@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "ગોળી સેવનની નોંધ કદાચ સાચવાઈ નથી",
   "quickRecordTakePillFailedMessage": "કૃપા કરીને ઍપ ખોલીને ગોળી લેવાની નોંધ તપાસો",
   "alreadyTaken": "ગોળી લઈ લીધી છે",
-  "startPauseTaking": "દવા લેવાનો વિરામ લેવો",
+  "startPauseTaking": "ગોળી લેવાનો વિરામ શરૂ કરો",
   "startedPauseTaking": "ગોળીનું સેવન વિરામ શરૂ કર્યું છે",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}મો",
   "startFromNumber": "નંબર થી શરૂ",

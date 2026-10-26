@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "د ګولۍ اخیستلو ریکارډ ښايي نه وي خوندي شوی",
   "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلېکېشن پرانیزئ او د ګولۍ اخیستلو ثبت وګورئ",
   "alreadyTaken": "ګولۍ اخیستل شوې ده",
-  "startPauseTaking": "د درملو وقفه پیل کړئ",
+  "startPauseTaking": "د ګولیو اخیستلو وقفه پیل کړئ",
   "startedPauseTaking": "د ګولیو د اخیستلو وقفه پیل شوه",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}مه",
   "startFromNumber": "له شمیرې پیل",

@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Η καταγραφή λήψης ίσως δεν αποθηκεύτηκε",
   "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε την καταγραφή λήψης του χαπιού",
   "alreadyTaken": "Το χάπι έχει ληφθεί",
-  "startPauseTaking": "Παύση λήψης",
+  "startPauseTaking": "Ξεκινήστε διάλειμμα από το χάπι",
   "startedPauseTaking": "Ξεκίνησε η διακοπή λήψης",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ο",
   "startFromNumber": "Ξεκίνημα από αριθμό",

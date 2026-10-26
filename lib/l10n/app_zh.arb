@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "服药记录可能未保存成功",
   "quickRecordTakePillFailedMessage": "请打开应用，查看服药记录",
   "alreadyTaken": "已服药",
-  "startPauseTaking": "暂停服用",
+  "startPauseTaking": "开始暂停服药",
   "startedPauseTaking": "已开始暂停服药",
   "sequentialLastTakenPlusOnePillNumber": "第{pillSheetGroupSequentialLastTakenPillNumber}颗",
   "startFromNumber": "从几号开始",

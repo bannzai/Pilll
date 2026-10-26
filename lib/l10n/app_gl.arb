@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Pode que non se gardase o rexistro de tomas",
   "quickRecordTakePillFailedMessage": "Abre a aplicación e comproba o rexistro da toma da pílula",
   "alreadyTaken": "Pílula tomada",
-  "startPauseTaking": "Pausar a toma",
+  "startPauseTaking": "Comezar a pausa da pílula",
   "startedPauseTaking": "Comezouse o período de descanso da toma",
   "sequentialLastTakenPlusOnePillNumber": "nº {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Comezar dende o número",

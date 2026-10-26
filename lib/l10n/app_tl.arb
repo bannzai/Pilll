@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Maaaring hindi na-save ang tala ng pag-inom",
   "quickRecordTakePillFailedMessage": "Pakibuksan po ang app at tingnan ang tala ng pag-inom ng pildoras",
   "alreadyTaken": "Nainom na ang pildoras",
-  "startPauseTaking": "Ihinto ang Pag-inom",
+  "startPauseTaking": "Simulan ang pahinga sa pag-inom ng pildoras",
   "startedPauseTaking": "Nagsimula na ang pahinga sa pag-inom ng pills",
   "sequentialLastTakenPlusOnePillNumber": "Bilang {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Magsimula sa numero",

@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Este posibil ca înregistrarea să nu se fi salvat",
   "quickRecordTakePillFailedMessage": "Deschide aplicația și verifică înregistrarea pilulei",
   "alreadyTaken": "Pilulă luată",
-  "startPauseTaking": "A lua o pauză de la administrare",
+  "startPauseTaking": "Începe pauza de la pilulă",
   "startedPauseTaking": "Pauza de administrare a început",
   "sequentialLastTakenPlusOnePillNumber": "numărul {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Începe de la numărul",

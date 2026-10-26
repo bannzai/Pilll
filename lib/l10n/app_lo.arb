@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "ບັນທຶກການກິນຢາອາດບໍ່ໄດ້ບັນທຶກໄວ້",
   "quickRecordTakePillFailedMessage": "ກະລຸນາເປີດແອັບ ແລ້ວກວດເບິ່ງບັນທຶກການກິນຢາເມັດ",
   "alreadyTaken": "ກິນຢາແລ້ວ",
-  "startPauseTaking": "ພັກການກິນຢາ",
+  "startPauseTaking": "ເລີ່ມຊ່ວງພັກການກິນຢາເມັດ",
   "startedPauseTaking": "ເລີ່ມພັກການກິນຢາແລ້ວ",
   "sequentialLastTakenPlusOnePillNumber": "ທີ່ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ເລີ່ມຈາກເລກ",

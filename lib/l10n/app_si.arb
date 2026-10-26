@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "පෙති ගැනීමේ සටහන සුරැකී නොතිබිය හැකියි",
   "quickRecordTakePillFailedMessage": "කරුණාකර යෙදුම විවෘත කර පෙත්ත ගත් බවට ඇති සටහන පරීක්ෂා කරන්න",
   "alreadyTaken": "පෙත්ත ගෙන ඇත",
-  "startPauseTaking": "ගැනීම නවත්වන්න",
+  "startPauseTaking": "පෙති ගැනීමේ විරාමය අරඹන්න",
   "startedPauseTaking": "ගෝලි විරාම කාලය ආරම්භ කර ඇත",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}වන",
   "startFromNumber": "අංකයෙන් ආරම්භය",

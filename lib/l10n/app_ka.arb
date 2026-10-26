@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "მიღების ჩანაწერი შესაძლოა ვერ შეინახა",
   "quickRecordTakePillFailedMessage": "გთხოვთ, გახსნათ აპი და შეამოწმოთ აბის მიღების ჩანაწერი",
   "alreadyTaken": "აბი მიღებულია",
-  "startPauseTaking": "მიღების დასვენება",
+  "startPauseTaking": "აბების მიღების შესვენების დაწყება",
   "startedPauseTaking": "ტაბლეტის მიღების შესვენება დაიწყო",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-ე",
   "startFromNumber": "ნომრიდან დაწყება",

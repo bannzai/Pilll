@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "ייתכן שרישום נטילה לא נשמר",
   "quickRecordTakePillFailedMessage": "נא לפתוח את האפליקציה ולבדוק את רישום נטילת הגלולה",
   "alreadyTaken": "הגלולה ניטלה",
-  "startPauseTaking": "להפסיק נטילה",
+  "startPauseTaking": "להתחיל הפסקה בנטילת הגלולה",
   "startedPauseTaking": "הפסקת הנטילה החלה",
   "sequentialLastTakenPlusOnePillNumber": "מס' {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "התחלה ממספר",

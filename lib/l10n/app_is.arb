@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Inntökuskrá hefur hugsanlega ekki vistast",
   "quickRecordTakePillFailedMessage": "Opnaðu appið og athugaðu skráninguna á pillutökunni",
   "alreadyTaken": "Pillan tekin",
-  "startPauseTaking": "Gera hlé á inntöku",
+  "startPauseTaking": "Hefja hlé á pillutöku",
   "startedPauseTaking": "Pillutökuhlé hefur hafist",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
   "startFromNumber": "Byrja frá númeri",

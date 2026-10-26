@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "सेवन रेकर्ड सुरक्षित नभएको हुन सक्छ",
   "quickRecordTakePillFailedMessage": "कृपया एप खोल्नुहोस् र चक्की खाएको रेकर्ड जाँच गर्नुहोस्",
   "alreadyTaken": "चक्की खाइसकिएको छ",
-  "startPauseTaking": "औषधि सेवन विश्राम लिनुहोस्",
+  "startPauseTaking": "चक्की खाने विश्राम सुरु गर्नुहोस्",
   "startedPauseTaking": "औषधि सेवन बिदा सुरु गरिएको छ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} नम्बर",
   "startFromNumber": "नम्बरदेखि सुरु",

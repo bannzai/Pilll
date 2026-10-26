@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Эм уусан бүртгэл хадгалагдаагүй байж магадгүй",
   "quickRecordTakePillFailedMessage": "Аппыг нээж, эм уусан бүртгэлээ шалгана уу",
   "alreadyTaken": "Эмээ уусан",
-  "startPauseTaking": "Эм уухаас амрах",
+  "startPauseTaking": "Эм уух завсарлагыг эхлүүлнэ үү",
   "startedPauseTaking": "Эмийн завсарлагыг эхлүүлэв",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} дугаар",
   "startFromNumber": "дугаараас эхлэх",

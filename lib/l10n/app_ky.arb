@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Таблетка ичүү жазуусу сакталбай калган болушу мүмкүн",
   "quickRecordTakePillFailedMessage": "Колдонмону ачып, таблетканы ичүү тууралуу жазууну текшериңиз",
   "alreadyTaken": "Таблетка кабыл алынды",
-  "startPauseTaking": "Дары ичүүнү токтотуу",
+  "startPauseTaking": "Таблетка ичүүдөгү тыныгууну баштаңыз",
   "startedPauseTaking": "Дарылоо тыныгуусу башталды",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-чи",
   "startFromNumber": "Номердөн башталуу",

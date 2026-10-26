@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Pilleloggen ble kanskje ikke lagret",
   "quickRecordTakePillFailedMessage": "Åpne appen og sjekk registreringen av p-pillen",
   "alreadyTaken": "P-pillen er tatt",
-  "startPauseTaking": "Ta pause fra inntak",
+  "startPauseTaking": "Start pillepause",
   "startedPauseTaking": "Pillepausen er startet",
   "sequentialLastTakenPlusOnePillNumber": "nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Start fra nr.",

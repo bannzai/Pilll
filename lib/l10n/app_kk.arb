@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Қабылдау жазбасы сақталмаған болуы мүмкін",
   "quickRecordTakePillFailedMessage": "Қолданбаны ашып, таблетканы қабылдау жазбасын тексеріңіз",
   "alreadyTaken": "Таблетка қабылданды",
-  "startPauseTaking": "Қабылдауды тоқтату",
+  "startPauseTaking": "Таблетка қабылдаудағы үзілісті бастаңыз",
   "startedPauseTaking": "Дәрі қабылдауды тоқтату басталды",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-інші",
   "startFromNumber": "нөмірінен бастау",

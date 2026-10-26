@@ -392,7 +392,7 @@
   "quickRecordTakePillFailed": "Záznam užití se možná nepodařilo uložit",
   "quickRecordTakePillFailedMessage": "Otevřete prosím aplikaci a zkontrolujte záznam o užití pilulky",
   "alreadyTaken": "Tableta užita",
-  "startPauseTaking": "Pozastavit užívání",
+  "startPauseTaking": "Zahájit přestávku v užívání pilulek",
   "startedPauseTaking": "Přestávka v užívání byla zahájena",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
   "startFromNumber": "Začít od čísla",
