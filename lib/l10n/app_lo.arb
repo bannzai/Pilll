@@ -359,7 +359,7 @@
   "pressAndHoldNotificationToRecordPillTaking": "ກົດການແຈ້ງເຕືອນຄ້າງໄວ້ ເພື່ອສ້າງບັນທຶກການກິນຢາ",
   "letsTryIt": "ລອງໃຊ້ເບິ່ງເດີ",
   "trialDeadlineDateOffsetDay": "ທ່ານສາມາດໃຊ້ທຸກຟັງຊັນໄດ້ເປັນເວລາ {number} ມື້!",
-  "inputAndAdd": "ປ້ອນແລະເພີ່ມ",
+  "inputAndAdd": "ປ້ອນແລ້ວເພີ່ມ",
   "averagePeriod": "ຮອບສະເລ່ຍ",
   "averageDays": "ຈຳນວນວັນສະເລ່ຍ",
   "days": "ວັນ",

@@ -359,7 +359,7 @@
   "pressAndHoldNotificationToRecordPillTaking": "กดการแจ้งเตือนค้างไว้เพื่อสร้างบันทึกการทานยาได้ค่ะ",
   "letsTryIt": "ลองใช้ดูนะคะ",
   "trialDeadlineDateOffsetDay": "ใช้ทุกฟีเจอร์ได้เต็มที่ตลอด {number} วันค่ะ!",
-  "inputAndAdd": "ป้อนและเพิ่ม",
+  "inputAndAdd": "พิมพ์แล้วเพิ่ม",
   "averagePeriod": "รอบเฉลี่ย",
   "averageDays": "เฉลี่ยจำนวนวัน",
   "days": "วัน",
