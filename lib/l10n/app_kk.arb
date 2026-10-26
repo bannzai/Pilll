@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Бұл {accountTypeProviderName} тіркелгісі басқа Pilll тіркелгісіне әлдеқашан байланыстырылған, сондықтан онымен тіркеле алмайсыз. FAQ бөлімін де қарап шығыңыз. Толығырақ: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} тіркелгіңізде қолданатын электрондық пошта мекенжайы басқа Pilll тіркелгісіне бұрыннан байланыстырылған, сондықтан тіркеле алмайсыз. Жиі қойылатын сұрақтарды да қарап шығыңыз. Толығырақ: {exceptionMessage}",
   "todaySchedule": "Бүгінгі жоспарыңыз",
-  "calendarSchedule": "Күнтізбе жоспарлары",
+  "calendarSchedule": "Күнтізбедегі жоспарлар",
   "newPillSheetNotificationTitle": "Бүгіннен жаңа дәрі парағы басталады",
   "newPillSheetNotificationMessage": "🆕 Бүгіннен жаңа дәрі парағы басталады\nҚабылдауды ұмытпаңыз👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум ақпараты табылмады",

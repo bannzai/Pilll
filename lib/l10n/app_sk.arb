@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Tento účet {accountTypeProviderName} je už prepojený s iným účtom Pilll, preto sa s ním nemôžete zaregistrovať. Pozrite si aj FAQ. Podrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "Registrácia nie je možná, pretože e-mailová adresa, ktorú používate v účte {accountTypeProviderName}, je už prepojená s iným účtom Pilll. Pozrite si aj časté otázky. Podrobnosti: {exceptionMessage}",
   "todaySchedule": "Váš dnešný plán",
-  "calendarSchedule": "Kalendárové udalosti",
+  "calendarSchedule": "Udalosti v kalendári",
   "newPillSheetNotificationTitle": "Dnes začína nové balenie",
   "newPillSheetNotificationMessage": "🆕 Dnes začína nový blister\nNezabudnite na užitie👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Prémiové informácie sa nenašli",

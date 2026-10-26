@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName}-reikningur er þegar tengdur öðrum Pilll-reikningi og því er ekki hægt að skrá sig með honum. Skoðaðu einnig FAQ. Nánari upplýsingar: {exceptionMessage}",
   "emailAlreadyInUse": "Þú getur ekki skráð þig því netfangið sem þú notar með {accountTypeProviderName}-reikningnum þínum er þegar tengt öðrum Pilll-reikningi. Skoðaðu líka algengar spurningar. Nánar: {exceptionMessage}",
   "todaySchedule": "Dagskráin þín í dag",
-  "calendarSchedule": "Dagataláætlanir",
+  "calendarSchedule": "Viðburðir í dagatali",
   "newPillSheetNotificationTitle": "Í dag byrjar nýtt blað",
   "newPillSheetNotificationMessage": "🆕 Nýtt blað byrjar í dag\nMundu að taka lyfið👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium upplýsingar fundust ekki",

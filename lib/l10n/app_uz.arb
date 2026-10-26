@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hisobi allaqachon boshqa Pilll hisobiga ulangan, shuning uchun u orqali roʻyxatdan oʻta olmaysiz. FAQ boʻlimini ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hisobingizda ishlatadigan elektron pochta manzili allaqachon boshqa Pilll hisobiga bogʻlangan, shu sababli roʻyxatdan oʻta olmaysiz. Koʻp soʻraladigan savollarni ham koʻring. Tafsilotlar: {exceptionMessage}",
   "todaySchedule": "Bugungi rejalaringiz",
-  "calendarSchedule": "Kalendar rejalari",
+  "calendarSchedule": "Taqvimdagi rejalar",
   "newPillSheetNotificationTitle": "Bugundan yangi qadoq boshlanadi",
   "newPillSheetNotificationMessage": "🆕 Bugun yangi dori kursi boshlanadi\nIchishni unutmang👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium ma'lumoti topilmadi",

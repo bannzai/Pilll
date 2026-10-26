@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "ਇਹ {accountTypeProviderName} ਖਾਤਾ ਪਹਿਲਾਂ ਹੀ ਕਿਸੇ ਹੋਰ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ, ਇਸ ਲਈ ਇਸ ਨਾਲ ਰਜਿਸਟਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ। ਕਿਰਪਾ ਕਰਕੇ FAQ ਵੀ ਵੇਖੋ। ਵੇਰਵੇ: {exceptionMessage}",
   "emailAlreadyInUse": "ਤੁਹਾਡੇ {accountTypeProviderName} ਖਾਤੇ ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਈਮੇਲ ਪਤਾ ਪਹਿਲਾਂ ਹੀ ਕਿਸੇ ਹੋਰ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ, ਇਸ ਲਈ ਰਜਿਸਟਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ। ਕਿਰਪਾ ਕਰਕੇ ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ ਵੀ ਦੇਖੋ। ਵੇਰਵੇ: {exceptionMessage}",
   "todaySchedule": "ਅੱਜ ਦਾ ਤੁਹਾਡਾ ਸਮਾਂ-ਸਾਰਣੀ",
-  "calendarSchedule": "ਕੈਲੰਡਰ ਦੇ ਕਾਰਜਕ੍ਰਮ",
+  "calendarSchedule": "ਕੈਲੰਡਰ ਦੇ ਪ੍ਰੋਗਰਾਮ",
   "newPillSheetNotificationTitle": "ਅੱਜ ਤੋਂ ਨਵੀਂ ਸ਼ੀਟ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ",
   "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਨਵੀਂ ਸ਼ੀਟ ਸ਼ੁਰੂ ਹੋ ਰਹੀ ਹੈ\nਲੈਣਾ ਨਾ ਭੁੱਲੋ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",

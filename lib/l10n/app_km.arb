@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "គណនី {accountTypeProviderName} នេះត្រូវបានភ្ជាប់ទៅគណនី Pilll ផ្សេងទៀតរួចហើយ ដូច្នេះមិនអាចប្រើវាដើម្បីចុះឈ្មោះបានទេ។ សូមមើល FAQ ផងដែរ។ ព័ត៌មានលម្អិត៖ {exceptionMessage}",
   "emailAlreadyInUse": "មិនអាចចុះឈ្មោះបានទេ ព្រោះអាសយដ្ឋានអ៊ីមែលដែលអ្នកប្រើជាមួយគណនី {accountTypeProviderName} បានភ្ជាប់ទៅគណនី Pilll ផ្សេងរួចហើយ។ សូមមើលសំណួរដែលសួរញឹកញាប់ផងដែរ។ ព័ត៌មានលម្អិត៖ {exceptionMessage}",
   "todaySchedule": "កាលវិភាគរបស់អ្នកសម្រាប់ថ្ងៃនេះ",
-  "calendarSchedule": "កម្មវិធីប្រតិទិន",
+  "calendarSchedule": "កាលវិភាគក្នុងប្រតិទិន",
   "newPillSheetNotificationTitle": "សន្លឹកថ្នាំថ្មីចាប់ផ្តើមពីថ្ងៃនេះ",
   "newPillSheetNotificationMessage": "🆕 ថ្ងៃនេះ ចាប់ផ្តើមជីថ្នាំថ្មី\nកុំភ្លេចពិសារថ្នាំ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានពិសេស",

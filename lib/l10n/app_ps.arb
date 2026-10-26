@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "دا د {accountTypeProviderName} حساب له مخکې څخه د Pilll له بل حساب سره تړلی دی، نو په دې سره نوم‌لیکنه نه شي کېدای. مهرباني وکړئ FAQ هم وګورئ. جزییات: {exceptionMessage}",
   "emailAlreadyInUse": "ستاسو د {accountTypeProviderName} حساب برېښنالیک پته له مخکې څخه له بل Pilll حساب سره تړلې ده، نو نوم‌لیکنه نه شي کېدای. مهرباني وکړئ ډېرې پوښتل کېدونکې پوښتنې هم وګورئ. جزییات: {exceptionMessage}",
   "todaySchedule": "ستاسو د نن ورځې مهالویش",
-  "calendarSchedule": "د تقویم برنامې",
+  "calendarSchedule": "د کلیزې مهالویش",
   "newPillSheetNotificationTitle": "نن د نوي شیټ پیل کیږي",
   "newPillSheetNotificationMessage": "🆕 نن د نوي شیټ پیل دی\nهیر مه کړئ چې دا واخلئ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "د پریمیم معلومات ونه موندل شول",

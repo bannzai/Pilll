@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "ଏହି {accountTypeProviderName} ଆକାଉଣ୍ଟ ପୂର୍ବରୁ ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହିତ ଯୋଡ଼ା ହୋଇଛି, ତେଣୁ ଏହା ଦ୍ୱାରା ପଞ୍ଜୀକରଣ କରିହେବ ନାହିଁ। ଦୟାକରି FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
   "emailAlreadyInUse": "ଆପଣଙ୍କ {accountTypeProviderName} ଆକାଉଣ୍ଟରେ ବ୍ୟବହୃତ ଇମେଲ୍ ଠିକଣା ପୂର୍ବରୁ ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହ ଯୋଡ଼ା ହୋଇଥିବାରୁ ପଞ୍ଜୀକରଣ କରିହେବ ନାହିଁ। ଦୟାକରି ବାରମ୍ବାର ପଚରାଯାଉଥିବା ପ୍ରଶ୍ନଗୁଡ଼ିକୁ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}",
   "todaySchedule": "ଆଜିର ଆପଣଙ୍କ କାର୍ଯ୍ୟସୂଚୀ",
-  "calendarSchedule": "କ୍ୟାଲେଣ୍ଡର କାର୍ଯ୍ୟସୂଚୀ",
+  "calendarSchedule": "କ୍ୟାଲେଣ୍ଡରର କାର୍ଯ୍ୟସୂଚୀ",
   "newPillSheetNotificationTitle": "ଆଜିଠାରୁ ନୂଆ ସିଟ୍ ଆରମ୍ଭ ହେଉଛି",
   "newPillSheetNotificationMessage": "🆕 ଆଜିଠାରୁ ନୂଆ ସିଟ୍ ଆରମ୍ଭ ହେଉଛି\nଭୁଲିଯିବା ବିନା ସେବନ କରନ୍ତୁ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ପ୍ରିମିୟମ୍ ସୂଚନା ମିଳିଲା ନାହିଁ",

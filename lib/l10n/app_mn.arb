@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Энэ {accountTypeProviderName} бүртгэл өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул үүгээр шинээр бүртгүүлэх боломжгүй. FAQ хэсгийг мөн харна уу. Дэлгэрэнгүй: {exceptionMessage}",
   "emailAlreadyInUse": "Таны {accountTypeProviderName} бүртгэлд ашигладаг имэйл хаяг өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул шинээр бүртгүүлэх боломжгүй. Түгээмэл асуултуудыг мөн үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
   "todaySchedule": "Таны өнөөдрийн төлөвлөгөө",
-  "calendarSchedule": "Хуанлийн төлөвлөгөө",
+  "calendarSchedule": "Хуанлийн тов",
   "newPillSheetNotificationTitle": "Өнөөдрөөс шинэ багц эхэлнэ",
   "newPillSheetNotificationMessage": "🆕 Өнөөдрөөс шинэ хавтасны курс эхэлнэ\nМартахгүйгээр уухаа👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум мэдээлэл олдсонгүй",

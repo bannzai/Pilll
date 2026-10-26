@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-konto er allerede knyttet til en anden Pilll-konto, så du kan ikke oprette dig med den. Se også FAQ. Detaljer: {exceptionMessage}",
   "emailAlreadyInUse": "Du kan ikke oprette en konto, fordi den e-mailadresse, du bruger til din {accountTypeProviderName}-konto, allerede er knyttet til en anden Pilll-konto. Se også de ofte stillede spørgsmål. Detaljer: {exceptionMessage}",
   "todaySchedule": "Dagens planer",
-  "calendarSchedule": "Kalenderbegivenheder",
+  "calendarSchedule": "Kalenderaftaler",
   "newPillSheetNotificationTitle": "I dag begynder et nyt ark",
   "newPillSheetNotificationMessage": "🆕 Din nye pille pakke begynder i dag\nHusk at tage dine piller👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-oplysninger blev ikke fundet",

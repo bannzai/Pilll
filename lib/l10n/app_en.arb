@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is already linked to another Pilll account, so you can’t sign up with it. Please see the FAQ too. Details: {exceptionMessage}",
   "emailAlreadyInUse": "You can’t sign up because the email address you use with your {accountTypeProviderName} account is already linked to another Pilll account. Please check the FAQ too. Details: {exceptionMessage}",
   "todaySchedule": "Today's schedule",
-  "calendarSchedule": "Calendar Events",
+  "calendarSchedule": "Calendar events",
   "newPillSheetNotificationTitle": "Your new pill sheet starts today",
   "newPillSheetNotificationMessage": "🆕 Your new pill sheet starts today\nRemember to take your pill👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",

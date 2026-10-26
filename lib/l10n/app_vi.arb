@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với một tài khoản Pilll khác, nên bạn không thể dùng tài khoản này để đăng ký. Vui lòng xem thêm FAQ. Chi tiết: {exceptionMessage}",
   "emailAlreadyInUse": "Bạn không thể đăng ký vì địa chỉ email dùng cho tài khoản {accountTypeProviderName} đã được liên kết với một tài khoản Pilll khác. Vui lòng xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
   "todaySchedule": "Lịch trình hôm nay của bạn",
-  "calendarSchedule": "Lịch trình trên lịch",
+  "calendarSchedule": "Lịch trình trong lịch",
   "newPillSheetNotificationTitle": "Hôm nay bắt đầu vỉ thuốc mới",
   "newPillSheetNotificationMessage": "🆕 Hôm nay bắt đầu chu kỳ viên thuốc mới\nĐừng quên uống thuốc nhé👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Không tìm thấy thông tin premium",

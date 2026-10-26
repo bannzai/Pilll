@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Овај {accountTypeProviderName} налог је већ повезан са другим Pilll налогом, па не можете да се региструјете помоћу њега. Погледајте и FAQ. Детаљи: {exceptionMessage}",
   "emailAlreadyInUse": "Не можете да се региструјете јер је адреса е-поште коју користите за {accountTypeProviderName} налог већ повезана са другим Pilll налогом. Погледајте и често постављана питања. Детаљи: {exceptionMessage}",
   "todaySchedule": "Ваш данашњи распоред",
-  "calendarSchedule": "Календарски догађаји",
+  "calendarSchedule": "Догађаји у календару",
   "newPillSheetNotificationTitle": "Danas počinje novo pakovanje",
   "newPillSheetNotificationMessage": "🆕 Nova blistava počinje danas\nNe zaboravi da uzmeš pilulu👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премијум информације нису пронађене",

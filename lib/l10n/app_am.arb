@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "ይህ የ{accountTypeProviderName} መለያ ከሌላ የPilll መለያ ጋር አስቀድሞ ተገናኝቷል፣ ስለዚህ በዚህ መለያ መመዝገብ አይቻልም። እባክዎ FAQንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "emailAlreadyInUse": "በ{accountTypeProviderName} መለያዎ የሚጠቀሙበት የኢሜይል አድራሻ ከሌላ የPilll መለያ ጋር አስቀድሞ ተያይዟል። ስለዚህ መመዝገብ አይችሉም። እባክዎ ተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "todaySchedule": "የዛሬ መርሃ ግብር",
-  "calendarSchedule": "የካሌንደር ቀጠሮዎች",
+  "calendarSchedule": "የቀን መቁጠሪያ ቀጠሮዎች",
   "newPillSheetNotificationTitle": "ዛሬ አዲስ ሺት ይጀምራል",
   "newPillSheetNotificationMessage": "🆕 ዛሬ አዲስ የመድሃኒት ሉህ ይጀምራል\nመውሰድዎን አይርሱ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ፕሪሚየም መረጃ አልተገኘም",

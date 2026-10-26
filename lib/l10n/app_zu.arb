@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Le akhawunti ye-{accountTypeProviderName} isivele ixhunywe kwenye i-akhawunti ye-Pilll, ngakho ngeke ukwazi ukubhalisa ngayo. Sicela ubheke ne-FAQ. Imininingwane: {exceptionMessage}",
   "emailAlreadyInUse": "Awukwazi ukubhalisa ngoba ikheli le-imeyili olisebenzisa ku-akhawunti yakho ye-{accountTypeProviderName} selixhunywe kwenye i-akhawunti ye-Pilll. Sicela ubheke nemibuzo evame ukubuzwa. Imininingwane: {exceptionMessage}",
   "todaySchedule": "Uhlelo lwakho lwanamuhla",
-  "calendarSchedule": "Amahlandlakwazi ekhalendeni",
+  "calendarSchedule": "Izinhlelo zekhalenda",
   "newPillSheetNotificationTitle": "Ishidi elisha liqala namuhla",
   "newPillSheetNotificationMessage": "🆕 Ishidi elisha lepilisi liqala namuhla\nKhumbula ukuthatha👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ulwazi lwe-premium alutholakanga",

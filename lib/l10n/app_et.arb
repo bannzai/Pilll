@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on juba seotud teise Pilll kontoga, seega ei saa sellega registreeruda. Vaata ka FAQ-d. Üksikasjad: {exceptionMessage}",
   "emailAlreadyInUse": "Sa ei saa registreeruda, sest sinu {accountTypeProviderName} kontoga kasutatav e-posti aadress on juba seotud teise Pilll kontoga. Vaata ka korduma kippuvaid küsimusi. Üksikasjad: {exceptionMessage}",
   "todaySchedule": "Tänased plaanid",
-  "calendarSchedule": "Kalendri sündmused",
+  "calendarSchedule": "Kalendrisündmused",
   "newPillSheetNotificationTitle": "Tänasest algab uus pillipakend",
   "newPillSheetNotificationMessage": "🆕 Täna algab uus pakend\nÄra unusta võtmast👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informatsioon ei leitud",

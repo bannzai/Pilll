@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dipautkan kepada akaun Pilll yang lain, jadi anda tidak boleh mendaftar dengannya. Sila lihat FAQ juga. Butiran: {exceptionMessage}",
   "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan kerana alamat e-mel yang anda gunakan dengan akaun {accountTypeProviderName} sudah dipautkan kepada akaun Pilll yang lain. Sila rujuk juga soalan lazim. Butiran: {exceptionMessage}",
   "todaySchedule": "Jadual anda hari ini",
-  "calendarSchedule": "Jadual kalendar",
+  "calendarSchedule": "Jadual dalam kalendar",
   "newPillSheetNotificationTitle": "Paket pil baru bermula hari ini",
   "newPillSheetNotificationMessage": "🆕 Lembaran baharu bermula hari ini\nJangan lupa minum pil anda👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Maklumat premium tidak ditemui",

@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца з яго дапамогай нельга. Калі ласка, зазірніце таксама ў FAQ. Падрабязнасці: {exceptionMessage}",
   "emailAlreadyInUse": "Адрас электроннай пошты, які вы выкарыстоўваеце для ўліковага запісу {accountTypeProviderName}, ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца не атрымаецца. Калі ласка, зазірніце таксама ў частыя пытанні. Падрабязнасці: {exceptionMessage}",
   "todaySchedule": "Вашы планы на сёння",
-  "calendarSchedule": "Каляндарныя планы",
+  "calendarSchedule": "Падзеі календара",
   "newPillSheetNotificationTitle": "Сёння пачынаецца новы блістэр",
   "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая пачка\nНе забывайце прыняць таблетку👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Прэміум інфармацыя не знойдзена",

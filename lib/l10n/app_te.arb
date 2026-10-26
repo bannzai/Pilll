@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మరో Pilll ఖాతాకు లింక్ అయి ఉంది. కాబట్టి దీనితో నమోదు చేసుకోవడం సాధ్యం కాదు. దయచేసి FAQ కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "emailAlreadyInUse": "మీ {accountTypeProviderName} ఖాతాలో ఉపయోగించే ఇమెయిల్ చిరునామా ఇప్పటికే మరో Pilll ఖాతాతో అనుసంధానమై ఉన్నందున నమోదు చేసుకోలేరు. దయచేసి తరచుగా అడిగే ప్రశ్నలను కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "todaySchedule": "ఈ రోజు మీ కార్యక్రమాలు",
-  "calendarSchedule": "క్యాలెండర్ ప్రణాళికలు",
+  "calendarSchedule": "క్యాలెండర్‌లోని కార్యక్రమాలు",
   "newPillSheetNotificationTitle": "ఈ రోజు నుండి కొత్త షీట్ మొదలవుతుంది",
   "newPillSheetNotificationMessage": "🆕 ఈరోజు నుండి కొత్త షీట్ ప్రారంభమవుతుంది\nమర్చిపోకుండా తీసుకోండి👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ప్రీమియం సమాచారం కనుగొనబడలేదు",

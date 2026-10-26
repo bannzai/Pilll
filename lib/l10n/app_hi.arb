@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "यह {accountTypeProviderName} खाता पहले से किसी दूसरे Pilll खाते से जुड़ा है, इसलिए इससे पंजीकरण नहीं किया जा सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",
   "emailAlreadyInUse": "आपके {accountTypeProviderName} खाते में इस्तेमाल किया जाने वाला ईमेल पता पहले से किसी दूसरे Pilll खाते से जुड़ा है, इसलिए पंजीकरण नहीं हो सकता। कृपया अक्सर पूछे जाने वाले सवाल भी देखें। विवरण: {exceptionMessage}",
   "todaySchedule": "आज के आपके कार्यक्रम",
-  "calendarSchedule": "कैलेंडर की योजनाएं",
+  "calendarSchedule": "कैलेंडर में तय कार्यक्रम",
   "newPillSheetNotificationTitle": "आज से नई शीट शुरू होती है",
   "newPillSheetNotificationMessage": "🆕 आज से नया शीट शुरू हो रहा है\nइसे लेना न भूलें👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम जानकारी नहीं मिली",

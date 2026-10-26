@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName}-ի այս հաշիվն արդեն կապված է Pilll-ի մեկ այլ հաշվի հետ, ուստի դրանով գրանցվել հնարավոր չէ։ Խնդրում ենք ծանոթանալ նաև FAQ-ին։ Մանրամասներ՝ {exceptionMessage}",
   "emailAlreadyInUse": "Գրանցվել հնարավոր չէ, քանի որ {accountTypeProviderName} հաշվում Ձեր օգտագործած էլփոստի հասցեն արդեն կապված է Pilll-ի մեկ այլ հաշվի հետ։ Խնդրում ենք ծանոթանալ նաև հաճախ տրվող հարցերին։ Մանրամասներ՝ {exceptionMessage}",
   "todaySchedule": "Ձեր այսօրվա ծրագիրը",
-  "calendarSchedule": "Օրացույցի ծրագրեր",
+  "calendarSchedule": "Օրացույցի իրադարձություններ",
   "newPillSheetNotificationTitle": "Այսօր սկսվում է նոր պաշարակը",
   "newPillSheetNotificationMessage": "🆕 Այսօր սկսվում է նոր շերտը\nՄի մոռացեք ընդունել👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Պրեմիում տեղեկությունները չեն գտնվել",

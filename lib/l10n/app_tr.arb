@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı başka bir Pilll hesabına zaten bağlı, bu nedenle bu hesapla kaydolamazsınız. Lütfen FAQ bölümüne de göz atın. Ayrıntılar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda kullandığınız e-posta adresi başka bir Pilll hesabına zaten bağlı olduğu için kayıt olamıyorsunuz. Sık sorulan sorulara da göz atabilirsiniz. Ayrıntılar: {exceptionMessage}",
   "todaySchedule": "Bugünkü programınız",
-  "calendarSchedule": "Takvim Etkinlikleri",
+  "calendarSchedule": "Takvimdeki etkinlikler",
   "newPillSheetNotificationTitle": "Bugün yeni blister başlıyor",
   "newPillSheetNotificationMessage": "🆕 Bugün yeni paket başlıyor\nAlmayı unutmayın👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium bilgisi bulunamadı",

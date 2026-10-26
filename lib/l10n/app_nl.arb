@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Dit {accountTypeProviderName}-account is al gekoppeld aan een ander Pilll-account. Je kunt je er daarom niet mee registreren. Bekijk ook de FAQ. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Je kunt je niet registreren, omdat het e-mailadres van je {accountTypeProviderName}-account al aan een ander Pilll-account is gekoppeld. Bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
   "todaySchedule": "Je planning voor vandaag",
-  "calendarSchedule": "Kalenderafspraken",
+  "calendarSchedule": "Agenda-afspraken",
   "newPillSheetNotificationTitle": "Vandaag begint een nieuwe strip",
   "newPillSheetNotificationMessage": "🆕 Vandaag begint een nieuwe strip\nVergeet niet je pil in te nemen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-informatie niet gevonden",

@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll lain, jadi Anda tidak dapat mendaftar dengannya. Silakan lihat juga FAQ. Detail: {exceptionMessage}",
   "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan karena alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung ke akun Pilll lain. Silakan lihat juga pertanyaan umum. Detail: {exceptionMessage}",
   "todaySchedule": "Jadwal Anda hari ini",
-  "calendarSchedule": "Jadwal Kalendar",
+  "calendarSchedule": "Jadwal di kalender",
   "newPillSheetNotificationTitle": "Paket baru dimulai hari ini",
   "newPillSheetNotificationMessage": "🆕 Lembar baru dimulai hari ini\nJangan lupa meminumnya👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informasi premium tidak ditemukan",

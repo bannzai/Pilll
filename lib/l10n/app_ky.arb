@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунту башка Pilll аккаунтуна мурунтан эле байланыштырылган, андыктан аны менен каттала албайсыз. FAQ бөлүмүн да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} каттоо эсебиңизде колдонгон электрондук почта дареги башка Pilll каттоо эсебине мурунтан эле байланып тургандыктан, каттала албайсыз. Көп берилүүчү суроолорду да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "todaySchedule": "Бүгүнкү планыңыз",
-  "calendarSchedule": "Календардын планы",
+  "calendarSchedule": "Жылнаамадагы пландар",
   "newPillSheetNotificationTitle": "Бүгүндөн жаңы курс башталат",
   "newPillSheetNotificationMessage": "🆕 Бүгүндөн жаңы дары пачкасы башталат\nУнутпай ичели 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум маалымат табылбады",

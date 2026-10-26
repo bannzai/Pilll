@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "यो {accountTypeProviderName} खाता पहिले नै अर्को Pilll खातासँग जोडिएको छ, त्यसैले यसबाट दर्ता गर्न सकिँदैन। कृपया FAQ पनि हेर्नुहोस्। विवरण: {exceptionMessage}",
   "emailAlreadyInUse": "तपाईंको {accountTypeProviderName} खातामा प्रयोग हुने इमेल ठेगाना पहिल्यै अर्को Pilll खातासँग जोडिएको हुनाले दर्ता गर्न सकिँदैन। कृपया बारम्बार सोधिने प्रश्नहरू पनि हेर्नुहोस्। विवरण: {exceptionMessage}",
   "todaySchedule": "आजको तपाईंको तालिका",
-  "calendarSchedule": "क्यालेन्डरका कार्यक्रमहरू",
+  "calendarSchedule": "पात्रोका तय गरिएका कार्यक्रमहरू",
   "newPillSheetNotificationTitle": "आजदेखि नयाँ सिट सुरु हुन्छ",
   "newPillSheetNotificationMessage": "🆕 आजदेखि नयाँ शीट सुरु हुन्छ\nनभुल्नुहोस्, सेवन गरौं👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रिमियम जानकारी फेला परेन",

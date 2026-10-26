@@ -335,7 +335,7 @@
   "accountAlreadyLinkedWithOtherPilllAccount": "Оваа сметка на {accountTypeProviderName} веќе е поврзана со друга сметка на Pilll, па не можете да се регистрирате со неа. Погледнете го и FAQ. Детали: {exceptionMessage}",
   "emailAlreadyInUse": "Не можете да се регистрирате бидејќи адресата на е-пошта што ја користите со сметката {accountTypeProviderName} веќе е поврзана со друга сметка на Pilll. Погледнете ги и често поставуваните прашања. Детали: {exceptionMessage}",
   "todaySchedule": "Вашиот распоред за денес",
-  "calendarSchedule": "Календарски настани",
+  "calendarSchedule": "Настани во календарот",
   "newPillSheetNotificationTitle": "Од денес започнува нова листче",
   "newPillSheetNotificationMessage": "🆕 Денес започнува нов лист\nНе заборавајте да ги земете👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум информациите не се пронајдени",
