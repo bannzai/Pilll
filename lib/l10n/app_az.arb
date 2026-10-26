@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Qəbul tarixçəsi haqqında məlumatı əldə etmək mümkün olmadı. {error}",
   "cancelTaking": "Həb qəbulunu ləğv edin",
   "deletedDiaryCannotBeRestored": "Sildiyiniz gündəlik qeydini bərpa etmək mümkün deyil",
-  "editMenstruation": "Menstruasiya dövrünü redaktə et",
+  "editMenstruation": "Aybaşı dövrünü redaktə edin",
   "changedPillNumber": "Həb nömrəsi dəyişikliyi",
   "offPercentForMonthlyPremiumPackage": "Adi aylıq planla müqayisədə {offPercent}% endirim",
   "premiumIntroductionDiscountPriceDeadline": "Premium abunəlik ilə bütün funksiyalardan istifadə etməyə davam edə bilərsiniz",

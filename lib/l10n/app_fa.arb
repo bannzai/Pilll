@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "دریافت اطلاعات تاریخچه مصرف ممکن نشد. {error}",
   "cancelTaking": "لغو ثبت مصرف قرص",
   "deletedDiaryCannotBeRestored": "یادداشت روزانه پس از حذف قابل بازیابی نیست",
-  "editMenstruation": "ویرایش دوره قاعدگی",
+  "editMenstruation": "ویرایش روزهای پریود",
   "changedPillNumber": "تغییر شماره قرص",
   "offPercentForMonthlyPremiumPackage": "{offPercent}٪ تخفیف نسبت به پلان ماهانه معمولی",
   "premiumIntroductionDiscountPriceDeadline": "با ثبت نام پریمیم می‌توانید همچنان از تمام ویژگی‌ها استفاده کنید",

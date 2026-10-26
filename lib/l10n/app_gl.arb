@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Non se puido cargar a información do historial de tomas. {error}",
   "cancelTaking": "Desfacer o rexistro da pílula",
   "deletedDiaryCannotBeRestored": "Non se pode recuperar unha entrada do diario despois de eliminala",
-  "editMenstruation": "Editar período menstrual",
+  "editMenstruation": "Editar os días da regra",
   "changedPillNumber": "Cambio de número de píldora",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF comparado coa mensualidade normal",
   "premiumIntroductionDiscountPriceDeadline": "Coa subscrición premium continúas tendo acceso a todas as funcións",

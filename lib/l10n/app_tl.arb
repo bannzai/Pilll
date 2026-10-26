@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Hindi makuha ang impormasyon sa kasaysayan ng pag-inom ng pildoras. {error}",
   "cancelTaking": "Pakibawi ang tala ng pag-inom ng pildoras",
   "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang naburang tala sa talaarawan",
-  "editMenstruation": "I-edit ang Regla",
+  "editMenstruation": "Baguhin ang mga petsa ng regla",
   "changedPillNumber": "Pagbabago ng Numero ng Pill",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF kumpara sa regular na monthly plan",
   "premiumIntroductionDiscountPriceDeadline": "Makakagamit ka pa rin ng lahat ng features sa Premium subscription",

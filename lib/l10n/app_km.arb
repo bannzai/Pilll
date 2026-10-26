@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "មិនអាចទាញយកព័ត៌មានប្រវត្តិលេបថ្នាំបានទេ។ {error}",
   "cancelTaking": "លុបចោលកំណត់ត្រាលេបថ្នាំគ្រាប់",
   "deletedDiaryCannotBeRestored": "កំណត់ហេតុប្រចាំថ្ងៃដែលបានលុប មិនអាចយកមកវិញបានទេ",
-  "editMenstruation": "កែសម្រួលរដូវ",
+  "editMenstruation": "កែសម្រួលថ្ងៃមានរដូវ",
   "changedPillNumber": "ផ្លាស់ប្តូរលេខថ្នាំគន្ត្រកកំណើត",
   "offPercentForMonthlyPremiumPackage": "បញ្ចុះតម្លៃ {offPercent}% ធៀបនឹងគម្រោងប្រចាំខែធម្មតា",
   "premiumIntroductionDiscountPriceDeadline": "ការចុះឈ្មោះ Premium នឹងអនុញ្ញាតឱ្យអ្នកបន្តប្រើមុខងារទាំងអស់",

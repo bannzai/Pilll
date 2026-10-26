@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "সেৱনৰ ইতিহাসৰ তথ্য আনিব পৰা নগ’ল। {error}",
   "cancelTaking": "ঔষধ খোৱাৰ ৰেকৰ্ড বাতিল কৰক",
   "deletedDiaryCannotBeRestored": "মচি পেলোৱা ডায়েৰীৰ লিখনি পুনৰ ঘূৰাই আনিব নোৱাৰি",
-  "editMenstruation": "ঋতুস্রাবৰ সময় সম্পাদনা কৰক",
+  "editMenstruation": "মাহেকীয়াৰ সময়সীমা সম্পাদনা কৰক",
   "changedPillNumber": "পিল নম্বৰ সলনি",
   "offPercentForMonthlyPremiumPackage": "সাধাৰণ মাহেকীয়াৰ তুলনাত {offPercent}% ছাড়",
   "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়াম পঞ্জীয়নৰ সৈতে সকলো সুবিধা অব্যাহত ব্যৱহাৰ কৰিব পাৰিব",

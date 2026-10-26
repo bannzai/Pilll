@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Қабылдау тарихы туралы ақпаратты алу мүмкін болмады. {error}",
   "cancelTaking": "Таблетканы қабылдау жазбасын болдырмаңыз",
   "deletedDiaryCannotBeRestored": "Жойылған күнделік жазбасын қалпына келтіру мүмкін емес",
-  "editMenstruation": "Етеккір кезеңін өңдеу",
+  "editMenstruation": "Етеккір күндерін өзгертіңіз",
   "changedPillNumber": "Дәрі нөмірін өзгерту",
   "offPercentForMonthlyPremiumPackage": "Әдеттегі айлық жоспармен салыстырғанда {offPercent}% жеңілдік",
   "premiumIntroductionDiscountPriceDeadline": "Премиум тіркелімі арқылы барлық мүмкіндіктерді әрі қарай пайдалана аласыз",

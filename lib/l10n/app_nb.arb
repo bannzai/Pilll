@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
   "cancelTaking": "Angre registrert p-pille",
   "deletedDiaryCannotBeRestored": "Et slettet dagboknotat kan ikke gjenopprettes",
-  "editMenstruation": "Rediger menstruasjonsperiode",
+  "editMenstruation": "Rediger mensdagene",
   "changedPillNumber": "Pillenummer endret",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt fra månedlig abonnement",
   "premiumIntroductionDiscountPriceDeadline": "Med Premium-registrering kan du fortsette å bruke alle funksjoner",

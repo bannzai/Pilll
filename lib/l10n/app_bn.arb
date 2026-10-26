@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "সেবনের ইতিহাসের তথ্য আনা যায়নি। {error}",
   "cancelTaking": "পিল খাওয়ার রেকর্ড বাতিল করুন",
   "deletedDiaryCannotBeRestored": "মুছে ফেলা ডায়েরির লেখা আর ফিরিয়ে আনা যাবে না",
-  "editMenstruation": "পিরিয়ড সম্পাদনা করুন",
+  "editMenstruation": "মাসিকের সময়কাল সম্পাদনা করুন",
   "changedPillNumber": "পিল নম্বর পরিবর্তন",
   "offPercentForMonthlyPremiumPackage": "সাধারণ মাসিক পরিকল্পনার তুলনায় {offPercent}% ছাড়",
   "premiumIntroductionDiscountPriceDeadline": "প্রিমিয়াম নিবন্ধনের মাধ্যমে আপনি সমস্ত বৈশিষ্ট্য অব্যাহত ব্যবহার করতে পারবেন",

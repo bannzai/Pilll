@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Nije moguće učitati podatke za historiju uzimanja. {error}",
   "cancelTaking": "Poništi zabilježeno uzimanje pilule",
   "deletedDiaryCannotBeRestored": "Izbrisani zapis u dnevniku ne može se vratiti",
-  "editMenstruation": "Urediti menstrualni period",
+  "editMenstruation": "Uredite period menstruacije",
   "changedPillNumber": "Izmjena broja pilule",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% popusta u odnosu na mjesečnu pretplatu",
   "premiumIntroductionDiscountPriceDeadline": "Sa premium pretplatom možete i dalje koristiti sve funkcije",

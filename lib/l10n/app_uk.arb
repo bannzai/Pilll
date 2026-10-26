@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Не вдалося завантажити дані з історії прийому. {error}",
   "cancelTaking": "Скасувати запис про прийом пігулки",
   "deletedDiaryCannotBeRestored": "Видалений запис щоденника неможливо відновити",
-  "editMenstruation": "Редагувати менструальний період",
+  "editMenstruation": "Змінити дати місячних",
   "changedPillNumber": "Зміна номера пігулки",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% знижка порівняно з щомісячним тарифом",
   "premiumIntroductionDiscountPriceDeadline": "Преміум-підписка дозволяє продовжувати використовувати всі функції",

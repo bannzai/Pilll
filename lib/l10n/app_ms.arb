@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Maklumat sejarah pengambilan tidak dapat dimuatkan. {error}",
   "cancelTaking": "Batalkan rekod pengambilan pil",
   "deletedDiaryCannotBeRestored": "Catatan diari yang dipadam tidak boleh dipulihkan",
-  "editMenstruation": "Sunting Tempoh Haid",
+  "editMenstruation": "Edit tarikh haid",
   "changedPillNumber": "Perubahan Nombor Pil",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF berbanding langganan bulanan biasa",
   "premiumIntroductionDiscountPriceDeadline": "Dengan pendaftaran premium, semua ciri boleh terus digunakan",

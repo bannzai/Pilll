@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
   "cancelTaking": "Desfazer registro da pílula",
   "deletedDiaryCannotBeRestored": "Uma anotação do diário excluída não pode ser recuperada",
-  "editMenstruation": "Editar período menstrual",
+  "editMenstruation": "Editar os dias da menstruação",
   "changedPillNumber": "Alteração do número da pílula",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de desconto comparado ao plano mensal",
   "premiumIntroductionDiscountPriceDeadline": "Com a assinatura premium, você pode continuar usando todas as funcionalidades",

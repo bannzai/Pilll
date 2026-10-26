@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Akukwazekanga ukulanda imininingwane yomlando wokuphuza amaphilisi. {error}",
   "cancelTaking": "Sicela uhoxise irekhodi lokuphuza iphilisi",
   "deletedDiaryCannotBeRestored": "Okubhalwe edayari okususiwe ngeke kubuyiselwe",
-  "editMenstruation": "Hlela isikhathi sokuzila",
+  "editMenstruation": "Sicela ulungise izinsuku zokuya esikhathini",
   "changedPillNumber": "Ukushintsha inombolo yephilisi",
   "offPercentForMonthlyPremiumPackage": "Isehlo sika-{offPercent}% uma kuqhathaniswa nenyanga ejwayelekile",
   "premiumIntroductionDiscountPriceDeadline": "Ngokubhalisa premium uzobe usuqhubeka usebenzisa zonke izici",

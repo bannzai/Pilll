@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "cancelTaking": "Tabletta szedésének visszavonása",
   "deletedDiaryCannotBeRestored": "A törölt naplóbejegyzés nem állítható vissza",
-  "editMenstruation": "Menstruációs időszak szerkesztése",
+  "editMenstruation": "A menstruáció időszakának szerkesztése",
   "changedPillNumber": "Tablettaszám módosítása",
   "offPercentForMonthlyPremiumPackage": "A normál havi díjhoz képest {offPercent}% kedvezmény",
   "premiumIntroductionDiscountPriceDeadline": "A prémium előfizetéssel továbbra is használhatja az összes funkciót",

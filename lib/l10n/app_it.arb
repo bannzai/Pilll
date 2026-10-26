@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Impossibile caricare le informazioni dello storico delle assunzioni. {error}",
   "cancelTaking": "Annulla l'assunzione registrata",
   "deletedDiaryCannotBeRestored": "Una voce del diario eliminata non può essere ripristinata",
-  "editMenstruation": "Modifica periodo mestruale",
+  "editMenstruation": "Modifica i giorni delle mestruazioni",
   "changedPillNumber": "Modifica numero pillola",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% di sconto rispetto al piano mensile",
   "premiumIntroductionDiscountPriceDeadline": "Con l'abbonamento Premium potrai continuare a utilizzare tutte le funzioni",

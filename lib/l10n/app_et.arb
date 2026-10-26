@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Võtmislogi andmeid ei õnnestunud laadida. {error}",
   "cancelTaking": "Tühista pilli võtmise kirje",
   "deletedDiaryCannotBeRestored": "Kustutatud päevikukannet ei saa taastada",
-  "editMenstruation": "Redigeeri menstruatsiooniperioodi",
+  "editMenstruation": "Muuda päevade kuupäevi",
   "changedPillNumber": "Pilli numbri muutmine",
   "offPercentForMonthlyPremiumPackage": "Kuumaksuga võrreldes {offPercent}% soodsam",
   "premiumIntroductionDiscountPriceDeadline": "Premium registreerimisega saate jätkuvalt kasutada kõiki funktsioone",

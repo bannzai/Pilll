@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Nepavyko įkelti vartojimo istorijos informacijos. {error}",
   "cancelTaking": "Atšaukti tabletės vartojimo įrašą",
   "deletedDiaryCannotBeRestored": "Ištrinto dienoraščio įrašo atkurti nepavyks",
-  "editMenstruation": "Redaguoti menstruacijų laikotarpį",
+  "editMenstruation": "Redaguoti mėnesinių datas",
   "changedPillNumber": "Piliulės numerio pakeitimas",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% nuolaida nuo mėnesinio mokesčio",
   "premiumIntroductionDiscountPriceDeadline": "Su Premium prenumerata galėsite toliau naudoti visas funkcijas",

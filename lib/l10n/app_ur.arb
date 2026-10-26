@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "گولی لینے کی ہسٹری کی معلومات حاصل نہیں ہو سکیں۔ {error}",
   "cancelTaking": "گولی لینے کا ریکارڈ منسوخ کریں",
   "deletedDiaryCannotBeRestored": "حذف شدہ ڈائری کا اندراج واپس نہیں لایا جا سکتا",
-  "editMenstruation": "حیض کی مدت میں ترمیم کریں",
+  "editMenstruation": "ماہواری کی تاریخیں تبدیل کریں",
   "changedPillNumber": "گولی نمبر تبدیلی",
   "offPercentForMonthlyPremiumPackage": "عام ماہانہ پلان کے مقابلے میں {offPercent}٪ رعایت",
   "premiumIntroductionDiscountPriceDeadline": "پریمیم رجسٹریشن کے ساتھ تمام فیچرز کا استعمال جاری رکھ سکتے ہیں",

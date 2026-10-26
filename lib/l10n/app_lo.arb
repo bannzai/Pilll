@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "ບໍ່ສາມາດໂຫຼດຂໍ້ມູນປະຫວັດການກິນຢາໄດ້. {error}",
   "cancelTaking": "ຍົກເລີກບັນທຶກການກິນຢາເມັດ",
   "deletedDiaryCannotBeRestored": "ບັນທຶກປະຈຳວັນທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
-  "editMenstruation": "ແກ້ໄຂໄລຍະປະຈຳເດືອນ",
+  "editMenstruation": "ແກ້ໄຂວັນປະຈຳເດືອນ",
   "changedPillNumber": "ການປ່ຽນແປງເລກເມັດຢາ",
   "offPercentForMonthlyPremiumPackage": "ຫຼຸດ {offPercent}% ຈາກລາຍເດືອນປົກກະຕິ",
   "premiumIntroductionDiscountPriceDeadline": "ດ້ວຍການສະໝັກສະມາຊິກພຣີມຽມ ທ່ານສາມາດໃຊ້ຟີເຈີທັງໝົດໄດ້ຕໍ່ໄປ",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Ичүү тарыхы тууралуу маалыматты алуу мүмкүн болгон жок. {error}",
   "cancelTaking": "Таблетка ичүү жазуусун жокко чыгарыңыз",
   "deletedDiaryCannotBeRestored": "Өчүрүлгөн күндөлүк жазуусун калыбына келтирүү мүмкүн эмес",
-  "editMenstruation": "Менструалдык мезгилди түзөтүү",
+  "editMenstruation": "Айыз күндөрүн өзгөртүңүз",
   "changedPillNumber": "Таблетка номерин өзгөртүү",
   "offPercentForMonthlyPremiumPackage": "Кадимки айлык акы менен салыштырганда {offPercent}% жеңилдик",
   "premiumIntroductionDiscountPriceDeadline": "Премиум катталуу менен бардык функцияларды улантуу менен колдоно аласыз",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "පෙති ගැනීමේ ඉතිහාසය පිළිබඳ තොරතුරු ලබා ගැනීමට නොහැකි විය. {error}",
   "cancelTaking": "පෙත්ත ගත් බවට ඇති සටහන අවලංගු කරන්න",
   "deletedDiaryCannotBeRestored": "මකා දැමූ දිනපොත් සටහනක් නැවත ලබා ගත නොහැක",
-  "editMenstruation": "ආර්තව කාලය සංස්කරණය කරන්න",
+  "editMenstruation": "ඔසප් දින සංස්කරණය කරන්න",
   "changedPillNumber": "පීල් අංකය වෙනස් කළා",
   "offPercentForMonthlyPremiumPackage": "සාමාන්‍ය මාසික සැලසුමට වඩා {offPercent}% අඩු",
   "premiumIntroductionDiscountPriceDeadline": "ප්‍රිමියම් ලියාපදිංචි වීමෙන් දිගටම සියලුම විශේෂාංග භාවිතා කළ හැකිය",

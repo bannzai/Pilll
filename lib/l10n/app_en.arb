@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Couldn’t load pill history information. {error}",
   "cancelTaking": "Undo pill taken",
   "deletedDiaryCannotBeRestored": "Deleted diary entries can’t be restored",
-  "editMenstruation": "Edit Period",
+  "editMenstruation": "Edit period dates",
   "changedPillNumber": "Pill Number Change",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF compared to monthly plan",
   "premiumIntroductionDiscountPriceDeadline": "Premium registration allows you to continue using all features",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Pillerihistoriaa koskevia tietoja ei voitu ladata. {error}",
   "cancelTaking": "Kumoa pillerin ottomerkintä",
   "deletedDiaryCannotBeRestored": "Poistettua päiväkirjamerkintää ei voi palauttaa",
-  "editMenstruation": "Muokkaa kuukautisia",
+  "editMenstruation": "Muokkaa kuukautisten ajankohtaa",
   "changedPillNumber": "Pillerinumeron muutos",
   "offPercentForMonthlyPremiumPackage": "{offPercent}％ OFF tavallisesta kuukausimaksusta",
   "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella kaikki ominaisuudet pysyvät käytettävissä",

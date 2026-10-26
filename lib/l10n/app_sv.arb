@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Det gick inte att hämta information om intagshistorik. {error}",
   "cancelTaking": "Ångra registrerat pillerintag",
   "deletedDiaryCannotBeRestored": "Ett raderat dagboksinlägg kan inte återställas",
-  "editMenstruation": "Redigera menstruationsperiod",
+  "editMenstruation": "Ändra mensdagar",
   "changedPillNumber": "P-pillernummer ändrad",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt jämfört med månadspris",
   "premiumIntroductionDiscountPriceDeadline": "Genom att registrera dig för premium kan du fortsätta att använda alla funktioner",

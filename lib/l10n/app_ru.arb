@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Не удалось загрузить сведения из истории приёма. {error}",
   "cancelTaking": "Отменить запись о приёме таблетки",
   "deletedDiaryCannotBeRestored": "Удалённую запись дневника нельзя восстановить",
-  "editMenstruation": "Редактировать период менструации",
+  "editMenstruation": "Изменить даты месячных",
   "changedPillNumber": "Изменение номера таблетки",
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевле месячной подписки",
   "premiumIntroductionDiscountPriceDeadline": "С премиум-подпиской вы сможете продолжить пользоваться всеми функциями",

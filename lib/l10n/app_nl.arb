@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "De gegevens van de innamegeschiedenis konden niet worden geladen. {error}",
   "cancelTaking": "Geregistreerde pilinname ongedaan maken",
   "deletedDiaryCannotBeRestored": "Een verwijderd dagboekbericht kun je niet herstellen",
-  "editMenstruation": "Menstruatieperiode bewerken",
+  "editMenstruation": "Menstruatiedagen aanpassen",
   "changedPillNumber": "Pilnummer aangepast",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% korting vergeleken met maandelijks",
   "premiumIntroductionDiscountPriceDeadline": "Met Premium-registratie blijf je alle functies gebruiken",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Эм уусан түүхийн мэдээллийг авч чадсангүй. {error}",
   "cancelTaking": "Эм уусан бүртгэлийг цуцлах",
   "deletedDiaryCannotBeRestored": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
-  "editMenstruation": "Сарын тэмдгийн хугацааг засварлах",
+  "editMenstruation": "сарын тэмдгийн өдрүүдийг засах",
   "changedPillNumber": "Эмийн дугаар өөрчлөлт",
   "offPercentForMonthlyPremiumPackage": "Ердийн сарын төлбөрөөс {offPercent}% хөнгөлөлт",
   "premiumIntroductionDiscountPriceDeadline": "Премиум бүртгэл хийснээр бүх функцийг үргэлжлүүлэн ашиглах боломжтой",

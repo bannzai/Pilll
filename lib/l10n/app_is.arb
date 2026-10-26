@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Ekki tókst að sækja upplýsingar um inntökuyfirlit. {error}",
   "cancelTaking": "Afturkalla skráða inntöku pillu",
   "deletedDiaryCannotBeRestored": "Ekki er hægt að endurheimta dagbókarfærslu eftir að henni hefur verið eytt",
-  "editMenstruation": "Breyta tíðarblæðingu",
+  "editMenstruation": "Breyta blæðingadögum",
   "changedPillNumber": "Píllunúmer breytt",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% afsláttur af venjulegu mánaðargjaldi",
   "premiumIntroductionDiscountPriceDeadline": "Með Premium áskrift geturðu áfram notað alla eiginleika",

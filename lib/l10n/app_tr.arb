@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Kullanım geçmişi bilgileri yüklenemedi. {error}",
   "cancelTaking": "Hap alım kaydını geri alın",
   "deletedDiaryCannotBeRestored": "Silinen günlük kaydı geri yüklenemez",
-  "editMenstruation": "Adet dönemini düzenle",
+  "editMenstruation": "Adet günlerini düzenleyin",
   "changedPillNumber": "Hap Numarası Değişikliği",
   "offPercentForMonthlyPremiumPackage": "Normal aylık plana kıyasla %{offPercent} İNDİRİM",
   "premiumIntroductionDiscountPriceDeadline": "Premium üyelik ile tüm özellikleri kullanmaya devam edebilirsiniz",

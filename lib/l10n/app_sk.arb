@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Nepodarilo sa načítať informácie z histórie užívania. {error}",
   "cancelTaking": "Zrušiť záznam o užití tabletky",
   "deletedDiaryCannotBeRestored": "Vymazaný záznam v denníku nie je možné obnoviť",
-  "editMenstruation": "Upraviť menštruáciu",
+  "editMenstruation": "Upraviť obdobie menštruácie",
   "changedPillNumber": "Zmena číslovania piluliek",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% zľava oproti mesačnému plánu",
   "premiumIntroductionDiscountPriceDeadline": "S premium registráciou budú naďalej k dispozícii všetky funkcie",

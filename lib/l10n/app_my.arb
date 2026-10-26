@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "ဆေးသောက်ခဲ့သည့်စာရင်း အချက်အလက်ကို ရယူ၍ မရပါ။ {error}",
   "cancelTaking": "ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပါ",
   "deletedDiaryCannotBeRestored": "ဖျက်လိုက်သော နေ့စဉ်မှတ်တမ်းကို ပြန်လည်ရယူ၍ မရတော့ပါ",
-  "editMenstruation": "ရာသီလာချိန် ပြင်ဆင်ရန်",
+  "editMenstruation": "ရာသီလာသည့်ရက်များကို ပြင်ဆင်ရန်",
   "changedPillNumber": "ဆေးပြားနံပါတ်ပြောင်းလဲခြင်း",
   "offPercentForMonthlyPremiumPackage": "လစဉ် ငွေပေးချေမှုနှင့် နှိုင်းယှဉ်လျှင် {offPercent}％ လျှော့စျေး",
   "premiumIntroductionDiscountPriceDeadline": "Premium စာရင်းသွင်းခြင်းဖြင့် လုပ်ဆောင်ချက်အားလုံးကို ဆက်လက်အသုံးပြုနိုင်သည်",

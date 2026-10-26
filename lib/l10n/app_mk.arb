@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Не успеавме да ги вчитаме податоците за Историја на земање. {error}",
   "cancelTaking": "Поништување запис за земање таблета",
   "deletedDiaryCannotBeRestored": "Избришаниот запис во дневникот не може да се врати",
-  "editMenstruation": "Уредување на менструалниот период",
+  "editMenstruation": "Уредување на периодот на менструација",
   "changedPillNumber": "Промена на број на пилула",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% попуст споредено со месечниот план",
   "premiumIntroductionDiscountPriceDeadline": "Регистрирајте се за премиум за да продолжите да ги користите сите функции",

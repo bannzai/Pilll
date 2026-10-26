@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "לא ניתן לטעון מידע על היסטוריית נטילה. {error}",
   "cancelTaking": "ביטול רישום נטילת הגלולה",
   "deletedDiaryCannotBeRestored": "לא ניתן לשחזר רשומה ביומן לאחר מחיקתה",
-  "editMenstruation": "עריכת תקופת הווסת",
+  "editMenstruation": "עריכת תאריכי המחזור",
   "changedPillNumber": "שינוי מספר גלולה",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% הנחה לעומת התשלום החודשי הרגיל",
   "premiumIntroductionDiscountPriceDeadline": "הרשמה לפרמיום מאפשרת המשך שימוש בכל התכונות",

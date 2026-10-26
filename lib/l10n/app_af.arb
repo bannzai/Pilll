@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Kon nie die innamegeskiedenis laai nie. {error}",
   "cancelTaking": "Maak inname ongedaan",
   "deletedDiaryCannotBeRestored": "’n Dagboekinskrywing wat jy uitvee, kan nie herstel word nie",
-  "editMenstruation": "Wysig menstruasieperiode",
+  "editMenstruation": "Wysig datums van jou maandstonde",
   "changedPillNumber": "Pilnommer wysiging",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% afslag in vergelyking met die gewone maandelikse plan",
   "premiumIntroductionDiscountPriceDeadline": "Met premium registrasie kan jy voortgaan om alle funksies te gebruik",

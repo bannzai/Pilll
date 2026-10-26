@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Informationen zum Einnahmeverlauf konnten nicht geladen werden. {error}",
   "cancelTaking": "Eingetragene Einnahme rückgängig machen",
   "deletedDiaryCannotBeRestored": "Ein gelöschter Tagebucheintrag kann nicht wiederhergestellt werden",
-  "editMenstruation": "Periode bearbeiten",
+  "editMenstruation": "Zeitraum der Periode bearbeiten",
   "changedPillNumber": "Pillennummer geändert",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als das Monatsabo",
   "premiumIntroductionDiscountPriceDeadline": "Mit der Premium-Registrierung können Sie weiterhin alle Funktionen nutzen",

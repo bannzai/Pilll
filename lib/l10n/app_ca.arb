@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "No s’ha pogut carregar la informació de l’historial de preses. {error}",
   "cancelTaking": "Desfer el registre de la píndola",
   "deletedDiaryCannotBeRestored": "No es pot recuperar una entrada del diari un cop eliminada",
-  "editMenstruation": "Editar període menstrual",
+  "editMenstruation": "Edita els dies de la regla",
   "changedPillNumber": "Canvi de número de píndola",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de descompte respecte al preu mensual",
   "premiumIntroductionDiscountPriceDeadline": "Amb la subscripció premium podeu continuar utilitzant totes les funcions",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Neizdevās ielādēt informāciju par lietošanas vēsturi. {error}",
   "cancelTaking": "Atcelt tabletes lietošanas ierakstu",
   "deletedDiaryCannotBeRestored": "Dzēstu dienasgrāmatas ierakstu nevar atjaunot",
-  "editMenstruation": "Rediģēt menstruācijas periodu",
+  "editMenstruation": "Rediģēt mēnešreižu datumus",
   "changedPillNumber": "Tablešu numura maiņa",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% ATLAIDE salīdzinājumā ar mēneša plānu",
   "premiumIntroductionDiscountPriceDeadline": "Ar premium reģistrāciju varēsiet turpināt izmantot visas funkcijas",

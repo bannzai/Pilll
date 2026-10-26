@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Ezin izan da hartze-historia informazioa kargatu. {error}",
   "cancelTaking": "Pilularen hartzea desegin",
   "deletedDiaryCannotBeRestored": "Ezabatutako egunkariko sarrera ezin da berreskuratu",
-  "editMenstruation": "Hilekoaren aldia editatu",
+  "editMenstruation": "Editatu hilekoaren datak",
   "changedPillNumber": "Pilula zenbakia aldatu",
   "offPercentForMonthlyPremiumPackage": "Hilabeteko prezioarekin alderatuta %{offPercent} deskontua",
   "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzan eginbide guztiak erabiltzen jarrai dezakezu",

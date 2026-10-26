@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Informasi riwayat minum pil tidak dapat dimuat. {error}",
   "cancelTaking": "Batalkan catatan minum pil",
   "deletedDiaryCannotBeRestored": "Catatan harian yang dihapus tidak dapat dipulihkan",
-  "editMenstruation": "Edit Periode Menstruasi",
+  "editMenstruation": "Edit tanggal haid",
   "changedPillNumber": "Perubahan Nomor Pil",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF dari paket bulanan",
   "premiumIntroductionDiscountPriceDeadline": "Berlangganan premium untuk terus menggunakan semua fitur",

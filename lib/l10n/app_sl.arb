@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Podatkov o zgodovini jemanja ni bilo mogoče naložiti. {error}",
   "cancelTaking": "Prekličite zapis o zaužitju tablete",
   "deletedDiaryCannotBeRestored": "Izbrisanega dnevniškega zapisa ni mogoče obnoviti",
-  "editMenstruation": "Uredi menstruacijo",
+  "editMenstruation": "Uredite obdobje menstruacije",
   "changedPillNumber": "Sprememba številke tabletke",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % popust v primerjavi z običajno mesečno naročnino",
   "premiumIntroductionDiscountPriceDeadline": "S premium naročnino lahko še naprej uporabljate vse funkcije",

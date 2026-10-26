@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "सेवन इतिहास की जानकारी लोड नहीं हो सकी। {error}",
   "cancelTaking": "गोली लेने का रिकॉर्ड हटाएं",
   "deletedDiaryCannotBeRestored": "मिटाई गई डायरी प्रविष्टि वापस नहीं लाई जा सकती",
-  "editMenstruation": "मासिक धर्म की अवधि संपादित करें",
+  "editMenstruation": "पीरियड की तारीखें बदलें",
   "changedPillNumber": "पिल नंबर परिवर्तन",
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक की तुलना में {offPercent}% छूट",
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम पंजीकरण के साथ सभी सुविधाओं का उपयोग जारी रख सकते हैं",

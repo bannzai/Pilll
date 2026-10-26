@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "የአወሳሰድ ታሪክ መረጃ ማግኘት አልተቻለም። {error}",
   "cancelTaking": "የክኒን መውሰድን ቀልብስ",
   "deletedDiaryCannotBeRestored": "የተሰረዘ የዕለት ማስታወሻ መዝገብ መመለስ አይቻልም",
-  "editMenstruation": "የወር አበባ ጊዜን ማስተካከል",
+  "editMenstruation": "የወር አበባ ቀናትን አርትዕ",
   "changedPillNumber": "የክኒን ቁጥር ለውጥ",
   "offPercentForMonthlyPremiumPackage": "ከመደበኛ ወርሃዊ ክፍያ ጋር ሲወዳደር {offPercent}% ቅናሽ",
   "premiumIntroductionDiscountPriceDeadline": "ፕሪሚየም በመመዝገብ ሁሉንም ባህርያት በመቀጠል መጠቀም ይችላሉ",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "د ګولۍ اخیستلو تاریخچې معلومات ترلاسه نه شول. {error}",
   "cancelTaking": "د ګولۍ د اخیستو ثبت لغوه کړئ",
   "deletedDiaryCannotBeRestored": "د ورځني یادښت له ړنګولو وروسته یې بېرته ترلاسه کول امکان نه لري",
-  "editMenstruation": "د میاشتنۍ دورې سمون",
+  "editMenstruation": "د حیض ورځې سمې کړئ",
   "changedPillNumber": "د ګولۍ شمېره بدلون",
   "offPercentForMonthlyPremiumPackage": "د عادي میاشتنۍ پیسو په پرتله {offPercent}٪ تخفیف",
   "premiumIntroductionDiscountPriceDeadline": "د پریمیم ثبت سره ټولې دندې کارولی شي",

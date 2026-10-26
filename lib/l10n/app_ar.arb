@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "تعذر جلب معلومات سجل تناول الحبوب. {error}",
   "cancelTaking": "التراجع عن تسجيل تناول الحبة",
   "deletedDiaryCannotBeRestored": "لا يمكن استعادة اليوميات بعد حذفها",
-  "editMenstruation": "تعديل فترة الدورة الشهرية",
+  "editMenstruation": "تعديل فترة الدورة",
   "changedPillNumber": "تغيير رقم الحبة",
   "offPercentForMonthlyPremiumPackage": "خصم {offPercent}٪ مقارنة بالخطة الشهرية العادية",
   "premiumIntroductionDiscountPriceDeadline": "التسجيل المميز يتيح لك الاستمرار في استخدام جميع الميزات",

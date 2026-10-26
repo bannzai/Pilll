@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Không thể tải thông tin lịch sử uống thuốc. {error}",
   "cancelTaking": "Hủy ghi nhận đã uống thuốc",
   "deletedDiaryCannotBeRestored": "Không thể khôi phục mục nhật ký đã xóa",
-  "editMenstruation": "Chỉnh sửa chu kỳ kinh nguyệt",
+  "editMenstruation": "Chỉnh sửa ngày kinh nguyệt",
   "changedPillNumber": "Thay đổi số thuốc",
   "offPercentForMonthlyPremiumPackage": "Giảm {offPercent}% so với gói theo tháng thường",
   "premiumIntroductionDiscountPriceDeadline": "Đăng ký Premium để tiếp tục sử dụng tất cả các tính năng",

@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulei. {error}",
   "cancelTaking": "Anulează înregistrarea pilulei",
   "deletedDiaryCannotBeRestored": "O însemnare ștearsă din jurnal nu poate fi recuperată",
-  "editMenstruation": "Editează perioada menstruală",
+  "editMenstruation": "Editează perioada menstruației",
   "changedPillNumber": "Modificare număr pilulă",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% reducere față de abonamentul lunar",
   "premiumIntroductionDiscountPriceDeadline": "Cu abonamentul Premium puteți continua să utilizați toate funcțiile",

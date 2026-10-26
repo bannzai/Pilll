@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "Неуспешно зареждане на информацията за История на приема. {error}",
   "cancelTaking": "Отмяна на записания прием",
   "deletedDiaryCannotBeRestored": "Изтритият запис в дневника не може да бъде възстановен",
-  "editMenstruation": "Редактиране на менструалния период",
+  "editMenstruation": "Редактиране на периода на мензиса",
   "changedPillNumber": "Промяна на номера на хапчето",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% отстъпка спрямо месечния план",
   "premiumIntroductionDiscountPriceDeadline": "С премиум регистрация можете да продължите да използвате всички функции",

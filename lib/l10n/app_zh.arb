@@ -418,7 +418,7 @@
   "failedToGetPillSheetHistory": "暂时无法获取服药历史信息。{error}",
   "cancelTaking": "撤销服药记录",
   "deletedDiaryCannotBeRestored": "删除的日记无法恢复",
-  "editMenstruation": "编辑月经期间",
+  "editMenstruation": "编辑经期日期",
   "changedPillNumber": "药片编号更改",
   "offPercentForMonthlyPremiumPackage": "相比普通月费优惠{offPercent}％",
   "premiumIntroductionDiscountPriceDeadline": "订阅高级会员即可继续使用所有功能",
