@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Түзмөгүңүздүн убакыт алкагы ({deviceTimezoneName}) менен шайкештештиргиңиз келеби?",
   "currentTimeZone": "Учурда коюлган убакыт алкагы",
   "yes": "Ооба",
-  "no": "жок",
+  "no": "Жок",
   "unsubscribeInfo": "Жокко чыгаруу жөнүндө",
   "pillReminder": "Таблетка ичүү эскертмеси",
   "takePillReminderChannelName": "Табалгы билдирүүсү",

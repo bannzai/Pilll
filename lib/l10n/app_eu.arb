@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Gailuaren ordu-eremuarekin ({deviceTimezoneName}) sinkronizatu nahi duzu?",
   "currentTimeZone": "Une honetan ezarritako ordu-eremua",
   "yes": "Bai",
-  "no": "ez",
+  "no": "Ez",
   "unsubscribeInfo": "Ezeztapenari buruz",
   "pillReminder": "Pilula hartzeko jakinarazpena",
   "takePillReminderChannelName": "Hartzeko jakinarazpena",

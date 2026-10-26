@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Синхронизировать с часовым поясом устройства ({deviceTimezoneName})?",
   "currentTimeZone": "Текущий часовой пояс",
   "yes": "Да",
-  "no": "нет",
+  "no": "Нет",
   "unsubscribeInfo": "О отмене подписки",
   "pillReminder": "Напоминания о приёме таблеток",
   "takePillReminderChannelName": "Напоминания о приеме",

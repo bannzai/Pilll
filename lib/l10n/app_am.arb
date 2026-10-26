@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "ከመሣሪያዎ የሰዓት ክልል ({deviceTimezoneName}) ጋር ማመሳሰል ይፈልጋሉ?",
   "currentTimeZone": "አሁን የተቀናበረው የሰዓት ሰቅ",
   "yes": "አዎ",
-  "no": "አይደለም",
+  "no": "አይ",
   "unsubscribeInfo": "ስለ መሻር",
   "pillReminder": "ፒል መውሰድ ማሳሰቢያ",
   "takePillReminderChannelName": "የክኒን መውሰድ ማሳወቂያ",

@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Да ли желите да ускладите са временском зоном уређаја ({deviceTimezoneName})?",
   "currentTimeZone": "Тренутно подешена временска зона",
   "yes": "Да",
-  "no": "Ne",
+  "no": "Не",
   "unsubscribeInfo": "О отказу",
   "pillReminder": "Podsetnik za uzimanje pilula",
   "takePillReminderChannelName": "Obaveštenja o uzimanju",

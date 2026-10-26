@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Qurilmangizning vaqt mintaqasi ({deviceTimezoneName}) bilan sinxronlashtirmoqchimisiz?",
   "currentTimeZone": "Hozir sozlangan vaqt mintaqasi",
   "yes": "Ha",
-  "no": "Yo'q",
+  "no": "Yoʻq",
   "unsubscribeInfo": "Obunani bekor qilish haqida",
   "pillReminder": "Dori qabul qilish eslatmasi",
   "takePillReminderChannelName": "Dori ichish bildirishnomalari",

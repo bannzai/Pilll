@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Ցանկանո՞ւմ եք համաժամեցնել սարքի ժամային գոտու ({deviceTimezoneName}) հետ։",
   "currentTimeZone": "Ներկայումս սահմանված ժամային գոտի",
   "yes": "Այո",
-  "no": "ոչ",
+  "no": "Ոչ",
   "unsubscribeInfo": "չեղարկման մասին",
   "pillReminder": "Դեղահատի ընդունման ծանուցում",
   "takePillReminderChannelName": "Դեղի ծանուցում",

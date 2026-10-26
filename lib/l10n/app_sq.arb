@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Dëshironi të sinkronizoni me zonën kohore të pajisjes ({deviceTimezoneName})?",
   "currentTimeZone": "Zona kohore e caktuar aktualisht",
   "yes": "Po",
-  "no": "jo",
+  "no": "Jo",
   "unsubscribeInfo": "Rreth anulimit",
   "pillReminder": "Njoftim për marrjen e pilulës",
   "takePillReminderChannelName": "Njoftim marrje",

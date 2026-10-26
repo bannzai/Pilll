@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "ඔබේ උපාංගයේ වේලා කලාපය ({deviceTimezoneName}) සමඟ සමමුහුර්ත කරන්නද?",
   "currentTimeZone": "දැනට සකසා ඇති කාල කලාපය",
   "yes": "ඔව්",
-  "no": "නෑ",
+  "no": "නැහැ",
   "unsubscribeInfo": "අවලංගු කිරීම ගැන",
   "pillReminder": "ගර්භ නිරෝධක ගෙඩි ගැනීමේ දැනුම්දීම",
   "takePillReminderChannelName": "සේවන දැනුම්දීම්",

@@ -33,7 +33,7 @@
   "syncWithDeviceTimeZone": "Құрылғының уақыт белдеуімен ({deviceTimezoneName}) синхрондағыңыз келе ме?",
   "currentTimeZone": "Қазір орнатылған уақыт белдеуі",
   "yes": "Иә",
-  "no": "жоқ",
+  "no": "Жоқ",
   "unsubscribeInfo": "Жазылымды жою туралы",
   "pillReminder": "Дәрі қабылдау хабарландыруы",
   "takePillReminderChannelName": "Дәрі қабылдау хабарландыруы",
