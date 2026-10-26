@@ -412,7 +412,7 @@
   "notificationNumber": "Pemberitahuan {number}",
   "notificationTime": "Masa pemberitahuan",
   "timeZoneChangedTo": "Zon waktu telah ditukar kepada {tz}",
-  "changeStartOfPillDays": "Ubah Permulaan Kiraan Hari Pengambilan",
+  "changeStartOfPillDays": "Ubah permulaan kiraan hari pengambilan pil",
   "changeEndOfPillDays": "Ubah akhir tempoh pengambilan",
   "cannotUpdateToReplacePillSheet": "Tidak dapat mengemaskini dengan penggantian helaian pil id: {id}",
   "failedToGetPillSheetHistory": "Gagal memperoleh data sejarah pengambilan. {error}",

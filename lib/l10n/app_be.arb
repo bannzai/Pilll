@@ -412,7 +412,7 @@
   "notificationNumber": "Апавяшчэнне {number}",
   "notificationTime": "Час апавяшчэння",
   "timeZoneChangedTo": "Часавы пояс зменены на {tz}",
-  "changeStartOfPillDays": "Змяніць пачатак прыёму дзён",
+  "changeStartOfPillDays": "Змяніць пачатак адліку дзён прыёму пігулак",
   "changeEndOfPillDays": "Змена канца прыёму пілюль",
   "cannotUpdateToReplacePillSheet": "Немагчыма абнавіць пілюльную схему id: {id}",
   "failedToGetPillSheetHistory": "Не атрымалася загрузіць інформацыю аб гісторыі прыёму. {error}",

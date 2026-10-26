@@ -412,7 +412,7 @@
   "notificationNumber": "اعلان {number}",
   "notificationTime": "زمان اعلان",
   "timeZoneChangedTo": "منطقهٔ زمانی به {tz} تغییر کرد",
-  "changeStartOfPillDays": "تغییر شروع دوره مصرف",
+  "changeStartOfPillDays": "تغییر شروع شمارش روزهای مصرف قرص",
   "changeEndOfPillDays": "تغییر پایان دوره مصرف",
   "cannotUpdateToReplacePillSheet": "به‌روزرسانی با جایگزینی ورق قرص امکان‌پذیر نیست id: {id}",
   "failedToGetPillSheetHistory": "دریافت اطلاعات سابقه مصرف ناموفق بود. {error}",

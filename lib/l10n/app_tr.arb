@@ -412,7 +412,7 @@
   "notificationNumber": "Bildirim {number}",
   "notificationTime": "Bildirim saati",
   "timeZoneChangedTo": "Saat dilimi {tz} olarak değiştirildi",
-  "changeStartOfPillDays": "Alım günlerinin başlangıcını değiştir",
+  "changeStartOfPillDays": "Hap kullanım günlerinin sayım başlangıcını değiştirin",
   "changeEndOfPillDays": "Kullanım süresinin sonunu değiştir",
   "cannotUpdateToReplacePillSheet": "Hap paketi değişimi nedeniyle güncelleme başarısız id: {id}",
   "failedToGetPillSheetHistory": "İlaç kullanım geçmişi alınamadı. {error}",

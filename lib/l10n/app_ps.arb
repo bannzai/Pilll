@@ -412,7 +412,7 @@
   "notificationNumber": "خبرتیا {number}",
   "notificationTime": "د خبرتیا وخت",
   "timeZoneChangedTo": "د وخت سیمه {tz} ته بدله شوه",
-  "changeStartOfPillDays": "د اخستلو د پیل ورځ بدلول",
+  "changeStartOfPillDays": "د ګولۍ اخیستو د ورځو د شمېرلو د پیل ورځ بدله کړئ",
   "changeEndOfPillDays": "د استعمال ورځو د پای بدلون",
   "cannotUpdateToReplacePillSheet": "د ګولۍ ورقه بدلول ناکام و، پیژندنه: {id}",
   "failedToGetPillSheetHistory": "د منع حمل ګولۍ د کارونې تاریخ ترلاسه کول ناکام شو. {error}",

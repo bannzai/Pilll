@@ -412,7 +412,7 @@
   "notificationNumber": "அறிவிப்பு {number}",
   "notificationTime": "அறிவிப்பு நேரம்",
   "timeZoneChangedTo": "நேர மண்டலம் {tz} ஆக மாற்றப்பட்டது",
-  "changeStartOfPillDays": "மருந்து நாட்களின் தொடக்கத்தை மாற்று",
+  "changeStartOfPillDays": "மாத்திரை எடுத்துக்கொள்ளும் நாட்களின் கணக்கீடு தொடங்கும் நாளை மாற்றுங்கள்",
   "changeEndOfPillDays": "உட்கொள்ளும் நாட்களின் முடிவை மாற்றவும்",
   "cannotUpdateToReplacePillSheet": "மாத்திரை தாளின் மாற்று மூலம் புதுப்பிக்க முடியவில்லை id: {id}",
   "failedToGetPillSheetHistory": "மருந்து உட்கொண்ட வரலாற்றுத் தகவல்களைப் பெறுவதில் தோல்வி. {error}",

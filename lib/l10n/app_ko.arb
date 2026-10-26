@@ -412,7 +412,7 @@
   "notificationNumber": "알림 {number}",
   "notificationTime": "알림 시간",
   "timeZoneChangedTo": "시간대가 {tz}(으)로 변경됐어요",
-  "changeStartOfPillDays": "복용 일수 시작 변경",
+  "changeStartOfPillDays": "약 복용 일수 계산 시작일 변경",
   "changeEndOfPillDays": "복용 일수 종료 변경",
   "cannotUpdateToReplacePillSheet": "피임약 시트 교체로 업데이트할 수 없습니다 id: {id}",
   "failedToGetPillSheetHistory": "복용 기록 정보를 가져오는 데 실패했습니다. {error}",

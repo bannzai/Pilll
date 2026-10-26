@@ -412,7 +412,7 @@
   "notificationNumber": "ማሳወቂያ {number}",
   "notificationTime": "የማሳወቂያ ሰዓት",
   "timeZoneChangedTo": "የሰዓት ሰቅ ወደ {tz} ተቀይሯል",
-  "changeStartOfPillDays": "የአወሳሰድ መጀመሪያ ቀን መቀየር",
+  "changeStartOfPillDays": "የክኒን መውሰድ ቀናት ቆጠራ መጀመሪያን ይቀይሩ",
   "changeEndOfPillDays": "የመድሃኒት መውሰጃ ቀናት መጨረሻ መቀየር",
   "cannotUpdateToReplacePillSheet": "በክኒን ሽርት መተካት ማሻሻል አልተሳካም id: {id}",
   "failedToGetPillSheetHistory": "የመድሃኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",

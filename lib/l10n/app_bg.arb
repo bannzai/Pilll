@@ -412,7 +412,7 @@
   "notificationNumber": "Известие {number}",
   "notificationTime": "Час на известието",
   "timeZoneChangedTo": "Часовата зона е променена на {tz}",
-  "changeStartOfPillDays": "Промяна на началото на приема",
+  "changeStartOfPillDays": "Промяна на началото на броенето на дните за прием",
   "changeEndOfPillDays": "Променяне на края на приема",
   "cannotUpdateToReplacePillSheet": "Не може да се актуализира поради смяна на блистера с хапчета id: {id}",
   "failedToGetPillSheetHistory": "Неуспешно получаване на информацията за историята на приема. {error}",

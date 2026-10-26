@@ -412,7 +412,7 @@
   "notificationNumber": "Bildirishnoma {number}",
   "notificationTime": "Bildirishnoma vaqti",
   "timeZoneChangedTo": "Vaqt mintaqasi {tz} ga oʻzgartirildi",
-  "changeStartOfPillDays": "Qabul qilish kunlarining boshlanishini o'zgartirish",
+  "changeStartOfPillDays": "Tabletka qabul qilish kunlarini sanash boshlanadigan kunni oʻzgartiring",
   "changeEndOfPillDays": "Ichish mudatining tugashini o'zgartirish",
   "cannotUpdateToReplacePillSheet": "Dori varaqlarini almashtirish orqali yangilab bo'lmadi id: {id}",
   "failedToGetPillSheetHistory": "Dori qabul qilish tarixi ma'lumotlarini olishda xatolik yuz berdi. {error}",

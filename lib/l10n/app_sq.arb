@@ -412,7 +412,7 @@
   "notificationNumber": "Njoftim {number}",
   "notificationTime": "Ora e njoftimit",
   "timeZoneChangedTo": "Zona kohore u ndryshua në {tz}",
-  "changeStartOfPillDays": "Ndrysho datën e fillimit të marrjes",
+  "changeStartOfPillDays": "Ndryshoni fillimin e numërimit të ditëve të marrjes së pilulës",
   "changeEndOfPillDays": "Ndrysho fundin e dozimit",
   "cannotUpdateToReplacePillSheet": "Nuk mund të përditësohet për shkak të zëvendësimit të fletës së pilulës id: {id}",
   "failedToGetPillSheetHistory": "Dështoi marrja e informacioneve të historikut të dozave. {error}",

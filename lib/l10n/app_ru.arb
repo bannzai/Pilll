@@ -412,7 +412,7 @@
   "notificationNumber": "Уведомление {number}",
   "notificationTime": "Время уведомления",
   "timeZoneChangedTo": "Часовой пояс изменён на {tz}",
-  "changeStartOfPillDays": "Изменить начало отсчета дней приема",
+  "changeStartOfPillDays": "Изменить начало отсчёта дней приёма таблетки",
   "changeEndOfPillDays": "Изменить окончание периода приема",
   "cannotUpdateToReplacePillSheet": "Не удается обновить при замене упаковки таблеток id: {id}",
   "failedToGetPillSheetHistory": "Не удалось получить данные о истории приёма. {error}",

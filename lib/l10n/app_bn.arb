@@ -412,7 +412,7 @@
   "notificationNumber": "বিজ্ঞপ্তি {number}",
   "notificationTime": "বিজ্ঞপ্তির সময়",
   "timeZoneChangedTo": "সময় অঞ্চল {tz} করা হয়েছে",
-  "changeStartOfPillDays": "সেবনের দিন গণনার শুরু পরিবর্তন করুন",
+  "changeStartOfPillDays": "পিল খাওয়ার দিনের গণনা শুরুর দিন পরিবর্তন করুন",
   "changeEndOfPillDays": "সেবনের শেষ দিন পরিবর্তন করুন",
   "cannotUpdateToReplacePillSheet": "পিল শিট প্রতিস্থাপন আপডেট করা যায়নি id: {id}",
   "failedToGetPillSheetHistory": "সেবন ইতিহাসের তথ্য পেতে ব্যর্থ হয়েছে। {error}",

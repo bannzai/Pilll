@@ -412,7 +412,7 @@
   "notificationNumber": "Notification {number}",
   "notificationTime": "Heure de notification",
   "timeZoneChangedTo": "Le fuseau horaire a été défini sur {tz}",
-  "changeStartOfPillDays": "Modifier le début des jours de dosage",
+  "changeStartOfPillDays": "Modifier le début du décompte des jours de prise de la pilule",
   "changeEndOfPillDays": "Modifier les jours de fin de traitement",
   "cannotUpdateToReplacePillSheet": "Impossible de mettre à jour en raison de l'ID de remplacement de la feuille de pilules : {id}",
   "failedToGetPillSheetHistory": "Échec de la récupération des informations sur l'historique de prise de pilule. {error}",

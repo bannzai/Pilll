@@ -412,7 +412,7 @@
   "notificationNumber": "Известување {number}",
   "notificationTime": "Време на известување",
   "timeZoneChangedTo": "Временската зона е променета во {tz}",
-  "changeStartOfPillDays": "Промени почеток на бројот на денови за земање",
+  "changeStartOfPillDays": "Промена на почетокот на броењето денови за земање таблета",
   "changeEndOfPillDays": "Промени крај на периодот на земање",
   "cannotUpdateToReplacePillSheet": "Не може да се ажурира заменувањето на листчето со пилули id: {id}",
   "failedToGetPillSheetHistory": "Не успеавме да ги преземеме информациите за историјата на прием. {error}",

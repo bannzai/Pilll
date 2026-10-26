@@ -412,7 +412,7 @@
   "notificationNumber": "सूचना {number}",
   "notificationTime": "सूचनाको समय",
   "timeZoneChangedTo": "समय क्षेत्र {tz} मा परिवर्तन गरिएको छ",
-  "changeStartOfPillDays": "सेवन दिनको शुरुवात परिवर्तन गर्नुहोस्",
+  "changeStartOfPillDays": "चक्की खाने दिनहरूको गणना सुरु हुने दिन परिवर्तन गर्नुहोस्",
   "changeEndOfPillDays": "सेवन दिनको अन्त्य परिवर्तन गर्नुहोस्",
   "cannotUpdateToReplacePillSheet": "पिल सिट बदली गरेर अद्यावधिक गर्न सकिएन आईडी: {id}",
   "failedToGetPillSheetHistory": "औषधि सेवन इतिहासको जानकारी प्राप्त गर्न असफल भयो। {error}",

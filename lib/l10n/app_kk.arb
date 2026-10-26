@@ -412,7 +412,7 @@
   "notificationNumber": "Хабарландыру {number}",
   "notificationTime": "Хабарландыру уақыты",
   "timeZoneChangedTo": "Уақыт белдеуі {tz} болып өзгертілді",
-  "changeStartOfPillDays": "Қабылдау күндерінің басталуын өзгерту",
+  "changeStartOfPillDays": "Таблетка қабылдау күндерін санаудың басталуын өзгертіңіз",
   "changeEndOfPillDays": "Қабылдау мерзімінің соңын өзгерту",
   "cannotUpdateToReplacePillSheet": "Таблетка парағын ауыстыру арқылы жаңарту болмады id: {id}",
   "failedToGetPillSheetHistory": "Дәрі қабылдау тарихын алу сәтсіз аяқталды。{error}",

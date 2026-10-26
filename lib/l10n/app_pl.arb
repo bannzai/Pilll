@@ -412,7 +412,7 @@
   "notificationNumber": "Powiadomienie {number}",
   "notificationTime": "Godzina powiadomienia",
   "timeZoneChangedTo": "Strefa czasowa została zmieniona na {tz}",
-  "changeStartOfPillDays": "Zmień początek liczenia dni przyjmowania",
+  "changeStartOfPillDays": "Zmień początek liczenia dni przyjmowania pigułki",
   "changeEndOfPillDays": "Zmień koniec okresu przyjmowania",
   "cannotUpdateToReplacePillSheet": "Nie można zaktualizować z powodu wymiany opakowania tabletek id: {id}",
   "failedToGetPillSheetHistory": "Nie udało się pobrać historii przyjmowania tabletek. {error}",

@@ -412,7 +412,7 @@
   "notificationNumber": "ການແຈ້ງເຕືອນ {number}",
   "notificationTime": "ເວລາແຈ້ງເຕືອນ",
   "timeZoneChangedTo": "ເຂດເວລາຖືກປ່ຽນເປັນ {tz} ແລ້ວ",
-  "changeStartOfPillDays": "ປ່ຽນວັນເລີ່ມກິນຢາ",
+  "changeStartOfPillDays": "ປ່ຽນວັນເລີ່ມນັບຈຳນວນມື້ກິນຢາເມັດ",
   "changeEndOfPillDays": "ປ່ຽນແປງການສິ້ນສຸດວັນທີ່ກິນຢາ",
   "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບເດດແຜ່ນຢາໂດຍການທົດແທນ id: {id}",
   "failedToGetPillSheetHistory": "ບໍ່ສາມາດດຶງຂໍ້ມູນປະຫວັດການດື່ມຢາໄດ້. {error}",

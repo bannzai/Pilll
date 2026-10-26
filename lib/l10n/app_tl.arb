@@ -412,7 +412,7 @@
   "notificationNumber": "Abiso {number}",
   "notificationTime": "Oras ng abiso",
   "timeZoneChangedTo": "Napalitan ang sona ng oras sa {tz}",
-  "changeStartOfPillDays": "Baguhin ang simula ng mga araw ng pag-inom",
+  "changeStartOfPillDays": "Baguhin ang simula ng pagbibilang ng mga araw ng pag-inom ng pildoras",
   "changeEndOfPillDays": "Baguhin ang wakas ng mga araw ng pag-inom",
   "cannotUpdateToReplacePillSheet": "Hindi ma-update ang pagpapalit ng pill sheet id: {id}",
   "failedToGetPillSheetHistory": "Nabigong makuha ang impormasyon ng kasaysayan ng pag-inom. {error}",

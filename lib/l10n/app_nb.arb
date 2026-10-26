@@ -412,7 +412,7 @@
   "notificationNumber": "Varsel {number}",
   "notificationTime": "Varslingstidspunkt",
   "timeZoneChangedTo": "Tidssonen er endret til {tz}",
-  "changeStartOfPillDays": "Endre startdato for inntak",
+  "changeStartOfPillDays": "Endre startdag for telling av p-pilledager",
   "changeEndOfPillDays": "Endre slutt på pilleperioden",
   "cannotUpdateToReplacePillSheet": "Kan ikke oppdatere ved utskifting av pillepakke id: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke hente informasjon om inntak-historie. {error}",

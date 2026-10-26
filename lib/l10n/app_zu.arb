@@ -412,7 +412,7 @@
   "notificationNumber": "Isaziso {number}",
   "notificationTime": "Isikhathi sesaziso",
   "timeZoneChangedTo": "Indawo yesikhathi ishintshelwe ku-{tz}",
-  "changeStartOfPillDays": "Shintsha ukuqala kwezinsuku zokuthatha imithi",
+  "changeStartOfPillDays": "Sicela ushintshe usuku okuqala ngalo ukubalwa kwezinsuku zokuphuza iphilisi",
   "changeEndOfPillDays": "Shintsha usuku lokuphela lokuphuza",
   "cannotUpdateToReplacePillSheet": "Akukwazi ukubuyekeza umqulu wamaphilisi ngokuwushintsha i-ID: {id}",
   "failedToGetPillSheetHistory": "Kuhlulekile ukuthola ulwazi lwesimo sokudla amaphilisi. {error}",

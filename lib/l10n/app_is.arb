@@ -412,7 +412,7 @@
   "notificationNumber": "Tilkynning {number}",
   "notificationTime": "Tími tilkynningar",
   "timeZoneChangedTo": "Tímabeltinu var breytt í {tz}",
-  "changeStartOfPillDays": "Breyta upphafi inntökudaga",
+  "changeStartOfPillDays": "Breyta upphafsdegi talningar á pilludögum",
   "changeEndOfPillDays": "Breyta loki inntökutímabils",
   "cannotUpdateToReplacePillSheet": "Uppfærsla pillublaðs mistókst, auðkenni: {id}",
   "failedToGetPillSheetHistory": "Ekki tókst að sækja taknahald upplýsingar. {error}",

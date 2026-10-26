@@ -412,7 +412,7 @@
   "notificationNumber": "ਸੂਚਨਾ {number}",
   "notificationTime": "ਸੂਚਨਾ ਦਾ ਸਮਾਂ",
   "timeZoneChangedTo": "ਸਮਾਂ ਖੇਤਰ {tz} ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਹੈ",
-  "changeStartOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸ਼ੁਰੂਆਤ ਬਦਲੋ",
+  "changeStartOfPillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਦਾ ਸ਼ੁਰੂਆਤੀ ਦਿਨ ਬਦਲੋ",
   "changeEndOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦਾ ਅੰਤ ਬਦਲੋ",
   "cannotUpdateToReplacePillSheet": "ਪਿੱਲ ਸ਼ੀਟ ਦੀ ਬਦਲੀ ਨਾਲ ਅਪਡੇਟ ਨਹੀਂ ਹੋ ਸਕਦਾ id: {id}",
   "failedToGetPillSheetHistory": "ਦਵਾਈ ਲੈਣ ਦੇ ਇਤਿਹਾਸ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। {error}",

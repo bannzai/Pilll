@@ -412,7 +412,7 @@
   "notificationNumber": "Obavijest {number}",
   "notificationTime": "Vrijeme obavijesti",
   "timeZoneChangedTo": "Vremenska zona je promijenjena na {tz}",
-  "changeStartOfPillDays": "Promjena početka dana uzimanja",
+  "changeStartOfPillDays": "Promijenite početak brojanja dana uzimanja pilula",
   "changeEndOfPillDays": "Promijeni kraj uzimanja",
   "cannotUpdateToReplacePillSheet": "Ne može se ažurirati zamjena tabletke id: {id}",
   "failedToGetPillSheetHistory": "Neuspjelo je učitavanje podataka o istoriji uzimanja. {error}",

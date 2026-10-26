@@ -412,7 +412,7 @@
   "notificationNumber": "အသိပေးချက် {number}",
   "notificationTime": "အသိပေးချက်အချိန်",
   "timeZoneChangedTo": "အချိန်ဇုန်ကို {tz} သို့ ပြောင်းလဲပြီးပါပြီ",
-  "changeStartOfPillDays": "သောက်သုံးရက်ပေါင်း၏ အစကို ပြောင်းလဲခြင်း",
+  "changeStartOfPillDays": "ဆေးလုံးသောက်သည့် ရက်အရေအတွက် စတင်ရေတွက်မည့်ရက်ကို ပြောင်းပါ",
   "changeEndOfPillDays": "သောက်သုံးရက်နေ့အဆုံးကို ပြောင်းလဲရန်",
   "cannotUpdateToReplacePillSheet": "ပီလ်ရှိတ် အစားထိုးမွမ်းမံ၍ မရပါ id: {id}",
   "failedToGetPillSheetHistory": "ဆေးသောက်သုံးမှတ်တမ်းအချက်အလက် ရယူခြင်းမအောင်မြင်ပါ။ {error}",

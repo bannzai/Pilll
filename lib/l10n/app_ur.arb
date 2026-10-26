@@ -412,7 +412,7 @@
   "notificationNumber": "اطلاع {number}",
   "notificationTime": "اطلاع کا وقت",
   "timeZoneChangedTo": "ٹائم زون {tz} میں تبدیل کر دیا گیا ہے",
-  "changeStartOfPillDays": "دوا کے دنوں کی شروعات تبدیل کریں",
+  "changeStartOfPillDays": "گولی لینے کے دنوں کی گنتی کا آغاز تبدیل کریں",
   "changeEndOfPillDays": "دوا لینے کی مدت کا اختتام تبدیل کریں",
   "cannotUpdateToReplacePillSheet": "پل شیٹ کی تبدیلی سے اپڈیٹ نہیں ہو سکا آئی ڈی: {id}",
   "failedToGetPillSheetHistory": "دوا کے استعمال کی تاریخ کی معلومات حاصل کرنے میں ناکامی۔ {error}",

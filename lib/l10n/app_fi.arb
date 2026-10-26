@@ -412,7 +412,7 @@
   "notificationNumber": "Ilmoitus {number}",
   "notificationTime": "Ilmoituksen aika",
   "timeZoneChangedTo": "Aikavyöhykkeeksi vaihdettiin {tz}",
-  "changeStartOfPillDays": "Muuta ottopäivien alkua",
+  "changeStartOfPillDays": "Vaihda pillereiden käyttöpäivien laskennan aloituspäivää",
   "changeEndOfPillDays": "Muuta käyttöjakson päättymistä",
   "cannotUpdateToReplacePillSheet": "Pillerilehden päivittäminen epäonnistui id: {id}",
   "failedToGetPillSheetHistory": "Ottamishistorian tietojen lataaminen epäonnistui. {error}",

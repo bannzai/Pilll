@@ -412,7 +412,7 @@
   "notificationNumber": "Bildiriş {number}",
   "notificationTime": "Bildiriş vaxtı",
   "timeZoneChangedTo": "Saat qurşağınız {tz} olaraq dəyişdirildi",
-  "changeStartOfPillDays": "Qəbul başlanğıc tarixini dəyişdirmək",
+  "changeStartOfPillDays": "Həb qəbulu günlərinin sayımının başlanğıcını dəyişin",
   "changeEndOfPillDays": "Qəbul müddətinin sonunu dəyişdirmək",
   "cannotUpdateToReplacePillSheet": "Həb lövhəsinin əvəzlənməsi zamanı yeniləmə uğursuz oldu id: {id}",
   "failedToGetPillSheetHistory": "Dərman qəbulu tarixçəsi məlumatlarının əldə edilməsi uğursuz oldu. {error}",

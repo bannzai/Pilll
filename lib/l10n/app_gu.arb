@@ -412,7 +412,7 @@
   "notificationNumber": "સૂચના {number}",
   "notificationTime": "સૂચનાનો સમય",
   "timeZoneChangedTo": "સમય ઝોન {tz} પર બદલાઈ ગયો છે",
-  "changeStartOfPillDays": "સેવનના દિવસોની શરૂઆત બદલો",
+  "changeStartOfPillDays": "ગોળી લેવાના દિવસોની ગણતરીની શરૂઆત બદલો",
   "changeEndOfPillDays": "સેવનના દિવસોનો અંત બદલો",
   "cannotUpdateToReplacePillSheet": "પિલ શીટ બદલવાને કારણે અપડેટ કરી શકાતું નથી id: {id}",
   "failedToGetPillSheetHistory": "દવાના સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ. {error}",

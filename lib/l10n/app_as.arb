@@ -412,7 +412,7 @@
   "notificationNumber": "জাননী {number}",
   "notificationTime": "জাননীৰ সময়",
   "timeZoneChangedTo": "সময় অঞ্চল {tz}লৈ সলনি কৰা হৈছে",
-  "changeStartOfPillDays": "সেৱন আৰম্ভৰ দিন সলনি কৰক",
+  "changeStartOfPillDays": "পিল খোৱাৰ দিন গণনা আৰম্ভ হোৱাৰ দিন সলনি কৰক",
   "changeEndOfPillDays": "সেৱনৰ দিনৰ সংখ্যাৰ সমাপন সলনি কৰক",
   "cannotUpdateToReplacePillSheet": "পিল শীট প্ৰতিস্থাপনৰ দ্বাৰা আপডেট কৰিব পৰা নাই id: {id}",
   "failedToGetPillSheetHistory": "সেৱনৰ ইতিহাসৰ তথ্য আহৰণত ব্যৰ্থ হ'ল। {error}",

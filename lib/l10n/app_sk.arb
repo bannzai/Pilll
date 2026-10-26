@@ -412,7 +412,7 @@
   "notificationNumber": "Upozornenie {number}",
   "notificationTime": "Čas upozornenia",
   "timeZoneChangedTo": "Časové pásmo bolo zmenené na {tz}",
-  "changeStartOfPillDays": "Zmeniť začiatok dní užívania",
+  "changeStartOfPillDays": "Zmeniť začiatok počítania dní užívania tabletky",
   "changeEndOfPillDays": "Zmeniť koniec doby užívania",
   "cannotUpdateToReplacePillSheet": "Nepodarilo sa aktualizovať pri výmene tabletového balíčka id: {id}",
   "failedToGetPillSheetHistory": "Nepodarilo sa načítať informácie o histórii užívania. {error}",

@@ -412,7 +412,7 @@
   "notificationNumber": "Мэдэгдэл {number}",
   "notificationTime": "Мэдэгдлийн цаг",
   "timeZoneChangedTo": "Цагийн бүсийг {tz} болгож өөрчилсөн",
-  "changeStartOfPillDays": "Хэрэглэх өдрийн эхлэлийг өөрчлөх",
+  "changeStartOfPillDays": "Эм уусан өдрүүдийг тоолж эхлэх өдрийг өөрчилнө үү",
   "changeEndOfPillDays": "Эм уух өдрийн тооны төгсгөлийг өөрчлөх",
   "cannotUpdateToReplacePillSheet": "Эмийн хуудас солихоор шинэчлэх боломжгүй id: {id}",
   "failedToGetPillSheetHistory": "Уулгын түүхийн мэдээллийг авахад амжилтгүй боллоо。{error}",

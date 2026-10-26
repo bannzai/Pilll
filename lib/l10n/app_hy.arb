@@ -412,7 +412,7 @@
   "notificationNumber": "Ծանուցում {number}",
   "notificationTime": "Ծանուցման ժամը",
   "timeZoneChangedTo": "Ժամային գոտին փոխվել է՝ {tz}",
-  "changeStartOfPillDays": "Ընդունման օրերի սկիզբը փոփոխել",
+  "changeStartOfPillDays": "Փոխել հաբի ընդունման օրերի հաշվարկի սկիզբը",
   "changeEndOfPillDays": "Փոփոխել ընդունման ավարտը",
   "cannotUpdateToReplacePillSheet": "Չհաջողվեց թարմացնել դեղահապի թերթի փոխարինումը id: {id}",
   "failedToGetPillSheetHistory": "Հաբերի ընդունման պատմության տվյալների բեռնումը ձախողվեց։ {error}",

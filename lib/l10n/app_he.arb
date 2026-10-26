@@ -412,7 +412,7 @@
   "notificationNumber": "התראה {number}",
   "notificationTime": "שעת ההתראה",
   "timeZoneChangedTo": "אזור הזמן שונה ל־{tz}",
-  "changeStartOfPillDays": "שינוי תחילת ימי הנטילה",
+  "changeStartOfPillDays": "שינוי תחילת ספירת ימי נטילת הגלולה",
   "changeEndOfPillDays": "שינוי תאריך סיום הנטילה",
   "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן באמצעות החלפת גליון הכדורים id: {id}",
   "failedToGetPillSheetHistory": "נכשל בקבלת מידע על היסטוריית הצריכה. {error}",

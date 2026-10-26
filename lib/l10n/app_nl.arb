@@ -412,7 +412,7 @@
   "notificationNumber": "Melding {number}",
   "notificationTime": "Meldingstijd",
   "timeZoneChangedTo": "De tijdzone is gewijzigd naar {tz}",
-  "changeStartOfPillDays": "Startdatum van inname wijzigen",
+  "changeStartOfPillDays": "Begindag van de telling van pilgebruik wijzigen",
   "changeEndOfPillDays": "Einde innamedagen wijzigen",
   "cannotUpdateToReplacePillSheet": "Kan pillenstrip niet bijwerken door vervanging id: {id}",
   "failedToGetPillSheetHistory": "Het ophalen van de inname geschiedenis is mislukt. {error}",

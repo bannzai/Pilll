@@ -412,7 +412,7 @@
   "notificationNumber": "Notifikasi {number}",
   "notificationTime": "Waktu notifikasi",
   "timeZoneChangedTo": "Zona waktu diubah menjadi {tz}",
-  "changeStartOfPillDays": "Ubah Awal Hari Konsumsi",
+  "changeStartOfPillDays": "Ubah awal penghitungan hari minum pil",
   "changeEndOfPillDays": "Ubah Akhir Periode Minum",
   "cannotUpdateToReplacePillSheet": "Tidak dapat memperbarui penggantian lembar pil id: {id}",
   "failedToGetPillSheetHistory": "Gagal mengambil data riwayat konsumsi. {error}",

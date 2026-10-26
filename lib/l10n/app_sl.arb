@@ -412,7 +412,7 @@
   "notificationNumber": "Obvestilo {number}",
   "notificationTime": "Čas obvestila",
   "timeZoneChangedTo": "Časovni pas je spremenjen na {tz}",
-  "changeStartOfPillDays": "Spremeni začetek jemanja",
+  "changeStartOfPillDays": "Spremenite začetek štetja dni jemanja tablet",
   "changeEndOfPillDays": "Spremeni konec obdobja jemanja",
   "cannotUpdateToReplacePillSheet": "Ni mogoče posodobiti zaradi zamenjave tabletnega lista id: {id}",
   "failedToGetPillSheetHistory": "Pridobivanje podatkov o zgodovini jemanja ni uspelo. {error}",

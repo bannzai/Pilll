@@ -412,7 +412,7 @@
   "notificationNumber": "Билдирүү {number}",
   "notificationTime": "Билдирүү убактысы",
   "timeZoneChangedTo": "Убакыт алкагы {tz} болуп өзгөртүлдү",
-  "changeStartOfPillDays": "Дары ичүүнүн башталуу күнүн өзгөртүү",
+  "changeStartOfPillDays": "Таблетка ичкен күндөрдү эсептөөнүн башталышын өзгөртүңүз",
   "changeEndOfPillDays": "Ичүү мөөнөтүнүн аягын өзгөртүү",
   "cannotUpdateToReplacePillSheet": "Таблетка парагын алмаштырып жаңырта албадык id: {id}",
   "failedToGetPillSheetHistory": "Дары ичүү тарыхынын маалыматын алуу ийгиликсиз болду. {error}",
