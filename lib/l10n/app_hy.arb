@@ -343,7 +343,7 @@
   "launchError": "Հավելվածը բացելիս սխալ է առաջացել։\n{ErrorMessagesConnection}\n\nՄանրամասներ՝",
   "exampleRestDurationDate": "Օրինակ՝ եթե 1/12-ից սկսած 3 օր դադարեցնեք հաբի ընդունումը",
   "exampleRestDurationNumber": "Օրինակ՝ եթե Դուք 18-րդ հաբից սկսած 3 օր դադար եք տալիս հաբերի ընդունմանը",
-  "withNumber": "{number} համար",
+  "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Ներկայումս ակտիվ դեղահապի թերթիկը չի գտնվել",
   "doNotRevertTakePillInPausePeriod": "Դեղահատի ընդունման չեղարկումը դադարի ժամանակահատվածում հնարավոր չէ",
   "googleAccount": "Google հաշիվ",

@@ -343,7 +343,7 @@
   "launchError": "Ilova ochilayotganda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar:",
   "exampleRestDurationDate": "Masalan, 1/12 dan boshlab 3 kun davomida tabletkani qabul qilishda tanaffus qilsangiz",
   "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kun davomida tabletka qabul qilishni toʻxtatsangiz",
-  "withNumber": "{number}-chi",
+  "withNumber": "{number}-raqam",
   "currentPillSheetNotFound": "Hozirgi faol pil varag'i topilmadi",
   "doNotRevertTakePillInPausePeriod": "Dam olish davrida hapbalar qabul qilishni bekor qilish amali bajarilmaydi",
   "googleAccount": "Google hisobi",

@@ -343,7 +343,7 @@
   "launchError": "Er is een fout opgetreden bij het openen van de app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 1/12 3 dagen stopt met de pil",
   "exampleRestDurationNumber": "Bijvoorbeeld als je vanaf pil 18 een pauze van 3 dagen neemt",
-  "withNumber": "nummer {number}",
+  "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Het huidige pilstrip kon niet worden gevonden",
   "doNotRevertTakePillInPausePeriod": "Het annuleren van pilgebruik is niet mogelijk tijdens de rustperiode",
   "googleAccount": "Google-account",

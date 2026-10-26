@@ -343,7 +343,7 @@
   "launchError": "অ্যাপটি চালু করার সময় একটি সমস্যা হয়েছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত:",
   "exampleRestDurationDate": "যেমন, আপনি ১/১২ থেকে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
   "exampleRestDurationNumber": "যেমন, ১৮ নম্বর পিল থেকে শুরু করে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
-  "withNumber": "{number} নম্বর",
+  "withNumber": "নং {number}",
   "currentPillSheetNotFound": "বর্তমান পিল শীটটি পাওয়া যায়নি",
   "doNotRevertTakePillInPausePeriod": "বিরতির সময়কালে পিল সেবন বাতিল করার অপারেশন সম্পাদন করা যায় না",
   "googleAccount": "গুগল অ্যাকাউন্ট",

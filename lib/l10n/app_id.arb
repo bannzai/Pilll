@@ -343,7 +343,7 @@
   "launchError": "Terjadi kesalahan saat aplikasi dibuka.\n{ErrorMessagesConnection}\n\nDetail:",
   "exampleRestDurationDate": "Misalnya, jika Anda berhenti minum pil selama 3 hari mulai 1 Desember",
   "exampleRestDurationNumber": "Misalnya, jika Anda berhenti minum pil selama 3 hari mulai dari pil nomor 18",
-  "withNumber": "Nomor {number}",
+  "withNumber": "No. {number}",
   "currentPillSheetNotFound": "Lembar pil yang sedang aktif tidak ditemukan",
   "doNotRevertTakePillInPausePeriod": "Tidak dapat membatalkan catatan konsumsi pil selama periode istirahat obat",
   "googleAccount": "Akun Google",

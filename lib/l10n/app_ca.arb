@@ -343,7 +343,7 @@
   "launchError": "S'ha produït un error en obrir l'aplicació.\n{ErrorMessagesConnection}\n\nDetalls:",
   "exampleRestDurationDate": "Per exemple, si fas una pausa de 3 dies en la presa de la píndola a partir de l’1/12",
   "exampleRestDurationNumber": "Per exemple, si fas una pausa de 3 dies a partir de la píndola 18",
-  "withNumber": "{number}",
+  "withNumber": "Núm. {number}",
   "currentPillSheetNotFound": "No s'ha trobat la plaqueta de píndoles actual",
   "doNotRevertTakePillInPausePeriod": "L'operació de cancel·lació de la presa de píndoles no es pot executar durant el període de descans",
   "googleAccount": "Compte de Google",

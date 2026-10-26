@@ -343,7 +343,7 @@
   "launchError": "Дошло је до грешке при покретању апликације.\n{ErrorMessagesConnection}\n\nДетаљи:",
   "exampleRestDurationDate": "На пример, ако од 1/12 направите паузу од 3 дана у узимању пилуле",
   "exampleRestDurationNumber": "На пример, ако направите паузу од 3 дана почев од пилуле број 18",
-  "withNumber": "{number}.",
+  "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Trenutno blister pakovanje pilula nije pronađeno",
   "doNotRevertTakePillInPausePeriod": "Poništavanje uzimanja pilula nije moguće tokom perioda pauze",
   "googleAccount": "Google nalog",

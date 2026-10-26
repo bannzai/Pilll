@@ -343,7 +343,7 @@
   "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
   "exampleRestDurationDate": "Halimbawa, kung magpapahinga kayo sa pag-inom ng pildoras nang 3 araw simula Oktubre 26",
   "exampleRestDurationNumber": "Halimbawa, kung hihinto kayo sa pag-inom ng pildoras nang 3 araw simula sa pildoras bilang 18",
-  "withNumber": "No. {number}",
+  "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi natagpuan ang kasalukuyang ginagamit na pill sheet",
   "doNotRevertTakePillInPausePeriod": "Hindi maaaring kanselahin ang pag-inom ng pill habang nasa rest period",
   "googleAccount": "Google Account",

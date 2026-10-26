@@ -343,7 +343,7 @@
   "launchError": "Ndodhi një gabim gjatë hapjes së aplikacionit.\n{ErrorMessagesConnection}\n\nHollësitë:",
   "exampleRestDurationDate": "Për shembull, nëse bëni një pushim 3-ditor nga marrja e pilulës duke filluar më 1/12",
   "exampleRestDurationNumber": "Për shembull, nëse bëni një ndërprerje 3-ditore duke filluar nga pilula numër 18",
-  "withNumber": "nr. {number}",
+  "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nuk u gjet fletorja e pilulës aktuale",
   "doNotRevertTakePillInPausePeriod": "Anulimi i regjistrimit të pilulës nuk mund të kryhet gjatë periudhës së pushimit",
   "googleAccount": "Llogaria Google",

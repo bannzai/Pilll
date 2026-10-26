@@ -343,7 +343,7 @@
   "launchError": "ॲप सुरू करताना त्रुटी आली.\n{ErrorMessagesConnection}\n\nतपशील:",
   "exampleRestDurationDate": "उदाहरणार्थ, तुम्ही 1/12 पासून 3 दिवस गोळी घेणे थांबवले तर",
   "exampleRestDurationNumber": "उदाहरणार्थ, 18व्या गोळीपासून 3 दिवस गोळी घेणे थांबवल्यास",
-  "withNumber": "{number}वा",
+  "withNumber": "क्र. {number}",
   "currentPillSheetNotFound": "सध्या निवडलेली पिल शीट सापडली नाही",
   "doNotRevertTakePillInPausePeriod": "गोळी सेवनाचे रद्दीकरण कार्य विश्रांती कालावधीत करता येत नाही",
   "googleAccount": "गूगल खाते",

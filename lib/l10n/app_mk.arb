@@ -343,7 +343,7 @@
   "launchError": "Се појави грешка при отворањето на апликацијата.\n{ErrorMessagesConnection}\n\nДетали:",
   "exampleRestDurationDate": "На пример, ако од 1/12 направите пауза од 3 дена во земањето таблета",
   "exampleRestDurationNumber": "На пример, ако направите пауза од 3 дена во земањето, почнувајќи од таблета број 18",
-  "withNumber": "{number} број",
+  "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Тековниот пилул-пакет не беше пронајден",
   "doNotRevertTakePillInPausePeriod": "Не можете да ја откажете операцијата за земање пилула во текот на периодот на пауза",
   "googleAccount": "Google сметка",

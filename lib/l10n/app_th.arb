@@ -343,7 +343,7 @@
   "launchError": "เกิดข้อผิดพลาดขณะเปิดแอปค่ะ\n{ErrorMessagesConnection}\n\nรายละเอียด:",
   "exampleRestDurationDate": "ตัวอย่างเช่น หากพักทานยา 3 วัน ตั้งแต่ 1/12 ค่ะ",
   "exampleRestDurationNumber": "เช่น หากเว้นการทานยาตั้งแต่เม็ดที่ 18 เป็นเวลา 3 วันค่ะ",
-  "withNumber": "ที่ {number}",
+  "withNumber": "หมายเลข {number}",
   "currentPillSheetNotFound": "ไม่พบแผ่นยาคุมที่กำลังใช้อยู่ในปัจจุบัน",
   "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกการบันทึกการรับประทานยาคุมกำเนิดในช่วงพักยาได้",
   "googleAccount": "บัญชี Google",

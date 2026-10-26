@@ -343,7 +343,7 @@
   "launchError": "Аппыг нээх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй:",
   "exampleRestDurationDate": "Жишээлбэл, 1/12-ноос эхлэн 3 өдөр эмээ уухгүй завсарлавал",
   "exampleRestDurationNumber": "Жишээлбэл, 18 дахь шахмалаас эхлэн 3 өдөр уухаа түр зогсоовол",
-  "withNumber": "{number} дугаар",
+  "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Одоогийн зорилтот эмийн хуудас олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Эмийн хэрэглээг цуцлах үйлдлийг амралтын хугацаанд гүйцэтгэх боломжгүй",
   "googleAccount": "Google бүртгэл",

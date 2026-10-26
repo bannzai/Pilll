@@ -343,7 +343,7 @@
   "launchError": "Det oppsto en feil da appen ble åpnet.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra 1/12",
   "exampleRestDurationNumber": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra og med pille 18",
-  "withNumber": "pille {number}",
+  "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Fant ikke det gjeldende p-pillepakket",
   "doNotRevertTakePillInPausePeriod": "Pilleinntak kan ikke angres under den pillefrie perioden",
   "googleAccount": "Google-konto",

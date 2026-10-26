@@ -343,7 +343,7 @@
   "launchError": "ਐਪ ਖੋਲ੍ਹਣ ਵੇਲੇ ਇੱਕ ਗੜਬੜ ਹੋਈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ:",
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ ਰੱਖੋ",
   "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 18ਵੀਂ ਗੋਲੀ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਲੈਂਦੇ ਹੋ",
-  "withNumber": "{number}ਵਾਂ",
+  "withNumber": "ਨੰ. {number}",
   "currentPillSheetNotFound": "ਮੌਜੂਦਾ ਟੀਚੇ ਵਾਲੀ ਗੋਲੀ ਸ਼ੀਟ ਨਹੀਂ ਮਿਲੀ",
   "doNotRevertTakePillInPausePeriod": "ਬ੍ਰੇਕ ਪੀਰੀਅਡ ਦੇ ਦੌਰਾਨ ਪਿੱਲ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
   "googleAccount": "Google ਖਾਤਾ",

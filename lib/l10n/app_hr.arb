@@ -343,7 +343,7 @@
   "launchError": "Došlo je do pogreške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nPojedinosti:",
   "exampleRestDurationDate": "Na primjer, ako od 1/12 napravite stanku od 3 dana u uzimanju pilule",
   "exampleRestDurationNumber": "Na primjer, ako napravite stanku od 3 dana počevši od pilule broj 18",
-  "withNumber": "{number}.",
+  "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Trenutno aktivna lista pilula nije pronađena",
   "doNotRevertTakePillInPausePeriod": "Operacija poništavanja uzimanja pilula ne može se izvršiti tijekom perioda bez aktivnih pilula",
   "googleAccount": "Google račun",

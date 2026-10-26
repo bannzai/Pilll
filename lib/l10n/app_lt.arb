@@ -343,7 +343,7 @@
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija:",
   "exampleRestDurationDate": "Pavyzdžiui, jei nuo gruodžio 1 d. padarote 3 dienų pertrauką nuo piliulių vartojimo",
   "exampleRestDurationNumber": "Pavyzdžiui, jei nuo 18-osios tabletės darote 3 dienų vartojimo pertrauką",
-  "withNumber": "{number}-oji",
+  "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Šiuo metu naudojamas tablečių lapas nerastas",
   "doNotRevertTakePillInPausePeriod": "Negalima atšaukti tablečių vartojimo įrašo pertraukos periodo metu",
   "googleAccount": "Google paskyra",

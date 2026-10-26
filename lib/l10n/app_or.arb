@@ -343,7 +343,7 @@
   "launchError": "ଆପ୍‌ ଖୋଲିବା ସମୟରେ ଏକ ତ୍ରୁଟି ଘଟିଛି।\n{ErrorMessagesConnection}\n\nବିବରଣୀ:",
   "exampleRestDurationDate": "ଉଦାହରଣ ସ୍ୱରୂପ, ଆପଣ 1/12 ଠାରୁ 3 ଦିନ ପାଇଁ ବଟିକା ଖାଇବା ବନ୍ଦ ରଖିଲେ",
   "exampleRestDurationNumber": "ଉଦାହରଣ ସ୍ୱରୂପ, 18 ନମ୍ବର ବଟିକାଠାରୁ 3 ଦିନ ପାଇଁ ବଟିକା ନେବା ବନ୍ଦ ରଖିଲେ",
-  "withNumber": "{number}ନଂ",
+  "withNumber": "ନଂ {number}",
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନର ଲକ୍ଷ୍ୟ ବର୍ତ୍ତିକା ପତ୍ର ମିଳିଲା ନାହିଁ",
   "doNotRevertTakePillInPausePeriod": "ବିରତି ଅବଧି ସମୟରେ ପିଲ୍ ସେବନ ବାତିଲ୍ କରିବାର କାର୍ଯ୍ୟ କରାଯାଇପାରିବ ନାହିଁ",
   "googleAccount": "ଗୁଗୁଲ ଆକାଉଣ୍ଟ",

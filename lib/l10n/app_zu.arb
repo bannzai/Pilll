@@ -343,7 +343,7 @@
   "launchError": "Kuvele iphutha ngesikhathi kuvulwa uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane:",
   "exampleRestDurationDate": "Isibonelo, uma uthatha ikhefu lokuphuza iphilisi izinsuku ezi-3 kusukela ngo-1/12",
   "exampleRestDurationNumber": "Ngokwesibonelo, uma uthatha ikhefu lezinsuku ezi-3 ekuphuzeni amaphilisi, kusukela kuphilisi le-18",
-  "withNumber": "Ipilisi {number}",
+  "withNumber": "Inombolo {number}",
   "currentPillSheetNotFound": "Iphakheji lamaphilisi elisetshenzisiwe yamanje alitholakali",
   "doNotRevertTakePillInPausePeriod": "Ukucisha ukuthatha kwamaphilisi akukwazi ukwenziwa ngesikhathi sokuphumula emithini",
   "googleAccount": "I-akhawunti ye-Google",

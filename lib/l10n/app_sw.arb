@@ -343,7 +343,7 @@
   "launchError": "Hitilafu imetokea wakati wa kufungua programu.\n{ErrorMessagesConnection}\n\nMaelezo:",
   "exampleRestDurationDate": "Kwa mfano, ukipumzika kumeza kidonge kwa siku 3 kuanzia 1/12",
   "exampleRestDurationNumber": "Kwa mfano, ukipumzika kumeza vidonge kwa siku 3 kuanzia kidonge cha 18",
-  "withNumber": "Namba {number}",
+  "withNumber": "Nambari {number}",
   "currentPillSheetNotFound": "Karatasi ya vidonge vya sasa haikupatikana",
   "doNotRevertTakePillInPausePeriod": "Tendo la kubatilisha kutumia vidonge haliwezi kufanyika wakati wa kipindi cha mapumziko ya dawa",
   "googleAccount": "Akaunti ya Google",

@@ -343,7 +343,7 @@
   "launchError": "Падчас запуску праграмы ўзнікла памылка.\n{ErrorMessagesConnection}\n\nПадрабязнасці:",
   "exampleRestDurationDate": "Напрыклад, калі вы зрабілі перапынак у прыёме пігулак на 3 дні з 1/12",
   "exampleRestDurationNumber": "Напрыклад, калі вы зрабілі перапынак у прыёме пігулак на 3 дні, пачынаючы з пігулкі № 18",
-  "withNumber": "№{number}",
+  "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Актуальная табліцка пігулак не знойдзена",
   "doNotRevertTakePillInPausePeriod": "Скасаванне прыёму таблетак немагчыма падчас перыяду перапынку",
   "googleAccount": "Google акаўнт",

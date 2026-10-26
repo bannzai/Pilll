@@ -343,7 +343,7 @@
   "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση της εφαρμογής.\n{ErrorMessagesConnection}\n\nΛεπτομέρειες:",
   "exampleRestDurationDate": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από τη λήψη του χαπιού από την 1/12",
   "exampleRestDurationNumber": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από το χάπι 18",
-  "withNumber": "{number}ο",
+  "withNumber": "Αρ. {number}",
   "currentPillSheetNotFound": "Δεν βρέθηκε το τρέχον φύλλο αντισυλληπτικών",
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να ακυρώσετε τη λήψη του χαπιού κατά τη διάρκεια της περιόδου διακοπής",
   "googleAccount": "Λογαριασμός Google",

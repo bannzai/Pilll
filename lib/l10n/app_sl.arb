@@ -343,7 +343,7 @@
   "launchError": "Pri odpiranju aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Na primer, če od 1/12 za 3 dni prekinete jemanje tablet",
   "exampleRestDurationNumber": "Na primer, če od 18. tablete naredite 3-dnevni premor pri jemanju",
-  "withNumber": "{number}.",
+  "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Trenutno izbrani seznam tablet ni bil najden",
   "doNotRevertTakePillInPausePeriod": "Med placebo obdobjem ni mogoče preklicati jemanja tablet",
   "googleAccount": "Google račun",

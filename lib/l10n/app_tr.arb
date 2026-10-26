@@ -343,7 +343,7 @@
   "launchError": "Uygulama açılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar:",
   "exampleRestDurationDate": "Örneğin, 1/12’den itibaren 3 gün hap kullanımına ara verirseniz",
   "exampleRestDurationNumber": "Örneğin, 18. haptan başlayarak 3 gün hap almaya ara verirseniz",
-  "withNumber": "{number}.",
+  "withNumber": "No. {number}",
   "currentPillSheetNotFound": "Mevcut hap levhası bulunamadı",
   "doNotRevertTakePillInPausePeriod": "Dinlenme döneminde doğum kontrol hapı alma kaydını iptal edemezsiniz",
   "googleAccount": "Google Hesabı",

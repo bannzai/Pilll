@@ -343,7 +343,7 @@
   "launchError": "መተግበሪያው ሲከፈት ስህተት ተፈጥሯል።\n{ErrorMessagesConnection}\n\nዝርዝሮች፦",
   "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ክኒን መውሰድን ካቆሙ",
   "exampleRestDurationNumber": "ለምሳሌ፣ ከክኒን ቁጥር 18 ጀምሮ ለ3 ቀናት መውሰድ ካቆሙ",
-  "withNumber": "{number}ኛ",
+  "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን የሚወሰደው የክኒን ወረቀት አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በእረፍት ጊዜ ውስጥ የክኒን መውሰድ መሰረዝ ክወና መፈጸም አይቻልም",
   "googleAccount": "Google መለያ",

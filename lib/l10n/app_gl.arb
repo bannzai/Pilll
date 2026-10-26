@@ -343,7 +343,7 @@
   "launchError": "Produciuse un erro ao abrir a aplicación.\n{ErrorMessagesConnection}\n\nDetalles:",
   "exampleRestDurationDate": "Por exemplo, se fas unha pausa de 3 días na toma da pílula a partir do 1 de decembro",
   "exampleRestDurationNumber": "Por exemplo, se fas unha pausa de 3 días a partir da pílula 18",
-  "withNumber": "nº {number}",
+  "withNumber": "N.º {number}",
   "currentPillSheetNotFound": "Non se puido atopar a folla de píldoras actual",
   "doNotRevertTakePillInPausePeriod": "A operación de cancelación da toma da píldora non se pode executar durante o período de descanso",
   "googleAccount": "Conta de Google",

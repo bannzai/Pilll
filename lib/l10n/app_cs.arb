@@ -343,7 +343,7 @@
   "launchError": "Při spouštění aplikace došlo k chybě.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Například pokud od 1/12 na 3 dny přerušíte užívání pilulky",
   "exampleRestDurationNumber": "Například při 3denní pauze v užívání počínaje tabletou č. 18",
-  "withNumber": "č. {number}",
+  "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Aktuální pilulkový arch nebyl nalezen",
   "doNotRevertTakePillInPausePeriod": "Během bezpilulkové pauzy nelze zrušit užití pilulky",
   "googleAccount": "Google účet",

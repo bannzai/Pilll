@@ -343,7 +343,7 @@
   "launchError": "Під час запуску застосунку сталася помилка.\n{ErrorMessagesConnection}\n\nДокладніше:",
   "exampleRestDurationDate": "Наприклад, якщо ви зробите перерву в прийомі пігулок на 3 дні з 1/12",
   "exampleRestDurationNumber": "Наприклад, якщо ви робите перерву в прийомі пігулок на 3 дні, починаючи з пігулки № 18",
-  "withNumber": "№{number}",
+  "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Поточний блістер таблеток не знайдено",
   "doNotRevertTakePillInPausePeriod": "Не можна скасувати прийом пілюль під час періоду відміни",
   "googleAccount": "Акаунт Google",

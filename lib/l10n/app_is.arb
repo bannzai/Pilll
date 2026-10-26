@@ -343,7 +343,7 @@
   "launchError": "Villa kom upp þegar forritið var opnað.\n{ErrorMessagesConnection}\n\nNánari upplýsingar:",
   "exampleRestDurationDate": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá 1/12",
   "exampleRestDurationNumber": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá pillu númer 18",
-  "withNumber": "númer {number}",
+  "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Núverandi pillublað fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla pillutöku á hvíldartímabilinu",
   "googleAccount": "Google reikningur",

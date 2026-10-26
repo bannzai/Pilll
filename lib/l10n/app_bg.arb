@@ -343,7 +343,7 @@
   "launchError": "Възникна грешка при стартирането на приложението.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, ако сте направили пауза в приема на хапчета за 3 дни от 1/12",
   "exampleRestDurationNumber": "Например, ако сте направили 3-дневна пауза в приема, започвайки от хапче № 18",
-  "withNumber": "№{number}",
+  "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не е намерена текущата опаковка хапчета",
   "doNotRevertTakePillInPausePeriod": "Отмяната на приема на пилулата не е възможна по време на почивния период",
   "googleAccount": "Google акаунт",
