@@ -174,7 +174,7 @@
   "signInWith": "使用{loginName}登录",
   "registerWith": "使用{loginName}注册",
   "premiumRegistrationComplete": "Pilll 高级版订阅成功",
-  "thankYouForRegistration": "感谢您的注册。\n现在您可以使用所有功能了！",
+  "thankYouForRegistration": "感谢注册。\n现在可以使用全部功能啦！",
   "limitedTimeDiscount": "现在限时特惠价，永久使用",
   "standardMonthlyPlan": "标准月度套餐",
   "annualPlan": "年费套餐",

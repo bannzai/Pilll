@@ -174,7 +174,7 @@
   "signInWith": "ເຂົ້າລະບົບດ້ວຍ {loginName}",
   "registerWith": "ລົງທະບຽນດ້ວຍ {loginName}",
   "premiumRegistrationComplete": "ການລົງທະບຽນ Pilll Premium ສຳເລັດແລ້ວ",
-  "thankYouForRegistration": "ຂອບໃຈທີ່ໄດ້ລົງທະບຽນ.\nຕອນນີ້ທ່ານສາມາດໃຊ້ຄຸນສົມບັດທັງໝົດໄດ້ແລ້ວ!",
+  "thankYouForRegistration": "ຂອບໃຈທີ່ລົງທະບຽນ.\nຕອນນີ້ສາມາດໃຊ້ທຸກຟັງຊັນໄດ້ແລ້ວ!",
   "limitedTimeDiscount": "ດຽວນີ້ມີລາຄາພິເສດ ໃຊ້ໄດ້ຕະຫຼອດ",
   "standardMonthlyPlan": "ແຜນລາຍເດືອນປົກກະຕິ",
   "annualPlan": "ແຜນປະຈຳປີ",

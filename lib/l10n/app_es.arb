@@ -174,7 +174,7 @@
   "signInWith": "Inicia sesión con {loginName}",
   "registerWith": "Regístrate con {loginName}",
   "premiumRegistrationComplete": "Registro en Pilll Premium completado",
-  "thankYouForRegistration": "¡Gracias por registrarte! ¡Ahora puedes usar todas las funciones!",
+  "thankYouForRegistration": "Gracias por registrarte.\n¡Ya puedes usar todas las funciones!",
   "limitedTimeDiscount": "Ahora a precio especial para siempre",
   "standardMonthlyPlan": "Plan Mensual Regular",
   "annualPlan": "Plan Anual",
