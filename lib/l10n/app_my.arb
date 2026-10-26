@@ -422,7 +422,7 @@
   "changedPillNumber": "ဆေးပြားနံပါတ် ပြောင်းထားသည်",
   "offPercentForMonthlyPremiumPackage": "ပုံမှန်လစဉ်အစီအစဉ်ထက် {offPercent}% သက်သာ",
   "premiumIntroductionDiscountPriceDeadline": "ပရီမီယံ စာရင်းသွင်းထားပါက လုပ်ဆောင်ချက်အားလုံးကို ဆက်လက်အသုံးပြုနိုင်ပါတယ်",
-  "countdownForDiscountPriceDeadline": "{countdown}အတွင်း ဝယ်ယူပါက {offPercent}% လျှော့စျေး",
+  "countdownForDiscountPriceDeadline": "{countdown} အတွင်း ဝယ်ယူပါက {offPercent}% လျှော့ဈေး ရရှိပါမယ်",
   "pillReminderChanged": "ဆေးသောက် သတိပေးချက်ကို {value} သို့ ပြောင်းလဲပြီးပါပြီ",
   "silentModeNotificationDescription": "စူးစိုက်မှုမုဒ်ဖွင့်ထားသည့်အခါ သို့မဟုတ် စက်ပစ္စည်းအသံပိတ်ထားသည့်အခါတွင်ပင် အသိပေးချက်များသည် လော့ခ်မျက်နှာပြင်တွင်ပေါ်နေမည်ဖြစ်ပြီး အသံများလည်း ဖွင့်မည်ဖြစ်သည်",
   "enableNotificationInSilentMode": "အသံပိတ်မုဒ်တွင်လည်း သတိပေးမည်",

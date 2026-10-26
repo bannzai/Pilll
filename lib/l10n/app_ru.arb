@@ -422,7 +422,7 @@
   "changedPillNumber": "изменение номера таблетки",
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевле обычного месячного плана",
   "premiumIntroductionDiscountPriceDeadline": "С подпиской премиум вы сможете и дальше пользоваться всеми функциями",
-  "countdownForDiscountPriceDeadline": "Скидка {offPercent}% при покупке в течение {countdown}",
+  "countdownForDiscountPriceDeadline": "Купите в течение {countdown} и получите скидку {offPercent}%",
   "pillReminderChanged": "Напоминание о приёме установлено на {value}",
   "silentModeNotificationDescription": "Даже когда включён режим концентрации или устройство находится в беззвучном режиме, уведомления будут отображаться на экране блокировки и сопровождаться звуком",
   "enableNotificationInSilentMode": "Уведомления в беззвучном режиме",

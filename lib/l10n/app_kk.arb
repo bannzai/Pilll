@@ -422,7 +422,7 @@
   "changedPillNumber": "таблетка нөмір өзгертілді",
   "offPercentForMonthlyPremiumPackage": "Әдеттегі айлық жоспармен салыстырғанда {offPercent}% жеңілдік",
   "premiumIntroductionDiscountPriceDeadline": "Премиум жазылымымен барлық мүмкіндіктерді пайдалануды жалғастыра аласыз",
-  "countdownForDiscountPriceDeadline": "{countdown} ішінде сатып алса {offPercent}% жеңілдік",
+  "countdownForDiscountPriceDeadline": "{countdown} ішінде сатып алып, {offPercent}% жеңілдік алыңыз",
   "pillReminderChanged": "Дәрі қабылдау ескертуін {value} уақытына орнаттым",
   "silentModeNotificationDescription": "Шоғырлану режимі қосулы болса немесе құрылғы үнсіз режимде болса да, хабарландырулар құлып экранында көрсетіледі және дыбыс ойнатылады",
   "enableNotificationInSilentMode": "Дыбыссыз режимде де хабарландыру",

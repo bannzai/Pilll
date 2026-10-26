@@ -422,7 +422,7 @@
   "changedPillNumber": "nomor pil diubah",
   "offPercentForMonthlyPremiumPackage": "Hemat {offPercent}% dibandingkan paket bulanan biasa",
   "premiumIntroductionDiscountPriceDeadline": "Dengan berlangganan premium, Anda dapat terus menggunakan semua fitur",
-  "countdownForDiscountPriceDeadline": "Dapatkan diskon {offPercent}% untuk pembelian dalam {countdown}",
+  "countdownForDiscountPriceDeadline": "Beli dalam {countdown} dan dapatkan diskon {offPercent}%",
   "pillReminderChanged": "Notifikasi minum telah diatur ke {value}",
   "silentModeNotificationDescription": "Meskipun Mode Fokus aktif atau perangkat dalam keadaan senyap, notifikasi tetap akan ditampilkan di layar kunci dan suara akan diputar",
   "enableNotificationInSilentMode": "Tetap bernotifikasi dalam mode senyap",

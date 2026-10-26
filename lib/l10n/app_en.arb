@@ -422,7 +422,7 @@
   "changedPillNumber": "Pill number changed",
   "offPercentForMonthlyPremiumPackage": "Save {offPercent}% compared with the regular monthly plan",
   "premiumIntroductionDiscountPriceDeadline": "Subscribe to Premium to keep using all features",
-  "countdownForDiscountPriceDeadline": "Purchase within {countdown} for {offPercent}% OFF",
+  "countdownForDiscountPriceDeadline": "Buy within {countdown} to get {offPercent}% off",
   "pillReminderChanged": "Pill reminder has been set to {value}",
   "silentModeNotificationDescription": "Notifications will be displayed on the lock screen and sound will be played even when Focus mode is on or the device is on silent mode",
   "enableNotificationInSilentMode": "Override silent mode",

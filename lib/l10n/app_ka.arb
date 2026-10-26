@@ -422,7 +422,7 @@
   "changedPillNumber": "აბის ნომერ შეიცვალა",
   "offPercentForMonthlyPremiumPackage": "{offPercent}%-ით იაფი ჩვეულებრივ თვიურ გეგმასთან შედარებით",
   "premiumIntroductionDiscountPriceDeadline": "პრემიუმ გამოწერით შეგიძლიათ ყველა ფუნქციის გამოყენება გააგრძელოთ",
-  "countdownForDiscountPriceDeadline": "{countdown}-ის განმავლობაში შესყიდვით მიიღეთ {offPercent}% ფასდაკლება",
+  "countdownForDiscountPriceDeadline": "შეიძინეთ {countdown}-ში და მიიღეთ {offPercent}%-იანი ფასდაკლება",
   "pillReminderChanged": "მიღების შეხსენება {value}-ზე დაყენდა",
   "silentModeNotificationDescription": "ფოკუსირების რეჟიმის ჩართვისას ან მოწყობილობის უხმო რეჟიმშიც კი, შეტყობინებები ჩაკეტილ ეკრანზე გამოჩნდება და ხმა იკვრება",
   "enableNotificationInSilentMode": "უხმო რეჟიმშიც შეტყობინება",

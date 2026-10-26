@@ -422,7 +422,7 @@
   "changedPillNumber": "změna číslo tablety",
   "offPercentForMonthlyPremiumPackage": "O {offPercent} % levnější než běžný měsíční plán",
   "premiumIntroductionDiscountPriceDeadline": "S předplatným Premium můžete dál využívat všechny funkce",
-  "countdownForDiscountPriceDeadline": "Kupte během {countdown} a získejte {offPercent}% slevu",
+  "countdownForDiscountPriceDeadline": "Při nákupu do {countdown} získáte slevu {offPercent}%",
   "pillReminderChanged": "Upozornění na užití bylo nastaveno na {value}",
   "silentModeNotificationDescription": "Oznámení se zobrazí na uzamčené obrazovce a přehraje se zvuk i při zapnutém režimu soustředění nebo když je zařízení ztlumeno",
   "enableNotificationInSilentMode": "Upozornění i v tichém režimu",

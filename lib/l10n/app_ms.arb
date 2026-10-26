@@ -422,7 +422,7 @@
   "changedPillNumber": "nombor pil diubah",
   "offPercentForMonthlyPremiumPackage": "Jimat {offPercent}% berbanding pelan bulanan biasa",
   "premiumIntroductionDiscountPriceDeadline": "Dengan langganan premium, anda boleh terus menggunakan semua ciri",
-  "countdownForDiscountPriceDeadline": "{offPercent}% OFF untuk pembelian dalam masa {countdown}",
+  "countdownForDiscountPriceDeadline": "Beli dalam masa {countdown} untuk diskaun {offPercent}%",
   "pillReminderChanged": "Notifikasi pengambilan telah ditetapkan pada {value}",
   "silentModeNotificationDescription": "Notifikasi akan tetap dipaparkan pada skrin kunci dan bunyi akan dimainkan walaupun mod fokus diaktifkan atau peranti dalam keadaan senyap",
   "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun mod senyap",

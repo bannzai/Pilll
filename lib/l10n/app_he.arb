@@ -422,7 +422,7 @@
   "changedPillNumber": "שינוי מספר גלולה",
   "offPercentForMonthlyPremiumPackage": "הנחה של {offPercent}% לעומת התוכנית החודשית הרגילה",
   "premiumIntroductionDiscountPriceDeadline": "מינוי פרימיום מאפשר להמשיך להשתמש בכל האפשרויות",
-  "countdownForDiscountPriceDeadline": "קנה תוך {countdown} וקבל {offPercent}% הנחה",
+  "countdownForDiscountPriceDeadline": "רכישה בתוך {countdown} תזכה בהנחה של {offPercent}%",
   "pillReminderChanged": "תזכורת הנטילה הוגדרה ל{value}",
   "silentModeNotificationDescription": "גם כאשר מצב הריכוז מופעל או המכשיר מושתק, הודעות יוצגו במסך הנעילה וצליל יושמע",
   "enableNotificationInSilentMode": "התראה גם במצב שקט",

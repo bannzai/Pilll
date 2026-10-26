@@ -422,7 +422,7 @@
   "changedPillNumber": "మాత్ర సంఖ్య మార్చబడింది",
   "offPercentForMonthlyPremiumPackage": "సాధారణ నెలవారీ ప్లాన్‌తో పోలిస్తే {offPercent}% తగ్గింపు",
   "premiumIntroductionDiscountPriceDeadline": "ప్రీమియం సభ్యత్వంతో అన్ని ఫీచర్‌లను ఉపయోగించడం కొనసాగించవచ్చు",
-  "countdownForDiscountPriceDeadline": "{countdown}లో కొనుగోలు చేస్తే {offPercent}% తగ్గింపు",
+  "countdownForDiscountPriceDeadline": "{countdown} లోపు కొనుగోలు చేస్తే {offPercent}% తగ్గింపు పొందండి",
   "pillReminderChanged": "మందు సేవన నోటిఫికేషన్‌ను {value}కి సెట్ చేసాము",
   "silentModeNotificationDescription": "ఫోకస్ మోడ్ ఆన్‌లో ఉన్నప్పుడు లేదా పరికరం మూకంలో ఉన్నప్పుడు కూడా, నోటిఫికేషన్‌లు లాక్ స్క్రీన్‌లో కనిపిస్తాయి మరియు ధ్వని ప్లే అవుతుంది",
   "enableNotificationInSilentMode": "సైలెంట్ మోడ్‌లో కూడా నోటిఫై చేయండి",

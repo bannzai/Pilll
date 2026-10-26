@@ -422,7 +422,7 @@
   "changedPillNumber": "알약 번호 변경",
   "offPercentForMonthlyPremiumPackage": "일반 월간 요금제보다 {offPercent}% 할인",
   "premiumIntroductionDiscountPriceDeadline": "프리미엄에 가입하면 모든 기능을 계속 이용할 수 있어요",
-  "countdownForDiscountPriceDeadline": "{countdown} 이내 구매 시 {offPercent}% 할인",
+  "countdownForDiscountPriceDeadline": "{countdown} 안에 구매하면 {offPercent}% 할인받을 수 있어요",
   "pillReminderChanged": "복용 알림을 {value}로 설정했습니다",
   "silentModeNotificationDescription": "집중 모드가 켜져 있거나 기기가 무음 상태일 때도 알림이 잠금 화면에 표시되고 소리가 재생됩니다",
   "enableNotificationInSilentMode": "무음 모드에서도 알림 받기",

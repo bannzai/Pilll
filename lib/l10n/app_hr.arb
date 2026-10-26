@@ -422,7 +422,7 @@
   "changedPillNumber": "promjena broj pilule",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % povoljnije od redovnog mjesečnog plana",
   "premiumIntroductionDiscountPriceDeadline": "Uz pretplatu Premium možete nastaviti koristiti sve funkcije",
-  "countdownForDiscountPriceDeadline": "Kupite u sljedećih {countdown} i ostvarite {offPercent}% popusta",
+  "countdownForDiscountPriceDeadline": "Kupite u roku od {countdown} uz popust od {offPercent}%",
   "pillReminderChanged": "Podsjetnik za uzimanje postavljen je na {value}",
   "silentModeNotificationDescription": "Čak i kada je uključen način fokusiranja ili je uređaj utišan, obavijesti će se prikazati na zaključanom zaslonu i zvuk će se reproducirati",
   "enableNotificationInSilentMode": "Obavještavaj u tihom načinu",

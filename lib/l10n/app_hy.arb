@@ -422,7 +422,7 @@
   "changedPillNumber": "հաբի համար փոփոխվել է",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ՝ սովորական ամսական պլանի համեմատ",
   "premiumIntroductionDiscountPriceDeadline": "պրեմիում բաժանորդագրությամբ Դուք կարող եք շարունակել օգտվել բոլոր հնարավորություններից",
-  "countdownForDiscountPriceDeadline": "{countdown}ի ընթացքում գնելիս {offPercent}％ զեղչ",
+  "countdownForDiscountPriceDeadline": "Գնեք {countdown} ընթացքում և ստացեք {offPercent}% զեղչ",
   "pillReminderChanged": "Ծանուցումը տեղադրվեց {value}-ին",
   "silentModeNotificationDescription": "Կենտրոնացման ռեժիմի միացման կամ սարքի լռության դեպքում էլ ծանուցումները կցուցադրվեն կողպված էկրանին և ձայնը կնվագարկվի",
   "enableNotificationInSilentMode": "Ծանուցել լուռ ռեժիմում էլ",

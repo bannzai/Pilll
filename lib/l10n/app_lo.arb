@@ -422,7 +422,7 @@
   "changedPillNumber": "ປ່ຽນເລກເມັດຢາ",
   "offPercentForMonthlyPremiumPackage": "ຫຼຸດ {offPercent}% ທຽບກັບແຜນລາຍເດືອນປົກກະຕິ",
   "premiumIntroductionDiscountPriceDeadline": "ເມື່ອສະໝັກ Premium ແລ້ວ ທ່ານສາມາດໃຊ້ທຸກຟັງຊັນຕໍ່ໄປໄດ້",
-  "countdownForDiscountPriceDeadline": "ຊື້ພາຍໃນ {countdown} ຫຼຸດ {offPercent}％",
+  "countdownForDiscountPriceDeadline": "ຊື້ພາຍໃນ {countdown} ເພື່ອຮັບສ່ວນຫຼຸດ {offPercent}%",
   "pillReminderChanged": "ໄດ້ຕັ້ງການແຈ້ງເຕືອນການເສີບຢາເປັນ{value}ແລ້ວ",
   "silentModeNotificationDescription": "ເຖິງແມ່ນວ່າໂໝດເຈາະຈົງເປີດຢູ່ ຫຼື ອຸປະກອນເປັນແບບງຽບ, ການແຈ້ງເຕືອນຈະຍັງສະແດງຢູ່ໜ້າຈໍລັອກ ແລະ ສຽງຈະເປີດຂຶ້ນ",
   "enableNotificationInSilentMode": "ແຈ້ງເຕືອນແມ້ໃນໂໝດງຽບ",

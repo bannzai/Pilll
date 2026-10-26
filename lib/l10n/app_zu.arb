@@ -422,7 +422,7 @@
   "changedPillNumber": "nombolo yephilisi ishintshiwe",
   "offPercentForMonthlyPremiumPackage": "Yonga u-{offPercent}% uma kuqhathaniswa nohlelo olujwayelekile lwanyanga zonke",
   "premiumIntroductionDiscountPriceDeadline": "Ngokubhalisela i-Premium, ungaqhubeka nokusebenzisa zonke izici",
-  "countdownForDiscountPriceDeadline": "Thenga ngaphakathi kuka-{countdown} uzothole {offPercent}% OFF",
+  "countdownForDiscountPriceDeadline": "Uma uthenga phakathi kuka-{countdown}, uzothola isaphulelo sika-{offPercent}%",
   "pillReminderChanged": "Sishibeke isaziso lokuthatha amaphilisi ku-{value}",
   "silentModeNotificationDescription": "Noma imodi yokugxila ivuliwe noma idivayisi ithulile, izaziso zizoboniswa kusikrini esivaliwe futhi umsindo uzodlalwa",
   "enableNotificationInSilentMode": "Azisa nasemodi ethulile",

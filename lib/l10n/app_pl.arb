@@ -422,7 +422,7 @@
   "changedPillNumber": "zmiana numer",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% taniej niż w zwykłym planie miesięcznym",
   "premiumIntroductionDiscountPriceDeadline": "Z subskrypcją premium możesz nadal korzystać ze wszystkich funkcji",
-  "countdownForDiscountPriceDeadline": "{offPercent}% zniżki przy zakupie w ciągu {countdown}",
+  "countdownForDiscountPriceDeadline": "Kup w ciągu {countdown} i skorzystaj z {offPercent}% zniżki",
   "pillReminderChanged": "Ustawiono przypomnienie o zażyciu na {value}",
   "silentModeNotificationDescription": "Powiadomienia będą wyświetlane na ekranie blokady i będzie odtwarzany dźwięk, nawet gdy tryb nie przeszkadzać jest włączony lub urządzenie jest wyciszone",
   "enableNotificationInSilentMode": "Powiadomienia w trybie cichym",

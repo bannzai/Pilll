@@ -422,7 +422,7 @@
   "changedPillNumber": "ਗੋਲੀ ਨੰਬਰ ਬਦਲਿਆ ਗਿਆ",
   "offPercentForMonthlyPremiumPackage": "ਆਮ ਮਹੀਨਾਵਾਰ ਪਲਾਨ ਨਾਲੋਂ {offPercent}% ਛੋਟ",
   "premiumIntroductionDiscountPriceDeadline": "ਪ੍ਰੀਮੀਅਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਨਾਲ ਤੁਸੀਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਵਰਤਣਾ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ",
-  "countdownForDiscountPriceDeadline": "{countdown} ਵਿੱਚ ਖਰੀਦੋ, {offPercent}% ਛੂਟ",
+  "countdownForDiscountPriceDeadline": "{countdown} ਦੇ ਅੰਦਰ ਖਰੀਦਣ 'ਤੇ {offPercent}% ਛੋਟ ਪਾਓ",
   "pillReminderChanged": "ਸੇਵਨ ਸੂਚਨਾ {value} ਵਜੇ ਸੈੱਟ ਕਰ ਦਿੱਤੀ ਗਈ",
   "silentModeNotificationDescription": "ਫੋਕਸ ਮੋਡ ਚਾਲੂ ਹੋਣ 'ਤੇ ਜਾਂ ਡਿਵਾਈਸ ਸਾਈਲੈਂਟ ਹੋਣ 'ਤੇ ਵੀ, ਨੋਟੀਫਿਕੇਸ਼ਨ ਲਾਕ ਸਕਰੀਨ 'ਤੇ ਦਿਖਾਈ ਜਾਵੇਗੀ ਅਤੇ ਆਵਾਜ਼ ਚੱਲੇਗੀ",
   "enableNotificationInSilentMode": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾ ਦਿਓ",

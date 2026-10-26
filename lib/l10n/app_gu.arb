@@ -422,7 +422,7 @@
   "changedPillNumber": "ગોળી નંબર બદલાયો",
   "offPercentForMonthlyPremiumPackage": "નિયમિત માસિક પ્લાન કરતાં {offPercent}% સસ્તો",
   "premiumIntroductionDiscountPriceDeadline": "પ્રીમિયમ સબ્સ્ક્રિપ્શન સાથે તમે બધી સુવિધાઓનો ઉપયોગ ચાલુ રાખી શકો છો",
-  "countdownForDiscountPriceDeadline": "{countdown} અંદર ખરીદવા પર {offPercent}% છૂટ",
+  "countdownForDiscountPriceDeadline": "{countdown}માં ખરીદશો તો {offPercent}% છૂટ મળશે",
   "pillReminderChanged": "ગોળીની સૂચના {value} પર સેટ કરી છે",
   "silentModeNotificationDescription": "ફોકસ મોડ ચાલુ હોય અથવા ઉપકરણ મૌન હોય ત્યારે પણ, સૂચનાઓ લૉક સ્ક્રીન પર દેખાશે અને અવાજ વગાડવામાં આવશે",
   "enableNotificationInSilentMode": "મૌન મોડમાં પણ નોટિફાઇ કરો",

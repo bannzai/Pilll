@@ -422,7 +422,7 @@
   "changedPillNumber": "binago ang numero ng pildoras",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% na mas mura kaysa sa karaniwang buwanang plano",
   "premiumIntroductionDiscountPriceDeadline": "Sa pag-subscribe sa Premium, maaari pa rin ninyong gamitin ang lahat ng feature",
-  "countdownForDiscountPriceDeadline": "Bumili sa loob ng {countdown} para sa {offPercent}% OFF",
+  "countdownForDiscountPriceDeadline": "Bumili sa loob ng {countdown} para sa {offPercent}% diskuwento",
   "pillReminderChanged": "Naitakda na ang pill reminder sa {value}",
   "silentModeNotificationDescription": "Ang mga notification ay ipapakita sa lock screen at tutugtog ang tunog kahit naka-ON ang Focus Mode o naka-silent ang device.",
   "enableNotificationInSilentMode": "Mag-notify kahit sa silent mode",

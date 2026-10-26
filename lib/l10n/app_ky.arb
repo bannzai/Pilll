@@ -422,7 +422,7 @@
   "changedPillNumber": "таблетканын номери өзгөртүлдү",
   "offPercentForMonthlyPremiumPackage": "Кадимки айлык планга салыштырмалуу {offPercent}% арзандатуу",
   "premiumIntroductionDiscountPriceDeadline": "Премиум жазылуусу менен бардык мүмкүнчүлүктөрдү колдонууну уланта аласыз",
-  "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алсаңыз {offPercent}% жеңилдик",
+  "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алып, {offPercent}% арзандатуу алыңыз",
   "pillReminderChanged": "Дары ичүү эскертүүсү {value} убактысына орнотулду",
   "silentModeNotificationDescription": "Концентрация режими күйгүзүлгөндө же түзмөк үнсүз болгондо дагы, билдирүүлөр кулпуланган экранда көрсөтүлөт жана үн ойнотулат",
   "enableNotificationInSilentMode": "Үнсүз режимде да эскертүү",

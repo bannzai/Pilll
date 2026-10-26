@@ -422,7 +422,7 @@
   "changedPillNumber": "cambio del número de píldora",
   "offPercentForMonthlyPremiumPackage": "Ahorra un {offPercent}% frente al plan mensual habitual",
   "premiumIntroductionDiscountPriceDeadline": "Con una suscripción a Premium puedes seguir usando todas las funciones",
-  "countdownForDiscountPriceDeadline": "Compra dentro de {countdown} y obtén {offPercent}% de descuento",
+  "countdownForDiscountPriceDeadline": "Compra en los próximos {countdown} con un {offPercent}% de descuento",
   "pillReminderChanged": "Notificación de toma configurada en {value}",
   "silentModeNotificationDescription": "Las notificaciones se mostrarán en la pantalla de bloqueo y se reproducirá el sonido, incluso con el modo no molestar activado o el dispositivo silenciado",
   "enableNotificationInSilentMode": "Notificar incluso en modo silencioso",

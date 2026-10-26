@@ -422,7 +422,7 @@
   "changedPillNumber": "canvi del número de píndola",
   "offPercentForMonthlyPremiumPackage": "Estalvia un {offPercent}% respecte del pla mensual habitual",
   "premiumIntroductionDiscountPriceDeadline": "Amb la subscripció Premium pots continuar fent servir totes les funcions",
-  "countdownForDiscountPriceDeadline": "{offPercent}% de descompte amb la compra dins de {countdown}",
+  "countdownForDiscountPriceDeadline": "Compra en els pròxims {countdown} amb un {offPercent}% de descompte",
   "pillReminderChanged": "S'ha establert la notificació de presa a {value}",
   "silentModeNotificationDescription": "Fins i tot amb el mode de concentració activat o el dispositiu silenciat, les notificacions es mostraran a la pantalla de bloqueig i se'n reproduirà el so",
   "enableNotificationInSilentMode": "Notificar en mode silenciós",

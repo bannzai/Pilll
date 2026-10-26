@@ -422,7 +422,7 @@
   "changedPillNumber": "tablettnummer ändrat",
   "offPercentForMonthlyPremiumPackage": "Spara {offPercent} % jämfört med det vanliga månadsabonnemanget",
   "premiumIntroductionDiscountPriceDeadline": "Med en premiumprenumeration kan du fortsätta använda alla funktioner",
-  "countdownForDiscountPriceDeadline": "{offPercent}% rabatt vid köp inom {countdown}",
+  "countdownForDiscountPriceDeadline": "Köp inom {countdown} och få {offPercent}% rabatt",
   "pillReminderChanged": "Påminnelsen för medicintag har ställts in till {value}",
   "silentModeNotificationDescription": "Aviseringar visas på låsskärmen och ljud spelas upp även när fokusläget är PÅ eller enheten är på tyst",
   "enableNotificationInSilentMode": "Meddela även i tyst läge",

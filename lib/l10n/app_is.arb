@@ -422,7 +422,7 @@
   "changedPillNumber": "pillunúmer breytt",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% ódýrara en venjuleg mánaðaráskrift",
   "premiumIntroductionDiscountPriceDeadline": "Með Premium-áskrift geturðu haldið áfram að nota alla eiginleika appsins",
-  "countdownForDiscountPriceDeadline": "{offPercent}% afsláttur við kaup innan {countdown}",
+  "countdownForDiscountPriceDeadline": "Ef þú kaupir innan {countdown} færðu {offPercent}% afslátt",
   "pillReminderChanged": "Pillutilkynningin stillt á {value}",
   "silentModeNotificationDescription": "Tilkynningar birtast á læsingaskjá og hljóð spilast jafnvel þegar einbeitingarhamur er virkur eða tækið er á þögn",
   "enableNotificationInSilentMode": "Tilkynna jafnvel í þögn ham",

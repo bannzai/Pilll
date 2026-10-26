@@ -422,7 +422,7 @@
   "changedPillNumber": "pakeistas tabletės numer",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % pigiau nei įprastas mėnesinis planas",
   "premiumIntroductionDiscountPriceDeadline": "Užsisakę Premium galėsite toliau naudotis visomis funkcijomis",
-  "countdownForDiscountPriceDeadline": "{offPercent}% nuolaida įsigyjant per {countdown}",
+  "countdownForDiscountPriceDeadline": "Įsigykite per {countdown} ir gaukite {offPercent}% nuolaidą",
   "pillReminderChanged": "Tabletės vartojimo priminimas nustatytas {value}",
   "silentModeNotificationDescription": "Net įjungus koncentracijos režimą arba nutildžius įrenginį, pranešimai bus rodomi užrakintame ekrane ir atkuriamas garsas",
   "enableNotificationInSilentMode": "Pranešti tylių režimu",

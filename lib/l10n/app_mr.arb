@@ -422,7 +422,7 @@
   "changedPillNumber": "गोळी क्रमांक बदलला",
   "offPercentForMonthlyPremiumPackage": "नेहमीच्या मासिक प्लॅनपेक्षा {offPercent}% सवलत",
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम सदस्यत्वासह तुम्ही सर्व सुविधा वापरणे सुरू ठेवू शकता",
-  "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी करून {offPercent}% सूट मिळवा",
+  "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी केल्यास {offPercent}% सवलत मिळेल",
   "pillReminderChanged": "औषध सेवन सूचना {value} ला सेट केली",
   "silentModeNotificationDescription": "फोकस मोड चालू असताना किंवा डिव्हाइस साइलेंट असताना देखील, नोटिफिकेशन लॉक स्क्रीनवर दिसतील आणि आवाज वाजेल",
   "enableNotificationInSilentMode": "साइलेंट मोडमध्येही सूचना द्या",

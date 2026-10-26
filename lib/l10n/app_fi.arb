@@ -422,7 +422,7 @@
   "changedPillNumber": "pillerinumero muutettu",
   "offPercentForMonthlyPremiumPackage": "Säästä {offPercent} % tavalliseen kuukausitilaukseen verrattuna",
   "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella voit jatkaa kaikkien ominaisuuksien käyttöä",
-  "countdownForDiscountPriceDeadline": "{offPercent}% alennusta ostamalla {countdown} kuluessa",
+  "countdownForDiscountPriceDeadline": "Osta {countdown} kuluessa ja saat {offPercent} % alennusta",
   "pillReminderChanged": "Ottamismuistutus asetettu kelloaikaan {value}",
   "silentModeNotificationDescription": "Ilmoitukset näkyvät lukitusnäytöllä ja ääni toistetaan, vaikka keskittymistila olisi päällä tai laite olisi äänettömässä",
   "enableNotificationInSilentMode": "Ilmoita myös hiljaisessa tilassa",

@@ -422,7 +422,7 @@
   "changedPillNumber": "змена нумар пігулкі",
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% танней за звычайны месячны план",
   "premiumIntroductionDiscountPriceDeadline": "З падпіскай прэміум вы зможаце і далей карыстацца ўсімі функцыямі",
-  "countdownForDiscountPriceDeadline": "{offPercent}% скiдка пры покупцы за {countdown}",
+  "countdownForDiscountPriceDeadline": "Купіце на працягу {countdown} і атрымайце зніжку {offPercent}%",
   "pillReminderChanged": "Напамін аб прыёме ўсталяваны на {value}",
   "silentModeNotificationDescription": "Нават пры ўключаным рэжыме сканцэнтравання або калі прылада ў бязгучным рэжыме, паведамленні будуць адлюстроўвацца на экране блакавання і прайгравацца гук",
   "enableNotificationInSilentMode": "Апавяшчаць нават у бесшумным рэжыме",

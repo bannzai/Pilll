@@ -422,7 +422,7 @@
   "changedPillNumber": "həb nömrə dəyişikliyi",
   "offPercentForMonthlyPremiumPackage": "Adi aylıq planla müqayisədə {offPercent}% endirim",
   "premiumIntroductionDiscountPriceDeadline": "Premium abunəliyi ilə bütün funksiyalardan istifadə etməyə davam edə bilərsiniz",
-  "countdownForDiscountPriceDeadline": "{countdown} ərzində alışda {offPercent}% OFF",
+  "countdownForDiscountPriceDeadline": "{countdown} ərzində alın, {offPercent}% endirim qazanın",
   "pillReminderChanged": "Qəbul bildirişi {value} olaraq təyin edildi",
   "silentModeNotificationDescription": "Fokus rejimi aktiv olduqda və ya cihaz səssiz rejimində olduqda belə, bildirişlər kilidli ekranda görünür və səs çalınır",
   "enableNotificationInSilentMode": "Səssiz rejimdə də bildirmək",
