@@ -384,7 +384,7 @@
   "pauseTakingChanged": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള മാറ്റി",
   "editPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള മാറ്റുക",
   "changePillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റുക",
-  "beginToEndNumbers": "{begin} മുതൽ {end} വരെ",
+  "beginToEndNumbers": "നമ്പർ {begin} ~ {end}",
   "resumeTaking": "പുനരാരംഭിക്കുക",
   "changePausePeriod": "മരുന്ന് ഇടവേള മാറ്റം",
   "changedPausePeriod": "സേവന വിരാമ കാലാവധി മാറ്റി",

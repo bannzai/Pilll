@@ -384,7 +384,7 @@
   "pauseTakingChanged": "மாத்திரை எடுத்துக்கொள்வதற்கான இடைவேளை மாற்றப்பட்டது",
   "editPausePeriod": "மாத்திரை உட்கொள்வதில் இடைவேளை காலத்தைத் திருத்துங்கள்",
   "changePillDays": "மாத்திரை உட்கொள்ளும் நாட்களின் எண்ணிக்கையை மாற்றுங்கள்",
-  "beginToEndNumbers": "எண் {begin} முதல் {end} வரை",
+  "beginToEndNumbers": "எண் {begin} ~ {end}",
   "resumeTaking": "மீண்டும் எடுக்க",
   "changePausePeriod": "அளிப்பு இடைவெளி மாற்றம்",
   "changedPausePeriod": "மருந்து உட்கொள்ளாத ஓய்வுக் காலம் மாற்றப்பட்டது",

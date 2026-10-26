@@ -384,7 +384,7 @@
   "pauseTakingChanged": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားချိန်ကို ပြောင်းလဲပြီးပါပြီ",
   "editPausePeriod": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားသည့်ကာလကို ပြင်ဆင်ရန်",
   "changePillDays": "ဆေးလုံးသောက်ရမည့် ရက်အရေအတွက် ပြောင်းရန်",
-  "beginToEndNumbers": "{begin} နံပါတ် ~ {end} နံပါတ်",
+  "beginToEndNumbers": "နံပါတ် {begin} ~ {end}",
   "resumeTaking": "ပြန်လည်သောက်သုံးရန်",
   "changePausePeriod": "ဆေးရပ်ကာလ ပြောင်းလဲခြင်း",
   "changedPausePeriod": "သောက်သုံးခြင်း အနားယူကာလကို ပြောင်းလဲပြီးပါပြီ",

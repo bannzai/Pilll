@@ -384,7 +384,7 @@
   "pauseTakingChanged": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮವನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "editPausePeriod": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಿ",
   "changePillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಿ",
-  "beginToEndNumbers": "{begin}ನಂ ~ {end}ನಂ",
+  "beginToEndNumbers": "ಸಂ. {begin} ~ {end}",
   "resumeTaking": "ಸೇವನೆ ಪುನರಾರಂಭ",
   "changePausePeriod": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿ ಬದಲಾವಣೆ",
   "changedPausePeriod": "ಸೇವನೆಯ ವಿರಾಮ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",

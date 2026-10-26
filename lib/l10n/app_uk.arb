@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Перерву в прийомі пігулок змінено",
   "editPausePeriod": "Змінити тривалість перерви в прийомі пігулок",
   "changePillDays": "Змінити кількість днів прийому пігулок",
-  "beginToEndNumbers": "{begin} до {end}",
+  "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Відновити прийом",
   "changePausePeriod": "Зміна періоду перерви",
   "changedPausePeriod": "Період перерви у прийомі змінено",

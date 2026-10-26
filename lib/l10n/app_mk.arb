@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Променета е паузата во земањето таблета",
   "editPausePeriod": "Измена на периодот на пауза од земање таблета",
   "changePillDays": "Промена на бројот на денови за земање таблета",
-  "beginToEndNumbers": "{begin} број ~ {end} број",
+  "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Обнови прием",
   "changePausePeriod": "Промена на периодот на пауза",
   "changedPausePeriod": "Периодот на пауза од земање е променет",

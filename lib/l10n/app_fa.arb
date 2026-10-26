@@ -384,7 +384,7 @@
   "pauseTakingChanged": "دورهٔ توقف مصرف قرص تغییر کرد",
   "editPausePeriod": "ویرایش دورهٔ استراحت از مصرف قرص",
   "changePillDays": "تغییر تعداد روزهای مصرف قرص",
-  "beginToEndNumbers": "شماره {begin} تا {end}",
+  "beginToEndNumbers": "شمارهٔ {begin} ~ {end}",
   "resumeTaking": "از سرگیری مصرف",
   "changePausePeriod": "تغییر دوره توقف مصرف",
   "changedPausePeriod": "دوره استراحت مصرف تغییر داده شد",

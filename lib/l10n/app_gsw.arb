@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Dini Pillenpaus isch gänderet worde",
   "editPausePeriod": "Pillepause bearbeite",
   "changePillDays": "Aazahl Täg zum Pille näh ändere",
-  "beginToEndNumbers": "{begin} bis {end}",
+  "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Iinahm fortsetze",
   "changePausePeriod": "Pillepause ändere",
   "changedPausePeriod": "D Pauseperiode isch aagpasst worde",

@@ -384,7 +384,7 @@
   "pauseTakingChanged": "აბის მიღების შესვენება შეიცვალა",
   "editPausePeriod": "აბის მიღების შესვენების პერიოდის შეცვლა",
   "changePillDays": "აბების მიღების დღეების რაოდენობის შეცვლა",
-  "beginToEndNumbers": "{begin}-ე ნომერი ~ {end}-ე ნომერი",
+  "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "მიღების განახლება",
   "changePausePeriod": "მიღების შესვენების პერიოდის შეცვლა",
   "changedPausePeriod": "მიღების პაუზის პერიოდი შეიცვალა",

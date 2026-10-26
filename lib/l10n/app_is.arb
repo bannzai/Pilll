@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Hléi á pillutöku hefur verið breytt",
   "editPausePeriod": "Breyta hléi frá töku pillunnar",
   "changePillDays": "Breyta fjölda daga sem pillan er tekin",
-  "beginToEndNumbers": "{begin}. - {end}.",
+  "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Hefja aftur",
   "changePausePeriod": "Breyta hvíldartímabili",
   "changedPausePeriod": "Hvíldartímabil pillunnar hefur verið breytt",

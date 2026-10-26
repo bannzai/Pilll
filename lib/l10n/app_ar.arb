@@ -384,7 +384,7 @@
   "pauseTakingChanged": "تم تغيير فترة التوقف عن تناول الحبوب",
   "editPausePeriod": "تعديل فترة التوقف عن تناول الحبوب",
   "changePillDays": "تغيير عدد أيام تناول الحبوب",
-  "beginToEndNumbers": "رقم {begin} إلى رقم {end}",
+  "beginToEndNumbers": "رقم {begin} ~ {end}",
   "resumeTaking": "استئناف التناول",
   "changePausePeriod": "تغيير فترة الراحة من الحبوب",
   "changedPausePeriod": "تم تغيير فترة الراحة من تناول الحبوب",

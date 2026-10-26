@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Votre pause dans la prise de la pilule a été modifiée",
   "editPausePeriod": "Modifier la période de pause de la pilule",
   "changePillDays": "Modifier le nombre de jours de prise de la pilule",
-  "beginToEndNumbers": "{begin} - {end}",
+  "beginToEndNumbers": "n° {begin} ~ {end}",
   "resumeTaking": "Reprendre la prise",
   "changePausePeriod": "Modifier la période de repos",
   "changedPausePeriod": "Période de pause mise à jour",

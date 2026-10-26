@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Pillepausen din er endret",
   "editPausePeriod": "Endre p-pillepausen",
   "changePillDays": "Endre antall dager du tar p-piller",
-  "beginToEndNumbers": "{begin} - {end}",
+  "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Gjenoppta inntak",
   "changePausePeriod": "Endre pauseperiode",
   "changedPausePeriod": "Pauseperioden er oppdatert",

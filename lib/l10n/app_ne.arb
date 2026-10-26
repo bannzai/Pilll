@@ -384,7 +384,7 @@
   "pauseTakingChanged": "चक्की खाने बीचको विश्राम अवधि परिवर्तन गरिएको छ",
   "editPausePeriod": "चक्की खाने विराम अवधि परिवर्तन गर्नुहोस्",
   "changePillDays": "चक्की खाने दिनहरूको सङ्ख्या परिवर्तन गर्नुहोस्",
-  "beginToEndNumbers": "{begin} नं ~ {end} नं",
+  "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "सेवन पुनः सुरु",
   "changePausePeriod": "सेवन विश्राम अवधि परिवर्तन",
   "changedPausePeriod": "सेवन बिदा अवधि परिवर्तन गरिएको छ",

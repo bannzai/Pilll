@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Tempoh rehat pengambilan pil telah diubah",
   "editPausePeriod": "Ubah tempoh rehat pengambilan pil",
   "changePillDays": "Ubah bilangan hari pengambilan pil",
-  "beginToEndNumbers": "No. {begin} - No. {end}",
+  "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Sambung Minum",
   "changePausePeriod": "Ubah Tempoh Rehat Pengambilan",
   "changedPausePeriod": "Tempoh rehat pengambilan telah diubah",

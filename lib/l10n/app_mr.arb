@@ -384,7 +384,7 @@
   "pauseTakingChanged": "गोळी घेण्याचा विराम बदलला आहे",
   "editPausePeriod": "गोळी घेण्यातील विश्रांतीचा कालावधी बदला",
   "changePillDays": "गोळी घेण्याच्या दिवसांची संख्या बदला",
-  "beginToEndNumbers": "{begin} नंबर ते {end} नंबर",
+  "beginToEndNumbers": "क्र. {begin} ~ {end}",
   "resumeTaking": "सेवन पुन्हा सुरू करा",
   "changePausePeriod": "सेवन विराम कालावधी बदल",
   "changedPausePeriod": "सेवन विश्राम कालावधी बदलला",

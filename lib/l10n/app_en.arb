@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Your pill break has been changed",
   "editPausePeriod": "Edit pill break",
   "changePillDays": "Change pill-taking days",
-  "beginToEndNumbers": "{begin} - {end}",
+  "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Resume Taking",
   "changePausePeriod": "Change Rest Period",
   "changedPausePeriod": "Break period updated",

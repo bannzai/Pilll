@@ -384,7 +384,7 @@
   "pauseTakingChanged": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "editPausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲੋ",
   "changePillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
-  "beginToEndNumbers": "{begin} ਤੋਂ {end} ਤੱਕ",
+  "beginToEndNumbers": "ਨੰ. {begin} ~ {end}",
   "resumeTaking": "ਸੇਵਨ ਮੁੜ ਸ਼ੁਰੂ",
   "changePausePeriod": "ਸੇਵਨ ਵਿਰਾਮ ਮਿਆਦ ਬਦਲੋ",
   "changedPausePeriod": "ਦਵਾਈ ਦੇ ਬਰੇਕ ਦਾ ਸਮਾਂ ਬਦਲ ਦਿੱਤਾ ਗਿਆ",

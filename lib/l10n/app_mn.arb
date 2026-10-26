@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Эм уух завсарлагыг өөрчилсөн",
   "editPausePeriod": "Эм уух завсарлагын хугацааг өөрчлөх",
   "changePillDays": "Эм уух өдрийн тоог өөрчилнө үү",
-  "beginToEndNumbers": "{begin} дугаар ~ {end} дугаар",
+  "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Дахин уух",
   "changePausePeriod": "Амралтын хугацаа өөрчлөх",
   "changedPausePeriod": "Амралтын хугацааг өөрчиллөө",

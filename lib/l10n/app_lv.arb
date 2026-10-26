@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Tablešu lietošanas pārtraukums ir mainīts",
   "editPausePeriod": "Mainīt tablešu lietošanas pārtraukuma ilgumu",
   "changePillDays": "Mainiet tablešu lietošanas dienu skaitu",
-  "beginToEndNumbers": "{begin}. – {end}.",
+  "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsākt lietošanu",
   "changePausePeriod": "Pārtraukuma perioda maiņa",
   "changedPausePeriod": "Lietošanas pārtraukuma periods ir mainīts",

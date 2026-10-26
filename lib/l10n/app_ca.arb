@@ -384,7 +384,7 @@
   "pauseTakingChanged": "S'ha canviat la pausa de la píndola",
   "editPausePeriod": "Edita el període de descans de la píndola",
   "changePillDays": "Canvia el nombre de dies que prens la píndola",
-  "beginToEndNumbers": "{begin} a {end}",
+  "beginToEndNumbers": "núm. {begin} ~ {end}",
   "resumeTaking": "Reinici de la presa",
   "changePausePeriod": "Canvi de període de descans de la medicació",
   "changedPausePeriod": "He canviat el període de descans de la medicació.",

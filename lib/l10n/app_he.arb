@@ -384,7 +384,7 @@
   "pauseTakingChanged": "ההפסקה בנטילת הגלולה שונתה",
   "editPausePeriod": "עריכת תקופת ההפסקה בנטילת הגלולה",
   "changePillDays": "שינוי מספר ימי נטילת הגלולה",
-  "beginToEndNumbers": "{begin} עד {end}",
+  "beginToEndNumbers": "מס׳ {begin} ~ {end}",
   "resumeTaking": "חידוש הנטילה",
   "changePausePeriod": "שינוי תקופת ההפסקה",
   "changedPausePeriod": "תקופת ההפסקה עודכנה",

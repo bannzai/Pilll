@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Przerwa w przyjmowaniu tabletek została zmieniona",
   "editPausePeriod": "Edytuj przerwę w braniu tabletek",
   "changePillDays": "Zmień liczbę dni przyjmowania pigułek",
-  "beginToEndNumbers": "{begin} do {end}",
+  "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Wznów przyjmowanie",
   "changePausePeriod": "Zmiana okresu przerwy",
   "changedPausePeriod": "Okres przerwy w przyjmowaniu został zmieniony",

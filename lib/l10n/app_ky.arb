@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Таблетка ичүүдөгү тыныгуу өзгөртүлдү",
   "editPausePeriod": "Таблетка ичүүдөгү тыныгуу мөөнөтүн өзгөртүңүз",
   "changePillDays": "Таблетка ичүү күндөрүнүн санын өзгөртүңүз",
-  "beginToEndNumbers": "{begin}-чи ~ {end}-чи",
+  "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Кайра ичип баштоо",
   "changePausePeriod": "Эс алуу мөөнөтүн өзгөртүү",
   "changedPausePeriod": "Дары ичүүдө демалыс мезгили өзгөртүлдү",

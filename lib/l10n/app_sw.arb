@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Mapumziko ya kumeza vidonge yamebadilishwa",
   "editPausePeriod": "Hariri muda wa mapumziko ya kumeza vidonge",
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
-  "beginToEndNumbers": "{begin} hadi {end}",
+  "beginToEndNumbers": "namba {begin} ~ {end}",
   "resumeTaking": "Anza Tena",
   "changePausePeriod": "Badilisha Kipindi cha Kuacha Dawa",
   "changedPausePeriod": "Kipindi cha mapumziko kimebadilishwa",

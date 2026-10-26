@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Đã thay đổi thời gian tạm ngừng uống thuốc",
   "editPausePeriod": "Chỉnh sửa thời gian nghỉ uống thuốc",
   "changePillDays": "Thay đổi số ngày uống thuốc",
-  "beginToEndNumbers": "Số {begin} ~ {end}",
+  "beginToEndNumbers": "số {begin} ~ {end}",
   "resumeTaking": "Tiếp tục uống",
   "changePausePeriod": "Thay đổi thời kỳ nghỉ uống thuốc",
   "changedPausePeriod": "Đã thay đổi kỳ nghỉ uống thuốc",

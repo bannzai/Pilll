@@ -384,7 +384,7 @@
   "pauseTakingChanged": "เปลี่ยนช่วงพักทานยาแล้วค่ะ",
   "editPausePeriod": "แก้ไขช่วงพักทานยา",
   "changePillDays": "เปลี่ยนจำนวนวันที่ทานยา",
-  "beginToEndNumbers": "เลขที่ {begin} ถึง {end}",
+  "beginToEndNumbers": "หมายเลข {begin} ~ {end}",
   "resumeTaking": "เริ่มรับประทานใหม่",
   "changePausePeriod": "เปลี่ยนระยะหยุดยา",
   "changedPausePeriod": "เปลี่ยนระยะเวลาหยุดรับประทานยาเรียบร้อยแล้ว",

@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Jeda minum pil telah diubah",
   "editPausePeriod": "Ubah masa jeda minum pil",
   "changePillDays": "Ubah jumlah hari minum pil",
-  "beginToEndNumbers": "No. {begin} - {end}",
+  "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Lanjutkan Konsumsi",
   "changePausePeriod": "Ubah Periode Istirahat",
   "changedPausePeriod": "Periode istirahat konsumsi telah diubah",

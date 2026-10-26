@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Je pillenpauze is gewijzigd",
   "editPausePeriod": "Pillenpauze aanpassen",
   "changePillDays": "Aantal dagen dat je de pil neemt wijzigen",
-  "beginToEndNumbers": "{begin} tot {end}",
+  "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Inname hervatten",
   "changePausePeriod": "Pauzeperiode wijzigen",
   "changedPausePeriod": "De pilpauze periode is gewijzigd",

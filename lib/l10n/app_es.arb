@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Se cambió la pausa de la píldora",
   "editPausePeriod": "Editar el período de descanso de la píldora",
   "changePillDays": "Cambiar los días de toma de la píldora",
-  "beginToEndNumbers": "{begin} a {end}",
+  "beginToEndNumbers": "n.º {begin} ~ {end}",
   "resumeTaking": "Reanudar toma",
   "changePausePeriod": "Cambiar período de descanso",
   "changedPausePeriod": "Se ha modificado el período de descanso de la toma",

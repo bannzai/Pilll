@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Tablečių vartojimo pertrauka pakeista",
   "editPausePeriod": "Keisti tablečių vartojimo pertraukos trukmę",
   "changePillDays": "Pakeiskite tablečių vartojimo dienų skaičių",
-  "beginToEndNumbers": "{begin} - {end}",
+  "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atnaujinti vartojimą",
   "changePausePeriod": "Pertraukos laikotarpio keitimas",
   "changedPausePeriod": "Pertraukos laikotarpis pakeistas",

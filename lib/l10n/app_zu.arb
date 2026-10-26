@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Isikhathi sokuphumula ekuphuzeni amaphilisi sishintshiwe",
   "editPausePeriod": "Hlela isikhathi sekhefu ekuphuzeni amaphilisi",
   "changePillDays": "Shintsha inani lezinsuku zokuphuza amaphilisi",
-  "beginToEndNumbers": "{begin} kuya {end}",
+  "beginToEndNumbers": "inombolo {begin} ~ {end}",
   "resumeTaking": "Qalisa Kabusha",
   "changePausePeriod": "Shintsha Isikhathi Sokuphumula",
   "changedPausePeriod": "Isikhathi sokuphumula sishintshiwe",

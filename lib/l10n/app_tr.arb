@@ -384,7 +384,7 @@
   "pauseTakingChanged": "Hap kullanım molası değiştirildi",
   "editPausePeriod": "Hap kullanımına ara verme süresini düzenleyin",
   "changePillDays": "Hap kullanma gün sayısını değiştirin",
-  "beginToEndNumbers": "{begin} ~ {end}",
+  "beginToEndNumbers": "{begin} ~ {end} numara",
   "resumeTaking": "Kullanımı Devam Et",
   "changePausePeriod": "İlaç Arası Dönem Değişikliği",
   "changedPausePeriod": "Ara verme dönemi değiştirildi",
