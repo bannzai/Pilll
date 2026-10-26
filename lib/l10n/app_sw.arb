@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Historia ya kumeza vidonge ni kipengele cha Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ukisitisha kumeza vidonge kwa muda, nambari ya kidonge haitasonga mbele",
   "pauseTakingFromNumber": "Je, ungependa kupumzika kwa muda kutoka kumeza vidonge kuanzia kidonge nambari {number}?",
-  "lastTakenPlusOnePillNumber": "Namba {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Kidonge nambari {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "kumeza",
   "estimatedEndPillNumber": "Mwisho wa shiti la awali: {estimatedEndPillNumber}",
   "addPillSheetButton": "Ongeza Karatasi ya Vidonge",

@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Riwayat minum pil adalah fitur premium",
   "pauseTakingDoesNotAdvancePillNumber": "Jika Anda berhenti minum pil untuk sementara, nomor pil tidak akan bertambah",
   "pauseTakingFromNumber": "Ingin berhenti minum pil sementara mulai dari pil nomor {number}?",
-  "lastTakenPlusOnePillNumber": "ke-{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "konsumsi",
   "estimatedEndPillNumber": "Akhir lembar sebelumnya: {estimatedEndPillNumber}",
   "addPillSheetButton": "Tambah Lembar Pil",

@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Historie užívání je funkcí Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Pokud užívání přerušíte, číslo tablety se neposune",
   "pauseTakingFromNumber": "Chcete od pilulky číslo {number} přerušit užívání?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
+  "lastTakenPlusOnePillNumber": "Tableta č. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "užívání",
   "estimatedEndPillNumber": "Konec předchozího blistru: tableta č. {estimatedEndPillNumber}",
   "addPillSheetButton": "Přidat balení pilulek",

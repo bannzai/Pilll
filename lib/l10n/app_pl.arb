@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Historia przyjmowania tabletek to funkcja premium",
   "pauseTakingDoesNotAdvancePillNumber": "Jeśli zrobisz przerwę w przyjmowaniu tabletek, numer tabletki nie przesunie się dalej",
   "pauseTakingFromNumber": "Czy chcesz zrobić przerwę w przyjmowaniu tabletek od tabletki numer {number}?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
+  "lastTakenPlusOnePillNumber": "Tabletka nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "zażywanie",
   "estimatedEndPillNumber": "Ostatnia z poprzedniej blisterki: {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodaj blister",

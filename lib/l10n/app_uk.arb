@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Історія прийому — функція преміум-плану",
   "pauseTakingDoesNotAdvancePillNumber": "Якщо ви зробите перерву в прийомі, номер пігулки не зміниться",
   "pauseTakingFromNumber": "Хочете зробити перерву в прийомі пігулок, починаючи з пігулки № {number}?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-а",
+  "lastTakenPlusOnePillNumber": "Пігулка № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "прийом",
   "estimatedEndPillNumber": "Останній з попередньої упаковки: {estimatedEndPillNumber}",
   "addPillSheetButton": "Додати блістер таблеток",

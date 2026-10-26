@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Lo storico delle assunzioni è una funzione Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Se fai una pausa nell'assunzione, il numero della pillola non avanzerà",
   "pauseTakingFromNumber": "Vuoi fare una pausa nell’assunzione della pillola a partire dalla numero {number}?",
-  "lastTakenPlusOnePillNumber": "n. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pillola n. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "assunzione",
   "estimatedEndPillNumber": "Ultima pillola del blister precedente: n. {estimatedEndPillNumber}",
   "addPillSheetButton": "Aggiungi blister",

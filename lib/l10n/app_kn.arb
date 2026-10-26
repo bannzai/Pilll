@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "ಸೇವನೆಯ ಇತಿಹಾಸ ಪ್ರೀಮಿಯಂ ವೈಶಿಷ್ಟ್ಯವಾಗಿದೆ",
   "pauseTakingDoesNotAdvancePillNumber": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸಿದರೆ, ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಮುಂದಕ್ಕೆ ಸಾಗುವುದಿಲ್ಲ",
   "pauseTakingFromNumber": "{number}ನೇ ಮಾತ್ರೆಯಿಂದ ಮಾತ್ರೆಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ಸ್ವಲ್ಪ ಕಾಲ ನಿಲ್ಲಿಸಲು ಬಯಸುವಿರಾ?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ನೇ",
+  "lastTakenPlusOnePillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ಸೇವನೆ",
   "estimatedEndPillNumber": "ಹಿಂದಿನ ಶೀಟ್‌ನ ಅಂತಿಮ: {estimatedEndPillNumber} ಸಂಖ್ಯೆ",
   "addPillSheetButton": "ಪಿಲ್ ಶೀಟ್ ಸೇರಿಸು",

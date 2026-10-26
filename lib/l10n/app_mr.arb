@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "सेवन इतिहास हे प्रीमियम वैशिष्ट्य आहे",
   "pauseTakingDoesNotAdvancePillNumber": "गोळी घेणे काही काळ थांबवल्यास गोळी क्रमांक पुढे जाणार नाही",
   "pauseTakingFromNumber": "तुम्हाला {number} क्रमांकाच्या गोळीपासून गोळ्या घेणे काही काळ थांबवायचे आहे का?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}वा",
+  "lastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "सेवन",
   "estimatedEndPillNumber": "मागील शीटचा शेवट: {estimatedEndPillNumber} क्रमांक",
   "addPillSheetButton": "गोळीचे शीट जोडा",

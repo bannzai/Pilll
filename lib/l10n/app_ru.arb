@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "История приёма — функция премиум-плана",
   "pauseTakingDoesNotAdvancePillNumber": "Если вы сделаете перерыв в приёме, номер таблетки не изменится",
   "pauseTakingFromNumber": "Хотите сделать перерыв в приёме таблеток, начиная с таблетки № {number}?",
-  "lastTakenPlusOnePillNumber": "№{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Таблетка № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "прием",
   "estimatedEndPillNumber": "Последняя из предыдущего блистера: №{estimatedEndPillNumber}",
   "addPillSheetButton": "Добавить блистер",

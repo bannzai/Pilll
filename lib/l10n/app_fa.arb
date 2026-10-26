@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "تاریخچه مصرف از امکانات پریمیوم است",
   "pauseTakingDoesNotAdvancePillNumber": "اگر مصرف قرص را موقتاً متوقف کنید، شماره قرص جلو نمی‌رود",
   "pauseTakingFromNumber": "می‌خواهید مصرف قرص‌ها را از قرص شمارهٔ {number} به‌طور موقت متوقف کنید؟",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}‌ام",
+  "lastTakenPlusOnePillNumber": "قرص شماره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "مصرف",
   "estimatedEndPillNumber": "آخر ورق قبلی: شماره {estimatedEndPillNumber}",
   "addPillSheetButton": "افزودن بسته قرص",

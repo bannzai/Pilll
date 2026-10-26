@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Ичүү тарыхы — премиум мүмкүнчүлүк",
   "pauseTakingDoesNotAdvancePillNumber": "Эгер дары ичүүнү убактылуу токтотсоңуз, таблетканын номери алдыга жылбайт",
   "pauseTakingFromNumber": "{number}-таблеткадан баштап ичүүнү убактылуу токтоткуңуз келеби?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-чи",
+  "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} таблетка",
   "taking": "кабыл алуу",
   "estimatedEndPillNumber": "Мурунку барактын соңку: {estimatedEndPillNumber}-номер",
   "addPillSheetButton": "Таблетка пакетти кошуу",

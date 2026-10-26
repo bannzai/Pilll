@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "L’historique des prises est une fonctionnalité Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Si vous faites une pause dans la prise, le numéro de pilule n'avancera pas",
   "pauseTakingFromNumber": "Souhaitez-vous faire une pause dans la prise des pilules à partir de la pilule nº {number} ?",
-  "lastTakenPlusOnePillNumber": "Pilule {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "prise",
   "estimatedEndPillNumber": "Dernière pilule de la feuille précédente : #{estimatedEndPillNumber}",
   "addPillSheetButton": "Ajouter une feuille de pilules",

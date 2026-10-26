@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "服药历史是高级功能",
   "pauseTakingDoesNotAdvancePillNumber": "暂停服药期间，药片编号不会往后顺延",
   "pauseTakingFromNumber": "要从第 {number} 粒药开始暂停服用吗？",
-  "lastTakenPlusOnePillNumber": "第{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}颗",
+  "lastTakenPlusOnePillNumber": "第{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}片药",
   "taking": "服药",
   "estimatedEndPillNumber": "上一板的最后：第{estimatedEndPillNumber}号",
   "addPillSheetButton": "添加药板",

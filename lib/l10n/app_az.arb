@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Qəbul tarixçəsi premium funksiyadır",
   "pauseTakingDoesNotAdvancePillNumber": "Həb qəbuluna fasilə versəniz, həb nömrəsi irəliləməyəcək",
   "pauseTakingFromNumber": "{number} nömrəli həbdən başlayaraq qəbula fasilə vermək istəyirsiniz?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-cı",
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} nömrəli həb",
   "taking": "qəbul",
   "estimatedEndPillNumber": "Əvvəlki lövhənin sonu: {estimatedEndPillNumber} nömrə",
   "addPillSheetButton": "Həb paketini əlavə et",

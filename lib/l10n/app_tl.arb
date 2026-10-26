@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Ang kasaysayan ng pag-inom ng pildoras ay tampok ng Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Kung pansamantala kayong hihinto sa pag-inom ng pildoras, hindi uusad ang numero ng pildoras",
   "pauseTakingFromNumber": "Nais po ba ninyong pansamantalang ihinto ang pag-inom ng pildoras simula sa bilang {number}?",
-  "lastTakenPlusOnePillNumber": "Bilang {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pildoras bilang {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "pag-inom",
   "estimatedEndPillNumber": "Huling pildoras sa dating sheet: {estimatedEndPillNumber}",
   "addPillSheetButton": "Magdagdag ng Pill Sheet",

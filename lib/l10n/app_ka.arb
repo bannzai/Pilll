@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "მიღების ისტორია პრემიუმ ფუნქციაა",
   "pauseTakingDoesNotAdvancePillNumber": "თუ აბების მიღებას დროებით შეაჩერებთ, აბის ნომერი წინ არ წავა",
   "pauseTakingFromNumber": "გსურთ, დროებით შეწყვიტოთ აბების მიღება {number} ნომრიდან?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-ე",
+  "lastTakenPlusOnePillNumber": "აბი № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "მიღება",
   "estimatedEndPillNumber": "წინა პაკეტის ბოლო: {estimatedEndPillNumber} ნომერი",
   "addPillSheetButton": "აბების ფურცლის დამატება",

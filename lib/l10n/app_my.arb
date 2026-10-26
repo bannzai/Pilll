@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "ဆေးသောက်ခဲ့သည့်စာရင်းသည် ပရီမီယံ လုပ်ဆောင်ချက်ဖြစ်ပါတယ်",
   "pauseTakingDoesNotAdvancePillNumber": "ဆေးပြားသောက်တာကို ခဏနားထားရင် ဆေးပြားနံပါတ်က ရှေ့မတိုးပါဘူး",
   "pauseTakingFromNumber": "နံပါတ် {number} ဆေးလုံးမှစပြီး ဆေးသောက်ခြင်းကို ခဏရပ်နားလိုပါသလား?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} နံပါတ်",
+  "lastTakenPlusOnePillNumber": "ဆေးလုံးအမှတ် {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "သုံး",
   "estimatedEndPillNumber": "ယခင်အေးစ်၏နောက်ဆုံး - {estimatedEndPillNumber}နံပါတ်",
   "addPillSheetButton": "ယဉ်ဆေးအိုး ပေါင်းထည့်ရန်",

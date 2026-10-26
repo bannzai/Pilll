@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Innamegeschiedenis is een premiumfunctie",
   "pauseTakingDoesNotAdvancePillNumber": "Als je tijdelijk stopt met de pil, schuift het pilnummer niet op",
   "pauseTakingFromNumber": "Wil je vanaf pil {number} een pauze nemen met de pil?",
-  "lastTakenPlusOnePillNumber": "nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pil nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "inname",
   "estimatedEndPillNumber": "Laatste van vorige strip: pil {estimatedEndPillNumber}",
   "addPillSheetButton": "Pilstrip toevoegen",

@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "ସେବନ ଇତିହାସ ଏକ ପ୍ରିମିୟମ୍ ସୁବିଧା",
   "pauseTakingDoesNotAdvancePillNumber": "ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିଲେ ବଟିକା ନମ୍ବର ଆଗକୁ ବଢ଼ିବ ନାହିଁ",
   "pauseTakingFromNumber": "ଆପଣ {number} ନମ୍ବର ବଟିକାରୁ ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ତମ",
+  "lastTakenPlusOnePillNumber": "ବଟିକା ନମ୍ବର {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ସେବନ",
   "estimatedEndPillNumber": "ଗତ ସିଟ୍‌ର ଶେଷ: {estimatedEndPillNumber} ନମ୍ବର",
   "addPillSheetButton": "ପିଲ୍ ଶିଟ୍ ଯୋଗ କରନ୍ତୁ",

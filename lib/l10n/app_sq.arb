@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Historia e marrjes është veçori premium",
   "pauseTakingDoesNotAdvancePillNumber": "Nëse bëni një pauzë nga marrja e pilulave, numri i pilulës nuk do të ecë përpara",
   "pauseTakingFromNumber": "Dëshironi të bëni një pushim nga marrja e pilulave duke filluar nga pilula numër {number}?",
-  "lastTakenPlusOnePillNumber": "numri {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "marrje",
   "estimatedEndPillNumber": "Fundi i fletës së mëparshme: numri {estimatedEndPillNumber}",
   "addPillSheetButton": "Shto fletë pilule",

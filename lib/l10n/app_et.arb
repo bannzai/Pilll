@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Võtmislogi on premium-funktsioon",
   "pauseTakingDoesNotAdvancePillNumber": "Kui teed pillide võtmisel pausi, siis pillinumber edasi ei liigu",
   "pauseTakingFromNumber": "Kas soovid alates pillist nr {number} pillide võtmises pausi teha?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
+  "lastTakenPlusOnePillNumber": "Pill nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "võtmine",
   "estimatedEndPillNumber": "Eelmise pakendi lõpp: {estimatedEndPillNumber}",
   "addPillSheetButton": "Lisa pillipakend",

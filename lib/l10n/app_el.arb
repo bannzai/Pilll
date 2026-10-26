@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι λειτουργία Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Αν κάνετε παύση στη λήψη, ο αριθμός χαπιού δεν θα προχωρήσει",
   "pauseTakingFromNumber": "Θέλετε να κάνετε παύση στη λήψη των χαπιών από το χάπι {number} και μετά;",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ο",
+  "lastTakenPlusOnePillNumber": "Χάπι αρ. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "λήψη",
   "estimatedEndPillNumber": "Τέλος προηγούμενου φύλλου: {estimatedEndPillNumber}",
   "addPillSheetButton": "Προσθήκη φύλλου χαπιών",

@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Эм уусан түүх нь премиум боломж юм",
   "pauseTakingDoesNotAdvancePillNumber": "Эм уухаа түр завсарлавал эмийн дугаар урагшлахгүй",
   "pauseTakingFromNumber": "{number} дугаартай эмээс эхлэн уухаа түр завсарлуулах уу?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дэх",
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дугаартай эм",
   "taking": "уух",
   "estimatedEndPillNumber": "Өмнөх цаасны сүүлийн: {estimatedEndPillNumber} дугаар",
   "addPillSheetButton": "Эмийн хавтанг нэмэх",

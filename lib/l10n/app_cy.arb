@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Mae hanes cymryd y bilsen yn nodwedd premiwm",
   "pauseTakingDoesNotAdvancePillNumber": "Os byddwch chi'n cymryd seibiant o gymryd y bilsen, ni fydd rhif y bilsen yn symud ymlaen",
   "pauseTakingFromNumber": "Hoffech chi gymryd seibiant o gymryd y bilsen o rif {number} ymlaen?",
-  "lastTakenPlusOnePillNumber": "Rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Pilsen rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "cymryd",
   "estimatedEndPillNumber": "Diwedd y taflen diwethaf: rhif {estimatedEndPillNumber}",
   "addPillSheetButton": "Ychwanegu Taflen Bilsen",

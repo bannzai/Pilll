@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "El historial de tomas es una función Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Si haces una pausa en la toma, el número de píldora no avanzará",
   "pauseTakingFromNumber": "¿Quieres hacer una pausa en la toma de píldoras a partir de la número {number}?",
-  "lastTakenPlusOnePillNumber": "Píldora {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "Píldora n.º {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "toma",
   "estimatedEndPillNumber": "Último del blíster anterior: {estimatedEndPillNumber}",
   "addPillSheetButton": "Agregar nuevo blister",

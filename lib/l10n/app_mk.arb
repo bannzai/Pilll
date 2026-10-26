@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Историја на земање е премиум функција",
   "pauseTakingDoesNotAdvancePillNumber": "Ако направите пауза во земањето, број на таблета нема да се помести",
   "pauseTakingFromNumber": "Дали сакате да направите пауза во земањето таблети почнувајќи од таблета број {number}?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-та",
+  "lastTakenPlusOnePillNumber": "Таблета бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "земање",
   "estimatedEndPillNumber": "Последна од претходниот лист: {estimatedEndPillNumber}-ти",
   "addPillSheetButton": "Додади лист на пилули",

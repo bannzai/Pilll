@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "היסטוריית נטילה היא תכונת פרימיום",
   "pauseTakingDoesNotAdvancePillNumber": "בהפסקה זמנית של נטילת הגלולות, מספר גלולה לא יתקדם",
   "pauseTakingFromNumber": "להפסיק זמנית את נטילת הגלולות החל מגלולה מספר {number}?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "נטילה",
   "estimatedEndPillNumber": "הגלולה האחרונה בגיליון הקודם: {estimatedEndPillNumber}",
   "addPillSheetButton": "הוסף גלילת גלולות",

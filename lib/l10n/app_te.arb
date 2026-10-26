@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "మాత్రల సేవన చరిత్ర ప్రీమియం ఫీచర్",
   "pauseTakingDoesNotAdvancePillNumber": "మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపితే, మాత్ర సంఖ్య ముందుకు వెళ్లదు",
   "pauseTakingFromNumber": "{number}వ మాత్ర నుంచి మాత్రలు తీసుకోవడాన్ని కొంతకాలం ఆపాలనుకుంటున్నారా?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}వ",
+  "lastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "సేవన",
   "estimatedEndPillNumber": "గత షీట్ చివరిది: {estimatedEndPillNumber} నంబర్",
   "addPillSheetButton": "పిల్ షీట్ జోడించండి",

@@ -115,7 +115,7 @@
   "takingHistoryIsPremiumFeature": "Lietošanas vēsture ir Premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Ja ieturēsiet pārtraukumu tablešu lietošanā, tabletes numurs nemainīsies",
   "pauseTakingFromNumber": "Vai vēlaties uz laiku pārtraukt tablešu lietošanu, sākot ar tableti Nr. {number}?",
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. tablete",
+  "lastTakenPlusOnePillNumber": "Tablete Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "lietošana",
   "estimatedEndPillNumber": "Iepriekšējās plāksnītes beigas: {estimatedEndPillNumber}",
   "addPillSheetButton": "Pievienot tablešu iepakojumu",
