@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "ပုံမှန်လစဉ်အစီအစဉ်",
   "annualPlan": "နှစ်စဉ်အစီအစဉ်",
   "annualPrice": "{annualPackageStoreProductPriceString}/နှစ်",
-  "monthlyPrice": "{monthlyPriceString}/လပ်စဉ်",
+  "monthlyPrice": "{monthlyPriceString}/လ",
   "dailyPrice": "{dailyPriceString}/နေ့",
   "premiumTermsNotice1": "• ပရီမီယံ စာချုပ်သက်တမ်းသည် စတင်ရက်မှ စတင်၍ တစ်လ သို့မဟုတ် တစ်နှစ်တစ်ကြိမ် အလိုအလျောက် သက်တမ်းတိုး ဖြစ်မည်ဖြစ်သည်",
   "premiumTermsBullet": "•",

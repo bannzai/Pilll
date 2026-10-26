@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "S normale Monetsabo",
   "annualPlan": "Jahresabo",
   "annualPrice": "{annualPackageStoreProductPriceString}/Jahr",
-  "monthlyPrice": "{monthlyPriceString}/Monat",
+  "monthlyPrice": "{monthlyPriceString}/Monet",
   "dailyPrice": "{dailyPriceString}/Tag",
   "premiumTermsNotice1": "• D'Premium-Abonnementsduur verlängeret sich automatisch monatlich oder jährlich ab em Startdatum.",
   "premiumTermsBullet": "•",

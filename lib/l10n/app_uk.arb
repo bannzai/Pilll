@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Звичайний місячний план",
   "annualPlan": "Річний план",
   "annualPrice": "{annualPackageStoreProductPriceString}/рік",
-  "monthlyPrice": "{monthlyPriceString}/місяць",
+  "monthlyPrice": "{monthlyPriceString}/міс.",
   "dailyPrice": "{dailyPriceString}/день",
   "premiumTermsNotice1": "• Період дії преміум-підписки автоматично поновлюється кожен 1 місяць або 1 рік з дати початку",
   "premiumTermsBullet": "•",

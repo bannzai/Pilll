@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Стандарден месечен план",
   "annualPlan": "Годишен план",
   "annualPrice": "{annualPackageStoreProductPriceString}/година",
-  "monthlyPrice": "{monthlyPriceString}/месечно",
+  "monthlyPrice": "{monthlyPriceString}/месец",
   "dailyPrice": "{dailyPriceString}/ден",
   "premiumTermsNotice1": "• Премиум претплатата се обновува автоматски на секој месец или година од почетниот датум",
   "premiumTermsBullet": "•",

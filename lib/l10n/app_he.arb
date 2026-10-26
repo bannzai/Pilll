@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "מסלול חודשי במחיר רגיל",
   "annualPlan": "מסלול שנתי",
   "annualPrice": "{annualPackageStoreProductPriceString}/שנה",
-  "monthlyPrice": "{monthlyPriceString} לחודש",
+  "monthlyPrice": "{monthlyPriceString}/חודש",
   "dailyPrice": "{dailyPriceString} ליום",
   "premiumTermsNotice1": "• תקופת מנוי הפרמיום תתחדש באופן אוטומטי מדי חודש או שנה החל מתאריך ההתחלה",
   "premiumTermsBullet": "•",

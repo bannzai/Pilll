@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "แพ็กเกจรายเดือนราคาปกติ",
   "annualPlan": "แพ็กเกจรายปี",
   "annualPrice": "{annualPackageStoreProductPriceString}/ปี",
-  "monthlyPrice": "{monthlyPriceString} ต่อเดือน",
+  "monthlyPrice": "{monthlyPriceString}/เดือน",
   "dailyPrice": "{dailyPriceString}/วัน",
   "premiumTermsNotice1": "・ระยะเวลาสัญญาพรีเมียมจะมีการต่ออายุอัตโนมัติทุก 1 เดือนหรือ 1 ปี นับจากวันที่เริ่มต้นสัญญา",
   "premiumTermsBullet": "•",

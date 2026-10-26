@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Кадимки айлык план",
   "annualPlan": "Жылдык план",
   "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
-  "monthlyPrice": "{monthlyPriceString} айына",
+  "monthlyPrice": "{monthlyPriceString}/ай",
   "dailyPrice": "{dailyPriceString}/күн",
   "premiumTermsNotice1": "・Премиум келишимдин мөөнөтү башталган күндөн баштап эсептегенде ар бир ай же жыл сайын автоматтык түрдө жаңыланат",
   "premiumTermsBullet": "•",

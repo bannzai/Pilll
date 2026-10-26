@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Venjuleg mánaðaráskrift",
   "annualPlan": "Ársáskrift",
   "annualPrice": "{annualPackageStoreProductPriceString}/ár",
-  "monthlyPrice": "{monthlyPriceString}/mánuður",
+  "monthlyPrice": "{monthlyPriceString}/mánuði",
   "dailyPrice": "{dailyPriceString}/dag",
   "premiumTermsNotice1": "• Premium samningsinnstími endurnýjast sjálfkrafa í hverjum mánuði eða ári frá upphafsdegi",
   "premiumTermsBullet": "•",

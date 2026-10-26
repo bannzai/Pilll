@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Parastais mēneša plāns",
   "annualPlan": "Gada plāns",
   "annualPrice": "{annualPackageStoreProductPriceString}/gadā",
-  "monthlyPrice": "{monthlyPriceString}/mēnesī",
+  "monthlyPrice": "{monthlyPriceString}/mēn.",
   "dailyPrice": "{dailyPriceString}/dienā",
   "premiumTermsNotice1": "• Premium abonēšanas periods tiek automātiski atjaunots ik mēnesi vai gadu, skaitot no sākuma datuma",
   "premiumTermsBullet": "•",

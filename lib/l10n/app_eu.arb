@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Hileko plan arrunta",
   "annualPlan": "Urteko plana",
   "annualPrice": "{annualPackageStoreProductPriceString}/urte",
-  "monthlyPrice": "{monthlyPriceString}/hileko",
+  "monthlyPrice": "{monthlyPriceString}/hilean",
   "dailyPrice": "{dailyPriceString}/egun",
   "premiumTermsNotice1": "・Premium kontratuaren iraupena hasiera egunitik kontatzen hasita hilabete edo urte bakoitzeko automatikoki berritzen da",
   "premiumTermsBullet": "•",

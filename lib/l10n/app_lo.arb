@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "ແຜນລາຍເດືອນລາຄາປົກກະຕິ",
   "annualPlan": "ແຜນລາຍປີ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ປີ",
-  "monthlyPrice": "{monthlyPriceString}ຕໍ່ເດືອນ",
+  "monthlyPrice": "{monthlyPriceString}/ເດືອນ",
   "dailyPrice": "{dailyPriceString}/ມື້",
   "premiumTermsNotice1": "・ໄລຍະສັນຍາພຣີມຽມຈະຕໍ່ອາຍຸອັດຕະໂນມັດທຸກໆ 1 ເດືອນ ຫຼື 1 ປີ ນັບຈາກວັນທີ່ເລີ່ມຕົ້ນ",
   "premiumTermsBullet": "•",

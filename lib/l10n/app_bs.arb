@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Standardni mjesečni plan",
   "annualPlan": "Godišnji plan",
   "annualPrice": "{annualPackageStoreProductPriceString}/godina",
-  "monthlyPrice": "{monthlyPriceString}/mjesečno",
+  "monthlyPrice": "{monthlyPriceString}/mjesec",
   "dailyPrice": "{dailyPriceString}/dan",
   "premiumTermsNotice1": "• Period Premium pretplate se automatski obnavlja svakog mjeseca ili godine, računajući od datuma početka",
   "premiumTermsBullet": "•",

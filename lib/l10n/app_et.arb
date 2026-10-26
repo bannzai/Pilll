@@ -179,7 +179,7 @@
   "standardMonthlyPlan": "Tavaline kuupakett",
   "annualPlan": "Aastaplaan",
   "annualPrice": "{annualPackageStoreProductPriceString}/aasta",
-  "monthlyPrice": "{monthlyPriceString}/kuus",
+  "monthlyPrice": "{monthlyPriceString}/kuu",
   "dailyPrice": "{dailyPriceString}/päev",
   "premiumTermsNotice1": "• Premium leping uueneb automaatselt iga kuu või aasta järel, alates alguskuupäevast.",
   "premiumTermsBullet": "•",
