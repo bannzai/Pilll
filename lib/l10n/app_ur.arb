@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "گولی لینے میں وقفہ شروع ہونے کی تاریخ تبدیل کریں",
   "shareWithFriends": "دوستوں کو بتائیں",
-  "termsOfService": "شرائط و ضوابط",
+  "termsOfService": "استعمال کی شرائط",
   "privacyPolicy": "رازداری کی پالیسی",
   "linkCopiedToClipboard": "کلپ بورڈ میں کاپی کر دیا گیا",
   "notificationNumber": "اطلاع {number}",

@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edytuj datę rozpoczęcia przerwy w przyjmowaniu tabletki",
   "shareWithFriends": "Poleć znajomym",
-  "termsOfService": "Regulamin",
+  "termsOfService": "Warunki korzystania",
   "privacyPolicy": "Polityka Prywatności",
   "linkCopiedToClipboard": "Skopiowano do schowka",
   "notificationNumber": "Powiadomienie {number}",

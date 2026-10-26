@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "चक्की सेवनमा विश्राम सुरु हुने मिति बदल्नुहोस्",
   "shareWithFriends": "साथीहरूलाई भन्नुहोस्",
-  "termsOfService": "उपयोग सर्तहरू",
+  "termsOfService": "प्रयोगका सर्तहरू",
   "privacyPolicy": "गोपनीयता नीति",
   "linkCopiedToClipboard": "क्लिपबोर्डमा कपी गरियो",
   "notificationNumber": "सूचना {number}",

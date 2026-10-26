@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ পরিবর্তন করুন",
   "shareWithFriends": "বন্ধুদের জানান",
-  "termsOfService": "ব্যবহারের শর্তাবলী",
+  "termsOfService": "ব্যবহারের শর্তাবলি",
   "privacyPolicy": "গোপনীয়তা নীতি",
   "linkCopiedToClipboard": "ক্লিপবোর্ডে কপি করা হয়েছে",
   "notificationNumber": "বিজ্ঞপ্তি {number}",

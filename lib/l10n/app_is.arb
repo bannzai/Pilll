@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Breyta upphafsdegi hlés á pillutöku",
   "shareWithFriends": "Deila með vinum",
-  "termsOfService": "Þjónustuskilmálar",
+  "termsOfService": "Notkunarskilmálar",
   "privacyPolicy": "Persónuverndarstefna",
   "linkCopiedToClipboard": "Afritað á klemmuspjald",
   "notificationNumber": "tilkynning {number}",

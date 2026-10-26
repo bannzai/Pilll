@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Baguhin ang petsa ng simula ng paghinto muna sa pag-inom ng pill",
   "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
-  "termsOfService": "Mga Tuntunin ng Paggamit",
+  "termsOfService": "Mga tuntunin ng paggamit",
   "privacyPolicy": "Patakaran sa Privacy",
   "linkCopiedToClipboard": "Naikopya na sa clipboard",
   "notificationNumber": "Notipikasyon {number}",

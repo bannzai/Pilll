@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar la fecha de inicio de la pausa de la píldora",
   "shareWithFriends": "Compártelo con tus amistades",
-  "termsOfService": "Términos de Uso",
+  "termsOfService": "Condiciones de uso",
   "privacyPolicy": "Política de Privacidad",
   "linkCopiedToClipboard": "Copiado al portapapeles",
   "notificationNumber": "Notificación {number}",

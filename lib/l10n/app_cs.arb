@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upravit datum začátku pauzy v užívání pilulky",
   "shareWithFriends": "Doporučit přátelům",
-  "termsOfService": "Podmínky použití",
+  "termsOfService": "Podmínky používání",
   "privacyPolicy": "Ochrana soukromí",
   "linkCopiedToClipboard": "Zkopírováno do schránky",
   "notificationNumber": "notifikace {number}",

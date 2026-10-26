@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau'r seibiant rhag cymryd y bilsen",
   "shareWithFriends": "Rhannwch â ffrindiau",
-  "termsOfService": "Telerau ac Amodau",
+  "termsOfService": "Telerau defnyddio",
   "privacyPolicy": "Polisi Preifatrwydd",
   "linkCopiedToClipboard": "Wedi copïo i'r clipfwrdd",
   "notificationNumber": "hysbysiad {number}",

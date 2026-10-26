@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edita la data d'inici de la pausa de la píndola",
   "shareWithFriends": "Comparteix-ho amb els amics",
-  "termsOfService": "Condicions d'ús",
+  "termsOfService": "Condicions d’ús",
   "privacyPolicy": "Política de privacitat",
   "linkCopiedToClipboard": "Copiat al porta-retalls",
   "notificationNumber": "Notificació {number}",

@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ክኒን መውሰድ የሚታቆምበትን መጀመሪያ ቀን ያርትዑ",
   "shareWithFriends": "ለጓደኞችዎ ያሳውቁ",
-  "termsOfService": "የአገልግሎት ሁኔታዎች",
+  "termsOfService": "የአገልግሎት ውል",
   "privacyPolicy": "የግላዊነት ፖሊሲ",
   "linkCopiedToClipboard": "ወደ ክሊፕቦርድ ተገልብጧል",
   "notificationNumber": "ማሳወቃ{number}",

@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "د ګولۍ اخیستلو د وقفې د پیل نېټه بدله کړئ",
   "shareWithFriends": "له ملګرو سره یې شریک کړئ",
-  "termsOfService": "د استعمال شرایط",
+  "termsOfService": "د کارونې شرایط",
   "privacyPolicy": "د محرمیت پالیسي",
   "linkCopiedToClipboard": "کلپ بورډ ته کاپي شو",
   "notificationNumber": "خبرتیا {number}",

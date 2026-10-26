@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit pill pause start date",
   "shareWithFriends": "Share with friends",
-  "termsOfService": "Terms of Service",
+  "termsOfService": "Terms of service",
   "privacyPolicy": "Privacy Policy",
   "linkCopiedToClipboard": "Copied to clipboard",
   "notificationNumber": "Notification {number}",

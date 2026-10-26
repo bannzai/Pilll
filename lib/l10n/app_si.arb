@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය වෙනස් කරන්න",
   "shareWithFriends": "මිතුරන්ට කියන්න",
-  "termsOfService": "පරිශීලක නියමයන්",
+  "termsOfService": "භාවිත නියමයන්",
   "privacyPolicy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
   "linkCopiedToClipboard": "ක්ලිප්බෝඩ්එකට පිටපත් කරන ලදී",
   "notificationNumber": "දැනුම්දීම {number}",

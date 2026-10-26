@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uredite datum početka pauze u uzimanju pilule",
   "shareWithFriends": "Preporučite prijateljima",
-  "termsOfService": "Uslovi korišćenja",
+  "termsOfService": "Uslovi korištenja",
   "privacyPolicy": "Politika privatnosti",
   "linkCopiedToClipboard": "Kopirano u clipboard",
   "notificationNumber": "Obavještenje {number}",

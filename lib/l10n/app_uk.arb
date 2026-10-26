@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Змінити дату початку перерви в прийомі пігулки",
   "shareWithFriends": "Порадьте друзям",
-  "termsOfService": "Умови використання",
+  "termsOfService": "Умови користування",
   "privacyPolicy": "Політика конфіденційності",
   "linkCopiedToClipboard": "Скопійовано до буфера обміну",
   "notificationNumber": "Повідомлення {number}",

@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Pakeiskite tablečių vartojimo pertraukos pradžios datą",
   "shareWithFriends": "Pasidalykite su draugais",
-  "termsOfService": "Naudojimosi sąlygos",
+  "termsOfService": "Naudojimo sąlygos",
   "privacyPolicy": "Privatumo politika",
   "linkCopiedToClipboard": "Nukopijuota į iškarpinę",
   "notificationNumber": "Pranešimas {number}",

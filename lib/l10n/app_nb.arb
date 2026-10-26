@@ -406,7 +406,7 @@
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Endre startdato for pillepausen",
   "shareWithFriends": "Del med venner",
-  "termsOfService": "Brukervilkår",
+  "termsOfService": "Bruksvilkår",
   "privacyPolicy": "Personvernpolitikk",
   "linkCopiedToClipboard": "Kopiert til utklippstavlen",
   "notificationNumber": "Varsling {number}",
