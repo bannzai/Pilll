@@ -74,7 +74,7 @@
   "registeredWithProvider": "Registrirali ste se putem {accountTypeProviderName}",
   "linkAccount": "Povežite račun",
   "withdraw": "Izbrišite račun",
-  "withdrawalCompleted": "Uspješno ste se odjavili",
+  "withdrawalCompleted": "Vaš račun je izbrisan",
   "appExitMessage": "Aplikacija će se zatvoriti. Za novi početak, restartujte aplikaciju i izvršite početnu konfiguraciju.",
   "oK": "OK",
   "changePillNumber": "Promjena broja pilula",

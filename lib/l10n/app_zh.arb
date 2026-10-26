@@ -74,7 +74,7 @@
   "registeredWithProvider": "已通过{accountTypeProviderName}注册成功",
   "linkAccount": "关联账号",
   "withdraw": "删除账号",
-  "withdrawalCompleted": "已注销",
+  "withdrawalCompleted": "你的账号已删除",
   "appExitMessage": "应用将退出。如需重新开始，请重新启动应用并进行初始设置。",
   "oK": "确定",
   "changePillNumber": "修改药片编号",

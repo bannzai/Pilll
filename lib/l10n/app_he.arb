@@ -74,7 +74,7 @@
   "registeredWithProvider": "ההרשמה באמצעות {accountTypeProviderName} הושלמה",
   "linkAccount": "לקשר חשבון",
   "withdraw": "מחיקת החשבון",
-  "withdrawalCompleted": "החשבון בוטל",
+  "withdrawalCompleted": "החשבון נמחק",
   "appExitMessage": "האפליקציה תסגר. כדי להתחיל מחדש, אנא הפעל את האפליקציה מחדש ובצע הגדרות ראשוניות.",
   "oK": "אוקיי",
   "changePillNumber": "שינוי מספור הגלולות",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "మీరు {accountTypeProviderName} ద్వారా నమోదు చేసుకున్నారు",
   "linkAccount": "ఖాతాను లింక్ చేయండి",
   "withdraw": "ఖాతాను తొలగించండి",
-  "withdrawalCompleted": "విలువిడిచిపెట్టాను",
+  "withdrawalCompleted": "మీ ఖాతా తొలగించబడింది",
   "appExitMessage": "అప్లికేషన్ ఒకసారి మూసివేయబడుతుంది. కొత్తగా ప్రారంభించడానికి అప్లికేషన్‌ను పునఃప్రారంభించిన తర్వాత ప్రాథమిక సెట్టింగులను చేయండి.",
   "oK": "సరే",
   "changePillNumber": "పిల్ నంబర్ మార్పు",

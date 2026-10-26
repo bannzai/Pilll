@@ -74,7 +74,7 @@
   "registeredWithProvider": "Вы зарэгістраваліся праз {accountTypeProviderName}",
   "linkAccount": "Звязаць уліковы запіс",
   "withdraw": "Выдаліць уліковы запіс",
-  "withdrawalCompleted": "Акаўнт выдалены",
+  "withdrawalCompleted": "Ваш уліковы запіс выдалены",
   "appExitMessage": "Прыкладанне будзе закрыта. Каб пачаць нанова, перазапусціце прыкладанне і выканайце пачатковую наладу.",
   "oK": "Добра",
   "changePillNumber": "Змена нумару пілюлі",

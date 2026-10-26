@@ -74,7 +74,7 @@
   "registeredWithProvider": "Rekisteröidyit palvelun {accountTypeProviderName} kautta",
   "linkAccount": "Yhdistä tili",
   "withdraw": "Poista tili",
-  "withdrawalCompleted": "Tili on poistettu",
+  "withdrawalCompleted": "Tilisi on poistettu",
   "appExitMessage": "Sovellus suljetaan nyt. Aloittaaksesi uudelleen, käynnistä sovellus uudelleen ja suorita alkuasetukset.",
   "oK": "OK",
   "changePillNumber": "Pillien numerointi",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "Te-ai înregistrat cu {accountTypeProviderName}",
   "linkAccount": "Conectează contul",
   "withdraw": "Șterge contul",
-  "withdrawalCompleted": "Contul a fost șters",
+  "withdrawalCompleted": "Contul tău a fost șters",
   "appExitMessage": "Aplicația se va închide. Pentru a începe din nou, reporniți aplicația și efectuați configurarea inițială.",
   "oK": "OK",
   "changePillNumber": "Modificarea numerelor pilulelor",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "អ្នកបានចុះឈ្មោះដោយប្រើ {accountTypeProviderName} រួចហើយ",
   "linkAccount": "ភ្ជាប់គណនី",
   "withdraw": "លុបគណនី",
-  "withdrawalCompleted": "បានលុបគណនីរួច",
+  "withdrawalCompleted": "គណនីរបស់អ្នកត្រូវបានលុបហើយ",
   "appExitMessage": "កម្មវិធីនឹងបិទម្តង។ ប្រសិនបើចង់ចាប់ផ្តើមថ្មី សូមចាប់ផ្តើមកម្មវិធីឡើងវិញ រួចធ្វើការកំណត់ដំបូង។",
   "oK": "ចាស់",
   "changePillNumber": "ផ្លាស់ប្តូរលេខថ្នាំ",

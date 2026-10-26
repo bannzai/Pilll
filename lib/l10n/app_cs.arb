@@ -74,7 +74,7 @@
   "registeredWithProvider": "Registrace přes {accountTypeProviderName} proběhla úspěšně",
   "linkAccount": "Propojit účet",
   "withdraw": "Smazat účet",
-  "withdrawalCompleted": "Účet byl smazán",
+  "withdrawalCompleted": "Váš účet byl smazán",
   "appExitMessage": "Aplikace se nyní ukončí. Pro nový začátek restartujte aplikaci a proveďte počáteční nastavení.",
   "oK": "OK",
   "changePillNumber": "Změna číslování pilulek",

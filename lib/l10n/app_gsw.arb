@@ -74,7 +74,7 @@
   "registeredWithProvider": "Du hesch di mit {accountTypeProviderName} registriert",
   "linkAccount": "Konto verchnüpfe",
   "withdraw": "Konto lösche",
-  "withdrawalCompleted": "Abgmäldet",
+  "withdrawalCompleted": "Dis Konto isch glöscht worde",
   "appExitMessage": "D'App wird jetzt beendet. För e neue Afang start d'App bitschön neu und mach denn d'Iirichtig.",
   "oK": "OK",
   "changePillNumber": "Pillennummere-Änderig",

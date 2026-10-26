@@ -74,7 +74,7 @@
   "registeredWithProvider": "Դուք գրանցվել եք {accountTypeProviderName}֊ի միջոցով",
   "linkAccount": "Կապակցել հաշիվը",
   "withdraw": "Ջնջել հաշիվը",
-  "withdrawalCompleted": "Դուրս եկանք",
+  "withdrawalCompleted": "Ձեր հաշիվը ջնջվել է",
   "appExitMessage": "Ծրագիրը կփակվի: Նորից սկսելու համար ծրագիրը վերագործարկեք և կատարեք սկզբնական կարգավորումները:",
   "oK": "Լավ",
   "changePillNumber": "Հապի համարի փոփոխություն",

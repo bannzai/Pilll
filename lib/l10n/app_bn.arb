@@ -74,7 +74,7 @@
   "registeredWithProvider": "আপনি {accountTypeProviderName} দিয়ে নিবন্ধন করেছেন",
   "linkAccount": "অ্যাকাউন্ট সংযুক্ত করুন",
   "withdraw": "অ্যাকাউন্ট মুছুন",
-  "withdrawalCompleted": "প্রত্যাহার করা হয়েছে",
+  "withdrawalCompleted": "আপনার অ্যাকাউন্ট মুছে ফেলা হয়েছে",
   "appExitMessage": "অ্যাপটি এখন বন্ধ হবে। নতুন করে শুরু করতে অ্যাপ পুনরায় চালু করে প্রাথমিক সেটআপ সম্পন্ন করুন।",
   "oK": "ওকে",
   "changePillNumber": "পিল নম্বর পরিবর্তন",

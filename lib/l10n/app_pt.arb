@@ -74,7 +74,7 @@
   "registeredWithProvider": "Seu cadastro com {accountTypeProviderName} foi concluído",
   "linkAccount": "Vincular conta",
   "withdraw": "Excluir conta",
-  "withdrawalCompleted": "Desvinculação concluída",
+  "withdrawalCompleted": "Sua conta foi excluída",
   "appExitMessage": "O aplicativo será encerrado. Para começar novamente, reinicie o aplicativo e realize a configuração inicial.",
   "oK": "OK",
   "changePillNumber": "Alterar Numeração das Pílulas",

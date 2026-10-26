@@ -74,7 +74,7 @@
   "registeredWithProvider": "तपाईंले {accountTypeProviderName} मार्फत दर्ता गर्नुभएको छ",
   "linkAccount": "खाता लिंक गर्नुहोस्",
   "withdraw": "खाता मेटाउनुहोस्",
-  "withdrawalCompleted": "खाता बन्द भयो",
+  "withdrawalCompleted": "तपाईंको खाता मेटाइएको छ",
   "appExitMessage": "एप्प बन्द गरिनेछ। नयाँ सुरुवातको लागि एप्प पुनः सुरु गरेपछि प्रारम्भिक सेटिङ गर्नुहोस्।",
   "oK": "ठीक छ",
   "changePillNumber": "गोली संख्या परिवर्तन",

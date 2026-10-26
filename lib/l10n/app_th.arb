@@ -74,7 +74,7 @@
   "registeredWithProvider": "ลงทะเบียนด้วย {accountTypeProviderName} เรียบร้อยแล้วค่ะ",
   "linkAccount": "เชื่อมต่อบัญชี",
   "withdraw": "ลบบัญชี",
-  "withdrawalCompleted": "ลบบัญชีแล้ว",
+  "withdrawalCompleted": "ลบบัญชีเรียบร้อยแล้วค่ะ",
   "appExitMessage": "แอปจะปิดตัวลง หากต้องการเริ่มต้นใหม่ กรุณาเปิดแอปอีกครั้งและทำการตั้งค่าเริ่มต้น",
   "oK": "ตกลง",
   "changePillNumber": "เปลี่ยนหมายเลขยาคุม",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "Registracija prek {accountTypeProviderName} je uspela",
   "linkAccount": "Povežite račun",
   "withdraw": "Izbrišite račun",
-  "withdrawalCompleted": "Račun je bil izbrisan",
+  "withdrawalCompleted": "Vaš račun je izbrisan",
   "appExitMessage": "Aplikacija se bo zaprla. Za nov začetek ponovno zaženite aplikacijo in opravite začetno nastavitev.",
   "oK": "OK",
   "changePillNumber": "Sprememba številke tabletke",

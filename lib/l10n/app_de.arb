@@ -74,7 +74,7 @@
   "registeredWithProvider": "Du hast dich mit {accountTypeProviderName} registriert",
   "linkAccount": "Konto verknüpfen",
   "withdraw": "Konto löschen",
-  "withdrawalCompleted": "Konto gelöscht",
+  "withdrawalCompleted": "Dein Konto wurde gelöscht",
   "appExitMessage": "Die App wird jetzt beendet. Um neu zu beginnen, starten Sie die App neu und führen Sie die Ersteinrichtung durch.",
   "oK": "OK",
   "changePillNumber": "Pillennummer ändern",

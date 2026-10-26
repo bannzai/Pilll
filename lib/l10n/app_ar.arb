@@ -74,7 +74,7 @@
   "registeredWithProvider": "تم تسجيل حسابكِ باستخدام {accountTypeProviderName}",
   "linkAccount": "ربط الحساب",
   "withdraw": "حذف الحساب",
-  "withdrawalCompleted": "تم حذف الحساب",
+  "withdrawalCompleted": "تم حذف الحساب الخاص بكِ",
   "appExitMessage": "سيتم إغلاق التطبيق. إذا كنت تريد البدء من جديد، يرجى إعادة تشغيل التطبيق وإجراء الإعداد الأولي.",
   "oK": "موافق",
   "changePillNumber": "تغيير أرقام الحبوب",

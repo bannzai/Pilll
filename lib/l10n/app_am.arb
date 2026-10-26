@@ -74,7 +74,7 @@
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",
   "linkAccount": "መለያ ያገናኙ",
   "withdraw": "መለያ ይሰርዙ",
-  "withdrawalCompleted": "የመለያ መሰረዝ ተጠናቅቋል",
+  "withdrawalCompleted": "የእርስዎ መለያ ተሰርዟል",
   "appExitMessage": "መተግበሪያው ይዘጋል። እንደገና ለመጀመር መተግበሪያውን ዳግም ጀምረው የመጀመሪያ ቅንብሮቹን ማቀናጀት አለብዎት።",
   "oK": "እሺ",
   "changePillNumber": "የፒል ቁጥር መቀየር",

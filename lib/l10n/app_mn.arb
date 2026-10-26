@@ -74,7 +74,7 @@
   "registeredWithProvider": "Та {accountTypeProviderName}-ээр бүртгүүллээ",
   "linkAccount": "Бүртгэл холбох",
   "withdraw": "Бүртгэлээ устгах",
-  "withdrawalCompleted": "Бүртгэлээ устгалаа",
+  "withdrawalCompleted": "Таны бүртгэл устгагдсан",
   "appExitMessage": "Аппыг дуусгана. Шинээр эхлэх бол аппыг дахин эхлүүлсний дараа анхны тохиргоог хийнэ үү.",
   "oK": "За",
   "changePillNumber": "Эмийн дугаар өөрчлөх",

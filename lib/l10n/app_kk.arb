@@ -74,7 +74,7 @@
   "registeredWithProvider": "Сіз {accountTypeProviderName} арқылы тіркелдіңіз",
   "linkAccount": "Есептік жазбаны байланыстырыңыз",
   "withdraw": "Есептік жазбаны жою",
-  "withdrawalCompleted": "Аккаунт жойылды",
+  "withdrawalCompleted": "Есептік жазбаңыз жойылды",
   "appExitMessage": "Қолданба жабылады. Жаңа басталу үшін қолданбаны қайта іске қосып, бастапқы баптауларды орындаңыз.",
   "oK": "ОК",
   "changePillNumber": "Дәрі нөмірін өзгерту",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "Nakarehistro na kayo gamit ang {accountTypeProviderName}",
   "linkAccount": "I-link ang account ninyo",
   "withdraw": "Burahin ang account",
-  "withdrawalCompleted": "Nag-withdraw ka na",
+  "withdrawalCompleted": "Nabura na ang inyong account",
   "appExitMessage": "Tatapusin na ang app. Kapag magsisimula ulit, i-restart ang app at isagawa ang initial setup.",
   "oK": "OK",
   "changePillNumber": "Pagbabago ng Numero ng Pill",

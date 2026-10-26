@@ -74,7 +74,7 @@
   "registeredWithProvider": "Rydych wedi cofrestru drwy {accountTypeProviderName}",
   "linkAccount": "Cysylltwch gyfrif",
   "withdraw": "Dileu eich cyfrif",
-  "withdrawalCompleted": "Wedi gadael",
+  "withdrawalCompleted": "Mae eich cyfrif wedi'i ddileu",
   "appExitMessage": "Mae'r ap yn cau nawr. I ddechrau o'r newydd, ailgychwynnwch yr ap a chompletwch y gosodiad cychwynnol.",
   "oK": "Iawn",
   "changePillNumber": "Newid Rhifau Pilsen",

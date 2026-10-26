@@ -74,7 +74,7 @@
   "registeredWithProvider": "Се регистриравте преку {accountTypeProviderName}",
   "linkAccount": "Поврзување сметка",
   "withdraw": "Избришете ја сметката",
-  "withdrawalCompleted": "Се отпишавте",
+  "withdrawalCompleted": "Вашата сметка е избришана",
   "appExitMessage": "Апликацијата ќе се затвори. За да почнете одново, рестартирајте ја апликацијата и извршете ја почетната поставка.",
   "oK": "ОК",
   "changePillNumber": "Промена на броеви на таблети",

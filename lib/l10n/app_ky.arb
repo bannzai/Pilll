@@ -74,7 +74,7 @@
   "registeredWithProvider": "Сиз {accountTypeProviderName} аркылуу катталдыңыз",
   "linkAccount": "Аккаунтту байланыштырыңыз",
   "withdraw": "Каттоо эсебин өчүрүү",
-  "withdrawalCompleted": "Аккаунт жок кылынды",
+  "withdrawalCompleted": "Каттоо эсебиңиз өчүрүлдү",
   "appExitMessage": "Колдонмо жабылат. Жаңыдан баштоо үчүн колдонмону кайра иштетүүдөн кийин башталгыч жөндөөлөрдү жасаңыз.",
   "oK": "Макул",
   "changePillNumber": "Дары номерин өзгөртүү",

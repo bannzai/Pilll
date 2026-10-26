@@ -74,7 +74,7 @@
   "registeredWithProvider": "Registreerusid teenuse {accountTypeProviderName} kaudu",
   "linkAccount": "Seo konto",
   "withdraw": "Kustuta konto",
-  "withdrawalCompleted": "Konto on kustutatud",
+  "withdrawalCompleted": "Sinu konto on kustutatud",
   "appExitMessage": "Rakendus suletakse. Uuesti alustamiseks käivitage rakendus uuesti ja tehke algseadistus.",
   "oK": "OK",
   "changePillNumber": "Pilli numbrite muutmine",

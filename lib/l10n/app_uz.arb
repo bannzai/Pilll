@@ -74,7 +74,7 @@
   "registeredWithProvider": "Siz {accountTypeProviderName} orqali roʻyxatdan oʻtdingiz",
   "linkAccount": "Hisobni bogʻlang",
   "withdraw": "Hisobni oʻchiring",
-  "withdrawalCompleted": "A'zolikdan chiqib ketdim",
+  "withdrawalCompleted": "Hisobingiz oʻchirildi",
   "appExitMessage": "Ilova yopiladi. Qaytadan boshlash uchun ilovani qayta ishga tushiring va dastlabki sozlamalarni bajaring.",
   "oK": "Mayli",
   "changePillNumber": "Tabletka raqamini o'zgartirish",

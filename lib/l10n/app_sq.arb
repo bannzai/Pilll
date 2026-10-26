@@ -74,7 +74,7 @@
   "registeredWithProvider": "U regjistruat përmes {accountTypeProviderName}",
   "linkAccount": "Lidhni llogarinë",
   "withdraw": "Fshini llogarinë",
-  "withdrawalCompleted": "U larguat",
+  "withdrawalCompleted": "Llogaria juaj u fshi",
   "appExitMessage": "Aplikacioni do të mbyllet. Nëse dëshironi të filloni përsëri, rinisni aplikacionin dhe kryeni konfigurimin fillestar.",
   "oK": "OK",
   "changePillNumber": "Ndryshimi i numrave të pilulës",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "Ti sei registrata con {accountTypeProviderName}",
   "linkAccount": "Collega l’account",
   "withdraw": "Elimina account",
-  "withdrawalCompleted": "Ti sei disiscritto",
+  "withdrawalCompleted": "Il tuo account è stato eliminato",
   "appExitMessage": "L'app verrà chiusa. Per iniziare di nuovo, riavvia l'app ed esegui la configurazione iniziale.",
   "oK": "OK",
   "changePillNumber": "Modifica numerazione pillole",

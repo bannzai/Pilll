@@ -74,7 +74,7 @@
   "registeredWithProvider": "Регистрирахте се чрез {accountTypeProviderName}",
   "linkAccount": "Свързване на акаунт",
   "withdraw": "Изтриване на профила",
-  "withdrawalCompleted": "Акаунтът е изтрит",
+  "withdrawalCompleted": "Акаунтът ви е изтрит",
   "appExitMessage": "Приложението ще се затвори. За да започнете отново, рестартирайте приложението и направете първоначалната настройка.",
   "oK": "Добре",
   "changePillNumber": "Промяна на номерацията на хапчетата",

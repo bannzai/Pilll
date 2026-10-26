@@ -74,7 +74,7 @@
   "registeredWithProvider": "Sikeresen regisztráltál a(z) {accountTypeProviderName} segítségével",
   "linkAccount": "Fiók összekapcsolása",
   "withdraw": "Fiók törlése",
-  "withdrawalCompleted": "Fiók törölve",
+  "withdrawalCompleted": "A fiókod törölve lett",
   "appExitMessage": "Az alkalmazás bezárul. Ha újra szeretné kezdeni, indítsa újra az alkalmazást, majd végezze el a kezdeti beállításokat.",
   "oK": "OK",
   "changePillNumber": "Tabletta számok módosítása",

@@ -74,7 +74,7 @@
   "registeredWithProvider": "You've signed up with {accountTypeProviderName}",
   "linkAccount": "Link account",
   "withdraw": "Delete account",
-  "withdrawalCompleted": "Withdrawn",
+  "withdrawalCompleted": "Your account has been deleted",
   "appExitMessage": "The app will close. To start fresh, please restart the app and complete the initial setup.",
   "oK": "OK",
   "changePillNumber": "Change Pill Numbers",

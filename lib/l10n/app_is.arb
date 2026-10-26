@@ -74,7 +74,7 @@
   "registeredWithProvider": "Skráning með {accountTypeProviderName} tókst",
   "linkAccount": "Tengja reikning",
   "withdraw": "Eyða aðgangi",
-  "withdrawalCompleted": "Afskráning lokið",
+  "withdrawalCompleted": "Reikningnum þínum hefur verið eytt",
   "appExitMessage": "Appið mun lokast núna. Ef þú vilt byrja að nýju skaltu endurræsa appið og klára upphaflegu stillingarnar.",
   "oK": "OK",
   "changePillNumber": "Breyting á pillunúmerum",

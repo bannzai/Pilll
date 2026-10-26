@@ -74,7 +74,7 @@
   "registeredWithProvider": "Bạn đã đăng ký bằng {accountTypeProviderName}",
   "linkAccount": "Liên kết tài khoản",
   "withdraw": "Xóa tài khoản",
-  "withdrawalCompleted": "Đã hủy tài khoản",
+  "withdrawalCompleted": "Tài khoản của bạn đã được xóa",
   "appExitMessage": "Ứng dụng sẽ được đóng một lần. Nếu muốn bắt đầu lại, vui lòng khởi động lại ứng dụng và thực hiện thiết lập ban đầu.",
   "oK": "OK",
   "changePillNumber": "Thay đổi số viên thuốc",

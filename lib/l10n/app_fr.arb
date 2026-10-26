@@ -74,7 +74,7 @@
   "registeredWithProvider": "Votre inscription avec {accountTypeProviderName} est terminée",
   "linkAccount": "Associer le compte",
   "withdraw": "Supprimer le compte",
-  "withdrawalCompleted": "Retiré",
+  "withdrawalCompleted": "Votre compte a été supprimé",
   "appExitMessage": "L'application se fermera. Pour repartir à zéro, veuillez redémarrer l'application et terminer la configuration initiale.",
   "oK": "D'ACCORD",
   "changePillNumber": "Changer les numéros de pilule",

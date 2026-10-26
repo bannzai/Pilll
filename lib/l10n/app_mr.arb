@@ -74,7 +74,7 @@
   "registeredWithProvider": "तुमची {accountTypeProviderName} वापरून नोंदणी झाली आहे",
   "linkAccount": "खाते जोडा",
   "withdraw": "खाते हटवा",
-  "withdrawalCompleted": "खाते हटविले आहे",
+  "withdrawalCompleted": "तुमचे खाते हटवले आहे",
   "appExitMessage": "अॅप एकदा बंद होईल. नव्याने सुरू करायचे असल्यास अॅप पुन्हा सुरू केल्यानंतर प्रारंभिक सेटअप करावे.",
   "oK": "ठीक आहे",
   "changePillNumber": "गोळी क्रमांक बदला",

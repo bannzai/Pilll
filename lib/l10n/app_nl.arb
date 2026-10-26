@@ -74,7 +74,7 @@
   "registeredWithProvider": "Je bent geregistreerd met {accountTypeProviderName}",
   "linkAccount": "Account koppelen",
   "withdraw": "Account verwijderen",
-  "withdrawalCompleted": "Account verwijderd",
+  "withdrawalCompleted": "Je account is verwijderd",
   "appExitMessage": "De app wordt nu afgesloten. Om opnieuw te beginnen, start de app opnieuw op en doorloop de initiële configuratie.",
   "oK": "OK",
   "changePillNumber": "Pilnummers aanpassen",

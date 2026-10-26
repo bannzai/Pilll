@@ -74,7 +74,7 @@
   "registeredWithProvider": "Du har registrerat dig med {accountTypeProviderName}",
   "linkAccount": "Koppla konto",
   "withdraw": "Radera konto",
-  "withdrawalCompleted": "Avregistrerad",
+  "withdrawalCompleted": "Ditt konto har raderats",
   "appExitMessage": "Appen kommer nu att stängas. För att börja om, starta om appen och genomför den inledande konfigurationen.",
   "oK": "OK",
   "changePillNumber": "Ändra pillnummer",

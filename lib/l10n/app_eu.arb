@@ -74,7 +74,7 @@
   "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu zara",
   "linkAccount": "Lotu kontua",
   "withdraw": "Ezabatu kontua",
-  "withdrawalCompleted": "Baja eman duzu",
+  "withdrawalCompleted": "Zure kontua ezabatu da",
   "appExitMessage": "Aplikazioa itxiko da. Berriz hasteko, aplikazioa berrabiarazi ondoren hasierako konfigurazioa egin behar duzu.",
   "oK": "Ados",
   "changePillNumber": "Pilula zenbakia aldatu",

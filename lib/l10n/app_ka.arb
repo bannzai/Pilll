@@ -74,7 +74,7 @@
   "registeredWithProvider": "თქვენ დარეგისტრირდით {accountTypeProviderName}-ის მეშვეობით",
   "linkAccount": "ანგარიშის დაკავშირება",
   "withdraw": "ანგარიშის წაშლა",
-  "withdrawalCompleted": "ანგარიში წაიშალა",
+  "withdrawalCompleted": "თქვენი ანგარიში წაიშალა",
   "appExitMessage": "აპლიკაცია დაიხურება. ახლიდან დასაწყებად, გთხოვთ ხელახლა გაუშვათ აპლიკაცია და გაიაროთ საწყისი კონფიგურაცია.",
   "oK": "კარგი",
   "changePillNumber": "აბის ნომრის შეცვლა",

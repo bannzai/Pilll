@@ -74,7 +74,7 @@
   "registeredWithProvider": "T'has registrat amb {accountTypeProviderName}",
   "linkAccount": "Vincula el compte",
   "withdraw": "Elimina el compte",
-  "withdrawalCompleted": "S'ha donat de baixa",
+  "withdrawalCompleted": "S'ha suprimit el teu compte",
   "appExitMessage": "L'aplicació es tancarà ara. Per començar de nou, reinicieu l'aplicació i realitzeu la configuració inicial.",
   "oK": "D'acord",
   "changePillNumber": "Canvi del número de píndola",

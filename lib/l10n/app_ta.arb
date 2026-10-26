@@ -74,7 +74,7 @@
   "registeredWithProvider": "{accountTypeProviderName} மூலம் பதிவு செய்துவிட்டீர்கள்",
   "linkAccount": "கணக்கை இணைக்கவும்",
   "withdraw": "கணக்கை நீக்குங்கள்",
-  "withdrawalCompleted": "வெளியேறிவிட்டீர்கள்",
+  "withdrawalCompleted": "உங்கள் கணக்கு நீக்கப்பட்டது",
   "appExitMessage": "ஆப்பை ஒருமுறை மூடுகிறோம். புதிதாகத் தொடங்க விரும்பினால், ஆப்பை மீண்டும் தொடங்கிய பின் ஆரம்ப அமைப்புகளைச் செய்யவும்.",
   "oK": "சரி",
   "changePillNumber": "மாத்திரை எண் மாற்றம்",

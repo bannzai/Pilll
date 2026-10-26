@@ -74,7 +74,7 @@
   "registeredWithProvider": "Du er registreret med {accountTypeProviderName}",
   "linkAccount": "Tilknyt konto",
   "withdraw": "Slet din konto",
-  "withdrawalCompleted": "Kontoen er slettet",
+  "withdrawalCompleted": "Din konto er slettet",
   "appExitMessage": "Appen lukkes nu. For at starte på ny skal du genstarte appen og gennemføre den indledende opsætning.",
   "oK": "OK",
   "changePillNumber": "Ændring af pillenumre",
