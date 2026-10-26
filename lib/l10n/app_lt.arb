@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletę jau išgėrėte,\nnegalite naudoti „Vartojimo pertraukos“",
   "pauseTakingStarted": "Prasidėjo tablečių vartojimo pertrauka",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Redaguoti vartojimo pertraukos pradžios datą",
+  "editPauseStartDate": "Pakeiskite tablečių vartojimo pertraukos pradžios datą",
   "shareWithFriends": "Rekomenduoti draugui",
   "termsOfService": "Naudojimosi sąlygos",
   "privacyPolicy": "Privatumo politika",

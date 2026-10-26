@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Եթե Դուք արդեն ընդունել եք այսօրվա հաբը,\nչեք կարող օգտագործել «Ընդունման դադար» գործառույթը",
   "pauseTakingStarted": "Հաբերի ընդունման դադարը սկսվել է",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Խմբագրել ընդունման ընդմիջման սկսման ամսաթիվը",
+  "editPauseStartDate": "Փոխել հաբի ընդունման դադարի մեկնարկի ամսաթիվը",
   "shareWithFriends": "Ընկերներին ներկայացնել",
   "termsOfService": "Օգտագործման պայմաններ",
   "privacyPolicy": "Գաղտնիության քաղաքականություն",

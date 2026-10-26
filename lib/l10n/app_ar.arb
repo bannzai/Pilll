@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "إذا تناولتِ حبة اليوم بالفعل،\nفلن تتمكني من استخدام «إيقاف تناول الحبوب مؤقتًا»",
   "pauseTakingStarted": "بدأت فترة التوقف المؤقت عن تناول الحبوب",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "تعديل تاريخ بداية توقف التناول",
+  "editPauseStartDate": "تعديل تاريخ بدء التوقف المؤقت عن تناول الحبوب",
   "shareWithFriends": "شارك مع الأصدقاء",
   "termsOfService": "شروط الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",

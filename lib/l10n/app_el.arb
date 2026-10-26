@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Αν έχετε ήδη πάρει το σημερινό χάπι,\nδεν μπορείτε να χρησιμοποιήσετε την «Παύση λήψης»",
   "pauseTakingStarted": "Ξεκίνησε η παύση λήψης του χαπιού",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης παύσης λήψης",
+  "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης της παύσης λήψης χαπιού",
   "shareWithFriends": "Πες σε φίλους",
   "termsOfService": "Όροι χρήσης",
   "privacyPolicy": "Πολιτική Απορρήτου",

@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ha a mai tablettát már szedted,\nnem használhatod a „Szedési szünet” funkciót",
   "pauseTakingStarted": "Elkezdődött a tablettaszedési szünet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Szedési szünet kezdő dátumának szerkesztése",
+  "editPauseStartDate": "A tablettaszedési szünet kezdőnapjának módosítása",
   "shareWithFriends": "Ajánlás barátoknak",
   "termsOfService": "Felhasználási feltételek",
   "privacyPolicy": "Adatvédelmi irányelvek",

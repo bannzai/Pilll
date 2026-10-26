@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Uma usuliphuzile iphilisi lanamuhla,\nawukwazi ukusebenzisa okuthi “Ukuphumula ekuphuzeni amaphilisi”",
   "pauseTakingStarted": "Isikhathi sokuphumula ekuphuzeni amaphilisi sesiqalile",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Hlela usuku lokuqala lokuphumula ekuthatheni",
+  "editPauseStartDate": "Sicela ushintshe usuku lokuqala kwekhefu lokugwinya iphilisi",
   "shareWithFriends": "Tshela abangani",
   "termsOfService": "Imigomo Yokusetshenziswa",
   "privacyPolicy": "Inqubomgomo Yobumfihlo",

@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ako ste već uzeli današnju pilulu,\nne možete koristiti „Pauzu u uzimanju“",
   "pauseTakingStarted": "Počela je pauza u uzimanju pilula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Uredi datum početka pauze uzimanja",
+  "editPauseStartDate": "Uredite datum početka stanke u uzimanju pilule",
   "shareWithFriends": "Preporuči prijatelju",
   "termsOfService": "Uvjeti korištenja",
   "privacyPolicy": "Politika privatnosti",

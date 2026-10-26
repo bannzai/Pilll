@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "જો તમે આજની ગોળી પહેલેથી લઈ લીધી હોય,\nતો તમે ‘ગોળી લેવાનો વિરામ’ વાપરી શકતા નથી",
   "pauseTakingStarted": "ગોળી લેવાનો વિરામ શરૂ થયો છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "વિરામ શરૂઆતની તારીખ સંપાદિત કરો",
+  "editPauseStartDate": "ગોળી લેવાના વિરામની શરૂઆતની તારીખ બદલો",
   "shareWithFriends": "મિત્રોને કહો",
   "termsOfService": "વપરાશની શરતો",
   "privacyPolicy": "ગોપનીયતા નીતિ",

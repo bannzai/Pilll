@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "오늘 먹을 피임약을 이미 복용했다면\n‘복용 쉬기’를 사용할 수 없어요",
   "pauseTakingStarted": "피임약 복용 휴식이 시작됐어요",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "복용 중단 시작일 수정",
+  "editPauseStartDate": "복용 휴식 시작일 수정",
   "shareWithFriends": "친구에게 추천하기",
   "termsOfService": "이용약관",
   "privacyPolicy": "개인정보처리방침",

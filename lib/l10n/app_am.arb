@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "የዛሬውን ክኒን አስቀድመው ከወሰዱ፣\n«ክኒን መውሰድን ለጊዜው ማቆም» መጠቀም አይችሉም",
   "pauseTakingStarted": "የክኒን መውሰድ እረፍት ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን ማስተካከል",
+  "editPauseStartDate": "ክኒን መውሰድ የሚታቆምበትን መጀመሪያ ቀን ያርትዑ",
   "shareWithFriends": "ለወዳጆች ማስተዋወቅ",
   "termsOfService": "የአገልግሎት ሁኔታዎች",
   "privacyPolicy": "የግላዊነት ፖሊሲ",

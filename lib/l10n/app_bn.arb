@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "আজকের পিলটি ইতিমধ্যে খেয়ে থাকলে,\nআপনি ‘পিল খাওয়ায় বিরতি’ ব্যবহার করতে পারবেন না",
   "pauseTakingStarted": "পিল খাওয়ায় বিরতি শুরু হয়েছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "সেবন বিরতি শুরুর তারিখ সম্পাদনা",
+  "editPauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ পরিবর্তন করুন",
   "shareWithFriends": "বন্ধুদের জানান",
   "termsOfService": "ব্যবহারের শর্তাবলী",
   "privacyPolicy": "গোপনীয়তা নীতি",

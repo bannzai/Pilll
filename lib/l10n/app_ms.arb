@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diambil,\nanda tidak boleh menggunakan “Jeda pengambilan pil”",
   "pauseTakingStarted": "Jeda pengambilan pil telah bermula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Sunting Tarikh Mula Jeda Pengambilan",
+  "editPauseStartDate": "Ubah tarikh mula rehat pengambilan pil",
   "shareWithFriends": "Beritahu kawan",
   "termsOfService": "Terma dan Syarat",
   "privacyPolicy": "Dasar Privasi",

@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Kui oled tänase pilli juba võtnud,\nei saa kasutada valikut „Pillide võtmise paus“",
   "pauseTakingStarted": "Pillipaus on alanud",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Redigeeri võtmispausi alguskuupäeva",
+  "editPauseStartDate": "Muuda pillide võtmise pausi alguskuupäeva",
   "shareWithFriends": "Soovita sõbrale",
   "termsOfService": "Kasutustingimused",
   "privacyPolicy": "Privaatsuspoliitika",

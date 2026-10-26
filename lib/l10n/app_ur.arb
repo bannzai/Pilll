@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "اگر آج کی گولی پہلے ہی لی جا چکی ہے تو\nآپ «گولی لینے میں عارضی وقفہ» استعمال نہیں کر سکتیں",
   "pauseTakingStarted": "گولی لینے کا وقفہ شروع ہو گیا ہے",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "دوا میں وقفے کی شروعاتی تاریخ میں ترمیم",
+  "editPauseStartDate": "گولی لینے میں وقفہ شروع ہونے کی تاریخ تبدیل کریں",
   "shareWithFriends": "دوستوں کو بتائیں",
   "termsOfService": "شرائط و ضوابط",
   "privacyPolicy": "رازداری کی پالیسی",

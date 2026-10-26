@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Dacă ai luat deja pilula de astăzi,\nnu poți folosi „Pauză de la pilulă”",
   "pauseTakingStarted": "A început pauza de la pilulă",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Editează data de început a pauzei de administrare",
+  "editPauseStartDate": "Modifică data de început a pauzei de la pilulă",
   "shareWithFriends": "Recomandă prietenilor",
   "termsOfService": "Termeni de utilizare",
   "privacyPolicy": "Politica de confidențialitate",

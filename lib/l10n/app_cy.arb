@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Os ydych chi eisoes wedi cymryd pilsen heddiw,\nni allwch ddefnyddio «Seibiant rhag cymryd y bilsen»",
   "pauseTakingStarted": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Golygu dyddiad dechrau seibiant cymryd",
+  "editPauseStartDate": "Golygu dyddiad dechrau'r seibiant rhag cymryd y bilsen",
   "shareWithFriends": "Rhannu gyda ffrindiau",
   "termsOfService": "Telerau ac Amodau",
   "privacyPolicy": "Polisi Preifatrwydd",

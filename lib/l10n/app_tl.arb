@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pildoras para sa araw na ito,\nhindi ninyo magagamit ang “Pansamantalang paghinto sa pag-inom ng pildoras”",
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom ng pildoras",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "I-edit ang petsa ng pagsisimula ng pahinga sa pag-inom",
+  "editPauseStartDate": "Baguhin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "shareWithFriends": "Ibahagi sa mga kaibigan",
   "termsOfService": "Mga Tuntunin ng Paggamit",
   "privacyPolicy": "Patakaran sa Privacy",

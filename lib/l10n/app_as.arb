@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "আজিৰ পিলটো ইতিমধ্যে খাই থাকিলে,\nআপুনি «পিল খোৱা সাময়িকভাৱে বন্ধ» ব্যৱহাৰ কৰিব নোৱাৰিব",
   "pauseTakingStarted": "পিল খোৱাৰ বিৰতি আৰম্ভ হৈছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "সেৱন বিৰতিৰ আৰম্ভৰ তাৰিখ সম্পাদনা",
+  "editPauseStartDate": "পিল খোৱাত বিৰতি আৰম্ভ হোৱাৰ তাৰিখ সম্পাদনা কৰক",
   "shareWithFriends": "বন্ধুক জনোৱক",
   "termsOfService": "ব্যৱহাৰৰ চৰ্তাৱলী",
   "privacyPolicy": "গোপনীয়তা নীতি",

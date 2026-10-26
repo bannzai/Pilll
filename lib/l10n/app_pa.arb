@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "ਜੇ ਅੱਜ ਦੀ ਗੋਲੀ ਪਹਿਲਾਂ ਹੀ ਲੈ ਲਈ ਹੈ,\nਤਾਂ ਤੁਸੀਂ ‘ਗੋਲੀ ਲੈਣ ਤੋਂ ਅਸਥਾਈ ਵਿਰਾਮ’ ਵਰਤ ਨਹੀਂ ਸਕਦੇ",
   "pauseTakingStarted": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਸ਼ੁਰੂ ਹੋ ਗਿਆ ਹੈ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "ਸੇਵਨ ਬ੍ਰੇਕ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਐਡਿਟ ਕਰੋ",
+  "editPauseStartDate": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਬਦਲੋ",
   "shareWithFriends": "ਦੋਸਤਾਂ ਨੂੰ ਦੱਸੋ",
   "termsOfService": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
   "privacyPolicy": "ਗੋਪਨੀਯਤਾ ਨੀਤੀ",

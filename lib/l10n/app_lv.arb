@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ja šodienas tableti jau esat iedzēruši,\nnevarat izmantot „Lietošanas pārtraukumu“",
   "pauseTakingStarted": "Tablešu lietošanas pārtraukums ir sācies",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Rediģēt pārtraukuma sākuma datumu",
+  "editPauseStartDate": "Mainiet tablešu lietošanas pārtraukuma sākuma datumu",
   "shareWithFriends": "Ieteikt draugiem",
   "termsOfService": "Lietošanas noteikumi",
   "privacyPolicy": "Privātuma politika",

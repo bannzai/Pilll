@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "As jy vandag se pil reeds geneem het,\nkan jy nie \"Pillepouse\" gebruik nie",
   "pauseTakingStarted": "Jou pilpouse het begin",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Wysig pouse begindatum",
+  "editPauseStartDate": "Wysig die begindatum van jou pilpouse",
   "shareWithFriends": "Vertel vriende",
   "termsOfService": "Gebruiksvoorwaardes",
   "privacyPolicy": "Privaatheidsbeleid",

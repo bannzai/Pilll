@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Agar bugungi tabletkani allaqachon ichgan boʻlsangiz,\n«Tabletka ichishni vaqtincha toʻxtatish» funksiyasidan foydalana olmaysiz",
   "pauseTakingStarted": "Tabletkalarni ichishdagi tanaffus boshlandi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Qabul qilishni to'xtatish boshlanish sanasini tahrirlash",
+  "editPauseStartDate": "Tabletka ichishdagi tanaffus boshlanish sanasini oʻzgartiring",
   "shareWithFriends": "Do'stlarga ulashish",
   "termsOfService": "Foydalanish shartlari",
   "privacyPolicy": "Maxfiylik siyosati",

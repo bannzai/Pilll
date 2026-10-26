@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "បើអ្នកបានលេបថ្នាំគ្រាប់សម្រាប់ថ្ងៃនេះរួចហើយ\nអ្នកមិនអាចប្រើ «ផ្អាកការលេបថ្នាំគ្រាប់» បានទេ",
   "pauseTakingStarted": "ការផ្អាកលេបថ្នាំគ្រាប់បានចាប់ផ្តើមហើយ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "កែប្រែថ្ងៃចាប់ផ្តើមការផ្អាកទទួលទានថ្នាំ",
+  "editPauseStartDate": "កែប្រែកាលបរិច្ឆេទចាប់ផ្តើមផ្អាកលេបថ្នាំគ្រាប់",
   "shareWithFriends": "ណែនាំមិត្ត",
   "termsOfService": "ល័ក្ខខណ្ឌការប្រើប្រាស់",
   "privacyPolicy": "គោលការណ៏ឯកជនភាព",

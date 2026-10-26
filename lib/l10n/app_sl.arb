@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Če ste današnjo tableto že vzeli,\nne morete uporabiti možnosti »Premor pri jemanju«",
   "pauseTakingStarted": "Premor pri jemanju tablet je začel veljati",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Uredi datum začetka pavze jemanja",
+  "editPauseStartDate": "Uredite datum začetka premora pri jemanju tabletk",
   "shareWithFriends": "Povej prijateljem",
   "termsOfService": "Pogoji uporabe",
   "privacyPolicy": "Politika zasebnosti",

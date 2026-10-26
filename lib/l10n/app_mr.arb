@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतली असल्यास,\nतुम्ही ‘गोळी घेण्यास विराम’ वापरू शकत नाही",
   "pauseTakingStarted": "गोळी घेण्याचा विराम सुरू झाला आहे",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "सेवन विराम सुरुवातीचा दिनांक संपादन",
+  "editPauseStartDate": "गोळी घेण्याच्या विश्रांतीची सुरुवातीची तारीख बदला",
   "shareWithFriends": "मित्रांना सुचवा",
   "termsOfService": "वापराच्या अटी",
   "privacyPolicy": "गोपनीयता धोरण",

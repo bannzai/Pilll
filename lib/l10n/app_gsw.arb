@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Wänn du s Pilleli für hüt scho gnoh hesch,\nchasch d «Pillepause» nöd bruuche",
   "pauseTakingStarted": "D Pillepause hät aagfange",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Aafangsdatum vo der Ynahm-Pause bearbeite",
+  "editPauseStartDate": "Aafangsdatum vo de Pillepause ändere",
   "shareWithFriends": "Fründe empfähle",
   "termsOfService": "Nutzungsbedingungen",
   "privacyPolicy": "Datenschutzerklärung",

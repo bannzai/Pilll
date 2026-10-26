@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Якщо ви вже прийняли сьогоднішню пігулку,\nскористатися функцією «Перерва в прийомі» не вийде",
   "pauseTakingStarted": "Почалася перерва у прийомі пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "Редагувати дату початку перерви у прийомі",
+  "editPauseStartDate": "Змінити дату початку перерви в прийомі пігулки",
   "shareWithFriends": "Розповісти друзям",
   "termsOfService": "Умови використання",
   "privacyPolicy": "Політика конфіденційності",

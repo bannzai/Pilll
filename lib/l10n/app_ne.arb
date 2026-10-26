@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "आजको चक्की पहिले नै लिनुभएको छ भने,\nतपाईंले ‘चक्की लिन केही समय रोक्ने’ सुविधा प्रयोग गर्न सक्नुहुन्न",
   "pauseTakingStarted": "चक्की सेवनको विश्राम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "सेवन बिदाको सुरुवात मिति सम्पादन गर्नुहोस्",
+  "editPauseStartDate": "चक्की सेवनमा विश्राम सुरु हुने मिति बदल्नुहोस्",
   "shareWithFriends": "साथीलाई बताउनु",
   "termsOfService": "उपयोग सर्तहरू",
   "privacyPolicy": "गोपनीयता नीति",

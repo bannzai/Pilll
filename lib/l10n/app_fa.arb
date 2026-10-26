@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "اگر قرص امروز را مصرف کرده‌اید،\nنمی‌توانید از «توقف موقت مصرف قرص» استفاده کنید",
   "pauseTakingStarted": "وقفه در مصرف قرص آغاز شد",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "ویرایش تاریخ شروع توقف مصرف",
+  "editPauseStartDate": "ویرایش تاریخ شروع وقفه در مصرف قرص",
   "shareWithFriends": "به دوستان معرفی کن",
   "termsOfService": "شرایط استفاده",
   "privacyPolicy": "سیاست حریم خصوصی",

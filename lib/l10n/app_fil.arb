@@ -404,7 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pill para sa araw na ito,\nhindi ninyo magagamit ang “Pansamantalang paghinto ng pag-inom ng pill”",
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom ng pill",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "I-edit ang petsa ng simula ng pahinga sa pag-inom",
+  "editPauseStartDate": "Baguhin ang petsa ng simula ng paghinto muna sa pag-inom ng pill",
   "shareWithFriends": "Irekomenda sa kaibigan",
   "termsOfService": "Mga Tuntunin ng Paggamit",
   "privacyPolicy": "Patakaran sa Privacy",
