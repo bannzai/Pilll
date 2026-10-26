@@ -458,7 +458,7 @@
   "recommendSignupGeneralDescription": "რეგისტრაციის შემდეგ შეგიძლიათ თქვენი მონაცემების სარეზერვო ასლის შექმნა",
   "criticalAlertFeatureAppealTitle": "შეტყობინებების მიღება უხმო რეჟიმშიც",
   "criticalAlertFeatureAppealShortDescription": "გახსოვდეთ აბის მიღება „არ შემაწუხოთ“ რეჟიმშიც",
-  "criticalAlertFeatureAppealHeadline": "შეტყობინებები სიჩუმე რეჟიმშიც მიიღება",
+  "criticalAlertFeatureAppealHeadline": "შეტყობინებებს უხმო რეჟიმშიც მიიღებთ",
   "criticalAlertFeatureAppealBody": "Critical Alert-ის ჩართვის შემთხვევაში, წამლის მიღების შეტყობინებებს მიიღებთ 'არ შემაწუხო' (Do Not Disturb) და ჩუმი რეჟიმების დროსაც. რათა არ გამოტოვოთ მნიშვნელოვანი წამლის მიღების დრო, გთხოვთ, ჩართოთ ეს ფუნქცია.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "შეტყობინების ტექსტის მორგება",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "შეგიძლიათ შეცვალოთ შეხსენების ტექსტი",

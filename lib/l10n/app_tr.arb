@@ -458,7 +458,7 @@
   "recommendSignupGeneralDescription": "Kaydolduğunuzda verilerinizi yedekleyebilirsiniz",
   "criticalAlertFeatureAppealTitle": "Sessiz modda bile bildirim alın",
   "criticalAlertFeatureAppealShortDescription": "Rahatsız Etmeyin modunda bile hapınızı almayı hatırlayın",
-  "criticalAlertFeatureAppealHeadline": "Sessiz moddayken bile bildirim alırsınız",
+  "criticalAlertFeatureAppealHeadline": "Sessiz modda bile bildirim alabilirsiniz",
   "criticalAlertFeatureAppealBody": "Kritik Uyarıyı etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modunda olsanız bile doz alma bildirimleri alabilirsiniz. Önemli hap alma zamanlarını kaçırmamak için lütfen bu ayarı etkinleştirin.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirim mesajını özelleştir",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirim metnini özelleştirebilirsiniz",

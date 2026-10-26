@@ -458,7 +458,7 @@
   "recommendSignupGeneralDescription": "Po rejestracji możesz utworzyć kopię zapasową swoich danych",
   "criticalAlertFeatureAppealTitle": "Otrzymuj powiadomienia nawet w trybie cichym",
   "criticalAlertFeatureAppealShortDescription": "Pamiętaj o tabletce nawet w trybie Nie przeszkadzać",
-  "criticalAlertFeatureAppealHeadline": "Powiadomienia docierają nawet w trybie cichym",
+  "criticalAlertFeatureAppealHeadline": "Powiadomienia docierają także w trybie cichym",
   "criticalAlertFeatureAppealBody": "Włączenie Krytycznych Alertów umożliwia otrzymywanie powiadomień o przyjęciu tabletki nawet w trybie Nie przeszkadzać lub w trybie ciszy. Skonfiguruj tę opcję, aby nie przegapić ważnego momentu przyjęcia tabletki antykoncepcyjnej.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Dostosuj komunikat powiadomienia",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Możesz dostosować treść powiadomień",

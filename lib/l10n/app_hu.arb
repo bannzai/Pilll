@@ -458,7 +458,7 @@
   "recommendSignupGeneralDescription": "Regisztráció után biztonsági másolatot készíthetsz az adataidról",
   "criticalAlertFeatureAppealTitle": "Értesítések fogadása néma módban is",
   "criticalAlertFeatureAppealShortDescription": "Ne feledkezz meg a tablettáról Ne zavarjanak módban sem",
-  "criticalAlertFeatureAppealHeadline": "Értesítések némított módban is",
+  "criticalAlertFeatureAppealHeadline": "Néma módban is megérkeznek az értesítések",
   "criticalAlertFeatureAppealBody": "Critical Alert engedélyezésével még alvó vagy némított módban is megkaphatja a szedésről szóló értesítéseket. Ne maradjon le a fontos fogamzásgátló bevételéről — kapcsolja be ezt a beállítást!",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Értesítési üzenet testreszabása",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Az értesítések szövegét testreszabhatja",

@@ -458,7 +458,7 @@
   "recommendSignupGeneralDescription": "Kun rekisteröidyt, voit varmuuskopioida tietosi",
   "criticalAlertFeatureAppealTitle": "Saat ilmoituksia myös äänettömässä tilassa",
   "criticalAlertFeatureAppealShortDescription": "Muista ottaa pilleri myös Älä häiritse -tilassa",
-  "criticalAlertFeatureAppealHeadline": "Ilmoitukset saapuvat myös äänettömässä tilassa",
+  "criticalAlertFeatureAppealHeadline": "Saat ilmoituksia myös äänettömässä tilassa",
   "criticalAlertFeatureAppealBody": "Kun otat Critical Alertin käyttöön, voit vastaanottaa pillereiden ottamisilmoituksia myös Älä häiritse -tilan tai äänettömän tilan aikana. Jotta et missaa tärkeitä pillereiden ottoaikoja, suosittelemme ottamaan tämän ominaisuuden käyttöön.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Mukauta ilmoitusviestiä",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Voit muokata ilmoitustekstejä",
