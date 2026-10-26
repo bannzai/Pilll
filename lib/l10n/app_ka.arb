@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგის აღდგენა შეუძლებელია",
   "deleteSchedule": "გეგმის წაშლა",
   "onlySupportiOS": "ეს ფუნქცია ხელმისაწვდომია მხოლოდ iOS აპში",
-  "healthKitDoesNotSupport": "ჯანმრთელობის დაცვას არ უჭერს მხარს ეს მოწყობილობა, ამიტომ ფუნქციის გამოყენება შეუძლებელია",
+  "healthKitDoesNotSupport": "ეს ფუნქცია მიუწვდომელია მოწყობილობებზე, რომლებსაც ჯანმრთელობის მონაცემების მხარდაჭერა არ აქვთ",
   "enableHealthKitFromSettings": "პარამეტრების აპლიდან ჯანმრთელობის მონაცემები ჩართეთ",
   "accountAlreadyLinked": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებულია თქვენს Pilll ანგარიშთან. სცადეთ ეკრანის განახლება. ასევე იხილეთ FAQ. დეტალები: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებული არის Pilll-ის სხვა ანგარიშთან, ამიტომ რეგისტრაცია ვერ ხერხდება. გთხოვთ ნახოთ FAQ-იც. დეტალები: {exceptionMessage}",

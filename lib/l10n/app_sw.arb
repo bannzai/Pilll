@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ratiba iliyofutwa haiwezi kurejeshwa",
   "deleteSchedule": "Tafadhali futa ratiba",
   "onlySupportiOS": "Kipengele hiki kinapatikana kwenye programu ya iOS pekee",
-  "healthKitDoesNotSupport": "Huduma hii haipatikani kwenye vifaa ambavyo havitumii mfumo wa afya",
+  "healthKitDoesNotSupport": "Kipengele hiki hakipatikani kwenye vifaa visivyotumia data za afya",
   "enableHealthKitFromSettings": "Tafadhali washa huduma za afya katika programu ya mipangilio",
   "accountAlreadyLinked": "Akaunti ya {accountTypeProviderName} tayari imeunganishwa na akaunti yako ya Pilll. Jaribu kusasisha ukurasa. Pia angalia FAQ. Maelezo: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll, kwa hiyo haiwezi kusajiliwa. Tafadhali angalia pia FAQ. Maelezo: {exceptionMessage}",

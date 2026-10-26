@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Smazaný plán nelze obnovit",
   "deleteSchedule": "Smazat plán",
   "onlySupportiOS": "Tato funkce je dostupná pouze v aplikaci pro iOS",
-  "healthKitDoesNotSupport": "Tuto funkci nelze použít na zařízeních, která nepodporují zdravotní aplikace",
+  "healthKitDoesNotSupport": "Tato funkce není dostupná na zařízeních, která nepodporují zdravotní údaje",
   "enableHealthKitFromSettings": "Prosím povolte Zdraví v aplikaci Nastavení",
   "accountAlreadyLinked": "Tento {accountTypeProviderName} účet je již propojený s vaším Pilll účtem. Zkuste aktualizovat obrazovku. Podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tento {accountTypeProviderName} účet je již propojen s jiným Pilll účtem, proto registrace není možná. Prosím, podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",

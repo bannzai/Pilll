@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Không thể khôi phục lịch trình đã xóa",
   "deleteSchedule": "Xóa lịch trình",
   "onlySupportiOS": "Tính năng này chỉ có trên ứng dụng iOS",
-  "healthKitDoesNotSupport": "Không thể sử dụng trên các thiết bị không hỗ trợ tính năng Sức khỏe",
+  "healthKitDoesNotSupport": "Tính năng này không khả dụng trên thiết bị không hỗ trợ dữ liệu sức khỏe",
   "enableHealthKitFromSettings": "Vui lòng kích hoạt Sức khỏe trong ứng dụng Cài đặt",
   "accountAlreadyLinked": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll của bạn. Vui lòng thử làm mới màn hình. Vui lòng xem FAQ. Chi tiết: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll khác nên không thể đăng ký. Vui lòng xem FAQ. Chi tiết: {exceptionMessage}",

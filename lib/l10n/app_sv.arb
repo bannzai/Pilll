@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ett raderat schema kan inte återställas",
   "deleteSchedule": "Ta bort schemat",
   "onlySupportiOS": "Den här funktionen finns bara i iOS-appen",
-  "healthKitDoesNotSupport": "Den här funktionen är inte tillgänglig på enheter som inte stöder Hälsodata",
+  "healthKitDoesNotSupport": "Den här funktionen är inte tillgänglig på enheter som inte stöder hälsodata",
   "enableHealthKitFromSettings": "Vänligen aktivera Hälsa i Inställningar-appen",
   "accountAlreadyLinked": "Detta {accountTypeProviderName}-konto är redan kopplat till ditt Pilll-konto. Försök uppdatera skärmen. Se även FAQ. Detaljer: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Detta {accountTypeProviderName}-konto är redan kopplat till ett annat Pilll-konto och kan därför inte registreras. Se även FAQ. Detaljer: {exceptionMessage}",

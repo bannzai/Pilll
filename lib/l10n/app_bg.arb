@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Изтритият график не може да бъде възстановен",
   "deleteSchedule": "Изтриване на плана",
   "onlySupportiOS": "Тази функция е достъпна само в приложението за iOS",
-  "healthKitDoesNotSupport": "Тази функция не е достъпна на устройства, които не поддържат здравеопазване",
+  "healthKitDoesNotSupport": "Тази функция не е достъпна на устройства, които не поддържат здравни данни",
   "enableHealthKitFromSettings": "Моля, разрешете достъпа до Здраве от приложението Настройки",
   "accountAlreadyLinked": "Този {accountTypeProviderName} акаунт вече е свързан с вашия Pilll акаунт. Моля, опитайте да опресните екрана. Разгледайте и FAQ. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Този {accountTypeProviderName} акаунт вече е свързан с друг Pilll акаунт, поради което регистрацията не може да бъде извършена. Моля, вижте също FAQ. Подробности: {exceptionMessage}",

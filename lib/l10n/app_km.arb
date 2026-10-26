@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "មិនអាចស្ដារកាលវិភាគដែលបានលុបវិញបានទេ",
   "deleteSchedule": "លុបកាលវិភាគ",
   "onlySupportiOS": "មុខងារនេះមានតែនៅក្នុងកម្មវិធី iOS ប៉ុណ្ណោះ",
-  "healthKitDoesNotSupport": "មុខងារនេះមិនអាចប្រើបានលើឧបករណ៍ដែលមិនគាំទ្រការថែទាំសុខភាពទេ",
+  "healthKitDoesNotSupport": "មុខងារនេះមិនអាចប្រើបាននៅលើឧបករណ៍ដែលមិនគាំទ្រទិន្នន័យសុខភាពទេ",
   "enableHealthKitFromSettings": "សូមបើកមុខងារសុខភាពនៅក្នុងកម្មវិធីកំណត់ការ",
   "accountAlreadyLinked": "គណនី{accountTypeProviderName}នេះត្រូវបានភ្ជាប់ជាមួយគណនី Pilll របស់អ្នករួចហើយ។ សូមព្យាយាមធ្វើបច្ចុប្បន្នភាពអេក្រង់។ សូមមើល FAQ ផងដែរ។ លម្អិត៖ {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "គណនី{accountTypeProviderName}នេះត្រូវបានភ្ជាប់ជាមួយគណនី Pilll ផ្សេងទៀតរួចហើយ ដូច្នេះមិនអាចចុះឈ្មោះបានទេ។ សូមមើល FAQ ផងដែរ។ លម្អិត៖ {exceptionMessage}",

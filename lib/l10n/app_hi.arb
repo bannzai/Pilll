@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "हटाया गया शेड्यूल वापस नहीं लाया जा सकता",
   "deleteSchedule": "योजना हटाएं",
   "onlySupportiOS": "यह सुविधा सिर्फ़ iOS ऐप में उपलब्ध है",
-  "healthKitDoesNotSupport": "हेल्थकेयर समर्थित नहीं होने वाले डिवाइस पर यह सुविधा उपलब्ध नहीं है",
+  "healthKitDoesNotSupport": "स्वास्थ्य डेटा का समर्थन न करने वाले डिवाइस पर यह सुविधा उपलब्ध नहीं है",
   "enableHealthKitFromSettings": "कृपया सेटिंग्स ऐप से हेल्थकेयर सक्षम करें",
   "accountAlreadyLinked": "यह {accountTypeProviderName} खाता पहले से ही आपके Pilll खाते से जुड़ा हुआ है। स्क्रीन को रिफ्रेश करने का प्रयास करें। FAQ भी देखें। विवरण: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "यह {accountTypeProviderName} खाता पहले से ही किसी अन्य Pilll खाते से जुड़ा हुआ है, इसलिए पंजीकरण नहीं किया जा सकता। कृपया FAQ भी देखें। विवरण: {exceptionMessage}",

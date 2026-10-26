@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ekki er hægt að endurheimta eydda áætlun",
   "deleteSchedule": "Eyða áætlun",
   "onlySupportiOS": "Þessi eiginleiki er aðeins í boði í iOS-appinu",
-  "healthKitDoesNotSupport": "Þessi eiginleiki er ekki tiltækur á tækjum sem styðja ekki heilsugögn",
+  "healthKitDoesNotSupport": "Þessi eiginleiki er ekki í boði í tækjum sem styðja ekki heilsufarsgögn",
   "enableHealthKitFromSettings": "Vinsamlegast virkjaðu heilsuvernd í stillingaforritinu",
   "accountAlreadyLinked": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við Pilll reikninginn þinn. Reyndu að uppfæra skjáinn. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við annan Pilll reikning og því er ekki hægt að skrá sig. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",

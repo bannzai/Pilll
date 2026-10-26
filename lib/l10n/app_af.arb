@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Jy kan ’n geskrapte afspraak nie herstel nie",
   "deleteSchedule": "Vee afspraak uit",
   "onlySupportiOS": "Hierdie funksie is net in die iOS-toepassing beskikbaar",
-  "healthKitDoesNotSupport": "Hierdie funksie is nie beskikbaar op toestelle wat nie gesondheidsorgfunksies ondersteun nie",
+  "healthKitDoesNotSupport": "Hierdie funksie is nie beskikbaar op toestelle wat nie gesondheidsdata ondersteun nie",
   "enableHealthKitFromSettings": "Aktiveer asseblief Gesondheidsorg vanaf die Instellings-app",
   "accountAlreadyLinked": "Hierdie {accountTypeProviderName}-rekening is reeds aan u bestaande Pilll-rekening gekoppel. Probeer asseblief die skerm te verfris en kyk na die FAQ. Besonderhede: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Hierdie {accountTypeProviderName}-rekening kan nie geregistreer word nie omdat dit reeds aan 'n ander Pilll-rekening gekoppel is. Sien asseblief ook die FAQ. Besonderhede: {exceptionMessage}",

@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Uhlelo olususiwe alukwazi ukubuyiselwa",
   "deleteSchedule": "Sicela ususe uhlelo",
   "onlySupportiOS": "Lesi sici sitholakala kuphela ohlelweni lokusebenza lwe-iOS",
-  "healthKitDoesNotSupport": "Akukwazi ukusetshenziswa kumadivayisi angazwani nezinhlelo zezempilo",
+  "healthKitDoesNotSupport": "Lesi sici asitholakali kumadivayisi angasekeli idatha yezempilo",
   "enableHealthKitFromSettings": "Sicela uvumele i-Healthcare ku-app yezilungiselelo",
   "accountAlreadyLinked": "Leli {accountTypeProviderName} i-akhawunti sekunaye ihlanganiswe ne-akhawunti yakho ye-Pilll. Zama ukubuyekezwa kwekhusi. Buka ne-FAQ. Imininingwane: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Leli {accountTypeProviderName} akhawunti sele lexhunyelwe kwenye akhawunti yePilll ngakho-ke awukwazi ukubhalisela. Buka ne-FAQ futhi. Imininingwane: {exceptionMessage}",

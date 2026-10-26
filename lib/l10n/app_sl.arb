@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Izbrisanega urnika ni mogoče obnoviti",
   "deleteSchedule": "Izbrišite načrt",
   "onlySupportiOS": "Ta funkcija je na voljo samo v aplikaciji za iOS",
-  "healthKitDoesNotSupport": "Na napravah, ki ne podpirajo zdravstvenih funkcij, ta funkcija ni na voljo",
+  "healthKitDoesNotSupport": "Ta funkcija ni na voljo v napravah, ki ne podpirajo zdravstvenih podatkov",
   "enableHealthKitFromSettings": "V nastavitvah omogočite aplikacijo Zdravje",
   "accountAlreadyLinked": "Ta {accountTypeProviderName} račun je že povezan z vašim Pilll računom. Poskusite osvežiti zaslon. Preverite tudi FAQ. Podrobnosti: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ta {accountTypeProviderName} račun je že povezan z drugim Pilll računom, zato registracija ni mogoča. Oglejte si tudi FAQ. Podrobnosti: {exceptionMessage}",

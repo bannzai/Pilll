@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Un program șters nu poate fi restaurat",
   "deleteSchedule": "Șterge programul",
   "onlySupportiOS": "Această funcție este disponibilă doar în aplicația pentru iOS",
-  "healthKitDoesNotSupport": "Nu poate fi utilizată pe dispozitivele care nu sunt compatibile cu HealthCare",
+  "healthKitDoesNotSupport": "Această funcție nu este disponibilă pe dispozitivele care nu acceptă date de sănătate",
   "enableHealthKitFromSettings": "Activați Sănătatea din aplicația Setări",
   "accountAlreadyLinked": "Acest cont {accountTypeProviderName} este deja asociat cu contul dvs. Pilll. Încercați să actualizați ecranul. Consultați și FAQ-ul. Detalii: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Acest cont {accountTypeProviderName} este deja conectat la un alt cont Pilll, prin urmare înregistrarea nu este posibilă. Vă rugăm să consultați și FAQ-ul. Detalii: {exceptionMessage}",

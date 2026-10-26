@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "deleteSchedule": "ವೇಳಾಪಟ್ಟಿಯನ್ನು ಅಳಿಸಿ",
   "onlySupportiOS": "ಈ ಸೌಲಭ್ಯವು iOS ಆ್ಯಪ್‌ನಲ್ಲಿ ಮಾತ್ರ ಲಭ್ಯವಿದೆ",
-  "healthKitDoesNotSupport": "ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಬೆಂಬಲಿಸದ ಸಾಧನಗಳಲ್ಲಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ",
+  "healthKitDoesNotSupport": "ಆರೋಗ್ಯ ಮಾಹಿತಿಯನ್ನು ಬೆಂಬಲಿಸದ ಸಾಧನಗಳಲ್ಲಿ ಈ ಸೌಲಭ್ಯ ಲಭ್ಯವಿಲ್ಲ",
   "enableHealthKitFromSettings": "ಸೆಟ್ಟಿಂಗ್ಸ್ ಆ್ಯಪ್‌ನಿಂದ ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
   "accountAlreadyLinked": "ಈ {accountTypeProviderName} ಖಾತೆಯು ಈಗಾಗಲೇ ನಿಮ್ಮ Pilll ಖಾತೆಯೊಂದಿಗೆ ಲಿಂಕ್ ಮಾಡಲಾಗಿದೆ. ಪರದೆಯ ನವೀಕರಣವನ್ನು ಪ್ರಯತ್ನಿಸಿ. FAQ ಅನ್ನು ಸಹ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ಈ {accountTypeProviderName} ಖಾತೆಯು ಈಗಾಗಲೇ ಇತರ Pilll ಖಾತೆಯೊಂದಿಗೆ ಲಿಂಕ್ ಆಗಿರುವುದರಿಂದ ನೋಂದಣಿ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ. FAQ ಅನ್ನು ಸಹ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",

@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "삭제한 일정은 복원할 수 없어요",
   "deleteSchedule": "일정 삭제",
   "onlySupportiOS": "이 기능은 iOS 앱에서만 사용할 수 있어요",
-  "healthKitDoesNotSupport": "헬스케어를 지원하지 않는 기기에서는 이용하실 수 없습니다",
+  "healthKitDoesNotSupport": "건강 데이터를 지원하지 않는 기기에서는 이 기능을 사용할 수 없어요",
   "enableHealthKitFromSettings": "설정 앱에서 건강을 활성화해주세요",
   "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정과 연결되어 있습니다. 화면을 새로고침해 보세요. FAQ도 확인해 보세요. 세부 정보: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연동되어 있어 등록할 수 없습니다. FAQ도 확인해 주세요. 상세 정보: {exceptionMessage}",

@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ջնջված ժամանակացույցը հնարավոր չէ վերականգնել",
   "deleteSchedule": "Ջնջել ժամանակացույցը",
   "onlySupportiOS": "Այս գործառույթը հասանելի է միայն iOS հավելվածում",
-  "healthKitDoesNotSupport": "Առողջապահություն չաջակցող սարքերում այս ֆունկցիան հասանելի չէ",
+  "healthKitDoesNotSupport": "Այս գործառույթը հասանելի չէ առողջության տվյալները չաջակցող սարքերում",
   "enableHealthKitFromSettings": "Խնդրում ենք Կարգավորումների հավելվածում միացրեք Առողջությունը",
   "accountAlreadyLinked": "Այս {accountTypeProviderName} հաշիվն արդեն կապակցված է ձեր Pilll հաշվի հետ: Փորձեք թարմացնել էկրանը: Նաև նայեք FAQ-ին: Մանրամասներ՝ {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է այլ Pilll հաշվի հետ, ուստի գրանցումը հնարավոր չէ: Խնդրում ենք դիտել նաև ՀՏՀ բաժինը: Մանրամասները՝ {exceptionMessage}",

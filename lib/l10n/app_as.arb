@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "মচি পেলোৱা সময়সূচী পুনৰ ঘূৰাই আনিব নোৱাৰি",
   "deleteSchedule": "সূচী মচক",
   "onlySupportiOS": "এই সুবিধা কেৱল iOS এপত উপলব্ধ",
-  "healthKitDoesNotSupport": "স্বাস্থ্য সেৱা সমৰ্থন নকৰা যন্ত্ৰত এই সুবিধা ব্যৱহাৰ কৰিব নোৱাৰি",
+  "healthKitDoesNotSupport": "স্বাস্থ্য তথ্য সমৰ্থন নকৰা ডিভাইচত এই সুবিধা উপলব্ধ নহয়",
   "enableHealthKitFromSettings": "ছেটিং এপৰ পৰা হেল্থকেয়াৰ সক্ৰিয় কৰক",
   "accountAlreadyLinked": "এই {accountTypeProviderName} একাউন্ট ইতিমধ্যে আপোনাৰ Pilll একাউন্টৰ সৈতে সংযুক্ত হৈ আছে। স্ক্ৰীন ৰিফ্ৰেছ কৰি চাওক। FAQ ও চাওক। বিস্তাৰিত: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} একাউণ্টটো ইতিমধ্যে Pilll ৰ অন্য একাউণ্টৰ সৈতে সংযুক্ত হৈ আছে, সেয়ে নিবন্ধন কৰিব নোৱাৰি। FAQ ও চাওক। বিৱৰণ: {exceptionMessage}",

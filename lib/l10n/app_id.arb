@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Jadwal yang dihapus tidak dapat dipulihkan",
   "deleteSchedule": "Hapus jadwal",
   "onlySupportiOS": "Fitur ini hanya tersedia di aplikasi iOS",
-  "healthKitDoesNotSupport": "Tidak dapat digunakan pada perangkat yang tidak mendukung HealthCare",
+  "healthKitDoesNotSupport": "Fitur ini tidak tersedia di perangkat yang tidak mendukung data kesehatan",
   "enableHealthKitFromSettings": "Harap aktifkan Health melalui aplikasi Pengaturan",
   "accountAlreadyLinked": "Akun {accountTypeProviderName} ini sudah terhubung dengan akun Pilll Anda. Silakan coba refresh layar. Silakan juga lihat FAQ. Detail: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akun {accountTypeProviderName} ini sudah terkait dengan akun Pilll lain sehingga tidak dapat didaftarkan. Silakan lihat FAQ untuk informasi lebih lanjut. Detail: {exceptionMessage}",

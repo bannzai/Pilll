@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Oʻchirilgan jadvalni qayta tiklab boʻlmaydi",
   "deleteSchedule": "Rejani oʻchiring",
   "onlySupportiOS": "Bu funksiya faqat iOS ilovasida mavjud",
-  "healthKitDoesNotSupport": "Sog'liqni saqlash funksiyasini qo'llab-quvvatlamaydigan qurilmalarda bu xizmatdan foydalanib bo'lmaydi",
+  "healthKitDoesNotSupport": "Bu funksiya salomatlik maʼlumotlarini qoʻllab-quvvatlamaydigan qurilmalarda mavjud emas",
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasidan Salomatlikni faollashtiring",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hisob allaqachon sizning Pilll hisobingiz bilan bog'langan. Ekranni yangilashga harakat qiling. FAQni ham ko'ring. Tafsilotlar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hisob allaqachon boshqa Pilll hisobiga bog'langanligi sababli ro'yxatdan o'ta olmaysiz. FAQga ham qarang. Tafsilotlar: {exceptionMessage}",

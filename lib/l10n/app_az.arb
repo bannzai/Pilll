@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Silinmiş planı bərpa etmək mümkün deyil",
   "deleteSchedule": "Planı silin",
   "onlySupportiOS": "Bu funksiya yalnız iOS tətbiqində mövcuddur",
-  "healthKitDoesNotSupport": "Səhiyyə funksiyasını dəstəkləməyən cihazlarda bu xidmətdən istifadə edilə bilməz",
+  "healthKitDoesNotSupport": "Sağlamlıq məlumatlarını dəstəkləməyən cihazlarda bu funksiyadan istifadə etmək mümkün deyil",
   "enableHealthKitFromSettings": "Ayarlar tətbiqindən Sağlamlığı aktivləşdirin",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı artıq istifadə etdiyiniz Pilll hesabı ilə əlaqələndirilmişdir. Ekranı yeniləməyə cəhd edin. FAQ-ya da baxın. Təfərrüatlar: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı artıq digər Pilll hesabına bağlandığı üçün qeydiyyat mümkün deyil. FAQ-ya da baxın. Təfərrüat: {exceptionMessage}",

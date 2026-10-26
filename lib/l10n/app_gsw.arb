@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "En glöschte Termin chasch nümme zruggbringe",
   "deleteSchedule": "Plan lösche",
   "onlySupportiOS": "Die Funktion gits nume i de iOS-App",
-  "healthKitDoesNotSupport": "Die Funktion isch uf Gerät ohni HealthKit-Understützig nöd verfüegbar",
+  "healthKitDoesNotSupport": "Die Funktion gaht uf Grät, wo kei Gsundheitsdate unterstützed, leider nöd",
   "enableHealthKitFromSettings": "Bitte aktiviere d'Gsundheit i de Iistelligs-App",
   "accountAlreadyLinked": "Ds {accountTypeProviderName}-Konto isch scho mit Ihrem Pilll-Konto verbunde. Bitte versuechet d'Aazeig z'aktualisiere. Luegget au s'FAQ aa. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dä {accountTypeProviderName}-Account isch bereits mit eme andere Pilll-Account verknüpft und chan drum nöd registriert werde. Lueg au i üsi FAQ. Details: {exceptionMessage}",

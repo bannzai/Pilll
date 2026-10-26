@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Устгасан хуваарийг сэргээх боломжгүй",
   "deleteSchedule": "Төлөвлөгөөг устгана уу",
   "onlySupportiOS": "Энэ боломж зөвхөн iOS апп-д бий",
-  "healthKitDoesNotSupport": "Таны төхөөрөмж эрүүл мэндийн өгөгдлийг дэмждэггүй тул энэ функцийг ашиглах боломжгүй байна",
+  "healthKitDoesNotSupport": "Эрүүл мэндийн өгөгдлийг дэмждэггүй төхөөрөмжид энэ боломжийг ашиглах боломжгүй",
   "enableHealthKitFromSettings": "Тохиргооны аппаас Эрүүл мэндийг идэвхжүүлнэ үү",
   "accountAlreadyLinked": "Энэ {accountTypeProviderName} данс таны Pilll данстай аль хэдийн холбогдсон байна. Дэлгэцийг шинэчлэх оролдоно уу. FAQ-г үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Энэ {accountTypeProviderName} бүртгэл өөр Pilll бүртгэлтэй холбогдсон тул бүртгэх боломжгүй байна. FAQ-г харна уу. Дэлгэрэнгүй: {exceptionMessage}",

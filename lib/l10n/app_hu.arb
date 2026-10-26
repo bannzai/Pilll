@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "A törölt időbeosztás nem állítható vissza",
   "deleteSchedule": "Ütemezés törlése",
   "onlySupportiOS": "Ez a funkció csak az iOS-alkalmazásban érhető el",
-  "healthKitDoesNotSupport": "Ez a funkció nem elérhető olyan eszközökön, amelyek nem támogatják az egészségügyi adatokat",
+  "healthKitDoesNotSupport": "Ez a funkció nem érhető el az egészségügyi adatokat nem támogató eszközökön",
   "enableHealthKitFromSettings": "Kérjük, engedélyezze az Egészség funkciót a Beállítások alkalmazásból",
   "accountAlreadyLinked": "Ez a {accountTypeProviderName} fiók már kapcsolódik az Ön Pilll fiókjához. Kérjük, próbálja meg frissíteni a képernyőt. Tekintse meg a GYIK-ot is. Részletek: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ez a {accountTypeProviderName} fiók már össze van kapcsolva egy másik Pilll fiókkal, ezért a regisztráció nem lehetséges. Kérjük, tekintse meg a GYIK-et is. Részletek: {exceptionMessage}",

@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "የተሰረዘ ቀጠሮ መመለስ አይቻልም",
   "deleteSchedule": "ቀጠሮን ይሰርዙ",
   "onlySupportiOS": "ይህ ባህሪ በiOS መተግበሪያ ብቻ ይገኛል",
-  "healthKitDoesNotSupport": "ጤና እንክብካቤን የማይደግፉ መሣሪያዎች ላይ መጠቀም አይቻልም",
+  "healthKitDoesNotSupport": "የጤና መረጃን በማይደግፉ መሣሪያዎች ላይ ይህን ባህሪ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎን ሴቲንግስ መተግበሪያ ውስጥ ሄልዝኬርን ያንቁ",
   "accountAlreadyLinked": "ይህ {accountTypeProviderName} መለያ ቀድሞውኑ ከእርስዎ Pilll መለያ ጋር ተያይዞ ነው። ስክሪኑን ማሻሻል ይሞክሩ። FAQ ይመልከቱ። ዝርዝር፡ {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ ቀድሞውንም ከሌላ Pilll መለያ ጋር የተገናኘ ስለሆነ መመዝገብ አይችሉም። እባክዎ የተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር: {exceptionMessage}",

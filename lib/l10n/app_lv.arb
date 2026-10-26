@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Izdzēstu grafiku nevar atjaunot",
   "deleteSchedule": "Dzēsiet plānu",
   "onlySupportiOS": "Šī funkcija ir pieejama tikai iOS lietotnē",
-  "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta veselības datu funkcijas",
+  "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta veselības datus",
   "enableHealthKitFromSettings": "Lūdzu, iespējojiet Veselību iestatījumos",
   "accountAlreadyLinked": "Šis {accountTypeProviderName} konts jau ir saistīts ar jūsu Pilll kontu. Lūdzu, mēģiniet atjaunot ekrānu. Skatiet arī BUJ. Detaļas: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Šis {accountTypeProviderName} konts jau ir saistīts ar citu Pilll kontu, tāpēc reģistrācija nav iespējama. Lūdzu, skatiet arī FAQ. Detaļas: {exceptionMessage}",

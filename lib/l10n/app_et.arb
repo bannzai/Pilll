@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Kustutatud ajakava ei saa taastada",
   "deleteSchedule": "Kustuta plaan",
   "onlySupportiOS": "See funktsioon on saadaval ainult iOS-i rakenduses",
-  "healthKitDoesNotSupport": "Selles seadmes, mis ei toeta terviseandmeid, ei saa seda funktsiooni kasutada",
+  "healthKitDoesNotSupport": "See funktsioon pole saadaval seadmetes, mis ei toeta terviseandmeid",
   "enableHealthKitFromSettings": "Aktiveerige Tervis Seadete rakenduses",
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba teie Pilll kontoga seotud. Palun proovige lehte värskendada. Vaadake ka KKK-d. Üksikasjad: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on juba teise Pilll kontoga seotud, seega registreerimine ei ole võimalik. Vaadake ka KKK. Üksikasjad: {exceptionMessage}",

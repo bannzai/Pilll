@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "לא ניתן לשחזר לוח זמנים שנמחק",
   "deleteSchedule": "מחיקת התוכנית",
   "onlySupportiOS": "התכונה הזו זמינה רק באפליקציה ל־iOS",
-  "healthKitDoesNotSupport": "תכונה זו אינה זמינה במכשירים שאינם תומכים בבריאות",
+  "healthKitDoesNotSupport": "האפשרות הזו אינה זמינה במכשירים שאינם תומכים בנתוני בריאות",
   "enableHealthKitFromSettings": "אנא הפעילו את הבריאות באפליקציית ההגדרות",
   "accountAlreadyLinked": "החשבון {accountTypeProviderName} הזה כבר מקושר לחשבון Pilll שלך. נסה לרענן את המסך. עיין גם בשאלות נפוצות. פרטים: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "חשבון {accountTypeProviderName} זה כבר קשור לחשבון Pilll אחר ולכן לא ניתן להירשם. אנא עיינו גם בשאלות נפוצות (FAQ). פרטים: {exceptionMessage}",

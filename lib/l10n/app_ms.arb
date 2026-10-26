@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Jadual yang dipadam tidak dapat dipulihkan",
   "deleteSchedule": "Padam jadual",
   "onlySupportiOS": "Ciri ini hanya tersedia dalam aplikasi iOS",
-  "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong HealthCare",
+  "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong data kesihatan",
   "enableHealthKitFromSettings": "Sila dayakan Kesihatan daripada aplikasi Tetapan",
   "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll anda. Cuba muat semula skrin. Sila lihat juga FAQ. Butiran: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll yang lain, oleh itu tidak dapat didaftarkan. Sila rujuk FAQ juga. Butiran: {exceptionMessage}",

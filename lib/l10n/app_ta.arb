@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "நீக்கிய அட்டவணையை மீட்டெடுக்க முடியாது",
   "deleteSchedule": "அட்டவணையை நீக்குங்கள்",
   "onlySupportiOS": "இந்த அம்சம் iOS செயலியில் மட்டுமே கிடைக்கும்",
-  "healthKitDoesNotSupport": "ஹெல்த்கேர் ஆதரவு இல்லாத சாதனங்களில் பயன்படுத்த முடியாது",
+  "healthKitDoesNotSupport": "உடல்நலத் தரவை ஆதரிக்காத சாதனங்களில் இந்த அம்சத்தைப் பயன்படுத்த முடியாது",
   "enableHealthKitFromSettings": "அமைப்புகள் ஆப்பில் இருந்து ஹெல்த்கேர் இயக்கவும்",
   "accountAlreadyLinked": "இந்த {accountTypeProviderName} கணக்கு ஏற்கனவே உங்கள் Pilll கணக்குடன் இணைக்கப்பட்டுள்ளது. தயவுசெய்து திரையை புதுப்பிக்க முயற்சிக்கவும். FAQ யும் பார்க்கவும். விவரங்கள்: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "இந்த {accountTypeProviderName} கணக்கு ஏற்கனவே மற்றொரு Pilll கணக்குடன் இணைக்கப்பட்டுள்ளதால் பதிவு செய்ய முடியாது. FAQ-ஐயும் பார்க்கவும். விபரங்கள்: {exceptionMessage}",

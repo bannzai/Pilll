@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "En slettet avtale kan ikke gjenopprettes",
   "deleteSchedule": "Slett planen",
   "onlySupportiOS": "Denne funksjonen er bare tilgjengelig i iOS-appen",
-  "healthKitDoesNotSupport": "Denne funksjonen er ikke tilgjengelig på enheter som ikke støtter helse-app",
+  "healthKitDoesNotSupport": "Denne funksjonen er ikke tilgjengelig på enheter som ikke støtter helsedata",
   "enableHealthKitFromSettings": "Aktiver Helse fra Innstillinger-appen",
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-kontoen er allerede koblet til din Pilll-konto. Prøv å oppdatere skjermen. Se også FAQ. Detaljer: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-kontoen er allerede koblet til en annen Pilll-konto og kan derfor ikke registreres. Se også FAQ. Detaljer: {exceptionMessage}",

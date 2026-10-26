@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ni ellir adfer amserlen sydd wedi'i dileu",
   "deleteSchedule": "Dileu’r amserlen",
   "onlySupportiOS": "Mae'r nodwedd hon ar gael yn ap iOS yn unig",
-  "healthKitDoesNotSupport": "Nid yw'r nodwedd hon ar gael ar ddyfeisiau nad ydynt yn cefnogi gofal iechyd",
+  "healthKitDoesNotSupport": "Nid yw'r nodwedd hon ar gael ar ddyfeisiau nad ydynt yn cefnogi data iechyd",
   "enableHealthKitFromSettings": "Galluogwch Iechyd drwy'r ap Gosodiadau",
   "accountAlreadyLinked": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â'ch cyfrif Pilll. Rhowch gynnig ar adnewyddu'r sgrin. Gwelwch hefyd y CyfFAQ. Manylion: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â chyfrif Pilll arall, felly ni ellir ei gofrestru. Gwelwch hefyd y FAQ. Manylion: {exceptionMessage}",

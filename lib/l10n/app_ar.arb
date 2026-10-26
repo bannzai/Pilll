@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "لا يمكن استعادة الموعد بعد حذفه",
   "deleteSchedule": "حذف الموعد",
   "onlySupportiOS": "هذه الميزة متاحة في تطبيق iOS فقط",
-  "healthKitDoesNotSupport": "هذه الميزة غير متاحة على الأجهزة التي لا تدعم تطبيق الصحة",
+  "healthKitDoesNotSupport": "هذه الميزة غير متاحة على الأجهزة التي لا تدعم البيانات الصحية",
   "enableHealthKitFromSettings": "يرجى تفعيل الصحة من تطبيق الإعدادات",
   "accountAlreadyLinked": "هذا الحساب {accountTypeProviderName} مرتبط بالفعل بحساب Pilll الخاص بك. يرجى محاولة تحديث الشاشة. يمكنك أيضاً مراجعة الأسئلة الشائعة. التفاصيل: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "لا يمكن التسجيل لأن حساب {accountTypeProviderName} هذا مرتبط بالفعل بحساب Pilll آخر. يرجى الاطلاع على الأسئلة الشائعة أيضاً. التفاصيل: {exceptionMessage}",

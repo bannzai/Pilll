@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ezabatutako plana ezin da berreskuratu",
   "deleteSchedule": "Ezabatu plana",
   "onlySupportiOS": "Eginbide hau iOS aplikazioan bakarrik dago erabilgarri",
-  "healthKitDoesNotSupport": "Osasun-zaintza onartzen ez duten gailuetan ezin da funtzio hau erabili",
+  "healthKitDoesNotSupport": "Funtzio hau ez dago erabilgarri osasun-datuak onartzen ez dituzten gailuetan",
   "enableHealthKitFromSettings": "Mesedez, gaitu osasun-zaintza ezarpen aplikaziotik",
   "accountAlreadyLinked": "{accountTypeProviderName} kontu hau dagoeneko zure Pilll kontuarekin lotuta dago. Pantailaren eguneraketa saiatu ezazu. FAQ ere ikusi ezazu. Xehetasunak: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName} kontu hau dagoeneko beste Pilll kontu batekin lotuta dagoenez, ezin da erregistratu. Ikus ezazu FAQ ere. Xehetasunak: {exceptionMessage}",

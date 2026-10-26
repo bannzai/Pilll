@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Өчүрүлгөн жадыбалды калыбына келтирүү мүмкүн эмес",
   "deleteSchedule": "Планды өчүрүңүз",
   "onlySupportiOS": "Бул функция iOS тиркемесинде гана жеткиликтүү",
-  "healthKitDoesNotSupport": "Ден соолук кызматын колдобогон түзүлүштөрдө бул функцияны пайдалана албайсыз",
+  "healthKitDoesNotSupport": "Бул функция ден соолук маалыматын колдобогон түзмөктөрдө жеткиликсиз",
   "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Саламаттыкты иштетиңиз",
   "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунт мурда эле сиздин Pilll аккаунтуңузга байланыштырылган. Экранды жаңыртып көрүңүз. FAQты да караңыз. Кененирээк маалымат: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунт мурда эле башка Pilll аккаунтуна байланышкан болгондуктан каттоо мүмкүн эмес. FAQ дагы көрүңүз. Чоо-жайы: {exceptionMessage}",

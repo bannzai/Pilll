@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "මකා දැමූ කාලසටහනක් නැවත ලබා ගත නොහැක",
   "deleteSchedule": "කාලසටහන මකන්න",
   "onlySupportiOS": "මෙම පහසුකම ලබා ගත හැක්කේ iOS යෙදුමෙන් පමණි",
-  "healthKitDoesNotSupport": "සෞඛ්‍ය සේවා සහාය නොලබන උපකරණවල මෙම සේවාව භාවිතා කළ නොහැකිය",
+  "healthKitDoesNotSupport": "සෞඛ්‍ය දත්ත සඳහා සහය නොදක්වන උපාංගවල මෙම පහසුකම භාවිත කළ නොහැක",
   "enableHealthKitFromSettings": "සැකසීම් යෙදුමෙන් සෞඛ්‍ය රකවරණය සක්‍රිය කරන්න",
   "accountAlreadyLinked": "මෙම {accountTypeProviderName} ගිණුම ඔබගේ Pilll ගිණුම සමඟ දැනටමත් සම්බන්ධ කර ඇත. තිරය නැවුම් කිරීම උත්සාහ කරන්න. FAQ ද බලන්න. විස්තර: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "මෙම {accountTypeProviderName} ගිණුම දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ වී ඇති නිසා ලියාපදිංචි කළ නොහැකිය. FAQ ද බලන්න. විස්තර: {exceptionMessage}",

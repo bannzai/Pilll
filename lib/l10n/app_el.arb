@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Δεν είναι δυνατή η επαναφορά ενός διαγραμμένου προγράμματος",
   "deleteSchedule": "Διαγραφή προγράμματος",
   "onlySupportiOS": "Αυτή η λειτουργία είναι διαθέσιμη μόνο στην εφαρμογή για iOS",
-  "healthKitDoesNotSupport": "Δεν μπορεί να χρησιμοποιηθεί σε συσκευές που δεν υποστηρίζουν το HealthKit",
+  "healthKitDoesNotSupport": "Αυτή η λειτουργία δεν είναι διαθέσιμη σε συσκευές που δεν υποστηρίζουν δεδομένα υγείας",
   "enableHealthKitFromSettings": "Ενεργοποιήστε την Υγεία από την εφαρμογή Ρυθμίσεων",
   "accountAlreadyLinked": "Αυτός ο {accountTypeProviderName} λογαριασμός είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη. Επίσης, συμβουλευτείτε τις FAQ. Λεπτομέρειες: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλο λογαριασμό Pilll και δεν μπορεί να εγγραφεί. Ανατρέξτε επίσης στο FAQ. Λεπτομέρειες: {exceptionMessage}",

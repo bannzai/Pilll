@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "ဖျက်လိုက်သော အစီအစဉ်ကို ပြန်လည်ရယူ၍ မရပါ",
   "deleteSchedule": "အစီအစဉ်ကို ဖျက်ပါ",
   "onlySupportiOS": "ဤလုပ်ဆောင်ချက်ကို iOS အက်ပ်တွင်သာ အသုံးပြုနိုင်ပါတယ်",
-  "healthKitDoesNotSupport": "ကျန်းမာရေးစောင့်ရှောက်မှုကို မပံ့ပိုးပေးသော စက်ပစ္စည်းများတွင် အသုံးမပြုနိုင်ပါ",
+  "healthKitDoesNotSupport": "ကျန်းမာရေးဒေတာကို မပံ့ပိုးသော စက်များတွင် ဤလုပ်ဆောင်ချက်ကို အသုံးပြု၍ မရပါ",
   "enableHealthKitFromSettings": "Settings အပ်စ်မှ ကျန်းမာရေးကို ဖွင့်ပါ",
   "accountAlreadyLinked": "ဒီ{accountTypeProviderName}အကောင့်သည် သင့်လက်ရှိ Pilll အကောင့်နှင့် ပြီးသားချိတ်ဆက်ထားပါသည်။ မျက်နှာပြင်ကို ပြန်လည်တင်ကြည့်ပါ။ FAQ ကိုလည်း ကြည့်ရှုပါ။ အသေးစိတ်: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "ဤ{accountTypeProviderName}အကောင့်သည် အခြားPilllအကောင့်နှင့် ချိတ်ဆက်ထားပြီးဖြစ်သောကြောင့် မှတ်ပုံတင်၍မရပါ။ FAQကိုလည်း ကြည့်ရှုပါ။ အသေးစိတ်- {exceptionMessage}",

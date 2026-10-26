@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang iskedyul kapag nabura na",
   "deleteSchedule": "Pakibura ang iskedyul",
   "onlySupportiOS": "Sa iOS app lang po magagamit ang feature na ito",
-  "healthKitDoesNotSupport": "Hindi magagamit ang feature na ito sa mga device na walang suporta sa HealthCare.",
+  "healthKitDoesNotSupport": "Hindi magagamit ang tampok na ito sa mga device na hindi sumusuporta sa datos ng kalusugan",
   "enableHealthKitFromSettings": "Mangyaring paganahin ang Healthcare sa Settings app",
   "accountAlreadyLinked": "Ang {accountTypeProviderName} account na ito ay nakakonekta na sa inyong Pilll account. Subukan ninyong i-refresh ang screen. Tingnan din ninyo ang FAQ. Detalye: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Ang {accountTypeProviderName} account na ito ay nakalink na sa ibang Pilll account kaya hindi makakapag-register. Tingnan din ang FAQ. Detalye: {exceptionMessage}",

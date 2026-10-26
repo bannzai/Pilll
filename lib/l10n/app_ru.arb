@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Удалённое расписание нельзя восстановить",
   "deleteSchedule": "Удалить план",
   "onlySupportiOS": "Эта функция доступна только в приложении для iOS",
-  "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, не поддерживающих HealthKit",
+  "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, которые не поддерживают данные о здоровье",
   "enableHealthKitFromSettings": "Включите функцию «Здоровье» в приложении «Настройки»",
   "accountAlreadyLinked": "Этот аккаунт {accountTypeProviderName} уже связан с вашим аккаунтом Pilll. Попробуйте обновить экран. Также ознакомьтесь с FAQ. Подробности: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Этот аккаунт {accountTypeProviderName} уже привязан к другому аккаунту Pilll, поэтому регистрация невозможна. Пожалуйста, обратитесь к FAQ. Подробности: {exceptionMessage}",

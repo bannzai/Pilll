@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",
   "deleteSchedule": "Poista suunnitelma",
   "onlySupportiOS": "Tämä ominaisuus on käytettävissä vain iOS-sovelluksessa",
-  "healthKitDoesNotSupport": "Ei käytettävissä laitteissa, jotka eivät tue HealthKit-ominaisuutta",
+  "healthKitDoesNotSupport": "Tämä toiminto ei ole käytettävissä laitteilla, jotka eivät tue terveystietoja",
   "enableHealthKitFromSettings": "Ota Terveys käyttöön Asetuksista",
   "accountAlreadyLinked": "Tämä {accountTypeProviderName}-tili on jo linkitetty Pilll-tiliisi. Kokeile päivittää näyttö. Katso myös UKK. Yksityiskohdat: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joten rekisteröityminen ei ole mahdollista. Katso myös UKK. Yksityiskohdat: {exceptionMessage}",

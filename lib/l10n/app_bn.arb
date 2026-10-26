@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচি ফিরিয়ে আনা যাবে না",
   "deleteSchedule": "সময়সূচি মুছুন",
   "onlySupportiOS": "এই সুবিধাটি শুধু iOS অ্যাপে পাওয়া যায়",
-  "healthKitDoesNotSupport": "হেলথকেয়ার সমর্থিত নয় এমন ডিভাইসে এই সুবিধাটি ব্যবহার করা যাবে না",
+  "healthKitDoesNotSupport": "যেসব ডিভাইসে স্বাস্থ্যসংক্রান্ত তথ্য সমর্থিত নয়, সেগুলোতে এই সুবিধা ব্যবহার করা যাবে না",
   "enableHealthKitFromSettings": "সেটিংস অ্যাপ থেকে হেলথকেয়ার সক্রিয় করুন",
   "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে আপনার Pilll অ্যাকাউন্টের সাথে সংযুক্ত। স্ক্রিন রিফ্রেশ করে দেখুন। FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} অ্যাকাউন্টটি ইতিমধ্যে অন্য একটি Pilll অ্যাকাউন্টের সাথে সংযুক্ত থাকায় নিবন্ধন করা সম্ভব নয়। অনুগ্রহ করে FAQ দেখুন। বিস্তারিত: {exceptionMessage}",

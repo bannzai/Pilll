@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Ein gelöschter Termin kann nicht wiederhergestellt werden",
   "deleteSchedule": "Termin löschen",
   "onlySupportiOS": "Diese Funktion ist nur in der iOS-App verfügbar",
-  "healthKitDoesNotSupport": "Diese Funktion ist auf Geräten ohne Health-Unterstützung nicht verfügbar.",
+  "healthKitDoesNotSupport": "Diese Funktion ist auf Geräten ohne Unterstützung für Gesundheitsdaten nicht verfügbar",
   "enableHealthKitFromSettings": "Bitte aktivieren Sie Health in den Einstellungen",
   "accountAlreadyLinked": "Dieses {accountTypeProviderName}-Konto ist bereits mit Ihrem Pilll-Konto verknüpft. Bitte versuchen Sie, die Ansicht zu aktualisieren. Schauen Sie auch in unsere FAQ. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dieses {accountTypeProviderName}-Konto ist bereits mit einem anderen Pilll-Konto verknüpft und kann daher nicht registriert werden. Bitte schauen Sie auch in unsere FAQ. Details: {exceptionMessage}",

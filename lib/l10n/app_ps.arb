@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "ړنګ شوی مهالوېش بېرته نه شي راګرځېدلی",
   "deleteSchedule": "مهالوېش ړنګ کړئ",
   "onlySupportiOS": "دا ځانګړنه یوازې د iOS په اپ کې شته",
-  "healthKitDoesNotSupport": "دا فعالیت د هغو وسیلو لپاره چې د روغتیا پاملرنې سیسټم ته ملاتړ نه کوي، د کارونې وړ نه دی",
+  "healthKitDoesNotSupport": "دا ځانګړنه په هغو وسیلو کې نه شته چې د روغتیايي معلوماتو ملاتړ نه کوي",
   "enableHealthKitFromSettings": "مهرباني وکړئ د تنظیماتو اپ څخه روغتیایی پاملرنه فعاله کړئ",
   "accountAlreadyLinked": "دا {accountTypeProviderName} اکاونټ دمخه ستاسو د Pilll اکاونټ سره وصل شوی دی. د پرده تازه کول وآزموئ. د FAQ برخه هم وګورئ. تفصیلات: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "دا {accountTypeProviderName} حساب دمخه د نورو Pilll حساب سره تړلی دی، نو نوم لیکنه نشي کیدای. د ډېر پوښتنو ځوابونه هم وګورئ. تفصیلات: {exceptionMessage}",

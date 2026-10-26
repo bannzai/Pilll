@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Un programma eliminato non può essere ripristinato",
   "deleteSchedule": "Elimina il programma",
   "onlySupportiOS": "Questa funzione è disponibile solo nell'app per iOS",
-  "healthKitDoesNotSupport": "Non è possibile utilizzare questa funzione su dispositivi non compatibili con Health",
+  "healthKitDoesNotSupport": "Questa funzione non è disponibile sui dispositivi che non supportano i dati sanitari",
   "enableHealthKitFromSettings": "Attiva Salute dall'app Impostazioni",
   "accountAlreadyLinked": "Questo account {accountTypeProviderName} è già collegato al tuo account Pilll. Prova ad aggiornare la schermata. Consulta anche le FAQ. Dettagli: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Questo account {accountTypeProviderName} è già collegato a un altro account Pilll e non può essere registrato. Consulta anche le FAQ. Dettagli: {exceptionMessage}",

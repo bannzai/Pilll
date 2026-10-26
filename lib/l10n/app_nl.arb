@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Een verwijderd schema kun je niet herstellen",
   "deleteSchedule": "Planning verwijderen",
   "onlySupportiOS": "Deze functie is alleen beschikbaar in de iOS-app",
-  "healthKitDoesNotSupport": "Deze functie is niet beschikbaar op apparaten die de Health-app niet ondersteunen",
+  "healthKitDoesNotSupport": "Deze functie is niet beschikbaar op apparaten die geen gezondheidsgegevens ondersteunen",
   "enableHealthKitFromSettings": "Schakel Gezondheid in via de Instellingen-app",
   "accountAlreadyLinked": "Dit {accountTypeProviderName} account is al gekoppeld aan uw Pilll-account. Probeer het scherm te vernieuwen. Bekijk ook de FAQ. Details: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Dit {accountTypeProviderName}-account is al gekoppeld aan een ander Pilll-account en kan daarom niet geregistreerd worden. Bekijk ook onze FAQ. Details: {exceptionMessage}",

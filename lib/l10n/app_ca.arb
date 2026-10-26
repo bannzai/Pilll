@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Un cop eliminada, la programació no es pot recuperar",
   "deleteSchedule": "Eliminar el pla",
   "onlySupportiOS": "Aquesta funció només està disponible a l'aplicació per a iOS",
-  "healthKitDoesNotSupport": "Aquesta funcionalitat no està disponible en dispositius que no suporten l'app Salut",
+  "healthKitDoesNotSupport": "Aquesta funció no està disponible en dispositius que no admeten dades de salut",
   "enableHealthKitFromSettings": "Activeu Salut des de l'aplicació de Configuració",
   "accountAlreadyLinked": "Aquest compte de {accountTypeProviderName} ja està enllaçat al vostre compte de Pilll. Proveu de refrescar la pantalla. També consulteu les preguntes freqüents. Detalls: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Aquest compte de {accountTypeProviderName} ja està vinculat a un altre compte de Pilll i no es pot registrar. Consulteu també les FAQ. Detalls: {exceptionMessage}",

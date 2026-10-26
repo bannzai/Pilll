@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Usuniętego harmonogramu nie można przywrócić",
   "deleteSchedule": "Usuń plan",
   "onlySupportiOS": "Ta funkcja jest dostępna tylko w aplikacji na iOS",
-  "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują aplikacji Zdrowie",
+  "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują danych zdrowotnych",
   "enableHealthKitFromSettings": "Włącz aplikację Zdrowie w Ustawieniach",
   "accountAlreadyLinked": "To konto {accountTypeProviderName} jest już powiązane z Twoim kontem Pilll. Spróbuj odświeżyć ekran. Sprawdź także nasze FAQ. Szczegóły: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "To konto {accountTypeProviderName} jest już połączone z innym kontem Pilll, dlatego nie można się zarejestrować. Zobacz też FAQ. Szczegóły: {exceptionMessage}",

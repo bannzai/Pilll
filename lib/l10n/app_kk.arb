@@ -329,7 +329,7 @@
   "deletedScheduleCannotBeRestored": "Жойылған кестені қалпына келтіру мүмкін емес",
   "deleteSchedule": "Жоспарды жойыңыз",
   "onlySupportiOS": "Бұл мүмкіндік тек iOS қолданбасында қолжетімді",
-  "healthKitDoesNotSupport": "Денсаулық сақтауды қолдамайтын құрылғыларда бұл функция қолжетімді емес",
+  "healthKitDoesNotSupport": "Бұл мүмкіндік денсаулық деректерін қолдамайтын құрылғыларда қолжетімсіз",
   "enableHealthKitFromSettings": "Баптаулар қолданбасынан Денсаулықты қосыңыз",
   "accountAlreadyLinked": "Бұл {accountTypeProviderName} тіркелгісі сіздің Pilll тіркелгіңізге бұрыннан байланыстырылған. Экранды жаңартып көріңіз. ЖҚС бөлімін де қараңыз. Егжей-тегжей: {exceptionMessage}",
   "accountAlreadyLinkedWithOtherPilllAccount": "Бұл {accountTypeProviderName} аккаунты басқа Pilll аккаунтымен байланысқан болғандықтан тіркелу мүмкін емес. FAQ-ды көріңіз. Егжей-тегжей: {exceptionMessage}",
