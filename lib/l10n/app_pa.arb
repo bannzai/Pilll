@@ -390,7 +390,7 @@
   "changedPausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲ ਦਿੱਤੀ ਗਈ ਹੈ",
   "changedToDate": "ਤਾਰੀਖ ਬਦਲ ਕੇ {date} ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ",
   "quickRecordTakePillFailed": "ਸੇਵਨ ਰਿਕਾਰਡ ਸ਼ਾਇਦ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੋਇਆ",
-  "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹ ਕੇ ਜਾਂਚ ਕਰੋ",
+  "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹੋ ਅਤੇ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਜਾਂਚੋ",
   "alreadyTaken": "ਲਿਆ ਗਿਆ",
   "startPauseTaking": "ਦਵਾਈ ਬੰਦ ਕਰੋ",
   "startedPauseTaking": "ਪਿੱਲ ਦਾ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ",

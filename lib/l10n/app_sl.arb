@@ -390,7 +390,7 @@
   "changedPausePeriod": "Trajanje premora pri jemanju tablet je spremenjeno",
   "changedToDate": "Datum je spremenjen na {date}",
   "quickRecordTakePillFailed": "Beleženje jemanja morda ni uspelo",
-  "quickRecordTakePillFailedMessage": "Prosimo, odprite aplikacijo in preverite",
+  "quickRecordTakePillFailedMessage": "Odprite aplikacijo in preverite zapis o zaužitju tabletke",
   "alreadyTaken": "Vzeto",
   "startPauseTaking": "Prekini jemanje",
   "startedPauseTaking": "Začeli ste s premorom jemanja",

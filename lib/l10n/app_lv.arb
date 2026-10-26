@@ -390,7 +390,7 @@
   "changedPausePeriod": "Tablešu lietošanas pārtraukuma ilgums ir mainīts",
   "changedToDate": "Datums mainīts uz {date}",
   "quickRecordTakePillFailed": "Tablešu lietošanas ieraksts, iespējams, netika saglabāts",
-  "quickRecordTakePillFailedMessage": "Lūdzu, atveriet lietotni un pārbaudiet",
+  "quickRecordTakePillFailedMessage": "Atveriet lietotni un pārbaudiet tabletes lietošanas ierakstu",
   "alreadyTaken": "ieņemts",
   "startPauseTaking": "Pārtraukt lietošanu",
   "startedPauseTaking": "Tablešu lietošanas pārtraukums ir uzsākts",

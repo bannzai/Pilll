@@ -390,7 +390,7 @@
   "changedPausePeriod": "மாத்திரை எடுத்துக்கொள்வதற்கான இடைவேளையின் கால அளவு மாற்றப்பட்டது",
   "changedToDate": "தேதி {date} ஆக மாற்றப்பட்டது",
   "quickRecordTakePillFailed": "மாத்திரை உட்கொண்ட பதிவு சேமிக்கப்படாமல் போயிருக்கலாம்",
-  "quickRecordTakePillFailedMessage": "ஆப்பை திறந்து சரிபார்க்கவும்",
+  "quickRecordTakePillFailedMessage": "செயலியைத் திறந்து மாத்திரை எடுத்த பதிவைச் சரிபாருங்கள்",
   "alreadyTaken": "உட்கொண்டது",
   "startPauseTaking": "மருந்து சாப்பிடுவதை நிறுத்து",
   "startedPauseTaking": "மாத்திரை உட்கொள்ளும் ஓய்வு காலம் தொடங்கப்பட்டது",

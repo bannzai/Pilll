@@ -390,7 +390,7 @@
   "changedPausePeriod": "Тривалість перерви в прийомі пігулок змінено",
   "changedToDate": "Дату змінено на {date}",
   "quickRecordTakePillFailed": "Запис прийому, можливо, не зберігся",
-  "quickRecordTakePillFailedMessage": "Будь ласка, відкрийте додаток та перевірте",
+  "quickRecordTakePillFailedMessage": "Відкрийте застосунок і перевірте запис про прийом пігулки",
   "alreadyTaken": "Прийнято",
   "startPauseTaking": "Перерва в прийомі",
   "startedPauseTaking": "Розпочато перерву в прийомі",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "د ګولیو د اخیستو د وقفې موده بدله شوه",
   "changedToDate": "نېټه {date} ته بدله شوه",
   "quickRecordTakePillFailed": "د ګولۍ اخیستلو ریکارډ ښايي نه وي خوندي شوی",
-  "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلیکیشن خلاص کړئ او وی یې وګورئ",
+  "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلېکېشن پرانیزئ او د ګولۍ اخیستلو ثبت وګورئ",
   "alreadyTaken": "واخیستل شوی",
   "startPauseTaking": "د درملو وقفه پیل کړئ",
   "startedPauseTaking": "د ګولیو د اخیستلو وقفه پیل شوه",

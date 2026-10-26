@@ -390,7 +390,7 @@
   "changedPausePeriod": "Lengden på pillepausen er endret",
   "changedToDate": "Datoen er endret til {date}",
   "quickRecordTakePillFailed": "Pilleloggen ble kanskje ikke lagret",
-  "quickRecordTakePillFailedMessage": "Vennligst åpne appen og sjekk",
+  "quickRecordTakePillFailedMessage": "Åpne appen og sjekk registreringen av p-pillen",
   "alreadyTaken": "Tatt",
   "startPauseTaking": "Ta pause fra inntak",
   "startedPauseTaking": "Pillepausen er startet",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "เปลี่ยนระยะเวลาพักทานยาแล้วค่ะ",
   "changedToDate": "เปลี่ยนวันที่เป็น {date} แล้วค่ะ",
   "quickRecordTakePillFailed": "บันทึกการทานยาอาจไม่สำเร็จค่ะ",
-  "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปเพื่อตรวจสอบ",
+  "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปเพื่อตรวจสอบบันทึกการทานยาค่ะ",
   "alreadyTaken": "รับประทานแล้ว",
   "startPauseTaking": "พักการรับประทาน",
   "startedPauseTaking": "เริ่มการหยุดพักการรับประทานยาแล้ว",

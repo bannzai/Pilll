@@ -390,7 +390,7 @@
   "changedPausePeriod": "Délka pauzy v užívání pilulek byla změněna",
   "changedToDate": "Datum bylo změněno na {date}",
   "quickRecordTakePillFailed": "Záznam užití se možná nepodařilo uložit",
-  "quickRecordTakePillFailedMessage": "Prosím otevřete aplikaci a zkontrolujte",
+  "quickRecordTakePillFailedMessage": "Otevřete prosím aplikaci a zkontrolujte záznam o užití pilulky",
   "alreadyTaken": "Užito",
   "startPauseTaking": "Pozastavit užívání",
   "startedPauseTaking": "Přestávka v užívání byla zahájena",

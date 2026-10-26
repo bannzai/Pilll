@@ -390,7 +390,7 @@
   "changedPausePeriod": "Durata pauzei de la pilulă a fost modificată",
   "changedToDate": "Data a fost schimbată în {date}",
   "quickRecordTakePillFailed": "Este posibil ca înregistrarea să nu se fi salvat",
-  "quickRecordTakePillFailedMessage": "Vă rugăm să deschideți aplicația și să verificați",
+  "quickRecordTakePillFailedMessage": "Deschide aplicația și verifică înregistrarea pilulei",
   "alreadyTaken": "Luat",
   "startPauseTaking": "A lua o pauză de la administrare",
   "startedPauseTaking": "Pauza de administrare a început",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "Tablečių vartojimo pertraukos trukmė pakeista",
   "changedToDate": "Data pakeista į {date}",
   "quickRecordTakePillFailed": "Vartojimo įrašas galėjo būti neišsaugotas",
-  "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite",
+  "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite tabletės vartojimo įrašą",
   "alreadyTaken": "Išgerta",
   "startPauseTaking": "Padaryti pertrauką vartojime",
   "startedPauseTaking": "Pradėta tablečių vartojimo pertrauka",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "మాత్రలు తీసుకునే విరామ కాలం మార్చబడింది",
   "changedToDate": "తేదీని {date}కి మార్చాం",
   "quickRecordTakePillFailed": "మాత్రల నమోదు సేవ్ కాకపోయి ఉండవచ్చు",
-  "quickRecordTakePillFailedMessage": "యాప్ తెరిచి దయచేసి తనిఖీ చేయండి",
+  "quickRecordTakePillFailedMessage": "దయచేసి యాప్ తెరిచి మాత్ర తీసుకున్న రికార్డును తనిఖీ చేయండి",
   "alreadyTaken": "తీసుకున్నది",
   "startPauseTaking": "మందులను విరామం చేయండి",
   "startedPauseTaking": "సేవన విరామం ప్రారంభమైంది",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "បានផ្លាស់ប្តូររយៈពេលផ្អាកលេបថ្នាំគ្រាប់ហើយ",
   "changedToDate": "កាលបរិច្ឆេទត្រូវបានប្តូរទៅជា {date} ហើយ",
   "quickRecordTakePillFailed": "កំណត់ត្រាការលេបថ្នាំប្រហែលជាមិនបានរក្សាទុកទេ",
-  "quickRecordTakePillFailedMessage": "សូមបើកកម្មវិធីនិងពិនិត្យមើល",
+  "quickRecordTakePillFailedMessage": "សូមបើកកម្មវិធី ហើយពិនិត្យកំណត់ត្រានៃការលេបថ្នាំគ្រាប់",
   "alreadyTaken": "ញុំរួចរាល់",
   "startPauseTaking": "សម្រាកញ៉ាំថ្នាំ",
   "startedPauseTaking": "បានចាប់ផ្តើមការផ្អាកការញាំថ្នាំ",

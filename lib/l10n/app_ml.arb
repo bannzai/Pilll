@@ -390,7 +390,7 @@
   "changedPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ ദൈർഘ്യം മാറ്റി",
   "changedToDate": "തീയതി {date} ആക്കി മാറ്റി",
   "quickRecordTakePillFailed": "ഗുളിക കഴിച്ചതിന്റെ രേഖ സേവ് ആയിട്ടുണ്ടാകില്ല",
-  "quickRecordTakePillFailedMessage": "ആപ്പ് തുറന്ന് പരിശോധിക്കുക",
+  "quickRecordTakePillFailedMessage": "ദയവായി ആപ്പ് തുറന്ന് ഗുളിക കഴിച്ചതിന്റെ രേഖ പരിശോധിക്കൂ",
   "alreadyTaken": "കഴിച്ചു",
   "startPauseTaking": "സേവനം വിശ്രമിക്കുക",
   "startedPauseTaking": "ഗുളിക സേവന വിശ്രമം ആരംഭിച്ചു",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "Эм уух завсарлагын хугацаа өөрчлөгдсөн",
   "changedToDate": "Огноог {date} болгон өөрчилсөн",
   "quickRecordTakePillFailed": "Эм уусан бүртгэл хадгалагдаагүй байж магадгүй",
-  "quickRecordTakePillFailedMessage": "Апп-аа нээж шалгана уу",
+  "quickRecordTakePillFailedMessage": "Аппыг нээж, эм уусан бүртгэлээ шалгана уу",
   "alreadyTaken": "Уусан",
   "startPauseTaking": "Эм уухаас амрах",
   "startedPauseTaking": "Эмийн завсарлагыг эхлүүлэв",

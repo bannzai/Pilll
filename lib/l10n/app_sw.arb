@@ -390,7 +390,7 @@
   "changedPausePeriod": "Muda wa mapumziko ya kumeza vidonge umebadilishwa",
   "changedToDate": "Tarehe imebadilishwa kuwa {date}",
   "quickRecordTakePillFailed": "Rekodi ya kumeza vidonge huenda haijahifadhiwa",
-  "quickRecordTakePillFailedMessage": "Tafadhali fungua app na kagua",
+  "quickRecordTakePillFailedMessage": "Tafadhali fungua programu na uangalie rekodi ya kumeza kidonge",
   "alreadyTaken": "Imechukuliwa",
   "startPauseTaking": "Pumzisha kutumia",
   "startedPauseTaking": "Mapumziko ya kutumia tembe umeanza",

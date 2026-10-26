@@ -390,7 +390,7 @@
   "changedPausePeriod": "Pilula hartzeko atsedenaldiaren iraupena aldatu da",
   "changedToDate": "Data {date} egunera aldatu da",
   "quickRecordTakePillFailed": "Baliteke hartze-erregistroa gorde ez izana",
-  "quickRecordTakePillFailedMessage": "Aplikazioa ireki eta egiaztatu ezazu",
+  "quickRecordTakePillFailedMessage": "Ireki aplikazioa eta egiaztatu pilula hartu izanaren erregistroa",
   "alreadyTaken": "Hartuta",
   "startPauseTaking": "Hartzea eten",
   "startedPauseTaking": "Hartzeko atsedena hasi da",

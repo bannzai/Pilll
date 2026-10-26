@@ -390,7 +390,7 @@
   "changedPausePeriod": "Հաբերի ընդունման ընդմիջման տևողությունը փոխվել է",
   "changedToDate": "Ամսաթիվը փոխվել է՝ {date}",
   "quickRecordTakePillFailed": "Ընդունման գրառում հնարավոր է՝ չի պահպանվել",
-  "quickRecordTakePillFailedMessage": "Խնդրում ենք բացել հավելվածը և ստուգել",
+  "quickRecordTakePillFailedMessage": "Խնդրում ենք բացեք հավելվածը և ստուգեք հաբի ընդունման գրառումը",
   "alreadyTaken": "Ընդունված",
   "startPauseTaking": "Դադարել ընդունումը",
   "startedPauseTaking": "Դեղահատի ընդունման ընդմիջումը սկսվեց",

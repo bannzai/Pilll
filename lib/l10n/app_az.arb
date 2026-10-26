@@ -390,7 +390,7 @@
   "changedPausePeriod": "Həb qəbuluna fasilə müddəti dəyişdirildi",
   "changedToDate": "Tarix {date} olaraq dəyişdirildi",
   "quickRecordTakePillFailed": "Həb qəbulu qeydi saxlanmamış ola bilər",
-  "quickRecordTakePillFailedMessage": "Tətbiqi açıb yoxlayın",
+  "quickRecordTakePillFailedMessage": "Zəhmət olmasa, tətbiqi açıb həb qəbulunuza dair qeydi yoxlayın",
   "alreadyTaken": "Qəbul edilib",
   "startPauseTaking": "Qəbulda fasilə vermək",
   "startedPauseTaking": "Qəbul fasiləsi başladıldı",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "Трајање паузе у узимању пилула је промењено",
   "changedToDate": "Датум је промењен на {date}",
   "quickRecordTakePillFailed": "Евиденција узимања можда није сачувана",
-  "quickRecordTakePillFailedMessage": "Otvorite aplikaciju i proverite",
+  "quickRecordTakePillFailedMessage": "Молимо Вас, отворите апликацију и проверите запис о узимању пилуле",
   "alreadyTaken": "Uzeto",
   "startPauseTaking": "Паузирај узимање",
   "startedPauseTaking": "Započeta je pauza u uzimanju",

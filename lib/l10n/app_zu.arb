@@ -390,7 +390,7 @@
   "changedPausePeriod": "Ubude bekhefu lokuphuza amaphilisi bushintshiwe",
   "changedToDate": "Usuku lushintshelwe ku-{date}",
   "quickRecordTakePillFailed": "Irekhodi lokuphuza amaphilisi kungenzeka ayigcinwanga",
-  "quickRecordTakePillFailedMessage": "Sicela uvule i-app uqinisekise",
+  "quickRecordTakePillFailedMessage": "Sicela uvule uhlelo lokusebenza uhlole irekhodi lokuphuza iphilisi",
   "alreadyTaken": "Kusethiwe",
   "startPauseTaking": "Phumula ukuthatha amapilisi",
   "startedPauseTaking": "Kuqale ukuthatha ikhefu lomuthi",

@@ -390,7 +390,7 @@
   "changedPausePeriod": "משך ההפסקה בנטילת הגלולות עודכן",
   "changedToDate": "התאריך שונה ל־{date}",
   "quickRecordTakePillFailed": "ייתכן שרישום נטילה לא נשמר",
-  "quickRecordTakePillFailedMessage": "אנא פתחו את האפליקציה ובדקו",
+  "quickRecordTakePillFailedMessage": "נא לפתוח את האפליקציה ולבדוק את רישום נטילת הגלולה",
   "alreadyTaken": "נטלה",
   "startPauseTaking": "להפסיק נטילה",
   "startedPauseTaking": "הפסקת הנטילה החלה",

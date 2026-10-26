@@ -390,7 +390,7 @@
   "changedPausePeriod": "Tabletkalarni ichishdagi tanaffus muddati o‘zgartirildi",
   "changedToDate": "Sana {date}ga oʻzgartirildi",
   "quickRecordTakePillFailed": "Tabletka qabul qilish qaydi saqlanmagan boʻlishi mumkin",
-  "quickRecordTakePillFailedMessage": "Iltimos, ilovani oching va tekshiring",
+  "quickRecordTakePillFailedMessage": "Iltimos, ilovani ochib, tabletkani qabul qilish qaydini tekshiring",
   "alreadyTaken": "Qabul qilindi",
   "startPauseTaking": "Tanaffus qilish",
   "startedPauseTaking": "Tabletkani qabul qilishni to'xtatish boshlandi",

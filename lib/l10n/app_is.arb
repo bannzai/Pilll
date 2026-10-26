@@ -390,7 +390,7 @@
   "changedPausePeriod": "Lengd hlésins frá pillutöku hefur verið breytt",
   "changedToDate": "Dagsetningunni hefur verið breytt í {date}",
   "quickRecordTakePillFailed": "Inntökuskrá hefur hugsanlega ekki vistast",
-  "quickRecordTakePillFailedMessage": "Vinsamlegast opnaðu appið og athugaðu",
+  "quickRecordTakePillFailedMessage": "Opnaðu appið og athugaðu skráninguna á pillutökunni",
   "alreadyTaken": "Tekið",
   "startPauseTaking": "Gera hlé á inntöku",
   "startedPauseTaking": "Pillutökuhlé hefur hafist",

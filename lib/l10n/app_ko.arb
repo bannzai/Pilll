@@ -390,7 +390,7 @@
   "changedPausePeriod": "복용 휴식 기간을 변경했어요",
   "changedToDate": "날짜를 {date}(으)로 변경했어요",
   "quickRecordTakePillFailed": "복용 기록이 저장되지 않았을 수 있어요",
-  "quickRecordTakePillFailedMessage": "앱을 열어서 확인해 주세요",
+  "quickRecordTakePillFailedMessage": "앱을 열어 복용 기록을 확인해 주세요",
   "alreadyTaken": "복용함",
   "startPauseTaking": "복용 휴식",
   "startedPauseTaking": "복용 휴식을 시작했습니다",

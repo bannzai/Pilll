@@ -390,7 +390,7 @@
   "changedPausePeriod": "गोली लेने के बीच के विराम की अवधि बदल दी गई है",
   "changedToDate": "तारीख बदलकर {date} कर दी गई है",
   "quickRecordTakePillFailed": "सेवन रिकॉर्ड शायद सहेजा नहीं जा सका",
-  "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जांच लें",
+  "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर गोली लेने का रिकॉर्ड देखें",
   "alreadyTaken": "ली गई",
   "startPauseTaking": "सेवन रोकें",
   "startedPauseTaking": "सेवन विराम शुरू किया गया",

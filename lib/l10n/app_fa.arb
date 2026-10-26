@@ -390,7 +390,7 @@
   "changedPausePeriod": "مدت وقفه در مصرف قرص تغییر کرد",
   "changedToDate": "تاریخ به {date} تغییر کرد",
   "quickRecordTakePillFailed": "ممکن است ثبت مصرف ذخیره نشده باشد",
-  "quickRecordTakePillFailedMessage": "اپلیکیشن را باز کرده و بررسی کنید",
+  "quickRecordTakePillFailedMessage": "لطفاً برنامه را باز کنید و ثبت مصرف قرص را بررسی کنید",
   "alreadyTaken": "مصرف شده",
   "startPauseTaking": "استراحت از مصرف",
   "startedPauseTaking": "دوره استراحت از مصرف دارو شروع شد",

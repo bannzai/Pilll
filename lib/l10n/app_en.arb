@@ -390,7 +390,7 @@
   "changedPausePeriod": "The pill break length has been changed",
   "changedToDate": "Date changed to {date}",
   "quickRecordTakePillFailed": "Your pill log may not have been saved",
-  "quickRecordTakePillFailedMessage": "Please open the app to check",
+  "quickRecordTakePillFailedMessage": "Please open the app and check your pill record",
   "alreadyTaken": "Taken",
   "startPauseTaking": "Take a break from pills",
   "startedPauseTaking": "Started taking a pill break",
