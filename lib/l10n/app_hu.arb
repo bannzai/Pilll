@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Az „Igen” választásával beállítjuk, hogy hány nap telt el a szünet vége óta",
   "yazFlexLastRestDurationTitle": "Koppints a szünet előtt szedett tablettára",
   "yazFlexLastRestDurationNote": "Válaszd ki a szünet előtti utolsóként szedett tablettát",
-  "yazFlexRestDurationDaysLabel": "Szünet napjainak száma",
+  "yazFlexRestDurationDaysLabel": "A szünet napjainak száma",
   "yazFlexRestDurationDaysValue": "{days} nap",
   "yazFlexResting": "Szünetet tartok, és még nem kezdtem újra",
   "yazFlexRestingDaysLabel": "A szünet hányadik napja van ma",

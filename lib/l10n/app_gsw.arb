@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Wänn du «Ja» uswählsch, zeigts der aa, wie vill Täg sit em Ändi vo de Pillepause verbi sind",
   "yazFlexLastRestDurationTitle": "Tipp uf d Pille, wo du vor de Pillepause gno hesch",
   "yazFlexLastRestDurationNote": "Wähl d letschti Pille, wo du vor de Pillepause gnoh hesch",
-  "yazFlexRestDurationDaysLabel": "Aazahl vo de Pause-Täg",
+  "yazFlexRestDurationDaysLabel": "Aazahl Täg vo de Pillepause",
   "yazFlexRestDurationDaysValue": "{days} Täg",
   "yazFlexResting": "I de Pause und no nöd wieder agfange",
   "yazFlexRestingDaysLabel": "Dr wievielt Tag vo dr Pause isch hüt",

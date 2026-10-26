@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Dacă alegi „Da”, vom seta afișarea numărului de zile trecute de la sfârșitul pauzei",
   "yazFlexLastRestDurationTitle": "Atinge pilula luată înainte de pauză",
   "yazFlexLastRestDurationNote": "Alege ultima pilulă pe care ai luat-o înainte de pauză",
-  "yazFlexRestDurationDaysLabel": "Numărul zilelor de pauză",
+  "yazFlexRestDurationDaysLabel": "Numărul de zile de pauză",
   "yazFlexRestDurationDaysValue": "{days} zile",
   "yazFlexResting": "Sunt în pauză și încă nu am reluat",
   "yazFlexRestingDaysLabel": "A câta zi de pauză este astăzi",

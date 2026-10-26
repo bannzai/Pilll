@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“हाँ” चुनने पर विराम समाप्त होने के बाद कितने दिन बीते हैं, यह दिखाने की सेटिंग हो जाएगी",
   "yazFlexLastRestDurationTitle": "विराम से पहले ली गई गोली पर टैप करें",
   "yazFlexLastRestDurationNote": "विराम शुरू होने से पहले आपने जो आखिरी गोली ली थी, उसे चुनें",
-  "yazFlexRestDurationDaysLabel": "ब्रेक के दिनों की संख्या",
+  "yazFlexRestDurationDaysLabel": "विराम के दिनों की संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिन",
   "yazFlexResting": "ब्रेक पर हूँ और अभी दोबारा शुरू नहीं किया है",
   "yazFlexRestingDaysLabel": "आज विराम का कौन-सा दिन है",

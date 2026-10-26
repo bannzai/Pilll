@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Se escolles «Si», configuraremos a pantalla para mostrar cantos días pasaron desde que rematou o descanso",
   "yazFlexLastRestDurationTitle": "Toca a pílula que tomaches antes do descanso",
   "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes do descanso",
-  "yazFlexRestDurationDaysLabel": "Número de días de descanso",
+  "yazFlexRestDurationDaysLabel": "Días de descanso",
   "yazFlexRestDurationDaysValue": "{days} días",
   "yazFlexResting": "Estou nun período de descanso e aínda non retomei a toma",
   "yazFlexRestingDaysLabel": "Que día do descanso é hoxe",

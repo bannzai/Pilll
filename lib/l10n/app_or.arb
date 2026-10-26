@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ, ବିରତି ଶେଷ ହେବା ପରଠାରୁ କେତେ ଦିନ ବିତିଛି ତାହା ଦେଖାଇବାକୁ ସେଟ୍ ହେବ",
   "yazFlexLastRestDurationTitle": "ବିରତି ପୂର୍ବରୁ ନେଇଥିବା ବଟିକାରେ ଟ୍ୟାପ୍ କରନ୍ତୁ",
   "yazFlexLastRestDurationNote": "ବିରତି ଆରମ୍ଭ ପୂର୍ବରୁ ଆପଣ ଶେଷଥର ନେଇଥିବା ବଟିକାଟି ବାଛନ୍ତୁ",
-  "yazFlexRestDurationDaysLabel": "ବିରତି ଦିନର ସଂଖ୍ୟା",
+  "yazFlexRestDurationDaysLabel": "ବିରତିର ଦିନ ସଂଖ୍ୟା",
   "yazFlexRestDurationDaysValue": "{days} ଦିନ",
   "yazFlexResting": "ବିରତି ସମୟରେ ଅଛି ଏବଂ ଏପର୍ଯ୍ୟନ୍ତ ପୁଣି ଆରମ୍ଭ କରିନାହିଁ",
   "yazFlexRestingDaysLabel": "ଆଜି ବିରତିର କେତେତମ ଦିନ",

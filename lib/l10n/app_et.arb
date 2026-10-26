@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Kui valid „Jah“, seadistatakse kuva näitama, mitu päeva on pillipausi lõpust möödunud",
   "yazFlexLastRestDurationTitle": "Puuduta pilli, mille võtsid enne pillipausi",
   "yazFlexLastRestDurationNote": "Vali viimane pill, mille võtsid enne pillipausi",
-  "yazFlexRestDurationDaysLabel": "Pausipäevade arv",
+  "yazFlexRestDurationDaysLabel": "Pillipausi päevade arv",
   "yazFlexRestDurationDaysValue": "{days} päeva",
   "yazFlexResting": "Olen pausiperioodil ega ole veel uuesti alustanud",
   "yazFlexRestingDaysLabel": "Mitmes pausipäev täna on",

@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "«Այո» ընտրելու դեպքում կկարգավորվի դադարի ավարտից անցած օրերի ցուցադրումը",
   "yazFlexLastRestDurationTitle": "Հպվեք այն հաբին, որն ընդունել եք դադարից առաջ",
   "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որն ընդունել եք մինչև դադար սկսվելը",
-  "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակ",
+  "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակը",
   "yazFlexRestDurationDaysValue": "{days} օր",
   "yazFlexResting": "Դադարի շրջանում եմ և դեռ չեմ վերսկսել",
   "yazFlexRestingDaysLabel": "Այսօր ընդմիջման որերորդ օրն է",

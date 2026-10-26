@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz, ara dönem bittikten sonra kaç gün geçtiği gösterilecek şekilde ayarlanır",
   "yazFlexLastRestDurationTitle": "Ara dönemden önce aldığınız hapı seçmek için dokunun",
   "yazFlexLastRestDurationNote": "Ara dönem başlamadan önce aldığınız son hapı seçin",
-  "yazFlexRestDurationDaysLabel": "Ara verilen gün sayısı",
+  "yazFlexRestDurationDaysLabel": "Ara dönem gün sayısı",
   "yazFlexRestDurationDaysValue": "{days} gün",
   "yazFlexResting": "Ara dönemindeyim ve henüz yeniden başlamadım",
   "yazFlexRestingDaysLabel": "Bugün aranın kaçıncı günü",

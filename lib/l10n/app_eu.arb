@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "«Bai» aukeratzen baduzu, atsedenaldia amaitu zenetik zenbat egun igaro diren erakusteko ezarriko da",
   "yazFlexLastRestDurationTitle": "Ukitu atsedenaldiaren aurretik hartu zenuen pilula",
   "yazFlexLastRestDurationNote": "Hautatu atsedenaldiaren aurretik hartu duzun azken pilula",
-  "yazFlexRestDurationDaysLabel": "Atseden egun kopurua",
+  "yazFlexRestDurationDaysLabel": "Atsedenaldiko egun kopurua",
   "yazFlexRestDurationDaysValue": "{days} egun",
   "yazFlexResting": "Atsedenaldian nago eta oraindik ez naiz berriro hasi",
   "yazFlexRestingDaysLabel": "Atsedenaldiaren gaurko zenbatgarren eguna da",

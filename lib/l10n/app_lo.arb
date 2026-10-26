@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "ຖ້າເລືອກ “ແມ່ນ” ຈະຕັ້ງຄ່າໃຫ້ສະແດງຈຳນວນມື້ຫຼັງຈາກສິ້ນສຸດການພັກຢາ",
   "yazFlexLastRestDurationTitle": "ກະລຸນາແຕະເມັດຢາທີ່ກິນກ່ອນພັກຢາ",
   "yazFlexLastRestDurationNote": "ກະລຸນາເລືອກເມັດຢາເມັດສຸດທ້າຍທີ່ກິນກ່ອນເລີ່ມພັກຢາ",
-  "yazFlexRestDurationDaysLabel": "ຈຳນວນມື້ຢຸດກິນຢາ",
+  "yazFlexRestDurationDaysLabel": "ຈຳນວນມື້ພັກຢາ",
   "yazFlexRestDurationDaysValue": "{days} ມື້",
   "yazFlexResting": "ກຳລັງຢູ່ໃນຊ່ວງພັກຢາ ແລະ ຍັງບໍ່ໄດ້ເລີ່ມກິນອີກ",
   "yazFlexRestingDaysLabel": "ມື້ນີ້ແມ່ນມື້ທີເທົ່າໃດຂອງການຢຸດຢາ",

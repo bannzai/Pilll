@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "«Тийм» гэснийг сонговол завсарлага дууссанаас хойш хэд дэх өдөр болохыг харуулахаар тохируулна",
   "yazFlexLastRestDurationTitle": "Завсарлага эхлэхээс өмнө уусан эмээ товшино уу",
   "yazFlexLastRestDurationNote": "Завсарлага эхлэхээс өмнө хамгийн сүүлд уусан эмээ сонгоно уу",
-  "yazFlexRestDurationDaysLabel": "Завсарласан өдрийн тоо",
+  "yazFlexRestDurationDaysLabel": "Завсарлагааны өдрийн тоо",
   "yazFlexRestDurationDaysValue": "{days} өдөр",
   "yazFlexResting": "Завсарлагааны үед байгаа бөгөөд хараахан дахин эхлээгүй байна",
   "yazFlexRestingDaysLabel": "Өнөөдөр завсарлагааны хэд дэх өдөр вэ",

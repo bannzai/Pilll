@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“ verður skjárinn stilltur til að sýna hve margir dagar eru liðnir frá því að hléinu lauk",
   "yazFlexLastRestDurationTitle": "Pikkaðu á pilluna sem þú tókst fyrir hlé",
   "yazFlexLastRestDurationNote": "Veldu síðustu pilluna sem þú tókst áður en hlé hófst",
-  "yazFlexRestDurationDaysLabel": "Fjöldi hlédaga",
+  "yazFlexRestDurationDaysLabel": "Fjöldi daga í hléi",
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Í hléi og hef ekki hafið aftur enn",
   "yazFlexRestingDaysLabel": "Hvaða dagur hlésins er í dag",

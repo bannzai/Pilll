@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে, বিৰতি শেষ হোৱাৰ পৰা কিমান দিন হৈছে সেয়া দেখুৱাবলৈ ছেটিং কৰা হ’ব",
   "yazFlexLastRestDurationTitle": "বিৰতিৰ আগতে খোৱা পিলটোত টেপ কৰক",
   "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ হোৱাৰ আগতে শেষবাৰ খোৱা পিলটো বাছি লওক",
-  "yazFlexRestDurationDaysLabel": "ঔষধ নোখোৱা দিনৰ সংখ্যা",
+  "yazFlexRestDurationDaysLabel": "বিৰতিৰ দিনৰ সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexResting": "ঔষধ বন্ধৰ সময়ত আছোঁ, এতিয়াও পুনৰ আৰম্ভ কৰা নাই",
   "yazFlexRestingDaysLabel": "ঔষধ বন্ধ কৰাৰ পিছৰে পৰা আজি কিমানতম দিন",

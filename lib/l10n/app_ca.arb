@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Si tries «Sí», configurarem la pantalla perquè mostri quants dies han passat des del final del descans",
   "yazFlexLastRestDurationTitle": "Toca la píndola que vas prendre abans del descans",
   "yazFlexLastRestDurationNote": "Selecciona l’última píndola que vas prendre abans del descans",
-  "yazFlexRestDurationDaysLabel": "Nombre de dies de descans",
+  "yazFlexRestDurationDaysLabel": "Dies de descans",
   "yazFlexRestDurationDaysValue": "{days} dies",
   "yazFlexResting": "Estic en període de descans i encara no l'he reprès",
   "yazFlexRestingDaysLabel": "Quin dia de descans és avui",

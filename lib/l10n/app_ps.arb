@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "که «هو» وټاکئ، له وقف پای ته رسېدو وروسته د تېر شوو ورځو شمېر به ښودل کېږي",
   "yazFlexLastRestDurationTitle": "مهرباني وکړئ هغه ګولۍ وټاکئ چې له وقفې مخکې مو خوړلې وه",
   "yazFlexLastRestDurationNote": "مهرباني وکړئ هغه وروستۍ ګولۍ وټاکئ چې د وقف له پیل مخکې مو اخیستې وه",
-  "yazFlexRestDurationDaysLabel": "د وقفې د ورځو شمېر",
+  "yazFlexRestDurationDaysLabel": "د وقف د ورځو شمېر",
   "yazFlexRestDurationDaysValue": "{days} ورځې",
   "yazFlexResting": "د وقفې په موده کې یم او لا مې بیا نه دي پیل کړي",
   "yazFlexRestingDaysLabel": "نن د وقفې څوهمه ورځ ده",

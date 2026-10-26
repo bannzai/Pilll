@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Choose “Yes” to show how many days it’s been since your pill break ended",
   "yazFlexLastRestDurationTitle": "Tap the pill you took before your pill break",
   "yazFlexLastRestDurationNote": "Select the last pill you took before your pill break",
-  "yazFlexRestDurationDaysLabel": "Number of break days",
+  "yazFlexRestDurationDaysLabel": "Pill break duration in days",
   "yazFlexRestDurationDaysValue": "{days} days",
   "yazFlexResting": "On a break and haven’t restarted yet",
   "yazFlexRestingDaysLabel": "Which day of your break is it today?",

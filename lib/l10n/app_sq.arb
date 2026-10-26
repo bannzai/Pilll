@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”, do të shfaqet numri i ditëve që kanë kaluar që nga përfundimi i pushimit",
   "yazFlexLastRestDurationTitle": "Prekni pilulën që morët para pushimit",
   "yazFlexLastRestDurationNote": "Ju lutemi, zgjidhni pilulën e fundit që keni marrë para pushimit",
-  "yazFlexRestDurationDaysLabel": "Numri i ditëve të pauzës",
+  "yazFlexRestDurationDaysLabel": "Numri i ditëve të pushimit",
   "yazFlexRestDurationDaysValue": "{days} ditë",
   "yazFlexResting": "Jam në periudhë pushimi dhe ende nuk e kam rifilluar",
   "yazFlexRestingDaysLabel": "Cila ditë e pushimit është sot",

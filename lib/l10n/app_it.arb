@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "Se scegli “Sì”, imposteremo la visualizzazione dei giorni trascorsi dalla fine della pausa",
   "yazFlexLastRestDurationTitle": "Tocca la pillola che hai preso prima della pausa",
   "yazFlexLastRestDurationNote": "Seleziona l’ultima pillola che hai preso prima della pausa",
-  "yazFlexRestDurationDaysLabel": "Numero di giorni di pausa",
+  "yazFlexRestDurationDaysLabel": "Giorni di pausa",
   "yazFlexRestDurationDaysValue": "{days} giorni",
   "yazFlexResting": "Sono in pausa e non ho ancora ricominciato",
   "yazFlexRestingDaysLabel": "A che giorno di pausa sei oggi",

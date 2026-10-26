@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“ဟုတ်ကဲ့” ကို ရွေးပါက ဆေးနားရက် ပြီးဆုံးပြီးနောက် ရက်ဘယ်လောက်ရှိပြီလဲဆိုတာ ပြသရန် သတ်မှတ်ပေးပါမယ်",
   "yazFlexLastRestDurationTitle": "ဆေးနားရက် မတိုင်မီ သောက်ခဲ့သော ဆေးပြားကို နှိပ်ပါ",
   "yazFlexLastRestDurationNote": "ဆေးနားရက် မစမီ နောက်ဆုံးသောက်ခဲ့သော ဆေးလုံးကို ရွေးချယ်ပါ",
-  "yazFlexRestDurationDaysLabel": "ဆေးနားရက် အရေအတွက်",
+  "yazFlexRestDurationDaysLabel": "ဆေးနားရက်အရေအတွက်",
   "yazFlexRestDurationDaysValue": "{days} ရက်",
   "yazFlexResting": "ဆေးနားကာလအတွင်းဖြစ်ပြီး ပြန်မစသေးပါ",
   "yazFlexRestingDaysLabel": "ယနေ့သည် ဆေးနားကာလ၏ ဘယ်နှရက်မြောက်နေ့လဲ",

@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "หากเลือก “ใช่” ระบบจะแสดงจำนวนวันที่ผ่านไปหลังจากสิ้นสุดช่วงหยุดยาค่ะ",
   "yazFlexLastRestDurationTitle": "แตะเม็ดยาที่ทานก่อนเริ่มหยุดยา",
   "yazFlexLastRestDurationNote": "โปรดเลือกยาเม็ดสุดท้ายที่ทานก่อนเริ่มช่วงหยุดยาค่ะ",
-  "yazFlexRestDurationDaysLabel": "จำนวนวันหยุดยา",
+  "yazFlexRestDurationDaysLabel": "จำนวนวันที่หยุดยา",
   "yazFlexRestDurationDaysValue": "{days} วัน",
   "yazFlexResting": "อยู่ในช่วงพักยาและยังไม่ได้เริ่มใหม่",
   "yazFlexRestingDaysLabel": "วันนี้เป็นวันที่เท่าไรของช่วงหยุดยา",

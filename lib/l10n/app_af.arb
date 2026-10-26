@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies, stel ons die vertoning in om te wys hoeveel dae dit sedert die pouse is",
   "yazFlexLastRestDurationTitle": "Tik asseblief op die pil wat jy voor jou pouse geneem het",
   "yazFlexLastRestDurationNote": "Kies asseblief die laaste pil wat jy voor die pouse geneem het",
-  "yazFlexRestDurationDaysLabel": "Aantal dae sonder pille",
+  "yazFlexRestDurationDaysLabel": "Aantal dae van die pouse",
   "yazFlexRestDurationDaysValue": "{days} dae",
   "yazFlexResting": "Tydens die pilpouse en nog nie hervat nie",
   "yazFlexRestingDaysLabel": "Hoeveelste dag van jou pouse is dit vandag?",

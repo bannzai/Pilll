@@ -572,7 +572,7 @@
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുത്താൽ, ഇടവേള അവസാനിച്ചതിന് ശേഷം എത്ര ദിവസം കഴിഞ്ഞെന്ന് കാണിക്കുന്ന രീതിയിൽ സജ്ജീകരിക്കും",
   "yazFlexLastRestDurationTitle": "ഇടവേളയ്ക്ക് മുമ്പ് കഴിച്ച ഗുളികയിൽ ടാപ്പ് ചെയ്യൂ",
   "yazFlexLastRestDurationNote": "ഇടവേള തുടങ്ങുന്നതിന് മുമ്പ് അവസാനം കഴിച്ച ഗുളിക തിരഞ്ഞെടുക്കൂ",
-  "yazFlexRestDurationDaysLabel": "ഇടവേള ദിവസങ്ങളുടെ എണ്ണം",
+  "yazFlexRestDurationDaysLabel": "ഇടവേളയിലെ ദിവസങ്ങളുടെ എണ്ണം",
   "yazFlexRestDurationDaysValue": "{days} ദിവസം",
   "yazFlexResting": "ഇടവേളയിലാണ്, ഇനിയും വീണ്ടും തുടങ്ങിയിട്ടില്ല",
   "yazFlexRestingDaysLabel": "ഇന്ന് ഇടവേളയുടെ എത്രാമത്തെ ദിവസം",
