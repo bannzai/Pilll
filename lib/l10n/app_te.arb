@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "సబ్‌స్క్రిప్షన్‌ను రద్దు చేసిన తర్వాత సర్వేలో పాల్గొనండి",
   "pilllDescription": "Pilll, గర్భనిరోధక మాత్ర వేసుకోవడానికి రిమైండర్ యాప్",
   "reachedMaximumCountOfReminderTimes": "రిమైండర్ సమయాలను జోడించే గరిష్ఠ పరిమితికి చేరుకున్నారు. దయచేసి {ReminderTimeMaximumCount} లేదా అంతకంటే తక్కువ సమయాలను ఉంచండి",
-  "minimumCountOfReminderTimes": "కనీసం {ReminderTimeMinimumCount} రిమైండర్ టైమ్స్ అవసరం",
+  "minimumCountOfReminderTimes": "దయచేసి నోటిఫికేషన్‌ల కోసం కనీసం {ReminderTimeMinimumCount} సమయాలను సెట్ చేయండి",
   "purchaseErrorUnknownError": "అజ్ఞాత కారణంతో దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్ళీ ప్రయత్నించండి. పరిష్కారం కాకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}లో లోపం సంభవించింది. కొంత సమయం వేచి ఉండి మళ్లీ ప్రయత్నించండి",
   "purchaseErrorPurchaseNotAllowedError": "ఈ పరికరంలో కొనుగోలుకు అనుమతి లేదు",

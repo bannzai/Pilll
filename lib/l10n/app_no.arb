@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Hjelp oss gjerne med en undersøkelse etter at abonnementet er sagt opp",
   "pilllDescription": "Pilll – en påminnelseapp for p-pillen",
   "reachedMaximumCountOfReminderTimes": "Du har nådd grensen for påminnelsestidspunkter. Behold høyst {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Minst {ReminderTimeMinimumCount} påminnelsestider kreves",
+  "minimumCountOfReminderTimes": "Angi minst {ReminderTimeMinimumCount} varslingstidspunkter",
   "purchaseErrorUnknownError": "Det oppstod en ukjent feil. Vennligst vent litt og prøv igjen. Dersom problemet vedvarer, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Det har oppstått en feil i {storeName}. Vennligst vent litt og prøv igjen.",
   "purchaseErrorPurchaseNotAllowedError": "Kjøp er ikke tillatt på denne enheten",

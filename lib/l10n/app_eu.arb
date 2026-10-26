@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Harpidetza bertan behera utzi ondoren, inkestan parte hartzera gonbidatzen zaitugu",
   "pilllDescription": "Pilll, pilula antisorgailua hartzeko gogorarazpen aplikazioa",
   "reachedMaximumCountOfReminderTimes": "Gehienezko oroigarri-ordu kopurura iritsi zara. Utzi gehienez {ReminderTimeMaximumCount}, mesedez",
-  "minimumCountOfReminderTimes": "Gutxienez {ReminderTimeMinimumCount} jakinarazpen-denbora beharrezkoak dira",
+  "minimumCountOfReminderTimes": "Ezarri gutxienez {ReminderTimeMinimumCount} jakinarazpen-ordu",
   "purchaseErrorUnknownError": "Ezezaguna den errore bat gertatu da. Denbora pixka bat itxaron eta berriro saiatu. Konpondu ezin bada, Ezarpenak > Galdeketa bidez jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}(e)n errore bat gertatu da. Mesedez, itxaron pixka bat eta saiatu berriro.",
   "purchaseErrorPurchaseNotAllowedError": "Erosketak ez dira baimenduta gailu honetan",

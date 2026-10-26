@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Arolwg ar ôl canslo eich tanysgrifiad",
   "pilllDescription": "Pilll, ap atgoffa ar gyfer cymryd y bilsen atal cenhedlu",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd uchafswm yr amseroedd atgoffa. Cadwch ddim mwy na {ReminderTimeMaximumCount}, os gwelwch yn dda",
-  "minimumCountOfReminderTimes": "Mae angen o leiaf {ReminderTimeMinimumCount} amser hysbysiad",
+  "minimumCountOfReminderTimes": "Mae angen gosod o leiaf {ReminderTimeMinimumCount} amser ar gyfer hysbysiadau",
   "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arni eto ymhen ychydig. Os nad yw'n datrys, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Mae gwall wedi digwydd yn {storeName}. Arhoswch ychydig a rhowch gynnig arall arni.",
   "purchaseErrorPurchaseNotAllowedError": "Nid yw pryniadau yn cael eu caniatáu ar y ddyfais hon",

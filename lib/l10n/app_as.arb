@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "বাতিল কৰাৰ পিছৰ সমীক্ষাত অনুগ্ৰহ কৰি অংশ লওক",
   "pilllDescription": "Pilll, গৰ্ভনিৰোধক বড়ি খোৱাৰ সোঁৱৰণী এপ",
   "reachedMaximumCountOfReminderTimes": "পঞ্জীয়ন কৰিব পৰা সোঁৱৰাই দিয়াৰ সময়ৰ সৰ্বাধিক সীমাত উপনীত হৈছে। অনুগ্ৰহ কৰি সময়ৰ সংখ্যা {ReminderTimeMaximumCount}টাৰ ভিতৰত ৰাখক",
-  "minimumCountOfReminderTimes": "জাননী সময় নূন্যতম {ReminderTimeMinimumCount}টা প্ৰয়োজন",
+  "minimumCountOfReminderTimes": "অনুগ্ৰহ কৰি কমেও {ReminderTimeMinimumCount}টা জাননীৰ সময় নিৰ্ধাৰণ কৰক",
   "purchaseErrorUnknownError": "অজ্ঞাত কাৰণৰ বাবে ত্ৰুটি ঘটিছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক। যদি সমস্যাৰ সমাধান নহয়, অনুগ্ৰহ কৰি ছেটিংছ > যোগাযোগ ৰ জৰিয়তে আমাৰ লগত যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ত এটা ভুল ঘটিছে। অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক।",
   "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইছত ক্ৰয়ৰ অনুমতি নাই",

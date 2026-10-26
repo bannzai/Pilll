@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Obunani bekor qilganingizdan keyin soʻrovnomada qatnashishingizni soʻraymiz",
   "pilllDescription": "Pilll — kontratseptiv tabletkani ichish uchun eslatma ilovasi",
   "reachedMaximumCountOfReminderTimes": "Eslatma vaqtlarini qoʻshishning eng yuqori chegarasiga yetdingiz. Iltimos, koʻpi bilan {ReminderTimeMaximumCount} ta vaqt qoldiring",
-  "minimumCountOfReminderTimes": "Bildirishnoma vaqti kamida {ReminderTimeMinimumCount} ta bo'lishi kerak",
+  "minimumCountOfReminderTimes": "Iltimos, kamida {ReminderTimeMinimumCount} ta bildirishnoma vaqtini belgilang",
   "purchaseErrorUnknownError": "Noma'lum sabab tufayli xato yuz berdi. Biroz vaqt o'tgach qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}da xatolik yuz berdi. Biroz vaqt o'tgach yana urinib ko'ring.",
   "purchaseErrorPurchaseNotAllowedError": "Bu qurilmada sotib olish taqiqlangan",

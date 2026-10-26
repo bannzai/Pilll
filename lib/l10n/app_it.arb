@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Aiutaci rispondendo a un sondaggio dopo la disdetta dell’abbonamento",
   "pilllDescription": "Pilll, l’app con promemoria per prendere la pillola anticoncezionale",
   "reachedMaximumCountOfReminderTimes": "Hai raggiunto il numero massimo di orari per i promemoria. Tienine al massimo {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Sono necessari almeno {ReminderTimeMinimumCount} orari di notifica",
+  "minimumCountOfReminderTimes": "Imposta almeno {ReminderTimeMinimumCount} orari per le notifiche",
   "purchaseErrorUnknownError": "Si è verificato un errore sconosciuto. Si prega di riprovare più tardi. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova più tardi.",
   "purchaseErrorPurchaseNotAllowedError": "Gli acquisti non sono consentiti su questo dispositivo",

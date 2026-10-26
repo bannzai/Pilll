@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "सदस्यता रद्द करने के बाद सर्वेक्षण में भाग लेने का अनुरोध",
   "pilllDescription": "Pilll, गर्भनिरोधक गोली लेने के लिए रिमाइंडर ऐप",
   "reachedMaximumCountOfReminderTimes": "रिमाइंडर के समय जोड़ने की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} या उससे कम समय रखें",
-  "minimumCountOfReminderTimes": "न्यूनतम {ReminderTimeMinimumCount} रिमाइंडर समय आवश्यक हैं",
+  "minimumCountOfReminderTimes": "कृपया सूचनाओं के लिए कम से कम {ReminderTimeMinimumCount} समय तय करें",
   "purchaseErrorUnknownError": "अज्ञात कारण से त्रुटि हुई है। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} में त्रुटि हो रही है। कृपया कुछ समय बाद फिर से प्रयास करें।",
   "purchaseErrorPurchaseNotAllowedError": "इस डिवाइस पर खरीदारी की अनुमति नहीं है",

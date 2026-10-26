@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Ens ajudaries responent una enquesta després de cancel·lar la subscripció",
   "pilllDescription": "Pilll, una aplicació de recordatoris per prendre la píndola",
   "reachedMaximumCountOfReminderTimes": "Has arribat al nombre màxim d'hores de recordatori. Deixa'n {ReminderTimeMaximumCount} o menys, si us plau",
-  "minimumCountOfReminderTimes": "Es necessiten un mínim de {ReminderTimeMinimumCount} horaris de notificació",
+  "minimumCountOfReminderTimes": "Cal configurar almenys {ReminderTimeMinimumCount} hores per a les notificacions",
   "purchaseErrorUnknownError": "S'ha produït un error desconegut. Espereu una estona i torneu-ho a provar. Si el problema persisteix, contacteu-nos a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "S'ha produït un error a {storeName}. Espereu una estona i torneu-ho a provar.",
   "purchaseErrorPurchaseNotAllowedError": "No es permeten compres en aquest dispositiu",

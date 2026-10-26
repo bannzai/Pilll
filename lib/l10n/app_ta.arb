@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "சந்தாவை ரத்து செய்த பிறகு கருத்துக்கணிப்பில் பங்கேற்குங்கள்",
   "pilllDescription": "Pilll, கருத்தடை மாத்திரை எடுத்துக்கொள்ள நினைவூட்டும் செயலி",
   "reachedMaximumCountOfReminderTimes": "நினைவூட்டல் நேரங்களைச் சேர்ப்பதற்கான அதிகபட்ச வரம்பை எட்டிவிட்டீர்கள். தயவுசெய்து {ReminderTimeMaximumCount} அல்லது அதற்கும் குறைவான நேரங்களை மட்டும் வைத்துக்கொள்ளுங்கள்",
-  "minimumCountOfReminderTimes": "குறைந்தபட்சம் {ReminderTimeMinimumCount} அறிவிப்பு நேரங்கள் தேவை",
+  "minimumCountOfReminderTimes": "அறிவிப்புகளுக்கு குறைந்தது {ReminderTimeMinimumCount} நேரங்களை அமைக்குங்கள்",
   "purchaseErrorUnknownError": "தெரியாத காரணத்தால் பிழை ஏற்பட்டது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். சரியாகவில்லை என்றால் அமைப்புகள் > தொடர்பு கொள்ளவும் மூலம் தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} இல் பிழை ஏற்பட்டுள்ளது. சிறிது நேரம் காத்திருந்து மீண்டும் முயற்சிக்கவும்",
   "purchaseErrorPurchaseNotAllowedError": "இந்த சாதனத்தில் கொள்முதல் அனுமதிக்கப்படவில்லை",

@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਰਵੇਖਣ ਵਿੱਚ ਕਿਰਪਾ ਕਰਕੇ ਹਿੱਸਾ ਲਓ",
   "pilllDescription": "Pilll, ਗਰਭ ਨਿਰੋਧਕ ਗੋਲੀ ਲੈਣ ਲਈ ਰਿਮਾਈਂਡਰ ਐਪ",
   "reachedMaximumCountOfReminderTimes": "ਯਾਦ-ਦਹਾਨੀ ਦੇ ਸਮੇਂ ਜੋੜਨ ਦੀ ਵੱਧ ਤੋਂ ਵੱਧ ਹੱਦ ਪੂਰੀ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {ReminderTimeMaximumCount} ਜਾਂ ਇਸ ਤੋਂ ਘੱਟ ਸਮੇਂ ਰੱਖੋ",
-  "minimumCountOfReminderTimes": "ਸੂਚਨਾ ਸਮਾਂ ਘੱਟੋ-ਘੱਟ {ReminderTimeMinimumCount} ਲੋੜੀਂਦੇ ਹਨ",
+  "minimumCountOfReminderTimes": "ਕਿਰਪਾ ਕਰਕੇ ਸੂਚਨਾਵਾਂ ਲਈ ਘੱਟੋ-ਘੱਟ {ReminderTimeMinimumCount} ਸਮੇਂ ਤੈਅ ਕਰੋ",
   "purchaseErrorUnknownError": "ਅਣਜਾਣ ਗਲਤੀ ਹੋਈ ਹੈ। ਕੁਝ ਸਮਾਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਹੱਲ ਨਹੀਂ ਹੁੰਦਾ ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸੰਪਰਕ ਤੋਂ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ਵਿੱਚ ਗਲਤੀ ਹੋ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorPurchaseNotAllowedError": "ਇਸ ਡਿਵਾਈਸ ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ",

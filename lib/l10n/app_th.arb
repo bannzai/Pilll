@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "ขอความร่วมมือตอบแบบสอบถามหลังยกเลิกการสมัครสมาชิก",
   "pilllDescription": "Pilll แอปแจ้งเตือนเวลาทานยาเม็ดคุมกำเนิด",
   "reachedMaximumCountOfReminderTimes": "เพิ่มเวลาแจ้งเตือนครบจำนวนสูงสุดแล้วค่ะ กรุณาลดให้เหลือไม่เกิน {ReminderTimeMaximumCount} เวลา",
-  "minimumCountOfReminderTimes": "จำเป็นต้องตั้งเวลาแจ้งเตือนอย่างน้อย {ReminderTimeMinimumCount} รายการ",
+  "minimumCountOfReminderTimes": "โปรดตั้งเวลาแจ้งเตือนอย่างน้อย {ReminderTimeMinimumCount} เวลาค่ะ",
   "purchaseErrorUnknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ โปรดรอสักครู่แล้วลองอีกครั้ง หากยังไม่แก้ไขได้ โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "เกิดข้อผิดพลาดใน {storeName} กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",
   "purchaseErrorPurchaseNotAllowedError": "การซื้อไม่ได้รับอนุญาตบนอุปกรณ์นี้",

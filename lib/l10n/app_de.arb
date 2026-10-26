@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Bitte nimm nach der Kündigung an unserer Umfrage teil",
   "pilllDescription": "Pilll – deine App mit Erinnerungen an die Pille",
   "reachedMaximumCountOfReminderTimes": "Du hast die Höchstzahl an Erinnerungszeiten erreicht. Bitte behalte höchstens {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten sind erforderlich",
+  "minimumCountOfReminderTimes": "Bitte lege mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten fest",
   "purchaseErrorUnknownError": "Ein unbekannter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut. Falls das Problem weiterhin besteht, wenden Sie sich bitte über Einstellungen > Kontakt an uns. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Im {storeName} ist ein Fehler aufgetreten. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
   "purchaseErrorPurchaseNotAllowedError": "Käufe sind auf diesem Gerät nicht erlaubt",

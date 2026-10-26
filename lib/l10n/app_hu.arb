@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Kérjük, töltsd ki a lemondás utáni kérdőívünket",
   "pilllDescription": "Pilll – emlékeztető alkalmazás a fogamzásgátló tabletta szedéséhez",
   "reachedMaximumCountOfReminderTimes": "Elérted az emlékeztető időpontok maximális számát. Legfeljebb {ReminderTimeMaximumCount} időpontot tarts meg",
-  "minimumCountOfReminderTimes": "Legalább {ReminderTimeMinimumCount} értesítési idő szükséges",
+  "minimumCountOfReminderTimes": "Állíts be legalább {ReminderTimeMinimumCount} értesítési időpontot",
   "purchaseErrorUnknownError": "Ismeretlen hiba történt. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Támogatás menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Hiba történt a {storeName} szolgáltatásban. Kérjük, várjon egy kicsit, majd próbálja újra.",
   "purchaseErrorPurchaseNotAllowedError": "Ezen az eszközön nem engedélyezett a vásárlás",

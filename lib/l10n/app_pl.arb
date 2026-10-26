@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Pomóż nam, odpowiadając na ankietę po anulowaniu subskrypcji",
   "pilllDescription": "Pilll – aplikacja z przypomnieniami o przyjęciu tabletki antykoncepcyjnej",
   "reachedMaximumCountOfReminderTimes": "Osiągnięto maksymalną liczbę godzin przypomnień. Pozostaw najwyżej {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Wymagane jest minimum {ReminderTimeMinimumCount} powiadomień",
+  "minimumCountOfReminderTimes": "Ustaw co najmniej {ReminderTimeMinimumCount} godziny powiadomień",
   "purchaseErrorUnknownError": "Wystąpił nieznany błąd. Spróbuj ponownie po chwili. Jeśli problem się powtarza, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Wystąpił błąd w {storeName}. Proszę poczekać chwilę i spróbować ponownie.",
   "purchaseErrorPurchaseNotAllowedError": "Zakupy nie są dozwolone na tym urządzeniu",

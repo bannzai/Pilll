@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Ве молиме да учествувате во анкета по откажувањето на претплатата",
   "pilllDescription": "Pilll — апликација со потсетник за земање контрацептивна таблета",
   "reachedMaximumCountOfReminderTimes": "Го достигнавте максималниот број времиња за потсетување. Ве молиме, оставете најмногу {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Потребни се најмалку {ReminderTimeMinimumCount} времиња за известување",
+  "minimumCountOfReminderTimes": "Ве молиме, поставете најмалку {ReminderTimeMinimumCount} термини за известувања",
   "purchaseErrorUnknownError": "Се случи непозната грешка. Обидете се повторно подоцна. Ако проблемот не се реши, контактирајте нѐ преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Се случи грешка во {storeName}. Ве молиме почекајте малку време и обидете се повторно.",
   "purchaseErrorPurchaseNotAllowedError": "Купувањето не е дозволено на овој уред",

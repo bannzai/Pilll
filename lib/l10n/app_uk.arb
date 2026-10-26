@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Просимо вас пройти опитування після скасування підписки",
   "pilllDescription": "Pilll — застосунок із нагадуваннями про прийом протизаплідної пігулки",
   "reachedMaximumCountOfReminderTimes": "Ви досягли максимальної кількості часів нагадування. Будь ласка, залиште не більше ніж {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Потрібно щонайменше {ReminderTimeMinimumCount} часів нагадувань",
+  "minimumCountOfReminderTimes": "Укажіть щонайменше {ReminderTimeMinimumCount} часів для сповіщень",
   "purchaseErrorUnknownError": "Сталася невідома помилка. Будь ласка, спробуйте знову через деякий час. Якщо проблема не вирішується, зверніться до нас через Налаштування > Зворотний зв'язок. Деталі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "У {storeName} сталася помилка. Будь ласка, трохи зачекайте та спробуйте знову",
   "purchaseErrorPurchaseNotAllowedError": "Покупки заборонені на цьому пристрої",

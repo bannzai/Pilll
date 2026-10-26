@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Жазылууну токтоткондон кийинки сурамжылоого катышып коюуңузду суранабыз",
   "pilllDescription": "Pilll — бойго бүтүрбөөчү таблетканы ичүү үчүн эскертме колдонмосу",
   "reachedMaximumCountOfReminderTimes": "Эскертүү убакыттарынын эң көп санына жеттиңиз. Сураныч, алардын санын {ReminderTimeMaximumCount} же андан аз кылыңыз",
-  "minimumCountOfReminderTimes": "Эскертүү убактысы эң азында {ReminderTimeMinimumCount} болушу керек",
+  "minimumCountOfReminderTimes": "Кеминде {ReminderTimeMinimumCount} билдирүү убактысын коюңуз",
   "purchaseErrorUnknownError": "Белгисиз себепти катачылык болду. Бир аз убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбесе, Тууралоолор > Кайрылуу аркылуу кайрылыңыз. Майда-чүйдөлөрү: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} дүкөнүндө ката болду. Бир аз күтүп туруп, кайра аракет кылыңыз.",
   "purchaseErrorPurchaseNotAllowedError": "Бул түзмөктө сатып алууга уруксат жок",

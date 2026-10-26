@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "ກະລຸນາຊ່ວຍຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກການສະໝັກໃຊ້",
   "pilllDescription": "Pilll ແອັບແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດ",
   "reachedMaximumCountOfReminderTimes": "ຈຳນວນເວລາແຈ້ງເຕືອນຮອດຂີດຈຳກັດແລ້ວ. ກະລຸນາເຫຼືອບໍ່ເກີນ {ReminderTimeMaximumCount} ເວລາ",
-  "minimumCountOfReminderTimes": "ເວລາແຈ້ງເຕືອນຕ້ອງມີຢ່າງໜ້ອຍ {ReminderTimeMinimumCount} ລາຍການ",
+  "minimumCountOfReminderTimes": "ກະລຸນາຕັ້ງເວລາແຈ້ງເຕືອນຢ່າງໜ້ອຍ {ReminderTimeMinimumCount} ເວລາ",
   "purchaseErrorUnknownError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາລໍຖ້າສັກຄູ່ແລ້ວລອງໃໝ່. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ຫາພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ມີຂໍ້ຜິດພາດເກີດຂຶ້ນ. ກະລຸນາລໍຖ້າຄັ້ງໜຶ່ງ ແລະ ລອງໃໝ່ອີກຄັ້ງ",
   "purchaseErrorPurchaseNotAllowedError": "ອຸປະກອນນີ້ບໍ່ອະນຸຍາດໃຫ້ຊື້",

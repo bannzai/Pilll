@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Axúdanos cunha enquisa tras cancelar a túa subscrición",
   "pilllDescription": "Pilll, unha aplicación de recordatorios para tomar a pílula anticonceptiva",
   "reachedMaximumCountOfReminderTimes": "Chegaches ao límite de horas de recordatorio. Deixa {ReminderTimeMaximumCount} ou menos, por favor",
-  "minimumCountOfReminderTimes": "Necesítanse polo menos {ReminderTimeMinimumCount} horarios de notificación",
+  "minimumCountOfReminderTimes": "Configura polo menos {ReminderTimeMinimumCount} horas para as notificacións",
   "purchaseErrorUnknownError": "Produciuse un erro de causa descoñecida. Agarde un momento e ténteo de novo. Se o problema persiste, contacte a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Produciuse un erro en {storeName}. Agarda un momento e téntao de novo.",
   "purchaseErrorPurchaseNotAllowedError": "As compras non están permitidas neste dispositivo",

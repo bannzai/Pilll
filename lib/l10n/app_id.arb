@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Mohon bantu isi survei setelah membatalkan langganan",
   "pilllDescription": "Pilll, aplikasi pengingat untuk minum pil kontrasepsi",
   "reachedMaximumCountOfReminderTimes": "Jumlah waktu pengingat sudah mencapai batas. Harap sisakan paling banyak {ReminderTimeMaximumCount} waktu",
-  "minimumCountOfReminderTimes": "Minimal {ReminderTimeMinimumCount} waktu notifikasi diperlukan",
+  "minimumCountOfReminderTimes": "Atur setidaknya {ReminderTimeMinimumCount} waktu notifikasi",
   "purchaseErrorUnknownError": "Terjadi kesalahan yang tidak diketahui penyebabnya. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Kontak. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Terjadi kesalahan di {storeName}. Mohon tunggu sebentar dan coba lagi.",
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak diizinkan di perangkat ini",

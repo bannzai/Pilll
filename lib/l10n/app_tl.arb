@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Maaari po ba kayong sumagot sa sarbey matapos kanselahin ang suskrisyon",
   "pilllDescription": "Pilll, app na may paalala sa pag-inom ng pildoras na pangkontraseptibo",
   "reachedMaximumCountOfReminderTimes": "Naabot na ninyo ang pinakamataas na bilang ng oras ng paalala. Pakilimitahan po sa {ReminderTimeMaximumCount} o mas kaunti",
-  "minimumCountOfReminderTimes": "Kailangan ng hindi bababa sa {ReminderTimeMinimumCount} na oras ng paalala",
+  "minimumCountOfReminderTimes": "Mangyaring magtakda ng hindi bababa sa {ReminderTimeMinimumCount} oras ng abiso",
   "purchaseErrorUnknownError": "May naganap na hindi kilalang error. Pakihintay ang ilang sandali at subukang muli. Kung hindi pa rin nalulutas, mangyaring makipag-ugnayan sa Settings > Tanong. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "May error na naganap sa {storeName}. Mangyaring maghintay sandali at subukan ulit.",
   "purchaseErrorPurchaseNotAllowedError": "Hindi pinapahintulutan ang pagbili sa device na ito",

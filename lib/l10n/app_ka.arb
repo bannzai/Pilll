@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "გთხოვთ, მონაწილეობა მიიღოთ გამოწერის გაუქმების შემდგომ გამოკითხვაში",
   "pilllDescription": "Pilll — კონტრაცეპტიული აბის მიღების შეხსენების აპი",
   "reachedMaximumCountOfReminderTimes": "შეხსენების დროების მაქსიმალურ რაოდენობას მიაღწიეთ. გთხოვთ, დატოვოთ არაუმეტეს {ReminderTimeMaximumCount} დროისა",
-  "minimumCountOfReminderTimes": "შეტყობინების დრო მინიმუმ {ReminderTimeMinimumCount} საჭიროა",
+  "minimumCountOfReminderTimes": "გთხოვთ, მიუთითოთ შეტყობინების სულ მცირე {ReminderTimeMinimumCount} დრო",
   "purchaseErrorUnknownError": "უცნობი მიზეზით შეცდომა მოხდა. გთხოვთ, ცოტა ხანს მოიცადოთ და ისევ სცადოთ. თუ პრობლემა არ გადაწყდება, დაგვიკავშირდით პარამეტრები > კითხვა განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-ში შეცდომა წარმოიშვა. გთხოვთ, ცოტა ხნის შემდეგ ისევ სცადეთ.",
   "purchaseErrorPurchaseNotAllowedError": "ამ მოწყობილობაზე შეძენა არ არის ნებადართული",

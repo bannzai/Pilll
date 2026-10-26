@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Խնդրում ենք մասնակցել բաժանորդագրությունը չեղարկելուց հետո անցկացվող հարցմանը",
   "pilllDescription": "Pilll՝ հակաբեղմնավորիչ հաբի ընդունման հիշեցումներով հավելված",
   "reachedMaximumCountOfReminderTimes": "Հասել եք հիշեցումների ժամերի առավելագույն քանակին։ Խնդրում ենք թողնել առավելագույնը {ReminderTimeMaximumCount} ժամ",
-  "minimumCountOfReminderTimes": "Ծանուցման ժամերը առնվազն {ReminderTimeMinimumCount} հատ պահանջվում են",
+  "minimumCountOfReminderTimes": "Խնդրում ենք սահմանել ծանուցման առնվազն {ReminderTimeMinimumCount} ժամ",
   "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք փորձել մի փոքր ուշ։ Եթե խնդիրը չի լուծվում, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-ում սխալ է տեղի ունեցել: Խնդրում ենք մի փոքր սպասել և նորից փորձել:",
   "purchaseErrorPurchaseNotAllowedError": "Այս սարքում գնումները թույլատրված չեն",

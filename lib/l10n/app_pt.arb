@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Que tal responder a uma pesquisa após cancelar a assinatura",
   "pilllDescription": "Pilll, um app com lembretes para tomar a pílula anticoncepcional",
   "reachedMaximumCountOfReminderTimes": "Você atingiu o limite de horários de lembrete. Deixe no máximo {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "É necessário definir pelo menos {ReminderTimeMinimumCount} horários de notificação",
+  "minimumCountOfReminderTimes": "Defina pelo menos {ReminderTimeMinimumCount} horários de notificação",
   "purchaseErrorUnknownError": "Ocorreu um erro desconhecido. Tente novamente após um tempo. Se o problema não for resolvido, entre em contato conosco através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ocorreu um erro na {storeName}. Aguarde um momento e tente novamente.",
   "purchaseErrorPurchaseNotAllowedError": "Compras não são permitidas neste dispositivo",

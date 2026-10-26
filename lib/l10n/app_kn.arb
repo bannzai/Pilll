@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "ಚಂದಾದಾರಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿದ ನಂತರದ ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಭಾಗವಹಿಸಿ",
   "pilllDescription": "Pilll, ಗರ್ಭನಿರೋಧಕ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲು ಜ್ಞಾಪನೆ ನೀಡುವ ಆ್ಯಪ್",
   "reachedMaximumCountOfReminderTimes": "ಜ್ಞಾಪನೆ ಸಮಯಗಳನ್ನು ಸೇರಿಸುವ ಗರಿಷ್ಠ ಮಿತಿ ತಲುಪಿದೆ. ದಯವಿಟ್ಟು {ReminderTimeMaximumCount} ಅಥವಾ ಅದಕ್ಕಿಂತ ಕಡಿಮೆ ಸಮಯಗಳನ್ನು ಇರಿಸಿ",
-  "minimumCountOfReminderTimes": "ಕನಿಷ್ಠ {ReminderTimeMinimumCount} ಅಧಿಸೂಚನೆ ಸಮಯಗಳು ಅಗತ್ಯವಿದೆ",
+  "minimumCountOfReminderTimes": "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ {ReminderTimeMinimumCount} ಸೂಚನೆ ಸಮಯಗಳನ್ನು ನಿಗದಿಪಡಿಸಿ",
   "purchaseErrorUnknownError": "ಅಜ್ಞಾತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಇದು ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ನಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
   "purchaseErrorPurchaseNotAllowedError": "ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿ ಅನುಮತಿಸಲಾಗಿಲ್ಲ",

@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Prašome dalyvauti apklausoje po prenumeratos atšaukimo",
   "pilllDescription": "Pilll – priminimų programėlė kontraceptinėms tabletėms vartoti",
   "reachedMaximumCountOfReminderTimes": "Pasiektas didžiausias priminimo laikų skaičius. Palikite ne daugiau kaip {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Reikalinga mažiausiai {ReminderTimeMinimumCount} priminimų laikų",
+  "minimumCountOfReminderTimes": "Nustatykite bent {ReminderTimeMinimumCount} pranešimų laikus",
   "purchaseErrorUnknownError": "Įvyko nežinoma klaida. Pabandykite dar kartą po kurio laiko. Jei problema neišspręsta, susisiekite su mumis per Nustatymai > Kontaktai. Išsamiau: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} įvyko klaida. Palaukite šiek tiek ir bandykite dar kartą.",
   "purchaseErrorPurchaseNotAllowedError": "Šiame įrenginyje pirkimai neleistini",

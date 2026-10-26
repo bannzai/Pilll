@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Просим вас пройти опрос после отмены подписки",
   "pilllDescription": "Pilll — приложение с напоминаниями о приёме противозачаточной таблетки",
   "reachedMaximumCountOfReminderTimes": "Вы достигли предела количества времени напоминаний. Пожалуйста, оставьте не более {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Требуется минимум {ReminderTimeMinimumCount} времён уведомлений",
+  "minimumCountOfReminderTimes": "Укажите не менее {ReminderTimeMinimumCount} времён для уведомлений",
   "purchaseErrorUnknownError": "Произошла неизвестная ошибка. Пожалуйста, повторите попытку через некоторое время. Если проблема не решается, обратитесь в поддержку через Настройки > Обратиться в поддержку. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, подождите и попробуйте снова.",
   "purchaseErrorPurchaseNotAllowedError": "Покупки не разрешены на этом устройстве",

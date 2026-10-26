@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Tafadhali shiriki katika utafiti baada ya kusitisha usajili",
   "pilllDescription": "Pilll, programu ya kumbusho la kumeza kidonge cha uzazi wa mpango",
   "reachedMaximumCountOfReminderTimes": "Umefikia idadi ya juu ya nyakati za vikumbusho. Tafadhali bakiza zisizozidi {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Angalau mipango {ReminderTimeMinimumCount} ya arifa inahitajika",
+  "minimumCountOfReminderTimes": "Tafadhali weka angalau nyakati {ReminderTimeMinimumCount} za arifa",
   "purchaseErrorUnknownError": "Hitilafu isiyojulikana imetokea. Tafadhali subiri kidogo kisha ujaribu tena. Ikiwa tatizo halitatatulika, tafadhali wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Tatizo limeibuka katika {storeName}. Tafadhali subiri kwa muda na ujaribu tena.",
   "purchaseErrorPurchaseNotAllowedError": "Ununuzi hauruhusiwi kwenye kifaa hiki",

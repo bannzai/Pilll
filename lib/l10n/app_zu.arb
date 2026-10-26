@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Sicela usisize ngokuphendula inhlolovo ngemva kokukhansela ukubhalisa",
   "pilllDescription": "Pilll, uhlelo lokusebenza olunesikhumbuzo sokuphuza iphilisi lokuvimbela inzalo",
   "reachedMaximumCountOfReminderTimes": "Usufinyelele inani eliphezulu lezikhathi zesikhumbuzo. Sicela ushiye ezingadluli ku-{ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Izikhathi zesaziso okungenani {ReminderTimeMinimumCount} ziyadingeka",
+  "minimumCountOfReminderTimes": "Sicela usethe okungenani izikhathi zezaziso ezingu-{ReminderTimeMinimumCount}",
   "purchaseErrorUnknownError": "Kuveleke iphutha elingaziwa. Sicela uzame futhi emva kwesikhathi. Uma ingaxazululeki, sicela uxhumane nathi kusuka ku Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Kube nephutha ku-{storeName}. Sicela ulinde isikhashana bese uphinda uzama.",
   "purchaseErrorPurchaseNotAllowedError": "Ukuthenga akuvunyelwe kulesi mshini",

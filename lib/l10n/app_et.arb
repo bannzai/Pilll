@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Palume sul pärast tellimuse tühistamist küsitlusele vastata",
   "pilllDescription": "Pilll — meeldetuletuste rakendus rasestumisvastase pilli võtmiseks",
   "reachedMaximumCountOfReminderTimes": "Oled jõudnud meeldetuletuse kellaaegade ülempiirini. Palun jäta alles kuni {ReminderTimeMaximumCount} kellaaega",
-  "minimumCountOfReminderTimes": "Meeldetuletuse aegu on vaja vähemalt {ReminderTimeMinimumCount}",
+  "minimumCountOfReminderTimes": "Määra vähemalt {ReminderTimeMinimumCount} teavitusaega",
   "purchaseErrorUnknownError": "Tekkis tundmatu viga. Palun proovige hiljem uuesti. Kui probleem ei lahene, võtke meiega ühendust: Seaded > Pöördumine. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Rakenduses {storeName} tekkis viga. Palun oodake veidi ja proovige uuesti.",
   "purchaseErrorPurchaseNotAllowedError": "Ostmine ei ole selles seadmes lubatud",

@@ -286,7 +286,7 @@
   "requestForCancelSurvey": "Viltu svara könnun eftir að áskriftinni var sagt upp",
   "pilllDescription": "Pilll – áminningarapp fyrir töku getnaðarvarnarpillunnar",
   "reachedMaximumCountOfReminderTimes": "Hámarksfjölda áminningartíma er náð. Hafðu þá í mesta lagi {ReminderTimeMaximumCount}",
-  "minimumCountOfReminderTimes": "Að minnsta kosti {ReminderTimeMinimumCount} tilkynningatímar eru nauðsynlegir",
+  "minimumCountOfReminderTimes": "Stilltu að minnsta kosti {ReminderTimeMinimumCount} tilkynningatíma",
   "purchaseErrorUnknownError": "Óvænt villa kom upp. Vinsamlegast reyndu aftur síðar. Ef vandamálið helst, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Villa kom upp í {storeName}. Bíddu í smá stund og reyndu aftur.",
   "purchaseErrorPurchaseNotAllowedError": "Kaup eru ekki leyfð á þessu tæki",
