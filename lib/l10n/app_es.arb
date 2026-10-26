@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "También se creó un registro de toma para el {takenDate}. Hoy, {takenDate}, no recibirás el aviso de las {reminderTimes}.\nSi fue un error, puedes anular la toma registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Consulta cómo deshacer el registro de una píldora",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar",
-  "pauseStartDateMustBeOnOrBefore": "Selecciona una fecha de inicio de la pausa el {date} o antes",
+  "pauseStartDateMustBeOnOrBefore": "Elige {date} o una fecha anterior para comenzar la pausa de la píldora",
   "addPausePeriod": "Añadir periodo de descanso de toma",
   "addedPausePeriod": "Se ha añadido el período de descanso de la toma",
   "pausePeriodOverlapsOther": "No puedes seleccionar un período que se superponga con otro período de pausa de toma",

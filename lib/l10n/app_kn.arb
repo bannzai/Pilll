@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} ಗಾಗಿಯೂ ಸೇವನೆಯ ದಾಖಲೆ ಮಾಡಲಾಗಿದೆ. ಇಂದು {takenDate} ರಂದು {reminderTimes} ಸಮಯದ ನೆನಪಿನ ಸೂಚನೆ ನಿಮಗೆ ಬರುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿ ದಾಖಲಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ದಾಖಲಾದ ಮಾತ್ರೆ ಸೇವನೆಯನ್ನು ರದ್ದುಪಡಿಸಿ",
   "midnightTakenWarningDialogSeeHowToRevert": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ಹೇಗೆ ರದ್ದುಮಾಡುವುದು ಎಂದು ನೋಡಿ",
   "midnightTakenWarningDialogNeverShowAgain": "ಮತ್ತೆ ತೋರಿಸಬೇಡಿ",
-  "pauseStartDateMustBeOnOrBefore": "ದಯವಿಟ್ಟು {date} ಅಥವಾ ಅದಕ್ಕೂ ಮೊದಲಿನ ವಿರಾಮ ಆರಂಭ ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ",
+  "pauseStartDateMustBeOnOrBefore": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭಕ್ಕೆ ದಯವಿಟ್ಟು {date} ಅಥವಾ ಅದಕ್ಕಿಂತ ಹಿಂದಿನ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "addPausePeriod": "ಸೆವನ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಿ",
   "addedPausePeriod": "ಸೆವನ ವಿರಾಮ ಅವಧಿಯನ್ನು ಸೇರಿಸಲಾಗಿದೆ",
   "pausePeriodOverlapsOther": "ಇನ್ನೊಂದು ಸೇವನೆ ವಿರಾಮ ಅವಧಿಯೊಂದಿಗೆ ಹೇರಳವಾಗಿರುವ ಅವಧಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲಾಗುವುದಿಲ್ಲ",

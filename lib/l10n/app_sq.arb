@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "U krijua edhe regjistrimi i marrjes për {takenDate}. Sot, {takenDate}, nuk do ta merrni njoftimin për orën {reminderTimes}.\nNëse është gabim, mund ta anuloni marrjen e regjistruar",
   "midnightTakenWarningDialogSeeHowToRevert": "Shihni si të anuloni regjistrimin e marrjes së pilulës",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
-  "pauseStartDateMustBeOnOrBefore": "Zgjidhni një datë fillimi të pushimit më {date} ose më herët",
+  "pauseStartDateMustBeOnOrBefore": "Ju lutemi, zgjidhni {date} ose një datë më të hershme për fillimin e pushimit nga pilulat",
   "addPausePeriod": "Shto periudhën e pauzës së marrjes",
   "addedPausePeriod": "U shtua periudha e pushimit nga marrja",
   "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pauze të marrjes",

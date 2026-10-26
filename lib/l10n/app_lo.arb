@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "ໄດ້ສ້າງບັນທຶກການກິນຢາສຳລັບ {takenDate} ແລ້ວ. ມື້ນີ້ {takenDate} ທ່ານຈະບໍ່ໄດ້ຮັບການແຈ້ງເຕືອນເວລາ {reminderTimes}.\nຖ້າບັນທຶກຜິດ ກະລຸນາຍົກເລີກການກິນຢາທີ່ບັນທຶກໄວ້",
   "midnightTakenWarningDialogSeeHowToRevert": "ເບິ່ງວິທີຍົກເລີກບັນທຶກການກິນຢາເມັດ",
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ສະແດງອີກ",
-  "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກວັນເລີ່ມພັກຢາໃນ {date} ຫຼືກ່ອນໜ້ານັ້ນ",
+  "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກ {date} ຫຼືວັນທີກ່ອນນັ້ນ ເປັນວັນເລີ່ມພັກການກິນຢາເມັດ",
   "addPausePeriod": "ເພີ່ມໄລຍະພັກການກິນ",
   "addedPausePeriod": "ໄດ້ເພີ່ມໄລຍະພັກການກິນ",
   "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກໄລຍະທີ່ທັບຊ້ອນກັບໄລຍະພັກການກິນອື່ນໄດ້",

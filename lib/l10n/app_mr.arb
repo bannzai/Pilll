@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} साठीही सेवन नोंद झाली आहे. आज, {takenDate} रोजी, {reminderTimes} ची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया नोंदवलेले गोळीचे सेवन रद्द करा",
   "midnightTakenWarningDialogSeeHowToRevert": "गोळी घेतल्याची नोंद कशी रद्द करायची ते पाहा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
-  "pauseStartDateMustBeOnOrBefore": "कृपया {date} किंवा त्यापूर्वीची विश्रांती सुरू होण्याची तारीख निवडा",
+  "pauseStartDateMustBeOnOrBefore": "गोळी घेण्याच्या विश्रांतीची सुरुवात म्हणून कृपया {date} किंवा त्याआधीची तारीख निवडा",
   "addPausePeriod": "घेण्याचा विश्रांती कालावधी जोडा",
   "addedPausePeriod": "सेवन विश्रांती कालावधी जोडला आहे",
   "pausePeriodOverlapsOther": "दुसऱ्या सेवन-विराम कालावधीशी जुळणारा कालावधी निवडता येत नाही",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Создаден е и Запис за земање за {takenDate}. Денес, {takenDate}, нема да добиете известување во {reminderTimes}.\nАко ова е грешка, можете да го откажете запишаното земање",
   "midnightTakenWarningDialogSeeHowToRevert": "Погледнете како да откажете запис за земање таблета",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
-  "pauseStartDateMustBeOnOrBefore": "Изберете датум на почеток на паузата на {date} или порано",
+  "pauseStartDateMustBeOnOrBefore": "Ве молиме изберете {date} или претходен датум за почеток на паузата во земањето таблета",
   "addPausePeriod": "Додај период на пауза во земањето",
   "addedPausePeriod": "Додаден е период на пауза од земање",
   "pausePeriodOverlapsOther": "Не може да изберете период што се преклопува со друг период на пауза во земањето",

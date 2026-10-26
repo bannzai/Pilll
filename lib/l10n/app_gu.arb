@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} માટે પણ ગોળી સેવનની નોંધ થઈ ગઈ છે. આજે, {takenDate}ના રોજ, {reminderTimes} વાગ્યાની સૂચના તમને મળશે નહીં.\nજો આ ભૂલથી થયું હોય, તો કૃપા કરીને નોંધાયેલું ગોળી સેવન રદ કરો",
   "midnightTakenWarningDialogSeeHowToRevert": "ગોળી લીધાનું નોંધાણ કેવી રીતે રદ કરવું તે જુઓ",
   "midnightTakenWarningDialogNeverShowAgain": "ફરીથી બતાવશો નહીં",
-  "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",
+  "pauseStartDateMustBeOnOrBefore": "ગોળી લેવાના વિરામની શરૂઆત માટે કૃપા કરીને {date} અથવા તે પહેલાંની તારીખ પસંદ કરો",
   "addPausePeriod": "લેવાની વિરામ અવધિ ઉમેરો",
   "addedPausePeriod": "સેવન વિરામનો સમયગાળો ઉમેરાયો છે",
   "pausePeriodOverlapsOther": "બીજા લેવાની વિરામ અવધિ સાથે ઓવરલેપ થતો સમયગાળો પસંદ કરી શકાતો નથી",

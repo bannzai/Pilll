@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Для {takenDate} таксама зроблены запіс прыёму пігулак. Сёння, {takenDate}, апавяшчэнне на {reminderTimes} вам не прыйдзе.\nКалі гэта памылка, калі ласка, скасуйце запіс пра прыём пігулкі",
   "midnightTakenWarningDialogSeeHowToRevert": "Як адмяніць запіс аб прыёме пігулкі",
   "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
-  "pauseStartDateMustBeOnOrBefore": "Выберыце дату пачатку перапынку не пазней за {date}",
+  "pauseStartDateMustBeOnOrBefore": "Калі ласка, выберыце {date} або ранейшую дату пачатку перапынку ў прыёме пігулак",
   "addPausePeriod": "Дадаць перыяд перапынку ў прыёме",
   "addedPausePeriod": "Перыяд перапынку ў прыёме дададзены",
   "pausePeriodOverlapsOther": "Нельга выбраць перыяд, які перакрываецца з іншым перыядам перапынку прыёму",

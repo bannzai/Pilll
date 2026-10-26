@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "ለ{takenDate} አወሳሰድ መዝገብ ተፈጥሯል። ዛሬ {takenDate} ስለሆነ፣ የ{reminderTimes} ማሳወቂያ አይደርስዎትም።\nበስህተት ከተመዘገበ፣ የክኒን መውሰድ መዝገቡን ይሰርዙ",
   "midnightTakenWarningDialogSeeHowToRevert": "የክኒን መውሰድ መዝገብን እንዴት መሰረዝ እንደሚቻል ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አታሳይ",
-  "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
+  "pauseStartDateMustBeOnOrBefore": "እባክዎ ለክኒን ዕረፍት መጀመሪያ {date} ወይም ከዚያ በፊት ያለ ቀን ይምረጡ",
   "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",
   "addedPausePeriod": "የመውሰድ እረፍት ጊዜ ተጨምሯል",
   "pausePeriodOverlapsOther": "ከሌላ የመድሀኒት እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም",

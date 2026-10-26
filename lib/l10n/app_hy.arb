@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate}-ի համար նույնպես ստեղծվել է ընդունման գրառում։ Այսօր՝ {takenDate}-ին, {reminderTimes}-ի ծանուցումը Դուք չեք ստանա։\nԵթե գրառումը սխալմամբ է արվել, խնդրում ենք չեղարկել գրանցված ընդունումը",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսեք, թե ինչպես չեղարկել հաբի ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս չցուցադրել",
-  "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",
+  "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք դեղահաբերի ընդունման ընդմիջման սկզբի համար ընտրել {date} կամ ավելի վաղ ամսաթիվ",
   "addPausePeriod": "Ավելացնել ընդունման դադարային շրջան",
   "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է",
   "pausePeriodOverlapsOther": "Չի կարելի ընտրել այնպիսի ժամանակահատված, որը համընկնում է ընդունման այլ դադարի ժամանակահատվածի հետ",

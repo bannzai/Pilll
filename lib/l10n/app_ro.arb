@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "A fost adăugată și o înregistrare pentru {takenDate}. Astăzi, {takenDate}, nu vei primi notificarea de la {reminderTimes}.\nDacă a fost o greșeală, poți anula administrarea înregistrată",
   "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum anulezi înregistrarea unei pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa",
-  "pauseStartDateMustBeOnOrBefore": "Selectați o dată de început a pauzei pe {date} sau mai devreme",
+  "pauseStartDateMustBeOnOrBefore": "Alege {date} sau o dată anterioară pentru începutul pauzei de la pilulă",
   "addPausePeriod": "Adaugă perioada de pauză la administrare",
   "addedPausePeriod": "Perioada de pauză a administrării a fost adăugată",
   "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare",

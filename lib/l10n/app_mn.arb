@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} өдрийн эм уусан бүртгэл мөн хийгдлээ. Өнөөдөр буюу {takenDate}-нд {reminderTimes} цагийн сануулга танд ирэхгүй.\nХэрэв андуурч бүртгэсэн бол эм уусан бүртгэлийг цуцална уу",
   "midnightTakenWarningDialogSeeHowToRevert": "Эм уусан тэмдэглэлийг хэрхэн цуцлахыг харна уу",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин харуулахгүй",
-  "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",
+  "pauseStartDateMustBeOnOrBefore": "Эм уух завсарлагын эхлэх өдрөөр {date} эсвэл түүнээс өмнөх өдрийг сонгоно уу",
   "addPausePeriod": "Уух завсарлагааны хугацаа нэмэх",
   "addedPausePeriod": "Уух завсарлагааны хугацаа нэмлээ",
   "pausePeriodOverlapsOther": "Өөр уух завсарлагын хугацаатай давхцсан хугацааг сонгох боломжгүй",

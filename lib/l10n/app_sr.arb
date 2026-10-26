@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "За {takenDate} је направљена и евиденција узимања. Данас, {takenDate}, нећете добити обавештење за {reminderTimes}.\nАко је ово грешка, можете да откажете забележено узимање",
   "midnightTakenWarningDialogSeeHowToRevert": "Погледајте како да поништите запис о узимању пилуле",
   "midnightTakenWarningDialogNeverShowAgain": "Не приказуј поново",
-  "pauseStartDateMustBeOnOrBefore": "Izaberite datum početka pauze na dan {date} ili ranije",
+  "pauseStartDateMustBeOnOrBefore": "Молимо Вас, изаберите {date} или ранији датум за почетак паузе у узимању пилула",
   "addPausePeriod": "Dodaj period pauze u uzimanju",
   "addedPausePeriod": "Додат је период паузе у узимању",
   "pausePeriodOverlapsOther": "Не можете да изаберете период који се преклапа са другим периодом паузе у узимању",

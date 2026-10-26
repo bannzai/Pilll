@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} egunerako hartze-erregistro bat ere sortu da. Gaur, {takenDate}, ez duzu {reminderTimes}(e)ko jakinarazpena jasoko.\nOkerra bada, erregistratutako pilularen hartzea ezezta dezakezu",
   "midnightTakenWarningDialogSeeHowToRevert": "Ikusi nola ezeztatu pilula hartu izanaren erregistroa",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
-  "pauseStartDateMustBeOnOrBefore": "Aukeratu atsedenaren hasiera-data {date} edo lehenago",
+  "pauseStartDateMustBeOnOrBefore": "Hautatu {date} edo lehenagoko data pilulak hartzeko etenaldiaren hasierarako",
   "addPausePeriod": "Gehitu hartze-atsedenaldia",
   "addedPausePeriod": "Hartzeko atsedenaldia gehitu da",
   "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} നുള്ള ഗുളിക കഴിച്ചതിന്റെ രേഖയും സൃഷ്ടിച്ചു. ഇന്ന് {takenDate} ന് {reminderTimes} ലെ ഓർമ്മപ്പെടുത്തൽ ലഭിക്കില്ല.\nഅബദ്ധത്തിൽ രേഖപ്പെടുത്തിയതാണെങ്കിൽ, ഗുളിക കഴിച്ചതായി രേഖപ്പെടുത്തിയത് റദ്ദാക്കൂ",
   "midnightTakenWarningDialogSeeHowToRevert": "ഗുളിക കഴിച്ചതിന്റെ രേഖ എങ്ങനെ റദ്ദാക്കാമെന്ന് കാണൂ",
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി കാണിക്കരുത്",
-  "pauseStartDateMustBeOnOrBefore": "ദയവായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള ഇടവേള ആരംഭ തീയതി തിരഞ്ഞെടുക്കുക",
+  "pauseStartDateMustBeOnOrBefore": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങാൻ {date} അല്ലെങ്കിൽ അതിനു മുമ്പുള്ള തീയതി തിരഞ്ഞെടുക്കൂ",
   "addPausePeriod": "കഴിക്കലിലെ ഇടവേളാ കാലയളവ് ചേർക്കുക",
   "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു",
   "pausePeriodOverlapsOther": "മറ്റൊരു കഴിവ് ഇടവേളയുമായി മൂടിമുട്ടുന്ന കാലയളവ് തിരഞ്ഞെടുക്കാൻ കഴിയില്ല",

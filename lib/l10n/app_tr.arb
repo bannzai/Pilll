@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} için de hap kullanım kaydı oluşturuldu. Bugün, {takenDate} tarihinde, {reminderTimes} bildirimini almayacaksınız.\nBu bir hataysa lütfen kaydedilen hap alımını iptal edin",
   "midnightTakenWarningDialogSeeHowToRevert": "Hap alma kaydını nasıl geri alacağınızı görün",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
-  "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",
+  "pauseStartDateMustBeOnOrBefore": "Hap kullanımına ara verme başlangıcı için lütfen {date} veya daha önceki bir tarihi seçin",
   "addPausePeriod": "Kullanım ara verme süresi ekle",
   "addedPausePeriod": "Alım arası süresi eklendi",
   "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez",

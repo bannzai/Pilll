@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Myös päivälle {takenDate} luotiin pilleriloki. Et saa tänään {takenDate} muistutusta klo {reminderTimes}.\nJos merkintä tehtiin vahingossa, voit perua kirjatun pillerin oton",
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten pillerin ottomerkintä perutaan",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä uudelleen",
-  "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",
+  "pauseStartDateMustBeOnOrBefore": "Valitse pilleritauon alkamispäiväksi {date} tai sitä aiempi päivä",
   "addPausePeriod": "Lisää taukojakso",
   "addedPausePeriod": "Taukojakso lisätty",
   "pausePeriodOverlapsOther": "Et voi valita jaksoa, რომელიც on päällekkäinen toisen taukojaksen kanssa",

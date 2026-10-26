@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Для {takenDate} также создан журнал приёма таблеток. Сегодня, {takenDate}, уведомление на {reminderTimes} вам не придёт.\nЕсли запись сделана по ошибке, отмените отмеченный приём таблетки",
   "midnightTakenWarningDialogSeeHowToRevert": "Как отменить запись о приёме таблетки",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
-  "pauseStartDateMustBeOnOrBefore": "Выберите дату начала перерыва {date} или раньше",
+  "pauseStartDateMustBeOnOrBefore": "Пожалуйста, выберите {date} или более раннюю дату начала перерыва в приёме таблеток",
   "addPausePeriod": "Добавить период перерыва в приеме",
   "addedPausePeriod": "Добавлен период перерыва в приёме",
   "pausePeriodOverlapsOther": "Нельзя выбрать период, который пересекается с другим периодом перерыва в приеме",

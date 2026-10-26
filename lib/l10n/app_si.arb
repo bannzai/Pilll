@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} සඳහා ද පෙති ගැනීමේ සටහනක් එක් කර ඇත. අද {takenDate} දින {reminderTimes} දැනුම්දීම ඔබට නොලැබේ.\nමෙය වැරදීමකින් සටහන් වී ඇත්නම්, කරුණාකර සටහන් කළ පෙති ගැනීම අවලංගු කරන්න",
   "midnightTakenWarningDialogSeeHowToRevert": "පෙත්ත ගත් බවට වූ සටහන අවලංගු කරන ආකාරය බලන්න",
   "midnightTakenWarningDialogNeverShowAgain": "නැවත නොපෙන්වන්න",
-  "pauseStartDateMustBeOnOrBefore": "කරුණාකර {date} හෝ ඊට පෙර විවේක ආරම්භක දිනයක් තෝරන්න",
+  "pauseStartDateMustBeOnOrBefore": "පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට කරුණාකර {date} හෝ ඊට පෙර දිනයක් තෝරන්න",
   "addPausePeriod": "ගැනීමේ විරාම කාලය එක් කරන්න",
   "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කර ඇත",
   "pausePeriodOverlapsOther": "වෙනත් භාවිත විරාම කාලසීමාවක් සමඟ එකිනෙක මැලවෙන කාලසීමාවක් තේරිය නොහැක",

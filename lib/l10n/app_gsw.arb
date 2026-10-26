@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Für de {takenDate} isch au e Iinahm-Ufzeichnig gmacht worde. Hüt, am {takenDate}, chunnt d Erinnerig vo {reminderTimes} nöd bi dir aa.\nWänn das es Versee gsi isch, chasch d iitreiti Iinahm rückgängig mache",
   "midnightTakenWarningDialogSeeHowToRevert": "Lueg, wie du e Iinahm-Ufzeichnig rückgängig machsch",
   "midnightTakenWarningDialogNeverShowAgain": "Nüme aazeige",
-  "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",
+  "pauseStartDateMustBeOnOrBefore": "Wähl bitte {date} oder es früehers Datum für de Aafang vo dinere Pillepause",
   "addPausePeriod": "Pausenäriigs-Ziit derzuefüege",
   "addedPausePeriod": "D Paus für d Einnahm isch zuegfiegt worde",
   "pausePeriodOverlapsOther": "Du chasch kei Zytabschnitt uuswähle, wo sich mit eme andere Einnahmepause-Zytabschnitt überlappt",

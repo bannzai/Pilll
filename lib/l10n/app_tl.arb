@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Nagawa rin ang tala ng pag-inom para sa {takenDate}. Ngayong {takenDate}, hindi ninyo matatanggap ang abiso para sa {reminderTimes}.\nKung nagkamali sa pagtatala, maaari po ninyong kanselahin ang naitalang pag-inom ng pildoras",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang tala ng pag-inom ng pildoras",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
-  "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",
+  "pauseStartDateMustBeOnOrBefore": "Pakipili po ang {date} o mas maagang petsa bilang simula ng pahinga sa pag-inom ng pildoras",
   "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",
   "addedPausePeriod": "Naidagdag na ang pahinga sa pag-inom",
   "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong may overlap sa isa pang panahon ng pahinga sa pag-inom",

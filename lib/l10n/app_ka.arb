@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate}-ისთვისაც შეიქმნა მიღების ჩანაწერი. დღეს, {takenDate}-ს, {reminderTimes}-ის შეტყობინებას ვერ მიიღებთ.\nთუ ეს შეცდომით მოხდა, გთხოვთ, გააუქმოთ დაფიქსირებული მიღება",
   "midnightTakenWarningDialogSeeHowToRevert": "ნახეთ, როგორ გააუქმოთ აბის მიღების ჩანაწერი",
   "midnightTakenWarningDialogNeverShowAgain": "აღარ გამოჩნდეს",
-  "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აირჩიოთ შესვენების დაწყების თარიღი {date} ან უფრო ადრე",
+  "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აბების მიღების შესვენების დასაწყისად აირჩიოთ {date} ან უფრო ადრინდელი თარიღი",
   "addPausePeriod": "მიღების შესვენების პერიოდის დამატება",
   "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა",
   "pausePeriodOverlapsOther": "სხვა მიღების შესვენების პერიოდთან გადაფარვის მქონე პერიოდის არჩევა შეუძლებელია",

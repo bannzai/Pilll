@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Създаден е и запис на приема за {takenDate}. Днес, {takenDate}, няма да получите известието за {reminderTimes}.\nАко това е грешка, моля, отменете отбелязания прием",
   "midnightTakenWarningDialogSeeHowToRevert": "Вижте как да отмените запис за прием на хапче",
   "midnightTakenWarningDialogNeverShowAgain": "Да не се показва отново",
-  "pauseStartDateMustBeOnOrBefore": "Моля, изберете начална дата на паузата на {date} или по-рано",
+  "pauseStartDateMustBeOnOrBefore": "Моля, изберете {date} или по-ранна дата за начало на паузата в приема на хапчета",
   "addPausePeriod": "Добавяне на период без прием",
   "addedPausePeriod": "Добавен е период за почивка от приема",
   "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друг период на почивка от приема",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "È stata creata anche una voce nel registro delle assunzioni per il {takenDate}. Oggi, {takenDate}, non riceverai la notifica delle {reminderTimes}.\nSe si tratta di un errore, puoi annullare l’assunzione registrata",
   "midnightTakenWarningDialogSeeHowToRevert": "Scopri come annullare la registrazione di una pillola",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più",
-  "pauseStartDateMustBeOnOrBefore": "Seleziona una data di inizio pausa il {date} o prima",
+  "pauseStartDateMustBeOnOrBefore": "Scegli {date} o una data precedente per l'inizio della pausa dalla pillola",
   "addPausePeriod": "Aggiungi periodo di pausa nell’assunzione",
   "addedPausePeriod": "È stato aggiunto il periodo di pausa nell'assunzione",
   "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un altro periodo di pausa di assunzione",

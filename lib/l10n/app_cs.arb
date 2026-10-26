@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Byl vytvořen také záznam užití pro {takenDate}. Dnes, {takenDate}, vám upozornění na {reminderTimes} nepřijde.\nPokud jde o omyl, zrušte prosím zaznamenané užití",
   "midnightTakenWarningDialogSeeHowToRevert": "Jak zrušit záznam o užití pilulky",
   "midnightTakenWarningDialogNeverShowAgain": "Již nezobrazovat",
-  "pauseStartDateMustBeOnOrBefore": "Vyberte datum začátku pauzy {date} nebo dřívější",
+  "pauseStartDateMustBeOnOrBefore": "Pro začátek pauzy v užívání pilulek prosím vyberte {date} nebo dřívější datum",
   "addPausePeriod": "Přidat období pauzy v užívání",
   "addedPausePeriod": "Období přestávky v užívání bylo přidáno",
   "pausePeriodOverlapsOther": "Nelze vybrat období, které se překrývá s jiným obdobím pauzy v užívání",

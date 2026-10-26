@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} তাৰিখৰ ঔষধ সেৱনৰ ৰেকৰ্ডো কৰা হৈছে। আজি {takenDate} তাৰিখে {reminderTimes} বজাত দিয়া জাননী আপুনি নাপাব।\nভুলতে ৰেকৰ্ড হৈ থাকিলে, অনুগ্ৰহ কৰি ঔষধ সেৱনৰ ৰেকৰ্ড বাতিল কৰক",
   "midnightTakenWarningDialogSeeHowToRevert": "বড়ি খোৱাৰ ৰেকৰ্ড কেনেকৈ বাতিল কৰিব চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
-  "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি {date} বা তাৰ আগৰ বিৰতি আৰম্ভণিৰ তাৰিখ বাছনি কৰক",
+  "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি বড়ি খোৱাৰ বিৰতিৰ আৰম্ভণিৰ বাবে {date} বা তাৰ আগৰ তাৰিখ বাছনি কৰক",
   "addPausePeriod": "খোৱাৰ বিৰতিৰ সময় যোগ কৰক",
   "addedPausePeriod": "সেৱন-বিৰতি সময়সীমা যোগ কৰা হৈছে",
   "pausePeriodOverlapsOther": "অন্য এটা সেৱন-বিৰতি সময়ৰ সৈতে ওভাৰলেপ হোৱা সময় নিৰ্বাচন কৰিব নোৱাৰি",

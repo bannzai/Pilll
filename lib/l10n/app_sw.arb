@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Rekodi ya kumeza vidonge imeundwa pia kwa tarehe {takenDate}. Leo, {takenDate}, hutapokea ukumbusho wa saa {reminderTimes}.\nIkiwa hii ni kosa, tafadhali batilisha umezaji uliorekodiwa",
   "midnightTakenWarningDialogSeeHowToRevert": "Angalia jinsi ya kufuta rekodi ya kumeza kidonge",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
-  "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",
+  "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua {date} au tarehe ya awali zaidi kuwa mwanzo wa mapumziko ya kumeza vidonge",
   "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
   "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa",
   "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza",

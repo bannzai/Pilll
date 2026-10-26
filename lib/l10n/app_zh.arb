@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "已为 {takenDate} 添加服药记录。今天是 {takenDate}，你将不会收到 {reminderTimes} 的提醒。\n如果记录有误，请撤销这次服药记录",
   "midnightTakenWarningDialogSeeHowToRevert": "查看如何撤销服药记录",
   "midnightTakenWarningDialogNeverShowAgain": "不再显示",
-  "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",
+  "pauseStartDateMustBeOnOrBefore": "请将暂停服药的开始日期选为{date}或更早的日期",
   "addPausePeriod": "添加服用休息期",
   "addedPausePeriod": "已添加服用休息期间",
   "pausePeriodOverlapsOther": "不能选择与其他服用休息期间重叠的期间",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Die innamerekord vir {takenDate} is ook gemaak. Jy sal vandag, {takenDate}, nie die kennisgewing vir {reminderTimes} ontvang nie.\nAs dit ’n fout was, kan jy asseblief die aangetekende inname kanselleer",
   "midnightTakenWarningDialogSeeHowToRevert": "Kyk hoe om ’n pilinname te kanselleer",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie weer wys nie",
-  "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",
+  "pauseStartDateMustBeOnOrBefore": "Kies asseblief {date} of ’n vroeër datum as die begindatum van jou pilpouse",
   "addPausePeriod": "Voeg pouseperiode by",
   "addedPausePeriod": "Inname-pouseperiode is bygevoeg",
   "pausePeriodOverlapsOther": "Periodes wat oorvleuel met 'n ander pouse-periode kan nie gekies word nie",

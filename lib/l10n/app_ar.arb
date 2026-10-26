@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "تم أيضًا إنشاء تسجيل تناول ليوم {takenDate}. لن يصلكِ إشعار الساعة {reminderTimes} اليوم، {takenDate}.\nإذا كان التسجيل بالخطأ، يُرجى إلغاء تسجيل تناول الحبة",
   "midnightTakenWarningDialogSeeHowToRevert": "اطّلعي على طريقة التراجع عن تسجيل تناول الحبة",
   "midnightTakenWarningDialogNeverShowAgain": "عدم الإظهار مجددًا",
-  "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",
+  "pauseStartDateMustBeOnOrBefore": "يرجى اختيار {date} أو تاريخ يسبقه لبدء فترة التوقف عن تناول الحبوب",
   "addPausePeriod": "إضافة فترة التوقف عن الاستخدام",
   "addedPausePeriod": "تمت إضافة فترة التوقف عن تناول الحبوب",
   "pausePeriodOverlapsOther": "لا يمكن تحديد فترة تتداخل مع فترة إيقاف أخرى",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "A(z) {takenDate} napra is bekerült egy bejegyzés a tablettaszedési naplóba. Ma, {takenDate} napján nem érkezik értesítés {reminderTimes} időpontban.\nHa ez tévedés volt, visszavonhatod a rögzített tablettaszedést",
   "midnightTakenWarningDialogSeeHowToRevert": "Nézd meg, hogyan vonhatod vissza a tabletta szedésének rögzítését",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg újra",
-  "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",
+  "pauseStartDateMustBeOnOrBefore": "A tablettaszedési szünet kezdetének {date} vagy korábbi dátumot válassz",
   "addPausePeriod": "Szedési szünet időszakának hozzáadása",
   "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát",
   "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel",

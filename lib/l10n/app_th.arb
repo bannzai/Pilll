@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "มีบันทึกการทานยาสำหรับ {takenDate} แล้วค่ะ วันนี้ {takenDate} คุณจะไม่ได้รับการแจ้งเตือนเวลา {reminderTimes} ค่ะ\nหากบันทึกผิด โปรดยกเลิกการทานยาที่บันทึกไว้ค่ะ",
   "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธียกเลิกบันทึกการทานยา",
   "midnightTakenWarningDialogNeverShowAgain": "ไม่ต้องแสดงอีก",
-  "pauseStartDateMustBeOnOrBefore": "โปรดเลือกวันเริ่มพักยาเป็นวันที่ {date} หรือก่อนหน้านั้น",
+  "pauseStartDateMustBeOnOrBefore": "กรุณาเลือกวันที่ {date} หรือวันที่ก่อนหน้าเป็นวันเริ่มพักทานยาเม็ดค่ะ",
   "addPausePeriod": "เพิ่มช่วงพักการทาน",
   "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว",
   "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดรับประทานอื่นได้",

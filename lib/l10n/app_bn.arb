@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} তারিখের জন্যও সেবনের রেকর্ড করা হয়েছে। আজ {takenDate} তারিখে {reminderTimes}-এর বিজ্ঞপ্তি আপনি পাবেন না।\nভুল করে রেকর্ড করা হলে, অনুগ্রহ করে পিল সেবনের রেকর্ডটি বাতিল করুন",
   "midnightTakenWarningDialogSeeHowToRevert": "পিল খাওয়ার রেকর্ড কীভাবে বাতিল করবেন দেখুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
-  "pauseStartDateMustBeOnOrBefore": "অনুগ্রহ করে {date} বা তার আগের বিরতি শুরুর তারিখ নির্বাচন করুন",
+  "pauseStartDateMustBeOnOrBefore": "পিল খাওয়ার বিরতির শুরুর দিন হিসেবে অনুগ্রহ করে {date} বা তার আগের কোনো দিন বেছে নিন",
   "addPausePeriod": "ওষুধ না নেওয়ার সময়কাল যোগ করুন",
   "addedPausePeriod": "খাওয়ার বিরতির সময়কাল যোগ করা হয়েছে",
   "pausePeriodOverlapsOther": "অন্য কোনো ওষুধ খাওয়া বন্ধের সময়ের সঙ্গে ওভারল্যাপ করা সময় বেছে নেওয়া যাবে না",

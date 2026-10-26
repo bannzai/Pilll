@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Rekod pengambilan untuk {takenDate} juga telah dibuat. Hari ini, {takenDate}, anda tidak akan menerima peringatan pada {reminderTimes}.\nJika tersilap, sila batalkan pengambilan yang direkodkan",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan pil",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
-  "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh mula rehat pada {date} atau sebelumnya",
+  "pauseStartDateMustBeOnOrBefore": "Sila pilih {date} atau tarikh yang lebih awal sebagai tarikh mula rehat pengambilan pil",
   "addPausePeriod": "Tambah tempoh rehat pengambilan",
   "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah",
   "pausePeriodOverlapsOther": "Tempoh yang bertindih dengan tempoh rehat pengambilan lain tidak boleh dipilih",

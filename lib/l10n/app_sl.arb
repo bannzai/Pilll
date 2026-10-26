@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Za {takenDate} je bilo ustvarjeno tudi beleženje jemanja. Danes, {takenDate}, obvestila za {reminderTimes} ne boste prejeli.\nČe je šlo za pomoto, lahko zabeleženo jemanje prekličete",
   "midnightTakenWarningDialogSeeHowToRevert": "Oglejte si, kako prekličete zapis o zaužitju tabletke",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj več",
-  "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",
+  "pauseStartDateMustBeOnOrBefore": "Za začetek premora pri jemanju tablet izberite {date} ali zgodnejši datum",
   "addPausePeriod": "Dodaj obdobje premora pri jemanju",
   "addedPausePeriod": "Dodano je obdobje odmora pri jemanju",
   "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju",

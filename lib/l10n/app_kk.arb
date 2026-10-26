@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} күніне де қабылдау жазбасы жасалды. Бүгін, {takenDate} күні, {reminderTimes} уақытындағы ескертпе сізге келмейді.\nЕгер бұл қате болса, тіркелген қабылдауды болдырмаңыз",
   "midnightTakenWarningDialogSeeHowToRevert": "Таблетканы қабылдау жазбасын қалай жоюға болатынын қараңыз",
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
-  "pauseStartDateMustBeOnOrBefore": "Үзілістің басталу күнін {date} немесе одан бұрын таңдаңыз",
+  "pauseStartDateMustBeOnOrBefore": "Таблетка қабылдаудағы үзілістің басталу күні ретінде {date} немесе одан ертерек күнді таңдаңыз",
   "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",
   "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды",
   "pausePeriodOverlapsOther": "Басқа қабылдау үзіліс кезеңімен қабаттасатын кезеңді таңдауға болмайды",

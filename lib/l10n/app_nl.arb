@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Er is ook een innameregistratie gemaakt voor {takenDate}. Je krijgt vandaag, {takenDate}, geen herinnering om {reminderTimes}.\nIs dit per ongeluk gebeurd? Dan kun je de geregistreerde inname ongedaan maken",
   "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe je een geregistreerde pilinname ongedaan maakt",
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
-  "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",
+  "pauseStartDateMustBeOnOrBefore": "Kies {date} of een eerdere datum als begin van je pillenpauze",
   "addPausePeriod": "Pauzeperiode toevoegen",
   "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd",
   "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Dodano także wpis do rejestru przyjęciа tabletki na {takenDate}. Dziś, {takenDate}, nie otrzymasz przypomnienia o {reminderTimes}.\nJeśli to pomyłka, możesz cofnąć zarejestrowane przyjęcie tabletki",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć zapis przyjęcia tabletki",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
-  "pauseStartDateMustBeOnOrBefore": "Wybierz datę rozpoczęcia przerwy {date} lub wcześniejszą",
+  "pauseStartDateMustBeOnOrBefore": "Wybierz {date} lub wcześniejszą datę jako początek przerwy w przyjmowaniu tabletek",
   "addPausePeriod": "Dodaj okres przerwy w przyjmowaniu",
   "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu",
   "pausePeriodOverlapsOther": "Nie można wybrać okresu, który nakłada się na inny okres przerwy w przyjmowaniu",

@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Catatan minum pil untuk {takenDate} juga sudah dibuat. Hari ini, {takenDate}, Anda tidak akan menerima pengingat pukul {reminderTimes}.\nJika ini keliru, silakan batalkan catatan minum pil tersebut",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan minum pil",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
-  "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",
+  "pauseStartDateMustBeOnOrBefore": "Pilih {date} atau tanggal sebelumnya sebagai awal jeda minum pil",
   "addPausePeriod": "Tambahkan periode jeda minum",
   "addedPausePeriod": "Periode jeda minum telah ditambahkan",
   "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih",

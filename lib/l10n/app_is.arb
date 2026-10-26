@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "Inntökuskrá var einnig gerð fyrir {takenDate}. Í dag, {takenDate}, færðu ekki áminningu kl. {reminderTimes}.\nEf þetta var óvart geturðu afturkallað skráða inntöku",
   "midnightTakenWarningDialogSeeHowToRevert": "Sjáðu hvernig má afturkalla skráningu á pillutöku",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna aftur",
-  "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",
+  "pauseStartDateMustBeOnOrBefore": "Veldu {date} eða fyrri dagsetningu sem upphaf pilluhléssins",
   "addPausePeriod": "Bæta við hlé tímabili",
   "addedPausePeriod": "Bætt var við hléum á inntöku",
   "pausePeriodOverlapsOther": "Ekki er hægt að velja tímabil sem skarast við annað hlé tímabil",

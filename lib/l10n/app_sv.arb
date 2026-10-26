@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "En intagslogg skapades också för {takenDate}. Du får ingen påminnelse kl. {reminderTimes} i dag, {takenDate}.\nOm det blev fel kan du ångra det registrerade intaget",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrerad tablett",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
-  "pauseStartDateMustBeOnOrBefore": "Välj ett startdatum för pausen {date} eller tidigare",
+  "pauseStartDateMustBeOnOrBefore": "Välj {date} eller ett tidigare datum som start på ditt pilleruppehåll",
   "addPausePeriod": "Lägg till uppehållsperiod",
   "addedPausePeriod": "Pausperioden för intag har lagts till",
   "pausePeriodOverlapsOther": "Du kan inte välja en period som överlappar med en annan pausperiod",

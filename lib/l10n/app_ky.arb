@@ -557,7 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} күнүнө да таблетка ичүү жазуусу түзүлдү. Бүгүн, {takenDate} күнү, {reminderTimes} убактысындагы эскертмени албайсыз.\nЭгер бул жаңылыштык болсо, катталган таблетка ичүүнү жокко чыгарыңыз",
   "midnightTakenWarningDialogSeeHowToRevert": "Таблетка ичүү жазуусун кантип жокко чыгарууну көрүңүз",
   "midnightTakenWarningDialogNeverShowAgain": "Кайра көрсөтпөө",
-  "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",
+  "pauseStartDateMustBeOnOrBefore": "Таблетка ичүүдөгү тыныгуунун башталышы үчүн {date} же андан мурунку күндү тандаңыз",
   "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",
   "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду",
   "pausePeriodOverlapsOther": "Башка ичүүнү токтотуу мөөнөтү менен дал келген мөөнөттү тандап болбойт",
