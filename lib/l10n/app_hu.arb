@@ -351,7 +351,7 @@
   "scheduleRecord": "Esemény hozzáadása",
   "previousPillSheetGroupNotFound": "Még nincs korábbi tablettacsomag-csoport",
   "withPillSheetCount": "{number} levél tabletta",
-  "connectionError": "A hálózati kapcsolat instabil. Kérjük, próbálja újra később.",
+  "connectionError": "Úgy tűnik, az internetkapcsolat nem stabil. Próbáld újra egy kis idő múlva.",
   "unknownErrorAndRetryAfter": "Hiba történt. Kérjük, próbálja újra később.",
   "errorOccurred": "Hiba történt",
   "unknownError": "Ismeretlen hiba történt",
