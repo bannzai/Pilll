@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "តើថ្នាំគ្រាប់ដែលអ្នកលេបគឺ Yaz Flex មែនទេ?",
   "initialSettingAskYazFlexDescription": "បើជ្រើស «បាទ/ចាស» ការបង្ហាញនឹងត្រូវបានកំណត់ឱ្យបង្ហាញចំនួនថ្ងៃចាប់ពីពេលបញ្ចប់ការផ្អាកលេបថ្នាំ",
   "yazFlexLastRestDurationTitle": "សូមចុចលើគ្រាប់ថ្នាំដែលអ្នកបានលេបមុនពេលផ្អាកលេបថ្នាំ",
-  "yazFlexLastRestDurationNote": "សូមជ្រើសរើសគ្រាប់ថ្នាំចុងក្រោយដែលអ្នកបានលេប មុនពេលចាប់ផ្តើមការផ្អាក",
+  "yazFlexLastRestDurationNote": "សូមជ្រើសរើសគ្រាប់ថ្នាំចុងក្រោយដែលអ្នកបានលេប មុនពេលផ្អាកលេបថ្នាំ",
   "yazFlexRestDurationDaysLabel": "ចំនួនថ្ងៃឈប់ថ្នាំ",
   "yazFlexRestDurationDaysValue": "{days} ថ្ងៃ",
   "yazFlexResting": "កំពុងសម្រាកការលេប ហើយមិនទាន់ចាប់ផ្តើមវិញទេ",

@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "¿Tomas Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si eliges «Sí», configuraremos la pantalla para mostrar cuántos días han pasado desde que terminó el descanso",
   "yazFlexLastRestDurationTitle": "Toca la píldora que tomaste antes del descanso",
-  "yazFlexLastRestDurationNote": "Selecciona la última píldora que tomaste antes de empezar el descanso",
+  "yazFlexLastRestDurationNote": "Selecciona la última píldora que tomaste antes del descanso",
   "yazFlexRestDurationDaysLabel": "Número de días de descanso",
   "yazFlexRestDurationDaysValue": "{days} días",
   "yazFlexResting": "Estoy en un descanso y aún no he retomado la toma",

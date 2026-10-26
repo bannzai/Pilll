@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Czy bierzesz Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Po wybraniu „Tak” ustawimy wyświetlanie liczby dni od końca przerwy",
   "yazFlexLastRestDurationTitle": "Dotknij tabletki przyjętej przed przerwą",
-  "yazFlexLastRestDurationNote": "Wybierz ostatnią tabletkę, którą przyjęłaś przed rozpoczęciem przerwy",
+  "yazFlexLastRestDurationNote": "Wybierz ostatnią tabletkę przyjętą przed przerwą",
   "yazFlexRestDurationDaysLabel": "Liczba dni przerwy",
   "yazFlexRestDurationDaysValue": "{days} dni",
   "yazFlexResting": "Jestem w przerwie i jeszcze nie wznowiłam",

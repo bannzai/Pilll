@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Adakah pil yang anda ambil Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”, paparan akan ditetapkan untuk menunjukkan bilangan hari sejak rehat pengambilan pil tamat",
   "yazFlexLastRestDurationTitle": "Sila ketik pil yang anda ambil sebelum rehat",
-  "yazFlexLastRestDurationNote": "Sila pilih pil terakhir yang anda ambil sebelum memulakan rehat",
+  "yazFlexLastRestDurationNote": "Sila pilih pil terakhir yang anda ambil sebelum rehat",
   "yazFlexRestDurationDaysLabel": "Bilangan hari rehat",
   "yazFlexRestDurationDaysValue": "{days} hari",
   "yazFlexResting": "Sedang dalam tempoh rehat dan masih belum mula semula",

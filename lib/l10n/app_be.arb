@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так», наладзім паказ колькасці дзён пасля таго, як скончыўся перапын",
   "yazFlexLastRestDurationTitle": "Націсніце на пігулку, якую вы прынялі перад перапынкам",
-  "yazFlexLastRestDurationNote": "Калі ласка, абярыце апошнюю таблетку, якую вы прынялі перад пачаткам перапынку",
+  "yazFlexLastRestDurationNote": "Выберыце, калі ласка, апошнюю пігулку, якую прынялі перад тым, як пачаўся перапын",
   "yazFlexRestDurationDaysLabel": "Колькасць дзён перапынку",
   "yazFlexRestDurationDaysValue": "{days} дзён",
   "yazFlexResting": "На перапынку ў прыёме і яшчэ не аднавіла",

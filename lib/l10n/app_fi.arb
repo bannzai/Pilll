@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Käytätkö Yaz Flex -pillereitä?",
   "initialSettingAskYazFlexDescription": "Kun valitset ”Kyllä”, näyttö asetetaan kertomaan, montako päivää taukojakson päättymisestä on kulunut",
   "yazFlexLastRestDurationTitle": "Napauta pilleriä, jonka otit ennen taukojaksoa",
-  "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen tauon alkamista",
+  "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen taukojaksoa",
   "yazFlexRestDurationDaysLabel": "Taukopäivien määrä",
   "yazFlexRestDurationDaysValue": "{days} päivää",
   "yazFlexResting": "Taukojaksolla enkä ole vielä aloittanut uudelleen",

@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Παίρνετε Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι», θα ρυθμιστεί η εμφάνιση των ημερών που έχουν περάσει από το τέλος του διαλείμματος",
   "yazFlexLastRestDurationTitle": "Πατήστε το χάπι που πήρατε πριν από το διάλειμμα",
-  "yazFlexLastRestDurationNote": "Παρακαλώ επιλέξτε το τελευταίο χάπι που πήρατε πριν ξεκινήσει η διακοπή",
+  "yazFlexLastRestDurationNote": "Επιλέξτε το τελευταίο χάπι που πήρατε πριν από το διάλειμμα",
   "yazFlexRestDurationDaysLabel": "Αριθμός ημερών διακοπής",
   "yazFlexRestDurationDaysValue": "{days} ημέρες",
   "yazFlexResting": "Είμαι σε διάλειμμα και δεν έχω ξεκινήσει ξανά ακόμα",

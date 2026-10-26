@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Сиз Yaz Flex ичесизби?",
   "initialSettingAskYazFlexDescription": "«Ооба» дегенди тандасаңыз, тыныгуу аяктагандан бери канча күн өткөнү көрсөтүлөт",
   "yazFlexLastRestDurationTitle": "Тыныгуу алдында ичкен таблеткаңызды басыңыз",
-  "yazFlexLastRestDurationNote": "Тыныгуу башталганга чейин акыркы ичкен таблеткаңызды тандаңыз",
+  "yazFlexLastRestDurationNote": "Тыныгуу башталар алдында ичкен акыркы таблеткаңызды тандаңыз",
   "yazFlexRestDurationDaysLabel": "Тыныгуу күндөрүнүн саны",
   "yazFlexRestDurationDaysValue": "{days} күн",
   "yazFlexResting": "Тыныгуу мезгилиндемин жана али кайра баштай элекмин",

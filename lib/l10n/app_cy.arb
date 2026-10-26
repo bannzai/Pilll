@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Ydych chi'n cymryd Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ydw”, bydd y dangosydd yn cael ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd y seibiant",
   "yazFlexLastRestDurationTitle": "Tapiwch y bilsen a gymerwyd cyn y seibiant",
-  "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerasoch cyn dechrau’r egwyl",
+  "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerwyd cyn dechrau’r seibiant",
   "yazFlexRestDurationDaysLabel": "Nifer y dyddiau seibiant",
   "yazFlexRestDurationDaysValue": "{days} diwrnod",
   "yazFlexResting": "Ar gyfnod seibiant ac heb ailddechrau eto",

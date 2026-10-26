@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "আপনি কি Yaz Flex খান?",
   "initialSettingAskYazFlexDescription": "“হ্যাঁ” বেছে নিলে, বিরতি শেষ হওয়ার পর কত দিন পেরিয়েছে তা দেখানোর সেটিং চালু হবে",
   "yazFlexLastRestDurationTitle": "বিরতির আগে যে পিলটি খেয়েছিলেন, সেটিতে ট্যাপ করুন",
-  "yazFlexLastRestDurationNote": "বিরতি শুরু করার আগে শেষ যে পিলটি খেয়েছিলেন, সেটি নির্বাচন করুন",
+  "yazFlexLastRestDurationNote": "বিরতি শুরুর আগে সবশেষে যে পিলটি খেয়েছেন, সেটি বেছে নিন",
   "yazFlexRestDurationDaysLabel": "ওষুধ বিরতির দিনের সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexResting": "ওষুধ বিরতিতে আছি, এখনও আবার শুরু করিনি",

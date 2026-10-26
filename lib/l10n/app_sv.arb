@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Tar du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Om du väljer ”Ja” ställs visningen in så att du ser hur många dagar som gått sedan uppehållet tog slut",
   "yazFlexLastRestDurationTitle": "Tryck på pillret du tog före uppehållet",
-  "yazFlexLastRestDurationNote": "Välj den sista pillan du tog innan uppehållet började",
+  "yazFlexLastRestDurationNote": "Välj det sista pillret du tog före uppehållet",
   "yazFlexRestDurationDaysLabel": "Antal pausdagar",
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Jag är i uppehåll och har inte börjat igen än",

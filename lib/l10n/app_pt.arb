@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Você toma Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ao escolher “Sim”, a tela mostrará quantos dias se passaram desde o fim da pausa",
   "yazFlexLastRestDurationTitle": "Toque na pílula que você tomou antes da pausa",
-  "yazFlexLastRestDurationNote": "Selecione a última pílula que tomou antes de iniciar a pausa",
+  "yazFlexLastRestDurationNote": "Selecione a última pílula que você tomou antes da pausa",
   "yazFlexRestDurationDaysLabel": "Número de dias de pausa",
   "yazFlexRestDurationDaysValue": "{days} dias",
   "yazFlexResting": "Estou em pausa e ainda não retomei",

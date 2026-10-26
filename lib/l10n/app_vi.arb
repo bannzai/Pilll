@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Bạn có đang dùng Yaz Flex không?",
   "initialSettingAskYazFlexDescription": "Nếu chọn “Có”, ứng dụng sẽ hiển thị số ngày kể từ khi kết thúc đợt nghỉ thuốc",
   "yazFlexLastRestDurationTitle": "Vui lòng chạm vào viên thuốc bạn đã uống trước khi nghỉ thuốc",
-  "yazFlexLastRestDurationNote": "Vui lòng chọn viên thuốc cuối cùng bạn đã uống trước khi bắt đầu thời gian nghỉ",
+  "yazFlexLastRestDurationNote": "Vui lòng chọn viên thuốc cuối cùng bạn đã uống trước khi bắt đầu nghỉ thuốc",
   "yazFlexRestDurationDaysLabel": "Số ngày tạm ngừng thuốc",
   "yazFlexRestDurationDaysValue": "{days} ngày",
   "yazFlexResting": "Đang trong thời gian nghỉ thuốc và هنوز chưa dùng lại",

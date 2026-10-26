@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex ही गोळी घेता का?",
   "initialSettingAskYazFlexDescription": "“होय” निवडल्यास, विराम संपल्यानंतर किती दिवस झाले आहेत हे दिसण्यासाठी सेट केले जाईल",
   "yazFlexLastRestDurationTitle": "विरामापूर्वी घेतलेल्या गोळीवर टॅप करा",
-  "yazFlexLastRestDurationNote": "कृपया विश्रांती सुरू करण्यापूर्वी तुम्ही शेवटी घेतलेली गोळी निवडा",
+  "yazFlexLastRestDurationNote": "विराम सुरू होण्यापूर्वी तुम्ही शेवटची घेतलेली गोळी निवडा",
   "yazFlexRestDurationDaysLabel": "विश्रांतीच्या दिवसांची संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिवस",
   "yazFlexResting": "विश्रांती कालावधीत आहे आणि अजून पुन्हा सुरू केलेले नाही",

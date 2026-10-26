@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Yaz Flex po ba ang iniinom ninyong pildoras?",
   "initialSettingAskYazFlexDescription": "Kapag pinili ninyo ang “Oo”, ise-set ang display para ipakita kung ilang araw na ang lumipas mula nang matapos ang pahinga sa pag-inom ng pill",
   "yazFlexLastRestDurationTitle": "I-tap po ang pildoras na ininom ninyo bago ang pahinga",
-  "yazFlexLastRestDurationNote": "Pakipili ang huling pill na ininom mo bago magsimula ang pahinga",
+  "yazFlexLastRestDurationNote": "Piliin po ang huling pildoras na ininom ninyo bago ang pahinga",
   "yazFlexRestDurationDaysLabel": "Bilang ng mga araw ng pahinga",
   "yazFlexRestDurationDaysValue": "{days} araw",
   "yazFlexResting": "Nasa pahinga pa at hindi pa nagsisimulang muli",

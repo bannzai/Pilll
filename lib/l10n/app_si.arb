@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "ඔබ ගන්නා පෙත්ත Yaz Flex ද?",
   "initialSettingAskYazFlexDescription": "“ඔව්” තේරුවොත්, විරාමය අවසන් වූ දා සිට ගත වූ දින ගණන පෙන්වීමට සැකසෙනවා",
   "yazFlexLastRestDurationTitle": "විරාමයට පෙර ගත් පෙත්ත තට්ටු කරන්න",
-  "yazFlexLastRestDurationNote": "කරුණාකර විරාමය ආරම්භ කිරීමට පෙර අවසන් වරට ගත් ගුලිය තෝරන්න",
+  "yazFlexLastRestDurationNote": "විරාමය ආරම්භ වීමට පෙර අවසන් වරට ගත් පෙත්ත කරුණාකර තෝරන්න",
   "yazFlexRestDurationDaysLabel": "විරාම දින ගණන",
   "yazFlexRestDurationDaysValue": "{days} දින",
   "yazFlexResting": "විරාම කාලයේ සිටින අතර තවම නැවත ආරම්භ කර නැහැ",

@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುತ್ತೀರಾ?",
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ, ವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟು ದಿನಗಳಾಗಿವೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
   "yazFlexLastRestDurationTitle": "ವಿರಾಮಕ್ಕೆ ಮೊದಲು ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
-  "yazFlexLastRestDurationNote": "ವಿರಾಮ ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು ನೀವು ಕೊನೆಯಾಗಿ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ದಯವಿಟ್ಟು ಆಯ್ಕೆಮಾಡಿ",
+  "yazFlexLastRestDurationNote": "ವಿರಾಮ ಆರಂಭವಾಗುವ ಮೊದಲು ನೀವು ಕೊನೆಯದಾಗಿ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "yazFlexRestDurationDaysLabel": "ವಿರಾಮದ ದಿನಗಳ ಸಂಖ್ಯೆ",
   "yazFlexRestDurationDaysValue": "{days} ದಿನ",
   "yazFlexResting": "ವಿರಾಮದಲ್ಲಿದ್ದೇನೆ ಮತ್ತು ಇನ್ನೂ ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಿಲ್ಲ",

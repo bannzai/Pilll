@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Užívate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“, nastaví sa zobrazenie počtu dní od konca prestávky",
   "yazFlexLastRestDurationTitle": "Ťuknite na tabletku, ktorú ste užili pred prestávkou",
-  "yazFlexLastRestDurationNote": "Vyberte prosím poslednú tabletku, ktorú ste užili pred začiatkom prestávky",
+  "yazFlexLastRestDurationNote": "Vyberte poslednú tabletku, ktorú ste užili pred prestávkou",
   "yazFlexRestDurationDaysLabel": "Počet dní prestávky",
   "yazFlexRestDurationDaysValue": "{days} dní",
   "yazFlexResting": "Som v období pauzy a ešte som nezačala znova",

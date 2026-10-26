@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Siz Yaz Flex tabletkasini qabul qilasizmi?",
   "initialSettingAskYazFlexDescription": "“Ha”ni tanlasangiz, tanaffus tugaganidan beri necha kun oʻtgani koʻrsatiladi",
   "yazFlexLastRestDurationTitle": "Tanaffusdan oldin ichgan tabletkangizni bosing",
-  "yazFlexLastRestDurationNote": "Tanaffusni boshlashdan oldin oxirgi qabul qilgan tabletkangizni tanlang",
+  "yazFlexLastRestDurationNote": "Tanaffus boshlanishidan oldin ichgan oxirgi tabletkangizni tanlang",
   "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",
   "yazFlexRestDurationDaysValue": "{days} kun",
   "yazFlexResting": "Tanaffus davridaman va hali qayta boshlamadim",

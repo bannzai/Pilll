@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବଟିକା ନିଅନ୍ତି କି?",
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ, ବିରତି ଶେଷ ହେବା ପରଠାରୁ କେତେ ଦିନ ବିତିଛି ତାହା ଦେଖାଇବାକୁ ସେଟ୍ ହେବ",
   "yazFlexLastRestDurationTitle": "ବିରତି ପୂର୍ବରୁ ନେଇଥିବା ବଟିକାରେ ଟ୍ୟାପ୍ କରନ୍ତୁ",
-  "yazFlexLastRestDurationNote": "ଦୟାକରି ବିରତି ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଆପଣ ଶେଷରେ ଖାଇଥିବା ପିଲ୍‌ଟିକୁ ବାଛନ୍ତୁ",
+  "yazFlexLastRestDurationNote": "ବିରତି ଆରମ୍ଭ ପୂର୍ବରୁ ଆପଣ ଶେଷଥର ନେଇଥିବା ବଟିକାଟି ବାଛନ୍ତୁ",
   "yazFlexRestDurationDaysLabel": "ବିରତି ଦିନର ସଂଖ୍ୟା",
   "yazFlexRestDurationDaysValue": "{days} ଦିନ",
   "yazFlexResting": "ବିରତି ସମୟରେ ଅଛି ଏବଂ ଏପର୍ଯ୍ୟନ୍ତ ପୁଣି ଆରମ୍ଭ କରିନାହିଁ",

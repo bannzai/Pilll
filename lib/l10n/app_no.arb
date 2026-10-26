@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Bruker du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du velger «Ja», viser appen hvor mange dager det har gått siden pillepausen var over",
   "yazFlexLastRestDurationTitle": "Trykk på p-pillen du tok før pillepausen",
-  "yazFlexLastRestDurationNote": "Velg pillen du tok sist før pausen startet",
+  "yazFlexLastRestDurationNote": "Velg den siste p-pillen du tok før pillepausen",
   "yazFlexRestDurationDaysLabel": "Antall pausedager",
   "yazFlexRestDurationDaysValue": "{days} dager",
   "yazFlexResting": "Er i pause og har ikke startet igjen ennå",

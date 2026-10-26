@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "کیا آپ کی گولی Yaz Flex ہے؟",
   "initialSettingAskYazFlexDescription": "“ہاں” منتخب کرنے پر وقف ختم ہونے کے بعد گزرے ہوئے دنوں کی تعداد دکھانے کی ترتیب ہو جائے گی",
   "yazFlexLastRestDurationTitle": "براہِ کرم وقفے سے پہلے لی گئی گولی پر ٹیپ کریں",
-  "yazFlexLastRestDurationNote": "براہ کرم وقفہ شروع کرنے سے پہلے لی گئی آخری گولی منتخب کریں",
+  "yazFlexLastRestDurationNote": "براہِ کرم وقف شروع ہونے سے پہلے لی گئی آخری گولی منتخب کریں",
   "yazFlexRestDurationDaysLabel": "وقفے کے دنوں کی تعداد",
   "yazFlexRestDurationDaysValue": "{days} دن",
   "yazFlexResting": "وقفے کے دوران ہوں اور ابھی دوبارہ شروع نہیں کیا",

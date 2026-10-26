@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Kas võtad Yaz Flexi pille?",
   "initialSettingAskYazFlexDescription": "Kui valid „Jah“, seadistatakse kuva näitama, mitu päeva on pillipausi lõpust möödunud",
   "yazFlexLastRestDurationTitle": "Puuduta pilli, mille võtsid enne pillipausi",
-  "yazFlexLastRestDurationNote": "Palun valige viimane pill, mille võtsite enne pausi alustamist",
+  "yazFlexLastRestDurationNote": "Vali viimane pill, mille võtsid enne pillipausi",
   "yazFlexRestDurationDaysLabel": "Pausipäevade arv",
   "yazFlexRestDurationDaysValue": "{days} päeva",
   "yazFlexResting": "Olen pausiperioodil ega ole veel uuesti alustanud",

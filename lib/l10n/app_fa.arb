@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "آیا قرصی که مصرف می‌کنید Yaz Flex است؟",
   "initialSettingAskYazFlexDescription": "با انتخاب «بله»، نمایش تعداد روزهای گذشته از پایان وقفه تنظیم می‌شود",
   "yazFlexLastRestDurationTitle": "لطفاً قرصی را که پیش از وقفه مصرف کردید لمس کنید",
-  "yazFlexLastRestDurationNote": "لطفاً آخرین قرصی را که پیش از شروع دوره وقفه مصرف کردید انتخاب کنید",
+  "yazFlexLastRestDurationNote": "لطفاً آخرین قرصی را که پیش از شروع وقفه مصرف کردید انتخاب کنید",
   "yazFlexRestDurationDaysLabel": "تعداد روزهای وقفه",
   "yazFlexRestDurationDaysValue": "{days} روز",
   "yazFlexResting": "در دوره وقفه هستم و هنوز دوباره شروع نکرده‌ام",

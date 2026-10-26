@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Pasirinkus „Taip“, bus rodoma, kiek dienų praėjo nuo tada, kai baigėsi pertrauka",
   "yazFlexLastRestDurationTitle": "Palieskite tabletę, kurią vartojote prieš pertrauką",
-  "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pradėdama pertrauką",
+  "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pertrauką",
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
   "yazFlexRestDurationDaysValue": "{days} d.",
   "yazFlexResting": "Esu pertraukos laikotarpiu ir dar neatnaujinau vartojimo",

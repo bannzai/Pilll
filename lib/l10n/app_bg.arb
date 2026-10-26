@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“, ще настроим показването на дните след края на паузата",
   "yazFlexLastRestDurationTitle": "Докоснете хапчето, което сте взели преди паузата",
-  "yazFlexLastRestDurationNote": "Моля, изберете последното хапче, което сте приели преди началото на паузата",
+  "yazFlexLastRestDurationNote": "Моля, изберете последното хапче, което сте взели преди паузата",
   "yazFlexRestDurationDaysLabel": "Брой дни на пауза",
   "yazFlexRestDurationDaysValue": "{days} дни",
   "yazFlexResting": "В период на пауза съм и още не съм подновила",

@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "የሚወስዱት ክኒን Yaz Flex ነው?",
   "initialSettingAskYazFlexDescription": "«አዎ» ሲመርጡ፣ ከክኒን እረፍት በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ ይዘጋጃል",
   "yazFlexLastRestDurationTitle": "ከክኒን እረፍት በፊት የወሰዱትን ክኒን ይንኩ",
-  "yazFlexLastRestDurationNote": "የእረፍት ጊዜውን ከመጀመርዎ በፊት መጨረሻ የወሰዱትን ክኒን ይምረጡ",
+  "yazFlexLastRestDurationNote": "ከክኒን እረፍት በፊት መጨረሻ የወሰዱትን ክኒን እባክዎ ይምረጡ",
   "yazFlexRestDurationDaysLabel": "የመድኃኒት መቋረጥ ቀናት",
   "yazFlexRestDurationDaysValue": "{days} ቀናት",
   "yazFlexResting": "በመድኃኒት እረፍት ላይ ነኝ እና ገና አልጀመርኩም",

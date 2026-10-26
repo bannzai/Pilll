@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Uzimate li Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ako odaberete „Da“, prikazivat će se koliko je dana prošlo od završetka pauze",
   "yazFlexLastRestDurationTitle": "Dodirnite pilulu koju ste uzeli prije pauze",
-  "yazFlexLastRestDurationNote": "Odaberite pilulu koju ste posljednju uzeli prije početka pauze",
+  "yazFlexLastRestDurationNote": "Molimo Vas, odaberite posljednju pilulu koju ste uzeli prije pauze",
   "yazFlexRestDurationDaysLabel": "Broj dana pauze",
   "yazFlexRestDurationDaysValue": "{days} dana",
   "yazFlexResting": "U pauzi sam i još nisam nastavila",

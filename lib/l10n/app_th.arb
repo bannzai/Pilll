@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "ยาที่ทานอยู่คือ Yaz Flex ใช่ไหมคะ",
   "initialSettingAskYazFlexDescription": "หากเลือก “ใช่” ระบบจะแสดงจำนวนวันที่ผ่านไปหลังจากสิ้นสุดช่วงหยุดยาค่ะ",
   "yazFlexLastRestDurationTitle": "แตะเม็ดยาที่ทานก่อนเริ่มหยุดยา",
-  "yazFlexLastRestDurationNote": "โปรดเลือกยาที่คุณรับประทานครั้งสุดท้ายก่อนเริ่มช่วงพักยา",
+  "yazFlexLastRestDurationNote": "โปรดเลือกยาเม็ดสุดท้ายที่ทานก่อนเริ่มช่วงหยุดยาค่ะ",
   "yazFlexRestDurationDaysLabel": "จำนวนวันหยุดยา",
   "yazFlexRestDurationDaysValue": "{days} วัน",
   "yazFlexResting": "อยู่ในช่วงพักยาและยังไม่ได้เริ่มใหม่",

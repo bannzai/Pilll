@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Tekur þú Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“ verður skjárinn stilltur til að sýna hve margir dagar eru liðnir frá því að hléinu lauk",
   "yazFlexLastRestDurationTitle": "Pikkaðu á pilluna sem þú tókst fyrir hlé",
-  "yazFlexLastRestDurationNote": "Vinsamlegast veldu síðustu pilluna sem þú tókst áður en hléið hófst",
+  "yazFlexLastRestDurationNote": "Veldu síðustu pilluna sem þú tókst áður en hlé hófst",
   "yazFlexRestDurationDaysLabel": "Fjöldi hlédaga",
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Í hléi og hef ekki hafið aftur enn",

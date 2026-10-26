@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "तपाईंले खाने चक्की Yaz Flex हो?",
   "initialSettingAskYazFlexDescription": "“हो” छान्दा विश्राम सकिएपछि कति दिन बिते भनेर देखिने गरी सेट हुनेछ",
   "yazFlexLastRestDurationTitle": "विश्रामअघि लिनुभएको चक्कीमा ट्याप गर्नुहोस्",
-  "yazFlexLastRestDurationNote": "कृपया विश्राम सुरु गर्नु अघि तपाईंले अन्तिम पटक खाएको पिल छान्नुहोस्",
+  "yazFlexLastRestDurationNote": "विश्राम सुरु हुनुअघि तपाईंले अन्तिम पटक लिनुभएको चक्की छान्नुहोस्",
   "yazFlexRestDurationDaysLabel": "ब्रेक दिनहरूको संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिन",
   "yazFlexResting": "विश्राम अवधिमा छु र अझै फेरि सुरु गरेको छैन",

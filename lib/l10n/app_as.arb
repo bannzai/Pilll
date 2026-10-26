@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "আপুনি Yaz Flex খায় নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে, বিৰতি শেষ হোৱাৰ পৰা কিমান দিন হৈছে সেয়া দেখুৱাবলৈ ছেটিং কৰা হ’ব",
   "yazFlexLastRestDurationTitle": "বিৰতিৰ আগতে খোৱা পিলটোত টেপ কৰক",
-  "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ কৰাৰ আগতে আপুনি শেষবাৰ খোৱা পিলটো নিৰ্বাচন কৰক",
+  "yazFlexLastRestDurationNote": "বিৰতি আৰম্ভ হোৱাৰ আগতে শেষবাৰ খোৱা পিলটো বাছি লওক",
   "yazFlexRestDurationDaysLabel": "ঔষধ নোখোৱা দিনৰ সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",
   "yazFlexResting": "ঔষধ বন্ধৰ সময়ত আছোঁ, এতিয়াও পুনৰ আৰম্ভ কৰা নাই",

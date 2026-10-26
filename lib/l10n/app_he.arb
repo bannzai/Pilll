@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "האם הגלולה היא Yaz Flex?",
   "initialSettingAskYazFlexDescription": "בחירה ב״כן״ תגדיר תצוגה של מספר הימים שחלפו מאז סיום ההפסק",
   "yazFlexLastRestDurationTitle": "לגעת בגלולה שנלקחה לפני ההפסק",
-  "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שלקחת לפני תחילת ההפסקה",
+  "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שניטלה לפני תחילת ההפסק",
   "yazFlexRestDurationDaysLabel": "מספר ימי ההפסקה",
   "yazFlexRestDurationDaysValue": "{days} ימים",
   "yazFlexResting": "בתקופת הפסקה ועדיין לא חזרתי לקחת",

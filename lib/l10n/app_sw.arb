@@ -571,7 +571,7 @@
   "initialSettingAskYazFlex": "Je, unameza kidonge cha Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”, programu itaonyesha siku ngapi zimepita tangu mapumziko ya kumeza vidonge yalipoisha",
   "yazFlexLastRestDurationTitle": "Tafadhali gusa kidonge ulichomeza kabla ya mapumziko",
-  "yazFlexLastRestDurationNote": "Tafadhali chagua kidonge cha mwisho ulichotumia kabla ya kuanza mapumziko",
+  "yazFlexLastRestDurationNote": "Tafadhali chagua kidonge cha mwisho ulichomeza kabla ya mapumziko",
   "yazFlexRestDurationDaysLabel": "Idadi ya siku za mapumziko",
   "yazFlexRestDurationDaysValue": "{days} siku",
   "yazFlexResting": "Niko kwenye kipindi cha mapumziko na bado sijaanza tena",
