@@ -49,7 +49,7 @@
   "quickRecord": "Бърз запис",
   "quickRecordDescription": "На екрана с известия можете да видите кое хапче е за днес и веднага да направите запис на приема.",
   "healthCareIntegration": "Свързване със здравни приложения",
-  "healthCareIntegrationDescription": "Pilll може автоматично да записва вашите менструални данни в приложението Здраве",
+  "healthCareIntegrationDescription": "Записите за мензис в Pilll могат автоматично да се синхронизират с Apple Health",
   "viewPremiumPlan": "Разгледайте премиум плана",
   "changePillNumberForToday": "Промяна на номера на днешното хапче",
   "discardAllPillSheets": "Изтрий всички листове с хапчета",

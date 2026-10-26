@@ -49,7 +49,7 @@
   "quickRecord": "Hurtigregistrering",
   "quickRecordDescription": "På varslingsskjermen kan du se hvilken p-pille du skal ta i dag, og legge den rett inn i pilleloggen.",
   "healthCareIntegration": "Tilkobling til helseapper",
-  "healthCareIntegrationDescription": "Menstruasjonsdata registrert i Pilll kan automatisk synkroniseres til Helse-appen",
+  "healthCareIntegrationDescription": "Mensregistreringer i Pilll kan synkroniseres automatisk med Apple Helse",
   "viewPremiumPlan": "Se premium-planen",
   "changePillNumberForToday": "Endre dagens pillenummer",
   "discardAllPillSheets": "Slett alle pilleark",

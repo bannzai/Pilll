@@ -49,7 +49,7 @@
   "quickRecord": "Cofnodi cyflym",
   "quickRecordDescription": "Ar y sgrin hysbysiadau gallwch weld pa bilsen sydd i’w chymryd heddiw a’i hychwanegu’n syth at eich cofnod cymryd.",
   "healthCareIntegration": "Cysylltu ag apiau iechyd",
-  "healthCareIntegrationDescription": "Gall Pilll gofnodi eich cofnodion misglwyf yn awtomatig yn yr app Iechyd",
+  "healthCareIntegrationDescription": "Gellir cysoni cofnodion mislif yn Pilll yn awtomatig ag Apple Health",
   "viewPremiumPlan": "Gweld cynllun premiwm",
   "changePillNumberForToday": "Newid rhif y bilsen ar gyfer heddiw",
   "discardAllPillSheets": "Dileu pob taflen bilsen",

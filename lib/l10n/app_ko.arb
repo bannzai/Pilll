@@ -49,7 +49,7 @@
   "quickRecord": "빠른 복용 기록",
   "quickRecordDescription": "알림 화면에서 오늘 먹을 알약을 확인하고 바로 복용 기록을 남길 수 있어요.",
   "healthCareIntegration": "건강 앱 연동",
-  "healthCareIntegrationDescription": "Pilll에서 기록한 생리 기록을 자동으로 헬스케어에 기록할 수 있습니다",
+  "healthCareIntegrationDescription": "Pilll에 기록한 생리 정보를 Apple 건강 앱과 자동으로 동기화할 수 있어요",
   "viewPremiumPlan": "프리미엄 플랜 보기",
   "changePillNumberForToday": "오늘 복용할 알약 번호 변경",
   "discardAllPillSheets": "전체 피임약 시트 삭제",

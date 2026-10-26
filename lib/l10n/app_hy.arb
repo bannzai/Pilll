@@ -49,7 +49,7 @@
   "quickRecord": "Արագ գրանցում",
   "quickRecordDescription": "Ծանուցումների էկրանին կարող եք տեսնել, թե այսօր որ հաբն է պետք ընդունել, և անմիջապես ավելացնել ընդունման գրառում։",
   "healthCareIntegration": "Միացում առողջության հավելվածներին",
-  "healthCareIntegrationDescription": "Pilll-ում գրանցված կանանց ցիկլի տվյալները ավտոմատ կարող են գրանցվել Առողջություն հավելվածում",
+  "healthCareIntegrationDescription": "Pilll-ում գրանցված դաշտանի տվյալները կարող են ինքնաբերաբար համաժամացվել Apple Health-ի հետ",
   "viewPremiumPlan": "Տեսնել պրեմիում ծրագիրը",
   "changePillNumberForToday": "Այսօրվա հաբի համարի փոփոխում",
   "discardAllPillSheets": "Ջնջել բոլոր հապի թերթիկները",

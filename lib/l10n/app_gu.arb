@@ -49,7 +49,7 @@
   "quickRecord": "ઝડપી નોંધ",
   "quickRecordDescription": "સૂચનાની સ્ક્રીન પર આજે કઈ ગોળી લેવાની છે તે તમે જોઈ શકો છો અને ત્યાંથી જ ગોળી સેવનની નોંધ કરી શકો છો.",
   "healthCareIntegration": "આરોગ્ય એપ્લિકેશનો સાથે જોડાણ",
-  "healthCareIntegrationDescription": "Pilllમાં રેકોર્ડ કરેલા માસિક ધર્મના રેકોર્ડ આપોઆપ હેલ્થકેરમાં રેકોર્ડ કરી શકાય છે",
+  "healthCareIntegrationDescription": "Pilllમાં નોંધેલી માસિકની માહિતી Apple Health સાથે આપમેળે સમન્વયિત થઈ શકે છે",
   "viewPremiumPlan": "પ્રીમિયમ પ્લાન જુઓ",
   "changePillNumberForToday": "આજે લેવાના પિલ નંબર બદલો",
   "discardAllPillSheets": "બધી પિલ શીટ્સ કાઢી નાખો",

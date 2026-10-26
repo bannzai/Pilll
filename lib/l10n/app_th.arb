@@ -49,7 +49,7 @@
   "quickRecord": "บันทึกการทานยาอย่างรวดเร็ว",
   "quickRecordDescription": "บนหน้าการแจ้งเตือน คุณสามารถดูยาที่ต้องทานวันนี้และเพิ่มลงในบันทึกการทานยาได้ทันทีค่ะ",
   "healthCareIntegration": "เชื่อมต่อกับแอปสุขภาพ",
-  "healthCareIntegrationDescription": "สามารถบันทึกข้อมูลประจำเดือนจาก Pilll ลงในแอป Health Care โดยอัตโนมัติได้",
+  "healthCareIntegrationDescription": "ข้อมูลประจำเดือนที่บันทึกใน Pilll สามารถซิงค์กับแอปสุขภาพได้โดยอัตโนมัติค่ะ",
   "viewPremiumPlan": "ดูแผนพรีเมียม",
   "changePillNumberForToday": "เปลี่ยนหมายเลขยาวันนี้",
   "discardAllPillSheets": "ลบแผงยาเม็ดทั้งหมด",

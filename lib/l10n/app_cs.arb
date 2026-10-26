@@ -49,7 +49,7 @@
   "quickRecord": "Rychlý záznam",
   "quickRecordDescription": "Na obrazovce oznámení uvidíte, kterou pilulku si máte dnes vzít, a rovnou můžete vytvořit záznam užití.",
   "healthCareIntegration": "Propojení se zdravotními aplikacemi",
-  "healthCareIntegrationDescription": "Menstruační záznamy z Pilll lze automaticky synchronizovat s aplikací Zdraví",
+  "healthCareIntegrationDescription": "Záznamy o menstruaci v Pilll se mohou automaticky synchronizovat s aplikací Zdraví",
   "viewPremiumPlan": "Zobrazit Premium plán",
   "changePillNumberForToday": "Změna čísla dnešní pilulky",
   "discardAllPillSheets": "Smazat všechny pilulkové karty",

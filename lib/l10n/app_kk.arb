@@ -49,7 +49,7 @@
   "quickRecord": "Жылдам тіркеу",
   "quickRecordDescription": "Хабарландыру экранында бүгін қай таблетканы қабылдау керегін көріп, бірден қабылдау жазбасын қоса аласыз.",
   "healthCareIntegration": "Денсаулық қолданбаларымен байланыс",
-  "healthCareIntegrationDescription": "Pilll қосымшасында жазылған етеккір мәліметтерін автоматты түрде Денсаулық қосымшасына жазу мүмкін",
+  "healthCareIntegrationDescription": "Pilll ішіндегі етеккір жазбаларын Apple Health қолданбасымен автоматты түрде синхрондауға болады",
   "viewPremiumPlan": "Премиум жоспарын көру",
   "changePillNumberForToday": "Бүгінгі таблетка нөмірін өзгерту",
   "discardAllPillSheets": "Барлық дәрі парақтарын жою",

@@ -49,7 +49,7 @@
   "quickRecord": "Snel registreren",
   "quickRecordDescription": "Op het meldingenscherm zie je welke pil je vandaag neemt en kun je die meteen toevoegen aan je innameregistratie.",
   "healthCareIntegration": "Koppeling met gezondheidsapps",
-  "healthCareIntegrationDescription": "Pilll kan je menstruatiegegevens automatisch registreren in de Gezondheid-app",
+  "healthCareIntegrationDescription": "Je menstruatiegegevens in Pilll kunnen automatisch worden gesynchroniseerd met Apple Gezondheid",
   "viewPremiumPlan": "Bekijk premium plan",
   "changePillNumberForToday": "Pilnummer voor vandaag wijzigen",
   "discardAllPillSheets": "Alle pilstroken verwijderen",

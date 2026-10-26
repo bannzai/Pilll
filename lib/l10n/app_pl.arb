@@ -49,7 +49,7 @@
   "quickRecord": "Szybki zapis",
   "quickRecordDescription": "Na ekranie powiadomień sprawdzisz, którą tabletkę wziąć dziś, i od razu dodasz ją do rejestru przyjęć.",
   "healthCareIntegration": "Połączenie z aplikacjami zdrowotnymi",
-  "healthCareIntegrationDescription": "Zapisy miesiączki zarejestrowane w Pilll mogą być automatycznie zapisywane w aplikacji Zdrowie",
+  "healthCareIntegrationDescription": "Dane o okresie zapisane w Pilll mogą automatycznie synchronizować się z Apple Zdrowie",
   "viewPremiumPlan": "Zobacz plan premium",
   "changePillNumberForToday": "Zmiana numeru dzisiejszej pigułki",
   "discardAllPillSheets": "Usuń wszystkie blistry",

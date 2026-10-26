@@ -49,7 +49,7 @@
   "quickRecord": "Brzo bilježenje",
   "quickRecordDescription": "Na ekranu obavijesti možete vidjeti koju pilulu trebate uzeti danas i odmah je dodati u evidenciju uzimanja.",
   "healthCareIntegration": "Povezivanje sa zdravstvenim aplikacijama",
-  "healthCareIntegrationDescription": "Podaci o menstrualnom ciklusu zabilježeni u Pilll mogu se automatski sinhronizovati sa Health aplikacijom",
+  "healthCareIntegrationDescription": "Zapisi o menstruaciji iz Pilll mogu se automatski sinhronizovati s aplikacijom Apple Health",
   "viewPremiumPlan": "Pogledaj premium plan",
   "changePillNumberForToday": "Promjena broja današnje pilule",
   "discardAllPillSheets": "Obriši sve liste pilula",

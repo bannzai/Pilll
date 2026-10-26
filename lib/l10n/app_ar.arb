@@ -49,7 +49,7 @@
   "quickRecord": "تسجيل سريع",
   "quickRecordDescription": "يمكنكِ معرفة الحبة المخصصة لليوم من شاشة الإشعارات وإجراء تسجيل تناولها مباشرةً.",
   "healthCareIntegration": "الربط بتطبيقات الصحة",
-  "healthCareIntegrationDescription": "يمكن تسجيل سجلات الدورة الشهرية المسجلة في Pilll تلقائياً في تطبيق الصحة",
+  "healthCareIntegrationDescription": "يمكن مزامنة سجلات الدورة المسجلة في Pilll تلقائيا مع تطبيق صحتي",
   "viewPremiumPlan": "عرض الخطة المميزة",
   "changePillNumberForToday": "تغيير رقم حبة اليوم",
   "discardAllPillSheets": "حذف جميع أوراق الحبوب",

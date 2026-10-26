@@ -49,7 +49,7 @@
   "quickRecord": "Registrazione rapida",
   "quickRecordDescription": "Nella schermata delle notifiche puoi vedere quale pillola prendere oggi e aggiungerla subito al registro delle assunzioni.",
   "healthCareIntegration": "Collegamento alle app per la salute",
-  "healthCareIntegrationDescription": "I dati del ciclo mestruale registrati su Pilll possono essere automaticamente salvati nell'app Salute",
+  "healthCareIntegrationDescription": "I dati sulle mestruazioni registrati in Pilll possono sincronizzarsi automaticamente con Salute",
   "viewPremiumPlan": "Visualizza piano Premium",
   "changePillNumberForToday": "Modifica numero pillola di oggi",
   "discardAllPillSheets": "Elimina tutti i blister",

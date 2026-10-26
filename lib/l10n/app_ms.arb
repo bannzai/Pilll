@@ -49,7 +49,7 @@
   "quickRecord": "Catatan pantas",
   "quickRecordDescription": "Pada skrin pemberitahuan, anda boleh melihat pil yang perlu diambil hari ini dan terus menambahkannya pada rekod pengambilan.",
   "healthCareIntegration": "Sambungan ke aplikasi kesihatan",
-  "healthCareIntegrationDescription": "Rekod haid yang dicatat dalam Pilll boleh disimpan secara automatik ke Health",
+  "healthCareIntegrationDescription": "Rekod haid dalam Pilll boleh disegerakkan secara automatik dengan Apple Health",
   "viewPremiumPlan": "Lihat Pelan Premium",
   "changePillNumberForToday": "Ubah nombor pil hari ini",
   "discardAllPillSheets": "Padam Semua Lembaran Pil",

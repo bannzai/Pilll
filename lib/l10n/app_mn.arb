@@ -49,7 +49,7 @@
   "quickRecord": "Хурдан тэмдэглэх",
   "quickRecordDescription": "Мэдэгдлийн дэлгэцээс өнөөдөр уух эмээ харж, эм уусан бүртгэлд шууд нэмж болно.",
   "healthCareIntegration": "Эрүүл мэндийн апптай холбох",
-  "healthCareIntegrationDescription": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээллийг автоматаар Эрүүл мэндийн аппд тэмдэглэх боломжтой",
+  "healthCareIntegrationDescription": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээлэл Apple Health-тэй автоматаар синк хийгдэнэ",
   "viewPremiumPlan": "Премиум багцыг үзэх",
   "changePillNumberForToday": "Өнөөдрийн эмийн дугаарыг өөрчлөх",
   "discardAllPillSheets": "Бүх эмийн хуудсыг устгах",

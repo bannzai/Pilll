@@ -49,7 +49,7 @@
   "quickRecord": "Mabilis na pagtatala",
   "quickRecordDescription": "Sa screen ng mga abiso, makikita ninyo kung aling pildoras ang iinumin ngayon at mailalagay ninyo ito agad sa tala ng pag-inom.",
   "healthCareIntegration": "Pagkonekta sa mga app sa kalusugan",
-  "healthCareIntegrationDescription": "Ang mga tala ng regla sa Pilll ay awtomatikong maitatala sa HealthCare",
+  "healthCareIntegrationDescription": "Puwedeng awtomatikong i-sync sa Apple Health ang mga tala ng regla sa Pilll",
   "viewPremiumPlan": "Tingnan ang Premium Plan",
   "changePillNumberForToday": "Pagbabago ng numero ng pill na iinom ngayon",
   "discardAllPillSheets": "Tanggalin ang lahat ng pill sheet",

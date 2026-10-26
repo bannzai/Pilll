@@ -49,7 +49,7 @@
   "quickRecord": "Gyors rögzítés",
   "quickRecordDescription": "Az értesítési képernyőn láthatod, melyik tabletta esedékes ma, és rögtön beírhatod a tablettaszedési naplóba.",
   "healthCareIntegration": "Kapcsolódás egészségügyi alkalmazásokhoz",
-  "healthCareIntegrationDescription": "A Pilllben feljegyzett menstruációs adatok automatikusan rögzíthetők az Egészség alkalmazásban",
+  "healthCareIntegrationDescription": "A Pilllben rögzített menstruációs adatok automatikusan szinkronizálhatók az Apple Egészség alkalmazással",
   "viewPremiumPlan": "Prémium csomag megtekintése",
   "changePillNumberForToday": "A mai tablettaszám módosítása",
   "discardAllPillSheets": "Minden tablettacsomag törlése",

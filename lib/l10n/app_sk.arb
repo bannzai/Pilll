@@ -49,7 +49,7 @@
   "quickRecord": "Rýchly záznam",
   "quickRecordDescription": "Na obrazovke oznámení uvidíte, ktorú tabletku si máte dnes vziať, a hneď môžete pridať záznam o užití.",
   "healthCareIntegration": "Prepojenie so zdravotnými aplikáciami",
-  "healthCareIntegrationDescription": "Menštruačné záznamy zaznamenané v aplikácii Pilll sa môžu automaticky synchronizovať s aplikáciou Zdravie",
+  "healthCareIntegrationDescription": "Záznamy o menštruácii v Pilll sa môžu automaticky synchronizovať s aplikáciou Apple Zdravie",
   "viewPremiumPlan": "Zobraziť prémiový plán",
   "changePillNumberForToday": "Zmena čísla pilulky na dnes",
   "discardAllPillSheets": "Odstrániť všetky blistre",

@@ -49,7 +49,7 @@
   "quickRecord": "Registre ràpid",
   "quickRecordDescription": "A la pantalla de notificacions pots veure quina píndola toca avui i afegir-la directament al registre de preses.",
   "healthCareIntegration": "Connexió amb aplicacions de salut",
-  "healthCareIntegrationDescription": "Els registres menstruals de Pilll es poden sincronitzar automàticament amb Salut",
+  "healthCareIntegrationDescription": "Els registres de la regla de Pilll es poden sincronitzar automàticament amb l’app Salut",
   "viewPremiumPlan": "Veure el pla premium",
   "changePillNumberForToday": "Canvi del número de píndola d'avui",
   "discardAllPillSheets": "Eliminar tots els blísters de píndoles",

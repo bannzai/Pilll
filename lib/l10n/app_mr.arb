@@ -49,7 +49,7 @@
   "quickRecord": "झटपट नोंद",
   "quickRecordDescription": "सूचना स्क्रीनवर आज कोणती गोळी घ्यायची ते पाहू शकता आणि तिथेच सेवन नोंद करू शकता.",
   "healthCareIntegration": "आरोग्य ॲप्सशी जोडणी",
-  "healthCareIntegrationDescription": "Pilllमध्ये नोंदवलेल्या मासिकपाळी नोंदी आपोआप हेल्थकेअर अॅपमध्ये नोंदवल्या जाऊ शकतात",
+  "healthCareIntegrationDescription": "Pilllमध्ये नोंदवलेली मासिक पाळीची माहिती Apple Health सोबत आपोआप समक्रमित करता येते",
   "viewPremiumPlan": "प्रीमियम प्लान पाहा",
   "changePillNumberForToday": "आजच्या गोळीचा क्रमांक बदला",
   "discardAllPillSheets": "सर्व पिल शीट्स नष्ट करा",

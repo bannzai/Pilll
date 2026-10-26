@@ -49,7 +49,7 @@
   "quickRecord": "Tezkor qayd",
   "quickRecordDescription": "Bildirishnomalar ekranida bugun qaysi tabletkani qabul qilishingizni ko‘rib, uni darhol tabletka qabul qilish qaydiga qo‘shishingiz mumkin.",
   "healthCareIntegration": "Salomatlik ilovalari bilan ulanish",
-  "healthCareIntegrationDescription": "Pilll ilovasida qayd etilgan hayz davri yozuvlari avtomatik ravishda Health ilovasiga uzatiladi",
+  "healthCareIntegrationDescription": "Pilllʼda qayd etilgan hayz maʼlumotlari Apple Health bilan avtomatik sinxronlanishi mumkin",
   "viewPremiumPlan": "Premium rejani ko'rish",
   "changePillNumberForToday": "Bugungi tabletka raqamini o'zgartirish",
   "discardAllPillSheets": "Barcha dori varaqalarini yo'q qilish",

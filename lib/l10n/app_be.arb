@@ -49,7 +49,7 @@
   "quickRecord": "Хуткі запіс",
   "quickRecordDescription": "На экране апавяшчэнняў вы можаце ўбачыць, якую пігулку прыняць сёння, і адразу зрабіць запіс прыёму пігулак.",
   "healthCareIntegration": "Сувязь з праграмамі здароўя",
-  "healthCareIntegrationDescription": "Запісы месячных, зробленыя ў Pilll, могуць аўтаматычна запісвацца ў праграму Здароўе",
+  "healthCareIntegrationDescription": "Запісы пра месячныя ў Pilll можна аўтаматычна сінхранізаваць з Apple Health",
   "viewPremiumPlan": "Прагледзець прэміум-план",
   "changePillNumberForToday": "Змена нумара сённяшняй пілюлі",
   "discardAllPillSheets": "Выдаліць усе лісты",

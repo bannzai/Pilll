@@ -49,7 +49,7 @@
   "quickRecord": "Registro rápido",
   "quickRecordDescription": "En la pantalla de notificaciones puedes ver qué píldora te toca hoy y añadirla directamente al registro de toma.",
   "healthCareIntegration": "Conexión con apps de salud",
-  "healthCareIntegrationDescription": "Pilll puede sincronizar automáticamente tus registros menstruales con la app Salud",
+  "healthCareIntegrationDescription": "Los registros de la regla en Pilll se pueden sincronizar automáticamente con Salud",
   "viewPremiumPlan": "Ver plan premium",
   "changePillNumberForToday": "Cambiar número de píldora de hoy",
   "discardAllPillSheets": "Eliminar todos los blísteres",

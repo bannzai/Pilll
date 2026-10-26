@@ -49,7 +49,7 @@
   "quickRecord": "Γρήγορη καταγραφή",
   "quickRecordDescription": "Στην οθόνη ειδοποιήσεων μπορείτε να δείτε ποιο χάπι είναι για σήμερα και να κάνετε αμέσως καταγραφή λήψης.",
   "healthCareIntegration": "Σύνδεση με εφαρμογές υγείας",
-  "healthCareIntegrationDescription": "Οι καταγραφές περιόδου από το Pilll μπορούν να καταγράφονται αυτόματα στην εφαρμογή Υγεία",
+  "healthCareIntegrationDescription": "Οι καταγραφές περιόδου στο Pilll μπορούν να συγχρονίζονται αυτόματα με την Υγεία",
   "viewPremiumPlan": "Δες το Πρέμιουμ Πλάνο",
   "changePillNumberForToday": "Αλλαγή αριθμού σημερινού χαπιού",
   "discardAllPillSheets": "Διαγραφή όλων των φύλλων χαπιών",

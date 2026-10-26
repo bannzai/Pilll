@@ -49,7 +49,7 @@
   "quickRecord": "Erregistro azkarra",
   "quickRecordDescription": "Jakinarazpenen pantailan gaur zein pilula hartu behar duzun ikus dezakezu, eta hartze-erregistroan berehala jaso.",
   "healthCareIntegration": "Osasun aplikazioekin lotura",
-  "healthCareIntegrationDescription": "Pilllen erregistratutako hileko-datuak automatikoki Osasun aplikazioan gorde daitezke",
+  "healthCareIntegrationDescription": "Pilll-en gordetako hilekoaren erregistroak automatikoki sinkroniza daitezke Apple Health-ekin",
   "viewPremiumPlan": "Premium plana ikusi",
   "changePillNumberForToday": "Gaurko pilula zenbakiaren aldaketa",
   "discardAllPillSheets": "Pillola-orri guztiak ezabatu",

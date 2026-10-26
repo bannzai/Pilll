@@ -49,7 +49,7 @@
   "quickRecord": "កត់ត្រារហ័ស",
   "quickRecordDescription": "នៅលើអេក្រង់ជូនដំណឹង អ្នកអាចមើលថាត្រូវលេបថ្នាំគ្រាប់ណានៅថ្ងៃនេះ ហើយបន្ថែមទៅកំណត់ត្រាការលេបថ្នាំបានភ្លាមៗ។",
   "healthCareIntegration": "ភ្ជាប់ជាមួយកម្មវិធីសុខភាព",
-  "healthCareIntegrationDescription": "កំណត់ត្រាការរដូវដែលបានកត់ត្រានៅក្នុង Pilll អាចត្រូវបានកត់ត្រាដោយស្វ័យប្រវត្តិនៅក្នុងកម្មវិធីសុខភាព",
+  "healthCareIntegrationDescription": "កំណត់ត្រារដូវនៅក្នុង Pilll អាចធ្វើសមកាលកម្មដោយស្វ័យប្រវត្តិជាមួយ Apple Health",
   "viewPremiumPlan": "មើលផែនការព្រីមៀម",
   "changePillNumberForToday": "ការផ្លាស់ប្តូរលេខគ្រាប់ថ្នាំថ្ងៃនេះ",
   "discardAllPillSheets": "លុបចោលសន្លឹកគ្រាប់ថ្នាំទាំងអស់",

@@ -49,7 +49,7 @@
   "quickRecord": "ඉක්මන් සටහන",
   "quickRecordDescription": "දැනුම්දීම් තිරයේදී අද ගත යුතු පෙත්ත දැක, එතැනින්ම පෙති ගැනීමේ සටහනක් එක් කළ හැකියි.",
   "healthCareIntegration": "සෞඛ්‍ය යෙදුම් සමඟ සම්බන්ධ කිරීම",
-  "healthCareIntegrationDescription": "Pilll හි සටහන් කළ ඔසප් වාර්තා ස්වයංක්‍රීයව සෞඛ්‍ය යෙදුමට සටහන් කළ හැකිය",
+  "healthCareIntegrationDescription": "Pilll හි සටහන් කළ ඔසප් වාර්තා Apple Health සමඟ ස්වයංක්‍රීයව සමමුහුර්ත කළ හැකියි",
   "viewPremiumPlan": "ප්‍රීමියම් ක්‍රමය බලන්න",
   "changePillNumberForToday": "අද ගන්නා පිල් අංකය වෙනස් කිරීම",
   "discardAllPillSheets": "සියලු පිල් ෂීට් ඉවත් කරන්න",

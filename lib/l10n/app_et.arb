@@ -49,7 +49,7 @@
   "quickRecord": "Kiire märge",
   "quickRecordDescription": "Teavituste kuval näed, milline pill tuleb täna võtta, ja saad kohe lisada võtmiskirje.",
   "healthCareIntegration": "Ühendus terviserakendustega",
-  "healthCareIntegrationDescription": "Pillis registreeritud menstruatsiooniandmed saab automaatselt Tervise rakendusse salvestada",
+  "healthCareIntegrationDescription": "Pilllis salvestatud päevade andmeid saab automaatselt Apple Healthiga sünkroonida",
   "viewPremiumPlan": "Vaata premiumplaani",
   "changePillNumberForToday": "Tänase pilli numbri muutmine",
   "discardAllPillSheets": "Kustuta kõik tablettlehed",

@@ -49,7 +49,7 @@
   "quickRecord": "ບັນທຶກດ່ວນ",
   "quickRecordDescription": "ໃນໜ້າຈໍແຈ້ງເຕືອນ ທ່ານສາມາດເບິ່ງວ່າມື້ນີ້ຕ້ອງກິນຢາເມັດໃດ ແລະເພີ່ມໃສ່ບັນທຶກການກິນຢາໄດ້ທັນທີ.",
   "healthCareIntegration": "ເຊື່ອມຕໍ່ກັບແອັບສຸຂະພາບ",
-  "healthCareIntegrationDescription": "ຂໍ້ມູນປະຈຳເດືອນທີ່ບັນທຶກໃນ Pilll ສາມາດຖືກບັນທຶກໄປຍັງແອັບ HealthCare ໂດຍອັດຕະໂນມັດ",
+  "healthCareIntegrationDescription": "ຂໍ້ມູນປະຈຳເດືອນທີ່ບັນທຶກໃນ Pilll ສາມາດຊິງກັບ Apple Health ໄດ້ອັດຕະໂນມັດ",
   "viewPremiumPlan": "ເບິ່ງແຜນພຣີມຽມ",
   "changePillNumberForToday": "ປ່ຽນແປງເລກຢາມື້ນີ້",
   "discardAllPillSheets": "ລຶບແຜ່ນຢາຄຸມກຳເນີດທັງໝົດ",

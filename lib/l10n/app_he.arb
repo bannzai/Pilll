@@ -49,7 +49,7 @@
   "quickRecord": "תיעוד מהיר",
   "quickRecordDescription": "במסך ההתראות אפשר לראות איזו גלולה יש ליטול היום ולהוסיף מיד רישום נטילה.",
   "healthCareIntegration": "חיבור לאפליקציות בריאות",
-  "healthCareIntegrationDescription": "רישומי הווסת שנרשמו ב-Pilll יכולים להירשם באופן אוטומטי באפליקציית בריאות",
+  "healthCareIntegrationDescription": "אפשר לסנכרן אוטומטית עם אפליקציית הבריאות את רישומי המחזור שנשמרו ב־Pilll",
   "viewPremiumPlan": "צפה בתוכנית הפרמיום",
   "changePillNumberForToday": "שינוי מספר הגלולה להיום",
   "discardAllPillSheets": "מחק את כל גיליוני הכדורים",

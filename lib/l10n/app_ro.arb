@@ -49,7 +49,7 @@
   "quickRecord": "Înregistrare rapidă",
   "quickRecordDescription": "Pe ecranul de notificări poți vedea ce pilulă iei astăzi și o poți adăuga imediat în înregistrare.",
   "healthCareIntegration": "Conectare la aplicațiile de sănătate",
-  "healthCareIntegrationDescription": "Înregistrările menstruale din Pilll pot fi adăugate automat în aplicația Sănătate",
+  "healthCareIntegrationDescription": "Înregistrările despre menstruație din Pilll se pot sincroniza automat cu Apple Sănătate",
   "viewPremiumPlan": "Vezi planul premium",
   "changePillNumberForToday": "Schimbarea numărului pilulei pentru astăzi",
   "discardAllPillSheets": "Șterge toate foile de pastile",

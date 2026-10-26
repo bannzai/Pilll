@@ -49,7 +49,7 @@
   "quickRecord": "দ্ৰুত ৰেকৰ্ড",
   "quickRecordDescription": "জাননী পৰ্দাত আপুনি আজি খাবলগীয়া পিলটো চাব পাৰে আৰু তাৰ পৰাই ঔষধ সেৱনৰ ৰেকৰ্ডত নথিভুক্ত কৰিব পাৰে।",
   "healthCareIntegration": "স্বাস্থ্য এপৰ সৈতে সংযোগ",
-  "healthCareIntegrationDescription": "Pilll-এ ৰেকৰ্ড কৰা মাহেকীয়া তথ্য স্বয়ংক্ৰিয়ভাৱে স্বাস্থ্যসেৱাত ৰেকৰ্ড কৰিব পাৰে",
+  "healthCareIntegrationDescription": "Pilllত ৰেকৰ্ড কৰা মাহেকীয়াৰ তথ্য Apple Healthৰ সৈতে স্বয়ংক্ৰিয়ভাৱে মিলাব পাৰি",
   "viewPremiumPlan": "প্ৰিমিয়াম পৰিকল্পনা চাওক",
   "changePillNumberForToday": "আজিৰ পিল নম্বৰ সলনি কৰক",
   "discardAllPillSheets": "সকলো পিল শ্বীট মচি পেলাওক",

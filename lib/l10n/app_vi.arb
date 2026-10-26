@@ -49,7 +49,7 @@
   "quickRecord": "Ghi nhanh",
   "quickRecordDescription": "Trên màn hình thông báo, bạn có thể xem viên thuốc cần uống hôm nay và thêm ngay vào nhật ký uống thuốc.",
   "healthCareIntegration": "Kết nối với ứng dụng sức khỏe",
-  "healthCareIntegrationDescription": "Bản ghi kinh nguyệt trong Pilll có thể được tự động đồng bộ với ứng dụng Sức khỏe",
+  "healthCareIntegrationDescription": "Dữ liệu kinh nguyệt ghi trong Pilll có thể tự động đồng bộ với ứng dụng Sức khỏe",
   "viewPremiumPlan": "Xem gói Premium",
   "changePillNumberForToday": "Thay đổi số thuốc uống hôm nay",
   "discardAllPillSheets": "Xóa tất cả vỉ thuốc",

@@ -49,7 +49,7 @@
   "quickRecord": "Тез каттоо",
   "quickRecordDescription": "Билдирме экранынан бүгүн кайсы таблетканы ичүү керектигин көрүп, дароо таблетка ичүү жазуусун кошо аласыз.",
   "healthCareIntegration": "Ден соолук колдонмолору менен байланыш",
-  "healthCareIntegrationDescription": "Pilll колдонмосунда катталган менструалдык маалыматтарды автоматтык түрдө Health колдонмосуна каттоого болот",
+  "healthCareIntegrationDescription": "Pilll колдонмосундагы айыз жазуулары Apple Health менен автоматтык түрдө шайкештештирилет",
   "viewPremiumPlan": "Премиум планды көрүү",
   "changePillNumberForToday": "Бүгүнкү таблетка номурун өзгөртүү",
   "discardAllPillSheets": "Бардык таблетка барактарын өчүрүү",

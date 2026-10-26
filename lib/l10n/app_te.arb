@@ -49,7 +49,7 @@
   "quickRecord": "త్వరిత నమోదు",
   "quickRecordDescription": "నోటిఫికేషన్ స్క్రీన్‌లో ఈ రోజు తీసుకోవాల్సిన మాత్రను చూసి, అక్కడి నుంచే మాత్రల నమోదులో వెంటనే చేర్చవచ్చు.",
   "healthCareIntegration": "ఆరోగ్య యాప్‌లతో అనుసంధానం",
-  "healthCareIntegrationDescription": "Pilllలో నమోదు చేసిన మాసిక ధర్మ రికార్డులను స్వయంచాలకంగా ఆరోగ్య సంరక్షణ యాప్‌లో రికార్డు చేయవచ్చు",
+  "healthCareIntegrationDescription": "Pilllలో నమోదు చేసిన నెలసరి వివరాలను Apple Healthతో ఆటోమేటిక్‌గా సమకాలీకరించవచ్చు",
   "viewPremiumPlan": "ప్రీమియం ప్లాన్ చూడండి",
   "changePillNumberForToday": "ఈ రోజు పిల్ నంబర్ మార్పు",
   "discardAllPillSheets": "అన్ని పిల్ షీట్లను తొలగించు",

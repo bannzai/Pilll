@@ -49,7 +49,7 @@
   "quickRecord": "Enregistrement rapide",
   "quickRecordDescription": "Sur l’écran des notifications, vous pouvez voir quelle pilule prendre aujourd’hui et l’ajouter directement au journal des prises.",
   "healthCareIntegration": "Connexion aux applications de santé",
-  "healthCareIntegrationDescription": "Les enregistrements menstruels suivis dans Pilll peuvent être automatiquement synchronisés avec HealthKit",
+  "healthCareIntegrationDescription": "Vos données sur les règles enregistrées dans Pilll peuvent se synchroniser automatiquement avec Santé",
   "viewPremiumPlan": "Voir le forfait Premium",
   "changePillNumberForToday": "Changer le numéro de pilule du jour",
   "discardAllPillSheets": "Supprimer toutes les feuilles de pilules",

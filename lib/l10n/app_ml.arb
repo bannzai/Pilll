@@ -49,7 +49,7 @@
   "quickRecord": "വേഗത്തിലുള്ള രേഖപ്പെടുത്തൽ",
   "quickRecordDescription": "അറിയിപ്പ് സ്ക്രീനിൽ ഇന്ന് കഴിക്കേണ്ട ഗുളിക ഏതാണെന്ന് കാണാനും അവിടെനിന്നുതന്നെ ഗുളിക കഴിച്ചതിന്റെ രേഖ ചേർക്കാനും കഴിയും.",
   "healthCareIntegration": "ആരോഗ്യ ആപ്പുകളുമായി ബന്ധിപ്പിക്കൽ",
-  "healthCareIntegrationDescription": "Pilll-ൽ രേഖപ്പെടുത്തിയ ആർത്തവ രേഖകൾ സ്വയമേവ ഹെൽത്ത്കെയർ ആപ്പിൽ രേഖപ്പെടുത്താൻ കഴിയും",
+  "healthCareIntegrationDescription": "Pilll-ൽ രേഖപ്പെടുത്തിയ ആർത്തവ വിവരങ്ങൾ Apple Health-മായി സ്വയമേവ സമന്വയിപ്പിക്കാം",
   "viewPremiumPlan": "പ്രീമിയം പ്ലാൻ കാണുക",
   "changePillNumberForToday": "ഇന്നത്തെ ഗുളിക നമ്പർ മാറ്റം",
   "discardAllPillSheets": "എല്ലാ പിൽ ഷീറ്റുകളും ഇല്ലാതാക്കുക",

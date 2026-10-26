@@ -49,7 +49,7 @@
   "quickRecord": "სწრაფი აღრიცხვა",
   "quickRecordDescription": "შეტყობინებების ეკრანზე შეგიძლიათ ნახოთ, რომელი აბია დღეს მისაღები, და მაშინვე დაამატოთ მიღების ჩანაწერი.",
   "healthCareIntegration": "ჯანმრთელობის აპებთან დაკავშირება",
-  "healthCareIntegrationDescription": "Pilll-ში ჩაწერილი მენსტრუალური ციკლის ჩანაწერები ავტომატურად ჯანმრთელობის აპლიკაციაში ჩაიწერება",
+  "healthCareIntegrationDescription": "Pilll-ში შენახული მენსტრუაციის ჩანაწერები შეიძლება ავტომატურად სინქრონიზდეს Apple Health-თან",
   "viewPremiumPlan": "პრემიუმ პლანის ნახვა",
   "changePillNumberForToday": "დღეს მისაღები ტაბლეტის ნომრის შეცვლა",
   "discardAllPillSheets": "ყველა პილების ფურცლის წაშლა",

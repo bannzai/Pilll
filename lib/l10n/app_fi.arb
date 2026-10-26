@@ -49,7 +49,7 @@
   "quickRecord": "Pikakirjaus",
   "quickRecordDescription": "Ilmoitusnäytöltä näet, mikä pilleri on vuorossa tänään, ja voit lisätä sen heti pillerilokiin.",
   "healthCareIntegration": "Yhteys terveyssovelluksiin",
-  "healthCareIntegrationDescription": "Pilllissä tallennetut kuukautistiedot voidaan tallentaa automaattisesti Terveys-sovellukseen",
+  "healthCareIntegrationDescription": "Pillliin tallennetut kuukautistiedot voi synkronoida automaattisesti Apple Healthiin",
   "viewPremiumPlan": "Katso Premium-paketti",
   "changePillNumberForToday": "Muuta tänään otettavan pillerin numeroa",
   "discardAllPillSheets": "Poista kaikki pillilehteet",

@@ -49,7 +49,7 @@
   "quickRecord": "Fljótleg skráning",
   "quickRecordDescription": "Á tilkynningaskjánum sérðu hvaða pillu á að taka í dag og getur skráð hana strax í inntökuskrá.",
   "healthCareIntegration": "Tenging við heilsuöpp",
-  "healthCareIntegrationDescription": "Tíðablæðingarskráningar úr Pilll geta sjálfkrafa verið skráðar í Heilsugögn",
+  "healthCareIntegrationDescription": "Hægt er að samstilla skráningar um blæðingar í Pilll sjálfkrafa við Apple Health",
   "viewPremiumPlan": "Skoða úrvalsáætlun",
   "changePillNumberForToday": "Breyting á númeri pílu í dag",
   "discardAllPillSheets": "Eyða öllum pilluborðum",
