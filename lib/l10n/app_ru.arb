@@ -203,7 +203,7 @@
   "premiumFeaturesList": "Список премиум-функций",
   "pushNotificationForTakingRecord": "📩 журнал приёма таблеток из уведомления",
   "viewAndRecordTakingHistory": "🗂 Запись и просмотр истории приёма (история приёма)",
-  "displayDateOnPillSheet": "📆 Отображение даты на блистере с таблетками",
+  "displayDateOnPillSheet": "📆 Показывать дату на блистере",
   "autoRefillNewPillSheet": "📦 Автоматическое пополнение новых блистеров",
   "viewPastData": "👀 Просмотр архивных данных",
   "customizeHealthTags": "🏷 Настройка тегов самочувствия",
