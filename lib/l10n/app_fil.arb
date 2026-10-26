@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Hindi mahanap ang impormasyon tungkol sa Premium",
   "purchaseErrorPurchasePendingError": "Hindi pa tapos ang pag-activate ng binili ninyo. Pakihintay po sandali bago tingnan muli",
   "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
-  "exampleRestDurationDate": "Halimbawa kapag nag-rest sa pag-inom ng pills ng \"1/12 hanggang 3 araw\"",
+  "exampleRestDurationDate": "Halimbawa, kung magpapahinga kayo sa pag-inom ng pildoras nang 3 araw simula Disyembre 1",
   "exampleRestDurationNumber": "Halimbawa kapag \"mula sa numero 18 ng tatlong araw\" hindi uminom",
   "withNumber": "Bilang {number}",
   "currentPillSheetNotFound": "Hindi natagpuan ang kasalukuyang pill sheet na ginagamit",

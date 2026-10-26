@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम की जानकारी नहीं मिली",
   "purchaseErrorPurchasePendingError": "आपकी खरीदारी अभी सक्रिय की जा रही है। कृपया थोड़ी देर बाद फिर जाँच करें",
   "launchError": "ऐप खोलते समय कोई गड़बड़ी हुई।\n{ErrorMessagesConnection}\n\nविवरण:",
-  "exampleRestDurationDate": "उदाहरण के लिए \"1/12 से 3 दिन के लिए\" गोली बंद करने की स्थिति में",
+  "exampleRestDurationDate": "उदाहरण के लिए, अगर आप 1/12 से 3 दिनों के लिए गोली लेना रोकें",
   "exampleRestDurationNumber": "उदाहरण के लिए \"18वें से 3 दिन तक\" सेवन बंद करने पर",
   "withNumber": "{number}वां",
   "currentPillSheetNotFound": "वर्तमान में सक्रिय पिल शीट नहीं मिली",

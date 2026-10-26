@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "د پریمیم په اړه معلومات ونه موندل شول",
   "purchaseErrorPurchasePendingError": "د پېرود فعالول لا نه دي بشپړ شوي. مهرباني وکړئ لږ انتظار وکړئ او بیا یې وګورئ",
   "launchError": "د اپ د پرانیستلو پر مهال یوه تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nجزییات:",
-  "exampleRestDurationDate": "د بېلګې په توګه «د ۱/۱۲ څخه د ۳ ورځو لپاره» د درملو د خولو وقفه",
+  "exampleRestDurationDate": "د بېلګې په توګه، که تاسو له 1/12 څخه د 3 ورځو لپاره د ګولۍ اخیستل وځنډوئ",
   "exampleRestDurationNumber": "د بیلګې په توګه \"د ۱۸ نمبر څخه ۳ ورځې\" د خوړلو د ډنډ کولو په صورت کې",
   "withNumber": "{number}مه",
   "currentPillSheetNotFound": "د اوسنۍ هدف شوي ګولیو پاڼه ونه موندل شوه",

@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Premium information couldn't be found",
   "purchaseErrorPurchasePendingError": "Your purchase is still being activated. Please wait a little and check again",
   "launchError": "An error occurred while opening the app.\n{ErrorMessagesConnection}\n\nDetails:",
-  "exampleRestDurationDate": "For example, if you took a break from taking pills \"from 1/12 for 3 days\"",
+  "exampleRestDurationDate": "For example, if you take a 3-day break from the pill starting 1/12",
   "exampleRestDurationNumber": "For example, if you took a break \"from pill 18 for 3 days\"",
   "withNumber": "Pill {number}",
   "currentPillSheetNotFound": "The current pill sheet could not be found",

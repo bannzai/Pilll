@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានអំពីព្រីមៀមទេ",
   "purchaseErrorPurchasePendingError": "ការបើកដំណើរការការទិញមិនទាន់បញ្ចប់ទេ។ សូមរង់ចាំបន្តិច រួចពិនិត្យម្តងទៀត",
   "launchError": "មានបញ្ហាកើតឡើងពេលបើកកម្មវិធី។\n{ErrorMessagesConnection}\n\nព័ត៌មានលម្អិត៖",
-  "exampleRestDurationDate": "ឧទាហរណ៍ \"ចាប់ពី១/១២រយៈពេល៣ថ្ងៃ\" ក្នុងករណីឈប់ញ៉ាំថ្នាំ",
+  "exampleRestDurationDate": "ឧទាហរណ៍ ប្រសិនបើអ្នកផ្អាកលេបថ្នាំគ្រាប់រយៈពេល 3 ថ្ងៃ ចាប់ពីថ្ងៃទី 1/12",
   "exampleRestDurationNumber": "ឧទាហរណ៍ «ចាប់ពីថ្នាំពីទី១៨ ឈប់ញ៉ាំរយៈពេល៣ថ្ងៃ» ក្នុងករណីនេះ",
   "withNumber": "លេខ {number}",
   "currentPillSheetNotFound": "រកមិនឃើញសន្លឹកពិលដែលកំពុងប្រើប្រាស់បច្ចុប្បន្ន",

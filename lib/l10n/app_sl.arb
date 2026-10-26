@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informacij o Premium ni bilo mogoče najti",
   "purchaseErrorPurchasePendingError": "Aktivacija nakupa še ni končana. Počakajte malo in preverite znova",
   "launchError": "Pri odpiranju aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
-  "exampleRestDurationDate": "Na primer »od 1/12 za 3 dni« v primeru prenehanja jemanja",
+  "exampleRestDurationDate": "Na primer, če od 1/12 za 3 dni prekinete jemanje tablet",
   "exampleRestDurationNumber": "Na primer „od 18. tablete za 3 dni\" če prekinete jemanje",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Trenutno izbrani seznam tablet ni bil najden",

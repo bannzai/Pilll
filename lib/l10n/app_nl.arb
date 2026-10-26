@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informatie over premium is niet gevonden",
   "purchaseErrorPurchasePendingError": "Je aankoop wordt nog geactiveerd. Wacht even en controleer het daarna opnieuw",
   "launchError": "Er is een fout opgetreden bij het openen van de app.\n{ErrorMessagesConnection}\n\nDetails:",
-  "exampleRestDurationDate": "Bijvoorbeeld 'vanaf 1/12 voor 3 dagen' bij het pauzeren van de inname",
+  "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 1/12 3 dagen stopt met de pil",
   "exampleRestDurationNumber": "Bijvoorbeeld 'vanaf pil 18 gedurende 3 dagen' bij het onderbreken van de inname",
   "withNumber": "nummer {number}",
   "currentPillSheetNotFound": "Het huidige pilstrip kon niet worden gevonden",

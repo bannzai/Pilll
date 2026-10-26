@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Не се пронајдени информации за премиум",
   "purchaseErrorPurchasePendingError": "Активирањето на купувањето сè уште не е завршено. Ве молиме, почекајте малку и проверете повторно",
   "launchError": "Се појави грешка при отворањето на апликацијата.\n{ErrorMessagesConnection}\n\nДетали:",
-  "exampleRestDurationDate": "На пример „од 1/12 за 3 дена\" кога правите пауза во земањето",
+  "exampleRestDurationDate": "На пример, ако од 1/12 направите пауза од 3 дена во земањето таблета",
   "exampleRestDurationNumber": "На пример „од број 18 за 3 дена\" во случај на прекин на земањето",
   "withNumber": "{number} број",
   "currentPillSheetNotFound": "Тековниот пилул-пакет не беше пронајден",

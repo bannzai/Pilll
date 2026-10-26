@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Information om premium kunde inte hittas",
   "purchaseErrorPurchasePendingError": "Ditt köp håller fortfarande på att aktiveras. Vänta en stund och kontrollera igen",
   "launchError": "Ett fel uppstod när appen öppnades.\n{ErrorMessagesConnection}\n\nDetaljer:",
-  "exampleRestDurationDate": "Till exempel 'från 1/12 i 3 dagar' om du pausade med pillintaget",
+  "exampleRestDurationDate": "Till exempel om du gör ett uppehåll med p-pillren i 3 dagar från 1/12",
   "exampleRestDurationNumber": "Till exempel om du pausar intaget från piller nr 18 i 3 dagar",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Den aktuella pillerkarta kunde inte hittas",

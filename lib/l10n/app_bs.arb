@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informacije o premium paketu nisu pronađene",
   "purchaseErrorPurchasePendingError": "Aktivacija kupovine još nije završena. Molimo Vas, pričekajte malo pa provjerite ponovo",
   "launchError": "Došlo je do greške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nDetalji:",
-  "exampleRestDurationDate": "Na primjer, ako prekidite uzimanje „od 1/12 tokom 3 dana\"",
+  "exampleRestDurationDate": "Naprimjer, ako ste od 1/12 napravili pauzu od 3 dana u uzimanju pilula",
   "exampleRestDurationNumber": "Na primjer \"od 18. za 3 dana\" kada ste prekinuli uzimanje",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Trenutno aktivna tabletka pilula nije pronađena",

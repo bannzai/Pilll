@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-inligting kon nie gevind word nie",
   "purchaseErrorPurchasePendingError": "Jou aankoop word nog geaktiveer. Kyk asseblief oor ’n rukkie weer",
   "launchError": "'n Fout het voorgekom toe die app oopgemaak is.\n{ErrorMessagesConnection}\n\nBesonderhede:",
-  "exampleRestDurationDate": "Byvoorbeeld \"vanaf 1/12 vir 3 dae\" wanneer jy 'n pouse van die medisyne neem",
+  "exampleRestDurationDate": "Byvoorbeeld, as jy vanaf 1/12 vir 3 dae ’n pillepouse geneem het",
   "exampleRestDurationNumber": "Byvoorbeeld wanneer jy \"vanaf pil 18 vir 3 dae\" ophou inneem",
   "withNumber": "Nommer {number}",
   "currentPillSheetNotFound": "Die huidige pilvel kon nie gevind word nie",

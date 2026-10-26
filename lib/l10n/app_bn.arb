@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "প্রিমিয়াম তথ্য পাওয়া যায়নি",
   "purchaseErrorPurchasePendingError": "কেনাকাটাটি এখনও সক্রিয় হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার দেখুন",
   "launchError": "অ্যাপটি চালু করার সময় একটি সমস্যা হয়েছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত:",
-  "exampleRestDurationDate": "উদাহরণস্বরূপ \"১/১২ থেকে ৩ দিনের জন্য\" ওষুধ সেবন বন্ধ করার ক্ষেত্রে",
+  "exampleRestDurationDate": "যেমন, আপনি ১/১২ থেকে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
   "exampleRestDurationNumber": "যেমন \"১৮ নম্বর থেকে ৩ দিন\" সেবন বিরতির ক্ষেত্রে",
   "withNumber": "{number} নম্বর",
   "currentPillSheetNotFound": "বর্তমান পিল শীটটি পাওয়া যায়নি",

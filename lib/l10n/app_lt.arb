@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Nepavyko rasti informacijos apie Premium",
   "purchaseErrorPurchasePendingError": "Pirkinio aktyvinimas dar nebaigtas. Šiek tiek palaukite ir patikrinkite dar kartą",
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija:",
-  "exampleRestDurationDate": "Pavyzdžiui, „nuo 1/12 3 dienas\" pertraukėte tablečių vartojimą",
+  "exampleRestDurationDate": "Pavyzdžiui, jei nuo gruodžio 1 d. padarote 3 dienų pertrauką nuo piliulių vartojimo",
   "exampleRestDurationNumber": "Pavyzdžiui, „nuo 18-ojo 3 dienas\" nevartojimo atveju",
   "withNumber": "{number}-oji",
   "currentPillSheetNotFound": "Šiuo metu naudojamas tablečių lapas nerastas",

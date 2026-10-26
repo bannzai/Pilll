@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Ez da Premium-i buruzko informaziorik aurkitu",
   "purchaseErrorPurchasePendingError": "Erosketaren aktibazioa ez da oraindik amaitu. Itxaron pixka bat eta egiaztatu berriro",
   "launchError": "Errore bat gertatu da aplikazioa irekitzean.\n{ErrorMessagesConnection}\n\nXehetasunak:",
-  "exampleRestDurationDate": "Adibidez «1/12tik 3 egunez» pilulak hartzea eten zenuen kasuan",
+  "exampleRestDurationDate": "Adibidez, abenduaren 1etik aurrera pilula hartzeari 3 egunez uzten badiozu",
   "exampleRestDurationNumber": "Adibidez, «18. zenbakitik 3 egunez» pilulak hartzeari eten egiten diezaiogun kasuan",
   "withNumber": "{number}a",
   "currentPillSheetNotFound": "Orain erabiltzen ari zaren pilula-orria ez da aurkitu",

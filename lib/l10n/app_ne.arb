@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "प्रिमियम जानकारी फेला परेन",
   "purchaseErrorPurchasePendingError": "तपाईंको खरिद सक्रिय गर्ने प्रक्रिया अझै पूरा भएको छैन। कृपया केही बेरपछि फेरि जाँच गर्नुहोस्",
   "launchError": "एप खोल्दा त्रुटि भयो।\n{ErrorMessagesConnection}\n\nविवरण:",
-  "exampleRestDurationDate": "उदाहरणका लागि「1/12 देखि 3 दिन」सेवन बिदा गरेको अवस्थामा",
+  "exampleRestDurationDate": "उदाहरणका लागि, तपाईंले 1/12 देखि 3 दिनसम्म चक्की खान रोक्नुभयो भने",
   "exampleRestDurationNumber": "उदाहरणका लागि \"18 नम्बरबाट 3 दिन\" सेवन बन्द गरेको अवस्थामा",
   "withNumber": "{number} नम्बर",
   "currentPillSheetNotFound": "हाल सक्रिय गोली शीट फेला परेन",

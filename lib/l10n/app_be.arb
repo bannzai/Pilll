@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Не ўдалося знайсці інфармацыю пра прэміум",
   "purchaseErrorPurchasePendingError": "Актывацыя пакупкі яшчэ не завершана. Калі ласка, пачакайце крыху і праверце яшчэ раз",
   "launchError": "Падчас запуску праграмы ўзнікла памылка.\n{ErrorMessagesConnection}\n\nПадрабязнасці:",
-  "exampleRestDurationDate": "Напрыклад, калі прыпыняць прыём «з 1/12 на 3 дні»",
+  "exampleRestDurationDate": "Напрыклад, калі вы зрабілі перапынак у прыёме пігулак на 3 дні з 1/12",
   "exampleRestDurationNumber": "напрыклад «з 18-га нумара на 3 дні» прапусціць прыём",
   "withNumber": "№{number}",
   "currentPillSheetNotFound": "Актуальная табліцка пігулак не знойдзена",

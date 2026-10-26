@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "պրեմիում տեղեկությունները չգտնվեցին",
   "purchaseErrorPurchasePendingError": "Գնման ակտիվացումը դեռ չի ավարտվել։ Խնդրում ենք մի փոքր սպասել և կրկին ստուգել",
   "launchError": "Հավելվածը բացելիս սխալ է առաջացել։\n{ErrorMessagesConnection}\n\nՄանրամասներ՝",
-  "exampleRestDurationDate": "Օրինակ՝ «1/12-ից 3 օր» դեղ ընդունումը դադարեցնելու դեպքում",
+  "exampleRestDurationDate": "Օրինակ՝ եթե 1/12-ից սկսած 3 օր դադարեցնեք հաբի ընդունումը",
   "exampleRestDurationNumber": "Օրինակ «18-րդ համարից 3 օր» ընդունումը դադարեցնելու դեպքում",
   "withNumber": "{number} համար",
   "currentPillSheetNotFound": "Ներկայումս ակտիվ դեղահապի թերթիկը չի գտնվել",

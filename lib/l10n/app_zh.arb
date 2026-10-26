@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "未找到高级服务信息",
   "purchaseErrorPurchasePendingError": "购买尚未完成激活，请稍等片刻后再查看",
   "launchError": "打开应用时出现了错误。\n{ErrorMessagesConnection}\n\n详情：",
-  "exampleRestDurationDate": "例如「从1/12开始暂停服用3天」的情况下",
+  "exampleRestDurationDate": "例如，从 1/12 起暂停服药 3 天",
   "exampleRestDurationNumber": "例如\"从第18粒开始停药3天\"的情况",
   "withNumber": "第{number}号",
   "currentPillSheetNotFound": "未找到当前的药片板",

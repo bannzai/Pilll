@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රීමියම් පිළිබඳ තොරතුරු සොයාගත නොහැකි විය",
   "purchaseErrorPurchasePendingError": "මිලදී ගැනීම සක්‍රිය කිරීම තවම අවසන් වී නැහැ. කරුණාකර ටික වේලාවක් රැඳී සිට නැවත පරීක්ෂා කරන්න",
   "launchError": "යෙදුම විවෘත කරන විට දෝෂයක් ඇති වුණා.\n{ErrorMessagesConnection}\n\nවිස්තර:",
-  "exampleRestDurationDate": "උදාහරණයක් ලෙස \\\"1/12 සිට දින 3ක්\\\" ගැනීම නවත්වන ලද අවස්ථාවකදී",
+  "exampleRestDurationDate": "උදාහරණයක් ලෙස, ඔබ 1/12 සිට දින 3ක් පෙත්ත ගැනීම නවතා තැබුවහොත්",
   "exampleRestDurationNumber": "උදාහරණයක් ලෙස \\\"18 වන අංකයේ සිට දින 3ක්\\\" ගෙඩි ගැනීම නතර කළ අවස්థාවේ",
   "withNumber": "{number}වන",
   "currentPillSheetNotFound": "දැනට භාවිත කරන පිල් ෂීට් සොයා ගත නොහැකි විය",

@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Não foi possível encontrar as informações do Premium",
   "purchaseErrorPurchasePendingError": "A ativação da compra ainda está em andamento. Aguarde um pouco e confira novamente",
   "launchError": "Ocorreu um erro ao abrir o aplicativo.\n{ErrorMessagesConnection}\n\nDetalhes:",
-  "exampleRestDurationDate": "Por exemplo, se você pausar a medicação por 3 dias a partir de 1/12",
+  "exampleRestDurationDate": "Por exemplo, se você fizer uma pausa de 3 dias na pílula a partir de 1º de dezembro",
   "exampleRestDurationNumber": "Por exemplo, \"a partir do comprimido 18 por 3 dias\" quando pausou a toma",
   "withNumber": "nº {number}",
   "currentPillSheetNotFound": "A cartela de pílula atual não foi encontrada",

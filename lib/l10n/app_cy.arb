@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Heb ffeindio gwybodaeth am premiwm",
   "purchaseErrorPurchasePendingError": "Nid yw’r pryniant wedi’i actifadu eto. Arhoswch ychydig ac edrychwch eto",
   "launchError": "Digwyddodd gwall wrth agor yr ap.\n{ErrorMessagesConnection}\n\nManylion:",
-  "exampleRestDurationDate": "Er enghraifft \\\"o 1/12 am 3 diwrnod\\\" os gwnaethoch roi'r gorau i gymryd tabledi",
+  "exampleRestDurationDate": "Er enghraifft, os byddwch chi’n cael seibiant o 3 diwrnod o gymryd y bilsen o 1/12",
   "exampleRestDurationNumber": "Er enghraifft, os ydych wedi rhoi seibiant \"o rif 18 am 3 diwrnod\"",
   "withNumber": "rhif {number}",
   "currentPillSheetNotFound": "Ni chanfuwyd y daflen bilsen gyfredol",

@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informácie o Premium sa nepodarilo nájsť",
   "purchaseErrorPurchasePendingError": "Aktivácia nákupu ešte nie je dokončená. Chvíľu počkajte a skúste to znova skontrolovať",
   "launchError": "Pri spúšťaní aplikácie sa vyskytla chyba.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
-  "exampleRestDurationDate": "Napríklad „od 1/12 na 3 dni\" pri prerušení užívania",
+  "exampleRestDurationDate": "Napríklad, ak od 1/12 na 3 dni prerušíte užívanie tabletky",
   "exampleRestDurationNumber": "napríklad keď ste prerušili užívanie od 18. tablety na 3 dni",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Aktuálny balíček piluliek sa nenašiel",

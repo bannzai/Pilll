@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "No s'ha trobat la informació de Premium",
   "purchaseErrorPurchasePendingError": "La compra encara no s’ha activat. Espera una estona i torna-ho a comprovar",
   "launchError": "S'ha produït un error en obrir l'aplicació.\n{ErrorMessagesConnection}\n\nDetalls:",
-  "exampleRestDurationDate": "per exemple, si s'aturen la ingesta durant 3 dies a partir del 1/12",
+  "exampleRestDurationDate": "Per exemple, si fas una pausa de 3 dies en la presa de la píndola a partir de l’1/12",
   "exampleRestDurationNumber": "per exemple, si deixeu de prendre durant 3 dies a partir del dia 18",
   "withNumber": "{number}",
   "currentPillSheetNotFound": "No s'ha trobat la plaqueta de píndoles actual",

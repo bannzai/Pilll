@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียมค่ะ",
   "purchaseErrorPurchasePendingError": "การเปิดใช้งานการซื้อยังไม่เสร็จสิ้นค่ะ กรุณารอสักครู่แล้วตรวจสอบอีกครั้งค่ะ",
   "launchError": "เกิดข้อผิดพลาดขณะเปิดแอปค่ะ\n{ErrorMessagesConnection}\n\nรายละเอียด:",
-  "exampleRestDurationDate": "เช่น หากหยุดรับประทานจาก 1/12 เป็นเวลา 3 วัน",
+  "exampleRestDurationDate": "ตัวอย่างเช่น หากพักทานยา 3 วัน ตั้งแต่ 1/12 ค่ะ",
   "exampleRestDurationNumber": "เช่น \"หยุดทานยาจากเม็ดที่ 18 เป็นเวลา 3 วัน\"",
   "withNumber": "ที่ {number}",
   "currentPillSheetNotFound": "ไม่พบแผ่นยาคุมที่กำลังใช้อยู่ในปัจจุบัน",

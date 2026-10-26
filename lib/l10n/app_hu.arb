@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "A prémium információk nem találhatók",
   "purchaseErrorPurchasePendingError": "A vásárlás aktiválása még folyamatban van. Várj egy kicsit, majd ellenőrizd újra",
   "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek:",
-  "exampleRestDurationDate": "Például \"1/12-től 3 napig\" szedés szüneteltetése esetén",
+  "exampleRestDurationDate": "Például ha 1/12-től 3 nap szünetet tartasz a tabletta szedésében",
   "exampleRestDurationNumber": "Például ha „18. tablettától 3 napig\" szüneteltette a szedést",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "A jelenleg használt tablettabliszter nem található",

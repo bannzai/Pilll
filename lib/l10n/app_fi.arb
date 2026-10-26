@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-tietoja ei löytynyt",
   "purchaseErrorPurchasePendingError": "Ostoksesi aktivointi on vielä kesken. Odota hetki ja tarkista uudelleen",
   "launchError": "Sovellusta avattaessa tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot:",
-  "exampleRestDurationDate": "Esimerkiksi \"1/12 alkaen 3 päivää\" ottotauon tapauksessa",
+  "exampleRestDurationDate": "Esimerkiksi jos pidät pillereistä 3 päivän tauon 1/12 alkaen",
   "exampleRestDurationNumber": "Esimerkiksi \"tabletista 18 alkaen 3 päivää\" kun otat tauon ottamisesta",
   "withNumber": "{number}. tabletti",
   "currentPillSheetNotFound": "Käytössä olevaa pillerilehteä ei löytynyt",

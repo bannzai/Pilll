@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم پیدا نشد",
   "purchaseErrorPurchasePendingError": "فعال‌سازی خرید هنوز کامل نشده است. لطفاً کمی صبر کنید و دوباره بررسی کنید",
   "launchError": "هنگام باز کردن برنامه خطایی رخ داد.\n{ErrorMessagesConnection}\n\nجزئیات:",
-  "exampleRestDurationDate": "مثلاً اگر از ۱/۱۲ به مدت ۳ روز مصرف را متوقف کنید",
+  "exampleRestDurationDate": "برای مثال، اگر از ۱/۱۲ به مدت ۳ روز مصرف قرص را متوقف کنید",
   "exampleRestDurationNumber": "مثلاً در صورت قطع مصرف «از شماره ۱۸ به مدت ۳ روز»",
   "withNumber": "شماره {number}",
   "currentPillSheetNotFound": "اطلاعات ورق قرص فعلی یافت نشد",

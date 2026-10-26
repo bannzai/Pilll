@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ପ୍ରିମିୟମ୍ ସୂଚନା ମିଳିଲା ନାହିଁ",
   "purchaseErrorPurchasePendingError": "ଆପଣଙ୍କ କ୍ରୟ ସକ୍ରିୟ ହେବା ପ୍ରକ୍ରିୟା ଏଯାଏଁ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଯାଞ୍ଚ କରନ୍ତୁ",
   "launchError": "ଆପ୍‌ ଖୋଲିବା ସମୟରେ ଏକ ତ୍ରୁଟି ଘଟିଛି।\n{ErrorMessagesConnection}\n\nବିବରଣୀ:",
-  "exampleRestDurationDate": "ଉଦାହରଣ ସ୍ୱରୂପ 「1/12ରୁ 3 ଦିନ」 ସେବନ ବନ୍ଦ କରିଥିଲେ",
+  "exampleRestDurationDate": "ଉଦାହରଣ ସ୍ୱରୂପ, ଆପଣ 1/12 ଠାରୁ 3 ଦିନ ପାଇଁ ବଟିକା ଖାଇବା ବନ୍ଦ ରଖିଲେ",
   "exampleRestDurationNumber": "ଯେପରିକି \"18 ନମ୍ବରରୁ 3 ଦିନ\" ଔଷଧ ସେବନ ବନ୍ଦ କଲେ",
   "withNumber": "{number}ନଂ",
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନର ଲକ୍ଷ୍ୟ ବର୍ତ୍ତିକା ପତ୍ର ମିଳିଲା ନାହିଁ",

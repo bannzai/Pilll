@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Không tìm thấy thông tin Premium",
   "purchaseErrorPurchasePendingError": "Giao dịch mua của bạn vẫn đang được kích hoạt. Vui lòng đợi một lát rồi kiểm tra lại",
   "launchError": "Đã xảy ra lỗi khi mở ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết:",
-  "exampleRestDurationDate": "Ví dụ trong trường hợp nghỉ uống thuốc \"từ ngày 1/12 trong 3 ngày\"",
+  "exampleRestDurationDate": "Ví dụ, nếu bạn ngừng uống thuốc trong 3 ngày kể từ 1/12",
   "exampleRestDurationNumber": "Ví dụ \"từ viên số 18 nghỉ uống 3 ngày\"",
   "withNumber": "Số {number}",
   "currentPillSheetNotFound": "Không tìm thấy gói thuốc hiện tại",

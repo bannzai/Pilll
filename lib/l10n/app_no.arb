@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Fant ikke informasjon om Premium",
   "purchaseErrorPurchasePendingError": "Kjøpet ditt aktiveres fortsatt. Vent litt og sjekk igjen",
   "launchError": "Det oppsto en feil da appen ble åpnet.\n{ErrorMessagesConnection}\n\nDetaljer:",
-  "exampleRestDurationDate": "for eksempel «fra 1/12 i 3 dager» hvis du tok en pause fra inntak",
+  "exampleRestDurationDate": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra 1/12",
   "exampleRestDurationNumber": "For eksempel hvis du tar pause fra nummer 18 i 3 dager",
   "withNumber": "nr. {number}",
   "currentPillSheetNotFound": "Det gjeldende pilleskjemaet ble ikke funnet",

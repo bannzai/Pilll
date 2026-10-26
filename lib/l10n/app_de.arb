@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informationen zu Premium konnten nicht gefunden werden",
   "purchaseErrorPurchasePendingError": "Dein Kauf wird noch aktiviert. Warte bitte einen Moment und prüfe es dann erneut",
   "launchError": "Beim Starten der App ist ein Fehler aufgetreten.\n{ErrorMessagesConnection}\n\nDetails:",
-  "exampleRestDurationDate": "Z.B. „ab 1/12 für 3 Tage\" bei einer Einnahmepause",
+  "exampleRestDurationDate": "Zum Beispiel, wenn du ab dem 1/12 eine 3-tägige Pillenpause machst",
   "exampleRestDurationNumber": "Zum Beispiel bei einer 3-tägigen Einnahmepause ab Tablette 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Das aktuelle Pillenblister wurde nicht gefunden",

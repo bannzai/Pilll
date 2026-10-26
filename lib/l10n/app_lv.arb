@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informācija par Premium nav atrasta",
   "purchaseErrorPurchasePendingError": "Pirkuma aktivizēšana vēl nav pabeigta. Lūdzu, nedaudz uzgaidiet un pārbaudiet vēlreiz",
   "launchError": "Atverot lietotni, radās kļūda.\n{ErrorMessagesConnection}\n\nPapildinformācija:",
-  "exampleRestDurationDate": "Piemēram, „no 1/12 uz 3 dienām\" tablešu lietošanas pārtraukums",
+  "exampleRestDurationDate": "Piemēram, ja no 1/12 uz 3 dienām pārtraucat lietot tabletes",
   "exampleRestDurationNumber": "Piemēram, „no 18. tabletes 3 dienas\" tablešu lietošanas pārtraukuma gadījumā",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Pašreizējā tablešu plāksne netika atrasta",

@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ပရီမီယံ အချက်အလက်ကို ရှာမတွေ့ပါ",
   "purchaseErrorPurchasePendingError": "ဝယ်ယူမှုကို အသက်သွင်းခြင်း မပြီးသေးပါ။ ခဏစောင့်ပြီး ထပ်မံစစ်ဆေးပေးပါ",
   "launchError": "အက်ပ်ကို ဖွင့်ချိန်မှာ အမှားတစ်ခု ဖြစ်သွားပါတယ်။\n{ErrorMessagesConnection}\n\nအသေးစိတ်:",
-  "exampleRestDurationDate": "ဥပမာ \"၁/၁၂ မှ ၃ ရက်\" ဆေးသုံးခြင်းရပ်နားသည့်အခါ",
+  "exampleRestDurationDate": "ဥပမာ၊ 1/12 မှစပြီး 3 ရက်ကြာ ဆေးလုံးသောက်ခြင်းကို ခေတ္တရပ်ထားပါက",
   "exampleRestDurationNumber": "ဥပမာ 「နံပါတ် ၁၈ မှ ၃ ရက်」 သောက်ခြင်း ရပ်တန့်သောအခါ",
   "withNumber": "အမှတ် {number}",
   "currentPillSheetNotFound": "လက်ရှိ သုံးစွဲနေသော ဆေးလုံးပြားစာရင်းကို မတွေ့ရပါ",

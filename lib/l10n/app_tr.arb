@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Premium bilgileri bulunamadı",
   "purchaseErrorPurchasePendingError": "Satın alma işleminizin etkinleştirilmesi henüz tamamlanmadı. Lütfen biraz bekleyip tekrar kontrol edin",
   "launchError": "Uygulama açılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar:",
-  "exampleRestDurationDate": "Örneğin '1/12'den itibaren 3 gün' kullanım arasını verdiğiniz durumda",
+  "exampleRestDurationDate": "Örneğin, 1/12’den itibaren 3 gün hap kullanımına ara verirseniz",
   "exampleRestDurationNumber": "Örneğin \"18. tabletten itibaren 3 gün\" ara verdiğiniz durumda",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Mevcut hap levhası bulunamadı",

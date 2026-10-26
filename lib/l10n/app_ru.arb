@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Не удалось найти информацию о премиум",
   "purchaseErrorPurchasePendingError": "Активация покупки ещё не завершена. Пожалуйста, подождите немного и проверьте снова",
   "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности:",
-  "exampleRestDurationDate": "Например, если сделать перерыв в приеме \"с 1/12 на 3 дня\"",
+  "exampleRestDurationDate": "Например, если вы сделаете перерыв в приёме таблетки на 3 дня с 1/12",
   "exampleRestDurationNumber": "Например, в случае перерыва в приёме с 18-й таблетки на 3 дня",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущая упаковка таблеток не найдена",

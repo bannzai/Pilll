@@ -341,7 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "premiumi teavet ei leitud",
   "purchaseErrorPurchasePendingError": "Ostu aktiveerimine pole veel lõppenud. Oota veidi ja kontrolli uuesti",
   "launchError": "Rakenduse käivitamisel tekkis viga.\n{ErrorMessagesConnection}\n\nÜksikasjad:",
-  "exampleRestDurationDate": "Näiteks „1.12st 3 päevaks\" pillide võtmist peatanud",
+  "exampleRestDurationDate": "Näiteks kui teed alates 1/12 pillide võtmises 3-päevase pausi",
   "exampleRestDurationNumber": "Näiteks „18. tabletist alates 3 päevaks\" võtmise peatamine",
   "withNumber": "nr. {number}",
   "currentPillSheetNotFound": "Aktiivset pillitabletti ei leitud",
