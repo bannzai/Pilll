@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "병원 방문일을 간편하게 관리해요",
   "futureScheduleFeatureAppealPoint3": "알림으로 알려드려요",
   "futureScheduleFeatureAppealLocationHint": "날짜를 탭해 일정을 추가해요",
-  "healthCareIntegrationFeatureAppealPoint1": "생리 기록을 자동으로 연동",
+  "healthCareIntegrationFeatureAppealPoint1": "생리 기록을 자동으로 동기화해요",
   "healthCareIntegrationFeatureAppealPoint2": "건강 앱과 동기화",
   "healthCareIntegrationFeatureAppealPoint3": "Apple 건강 앱 연동",
   "quickRecordFeatureAppealPoint1": "알림에서 복용 기록하기",

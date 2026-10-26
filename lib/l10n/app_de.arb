@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Behalte deine Arzttermine einfach im Blick",
   "futureScheduleFeatureAppealPoint3": "Benachrichtigung per Erinnerung",
   "futureScheduleFeatureAppealLocationHint": "Tippe auf ein Datum, um einen Termin einzutragen",
-  "healthCareIntegrationFeatureAppealPoint1": "Periodendaten automatisch synchronisieren",
+  "healthCareIntegrationFeatureAppealPoint1": "Periodeneinträge automatisch synchronisieren",
   "healthCareIntegrationFeatureAppealPoint2": "Mit Gesundheits-App synchronisieren",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-Unterstützung",
   "quickRecordFeatureAppealPoint1": "Einnahme über Benachrichtigungsaktion erfassen",

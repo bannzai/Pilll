@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Hold enkelt oversikt over legetimene dine",
   "futureScheduleFeatureAppealPoint3": "Varsler med påminnelse",
   "futureScheduleFeatureAppealLocationHint": "Trykk på en dato for å legge til en plan",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering av menstruasjonsdata",
+  "healthCareIntegrationFeatureAppealPoint1": "Synkroniser mensregistreringer automatisk",
   "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med helseappen",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Helse-støtte",
   "quickRecordFeatureAppealPoint1": "Registrer medisininntak via varslingshandling",

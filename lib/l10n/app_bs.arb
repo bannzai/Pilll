@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Lako pratite datume odlazaka ljekaru",
   "futureScheduleFeatureAppealPoint3": "Obavijesti putem podsjetnika",
   "futureScheduleFeatureAppealLocationHint": "Dodirnite datum da dodate plan",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatska sinkronizacija podataka o menstruaciji",
+  "healthCareIntegrationFeatureAppealPoint1": "Automatski sinhronizujte zapise o menstruaciji",
   "healthCareIntegrationFeatureAppealPoint2": "Sinkronizacija s aplikacijom zdravlja",
   "healthCareIntegrationFeatureAppealPoint3": "Podrška za Apple Health",
   "quickRecordFeatureAppealPoint1": "Evidencija uzimanja putem akcije obavijesti",

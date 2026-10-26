@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Łatwo śledź terminy wizyt u lekarza",
   "futureScheduleFeatureAppealPoint3": "Powiadomienia przez przypomnienie",
   "futureScheduleFeatureAppealLocationHint": "Dotknij daty, aby dodać plan",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatyczna synchronizacja danych menstruacyjnych",
+  "healthCareIntegrationFeatureAppealPoint1": "Automatycznie synchronizuj zapisy okresu",
   "healthCareIntegrationFeatureAppealPoint2": "Synchronizuj z aplikacją zdrowotną",
   "healthCareIntegrationFeatureAppealPoint3": "Obsługa Apple Health",
   "quickRecordFeatureAppealPoint1": "Zarejestruj przyjęcie przez powiadomienie",

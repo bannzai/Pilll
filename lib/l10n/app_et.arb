@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Hoia arsti vastuvõtuajad hõlpsalt silma all",
   "futureScheduleFeatureAppealPoint3": "Teavitused meeldetuletusega",
   "futureScheduleFeatureAppealLocationHint": "Puuduta kuupäeva, et lisada plaan",
-  "healthCareIntegrationFeatureAppealPoint1": "Menstruatsiooni andmete automaatne sünkroonimine",
+  "healthCareIntegrationFeatureAppealPoint1": "Sünkrooni päevade kirjed automaatselt",
   "healthCareIntegrationFeatureAppealPoint2": "Sünkroonimine tervishoiurakendusega",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Healthi tugi",
   "quickRecordFeatureAppealPoint1": "Ravimi võtmise registreerimine teavituse toiminguga",

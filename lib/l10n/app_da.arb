@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Hold nemt styr på dine lægeaftaler",
   "futureScheduleFeatureAppealPoint3": "Notifikationer med påmindelse",
   "futureScheduleFeatureAppealLocationHint": "Tryk på en dato for at tilføje en plan",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering af menstruationsdata",
+  "healthCareIntegrationFeatureAppealPoint1": "Synkroniser menstruationsregistreringer automatisk",
   "healthCareIntegrationFeatureAppealPoint2": "Synkroniser med Sundhedsapp",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health-understøttelse",
   "quickRecordFeatureAppealPoint1": "Registrer indtagelse via notifikationshandling",

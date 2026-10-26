@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "ติดตามวันนัดพบแพทย์ได้ง่าย ๆ",
   "futureScheduleFeatureAppealPoint3": "แจ้งเตือนด้วยการแจ้งเตือน",
   "futureScheduleFeatureAppealLocationHint": "แตะวันที่เพื่อเพิ่มกำหนดการ",
-  "healthCareIntegrationFeatureAppealPoint1": "เชื่อมต่อข้อมูลบันทึกประจำเดือนโดยอัตโนมัติ",
+  "healthCareIntegrationFeatureAppealPoint1": "ซิงค์บันทึกประจำเดือนโดยอัตโนมัติ",
   "healthCareIntegrationFeatureAppealPoint2": "ซิงค์กับแอปสุขภาพ",
   "healthCareIntegrationFeatureAppealPoint3": "รองรับ Apple Health",
   "quickRecordFeatureAppealPoint1": "บันทึกการทานจากการแจ้งเตือน",

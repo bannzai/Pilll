@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Håll enkelt koll på dina läkarbesök",
   "futureScheduleFeatureAppealPoint3": "Aviseringar med påminnelse",
   "futureScheduleFeatureAppealLocationHint": "Tryck på ett datum för att lägga till en plan",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatisk synkronisering av mensdata",
+  "healthCareIntegrationFeatureAppealPoint1": "Synka mensanteckningar automatiskt",
   "healthCareIntegrationFeatureAppealPoint2": "Synkronisera med Hälsa-appen",
   "healthCareIntegrationFeatureAppealPoint3": "Fungerar med Apple Hälsa",
   "quickRecordFeatureAppealPoint1": "Registrera intag via aviseringens åtgärd",

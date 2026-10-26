@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Snadná správa termínů návštěv lékaře",
   "futureScheduleFeatureAppealPoint3": "Oznámení pomocí připomínky",
   "futureScheduleFeatureAppealLocationHint": "Klepněte na datum a přidejte plán",
-  "healthCareIntegrationFeatureAppealPoint1": "Automatická synchronizace dat o menstruaci",
+  "healthCareIntegrationFeatureAppealPoint1": "Automaticky synchronizovat záznamy o menstruaci",
   "healthCareIntegrationFeatureAppealPoint2": "Synchronizovat s aplikací Zdraví",
   "healthCareIntegrationFeatureAppealPoint3": "Podpora Apple Health",
   "quickRecordFeatureAppealPoint1": "Záznam užití přes akci oznámení",

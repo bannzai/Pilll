@@ -532,7 +532,7 @@
   "futureScheduleFeatureAppealPoint2": "Madaling subaybayan ang mga araw ng pagpunta ninyo sa doktor",
   "futureScheduleFeatureAppealPoint3": "Mga abiso sa pamamagitan ng paalala",
   "futureScheduleFeatureAppealLocationHint": "I-tap po ang petsa para magdagdag ng plano",
-  "healthCareIntegrationFeatureAppealPoint1": "Awtomatikong pagkonekta ng data ng pagtatala ng regla",
+  "healthCareIntegrationFeatureAppealPoint1": "Awtomatikong i-sync ang mga tala ng regla",
   "healthCareIntegrationFeatureAppealPoint2": "I-sync sa Healthcare App",
   "healthCareIntegrationFeatureAppealPoint3": "Suporta sa Apple Healthcare",
   "quickRecordFeatureAppealPoint1": "Itala ang pag-inom sa aksyon ng notification",
