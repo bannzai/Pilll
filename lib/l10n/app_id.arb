@@ -137,7 +137,7 @@
   "dateDisplay": "Tampilan tanggal",
   "pillNumber": "nomor pil",
   "pillDaysCycle": "Jumlah hari minum pil",
-  "pillSheetEnded": "Strip pil telah selesai",
+  "pillSheetEnded": "strip pil sudah habis",
   "checkLastTakenDate": "Periksa tanggal terakhir minum",
   "pleaseRegisterAccount": "Silakan daftar akun",
   "cannotTransferPremiumWithoutAccount": "Fitur premium tidak dapat dipindahkan saat pergantian perangkat atau kehilangan ponsel",

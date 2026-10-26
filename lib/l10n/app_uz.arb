@@ -137,7 +137,7 @@
   "dateDisplay": "Sanani ko‘rsatish",
   "pillNumber": "tabletka raqam",
   "pillDaysCycle": "Tabletka ichiladigan kunlar soni",
-  "pillSheetEnded": "Tabletka qadoqi yakunlandi",
+  "pillSheetEnded": "tabletka blister tugadi",
   "checkLastTakenDate": "Oxirgi qabul qilgan kunni ko'rish",
   "pleaseRegisterAccount": "Iltimos, hisob ro'yxatdan o'ting",
   "cannotTransferPremiumWithoutAccount": "Qurilma almashinuvi yoki smartfon yo'qolishi paytida premium funksiyalar o'tkazilmaydi",

@@ -137,7 +137,7 @@
   "dateDisplay": "Datumvisning",
   "pillNumber": "tablettnummer",
   "pillDaysCycle": "Antal dagar med p-piller",
-  "pillSheetEnded": "P-pillerförpackningen är slut",
+  "pillSheetEnded": "p-pillerkartan är slut",
   "checkLastTakenDate": "Kontrollera senaste intag",
   "pleaseRegisterAccount": "Registrera ett konto",
   "cannotTransferPremiumWithoutAccount": "Premiumfunktioner kan inte överföras vid telefonbyte eller om telefonen förloras",

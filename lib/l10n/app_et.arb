@@ -137,7 +137,7 @@
   "dateDisplay": "Kuupäeva kuvamine",
   "pillNumber": "pillinumb",
   "pillDaysCycle": "Pilli võtmise päevade arv",
-  "pillSheetEnded": "Pilliplaat on lõppenud",
+  "pillSheetEnded": "pillileh on läbi",
   "checkLastTakenDate": "Kontrolli viimati võetud päeva",
   "pleaseRegisterAccount": "Palun registreeruge kontole",
   "cannotTransferPremiumWithoutAccount": "Seadme vahetuse või telefoni kadumise korral premium funktsioone üle kanda ei saa",

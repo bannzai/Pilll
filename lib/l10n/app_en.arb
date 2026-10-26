@@ -137,7 +137,7 @@
   "dateDisplay": "Date display",
   "pillNumber": "pill number",
   "pillDaysCycle": "Number of pill-taking days",
-  "pillSheetEnded": "Pill sheet completed",
+  "pillSheetEnded": "Pill pack finished",
   "checkLastTakenDate": "Check last pill date",
   "pleaseRegisterAccount": "Please create an account",
   "cannotTransferPremiumWithoutAccount": "You cannot transfer premium features when changing devices or if your phone is lost",

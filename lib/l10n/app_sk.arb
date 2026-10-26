@@ -137,7 +137,7 @@
   "dateDisplay": "Zobrazenie dátumu",
   "pillNumber": "číslo tabletky",
   "pillDaysCycle": "Počet dní užívania tabletky",
-  "pillSheetEnded": "Balenie tabletiek sa skončilo",
+  "pillSheetEnded": "blist je dobratý",
   "checkLastTakenDate": "Skontrolovať posledný deň užitia",
   "pleaseRegisterAccount": "Prosím, zaregistrujte si účet",
   "cannotTransferPremiumWithoutAccount": "Prémiové funkcie sa nedajú preniesť pri zmene telefónu alebo strate zariadenia",

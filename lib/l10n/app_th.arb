@@ -137,7 +137,7 @@
   "dateDisplay": "การแสดงวันที่",
   "pillNumber": "หมายเลขเม็ดยา",
   "pillDaysCycle": "จำนวนวันที่ทานยาเม็ด",
-  "pillSheetEnded": "แผงยาหมดแล้ว",
+  "pillSheetEnded": "แผงยาหมดแล้วค่ะ",
   "checkLastTakenDate": "ตรวจสอบวันที่รับประทานล่าสุด",
   "pleaseRegisterAccount": "กรุณาลงทะเบียนบัญชี",
   "cannotTransferPremiumWithoutAccount": "เมื่อเปลี่ยนเครื่องหรือทำโทรศัพท์หาย จะไม่สามารถถ่ายทอดฟีเจอร์พรีเมียมได้",

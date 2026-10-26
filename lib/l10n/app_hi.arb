@@ -137,7 +137,7 @@
   "dateDisplay": "तारीख दिखाने का तरीका",
   "pillNumber": "गोली नंबर",
   "pillDaysCycle": "गोली लेने के दिनों की संख्या",
-  "pillSheetEnded": "पिल शीट पूरी हो गई",
+  "pillSheetEnded": "पिल स्ट्रिप खत्म हो गई है",
   "checkLastTakenDate": "अंतिम सेवन तिथि देखें",
   "pleaseRegisterAccount": "कृपया खाता पंजीकृत करें",
   "cannotTransferPremiumWithoutAccount": "डिवाइस बदलने या फोन खो जाने पर प्रीमियम सुविधाएं स्थानांतरित नहीं हो सकतीं",

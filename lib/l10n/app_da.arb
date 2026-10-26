@@ -137,7 +137,7 @@
   "dateDisplay": "Datovisning",
   "pillNumber": "pillenummer",
   "pillDaysCycle": "Antal dage med p-piller",
-  "pillSheetEnded": "Pillepakken er færdig",
+  "pillSheetEnded": "pillekortet er færdigt",
   "checkLastTakenDate": "Tjek sidste indtagelse",
   "pleaseRegisterAccount": "Opret venligst en konto",
   "cannotTransferPremiumWithoutAccount": "Premium-funktioner kan ikke overføres ved enhedsskift eller tab af smartphone",

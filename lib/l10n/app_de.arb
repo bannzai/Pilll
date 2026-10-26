@@ -137,7 +137,7 @@
   "dateDisplay": "Datumsanzeige",
   "pillNumber": "Pillennummer",
   "pillDaysCycle": "Anzahl der Einnahmetage",
-  "pillSheetEnded": "Die Pillenpackung ist beendet",
+  "pillSheetEnded": "Der Pillenblister ist aufgebraucht",
   "checkLastTakenDate": "Letzten Einnahmetag überprüfen",
   "pleaseRegisterAccount": "Bitte registrieren Sie sich",
   "cannotTransferPremiumWithoutAccount": "Premium-Funktionen können bei Gerätewechsel oder Verlust des Smartphones nicht übertragen werden",

@@ -137,7 +137,7 @@
   "dateDisplay": "Tarixin göstərilməsi",
   "pillNumber": "həb nömrə",
   "pillDaysCycle": "Həb qəbul etdiyiniz günlərin sayı",
-  "pillSheetEnded": "Dərman vərəqi tamamlandı",
+  "pillSheetEnded": "həb blister bitdi",
   "checkLastTakenDate": "Son qəbul etdiyiniz günü yoxlayın",
   "pleaseRegisterAccount": "Hesab yaradın",
   "cannotTransferPremiumWithoutAccount": "Cihaz dəyişdirmə və ya telefon itkisi zamanı premium funksiyalar köçürülə bilməz",

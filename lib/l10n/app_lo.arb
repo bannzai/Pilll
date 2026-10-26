@@ -137,7 +137,7 @@
   "dateDisplay": "ການສະແດງວັນທີ",
   "pillNumber": "ເລກເມັດຢາ",
   "pillDaysCycle": "ຈຳນວນມື້ທີ່ກິນຢາຄຸມ",
-  "pillSheetEnded": "ແຜ່ນຢາຄຸມກຳເນີດໝົດແລ້ວ",
+  "pillSheetEnded": "ແຜງຢາຄຸມໝົດແລ້ວ",
   "checkLastTakenDate": "ກວດສອບວັນທີ່ກິນຢາຄັ້ງສຸດທ້າຍ",
   "pleaseRegisterAccount": "ກະລຸນາລົງທະບຽນບັນຊີ",
   "cannotTransferPremiumWithoutAccount": "ເມື່ອປ່ຽນອຸປະກອນໃໝ່ ຫຼື ສູນເສຍໂທລະສັບ, ຟີເຈີພິເສດຈະບໍ່ສາມາດຍ້າຍມາໄດ້",

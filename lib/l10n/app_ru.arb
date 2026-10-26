@@ -137,7 +137,7 @@
   "dateDisplay": "Отображение даты",
   "pillNumber": "номер таблетки",
   "pillDaysCycle": "Количество дней приёма таблеток",
-  "pillSheetEnded": "Блистер закончился",
+  "pillSheetEnded": "блистер закончился",
   "checkLastTakenDate": "Проверить дату последнего приема",
   "pleaseRegisterAccount": "Зарегистрируйте аккаунт",
   "cannotTransferPremiumWithoutAccount": "При смене устройства или потере смартфона премиум-функции не могут быть перенесены",

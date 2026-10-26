@@ -137,7 +137,7 @@
   "dateDisplay": "날짜 표시",
   "pillNumber": "알약 번호",
   "pillDaysCycle": "복용 일수",
-  "pillSheetEnded": "알약 시트가 끝났습니다",
+  "pillSheetEnded": "알약 시트를 다 복용했어요",
   "checkLastTakenDate": "마지막 복용일 확인",
   "pleaseRegisterAccount": "계정 등록을 해주세요",
   "cannotTransferPremiumWithoutAccount": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이전할 수 없습니다",

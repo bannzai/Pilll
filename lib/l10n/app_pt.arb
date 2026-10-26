@@ -137,7 +137,7 @@
   "dateDisplay": "Exibição da data",
   "pillNumber": "número da pílula",
   "pillDaysCycle": "Número de dias de uso da pílula",
-  "pillSheetEnded": "A cartela de pílulas foi finalizada",
+  "pillSheetEnded": "A cartela terminou",
   "checkLastTakenDate": "Verificar último dia de tomada",
   "pleaseRegisterAccount": "Crie sua conta",
   "cannotTransferPremiumWithoutAccount": "As funcionalidades premium não poderão ser transferidas em caso de troca de dispositivo ou perda do smartphone",

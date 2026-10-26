@@ -137,7 +137,7 @@
   "dateDisplay": "Visualización de la fecha",
   "pillNumber": "número de píldora",
   "pillDaysCycle": "Días de toma de la píldora",
-  "pillSheetEnded": "Has completado el blíster de píldoras",
+  "pillSheetEnded": "Se terminó el blíster",
   "checkLastTakenDate": "Verificar último día de toma",
   "pleaseRegisterAccount": "Por favor, regístrese",
   "cannotTransferPremiumWithoutAccount": "Las funciones premium no se transfieren al cambiar de dispositivo o perder el teléfono",

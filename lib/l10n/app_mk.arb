@@ -137,7 +137,7 @@
   "dateDisplay": "Приказ на датум",
   "pillNumber": "број на таблета",
   "pillDaysCycle": "Број на денови за земање таблета",
-  "pillSheetEnded": "Листот со пилули е завршен",
+  "pillSheetEnded": "блистер е завршен",
   "checkLastTakenDate": "Провери ја последната дата на прием",
   "pleaseRegisterAccount": "Ве молиме, регистрирајте сметка",
   "cannotTransferPremiumWithoutAccount": "Премиум функциите не можат да се пренесуваат при смена на уред или загубен телефон",

@@ -137,7 +137,7 @@
   "dateDisplay": "Visualització de la data",
   "pillNumber": "número de píndola",
   "pillDaysCycle": "Dies de presa de la píndola",
-  "pillSheetEnded": "Ha finalitzat el blíster de píndoles",
+  "pillSheetEnded": "S’ha acabat el blíster",
   "checkLastTakenDate": "Comprovar l'últim dia de presa",
   "pleaseRegisterAccount": "Si us plau, registreu un compte",
   "cannotTransferPremiumWithoutAccount": "Les funcions premium no es poden transferir en cas de canvi de dispositiu o pèrdua del telèfon",

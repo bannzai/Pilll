@@ -137,7 +137,7 @@
   "dateDisplay": "ការបង្ហាញកាលបរិច្ឆេទ",
   "pillNumber": "លេខគ្រាប់ថ្នាំ",
   "pillDaysCycle": "ចំនួនថ្ងៃដែលលេបថ្នាំគ្រាប់",
-  "pillSheetEnded": "សន្លឹកគ្រាប់ថ្នាំបានចប់ហើយ",
+  "pillSheetEnded": "បន្ទះថ្នាំគ្រាប់បានអស់ហើយ",
   "checkLastTakenDate": "ពិនិត្យថ្ងៃញ៉ាំថ្នាំចុងក្រោយ",
   "pleaseRegisterAccount": "សូមចុះបញ្ជីគណនី",
   "cannotTransferPremiumWithoutAccount": "មុខងារ Premium នឹងមិនអាចបន្តបានទេ នៅពេលផ្លាស់ប្តូរទូរស័ព្ទ ឬបាត់បង់ទូរស័ព្ទ",

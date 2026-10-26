@@ -137,7 +137,7 @@
   "dateDisplay": "Күнді көрсету",
   "pillNumber": "таблетка нөмір",
   "pillDaysCycle": "Таблетка қабылдайтын күндер саны",
-  "pillSheetEnded": "Дәрі парағы аяқталды",
+  "pillSheetEnded": "таблетка блистер аяқталды",
   "checkLastTakenDate": "Соңғы қабылдау күнін тексеру",
   "pleaseRegisterAccount": "Тіркелгі жасаңыз",
   "cannotTransferPremiumWithoutAccount": "Құрылғыны ауыстыру немесе жоғалту кезінде премиум функцияларды тасымалдау мүмкін емес",

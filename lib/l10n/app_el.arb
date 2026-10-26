@@ -137,7 +137,7 @@
   "dateDisplay": "Εμφάνιση ημερομηνίας",
   "pillNumber": "αριθμό χαπιού",
   "pillDaysCycle": "Αριθμός ημερών λήψης χαπιών",
-  "pillSheetEnded": "Το δισκίο των χαπιών ολοκληρώθηκε",
+  "pillSheetEnded": "Η καρτέλα χαπιών ολοκληρώθηκε",
   "checkLastTakenDate": "Ελέγξτε την τελευταία ημέρα λήψης",
   "pleaseRegisterAccount": "Παρακαλώ δημιουργήστε λογαριασμό",
   "cannotTransferPremiumWithoutAccount": "Οι premium λειτουργίες δεν μπορούν να μεταφερθούν σε περίπτωση αλλαγής συσκευής ή απώλειας κινητού",

@@ -137,7 +137,7 @@
   "dateDisplay": "Datuma attēlojums",
   "pillNumber": "tabletes numur",
   "pillDaysCycle": "Tablešu lietošanas dienu skaits",
-  "pillSheetEnded": "Tablešu iepakojums ir pabeigts",
+  "pillSheetEnded": "tablešu blisteris ir izlietots",
   "checkLastTakenDate": "Pārbaudīt pēdējās lietošanas datumu",
   "pleaseRegisterAccount": "Lūdzu, reģistrējieties",
   "cannotTransferPremiumWithoutAccount": "Ierīces maiņas vai zuduma gadījumā premium funkcijas netiks saglabātas",

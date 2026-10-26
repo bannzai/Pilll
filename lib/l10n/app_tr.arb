@@ -137,7 +137,7 @@
   "dateDisplay": "Tarih gösterimi",
   "pillNumber": "hap numarası",
   "pillDaysCycle": "Hap kullanılan gün sayısı",
-  "pillSheetEnded": "Hap paketiniz tamamlandı",
+  "pillSheetEnded": "blister bitti",
   "checkLastTakenDate": "Son alım tarihini kontrol et",
   "pleaseRegisterAccount": "Lütfen hesap oluşturun",
   "cannotTransferPremiumWithoutAccount": "Cihaz değiştirme veya telefon kayıp durumlarında premium özellikleri taşıyamazsınız",

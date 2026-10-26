@@ -137,7 +137,7 @@
   "dateDisplay": "Päivämäärän näyttö",
   "pillNumber": "pillerinumero",
   "pillDaysCycle": "Pillerin ottopäivät",
-  "pillSheetEnded": "Pilleripakkaus on päättynyt",
+  "pillSheetEnded": "pilleriliuska on käytetty loppuun",
   "checkLastTakenDate": "Tarkista viimeinen ottopäivä",
   "pleaseRegisterAccount": "Rekisteröidy tilille",
   "cannotTransferPremiumWithoutAccount": "Premium-ominaisuudet eivät siirry laitteen vaihdon tai puhelimen menetyksen yhteydessä",

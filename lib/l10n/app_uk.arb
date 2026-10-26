@@ -137,7 +137,7 @@
   "dateDisplay": "Відображення дати",
   "pillNumber": "номер пігулки",
   "pillDaysCycle": "Кількість днів прийому пігулок",
-  "pillSheetEnded": "Пластина таблеток закінчилася",
+  "pillSheetEnded": "блістер закінчився",
   "checkLastTakenDate": "Переглянути останню дату прийому",
   "pleaseRegisterAccount": "Будь ласка, зареєструйтеся",
   "cannotTransferPremiumWithoutAccount": "Преміум-функції не передаються при зміні пристрою або втраті телефону",

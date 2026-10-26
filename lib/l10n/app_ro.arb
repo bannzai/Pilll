@@ -137,7 +137,7 @@
   "dateDisplay": "Afișarea datei",
   "pillNumber": "numărul pilulei",
   "pillDaysCycle": "Numărul de zile de administrare a pilulei",
-  "pillSheetEnded": "Blisterul cu pastile s-a terminat",
+  "pillSheetEnded": "Blisterul s-a terminat",
   "checkLastTakenDate": "Verifică ultima zi de administrare",
   "pleaseRegisterAccount": "Vă rugăm să vă înregistrați un cont",
   "cannotTransferPremiumWithoutAccount": "Funcțiile premium nu pot fi transferate la schimbarea dispozitivului sau pierderea smartphone-ului",

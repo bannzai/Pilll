@@ -137,7 +137,7 @@
   "dateDisplay": "Prikaz datuma",
   "pillNumber": "številka tablete",
   "pillDaysCycle": "Število dni jemanja tablet",
-  "pillSheetEnded": "Zavoj tablet je končan",
+  "pillSheetEnded": "ploščica je porabljena",
   "checkLastTakenDate": "Preveri datum zadnjega jemanja",
   "pleaseRegisterAccount": "Prosimo, registrirajte se za račun",
   "cannotTransferPremiumWithoutAccount": "Premium funkcije se ne morejo prenesti ob menjavi naprave ali izgubi pametnega telefona",
