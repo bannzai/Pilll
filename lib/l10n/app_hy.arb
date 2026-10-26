@@ -338,7 +338,7 @@
   "calendarSchedule": "Օրացույցի իրադարձություններ",
   "newPillSheetNotificationTitle": "Այսօր սկսվում է հաբերի նոր տուփը",
   "newPillSheetNotificationMessage": "🆕 Այսօր սկսվում է հաբերի նոր փաթեթը\nԽնդրում ենք հիշել հաբն ընդունել 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Պրեմիում տեղեկությունները չեն գտնվել",
+  "unexpectedPremiumEntitlementsIsNotExists": "պրեմիում տեղեկությունները չգտնվեցին",
   "purchaseErrorPurchasePendingError": "Վճարման ակտիվացումը դեռ չի ավարտվել: Խնդրում ենք սպասել և նորից ստուգել:",
   "launchError": "Հավելվածի գործարկման ժամանակ սխալ է տեղի ունեցել:\n{ErrorMessagesConnection}\n\nՄանրամասներ: ",
   "exampleRestDurationDate": "Օրինակ՝ «1/12-ից 3 օր» դեղ ընդունումը դադարեցնելու դեպքում",

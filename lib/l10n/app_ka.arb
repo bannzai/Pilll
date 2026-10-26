@@ -338,7 +338,7 @@
   "calendarSchedule": "კალენდრის გეგმები",
   "newPillSheetNotificationTitle": "დღეს აბების ახალი შეფუთვა იწყება",
   "newPillSheetNotificationMessage": "🆕 დღეს აბების ახალი შეფუთვა იწყება\nგთხოვთ, გახსოვდეთ აბის მიღება 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმ ინფორმაცია ვერ მოიძებნა",
+  "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმის შესახებ ინფორმაცია ვერ მოიძებნა",
   "purchaseErrorPurchasePendingError": "გადახდის დადასტურება ჯერ კიდევ დასრულებული არ არის. გთხოვთ, ცოტა ხანში ხელახლა შეამოწმოთ.",
   "launchError": "აპლიკაციის გაშვებისას მოხდა შეცდომა.\n{ErrorMessagesConnection}\n\nდეტალები: ",
   "exampleRestDurationDate": "მაგალითად „1/12-დან 3 დღით\" მიღების შეწყვეტის შემთხვევაში",

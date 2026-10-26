@@ -338,7 +338,7 @@
   "calendarSchedule": "ਕੈਲੰਡਰ ਦੇ ਪ੍ਰੋਗਰਾਮ",
   "newPillSheetNotificationTitle": "ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੈਕ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ",
   "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੱਤਾ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ\nਗੋਲੀ ਲੈਣੀ ਯਾਦ ਰੱਖੋ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
+  "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
   "purchaseErrorPurchasePendingError": "ਚਾਰਜ ਦੀ ਐਕਟੀਵੇਸ਼ਨ ਅਜੇ ਪੂਰੀ ਨਹੀਂ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰੋ ਅਤੇ ਫਿਰ ਚੈਕ ਕਰੋ।",
   "launchError": "ਐਪ ਸ਼ੁਰੂ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ: ",
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ \"1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ\" ਗੋਲੀ ਬੰਦ ਕਰਨ ਦੇ ਮਾਮਲੇ ਵਿੱਚ",

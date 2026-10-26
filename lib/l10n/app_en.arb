@@ -338,7 +338,7 @@
   "calendarSchedule": "Calendar events",
   "newPillSheetNotificationTitle": "Your new pill pack starts today",
   "newPillSheetNotificationMessage": "🆕 Your new pill pack starts today\nRemember to take your pill 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",
+  "unexpectedPremiumEntitlementsIsNotExists": "Premium information couldn't be found",
   "purchaseErrorPurchasePendingError": "Premium activation has not been completed. Please check again after some time.",
   "launchError": "An error occurred while launching the app.\n{ErrorMessagesConnection}\n\nDetails: ",
   "exampleRestDurationDate": "For example, if you took a break from taking pills \"from 1/12 for 3 days\"",

@@ -338,7 +338,7 @@
   "calendarSchedule": "กำหนดการในปฏิทิน",
   "newPillSheetNotificationTitle": "เริ่มแผงยาใหม่วันนี้ค่ะ",
   "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มยาแผงใหม่ค่ะ\nอย่าลืมทานยานะคะ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียม",
+  "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียมค่ะ",
   "purchaseErrorPurchasePendingError": "การชำระเงินยังไม่เสร็จสิ้น กรุณารอสักครู่แล้วตรวจสอบอีกครั้ง",
   "launchError": "เกิดข้อผิดพลาดขณะเปิดแอป\n{ErrorMessagesConnection}\n\nรายละเอียด:",
   "exampleRestDurationDate": "เช่น หากหยุดรับประทานจาก 1/12 เป็นเวลา 3 วัน",

@@ -338,7 +338,7 @@
   "calendarSchedule": "Kalenderafsprake",
   "newPillSheetNotificationTitle": "Jou nuwe pilpak begin vandag",
   "newPillSheetNotificationMessage": "🆕 Vandag begin jy met ’n nuwe pilpak\nOnthou asseblief om jou pil te neem 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Premium inligting nie gevind nie",
+  "unexpectedPremiumEntitlementsIsNotExists": "Premium-inligting kon nie gevind word nie",
   "purchaseErrorPurchasePendingError": "Die betalingsaktivering is nog nie voltooi nie. Wag asseblief 'n rukkie en kontroleer weer.",
   "launchError": "Daar was 'n fout tydens die aanskakel van die app.\n{ErrorMessagesConnection}\n\nBesonderhede: ",
   "exampleRestDurationDate": "Byvoorbeeld \"vanaf 1/12 vir 3 dae\" wanneer jy 'n pouse van die medisyne neem",

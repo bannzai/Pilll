@@ -338,7 +338,7 @@
   "calendarSchedule": "Agenda-afspraken",
   "newPillSheetNotificationTitle": "Je nieuwe pillenstrip begint vandaag",
   "newPillSheetNotificationMessage": "🆕 Vandaag begin je aan een nieuwe pillenstrip\nDenk eraan je pil in te nemen 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Premium-informatie niet gevonden",
+  "unexpectedPremiumEntitlementsIsNotExists": "Informatie over premium is niet gevonden",
   "purchaseErrorPurchasePendingError": "Uw betalingsactivering is nog niet voltooid. Wacht even en controleer het later opnieuw.",
   "launchError": "Er is een fout opgetreden bij het starten van de app.\n{ErrorMessagesConnection}\n\nDetails: ",
   "exampleRestDurationDate": "Bijvoorbeeld 'vanaf 1/12 voor 3 dagen' bij het pauzeren van de inname",

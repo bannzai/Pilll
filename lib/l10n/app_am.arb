@@ -338,7 +338,7 @@
   "calendarSchedule": "የቀን መቁጠሪያ ቀጠሮዎች",
   "newPillSheetNotificationTitle": "አዲስ የክኒን ጥቅል ዛሬ ይጀምራል",
   "newPillSheetNotificationMessage": "🆕 ከዛሬ ጀምሮ አዲስ የክኒን ማሸጊያ ይጀምራል\nእባክዎ ክኒን መውሰድዎን ያስታውሱ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "ፕሪሚየም መረጃ አልተገኘም",
+  "unexpectedPremiumEntitlementsIsNotExists": "የፕሪሚየም መረጃ አልተገኘም",
   "purchaseErrorPurchasePendingError": "የክፍያ ማግበሪያ አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ያረጋግጡ",
   "launchError": "መተግበሪያውን በሚያስጀምሩበት ጊዜ ስህተት ተከስቷል።\n{ErrorMessagesConnection}\n\nዝርዝር: ",
   "exampleRestDurationDate": "ለምሳሌ \"ከ1/12 ጀምሮ ለ3 ቀናት\" መድሃኒት አለመውሰድ ሁኔታ",

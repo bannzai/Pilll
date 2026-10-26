@@ -338,7 +338,7 @@
   "calendarSchedule": "События календаря",
   "newPillSheetNotificationTitle": "Сегодня начинается новая упаковка таблеток",
   "newPillSheetNotificationMessage": "🆕 Сегодня начинается новая упаковка таблеток\nНе забудьте принять таблетку 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Данные премиум-подписки не найдены",
+  "unexpectedPremiumEntitlementsIsNotExists": "Не удалось найти информацию о премиум",
   "purchaseErrorPurchasePendingError": "Активация подписки еще не завершена. Пожалуйста, подождите и попробуйте снова через некоторое время.",
   "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности: ",
   "exampleRestDurationDate": "Например, если сделать перерыв в приеме \"с 1/12 на 3 дня\"",

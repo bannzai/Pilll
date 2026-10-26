@@ -338,7 +338,7 @@
   "calendarSchedule": "رویدادهای تقویم",
   "newPillSheetNotificationTitle": "بسته جدید قرص‌ها از امروز شروع می‌شود",
   "newPillSheetNotificationMessage": "🆕 بستهٔ جدید قرص‌ها از امروز شروع می‌شود\nلطفاً مصرف قرص را فراموش نکنید 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم یافت نشد",
+  "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم پیدا نشد",
   "purchaseErrorPurchasePendingError": "فعال‌سازی پرداخت هنوز تکمیل نشده است. لطفاً مدتی صبر کرده و دوباره بررسی کنید",
   "launchError": "هنگام راه‌اندازی برنامه خطایی رخ داد.\n{ErrorMessagesConnection}\n\nجزئیات: ",
   "exampleRestDurationDate": "مثلاً اگر از ۱/۱۲ به مدت ۳ روز مصرف را متوقف کنید",

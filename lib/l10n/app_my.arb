@@ -338,7 +338,7 @@
   "calendarSchedule": "ပြက္ခဒိန်ရှိ အစီအစဉ်များ",
   "newPillSheetNotificationTitle": "ဆေးပြားကတ်အသစ်ကို ဒီနေ့ စတင်ပါမယ်",
   "newPillSheetNotificationMessage": "🆕 ဒီနေ့ ဆေးပြားကတ်အသစ် စတင်ပါပြီ\nဆေးပြားသောက်ဖို့ မမေ့ပါနဲ့ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "ပရီမီယံအချက်အလက်များ မတွေ့ရှိပါ",
+  "unexpectedPremiumEntitlementsIsNotExists": "ပရီမီယံ အချက်အလက်ကို ရှာမတွေ့ပါ",
   "purchaseErrorPurchasePendingError": "ငွေပေးချေမှုအတည်ပြုခြင်း မပြီးစီးသေးပါ။ ခဏကြာပြီးမှ ပြန်လည်စစ်ဆေးပါ",
   "launchError": "အက်ပ်ဖွင့်သည့်အချိန်တွင် အမှားတစ်ခု ဖြစ်ပေါ်ခဲ့ပါသည်။\n{ErrorMessagesConnection}\n\nအသေးစိတ်: ",
   "exampleRestDurationDate": "ဥပမာ \"၁/၁၂ မှ ၃ ရက်\" ဆေးသုံးခြင်းရပ်နားသည့်အခါ",

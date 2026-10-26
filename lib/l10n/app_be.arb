@@ -338,7 +338,7 @@
   "calendarSchedule": "Падзеі календара",
   "newPillSheetNotificationTitle": "Сёння пачынаецца новая ўпакоўка пігулак",
   "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая ўпакоўка пігулак\nНе забудзьцеся прыняць пігулку 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Прэміум інфармацыя не знойдзена",
+  "unexpectedPremiumEntitlementsIsNotExists": "Не ўдалося знайсці інфармацыю пра прэміум",
   "purchaseErrorPurchasePendingError": "Актывацыя плацяжоў яшчэ не завершана. Калі ласка, пачакайце некаторы час і праверце зноў.",
   "launchError": "Пры запуску прыкладання ўзнікла тэхнічная памылка. {ErrorMessagesConnection}",
   "exampleRestDurationDate": "Напрыклад, калі прыпыняць прыём «з 1/12 на 3 дні»",

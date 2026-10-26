@@ -338,7 +338,7 @@
   "calendarSchedule": "Mga iskedyul sa kalendaryo",
   "newPillSheetNotificationTitle": "Magsisimula na po ngayon ang bagong pakete ng pildoras",
   "newPillSheetNotificationMessage": "🆕 Ngayon po magsisimula ang bagong pakete ng mga pildoras\nPaalala po na inumin ang inyong pildoras 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Hindi natagpuan ang premium na impormasyon",
+  "unexpectedPremiumEntitlementsIsNotExists": "Hindi mahanap ang impormasyon tungkol sa Premium",
   "purchaseErrorPurchasePendingError": "Hindi pa nakumpleto ang pag-activate ng bayad. Mangyaring maghintay ng ilang sandali at tingnan muli.",
   "launchError": "May naganap na error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nDetalye: ",
   "exampleRestDurationDate": "Halimbawa kapag nag-rest sa pag-inom ng pills ng \"1/12 hanggang 3 araw\"",

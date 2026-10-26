@@ -338,7 +338,7 @@
   "calendarSchedule": "ಕ್ಯಾಲೆಂಡರ್‌ನ ಕಾರ್ಯಕ್ರಮಗಳು",
   "newPillSheetNotificationTitle": "ಇಂದಿನಿಂದ ಹೊಸ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
   "newPillSheetNotificationMessage": "🆕 ಇಂದಿನಿಂದ ಮಾತ್ರೆಗಳ ಹೊಸ ಪ್ಯಾಕ್ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ\nಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನೆನಪಿಡಿ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "ಪ್ರೀಮಿಯಂ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ",
+  "unexpectedPremiumEntitlementsIsNotExists": "ಪ್ರೀಮಿಯಂ ಮಾಹಿತಿ ಕಂಡುಬಂದಿಲ್ಲ",
   "purchaseErrorPurchasePendingError": "ಪಾವತಿ ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆ ಪೂರ್ಣಗೊಂಡಿಲ್ಲ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ.",
   "launchError": "ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾರಂಭದಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು: ",
   "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ \"1/12ನಿಂದ 3ದಿನಗಳು\" ಸೇವನೆ ವಿರಾಮಿಸಿದ ಸಂದರ್ಭದಲ್ಲಿ",

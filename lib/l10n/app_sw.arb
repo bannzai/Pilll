@@ -338,7 +338,7 @@
   "calendarSchedule": "Ratiba ya kalenda",
   "newPillSheetNotificationTitle": "Pakiti mpya ya vidonge inaanza leo",
   "newPillSheetNotificationMessage": "🆕 Leo unaanza pakiti mpya ya vidonge\nTafadhali kumbuka kumeza kidonge 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Taarifa za premium hazikupatikana",
+  "unexpectedPremiumEntitlementsIsNotExists": "Taarifa kuhusu Premium hazikupatikana",
   "purchaseErrorPurchasePendingError": "Kuwezesha malipo hakujakamilika. Tafadhali subiri muda kidogo halafu jaribu tena.",
   "launchError": "Hitilafu imetokea wakati wa kuzindua programu.\n{ErrorMessagesConnection}\n\nMaelezo: ",
   "exampleRestDurationDate": "Kwa mfano \"kuanzia 1/12 kwa siku 3\" kuacha kunywa dawa",

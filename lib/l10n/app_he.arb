@@ -338,7 +338,7 @@
   "calendarSchedule": "אירועים ביומן",
   "newPillSheetNotificationTitle": "היום מתחילה חפיסה חדשה של גלולות",
   "newPillSheetNotificationMessage": "🆕 היום מתחילה חפיסת גלולות חדשה\nכדאי לזכור את נטילת הגלולה 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "מידע הפרימיום לא נמצא",
+  "unexpectedPremiumEntitlementsIsNotExists": "לא נמצאו פרטים על פרימיום",
   "purchaseErrorPurchasePendingError": "הפעלת התשלום עדיין לא הושלמה. אנא המתן מעט ובדוק שוב",
   "launchError": "אירעה שגיאה בעת הפעלת האפליקציה\n{ErrorMessagesConnection}\n\nפרטים:",
   "exampleRestDurationDate": "לדוגמה במקרה של הפסקת נטילה \"מ-1/12 למשך 3 ימים\"",

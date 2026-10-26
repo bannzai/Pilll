@@ -338,7 +338,7 @@
   "calendarSchedule": "Eventos do calendario",
   "newPillSheetNotificationTitle": "Hoxe comezas unha nova caixa de pílulas",
   "newPillSheetNotificationMessage": "🆕 Hoxe comezas un novo envase de pílulas\nLembra tomar a pílula 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Non se atopou información premium",
+  "unexpectedPremiumEntitlementsIsNotExists": "Non se atopou a información de Premium",
   "purchaseErrorPurchasePendingError": "A activación da subscrición non foi completada. Por favor, agarde un momento e volva verificar.",
   "launchError": "Produciuse un erro ao iniciar a aplicación.\n{ErrorMessagesConnection}\n\nDetalles: ",
   "exampleRestDurationDate": "Por exemplo «dende o 1/12 durante 3 días» no caso de interromper a toma",

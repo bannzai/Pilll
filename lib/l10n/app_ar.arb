@@ -338,7 +338,7 @@
   "calendarSchedule": "مواعيد التقويم",
   "newPillSheetNotificationTitle": "تبدأ عبوة جديدة من الحبوب اليوم",
   "newPillSheetNotificationMessage": "🆕 تبدأ اليوم عبوة جديدة من الحبوب\nتذكري تناول الحبة 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "لم يتم العثور على معلومات البريميوم",
+  "unexpectedPremiumEntitlementsIsNotExists": "تعذر العثور على معلومات بريميوم",
   "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الاشتراك بعد. يرجى الانتظار قليلاً ثم المحاولة مرة أخرى",
   "launchError": "حدث خطأ عند بدء التشغيل\n{ErrorMessagesConnection}\n\nالتفاصيل:",
   "exampleRestDurationDate": "على سبيل المثال، في حالة التوقف عن تناول الحبوب \"من 1/12 لمدة 3 أيام\"",

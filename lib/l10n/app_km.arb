@@ -338,7 +338,7 @@
   "calendarSchedule": "កាលវិភាគក្នុងប្រតិទិន",
   "newPillSheetNotificationTitle": "កញ្ចប់ថ្នាំគ្រាប់ថ្មីចាប់ផ្តើមនៅថ្ងៃនេះ",
   "newPillSheetNotificationMessage": "🆕 កញ្ចប់ថ្នាំគ្រាប់ថ្មីចាប់ផ្តើមពីថ្ងៃនេះ\nសូមកុំភ្លេចលេបថ្នាំគ្រាប់ 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានពិសេស",
+  "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានអំពីព្រីមៀមទេ",
   "purchaseErrorPurchasePendingError": "ការធ្វើឱ្យការបង់ប្រាក់មានប្រសិទ្ធភាពមិនទាន់បាន​បញ្ចប់នៅឡើយទេ។ សូមរង់ចាំបន្តិច រួចពិនិត្យមើលម្តងទៀត។",
   "launchError": "មានកំហុសកើតឡើងនៅពេលចាប់ផ្ដើមកម្មវិធី។\n{ErrorMessagesConnection}\n\nព័ត៌មានលម្អិត៖ ",
   "exampleRestDurationDate": "ឧទាហរណ៍ \"ចាប់ពី១/១២រយៈពេល៣ថ្ងៃ\" ក្នុងករណីឈប់ញ៉ាំថ្នាំ",

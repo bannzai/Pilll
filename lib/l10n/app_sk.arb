@@ -338,7 +338,7 @@
   "calendarSchedule": "Udalosti v kalendári",
   "newPillSheetNotificationTitle": "Dnes sa začína nové balenie tabletiek",
   "newPillSheetNotificationMessage": "🆕 Dnes začínate nové balenie tabletiek\nNezabudnite užiť tabletku 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Prémiové informácie sa nenašli",
+  "unexpectedPremiumEntitlementsIsNotExists": "Informácie o Premium sa nepodarilo nájsť",
   "purchaseErrorPurchasePendingError": "Aktivácia predplatného ešte nie je dokončená. Prosím, počkajte chvíľu a následne skontrolujte stav.",
   "launchError": "Pri spustení aplikácie došlo k chybe.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
   "exampleRestDurationDate": "Napríklad „od 1/12 na 3 dni\" pri prerušení užívania",

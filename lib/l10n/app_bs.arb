@@ -338,7 +338,7 @@
   "calendarSchedule": "Događaji u kalendaru",
   "newPillSheetNotificationTitle": "Danas počinje novo pakovanje pilula",
   "newPillSheetNotificationMessage": "🆕 Danas počinjete novo pakovanje pilula\nMolimo Vas, sjetite se uzeti pilulu 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Premium informacije nisu pronađene",
+  "unexpectedPremiumEntitlementsIsNotExists": "Informacije o premium paketu nisu pronađene",
   "purchaseErrorPurchasePendingError": "Aktivacija pretplate nije završena. Molimo sačekajte neko vrijeme pa pokušajte ponovo.",
   "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
   "exampleRestDurationDate": "Na primjer, ako prekidite uzimanje „od 1/12 tokom 3 dana\"",

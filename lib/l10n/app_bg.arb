@@ -338,7 +338,7 @@
   "calendarSchedule": "Събития в календара",
   "newPillSheetNotificationTitle": "Днес започва новата опаковка с хапчета",
   "newPillSheetNotificationMessage": "🆕 От днес започвате нов блистер с хапчета\nВреме е да вземете хапчето си 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Премиум информацията не е намерена",
+  "unexpectedPremiumEntitlementsIsNotExists": "Информацията за премиум не беше намерена",
   "purchaseErrorPurchasePendingError": "Активирането на плащането все още не е завършено. Моля, изчакайте малко и проверете отново.",
   "launchError": "Възникна грешка при стартиране на приложението.\n{ErrorMessagesConnection}\n\nПодробности: ",
   "exampleRestDurationDate": "Например „от 1/12 за 3 дни\" при спиране на приема",

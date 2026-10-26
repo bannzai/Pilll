@@ -338,7 +338,7 @@
   "calendarSchedule": "Viðburðir í dagatali",
   "newPillSheetNotificationTitle": "Ný pillupakkning hefst í dag",
   "newPillSheetNotificationMessage": "🆕 Ný pakkning af pillum hefst í dag\nMundu að taka pilluna 👍",
-  "unexpectedPremiumEntitlementsIsNotExists": "Premium upplýsingar fundust ekki",
+  "unexpectedPremiumEntitlementsIsNotExists": "Upplýsingar um Premium fundust ekki",
   "purchaseErrorPurchasePendingError": "Greiðslan hefur ekki verið staðfest. Vinsamlegast reyndu aftur eftir smá stund.",
   "launchError": "Villa kom upp við ræsingu forritsins.\n{ErrorMessagesConnection}\n\nNánar: ",
   "exampleRestDurationDate": "Til dæmis ef þú tekur hlé „frá 1/12 í 3 daga\"",
