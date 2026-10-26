@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Informasi login Anda berhasil diperbarui",
   "updateAuthenticationInformation": "Perbarui informasi masuk Anda",
   "registeredWithProvider": "Anda berhasil mendaftar dengan {accountTypeProviderName}",
-  "linkAccount": "Hubungkan",
+  "linkAccount": "Hubungkan akun",
   "withdraw": "Hapus Akun",
   "withdrawalCompleted": "Berhasil menghapus akun",
   "appExitMessage": "Aplikasi akan ditutup. Untuk memulai yang baru, silakan mulai ulang aplikasi dan lakukan pengaturan awal.",

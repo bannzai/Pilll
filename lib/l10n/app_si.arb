@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "ඔබේ පිවිසුම් තොරතුරු යාවත්කාලීන කර ඇත",
   "updateAuthenticationInformation": "පිවිසුම් තොරතුරු යාවත්කාලීන කරන්න",
   "registeredWithProvider": "ඔබ {accountTypeProviderName} හරහා ලියාපදිංචි වී ඇත",
-  "linkAccount": "සම්බන්ධ කරන්න",
+  "linkAccount": "ගිණුම සම්බන්ධ කරන්න",
   "withdraw": "ගිණුම මකන්න",
   "withdrawalCompleted": "ගිණුම ඉවත් කර ඇත",
   "appExitMessage": "ඇප්ලිකේෂනය එක් වතාවක් වසා දමනු ලැබේ. නැවුම්ව ආරම්භ කරන්නේ නම් ඇප්ලිකේෂනය නැවත ආරම්භ කිරීමෙන් පසුව ආරම්භක සැකසීම් සිදු කරන්න.",

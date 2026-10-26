@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Таны нэвтрэх мэдээлэл шинэчлэгдлээ",
   "updateAuthenticationInformation": "Нэвтрэх мэдээллээ шинэчилнэ үү",
   "registeredWithProvider": "Та {accountTypeProviderName}-ээр бүртгүүллээ",
-  "linkAccount": "Холбох",
+  "linkAccount": "Бүртгэл холбох",
   "withdraw": "гарах",
   "withdrawalCompleted": "Бүртгэлээ устгалаа",
   "appExitMessage": "Аппыг дуусгана. Шинээр эхлэх бол аппыг дахин эхлүүлсний дараа анхны тохиргоог хийнэ үү.",

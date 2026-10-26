@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Innskráningarupplýsingarnar þínar hafa verið uppfærðar",
   "updateAuthenticationInformation": "Uppfærðu innskráningarupplýsingar",
   "registeredWithProvider": "Skráning með {accountTypeProviderName} tókst",
-  "linkAccount": "Tengja",
+  "linkAccount": "Tengja reikning",
   "withdraw": "Segja úr",
   "withdrawalCompleted": "Afskráning lokið",
   "appExitMessage": "Appið mun lokast núna. Ef þú vilt byrja að nýju skaltu endurræsa appið og klára upphaflegu stillingarnar.",

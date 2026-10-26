@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "તમારી લૉગિન માહિતી અપડેટ થઈ ગઈ છે",
   "updateAuthenticationInformation": "પ્રવેશ વિગતો અપડેટ કરો",
   "registeredWithProvider": "તમે {accountTypeProviderName} દ્વારા નોંધણી કરી છે",
-  "linkAccount": "જોડાવવું",
+  "linkAccount": "ખાતું જોડો",
   "withdraw": "ખાતું ડિલીટ કરવું",
   "withdrawalCompleted": "અકાઉન્ટ કાઢી નાખ્યું",
   "appExitMessage": "એપ એકવાર બંધ થશે. નવી શરૂઆત કરવા માટે એપ ફરીથી શરૂ કર્યા પછી પ્રારંભિક સેટિંગ કરશો.",

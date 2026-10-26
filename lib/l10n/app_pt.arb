@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Seus dados de acesso foram atualizados",
   "updateAuthenticationInformation": "Atualize seus dados de acesso",
   "registeredWithProvider": "Seu cadastro com {accountTypeProviderName} foi concluído",
-  "linkAccount": "Conectar",
+  "linkAccount": "Vincular conta",
   "withdraw": "Excluir conta",
   "withdrawalCompleted": "Desvinculação concluída",
   "appExitMessage": "O aplicativo será encerrado. Para começar novamente, reinicie o aplicativo e realize a configuração inicial.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "A bejelentkezési adataid frissültek",
   "updateAuthenticationInformation": "Bejelentkezési adatok frissítése",
   "registeredWithProvider": "Sikeresen regisztráltál a(z) {accountTypeProviderName} segítségével",
-  "linkAccount": "Összekapcsolás",
+  "linkAccount": "Fiók összekapcsolása",
   "withdraw": "Kilép",
   "withdrawalCompleted": "Fiók törölve",
   "appExitMessage": "Az alkalmazás bezárul. Ha újra szeretné kezdeni, indítsa újra az alkalmazást, majd végezze el a kezdeti beállításokat.",

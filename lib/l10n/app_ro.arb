@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Datele tale de conectare au fost actualizate",
   "updateAuthenticationInformation": "Actualizează datele de conectare",
   "registeredWithProvider": "Te-ai înregistrat cu {accountTypeProviderName}",
-  "linkAccount": "Conecta",
+  "linkAccount": "Conectează contul",
   "withdraw": "Șterge contul",
   "withdrawalCompleted": "Contul a fost șters",
   "appExitMessage": "Aplicația se va închide. Pentru a începe din nou, reporniți aplicația și efectuați configurarea inițială.",

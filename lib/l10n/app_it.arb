@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "I tuoi dati di accesso sono stati aggiornati",
   "updateAuthenticationInformation": "Aggiorna i dati di accesso",
   "registeredWithProvider": "Ti sei registrata con {accountTypeProviderName}",
-  "linkAccount": "Collega",
+  "linkAccount": "Collega l’account",
   "withdraw": "Elimina account",
   "withdrawalCompleted": "Ti sei disiscritto",
   "appExitMessage": "L'app verrà chiusa. Per iniziare di nuovo, riavvia l'app ed esegui la configurazione iniziale.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Jou aanmeldbesonderhede is opgedateer",
   "updateAuthenticationInformation": "Werk jou aanmeldbesonderhede by",
   "registeredWithProvider": "Jy is met {accountTypeProviderName} geregistreer",
-  "linkAccount": "Koppel",
+  "linkAccount": "Koppel rekening",
   "withdraw": "Uittree",
   "withdrawalCompleted": "Uitgemeld",
   "appExitMessage": "Die app sal nou gesluit word. As jy opnuut wil begin, herlaai die app en voltooi die aanvanklike opstelling.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "നിങ്ങളുടെ ലോഗിൻ വിവരങ്ങൾ പുതുക്കി",
   "updateAuthenticationInformation": "ലോഗിൻ വിവരങ്ങൾ പുതുക്കൂ",
   "registeredWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് രജിസ്ട്രേഷൻ പൂർത്തിയായി",
-  "linkAccount": "സമന്വയിപ്പിക്കുക",
+  "linkAccount": "അക്കൗണ്ട് ബന്ധിപ്പിക്കുക",
   "withdraw": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
   "withdrawalCompleted": "അക്കൗണ്ട് ഇല്ലാതാക്കി",
   "appExitMessage": "ആപ്പ് ഇപ്പോൾ അവസാനിപ്പിക്കും. പുതുതായി ആരംഭിക്കുന്നതിന് ആപ്പ് പുനരാരംഭിച്ച് പ്രാരംഭ സജ്ജീകരണം പൂർത്തിയാക്കുക.",

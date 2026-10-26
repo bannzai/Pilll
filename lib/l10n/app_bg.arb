@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Данните ви за вход са обновени",
   "updateAuthenticationInformation": "Актуализирайте данните за вход",
   "registeredWithProvider": "Регистрирахте се чрез {accountTypeProviderName}",
-  "linkAccount": "Свържи",
+  "linkAccount": "Свързване на акаунт",
   "withdraw": "Напусни",
   "withdrawalCompleted": "Акаунтът е изтрит",
   "appExitMessage": "Приложението ще се затвори. За да започнете отново, рестартирайте приложението и направете първоначалната настройка.",

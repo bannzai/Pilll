@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Maklumat log masuk anda telah dikemas kini",
   "updateAuthenticationInformation": "Sila kemas kini maklumat log masuk",
   "registeredWithProvider": "Anda telah mendaftar menggunakan {accountTypeProviderName}",
-  "linkAccount": "Hubungkan",
+  "linkAccount": "Pautkan akaun",
   "withdraw": "Padam akaun",
   "withdrawalCompleted": "Akaun telah dipadamkan",
   "appExitMessage": "Aplikasi akan ditutup. Untuk memulakan semula, sila mulakan semula aplikasi dan lakukan tetapan awal.",

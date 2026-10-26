@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Dina inloggningsuppgifter har uppdaterats",
   "updateAuthenticationInformation": "Uppdatera dina inloggningsuppgifter",
   "registeredWithProvider": "Du har registrerat dig med {accountTypeProviderName}",
-  "linkAccount": "Anslut",
+  "linkAccount": "Koppla konto",
   "withdraw": "Avregistrera",
   "withdrawalCompleted": "Avregistrerad",
   "appExitMessage": "Appen kommer nu att stängas. För att börja om, starta om appen och genomför den inledande konfigurationen.",

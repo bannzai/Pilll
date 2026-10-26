@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Ваши подаци за пријаву су ажурирани",
   "updateAuthenticationInformation": "Ажурирајте податке за пријаву",
   "registeredWithProvider": "Регистровали сте се преко {accountTypeProviderName}",
-  "linkAccount": "Poveži",
+  "linkAccount": "Повежите налог",
   "withdraw": "Obriši nalog",
   "withdrawalCompleted": "Налог је обрисан",
   "appExitMessage": "Aplikacija će se zatvoriti. Da biste počeli iznova, restartujte aplikaciju i izvršite početno podešavanje.",

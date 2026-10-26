@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Ваші дані для входу оновлено",
   "updateAuthenticationInformation": "Оновіть дані для входу",
   "registeredWithProvider": "Ви зареєструвалися через {accountTypeProviderName}",
-  "linkAccount": "Підключити",
+  "linkAccount": "Пов’язати обліковий запис",
   "withdraw": "Видалити акаунт",
   "withdrawalCompleted": "Обліковий запис видалено",
   "appExitMessage": "Додаток зараз закриється. Для нового початку перезапустіть додаток та виконайте початкові налаштування.",

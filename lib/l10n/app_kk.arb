@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Кіру деректеріңіз жаңартылды",
   "updateAuthenticationInformation": "Кіру деректерін жаңартыңыз",
   "registeredWithProvider": "Сіз {accountTypeProviderName} арқылы тіркелдіңіз",
-  "linkAccount": "Байланыстыру",
+  "linkAccount": "Есептік жазбаны байланыстырыңыз",
   "withdraw": "Аккаунтты жою",
   "withdrawalCompleted": "Аккаунт жойылды",
   "appExitMessage": "Қолданба жабылады. Жаңа басталу үшін қолданбаны қайта іске қосып, бастапқы баптауларды орындаңыз.",

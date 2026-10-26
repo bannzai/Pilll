@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "თქვენი შესვლის მონაცემები განახლდა",
   "updateAuthenticationInformation": "შესვლის მონაცემების განახლება",
   "registeredWithProvider": "თქვენ დარეგისტრირდით {accountTypeProviderName}-ის მეშვეობით",
-  "linkAccount": "დაკავშირება",
+  "linkAccount": "ანგარიშის დაკავშირება",
   "withdraw": "გაწყვეტა",
   "withdrawalCompleted": "ანგარიში წაიშალა",
   "appExitMessage": "აპლიკაცია დაიხურება. ახლიდან დასაწყებად, გთხოვთ ხელახლა გაუშვათ აპლიკაცია და გაიაროთ საწყისი კონფიგურაცია.",

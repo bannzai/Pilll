@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Τα στοιχεία σύνδεσής σας ενημερώθηκαν",
   "updateAuthenticationInformation": "Ενημέρωση στοιχείων σύνδεσης",
   "registeredWithProvider": "Η εγγραφή σας μέσω {accountTypeProviderName} ολοκληρώθηκε",
-  "linkAccount": "Σύνδεση",
+  "linkAccount": "Σύνδεση λογαριασμού",
   "withdraw": "Διαγραφή λογαριασμού",
   "withdrawalCompleted": "Διαγράφηκατε επιτυχώς",
   "appExitMessage": "Η εφαρμογή θα τερματιστεί. Για νέα έναρξη, επανεκκινήστε την εφαρμογή και πραγματοποιήστε την αρχική ρύθμιση.",

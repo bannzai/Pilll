@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "লগইন তথ্য আপডেট কৰা হৈছে",
   "updateAuthenticationInformation": "প্ৰৱেশৰ তথ্য আপডেট কৰক",
   "registeredWithProvider": "আপুনি {accountTypeProviderName}ৰ জৰিয়তে সফলভাৱে পঞ্জীয়ন কৰিছে",
-  "linkAccount": "সংযোগ কৰক",
+  "linkAccount": "একাউণ্ট সংযোগ কৰক",
   "withdraw": "একাউন্ট ডিলিট কৰক",
   "withdrawalCompleted": "প্রত্যাহাৰ কৰা হ'ল",
   "appExitMessage": "এপ্লিকেচনটো এবাৰ বন্ধ হ'ব। নতুনকৈ আৰম্ভ কৰিবলৈ হ'লে এপ্লিকেচনটো পুনৰ চালু কৰি প্ৰাৰম্ভিক ছেটআপ কৰক।",

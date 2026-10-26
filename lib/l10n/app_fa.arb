@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "اطلاعات ورود شما به‌روزرسانی شد",
   "updateAuthenticationInformation": "به‌روزرسانی اطلاعات ورود",
   "registeredWithProvider": "ثبت‌نام شما با {accountTypeProviderName} انجام شد",
-  "linkAccount": "پیوند دادن",
+  "linkAccount": "پیوند دادن حساب",
   "withdraw": "حذف حساب",
   "withdrawalCompleted": "حساب کاربری حذف شد",
   "appExitMessage": "برنامه بسته خواهد شد. برای شروع مجدد، لطفاً پس از راه‌اندازی دوباره برنامه، تنظیمات اولیه را انجام دهید.",

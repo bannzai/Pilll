@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "ຂໍ້ມູນເຂົ້າລະບົບຂອງທ່ານໄດ້ອັບເດດແລ້ວ",
   "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນເຂົ້າລະບົບ",
   "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ສຳເລັດແລ້ວເດີ",
-  "linkAccount": "ເຊື່ອມຕໍ່",
+  "linkAccount": "ເຊື່ອມຕໍ່ບັນຊີ",
   "withdraw": "ອອກຈາກສະມາຊິກ",
   "withdrawalCompleted": "ລົບບັນຊີແລ້ວ",
   "appExitMessage": "ແອັບຈະປິດລົງ. ຫາກຕ້ອງການເລີ່ມໃໝ່ ກະລຸນາເປີດແອັບໃໝ່ແລະຕັ້ງຄ່າເບື້ອງຕົ້ນ.",

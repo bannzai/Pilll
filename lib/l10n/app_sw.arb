@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Taarifa zako za kuingia zimesasishwa",
   "updateAuthenticationInformation": "Tafadhali sasisha taarifa zako za kuingia",
   "registeredWithProvider": "Umejisajili kupitia {accountTypeProviderName}",
-  "linkAccount": "Unganisha",
+  "linkAccount": "Unganisha akaunti",
   "withdraw": "Jiondoe",
   "withdrawalCompleted": "Umejiondoa",
   "appExitMessage": "Programu itafungwa sasa. Ikiwa ungependa kuanza upya, tafadhali anzisha tena programu na ufanye usanidi wa mwanzo.",

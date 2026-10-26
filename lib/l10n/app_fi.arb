@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Kirjautumistietosi on päivitetty",
   "updateAuthenticationInformation": "Päivitä kirjautumistiedot",
   "registeredWithProvider": "Rekisteröidyit palvelun {accountTypeProviderName} kautta",
-  "linkAccount": "Yhdistä",
+  "linkAccount": "Yhdistä tili",
   "withdraw": "Poista tili",
   "withdrawalCompleted": "Tili on poistettu",
   "appExitMessage": "Sovellus suljetaan nyt. Aloittaaksesi uudelleen, käynnistä sovellus uudelleen ja suorita alkuasetukset.",

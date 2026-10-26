@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "פרטי ההתחברות עודכנו",
   "updateAuthenticationInformation": "עדכון פרטי ההתחברות",
   "registeredWithProvider": "ההרשמה באמצעות {accountTypeProviderName} הושלמה",
-  "linkAccount": "חבר",
+  "linkAccount": "לקשר חשבון",
   "withdraw": "לפרוש",
   "withdrawalCompleted": "החשבון בוטל",
   "appExitMessage": "האפליקציה תסגר. כדי להתחיל מחדש, אנא הפעל את האפליקציה מחדש ובצע הגדרות ראשוניות.",

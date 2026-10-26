@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "อัปเดตข้อมูลเข้าสู่ระบบเรียบร้อยแล้วค่ะ",
   "updateAuthenticationInformation": "อัปเดตข้อมูลการเข้าสู่ระบบ",
   "registeredWithProvider": "ลงทะเบียนด้วย {accountTypeProviderName} เรียบร้อยแล้วค่ะ",
-  "linkAccount": "เชื่อมต่อ",
+  "linkAccount": "เชื่อมต่อบัญชี",
   "withdraw": "ลบบัญชี",
   "withdrawalCompleted": "ลบบัญชีแล้ว",
   "appExitMessage": "แอปจะปิดตัวลง หากต้องการเริ่มต้นใหม่ กรุณาเปิดแอปอีกครั้งและทำการตั้งค่าเริ่มต้น",

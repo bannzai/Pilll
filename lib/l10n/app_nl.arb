@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Je inloggegevens zijn bijgewerkt",
   "updateAuthenticationInformation": "Werk je inloggegevens bij",
   "registeredWithProvider": "Je bent geregistreerd met {accountTypeProviderName}",
-  "linkAccount": "Koppelen",
+  "linkAccount": "Account koppelen",
   "withdraw": "Account verwijderen",
   "withdrawalCompleted": "Account verwijderd",
   "appExitMessage": "De app wordt nu afgesloten. Om opnieuw te beginnen, start de app opnieuw op en doorloop de initiële configuratie.",

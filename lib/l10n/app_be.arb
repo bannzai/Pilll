@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Даныя для ўваходу абноўлены",
   "updateAuthenticationInformation": "Абнавіць даныя для ўваходу",
   "registeredWithProvider": "Вы зарэгістраваліся праз {accountTypeProviderName}",
-  "linkAccount": "Звязаць",
+  "linkAccount": "Звязаць уліковы запіс",
   "withdraw": "Выдаліць акаўнт",
   "withdrawalCompleted": "Акаўнт выдалены",
   "appExitMessage": "Прыкладанне будзе закрыта. Каб пачаць нанова, перазапусціце прыкладанне і выканайце пачатковую наладу.",

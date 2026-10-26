@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Actualizáronse os teus datos de acceso",
   "updateAuthenticationInformation": "Actualiza os datos de acceso",
   "registeredWithProvider": "Rexistrácheste con {accountTypeProviderName}",
-  "linkAccount": "Conectar",
+  "linkAccount": "Vincular a conta",
   "withdraw": "Darse de baixa",
   "withdrawalCompleted": "Déronse de baixa",
   "appExitMessage": "A aplicación pecharase agora. Para comezar de novo, reinicia a aplicación e realiza a configuración inicial.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Ձեր մուտքի տվյալները թարմացվել են",
   "updateAuthenticationInformation": "Թարմացրեք մուտքի տվյալները",
   "registeredWithProvider": "Դուք գրանցվել եք {accountTypeProviderName}֊ի միջոցով",
-  "linkAccount": "միացնել",
+  "linkAccount": "Կապակցել հաշիվը",
   "withdraw": "Հաշիվը ջնջել",
   "withdrawalCompleted": "Դուրս եկանք",
   "appExitMessage": "Ծրագիրը կփակվի: Նորից սկսելու համար ծրագիրը վերագործարկեք և կատարեք սկզբնական կարգավորումները:",

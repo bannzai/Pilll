@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "तुमची लॉगिन माहिती अपडेट झाली आहे",
   "updateAuthenticationInformation": "लॉगिन माहिती अद्ययावत करा",
   "registeredWithProvider": "तुमची {accountTypeProviderName} वापरून नोंदणी झाली आहे",
-  "linkAccount": "जोडा",
+  "linkAccount": "खाते जोडा",
   "withdraw": "खाते हटवा",
   "withdrawalCompleted": "खाते हटविले आहे",
   "appExitMessage": "अॅप एकदा बंद होईल. नव्याने सुरू करायचे असल्यास अॅप पुन्हा सुरू केल्यानंतर प्रारंभिक सेटअप करावे.",

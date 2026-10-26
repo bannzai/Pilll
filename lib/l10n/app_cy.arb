@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Mae eich manylion mewngofnodi wedi'u diweddaru",
   "updateAuthenticationInformation": "Diweddarwch eich manylion mewngofnodi",
   "registeredWithProvider": "Rydych wedi cofrestru drwy {accountTypeProviderName}",
-  "linkAccount": "Cysylltu",
+  "linkAccount": "Cysylltwch gyfrif",
   "withdraw": "Ymddiswyddo",
   "withdrawalCompleted": "Wedi gadael",
   "appExitMessage": "Mae'r ap yn cau nawr. I ddechrau o'r newydd, ailgychwynnwch yr ap a chompletwch y gosodiad cychwynnol.",

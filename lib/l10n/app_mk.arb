@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Податоците за најава се ажурирани",
   "updateAuthenticationInformation": "Ажурирајте ги податоците за најава",
   "registeredWithProvider": "Се регистриравте преку {accountTypeProviderName}",
-  "linkAccount": "Поврзи",
+  "linkAccount": "Поврзување сметка",
   "withdraw": "Се повлече",
   "withdrawalCompleted": "Се отпишавте",
   "appExitMessage": "Апликацијата ќе се затвори. За да почнете одново, рестартирајте ја апликацијата и извршете ја почетната поставка.",

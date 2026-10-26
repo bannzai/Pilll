@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Të dhënat tuaja të hyrjes u përditësuan",
   "updateAuthenticationInformation": "Përditësoni të dhënat e hyrjes",
   "registeredWithProvider": "U regjistruat përmes {accountTypeProviderName}",
-  "linkAccount": "Lidh",
+  "linkAccount": "Lidhni llogarinë",
   "withdraw": "Fshij llogarinë",
   "withdrawalCompleted": "U larguat",
   "appExitMessage": "Aplikacioni do të mbyllet. Nëse dëshironi të filloni përsëri, rinisni aplikacionin dhe kryeni konfigurimin fillestar.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "உங்கள் உள்நுழைவுத் தகவல் புதுப்பிக்கப்பட்டது",
   "updateAuthenticationInformation": "உள்நுழைவுத் தகவலைப் புதுப்பியுங்கள்",
   "registeredWithProvider": "{accountTypeProviderName} மூலம் பதிவு செய்துவிட்டீர்கள்",
-  "linkAccount": "இணைக்க",
+  "linkAccount": "கணக்கை இணைக்கவும்",
   "withdraw": "கணக்கை நீக்கு",
   "withdrawalCompleted": "வெளியேறிவிட்டீர்கள்",
   "appExitMessage": "ஆப்பை ஒருமுறை மூடுகிறோம். புதிதாகத் தொடங்க விரும்பினால், ஆப்பை மீண்டும் தொடங்கிய பின் ஆரம்ப அமைப்புகளைச் செய்யவும்.",

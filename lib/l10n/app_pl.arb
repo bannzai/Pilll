@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Dane logowania zostały zaktualizowane",
   "updateAuthenticationInformation": "Zaktualizuj dane logowania",
   "registeredWithProvider": "Rejestracja przez {accountTypeProviderName} zakończyła się pomyślnie",
-  "linkAccount": "Połącz",
+  "linkAccount": "Połącz konto",
   "withdraw": "Usuń konto",
   "withdrawalCompleted": "Konto zostało usunięte",
   "appExitMessage": "Aplikacja zostanie zamknięta. W przypadku ponownego rozpoczęcia należy uruchomić aplikację ponownie i wykonać konfigurację początkową.",

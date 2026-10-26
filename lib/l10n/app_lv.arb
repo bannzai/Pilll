@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Jūsu pieteikšanās dati ir atjaunināti",
   "updateAuthenticationInformation": "Atjauniniet pierakstīšanās datus",
   "registeredWithProvider": "Jūs reģistrējāties, izmantojot {accountTypeProviderName}",
-  "linkAccount": "Savienot",
+  "linkAccount": "Saistīt kontu",
   "withdraw": "Dzēst kontu",
   "withdrawalCompleted": "Konts ir dzēsts",
   "appExitMessage": "Lietotne tiks aizvērta. Lai uzsāktu darbu no jauna, restartējiet lietotni un veiciet sākotnējo iestatīšanu.",

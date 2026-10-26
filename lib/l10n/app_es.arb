@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Se actualizaron tus datos de acceso",
   "updateAuthenticationInformation": "Actualiza tus datos de acceso",
   "registeredWithProvider": "Te registraste con {accountTypeProviderName}",
-  "linkAccount": "Vincular",
+  "linkAccount": "Vincular cuenta",
   "withdraw": "Darse de baja",
   "withdrawalCompleted": "Su cuenta ha sido eliminada",
   "appExitMessage": "La aplicación se cerrará. Para volver a empezar, reinicie la aplicación y complete la configuración inicial.",

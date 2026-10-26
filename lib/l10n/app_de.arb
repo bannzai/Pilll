@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Deine Anmeldedaten wurden aktualisiert",
   "updateAuthenticationInformation": "Anmeldedaten aktualisieren",
   "registeredWithProvider": "Du hast dich mit {accountTypeProviderName} registriert",
-  "linkAccount": "Verknüpfen",
+  "linkAccount": "Konto verknüpfen",
   "withdraw": "Konto löschen",
   "withdrawalCompleted": "Konto gelöscht",
   "appExitMessage": "Die App wird jetzt beendet. Um neu zu beginnen, starten Sie die App neu und führen Sie die Ersteinrichtung durch.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Dini Aamälddate sind aktualisiert",
   "updateAuthenticationInformation": "Dini Aamäldaagabe aktualisiere",
   "registeredWithProvider": "Du hesch di mit {accountTypeProviderName} registriert",
-  "linkAccount": "verchnüpfe",
+  "linkAccount": "Konto verchnüpfe",
   "withdraw": "Konto lösche",
   "withdrawalCompleted": "Abgmäldet",
   "appExitMessage": "D'App wird jetzt beendet. För e neue Afang start d'App bitschön neu und mach denn d'Iirichtig.",

@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "登录信息已更新",
   "updateAuthenticationInformation": "更新登录信息",
   "registeredWithProvider": "已通过{accountTypeProviderName}注册成功",
-  "linkAccount": "关联",
+  "linkAccount": "关联账号",
   "withdraw": "注销",
   "withdrawalCompleted": "已注销",
   "appExitMessage": "应用将退出。如需重新开始，请重新启动应用并进行初始设置。",

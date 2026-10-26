@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "ព័ត៌មានចូលគណនីរបស់អ្នកត្រូវបានធ្វើបច្ចុប្បន្នភាព",
   "updateAuthenticationInformation": "សូមធ្វើបច្ចុប្បន្នភាពព័ត៌មានចូលគណនី",
   "registeredWithProvider": "អ្នកបានចុះឈ្មោះដោយប្រើ {accountTypeProviderName} រួចហើយ",
-  "linkAccount": "ភ្ជាប់",
+  "linkAccount": "ភ្ជាប់គណនី",
   "withdraw": "លុបគណនី",
   "withdrawalCompleted": "បានលុបគណនីរួច",
   "appExitMessage": "កម្មវិធីនឹងបិទម្តង។ ប្រសិនបើចង់ចាប់ផ្តើមថ្មី សូមចាប់ផ្តើមកម្មវិធីឡើងវិញ រួចធ្វើការកំណត់ដំបូង។",

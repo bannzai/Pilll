@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Ваши данные для входа обновлены",
   "updateAuthenticationInformation": "Обновите данные для входа",
   "registeredWithProvider": "Вы зарегистрировались через {accountTypeProviderName}",
-  "linkAccount": "Связать",
+  "linkAccount": "Привязать аккаунт",
   "withdraw": "Удалить аккаунт",
   "withdrawalCompleted": "Аккаунт удалён",
   "appExitMessage": "Приложение будет закрыто. Чтобы начать заново, перезапустите приложение и выполните начальную настройку.",

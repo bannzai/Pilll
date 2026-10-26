@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Giriş bilgileriniz güncellendi",
   "updateAuthenticationInformation": "Giriş bilgilerinizi güncelleyin",
   "registeredWithProvider": "{accountTypeProviderName} ile kaydoldunuz",
-  "linkAccount": "Bağla",
+  "linkAccount": "Hesabı bağlayın",
   "withdraw": "Hesabı Sil",
   "withdrawalCompleted": "Hesabınız silindi",
   "appExitMessage": "Uygulama kapatılacak. Yeniden başlamak için uygulamayı yeniden açtıktan sonra ilk kurulumu yapın.",

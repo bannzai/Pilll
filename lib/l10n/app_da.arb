@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Dine loginoplysninger er opdateret",
   "updateAuthenticationInformation": "Opdater dine loginoplysninger",
   "registeredWithProvider": "Du er registreret med {accountTypeProviderName}",
-  "linkAccount": "Forbind",
+  "linkAccount": "Tilknyt konto",
   "withdraw": "Slet konto",
   "withdrawalCompleted": "Kontoen er slettet",
   "appExitMessage": "Appen lukkes nu. For at starte på ny skal du genstarte appen og gennemføre den indledende opsætning.",

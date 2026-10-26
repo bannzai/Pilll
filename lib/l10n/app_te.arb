@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "మీ లాగిన్ సమాచారం నవీకరించబడింది",
   "updateAuthenticationInformation": "లాగిన్ సమాచారాన్ని నవీకరించండి",
   "registeredWithProvider": "మీరు {accountTypeProviderName} ద్వారా నమోదు చేసుకున్నారు",
-  "linkAccount": "అనుసంధానం చేయండి",
+  "linkAccount": "ఖాతాను లింక్ చేయండి",
   "withdraw": "నిష్క్రమించు",
   "withdrawalCompleted": "విలువిడిచిపెట్టాను",
   "appExitMessage": "అప్లికేషన్ ఒకసారి మూసివేయబడుతుంది. కొత్తగా ప్రారంభించడానికి అప్లికేషన్‌ను పునఃప్రారంభించిన తర్వాత ప్రాథమిక సెట్టింగులను చేయండి.",

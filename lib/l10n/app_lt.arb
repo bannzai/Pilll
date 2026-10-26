@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Jūsų prisijungimo duomenys atnaujinti",
   "updateAuthenticationInformation": "Atnaujinkite prisijungimo duomenis",
   "registeredWithProvider": "Užsiregistravote naudodami {accountTypeProviderName}",
-  "linkAccount": "Susieti",
+  "linkAccount": "Susieti paskyrą",
   "withdraw": "Ištrinti paskyrą",
   "withdrawalCompleted": "Atsijungėte",
   "appExitMessage": "Programa bus uždaryta. Norėdami pradėti iš naujo, paleiskite programą iš naujo ir atlikite pradinį nustatymą.",

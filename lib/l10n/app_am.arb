@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "የመግቢያ መረጃ ተዘምኗል",
   "updateAuthenticationInformation": "የመግቢያ መረጃን ያዘምኑ",
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",
-  "linkAccount": "ማገናኘት",
+  "linkAccount": "መለያ ያገናኙ",
   "withdraw": "መለያ ማጥፋት",
   "withdrawalCompleted": "የመለያ መሰረዝ ተጠናቅቋል",
   "appExitMessage": "መተግበሪያው ይዘጋል። እንደገና ለመጀመር መተግበሪያውን ዳግም ጀምረው የመጀመሪያ ቅንብሮቹን ማቀናጀት አለብዎት።",

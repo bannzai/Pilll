@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Vos informations de connexion ont été mises à jour",
   "updateAuthenticationInformation": "Mettre à jour les informations de connexion",
   "registeredWithProvider": "Votre inscription avec {accountTypeProviderName} est terminée",
-  "linkAccount": "Connecter",
+  "linkAccount": "Associer le compte",
   "withdraw": "Supprimer le compte",
   "withdrawalCompleted": "Retiré",
   "appExitMessage": "L'application se fermera. Pour repartir à zéro, veuillez redémarrer l'application et terminer la configuration initiale.",

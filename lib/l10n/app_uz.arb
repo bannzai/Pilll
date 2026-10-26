@@ -72,7 +72,7 @@
   "authenticationInfoUpdated": "Kirish maʼlumotlaringiz yangilandi",
   "updateAuthenticationInformation": "Kirish maʼlumotlarini yangilang",
   "registeredWithProvider": "Siz {accountTypeProviderName} orqali roʻyxatdan oʻtdingiz",
-  "linkAccount": "Bog'lash",
+  "linkAccount": "Hisobni bogʻlang",
   "withdraw": "Chiqib ketish",
   "withdrawalCompleted": "A'zolikdan chiqib ketdim",
   "appExitMessage": "Ilova yopiladi. Qaytadan boshlash uchun ilovani qayta ishga tushiring va dastlabki sozlamalarni bajaring.",
