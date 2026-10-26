@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Premium'a kaydolmadan önce…",
   "createNewAccountIfNotLoggedIn": "Pilll'e daha önce giriş yapmadıysanız sizin için yeni bir hesap oluşturulur",
   "registerAccountForDataTransfer": "Hesap oluşturduğunuzda verilerinizi başka bir cihaza aktarabilirsiniz",
-  "registerAccountToKeepData": "Hesap bilgilerinizi korumak için lütfen hesap kaydı yapın",
+  "registerAccountToKeepData": "Hesap bilgilerinizi saklamak için lütfen bir hesap oluşturun",
   "signInWith": "{loginName} ile giriş yap",
   "registerWith": "{loginName} ile kayıt ol",
   "premiumRegistrationComplete": "Pilll Premium Kaydı Tamamlandı",

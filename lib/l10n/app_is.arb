@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Áður en þú skráir þig í Premium…",
   "createNewAccountIfNotLoggedIn": "Ef þú hefur ekki skráð þig inn í Pilll áður verður nýr aðgangur stofnaður fyrir þig",
   "registerAccountForDataTransfer": "Ef þú stofnar aðgang geturðu flutt gögnin þín í annað tæki",
-  "registerAccountToKeepData": "Vinsamlegast stofnaðu reikning til að varðveita gögnin þín",
+  "registerAccountToKeepData": "Þú getur stofnað aðgang svo að reikningsupplýsingarnar þínar varðveitist",
   "signInWith": "Skrá inn með {loginName}",
   "registerWith": "Skrá sig með {loginName}",
   "premiumRegistrationComplete": "Pilll Premium skráning kláruð",

@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Cyn cofrestru ar gyfer premiwm…",
   "createNewAccountIfNotLoggedIn": "Os nad ydych erioed wedi mewngofnodi i Pilll, caiff cyfrif newydd ei greu ar eich cyfer",
   "registerAccountForDataTransfer": "Drwy greu cyfrif, gallwch drosglwyddo eich data i ddyfais arall",
-  "registerAccountToKeepData": "Os gwelwch yn dda, cofrestrwch gyfrif er mwyn cadw eich gwybodaeth",
+  "registerAccountToKeepData": "I gadw gwybodaeth eich cyfrif, cofrestrwch gyfrif os gwelwch yn dda",
   "signInWith": "Arwyddo i mewn gyda {loginName}",
   "registerWith": "Cofrestru gyda {loginName}",
   "premiumRegistrationComplete": "Pilll Premium wedi'i gofrestu'n llwyddiannus",

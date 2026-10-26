@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Bago kayo mag-sign up sa Premium…",
   "createNewAccountIfNotLoggedIn": "Kung hindi pa kayo nakakapag-log in sa Pilll, gagawa ng bagong account para sa inyo",
   "registerAccountForDataTransfer": "Kapag gumawa kayo ng account, maaari ninyong ilipat ang inyong data sa ibang device",
-  "registerAccountToKeepData": "Mangyaring magparehistro ng account upang mapanatili ang inyong impormasyon",
+  "registerAccountToKeepData": "Para mapanatili ang impormasyon ng inyong account, magparehistro po ng account",
   "signInWith": "Mag-sign in gamit ang {loginName}",
   "registerWith": "Mag-register gamit ang {loginName}",
   "premiumRegistrationComplete": "Tapos na ang Pilll Premium Registration",

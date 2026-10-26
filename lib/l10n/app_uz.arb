@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Premium uchun roʻyxatdan oʻtishdan oldin…",
   "createNewAccountIfNotLoggedIn": "Agar siz ilgari Pilllʼga kirmagan boʻlsangiz, siz uchun yangi hisob yaratiladi",
   "registerAccountForDataTransfer": "Hisob ochsangiz, maʼlumotlaringizni boshqa qurilmaga koʻchira olasiz",
-  "registerAccountToKeepData": "Ma'lumotlaringizni saqlash uchun hisobingizni ro'yxatdan o'tkazishingizni so'raymiz",
+  "registerAccountToKeepData": "Hisobingiz maʼlumotlarini saqlab qolish uchun, iltimos, hisob yarating",
   "signInWith": "{loginName} orqali kirish",
   "registerWith": "{loginName} bilan ro'yxatdan o'tish",
   "premiumRegistrationComplete": "Pilll Premium ro'yxatdan o'tish tugallandi",

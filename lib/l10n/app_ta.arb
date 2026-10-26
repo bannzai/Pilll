@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "பிரீமியம் திட்டத்தில் பதிவு செய்வதற்கு முன்…",
   "createNewAccountIfNotLoggedIn": "இதற்கு முன்பு Pilll-இல் உள்நுழைந்திருக்கவில்லை என்றால், உங்களுக்காகப் புதிய கணக்கு உருவாக்கப்படும்",
   "registerAccountForDataTransfer": "கணக்கைப் பதிவு செய்தால் உங்கள் தரவை வேறொரு சாதனத்திற்கு மாற்றலாம்",
-  "registerAccountToKeepData": "உங்கள் கணக்குத் தகவல்களைப் பாதுகாப்பதற்காக, கணக்கு பதிவு செய்யுமாறு கேட்டுக்கொள்கிறோம்",
+  "registerAccountToKeepData": "உங்கள் கணக்குத் தகவலைப் பாதுகாத்து வைத்திருக்க, தயவுசெய்து ஒரு கணக்கைப் பதிவு செய்யுங்கள்",
   "signInWith": "{loginName} மூலம் உள்நுழைவு",
   "registerWith": "{loginName} மூலம் பதிவு செய்யவும்",
   "premiumRegistrationComplete": "Pilll பிரீமியம் பதிவு நிறைவு",

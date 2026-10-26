@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Pirms reģistrēšanās Premium plānam…",
   "createNewAccountIfNotLoggedIn": "Ja iepriekš neesat pierakstījušies Pilll, jums tiks izveidots jauns konts",
   "registerAccountForDataTransfer": "Izveidojot kontu, varēsiet pārcelt savus datus uz citu ierīci",
-  "registerAccountToKeepData": "Lūdzam izveidot kontu, lai saglabātu jūsu informāciju",
+  "registerAccountToKeepData": "Lai saglabātu sava konta informāciju, lūdzu, izveidojiet kontu",
   "signInWith": "Pierakstīties ar {loginName}",
   "registerWith": "Reģistrēties ar {loginName}",
   "premiumRegistrationComplete": "Pilll Premium reģistrācija pabeigta",

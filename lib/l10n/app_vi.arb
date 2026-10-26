@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Trước khi đăng ký Premium…",
   "createNewAccountIfNotLoggedIn": "Nếu bạn chưa từng đăng nhập vào Pilll, một tài khoản mới sẽ được tạo cho bạn",
   "registerAccountForDataTransfer": "Khi tạo tài khoản, bạn có thể chuyển dữ liệu sang thiết bị khác",
-  "registerAccountToKeepData": "Vui lòng đăng ký tài khoản để lưu giữ thông tin tài khoản",
+  "registerAccountToKeepData": "Vui lòng tạo tài khoản để lưu giữ thông tin tài khoản của bạn",
   "signInWith": "Đăng nhập bằng {loginName}",
   "registerWith": "Đăng ký bằng {loginName}",
   "premiumRegistrationComplete": "Đăng ký Pilll Premium hoàn tất",

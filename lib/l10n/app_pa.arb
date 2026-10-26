@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "ਪ੍ਰੀਮੀਅਮ ਲਈ ਰਜਿਸਟਰ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ…",
   "createNewAccountIfNotLoggedIn": "ਜੇ ਤੁਸੀਂ ਪਹਿਲਾਂ ਕਦੇ Pilll ਵਿੱਚ ਲੌਗ ਇਨ ਨਹੀਂ ਕੀਤਾ, ਤਾਂ ਤੁਹਾਡੇ ਲਈ ਨਵਾਂ ਖਾਤਾ ਬਣਾਇਆ ਜਾਵੇਗਾ",
   "registerAccountForDataTransfer": "ਖਾਤਾ ਬਣਾਉਣ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ ਆਪਣਾ ਡਾਟਾ ਕਿਸੇ ਹੋਰ ਡਿਵਾਈਸ ਵਿੱਚ ਤਬਦੀਲ ਕਰ ਸਕਦੇ ਹੋ",
-  "registerAccountToKeepData": "ਆਪਣੀ ਜਾਣਕਾਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਰੱਖਣ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਖਾਤਾ ਬਣਾਓ",
+  "registerAccountToKeepData": "ਆਪਣੇ ਖਾਤੇ ਦੀ ਜਾਣਕਾਰੀ ਸੰਭਾਲ ਕੇ ਰੱਖਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਖਾਤਾ ਬਣਾਓ",
   "signInWith": "{loginName} ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ",
   "registerWith": "{loginName} ਨਾਲ ਰਜਿਸਟਰ ਕਰੋ",
   "premiumRegistrationComplete": "Pilll ਪ੍ਰੀਮੀਅਮ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੂਰਾ",

@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "לפני ההרשמה לפרימיום…",
   "createNewAccountIfNotLoggedIn": "אם זו הפעם הראשונה של כניסה ל־Pilll, ייווצר עבורך חשבון חדש",
   "registerAccountForDataTransfer": "יצירת חשבון מאפשרת להעביר את הנתונים למכשיר אחר",
-  "registerAccountToKeepData": "אנא רשמו חשבון כדי לשמור על המידע החשוב שלכן",
+  "registerAccountToKeepData": "כדי לשמור את פרטי החשבון, יש ליצור חשבון",
   "signInWith": "היכנס עם {loginName}",
   "registerWith": "הירשם עם {loginName}",
   "premiumRegistrationComplete": "רישום Pilll פרימיום הושלם",

@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Prije registracije za premium…",
   "createNewAccountIfNotLoggedIn": "Ako se još niste prijavili u Pilll, za Vas će biti kreiran novi račun",
   "registerAccountForDataTransfer": "Kada napravite račun, možete prenijeti svoje podatke na drugi uređaj",
-  "registerAccountToKeepData": "Molimo vas da se registrujete kako bismo mogli sačuvati vaše podatke",
+  "registerAccountToKeepData": "Da biste sačuvali podatke o svom računu, molimo Vas da registrujete račun",
   "signInWith": "Prijavi se putem {loginName}",
   "registerWith": "Registriraj se sa {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registracija uspješno završena",

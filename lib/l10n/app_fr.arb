@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Avant de vous inscrire à Premium…",
   "createNewAccountIfNotLoggedIn": "Si vous ne vous êtes jamais connecté à Pilll, un nouveau compte sera créé pour vous",
   "registerAccountForDataTransfer": "En créant un compte, vous pourrez transférer vos données vers un autre appareil",
-  "registerAccountToKeepData": "Veuillez créer un compte pour conserver vos données",
+  "registerAccountToKeepData": "Veuillez créer un compte pour conserver les informations de votre compte",
   "signInWith": "Connectez-vous avec {loginName}",
   "registerWith": "Inscrivez-vous avec {loginName}",
   "premiumRegistrationComplete": "Inscription Pilll Premium terminée",

@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Sebelum mendaftar premium…",
   "createNewAccountIfNotLoggedIn": "Jika Anda belum pernah masuk ke Pilll, akun baru akan dibuat untuk Anda",
   "registerAccountForDataTransfer": "Dengan membuat akun, Anda dapat memindahkan data ke perangkat lain",
-  "registerAccountToKeepData": "Untuk menyimpan informasi akun, silakan daftar akun",
+  "registerAccountToKeepData": "Buat akun agar informasi akun Anda tetap tersimpan",
   "signInWith": "Masuk dengan {loginName}",
   "registerWith": "Daftar dengan {loginName}",
   "premiumRegistrationComplete": "Pendaftaran Pilll Premium Berhasil",

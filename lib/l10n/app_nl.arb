@@ -170,7 +170,7 @@
   "beforePremiumRegistration": "Voordat je je aanmeldt voor premium…",
   "createNewAccountIfNotLoggedIn": "Als je nog niet eerder bij Pilll bent ingelogd, wordt er een nieuw account voor je aangemaakt",
   "registerAccountForDataTransfer": "Als je een account aanmaakt, kun je je gegevens overzetten naar een ander apparaat",
-  "registerAccountToKeepData": "Om uw accountgegevens te behouden, vragen wij u een account aan te maken",
+  "registerAccountToKeepData": "Maak een account aan om je accountgegevens te bewaren",
   "signInWith": "Inloggen met {loginName}",
   "registerWith": "Registreren met {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registratie voltooid",
