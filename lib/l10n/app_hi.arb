@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 आज से गोलियों का नया पैक शुरू हो रहा है\nगोली लेना याद रखें 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम की जानकारी नहीं मिली",
   "purchaseErrorPurchasePendingError": "आपकी खरीदारी अभी सक्रिय की जा रही है। कृपया थोड़ी देर बाद फिर जाँच करें",
-  "launchError": "ऐप शुरू करते समय त्रुटि हुई।\n{ErrorMessagesConnection}\n\nविवरण: ",
+  "launchError": "ऐप खोलते समय कोई गड़बड़ी हुई।\n{ErrorMessagesConnection}\n\nविवरण:",
   "exampleRestDurationDate": "उदाहरण के लिए \"1/12 से 3 दिन के लिए\" गोली बंद करने की स्थिति में",
   "exampleRestDurationNumber": "उदाहरण के लिए \"18वें से 3 दिन तक\" सेवन बंद करने पर",
   "withNumber": "{number}वां",

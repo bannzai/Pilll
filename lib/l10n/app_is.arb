@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Ný pakkning af pillum hefst í dag\nMundu að taka pilluna 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Upplýsingar um Premium fundust ekki",
   "purchaseErrorPurchasePendingError": "Enn er verið að virkja kaupin. Bíddu aðeins og athugaðu aftur",
-  "launchError": "Villa kom upp við ræsingu forritsins.\n{ErrorMessagesConnection}\n\nNánar: ",
+  "launchError": "Villa kom upp þegar forritið var opnað.\n{ErrorMessagesConnection}\n\nNánari upplýsingar:",
   "exampleRestDurationDate": "Til dæmis ef þú tekur hlé „frá 1/12 í 3 daga\"",
   "exampleRestDurationNumber": "til dæmis „frá 18. töflu í 3 daga\" ef þú hvílir frá töku",
   "withNumber": "númer {number}",

@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Danes začnete nov zavojček tablet\nNe pozabite vzeti tablete 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informacij o Premium ni bilo mogoče najti",
   "purchaseErrorPurchasePendingError": "Aktivacija nakupa še ni končana. Počakajte malo in preverite znova",
-  "launchError": "Med zagonom aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",
+  "launchError": "Pri odpiranju aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Na primer »od 1/12 za 3 dni« v primeru prenehanja jemanja",
   "exampleRestDurationNumber": "Na primer „od 18. tablete za 3 dni\" če prekinete jemanje",
   "withNumber": "{number}.",

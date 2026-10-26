@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੱਤਾ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ\nਗੋਲੀ ਲੈਣੀ ਯਾਦ ਰੱਖੋ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
   "purchaseErrorPurchasePendingError": "ਤੁਹਾਡੀ ਖਰੀਦ ਹਾਲੇ ਸਰਗਰਮ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰੋ",
-  "launchError": "ਐਪ ਸ਼ੁਰੂ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ: ",
+  "launchError": "ਐਪ ਖੋਲ੍ਹਣ ਵੇਲੇ ਇੱਕ ਗੜਬੜ ਹੋਈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ:",
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ \"1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ\" ਗੋਲੀ ਬੰਦ ਕਰਨ ਦੇ ਮਾਮਲੇ ਵਿੱਚ",
   "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ \"18ਵੇਂ ਨੰਬਰ ਤੋਂ 3 ਦਿਨ\" ਦਵਾਈ ਬੰਦ ਕਰਨ ਦੇ ਮਾਮਲੇ ਵਿੱਚ",
   "withNumber": "{number}ਵਾਂ",

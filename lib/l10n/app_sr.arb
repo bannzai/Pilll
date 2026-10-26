@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Данас почињете ново паковање пилула\nНе заборавите да узмете пилулу 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Информације о премијум нису пронађене",
   "purchaseErrorPurchasePendingError": "Активирање куповине још није завршено. Молимо Вас, сачекајте мало и проверите поново",
-  "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
+  "launchError": "Дошло је до грешке при покретању апликације.\n{ErrorMessagesConnection}\n\nДетаљи:",
   "exampleRestDurationDate": "На пример, ако прекинете узимање пилула „од 1/12 током 3 дана\"",
   "exampleRestDurationNumber": "Na primer „od 18. tableta 3 dana\" pauza u uzimanju",
   "withNumber": "{number}.",

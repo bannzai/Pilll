@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 ຢາເມັດຊຸດໃໝ່ເລີ່ມມື້ນີ້\nກະລຸນາຢ່າລືມກິນຢາເມັດ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ບໍ່ພົບຂໍ້ມູນກ່ຽວກັບ Premium",
   "purchaseErrorPurchasePendingError": "ການເປີດໃຊ້ງານການຊື້ຍັງບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າຈັກໜ້ອຍ ແລ້ວກວດເບິ່ງອີກຄັ້ງ",
-  "launchError": "ເກີດຂໍ້ຜິດພາດເວລາເປີດແອັບ\n{ErrorMessagesConnection}\n\nລາຍລະອຽດ:",
+  "launchError": "ເກີດຂໍ້ຜິດພາດຂະນະເປີດແອັບ.\n{ErrorMessagesConnection}\n\nລາຍລະອຽດ:",
   "exampleRestDurationDate": "ຕົວຢ່າງ \"ຕັ້ງແຕ່ວັນທີ 1/12 ເປັນເວລາ 3 ວັນ\" ໃນກໍລະນີທີ່ພັກການເຊີບຢາ",
   "exampleRestDurationNumber": "ຕົວຢ່າງ \"ພັກການກິນຢາຈາກເບີ 18 ເປັນເວລາ 3 ມື້\"",
   "withNumber": "{number}ທີ່",

@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Avui comences un envàs nou de píndoles\nRecorda prendre la píndola 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "No s'ha trobat la informació de Premium",
   "purchaseErrorPurchasePendingError": "La compra encara no s’ha activat. Espera una estona i torna-ho a comprovar",
-  "launchError": "S'ha produït un error en iniciar l'aplicació\n{ErrorMessagesConnection}",
+  "launchError": "S'ha produït un error en obrir l'aplicació.\n{ErrorMessagesConnection}\n\nDetalls:",
   "exampleRestDurationDate": "per exemple, si s'aturen la ingesta durant 3 dies a partir del 1/12",
   "exampleRestDurationNumber": "per exemple, si deixeu de prendre durant 3 dies a partir del dia 18",
   "withNumber": "{number}",

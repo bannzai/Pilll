@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Danas počinjete novo pakiranje pilula\nNe zaboravite uzeti pilulu 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Podaci o Premium planu nisu pronađeni",
   "purchaseErrorPurchasePendingError": "Aktivacija kupnje još nije dovršena. Pričekajte malo pa ponovno provjerite",
-  "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",
+  "launchError": "Došlo je do pogreške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nPojedinosti:",
   "exampleRestDurationDate": "Na primjer „od 1/12 tijekom 3 dana\" kada prestanete uzimati",
   "exampleRestDurationNumber": "Na primjer «od 18. tableta tijekom 3 dana» kada preskoćite uzimanje",
   "withNumber": "{number}.",

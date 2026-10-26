@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 От днес започвате нов блистер с хапчета\nВреме е да вземете хапчето си 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Информацията за премиум не беше намерена",
   "purchaseErrorPurchasePendingError": "Активирането на покупката още не е завършило. Моля, изчакайте малко и проверете отново",
-  "launchError": "Възникна грешка при стартиране на приложението.\n{ErrorMessagesConnection}\n\nПодробности: ",
+  "launchError": "Възникна грешка при стартирането на приложението.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например „от 1/12 за 3 дни\" при спиране на приема",
   "exampleRestDurationNumber": "Например, при прекъсване на приема „от номер 18 за 3 дни\"",
   "withNumber": "№{number}",

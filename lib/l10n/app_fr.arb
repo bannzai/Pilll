@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Une nouvelle plaquette de pilules commence aujourd’hui\nPensez à prendre votre pilule 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Les informations sur Premium sont introuvables",
   "purchaseErrorPurchasePendingError": "L’activation de votre achat est encore en cours. Veuillez patienter un peu, puis vérifier à nouveau",
-  "launchError": "Une erreur s'est produite lors du lancement de l'application.\n{ErrorMessagesConnection}\n\nDétails :",
+  "launchError": "Une erreur s’est produite à l’ouverture de l’application.\n{ErrorMessagesConnection}\n\nDétails :",
   "exampleRestDurationDate": "Par exemple, si vous avez interrompu la prise des pilules « à partir du 1/12 pendant 3 jours »",
   "exampleRestDurationNumber": "Par exemple, si vous avez fait une pause « de la pilule 18 pendant 3 jours »",
   "withNumber": "Pilule {number}",

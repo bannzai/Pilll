@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Hoy empiezas un nuevo envase de píldoras\nRecuerda tomar tu píldora 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "No se encontró la información de Premium",
   "purchaseErrorPurchasePendingError": "Tu compra aún se está activando. Espera un momento y vuelve a comprobarlo",
-  "launchError": "Se ha producido un error al iniciar la aplicación.\n{ErrorMessagesConnection}\n\nDetalles: ",
+  "launchError": "Se produjo un error al abrir la aplicación.\n{ErrorMessagesConnection}\n\nDetalles:",
   "exampleRestDurationDate": "Por ejemplo, si se descansó la toma \"desde el 1/12 durante 3 días\"",
   "exampleRestDurationNumber": "Por ejemplo, si pausas la toma \"del número 18 por 3 días\"",
   "withNumber": "No. {number}",

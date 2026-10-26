@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Бүгүн таблеткалардын жаңы таңгагы башталат\nТаблетканы ичүүнү унутпаңыз 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "премиум тууралуу маалымат табылган жок",
   "purchaseErrorPurchasePendingError": "Сатып алууну иштетүү али бүтө элек. Бир аз күтүп, кайра текшериңиз",
-  "launchError": "Колдонмону иштетүү учурунда ката кетти.\n{ErrorMessagesConnection}\n\nМайда-чүйдөлөрү: ",
+  "launchError": "Колдонмо ачылып жатканда ката кетти.\n{ErrorMessagesConnection}\n\nТолук маалымат:",
   "exampleRestDurationDate": "Мисалы, \"1/12-дан 3 күнгө\" дары ичүүнү токтоткон учурда",
   "exampleRestDurationNumber": "Мисалы «18-чи таблеткадан баштап 3 күн» кабыл алууну токтотуп койгон учурда",
   "withNumber": "{number}-номер",

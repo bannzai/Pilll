@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 ಇಂದಿನಿಂದ ಮಾತ್ರೆಗಳ ಹೊಸ ಪ್ಯಾಕ್ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ\nಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನೆನಪಿಡಿ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ಪ್ರೀಮಿಯಂ ಮಾಹಿತಿ ಕಂಡುಬಂದಿಲ್ಲ",
   "purchaseErrorPurchasePendingError": "ನಿಮ್ಮ ಖರೀದಿ ಇನ್ನೂ ಸಕ್ರಿಯವಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ",
-  "launchError": "ಅಪ್ಲಿಕೇಶನ್ ಪ್ರಾರಂಭದಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು: ",
+  "launchError": "ಆ್ಯಪ್ ತೆರೆಯುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು:",
   "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ \"1/12ನಿಂದ 3ದಿನಗಳು\" ಸೇವನೆ ವಿರಾಮಿಸಿದ ಸಂದರ್ಭದಲ್ಲಿ",
   "exampleRestDurationNumber": "ಉದಾಹರಣೆಗೆ「18ನೇಯಿಂದ 3 ದಿನಗಳ」ಸೇವನೆ ವಿರಾಮ ಮಾಡಿದ ಸಂದರ್ಭದಲ್ಲಿ",
   "withNumber": "{number}ನೇ",

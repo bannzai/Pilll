@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 آج سے گولیوں کا نیا پیک شروع ہو رہا ہے\nبراہِ کرم گولی لینا یاد رکھیں 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "پریمیم کی معلومات نہیں مل سکیں",
   "purchaseErrorPurchasePendingError": "خریداری کو فعال کرنے کا عمل ابھی مکمل نہیں ہوا۔ براہِ کرم کچھ دیر بعد دوبارہ چیک کریں",
-  "launchError": "ایپ شروع کرتے وقت خرابی پیش آئی۔\n{ErrorMessagesConnection}\n\nتفصیلات: ",
+  "launchError": "ایپ کھولتے وقت ایک خرابی پیش آئی۔\n{ErrorMessagesConnection}\n\nتفصیلات:",
   "exampleRestDurationDate": "مثال کے طور پر \"1/12 سے 3 دن\" گولی لینا بند کرنے کی صورت میں",
   "exampleRestDurationNumber": "مثال کے طور پر «18 نمبر سے 3 دن» دوا لینے میں وقفہ کی صورت میں",
   "withNumber": "{number} نمبر",

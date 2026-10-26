@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Oggi inizi una nuova confezione di pillole\nRicordati di prendere la pillola 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Impossibile trovare le informazioni su Premium",
   "purchaseErrorPurchasePendingError": "L’attivazione dell’acquisto è ancora in corso. Attendi un po’ e verifica di nuovo",
-  "launchError": "Si è verificato un errore durante l'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli: ",
+  "launchError": "Si è verificato un errore all'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli:",
   "exampleRestDurationDate": "Ad esempio \\\"dal 1/12 per 3 giorni\\\" di pausa nell'assunzione",
   "exampleRestDurationNumber": "Ad esempio \"dalla 18ª per 3 giorni\" in caso di pausa dall'assunzione",
   "withNumber": "{number}ª",

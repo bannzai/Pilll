@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มยาแผงใหม่ค่ะ\nอย่าลืมทานยานะคะ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียมค่ะ",
   "purchaseErrorPurchasePendingError": "การเปิดใช้งานการซื้อยังไม่เสร็จสิ้นค่ะ กรุณารอสักครู่แล้วตรวจสอบอีกครั้งค่ะ",
-  "launchError": "เกิดข้อผิดพลาดขณะเปิดแอป\n{ErrorMessagesConnection}\n\nรายละเอียด:",
+  "launchError": "เกิดข้อผิดพลาดขณะเปิดแอปค่ะ\n{ErrorMessagesConnection}\n\nรายละเอียด:",
   "exampleRestDurationDate": "เช่น หากหยุดรับประทานจาก 1/12 เป็นเวลา 3 วัน",
   "exampleRestDurationNumber": "เช่น \"หยุดทานยาจากเม็ดที่ 18 เป็นเวลา 3 วัน\"",
   "withNumber": "ที่ {number}",

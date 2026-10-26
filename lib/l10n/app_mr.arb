@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 आजपासून गोळ्यांचे नवीन पाकीट सुरू होत आहे\nगोळी घ्यायला विसरू नका 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम माहिती सापडली नाही",
   "purchaseErrorPurchasePendingError": "तुमची खरेदी सक्रिय होण्याची प्रक्रिया अजून पूर्ण झालेली नाही. कृपया थोड्या वेळाने पुन्हा तपासा",
-  "launchError": "अॅप सुरू होताना त्रुटी आली आहे.\n{ErrorMessagesConnection}\n\nतपशील: ",
+  "launchError": "ॲप सुरू करताना त्रुटी आली.\n{ErrorMessagesConnection}\n\nतपशील:",
   "exampleRestDurationDate": "उदाहरणार्थ \"१/१२ पासून ३ दिवस\" गोळ्यांचे सेवन थांबवल्यास",
   "exampleRestDurationNumber": "उदाहरणार्थ \"18 क्रमांकापासून 3 दिवस\" गोळी घेणे बंद केले असल्यास",
   "withNumber": "{number}वा",

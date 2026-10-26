@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Your new pill pack starts today\nRemember to take your pill 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium information couldn't be found",
   "purchaseErrorPurchasePendingError": "Your purchase is still being activated. Please wait a little and check again",
-  "launchError": "An error occurred while launching the app.\n{ErrorMessagesConnection}\n\nDetails: ",
+  "launchError": "An error occurred while opening the app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "For example, if you took a break from taking pills \"from 1/12 for 3 days\"",
   "exampleRestDurationNumber": "For example, if you took a break \"from pill 18 for 3 days\"",
   "withNumber": "Pill {number}",

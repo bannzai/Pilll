@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Сегодня начинается новая упаковка таблеток\nНе забудьте принять таблетку 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Не удалось найти информацию о премиум",
   "purchaseErrorPurchasePendingError": "Активация покупки ещё не завершена. Пожалуйста, подождите немного и проверьте снова",
-  "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности: ",
+  "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, если сделать перерыв в приеме \"с 1/12 на 3 дня\"",
   "exampleRestDurationNumber": "Например, в случае перерыва в приёме с 18-й таблетки на 3 дня",
   "withNumber": "№ {number}",

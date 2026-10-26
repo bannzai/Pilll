@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Бүгін таблеткалардың жаңа қаптамасы басталады\nТаблетканы қабылдауды ұмытпаңыз 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "премиум туралы ақпарат табылмады",
   "purchaseErrorPurchasePendingError": "Сатып алуды іске қосу әлі аяқталған жоқ. Біраз күтіп, қайта тексеріңіз",
-  "launchError": "Қолданбаны іске қосу кезінде қате орын алды.\n{ErrorMessagesConnection}\n\nТолық ақпарат: ",
+  "launchError": "Қолданбаны ашу кезінде қате орын алды.\n{ErrorMessagesConnection}\n\nТолығырақ:",
   "exampleRestDurationDate": "Мысалы «1/12-ден бастап 3 күн» қабылдауды тоқтаткан жағдайда",
   "exampleRestDurationNumber": "Мысалы, «18 номерден 3 күн бойы» қабылдауды тоқтатқан жағдайда",
   "withNumber": "{number}-ші",

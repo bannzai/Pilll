@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Leo unaanza pakiti mpya ya vidonge\nTafadhali kumbuka kumeza kidonge 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Taarifa kuhusu Premium hazikupatikana",
   "purchaseErrorPurchasePendingError": "Uwezeshaji wa ununuzi wako bado haujakamilika. Tafadhali subiri kidogo kisha uangalie tena",
-  "launchError": "Hitilafu imetokea wakati wa kuzindua programu.\n{ErrorMessagesConnection}\n\nMaelezo: ",
+  "launchError": "Hitilafu imetokea wakati wa kufungua programu.\n{ErrorMessagesConnection}\n\nMaelezo:",
   "exampleRestDurationDate": "Kwa mfano \"kuanzia 1/12 kwa siku 3\" kuacha kunywa dawa",
   "exampleRestDurationNumber": "Kwa mfano ikiwa \"kutoka nambari 18 kwa siku 3\" umepumzisha kumeza vidonge",
   "withNumber": "Namba {number}",

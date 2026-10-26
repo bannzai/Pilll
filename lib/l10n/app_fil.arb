@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Ngayon po magsisimula ang bagong pakete ng mga pildoras\nPaalala po na inumin ang inyong pildoras 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Hindi mahanap ang impormasyon tungkol sa Premium",
   "purchaseErrorPurchasePendingError": "Hindi pa tapos ang pag-activate ng binili ninyo. Pakihintay po sandali bago tingnan muli",
-  "launchError": "May naganap na error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nDetalye: ",
+  "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
   "exampleRestDurationDate": "Halimbawa kapag nag-rest sa pag-inom ng pills ng \"1/12 hanggang 3 araw\"",
   "exampleRestDurationNumber": "Halimbawa kapag \"mula sa numero 18 ng tatlong araw\" hindi uminom",
   "withNumber": "Bilang {number}",

@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 היום מתחילה חפיסת גלולות חדשה\nכדאי לזכור את נטילת הגלולה 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "לא נמצאו פרטים על פרימיום",
   "purchaseErrorPurchasePendingError": "הפעלת הרכישה עדיין לא הושלמה. כדאי להמתין מעט ולבדוק שוב",
-  "launchError": "אירעה שגיאה בעת הפעלת האפליקציה\n{ErrorMessagesConnection}\n\nפרטים:",
+  "launchError": "אירעה שגיאה בעת פתיחת האפליקציה.\n{ErrorMessagesConnection}\n\nפרטים:",
   "exampleRestDurationDate": "לדוגמה במקרה של הפסקת נטילה \"מ-1/12 למשך 3 ימים\"",
   "exampleRestDurationNumber": "לדוגמה \"הפסקה ממספר 18 למשך 3 ימים\"",
   "withNumber": "מס' {number}",

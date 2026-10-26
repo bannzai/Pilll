@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Այսօր սկսվում է հաբերի նոր փաթեթը\nԽնդրում ենք հիշել հաբն ընդունել 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "պրեմիում տեղեկությունները չգտնվեցին",
   "purchaseErrorPurchasePendingError": "Գնման ակտիվացումը դեռ չի ավարտվել։ Խնդրում ենք մի փոքր սպասել և կրկին ստուգել",
-  "launchError": "Հավելվածի գործարկման ժամանակ սխալ է տեղի ունեցել:\n{ErrorMessagesConnection}\n\nՄանրամասներ: ",
+  "launchError": "Հավելվածը բացելիս սխալ է առաջացել։\n{ErrorMessagesConnection}\n\nՄանրամասներ՝",
   "exampleRestDurationDate": "Օրինակ՝ «1/12-ից 3 օր» դեղ ընդունումը դադարեցնելու դեպքում",
   "exampleRestDurationNumber": "Օրինակ «18-րդ համարից 3 օր» ընդունումը դադարեցնելու դեպքում",
   "withNumber": "{number} համար",

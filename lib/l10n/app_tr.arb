@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Bugün yeni hap paketinize başlıyorsunuz\nHapınızı almayı unutmayın 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium bilgileri bulunamadı",
   "purchaseErrorPurchasePendingError": "Satın alma işleminizin etkinleştirilmesi henüz tamamlanmadı. Lütfen biraz bekleyip tekrar kontrol edin",
-  "launchError": "Uygulama başlatılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar: ",
+  "launchError": "Uygulama açılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar:",
   "exampleRestDurationDate": "Örneğin '1/12'den itibaren 3 gün' kullanım arasını verdiğiniz durumda",
   "exampleRestDurationNumber": "Örneğin \"18. tabletten itibaren 3 gün\" ara verdiğiniz durumda",
   "withNumber": "{number}.",

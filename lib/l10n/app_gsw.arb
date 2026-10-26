@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Hüt fangsch mit ere neue Pillepackig aa\nDänk dra, dini Pille z näh 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "D Informatione zu Premium sind nöd gfunde worde",
   "purchaseErrorPurchasePendingError": "Din Chauf wird no aktiviert. Wart bitte es bitzli und lueg dänn nomal",
-  "launchError": "Bim App-Start isch e technische Fähler uftrette. {ErrorMessagesConnection}",
+  "launchError": "Bim Ufmache vo de App isch en Fähler ufträte.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Zum Bispil wänn Sie «vo 1/12 aa für 3 Täg» d'Iinahm pausiert händ",
   "exampleRestDurationNumber": "z.B. «ab Nr. 18 für 3 Täg» Iinahm pausiert",
   "withNumber": "{number}.",

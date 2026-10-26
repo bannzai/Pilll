@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Gaur pilula kaxa berria hasiko duzu\nGogoratu pilula hartzea 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ez da Premium-i buruzko informaziorik aurkitu",
   "purchaseErrorPurchasePendingError": "Erosketaren aktibazioa ez da oraindik amaitu. Itxaron pixka bat eta egiaztatu berriro",
-  "launchError": "Errore bat gertatu da aplikazioa abiaraztean.\n{ErrorMessagesConnection}\n\nXehetasunak: ",
+  "launchError": "Errore bat gertatu da aplikazioa irekitzean.\n{ErrorMessagesConnection}\n\nXehetasunak:",
   "exampleRestDurationDate": "Adibidez «1/12tik 3 egunez» pilulak hartzea eten zenuen kasuan",
   "exampleRestDurationNumber": "Adibidez, «18. zenbakitik 3 egunez» pilulak hartzeari eten egiten diezaiogun kasuan",
   "withNumber": "{number}a",

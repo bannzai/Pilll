@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Ngayon po magsisimula ang bagong pakete ng mga pildoras\nPakiusap, tandaan po ninyong inumin ang pildoras 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Hindi mahanap ang impormasyon tungkol sa Premium",
   "purchaseErrorPurchasePendingError": "Hindi pa tapos ang pag-activate ng binili ninyo. Pakihintay po sandali bago tingnan muli",
-  "launchError": "Nabigo ang paglunsad ng app. Pakisuri ang inyong network connection at subukang muli. {ErrorMessagesConnection}",
+  "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
   "exampleRestDurationDate": "Halimbawa kung \"1/12 ng 3 araw\" nagpahinga sa pag-inom",
   "exampleRestDurationNumber": "Halimbawa, kung hindi uminom mula sa numero 18 ng 3 araw",
   "withNumber": "No. {number}",

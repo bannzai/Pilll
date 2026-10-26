@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 আজিৰ পৰা নতুন পিলৰ পেকেট আৰম্ভ হৈছে\nপিল খাবলৈ মনত ৰাখিব 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "প্ৰিমিয়ামৰ তথ্য পোৱা নগ'ল",
   "purchaseErrorPurchasePendingError": "ক্ৰয় সক্ৰিয়কৰণ এতিয়াও সম্পূৰ্ণ হোৱা নাই। অনুগ্ৰহ কৰি অলপ পাছত পুনৰ পৰীক্ষা কৰক",
-  "launchError": "এপটো চালু হ'ওতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nবিৱৰণ: ",
+  "launchError": "এপটো খোলোঁতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nসবিশেষ:",
   "exampleRestDurationDate": "উদাহৰণস্বৰূপে \"১/১২ ৰ পৰা ৩ দিনৰ বাবে\" বড়ি সেৱন বন্ধ কৰিলে",
   "exampleRestDurationNumber": "উদাহৰণস্বৰূপে \"১৮ নম্বৰৰ পৰা ৩ দিনৰ বাবে\" সেৱন বন্ধ কৰিলে",
   "withNumber": "{number}নং",

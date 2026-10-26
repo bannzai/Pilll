@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 نن د ګولیو نوې بسته پیلېږي\nمهرباني وکړئ د ګولۍ اخیستل په یاد ولرئ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "د پریمیم په اړه معلومات ونه موندل شول",
   "purchaseErrorPurchasePendingError": "د پېرود فعالول لا نه دي بشپړ شوي. مهرباني وکړئ لږ انتظار وکړئ او بیا یې وګورئ",
-  "launchError": "د اپلیکیشن پرانیستلو پر مهال تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nتفصیلات: ",
+  "launchError": "د اپ د پرانیستلو پر مهال یوه تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nجزییات:",
   "exampleRestDurationDate": "د بېلګې په توګه «د ۱/۱۲ څخه د ۳ ورځو لپاره» د درملو د خولو وقفه",
   "exampleRestDurationNumber": "د بیلګې په توګه \"د ۱۸ نمبر څخه ۳ ورځې\" د خوړلو د ډنډ کولو په صورت کې",
   "withNumber": "{number}مه",

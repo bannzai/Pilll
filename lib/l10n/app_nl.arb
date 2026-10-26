@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Vandaag begin je aan een nieuwe pillenstrip\nDenk eraan je pil in te nemen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informatie over premium is niet gevonden",
   "purchaseErrorPurchasePendingError": "Je aankoop wordt nog geactiveerd. Wacht even en controleer het daarna opnieuw",
-  "launchError": "Er is een fout opgetreden bij het starten van de app.\n{ErrorMessagesConnection}\n\nDetails: ",
+  "launchError": "Er is een fout opgetreden bij het openen van de app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Bijvoorbeeld 'vanaf 1/12 voor 3 dagen' bij het pauzeren van de inname",
   "exampleRestDurationNumber": "Bijvoorbeeld 'vanaf pil 18 gedurende 3 dagen' bij het onderbreken van de inname",
   "withNumber": "nummer {number}",

@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Bugun yangi tabletkalar oʻramini boshlaysiz\nTabletkani qabul qilishni unutmang 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium maʼlumotlari topilmadi",
   "purchaseErrorPurchasePendingError": "Xaridingizni faollashtirish hali yakunlanmadi. Iltimos, biroz kutib, qayta tekshiring",
-  "launchError": "Ilovani ishga tushirishda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar: ",
+  "launchError": "Ilova ochilayotganda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar:",
   "exampleRestDurationDate": "Masalan «1/12 dan 3 kun davomida» qabul qilishni to'xtatish holatida",
   "exampleRestDurationNumber": "Masalan «18-raqamdan 3 kun» qabul qilishni to'xtatgan holda",
   "withNumber": "{number}-chi",

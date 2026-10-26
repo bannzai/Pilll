@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая ўпакоўка пігулак\nНе забудзьцеся прыняць пігулку 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Не ўдалося знайсці інфармацыю пра прэміум",
   "purchaseErrorPurchasePendingError": "Актывацыя пакупкі яшчэ не завершана. Калі ласка, пачакайце крыху і праверце яшчэ раз",
-  "launchError": "Пры запуску прыкладання ўзнікла тэхнічная памылка. {ErrorMessagesConnection}",
+  "launchError": "Падчас запуску праграмы ўзнікла памылка.\n{ErrorMessagesConnection}\n\nПадрабязнасці:",
   "exampleRestDurationDate": "Напрыклад, калі прыпыняць прыём «з 1/12 на 3 дні»",
   "exampleRestDurationNumber": "напрыклад «з 18-га нумара на 3 дні» прапусціць прыём",
   "withNumber": "№{number}",

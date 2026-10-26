@@ -340,7 +340,7 @@
   "newPillSheetNotificationMessage": "🆕 Hôm nay bạn bắt đầu vỉ thuốc mới\nHãy nhớ uống thuốc nhé 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Không tìm thấy thông tin Premium",
   "purchaseErrorPurchasePendingError": "Giao dịch mua của bạn vẫn đang được kích hoạt. Vui lòng đợi một lát rồi kiểm tra lại",
-  "launchError": "Đã xảy ra lỗi khi khởi động ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết: ",
+  "launchError": "Đã xảy ra lỗi khi mở ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết:",
   "exampleRestDurationDate": "Ví dụ trong trường hợp nghỉ uống thuốc \"từ ngày 1/12 trong 3 ngày\"",
   "exampleRestDurationNumber": "Ví dụ \"từ viên số 18 nghỉ uống 3 ngày\"",
   "withNumber": "Số {number}",
