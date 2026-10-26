@@ -399,7 +399,7 @@
   "add": "ചേർക്കുക",
   "addPillSheet": "ഗുളിക സ്ട്രിപ്പ് ചേർക്കുക",
   "pillTakenCountPrefix": "ഒരു ദിവസത്തിൽ",
-  "pillTakenCountSuffix": "തവണ കഴിക്കുന്നു",
+  "pillTakenCountSuffix": "തവണ ഗുളിക കഴിക്കുക",
   "duringPauseTaking": "പിൽ സേവനം വിശ്രമത്തിൽ",
   "cannotPauseAlreadyTakenToday": "ഇന്നത്തെ ഗുളിക കഴിച്ചുകഴിഞ്ഞാൽ \"സേവന വിരാമം\" ചെയ്യാൻ കഴിയില്ല",
   "pauseTakingStarted": "ഗുളിക വിശ്രമം ആരംഭിച്ചു",

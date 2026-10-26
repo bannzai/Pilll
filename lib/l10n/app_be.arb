@@ -399,7 +399,7 @@
   "add": "Дадаць",
   "addPillSheet": "Дадаць блістар",
   "pillTakenCountPrefix": "За дзень",
-  "pillTakenCountSuffix": "разы прымаецца",
+  "pillTakenCountSuffix": "разы прымаць",
   "duringPauseTaking": "Перапынак у прыёме",
   "cannotPauseAlreadyTakenToday": "Калі сённяшняя пілюля ўжо прынята,\n«Перапынак прыёму» недаступны",
   "pauseTakingStarted": "Перапынак у прыёме ліків пачаты",

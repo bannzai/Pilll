@@ -399,7 +399,7 @@
   "add": "ਸ਼ਾਮਲ ਕਰੋ",
   "addPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸ਼ਾਮਲ ਕਰੋ",
   "pillTakenCountPrefix": "ਦਿਨ ਵਿੱਚ",
-  "pillTakenCountSuffix": "2 ਦਿਨ ਵਿੱਚ ਲਵੋ",
+  "pillTakenCountSuffix": "ਵਾਰ ਗੋਲੀ ਲੈਣੀ",
   "duringPauseTaking": "ਦਵਾਈ ਦਾ ਬ੍ਰੇਕ",
   "cannotPauseAlreadyTakenToday": "ਅੱਜ ਦੀ ਗੋਲੀ ਪਹਿਲਾਂ ਹੀ ਲੈ ਲਈ ਗਈ ਹੈ, \"ਦਵਾਈ ਦੀ ਛੁੱਟੀ\" ਨਹੀਂ ਕਰ ਸਕਦੇ",
   "pauseTakingStarted": "ਦਵਾਈ ਦੀ ਛੁੱਟੀ ਸ਼ੁਰੂ ਕੀਤੀ ਗਈ",

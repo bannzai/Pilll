@@ -399,7 +399,7 @@
   "add": "Dodaj",
   "addPillSheet": "Dodaj blist",
   "pillTakenCountPrefix": "Dziennie",
-  "pillTakenCountSuffix": "Wypij 1 raz",
+  "pillTakenCountSuffix": "razy przyjąć tabletkę",
   "duringPauseTaking": "Przerwa w przyjmowaniu",
   "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza pigułka została już przyjęta\nNie można użyć funkcji „przerwa w przyjmowaniu\"",
   "pauseTakingStarted": "Rozpoczęto przerwę w przyjmowaniu",

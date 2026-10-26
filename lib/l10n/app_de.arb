@@ -399,7 +399,7 @@
   "add": "Hinzufügen",
   "addPillSheet": "Pillenblister hinzufügen",
   "pillTakenCountPrefix": "Pro Tag",
-  "pillTakenCountSuffix": "Täglich einnehmen",
+  "pillTakenCountSuffix": "Mal einnehmen",
   "duringPauseTaking": "Einnahmepause",
   "cannotPauseAlreadyTakenToday": "Wenn die heutige Pille bereits eingenommen wurde, ist eine „Einnahmepause\" nicht möglich",
   "pauseTakingStarted": "Die Einnahmepause wurde gestartet",

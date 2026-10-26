@@ -399,7 +399,7 @@
   "add": "Tambah",
   "addPillSheet": "Tambah pek pil",
   "pillTakenCountPrefix": "Sehari",
-  "pillTakenCountSuffix": "Sehari [2] kali",
+  "pillTakenCountSuffix": "kali makan pil",
   "duringPauseTaking": "Sedang Berehat",
   "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan 'Rehat Pengambilan' kerana pil hari ini sudah diminum",
   "pauseTakingStarted": "Rehat pengambilan pil telah dimulakan",

@@ -399,7 +399,7 @@
   "add": "Voeg by",
   "addPillSheet": "Voeg pilstrokie by",
   "pillTakenCountPrefix": "Per dag",
-  "pillTakenCountSuffix": "Ek neem 2 keer",
+  "pillTakenCountSuffix": "keer neem",
   "duringPauseTaking": "Inneem gepauzeer",
   "cannotPauseAlreadyTakenToday": "Kan nie pil onderbreek as vandag se pil reeds geneem is nie",
   "pauseTakingStarted": "Die pilgebruik-pouse is begin",

@@ -399,7 +399,7 @@
   "add": "যোগ কৰক",
   "addPillSheet": "পিলৰ ষ্ট্ৰিপ যোগ কৰক",
   "pillTakenCountPrefix": "1 দিনত",
-  "pillTakenCountSuffix": "1回服用する",
+  "pillTakenCountSuffix": "বাৰ খাব",
   "duringPauseTaking": "সেৱন বিৰতি",
   "cannotPauseAlreadyTakenToday": "আজিৰ পিল আগতেই খোৱা হৈছে, গতিকে 'সেৱন বিৰতি' কৰিব নোৱাৰি",
   "pauseTakingStarted": "ঔষধ সেৱনৰ বিৰাম আৰম্ভ কৰিলো",

@@ -399,7 +399,7 @@
   "add": "ઉમેરો",
   "addPillSheet": "ગોળીની સ્ટ્રિપ ઉમેરો",
   "pillTakenCountPrefix": "દરરોજ",
-  "pillTakenCountSuffix": "વખત લો",
+  "pillTakenCountSuffix": "વખત ગોળી લેવી",
   "duringPauseTaking": "દવાનો વિરામ",
   "cannotPauseAlreadyTakenToday": "આજે ગોળી પહેલેથી લીધેલ હોવાથી 'સેવન વિરામ' કરી શકાતું નથી",
   "pauseTakingStarted": "ગોળી લેવાનો વિરામ શરૂ કર્યો છે",

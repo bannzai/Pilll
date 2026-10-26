@@ -399,7 +399,7 @@
   "add": "Tambah",
   "addPillSheet": "Tambahkan strip pil",
   "pillTakenCountPrefix": "Per hari",
-  "pillTakenCountSuffix": "1日に服用する回数",
+  "pillTakenCountSuffix": "kali minum pil",
   "duringPauseTaking": "Sedang istirahat",
   "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan \"Jeda Minum\" karena pil hari ini sudah diminum",
   "pauseTakingStarted": "Jeda konsumsi telah dimulai",

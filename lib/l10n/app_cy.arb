@@ -399,7 +399,7 @@
   "add": "Ychwanegu",
   "addPillSheet": "Ychwanegwch stribed pils",
   "pillTakenCountPrefix": "Y dydd",
-  "pillTakenCountSuffix": "Cymryd 2 lwy y dydd",
+  "pillTakenCountSuffix": "gwaith cymryd y bilsen",
   "duringPauseTaking": "Seibiant cymryd",
   "cannotPauseAlreadyTakenToday": "Os yw pil heddiw wedi'i gymryd eisoes\nNi allwch ddefnyddio 'Seibiant Cymryd'",
   "pauseTakingStarted": "Wedi dechrau seibiant cymryd",

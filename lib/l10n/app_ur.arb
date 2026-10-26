@@ -399,7 +399,7 @@
   "add": "شامل کریں",
   "addPillSheet": "گولیوں کی پٹی شامل کریں",
   "pillTakenCountPrefix": "دن میں",
-  "pillTakenCountSuffix": "بار لیں",
+  "pillTakenCountSuffix": "بار گولی لیں",
   "duringPauseTaking": "دوا موقوف ہے",
   "cannotPauseAlreadyTakenToday": "آج کی گولی لے چکنے کے بعد \"دوا بند کرنا\" استعمال نہیں کر سکتے",
   "pauseTakingStarted": "دوائی لینے میں وقفہ شروع کیا گیا ہے",

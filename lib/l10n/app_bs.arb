@@ -399,7 +399,7 @@
   "add": "Dodaj",
   "addPillSheet": "Dodajte blister",
   "pillTakenCountPrefix": "Dnevno",
-  "pillTakenCountSuffix": "`bs.arb` には `pillTakenCountSuffix` キー自体がまだ存在しないことを確認しました。既存の prefix (`\"Dnevno\"` = 「毎日」) と、number 入力欄の後に続く形として、「回服用する」を訳します。\n\n翻訳結果:\n\nputa uzeti",
+  "pillTakenCountSuffix": "puta uzeti",
   "duringPauseTaking": "Pauza u uzimanju",
   "cannotPauseAlreadyTakenToday": "Ne možete napraviti pauzu u uzimanju jer su pilule za danas već uzete",
   "pauseTakingStarted": "Započeli ste pauzu u uzimanju",

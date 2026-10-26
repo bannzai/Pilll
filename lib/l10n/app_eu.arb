@@ -399,7 +399,7 @@
   "add": "Gehitu",
   "addPillSheet": "Gehitu pilula-blister",
   "pillTakenCountPrefix": "Egunean",
-  "pillTakenCountSuffix": "Erabiltzeko unitate kopuruaren aurretik erakusten dela kontuan hartuta, \"回服用する\" euskarara honela itzultzen dut.\n\naldiz hartu",
+  "pillTakenCountSuffix": "aldiz hartu",
   "duringPauseTaking": "Hartzea pausatuta",
   "cannotPauseAlreadyTakenToday": "Gaurko pilula hartuta dagoenean \"Hartzea pausatu\" ezin da",
   "pauseTakingStarted": "Pilularen hartzea etetea hasi da",

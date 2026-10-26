@@ -399,7 +399,7 @@
   "add": "Pridať",
   "addPillSheet": "Pridať blist",
   "pillTakenCountPrefix": "Za deň",
-  "pillTakenCountSuffix": "Užite 1x denne",
+  "pillTakenCountSuffix": "krát užiť tabletku",
   "duringPauseTaking": "Pauza v užívaní",
   "cannotPauseAlreadyTakenToday": "Keď je dnešná pilulka už užitá, nemožno použiť „prestávku v užívaní\"",
   "pauseTakingStarted": "Začala sa prestávka v užívaní tablietiek",

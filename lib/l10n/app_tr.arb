@@ -399,7 +399,7 @@
   "add": "Ekle",
   "addPillSheet": "Blister ekleyin",
   "pillTakenCountPrefix": "Günde",
-  "pillTakenCountSuffix": "1 kez alınır",
+  "pillTakenCountSuffix": "kez alın",
   "duringPauseTaking": "Kullanım molasında",
   "cannotPauseAlreadyTakenToday": "Bugün alınacak hap zaten alındığından \"İlaç Molası\" yapılamaz",
   "pauseTakingStarted": "Kullanım molası başlatıldı",

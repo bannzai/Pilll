@@ -399,7 +399,7 @@
   "add": "Ավելացնել",
   "addPillSheet": "Ավելացնել հաբերի բլիստեր",
   "pillTakenCountPrefix": "Օրական",
-  "pillTakenCountSuffix": "Դեղահատ ընդունել",
+  "pillTakenCountSuffix": "անգամ ընդունել",
   "duringPauseTaking": "Ընդունման ընդմիջում",
   "cannotPauseAlreadyTakenToday": "Այսօրվա հաբն արդեն ընդունված է\n«Ընդունման ընդմիջում» անհնար է",
   "pauseTakingStarted": "Դեղահատի ընդունման դադարը սկսվել է",

@@ -399,7 +399,7 @@
   "add": "Lägg till",
   "addPillSheet": "Lägg till p-pillerkarta",
   "pillTakenCountPrefix": "Per dag",
-  "pillTakenCountSuffix": "Hon tar 2 tabletter per dag",
+  "pillTakenCountSuffix": "gånger ta pillret",
   "duringPauseTaking": "P-piller pausad",
   "cannotPauseAlreadyTakenToday": "Kan inte pausa intag när dagens p-piller redan är taget",
   "pauseTakingStarted": "Paus från intag har påbörjats",

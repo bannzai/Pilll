@@ -399,7 +399,7 @@
   "add": "Додати",
   "addPillSheet": "Додати блістер",
   "pillTakenCountPrefix": "За день",
-  "pillTakenCountSuffix": "Приймати по [VAL] раз(и) на день",
+  "pillTakenCountSuffix": "разів приймати пігулку",
   "duringPauseTaking": "Перерва в прийомі",
   "cannotPauseAlreadyTakenToday": "Не можна пропустити прийом після того, як таблетку вже прийнято",
   "pauseTakingStarted": "Розпочато перерву в прийомі",

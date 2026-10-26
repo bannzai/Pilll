@@ -399,7 +399,7 @@
   "add": "ထည့်ရန်",
   "addPillSheet": "ဆေးပြားကတ် ထည့်ရန်",
   "pillTakenCountPrefix": "တစ်နေ့လျှင်",
-  "pillTakenCountSuffix": "回服用する",
+  "pillTakenCountSuffix": "ကြိမ် သောက်ရန်",
   "duringPauseTaking": "သောက်ခြင်း နားနေသည်",
   "cannotPauseAlreadyTakenToday": "ယနေ့ဆေးပြားကို သောက်ပြီးသားဆိုရင် \"ဆေးနားခြင်း\" မလုပ်နိုင်ပါ",
   "pauseTakingStarted": "ဆေးသောက်ခြင်း ရပ်နားခြင်းကို စတင်ပြီးပါပြီ",

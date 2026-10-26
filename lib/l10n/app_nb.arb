@@ -399,7 +399,7 @@
   "add": "Legg til",
   "addPillSheet": "Legg til pillebrett",
   "pillTakenCountPrefix": "Per dag",
-  "pillTakenCountSuffix": "2 ganger daglig",
+  "pillTakenCountSuffix": "ganger ta p-pillen",
   "duringPauseTaking": "Tar pause",
   "cannotPauseAlreadyTakenToday": "Du kan ikke 'pause inntak'\nnår dagens pille allerede er tatt",
   "pauseTakingStarted": "Pillepausen er startet",

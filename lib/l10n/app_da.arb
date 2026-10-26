@@ -399,7 +399,7 @@
   "add": "Tilføj",
   "addPillSheet": "Tilføj pillekort",
   "pillTakenCountPrefix": "Om dagen",
-  "pillTakenCountSuffix": "Tager 1 pille om dagen",
+  "pillTakenCountSuffix": "gange tage p-pillen",
   "duringPauseTaking": "Indtagelsespause",
   "cannotPauseAlreadyTakenToday": "Kan ikke pausere indtagelse når dagens pille allerede er taget",
   "pauseTakingStarted": "Pillepause er påbegyndt",

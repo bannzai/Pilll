@@ -399,7 +399,7 @@
   "add": "Engadir",
   "addPillSheet": "Engadir un blíster",
   "pillTakenCountPrefix": "Ao día",
-  "pillTakenCountSuffix": "Vou este día",
+  "pillTakenCountSuffix": "veces tomar a pílula",
   "duringPauseTaking": "En pausa na toma",
   "cannotPauseAlreadyTakenToday": "Non se pode pausar a toma se xa se inxeriu a píldora de hoxe",
   "pauseTakingStarted": "Comezou a pausa na toma",

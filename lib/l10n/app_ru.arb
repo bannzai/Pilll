@@ -399,7 +399,7 @@
   "add": "Добавить",
   "addPillSheet": "Добавить блистер",
   "pillTakenCountPrefix": "В день",
-  "pillTakenCountSuffix": "Принимать по 2 раза в день",
+  "pillTakenCountSuffix": "раз принять таблетку",
   "duringPauseTaking": "Перерыв в приёме",
   "cannotPauseAlreadyTakenToday": "Функция «Пропуск приёма» недоступна, если сегодняшняя таблетка уже принята",
   "pauseTakingStarted": "Начат перерыв в приёме",

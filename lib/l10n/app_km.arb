@@ -399,7 +399,7 @@
   "add": "បន្ថែម",
   "addPillSheet": "សូមបន្ថែមបន្ទះថ្នាំគ្រាប់",
   "pillTakenCountPrefix": "ក្នុងមួយថ្ងៃ",
-  "pillTakenCountSuffix": "ដងលេប",
+  "pillTakenCountSuffix": "ដងលេបថ្នាំគ្រាប់",
   "duringPauseTaking": "កំពុងសម្រាក",
   "cannotPauseAlreadyTakenToday": "មិនអាចផ្អាកការញ៉ាំបានទេ ប្រសិនបើថ្នាំថ្ងៃនេះត្រូវបានញ៉ាំរួចហើយ",
   "pauseTakingStarted": "បានចាប់ផ្តើមការសម្រាកញ៉ាំថ្នាំ",

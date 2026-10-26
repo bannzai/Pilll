@@ -399,7 +399,7 @@
   "add": "Bæta við",
   "addPillSheet": "Bæta við pilluspjaldi",
   "pillTakenCountPrefix": "Á dag",
-  "pillTakenCountSuffix": "Þú tekur [VAL] pillur á dag",
+  "pillTakenCountSuffix": "sinnum taka pilluna",
   "duringPauseTaking": "Á hlé frá innköllun",
   "cannotPauseAlreadyTakenToday": "Ekki er hægt að hvíla frá inntöku þegar pilla dagsins hefur þegar verið tekin",
   "pauseTakingStarted": "Pilluhvíld hefur hafist",

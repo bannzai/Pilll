@@ -399,7 +399,7 @@
   "add": "Shtoni",
   "addPillSheet": "Shtoni blister",
   "pillTakenCountPrefix": "Në ditë",
-  "pillTakenCountSuffix": "Merr një herë në ditë",
+  "pillTakenCountSuffix": "herë merrni pilulën",
   "duringPauseTaking": "Pushim nga marrja",
   "cannotPauseAlreadyTakenToday": "Kur pilula e sotme është marrë tashmë, \"Pushim në përdorim\" nuk është i mundur",
   "pauseTakingStarted": "Filloi pushimi i pilulës",

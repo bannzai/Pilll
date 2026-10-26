@@ -399,7 +399,7 @@
   "add": "Aggiungi",
   "addPillSheet": "Aggiungi un blister",
   "pillTakenCountPrefix": "Al giorno",
-  "pillTakenCountSuffix": "Prendo una volta al giorno",
+  "pillTakenCountSuffix": "volte prendere la pillola",
   "duringPauseTaking": "In pausa",
   "cannotPauseAlreadyTakenToday": "Non è possibile sospendere l'assunzione quando la pillola di oggi è già stata presa",
   "pauseTakingStarted": "Pausa dall'assunzione iniziata",

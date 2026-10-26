@@ -399,7 +399,7 @@
   "add": "Hozzáadás",
   "addPillSheet": "Új tablettacsomag hozzáadása",
   "pillTakenCountPrefix": "Naponta",
-  "pillTakenCountSuffix": "1 alkalommal veszi be",
+  "pillTakenCountSuffix": "alkalommal szedni",
   "duringPauseTaking": "Szedés szünetel",
   "cannotPauseAlreadyTakenToday": "A mai tabletta bevétele után nem lehet szedési szünetet tartani",
   "pauseTakingStarted": "A tablettaszedési szünet elkezdődött",

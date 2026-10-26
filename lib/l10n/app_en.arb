@@ -399,7 +399,7 @@
   "add": "Add",
   "addPillSheet": "Add pill pack",
   "pillTakenCountPrefix": "Per day",
-  "pillTakenCountSuffix": "time(s) a day",
+  "pillTakenCountSuffix": "times",
   "duringPauseTaking": "Taking a break",
   "cannotPauseAlreadyTakenToday": "Cannot pause taking when today's pill has already been taken",
   "pauseTakingStarted": "Pill break started",

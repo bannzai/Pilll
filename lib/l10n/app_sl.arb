@@ -399,7 +399,7 @@
   "add": "Dodaj",
   "addPillSheet": "Dodajte ploščico",
   "pillTakenCountPrefix": "Na dan",
-  "pillTakenCountSuffix": "Vzame 2-krat na dan",
+  "pillTakenCountSuffix": "krat vzeti tableto",
   "duringPauseTaking": "Na premoru pri jemanju",
   "cannotPauseAlreadyTakenToday": "Premora jemanja ni mogoče nastaviti, ker je današnja tableta že vzeta",
   "pauseTakingStarted": "Začeli ste s pavzo pri jemanju",

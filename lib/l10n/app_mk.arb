@@ -399,7 +399,7 @@
   "add": "Додавање",
   "addPillSheet": "Додавање блистер",
   "pillTakenCountPrefix": "Дневно",
-  "pillTakenCountSuffix": "Земи по 1 пат на ден",
+  "pillTakenCountSuffix": "пати земање",
   "duringPauseTaking": "Во пауза",
   "cannotPauseAlreadyTakenToday": "Не можете да направите пауза од земање бидејќи денешната пилула е веќе земена",
   "pauseTakingStarted": "Започна паузата од земање на пилулите",

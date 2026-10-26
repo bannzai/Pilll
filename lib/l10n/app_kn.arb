@@ -399,7 +399,7 @@
   "add": "ಸೇರಿಸಿ",
   "addPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೇರಿಸಿ",
   "pillTakenCountPrefix": "ದಿನಕ್ಕೆ",
-  "pillTakenCountSuffix": "ದಿನಕ್ಕೆ [2] ಬಾರಿ ಸೇವಿಸಿ",
+  "pillTakenCountSuffix": "ಬಾರಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು",
   "duringPauseTaking": "ಸೇವನೆ ವಿರಾಮದಲ್ಲಿ",
   "cannotPauseAlreadyTakenToday": "ಇಂದಿನ ಮಾತ್ರೆ ಈಗಾಗಲೇ ಸೇವಿಸಿದ್ದರೆ\n'ಸೇವನೆ ವಿರಾಮ' ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "pauseTakingStarted": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮವನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ",

@@ -399,7 +399,7 @@
   "add": "إضافة",
   "addPillSheet": "إضافة شريط",
   "pillTakenCountPrefix": "في اليوم",
-  "pillTakenCountSuffix": "مرات تؤخذ",
+  "pillTakenCountSuffix": "مرات لتناول الحبة",
   "duringPauseTaking": "في فترة راحة",
   "cannotPauseAlreadyTakenToday": "لا يمكن \"إيقاف تناول الحبة\" إذا تم تناول حبة اليوم بالفعل",
   "pauseTakingStarted": "تم بدء فترة إيقاف تناول الحبوب",

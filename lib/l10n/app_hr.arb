@@ -399,7 +399,7 @@
   "add": "Dodajte",
   "addPillSheet": "Dodajte blister",
   "pillTakenCountPrefix": "Dnevno",
-  "pillTakenCountSuffix": "Uzeti 2 puta dnevno",
+  "pillTakenCountSuffix": "puta uzeti pilulu",
   "duringPauseTaking": "Pauza u uzimanju",
   "cannotPauseAlreadyTakenToday": "Ne možete pauzirati uzimanje kad je pilula za danas već uzeta",
   "pauseTakingStarted": "Započeta je pauza u uzimanju",

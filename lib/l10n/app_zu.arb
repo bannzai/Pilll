@@ -399,7 +399,7 @@
   "add": "Engeza",
   "addPillSheet": "Engeza ishidi lamaphilisi",
   "pillTakenCountPrefix": "Ngosuku",
-  "pillTakenCountSuffix": "izikhathi zokuthatha",
+  "pillTakenCountSuffix": "izikhathi zokugwinya iphilisi",
   "duringPauseTaking": "Ukuphumula emisebenzini yemithi",
   "cannotPauseAlreadyTakenToday": "Uma iphilisi lanamuhla sele lisetshenzisiwe\nAwukwazi \"ukuyeka ukuphuza\"",
   "pauseTakingStarted": "Siqalile ikhefu lokuthatha amaphilisi",

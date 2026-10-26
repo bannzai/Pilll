@@ -399,7 +399,7 @@
   "add": "थप्नुहोस्",
   "addPillSheet": "चक्की पत्ता थप्नुहोस्",
   "pillTakenCountPrefix": "दिनमा",
-  "pillTakenCountSuffix": "पटक सेवन गर्नुहोस्",
+  "pillTakenCountSuffix": "पटक चक्की लिनुहोस्",
   "duringPauseTaking": "सेवन बिराम",
   "cannotPauseAlreadyTakenToday": "आजको चक्की सेवन गरिसकेको अवस्थामा 'सेवन विराम' गर्न सकिंदैन",
   "pauseTakingStarted": "औषधि सेवन विराम सुरु गरियो",

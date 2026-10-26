@@ -399,7 +399,7 @@
   "add": "הוספה",
   "addPillSheet": "הוספת חפיסת גלולות",
   "pillTakenCountPrefix": "ביום",
-  "pillTakenCountSuffix": "פעם ליום",
+  "pillTakenCountSuffix": "פעמים ליטול גלולה",
   "duringPauseTaking": "הפסקת נטילה",
   "cannotPauseAlreadyTakenToday": "לא ניתן לבצע 'הפסקת נטילה' כאשר הגלולה של היום כבר נלקחה",
   "pauseTakingStarted": "החלה הפסקת נטילת הכדורים",

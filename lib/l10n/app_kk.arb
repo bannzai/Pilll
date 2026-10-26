@@ -399,7 +399,7 @@
   "add": "Қосу",
   "addPillSheet": "Таблетка блистер қосу",
   "pillTakenCountPrefix": "Күніне",
-  "pillTakenCountSuffix": "рет қабылданады",
+  "pillTakenCountSuffix": "рет қабылдау",
   "duringPauseTaking": "Қабылдау үзілісі",
   "cannotPauseAlreadyTakenToday": "Бүгінгі дәрі қабылданғаннан кейін\n«Дәрі демалысы» мүмкін емес",
   "pauseTakingStarted": "Дәрі қабылдау демалысы басталды",

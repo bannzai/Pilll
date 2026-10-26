@@ -399,7 +399,7 @@
   "add": "Thêm",
   "addPillSheet": "Thêm vỉ thuốc",
   "pillTakenCountPrefix": "Mỗi ngày",
-  "pillTakenCountSuffix": "1 lần uống",
+  "pillTakenCountSuffix": "lần uống thuốc",
   "duringPauseTaking": "Đang tạm nghỉ uống",
   "cannotPauseAlreadyTakenToday": "Không thể \"Nghỉ uống thuốc\" khi đã uống viên thuốc hôm nay",
   "pauseTakingStarted": "Đã bắt đầu tạm nghỉ uống thuốc",

@@ -399,7 +399,7 @@
   "add": "Qoʻshish",
   "addPillSheet": "Tabletka blister qoʻshing",
   "pillTakenCountPrefix": "Kuniga",
-  "pillTakenCountSuffix": "1 kunlik doza soni",
+  "pillTakenCountSuffix": "marta qabul qilish",
   "duringPauseTaking": "Qabul qilishdan dam olish",
   "cannotPauseAlreadyTakenToday": "Bugungi dori allaqachon qabul qilingan bo'lgani uchun tanaffus funksiyasini ishlatib bo'lmaydi",
   "pauseTakingStarted": "Tabletka qabul qilishda tanaffus boshlandi",

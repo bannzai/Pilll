@@ -399,7 +399,7 @@
   "add": "Добавяне",
   "addPillSheet": "Добавяне на блистер",
   "pillTakenCountPrefix": "На ден",
-  "pillTakenCountSuffix": "Приемате 2 таблетки",
+  "pillTakenCountSuffix": "пъти прием",
   "duringPauseTaking": "Пауза в приемането",
   "cannotPauseAlreadyTakenToday": "Когато днешното хапче вече е взето,\nне можете да активирате „пауза в приема\"",
   "pauseTakingStarted": "Започна пауза в приема",

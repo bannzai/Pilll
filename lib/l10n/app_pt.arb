@@ -399,7 +399,7 @@
   "add": "Adicionar",
   "addPillSheet": "Adicionar cartela",
   "pillTakenCountPrefix": "Por dia",
-  "pillTakenCountSuffix": "vez(es) ao dia",
+  "pillTakenCountSuffix": "vezes tomar a pílula",
   "duringPauseTaking": "Em pausa",
   "cannotPauseAlreadyTakenToday": "Não é possível pausar a dose quando o comprimido de hoje já foi tomado",
   "pauseTakingStarted": "Pausa na tomada iniciada",

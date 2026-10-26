@@ -399,7 +399,7 @@
   "add": "जोडा",
   "addPillSheet": "पिल शीट जोडा",
   "pillTakenCountPrefix": "दिवसातून",
-  "pillTakenCountSuffix": "वेळा घ्या",
+  "pillTakenCountSuffix": "वेळा गोळी घेणे",
   "duringPauseTaking": "सेवन विराम",
   "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतल्यामुळे 'सेवन विराम' करता येत नाही",
   "pauseTakingStarted": "औषध विराम सुरू केला आहे",

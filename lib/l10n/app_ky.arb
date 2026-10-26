@@ -399,7 +399,7 @@
   "add": "Кошуу",
   "addPillSheet": "Таблетка блистери кошуу",
   "pillTakenCountPrefix": "Күнүнө",
-  "pillTakenCountSuffix": "Ичкенде 2 жолу ичесиз",
+  "pillTakenCountSuffix": "жолу ичүү",
   "duringPauseTaking": "Дарыдан эс алуу",
   "cannotPauseAlreadyTakenToday": "Бүгүнкү таблетка ичилгендиктен \"ичүүнү токтотуу\" мүмкүн эмес",
   "pauseTakingStarted": "Дарыны алуудан тыныгууну баштадык",

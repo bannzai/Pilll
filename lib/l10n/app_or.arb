@@ -399,7 +399,7 @@
   "add": "ଯୋଡ଼ନ୍ତୁ",
   "addPillSheet": "ବଟିକା ସିଟ ଯୋଡ଼ନ୍ତୁ",
   "pillTakenCountPrefix": "ଦିନକୁ",
-  "pillTakenCountSuffix": "1日に2回服用する",
+  "pillTakenCountSuffix": "ଥର ବଟିକା ନିଅନ୍ତୁ",
   "duringPauseTaking": "ସେବନ ବିରାମରେ",
   "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ସେବନ କରାଯାଇଥିବାରୁ 'ସେବନ ବିଶ୍ରାମ' କରିପାରିବେ ନାହିଁ",
   "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ କରାଯାଇଛି",

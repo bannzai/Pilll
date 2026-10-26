@@ -399,7 +399,7 @@
   "add": "Προσθήκη",
   "addPillSheet": "Προσθήκη καρτέλα χαπιών",
   "pillTakenCountPrefix": "Την ημέρα",
-  "pillTakenCountSuffix": "Λαμβάνω κατά τη λήψη",
+  "pillTakenCountSuffix": "φορές λήψη",
   "duringPauseTaking": "Σε διάλειμμα λήψης",
   "cannotPauseAlreadyTakenToday": "Δεν μπορείτε να παυσετε τη λήψη αφού έχετε ήδη πάρει το σημερινό χάπι",
   "pauseTakingStarted": "Ξεκίνησε το διάλειμμα λήψης",

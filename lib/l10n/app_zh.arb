@@ -399,7 +399,7 @@
   "add": "添加",
   "addPillSheet": "添加药板",
   "pillTakenCountPrefix": "每天",
-  "pillTakenCountSuffix": "服用回数",
+  "pillTakenCountSuffix": "次服药",
   "duringPauseTaking": "暂停服用中",
   "cannotPauseAlreadyTakenToday": "已服用今日药片时无法使用\"暂停服药\"功能",
   "pauseTakingStarted": "服药暂停已开始",

@@ -399,7 +399,7 @@
   "add": "زیاتول",
   "addPillSheet": "د ګولیو پاڼې اضافه کول",
   "pillTakenCountPrefix": "په ورځ کې",
-  "pillTakenCountSuffix": "ځله مصرفیږي",
+  "pillTakenCountSuffix": "ځله ګولۍ واخلئ",
   "duringPauseTaking": "د درملو وقفه",
   "cannotPauseAlreadyTakenToday": "که چیرې د نن ورځې ګوټۍ دمخه واخیستل شوي وي\n\"د درملو استعمال ودروول\" نشي کولی",
   "pauseTakingStarted": "د درملو اخیستلو وقفه پیل شوه",
