@@ -111,7 +111,7 @@
   "pauseEndDate": "Tarikh tamat rehat pengambilan pil",
   "endPillSheet": "pek pil sudah habis",
   "discardPillSheet": "buang pek pil",
-  "takingTime": "Waktu minum pil",
+  "takingTime": "Masa makan pil",
   "takingHistoryIsPremiumFeature": "Rekod pengambilan adalah ciri premium",
   "pauseTakingDoesNotAdvancePillNumber": "Apabila anda melewatkan pengambilan, nombor pil tidak akan maju",
   "pauseTakingFromNumber": "Adakah anda ingin berhenti mengambil dari {number}?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "Pillipausi lõppkuupäev",
   "endPillSheet": "pillileh on lõpetatud",
   "discardPillSheet": "pillilehe äraviskamine",
-  "takingTime": "Võtmisaeg",
+  "takingTime": "Pilli võtmise aeg",
   "takingHistoryIsPremiumFeature": "Võtmisajalugu on premium funktsioon",
   "pauseTakingDoesNotAdvancePillNumber": "Võtmise peatamisel pillisumber ei liigu edasi",
   "pauseTakingFromNumber": "Kas võtate alates {number} pausi?",

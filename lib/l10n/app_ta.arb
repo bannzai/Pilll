@@ -111,7 +111,7 @@
   "pauseEndDate": "மாத்திரை எடுத்துக்கொள்வதில் இடைவெளி முடியும் தேதி",
   "endPillSheet": "மாத்திரை அட்டை முடிந்தது",
   "discardPillSheet": "மாத்திரை அட்டையை அகற்றுங்கள்",
-  "takingTime": "மருந்து நேரம்",
+  "takingTime": "மாத்திரை எடுத்துக்கொள்ளும் நேரம்",
   "takingHistoryIsPremiumFeature": "மருந்து எடுத்த வரலாறு பிரீமியம் அம்சமாகும்",
   "pauseTakingDoesNotAdvancePillNumber": "மாத்திரை எடுப்பதை இடைநிறுத்தினால் பில் எண் முன்னேறாது",
   "pauseTakingFromNumber": "{number}-இல் இருந்து மாத்திரை உட்கொள்வதை நிறுத்துவீர்களா？",

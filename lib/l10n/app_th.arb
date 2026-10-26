@@ -111,7 +111,7 @@
   "pauseEndDate": "วันที่สิ้นสุดช่วงพักทานยา",
   "endPillSheet": "แผงยาหมดแล้ว",
   "discardPillSheet": "ทิ้งแผงยา",
-  "takingTime": "เวลารับประทานยา",
+  "takingTime": "เวลาทานยาเม็ด",
   "takingHistoryIsPremiumFeature": "ประวัติการรับประทานยาเป็นฟีเจอร์พรีเมียม",
   "pauseTakingDoesNotAdvancePillNumber": "เมื่อพักการรับประทานยา หมายเลขยาจะไม่เพิ่มขึ้น",
   "pauseTakingFromNumber": "ต้องการหยุดรับประทานยาจากเม็ดที่ {number} หรือไม่?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "აბების მიღების შესვენების დასრულების თარიღი",
   "endPillSheet": "აბების ბლისტერ დასრულებულია",
   "discardPillSheet": "აბების ბლისტერ გადაგდება",
-  "takingTime": "მიღების დრო",
+  "takingTime": "აბის მიღების დრო",
   "takingHistoryIsPremiumFeature": "მიღების ისტორია პრემიუმ ფუნქციაა",
   "pauseTakingDoesNotAdvancePillNumber": "მიღების შეჩერებისას აბის ნომერი არ გაგრძელდება",
   "pauseTakingFromNumber": "{number}-დან აბების მიღების შეწყვეტა გსურთ?",

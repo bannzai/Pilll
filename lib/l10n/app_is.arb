@@ -111,7 +111,7 @@
   "pauseEndDate": "Lokadagur pilluhlés",
   "endPillSheet": "pilluspjald búið",
   "discardPillSheet": "farga pilluspjaldi",
-  "takingTime": "Inntökutími",
+  "takingTime": "Tími til að taka pilluna",
   "takingHistoryIsPremiumFeature": "Inntökusaga er Premium virkni",
   "pauseTakingDoesNotAdvancePillNumber": "Þegar inntaka er í hvíld færist pillunúmerið ekki áfram",
   "pauseTakingFromNumber": "Viltu gera hlé á töku frá {number}?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "Таблетка қабылдау үзілісінің аяқталу күні",
   "endPillSheet": "таблетка блистер аяқталды",
   "discardPillSheet": "таблетка блистер тастау",
-  "takingTime": "Қабылдау уақыты",
+  "takingTime": "Таблетканы қабылдау уақыты",
   "takingHistoryIsPremiumFeature": "Қабылдау тарихы премиум функциясы",
   "pauseTakingDoesNotAdvancePillNumber": "Қабылдауды тоқтатсаңыз, таблетка нөмірі алға жылжымайды",
   "pauseTakingFromNumber": "{number}-ден бастап дәрі қабылдауды тоқтатасыз ба？",

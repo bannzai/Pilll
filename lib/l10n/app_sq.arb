@@ -111,7 +111,7 @@
   "pauseEndDate": "Data e përfundimit të pushimit nga marrja e pilulave",
   "endPillSheet": "blister ka përfunduar",
   "discardPillSheet": "hidhni blisterin",
-  "takingTime": "Ora e marrjes",
+  "takingTime": "Ora e marrjes së pilulës",
   "takingHistoryIsPremiumFeature": "Historiku i marrjes është një funksion premium",
   "pauseTakingDoesNotAdvancePillNumber": "Kur ndaloni marrjen e pilulës, numri i pilulës nuk përparon",
   "pauseTakingFromNumber": "A dëshironi të pushoni marrjen duke filluar nga {number}?",

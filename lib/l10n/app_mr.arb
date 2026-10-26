@@ -111,7 +111,7 @@
   "pauseEndDate": "गोळ्या घेण्याचा विराम संपण्याची तारीख",
   "endPillSheet": "पिल शीट संपली",
   "discardPillSheet": "पिल शीट टाकून द्या",
-  "takingTime": "घेण्याची वेळ",
+  "takingTime": "गोळी घेण्याची वेळ",
   "takingHistoryIsPremiumFeature": "सेवन इतिहास प्रीमियम सुविधा आहे",
   "pauseTakingDoesNotAdvancePillNumber": "गोळी घेणे थांबवल्यास गोळी क्रमांक पुढे जात नाही",
   "pauseTakingFromNumber": "{number} नंबर पासून गोळ्या घेणे थांबवायचे का?",

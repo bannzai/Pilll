@@ -111,7 +111,7 @@
   "pauseEndDate": "Tablečių vartojimo pertraukos pabaigos data",
   "endPillSheet": "tablečių plokštel baigta",
   "discardPillSheet": "Išmesti tablečių plokštelę",
-  "takingTime": "Vartojimo laikas",
+  "takingTime": "Tabletės vartojimo laikas",
   "takingHistoryIsPremiumFeature": "Vartojimo istorija yra premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Praleidžiant vartojimą, tablečių numeris nepažengės",
   "pauseTakingFromNumber": "Ar sustabdysite vartojimą nuo {number}?",

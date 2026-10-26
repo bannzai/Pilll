@@ -111,7 +111,7 @@
   "pauseEndDate": "Pilulak hartzeko etenaldiaren amaiera-data",
   "endPillSheet": "pilula-blister amaituta",
   "discardPillSheet": "pilula-blister botatzea",
-  "takingTime": "Hartzeko ordua",
+  "takingTime": "Pilula hartzeko ordua",
   "takingHistoryIsPremiumFeature": "Hartze-historia premium funtzioa da",
   "pauseTakingDoesNotAdvancePillNumber": "Pilula hartzea pausatzen baduzu, pilula zenbakia ez da aurreratuko",
   "pauseTakingFromNumber": "{number}tik aurrera hartzea pausatu nahi duzu?",

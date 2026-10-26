@@ -111,7 +111,7 @@
   "pauseEndDate": "Date de fin de la pause de la pilule",
   "endPillSheet": "Plaquette terminée",
   "discardPillSheet": "jeter la plaquette",
-  "takingTime": "Temps de dosage",
+  "takingTime": "Heure de prise de la pilule",
   "takingHistoryIsPremiumFeature": "Prendre l'historique est une fonctionnalité premium",
   "pauseTakingDoesNotAdvancePillNumber": "Les numéros de pilules n'avancent pas lorsque vous sautez des doses",
   "pauseTakingFromNumber": "Faire une pause à partir de la pilule {number} ?",

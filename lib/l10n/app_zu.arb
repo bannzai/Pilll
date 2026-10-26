@@ -111,7 +111,7 @@
   "pauseEndDate": "Usuku lokuphela kwekhefu lokuphuza amaphilisi",
   "endPillSheet": "shidi lamaphilisi seliphelile",
   "discardPillSheet": "ukulahla ishidi lamaphilisi",
-  "takingTime": "Isikhathi sokuthatha",
+  "takingTime": "Isikhathi sokuphuza iphilisi",
   "takingHistoryIsPremiumFeature": "Umlando wokuphuza uwumsebenzi we-premium",
   "pauseTakingDoesNotAdvancePillNumber": "Uma utatha ikhefu ekudleni kwamaphilisi, inombolo yamaphilisi ayiqhubeki",
   "pauseTakingFromNumber": "Ufuna ukuphumula ukudla imithi kusukela ku-{number}?",

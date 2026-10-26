@@ -111,7 +111,7 @@
   "pauseEndDate": "Data de finalització de la pausa de la píndola",
   "endPillSheet": "blíster acabat",
   "discardPillSheet": "llençar el blíster",
-  "takingTime": "Hora de presa",
+  "takingTime": "Hora de prendre la píndola",
   "takingHistoryIsPremiumFeature": "L'historial de presa és una funció premium",
   "pauseTakingDoesNotAdvancePillNumber": "Quan pauseu la presa, el número de píndola no avança",
   "pauseTakingFromNumber": "Vols pausar la presa a partir del {number}?",

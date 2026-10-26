@@ -111,7 +111,7 @@
   "pauseEndDate": "Datum konca premora pri jemanju tablet",
   "endPillSheet": "ploščic je porabljen",
   "discardPillSheet": "zavrzite ploščico",
-  "takingTime": "Čas jemanja",
+  "takingTime": "Čas za jemanje tabletke",
   "takingHistoryIsPremiumFeature": "Zgodovina jemanja je premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Ko preskočite jemanje, se številka tabletke ne pomakne",
   "pauseTakingFromNumber": "Ali želite narediti premor v jemanju od {number}?",

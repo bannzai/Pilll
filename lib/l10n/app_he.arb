@@ -111,7 +111,7 @@
   "pauseEndDate": "תאריך סיום ההפסקה בנטילת הגלולה",
   "endPillSheet": "חפיסת הגלולות הסתיימה",
   "discardPillSheet": "השלכת חפיסת הגלולות",
-  "takingTime": "זמן נטילה",
+  "takingTime": "שעת נטילת הגלולה",
   "takingHistoryIsPremiumFeature": "היסטוריית הנטילות היא תכונה פרימיום",
   "pauseTakingDoesNotAdvancePillNumber": "בעת הפסקת הנטילה, מספר הגלולה לא יתקדם",
   "pauseTakingFromNumber": "האם להפסיק את נטילת הכדורים מ־{number}?",

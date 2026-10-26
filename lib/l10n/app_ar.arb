@@ -111,7 +111,7 @@
   "pauseEndDate": "تاريخ انتهاء فترة التوقف عن تناول الحبوب",
   "endPillSheet": "انتهى شريط الحبوب",
   "discardPillSheet": "التخلص من شريط الحبوب",
-  "takingTime": "وقت تناول الدواء",
+  "takingTime": "وقت تناول الحبة",
   "takingHistoryIsPremiumFeature": "سجل تناول الحبوب ميزة مدفوعة",
   "pauseTakingDoesNotAdvancePillNumber": "عند توقف تناول الحبوب، لن يتقدم رقم الحبة",
   "pauseTakingFromNumber": "هل تريد إيقاف تناول الحبوب من {number}؟",

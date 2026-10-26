@@ -111,7 +111,7 @@
   "pauseEndDate": "Дата заканчэння перапынку ў прыёме пігулак",
   "endPillSheet": "блістар скончыўся",
   "discardPillSheet": "утылізаваць блістар",
-  "takingTime": "Час прыёму",
+  "takingTime": "Час прыёму пігулкі",
   "takingHistoryIsPremiumFeature": "Гісторыя прыёму - прэміум-функцыя",
   "pauseTakingDoesNotAdvancePillNumber": "Пры перапынку прыёму нумар таблеткі не прасоўваецца",
   "pauseTakingFromNumber": "Спыніць прыём з {number}?",

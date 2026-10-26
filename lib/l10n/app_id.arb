@@ -111,7 +111,7 @@
   "pauseEndDate": "Tanggal berakhirnya jeda minum pil",
   "endPillSheet": "strip pil sudah habis",
   "discardPillSheet": "buang strip pil",
-  "takingTime": "Waktu Minum",
+  "takingTime": "Waktu minum pil",
   "takingHistoryIsPremiumFeature": "Riwayat konsumsi merupakan fitur premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ketika melewatkan konsumsi, nomor pil tidak akan maju",
   "pauseTakingFromNumber": "Berhenti minum pil mulai dari {number}?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "Einddatum van de pillenpauze",
   "endPillSheet": "pillenstrip is op",
   "discardPillSheet": "pillenstrip weggooien",
-  "takingTime": "Innametijd",
+  "takingTime": "Tijd om je pil te nemen",
   "takingHistoryIsPremiumFeature": "De inname geschiedenis is een premium functie",
   "pauseTakingDoesNotAdvancePillNumber": "Wanneer je de inname pauzeert, gaat het pilnummer niet verder",
   "pauseTakingFromNumber": "Wilt u vanaf {number} pauzeren met de inname?",

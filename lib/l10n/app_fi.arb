@@ -111,7 +111,7 @@
   "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "pilleriliuska käytetty loppuun",
   "discardPillSheet": "hävitä pilleriliuska",
-  "takingTime": "Ottamisaika",
+  "takingTime": "Pillerin ottoaika",
   "takingHistoryIsPremiumFeature": "Ottamishistoria on premium-ominaisuus",
   "pauseTakingDoesNotAdvancePillNumber": "Kun pidät tauon pillerien ottamisessa, pillin numero ei etene",
   "pauseTakingFromNumber": "Keskeytätkö lääkkeen ottamisen numerosta {number} alkaen?",

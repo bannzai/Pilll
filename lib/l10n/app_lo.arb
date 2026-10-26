@@ -111,7 +111,7 @@
   "pauseEndDate": "ວັນສິ້ນສຸດຊ່ວງພັກກິນຢາເມັດ",
   "endPillSheet": "ແຜງຢາຄຸມໝົດແລ້ວ",
   "discardPillSheet": "ຖິ້ມແຜງຢາຄຸມ",
-  "takingTime": "ເວລາກິນຢາ",
+  "takingTime": "ເວລາກິນຢາເມັດ",
   "takingHistoryIsPremiumFeature": "ປະຫວັດການກິນຢາແມ່ນຟັງຊັນພຣີມຽມ",
   "pauseTakingDoesNotAdvancePillNumber": "ເມື່ອຢຸດພັກການກິນຢາ, ເລກລຳດັບຢາຈະບໍ່ດຳເນີນຕໍ່",
   "pauseTakingFromNumber": "ຈະພັກການກິນຢາຈາກເລກທີ່ {number} ບໍ?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "Data zakończenia przerwy w braniu tabletek",
   "endPillSheet": "blist zużyty",
   "discardPillSheet": "wyrzuć blist",
-  "takingTime": "Godzina przyjmowania",
+  "takingTime": "Godzina przyjęcia tabletki",
   "takingHistoryIsPremiumFeature": "Historia przyjmowania to funkcja premium",
   "pauseTakingDoesNotAdvancePillNumber": "Podczas przerwy w przyjmowaniu numer tabletki nie postępuje",
   "pauseTakingFromNumber": "Czy przerwać zażywanie od {number}?",

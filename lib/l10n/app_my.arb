@@ -111,7 +111,7 @@
   "pauseEndDate": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမှု ပြီးဆုံးမည့်ရက်",
   "endPillSheet": "ဆေးပြားကတ် ကုန်သွားပါပြီ",
   "discardPillSheet": "ဆေးပြားကတ် စွန့်ပစ်ရန်",
-  "takingTime": "သောက်သုံးချိန်",
+  "takingTime": "ဆေးပြားသောက်ချိန်",
   "takingHistoryIsPremiumFeature": "ဆေးသောက်မှတ်တမ်းများသည် ပရီမီယံလုပ်ဆောင်ချက်ဖြစ်ပါသည်။",
   "pauseTakingDoesNotAdvancePillNumber": "ဆေးသောက်ခြင်းကို ရပ်နားလိုက်ပါက ဆေးလုံးနံပါတ် မတိုးတက်ပါ",
   "pauseTakingFromNumber": "{number} မှစ၍ ဆေးသောက်ခြင်းကို ခေတ္တရပ်တန့်လိုပါသလား။",

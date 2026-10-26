@@ -111,7 +111,7 @@
   "pauseEndDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള അവസാനിക്കുന്ന തീയതി",
   "endPillSheet": "ഗുളിക സ്ട്രിപ്പ തീർന്നു",
   "discardPillSheet": "ഗുളിക സ്ട്രിപ്പ് കളയുക",
-  "takingTime": "സേവന സമയം",
+  "takingTime": "ഗുളിക കഴിക്കേണ്ട സമയം",
   "takingHistoryIsPremiumFeature": "മരുന്ന് കഴിച്ച ചരിത്രം പ്രീമിയം ഫീച്ചറാണ്",
   "pauseTakingDoesNotAdvancePillNumber": "ഗുളിക കഴിക്കുന്നത് വിട്ടുനിർത്തുമ്പോൾ ഗുളിക നമ്പർ മുന്നോട്ട് പോകില്ല",
   "pauseTakingFromNumber": "{number} മുതൽ മരുന്ന് കഴിക്കുന്നത് നിർത്തണമോ?",

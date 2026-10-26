@@ -111,7 +111,7 @@
   "pauseEndDate": "మాత్రలు తీసుకోవడంలో విరామం ముగిసే తేదీ",
   "endPillSheet": "మాత్రల స్ట్రిప్ పూర్తయింది",
   "discardPillSheet": "మాత్రల స్ట్రిప్ పారవేయండి",
-  "takingTime": "సేవన సమయం",
+  "takingTime": "మాత్ర తీసుకునే సమయం",
   "takingHistoryIsPremiumFeature": "సేవన చరిత్ర ప్రీమియం ఫీచర్‌లో ఉంది",
   "pauseTakingDoesNotAdvancePillNumber": "మందు తీసుకోవడం ఆపేస్తే గుళిక నంబర్ ముందుకు వెళ్లదు",
   "pauseTakingFromNumber": "{number}నుండి మందు తీసుకోవడం ఆపేస్తారా?",

@@ -111,7 +111,7 @@
   "pauseEndDate": "ବଟି ଖାଇବାର ବିରତି ଶେଷ ତାରିଖ",
   "endPillSheet": "ବଟିକା ସିଟ ସରିଗଲା",
   "discardPillSheet": "ବଟିକା ସିଟ ଫିଙ୍ଗିଦିଅନ୍ତୁ",
-  "takingTime": "ସେବନ ସମୟ",
+  "takingTime": "ବଟିକା ଖାଇବା ସମୟ",
   "takingHistoryIsPremiumFeature": "ସେବନ ଇତିହାସ ଏକ ପ୍ରିମିୟମ୍ ସୁବିଧା ଅଟେ",
   "pauseTakingDoesNotAdvancePillNumber": "ସେବନ ବିରତି କଲେ ବଟିକା ନମ୍ବର ଆଗକୁ ବଢିବ ନାହିଁ",
   "pauseTakingFromNumber": "{number}ରୁ ସେବନ ବନ୍ଦ କରିବେ କି?",

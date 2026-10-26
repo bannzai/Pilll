@@ -111,7 +111,7 @@
   "pauseEndDate": "Data încheierii pauzei de la pilulă",
   "endPillSheet": "blister terminat",
   "discardPillSheet": "aruncă blisterul",
-  "takingTime": "Ora administrării",
+  "takingTime": "Ora la care iei pilula",
   "takingHistoryIsPremiumFeature": "Istoricul administrării este o funcție premium",
   "pauseTakingDoesNotAdvancePillNumber": "Când întrerupi administrarea, numărul pilulei nu avansează",
   "pauseTakingFromNumber": "Doriți să faceți o pauză în administrare începând cu {number}?",

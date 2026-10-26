@@ -111,7 +111,7 @@
   "pauseEndDate": "Dátum konca prestávky v užívaní tabletiek",
   "endPillSheet": "blist je dokončený",
   "discardPillSheet": "Vyhodiť blist",
-  "takingTime": "čas užitia",
+  "takingTime": "Čas užitia tabletky",
   "takingHistoryIsPremiumFeature": "História požívania je prémiová funkcia",
   "pauseTakingDoesNotAdvancePillNumber": "Pri prerušení užívania sa číslo pilulky neposúva",
   "pauseTakingFromNumber": "Chcete pozastaviť užívanie od {number}?",

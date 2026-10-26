@@ -111,7 +111,7 @@
   "pauseEndDate": "Крайна дата на паузата в приема на хапчета",
   "endPillSheet": "блистерът е приключен",
   "discardPillSheet": "изхвърляне на блистер",
-  "takingTime": "Време за прием",
+  "takingTime": "Час за прием на хапчето",
   "takingHistoryIsPremiumFeature": "Историята на приема е премиум функция",
   "pauseTakingDoesNotAdvancePillNumber": "При пропускане на приемане номерът на хапчето няма да продължи",
   "pauseTakingFromNumber": "Искате ли да направите пауза в приемането от {number}?",

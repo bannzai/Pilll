@@ -111,7 +111,7 @@
   "pauseEndDate": "Hap kullanımına ara verme bitiş tarihi",
   "endPillSheet": "blister tamamlandı",
   "discardPillSheet": "Kullanılmış blisteri atın",
-  "takingTime": "İlaç Saati",
+  "takingTime": "Hap alma saati",
   "takingHistoryIsPremiumFeature": "Kullanım geçmişi premium özelliğidir",
   "pauseTakingDoesNotAdvancePillNumber": "Kullanımı duraklattığınızda hap numarası ilerlemez",
   "pauseTakingFromNumber": "{number}'den itibaren alımı durduracak mısınız?",

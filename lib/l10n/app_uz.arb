@@ -111,7 +111,7 @@
   "pauseEndDate": "Tabletkalarni qabul qilishdagi tanaffus tugash sanasi",
   "endPillSheet": "tabletka blister tugadi",
   "discardPillSheet": "tabletka blisterni tashlang",
-  "takingTime": "Qabul vaqti",
+  "takingTime": "Tabletkani ichish vaqti",
   "takingHistoryIsPremiumFeature": "Qabul qilish tarixi premium funksiyasidir",
   "pauseTakingDoesNotAdvancePillNumber": "Qabul qilishni to'xtatganingizda, tabletka raqami oldinga siljimaydi",
   "pauseTakingFromNumber": "{number}-dan dori qabul qilishni to'xtatasizmi?",

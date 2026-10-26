@@ -111,7 +111,7 @@
   "pauseEndDate": "Pill break end date",
   "endPillSheet": "Pill pack finished",
   "discardPillSheet": "Discard pill pack",
-  "takingTime": "Dosage Time",
+  "takingTime": "Time to take your pill",
   "takingHistoryIsPremiumFeature": "Taking history is a premium feature",
   "pauseTakingDoesNotAdvancePillNumber": "Pill numbers do not advance when you skip doses",
   "pauseTakingFromNumber": "Take a break starting from pill {number}?",

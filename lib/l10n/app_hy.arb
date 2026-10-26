@@ -111,7 +111,7 @@
   "pauseEndDate": "Հաբերի ընդունման ընդմիջման ավարտի ամսաթիվ",
   "endPillSheet": "հաբերի բլիստեր ավարտվել է",
   "discardPillSheet": "հաբերի բլիստեր դեն նետել",
-  "takingTime": "Ընդունման ժամ",
+  "takingTime": "Հաբն ընդունելու ժամը",
   "takingHistoryIsPremiumFeature": "Ընդունման պատմությունը պրեմիում գործառույթ է",
   "pauseTakingDoesNotAdvancePillNumber": "Հապի ընդունումը դադարեցնելիս համարը չի առաջ գնա",
   "pauseTakingFromNumber": "{number}-ից դեղի ընդունումը դադարեցնե՞լ:",
