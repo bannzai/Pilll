@@ -223,7 +223,7 @@
   "startApp": "Begin die app gebruik",
   "loggedInWithProvider": "Jy is met {accountTypeProviderName} aangemeld",
   "tellAboutPrescribedSheet": "Vertel ons asseblief van jou voorgeskrewe pilverpakking",
-  "existingAccountUsers": "Het jy reeds 'n rekening? Klik hier",
+  "existingAccountUsers": "Het jy reeds ’n rekening? Meld aan",
   "selectTodayPillNumber": "Vandag({todayString})\nTik die nommer van die pil wat jy gaan neem of al geneem het",
   "notYetKnown": "Nog onbekend",
   "pillForToday": "Pille vir {today}:",

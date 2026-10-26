@@ -223,7 +223,7 @@
   "startApp": "Kezdd el használni az alkalmazást",
   "loggedInWithProvider": "Bejelentkeztél a(z) {accountTypeProviderName} használatával",
   "tellAboutPrescribedSheet": "Mesélj a felírt tabletták csomagolásáról",
-  "existingAccountUsers": "Aki már rendelkezik fiókkal, kattintson ide",
+  "existingAccountUsers": "Már van fiókod? Jelentkezz be",
   "selectTodayPillNumber": "Koppintson a ma ({todayString}) beveendő vagy bevett tabletta számára",
   "notYetKnown": "Még nem ismert",
   "pillForToday": "A {today} napján szedendő pirula:",

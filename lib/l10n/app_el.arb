@@ -223,7 +223,7 @@
   "startApp": "Ξεκινήστε να χρησιμοποιείτε την εφαρμογή",
   "loggedInWithProvider": "Συνδεθήκατε μέσω {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Πείτε μας για τη συσκευασία των χαπιών που σας έχουν συνταγογραφηθεί",
-  "existingAccountUsers": "Έχετε ήδη λογαριασμό; Κάντε κλικ εδώ",
+  "existingAccountUsers": "Έχετε ήδη λογαριασμό; Συνδεθείτε",
   "selectTodayPillNumber": "Σήμερα ({todayString}) πατήστε τον αριθμό του χαπιού που πρέπει να πάρετε ή πήρατε",
   "notYetKnown": "Άγνωστο",
   "pillForToday": "Το χάπι για τις {today} είναι",

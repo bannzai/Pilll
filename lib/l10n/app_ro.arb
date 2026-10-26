@@ -223,7 +223,7 @@
   "startApp": "Începe să folosești aplicația",
   "loggedInWithProvider": "Te-ai conectat cu {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Spune-ne despre folia de pilule care ți-a fost prescrisă",
-  "existingAccountUsers": "Aveți deja un cont? Conectați-vă aici",
+  "existingAccountUsers": "Ai deja un cont? Autentifică-te",
   "selectTodayPillNumber": "Atinge numărul pilulei pentru astăzi ({todayString})",
   "notYetKnown": "Încă nespecificat",
   "pillForToday": "Pilulele de luat pe {today}",

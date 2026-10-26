@@ -223,7 +223,7 @@
   "startApp": "Inizia a usare l'app",
   "loggedInWithProvider": "Hai effettuato l’accesso con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlaci della confezione di pillole che ti è stata prescritta",
-  "existingAccountUsers": "Hai già un account? Accedi qui",
+  "existingAccountUsers": "Hai già un account? Accedi",
   "selectTodayPillNumber": "Tocca il numero della pillola di oggi ({todayString})",
   "notYetKnown": "Non ancora noto",
   "pillForToday": "La pillola per {today} è",

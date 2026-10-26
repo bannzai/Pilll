@@ -223,7 +223,7 @@
   "startApp": "Byrja að nota appið",
   "loggedInWithProvider": "Þú ert skráð inn með {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Segðu okkur frá pakkningunni með pillunum sem þér var ávísað",
-  "existingAccountUsers": "Ertu nú þegar með reikning?",
+  "existingAccountUsers": "Ertu nú þegar með aðgang? Skráðu þig inn",
   "selectTodayPillNumber": "Í dag ({todayString}) - pikkaðu á númer pillunnar sem þú tekur/tókst",
   "notYetKnown": "Ekki vitað ennþá",
   "pillForToday": "Pilla fyrir {today} er",

@@ -223,7 +223,7 @@
   "startApp": "Аппыг ашиглаж эхэлнэ үү",
   "loggedInWithProvider": "Та {accountTypeProviderName}-ээр нэвтэрсэн",
   "tellAboutPrescribedSheet": "Танд бичиж өгсөн эмийн блистерийн талаар хэлж өгнө үү",
-  "existingAccountUsers": "Бүртгэлтэй бол энд дарна уу",
+  "existingAccountUsers": "Та бүртгэлтэй юу? Нэвтэрнэ үү",
   "selectTodayPillNumber": "Өнөөдөр ({todayString}) уух/уусан эмийн дугаарыг дарна уу",
   "notYetKnown": "Хараахан тодорхойгүй",
   "pillForToday": "{today}-д уух эм нь",

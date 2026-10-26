@@ -223,7 +223,7 @@
   "startApp": "앱 사용 시작하기",
   "loggedInWithProvider": "{accountTypeProviderName}로 로그인했어요",
   "tellAboutPrescribedSheet": "처방받은 피임약 포장에 대해 알려 주세요",
-  "existingAccountUsers": "이미 계정이 있는 분은 여기",
+  "existingAccountUsers": "이미 계정이 있나요? 로그인해요",
   "selectTodayPillNumber": "오늘({todayString}) 복용할・복용한 피임약 번호를 탭하세요",
   "notYetKnown": "아직 모름",
   "pillForToday": "{today}에 복용할 피임약은",

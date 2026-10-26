@@ -223,7 +223,7 @@
   "startApp": "Սկսեք օգտվել հավելվածից",
   "loggedInWithProvider": "Դուք մուտք եք գործել {accountTypeProviderName}‑ով",
   "tellAboutPrescribedSheet": "Խնդրում ենք պատմել Ձեզ նշանակված հաբերի փաթեթի մասին",
-  "existingAccountUsers": "Արդեն հաշիվ ունեցողների համար",
+  "existingAccountUsers": "Արդեն հաշիվ ունե՞ք։ Մուտք գործեք",
   "selectTodayPillNumber": "Հպեք այսօր ({todayString}) խմելու կամ խմած դեղահատի համարին",
   "notYetKnown": "Դեռ անհայտ է",
   "pillForToday": "{today}-ին ընդունելիք հաբերը",

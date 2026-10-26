@@ -223,7 +223,7 @@
   "startApp": "Започнете да ја користите апликацијата",
   "loggedInWithProvider": "Се најавивте преку {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Кажете ни за пакувањето на таблетите што Ви се препишани",
-  "existingAccountUsers": "Веќе имате сметка? Кликнете тука",
+  "existingAccountUsers": "Веќе имате сметка? Најавете се",
   "selectTodayPillNumber": "Денес ({todayString})\nДопрете го бројот на пилулата што треба да ја земете/ја земавте",
   "notYetKnown": "Сè уште не е познато",
   "pillForToday": "Пилулата за {today} е",

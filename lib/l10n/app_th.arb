@@ -223,7 +223,7 @@
   "startApp": "เริ่มใช้แอป",
   "loggedInWithProvider": "เข้าสู่ระบบด้วย {accountTypeProviderName} แล้วค่ะ",
   "tellAboutPrescribedSheet": "กรุณาบอกข้อมูลเกี่ยวกับแผงยาคุมที่แพทย์สั่งให้ค่ะ",
-  "existingAccountUsers": "หากมีบัญชีแล้ว คลิกที่นี่",
+  "existingAccountUsers": "มีบัญชีอยู่แล้วใช่ไหม เข้าสู่ระบบ",
   "selectTodayPillNumber": "วันนี้ ({todayString})\nแตะหมายเลขยาเม็ดที่จะกินหรือกินแล้ว",
   "notYetKnown": "ยังไม่ทราบ",
   "pillForToday": "ยาเม็ดวัน{today}คือ",

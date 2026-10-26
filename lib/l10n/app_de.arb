@@ -223,7 +223,7 @@
   "startApp": "App jetzt nutzen",
   "loggedInWithProvider": "Du bist mit {accountTypeProviderName} angemeldet",
   "tellAboutPrescribedSheet": "Erzähl uns von deiner verschriebenen Pillenpackung",
-  "existingAccountUsers": "Bereits ein Konto? Hier anmelden",
+  "existingAccountUsers": "Du hast schon ein Konto? Melde dich an",
   "selectTodayPillNumber": "Heute ({todayString})\nPillennummer für heute antippen",
   "notYetKnown": "Noch unbekannt",
   "pillForToday": "Die Pille für {today}:",

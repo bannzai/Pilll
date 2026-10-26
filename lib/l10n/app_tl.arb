@@ -223,7 +223,7 @@
   "startApp": "Simulan na po ninyong gamitin ang app",
   "loggedInWithProvider": "Naka-log in na po kayo gamit ang {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pakisabi po sa amin ang tungkol sa pakete ng pildoras na inireseta sa inyo",
-  "existingAccountUsers": "May account ka na? Mag-log in dito",
+  "existingAccountUsers": "May account na kayo? Mag-sign in po",
   "selectTodayPillNumber": "I-tap ang numero ng pill na iiinom o nainom ngayon ({todayString})",
   "notYetKnown": "Hindi pa alam",
   "pillForToday": "Mga pill para sa {today}",

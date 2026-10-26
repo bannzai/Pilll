@@ -223,7 +223,7 @@
   "startApp": "شروع استفاده از برنامه",
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",
   "tellAboutPrescribedSheet": "لطفاً درباره بسته قرص تجویزشده‌تان به ما بگویید",
-  "existingAccountUsers": "حساب کاربری دارید؟ ورود",
+  "existingAccountUsers": "از قبل حساب کاربری دارید؟ وارد شوید",
   "selectTodayPillNumber": "شماره قرص امروز ({todayString}) را لمس کنید",
   "notYetKnown": "هنوز مشخص نیست",
   "pillForToday": "قرص‌های {today}",

@@ -223,7 +223,7 @@
   "startApp": "ເລີ່ມໃຊ້ແອັບ",
   "loggedInWithProvider": "ເຂົ້າລະບົບຜ່ານ {accountTypeProviderName} ສຳເລັດແລ້ວ",
   "tellAboutPrescribedSheet": "ກະລຸນາບອກພວກເຮົາກ່ຽວກັບແຜງຢາຄຸມກຳເນີດທີ່ທ່ານໄດ້ຮັບຕາມໃບສັ່ງແພດ",
-  "existingAccountUsers": "ຜູ້ທີ່ມີບັນຊີແລ້ວກົດທີ່ນີ້",
+  "existingAccountUsers": "ມີບັນຊີແລ້ວບໍ? ກະລຸນາເຂົ້າລະບົບ",
   "selectTodayPillNumber": "ມື້ນີ້ ({todayString})\nແຕະເລກຢາທີ່ຈະກິນ ຫຼື ກິນແລ້ວ",
   "notYetKnown": "ຍັງບໍ່ຮູ້",
   "pillForToday": "ຢາເມັດສຳລັບ {today} ແມ່ນ",

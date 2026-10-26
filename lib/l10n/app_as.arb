@@ -223,7 +223,7 @@
   "startApp": "এপটো ব্যৱহাৰ কৰিবলৈ আৰম্ভ কৰক",
   "loggedInWithProvider": "{accountTypeProviderName}ৰ জৰিয়তে আপুনি লগ ইন কৰিছে",
   "tellAboutPrescribedSheet": "আপোনাক প্ৰেছক্ৰাইব কৰা পিলৰ পেকেটটোৰ বিষয়ে অনুগ্ৰহ কৰি জনাওক",
-  "existingAccountUsers": "ইতিমধ্যে একাউণ্ট আছে? ইয়াত ক্লিক কৰক",
+  "existingAccountUsers": "আপোনাৰ ইতিমধ্যে একাউণ্ট আছে নেকি? লগ ইন কৰক",
   "selectTodayPillNumber": "আজি ({todayString}) খোৱা বা খাব লগীয়া পিলৰ নম্বৰত টেপ কৰক",
   "notYetKnown": "এতিয়াও জনা নাই",
   "pillForToday": "{today}ত সেৱন কৰিবলগীয়া পিল হ'ল",

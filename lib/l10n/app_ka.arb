@@ -223,7 +223,7 @@
   "startApp": "აპის გამოყენების დაწყება",
   "loggedInWithProvider": "თქვენ შეხვედით {accountTypeProviderName}-ით",
   "tellAboutPrescribedSheet": "გთხოვთ, გვიამბოთ თქვენთვის გამოწერილი აბების შეფუთვის შესახებ",
-  "existingAccountUsers": "უკვე გაქვთ ანგარიში? დაკლიკეთ აქ",
+  "existingAccountUsers": "უკვე გაქვთ ანგარიში? შესვლა",
   "selectTodayPillNumber": "შეეხეთ დღევანდელი ({todayString}) აბის ნომერს",
   "notYetKnown": "ჯერ უცნობია",
   "pillForToday": "{today}-ზე მისაღები ტაბლეტები",

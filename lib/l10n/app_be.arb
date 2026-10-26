@@ -223,7 +223,7 @@
   "startApp": "Пачаць карыстацца праграмай",
   "loggedInWithProvider": "Вы ўвайшлі праз {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Раскажыце, калі ласка, пра ўпакоўку прызначаных вам пігулак",
-  "existingAccountUsers": "Ужо маеце акаўнт? Сюды",
+  "existingAccountUsers": "У вас ужо ёсць уліковы запіс? Увайдзіце",
   "selectTodayPillNumber": "Сёння ({todayString})\nНацісніце нумар пілюлі, якую трэба прыняць/прынялі",
   "notYetKnown": "Яшчэ невядома",
   "pillForToday": "Таблетка на {today}:",

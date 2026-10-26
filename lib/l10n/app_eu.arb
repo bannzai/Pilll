@@ -223,7 +223,7 @@
   "startApp": "Hasi aplikazioa erabiltzen",
   "loggedInWithProvider": "{accountTypeProviderName} bidez hasi duzu saioa",
   "tellAboutPrescribedSheet": "Esaguzu agindu dizuten pilula sortari buruz",
-  "existingAccountUsers": "Dagoeneko kontua baduzu? Hemen klik egin",
+  "existingAccountUsers": "Baduzu kontu bat? Hasi saioa",
   "selectTodayPillNumber": "Gaur ({todayString})\\nHartu beharreko/hartutako pilularen zenbakia sakatu",
   "notYetKnown": "Oraindik ez da jakina",
   "pillForToday": "{today}(e)an hartu beharreko pilula",

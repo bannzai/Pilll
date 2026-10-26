@@ -223,7 +223,7 @@
   "startApp": "Fang aa, d App z bruuche",
   "loggedInWithProvider": "Du bisch mit {accountTypeProviderName} aagmäldet",
   "tellAboutPrescribedSheet": "Verzell üs vo dim verschribne Pilleblister",
-  "existingAccountUsers": "Haben Sie bereits ein Konto? Hier",
+  "existingAccountUsers": "Häsch scho es Konto? Mäld di aa",
   "selectTodayPillNumber": "Hüt ({todayString})\nDrück d Pill-Nummer wo du nimmsch oder scho gnoh hesch",
   "notYetKnown": "Noch nöd bekannt",
   "pillForToday": "D'Pille am {today}:",

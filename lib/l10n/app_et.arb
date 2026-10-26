@@ -223,7 +223,7 @@
   "startApp": "Alusta rakenduse kasutamist",
   "loggedInWithProvider": "Oled sisse logitud teenusega {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Räägi meile oma väljakirjutatud pillipakist",
-  "existingAccountUsers": "Sul on juba konto?",
+  "existingAccountUsers": "Kas sul on juba konto? Logi sisse",
   "selectTodayPillNumber": "Puuduta täna ({todayString}) võetava või võetud tableti numbrit",
   "notYetKnown": "Veel pole teada",
   "pillForToday": "{today}l võetav pill on",

@@ -223,7 +223,7 @@
   "startApp": "Start using the app",
   "loggedInWithProvider": "You're signed in with {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Tell us about your prescribed pill pack",
-  "existingAccountUsers": "Already have an account? Sign in here",
+  "existingAccountUsers": "Already have an account? Sign in",
   "selectTodayPillNumber": "Today ({todayString}) Tap the number of the pill to take or taken",
   "notYetKnown": "Unknown",
   "pillForToday": "Pills for {today}:",

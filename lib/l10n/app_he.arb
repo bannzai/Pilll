@@ -223,7 +223,7 @@
   "startApp": "להתחיל להשתמש באפליקציה",
   "loggedInWithProvider": "הכניסה באמצעות {accountTypeProviderName} הושלמה",
   "tellAboutPrescribedSheet": "נשמח לשמוע על חפיסת הגלולות שנרשמה לך",
-  "existingAccountUsers": "כבר יש לכם חשבון? לחצו כאן",
+  "existingAccountUsers": "יש כבר חשבון? כניסה לחשבון",
   "selectTodayPillNumber": "היום ({todayString})\nהקש על מספר הגלולה לנטילה היום",
   "notYetKnown": "עדיין לא ידוע",
   "pillForToday": "הגלולה ל{today}",

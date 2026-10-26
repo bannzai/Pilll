@@ -223,7 +223,7 @@
   "startApp": "Filloni të përdorni aplikacionin",
   "loggedInWithProvider": "U identifikuat përmes {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Na tregoni për paketimin e pilulave që ju janë përshkruar",
-  "existingAccountUsers": "Keni tashmë një llogari?",
+  "existingAccountUsers": "Keni tashmë një llogari? Hyni",
   "selectTodayPillNumber": "Prekni numrin e pilulës për sot ({todayString})",
   "notYetKnown": "Ende nuk dihet",
   "pillForToday": "Pillat për t'u marrë në {today}",

@@ -223,7 +223,7 @@
   "startApp": "ابدئي استخدام التطبيق",
   "loggedInWithProvider": "تم تسجيل الدخول باستخدام {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "أخبرينا عن عبوة حبوب منع الحمل الموصوفة لكِ",
-  "existingAccountUsers": "لديك حساب بالفعل؟ اضغط هنا",
+  "existingAccountUsers": "لديكِ حساب بالفعل؟ سجلي الدخول",
   "selectTodayPillNumber": "انقر على رقم الحبة المراد تناولها اليوم ({todayString})",
   "notYetKnown": "غير محدد بعد",
   "pillForToday": "أقراص يوم {today}",

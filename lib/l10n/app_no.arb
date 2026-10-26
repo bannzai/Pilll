@@ -223,7 +223,7 @@
   "startApp": "Begynn å bruke appen",
   "loggedInWithProvider": "Du er logget inn med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortell oss om p-pillebrettet du har fått på resept",
-  "existingAccountUsers": "Har du allerede en konto? Klikk her",
+  "existingAccountUsers": "Har du allerede en konto? Logg inn",
   "selectTodayPillNumber": "Trykk på nummeret til dagens ({todayString}) pille",
   "notYetKnown": "Ukjent",
   "pillForToday": "Pillen for {today} er",

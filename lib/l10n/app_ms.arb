@@ -223,7 +223,7 @@
   "startApp": "Mula gunakan aplikasi",
   "loggedInWithProvider": "Anda telah log masuk dengan {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Ceritakan tentang pek pil yang dipreskripsikan untuk anda",
-  "existingAccountUsers": "Sudah ada akaun? Klik di sini",
+  "existingAccountUsers": "Sudah ada akaun? Log masuk",
   "selectTodayPillNumber": "Ketuk nombor pil yang perlu/telah diminum hari ini ({todayString})",
   "notYetKnown": "Belum ditentukan",
   "pillForToday": "Pil untuk {today} ialah",

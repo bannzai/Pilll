@@ -223,7 +223,7 @@
   "startApp": "Ilovadan foydalanishni boshlang",
   "loggedInWithProvider": "Siz {accountTypeProviderName} orqali tizimga kirdingiz",
   "tellAboutPrescribedSheet": "Sizga buyurilgan tabletkalar qadoği haqida aytib bering",
-  "existingAccountUsers": "Hisobingiz bormi? Shu yerda",
+  "existingAccountUsers": "Hisobingiz bormi? Tizimga kiring",
   "selectTodayPillNumber": "Bugun ({todayString}) qabul qilish kerak bo'lgan yoki qabul qilingan tabletka raqamini bosing",
   "notYetKnown": "Hali ma'lum emas",
   "pillForToday": "{today} kuni qabul qilinadigan dorilar",

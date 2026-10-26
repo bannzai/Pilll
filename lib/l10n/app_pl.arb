@@ -223,7 +223,7 @@
   "startApp": "Zacznij korzystać z aplikacji",
   "loggedInWithProvider": "Zalogowano przez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Opowiedz nam o opakowaniu przepisanych tabletek",
-  "existingAccountUsers": "Masz już konto? Kliknij tutaj",
+  "existingAccountUsers": "Masz już konto? Zaloguj się",
   "selectTodayPillNumber": "Dzisiaj ({todayString})\nDotknij numer tabletki, którą masz wziąć lub już wzięłaś",
   "notYetKnown": "Jeszcze nieznane",
   "pillForToday": "Pigułka na {today}:",

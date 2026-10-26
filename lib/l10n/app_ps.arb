@@ -223,7 +223,7 @@
   "startApp": "د اپ کارول پیل کړئ",
   "loggedInWithProvider": "تاسو د {accountTypeProviderName} له لارې ننوتلي یاست",
   "tellAboutPrescribedSheet": "مهرباني وکړئ د درته تجویز شوې د ګولیو بستې په اړه راته ووایئ",
-  "existingAccountUsers": "دمخه حساب لرې؟ دلته ننوتل وکړئ",
+  "existingAccountUsers": "له مخکې حساب لرئ؟ ننوځئ",
   "selectTodayPillNumber": "نن ({todayString}) د اخیستلو یا اخیستل شوي ګولۍ شمیره ټپ وکړئ",
   "notYetKnown": "نامعلوم",
   "pillForToday": "د {today} ګولۍ:",

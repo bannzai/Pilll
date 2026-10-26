@@ -223,7 +223,7 @@
   "startApp": "एप प्रयोग गर्न सुरु गर्नुहोस्",
   "loggedInWithProvider": "तपाईंले {accountTypeProviderName} मार्फत लग इन गर्नुभएको छ",
   "tellAboutPrescribedSheet": "तपाईंलाई सिफारिस गरिएको चक्कीको पत्ताबारे बताउनुहोस्",
-  "existingAccountUsers": "पहिले देखि खाता भएकाहरुको लागि यहाँ",
+  "existingAccountUsers": "तपाईंसँग पहिले नै खाता छ? लग इन गर्नुहोस्",
   "selectTodayPillNumber": "आज ({todayString})\nखाने वा खाइसकेको गोलीको नम्बरमा ट्याप गर्नुहोस्",
   "notYetKnown": "अझै थाहा छैन",
   "pillForToday": "{today} मा सेवन गर्ने गोली",

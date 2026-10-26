@@ -223,7 +223,7 @@
   "startApp": "ആപ്പ് ഉപയോഗിച്ച് തുടങ്ങൂ",
   "loggedInWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് ലോഗിൻ ചെയ്തു",
   "tellAboutPrescribedSheet": "നിങ്ങൾക്ക് നിർദേശിച്ച ഗുളികകളുടെ പാക്കറ്റിനെക്കുറിച്ച് പറയൂ",
-  "existingAccountUsers": "ഇതിനകം അക്കൗണ്ടുള്ളവര്‍ ഇവിടെ",
+  "existingAccountUsers": "ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യൂ",
   "selectTodayPillNumber": "ഇന്ന് ({todayString})\nഎടുക്കാനുള്ള/എടുത്ത ഗുളികയുടെ നമ്പർ ടാപ്പ് ചെയ്യുക",
   "notYetKnown": "ഇനിയും അറിയില്ല",
   "pillForToday": "{today}ൽ കഴിക്കേണ്ട മാത്ര",

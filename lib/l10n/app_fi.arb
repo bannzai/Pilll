@@ -223,7 +223,7 @@
   "startApp": "Aloita sovelluksen käyttö",
   "loggedInWithProvider": "Olet kirjautunut sisään palvelulla {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Kerro sinulle määrätystä pilleripakkauksesta",
-  "existingAccountUsers": "Minulla on jo tili",
+  "existingAccountUsers": "Onko sinulla jo tili? Kirjaudu sisään",
   "selectTodayPillNumber": "Napauta tänään ({todayString}) otettavan tai otetun pillerin numeroa",
   "notYetKnown": "Ei vielä tiedossa",
   "pillForToday": "{today}n pilleri:",

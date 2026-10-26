@@ -223,7 +223,7 @@
   "startApp": "Pradėkite naudotis programėle",
   "loggedInWithProvider": "Prisijungėte per {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Papasakokite apie jums išrašytų tablečių pakuotę",
-  "existingAccountUsers": "Jau turite paskyrą? Spustelėkite čia",
+  "existingAccountUsers": "Jau turite paskyrą? Prisijunkite",
   "selectTodayPillNumber": "Palieskite šiandien ({todayString}) vartojamos ar išvartojamos tabletės numerį",
   "notYetKnown": "Dar nežinoma",
   "pillForToday": "{today} vartotinos tabletes",

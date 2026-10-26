@@ -223,7 +223,7 @@
   "startApp": "Začnite používať aplikáciu",
   "loggedInWithProvider": "Prihlásili ste sa cez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Povedzte nám o balení predpísaných tabletiek",
-  "existingAccountUsers": "Už máte účet? Prihláste sa tu",
+  "existingAccountUsers": "Už máte účet? Prihláste sa",
   "selectTodayPillNumber": "Dnes ({todayString}) ťuknite na číslo tabletky, ktorú máte vziať/ste vzali",
   "notYetKnown": "Zatiaľ neurčené",
   "pillForToday": "Pilulka na {today} je",

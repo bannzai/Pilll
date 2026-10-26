@@ -223,7 +223,7 @@
   "startApp": "යෙදුම භාවිතය අරඹන්න",
   "loggedInWithProvider": "ඔබ {accountTypeProviderName} හරහා පිවිස ඇත",
   "tellAboutPrescribedSheet": "ඔබට නිර්දේශ කළ පෙති පැකට්ටුව ගැන කරුණාකර අපට කියන්න",
-  "existingAccountUsers": "දැනටමත් ගිණුමක් ඇත්නම් මෙහියින්",
+  "existingAccountUsers": "ඔබට දැනටමත් ගිණුමක් තිබේද? පිවිසෙන්න",
   "selectTodayPillNumber": "අද ({todayString}) ගත යුතු/ගත් පෙති අංකය ටැප් කරන්න",
   "notYetKnown": "තවම නොදනවා",
   "pillForToday": "{today}ට ගන්න පෙති",

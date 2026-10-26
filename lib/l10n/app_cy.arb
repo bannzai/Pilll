@@ -223,7 +223,7 @@
   "startApp": "Dechreuwch ddefnyddio'r ap",
   "loggedInWithProvider": "Rydych chi wedi mewngofnodi gyda {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Dywedwch wrthym am y pecyn pils sydd wedi'i ragnodi i chi",
-  "existingAccountUsers": "Os oes gennych gyfrif eisoes, cliciwch yma",
+  "existingAccountUsers": "Oes gennych gyfrif eisoes? Mewngofnodwch",
   "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen i'w gymryd neu sydd wedi'i gymryd",
   "notYetKnown": "Ddim yn gwybod eto",
   "pillForToday": "Y bilsen ar gyfer {today}",

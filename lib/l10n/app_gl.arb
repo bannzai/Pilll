@@ -223,7 +223,7 @@
   "startApp": "Comeza a usar a aplicación",
   "loggedInWithProvider": "Iniciaches sesión con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Cóntanos como é o envase das pílulas que che receitaron",
-  "existingAccountUsers": "Xa tes unha conta?",
+  "existingAccountUsers": "Xa tes unha conta? Inicia sesión",
   "selectTodayPillNumber": "Toca o número da pastilla de hoxe ({todayString})",
   "notYetKnown": "Aínda descoñecido",
   "pillForToday": "A píldora para o {today}:",

@@ -223,7 +223,7 @@
   "startApp": "Sāciet lietot lietotni",
   "loggedInWithProvider": "Jūs pierakstījāties ar {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pastāstiet par jums izrakstīto tablešu iepakojumu",
-  "existingAccountUsers": "Jau ir konts? Noklikšķiniet šeit",
+  "existingAccountUsers": "Jums jau ir konts? Piesakieties",
   "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties pie pilules numura, ko jāizdzer vai jau izdzēra",
   "notYetKnown": "Vēl nav zināms",
   "pillForToday": "{today} dzert tabletes ir",

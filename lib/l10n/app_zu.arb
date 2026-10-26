@@ -223,7 +223,7 @@
   "startApp": "Sicela uqale ukusebenzisa uhlelo lokusebenza",
   "loggedInWithProvider": "Ungene ngemvume usebenzisa {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sicela usitshele ngephakethe lamaphilisi owalinikezwa udokotela",
-  "existingAccountUsers": "Senayo i-akhawunti? Chofoza lapha",
+  "existingAccountUsers": "Usunayo i-akhawunti? Sicela ungene",
   "selectTodayPillNumber": "Thepha inombolo yepilisi ozoyiphuza noma osuyiphuzile namuhla ({todayString})",
   "notYetKnown": "Akusazakali",
   "pillForToday": "Amaphilisi a{today}:",

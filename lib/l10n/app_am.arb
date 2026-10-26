@@ -223,7 +223,7 @@
   "startApp": "መተግበሪያውን መጠቀም ይጀምሩ",
   "loggedInWithProvider": "በ{accountTypeProviderName} ገብተዋል",
   "tellAboutPrescribedSheet": "ስለታዘዘልዎት የክኒን ማሸጊያ እባክዎ ይንገሩን",
-  "existingAccountUsers": "አስቀድሞ መለያ ካለዎት እዚህ ጋር",
+  "existingAccountUsers": "አስቀድሞ መለያ ካለዎት፣ ይግቡ",
   "selectTodayPillNumber": "ዛሬ ({todayString}) የሚወስዱትን ወይም የወሰዱትን ክኒን ቁጥር ተጫኑ",
   "notYetKnown": "ገና አይታወቅም",
   "pillForToday": "{today}ላይ የሚወሰደው ክኒን",

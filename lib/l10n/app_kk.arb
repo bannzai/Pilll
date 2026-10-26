@@ -223,7 +223,7 @@
   "startApp": "Қолданбаны пайдалана бастаңыз",
   "loggedInWithProvider": "Сіз {accountTypeProviderName} арқылы кірдіңіз",
   "tellAboutPrescribedSheet": "Сізге тағайындалған таблеткалардың қаптамасы туралы айтып беріңіз",
-  "existingAccountUsers": "Тіркелгіңіз бар болса, осы жерден кіріңіз",
+  "existingAccountUsers": "Есептік жазбаңыз бар ма? Кіріңіз",
   "selectTodayPillNumber": "Бүгін ({todayString}) ішетін немесе ішкен таблетканың нөмірін басыңыз",
   "notYetKnown": "Әлі белгісіз",
   "pillForToday": "{today} күні ішетін таблетка",

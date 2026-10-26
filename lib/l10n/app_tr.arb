@@ -223,7 +223,7 @@
   "startApp": "Uygulamayı kullanmaya başlayın",
   "loggedInWithProvider": "{accountTypeProviderName} ile giriş yaptınız",
   "tellAboutPrescribedSheet": "Size reçete edilen hap paketini bize anlatın",
-  "existingAccountUsers": "Zaten hesabım var",
+  "existingAccountUsers": "Zaten hesabınız var mı? Giriş yapın",
   "selectTodayPillNumber": "Bugün ({todayString})\nAlacağınız veya aldığınız hapın numarasına dokunun",
   "notYetKnown": "Henüz belli değil",
   "pillForToday": "{today} günü alınacak hap",

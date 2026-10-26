@@ -223,7 +223,7 @@
   "startApp": "ಆ್ಯಪ್ ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ",
   "loggedInWithProvider": "ನೀವು {accountTypeProviderName} ಮೂಲಕ ಲಾಗಿನ್ ಆಗಿದ್ದೀರಿ",
   "tellAboutPrescribedSheet": "ನಿಮಗೆ ವೈದ್ಯರು ಸೂಚಿಸಿದ ಮಾತ್ರೆಗಳ ಪಟ್ಟಿಯ ಬಗ್ಗೆ ತಿಳಿಸಿ",
-  "existingAccountUsers": "ಈಗಾಗಲೇ ಖಾತೆ ಹೊಂದಿದ್ದೀರಾ? ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "existingAccountUsers": "ನಿಮಗೆ ಈಗಾಗಲೇ ಖಾತೆ ಇದೆಯೇ? ಸೈನ್ ಇನ್ ಮಾಡಿ",
   "selectTodayPillNumber": "ಇಂದು ({todayString}) ತೆಗೆದುಕೊಳ್ಳುವ/ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
   "notYetKnown": "ಇನ್ನೂ ತಿಳಿದಿಲ್ಲ",
   "pillForToday": "{today} ರಂದು ತೆಗೆದುಕೊಳ್ಳಬೇಕಾದ ಮಾತ್ರೆ",

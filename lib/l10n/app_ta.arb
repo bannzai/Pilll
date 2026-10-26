@@ -223,7 +223,7 @@
   "startApp": "செயலியைப் பயன்படுத்தத் தொடங்குங்கள்",
   "loggedInWithProvider": "நீங்கள் {accountTypeProviderName} மூலம் உள்நுழைந்துள்ளீர்கள்",
   "tellAboutPrescribedSheet": "உங்களுக்கு மருத்துவர் பரிந்துரைத்த மாத்திரை அட்டை பற்றிச் சொல்லுங்கள்",
-  "existingAccountUsers": "ஏற்கனவே கணக்கு உள்ளவர்கள் இங்கே",
+  "existingAccountUsers": "ஏற்கனவே கணக்கு உள்ளதா? உள்நுழையுங்கள்",
   "selectTodayPillNumber": "இன்று ({todayString})\nமாத்திரை எண்ணைத் தட்டவும்",
   "notYetKnown": "இன்னும் தெரியவில்லை",
   "pillForToday": "{today}அன்று எடுக்க வேண்டிய மாத்திரை",
