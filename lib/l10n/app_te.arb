@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "సైలెంట్ మోడ్‌లో కూడా నోటిఫికేషన్‌లు అందుతాయి",
   "criticalAlertFeatureAppealBody": "కీలక హెచ్చరికలను ఆన్ చేస్తే, డిస్టర్బ్ చేయవద్దు లేదా సైలెంట్ మోడ్‌లో ఉన్నా మాత్ర తీసుకోవాల్సిన నోటిఫికేషన్‌లు అందుతాయి. మాత్ర తీసుకోవాల్సిన ముఖ్యమైన సమయాలను గుర్తుంచుకోవడానికి ఈ సెట్టింగ్‌ను ఆన్ చేసి చూడండి.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "నోటిఫికేషన్ సందేశాలను మీకు నచ్చినట్లు మార్చుకోండి",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "నోటిఫికేషన్ సందేశాలను అనుకూలీకరించవచ్చు",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "నోటిఫికేషన్‌ల వచనాన్ని మీకు నచ్చినట్లు మార్చుకోవచ్చు",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "మాత్ర తీసుకునే నోటిఫికేషన్ సందేశాన్ని స్వేచ్ఛగా సవరించుకోవచ్చు",
   "reminderNotificationCustomizeWordFeatureAppealBody": "డిఫాల్ట్ “పిల్ తీసుకునే సమయం” అనే సందేశాన్ని మీ ఇష్టమైన పదజాలంతో అనుకూలీకరించవచ్చు. మీ మోటివేషన్ పెంచే మాటలు, లేదా మీ పెంపుడు జంతువు పేరును వాడి, ప్రతి రోజు మాత్ర తీసుకోవడాన్ని మరింత ఆనందదాయకంగా మార్చండి.",
   "appearanceModeDateFeatureAppealTitle": "పిల్ షీట్‌లో తేదీని చూపించు",

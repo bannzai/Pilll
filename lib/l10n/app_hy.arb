@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Ծանուցումները հասնում են նաև անձայն ռեժիմում",
   "criticalAlertFeatureAppealBody": "Եթե միացնեք կարևոր ազդանշանները, կկարողանաք հաբն ընդունելու հիշեցումներ ստանալ նույնիսկ «Չանհանգստացնել» կամ անձայն ռեժիմում։ Փորձեք միացնել այս կարգավորումը, որպեսզի հիշեք հաբն ընդունելու կարևոր ժամերը։",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Ծանուցումների հաղորդագրությունների հարմարեցում",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Կարող եք հարմարեցնել ծանուցման տեքտը",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Դուք կարող եք ծանուցումների տեքստը փոխել Ձեր ուզած ձևով",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Ձեր ընդունման ծանուցումների հաղորդագրությունը ազատորեն խմբագրեք",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Դուք կարող եք սովորական «Ժամանակն է՝ դեղը ընդունելու» հաղորդագրությունը հարմարեցնել ձեր նախընտրած բառերին։ Փորձեք այն փոխել ոգեշնչող արտահայտությամբ կամ ձեր սիրելի կենդանու անվամբ՝ որպեսզի ամենօրյա ընդունումը ավելի հաճելի դառնա։",
   "appearanceModeDateFeatureAppealTitle": "Ամսաթվերը ցույց տալ պիլշիթում",

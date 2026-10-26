@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "รับการแจ้งเตือนได้แม้เปิดโหมดปิดเสียง",
   "criticalAlertFeatureAppealBody": "เมื่อเปิดการแจ้งเตือนสำคัญ คุณจะได้รับการเตือนให้ทานยาเม็ดคุมกำเนิด แม้จะเปิดโหมดห้ามรบกวนหรือโหมดปิดเสียงอยู่ค่ะ ลองเปิดการตั้งค่านี้เพื่อช่วยให้จำเวลาทานยาที่สำคัญได้นะคะ",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ปรับข้อความแจ้งเตือน",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "คุณสามารถปรับแต่งข้อความการแจ้งเตือนได้",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ปรับข้อความแจ้งเตือนได้ตามต้องการค่ะ",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาได้อย่างอิสระ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "คุณสามารถปรับข้อความเริ่มต้น 'ถึงเวลาทานยาแล้ว' ให้เป็นคำที่คุณชอบได้ ลองเปลี่ยนเป็นคำที่ช่วยสร้างแรงจูงใจ หรือชื่อสัตว์เลี้ยง เพื่อทำให้การทานยาประจำวันสนุกขึ้น",
   "appearanceModeDateFeatureAppealTitle": "แสดงวันที่บนแผ่นยา",

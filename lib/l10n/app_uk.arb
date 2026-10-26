@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Сповіщення надходять навіть у беззвучному режимі",
   "criticalAlertFeatureAppealBody": "Якщо ввімкнути критичні сповіщення, ви зможете отримувати нагадування про прийом пігулки навіть у режимі «Не турбувати» або беззвучному режимі. Спробуйте ввімкнути це налаштування, щоб пам’ятати про важливий час прийому.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Налаштуйте тексти сповіщень",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можна налаштувати текст сповіщень",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Ви можете налаштувати текст сповіщень",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Налаштуйте текст повідомлення нагадування про прийом пігулок",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Ви можете налаштувати стандартне повідомлення «Час приймати таблетку» на будь-який інший текст. Спробуйте змінити його на мотивуючі слова, ім'я домашнього улюбленця або інші фрази, які зроблять щоденний прийом ліків приємнішим.",
   "appearanceModeDateFeatureAppealTitle": "Показати дату на аркуші таблеток",

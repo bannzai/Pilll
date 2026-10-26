@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Recibe notificaciones incluso en modo silencio",
   "criticalAlertFeatureAppealBody": "Si activas las alertas críticas, podrás recibir recordatorios para tomar la píldora incluso con el modo No molestar o el modo silencio activados. Prueba a activarlas para tener presentes las horas importantes de toma.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personaliza los mensajes de las notificaciones",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puedes personalizar el mensaje de notificación",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puedes personalizar el texto de las notificaciones",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita libremente el mensaje de notificación de toma",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Puedes personalizar el mensaje estándar «Es hora de tomar tu píldora» con las palabras que prefieras. Prueba con frases que te motiven, el nombre de tu mascota u otros mensajes que hagan tu rutina diaria más entretenida.",
   "appearanceModeDateFeatureAppealTitle": "Mostrar fecha en la hoja de pastillas",

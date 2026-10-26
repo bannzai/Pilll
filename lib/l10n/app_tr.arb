@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Sessiz modda bile bildirim alabilirsiniz",
   "criticalAlertFeatureAppealBody": "Kritik Uyarıları etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modundayken de hap alma bildirimleri alabilirsiniz. Önemli hap alma saatlerini hatırlamak için bu ayarı etkinleştirmeyi deneyin.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirim mesajlarını özelleştirin",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirim metnini özelleştirebilirsiniz",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirim metnini dilediğiniz gibi değiştirebilirsiniz",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hatırlatma mesajını istediğiniz gibi düzenleyin",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Varsayılan 'Hapını alma zamanı' ifadesini istediğiniz gibi özelleştirebilirsiniz. Motivasyon verici bir söz, evcil hayvanınızın adı veya sizi gülümseten başka bir ifade ekleyerek günlük hap alımınızı daha keyifli hale getirin.",
   "appearanceModeDateFeatureAppealTitle": "Hap çizelgesinde tarihleri göster",

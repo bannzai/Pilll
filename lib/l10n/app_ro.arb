@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Primești notificări chiar și în modul silențios",
   "criticalAlertFeatureAppealBody": "Dacă activezi alertele critice, poți primi notificări pentru administrarea pilulei chiar și când modul Nu deranja sau modul silențios este activ. Încearcă să activezi această setare ca să îți amintești orele importante de administrare.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizează mesajele notificărilor",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puteți personaliza textul notificărilor",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Poți personaliza textul notificărilor",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Editați liber mesajul de notificare a dozei",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Poți personaliza mesajul standard „E timpul să iei pastila\" cu cuvinte pe care le preferi. Încearcă să îl schimbi cu cuvinte motivatoare, numele animalului tău de companie sau orice alt mesaj care să facă administrarea zilnică mai plăcută.",
   "appearanceModeDateFeatureAppealTitle": "Afișare dată pe foaia de pastile",

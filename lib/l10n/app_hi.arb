@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ पाएँ",
   "criticalAlertFeatureAppealBody": "गंभीर अलर्ट चालू करने पर, ‘परेशान न करें’ या साइलेंट मोड में भी गोली लेने की सूचनाएँ मिल सकती हैं। गोली लेने के ज़रूरी समय याद रखने के लिए यह सेटिंग चालू करके देखें।",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "नोटिफ़िकेशन संदेश अपने हिसाब से बदलें",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप सूचनाओं के संदेशों को अनुकूलित कर सकते हैं।",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप नोटिफ़िकेशन का टेक्स्ट अपनी पसंद के अनुसार बदल सकती हैं",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "दवा लेने के रिमाइंडर संदेश को अपनी इच्छानुसार संपादित करें",
   "reminderNotificationCustomizeWordFeatureAppealBody": "आप \"पिल लेने का समय है\" जैसे डिफ़ॉल्ट संदेश को अपनी पसंद के शब्दों से कस्टमाइज़ कर सकते हैं। प्रेरणादायी वाक्य या पालतू के नाम जैसे व्यक्तिगत संदेश चुनें ताकि रोज़ाना दवा लेना और भी मजेदार हो सके।",
   "appearanceModeDateFeatureAppealTitle": "पिल शीट पर तारीखें दिखाएँ",

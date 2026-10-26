@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "အသံတိတ်မုဒ်မှာလည်း အသိပေးချက်များ ရရှိနိုင်ပါတယ်",
   "criticalAlertFeatureAppealBody": "အရေးကြီးသတိပေးချက်များကို ဖွင့်ထားပါက မနှောင့်ယှက်ရန်မုဒ် သို့မဟုတ် အသံပိတ်မုဒ် ဖွင့်ထားချိန်တွင်လည်း ဆေးလုံးသောက်ရန် အသိပေးချက်များကို လက်ခံရရှိနိုင်ပါတယ်။ ဆေးလုံးသောက်ရမည့် အရေးကြီးသောအချိန်များကို မှတ်မိနေစေရန် ဤဆက်တင်ကို ဖွင့်ကြည့်ပါ။",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "အသိပေးစာများကို စိတ်ကြိုက်ပြင်ဆင်ပါ",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "အကြောင်းကြားချက် စာသားကို စိတ်ကြိုက်ပြင်ဆင်နိုင်သည်",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "အသိပေးချက်စာသားကို စိတ်ကြိုက်ပြောင်းလဲနိုင်ပါတယ်",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ဆေးသောက်ရန် အကြောင်းကြားချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "'ဆေးသောက်ရမည့်အချိန်ရောက်ပါပြီ' ဆိုသော ပုံသေသတင်းပို့ချက်ကို သင်နှစ်သက်ရာ စကားလုံးများဖြင့် ကိုယ်ပိုင်ပြင်ဆင်နိုင်ပါသည်။ အားအင်ပေးသောစကားများ၊ သင့်အိမ်မွေးတိရစ္ဆာန်အမည် စသည်တို့ဖြင့် ပြောင်းလဲ၍ နေ့တိုင်းဆေးသောက်ခြင်းကို ပိုမိုပျော်ရွှင်စေပါ။",
   "appearanceModeDateFeatureAppealTitle": "ဆေးပြားစာရင်းတွင် ရက်စွဲများပြသပါ",

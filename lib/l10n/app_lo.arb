@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "ໄດ້ຮັບການແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດປິດສຽງ",
   "criticalAlertFeatureAppealBody": "ເມື່ອເປີດການແຈ້ງເຕືອນສຳຄັນ ທ່ານຈະຮັບການເຕືອນໃຫ້ກິນຢາເມັດໄດ້ ເຖິງແມ່ນວ່າເປີດໂໝດຫ້າມລົບກວນ ຫຼື ໂໝດປິດສຽງຢູ່ກໍຕາມ. ລອງເປີດການຕັ້ງຄ່ານີ້ເພື່ອຊ່ວຍຈື່ເວລາກິນຢາທີ່ສຳຄັນເດີ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ປັບແຕ່ງຂໍ້ຄວາມແຈ້ງເຕືອນ",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ທ່ານສາມາດປັບແກ້ຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ສາມາດປັບຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້ຕາມໃຈ",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาตามต้องการ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "ທ່ານສາມາດປັບປຸງຂໍ້ຄວາມມາດຕະຖານ «ເວລາທີ່ຈະກິນຢາ» ເປັນຄຳທີ່ທ່ານມັກໄດ້ — ອາດເປັນຄຳທີ່ກະຕ້ືງໃຈ ຫຼືແມ່ນຊື່ສັດນ້ອຍຂອງທ່ານ. ລອງແປງຂໍ້ຄວາມເພື່ອໃຫ້ການຮັບຢາປະຈຳວັນຂອງທ່ານມີຄວາມສຶກມ່ວນຊື່ນຂື້ນ.",
   "appearanceModeDateFeatureAppealTitle": "ສະແດງວັນທີໃນແຜ່ນຢາ",

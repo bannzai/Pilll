@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Du får varsler selv i lydløs modus",
   "criticalAlertFeatureAppealBody": "Når du slår på kritiske varsler, kan du få påminnelser om å ta p-pillen selv om Ikke forstyrr eller lydløs modus er på. Prøv å slå på innstillingen, så blir det lettere å huske de viktige tidspunktene.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpass varslingsmeldinger",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse varselteksten",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse teksten i varslene",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger varslingsmelding for medisininntak fritt",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standardmeldingen «Det er på tide å ta pillen» til dine egne ord. Prøv å endre den til noe som motiverer deg, som et kjæledyrnavn eller en oppmuntrende setning, for å gjøre den daglige pilleinntaket morsommere.",
   "appearanceModeDateFeatureAppealTitle": "Vis dato på pillearket",

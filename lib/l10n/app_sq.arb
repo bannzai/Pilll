@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Njoftimet mbërrijnë edhe në modalitetin pa zë",
   "criticalAlertFeatureAppealBody": "Nëse aktivizoni njoftimet kritike, mund të merrni kujtesa për marrjen e pilulës edhe kur është aktiv modaliteti Mos shqetëso ose modaliteti pa zë. Provoni ta aktivizoni këtë cilësim që t’i mbani mend oraret e rëndësishme të marrjes.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Përshtatni mesazhet e njoftimeve",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Mund të personalizoni tekstin e njoftimeve.",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Mund ta përshtatni tekstin e njoftimeve sipas dëshirës",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Redaktoni lirshëm mesazhin e kujtuesit për marrjen",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Formulimin standard „Është koha për të marrë pilulën” mund ta personalizoni me fjalët që ju pëlqejnë. Përdorni fjalë motivuese, emrin e kafshës suaj shtëpiake, etj., për ta bërë marrjen e pilulës më të këndshme çdo ditë.",
   "appearanceModeDateFeatureAppealTitle": "Shfaq datën në fletën e barnave",

@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "നിശ്ശബ്ദ മോഡിലും അറിയിപ്പുകൾ ലഭിക്കും",
   "criticalAlertFeatureAppealBody": "പ്രധാന അറിയിപ്പുകൾ ഓണാക്കിയാൽ, ശല്യപ്പെടുത്തരുത് മോഡിലോ നിശ്ശബ്ദ മോഡിലോ ആയിരിക്കുമ്പോഴും ഗുളിക കഴിക്കാനുള്ള ഓർമ്മപ്പെടുത്തലുകൾ ലഭിക്കും. ഗുളിക കഴിക്കേണ്ട പ്രധാന സമയങ്ങൾ ഓർമ്മയിൽ നിർത്താൻ ഈ ക്രമീകരണം ഓണാക്കി നോക്കൂ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "അറിയിപ്പ് സന്ദേശങ്ങൾ ഇഷ്ടാനുസരണം മാറ്റൂ",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "നോട്ടിഫിക്കേഷൻ സന്ദേശം ഇഷ്ടാനുസരണം ക്രമീകരിക്കാം",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "അറിയിപ്പുകളിലെ വാചകം ഇഷ്ടാനുസരണം മാറ്റാം",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ഗുളിക കഴിക്കൽ അറിയിപ്പ് സന്ദേശം സ്വതന്ത്രമായി എഡിറ്റ് ചെയ്യുക",
   "reminderNotificationCustomizeWordFeatureAppealBody": "\"ഗുളിക കഴിക്കാൻ സമയമായി\" എന്ന ഡിഫോൾട്ട് സന്ദേശം നിങ്ങൾ ഇഷ്ടപ്പെടുന്ന വാക്കുകൾ ഉപയോഗിച്ച് കസ്റ്റമൈസ് ചെയ്യാൻ കഴിയും. ഉൽസാഹം ജനിപ്പിക്കുന്ന വാക്കുകളോ, നിങ്ങളുടെ വളർത്തുമൃഗത്തിന്റെ പേരോ ഉപയോഗിച്ച്, ദിവസേനയുള്ള ഗുളിക കഴിക്കൽ കൂടുതൽ ആനന്ദദായകമാക്കി മാറ്റൂ.",
   "appearanceModeDateFeatureAppealTitle": "ഗുളിക ഷീറ്റിൽ തീയതി പ്രദർശിപ്പിക്കുക",

@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Du får notifikationer selv i lydløs tilstand",
   "criticalAlertFeatureAppealBody": "Når du slår kritiske advarsler til, kan du få påmindelser om at tage din p-pille, selv når Forstyr ikke eller lydløs tilstand er slået til. Prøv at slå funktionen til, så du husker de vigtige tidspunkter.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpas beskeder i notifikationer",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse ordlyden i notifikationer",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse teksten i notifikationerne",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger din påmindelsesbesked om piller frit",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standardbeskeden \"Det er tid til at tage din pille\" med ord, du selv vælger. Prøv at ændre den til noget motiverende, dit kæledyrs navn eller en anden tekst, der gør din daglige indtagelse lidt sjovere.",
   "appearanceModeDateFeatureAppealTitle": "Vis dato på pillearket",

@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "Получавате известия дори в безшумен режим",
   "criticalAlertFeatureAppealBody": "Ако включите критичните известия, ще получавате напомняния за прием на хапчето дори в режим „Не безпокойте“ или безшумен режим. Можете да включите тази настройка, за да помните важните часове за прием.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Персонализиране на съобщенията в известията",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да персонализирате текста на известията",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да промените текста на известията според предпочитанията си",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Свободно редактирайте съобщението за известие за прием",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Можете да персонализирате стандартното „Време е да вземете хапчето\" с думи по ваш избор. Опитайте да го промените с мотивиращи думи, името на домашния ви любимец или друг израз, който прави ежедневния прием по-приятен.",
   "appearanceModeDateFeatureAppealTitle": "Показване на дата в листа с хапчета",

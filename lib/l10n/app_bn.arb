@@ -461,7 +461,7 @@
   "criticalAlertFeatureAppealHeadline": "সাইলেন্ট মোডেও বিজ্ঞপ্তি পাবেন",
   "criticalAlertFeatureAppealBody": "গুরুত্বপূর্ণ সতর্কতা চালু করলে ‘বিরক্ত করবেন না’ বা নীরব মোডেও আপনি পিল খাওয়ার বিজ্ঞপ্তি পেতে পারেন। পিল খাওয়ার জরুরি সময়গুলো মনে রাখতে সেটিংটি চালু করে দেখতে পারেন।",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "বিজ্ঞপ্তির বার্তা নিজের মতো সাজান",
-  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "বিজ্ঞপ্তির বার্তা কাস্টমাইজ করতে পারবেন",
+  "reminderNotificationCustomizeWordFeatureAppealShortDescription": "আপনি বিজ্ঞপ্তির লেখা নিজের মতো করে বদলাতে পারেন",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "সেবন বিজ্ঞপ্তির বার্তা স্বাধীনভাবে সম্পাদনা করুন",
   "reminderNotificationCustomizeWordFeatureAppealBody": "ডিফল্ট \"পিল খাওয়ার সময় হয়েছে\" বার্তাটি আপনার পছন্দমতো কাস্টমাইজ করতে পারবেন। উৎসাহমূলক কোনো কথা, আপনার পোষা প্রাণীর নাম বা এমন কিছু লিখুন যা প্রতিদিনের পিল সেবনকে আরও আনন্দদায়ক করে তুলবে।",
   "appearanceModeDateFeatureAppealTitle": "পিল শীটে তারিখ দেখান",
