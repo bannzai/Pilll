@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirishnomalar o‘chirilganda, {pillSheetPillSheetTypeNotTakenWord} davri uchun tabletka qabul qilish qaydi ham avtomatik yaratiladi",
   "requestForCancelSurvey": "Obunani bekor qilganingizdan keyin soʻrovnomada qatnashishingizni soʻraymiz",
   "pilllDescription": "Pilll — kontratseptiv tabletkani ichish uchun eslatma ilovasi",
-  "reachedMaximumCountOfReminderTimes": "Ro'yxatga olish chegarasiga yetdingiz. {ReminderTimeMaximumCount} tadan oshmasligi kerak.",
+  "reachedMaximumCountOfReminderTimes": "Eslatma vaqtlarini qoʻshishning eng yuqori chegarasiga yetdingiz. Iltimos, koʻpi bilan {ReminderTimeMaximumCount} ta vaqt qoldiring",
   "minimumCountOfReminderTimes": "Bildirishnoma vaqti kamida {ReminderTimeMinimumCount} ta bo'lishi kerak",
   "purchaseErrorUnknownError": "Noma'lum sabab tufayli xato yuz berdi. Biroz vaqt o'tgach qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}da xatolik yuz berdi. Biroz vaqt o'tgach yana urinib ko'ring.",

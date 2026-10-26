@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "As kennisgewings af is, word die innamerekord vir die {pillSheetPillSheetTypeNotTakenWord}-tydperk ook outomaties ingevul",
   "requestForCancelSurvey": "Help asseblief met ’n opname ná jou kansellasie",
   "pilllDescription": "Pilll, ’n herinnering vir jou pil",
-  "reachedMaximumCountOfReminderTimes": "Die maksimum aantal inskrywings is bereik. Hou dit asseblief op {ReminderTimeMaximumCount} of minder.",
+  "reachedMaximumCountOfReminderTimes": "Jy het die maksimum aantal herinneringstye bereik. Hou dit asseblief by hoogstens {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Ten minste {ReminderTimeMinimumCount} herinneringstye is nodig.",
   "purchaseErrorUnknownError": "Daar het 'n onbekende fout voorgekom. Probeer dit asseblief weer later. Indien dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "'n fout het by {storeName} voorgekom. Wag asseblief 'n rukkie en probeer weer.",

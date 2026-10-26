@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Når varsler er slått av, opprettes også en pillelogg for perioden {pillSheetPillSheetTypeNotTakenWord} automatisk",
   "requestForCancelSurvey": "Hjelp oss gjerne med en undersøkelse etter at abonnementet er sagt opp",
   "pilllDescription": "Pilll – en påminnelseapp for p-pillen",
-  "reachedMaximumCountOfReminderTimes": "Du har nådd grensen for antall registreringer. Vennligst hold deg til maksimalt {ReminderTimeMaximumCount}.",
+  "reachedMaximumCountOfReminderTimes": "Du har nådd grensen for påminnelsestidspunkter. Behold høyst {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Minst {ReminderTimeMinimumCount} påminnelsestider kreves",
   "purchaseErrorUnknownError": "Det oppstod en ukjent feil. Vennligst vent litt og prøv igjen. Dersom problemet vedvarer, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Det har oppstått en feil i {storeName}. Vennligst vent litt og prøv igjen.",

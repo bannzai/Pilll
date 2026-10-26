@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Apabila pemberitahuan dimatikan, rekod pengambilan untuk tempoh {pillSheetPillSheetTypeNotTakenWord} juga dibuat secara automatik",
   "requestForCancelSurvey": "Sila bantu jawab tinjauan selepas pembatalan langganan",
   "pilllDescription": "Pilll, aplikasi peringatan untuk mengambil pil perancang",
-  "reachedMaximumCountOfReminderTimes": "Had maksimum pendaftaran telah dicapai. Sila hadkan kepada {ReminderTimeMaximumCount} item sahaja.",
+  "reachedMaximumCountOfReminderTimes": "Bilangan masa peringatan sudah mencapai had. Sila kekalkan tidak lebih daripada {ReminderTimeMaximumCount} masa",
   "minimumCountOfReminderTimes": "Sekurang-kurangnya {ReminderTimeMinimumCount} masa pemberitahuan diperlukan",
   "purchaseErrorUnknownError": "Ralat tidak diketahui telah berlaku. Sila cuba lagi selepas beberapa minit. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ralat telah berlaku di {storeName}. Sila tunggu sebentar dan cuba semula.",

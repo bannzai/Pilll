@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wänn d'Mäldige usgschalte sind, wird für d'Ziit vo {pillSheetPillSheetTypeNotTakenWord} au automatisch e Iinahm-Ufzeichnig gmacht",
   "requestForCancelSurvey": "Hilf eus doch mit ere Umfrag nach de Chündigung",
   "pilllDescription": "Pilll – e App mit ere Erinnerig fürs Iinäh vo de Verhüetigspille",
-  "reachedMaximumCountOfReminderTimes": "S Maximum isch erreicht. Bitte begränzed Sie sich uf {ReminderTimeMaximumCount} Stück.",
+  "reachedMaximumCountOfReminderTimes": "Du hesch s Maximum a Erinnerigsziite erreicht. Bitte lah höchstens {ReminderTimeMaximumCount} dinne",
   "minimumCountOfReminderTimes": "Es sind mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten erforderlich",
   "purchaseErrorUnknownError": "Es isch en unbekannte Fähler uftrete. Bitte probiert es spöter nomol. Falls es nöd glöst wird, chönd Sie üs über Istellige > Kontakt kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Bi {storeName} isch en Fähler ufträte. Bitte warted chli und versuecheds nomal.",

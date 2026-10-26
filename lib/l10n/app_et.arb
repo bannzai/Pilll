@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kui teavitused on välja lülitatud, luuakse {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirje samuti automaatselt",
   "requestForCancelSurvey": "Palume sul pärast tellimuse tühistamist küsitlusele vastata",
   "pilllDescription": "Pilll — meeldetuletuste rakendus rasestumisvastase pilli võtmiseks",
-  "reachedMaximumCountOfReminderTimes": "Maksimaalne arv on saavutatud. Palun piirike {ReminderTimeMaximumCount} kirjega.",
+  "reachedMaximumCountOfReminderTimes": "Oled jõudnud meeldetuletuse kellaaegade ülempiirini. Palun jäta alles kuni {ReminderTimeMaximumCount} kellaaega",
   "minimumCountOfReminderTimes": "Meeldetuletuse aegu on vaja vähemalt {ReminderTimeMinimumCount}",
   "purchaseErrorUnknownError": "Tekkis tundmatu viga. Palun proovige hiljem uuesti. Kui probleem ei lahene, võtke meiega ühendust: Seaded > Pöördumine. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Rakenduses {storeName} tekkis viga. Palun oodake veidi ja proovige uuesti.",

@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बंद असतानाही {pillSheetPillSheetTypeNotTakenWord} कालावधीसाठी सेवन नोंद आपोआप तयार होते",
   "requestForCancelSurvey": "सदस्यता रद्द केल्यानंतरच्या सर्वेक्षणात कृपया सहभागी व्हा",
   "pilllDescription": "Pilll, गर्भनिरोधक गोळी घेण्यासाठी रिमाइंडर ॲप",
-  "reachedMaximumCountOfReminderTimes": "नोंदणीची कमाल संख्या गाठली आहे. कृपया {ReminderTimeMaximumCount} च्या मर्यादेत ठेवा.",
+  "reachedMaximumCountOfReminderTimes": "रिमाइंडरच्या वेळांची कमाल मर्यादा गाठली आहे. कृपया {ReminderTimeMaximumCount} किंवा त्यापेक्षा कमी वेळा ठेवा",
   "minimumCountOfReminderTimes": "किमान {ReminderTimeMinimumCount} सूचना वेळा आवश्यक आहेत",
   "purchaseErrorUnknownError": "अज्ञात त्रुटी आली आहे. काही वेळानंतर पुन्हा प्रयत्न करा. समस्या सुटत नसल्यास सेटिंग्स > संपर्क साधा मधून आम्हाला संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} मध्ये त्रुटी आली आहे. कृपया काही वेळाने पुन्हा प्रयत्न करा",

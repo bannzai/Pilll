@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirimler kapalıyken {pillSheetPillSheetTypeNotTakenWord} dönemi için hap kullanım kaydı da otomatik olarak oluşturulur",
   "requestForCancelSurvey": "Aboneliğinizi iptal ettikten sonra anketimize katılmanızı rica ederiz",
   "pilllDescription": "Pilll, doğum kontrol hapı için hatırlatma uygulaması",
-  "reachedMaximumCountOfReminderTimes": "Kaydedilebilir üst sınıra ulaşıldı. Lütfen {ReminderTimeMaximumCount} adet ile sınırlayın",
+  "reachedMaximumCountOfReminderTimes": "Kaydedilebilecek hatırlatma saati sınırına ulaştınız. Lütfen en fazla {ReminderTimeMaximumCount} saat bırakın",
   "minimumCountOfReminderTimes": "En az {ReminderTimeMinimumCount} bildirim zamanı gereklidir",
   "purchaseErrorUnknownError": "Bilinmeyen bir hata oluştu. Lütfen bir süre bekledikten sonra tekrar deneyin. Sorun devam ederse Ayarlar > İletişim bölümünden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} üzerinde bir hata oluştu. Lütfen bir süre bekleyip tekrar deneyin.",

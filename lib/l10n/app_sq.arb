@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kur njoftimet janë të çaktivizuara, regjistrimi i marrjes për periudhën {pillSheetPillSheetTypeNotTakenWord} krijohet gjithashtu automatikisht",
   "requestForCancelSurvey": "Ju lutemi, merrni pjesë në anketë pas anulimit të abonimit",
   "pilllDescription": "Pilll, aplikacion me rikujtues për marrjen e pilulës kontraceptive",
-  "reachedMaximumCountOfReminderTimes": "U arrit numri maksimal i regjistrimit. Ju lutemi kufizohuni në {ReminderTimeMaximumCount} ose më pak.",
+  "reachedMaximumCountOfReminderTimes": "Keni arritur numrin maksimal të orareve të kujtesës. Ju lutemi, mbani jo më shumë se {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Duhen të paktën {ReminderTimeMinimumCount} kohë njoftimi",
   "purchaseErrorUnknownError": "Ka ndodhur një gabim i panjohur. Ju lutem prisni pak dhe provoni përsëri. Nëse problemi nuk zgjidhet, ju lutem na kontaktoni përmes Cilësimet > Kontakto. Detajet: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Është ndodhur një gabim në {storeName}. Ju lutemi prisni pak dhe provoni sërish.",

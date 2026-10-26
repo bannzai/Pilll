@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "ବିଜ୍ଞପ୍ତି ବନ୍ଦ ଥିଲେ ମଧ୍ୟ {pillSheetPillSheetTypeNotTakenWord} ଅବଧି ପାଇଁ ସେବନ ରେକର୍ଡ ସ୍ୱୟଂଚାଳିତ ଭାବେ ତିଆରି ହୁଏ",
   "requestForCancelSurvey": "ସଦସ୍ୟତା ବାତିଲ କରିବା ପରେ ସର୍ବେକ୍ଷଣରେ ଦୟାକରି ଭାଗ ନିଅନ୍ତୁ",
   "pilllDescription": "Pilll, ଗର୍ଭନିରୋଧକ ବଟିକା ଖାଇବା ପାଇଁ ରିମାଇଣ୍ଡର ଆପ୍",
-  "reachedMaximumCountOfReminderTimes": "ସର୍ବାଧିକ ପଞ୍ଜୀକରଣ ସୀମା ପହଞ୍ଚିଛି। ଦୟାକରି {ReminderTimeMaximumCount}ଟି ମଧ୍ୟରେ ରଖନ୍ତୁ।",
+  "reachedMaximumCountOfReminderTimes": "ରିମାଇଣ୍ଡର୍ ସମୟ ଯୋଡ଼ିବାର ସର୍ବାଧିକ ସୀମାରେ ପହଞ୍ଚିଛନ୍ତି। ଦୟାକରି {ReminderTimeMaximumCount} କିମ୍ବା ତା'ଠାରୁ କମ୍ ସମୟ ରଖନ୍ତୁ",
   "minimumCountOfReminderTimes": "ସର୍ବନିମ୍ନ {ReminderTimeMinimumCount}ଟି ବିଜ୍ଞପ୍ତି ସମୟ ଆବଶ୍ୟକ",
   "purchaseErrorUnknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାଟି ସମାଧାନ ନହୁଏ, ଦୟାକରି ସେଟିଂସ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} ରେ ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",

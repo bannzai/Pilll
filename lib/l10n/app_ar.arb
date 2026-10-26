@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "عند إيقاف الإشعارات، يُنشأ تسجيل تناول لفترة {pillSheetPillSheetTypeNotTakenWord} تلقائيًا أيضًا",
   "requestForCancelSurvey": "نرجو مشاركتكِ في استبيان بعد إلغاء الاشتراك",
   "pilllDescription": "Pilll، تطبيق تذكير بتناول حبوب منع الحمل",
-  "reachedMaximumCountOfReminderTimes": "تم الوصول إلى الحد الأقصى للتسجيل. يرجى البقاء ضمن {ReminderTimeMaximumCount} عنصر.",
+  "reachedMaximumCountOfReminderTimes": "وصلتِ إلى الحد الأقصى لأوقات التذكير. يُرجى الاكتفاء بـ {ReminderTimeMaximumCount} أوقات أو أقل",
   "minimumCountOfReminderTimes": "مطلوب {ReminderTimeMinimumCount} من أوقات الإشعارات كحد أدنى",
   "purchaseErrorUnknownError": "حدث خطأ غير معروف السبب. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "حدث خطأ في {storeName}. يرجى الانتظار قليلاً والمحاولة مرة أخرى",

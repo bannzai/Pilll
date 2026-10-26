@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "အကြောင်းကြားချက်များ ပိတ်ထားချိန်တွင်လည်း {pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် ဆေးသောက်မှတ်တမ်းကို အလိုအလျောက် ဖန်တီးပေးပါတယ်",
   "requestForCancelSurvey": "စာရင်းသွင်းမှု ပယ်ဖျက်ပြီးနောက် စစ်တမ်းတွင် ပါဝင်ဖြေဆိုပေးပါ",
   "pilllDescription": "Pilll၊ သန္ဓေတားဆေးသောက်ရန် သတိပေးချက်ပေးသည့် အက်ပ်",
-  "reachedMaximumCountOfReminderTimes": "အများဆုံးအကန့်အသတ်သို့ ရောက်ရှိပါပြီ။ {ReminderTimeMaximumCount} ခုအောက်တွင် ကန့်သတ်ပါ။",
+  "reachedMaximumCountOfReminderTimes": "သတိပေးချိန် သတ်မှတ်နိုင်သည့် အများဆုံးအရေအတွက် ပြည့်သွားပါပြီ။ ကျေးဇူးပြု၍ {ReminderTimeMaximumCount} ခုထက် မပိုအောင် လျှော့ပါ",
   "minimumCountOfReminderTimes": "သတိပေးချိန်သည် အနည်းဆုံး {ReminderTimeMinimumCount} ခု လိုအပ်ပါသည်",
   "purchaseErrorUnknownError": "အကြောင်းရင်းမသိသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာမပျောက်ပါက ဆက်တင် > စုံစမ်းမေးမြန်းရန် မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} တွင် အမှားတစ်ခု ဖြစ်ပေါ်နေပါသည်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။",

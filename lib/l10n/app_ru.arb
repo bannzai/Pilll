@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когда уведомления отключены, журнал приёма таблеток за период {pillSheetPillSheetTypeNotTakenWord} также заполняется автоматически",
   "requestForCancelSurvey": "Просим вас пройти опрос после отмены подписки",
   "pilllDescription": "Pilll — приложение с напоминаниями о приёме противозачаточной таблетки",
-  "reachedMaximumCountOfReminderTimes": "Достигнуто максимальное количество напоминаний. Пожалуйста, ограничьте количество до {ReminderTimeMaximumCount}.",
+  "reachedMaximumCountOfReminderTimes": "Вы достигли предела количества времени напоминаний. Пожалуйста, оставьте не более {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Требуется минимум {ReminderTimeMinimumCount} времён уведомлений",
   "purchaseErrorUnknownError": "Произошла неизвестная ошибка. Пожалуйста, повторите попытку через некоторое время. Если проблема не решается, обратитесь в поддержку через Настройки > Обратиться в поддержку. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, подождите и попробуйте снова.",

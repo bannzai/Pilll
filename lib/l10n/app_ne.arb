@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाहरू बन्द हुँदा पनि {pillSheetPillSheetTypeNotTakenWord} अवधिका लागि सेवन रेकर्ड स्वतः बनाइन्छ",
   "requestForCancelSurvey": "सदस्यता रद्द गरेपछिको सर्वेक्षणमा कृपया सहभागी हुनुहोस्",
   "pilllDescription": "Pilll, गर्भनिरोधक चक्की खान सम्झाउने सूचना दिने एप",
-  "reachedMaximumCountOfReminderTimes": "दर्ताको अधिकतम सीमा पुगेको छ। कृपया {ReminderTimeMaximumCount} वटा भित्र राख्नुहोस्।",
+  "reachedMaximumCountOfReminderTimes": "रिमाइन्डरको समय थप्ने अधिकतम सीमा पुगेको छ। कृपया {ReminderTimeMaximumCount} वा सोभन्दा कम समय राख्नुहोस्",
   "minimumCountOfReminderTimes": "सूचना समयको लागि न्यूनतम {ReminderTimeMinimumCount} वटा आवश्यक छ",
   "purchaseErrorUnknownError": "अज्ञात त्रुटि भयो। केही समयपछि पुनः प्रयास गर्नुहोस्। समाधान नभएमा सेटिङ > सम्पर्क मार्फत सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} मा त्रुटि भएको छ। केहि समय पछि फेरि प्रयास गर्नुहोस्।",

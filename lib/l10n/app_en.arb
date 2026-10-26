@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "When notifications are off, a pill log is also created automatically for the {pillSheetPillSheetTypeNotTakenWord} period",
   "requestForCancelSurvey": "Please take a survey after canceling your subscription",
   "pilllDescription": "Pilll, a reminder app for taking your birth control pill",
-  "reachedMaximumCountOfReminderTimes": "Maximum limit reached. Please keep within {ReminderTimeMaximumCount} reminders.",
+  "reachedMaximumCountOfReminderTimes": "You've reached the limit for reminder times. Please keep no more than {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "At least {ReminderTimeMinimumCount} notification times are required",
   "purchaseErrorUnknownError": "An unknown error has occurred. Please try again later. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "An error occurred on {storeName}. Please wait a moment and try again.",

@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, també es crea automàticament un registre de preses per al període {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Ens ajudaries responent una enquesta després de cancel·lar la subscripció",
   "pilllDescription": "Pilll, una aplicació de recordatoris per prendre la píndola",
-  "reachedMaximumCountOfReminderTimes": "S'ha arribat al límit màxim de registres. Si us plau, mantingueu-ho dins de {ReminderTimeMaximumCount} recordatoris.",
+  "reachedMaximumCountOfReminderTimes": "Has arribat al nombre màxim d'hores de recordatori. Deixa'n {ReminderTimeMaximumCount} o menys, si us plau",
   "minimumCountOfReminderTimes": "Es necessiten un mínim de {ReminderTimeMinimumCount} horaris de notificació",
   "purchaseErrorUnknownError": "S'ha produït un error desconegut. Espereu una estona i torneu-ho a provar. Si el problema persisteix, contacteu-nos a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "S'ha produït un error a {storeName}. Espereu una estona i torneu-ho a provar.",

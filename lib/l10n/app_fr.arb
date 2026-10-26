@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Lorsque les notifications sont désactivées, une entrée dans le journal des prises est aussi créée automatiquement pour la période {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Merci de répondre à notre questionnaire après la résiliation de votre abonnement",
   "pilllDescription": "Pilll, une application de rappel pour la prise de la pilule contraceptive",
-  "reachedMaximumCountOfReminderTimes": "Limite maximale atteinte. Veuillez conserver les rappels {ReminderTimeMaximumCount}.",
+  "reachedMaximumCountOfReminderTimes": "Vous avez atteint le nombre maximal d'heures de rappel. Veuillez n'en garder que {ReminderTimeMaximumCount} au maximum",
   "minimumCountOfReminderTimes": "Au moins des délais de notification {ReminderTimeMinimumCount} sont requis",
   "purchaseErrorUnknownError": "Une erreur inconnue s'est produite. Veuillez réessayer plus tard. Si le problème persiste, veuillez nous contacter via Paramètres > Contact. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Une erreur s'est produite sur {storeName}. Veuillez patienter un moment et réessayer.",

@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Když jsou oznámení vypnutá, záznam užití pro období {pillSheetPillSheetTypeNotTakenWord} se také vytvoří automaticky",
   "requestForCancelSurvey": "Prosíme o vyplnění dotazníku po zrušení předplatného",
   "pilllDescription": "Pilll — aplikace s připomínkami užívání antikoncepční pilulky",
-  "reachedMaximumCountOfReminderTimes": "Dosáhl jste maximálního počtu registrací. Omezte počet na {ReminderTimeMaximumCount} položek.",
+  "reachedMaximumCountOfReminderTimes": "Dosáhli jste maximálního počtu časů připomenutí. Ponechte jich prosím nejvýše {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Je třeba nastavit minimálně {ReminderTimeMinimumCount} časů upozornění",
   "purchaseErrorUnknownError": "Vyskytla se neznámá chyba. Zkuste to prosím znovu později. Pokud problém přetrvává, kontaktujte nás prosím přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "V {storeName} došlo k chybě. Počkejte chvíli a zkuste to znovu.",

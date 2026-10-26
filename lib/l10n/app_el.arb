@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, δημιουργείται αυτόματα καταγραφή λήψης και για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Θα θέλαμε τη βοήθειά σας σε μια έρευνα μετά την ακύρωση της συνδρομής",
   "pilllDescription": "Pilll — εφαρμογή υπενθύμισης για το αντισυλληπτικό χάπι",
-  "reachedMaximumCountOfReminderTimes": "Έχετε φτάσει το μέγιστο όριο εγγραφής. Παρακαλώ περιορίστε σε {ReminderTimeMaximumCount} ή λιγότερα.",
+  "reachedMaximumCountOfReminderTimes": "Φτάσατε στο μέγιστο πλήθος ωρών υπενθύμισης. Παρακαλούμε κρατήστε έως {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Απαιτούνται τουλάχιστον {ReminderTimeMinimumCount} ώρες ειδοποίησης",
   "purchaseErrorUnknownError": "Παρουσιάστηκε άγνωστο σφάλμα. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Παρουσιάστηκε σφάλμα στο {storeName}. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά.",

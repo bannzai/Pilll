@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "Quando le notifiche sono disattivate, viene creato automaticamente anche un registro delle assunzioni per il periodo {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Aiutaci rispondendo a un sondaggio dopo la disdetta dell’abbonamento",
   "pilllDescription": "Pilll, l’app con promemoria per prendere la pillola anticoncezionale",
-  "reachedMaximumCountOfReminderTimes": "Hai raggiunto il limite massimo di registrazioni. Ti preghiamo di limitare a {ReminderTimeMaximumCount} promemoria.",
+  "reachedMaximumCountOfReminderTimes": "Hai raggiunto il numero massimo di orari per i promemoria. Tienine al massimo {ReminderTimeMaximumCount}",
   "minimumCountOfReminderTimes": "Sono necessari almeno {ReminderTimeMinimumCount} orari di notifica",
   "purchaseErrorUnknownError": "Si è verificato un errore sconosciuto. Si prega di riprovare più tardi. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova più tardi.",

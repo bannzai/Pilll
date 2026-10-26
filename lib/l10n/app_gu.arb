@@ -285,7 +285,7 @@
   "autoRecordForNotTakenPeriodIfNotificationOff": "સૂચનાઓ બંધ હોય ત્યારે પણ {pillSheetPillSheetTypeNotTakenWord} સમયગાળા માટે ગોળી સેવનની નોંધ આપમેળે બનાવવામાં આવે છે",
   "requestForCancelSurvey": "સબ્સ્ક્રિપ્શન રદ કર્યા પછીના સર્વેમાં ભાગ લેવા વિનંતી",
   "pilllDescription": "Pilll, ગર્ભનિરોધક ગોળી લેવા માટેની રિમાઇન્ડર ઍપ",
-  "reachedMaximumCountOfReminderTimes": "નોંધણીની મર્યાદા પહોંચી ગઈ છે. કૃપા કરીને {ReminderTimeMaximumCount} કે તેથી ઓછા આઈટમ્સ રાખો",
+  "reachedMaximumCountOfReminderTimes": "રીમાઇન્ડરના સમય ઉમેરવાની મહત્તમ મર્યાદા સુધી પહોંચી ગયા છો. કૃપા કરીને {ReminderTimeMaximumCount} કે તેથી ઓછા સમય રાખો",
   "minimumCountOfReminderTimes": "ઓછામાં ઓછી {ReminderTimeMinimumCount} સૂચના સમય જરૂરી છે",
   "purchaseErrorUnknownError": "અજ્ઞાત ભૂલ આવી છે. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો. જો તે ઉકેલાય નહીં તો સેટિંગ્સ > સંપર્ક મારફતે અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} માં ભૂલ આવી છે. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો.",
