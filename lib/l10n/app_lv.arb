@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Mainīt tablešu lietošanas dienu skaitu vienā plāksnītē",
   "changedStartAndEndNumbers": "Sākuma un beigu numuri ir mainīti",
-  "startOfPillDays": "Lietošanas dienu sākums",
+  "startOfPillDays": "Tablešu lietošanas dienu sākums",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Iepriekšējās plāksnes beigas: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. diena",
   "endOfPillDays": "Tablešu kursa beigas",
   "changedToNumber": "Mainīt uz numuru",

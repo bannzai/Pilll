@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmień liczbę dni przyjmowania tabletek z blistra",
   "changedStartAndEndNumbers": "Zmieniono numer początkowy i końcowy",
-  "startOfPillDays": "Początek przyjmowania",
+  "startOfPillDays": "Początek dni przyjmowania tabletek",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Koniec poprzedniej paczki: dzień {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Koniec okresu przyjmowania",
   "changedToNumber": "Zmień na numer",

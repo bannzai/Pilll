@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "په هر پټۍ کې د ګولیو د اخیستو د ورځو شمېر بدل کړئ",
   "changedStartAndEndNumbers": "د پیل او پای شمېرې بدلې شوې",
-  "startOfPillDays": "د استعمال ورځو پیل",
+  "startOfPillDays": "د ګولۍ اخیستلو د ورځو پیل",
   "beforePillSheetGroupSequentialEstimatedEndDay": "د پخوانۍ شیټ وروستی: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ورځ",
   "endOfPillDays": "د استعمال ورځو پای",
   "changedToNumber": "ته بدلول",

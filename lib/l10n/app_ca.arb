@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Canvia el nombre de dies de presa de la píndola per blíster",
   "changedStartAndEndNumbers": "S'han canviat els números inicial i final",
-  "startOfPillDays": "Inici de la presa",
+  "startOfPillDays": "Inici dels dies de presa de la píndola",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Final del full anterior: dia {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fi del període de presa",
   "changedToNumber": "Canviar al número",

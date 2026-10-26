@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Newid nifer y diwrnodau o gymryd pils o'r pecyn",
   "changedStartAndEndNumbers": "Mae'r rhifau dechrau a diwedd wedi'u newid",
-  "startOfPillDays": "Dechrau'r dyddiau cymryd",
+  "startOfPillDays": "Dechrau’r dyddiau cymryd y bilsen",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Diwedd y dalen flaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Diwedd y dyddiau cymryd",
   "changedToNumber": "Newid i rif",

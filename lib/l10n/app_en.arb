@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Change pill-taking days per pack",
   "changedStartAndEndNumbers": "Start and end numbers changed",
-  "startOfPillDays": "Start of medication days",
+  "startOfPillDays": "Start of pill-taking days",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Previous sheet end: Day {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "End of pill days",
   "changedToNumber": "Change to No.",

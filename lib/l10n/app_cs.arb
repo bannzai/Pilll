@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Změnit počet dní užívání pilulek z plata",
   "changedStartAndEndNumbers": "Počáteční a koncové číslo byly změněny",
-  "startOfPillDays": "Začátek užívání",
+  "startOfPillDays": "Začátek dnů užívání pilulek",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Konec předchozího balení: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. den",
   "endOfPillDays": "Konec období užívání",
   "changedToNumber": "Změnit na čísla",

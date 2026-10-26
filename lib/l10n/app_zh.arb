@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "更改每板药的服用天数",
   "changedStartAndEndNumbers": "已更改起始和结束编号",
-  "startOfPillDays": "服用开始日数",
+  "startOfPillDays": "服药日的起始日",
   "beforePillSheetGroupSequentialEstimatedEndDay": "上一板最后：第{beforePillSheetGroupSequentialEstimatedEndPillNumber}天",
   "endOfPillDays": "服用天数结束",
   "changedToNumber": "更改号码",

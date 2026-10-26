@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Змяніць колькасць дзён прыёму пігулак з блістара",
   "changedStartAndEndNumbers": "Пачатковы і канчатковы нумары зменены",
-  "startOfPillDays": "Пачатак прыёму",
+  "startOfPillDays": "Пачатак дзён прыёму пігулак",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Канец папярэдняй пачкі: {beforePillSheetGroupSequentialEstimatedEndPillNumber} дзень",
   "endOfPillDays": "Канец перыяду прыёму",
   "changedToNumber": "Змяніць нумар",

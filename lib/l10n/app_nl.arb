@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aantal dagen pilgebruik per strip wijzigen",
   "changedStartAndEndNumbers": "Het begin- en eindnummer zijn gewijzigd",
-  "startOfPillDays": "Start inname",
+  "startOfPillDays": "Begin van de dagen waarop je de pil neemt",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Einde van vorige strip: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Einde van de innamedagen",
   "changedToNumber": "Wijzig naar nummer",

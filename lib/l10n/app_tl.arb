@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Palitan ang bilang ng araw ng pag-inom ng pildoras sa bawat pakete",
   "changedStartAndEndNumbers": "Nabago na ang una at huling numero",
-  "startOfPillDays": "Simula ng pag-inom",
+  "startOfPillDays": "Simula ng mga araw ng pag-inom ng pildoras",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Huling araw ng nakaraang sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber} na araw",
   "endOfPillDays": "Katapusan ng mga araw ng pag-inom",
   "changedToNumber": "Palitan sa numero",

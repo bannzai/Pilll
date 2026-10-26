@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Изменить число дней приёма таблеток из блистера",
   "changedStartAndEndNumbers": "Начальный и конечный номера изменены",
-  "startOfPillDays": "Начало приема",
+  "startOfPillDays": "Начало дней приёма таблеток",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Конец предыдущей пачки: {beforePillSheetGroupSequentialEstimatedEndPillNumber} день",
   "endOfPillDays": "Конец приема таблеток",
   "changedToNumber": "Изменить на номер",

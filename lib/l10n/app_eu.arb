@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aldatu blister bakoitzeko pilulak hartzeko egun kopurua",
   "changedStartAndEndNumbers": "Hasierako eta amaierako zenbakiak aldatu dira",
-  "startOfPillDays": "Hartze-egunen hasiera",
+  "startOfPillDays": "Pilula hartzeko egunen hasiera",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Aurreko txartelaren amaiera: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. eguna",
   "endOfPillDays": "Hartzeko egunen amaiera",
   "changedToNumber": "zenbakira aldatu",

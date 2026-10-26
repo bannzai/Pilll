@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Schimbă numărul de zile de administrare a pilulei per folie",
   "changedStartAndEndNumbers": "Numerele de început și de sfârșit au fost schimbate",
-  "startOfPillDays": "Începutul zilelor de administrare",
+  "startOfPillDays": "Începutul zilelor de administrare a pilulei",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Sfârșitul blisterului precedent: ziua {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Sfârșitul zilelor de administrare",
   "changedToNumber": "Schimbă în numărul",

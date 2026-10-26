@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Promijenite broj dana uzimanja pilula iz pakovanja",
   "changedStartAndEndNumbers": "Početni i završni brojevi su promijenjeni",
-  "startOfPillDays": "Početak uzimanja",
+  "startOfPillDays": "Početak dana uzimanja pilula",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Kraj prethodnog lista: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",
   "endOfPillDays": "Kraj perioda uzimanja",
   "changedToNumber": "Promijeni u broj",

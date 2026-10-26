@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "เปลี่ยนจำนวนวันที่ทานยาในแต่ละแผง",
   "changedStartAndEndNumbers": "เปลี่ยนหมายเลขเริ่มต้นและหมายเลขสิ้นสุดแล้วค่ะ",
-  "startOfPillDays": "วันเริ่มต้นการรับประทาน",
+  "startOfPillDays": "วันเริ่มทานยาเม็ด",
   "beforePillSheetGroupSequentialEstimatedEndDay": "วันสุดท้ายของแผงครั้งก่อน: วันที่ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "สิ้นสุดวันรับประทานยา",
   "changedToNumber": "เปลี่ยนเป็นหมายเลข",

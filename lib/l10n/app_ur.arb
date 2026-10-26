@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ہر پتے میں گولیاں لینے کے دنوں کی تعداد بدلیں",
   "changedStartAndEndNumbers": "ابتدائی اور آخری نمبر تبدیل کر دیے گئے ہیں",
-  "startOfPillDays": "خوراک کا آغاز",
+  "startOfPillDays": "گولی لینے کے دنوں کی شروعات",
   "beforePillSheetGroupSequentialEstimatedEndDay": "پچھلی شیٹ کا آخری: {beforePillSheetGroupSequentialEstimatedEndPillNumber}واں دن",
   "endOfPillDays": "استعمال کی مدت کا اختتام",
   "changedToNumber": "نمبر میں تبدیل کریں",

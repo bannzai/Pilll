@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ከአንድ የክኒን ማሸጊያ ክኒን የሚወስዱባቸውን ቀናት ይቀይሩ",
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",
-  "startOfPillDays": "የመውሰጃ ቀናት መጀመሪያ",
+  "startOfPillDays": "ክኒን መውሰድ የሚጀምርበት ቀን",
   "beforePillSheetGroupSequentialEstimatedEndDay": "የቀድሞ ካርድ መጨረሻ፦ {beforePillSheetGroupSequentialEstimatedEndPillNumber}ኛ ቀን",
   "endOfPillDays": "የመዋቢያ ቀናት መጨረሻ",
   "changedToNumber": "ወደ ቁጥር መቀየር",

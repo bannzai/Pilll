@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ਹਰ ਸਟ੍ਰਿਪ ਵਿੱਚ ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
   "changedStartAndEndNumbers": "ਸ਼ੁਰੂਆਤੀ ਅਤੇ ਆਖਰੀ ਨੰਬਰ ਬਦਲ ਦਿੱਤੇ ਗਏ ਹਨ",
-  "startOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸ਼ੁਰੂਆਤ",
+  "startOfPillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਸ਼ੁਰੂਆਤ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ਪਿਛਲੀ ਸ਼ੀਟ ਦਾ ਅੰਤ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ਵਾਂ ਦਿਨ",
   "endOfPillDays": "ਦਵਾਈ ਦੇ ਦਿਨਾਂ ਦਾ ਅੰਤ",
   "changedToNumber": "ਨੰਬਰ ਬਦਲੋ",

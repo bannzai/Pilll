@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "D Aazahl Täg für d Iinahm pro Blister ändere",
   "changedStartAndEndNumbers": "D Aafangs- und Ändnummere sind gänderet",
-  "startOfPillDays": "Aafang vo de Iinahm-Täg",
+  "startOfPillDays": "Aafang vo de Iinahmtäg",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Läschte vom vorige Blatt: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. Tag",
   "endOfPillDays": "Ändi vo de Iinahmeziit",
   "changedToNumber": "zue Nummer ändere",

@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Бир блистердеги таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "changedStartAndEndNumbers": "Баштапкы жана акыркы номерлер өзгөртүлдү",
-  "startOfPillDays": "Кабыл алуу күндөрүнүн башы",
+  "startOfPillDays": "Таблетка ичүү күндөрүнүн башталышы",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Мурунку баракчанын акыры: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-күн",
   "endOfPillDays": "Дарыны ичүү мөөнөтүнүн аягы",
   "changedToNumber": "Санга өзгөртүү",

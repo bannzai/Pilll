@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Breyta fjölda daga sem pillur eru teknar úr spjaldi",
   "changedStartAndEndNumbers": "Upphafs- og lokanúmeri hefur verið breytt",
-  "startOfPillDays": "Upphaf inntökudaga",
+  "startOfPillDays": "Upphaf daga sem pillan er tekin",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Síðasti dagur fyrra blaðs: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dagur",
   "endOfPillDays": "Lok töku tímabils",
   "changedToNumber": "Breyta í númer",

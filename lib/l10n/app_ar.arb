@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "تغيير عدد أيام تناول الحبوب من الشريط",
   "changedStartAndEndNumbers": "تم تغيير رقمي البداية والنهاية",
-  "startOfPillDays": "بداية أيام التناول",
+  "startOfPillDays": "بداية أيام تناول الحبوب",
   "beforePillSheetGroupSequentialEstimatedEndDay": "نهاية الشريط السابق: اليوم {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "نهاية فترة تناول الحبوب",
   "changedToNumber": "تغيير إلى رقم",

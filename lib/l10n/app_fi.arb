@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuta liuskan pillereiden käyttöpäivien määrää",
   "changedStartAndEndNumbers": "Aloitus- ja lopetusnumero muutettiin",
-  "startOfPillDays": "Ottopäivien alku",
+  "startOfPillDays": "Pillereiden ottopäivien alku",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Edellisen pakkauksen loppu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päivä",
   "endOfPillDays": "Ottajakson loppu",
   "changedToNumber": "numeroon",

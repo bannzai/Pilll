@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Badilisha idadi ya siku za kumeza vidonge kwa kila pakiti",
   "changedStartAndEndNumbers": "Nambari za mwanzo na mwisho zimebadilishwa",
-  "startOfPillDays": "Mwanzo wa siku za dawa",
+  "startOfPillDays": "Mwanzo wa siku za kumeza vidonge",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Mwisho wa shati la awali: siku ya {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Mwisho wa siku za dawa",
   "changedToNumber": "badilisha kuwa nambari",

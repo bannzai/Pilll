@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ಪ್ರತಿ ಸ್ಟ್ರಿಪ್‌ನಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಿ",
   "changedStartAndEndNumbers": "ಆರಂಭ ಮತ್ತು ಕೊನೆಯ ಸಂಖ್ಯೆಗಳು ಬದಲಾಗಿವೆ",
-  "startOfPillDays": "ಸೇವನೆಯ ಆರಂಭ",
+  "startOfPillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಆರಂಭ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ಹಿಂದಿನ ಶೀಟ್‌ನ ಕೊನೆಯದು: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ನೇ ದಿನ",
   "endOfPillDays": "ಸೇವನೆಯ ಅವಧಿಯ ಮುಕ್ತಾಯ",
   "changedToNumber": "ಸಂಖ್ಯೆಗೆ ಬದಲಿಸಿ",

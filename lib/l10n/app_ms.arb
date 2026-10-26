@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ubah bilangan hari pengambilan pil bagi setiap pek",
   "changedStartAndEndNumbers": "Nombor mula dan akhir telah diubah",
-  "startOfPillDays": "Permulaan hari pengambilan",
+  "startOfPillDays": "Permulaan hari pengambilan pil",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir set sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Tamat Hari Pengambilan",
   "changedToNumber": "Tukar ke nombor",

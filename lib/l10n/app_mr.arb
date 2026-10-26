@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "प्रत्येक स्ट्रिपमधील गोळ्या घेण्याच्या दिवसांची संख्या बदला",
   "changedStartAndEndNumbers": "सुरुवातीचा आणि शेवटचा क्रमांक बदलला आहे",
-  "startOfPillDays": "सेवनाची सुरुवात",
+  "startOfPillDays": "गोळ्या घेण्याच्या दिवसांची सुरुवात",
   "beforePillSheetGroupSequentialEstimatedEndDay": "मागील शीटचा शेवट: {beforePillSheetGroupSequentialEstimatedEndPillNumber} दिवस",
   "endOfPillDays": "सेवन कालावधी समाप्त",
   "changedToNumber": "क्रमांकात बदला",

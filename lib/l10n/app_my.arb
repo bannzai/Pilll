@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "တစ်ကတ်တွင် ဆေးပြားသောက်ရမည့် ရက်အရေအတွက်ကို ပြောင်းပါ",
   "changedStartAndEndNumbers": "အစနှင့်အဆုံး နံပါတ်များကို ပြောင်းလဲပြီးပါပြီ",
-  "startOfPillDays": "သောက်စရက်",
+  "startOfPillDays": "ဆေးလုံးသောက်ရမည့်ရက်များ၏အစ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ယခင်စားရွက်၏ နောက်ဆုံး： {beforePillSheetGroupSequentialEstimatedEndPillNumber}ရက်မြောက်",
   "endOfPillDays": "ဆေးသောက်ရက်များ အဆုံး",
   "changedToNumber": "နံပါတ်သို့ ပြောင်းလဲ",

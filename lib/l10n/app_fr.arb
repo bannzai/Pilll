@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Modifier le nombre de jours de prise par plaquette",
   "changedStartAndEndNumbers": "Les numéros de début et de fin ont été modifiés",
-  "startOfPillDays": "Début des journées de traitement",
+  "startOfPillDays": "Début des jours de prise de la pilule",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Fin de feuille précédente : Jour {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fin des jours de pilule",
   "changedToNumber": "Remplacer par Non.",

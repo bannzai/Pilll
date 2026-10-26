@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Endre antall dager med p-piller per brett",
   "changedStartAndEndNumbers": "Start- og sluttnummeret er endret",
-  "startOfPillDays": "Start av inntagelsesdager",
+  "startOfPillDays": "Start på p-pilledagene",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Slutten av forrige plate: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Slutt på pilleperioden",
   "changedToNumber": "Endre til nummer",

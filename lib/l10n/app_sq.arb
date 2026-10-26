@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ndryshoni numrin e ditëve të marrjes së pilulave për çdo paketë",
   "changedStartAndEndNumbers": "Numrat e fillimit dhe të fundit u ndryshuan",
-  "startOfPillDays": "Fillimi i ditëve të marrjes",
+  "startOfPillDays": "Fillimi i ditëve të marrjes së pilulës",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Fundi i fletës së mëparshme: dita {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fundi i ditëve të marrjes",
   "changedToNumber": "Ndrysho në numër",

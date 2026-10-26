@@ -129,7 +129,7 @@
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Spremenite število dni jemanja tablet iz omota",
   "changedStartAndEndNumbers": "Začetna in končna številka sta spremenjeni",
-  "startOfPillDays": "Začetek jemanja",
+  "startOfPillDays": "Začetek dni jemanja tablet",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Konec prejšnjega lista: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",
   "endOfPillDays": "Konec jemanja",
   "changedToNumber": "Spremeni na številko",
