@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Чухал сэрэмжлүүлгийг асаавал «Бүү саад бол» эсвэл чимээгүй горимд байсан ч эм уух сануулга хүлээн авч болно. Эм уух чухал цагаа санахад туслахын тулд энэ тохиргоог асааж үзнэ үү.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Мэдэгдлийн зурвасыг өөртөө тохируулах",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Мэдэгдлийн үгийг өөрийн хүссэнээр өөрчилж болно",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Эмийн мэдэгдлийн мессежийг чөлөөтэй засварлах",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Эм уух сануулгын зурвасыг хүссэнээрээ өөрчилнө үү",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Стандарт \"Эм уух цаг боллоо\" гэсэн мессежийг өөрт таалагдах үгээр тохируулах боломжтой. Урам зориг өгөх үг, тэжээвэр амьтнынхаа нэр гэх мэт өдөр бүрийн хэрэглээг илүү баясгалантай болгох үгс рүү өөрчилж үзээрэй.",
   "appearanceModeDateFeatureAppealTitle": "Эмийн хуудсанд огноо харуулах",
   "appearanceModeDateFeatureAppealShortDescription": "Хэзээ уухаа нэг харцаар шалгах",

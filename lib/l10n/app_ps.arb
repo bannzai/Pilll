@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "که مهم خبرتیاوې فعالې کړئ، د «مه ګډوډوئ» یا چوپ حالت پر مهال هم د ګولۍ اخیستلو خبرتیاوې ترلاسه کولی شئ. د ګولۍ اخیستلو مهم وختونه د یاد ساتلو لپاره دا امستنه فعاله کړئ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "د خبرتیاوو پیغامونه د خپلې خوښې سره سم کړئ",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "تاسو د خبرتیاوو متن د خپلې خوښې سره سم بدلولی شئ",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "د دوا د خبرتیا پیغام آزادانه سمول",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "د ګولۍ اخیستلو د یادونې پیغام د خپلې خوښې سره سم بدل کړئ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "تاسو کولی شئ چې معیاري \"د حبوبو د خوړلو وخت دی\" خپلې خوښې کلمو ته بدل کړئ. هڅوونکې کلمې، د خپل ګرانپیژندلي ژوي نوم، یا نورې جملې هڅه وکړئ چې ستاسو ورځنۍ دوا اخیستل ډیر خوندور کوي.",
   "appearanceModeDateFeatureAppealTitle": "د پیل شیټ پر مخ نیټې ښکاره کول",
   "appearanceModeDateFeatureAppealShortDescription": "یو نظر کې وګورئ چې کله دوا وخورئ",

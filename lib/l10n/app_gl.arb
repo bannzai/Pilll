@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Se activas as alertas críticas, poderás recibir avisos para tomar a pílula mesmo co modo Non molestar ou o modo silencio activados. Proba a activar esta opción para ter presentes as horas importantes de toma.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personaliza as mensaxes das notificacións",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Podes personalizar o texto das notificacións",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita libremente o mensaxe de notificación de toma",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personaliza a mensaxe do recordatorio para tomar a pílula",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Podes personalizar a mensaxe estándar «É a hora de tomar a pílula» coas palabras que prefiras. Proba a cambiala por palabras motivadoras, o nome da túa mascota ou calquera outra frase que faga que tomar a pílula cada día sexa máis agradable.",
   "appearanceModeDateFeatureAppealTitle": "Mostrar datas na folla de comprimidos",
   "appearanceModeDateFeatureAppealShortDescription": "Comproba cando tomar dunha ollada",

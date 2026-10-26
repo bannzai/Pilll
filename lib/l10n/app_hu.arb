@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "A kritikus jelzések bekapcsolásával akkor is kaphatsz emlékeztetőt a tabletta szedésére, ha a Ne zavarjanak mód vagy a néma üzemmód aktív. Érdemes bekapcsolni ezt a beállítást, hogy a fontos időpontok ne maradjanak ki.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Értesítési üzenetek testreszabása",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Saját igényeid szerint módosíthatod az értesítések szövegét",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Értesítési üzenet szabad szerkesztése",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Szabd személyre a tabletta szedésére emlékeztető üzenetet",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Az alapértelmezett „Ideje bevenni a tablettát” üzenetet testre szabhatod a saját szavaiddal. Válassz motiváló üzenetet, a háziállatod nevét, vagy bármilyen más szöveget, amely élvezetesebbé teszi a napi szedést.",
   "appearanceModeDateFeatureAppealTitle": "Dátumok megjelenítése a tablettalapon",
   "appearanceModeDateFeatureAppealShortDescription": "Egy pillantással lásd, mikor kell bevenni",

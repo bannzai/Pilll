@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Kui lülitad kriitilised teavitused sisse, saad pilli võtmise meeldetuletusi ka siis, kui režiim Mitte segada või vaikne režiim on sisse lülitatud. Proovi see seade sisse lülitada, et olulised pilli võtmise ajad püsiksid meeles.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Kohanda teavituste sõnumeid",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Saad teavituste teksti endale sobivaks muuta",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Kohandage meeldetuletuse sõnumit vabalt",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Kohanda pillivõtmise meeldetuletuse sõnumit",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Saate muuta vaikimisi teadet „On aeg tabletti võtta\" oma lemmikuteks sõnadeks. Proovige asendada see millegi motiveerivaga – näiteks oma lemmiklooma nimega –, et muuta igapäevane tableti võtmine lõbusamaks.",
   "appearanceModeDateFeatureAppealTitle": "Näita kuupäeva pillilehel",
   "appearanceModeDateFeatureAppealShortDescription": "Näe ühe pilguga, millal võtta",

@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Se attivi gli avvisi critici, puoi ricevere promemoria per prendere la pillola anche con Non disturbare o la modalità silenziosa attivi. Prova ad attivarli per tenere a mente gli orari importanti.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizza i messaggi delle notifiche",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puoi personalizzare il testo delle notifiche",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personalizza liberamente il messaggio di notifica per l'assunzione",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personalizza il messaggio del promemoria per la pillola",
   "reminderNotificationCustomizeWordFeatureAppealBody": "La notifica predefinita \"È ora di prendere la pillola\" può essere personalizzata con le parole che preferisci. Prova a sostituirla con frasi che ti motivano, il nome del tuo animale domestico o qualsiasi testo che renda più piacevole l'assunzione quotidiana.",
   "appearanceModeDateFeatureAppealTitle": "Mostra le date sul foglio delle pillole",
   "appearanceModeDateFeatureAppealShortDescription": "Quando prendere la pillola a colpo d'occhio",

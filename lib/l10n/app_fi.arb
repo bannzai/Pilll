@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Kun otat kriittiset ilmoitukset käyttöön, saat muistutukset pillerin ottamisesta myös Älä häiritse -tilassa ja äänettömässä tilassa. Kokeile ottaa asetus käyttöön, jotta tärkeät ottoajat pysyvät mielessä.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Muokkaa ilmoitusviestejä",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Voit muokata ilmoitusten tekstiä mieleiseksesi",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Muokkaa lääkkeidenottomuistutuksen viestiä vapaasti",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Muokkaa pillerimuistutuksen viestiä",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Voit mukauttaa oletusviestin \"On aika ottaa pillerisi\" haluamallasi tavalla. Kokeile motivoivaa lausetta, lemmikkisi nimeä tai muuta inspiroivaa tekstiä – tee päivittäisestä pillerin ottamisesta entistä mukavampaa!",
   "appearanceModeDateFeatureAppealTitle": "Näytä päivämäärä pillerikortilla",
   "appearanceModeDateFeatureAppealShortDescription": "Tarkista milloin ottaa yhdellä silmäyksellä",

@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Med kritiska notiser på kan du få påminnelser om att ta ditt p-piller även när Stör ej eller tyst läge är aktiverat. Prova att slå på inställningen så att du lättare kommer ihåg de viktiga tiderna.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Anpassa aviseringsmeddelanden",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan anpassa texten i aviseringarna",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Anpassa påminnelsemeddelandet",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Anpassa meddelandet i din pillerpåminnelse",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Standardmeddelandet \"Dags att ta pillret\" kan du anpassa efter eget tycke. Använd uppmuntrande fraser, ditt husdjurs namn eller något annat som gör det roligare att ta din dos varje dag.",
   "appearanceModeDateFeatureAppealTitle": "Visa datum på pillerarken",
   "appearanceModeDateFeatureAppealShortDescription": "Se snabbt när du ska ta tabletten",

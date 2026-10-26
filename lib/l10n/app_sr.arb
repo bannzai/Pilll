@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Ако укључите критична обавештења, можете да добијате подсетнике за узимање пилуле чак и када су укључени режим Не узнемиравај или тихи режим. Покушајте да укључите ово подешавање како бисте лакше запамтили важно време за узимање.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Прилагодите поруке обавештења",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да прилагодите текст обавештења",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Slobodno uredite poruku podsetnika o uzimanju pilule",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Прилагодите поруку подсетника за узимање пилуле",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Можете прилагодити подразумевану поруку „Време је да попијете пилулу“ по свом укусу. Покушајте да је замените мотивационим порукама или именом кућног љубимца како би свакодневно узимање било пријатније.",
   "appearanceModeDateFeatureAppealTitle": "Prikaži datume na listi pilula",
   "appearanceModeDateFeatureAppealShortDescription": "Једним погледом сазнајте када да узмете пилулу",

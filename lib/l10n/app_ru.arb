@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Если включить критические уведомления, вы сможете получать напоминания о приёме таблетки даже в режиме «Не беспокоить» или беззвучном режиме. Попробуйте включить эту настройку, чтобы помнить о важном времени приёма.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Настроить тексты уведомлений",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Вы можете настроить текст уведомлений",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Редактирование сообщения уведомления о приёме таблетки",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Настройте текст напоминания о приёме таблетки",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Вы можете настроить стандартное сообщение «Время принять таблетку» по своему вкусу. Попробуйте изменить его на вдохновляющую фразу, имя питомца или любые слова, которые сделают ежедневный приём таблеток более приятным.",
   "appearanceModeDateFeatureAppealTitle": "Отображение дат на листке таблеток",
   "appearanceModeDateFeatureAppealShortDescription": "Когда принимать — с первого взгляда",

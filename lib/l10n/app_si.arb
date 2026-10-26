@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "වැදගත් දැනුම්දීම් සක්‍රිය කළ විට, බාධා නොකරන්න හෝ නිහඬ ප්‍රකාරය ක්‍රියාත්මක වුවත් පෙති ගැනීමේ මතක් කිරීම් ලබාගත හැකිය. පෙති ගත යුතු වැදගත් වේලාවන් මතක තබා ගැනීමට කරුණාකර මෙම සැකසුම සක්‍රිය කර බලන්න.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "දැනුම්දීම් පණිවිඩ ඔබේ අභිමතයට සකසන්න",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ඔබට දැනුම්දීම්වල පෙළ කැමති පරිදි වෙනස් කළ හැක",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "පිල් මතක් කිරීමේ පණිවිඩය ඔබට කැමති පරිදි සංස්කරණය කරන්න",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "පෙත්ත ගැනීම මතක් කරන පණිවිඩය ඔබට කැමති ලෙස වෙනස් කරන්න",
   "reminderNotificationCustomizeWordFeatureAppealBody": "සාමාන්‍ය 'පිල් ගන්නා වේලාවයි' පණිවිඩය ඔබ කැමති වචන වලට අභිරුචි කළ හැක. උද්යෝගය දෙන වචනක් හෝ ඔබේ සත්ත්වයාගේ නම වැනි දේක් දාලා, දිනපතා පිල් ගැනීම තවදුරටත් රසවත් සහ සුවපහසු කරගන්න.",
   "appearanceModeDateFeatureAppealTitle": "පිල් පත්‍රිකාවේ දිනයන් පෙන්වන්න",
   "appearanceModeDateFeatureAppealShortDescription": "ක්ෂණිකව කවදා ගන්නද බලන්න",

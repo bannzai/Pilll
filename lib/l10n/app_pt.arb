@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "Ao ativar os Alertas Críticos, você pode receber lembretes para tomar a pílula mesmo com o modo Não Perturbe ou o modo silencioso ativado. Que tal ativar essa opção para lembrar dos horários importantes?",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalize as mensagens das notificações",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Você pode personalizar o texto das notificações",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edite livremente a mensagem de notificação de ingestão",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personalize a mensagem do lembrete da pílula",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Você pode personalizar a mensagem padrão \"É hora de tomar o comprimido\" com as palavras que preferir. Experimente substituí-la por frases motivadoras, o nome do seu animal de estimação ou qualquer mensagem que torne a sua rotina diária mais agradável.",
   "appearanceModeDateFeatureAppealTitle": "Exibir data na cartela de pílulas",
   "appearanceModeDateFeatureAppealShortDescription": "Veja quando tomar de um relance",

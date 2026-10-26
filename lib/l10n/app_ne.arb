@@ -462,7 +462,7 @@
   "criticalAlertFeatureAppealBody": "महत्त्वपूर्ण अलर्ट अन गर्दा, ‘बाधा नपुर्‍याउनुहोस्’ वा साइलेन्ट मोडमा पनि चक्की खाने सूचना पाउन सक्नुहुन्छ। चक्की खाने महत्त्वपूर्ण समय सम्झन यो सेटिङ अन गरेर हेर्नुहोस्।",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचनाका सन्देशहरू आफूअनुसार मिलाउनुहोस्",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "तपाईं सूचनाको पाठ आफूलाई मन पर्ने गरी परिवर्तन गर्न सक्नुहुन्छ",
-  "reminderNotificationCustomizeWordFeatureAppealHeadline": "सेवन सूचनाको सन्देश स्वतन्त्र रूपमा सम्पादन गर्नुहोस्",
+  "reminderNotificationCustomizeWordFeatureAppealHeadline": "चक्की खाने सम्झनाको सन्देश आफूलाई मनपर्ने गरी बदल्नुहोस्",
   "reminderNotificationCustomizeWordFeatureAppealBody": "मानक \"पिल खाने समय भयो\" लाई तपाईंले मन पर्ने शब्दमा अनुकूलित गर्न सकिन्छ। उत्प्रेरक शब्दहरू, आफ्नो पाल्तु जनावरको नाम, वा दैनिक सेवन झन् रमाइलो बनाउने कुनै पनि वाक्यांशमा परिवर्तन गरेर हेर्नुस्।",
   "appearanceModeDateFeatureAppealTitle": "पिल शिटमा मिति देखाउनुहोस्",
   "appearanceModeDateFeatureAppealShortDescription": "एक नजरमा कहिले खाने हो जाँच्नुहोस्",
