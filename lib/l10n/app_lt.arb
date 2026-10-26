@@ -536,7 +536,7 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sinchronizuoti su Sveikatos programėle",
   "healthCareIntegrationFeatureAppealPoint3": "Susiejimas su Apple Health",
   "quickRecordFeatureAppealPoint1": "Pridėkite vartojimo įrašą pranešimo mygtuku",
-  "quickRecordFeatureAppealPoint2": "Atlikta be programėlės atidarymo",
+  "quickRecordFeatureAppealPoint2": "Atlikite neatidarę programėlės",
   "quickRecordFeatureAppealPoint3": "Galima naudoti iš karto su Premium prenumerata",
   "creatingNewPillSheetFeatureAppealPoint1": "Pill sheet automatic switch on completion",
   "creatingNewPillSheetFeatureAppealPoint2": "Rankinis kūrimas nebūtinas",

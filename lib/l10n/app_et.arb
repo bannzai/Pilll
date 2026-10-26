@@ -536,7 +536,7 @@
   "healthCareIntegrationFeatureAppealPoint2": "Sünkrooni Tervise rakendusega",
   "healthCareIntegrationFeatureAppealPoint3": "Ühendus Apple Healthiga",
   "quickRecordFeatureAppealPoint1": "Lisa võtmiskirje teavituse nupuga",
-  "quickRecordFeatureAppealPoint2": "Lõpeta rakendust avamata",
+  "quickRecordFeatureAppealPoint2": "Valmis ilma rakendust avamata",
   "quickRecordFeatureAppealPoint3": "Saadaval Premiumi tellimusega",
   "creatingNewPillSheetFeatureAppealPoint1": "Automaatne ümberlülitus pillilehe lõppemisel",
   "creatingNewPillSheetFeatureAppealPoint2": "Käsitsi loomine pole vajalik",
