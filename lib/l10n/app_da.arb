@@ -83,7 +83,7 @@
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Dine brugeroplysninger bliver slettet",
   "withdrawalMessage": "Hvis du sletter din konto, bliver alle dine data slettet, og du kan aldrig logge ind med den samme konto igen.",
-  "recordPage": "Optegnelsesside",
+  "recordPage": "Pillehistorik",
   "doReLogin": "Log venligst ind igen",
   "reLoginMessage": "Venligst log ind igen for identitetsverifikation før sletning af din konto. Sletningsprocessen starter automatisk efter genindlogning.",
   "updateAuthenticationAfterReLogin": "Log ind igen for at opdatere dine godkendelsesoplysninger",

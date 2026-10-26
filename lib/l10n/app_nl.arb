@@ -83,7 +83,7 @@
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Je gebruikersgegevens worden verwijderd",
   "withdrawalMessage": "Als je je account verwijdert, worden al je gegevens gewist en kun je nooit meer met hetzelfde account inloggen.",
-  "recordPage": "Registraties",
+  "recordPage": "Pillenoverzicht",
   "doReLogin": "Log opnieuw in",
   "reLoginMessage": "Voordat u uw account verwijdert, moet u opnieuw inloggen voor identiteitsverificatie. Na het opnieuw inloggen begint automatisch het verwijderingsproces.",
   "updateAuthenticationAfterReLogin": "Log opnieuw in om uw verificatiegegevens bij te werken",

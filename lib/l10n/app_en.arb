@@ -83,7 +83,7 @@
   "calendar": "Calendar",
   "userInformationWillBeDeleted": "Your user information will be deleted",
   "withdrawalMessage": "If you delete your account, all your data will be deleted, and you’ll never be able to sign in with the same account again.",
-  "recordPage": "Records",
+  "recordPage": "Pill records",
   "doReLogin": "Please log in again",
   "reLoginMessage": "Please log in again to verify your identity before deleting your account. The account deletion process will start automatically after you log in again.",
   "updateAuthenticationAfterReLogin": "Please log in again to update your authentication information",

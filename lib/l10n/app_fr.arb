@@ -83,7 +83,7 @@
   "calendar": "Calendrier",
   "userInformationWillBeDeleted": "Vos informations personnelles seront supprimées",
   "withdrawalMessage": "Si vous supprimez votre compte, toutes vos données seront effacées et vous ne pourrez plus jamais vous connecter avec ce même compte.",
-  "recordPage": "Dossiers",
+  "recordPage": "Suivi des prises de pilule",
   "doReLogin": "Veuillez vous reconnecter",
   "reLoginMessage": "Veuillez vous reconnecter pour vérifier votre identité avant de supprimer votre compte. Le processus de suppression de compte démarrera automatiquement après votre nouvelle connexion.",
   "updateAuthenticationAfterReLogin": "Veuillez vous reconnecter pour mettre à jour vos informations d'authentification",

@@ -83,7 +83,7 @@
   "calendar": "የቀን መቁጠሪያ",
   "userInformationWillBeDeleted": "የእርስዎ የተጠቃሚ መረጃ ይሰረዛል",
   "withdrawalMessage": "መለያዎን ከዘጉ፣ ሁሉም ውሂብ ይሰረዛል፤ በዚያው መለያ እንደገና መግባት አይችሉም።",
-  "recordPage": "የመዝገብ ገጽ",
+  "recordPage": "የክኒን አወሳሰድ መዝገብ",
   "doReLogin": "እባክዎ እንደገና ይግቡ",
   "reLoginMessage": "ከመውጣትዎ በፊት የመታወቂያ ማረጋገጫ ለማድረግ እንደገና ይግቡ። ከተመለሱ በኋላ የመውጣት ሂደቱ በራስ ሰር ይጀምራል።",
   "updateAuthenticationAfterReLogin": "የማረጋገጫ መረጃዎትን ለማዘመን እንደገና ይግቡ",

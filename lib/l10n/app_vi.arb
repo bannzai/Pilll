@@ -83,7 +83,7 @@
   "calendar": "Lịch",
   "userInformationWillBeDeleted": "Thông tin người dùng của bạn sẽ bị xóa",
   "withdrawalMessage": "Nếu bạn xóa tài khoản, toàn bộ dữ liệu của bạn sẽ bị xóa và bạn sẽ không bao giờ đăng nhập lại được bằng tài khoản đó.",
-  "recordPage": "Ghi Chép",
+  "recordPage": "Nhật ký uống thuốc",
   "doReLogin": "Vui lòng đăng nhập lại",
   "reLoginMessage": "Vui lòng đăng nhập lại để xác minh danh tính trước khi hủy tài khoản. Sau khi đăng nhập lại, quá trình hủy tài khoản sẽ tự động bắt đầu.",
   "updateAuthenticationAfterReLogin": "Đăng nhập lại để cập nhật thông tin xác thực",

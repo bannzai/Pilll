@@ -83,7 +83,7 @@
   "calendar": "Kalenteri",
   "userInformationWillBeDeleted": "Käyttäjätietosi poistetaan",
   "withdrawalMessage": "Jos poistat tilisi, kaikki tietosi poistetaan etkä voi enää koskaan kirjautua sisään samalla tilillä.",
-  "recordPage": "Kirjaussivu",
+  "recordPage": "Pillereiden ottomerkinnät",
   "doReLogin": "Kirjaudu sisään uudelleen",
   "reLoginMessage": "Vahvista henkilöllisyytesi kirjautumalla uudelleen sisään ennen tilin poistamista. Uudelleenkirjautumisen jälkeen tilin poistoprosessi alkaa automaattisesti.",
   "updateAuthenticationAfterReLogin": "Kirjaudu uudelleen sisään päivittääksesi todentamistietosi",

@@ -83,7 +83,7 @@
   "calendar": "Kalender",
   "userInformationWillBeDeleted": "Brukeropplysningene dine blir slettet",
   "withdrawalMessage": "Hvis du sletter kontoen din, blir alle dataene dine slettet, og du kan aldri logge inn med den samme kontoen igjen.",
-  "recordPage": "Registreringsside",
+  "recordPage": "Pillehistorikk",
   "doReLogin": "Vennligst logg inn på nytt",
   "reLoginMessage": "Vennligst logg inn på nytt for å bekrefte identiteten din før avmelding. Avmeldingsprosessen starter automatisk etter at du har logget inn på nytt.",
   "updateAuthenticationAfterReLogin": "Logg inn på nytt for å oppdatere legitimasjonsopplysningene dine",

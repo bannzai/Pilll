@@ -83,7 +83,7 @@
   "calendar": "Kalendorius",
   "userInformationWillBeDeleted": "Jūsų naudotojo duomenys bus ištrinti",
   "withdrawalMessage": "Jei ištrinsite paskyrą, visi jūsų duomenys bus ištrinti ir su ta pačia paskyra daugiau niekada negalėsite prisijungti.",
-  "recordPage": "Įrašai",
+  "recordPage": "Tablečių vartojimo įrašai",
   "doReLogin": "Prašome prisijungti iš naujo",
   "reLoginMessage": "Prieš ištrindami paskyrą, pakartotinai prisijunkite tapatybės patvirtinimui. Po pakartotinio prisijungimo automatiškai prasidės paskyros ištrynimo procesas",
   "updateAuthenticationAfterReLogin": "Pakartotinai prisijunkite ir atnaujinkite autentifikavimo duomenis",

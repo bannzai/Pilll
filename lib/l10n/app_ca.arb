@@ -83,7 +83,7 @@
   "calendar": "Calendari",
   "userInformationWillBeDeleted": "S'eliminarà la teva informació d'usuari",
   "withdrawalMessage": "Si elimines el compte, s’esborraran totes les teves dades i no podràs tornar a iniciar sessió amb el mateix compte.",
-  "recordPage": "Registres",
+  "recordPage": "Registre de píndoles",
   "doReLogin": "Si us plau, torneu a iniciar sessió",
   "reLoginMessage": "Abans de cancel·lar el compte, torneu a iniciar sessió per verificar la vostra identitat. Després de tornar a iniciar sessió, s'iniciarà automàticament el procés de cancel·lació del compte.",
   "updateAuthenticationAfterReLogin": "Torneu a iniciar sessió per actualitzar la informació d'autenticació",

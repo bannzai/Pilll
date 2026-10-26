@@ -83,7 +83,7 @@
   "calendar": "Kalendaryo",
   "userInformationWillBeDeleted": "Mabubura ang inyong impormasyon bilang user",
   "withdrawalMessage": "Kapag tinanggal ninyo ang inyong account, mabubura ang lahat ng inyong data at hindi na kayo kailanman makakapag-log in gamit ang account na iyon.",
-  "recordPage": "Talaan",
+  "recordPage": "Talaan ng pag-inom ng pildoras",
   "doReLogin": "Mangyaring mag-login ulit",
   "reLoginMessage": "Mag-log in muli para sa pagpapatunay ng pagkakakilanlan bago i-deactivate ang account. Awtomatikong magsisimula ang proseso ng pag-deactivate pagkatapos ng muling pag-log in.",
   "updateAuthenticationAfterReLogin": "Mag-login muli upang ma-update ang inyong impormasyon ng pagpapatunay",

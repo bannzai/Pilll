@@ -83,7 +83,7 @@
   "calendar": "日历",
   "userInformationWillBeDeleted": "你的用户信息将被删除",
   "withdrawalMessage": "删除账户后，所有数据都将被删除，你将无法再使用同一账户登录。",
-  "recordPage": "服用记录",
+  "recordPage": "服药记录",
   "doReLogin": "请重新登录",
   "reLoginMessage": "请在注销账户前重新登录进行身份确认。重新登录后将自动开始注销流程。",
   "updateAuthenticationAfterReLogin": "请重新登录以更新认证信息",

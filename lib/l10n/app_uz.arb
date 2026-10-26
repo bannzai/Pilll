@@ -83,7 +83,7 @@
   "calendar": "Taqvim",
   "userInformationWillBeDeleted": "Foydalanuvchi maʼlumotlaringiz oʻchiriladi",
   "withdrawalMessage": "Agar hisobingizni oʻchirsangiz, barcha maʼlumotlaringiz oʻchiriladi va shu hisob orqali boshqa hech qachon kira olmaysiz.",
-  "recordPage": "Qaydlar",
+  "recordPage": "Tabletka qabul qilish qaydlari",
   "doReLogin": "Iltimos, qaytadan kiring",
   "reLoginMessage": "Hisobni o'chirishdan oldin shaxsingizni tasdiqlash uchun qayta tizimga kiring. Qayta kirganingizdan so'ng, hisobni o'chirish jarayoni avtomatik ravishda boshlanadi.",
   "updateAuthenticationAfterReLogin": "Autentifikatsiya ma'lumotlarini yangilash uchun qayta tizimga kiring",

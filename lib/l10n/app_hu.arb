@@ -83,7 +83,7 @@
   "calendar": "Naptár",
   "userInformationWillBeDeleted": "A felhasználói adataid törlődnek",
   "withdrawalMessage": "Ha törlöd a fiókodat, minden adatod törlődik, és soha többé nem tudsz bejelentkezni ugyanazzal a fiókkal.",
-  "recordPage": "Feljegyzések",
+  "recordPage": "Tablettaszedési napló",
   "doReLogin": "Kérjük, jelentkezzen be újra",
   "reLoginMessage": "A fiók törlése előtt kérjük, jelentkezzen be újra a személyazonosság ellenőrzése érdekében. Az újbóli bejelentkezés után automatikusan megkezdődik a fiók törlésének folyamata.",
   "updateAuthenticationAfterReLogin": "Kérjük, jelentkezzen be újra a hitelesítési adatok frissítéséhez",
