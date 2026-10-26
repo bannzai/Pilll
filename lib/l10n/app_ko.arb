@@ -388,7 +388,7 @@
   "resumeTaking": "복용 다시 시작하기",
   "changePausePeriod": "복용 휴지기 변경",
   "changedPausePeriod": "복용 휴식 기간을 변경했어요",
-  "changedToDate": "{date}로 변경되었습니다",
+  "changedToDate": "날짜를 {date}(으)로 변경했어요",
   "quickRecordTakePillFailed": "복용 기록 저장에 실패했을 가능성이 있습니다",
   "quickRecordTakePillFailedMessage": "앱을 열어서 확인해 주세요",
   "alreadyTaken": "복용함",

@@ -388,7 +388,7 @@
   "resumeTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ಮತ್ತೆ ಆರಂಭಿಸಿ",
   "changePausePeriod": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಿಸಿ",
   "changedPausePeriod": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
-  "changedToDate": "{date}ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
+  "changedToDate": "ದಿನಾಂಕವನ್ನು {date} ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "quickRecordTakePillFailed": "ಸೇವನೆಯ ದಾಖಲೆ ವಿಫಲವಾಗಿರಬಹುದು",
   "quickRecordTakePillFailedMessage": "ದಯವಿಟ್ಟು ಆಪ್ ಅನ್ನು ತೆರೆದು ಪರಿಶೀಲಿಸಿ",
   "alreadyTaken": "ಸೇವಿಸಲಾಗಿದೆ",

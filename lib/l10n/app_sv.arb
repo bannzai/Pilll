@@ -388,7 +388,7 @@
   "resumeTaking": "Börja ta p-piller igen",
   "changePausePeriod": "Ändra längden på pilleruppehållet",
   "changedPausePeriod": "Längden på pillerpausen har ändrats",
-  "changedToDate": "Ändrat till {date}",
+  "changedToDate": "Datumet har ändrats till {date}",
   "quickRecordTakePillFailed": "Registreringen av ditt medicintag kan ha misslyckats",
   "quickRecordTakePillFailedMessage": "Vänligen öppna appen och kontrollera",
   "alreadyTaken": "Tagen",

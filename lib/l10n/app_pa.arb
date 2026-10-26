@@ -388,7 +388,7 @@
   "resumeTaking": "ਗੋਲੀ ਲੈਣੀ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ",
   "changePausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲੋ",
   "changedPausePeriod": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲ ਦਿੱਤੀ ਗਈ ਹੈ",
-  "changedToDate": "{date} ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ",
+  "changedToDate": "ਤਾਰੀਖ ਬਦਲ ਕੇ {date} ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ",
   "quickRecordTakePillFailed": "ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ ਫੇਲ ਹੋਣ ਦੀ ਸੰਭਾਵਨਾ ਹੈ",
   "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹ ਕੇ ਜਾਂਚ ਕਰੋ",
   "alreadyTaken": "ਲਿਆ ਗਿਆ",

@@ -388,7 +388,7 @@
   "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",
   "changePausePeriod": "বিৰতিৰ দিন সলনি কৰক",
   "changedPausePeriod": "পিল খোৱাৰ বিৰতিৰ সময় সলনি কৰা হৈছে",
-  "changedToDate": "{date}লৈ সলনি কৰা হ'ল",
+  "changedToDate": "তাৰিখ {date}লৈ সলনি কৰা হৈছে",
   "quickRecordTakePillFailed": "সেৱন ৰেকৰ্ড সংৰক্ষণত বিফল হোৱাৰ সম্ভাৱনা আছে",
   "quickRecordTakePillFailedMessage": "অনুগ্ৰহ কৰি এপ্টো খুলি পৰীক্ষা কৰক",
   "alreadyTaken": "সেৱিত",

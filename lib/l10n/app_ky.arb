@@ -388,7 +388,7 @@
   "resumeTaking": "Таблетка ичүүнү кайра баштаңыз",
   "changePausePeriod": "Таблетка ичүүдөгү тыныгуунун узактыгын өзгөртүңүз",
   "changedPausePeriod": "Таблетка ичүүдөгү тыныгуунун узактыгы өзгөртүлдү",
-  "changedToDate": "{date}-га өзгөртүлдү",
+  "changedToDate": "Күн {date} болуп өзгөртүлдү",
   "quickRecordTakePillFailed": "Дары ичүү жазуусун сактоо жаңылышы болушу мүмкүн",
   "quickRecordTakePillFailedMessage": "Тиркемени ачып текшериңиз",
   "alreadyTaken": "ичилген",

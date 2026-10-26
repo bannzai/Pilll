@@ -388,7 +388,7 @@
   "resumeTaking": "Atsāciet lietot tabletes",
   "changePausePeriod": "Mainiet tablešu lietošanas pārtraukuma ilgumu",
   "changedPausePeriod": "Tablešu lietošanas pārtraukuma ilgums ir mainīts",
-  "changedToDate": "Mainīts uz {date}",
+  "changedToDate": "Datums mainīts uz {date}",
   "quickRecordTakePillFailed": "Iespējams, medikamentu lietošanas ieraksts nav saglabājies",
   "quickRecordTakePillFailedMessage": "Lūdzu, atveriet lietotni un pārbaudiet",
   "alreadyTaken": "ieņemts",

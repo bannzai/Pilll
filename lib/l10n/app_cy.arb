@@ -388,7 +388,7 @@
   "resumeTaking": "Ailddechrau cymryd y bilsen",
   "changePausePeriod": "Newid hyd y seibiant o gymryd y bilsen",
   "changedPausePeriod": "Mae hyd yr egwyl o gymryd y bilsen wedi newid",
-  "changedToDate": "Newidiwyd i {date}",
+  "changedToDate": "Mae'r dyddiad wedi'i newid i {date}",
   "quickRecordTakePillFailed": "Efallai bod y cofnod cymryd wedi methu",
   "quickRecordTakePillFailedMessage": "Agorwch yr ap a gwiriwch",
   "alreadyTaken": "Wedi'i gymryd",

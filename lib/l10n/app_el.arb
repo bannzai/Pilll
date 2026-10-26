@@ -388,7 +388,7 @@
   "resumeTaking": "Συνεχίστε τη λήψη του χαπιού",
   "changePausePeriod": "Αλλαγή διάρκειας διακοπής λήψης χαπιών",
   "changedPausePeriod": "Η διάρκεια της διακοπής λήψης του χαπιού άλλαξε",
-  "changedToDate": "Άλλαξε σε {date}",
+  "changedToDate": "Η ημερομηνία άλλαξε σε {date}",
   "quickRecordTakePillFailed": "Η καταγραφή της λήψης ενδέχεται να απέτυχε",
   "quickRecordTakePillFailedMessage": "Παρακαλώ ανοίξτε την εφαρμογή για να ελέγξετε",
   "alreadyTaken": "Ληφθέν",

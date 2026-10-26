@@ -388,7 +388,7 @@
   "resumeTaking": "गोळी पुन्हा घेण्यास सुरुवात करा",
   "changePausePeriod": "गोळ्या घेण्याच्या विश्रांतीचा कालावधी बदला",
   "changedPausePeriod": "गोळ्या घेण्याच्या विश्रांतीचा कालावधी बदलला आहे",
-  "changedToDate": "{date} मध्ये बदलले",
+  "changedToDate": "तारीख {date} अशी बदलली आहे",
   "quickRecordTakePillFailed": "सेवन रेकॉर्ड सेव्ह करण्यात अयशस्वी झाले असण्याची शक्यता आहे",
   "quickRecordTakePillFailedMessage": "कृपया अॅप उघडून तपासा",
   "alreadyTaken": "घेतले",

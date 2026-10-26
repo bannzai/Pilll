@@ -388,7 +388,7 @@
   "resumeTaking": "აბების მიღების განახლება",
   "changePausePeriod": "აბების მიღების შესვენების ხანგრძლივობის შეცვლა",
   "changedPausePeriod": "აბების მიღების შესვენების ხანგრძლივობა შეიცვალა",
-  "changedToDate": "{date}-ზე შეიცვალა",
+  "changedToDate": "თარიღი შეიცვალა: {date}",
   "quickRecordTakePillFailed": "დოზის აღრიცხვა შესაძლოა ვერ მოხერხდა",
   "quickRecordTakePillFailedMessage": "გთხოვთ, გახსენით აპლიკაცია და შეამოწმეთ",
   "alreadyTaken": "მიღებულია",

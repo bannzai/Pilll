@@ -388,7 +388,7 @@
   "resumeTaking": "Həb qəbuluna yenidən başlayın",
   "changePausePeriod": "Həbə fasilə müddətini dəyişin",
   "changedPausePeriod": "Həb qəbuluna fasilə müddəti dəyişdirildi",
-  "changedToDate": "{date}-ə dəyişdirildi",
+  "changedToDate": "Tarix {date} olaraq dəyişdirildi",
   "quickRecordTakePillFailed": "Qəbul qeydi saxlanmamış ola bilər",
   "quickRecordTakePillFailedMessage": "Tətbiqi açıb yoxlayın",
   "alreadyTaken": "Qəbul edilib",

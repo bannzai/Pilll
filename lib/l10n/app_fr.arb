@@ -388,7 +388,7 @@
   "resumeTaking": "Reprendre la pilule",
   "changePausePeriod": "Modifier la durée de la pause de la pilule",
   "changedPausePeriod": "La durée de la pause entre les prises de pilule a été modifiée",
-  "changedToDate": "Changé en {date}",
+  "changedToDate": "La date a été modifiée pour {date}",
   "quickRecordTakePillFailed": "L'enregistrement de votre dose a peut-être échoué",
   "quickRecordTakePillFailedMessage": "Veuillez ouvrir l'application pour vérifier",
   "alreadyTaken": "Pris",

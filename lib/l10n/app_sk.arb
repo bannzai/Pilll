@@ -388,7 +388,7 @@
   "resumeTaking": "Znova začnite užívať tabletky",
   "changePausePeriod": "Zmeniť dĺžku prestávky v užívaní tabletiek",
   "changedPausePeriod": "Dĺžka prestávky v užívaní tabletiek bola zmenená",
-  "changedToDate": "Zmenené na {date}",
+  "changedToDate": "Dátum bol zmenený na {date}",
   "quickRecordTakePillFailed": "Uloženie záznamu užitia sa možno nepodarilo",
   "quickRecordTakePillFailedMessage": "Otvorte aplikáciu a skontrolujte",
   "alreadyTaken": "Užité",

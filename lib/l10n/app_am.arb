@@ -388,7 +388,7 @@
   "resumeTaking": "ክኒን መውሰድን እንደገና ይጀምሩ",
   "changePausePeriod": "የክኒን እረፍት ጊዜን መቀየር",
   "changedPausePeriod": "ክኒን ከመውሰድ የእረፍት ጊዜ ተቀይሯል",
-  "changedToDate": "ወደ {date} ተቀይሯል",
+  "changedToDate": "ቀኑ ወደ {date} ተቀይሯል",
   "quickRecordTakePillFailed": "የመድሃኒት ወሰድ መመዝገብ ሊሳነው ይችላል",
   "quickRecordTakePillFailedMessage": "አፕሊኬሽኑን ይክፈቱና ያረጋግጡ",
   "alreadyTaken": "ተወስዷል",

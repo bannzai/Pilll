@@ -388,7 +388,7 @@
   "resumeTaking": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించండి",
   "changePausePeriod": "మాత్రలు తీసుకునే విరామ వ్యవధిని మార్చండి",
   "changedPausePeriod": "మాత్రలు తీసుకునే విరామ కాలం మార్చబడింది",
-  "changedToDate": "{date}కు మార్చబడింది",
+  "changedToDate": "తేదీని {date}కి మార్చాం",
   "quickRecordTakePillFailed": "మందు సేవన రికార్డు విఫలమైన అవకాశం ఉంది",
   "quickRecordTakePillFailedMessage": "యాప్ తెరిచి దయచేసి తనిఖీ చేయండి",
   "alreadyTaken": "తీసుకున్నది",

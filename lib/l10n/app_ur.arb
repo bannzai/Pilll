@@ -388,7 +388,7 @@
   "resumeTaking": "گولی لینا دوبارہ شروع کریں",
   "changePausePeriod": "گولیاں لینے کے وقفے کی مدت تبدیل کریں",
   "changedPausePeriod": "گولیاں لینے کے وقفے کی مدت تبدیل کر دی گئی ہے",
-  "changedToDate": "{date} میں تبدیل کر دیا گیا",
+  "changedToDate": "تاریخ بدل کر {date} کر دی گئی ہے",
   "quickRecordTakePillFailed": "دوا کا ریکارڈ ناکام ہونے کا امکان ہے",
   "quickRecordTakePillFailedMessage": "اپلیکیشن کھول کر چیک کریں",
   "alreadyTaken": "استعمال شدہ",

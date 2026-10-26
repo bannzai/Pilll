@@ -388,7 +388,7 @@
   "resumeTaking": "আবার পিল খাওয়া শুরু করুন",
   "changePausePeriod": "পিল খাওয়ার বিরতির সময় বদলান",
   "changedPausePeriod": "পিল খাওয়ার বিরতির সময় পরিবর্তন করা হয়েছে",
-  "changedToDate": "{date} তে পরিবর্তন করা হয়েছে",
+  "changedToDate": "তারিখ {date}-এ পরিবর্তন করা হয়েছে",
   "quickRecordTakePillFailed": "ওষুধ সেবনের রেকর্ড সংরক্ষণে সমস্যা হতে পারে",
   "quickRecordTakePillFailedMessage": "অ্যাপ খুলে যাচাই করুন",
   "alreadyTaken": "সেবিত",

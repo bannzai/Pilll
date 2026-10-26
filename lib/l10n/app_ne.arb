@@ -388,7 +388,7 @@
   "resumeTaking": "चक्की फेरि खान सुरु गर्नुहोस्",
   "changePausePeriod": "चक्की खाने विश्रामको अवधि बदल्नुहोस्",
   "changedPausePeriod": "चक्की खाने बीचको विश्राम अवधि परिवर्तन गरिएको छ",
-  "changedToDate": "{date} मा परिवर्तन गरिएको छ",
+  "changedToDate": "मिति {date} मा परिवर्तन गरिएको छ",
   "quickRecordTakePillFailed": "सेवन रेकर्ड असफल भएको हुन सक्छ",
   "quickRecordTakePillFailedMessage": "कृपया एप खोलेर जाँच गर्नुहोस्",
   "alreadyTaken": "सेवन गरिसकेको",

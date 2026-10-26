@@ -388,7 +388,7 @@
   "resumeTaking": "Reprèn la píndola",
   "changePausePeriod": "Canvia la durada de la pausa de la píndola",
   "changedPausePeriod": "S'ha canviat el període de descans de la píndola",
-  "changedToDate": "He canviat a {date}",
+  "changedToDate": "La data s'ha canviat a {date}",
   "quickRecordTakePillFailed": "És possible que el registre de la presa hagi fallat.",
   "quickRecordTakePillFailedMessage": "Obre l'aplicació i comprova-ho",
   "alreadyTaken": "Prescrit",

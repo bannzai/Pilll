@@ -388,7 +388,7 @@
   "resumeTaking": "Resume taking the pill",
   "changePausePeriod": "Change pill break length",
   "changedPausePeriod": "The pill break length has been changed",
-  "changedToDate": "Changed to {date}",
+  "changedToDate": "Date changed to {date}",
   "quickRecordTakePillFailed": "Recording your dose may have failed",
   "quickRecordTakePillFailedMessage": "Please open the app to check",
   "alreadyTaken": "Taken",

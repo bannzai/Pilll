@@ -388,7 +388,7 @@
   "resumeTaking": "ഗുളിക കഴിക്കുന്നത് വീണ്ടും തുടങ്ങൂ",
   "changePausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ ദൈർഘ്യം മാറ്റുക",
   "changedPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ ദൈർഘ്യം മാറ്റി",
-  "changedToDate": "{date} ലേക്ക് മാറ്റി",
+  "changedToDate": "തീയതി {date} ആക്കി മാറ്റി",
   "quickRecordTakePillFailed": "മരുന്ന് കഴിക്കുന്ന രേഖ പരാജയപ്പെട്ടിരിക്കാം",
   "quickRecordTakePillFailedMessage": "ആപ്പ് തുറന്ന് പരിശോധിക്കുക",
   "alreadyTaken": "കഴിച്ചു",

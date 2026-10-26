@@ -388,7 +388,7 @@
   "resumeTaking": "Эмээ дахин ууж эхэлнэ үү",
   "changePausePeriod": "Эм уух завсарлагааны хугацааг өөрчилнө үү",
   "changedPausePeriod": "Эм уух завсарлагын хугацаа өөрчлөгдсөн",
-  "changedToDate": "{date} рүү өөрчлөгдсөн",
+  "changedToDate": "Огноог {date} болгон өөрчилсөн",
   "quickRecordTakePillFailed": "Эм уусан бүртгэл амжилтгүй болсон байж болзошгүй байна",
   "quickRecordTakePillFailedMessage": "Апп-аа нээж шалгана уу",
   "alreadyTaken": "Уусан",

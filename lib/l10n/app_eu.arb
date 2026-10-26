@@ -388,7 +388,7 @@
   "resumeTaking": "Hasi berriro pilula hartzen",
   "changePausePeriod": "Pilulen atsedenaldiaren iraupena aldatu",
   "changedPausePeriod": "Pilula hartzeko atsedenaldiaren iraupena aldatu da",
-  "changedToDate": "{date} datara aldatu da",
+  "changedToDate": "Data {date} egunera aldatu da",
   "quickRecordTakePillFailed": "Hartze erregistroak huts egin dezake",
   "quickRecordTakePillFailedMessage": "Aplikazioa ireki eta egiaztatu ezazu",
   "alreadyTaken": "Hartuta",

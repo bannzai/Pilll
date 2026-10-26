@@ -388,7 +388,7 @@
   "resumeTaking": "Hapı almaya yeniden başlayın",
   "changePausePeriod": "Hap kullanma arasının süresini değiştirin",
   "changedPausePeriod": "İlaca ara verme süresi değiştirildi",
-  "changedToDate": "{date} tarihine değiştirildi",
+  "changedToDate": "Tarih {date} olarak değiştirildi",
   "quickRecordTakePillFailed": "İlaç alım kaydınız başarısız olmuş olabilir",
   "quickRecordTakePillFailedMessage": "Lütfen uygulamayı açın ve kontrol edin",
   "alreadyTaken": "Alındı",

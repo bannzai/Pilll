@@ -388,7 +388,7 @@
   "resumeTaking": "Byrja aftur að taka pilluna",
   "changePausePeriod": "Breyta lengd pilluhléss",
   "changedPausePeriod": "Lengd hlésins frá pillutöku hefur verið breytt",
-  "changedToDate": "Breytt í {date}",
+  "changedToDate": "Dagsetningunni hefur verið breytt í {date}",
   "quickRecordTakePillFailed": "Inntökuskráning gæti hafa mistekist",
   "quickRecordTakePillFailedMessage": "Vinsamlegast opnaðu appið og athugaðu",
   "alreadyTaken": "Tekið",

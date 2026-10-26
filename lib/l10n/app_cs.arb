@@ -388,7 +388,7 @@
   "resumeTaking": "Obnovit užívání pilulek",
   "changePausePeriod": "Změnit délku pauzy v užívání pilulek",
   "changedPausePeriod": "Délka pauzy v užívání pilulek byla změněna",
-  "changedToDate": "Změněno na {date}",
+  "changedToDate": "Datum bylo změněno na {date}",
   "quickRecordTakePillFailed": "Záznam o užití se možná nepodařilo uložit",
   "quickRecordTakePillFailedMessage": "Prosím otevřete aplikaci a zkontrolujte",
   "alreadyTaken": "Užito",

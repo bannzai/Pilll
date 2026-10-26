@@ -388,7 +388,7 @@
   "resumeTaking": "ବଟିକା ଖାଇବା ପୁଣି ଆରମ୍ଭ କରନ୍ତୁ",
   "changePausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ବଦଳାନ୍ତୁ",
   "changedPausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
-  "changedToDate": "{date} କୁ ବଦଳାଇଲେ",
+  "changedToDate": "ତାରିଖ {date}କୁ ବଦଳାଯାଇଛି",
   "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ବିଫଳ ହେବାର ସମ୍ଭାବନା ଅଛି",
   "quickRecordTakePillFailedMessage": "ଦୟାକରି ଆପ୍ ଖୋଲି ଯାଞ୍ଚ କରନ୍ତୁ",
   "alreadyTaken": "ଖାଇଛି",

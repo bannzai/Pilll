@@ -388,7 +388,7 @@
   "resumeTaking": "Pilleneinnahme fortsetzen",
   "changePausePeriod": "Dauer der Pillenpause ändern",
   "changedPausePeriod": "Die Pillenpause wurde geändert",
-  "changedToDate": "Auf {date} geändert",
+  "changedToDate": "Das Datum wurde auf {date} geändert",
   "quickRecordTakePillFailed": "Die Einnahmeaufzeichnung konnte möglicherweise nicht gespeichert werden",
   "quickRecordTakePillFailedMessage": "Bitte öffnen Sie die App zur Überprüfung",
   "alreadyTaken": "Eingenommen",

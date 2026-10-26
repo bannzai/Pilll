@@ -388,7 +388,7 @@
   "resumeTaking": "गोली लेना फिर शुरू करें",
   "changePausePeriod": "गोली लेने के बीच विराम की अवधि बदलें",
   "changedPausePeriod": "गोली लेने के बीच के विराम की अवधि बदल दी गई है",
-  "changedToDate": "{date} पर बदल दिया गया",
+  "changedToDate": "तारीख बदलकर {date} कर दी गई है",
   "quickRecordTakePillFailed": "दवा सेवन का रिकॉर्ड सहेजने में असफलता हो सकती है",
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जांच लें",
   "alreadyTaken": "ली गई",

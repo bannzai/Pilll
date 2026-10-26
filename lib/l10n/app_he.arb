@@ -388,7 +388,7 @@
   "resumeTaking": "לחזור לנטילת הגלולה",
   "changePausePeriod": "שינוי משך ההפסקה בנטילת הגלולות",
   "changedPausePeriod": "משך ההפסקה בנטילת הגלולות עודכן",
-  "changedToDate": "עודכן ל-{date}",
+  "changedToDate": "התאריך שונה ל־{date}",
   "quickRecordTakePillFailed": "ייתכן שרישום הנטילה נכשל",
   "quickRecordTakePillFailedMessage": "אנא פתחו את האפליקציה ובדקו",
   "alreadyTaken": "נטלה",

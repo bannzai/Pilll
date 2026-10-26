@@ -388,7 +388,7 @@
   "resumeTaking": "Jätka pilli võtmist",
   "changePausePeriod": "Muuda pillipausi pikkust",
   "changedPausePeriod": "Pillipausi pikkus on muudetud",
-  "changedToDate": "Muudetud {date}-le",
+  "changedToDate": "Kuupäevaks määrati {date}",
   "quickRecordTakePillFailed": "Manustamise salvestamine võis ebaõnnestuda",
   "quickRecordTakePillFailedMessage": "Palun avage rakendus ja kontrollige",
   "alreadyTaken": "Võetud",

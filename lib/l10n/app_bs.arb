@@ -388,7 +388,7 @@
   "resumeTaking": "Nastavite uzimati pilule",
   "changePausePeriod": "Promjena trajanja pauze u uzimanju pilula",
   "changedPausePeriod": "Period pauze u uzimanju pilula je promijenjen",
-  "changedToDate": "Promijenjeno na {date}",
+  "changedToDate": "Datum je promijenjen na {date}",
   "quickRecordTakePillFailed": "Zapisivanje uzimanja pilula možda nije uspjelo",
   "quickRecordTakePillFailedMessage": "Molimo otvorite aplikaciju i provjerite",
   "alreadyTaken": "Uzeto",

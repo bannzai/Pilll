@@ -388,7 +388,7 @@
   "resumeTaking": "Retoma a pílula",
   "changePausePeriod": "Cambiar a duración da pausa da pílula",
   "changedPausePeriod": "Cambiouse a duración da pausa da pílula",
-  "changedToDate": "Cambiouse a {date}",
+  "changedToDate": "A data cambiouse a {date}",
   "quickRecordTakePillFailed": "É posible que o rexistro da toma fallase",
   "quickRecordTakePillFailedMessage": "Abre a aplicación e comproba",
   "alreadyTaken": "Tomado",
