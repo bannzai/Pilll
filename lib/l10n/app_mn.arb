@@ -42,7 +42,7 @@
   "cancel": "Цуцлах",
   "signOut": "Бүртгэлээс гарах",
   "autoAddPillSheetGroup": "эмийн блистер бүлгүүдийг автоматаар нэмэх",
-  "autoAddNewSheetAfterCurrentEnds": "Одоогийн эмийн хавтасны бүлэг дуусахад шинэ хавтасыг автоматаар нэмнэ",
+  "autoAddNewSheetAfterCurrentEnds": "Одоогийн эмийн блистер бүлэг дуусахад шинэ блистер автоматаар нэмэгдэнэ",
   "accountSettings": "Дансны тохиргоо",
   "linked": "Холбогдсон",
   "unregistered": "бүртгэгдээгүй",

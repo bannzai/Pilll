@@ -42,7 +42,7 @@
   "cancel": "ሰርዝ",
   "signOut": "ይውጡ",
   "autoAddPillSheetGroup": "የክኒን ሉህ ቡድኖችን በራስ-ሰር ማከል",
-  "autoAddNewSheetAfterCurrentEnds": "የአሁኑ የክንፍ ሉሆች ቡድን ሲያበቅ አዲስ ሉሆች በራስ-ሰር ይጨመራሉ።",
+  "autoAddNewSheetAfterCurrentEnds": "የአሁኑ ክኒን ሉህ ቡድን ሲያበቃ፣ አዲስ ክኒን ሉህ በራስ-ሰር ይጨመራል",
   "accountSettings": "መለያ ቅንብር",
   "linked": "ተገናኝቷል",
   "unregistered": "ያልተመዘገበ",

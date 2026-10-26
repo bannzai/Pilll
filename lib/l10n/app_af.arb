@@ -42,7 +42,7 @@
   "cancel": "Kanselleer",
   "signOut": "Meld af",
   "autoAddPillSheetGroup": "Voeg pilstrokiegroepe outomaties by",
-  "autoAddNewSheetAfterCurrentEnds": "Wanneer die huidige pilbladgroep voltooi is, sal 'n nuwe blad outomaties bygevoeg word",
+  "autoAddNewSheetAfterCurrentEnds": "Wanneer die huidige pilstrokiegroep klaar is, word ’n nuwe pilstrokie outomaties bygevoeg",
   "accountSettings": "Rekeninginstellings",
   "linked": "Gekoppel",
   "unregistered": "Ongeregistreer",

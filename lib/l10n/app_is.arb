@@ -42,7 +42,7 @@
   "cancel": "Hætta við",
   "signOut": "Skrá út",
   "autoAddPillSheetGroup": "Bæta pilluspjaldshópum sjálfkrafa við",
-  "autoAddNewSheetAfterCurrentEnds": "Nýtt pillublað verður sjálfkrafa bætt við þegar núverandi pilluhópur lýkur",
+  "autoAddNewSheetAfterCurrentEnds": "Þegar núverandi hópi pilluspjald lýkur bætist nýtt spjald sjálfkrafa við",
   "accountSettings": "Reikningsstillingar",
   "linked": "Tengt",
   "unregistered": "Óskráð",

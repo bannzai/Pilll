@@ -42,7 +42,7 @@
   "cancel": "বাতিল করুন",
   "signOut": "সাইন আউট করুন",
   "autoAddPillSheetGroup": "পিল শিটের গ্রুপ স্বয়ংক্রিয়ভাবে যোগ করা",
-  "autoAddNewSheetAfterCurrentEnds": "বর্তমান পিল শিট গ্রুপ শেষ হলে, স্বয়ংক্রিয়ভাবে একটি নতুন শিট যোগ করা হবে",
+  "autoAddNewSheetAfterCurrentEnds": "বর্তমান পিল শিটের গ্রুপ শেষ হলে, নতুন শিট স্বয়ংক্রিয়ভাবে যোগ হবে",
   "accountSettings": "অ্যাকাউন্ট সেটিংস",
   "linked": "সংযুক্ত",
   "unregistered": "অনিবন্ধিত",

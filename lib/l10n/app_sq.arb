@@ -42,7 +42,7 @@
   "cancel": "Anuloni",
   "signOut": "Dilni nga llogaria",
   "autoAddPillSheetGroup": "Shtimi automatik i grupeve të blisterave",
-  "autoAddNewSheetAfterCurrentEnds": "Kur përfundon grupi aktual i fletëve të pilulës, do të shtohet automatikisht një fletë e re",
+  "autoAddNewSheetAfterCurrentEnds": "Kur të përfundojë grupi aktual i blister, do të shtohet automatikisht një blister i ri",
   "accountSettings": "Cilësimet e llogarisë",
   "linked": "I lidhur",
   "unregistered": "E paregjistruar",

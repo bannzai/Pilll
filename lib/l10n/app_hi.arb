@@ -42,7 +42,7 @@
   "cancel": "रद्द करें",
   "signOut": "साइन आउट करें",
   "autoAddPillSheetGroup": "पिल स्ट्रिप के समूह अपने आप जोड़ना",
-  "autoAddNewSheetAfterCurrentEnds": "जब मौजूदा पिल शीट समूह समाप्त हो जाएगा, तो नई शीट अपने आप जुड़ जाएगी",
+  "autoAddNewSheetAfterCurrentEnds": "मौजूदा पिल स्ट्रिप समूह खत्म होने पर नई स्ट्रिप अपने आप जुड़ जाएगी",
   "accountSettings": "अकाउंट सेटिंग्स",
   "linked": "जुड़ा हुआ",
   "unregistered": "अपंजीकृत",

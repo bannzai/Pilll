@@ -42,7 +42,7 @@
   "cancel": "Anulează",
   "signOut": "Deconectează-te",
   "autoAddPillSheetGroup": "Adăugarea automată a grupurilor de blister",
-  "autoAddNewSheetAfterCurrentEnds": "Când se termină grupul actual de plachete, se va adăuga automat o nouă plachetă",
+  "autoAddNewSheetAfterCurrentEnds": "Când grupul actual de blister se încheie, se adaugă automat un blister nou",
   "accountSettings": "Setări cont",
   "linked": "Conectat",
   "unregistered": "Neînregistrat",

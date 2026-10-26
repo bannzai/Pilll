@@ -42,7 +42,7 @@
   "cancel": "रद्द करा",
   "signOut": "साइन आउट करा",
   "autoAddPillSheetGroup": "पिल शीट गट आपोआप जोडणे",
-  "autoAddNewSheetAfterCurrentEnds": "सध्याचा पिल शीट गट संपल्यानंतर, नवीन शीट आपोआप जोडले जाईल",
+  "autoAddNewSheetAfterCurrentEnds": "सध्याचा पिल शीट गट संपल्यावर नवीन शीट आपोआप जोडली जाईल",
   "accountSettings": "खाते सेटिंग्स",
   "linked": "जोडलेले",
   "unregistered": "अनोंदणीकृत",

@@ -42,7 +42,7 @@
   "cancel": "Atšaukti",
   "signOut": "Atsijungti",
   "autoAddPillSheetGroup": "Automatinis tablečių plokštel grupių pridėjimas",
-  "autoAddNewSheetAfterCurrentEnds": "Pasibaigus dabartiniam tablečių paketui, automatiškai bus pridėtas naujas paketas",
+  "autoAddNewSheetAfterCurrentEnds": "Pasibaigus dabartinei tablečių plokštel grupei, automatiškai bus pridėta nauja plokštelė",
   "accountSettings": "Paskyros nustatymai",
   "linked": "Prijungtas",
   "unregistered": "Neregistruotas",

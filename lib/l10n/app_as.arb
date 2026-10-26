@@ -42,7 +42,7 @@
   "cancel": "বাতিল কৰক",
   "signOut": "ছাইন আউট কৰক",
   "autoAddPillSheetGroup": "পিলৰ ষ্ট্ৰিপৰ গোট স্বয়ংক্ৰিয়ভাৱে যোগ কৰা",
-  "autoAddNewSheetAfterCurrentEnds": "বৰ্তমানৰ পিল শ্বীট গ্ৰুপ শেষ হ'লে নতুন শ্বীট স্বয়ংক্ৰিয়ভাৱে যোগ কৰিব",
+  "autoAddNewSheetAfterCurrentEnds": "বৰ্তমানৰ পিলৰ ষ্ট্ৰিপৰ গোট শেষ হ’লে, নতুন ষ্ট্ৰিপ এখন স্বয়ংক্ৰিয়ভাৱে যোগ হ’ব",
   "accountSettings": "আকাউন্ট ছেটিং",
   "linked": "সংযুক্ত",
   "unregistered": "অনিবন্ধিত",

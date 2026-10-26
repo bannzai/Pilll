@@ -42,7 +42,7 @@
   "cancel": "Cancelar",
   "signOut": "Pechar sesión",
   "autoAddPillSheetGroup": "Engadir automaticamente grupos de blíster",
-  "autoAddNewSheetAfterCurrentEnds": "Ao rematar o grupo actual de blísteres de píldoras, engadirase automaticamente un novo blíster",
+  "autoAddNewSheetAfterCurrentEnds": "Cando remate o grupo actual de blíster, engadirase automaticamente un blíster novo",
   "accountSettings": "Configuración da conta",
   "linked": "Conectado",
   "unregistered": "Non rexistrado",

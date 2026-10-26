@@ -42,7 +42,7 @@
   "cancel": "Anuluj",
   "signOut": "Wyloguj się",
   "autoAddPillSheetGroup": "Automatyczne dodawanie grup blistów",
-  "autoAddNewSheetAfterCurrentEnds": "Gdy aktualna grupa opakowań tabletek się skończy, nowe opakowanie zostanie automatycznie dodane",
+  "autoAddNewSheetAfterCurrentEnds": "Po zakończeniu bieżącej grupy blistów nowy blist zostanie dodany automatycznie",
   "accountSettings": "Ustawienia konta",
   "linked": "Połączono",
   "unregistered": "Niezarejestrowane",

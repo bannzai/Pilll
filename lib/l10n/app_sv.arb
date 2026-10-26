@@ -42,7 +42,7 @@
   "cancel": "Avbryt",
   "signOut": "Logga ut",
   "autoAddPillSheetGroup": "Lägg till grupper med p-pillerkarta automatiskt",
-  "autoAddNewSheetAfterCurrentEnds": "När nuvarande p-pillerblister tar slut läggs nästa blister till automatiskt",
+  "autoAddNewSheetAfterCurrentEnds": "När den nuvarande gruppen med p-pillerkarta är slut läggs en ny karta till automatiskt",
   "accountSettings": "Kontoinställningar",
   "linked": "Ansluten",
   "unregistered": "Ej registrerad",

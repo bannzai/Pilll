@@ -42,7 +42,7 @@
   "cancel": "Mégse",
   "signOut": "Kijelentkezés",
   "autoAddPillSheetGroup": "Tablettacsomag-csoportok automatikus hozzáadása",
-  "autoAddNewSheetAfterCurrentEnds": "A jelenlegi tablettacsomag befejezése után automatikusan új csomagot ad hozzá",
+  "autoAddNewSheetAfterCurrentEnds": "Amikor a jelenlegi tablettacsomag-csoport véget ér, automatikusan hozzáadunk egy új csomagot",
   "accountSettings": "Fiók beállítások",
   "linked": "Összekapcsolva",
   "unregistered": "Regisztrálatlan",

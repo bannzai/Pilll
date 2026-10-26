@@ -42,7 +42,7 @@
   "cancel": "ยกเลิก",
   "signOut": "ออกจากระบบ",
   "autoAddPillSheetGroup": "เพิ่มกลุ่มแผงยาอัตโนมัติ",
-  "autoAddNewSheetAfterCurrentEnds": "เมื่อกลุ่มแผงยาปัจจุบันสิ้นสุดแล้ว ระบบจะเพิ่มแผงใหม่โดยอัตโนมัติ",
+  "autoAddNewSheetAfterCurrentEnds": "เมื่อกลุ่มแผงยาปัจจุบันหมด ระบบจะเพิ่มแผงยาใหม่ให้อัตโนมัติค่ะ",
   "accountSettings": "ตั้งค่าบัญชี",
   "linked": "เชื่อมต่อแล้ว",
   "unregistered": "ยังไม่ได้ลงทะเบียน",

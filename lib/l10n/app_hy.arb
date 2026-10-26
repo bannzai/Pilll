@@ -42,7 +42,7 @@
   "cancel": "Չեղարկել",
   "signOut": "Դուրս գալ հաշվից",
   "autoAddPillSheetGroup": "հաբերի բլիստեր խմբերի ինքնաշխատ ավելացում",
-  "autoAddNewSheetAfterCurrentEnds": "Ընթացիկ հապակի փաթեթի ավարտից հետո նոր փաթեթ կավելացվի ավտոմատ",
+  "autoAddNewSheetAfterCurrentEnds": "Երբ ընթացիկ հաբերի բլիստեր խումբն ավարտվի, նոր բլիստերն ինքնաշխատ կավելացվի",
   "accountSettings": "Հաշվի կարգավորումներ",
   "linked": "Կապակցված",
   "unregistered": "չգրանցված",

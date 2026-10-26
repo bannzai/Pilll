@@ -42,7 +42,7 @@
   "cancel": "Batal",
   "signOut": "Keluar dari akun",
   "autoAddPillSheetGroup": "Tambahkan grup strip pil secara otomatis",
-  "autoAddNewSheetAfterCurrentEnds": "Lembar pil baru akan ditambahkan secara otomatis setelah grup lembar pil saat ini berakhir",
+  "autoAddNewSheetAfterCurrentEnds": "Saat grup strip pil saat ini selesai, strip baru akan ditambahkan otomatis",
   "accountSettings": "Pengaturan Akun",
   "linked": "Terhubung",
   "unregistered": "Belum Terdaftar",

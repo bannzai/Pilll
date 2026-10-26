@@ -42,7 +42,7 @@
   "cancel": "Annuller",
   "signOut": "Log ud",
   "autoAddPillSheetGroup": "Tilføj automatisk pillekortgrupper",
-  "autoAddNewSheetAfterCurrentEnds": "Når den nuværende pillepakning slutter, tilføjes en ny pakning automatisk",
+  "autoAddNewSheetAfterCurrentEnds": "Når den nuværende gruppe af pillekort er færdig, tilføjes et nyt pillekort automatisk",
   "accountSettings": "Kontoindstillinger",
   "linked": "Tilsluttet",
   "unregistered": "Ikke registreret",

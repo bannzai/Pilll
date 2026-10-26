@@ -42,7 +42,7 @@
   "cancel": "إلغاء",
   "signOut": "تسجيل الخروج",
   "autoAddPillSheetGroup": "إضافة مجموعات شريط تلقائيًا",
-  "autoAddNewSheetAfterCurrentEnds": "سيتم إضافة شريط حبوب جديد تلقائيًا عند انتهاء المجموعة الحالية",
+  "autoAddNewSheetAfterCurrentEnds": "عند انتهاء مجموعة الشريط الحالية، ستُضاف مجموعة جديدة تلقائيًا",
   "accountSettings": "إعدادات الحساب",
   "linked": "مرتبط",
   "unregistered": "غير مسجل",

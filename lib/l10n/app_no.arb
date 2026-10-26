@@ -42,7 +42,7 @@
   "cancel": "Avbryt",
   "signOut": "Logg ut",
   "autoAddPillSheetGroup": "Legg til pillebrettgrupper automatisk",
-  "autoAddNewSheetAfterCurrentEnds": "Legger automatisk til et nytt ark når den nåværende p-pillearkgruppen er fullført",
+  "autoAddNewSheetAfterCurrentEnds": "Når den nåværende gruppen med pillebrett er ferdig, legges et nytt brett til automatisk",
   "accountSettings": "Kontoinnstillinger",
   "linked": "Tilkoblet",
   "unregistered": "Ikke registrert",

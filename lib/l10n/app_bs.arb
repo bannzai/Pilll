@@ -42,7 +42,7 @@
   "cancel": "Otkaži",
   "signOut": "Odjavite se",
   "autoAddPillSheetGroup": "Automatsko dodavanje blister grupa",
-  "autoAddNewSheetAfterCurrentEnds": "Kada se završi trenutni paket pilula, automatski će se dodati novi paket",
+  "autoAddNewSheetAfterCurrentEnds": "Kada se završi trenutna grupa blistera, novi blister će se automatski dodati",
   "accountSettings": "Postavke računa",
   "linked": "Povezano",
   "unregistered": "Neregistrovan",

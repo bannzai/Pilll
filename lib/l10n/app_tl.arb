@@ -42,7 +42,7 @@
   "cancel": "Kanselahin",
   "signOut": "Mag-sign out",
   "autoAddPillSheetGroup": "Awtomatikong pagdagdag ng mga grupo ng pakete ng pildoras",
-  "autoAddNewSheetAfterCurrentEnds": "Kapag matapos na ang kasalukuyang pill sheet group, kusang magdadagdag ng bagong sheet",
+  "autoAddNewSheetAfterCurrentEnds": "Kapag naubos ang kasalukuyang grupo ng pakete ng pildoras, awtomatikong magdaragdag ng bagong pakete",
   "accountSettings": "Mga Setting ng Akaunt",
   "linked": "Nakakonekta na",
   "unregistered": "Hindi pa naka-rehistro",

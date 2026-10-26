@@ -42,7 +42,7 @@
   "cancel": "Abbrechen",
   "signOut": "Abmelden",
   "autoAddPillSheetGroup": "Pillenblister-Gruppen automatisch hinzufügen",
-  "autoAddNewSheetAfterCurrentEnds": "Nach Abschluss der aktuellen Pillenblistergruppe wird automatisch ein neuer Blister hinzugefügt",
+  "autoAddNewSheetAfterCurrentEnds": "Wenn die aktuelle Pillenblistergruppe endet, wird automatisch ein neuer Pillenblister hinzugefügt",
   "accountSettings": "Kontoeinstellungen",
   "linked": "Verknüpft",
   "unregistered": "Nicht registriert",

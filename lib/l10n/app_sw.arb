@@ -42,7 +42,7 @@
   "cancel": "Ghairi",
   "signOut": "Tafadhali ondoka kwenye akaunti",
   "autoAddPillSheetGroup": "Kuongeza vikundi vya pakiti ya vidonge kiotomatiki",
-  "autoAddNewSheetAfterCurrentEnds": "Baada ya kikundi cha karatasi za vidonge cha sasa kumalizika, karatasi mpya itaongezwa kiotomatiki",
+  "autoAddNewSheetAfterCurrentEnds": "Kikundi cha sasa cha pakiti ya vidonge kitakapokwisha, pakiti mpya itaongezwa kiotomatiki",
   "accountSettings": "Mipangilio ya Akaunti",
   "linked": "Imeunganishwa",
   "unregistered": "Haijasajiliwa",

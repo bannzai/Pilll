@@ -42,7 +42,7 @@
   "cancel": "Annuleren",
   "signOut": "Uitloggen",
   "autoAddPillSheetGroup": "Pillenstripgroepen automatisch toevoegen",
-  "autoAddNewSheetAfterCurrentEnds": "Een nieuwe pilstrip wordt automatisch toegevoegd wanneer de huidige strip op is",
+  "autoAddNewSheetAfterCurrentEnds": "Als de huidige groep pillenstrippen klaar is, wordt automatisch een nieuwe strip toegevoegd",
   "accountSettings": "Accountinstellingen",
   "linked": "Gekoppeld",
   "unregistered": "Niet geregistreerd",

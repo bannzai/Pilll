@@ -42,7 +42,7 @@
   "cancel": "Откажи",
   "signOut": "Одјавување",
   "autoAddPillSheetGroup": "Автоматско додавање групи за блистер",
-  "autoAddNewSheetAfterCurrentEnds": "Автоматски додава нов лист со таблети кога тековната група заврши",
+  "autoAddNewSheetAfterCurrentEnds": "Кога ќе заврши тековната група блистер, автоматски ќе се додаде нов блистер",
   "accountSettings": "Поставки на сметка",
   "linked": "Поврзано",
   "unregistered": "Нерегистриран",

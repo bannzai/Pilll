@@ -42,7 +42,7 @@
   "cancel": "Cancel",
   "signOut": "Sign out",
   "autoAddPillSheetGroup": "Automatically add pill pack groups",
-  "autoAddNewSheetAfterCurrentEnds": "Automatically add a new sheet when the current pill sheet group is finished",
+  "autoAddNewSheetAfterCurrentEnds": "When the current pill pack group ends, a new pack is added automatically",
   "accountSettings": "Account Settings",
   "linked": "Connected",
   "unregistered": "Not registered",

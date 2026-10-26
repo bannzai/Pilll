@@ -42,7 +42,7 @@
   "cancel": "취소",
   "signOut": "로그아웃",
   "autoAddPillSheetGroup": "알약 시트 그룹 자동 추가",
-  "autoAddNewSheetAfterCurrentEnds": "현재 피임약 시트가 끝나면 새로운 시트를 자동으로 추가합니다",
+  "autoAddNewSheetAfterCurrentEnds": "현재 알약 시트 그룹이 끝나면 새 시트가 자동으로 추가돼요",
   "accountSettings": "계정 설정",
   "linked": "연동됨",
   "unregistered": "미등록",

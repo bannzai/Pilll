@@ -42,7 +42,7 @@
   "cancel": "منسوخ کریں",
   "signOut": "سائن آؤٹ کریں",
   "autoAddPillSheetGroup": "گولیوں کی پٹی کے گروپ خودکار طور پر شامل کرنا",
-  "autoAddNewSheetAfterCurrentEnds": "جب موجودہ پل شیٹ گروپ ختم ہو جائے تو نئی شیٹ خودکار طور پر شامل کر دی جائے گی",
+  "autoAddNewSheetAfterCurrentEnds": "موجودہ گولیوں کی پٹی کا گروپ ختم ہونے پر نئی پٹی خود بخود شامل ہو جائے گی",
   "accountSettings": "اکاؤنٹ سیٹنگز",
   "linked": "منسلک ہے",
   "unregistered": "غیر رجسٹرڈ",

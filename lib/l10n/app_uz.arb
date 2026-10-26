@@ -42,7 +42,7 @@
   "cancel": "Bekor qilish",
   "signOut": "Hisobdan chiqing",
   "autoAddPillSheetGroup": "tabletka blister guruhlarini avtomatik qoʻshish",
-  "autoAddNewSheetAfterCurrentEnds": "Hozirgi dori varaq'i tugagach, yangi varaq avtomatik ravishda qo'shiladi",
+  "autoAddNewSheetAfterCurrentEnds": "Joriy tabletka blister guruhi tugaganda, yangi blister avtomatik qoʻshiladi",
   "accountSettings": "Akkaunt sozlamalari",
   "linked": "Ulangan",
   "unregistered": "Ro'yxatdan o'tmagan",

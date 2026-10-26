@@ -42,7 +42,7 @@
   "cancel": "Batal",
   "signOut": "Log keluar",
   "autoAddPillSheetGroup": "Tambah kumpulan pek pil secara automatik",
-  "autoAddNewSheetAfterCurrentEnds": "Bila kumpulan pil semasa habis, helaian baru akan ditambah secara automatik",
+  "autoAddNewSheetAfterCurrentEnds": "Apabila kumpulan pek pil semasa tamat, pek baharu akan ditambahkan secara automatik",
   "accountSettings": "Tetapan Akaun",
   "linked": "Telah dipautkan",
   "unregistered": "Belum Berdaftar",

@@ -42,7 +42,7 @@
   "cancel": "Zrušiť",
   "signOut": "Odhlásiť sa",
   "autoAddPillSheetGroup": "Automatické pridávanie skupín blistov",
-  "autoAddNewSheetAfterCurrentEnds": "Keď sa skončí aktuálna skupina tabliet, automaticky sa pridá nové balenie",
+  "autoAddNewSheetAfterCurrentEnds": "Po skončení aktuálnej skupiny blistov sa automaticky pridá nový blist",
   "accountSettings": "Nastavenia účtu",
   "linked": "Pripojené",
   "unregistered": "Neregistrovaný",

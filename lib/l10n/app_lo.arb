@@ -42,7 +42,7 @@
   "cancel": "ຍົກເລີກ",
   "signOut": "ອອກຈາກບັນຊີ",
   "autoAddPillSheetGroup": "ເພີ່ມກຸ່ມແຜງຢາຄຸມອັດຕະໂນມັດ",
-  "autoAddNewSheetAfterCurrentEnds": "ເມື່ອກຸ່ມແຜ່ນຢາຄຸມກຳເນີດປັດຈຸບັນສິ້ນສຸດແລ້ວ, ແຜ່ນໃໝ່ຈະຖືກເພີ່ມໂດຍອັດຕະໂນມັດ",
+  "autoAddNewSheetAfterCurrentEnds": "ເມື່ອກຸ່ມແຜງຢາຄຸມປັດຈຸບັນໝົດ ແຜງໃໝ່ຈະຖືກເພີ່ມອັດຕະໂນມັດ",
   "accountSettings": "ການຕັ້ງຄ່າບັນຊີ",
   "linked": "ເຊື່ອມຕໍ່ແລ້ວ",
   "unregistered": "ບໍ່ໄດ້ລົງທະບຽນ",

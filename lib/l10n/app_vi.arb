@@ -42,7 +42,7 @@
   "cancel": "Hủy",
   "signOut": "Đăng xuất",
   "autoAddPillSheetGroup": "Tự động thêm nhóm vỉ thuốc",
-  "autoAddNewSheetAfterCurrentEnds": "Tự động thêm vỉ thuốc mới khi nhóm vỉ thuốc hiện tại kết thúc",
+  "autoAddNewSheetAfterCurrentEnds": "Khi nhóm vỉ thuốc hiện tại kết thúc, vỉ mới sẽ tự động được thêm vào",
   "accountSettings": "Cài đặt tài khoản",
   "linked": "Đã liên kết",
   "unregistered": "Chưa đăng ký",

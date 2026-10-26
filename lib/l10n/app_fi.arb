@@ -42,7 +42,7 @@
   "cancel": "Peruuta",
   "signOut": "Kirjaudu ulos",
   "autoAddPillSheetGroup": "Lisää pilleriliuskaryhmät automaattisesti",
-  "autoAddNewSheetAfterCurrentEnds": "Kun nykyinen pillipakkaus päättyy, uusi pakkaus lisätään automaattisesti",
+  "autoAddNewSheetAfterCurrentEnds": "Kun nykyinen pilleriliuska-ryhmä päättyy, uusi liuska lisätään automaattisesti",
   "accountSettings": "Tiliasetukset",
   "linked": "Yhdistetty",
   "unregistered": "Rekisteröimätön",

@@ -42,7 +42,7 @@
   "cancel": "取消",
   "signOut": "退出登录",
   "autoAddPillSheetGroup": "自动添加药板分组",
-  "autoAddNewSheetAfterCurrentEnds": "当前药片组完成后，将自动添加新的药片组",
+  "autoAddNewSheetAfterCurrentEnds": "当前药板组用完后，会自动添加新药板",
   "accountSettings": "账户设置",
   "linked": "已绑定",
   "unregistered": "未注册",

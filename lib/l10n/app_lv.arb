@@ -42,7 +42,7 @@
   "cancel": "Atcelt",
   "signOut": "Izrakstīties",
   "autoAddPillSheetGroup": "Automātiska tablešu blister grupu pievienošana",
-  "autoAddNewSheetAfterCurrentEnds": "Kad pašreizējā tablešu plāksnes grupa beigsies, automātiski tiks pievienota jauna plāksne",
+  "autoAddNewSheetAfterCurrentEnds": "Kad pašreizējā tablešu blister grupa beigsies, automātiski tiks pievienots jauns blisteris",
   "accountSettings": "Konta iestatījumi",
   "linked": "Savienots",
   "unregistered": "Nav reģistrēts",

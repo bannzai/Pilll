@@ -42,7 +42,7 @@
   "cancel": "Tühista",
   "signOut": "Logi välja",
   "autoAddPillSheetGroup": "Pillilehtrühmade automaatne lisamine",
-  "autoAddNewSheetAfterCurrentEnds": "Kui praegune pillipakkide grupp lõpeb, lisatakse automaatselt uus pakk",
+  "autoAddNewSheetAfterCurrentEnds": "Kui praegune pillileh grupp lõpeb, lisatakse automaatselt uus pillileh",
   "accountSettings": "Konto seaded",
   "linked": "Ühendatud",
   "unregistered": "Registreerimata",

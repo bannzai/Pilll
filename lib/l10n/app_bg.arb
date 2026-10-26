@@ -42,7 +42,7 @@
   "cancel": "Отказ",
   "signOut": "Изход от профила",
   "autoAddPillSheetGroup": "Автоматично добавяне на групи блистери",
-  "autoAddNewSheetAfterCurrentEnds": "След като настоящата група блистери приключи, автоматично ще се добави нов блистер",
+  "autoAddNewSheetAfterCurrentEnds": "Когато текущата група блистери приключи, автоматично ще се добави нов блистер",
   "accountSettings": "Настройки на акаунта",
   "linked": "Свързано",
   "unregistered": "Нерегистриран",

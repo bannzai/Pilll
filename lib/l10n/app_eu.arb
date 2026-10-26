@@ -42,7 +42,7 @@
   "cancel": "Utzi",
   "signOut": "Amaitu saioa",
   "autoAddPillSheetGroup": "Pilula-blister taldeak automatikoki gehitzea",
-  "autoAddNewSheetAfterCurrentEnds": "Oraingo pilula-orri taldea amaitzen denean, orri berria automatikoki gehituko da",
+  "autoAddNewSheetAfterCurrentEnds": "Uneko pilula-blister taldea amaitzean, beste blister bat gehituko da automatikoki",
   "accountSettings": "Kontu ezarpenak",
   "linked": "Konektatuta",
   "unregistered": "Erregistratu gabe",

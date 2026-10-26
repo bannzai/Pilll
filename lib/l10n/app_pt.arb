@@ -42,7 +42,7 @@
   "cancel": "Cancelar",
   "signOut": "Sair da conta",
   "autoAddPillSheetGroup": "Adicionar grupos de cartela automaticamente",
-  "autoAddNewSheetAfterCurrentEnds": "Uma nova cartela será adicionada automaticamente quando o grupo atual de cartelas terminar",
+  "autoAddNewSheetAfterCurrentEnds": "Quando o grupo atual de cartela terminar, uma nova cartela será adicionada automaticamente",
   "accountSettings": "Configurações da conta",
   "linked": "Conectado",
   "unregistered": "Não cadastrado",

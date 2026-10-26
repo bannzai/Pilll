@@ -42,7 +42,7 @@
   "cancel": "Zrušit",
   "signOut": "Odhlásit se",
   "autoAddPillSheetGroup": "Automatické přidávání skupin blistrů",
-  "autoAddNewSheetAfterCurrentEnds": "Po dokončení aktuální skupiny pilulek se automaticky přidá nový list",
+  "autoAddNewSheetAfterCurrentEnds": "Po skončení aktuální skupiny blistrů se automaticky přidá nový blistr",
   "accountSettings": "Nastavení účtu",
   "linked": "Propojeno",
   "unregistered": "Neregistrováno",

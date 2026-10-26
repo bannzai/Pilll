@@ -42,7 +42,7 @@
   "cancel": "Ləğv edin",
   "signOut": "Hesabdan çıxın",
   "autoAddPillSheetGroup": "həb blister qruplarının avtomatik əlavə edilməsi",
-  "autoAddNewSheetAfterCurrentEnds": "Hazırkı həb vərəqi qrupu bitdikdə, yeni vərəq avtomatik əlavə edilir",
+  "autoAddNewSheetAfterCurrentEnds": "Cari həb blister qrupu bitdikdə, yeni blister avtomatik əlavə ediləcək",
   "accountSettings": "Hesab ayarları",
   "linked": "Bağlanmış",
   "unregistered": "Qeydiyyatsız",

@@ -42,7 +42,7 @@
   "cancel": "Prekliči",
   "signOut": "Odjavite se",
   "autoAddPillSheetGroup": "Samodejno dodajanje skupin ploščic",
-  "autoAddNewSheetAfterCurrentEnds": "Ko se trenutna skupina tablet konča, bo samodejno dodana nova plošča.",
+  "autoAddNewSheetAfterCurrentEnds": "Ko se trenutna skupina ploščic konča, se samodejno doda nova ploščica",
   "accountSettings": "Nastavitve računa",
   "linked": "Povezano",
   "unregistered": "Neregistriran",

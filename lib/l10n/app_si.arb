@@ -42,7 +42,7 @@
   "cancel": "අවලංගු කරන්න",
   "signOut": "ගිණුමෙන් ඉවත් වන්න",
   "autoAddPillSheetGroup": "පෙති කාඩ්පත කණ්ඩායම් ස්වයංක්‍රීයව එක් කිරීම",
-  "autoAddNewSheetAfterCurrentEnds": "වර්තමාන ගුලි තහඩු කණ්ඩායම අවසන් වූ විට, අලුත් තහඩුවක් ස්වයංක්‍රීයව එකතු කරනු ඇත",
+  "autoAddNewSheetAfterCurrentEnds": "දැනට ඇති පෙති කාඩ්පත සමූහය අවසන් වූ විට, නව කාඩ්පතක් ස්වයංක්‍රීයව එකතු වේ",
   "accountSettings": "ගිණුම් සැකසීම්",
   "linked": "සම්බන්ධිත",
   "unregistered": "අලේඛනය",

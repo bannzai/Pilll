@@ -42,7 +42,7 @@
   "cancel": "İptal",
   "signOut": "Çıkış yapın",
   "autoAddPillSheetGroup": "Blister gruplarını otomatik ekleme",
-  "autoAddNewSheetAfterCurrentEnds": "Şu anki hap paketi grubu bittiğinde, yeni paket otomatik olarak eklenir",
+  "autoAddNewSheetAfterCurrentEnds": "Mevcut blister grubu bittiğinde yeni bir blister otomatik olarak eklenir",
   "accountSettings": "Hesap Ayarları",
   "linked": "Bağlı",
   "unregistered": "Kayıtlı değil",
