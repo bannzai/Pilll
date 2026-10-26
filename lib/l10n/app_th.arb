@@ -226,7 +226,7 @@
   "existingAccountUsers": "มีบัญชีอยู่แล้วใช่ไหม เข้าสู่ระบบ",
   "selectTodayPillNumber": "วันนี้ ({todayString})\nโปรดแตะหมายเลขเม็ดยาที่จะทานหรือทานไปแล้วค่ะ",
   "notYetKnown": "ยังไม่ทราบ",
-  "pillForToday": "ยาเม็ดวัน{today}คือ",
+  "pillForToday": "ยาเม็ดที่ต้องทานในวันที่ {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "พรีวิว",
   "normal": "ปกติ",

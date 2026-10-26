@@ -226,7 +226,7 @@
   "existingAccountUsers": "Kas sul on juba konto? Logi sisse",
   "selectTodayPillNumber": "Täna ({todayString})\nPuuduta pilli numbrit, mille võtad või oled juba võtnud",
   "notYetKnown": "Ma ei tea veel",
-  "pillForToday": "{today}l võetav pill on",
+  "pillForToday": "Pill, mida võtta {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Eelvaade",
   "normal": "tavaline",

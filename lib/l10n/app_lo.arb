@@ -226,7 +226,7 @@
   "existingAccountUsers": "ມີບັນຊີແລ້ວບໍ? ກະລຸນາເຂົ້າລະບົບ",
   "selectTodayPillNumber": "ມື້ນີ້ ({todayString})\nກະລຸນາແຕະເລກຂອງເມັດຢາທີ່ຈະກິນ ຫຼືກິນແລ້ວ",
   "notYetKnown": "ຍັງບໍ່ຮູ້",
-  "pillForToday": "ຢາເມັດສຳລັບ {today} ແມ່ນ",
+  "pillForToday": "ຢາເມັດທີ່ຕ້ອງກິນໃນວັນທີ {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ດູກ່ອນ",
   "normal": "ປົກກະຕິ",

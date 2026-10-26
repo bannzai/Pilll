@@ -226,7 +226,7 @@
   "existingAccountUsers": "Una akaunti tayari? Tafadhali ingia",
   "selectTodayPillNumber": "Leo ({todayString})\nTafadhali gusa namba ya kidonge utakachomeza au ambacho tayari umemeza",
   "notYetKnown": "Bado sijui",
-  "pillForToday": "Vidonge vya {today} ni",
+  "pillForToday": "Kidonge cha kumeza tarehe {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Hakiki",
   "normal": "kawaida",

@@ -226,7 +226,7 @@
   "existingAccountUsers": "Onko sinulla jo tili? Kirjaudu sisään",
   "selectTodayPillNumber": "Tänään ({todayString})\nNapauta sen pillerin numeroa, jonka aiot ottaa tai olet jo ottanut",
   "notYetKnown": "En tiedä vielä",
-  "pillForToday": "{today}n pilleri:",
+  "pillForToday": "Pilleri päivälle {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "esikatselu",
   "normal": "Normaali",

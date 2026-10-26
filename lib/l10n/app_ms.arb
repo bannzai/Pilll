@@ -226,7 +226,7 @@
   "existingAccountUsers": "Sudah ada akaun? Log masuk",
   "selectTodayPillNumber": "Hari ini ({todayString})\nSila ketik nombor pil yang akan atau sudah anda ambil",
   "notYetKnown": "Belum tahu",
-  "pillForToday": "Pil untuk {today} ialah",
+  "pillForToday": "Pil untuk diambil pada {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pratonton",
   "normal": "Normal",

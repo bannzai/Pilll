@@ -226,7 +226,7 @@
   "existingAccountUsers": "У вас уже есть аккаунт? Войдите",
   "selectTodayPillNumber": "Сегодня ({todayString})\nНажмите на номер таблетки, которую собираетесь принять или уже приняли",
   "notYetKnown": "Пока не знаю",
-  "pillForToday": "Таблетки на {today}:",
+  "pillForToday": "Таблетка для приёма {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Просмотр",
   "normal": "Нормальное",

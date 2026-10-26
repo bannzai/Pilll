@@ -226,7 +226,7 @@
   "existingAccountUsers": "이미 계정이 있나요? 로그인해요",
   "selectTodayPillNumber": "오늘 ({todayString})\n먹을 예정이거나 이미 먹은 알약의 번호를 탭해 주세요",
   "notYetKnown": "아직 모르겠어요",
-  "pillForToday": "{today}에 복용할 피임약은",
+  "pillForToday": "{today}에 먹을 피임약",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "미리보기",
   "normal": "정상",

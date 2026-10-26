@@ -226,7 +226,7 @@
   "existingAccountUsers": "क्या आपका पहले से खाता है? साइन इन करें",
   "selectTodayPillNumber": "आज ({todayString})\nजिस गोली को लेना है या ले लिया गया है, उसके नंबर पर टैप करें",
   "notYetKnown": "अभी पता नहीं",
-  "pillForToday": "{today} को लेने वाली गोली",
+  "pillForToday": "{today} को ली जाने वाली गोली",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "पूर्वावलोकन",
   "normal": "सामान्य",

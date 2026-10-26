@@ -226,7 +226,7 @@
   "existingAccountUsers": "已有账号？登录",
   "selectTodayPillNumber": "今天（{todayString}）\n请点击今天要服用或已经服用的药片编号",
   "notYetKnown": "还不确定",
-  "pillForToday": "{today}要服用的药片是",
+  "pillForToday": "{today}要服用的药片",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "预览",
   "normal": "正常",

@@ -226,7 +226,7 @@
   "existingAccountUsers": "Už máte účet? Prihláste sa",
   "selectTodayPillNumber": "Dnes ({todayString})\nŤuknite na číslo tabletky, ktorú užijete alebo ste už užili",
   "notYetKnown": "Zatiaľ neviem",
-  "pillForToday": "Pilulka na {today} je",
+  "pillForToday": "Tabletka, ktorú treba užiť {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Náhľad",
   "normal": "normálny",

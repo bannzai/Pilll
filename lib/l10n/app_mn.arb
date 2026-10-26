@@ -226,7 +226,7 @@
   "existingAccountUsers": "Та бүртгэлтэй юу? Нэвтэрнэ үү",
   "selectTodayPillNumber": "Өнөөдөр ({todayString})\nУух гэж байгаа эсвэл уусан эмийн дугаарыг дарна уу",
   "notYetKnown": "Одоохондоо мэдэхгүй байна",
-  "pillForToday": "{today}-д уух эм нь",
+  "pillForToday": "{today}-нд уух эм",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Урьдчилан үзэх",
   "normal": "энгийн",

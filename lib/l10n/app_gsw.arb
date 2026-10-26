@@ -226,7 +226,7 @@
   "existingAccountUsers": "Häsch scho es Konto? Mäld di aa",
   "selectTodayPillNumber": "Hüt ({todayString})\nTipp uf d Nummere vo de Pille, wo du hüt nimmsch oder scho gnoh hesch",
   "notYetKnown": "Ich weiss es no nöd",
-  "pillForToday": "D'Pille am {today}:",
+  "pillForToday": "D Pille zum Iinäh am {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vorschau",
   "normal": "normal",

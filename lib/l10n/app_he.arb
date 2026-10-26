@@ -226,7 +226,7 @@
   "existingAccountUsers": "יש כבר חשבון? כניסה לחשבון",
   "selectTodayPillNumber": "היום ({todayString})\nללחוץ על מספר הגלולה שמיועדת לנטילה או שכבר ניטלה",
   "notYetKnown": "עדיין לא ידוע",
-  "pillForToday": "הגלולה ל{today}",
+  "pillForToday": "הגלולה לנטילה ב־{today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "תצוגה מקדימה",
   "normal": "רגיל",

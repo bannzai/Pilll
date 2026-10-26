@@ -226,7 +226,7 @@
   "existingAccountUsers": "Har du redan ett konto? Logga in",
   "selectTodayPillNumber": "I dag ({todayString})\nTryck på numret för pillret du ska ta eller redan har tagit",
   "notYetKnown": "Jag vet inte än",
-  "pillForToday": "Piller för {today}:",
+  "pillForToday": "P-pillret att ta {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Förhandsvisning",
   "normal": "Normal",

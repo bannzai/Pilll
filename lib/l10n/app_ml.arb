@@ -226,7 +226,7 @@
   "existingAccountUsers": "ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യൂ",
   "selectTodayPillNumber": "ഇന്ന് ({todayString})\nകഴിക്കാനിരിക്കുന്നതോ ഇതിനകം കഴിച്ചതോ ആയ ഗുളികയുടെ നമ്പറിൽ തൊടൂ",
   "notYetKnown": "ഇതുവരെ അറിയില്ല",
-  "pillForToday": "{today}ൽ കഴിക്കേണ്ട മാത്ര",
+  "pillForToday": "{today} ന് കഴിക്കേണ്ട ഗുളിക",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "പ്രിവ്യൂ",
   "normal": "സാധാരണ",

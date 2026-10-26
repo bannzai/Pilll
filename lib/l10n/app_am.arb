@@ -226,7 +226,7 @@
   "existingAccountUsers": "አስቀድሞ መለያ ካለዎት፣ ይግቡ",
   "selectTodayPillNumber": "ዛሬ ({todayString})\nየሚወስዱትን ወይም የወሰዱትን ክኒን ቁጥር ይንኩ",
   "notYetKnown": "ገና አላውቅም",
-  "pillForToday": "{today}ላይ የሚወሰደው ክኒን",
+  "pillForToday": "በ{today} የሚወሰድ ክኒን",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ቅድመ እይታ",
   "normal": "መደበኛ",

@@ -226,7 +226,7 @@
   "existingAccountUsers": "Jau turite paskyrą? Prisijunkite",
   "selectTodayPillNumber": "Šiandien ({todayString})\nPalieskite tabletės, kurią vartosite arba jau pavartojote, numerį",
   "notYetKnown": "Kol kas nežinau",
-  "pillForToday": "{today} vartotinos tabletes",
+  "pillForToday": "Tabletė, kurią reikia išgerti {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Peržiūra",
   "normal": "Normalus",

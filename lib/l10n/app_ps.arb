@@ -226,7 +226,7 @@
   "existingAccountUsers": "له مخکې حساب لرئ؟ ننوځئ",
   "selectTodayPillNumber": "نن ({todayString})\nمهرباني وکړئ د هغې ګولۍ پر شمېره ټېپ وکړئ چې اخلئ یا مو لا مخکې اخیستې ده",
   "notYetKnown": "لا تر اوسه نه پوهېږم",
-  "pillForToday": "د {today} ګولۍ:",
+  "pillForToday": "هغه ګولۍ چې په {today} باید واخیستل شي",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "لیدنه",
   "normal": "معمولي",

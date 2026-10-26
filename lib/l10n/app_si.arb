@@ -226,7 +226,7 @@
   "existingAccountUsers": "ඔබට දැනටමත් ගිණුමක් තිබේද? පිවිසෙන්න",
   "selectTodayPillNumber": "අද ({todayString})\nඔබ ගන්නා හෝ දැනටමත් ගෙන ඇති පෙත්තේ අංකය කරුණාකර තට්ටු කරන්න",
   "notYetKnown": "තවම දන්නේ නැහැ",
-  "pillForToday": "{today}ට ගන්න පෙති",
+  "pillForToday": "{today} දින ගත යුතු පෙත්ත",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "පෙරදසුන",
   "normal": "සාමාන්‍ය",

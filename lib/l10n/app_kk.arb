@@ -226,7 +226,7 @@
   "existingAccountUsers": "Есептік жазбаңыз бар ма? Кіріңіз",
   "selectTodayPillNumber": "Бүгін ({todayString})\nІшетін немесе ішіп қойған таблетканың нөмірін түртіңіз",
   "notYetKnown": "Әзірге білмеймін",
-  "pillForToday": "{today} күні ішетін таблетка",
+  "pillForToday": "{today} күні қабылдайтын таблетка",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "көрініс",
   "normal": "Қалыпты",

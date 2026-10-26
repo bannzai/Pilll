@@ -226,7 +226,7 @@
   "existingAccountUsers": "Već imate račun? Prijavite se",
   "selectTodayPillNumber": "Danas ({todayString})\nDodirnite broj pilule koju ćete uzeti ili ste je već uzeli",
   "notYetKnown": "Još ne znam",
-  "pillForToday": "Pilule za {today}:",
+  "pillForToday": "Pilula koju trebate uzeti {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pregled",
   "normal": "normalno",

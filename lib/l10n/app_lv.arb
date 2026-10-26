@@ -226,7 +226,7 @@
   "existingAccountUsers": "Jums jau ir konts? Piesakieties",
   "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties tās tabletes numuram, kuru lietosiet vai jau esat lietojuši",
   "notYetKnown": "Pagaidām nezinu",
-  "pillForToday": "{today} dzert tabletes ir",
+  "pillForToday": "Tablete, kas jālieto {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Priekšskatījums",
   "normal": "Normāls",

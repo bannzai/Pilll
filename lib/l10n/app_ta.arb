@@ -226,7 +226,7 @@
   "existingAccountUsers": "ஏற்கனவே கணக்கு உள்ளதா? உள்நுழையுங்கள்",
   "selectTodayPillNumber": "இன்று ({todayString})\nநீங்கள் எடுத்துக்கொள்ளவிருக்கும் அல்லது ஏற்கனவே எடுத்துக்கொண்ட மாத்திரையின் எண்ணைத் தட்டுங்கள்",
   "notYetKnown": "இன்னும் தெரியவில்லை",
-  "pillForToday": "{today}அன்று எடுக்க வேண்டிய மாத்திரை",
+  "pillForToday": "{today} அன்று எடுத்துக்கொள்ள வேண்டிய மாத்திரை",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "முன்னோட்டம்",
   "normal": "சாதாரண",

@@ -226,7 +226,7 @@
   "existingAccountUsers": "Zaten hesabınız var mı? Giriş yapın",
   "selectTodayPillNumber": "Bugün ({todayString})\nAlacağınız veya aldığınız hapın numarasına dokunun",
   "notYetKnown": "Henüz bilmiyorum",
-  "pillForToday": "{today} günü alınacak hap",
+  "pillForToday": "{today} tarihinde alacağınız hap",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Önizleme",
   "normal": "Normal",

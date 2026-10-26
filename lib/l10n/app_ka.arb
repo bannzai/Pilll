@@ -226,7 +226,7 @@
   "existingAccountUsers": "უკვე გაქვთ ანგარიში? შესვლა",
   "selectTodayPillNumber": "დღეს ({todayString})\nშეეხეთ იმ აბის ნომერს, რომელსაც მიიღებთ ან უკვე მიიღეთ",
   "notYetKnown": "ჯერ არ ვიცი",
-  "pillForToday": "{today}-ზე მისაღები ტაბლეტები",
+  "pillForToday": "{today}-ს მისაღები აბი",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "პრევიუ",
   "normal": "ნორმალური",

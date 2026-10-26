@@ -226,7 +226,7 @@
   "existingAccountUsers": "May account na kayo? Mag-sign in",
   "selectTodayPillNumber": "Ngayon ({todayString})\nPaki-tap po ang numero ng pill na iinumin ninyo o nainom na ninyo",
   "notYetKnown": "Hindi ko pa po alam",
-  "pillForToday": "Ang pill para sa {today} ay",
+  "pillForToday": "Pildoras na iinumin ninyo sa {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Paunang-tingin",
   "normal": "Normal",

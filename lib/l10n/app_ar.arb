@@ -226,7 +226,7 @@
   "existingAccountUsers": "لديكِ حساب بالفعل؟ سجلي الدخول",
   "selectTodayPillNumber": "اليوم ({todayString})\nاضغطي على رقم الحبة التي ستتناولينها أو تناولتِها",
   "notYetKnown": "لا أعرف بعد",
-  "pillForToday": "أقراص يوم {today}",
+  "pillForToday": "الحبة المقرر تناولها في {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "معاينة",
   "normal": "عادي",

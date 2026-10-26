@@ -226,7 +226,7 @@
   "existingAccountUsers": "Вече имате профил? Влезте",
   "selectTodayPillNumber": "Днес ({todayString})\nДокоснете номера на хапчето, което ще вземете или вече сте взели",
   "notYetKnown": "Все още не знам",
-  "pillForToday": "Хапчето за {today}",
+  "pillForToday": "Хапчето за прием на {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Преглед",
   "normal": "нормален",

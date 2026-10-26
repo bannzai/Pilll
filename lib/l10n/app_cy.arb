@@ -226,7 +226,7 @@
   "existingAccountUsers": "Oes gennych gyfrif eisoes? Mewngofnodwch",
   "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen rydych chi am ei chymryd neu wedi ei chymryd",
   "notYetKnown": "Ddim yn gwybod eto",
-  "pillForToday": "Y bilsen ar gyfer {today}",
+  "pillForToday": "Y bilsen i'w chymryd ar {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "rhagolwg",
   "normal": "arferol",

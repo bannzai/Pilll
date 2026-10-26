@@ -226,7 +226,7 @@
   "existingAccountUsers": "Έχετε ήδη λογαριασμό; Συνδεθείτε",
   "selectTodayPillNumber": "Σήμερα ({todayString})\nΠατήστε τον αριθμό του χαπιού που θα πάρετε ή έχετε ήδη πάρει",
   "notYetKnown": "Δεν γνωρίζω ακόμα",
-  "pillForToday": "Το χάπι για τις {today} είναι",
+  "pillForToday": "Το χάπι για τις {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Προεπισκόπηση",
   "normal": "κανονικό",

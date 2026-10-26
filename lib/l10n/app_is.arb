@@ -226,7 +226,7 @@
   "existingAccountUsers": "Ertu nú þegar með aðgang? Skráðu þig inn",
   "selectTodayPillNumber": "Í dag ({todayString})\nPikkaðu á númer pillunnar sem þú ætlar að taka eða hefur þegar tekið",
   "notYetKnown": "Ég veit það ekki enn",
-  "pillForToday": "Pilla fyrir {today} er",
+  "pillForToday": "Pillan sem á að taka {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Forskoðun",
   "normal": "Venjulegt",

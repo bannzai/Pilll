@@ -226,7 +226,7 @@
   "existingAccountUsers": "আপোনাৰ ইতিমধ্যে একাউণ্ট আছে নেকি? লগ ইন কৰক",
   "selectTodayPillNumber": "আজি ({todayString})\nআপুনি খাবলগীয়া বা খোৱা পিলৰ নম্বৰটোত টেপ কৰক",
   "notYetKnown": "এতিয়াও নাজানো",
-  "pillForToday": "{today}ত সেৱন কৰিবলগীয়া পিল হ'ল",
+  "pillForToday": "{today} তাৰিখে খাবলগীয়া পিলটো",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}নং বটি",
   "preview": "পূৰ্বদৰ্শন",
   "normal": "সাধাৰণ",

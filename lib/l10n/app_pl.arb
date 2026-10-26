@@ -226,7 +226,7 @@
   "existingAccountUsers": "Masz już konto? Zaloguj się",
   "selectTodayPillNumber": "Dzisiaj ({todayString})\nDotknij numeru tabletki, którą dziś weźmiesz lub już została przyjęta",
   "notYetKnown": "Jeszcze nie wiem",
-  "pillForToday": "Pigułka na {today}:",
+  "pillForToday": "Tabletka do przyjęcia {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}. tabletka",
   "preview": "Podgląd",
   "normal": "normalne",

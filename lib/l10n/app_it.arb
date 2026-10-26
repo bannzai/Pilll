@@ -226,7 +226,7 @@
   "existingAccountUsers": "Hai già un account? Accedi",
   "selectTodayPillNumber": "Oggi ({todayString})\nTocca il numero della pillola che prenderai o hai già preso",
   "notYetKnown": "Non lo so ancora",
-  "pillForToday": "La pillola per {today} è",
+  "pillForToday": "La pillola da prendere il {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Anteprima",
   "normal": "Normale",

@@ -226,7 +226,7 @@
   "existingAccountUsers": "Hisobingiz bormi? Tizimga kiring",
   "selectTodayPillNumber": "Bugun ({todayString})\nIchmoqchi boʻlgan yoki allaqachon ichgan tabletkangiz raqamiga bosing",
   "notYetKnown": "Hali bilmayman",
-  "pillForToday": "{today} kuni qabul qilinadigan dorilar",
+  "pillForToday": "{today} kuni qabul qilinadigan tabletka",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Oldindan ko'rish",
   "normal": "oddiy",

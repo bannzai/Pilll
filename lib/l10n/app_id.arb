@@ -226,7 +226,7 @@
   "existingAccountUsers": "Sudah punya akun? Masuk",
   "selectTodayPillNumber": "Hari ini ({todayString})\nKetuk nomor pil yang akan Anda minum atau sudah diminum",
   "notYetKnown": "Belum tahu",
-  "pillForToday": "Pil untuk {today}",
+  "pillForToday": "Pil yang diminum pada {today}",
   "todayPillNumber": "Pil ke-{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pratinjau",
   "normal": "Normal",

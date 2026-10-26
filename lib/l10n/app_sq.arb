@@ -226,7 +226,7 @@
   "existingAccountUsers": "Keni tashmë një llogari? Hyni",
   "selectTodayPillNumber": "Sot ({todayString})\nPrekni numrin e pilulës që do të merrni ose e keni marrë tashmë",
   "notYetKnown": "Ende nuk e di",
-  "pillForToday": "Pillat për t'u marrë në {today}",
+  "pillForToday": "Pilula për t’u marrë më {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Parashikim",
   "normal": "Normal",

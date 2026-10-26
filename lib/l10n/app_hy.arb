@@ -226,7 +226,7 @@
   "existingAccountUsers": "Արդեն հաշիվ ունե՞ք։ Մուտք գործեք",
   "selectTodayPillNumber": "Այսօր ({todayString})\nՀպեք այն հաբի համարին, որը պատրաստվում եք ընդունել կամ արդեն ընդունել եք",
   "notYetKnown": "Դեռ չգիտեմ",
-  "pillForToday": "{today}-ին ընդունելիք հաբերը",
+  "pillForToday": "{today}-ին ընդունելու հաբը",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "նախադիտում",
   "normal": "սովորական",

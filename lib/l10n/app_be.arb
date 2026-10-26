@@ -226,7 +226,7 @@
   "existingAccountUsers": "У вас ужо ёсць уліковы запіс? Увайдзіце",
   "selectTodayPillNumber": "Сёння ({todayString})\nНацісніце на нумар пігулкі, якую збіраецеся прыняць або ўжо прынялі",
   "notYetKnown": "Пакуль не ведаю",
-  "pillForToday": "Таблетка на {today}:",
+  "pillForToday": "Пігулка для прыёму {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "перадпрагляд",
   "normal": "звычайны",

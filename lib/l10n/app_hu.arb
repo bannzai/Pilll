@@ -226,7 +226,7 @@
   "existingAccountUsers": "Már van fiókod? Jelentkezz be",
   "selectTodayPillNumber": "Ma ({todayString})\nKoppints annak a tablettának a számára, amelyet ma szedsz vagy már beszedtél",
   "notYetKnown": "Még nem tudom",
-  "pillForToday": "A {today} napján szedendő pirula:",
+  "pillForToday": "A {today} napján szedendő tabletta",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Előnézet",
   "normal": "normális",

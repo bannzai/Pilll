@@ -226,7 +226,7 @@
   "existingAccountUsers": "Xa tes unha conta? Inicia sesión",
   "selectTodayPillNumber": "Hoxe ({todayString})\nToca o número da pílula que vas tomar ou que xa tomaches",
   "notYetKnown": "Aínda non o sei",
-  "pillForToday": "A píldora para o {today}:",
+  "pillForToday": "A pílula que toca tomar o {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vista previa",
   "normal": "Normal",

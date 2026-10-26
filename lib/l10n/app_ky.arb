@@ -226,7 +226,7 @@
   "existingAccountUsers": "Аккаунтуңуз барбы? Кириңиз",
   "selectTodayPillNumber": "Бүгүн ({todayString})\nИче турган же ичип койгон таблетканын номерин басыңыз",
   "notYetKnown": "Азырынча билбейм",
-  "pillForToday": "{today} күнү ичилүүчү дары:",
+  "pillForToday": "{today} күнү иче турган таблетка",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Алдын ала көрүү",
   "normal": "кадимки",
