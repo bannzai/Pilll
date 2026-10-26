@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Rencana tanggal mulai minum pil lagi (opsional)",
   "plannedResumeDateNotSet": "Belum ditentukan",
   "selectPlannedResumeDate": "Pilih tanggal rencana mulai minum pil lagi",
-  "pauseEndDateLimitIsToday": "Tanggal berakhir hanya dapat diatur sampai hari ini",
+  "pauseEndDateLimitIsToday": "Tanggal selesai paling lambat hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sampai hari yang tidak tumpang tindih dengan jeda berikutnya ({date}–)",
   "pauseStartDateLimit": "Tanggal mulai dapat dipilih hingga {date}",
   "initialSettingAskYazFlex": "Apakah Anda menggunakan Yaz Flex?",

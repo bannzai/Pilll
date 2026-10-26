@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "预计恢复服药日期（选填）",
   "plannedResumeDateNotSet": "尚未设置",
   "selectPlannedResumeDate": "选择计划恢复服药的日期",
-  "pauseEndDateLimitIsToday": "结束日期只能设置到今天",
+  "pauseEndDateLimitIsToday": "结束日期最晚可选今天",
   "pauseEndDateLimitBeforeNextPause": "截至不与下一次休药期（{date}〜）重叠的日期",
   "pauseStartDateLimit": "开始日期最晚可选至{date}",
   "initialSettingAskYazFlex": "您正在使用优思明灵活型吗？",

@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Таблетканы қайта қабылдаудың жоспарланған күні (міндетті емес)",
   "plannedResumeDateNotSet": "Әлі белгіленбеген",
   "selectPlannedResumeDate": "Таблетканы қайта қабылдауды жоспарлаған күнді таңдаңыз",
-  "pauseEndDateLimitIsToday": "Аяқталу күнін ең көбі бүгінге дейін ғана таңдауға болады",
+  "pauseEndDateLimitIsToday": "Аяқталу күні бүгіннен кеш болмауы керек",
   "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date}〜) қабаттаспайтын күнге дейін",
   "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
   "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",

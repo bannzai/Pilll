@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Beplande datum om weer die pil te neem (opsioneel)",
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die datum waarop jy weer jou pil gaan drink",
-  "pauseEndDateLimitIsToday": "Die einddatum is tot vandag",
+  "pauseEndDateLimitIsToday": "Die einddatum kan nie later as vandag wees nie",
   "pauseEndDateLimitBeforeNextPause": "Tot en met die dag voordat dit met die volgende pouse ({date}–) oorvleuel",
   "pauseStartDateLimit": "Die begindatum kan tot {date} gekies word",
   "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",

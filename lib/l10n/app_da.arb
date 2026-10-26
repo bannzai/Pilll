@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Planlagt dato for at tage p-pillen igen (valgfrit)",
   "plannedResumeDateNotSet": "Ikke angivet",
   "selectPlannedResumeDate": "Vælg datoen, hvor du vil begynde på p-pillen igen",
-  "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
+  "pauseEndDateLimitIsToday": "Slutdatoen kan senest være i dag",
   "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",
   "pauseStartDateLimit": "Startdatoen kan vælges til og med {date}",
   "initialSettingAskYazFlex": "Bruger du Yaz Flex?",

@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Таблетканы кайра иче баштоонун пландалган күнү (милдеттүү эмес)",
   "plannedResumeDateNotSet": "Азырынча белгилене элек",
   "selectPlannedResumeDate": "Таблетканы кайра иче баштай турган күндү тандаңыз",
-  "pauseEndDateLimitIsToday": "Аяктоо күнүн бүгүнкү күнгө чейин гана тандаса болот",
+  "pauseEndDateLimitIsToday": "Аяктоо күнү бүгүнтөн кеч болбошу керек",
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",
   "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",
   "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",

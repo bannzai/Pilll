@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Pilula berriro hartzen hasteko aurreikusitako eguna (aukerakoa)",
   "plannedResumeDateNotSet": "Zehaztu gabe",
   "selectPlannedResumeDate": "Aukeratu pilula berriro hartzeko aurreikusitako eguna",
-  "pauseEndDateLimitIsToday": "Amaiera-data gaur arte baino ezin da ezarri",
+  "pauseEndDateLimitIsToday": "Amaiera-data, beranduenez, gaurkoa izan daiteke",
   "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}〜) gainjartzen ez den egunera arte",
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke",
   "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",

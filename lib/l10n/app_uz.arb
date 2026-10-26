@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Tabletkani qayta qabul qilishni boshlash uchun rejalashtirilgan sana (ixtiyoriy)",
   "plannedResumeDateNotSet": "Hali belgilanmagan",
   "selectPlannedResumeDate": "Tabletkani qayta qabul qilishni rejalashtirgan sanani tanlang",
-  "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
+  "pauseEndDateLimitIsToday": "Tugash sanasi eng kechi bugun bo‘lishi mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",
   "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",
   "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",

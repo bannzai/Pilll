@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Hapı yeniden almaya başlamayı planladığınız tarih (isteğe bağlı)",
   "plannedResumeDateNotSet": "Henüz belirlenmedi",
   "selectPlannedResumeDate": "Hapı yeniden almaya başlamayı planladığınız tarihi seçin",
-  "pauseEndDateLimitIsToday": "Bitiş tarihi yalnızca bugüne kadar ayarlanabilir",
+  "pauseEndDateLimitIsToday": "Bitiş tarihi en geç bugün olabilir",
   "pauseEndDateLimitBeforeNextPause": "Sonraki ara ({date}–) ile çakışmayan güne kadar",
   "pauseStartDateLimit": "Başlangıç tarihi en geç {date} olarak seçilebilir",
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",

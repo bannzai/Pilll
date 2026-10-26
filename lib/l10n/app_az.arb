@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Həbi yenidən qəbul etməyə başlama tarixi (istəyə bağlı)",
   "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Həbi yenidən qəbul edəcəyiniz tarixi seçin",
-  "pauseEndDateLimitIsToday": "Bitmə tarixi yalnız bu günə qədər seçilə bilər",
+  "pauseEndDateLimitIsToday": "Bitiş tarixi ən gec bu gün ola bilər",
   "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ({date}〜) ilə üst-üstə düşməyən günədək",
   "pauseStartDateLimit": "Başlanğıc tarixi ən gec {date} seçilə bilər",
   "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",

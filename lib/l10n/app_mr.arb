@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "गोळी पुन्हा घेण्यास सुरुवात करण्याची नियोजित तारीख (ऐच्छिक)",
   "plannedResumeDateNotSet": "अद्याप ठरवलेली नाही",
   "selectPlannedResumeDate": "गोळी पुन्हा घेण्याची नियोजित तारीख निवडा",
-  "pauseEndDateLimitIsToday": "समाप्तीची तारीख फक्त आजपर्यंतच सेट करता येते",
+  "pauseEndDateLimitIsToday": "समाप्तीची तारीख आजपर्यंतच निवडता येईल",
   "pauseEndDateLimitBeforeNextPause": "पुढील विश्रांती ({date}〜) शी जुळत नाही त्या दिवसापर्यंत",
   "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंत निवडता येईल",
   "initialSettingAskYazFlex": "तुम्ही Yaz Flex वापरत आहात का?",

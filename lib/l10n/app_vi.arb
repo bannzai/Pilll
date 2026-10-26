@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Ngày dự định uống thuốc trở lại (không bắt buộc)",
   "plannedResumeDateNotSet": "Chưa thiết lập",
   "selectPlannedResumeDate": "Chọn ngày dự kiến uống thuốc trở lại",
-  "pauseEndDateLimitIsToday": "Ngày kết thúc chỉ có thể đặt đến hôm nay",
+  "pauseEndDateLimitIsToday": "Ngày kết thúc muộn nhất là hôm nay",
   "pauseEndDateLimitBeforeNextPause": "Đến ngày không bị trùng với kỳ nghỉ tiếp theo ({date}–)",
   "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}",
   "initialSettingAskYazFlex": "Bạn có đang sử dụng Yaz Flex không?",

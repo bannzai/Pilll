@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "ဆေးပြားကို ပြန်လည်သောက်ရန် စီစဉ်ထားသော ရက်စွဲ (ရွေးချယ်နိုင်သည်)",
   "plannedResumeDateNotSet": "မသတ်မှတ်ရသေးပါ",
   "selectPlannedResumeDate": "ဆေးပြားကို ပြန်သောက်ရန် စီစဉ်ထားသည့် ရက်ကို ရွေးပါ",
-  "pauseEndDateLimitIsToday": "ပြီးဆုံးရက်ကို ယနေ့အထိသာ သတ်မှတ်နိုင်ပါသည်",
+  "pauseEndDateLimitIsToday": "ပြီးဆုံးမည့်ရက်ကို ဒီနေ့အထိသာ ရွေးနိုင်ပါတယ်",
   "pauseEndDateLimitBeforeNextPause": "နောက်လာမည့်နားရက် ({date}〜) နှင့် မထပ်သည့်နေ့အထိ",
   "pauseStartDateLimit": "စတင်ရက်ကို {date} အထိ ရွေးချယ်နိုင်သည်",
   "initialSettingAskYazFlex": "သင် Yaz Flex ကို အသုံးပြုနေပါသလား?",

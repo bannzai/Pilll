@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Usuku oluhleliwe lokuphinda uqale ukuphuza iphilisi (uyazikhethela)",
   "plannedResumeDateNotSet": "Akukakasethwa",
   "selectPlannedResumeDate": "Sicela ukhethe usuku ohlela ukuqala ngalo ukuphuza iphilisi futhi",
-  "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
+  "pauseEndDateLimitIsToday": "Usuku lokuphela lungaba yinamuhla noma ngaphambi kwanamuhla",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
   "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
   "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",

@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "วันที่คาดว่าจะกลับมาทานยา (ไม่บังคับ)",
   "plannedResumeDateNotSet": "ยังไม่ได้กำหนด",
   "selectPlannedResumeDate": "เลือกวันที่วางแผนจะกลับมาทานยาอีกครั้ง",
-  "pauseEndDateLimitIsToday": "สามารถตั้งวันที่สิ้นสุดได้ถึงวันนี้เท่านั้น",
+  "pauseEndDateLimitIsToday": "เลือกวันสิ้นสุดได้ถึงวันนี้เท่านั้นค่ะ",
   "pauseEndDateLimitBeforeNextPause": "จนถึงวันที่ไม่ทับกับช่วงพักครั้งถัดไป ({date}〜)",
   "pauseStartDateLimit": "เลือกวันที่เริ่มต้นได้ถึง {date}",
   "initialSettingAskYazFlex": "คุณใช้ Yaz Flex อยู่ใช่ไหม",

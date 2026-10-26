@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania pigułki (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę ponownego rozpoczęcia przyjmowania pigułki",
-  "pauseEndDateLimitIsToday": "Datę zakończenia można ustawić tylko do dzisiaj",
+  "pauseEndDateLimitIsToday": "Data zakończenia może przypadać najpóźniej na dziś",
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie nakłada się z następną przerwą ({date}–)",
   "pauseStartDateLimit": "Datę rozpoczęcia można wybrać najpóźniej do {date}",
   "initialSettingAskYazFlex": "Czy stosujesz Yaz Flex?",

@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ (ଇଚ୍ଛାଧୀନ)",
   "plannedResumeDateNotSet": "ଏପର୍ଯ୍ୟନ୍ତ ନିର୍ଦ୍ଧାରଣ ହୋଇନାହିଁ",
   "selectPlannedResumeDate": "ପୁଣି ବଟିକା ଖାଇବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ ବାଛନ୍ତୁ",
-  "pauseEndDateLimitIsToday": "ଶେଷ ତାରିଖ କେବଳ ଆଜି ପର୍ଯ୍ୟନ୍ତ ସେଟ୍ କରାଯାଇପାରିବ",
+  "pauseEndDateLimitIsToday": "ଶେଷ ତାରିଖ ଭାବେ ଆଜି ପର୍ଯ୍ୟନ୍ତ ହିଁ ବାଛିପାରିବେ",
   "pauseEndDateLimitBeforeNextPause": "ପରବର୍ତ୍ତୀ ବିରତି ({date}〜) ସହିତ ମିଳିନଥିବା ଦିନ ପର୍ଯ୍ୟନ୍ତ",
   "pauseStartDateLimit": "ଆରମ୍ଭ ତାରିଖ {date} ପର୍ଯ୍ୟନ୍ତ ବାଛି ପାରିବେ",
   "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",

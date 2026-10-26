@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Data prevista per riprendere la pillola (facoltativa)",
   "plannedResumeDateNotSet": "Non ancora impostata",
   "selectPlannedResumeDate": "Seleziona la data prevista per riprendere la pillola",
-  "pauseEndDateLimitIsToday": "La data di fine può essere impostata solo fino a oggi",
+  "pauseEndDateLimitIsToday": "La data di fine può essere al massimo oggi",
   "pauseEndDateLimitBeforeNextPause": "Fino al giorno che non si sovrappone alla pausa successiva ({date}–)",
   "pauseStartDateLimit": "La data di inizio può essere selezionata fino al {date}",
   "initialSettingAskYazFlex": "Stai usando Yaz Flex?",

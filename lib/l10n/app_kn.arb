@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "ಮಾತ್ರೆಗಳನ್ನು ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಯೋಜಿಸಿದ ದಿನಾಂಕ (ಐಚ್ಛಿಕ)",
   "plannedResumeDateNotSet": "ಇನ್ನೂ ನಿಗದಿಪಡಿಸಿಲ್ಲ",
   "selectPlannedResumeDate": "ಮಾತ್ರೆ ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಯೋಜಿಸಿರುವ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-  "pauseEndDateLimitIsToday": "ಅಂತ್ಯದ ದಿನಾಂಕವನ್ನು ಇಂದು ತನಕ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
+  "pauseEndDateLimitIsToday": "ಮುಕ್ತಾಯ ದಿನಾಂಕವಾಗಿ ಇಂದಿನವರೆಗೆ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ ({date}〜) ಜೊತೆ ಹೊಮ್ಮಿಸದ ದಿನದವರೆಗೆ",
   "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",

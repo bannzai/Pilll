@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Planuojama tabletės vartojimo atnaujinimo data (nebūtina)",
   "plannedResumeDateNotSet": "Dar nenustatyta",
   "selectPlannedResumeDate": "Pasirinkite planuojamą dieną, kada vėl pradėsite vartoti piliulę",
-  "pauseEndDateLimitIsToday": "Pabaigos datą galima nustatyti tik iki šiandienos",
+  "pauseEndDateLimitIsToday": "Pabaigos data gali būti ne vėlesnė kaip šiandien",
   "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita pertrauka ({date}–)",
   "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",

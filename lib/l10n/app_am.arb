@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ የሚቀጥሉበትን ቀን ይምረጡ",
-  "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
+  "pauseEndDateLimitIsToday": "የመጨረሻ ቀን ከዛሬ በላይ መሆን አይችልም",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
   "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",
   "initialSettingAskYazFlex": "Yaz Flex ነው የምትወስዱት?",

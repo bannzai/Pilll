@@ -565,7 +565,7 @@
   "plannedResumeDateOptional": "Planong petsa ng muling pag-inom ng pildoras (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",
   "selectPlannedResumeDate": "Piliin ang petsang balak ninyong muling uminom ng pildoras",
-  "pauseEndDateLimitIsToday": "Maaari lang itakda ang petsa ng pagtatapos hanggang ngayong araw",
+  "pauseEndDateLimitIsToday": "Hanggang ngayon lamang maaaring itakda ang petsa ng pagtatapos",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sumasapaw sa susunod na pahinga ({date}–)",
   "pauseStartDateLimit": "Maaaring piliin ang petsa ng pagsisimula hanggang {date}",
   "initialSettingAskYazFlex": "Gumagamit ka ba ng Yaz Flex?",
