@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pillole + 4 pillole per la pausa",
   "choosePillType": "Scegli il tipo di pillola",
   "notificationForNotTakenPeriod": "Notifica per il periodo di {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Con le notifiche disattivate, anche le registrazioni di assunzione del periodo {pillSheetPillSheetTypeNotTakenWord} vengono aggiunte automaticamente",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Quando le notifiche sono disattivate, viene creato automaticamente anche un registro delle assunzioni per il periodo {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Richiesta di collaborazione per questionario post-cancellazione",
   "pilllDescription": "Pilll - App promemoria dedicata all'assunzione della pillola",
   "reachedMaximumCountOfReminderTimes": "Hai raggiunto il limite massimo di registrazioni. Ti preghiamo di limitare a {ReminderTimeMaximumCount} promemoria.",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pille + 4 pille pouse",
   "choosePillType": "Kies die soort pil",
   "notificationForNotTakenPeriod": "Kennisgewing vir die {pillSheetPillSheetTypeNotTakenWord}tydperk",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "As kennisgewings afgeskakel is, sal inname-opnames vir die {pillSheetPillSheetTypeNotTakenWord}-periode ook outomaties aangeteken word.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "As kennisgewings af is, word die innamerekord vir die {pillSheetPillSheetTypeNotTakenWord}-tydperk ook outomaties ingevul",
   "requestForCancelSurvey": "Versoek om hulp met ons vraelys na kansellasie",
   "pilllDescription": "Pilll - Gespesialiseerde pil-herinneringsapp",
   "reachedMaximumCountOfReminderTimes": "Die maksimum aantal inskrywings is bereik. Hou dit asseblief op {ReminderTimeMaximumCount} of minder.",

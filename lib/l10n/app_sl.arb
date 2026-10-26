@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 tablet + 4 tablete za premor",
   "choosePillType": "Izberite vrsto tabletke",
   "notificationForNotTakenPeriod": "Obvestilo za obdobje {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Če so obvestila izklopljena, se samodejno zabeleži tudi jemanje zdravila v {pillSheetPillSheetTypeNotTakenWord} obdobju",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Ko so obvestila izklopljena, se beleženje jemanja za obdobje {pillSheetPillSheetTypeNotTakenWord} prav tako izvede samodejno",
   "requestForCancelSurvey": "Prosimo za sodelovanje v anketi po odpovedi",
   "pilllDescription": "Pilll - aplikacija za opominjanje jemanja kontracepcijskih tablet",
   "reachedMaximumCountOfReminderTimes": "Dosegli ste največjo mejo registracij. Prosim, omejite se na {ReminderTimeMaximumCount} elementov.",

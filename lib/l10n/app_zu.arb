@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "Amaphilisi angu-24 + amaphilisi ama-4 ekhefu",
   "choosePillType": "Sicela ukhethe uhlobo lwephilisi",
   "notificationForNotTakenPeriod": "Isaziso sesikhathi se-{pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, amarekhodi okuthatha amaphilisi esikhathini se{pillSheetPillSheetTypeNotTakenWord} nawo azofakwa ngokuzenzakalayo.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, irekhodi lokuphuza amaphilisi lesikhathi se-{pillSheetPillSheetTypeNotTakenWord} nalo lenziwa ngokuzenzakalelayo",
   "requestForCancelSurvey": "Sicela usisizise ngenhlolovo yangemva kokukhansela",
   "pilllDescription": "Pilll - I-app yesikhumbuzi samaphilisi okuvimbela ukukhulelwa",
   "reachedMaximumCountOfReminderTimes": "Umngcele wokubhalisa usufinyelelwe. Sicela ugcine ngaphansi kwe-{ReminderTimeMaximumCount}.",

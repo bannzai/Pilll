@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 ክኒን + 4 ክኒን እረፍት",
   "choosePillType": "የክኒን ዓይነት ይምረጡ",
   "notificationForNotTakenPeriod": "የ{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያ",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "ማሳወቂያ ስራ ላይ ሳይሆን፣ የ{pillSheetPillSheetTypeNotTakenWord} ወቅት የመዳኅኒት መውሰድ ማስታወሻም በራስሰር ይመዘገባል",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ማሳወቂያዎች ሲጠፉ፣ ለ{pillSheetPillSheetTypeNotTakenWord} ጊዜ አወሳሰድ መዝገብ በራስ-ሰር ይፈጠራል",
   "requestForCancelSurvey": "የመሰረዝ በኋላ ጥናት ትብብር ጥያቄ",
   "pilllDescription": "Pilll የክኒን መውሰጃ አስታዋሽ መተግበሪያ",
   "reachedMaximumCountOfReminderTimes": "የመመዝገቢያ ከፍተኛ ቁጥር ላይ ደርሰዋል። እባክዎን ከ{ReminderTimeMaximumCount} ጊዜ ያልበለጠ ያድርጉ።",

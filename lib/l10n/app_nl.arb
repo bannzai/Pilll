@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pillen + 4 pillen voor de stopweek",
   "choosePillType": "Kies het type pil",
   "notificationForNotTakenPeriod": "Melding voor de periode {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Bij uitgeschakelde meldingen worden ook automatisch inname-records voor de {pillSheetPillSheetTypeNotTakenWord}-periode aangemaakt",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Als meldingen uitstaan, wordt ook voor de periode {pillSheetPillSheetTypeNotTakenWord} automatisch een innameregistratie aangemaakt",
   "requestForCancelSurvey": "Verzoek om medewerking aan enquête na opzegging",
   "pilllDescription": "Pilll - Gespecialiseerde pil reminder app",
   "reachedMaximumCountOfReminderTimes": "Het maximum aantal registraties is bereikt. Houd het binnen {ReminderTimeMaximumCount} items.",

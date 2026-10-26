@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 таблетки + 4 таблетки на перерыв",
   "choosePillType": "Выберите тип таблетки",
   "notificationForNotTakenPeriod": "Уведомление о периоде {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "При отключенных уведомлениях записи о приеме за период {pillSheetPillSheetTypeNotTakenWord} также будут автоматически созданы",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Когда уведомления отключены, журнал приёма таблеток за период {pillSheetPillSheetTypeNotTakenWord} также заполняется автоматически",
   "requestForCancelSurvey": "Просим вас принять участие в опросе после отмены подписки",
   "pilllDescription": "Pilll - приложение-напоминание для приёма контрацептивов",
   "reachedMaximumCountOfReminderTimes": "Достигнуто максимальное количество напоминаний. Пожалуйста, ограничьте количество до {ReminderTimeMaximumCount}.",

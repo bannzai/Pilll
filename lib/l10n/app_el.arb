@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 χάπια + 4 χάπια για διάλειμμα",
   "choosePillType": "Επιλέξτε τύπο χαπιού",
   "notificationForNotTakenPeriod": "Ειδοποίηση για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, θα προστεθούν αυτόματα και οι καταγραφές λήψης για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, δημιουργείται αυτόματα καταγραφή λήψης και για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Παρακαλούμε βοηθήστε μας συμπληρώνοντας το ερωτηματολόγιο μετά την ακύρωση",
   "pilllDescription": "Pilll - Εφαρμογή υπενθύμισης για αντισυλληπτικά χάπια",
   "reachedMaximumCountOfReminderTimes": "Έχετε φτάσει το μέγιστο όριο εγγραφής. Παρακαλώ περιορίστε σε {ReminderTimeMaximumCount} ή λιγότερα.",

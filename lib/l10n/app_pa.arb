@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 ਗੋਲੀਆਂ + ਵਿਰਾਮ ਲਈ 4 ਗੋਲੀਆਂ",
   "choosePillType": "ਗੋਲੀ ਦੀ ਕਿਸਮ ਚੁਣੋ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ਮਿਆਦ ਲਈ ਸੂਚਨਾ",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬੰਦ ਹੋਣ ਦੀ ਸੂਰਤ ਵਿੱਚ ਵੀ, {pillSheetPillSheetTypeNotTakenWord} ਅਵਧੀ ਦੇ ਸੇਵਨ ਰਿਕਾਰਡ ਆਪਣੇ ਆਪ ਲਗਾਏ ਜਾਂਦੇ ਹਨ।",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ਸੂਚਨਾਵਾਂ ਬੰਦ ਹੋਣ 'ਤੇ ਵੀ {pillSheetPillSheetTypeNotTakenWord} ਮਿਆਦ ਲਈ ਸੇਵਨ ਰਿਕਾਰਡ ਆਪਣੇ ਆਪ ਬਣ ਜਾਂਦਾ ਹੈ",
   "requestForCancelSurvey": "ਰੱਦ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਰਵੇ ਵਿੱਚ ਸਹਿਯੋਗ ਦੀ ਬੇਨਤੀ",
   "pilllDescription": "Pilll پل دی یاددہانی دے لئی مخصوص ایپ",
   "reachedMaximumCountOfReminderTimes": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੀ ਅਧਿਕਤਮ ਸੀਮਾ ਪਹੁੰਚ ਗਈ ਹੈ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਇਸ ਨੂੰ {ReminderTimeMaximumCount} ਤੱਕ ਸੀਮਤ ਰੱਖੋ।",

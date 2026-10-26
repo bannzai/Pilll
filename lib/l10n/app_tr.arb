@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 hap + ara dönem için 4 hap",
   "choosePillType": "Hap türünü seçin",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dönemi bildirimi",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirimler kapalı olsa bile, {pillSheetPillSheetTypeNotTakenWord} dönemindeki ilaç alma kayıtları otomatik olarak eklenir.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirimler kapalıyken {pillSheetPillSheetTypeNotTakenWord} dönemi için hap kullanım kaydı da otomatik olarak oluşturulur",
   "requestForCancelSurvey": "İptal Sonrası Anketimize Katılım Ricamız",
   "pilllDescription": "Pilll - Doğum kontrol hapı için özel hatırlatma uygulaması",
   "reachedMaximumCountOfReminderTimes": "Kaydedilebilir üst sınıra ulaşıldı. Lütfen {ReminderTimeMaximumCount} adet ile sınırlayın",

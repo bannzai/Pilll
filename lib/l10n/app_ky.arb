@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 таблетка + тыныгуу үчүн 4 таблетка",
   "choosePillType": "Таблетканын түрүн тандаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгили тууралуу билдирүү",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Эскертүү өчүрүлгөн учурда, {pillSheetPillSheetTypeNotTakenWord} мезгилинин дары ичүү каттоосу да автоматтык түрдө жазылат",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Билдирмелер өчүрүлгөндө да {pillSheetPillSheetTypeNotTakenWord} мезгилине таблетка ичүү жазуусу автоматтык түрдө түзүлөт",
   "requestForCancelSurvey": "Жокко чыганган соңундагы сурамжылоого кол кабыш берүү өтүнүчү",
   "pilllDescription": "Pilll контрацептивдик таблеткаларды ичүүгө атайын иштелип чыккан эскертүү колдонмосу",
   "reachedMaximumCountOfReminderTimes": "Катталуунун чеги толду. {ReminderTimeMaximumCount} данадан ашпаган санда болушу керек.",

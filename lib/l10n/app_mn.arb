@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 шахмал + завсарлагааны 4 шахмал",
   "choosePillType": "Эмийн төрлөө сонгоно уу",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} хугацааны мэдэгдэл",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Мэдэгдэл унтраасан байсан ч {pillSheetPillSheetTypeNotTakenWord} хугацааны уулгын бүртгэл автоматаар нэмэгдэнэ",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Мэдэгдлийг унтраасан үед ч {pillSheetPillSheetTypeNotTakenWord} хугацааны эм уусан бүртгэл автоматаар үүснэ",
   "requestForCancelSurvey": "Цуцлалтын дараах судалгаанд хамтран оролцохыг хүсэж байна",
   "pilllDescription": "Pilll - Эмчилгээний таблет уухад зориулсан сануулгын апп",
   "reachedMaximumCountOfReminderTimes": "Бүртгэлийн дээд хязгаарт хүрлээ. {ReminderTimeMaximumCount} удаагаас илүүгүй байхаар тохируулна уу",

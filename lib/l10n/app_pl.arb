@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 tabletki + 4 tabletki na przerwę",
   "choosePillType": "Wybierz rodzaj tabletki",
   "notificationForNotTakenPeriod": "Powiadomienie o okresie {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "W przypadku wyłączenia powiadomień, rekordy przyjmowania w okresie {pillSheetPillSheetTypeNotTakenWord} również będą automatycznie dodawane",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Gdy powiadomienia są wyłączone, zapis przyjęcia tabletki w okresie {pillSheetPillSheetTypeNotTakenWord} również powstaje automatycznie",
   "requestForCancelSurvey": "Prośba o wypełnienie ankiety po rezygnacji",
   "pilllDescription": "Pilll - aplikacja do przypominania o pigułkach antykoncepcyjnych",
   "reachedMaximumCountOfReminderTimes": "Osiągnięto limit przypomnień. Ogranicz do {ReminderTimeMaximumCount} pozycji.",

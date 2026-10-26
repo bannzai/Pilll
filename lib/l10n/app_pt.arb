@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pílulas + 4 pílulas para a pausa",
   "choosePillType": "Escolha o tipo de pílula",
   "notificationForNotTakenPeriod": "Notificação do período de {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Quando as notificações estão desativadas, os registros do período {pillSheetPillSheetTypeNotTakenWord} também são criados automaticamente",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Quando as notificações estão desativadas, um registro de uso para o período {pillSheetPillSheetTypeNotTakenWord} também é criado automaticamente",
   "requestForCancelSurvey": "Solicitamos sua colaboração com uma pesquisa pós-cancelamento",
   "pilllDescription": "Pilll - Aplicativo de lembrete especializado na toma da pílula",
   "reachedMaximumCountOfReminderTimes": "Limite máximo atingido. Mantenha dentro de {ReminderTimeMaximumCount} itens.",

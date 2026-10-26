@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24片药＋4片停药期用药",
   "choosePillType": "选择药片类型",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}期提醒",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "通知关闭时，{pillSheetPillSheetTypeNotTakenWord}期间的服用记录也会自动添加",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "关闭通知后，{pillSheetPillSheetTypeNotTakenWord}期间的服药记录也会自动创建",
   "requestForCancelSurvey": "解约后问卷调查协助请求",
   "pilllDescription": "Pilll 专业避孕药服用提醒应用",
   "reachedMaximumCountOfReminderTimes": "已达到注册上限。请控制在{ReminderTimeMaximumCount}个以内",

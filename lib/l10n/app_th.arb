@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "ยา 24 เม็ด + ยา 4 เม็ดสำหรับช่วงหยุดยา",
   "choosePillType": "เลือกประเภทของยาเม็ด",
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "หากปิดการแจ้งเตือนแล้ว การบันทึกการรับประทานยาในช่วง{pillSheetPillSheetTypeNotTakenWord}ก็จะถูกบันทึกโดยอัตโนมัติด้วย",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "แม้ปิดการแจ้งเตือน ระบบก็จะสร้างบันทึกการทานยาสำหรับช่วง {pillSheetPillSheetTypeNotTakenWord} โดยอัตโนมัติค่ะ",
   "requestForCancelSurvey": "ขอความร่วมมือในการตอบแบบสำรวจหลังการยกเลิกสมาชิก",
   "pilllDescription": "Pilll แอปเตือนรับประทานยาคุมเฉพาะทาง",
   "reachedMaximumCountOfReminderTimes": "คุณได้ลงทะเบียนครบจำนวนสูงสุดแล้ว กรุณาจำกัดให้ไม่เกิน {ReminderTimeMaximumCount} รายการ",

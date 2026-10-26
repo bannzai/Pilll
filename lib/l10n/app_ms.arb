@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pil + 4 pil untuk rehat",
   "choosePillType": "Sila pilih jenis pil",
   "notificationForNotTakenPeriod": "Pemberitahuan bagi tempoh {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Apabila pemberitahuan dimatikan, rekod pengambilan pill untuk tempoh {pillSheetPillSheetTypeNotTakenWord} juga akan ditambah secara automatik",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Apabila pemberitahuan dimatikan, rekod pengambilan untuk tempoh {pillSheetPillSheetTypeNotTakenWord} juga dibuat secara automatik",
   "requestForCancelSurvey": "Mohon Kerjasama Anda untuk Tinjauan Selepas Pembatalan",
   "pilllDescription": "Pilll Aplikasi peringatan khusus pengambilan pil",
   "reachedMaximumCountOfReminderTimes": "Had maksimum pendaftaran telah dicapai. Sila hadkan kepada {ReminderTimeMaximumCount} item sahaja.",

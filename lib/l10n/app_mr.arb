@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 गोळ्या + विरामासाठी 4 गोळ्या",
   "choosePillType": "गोळीचा प्रकार निवडा",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} कालावधीची सूचना",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बंद असल्यास, {pillSheetPillSheetTypeNotTakenWord} कालावधीतील औषध सेवनाचे रेकॉर्ड देखील आपोआप जोडले जातात",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "सूचना बंद असतानाही {pillSheetPillSheetTypeNotTakenWord} कालावधीसाठी सेवन नोंद आपोआप तयार होते",
   "requestForCancelSurvey": "रद्द केल्यानंतरच्या सर्वेक्षणासाठी सहकार्याची विनंती",
   "pilllDescription": "Pilll गर्भनिरोधक गोळ्या घेण्यासाठी विशेष रिमाइंडर अ‍ॅप",
   "reachedMaximumCountOfReminderTimes": "नोंदणीची कमाल संख्या गाठली आहे. कृपया {ReminderTimeMaximumCount} च्या मर्यादेत ठेवा.",

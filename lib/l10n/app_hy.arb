@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 հաբ + 4 դադարի հաբ",
   "choosePillType": "Ընտրեք հաբի տեսակը",
   "notificationForNotTakenPeriod": "Ծանուցում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Ծանուցումները անջատված լինելու դեպքում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ընդունման գրառումները նույնպես ավտոմատ ավելացվում են:",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Երբ ծանուցումներն անջատված են, {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար նույնպես ինքնաբերաբար ստեղծվում է ընդունման գրառում",
   "requestForCancelSurvey": "Լուծարման հետո հարցակցությանը մասնակցության խնդրանք",
   "pilllDescription": "Pilll - հակաբեղմնավորիչ դեղերի ընդունման մասնագիտացված հիշեցման հավելված",
   "reachedMaximumCountOfReminderTimes": "Գրանցման սահմանը լրացել է: Խնդրում ենք պահպանել {ReminderTimeMaximumCount} հիշեցման սահմանը:",

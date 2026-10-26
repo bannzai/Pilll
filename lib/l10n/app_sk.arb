@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 tabletiek + 4 tabletky na prestávku",
   "choosePillType": "Vyberte typ tabletky",
   "notificationForNotTakenPeriod": "Upozornenie na obdobie {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznamy o užívaní počas {pillSheetPillSheetTypeNotTakenWord} obdobia sa tiež automaticky pridajú",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznam o užití za obdobie {pillSheetPillSheetTypeNotTakenWord} sa tiež vytvorí automaticky",
   "requestForCancelSurvey": "Prosba o spoluprácu s anketou po zrušení",
   "pilllDescription": "Pilll - špecializovaný pripomínač na užívanie piluliek",
   "reachedMaximumCountOfReminderTimes": "Bol dosiahnutý maximálny počet registrácií. Obmedzte na maximálne {ReminderTimeMaximumCount} položiek.",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 comprimés + 4 comprimés de pause",
   "choosePillType": "Choisissez le type de pilule",
   "notificationForNotTakenPeriod": "Notification pour la période de {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Même lorsque les notifications sont désactivées, les enregistrements de pilules pour la période {pillSheetPillSheetTypeNotTakenWord} seront automatiquement ajoutés",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Lorsque les notifications sont désactivées, une entrée dans le journal des prises est aussi créée automatiquement pour la période {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Demande d'enquête post-annulation",
   "pilllDescription": "Pilll - Application de rappel de pilule contraceptive",
   "reachedMaximumCountOfReminderTimes": "Limite maximale atteinte. Veuillez conserver les rappels {ReminderTimeMaximumCount}.",

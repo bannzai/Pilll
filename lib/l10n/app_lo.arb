@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "ຢາ 24 ເມັດ + ຢາສຳລັບພັກຢາ 4 ເມັດ",
   "choosePillType": "ກະລຸນາເລືອກປະເພດເມັດຢາ",
   "notificationForNotTakenPeriod": "ແຈ້ງເຕືອນຊ່ວງ {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "ຫາກການແຈ້ງເຕືອນຖືກປິດໄວ້, ບັນທຶກການກິນຢາໃນໄລຍະ{pillSheetPillSheetTypeNotTakenWord}ກໍຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດ",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ເມື່ອປິດການແຈ້ງເຕືອນ ບັນທຶກການກິນຢາສຳລັບໄລຍະ {pillSheetPillSheetTypeNotTakenWord} ກໍຈະຖືກສ້າງອັດຕະໂນມັດເຊັ່ນກັນ",
   "requestForCancelSurvey": "ຂໍຄວາມກະລຸນາຮ່ວມມືໃນການຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກ",
   "pilllDescription": "Pilll - ແອັບຯແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດສະເພາະ",
   "reachedMaximumCountOfReminderTimes": "ຈຳນວນການລົງທະບຽນໄດ້ຮອດຂີດສູງສຸດແລ້ວ។ ກະລຸນາຈັດການໃຫ້ຢູ່ໃນ {ReminderTimeMaximumCount} ລາຍການ",

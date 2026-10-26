@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 пилуле + 4 пилуле за паузу",
   "choosePillType": "Изаберите врсту пилуле",
   "notificationForNotTakenPeriod": "Обавештење за период {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Kada su obaveštenja isključena, zapisi o uzimanju za {pillSheetPillSheetTypeNotTakenWord} period se takođe automatski kreiraju",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Када су обавештења искључена, евиденција узимања за период {pillSheetPillSheetTypeNotTakenWord} такође се прави аутоматски",
   "requestForCancelSurvey": "Molimo vas da učestvujete u anketi nakon otkazivanja",
   "pilllDescription": "Pilll - podsetnik za uzimanje pilula",
   "reachedMaximumCountOfReminderTimes": "Dostignut je maksimum za registraciju. Molimo ograničite na {ReminderTimeMaximumCount} stavki.",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 גלולות + 4 גלולות להפסק",
   "choosePillType": "בחירת סוג הגלולה",
   "notificationForNotTakenPeriod": "התראה לתקופת {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "במקרה של כיבוי התראות, רישומי הנטילה של תקופת {pillSheetPillSheetTypeNotTakenWord} יתווספו באופן אוטומטי",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "כשההתראות כבויות, נוצר אוטומטית גם רישום נטילה לתקופת {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "בקשה לשיתוף פעולה בסקר לאחר הביטול",
   "pilllDescription": "Pilll אפליקציית תזכורת מיוחדת לנטילת גלולות",
   "reachedMaximumCountOfReminderTimes": "הגעת למגבלת הרישום. אנא הגבל את מספר התזכורות ל-{ReminderTimeMaximumCount}",

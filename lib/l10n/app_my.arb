@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "ဆေး 24 လုံး + ဆေးနားရက်အတွက် ဆေး 4 လုံး",
   "choosePillType": "ဆေးပြားအမျိုးအစား ရွေးချယ်ပါ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် အသိပေးချက်",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "သတိပေးချက်ကိုပိတ်ထားပါက {pillSheetPillSheetTypeNotTakenWord}ကာလအတွင်း ဆေးသောက်မှတ်တမ်းများကို အလိုအလျောက်ထည့်ပေးမည်ဖြစ်သည်",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "အကြောင်းကြားချက်များ ပိတ်ထားချိန်တွင်လည်း {pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် ဆေးသောက်မှတ်တမ်းကို အလိုအလျောက် ဖန်တီးပေးပါတယ်",
   "requestForCancelSurvey": "ပယ်ဖျက်ပြီးနောက် စစ်တမ်းအတွက် ပူးပေါင်းကူညီမှုတောင်းခံခြင်း",
   "pilllDescription": "Pilll ဆေးလုံးသောက်ခြင်းအတွက် အထူးပြု အမှတ်ရစေရန်အက်ပ်",
   "reachedMaximumCountOfReminderTimes": "အများဆုံးအကန့်အသတ်သို့ ရောက်ရှိပါပြီ။ {ReminderTimeMaximumCount} ခုအောက်တွင် ကန့်သတ်ပါ။",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 حبة + 4 حبات راحة",
   "choosePillType": "اختاري نوع الحبوب",
   "notificationForNotTakenPeriod": "إشعار فترة {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "عند إيقاف الإشعارات، سيتم أيضاً إنشاء سجل تناول فترة {pillSheetPillSheetTypeNotTakenWord} تلقائياً",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "عند إيقاف الإشعارات، يُنشأ تسجيل تناول لفترة {pillSheetPillSheetTypeNotTakenWord} تلقائيًا أيضًا",
   "requestForCancelSurvey": "نرجو التعاون في الاستبيان بعد الإلغاء",
   "pilllDescription": "Pilll - تطبيق التذكير المتخصص لحبوب منع الحمل",
   "reachedMaximumCountOfReminderTimes": "تم الوصول إلى الحد الأقصى للتسجيل. يرجى البقاء ضمن {ReminderTimeMaximumCount} عنصر.",

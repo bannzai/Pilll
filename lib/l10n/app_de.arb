@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 Pillen + 4 Pillen für die Einnahmepause",
   "choosePillType": "Wähle die Pillenart",
   "notificationForNotTakenPeriod": "Benachrichtigung zur {pillSheetPillSheetTypeNotTakenWord}-Phase",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Bei ausgeschalteten Benachrichtigungen werden auch die Einnahmeaufzeichnungen für die {pillSheetPillSheetTypeNotTakenWord} automatisch erstellt.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Wenn Benachrichtigungen ausgeschaltet sind, wird auch für den Zeitraum {pillSheetPillSheetTypeNotTakenWord} automatisch ein Einnahmeprotokoll erstellt",
   "requestForCancelSurvey": "Bitte um Ihre Mithilfe bei unserer Umfrage nach der Kündigung",
   "pilllDescription": "Pilll - Spezialisierte Pillen-Erinnerungs-App",
   "reachedMaximumCountOfReminderTimes": "Das Maximum wurde erreicht. Bitte beschränken Sie sich auf maximal {ReminderTimeMaximumCount} Erinnerungszeiten.",

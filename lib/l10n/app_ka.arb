@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 აბი + 4 აბი შესვენებისთვის",
   "choosePillType": "აბის ტიპის არჩევა",
   "notificationForNotTakenPeriod": "შეტყობინება {pillSheetPillSheetTypeNotTakenWord} პერიოდის შესახებ",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "შეტყობინებების გამორთვის შემთხვევაში, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერებიც ავტომატურად ემატება",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "როცა შეტყობინებები გამორთულია, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერიც ავტომატურად იქმნება",
   "requestForCancelSurvey": "გაუქმების შემდგომი კითხვარის შევსების თხოვნა",
   "pilllDescription": "Pilll - კონტრაცეპტული აბების მიღების შეხსენების აპი",
   "reachedMaximumCountOfReminderTimes": "რეგისტრაციის ლიმიტს მიაღწია. გთხოვთ შეზღუდოთ {ReminderTimeMaximumCount} ცალამდე.",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "පෙති 24ක් + විරාමය සඳහා පෙති 4ක්",
   "choosePillType": "පෙති වර්ගය තෝරන්න",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා දැනුම්දීම",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය කර ඇති විට, {pillSheetPillSheetTypeNotTakenWord} කාලයේ ගැනීමේ සටහන් ද ස්වයංක්‍රීයව එකතු වේ",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය වූ විටත් {pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා පෙති ගැනීමේ සටහන ස්වයංක්‍රීයව සෑදේ",
   "requestForCancelSurvey": "අවලංගු කිරීමෙන් පසු සමීක්ෂණයට සහයෝගිතාව ඉල්ලීම",
   "pilllDescription": "Pilll ගර්භ නිරෝධක පෙති සඳහා විශේෂ මතක්කිරීමේ යෙදුම",
   "reachedMaximumCountOfReminderTimes": "ලියාපදිංචි කළ හැකි උපරිම සීමාවට ළඟා වී ඇත. කරුණාකර {ReminderTimeMaximumCount} ක් ඇතුළත සීමා කරන්න.",

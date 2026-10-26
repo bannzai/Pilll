@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 пігулкі + 4 пігулкі на перапын",
   "choosePillType": "Выберыце тып пігулкі",
   "notificationForNotTakenPeriod": "Апавяшчэнне пра перыяд {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Пры выключаных апавяшчэннях запісы пра прыём за {pillSheetPillSheetTypeNotTakenWord} перыяд таксама ствараюцца аўтаматычна",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Калі апавяшчэнні выключаны, запіс прыёму пігулак за перыяд {pillSheetPillSheetTypeNotTakenWord} таксама ствараецца аўтаматычна",
   "requestForCancelSurvey": "Просім прыняць удзел у апытанні пасля адмовы",
   "pilllDescription": "Pilll - спецыялізаванае прыкладанне-нагадванне для прыёму пілюль",
   "reachedMaximumCountOfReminderTimes": "Дасягнута максімальная колькасць напамінаў. Калі ласка, абмежуйцеся {ReminderTimeMaximumCount} напамінамі",

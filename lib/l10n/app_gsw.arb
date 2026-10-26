@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 Pille + 4 Pille für d Pillepause",
   "choosePillType": "Wähl d Pillensorte uus",
   "notificationForNotTakenPeriod": "Mitteilige für d {pillSheetPillSheetTypeNotTakenWord}-Ziit",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Au wänn d Benachrichtigunge usgschaltet sind, werded d Inahmeufzeichnige för d {pillSheetPillSheetTypeNotTakenWord}-Period automatisch erfasst",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Wänn d'Mäldige usgschalte sind, wird für d'Ziit vo {pillSheetPillSheetTypeNotTakenWord} au automatisch e Iinahm-Ufzeichnig gmacht",
   "requestForCancelSurvey": "Bitte um Ihre Mithilfe bei der Umfrage nach der Kündigung",
   "pilllDescription": "Pilll - Spezialisierti Erinnerigsapp für Pille-Iinahm",
   "reachedMaximumCountOfReminderTimes": "S Maximum isch erreicht. Bitte begränzed Sie sich uf {ReminderTimeMaximumCount} Stück.",

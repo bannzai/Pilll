@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 həb + 4 fasilə həbi",
   "choosePillType": "Həb növünü seçin",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildiriş",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrünün qəbul qeydləri də avtomatik olaraq əlavə olunur",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrü üçün həb qəbulu qeyd avtomatik olaraq yaradılır",
   "requestForCancelSurvey": "Ləğvetmədən sonra sorğuda əməkdaşlıq xahişi",
   "pilllDescription": "Pilll - Doğum nəzarəti həbləri üçün xüsusi xatırladıcı tətbiq",
   "reachedMaximumCountOfReminderTimes": "Maksimal həddə çatdınız. {ReminderTimeMaximumCount} ədəd daxilində saxlayın",

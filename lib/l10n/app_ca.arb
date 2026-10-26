@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 píndoles + 4 píndoles de descans",
   "choosePillType": "Tria el tipus de píndola",
   "notificationForNotTakenPeriod": "Notificació del període de {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, els registres de presa del període {pillSheetPillSheetTypeNotTakenWord} també s'afegeixen automàticament",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, també es crea automàticament un registre de preses per al període {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Sol·licitud de col·laboració per a l'enquesta posterior a la cancel·lació",
   "pilllDescription": "Pilll Recordatori especialitzat en la presa de píndoles",
   "reachedMaximumCountOfReminderTimes": "S'ha arribat al límit màxim de registres. Si us plau, mantingueu-ho dins de {ReminderTimeMaximumCount} recordatoris.",

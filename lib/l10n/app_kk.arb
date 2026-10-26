@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 таблетка + үзіліске арналған 4 таблетка",
   "choosePillType": "Таблетка түрін таңдаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} кезеңі туралы хабарландыру",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландыру өшірулген жағдайда, {pillSheetPillSheetTypeNotTakenWord} кезеңінің қабылдау жазбалары да автоматты түрде қосылады",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландырулар өшірілгенде, {pillSheetPillSheetTypeNotTakenWord} кезеңіне қабылдау жазбасы да автоматты түрде жасалады",
   "requestForCancelSurvey": "Жазылымды тоқтатқаннан кейінгі сауалнамаға қатысуды сұраймыз",
   "pilllDescription": "Pilll таблетка қабылдауға арналған хабарландыру қолданбасы",
   "reachedMaximumCountOfReminderTimes": "Тіркеу шегіне жеттіңіз. {ReminderTimeMaximumCount} данадан аспауы керек.",

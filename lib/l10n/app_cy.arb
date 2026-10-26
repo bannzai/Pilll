@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pilsen + 4 pilsen seibiant",
   "choosePillType": "Dewiswch y math o bilsen",
   "notificationForNotTakenPeriod": "Hysbysiad am gyfnod {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Os yw hysbysiadau wedi'u diffodd, bydd cofnodion cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} yn cael eu creu'n awtomatig hefyd",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Pan fydd hysbysiadau wedi'u diffodd, caiff cofnod cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} ei greu'n awtomatig hefyd",
   "requestForCancelSurvey": "Cais am Gymorth gydag Arolwg ar ôl Canslo",
   "pilllDescription": "Pilll - ap atgoffa pilsennau arbenigol",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd y terfyn uchaf cofrestru. Cadwch at {ReminderTimeMaximumCount} eitem neu lai os gwelwch yn dda",

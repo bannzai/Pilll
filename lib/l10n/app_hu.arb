@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 tabletta + 4 szüneti tabletta",
   "choosePillType": "Válaszd ki a tabletta típusát",
   "notificationForNotTakenPeriod": "Értesítés a(z) {pillSheetPillSheetTypeNotTakenWord} időszakáról",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Értesítések kikapcsolása esetén a {pillSheetPillSheetTypeNotTakenWord} időszak bevételi rekordjai szintén automatikusan rögzítésre kerülnek.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Ha az értesítések ki vannak kapcsolva, a {pillSheetPillSheetTypeNotTakenWord} időszakra is automatikusan készül tablettaszedési napló",
   "requestForCancelSurvey": "Kérjük, segítsen a lemondás utáni felmérésben",
   "pilllDescription": "Pilll - Fogamzásgátló tabletta szedésére specializált emlékeztető alkalmazás",
   "reachedMaximumCountOfReminderTimes": "Elérte a regisztrálható felső határt. Kérjük, tartsa {ReminderTimeMaximumCount} darab alatt.",

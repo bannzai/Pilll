@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pilula + 4 atsedenaldiko pilula",
   "choosePillType": "Aukeratu pilula mota",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiari buruzko jakinarazpena",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldiko hartzeko erregistroak ere automatikoki gehituko dira",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldirako hartze-erregistro bat ere automatikoki sortzen da",
   "requestForCancelSurvey": "Ezeztatze ondorengo inkestarekin laguntzeko eskaria",
   "pilllDescription": "Pilll - Pilula hartzeko oroigarri aplikazio espezializatua",
   "reachedMaximumCountOfReminderTimes": "Erregistratzeko gehienezko mugara iritsi zara. {ReminderTimeMaximumCount} elementu baino gutxiago eduki behar dituzu.",

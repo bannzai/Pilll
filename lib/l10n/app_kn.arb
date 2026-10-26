@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 ಮಾತ್ರೆಗಳು + ವಿರಾಮದ 4 ಮಾತ್ರೆಗಳು",
   "choosePillType": "ಮಾತ್ರೆಯ ಪ್ರಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಸೂಚನೆ",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "ಅಧಿಸೂಚನೆ ಆಫ್ ಆಗಿರುವ ಸಂದರ್ಭದಲ್ಲಿ, {pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಸೇವನೆಯ ದಾಖಲೆಯನ್ನು ಸಹ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರಿಸಲಾಗುತ್ತದೆ",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ಅಧಿಸೂಚನೆಗಳು ಆಫ್ ಆಗಿದ್ದಾಗಲೂ {pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಗೆ ಸೇವನೆಯ ದಾಖಲೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೃಷ್ಟಿಯಾಗುತ್ತದೆ",
   "requestForCancelSurvey": "ರದ್ದತಿ ನಂತರದ ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಸಹಕಾರಕ್ಕಾಗಿ ವಿನಂತಿ",
   "pilllDescription": "Pilll ಗರ್ಭನಿರೋಧಕ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿಶೇಷೀಕೃತ ರಿಮೈಂಡರ್ ಆ್ಯಪ್",
   "reachedMaximumCountOfReminderTimes": "ನೋಂದಣಿ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ. ದಯವಿಟ್ಟು {ReminderTimeMaximumCount} ರ ಒಳಗೆ ಇರಿಸಿ",

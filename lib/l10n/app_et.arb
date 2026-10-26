@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pilli + 4 pillipausi pilli",
   "choosePillType": "Vali pilli tüüp",
   "notificationForNotTakenPeriod": "Teavitus perioodi {pillSheetPillSheetTypeNotTakenWord} kohta",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Teatiste keelamisel lisatakse ka {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirjed automaatselt",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Kui teavitused on välja lülitatud, luuakse {pillSheetPillSheetTypeNotTakenWord} perioodi võtmiskirje samuti automaatselt",
   "requestForCancelSurvey": "Palun osalemist küsitluses pärast tühistamist",
   "pilllDescription": "Pilll - pillide võtmise meeldetuletusrakendus",
   "reachedMaximumCountOfReminderTimes": "Maksimaalne arv on saavutatud. Palun piirike {ReminderTimeMaximumCount} kirjega.",

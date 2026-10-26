@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 p-piller + 4 p-piller til pillepause",
   "choosePillType": "Velg type p-pille",
   "notificationForNotTakenPeriod": "Varsel for {pillSheetPillSheetTypeNotTakenWord}-perioden",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Selv når varsler er av, vil pilleinntak for {pillSheetPillSheetTypeNotTakenWord}-perioden automatisk bli registrert",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Når varsler er slått av, opprettes også en pillelogg for perioden {pillSheetPillSheetTypeNotTakenWord} automatisk",
   "requestForCancelSurvey": "Vi ber om din hjelp med en undersøkelse etter oppsigelse",
   "pilllDescription": "Pilll - Påminnelsesapp spesialisert på p-pilleinntak",
   "reachedMaximumCountOfReminderTimes": "Du har nådd grensen for antall registreringer. Vennligst hold deg til maksimalt {ReminderTimeMaximumCount}.",

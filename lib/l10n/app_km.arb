@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "ថ្នាំ 24 គ្រាប់ + ថ្នាំ 4 គ្រាប់សម្រាប់ផ្អាកលេបថ្នាំ",
   "choosePillType": "ជ្រើសរើសប្រភេទថ្នាំគ្រាប់",
   "notificationForNotTakenPeriod": "ការជូនដំណឹងសម្រាប់រយៈពេល {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "ប្រសិនបើការជូនដំណឹងត្រូវបានបិទ កំណត់ត្រាការទទួលទានថ្នាំសម្រាប់អំឡុងពេល{pillSheetPillSheetTypeNotTakenWord}ក៏នឹងត្រូវបានបន្ថែមដោយស្វ័យប្រវត្តិដែរ",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ពេលបិទការជូនដំណឹង កំណត់ត្រាការលេបថ្នាំសម្រាប់អំឡុងពេល {pillSheetPillSheetTypeNotTakenWord} ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិដែរ",
   "requestForCancelSurvey": "សំណូមពរការសហការក្នុងការស្ទាបស្ទង់មតិបន្ទាប់ពីការលុបចោល",
   "pilllDescription": "Pilll កម្មវិធីរំលឹកថ្នាំកុំមានកូនជំនាញពិសេស",
   "reachedMaximumCountOfReminderTimes": "ចំនួនម៉ោងរំលឹកបានដល់ដែនកំណត់។ សូមរក្សាឲ្យតិចជាង {ReminderTimeMaximumCount} ដង។",

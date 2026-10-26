@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 таблети + 4 таблети за пауза",
   "choosePillType": "Избор на вид таблета",
   "notificationForNotTakenPeriod": "Известување за периодот {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Кога известувањата се исклучени, записите за земање за {pillSheetPillSheetTypeNotTakenWord} периодот исто така автоматски се додаваат",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Кога известувањата се исклучени, Запис за земање за периодот {pillSheetPillSheetTypeNotTakenWord} исто така се создава автоматски",
   "requestForCancelSurvey": "Ве молиме за соработка со анкетата по откажувањето",
   "pilllDescription": "Pilll специјализирана апликација за потсетување на пилули",
   "reachedMaximumCountOfReminderTimes": "Достигнат е максималниот број на регистрации. Ве молиме ограничете се на {ReminderTimeMaximumCount} или помалку.",

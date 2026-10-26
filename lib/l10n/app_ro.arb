@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 de pilule + 4 pilule pentru pauză",
   "choosePillType": "Alege tipul de pilulă",
   "notificationForNotTakenPeriod": "Notificare pentru perioada de {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Când notificările sunt dezactivate, înregistrările de administrare pentru perioada {pillSheetPillSheetTypeNotTakenWord} sunt de asemenea adăugate automat.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Când notificările sunt dezactivate, se creează automat și o înregistrare pentru perioada {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Vă rugăm să ne ajutați cu chestionarul post-anulare",
   "pilllDescription": "Pilll - Aplicație de memento pentru pilule",
   "reachedMaximumCountOfReminderTimes": "Ați atins limita maximă de înregistrări. Vă rugăm să păstrați numărul la maximum {ReminderTimeMaximumCount} elemente.",

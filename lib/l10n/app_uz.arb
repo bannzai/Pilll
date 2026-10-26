@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 tabletka + tanaffus uchun 4 tabletka",
   "choosePillType": "Tabletka turini tanlang",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} davri uchun bildirishnoma",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirishnomalar o'chirilgan bo'lsa, {pillSheetPillSheetTypeNotTakenWord} davridagi qabul qilish yozuvlari ham avtomatik ravishda yaratiladi",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirishnomalar o‘chirilganda, {pillSheetPillSheetTypeNotTakenWord} davri uchun tabletka qabul qilish qaydi ham avtomatik yaratiladi",
   "requestForCancelSurvey": "Obunani bekor qilgach so'rovnomaga hamkorlik qilishingizni so'raymiz",
   "pilllDescription": "Pilll kontratseptiv tabletka qabul qilishga ixtisoslashgan eslatuvchi ilova",
   "reachedMaximumCountOfReminderTimes": "Ro'yxatga olish chegarasiga yetdingiz. {ReminderTimeMaximumCount} tadan oshmasligi kerak.",

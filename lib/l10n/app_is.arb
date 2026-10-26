@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 pillur + 4 pillur í hlé",
   "choosePillType": "Veldu tegund pillu",
   "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord}-tímabil",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar tilkynningar eru slökkt eru inntökuskrár fyrir {pillSheetPillSheetTypeNotTakenWord} tímabilið einnig sjálfkrafa búnar til",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar slökkt er á tilkynningum verður inntökuskrá fyrir tímabilið {pillSheetPillSheetTypeNotTakenWord} einnig til sjálfkrafa",
   "requestForCancelSurvey": "Vinsamlegast taktu þátt í könnun eftir uppsögn",
   "pilllDescription": "Pilll - píluáminningarforrit fyrir píluinntöku",
   "reachedMaximumCountOfReminderTimes": "Hámarki hefur verið náð. Vinsamlegast hafðu ekki fleiri en {ReminderTimeMaximumCount} áminningar.",

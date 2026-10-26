@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 viên + 4 viên cho kỳ nghỉ thuốc",
   "choosePillType": "Chọn loại thuốc tránh thai",
   "notificationForNotTakenPeriod": "Thông báo cho giai đoạn {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Khi tắt thông báo, lịch sử uống thuốc trong {pillSheetPillSheetTypeNotTakenWord} cũng sẽ được tự động ghi lại",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Khi tắt thông báo, nhật ký uống thuốc cho giai đoạn {pillSheetPillSheetTypeNotTakenWord} cũng được tạo tự động",
   "requestForCancelSurvey": "Lời mời tham gia khảo sát sau khi hủy đăng ký",
   "pilllDescription": "Pilll - Ứng dụng nhắc nhở uống thuốc tránh thai chuyên biệt",
   "reachedMaximumCountOfReminderTimes": "Đã đạt giới hạn đăng ký tối đa. Vui lòng giữ trong phạm vi {ReminderTimeMaximumCount} mục.",

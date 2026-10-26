@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "Vidonge 24 + vidonge 4 vya mapumziko",
   "choosePillType": "Tafadhali chagua aina ya kidonge",
   "notificationForNotTakenPeriod": "Arifa ya kipindi cha {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Wakati arifa zimezimwa, rekodi za kumeza dawa za kipindi cha {pillSheetPillSheetTypeNotTakenWord} pia zitaongezwa kiotomatiki",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Arifa zikiwa zimezimwa, rekodi ya kumeza vidonge ya kipindi cha {pillSheetPillSheetTypeNotTakenWord} pia huundwa kiotomatiki",
   "requestForCancelSurvey": "Tafadhali shiriki katika utafiti wetu baada ya kusitisha",
   "pilllDescription": "Pilll - Programu ya ukumbusho mahsusi kwa kutumia kidongowazi",
   "reachedMaximumCountOfReminderTimes": "Umefika kikomo cha juu cha usajili. Tafadhali hakikisha kuwa si zaidi ya {ReminderTimeMaximumCount}.",

@@ -282,7 +282,7 @@
   "twentyFourPlusFourDaysBreak": "24 píldoras + 4 píldoras de descanso",
   "choosePillType": "Elige el tipo de píldora",
   "notificationForNotTakenPeriod": "Notificación del período de {pillSheetPillSheetTypeNotTakenWord}",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Si las notificaciones están desactivadas, también se registrarán automáticamente las tomas del período {pillSheetPillSheetTypeNotTakenWord}",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Si las notificaciones están desactivadas, también se crea automáticamente un registro de toma para el período {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Solicitud de colaboración con encuesta post-cancelación",
   "pilllDescription": "Pilll - Aplicación recordatorio especializada en la toma de píldoras anticonceptivas",
   "reachedMaximumCountOfReminderTimes": "Has alcanzado el límite máximo de registro. Por favor, mantén el número dentro de {ReminderTimeMaximumCount} recordatorios.",
