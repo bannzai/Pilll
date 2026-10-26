@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "ከክኒን እረፍት በፊት የወሰዱትን ክኒን ይንኩ",
   "yazFlexLastRestDurationNote": "ከክኒን እረፍት በፊት መጨረሻ የወሰዱትን ክኒን እባክዎ ይምረጡ",
   "yazFlexRestDurationDaysLabel": "የክኒን እረፍት ቀናት",
-  "yazFlexRestDurationDaysValue": "{days} ቀናት",
+  "yazFlexRestDurationDaysValue": "ለ{days} ቀናት",
   "yazFlexResting": "በመድኃኒት እረፍት ላይ ነኝ እና ገና አልጀመርኩም",
   "yazFlexRestingDaysLabel": "መድሃኒቱን ካቆሙ ጀምሮ ዛሬ ስንተኛ ቀን ነው",
   "yazFlexSkipRestDuration": "የመድሀኒት ዕረፍት መረጃ ማስገባትን ዝለል",

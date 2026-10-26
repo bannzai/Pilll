@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "Sicela uthephe iphilisi oligwinye ngaphambi kwekhefu",
   "yazFlexLastRestDurationNote": "Sicela ukhethe iphilisi lokugcina oliphuze ngaphambi kokuqala kwekhefu",
   "yazFlexRestDurationDaysLabel": "Inani lezinsuku zekhefu",
-  "yazFlexRestDurationDaysValue": "{days} izinsuku",
+  "yazFlexRestDurationDaysValue": "izinsuku ezingu-{days}",
   "yazFlexResting": "Ngisesikhathini sekhefu futhi angikaqali futhi",
   "yazFlexRestingDaysLabel": "Namuhla usuku lwesingaki sekhefu",
   "yazFlexSkipRestDuration": "Yeqa ukufaka isikhathi sekhefu",

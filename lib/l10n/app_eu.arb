@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "Ukitu atsedenaldiaren aurretik hartu zenuen pilula",
   "yazFlexLastRestDurationNote": "Hautatu atsedenaldiaren aurretik hartu duzun azken pilula",
   "yazFlexRestDurationDaysLabel": "Atsedenaldiko egun kopurua",
-  "yazFlexRestDurationDaysValue": "{days} egun",
+  "yazFlexRestDurationDaysValue": "{days} egunez",
   "yazFlexResting": "Atsedenaldian nago eta oraindik ez naiz berriro hasi",
   "yazFlexRestingDaysLabel": "Atsedenaldiaren gaurko zenbatgarren eguna da",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",

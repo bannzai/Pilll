@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "المسي الحبة التي تناولتِها قبل فترة الراحة",
   "yazFlexLastRestDurationNote": "يرجى اختيار آخر حبة تناولتِها قبل بدء الراحة",
   "yazFlexRestDurationDaysLabel": "عدد أيام الراحة",
-  "yazFlexRestDurationDaysValue": "{days} أيام",
+  "yazFlexRestDurationDaysValue": "لمدة {days} أيام",
   "yazFlexResting": "في فترة التوقف ولم أستأنف بعد",
   "yazFlexRestingDaysLabel": "اليوم هو اليوم رقم كم من فترة التوقف؟",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة التوقف",

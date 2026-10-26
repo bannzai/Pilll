@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "Tafadhali gusa kidonge ulichomeza kabla ya mapumziko",
   "yazFlexLastRestDurationNote": "Tafadhali chagua kidonge cha mwisho ulichomeza kabla ya mapumziko",
   "yazFlexRestDurationDaysLabel": "Idadi ya siku za mapumziko",
-  "yazFlexRestDurationDaysValue": "{days} siku",
+  "yazFlexRestDurationDaysValue": "kwa siku {days}",
   "yazFlexResting": "Niko kwenye kipindi cha mapumziko na bado sijaanza tena",
   "yazFlexRestingDaysLabel": "Leo ni siku ya ngapi ya mapumziko",
   "yazFlexSkipRestDuration": "Ruka kuingiza kipindi cha mapumziko",

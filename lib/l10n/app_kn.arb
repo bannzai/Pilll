@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "ವಿರಾಮಕ್ಕೆ ಮೊದಲು ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
   "yazFlexLastRestDurationNote": "ವಿರಾಮ ಆರಂಭವಾಗುವ ಮೊದಲು ನೀವು ಕೊನೆಯದಾಗಿ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "yazFlexRestDurationDaysLabel": "ವಿರಾಮದ ದಿನಗಳ ಸಂಖ್ಯೆ",
-  "yazFlexRestDurationDaysValue": "{days} ದಿನ",
+  "yazFlexRestDurationDaysValue": "{days} ದಿನಗಳು",
   "yazFlexResting": "ವಿರಾಮದಲ್ಲಿದ್ದೇನೆ ಮತ್ತು ಇನ್ನೂ ಮತ್ತೆ ಪ್ರಾರಂಭಿಸಿಲ್ಲ",
   "yazFlexRestingDaysLabel": "ಇಂದು ವಿರಾಮದ ಎಷ್ಟನೇ ದಿನ",
   "yazFlexSkipRestDuration": "ವಿರಾಮ ಅವಧಿ ನಮೂದಿಸುವುದನ್ನು ಬಿಟ್ಟುಬಿಡಿ",

@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "විරාමයට පෙර ගත් පෙත්ත තට්ටු කරන්න",
   "yazFlexLastRestDurationNote": "විරාමය ආරම්භ වීමට පෙර අවසන් වරට ගත් පෙත්ත කරුණාකර තෝරන්න",
   "yazFlexRestDurationDaysLabel": "විරාම දින ගණන",
-  "yazFlexRestDurationDaysValue": "{days} දින",
+  "yazFlexRestDurationDaysValue": "දින {days}ක්",
   "yazFlexResting": "විරාම කාලයේ සිටින අතර තවම නැවත ආරම්භ කර නැහැ",
   "yazFlexRestingDaysLabel": "අද විරාමයේ කීවෙනි දවසද",
   "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",

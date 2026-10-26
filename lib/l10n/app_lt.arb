@@ -573,7 +573,7 @@
   "yazFlexLastRestDurationTitle": "Palieskite tabletę, kurią vartojote prieš pertrauką",
   "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pertrauką",
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",
-  "yazFlexRestDurationDaysValue": "{days} d.",
+  "yazFlexRestDurationDaysValue": "{days} dienų",
   "yazFlexResting": "Esu pertraukos laikotarpiu ir dar neatnaujinau vartojimo",
   "yazFlexRestingDaysLabel": "Kelinta šiandien pertraukos diena",
   "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
