@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "Predplaťte si teraz za špeciálnu cenu a ponechajte si ju",
   "standardMonthlyPlan": "Štandardný mesačný plán",
   "annualPlan": "Ročný plán",
-  "annualPrice": "{annualPackageStoreProductPriceString} za rok",
+  "annualPrice": "{annualPackageStoreProductPriceString}/rok",
   "monthlyPrice": "{monthlyPriceString}/mesiac",
   "dailyPrice": "{dailyPriceString}/deň",
   "premiumTermsNotice1": "・ Prémiové predplatné sa automaticky obnovuje každý mesiac alebo rok od dátumu začiatku",

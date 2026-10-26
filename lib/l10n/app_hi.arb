@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "अभी विशेष कीमत पर सदस्यता लें और यही कीमत आगे भी पाएं",
   "standardMonthlyPlan": "नियमित मासिक प्लान",
   "annualPlan": "सालाना प्लान",
-  "annualPrice": "{annualPackageStoreProductPriceString}/साल",
+  "annualPrice": "{annualPackageStoreProductPriceString}/वर्ष",
   "monthlyPrice": "{monthlyPriceString}/माह",
   "dailyPrice": "{dailyPriceString}/दिन",
   "premiumTermsNotice1": "• प्रीमियम अनुबंध अवधि प्रारंभ तिथि से गिनकर प्रत्येक 1 महीने या 1 वर्ष में स्वचालित रूप से नवीकृत होगी।",

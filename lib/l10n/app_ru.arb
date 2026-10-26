@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "Оформите подписку сейчас по специальной цене и сохраните её",
   "standardMonthlyPlan": "Обычный месячный план",
   "annualPlan": "Годовой план",
-  "annualPrice": "{annualPackageStoreProductPriceString} в год",
+  "annualPrice": "{annualPackageStoreProductPriceString}/год",
   "monthlyPrice": "{monthlyPriceString}/мес",
   "dailyPrice": "{dailyPriceString}/день",
   "premiumTermsNotice1": "• Премиум-подписка автоматически продлевается ежемесячно или ежегодно с даты начала подписки",

@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "Užsisakykite dabar už specialią kainą ir išsaugokite ją ateityje",
   "standardMonthlyPlan": "Įprastas mėnesio planas",
   "annualPlan": "Metinis planas",
-  "annualPrice": "{annualPackageStoreProductPriceString}/metų",
+  "annualPrice": "{annualPackageStoreProductPriceString}/metus",
   "monthlyPrice": "{monthlyPriceString}/mėn.",
   "dailyPrice": "{dailyPriceString}/dieną",
   "premiumTermsNotice1": "• Premium prenumeratos laikotarpis automatiškai atsinaujina kas mėnesį arba kas metus, skaičiuojant nuo pradžios datos",

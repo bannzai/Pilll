@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "Sicela ubhalise manje ngentengo ekhethekile, uqhubeke nokusebenzisa ngale ntengo",
   "standardMonthlyPlan": "Uhlelo olujwayelekile lwanyanga zonke",
   "annualPlan": "Uhlelo lonyaka",
-  "annualPrice": "{annualPackageStoreProductPriceString}/ngonyaka",
+  "annualPrice": "{annualPackageStoreProductPriceString}/unyaka",
   "monthlyPrice": "{monthlyPriceString}/ngenyanga",
   "dailyPrice": "{dailyPriceString}/usuku",
   "premiumTermsNotice1": "• Isikhathi sesivumelwano se-Premium sizovuselelwa ngokuzenzakalela njalo inyanga noma unyaka munye kusukela ngosuku lokuqala.",

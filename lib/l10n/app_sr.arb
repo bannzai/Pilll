@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "Претплатите се сада по посебној цени и задржите је",
   "standardMonthlyPlan": "Стандардни месечни план",
   "annualPlan": "Годишњи план",
-  "annualPrice": "{annualPackageStoreProductPriceString}/годину",
+  "annualPrice": "{annualPackageStoreProductPriceString}/година",
   "monthlyPrice": "{monthlyPriceString}/mesec",
   "dailyPrice": "{dailyPriceString}/dan",
   "premiumTermsNotice1": "・Премијум период се аутоматски обнавља месечно или годишње рачунајући од датума почетка",

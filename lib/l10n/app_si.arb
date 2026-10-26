@@ -178,7 +178,7 @@
   "limitedTimeDiscount": "දැන් විශේෂ මිලකට දායක වී, එම මිලටම දිගටම භාවිත කරන්න",
   "standardMonthlyPlan": "සාමාන්‍ය මාසික සැලැස්ම",
   "annualPlan": "වාර්ෂික සැලැස්ම",
-  "annualPrice": "{annualPackageStoreProductPriceString}/වර්ෂය",
+  "annualPrice": "{annualPackageStoreProductPriceString}/වසර",
   "monthlyPrice": "{monthlyPriceString}/මසකට",
   "dailyPrice": "{dailyPriceString}/දිනකට",
   "premiumTermsNotice1": "• ප්‍රීමියම් ගිණුම් කාල සීමාව ආරම්භක දිනයෙන් ගණන් කරන ලද මාස 1ක් හෝ වසර 1ක් සඳහා ස්වයංක්‍රීයව දීර්ඝ කරනු ලැබේ",
