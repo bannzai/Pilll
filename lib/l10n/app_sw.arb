@@ -250,7 +250,7 @@
   "save": "Hifadhi",
   "physicalCondition": "Hali ya mwili",
   "deletedDiaryCannotBeRecovered": "Maandishi ya shajara yaliyofutwa hayawezi kurejeshwa",
-  "sex": "ngono",
+  "sex": "Tendo la ndoa",
   "previousPillSheetGroup": "Kundi la awali la karatasi za dawa",
   "noPreviousPillSheetGroup": "Kundi la karatasi za vidonge la awali bado halipo",
   "failedToFetchPillHistory": "Imeshindwa kupata taarifa za historia ya kutumia dawa. {error}",

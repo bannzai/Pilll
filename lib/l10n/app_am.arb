@@ -250,7 +250,7 @@
   "save": "ያስቀምጡ",
   "physicalCondition": "የሰውነት ሁኔታ",
   "deletedDiaryCannotBeRecovered": "የተሰረዙ የማስታወሻ መዝገቦችን መመለስ አይቻልም",
-  "sex": "ወሲብ",
+  "sex": "ወሲባዊ ግንኙነት",
   "previousPillSheetGroup": "ያለፈው የክኒን ሳህን ቡድን",
   "noPreviousPillSheetGroup": "የቀደመው የክኒን ቡድን አሁንም የለም",
   "failedToFetchPillHistory": "የመድሐኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",

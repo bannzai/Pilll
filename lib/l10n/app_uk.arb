@@ -250,7 +250,7 @@
   "save": "Зберегти",
   "physicalCondition": "Фізичний стан",
   "deletedDiaryCannotBeRecovered": "Видалені записи щоденника неможливо відновити",
-  "sex": "секс",
+  "sex": "Статевий акт",
   "previousPillSheetGroup": "Попередня група блістерів",
   "noPreviousPillSheetGroup": "Попередня група блістерів з таблетками ще не існує",
   "failedToFetchPillHistory": "Не вдалося отримати інформацію про історію прийому. {error}",

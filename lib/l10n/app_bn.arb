@@ -250,7 +250,7 @@
   "save": "সংরক্ষণ করুন",
   "physicalCondition": "শারীরিক অবস্থা",
   "deletedDiaryCannotBeRecovered": "মুছে ফেলা ডায়েরির লেখা আর ফিরিয়ে আনা যাবে না",
-  "sex": "সেক্স",
+  "sex": "যৌন সম্পর্ক",
   "previousPillSheetGroup": "আগের পিল শিট গ্রুপ",
   "noPreviousPillSheetGroup": "আগের পিল শিট গ্রুপ এখনও বিদ্যমান নেই",
   "failedToFetchPillHistory": "সেবনের ইতিহাসের তথ্য লোড করতে ব্যর্থ হয়েছে। {error}",

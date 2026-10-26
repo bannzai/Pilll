@@ -250,7 +250,7 @@
   "save": "Lagre",
   "physicalCondition": "Fysisk form",
   "deletedDiaryCannotBeRecovered": "Slettede dagboknotater kan ikke gjenopprettes",
-  "sex": "sex",
+  "sex": "Sex",
   "previousPillSheetGroup": "Forrige pillpakkegruppe",
   "noPreviousPillSheetGroup": "Forrige pilleark-gruppe finnes ikke ennå",
   "failedToFetchPillHistory": "Kunne ikke laste dosehistorikk. {error}",

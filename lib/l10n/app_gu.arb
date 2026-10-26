@@ -250,7 +250,7 @@
   "save": "સાચવો",
   "physicalCondition": "શારીરિક સ્થિતિ",
   "deletedDiaryCannotBeRecovered": "કાઢી નાખેલી ડાયરીની નોંધો પાછી મેળવી શકાતી નથી",
-  "sex": "સેક્સ",
+  "sex": "જાતીય સંબંધ",
   "previousPillSheetGroup": "પાછલું પિલ શીટ જૂથ",
   "noPreviousPillSheetGroup": "પાછલું પિલ શીટ ગ્રૂપ હજુ અસ્તિત્વમાં નથી",
   "failedToFetchPillHistory": "સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ થયું. {error}",

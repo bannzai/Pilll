@@ -250,7 +250,7 @@
   "save": "Αποθήκευση",
   "physicalCondition": "Σωματική κατάσταση",
   "deletedDiaryCannotBeRecovered": "Οι διαγραμμένες καταχωρίσεις ημερολογίου δεν μπορούν να ανακτηθούν",
-  "sex": "σεξ",
+  "sex": "Σεξουαλική επαφή",
   "previousPillSheetGroup": "Προηγούμενη ομάδα συσκευασιών",
   "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμα προηγούμενη ομάδα φύλλων χαπιών",
   "failedToFetchPillHistory": "Απέτυχε η ανάκτηση των στοιχείων ιστορικού λήψης. {error}",

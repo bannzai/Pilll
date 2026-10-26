@@ -250,7 +250,7 @@
   "save": "Хадгалах",
   "physicalCondition": "Биеийн байдал",
   "deletedDiaryCannotBeRecovered": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
-  "sex": "бэлгийн харьцаа",
+  "sex": "Бэлгийн харьцаа",
   "previousPillSheetGroup": "Өмнөх эмийн хавтасны бүлэг",
   "noPreviousPillSheetGroup": "Өмнөх эмийн хуудасны бүлэг хараахан байхгүй байна",
   "failedToFetchPillHistory": "Уулгын түүхийн мэдээллийг авахад амжилтгүй боллоо. {error}",

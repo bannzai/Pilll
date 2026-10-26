@@ -250,7 +250,7 @@
   "save": "സംരക്ഷിക്കുക",
   "physicalCondition": "ശാരീരിക അവസ്ഥ",
   "deletedDiaryCannotBeRecovered": "ഇല്ലാതാക്കിയ ഡയറി കുറിപ്പുകൾ വീണ്ടെടുക്കാനാവില്ല",
-  "sex": "ലൈംഗികത",
+  "sex": "ലൈംഗിക ബന്ധം",
   "previousPillSheetGroup": "മുൻപത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ്",
   "noPreviousPillSheetGroup": "മുമ്പത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് ഇതുവരെ നിലവിലില്ല",
   "failedToFetchPillHistory": "സേവന ചരിത്രം ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. {error}",

@@ -250,7 +250,7 @@
   "save": "Uložit",
   "physicalCondition": "Tělesný stav",
   "deletedDiaryCannotBeRecovered": "Smazané záznamy v deníku nelze obnovit",
-  "sex": "sex",
+  "sex": "Pohlavní styk",
   "previousPillSheetGroup": "Předchozí skupina blistrů",
   "noPreviousPillSheetGroup": "Předchozí skupina balení pilulek zatím neexistuje",
   "failedToFetchPillHistory": "Nepodařilo se načíst historii užívání. {error}",

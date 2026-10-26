@@ -250,7 +250,7 @@
   "save": "Spremite",
   "physicalCondition": "Tjelesno stanje",
   "deletedDiaryCannotBeRecovered": "Izbrisani zapisi u dnevniku ne mogu se vratiti",
-  "sex": "seks",
+  "sex": "Spolni odnos",
   "previousPillSheetGroup": "Prethodna grupa blistera",
   "noPreviousPillSheetGroup": "Prethodna grupa tableta još ne postoji",
   "failedToFetchPillHistory": "Neuspješno dohvaćanje informacija o povijesti uzimanja. {error}",

@@ -250,7 +250,7 @@
   "save": "Gorde",
   "physicalCondition": "Egoera fisikoa",
   "deletedDiaryCannotBeRecovered": "Ezabatutako egunkariko sarrerak ezin dira berreskuratu",
-  "sex": "sexu",
+  "sex": "Sexu harremanak",
   "previousPillSheetGroup": "Aurreko pilula-orrien taldea",
   "noPreviousPillSheetGroup": "Aurreko pilula orriko taldea oraindik ez dago",
   "failedToFetchPillHistory": "Ezin izan da hartzeen historiaren informazioa eskuratu. {error}",

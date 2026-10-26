@@ -250,7 +250,7 @@
   "save": "Guardar",
   "physicalCondition": "Estado físico",
   "deletedDiaryCannotBeRecovered": "Las entradas del diario eliminadas no se pueden recuperar",
-  "sex": "sexo",
+  "sex": "Relaciones sexuales",
   "previousPillSheetGroup": "Grupo de blísteres anterior",
   "noPreviousPillSheetGroup": "El grupo de pastillas anterior aún no existe",
   "failedToFetchPillHistory": "Error al obtener la información del historial de toma. {error}",

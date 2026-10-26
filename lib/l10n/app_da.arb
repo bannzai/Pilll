@@ -250,7 +250,7 @@
   "save": "Gem",
   "physicalCondition": "Fysisk velbefindende",
   "deletedDiaryCannotBeRecovered": "Slettede dagbogsnotater kan ikke gendannes",
-  "sex": "sex",
+  "sex": "Sex",
   "previousPillSheetGroup": "Forrige p-pille gruppe",
   "noPreviousPillSheetGroup": "Den forrige p-pillekort gruppe findes ikke endnu",
   "failedToFetchPillHistory": "Kunne ikke hente indtagelseshistorik. {error}",

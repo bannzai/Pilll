@@ -250,7 +250,7 @@
   "save": "Mentés",
   "physicalCondition": "Fizikai állapot",
   "deletedDiaryCannotBeRecovered": "A törölt naplóbejegyzések nem állíthatók vissza",
-  "sex": "szex",
+  "sex": "Szexuális együttlét",
   "previousPillSheetGroup": "Előző tablettacsoport",
   "noPreviousPillSheetGroup": "Az előző pilulacsoport még nem létezik",
   "failedToFetchPillHistory": "A szedési előzmények betöltése sikertelen volt. {error}",

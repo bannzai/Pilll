@@ -250,7 +250,7 @@
   "save": "Ruani",
   "physicalCondition": "Gjendja fizike",
   "deletedDiaryCannotBeRecovered": "Shënimet e fshira të ditarit nuk mund të rikthehen",
-  "sex": "seks",
+  "sex": "Marrëdhënie seksuale",
   "previousPillSheetGroup": "Grupi i mëparshëm i paketave të pilulash",
   "noPreviousPillSheetGroup": "Grupi i mëparshëm i fletës së pilulës nuk ekziston ende",
   "failedToFetchPillHistory": "Dështoi në marrjen e të dhënave të historisë së marrjes. {error}",

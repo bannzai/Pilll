@@ -250,7 +250,7 @@
   "save": "حفظ",
   "physicalCondition": "الحالة الجسدية",
   "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات المحذوفة",
-  "sex": "الجنس",
+  "sex": "العلاقة الجنسية",
   "previousPillSheetGroup": "مجموعة شرائط الحبوب السابقة",
   "noPreviousPillSheetGroup": "لا توجد مجموعة شرائح الحبوب السابقة بعد",
   "failedToFetchPillHistory": "فشل في الحصول على معلومات سجل تناول الأقراص. {error}",

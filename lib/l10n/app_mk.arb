@@ -250,7 +250,7 @@
   "save": "Зачувајте",
   "physicalCondition": "Физичка состојба",
   "deletedDiaryCannotBeRecovered": "Избришаните записи во дневникот не може да се вратат",
-  "sex": "секс",
+  "sex": "Сексуален однос",
   "previousPillSheetGroup": "Претходна група таблети",
   "noPreviousPillSheetGroup": "Претходната grupa на пилули сè уште не постои",
   "failedToFetchPillHistory": "Неуспешно преземање на информациите за историјата на земање. {error}",

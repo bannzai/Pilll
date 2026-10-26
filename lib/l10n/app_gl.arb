@@ -250,7 +250,7 @@
   "save": "Gardar",
   "physicalCondition": "Estado físico",
   "deletedDiaryCannotBeRecovered": "As entradas do diario eliminadas non se poden recuperar",
-  "sex": "sexo",
+  "sex": "Relacións sexuais",
   "previousPillSheetGroup": "Anterior grupo de cartelas",
   "noPreviousPillSheetGroup": "O grupo de píldoras anterior aínda non existe",
   "failedToFetchPillHistory": "Fallou a obtención da información do historial de toma. {error}",

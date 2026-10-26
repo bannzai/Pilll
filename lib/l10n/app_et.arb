@@ -250,7 +250,7 @@
   "save": "Salvesta",
   "physicalCondition": "Enesetunne",
   "deletedDiaryCannotBeRecovered": "Kustutatud päevikukirjeid ei saa taastada",
-  "sex": "seks",
+  "sex": "Seksuaalvahekord",
   "previousPillSheetGroup": "Eelmine pillilehtede grupp",
   "noPreviousPillSheetGroup": "Eelmine pillilehtede grupp ei ole veel olemas",
   "failedToFetchPillHistory": "Tablettide võtmisajaloo laadimine ebaõnnestus. {error}",

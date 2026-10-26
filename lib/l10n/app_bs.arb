@@ -250,7 +250,7 @@
   "save": "Sačuvajte",
   "physicalCondition": "Fizičko stanje",
   "deletedDiaryCannotBeRecovered": "Izbrisani zapisi u dnevniku ne mogu se vratiti",
-  "sex": "seks",
+  "sex": "Seksualni odnos",
   "previousPillSheetGroup": "Prethodna grupa pilula",
   "noPreviousPillSheetGroup": "Prethodna grupa pilula još uvijek ne postoji",
   "failedToFetchPillHistory": "Nije moguće učitati istoriju uzimanja pilula. {error}",

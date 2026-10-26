@@ -250,7 +250,7 @@
   "save": "Сақтау",
   "physicalCondition": "Дене күйі",
   "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбаларын қалпына келтіру мүмкін емес",
-  "sex": "секс",
+  "sex": "Жыныстық қатынас",
   "previousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы",
   "noPreviousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы әлі жоқ",
   "failedToFetchPillHistory": "Дәрі қабылдау тарихы ақпаратын алу сәтсіз аяқталды. {error}",

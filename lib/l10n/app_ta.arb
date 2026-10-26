@@ -250,7 +250,7 @@
   "save": "சேமியுங்கள்",
   "physicalCondition": "உடல் நிலை",
   "deletedDiaryCannotBeRecovered": "நீக்கப்பட்ட நாட்குறிப்புப் பதிவுகளை மீட்டெடுக்க முடியாது",
-  "sex": "பாலியல்",
+  "sex": "பாலியல் உறவு",
   "previousPillSheetGroup": "முந்தைய மாத்திரை தாள் குழு",
   "noPreviousPillSheetGroup": "முந்தைய மாத்திரை தாள் குழு இன்னும் இல்லை",
   "failedToFetchPillHistory": "மருந்து உட்கொள்ளல் வரலாறு தகவலை பெறுவதில் தோல்வி. {error}",

@@ -250,7 +250,7 @@
   "save": "Saglabājiet",
   "physicalCondition": "Fiziskā pašsajūta",
   "deletedDiaryCannotBeRecovered": "Izdzēstos dienasgrāmatas ierakstus nevar atjaunot",
-  "sex": "sekss",
+  "sex": "Dzimumattiecības",
   "previousPillSheetGroup": "Iepriekšējā tablešu grupa",
   "noPreviousPillSheetGroup": "Iepriekšējā tablešu grupa vēl neeksistē",
   "failedToFetchPillHistory": "Neizdevās iegūt tablešu lietošanas vēstures informāciju. {error}",

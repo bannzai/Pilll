@@ -250,7 +250,7 @@
   "save": "Захаваць",
   "physicalCondition": "Самаадчуванне",
   "deletedDiaryCannotBeRecovered": "Выдаленыя запісы ў дзённіку нельга аднавіць",
-  "sex": "секс",
+  "sex": "Сэксуальныя адносіны",
   "previousPillSheetGroup": "Папярэдняя група блістараў",
   "noPreviousPillSheetGroup": "Папярэдняя група аркушоў таблетак яшчэ не існуе",
   "failedToFetchPillHistory": "Не ўдалося атрымаць інформацыю пра гісторыю прыёму. {error}",

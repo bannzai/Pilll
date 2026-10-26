@@ -250,7 +250,7 @@
   "save": "Yadda saxlayın",
   "physicalCondition": "Fiziki vəziyyət",
   "deletedDiaryCannotBeRecovered": "Silinmiş gündəlik qeydlərini bərpa etmək mümkün deyil",
-  "sex": "seks",
+  "sex": "Cinsi əlaqə",
   "previousPillSheetGroup": "Əvvəlki həb qrupu",
   "noPreviousPillSheetGroup": "Əvvəlki həb vərəqi qrupu hələ mövcud deyil",
   "failedToFetchPillHistory": "Dərman qəbulu tarixçəsi məlumatları yüklənə bilmədi. {error}",

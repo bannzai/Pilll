@@ -250,7 +250,7 @@
   "save": "Išsaugokite",
   "physicalCondition": "Fizinė savijauta",
   "deletedDiaryCannotBeRecovered": "Ištrintų dienoraščio įrašų atkurti negalima",
-  "sex": "seksas",
+  "sex": "Lytiniai santykiai",
   "previousPillSheetGroup": "Ankstesnė pilulių lakštų grupė",
   "noPreviousPillSheetGroup": "Ankstesnė tablečių lakšto grupė dar nėra",
   "failedToFetchPillHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",

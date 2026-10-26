@@ -250,7 +250,7 @@
   "save": "Salvează",
   "physicalCondition": "Stare fizică",
   "deletedDiaryCannotBeRecovered": "Însemnările șterse din jurnal nu pot fi recuperate",
-  "sex": "sex",
+  "sex": "Relații sexuale",
   "previousPillSheetGroup": "Grupul anterior de plachete",
   "noPreviousPillSheetGroup": "Grupul anterior de blistere de pastile nu există încă",
   "failedToFetchPillHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",

@@ -250,7 +250,7 @@
   "save": "Vista",
   "physicalCondition": "Líkamleg líðan",
   "deletedDiaryCannotBeRecovered": "Ekki er hægt að endurheimta eyddar dagbókarfærslur",
-  "sex": "kynlíf",
+  "sex": "Kynlíf",
   "previousPillSheetGroup": "Síðasti pillupakkningahópur",
   "noPreviousPillSheetGroup": "Fyrri pillublað hópur er ekki til",
   "failedToFetchPillHistory": "Mistókst að sækja lyfjanotkunarsögu. {error}",

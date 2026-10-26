@@ -250,7 +250,7 @@
   "save": "Opslaan",
   "physicalCondition": "Lichamelijke conditie",
   "deletedDiaryCannotBeRecovered": "Verwijderde dagboeknotities kun je niet herstellen",
-  "sex": "seks",
+  "sex": "Seks",
   "previousPillSheetGroup": "Vorige pilstripgroep",
   "noPreviousPillSheetGroup": "De vorige pillenstripgroep bestaat nog niet",
   "failedToFetchPillHistory": "Kan inname geschiedenis niet ophalen. {error}",

@@ -250,7 +250,7 @@
   "save": "Enregistrer",
   "physicalCondition": "État physique",
   "deletedDiaryCannotBeRecovered": "Les notes du journal supprimées ne peuvent pas être récupérées",
-  "sex": "activité sexuelle",
+  "sex": "Rapport sexuel",
   "previousPillSheetGroup": "Groupe de feuilles de pilules précédent",
   "noPreviousPillSheetGroup": "Il n'existe pas encore de groupe de feuilles de pilules précédent.",
   "failedToFetchPillHistory": "Échec de la récupération des informations sur l'historique des médicaments. {error}",

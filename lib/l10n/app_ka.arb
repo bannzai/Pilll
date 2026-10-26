@@ -250,7 +250,7 @@
   "save": "შენახვა",
   "physicalCondition": "ფიზიკური მდგომარეობა",
   "deletedDiaryCannotBeRecovered": "წაშლილი დღიურის ჩანაწერების აღდგენა შეუძლებელია",
-  "sex": "სექსი",
+  "sex": "სქესობრივი კავშირი",
   "previousPillSheetGroup": "წინა ტაბლეტების ფურცლის ჯგუფი",
   "noPreviousPillSheetGroup": "წინა აბების ფურცლის ჯგუფი ჯერ არ არსებობს",
   "failedToFetchPillHistory": "მიღების ისტორიის ინფორმაციის მიღება ვერ მოხერხდა. {error}",

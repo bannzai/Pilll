@@ -250,7 +250,7 @@
   "save": "Stoor",
   "physicalCondition": "Hoe jou liggaam voel",
   "deletedDiaryCannotBeRecovered": "Geskrapte dagboekinskrywings kan nie herstel word nie",
-  "sex": "seks",
+  "sex": "Seks",
   "previousPillSheetGroup": "Vorige pilpakketgroep",
   "noPreviousPillSheetGroup": "Die vorige pilblad groep bestaan nog nie",
   "failedToFetchPillHistory": "Kon nie die inligting oor die pilgebruikgeskiedenis laai nie. {error}",

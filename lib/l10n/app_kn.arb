@@ -250,7 +250,7 @@
   "save": "ಉಳಿಸಿ",
   "physicalCondition": "ದೈಹಿಕ ಸ್ಥಿತಿ",
   "deletedDiaryCannotBeRecovered": "ಅಳಿಸಿದ ದಿನಚರಿ ದಾಖಲಾತಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ",
-  "sex": "ಲೈಂಗಿಕ",
+  "sex": "ಲೈಂಗಿಕ ಸಂಪರ್ಕ",
   "previousPillSheetGroup": "ಹಿಂದಿನ ಪಿಲ್ ಶೀಟ್ ಗುಂಪು",
   "noPreviousPillSheetGroup": "ಹಿಂದಿನ ಪಿಲ್ ಶೀಟ್ ಗುಂಪು ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ",
   "failedToFetchPillHistory": "ಸೇವನೆ ಇತಿಹಾಸ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯುವಲ್ಲಿ ವಿಫಲವಾಗಿದೆ। {error}",

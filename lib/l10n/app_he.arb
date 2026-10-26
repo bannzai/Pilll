@@ -250,7 +250,7 @@
   "save": "לשמור",
   "physicalCondition": "מצב גופני",
   "deletedDiaryCannotBeRecovered": "אי אפשר לשחזר רשומות יומן שנמחקו",
-  "sex": "מין",
+  "sex": "יחסי מין",
   "previousPillSheetGroup": "קבוצת אריזות הכדורים הקודמת",
   "noPreviousPillSheetGroup": "קבוצת גיליון הכדורים הקודמת אינה קיימת עדיין",
   "failedToFetchPillHistory": "שליפת מידע היסטוריית הנטילה נכשלה. {error}",

@@ -250,7 +250,7 @@
   "save": "सुरक्षित गर्नुहोस्",
   "physicalCondition": "शारीरिक अवस्था",
   "deletedDiaryCannotBeRecovered": "मेटाइएका डायरीका टिपोटहरू पुनः प्राप्त गर्न सकिँदैन",
-  "sex": "यौन",
+  "sex": "यौन सम्बन्ध",
   "previousPillSheetGroup": "अघिल्लो पिल सिट समूह",
   "noPreviousPillSheetGroup": "अघिल्लो पिल शिटको समूह अझै उपलब्ध छैन",
   "failedToFetchPillHistory": "दवा सेवनको इतिहास लोड गर्न असफल भयो। {error}",

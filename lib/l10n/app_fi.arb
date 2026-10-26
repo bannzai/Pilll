@@ -250,7 +250,7 @@
   "save": "Tallenna",
   "physicalCondition": "Fyysinen vointi",
   "deletedDiaryCannotBeRecovered": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",
-  "sex": "seksi",
+  "sex": "Seksi",
   "previousPillSheetGroup": "Edellinen pilleripakkausryhmä",
   "noPreviousPillSheetGroup": "Edellistä pillipakkausryhmää ei ole vielä olemassa",
   "failedToFetchPillHistory": "Ottamishistorian tietojen hakeminen epäonnistui. {error}",

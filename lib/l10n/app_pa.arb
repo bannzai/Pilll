@@ -250,7 +250,7 @@
   "save": "ਸੰਭਾਲੋ",
   "physicalCondition": "ਸਰੀਰਕ ਹਾਲਤ",
   "deletedDiaryCannotBeRecovered": "ਮਿਟਾਈਆਂ ਗਈਆਂ ਡਾਇਰੀ ਐਂਟਰੀਆਂ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ",
-  "sex": "ਸੈਕਸ",
+  "sex": "ਜਿਨਸੀ ਸੰਬੰਧ",
   "previousPillSheetGroup": "ਪਿਛਲਾ ਗੋਲੀ ਸ਼ੀਟ ਗਰੁੱਪ",
   "noPreviousPillSheetGroup": "ਪਿਛਲਾ ਪਿਲ ਸ਼ੀਟ ਗਰੁੱਪ ਅਜੇ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
   "failedToFetchPillHistory": "ਦਵਾਈ ਸੇਵਨ ਇਤਿਹਾਸ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। {error}",

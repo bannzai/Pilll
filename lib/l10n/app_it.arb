@@ -250,7 +250,7 @@
   "save": "Salva",
   "physicalCondition": "Condizione fisica",
   "deletedDiaryCannotBeRecovered": "Le voci del diario eliminate non possono essere recuperate",
-  "sex": "sesso",
+  "sex": "Rapporti sessuali",
   "previousPillSheetGroup": "Gruppo di blister precedente",
   "noPreviousPillSheetGroup": "Il gruppo del blister precedente non esiste ancora",
   "failedToFetchPillHistory": "Non è stato possibile recuperare le informazioni della cronologia delle assunzioni. {error}",

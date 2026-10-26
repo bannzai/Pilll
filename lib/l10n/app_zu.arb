@@ -250,7 +250,7 @@
   "save": "Londoloza",
   "physicalCondition": "Isimo somzimba",
   "deletedDiaryCannotBeRecovered": "Okubhalwe kudayari okususiwe ngeke kuphinde kubuyiswe",
-  "sex": "ucansi",
+  "sex": "Ukuya ocansini",
   "previousPillSheetGroup": "Iqembu leshidi lepilisi elidlule",
   "noPreviousPillSheetGroup": "Iqembu lamaphilisi elidlule alikho okwamanje",
   "failedToFetchPillHistory": "Kwehlulekile ukuthola ulwazi lomlando wokuphuzwa kwamaphilisi. {error}",

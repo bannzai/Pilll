@@ -250,7 +250,7 @@
   "save": "Պահպանել",
   "physicalCondition": "Ֆիզիկական վիճակ",
   "deletedDiaryCannotBeRecovered": "Ջնջված օրագրային գրառումները հնարավոր չէ վերականգնել",
-  "sex": "սեռ",
+  "sex": "Սեռական հարաբերություն",
   "previousPillSheetGroup": "Նախորդ հաբային փաթեթների խումբ",
   "noPreviousPillSheetGroup": "Նախորդ հաբերի խումբը դեռ գոյություն չունի",
   "failedToFetchPillHistory": "Հաբերի ընդունման պատմության տվյալները ստանալը ձախողվեց: {error}",

@@ -250,7 +250,7 @@
   "save": "Salvar",
   "physicalCondition": "Condição física",
   "deletedDiaryCannotBeRecovered": "As entradas do diário excluídas não podem ser recuperadas",
-  "sex": "sexo",
+  "sex": "Relação sexual",
   "previousPillSheetGroup": "Grupo anterior de cartelas",
   "noPreviousPillSheetGroup": "O grupo de cartela anterior ainda não existe",
   "failedToFetchPillHistory": "Falha ao obter informações do histórico de medicação. {error}",

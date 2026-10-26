@@ -250,7 +250,7 @@
   "save": "सहेजें",
   "physicalCondition": "शारीरिक स्थिति",
   "deletedDiaryCannotBeRecovered": "मिटाई गई डायरी की प्रविष्टियाँ वापस नहीं लाई जा सकतीं",
-  "sex": "यौन",
+  "sex": "यौन संबंध",
   "previousPillSheetGroup": "पिछला पिल शीट समूह",
   "noPreviousPillSheetGroup": "पिछला पिल शीट समूह अभी तक मौजूद नहीं है",
   "failedToFetchPillHistory": "सेवन इतिहास की जानकारी प्राप्त करने में असफल। {error}",

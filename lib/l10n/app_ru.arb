@@ -250,7 +250,7 @@
   "save": "Сохранить",
   "physicalCondition": "Физическое состояние",
   "deletedDiaryCannotBeRecovered": "Удалённые записи дневника нельзя восстановить",
-  "sex": "секс",
+  "sex": "Половой контакт",
   "previousPillSheetGroup": "Предыдущая группа блистеров",
   "noPreviousPillSheetGroup": "Предыдущая группа блистеров ещё не существует",
   "failedToFetchPillHistory": "Не удалось получить информацию об истории приема. {error}",

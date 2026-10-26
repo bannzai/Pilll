@@ -250,7 +250,7 @@
   "save": "Desa",
   "physicalCondition": "Estat físic",
   "deletedDiaryCannotBeRecovered": "Les entrades del diari eliminades no es poden recuperar",
-  "sex": "sexe",
+  "sex": "Relacions sexuals",
   "previousPillSheetGroup": "Grup de plaquetes anterior",
   "noPreviousPillSheetGroup": "El grup de làmines de píndoles anterior no existeix encara.",
   "failedToFetchPillHistory": "No s'ha pogut obtenir l'historial de prises. {error}",

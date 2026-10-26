@@ -250,7 +250,7 @@
   "save": "Saqlang",
   "physicalCondition": "Jismoniy holat",
   "deletedDiaryCannotBeRecovered": "Oʻchirilgan kundalik yozuvlarini qayta tiklab boʻlmaydi",
-  "sex": "jinsiy aloqa",
+  "sex": "Jinsiy aloqa",
   "previousPillSheetGroup": "Oldingi pill varaqalari guruhi",
   "noPreviousPillSheetGroup": "Oldingi pill varag'i guruhi hali mavjud emas",
   "failedToFetchPillHistory": "Qabul qilish tarixi ma'lumotlarini olishda xatolik yuz berdi. {error}",
