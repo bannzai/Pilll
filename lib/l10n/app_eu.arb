@@ -29,7 +29,7 @@
   "deleteUser": "Ezabatu kontua",
   "deleteDiary": "Ezabatu egunkariko sarrera",
   "confirmDeletingMenstruation": "Hileko honen erregistroa ezabatu nahi duzu?",
-  "addNotificationTime": "Abisu-ordua gehitu",
+  "addNotificationTime": "Gehitu jakinarazpenaren ordua",
   "syncWithDeviceTimeZone": "Gailuaren ordu-zonarekin ({deviceTimezoneName}) sinkronizatu nahi duzu?",
   "currentTimeZone": "Konfiguratutako ordu zona",
   "yes": "Bai",

@@ -29,7 +29,7 @@
   "deleteUser": "Burahin ang account ninyo",
   "deleteDiary": "Burahin ang tala sa talaarawan",
   "confirmDeletingMenstruation": "Gusto po ba ninyong burahin ang tala ng panahong ito ng regla?",
-  "addNotificationTime": "Magdagdag ng Oras ng Paalala",
+  "addNotificationTime": "Magdagdag ng oras ng abiso",
   "syncWithDeviceTimeZone": "Mag-sync po ba sa timezone ng device ({deviceTimezoneName})?",
   "currentTimeZone": "Kasalukuyang Time Zone na Naka-set",
   "yes": "Oo",

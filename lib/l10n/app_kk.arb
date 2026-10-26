@@ -29,7 +29,7 @@
   "deleteUser": "Есептік жазбаны жою",
   "deleteDiary": "Күнделік жазбасын жою",
   "confirmDeletingMenstruation": "Етеккір кезеңінің жазбасын жойғыңыз келе ме?",
-  "addNotificationTime": "Хабарландыру уақытын қосу",
+  "addNotificationTime": "Хабарландыру уақытын қосыңыз",
   "syncWithDeviceTimeZone": "Құрылғының уақыт белдеуімен ({deviceTimezoneName}) синхрондаймыз ба?",
   "currentTimeZone": "Ағымдағы орнатылған уақыт белдеуі",
   "yes": "иә",

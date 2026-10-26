@@ -29,7 +29,7 @@
   "deleteUser": "Odstráňte účet",
   "deleteDiary": "Odstrániť záznam v denníku",
   "confirmDeletingMenstruation": "Chcete vymazať záznam o tomto období menštruácie?",
-  "addNotificationTime": "Pridať čas notifikácie",
+  "addNotificationTime": "Pridajte čas upozornenia",
   "syncWithDeviceTimeZone": "Chcete synchronizovať s časovým pásmom zariadenia ({deviceTimezoneName})?",
   "currentTimeZone": "Aktuálne nastavené časové pásmo",
   "yes": "Áno",

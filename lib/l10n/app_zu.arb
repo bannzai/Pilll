@@ -29,7 +29,7 @@
   "deleteUser": "Sicela ususe i-akhawunti",
   "deleteDiary": "Sicela ususe okubhalwe edayari",
   "confirmDeletingMenstruation": "Ungathanda ukususa irekhodi lalesi sikhathi sokuya esikhathini?",
-  "addNotificationTime": "Engeza Isikhathi Sesaziso",
+  "addNotificationTime": "Sicela ungeze isikhathi sesaziso",
   "syncWithDeviceTimeZone": "Ufuna ukuxhumanisa nesikhathi somshini wakho ({deviceTimezoneName})?",
   "currentTimeZone": "I-timezone esetiwe njengamanje",
   "yes": "Yebo",

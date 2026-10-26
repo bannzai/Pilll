@@ -29,7 +29,7 @@
   "deleteUser": "Изтриване на профила",
   "deleteDiary": "Изтриване на записа в дневника",
   "confirmDeletingMenstruation": "Искате ли да изтриете записа за периода на мензиса?",
-  "addNotificationTime": "Добави време за уведомление",
+  "addNotificationTime": "Добавяне на час за известие",
   "syncWithDeviceTimeZone": "Искате ли да синхронизирате с часовата зона на устройството ({deviceTimezoneName})?",
   "currentTimeZone": "Текущо зададена часова зона",
   "yes": "Да",

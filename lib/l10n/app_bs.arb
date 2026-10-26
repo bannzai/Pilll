@@ -29,7 +29,7 @@
   "deleteUser": "Izbrišite svoj račun",
   "deleteDiary": "Brisanje zapisa iz dnevnika",
   "confirmDeletingMenstruation": "Želite li izbrisati zapis o periodu menstruacije?",
-  "addNotificationTime": "Dodaj vrijeme notifikacije",
+  "addNotificationTime": "Dodajte vrijeme obavijesti",
   "syncWithDeviceTimeZone": "Da li želite sinhronizovati sa vremenskom zonom uređaja ({deviceTimezoneName})?",
   "currentTimeZone": "Trenutno podešena vremenska zona",
   "yes": "da",

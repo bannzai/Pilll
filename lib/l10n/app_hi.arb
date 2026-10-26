@@ -29,7 +29,7 @@
   "deleteUser": "खाता हटाएं",
   "deleteDiary": "डायरी की प्रविष्टि हटाएँ",
   "confirmDeletingMenstruation": "क्या आप इस पीरियड की अवधि का रिकॉर्ड हटाना चाहती हैं?",
-  "addNotificationTime": "सूचना समय जोड़ें",
+  "addNotificationTime": "सूचना का समय जोड़ें",
   "syncWithDeviceTimeZone": "क्या आप डिवाइस टाइम जोन ({deviceTimezoneName}) के साथ सिंक करना चाहते हैं?",
   "currentTimeZone": "वर्तमान में सेट टाइम ज़ोन",
   "yes": "हाँ",

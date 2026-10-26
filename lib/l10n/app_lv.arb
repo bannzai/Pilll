@@ -29,7 +29,7 @@
   "deleteUser": "Dzēst kontu",
   "deleteDiary": "Dzēst dienasgrāmatas ierakstu",
   "confirmDeletingMenstruation": "Vai vēlaties dzēst šī mēnešreižu perioda ierakstu?",
-  "addNotificationTime": "Pievienot atgādinājuma laiku",
+  "addNotificationTime": "Pievienojiet paziņojuma laiku",
   "syncWithDeviceTimeZone": "Vai sinhronizēt ar ierīces laika joslu ({deviceTimezoneName})?",
   "currentTimeZone": "Pašlaik iestatītā laika zona",
   "yes": "Jā",

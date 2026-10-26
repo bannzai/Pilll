@@ -29,7 +29,7 @@
   "deleteUser": "Видалити обліковий запис",
   "deleteDiary": "Видалити запис у щоденнику",
   "confirmDeletingMenstruation": "Видалити запис про цей період місячних?",
-  "addNotificationTime": "Додати час нагадування",
+  "addNotificationTime": "Додати час сповіщення",
   "syncWithDeviceTimeZone": "Синхронізувати з часовим поясом пристрою ({deviceTimezoneName})?",
   "currentTimeZone": "Поточний часовий пояс",
   "yes": "Так",

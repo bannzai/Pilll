@@ -29,7 +29,7 @@
   "deleteUser": "የተጠቃሚ መለያን ሰርዝ",
   "deleteDiary": "የማስታወሻ መዝገቡን ይሰርዙ",
   "confirmDeletingMenstruation": "የወር አበባ ጊዜ መዝገቡን መሰረዝ ይፈልጋሉ?",
-  "addNotificationTime": "ማሳወቂያ ሰዓት ማከል",
+  "addNotificationTime": "የማሳወቂያ ሰዓት ያክሉ",
   "syncWithDeviceTimeZone": "የመሳሪያው የጊዜ ዞን ({deviceTimezoneName}) ማመሳሰል ይፈልጋሉ?",
   "currentTimeZone": "የተዋቀረው ጊዜ ዞን",
   "yes": "አዎ",

@@ -29,7 +29,7 @@
   "deleteUser": "অ্যাকাউন্ট মুছে ফেলুন",
   "deleteDiary": "ডায়েরির লেখাটি মুছে ফেলুন",
   "confirmDeletingMenstruation": "আপনি কি মাসিকের সময়কালের রেকর্ড মুছে ফেলতে চান?",
-  "addNotificationTime": "বিজ্ঞপ্তির সময় যোগ করুন",
+  "addNotificationTime": "নোটিফিকেশনের সময় যোগ করুন",
   "syncWithDeviceTimeZone": "ডিভাইসের টাইম জোন ({deviceTimezoneName}) এর সাথে সিঙ্ক করবেন?",
   "currentTimeZone": "বর্তমানে সেট করা টাইমজোন",
   "yes": "হ্যাঁ",

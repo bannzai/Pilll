@@ -29,7 +29,7 @@
   "deleteUser": "Kustuta konto",
   "deleteDiary": "Kustuta päevikukanne",
   "confirmDeletingMenstruation": "Kas soovid selle päevade perioodi kirje kustutada?",
-  "addNotificationTime": "Lisa teavitusaeg",
+  "addNotificationTime": "Lisa teavituse aeg",
   "syncWithDeviceTimeZone": "Kas sünkroniseerida seadme ajavööndiga ({deviceTimezoneName})?",
   "currentTimeZone": "Praegu seadistatud ajavöönd",
   "yes": "Jah",

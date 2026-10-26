@@ -29,7 +29,7 @@
   "deleteUser": "கணக்கை நீக்குங்கள்",
   "deleteDiary": "நாட்குறிப்புப் பதிவை நீக்குங்கள்",
   "confirmDeletingMenstruation": "இந்த மாதவிடாய் காலப் பதிவை நீக்க விரும்புகிறீர்களா?",
-  "addNotificationTime": "அறிவிப்பு நேரம் சேர்க்கவும்",
+  "addNotificationTime": "அறிவிப்பு நேரத்தைச் சேர்க்குங்கள்",
   "syncWithDeviceTimeZone": "சாதன நேர மண்டலம் ({deviceTimezoneName}) உடன் ஒத்திசைக்க வேண்டுமா？",
   "currentTimeZone": "தற்போதைய நேர மண்டலம்",
   "yes": "ஆம்",

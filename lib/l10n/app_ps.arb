@@ -29,7 +29,7 @@
   "deleteUser": "حساب ړنګ کړئ",
   "deleteDiary": "د ورځني یادښت ثبت ړنګ کړئ",
   "confirmDeletingMenstruation": "ایا تاسو غواړئ د دې حیض د مودې ثبت پاک کړئ؟",
-  "addNotificationTime": "د یادونې وخت اضافه کول",
+  "addNotificationTime": "د خبرتیا وخت ورزیات کړئ",
   "syncWithDeviceTimeZone": "ایا تاسو غواړئ چې د دستګاه د وخت سیمې ({deviceTimezoneName}) سره همغږي وکړئ؟",
   "currentTimeZone": "اوسنی تنظیم شوی ټایم زون",
   "yes": "هو",

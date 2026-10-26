@@ -29,7 +29,7 @@
   "deleteUser": "Eliminar cuenta",
   "deleteDiary": "Eliminar la entrada del diario",
   "confirmDeletingMenstruation": "¿Quieres eliminar el registro de este período de regla?",
-  "addNotificationTime": "Agregar horario de notificación",
+  "addNotificationTime": "Añadir hora de notificación",
   "syncWithDeviceTimeZone": "¿Desea sincronizar con la zona horaria del dispositivo ({deviceTimezoneName})?",
   "currentTimeZone": "Zona horaria actual",
   "yes": "Sí",

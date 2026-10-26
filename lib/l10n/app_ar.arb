@@ -29,7 +29,7 @@
   "deleteUser": "حذف الحساب",
   "deleteDiary": "حذف تدوينة اليوميات",
   "confirmDeletingMenstruation": "هل تريدين حذف فترة الدورة المسجلة؟",
-  "addNotificationTime": "إضافة وقت الإشعار",
+  "addNotificationTime": "إضافة وقت تنبيه",
   "syncWithDeviceTimeZone": "هل تريد المزامنة مع المنطقة الزمنية للجهاز ({deviceTimezoneName})؟",
   "currentTimeZone": "المنطقة الزمنية الحالية",
   "yes": "نعم",

@@ -29,7 +29,7 @@
   "deleteUser": "Șterge contul",
   "deleteDiary": "Șterge însemnarea din jurnal",
   "confirmDeletingMenstruation": "Vrei să ștergi înregistrarea acestei perioade de menstruație?",
-  "addNotificationTime": "Adaugă oră de notificare",
+  "addNotificationTime": "Adaugă o oră pentru notificare",
   "syncWithDeviceTimeZone": "Sincronizați cu fusul orar al dispozitivului ({deviceTimezoneName})?",
   "currentTimeZone": "Fusul orar configurat în prezent",
   "yes": "Da",

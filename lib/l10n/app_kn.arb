@@ -29,7 +29,7 @@
   "deleteUser": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
   "deleteDiary": "ದಿನಚರಿಯ ದಾಖಲೆಯನ್ನು ಅಳಿಸಿ",
   "confirmDeletingMenstruation": "ಈ ಮುಟ್ಟಿನ ಅವಧಿಯ ದಾಖಲೆಯನ್ನು ಅಳಿಸಲು ಬಯಸುವಿರಾ?",
-  "addNotificationTime": "ಸೂಚನೆ ಸಮಯ ಸೇರಿಸು",
+  "addNotificationTime": "ಅಧಿಸೂಚನೆ ಸಮಯವನ್ನು ಸೇರಿಸಿ",
   "syncWithDeviceTimeZone": "ಸಾಧನದ ಸಮಯ ವಲಯ ({deviceTimezoneName}) ಜೊತೆ ಸಿಂಕ್ ಮಾಡಬೇಕೇ?",
   "currentTimeZone": "ಪ್ರಸ್ತುತ ಹೊಂದಿಸಲಾಗಿರುವ ಸಮಯ ಮಂಡಲ",
   "yes": "ಹೌದು",

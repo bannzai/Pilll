@@ -29,7 +29,7 @@
   "deleteUser": "Каттоо эсебин өчүрүңүз",
   "deleteDiary": "Күндөлүк жазуусун өчүрүңүз",
   "confirmDeletingMenstruation": "Айыз мезгилинин жазуусун өчүргүңүз келеби?",
-  "addNotificationTime": "Эскертүү убактысын кошуу",
+  "addNotificationTime": "Эскертме убактысын кошуңуз",
   "syncWithDeviceTimeZone": "Түзмөктүн убакыт алкагы ({deviceTimezoneName}) менен шайкештирилсинби?",
   "currentTimeZone": "Учурда орнотулган убакыт зонасы",
   "yes": "Ооба",

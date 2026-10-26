@@ -29,7 +29,7 @@
   "deleteUser": "Hapus akun",
   "deleteDiary": "Hapus entri jurnal",
   "confirmDeletingMenstruation": "Hapus catatan periode haid ini?",
-  "addNotificationTime": "Tambah Waktu Notifikasi",
+  "addNotificationTime": "Tambah waktu notifikasi",
   "syncWithDeviceTimeZone": "Sinkronkan dengan zona waktu perangkat ({deviceTimezoneName})?",
   "currentTimeZone": "Zona waktu saat ini",
   "yes": "Ya",

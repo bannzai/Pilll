@@ -29,7 +29,7 @@
   "deleteUser": "Slet din konto",
   "deleteDiary": "Slet dagbogsopslaget",
   "confirmDeletingMenstruation": "Vil du slette registreringen af denne menstruation?",
-  "addNotificationTime": "Tilføj påmindelsestid",
+  "addNotificationTime": "Tilføj påmindelsestidspunkt",
   "syncWithDeviceTimeZone": "Vil du synkronisere med enhedens tidszone ({deviceTimezoneName})?",
   "currentTimeZone": "Aktuelt indstillede tidszone",
   "yes": "Ja",

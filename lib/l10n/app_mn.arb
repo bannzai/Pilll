@@ -29,7 +29,7 @@
   "deleteUser": "Бүртгэлээ устгана уу",
   "deleteDiary": "Өдрийн тэмдэглэлийн бичлэгийг устгана уу",
   "confirmDeletingMenstruation": "Энэ сарын тэмдгийн үеийн бүртгэлийг устгах уу?",
-  "addNotificationTime": "Мэдэгдэлийн цаг нэмэх",
+  "addNotificationTime": "Мэдэгдлийн цаг нэмнэ үү",
   "syncWithDeviceTimeZone": "Төхөөрөмжийн цагийн бүс ({deviceTimezoneName})-той синхронлох уу?",
   "currentTimeZone": "одоогийн тохируулсан цагийн бүс",
   "yes": "Тийм",

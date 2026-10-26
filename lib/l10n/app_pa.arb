@@ -29,7 +29,7 @@
   "deleteUser": "ਖਾਤਾ ਮਿਟਾਓ",
   "deleteDiary": "ਡਾਇਰੀ ਦੀ ਐਂਟਰੀ ਮਿਟਾਓ",
   "confirmDeletingMenstruation": "ਕੀ ਤੁਸੀਂ ਇਸ ਮਾਹਵਾਰੀ ਦੀ ਮਿਆਦ ਦਾ ਰਿਕਾਰਡ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
-  "addNotificationTime": "ਸੂਚਨਾ ਸਮਾਂ ਜੋੜੋ",
+  "addNotificationTime": "ਸੂਚਨਾ ਦਾ ਸਮਾਂ ਜੋੜੋ",
   "syncWithDeviceTimeZone": "ਕੀ ਤੁਸੀਂ ਡਿਵਾਈਸ ਦੇ ਟਾਈਮ ਜ਼ੋਨ ({deviceTimezoneName}) ਨਾਲ ਸਿੰਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
   "currentTimeZone": "ਵਰਤਮਾਨ ਵਿੱਚ ਸੈੱਟ ਕੀਤਾ ਗਿਆ ਟਾਈਮ ਜ਼ੋਨ",
   "yes": "ਹਾਂ",
