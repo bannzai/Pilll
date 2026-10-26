@@ -29,6 +29,7 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 - [x] カレンダー・体調記録・予定
 - [x] プレミアム (RevenueCat。ピルシート自動追加・クイックレコード等) と課金導線 (FeatureAppeal / lifetime offer / special offering)
 - [x] 問い合わせ・ストアレビュー依頼・リリースノート
+- [x] 1 日 2 回服用する薬の記録 (ジエノゲスト等。ピルシート追加時に服用回数を設定し、1 回ごとに記録する。202608.04.x で配布。`lib/features/release_note/release_note.dart`)
 - [ ] 連続服用モード (ヤーズフレックス等。シート番号とサイクル日数を分け、上限日数・休薬を扱う。方針 bannzai/PilllBackend#498、MVP1 仕様 bannzai/PilllBackend#499)
 - [ ] オンボーディングの改善 (課金導線の A/B テスト結果の反映。bannzai/PilllBackend#418)
 - [ ] AdMob メディエーション設定の見直し (bannzai/PilllBackend#419)
@@ -44,6 +45,7 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 | --- | --- | --- | --- |
 | 2026-09-29 | 既存アプリへの後付け | 下書きを agent が作成。bannzai が直すか黙認する。しきい値は 2026-09-29 時点の実測 (平均評価 4.66 / 5954 件、直近 14 日の ★1〜2 レビュー 0 件、直近 14 日の FATAL issue 4 件) を基準に「現状維持なら継続、明確に落ちたら打ち切り」で置いた | agent |
 | 2026-10-15 | 判定日 2026-10-13 の判定 | 継続。平均評価 4.66 / 6006 件 (>= 4.0)、直近 14 日の ★1〜2 レビュー 1 件 (<= 1。しきい値の端)。直近 14 日の FATAL クラッシュ issue 数は firebase CLI のログインが切れていて計測できず (UNMEASURED)、残り 2 指標で判定した。打ち切り条件 (> 50 x2) は前回の記録が無いため今回の値に関わらず当たらない。指標の値は `documents/loop/metrics-2026-10-13.json` | agent |
+| 2026-10-26 | issue の読み書き先の変更 (bannzai/Pilll#1914) | 公開後の無人ループの記録を bannzai/PilllBackend#491 から bannzai/Pilll#1945 へ移した。2026-10-18 までの記録は bannzai/PilllBackend#491 に残る | agent |
 
 ## agent に任せること
 
