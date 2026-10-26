@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Aybaşının başlama tarixini seçin",
   "menstruationCycle": "{menstruationDuration} günlük aybaşı dövrü",
   "login": "Daxil olun",
-  "beforePremiumRegistration": "Premium qeydiyyatından öncə...",
+  "beforePremiumRegistration": "premium üçün qeydiyyatdan keçməzdən əvvəl…",
   "createNewAccountIfNotLoggedIn": "Pilll-ə əvvəl daxil olmamışsınızsa, yeni hesab yaradılacaq",
   "registerAccountForDataTransfer": "Hesaba qeydiyyatdan keçsəniz, məlumatlarınızı köçürə bilərsiniz",
   "registerAccountToKeepData": "Məlumatlarınızı saxlamaq üçün hesab qeydiyyatından keçməyinizi xahiş edirik",

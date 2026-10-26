@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "महिनावारी सुरु भएको मिति छान्नुहोस्",
   "menstruationCycle": "{menstruationDuration} दिनको महिनावारी चक्र",
   "login": "लग इन गर्नुहोस्",
-  "beforePremiumRegistration": "प्रिमियम दर्ता गर्नु अघि...",
+  "beforePremiumRegistration": "प्रिमियममा दर्ता गर्नुअघि…",
   "createNewAccountIfNotLoggedIn": "Pilll मा पहिलो पटक लगइन गर्दा नयाँ खाता स्वतः सिर्जना हुनेछ",
   "registerAccountForDataTransfer": "खाता दर्ता गरेपछि डाटा स्थानान्तरण गर्न सकिन्छ",
   "registerAccountToKeepData": "खाता जानकारी सुरक्षित राख्नका लागि, कृपया खाता दर्ता गर्नुहोस्",

@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Valitse kuukautisten alkamispäivä",
   "menstruationCycle": "{menstruationDuration} päivän kuukautiskierto",
   "login": "Kirjaudu sisään",
-  "beforePremiumRegistration": "Ennen premium-tilausta...",
+  "beforePremiumRegistration": "Ennen Premium-tilausta…",
   "createNewAccountIfNotLoggedIn": "Jos et ole vielä kirjautunut Pillliin, luodaan uusi tili",
   "registerAccountForDataTransfer": "Tilin luominen mahdollistaa tietojen siirtämisen",
   "registerAccountToKeepData": "Rekisteröidy tilille tietojesi säilyttämiseksi",

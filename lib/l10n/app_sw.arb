@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Tafadhali chagua tarehe ya kuanza kwa hedhi",
   "menstruationCycle": "Mzunguko wa hedhi wa siku {menstruationDuration}",
   "login": "Ingia",
-  "beforePremiumRegistration": "Kabla ya usajili wa premium...",
+  "beforePremiumRegistration": "Kabla ya kujisajili kwa Premium…",
   "createNewAccountIfNotLoggedIn": "Ikiwa bado hujaingia kwenye Pilll, akaunti mpya itaundwa",
   "registerAccountForDataTransfer": "Kusajili akaunti kutakuwezesha kuhamisha data yako",
   "registerAccountToKeepData": "Tafadhali jisajili akaunti ili kuhifadhi taarifa zako",

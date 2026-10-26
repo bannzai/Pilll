@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Етеккірдің басталу күнін таңдаңыз",
   "menstruationCycle": "{menstruationDuration} күндік етеккір циклі",
   "login": "Кіру",
-  "beforePremiumRegistration": "Premium жазылуы алдында…",
+  "beforePremiumRegistration": "премиумға тіркелмес бұрын…",
   "createNewAccountIfNotLoggedIn": "Pilll-де әлі аккаунтыңыз жоқ болса, жаңа аккаунт жасалады",
   "registerAccountForDataTransfer": "Тіркелгі жасаған кезде деректерді сақтау мен ауыстыру мүмкіндігі пайда болады",
   "registerAccountToKeepData": "Аккаунт ақпаратын сақтау үшін, аккаунтқа тіркелуіңізді сұраймыз",

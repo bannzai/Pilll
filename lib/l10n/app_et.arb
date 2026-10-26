@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Vali päevade alguskuupäev",
   "menstruationCycle": "{menstruationDuration}-päevane menstruaaltsükkel",
   "login": "Logi sisse",
-  "beforePremiumRegistration": "Enne premiumi tellimist...",
+  "beforePremiumRegistration": "Enne premiumiga liitumist…",
   "createNewAccountIfNotLoggedIn": "Kui te ei ole veel Pillisse sisse loginud, luuakse teile automaatselt uus konto",
   "registerAccountForDataTransfer": "Konto registreerimisel saab võimalikuks andmete ülekandmine",
   "registerAccountToKeepData": "Andmete säilitamiseks palume teil kasutajakonto registreerida",

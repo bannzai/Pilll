@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "ඔසප් වීම ආරම්භ වූ දිනය තෝරන්න",
   "menstruationCycle": "දින {menstruationDuration}ක ඔසප් චක්‍රය",
   "login": "පිවිසෙන්න",
-  "beforePremiumRegistration": "ප්‍රිමියම් ලියාපදිංචි කිරීමට පෙර...",
+  "beforePremiumRegistration": "ප්‍රීමියම් සඳහා ලියාපදිංචි වීමට පෙර…",
   "createNewAccountIfNotLoggedIn": "ඔබ තවම Pilll වෙත පිවිසී නොමැති නම් නව ගිණුමක් සාදනු ලැබේ",
   "registerAccountForDataTransfer": "ගිණුමක් ලියාපදිංචි කළහොත් දත්ත ස්ථානාන්තරණය කළ හැකිය",
   "registerAccountToKeepData": "ගිණුම් තොරතුරු සුරක්ෂිත කරගැනීම සඳහා කරුණාකර ගිණුමක් ලියාපදිංචි කරන්න",

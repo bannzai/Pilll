@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "选择经期开始日期",
   "menstruationCycle": "{menstruationDuration}天的月经周期",
   "login": "登录",
-  "beforePremiumRegistration": "开通高级版前...",
+  "beforePremiumRegistration": "注册高级版之前…",
   "createNewAccountIfNotLoggedIn": "如果您还没有登录过Pilll，将为您创建新账户",
   "registerAccountForDataTransfer": "注册账户后可以实现数据同步",
   "registerAccountToKeepData": "为了保存账户信息，请注册账户",

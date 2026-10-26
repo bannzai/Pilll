@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "생리 시작일 선택",
   "menstruationCycle": "{menstruationDuration}일 생리 주기",
   "login": "로그인",
-  "beforePremiumRegistration": "프리미엄 등록 전에…",
+  "beforePremiumRegistration": "프리미엄에 가입하기 전에…",
   "createNewAccountIfNotLoggedIn": "Pilll에 처음 로그인하시는 경우 새로운 계정이 자동으로 생성됩니다",
   "registerAccountForDataTransfer": "계정을 등록하면 데이터 이전이 가능해집니다",
   "registerAccountToKeepData": "계정 정보를 보관하기 위해 계정 등록을 해주세요",

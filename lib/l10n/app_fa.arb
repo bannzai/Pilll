@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "تاریخ شروع پریود را انتخاب کنید",
   "menstruationCycle": "چرخهٔ قاعدگی {menstruationDuration} روزه",
   "login": "ورود",
-  "beforePremiumRegistration": "قبل از ثبت‌نام پریمیوم...",
+  "beforePremiumRegistration": "پیش از ثبت‌نام در پریمیوم…",
   "createNewAccountIfNotLoggedIn": "در صورتی که هنوز وارد Pilll نشده‌اید، حساب کاربری جدیدی ایجاد خواهد شد",
   "registerAccountForDataTransfer": "ثبت نام حساب کاربری امکان انتقال اطلاعات را فراهم می‌کند",
   "registerAccountToKeepData": "برای حفظ اطلاعات حساب کاربری، لطفاً ثبت نام کنید",

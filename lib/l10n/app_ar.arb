@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "اختاري تاريخ بدء الدورة",
   "menstruationCycle": "دورة شهرية كل {menstruationDuration} يومًا",
   "login": "تسجيل الدخول",
-  "beforePremiumRegistration": "قبل الاشتراك المميز...",
+  "beforePremiumRegistration": "قبل الاشتراك في بريميوم…",
   "createNewAccountIfNotLoggedIn": "إذا لم تقم بتسجيل الدخول إلى Pilll من قبل، فسيتم إنشاء حساب جديد لك",
   "registerAccountForDataTransfer": "تسجيل الحساب يتيح نقل البيانات",
   "registerAccountToKeepData": "يرجى تسجيل حساب للحفاظ على معلومات حسابك",

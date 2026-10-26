@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "לבחור את תאריך תחילת המחזור",
   "menstruationCycle": "מחזור חודשי של {menstruationDuration} ימים",
   "login": "כניסה לחשבון",
-  "beforePremiumRegistration": "לפני הרשמה לפרימיום...",
+  "beforePremiumRegistration": "לפני ההרשמה לפרימיום…",
   "createNewAccountIfNotLoggedIn": "אם עדיין לא התחברת ל-Pilll, יווצר חשבון חדש",
   "registerAccountForDataTransfer": "רישום חשבון מאפשר העברת נתונים",
   "registerAccountToKeepData": "אנא רשמו חשבון כדי לשמור על המידע החשוב שלכן",

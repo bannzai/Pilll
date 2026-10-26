@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Izvēlieties mēnešreižu sākuma datumu",
   "menstruationCycle": "{menstruationDuration} dienu menstruālais cikls",
   "login": "Pierakstīties",
-  "beforePremiumRegistration": "Pirms premium abonēšanas...",
+  "beforePremiumRegistration": "Pirms reģistrēšanās Premium plānam…",
   "createNewAccountIfNotLoggedIn": "Ja jūs vēl neesat pieteicies Pilll lietotnē, tiks automātiski izveidots jauns konts",
   "registerAccountForDataTransfer": "Reģistrējot kontu, kļūst iespējama datu pārnešana",
   "registerAccountToKeepData": "Lūdzam izveidot kontu, lai saglabātu jūsu informāciju",

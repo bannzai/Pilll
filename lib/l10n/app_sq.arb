@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Zgjidhni datën e fillimit të menstruacioneve",
   "menstruationCycle": "Cikli menstrual prej {menstruationDuration} ditësh",
   "login": "Hyni",
-  "beforePremiumRegistration": "Para regjistrimit premium...",
+  "beforePremiumRegistration": "Para se të regjistroheni për premium…",
   "createNewAccountIfNotLoggedIn": "Nëse nuk keni kryer ende hyrjen në Pilll, do të krijohet automatikisht një llogari e re",
   "registerAccountForDataTransfer": "Regjistrimi i llogarisë mundëson transferimin e të dhënave",
   "registerAccountToKeepData": "Ju lutem regjistrohuni për të ruajtur informacionin e llogarisë suaj",

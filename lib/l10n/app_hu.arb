@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Válaszd ki a menstruáció kezdőnapját",
   "menstruationCycle": "{menstruationDuration} napos menstruációs ciklus",
   "login": "Bejelentkezés",
-  "beforePremiumRegistration": "A prémium regisztráció előtt...",
+  "beforePremiumRegistration": "A prémiumra való regisztráció előtt…",
   "createNewAccountIfNotLoggedIn": "Ha még nincs Pilll fiókja, automatikusan létrejön egy új fiók",
   "registerAccountForDataTransfer": "Fiók regisztrálásával lehetővé válik az adatok átvitele",
   "registerAccountToKeepData": "Az adatok megőrzése érdekében kérjük, regisztráljon fiókot",

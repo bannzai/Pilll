@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "মাসিক শুরুর তারিখ বেছে নিন",
   "menstruationCycle": "{menstruationDuration} দিনের মাসিক চক্র",
   "login": "লগ ইন করুন",
-  "beforePremiumRegistration": "প্রিমিয়াম রেজিস্ট্রেশনের আগে...",
+  "beforePremiumRegistration": "প্রিমিয়ামে নিবন্ধনের আগে…",
   "createNewAccountIfNotLoggedIn": "আপনি যদি আগে কখনো Pilll-এ লগইন না করে থাকেন, তাহলে একটি নতুন অ্যাকাউন্ট তৈরি হবে",
   "registerAccountForDataTransfer": "অ্যাকাউন্ট নিবন্ধন করলে ডেটা স্থানান্তর সম্ভব হবে",
   "registerAccountToKeepData": "আপনার অ্যাকাউন্ট তথ্য সংরক্ষণের জন্য, দয়া করে একটি অ্যাকাউন্ট নিবন্ধন করুন",

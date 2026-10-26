@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Сарын тэмдгийн эхэлсэн өдрийг сонгоно уу",
   "menstruationCycle": "{menstruationDuration} хоногийн сарын тэмдгийн мөчлөг",
   "login": "Нэвтрэх",
-  "beforePremiumRegistration": "Премиум бүртгүүлэхийн өмнө...",
+  "beforePremiumRegistration": "премиумд бүртгүүлэхээс өмнө…",
   "createNewAccountIfNotLoggedIn": "Pilll-д урьд нь нэвтрээгүй бол шинэ бүртгэл үүсгэгдэнэ",
   "registerAccountForDataTransfer": "Бүртгэл үүсгэснээр өгөгдлийг шилжүүлэх боломжтой болно",
   "registerAccountToKeepData": "Мэдээллээ хадгалж үлдээхийн тулд бүртгэл үүсгэнэ үү",

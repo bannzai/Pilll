@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Изберете начална дата на мензиса",
   "menstruationCycle": "Менструален цикъл от {menstruationDuration} дни",
   "login": "Вход",
-  "beforePremiumRegistration": "Преди да се регистрирате за премиум...",
+  "beforePremiumRegistration": "Преди регистрация за премиум…",
   "createNewAccountIfNotLoggedIn": "Ако все още не сте влизали в Pilll, ще бъде създаден нов акаунт",
   "registerAccountForDataTransfer": "Регистрацията на акаунт позволява прехвърляне на данни",
   "registerAccountToKeepData": "Моля, регистрирайте акаунт, за да запазим вашите данни",

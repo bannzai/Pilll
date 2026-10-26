@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Tria la data d'inici de la regla",
   "menstruationCycle": "Cicle menstrual de {menstruationDuration} dies",
   "login": "Inicia sessió",
-  "beforePremiumRegistration": "Abans de la subscripció premium...",
+  "beforePremiumRegistration": "Abans de registrar-te a Premium…",
   "createNewAccountIfNotLoggedIn": "Si encara no has iniciat sessió a Pilll, es crearà un compte nou automàticament",
   "registerAccountForDataTransfer": "Registrant un compte podràs transferir les teves dades",
   "registerAccountToKeepData": "Si us plau, registreu-vos per mantenir la informació del vostre compte",

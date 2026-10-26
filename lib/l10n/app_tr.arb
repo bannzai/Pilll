@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Adet başlangıç tarihini seçin",
   "menstruationCycle": "{menstruationDuration} günlük adet döngüsü",
   "login": "Giriş yapın",
-  "beforePremiumRegistration": "Premium aboneliğinden önce...",
+  "beforePremiumRegistration": "Premium'a kaydolmadan önce…",
   "createNewAccountIfNotLoggedIn": "Pilll'e daha önce giriş yapmadıysanız, yeni bir hesap oluşturulacaktır",
   "registerAccountForDataTransfer": "Hesap kaydı yaptığınızda verilerinizi aktarabilirsiniz",
   "registerAccountToKeepData": "Hesap bilgilerinizi korumak için lütfen hesap kaydı yapın",

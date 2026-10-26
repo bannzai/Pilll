@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Ընտրեք դաշտանի սկսվելու օրը",
   "menstruationCycle": "{menstruationDuration} օրվա դաշտանային ցիկլ",
   "login": "Մուտք գործել",
-  "beforePremiumRegistration": "Պրեմիում գրանցումից առաջ...",
+  "beforePremiumRegistration": "Մինչ պրեմիում բաժանորդագրության գրանցումը…",
   "createNewAccountIfNotLoggedIn": "Եթե դուք դեռ չեք մուտք գործել Pilll-ում, նոր հաշիվ կստեղծվի",
   "registerAccountForDataTransfer": "Հաշվի գրանցումը թույլ է տալիս տվյալները փոխանցել",
   "registerAccountToKeepData": "Ձեր տվյալները պահպանելու համար խնդրում ենք գրանցել հաշիվ",

@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης της περιόδου",
   "menstruationCycle": "Έμμηνος κύκλος {menstruationDuration} ημερών",
   "login": "Σύνδεση",
-  "beforePremiumRegistration": "Πριν από την εγγραφή premium…",
+  "beforePremiumRegistration": "Πριν εγγραφείτε στο Premium…",
   "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί αυτόματα ένας νέος λογαριασμός",
   "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού μπορείτε να μεταφέρετε τα δεδομένα σας",
   "registerAccountToKeepData": "Παρακαλούμε δημιουργήστε λογαριασμό για να διατηρήσουμε τα στοιχεία σας",

@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Velg startdato for mens",
   "menstruationCycle": "Menssyklus på {menstruationDuration} dager",
   "login": "Logg inn",
-  "beforePremiumRegistration": "Før premiumregistrering…",
+  "beforePremiumRegistration": "Før du registrerer deg for Premium…",
   "createNewAccountIfNotLoggedIn": "Hvis du aldri har logget inn på Pilll før, vil en ny konto bli opprettet",
   "registerAccountForDataTransfer": "Ved å registrere en konto blir det mulig å overføre data",
   "registerAccountToKeepData": "Vennligst registrer en konto for å opprettholde kontoinformasjonen din",

@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Piliin ang petsa ng simula ng regla",
   "menstruationCycle": "Siklo ng regla na {menstruationDuration} araw",
   "login": "Mag-sign in",
-  "beforePremiumRegistration": "Bago ka mag-subscribe sa premium...",
+  "beforePremiumRegistration": "Bago kayo mag-sign up sa Premium…",
   "createNewAccountIfNotLoggedIn": "Kung hindi ka pa nakapag-login sa Pilll, lilikha ng bagong account",
   "registerAccountForDataTransfer": "Kapag magrehistro ng account, magiging posible ang paglipat ng data",
   "registerAccountToKeepData": "Mangyaring magparehistro ng account upang mapanatili ang inyong impormasyon",

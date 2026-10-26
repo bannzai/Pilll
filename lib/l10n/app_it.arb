@@ -167,7 +167,7 @@
   "selectMenstruationStartDate": "Scegli la data di inizio delle mestruazioni",
   "menstruationCycle": "Ciclo mestruale di {menstruationDuration} giorni",
   "login": "Accedi",
-  "beforePremiumRegistration": "Prima della registrazione premium...",
+  "beforePremiumRegistration": "Prima di iscriverti a Premium…",
   "createNewAccountIfNotLoggedIn": "Se non hai mai effettuato l'accesso a Pilll, verrà creato automaticamente un nuovo account",
   "registerAccountForDataTransfer": "Registrando un account potrai trasferire i tuoi dati",
   "registerAccountToKeepData": "Per conservare le tue informazioni, ti preghiamo di registrare un account",
