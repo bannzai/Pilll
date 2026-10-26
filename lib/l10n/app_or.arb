@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "ବଟିକା ଖାଇବାର ବିରତି ଶେଷ ହୋଇଛି",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ପ୍ରତି ଷ୍ଟ୍ରିପ୍‌ରୁ ବଟିକା ଖାଇବା ଦିନ ସଂଖ୍ୟା ବଦଳାନ୍ତୁ",
-  "changedStartAndEndNumbers": "ଆରମ୍ଭ ଏବଂ ଶେଷ ନମ୍ବର ପରିବର୍ତ୍ତନ କରାଯାଇଛି",
+  "changedStartAndEndNumbers": "ଆରମ୍ଭ ଓ ଶେଷ ନମ୍ବର ବଦଳାଯାଇଛି",
   "startOfPillDays": "ସେବନ ଆରମ୍ଭ ଦିନ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ପୂର୍ବ ଶୀଟ୍‌ର ଶେଷ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ତମ ଦିନ",
   "endOfPillDays": "ସେବନ ଦିନର ଶେଷ",

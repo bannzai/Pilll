@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Tablešu lietošanas pārtraukums ir beidzies",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Mainīt tablešu lietošanas dienu skaitu vienā plāksnītē",
-  "changedStartAndEndNumbers": "Sākuma un beigu numuri tika mainīti",
+  "changedStartAndEndNumbers": "Sākuma un beigu numuri ir mainīti",
   "startOfPillDays": "Lietošanas dienu sākums",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Iepriekšējās plāksnes beigas: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. diena",
   "endOfPillDays": "Tablešu kursa beigas",

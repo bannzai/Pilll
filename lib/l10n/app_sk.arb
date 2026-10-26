@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Prestávka v užívaní tabletiek sa skončila",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmeniť počet dní užívania tabletiek z blistra",
-  "changedStartAndEndNumbers": "Čísla začiatku a konca boli zmenené",
+  "changedStartAndEndNumbers": "Počiatočné a koncové číslo boli zmenené",
   "startOfPillDays": "Začiatok užívania",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Koniec predchádzajúceho blistra: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. deň",
   "endOfPillDays": "Koniec obdobia užívania",

@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Tempoh rehat daripada mengambil pil telah tamat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ubah bilangan hari pengambilan pil bagi setiap pek",
-  "changedStartAndEndNumbers": "Nombor permulaan dan akhir telah diubah",
+  "changedStartAndEndNumbers": "Nombor mula dan akhir telah diubah",
   "startOfPillDays": "Permulaan hari pengambilan",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir set sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Tamat Hari Pengambilan",

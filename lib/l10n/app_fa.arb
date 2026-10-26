@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "دورهٔ وقفه در مصرف قرص به پایان رسید",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "تغییر تعداد روزهای مصرف قرص در هر ورق",
-  "changedStartAndEndNumbers": "شماره‌های شروع و پایان تغییر داده شد",
+  "changedStartAndEndNumbers": "شماره‌های شروع و پایان تغییر کردند",
   "startOfPillDays": "شروع مصرف",
   "beforePillSheetGroupSequentialEstimatedEndDay": "آخر برگه قبلی: روز {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "پایان دوره مصرف",

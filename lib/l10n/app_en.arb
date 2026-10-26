@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Your pill break has ended",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Change pill-taking days per pack",
-  "changedStartAndEndNumbers": "Start and end numbers have been changed",
+  "changedStartAndEndNumbers": "Start and end numbers changed",
   "startOfPillDays": "Start of medication days",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Previous sheet end: Day {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "End of pill days",

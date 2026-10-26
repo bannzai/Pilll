@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "گولیاں لینے کا وقفہ ختم ہو گیا ہے",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ہر پتے میں گولیاں لینے کے دنوں کی تعداد بدلیں",
-  "changedStartAndEndNumbers": "شروع اور اختتام کے نمبر تبدیل کر دیے گئے",
+  "changedStartAndEndNumbers": "ابتدائی اور آخری نمبر تبدیل کر دیے گئے ہیں",
   "startOfPillDays": "خوراک کا آغاز",
   "beforePillSheetGroupSequentialEstimatedEndDay": "پچھلی شیٹ کا آخری: {beforePillSheetGroupSequentialEstimatedEndPillNumber}واں دن",
   "endOfPillDays": "استعمال کی مدت کا اختتام",

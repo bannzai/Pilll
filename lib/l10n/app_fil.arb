@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Tapos na ang pahinga ninyo sa pag-inom ng pildoras",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Baguhin ang bilang ng araw ng pag-inom ng pildoras sa bawat pakete",
-  "changedStartAndEndNumbers": "Binago ang mga numero ng simula at katapusan",
+  "changedStartAndEndNumbers": "Nabago na ang panimula at panghuling numero",
   "startOfPillDays": "Simula ng Pag-inom",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Katapusan ng nakaraang sheet: ika-{beforePillSheetGroupSequentialEstimatedEndPillNumber} araw",
   "endOfPillDays": "Katapusan ng mga araw ng pag-inom",

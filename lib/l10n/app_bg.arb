@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Паузата в приема на хапчета приключи",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Промяна на броя дни за прием на хапчета от блистера",
-  "changedStartAndEndNumbers": "Номерата за начало и край бяха променени",
+  "changedStartAndEndNumbers": "Началният и крайният номер са променени",
   "startOfPillDays": "Начало на приемането",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Край на предишната опаковка: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ти ден",
   "endOfPillDays": "Край на приемния период",

@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Din pillepause er slut",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Skift antal dage med p-piller pr. pakke",
-  "changedStartAndEndNumbers": "Start- og slutnumrene er blevet ændret",
+  "changedStartAndEndNumbers": "Start- og slutnummeret er ændret",
   "startOfPillDays": "Start af indtagelsesdage",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Sidste af forrige ark: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Slutning af pilleperioden",

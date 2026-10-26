@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Je pillenpauze is voorbij",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aantal dagen pilgebruik per strip wijzigen",
-  "changedStartAndEndNumbers": "Begin- en eindnummers zijn gewijzigd",
+  "changedStartAndEndNumbers": "Het begin- en eindnummer zijn gewijzigd",
   "startOfPillDays": "Start inname",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Einde van vorige strip: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Einde van de innamedagen",

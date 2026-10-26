@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Pillipaus on lõppenud",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuda pillide võtmise päevade arvu pakis",
-  "changedStartAndEndNumbers": "Algus- ja lõpunumbrid on muudetud",
+  "changedStartAndEndNumbers": "Algus- ja lõppnumber on muudetud",
   "startOfPillDays": "Võtmise algus",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Eelmise paki lõpp: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päev",
   "endOfPillDays": "Võtmisperioodi lõpp",

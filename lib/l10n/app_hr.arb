@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Stanka u uzimanju pilule je završila",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Promijenite broj dana uzimanja pilula po blisteru",
-  "changedStartAndEndNumbers": "Promijenjeni su početni i završni brojevi",
+  "changedStartAndEndNumbers": "Početni i završni broj su promijenjeni",
   "startOfPillDays": "Početak uzimanja",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Zadnji dan prethodnog paketa: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",
   "endOfPillDays": "Kraj dana uzimanja",

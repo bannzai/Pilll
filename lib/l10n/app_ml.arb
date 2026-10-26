@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള അവസാനിച്ചു",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ഓരോ സ്ട്രിപ്പിലെയും ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റുക",
-  "changedStartAndEndNumbers": "ആരംഭവും അവസാനവുമായ നമ്പറുകൾ മാറ്റിയിട്ടുണ്ട്",
+  "changedStartAndEndNumbers": "തുടക്കത്തിലെയും അവസാനത്തിലെയും നമ്പറുകൾ മാറ്റി",
   "startOfPillDays": "സേവന ദിനങ്ങളുടെ തുടക്കം",
   "beforePillSheetGroupSequentialEstimatedEndDay": "മുമ്പത്തെ ഷീറ്റിന്റെ അവസാനം: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ദിവസം",
   "endOfPillDays": "സേവനദിവസങ്ങളുടെ അവസാനം",

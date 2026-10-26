@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "පෙති ගැනීමේ විරාම කාලය අවසන් වී ඇත",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "එක් පෙත්ත පත්‍රයකින් පෙති ගන්නා දින ගණන වෙනස් කරන්න",
-  "changedStartAndEndNumbers": "ආරම්භ සහ අවසාන අංක වෙනස් කරන ලදී",
+  "changedStartAndEndNumbers": "ආරම්භක සහ අවසාන අංක වෙනස් කර ඇත",
   "startOfPillDays": "ගෙඩි ගැනීම ආරම්භය",
   "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පත්‍රිකාවේ අවසානය: {beforePillSheetGroupSequentialEstimatedEndPillNumber}වන දවස",
   "endOfPillDays": "සේවන කාලයේ අවසානය",

@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Таблетка ичүүдөгү тыныгуу аяктады",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Бир блистердеги таблетка ичүү күндөрүнүн санын өзгөртүңүз",
-  "changedStartAndEndNumbers": "Башталыш жана аякталыш номерлери өзгөртүлдү",
+  "changedStartAndEndNumbers": "Баштапкы жана акыркы номерлер өзгөртүлдү",
   "startOfPillDays": "Кабыл алуу күндөрүнүн башы",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Мурунку баракчанын акыры: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-күн",
   "endOfPillDays": "Дарыны ичүү мөөнөтүнүн аягы",

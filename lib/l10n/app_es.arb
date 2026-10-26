@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Terminó tu pausa de la píldora",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Cambiar los días de toma de la píldora por blíster",
-  "changedStartAndEndNumbers": "Se han cambiado los números de inicio y fin",
+  "changedStartAndEndNumbers": "Se cambiaron los números de inicio y fin",
   "startOfPillDays": "Inicio de la toma",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Final de la última plaqueta: día {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Final del período de toma",

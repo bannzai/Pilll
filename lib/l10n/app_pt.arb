@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "A pausa na tomada da pílula terminou",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Alterar o número de dias de uso da pílula por cartela",
-  "changedStartAndEndNumbers": "Os números de início e fim foram alterados",
+  "changedStartAndEndNumbers": "Os números inicial e final foram alterados",
   "startOfPillDays": "Início dos dias de tomada",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Final da cartela anterior: {beforePillSheetGroupSequentialEstimatedEndPillNumber}º dia",
   "endOfPillDays": "Fim do período de administração",

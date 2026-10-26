@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "পিল খোৱাৰ বিৰতি শেষ হ’ল",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "প্ৰতি ষ্ট্ৰিপত বড়ি খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
-  "changedStartAndEndNumbers": "আৰম্ভ আৰু শেষৰ নম্বৰ সলনি কৰিলোঁ",
+  "changedStartAndEndNumbers": "আৰম্ভণি আৰু শেষৰ নম্বৰ সলনি কৰা হৈছে",
   "startOfPillDays": "গ্ৰহণ দিনৰ আৰম্ভ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "পূৰ্বৱৰ্তী শ্বীটৰ শেষ: {beforePillSheetGroupSequentialEstimatedEndPillNumber} দিন",
   "endOfPillDays": "সেৱনৰ দিন সমাপ্ত",

@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Deine Pillenpause ist vorbei",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Anzahl der Einnahmetage pro Blister ändern",
-  "changedStartAndEndNumbers": "Die Start- und Endnummern wurden geändert",
+  "changedStartAndEndNumbers": "Start- und Endnummer wurden geändert",
   "startOfPillDays": "Beginn der Einnahmetage",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Ende des vorherigen Blisters: Tag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Ende der Einnahmedauer",

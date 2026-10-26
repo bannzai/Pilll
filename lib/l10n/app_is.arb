@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Hléi frá pillutöku er lokið",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Breyta fjölda daga sem pillur eru teknar úr spjaldi",
-  "changedStartAndEndNumbers": "Byrjunar- og endanúmerum var breytt",
+  "changedStartAndEndNumbers": "Upphafs- og lokanúmeri hefur verið breytt",
   "startOfPillDays": "Upphaf inntökudaga",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Síðasti dagur fyrra blaðs: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dagur",
   "endOfPillDays": "Lok töku tímabils",

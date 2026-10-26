@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "ההפסקה בנטילת הגלולה הסתיימה",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "שינוי מספר ימי נטילת הגלולות בכל חפיסה",
-  "changedStartAndEndNumbers": "שונו מספרי ההתחלה והסיום",
+  "changedStartAndEndNumbers": "המספרים ההתחלתי והסופי שונו",
   "startOfPillDays": "תחילת ימי הנטילה",
   "beforePillSheetGroupSequentialEstimatedEndDay": "סוף הגיליון הקודם: יום {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "סוף תקופת הנטילה",

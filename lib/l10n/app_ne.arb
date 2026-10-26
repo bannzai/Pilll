@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "चक्की लिने विश्राम अवधि सकिएको छ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "प्रत्येक पत्तामा चक्की खाने दिनको सङ्ख्या परिवर्तन गर्नुहोस्",
-  "changedStartAndEndNumbers": "सुरुवात र अन्त्यको नम्बर परिवर्तन गरिएको छ",
+  "changedStartAndEndNumbers": "सुरु र अन्त्यका नम्बर परिवर्तन गरिएका छन्",
   "startOfPillDays": "सेवन सुरुवातको दिन",
   "beforePillSheetGroupSequentialEstimatedEndDay": "अघिल्लो शीटको अन्त्य: {beforePillSheetGroupSequentialEstimatedEndPillNumber}औं दिन",
   "endOfPillDays": "सेवनका दिनहरूको अन्त्य",

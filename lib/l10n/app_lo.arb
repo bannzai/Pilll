@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "ໄລຍະພັກການກິນຢາເມັດສິ້ນສຸດແລ້ວ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ປ່ຽນຈຳນວນມື້ກິນຢາຕໍ່ແຜງ",
-  "changedStartAndEndNumbers": "ປ່ຽນແປງເລກເລີ່ມຕົ້ນແລະສຸດທ້າຍແລ້ວ",
+  "changedStartAndEndNumbers": "ປ່ຽນເລກເລີ່ມຕົ້ນ ແລະ ເລກສິ້ນສຸດແລ້ວ",
   "startOfPillDays": "ການເລີ່ມຕົ້ນການກິນຢາ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ສຸດທ້າຍຂອງແຜ່ນຢາກ່ອນໜ້າ: ວັນທີ່ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ສິ້ນສຸດວັນກິນຢາ",

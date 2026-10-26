@@ -128,7 +128,7 @@
   "pauseTakingPeriodEnded": "Przerwa w przyjmowaniu tabletek dobiegła końca",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmień liczbę dni przyjmowania tabletek z blistra",
-  "changedStartAndEndNumbers": "Zmieniono numery początku i końca",
+  "changedStartAndEndNumbers": "Zmieniono numer początkowy i końcowy",
   "startOfPillDays": "Początek przyjmowania",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Koniec poprzedniej paczki: dzień {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Koniec okresu przyjmowania",
