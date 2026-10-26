@@ -314,7 +314,7 @@
   "purchaseErrorEmptySubscriberAttributesError": "发生未知错误，无法提前获取购买信息。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "发生了未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过“设置 > 联系我们”与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnknownNonNativeError": "发生未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "发生未知错误。请更新至最新版本后重试。如果仍未解决，请通过 设置 > 意见反馈 联系我们。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "发生了未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorCustomerInfoError": "获取客户信息失败。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 与我们联系。详细信息：代码：{errorCode} {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorSystemInfoError": "设备设置存在问题。请确认后重新尝试。如无法解决，请通过 设置 > 咨询 联系我们。代码: {errorCode} 详情: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "退款处理已开始。请确认后重试。如仍无法解决，请通过 设置 > 联系我们 进行咨询。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",

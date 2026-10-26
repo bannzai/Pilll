@@ -314,7 +314,7 @@
   "purchaseErrorEmptySubscriberAttributesError": "אירעה שגיאה לא ידועה. לא ניתן היה לקבל מראש את פרטי הרכישה. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "אירעה שגיאה לא ידועה. מומלץ לעדכן את האפליקציה לגרסה העדכנית ולנסות שוב. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnknownNonNativeError": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה העדכנית ביותר ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "שגיאה לא ידועה. אנא עדכנו לגרסה האחרונה ונסו שוב. אם הבעיה לא נפתרת, אנא צרו קשר דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה האחרונה ולנסות שוב. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorCustomerInfoError": "נכשל בקבלת מידע הלקוח. אנא נסה שוב מאוחר יותר. אם הבעיה נמשכת, אנא צור איתנו קשר דרך הגדרות > צור קשר. פרטים: קוד: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorSystemInfoError": "יש בעיה בהגדרות המכשיר. אנא בדוק ונסה שוב. אם הבעיה לא נפתרת, פנה אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "תהליך ההחזר החל. אנא בדקו ונסו שוב. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
