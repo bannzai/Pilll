@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ಈ ಸಂಖ್ಯೆಯಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "add": "ಸೇರಿಸಿ",
-  "addPillSheet": "ಮಾತ್ರೆ ಶೀಟ್ ಸೇರಿಸಿ",
+  "addPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೇರಿಸಿ",
   "pillTakenCountPrefix": "1 ದಿನಕ್ಕೆ",
   "pillTakenCountSuffix": "ದಿನಕ್ಕೆ [2] ಬಾರಿ ಸೇವಿಸಿ",
   "duringPauseTaking": "ಸೇವನೆ ವಿರಾಮದಲ್ಲಿ",

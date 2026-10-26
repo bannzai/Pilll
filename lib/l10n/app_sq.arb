@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "pilula nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Filloni nga ky numër",
   "add": "Shtoni",
-  "addPillSheet": "Shto fletë pilule",
+  "addPillSheet": "Shtoni blister",
   "pillTakenCountPrefix": "Në ditë",
   "pillTakenCountSuffix": "Merr një herë në ditë",
   "duringPauseTaking": "Pushim nga marrja",

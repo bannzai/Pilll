@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tabletta",
   "startFromNumber": "Kezdés ettől a számtól",
   "add": "Hozzáadás",
-  "addPillSheet": "Tablettás lemez hozzáadása",
+  "addPillSheet": "Új tablettacsomag hozzáadása",
   "pillTakenCountPrefix": "Naponta",
   "pillTakenCountSuffix": "1 alkalommal veszi be",
   "duringPauseTaking": "Szedés szünetel",

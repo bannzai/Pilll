@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "להתחיל ממספר זה",
   "add": "הוספה",
-  "addPillSheet": "הוסף גיליון כדורים",
+  "addPillSheet": "הוספת חפיסת גלולות",
   "pillTakenCountPrefix": "他言語(アラビア語)では「في اليوم」(1日に)+「مرات تؤخذ」(回服用する)という構成でした。ヘブライ語も同じ構造で自然な表現にします。\n\n**ביום**",
   "pillTakenCountSuffix": "פעם ליום",
   "duringPauseTaking": "הפסקת נטילה",

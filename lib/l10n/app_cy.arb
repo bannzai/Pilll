@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "pilsen rhif {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Dechrau o'r rhif hwn",
   "add": "Ychwanegu",
-  "addPillSheet": "Ychwanegu Taflen Biliau",
+  "addPillSheet": "Ychwanegwch stribed pils",
   "pillTakenCountPrefix": "Un diwrnod",
   "pillTakenCountSuffix": "Cymryd 2 lwy y dydd",
   "duringPauseTaking": "Seibiant cymryd",

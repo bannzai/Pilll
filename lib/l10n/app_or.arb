@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ବଟି ନମ୍ବର {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ଏହି ନମ୍ବରରୁ ଆରମ୍ଭ କରନ୍ତୁ",
   "add": "ଯୋଡ଼ନ୍ତୁ",
-  "addPillSheet": "ପିଲ୍ ଶିଟ୍ ଯୋଗ କରନ୍ତୁ",
+  "addPillSheet": "ବଟିକା ସିଟ ଯୋଡ଼ନ୍ତୁ",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "1日に2回服用する",
   "duringPauseTaking": "ସେବନ ବିରାମରେ",

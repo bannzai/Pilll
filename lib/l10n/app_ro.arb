@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Începe de la acest număr",
   "add": "Adaugă",
-  "addPillSheet": "Adaugă folie de pastile",
+  "addPillSheet": "Adaugă un blister",
   "pillTakenCountPrefix": "Într-o zi",
   "pillTakenCountSuffix": "ori",
   "duringPauseTaking": "În pauză de administrare",

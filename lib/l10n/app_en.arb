@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pill #{pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Start from this number",
   "add": "Add",
-  "addPillSheet": "Add Pill Sheet",
+  "addPillSheet": "Add pill pack",
   "pillTakenCountPrefix": "Take",
   "pillTakenCountSuffix": "time(s) a day",
   "duringPauseTaking": "Taking a break",

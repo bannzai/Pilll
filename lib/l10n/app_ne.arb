@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "यो नम्बरबाट सुरु गर्नुहोस्",
   "add": "थप्नुहोस्",
-  "addPillSheet": "पिल सिट थप्नुहोस्",
+  "addPillSheet": "चक्की पत्ता थप्नुहोस्",
   "pillTakenCountPrefix": "1 दिनमा",
   "pillTakenCountSuffix": "पटक सेवन गर्नुहोस्",
   "duringPauseTaking": "सेवन बिराम",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tablete",
   "startFromNumber": "Sākt ar šo numuru",
   "add": "Pievienot",
-  "addPillSheet": "Pievienot tablešu plāksnīti",
+  "addPillSheet": "Pievienot tablešu blisteri",
   "pillTakenCountPrefix": "Dienā",
   "pillTakenCountSuffix": "reizes lietot",
   "duringPauseTaking": "Lietošanas pārtraukums",

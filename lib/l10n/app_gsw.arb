@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Bi dere Nummere aafange",
   "add": "Dezue tue",
-  "addPillSheet": "Pilleblischter hinzuefüege",
+  "addPillSheet": "Pilleblister dezue tue",
   "pillTakenCountPrefix": "1 Tag",
   "pillTakenCountSuffix": "Nimm 2 Mal ein",
   "duringPauseTaking": "Ihname pausiert",

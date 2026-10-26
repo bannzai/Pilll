@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Ab dieser Nummer starten",
   "add": "Hinzufügen",
-  "addPillSheet": "Pillenpackung hinzufügen",
+  "addPillSheet": "Pillenblister hinzufügen",
   "pillTakenCountPrefix": "Einmal täglich",
   "pillTakenCountSuffix": "Täglich einnehmen",
   "duringPauseTaking": "Einnahmepause",

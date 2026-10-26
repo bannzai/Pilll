@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ਗੋਲੀ ਨੰਬਰ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ਇਸ ਨੰਬਰ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
   "add": "ਸ਼ਾਮਲ ਕਰੋ",
-  "addPillSheet": "ਗੋਲੀ ਸ਼ੀਟ ਜੋੜੋ",
+  "addPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸ਼ਾਮਲ ਕਰੋ",
   "pillTakenCountPrefix": "ਦਿਨ ਵਿੱਚ",
   "pillTakenCountSuffix": "2 ਦਿਨ ਵਿੱਚ ਲਵੋ",
   "duringPauseTaking": "ਦਵਾਈ ਦਾ ਬ੍ਰੇਕ",

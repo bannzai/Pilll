@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "p-pille nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Start fra dette nummeret",
   "add": "Legg til",
-  "addPillSheet": "Legg til pillark",
+  "addPillSheet": "Legg til pillebrett",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "ganger om dagen",
   "duringPauseTaking": "På pause",

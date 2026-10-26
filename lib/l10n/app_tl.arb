@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pildoras bilang {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Magsimula sa numerong ito",
   "add": "Magdagdag",
-  "addPillSheet": "Magdagdag ng Pill Sheet",
+  "addPillSheet": "Magdagdag ng pakete ng pildoras",
   "pillTakenCountPrefix": "Isang beses sa isang araw",
   "pillTakenCountSuffix": "1回服用する",
   "duringPauseTaking": "Naka-break sa pag-inom",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-raqamli tabletka",
   "startFromNumber": "Shu raqamdan boshlang",
   "add": "Qoʻshish",
-  "addPillSheet": "Dori paketini qo'shish",
+  "addPillSheet": "Tabletka blister qoʻshing",
   "pillTakenCountPrefix": "Bir kunda",
   "pillTakenCountSuffix": "1 kunlik doza soni",
   "duringPauseTaking": "Qabul qilishdan dam olish",

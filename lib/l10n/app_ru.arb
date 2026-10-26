@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "таблетка № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Начать с этого номера",
   "add": "Добавить",
-  "addPillSheet": "Добавить упаковку",
+  "addPillSheet": "Добавить блистер",
   "pillTakenCountPrefix": "Через день",
   "pillTakenCountSuffix": "Принимать по 2 раза в день",
   "duringPauseTaking": "Перерыв в приёме",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mulai dari nomor ini",
   "add": "Tambah",
-  "addPillSheet": "Tambah Strip Pil",
+  "addPillSheet": "Tambahkan strip pil",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "1日に服用する回数",
   "duringPauseTaking": "Sedang istirahat",

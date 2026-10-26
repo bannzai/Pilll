@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} nömrəli həb",
   "startFromNumber": "Bu nömrədən başlayın",
   "add": "Əlavə edin",
-  "addPillSheet": "Həb paketi əlavə et",
+  "addPillSheet": "Həb blister əlavə edin",
   "pillTakenCountPrefix": "Gündə",
   "pillTakenCountSuffix": "dəfə qəbul edilir",
   "duringPauseTaking": "Qəbul fasiləsi",

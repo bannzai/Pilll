@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "piller nr {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Börja från det här numret",
   "add": "Lägg till",
-  "addPillSheet": "Lägg till tablettark",
+  "addPillSheet": "Lägg till p-pillerkarta",
   "pillTakenCountPrefix": "En dag att ta",
   "pillTakenCountSuffix": "Hon tar 2 tabletter per dag",
   "duringPauseTaking": "P-piller pausad",

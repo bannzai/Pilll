@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. pilula",
   "startFromNumber": "Hasi zenbaki honetatik",
   "add": "Gehitu",
-  "addPillSheet": "Pilula-orria gehitu",
+  "addPillSheet": "Gehitu pilula-blister",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "Erabiltzeko unitate kopuruaren aurretik erakusten dela kontuan hartuta, \"回服用する\" euskarara honela itzultzen dut.\n\naldiz hartu",
   "duringPauseTaking": "Hartzea pausatuta",

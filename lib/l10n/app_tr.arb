@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} numaralı hap",
   "startFromNumber": "Bu numaradan başlayın",
   "add": "Ekle",
-  "addPillSheet": "Hap Paketi Ekle",
+  "addPillSheet": "Blister ekleyin",
   "pillTakenCountPrefix": "Günde",
   "pillTakenCountSuffix": "1 kez alınır",
   "duringPauseTaking": "Kullanım molasında",

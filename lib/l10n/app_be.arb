@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "пігулка № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Пачаць з гэтага нумара",
   "add": "Дадаць",
-  "addPillSheet": "Дадаць блістэр таблетак",
+  "addPillSheet": "Дадаць блістар",
   "pillTakenCountPrefix": "На дзень",
   "pillTakenCountSuffix": "разы прымаецца",
   "duringPauseTaking": "Перапынак у прыёме",

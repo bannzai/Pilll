@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-oji tabletė",
   "startFromNumber": "Pradėti nuo šio numerio",
   "add": "Pridėti",
-  "addPillSheet": "Pridėti tablečių pakuotę",
+  "addPillSheet": "Pridėti tablečių plokštelę",
   "pillTakenCountPrefix": "1 dieną",
   "pillTakenCountSuffix": "1 dieną vartoti",
   "duringPauseTaking": "Vartojimo pertrauka",

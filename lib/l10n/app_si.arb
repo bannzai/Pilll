@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "පෙති අංක {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "මෙම අංකයෙන් ආරම්භ කරන්න",
   "add": "එක් කරන්න",
-  "addPillSheet": "ගුලිය පත්‍රය එකතු කරන්න",
+  "addPillSheet": "පෙති කාඩ්පත එක් කරන්න",
   "pillTakenCountPrefix": "1දිනකට",
   "pillTakenCountSuffix": "回衣ගන්නවා",
   "duringPauseTaking": "මාධ්‍යය විවේකයේ",

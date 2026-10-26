@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "pil nummer {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Begin bij dit nummer",
   "add": "Toevoegen",
-  "addPillSheet": "Pilstrip toevoegen",
+  "addPillSheet": "Pillenstrip toevoegen",
   "pillTakenCountPrefix": "Overdag",
   "pillTakenCountSuffix": "1 keer per dag innemen",
   "duringPauseTaking": "Innamepauze",

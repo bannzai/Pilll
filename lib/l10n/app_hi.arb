@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "गोली नंबर {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "इस नंबर से शुरू करें",
   "add": "जोड़ें",
-  "addPillSheet": "पिल शीट जोड़ें",
+  "addPillSheet": "पिल स्ट्रिप जोड़ें",
   "pillTakenCountPrefix": "1 दिन में",
   "pillTakenCountSuffix": "1 दिन में [X] बार लें",
   "duringPauseTaking": "सेवन बंद",

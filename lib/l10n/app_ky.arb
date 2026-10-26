@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber} таблетка",
   "startFromNumber": "Ушул номерден баштаңыз",
   "add": "Кошуу",
-  "addPillSheet": "Таблетка листин кошуу",
+  "addPillSheet": "Таблетка блистери кошуу",
   "pillTakenCountPrefix": "Күнүнө",
   "pillTakenCountSuffix": "Ичкенде 2 жолу ичесиз",
   "duringPauseTaking": "Дарыдан эс алуу",

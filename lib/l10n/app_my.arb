@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ဆေးပြားအမှတ် {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ဒီနံပါတ်ကနေ စတင်ပါ",
   "add": "ထည့်ရန်",
-  "addPillSheet": "မီးမိုးဆေးပြား ထပ်ထည့်",
+  "addPillSheet": "ဆေးပြားကတ် ထည့်ရန်",
   "pillTakenCountPrefix": "1 ရက်လျှင်",
   "pillTakenCountSuffix": "回服用する",
   "duringPauseTaking": "သောက်ခြင်း နားနေသည်",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} নম্বৰ গৰ্ভনিৰোধক বড়ি",
   "startFromNumber": "এই নম্বৰৰ পৰা আৰম্ভ কৰক",
   "add": "যোগ কৰক",
-  "addPillSheet": "পিল শীট যোগ কৰক",
+  "addPillSheet": "পিলৰ ষ্ট্ৰিপ যোগ কৰক",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "1回服用する",
   "duringPauseTaking": "সেৱন বিৰতি",

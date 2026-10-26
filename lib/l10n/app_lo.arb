@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ເມັດເລກ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ເລີ່ມຈາກເລກນີ້",
   "add": "ເພີ່ມ",
-  "addPillSheet": "ເພີ່ມແຜ່ນຢາເມັດ",
+  "addPillSheet": "ເພີ່ມແຜງຢາຄຸມ",
   "pillTakenCountPrefix": "້ານໜຶ່ງ",
   "pillTakenCountSuffix": "ຮັບປະທານ 回",
   "duringPauseTaking": "ພັກການກິນຢາ",

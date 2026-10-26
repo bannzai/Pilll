@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "хапче № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Начало от този номер",
   "add": "Добавяне",
-  "addPillSheet": "Добави опаковка",
+  "addPillSheet": "Добавяне на блистер",
   "pillTakenCountPrefix": "На 1 ден",
   "pillTakenCountSuffix": "Приемате 2 таблетки",
   "duringPauseTaking": "Пауза в приемането",

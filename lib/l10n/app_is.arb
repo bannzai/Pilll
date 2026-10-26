@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "pilla nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Byrja á þessu númeri",
   "add": "Bæta við",
-  "addPillSheet": "Bæta við pillupakka",
+  "addPillSheet": "Bæta við pilluspjaldi",
   "pillTakenCountPrefix": "Á dag",
   "pillTakenCountSuffix": "Þú tekur [VAL] pillur á dag",
   "duringPauseTaking": "Á hlé frá innköllun",

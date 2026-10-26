@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "tableta št. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Začnite pri tej številki",
   "add": "Dodaj",
-  "addPillSheet": "Dodaj list tablet",
+  "addPillSheet": "Dodajte ploščico",
   "pillTakenCountPrefix": "1× na dan",
   "pillTakenCountSuffix": "Vzame 2-krat na dan",
   "duringPauseTaking": "Na premoru pri jemanju",

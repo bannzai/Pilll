@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ഗുളിക നമ്പർ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ഈ നമ്പറിൽ നിന്ന് തുടങ്ങാം",
   "add": "ചേർക്കുക",
-  "addPillSheet": "ഗുളിക ഷീറ്റ് ചേർക്കുക",
+  "addPillSheet": "ഗുളിക സ്ട്രിപ്പ് ചേർക്കുക",
   "pillTakenCountPrefix": "ദിവസത്തിൽ",
   "pillTakenCountSuffix": "തവണ കഴിക്കുന്നു",
   "duringPauseTaking": "പിൽ സേവനം വിശ്രമത്തിൽ",

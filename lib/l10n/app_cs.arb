@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "tableta č. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Začít od tohoto čísla",
   "add": "Přidat",
-  "addPillSheet": "Přidat blistr pilulek",
+  "addPillSheet": "Přidat blistr",
   "pillTakenCountPrefix": "Denně",
   "pillTakenCountSuffix": "krát užívat",
   "duringPauseTaking": "Přestávka v užívání",

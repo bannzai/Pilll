@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "tabletka nr {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Zacznij od tego numeru",
   "add": "Dodaj",
-  "addPillSheet": "Dodaj opakowanie pigułek",
+  "addPillSheet": "Dodaj blist",
   "pillTakenCountPrefix": "Codziennie",
   "pillTakenCountSuffix": "Wypij 1 raz",
   "duringPauseTaking": "Przerwa w przyjmowaniu",

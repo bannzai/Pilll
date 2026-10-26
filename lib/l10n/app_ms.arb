@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mula dari nombor ini",
   "add": "Tambah",
-  "addPillSheet": "Tambah Pek Pil",
+  "addPillSheet": "Tambah pek pil",
   "pillTakenCountPrefix": "Sehari sekali",
   "pillTakenCountSuffix": "Sehari [2] kali",
   "duringPauseTaking": "Sedang Berehat",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ክኒን ቁጥር {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ከዚህ ቁጥር ጀምሮ",
   "add": "ጨምር",
-  "addPillSheet": "የክኒን ሰሌዳ መጨመር",
+  "addPillSheet": "ክኒን ሉህ ያክሉ",
   "pillTakenCountPrefix": "በቀን",
   "pillTakenCountSuffix": "ጊዜ ይወሰዳል",
   "duringPauseTaking": "እረፍት ላይ",

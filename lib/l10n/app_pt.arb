@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Pílula nº {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Começar por este número",
   "add": "Adicionar",
-  "addPillSheet": "Adicionar cartela de pílulas",
+  "addPillSheet": "Adicionar cartela",
   "pillTakenCountPrefix": "Uma vez ao dia",
   "pillTakenCountSuffix": "vez(es) ao dia",
   "duringPauseTaking": "Em pausa",

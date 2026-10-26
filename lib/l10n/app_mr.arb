@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "या क्रमांकापासून सुरू करा",
   "add": "जोडा",
-  "addPillSheet": "गोळी-शीट जोडा",
+  "addPillSheet": "पिल शीट जोडा",
   "pillTakenCountPrefix": "1 दिवसात",
   "pillTakenCountSuffix": "वेळा घ्या",
   "duringPauseTaking": "सेवन विराम",

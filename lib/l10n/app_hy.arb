@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "հաբ № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Սկսել այս համարից",
   "add": "Ավելացնել",
-  "addPillSheet": "Հապակի փաթեթ ավելացնել",
+  "addPillSheet": "Ավելացնել հաբերի բլիստեր",
   "pillTakenCountPrefix": "Օրական",
   "pillTakenCountSuffix": "Դեղահատ ընդունել",
   "duringPauseTaking": "Ընդունման ընդմիջում",

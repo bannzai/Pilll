@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "ગોળી નંબર {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "આ નંબરથી શરૂ કરો",
   "add": "ઉમેરો",
-  "addPillSheet": "પિલ શીટ ઉમેરો",
+  "addPillSheet": "ગોળીની સ્ટ્રિપ ઉમેરો",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "વખત લો",
   "duringPauseTaking": "દવાનો વિરામ",

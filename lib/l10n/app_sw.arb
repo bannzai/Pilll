@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "kidonge namba {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Tafadhali anza kwenye nambari hii",
   "add": "Ongeza",
-  "addPillSheet": "Ongeza Karatasi ya Vidonge",
+  "addPillSheet": "Ongeza pakiti ya vidonge",
   "pillTakenCountPrefix": "Kwa siku moja",
   "pillTakenCountSuffix": "Kutumia mara moja",
   "duringPauseTaking": "Mapumziko wa dawa",

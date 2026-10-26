@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "گولی نمبر {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "اس نمبر سے شروع کریں",
   "add": "شامل کریں",
-  "addPillSheet": "پل شیٹ شامل کریں",
+  "addPillSheet": "گولیوں کی پٹی شامل کریں",
   "pillTakenCountPrefix": "1日میں",
   "pillTakenCountSuffix": "بار لیں",
   "duringPauseTaking": "دوا موقوف ہے",

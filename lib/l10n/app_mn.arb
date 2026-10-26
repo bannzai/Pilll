@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} дугаартай эм",
   "startFromNumber": "Энэ дугаараас эхлүүлэх",
   "add": "Нэмэх",
-  "addPillSheet": "Эм хаягдас нэмэх",
+  "addPillSheet": "Эмийн блистер нэмэх",
   "pillTakenCountPrefix": "1 өдөрт",
   "pillTakenCountSuffix": "удаа уух",
   "duringPauseTaking": "Уухыг амраж байна",

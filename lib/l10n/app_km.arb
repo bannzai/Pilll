@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "គ្រាប់លេខ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ចាប់ផ្តើមពីលេខនេះ",
   "add": "បន្ថែម",
-  "addPillSheet": "បន្ថែមបន្ទះថ្នាំ",
+  "addPillSheet": "សូមបន្ថែមបន្ទះថ្នាំគ្រាប់",
   "pillTakenCountPrefix": "1日に",
   "pillTakenCountSuffix": "ដងលេប",
   "duringPauseTaking": "កំពុងសម្រាក",

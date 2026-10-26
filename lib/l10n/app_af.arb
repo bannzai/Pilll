@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Begin by hierdie nommer",
   "add": "Voeg by",
-  "addPillSheet": "Voeg pilpakket by",
+  "addPillSheet": "Voeg pilstrokie by",
   "pillTakenCountPrefix": "1 dag",
   "pillTakenCountSuffix": "Ek neem 2 keer",
   "duringPauseTaking": "Inneem gepauzeer",

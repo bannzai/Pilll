@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "البدء من هذا الرقم",
   "add": "إضافة",
-  "addPillSheet": "أضف شريط الحبوب",
+  "addPillSheet": "إضافة شريط",
   "pillTakenCountPrefix": "في اليوم",
   "pillTakenCountSuffix": "مرات تؤخذ",
   "duringPauseTaking": "في فترة راحة",

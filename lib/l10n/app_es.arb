@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "Píldora n.º {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Empezar desde este número",
   "add": "Agregar",
-  "addPillSheet": "Añadir blíster de píldoras",
+  "addPillSheet": "Añadir blíster",
   "pillTakenCountPrefix": "1 día al",
   "pillTakenCountSuffix": "Toma 2 veces al día",
   "duringPauseTaking": "En pausa",

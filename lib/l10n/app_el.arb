@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "χάπι αρ. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Έναρξη από αυτόν τον αριθμό",
   "add": "Προσθήκη",
-  "addPillSheet": "Προσθέστε συσκευασία",
+  "addPillSheet": "Προσθήκη καρτέλα χαπιών",
   "pillTakenCountPrefix": "Μία φορά την ημέρα",
   "pillTakenCountSuffix": "Λαμβάνω κατά τη λήψη",
   "duringPauseTaking": "Σε διάλειμμα λήψης",

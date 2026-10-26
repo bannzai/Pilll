@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "აბი № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ამ ნომრიდან დაწყება",
   "add": "დამატება",
-  "addPillSheet": "აბების ფურცლის დამატება",
+  "addPillSheet": "აბების ბლისტერ დამატება",
   "pillTakenCountPrefix": "1 დღეში",
   "pillTakenCountSuffix": "-ჯერ მიღება",
   "duringPauseTaking": "მიღების შესვენება",

@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "пилула бр. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Почните од овог броја",
   "add": "Додајте",
-  "addPillSheet": "Додати паковање пилула",
+  "addPillSheet": "Додајте блистер",
   "pillTakenCountPrefix": "Дневно",
   "pillTakenCountSuffix": "Пута дневно",
   "duringPauseTaking": "Na pauzi",

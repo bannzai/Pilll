@@ -397,7 +397,7 @@
   "sequentialLastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ఈ సంఖ్య నుంచి ప్రారంభించండి",
   "add": "జోడించండి",
-  "addPillSheet": "పిల్ షీట్ జోడించండి",
+  "addPillSheet": "మాత్రల స్ట్రిప్ జోడించండి",
   "pillTakenCountPrefix": "రోజుకు",
   "pillTakenCountSuffix": "సార్లు తీసుకోవాలి",
   "duringPauseTaking": "సేవన విరామంలో",
