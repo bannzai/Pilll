@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwa leo au kabla ya leo",
   "pauseEndDateLimitBeforeNextPause": "Hadi tarehe isiyoingiliana na mapumziko yanayofuata (kuanzia {date})",
   "pauseStartDateLimit": "Unaweza kuchagua tarehe ya kuanza hadi {date}",
-  "initialSettingAskYazFlex": "Je, unatumia Yaz Flex?",
+  "initialSettingAskYazFlex": "Je, unameza kidonge cha Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”,\ntutaiweka ili ionyeshe ni siku ya ngapi tangu mapumziko yalipoisha.",
   "yazFlexLastRestDurationTitle": "Tafadhali gusa kidonge\nulichotumia kabla tu ya mapumziko",
   "yazFlexLastRestDurationNote": "Tafadhali chagua kidonge cha mwisho ulichotumia kabla ya kuanza mapumziko",

@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Slutdatoen kan senest være i dag",
   "pauseEndDateLimitBeforeNextPause": "Til en dato, der ikke overlapper med næste pillepause (fra {date})",
   "pauseStartDateLimit": "Du kan vælge en startdato til og med {date}",
-  "initialSettingAskYazFlex": "Bruger du Yaz Flex?",
+  "initialSettingAskYazFlex": "Tager du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Hvis du vælger “Ja”,\nindstiller vi det, så antal dage siden pausen sluttede kan vises.",
   "yazFlexLastRestDurationTitle": "Tryk på den pille,\ndu tog lige før pausen",
   "yazFlexLastRestDurationNote": "Vælg den sidste pille, du tog, før du begyndte pausen",

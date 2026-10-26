@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "അവസാന തീയതിയായി ഇന്നുവരെ മാത്രമേ തിരഞ്ഞെടുക്കാനാകൂ",
   "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേളയുമായി ({date} മുതൽ) ഒത്തുചേരാത്ത തീയതി വരെ",
   "pauseStartDateLimit": "ആരംഭ തീയതിയായി {date} വരെയുള്ള ദിവസം തിരഞ്ഞെടുക്കാം",
-  "initialSettingAskYazFlex": "നിങ്ങൾ Yaz Flex ഉപയോഗിക്കുകയാണോ?",
+  "initialSettingAskYazFlex": "നിങ്ങൾ കഴിക്കുന്നത് Yaz Flex ഗുളികയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ\nഇടവേള കഴിഞ്ഞ് എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന വിധത്തിൽ സജ്ജീകരിക്കും",
   "yazFlexLastRestDurationTitle": "ഇടവേള തുടങ്ങുന്നതിനുമുമ്പ് എടുത്ത ഗുളികയിൽ\nടാപ്പ് ചെയ്യുക",
   "yazFlexLastRestDurationNote": "ഇടവേള ആരംഭിക്കുന്നതിന് മുമ്പ് നിങ്ങൾ അവസാനമായി കഴിച്ച ഗുളിക തിരഞ്ഞെടുക്കുക",

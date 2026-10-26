@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Датумот на завршување може да биде најдоцна денес",
   "pauseEndDateLimitBeforeNextPause": "До датум што не се преклопува со следната пауза (од {date})",
   "pauseStartDateLimit": "Можете да изберете датум на почеток најдоцна до {date}",
-  "initialSettingAskYazFlex": "Дали користите Yaz Flex?",
+  "initialSettingAskYazFlex": "Дали земате Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nќе поставиме да се прикажува кој ден е по завршувањето на паузата.",
   "yazFlexLastRestDurationTitle": "Допрете ја таблетата\nшто ја испивте непосредно пред паузата",
   "yazFlexLastRestDurationNote": "Изберете ја последната пилула што ја испивте пред да започне паузата",

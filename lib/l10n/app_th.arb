@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "เลือกวันสิ้นสุดได้ถึงวันนี้เท่านั้นค่ะ",
   "pauseEndDateLimitBeforeNextPause": "ถึงวันที่ไม่ทับกับช่วงพักทานยาครั้งถัดไป (เริ่ม {date}) ค่ะ",
   "pauseStartDateLimit": "เลือกวันเริ่มต้นได้ถึง {date} ค่ะ",
-  "initialSettingAskYazFlex": "คุณใช้ Yaz Flex อยู่ใช่ไหม",
+  "initialSettingAskYazFlex": "ยาที่ทานอยู่คือ Yaz Flex ใช่ไหมคะ",
   "initialSettingAskYazFlexDescription": "หากคุณเลือก “ใช่”\nเราจะตั้งค่าให้สามารถแสดงได้ว่าเป็นวันที่เท่าไรหลังจากช่วงหยุดยา",
   "yazFlexLastRestDurationTitle": "โปรดแตะยาเม็ด\nที่คุณรับประทานก่อนเริ่มช่วงหยุดยา",
   "yazFlexLastRestDurationNote": "โปรดเลือกยาที่คุณรับประทานครั้งสุดท้ายก่อนเริ่มช่วงพักยา",

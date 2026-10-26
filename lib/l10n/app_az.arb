@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Bitiş tarixi ən gec bu gün ola bilər",
   "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ilə ({date} tarixindən) üst-üstə düşməyən tarixədək",
   "pauseStartDateLimit": "Başlama tarixini {date} tarixinədək seçə bilərsiniz",
-  "initialSettingAskYazFlex": "Yaz Flex istifadə edirsiniz?",
+  "initialSettingAskYazFlex": "Qəbul etdiyiniz həb Yaz Flex-dir?",
   "initialSettingAskYazFlexDescription": "“Bəli” seçsəniz,\nfasilədən sonra neçə gün keçdiyini göstərə biləcək şəkildə tənzimləyəcəyik.",
   "yazFlexLastRestDurationTitle": "Fasiləyə başlamazdan əvvəl qəbul etdiyiniz həbi\nseçmək üçün toxunun",
   "yazFlexLastRestDurationNote": "Fasiləyə başlamazdan əvvəl son qəbul etdiyiniz həbi seçin",

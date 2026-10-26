@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Hanggang ngayon lamang maaaring itakda ang petsa ng pagtatapos",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa petsang hindi sakop ng susunod na pahinga (mula {date})",
   "pauseStartDateLimit": "Maaari po kayong pumili ng petsa ng simula hanggang {date}",
-  "initialSettingAskYazFlex": "Gumagamit ka ba ng Yaz Flex?",
+  "initialSettingAskYazFlex": "Yaz Flex po ba ang iniinom ninyong pildoras?",
   "initialSettingAskYazFlexDescription": "Kapag pinili mo ang “Oo”,\nise-set namin ito para maipakita kung pang-ilang araw na mula nang matapos ang pahinga.",
   "yazFlexLastRestDurationTitle": "I-tap ang pill\nna ininom mo bago magsimula ang pahinga",
   "yazFlexLastRestDurationNote": "Pakipili ang huling pill na ininom mo bago magsimula ang pahinga",

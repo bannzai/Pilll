@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "ଶେଷ ତାରିଖ ଭାବେ ଆଜି ପର୍ଯ୍ୟନ୍ତ ହିଁ ବାଛିପାରିବେ",
   "pauseEndDateLimitBeforeNextPause": "ପରବର୍ତ୍ତୀ ବିରତି ({date} ଠାରୁ) ସହ ମେଳ ନ ଖାଉଥିବା ତାରିଖ ପର୍ଯ୍ୟନ୍ତ",
   "pauseStartDateLimit": "ଆପଣ ଆରମ୍ଭ ତାରିଖ {date} ପର୍ଯ୍ୟନ୍ତ ବାଛିପାରିବେ",
-  "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବ୍ୟବହାର କରୁଛନ୍ତି କି?",
+  "initialSettingAskYazFlex": "ଆପଣ Yaz Flex ବଟିକା ନିଅନ୍ତି କି?",
   "initialSettingAskYazFlexDescription": "“ହଁ” ବାଛିଲେ\nବିରତି ସମାପ୍ତ ହେବା ପରେ କେତେ ଦିନ ହେଲା ତାହା ଦେଖାଇବା ପାଇଁ ସେଟ୍ କରାଯିବ",
   "yazFlexLastRestDurationTitle": "ବିରତି ଆରମ୍ଭ ହେବା ପୂର୍ବରୁ ନେଇଥିବା ପିଲ୍‌ଟିରେ\nଟାପ୍ କରନ୍ତୁ",
   "yazFlexLastRestDurationNote": "ଦୟାକରି ବିରତି ଆରମ୍ଭ କରିବା ପୂର୍ବରୁ ଆପଣ ଶେଷରେ ଖାଇଥିବା ପିଲ୍‌ଟିକୁ ବାଛନ୍ତୁ",

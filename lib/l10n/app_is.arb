@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Lokadagsetning getur í síðasta lagi verið í dag",
   "pauseEndDateLimitBeforeNextPause": "Fram að degi sem skarast ekki við næsta pilluhlé (frá {date})",
   "pauseStartDateLimit": "Þú getur valið upphafsdag til og með {date}",
-  "initialSettingAskYazFlex": "Ertu að nota Yaz Flex?",
+  "initialSettingAskYazFlex": "Tekur þú Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ef þú velur „Já“,\nstillum við þetta þannig að hægt sé að sýna hversu margir dagar eru liðnir frá því að hléinu lauk.",
   "yazFlexLastRestDurationTitle": "Pikkaðu á pilluna\nsem þú tókst rétt áður en hléið hófst",
   "yazFlexLastRestDurationNote": "Vinsamlegast veldu síðustu pilluna sem þú tókst áður en hléið hófst",

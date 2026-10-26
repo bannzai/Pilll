@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Amaiera-data, beranduenez, gaurkoa izan daiteke",
   "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}tik aurrera) bat egiten ez duen egunera arte",
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu dezakezu",
-  "initialSettingAskYazFlex": "Yaz Flex erabiltzen duzu?",
+  "initialSettingAskYazFlex": "Yaz Flex hartzen duzu?",
   "initialSettingAskYazFlexDescription": "“Bai” aukeratzen baduzu,\netenaldiaren amaieratik zenbat egun igaro diren erakusteko ezarriko dugu.",
   "yazFlexLastRestDurationTitle": "Sakatu atsedenaldia hasi aurretik\nhartu zenuen pilula",
   "yazFlexLastRestDurationNote": "Aukeratu atsedenaldia hasi aurretik hartu zenuen azken pilula",

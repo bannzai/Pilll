@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Tarikh tamat boleh ditetapkan selewat-lewatnya hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sehingga tarikh yang tidak bertindih dengan rehat seterusnya (mulai {date})",
   "pauseStartDateLimit": "Anda boleh memilih tarikh mula sehingga {date}",
-  "initialSettingAskYazFlex": "Adakah anda menggunakan Yaz Flex?",
+  "initialSettingAskYazFlex": "Adakah pil yang anda ambil Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”,\nkami akan menetapkannya supaya bilangan hari sejak tamat tempoh rehat dapat dipaparkan.",
   "yazFlexLastRestDurationTitle": "Ketik pil\nyang anda ambil sejurus sebelum rehat",
   "yazFlexLastRestDurationNote": "Sila pilih pil terakhir yang anda ambil sebelum memulakan rehat",

@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարող է լինել ամենաուշը այսօր",
   "pauseEndDateLimitBeforeNextPause": "Մինչև հաջորդ ընդմիջման ({date}-ից) հետ չհամընկնող օրը",
   "pauseStartDateLimit": "Դուք կարող եք ընտրել մեկնարկի ամսաթիվ՝ մինչև {date} ներառյալ",
-  "initialSettingAskYazFlex": "Yaz Flex օգտագործո՞ւմ եք։",
+  "initialSettingAskYazFlex": "Դուք Yaz Flex եք ընդունո՞ւմ։",
   "initialSettingAskYazFlexDescription": "Եթե ընտրեք «Այո»-ն,\nկկարգավորենք, որպեսզի ցուցադրվի, թե ընդմիջման ավարտից քանիերորդ օրն է։",
   "yazFlexLastRestDurationTitle": "Խնդրում ենք հպվել այն հաբին,\nորը ընդունել եք դադարից անմիջապես առաջ",
   "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որը ընդունել եք ընդմիջումը սկսելուց առաջ",

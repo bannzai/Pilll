@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "תאריך הסיום יכול להיות היום לכל המאוחר",
   "pauseEndDateLimitBeforeNextPause": "עד לתאריך שאינו חופף להפסקה הבאה (מ־{date})",
   "pauseStartDateLimit": "אפשר לבחור תאריך התחלה עד {date}",
-  "initialSettingAskYazFlex": "האם את משתמשת ב-Yaz Flex?",
+  "initialSettingAskYazFlex": "האם הגלולה היא Yaz Flex?",
   "initialSettingAskYazFlexDescription": "אם תבחרי ב״כן״,\nנגדיר שיוצג כמה ימים עברו מאז סיום ההפסקה.",
   "yazFlexLastRestDurationTitle": "יש להקיש על הגלולה\nשנטלת ממש לפני תחילת ההפסקה",
   "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שלקחת לפני תחילת ההפסקה",

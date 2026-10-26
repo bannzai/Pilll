@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Gall y dyddiad gorffen fod hyd at heddiw",
   "pauseEndDateLimitBeforeNextPause": "Hyd at ddyddiad nad yw’n gorgyffwrdd â’r seibiant nesaf (o {date})",
   "pauseStartDateLimit": "Gallwch ddewis dyddiad dechrau hyd at {date}",
-  "initialSettingAskYazFlex": "Ydych chi’n defnyddio Yaz Flex?",
+  "initialSettingAskYazFlex": "Ydych chi'n cymryd Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”,\nbyddwn yn ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd yr egwyl.",
   "yazFlexLastRestDurationTitle": "Tapiwch y bilsen\na gymerwyd gennych yn union cyn dechrau’r egwyl",
   "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerasoch cyn dechrau’r egwyl",

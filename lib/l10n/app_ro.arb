@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "Data de încheiere poate fi cel târziu astăzi",
   "pauseEndDateLimitBeforeNextPause": "Până la o dată care nu se suprapune cu următoarea pauză (din {date})",
   "pauseStartDateLimit": "Poți alege o dată de început până la {date}",
-  "initialSettingAskYazFlex": "Folosiți Yaz Flex?",
+  "initialSettingAskYazFlex": "Iei Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Dacă alegeți „Da”,\nvom seta afișarea numărului de zile de la încheierea pauzei.",
   "yazFlexLastRestDurationTitle": "Atingeți pilula\npe care ați luat-o chiar înainte de pauză",
   "yazFlexLastRestDurationNote": "Te rugăm să selectezi ultima pilulă pe care ai luat-o înainte de începerea pauzei",

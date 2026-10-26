@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "დასრულების თარიღი შეიძლება იყოს არაუგვიანეს დღევანდელი დღისა",
   "pauseEndDateLimitBeforeNextPause": "იმ თარიღამდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}-დან)",
   "pauseStartDateLimit": "დაწყების თარიღად შეგიძლიათ აირჩიოთ არაუგვიანეს {date}",
-  "initialSettingAskYazFlex": "Yaz Flex-ს იყენებთ?",
+  "initialSettingAskYazFlex": "თქვენ Yaz Flex-ს იღებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს,\nდავაყენებთ ისე, რომ გამოჩნდეს, რამდენი დღე გავიდა შესვენების დასრულებიდან.",
   "yazFlexLastRestDurationTitle": "გთხოვთ, შეეხეთ აბს,\nრომელიც შესვენების დაწყებამდე მიიღეთ",
   "yazFlexLastRestDurationNote": "გთხოვთ, აირჩიოთ ბოლო აბი, რომელიც შესვენების დაწყებამდე მიიღეთ",

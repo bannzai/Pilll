@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "La date de fin peut être aujourd’hui au plus tard",
   "pauseEndDateLimitBeforeNextPause": "Jusqu’à une date qui ne chevauche pas la prochaine pause (à partir du {date})",
   "pauseStartDateLimit": "Vous pouvez choisir une date de début jusqu’au {date}",
-  "initialSettingAskYazFlex": "Utilisez-vous Yaz Flex ?",
+  "initialSettingAskYazFlex": "Prenez-vous Yaz Flex ?",
   "initialSettingAskYazFlexDescription": "Si vous choisissez « Oui »,\nnous le configurerons pour afficher le nombre de jours écoulés depuis la fin de la pause.",
   "yazFlexLastRestDurationTitle": "Touchez la pilule\nque vous avez prise juste avant la pause",
   "yazFlexLastRestDurationNote": "Veuillez sélectionner la dernière pilule que vous avez prise avant de commencer la pause",

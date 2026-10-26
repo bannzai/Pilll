@@ -568,7 +568,7 @@
   "pauseEndDateLimitIsToday": "កាលបរិច្ឆេទបញ្ចប់អាចជ្រើសបានត្រឹមថ្ងៃនេះ",
   "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់នឹងរយៈពេលសម្រាកបន្ទាប់ (ចាប់ពី {date})",
   "pauseStartDateLimit": "អ្នកអាចជ្រើសរើសថ្ងៃចាប់ផ្តើមរហូតដល់ {date}",
-  "initialSettingAskYazFlex": "តើអ្នកកំពុងប្រើ Yaz Flex មែនទេ?",
+  "initialSettingAskYazFlex": "តើថ្នាំគ្រាប់ដែលអ្នកលេបគឺ Yaz Flex មែនទេ?",
   "initialSettingAskYazFlexDescription": "ប្រសិនបើអ្នកជ្រើសរើស «បាទ/ចាស»\nយើងនឹងកំណត់ឱ្យអាចបង្ហាញថា ជាថ្ងៃទីប៉ុន្មានបន្ទាប់ពីចប់រយៈពេលឈប់លេបថ្នាំ។",
   "yazFlexLastRestDurationTitle": "សូមចុចលើថ្នាំគ្រាប់\nដែលអ្នកបានលេបមុនចូលរយៈពេលឈប់សម្រាក",
   "yazFlexLastRestDurationNote": "សូមជ្រើសរើសគ្រាប់ថ្នាំចុងក្រោយដែលអ្នកបានលេប មុនពេលចាប់ផ្តើមការផ្អាក",
