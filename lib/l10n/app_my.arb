@@ -43,7 +43,7 @@
   "signOut": "အကောင့်မှ ထွက်ရန်",
   "autoAddPillSheetGroup": "ဆေးပြားကတ် အုပ်စုများကို အလိုအလျောက် ထည့်သွင်းခြင်း",
   "autoAddNewSheetAfterCurrentEnds": "လက်ရှိ ဆေးပြားကတ် အုပ်စု ကုန်သွားတဲ့အခါ ကတ်အသစ်ကို အလိုအလျောက် ထည့်ပေးပါမယ်",
-  "accountSettings": "အကောင့်ဆက်တင်",
+  "accountSettings": "အကောင့်ဆက်တင်များ",
   "linked": "ချိတ်ဆက်ပြီး",
   "unregistered": "မမှတ်ပုံတင်ရသေး",
   "quickRecord": "မြန်မြန်မှတ်တမ်း",

@@ -43,7 +43,7 @@
   "signOut": "خروج از حساب",
   "autoAddPillSheetGroup": "افزودن خودکار گروه‌های ورق قرص",
   "autoAddNewSheetAfterCurrentEnds": "وقتی گروه فعلی ورق قرص تمام شود، ورق جدیدی به‌طور خودکار اضافه می‌شود",
-  "accountSettings": "تنظیمات حساب",
+  "accountSettings": "تنظیمات حساب کاربری",
   "linked": "متصل شده",
   "unregistered": "ثبت نشده",
   "quickRecord": "ثبت سریع",

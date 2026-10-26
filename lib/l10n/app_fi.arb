@@ -43,7 +43,7 @@
   "signOut": "Kirjaudu ulos",
   "autoAddPillSheetGroup": "Lisää pilleriliuskaryhmät automaattisesti",
   "autoAddNewSheetAfterCurrentEnds": "Kun nykyinen pilleriliuska-ryhmä päättyy, uusi liuska lisätään automaattisesti",
-  "accountSettings": "Tiliasetukset",
+  "accountSettings": "Tilin asetukset",
   "linked": "Yhdistetty",
   "unregistered": "Rekisteröimätön",
   "quickRecord": "Pikamerkintä",

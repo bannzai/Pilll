@@ -43,7 +43,7 @@
   "signOut": "Kijelentkezés",
   "autoAddPillSheetGroup": "Tablettacsomag-csoportok automatikus hozzáadása",
   "autoAddNewSheetAfterCurrentEnds": "Amikor a jelenlegi tablettacsomag-csoport véget ér, automatikusan hozzáadunk egy új csomagot",
-  "accountSettings": "Fiók beállítások",
+  "accountSettings": "Fiókbeállítások",
   "linked": "Összekapcsolva",
   "unregistered": "Regisztrálatlan",
   "quickRecord": "Gyors rögzítés",
