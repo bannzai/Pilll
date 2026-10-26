@@ -443,7 +443,7 @@
   "inquiryContent": "Подробности за запитването",
   "inquiryContentPlaceholder": "Моля, опишете запитването си",
   "debugInfoLabel": "Информация за отстраняване на грешки (попълва се автоматично)",
-  "inquirySent": "Запитването беше изпратено",
+  "inquirySent": "Запитването ви е изпратено",
   "sendInquiry": "Изпрати",
   "invalidEmailFormat": "Моля, въведете валиден имейл адрес",
   "emailCannotReceiveICloud": "※ Моля, използвайте имейл адрес, различен от @icloud.com. Възникват чести блокирания",

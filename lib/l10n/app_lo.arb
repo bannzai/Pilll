@@ -443,7 +443,7 @@
   "inquiryContent": "ລາຍລະອຽດຄຳຖາມ",
   "inquiryContentPlaceholder": "ກະລຸນາຂຽນລາຍລະອຽດຄຳຖາມຂອງທ່ານ",
   "debugInfoLabel": "ຂໍ້ມູນສຳລັບກວດຫາຂໍ້ຜິດພາດ (ຕື່ມອັດຕະໂນມັດ)",
-  "inquirySent": "ສົ່ງຄຳຖາມສຳເລັດແລ້ວ",
+  "inquirySent": "ສົ່ງຂໍ້ຄວາມຂອງທ່ານແລ້ວ",
   "sendInquiry": "ສົ່ງ",
   "invalidEmailFormat": "ກະລຸນາໃສ່ທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
   "emailCannotReceiveICloud": "ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມລນອກເໜືອຈາກ @icloud.com ເນື່ອງຈາກມີການບລັອກເກີດຂຶ້ນເປັນປະຈໍາ",

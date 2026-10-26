@@ -443,7 +443,7 @@
   "inquiryContent": "ستاسو د پوښتنې جزئیات",
   "inquiryContentPlaceholder": "مهرباني وکړئ د خپلې پوښتنې جزئیات ولیکئ",
   "debugInfoLabel": "د تېروتنو د موندلو معلومات (په خپله ډک شوي)",
-  "inquirySent": "ستاسو پوښتنه واستول شوه",
+  "inquirySent": "ستاسو پیغام واستول شو",
   "sendInquiry": "لېږل",
   "invalidEmailFormat": "مهرباني وکړئ معتبر بریښنالیک پته دننه کړئ",
   "emailCannotReceiveICloud": "مهرباني وکړئ د @icloud.com پرته بل بریښنالیک پته وکاروئ. ډیری ځله بلاک کیږي",

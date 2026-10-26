@@ -443,7 +443,7 @@
   "inquiryContent": "Jūsu jautājuma apraksts",
   "inquiryContentPlaceholder": "Lūdzu, aprakstiet savu jautājumu",
   "debugInfoLabel": "Atkļūdošanas informācija (aizpildīta automātiski)",
-  "inquirySent": "Vaicājums nosūtīts",
+  "inquirySent": "Jūsu ziņojums ir nosūtīts",
   "sendInquiry": "Nosūtīt",
   "invalidEmailFormat": "Lūdzu, ievadiet derīgu e-pasta adresi",
   "emailCannotReceiveICloud": "Lūdzu, izmantojiet e-pasta adresi, kas nav @icloud.com. Atbildes bieži tiek bloķētas",

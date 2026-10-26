@@ -443,7 +443,7 @@
   "inquiryContent": "Detaljer om din förfrågan",
   "inquiryContentPlaceholder": "Beskriv vad din fråga gäller",
   "debugInfoLabel": "Felsökningsinformation (fylls i automatiskt)",
-  "inquirySent": "Din förfrågan har skickats",
+  "inquirySent": "Ditt meddelande har skickats",
   "sendInquiry": "Skicka",
   "invalidEmailFormat": "Vänligen ange en giltig e-postadress",
   "emailCannotReceiveICloud": "Vänligen använd en annan e-postadress än @icloud.com. Det förekommer ofta blockering.",

@@ -443,7 +443,7 @@
   "inquiryContent": "Yhteydenoton tiedot",
   "inquiryContentPlaceholder": "Kirjoita yhteydenottosi sisältö",
   "debugInfoLabel": "Virheenjäljitystiedot (täytetään automaattisesti)",
-  "inquirySent": "Yhteydenotto lähetetty",
+  "inquirySent": "Yhteydenottosi on lähetetty",
   "sendInquiry": "Lähetä",
   "invalidEmailFormat": "Syötä kelvollinen sähköpostiosoite",
   "emailCannotReceiveICloud": "※Käytä muuta sähköpostiosoitetta kuin @icloud.com. Viestit estetään usein.",

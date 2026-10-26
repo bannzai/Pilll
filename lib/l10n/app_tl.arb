@@ -443,7 +443,7 @@
   "inquiryContent": "Mga detalye ng inyong tanong",
   "inquiryContentPlaceholder": "Pakilagay po ang mga detalye ng inyong katanungan",
   "debugInfoLabel": "Impormasyon sa paghanap ng error (awtomatikong pinunan)",
-  "inquirySent": "Naipadala na ang iyong inquiry",
+  "inquirySent": "Naipadala na ang inyong mensahe",
   "sendInquiry": "Ipadala",
   "invalidEmailFormat": "Mangyaring maglagay ng wastong email address",
   "emailCannotReceiveICloud": "Mangyaring gumamit ng email address maliban sa @icloud.com. Maraming na-block na email mula dito.",

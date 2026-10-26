@@ -443,7 +443,7 @@
   "inquiryContent": "Details van je vraag",
   "inquiryContentPlaceholder": "Beschrijf je vraag",
   "debugInfoLabel": "Foutopsporingsgegevens (automatisch ingevuld)",
-  "inquirySent": "Uw vraag is verzonden",
+  "inquirySent": "Je bericht is verzonden",
   "sendInquiry": "Versturen",
   "invalidEmailFormat": "Voer een geldig e-mailadres in",
   "emailCannotReceiveICloud": "Gebruik alstublieft een ander e-mailadres dan @icloud.com. Berichten worden vaak geblokkeerd",

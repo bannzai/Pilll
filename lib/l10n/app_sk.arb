@@ -443,7 +443,7 @@
   "inquiryContent": "Podrobnosti otázky",
   "inquiryContentPlaceholder": "Prosím, opíšte svoju otázku",
   "debugInfoLabel": "Informácie na ladenie (vyplnené automaticky)",
-  "inquirySent": "Žiadosť bola odoslaná",
+  "inquirySent": "Vaša správa bola odoslaná",
   "sendInquiry": "Odoslať",
   "invalidEmailFormat": "Zadajte platnú e-mailovú adresu",
   "emailCannotReceiveICloud": "Používajte prosím e-mailovú adresu inú ako @icloud.com. Odpovede sú často blokované.",

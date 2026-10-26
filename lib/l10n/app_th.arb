@@ -443,7 +443,7 @@
   "inquiryContent": "รายละเอียดการติดต่อ",
   "inquiryContentPlaceholder": "กรุณากรอกรายละเอียดที่ต้องการสอบถาม",
   "debugInfoLabel": "ข้อมูลสำหรับตรวจสอบข้อผิดพลาด (กรอกอัตโนมัติ)",
-  "inquirySent": "ส่งคำถามเรียบร้อยแล้ว",
+  "inquirySent": "ส่งข้อความติดต่อเรียบร้อยแล้วค่ะ",
   "sendInquiry": "ส่ง",
   "invalidEmailFormat": "กรุณากรอกอีเมลที่ถูกต้อง",
   "emailCannotReceiveICloud": "กรุณาใช้ที่อยู่อีเมลอื่นที่ไม่ใช่ @icloud.com เนื่องจากมีปัญหาการบล็อกบ่อยครั้ง",

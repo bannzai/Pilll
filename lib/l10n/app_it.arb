@@ -443,7 +443,7 @@
   "inquiryContent": "Dettagli della richiesta",
   "inquiryContentPlaceholder": "Scrivi i dettagli della tua richiesta",
   "debugInfoLabel": "Informazioni di debug (compilate automaticamente)",
-  "inquirySent": "Richiesta inviata",
+  "inquirySent": "La tua richiesta è stata inviata",
   "sendInquiry": "Invia",
   "invalidEmailFormat": "Inserisci un indirizzo email valido",
   "emailCannotReceiveICloud": "Si prega di utilizzare un indirizzo email diverso da @icloud.com. Le email vengono bloccate frequentemente.",

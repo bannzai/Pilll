@@ -443,7 +443,7 @@
   "inquiryContent": "Detail pertanyaan Anda",
   "inquiryContentPlaceholder": "Tulis detail pertanyaan Anda",
   "debugInfoLabel": "Informasi pemecahan masalah (terisi otomatis)",
-  "inquirySent": "Pertanyaan telah dikirim",
+  "inquirySent": "Pesan Anda telah terkirim",
   "sendInquiry": "Kirim",
   "invalidEmailFormat": "Masukkan alamat email yang valid",
   "emailCannotReceiveICloud": "Harap gunakan alamat email selain @icloud.com. Email sering diblokir",

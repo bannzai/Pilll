@@ -443,7 +443,7 @@
   "inquiryContent": "Megkeresés részletei",
   "inquiryContentPlaceholder": "Írd le, miben segíthetünk",
   "debugInfoLabel": "Hibakeresési adatok (automatikusan kitöltve)",
-  "inquirySent": "Az üzenetet elküldtük",
+  "inquirySent": "Az üzenetedet elküldtük",
   "sendInquiry": "Küldés",
   "invalidEmailFormat": "Kérjük, adjon meg érvényes e-mail címet",
   "emailCannotReceiveICloud": "※Kérjük, ne használjon @icloud.com e-mail címet. A válaszlevelek gyakran blokkolásra kerülnek.",

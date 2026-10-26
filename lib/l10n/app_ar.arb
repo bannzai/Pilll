@@ -443,7 +443,7 @@
   "inquiryContent": "تفاصيل الاستفسار",
   "inquiryContentPlaceholder": "يرجى إدخال تفاصيل استفساركِ",
   "debugInfoLabel": "معلومات تصحيح الأخطاء (تُملأ تلقائيًا)",
-  "inquirySent": "تم إرسال استفسارك",
+  "inquirySent": "تم إرسال استفساركِ",
   "sendInquiry": "إرسال",
   "invalidEmailFormat": "يرجى إدخال عنوان بريد إلكتروني صالح",
   "emailCannotReceiveICloud": "※ يُرجى استخدام عنوان بريد إلكتروني بخلاف @icloud.com. تتكرر حالات حظر الرسائل",

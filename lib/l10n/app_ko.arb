@@ -443,7 +443,7 @@
   "inquiryContent": "문의 내용",
   "inquiryContentPlaceholder": "문의하실 내용을 입력해 주세요",
   "debugInfoLabel": "디버그 정보 (자동 입력)",
-  "inquirySent": "문의가 전송되었습니다",
+  "inquirySent": "문의가 전송되었어요",
   "sendInquiry": "보내기",
   "invalidEmailFormat": "올바른 이메일 주소를 입력해 주세요",
   "emailCannotReceiveICloud": "@icloud.com 이외의 이메일 주소를 사용해 주세요. 차단이 자주 발생하고 있습니다",

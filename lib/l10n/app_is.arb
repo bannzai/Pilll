@@ -443,7 +443,7 @@
   "inquiryContent": "Nánari upplýsingar um fyrirspurnina",
   "inquiryContentPlaceholder": "Skrifaðu hvað fyrirspurnin þín snýst um",
   "debugInfoLabel": "Villuleitarupplýsingar (fyllt út sjálfkrafa)",
-  "inquirySent": "Fyrirspurn send",
+  "inquirySent": "Fyrirspurnin þín hefur verið send",
   "sendInquiry": "Senda",
   "invalidEmailFormat": "Vinsamlegast sláðu inn gilt netfang",
   "emailCannotReceiveICloud": "Vinsamlegast notaðu annað netfang en @icloud.com. Svör berast oft ekki.",

@@ -443,7 +443,7 @@
   "inquiryContent": "Detalles de tu consulta",
   "inquiryContentPlaceholder": "Escribe los detalles de tu consulta",
   "debugInfoLabel": "Información de depuración (completada automáticamente)",
-  "inquirySent": "Consulta enviada",
+  "inquirySent": "Tu consulta se ha enviado",
   "sendInquiry": "Enviar",
   "invalidEmailFormat": "Por favor, introduce una dirección de correo electrónico válida",
   "emailCannotReceiveICloud": "*Por favor, utilice una dirección de correo diferente a @icloud.com, ya que los mensajes suelen ser bloqueados con frecuencia",

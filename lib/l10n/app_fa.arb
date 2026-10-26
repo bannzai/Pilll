@@ -443,7 +443,7 @@
   "inquiryContent": "جزئیات پرسش شما",
   "inquiryContentPlaceholder": "لطفاً جزئیات پرسش خود را بنویسید",
   "debugInfoLabel": "اطلاعات رفع اشکال (به‌طور خودکار تکمیل شده)",
-  "inquirySent": "درخواست ارسال شد",
+  "inquirySent": "پیام شما ارسال شد",
   "sendInquiry": "ارسال",
   "invalidEmailFormat": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
   "emailCannotReceiveICloud": "※ لطفاً از آدرس ایمیلی به جز @icloud.com استفاده کنید. ایمیل‌های پاسخ اغلب مسدود می‌شوند",

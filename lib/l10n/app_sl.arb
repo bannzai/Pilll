@@ -443,7 +443,7 @@
   "inquiryContent": "Podrobnosti vprašanja",
   "inquiryContentPlaceholder": "Prosimo, opišite svoje vprašanje",
   "debugInfoLabel": "Podatki za odpravljanje napak (samodejno izpolnjeno)",
-  "inquirySent": "Vaša poizvedba je bila poslana",
+  "inquirySent": "Vaše sporočilo je bilo poslano",
   "sendInquiry": "Pošlji",
   "invalidEmailFormat": "Vnesite veljaven e-poštni naslov",
   "emailCannotReceiveICloud": "Prosimo, ne uporabljajte e-poštnega naslova @icloud.com. Pogosto prihaja do blokiranja.",

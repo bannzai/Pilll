@@ -443,7 +443,7 @@
   "inquiryContent": "Jūsų užklausos informacija",
   "inquiryContentPlaceholder": "Įrašykite savo užklausos informaciją",
   "debugInfoLabel": "Derinimo informacija (užpildoma automatiškai)",
-  "inquirySent": "Užklausa išsiųsta",
+  "inquirySent": "Jūsų užklausa išsiųsta",
   "sendInquiry": "Siųsti",
   "invalidEmailFormat": "Įveskite galiojantį el. pašto adresą",
   "emailCannotReceiveICloud": "Prašome nenaudoti @icloud.com el. pašto adreso, nes atsakymai dažnai būna blokuojami.",

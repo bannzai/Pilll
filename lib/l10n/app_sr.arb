@@ -443,7 +443,7 @@
   "inquiryContent": "Детаљи Вашег упита",
   "inquiryContentPlaceholder": "Молимо Вас, опишите своје питање",
   "debugInfoLabel": "Информације за отклањање грешака (аутоматски попуњено)",
-  "inquirySent": "Upit je poslat",
+  "inquirySent": "Ваша порука је послата",
   "sendInquiry": "Pošalji",
   "invalidEmailFormat": "Molimo unesite važeću e-mail adresu",
   "emailCannotReceiveICloud": "Молимо користите имејл адресу која није @icloud.com. Порuke се често блокирају.",

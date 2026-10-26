@@ -443,7 +443,7 @@
   "inquiryContent": "Savolingiz tafsilotlari",
   "inquiryContentPlaceholder": "Iltimos, savolingiz tafsilotlarini yozing",
   "debugInfoLabel": "Xatolarni aniqlash maʼlumotlari (avtomatik toʻldirilgan)",
-  "inquirySent": "Murojaat yuborildi",
+  "inquirySent": "Murojaatingiz yuborildi",
   "sendInquiry": "Yuborish",
   "invalidEmailFormat": "Yaroqli elektron pochta manzilini kiriting",
   "emailCannotReceiveICloud": "Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",

@@ -443,7 +443,7 @@
   "inquiryContent": "Nội dung liên hệ",
   "inquiryContentPlaceholder": "Vui lòng nhập nội dung cần liên hệ",
   "debugInfoLabel": "Thông tin gỡ lỗi (được tự động điền)",
-  "inquirySent": "Đã gửi yêu cầu hỗ trợ",
+  "inquirySent": "Đã gửi tin nhắn của bạn",
   "sendInquiry": "Gửi",
   "invalidEmailFormat": "Vui lòng nhập địa chỉ email hợp lệ",
   "emailCannotReceiveICloud": "Vui lòng sử dụng địa chỉ email khác ngoài @icloud.com vì email trả lời thường bị chặn.",

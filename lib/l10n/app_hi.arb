@@ -443,7 +443,7 @@
   "inquiryContent": "आपकी पूछताछ का विवरण",
   "inquiryContentPlaceholder": "कृपया अपनी पूछताछ का विवरण लिखें",
   "debugInfoLabel": "त्रुटि जाँच की जानकारी (अपने आप भरी गई)",
-  "inquirySent": "पूछताछ भेजी गई है",
+  "inquirySent": "आपका संदेश भेज दिया गया है",
   "sendInquiry": "भेजें",
   "invalidEmailFormat": "कृपया एक मान्य ईमेल पता दर्ज करें",
   "emailCannotReceiveICloud": "※कृपया @icloud.com के अलावा अन्य ईमेल पते का उपयोग करें। इस पर ब्लॉकिंग अक्सर हो रही है।",

@@ -443,7 +443,7 @@
   "inquiryContent": "तुमच्या चौकशीचा तपशील",
   "inquiryContentPlaceholder": "कृपया तुमच्या चौकशीचा तपशील लिहा",
   "debugInfoLabel": "त्रुटी शोधण्याची माहिती (आपोआप भरलेली)",
-  "inquirySent": "चौकशी पाठवली",
+  "inquirySent": "तुमचा संदेश पाठवला आहे",
   "sendInquiry": "पाठवा",
   "invalidEmailFormat": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",
   "emailCannotReceiveICloud": "कृपया @icloud.com व्यतिरिक्त ईमेल पत्ता वापरा. वारंवार ब्लॉक होत आहे",

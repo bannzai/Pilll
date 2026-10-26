@@ -443,7 +443,7 @@
   "inquiryContent": "Detaliile solicitării",
   "inquiryContentPlaceholder": "Scrie detaliile întrebării tale",
   "debugInfoLabel": "Informații pentru depanare (completate automat)",
-  "inquirySent": "Solicitarea a fost trimisă",
+  "inquirySent": "Mesajul tău a fost trimis",
   "sendInquiry": "Trimite",
   "invalidEmailFormat": "Vă rugăm să introduceți o adresă de e-mail validă",
   "emailCannotReceiveICloud": "Vă rugăm să utilizați o altă adresă de email decât @icloud.com. Blocările sunt frecvente",
