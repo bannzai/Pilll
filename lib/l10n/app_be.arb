@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Выберыце, калі ласка, апошнюю пігулку, якую прынялі перад тым, як пачаўся перапын",
   "yazFlexRestDurationDaysLabel": "Колькасць дзён перапынку",
   "yazFlexRestDurationDaysValue": "{days} дзён",
-  "yazFlexResting": "На перапынку ў прыёме і яшчэ не аднавіла",
+  "yazFlexResting": "Яшчэ на перапынку, прыём пігулкі не адноўлены",
   "yazFlexRestingDaysLabel": "Які сёння дзень перапынку ў прыёме",
   "yazFlexSkipRestDuration": "Прапусціць увод перыяду перапынку",
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод перыяду перапынку",

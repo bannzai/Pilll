@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Vyberte poslednú tabletku, ktorú ste užili pred prestávkou",
   "yazFlexRestDurationDaysLabel": "Počet dní prestávky",
   "yazFlexRestDurationDaysValue": "{days} dní",
-  "yazFlexResting": "Som v období pauzy a ešte som nezačala znova",
+  "yazFlexResting": "Prestávka stále trvá a užívanie tabletky ešte nebolo obnovené",
   "yazFlexRestingDaysLabel": "Ktorý deň pauzy je dnes",
   "yazFlexSkipRestDuration": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",

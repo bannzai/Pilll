@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Vyberte prosím poslední pilulku užitou před začátkem pauzy",
   "yazFlexRestDurationDaysLabel": "Počet dní pauzy",
   "yazFlexRestDurationDaysValue": "{days} dní",
-  "yazFlexResting": "Jsem v období vysazení a ještě jsem nezačala znovu",
+  "yazFlexResting": "Pauza stále trvá, užívání pilulky ještě nebylo obnoveno",
   "yazFlexRestingDaysLabel": "Kolikátý je dnes den pauzy",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",

@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Ara dönem başlamadan önce aldığınız son hapı seçin",
   "yazFlexRestDurationDaysLabel": "Ara dönem gün sayısı",
   "yazFlexRestDurationDaysValue": "{days} gün",
-  "yazFlexResting": "Ara dönemindeyim ve henüz yeniden başlamadım",
+  "yazFlexResting": "Ara dönem hâlâ sürüyor, hapı almaya henüz yeniden başlamadınız",
   "yazFlexRestingDaysLabel": "Bugün aranın kaçıncı günü",
   "yazFlexSkipRestDuration": "Ara dönem girişini atla",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",

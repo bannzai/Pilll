@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Kies de laatste pil die je vóór de stopweek hebt ingenomen",
   "yazFlexRestDurationDaysLabel": "Aantal dagen stopweek",
   "yazFlexRestDurationDaysValue": "{days} dagen",
-  "yazFlexResting": "Ik ben in mijn stopperiode en nog niet opnieuw begonnen",
+  "yazFlexResting": "Nog in de stopweek en nog niet opnieuw begonnen met de pil",
   "yazFlexRestingDaysLabel": "Welke dag van je stopweek is het vandaag",
   "yazFlexSkipRestDuration": "Invoeren van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogTitle": "Invoer van de stopweek overslaan",

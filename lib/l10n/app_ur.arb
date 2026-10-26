@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "براہِ کرم وقف شروع ہونے سے پہلے لی گئی آخری گولی منتخب کریں",
   "yazFlexRestDurationDaysLabel": "وقف کے دنوں کی تعداد",
   "yazFlexRestDurationDaysValue": "{days} دن",
-  "yazFlexResting": "وقفے کے دوران ہوں اور ابھی دوبارہ شروع نہیں کیا",
+  "yazFlexResting": "ابھی وقف جاری ہے اور گولی لینا دوبارہ شروع نہیں ہوا",
   "yazFlexRestingDaysLabel": "آج وقفے کا کون سا دن ہے",
   "yazFlexSkipRestDuration": "وقفے کی مدت درج کرنا چھوڑ دیں",
   "yazFlexSkipRestDurationDialogTitle": "وقفے کی مدت کا اندراج چھوڑ دیں",

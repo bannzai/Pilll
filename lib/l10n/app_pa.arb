@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "ਵਿਰਾਮ ਸ਼ੁਰੂ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਤੁਸੀਂ ਆਖਰੀ ਵਾਰ ਲਈ ਗੋਲੀ ਚੁਣੋ",
   "yazFlexRestDurationDaysLabel": "ਵਿਰਾਮ ਦੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ",
   "yazFlexRestDurationDaysValue": "{days} ਦਿਨ",
-  "yazFlexResting": "ਵਿਰਾਮ ਦੌਰਾਨ ਹਾਂ ਅਤੇ ਅਜੇ ਮੁੜ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤਾ",
+  "yazFlexResting": "ਹਾਲੇ ਵੀ ਵਿਰਾਮ ਚੱਲ ਰਿਹਾ ਹੈ ਅਤੇ ਗੋਲੀ ਲੈਣੀ ਮੁੜ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ",
   "yazFlexRestingDaysLabel": "ਅੱਜ ਵਿਸ਼ਰਾਮ ਦਾ ਕਿਹੜਾ ਦਿਨ ਹੈ",
   "yazFlexSkipRestDuration": "ਵਿਰਾਮ ਮਿਆਦ ਦਰਜ ਕਰਨਾ ਛੱਡੋ",
   "yazFlexSkipRestDurationDialogTitle": "ਵਿਰਾਮ ਅਵਧੀ ਦੀ ਐਂਟਰੀ ਛੱਡੋ",

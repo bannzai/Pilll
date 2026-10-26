@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Ве молиме, изберете ја последната таблета што сте ја земале пред пауза",
   "yazFlexRestDurationDaysLabel": "Број на денови за пауза",
   "yazFlexRestDurationDaysValue": "{days} дена",
-  "yazFlexResting": "Во период на пауза сум и сè уште не сум продолжила",
+  "yazFlexResting": "Сè уште сте во пауза и не сте продолжиле со земање таблета",
   "yazFlexRestingDaysLabel": "Кој ден од паузата е денес",
   "yazFlexSkipRestDuration": "Прескокни внесување на паузата",
   "yazFlexSkipRestDurationDialogTitle": "Прескокни го внесувањето на паузата",

@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Selecciona a última pílula que tomaches antes do descanso",
   "yazFlexRestDurationDaysLabel": "Días de descanso",
   "yazFlexRestDurationDaysValue": "{days} días",
-  "yazFlexResting": "Estou nun período de descanso e aínda non retomei a toma",
+  "yazFlexResting": "Aínda estás no descanso e non retomaches a pílula",
   "yazFlexRestingDaysLabel": "Que día do descanso é hoxe",
   "yazFlexSkipRestDuration": "Omitir a introdución do período de descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir o rexistro do descanso",

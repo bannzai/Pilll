@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Izberite zadnjo tabletko, ki ste jo vzeli pred premorom",
   "yazFlexRestDurationDaysLabel": "Število dni premora",
   "yazFlexRestDurationDaysValue": "{days} dni",
-  "yazFlexResting": "Sem v premoru in še nisem ponovno začela",
+  "yazFlexResting": "Premor še traja, jemanje tablet pa se še ni nadaljevalo",
   "yazFlexRestingDaysLabel": "Kateri dan premora je danes",
   "yazFlexSkipRestDuration": "Preskoči vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Preskoči vnos premora",

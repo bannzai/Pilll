@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Խնդրում ենք ընտրել վերջին հաբը, որն ընդունել եք մինչև դադար սկսվելը",
   "yazFlexRestDurationDaysLabel": "Դադարի օրերի քանակը",
   "yazFlexRestDurationDaysValue": "{days} օր",
-  "yazFlexResting": "Դադարի շրջանում եմ և դեռ չեմ վերսկսել",
+  "yazFlexResting": "Դեռ դադարի մեջ եք և չեք վերսկսել հաբի ընդունումը",
   "yazFlexRestingDaysLabel": "Այսօր ընդմիջման որերորդ օրն է",
   "yazFlexSkipRestDuration": "Բաց թողնել ընդմիջման շրջանի մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",

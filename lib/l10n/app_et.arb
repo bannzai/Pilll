@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Vali viimane pill, mille võtsid enne pillipausi",
   "yazFlexRestDurationDaysLabel": "Pillipausi päevade arv",
   "yazFlexRestDurationDaysValue": "{days} päeva",
-  "yazFlexResting": "Olen pausiperioodil ega ole veel uuesti alustanud",
+  "yazFlexResting": "Pillipaus veel kestab ja pillide võtmine pole veel alanud",
   "yazFlexRestingDaysLabel": "Mitmes pausipäev täna on",
   "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",

@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "יש לבחור את הגלולה האחרונה שניטלה לפני תחילת ההפסק",
   "yazFlexRestDurationDaysLabel": "מספר ימי ההפסק",
   "yazFlexRestDurationDaysValue": "למשך {days} ימים",
-  "yazFlexResting": "בתקופת הפסקה ועדיין לא חזרתי לקחת",
+  "yazFlexResting": "עדיין בהפסק, בלי לחדש את נטילת הגלולה",
   "yazFlexRestingDaysLabel": "היום הוא היום ה־כמה של ההפסקה",
   "yazFlexSkipRestDuration": "דלגי על הזנת תקופת ההפסקה",
   "yazFlexSkipRestDurationDialogTitle": "לדלג על הזנת תקופת ההפסקה",

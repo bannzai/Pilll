@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Izvēlieties pēdējo tableti, ko lietojāt pirms pārtraukuma",
   "yazFlexRestDurationDaysLabel": "Pārtraukuma dienu skaits",
   "yazFlexRestDurationDaysValue": "{days} dienas",
-  "yazFlexResting": "Esmu pārtraukuma periodā un vēl neesmu atsākusi",
+  "yazFlexResting": "Pārtraukums vēl turpinās, un tablešu lietošana nav atsākta",
   "yazFlexRestingDaysLabel": "Kura šodien ir pārtraukuma diena",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma perioda ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma perioda ievadi",

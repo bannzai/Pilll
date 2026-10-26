@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "વિરામ શરૂ થાય તે પહેલાં તમે છેલ્લે લીધેલી ગોળી પસંદ કરો",
   "yazFlexRestDurationDaysLabel": "વિરામના દિવસોની સંખ્યા",
   "yazFlexRestDurationDaysValue": "{days} દિવસ",
-  "yazFlexResting": "વિરામ દરમિયાન છું અને હજી ફરી શરૂ કર્યું નથી",
+  "yazFlexResting": "હજુ વિરામમાં છો અને ગોળી લેવાનું ફરી શરૂ કર્યું નથી",
   "yazFlexRestingDaysLabel": "આજે વિરામનો કેટલામો દિવસ છે",
   "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",

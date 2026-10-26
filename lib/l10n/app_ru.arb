@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Выберите последнюю таблетку, которую вы приняли перед перерывом",
   "yazFlexRestDurationDaysLabel": "Количество дней перерыва",
   "yazFlexRestDurationDaysValue": "{days} дней",
-  "yazFlexResting": "Сейчас перерыв, и я ещё не возобновила приём",
+  "yazFlexResting": "Перерыв ещё продолжается, приём таблетки не возобновлён",
   "yazFlexRestingDaysLabel": "Какой сегодня день перерыва",
   "yazFlexSkipRestDuration": "Пропустить ввод перерыва",
   "yazFlexSkipRestDurationDialogTitle": "Пропустить ввод периода перерыва",

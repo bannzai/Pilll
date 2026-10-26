@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "বিরতি শুরুর আগে সবশেষে যে পিলটি খেয়েছেন, সেটি বেছে নিন",
   "yazFlexRestDurationDaysLabel": "বিরতির দিনের সংখ্যা",
   "yazFlexRestDurationDaysValue": "{days} দিন",
-  "yazFlexResting": "ওষুধ বিরতিতে আছি, এখনও আবার শুরু করিনি",
+  "yazFlexResting": "এখনও বিরতিতে আছেন, পিল খাওয়া আবার শুরু করেননি",
   "yazFlexRestingDaysLabel": "ওষুধ বন্ধের আজ কততম দিন",
   "yazFlexSkipRestDuration": "ওষুধ বিরতির তথ্য দেওয়া এড়িয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "ওষুধ বিরতির তথ্য লেখা এড়িয়ে যান",

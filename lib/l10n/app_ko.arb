@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "휴약을 시작하기 전에 마지막으로 복용한 알약을 선택해 주세요",
   "yazFlexRestDurationDaysLabel": "휴약 일수",
   "yazFlexRestDurationDaysValue": "{days}일 동안",
-  "yazFlexResting": "휴약 중이며 아직 다시 시작하지 않았어요",
+  "yazFlexResting": "휴약 중이고 아직 복용을 다시 시작하지 않았어요",
   "yazFlexRestingDaysLabel": "휴약한 지 오늘로 며칠째",
   "yazFlexSkipRestDuration": "휴약 입력 건너뛰기",
   "yazFlexSkipRestDurationDialogTitle": "휴약 입력을 건너뛸게요",

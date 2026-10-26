@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Seleziona l’ultima pillola che hai preso prima della pausa",
   "yazFlexRestDurationDaysLabel": "Giorni di pausa",
   "yazFlexRestDurationDaysValue": "{days} giorni",
-  "yazFlexResting": "Sono in pausa e non ho ancora ricominciato",
+  "yazFlexResting": "Sei ancora in pausa e non hai ripreso a prendere la pillola",
   "yazFlexRestingDaysLabel": "A che giorno di pausa sei oggi",
   "yazFlexSkipRestDuration": "Salta l’inserimento della pausa",
   "yazFlexSkipRestDurationDialogTitle": "Salta l’inserimento della pausa",

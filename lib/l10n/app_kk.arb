@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Үзіліс басталғанға дейін қабылдаған соңғы таблетканы таңдаңыз",
   "yazFlexRestDurationDaysLabel": "Үзіліс күндерінің саны",
   "yazFlexRestDurationDaysValue": "{days} күн",
-  "yazFlexResting": "Үзіліс кезеңіндемін және әлі қайта бастаған жоқпын",
+  "yazFlexResting": "Үзіліс әлі жалғасуда, таблетканы қабылдауды қайта бастамадыңыз",
   "yazFlexRestingDaysLabel": "Бүгін үзілістің нешінші күні",
   "yazFlexSkipRestDuration": "Үзіліс кезеңін енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",

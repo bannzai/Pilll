@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Válaszd ki a szünet előtti utolsóként szedett tablettát",
   "yazFlexRestDurationDaysLabel": "A szünet napjainak száma",
   "yazFlexRestDurationDaysValue": "{days} nap",
-  "yazFlexResting": "Szünetet tartok, és még nem kezdtem újra",
+  "yazFlexResting": "Még tart a szünet, és nem kezdted újra a tabletta szedését",
   "yazFlexRestingDaysLabel": "A szünet hányadik napja van ma",
   "yazFlexSkipRestDuration": "A szünet megadásának kihagyása",
   "yazFlexSkipRestDurationDialogTitle": "A szünet megadásának kihagyása",

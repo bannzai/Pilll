@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Zəhmət olmasa, fasilə başlamazdan əvvəl qəbul etdiyiniz son həbi seçin",
   "yazFlexRestDurationDaysLabel": "Fasilə günlərinin sayı",
   "yazFlexRestDurationDaysValue": "{days} gün",
-  "yazFlexResting": "Fasilə dövründəyəm və hələ yenidən başlamamışam",
+  "yazFlexResting": "Fasilə davam edir, həb qəbuluna hələ başlamamısınız",
   "yazFlexRestingDaysLabel": "Fasilədən bu gün neçənci gündür",
   "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",

@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Selecciona l’última píndola que vas prendre abans del descans",
   "yazFlexRestDurationDaysLabel": "Dies de descans",
   "yazFlexRestDurationDaysValue": "{days} dies",
-  "yazFlexResting": "Estic en període de descans i encara no l'he reprès",
+  "yazFlexResting": "Encara ets en el descans i no has reprès la píndola",
   "yazFlexRestingDaysLabel": "Quin dia de descans és avui",
   "yazFlexSkipRestDuration": "Omet la introducció del període de descans",
   "yazFlexSkipRestDurationDialogTitle": "Omet l’entrada del descans",

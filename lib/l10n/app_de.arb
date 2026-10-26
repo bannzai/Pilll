@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Wähle die letzte Pille, die du vor der Einnahmepause genommen hast",
   "yazFlexRestDurationDaysLabel": "Dauer der Einnahmepause in Tagen",
   "yazFlexRestDurationDaysValue": "{days} Tage",
-  "yazFlexResting": "In der Pause und noch nicht wieder begonnen",
+  "yazFlexResting": "Noch in der Einnahmepause und die Pille noch nicht wieder eingenommen",
   "yazFlexRestingDaysLabel": "Der wievielte Tag der Pause ist heute",
   "yazFlexSkipRestDuration": "Eingabe der Pause überspringen",
   "yazFlexSkipRestDurationDialogTitle": "Eingabe der Pause überspringen",

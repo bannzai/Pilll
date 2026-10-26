@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "இடைவேளை தொடங்குவதற்கு முன் கடைசியாக எடுத்த மாத்திரையைத் தேர்ந்தெடுங்கள்",
   "yazFlexRestDurationDaysLabel": "இடைவேளை நாட்களின் எண்ணிக்கை",
   "yazFlexRestDurationDaysValue": "{days} நாட்கள்",
-  "yazFlexResting": "இடைவேளையில் இருக்கிறேன், இன்னும் மீண்டும் தொடங்கவில்லை",
+  "yazFlexResting": "இன்னும் இடைவேளையில் உள்ளீர்கள்; மாத்திரை உட்கொள்வதை மீண்டும் தொடங்கவில்லை",
   "yazFlexRestingDaysLabel": "இன்று இடைவெளியின் எத்தனையாவது நாள்",
   "yazFlexSkipRestDuration": "இடைவேளை காலத்தை உள்ளிடுவது தவிர்க்கவும்",
   "yazFlexSkipRestDurationDialogTitle": "இடைவேளை காலத்தை பதிவு செய்வதைத் தவிர்க்கவும்",

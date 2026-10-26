@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Vælg den sidste p-pille, du tog før din pillepause",
   "yazFlexRestDurationDaysLabel": "Antal dage i pillepausen",
   "yazFlexRestDurationDaysValue": "{days} dage",
-  "yazFlexResting": "Jeg er i pause og er ikke startet igen endnu",
+  "yazFlexResting": "Stadig i pillepause og ikke begyndt på p-pillerne igen",
   "yazFlexRestingDaysLabel": "Hvilken dag i pausen er det i dag",
   "yazFlexSkipRestDuration": "Spring indtastning af pause over",
   "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",

@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Моля, изберете последното хапче, което сте взели преди паузата",
   "yazFlexRestDurationDaysLabel": "Брой дни на паузата",
   "yazFlexRestDurationDaysValue": "{days} дни",
-  "yazFlexResting": "В период на пауза съм и още не съм подновила",
+  "yazFlexResting": "Все още сте в пауза и не сте подновили приема на хапчето",
   "yazFlexRestingDaysLabel": "Кой ден от почивката е днес",
   "yazFlexSkipRestDuration": "Пропуснете въвеждането на почивката",
   "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",

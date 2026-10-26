@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Tanaffus boshlanishidan oldin ichgan oxirgi tabletkangizni tanlang",
   "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",
   "yazFlexRestDurationDaysValue": "{days} kun",
-  "yazFlexResting": "Tanaffus davridaman va hali qayta boshlamadim",
+  "yazFlexResting": "Tanaffus hali davom etmoqda, tabletkani ichishni qayta boshlamagansiz",
   "yazFlexRestingDaysLabel": "Bugun tanaffusning nechinchi kuni",
   "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",

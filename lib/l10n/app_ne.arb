@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "विश्राम सुरु हुनुअघि तपाईंले अन्तिम पटक लिनुभएको चक्की छान्नुहोस्",
   "yazFlexRestDurationDaysLabel": "विश्रामका दिनहरूको संख्या",
   "yazFlexRestDurationDaysValue": "{days} दिन",
-  "yazFlexResting": "विश्राम अवधिमा छु र अझै फेरि सुरु गरेको छैन",
+  "yazFlexResting": "अझै विश्राममा हुनुहुन्छ र चक्की फेरि लिन सुरु गर्नुभएको छैन",
   "yazFlexRestingDaysLabel": "आज विश्रामको कतिौँ दिन हो",
   "yazFlexSkipRestDuration": "ब्रेक अवधि प्रविष्ट नगरी अघि बढ्नुहोस्",
   "yazFlexSkipRestDurationDialogTitle": "विश्राम अवधिको प्रविष्टि छोड्नुहोस्",

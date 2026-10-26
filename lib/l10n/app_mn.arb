@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Завсарлага эхлэхээс өмнө хамгийн сүүлд уусан эмээ сонгоно уу",
   "yazFlexRestDurationDaysLabel": "Завсарлагааны өдрийн тоо",
   "yazFlexRestDurationDaysValue": "{days} өдөр",
-  "yazFlexResting": "Завсарлагааны үед байгаа бөгөөд хараахан дахин эхлээгүй байна",
+  "yazFlexResting": "Завсарлага үргэлжилж байгаа бөгөөд эмээ дахин ууж эхлээгүй байна",
   "yazFlexRestingDaysLabel": "Өнөөдөр завсарлагааны хэд дэх өдөр вэ",
   "yazFlexSkipRestDuration": "Завсарлагааны хугацаа оруулахыг алгасах",
   "yazFlexSkipRestDurationDialogTitle": "Завсарлах хугацааны оруулгыг алгасах",

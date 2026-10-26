@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen taukojaksoa",
   "yazFlexRestDurationDaysLabel": "Taukojakson päivien määrä",
   "yazFlexRestDurationDaysValue": "{days} päivää",
-  "yazFlexResting": "Taukojaksolla enkä ole vielä aloittanut uudelleen",
+  "yazFlexResting": "Taukojakso jatkuu, etkä ole vielä aloittanut pillereitä uudelleen",
   "yazFlexRestingDaysLabel": "Monesko taukopäivä tänään on",
   "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",

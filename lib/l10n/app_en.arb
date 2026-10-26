@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Select the last pill you took before your pill break",
   "yazFlexRestDurationDaysLabel": "Pill break duration in days",
   "yazFlexRestDurationDaysValue": "{days} days",
-  "yazFlexResting": "On a break and haven’t restarted yet",
+  "yazFlexResting": "Still on a pill break and haven't resumed taking pills",
   "yazFlexRestingDaysLabel": "Which day of your break is it today?",
   "yazFlexSkipRestDuration": "Skip entering the break period",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",

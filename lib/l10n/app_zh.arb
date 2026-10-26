@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "请选择开始停药前最后服用的那片药",
   "yazFlexRestDurationDaysLabel": "停药天数",
   "yazFlexRestDurationDaysValue": "{days}天",
-  "yazFlexResting": "处于停药期，尚未重新开始服用",
+  "yazFlexResting": "仍在停药期，尚未恢复服药",
   "yazFlexRestingDaysLabel": "今天是停药第几天",
   "yazFlexSkipRestDuration": "跳过输入停药期",
   "yazFlexSkipRestDurationDialogTitle": "跳过停药期录入",

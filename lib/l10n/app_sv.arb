@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Välj det sista pillret du tog före uppehållet",
   "yazFlexRestDurationDaysLabel": "Antal dagar med uppehåll",
   "yazFlexRestDurationDaysValue": "{days} dagar",
-  "yazFlexResting": "Jag är i uppehåll och har inte börjat igen än",
+  "yazFlexResting": "Fortfarande i uppehåll och har inte börjat ta pillren igen",
   "yazFlexRestingDaysLabel": "Vilken dag i uppehållet är det i dag",
   "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",

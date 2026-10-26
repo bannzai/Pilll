@@ -574,7 +574,7 @@
   "yazFlexLastRestDurationNote": "Dewiswch y bilsen olaf a gymerwyd cyn dechrau’r seibiant",
   "yazFlexRestDurationDaysLabel": "Nifer dyddiau'r seibiant",
   "yazFlexRestDurationDaysValue": "am {days} diwrnod",
-  "yazFlexResting": "Ar gyfnod seibiant ac heb ailddechrau eto",
+  "yazFlexResting": "Mae'r seibiant yn parhau, ac nid ydych wedi ailddechrau cymryd y bilsen",
   "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r egwyl yw hi heddiw",
   "yazFlexSkipRestDuration": "Hepgor mewnbynnu'r cyfnod seibiant",
   "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
