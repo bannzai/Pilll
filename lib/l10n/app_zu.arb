@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Ayitholakalanga imininingwane yokuthenga kwangaphambilini. Sicela uhlole i-akhawunti yakho bese uzama futhi.",
   "monthlyPlan": "Uhlelo lwanyanga zonke",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ngenyanga",
-  "lifetimePlan": "Ukuthenga kanye",
+  "lifetimePlan": "Ukuthenga kanye kuphela",
   "lifetimePlanDescription": "Thenga kanye ube nePremium njalo",
   "lifetimePlanSpecialOffer": "Iplan yokuthenga kanye\nIntengo ekhethekile yesikhathi esilinganiselwe",
   "lifetimePlanStandardPrice": "Intengo ejwayelekile",

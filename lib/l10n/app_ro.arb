@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Nu au fost găsite informații despre o achiziție anterioară. Verifică-ți contul și încearcă din nou.",
   "monthlyPlan": "Plan lunar",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/lună",
-  "lifetimePlan": "achiziție unică",
+  "lifetimePlan": "Achiziție unică",
   "lifetimePlanDescription": "Premium pentru totdeauna printr-o singură cumpărare",
   "lifetimePlanSpecialOffer": "Plan pe viață\nPreț special cu timp limitat",
   "lifetimePlanStandardPrice": "Preț obișnuit",

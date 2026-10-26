@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "मागील खरेदीची माहिती सापडली नाही. कृपया तुमचे खाते तपासा आणि पुन्हा प्रयत्न करा.",
   "monthlyPlan": "मासिक प्लॅन",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/महिना",
-  "lifetimePlan": "एकदा खरेदी",
+  "lifetimePlan": "एकदाच खरेदी",
   "lifetimePlanDescription": "एकदा खरेदी करून कायमचे प्रीमियम",
   "lifetimePlanSpecialOffer": "एकदा खरेदी प्लान\nमर्यादित काळासाठी विशेष किंमत",
   "lifetimePlanStandardPrice": "नियमित किंमत",

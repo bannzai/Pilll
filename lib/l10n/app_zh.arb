@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "未找到之前的购买记录。请检查账号后重试。",
   "monthlyPlan": "月度套餐",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/月",
-  "lifetimePlan": "买断",
+  "lifetimePlan": "一次性购买",
   "lifetimePlanDescription": "一次购买，终身高级版",
   "lifetimePlanSpecialOffer": "终身套餐\n限时特价",
   "lifetimePlanStandardPrice": "原价",

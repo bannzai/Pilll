@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Інформацію про попередню покупку не знайдено. Перевірте свій обліковий запис і спробуйте ще раз.",
   "monthlyPlan": "Місячний план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/міс.",
-  "lifetimePlan": "одноразова покупка",
+  "lifetimePlan": "Одноразова покупка",
   "lifetimePlanDescription": "Одна покупка — преміум назавжди",
   "lifetimePlanSpecialOffer": "Пожиттєвий план\nОбмежена за часом спеціальна ціна",
   "lifetimePlanStandardPrice": "звичайна ціна",

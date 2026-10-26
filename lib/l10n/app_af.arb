@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Geen vorige aankoop is gevind nie. Maak asseblief seker jy gebruik die regte rekening en probeer weer.",
   "monthlyPlan": "Maandelikse plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",
-  "lifetimePlan": "Eenmalige koop",
+  "lifetimePlan": "Eenmalige aankoop",
   "lifetimePlanDescription": "Premium vir altyd met een enkele aankoop",
   "lifetimePlanSpecialOffer": "Lewenslange plan\nBeperkte tyd spesiale prys",
   "lifetimePlanStandardPrice": "Normale prys",

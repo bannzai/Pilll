@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "మునుపటి కొనుగోలు వివరాలు కనుగొనబడలేదు. దయచేసి మీ ఖాతాను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
   "monthlyPlan": "నెలవారీ ప్లాన్",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/నెల",
-  "lifetimePlan": "లైఫ్ టైమ్",
+  "lifetimePlan": "ఒకేసారి కొనుగోలు",
   "lifetimePlanDescription": "ఒకసారి కొనుగోలుతో శాశ్వత ప్రీమియం",
   "lifetimePlanSpecialOffer": "లైఫ్‌టైమ్ ప్లాన్\nపరిమిత కాల ప్రత్యేక ధర",
   "lifetimePlanStandardPrice": "సాధారణ ధర",

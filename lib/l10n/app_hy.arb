@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Նախորդ գնման մասին տեղեկություն չի գտնվել։ Խնդրում ենք ստուգել Ձեր հաշիվը և կրկին փորձել։",
   "monthlyPlan": "Ամսական պլան",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ամիս",
-  "lifetimePlan": "մեկանգամյա գնում",
+  "lifetimePlan": "Մեկանգամյա գնում",
   "lifetimePlanDescription": "Մեկ գնումով՝ ընդմիշտ պրեմիում",
   "lifetimePlanSpecialOffer": "Մշտական պլան\nԺամանակավոր հատուկ գին",
   "lifetimePlanStandardPrice": "սովորական գին",

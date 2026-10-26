@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "រកមិនឃើញព័ត៌មានអំពីការទិញពីមុនទេ។ សូមពិនិត្យគណនីរបស់អ្នក ហើយព្យាយាមម្តងទៀត។",
   "monthlyPlan": "គម្រោងប្រចាំខែ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ខែ",
-  "lifetimePlan": "ការទិញម្តង",
+  "lifetimePlan": "ការទិញតែម្តង",
   "lifetimePlanDescription": "ទិញម្តង ប្រេមៀមរហូត",
   "lifetimePlanSpecialOffer": "ផែនការទិញម្តង តម្លៃពិសេសរយៈពេលកំណត់",
   "lifetimePlanStandardPrice": "តម្លៃធម្មតា",

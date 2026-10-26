@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Aiempaa ostosta ei löytynyt. Tarkista tilisi ja yritä uudelleen.",
   "monthlyPlan": "Kuukausitilaus",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kk",
-  "lifetimePlan": "Kertaosto",
+  "lifetimePlan": "Kertaostos",
   "lifetimePlanDescription": "Premium ikuisesti yhdellä ostoksella",
   "lifetimePlanSpecialOffer": "Elinaikainen suunnitelma\nRajoitetun ajan erikoishinta",
   "lifetimePlanStandardPrice": "Normaali hinta",

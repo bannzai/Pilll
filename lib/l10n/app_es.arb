@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "No se encontró información de una compra anterior. Comprueba tu cuenta y vuelve a intentarlo.",
   "monthlyPlan": "Plan mensual",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mes",
-  "lifetimePlan": "compra única",
+  "lifetimePlan": "Compra única",
   "lifetimePlanDescription": "Premium de por vida con una compra",
   "lifetimePlanSpecialOffer": "Plan de por vida\nPrecio especial por tiempo limitado",
   "lifetimePlanStandardPrice": "Precio normal",

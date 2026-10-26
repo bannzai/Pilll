@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Nuk u gjetën të dhëna për një blerje të mëparshme. Ju lutemi, kontrolloni llogarinë tuaj dhe provoni përsëri.",
   "monthlyPlan": "Plani mujor",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/muaj",
-  "lifetimePlan": "Blerje e vetme",
+  "lifetimePlan": "Blerje njëherëshe",
   "lifetimePlanDescription": "Premium përgjithmonë me një blerje të vetme",
   "lifetimePlanSpecialOffer": "Plani një herë\nÇmim special me kohë të kufizuar",
   "lifetimePlanStandardPrice": "Çmimi normal",

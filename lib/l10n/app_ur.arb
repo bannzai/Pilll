@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "پچھلی خریداری کی معلومات نہیں ملیں۔ براہِ کرم اپنا اکاؤنٹ چیک کریں اور دوبارہ کوشش کریں۔",
   "monthlyPlan": "ماہانہ پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماہ",
-  "lifetimePlan": "ایک بار خرید",
+  "lifetimePlan": "ایک بار کی خریداری",
   "lifetimePlanDescription": "ایک بار خریدیں، ہمیشہ کے لیے پریمیم",
   "lifetimePlanSpecialOffer": "ایک بار کی خریداری کا پلان\nمحدود وقت کی خصوصی قیمت",
   "lifetimePlanStandardPrice": "باقاعدہ قیمت",

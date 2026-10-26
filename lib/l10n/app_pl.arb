@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Nie znaleziono informacji o wcześniejszym zakupie. Sprawdź swoje konto i spróbuj ponownie.",
   "monthlyPlan": "Plan miesięczny",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/miesiąc",
-  "lifetimePlan": "Jednorazowy zakup",
+  "lifetimePlan": "Zakup jednorazowy",
   "lifetimePlanDescription": "Jednorazowy zakup, premium na zawsze",
   "lifetimePlanSpecialOffer": "Plan dożywotni - specjalna cena przez ograniczony czas",
   "lifetimePlanStandardPrice": "Cena regularna",

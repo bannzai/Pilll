@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Информация о предыдущей покупке не найдена. Проверьте свой аккаунт и попробуйте ещё раз.",
   "monthlyPlan": "Месячный план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/мес.",
-  "lifetimePlan": "одноразовая покупка",
+  "lifetimePlan": "Разовая покупка",
   "lifetimePlanDescription": "Премиум навсегда за разовый платеж",
   "lifetimePlanSpecialOffer": "План пожизненного доступа\nСпециальная цена на ограниченное время",
   "lifetimePlanStandardPrice": "Обычная цена",

@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "আগের কেনাকাটার তথ্য পাওয়া যায়নি। অনুগ্রহ করে আপনার অ্যাকাউন্ট যাচাই করে আবার চেষ্টা করুন।",
   "monthlyPlan": "মাসিক প্ল্যান",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/মাস",
-  "lifetimePlan": "একবার কিনুন",
+  "lifetimePlan": "একবার কিনলেই ব্যবহার করা যাবে",
   "lifetimePlanDescription": "একবার কিনলেই আজীবন প্রিমিয়াম",
   "lifetimePlanSpecialOffer": "এককালীন কেনা প্ল্যান\nসীমিত সময়ের বিশেষ দাম",
   "lifetimePlanStandardPrice": "সাধারণ মূল্য",

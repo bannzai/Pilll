@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "የቀድሞ ግዢ መረጃ አልተገኘም። እባክዎ መለያዎን ያረጋግጡና እንደገና ይሞክሩ።",
   "monthlyPlan": "ወርሃዊ ዕቅድ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ወር",
-  "lifetimePlan": "አንድ ጊዜ ክፍያ",
+  "lifetimePlan": "አንድ ጊዜ ግዢ",
   "lifetimePlanDescription": "አንዴ ካገዙ ዘለዓለማዊ ፕሪሚየም",
   "lifetimePlanSpecialOffer": "የዕድሜ ዘመን እቅድ\nለተወሰነ ጊዜ ልዩ ዋጋ",
   "lifetimePlanStandardPrice": "መደበኛ ዋጋ",

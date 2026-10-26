@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Ni ddaethpwyd o hyd i wybodaeth am bryniant blaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni.",
   "monthlyPlan": "Cynllun misol",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mis",
-  "lifetimePlan": "pryniant un-tro",
+  "lifetimePlan": "Pryniant unwaith",
   "lifetimePlanDescription": "Un prynu - premiwm am byth",
   "lifetimePlanSpecialOffer": "Cynllun Oes\nPris Arbennig am Gyfnod Cyfyngedig",
   "lifetimePlanStandardPrice": "pris arferol",

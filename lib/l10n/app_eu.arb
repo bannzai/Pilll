@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Ez da aurreko erosketaren informaziorik aurkitu. Egiaztatu kontua eta saiatu berriro.",
   "monthlyPlan": "Hileko plana",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hilabete",
-  "lifetimePlan": "Erosketa bakarra",
+  "lifetimePlan": "Ordainketa bakarreko erosketa",
   "lifetimePlanDescription": "Erosketa batez Premium betirako",
   "lifetimePlanSpecialOffer": "Plan betirako\nDenbora mugatuko prezio berezia",
   "lifetimePlanStandardPrice": "ohiko prezioa",

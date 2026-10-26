@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Maklumat pembelian terdahulu tidak ditemui. Sila semak akaun anda dan cuba lagi.",
   "monthlyPlan": "Pelan bulanan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/bulan",
-  "lifetimePlan": "Pembelian sekali",
+  "lifetimePlan": "Pembelian sekali sahaja",
   "lifetimePlanDescription": "Premium selamanya dengan sekali pembelian",
   "lifetimePlanSpecialOffer": "Pelan Beli Sekali\nHarga Istimewa Masa Terhad",
   "lifetimePlanStandardPrice": "Harga Biasa",

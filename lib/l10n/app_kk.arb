@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Бұрынғы сатып алу туралы ақпарат табылмады. Есептік жазбаңызды тексеріп, қайта көріңіз.",
   "monthlyPlan": "Айлық жоспар",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",
-  "lifetimePlan": "бір рет сатып алу",
+  "lifetimePlan": "Бір реттік сатып алу",
   "lifetimePlanDescription": "Бір сатып алумен мәңгілік премиум",
   "lifetimePlanSpecialOffer": "Мәңгілік жоспар\nУақытша арнайы баға",
   "lifetimePlanStandardPrice": "Әдеттегі баға",

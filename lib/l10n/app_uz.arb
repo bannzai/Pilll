@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Avvalgi xarid haqida maʼlumot topilmadi. Iltimos, hisobingizni tekshirib, qayta urinib koʻring.",
   "monthlyPlan": "Oylik reja",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/oy",
-  "lifetimePlan": "Bir martalik sotib olish",
+  "lifetimePlan": "Bir martalik xarid",
   "lifetimePlanDescription": "Bir marta to'lov - doimiy Premium",
   "lifetimePlanSpecialOffer": "Bir martalik to'lov rejasi\nMuddatli maxsus narx",
   "lifetimePlanStandardPrice": "Oddiy narx",

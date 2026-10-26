@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "წინა შეძენის შესახებ ინფორმაცია ვერ მოიძებნა. გთხოვთ, შეამოწმოთ თქვენი ანგარიში და ხელახლა სცადოთ.",
   "monthlyPlan": "თვიური გეგმა",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/თვე",
-  "lifetimePlan": "ერთჯერადი შესყიდვა",
+  "lifetimePlan": "ერთჯერადი შეძენა",
   "lifetimePlanDescription": "ერთჯერადი შეძენა - სამუდამო პრემიუმი",
   "lifetimePlanSpecialOffer": "ერთჯერადი გეგმა\nდროებითი სპეციალური ფასი",
   "lifetimePlanStandardPrice": "ჩვეულებრივი ფასი",

@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Əvvəlki alış məlumatı tapılmadı. Zəhmət olmasa, hesabınızı yoxlayıb yenidən cəhd edin.",
   "monthlyPlan": "Aylıq plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",
-  "lifetimePlan": "Birdəfəlik satın alma",
+  "lifetimePlan": "Birdəfəlik alış",
   "lifetimePlanDescription": "Bir dəfəlik alışla həmişə Premium",
   "lifetimePlanSpecialOffer": "Həmişəlik Plan\nMəhdud Müddətli Xüsusi Qiymət",
   "lifetimePlanStandardPrice": "Normal qiymət",

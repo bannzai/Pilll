@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Podaci o prethodnoj kupnji nisu pronađeni. Provjerite svoj račun i pokušajte ponovno.",
   "monthlyPlan": "Mjesečni plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mjesec",
-  "lifetimePlan": "jednokratna kupnja",
+  "lifetimePlan": "Jednokratna kupnja",
   "lifetimePlanDescription": "Jedna kupovina za doživotni premium",
   "lifetimePlanSpecialOffer": "Doživotni plan\nPosebna cijena - ograničeno vrijeme",
   "lifetimePlanStandardPrice": "Redovna cijena",

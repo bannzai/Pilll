@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "ယခင်ဝယ်ယူမှု အချက်အလက်ကို မတွေ့ပါ။ ကျေးဇူးပြု၍ အကောင့်ကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။",
   "monthlyPlan": "လစဉ်အစီအစဉ်",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/လ",
-  "lifetimePlan": "တစ်ကြိမ်သာ ဝယ်ယူမှု",
+  "lifetimePlan": "တစ်ကြိမ်တည်း ဝယ်ယူမှု",
   "lifetimePlanDescription": "တစ်ကြိမ်သာဝယ်ယူပြီး အမြဲတမ်းပရီမီယံ",
   "lifetimePlanSpecialOffer": "တစ်သက်တည်း သုံးနိုင်သော အစီအစဥ်\nအချိန်ကန့်သတ် အထူးစျေးနှုန်း",
   "lifetimePlanStandardPrice": "ပုံမှန်စျေးနှုန်း",

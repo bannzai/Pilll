@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "د پخوانۍ پېرودنې معلومات ونه موندل شول. مهرباني وکړئ خپل حساب وګورئ او بیا هڅه وکړئ.",
   "monthlyPlan": "میاشتنی پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/میاشت",
-  "lifetimePlan": "یوځل پیرود",
+  "lifetimePlan": "یو ځل پېرود",
   "lifetimePlanDescription": "د یوځل پیرود سره د تل لپاره پریمیم",
   "lifetimePlanSpecialOffer": "د ژوند پلان\nد محدود وخت ځانګړي بیه",
   "lifetimePlanStandardPrice": "عادي نرخ",

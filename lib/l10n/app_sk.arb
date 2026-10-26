@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Informácie o predchádzajúcom nákupe sa nenašli. Skontrolujte svoj účet a skúste to znova.",
   "monthlyPlan": "Mesačný plán",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mesiac",
-  "lifetimePlan": "jednorazový nákup",
+  "lifetimePlan": "Jednorazový nákup",
   "lifetimePlanDescription": "Jedným nákupom prémium navždy",
   "lifetimePlanSpecialOffer": "Doživotný plán\nČasovo obmedzená špeciálna cena",
   "lifetimePlanStandardPrice": "Bežná cena",

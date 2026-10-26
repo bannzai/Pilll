@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "ಹಿಂದಿನ ಖರೀದಿಯ ಮಾಹಿತಿ ಕಂಡುಬಂದಿಲ್ಲ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "monthlyPlan": "ಮಾಸಿಕ ಯೋಜನೆ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ತಿಂಗಳು",
-  "lifetimePlan": "ಒಂದೇ ಬಾರಿ ಖರೀದಿ",
+  "lifetimePlan": "ಒಮ್ಮೆ ಮಾತ್ರ ಖರೀದಿ",
   "lifetimePlanDescription": "ಒಂದೇ ಖರೀದಿಯಲ್ಲಿ ಶಾಶ್ವತ ಪ್ರೀಮಿಯಂ",
   "lifetimePlanSpecialOffer": "ಜೀವಿತಾವಧಿ ಯೋಜನೆ\nಸೀಮಿತ ಅವಧಿಯ ವಿಶೇಷ ಬೆಲೆ",
   "lifetimePlanStandardPrice": "ನಿಯಮಿತ ಬೆಲೆ",

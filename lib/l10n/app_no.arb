@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Fant ingen informasjon om tidligere kjøp. Sjekk kontoen din og prøv igjen.",
   "monthlyPlan": "Månedsabonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/måned",
-  "lifetimePlan": "engangs kjøp",
+  "lifetimePlan": "Engangskjøp",
   "lifetimePlanDescription": "Premium for alltid med ett kjøp",
   "lifetimePlanSpecialOffer": "Livstidsplan\nTidsbegrenset spesialpris",
   "lifetimePlanStandardPrice": "Vanlig pris",

@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Er zijn geen gegevens over een eerdere aankoop gevonden. Controleer je account en probeer het opnieuw.",
   "monthlyPlan": "Maandabonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",
-  "lifetimePlan": "eenmalige aankoop",
+  "lifetimePlan": "Eenmalige aankoop",
   "lifetimePlanDescription": "Premium voor altijd met één aankoop",
   "lifetimePlanSpecialOffer": "Lifetime plan\nTijdelijke aanbieding",
   "lifetimePlanStandardPrice": "Normale prijs",

@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "पिछली खरीदारी की जानकारी नहीं मिली। कृपया अपना अकाउंट जाँचें और फिर से कोशिश करें।",
   "monthlyPlan": "मासिक प्लान",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/माह",
-  "lifetimePlan": "आजीवन खरीद",
+  "lifetimePlan": "एक बार की खरीदारी",
   "lifetimePlanDescription": "एक बार खरीदें, हमेशा के लिए प्रीमियम",
   "lifetimePlanSpecialOffer": "आजीवन योजना\nसीमित समय विशेष मूल्य",
   "lifetimePlanStandardPrice": "सामान्य मूल्य",

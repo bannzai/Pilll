@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "পূৰ্বৰ ক্ৰয়ৰ তথ্য পোৱা নগ’ল। অনুগ্ৰহ কৰি আপোনাৰ একাউণ্টটো পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
   "monthlyPlan": "মাহিলী পৰিকল্পনা",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/মাহ",
-  "lifetimePlan": "একক ক্ৰয়",
+  "lifetimePlan": "এবাৰতে ক্ৰয়",
   "lifetimePlanDescription": "এবাৰ কিনিলেই চিৰকাল প্ৰিমিয়াম",
   "lifetimePlanSpecialOffer": "এককালীন ক্ৰয় পৰিকল্পনা\nসীমিত সময়ৰ বিশেষ মূল্য",
   "lifetimePlanStandardPrice": "সাধাৰণ মূল্য",

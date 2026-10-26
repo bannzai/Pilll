@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Engar upplýsingar um fyrri kaup fundust. Athugaðu reikninginn þinn og reyndu aftur.",
   "monthlyPlan": "Mánaðaráskrift",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuð",
-  "lifetimePlan": "einnkaup",
+  "lifetimePlan": "Eingreiðslukaup",
   "lifetimePlanDescription": "Premium fyrir alltaf með einu kaupi",
   "lifetimePlanSpecialOffer": "Einskiptis áætlun\nTakmarkaður tími sérstakt verð",
   "lifetimePlanStandardPrice": "Venjulegt verð",

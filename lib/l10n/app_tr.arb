@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Önceki satın alma bilgileri bulunamadı. Lütfen hesabınızı kontrol edip tekrar deneyin.",
   "monthlyPlan": "Aylık plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",
-  "lifetimePlan": "Tek Seferlik",
+  "lifetimePlan": "Tek seferlik satın alma",
   "lifetimePlanDescription": "Tek satın alımla kalıcı premium",
   "lifetimePlanSpecialOffer": "Yaşam Boyu Plan\nSınırlı Süreli Özel Fiyat",
   "lifetimePlanStandardPrice": "Normal Fiyat",

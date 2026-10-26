@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "לא נמצא מידע על רכישה קודמת. כדאי לבדוק את החשבון ולנסות שוב.",
   "monthlyPlan": "תוכנית חודשית",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/חודש",
-  "lifetimePlan": "רכישה חד-פעמית",
+  "lifetimePlan": "רכישה חד־פעמית",
   "lifetimePlanDescription": "פרמיום לכל החיים ברכישה אחת",
   "lifetimePlanSpecialOffer": "תוכנית לכל החיים במחיר מיוחד לזמן מוגבל",
   "lifetimePlanStandardPrice": "מחיר רגיל",

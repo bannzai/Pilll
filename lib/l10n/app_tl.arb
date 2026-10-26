@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Walang nakitang impormasyon tungkol sa dati ninyong pagbili. Pakisuri po ang inyong account at subukang muli.",
   "monthlyPlan": "Buwanang plano",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/buwan",
-  "lifetimePlan": "Isang beses na bayad",
+  "lifetimePlan": "Isang beses na pagbili",
   "lifetimePlanDescription": "Premium habang-buhay sa isang pagbili lang",
   "lifetimePlanSpecialOffer": "Panghabang-buhay na Plano\nLimitadong Panahon na Espesyal na Presyo",
   "lifetimePlanStandardPrice": "Karaniwang Presyo",

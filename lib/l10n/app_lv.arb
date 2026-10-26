@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Informācija par iepriekšēju pirkumu nav atrasta. Lūdzu, pārbaudiet savu kontu un mēģiniet vēlreiz.",
   "monthlyPlan": "Mēneša plāns",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mēn.",
-  "lifetimePlan": "vienreizējs pirkums",
+  "lifetimePlan": "Vienreizējs pirkums",
   "lifetimePlanDescription": "Vienreizējs pirkums - Premium uz visiem laikiem",
   "lifetimePlanSpecialOffer": "Mūža plāns\nIerobežota laika īpašā cena",
   "lifetimePlanStandardPrice": "Parastā cena",

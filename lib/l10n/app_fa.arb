@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "اطلاعاتی از خرید قبلی پیدا نشد. لطفاً حساب خود را بررسی کنید و دوباره تلاش کنید.",
   "monthlyPlan": "طرح ماهانه",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماه",
-  "lifetimePlan": "خرید یکباره",
+  "lifetimePlan": "خرید یک‌باره",
   "lifetimePlanDescription": "یکبار خرید، پریمیوم مادام‌العمر",
   "lifetimePlanSpecialOffer": "طرح مادام‌العمر\nقیمت ویژه محدودالمدت",
   "lifetimePlanStandardPrice": "قیمت معمولی",

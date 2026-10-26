@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "અગાઉની ખરીદીની માહિતી મળી નથી. કૃપા કરીને તમારું ખાતું તપાસો અને ફરી પ્રયાસ કરો.",
   "monthlyPlan": "માસિક પ્લાન",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/મહિનો",
-  "lifetimePlan": "કાયમી ખરીદી",
+  "lifetimePlan": "એક વખતની ખરીદી",
   "lifetimePlanDescription": "એક જ ખરીદીમાં કાયમી પ્રીમિયમ",
   "lifetimePlanSpecialOffer": "એકવારનું ખરીદી પ્લાન\nમર્યાદિત સમય વિશેષ કિંમત",
   "lifetimePlanStandardPrice": "સામાન્ય કિંમત",

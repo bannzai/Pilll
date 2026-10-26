@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "ਪਿਛਲੀ ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਖਾਤਾ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "monthlyPlan": "ਮਹੀਨਾਵਾਰ ਪਲਾਨ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ਮਹੀਨਾ",
-  "lifetimePlan": "ਇੱਕ ਵਾਰੀ ਖਰੀਦਦਾਰੀ",
+  "lifetimePlan": "ਇੱਕ ਵਾਰ ਦੀ ਖਰੀਦ",
   "lifetimePlanDescription": "ਇੱਕ ਵਾਰ ਖਰੀਦੋ, ਹਮੇਸ਼ਾ ਪ੍ਰੀਮੀਅਮ",
   "lifetimePlanSpecialOffer": "ਲਾਈਫਟਾਈਮ ਪਲਾਨ\nਸੀਮਿਤ ਸਮੇਂ ਵਿਸ਼ੇਸ਼ ਕੀਮਤ",
   "lifetimePlanStandardPrice": "ਆਮ ਕੀਮਤ",

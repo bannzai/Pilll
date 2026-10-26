@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "لم يُعثر على معلومات شراء سابقة. يُرجى التحقق من الحساب ثم المحاولة مرة أخرى.",
   "monthlyPlan": "الخطة الشهرية",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/شهر",
-  "lifetimePlan": "شراء مرة واحدة",
+  "lifetimePlan": "شراء لمرة واحدة",
   "lifetimePlanDescription": "شراء مرة واحدة، بريميوم مدى الحياة",
   "lifetimePlanSpecialOffer": "خطة الشراء الدائمة\nسعر خاص لفترة محدودة",
   "lifetimePlanStandardPrice": "السعر العادي",

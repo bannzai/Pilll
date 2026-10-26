@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Non sono state trovate informazioni su acquisti precedenti. Controlla il tuo account e riprova.",
   "monthlyPlan": "Piano mensile",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mese",
-  "lifetimePlan": "acquisto unico",
+  "lifetimePlan": "Acquisto una tantum",
   "lifetimePlanDescription": "Premium per sempre con un solo acquisto",
   "lifetimePlanSpecialOffer": "Piano una tantum\nPrezzo speciale a tempo limitato",
   "lifetimePlanStandardPrice": "Prezzo normale",

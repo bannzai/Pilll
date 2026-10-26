@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "Varasema ostu andmeid ei leitud. Kontrolli oma kontot ja proovi uuesti.",
   "monthlyPlan": "Kuuplaan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kuu",
-  "lifetimePlan": "ühekordne ost",
+  "lifetimePlan": "Ühekordne ost",
   "lifetimePlanDescription": "Premium igaveseks ühe ostuga",
   "lifetimePlanSpecialOffer": "Eluaegne plaan\nPiiratud aja eripakkumine",
   "lifetimePlanStandardPrice": "Tavahind",

@@ -194,7 +194,7 @@
   "noPreviousPurchaseInfo": "ପୂର୍ବ କ୍ରୟର ସୂଚନା ମିଳିଲା ନାହିଁ। ଦୟାକରି ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
   "monthlyPlan": "ମାସିକ ଯୋଜନା",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ମାସ",
-  "lifetimePlan": "ଏକଥର କ୍ରୟ",
+  "lifetimePlan": "ଏକକାଳୀନ କ୍ରୟ",
   "lifetimePlanDescription": "ଏକ ଥର କ୍ରୟରେ ସଦାକାଳ ପାଇଁ ପ୍ରିମିୟମ୍",
   "lifetimePlanSpecialOffer": "ଏକବାରିକ କ୍ରୟ ଯୋଜନା\nସୀମିତ ସମୟ ପାଇଁ ବିଶେଷ ମୂଲ୍ୟ",
   "lifetimePlanStandardPrice": "ସାଧାରଣ ମୂଲ୍ୟ",
