@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Nombor mula dan akhir telah diubah",
   "startOfPillDays": "Permulaan hari pengambilan pil",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Hari terakhir pada pek pil sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Tamat Hari Pengambilan",
+  "endOfPillDays": "Akhir hari pengambilan pil",
   "changedToNumber": "Tukar ke nombor",
   "displayMode": "Mod Paparan",
   "dateDisplay": "Paparan Tarikh",

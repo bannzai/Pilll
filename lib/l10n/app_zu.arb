@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Izinombolo zokuqala nezokugcina zishintshiwe",
   "startOfPillDays": "Ukuqala kwezinsuku zokuphuza amaphilisi",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Usuku lokugcina lwephakethe langaphambilini lamaphilisi: usuku lwesi-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Ukuphela kwezinsuku zokuthatha",
+  "endOfPillDays": "Ukuphela kwezinsuku zokuphuza amaphilisi",
   "changedToNumber": "Shintshela enombolweni",
   "displayMode": "Imodi Yokubonisa",
   "dateDisplay": "Ukubonisa usuku",

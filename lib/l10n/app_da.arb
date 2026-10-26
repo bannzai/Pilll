@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Start- og slutnummeret er ændret",
   "startOfPillDays": "Start på p-pilledage",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Sidste dag på den forrige p-pillepakke: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Slutning af pilleperioden",
+  "endOfPillDays": "Slut på dagene med p-piller",
   "changedToNumber": "Skift til nummer",
   "displayMode": "Visningstilstand",
   "dateDisplay": "Datovisning",

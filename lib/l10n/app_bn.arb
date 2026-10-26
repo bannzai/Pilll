@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "শুরুর ও শেষের নম্বর পরিবর্তন করা হয়েছে",
   "startOfPillDays": "পিল খাওয়ার দিনগুলোর শুরু",
   "beforePillSheetGroupSequentialEstimatedEndDay": "আগের পিলের পাতার শেষ দিন: {beforePillSheetGroupSequentialEstimatedEndPillNumber}তম দিন",
-  "endOfPillDays": "সেবনের মেয়াদ শেষ",
+  "endOfPillDays": "পিল খাওয়ার দিনগুলোর শেষ",
   "changedToNumber": "নম্বরে পরিবর্তন",
   "displayMode": "প্রদর্শন মোড",
   "dateDisplay": "তারিখ প্রদর্শন",

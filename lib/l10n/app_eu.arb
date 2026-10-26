@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Hasierako eta amaierako zenbakiak aldatu dira",
   "startOfPillDays": "Pilula hartzeko egunen hasiera",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Aurreko pilula-sortaren azken eguna: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. eguna",
-  "endOfPillDays": "Hartzeko egunen amaiera",
+  "endOfPillDays": "Pilulak hartzeko egunen amaiera",
   "changedToNumber": "zenbakira aldatu",
   "displayMode": "Erakuspen modua",
   "dateDisplay": "Data formatua",

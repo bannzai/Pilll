@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Đã thay đổi số bắt đầu và số kết thúc",
   "startOfPillDays": "Bắt đầu những ngày uống thuốc",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Ngày cuối của vỉ thuốc trước: ngày thứ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Kết thúc chu kỳ uống thuốc",
+  "endOfPillDays": "Kết thúc những ngày uống thuốc",
   "changedToNumber": "Thay đổi thành số",
   "displayMode": "Chế độ hiển thị",
   "dateDisplay": "Hiển thị ngày tháng",

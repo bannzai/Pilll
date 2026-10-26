@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "เปลี่ยนหมายเลขเริ่มต้นและหมายเลขสิ้นสุดแล้วค่ะ",
   "startOfPillDays": "วันเริ่มทานยาเม็ด",
   "beforePillSheetGroupSequentialEstimatedEndDay": "วันสุดท้ายของแผงยาก่อนหน้า: วันที่ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "สิ้นสุดวันรับประทานยา",
+  "endOfPillDays": "สิ้นสุดช่วงวันที่ทานยา",
   "changedToNumber": "เปลี่ยนเป็นหมายเลข",
   "displayMode": "โหมดแสดงผล",
   "dateDisplay": "การแสดงวันที่",

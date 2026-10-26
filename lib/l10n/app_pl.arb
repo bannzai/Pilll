@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Zmieniono numer początkowy i końcowy",
   "startOfPillDays": "Początek dni przyjmowania tabletek",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Ostatni dzień poprzedniego blistra tabletek: dzień {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Koniec okresu przyjmowania",
+  "endOfPillDays": "Koniec dni przyjmowania tabletek",
   "changedToNumber": "Zmień na numer",
   "displayMode": "Tryb wyświetlania",
   "dateDisplay": "Format daty",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Algus- ja lõppnumber on muudetud",
   "startOfPillDays": "Pillivõtmise päevade algus",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Eelmise pillilehe viimane päev: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päev",
-  "endOfPillDays": "Võtmisperioodi lõpp",
+  "endOfPillDays": "Pilli võtmise päevade lõpp",
   "changedToNumber": "Muuda numbriks",
   "displayMode": "Kuvamisrežiim",
   "dateDisplay": "Kuupäeva kuvamine",

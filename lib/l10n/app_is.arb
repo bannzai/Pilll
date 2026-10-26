@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Upphafs- og lokanúmeri hefur verið breytt",
   "startOfPillDays": "Upphaf daga sem pillan er tekin",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Síðasti dagur fyrri pilluspjalds: dagur {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Lok töku tímabils",
+  "endOfPillDays": "Lok daga sem pillan er tekin",
   "changedToNumber": "Breyta í númer",
   "displayMode": "Birtingarhamur",
   "dateDisplay": "Dagsetningasýning",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "အစနှင့်အဆုံး နံပါတ်များကို ပြောင်းလဲပြီးပါပြီ",
   "startOfPillDays": "ဆေးလုံးသောက်ရမည့်ရက်များ၏အစ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ယခင်ဆေးကတ်၏ နောက်ဆုံးနေ့: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ရက်မြောက်နေ့",
-  "endOfPillDays": "ဆေးသောက်ရက်များ အဆုံး",
+  "endOfPillDays": "ဆေးလုံးသောက်ရမည့်ရက်များ၏ နောက်ဆုံးနေ့",
   "changedToNumber": "နံပါတ်သို့ ပြောင်းလဲ",
   "displayMode": "ပြသမှုပုံစံ",
   "dateDisplay": "ရက်စွဲပြပုံ",

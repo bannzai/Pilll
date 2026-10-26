@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Početni i završni brojevi su promijenjeni",
   "startOfPillDays": "Početak dana uzimanja pilula",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Posljednji dan prethodnog pakovanja pilula: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",
-  "endOfPillDays": "Kraj perioda uzimanja",
+  "endOfPillDays": "Kraj dana uzimanja pilula",
   "changedToNumber": "Promijeni u broj",
   "displayMode": "Način prikaza",
   "dateDisplay": "Prikaz datuma",

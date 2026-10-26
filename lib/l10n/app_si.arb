@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "ආරම්භක සහ අවසාන අංක වෙනස් කර ඇත",
   "startOfPillDays": "පෙති ගන්නා දිනවල ආරම්භය",
   "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පෙති පත්‍රයේ අවසන් දිනය: {beforePillSheetGroupSequentialEstimatedEndPillNumber} වන දිනය",
-  "endOfPillDays": "සේවන කාලයේ අවසානය",
+  "endOfPillDays": "පෙති ගන්නා දිනවල අවසානය",
   "changedToNumber": "අංකයට වෙනස් කරන්න",
   "displayMode": "දර්ශන ආකාරය",
   "dateDisplay": "දිනය පෙන්වීම",

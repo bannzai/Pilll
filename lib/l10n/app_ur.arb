@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "ابتدائی اور آخری نمبر تبدیل کر دیے گئے ہیں",
   "startOfPillDays": "گولی لینے کے دنوں کی شروعات",
   "beforePillSheetGroupSequentialEstimatedEndDay": "گولیوں کی پچھلی پتی کا آخری دن: دن {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "استعمال کی مدت کا اختتام",
+  "endOfPillDays": "گولیاں لینے کے دنوں کا اختتام",
   "changedToNumber": "نمبر میں تبدیل کریں",
   "displayMode": "ڈسپلے موڈ",
   "dateDisplay": "تاریخ کی نمایش",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "શરૂઆત અને અંતના નંબર બદલાઈ ગયા છે",
   "startOfPillDays": "ગોળી લેવાના દિવસોની શરૂઆત",
   "beforePillSheetGroupSequentialEstimatedEndDay": "પાછલી ગોળીઓની સ્ટ્રિપનો છેલ્લો દિવસ: દિવસ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "સેવનના દિવસોનો અંત",
+  "endOfPillDays": "ગોળી લેવાના દિવસોનો અંત",
   "changedToNumber": "નંબર બદલો",
   "displayMode": "પ્રદર્શન મોડ",
   "dateDisplay": "તારીખ પ્રદર્શન",

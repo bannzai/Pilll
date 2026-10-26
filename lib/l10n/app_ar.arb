@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "تم تغيير رقمي البداية والنهاية",
   "startOfPillDays": "بداية أيام تناول الحبوب",
   "beforePillSheetGroupSequentialEstimatedEndDay": "آخر يوم في شريط الحبوب السابق: اليوم {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "نهاية فترة تناول الحبوب",
+  "endOfPillDays": "نهاية أيام تناول الحبوب",
   "changedToNumber": "تغيير إلى رقم",
   "displayMode": "وضع العرض",
   "dateDisplay": "عرض التاريخ",

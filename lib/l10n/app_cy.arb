@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Mae'r rhifau dechrau a diwedd wedi'u newid",
   "startOfPillDays": "Dechrau’r dyddiau cymryd y bilsen",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Diwrnod olaf y pecyn pils blaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Diwedd y dyddiau cymryd",
+  "endOfPillDays": "Diwedd y dyddiau cymryd y bilsen",
   "changedToNumber": "Newid i rif",
   "displayMode": "Modd Dangos",
   "dateDisplay": "Arddangos Dyddiad",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Aloitus- ja lopetusnumero muutettiin",
   "startOfPillDays": "Pillereiden ottopäivien alku",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Edellisen pillerilevyn viimeinen päivä: päivä {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Ottajakson loppu",
+  "endOfPillDays": "Pillereiden ottopäivien loppu",
   "changedToNumber": "numeroon",
   "displayMode": "Näyttötila",
   "dateDisplay": "Päivämäärämuoto",

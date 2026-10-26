@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "ಆರಂಭ ಮತ್ತು ಕೊನೆಯ ಸಂಖ್ಯೆಗಳು ಬದಲಾಗಿವೆ",
   "startOfPillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಆರಂಭ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಕೊನೆಯ ದಿನ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ನೇ ದಿನ",
-  "endOfPillDays": "ಸೇವನೆಯ ಅವಧಿಯ ಮುಕ್ತಾಯ",
+  "endOfPillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಅಂತ್ಯ",
   "changedToNumber": "ಸಂಖ್ಯೆಗೆ ಬದಲಿಸಿ",
   "displayMode": "ಪ್ರದರ್ಶನ ಮೋಡ್",
   "dateDisplay": "ದಿನಾಂಕ ಪ್ರದರ್ಶನ",

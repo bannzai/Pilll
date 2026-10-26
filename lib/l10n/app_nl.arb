@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Het begin- en eindnummer zijn gewijzigd",
   "startOfPillDays": "Begin van de dagen waarop je de pil neemt",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Laatste dag van de vorige pillenstrip: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Einde van de innamedagen",
+  "endOfPillDays": "Einde van de dagen waarop je de pil neemt",
   "changedToNumber": "Wijzig naar nummer",
   "displayMode": "Weergavemodus",
   "dateDisplay": "Datumweergave",

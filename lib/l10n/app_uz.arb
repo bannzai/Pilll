@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Boshlanish va tugash raqamlari oʻzgartirildi",
   "startOfPillDays": "Tabletkalarni qabul qilish kunlarining boshlanishi",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Oldingi tabletkalar blisterining oxirgi kuni: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-kun",
-  "endOfPillDays": "Qabul qilish muddatining tugashi",
+  "endOfPillDays": "Tabletka qabul qilish kunlarining oxiri",
   "changedToNumber": "Raqamga o'zgartirish",
   "displayMode": "Ko'rsatish rejimi",
   "dateDisplay": "Sana ko'rinishi",

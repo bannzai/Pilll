@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "ປ່ຽນເລກເລີ່ມຕົ້ນ ແລະ ເລກສິ້ນສຸດແລ້ວ",
   "startOfPillDays": "ມື້ເລີ່ມກິນຢາເມັດ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ມື້ສຸດທ້າຍຂອງແຜງຢາເມັດກ່ອນ: ມື້ທີ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "ສິ້ນສຸດວັນກິນຢາ",
+  "endOfPillDays": "ມື້ສຸດທ້າຍຂອງການກິນຢາເມັດ",
   "changedToNumber": "ປ່ຽນເປັນເລກ",
   "displayMode": "ໂໝດການສະແດງ",
   "dateDisplay": "ການສະແດງວັນທີ",

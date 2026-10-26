@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",
   "startOfPillDays": "ክኒን መውሰድ የሚጀምርበት ቀን",
   "beforePillSheetGroupSequentialEstimatedEndDay": "የቀደመው የክኒን ሉህ የመጨረሻ ቀን፦ ቀን {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "የመዋቢያ ቀናት መጨረሻ",
+  "endOfPillDays": "ክኒን የመውሰድ ቀናት መጨረሻ",
   "changedToNumber": "ወደ ቁጥር መቀየር",
   "displayMode": "የማሳያ ዘዴ",
   "dateDisplay": "ቀን ማሳያ",

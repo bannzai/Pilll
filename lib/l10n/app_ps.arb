@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "د پیل او پای شمېرې بدلې شوې",
   "startOfPillDays": "د ګولۍ اخیستلو د ورځو پیل",
   "beforePillSheetGroupSequentialEstimatedEndDay": "د ګولیو د مخکینۍ پاڼې وروستۍ ورځ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}مه ورځ",
-  "endOfPillDays": "د استعمال ورځو پای",
+  "endOfPillDays": "د ګولیو اخیستلو د ورځو پای",
   "changedToNumber": "ته بدلول",
   "displayMode": "د ښودنې حالت",
   "dateDisplay": "نیټې ښودل",

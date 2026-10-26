@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "D Aafangs- und Ändnummere sind gänderet",
   "startOfPillDays": "Aafang vo de Iinahmtäg",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Letschte Tag vom letschte Pilleblister: Tag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Ändi vo de Iinahmeziit",
+  "endOfPillDays": "Ändi vo de Täg mit Pillene",
   "changedToNumber": "zue Nummer ändere",
   "displayMode": "Darstelligsmodus",
   "dateDisplay": "Datumaazeig",

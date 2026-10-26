@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "सुरुवातीचा आणि शेवटचा क्रमांक बदलला आहे",
   "startOfPillDays": "गोळ्या घेण्याच्या दिवसांची सुरुवात",
   "beforePillSheetGroupSequentialEstimatedEndDay": "मागील गोळ्यांच्या पट्टीचा शेवटचा दिवस: {beforePillSheetGroupSequentialEstimatedEndPillNumber}वा दिवस",
-  "endOfPillDays": "सेवन कालावधी समाप्त",
+  "endOfPillDays": "गोळ्या घेण्याच्या दिवसांचा शेवट",
   "changedToNumber": "क्रमांकात बदला",
   "displayMode": "प्रदर्शन मोड",
   "dateDisplay": "तारीख प्रदर्शन",

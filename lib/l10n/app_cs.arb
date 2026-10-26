@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Počáteční a koncové číslo byly změněny",
   "startOfPillDays": "Začátek dnů užívání pilulek",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Poslední den předchozího platíčka pilulek: den {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Konec období užívání",
+  "endOfPillDays": "Konec dnů užívání pilulek",
   "changedToNumber": "Změnit na čísla",
   "displayMode": "Režim zobrazení",
   "dateDisplay": "Zobrazení data",

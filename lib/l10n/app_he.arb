@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "המספרים ההתחלתי והסופי שונו",
   "startOfPillDays": "תחילת ימי נטילת הגלולה",
   "beforePillSheetGroupSequentialEstimatedEndDay": "היום האחרון בחפיסת הגלולות הקודמת: יום {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "סוף תקופת הנטילה",
+  "endOfPillDays": "סיום ימי נטילת הגלולות",
   "changedToNumber": "שנה למספר",
   "displayMode": "מצב תצוגה",
   "dateDisplay": "תצוגת תאריך",

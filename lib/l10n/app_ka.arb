@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "საწყისი და საბოლოო ნომრები შეიცვალა",
   "startOfPillDays": "აბების მიღების დღეების დასაწყისი",
   "beforePillSheetGroupSequentialEstimatedEndDay": "წინა აბების ფირფიტის ბოლო დღე: დღე {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "მიღების დღეების დასასრული",
+  "endOfPillDays": "აბების მიღების დღეების დასასრული",
   "changedToNumber": "ნომრის შეცვლა",
   "displayMode": "ჩვენების რეჟიმი",
   "dateDisplay": "თარიღის ჩვენება",

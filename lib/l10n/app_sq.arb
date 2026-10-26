@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Numrat e fillimit dhe të fundit u ndryshuan",
   "startOfPillDays": "Fillimi i ditëve të marrjes së pilulës",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Dita e fundit e paketës së mëparshme të pilulave: dita {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Fundi i ditëve të marrjes",
+  "endOfPillDays": "Fundi i ditëve të marrjes së pilulës",
   "changedToNumber": "Ndrysho në numër",
   "displayMode": "Regjimi i shfaqjes",
   "dateDisplay": "Shfaqja e datës",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Počiatočné a koncové číslo boli zmenené",
   "startOfPillDays": "Začiatok dní užívania tabletiek",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Posledný deň predchádzajúceho blistra tabletiek: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. deň",
-  "endOfPillDays": "Koniec obdobia užívania",
+  "endOfPillDays": "Koniec dní užívania tabletiek",
   "changedToNumber": "zmeniť na číslo",
   "displayMode": "Režim zobrazenia",
   "dateDisplay": "Zobrazenie dátumu",

@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Se cambiaron los números de inicio y fin",
   "startOfPillDays": "Inicio de los días de toma de la píldora",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Último día del blíster de píldoras anterior: día {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Final del período de toma",
+  "endOfPillDays": "Fin de los días de toma de la píldora",
   "changedToNumber": "Cambiar al número",
   "displayMode": "Modo de visualización",
   "dateDisplay": "Formato de fecha",

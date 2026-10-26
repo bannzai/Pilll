@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "सुरु र अन्त्यका नम्बर परिवर्तन गरिएका छन्",
   "startOfPillDays": "चक्की खाने दिनहरूको सुरुवात",
   "beforePillSheetGroupSequentialEstimatedEndDay": "अघिल्लो चक्कीको पत्ताको अन्तिम दिन: {beforePillSheetGroupSequentialEstimatedEndPillNumber}औँ दिन",
-  "endOfPillDays": "सेवनका दिनहरूको अन्त्य",
+  "endOfPillDays": "चक्की खाने दिनहरूको अन्त्य",
   "changedToNumber": "नम्बर बदल्नुहोस्",
   "displayMode": "प्रदर्शन मोड",
   "dateDisplay": "मिति प्रदर्शन",

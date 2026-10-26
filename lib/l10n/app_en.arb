@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Start and end numbers changed",
   "startOfPillDays": "Start of pill-taking days",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Last day of the previous pill sheet: day {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "End of pill days",
+  "endOfPillDays": "End of pill-taking days",
   "changedToNumber": "Change to No.",
   "displayMode": "Display Mode",
   "dateDisplay": "Date Display",

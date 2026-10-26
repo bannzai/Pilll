@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "S'han canviat els números inicial i final",
   "startOfPillDays": "Inici dels dies de presa de la píndola",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Últim dia del blíster de píndoles anterior: dia {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Fi del període de presa",
+  "endOfPillDays": "Final dels dies de presa de la píndola",
   "changedToNumber": "Canviar al número",
   "displayMode": "Mode de visualització",
   "dateDisplay": "Format de data",

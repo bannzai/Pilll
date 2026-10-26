@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",
   "startOfPillDays": "Έναρξη ημερών λήψης χαπιού",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Τελευταία ημέρα του προηγούμενου φύλλου χαπιών: ημέρα {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Τέλος ημερών λήψης",
+  "endOfPillDays": "Τέλος των ημερών λήψης του χαπιού",
   "changedToNumber": "Αλλαγή σε αριθμό",
   "displayMode": "Τρόπος εμφάνισης",
   "dateDisplay": "Εμφάνιση ημερομηνίας",

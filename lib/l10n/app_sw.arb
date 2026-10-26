@@ -131,7 +131,7 @@
   "changedStartAndEndNumbers": "Nambari za mwanzo na mwisho zimebadilishwa",
   "startOfPillDays": "Mwanzo wa siku za kumeza vidonge",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Siku ya mwisho ya pakiti iliyotangulia ya vidonge: siku ya {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
-  "endOfPillDays": "Mwisho wa siku za dawa",
+  "endOfPillDays": "Mwisho wa siku za kumeza vidonge",
   "changedToNumber": "badilisha kuwa nambari",
   "displayMode": "Modi ya Onyesho",
   "dateDisplay": "Onyesho la Tarehe",
