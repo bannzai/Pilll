@@ -312,7 +312,7 @@
   "purchaseErrorConfigurationError": "የግዢ መረጃውን ማግኘት አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "ያልታወቀ ስህተት ተፈጥሯል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት አዘምነው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ኮድ፦ {errorCode} ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "ያልታወቀ ስህተት ተከስቷል። የግዢ መረጃን አስቀድሞ ማግኘት አልተቻለም። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorProductDiscountMissingIdentifierError": "የማይታወቅ ስህተት ነው። ወደ ዘመናዊ ስሪት በማሻሻል እንደገና ይሞክሩ። ካልተፈታ ቅንብሮች > ግንኙነት በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት ያዘምኑና እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ኮድ፦ {errorCode} ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnknownNonNativeError": "የማይታወቅ ስህተት ነው። ወደ ቅርብ ስሪት ያዘምኑ እና እንደገና ይሞክሩ። ባይፈታ ቅንብሮች > የመጠይቅ በኩል ያገናኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "የማይታወቅ ስህተት ነው። ወደ ቅርብ ሕትመት አሳድገው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ከቅንብር > የእርዳታ ጥያቄ በማድረግ ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorCustomerInfoError": "የደንበኛ መረጃ ማግኘት አልተሳካም። ትንሽ ቆይተው በድጋሚ ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: ኮድ: {errorCode} {exceptionMessage}:{exceptionDetails}",
