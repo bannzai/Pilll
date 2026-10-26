@@ -327,7 +327,7 @@
   "visitHospital": "ექიმთან გეგმურ შემოწმებაზე მისვლა",
   "receiveNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს 9:00 საათზე",
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგის აღდგენა შეუძლებელია",
-  "deleteSchedule": "განრიგის წაშლა",
+  "deleteSchedule": "გეგმის წაშლა",
   "onlySupportiOS": "მხარდაჭერილია მხოლოდ iOS აპლიკაციაში",
   "healthKitDoesNotSupport": "ჯანმრთელობის დაცვას არ უჭერს მხარს ეს მოწყობილობა, ამიტომ ფუნქციის გამოყენება შეუძლებელია",
   "enableHealthKitFromSettings": "პარამეტრების აპლიდან ჯანმრთელობის მონაცემები ჩართეთ",

@@ -327,7 +327,7 @@
   "visitHospital": "Дарыгерге үзгүлтүксүз көрүнүү",
   "receiveNotificationAt9AM": "Ошол күнү саат 9:00дө билдирме алыңыз",
   "deletedScheduleCannotBeRestored": "Өчүрүлгөн жадыбалды калыбына келтирүү мүмкүн эмес",
-  "deleteSchedule": "Планды өчүрүү",
+  "deleteSchedule": "Планды өчүрүңүз",
   "onlySupportiOS": "iOS колдонмосунда гана жеткиликтүү",
   "healthKitDoesNotSupport": "Ден соолук кызматын колдобогон түзүлүштөрдө бул функцияны пайдалана албайсыз",
   "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Саламаттыкты иштетиңиз",

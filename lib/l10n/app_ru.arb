@@ -327,7 +327,7 @@
   "visitHospital": "Ходить на регулярные осмотры к врачу",
   "receiveNotificationAt9AM": "Получать уведомление в 9:00 того же дня",
   "deletedScheduleCannotBeRestored": "Удалённое расписание нельзя восстановить",
-  "deleteSchedule": "Удалить событие",
+  "deleteSchedule": "Удалить план",
   "onlySupportiOS": "Доступно только для iOS-приложения",
   "healthKitDoesNotSupport": "Эта функция недоступна на устройствах, не поддерживающих HealthKit",
   "enableHealthKitFromSettings": "Включите функцию «Здоровье» в приложении «Настройки»",

@@ -327,7 +327,7 @@
   "visitHospital": "ለቀጣይ የሕክምና ቀጠሮ መሄድ",
   "receiveNotificationAt9AM": "በዚያው ቀን 9:00 ላይ ማሳወቂያ ይቀበሉ",
   "deletedScheduleCannotBeRestored": "የተሰረዘ ቀጠሮ መመለስ አይቻልም",
-  "deleteSchedule": "ቀን ሰቀንን ይሰርዙ",
+  "deleteSchedule": "ቀጠሮን ይሰርዙ",
   "onlySupportiOS": "iOS መተግበሪያ ላይ ብቻ ይገኛል",
   "healthKitDoesNotSupport": "ጤና እንክብካቤን የማይደግፉ መሣሪያዎች ላይ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎን ሴቲንግስ መተግበሪያ ውስጥ ሄልዝኬርን ያንቁ",

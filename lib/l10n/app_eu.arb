@@ -327,7 +327,7 @@
   "visitHospital": "Medikuaren jarraipen-kontsultara joatea",
   "receiveNotificationAt9AM": "Jaso jakinarazpena egun horretan 9:00etan",
   "deletedScheduleCannotBeRestored": "Ezabatutako plana ezin da berreskuratu",
-  "deleteSchedule": "Hitzordua ezabatu",
+  "deleteSchedule": "Ezabatu plana",
   "onlySupportiOS": "iOS aplikaziorako soilik eskuragarria da",
   "healthKitDoesNotSupport": "Osasun-zaintza onartzen ez duten gailuetan ezin da funtzio hau erabili",
   "enableHealthKitFromSettings": "Mesedez, gaitu osasun-zaintza ezarpen aplikaziotik",

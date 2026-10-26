@@ -327,7 +327,7 @@
   "visitHospital": "नियमित तपासणीसाठी डॉक्टरांकडे जाणे",
   "receiveNotificationAt9AM": "त्याच दिवशी 9:00 वाजता सूचना मिळवा",
   "deletedScheduleCannotBeRestored": "हटवलेले वेळापत्रक पुन्हा मिळवता येणार नाही",
-  "deleteSchedule": "वेळापत्रक हटवा",
+  "deleteSchedule": "नियोजन हटवा",
   "onlySupportiOS": "iOS अॅपवरच समर्थित आहे",
   "healthKitDoesNotSupport": "या उपकरणावर हेल्थकेअर सपोर्ट उपलब्ध नसल्यामुळे हे वैशिष्ट्य वापरता येणार नाही",
   "enableHealthKitFromSettings": "कृपया सेटिंग्ज अॅप मधून हेल्थकेअर सक्रिय करा",

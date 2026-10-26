@@ -327,7 +327,7 @@
   "visitHospital": "Дәрігерге жоспарлы тексерілуге бару",
   "receiveNotificationAt9AM": "Сол күні сағат 9:00-де хабарлама алыңыз",
   "deletedScheduleCannotBeRestored": "Жойылған кестені қалпына келтіру мүмкін емес",
-  "deleteSchedule": "Жоспарды жою",
+  "deleteSchedule": "Жоспарды жойыңыз",
   "onlySupportiOS": "Тек iOS қосымшасын ғана қолдайды",
   "healthKitDoesNotSupport": "Денсаулық сақтауды қолдамайтын құрылғыларда бұл функция қолжетімді емес",
   "enableHealthKitFromSettings": "Баптаулар қолданбасынан Денсаулықты қосыңыз",

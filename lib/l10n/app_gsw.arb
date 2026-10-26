@@ -327,7 +327,7 @@
   "visitHospital": "Zur regelmässige Kontroll bim Dokter gah",
   "receiveNotificationAt9AM": "Am gliiche Tag am 9:00 e Meldig übercho",
   "deletedScheduleCannotBeRestored": "En glöschte Termin chasch nümme zruggbringe",
-  "deleteSchedule": "Termin lösche",
+  "deleteSchedule": "Plan lösche",
   "onlySupportiOS": "Isch numme für iOS verfügbar",
   "healthKitDoesNotSupport": "Die Funktion isch uf Gerät ohni HealthKit-Understützig nöd verfüegbar",
   "enableHealthKitFromSettings": "Bitte aktiviere d'Gsundheit i de Iistelligs-App",

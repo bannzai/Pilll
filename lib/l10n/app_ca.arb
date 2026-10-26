@@ -327,7 +327,7 @@
   "visitHospital": "Anar a la visita mèdica de seguiment",
   "receiveNotificationAt9AM": "Rep una notificació a les 9:00 del mateix dia",
   "deletedScheduleCannotBeRestored": "Un cop eliminada, la programació no es pot recuperar",
-  "deleteSchedule": "Eliminar cita",
+  "deleteSchedule": "Eliminar el pla",
   "onlySupportiOS": "Només és compatible amb l'aplicació d'iOS",
   "healthKitDoesNotSupport": "Aquesta funcionalitat no està disponible en dispositius que no suporten l'app Salut",
   "enableHealthKitFromSettings": "Activeu Salut des de l'aplicació de Configuració",

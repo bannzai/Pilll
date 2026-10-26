@@ -327,7 +327,7 @@
   "visitHospital": "להגיע לביקור מעקב רפואי",
   "receiveNotificationAt9AM": "קבלת התראה בשעה 9:00 באותו יום",
   "deletedScheduleCannotBeRestored": "לא ניתן לשחזר לוח זמנים שנמחק",
-  "deleteSchedule": "מחק תור",
+  "deleteSchedule": "מחיקת התוכנית",
   "onlySupportiOS": "זמין רק באפליקציה של iOS",
   "healthKitDoesNotSupport": "תכונה זו אינה זמינה במכשירים שאינם תומכים בבריאות",
   "enableHealthKitFromSettings": "אנא הפעילו את הבריאות באפליקציית ההגדרות",

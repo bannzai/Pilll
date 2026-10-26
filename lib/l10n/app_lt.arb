@@ -327,7 +327,7 @@
   "visitHospital": "Reguliariai lankytis pas gydytoją",
   "receiveNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
   "deletedScheduleCannotBeRestored": "Ištrinto tvarkaraščio atkurti nepavyks",
-  "deleteSchedule": "Ištrinti planą",
+  "deleteSchedule": "Ištrinkite planą",
   "onlySupportiOS": "Palaikoma tik iOS programėlėje",
   "healthKitDoesNotSupport": "Šis funkcionalumas nepasiekiamas įrenginiuose, kurie nepalaiko sveikatos duomenų",
   "enableHealthKitFromSettings": "Prašome įgalinti Sveikatą nustatymų programėlėje",

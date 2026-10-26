@@ -327,7 +327,7 @@
   "visitHospital": "தொடர் மருத்துவப் பரிசோதனைக்குச் செல்லுதல்",
   "receiveNotificationAt9AM": "அதே நாளில் 9:00 மணிக்கு அறிவிப்பைப் பெறுங்கள்",
   "deletedScheduleCannotBeRestored": "நீக்கிய அட்டவணையை மீட்டெடுக்க முடியாது",
-  "deleteSchedule": "அப்பாயின்ட்மெண்ட் நீக்கும்",
+  "deleteSchedule": "அட்டவணையை நீக்குங்கள்",
   "onlySupportiOS": "iOS பயன்பாட்டில் மட்டுமே கிடைக்கும்",
   "healthKitDoesNotSupport": "ஹெல்த்கேர் ஆதரவு இல்லாத சாதனங்களில் பயன்படுத்த முடியாது",
   "enableHealthKitFromSettings": "அமைப்புகள் ஆப்பில் இருந்து ஹெல்த்கேர் இயக்கவும்",

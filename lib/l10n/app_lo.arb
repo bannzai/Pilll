@@ -327,7 +327,7 @@
   "visitHospital": "ໄປພົບແພດຕາມນັດເປັນປະຈຳ",
   "receiveNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນເວລາ 9:00 ໃນມື້ນັ້ນ",
   "deletedScheduleCannotBeRestored": "ບໍ່ສາມາດກູ້ຄືນກຳນົດການທີ່ລຶບແລ້ວໄດ້",
-  "deleteSchedule": "ລົບກຳນົດການ",
+  "deleteSchedule": "ລຶບກຳນົດການ",
   "onlySupportiOS": "ໃຊ້ໄດ້ກັບແອັບ iOS ເທົ່ານັ້ນ",
   "healthKitDoesNotSupport": "ບໍ່ສາມາດໃຊ້ໄດ້ໃນອຸປະກອນທີ່ບໍ່ຮອງຮັບການດູແລສຸຂະພາບ",
   "enableHealthKitFromSettings": "ກະລຸນາເປີດໃຊ້ການດູແລສຸຂະພາບຈາກແອັບການຕັ້ງຄ່າ",

@@ -327,7 +327,7 @@
   "visitHospital": "Эмчийн тогтмол үзлэгт орох",
   "receiveNotificationAt9AM": "Тухайн өдөр 9:00 цагт мэдэгдэл авах",
   "deletedScheduleCannotBeRestored": "Устгасан хуваарийг сэргээх боломжгүй",
-  "deleteSchedule": "Хуваарийг устгах",
+  "deleteSchedule": "Төлөвлөгөөг устгана уу",
   "onlySupportiOS": "Зөвхөн iOS аппд дэмждэг",
   "healthKitDoesNotSupport": "Таны төхөөрөмж эрүүл мэндийн өгөгдлийг дэмждэггүй тул энэ функцийг ашиглах боломжгүй байна",
   "enableHealthKitFromSettings": "Тохиргооны аппаас Эрүүл мэндийг идэвхжүүлнэ үү",

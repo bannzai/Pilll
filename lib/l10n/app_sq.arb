@@ -327,7 +327,7 @@
   "visitHospital": "Të shkoni në kontrolle të rregullta te mjeku",
   "receiveNotificationAt9AM": "Merrni një njoftim në orën 9:00 të po asaj dite",
   "deletedScheduleCannotBeRestored": "Orari i fshirë nuk mund të rikthehet",
-  "deleteSchedule": "Fshij planifikimin",
+  "deleteSchedule": "Fshini planin",
   "onlySupportiOS": "I disponueshëm vetëm për aplikacionin iOS",
   "healthKitDoesNotSupport": "Nuk mund të përdoret në pajisje që nuk mbështesin HealthCare",
   "enableHealthKitFromSettings": "Ju lutemi aktivizoni Shëndetin nga aplikacioni Cilësime",

@@ -327,7 +327,7 @@
   "visitHospital": "নিয়মীয়া চিকিৎসাৰ বাবে যোৱা",
   "receiveNotificationAt9AM": "সেই দিনা 9:00 বজাত জাননী লাভ কৰক",
   "deletedScheduleCannotBeRestored": "মচি পেলোৱা সময়সূচী পুনৰ ঘূৰাই আনিব নোৱাৰি",
-  "deleteSchedule": "সূচী মচি পেলাওক",
+  "deleteSchedule": "সূচী মচক",
   "onlySupportiOS": "কেৱল আইঅ'এছ এপৰ বাবে উপলব্ধ",
   "healthKitDoesNotSupport": "স্বাস্থ্য সেৱা সমৰ্থন নকৰা যন্ত্ৰত এই সুবিধা ব্যৱহাৰ কৰিব নোৱাৰি",
   "enableHealthKitFromSettings": "ছেটিং এপৰ পৰা হেল্থকেয়াৰ সক্ৰিয় কৰক",

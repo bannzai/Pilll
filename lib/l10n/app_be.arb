@@ -327,7 +327,7 @@
   "visitHospital": "Наведваць лекара рэгулярна",
   "receiveNotificationAt9AM": "Атрымліваць апавяшчэнне ў гэты дзень а 9:00",
   "deletedScheduleCannotBeRestored": "Выдалены план нельга аднавіць",
-  "deleteSchedule": "Выдаліць план",
+  "deleteSchedule": "Выдаліць запланаванае",
   "onlySupportiOS": "Даступна толькі ў iOS-прыкладанні",
   "healthKitDoesNotSupport": "Гэтая функцыя недаступная на прыладах, якія не падтрымліваюць Health",
   "enableHealthKitFromSettings": "Калі ласка, уключыце Здароўе ў праграме Налады",

@@ -327,7 +327,7 @@
   "visitHospital": "定期复诊",
   "receiveNotificationAt9AM": "当天 9:00 接收通知",
   "deletedScheduleCannotBeRestored": "已删除的日程无法恢复",
-  "deleteSchedule": "删除日程",
+  "deleteSchedule": "删除计划",
   "onlySupportiOS": "仅支持iOS应用",
   "healthKitDoesNotSupport": "抱歉，您的设备不支持健康数据功能，无法使用此功能",
   "enableHealthKitFromSettings": "请在设置中启用健康功能",

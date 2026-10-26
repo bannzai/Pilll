@@ -327,7 +327,7 @@
   "visitHospital": "Ir à consulta médica de acompanhamento",
   "receiveNotificationAt9AM": "Receba uma notificação às 9:00 do mesmo dia",
   "deletedScheduleCannotBeRestored": "Não é possível restaurar uma programação excluída",
-  "deleteSchedule": "Excluir agendamento",
+  "deleteSchedule": "Excluir programação",
   "onlySupportiOS": "Disponível apenas no aplicativo iOS",
   "healthKitDoesNotSupport": "Esta funcionalidade não está disponível em dispositivos que não suportam o app Saúde",
   "enableHealthKitFromSettings": "Ative a Saúde no app Configurações",

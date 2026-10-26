@@ -327,7 +327,7 @@
   "visitHospital": "പതിവ് പരിശോധനയ്ക്ക് ഡോക്ടറെ കാണുക",
   "receiveNotificationAt9AM": "അതേ ദിവസം 9:00-ന് അറിയിപ്പ് ലഭിക്കുക",
   "deletedScheduleCannotBeRestored": "ഇല്ലാതാക്കിയ ഷെഡ്യൂൾ വീണ്ടെടുക്കാൻ കഴിയില്ല",
-  "deleteSchedule": "ഷെഡ്യൂൾ ഇല്ലാതാക്കുക",
+  "deleteSchedule": "പട്ടിക ഇല്ലാതാക്കുക",
   "onlySupportiOS": "iOS ആപ്പിൽ മാത്രം ലഭ്യമാണ്",
   "healthKitDoesNotSupport": "ഹെൽത്ത്‌കെയർ പിന്തുണയില്ലാത്ത ഉപകരണങ്ങളിൽ ഈ സവിശേഷത ഉപയോഗിക്കാൻ കഴിയില്ല",
   "enableHealthKitFromSettings": "സെറ്റിംഗ്സ് ആപ്പിൽ നിന്ന് ഹെൽത്ത്കെയർ സജീവമാക്കുക",

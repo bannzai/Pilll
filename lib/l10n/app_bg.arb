@@ -327,7 +327,7 @@
   "visitHospital": "Редовен преглед при лекар",
   "receiveNotificationAt9AM": "Получаване на известие в 9:00 ч. на същия ден",
   "deletedScheduleCannotBeRestored": "Изтритият график не може да бъде възстановен",
-  "deleteSchedule": "Изтриване на събитието",
+  "deleteSchedule": "Изтриване на плана",
   "onlySupportiOS": "Достъпно само за iOS приложения",
   "healthKitDoesNotSupport": "Тази функция не е достъпна на устройства, които не поддържат здравеопазване",
   "enableHealthKitFromSettings": "Моля, разрешете достъпа до Здраве от приложението Настройки",

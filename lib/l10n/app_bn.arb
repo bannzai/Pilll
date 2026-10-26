@@ -327,7 +327,7 @@
   "visitHospital": "নিয়মিত চিকিৎসকের কাছে যাওয়া",
   "receiveNotificationAt9AM": "সেদিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচি ফিরিয়ে আনা যাবে না",
-  "deleteSchedule": "সময়সূচি মুছে ফেলুন",
+  "deleteSchedule": "সময়সূচি মুছুন",
   "onlySupportiOS": "শুধুমাত্র iOS অ্যাপে সমর্থিত",
   "healthKitDoesNotSupport": "হেলথকেয়ার সমর্থিত নয় এমন ডিভাইসে এই সুবিধাটি ব্যবহার করা যাবে না",
   "enableHealthKitFromSettings": "সেটিংস অ্যাপ থেকে হেলথকেয়ার সক্রিয় করুন",

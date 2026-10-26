@@ -327,7 +327,7 @@
   "visitHospital": "Rendszeres orvosi ellenőrzésre járni",
   "receiveNotificationAt9AM": "Értesítés aznap 9:00-kor",
   "deletedScheduleCannotBeRestored": "A törölt időbeosztás nem állítható vissza",
-  "deleteSchedule": "Időpont törlése",
+  "deleteSchedule": "Ütemezés törlése",
   "onlySupportiOS": "Csak iOS alkalmazásban elérhető",
   "healthKitDoesNotSupport": "Ez a funkció nem elérhető olyan eszközökön, amelyek nem támogatják az egészségügyi adatokat",
   "enableHealthKitFromSettings": "Kérjük, engedélyezze az Egészség funkciót a Beállítások alkalmazásból",

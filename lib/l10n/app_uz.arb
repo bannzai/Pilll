@@ -327,7 +327,7 @@
   "visitHospital": "Shifokor ko‘rigiga muntazam borish",
   "receiveNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
   "deletedScheduleCannotBeRestored": "Oʻchirilgan jadvalni qayta tiklab boʻlmaydi",
-  "deleteSchedule": "Rejani o'chirish",
+  "deleteSchedule": "Rejani oʻchiring",
   "onlySupportiOS": "Faqat iOS ilovasi qo'llab-quvvatlanadi",
   "healthKitDoesNotSupport": "Sog'liqni saqlash funksiyasini qo'llab-quvvatlamaydigan qurilmalarda bu xizmatdan foydalanib bo'lmaydi",
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasidan Salomatlikni faollashtiring",

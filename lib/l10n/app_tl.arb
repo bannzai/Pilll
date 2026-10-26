@@ -327,7 +327,7 @@
   "visitHospital": "Pumunta sa regular na pagpapatingin",
   "receiveNotificationAt9AM": "Makatanggap ng abiso nang 9:00 sa araw na iyon",
   "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang iskedyul kapag nabura na",
-  "deleteSchedule": "Tanggalin ang iskedyul",
+  "deleteSchedule": "Pakibura ang iskedyul",
   "onlySupportiOS": "Suportado lamang sa iOS na app",
   "healthKitDoesNotSupport": "Hindi magagamit ang feature na ito sa mga device na walang suporta sa HealthCare.",
   "enableHealthKitFromSettings": "Mangyaring paganahin ang Healthcare sa Settings app",

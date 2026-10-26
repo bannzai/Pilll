@@ -327,7 +327,7 @@
   "visitHospital": "Tage til regelmæssig lægekontrol",
   "receiveNotificationAt9AM": "Få en notifikation kl. 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "En slettet aftale kan ikke gendannes",
-  "deleteSchedule": "Slet aftale",
+  "deleteSchedule": "Slet planen",
   "onlySupportiOS": "Understøttes kun på iOS-appen",
   "healthKitDoesNotSupport": "Denne funktion er ikke tilgængelig på enheder, der ikke understøtter Sundhed-appen",
   "enableHealthKitFromSettings": "Slå Sundhed til i Indstillinger-appen",

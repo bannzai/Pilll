@@ -327,7 +327,7 @@
   "visitHospital": "Regulāri apmeklēt ārstu",
   "receiveNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9:00",
   "deletedScheduleCannotBeRestored": "Izdzēstu grafiku nevar atjaunot",
-  "deleteSchedule": "Dzēst plānu",
+  "deleteSchedule": "Dzēsiet plānu",
   "onlySupportiOS": "Pieejams tikai iOS lietotnē",
   "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta veselības datu funkcijas",
   "enableHealthKitFromSettings": "Lūdzu, iespējojiet Veselību iestatījumos",

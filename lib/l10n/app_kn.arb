@@ -327,7 +327,7 @@
   "visitHospital": "ನಿಯಮಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣೆಗೆ ಹೋಗುವುದು",
   "receiveNotificationAt9AM": "ಅದೇ ದಿನ 9:00 ಗಂಟೆಗೆ ಅಧಿಸೂಚನೆ ಪಡೆಯಿರಿ",
   "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ವೇಳಾಪಟ್ಟಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
-  "deleteSchedule": "ವೇಳಾಪಟ್ಟಿ ಅಳಿಸಿ",
+  "deleteSchedule": "ವೇಳಾಪಟ್ಟಿಯನ್ನು ಅಳಿಸಿ",
   "onlySupportiOS": "ಕೇವಲ iOS ಆಪ್‌ನಲ್ಲಿ ಮಾತ್ರ ಲಭ್ಯವಿದೆ",
   "healthKitDoesNotSupport": "ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಬೆಂಬಲಿಸದ ಸಾಧನಗಳಲ್ಲಿ ಬಳಸಲಾಗುವುದಿಲ್ಲ",
   "enableHealthKitFromSettings": "ಸೆಟ್ಟಿಂಗ್ಸ್ ಆ್ಯಪ್‌ನಿಂದ ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",

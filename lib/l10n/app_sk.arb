@@ -327,7 +327,7 @@
   "visitHospital": "Chodiť na pravidelné kontroly k lekárovi",
   "receiveNotificationAt9AM": "Dostávať upozornenie o 9:00 v ten istý deň",
   "deletedScheduleCannotBeRestored": "Odstránený plán nie je možné obnoviť",
-  "deleteSchedule": "Vymazať termín",
+  "deleteSchedule": "Vymažte plán",
   "onlySupportiOS": "Dostupné len pre iOS aplikáciu",
   "healthKitDoesNotSupport": "Táto funkcia nie je dostupná na zariadeniach, ktoré nepodporujú zdravotné údaje",
   "enableHealthKitFromSettings": "Povoľte Zdravie v aplikácii Nastavenia",

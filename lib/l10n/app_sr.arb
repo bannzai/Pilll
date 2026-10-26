@@ -327,7 +327,7 @@
   "visitHospital": "Редовни прегледи код лекара",
   "receiveNotificationAt9AM": "Примајте обавештење у 9:00 истог дана",
   "deletedScheduleCannotBeRestored": "Обрисани распоред није могуће вратити",
-  "deleteSchedule": "Obriši raspored",
+  "deleteSchedule": "Обришите план",
   "onlySupportiOS": "Podržano je samo na iOS aplikaciji",
   "healthKitDoesNotSupport": "Ova funkcija nije dostupna na uređajima koji ne podržavaju zdravstvene podatke",
   "enableHealthKitFromSettings": "Molimo omogućite Zdravstvene podatke u aplikaciji Podešavanja",

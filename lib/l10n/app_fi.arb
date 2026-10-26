@@ -327,7 +327,7 @@
   "visitHospital": "Käydä seurantakäynnillä",
   "receiveNotificationAt9AM": "Saat ilmoituksen samana päivänä klo 9:00",
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",
-  "deleteSchedule": "Poista aikataulu",
+  "deleteSchedule": "Poista suunnitelma",
   "onlySupportiOS": "Tuettu vain iOS-sovelluksessa",
   "healthKitDoesNotSupport": "Ei käytettävissä laitteissa, jotka eivät tue HealthKit-ominaisuutta",
   "enableHealthKitFromSettings": "Ota Terveys käyttöön Asetuksista",

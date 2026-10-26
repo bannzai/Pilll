@@ -327,7 +327,7 @@
   "visitHospital": "د ډاکټر منظمې کتنې ته تلل",
   "receiveNotificationAt9AM": "په هماغه ورځ 9:00 بجې خبرتیا ترلاسه کړئ",
   "deletedScheduleCannotBeRestored": "ړنګ شوی مهالوېش بېرته نه شي راګرځېدلی",
-  "deleteSchedule": "پروګرام ړنګول",
+  "deleteSchedule": "مهالوېش ړنګ کړئ",
   "onlySupportiOS": "یوازې د iOS اپلیکیشن لپاره دستیاب دی",
   "healthKitDoesNotSupport": "دا فعالیت د هغو وسیلو لپاره چې د روغتیا پاملرنې سیسټم ته ملاتړ نه کوي، د کارونې وړ نه دی",
   "enableHealthKitFromSettings": "مهرباني وکړئ د تنظیماتو اپ څخه روغتیایی پاملرنه فعاله کړئ",

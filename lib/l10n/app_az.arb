@@ -327,7 +327,7 @@
   "visitHospital": "Müntəzəm həkim müayinəsinə getmək",
   "receiveNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş alın",
   "deletedScheduleCannotBeRestored": "Silinmiş planı bərpa etmək mümkün deyil",
-  "deleteSchedule": "Planı sil",
+  "deleteSchedule": "Planı silin",
   "onlySupportiOS": "Yalnız iOS tətbiqi üçün mövcuddur",
   "healthKitDoesNotSupport": "Səhiyyə funksiyasını dəstəkləməyən cihazlarda bu xidmətdən istifadə edilə bilməz",
   "enableHealthKitFromSettings": "Ayarlar tətbiqindən Sağlamlığı aktivləşdirin",

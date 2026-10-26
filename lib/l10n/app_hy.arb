@@ -327,7 +327,7 @@
   "visitHospital": "Պարբերաբար բժշկի այցելել",
   "receiveNotificationAt9AM": "Ստացեք ծանուցում նույն օրը՝ ժամը 9:00-ին",
   "deletedScheduleCannotBeRestored": "Ջնջված ժամանակացույցը հնարավոր չէ վերականգնել",
-  "deleteSchedule": "Ծրագիրը ջնջել",
+  "deleteSchedule": "Ջնջել ժամանակացույցը",
   "onlySupportiOS": "Աջակցվում է միայն iOS հավելվածը",
   "healthKitDoesNotSupport": "Առողջապահություն չաջակցող սարքերում այս ֆունկցիան հասանելի չէ",
   "enableHealthKitFromSettings": "Խնդրում ենք Կարգավորումների հավելվածում միացրեք Առողջությունը",

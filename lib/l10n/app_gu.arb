@@ -327,7 +327,7 @@
   "visitHospital": "નિયમિત તબીબી તપાસ માટે જવું",
   "receiveNotificationAt9AM": "તે જ દિવસે 9:00 વાગ્યે સૂચના મેળવો",
   "deletedScheduleCannotBeRestored": "કાઢી નાખેલું સમયપત્રક પાછું મેળવી શકાશે નહીં",
-  "deleteSchedule": "કાર્યક્રમ કાઢશે",
+  "deleteSchedule": "યોજના કાઢી નાખો",
   "onlySupportiOS": "આ માત્ર iOS એપ્લિકેશન માટે ઉપલબ્ધ છે",
   "healthKitDoesNotSupport": "આ ઉપકરણ આરોગ્ય સંભાળને સપોર્ટ કરતું નથી, તેથી આ સુવિધાનો ઉપયોગ કરી શકાતો નથી",
   "enableHealthKitFromSettings": "કૃપા કરીને સેટિંગ્સ એપમાંથી હેલ્થકેર સક્રિય કરો",

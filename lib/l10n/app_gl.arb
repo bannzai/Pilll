@@ -327,7 +327,7 @@
   "visitHospital": "Ir á consulta médica de seguimento",
   "receiveNotificationAt9AM": "Recibe unha notificación ás 9:00 dese día",
   "deletedScheduleCannotBeRestored": "Non se pode recuperar un plan eliminado",
-  "deleteSchedule": "Eliminar a cita",
+  "deleteSchedule": "Eliminar o plan",
   "onlySupportiOS": "Só compatible con iOS",
   "healthKitDoesNotSupport": "Esta función non está dispoñible en dispositivos que non son compatibles coa aplicación de Saúde",
   "enableHealthKitFromSettings": "Activa Saúde dende a aplicación de Configuración",

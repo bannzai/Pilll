@@ -327,7 +327,7 @@
   "visitHospital": "Attend a follow-up appointment",
   "receiveNotificationAt9AM": "Get a notification at 9:00 that day",
   "deletedScheduleCannotBeRestored": "Deleted schedules cannot be restored",
-  "deleteSchedule": "Delete Schedule",
+  "deleteSchedule": "Delete schedule",
   "onlySupportiOS": "This feature is only available on the iOS app",
   "healthKitDoesNotSupport": "This feature is not available on devices that do not support HealthKit",
   "enableHealthKitFromSettings": "Please enable Health in the Settings app",
