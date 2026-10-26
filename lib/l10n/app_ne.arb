@@ -12,7 +12,7 @@
   "userNotFound": "प्रयोगकर्ता फेला परेन",
   "userAlreadyExists": "यो खाता पहिले नै छ",
   "medicationHistory": "सेवन इतिहास",
-  "settings": "सेटिङ",
+  "settings": "सेटिङहरू",
   "account": "खाता",
   "dataTransferRequiresAccount": "मोडेल परिवर्तन वा स्मार्टफोन हराउने जस्ता अवस्थाहरूमा डाटा स्थानान्तरण र पुनर्स्थापनाका लागि खाता दर्ता आवश्यक छ।",
   "pillPremium": "Pilll प्रिमियम",

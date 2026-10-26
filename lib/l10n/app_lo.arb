@@ -12,7 +12,7 @@
   "userNotFound": "ບໍ່ພົບຜູ້ໃຊ້",
   "userAlreadyExists": "ບັນຊີນີ້ມີຢູ່ແລ້ວ",
   "medicationHistory": "ປະຫວັດການກິນຢາ",
-  "settings": "ຕັ້ງຄ່າ",
+  "settings": "ການຕັ້ງຄ່າ",
   "account": "ບັນຊີ",
   "dataTransferRequiresAccount": "ສຳລັບການປ່ຽນເຄື່ອງ ຫຼື ເມື່ອໂທລະສັບຫາຍ, ການລົງທະບຽນບັນຊີແມ່ນຈຳເປັນສຳລັບການໂອນຍ້າຍ ແລະ ກູ້ຄືນຂໍ້ມູນ.",
   "pillPremium": "Pilll ພິເສດ",
