@@ -221,7 +221,7 @@
   "notificationIndex": "දැනුම්දීම {number}",
   "takingRecordFromNotification": "දැනුම්දීමෙන්ම පෙති ගැනීමේ සටහනක් එක් කළ හැකියි",
   "startApp": "යෙදුම භාවිතය අරඹන්න",
-  "loggedInWithProvider": "{accountTypeProviderName} හරහා ලොග් වී ඇත",
+  "loggedInWithProvider": "ඔබ {accountTypeProviderName} හරහා පිවිස ඇත",
   "tellAboutPrescribedSheet": "නිර්දේශිත ඖෂධ පත්‍ර ගැන අපට කියන්න",
   "existingAccountUsers": "දැනටමත් ගිණුමක් ඇත්නම් මෙහියින්",
   "selectTodayPillNumber": "අද ({todayString}) ගත යුතු/ගත් පෙති අංකය ටැප් කරන්න",

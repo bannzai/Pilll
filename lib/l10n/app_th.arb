@@ -221,7 +221,7 @@
   "notificationIndex": "การแจ้งเตือน {number}",
   "takingRecordFromNotification": "เพิ่มบันทึกการทานยาได้จากการแจ้งเตือนโดยตรงค่ะ",
   "startApp": "เริ่มใช้แอป",
-  "loggedInWithProvider": "เข้าสู่ระบบผ่าน{accountTypeProviderName}แล้ว",
+  "loggedInWithProvider": "เข้าสู่ระบบด้วย {accountTypeProviderName} แล้วค่ะ",
   "tellAboutPrescribedSheet": "โปรดแจ้งข้อมูลเกี่ยวกับแผงยาที่แพทย์สั่ง",
   "existingAccountUsers": "หากมีบัญชีแล้ว คลิกที่นี่",
   "selectTodayPillNumber": "วันนี้ ({todayString})\nแตะหมายเลขยาเม็ดที่จะกินหรือกินแล้ว",

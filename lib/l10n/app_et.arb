@@ -221,7 +221,7 @@
   "notificationIndex": "Teavitus {number}",
   "takingRecordFromNotification": "Saad lisada võtmiskirje otse teavitusest",
   "startApp": "Alusta rakenduse kasutamist",
-  "loggedInWithProvider": "Logitud sisse {accountTypeProviderName} kaudu",
+  "loggedInWithProvider": "Oled sisse logitud teenusega {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Palun rääkige määratud pillipakist",
   "existingAccountUsers": "Sul on juba konto?",
   "selectTodayPillNumber": "Puuduta täna ({todayString}) võetava või võetud tableti numbrit",

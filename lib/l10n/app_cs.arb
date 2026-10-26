@@ -221,7 +221,7 @@
   "notificationIndex": "Oznámení {number}",
   "takingRecordFromNotification": "Záznam užití můžete přidat přímo z oznámení",
   "startApp": "Začít používat aplikaci",
-  "loggedInWithProvider": "Přihlášen pomocí {accountTypeProviderName}",
+  "loggedInWithProvider": "Přihlášení přes {accountTypeProviderName} proběhlo úspěšně",
   "tellAboutPrescribedSheet": "Sdělte nám prosím o předepsaném blistrovém balení",
   "existingAccountUsers": "Již máte účet? Klikněte zde",
   "selectTodayPillNumber": "Klepněte na číslo pilulky pro dnes ({todayString})",

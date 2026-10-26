@@ -221,7 +221,7 @@
   "notificationIndex": "Varsel {number}",
   "takingRecordFromNotification": "Du kan oppdatere pilleloggen rett fra varselet",
   "startApp": "Begynn å bruke appen",
-  "loggedInWithProvider": "Logget inn med {accountTypeProviderName}",
+  "loggedInWithProvider": "Du er logget inn med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortell oss om den utskrevne\npillepakken",
   "existingAccountUsers": "Har du allerede en konto? Logg inn her",
   "selectTodayPillNumber": "I dag ({todayString})\nTrykk på nummeret til pillen du skal ta eller har tatt",

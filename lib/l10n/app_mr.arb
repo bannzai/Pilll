@@ -221,7 +221,7 @@
   "notificationIndex": "सूचना {number}",
   "takingRecordFromNotification": "तुम्ही सूचनेतूनच सेवन नोंद करू शकता",
   "startApp": "अ‍ॅप वापरायला सुरुवात करा",
-  "loggedInWithProvider": "{accountTypeProviderName} वापरून लॉगिन केले",
+  "loggedInWithProvider": "तुम्ही {accountTypeProviderName} वापरून लॉग इन केले आहे",
   "tellAboutPrescribedSheet": "निर्धारित गोळी पट्टी बद्दल माहिती द्या",
   "existingAccountUsers": "आधीपासूनच खाते आहे? येथे",
   "selectTodayPillNumber": "आज ({todayString})\nघेण्यासाठी किंवा घेतलेल्या गोळीचा क्रमांक टॅप करा",

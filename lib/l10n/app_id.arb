@@ -221,7 +221,7 @@
   "notificationIndex": "Notifikasi {number}",
   "takingRecordFromNotification": "Anda bisa menambahkan catatan minum pil langsung dari notifikasi",
   "startApp": "Mulai gunakan aplikasi",
-  "loggedInWithProvider": "Berhasil masuk dengan {accountTypeProviderName}",
+  "loggedInWithProvider": "Anda berhasil masuk dengan {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Mohon ceritakan tentang kemasan pil yang diresepkan",
   "existingAccountUsers": "Sudah punya akun? Masuk di sini",
   "selectTodayPillNumber": "Ketuk nomor pil hari ini ({todayString})",

@@ -221,7 +221,7 @@
   "notificationIndex": "Kennisgewing {number}",
   "takingRecordFromNotification": "Jy kan jou innamerekord direk vanuit die kennisgewing bywerk",
   "startApp": "Begin die app gebruik",
-  "loggedInWithProvider": "Aangemeld met {accountTypeProviderName}",
+  "loggedInWithProvider": "Jy is met {accountTypeProviderName} aangemeld",
   "tellAboutPrescribedSheet": "Vertel ons asseblief oor\ndie voorgeskrewe pillefoelie",
   "existingAccountUsers": "Het jy reeds 'n rekening? Klik hier",
   "selectTodayPillNumber": "Vandag({todayString})\nTik die nommer van die pil wat jy gaan neem of al geneem het",

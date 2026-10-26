@@ -221,7 +221,7 @@
   "notificationIndex": "Abiso {number}",
   "takingRecordFromNotification": "Maaari kayong magdagdag sa tala ng pag-inom nang direkta mula sa abiso",
   "startApp": "Simulan na po ninyong gamitin ang app",
-  "loggedInWithProvider": "Naka-login na gamit ang {accountTypeProviderName}",
+  "loggedInWithProvider": "Naka-log in na po kayo gamit ang {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pakikwento mo sa amin ang tungkol sa inireresetang sheet",
   "existingAccountUsers": "May account ka na? Mag-log in dito",
   "selectTodayPillNumber": "I-tap ang numero ng pill na iiinom o nainom ngayon ({todayString})",

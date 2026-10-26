@@ -221,7 +221,7 @@
   "notificationIndex": "Notifikation {number}",
   "takingRecordFromNotification": "Du kan opdatere din pilleregistrering direkte fra notifikationen",
   "startApp": "Begynd at bruge appen",
-  "loggedInWithProvider": "Du har logget ind med {accountTypeProviderName}",
+  "loggedInWithProvider": "Du er logget ind med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortæl os om din ordinerede pillepakke",
   "existingAccountUsers": "Har du allerede en konto? Log ind her",
   "selectTodayPillNumber": "I dag ({todayString})\nTryk på nummeret for den pille, du skal tage eller har taget",

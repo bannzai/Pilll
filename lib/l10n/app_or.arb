@@ -221,7 +221,7 @@
   "notificationIndex": "ସୂଚନା {number}",
   "takingRecordFromNotification": "ଆପଣ ବିଜ୍ଞପ୍ତିରୁ ସିଧାସଳଖ ସେବନ ରେକର୍ଡ ଯୋଡ଼ିପାରିବେ",
   "startApp": "ଆପ୍‌ ବ୍ୟବହାର ଆରମ୍ଭ କରନ୍ତୁ",
-  "loggedInWithProvider": "{accountTypeProviderName}ରେ ଲଗିନ୍ ହୋଇଛି",
+  "loggedInWithProvider": "ଆପଣ {accountTypeProviderName} ମାଧ୍ୟମରେ ଲଗ୍ ଇନ୍ କରିଛନ୍ତି",
   "tellAboutPrescribedSheet": "ଦିଆଯାଇଥିବା ଶୀଟ୍ ବିଷୟରେ କୁହନ୍ତୁ",
   "existingAccountUsers": "ଆଗରୁ ଆକାଉଣ୍ଟ ଥିବା ବ୍ୟକ୍ତିମାନେ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ",
   "selectTodayPillNumber": "ଆଜି ({todayString}) ଖାଇବାକୁ/ଖାଇଥିବା ପିଲର ନମ୍ବର ଟ୍ୟାପ୍ କରନ୍ତୁ",

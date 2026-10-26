@@ -221,7 +221,7 @@
   "notificationIndex": "Notificação {number}",
   "takingRecordFromNotification": "Você pode atualizar o registro de uso direto pela notificação",
   "startApp": "Comece a usar o aplicativo",
-  "loggedInWithProvider": "Login realizado com {accountTypeProviderName}",
+  "loggedInWithProvider": "Você entrou com {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Conte-nos sobre a cartela prescrita",
   "existingAccountUsers": "Já tem uma conta? Entre aqui",
   "selectTodayPillNumber": "Hoje ({todayString})\nToque no número do comprimido que você deve tomar ou já tomou",

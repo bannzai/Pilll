@@ -221,7 +221,7 @@
   "notificationIndex": "Isaziso {number}",
   "takingRecordFromNotification": "Ungakwazi ukwengeza ku-rekhodi lokuphuza amaphilisi ngokuqondile esazisweni",
   "startApp": "Sicela uqale ukusebenzisa uhlelo lokusebenza",
-  "loggedInWithProvider": "Ungenile ngo{accountTypeProviderName}",
+  "loggedInWithProvider": "Ungene ngemvume usebenzisa {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sitshele mayelana neshidi lezidakamizwa ezikunikezwe udokotela",
   "existingAccountUsers": "Senayo i-akhawunti? Chofoza lapha",
   "selectTodayPillNumber": "Thepha inombolo yepilisi ozoyiphuza noma osuyiphuzile namuhla ({todayString})",

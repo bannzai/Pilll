@@ -221,7 +221,7 @@
   "notificationIndex": "ಅಧಿಸೂಚನೆ {number}",
   "takingRecordFromNotification": "ಅಧಿಸೂಚನೆಯಿಂದಲೇ ಸೇವನೆಯ ದಾಖಲೆ ಸೇರಿಸಬಹುದು",
   "startApp": "ಆ್ಯಪ್ ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ",
-  "loggedInWithProvider": "{accountTypeProviderName}ನಲ್ಲಿ ಲಾಗ್ ಇನ್ ಮಾಡಿದ್ದೀರಿ",
+  "loggedInWithProvider": "ನೀವು {accountTypeProviderName} ಮೂಲಕ ಲಾಗಿನ್ ಆಗಿದ್ದೀರಿ",
   "tellAboutPrescribedSheet": "ಶಿಫಾರಸು ಮಾಡಿದ ಶೀಟ್ ಬಗ್ಗೆ ತಿಳಿಸಿ",
   "existingAccountUsers": "ಈಗಾಗಲೇ ಖಾತೆ ಹೊಂದಿದ್ದೀರಾ? ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ",
   "selectTodayPillNumber": "ಇಂದು ({todayString}) ತೆಗೆದುಕೊಳ್ಳುವ/ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",

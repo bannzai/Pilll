@@ -221,7 +221,7 @@
   "notificationIndex": "Benachrichtigung {number}",
   "takingRecordFromNotification": "Du kannst dein Einnahmeprotokoll direkt über die Benachrichtigung ergänzen",
   "startApp": "App jetzt nutzen",
-  "loggedInWithProvider": "Mit {accountTypeProviderName} angemeldet",
+  "loggedInWithProvider": "Du bist mit {accountTypeProviderName} angemeldet",
   "tellAboutPrescribedSheet": "Über Ihre verschriebene\nPillenpackung",
   "existingAccountUsers": "Bereits ein Konto? Hier anmelden",
   "selectTodayPillNumber": "Heute ({todayString})\nPillennummer für heute antippen",

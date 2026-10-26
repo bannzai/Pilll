@@ -221,7 +221,7 @@
   "notificationIndex": "Njoftim {number}",
   "takingRecordFromNotification": "Mund të shtoni regjistrimi i marrjes drejtpërdrejt nga njoftimi",
   "startApp": "Filloni të përdorni aplikacionin",
-  "loggedInWithProvider": "U kyçët me {accountTypeProviderName}",
+  "loggedInWithProvider": "U identifikuat përmes {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Ju lutemi na tregoni rreth bllokut që ju është përshkruar",
   "existingAccountUsers": "Keni tashmë një llogari?",
   "selectTodayPillNumber": "Prekni numrin e pilulës për sot ({todayString})",

@@ -221,7 +221,7 @@
   "notificationIndex": "Мэдэгдэл {number}",
   "takingRecordFromNotification": "Мэдэгдлээс шууд эм уусан бүртгэл нэмэх боломжтой",
   "startApp": "Аппыг ашиглаж эхэлнэ үү",
-  "loggedInWithProvider": "{accountTypeProviderName} ашиглан нэвтрэв",
+  "loggedInWithProvider": "Та {accountTypeProviderName}-ээр нэвтэрсэн",
   "tellAboutPrescribedSheet": "Жороор олгосон эмийн багцны талаар\nхэлж өгнө үү",
   "existingAccountUsers": "Бүртгэлтэй бол энд дарна уу",
   "selectTodayPillNumber": "Өнөөдөр ({todayString}) уух/уусан эмийн дугаарыг дарна уу",

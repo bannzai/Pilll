@@ -221,7 +221,7 @@
   "notificationIndex": "Хабарландыру {number}",
   "takingRecordFromNotification": "Хабарламадан бірден қабылдау жазбасын қоса аласыз",
   "startApp": "Қолданбаны пайдалана бастаңыз",
-  "loggedInWithProvider": "{accountTypeProviderName} арқылы кірдіңіз",
+  "loggedInWithProvider": "Сіз {accountTypeProviderName} арқылы кірдіңіз",
   "tellAboutPrescribedSheet": "Дәрігер жазған дәрі блистері туралы айтып беріңіз",
   "existingAccountUsers": "Тіркелгіңіз бар болса, осы жерден кіріңіз",
   "selectTodayPillNumber": "Бүгін ({todayString}) ішетін немесе ішкен таблетканың нөмірін басыңыз",

@@ -221,7 +221,7 @@
   "notificationIndex": "ਸੂਚਨਾ {number}",
   "takingRecordFromNotification": "ਤੁਸੀਂ ਸੂਚਨਾ ਤੋਂ ਹੀ ਸੇਵਨ ਰਿਕਾਰਡ ਵਿੱਚ ਜਾਣਕਾਰੀ ਜੋੜ ਸਕਦੇ ਹੋ",
   "startApp": "ਐਪ ਵਰਤਣਾ ਸ਼ੁਰੂ ਕਰੋ",
-  "loggedInWithProvider": "{accountTypeProviderName} ਨਾਲ ਲੌਗ ਇਨ ਹੋ ਗਏ",
+  "loggedInWithProvider": "ਤੁਸੀਂ {accountTypeProviderName} ਨਾਲ ਲੌਗ ਇਨ ਕੀਤਾ ਹੈ",
   "tellAboutPrescribedSheet": "ਤਜਵੀਜ਼ ਕੀਤੇ ਗਏ ਸ਼ੀਟ ਬਾਰੇ\nਜਾਣਕਾਰੀ ਦਿਓ ਜੀ",
   "existingAccountUsers": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ? ਇੱਥੇ ਲਾਗਇਨ ਕਰੋ",
   "selectTodayPillNumber": "ਅੱਜ ({todayString}) ਲੈਣ ਵਾਲੀ ਜਾਂ ਲਈ ਗਈ ਗੋਲੀ ਦਾ ਨੰਬਰ ਟੈਪ ਕਰੋ",

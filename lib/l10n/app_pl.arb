@@ -221,7 +221,7 @@
   "notificationIndex": "Powiadomienie {number}",
   "takingRecordFromNotification": "Możesz dodać wpis o przyjęciu tabletki bezpośrednio z powiadomienia",
   "startApp": "Zacznij korzystać z aplikacji",
-  "loggedInWithProvider": "Zalogowano się przez {accountTypeProviderName}",
+  "loggedInWithProvider": "Zalogowano przez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Opowiedz nam o przepisanych blistrach",
   "existingAccountUsers": "Masz już konto? Kliknij tutaj",
   "selectTodayPillNumber": "Dzisiaj ({todayString})\nDotknij numer tabletki, którą masz wziąć lub już wzięłaś",

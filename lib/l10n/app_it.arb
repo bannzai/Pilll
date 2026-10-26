@@ -221,7 +221,7 @@
   "notificationIndex": "Notifica {number}",
   "takingRecordFromNotification": "Puoi aggiornare il registro delle assunzioni direttamente dalla notifica",
   "startApp": "Inizia a usare l'app",
-  "loggedInWithProvider": "Accesso effettuato con {accountTypeProviderName}",
+  "loggedInWithProvider": "Hai effettuato l’accesso con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlaci del blister prescritto",
   "existingAccountUsers": "Hai già un account? Accedi qui",
   "selectTodayPillNumber": "Tocca il numero della pillola di oggi ({todayString})",

@@ -221,7 +221,7 @@
   "notificationIndex": "Апавяшчэнне {number}",
   "takingRecordFromNotification": "Вы можаце зрабіць запіс прыёму пігулак проста з апавяшчэння",
   "startApp": "Пачаць карыстацца праграмай",
-  "loggedInWithProvider": "Увайшлі праз {accountTypeProviderName}",
+  "loggedInWithProvider": "Вы ўвайшлі праз {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Калі ласка, расскажыце пра прызначаную вам пачку",
   "existingAccountUsers": "Ужо маеце акаўнт? Сюды",
   "selectTodayPillNumber": "Сёння ({todayString})\nНацісніце нумар пілюлі, якую трэба прыняць/прынялі",

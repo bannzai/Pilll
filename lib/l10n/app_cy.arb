@@ -221,7 +221,7 @@
   "notificationIndex": "Hysbysiad {number}",
   "takingRecordFromNotification": "Gallwch ychwanegu at y cofnod cymryd yn syth o'r hysbysiad",
   "startApp": "Dechreuwch ddefnyddio'r ap",
-  "loggedInWithProvider": "Wedi mewngofnodi â {accountTypeProviderName}",
+  "loggedInWithProvider": "Rydych chi wedi mewngofnodi gyda {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Dywedwch wrthym am y\nddalennau bilsennau a ragnodwyd",
   "existingAccountUsers": "Os oes gennych gyfrif eisoes, cliciwch yma",
   "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen i'w gymryd neu sydd wedi'i gymryd",

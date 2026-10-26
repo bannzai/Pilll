@@ -221,7 +221,7 @@
   "notificationIndex": "Paziņojums {number}",
   "takingRecordFromNotification": "Tablešu lietošanas ierakstu varat pievienot tieši no paziņojuma",
   "startApp": "Sāciet lietot lietotni",
-  "loggedInWithProvider": "Esat veiksmīgi pieslēdzies ar {accountTypeProviderName}",
+  "loggedInWithProvider": "Jūs pierakstījāties ar {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pastāstiet par izrakstītajām plāksnītēm",
   "existingAccountUsers": "Jau ir konts? Noklikšķiniet šeit",
   "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties pie pilules numura, ko jāizdzer vai jau izdzēra",

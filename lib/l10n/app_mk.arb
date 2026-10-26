@@ -221,7 +221,7 @@
   "notificationIndex": "Известување {number}",
   "takingRecordFromNotification": "Можете да додадете Запис за земање директно од известувањето",
   "startApp": "Започнете да ја користите апликацијата",
-  "loggedInWithProvider": "Се најавивте со {accountTypeProviderName}",
+  "loggedInWithProvider": "Се најавивте преку {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Кажете ни за пропишаните листови на пилули",
   "existingAccountUsers": "Веќе имате сметка? Кликнете тука",
   "selectTodayPillNumber": "Денес ({todayString})\nДопрете го бројот на пилулата што треба да ја земете/ја земавте",

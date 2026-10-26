@@ -221,7 +221,7 @@
   "notificationIndex": "Notificación {number}",
   "takingRecordFromNotification": "Podes engadir unha entrada ao rexistro de tomas directamente desde a notificación",
   "startApp": "Comeza a usar a aplicación",
-  "loggedInWithProvider": "Iniciou sesión con {accountTypeProviderName}",
+  "loggedInWithProvider": "Iniciaches sesión con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fálenos sobre o envase receitado",
   "existingAccountUsers": "Xa tes unha conta?",
   "selectTodayPillNumber": "Toca o número da pastilla de hoxe ({todayString})",

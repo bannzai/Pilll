@@ -221,7 +221,7 @@
   "notificationIndex": "შეტყობინება {number}",
   "takingRecordFromNotification": "შეტყობინებიდან პირდაპირ შეგიძლიათ მიღების ჩანაწერის დამატება",
   "startApp": "აპის გამოყენების დაწყება",
-  "loggedInWithProvider": "{accountTypeProviderName}-ით შესული ხართ",
+  "loggedInWithProvider": "თქვენ შეხვედით {accountTypeProviderName}-ით",
   "tellAboutPrescribedSheet": "გთხოვთ, გვითხრათ დანიშნული შეფუთვის შესახებ",
   "existingAccountUsers": "უკვე გაქვთ ანგარიში? დაკლიკეთ აქ",
   "selectTodayPillNumber": "შეეხეთ დღევანდელი ({todayString}) აბის ნომერს",

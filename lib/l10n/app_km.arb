@@ -221,7 +221,7 @@
   "notificationIndex": "ការជូនដំណឹង {number}",
   "takingRecordFromNotification": "អ្នកអាចបន្ថែមទៅកំណត់ត្រាការលេបថ្នាំបានភ្លាមៗពីការជូនដំណឹង",
   "startApp": "ចាប់ផ្តើមប្រើកម្មវិធី",
-  "loggedInWithProvider": "បានចូលប្រើដោយ{accountTypeProviderName}ហើយ",
+  "loggedInWithProvider": "អ្នកបានចូលគណនីតាមរយៈ {accountTypeProviderName} ហើយ",
   "tellAboutPrescribedSheet": "សូមប្រាប់អំពីបាយសៀត\nដែលពេទ្យចេចេបេសចេ",
   "existingAccountUsers": "សម្រាប់អ្នកដែលមានគណនីរួចហើយ ចុចទីនេះ",
   "selectTodayPillNumber": "ចុចលេខថ្នាំគ្រាប់ដែលត្រូវទទួលទាន ឬ បានទទួលទានថ្ងៃនេះ ({todayString})",

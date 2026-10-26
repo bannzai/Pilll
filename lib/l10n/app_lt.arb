@@ -221,7 +221,7 @@
   "notificationIndex": "Pranešimas {number}",
   "takingRecordFromNotification": "Vartojimo įrašą galite pridėti tiesiai iš pranešimo",
   "startApp": "Pradėkite naudotis programėle",
-  "loggedInWithProvider": "Sėkmingai prisijungėte su {accountTypeProviderName}",
+  "loggedInWithProvider": "Prisijungėte per {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Papasakykite apie praskiriamą plokštelę",
   "existingAccountUsers": "Jau turite paskyrą? Spustelėkite čia",
   "selectTodayPillNumber": "Palieskite šiandien ({todayString}) vartojamos ar išvartojamos tabletės numerį",

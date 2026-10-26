@@ -221,7 +221,7 @@
   "notificationIndex": "सूचना {number}",
   "takingRecordFromNotification": "आप सूचना से ही सेवन रिकॉर्ड में जानकारी जोड़ सकती हैं",
   "startApp": "ऐप का इस्तेमाल शुरू करें",
-  "loggedInWithProvider": "{accountTypeProviderName} के साथ लॉग इन हो गए",
+  "loggedInWithProvider": "आपने {accountTypeProviderName} से लॉग इन कर लिया है",
   "tellAboutPrescribedSheet": "निर्धारित शीट के बारे में\nकृपया बताएं",
   "existingAccountUsers": "पहले से खाता है? यहाँ लॉगिन करें",
   "selectTodayPillNumber": "आज ({todayString}) की गोली का नंबर टैप करें",

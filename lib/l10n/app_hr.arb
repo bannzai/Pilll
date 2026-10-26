@@ -221,7 +221,7 @@
   "notificationIndex": "Obavijest {number}",
   "takingRecordFromNotification": "Evidencija uzimanja može se dopuniti izravno iz obavijesti",
   "startApp": "Počnite koristiti aplikaciju",
-  "loggedInWithProvider": "Prijavili ste se pomoću {accountTypeProviderName}",
+  "loggedInWithProvider": "Prijavili ste se putem {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo vas da nam kažete o propisanim tabletama",
   "existingAccountUsers": "Već imate račun? Prijavite se ovdje",
   "selectTodayPillNumber": "Danas ({todayString})\nDodirnite broj tablete koju trebate uzeti ili ste već uzeli",

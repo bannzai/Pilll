@@ -221,7 +221,7 @@
   "notificationIndex": "Thông báo {number}",
   "takingRecordFromNotification": "Bạn có thể thêm vào nhật ký uống thuốc ngay từ thông báo",
   "startApp": "Bắt đầu dùng ứng dụng",
-  "loggedInWithProvider": "Đã đăng nhập thành công bằng {accountTypeProviderName}",
+  "loggedInWithProvider": "Bạn đã đăng nhập bằng {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vui lòng cho biết thông tin về vỉ thuốc được kê đơn",
   "existingAccountUsers": "Đã có tài khoản? Đăng nhập tại đây",
   "selectTodayPillNumber": "Hôm nay ({todayString})\nChạm vào số viên thuốc cần uống hoặc đã uống",

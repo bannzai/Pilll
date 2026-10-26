@@ -221,7 +221,7 @@
   "notificationIndex": "Ծանուցում {number}",
   "takingRecordFromNotification": "Դուք կարող եք ընդունման գրառում ավելացնել անմիջապես ծանուցումից",
   "startApp": "Սկսեք օգտվել հավելվածից",
-  "loggedInWithProvider": "{accountTypeProviderName}-ի միջոցով մուտք գործեցիք",
+  "loggedInWithProvider": "Դուք մուտք եք գործել {accountTypeProviderName}‑ով",
   "tellAboutPrescribedSheet": "Խնդրում եմ պատմեք նշանակված դեղահաբերի թերթիկի մասին",
   "existingAccountUsers": "Արդեն հաշիվ ունեցողների համար",
   "selectTodayPillNumber": "Հպեք այսօր ({todayString}) խմելու կամ խմած դեղահատի համարին",

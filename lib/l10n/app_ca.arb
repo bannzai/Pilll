@@ -221,7 +221,7 @@
   "notificationIndex": "Notificació {number}",
   "takingRecordFromNotification": "Pots afegir una entrada al registre de preses directament des de la notificació",
   "startApp": "Comença a fer servir l'aplicació",
-  "loggedInWithProvider": "T'has connectat amb {accountTypeProviderName}",
+  "loggedInWithProvider": "Has iniciat la sessió amb {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Si us plau, expliqueu-nos sobre el blíster receptat",
   "existingAccountUsers": "Si ja tens un compte, entra aquí",
   "selectTodayPillNumber": "Avui ({todayString})\nToca el número de la píndola que has de prendre o que has pres",
