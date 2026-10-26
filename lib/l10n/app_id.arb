@@ -86,7 +86,7 @@
   "recordPage": "Catatan minum pil",
   "doReLogin": "Silakan masuk kembali",
   "reLoginMessage": "Silakan masuk kembali untuk memverifikasi identitas Anda sebelum akun dihapus. Setelah masuk, proses penghapusan akun akan dimulai secara otomatis.",
-  "updateAuthenticationAfterReLogin": "Silakan login kembali untuk memperbarui informasi autentikasi Anda",
+  "updateAuthenticationAfterReLogin": "Silakan masuk kembali untuk memperbarui informasi autentikasi Anda",
   "menstruationPage": "Menstruasi",
   "calendarPage": "Kalender",
   "settingsPage": "Pengaturan",

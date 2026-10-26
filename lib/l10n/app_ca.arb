@@ -86,7 +86,7 @@
   "recordPage": "Registre de píndoles",
   "doReLogin": "Torna a iniciar la sessió, si us plau",
   "reLoginMessage": "Torna a iniciar sessió per verificar la teva identitat abans de suprimir el compte. Després, el procés de supressió començarà automàticament.",
-  "updateAuthenticationAfterReLogin": "Torneu a iniciar sessió per actualitzar la informació d'autenticació",
+  "updateAuthenticationAfterReLogin": "Torna a iniciar sessió per actualitzar les dades d'autenticació",
   "menstruationPage": "Menstruació",
   "calendarPage": "Calendari",
   "settingsPage": "Configuració",

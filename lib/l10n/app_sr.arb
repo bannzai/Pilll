@@ -86,7 +86,7 @@
   "recordPage": "Евиденција узимања пилула",
   "doReLogin": "Молимо Вас, пријавите се поново",
   "reLoginMessage": "Молимо Вас да се поново пријавите ради потврде идентитета пре брисања налога. Након пријаве, брисање ће почети аутоматски.",
-  "updateAuthenticationAfterReLogin": "Ponovo se prijavite da biste ažurirali svoje podatke za autentifikaciju",
+  "updateAuthenticationAfterReLogin": "Молимо Вас да се поново пријавите како би се подаци за потврду идентитета ажурирали",
   "menstruationPage": "Менструација",
   "calendarPage": "Kalendar",
   "settingsPage": "Postavke",

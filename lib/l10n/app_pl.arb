@@ -86,7 +86,7 @@
   "recordPage": "Historia przyjmowania tabletek",
   "doReLogin": "Zaloguj się ponownie",
   "reLoginMessage": "Zaloguj się ponownie, aby potwierdzić tożsamość przed usunięciem konta. Po zalogowaniu usuwanie rozpocznie się automatycznie.",
-  "updateAuthenticationAfterReLogin": "Proszę zalogować się ponownie, aby zaktualizować dane uwierzytelniające",
+  "updateAuthenticationAfterReLogin": "Zaloguj się ponownie, aby zaktualizować dane uwierzytelniające",
   "menstruationPage": "Menstruacja",
   "calendarPage": "Kalendarz",
   "settingsPage": "Ustawienia",

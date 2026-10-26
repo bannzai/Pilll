@@ -86,7 +86,7 @@
   "recordPage": "Pillenoverzicht",
   "doReLogin": "Log alsjeblieft opnieuw in",
   "reLoginMessage": "Log opnieuw in om je identiteit te bevestigen voordat je account wordt verwijderd. Daarna begint het verwijderen automatisch.",
-  "updateAuthenticationAfterReLogin": "Log opnieuw in om uw verificatiegegevens bij te werken",
+  "updateAuthenticationAfterReLogin": "Log opnieuw in om je aanmeldgegevens bij te werken",
   "menstruationPage": "Menstruatie",
   "calendarPage": "Kalender",
   "settingsPage": "Instellingen",

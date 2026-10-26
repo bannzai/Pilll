@@ -86,7 +86,7 @@
   "recordPage": "سجل تناول الحبوب",
   "doReLogin": "يرجى تسجيل الدخول مرة أخرى",
   "reLoginMessage": "يرجى تسجيل الدخول مرة أخرى للتحقق من هويتكِ قبل حذف الحساب. ستبدأ عملية حذف الحساب تلقائيًا بعد تسجيل الدخول.",
-  "updateAuthenticationAfterReLogin": "سيتم إعادة تسجيل الدخول لتحديث معلومات المصادقة",
+  "updateAuthenticationAfterReLogin": "يرجى تسجيل الدخول مجددًا لتحديث معلومات المصادقة",
   "menstruationPage": "الدورة الشهرية",
   "calendarPage": "التقويم",
   "settingsPage": "صفحة الإعدادات",

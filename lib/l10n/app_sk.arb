@@ -86,7 +86,7 @@
   "recordPage": "Záznamy užívania tabletiek",
   "doReLogin": "Prihláste sa, prosím, znova",
   "reLoginMessage": "Pred odstránením účtu sa, prosím, znova prihláste, aby sme overili vašu totožnosť. Po prihlásení sa odstránenie spustí automaticky.",
-  "updateAuthenticationAfterReLogin": "Znovu sa prihláste na aktualizáciu vašich autentifikačných údajov",
+  "updateAuthenticationAfterReLogin": "Na aktualizáciu prihlasovacích údajov sa, prosím, znova prihláste",
   "menstruationPage": "Menštruácia",
   "calendarPage": "Kalendár",
   "settingsPage": "Nastavenia",

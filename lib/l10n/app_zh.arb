@@ -86,7 +86,7 @@
   "recordPage": "服药记录",
   "doReLogin": "请重新登录",
   "reLoginMessage": "删除账号前，请重新登录以验证身份。登录后，账号删除流程将自动开始。",
-  "updateAuthenticationAfterReLogin": "请重新登录以更新认证信息",
+  "updateAuthenticationAfterReLogin": "请重新登录，以更新身份验证信息",
   "menstruationPage": "月经",
   "calendarPage": "日历",
   "settingsPage": "设置",

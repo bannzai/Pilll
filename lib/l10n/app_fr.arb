@@ -86,7 +86,7 @@
   "recordPage": "Suivi des prises de pilule",
   "doReLogin": "Veuillez vous reconnecter",
   "reLoginMessage": "Veuillez vous reconnecter pour confirmer votre identité avant la suppression de votre compte. La suppression commencera automatiquement après votre connexion.",
-  "updateAuthenticationAfterReLogin": "Veuillez vous reconnecter pour mettre à jour vos informations d'authentification",
+  "updateAuthenticationAfterReLogin": "Reconnectez-vous pour mettre à jour vos informations d’authentification",
   "menstruationPage": "Période",
   "calendarPage": "Calendrier",
   "settingsPage": "Paramètres",

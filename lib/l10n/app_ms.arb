@@ -86,7 +86,7 @@
   "recordPage": "Rekod pengambilan pil",
   "doReLogin": "Sila log masuk semula",
   "reLoginMessage": "Sila log masuk semula untuk mengesahkan identiti anda sebelum akaun dipadamkan. Selepas log masuk, proses pemadaman akan bermula secara automatik.",
-  "updateAuthenticationAfterReLogin": "Log masuk semula untuk mengemaskini maklumat pengesahan anda",
+  "updateAuthenticationAfterReLogin": "Sila log masuk semula untuk mengemas kini maklumat pengesahan anda",
   "menstruationPage": "Menstruasi",
   "calendarPage": "Kalendar",
   "settingsPage": "Tetapan",

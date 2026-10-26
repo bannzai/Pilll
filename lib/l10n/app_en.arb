@@ -86,7 +86,7 @@
   "recordPage": "Pill records",
   "doReLogin": "Please log in again",
   "reLoginMessage": "Please sign in again to verify your identity before deleting your account. Account deletion will start automatically after you sign in.",
-  "updateAuthenticationAfterReLogin": "Please log in again to update your authentication information",
+  "updateAuthenticationAfterReLogin": "Sign in again to update your authentication information",
   "menstruationPage": "Period",
   "calendarPage": "Calendar",
   "settingsPage": "Settings",

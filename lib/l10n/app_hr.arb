@@ -86,7 +86,7 @@
   "recordPage": "Evidencija uzimanja pilula",
   "doReLogin": "Prijavite se ponovno, molimo",
   "reLoginMessage": "Prije brisanja računa ponovno se prijavite kako biste potvrdili identitet. Nakon prijave brisanje će započeti automatski.",
-  "updateAuthenticationAfterReLogin": "Prijavite se ponovno da ažurirate podatke za autentifikaciju",
+  "updateAuthenticationAfterReLogin": "Ponovno se prijavite kako biste ažurirali podatke za autentifikaciju",
   "menstruationPage": "Menstruacija",
   "calendarPage": "Kalendar",
   "settingsPage": "Postavke",

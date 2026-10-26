@@ -86,7 +86,7 @@
   "recordPage": "Regjistri i marrjes së pilulave",
   "doReLogin": "Ju lutemi, hyni përsëri",
   "reLoginMessage": "Ju lutemi, hyni përsëri për të konfirmuar identitetin tuaj para fshirjes së llogarisë. Pas hyrjes, fshirja do të fillojë automatikisht.",
-  "updateAuthenticationAfterReLogin": "Ju lutemi kyçuni përsëri për të përditësuar informacionet e autentifikimit",
+  "updateAuthenticationAfterReLogin": "Ju lutemi, hyni përsëri për të përditësuar të dhënat e vërtetimit",
   "menstruationPage": "Menstruacioni",
   "calendarPage": "Kalendar",
   "settingsPage": "Cilësimet",

@@ -86,7 +86,7 @@
   "recordPage": "سوابق مصرف قرص",
   "doReLogin": "لطفاً دوباره وارد شوید",
   "reLoginMessage": "لطفاً پیش از حذف حساب، برای تأیید هویت خود دوباره وارد شوید. پس از ورود، فرایند حذف حساب به‌طور خودکار آغاز می‌شود.",
-  "updateAuthenticationAfterReLogin": "لطفاً مجدداً وارد شوید تا اطلاعات احراز هویت شما به‌روزرسانی شود",
+  "updateAuthenticationAfterReLogin": "لطفاً برای به‌روزرسانی اطلاعات احراز هویت، دوباره وارد شوید",
   "menstruationPage": "قاعدگی",
   "calendarPage": "تقویم",
   "settingsPage": "تنظیمات",

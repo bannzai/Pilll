@@ -86,7 +86,7 @@
   "recordPage": "Pillereiden ottomerkinnät",
   "doReLogin": "Kirjaudu uudelleen, kiitos",
   "reLoginMessage": "Kirjaudu uudelleen sisään henkilöllisyytesi vahvistamiseksi ennen tilin poistamista. Poistaminen alkaa automaattisesti kirjautumisen jälkeen.",
-  "updateAuthenticationAfterReLogin": "Kirjaudu uudelleen sisään päivittääksesi todentamistietosi",
+  "updateAuthenticationAfterReLogin": "Kirjaudu uudelleen, jotta tunnistautumistietosi päivittyvät",
   "menstruationPage": "Kuukautiset",
   "calendarPage": "Kalenteri",
   "settingsPage": "Asetukset",

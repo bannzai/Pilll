@@ -86,7 +86,7 @@
   "recordPage": "Pillehistorikk",
   "doReLogin": "Logg inn igjen, takk",
   "reLoginMessage": "Logg inn på nytt for å bekrefte identiteten din før kontoen slettes. Når du er logget inn, starter slettingen automatisk.",
-  "updateAuthenticationAfterReLogin": "Logg inn på nytt for å oppdatere legitimasjonsopplysningene dine",
+  "updateAuthenticationAfterReLogin": "Logg inn på nytt for å oppdatere innloggingsopplysningene dine",
   "menstruationPage": "Menstruasjon",
   "calendarPage": "Kalender",
   "settingsPage": "Innstillinger",

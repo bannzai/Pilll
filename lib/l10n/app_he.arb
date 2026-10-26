@@ -86,7 +86,7 @@
   "recordPage": "רישום נטילת גלולות",
   "doReLogin": "יש להתחבר מחדש",
   "reLoginMessage": "יש להתחבר שוב כדי לאמת את הזהות לפני מחיקת החשבון. לאחר ההתחברות, מחיקת החשבון תתחיל באופן אוטומטי.",
-  "updateAuthenticationAfterReLogin": "התחבר שוב לעדכון מידע האימות",
+  "updateAuthenticationAfterReLogin": "יש להתחבר מחדש כדי לעדכן את פרטי האימות",
   "menstruationPage": "וסת",
   "calendarPage": "לוח שנה",
   "settingsPage": "הגדרות",

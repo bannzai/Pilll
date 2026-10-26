@@ -86,7 +86,7 @@
   "recordPage": "Registro de uso da pílula",
   "doReLogin": "Entre novamente, por favor",
   "reLoginMessage": "Entre novamente para confirmar sua identidade antes de excluir a conta. Após o acesso, a exclusão começará automaticamente.",
-  "updateAuthenticationAfterReLogin": "Entre novamente para atualizarmos suas informações de autenticação",
+  "updateAuthenticationAfterReLogin": "Entre novamente para atualizar suas informações de autenticação",
   "menstruationPage": "Menstruação",
   "calendarPage": "Calendário",
   "settingsPage": "Configurações",

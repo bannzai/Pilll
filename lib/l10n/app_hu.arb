@@ -86,7 +86,7 @@
   "recordPage": "Tablettaszedési napló",
   "doReLogin": "Jelentkezz be újra, kérjük",
   "reLoginMessage": "A fiók törlése előtt jelentkezz be újra a személyazonosságod megerősítéséhez. Bejelentkezés után a törlés automatikusan elindul.",
-  "updateAuthenticationAfterReLogin": "Kérjük, jelentkezzen be újra a hitelesítési adatok frissítéséhez",
+  "updateAuthenticationAfterReLogin": "Jelentkezz be újra a hitelesítési adataid frissítéséhez",
   "menstruationPage": "Menstruáció",
   "calendarPage": "Naptár",
   "settingsPage": "Beállítások",

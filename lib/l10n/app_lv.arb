@@ -86,7 +86,7 @@
   "recordPage": "Tablešu lietošanas ieraksti",
   "doReLogin": "Lūdzu, piesakieties vēlreiz",
   "reLoginMessage": "Pirms konta dzēšanas, lūdzu, piesakieties vēlreiz, lai apstiprinātu savu identitāti. Pēc pieteikšanās dzēšana sāksies automātiski.",
-  "updateAuthenticationAfterReLogin": "Pieslēdzieties vēlreiz un atjauniniet autentifikācijas informāciju",
+  "updateAuthenticationAfterReLogin": "Lai atjauninātu autentifikācijas datus, lūdzu, piesakieties vēlreiz",
   "menstruationPage": "Menstruācija",
   "calendarPage": "Kalendārs",
   "settingsPage": "Iestatījumi",

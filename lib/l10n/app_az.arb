@@ -86,7 +86,7 @@
   "recordPage": "Həb qəbulu qeydləri",
   "doReLogin": "Zəhmət olmasa, yenidən daxil olun",
   "reLoginMessage": "Hesabınızı silməzdən əvvəl şəxsiyyətinizi təsdiqləmək üçün yenidən daxil olun. Daxil olduqdan sonra hesabın silinməsi avtomatik başlayacaq.",
-  "updateAuthenticationAfterReLogin": "Autentifikasiya məlumatlarınızı yeniləmək üçün yenidən daxil olun",
+  "updateAuthenticationAfterReLogin": "Doğrulama məlumatlarınızı yeniləmək üçün zəhmət olmasa yenidən daxil olun",
   "menstruationPage": "Aybaşı Səhifəsi",
   "calendarPage": "Təqvim",
   "settingsPage": "Parametrlər",

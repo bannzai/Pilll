@@ -86,7 +86,7 @@
   "recordPage": "Skrá yfir inntöku pillunnar",
   "doReLogin": "Skráðu þig inn aftur, takk",
   "reLoginMessage": "Skráðu þig inn aftur til að staðfesta hver þú ert áður en reikningnum er eytt. Eyðingin hefst sjálfkrafa eftir innskráningu.",
-  "updateAuthenticationAfterReLogin": "Vinsamlegast skráðu þig inn aftur til að uppfæra auðkenningarupplýsingarnar",
+  "updateAuthenticationAfterReLogin": "Skráðu þig inn aftur til að uppfæra auðkenningarupplýsingarnar þínar",
   "menstruationPage": "Tíðir",
   "calendarPage": "Dagatal",
   "settingsPage": "Stillingasíða",

@@ -86,7 +86,7 @@
   "recordPage": "Registro delle pillole",
   "doReLogin": "Accedi di nuovo, per favore",
   "reLoginMessage": "Accedi di nuovo per verificare la tua identità prima di eliminare l'account. Dopo l'accesso, l'eliminazione inizierà automaticamente.",
-  "updateAuthenticationAfterReLogin": "Accedi nuovamente per aggiornare le informazioni di autenticazione",
+  "updateAuthenticationAfterReLogin": "Accedi di nuovo per aggiornare le informazioni di autenticazione",
   "menstruationPage": "Mestruazioni",
   "calendarPage": "Calendario",
   "settingsPage": "Impostazioni",

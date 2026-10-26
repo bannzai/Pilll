@@ -86,7 +86,7 @@
   "recordPage": "Pillerhistorik",
   "doReLogin": "Logga in igen, tack",
   "reLoginMessage": "Logga in igen för att bekräfta din identitet innan kontot tas bort. Borttagningen startar automatiskt när du har loggat in.",
-  "updateAuthenticationAfterReLogin": "Logga in igen för att uppdatera din autentiseringsinformation",
+  "updateAuthenticationAfterReLogin": "Logga in igen för att uppdatera dina inloggningsuppgifter",
   "menstruationPage": "Mens",
   "calendarPage": "Kalender",
   "settingsPage": "Inställningar",

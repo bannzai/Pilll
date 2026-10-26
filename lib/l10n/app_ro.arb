@@ -86,7 +86,7 @@
   "recordPage": "Evidența administrării pilulelor",
   "doReLogin": "Conectează-te din nou, te rugăm",
   "reLoginMessage": "Conectează-te din nou pentru a-ți confirma identitatea înainte de ștergerea contului. După conectare, ștergerea va începe automat.",
-  "updateAuthenticationAfterReLogin": "Vă rugăm să vă conectați din nou pentru a actualiza informațiile de autentificare",
+  "updateAuthenticationAfterReLogin": "Conectează-te din nou pentru a actualiza datele de autentificare",
   "menstruationPage": "Menstruație",
   "calendarPage": "Calendar",
   "settingsPage": "Setări",

@@ -86,7 +86,7 @@
   "recordPage": "Talaan ng pag-inom ng pildoras",
   "doReLogin": "Mangyaring mag-log in po kayo muli",
   "reLoginMessage": "Mag-sign in po ulit para makumpirma ang inyong pagkakakilanlan bago burahin ang account. Awtomatikong magsisimula ang pagbura pagkatapos ninyong mag-sign in.",
-  "updateAuthenticationAfterReLogin": "Mag-login muli upang ma-update ang inyong impormasyon ng pagpapatunay",
+  "updateAuthenticationAfterReLogin": "Mangyaring mag-log in po muli upang ma-update ang inyong impormasyon sa pagpapatunay",
   "menstruationPage": "Regla",
   "calendarPage": "Kalendaryo",
   "settingsPage": "Mga Setting",

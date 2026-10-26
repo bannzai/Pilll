@@ -86,7 +86,7 @@
   "recordPage": "Registro de píldoras",
   "doReLogin": "Vuelve a iniciar sesión, por favor",
   "reLoginMessage": "Vuelve a iniciar sesión para verificar tu identidad antes de eliminar tu cuenta. Después, la eliminación comenzará automáticamente.",
-  "updateAuthenticationAfterReLogin": "Inicia sesión nuevamente para actualizar tu información de autenticación",
+  "updateAuthenticationAfterReLogin": "Vuelve a iniciar sesión para actualizar tus datos de autenticación",
   "menstruationPage": "Menstruación",
   "calendarPage": "Calendario",
   "settingsPage": "Configuración",

@@ -86,7 +86,7 @@
   "recordPage": "Pilleneinnahmen",
   "doReLogin": "Melde dich bitte erneut an",
   "reLoginMessage": "Melde dich bitte erneut an, um deine Identität zu bestätigen, bevor dein Konto gelöscht wird. Danach beginnt die Löschung automatisch.",
-  "updateAuthenticationAfterReLogin": "Bitte melden Sie sich erneut an, um Ihre Anmeldedaten zu aktualisieren",
+  "updateAuthenticationAfterReLogin": "Melde dich erneut an, um deine Anmeldedaten zu aktualisieren",
   "menstruationPage": "Menstruation",
   "calendarPage": "Kalender",
   "settingsPage": "Einstellungen",

@@ -86,7 +86,7 @@
   "recordPage": "የክኒን አወሳሰድ መዝገብ",
   "doReLogin": "እባክዎ እንደገና ይግቡ",
   "reLoginMessage": "መለያዎ ከመሰረዙ በፊት ማንነትዎን ለማረጋገጥ እንደገና ይግቡ። እንደገና ከገቡ በኋላ የመለያ ስረዛ ሂደት በራስ-ሰር ይጀምራል።",
-  "updateAuthenticationAfterReLogin": "የማረጋገጫ መረጃዎትን ለማዘመን እንደገና ይግቡ",
+  "updateAuthenticationAfterReLogin": "የማረጋገጫ መረጃን ለማዘመን እባክዎ እንደገና ይግቡ",
   "menstruationPage": "የወር አበባ ገጽ",
   "calendarPage": "ካላንደር",
   "settingsPage": "ቅንብሮች",

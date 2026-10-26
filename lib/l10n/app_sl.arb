@@ -86,7 +86,7 @@
   "recordPage": "Evidenca jemanja tablet",
   "doReLogin": "Prosimo, znova se prijavite",
   "reLoginMessage": "Pred izbrisom računa se znova prijavite, da potrdite svojo identiteto. Po prijavi se bo brisanje začelo samodejno.",
-  "updateAuthenticationAfterReLogin": "Ponovno se prijavite za posodobitev avtentikacijskih podatkov",
+  "updateAuthenticationAfterReLogin": "Za posodobitev podatkov za prijavo se znova prijavite",
   "menstruationPage": "Menstruacija",
   "calendarPage": "Koledar",
   "settingsPage": "Nastavitve",

@@ -86,7 +86,7 @@
   "recordPage": "Záznamy užívání pilulek",
   "doReLogin": "Přihlaste se prosím znovu",
   "reLoginMessage": "Před smazáním účtu se prosím znovu přihlaste, abychom ověřili vaši totožnost. Po přihlášení se mazání spustí automaticky.",
-  "updateAuthenticationAfterReLogin": "Znovu se přihlaste pro aktualizaci autentizačních údajů",
+  "updateAuthenticationAfterReLogin": "Pro aktualizaci přihlašovacích údajů se prosím znovu přihlaste",
   "menstruationPage": "Menstruace",
   "calendarPage": "Kalendář",
   "settingsPage": "Nastavení",
