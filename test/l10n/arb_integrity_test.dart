@@ -34,15 +34,12 @@ void main() {
     final french = _readArb(File('${arbDirectory.path}/app_fr.arb'));
     expect(french['@@locale'], 'fr');
     expect(_messageKeys(french), templateKeys);
-    expect(french['pill'], 'Pilule');
-    expect(french['todayPillToTake'], '💊 Pilule du jour');
-    expect(french['menstruationScheduleDate'], 'Prochaines règles');
-    expect(french['recordMenstruation'], 'Noter les règles');
-    expect(french['menstruationFeatureAppealTitle'],
-        'Suivez et prévoyez vos règles');
 
+    // 訳文の字句は translate-app-arb skill の再翻訳で変わるため、特定の訳語に固定せず
+    // 「空でなく日本語が残っていない」ことだけを検査する
     final japanese = RegExp(r'[ぁ-んァ-ヶ一-龯]');
     for (final key in _messageKeys(french)) {
+      expect(french[key] as String, isNotEmpty, reason: key);
       expect(french[key] as String, isNot(matches(japanese)), reason: key);
     }
   });
