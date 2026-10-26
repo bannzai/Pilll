@@ -346,7 +346,7 @@
   "withNumber": "No. {number}",
   "currentPillSheetNotFound": "The pill pack you're currently using couldn't be found",
   "doNotRevertTakePillInPausePeriod": "You can't undo a recorded pill intake during a pill break",
-  "googleAccount": "Google Account",
+  "googleAccount": "Google account",
   "diaryRecord": "Record diary",
   "scheduleRecord": "Add event",
   "previousPillSheetGroupNotFound": "Previous pill sheet group not found",

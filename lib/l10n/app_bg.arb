@@ -346,7 +346,7 @@
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущият блистер не е намерен",
   "doNotRevertTakePillInPausePeriod": "По време на паузата не можете да отмените записа за прието хапче",
-  "googleAccount": "Google акаунт",
+  "googleAccount": "Профил в Google",
   "diaryRecord": "Запиши дневник",
   "scheduleRecord": "Въведете събитие",
   "previousPillSheetGroupNotFound": "Предишната група хапчета все още не съществува",

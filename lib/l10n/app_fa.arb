@@ -346,7 +346,7 @@
   "withNumber": "شمارهٔ {number}",
   "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
   "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",
-  "googleAccount": "حساب گوگل",
+  "googleAccount": "حساب Google",
   "diaryRecord": "ثبت روزنامه",
   "scheduleRecord": "ثبت برنامه",
   "previousPillSheetGroupNotFound": "گروه برگه قرص قبلی هنوز وجود ندارد",

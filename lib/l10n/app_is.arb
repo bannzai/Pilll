@@ -346,7 +346,7 @@
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",
-  "googleAccount": "Google reikningur",
+  "googleAccount": "Google-reikningur",
   "diaryRecord": "Skrá dagbók",
   "scheduleRecord": "Skrá áætlun",
   "previousPillSheetGroupNotFound": "Fyrri píluvelti hópur finnst ekki",

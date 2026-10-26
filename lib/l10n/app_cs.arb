@@ -346,7 +346,7 @@
   "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Aktuální blistr se nepodařilo najít",
   "doNotRevertTakePillInPausePeriod": "Během pauzy nelze zrušit záznam o užití pilulky",
-  "googleAccount": "Google účet",
+  "googleAccount": "Účet Google",
   "diaryRecord": "Zaznamenat deník",
   "scheduleRecord": "Zadat událost",
   "previousPillSheetGroupNotFound": "Předchozí skupina pilulkového balení zatím neexistuje",

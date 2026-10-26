@@ -346,7 +346,7 @@
   "withNumber": "{number}번",
   "currentPillSheetNotFound": "현재 사용 중인 알약 시트를 찾을 수 없어요",
   "doNotRevertTakePillInPausePeriod": "휴약 기간에는 피임약 복용 기록을 취소할 수 없어요",
-  "googleAccount": "구글 계정",
+  "googleAccount": "Google 계정",
   "diaryRecord": "일기 기록",
   "scheduleRecord": "일정 입력",
   "previousPillSheetGroupNotFound": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",

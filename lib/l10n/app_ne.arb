@@ -346,7 +346,7 @@
   "withNumber": "नं. {number}",
   "currentPillSheetNotFound": "अहिले प्रयोग भइरहेको चक्की पत्ता फेला परेन",
   "doNotRevertTakePillInPausePeriod": "विश्रामको समयमा चक्की खाएको अभिलेख रद्द गर्न मिल्दैन",
-  "googleAccount": "गूगल खाता",
+  "googleAccount": "Google खाता",
   "diaryRecord": "डायरी रेकर्ड गर्नुहोस्",
   "scheduleRecord": "योजना लेख्नुहोस्",
   "previousPillSheetGroupNotFound": "अघिल्लो पिल शिट समूह अझै छैन",

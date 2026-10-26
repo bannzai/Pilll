@@ -346,7 +346,7 @@
   "withNumber": "第{number}号",
   "currentPillSheetNotFound": "未找到当前使用的药板",
   "doNotRevertTakePillInPausePeriod": "停药期间无法撤销服药记录",
-  "googleAccount": "Google 账户",
+  "googleAccount": "Google 账号",
   "diaryRecord": "记录日记",
   "scheduleRecord": "添加日程",
   "previousPillSheetGroupNotFound": "上一个避孕药包装组尚不存在",

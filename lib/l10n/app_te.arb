@@ -346,7 +346,7 @@
   "withNumber": "సంఖ్య {number}",
   "currentPillSheetNotFound": "ప్రస్తుతం ఉపయోగిస్తున్న మాత్రల స్ట్రిప్ కనుగొనబడలేదు",
   "doNotRevertTakePillInPausePeriod": "విరామ సమయంలో మాత్ర తీసుకున్న నమోదును రద్దు చేయడం సాధ్యం కాదు",
-  "googleAccount": "గూగుల్ ఖాతా",
+  "googleAccount": "Google ఖాతా",
   "diaryRecord": "డైరీ రికార్డ్ చేయండి",
   "scheduleRecord": "షెడ్యూల్ రాయండి",
   "previousPillSheetGroupNotFound": "మునుపటి పిల్ షీట్ గ్రూప్ ఇంకా ఉనికిలో లేదు",

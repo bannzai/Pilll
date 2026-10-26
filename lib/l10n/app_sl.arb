@@ -346,7 +346,7 @@
   "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
   "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tabletke",
-  "googleAccount": "Google račun",
+  "googleAccount": "Račun Google",
   "diaryRecord": "Zapisati v dnevnik",
   "scheduleRecord": "Vnesi načrt",
   "previousPillSheetGroupNotFound": "Prejšnja skupina tablet še ne obstaja",

@@ -346,7 +346,7 @@
   "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በክኒን እረፍት ጊዜ የክኒን መውሰድን መቀልበስ አይቻልም",
-  "googleAccount": "Google መለያ",
+  "googleAccount": "የGoogle መለያ",
   "diaryRecord": "ዕለታዊ ማስታወሻ መዝግብ",
   "scheduleRecord": "መርሃ ግብር ማስገባት",
   "previousPillSheetGroupNotFound": "የቀደመው ፒል ሺት ቡድን አልተገኘም",
