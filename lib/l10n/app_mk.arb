@@ -62,7 +62,7 @@
   "aboutMenstruation": "За менструација",
   "checkPillNumberForMenstruationStart": "Ве молиме, проверете го број на таблета за денот на почеток на менструација. Поставениот број на таблета не постои во избраниот тип блистер",
   "customizeMedicationNotifications": "Приспособување на известувањата за земање таблета",
-  "medicationNotification": "Нотификација за земање",
+  "medicationNotification": "Потсетник за земање таблета",
   "xCanBeCustomized": "{x} може да се прилагоди",
   "thankYouForCooperation": "Ви благодарам за соработката",
   "feedbackUsage": "Ви благодариме за вашето мислење кое ќе го искористиме за идни подобрувања.",

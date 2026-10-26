@@ -62,7 +62,7 @@
   "aboutMenstruation": "Päevadest",
   "checkPillNumberForMenstruationStart": "Palun kontrolli päevade alguspäeva pillinumbrit. Määratud pillinumber ei ole valitud pillilehe tüübil",
   "customizeMedicationNotifications": "Kohanda pillivõtmise meeldetuletusi",
-  "medicationNotification": "Võtmise teavitus",
+  "medicationNotification": "Pilli võtmise meeldetuletus",
   "xCanBeCustomized": "{x} on kohandatav",
   "thankYouForCooperation": "Tänan koostöö eest",
   "feedbackUsage": "Teie esitatud arvamusi kasutatakse rakenduse tulevikus parandamiseks.",

@@ -62,7 +62,7 @@
   "aboutMenstruation": "মাসিক সম্পর্কে",
   "checkPillNumberForMenstruationStart": "অনুগ্রহ করে মাসিক শুরুর দিনের পিল নম্বর দেখুন। নির্ধারিত পিল নম্বরটি বর্তমানে বেছে নেওয়া পিল শিটের ধরনে নেই",
   "customizeMedicationNotifications": "পিল খাওয়ার বিজ্ঞপ্তি নিজের মতো করে সাজান",
-  "medicationNotification": "সেবন বিজ্ঞপ্তি",
+  "medicationNotification": "পিল খাওয়ার রিমাইন্ডার",
   "xCanBeCustomized": "{x} কাস্টমাইজ করতে পারবেন",
   "thankYouForCooperation": "সহযোগিতার জন্য ধন্যবাদ",
   "feedbackUsage": "আপনার মূল্যবান মতামত আমরা ভবিষ্যতে সেবার উন্নতির জন্য ব্যবহার করব।",

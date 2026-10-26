@@ -62,7 +62,7 @@
   "aboutMenstruation": "생리에 대해",
   "checkPillNumberForMenstruationStart": "생리 시작일의 알약 번호를 확인해 주세요. 설정된 알약 번호가 현재 선택한 알약 시트 종류에 없어요",
   "customizeMedicationNotifications": "복용 알림 맞춤 설정",
-  "medicationNotification": "복용 알림",
+  "medicationNotification": "알약 복용 알림",
   "xCanBeCustomized": "{x}를 맞춤 설정할 수 있습니다",
   "thankYouForCooperation": "협조해 주셔서 감사합니다",
   "feedbackUsage": "주신 의견은 향후 개선에 활용하겠습니다.",

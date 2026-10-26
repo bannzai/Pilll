@@ -62,7 +62,7 @@
   "aboutMenstruation": "A menstruációról",
   "checkPillNumberForMenstruationStart": "Kérjük, ellenőrizd a menstruáció kezdőnapjához megadott tablettaszámot. A beállított tablettaszám nem szerepel a kiválasztott tablettacsomag típusban",
   "customizeMedicationNotifications": "A tablettaszedési értesítések testreszabása",
-  "medicationNotification": "Bevételi értesítés",
+  "medicationNotification": "Emlékeztető a tabletta szedésére",
   "xCanBeCustomized": "A(z) {x} testreszabható",
   "thankYouForCooperation": "Köszönjük a segítségét!",
   "feedbackUsage": "Az Önök értékes visszajelzéseit a szolgáltatás további fejlesztéséhez használjuk fel.",

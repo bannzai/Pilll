@@ -62,7 +62,7 @@
   "aboutMenstruation": "Tietoa kuukautisista",
   "checkPillNumberForMenstruationStart": "Tarkista kuukautisten alkamispäivälle asetettu pillerinumero. Asetettua pillerinumeroa ei ole valitussa pilleriliuskatyypissä",
   "customizeMedicationNotifications": "Mukauta pillerimuistutuksia",
-  "medicationNotification": "Lääkemuistutus",
+  "medicationNotification": "Pillerimuistutus",
   "xCanBeCustomized": "Voit mukauttaa {x}",
   "thankYouForCooperation": "Kiitoksia yhteistyöstä",
   "feedbackUsage": "Hyödynnämme antamaanne palautetta tulevien parannusten tekemisessä.",

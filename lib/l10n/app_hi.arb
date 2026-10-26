@@ -62,7 +62,7 @@
   "aboutMenstruation": "पीरियड के बारे में",
   "checkPillNumberForMenstruationStart": "कृपया पीरियड शुरू होने वाले दिन का गोली नंबर जाँचें। सेट किया गया गोली नंबर चुनी हुई पिल स्ट्रिप के प्रकार में नहीं है",
   "customizeMedicationNotifications": "गोली लेने की सूचनाएँ अपनी पसंद के अनुसार सेट करें",
-  "medicationNotification": "दवा की सूचना",
+  "medicationNotification": "गोली लेने का रिमाइंडर",
   "xCanBeCustomized": "{x} को अनुकूलित कर सकते हैं",
   "thankYouForCooperation": "आपके सहयोग के लिए धन्यवाद",
   "feedbackUsage": "आपके सुझावों का उपयोग हम भविष्य में अपनी सेवा को बेहतर बनाने के लिए करेंगे।",
