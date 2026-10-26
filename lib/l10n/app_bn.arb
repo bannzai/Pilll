@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "যেমন, ১৮ নম্বর পিল থেকে শুরু করে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
   "withNumber": "নং {number}",
   "currentPillSheetNotFound": "বর্তমানে ব্যবহার করা পিল শিট পাওয়া যায়নি",
-  "doNotRevertTakePillInPausePeriod": "বিরতির সময়কালে পিল সেবন বাতিল করার অপারেশন সম্পাদন করা যায় না",
+  "doNotRevertTakePillInPausePeriod": "বিরতির সময় পিল খাওয়ার রেকর্ড বাতিল করা যাবে না",
   "googleAccount": "গুগল অ্যাকাউন্ট",
   "diaryRecord": "ডায়রি রেকর্ড করুন",
   "scheduleRecord": "সময়সূচী লিখুন",

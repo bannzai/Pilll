@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Мисалы, 18-таблеткадан баштап 3 күнгө ичүүнү токтотсоңуз",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Учурда колдонулуп жаткан таблетка блистери табылган жок",
-  "doNotRevertTakePillInPausePeriod": "Эс алуу мезгилинде пилдин ичүүсүн жокко чыгаруу операциясын жасоо мүмкүн эмес",
+  "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",
   "googleAccount": "Google аккаунт",
   "diaryRecord": "Күндөлүк жазуу",
   "scheduleRecord": "Планды жазуу",

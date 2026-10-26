@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Например, ако сте направили 3-дневна пауза в приема, започвайки от хапче № 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущият блистер не е намерен",
-  "doNotRevertTakePillInPausePeriod": "Отмяната на приема на пилулата не е възможна по време на почивния период",
+  "doNotRevertTakePillInPausePeriod": "По време на паузата не можете да отмените записа за прието хапче",
   "googleAccount": "Google акаунт",
   "diaryRecord": "Запиши дневник",
   "scheduleRecord": "Въведете събитие",

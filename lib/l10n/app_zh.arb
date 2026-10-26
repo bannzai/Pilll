@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "例如，从第18片开始暂停服药3天",
   "withNumber": "第{number}号",
   "currentPillSheetNotFound": "未找到当前使用的药板",
-  "doNotRevertTakePillInPausePeriod": "停药期间无法取消避孕药服用记录",
+  "doNotRevertTakePillInPausePeriod": "停药期间无法撤销服药记录",
   "googleAccount": "Google 账户",
   "diaryRecord": "记录日记",
   "scheduleRecord": "添加日程",

@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Na primer, če od 18. tablete naredite 3-dnevni premor pri jemanju",
   "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
-  "doNotRevertTakePillInPausePeriod": "Med placebo obdobjem ni mogoče preklicati jemanja tablet",
+  "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tabletke",
   "googleAccount": "Google račun",
   "diaryRecord": "Zapisati v dnevnik",
   "scheduleRecord": "Vnesi načrt",

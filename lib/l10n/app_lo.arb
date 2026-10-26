@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "ຕົວຢ່າງ ຖ້າຢຸດກິນຢາ 3 ມື້ ໂດຍເລີ່ມຈາກເມັດທີ 18",
   "withNumber": "ເລກ {number}",
   "currentPillSheetNotFound": "ບໍ່ພົບແຜງຢາຄຸມທີ່ກຳລັງໃຊ້ຢູ່",
-  "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກການບັນທຶກການກິນຢາຄຸມກຳເນີດໃນໄລຍະພັກຢາໄດ້",
+  "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",
   "googleAccount": "ບັນຊີ Google",
   "diaryRecord": "ບັນທຶກບັນທຶກການ",
   "scheduleRecord": "ບັນທຶກກຳນົດການ",

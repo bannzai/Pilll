@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Zum Beispiel, wenn du ab Pille 18 für 3 Tage eine Einnahmepause machst",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Der Pillenblister, den du gerade verwendest, wurde nicht gefunden",
-  "doNotRevertTakePillInPausePeriod": "Die Stornierung der Pilleneinnahme ist während der Pillenpause nicht möglich",
+  "doNotRevertTakePillInPausePeriod": "Während der Einnahmepause kannst du die erfasste Pilleneinnahme nicht rückgängig machen",
   "googleAccount": "Google-Konto",
   "diaryRecord": "Tagebuch eintragen",
   "scheduleRecord": "Termin eintragen",

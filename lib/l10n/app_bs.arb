@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Na primjer, ako ste napravili pauzu od 3 dana počevši od pilule broj 18",
   "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Trenutni blister nije pronađen",
-  "doNotRevertTakePillInPausePeriod": "Poništavanje uzimanja pilule nije moguće tokom perioda pauze",
+  "doNotRevertTakePillInPausePeriod": "Tokom pauze ne možete poništiti zapis o uzimanju pilule",
   "googleAccount": "Google nalog",
   "diaryRecord": "Zabilježiti dnevnik",
   "scheduleRecord": "Dodaj termin",

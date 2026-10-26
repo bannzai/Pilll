@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "مثلاً، اگر گولی نمبر 18 سے شروع کرکے 3 دن کے لیے گولیاں لینے میں وقفہ کیا جائے",
   "withNumber": "نمبر {number}",
   "currentPillSheetNotFound": "اس وقت استعمال ہونے والی گولیوں کی پٹی نہیں ملی",
-  "doNotRevertTakePillInPausePeriod": "گولی کے استعمال کو منسوخ کرنے کا عمل آرام کی مدت کے دوران نہیں کیا جا سکتا",
+  "doNotRevertTakePillInPausePeriod": "وقف کے دوران گولی لینے کا ریکارڈ منسوخ نہیں کیا جا سکتا",
   "googleAccount": "Google اکاؤنٹ",
   "diaryRecord": "ڈائری ریکارڈ کریں",
   "scheduleRecord": "منصوبہ درج کریں",

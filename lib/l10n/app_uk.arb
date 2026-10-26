@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Наприклад, якщо ви робите перерву в прийомі пігулок на 3 дні, починаючи з пігулки № 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не вдалося знайти блістер, який ви зараз використовуєте",
-  "doNotRevertTakePillInPausePeriod": "Не можна скасувати прийом пілюль під час періоду відміни",
+  "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",
   "googleAccount": "Акаунт Google",
   "diaryRecord": "Записати щоденник",
   "scheduleRecord": "Записати подію",

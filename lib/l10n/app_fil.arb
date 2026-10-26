@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Halimbawa, kung hihinto kayo sa pag-inom ng pill nang 3 araw simula sa pill 18",
   "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
-  "doNotRevertTakePillInPausePeriod": "Hindi maaaring i-cancel ang record ng pag-inom ng pills sa panahon ng pahinga mula sa gamot",
+  "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",
   "googleAccount": "Google Account",
   "diaryRecord": "I-record ang Diary",
   "scheduleRecord": "Magdagdag ng Schedule",

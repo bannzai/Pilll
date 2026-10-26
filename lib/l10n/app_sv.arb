@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Till exempel om du gör ett uppehåll på 3 dagar från och med piller 18",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Den p-pillerkarta du använder nu kunde inte hittas",
-  "doNotRevertTakePillInPausePeriod": "Du kan inte avbryta pillintag under viloperiodens gång",
+  "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",
   "googleAccount": "Google-konto",
   "diaryRecord": "Registrera dagbok",
   "scheduleRecord": "Lägg till schema",

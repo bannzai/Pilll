@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Օրինակ՝ եթե Դուք 18-րդ հաբից սկսած 3 օր դադար եք տալիս հաբերի ընդունմանը",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Այժմ օգտագործվող հաբերի բլիստեր չի գտնվել",
-  "doNotRevertTakePillInPausePeriod": "Դեղահատի ընդունման չեղարկումը դադարի ժամանակահատվածում հնարավոր չէ",
+  "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",
   "googleAccount": "Google հաշիվ",
   "diaryRecord": "օրագիր գրանցել",
   "scheduleRecord": "Ծրագիր ավելացնել",

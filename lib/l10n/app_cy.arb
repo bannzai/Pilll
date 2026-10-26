@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Er enghraifft, os byddwch yn cymryd seibiant o 3 diwrnod gan ddechrau gyda philsen 18",
   "withNumber": "Rhif {number}",
   "currentPillSheetNotFound": "Heb ddod o hyd i'r stribed pils rydych chi'n ei ddefnyddio ar hyn o bryd",
-  "doNotRevertTakePillInPausePeriod": "Ni ellir canslo cofnod cymryd y bilsen yn ystod y cyfnod seibiant",
+  "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",
   "googleAccount": "Cyfrif Google",
   "diaryRecord": "Cofnodi dyddiadur",
   "scheduleRecord": "Cofnodi apwyntiad",

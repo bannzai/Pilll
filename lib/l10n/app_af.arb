@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Byvoorbeeld, as jy vanaf pil 18 vir 3 dae ophou om jou pil te neem",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Die pilstrokie wat jy tans gebruik, kon nie gevind word nie",
-  "doNotRevertTakePillInPausePeriod": "Pilinname kan nie tydens die rusperiode gekanselleer word nie",
+  "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",
   "googleAccount": "Google-rekening",
   "diaryRecord": "Teken dagboek op",
   "scheduleRecord": "Voeg afspraak by",

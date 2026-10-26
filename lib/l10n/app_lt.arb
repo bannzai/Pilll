@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Pavyzdžiui, jei nuo 18-osios tabletės darote 3 dienų vartojimo pertrauką",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nepavyko rasti šiuo metu naudojamos tablečių plokštelės",
-  "doNotRevertTakePillInPausePeriod": "Negalima atšaukti tablečių vartojimo įrašo pertraukos periodo metu",
+  "doNotRevertTakePillInPausePeriod": "Per pertrauką negalima atšaukti įrašo apie tabletės vartojimą",
   "googleAccount": "Google paskyra",
   "diaryRecord": "Įrašyti dienoraštį",
   "scheduleRecord": "Pridėti įvykį",

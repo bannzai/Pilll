@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 18ਵੀਂ ਗੋਲੀ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਲੈਂਦੇ ਹੋ",
   "withNumber": "ਨੰ. {number}",
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਵਰਤੀ ਜਾ ਰਹੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨਹੀਂ ਮਿਲੀ",
-  "doNotRevertTakePillInPausePeriod": "ਬ੍ਰੇਕ ਪੀਰੀਅਡ ਦੇ ਦੌਰਾਨ ਪਿੱਲ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+  "doNotRevertTakePillInPausePeriod": "ਵਿਰਾਮ ਦੌਰਾਨ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
   "googleAccount": "Google ਖਾਤਾ",
   "diaryRecord": "ਡਾਇਰੀ ਰਿਕਾਰਡ ਕਰੋ",
   "scheduleRecord": "ਯੋਜਨਾ ਦਰਜ ਕਰੋ",

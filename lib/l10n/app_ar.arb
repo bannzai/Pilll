@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "مثلًا، إذا توقفتِ عن تناول الحبوب لمدة 3 أيام بدءًا من الحبة رقم 18",
   "withNumber": "رقم {number}",
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستخدم حاليًا",
-  "doNotRevertTakePillInPausePeriod": "لا يمكن إلغاء تسجيل تناول الحبوب خلال فترة الراحة",
+  "doNotRevertTakePillInPausePeriod": "لا يمكن التراجع عن تسجيل تناول الحبة خلال فترة الراحة",
   "googleAccount": "حساب Google",
   "diaryRecord": "تسجيل اليوميات",
   "scheduleRecord": "إضافة موعد",

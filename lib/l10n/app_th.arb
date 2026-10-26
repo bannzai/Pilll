@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "เช่น หากเว้นการทานยาตั้งแต่เม็ดที่ 18 เป็นเวลา 3 วันค่ะ",
   "withNumber": "หมายเลข {number}",
   "currentPillSheetNotFound": "ไม่พบแผงยาที่ใช้อยู่ในขณะนี้ค่ะ",
-  "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกการบันทึกการรับประทานยาคุมกำเนิดในช่วงพักยาได้",
+  "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกบันทึกการทานยาระหว่างช่วงหยุดยาได้ค่ะ",
   "googleAccount": "บัญชี Google",
   "diaryRecord": "บันทึกไดอารี่",
   "scheduleRecord": "กรอกกำหนดการ",

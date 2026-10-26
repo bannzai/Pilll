@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "De exemplu, dacă faci o pauză de 3 zile începând cu pilula 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nu a fost găsit blisterul pe care îl folosești acum",
-  "doNotRevertTakePillInPausePeriod": "Nu puteți anula administrarea pilulei în timpul perioadei de pauză",
+  "doNotRevertTakePillInPausePeriod": "În timpul pauzei nu poți anula înregistrarea administrării pilulei",
   "googleAccount": "Cont Google",
   "diaryRecord": "Înregistrează jurnalul",
   "scheduleRecord": "Introdu programare",

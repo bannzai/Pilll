@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "ഉദാഹരണത്തിന്, 18-ാം ഗുളിക മുതൽ 3 ദിവസം ഗുളിക കഴിക്കുന്നത് നിർത്തിയാൽ",
   "withNumber": "നമ്പർ {number}",
   "currentPillSheetNotFound": "ഇപ്പോൾ ഉപയോഗിക്കുന്ന ഗുളിക സ്ട്രിപ്പ് കണ്ടെത്താനായില്ല",
-  "doNotRevertTakePillInPausePeriod": "വിശ്രമ കാലയളവിൽ ഗുളിക സേവനത്തിന്റെ റദ്ദാക്കൽ പ്രവർത്തനം നിർവ്വഹിക്കാൻ കഴിയില്ല",
+  "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",
   "googleAccount": "Google അക്കൗണ്ട്",
   "diaryRecord": "ഡയറി രേഖപെടുത്തുക",
   "scheduleRecord": "ഷെഡ്യൂൾ ചേർക്കുക",

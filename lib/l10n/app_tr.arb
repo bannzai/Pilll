@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Örneğin, 18. haptan başlayarak 3 gün hap almaya ara verirseniz",
   "withNumber": "No. {number}",
   "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
-  "doNotRevertTakePillInPausePeriod": "Dinlenme döneminde doğum kontrol hapı alma kaydını iptal edemezsiniz",
+  "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",
   "googleAccount": "Google Hesabı",
   "diaryRecord": "Günlük kaydet",
   "scheduleRecord": "Plan Ekle",

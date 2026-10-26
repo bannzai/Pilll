@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "उदाहरण के लिए, अगर 18वीं गोली से शुरू करके 3 दिनों तक गोली लेने से विराम लिया जाए",
   "withNumber": "नं. {number}",
   "currentPillSheetNotFound": "अभी इस्तेमाल की जा रही पिल स्ट्रिप नहीं मिली",
-  "doNotRevertTakePillInPausePeriod": "विश्राम अवधि में पिल सेवन रद्द नहीं किया जा सकता",
+  "doNotRevertTakePillInPausePeriod": "विराम के दौरान गोली लेने का रिकॉर्ड रद्द नहीं किया जा सकता",
   "googleAccount": "Google खाता",
   "diaryRecord": "डायरी रिकॉर्ड करें",
   "scheduleRecord": "योजना दर्ज करें",

@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "उदाहरणार्थ, 18व्या गोळीपासून 3 दिवस गोळी घेणे थांबवल्यास",
   "withNumber": "क्र. {number}",
   "currentPillSheetNotFound": "सध्या वापरत असलेली पिल शीट सापडली नाही",
-  "doNotRevertTakePillInPausePeriod": "गोळी सेवनाचे रद्दीकरण कार्य विश्रांती कालावधीत करता येत नाही",
+  "doNotRevertTakePillInPausePeriod": "विरामादरम्यान गोळी घेतल्याची नोंद रद्द करता येत नाही",
   "googleAccount": "गूगल खाते",
   "diaryRecord": "डायरी नोंदवा",
   "scheduleRecord": "योजना नोंदवा",

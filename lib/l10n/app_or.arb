@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "ଉଦାହରଣ ସ୍ୱରୂପ, 18 ନମ୍ବର ବଟିକାଠାରୁ 3 ଦିନ ପାଇଁ ବଟିକା ନେବା ବନ୍ଦ ରଖିଲେ",
   "withNumber": "ନଂ {number}",
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନ ବ୍ୟବହାର ହେଉଥିବା ବଟିକା ସିଟ ମିଳିଲା ନାହିଁ",
-  "doNotRevertTakePillInPausePeriod": "ବିରତି ଅବଧି ସମୟରେ ପିଲ୍ ସେବନ ବାତିଲ୍ କରିବାର କାର୍ଯ୍ୟ କରାଯାଇପାରିବ ନାହିଁ",
+  "doNotRevertTakePillInPausePeriod": "ବିରତି ସମୟରେ ପିଲ୍ ଖାଇବାର ରେକର୍ଡ ବାତିଲ କରାଯାଇପାରିବ ନାହିଁ",
   "googleAccount": "ଗୁଗୁଲ ଆକାଉଣ୍ଟ",
   "diaryRecord": "ଦିନଲିପି ଲେଖ",
   "scheduleRecord": "କାର୍ଯ୍ୟସୂଚୀ ଲେଖନ୍ତୁ",

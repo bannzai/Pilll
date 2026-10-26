@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Na przykład przy 3-dniowej przerwie w przyjmowaniu, zaczynając od tabletki nr 18",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Nie znaleziono blistra, który jest teraz używany",
-  "doNotRevertTakePillInPausePeriod": "Nie można cofnąć przyjęcia tabletki podczas okresu przerwy",
+  "doNotRevertTakePillInPausePeriod": "Podczas przerwy nie można cofnąć zapisu o przyjęciu tabletki",
   "googleAccount": "Konto Google",
   "diaryRecord": "Zapisz w dzienniku",
   "scheduleRecord": "Dodaj termin",

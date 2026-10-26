@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Adibidez, 18. pilulatik aurrera 3 egunez pilulak hartzeari uzten badiozu",
   "withNumber": "{number}.a",
   "currentPillSheetNotFound": "Ez da aurkitu orain erabiltzen duzun pilula-blister",
-  "doNotRevertTakePillInPausePeriod": "Pilula hartzea ezeztatzeko eragiketa ezin da burutu atseden aldian",
+  "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",
   "googleAccount": "Google kontua",
   "diaryRecord": "Egunerokoa erregistratu",
   "scheduleRecord": "Gertaera sartu",

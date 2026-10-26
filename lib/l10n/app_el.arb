@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από το χάπι 18",
   "withNumber": "Αρ. {number}",
   "currentPillSheetNotFound": "Δεν βρέθηκε η καρτέλα χαπιών που χρησιμοποιείτε αυτή τη στιγμή",
-  "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να ακυρώσετε τη λήψη του χαπιού κατά τη διάρκεια της περιόδου διακοπής",
+  "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταγραφή λήψης του χαπιού κατά τη διάρκεια του διαλείμματος",
   "googleAccount": "Λογαριασμός Google",
   "diaryRecord": "Καταγραφή ημερολογίου",
   "scheduleRecord": "Προσθήκη συμβάντος",

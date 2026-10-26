@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Например, если вы делаете перерыв в приёме на 3 дня, начиная с таблетки № 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не удалось найти блистер, который вы сейчас используете",
-  "doNotRevertTakePillInPausePeriod": "Невозможно отменить прием таблеток во время периода плацебо",
+  "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",
   "googleAccount": "Google аккаунт",
   "diaryRecord": "Записать дневник",
   "scheduleRecord": "Записать планы",

@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Piemēram, ja, sākot ar 18. tableti, lietošanā ir 3 dienu pārtraukums",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pašlaik lietotais tablešu blisteris nav atrasts",
-  "doNotRevertTakePillInPausePeriod": "Tablešu lietošanas atcelšana nav iespējama pārtraukuma periodā",
+  "doNotRevertTakePillInPausePeriod": "Pārtraukuma laikā nevar atcelt ierakstu par tabletes lietošanu",
   "googleAccount": "Google konts",
   "diaryRecord": "Ierakstīt dienasgrāmatā",
   "scheduleRecord": "Ierakstīt plānu",

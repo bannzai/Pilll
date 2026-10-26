@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Per exemple, si fas una pausa de 3 dies a partir de la píndola 18",
   "withNumber": "Núm. {number}",
   "currentPillSheetNotFound": "No s'ha trobat el blíster que fas servir ara",
-  "doNotRevertTakePillInPausePeriod": "L'operació de cancel·lació de la presa de píndoles no es pot executar durant el període de descans",
+  "doNotRevertTakePillInPausePeriod": "Durant el descans no pots desfer el registre de la presa de la píndola",
   "googleAccount": "Compte de Google",
   "diaryRecord": "Registrar diari",
   "scheduleRecord": "Afegir cita",

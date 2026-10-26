@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra og med pille 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pillebrettet du bruker nå, ble ikke funnet",
-  "doNotRevertTakePillInPausePeriod": "Du kan ikke avbryte pilleinntak under den tabletfrie perioden",
+  "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en p-pille under en pillepause",
   "googleAccount": "Google-konto",
   "diaryRecord": "Registrer dagbok",
   "scheduleRecord": "Legg til avtale",

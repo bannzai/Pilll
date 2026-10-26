@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Näiteks kui teed alates pillist 18 pillide võtmisel 3-päevase pausi",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
-  "doNotRevertTakePillInPausePeriod": "Pilli võtmise tühistamine pole pillipause ajal võimalik",
+  "doNotRevertTakePillInPausePeriod": "Pillipausi ajal ei saa pilli võtmise kirjet tagasi võtta",
   "googleAccount": "Google'i konto",
   "diaryRecord": "Salvesta päevik",
   "scheduleRecord": "Lisa sündmus",

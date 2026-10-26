@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "উদাহৰণস্বৰূপে, 18 নম্বৰ পিলৰ পৰা 3 দিনৰ বাবে আপুনি পিল খোৱা বন্ধ ৰাখিলে",
   "withNumber": "নং {number}",
   "currentPillSheetNotFound": "বৰ্তমান ব্যৱহাৰ কৰি থকা পিলৰ ষ্ট্ৰিপ পোৱা নগ’ল",
-  "doNotRevertTakePillInPausePeriod": "পিল সেৱনৰ বাতিলকৰণ বিৰতি কালত কৰিব নোৱাৰি",
+  "doNotRevertTakePillInPausePeriod": "বিৰতিৰ সময়ত পিল খোৱাৰ তথ্য বাতিল কৰিব নোৱাৰি",
   "googleAccount": "গুগল একাউণ্ট",
   "diaryRecord": "ডায়েৰী ৰেকৰ্ড কৰক",
   "scheduleRecord": "অনুষ্ঠান যোগ কৰক",

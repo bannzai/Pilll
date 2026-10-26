@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "მაგალითად, თუ მე-18 აბიდან დაწყებული 3 დღით შეწყვეტთ აბების მიღებას",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "ამჟამად გამოყენებული აბების ბლისტერი ვერ მოიძებნა",
-  "doNotRevertTakePillInPausePeriod": "ალბების მიღების ჩანაწერის გაუქმება შეუძლებელია უაბო პერიოდის დროს",
+  "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",
   "googleAccount": "Google ანგარიში",
   "diaryRecord": "დღიურის ჩაწერა",
   "scheduleRecord": "გეგმის შეყვანა",

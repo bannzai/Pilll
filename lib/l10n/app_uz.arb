@@ -345,7 +345,7 @@
   "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kun davomida tabletka qabul qilishni toʻxtatsangiz",
   "withNumber": "{number}-raqam",
   "currentPillSheetNotFound": "Hozir foydalanayotgan tabletka blister topilmadi",
-  "doNotRevertTakePillInPausePeriod": "Dam olish davrida hapbalar qabul qilishni bekor qilish amali bajarilmaydi",
+  "doNotRevertTakePillInPausePeriod": "Tanaffus davrida tabletkani qabul qilish qaydini bekor qilib bo‘lmaydi",
   "googleAccount": "Google hisobi",
   "diaryRecord": "Kundalik yozish",
   "scheduleRecord": "Reja yozish",
