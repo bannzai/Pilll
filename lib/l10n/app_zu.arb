@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Ulwazi ngokomthetho waseJapane ophathelene nokuhwebelana okuthile",
   "premiumTermsNotice3": "Sicela ukufunde ngaphambi kokubhalisela uhlelo",
-  "autoRenewNotice": "・Ngaphandle kokuthi ukhansele ngaphambi kwamahora angama-24 noma ngaphezulu ngaphambi kokuphela kwesikhathi sesivumelwano se-premium, isivumelwano sizovuseleliswa ngokuzenzakalayo",
+  "autoRenewNotice": "・Ukubhalisa kwakho ku-i-Premium kuzovuselelwa ngokuzenzakalelayo ngaphandle uma ukukhansela okungenani amahora angu-24 ngaphambi kokuphela kwesikhathi sokubhalisa",
   "cancelAutoRenewInfo": "• Ngemuva kokuthengwa, ungakhansela ukuvuselela ngokuzenzakalayo ezilungiselelweni ze-akhawunti kuhlelo lokusebenza lwe-{storeName}. (Awukwazi ukukhansela ukuvuselela ngokuzenzakalayo ngaphakathi kuhlelo lokusebenza).",
   "moreDetails": "Imininingwane lapha",
   "restorePurchase": "Imininingwane yokuthenga ibuyisiwe",

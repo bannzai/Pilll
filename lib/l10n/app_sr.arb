@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Подаци у складу са јапанским законом о одређеним трговинским трансакцијама",
   "premiumTermsNotice3": "Молимо Вас да их прочитате пре претплате",
-  "autoRenewNotice": "• Period pretplate se automatski obnavlja osim ako se ne otkaže više od 24 sata pre datuma isteka premium pretplate.",
+  "autoRenewNotice": "・Претплата на премијум се аутоматски обнавља ако је не откажете најмање 24 сата пре истека периода претплате",
   "cancelAutoRenewInfo": "• Nakon kupovine, otkazivanje automatskog obnavljanja možete obaviti u podešavanjima naloga u {storeName} aplikaciji. (Otkazivanje automatskog obnavljanja nije moguće izvršiti iz same aplikacije).",
   "moreDetails": "Detaljnije ovde",
   "restorePurchase": "Obnovili smo podatke o kupovini",

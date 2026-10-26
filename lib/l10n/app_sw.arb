@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Taarifa kwa mujibu wa sheria ya Japani kuhusu miamala maalumu ya kibiashara",
   "premiumTermsNotice3": "Tafadhali zisome kabla ya kujisajili",
-  "autoRenewNotice": "・Mkataba utajadiliwa kiotomatiki isipokuwa ukighairi zaidi ya masaa 24 kabla ya tarehe ya mwisho wa kipindi cha mkataba wa premium",
+  "autoRenewNotice": "・Usajili wa Premium utajisasisha kiotomatiki isipokuwa uughairi angalau saa 24 kabla ya kipindi cha usajili kuisha",
   "cancelAutoRenewInfo": "・Baada ya ununuzi, kusitisha upyaji otomatiki kunaweza kufanywa katika mipangilio ya akaunti ya programu ya {storeName}. (Kusitisha upyaji otomatiki hakuwezi kufanywa ndani ya programu).",
   "moreDetails": "Maelezo zaidi",
   "restorePurchase": "Taarifa za ununuzi zimerudishwa",

@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Oplysninger i henhold til Japans lov om særlige handelstransaktioner",
   "premiumTermsNotice3": "Læs dem gerne, før du abonnerer",
-  "autoRenewNotice": "・Abonnementsperioden fornyes automatisk, medmindre du opsiger mindst 24 timer før premium-abonnementsperiodens udløbsdato",
+  "autoRenewNotice": "・Dit Premium-abonnement fornyes automatisk, medmindre du opsiger det mindst 24 timer før abonnementsperiodens udløb",
   "cancelAutoRenewInfo": "・Efter køb kan du opsige automatisk fornyelse i kontoindstillingerne i {storeName}-appen. (Du kan ikke opsige automatisk fornyelse inde fra appen).",
   "moreDetails": "Læs mere",
   "restorePurchase": "Købsinformationen er genoprettet",

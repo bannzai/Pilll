@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Angaben gemäß dem japanischen Gesetz über bestimmte Handelsgeschäfte",
   "premiumTermsNotice3": "Lies sie dir bitte durch, bevor du das Abo abschließt",
-  "autoRenewNotice": "• Sofern Sie nicht mindestens 24 Stunden vor Ablauf der Premium-Abonnementlaufzeit kündigen, verlängert sich das Abonnement automatisch.",
+  "autoRenewNotice": "・Dein Premium-Abo verlängert sich automatisch, wenn du es nicht mindestens 24 Stunden vor Ablauf des Abozeitraums kündigst",
   "cancelAutoRenewInfo": "・Nach dem Kauf kann die Kündigung der automatischen Verlängerung in den Kontoeinstellungen der {storeName}-App vorgenommen werden. (Die Kündigung der automatischen Verlängerung ist nicht innerhalb der App möglich).",
   "moreDetails": "Mehr Details",
   "restorePurchase": "Käufe wurden wiederhergestellt",

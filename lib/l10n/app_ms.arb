@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Maklumat di bawah undang-undang Jepun mengenai transaksi perdagangan tertentu",
   "premiumTermsNotice3": "Sila semak dahulu sebelum melanggan",
-  "autoRenewNotice": "・Tempoh langganan akan diperbaharui secara automatik melainkan anda membatalkan sekurang-kurangnya 24 jam sebelum tarikh tamat tempoh langganan premium",
+  "autoRenewNotice": "・Langganan premium akan diperbaharui secara automatik melainkan anda membatalkannya sekurang-kurangnya 24 jam sebelum tempoh langganan tamat",
   "cancelAutoRenewInfo": "・Selepas pembelian, pembatalan pembaharuan automatik boleh dilakukan dalam tetapan akaun aplikasi {storeName}. (Pembatalan pembaharuan automatik tidak boleh dilakukan dari dalam aplikasi).",
   "moreDetails": "Lihat butiran",
   "restorePurchase": "Maklumat pembelian telah dipulihkan",

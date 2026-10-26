@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Tájékoztatás a meghatározott kereskedelmi ügyletekről szóló japán törvény alapján",
   "premiumTermsNotice3": "Az előfizetés előtt kérjük, olvasd el őket",
-  "autoRenewNotice": "• A prémium szerződési időszak automatikusan megújul, amennyiben nem mondja le legalább 24 órával a szerződési időszak lejárata előtt",
+  "autoRenewNotice": "・A prémium előfizetés automatikusan megújul, ha nem mondod le legalább 24 órával az előfizetési időszak vége előtt",
   "cancelAutoRenewInfo": "・ A vásárlás után az automatikus megújítás lemondása a {storeName} alkalmazás fiókbeállításaiban történhet. (Az automatikus megújítás lemondása az alkalmazáson belülről nem lehetséges.)",
   "moreDetails": "Bővebben",
   "restorePurchase": "Vásárlási adatok visszaállítva",

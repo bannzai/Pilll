@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informatie volgens de Japanse wet op specifieke handelstransacties",
   "premiumTermsNotice3": "Lees ze even door voordat je een abonnement afsluit",
-  "autoRenewNotice": "・Tenzij u uw premium abonnement minimaal 24 uur voor de einddatum van de abonnementsperiode opzegt, wordt het abonnement automatisch verlengd",
+  "autoRenewNotice": "・Je premiumabonnement wordt automatisch verlengd, tenzij je het minstens 24 uur voor het einde van de abonnementsperiode opzegt",
   "cancelAutoRenewInfo": "・Na aankoop kan de automatische verlenging worden geannuleerd in de accountinstellingen van de {storeName}-app. (Automatische verlenging kan niet vanuit deze app worden geannuleerd).",
   "moreDetails": "Meer details",
   "restorePurchase": "Je aankopen zijn hersteld",

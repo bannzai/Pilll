@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informations prévues par la loi japonaise sur certaines transactions commerciales",
   "premiumTermsNotice3": "Veuillez les consulter avant de vous abonner",
-  "autoRenewNotice": "• Votre abonnement sera automatiquement renouvelé sauf si vous l'annulez au moins 24 heures avant la fin de votre période d'abonnement premium.",
+  "autoRenewNotice": "・Votre abonnement Premium est renouvelé automatiquement, sauf si vous le résiliez au moins 24 heures avant la fin de la période d’abonnement",
   "cancelAutoRenewInfo": "• Après l'achat, vous pouvez annuler le renouvellement automatique dans les paramètres du compte de l'application {storeName}. (Le renouvellement automatique ne peut pas être annulé depuis cette application).",
   "moreDetails": "Apprendre encore plus",
   "restorePurchase": "Informations d'achat restaurées",

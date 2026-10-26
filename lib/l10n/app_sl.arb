@@ -186,7 +186,7 @@
   "slashSeparator": "/",
   "premiumTermsNotice2": "Podatki v skladu z japonskim zakonom o določenih trgovinskih poslih",
   "premiumTermsNotice3": "Pred sklenitvijo naročnine jih, prosimo, preberite",
-  "autoRenewNotice": "・Razen če ne odpoveste naročnine najmanj 24 ur pred koncem obdobja Premium naročnine, se bo obdobje naročnine samodejno podaljšalo",
+  "autoRenewNotice": "・Naročnina Premium se samodejno obnovi, če je ne prekličete vsaj 24 ur pred koncem naročniškega obdobja",
   "cancelAutoRenewInfo": "・Po nakupu lahko preklic samodejne podaljšave opravite v nastavitvah računa aplikacije {storeName}. (Preklic samodejne podaljšave iz aplikacije ni mogoč).",
   "moreDetails": "Več podrobnosti",
   "restorePurchase": "Nakupni podatki so bili obnovljeni",
