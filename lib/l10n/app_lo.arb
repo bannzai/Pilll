@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "ແຈ້ງເຕືອນການກິນຢາເມັດ",
   "takePillReminder": "ເຖິງເວລາກິນຢາເມັດແລ້ວເດີ 💊",
   "copyDebugInfo": "ສຳເນົາຂໍ້ມູນການແກ້ໄຂຂໍ້ຜິດພາດ",
-  "cancel": "ຍົກ​ເລີກ",
+  "cancel": "ຍົກເລີກ",
   "signOut": "ອອກຈາກລະບົບ",
   "autoAddPillSheetGroup": "ການເພີ່ມກຸ່ມແຜ່ນຢາອັດຕະໂນມັດ",
   "autoAddNewSheetAfterCurrentEnds": "ເມື່ອກຸ່ມແຜ່ນຢາຄຸມກຳເນີດປັດຈຸບັນສິ້ນສຸດແລ້ວ, ແຜ່ນໃໝ່ຈະຖືກເພີ່ມໂດຍອັດຕະໂນມັດ",

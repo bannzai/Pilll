@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "পিল খাওয়ার বিজ্ঞপ্তি",
   "takePillReminder": "আপনার পিল খাওয়ার সময় হয়েছে 💊",
   "copyDebugInfo": "ডিবাগ তথ্য কপি করুন",
-  "cancel": "বাতিল",
+  "cancel": "বাতিল করুন",
   "signOut": "সাইন আউট",
   "autoAddPillSheetGroup": "স্বয়ংক্রিয় পিল শিট গ্রুপ সংযোজন",
   "autoAddNewSheetAfterCurrentEnds": "বর্তমান পিল শিট গ্রুপ শেষ হলে, স্বয়ংক্রিয়ভাবে একটি নতুন শিট যোগ করা হবে",

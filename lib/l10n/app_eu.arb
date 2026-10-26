@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "Pilula hartzeko abisuak",
   "takePillReminder": "Pilula hartzeko ordua da 💊",
   "copyDebugInfo": "Kopiatu arazketa-informazioa",
-  "cancel": "Ezeztatu",
+  "cancel": "Utzi",
   "signOut": "Saioa itxi",
   "autoAddPillSheetGroup": "Pilula orri taldeen gehiketa automatikoa",
   "autoAddNewSheetAfterCurrentEnds": "Oraingo pilula-orri taldea amaitzen denean, orri berria automatikoki gehituko da",

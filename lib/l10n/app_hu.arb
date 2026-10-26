@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "Tablettaszedési emlékeztetők",
   "takePillReminder": "Itt az ideje a tablettád szedésének 💊",
   "copyDebugInfo": "Hibakeresési adatok másolása",
-  "cancel": "Mégsem",
+  "cancel": "Mégse",
   "signOut": "Kijelentkezés",
   "autoAddPillSheetGroup": "Automatikus tablettacsomag-csoport hozzáadás",
   "autoAddNewSheetAfterCurrentEnds": "A jelenlegi tablettacsomag befejezése után automatikusan új csomagot ad hozzá",

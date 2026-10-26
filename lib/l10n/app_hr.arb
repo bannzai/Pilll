@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "Podsjetnici za uzimanje pilule",
   "takePillReminder": "Vrijeme je da uzmete pilulu 💊",
   "copyDebugInfo": "Kopirajte podatke za otklanjanje pogrešaka",
-  "cancel": "Otkaži",
+  "cancel": "Odustani",
   "signOut": "Odjava",
   "autoAddPillSheetGroup": "Automatsko dodavanje grupa pilula",
   "autoAddNewSheetAfterCurrentEnds": "Kada se završi trenutni paket pilula, automatski će se dodati novi paket",

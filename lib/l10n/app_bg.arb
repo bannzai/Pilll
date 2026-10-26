@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "Напомняния за прием на хапчето",
   "takePillReminder": "Време е за хапчето ви 💊",
   "copyDebugInfo": "Копирайте информацията за отстраняване на грешки",
-  "cancel": "Отмени",
+  "cancel": "Отказ",
   "signOut": "Изход",
   "autoAddPillSheetGroup": "Автоматично добавяне на група таблетки",
   "autoAddNewSheetAfterCurrentEnds": "След като настоящата група блистери приключи, автоматично ще се добави нов блистер",

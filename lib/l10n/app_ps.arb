@@ -39,7 +39,7 @@
   "takePillReminderChannelName": "د ګولۍ اخیستلو یادونې",
   "takePillReminder": "ستاسو د ګولۍ خوړلو وخت دی 💊",
   "copyDebugInfo": "د تېروتنو د موندلو معلومات کاپي کړئ",
-  "cancel": "لغوه",
+  "cancel": "لغوه کړئ",
   "signOut": "بهر ته ووتل",
   "autoAddPillSheetGroup": "د ګولیو د پاڼې ګروپ خودکار اضافه کول",
   "autoAddNewSheetAfterCurrentEnds": "کله چې د اوسني د ګولۍ شیټ ګروپ پای ته ورسیږي، نوی شیټ به په اتوماتیک ډول اضافه شي",
