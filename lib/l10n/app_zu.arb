@@ -175,7 +175,7 @@
   "registerWith": "Sicela ubhalise usebenzisa i-{loginName}",
   "premiumRegistrationComplete": "Ukubhalisela i-Pilll i-Premium sekuqediwe",
   "thankYouForRegistration": "Siyabonga ngokubhalisa.\nManje usungasebenzisa zonke izici!",
-  "limitedTimeDiscount": "Manje kukhona intengo ekhethekile ozoyisebenzisa unaphakade",
+  "limitedTimeDiscount": "Sicela ubhalise manje ngentengo ekhethekile, uqhubeke nokusebenzisa ngale ntengo",
   "standardMonthlyPlan": "Uhlelo lwenyanga olujwayelekile",
   "annualPlan": "Iplani lonyaka",
   "annualPrice": "{annualPackageStoreProductPriceString}/ngonyaka",

@@ -175,7 +175,7 @@
   "registerWith": "Regisztráció {loginName} használatával",
   "premiumRegistrationComplete": "A Pilll prémium regisztráció befejeződött",
   "thankYouForRegistration": "Köszönjük a regisztrációt.\nMostantól minden funkciót használhatsz!",
-  "limitedTimeDiscount": "Most különleges áron mindörökre használható",
+  "limitedTimeDiscount": "Fizess elő most kedvezményes áron, és tartsd meg ezt az árat",
   "standardMonthlyPlan": "Normál havi csomag",
   "annualPlan": "Éves csomag",
   "annualPrice": "{annualPackageStoreProductPriceString}/év",

@@ -175,7 +175,7 @@
   "registerWith": "Skráðu þig með {loginName}",
   "premiumRegistrationComplete": "Skráningu í Pilll Premium er lokið",
   "thankYouForRegistration": "Takk fyrir að skrá þig.\nNú geturðu notað alla eiginleika appsins!",
-  "limitedTimeDiscount": "Sérstakt verð núna - notaðu að eilífu",
+  "limitedTimeDiscount": "Gerðu áskrift núna á sérstöku verði og haltu því verði",
   "standardMonthlyPlan": "Venjuleg mánaðaráætlun",
   "annualPlan": "Ársáskrift",
   "annualPrice": "{annualPackageStoreProductPriceString}/ár",

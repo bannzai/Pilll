@@ -175,7 +175,7 @@
   "registerWith": "د {loginName} له لارې نوم‌لیکنه وکړئ",
   "premiumRegistrationComplete": "د Pilll پریمیم نوم‌لیکنه بشپړه شوه",
   "thankYouForRegistration": "د نوم‌لیکنې لپاره مننه.\nاوس تاسو له ټولو ځانګړنو ګټه اخیستلی شئ!",
-  "limitedTimeDiscount": "اوس د محدود بیه سره د تل لپاره وکاروئ",
+  "limitedTimeDiscount": "اوس په ځانګړې بیه ګډون وکړئ او همدا بیه وساتئ",
   "standardMonthlyPlan": "معمولي میاشتنۍ پلان",
   "annualPlan": "کلني پلان",
   "annualPrice": "{annualPackageStoreProductPriceString}/کال",

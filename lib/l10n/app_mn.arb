@@ -175,7 +175,7 @@
   "registerWith": "{loginName}-ээр бүртгүүлнэ үү",
   "premiumRegistrationComplete": "Pilll премиум бүртгэл дууссан",
   "thankYouForRegistration": "Бүртгүүлсэнд баярлалаа.\nОдоо та бүх боломжийг ашиглах боломжтой боллоо!",
-  "limitedTimeDiscount": "Одоо онцгой үнээр үүрд ашиглах боломжтой",
+  "limitedTimeDiscount": "Одоо тусгай үнээр захиалаад, цаашид энэ үнээрээ ашиглаарай",
   "standardMonthlyPlan": "Хэвийн сарын багц",
   "annualPlan": "Жилийн төлөвлөгөө",
   "annualPrice": "{annualPackageStoreProductPriceString}/жил",

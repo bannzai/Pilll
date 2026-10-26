@@ -175,7 +175,7 @@
   "registerWith": "{loginName}తో నమోదు చేసుకోండి",
   "premiumRegistrationComplete": "Pilll ప్రీమియం నమోదు పూర్తయింది",
   "thankYouForRegistration": "నమోదు చేసుకున్నందుకు ధన్యవాదాలు.\nఇప్పుడు మీరు అన్ని ఫీచర్‌లను ఉపయోగించవచ్చు!",
-  "limitedTimeDiscount": "ఇప్పుడు ప్రత్యేక ధరలో ఎల్లప్పుడూ ఉపయోగించవచ్చు",
+  "limitedTimeDiscount": "ఇప్పుడే ప్రత్యేక ధరతో చందా తీసుకోండి, అదే ధరతో వాడటం కొనసాగించండి",
   "standardMonthlyPlan": "సాధారణ నెలవారీ ప్లాన్",
   "annualPlan": "వార్షిక ప్లాన్",
   "annualPrice": "{annualPackageStoreProductPriceString}/సంవత్సరం",

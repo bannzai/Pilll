@@ -175,7 +175,7 @@
   "registerWith": "{loginName} से साइन अप करें",
   "premiumRegistrationComplete": "Pilll प्रीमियम का पंजीकरण पूरा हो गया है",
   "thankYouForRegistration": "पंजीकरण के लिए धन्यवाद।\nअब आप सभी सुविधाओं का उपयोग कर सकती हैं!",
-  "limitedTimeDiscount": "अभी सीमित कीमत में हमेशा के लिए उपयोग करें",
+  "limitedTimeDiscount": "अभी विशेष कीमत पर सदस्यता लें और यही कीमत आगे भी पाएं",
   "standardMonthlyPlan": "सामान्य मासिक प्लान",
   "annualPlan": "वार्षिक प्लान",
   "annualPrice": "{annualPackageStoreProductPriceString}/साल",

@@ -175,7 +175,7 @@
   "registerWith": "สมัครด้วย {loginName}",
   "premiumRegistrationComplete": "สมัคร Pilll พรีเมียมเรียบร้อยแล้ว",
   "thankYouForRegistration": "ขอบคุณที่ลงทะเบียนค่ะ\nตอนนี้ใช้ฟีเจอร์ทั้งหมดได้แล้วค่ะ!",
-  "limitedTimeDiscount": "ตอนนี้ราคาพิเศษ ใช้ได้ตลอดไป",
+  "limitedTimeDiscount": "สมัครตอนนี้ในราคาพิเศษ แล้วใช้ต่อในราคาเดิมได้ตลอดค่ะ",
   "standardMonthlyPlan": "แผนรายเดือนปกติ",
   "annualPlan": "แผนรายปี",
   "annualPrice": "{annualPackageStoreProductPriceString}/ปี",

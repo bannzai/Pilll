@@ -175,7 +175,7 @@
   "registerWith": "Գրանցվեք {loginName}-ի միջոցով",
   "premiumRegistrationComplete": "Pilll պրեմիում բաժանորդագրությունն ավարտված է",
   "thankYouForRegistration": "Շնորհակալություն գրանցվելու համար։\nԱյժմ Դուք կարող եք օգտվել բոլոր հնարավորություններից։",
-  "limitedTimeDiscount": "Հիմա հատուկ գնով՝ մշտապես օգտագործեք",
+  "limitedTimeDiscount": "Բաժանորդագրվեք հիմա հատուկ գնով և պահպանեք այդ գինը",
   "standardMonthlyPlan": "Սովորական ամսական պլան",
   "annualPlan": "տարեկան պլան",
   "annualPrice": "{annualPackageStoreProductPriceString}/տարի",

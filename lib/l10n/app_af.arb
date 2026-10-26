@@ -175,7 +175,7 @@
   "registerWith": "Registreer met {loginName}",
   "premiumRegistrationComplete": "Registrasie vir Pilll Premium voltooi",
   "thankYouForRegistration": "Dankie dat jy geregistreer het.\nJy kan nou al die funksies gebruik!",
-  "limitedTimeDiscount": "Nou teen beperkte prys vir altyd",
+  "limitedTimeDiscount": "Sluit nou teen ’n spesiale prys aan en behou dié prys",
   "standardMonthlyPlan": "Standaard Maandelikse Plan",
   "annualPlan": "Jaarlikse Plan",
   "annualPrice": "{annualPackageStoreProductPriceString}/jaar",

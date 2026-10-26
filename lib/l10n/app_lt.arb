@@ -175,7 +175,7 @@
   "registerWith": "Registruokitės per {loginName}",
   "premiumRegistrationComplete": "Registracija į Pilll Premium baigta",
   "thankYouForRegistration": "Dėkojame, kad užsiregistravote.\nDabar galite naudotis visomis funkcijomis!",
-  "limitedTimeDiscount": "Dabar už ribotą kainą - naudokite visam laikui",
+  "limitedTimeDiscount": "Užsisakykite dabar už specialią kainą ir išsaugokite ją ateityje",
   "standardMonthlyPlan": "Standartinis mėnesinis planas",
   "annualPlan": "Metinis planas",
   "annualPrice": "{annualPackageStoreProductPriceString}/metų",

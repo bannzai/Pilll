@@ -175,7 +175,7 @@
   "registerWith": "הרשמה באמצעות {loginName}",
   "premiumRegistrationComplete": "ההרשמה ל־Pilll פרימיום הושלמה",
   "thankYouForRegistration": "תודה על ההרשמה.\nכל התכונות זמינות כעת לשימוש!",
-  "limitedTimeDiscount": "עכשיו במחיר מיוחד לכל החיים",
+  "limitedTimeDiscount": "הרשמה עכשיו במחיר מיוחד תאפשר להמשיך ליהנות מאותו מחיר",
   "standardMonthlyPlan": "מנוי חודשי רגיל",
   "annualPlan": "מנוי שנתי",
   "annualPrice": "{annualPackageStoreProductPriceString}/שנה",

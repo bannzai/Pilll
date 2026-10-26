@@ -175,7 +175,7 @@
   "registerWith": "በ{loginName} ይመዝገቡ",
   "premiumRegistrationComplete": "የPilll ፕሪሚየም ምዝገባ ተጠናቋል",
   "thankYouForRegistration": "ስለተመዘገቡ እናመሰግናለን።\nአሁን ሁሉንም ባህሪያት መጠቀም ይችላሉ!",
-  "limitedTimeDiscount": "አሁን በልዩ ዋጋ ለዘላለም ይጠቀሙ",
+  "limitedTimeDiscount": "አሁን በልዩ ዋጋ ይመዝገቡ፤ በዚያው ዋጋ መጠቀምዎን ይቀጥሉ",
   "standardMonthlyPlan": "መደበኛ ወርሃዊ እቅድ",
   "annualPlan": "ዓመታዊ እቅድ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ዓመት",

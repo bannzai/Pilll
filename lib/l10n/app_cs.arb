@@ -175,7 +175,7 @@
   "registerWith": "Zaregistrovat se přes {loginName}",
   "premiumRegistrationComplete": "Registrace do Pilll Premium je dokončena",
   "thankYouForRegistration": "Děkujeme za registraci.\nNyní můžete využívat všechny funkce!",
-  "limitedTimeDiscount": "Nyní za omezenou cenu na vždy",
+  "limitedTimeDiscount": "Předplaťte si nyní za speciální cenu a ponechte si ji i nadále",
   "standardMonthlyPlan": "Standardní měsíční plán",
   "annualPlan": "Roční plán",
   "annualPrice": "{annualPackageStoreProductPriceString}/rok",

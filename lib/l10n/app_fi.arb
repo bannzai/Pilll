@@ -175,7 +175,7 @@
   "registerWith": "Rekisteröidy {loginName}-tilillä",
   "premiumRegistrationComplete": "Pilll Premium -tilaus on valmis",
   "thankYouForRegistration": "Kiitos rekisteröitymisestä.\nVoit nyt käyttää kaikkia ominaisuuksia!",
-  "limitedTimeDiscount": "Nyt erikoishinnalla - säilytä hinta ikuisesti",
+  "limitedTimeDiscount": "Tilaa nyt erikoishintaan ja säilytä sama hinta",
   "standardMonthlyPlan": "Normaali kuukausitilaus",
   "annualPlan": "Vuosipaketti",
   "annualPrice": "{annualPackageStoreProductPriceString}/vuosi",

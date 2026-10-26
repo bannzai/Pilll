@@ -175,7 +175,7 @@
   "registerWith": "Eman izena {loginName} bidez",
   "premiumRegistrationComplete": "Pilll Premiumen erregistroa osatu da",
   "thankYouForRegistration": "Eskerrik asko erregistratzeagatik.\nOrain funtzio guztiak erabil ditzakezu!",
-  "limitedTimeDiscount": "Orain prezio bereziarekin betirako erabil dezakezu",
+  "limitedTimeDiscount": "Harpidetu orain prezio berezian, eta mantendu prezio hori",
   "standardMonthlyPlan": "Hilabeteko plan arrunta",
   "annualPlan": "urteko plana",
   "annualPrice": "{annualPackageStoreProductPriceString}/urte",

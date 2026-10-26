@@ -175,7 +175,7 @@
   "registerWith": "Reģistrējieties ar {loginName}",
   "premiumRegistrationComplete": "Reģistrācija Pilll Premium ir pabeigta",
   "thankYouForRegistration": "Paldies par reģistrēšanos.\nTagad jums ir pieejamas visas funkcijas!",
-  "limitedTimeDiscount": "Tagad īpašā cenā uz visiem laikiem",
+  "limitedTimeDiscount": "Abonējiet tagad par īpašu cenu un saglabājiet šo cenu",
   "standardMonthlyPlan": "Standarta mēneša plāns",
   "annualPlan": "Gada plāns",
   "annualPrice": "{annualPackageStoreProductPriceString}/gadā",

@@ -175,7 +175,7 @@
   "registerWith": "Registreeru {loginName} kaudu",
   "premiumRegistrationComplete": "Pilll premiumiga registreerumine on lõpetatud",
   "thankYouForRegistration": "Aitäh registreerumise eest.\nNüüd saad kasutada kõiki funktsioone!",
-  "limitedTimeDiscount": "Nüüd piiratud hinnaga igaveseks",
+  "limitedTimeDiscount": "Telli nüüd erihinnaga ja säilita see hind",
   "standardMonthlyPlan": "Tavaline kuutasu",
   "annualPlan": "Aastaline plaan",
   "annualPrice": "{annualPackageStoreProductPriceString}/aasta",

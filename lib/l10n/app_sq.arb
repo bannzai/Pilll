@@ -175,7 +175,7 @@
   "registerWith": "Regjistrohuni me {loginName}",
   "premiumRegistrationComplete": "Regjistrimi për Pilll premium përfundoi",
   "thankYouForRegistration": "Faleminderit që u regjistruat.\nTani mund t'i përdorni të gjitha funksionet!",
-  "limitedTimeDiscount": "Tani me çmim special - përdore përgjithmonë",
+  "limitedTimeDiscount": "Abonohuni tani me çmim të veçantë dhe ruajeni atë çmim",
   "standardMonthlyPlan": "Plan mujor standard",
   "annualPlan": "Plan vjetor",
   "annualPrice": "{annualPackageStoreProductPriceString}/vit",

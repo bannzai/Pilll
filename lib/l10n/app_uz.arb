@@ -175,7 +175,7 @@
   "registerWith": "{loginName} orqali roʻyxatdan oʻting",
   "premiumRegistrationComplete": "Pilll Premium roʻyxatdan oʻtish yakunlandi",
   "thankYouForRegistration": "Roʻyxatdan oʻtganingiz uchun rahmat.\nEndi barcha funksiyalardan foydalanishingiz mumkin!",
-  "limitedTimeDiscount": "Hozir maxsus narxda abadiy foydalaning",
+  "limitedTimeDiscount": "Hozir maxsus narxda obuna bo‘ling va shu narxni saqlab qoling",
   "standardMonthlyPlan": "Oddiy oylik reja",
   "annualPlan": "Yillik reja",
   "annualPrice": "{annualPackageStoreProductPriceString}/yil",

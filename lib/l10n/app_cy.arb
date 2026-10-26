@@ -175,7 +175,7 @@
   "registerWith": "Cofrestrwch gyda {loginName}",
   "premiumRegistrationComplete": "Cofrestru ar gyfer Pilll premiwm wedi'i gwblhau",
   "thankYouForRegistration": "Diolch am gofrestru.\nGallwch chi ddefnyddio'r holl nodweddion nawr!",
-  "limitedTimeDiscount": "Pris arbennig nawr - cadwch am byth",
+  "limitedTimeDiscount": "Tanysgrifiwch nawr am bris arbennig a chadwch y pris hwnnw",
   "standardMonthlyPlan": "Cynllun Misol Safonol",
   "annualPlan": "Cynllun Blynyddol",
   "annualPrice": "{annualPackageStoreProductPriceString}/blwyddyn",

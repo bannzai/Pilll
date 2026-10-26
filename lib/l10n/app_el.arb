@@ -175,7 +175,7 @@
   "registerWith": "Εγγραφείτε με {loginName}",
   "premiumRegistrationComplete": "Η εγγραφή στο Pilll Premium ολοκληρώθηκε",
   "thankYouForRegistration": "Σας ευχαριστούμε για την εγγραφή σας.\nΤώρα μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες!",
-  "limitedTimeDiscount": "Τώρα με ειδική τιμή για πάντα",
+  "limitedTimeDiscount": "Εγγραφείτε τώρα στην ειδική τιμή και διατηρήστε την",
   "standardMonthlyPlan": "Κανονικό Μηνιαίο Πλάνο",
   "annualPlan": "Ετήσιο Πλάνο",
   "annualPrice": "{annualPackageStoreProductPriceString}/έτος",

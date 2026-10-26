@@ -175,7 +175,7 @@
   "registerWith": "Регистрирайте се с {loginName}",
   "premiumRegistrationComplete": "Регистрацията за Pilll премиум е завършена",
   "thankYouForRegistration": "Благодарим ви за регистрацията.\nВече можете да използвате всички функции!",
-  "limitedTimeDiscount": "Сега със специална цена завинаги",
+  "limitedTimeDiscount": "Абонирайте се сега на специална цена и я запазете занапред",
   "standardMonthlyPlan": "Стандартен месечен план",
   "annualPlan": "Годишен план",
   "annualPrice": "{annualPackageStoreProductPriceString}/година",

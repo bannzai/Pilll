@@ -175,7 +175,7 @@
   "registerWith": "Đăng ký bằng {loginName}",
   "premiumRegistrationComplete": "Đăng ký Pilll Premium đã hoàn tất",
   "thankYouForRegistration": "Cảm ơn bạn đã đăng ký.\nGiờ bạn có thể dùng tất cả tính năng!",
-  "limitedTimeDiscount": "Ngay bây giờ với giá ưu đãi đặc biệt, sử dụng vĩnh viễn",
+  "limitedTimeDiscount": "Đăng ký ngay với giá ưu đãi và tiếp tục dùng với mức giá đó",
   "standardMonthlyPlan": "Gói Tháng Thông Thường",
   "annualPlan": "Gói hàng năm",
   "annualPrice": "{annualPackageStoreProductPriceString}/năm",
