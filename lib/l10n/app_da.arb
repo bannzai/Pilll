@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Tilpas nummeret på dagens p-pille",
   "todayPillNumberFeatureAppealShortDescription": "Hvis pillenummeret ikke passer, kan du rette det i indstillingerne",
   "todayPillNumberFeatureAppealHeadline": "Du kan ændre dagens pillenummer",
-  "todayPillNumberFeatureAppealBody": "Hvis nummeret på pillekortet ikke stemmer overens med den faktiske indtagelse på grund af glemte piller eller forveksling, kan du manuelt justere dagens pillenummer. Du kan også åbne den samme skærm fra pillenummervisningen på startskærmen.",
+  "todayPillNumberFeatureAppealBody": "Hvis du har glemt en p-pille eller taget den forkerte, så nummeret på dit pillekort ikke passer med den p-pille, du har taget, kan du selv rette dagens pillenummer. Du kan også åbne den samme skærm via pillenummeret på hjemmeskærmen.",
   "restDurationFeatureAppealTitle": "Registrer pillepause",
   "restDurationFeatureAppealShortDescription": "Præcis styring af pauser og afbrydelser",
   "restDurationFeatureAppealHeadline": "Sæt pilleindtagelse på pause",

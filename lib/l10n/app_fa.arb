@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "شماره قرص امروز را تنظیم کنید",
   "todayPillNumberFeatureAppealShortDescription": "اگر شماره قرص درست نیست، می‌توانید آن را در تنظیمات اصلاح کنید",
   "todayPillNumberFeatureAppealHeadline": "می‌توانید شماره قرص امروز را تغییر دهید",
-  "todayPillNumberFeatureAppealBody": "وقتی به دلیل فراموشی یا اشتباه، شماره روی برگه قرص با مصرف واقعی همخوانی ندارد، می‌توانید شماره قرص امروز را به‌صورت دستی تنظیم کنید. همچنین می‌توانید همین صفحه را از نمایش عدد قرص در صفحه اصلی باز کنید.",
+  "todayPillNumberFeatureAppealBody": "اگر قرصی را فراموش کرده‌اید یا قرص‌ها را اشتباه گرفته‌اید و شماره روی ورق قرص با قرصی که مصرف کرده‌اید یکی نیست، می‌توانید شماره قرص امروز را دستی تنظیم کنید. همین صفحه را از شماره قرص در صفحهٔ اصلی هم می‌توانید باز کنید.",
   "restDurationFeatureAppealTitle": "ثبت دوره استراحت مصرف",
   "restDurationFeatureAppealShortDescription": "مدیریت دقیق وقفه و قطع مصرف",
   "restDurationFeatureAppealHeadline": "استراحت از مصرف قرص",

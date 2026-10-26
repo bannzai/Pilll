@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Prilagodite številko današnje tabletke",
   "todayPillNumberFeatureAppealShortDescription": "Če se številka tablete ne ujema, jo lahko popravite v nastavitvah",
   "todayPillNumberFeatureAppealHeadline": "Za danes lahko spremenite številka tablete",
-  "todayPillNumberFeatureAppealBody": "Če se zaradi pozabljanja ali zamenjave številke na listu tabletk in dejanskega jemanja pojavijo neskladja, lahko ročno uskladite številko tablete za današnji vnos. Enak zaslon lahko odprete tudi z zaslona s številko tablete na domači strani.",
+  "todayPillNumberFeatureAppealBody": "Če tableta ni bila vzeta ali so se tablete zamenjale in številka na ploščici ne ustreza več vzeti tableti, lahko današnjo številko tablete ročno popravite. Isti zaslon lahko odprete tudi prek številke tablete na domačem zaslonu.",
   "restDurationFeatureAppealTitle": "Zabeležite premor pri jemanju",
   "restDurationFeatureAppealShortDescription": "Natančno upravljanje odmorov in prekinitev jemanja",
   "restDurationFeatureAppealHeadline": "Vzeti premor pri jemanju tablet",

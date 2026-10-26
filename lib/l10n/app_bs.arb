@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Možete uskladiti broj današnje pilule",
   "todayPillNumberFeatureAppealShortDescription": "Ako se broj pilule ne podudara, možete ga ispraviti u postavkama",
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",
-  "todayPillNumberFeatureAppealBody": "Kada se broj na listu tableta i stvarno uzimanje ne podudaraju zbog zaboravljanja ili zamjene tablete, možete ručno ponovo podesiti broj tablete koji uzimate danas. Isti ekran možete otvoriti i putem prikaza broja tableta na početnom ekranu.",
+  "todayPillNumberFeatureAppealBody": "Ako ste zaboravili uzeti pilulu ili ste zamijenili pilule pa broj na blisteru ne odgovara onoj koju ste uzeli, možete ručno podesiti današnji broj pilule. Isti ekran možete otvoriti i dodirom na broj pilule na početnom ekranu.",
   "restDurationFeatureAppealTitle": "Zabilježi period odmora od uzimanja",
   "restDurationFeatureAppealShortDescription": "Precizno upravljanje pauzama i prekidima",
   "restDurationFeatureAppealHeadline": "Pauziranje uzimanja pilule",

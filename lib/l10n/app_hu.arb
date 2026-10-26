@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "A mai tabletta sorszámának beállítása",
   "todayPillNumberFeatureAppealShortDescription": "Ha nem stimmel a tabletta száma, a beállításokban módosíthatod",
   "todayPillNumberFeatureAppealHeadline": "Megváltoztathatod a mai tablettaszámot",
-  "todayPillNumberFeatureAppealBody": "Ha a bliszteren szereplő szám és a tényleges bevétel eltolódott (például elfelejtés vagy összekeverés miatt), manuálisan beállíthatja, melyik tablettát kell ma bevennie. Ugyanezt a képernyőt megnyithatja a Kezdőlap tablettaszám‑kijelzéséről is.",
+  "todayPillNumberFeatureAppealBody": "Ha kimaradt egy tabletta, vagy összekeveredtek a tabletták, és a tablettacsomag száma már nem egyezik a ténylegesen beszedett tablettával, kézzel módosíthatod a mai tablettaszámot. Ugyanezt a képernyőt a kezdőlapon látható tablettaszámról is megnyithatod.",
   "restDurationFeatureAppealTitle": "Szedésszünet rögzítése",
   "restDurationFeatureAppealShortDescription": "Szünetek és megszakítások pontos kezelése",
   "restDurationFeatureAppealHeadline": "Szünet a fogamzásgátló szedésében",

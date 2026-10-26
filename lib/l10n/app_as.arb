@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "আজিৰ বড়িৰ নম্বৰ মিলাই লওক",
   "todayPillNumberFeatureAppealShortDescription": "পিলৰ নম্বৰ মিল নাখালে, ছেটিংছত সলনি কৰিব পাৰে",
   "todayPillNumberFeatureAppealHeadline": "আপুনি আজিৰ পিল নম্বৰ সলনি কৰিব পাৰে",
-  "todayPillNumberFeatureAppealBody": "পিল খাবলৈ পাহৰি যোৱা বা ভুল কৰাৰ বাবে পিল শ্বীটৰ নম্বৰ আৰু প্ৰকৃত সেৱনৰ মাজত পাৰ্থক্য হ'লে, আজি খাব লগা পিলৰ নম্বৰ হাতেৰে মিলাব পাৰিব। হোমৰ পিল নম্বৰ প্ৰদৰ্শনৰ পৰাও একেটা স্ক্ৰীণ খুলিব পাৰিব।",
+  "todayPillNumberFeatureAppealBody": "পিল খাবলৈ পাহৰিলে বা পিলৰ মাজত ভুল হ’লে পিলৰ ষ্ট্ৰিপত থকা নম্বৰ আৰু আপুনি খোৱা পিলৰ মাজত অমিল হ’ব পাৰে। তেনে হ’লে আজিৰ পিল নম্বৰ নিজে মিলাই ল’ব পাৰে। হোম স্ক্ৰীনত দেখুওৱা পিল নম্বৰত টিপিও একেখন স্ক্ৰীন খুলিব পাৰে।",
   "restDurationFeatureAppealTitle": "ঔষধ সেৱনৰ বিৰতিৰ সময় ৰেকৰ্ড কৰক",
   "restDurationFeatureAppealShortDescription": "বিৰতি আৰু বন্ধ সঠিকভাৱে পৰিচালনা কৰক",
   "restDurationFeatureAppealHeadline": "পিল সেৱন বিৰতি লওক",

@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Bugünkü həb nömrəsini uyğunlaşdırın",
   "todayPillNumberFeatureAppealShortDescription": "Həb nömrəsi uyğun gəlmirsə, onu ayarlarda düzəldə bilərsiniz",
   "todayPillNumberFeatureAppealHeadline": "Bugünkü həb nömrəsini dəyişə bilərsiniz",
-  "todayPillNumberFeatureAppealBody": "Həb vərəqəsindəki nömrə ilə faktiki qəbul arasında uyğunsuzluq baş verdikdə (həb içməyi unutduqda və ya səhv həb götürdükdə), bu günün həb nömrəsini əl ilə düzəltmək mümkündür. Eyni ekranı ana ekrandakı həb rəqəmi göstəricisindən də açmaq olar.",
+  "todayPillNumberFeatureAppealBody": "Həbi qəbul etməyi unutduğunuz və ya həbləri qarışdırdığınız üçün həb blister üzərindəki nömrə qəbul etdiyiniz həblə uyğun gəlmirsə, bugünkü həb nömrə göstəricisini əl ilə düzəldə bilərsiniz. Eyni ekranı ana səhifədəki həb nömrə göstəricisindən də aça bilərsiniz.",
   "restDurationFeatureAppealTitle": "Qəbul fasiləsini qeyd edin",
   "restDurationFeatureAppealShortDescription": "İstirahət və fasilələri dəqiq idarə edin",
   "restDurationFeatureAppealHeadline": "Həbi qəbuluna fasilə vermək",

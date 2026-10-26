@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nomor pil hari ini",
   "todayPillNumberFeatureAppealShortDescription": "Jika nomor pil tidak sesuai, Anda dapat memperbaikinya di pengaturan",
   "todayPillNumberFeatureAppealHeadline": "Anda dapat mengubah nomor pil untuk hari ini",
-  "todayPillNumberFeatureAppealBody": "Jika nomor pada lembar pil tidak sesuai dengan pil yang sebenarnya diminum karena lupa minum atau salah mengambil, Anda dapat menyesuaikan nomor pil yang harus diminum hari ini secara manual. Halaman yang sama juga dapat dibuka dari tampilan angka pil di Beranda.",
+  "todayPillNumberFeatureAppealBody": "Jika Anda lupa minum pil atau tertukar, sehingga nomor pada strip pil tidak sesuai dengan pil yang diminum, Anda dapat menyesuaikan nomor pil hari ini secara manual. Layar yang sama juga dapat dibuka dari nomor pil di beranda.",
   "restDurationFeatureAppealTitle": "Catat periode istirahat minum pil",
   "restDurationFeatureAppealShortDescription": "Kelola jeda dan penghentian pemakaian dengan tepat",
   "restDurationFeatureAppealHeadline": "Berhenti minum pil",

@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "عدلي رقم حبة اليوم",
   "todayPillNumberFeatureAppealShortDescription": "إذا كان رقم الحبة غير صحيح، يمكنكِ تصحيحه من الإعدادات",
   "todayPillNumberFeatureAppealHeadline": "يمكنكِ تغيير رقم الحبة لليوم",
-  "todayPillNumberFeatureAppealBody": "عندما يختلف الرقم الموجود على ورقة الحبوب عن الجرعة الفعلية بسبب النسيان أو الخطأ، يمكنك ضبط رقم الحبة التي ستتناولينها اليوم يدوياً. يمكنك أيضاً فتح نفس الشاشة من خلال عرض رقم الحبة في الصفحة الرئيسية.",
+  "todayPillNumberFeatureAppealBody": "إذا حدث اختلاف بين الرقم على الشريط والحبة التي تناولتِها بسبب نسيان الجرعة أو الخلط بين الحبوب، يمكنكِ تعديل رقم الحبة الخاصة باليوم يدويًا. ويمكنكِ فتح الشاشة نفسها من رقم الحبة المعروض على الصفحة الرئيسية.",
   "restDurationFeatureAppealTitle": "تسجيل فترة توقف تناول الدواء",
   "restDurationFeatureAppealShortDescription": "إدارة دقيقة لفترات التوقف والانقطاع",
   "restDurationFeatureAppealHeadline": "أخذ استراحة من تناول الحبوب",

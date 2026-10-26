@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "आजको चक्कीको नम्बर मिलाउनुहोस्",
   "todayPillNumberFeatureAppealShortDescription": "चक्कीको नम्बर नमिलेमा सेटिङमा सच्याउन सक्नुहुन्छ",
   "todayPillNumberFeatureAppealHeadline": "तपाईं आजको चक्की नम्बर परिवर्तन गर्न सक्नुहुन्छ",
-  "todayPillNumberFeatureAppealBody": "पिल खान बिर्सिएमा वा गलत पिल खाइयो भने पिल शीटको नम्बर र वास्तविक सेवनमा भिन्नता आउँदा, आज खानुपर्ने पिल नम्बर हातले मिलाउन सकिन्छ। गृहपृष्ठको पिल नम्बर प्रदर्शनबाट पनि उही स्क्रिन खोल्न सकिन्छ।",
+  "todayPillNumberFeatureAppealBody": "चक्की खान बिर्सनुभएको वा चक्कीहरू झुक्किनुभएको कारण चक्की पत्तामा भएको नम्बर र वास्तवमा खाएको चक्की नमिलेमा, तपाईं आजको चक्की नम्बर आफैँ मिलाउन सक्नुहुन्छ। गृह स्क्रिनमा देखिने चक्की नम्बरबाट पनि यही स्क्रिन खोल्न सक्नुहुन्छ।",
   "restDurationFeatureAppealTitle": "गोली नखाने अवधि रेकर्ड गर्नुहोस्",
   "restDurationFeatureAppealShortDescription": "विराम र अवरोधको सटीक व्यवस्थापन",
   "restDurationFeatureAppealHeadline": "पिल सेवन बिराम गर्ने",

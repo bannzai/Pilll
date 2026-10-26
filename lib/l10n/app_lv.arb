@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Pielāgojiet šodienas tabletes numuru",
   "todayPillNumberFeatureAppealShortDescription": "Ja tabletes numurs nesakrīt, varat to labot iestatījumos",
   "todayPillNumberFeatureAppealHeadline": "Varat mainīt šodienas tabletes numur",
-  "todayPillNumberFeatureAppealBody": "Ja tablešu loksnē redzamie numuri nesakrīt ar faktisko lietošanu (piemēram, ja esat kādu tableti aizmirsis vai sajaucis), jūs varat manuāli pielāgot šodien lietojamās tabletes numuru. To pašu ekrānu varat atvērt arī no sākuma ekrāna, pieskaroties tabletes numura rādījumam.",
+  "todayPillNumberFeatureAppealBody": "Ja tablete nav lietota vai tabletes ir sajauktas un numurs uz tablešu blistera vairs neatbilst lietotajai tabletei, varat manuāli pielāgot šodienas tabletes numuru. To pašu ekrānu varat atvērt arī no tabletes numura sākuma ekrānā.",
   "restDurationFeatureAppealTitle": "Reģistrēt pauzi lietošanā",
   "restDurationFeatureAppealShortDescription": "Precīza paužu un pārtraukumu vadība",
   "restDurationFeatureAppealHeadline": "Pauzēt tablešu lietošanu",

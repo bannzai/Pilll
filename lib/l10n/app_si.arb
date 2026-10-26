@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "අද පෙත්තේ අංකය සකසන්න",
   "todayPillNumberFeatureAppealShortDescription": "පෙත්තේ අංකය නොගැළපේ නම්, සැකසීම් තුළ එය නිවැරදි කළ හැක",
   "todayPillNumberFeatureAppealHeadline": "ඔබට අද දින පෙති අංකය වෙනස් කළ හැකියි",
-  "todayPillNumberFeatureAppealBody": "අමතක වීමකින් හෝ වැරදීමකින් පිල් ෂීට් එකේ අංකය හා ඇත්තටම ගත් පිළිවෙළ අතර පරතරයක් ඇති වූ විට, අද ගත යුතු පිල් අංකය අතින් නැවත සකසා ගත හැක. හෝම් තිරයේ පිල් අංකය ටැප් කිරීමෙන්ද මෙම තිරයම විවෘත කළ හැක.",
+  "todayPillNumberFeatureAppealBody": "පෙත්තක් ගැනීම අමතක වූ විට හෝ පෙති මාරු වූ විට, පෙති කාඩ්පතේ අංකය ඇත්තටම ගත් පෙත්තට නොගැළපෙන්න පුළුවන්. එවිට ඔබට අද පෙති අංකය අතින් නිවැරදි කළ හැකිය. මුල් තිරයේ පෙන්වන පෙති අංකයෙන්ද එම තිරය විවෘත කළ හැකිය.",
   "restDurationFeatureAppealTitle": "පිල් ගැනීමේ විරාම කාලය සටහන් කරන්න",
   "restDurationFeatureAppealShortDescription": "විරාම සහ අස්වීම් නිවැරදිව කළමනාකරණය කරන්න",
   "restDurationFeatureAppealHeadline": "පිල් භාවිතය අත්හිටුවන්න",

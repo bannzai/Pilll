@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Điều chỉnh số thứ tự viên thuốc hôm nay",
   "todayPillNumberFeatureAppealShortDescription": "Nếu số thứ tự viên thuốc không khớp, bạn có thể chỉnh lại trong phần cài đặt",
   "todayPillNumberFeatureAppealHeadline": "Bạn có thể đổi số thứ tự viên thuốc hôm nay",
-  "todayPillNumberFeatureAppealBody": "Khi số trên vỉ thuốc và việc uống thực tế bị lệch do quên uống hoặc nhầm lẫn, bạn có thể điều chỉnh thủ công số viên cần uống hôm nay. Bạn cũng có thể mở cùng màn hình này từ phần hiển thị số viên trên trang chủ.",
+  "todayPillNumberFeatureAppealBody": "Nếu bạn quên uống thuốc hoặc lấy nhầm viên, khiến số trên vỉ thuốc không còn khớp với viên đã uống, bạn có thể tự chỉnh số thứ tự viên thuốc của hôm nay. Bạn cũng có thể mở cùng màn hình từ số thứ tự viên thuốc hiển thị trên màn hình chính.",
   "restDurationFeatureAppealTitle": "Ghi lại thời gian nghỉ uống thuốc",
   "restDurationFeatureAppealShortDescription": "Quản lý chính xác việc tạm ngưng/gián đoạn uống thuốc",
   "restDurationFeatureAppealHeadline": "Tạm dừng uống thuốc tránh thai",

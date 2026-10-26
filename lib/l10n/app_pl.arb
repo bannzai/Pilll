@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Dostosuj numer dzisiejszej tabletki",
   "todayPillNumberFeatureAppealShortDescription": "Jeśli numer tabletki się nie zgadza, możesz go poprawić w ustawieniach",
   "todayPillNumberFeatureAppealHeadline": "Możesz zmienić numer dzisiejszej tabletki",
-  "todayPillNumberFeatureAppealBody": "Gdy numer na opakowaniu tabletek nie zgadza się z rzeczywistym przyjęciem z powodu zapomnianej lub pomylonej tabletki, możesz ręcznie skorygować numer tabletki przyjmowanej dzisiaj. Tę samą stronę możesz otworzyć również z wyświetlacza numeru tabletki na ekranie głównym.",
+  "todayPillNumberFeatureAppealBody": "Jeśli tabletka nie została przyjęta lub tabletki się pomyliły i numer na bliście nie odpowiada już przyjętej tabletce, możesz ręcznie zmienić dzisiejszy numer tabletki. Ten sam ekran otworzysz także przez numer tabletki na ekranie głównym.",
   "restDurationFeatureAppealTitle": "Rejestruj przerwy w przyjmowaniu tabletek",
   "restDurationFeatureAppealShortDescription": "Dokładne zarządzanie przerwami i odstawieniem",
   "restDurationFeatureAppealHeadline": "Zrób przerwę w przyjmowaniu pigułki",

@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Axusta o número da pílula de hoxe",
   "todayPillNumberFeatureAppealShortDescription": "Se o número da pílula non coincide, podes corrixilo nos axustes",
   "todayPillNumberFeatureAppealHeadline": "Podes cambiar o número de pílula de hoxe",
-  "todayPillNumberFeatureAppealBody": "Cando o número na folla de comprimidos e a toma real non coinciden por esquecer de tomar ou por confusión, pode axustar manualmente o número do comprimido que debe tomar hoxe. Tamén pode acceder á mesma pantalla desde a visualización do número de comprimido na pantalla de inicio.",
+  "todayPillNumberFeatureAppealBody": "Se esqueciches tomar unha pílula ou confundiches as pílulas e o número do blíster xa non coincide coa que tomaches, podes axustar manualmente o número de pílula de hoxe. Tamén podes abrir a mesma pantalla desde o número de pílula que aparece na pantalla de inicio.",
   "restDurationFeatureAppealTitle": "Rexistrar período de descanso da medicación",
   "restDurationFeatureAppealShortDescription": "Xestión precisa de descansos e interrupcións",
   "restDurationFeatureAppealHeadline": "Facer un descanso na toma da pílula",

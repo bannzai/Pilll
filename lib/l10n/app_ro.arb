@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Ajustează numărul pilulei de azi",
   "todayPillNumberFeatureAppealShortDescription": "Dacă numărul pilulei nu corespunde, îl poți corecta în setări",
   "todayPillNumberFeatureAppealHeadline": "Poți schimba numărul pilulei de astăzi",
-  "todayPillNumberFeatureAppealBody": "Când numărul de pe fișa de pastile nu corespunde cu administrarea reală, din cauza uitării sau confuziei, puteți ajusta manual numărul pastilei pe care trebuie să o luați astăzi. Același ecran poate fi deschis și din afișajul numărului de pastile de pe ecranul principal.",
+  "todayPillNumberFeatureAppealBody": "Dacă nu ai luat o pilulă sau ai încurcat pilulele, iar numărul de pe blister nu mai corespunde pilulei luate, poți ajusta manual numărul pilulei de azi. Poți deschide același ecran și din numărul pilulei afișat pe ecranul principal.",
   "restDurationFeatureAppealTitle": "Înregistrează perioada de pauză de la administrare",
   "restDurationFeatureAppealShortDescription": "Gestionare precisă a pauzelor și întreruperilor",
   "restDurationFeatureAppealHeadline": "Pauza administrarea pilulelor",

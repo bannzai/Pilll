@@ -503,7 +503,7 @@
   "todayPillNumberFeatureAppealTitle": "Upravit číslo dnešní pilulky",
   "todayPillNumberFeatureAppealShortDescription": "Pokud číslo pilulky nesouhlasí, můžete ho upravit v nastavení",
   "todayPillNumberFeatureAppealHeadline": "Můžete změnit číslo tablety pro dnešek",
-  "todayPillNumberFeatureAppealBody": "Pokud jste zapomněli užít tabletu nebo ji zaměnili a číslo na blistru se neshoduje se skutečně užitou tabletou, můžete ručně opravit číslo tablety pro dnešní den. Stejnou obrazovku lze otevřít také z číselného zobrazení tablet na domovské obrazovce.",
+  "todayPillNumberFeatureAppealBody": "Pokud jste zapomněli užít tabletu nebo jste tablety zaměnili a číslo na blistru neodpovídá skutečně užité tabletě, můžete dnešní číslo tablety ručně upravit. Stejnou obrazovku otevřete také klepnutím na číslo tablety na úvodní obrazovce.",
   "restDurationFeatureAppealTitle": "Zaznamenat přestávku v užívání",
   "restDurationFeatureAppealShortDescription": "Přesná správa přestávek a přerušení",
   "restDurationFeatureAppealHeadline": "Přerušit užívání pilulky",
