@@ -70,7 +70,7 @@
   "registerAccount": "Opprett konto",
   "reLogin": "Logg inn igjen",
   "authenticationInfoUpdated": "Innloggingsopplysningene dine er oppdatert",
-  "updateAuthenticationInformation": "Oppdater autentiseringsinformasjon",
+  "updateAuthenticationInformation": "Oppdater innloggingsopplysningene dine",
   "registeredWithProvider": "Registrert med {accountTypeProviderName}",
   "linkAccount": "Koble til",
   "withdraw": "Meld av",

@@ -70,7 +70,7 @@
   "registerAccount": "Account aanmaken",
   "reLogin": "Log opnieuw in",
   "authenticationInfoUpdated": "Je inloggegevens zijn bijgewerkt",
-  "updateAuthenticationInformation": "Authenticatiegegevens bijwerken",
+  "updateAuthenticationInformation": "Werk je inloggegevens bij",
   "registeredWithProvider": "Geregistreerd met {accountTypeProviderName}",
   "linkAccount": "Koppelen",
   "withdraw": "Account verwijderen",

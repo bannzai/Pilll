@@ -70,7 +70,7 @@
   "registerAccount": "Fiók létrehozása",
   "reLogin": "Jelentkezz be újra",
   "authenticationInfoUpdated": "A bejelentkezési adataid frissültek",
-  "updateAuthenticationInformation": "Hitelesítési adatok frissítése",
+  "updateAuthenticationInformation": "Bejelentkezési adatok frissítése",
   "registeredWithProvider": "Regisztráltál {accountTypeProviderName}-val",
   "linkAccount": "Összekapcsolás",
   "withdraw": "Kilép",

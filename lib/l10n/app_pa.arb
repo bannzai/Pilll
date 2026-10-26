@@ -70,7 +70,7 @@
   "registerAccount": "ਖਾਤਾ ਬਣਾਓ",
   "reLogin": "ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰੋ",
   "authenticationInfoUpdated": "ਤੁਹਾਡੀ ਲੌਗਇਨ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਹੋ ਗਈ ਹੈ",
-  "updateAuthenticationInformation": "ਪ੍ਰਮਾਣਿਕਤਾ ਦੀ ਜਾਣਕਾਰੀ ਅਪਡੇਟ ਕਰੋ",
+  "updateAuthenticationInformation": "ਲੌਗਇਨ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਕਰੋ",
   "registeredWithProvider": "{accountTypeProviderName} ਨਾਲ ਰਜਿਸਟਰ ਹੋ ਗਿਆ",
   "linkAccount": "ਜੋੜੋ",
   "withdraw": "ਖਾਤਾ ਮਿਟਾਓ",

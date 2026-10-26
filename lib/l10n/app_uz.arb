@@ -70,7 +70,7 @@
   "registerAccount": "Hisob yarating",
   "reLogin": "Qayta kiring",
   "authenticationInfoUpdated": "Kirish maʼlumotlaringiz yangilandi",
-  "updateAuthenticationInformation": "Autentifikatsiya ma'lumotlarini yangilash",
+  "updateAuthenticationInformation": "Kirish maʼlumotlarini yangilang",
   "registeredWithProvider": "{accountTypeProviderName} orqali ro'yxatdan o'tdingiz",
   "linkAccount": "Bog'lash",
   "withdraw": "Chiqib ketish",

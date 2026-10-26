@@ -70,7 +70,7 @@
   "registerAccount": "Crea un compte",
   "reLogin": "Torna a iniciar sessió",
   "authenticationInfoUpdated": "S'han actualitzat les dades d'accés",
-  "updateAuthenticationInformation": "Actualitza les credencials",
+  "updateAuthenticationInformation": "Actualitza les dades d'inici de sessió",
   "registeredWithProvider": "T'has registrat amb {accountTypeProviderName}",
   "linkAccount": "Vincular",
   "withdraw": "Donar-se de baixa",

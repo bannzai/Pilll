@@ -70,7 +70,7 @@
   "registerAccount": "അക്കൗണ്ട് സൃഷ്ടിക്കുക",
   "reLogin": "വീണ്ടും ലോഗിൻ ചെയ്യൂ",
   "authenticationInfoUpdated": "നിങ്ങളുടെ ലോഗിൻ വിവരങ്ങൾ പുതുക്കി",
-  "updateAuthenticationInformation": "പ്രാമാണീകരണ വിവരങ്ങൾ അപ്‌ഡേറ്റ് ചെയ്യുക",
+  "updateAuthenticationInformation": "ലോഗിൻ വിവരങ്ങൾ പുതുക്കൂ",
   "registeredWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് രജിസ്റ്റർ ചെയ്തു",
   "linkAccount": "സമന്വയിപ്പിക്കുക",
   "withdraw": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",

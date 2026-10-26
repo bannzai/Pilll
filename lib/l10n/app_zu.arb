@@ -70,7 +70,7 @@
   "registerAccount": "Dala i-akhawunti",
   "reLogin": "Sicela ungene ngemvume futhi",
   "authenticationInfoUpdated": "Imininingwane yakho yokungena ibuyekeziwe",
-  "updateAuthenticationInformation": "Sizobuyekeza ulwazi lokuqinisekisa",
+  "updateAuthenticationInformation": "Sicela ubuyekeze imininingwane yakho yokungena",
   "registeredWithProvider": "Ubhalisiwe nge-{accountTypeProviderName}",
   "linkAccount": "Xhuma",
   "withdraw": "Susa i-akhawunti",

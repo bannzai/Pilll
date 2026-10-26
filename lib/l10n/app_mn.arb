@@ -70,7 +70,7 @@
   "registerAccount": "Бүртгэл үүсгэх",
   "reLogin": "Дахин нэвтэрнэ үү",
   "authenticationInfoUpdated": "Таны нэвтрэх мэдээлэл шинэчлэгдлээ",
-  "updateAuthenticationInformation": "Баталгаажуулалт шинэчлэх",
+  "updateAuthenticationInformation": "Нэвтрэх мэдээллээ шинэчилнэ үү",
   "registeredWithProvider": "{accountTypeProviderName}-аар бүртгүүлсэн",
   "linkAccount": "Холбох",
   "withdraw": "гарах",

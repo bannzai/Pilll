@@ -70,7 +70,7 @@
   "registerAccount": "Konto aalege",
   "reLogin": "Meld di nomal aa",
   "authenticationInfoUpdated": "Dini Aamälddate sind aktualisiert",
-  "updateAuthenticationInformation": "Aagmäldigsdate aktualisiere",
+  "updateAuthenticationInformation": "Dini Aamäldaagabe aktualisiere",
   "registeredWithProvider": "Mit {accountTypeProviderName} aagmeldet",
   "linkAccount": "verchnüpfe",
   "withdraw": "Konto lösche",

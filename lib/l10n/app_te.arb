@@ -70,7 +70,7 @@
   "registerAccount": "ఖాతా సృష్టించండి",
   "reLogin": "మళ్లీ లాగిన్ అవ్వండి",
   "authenticationInfoUpdated": "మీ లాగిన్ సమాచారం నవీకరించబడింది",
-  "updateAuthenticationInformation": "ప్రమాణీకరణ వివరాలను అప్‌డేట్ చేయండి",
+  "updateAuthenticationInformation": "లాగిన్ సమాచారాన్ని నవీకరించండి",
   "registeredWithProvider": "{accountTypeProviderName}తో నమోదు చేయబడింది",
   "linkAccount": "అనుసంధానం చేయండి",
   "withdraw": "నిష్క్రమించు",

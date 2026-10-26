@@ -70,7 +70,7 @@
   "registerAccount": "Каттоо эсебин түзүү",
   "reLogin": "Кайра кириңиз",
   "authenticationInfoUpdated": "Кирүү маалыматыңыз жаңыртылды",
-  "updateAuthenticationInformation": "Аутентификация маалыматын жаңыртуу",
+  "updateAuthenticationInformation": "Кирүү маалыматын жаңыртыңыз",
   "registeredWithProvider": "{accountTypeProviderName} аркылуу катталдыңыз",
   "linkAccount": "Байланыштыруу",
   "withdraw": "Чыгуу",

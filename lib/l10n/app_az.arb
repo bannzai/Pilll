@@ -70,7 +70,7 @@
   "registerAccount": "Hesab qeydiyyatı",
   "reLogin": "Yenidən daxil olun",
   "authenticationInfoUpdated": "Giriş məlumatlarınız yeniləndi",
-  "updateAuthenticationInformation": "Autentifikasiya məlumatlarını yeniləyin",
+  "updateAuthenticationInformation": "Giriş məlumatlarınızı yeniləyin",
   "registeredWithProvider": "{accountTypeProviderName} ilə qeydiyyatdan keçdiniz",
   "linkAccount": "Əlaqələndir",
   "withdraw": "Hesabı sil",

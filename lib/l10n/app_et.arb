@@ -70,7 +70,7 @@
   "registerAccount": "Loo konto",
   "reLogin": "Logi uuesti sisse",
   "authenticationInfoUpdated": "Sinu sisselogimisandmed on uuendatud",
-  "updateAuthenticationInformation": "Uuenda autentimisandmeid",
+  "updateAuthenticationInformation": "Uuenda sisselogimisandmeid",
   "registeredWithProvider": "Registreeritud {accountTypeProviderName} kaudu",
   "linkAccount": "Linkida",
   "withdraw": "Lahkuda",

@@ -70,7 +70,7 @@
   "registerAccount": "Tạo tài khoản",
   "reLogin": "Đăng nhập lại",
   "authenticationInfoUpdated": "Thông tin đăng nhập của bạn đã được cập nhật",
-  "updateAuthenticationInformation": "Cập nhật thông tin xác thực",
+  "updateAuthenticationInformation": "Cập nhật thông tin đăng nhập",
   "registeredWithProvider": "Đã đăng ký bằng {accountTypeProviderName}",
   "linkAccount": "Liên kết",
   "withdraw": "Hủy tài khoản",

@@ -70,7 +70,7 @@
   "registerAccount": "ගිණුමක් සාදන්න",
   "reLogin": "නැවත පිවිසෙන්න",
   "authenticationInfoUpdated": "ඔබේ පිවිසුම් තොරතුරු යාවත්කාලීන කර ඇත",
-  "updateAuthenticationInformation": "සත්‍යාපන තොරතුරු යාවත්කාලීන කරන්න",
+  "updateAuthenticationInformation": "පිවිසුම් තොරතුරු යාවත්කාලීන කරන්න",
   "registeredWithProvider": "{accountTypeProviderName} සමඟ ලියාපදිංචි කරන ලදී",
   "linkAccount": "සම්බන්ධ කරන්න",
   "withdraw": "ගිණුම මකන්න",

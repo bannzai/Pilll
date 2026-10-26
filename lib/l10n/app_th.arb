@@ -70,7 +70,7 @@
   "registerAccount": "สร้างบัญชี",
   "reLogin": "เข้าสู่ระบบอีกครั้ง",
   "authenticationInfoUpdated": "อัปเดตข้อมูลเข้าสู่ระบบเรียบร้อยแล้วค่ะ",
-  "updateAuthenticationInformation": "อัปเดตข้อมูลการยืนยันตัวตน",
+  "updateAuthenticationInformation": "อัปเดตข้อมูลการเข้าสู่ระบบ",
   "registeredWithProvider": "ลงทะเบียนด้วย{accountTypeProviderName}เรียบร้อยแล้ว",
   "linkAccount": "เชื่อมต่อ",
   "withdraw": "ลบบัญชี",

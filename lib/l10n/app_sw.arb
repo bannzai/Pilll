@@ -70,7 +70,7 @@
   "registerAccount": "Fungua akaunti",
   "reLogin": "Tafadhali ingia tena",
   "authenticationInfoUpdated": "Taarifa zako za kuingia zimesasishwa",
-  "updateAuthenticationInformation": "Sasisha taarifa za uthibitishaji",
+  "updateAuthenticationInformation": "Tafadhali sasisha taarifa zako za kuingia",
   "registeredWithProvider": "Umesajiliwa kwa kutumia {accountTypeProviderName}",
   "linkAccount": "Unganisha",
   "withdraw": "Jiondoe",

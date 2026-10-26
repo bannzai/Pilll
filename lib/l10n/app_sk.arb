@@ -70,7 +70,7 @@
   "registerAccount": "Vytvoriť účet",
   "reLogin": "Prihláste sa znova",
   "authenticationInfoUpdated": "Vaše prihlasovacie údaje boli aktualizované",
-  "updateAuthenticationInformation": "Aktualizovať autentifikačné údaje",
+  "updateAuthenticationInformation": "Aktualizujte prihlasovacie údaje",
   "registeredWithProvider": "Zaregistrovali ste sa cez {accountTypeProviderName}",
   "linkAccount": "Prepojiť",
   "withdraw": "Zrušiť účet",

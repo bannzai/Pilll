@@ -70,7 +70,7 @@
   "registerAccount": "Sukurti paskyrą",
   "reLogin": "Prisijunkite dar kartą",
   "authenticationInfoUpdated": "Jūsų prisijungimo duomenys atnaujinti",
-  "updateAuthenticationInformation": "Atnaujinti autentifikavimo duomenis",
+  "updateAuthenticationInformation": "Atnaujinkite prisijungimo duomenis",
   "registeredWithProvider": "Užsiregistravote per {accountTypeProviderName}",
   "linkAccount": "Susieti",
   "withdraw": "Ištrinti paskyrą",

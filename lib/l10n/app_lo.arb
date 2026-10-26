@@ -70,7 +70,7 @@
   "registerAccount": "ສ້າງບັນຊີ",
   "reLogin": "ເຂົ້າລະບົບອີກຄັ້ງ",
   "authenticationInfoUpdated": "ຂໍ້ມູນເຂົ້າລະບົບຂອງທ່ານໄດ້ອັບເດດແລ້ວ",
-  "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນການພິສູດຕົວຕົນ",
+  "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນເຂົ້າລະບົບ",
   "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ແລ້ວ",
   "linkAccount": "ເຊື່ອມຕໍ່",
   "withdraw": "ອອກຈາກສະມາຊິກ",

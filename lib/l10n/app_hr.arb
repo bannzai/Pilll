@@ -70,7 +70,7 @@
   "registerAccount": "Registrirajte račun",
   "reLogin": "Ponovno se prijavite",
   "authenticationInfoUpdated": "Vaši podaci za prijavu su ažurirani",
-  "updateAuthenticationInformation": "Ažuriraj autentifikacijske podatke",
+  "updateAuthenticationInformation": "Ažurirajte podatke za prijavu",
   "registeredWithProvider": "Registrirali ste se pomoću {accountTypeProviderName}",
   "linkAccount": "Povezati",
   "withdraw": "Obriši račun",

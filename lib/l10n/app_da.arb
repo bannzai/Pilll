@@ -70,7 +70,7 @@
   "registerAccount": "Opret konto",
   "reLogin": "Log ind igen",
   "authenticationInfoUpdated": "Dine loginoplysninger er opdateret",
-  "updateAuthenticationInformation": "Opdater legitimationsoplysninger",
+  "updateAuthenticationInformation": "Opdater dine loginoplysninger",
   "registeredWithProvider": "Registreret med {accountTypeProviderName}",
   "linkAccount": "Forbind",
   "withdraw": "Slet konto",

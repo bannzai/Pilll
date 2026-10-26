@@ -70,7 +70,7 @@
   "registerAccount": "حساب جوړ کړئ",
   "reLogin": "بیا ننوتل",
   "authenticationInfoUpdated": "ستاسو د ننوتلو معلومات تازه شول",
-  "updateAuthenticationInformation": "د تصديق معلومات اپډېټ کړو",
+  "updateAuthenticationInformation": "د ننوتلو معلومات تازه کړئ",
   "registeredWithProvider": "د {accountTypeProviderName} سره ثبت شوي",
   "linkAccount": "تړل",
   "withdraw": "حساب ړنګول",

@@ -70,7 +70,7 @@
   "registerAccount": "Create an account",
   "reLogin": "Log in again",
   "authenticationInfoUpdated": "Your sign-in details have been updated",
-  "updateAuthenticationInformation": "Update authentication information",
+  "updateAuthenticationInformation": "Update sign-in details",
   "registeredWithProvider": "Registered with {accountTypeProviderName}",
   "linkAccount": "Connect",
   "withdraw": "Delete Account",

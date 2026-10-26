@@ -70,7 +70,7 @@
   "registerAccount": "계정 만들기",
   "reLogin": "다시 로그인해요",
   "authenticationInfoUpdated": "로그인 정보가 업데이트됐어요",
-  "updateAuthenticationInformation": "인증 정보를 업데이트합니다",
+  "updateAuthenticationInformation": "로그인 정보를 업데이트해요",
   "registeredWithProvider": "{accountTypeProviderName}로 가입했습니다",
   "linkAccount": "연동하기",
   "withdraw": "탈퇴하기",

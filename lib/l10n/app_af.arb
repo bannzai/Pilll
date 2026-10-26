@@ -70,7 +70,7 @@
   "registerAccount": "Rekeningregistrasie",
   "reLogin": "Meld weer aan",
   "authenticationInfoUpdated": "Jou aanmeldbesonderhede is opgedateer",
-  "updateAuthenticationInformation": "Werk outentiseringsinligting op",
+  "updateAuthenticationInformation": "Werk jou aanmeldbesonderhede by",
   "registeredWithProvider": "Geregistreer met {accountTypeProviderName}",
   "linkAccount": "Koppel",
   "withdraw": "Uittree",

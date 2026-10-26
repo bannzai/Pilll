@@ -70,7 +70,7 @@
   "registerAccount": "መለያ መመዝገብ",
   "reLogin": "እንደገና ይግቡ",
   "authenticationInfoUpdated": "የመግቢያ መረጃ ተዘምኗል",
-  "updateAuthenticationInformation": "የማረጋገጫ መረጃዎችን ያዘምናል",
+  "updateAuthenticationInformation": "የመግቢያ መረጃን ያዘምኑ",
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",
   "linkAccount": "ማገናኘት",
   "withdraw": "መለያ ማጥፋት",

@@ -70,7 +70,7 @@
   "registerAccount": "Cofrestru cyfrif",
   "reLogin": "Mewngofnodwch eto",
   "authenticationInfoUpdated": "Mae eich manylion mewngofnodi wedi'u diweddaru",
-  "updateAuthenticationInformation": "Diweddaru gwybodaeth ddilysu",
+  "updateAuthenticationInformation": "Diweddarwch eich manylion mewngofnodi",
   "registeredWithProvider": "Wedi cofrestru gyda {accountTypeProviderName}",
   "linkAccount": "Cysylltu",
   "withdraw": "Ymddiswyddo",

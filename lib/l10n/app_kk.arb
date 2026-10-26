@@ -70,7 +70,7 @@
   "registerAccount": "Тіркелгі ашу",
   "reLogin": "Қайта кіріңіз",
   "authenticationInfoUpdated": "Кіру деректеріңіз жаңартылды",
-  "updateAuthenticationInformation": "Растау ақпаратын жаңарту",
+  "updateAuthenticationInformation": "Кіру деректерін жаңартыңыз",
   "registeredWithProvider": "{accountTypeProviderName} арқылы тіркелдіңіз",
   "linkAccount": "Байланыстыру",
   "withdraw": "Аккаунтты жою",

@@ -70,7 +70,7 @@
   "registerAccount": "Регистрација на сметка",
   "reLogin": "Најавете се повторно",
   "authenticationInfoUpdated": "Податоците за најава се ажурирани",
-  "updateAuthenticationInformation": "Ажурирај ги автентикациските податоци",
+  "updateAuthenticationInformation": "Ажурирајте ги податоците за најава",
   "registeredWithProvider": "Се регистриравте со {accountTypeProviderName}",
   "linkAccount": "Поврзи",
   "withdraw": "Се повлече",

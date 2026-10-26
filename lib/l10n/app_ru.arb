@@ -70,7 +70,7 @@
   "registerAccount": "Создать аккаунт",
   "reLogin": "Войдите снова",
   "authenticationInfoUpdated": "Ваши данные для входа обновлены",
-  "updateAuthenticationInformation": "Обновить учётные данные",
+  "updateAuthenticationInformation": "Обновите данные для входа",
   "registeredWithProvider": "Зарегистрировано через {accountTypeProviderName}",
   "linkAccount": "Связать",
   "withdraw": "Удалить аккаунт",

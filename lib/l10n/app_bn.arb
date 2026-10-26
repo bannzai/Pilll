@@ -70,7 +70,7 @@
   "registerAccount": "অ্যাকাউন্ট নিবন্ধন",
   "reLogin": "আবার লগ ইন করুন",
   "authenticationInfoUpdated": "লগইন তথ্য আপডেট হয়েছে",
-  "updateAuthenticationInformation": "প্রমাণীকরণ তথ্য আপডেট করুন",
+  "updateAuthenticationInformation": "লগইন তথ্য হালনাগাদ করুন",
   "registeredWithProvider": "{accountTypeProviderName} দিয়ে নিবন্ধন সম্পন্ন হয়েছে",
   "linkAccount": "সংযুক্ত করুন",
   "withdraw": "অ্যাকাউন্ট মুছুন",

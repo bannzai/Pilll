@@ -70,7 +70,7 @@
   "registerAccount": "Crear una cuenta",
   "reLogin": "Vuelve a iniciar sesión",
   "authenticationInfoUpdated": "Se actualizaron tus datos de acceso",
-  "updateAuthenticationInformation": "Actualizar credenciales",
+  "updateAuthenticationInformation": "Actualiza tus datos de acceso",
   "registeredWithProvider": "Te registraste con {accountTypeProviderName}",
   "linkAccount": "Vincular",
   "withdraw": "Darse de baja",

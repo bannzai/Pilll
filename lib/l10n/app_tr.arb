@@ -70,7 +70,7 @@
   "registerAccount": "Hesap oluşturun",
   "reLogin": "Yeniden giriş yapın",
   "authenticationInfoUpdated": "Giriş bilgileriniz güncellendi",
-  "updateAuthenticationInformation": "Kimlik bilgilerini güncelle",
+  "updateAuthenticationInformation": "Giriş bilgilerinizi güncelleyin",
   "registeredWithProvider": "{accountTypeProviderName} ile kayıt oldunuz",
   "linkAccount": "Bağla",
   "withdraw": "Hesabı Sil",

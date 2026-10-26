@@ -70,7 +70,7 @@
   "registerAccount": "Δημιουργία λογαριασμού",
   "reLogin": "Συνδεθείτε ξανά",
   "authenticationInfoUpdated": "Τα στοιχεία σύνδεσής σας ενημερώθηκαν",
-  "updateAuthenticationInformation": "Ενημέρωση στοιχείων ταυτοποίησης",
+  "updateAuthenticationInformation": "Ενημέρωση στοιχείων σύνδεσης",
   "registeredWithProvider": "Εγγραφήκατε μέσω {accountTypeProviderName}",
   "linkAccount": "Σύνδεση",
   "withdraw": "Διαγραφή λογαριασμού",

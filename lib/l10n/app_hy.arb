@@ -70,7 +70,7 @@
   "registerAccount": "Հաշվի գրանցում",
   "reLogin": "Կրկին մուտք գործեք",
   "authenticationInfoUpdated": "Ձեր մուտքի տվյալները թարմացվել են",
-  "updateAuthenticationInformation": "Նույնականացման տվյալները թարմացնել",
+  "updateAuthenticationInformation": "Թարմացրեք մուտքի տվյալները",
   "registeredWithProvider": "Գրանցվել եք {accountTypeProviderName}-ով",
   "linkAccount": "միացնել",
   "withdraw": "Հաշիվը ջնջել",

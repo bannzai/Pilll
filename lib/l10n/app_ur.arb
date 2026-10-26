@@ -70,7 +70,7 @@
   "registerAccount": "اکاؤنٹ بنائیں",
   "reLogin": "دوبارہ لاگ اِن کریں",
   "authenticationInfoUpdated": "آپ کی لاگ اِن معلومات اپ ڈیٹ ہو گئی ہیں",
-  "updateAuthenticationInformation": "تصدیقی معلومات اپڈیٹ کریں",
+  "updateAuthenticationInformation": "لاگ اِن کی معلومات اپ ڈیٹ کریں",
   "registeredWithProvider": "{accountTypeProviderName} کے ساتھ رجسٹریشن مکمل ہوگئی",
   "linkAccount": "منسلک کریں",
   "withdraw": "اکاؤنٹ ڈیلیٹ کریں",

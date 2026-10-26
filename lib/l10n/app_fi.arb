@@ -70,7 +70,7 @@
   "registerAccount": "Luo tili",
   "reLogin": "Kirjaudu uudelleen",
   "authenticationInfoUpdated": "Kirjautumistietosi on päivitetty",
-  "updateAuthenticationInformation": "Päivitetään tunnistautumistiedot",
+  "updateAuthenticationInformation": "Päivitä kirjautumistiedot",
   "registeredWithProvider": "Rekisteröidyttiin {accountTypeProviderName}lla",
   "linkAccount": "Yhdistä",
   "withdraw": "Poista tili",

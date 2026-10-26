@@ -70,7 +70,7 @@
   "registerAccount": "खाते तयार करा",
   "reLogin": "पुन्हा लॉग इन करा",
   "authenticationInfoUpdated": "तुमची लॉगिन माहिती अपडेट झाली आहे",
-  "updateAuthenticationInformation": "प्रमाणीकरण माहिती अद्यतन करा",
+  "updateAuthenticationInformation": "लॉगिन माहिती अद्ययावत करा",
   "registeredWithProvider": "{accountTypeProviderName} वापरून नोंदणी केली",
   "linkAccount": "जोडा",
   "withdraw": "खाते हटवा",

@@ -70,7 +70,7 @@
   "registerAccount": "إنشاء حساب",
   "reLogin": "تسجيل الدخول مجددًا",
   "authenticationInfoUpdated": "تم تحديث بيانات تسجيل الدخول",
-  "updateAuthenticationInformation": "تحديث معلومات المصادقة",
+  "updateAuthenticationInformation": "تحديث بيانات تسجيل الدخول",
   "registeredWithProvider": "تم التسجيل باستخدام {accountTypeProviderName}",
   "linkAccount": "ربط",
   "withdraw": "إلغاء الحساب",

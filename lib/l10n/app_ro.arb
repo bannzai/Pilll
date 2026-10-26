@@ -70,7 +70,7 @@
   "registerAccount": "Creează un cont",
   "reLogin": "Conectează-te din nou",
   "authenticationInfoUpdated": "Datele tale de conectare au fost actualizate",
-  "updateAuthenticationInformation": "Actualizați informațiile de autentificare",
+  "updateAuthenticationInformation": "Actualizează datele de conectare",
   "registeredWithProvider": "Te-ai înregistrat cu {accountTypeProviderName}",
   "linkAccount": "Conecta",
   "withdraw": "Șterge contul",

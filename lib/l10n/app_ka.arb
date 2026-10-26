@@ -70,7 +70,7 @@
   "registerAccount": "ანგარიშის შექმნა",
   "reLogin": "ხელახლა შესვლა",
   "authenticationInfoUpdated": "თქვენი შესვლის მონაცემები განახლდა",
-  "updateAuthenticationInformation": "ავთენტიფიკაციის მონაცემების განახლება",
+  "updateAuthenticationInformation": "შესვლის მონაცემების განახლება",
   "registeredWithProvider": "{accountTypeProviderName}-ით დარეგისტრირდით",
   "linkAccount": "დაკავშირება",
   "withdraw": "გაწყვეტა",

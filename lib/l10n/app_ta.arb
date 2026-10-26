@@ -70,7 +70,7 @@
   "registerAccount": "கணக்கை உருவாக்குங்கள்",
   "reLogin": "மீண்டும் உள்நுழையுங்கள்",
   "authenticationInfoUpdated": "உங்கள் உள்நுழைவுத் தகவல் புதுப்பிக்கப்பட்டது",
-  "updateAuthenticationInformation": "அங்கீகார தகவலை புதுப்பிக்கும்",
+  "updateAuthenticationInformation": "உள்நுழைவுத் தகவலைப் புதுப்பியுங்கள்",
   "registeredWithProvider": "{accountTypeProviderName} மூலம் பதிவு செய்யப்பட்டது",
   "linkAccount": "இணைக்க",
   "withdraw": "கணக்கை நீக்கு",

@@ -70,7 +70,7 @@
   "registerAccount": "Krijoni llogari",
   "reLogin": "Hyni përsëri",
   "authenticationInfoUpdated": "Të dhënat tuaja të hyrjes u përditësuan",
-  "updateAuthenticationInformation": "Përditëso informacionin e autentifikimit",
+  "updateAuthenticationInformation": "Përditësoni të dhënat e hyrjes",
   "registeredWithProvider": "U regjistruat me {accountTypeProviderName}",
   "linkAccount": "Lidh",
   "withdraw": "Fshij llogarinë",

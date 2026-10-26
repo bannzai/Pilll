@@ -70,7 +70,7 @@
   "registerAccount": "Buat akun",
   "reLogin": "Masuk lagi",
   "authenticationInfoUpdated": "Informasi login Anda berhasil diperbarui",
-  "updateAuthenticationInformation": "Perbarui kredensial",
+  "updateAuthenticationInformation": "Perbarui informasi masuk Anda",
   "registeredWithProvider": "Berhasil mendaftar dengan {accountTypeProviderName}",
   "linkAccount": "Hubungkan",
   "withdraw": "Hapus Akun",

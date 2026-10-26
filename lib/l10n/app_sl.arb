@@ -70,7 +70,7 @@
   "registerAccount": "Ustvarite račun",
   "reLogin": "Znova se prijavite",
   "authenticationInfoUpdated": "Vaši podatki za prijavo so posodobljeni",
-  "updateAuthenticationInformation": "Posodobi poverilnice",
+  "updateAuthenticationInformation": "Posodobite podatke za prijavo",
   "registeredWithProvider": "Uspešno ste se registrirali z {accountTypeProviderName}",
   "linkAccount": "Povezati",
   "withdraw": "Odstopi",

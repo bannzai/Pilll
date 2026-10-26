@@ -70,7 +70,7 @@
   "registerAccount": "Kontua sortu",
   "reLogin": "Hasi saioa berriro",
   "authenticationInfoUpdated": "Saioa hasteko zure datuak eguneratu dira",
-  "updateAuthenticationInformation": "Autentifikazio informazioa eguneratu",
+  "updateAuthenticationInformation": "Eguneratu saioa hasteko datuak",
   "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu da",
   "linkAccount": "Konektatu",
   "withdraw": "Kontua ezabatu",

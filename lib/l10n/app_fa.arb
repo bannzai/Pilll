@@ -70,7 +70,7 @@
   "registerAccount": "ایجاد حساب کاربری",
   "reLogin": "ورود دوباره",
   "authenticationInfoUpdated": "اطلاعات ورود شما به‌روزرسانی شد",
-  "updateAuthenticationInformation": "به‌روزرسانی اطلاعات احراز هویت",
+  "updateAuthenticationInformation": "به‌روزرسانی اطلاعات ورود",
   "registeredWithProvider": "با {accountTypeProviderName} ثبت نام شدید",
   "linkAccount": "پیوند دادن",
   "withdraw": "حذف حساب",

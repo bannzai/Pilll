@@ -70,7 +70,7 @@
   "registerAccount": "Регистрация на акаунт",
   "reLogin": "Влезте отново",
   "authenticationInfoUpdated": "Данните ви за вход са обновени",
-  "updateAuthenticationInformation": "Актуализиране на данните за вход",
+  "updateAuthenticationInformation": "Актуализирайте данните за вход",
   "registeredWithProvider": "Успешно се регистрирахте с {accountTypeProviderName}",
   "linkAccount": "Свържи",
   "withdraw": "Напусни",

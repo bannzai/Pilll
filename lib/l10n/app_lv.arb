@@ -70,7 +70,7 @@
   "registerAccount": "Izveidot kontu",
   "reLogin": "Piesakieties vēlreiz",
   "authenticationInfoUpdated": "Jūsu pieteikšanās dati ir atjaunināti",
-  "updateAuthenticationInformation": "Atjaunināt autentifikācijas datus",
+  "updateAuthenticationInformation": "Atjauniniet pierakstīšanās datus",
   "registeredWithProvider": "Reģistrējies ar {accountTypeProviderName}",
   "linkAccount": "Savienot",
   "withdraw": "Dzēst kontu",

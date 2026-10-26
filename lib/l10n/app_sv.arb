@@ -70,7 +70,7 @@
   "registerAccount": "Skapa konto",
   "reLogin": "Logga in igen",
   "authenticationInfoUpdated": "Dina inloggningsuppgifter har uppdaterats",
-  "updateAuthenticationInformation": "Uppdatera autentiseringsuppgifter",
+  "updateAuthenticationInformation": "Uppdatera dina inloggningsuppgifter",
   "registeredWithProvider": "Registrerad med {accountTypeProviderName}",
   "linkAccount": "Anslut",
   "withdraw": "Avregistrera",

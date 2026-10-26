@@ -70,7 +70,7 @@
   "registerAccount": "Створити обліковий запис",
   "reLogin": "Увійдіть знову",
   "authenticationInfoUpdated": "Ваші дані для входу оновлено",
-  "updateAuthenticationInformation": "Оновити облікові дані",
+  "updateAuthenticationInformation": "Оновіть дані для входу",
   "registeredWithProvider": "Зареєстровано через {accountTypeProviderName}",
   "linkAccount": "Підключити",
   "withdraw": "Видалити акаунт",

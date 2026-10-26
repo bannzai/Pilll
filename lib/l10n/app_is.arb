@@ -70,7 +70,7 @@
   "registerAccount": "Stofna aðgang",
   "reLogin": "Skráðu þig inn aftur",
   "authenticationInfoUpdated": "Innskráningarupplýsingarnar þínar hafa verið uppfærðar",
-  "updateAuthenticationInformation": "Uppfæra auðkenningargögn",
+  "updateAuthenticationInformation": "Uppfærðu innskráningarupplýsingar",
   "registeredWithProvider": "Skráður með {accountTypeProviderName}",
   "linkAccount": "Tengja",
   "withdraw": "Segja úr",

@@ -70,7 +70,7 @@
   "registerAccount": "יצירת חשבון",
   "reLogin": "להתחבר מחדש",
   "authenticationInfoUpdated": "פרטי ההתחברות עודכנו",
-  "updateAuthenticationInformation": "עדכון פרטי אימות",
+  "updateAuthenticationInformation": "עדכון פרטי ההתחברות",
   "registeredWithProvider": "נרשמת באמצעות {accountTypeProviderName}",
   "linkAccount": "חבר",
   "withdraw": "לפרוש",
