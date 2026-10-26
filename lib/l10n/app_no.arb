@@ -357,7 +357,7 @@
   "unknownError": "Det oppstod en ukjent feil",
   "unexpectedErrorOccurred": "Det oppstod en uventet feil",
   "pressAndHoldNotificationToRecordPillTaking": "Trykk og hold på varselet for å opprette en pillelogg",
-  "letsTryIt": "Prøv det gjerne!",
+  "letsTryIt": "Prøv det gjerne",
   "trialDeadlineDateOffsetDay": "Du har tilgang til alle funksjonene i hele {number} dager!",
   "inputAndAdd": "Skriv inn og legg til",
   "averagePeriod": "Gjennomsnittsyklus",

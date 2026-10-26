@@ -357,7 +357,7 @@
   "unknownError": "حدث خطأ غير معروف",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع",
   "pressAndHoldNotificationToRecordPillTaking": "يمكنكِ إنشاء تسجيل تناول بالضغط مطولًا على الإشعار",
-  "letsTryIt": "جربها الآن!",
+  "letsTryIt": "جرّبيها الآن",
   "trialDeadlineDateOffsetDay": "يمكنك استخدام جميع الميزات لمدة {number} أيام!",
   "inputAndAdd": "أدخل وأضف",
   "averagePeriod": "متوسط الدورة",

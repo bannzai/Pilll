@@ -357,7 +357,7 @@
   "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ",
   "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิดค่ะ",
   "pressAndHoldNotificationToRecordPillTaking": "กดการแจ้งเตือนค้างไว้เพื่อสร้างบันทึกการทานยาได้ค่ะ",
-  "letsTryIt": "ลองใช้ดูนะ",
+  "letsTryIt": "ลองใช้ดูนะคะ",
   "trialDeadlineDateOffsetDay": "สามารถใช้ฟีเจอร์ครบทุกอย่างได้เป็นเวลา {number} วัน!",
   "inputAndAdd": "ป้อนและเพิ่ม",
   "averagePeriod": "รอบเฉลี่ย",

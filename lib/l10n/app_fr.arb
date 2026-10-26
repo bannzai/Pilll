@@ -357,7 +357,7 @@
   "unknownError": "Une erreur inconnue s’est produite",
   "unexpectedErrorOccurred": "Une erreur inattendue s'est produite",
   "pressAndHoldNotificationToRecordPillTaking": "Maintenez la notification appuyée pour créer une entrée dans le journal des prises",
-  "letsTryIt": "Essayez-le !",
+  "letsTryIt": "N'hésitez pas à essayer",
   "trialDeadlineDateOffsetDay": "Toutes les fonctionnalités disponibles pour les jours {number} !",
   "inputAndAdd": "Ajouter une entrée",
   "averagePeriod": "Cycle moyen",

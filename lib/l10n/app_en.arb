@@ -357,7 +357,7 @@
   "unknownError": "An unknown error occurred",
   "unexpectedErrorOccurred": "Something unexpected happened",
   "pressAndHoldNotificationToRecordPillTaking": "Press and hold the notification to create a pill log",
-  "letsTryIt": "Give it a try!",
+  "letsTryIt": "Give it a try",
   "trialDeadlineDateOffsetDay": "All features available for {number} days!",
   "inputAndAdd": "Add Entry",
   "averagePeriod": "Average Cycle",

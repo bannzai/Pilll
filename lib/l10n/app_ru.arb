@@ -357,7 +357,7 @@
   "unknownError": "Произошла неизвестная ошибка",
   "unexpectedErrorOccurred": "Произошла непредвиденная ошибка",
   "pressAndHoldNotificationToRecordPillTaking": "Нажмите и удерживайте уведомление, чтобы создать запись в журнале приёма таблеток",
-  "letsTryIt": "Обязательно попробуйте!",
+  "letsTryIt": "Попробуйте",
   "trialDeadlineDateOffsetDay": "Все функции доступны в течение {number} дней!",
   "inputAndAdd": "Добавить вручную",
   "averagePeriod": "Средний цикл",
