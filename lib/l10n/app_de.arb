@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Benachrichtigung zur {pillSheetPillSheetTypeNotTakenWord}-Phase",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wenn Benachrichtigungen ausgeschaltet sind, wird auch für den Zeitraum {pillSheetPillSheetTypeNotTakenWord} automatisch ein Einnahmeprotokoll erstellt",
   "requestForCancelSurvey": "Bitte nimm nach der Kündigung an unserer Umfrage teil",
-  "pilllDescription": "Pilll - Spezialisierte Pillen-Erinnerungs-App",
+  "pilllDescription": "Pilll – deine App mit Erinnerungen an die Pille",
   "reachedMaximumCountOfReminderTimes": "Das Maximum wurde erreicht. Bitte beschränken Sie sich auf maximal {ReminderTimeMaximumCount} Erinnerungszeiten.",
   "minimumCountOfReminderTimes": "Mindestens {ReminderTimeMinimumCount} Benachrichtigungszeiten sind erforderlich",
   "purchaseErrorUnknownError": "Ein unbekannter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut. Falls das Problem weiterhin besteht, wenden Sie sich bitte über Einstellungen > Kontakt an uns. Details: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "แม้ปิดการแจ้งเตือน ระบบก็จะสร้างบันทึกการทานยาสำหรับช่วง {pillSheetPillSheetTypeNotTakenWord} โดยอัตโนมัติค่ะ",
   "requestForCancelSurvey": "ขอความร่วมมือตอบแบบสอบถามหลังยกเลิกการสมัครสมาชิก",
-  "pilllDescription": "Pilll แอปเตือนรับประทานยาคุมเฉพาะทาง",
+  "pilllDescription": "Pilll แอปแจ้งเตือนเวลาทานยาเม็ดคุมกำเนิด",
   "reachedMaximumCountOfReminderTimes": "คุณได้ลงทะเบียนครบจำนวนสูงสุดแล้ว กรุณาจำกัดให้ไม่เกิน {ReminderTimeMaximumCount} รายการ",
   "minimumCountOfReminderTimes": "จำเป็นต้องตั้งเวลาแจ้งเตือนอย่างน้อย {ReminderTimeMinimumCount} รายการ",
   "purchaseErrorUnknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ โปรดรอสักครู่แล้วลองอีกครั้ง หากยังไม่แก้ไขได้ โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",

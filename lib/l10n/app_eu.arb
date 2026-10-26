@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiari buruzko jakinarazpena",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldirako hartze-erregistro bat ere automatikoki sortzen da",
   "requestForCancelSurvey": "Harpidetza bertan behera utzi ondoren, inkestan parte hartzera gonbidatzen zaitugu",
-  "pilllDescription": "Pilll - Pilula hartzeko oroigarri aplikazio espezializatua",
+  "pilllDescription": "Pilll, pilula antisorgailua hartzeko gogorarazpen aplikazioa",
   "reachedMaximumCountOfReminderTimes": "Erregistratzeko gehienezko mugara iritsi zara. {ReminderTimeMaximumCount} elementu baino gutxiago eduki behar dituzu.",
   "minimumCountOfReminderTimes": "Gutxienez {ReminderTimeMinimumCount} jakinarazpen-denbora beharrezkoak dira",
   "purchaseErrorUnknownError": "Ezezaguna den errore bat gertatu da. Denbora pixka bat itxaron eta berriro saiatu. Konpondu ezin bada, Ezarpenak > Galdeketa bidez jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Pranešimas apie {pillSheetPillSheetTypeNotTakenWord} laikotarpį",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kai pranešimai išjungti, vartojimo įrašas laikotarpiui {pillSheetPillSheetTypeNotTakenWord} taip pat sukuriamas automatiškai",
   "requestForCancelSurvey": "Prašome dalyvauti apklausoje po prenumeratos atšaukimo",
-  "pilllDescription": "Pilll - kontraceptinių tablečių vartojimo priminimo programėlė",
+  "pilllDescription": "Pilll – priminimų programėlė kontraceptinėms tabletėms vartoti",
   "reachedMaximumCountOfReminderTimes": "Pasiektas maksimalus registracijų skaičius. Sumažinkite iki {ReminderTimeMaximumCount} priminimų.",
   "minimumCountOfReminderTimes": "Reikalinga mažiausiai {ReminderTimeMinimumCount} priminimų laikų",
   "purchaseErrorUnknownError": "Įvyko nežinoma klaida. Pabandykite dar kartą po kurio laiko. Jei problema neišspręsta, susisiekite su mumis per Nustatymai > Kontaktai. Išsamiau: {exceptionMessage}:{exceptionDetails}",

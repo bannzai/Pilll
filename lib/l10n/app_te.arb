@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} కాలానికి నోటిఫికేషన్",
   "autoRecordForNotTakenPeriodIfNotificationOff": "నోటిఫికేషన్‌లు ఆఫ్‌లో ఉన్నప్పుడు కూడా {pillSheetPillSheetTypeNotTakenWord} కాలానికి మాత్రల నమోదు ఆటోమేటిక్‌గా సృష్టించబడుతుంది",
   "requestForCancelSurvey": "సబ్‌స్క్రిప్షన్‌ను రద్దు చేసిన తర్వాత సర్వేలో పాల్గొనండి",
-  "pilllDescription": "Pilll పిల్స్ తీసుకోవడంలో ప్రత్యేకమైన పిల్ రిమైండర్ యాప్",
+  "pilllDescription": "Pilll, గర్భనిరోధక మాత్ర వేసుకోవడానికి రిమైండర్ యాప్",
   "reachedMaximumCountOfReminderTimes": "నమోదు చేయగల గరిష్ఠ సంఖ్యకు చేరుకున్నారు. దయచేసి {ReminderTimeMaximumCount} కు పరిమితం చేయండి",
   "minimumCountOfReminderTimes": "కనీసం {ReminderTimeMinimumCount} రిమైండర్ టైమ్స్ అవసరం",
   "purchaseErrorUnknownError": "అజ్ఞాత కారణంతో దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్ళీ ప్రయత్నించండి. పరిష్కారం కాకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",

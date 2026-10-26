@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "შეტყობინება {pillSheetPillSheetTypeNotTakenWord} პერიოდის შესახებ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "როცა შეტყობინებები გამორთულია, {pillSheetPillSheetTypeNotTakenWord} პერიოდის მიღების ჩანაწერიც ავტომატურად იქმნება",
   "requestForCancelSurvey": "გთხოვთ, მონაწილეობა მიიღოთ გამოწერის გაუქმების შემდგომ გამოკითხვაში",
-  "pilllDescription": "Pilll - კონტრაცეპტული აბების მიღების შეხსენების აპი",
+  "pilllDescription": "Pilll — კონტრაცეპტიული აბის მიღების შეხსენების აპი",
   "reachedMaximumCountOfReminderTimes": "რეგისტრაციის ლიმიტს მიაღწია. გთხოვთ შეზღუდოთ {ReminderTimeMaximumCount} ცალამდე.",
   "minimumCountOfReminderTimes": "შეტყობინების დრო მინიმუმ {ReminderTimeMinimumCount} საჭიროა",
   "purchaseErrorUnknownError": "უცნობი მიზეზით შეცდომა მოხდა. გთხოვთ, ცოტა ხანს მოიცადოთ და ისევ სცადოთ. თუ პრობლემა არ გადაწყდება, დაგვიკავშირდით პარამეტრები > კითხვა განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",

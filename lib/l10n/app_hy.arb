@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Ծանուցում {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Երբ ծանուցումներն անջատված են, {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար նույնպես ինքնաբերաբար ստեղծվում է ընդունման գրառում",
   "requestForCancelSurvey": "Խնդրում ենք մասնակցել բաժանորդագրությունը չեղարկելուց հետո անցկացվող հարցմանը",
-  "pilllDescription": "Pilll - հակաբեղմնավորիչ դեղերի ընդունման մասնագիտացված հիշեցման հավելված",
+  "pilllDescription": "Pilll՝ հակաբեղմնավորիչ հաբի ընդունման հիշեցումներով հավելված",
   "reachedMaximumCountOfReminderTimes": "Գրանցման սահմանը լրացել է: Խնդրում ենք պահպանել {ReminderTimeMaximumCount} հիշեցման սահմանը:",
   "minimumCountOfReminderTimes": "Ծանուցման ժամերը առնվազն {ReminderTimeMinimumCount} հատ պահանջվում են",
   "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք փորձել մի փոքր ուշ։ Եթե խնդիրը չի լուծվում, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",

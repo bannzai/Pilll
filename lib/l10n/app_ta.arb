@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} காலத்திற்கான அறிவிப்பு",
   "autoRecordForNotTakenPeriodIfNotificationOff": "அறிவிப்புகள் முடக்கப்பட்டிருந்தாலும், {pillSheetPillSheetTypeNotTakenWord} காலத்திற்கான மாத்திரை உட்கொண்ட பதிவு தானாக உருவாக்கப்படும்",
   "requestForCancelSurvey": "சந்தாவை ரத்து செய்த பிறகு கருத்துக்கணிப்பில் பங்கேற்குங்கள்",
-  "pilllDescription": "Pilll மாத்திரை உட்கொள்ளலுக்கான சிறப்பு நினைவூட்டல் செயலி",
+  "pilllDescription": "Pilll, கருத்தடை மாத்திரை எடுத்துக்கொள்ள நினைவூட்டும் செயலி",
   "reachedMaximumCountOfReminderTimes": "பதிவு செய்யக்கூடிய மேல் வரம்பை அடைந்துவிட்டது। {ReminderTimeMaximumCount} எண்ணிக்கைக்குள் வைத்துக் கொள்ளவும்",
   "minimumCountOfReminderTimes": "குறைந்தபட்சம் {ReminderTimeMinimumCount} அறிவிப்பு நேரங்கள் தேவை",
   "purchaseErrorUnknownError": "தெரியாத காரணத்தால் பிழை ஏற்பட்டது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். சரியாகவில்லை என்றால் அமைப்புகள் > தொடர்பு கொள்ளவும் மூலம் தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",

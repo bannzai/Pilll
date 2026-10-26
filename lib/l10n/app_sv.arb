@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Avisering för perioden med {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "När aviseringar är avstängda skapas en intagslogg för perioden {pillSheetPillSheetTypeNotTakenWord} också automatiskt",
   "requestForCancelSurvey": "Hjälp oss gärna genom att svara på en enkät efter uppsägningen",
-  "pilllDescription": "Pilll - påminnelseapp specialiserad på p-pillerintag",
+  "pilllDescription": "Pilll – en app med påminnelser om att ta p-piller",
   "reachedMaximumCountOfReminderTimes": "Du har nått det maximala antalet registreringar. Begränsa till {ReminderTimeMaximumCount} påminnelser eller färre.",
   "minimumCountOfReminderTimes": "Minst {ReminderTimeMinimumCount} påminnelsetider krävs",
   "purchaseErrorUnknownError": "Ett okänt fel har uppstått. Vänta ett tag och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",

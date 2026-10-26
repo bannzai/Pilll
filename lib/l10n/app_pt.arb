@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Notificação do período de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Quando as notificações estão desativadas, um registro de uso para o período {pillSheetPillSheetTypeNotTakenWord} também é criado automaticamente",
   "requestForCancelSurvey": "Que tal responder a uma pesquisa após cancelar a assinatura",
-  "pilllDescription": "Pilll - Aplicativo de lembrete especializado na toma da pílula",
+  "pilllDescription": "Pilll, um app com lembretes para tomar a pílula anticoncepcional",
   "reachedMaximumCountOfReminderTimes": "Limite máximo atingido. Mantenha dentro de {ReminderTimeMaximumCount} itens.",
   "minimumCountOfReminderTimes": "É necessário definir pelo menos {ReminderTimeMinimumCount} horários de notificação",
   "purchaseErrorUnknownError": "Ocorreu um erro desconhecido. Tente novamente após um tempo. Se o problema não for resolvido, entre em contato conosco através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",

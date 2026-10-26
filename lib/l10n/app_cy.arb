@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Hysbysiad am gyfnod {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Pan fydd hysbysiadau wedi'u diffodd, caiff cofnod cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} ei greu'n awtomatig hefyd",
   "requestForCancelSurvey": "Arolwg ar ôl canslo eich tanysgrifiad",
-  "pilllDescription": "Pilll - ap atgoffa pilsennau arbenigol",
+  "pilllDescription": "Pilll, ap atgoffa ar gyfer cymryd y bilsen atal cenhedlu",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd y terfyn uchaf cofrestru. Cadwch at {ReminderTimeMaximumCount} eitem neu lai os gwelwch yn dda",
   "minimumCountOfReminderTimes": "Mae angen o leiaf {ReminderTimeMinimumCount} amser hysbysiad",
   "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arni eto ymhen ychydig. Os nad yw'n datrys, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",

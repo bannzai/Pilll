@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಸೂಚನೆ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ಅಧಿಸೂಚನೆಗಳು ಆಫ್ ಆಗಿದ್ದಾಗಲೂ {pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಗೆ ಸೇವನೆಯ ದಾಖಲೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೃಷ್ಟಿಯಾಗುತ್ತದೆ",
   "requestForCancelSurvey": "ಚಂದಾದಾರಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿದ ನಂತರದ ಸಮೀಕ್ಷೆಯಲ್ಲಿ ಭಾಗವಹಿಸಿ",
-  "pilllDescription": "Pilll ಗರ್ಭನಿರೋಧಕ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿಶೇಷೀಕೃತ ರಿಮೈಂಡರ್ ಆ್ಯಪ್",
+  "pilllDescription": "Pilll, ಗರ್ಭನಿರೋಧಕ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲು ಜ್ಞಾಪನೆ ನೀಡುವ ಆ್ಯಪ್",
   "reachedMaximumCountOfReminderTimes": "ನೋಂದಣಿ ಮಿತಿಯನ್ನು ತಲುಪಿದೆ. ದಯವಿಟ್ಟು {ReminderTimeMaximumCount} ರ ಒಳಗೆ ಇರಿಸಿ",
   "minimumCountOfReminderTimes": "ಕನಿಷ್ಠ {ReminderTimeMinimumCount} ಅಧಿಸೂಚನೆ ಸಮಯಗಳು ಅಗತ್ಯವಿದೆ",
   "purchaseErrorUnknownError": "ಅಜ್ಞಾತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಇದು ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",

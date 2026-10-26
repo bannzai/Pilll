@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}期提醒",
   "autoRecordForNotTakenPeriodIfNotificationOff": "关闭通知后，{pillSheetPillSheetTypeNotTakenWord}期间的服药记录也会自动创建",
   "requestForCancelSurvey": "取消订阅后，欢迎参与问卷调查",
-  "pilllDescription": "Pilll 专业避孕药服用提醒应用",
+  "pilllDescription": "Pilll，专为服用避孕药设计的提醒应用",
   "reachedMaximumCountOfReminderTimes": "已达到注册上限。请控制在{ReminderTimeMaximumCount}个以内",
   "minimumCountOfReminderTimes": "通知时间至少需要{ReminderTimeMinimumCount}个",
   "purchaseErrorUnknownError": "发生了未知错误，请稍后重试。如果问题仍未解决，请通过 设置 > 问询 联系我们。详细信息：{exceptionMessage}:{exceptionDetails}",

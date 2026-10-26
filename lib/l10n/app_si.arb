@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා දැනුම්දීම",
   "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය වූ විටත් {pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා පෙති ගැනීමේ සටහන ස්වයංක්‍රීයව සෑදේ",
   "requestForCancelSurvey": "දායකත්වය අවලංගු කිරීමෙන් පසු සමීක්ෂණයට කරුණාකර සහභාගී වන්න",
-  "pilllDescription": "Pilll ගර්භ නිරෝධක පෙති සඳහා විශේෂ මතක්කිරීමේ යෙදුම",
+  "pilllDescription": "Pilll, උපත් පාලන පෙති ගැනීම සඳහා සිහිකැඳවීමේ යෙදුම",
   "reachedMaximumCountOfReminderTimes": "ලියාපදිංචි කළ හැකි උපරිම සීමාවට ළඟා වී ඇත. කරුණාකර {ReminderTimeMaximumCount} ක් ඇතුළත සීමා කරන්න.",
   "minimumCountOfReminderTimes": "අවම වශයෙන් {ReminderTimeMinimumCount} දැනුම්දීමේ වේලාවන් අවශ්‍ය වේ",
   "purchaseErrorUnknownError": "නොදන්නා හේතුවක් නිසා දෝෂයක් ඇතිවී ඇත. කරුණාකර මදක් වේලාවක් ගත වූ පසු නැවතත් උත්සාහ කරන්න. එය විසඳී නොගියහොත් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Известие за периода {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когато известията са изключени, запис на приема за периода {pillSheetPillSheetTypeNotTakenWord} също се създава автоматично",
   "requestForCancelSurvey": "Молим ви да участвате в анкета след прекратяване на абонамента",
-  "pilllDescription": "Pilll - специализирано приложение за напомняне за прием на контрацептивни хапчета",
+  "pilllDescription": "Pilll — приложение с напомняне за прием на противозачатъчното хапче",
   "reachedMaximumCountOfReminderTimes": "Достигнахте максималния брой регистрации. Моля, ограничете се до {ReminderTimeMaximumCount} записа.",
   "minimumCountOfReminderTimes": "Необходими са минимум {ReminderTimeMinimumCount} времена за известяване",
   "purchaseErrorUnknownError": "Възникна неизвестна грешка. Моля, опитайте отново след малко. Ако проблемът не се реши, се свържете с нас чрез Настройки > Контакт. Подробности: {exceptionMessage}:{exceptionDetails}",

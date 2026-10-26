@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildiriş",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrü üçün həb qəbulu qeyd avtomatik olaraq yaradılır",
   "requestForCancelSurvey": "Ləğvdən sonrakı sorğuda iştirak etməyinizi xahiş edirik",
-  "pilllDescription": "Pilll - Doğum nəzarəti həbləri üçün xüsusi xatırladıcı tətbiq",
+  "pilllDescription": "Pilll — həb qəbulunuz üçün xatırlatma tətbiqi",
   "reachedMaximumCountOfReminderTimes": "Maksimal həddə çatdınız. {ReminderTimeMaximumCount} ədəd daxilində saxlayın",
   "minimumCountOfReminderTimes": "Ən azı {ReminderTimeMinimumCount} bildiriş vaxtı tələb olunur",
   "purchaseErrorUnknownError": "Naməlum səbəb üzündən xəta baş verdi. Bir az vaxt keçdikdən sonra yenidən cəhd edin. Həll olunmadığı halda Tənzimləmələr > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",

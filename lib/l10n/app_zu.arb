@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Isaziso sesikhathi se-{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, irekhodi lokuphuza amaphilisi lesikhathi se-{pillSheetPillSheetTypeNotTakenWord} nalo lenziwa ngokuzenzakalelayo",
   "requestForCancelSurvey": "Sicela usisize ngokuphendula inhlolovo ngemva kokukhansela ukubhalisa",
-  "pilllDescription": "Pilll - I-app yesikhumbuzi samaphilisi okuvimbela ukukhulelwa",
+  "pilllDescription": "Pilll, uhlelo lokusebenza olunesikhumbuzo sokuphuza iphilisi lokuvimbela inzalo",
   "reachedMaximumCountOfReminderTimes": "Umngcele wokubhalisa usufinyelelwe. Sicela ugcine ngaphansi kwe-{ReminderTimeMaximumCount}.",
   "minimumCountOfReminderTimes": "Izikhathi zesaziso okungenani {ReminderTimeMinimumCount} ziyadingeka",
   "purchaseErrorUnknownError": "Kuveleke iphutha elingaziwa. Sicela uzame futhi emva kwesikhathi. Uma ingaxazululeki, sicela uxhumane nathi kusuka ku Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",

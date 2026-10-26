@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاع",
   "autoRecordForNotTakenPeriodIfNotificationOff": "اطلاعات بند ہونے پر بھی {pillSheetPillSheetTypeNotTakenWord} کی مدت کے لیے گولی لینے کا ریکارڈ خودکار طور پر بن جاتا ہے",
   "requestForCancelSurvey": "رکنیت منسوخ کرنے کے بعد براہ کرم سروے میں حصہ لیں",
-  "pilllDescription": "Pilll پل کی یاد دہانی کے لیے مخصوص ایپ",
+  "pilllDescription": "Pilll، مانع حمل گولی لینے کی یاد دہانی کی ایپ",
   "reachedMaximumCountOfReminderTimes": "اندراج کی حد مکمل ہو گئی ہے۔ براہ کرم {ReminderTimeMaximumCount} کے اندر رکھیں",
   "minimumCountOfReminderTimes": "نوٹیفیکیشن کے اوقات میں کم از کم {ReminderTimeMinimumCount} اندراج ضروری ہے",
   "purchaseErrorUnknownError": "ایک نامعلوم خرابی پیدا ہوئی ہے۔ براہ کرم کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کے ذریعے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",

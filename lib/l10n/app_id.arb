@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Notifikasi untuk periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Saat notifikasi dimatikan, catatan minum pil untuk periode {pillSheetPillSheetTypeNotTakenWord} juga dibuat otomatis",
   "requestForCancelSurvey": "Mohon bantu isi survei setelah membatalkan langganan",
-  "pilllDescription": "Pilll Aplikasi pengingat khusus konsumsi pil",
+  "pilllDescription": "Pilll, aplikasi pengingat untuk minum pil kontrasepsi",
   "reachedMaximumCountOfReminderTimes": "Batas maksimum pendaftaran telah tercapai. Harap batasi dalam {ReminderTimeMaximumCount} item.",
   "minimumCountOfReminderTimes": "Minimal {ReminderTimeMinimumCount} waktu notifikasi diperlukan",
   "purchaseErrorUnknownError": "Terjadi kesalahan yang tidak diketahui penyebabnya. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Kontak. Detail: {exceptionMessage}:{exceptionDetails}",

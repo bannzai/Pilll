@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Abiso para sa panahon ng {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kapag naka-off ang mga abiso, awtomatiko ring nagagawa ang tala ng pag-inom para sa panahon ng {pillSheetPillSheetTypeNotTakenWord}",
   "requestForCancelSurvey": "Maaari po ba kayong sumagot sa sarbey matapos kanselahin ang suskrisyon",
-  "pilllDescription": "Pilll - Pill Reminder App para sa Birth Control Pills",
+  "pilllDescription": "Pilll, app na may paalala sa pag-inom ng pildoras na pangkontraseptibo",
   "reachedMaximumCountOfReminderTimes": "Naabot na ang maximum na bilang na pwedeng ma-register. Panatilihin sa loob ng {ReminderTimeMaximumCount} na mga reminder.",
   "minimumCountOfReminderTimes": "Kailangan ng hindi bababa sa {ReminderTimeMinimumCount} na oras ng paalala",
   "purchaseErrorUnknownError": "May naganap na hindi kilalang error. Pakihintay ang ilang sandali at subukang muli. Kung hindi pa rin nalulutas, mangyaring makipag-ugnayan sa Settings > Tanong. Mga detalye: {exceptionMessage}:{exceptionDetails}",

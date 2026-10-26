@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "ការជូនដំណឹងសម្រាប់រយៈពេល {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ពេលបិទការជូនដំណឹង កំណត់ត្រាការលេបថ្នាំសម្រាប់អំឡុងពេល {pillSheetPillSheetTypeNotTakenWord} ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិដែរ",
   "requestForCancelSurvey": "សូមចូលរួមការស្ទង់មតិបន្ទាប់ពីបោះបង់ការជាវ",
-  "pilllDescription": "Pilll កម្មវិធីរំលឹកថ្នាំកុំមានកូនជំនាញពិសេស",
+  "pilllDescription": "Pilll កម្មវិធីរំលឹកការលេបថ្នាំពន្យារកំណើត",
   "reachedMaximumCountOfReminderTimes": "ចំនួនម៉ោងរំលឹកបានដល់ដែនកំណត់។ សូមរក្សាឲ្យតិចជាង {ReminderTimeMaximumCount} ដង។",
   "minimumCountOfReminderTimes": "ត្រូវការការជូនដំណឹងយ៉ាងតិច {ReminderTimeMinimumCount} ចំនួន",
   "purchaseErrorUnknownError": "មានកំហុសដែលមិនស្គាល់មូលហេតុបានកើតឡើង។ សូមរង់ចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការទាក់ទង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",

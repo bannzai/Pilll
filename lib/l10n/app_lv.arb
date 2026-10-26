@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Paziņojums par {pillSheetPillSheetTypeNotTakenWord} periodu",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad paziņojumi ir izslēgti, tablešu lietošanas ieraksts par {pillSheetPillSheetTypeNotTakenWord} periodu arī tiek izveidots automātiski",
   "requestForCancelSurvey": "Lūdzu, piedalieties aptaujā pēc abonementa atcelšanas",
-  "pilllDescription": "Pilll - kontraceptīvo tableťu atgādinājumu lietotne",
+  "pilllDescription": "Pilll — atgādinājumu lietotne kontracepcijas tablešu lietošanai",
   "reachedMaximumCountOfReminderTimes": "Sasniegts reģistrācijas ierobežojums. Lūdzu, ierobežojiet līdz {ReminderTimeMaximumCount} vienībām.",
   "minimumCountOfReminderTimes": "Ir nepieciešami vismaz {ReminderTimeMinimumCount} paziņojuma laiki",
   "purchaseErrorUnknownError": "Notika nezināma kļūda. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma nerisinājas, lūdzu, sazinieties ar mums sadaļā Iestatījumi > Saziņa. Detaļas: {exceptionMessage}:{exceptionDetails}",

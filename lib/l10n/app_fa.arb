@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "اعلان دورهٔ {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "وقتی اعلان‌ها خاموش باشند، ثبت مصرف برای دورهٔ {pillSheetPillSheetTypeNotTakenWord} نیز به‌طور خودکار ایجاد می‌شود",
   "requestForCancelSurvey": "لطفاً پس از لغو اشتراک در نظرسنجی شرکت کنید",
-  "pilllDescription": "Pilll - اپلیکیشن یادآور تخصصی مصرف قرص",
+  "pilllDescription": "Pilll، برنامهٔ یادآور مصرف قرص ضدبارداری",
   "reachedMaximumCountOfReminderTimes": "به حداکثر تعداد مجاز رسیده‌اید. لطفاً تعداد را به {ReminderTimeMaximumCount} مورد محدود کنید",
   "minimumCountOfReminderTimes": "حداقل {ReminderTimeMinimumCount} زمان یادآوری لازم است",
   "purchaseErrorUnknownError": "خطای ناشناخته‌ای رخ داده است. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورت حل نشدن مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",

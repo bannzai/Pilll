@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ അറിയിപ്പ്",
   "autoRecordForNotTakenPeriodIfNotificationOff": "അറിയിപ്പുകൾ ഓഫായിരിക്കുമ്പോഴും {pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ ഗുളിക കഴിച്ചതിന്റെ രേഖ സ്വയമേവ സൃഷ്ടിക്കപ്പെടും",
   "requestForCancelSurvey": "സബ്‌സ്‌ക്രിപ്‌ഷൻ റദ്ദാക്കിയ ശേഷമുള്ള സർവേയിൽ പങ്കെടുക്കൂ",
-  "pilllDescription": "Pilll - പിൽ സേവനത്തിനായി പ്രത്യേകം രൂപകൽപ്പന ചെയ്ത റിമൈൻഡർ ആപ്പ്",
+  "pilllDescription": "Pilll, ഗർഭനിരോധന ഗുളിക കഴിക്കാൻ ഓർമ്മപ്പെടുത്തുന്ന ആപ്പ്",
   "reachedMaximumCountOfReminderTimes": "പരമാവധി പരിധിയിൽ എത്തി. ദయവായി {ReminderTimeMaximumCount} എണ്ണത്തിനുള്ളിൽ ഒതുക്കുക",
   "minimumCountOfReminderTimes": "കുറഞ്ഞത് {ReminderTimeMinimumCount} അറിയിപ്പ് സമയങ്ങൾ ആവശ്യമാണ്",
   "purchaseErrorUnknownError": "അറിയാത്ത കാരണത്താൽ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പരിഹരിക്കാൻ കഴിയുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Powiadomienie o okresie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Gdy powiadomienia są wyłączone, zapis przyjęcia tabletki w okresie {pillSheetPillSheetTypeNotTakenWord} również powstaje automatycznie",
   "requestForCancelSurvey": "Pomóż nam, odpowiadając na ankietę po anulowaniu subskrypcji",
-  "pilllDescription": "Pilll - aplikacja do przypominania o pigułkach antykoncepcyjnych",
+  "pilllDescription": "Pilll – aplikacja z przypomnieniami o przyjęciu tabletki antykoncepcyjnej",
   "reachedMaximumCountOfReminderTimes": "Osiągnięto limit przypomnień. Ogranicz do {ReminderTimeMaximumCount} pozycji.",
   "minimumCountOfReminderTimes": "Wymagane jest minimum {ReminderTimeMinimumCount} powiadomień",
   "purchaseErrorUnknownError": "Wystąpił nieznany błąd. Spróbuj ponownie po chwili. Jeśli problem się powtarza, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",

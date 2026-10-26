@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord}-tímabil",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar slökkt er á tilkynningum verður inntökuskrá fyrir tímabilið {pillSheetPillSheetTypeNotTakenWord} einnig til sjálfkrafa",
   "requestForCancelSurvey": "Viltu svara könnun eftir að áskriftinni var sagt upp",
-  "pilllDescription": "Pilll - píluáminningarforrit fyrir píluinntöku",
+  "pilllDescription": "Pilll – áminningarapp fyrir töku getnaðarvarnarpillunnar",
   "reachedMaximumCountOfReminderTimes": "Hámarki hefur verið náð. Vinsamlegast hafðu ekki fleiri en {ReminderTimeMaximumCount} áminningar.",
   "minimumCountOfReminderTimes": "Að minnsta kosti {ReminderTimeMinimumCount} tilkynningatímar eru nauðsynlegir",
   "purchaseErrorUnknownError": "Óvænt villa kom upp. Vinsamlegast reyndu aftur síðar. Ef vandamálið helst, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",

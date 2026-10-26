@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "ແຈ້ງເຕືອນຊ່ວງ {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ເມື່ອປິດການແຈ້ງເຕືອນ ບັນທຶກການກິນຢາສຳລັບໄລຍະ {pillSheetPillSheetTypeNotTakenWord} ກໍຈະຖືກສ້າງອັດຕະໂນມັດເຊັ່ນກັນ",
   "requestForCancelSurvey": "ກະລຸນາຊ່ວຍຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກການສະໝັກໃຊ້",
-  "pilllDescription": "Pilll - ແອັບຯແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດສະເພາະ",
+  "pilllDescription": "Pilll ແອັບແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດ",
   "reachedMaximumCountOfReminderTimes": "ຈຳນວນການລົງທະບຽນໄດ້ຮອດຂີດສູງສຸດແລ້ວ។ ກະລຸນາຈັດການໃຫ້ຢູ່ໃນ {ReminderTimeMaximumCount} ລາຍການ",
   "minimumCountOfReminderTimes": "ເວລາແຈ້ງເຕືອນຕ້ອງມີຢ່າງໜ້ອຍ {ReminderTimeMinimumCount} ລາຍການ",
   "purchaseErrorUnknownError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາລໍຖ້າສັກຄູ່ແລ້ວລອງໃໝ່. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ຫາພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",

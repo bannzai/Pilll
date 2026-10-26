@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Ilmoitus {pillSheetPillSheetTypeNotTakenWord}-jaksosta",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kun ilmoitukset ovat pois päältä, myös {pillSheetPillSheetTypeNotTakenWord}-jakson pilleriloki luodaan automaattisesti",
   "requestForCancelSurvey": "Voisitko vastata kyselyyn tilauksen perumisen jälkeen",
-  "pilllDescription": "Pilll - ehkäisypillerien ottamiseen keskittyvä muistutussovellus",
+  "pilllDescription": "Pilll – muistutussovellus ehkäisypillerin ottamiseen",
   "reachedMaximumCountOfReminderTimes": "Enimmäismäärä on saavutettu. Rajoita määrä {ReminderTimeMaximumCount} muistutusaikaan.",
   "minimumCountOfReminderTimes": "Vähintään {ReminderTimeMinimumCount} muistutusaikaa vaaditaan",
   "purchaseErrorUnknownError": "Tuntematon virhe on tapahtunut. Yritä uudelleen hetken kuluttua. Jos ongelma jatkuu, ota yhteyttä Asetukset > Yhteydenotto kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",

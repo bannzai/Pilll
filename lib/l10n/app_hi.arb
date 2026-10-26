@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाएँ बंद होने पर भी {pillSheetPillSheetTypeNotTakenWord} अवधि के लिए सेवन रिकॉर्ड अपने आप बन जाता है",
   "requestForCancelSurvey": "सदस्यता रद्द करने के बाद सर्वेक्षण में भाग लेने का अनुरोध",
-  "pilllDescription": "Pilll पिल सेवन के लिए विशेषीकृत रिमाइंडर ऐप",
+  "pilllDescription": "Pilll, गर्भनिरोधक गोली लेने के लिए रिमाइंडर ऐप",
   "reachedMaximumCountOfReminderTimes": "पंजीकरण की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} के अंदर रखें।",
   "minimumCountOfReminderTimes": "न्यूनतम {ReminderTimeMinimumCount} रिमाइंडर समय आवश्यक हैं",
   "purchaseErrorUnknownError": "अज्ञात कारण से त्रुटि हुई है। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",

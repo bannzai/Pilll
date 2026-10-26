@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Melding voor de periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Als meldingen uitstaan, wordt ook voor de periode {pillSheetPillSheetTypeNotTakenWord} automatisch een innameregistratie aangemaakt",
   "requestForCancelSurvey": "Help ons met een enquête na het opzeggen van je abonnement",
-  "pilllDescription": "Pilll - Gespecialiseerde pil reminder app",
+  "pilllDescription": "Pilll, een app met herinneringen voor je anticonceptiepil",
   "reachedMaximumCountOfReminderTimes": "Het maximum aantal registraties is bereikt. Houd het binnen {ReminderTimeMaximumCount} items.",
   "minimumCountOfReminderTimes": "Er zijn minimaal {ReminderTimeMinimumCount} herinneringstijden vereist",
   "purchaseErrorUnknownError": "Er is een onbekende fout opgetreden. Probeer het na een tijdje opnieuw. Als het probleem aanhoudt, neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",

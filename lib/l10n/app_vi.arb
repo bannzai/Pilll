@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Thông báo cho giai đoạn {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Khi tắt thông báo, nhật ký uống thuốc cho giai đoạn {pillSheetPillSheetTypeNotTakenWord} cũng được tạo tự động",
   "requestForCancelSurvey": "Vui lòng tham gia khảo sát sau khi hủy gói đăng ký",
-  "pilllDescription": "Pilll - Ứng dụng nhắc nhở uống thuốc tránh thai chuyên biệt",
+  "pilllDescription": "Pilll, ứng dụng lời nhắc uống thuốc tránh thai",
   "reachedMaximumCountOfReminderTimes": "Đã đạt giới hạn đăng ký tối đa. Vui lòng giữ trong phạm vi {ReminderTimeMaximumCount} mục.",
   "minimumCountOfReminderTimes": "Cần ít nhất {ReminderTimeMinimumCount} thời gian thông báo",
   "purchaseErrorUnknownError": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau một thời gian. Nếu không giải quyết được, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",

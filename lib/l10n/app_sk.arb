@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Upozornenie na obdobie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznam o užití za obdobie {pillSheetPillSheetTypeNotTakenWord} sa tiež vytvorí automaticky",
   "requestForCancelSurvey": "Prosíme vás o vyplnenie dotazníka po zrušení predplatného",
-  "pilllDescription": "Pilll - špecializovaný pripomínač na užívanie piluliek",
+  "pilllDescription": "Pilll — aplikácia s pripomienkami na užitie antikoncepčnej tabletky",
   "reachedMaximumCountOfReminderTimes": "Bol dosiahnutý maximálny počet registrácií. Obmedzte na maximálne {ReminderTimeMaximumCount} položiek.",
   "minimumCountOfReminderTimes": "Je potrebných minimálne {ReminderTimeMinimumCount} časov upozornení",
   "purchaseErrorUnknownError": "Vyskytla sa neznáma chyba. Počkajte chvíľu a skúste to znovu. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

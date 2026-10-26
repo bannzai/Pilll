@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "የ{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ማሳወቂያዎች ሲጠፉ፣ ለ{pillSheetPillSheetTypeNotTakenWord} ጊዜ አወሳሰድ መዝገብ በራስ-ሰር ይፈጠራል",
   "requestForCancelSurvey": "ከስረዛው በኋላ በሚደረገው የዳሰሳ ጥናት እንዲሳተፉ እንጠይቃለን",
-  "pilllDescription": "Pilll የክኒን መውሰጃ አስታዋሽ መተግበሪያ",
+  "pilllDescription": "Pilll፣ ክኒን ለመውሰድ ማሳሰቢያ መተግበሪያ",
   "reachedMaximumCountOfReminderTimes": "የመመዝገቢያ ከፍተኛ ቁጥር ላይ ደርሰዋል። እባክዎን ከ{ReminderTimeMaximumCount} ጊዜ ያልበለጠ ያድርጉ።",
   "minimumCountOfReminderTimes": "ቢያንስ {ReminderTimeMinimumCount} የማሳወቂያ ጊዜዎች ያስፈልጋሉ",
   "purchaseErrorUnknownError": "ያልታወቀ ስህተት ተከስቷል፡፡ እባክዎ ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ፡፡ ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያግኙን፡፡ ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",

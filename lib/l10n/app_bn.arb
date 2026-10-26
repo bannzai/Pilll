@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ের বিজ্ঞপ্তি",
   "autoRecordForNotTakenPeriodIfNotificationOff": "বিজ্ঞপ্তি বন্ধ থাকলেও {pillSheetPillSheetTypeNotTakenWord} সময়ের সেবনের রেকর্ড স্বয়ংক্রিয়ভাবে তৈরি হয়",
   "requestForCancelSurvey": "সদস্যতা বাতিলের পর জরিপে অংশ নিতে আপনাকে অনুরোধ করছি",
-  "pilllDescription": "Pilll পিল সেবনের জন্য বিশেষায়িত রিমাইন্ডার অ্যাপ",
+  "pilllDescription": "Pilll, জন্মনিয়ন্ত্রণ পিল খাওয়ার রিমাইন্ডার অ্যাপ",
   "reachedMaximumCountOfReminderTimes": "নিবন্ধনের সর্বোচ্চ সীমায় পৌঁছেছেন। {ReminderTimeMaximumCount}টির মধ্যে রাখুন",
   "minimumCountOfReminderTimes": "কমপক্ষে {ReminderTimeMinimumCount}টি বিজ্ঞপ্তির সময় প্রয়োজন",
   "purchaseErrorUnknownError": "অজানা কারণে একটি ত্রুটি ঘটেছে। কিছুক্ষণ পর আবার চেষ্টা করুন। সমস্যার সমাধান না হলে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",

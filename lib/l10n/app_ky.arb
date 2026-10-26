@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгили тууралуу билдирүү",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Билдирмелер өчүрүлгөндө да {pillSheetPillSheetTypeNotTakenWord} мезгилине таблетка ичүү жазуусу автоматтык түрдө түзүлөт",
   "requestForCancelSurvey": "Жазылууну токтоткондон кийинки сурамжылоого катышып коюуңузду суранабыз",
-  "pilllDescription": "Pilll контрацептивдик таблеткаларды ичүүгө атайын иштелип чыккан эскертүү колдонмосу",
+  "pilllDescription": "Pilll — бойго бүтүрбөөчү таблетканы ичүү үчүн эскертме колдонмосу",
   "reachedMaximumCountOfReminderTimes": "Катталуунун чеги толду. {ReminderTimeMaximumCount} данадан ашпаган санда болушу керек.",
   "minimumCountOfReminderTimes": "Эскертүү убактысы эң азында {ReminderTimeMinimumCount} болушу керек",
   "purchaseErrorUnknownError": "Белгисиз себепти катачылык болду. Бир аз убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбесе, Тууралоолор > Кайрылуу аркылуу кайрылыңыз. Майда-чүйдөлөрү: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} хугацааны мэдэгдэл",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Мэдэгдлийг унтраасан үед ч {pillSheetPillSheetTypeNotTakenWord} хугацааны эм уусан бүртгэл автоматаар үүснэ",
   "requestForCancelSurvey": "Захиалгаа цуцалсны дараах санал асуулгад оролцоно уу",
-  "pilllDescription": "Pilll - Эмчилгээний таблет уухад зориулсан сануулгын апп",
+  "pilllDescription": "Pilll — жирэмслэлтээс хамгаалах эм уух сануулгатай апп",
   "reachedMaximumCountOfReminderTimes": "Бүртгэлийн дээд хязгаарт хүрлээ. {ReminderTimeMaximumCount} удаагаас илүүгүй байхаар тохируулна уу",
   "minimumCountOfReminderTimes": "Хамгийн багадаа {ReminderTimeMinimumCount} мэдэгдлийн цаг шаардлагатай",
   "purchaseErrorUnknownError": "Үл мэдэгдэх алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандах-аас хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",

@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ਮਿਆਦ ਲਈ ਸੂਚਨਾ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ਸੂਚਨਾਵਾਂ ਬੰਦ ਹੋਣ 'ਤੇ ਵੀ {pillSheetPillSheetTypeNotTakenWord} ਮਿਆਦ ਲਈ ਸੇਵਨ ਰਿਕਾਰਡ ਆਪਣੇ ਆਪ ਬਣ ਜਾਂਦਾ ਹੈ",
   "requestForCancelSurvey": "ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਰੱਦ ਕਰਨ ਤੋਂ ਬਾਅਦ ਸਰਵੇਖਣ ਵਿੱਚ ਕਿਰਪਾ ਕਰਕੇ ਹਿੱਸਾ ਲਓ",
-  "pilllDescription": "Pilll پل دی یاددہانی دے لئی مخصوص ایپ",
+  "pilllDescription": "Pilll, ਗਰਭ ਨਿਰੋਧਕ ਗੋਲੀ ਲੈਣ ਲਈ ਰਿਮਾਈਂਡਰ ਐਪ",
   "reachedMaximumCountOfReminderTimes": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦੀ ਅਧਿਕਤਮ ਸੀਮਾ ਪਹੁੰਚ ਗਈ ਹੈ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਇਸ ਨੂੰ {ReminderTimeMaximumCount} ਤੱਕ ਸੀਮਤ ਰੱਖੋ।",
   "minimumCountOfReminderTimes": "ਸੂਚਨਾ ਸਮਾਂ ਘੱਟੋ-ਘੱਟ {ReminderTimeMinimumCount} ਲੋੜੀਂਦੇ ਹਨ",
   "purchaseErrorUnknownError": "ਅਣਜਾਣ ਗਲਤੀ ਹੋਈ ਹੈ। ਕੁਝ ਸਮਾਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਹੱਲ ਨਹੀਂ ਹੁੰਦਾ ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸੰਪਰਕ ਤੋਂ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",

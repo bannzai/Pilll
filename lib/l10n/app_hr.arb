@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Obavijest za razdoblje {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad su obavijesti isključene, evidencija uzimanja za razdoblje {pillSheetPillSheetTypeNotTakenWord} također se automatski stvara",
   "requestForCancelSurvey": "Molimo vas da ispunite anketu nakon otkazivanja pretplate",
-  "pilllDescription": "Pilll - aplikacija podsjetnik specijalizirana za uzimanje pilula",
+  "pilllDescription": "Pilll — aplikacija s podsjetnikom za uzimanje kontracepcijske pilule",
   "reachedMaximumCountOfReminderTimes": "Dosegnuta je maksimalna granica. Molimo ograničite na maksimalno {ReminderTimeMaximumCount} podsjetnika.",
   "minimumCountOfReminderTimes": "Potrebno je najmanje {ReminderTimeMinimumCount} vremena obavještavanja",
   "purchaseErrorUnknownError": "Došlo je do neočekivane greške. Molimo pokušajte ponovno nakon nekog vremena. Ako se problem nastavi, obratite nam se putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",

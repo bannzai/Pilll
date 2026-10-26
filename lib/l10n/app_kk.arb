@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} кезеңі туралы хабарландыру",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландырулар өшірілгенде, {pillSheetPillSheetTypeNotTakenWord} кезеңіне қабылдау жазбасы да автоматты түрде жасалады",
   "requestForCancelSurvey": "Жазылымнан бас тартқаннан кейінгі сауалнамаға қатысуыңызды сұраймыз",
-  "pilllDescription": "Pilll таблетка қабылдауға арналған хабарландыру қолданбасы",
+  "pilllDescription": "Pilll — контрацепциялық таблетканы қабылдауға арналған еске салу қолданбасы",
   "reachedMaximumCountOfReminderTimes": "Тіркеу шегіне жеттіңіз. {ReminderTimeMaximumCount} данадан аспауы керек.",
   "minimumCountOfReminderTimes": "Ескерту уақыты кемінде {ReminderTimeMinimumCount} дана болуы қажет",
   "purchaseErrorUnknownError": "Белгісіз қате орын алды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",

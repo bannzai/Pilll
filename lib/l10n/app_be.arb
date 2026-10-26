@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "Апавяшчэнне пра перыяд {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Калі апавяшчэнні выключаны, запіс прыёму пігулак за перыяд {pillSheetPillSheetTypeNotTakenWord} таксама ствараецца аўтаматычна",
   "requestForCancelSurvey": "Просім вас паўдзельнічаць у апытанні пасля скасавання падпіскі",
-  "pilllDescription": "Pilll - спецыялізаванае прыкладанне-нагадванне для прыёму пілюль",
+  "pilllDescription": "Pilll — праграма з напамінам пра прыём пігулкі",
   "reachedMaximumCountOfReminderTimes": "Дасягнута максімальная колькасць напамінаў. Калі ласка, абмежуйцеся {ReminderTimeMaximumCount} напамінамі",
   "minimumCountOfReminderTimes": "Патрэбна як мінімум {ReminderTimeMinimumCount} гадзін апавяшчэння",
   "purchaseErrorUnknownError": "Узнікла невядомая памылка. Паспрабуйце яшчэ раз праз некаторы час. Калі праблема не вырашаецца, звярніцеся праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",

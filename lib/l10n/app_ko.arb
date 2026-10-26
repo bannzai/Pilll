@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간 알림",
   "autoRecordForNotTakenPeriodIfNotificationOff": "알림을 꺼도 {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록이 자동으로 생성돼요",
   "requestForCancelSurvey": "구독 취소 후 설문조사에 참여해 주세요",
-  "pilllDescription": "Pilll 피임약 복용 전용 리마인더 앱",
+  "pilllDescription": "Pilll, 피임약 복용 알림 앱",
   "reachedMaximumCountOfReminderTimes": "등록할 수 있는 상한에 도달했습니다. {ReminderTimeMaximumCount}개 이내로 설정해 주세요.",
   "minimumCountOfReminderTimes": "알림 시간은 최소 {ReminderTimeMinimumCount}개가 필요합니다",
   "purchaseErrorUnknownError": "원인불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않을 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",

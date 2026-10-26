@@ -284,7 +284,7 @@
   "notificationForNotTakenPeriod": "د {pillSheetPillSheetTypeNotTakenWord} مودې خبرتیا",
   "autoRecordForNotTakenPeriodIfNotificationOff": "کله چې خبرتیاوې بندې وي، د {pillSheetPillSheetTypeNotTakenWord} مودې لپاره د ګولۍ اخیستلو ریکارډ هم په اوتومات ډول جوړېږي",
   "requestForCancelSurvey": "د ګډون له لغوه کولو وروسته، مهرباني وکړئ په سروې کې برخه واخلئ",
-  "pilllDescription": "Pilll د ګولیو د اخیستلو لپاره ځانګړی یادښت اپلیکیشن",
+  "pilllDescription": "Pilll، د امیندوارۍ مخنیوي ګولۍ د خوړلو لپاره د یادونې اپلېکېشن",
   "reachedMaximumCountOfReminderTimes": "د ثبت کولو حد ته ورسیده. د {ReminderTimeMaximumCount} څخه کم وساتئ",
   "minimumCountOfReminderTimes": "د یادونې وخت لږترلږه {ReminderTimeMinimumCount} اړین دی",
   "purchaseErrorUnknownError": "د نامعلومو اسبابو د تېروتنې رامنځته شوې. د یو څه وخت څخه وروسته بیا هڅه وکړئ. که ستونزه نه حل شي، د تنظیماتو > پوښتنې څخه موږ سره اړیکه ونیسئ. جزئیات: {exceptionMessage}:{exceptionDetails}",
