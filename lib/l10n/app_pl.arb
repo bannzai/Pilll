@@ -47,7 +47,7 @@
   "linked": "Połączono",
   "unregistered": "Nie zarejestrowano",
   "quickRecord": "Szybki zapis",
-  "quickRecordDescription": "Ekran powiadomień pokazuje dzisiejszą pigułkę i pozwala bezpośrednio zarejestrować jej przyjęcie.",
+  "quickRecordDescription": "Na ekranie powiadomień sprawdzisz, którą tabletkę wziąć dziś, i od razu dodasz ją do rejestru przyjęć.",
   "healthCareIntegration": "Integracja ze zdrowiem",
   "healthCareIntegrationDescription": "Zapisy miesiączki zarejestrowane w Pilll mogą być automatycznie zapisywane w aplikacji Zdrowie",
   "viewPremiumPlan": "Zobacz plan premium",

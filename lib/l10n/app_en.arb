@@ -47,7 +47,7 @@
   "linked": "Linked",
   "unregistered": "Not registered",
   "quickRecord": "Quick record",
-  "quickRecordDescription": "See today's pill on the notification screen and record your intake right there.",
+  "quickRecordDescription": "See which pill to take today on the notification screen and add it to your pill log right there.",
   "healthCareIntegration": "Healthcare Integration",
   "healthCareIntegrationDescription": "Menstrual records tracked in Pilll can be automatically synced to HealthKit",
   "viewPremiumPlan": "View Premium Plan",

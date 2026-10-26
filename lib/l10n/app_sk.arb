@@ -47,7 +47,7 @@
   "linked": "Prepojené",
   "unregistered": "Neregistrované",
   "quickRecord": "Rýchly záznam",
-  "quickRecordDescription": "Na notifikačnej obrazovke vidíte dnešnú pilulku a môžete si priamo zaznamenať jej užitie.",
+  "quickRecordDescription": "Na obrazovke oznámení uvidíte, ktorú tabletku si máte dnes vziať, a hneď môžete pridať záznam o užití.",
   "healthCareIntegration": "Zdravotná integrácia",
   "healthCareIntegrationDescription": "Menštruačné záznamy zaznamenané v aplikácii Pilll sa môžu automaticky synchronizovať s aplikáciou Zdravie",
   "viewPremiumPlan": "Zobraziť prémiový plán",

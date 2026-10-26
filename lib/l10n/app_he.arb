@@ -47,7 +47,7 @@
   "linked": "מקושר",
   "unregistered": "לא בוצע רישום",
   "quickRecord": "תיעוד מהיר",
-  "quickRecordDescription": "במסך ההתראות תוכלי לראות איזו גלולה לקחת היום ולרשום את הנטילה ישירות.",
+  "quickRecordDescription": "במסך ההתראות אפשר לראות איזו גלולה יש ליטול היום ולהוסיף מיד רישום נטילה.",
   "healthCareIntegration": "חיבור בריאות",
   "healthCareIntegrationDescription": "רישומי הווסת שנרשמו ב-Pilll יכולים להירשם באופן אוטומטי באפליקציית בריאות",
   "viewPremiumPlan": "צפה בתוכנית הפרמיום",

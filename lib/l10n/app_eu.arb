@@ -47,7 +47,7 @@
   "linked": "Lotuta",
   "unregistered": "Erregistratu gabe",
   "quickRecord": "Erregistro azkarra",
-  "quickRecordDescription": "Jakinarazpen pantailan gaur hartu beharreko pilula ikusi eta zuzenean hartzeko erregistroa egin dezakezu.",
+  "quickRecordDescription": "Jakinarazpenen pantailan gaur zein pilula hartu behar duzun ikus dezakezu, eta hartze-erregistroan berehala jaso.",
   "healthCareIntegration": "Osasun elkarlana",
   "healthCareIntegrationDescription": "Pilllen erregistratutako hileko-datuak automatikoki Osasun aplikazioan gorde daitezke",
   "viewPremiumPlan": "Premium plana ikusi",

@@ -47,7 +47,7 @@
   "linked": "Tilknyttet",
   "unregistered": "Ikke registreret",
   "quickRecord": "Hurtig registrering",
-  "quickRecordDescription": "På notifikationsskærmen kan du se dagens pille og registrere indtagelsen direkte.",
+  "quickRecordDescription": "På notifikationsskærmen kan du se, hvilken p-pille du skal tage i dag, og straks opdatere din pilleregistrering.",
   "healthCareIntegration": "Sundhedsintegration",
   "healthCareIntegrationDescription": "Menstruationsregistreringer fra Pilll kan automatisk gemmes i Sundhed-appen",
   "viewPremiumPlan": "Se premium plan",

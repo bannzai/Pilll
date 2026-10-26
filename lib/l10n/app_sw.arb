@@ -47,7 +47,7 @@
   "linked": "Imeunganishwa",
   "unregistered": "Haijasajiliwa",
   "quickRecord": "Rekodi ya haraka",
-  "quickRecordDescription": "Katika skrini ya arifa, unaweza kuona vidonge vya leo na kurekodi matumizi yako papo hapo.",
+  "quickRecordDescription": "Kwenye skrini ya arifa, unaweza kuona kidonge cha kumeza leo na kukiongeza papo hapo kwenye rekodi ya kumeza vidonge.",
   "healthCareIntegration": "Muunganisho wa Afya",
   "healthCareIntegrationDescription": "Rekodi za hedhi zilizorekodiwa kwenye Pilll zinaweza kuhifadhiwa kiotomatiki kwenye HealthCare",
   "viewPremiumPlan": "Angalia Mpango wa Premium",

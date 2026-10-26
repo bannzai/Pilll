@@ -47,7 +47,7 @@
   "linked": "Terhubung",
   "unregistered": "Belum terdaftar",
   "quickRecord": "Catat cepat",
-  "quickRecordDescription": "Di layar notifikasi, Anda dapat melihat pil yang harus diminum hari ini dan langsung mencatat konsumsinya.",
+  "quickRecordDescription": "Di layar notifikasi, Anda dapat melihat pil yang perlu diminum hari ini dan langsung menambahkannya ke catatan minum pil.",
   "healthCareIntegration": "Integrasi Kesehatan",
   "healthCareIntegrationDescription": "Catatan menstruasi yang direkam di Pilll dapat secara otomatis disinkronkan ke aplikasi Health",
   "viewPremiumPlan": "Lihat Paket Premium",

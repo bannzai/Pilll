@@ -47,7 +47,7 @@
   "linked": "연동됨",
   "unregistered": "등록되지 않았어요",
   "quickRecord": "빠른 복용 기록",
-  "quickRecordDescription": "알림 화면에서 오늘 복용할 피임약을 확인하고 바로 복용 기록할 수 있습니다.",
+  "quickRecordDescription": "알림 화면에서 오늘 먹을 알약을 확인하고 바로 복용 기록을 남길 수 있어요.",
   "healthCareIntegration": "헬스케어 연동",
   "healthCareIntegrationDescription": "Pilll에서 기록한 생리 기록을 자동으로 헬스케어에 기록할 수 있습니다",
   "viewPremiumPlan": "프리미엄 플랜 보기",

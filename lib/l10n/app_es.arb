@@ -47,7 +47,7 @@
   "linked": "Vinculado",
   "unregistered": "Sin registrar",
   "quickRecord": "Registro rápido",
-  "quickRecordDescription": "En la pantalla de notificaciones puedes ver las pastillas que debes tomar hoy y registrar la toma directamente.",
+  "quickRecordDescription": "En la pantalla de notificaciones puedes ver qué píldora te toca hoy y añadirla directamente al registro de toma.",
   "healthCareIntegration": "Integración de salud",
   "healthCareIntegrationDescription": "Pilll puede sincronizar automáticamente tus registros menstruales con la app Salud",
   "viewPremiumPlan": "Ver plan premium",

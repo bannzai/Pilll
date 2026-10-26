@@ -47,7 +47,7 @@
   "linked": "Ulangan",
   "unregistered": "Roʻyxatdan oʻtmagan",
   "quickRecord": "Tezkor qayd",
-  "quickRecordDescription": "Bildirishnoma ekranida bugun ichish kerak bo'lgan tabletkalar ko'rsatiladi va ularni qabul qilganingizni darhol qayd qilish mumkin.",
+  "quickRecordDescription": "Bildirishnomalar ekranida bugun qaysi tabletkani qabul qilishingizni ko‘rib, uni darhol tabletka qabul qilish qaydiga qo‘shishingiz mumkin.",
   "healthCareIntegration": "Sog'liqni saqlash integratsiyasi",
   "healthCareIntegrationDescription": "Pilll ilovasida qayd etilgan hayz davri yozuvlari avtomatik ravishda Health ilovasiga uzatiladi",
   "viewPremiumPlan": "Premium rejani ko'rish",

@@ -47,7 +47,7 @@
   "linked": "نښلول شوی",
   "unregistered": "لا نه دی ثبت شوی",
   "quickRecord": "چټک ثبت",
-  "quickRecordDescription": "په اطلاعاتو پاڼه کې تاسو کولی شئ د نن د څښلو ګولۍ وګورئ او سمدلاسه د څښلو ثبت ورسره وکړئ۔",
+  "quickRecordDescription": "د خبرتیاوو په پرده کې نننۍ ګولۍ لیدلی شئ او هماغلته یې د ګولۍ اخیستلو ریکارډ ته سمدستي ورزیاتولی شئ.",
   "healthCareIntegration": "د روغتیا پاملرنې ترکیب",
   "healthCareIntegrationDescription": "په Pilll کې د میاشتنۍ دورې ثبت شوي ریکارډونه په اتوماتیک ډول د Health اپ ته ثبتولی شي",
   "viewPremiumPlan": "پریمیم پلان وګورئ",

@@ -47,7 +47,7 @@
   "linked": "Compte associé",
   "unregistered": "Inscription non effectuée",
   "quickRecord": "Enregistrement rapide",
-  "quickRecordDescription": "Consultez la pilule du jour sur l'écran de notification et enregistrez votre consommation ici.",
+  "quickRecordDescription": "Sur l’écran des notifications, vous pouvez voir quelle pilule prendre aujourd’hui et l’ajouter directement au journal des prises.",
   "healthCareIntegration": "Intégration des soins de santé",
   "healthCareIntegrationDescription": "Les enregistrements menstruels suivis dans Pilll peuvent être automatiquement synchronisés avec HealthKit",
   "viewPremiumPlan": "Voir le forfait Premium",

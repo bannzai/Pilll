@@ -47,7 +47,7 @@
   "linked": "Collegato",
   "unregistered": "Registrazione non effettuata",
   "quickRecord": "Registrazione rapida",
-  "quickRecordDescription": "Dalla schermata delle notifiche puoi vedere quale pillola prendere oggi e registrarne direttamente l'assunzione.",
+  "quickRecordDescription": "Nella schermata delle notifiche puoi vedere quale pillola prendere oggi e aggiungerla subito al registro delle assunzioni.",
   "healthCareIntegration": "Integrazione Salute",
   "healthCareIntegrationDescription": "I dati del ciclo mestruale registrati su Pilll possono essere automaticamente salvati nell'app Salute",
   "viewPremiumPlan": "Visualizza piano Premium",
