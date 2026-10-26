@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Modifier le début du décompte des jours de prise de la pilule",
   "changeEndOfPillDays": "Modifier la fin des jours de prise de la pilule",
   "cannotUpdateToReplacePillSheet": "La mise à jour a échoué lors du remplacement de la plaquette. ID : {id}",
-  "failedToGetPillSheetHistory": "Échec de la récupération des informations sur l'historique de prise de pilule. {error}",
+  "failedToGetPillSheetHistory": "Impossible de charger les informations de l’historique des prises. {error}",
   "cancelTaking": "Annuler la dose",
   "deletedDiaryCannotBeRestored": "Les entrées de journal supprimées ne peuvent pas être restaurées",
   "editMenstruation": "Modifier la période",

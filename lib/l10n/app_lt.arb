@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Pakeiskite tablečių vartojimo dienų skaičiavimo pradžią",
   "changeEndOfPillDays": "Pakeisti tablečių vartojimo dienų pabaigą",
   "cannotUpdateToReplacePillSheet": "Keičiant tablečių plokštel nepavyko atnaujinti duomenų. ID: {id}",
-  "failedToGetPillSheetHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",
+  "failedToGetPillSheetHistory": "Nepavyko įkelti vartojimo istorijos informacijos. {error}",
   "cancelTaking": "Atšaukti vartojimą",
   "deletedDiaryCannotBeRestored": "Ištrinta dienoraštis negali būti atkurtas",
   "editMenstruation": "Redaguoti menstruacijų laikotarpį",

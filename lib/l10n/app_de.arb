@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Beginn der Zählung deiner Pillentage ändern",
   "changeEndOfPillDays": "Ende der Pilleneinnahme ändern",
   "cannotUpdateToReplacePillSheet": "Beim Wechsel des Pillenblisters konnte die Aktualisierung nicht abgeschlossen werden. ID: {id}",
-  "failedToGetPillSheetHistory": "Das Abrufen der Einnahmehistorie ist fehlgeschlagen. {error}",
+  "failedToGetPillSheetHistory": "Informationen zum Einnahmeverlauf konnten nicht geladen werden. {error}",
   "cancelTaking": "Einnahme stornieren",
   "deletedDiaryCannotBeRestored": "Gelöschte Tagebucheinträge können nicht wiederhergestellt werden",
   "editMenstruation": "Periode bearbeiten",

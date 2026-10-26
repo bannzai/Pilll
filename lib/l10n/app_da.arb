@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Skift startdag for optælling af p-pilledage",
   "changeEndOfPillDays": "Ændr slutningen på dagene med p-piller",
   "cannotUpdateToReplacePillSheet": "Kunne ikke opdatere ved udskiftning af pillekort. ID: {id}",
-  "failedToGetPillSheetHistory": "Kunne ikke indlæse indtagehistorik information. {error}",
+  "failedToGetPillSheetHistory": "Kunne ikke hente oplysninger om pillehistorik. {error}",
   "cancelTaking": "Annuller indtag",
   "deletedDiaryCannotBeRestored": "Slettede dagbogsindlæg kan ikke gendannes",
   "editMenstruation": "Rediger menstruationsperiode",

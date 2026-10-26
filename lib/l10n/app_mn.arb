@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Эм уусан өдрүүдийг тоолж эхлэх өдрийг өөрчилнө үү",
   "changeEndOfPillDays": "Эм уух өдрүүдийн дуусах хугацааг өөрчлөх",
   "cannotUpdateToReplacePillSheet": "эмийн блистер солих үед мэдээллийг шинэчилж чадсангүй. ID: {id}",
-  "failedToGetPillSheetHistory": "Уулгын түүхийн мэдээллийг авахад амжилтгүй боллоо。{error}",
+  "failedToGetPillSheetHistory": "Эм уусан түүхийн мэдээллийг авч чадсангүй. {error}",
   "cancelTaking": "Уухыг цуцлах",
   "deletedDiaryCannotBeRestored": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
   "editMenstruation": "Сарын тэмдгийн хугацааг засварлах",

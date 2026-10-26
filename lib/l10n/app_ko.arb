@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "약 복용 일수 계산 시작일 변경",
   "changeEndOfPillDays": "복용 일수 종료 시점 변경",
   "cannotUpdateToReplacePillSheet": "알약 시트를 교체하는 동안 업데이트하지 못했어요. ID: {id}",
-  "failedToGetPillSheetHistory": "복용 기록 정보를 가져오는 데 실패했습니다. {error}",
+  "failedToGetPillSheetHistory": "복용 내역 정보를 불러오지 못했어요. {error}",
   "cancelTaking": "복용 취소",
   "deletedDiaryCannotBeRestored": "삭제된 일기는 복구할 수 없습니다",
   "editMenstruation": "생리 기간 수정",

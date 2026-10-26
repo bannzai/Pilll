@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Ubah awal penghitungan hari minum pil",
   "changeEndOfPillDays": "Ubah akhir hari minum pil",
   "cannotUpdateToReplacePillSheet": "Tidak dapat memperbarui saat mengganti strip pil. ID: {id}",
-  "failedToGetPillSheetHistory": "Gagal mengambil data riwayat konsumsi. {error}",
+  "failedToGetPillSheetHistory": "Informasi riwayat minum pil tidak dapat dimuat. {error}",
   "cancelTaking": "Batalkan Konsumsi",
   "deletedDiaryCannotBeRestored": "Catatan harian yang dihapus tidak dapat dipulihkan",
   "editMenstruation": "Edit Periode Menstruasi",

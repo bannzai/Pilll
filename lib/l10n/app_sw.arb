@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Badilisha siku ya kuanza kuhesabu siku za kumeza kidonge",
   "changeEndOfPillDays": "Badilisha mwisho wa siku za kumeza vidonge",
   "cannotUpdateToReplacePillSheet": "Imeshindikana kusasisha wakati wa kubadilisha pakiti ya vidonge. ID: {id}",
-  "failedToGetPillSheetHistory": "Imeshindwa kupata historia ya kutumia dawa. {error}",
+  "failedToGetPillSheetHistory": "Imeshindikana kupata taarifa za historia ya kumeza vidonge. {error}",
   "cancelTaking": "Batilisha kumeza",
   "deletedDiaryCannotBeRestored": "Kumbuka zilizofutwa haziwezi kurejeshwa",
   "editMenstruation": "Hariri kipindi cha hedhi",

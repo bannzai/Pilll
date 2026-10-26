@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Alterar o início da contagem dos dias de uso da pílula",
   "changeEndOfPillDays": "Alterar o fim dos dias de uso da pílula",
   "cannotUpdateToReplacePillSheet": "Não foi possível atualizar ao trocar a cartela. ID: {id}",
-  "failedToGetPillSheetHistory": "Falha ao obter as informações do histórico de uso. {error}",
+  "failedToGetPillSheetHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
   "cancelTaking": "Cancelar tomada",
   "deletedDiaryCannotBeRestored": "O diário excluído não pode ser restaurado",
   "editMenstruation": "Editar período menstrual",

@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Canvia l'inici del recompte de dies de presa de la píndola",
   "changeEndOfPillDays": "Canvia el final dels dies de presa de la píndola",
   "cannotUpdateToReplacePillSheet": "No s'ha pogut actualitzar en substituir el blíster. ID: {id}",
-  "failedToGetPillSheetHistory": "No s'ha pogut obtenir la informació de l'historial de presa. {error}",
+  "failedToGetPillSheetHistory": "No s’ha pogut carregar la informació de l’historial de preses. {error}",
   "cancelTaking": "Cancel·l'ús",
   "deletedDiaryCannotBeRestored": "El diari eliminat no es pot recuperar",
   "editMenstruation": "Editar període menstrual",

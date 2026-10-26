@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Spremenite začetek štetja dni jemanja tablet",
   "changeEndOfPillDays": "Spremenite konec dni jemanja tablet",
   "cannotUpdateToReplacePillSheet": "Pri zamenjavi ploščice podatkov ni bilo mogoče posodobiti. ID: {id}",
-  "failedToGetPillSheetHistory": "Pridobivanje podatkov o zgodovini jemanja ni uspelo. {error}",
+  "failedToGetPillSheetHistory": "Podatkov o zgodovini jemanja ni bilo mogoče naložiti. {error}",
   "cancelTaking": "Prekliči jemanje",
   "deletedDiaryCannotBeRestored": "Izbrisanega dnevnika ni mogoče obnoviti",
   "editMenstruation": "Uredi menstruacijo",

@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "เปลี่ยนวันเริ่มนับจำนวนวันที่ทานยา",
   "changeEndOfPillDays": "เปลี่ยนวันสิ้นสุดการทานยา",
   "cannotUpdateToReplacePillSheet": "อัปเดตข้อมูลขณะเปลี่ยนแผงยาไม่สำเร็จค่ะ ID: {id}",
-  "failedToGetPillSheetHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานได้ {error}",
+  "failedToGetPillSheetHistory": "ไม่สามารถโหลดข้อมูลประวัติการทานยาได้ค่ะ {error}",
   "cancelTaking": "ยกเลิกการรับประทาน",
   "deletedDiaryCannotBeRestored": "บันทึกที่ลบแล้วจะไม่สามารถกู้คืนได้",
   "editMenstruation": "แก้ไขช่วงประจำเดือน",

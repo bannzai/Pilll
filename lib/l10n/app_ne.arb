@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "चक्की खाने दिनहरूको गणना सुरु हुने दिन परिवर्तन गर्नुहोस्",
   "changeEndOfPillDays": "चक्की खाने दिनहरूको अन्त्य परिवर्तन गर्नुहोस्",
   "cannotUpdateToReplacePillSheet": "चक्की पत्ता फेर्दा अद्यावधिक गर्न सकिएन। ID: {id}",
-  "failedToGetPillSheetHistory": "औषधि सेवन इतिहासको जानकारी प्राप्त गर्न असफल भयो। {error}",
+  "failedToGetPillSheetHistory": "सेवन इतिहासको जानकारी प्राप्त गर्न सकिएन। {error}",
   "cancelTaking": "सेवन रद्द गर्नुहोस्",
   "deletedDiaryCannotBeRestored": "मेटाएको डायरी फिर्ता ल्याउन सकिँदैन",
   "editMenstruation": "रजोधर्म अवधि सम्पादन गर्नुहोस्",

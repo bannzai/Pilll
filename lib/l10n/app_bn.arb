@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "পিল খাওয়ার দিনের গণনা শুরুর দিন পরিবর্তন করুন",
   "changeEndOfPillDays": "পিল খাওয়ার দিনগুলোর শেষ পরিবর্তন করুন",
   "cannotUpdateToReplacePillSheet": "পিল শিট বদলানোর সময় আপডেট করা যায়নি। ID: {id}",
-  "failedToGetPillSheetHistory": "সেবন ইতিহাসের তথ্য পেতে ব্যর্থ হয়েছে। {error}",
+  "failedToGetPillSheetHistory": "সেবনের ইতিহাসের তথ্য আনা যায়নি। {error}",
   "cancelTaking": "সেবন বাতিল",
   "deletedDiaryCannotBeRestored": "মুছে ফেলা ডায়েরি আর ফিরিয়ে আনা যাবে না",
   "editMenstruation": "পিরিয়ড সম্পাদনা করুন",

@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Изменить начало отсчёта дней приёма таблетки",
   "changeEndOfPillDays": "Изменить окончание дней приёма таблеток",
   "cannotUpdateToReplacePillSheet": "Не удалось обновить данные при замене блистера. ID: {id}",
-  "failedToGetPillSheetHistory": "Не удалось получить данные о истории приёма. {error}",
+  "failedToGetPillSheetHistory": "Не удалось загрузить сведения из истории приёма. {error}",
   "cancelTaking": "Отменить прием",
   "deletedDiaryCannotBeRestored": "Удаленные записи дневника невозможно восстановить",
   "editMenstruation": "Редактировать период менструации",

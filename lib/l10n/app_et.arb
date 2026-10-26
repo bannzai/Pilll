@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Muuda pillivõtmise päevade arvestuse algust",
   "changeEndOfPillDays": "Muuda pillivõtmispäevade lõppu",
   "cannotUpdateToReplacePillSheet": "Pillilehe vahetamisel ei õnnestunud andmeid uuendada. ID: {id}",
-  "failedToGetPillSheetHistory": "Tablettide võtmise ajaloo andmete hankimine ebaõnnestus. {error}",
+  "failedToGetPillSheetHistory": "Võtmislogi andmeid ei õnnestunud laadida. {error}",
   "cancelTaking": "Tühista võtmine",
   "deletedDiaryCannotBeRestored": "Kustutatud päevikut ei saa taastada",
   "editMenstruation": "Redigeeri menstruatsiooniperioodi",

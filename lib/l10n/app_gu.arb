@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "ગોળી લેવાના દિવસોની ગણતરીની શરૂઆત બદલો",
   "changeEndOfPillDays": "ગોળી લેવાના દિવસોનો અંત બદલો",
   "cannotUpdateToReplacePillSheet": "ગોળીની સ્ટ્રિપ બદલતી વખતે અપડેટ થઈ શક્યું નહીં. ID: {id}",
-  "failedToGetPillSheetHistory": "દવાના સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ. {error}",
+  "failedToGetPillSheetHistory": "સેવન ઇતિહાસની માહિતી મેળવી શકાઈ નથી. {error}",
   "cancelTaking": "સેવન રદ કરો",
   "deletedDiaryCannotBeRestored": "કાઢેલી ડાયરી પાછી લાવી શકાતી નથી",
   "editMenstruation": "માસિક ધર્મ સંપાદિત કરો",

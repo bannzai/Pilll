@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Schimbă începutul numărării zilelor de administrare a pilulei",
   "changeEndOfPillDays": "Schimbă sfârșitul zilelor de administrare a pilulei",
   "cannotUpdateToReplacePillSheet": "Actualizarea la înlocuirea blisterului nu a reușit. ID: {id}",
-  "failedToGetPillSheetHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",
+  "failedToGetPillSheetHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulei. {error}",
   "cancelTaking": "Anulare administrare",
   "deletedDiaryCannotBeRestored": "Jurnalul șters nu poate fi restaurat",
   "editMenstruation": "Editează perioada menstruală",

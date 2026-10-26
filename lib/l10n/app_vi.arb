@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Thay đổi ngày bắt đầu đếm số ngày uống thuốc",
   "changeEndOfPillDays": "Thay đổi thời điểm kết thúc các ngày uống thuốc",
   "cannotUpdateToReplacePillSheet": "Không thể cập nhật khi thay vỉ thuốc. ID: {id}",
-  "failedToGetPillSheetHistory": "Không thể lấy thông tin lịch sử uống thuốc. {error}",
+  "failedToGetPillSheetHistory": "Không thể tải thông tin lịch sử uống thuốc. {error}",
   "cancelTaking": "Hủy việc uống",
   "deletedDiaryCannotBeRestored": "Nhật ký đã xóa không thể khôi phục",
   "editMenstruation": "Chỉnh sửa chu kỳ kinh nguyệt",

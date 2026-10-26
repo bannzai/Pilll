@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "A tablettaszedési napok számolásának kezdete",
   "changeEndOfPillDays": "A tablettaszedési napok végének módosítása",
   "cannotUpdateToReplacePillSheet": "A tablettacsomag cseréjekor nem sikerült a frissítés. ID: {id}",
-  "failedToGetPillSheetHistory": "Nem sikerült lekérni a bevételi előzmények adatait. {error}",
+  "failedToGetPillSheetHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "cancelTaking": "Szedés visszavonása",
   "deletedDiaryCannotBeRestored": "A törölt napló nem állítható vissza",
   "editMenstruation": "Menstruációs időszak szerkesztése",

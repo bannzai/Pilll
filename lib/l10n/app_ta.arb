@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "மாத்திரை எடுத்துக்கொள்ளும் நாட்களின் கணக்கீடு தொடங்கும் நாளை மாற்றுங்கள்",
   "changeEndOfPillDays": "மாத்திரை எடுத்துக்கொள்ளும் நாட்களின் முடிவை மாற்றுங்கள்",
   "cannotUpdateToReplacePillSheet": "மாத்திரை அட்டை மாற்றும்போது புதுப்பிக்க முடியவில்லை. ID: {id}",
-  "failedToGetPillSheetHistory": "மருந்து உட்கொண்ட வரலாற்றுத் தகவல்களைப் பெறுவதில் தோல்வி. {error}",
+  "failedToGetPillSheetHistory": "மாத்திரை உட்கொண்ட வரலாறு பற்றிய தகவலைப் பெற முடியவில்லை. {error}",
   "cancelTaking": "உட்கொள்ளுதலை ரத்துசெய்",
   "deletedDiaryCannotBeRestored": "அழிக்கப்பட்ட டயரி மீட்டெடுக்க முடியாது",
   "editMenstruation": "மாதவிடாய் காலத்தை திருத்தவும்",

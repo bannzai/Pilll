@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Tabletka qabul qilish kunlarini sanash boshlanadigan kunni oʻzgartiring",
   "changeEndOfPillDays": "Tabletka ichish kunlarining tugash vaqtini oʻzgartiring",
   "cannotUpdateToReplacePillSheet": "tabletka blister almashtirilayotganda yangilab bo‘lmadi. ID: {id}",
-  "failedToGetPillSheetHistory": "Dori qabul qilish tarixi ma'lumotlarini olishda xatolik yuz berdi. {error}",
+  "failedToGetPillSheetHistory": "Qabul qilish tarixi maʼlumotlarini yuklab boʻlmadi. {error}",
   "cancelTaking": "Qabulni bekor qilish",
   "deletedDiaryCannotBeRestored": "O'chirilgan kundalikni qayta tiklab bo'lmaydi",
   "editMenstruation": "Hayiz davrini tahrirlash",

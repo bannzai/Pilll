@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "აბის მიღების დღეების ათვლის დასაწყისის შეცვლა",
   "changeEndOfPillDays": "აბის მიღების დღეების დასრულების შეცვლა",
   "cannotUpdateToReplacePillSheet": "აბების ბლისტერის შეცვლისას განახლება ვერ მოხერხდა. ID: {id}",
-  "failedToGetPillSheetHistory": "მიღების ისტორიის ჩატვირთვა ვერ მოხერხდა. {error}",
+  "failedToGetPillSheetHistory": "მიღების ისტორიის მონაცემების ჩატვირთვა ვერ მოხერხდა. {error}",
   "cancelTaking": "მიღების გაუქმება",
   "deletedDiaryCannotBeRestored": "წაშლილი დღიური ვერ აღდგება",
   "editMenstruation": "მენსტრუაციის პერიოდის რედაქტირება",

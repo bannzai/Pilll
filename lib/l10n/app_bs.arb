@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Promijenite početak brojanja dana uzimanja pilula",
   "changeEndOfPillDays": "Promijenite kraj dana uzimanja pilula",
   "cannotUpdateToReplacePillSheet": "Ažuriranje pri zamjeni blistera nije uspjelo. ID: {id}",
-  "failedToGetPillSheetHistory": "Neuspjelo je učitavanje podataka o istoriji uzimanja. {error}",
+  "failedToGetPillSheetHistory": "Nije moguće učitati podatke za historiju uzimanja. {error}",
   "cancelTaking": "Otkaži uzimanje",
   "deletedDiaryCannotBeRestored": "Obrisani dnevnik se ne može vratiti",
   "editMenstruation": "Urediti menstrualni period",

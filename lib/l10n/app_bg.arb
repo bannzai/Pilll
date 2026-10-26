@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Промяна на началото на броенето на дните за прием",
   "changeEndOfPillDays": "Промяна на края на дните за прием на хапчета",
   "cannotUpdateToReplacePillSheet": "Неуспешно обновяване при смяна на блистер. ID: {id}",
-  "failedToGetPillSheetHistory": "Неуспешно получаване на информацията за историята на приема. {error}",
+  "failedToGetPillSheetHistory": "Неуспешно зареждане на информацията за История на приема. {error}",
   "cancelTaking": "Отмени прием",
   "deletedDiaryCannotBeRestored": "Изтритите дневници не могат да бъдат възстановени",
   "editMenstruation": "Редактиране на менструалния период",

@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Змінити початок відліку днів прийому пігулок",
   "changeEndOfPillDays": "Змінити завершення днів прийому пігулок",
   "cannotUpdateToReplacePillSheet": "Не вдалося оновити дані під час заміни блістера. ID: {id}",
-  "failedToGetPillSheetHistory": "Не вдалося отримати інформацію про історію прийому. {error}",
+  "failedToGetPillSheetHistory": "Не вдалося завантажити дані з історії прийому. {error}",
   "cancelTaking": "Скасувати прийом",
   "deletedDiaryCannotBeRestored": "Видалені записи неможливо відновити",
   "editMenstruation": "Редагувати менструальний період",

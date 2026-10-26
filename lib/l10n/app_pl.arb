@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Zmień początek liczenia dni przyjmowania pigułki",
   "changeEndOfPillDays": "Zmień koniec dni przyjmowania tabletek",
   "cannotUpdateToReplacePillSheet": "Nie udało się zaktualizować danych podczas wymiany blistu. ID: {id}",
-  "failedToGetPillSheetHistory": "Nie udało się pobrać historii przyjmowania tabletek. {error}",
+  "failedToGetPillSheetHistory": "Nie udało się pobrać informacji z historii przyjmowania tabletek. {error}",
   "cancelTaking": "Anuluj przyjęcie",
   "deletedDiaryCannotBeRestored": "Usuniętego pamiętnika nie można przywrócić",
   "editMenstruation": "Edytuj okres",

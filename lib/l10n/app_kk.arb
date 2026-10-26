@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Таблетка қабылдау күндерін санаудың басталуын өзгертіңіз",
   "changeEndOfPillDays": "Таблетка қабылдау күндерінің аяқталуын өзгертіңіз",
   "cannotUpdateToReplacePillSheet": "таблетка блистер ауыстырылғанда жаңарту мүмкін болмады. ID: {id}",
-  "failedToGetPillSheetHistory": "Дәрі қабылдау тарихын алу сәтсіз аяқталды。{error}",
+  "failedToGetPillSheetHistory": "Қабылдау тарихы туралы ақпаратты алу мүмкін болмады. {error}",
   "cancelTaking": "Қабылдауды болдырмау",
   "deletedDiaryCannotBeRestored": "Жойылған күнделік қалпына келтірілмейді",
   "editMenstruation": "Етеккір кезеңін өңдеу",

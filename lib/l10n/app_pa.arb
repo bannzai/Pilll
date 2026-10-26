@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਦਾ ਸ਼ੁਰੂਆਤੀ ਦਿਨ ਬਦਲੋ",
   "changeEndOfPillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦਾ ਅੰਤ ਬਦਲੋ",
   "cannotUpdateToReplacePillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਬਦਲਦੇ ਸਮੇਂ ਅੱਪਡੇਟ ਨਹੀਂ ਹੋ ਸਕਿਆ। ID: {id}",
-  "failedToGetPillSheetHistory": "ਦਵਾਈ ਲੈਣ ਦੇ ਇਤਿਹਾਸ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। {error}",
+  "failedToGetPillSheetHistory": "ਸੇਵਨ ਇਤਿਹਾਸ ਦੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਸਕੀ। {error}",
   "cancelTaking": "ਸੇਵਨ ਰੱਦ ਕਰੋ",
   "deletedDiaryCannotBeRestored": "ਮਿਟਾਈ ਗਈ ਡਾਇਰੀ ਵਾਪਸ ਨਹੀਂ ਮਿਲ ਸਕਦੀ",
   "editMenstruation": "ਮਾਹਵਾਰੀ ਸੋਧੋ",

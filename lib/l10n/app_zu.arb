@@ -415,7 +415,7 @@
   "changeStartOfPillDays": "Sicela ushintshe usuku okuqala ngalo ukubalwa kwezinsuku zokuphuza iphilisi",
   "changeEndOfPillDays": "Sicela ushintshe ukuphela kwezinsuku zokuphuza amaphilisi",
   "cannotUpdateToReplacePillSheet": "Akukwazekanga ukuvuselela ngesikhathi kushintshwa ishidi lamaphilisi. ID: {id}",
-  "failedToGetPillSheetHistory": "Kuhlulekile ukuthola ulwazi lwesimo sokudla amaphilisi. {error}",
+  "failedToGetPillSheetHistory": "Akukwazekanga ukulanda imininingwane yomlando wokuphuza amaphilisi. {error}",
   "cancelTaking": "Susa ukuthatha",
   "deletedDiaryCannotBeRestored": "Idayari esusiwe ayikwazi ukubuyiselwa",
   "editMenstruation": "Hlela isikhathi sokuzila",
