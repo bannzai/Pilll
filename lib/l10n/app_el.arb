@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταγραφή λήψης του χαπιού κατά τη διάρκεια του διαλείμματος",
   "googleAccount": "Λογαριασμός Google",
   "diaryRecord": "Προσθήκη καταχώρισης στο ημερολόγιο",
-  "scheduleRecord": "Προσθήκη συμβάντος",
+  "scheduleRecord": "Προσθήκη προγραμματισμένου γεγονότος",
   "previousPillSheetGroupNotFound": "Η προηγούμενη ομάδα φύλλων χαπιών δεν υπάρχει ακόμη",
   "withPillSheetCount": "{number} φύλλα",
   "connectionError": "Η σύνδεση δικτύου φαίνεται ασταθής. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά",

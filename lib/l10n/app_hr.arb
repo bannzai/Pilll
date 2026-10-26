@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Tijekom pauze ne možete poništiti zapis o uzimanju pilule",
   "googleAccount": "Google račun",
   "diaryRecord": "Dodajte zapis u dnevnik",
-  "scheduleRecord": "Unesi događaj",
+  "scheduleRecord": "Dodajte događaj",
   "previousPillSheetGroupNotFound": "Prethodna grupa pilula još ne postoji",
   "withPillSheetCount": "{number} paketa",
   "connectionError": "Čini se da je internetska veza nestabilna. Molimo pokušajte ponovo kasnije.",

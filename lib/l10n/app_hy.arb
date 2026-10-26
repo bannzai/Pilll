@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",
   "googleAccount": "Google հաշիվ",
   "diaryRecord": "Ավելացնել օրագրի գրառում",
-  "scheduleRecord": "Ծրագիր ավելացնել",
+  "scheduleRecord": "Ավելացնել իրադարձություն",
   "previousPillSheetGroupNotFound": "Նախորդ հաբահերթի խումբը դեռ գոյություն չունի",
   "withPillSheetCount": "{number} բլիթ",
   "connectionError": "Ցանցային կապը անկայուն է թվում: Խնդրում ենք սպասել մի փոքր և կրկին փորձել:",

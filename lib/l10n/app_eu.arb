@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",
   "googleAccount": "Google kontua",
   "diaryRecord": "Gehitu egunerokoan sarrera bat",
-  "scheduleRecord": "Gertaera sartu",
+  "scheduleRecord": "Gehitu hitzordua",
   "previousPillSheetGroupNotFound": "Aurreko pilula-orri taldea ez dago oraindik",
   "withPillSheetCount": "{number} blister",
   "connectionError": "Konexioa ezegonkorra dirudi. Pixka bat itxaron eta berriz saiatu, mesedez.",

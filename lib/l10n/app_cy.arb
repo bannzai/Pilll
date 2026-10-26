@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",
   "googleAccount": "Cyfrif Google",
   "diaryRecord": "Ychwanegwch gofnod dyddiadur",
-  "scheduleRecord": "Cofnodi apwyntiad",
+  "scheduleRecord": "Ychwanegwch ddigwyddiad",
   "previousPillSheetGroupNotFound": "Dyw grŵp taflen bilsen y tro diwethaf ddim yn bodoli",
   "withPillSheetCount": "{number} dalen",
   "connectionError": "Mae'r cysylltiad rhwydwaith yn ymddangos yn ansefydlog. Rhowch gynnig arall arni ar ôl ychydig o amser.",

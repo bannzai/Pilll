@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "د وقف پر مهال د ګولۍ اخیستلو ثبت بېرته نه شي لغوه کېدای",
   "googleAccount": "د Google حساب",
   "diaryRecord": "د ورځني یادښت لیکنه زیاته کړئ",
-  "scheduleRecord": "ټاکنه ننوتل",
+  "scheduleRecord": "پلان شوی کار ورزیات کړئ",
   "previousPillSheetGroupNotFound": "وروستي د ګولیو د پاڼې ګروپ لا تر اوسه شتون نلري",
   "withPillSheetCount": "{number} ټوټې",
   "connectionError": "د شبکې اړیکې بې ثباته ښکاري. مهرباني وکړئ یو څه وخت وروسته بیا هڅه وکړئ",

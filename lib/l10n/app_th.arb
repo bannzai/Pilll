@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกบันทึกการทานยาระหว่างช่วงหยุดยาได้ค่ะ",
   "googleAccount": "บัญชี Google",
   "diaryRecord": "เพิ่มบันทึกประจำวัน",
-  "scheduleRecord": "กรอกกำหนดการ",
+  "scheduleRecord": "เพิ่มกำหนดการ",
   "previousPillSheetGroupNotFound": "ยังไม่พบกลุ่มแผ่นยาคุมกำเนิดก่อนหน้า",
   "withPillSheetCount": "{number}แผ่น",
   "connectionError": "การเชื่อมต่ออินเทอร์เน็ตไม่เสถียร กรุณารอสักครู่แล้วลองใหม่อีกครั้ง",

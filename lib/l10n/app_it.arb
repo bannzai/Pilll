@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Durante la pausa non puoi annullare la registrazione dell’assunzione della pillola",
   "googleAccount": "Account Google",
   "diaryRecord": "Aggiungi una voce al diario",
-  "scheduleRecord": "Aggiungi evento",
+  "scheduleRecord": "Aggiungi un evento",
   "previousPillSheetGroupNotFound": "Il gruppo del blister precedente non esiste",
   "withPillSheetCount": "{number} blister",
   "connectionError": "La connessione sembra instabile. Riprova tra qualche momento.",

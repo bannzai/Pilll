@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en p-pille under en pillepause",
   "googleAccount": "Google-konto",
   "diaryRecord": "Legg til dagboknotat",
-  "scheduleRecord": "Legg inn avtale",
+  "scheduleRecord": "Legg til avtale",
   "previousPillSheetGroupNotFound": "Forrige p-pille gruppe finnes ikke",
   "withPillSheetCount": "{number} pakker",
   "connectionError": "Det ser ut til at nettverkstilkoblingen er ustabil. Vennligst vent litt og prøv igjen.",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Per pertrauką negalima atšaukti įrašo apie tabletės vartojimą",
   "googleAccount": "Google paskyra",
   "diaryRecord": "Pridėkite dienoraščio įrašą",
-  "scheduleRecord": "Pridėti įvykį",
+  "scheduleRecord": "Pridėkite įvykį",
   "previousPillSheetGroupNotFound": "Ankstesnės tabletės pakuotės grupė dar neegzistuoja",
   "withPillSheetCount": "{number} pak.",
   "connectionError": "Tinklo ryšys nestabilus. Palaukite ir bandykite dar kartą.",

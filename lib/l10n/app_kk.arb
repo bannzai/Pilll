@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Үзіліс кезінде таблетканы қабылдау жазбасын болдырмау мүмкін емес",
   "googleAccount": "Google есептік жазбасы",
   "diaryRecord": "Күнделікке жазба қосыңыз",
-  "scheduleRecord": "Жоспар енгізу",
+  "scheduleRecord": "Жоспарланған оқиғаны қосыңыз",
   "previousPillSheetGroupNotFound": "Алдыңғы дәрі парағы тобы табылмады",
   "withPillSheetCount": "{number} парақ",
   "connectionError": "Интернет байланысы тұрақсыз. Кейінірек қайталап көріңіз",

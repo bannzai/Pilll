@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",
   "googleAccount": "Google-rekening",
   "diaryRecord": "Voeg dagboekinskrywing by",
-  "scheduleRecord": "Voeg afspraak by",
+  "scheduleRecord": "Voeg 'n afspraak by",
   "previousPillSheetGroupNotFound": "Die vorige pilblad groep bestaan nog nie",
   "withPillSheetCount": "{number} stukke",
   "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",

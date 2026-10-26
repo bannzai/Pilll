@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "ವಿರಾಮದ ಅವಧಿಯಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ರದ್ದುಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "googleAccount": "Google ಖಾತೆ",
   "diaryRecord": "ದಿನಚರಿಯಲ್ಲಿ ದಾಖಲಿಸಿ",
-  "scheduleRecord": "ವೇಳಾಪಟ್ಟಿ ನಮೂದಿಸಿ",
+  "scheduleRecord": "ಕಾರ್ಯಕ್ರಮ ಸೇರಿಸಿ",
   "previousPillSheetGroupNotFound": "ಹಿಂದಿನ ಮಾತ್ರೆ ಶೀಟ್ ಗುಂಪು ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ",
   "withPillSheetCount": "{number} ಶೀಟ್",
   "connectionError": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಅಸ್ಥಿರವಾಗಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",

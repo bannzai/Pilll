@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Haiwezekani kutengua rekodi ya kumeza kidonge wakati wa mapumziko",
   "googleAccount": "Akaunti ya Google",
   "diaryRecord": "Tafadhali ongeza kumbukumbu kwenye shajara",
-  "scheduleRecord": "Andika ratiba",
+  "scheduleRecord": "Tafadhali ongeza tukio",
   "previousPillSheetGroupNotFound": "Kikundi cha dawa cha awali hakijapatikana bado",
   "withPillSheetCount": "{number} karatasi",
   "connectionError": "Muunganisho wa mtandao hauwa thabiti. Tafadhali subiri kidogo na ujaribu tena.",

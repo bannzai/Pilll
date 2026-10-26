@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",
   "googleAccount": "Google account",
   "diaryRecord": "Magdagdag ng tala sa talaarawan",
-  "scheduleRecord": "Magdagdag ng Schedule",
+  "scheduleRecord": "Magdagdag ng iskedyul",
   "previousPillSheetGroupNotFound": "Hindi pa natagpuan ang nakaraang pill sheet group",
   "withPillSheetCount": "{number} piraso",
   "connectionError": "Mukhang may problema sa koneksyon. Subukan ulit mamaya.",

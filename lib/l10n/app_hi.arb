@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "विराम के दौरान गोली लेने का रिकॉर्ड रद्द नहीं किया जा सकता",
   "googleAccount": "Google खाता",
   "diaryRecord": "डायरी में लिखें",
-  "scheduleRecord": "योजना दर्ज करें",
+  "scheduleRecord": "कार्यक्रम जोड़ें",
   "previousPillSheetGroupNotFound": "पिछला पिल शीट ग्रुप अभी तक मौजूद नहीं है",
   "withPillSheetCount": "{number} शीट",
   "connectionError": "नेटवर्क कनेक्शन अस्थिर लग रहा है। कृपया कुछ समय बाद पुनः प्रयास करें।",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",
   "googleAccount": "Google-konto",
   "diaryRecord": "Lägg till dagboksanteckning",
-  "scheduleRecord": "Lägg till schema",
+  "scheduleRecord": "Lägg till händelse",
   "previousPillSheetGroupNotFound": "Den föregående p-pillerark gruppen finns inte än",
   "withPillSheetCount": "{number} blister",
   "connectionError": "Det verkar vara problem med nätverksanslutningen. Vänta en stund och försök igen.",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",
   "googleAccount": "Google അക്കൗണ്ട്",
   "diaryRecord": "ഡയറിയിൽ കുറിപ്പ് ചേർക്കുക",
-  "scheduleRecord": "ഷെഡ്യൂൾ ചേർക്കുക",
+  "scheduleRecord": "പരിപാടി ചേർക്കുക",
   "previousPillSheetGroupNotFound": "മുമ്പത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് ഇതുവരെ നിലവിലില്ല",
   "withPillSheetCount": "{number} ഷീറ്റ്",
   "connectionError": "നെറ്റ്‌വർക്ക് കണക്ഷൻ അസ്ഥിരമാണെന്ന് തോന്നുന്നു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക",

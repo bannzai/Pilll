@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",
   "googleAccount": "Google аккаунту",
   "diaryRecord": "Күндөлүккө жазуу кошуңуз",
-  "scheduleRecord": "Планды жазуу",
+  "scheduleRecord": "Иш-чара кошуңуз",
   "previousPillSheetGroupNotFound": "Мурунку таблетка барагынын тобу дагы деле жок",
   "withPillSheetCount": "{number} барак",
   "connectionError": "Интернет туташууда көйгөй бар көрүнөт. Бир аз күтүп, кайра аракет кылыңыз",

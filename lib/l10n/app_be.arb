@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Падчас перапынку нельга адмяніць запіс аб прыёме пігулкі",
   "googleAccount": "Уліковы запіс Google",
   "diaryRecord": "Дадаць запіс у дзённік",
-  "scheduleRecord": "Дадаць план",
+  "scheduleRecord": "Дадаць запланаваную падзею",
   "previousPillSheetGroupNotFound": "Папярэдняя група лісткоў з пілюлямі адсутнічае",
   "withPillSheetCount": "{number} лістоў",
   "connectionError": "Сувязь нестабільная. Пачакайце і паспрабуйце зноў.",

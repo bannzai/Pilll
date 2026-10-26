@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",
   "googleAccount": "Google ანგარიში",
   "diaryRecord": "დღიურში ჩანაწერის დამატება",
-  "scheduleRecord": "გეგმის შეყვანა",
+  "scheduleRecord": "ღონისძიების დამატება",
   "previousPillSheetGroupNotFound": "წინა ტაბლეტების ფურცლის ჯგუფი ჯერ კიდევ არ არსებობს",
   "withPillSheetCount": "{number} ფურცელი",
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",

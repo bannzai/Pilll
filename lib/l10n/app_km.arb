@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "មិនអាចលុបចោលកំណត់ត្រាលេបថ្នាំគ្រាប់ក្នុងអំឡុងពេលផ្អាកលេបថ្នាំបានទេ",
   "googleAccount": "គណនី Google",
   "diaryRecord": "បន្ថែមកំណត់ហេតុប្រចាំថ្ងៃ",
-  "scheduleRecord": "បញ្ចូលកាលវិភាគ",
+  "scheduleRecord": "បន្ថែមព្រឹត្តិការណ៍",
   "previousPillSheetGroupNotFound": "ក្រុមសន្លឹកថ្នាំគ្រាប់ពងលើកមុនមិនទាន់មានទេ",
   "withPillSheetCount": "{number}សន្លឹក",
   "connectionError": "ការតភ្ជាប់អ៊ីនធឺណិតហាក់ដូចជាមិនស្ថិរ។ សូមរង់ចាំមួយរយៈ រួចព្យាយាមម្តងទៀត",

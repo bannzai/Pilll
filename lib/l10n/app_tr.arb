@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",
   "googleAccount": "Google hesabı",
   "diaryRecord": "Günlük kaydı ekleyin",
-  "scheduleRecord": "Plan Ekle",
+  "scheduleRecord": "Etkinlik ekleyin",
   "previousPillSheetGroupNotFound": "Önceki hap paketi grubu bulunamadı",
   "withPillSheetCount": "{number} adet",
   "connectionError": "Ağ bağlantısı kararsız görünüyor. Lütfen biraz bekledikten sonra tekrar deneyin.",

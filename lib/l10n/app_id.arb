@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Catatan minum pil tidak dapat dibatalkan selama jeda",
   "googleAccount": "Akun Google",
   "diaryRecord": "Tambah catatan harian",
-  "scheduleRecord": "Masukkan jadwal",
+  "scheduleRecord": "Tambah jadwal",
   "previousPillSheetGroupNotFound": "Grup lembar pil sebelumnya belum ditemukan",
   "withPillSheetCount": "{number} lembar",
   "connectionError": "Koneksi jaringan tampaknya tidak stabil. Mohon tunggu sebentar dan coba lagi.",

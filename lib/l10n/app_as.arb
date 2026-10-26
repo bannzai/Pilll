@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "বিৰতিৰ সময়ত পিল খোৱাৰ তথ্য বাতিল কৰিব নোৱাৰি",
   "googleAccount": "Google একাউণ্ট",
   "diaryRecord": "ডায়েৰীত লিখক",
-  "scheduleRecord": "অনুষ্ঠান যোগ কৰক",
+  "scheduleRecord": "পৰিকল্পনা যোগ কৰক",
   "previousPillSheetGroupNotFound": "আগৰ পিল শ্বীট গ্ৰুপ এতিয়াও বিদ্যমান নাই",
   "withPillSheetCount": "{number}খন",
   "connectionError": "ইন্টাৰনেট সংযোগ অস্থিৰ যেন লাগিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",

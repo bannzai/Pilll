@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",
   "googleAccount": "Аккаунт Google",
   "diaryRecord": "Добавить запись в дневник",
-  "scheduleRecord": "Записать планы",
+  "scheduleRecord": "Добавить событие",
   "previousPillSheetGroupNotFound": "Предыдущая группа блистеров еще не создана",
   "withPillSheetCount": "{number} упаковок",
   "connectionError": "Похоже, что сетевое соединение нестабильно. Пожалуйста, подождите и попробуйте снова.",

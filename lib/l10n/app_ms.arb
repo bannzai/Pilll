@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Rekod pengambilan pil tidak boleh dibatalkan semasa tempoh rehat",
   "googleAccount": "Akaun Google",
   "diaryRecord": "Tambah catatan diari",
-  "scheduleRecord": "Tambah jadual",
+  "scheduleRecord": "Tambah acara",
   "previousPillSheetGroupNotFound": "Kumpulan lembaran pil sebelumnya belum wujud",
   "withPillSheetCount": "{number} helai",
   "connectionError": "Nampaknya sambungan rangkaian tidak stabil. Sila cuba lagi selepas beberapa ketika.",

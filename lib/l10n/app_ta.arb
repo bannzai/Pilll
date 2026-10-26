@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "இடைவேளையின் போது மாத்திரை எடுத்த பதிவை ரத்து செய்ய முடியாது",
   "googleAccount": "Google கணக்கு",
   "diaryRecord": "நாட்குறிப்பில் பதிவு செய்யுங்கள்",
-  "scheduleRecord": "தேதி சேர்க்கவும்",
+  "scheduleRecord": "நிகழ்வைச் சேருங்கள்",
   "previousPillSheetGroupNotFound": "முந்தைய பில் ஷீட் குழு இல்லை",
   "withPillSheetCount": "{number} தாள்கள்",
   "connectionError": "இணைய இணைப்பு நிலையற்றதாக தெரிகிறது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும்.",

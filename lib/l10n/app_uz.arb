@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Tanaffus davrida tabletkani qabul qilish qaydini bekor qilib bo‘lmaydi",
   "googleAccount": "Google hisobi",
   "diaryRecord": "Kundalikka yozuv qoʻshing",
-  "scheduleRecord": "Reja yozish",
+  "scheduleRecord": "Reja qoʻshing",
   "previousPillSheetGroupNotFound": "Avvalgi pill sheet guruhi hali mavjud emas",
   "withPillSheetCount": "{number} dona",
   "connectionError": "Internet aloqasi beqaror ko'rinadi. Iltimos, biroz vaqt o'tgach qaytadan urinib ko'ring",

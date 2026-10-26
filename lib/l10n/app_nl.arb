@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",
   "googleAccount": "Google-account",
   "diaryRecord": "Dagboeknotitie toevoegen",
-  "scheduleRecord": "Afspraak invoeren",
+  "scheduleRecord": "Afspraak toevoegen",
   "previousPillSheetGroupNotFound": "De vorige pilbladgroep bestaat nog niet",
   "withPillSheetCount": "{number} strips",
   "connectionError": "De verbinding lijkt instabiel. Probeer het later opnieuw.",

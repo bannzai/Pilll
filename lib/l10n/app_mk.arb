@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",
   "googleAccount": "Сметка на Google",
   "diaryRecord": "Запис во дневник",
-  "scheduleRecord": "Внеси термин",
+  "scheduleRecord": "Додавање на настан",
   "previousPillSheetGroupNotFound": "Претходната група на пилули сè уште не постои",
   "withPillSheetCount": "{number} листови",
   "connectionError": "Мрежната врска изгледа нестабилна. Ве молиме почекајте малку и обидете се повторно.",

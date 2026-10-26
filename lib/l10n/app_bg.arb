@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "По време на паузата не можете да отмените записа за прието хапче",
   "googleAccount": "Профил в Google",
   "diaryRecord": "Добавете запис в дневника",
-  "scheduleRecord": "Въведете събитие",
+  "scheduleRecord": "Добавяне на събитие",
   "previousPillSheetGroupNotFound": "Предишната група хапчета все още не съществува",
   "withPillSheetCount": "{number} опаковки",
   "connectionError": "Мрежовата връзка е нестабилна. Моля, опитайте отново след малко.",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Durant el descans no pots desfer el registre de la presa de la píndola",
   "googleAccount": "Compte de Google",
   "diaryRecord": "Afegeix una entrada al diari",
-  "scheduleRecord": "Afegir cita",
+  "scheduleRecord": "Afegeix un esdeveniment",
   "previousPillSheetGroupNotFound": "El grup de la placa de píndoles anterior encara no existeix",
   "withPillSheetCount": "{number} plaquetes",
   "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",

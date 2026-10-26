@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Während der Einnahmepause kannst du die erfasste Pilleneinnahme nicht rückgängig machen",
   "googleAccount": "Google-Konto",
   "diaryRecord": "Tagebucheintrag hinzufügen",
-  "scheduleRecord": "Termin eintragen",
+  "scheduleRecord": "Termin hinzufügen",
   "previousPillSheetGroupNotFound": "Die vorherige Pillenblatt-Gruppe existiert noch nicht",
   "withPillSheetCount": "{number} Packungen",
   "connectionError": "Ihre Internetverbindung scheint instabil zu sein. Bitte versuchen Sie es später erneut.",

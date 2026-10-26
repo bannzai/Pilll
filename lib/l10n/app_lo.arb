@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",
   "googleAccount": "ບັນຊີ Google",
   "diaryRecord": "ເພີ່ມບັນທຶກປະຈຳວັນ",
-  "scheduleRecord": "ບັນທຶກກຳນົດການ",
+  "scheduleRecord": "ເພີ່ມນັດໝາຍ",
   "previousPillSheetGroupNotFound": "ກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນຍັງບໍ່ມີ",
   "withPillSheetCount": "{number}ແຜ່ນ",
   "connectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດບໍ່ໝັ້ນຄົງ. ກະລຸນາລໍຖ້າຄັກໜຶ່ງແລ້ວລອງໃໝ່ອີກຄັ້ງ",

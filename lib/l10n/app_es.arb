@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "No puedes deshacer el registro de la toma de la píldora durante el descanso",
   "googleAccount": "Cuenta de Google",
   "diaryRecord": "Añadir entrada al diario",
-  "scheduleRecord": "Añadir evento",
+  "scheduleRecord": "Agregar evento",
   "previousPillSheetGroupNotFound": "El grupo de blíster anterior aún no existe",
   "withPillSheetCount": "{number} hojas",
   "connectionError": "Parece que la conexión de red es inestable. Por favor, inténtalo de nuevo más tarde.",

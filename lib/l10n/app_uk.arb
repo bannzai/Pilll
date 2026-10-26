@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",
   "googleAccount": "Обліковий запис Google",
   "diaryRecord": "Додати запис у щоденник",
-  "scheduleRecord": "Записати подію",
+  "scheduleRecord": "Додати подію",
   "previousPillSheetGroupNotFound": "Попередня група аркушів таблеток ще не існує",
   "withPillSheetCount": "{number} упаковок",
   "connectionError": "Здається, з'єднання нестабільне. Будь ласка, повторіть спробу через деякий час.",

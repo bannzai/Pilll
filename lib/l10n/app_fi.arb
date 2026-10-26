@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",
   "googleAccount": "Google-tili",
   "diaryRecord": "Lisää päiväkirjamerkintä",
-  "scheduleRecord": "Merkitse tapaaminen",
+  "scheduleRecord": "Lisää tapahtuma",
   "previousPillSheetGroupNotFound": "Edellisen pilleriarkin ryhmää ei ole vielä olemassa",
   "withPillSheetCount": "{number} arkkia",
   "connectionError": "Verkkoyhteys vaikuttaa epävakaalta. Odota hetki ja yritä uudelleen.",

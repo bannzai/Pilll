@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "విరామ సమయంలో మాత్ర తీసుకున్న నమోదును రద్దు చేయడం సాధ్యం కాదు",
   "googleAccount": "Google ఖాతా",
   "diaryRecord": "డైరీలో నమోదు చేయండి",
-  "scheduleRecord": "షెడ్యూల్ రాయండి",
+  "scheduleRecord": "కార్యక్రమాన్ని జోడించండి",
   "previousPillSheetGroupNotFound": "మునుపటి పిల్ షీట్ గ్రూప్ ఇంకా ఉనికిలో లేదు",
   "withPillSheetCount": "{number}షీట్లు",
   "connectionError": "ఇంటర్నెట్ కనెక్షన్ అస్థిరంగా ఉంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "În timpul pauzei nu poți anula înregistrarea administrării pilulei",
   "googleAccount": "Cont Google",
   "diaryRecord": "Adaugă o însemnare în jurnal",
-  "scheduleRecord": "Introdu programare",
+  "scheduleRecord": "Adaugă un eveniment",
   "previousPillSheetGroupNotFound": "Grupul precedent de plici de pastile nu există încă",
   "withPillSheetCount": "{number} blistere",
   "connectionError": "Conexiunea pare instabilă. Vă rugăm să încercați din nou mai târziu.",

@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Ngesikhathi sekhefu, akunakwenzeka ukuhoxisa irekhodi lokuphuza iphilisi",
   "googleAccount": "I-akhawunti ye-Google",
   "diaryRecord": "Sicela wengeze okubhalwe kudayari",
-  "scheduleRecord": "Bhala isimemezelo",
+  "scheduleRecord": "Sicela wengeze umcimbi",
   "previousPillSheetGroupNotFound": "Iqembu lamaphilisi elidlule alukabikhona okwamanje",
   "withPillSheetCount": "{number} amashidi",
   "connectionError": "Kubonakala sengathi uxhumano lunenkinga. Sicela uzame futhi kamuva.",

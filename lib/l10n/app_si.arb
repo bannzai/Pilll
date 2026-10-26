@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "විරාමය අතරතුර පෙත්ත ගත් බවට ඇති සටහන අවලංගු කළ නොහැක",
   "googleAccount": "Google ගිණුම",
   "diaryRecord": "දිනපොතට සටහනක් එක් කරන්න",
-  "scheduleRecord": "කාලසටහන ඇතුළත් කරන්න",
+  "scheduleRecord": "සිදුවීමක් එක් කරන්න",
   "previousPillSheetGroupNotFound": "පෙර පෙති ශීට් කණ්ඩායම තවමත් පවතින්නේ නැත",
   "withPillSheetCount": "{number}පත්‍ර",
   "connectionError": "ඔබගේ අන්තර්ජාල සම්බන්ධතාවය අස්ථිර බව පෙනේ. කරුණාකර කෙටි වේලාවකට පසු නැවත උත්සාහ කරන්න",

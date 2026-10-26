@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tabletke",
   "googleAccount": "Račun Google",
   "diaryRecord": "Dodajte zapis v dnevnik",
-  "scheduleRecord": "Vnesi načrt",
+  "scheduleRecord": "Dodajte dogodek",
   "previousPillSheetGroupNotFound": "Prejšnja skupina tablet še ne obstaja",
   "withPillSheetCount": "{number} listov",
   "connectionError": "Zdi se, da je internetna povezava nestabilna. Prosimo, poskusite znova čez nekaj časa.",

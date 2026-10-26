@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "אי אפשר לבטל רישום נטילה של גלולה במהלך ההפסק",
   "googleAccount": "חשבון Google",
   "diaryRecord": "הוספת רשומה ליומן",
-  "scheduleRecord": "הוסף אירועים",
+  "scheduleRecord": "הוספת אירוע",
   "previousPillSheetGroupNotFound": "קבוצת גיליון הגלולות הקודמת עדיין לא קיימת",
   "withPillSheetCount": "{number} דפים",
   "connectionError": "החיבור לאינטרנט נראה לא יציב. אנא המתינו ונסו שוב",

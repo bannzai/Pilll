@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",
   "googleAccount": "Google-reikningur",
   "diaryRecord": "Bæta við dagbókarfærslu",
-  "scheduleRecord": "Skrá áætlun",
+  "scheduleRecord": "Bæta við viðburði",
   "previousPillSheetGroupNotFound": "Fyrri píluvelti hópur finnst ekki",
   "withPillSheetCount": "{number} blöð",
   "connectionError": "Nettengingin virðist vera óstöðug. Vinsamlegast reyndu aftur eftir smá stund.",

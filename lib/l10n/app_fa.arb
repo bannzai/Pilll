@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",
   "googleAccount": "حساب Google",
   "diaryRecord": "افزودن یادداشت روزانه",
-  "scheduleRecord": "ثبت برنامه",
+  "scheduleRecord": "افزودن رویداد",
   "previousPillSheetGroupNotFound": "گروه برگه قرص قبلی هنوز وجود ندارد",
   "withPillSheetCount": "{number} بلیستر",
   "connectionError": "اتصال اینترنت ناپایدار است. لطفاً کمی صبر کرده و دوباره تلاش کنید.",

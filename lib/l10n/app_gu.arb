@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "વિરામ દરમિયાન ગોળી લીધી હોવાની નોંધ રદ કરી શકાતી નથી",
   "googleAccount": "Google એકાઉન્ટ",
   "diaryRecord": "ડાયરીમાં નોંધ ઉમેરો",
-  "scheduleRecord": "યોજના દાખલ કરો",
+  "scheduleRecord": "કાર્યક્રમ ઉમેરો",
   "previousPillSheetGroupNotFound": "અગાઉના ગોળીની શીટ જૂથ હજુ અસ્તિત્વમાં નથી",
   "withPillSheetCount": "{number} શીટ",
   "connectionError": "નેટવર્ક કનેક્શન અસ્થિર લાગે છે. કૃપા કરીને થોડા સમય પછી ફરીથી પ્રયાસ કરો.",

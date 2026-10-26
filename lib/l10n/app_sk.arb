@@ -348,7 +348,7 @@
   "doNotRevertTakePillInPausePeriod": "Počas prestávky nemožno zrušiť záznam o užití tabletky",
   "googleAccount": "Účet Google",
   "diaryRecord": "Pridajte záznam do denníka",
-  "scheduleRecord": "Zadať termín",
+  "scheduleRecord": "Pridajte udalosť",
   "previousPillSheetGroupNotFound": "Predchádzajúca skupina pilulkových balení ešte neexistuje",
   "withPillSheetCount": "{number} balení",
   "connectionError": "Pripojenie k internetu je nestabilné. Skúste to prosím znova o chvíľu.",
