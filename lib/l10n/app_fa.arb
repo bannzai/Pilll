@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "لطفاً برای پایان وقفهٔ مصرف قرص، تاریخی پس از تاریخ شروع انتخاب کنید",
   "plannedResumeDateOptional": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص (اختیاری)",
   "plannedResumeDateNotSet": "هنوز تعیین نشده",
-  "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف را انتخاب کنید",
+  "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص را انتخاب کنید",
   "pauseEndDateLimitIsToday": "تاریخ پایان فقط تا امروز قابل انتخاب است",
   "pauseEndDateLimitBeforeNextPause": "تا روزی که با وقفه بعدی ({date}〜) هم‌پوشانی نداشته باشد",
   "pauseStartDateLimit": "تاریخ شروع را می‌توان تا {date} انتخاب کرد",

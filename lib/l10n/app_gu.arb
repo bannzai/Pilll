@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "ગોળી લેવાના વિરામની સમાપ્તિ માટે શરૂઆતની તારીખ પછીની તારીખ પસંદ કરો",
   "plannedResumeDateOptional": "ગોળી ફરી લેવાનું શરૂ કરવાની આયોજિત તારીખ (વૈકલ્પિક)",
   "plannedResumeDateNotSet": "હજુ નક્કી કરેલ નથી",
-  "selectPlannedResumeDate": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ પસંદ કરો",
+  "selectPlannedResumeDate": "ગોળી ફરી લેવાનું આયોજન કરેલી તારીખ પસંદ કરો",
   "pauseEndDateLimitIsToday": "અંતિમ તારીખ આજે સુધી જ પસંદ કરી શકાય છે",
   "pauseEndDateLimitBeforeNextPause": "આગામી વિરામ ({date}〜) સાથે ન અથડાતો દિવસ સુધી",
   "pauseStartDateLimit": "શરૂઆતની તારીખ {date} સુધી પસંદ કરી શકાય છે",

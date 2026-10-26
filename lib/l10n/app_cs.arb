@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Vyberte prosím datum konce přestávky v užívání pilulek, které je pozdější než datum začátku",
   "plannedResumeDateOptional": "Plánované datum obnovení užívání pilulek (volitelné)",
   "plannedResumeDateNotSet": "Nenastaveno",
-  "selectPlannedResumeDate": "Vyberte plánované datum obnovení užívání",
+  "selectPlannedResumeDate": "Vybrat plánované datum obnovení užívání pilulky",
   "pauseEndDateLimitIsToday": "Datum ukončení lze nastavit nejpozději na dnešek",
   "pauseEndDateLimitBeforeNextPause": "Do dne, který se nepřekrývá s následující pauzou ({date}〜)",
   "pauseStartDateLimit": "Počáteční datum lze vybrat nejpozději do {date}",

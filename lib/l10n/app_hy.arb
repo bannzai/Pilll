@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Խնդրում ենք հաբերի ընդունման ընդմիջման ավարտի համար ընտրել մեկնարկի ամսաթվից ավելի ուշ ամսաթիվ",
   "plannedResumeDateOptional": "Հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվ (ըստ ցանկության)",
   "plannedResumeDateNotSet": "Դեռ սահմանված չէ",
-  "selectPlannedResumeDate": "Ընտրեք ընդունումը վերսկսելու նախատեսված ամսաթիվը",
+  "selectPlannedResumeDate": "Ընտրեք հաբի ընդունումը վերսկսելու նախատեսված օրը",
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարելի է սահմանել միայն մինչև այսօր",
   "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",
   "pauseStartDateLimit": "Մեկնարկի ամսաթիվը կարելի է ընտրել մինչև {date}",

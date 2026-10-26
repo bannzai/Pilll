@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë përfundimi të pushimit nga pilulat që është pas datës së fillimit",
   "plannedResumeDateOptional": "Data e planifikuar për të rifilluar marrjen e pilulës (opsionale)",
   "plannedResumeDateNotSet": "Ende e papërcaktuar",
-  "selectPlannedResumeDate": "Zgjidhni datën e planifikuar për rifillimin e marrjes",
+  "selectPlannedResumeDate": "Zgjidhni datën kur planifikoni të filloni sërish marrjen e pilulës",
   "pauseEndDateLimitIsToday": "Data e përfundimit mund të caktohet vetëm deri sot",
   "pauseEndDateLimitBeforeNextPause": "Deri në ditën që nuk përputhet me pushimin e radhës ({date}–)",
   "pauseStartDateLimit": "Data e fillimit mund të zgjidhet deri më {date}",

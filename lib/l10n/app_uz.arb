@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Tabletka qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang",
   "plannedResumeDateOptional": "Tabletkani qayta qabul qilishni boshlash uchun rejalashtirilgan sana (ixtiyoriy)",
   "plannedResumeDateNotSet": "Hali belgilanmagan",
-  "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",
+  "selectPlannedResumeDate": "Tabletkani qayta qabul qilishni rejalashtirgan sanani tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",
   "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",

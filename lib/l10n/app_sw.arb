@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe ya mwisho wa mapumziko ya kumeza vidonge iliyo baada ya tarehe ya kuanza",
   "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kumeza kidonge (si lazima)",
   "plannedResumeDateNotSet": "Bado haijawekwa",
-  "selectPlannedResumeDate": "Chagua tarehe iliyopangwa ya kuanza kutumia tena",
+  "selectPlannedResumeDate": "Tafadhali chagua tarehe unayopanga kuanza kumeza kidonge tena",
   "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwekwa hadi leo tu",
   "pauseEndDateLimitBeforeNextPause": "Hadi siku ambayo haiingiliani na mapumziko yajayo ({date}–)",
   "pauseStartDateLimit": "Tarehe ya kuanza inaweza kuchaguliwa hadi {date}",

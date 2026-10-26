@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Velg en sluttdato for p-pillepausen som er etter startdatoen",
   "plannedResumeDateOptional": "Planlagt dato for å ta p-pillen igjen (valgfritt)",
   "plannedResumeDateNotSet": "Ikke angitt",
-  "selectPlannedResumeDate": "Velg planlagt dato for å gjenoppta inntak",
+  "selectPlannedResumeDate": "Velg datoen du planlegger å begynne med p-pillen igjen",
   "pauseEndDateLimitIsToday": "Sluttdatoen kan bare settes til og med i dag",
   "pauseEndDateLimitBeforeNextPause": "Til dagen som ikke overlapper med neste pause ({date}–)",
   "pauseStartDateLimit": "Startdato kan velges til og med {date}",

@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Молимо Вас, изаберите датум завршетка паузе у узимању пилула који је после датума почетка",
   "plannedResumeDateOptional": "Планирани датум поновног узимања пилуле (није обавезно)",
   "plannedResumeDateNotSet": "Још није одређено",
-  "selectPlannedResumeDate": "Изаберите планирани датум наставка узимања",
+  "selectPlannedResumeDate": "Изаберите планирани датум поновног узимања пилуле",
   "pauseEndDateLimitIsToday": "Датум завршетка може да се подеси најкасније на данас",
   "pauseEndDateLimitBeforeNextPause": "Do dana koji se ne preklapa sa sledećom pauzom ({date}–)",
   "pauseStartDateLimit": "Datum početka može da se izabere do {date}",

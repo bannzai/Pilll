@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Kies voor het einde van de pillenpauze een datum na de begindatum",
   "plannedResumeDateOptional": "Geplande datum om weer met de pil te beginnen (optioneel)",
   "plannedResumeDateNotSet": "Nog niet ingesteld",
-  "selectPlannedResumeDate": "Selecteer de geplande datum om weer te beginnen",
+  "selectPlannedResumeDate": "Kies de datum waarop je weer met de pil wilt beginnen",
   "pauseEndDateLimitIsToday": "De einddatum kan alleen tot en met vandaag worden ingesteld",
   "pauseEndDateLimitBeforeNextPause": "Tot de dag die niet overlapt met de volgende pauze ({date}–)",
   "pauseStartDateLimit": "De startdatum kan tot en met {date} worden gekozen",

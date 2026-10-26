@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Выберите дату окончания перерыва в приёме таблеток позже даты начала",
   "plannedResumeDateOptional": "Планируемая дата возобновления приёма таблетки (необязательно)",
   "plannedResumeDateNotSet": "Пока не указана",
-  "selectPlannedResumeDate": "Выберите предполагаемую дату возобновления приёма",
+  "selectPlannedResumeDate": "Выберите планируемую дату возобновления приёма таблетки",
   "pauseEndDateLimitIsToday": "Дату окончания можно установить только до сегодняшнего дня",
   "pauseEndDateLimitBeforeNextPause": "До дня, который не пересекается со следующим перерывом ({date}–)",
   "pauseStartDateLimit": "Дату начала можно выбрать до {date}",

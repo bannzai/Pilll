@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "សូមជ្រើសរើសថ្ងៃបញ្ចប់ការផ្អាកលេបថ្នាំគ្រាប់ ដែលនៅក្រោយថ្ងៃចាប់ផ្តើម",
   "plannedResumeDateOptional": "កាលបរិច្ឆេទគ្រោងចាប់ផ្ដើមលេបថ្នាំគ្រាប់វិញ (មិនបាច់ជ្រើសក៏បាន)",
   "plannedResumeDateNotSet": "មិនទាន់កំណត់",
-  "selectPlannedResumeDate": "ជ្រើសរើសកាលបរិច្ឆេទដែលគ្រោងចាប់ផ្តើមលេបវិញ",
+  "selectPlannedResumeDate": "សូមជ្រើសរើសថ្ងៃដែលគ្រោងចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",
   "pauseEndDateLimitIsToday": "កាលបរិច្ឆេទបញ្ចប់អាចកំណត់បានត្រឹមថ្ងៃនេះប៉ុណ្ណោះ",
   "pauseEndDateLimitBeforeNextPause": "រហូតដល់ថ្ងៃដែលមិនជាន់គ្នានឹងការសម្រាកបន្ទាប់ ({date}〜)",
   "pauseStartDateLimit": "អាចជ្រើសរើសកាលបរិច្ឆេទចាប់ផ្តើមបានរហូតដល់ {date}",

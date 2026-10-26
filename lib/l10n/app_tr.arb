@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Hap kullanımına verilen aranın bitişi için başlangıç tarihinden sonraki bir tarih seçin",
   "plannedResumeDateOptional": "Hapı yeniden almaya başlamayı planladığınız tarih (isteğe bağlı)",
   "plannedResumeDateNotSet": "Henüz belirlenmedi",
-  "selectPlannedResumeDate": "Yeniden kullanmaya başlama tarihini seçin",
+  "selectPlannedResumeDate": "Hapı yeniden almaya başlamayı planladığınız tarihi seçin",
   "pauseEndDateLimitIsToday": "Bitiş tarihi yalnızca bugüne kadar ayarlanabilir",
   "pauseEndDateLimitBeforeNextPause": "Sonraki ara ({date}–) ile çakışmayan güne kadar",
   "pauseStartDateLimit": "Başlangıç tarihi en geç {date} olarak seçilebilir",

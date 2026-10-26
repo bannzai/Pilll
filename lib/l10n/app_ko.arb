@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "복용 휴식 종료일은 시작일보다 늦은 날짜로 선택해 주세요",
   "plannedResumeDateOptional": "복용 재개 예정일 (선택)",
   "plannedResumeDateNotSet": "아직 설정하지 않았어요",
-  "selectPlannedResumeDate": "복용 재개 예정일을 선택해 주세요",
+  "selectPlannedResumeDate": "복용을 다시 시작할 예정일을 선택해 주세요",
   "pauseEndDateLimitIsToday": "종료일은 오늘까지만 선택할 수 있어요",
   "pauseEndDateLimitBeforeNextPause": "다음 휴약 기간({date}~)과 겹치지 않는 날까지",
   "pauseStartDateLimit": "시작일은 {date}까지 선택할 수 있어요",

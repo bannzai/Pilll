@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Aukeratu pilulak hartzeko etenaldiaren amaiera-data hasiera-dataren ondoren",
   "plannedResumeDateOptional": "Pilula berriro hartzen hasteko aurreikusitako eguna (aukerakoa)",
   "plannedResumeDateNotSet": "Zehaztu gabe",
-  "selectPlannedResumeDate": "Hautatu berriro hartzeko aurreikusitako data",
+  "selectPlannedResumeDate": "Aukeratu pilula berriro hartzeko aurreikusitako eguna",
   "pauseEndDateLimitIsToday": "Amaiera-data gaur arte baino ezin da ezarri",
   "pauseEndDateLimitBeforeNextPause": "Hurrengo atsedenaldiarekin ({date}〜) gainjartzen ez den egunera arte",
   "pauseStartDateLimit": "Hasiera-data {date} arte aukeratu daiteke",

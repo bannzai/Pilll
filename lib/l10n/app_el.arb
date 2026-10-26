@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Επιλέξτε ημερομηνία λήξης της παύσης λήψης χαπιών μετά την ημερομηνία έναρξης",
   "plannedResumeDateOptional": "Προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού (προαιρετικό)",
   "plannedResumeDateNotSet": "Δεν έχει οριστεί",
-  "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης",
+  "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού",
   "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να οριστεί μόνο έως σήμερα",
   "pauseEndDateLimitBeforeNextPause": "Μέχρι την ημέρα που δεν επικαλύπτεται με την επόμενη παύση ({date}〜)",
   "pauseStartDateLimit": "Η ημερομηνία έναρξης μπορεί να επιλεγεί έως τις {date}",

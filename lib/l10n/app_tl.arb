@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Pumili po kayo ng petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras na mas huli sa petsa ng simula",
   "plannedResumeDateOptional": "Planong petsa ng muling pag-inom ng pildoras (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa itinakda",
-  "selectPlannedResumeDate": "Piliin ang nakatakdang petsa ng muling pag-inom",
+  "selectPlannedResumeDate": "Piliin ang petsang balak ninyong muling uminom ng pildoras",
   "pauseEndDateLimitIsToday": "Maaari lang itakda ang petsa ng pagtatapos hanggang ngayong araw",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sumasapaw sa susunod na pahinga ({date}–)",
   "pauseStartDateLimit": "Maaaring piliin ang petsa ng pagsisimula hanggang {date}",

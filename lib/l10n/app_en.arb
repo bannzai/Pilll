@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Choose a pill break end date after the start date",
   "plannedResumeDateOptional": "Planned date to resume taking the pill (optional)",
   "plannedResumeDateNotSet": "Not set",
-  "selectPlannedResumeDate": "Select the scheduled date to resume taking",
+  "selectPlannedResumeDate": "Select your planned pill restart date",
   "pauseEndDateLimitIsToday": "The end date can only be set up to today",
   "pauseEndDateLimitBeforeNextPause": "Up to the day before it overlaps with the next break ({date}–)",
   "pauseStartDateLimit": "The start date can be selected up to {date}",

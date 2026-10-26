@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Таблетка ичүүдөгү тыныгуунун аяктоо күнүн башталыш күнүнөн кийинки күнгө тандаңыз",
   "plannedResumeDateOptional": "Таблетканы кайра иче баштоонун пландалган күнү (милдеттүү эмес)",
   "plannedResumeDateNotSet": "Азырынча белгилене элек",
-  "selectPlannedResumeDate": "Кабыл алууну кайра баштоо пландалган күндү тандаңыз",
+  "selectPlannedResumeDate": "Таблетканы кайра иче баштай турган күндү тандаңыз",
   "pauseEndDateLimitIsToday": "Аяктоо күнүн бүгүнкү күнгө чейин гана тандаса болот",
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",
   "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",

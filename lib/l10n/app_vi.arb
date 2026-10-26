@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày kết thúc thời gian tạm ngừng uống thuốc sau ngày bắt đầu",
   "plannedResumeDateOptional": "Ngày dự định uống thuốc trở lại (không bắt buộc)",
   "plannedResumeDateNotSet": "Chưa thiết lập",
-  "selectPlannedResumeDate": "Chọn ngày dự định dùng lại",
+  "selectPlannedResumeDate": "Chọn ngày dự kiến uống thuốc trở lại",
   "pauseEndDateLimitIsToday": "Ngày kết thúc chỉ có thể đặt đến hôm nay",
   "pauseEndDateLimitBeforeNextPause": "Đến ngày không bị trùng với kỳ nghỉ tiếp theo ({date}–)",
   "pauseStartDateLimit": "Có thể chọn ngày bắt đầu đến {date}",

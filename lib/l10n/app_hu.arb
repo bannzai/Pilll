@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "A tablettaszedési szünet végéhez a kezdőnapnál későbbi dátumot válassz",
   "plannedResumeDateOptional": "A tabletta újbóli szedésének tervezett napja (nem kötelező)",
   "plannedResumeDateNotSet": "Nincs beállítva",
-  "selectPlannedResumeDate": "Válassza ki a szedés tervezett újrakezdési dátumát",
+  "selectPlannedResumeDate": "Válaszd ki, mikor kezded újra szedni a tablettát",
   "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",
   "pauseEndDateLimitBeforeNextPause": "A következő szünettel ({date}–) nem átfedő napig",
   "pauseStartDateLimit": "A kezdőnap legkésőbb {date} lehet",

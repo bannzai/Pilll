@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള അവസാനിക്കുന്നതിന്, ആരംഭ തീയതിക്കു ശേഷമുള്ള തീയതി തിരഞ്ഞെടുക്കൂ",
   "plannedResumeDateOptional": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി (നിർബന്ധമില്ല)",
   "plannedResumeDateNotSet": "ഇതുവരെ നിശ്ചയിച്ചിട്ടില്ല",
-  "selectPlannedResumeDate": "വീണ്ടും കഴിക്കാൻ തുടങ്ങാനുള്ള നിശ്ചിത തീയതി തിരഞ്ഞെടുക്കുക",
+  "selectPlannedResumeDate": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",
   "pauseEndDateLimitIsToday": "അവസാന തീയതി ഇന്നുവരെ മാത്രം തിരഞ്ഞെടുക്കാനാകും",
   "pauseEndDateLimitBeforeNextPause": "അടുത്ത ഇടവേള ({date}〜) യുമായി ഒതുങ്ങാത്ത ദിവസം വരെ",
   "pauseStartDateLimit": "ആരംഭ തീയതി {date} വരെ തിരഞ്ഞെടുക്കാം",

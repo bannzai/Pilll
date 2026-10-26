@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "يرجى اختيار تاريخ انتهاء فترة التوقف عن تناول الحبوب بعد تاريخ البدء",
   "plannedResumeDateOptional": "التاريخ المخطط لاستئناف تناول الحبوب (اختياري)",
   "plannedResumeDateNotSet": "لم يُحدَّد بعد",
-  "selectPlannedResumeDate": "اختاري تاريخ استئناف التناول",
+  "selectPlannedResumeDate": "اختاري التاريخ المخطط لاستئناف تناول الحبوب",
   "pauseEndDateLimitIsToday": "يمكن تحديد تاريخ الانتهاء حتى اليوم فقط",
   "pauseEndDateLimitBeforeNextPause": "حتى اليوم الذي لا يتداخل مع فترة التوقف التالية ({date}〜)",
   "pauseStartDateLimit": "يمكن اختيار تاريخ البدء حتى {date}",

@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "गोळ्या घेण्याच्या विश्रांतीची समाप्ती तारीख सुरुवातीच्या तारखेनंतरची निवडा",
   "plannedResumeDateOptional": "गोळी पुन्हा घेण्यास सुरुवात करण्याची नियोजित तारीख (ऐच्छिक)",
   "plannedResumeDateNotSet": "अद्याप ठरवलेली नाही",
-  "selectPlannedResumeDate": "पुन्हा सेवन सुरू करण्याची नियोजित तारीख निवडा",
+  "selectPlannedResumeDate": "गोळी पुन्हा घेण्याची नियोजित तारीख निवडा",
   "pauseEndDateLimitIsToday": "समाप्तीची तारीख फक्त आजपर्यंतच सेट करता येते",
   "pauseEndDateLimitBeforeNextPause": "पुढील विश्रांती ({date}〜) शी जुळत नाही त्या दिवसापर्यंत",
   "pauseStartDateLimit": "सुरुवातीची तारीख {date} पर्यंत निवडता येईल",

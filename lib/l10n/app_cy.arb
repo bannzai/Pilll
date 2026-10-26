@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad gorffen y seibiant o gymryd y bilsen sydd ar ôl y dyddiad dechrau",
   "plannedResumeDateOptional": "Dyddiad bwriedig ailafael yn y bilsen (dewisol)",
   "plannedResumeDateNotSet": "Heb ei bennu eto",
-  "selectPlannedResumeDate": "Dewiswch y dyddiad a drefnwyd i ailddechrau cymryd",
+  "selectPlannedResumeDate": "Dewiswch y dyddiad rydych yn bwriadu ailddechrau cymryd y bilsen",
   "pauseEndDateLimitIsToday": "Dim ond hyd at heddiw y gellir dewis y dyddiad gorffen",
   "pauseEndDateLimitBeforeNextPause": "Hyd at y diwrnod nad yw’n gorgyffwrdd â’r seibiant nesaf ({date}〜)",
   "pauseStartDateLimit": "Gellir dewis y dyddiad cychwyn hyd at {date}",

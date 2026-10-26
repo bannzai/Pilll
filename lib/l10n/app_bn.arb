@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "পিল খাওয়ার বিরতির শেষ তারিখ হিসেবে শুরুর তারিখের পরের কোনো দিন বেছে নিন",
   "plannedResumeDateOptional": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "এখনও নির্ধারণ করা হয়নি",
-  "selectPlannedResumeDate": "পুনরায় সেবন শুরুর নির্ধারিত তারিখ নির্বাচন করুন",
+  "selectPlannedResumeDate": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ বেছে নিন",
   "pauseEndDateLimitIsToday": "শেষের তারিখ আজ পর্যন্তই নির্বাচন করা যাবে",
   "pauseEndDateLimitBeforeNextPause": "পরবর্তী বিরতি ({date}〜)-র সঙ্গে মিলে না যাওয়া দিন পর্যন্ত",
   "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে",

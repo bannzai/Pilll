@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Valitse pilleritauon päättymispäiväksi alkamispäivää myöhempi päivä",
   "plannedResumeDateOptional": "Suunniteltu päivä, jolloin jatkat pillerin ottamista (valinnainen)",
   "plannedResumeDateNotSet": "Ei asetettu",
-  "selectPlannedResumeDate": "Valitse suunniteltu käytön aloituspäivä uudelleen",
+  "selectPlannedResumeDate": "Valitse päivä, jolloin aiot aloittaa pillerin käytön uudelleen",
   "pauseEndDateLimitIsToday": "Päättymispäiväksi voi valita vain tämän päivän tai aiemman",
   "pauseEndDateLimitBeforeNextPause": "Päivään asti, joka ei mene päällekkäin seuraavan tauon kanssa ({date}–)",
   "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",

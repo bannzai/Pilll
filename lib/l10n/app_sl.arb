@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Izberite datum konca premora pri jemanju tablet, ki je poznejši od datuma začetka",
   "plannedResumeDateOptional": "Načrtovani datum ponovnega jemanja tabletke (neobvezno)",
   "plannedResumeDateNotSet": "Še ni določeno",
-  "selectPlannedResumeDate": "Izberite predvideni datum ponovnega začetka jemanja",
+  "selectPlannedResumeDate": "Izberite načrtovani datum, ko boste znova začeli jemati tableto",
   "pauseEndDateLimitIsToday": "Končni datum lahko nastavite najpozneje na danes",
   "pauseEndDateLimitBeforeNextPause": "Do dneva, ki se ne prekriva z naslednjim premorom ({date}–)",
   "pauseStartDateLimit": "Začetni datum lahko izberete do {date}",

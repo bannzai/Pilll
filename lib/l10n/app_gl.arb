@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Escolle unha data de fin da pausa da pílula posterior á data de inicio",
   "plannedResumeDateOptional": "Data prevista para volver tomar a pílula (opcional)",
   "plannedResumeDateNotSet": "Aínda sen definir",
-  "selectPlannedResumeDate": "Selecciona a data prevista para retomar a toma",
+  "selectPlannedResumeDate": "Escolle a data prevista para volver tomar a pílula",
   "pauseEndDateLimitIsToday": "A data de finalización só se pode establecer ata hoxe",
   "pauseEndDateLimitBeforeNextPause": "Ata o día que non se solape co seguinte descanso ({date}〜)",
   "pauseStartDateLimit": "A data de inicio pódese escoller ata o {date}",

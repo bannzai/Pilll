@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Sicela ukhethe usuku lokuphela kwekhefu lokuphuza amaphilisi olungemva kosuku lokuqala",
   "plannedResumeDateOptional": "Usuku oluhleliwe lokuphinda uqale ukuphuza iphilisi (uyazikhethela)",
   "plannedResumeDateNotSet": "Akukakasethwa",
-  "selectPlannedResumeDate": "Khetha usuku oluhleliwe lokuqala futhi ukulusebenzisa",
+  "selectPlannedResumeDate": "Sicela ukhethe usuku ohlela ukuqala ngalo ukuphuza iphilisi futhi",
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",
   "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",

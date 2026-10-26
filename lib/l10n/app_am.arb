@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "ለክኒን እረፍት የማብቂያ ቀን፣ ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
-  "selectPlannedResumeDate": "የመውሰድ ዳግም መጀመሪያ የታቀደበትን ቀን ይምረጡ",
+  "selectPlannedResumeDate": "ክኒን መውሰድ የሚቀጥሉበትን ቀን ይምረጡ",
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",
   "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} ድረስ መምረጥ ይቻላል",

@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Выберыце дату заканчэння перапынку ў прыёме пігулак пазней за дату пачатку",
   "plannedResumeDateOptional": "Запланаваная дата аднаўлення прыёму пігулак (неабавязкова)",
   "plannedResumeDateNotSet": "Не зададзена",
-  "selectPlannedResumeDate": "Выберыце запланаваную дату аднаўлення прыёму",
+  "selectPlannedResumeDate": "Выберыце дату аднаўлення прыёму пігулкі",
   "pauseEndDateLimitIsToday": "Дату завяршэння можна выбраць толькі да сённяшняга дня",
   "pauseEndDateLimitBeforeNextPause": "Да дня, які не перасякаецца з наступным перапынкам ({date}〜)",
   "pauseStartDateLimit": "Дату пачатку можна выбраць да {date}",

@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Vali pillipausi lõpukuupäevaks alguskuupäevast hilisem kuupäev",
   "plannedResumeDateOptional": "Pilli võtmise jätkamise plaanitud kuupäev (valikuline)",
   "plannedResumeDateNotSet": "Määramata",
-  "selectPlannedResumeDate": "Valige võtmise jätkamise kavandatud kuupäev",
+  "selectPlannedResumeDate": "Vali kuupäev, mil plaanid taas pilli võtta",
   "pauseEndDateLimitIsToday": "Lõppkuupäevaks saab valida ainult tänase päeva",
   "pauseEndDateLimitBeforeNextPause": "Kuni päevani, mis ei kattu järgmise pausiga ({date}–)",
   "pauseStartDateLimit": "Alguskuupäeva saab valida kuni {date}",

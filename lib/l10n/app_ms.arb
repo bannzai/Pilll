@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Sila pilih tarikh tamat rehat pengambilan pil selepas tarikh mula",
   "plannedResumeDateOptional": "Tarikh dirancang untuk mula mengambil pil semula (pilihan)",
   "plannedResumeDateNotSet": "Belum ditetapkan",
-  "selectPlannedResumeDate": "Pilih tarikh dijadualkan untuk menyambung pengambilan",
+  "selectPlannedResumeDate": "Sila pilih tarikh anda merancang untuk mengambil pil semula",
   "pauseEndDateLimitIsToday": "Tarikh tamat hanya boleh ditetapkan sehingga hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sehingga hari yang tidak bertindih dengan rehat seterusnya ({date}–)",
   "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",

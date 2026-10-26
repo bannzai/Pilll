@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Ве молиме, изберете датум за крај на паузата во земањето таблета што е по датумот на почеток",
   "plannedResumeDateOptional": "Планиран датум за повторно земање таблета (незадолжително)",
   "plannedResumeDateNotSet": "Сѐ уште не е одредено",
-  "selectPlannedResumeDate": "Изберете го планираниот датум за продолжување со земањето",
+  "selectPlannedResumeDate": "Изберете го планираниот датум за повторно земање на таблета",
   "pauseEndDateLimitIsToday": "Датумот на завршување може да се постави најдоцна до денес",
   "pauseEndDateLimitBeforeNextPause": "До денот што не се преклопува со следната пауза ({date}〜)",
   "pauseStartDateLimit": "Почетниот датум може да се избере до {date}",

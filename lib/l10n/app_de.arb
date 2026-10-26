@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Wähle für das Ende der Pillenpause ein Datum nach dem Startdatum",
   "plannedResumeDateOptional": "Geplantes Datum für die erneute Pilleneinnahme (optional)",
   "plannedResumeDateNotSet": "Noch nicht festgelegt",
-  "selectPlannedResumeDate": "Geplantes Datum für die Wiederaufnahme auswählen",
+  "selectPlannedResumeDate": "Wähle das geplante Datum, an dem du die Pille wieder einnimmst",
   "pauseEndDateLimitIsToday": "Das Enddatum kann nur bis heute festgelegt werden",
   "pauseEndDateLimitBeforeNextPause": "Bis zu dem Tag, der sich nicht mit der nächsten Pause ({date}–) überschneidet",
   "pauseStartDateLimit": "Das Startdatum kann bis {date} gewählt werden",

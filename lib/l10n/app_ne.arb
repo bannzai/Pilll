@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "चक्की खाने विश्रामको अन्तिम मितिका लागि सुरु मितिभन्दा पछिको मिति छान्नुहोस्",
   "plannedResumeDateOptional": "चक्की फेरि खान सुरु गर्ने योजनाबद्ध मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "अझै तय गरिएको छैन",
-  "selectPlannedResumeDate": "फेरि सेवन सुरु गर्ने निर्धारित मिति चयन गर्नुहोस्",
+  "selectPlannedResumeDate": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति छान्नुहोस्",
   "pauseEndDateLimitIsToday": "समाप्ति मिति आजसम्म मात्र सेट गर्न सकिन्छ",
   "pauseEndDateLimitBeforeNextPause": "अर्को विश्राम ({date}〜) सँग नजुध्ने दिनसम्म",
   "pauseStartDateLimit": "सुरु मिति {date} सम्म छान्न सकिन्छ",

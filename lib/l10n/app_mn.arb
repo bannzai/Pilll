@@ -564,7 +564,7 @@
   "pauseEndDateMustBeAfterStartDate": "Эм уух завсарлагын дуусах өдрийг эхлэх өдрөөс хойших өдөр болгон сонгоно уу",
   "plannedResumeDateOptional": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдөр (заавал биш)",
   "plannedResumeDateNotSet": "Одоогоор товлоогүй",
-  "selectPlannedResumeDate": "Ууж эхлэхээр төлөвлөсөн огноог сонгоно уу",
+  "selectPlannedResumeDate": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдрөө сонгоно уу",
   "pauseEndDateLimitIsToday": "Дуусах огноог өнөөдрийг хүртэлхээр л сонгох боломжтой",
   "pauseEndDateLimitBeforeNextPause": "Дараагийн завсарлага ({date}〜)-тай давхцахгүй өдөр хүртэл",
   "pauseStartDateLimit": "Эхлэх өдрийг {date} хүртэл сонгох боломжтой",
