@@ -140,7 +140,7 @@
   "pillSheetEnded": "блистер е завршен",
   "checkLastTakenDate": "Проверете кога последен пат сте земале таблета",
   "pleaseRegisterAccount": "Ве молиме, создадете сметка",
-  "cannotTransferPremiumWithoutAccount": "Премиум функциите не можат да се пренесуваат при смена на уред или загубен телефон",
+  "cannotTransferPremiumWithoutAccount": "Ако го смените или изгубите телефонот, нема да можете да ги пренесете премиум функциите",
   "reexperiencePremiumFeatures": "Можете повторно да ги искусите премиум функциите 14 дена!\nДопрете за да споделите на социјални мрежи!",
   "whereToShare": "Каде сакате да споделите?",
   "pauseTakingDay": "🌙 Пауза од земање {day} ден",

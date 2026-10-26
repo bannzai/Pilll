@@ -140,7 +140,7 @@
   "pillSheetEnded": "انتهى شريط الحبوب",
   "checkLastTakenDate": "تحققي من تاريخ آخر حبة تناولتِها",
   "pleaseRegisterAccount": "يرجى إنشاء حساب",
-  "cannotTransferPremiumWithoutAccount": "لا يمكن نقل الميزات المتقدمة عند تغيير الجهاز أو فقدان الهاتف الذكي",
+  "cannotTransferPremiumWithoutAccount": "إذا غيّرتِ هاتفكِ أو فقدتِه، فلن تتمكني من نقل ميزات بريميوم",
   "reexperiencePremiumFeatures": "يمكنك إعادة تجربة الميزات المميزة لمدة 14 يوماً!\nاضغط للمشاركة على وسائل التواصل الاجتماعي!",
   "whereToShare": "أين تريد المشاركة؟",
   "pauseTakingDay": "🌙 فترة الراحة من الحبوب - اليوم {day}",

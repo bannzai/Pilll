@@ -140,7 +140,7 @@
   "pillSheetEnded": "ແຜງຢາຄຸມໝົດແລ້ວ",
   "checkLastTakenDate": "ເບິ່ງວັນທີກິນຢາເມັດຄັ້ງສຸດທ້າຍ",
   "pleaseRegisterAccount": "ກະລຸນາສ້າງບັນຊີ",
-  "cannotTransferPremiumWithoutAccount": "ເມື່ອປ່ຽນອຸປະກອນໃໝ່ ຫຼື ສູນເສຍໂທລະສັບ, ຟີເຈີພິເສດຈະບໍ່ສາມາດຍ້າຍມາໄດ້",
+  "cannotTransferPremiumWithoutAccount": "ຖ້າປ່ຽນໂທລະສັບ ຫຼື ເຮັດໂທລະສັບເສຍ ຈະບໍ່ສາມາດໂອນຟີເຈີ Premium ໄປເຄື່ອງໃໝ່ໄດ້",
   "reexperiencePremiumFeatures": "ສາມາດທົດລອງໃຊ້ຄຸນສົມບັດພຣີມຽມອີກ 14 ວັນ!\nແຕະເພື່ອແບ່ງປັນໃນ SNS!",
   "whereToShare": "ແບ່ງປັນໄປທີ່ໃດ?",
   "pauseTakingDay": "🌙 ພັກການກິນຢາ ວັນທີ່ {day}",

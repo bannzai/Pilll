@@ -140,7 +140,7 @@
   "pillSheetEnded": "აბების ბლისტერ დასრულდა",
   "checkLastTakenDate": "ნახეთ, ბოლოს როდის მიიღეთ აბი",
   "pleaseRegisterAccount": "გთხოვთ, შექმნათ ანგარიში",
-  "cannotTransferPremiumWithoutAccount": "მოწყობილობის შეცვლისას ან სმარტფონის დაკარგვისას პრემიუმ ფუნქციები ვერ გადაიტანება",
+  "cannotTransferPremiumWithoutAccount": "თუ ტელეფონს შეცვლით ან დაკარგავთ, პრემიუმ ფუნქციებს ვერ გადაიტანთ",
   "reexperiencePremiumFeatures": "პრემიუმ ფუნქციებს 14 დღის განმავლობაში ხელახლა შეგიძლიათ გამოიცადოთ!\nდააჭირეთ სოცმედიაში გასაზიარებლად!",
   "whereToShare": "სად გსურთ გაზიარება?",
   "pauseTakingDay": "🌙 შესვენების {day}-ე დღე",

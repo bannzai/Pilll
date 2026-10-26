@@ -140,7 +140,7 @@
   "pillSheetEnded": "Rematou o blíster",
   "checkLastTakenDate": "Consulta cando tomaches a última pílula",
   "pleaseRegisterAccount": "Crea unha conta, por favor",
-  "cannotTransferPremiumWithoutAccount": "As funcións premium non se poden transferir ao cambiar de dispositivo ou perder o smartphone",
+  "cannotTransferPremiumWithoutAccount": "Se cambias de móbil ou o perdes, non poderás transferir as funcións Premium",
   "reexperiencePremiumFeatures": "Podes volver experimentar as funcionalidades premium durante 14 días!\nToca para compartir nas redes sociais!",
   "whereToShare": "Onde queres compartir?",
   "pauseTakingDay": "🌙 Descanso da toma día {day}",

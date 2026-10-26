@@ -140,7 +140,7 @@
   "pillSheetEnded": "گولیوں کی پٹی ختم ہو گئی ہے",
   "checkLastTakenDate": "آخری بار گولی لینے کی تاریخ دیکھیں",
   "pleaseRegisterAccount": "براہِ کرم اکاؤنٹ بنائیں",
-  "cannotTransferPremiumWithoutAccount": "فون تبدیل کرنے یا کھو جانے کی صورت میں، پریمیم فیچرز منتقل نہیں کیے جا سکتے",
+  "cannotTransferPremiumWithoutAccount": "فون بدلنے یا گم ہونے کی صورت میں پریمیم خصوصیات نئے فون پر منتقل نہیں کی جا سکیں گی",
   "reexperiencePremiumFeatures": "پریمیم فیچرز کو 14 دنوں کے لیے دوبارہ تجربہ کر سکتے ہیں!\nسوشل میڈیا پر شیئر کرنے کے لیے ٹیپ کریں!",
   "whereToShare": "کہاں شیئر کریں؟",
   "pauseTakingDay": "🌙 دوائی کا وقفہ {day}واں دن",

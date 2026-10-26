@@ -140,7 +140,7 @@
   "pillSheetEnded": "pakiti ya vidonge imeisha",
   "checkLastTakenDate": "Angalia tarehe uliyomeza kidonge mara ya mwisho",
   "pleaseRegisterAccount": "Tafadhali fungua akaunti",
-  "cannotTransferPremiumWithoutAccount": "Hutaweza kuhamisha vipengele vya premium wakati wa kubadilisha kifaa au kupoteza simu",
+  "cannotTransferPremiumWithoutAccount": "Ukibadilisha au kupoteza simu, hutaweza kuhamisha vipengele vya Premium",
   "reexperiencePremiumFeatures": "Pata uzoefu wa vipengele vya premium tena kwa siku 14!\nGusa kushiriki kwenye mitandao ya kijamii!",
   "whereToShare": "Ungependa kushiriki wapi?",
   "pauseTakingDay": "🌙 Mapumziko wa dawa siku ya {day}",

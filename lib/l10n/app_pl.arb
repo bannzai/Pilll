@@ -140,7 +140,7 @@
   "pillSheetEnded": "blist jest już pusty",
   "checkLastTakenDate": "Sprawdź datę ostatniego przyjęcia tabletki",
   "pleaseRegisterAccount": "Utwórz konto",
-  "cannotTransferPremiumWithoutAccount": "W przypadku zmiany urządzenia lub utraty telefonu funkcje premium nie będą przeniesione",
+  "cannotTransferPremiumWithoutAccount": "Po zmianie lub utracie telefonu nie będzie można przenieść funkcji premium",
   "reexperiencePremiumFeatures": "Możesz ponownie doświadczyć funkcji premium przez 14 dni! Dotknij, aby udostępnić w mediach społecznościowych!",
   "whereToShare": "Gdzie chcesz udostępnić?",
   "pauseTakingDay": "🌙 Przerwa dzień {day}",

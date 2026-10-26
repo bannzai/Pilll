@@ -140,7 +140,7 @@
   "pillSheetEnded": "Naubos na ang pakete ng pildoras",
   "checkLastTakenDate": "Tingnan kung kailan ninyo huling ininom ang pildoras",
   "pleaseRegisterAccount": "Pakiusap, gumawa po kayo ng account",
-  "cannotTransferPremiumWithoutAccount": "Hindi maililipat ang mga premium feature kapag nagpalit ng device o nawala ang smartphone",
+  "cannotTransferPremiumWithoutAccount": "Kung magpapalit kayo ng telepono o mawala ito, hindi ninyo maililipat ang mga Premium na feature",
   "reexperiencePremiumFeatures": "Muling maranasan ang mga premium feature sa loob ng 14 araw!\nI-tap para ibahagi sa social media!",
   "whereToShare": "Saan mo ibabahagi?",
   "pauseTakingDay": "🌙 Pahinga sa pills ika-{day} araw",

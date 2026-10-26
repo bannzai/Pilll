@@ -140,7 +140,7 @@
   "pillSheetEnded": "חפיסת הגלולות הסתיימה",
   "checkLastTakenDate": "לבדוק מתי הייתה נטילת הגלולה האחרונה",
   "pleaseRegisterAccount": "יש ליצור חשבון",
-  "cannotTransferPremiumWithoutAccount": "במקרה של החלפת מכשיר או אובדן הטלפון הנייד, לא ניתן להעביר את תכונות הפרימיום",
+  "cannotTransferPremiumWithoutAccount": "בהחלפת הטלפון או במקרה של אובדן, לא תהיה אפשרות להעביר את תכונות הפרימיום",
   "reexperiencePremiumFeatures": "תוכל לחוות שוב את התכונות הפרימיום למשך 14 ימים!\nהקש כדי לשתף ברשתות החברתיות!",
   "whereToShare": "איפה לשתף?",
   "pauseTakingDay": "🌙 הפסקה יום {day}",

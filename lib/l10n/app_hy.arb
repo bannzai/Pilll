@@ -140,7 +140,7 @@
   "pillSheetEnded": "հաբերի բլիստեր ավարտվել է",
   "checkLastTakenDate": "Ստուգեք հաբը վերջին անգամ ընդունելու ամսաթիվը",
   "pleaseRegisterAccount": "Խնդրում ենք գրանցել հաշիվ",
-  "cannotTransferPremiumWithoutAccount": "Սարքի փոխարինման կամ հեռախոսի կորստյան դեպքում պրեմիում ֆունկցիաները չեն փոխանցվի",
+  "cannotTransferPremiumWithoutAccount": "Եթե փոխեք կամ կորցնեք հեռախոսը, չեք կարողանա փոխանցել պրեմիում գործառույթները",
   "reexperiencePremiumFeatures": "Կարող եք 14 օր պրեմիում գործառույթները կրկին փորձել!\nՀպեք և սոցիալական ցանցերում կիսվեք!",
   "whereToShare": "Որտե՞ղ կիսեք:",
   "pauseTakingDay": "🌙 Դեղի ընդմիջում {day}-րդ օր",

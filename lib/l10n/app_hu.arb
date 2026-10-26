@@ -140,7 +140,7 @@
   "pillSheetEnded": "A tablettacsomag elfogyott",
   "checkLastTakenDate": "Nézd meg, mikor szedted utoljára a tablettát",
   "pleaseRegisterAccount": "Kérjük, hozz létre egy fiókot",
-  "cannotTransferPremiumWithoutAccount": "Készülékváltás vagy telefon elvesztése esetén a prémium funkciók nem vihetők át",
+  "cannotTransferPremiumWithoutAccount": "Ha telefont váltasz, vagy elveszíted a telefonodat, a prémium funkciókat nem tudod átvinni",
   "reexperiencePremiumFeatures": "Újra kipróbálhatod a prémium funkciókat 14 napig!\nKoppints ide, hogy megoszd a közösségi médiában!",
   "whereToShare": "Hová szeretné megosztani?",
   "pauseTakingDay": "🌙 Szünet {day}. napja",

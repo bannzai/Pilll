@@ -140,7 +140,7 @@
   "pillSheetEnded": "блістар скончыўся",
   "checkLastTakenDate": "Праверыць дату апошняга прыёму пігулкі",
   "pleaseRegisterAccount": "Калі ласка, зарэгіструйце ўліковы запіс",
-  "cannotTransferPremiumWithoutAccount": "Прэміум-функцыі нельга перанесці пры змене або страце тэлефона",
+  "cannotTransferPremiumWithoutAccount": "Калі вы зменіце або страціце тэлефон, перанесці прэміум-функцыі не атрымаецца",
   "reexperiencePremiumFeatures": "Вы можаце паўторна скарыстацца прэміум-функцыямі на працягу 14 дзён!\nНацісніце, каб падзяліцца ў сацыяльных сетках!",
   "whereToShare": "Куды падзяліцца?",
   "pauseTakingDay": "🌙 Перапынак у прыёме {day} дзень",

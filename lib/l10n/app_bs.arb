@@ -140,7 +140,7 @@
   "pillSheetEnded": "blister je završen",
   "checkLastTakenDate": "Provjerite kada ste posljednji put uzeli pilulu",
   "pleaseRegisterAccount": "Molimo Vas, registrujte račun",
-  "cannotTransferPremiumWithoutAccount": "Premium funkcije se neće prenijeti prilikom promjene uređaja ili gubitka telefona",
+  "cannotTransferPremiumWithoutAccount": "Ako promijenite ili izgubite telefon, nećete moći prenijeti premium funkcije",
   "reexperiencePremiumFeatures": "Možete ponovo iskusiti premium funkcije tokom 14 dana!\nDodirnite da podijelite na društvene mreže!",
   "whereToShare": "Gdje želite podijeliti?",
   "pauseTakingDay": "🌙 Pauza od tableta, {day}. dan",

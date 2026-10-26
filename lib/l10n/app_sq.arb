@@ -140,7 +140,7 @@
   "pillSheetEnded": "Blisteri ka përfunduar",
   "checkLastTakenDate": "Shikoni datën kur e morët pilulën për herë të fundit",
   "pleaseRegisterAccount": "Ju lutemi, krijoni një llogari",
-  "cannotTransferPremiumWithoutAccount": "Funksionet premium nuk mund të transferohen në rast të ndryshimit të pajisjes ose humbjes së telefonit",
+  "cannotTransferPremiumWithoutAccount": "Nëse ndërroni ose humbni telefonin, nuk do të mund t’i transferoni veçoritë premium",
   "reexperiencePremiumFeatures": "Mund të përjetoni përsëri veçoritë premium për 14 ditë!\nShtypni për të ndarë në rrjetet sociale!",
   "whereToShare": "Ku dëshironi të ndani?",
   "pauseTakingDay": "🌙 Pushim nga marrja dita {day}",

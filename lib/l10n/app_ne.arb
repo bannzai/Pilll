@@ -140,7 +140,7 @@
   "pillSheetEnded": "चक्की पत्ता सकिएको छ",
   "checkLastTakenDate": "अन्तिम पटक चक्की लिएको मिति हेर्नुहोस्",
   "pleaseRegisterAccount": "कृपया खाता बनाउनुहोस्",
-  "cannotTransferPremiumWithoutAccount": "मोडेल परिवर्तन वा स्मार्टफोन हराउँदा प्रिमियम सुविधाहरू स्थानान्तरण गर्न सकिँदैन",
+  "cannotTransferPremiumWithoutAccount": "फोन फेर्नुभयो वा हरायो भने प्रिमियम सुविधाहरू नयाँ फोनमा सार्न सकिँदैन",
   "reexperiencePremiumFeatures": "प्रिमियम सुविधाहरू १४ दिनका लागि पुनः अनुभव गर्नुहोस्!\nट्याप गरेर SNS मा साझा गरौं!",
   "whereToShare": "कहाँ साझा गर्नुहुन्छ？",
   "pauseTakingDay": "🌙 सेवन बिदा {day}औं दिन",

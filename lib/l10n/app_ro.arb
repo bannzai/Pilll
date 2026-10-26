@@ -140,7 +140,7 @@
   "pillSheetEnded": "Blisterul s-a terminat",
   "checkLastTakenDate": "Verifică data ultimei pilule luate",
   "pleaseRegisterAccount": "Te rugăm să creezi un cont",
-  "cannotTransferPremiumWithoutAccount": "Funcțiile premium nu pot fi transferate la schimbarea dispozitivului sau pierderea smartphone-ului",
+  "cannotTransferPremiumWithoutAccount": "Dacă schimbi sau pierzi telefonul, nu vei putea transfera funcțiile premium",
   "reexperiencePremiumFeatures": "Poți experimenta din nou funcțiile premium timp de 14 zile!\nApasă pentru a împărtăși pe rețelele sociale!",
   "whereToShare": "Unde distribuim?",
   "pauseTakingDay": "🌙 Ziua {day} fără pilule",

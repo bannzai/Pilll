@@ -140,7 +140,7 @@
   "pillSheetEnded": "блистер закончился",
   "checkLastTakenDate": "Проверьте дату последнего приёма таблетки",
   "pleaseRegisterAccount": "Пожалуйста, создайте учётную запись",
-  "cannotTransferPremiumWithoutAccount": "При смене устройства или потере смартфона премиум-функции не могут быть перенесены",
+  "cannotTransferPremiumWithoutAccount": "Если вы смените или потеряете телефон, перенести функции премиум не получится",
   "reexperiencePremiumFeatures": "Вы можете повторно попробовать премиум-функции в течение 14 дней!\nНажмите, чтобы поделиться в соцсетях!",
   "whereToShare": "Куда поделиться?",
   "pauseTakingDay": "🌙 Перерыв в приеме {day} день",

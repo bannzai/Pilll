@@ -140,7 +140,7 @@
   "pillSheetEnded": "ورق قرص تمام شد",
   "checkLastTakenDate": "تاریخ آخرین مصرف قرص را ببینید",
   "pleaseRegisterAccount": "لطفاً یک حساب کاربری بسازید",
-  "cannotTransferPremiumWithoutAccount": "در صورت تغییر دستگاه یا گم شدن گوشی، امکان انتقال ویژگی‌های پریمیوم وجود ندارد",
+  "cannotTransferPremiumWithoutAccount": "اگر گوشی‌تان را عوض کنید یا گم کنید، نمی‌توانید ویژگی‌های پریمیوم را منتقل کنید",
   "reexperiencePremiumFeatures": "می‌توانید ویژگی‌های پریمیوم را به مدت ۱۴ روز مجدداً تجربه کنید！\nبرای به اشتراک‌گذاری در شبکه‌های اجتماعی ضربه بزنید！",
   "whereToShare": "کجا به اشتراک بگذارید؟",
   "pauseTakingDay": "🌙 دوره استراحت روز {day}",

@@ -140,7 +140,7 @@
   "pillSheetEnded": "Der Pillenblister ist aufgebraucht",
   "checkLastTakenDate": "Prüfen, wann du zuletzt die Pille genommen hast",
   "pleaseRegisterAccount": "Bitte erstelle ein Konto",
-  "cannotTransferPremiumWithoutAccount": "Premium-Funktionen können bei Gerätewechsel oder Verlust des Smartphones nicht übertragen werden",
+  "cannotTransferPremiumWithoutAccount": "Wenn du dein Handy wechselst oder verlierst, kannst du deine Premium-Funktionen nicht übertragen",
   "reexperiencePremiumFeatures": "Premium-Funktionen 14 Tage lang erneut erleben! Antippen und in sozialen Medien teilen!",
   "whereToShare": "Wo möchten Sie teilen?",
   "pauseTakingDay": "🌙 Pillenpause Tag {day}",

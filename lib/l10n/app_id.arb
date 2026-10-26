@@ -140,7 +140,7 @@
   "pillSheetEnded": "strip pil sudah habis",
   "checkLastTakenDate": "Lihat kapan terakhir kali Anda minum pil",
   "pleaseRegisterAccount": "Silakan buat akun",
-  "cannotTransferPremiumWithoutAccount": "Fitur premium tidak dapat dipindahkan saat pergantian perangkat atau kehilangan ponsel",
+  "cannotTransferPremiumWithoutAccount": "Jika Anda mengganti atau kehilangan ponsel, fitur premium tidak dapat dipindahkan",
   "reexperiencePremiumFeatures": "Nikmati kembali fitur premium selama 14 hari!\nKetuk untuk bagikan ke media sosial!",
   "whereToShare": "Bagikan ke mana?",
   "pauseTakingDay": "🌙 Jeda minum pil hari ke-{day}",

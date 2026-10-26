@@ -140,7 +140,7 @@
   "pillSheetEnded": "د ګولیو پاڼ پای ته ورسېده",
   "checkLastTakenDate": "د ګولۍ د وروستي ځل اخیستو نېټه وګورئ",
   "pleaseRegisterAccount": "مهرباني وکړئ یو حساب جوړ کړئ",
-  "cannotTransferPremiumWithoutAccount": "د ډيوايس بدلولو يا د تليفون ورکولو په وخت کې، پرېميم ځانګړتياوې نشي لېږدول کېدی",
+  "cannotTransferPremiumWithoutAccount": "که ټېلېفون بدل یا ورک شي، د پریمیم ځانګړنې نوي ټېلېفون ته نه شئ لېږدولی",
   "reexperiencePremiumFeatures": "د پریمیم فیچرونو د ۱۴ ورځو لپاره بیا تجربه وکړئ!\nټک ورکړئ او په ټولنیزو رسنیو کې یې شریک کړئ!",
   "whereToShare": "چېرته شریک کړئ؟",
   "pauseTakingDay": "🌙 د آرام {day}مه ورځ",

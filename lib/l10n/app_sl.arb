@@ -140,7 +140,7 @@
   "pillSheetEnded": "ploščica je porabljena",
   "checkLastTakenDate": "Preverite datum zadnjega zaužitja tabletke",
   "pleaseRegisterAccount": "Prosimo, ustvarite račun",
-  "cannotTransferPremiumWithoutAccount": "Premium funkcije se ne morejo prenesti ob menjavi naprave ali izgubi pametnega telefona",
+  "cannotTransferPremiumWithoutAccount": "Če zamenjate ali izgubite telefon, funkcij Premium ne boste mogli prenesti",
   "reexperiencePremiumFeatures": "Preizkusite Premium funkcije ponovno za 14 dni!\nTapnite in delite na družbenih omrežjih!",
   "whereToShare": "Kje želite deliti?",
   "pauseTakingDay": "🌙 {day}. dan odmora od jemanja",

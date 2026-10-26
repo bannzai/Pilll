@@ -140,7 +140,7 @@
   "pillSheetEnded": "pilluspjald er búið",
   "checkLastTakenDate": "Sjá hvenær þú tókst pilluna síðast",
   "pleaseRegisterAccount": "Viltu stofna aðgang?",
-  "cannotTransferPremiumWithoutAccount": "Premium eiginleikar eru ekki fluttir við tækjaskipti eða snjallsímatap",
+  "cannotTransferPremiumWithoutAccount": "Ef þú skiptir um síma eða týnir honum geturðu ekki flutt Premium-eiginleikana",
   "reexperiencePremiumFeatures": "Þú getur prófað úrvals eiginleika aftur í 14 daga!\nPikkaðu til að deila á samfélagsmiðlum!",
   "whereToShare": "Hvert viltu deila þessu?",
   "pauseTakingDay": "🌙 Pilluhvíld dagur {day}",

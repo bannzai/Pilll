@@ -140,7 +140,7 @@
   "pillSheetEnded": "pilleriliuska on käytetty loppuun",
   "checkLastTakenDate": "Katso, milloin otit pillerin viimeksi",
   "pleaseRegisterAccount": "Luo tili, kiitos",
-  "cannotTransferPremiumWithoutAccount": "Premium-ominaisuudet eivät siirry laitteen vaihdon tai puhelimen menetyksen yhteydessä",
+  "cannotTransferPremiumWithoutAccount": "Jos vaihdat puhelinta tai kadotat sen, et voi siirtää Premium-ominaisuuksia",
   "reexperiencePremiumFeatures": "Voit kokea premium-ominaisuudet uudelleen 14 päiväksi! Napauta jakaaksesi sosiaalisessa mediassa!",
   "whereToShare": "Mihin jaetaan?",
   "pauseTakingDay": "🌙 {day}. taukopäivä",

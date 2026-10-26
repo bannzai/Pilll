@@ -140,7 +140,7 @@
   "pillSheetEnded": "Pill pack finished",
   "checkLastTakenDate": "Check when you last took your pill",
   "pleaseRegisterAccount": "Please create an account",
-  "cannotTransferPremiumWithoutAccount": "You cannot transfer premium features when changing devices or if your phone is lost",
+  "cannotTransferPremiumWithoutAccount": "If you change or lose your phone, you won't be able to transfer your Premium features",
   "reexperiencePremiumFeatures": "Experience premium features again for 14 days! Tap to share on social media!",
   "whereToShare": "Where would you like to share?",
   "pauseTakingDay": "🌙 Rest day {day}",

@@ -140,7 +140,7 @@
   "pillSheetEnded": "tablešu blisteris ir izlietots",
   "checkLastTakenDate": "Pārbaudiet, kad pēdējo reizi lietojāt tableti",
   "pleaseRegisterAccount": "Lūdzu, izveidojiet kontu",
-  "cannotTransferPremiumWithoutAccount": "Ierīces maiņas vai zuduma gadījumā premium funkcijas netiks saglabātas",
+  "cannotTransferPremiumWithoutAccount": "Ja nomainīsiet vai pazaudēsiet tālruni, Premium funkcijas nevarēsiet pārcelt",
   "reexperiencePremiumFeatures": "Atkārtoti izmēģiniet premium funkcijas 14 dienas! Pieskarieties, lai dalītos sociālajos tīklos!",
   "whereToShare": "Kur dalīties?",
   "pauseTakingDay": "🌙 Tablešu pauze {day}. diena",

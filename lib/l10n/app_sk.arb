@@ -140,7 +140,7 @@
   "pillSheetEnded": "blist je dobratý",
   "checkLastTakenDate": "Skontrolujte dátum posledného užitia tabletky",
   "pleaseRegisterAccount": "Prosím, vytvorte si účet",
-  "cannotTransferPremiumWithoutAccount": "Prémiové funkcie sa nedajú preniesť pri zmene telefónu alebo strate zariadenia",
+  "cannotTransferPremiumWithoutAccount": "Ak zmeníte alebo stratíte telefón, funkcie Premium nebudete môcť preniesť",
   "reexperiencePremiumFeatures": "Môžete znovu vyskúšať prémiové funkcie na 14 dní! Ťuknite a zdieľajte na sociálnych sieťach!",
   "whereToShare": "Kde chcete zdieľať?",
   "pauseTakingDay": "🌙 Prestávka v užívaní {day}. deň",

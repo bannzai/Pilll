@@ -140,7 +140,7 @@
   "pillSheetEnded": "Η καρτέλα χαπιών ολοκληρώθηκε",
   "checkLastTakenDate": "Δείτε πότε πήρατε τελευταία φορά το χάπι",
   "pleaseRegisterAccount": "Παρακαλούμε δημιουργήστε λογαριασμό",
-  "cannotTransferPremiumWithoutAccount": "Οι premium λειτουργίες δεν μπορούν να μεταφερθούν σε περίπτωση αλλαγής συσκευής ή απώλειας κινητού",
+  "cannotTransferPremiumWithoutAccount": "Αν αλλάξετε ή χάσετε το τηλέφωνό σας, δεν θα μπορείτε να μεταφέρετε τις λειτουργίες Premium",
   "reexperiencePremiumFeatures": "Μπορείτε να ξαναδοκιμάσετε τις premium λειτουργίες για 14 ημέρες!\nΠατήστε για να μοιραστείτε στα social media!",
   "whereToShare": "Πού θέλετε να το μοιραστείτε;",
   "pauseTakingDay": "🌙 Διάλειμμα δόσης {day}η ημέρα",

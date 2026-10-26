@@ -140,7 +140,7 @@
   "pillSheetEnded": "tablečių plokštelė baigta",
   "checkLastTakenDate": "Patikrinkite, kada paskutinį kartą išgėrėte tabletę",
   "pleaseRegisterAccount": "Prašome susikurti paskyrą",
-  "cannotTransferPremiumWithoutAccount": "Keičiant telefoną ar jį praradus, premium funkcijos negali būti perkeltos",
+  "cannotTransferPremiumWithoutAccount": "Jei pakeisite ar pamesite telefoną, negalėsite perkelti Premium funkcijų",
   "reexperiencePremiumFeatures": "Vėl išbandykite premium funkcijas 14 dienų!\nPalieskite ir pasidalinkite socialiniuose tinkluose!",
   "whereToShare": "Kur dalintis?",
   "pauseTakingDay": "🌙 Tablečių pertrauka {day} diena",

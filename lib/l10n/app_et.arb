@@ -140,7 +140,7 @@
   "pillSheetEnded": "pillileh on läbi",
   "checkLastTakenDate": "Vaata, millal viimati pilli võtsid",
   "pleaseRegisterAccount": "Palun loo konto",
-  "cannotTransferPremiumWithoutAccount": "Seadme vahetuse või telefoni kadumise korral premium funktsioone üle kanda ei saa",
+  "cannotTransferPremiumWithoutAccount": "Kui vahetad telefoni või kaotad selle, ei saa sa premium-funktsioone üle kanda",
   "reexperiencePremiumFeatures": "Kogege preemiumfunktsioone uuesti 14 päeva!\nPuudutage jagamiseks sotsiaalmeedias!",
   "whereToShare": "Kuhu soovite jagada?",
   "pauseTakingDay": "🌙 Tablettide paus {day}. päev",
