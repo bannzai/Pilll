@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/کال",
   "monthlyPrice": "{monthlyPriceString}/میاشت",
   "dailyPrice": "{dailyPriceString}/ورځ",
-  "premiumTermsNotice1": "• د پریمیم تړون موده د پیل نیټې څخه په یوه میاشت یا یو کال کې اتوماتیک تجدید کیږي",
+  "premiumTermsNotice1": "・د پریمیم ګډون د پیل له نېټې څخه هره 1 میاشت یا هر 1 کال په اوتومات ډول نوي کېږي",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "د ځانګړي سوداګرۍ د قانون پر بنسټ ښودنه",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/წელი",
   "monthlyPrice": "{monthlyPriceString}/თვე",
   "dailyPrice": "{dailyPriceString}/დღე",
-  "premiumTermsNotice1": "・პრემიუმ ხელშეკრულების ვადა დაწყების თარიღიდან 1 თვის ან 1 წლის ინტერვალით ავტომატურად განახლდება",
+  "premiumTermsNotice1": "・პრემიუმ გამოწერა ავტომატურად განახლდება ყოველ 1 თვეში ან 1 წელიწადში, დაწყების თარიღიდან",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "კანონით განსაზღვრული ინფორმაცია",

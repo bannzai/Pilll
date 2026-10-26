@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/an",
   "monthlyPrice": "{monthlyPriceString}/lună",
   "dailyPrice": "{dailyPriceString}/zi",
-  "premiumTermsNotice1": "• Perioada contractului Premium se reînnoiește automat la fiecare lună sau an, calculată de la data de început",
+  "premiumTermsNotice1": "・Abonamentul premium se reînnoiește automat lunar sau anual, începând de la data activării",
   "premiumTermsBullet": "-",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informații legale comerciale",

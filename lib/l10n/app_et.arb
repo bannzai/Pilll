@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/aasta",
   "monthlyPrice": "{monthlyPriceString}/kuu",
   "dailyPrice": "{dailyPriceString}/päev",
-  "premiumTermsNotice1": "• Premium leping uueneb automaatselt iga kuu või aasta järel, alates alguskuupäevast.",
+  "premiumTermsNotice1": "・Premium-tellimus uueneb automaatselt iga kuu või aasta tagant, arvestades alguskuupäevast",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Seaduslik teave",

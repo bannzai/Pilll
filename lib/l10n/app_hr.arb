@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/godina",
   "monthlyPrice": "{monthlyPriceString}/mjesec",
   "dailyPrice": "{dailyPriceString}/dan",
-  "premiumTermsNotice1": "・Trajanje Premium pretplate automatski se obnavlja svakih mjesec ili godinu dana od datuma početka",
+  "premiumTermsNotice1": "・Pretplata Premium automatski se obnavlja svaki mjesec ili svake godine, računajući od datuma početka",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Pravne informacije",

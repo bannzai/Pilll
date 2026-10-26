@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/वर्ष",
   "monthlyPrice": "{monthlyPriceString}/माह",
   "dailyPrice": "{dailyPriceString}/दिन",
-  "premiumTermsNotice1": "• प्रीमियम अनुबंध अवधि प्रारंभ तिथि से गिनकर प्रत्येक 1 महीने या 1 वर्ष में स्वचालित रूप से नवीकृत होगी।",
+  "premiumTermsNotice1": "・प्रीमियम सदस्यता शुरू होने की तारीख से हर 1 महीने या 1 साल पर अपने आप नवीनीकृत होती है",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "व्यापारिक कानूनी जानकारी",

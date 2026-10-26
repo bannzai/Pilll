@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/рік",
   "monthlyPrice": "{monthlyPriceString}/міс.",
   "dailyPrice": "{dailyPriceString}/день",
-  "premiumTermsNotice1": "• Період дії преміум-підписки автоматично поновлюється кожен 1 місяць або 1 рік з дати початку",
+  "premiumTermsNotice1": "・преміумпідписка автоматично поновлюється щомісяця або щороку, починаючи з дати її початку",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Правова інформація про продавця",

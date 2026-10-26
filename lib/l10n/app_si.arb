@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/වසර",
   "monthlyPrice": "{monthlyPriceString}/මාසය",
   "dailyPrice": "{dailyPriceString}/දින",
-  "premiumTermsNotice1": "• ප්‍රීමියම් ගිණුම් කාල සීමාව ආරම්භක දිනයෙන් ගණන් කරන ලද මාස 1ක් හෝ වසර 1ක් සඳහා ස්වයංක්‍රීයව දීර්ඝ කරනු ලැබේ",
+  "premiumTermsNotice1": "・ප්‍රීමියම් දායකත්වය ආරම්භ වූ දිනයේ සිට සෑම මාස 1කට හෝ වසර 1කට වරක් ස්වයංක්‍රීයව අලුත් වේ",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "නීතිමය තොරතුරු",

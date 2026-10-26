@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ano",
   "monthlyPrice": "{monthlyPriceString}/mes",
   "dailyPrice": "{dailyPriceString}/día",
-  "premiumTermsNotice1": "・ O período de contrato premium será de renovación automática cada mes ou ano desde a data de inicio",
+  "premiumTermsNotice1": "・A subscrición Premium renóvase automaticamente cada mes ou cada ano a partir da data de inicio",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Información legal de comercio",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/jaar",
   "monthlyPrice": "{monthlyPriceString}/maand",
   "dailyPrice": "{dailyPriceString}/dag",
-  "premiumTermsNotice1": "• Die Premium-kontraktydperk sal outomaties elke 1 maand of 1 jaar vanaf die begindatum hernu word",
+  "premiumTermsNotice1": "・Die Premium-intekening hernu outomaties elke maand of jaar vanaf die begindatum",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Regtelike Openbaarmaking",

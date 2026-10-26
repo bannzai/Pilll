@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ஆண்டு",
   "monthlyPrice": "{monthlyPriceString}/மாதம்",
   "dailyPrice": "{dailyPriceString}/நாள்",
-  "premiumTermsNotice1": "• பிரீமியம் ஒப்பந்த காலம் தொடக்க தேதியிலிருந்து கணக்கிடப்பட்டு 1 மாதம் அல்லது 1 வருடத்திற்கு ஒருமுறை தானாக புதுப்பிக்கப்படும்",
+  "premiumTermsNotice1": "・பிரீமியம் சந்தா தொடங்கிய தேதியிலிருந்து ஒவ்வொரு 1 மாதத்திற்கும் அல்லது 1 ஆண்டிற்கும் தானாகப் புதுப்பிக்கப்படும்",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "குறிப்பிட்ட வணிக பரிவர்த்தனை சட்டத்தின் அடிப்படையிலான தகவல்கள்",

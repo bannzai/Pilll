@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ਸਾਲ",
   "monthlyPrice": "{monthlyPriceString}/ਮਹੀਨਾ",
   "dailyPrice": "{dailyPriceString}/ਦਿਨ",
-  "premiumTermsNotice1": "• ਪ੍ਰੀਮੀਅਮ ਕੰਟਰੈਕਟ ਦੀ ਮਿਆਦ ਸ਼ੁਰੂਆਤ ਦੀ ਤਾਰੀਖ਼ ਤੋਂ ਗਿਣਤੀ ਕਰਕੇ ਹਰ 1 ਮਹੀਨੇ ਜਾਂ 1 ਸਾਲ ਬਾਅਦ ਆਟੋਮੈਟਿਕ ਰਿਨਿਊਅਲ ਹੋਵੇਗੀ।",
+  "premiumTermsNotice1": "・ਪ੍ਰੀਮੀਅਮ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਮਿਤੀ ਤੋਂ ਹਰ 1 ਮਹੀਨੇ ਜਾਂ 1 ਸਾਲ ਬਾਅਦ ਆਪਣੇ ਆਪ ਨਵਿਆਈ ਜਾਂਦੀ ਹੈ",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "ਵਿਸ਼ੇਸ਼ ਵਪਾਰਕ ਲੈਣ-ਦੇਣ ਕਾਨੂੰਨ ਅਨੁਸਾਰ ਪ੍ਰਦਰਸ਼ਨ",

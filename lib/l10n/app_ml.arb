@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/വർഷം",
   "monthlyPrice": "{monthlyPriceString}/മാസം",
   "dailyPrice": "{dailyPriceString}/ദിവസം",
-  "premiumTermsNotice1": "・പ്രീമിയം കരാർ കാലാവധി ആരംഭ തീയതി മുതൽ കണക്കാക്കി 1 മാസം അല്ലെങ്കിൽ 1 വർഷം കൂടുമ്പോൾ സ്വയമേവ പുതുക്കപ്പെടുന്നതാണ്",
+  "premiumTermsNotice1": "・പ്രീമിയ സബ്‌സ്‌ക്രിപ്‌ഷൻ ആരംഭിച്ച തീയതി മുതൽ ഓരോ മാസവും അല്ലെങ്കിൽ വർഷവും സ്വയമേവ പുതുക്കപ്പെടും",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "വിശിഷ്ട വാണിജ്യ ഇടപാട് നിയമപ്രകാരമുള്ള പ്രദർശനം",

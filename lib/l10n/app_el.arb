@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/έτος",
   "monthlyPrice": "{monthlyPriceString}/μήνα",
   "dailyPrice": "{dailyPriceString}/ημέρα",
-  "premiumTermsNotice1": "・Η περίοδος συμβολαίου Premium ανανεώνεται αυτόματα κάθε 1 μήνα ή 1 έτος, υπολογιζόμενη από την ημερομηνία έναρξης",
+  "premiumTermsNotice1": "・Η συνδρομή Premium ανανεώνεται αυτόματα κάθε μήνα ή κάθε έτος, με αφετηρία την ημερομηνία έναρξης",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Νομικές Πληροφορίες",

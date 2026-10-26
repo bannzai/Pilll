@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/gadā",
   "monthlyPrice": "{monthlyPriceString}/mēn.",
   "dailyPrice": "{dailyPriceString}/dienā",
-  "premiumTermsNotice1": "• Premium abonēšanas periods tiek automātiski atjaunots ik mēnesi vai gadu, skaitot no sākuma datuma",
+  "premiumTermsNotice1": "・Premium abonements tiek automātiski atjaunots katru mēnesi vai gadu, skaitot no sākuma datuma",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Juridiskā informācija",

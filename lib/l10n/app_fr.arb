@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/an",
   "monthlyPrice": "{monthlyPriceString}/mois",
   "dailyPrice": "{dailyPriceString}/jour",
-  "premiumTermsNotice1": "• Les périodes d'abonnement Premium sont automatiquement renouvelées mensuellement ou annuellement à compter de la date de début.",
+  "premiumTermsNotice1": "・L’abonnement Premium se renouvelle automatiquement chaque mois ou chaque année à compter de sa date de début",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informations légales",

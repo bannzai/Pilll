@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/év",
   "monthlyPrice": "{monthlyPriceString}/hó",
   "dailyPrice": "{dailyPriceString}/nap",
-  "premiumTermsNotice1": "・A prémium szerződési időszak a kezdő dátumtól számítva havonta vagy évente automatikusan megújul",
+  "premiumTermsNotice1": "・A prémium-előfizetés a kezdőnaptól számítva havonta vagy évente automatikusan megújul",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Jogi információk",

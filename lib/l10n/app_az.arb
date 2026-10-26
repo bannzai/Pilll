@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/il",
   "monthlyPrice": "{monthlyPriceString}/ay",
   "dailyPrice": "{dailyPriceString}/gün",
-  "premiumTermsNotice1": "• Premium müqavilə müddəti başlama tarixindən etibarən hər ay və ya ildə bir dəfə avtomatik olaraq yenilənir",
+  "premiumTermsNotice1": "・premium abunəliyi başlanğıc tarixindən etibarən hər 1 aydan və ya 1 ildən bir avtomatik yenilənir",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Xüsusi ticarət qanununa əsasən açıqlama",

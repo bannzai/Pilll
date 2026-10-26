@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/metus",
   "monthlyPrice": "{monthlyPriceString}/mėn.",
   "dailyPrice": "{dailyPriceString}/d.",
-  "premiumTermsNotice1": "• Premium prenumeratos laikotarpis automatiškai atsinaujina kas mėnesį arba kas metus, skaičiuojant nuo pradžios datos",
+  "premiumTermsNotice1": "・Premium prenumerata automatiškai atnaujinama kas mėnesį arba kas metus, skaičiuojant nuo pradžios datos",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Teisinis atskleidimas",

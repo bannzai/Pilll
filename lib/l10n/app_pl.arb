@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/rok",
   "monthlyPrice": "{monthlyPriceString}/miesiąc",
   "dailyPrice": "{dailyPriceString}/dzień",
-  "premiumTermsNotice1": "• Subskrypcja premium jest automatycznie odnawiana co miesiąc lub co rok od daty rozpoczęcia",
+  "premiumTermsNotice1": "・Subskrypcja premium odnawia się automatycznie co miesiąc lub co rok, licząc od daty rozpoczęcia",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informacje prawne",

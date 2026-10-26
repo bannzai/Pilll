@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/年",
   "monthlyPrice": "{monthlyPriceString}/月",
   "dailyPrice": "{dailyPriceString}/天",
-  "premiumTermsNotice1": "・高级服务合同期间自开始日起算，每1个月或每1年自动续约。",
+  "premiumTermsNotice1": "・高级订阅自开始日期起，每 1 个月或 1 年自动续订",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "法定商业信息",

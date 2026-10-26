@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/yil",
   "monthlyPrice": "{monthlyPriceString}/oy",
   "dailyPrice": "{dailyPriceString}/kun",
-  "premiumTermsNotice1": "・Premium obuna muddati boshlanish sanasidan hisoblab har 1 oy yoki 1 yil avtomatik yangilanadi",
+  "premiumTermsNotice1": "・Premium obunasi boshlangan sanadan boshlab har oy yoki har yili avtomatik ravishda yangilanadi",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Huquqiy ma'lumotlar",

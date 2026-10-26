@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/год",
   "monthlyPrice": "{monthlyPriceString}/месяц",
   "dailyPrice": "{dailyPriceString}/дзень",
-  "premiumTermsNotice1": "・Тэрмін прэміум-падпіскі аўтаматычна абнаўляецца кожны месяц або год з даты пачатку.",
+  "premiumTermsNotice1": "・Падпіска прэміум аўтаматычна падаўжаецца кожны месяц або кожны год, пачынаючы з даты яе пачатку",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Прававая інфармацыя аб продажы",

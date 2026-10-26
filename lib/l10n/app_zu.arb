@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/unyaka",
   "monthlyPrice": "{monthlyPriceString}/inyanga",
   "dailyPrice": "{dailyPriceString}/ngosuku",
-  "premiumTermsNotice1": "• Isikhathi sesivumelwano se-Premium sizovuselelwa ngokuzenzakalela njalo inyanga noma unyaka munye kusukela ngosuku lokuqala.",
+  "premiumTermsNotice1": "・Ukubhalisa kwe-i-Premium kuvuselelwa ngokuzenzakalelayo njalo ngenyanga noma ngonyaka, kusukela ngosuku okuqale ngalo",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Ukuvezwa Komthetho Wezohwebo",

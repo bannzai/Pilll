@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/år",
   "monthlyPrice": "{monthlyPriceString}/månad",
   "dailyPrice": "{dailyPriceString}/dag",
-  "premiumTermsNotice1": "• Premium-avtalsperioden förnyas automatiskt månads- eller årsvis räknat från startdatumet",
+  "premiumTermsNotice1": "・Din premiumprenumeration förnyas automatiskt varje månad eller varje år, räknat från startdatumet",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Information enligt handelslagstiftning",

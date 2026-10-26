@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/વર્ષ",
   "monthlyPrice": "{monthlyPriceString}/મહિનો",
   "dailyPrice": "{dailyPriceString}/દિવસ",
-  "premiumTermsNotice1": "・પ્રીમિયમ કરારની અવધિ શરૂઆતની તારીખથી ગણતરી કરીને દર 1 મહિને અથવા 1 વર્ષે આપોઆપ નવીકરણ થશે",
+  "premiumTermsNotice1": "・પ્રીમિયમ સબ્સ્ક્રિપ્શન શરૂઆતની તારીખથી દર મહિને અથવા દર વર્ષે આપમેળે નવીકરણ થાય છે",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "વિશિષ્ટ વ્યાપારી વ્યવહાર કાયદાના આધારે પ્રદર્શન",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/жил",
   "monthlyPrice": "{monthlyPriceString}/сар",
   "dailyPrice": "{dailyPriceString}/өдөр",
-  "premiumTermsNotice1": "• Премиум гэрээний хугацаа нь эхлэх өдрөөс тооцоолж сар бүр эсвэл жил бүрийн автомат сэргээлттэй болно",
+  "premiumTermsNotice1": "・премиум захиалга эхэлсэн өдрөөсөө тооцогдон сар эсвэл жил тутам автоматаар сунгагдана",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Арилжааны хуулийн мэдээлэл",

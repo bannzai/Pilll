@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/year",
   "monthlyPrice": "{monthlyPriceString}/month",
   "dailyPrice": "{dailyPriceString}/day",
-  "premiumTermsNotice1": "• Premium subscription periods are automatically renewed monthly or yearly from the start date",
+  "premiumTermsNotice1": "・Your Premium subscription renews automatically every month or year, measured from the start date",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Legal Information",

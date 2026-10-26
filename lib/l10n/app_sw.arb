@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/mwaka",
   "monthlyPrice": "{monthlyPriceString}/mwezi",
   "dailyPrice": "{dailyPriceString}/siku",
-  "premiumTermsNotice1": "・Kipindi cha mkataba wa premium kitajifunga kiotomatiki kila baada ya mwezi mmoja au mwaka mmoja kuanzia tarehe ya kuanza",
+  "premiumTermsNotice1": "・Usajili wa Premium utasasishwa kiotomatiki kila mwezi au kila mwaka, kuanzia tarehe ya kuanza",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Taarifa za Kisheria za Biashara",

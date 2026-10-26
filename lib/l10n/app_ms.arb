@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/tahun",
   "monthlyPrice": "{monthlyPriceString}/bulan",
   "dailyPrice": "{dailyPriceString}/hari",
-  "premiumTermsNotice1": "• Tempoh kontrak premium akan diperbaharui secara automatik setiap 1 bulan atau 1 tahun bermula dari tarikh permulaan",
+  "premiumTermsNotice1": "・Langganan premium diperbaharui secara automatik setiap bulan atau setiap tahun, dikira dari tarikh mula",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Paparan Berdasarkan Undang-undang Perdagangan Tertentu",

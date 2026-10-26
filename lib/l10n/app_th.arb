@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ปี",
   "monthlyPrice": "{monthlyPriceString}/เดือน",
   "dailyPrice": "วันละ {dailyPriceString}",
-  "premiumTermsNotice1": "・ระยะเวลาสัญญาพรีเมียมจะมีการต่ออายุอัตโนมัติทุก 1 เดือนหรือ 1 ปี นับจากวันที่เริ่มต้นสัญญา",
+  "premiumTermsNotice1": "・การสมัครสมาชิกพรีเมียมจะต่ออายุโดยอัตโนมัติทุก 1 เดือนหรือ 1 ปี โดยนับจากวันที่เริ่มสมัครค่ะ",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "ข้อมูลทางกฎหมาย",

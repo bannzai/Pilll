@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/سنة",
   "monthlyPrice": "{monthlyPriceString}/شهر",
   "dailyPrice": "{dailyPriceString}/يوم",
-  "premiumTermsNotice1": "• يتم تجديد فترة الاشتراك المميز تلقائياً كل شهر أو سنة واحدة ابتداءً من تاريخ البداية",
+  "premiumTermsNotice1": "・يتجدد اشتراك بريميوم تلقائيًا كل شهر أو كل سنة، بدءًا من تاريخ بدايته",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "بيان وفقاً لقانون المعاملات التجارية",

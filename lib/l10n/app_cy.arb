@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/blwyddyn",
   "monthlyPrice": "{monthlyPriceString}/mis",
   "dailyPrice": "{dailyPriceString}/diwrnod",
-  "premiumTermsNotice1": "• Bydd cyfnod tanysgrifiad premiwm yn adnewyddu'n awtomatig bob mis neu bob blwyddyn o'r dyddiad dechrau",
+  "premiumTermsNotice1": "・Mae'r tanysgrifiad premiwm yn adnewyddu'n awtomatig bob mis neu bob blwyddyn o'r dyddiad cychwyn",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Datganiad ar Sail Deddf Trafodion Masnachol Penodedig",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/leto",
   "monthlyPrice": "{monthlyPriceString}/mesec",
   "dailyPrice": "{dailyPriceString}/dan",
-  "premiumTermsNotice1": "• Premijska naročnina se avtomatično obnovi vsak mesec ali vsako leto od začetnega datuma.",
+  "premiumTermsNotice1": "・Naročnina Premium se samodejno obnovi vsak mesec ali vsako leto, šteto od datuma začetka",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Pravne informacije",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/jaar",
   "monthlyPrice": "{monthlyPriceString}/maand",
   "dailyPrice": "{dailyPriceString}/dag",
-  "premiumTermsNotice1": "・ De Premium abonnementsperiode wordt automatisch verlengd elke maand of elk jaar vanaf de startdatum",
+  "premiumTermsNotice1": "・Je premiumabonnement wordt vanaf de startdatum automatisch elke maand of elk jaar verlengd",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Wettelijke informatie",

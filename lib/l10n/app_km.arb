@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ឆ្នាំ",
   "monthlyPrice": "{monthlyPriceString}/ខែ",
   "dailyPrice": "{dailyPriceString}/ថ្ងៃ",
-  "premiumTermsNotice1": "• កាលកំណត់សន្យាបុព្វលាភនឹងបន្តដោយស្វ័យប្រវត្តិរៀងរាល់ 1 ខែ ឬ 1 ឆ្នាំ គណនាចាប់ពីថ្ងៃចាប់ផ្តើម",
+  "premiumTermsNotice1": "・ការជាវព្រីមៀមនឹងបន្តដោយស្វ័យប្រវត្តិរៀងរាល់ 1 ខែ ឬ 1 ឆ្នាំម្តង ដោយគិតចាប់ពីថ្ងៃចាប់ផ្តើម",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "ការបង្ហាញព័ត៌មានតាមច្បាប់ពាណិជ្ជកម្មជាក់លាក់",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/နှစ်",
   "monthlyPrice": "{monthlyPriceString}/လ",
   "dailyPrice": "{dailyPriceString}/နေ့",
-  "premiumTermsNotice1": "• ပရီမီယံ စာချုပ်သက်တမ်းသည် စတင်ရက်မှ စတင်၍ တစ်လ သို့မဟုတ် တစ်နှစ်တစ်ကြိမ် အလိုအလျောက် သက်တမ်းတိုး ဖြစ်မည်ဖြစ်သည်",
+  "premiumTermsNotice1": "・ပရီမီယံ စာရင်းသွင်းမှုကို စတင်သည့်နေ့မှစ၍ 1 လ သို့မဟုတ် 1 နှစ်တစ်ကြိမ် အလိုအလျောက် သက်တမ်းတိုးပေးပါတယ်",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "အထူးကုန်သွယ်မှုဥပဒေအရ ဖော်ပြချက်",

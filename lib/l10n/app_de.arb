@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/Jahr",
   "monthlyPrice": "{monthlyPriceString}/Monat",
   "dailyPrice": "{dailyPriceString}/Tag",
-  "premiumTermsNotice1": "• Das Premium-Abonnement verlängert sich automatisch um jeweils 1 Monat oder 1 Jahr, gerechnet ab dem Startdatum.",
+  "premiumTermsNotice1": "・Dein Premium-Abo verlängert sich ab dem Startdatum automatisch jeden Monat oder jedes Jahr",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Gesetzliche Angaben zum Handel",

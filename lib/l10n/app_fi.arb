@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/vuosi",
   "monthlyPrice": "{monthlyPriceString}/kk",
   "dailyPrice": "{dailyPriceString}/päivä",
-  "premiumTermsNotice1": "• Premium-tilaus uusiutuu automaattisesti kuukausittain tai vuosittain alkaen aloituspäivästä",
+  "premiumTermsNotice1": "・Premium-tilaus uusiutuu automaattisesti kuukauden tai vuoden välein aloituspäivästä laskettuna",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Oikeudelliset tiedot",

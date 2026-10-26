@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/సంవత్సరం",
   "monthlyPrice": "{monthlyPriceString}/నెల",
   "dailyPrice": "{dailyPriceString}/రోజు",
-  "premiumTermsNotice1": "• ప్రీమియం ఒప్పంద వ్యవధి ప్రారంభ తేదీ నుండి లెక్కించి ప్రతి 1 నెల లేదా 1 సంవత్సరానికి స్వయంచాలక పునరుద్ధరణ అవుతుంది",
+  "premiumTermsNotice1": "・ప్రీమియం సభ్యత్వం ప్రారంభ తేదీ నుంచి ప్రతి 1 నెలకు లేదా 1 సంవత్సరానికి ఆటోమేటిక్‌గా పునరుద్ధరించబడుతుంది",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "చట్టపరమైన వివరాలు",

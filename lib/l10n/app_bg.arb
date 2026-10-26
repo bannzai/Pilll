@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/година",
   "monthlyPrice": "{monthlyPriceString}/месец",
   "dailyPrice": "{dailyPriceString}/ден",
-  "premiumTermsNotice1": "・Периодът на премиум договора се подновява автоматично на всеки 1 месец или 1 година, считано от началната дата",
+  "premiumTermsNotice1": "・Абонаментът за премиум се подновява автоматично всеки месец или всяка година, считано от началната дата",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Правна информация за търговеца",

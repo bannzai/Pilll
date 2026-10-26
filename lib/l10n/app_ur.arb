@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/سال",
   "monthlyPrice": "{monthlyPriceString}/ماہ",
   "dailyPrice": "{dailyPriceString}/دن",
-  "premiumTermsNotice1": "• پریمیم سبسکرپشن کی مدت شروع کی تاریخ سے ہر ایک ماہ یا ایک سال کے بعد خودکار طور پر تجدید ہوگی",
+  "premiumTermsNotice1": "・پریمیم سبسکرپشن آغاز کی تاریخ سے ہر 1 ماہ یا 1 سال بعد خودکار طور پر تجدید ہو جاتی ہے",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "قانونی تجارتی معلومات",

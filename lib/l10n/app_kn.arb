@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ವರ್ಷ",
   "monthlyPrice": "{monthlyPriceString}/ತಿಂಗಳು",
   "dailyPrice": "{dailyPriceString}/ದಿನ",
-  "premiumTermsNotice1": "・ಪ್ರೀಮಿಯಂ ಗುತ್ತಿಗೆ ಅವಧಿಯು ಪ್ರಾರಂಭ ದಿನಾಂಕದಿಂದ ಎಣಿಸಿ ಪ್ರತಿ 1 ತಿಂಗಳು ಅಥವಾ 1 ವರ್ಷಕ್ಕೆ ಸ್ವಯಂಚಾಲಿತ ನವೀಕರಣವಾಗುವುದು",
+  "premiumTermsNotice1": "・ಪ್ರೀಮಿಯಂ ಚಂದಾದಾರಿಕೆಯು ಪ್ರಾರಂಭದ ದಿನಾಂಕದಿಂದ ಪ್ರತಿ 1 ತಿಂಗಳು ಅಥವಾ 1 ವರ್ಷಕ್ಕೊಮ್ಮೆ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಣಗೊಳ್ಳುತ್ತದೆ",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "ಕಾನೂನು ಪ್ರಕಟಣೆ",

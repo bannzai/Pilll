@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/년",
   "monthlyPrice": "{monthlyPriceString}/월",
   "dailyPrice": "하루 {dailyPriceString}",
-  "premiumTermsNotice1": "・프리미엄 계약 기간은 시작일로부터 1개월 또는 1년마다 자동 갱신됩니다",
+  "premiumTermsNotice1": "・프리미엄 구독은 시작일을 기준으로 1개월 또는 1년마다 자동 갱신돼요",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "전자상거래법에 따른 표시",

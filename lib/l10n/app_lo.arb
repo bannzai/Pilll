@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ປີ",
   "monthlyPrice": "{monthlyPriceString}/ເດືອນ",
   "dailyPrice": "{dailyPriceString}/ມື້",
-  "premiumTermsNotice1": "・ໄລຍະສັນຍາພຣີມຽມຈະຕໍ່ອາຍຸອັດຕະໂນມັດທຸກໆ 1 ເດືອນ ຫຼື 1 ປີ ນັບຈາກວັນທີ່ເລີ່ມຕົ້ນ",
+  "premiumTermsNotice1": "・ການສະໝັກ Premium ຈະຕໍ່ອາຍຸອັດຕະໂນມັດທຸກ 1 ເດືອນ ຫຼື 1 ປີ ໂດຍນັບຈາກວັນເລີ່ມຕົ້ນ",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "ການສະແດງຂໍ້ມູນທາງກົດຫມາຍ",

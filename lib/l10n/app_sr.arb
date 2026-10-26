@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/година",
   "monthlyPrice": "{monthlyPriceString}/месец",
   "dailyPrice": "{dailyPriceString}/дан",
-  "premiumTermsNotice1": "・Премијум период се аутоматски обнавља месечно или годишње рачунајући од датума почетка",
+  "premiumTermsNotice1": "・Претплата на премијум аутоматски се обнавља сваког месеца или сваке године, рачунајући од датума почетка",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Zakonska obaveštenja",

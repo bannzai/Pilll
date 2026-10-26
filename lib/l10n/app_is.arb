@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/ár",
   "monthlyPrice": "{monthlyPriceString}/mánuði",
   "dailyPrice": "{dailyPriceString}/dag",
-  "premiumTermsNotice1": "• Premium samningsinnstími endurnýjast sjálfkrafa í hverjum mánuði eða ári frá upphafsdegi",
+  "premiumTermsNotice1": "・Premium-áskriftin endurnýjast sjálfkrafa mánaðarlega eða árlega, talið frá upphafsdegi",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Lagalegar upplýsingar",

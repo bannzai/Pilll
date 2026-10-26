@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/বছৰ",
   "monthlyPrice": "{monthlyPriceString}/মাহ",
   "dailyPrice": "{dailyPriceString}/দিন",
-  "premiumTermsNotice1": "・প্ৰিমিয়াম চুক্তিৰ সময়কাল আৰম্ভণিৰ দিনৰ পৰা প্ৰতি ১ মাহ বা ১ বছৰৰ স্বয়ংক্ৰিয় নৱীকৰণ হ'ব।",
+  "premiumTermsNotice1": "・প্ৰিমিয়াম সদস্যতা আৰম্ভ হোৱা তাৰিখৰ পৰা প্ৰতি 1 মাহ বা 1 বছৰৰ মূৰে মূৰে স্বয়ংক্ৰিয়ভাৱে নবীকৰণ হয়",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "বিশেষ বাণিজ্যিক লেনদেন আইন অনুযায়ী প্ৰদৰ্শন",

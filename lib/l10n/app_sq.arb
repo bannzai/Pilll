@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/vit",
   "monthlyPrice": "{monthlyPriceString}/muaj",
   "dailyPrice": "{dailyPriceString}/ditë",
-  "premiumTermsNotice1": "• Periudha e kontratës Premium do të rinovohet automatikisht çdo 1 muaj ose 1 vit duke filluar nga data e fillimit",
+  "premiumTermsNotice1": "・Abonimi premium rinovohet automatikisht çdo muaj ose çdo vit, duke filluar nga data e nisjes",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informacione Ligjore të Biznesit",

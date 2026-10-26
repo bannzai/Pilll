@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
   "monthlyPrice": "{monthlyPriceString}/ай",
   "dailyPrice": "{dailyPriceString}/күн",
-  "premiumTermsNotice1": "・Премиум келишимдин мөөнөтү башталган күндөн баштап эсептегенде ар бир ай же жыл сайын автоматтык түрдө жаңыланат",
+  "premiumTermsNotice1": "・премиум жазылуу башталган күндөн тартып ар 1 ай же 1 жыл сайын автоматтык түрдө жаңыртылат",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Атайын соода мыйзамына ылайык көрсөтүү",

@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/Jahr",
   "monthlyPrice": "{monthlyPriceString}/Monet",
   "dailyPrice": "{dailyPriceString}/Tag",
-  "premiumTermsNotice1": "• D'Premium-Abonnementsduur verlängeret sich automatisch monatlich oder jährlich ab em Startdatum.",
+  "premiumTermsNotice1": "・Dis Premium-Abo verlengeret sich ab em Startdatum automatisch jede Monet oder jedes Jahr",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Rechtligi Aagabe",

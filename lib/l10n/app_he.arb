@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/שנה",
   "monthlyPrice": "{monthlyPriceString}/חודש",
   "dailyPrice": "{dailyPriceString}/יום",
-  "premiumTermsNotice1": "• תקופת מנוי הפרמיום תתחדש באופן אוטומטי מדי חודש או שנה החל מתאריך ההתחלה",
+  "premiumTermsNotice1": "・מנוי פרימיום מתחדש אוטומטית מדי חודש או מדי שנה, החל מתאריך תחילתו",
   "premiumTermsBullet": "•",
   "slashSeparator": "\" / \"",
   "premiumTermsNotice2": "מידע משפטי",

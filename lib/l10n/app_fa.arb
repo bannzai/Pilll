@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/سال",
   "monthlyPrice": "{monthlyPriceString}/ماه",
   "dailyPrice": "{dailyPriceString}/روز",
-  "premiumTermsNotice1": "・دوره قرارداد پریمیوم از تاریخ شروع محاسبه شده و هر یک ماه یا یک سال به صورت خودکار تمدید می‌شود",
+  "premiumTermsNotice1": "・اشتراک پریمیوم از تاریخ شروع، هر ۱ ماه یا هر ۱ سال به‌طور خودکار تمدید می‌شود",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "نمایش اطلاعات قانونی تجاری",

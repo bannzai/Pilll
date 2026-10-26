@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/năm",
   "monthlyPrice": "{monthlyPriceString}/tháng",
   "dailyPrice": "{dailyPriceString}/ngày",
-  "premiumTermsNotice1": "・Thời hạn hợp đồng Premium sẽ tự động gia hạn theo chu kỳ 1 tháng hoặc 1 năm kể từ ngày bắt đầu",
+  "premiumTermsNotice1": "・Gói đăng ký Premium tự động gia hạn hằng tháng hoặc hằng năm, tính từ ngày bắt đầu",
   "premiumTermsBullet": "-",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Thông báo theo Luật Giao dịch Thương mại Cụ thể",

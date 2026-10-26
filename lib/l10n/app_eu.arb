@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/urte",
   "monthlyPrice": "{monthlyPriceString}/hilean",
   "dailyPrice": "{dailyPriceString}/egun",
-  "premiumTermsNotice1": "・Premium kontratuaren iraupena hasiera egunitik kontatzen hasita hilabete edo urte bakoitzeko automatikoki berritzen da",
+  "premiumTermsNotice1": "・Premium harpidetza automatikoki berritzen da hilero edo urtero, hasiera-datatik zenbatzen hasita",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Legezko salmen informazioa",

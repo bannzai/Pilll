@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/տարի",
   "monthlyPrice": "{monthlyPriceString}/ամիս",
   "dailyPrice": "{dailyPriceString}/օր",
-  "premiumTermsNotice1": "• Պրեմիում պայմանագրի ժամկետը սկսելու օրվանից հաշվարկված 1 ամսի կամ 1 տարվა ինքնաշխատ նորացում է",
+  "premiumTermsNotice1": "・պրեմիում բաժանորդագրությունն ինքնաբերաբար երկարաձգվում է յուրաքանչյուր 1 ամիսը կամ 1 տարին մեկ՝ սկսած մեկնարկի օրվանից",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Հատուկ առևտրային գործարքների օրենքի համաձայն տեղեկատվություն",

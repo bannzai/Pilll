@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/rok",
   "monthlyPrice": "{monthlyPriceString}/měsíc",
   "dailyPrice": "{dailyPriceString}/den",
-  "premiumTermsNotice1": "• Doba platnosti prémiového předplatného se automaticky obnovuje každý měsíc nebo rok počítáno od data zahájení.",
+  "premiumTermsNotice1": "・Předplatné Premium se automaticky obnovuje každý měsíc nebo rok, počítáno od data zahájení",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Právní informace",

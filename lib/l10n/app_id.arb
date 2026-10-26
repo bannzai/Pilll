@@ -181,7 +181,7 @@
   "annualPrice": "{annualPackageStoreProductPriceString}/tahun",
   "monthlyPrice": "{monthlyPriceString}/bulan",
   "dailyPrice": "{dailyPriceString}/hari",
-  "premiumTermsNotice1": "• Periode langganan premium akan diperpanjang secara otomatis setiap 1 bulan atau 1 tahun terhitung dari tanggal mulai berlangganan.",
+  "premiumTermsNotice1": "・Langganan premium diperpanjang otomatis setiap bulan atau setiap tahun, dihitung sejak tanggal mulai",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informasi Berdasarkan Hukum Transaksi Komersial Khusus",
