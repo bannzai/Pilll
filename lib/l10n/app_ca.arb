@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Tria la data prevista per tornar a prendre la píndola",
   "pauseEndDateLimitIsToday": "La data de finalització pot ser, com a màxim, avui",
   "pauseEndDateLimitBeforeNextPause": "Fins a una data que no coincideixi amb la pausa següent (a partir del {date})",
-  "pauseStartDateLimit": "La data d'inici es pot triar fins a {date}",
+  "pauseStartDateLimit": "Pots triar una data d’inici fins al {date}",
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si selecciones «Sí»,\nho configurarem perquè es mostri quants dies han passat des del final del descans.",
   "yazFlexLastRestDurationTitle": "Toca la píndola\nque vas prendre just abans de la pausa",

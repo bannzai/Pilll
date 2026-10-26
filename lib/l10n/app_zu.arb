@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Sicela ukhethe usuku ohlela ukuqala ngalo ukuphuza iphilisi futhi",
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungaba yinamuhla noma ngaphambi kwanamuhla",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungagqagqani nekhefu elilandelayo (kusukela {date})",
-  "pauseStartDateLimit": "Usuku lokuqala lungakhethwa kuze kube u-{date}",
+  "pauseStartDateLimit": "Ungakhetha usuku lokuqala kuze kufike ku-{date}",
   "initialSettingAskYazFlex": "Ingabe usebenzisa i-Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Uma ukhetha okuthi “Yebo”,\nsizokumisa ukuze kuboniswe ukuthi sekuyisuku lwesingaki kusukela ikhefu liphelile.",
   "yazFlexLastRestDurationTitle": "Sicela uthephe iphilisi\noliphuze ngaphambi nje kokuqala kwekhefu",

@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Таблетканы кайра иче баштай турган күндү тандаңыз",
   "pauseEndDateLimitIsToday": "Аяктоо күнү бүгүнтөн кеч болбошу керек",
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгууга ({date} башталат) дал келбеген күнгө чейин",
-  "pauseStartDateLimit": "Баштоо күнүн {date} чейин тандаса болот",
+  "pauseStartDateLimit": "Башталыш күнүн {date} чейин тандай аласыз",
   "initialSettingAskYazFlex": "Yaz Flex колдонуп жатасызбы?",
   "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
   "yazFlexLastRestDurationTitle": "Тыныгуу башталардын алдында ичкен таблетканы\nтаптаңыз",

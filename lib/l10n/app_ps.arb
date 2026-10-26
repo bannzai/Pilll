@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "د ګولۍ د بیا پیلولو لپاره پلان شوې نېټه وټاکئ",
   "pauseEndDateLimitIsToday": "د پای نېټه تر نن ورځې پورې ټاکلی شئ",
   "pauseEndDateLimitBeforeNextPause": "تر هغې نېټې پورې چې له راتلونکې وقفې (له {date} څخه) سره نه ګډېږي",
-  "pauseStartDateLimit": "د پیل نېټه تر {date} پورې ټاکل کېدای شي",
+  "pauseStartDateLimit": "تاسو د پیل نېټه تر {date} پورې ټاکلی شئ",
   "initialSettingAskYazFlex": "ایا تاسو Yaz Flex کاروئ؟",
   "initialSettingAskYazFlexDescription": "که «هو» وټاکئ،\nموږ به داسې یې تنظیم کړو چې د وقفې له پای ته رسېدو وروسته څویمه ورځ ده، وښيي.",
   "yazFlexLastRestDurationTitle": "مهرباني وکړئ هغه ګولۍ ټیپ کړئ\nچې تاسو د وقفې له پیل مخکې اخیستې وه",

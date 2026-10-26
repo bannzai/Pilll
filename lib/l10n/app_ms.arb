@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Sila pilih tarikh anda merancang untuk mengambil pil semula",
   "pauseEndDateLimitIsToday": "Tarikh tamat boleh ditetapkan selewat-lewatnya hari ini",
   "pauseEndDateLimitBeforeNextPause": "Sehingga tarikh yang tidak bertindih dengan rehat seterusnya (mulai {date})",
-  "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",
+  "pauseStartDateLimit": "Anda boleh memilih tarikh mula sehingga {date}",
   "initialSettingAskYazFlex": "Adakah anda menggunakan Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”,\nkami akan menetapkannya supaya bilangan hari sejak tamat tempoh rehat dapat dipaparkan.",
   "yazFlexLastRestDurationTitle": "Ketik pil\nyang anda ambil sejurus sebelum rehat",

@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Escolle a data prevista para volver tomar a pílula",
   "pauseEndDateLimitIsToday": "A data de remate pode ser, como moi tarde, hoxe",
   "pauseEndDateLimitBeforeNextPause": "Ata unha data que non coincida coa seguinte pausa (desde o {date})",
-  "pauseStartDateLimit": "A data de inicio pódese escoller ata o {date}",
+  "pauseStartDateLimit": "Podes escoller unha data de inicio ata o {date}",
   "initialSettingAskYazFlex": "Estás a usar Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Se escolles «Si»,\nconfigurarémolo para que se mostre cantos días pasaron desde que rematou a pausa.",
   "yazFlexLastRestDurationTitle": "Toca a pílula\nque tomaches xusto antes da pausa",

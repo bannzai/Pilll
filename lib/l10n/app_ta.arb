@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "மாத்திரையை மீண்டும் எடுத்துக்கொள்ளத் திட்டமிட்டுள்ள தேதியைத் தேர்ந்தெடுங்கள்",
   "pauseEndDateLimitIsToday": "முடிவுத் தேதியாக இன்று வரை மட்டுமே தேர்ந்தெடுக்கலாம்",
   "pauseEndDateLimitBeforeNextPause": "அடுத்த இடைவேளையுடன் ({date} முதல்) ஒத்துப்போகாத தேதி வரை",
-  "pauseStartDateLimit": "தொடக்கத் தேதியை {date} வரை தேர்ந்தெடுக்கலாம்",
+  "pauseStartDateLimit": "தொடக்கத் தேதியாக {date} வரை தேர்வு செய்யலாம்",
   "initialSettingAskYazFlex": "நீங்கள் Yaz Flex பயன்படுத்துகிறீர்களா?",
   "initialSettingAskYazFlexDescription": "“ஆம்” என்பதைத் தேர்ந்தெடுத்தால்\nஇடைவேளை முடிந்ததிலிருந்து எத்தனையாவது நாள் என்பதை காட்டும் வகையில் அமைக்கப்படும்",
   "yazFlexLastRestDurationTitle": "இடைவேளை தொடங்குவதற்கு முன் எடுத்த மாத்திரையைத்\nதட்டவும்",

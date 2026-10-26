@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Tabletkani qayta qabul qilishni rejalashtirgan sanani tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasi eng kechi bugun bo‘lishi mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffusga ({date}dan boshlab) toʻgʻri kelmaydigan sanagacha",
-  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlash mumkin",
+  "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlashingiz mumkin",
   "initialSettingAskYazFlex": "Siz Yaz Flex ishlatyapsizmi?",
   "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
   "yazFlexLastRestDurationTitle": "Tanaffus boshlanishidan oldin ichgan tabletkani\nbosing",

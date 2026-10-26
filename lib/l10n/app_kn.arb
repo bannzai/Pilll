@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "ಮಾತ್ರೆ ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಯೋಜಿಸಿರುವ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "pauseEndDateLimitIsToday": "ಮುಕ್ತಾಯ ದಿನಾಂಕವಾಗಿ ಇಂದಿನವರೆಗೆ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮದೊಂದಿಗೆ ({date}ರಿಂದ) ಹೊಂದಿಕೆಯಾಗದ ದಿನಾಂಕದವರೆಗೆ",
-  "pauseStartDateLimit": "ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು {date} ವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
+  "pauseStartDateLimit": "ಪ್ರಾರಂಭದ ದಿನಾಂಕವನ್ನು {date} ರವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಬಳಸುತ್ತೀರಾ?",
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ\nವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟುನೇ ದಿನವಾಗಿದೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
   "yazFlexLastRestDurationTitle": "ವಿರಾಮ ಆರಂಭಿಸುವ ಮುನ್ನ ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಯನ್ನು\nಟ್ಯಾಪ್ ಮಾಡಿ",

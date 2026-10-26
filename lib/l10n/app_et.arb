@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Vali kuupäev, mil plaanid taas pilli võtta",
   "pauseEndDateLimitIsToday": "Lõppkuupäev võib olla hiljemalt täna",
   "pauseEndDateLimitBeforeNextPause": "Kuni kuupäevani, mis ei kattu järgmise pillipausiga (alates {date})",
-  "pauseStartDateLimit": "Alguskuupäeva saab valida kuni {date}",
+  "pauseStartDateLimit": "Alguskuupäevaks saad valida hiljemalt {date}",
   "initialSettingAskYazFlex": "Kas kasutad Yaz Flexi?",
   "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
   "yazFlexLastRestDurationTitle": "Puudutage pilli,\nmille võtsite vahetult enne pausi",

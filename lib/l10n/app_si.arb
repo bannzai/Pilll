@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "පෙත්ත නැවත ගැනීම ආරම්භ කිරීමට සැලසුම් කළ දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය ලෙස අද දක්වා පමණක් තෝරාගත හැක",
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date} සිට) සමඟ නොගැටෙන දිනයක් දක්වා",
-  "pauseStartDateLimit": "ආරම්භක දිනය {date} දක්වා තෝරා ගත හැක",
+  "pauseStartDateLimit": "ඔබට ආරම්භක දිනය ලෙස {date} දක්වා දිනයක් තෝරාගත හැකියි",
   "initialSettingAskYazFlex": "ඔබ Yaz Flex භාවිතා කරනවාද?",
   "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
   "yazFlexLastRestDurationTitle": "විරාමය ආරම්භ කිරීමට පෙර ගත් ගෝලිය\nතට්ටු කරන්න",

@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Изберете дата за подновяване на приема на хапчето",
   "pauseEndDateLimitIsToday": "Крайната дата за приключване е днес",
   "pauseEndDateLimitBeforeNextPause": "До дата, която не се припокрива със следващата пауза (от {date})",
-  "pauseStartDateLimit": "Началната дата може да бъде до {date}",
+  "pauseStartDateLimit": "Можете да изберете начална дата до {date} включително",
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
   "yazFlexLastRestDurationTitle": "Моля, докоснете хапчето,\nкоето сте приели преди началото на паузата",

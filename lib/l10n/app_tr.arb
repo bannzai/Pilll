@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Hapı yeniden almaya başlamayı planladığınız tarihi seçin",
   "pauseEndDateLimitIsToday": "Bitiş tarihi en geç bugün olabilir",
   "pauseEndDateLimitBeforeNextPause": "Sonraki arayla ({date} itibarıyla) çakışmayan bir tarihe kadar",
-  "pauseStartDateLimit": "Başlangıç tarihi en geç {date} olarak seçilebilir",
+  "pauseStartDateLimit": "Başlangıç tarihini en geç {date} olarak seçebilirsiniz",
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz,\nara dönem bittikten sonra kaçıncı gün olduğunu gösterecek şekilde ayarlayacağız.",
   "yazFlexLastRestDurationTitle": "Molaya başlamadan hemen önce aldığınız hapı\nseçmek için dokunun",

@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "ဆေးပြားကို ပြန်သောက်ရန် စီစဉ်ထားသည့် ရက်ကို ရွေးပါ",
   "pauseEndDateLimitIsToday": "ပြီးဆုံးမည့်ရက်ကို ဒီနေ့အထိသာ ရွေးနိုင်ပါတယ်",
   "pauseEndDateLimitBeforeNextPause": "နောက်လာမည့် ခေတ္တနားချိန် ({date} မှစ၍) နှင့် မထပ်သော ရက်အထိ",
-  "pauseStartDateLimit": "စတင်ရက်ကို {date} အထိ ရွေးချယ်နိုင်သည်",
+  "pauseStartDateLimit": "စတင်မည့်ရက်ကို {date} အထိ ရွေးချယ်နိုင်ပါတယ်",
   "initialSettingAskYazFlex": "သင် Yaz Flex ကို အသုံးပြုနေပါသလား?",
   "initialSettingAskYazFlexDescription": "“ဟုတ်ကဲ့” ကိုရွေးပါက\nအနားယူကာလပြီးဆုံးပြီးနောက် ဘယ်နှရက်မြောက်နေ့လဲကို ပြသနိုင်အောင် သတ်မှတ်ပေးပါမည်",
   "yazFlexLastRestDurationTitle": "အနားယူကာလမစတင်မီ သောက်ခဲ့သော ဆေးလုံးကို\nနှိပ်ပါ",

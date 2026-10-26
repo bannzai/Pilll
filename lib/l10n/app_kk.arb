@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Таблетканы қайта қабылдауды жоспарлаған күнді таңдаңыз",
   "pauseEndDateLimitIsToday": "Аяқталу күні бүгіннен кеш болмауы керек",
   "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date} бастап) қабаттаспайтын күнге дейін",
-  "pauseStartDateLimit": "Басталу күнін {date} күніне дейін таңдауға болады",
+  "pauseStartDateLimit": "Басталу күнін {date} дейін таңдай аласыз",
   "initialSettingAskYazFlex": "Yaz Flex қолданасыз ба?",
   "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз.",
   "yazFlexLastRestDurationTitle": "Үзіліс басталардың алдында ішкен таблетканы\nтүртіңіз",

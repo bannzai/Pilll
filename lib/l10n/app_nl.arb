@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Kies de datum waarop je weer met de pil wilt beginnen",
   "pauseEndDateLimitIsToday": "De einddatum kan uiterlijk vandaag zijn",
   "pauseEndDateLimitBeforeNextPause": "Tot een datum die niet overlapt met de volgende pillenpauze (vanaf {date})",
-  "pauseStartDateLimit": "De startdatum kan tot en met {date} worden gekozen",
+  "pauseStartDateLimit": "Je kunt een startdatum kiezen tot en met {date}",
   "initialSettingAskYazFlex": "Gebruik je Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Als je “Ja” kiest,\nstellen we het zo in dat je kunt zien hoeveel dagen het sinds het einde van de stopweek is.",
   "yazFlexLastRestDurationTitle": "Tik op de pil\ndie je vlak voor de stopperiode hebt ingenomen",

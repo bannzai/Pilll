@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Pasirinkite planuojamą dieną, kada vėl pradėsite vartoti piliulę",
   "pauseEndDateLimitIsToday": "Pabaigos data gali būti ne vėlesnė kaip šiandien",
   "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita pertrauka (nuo {date})",
-  "pauseStartDateLimit": "Pradžios datą galima pasirinkti iki {date}",
+  "pauseStartDateLimit": "Pradžios datą galite pasirinkti ne vėlesnę kaip {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
   "yazFlexLastRestDurationTitle": "Palieskite tabletę,\nkurią išgėrėte prieš pat pertrauką",

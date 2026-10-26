@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ বেছে নিন",
   "pauseEndDateLimitIsToday": "শেষের তারিখ হিসেবে আজ পর্যন্ত বেছে নিতে পারবেন",
   "pauseEndDateLimitBeforeNextPause": "পরের বিরতি ({date} থেকে) শুরু হওয়ার আগের দিন পর্যন্ত",
-  "pauseStartDateLimit": "শুরুর তারিখ {date} পর্যন্ত বেছে নেওয়া যাবে",
+  "pauseStartDateLimit": "আপনি {date} পর্যন্ত শুরুর তারিখ বেছে নিতে পারেন",
   "initialSettingAskYazFlex": "আপনি কি Yaz Flex ব্যবহার করছেন?",
   "initialSettingAskYazFlexDescription": "“হ্যাঁ” নির্বাচন করলে\nবিরতি শেষ হওয়ার পর কততম দিন চলছে তা দেখানোর জন্য সেট করা হবে",
   "yazFlexLastRestDurationTitle": "বিরতি শুরুর ঠিক আগে যে পিলটি খেয়েছিলেন,\nসেটিতে ট্যাপ করুন",

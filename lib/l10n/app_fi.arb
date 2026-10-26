@@ -567,7 +567,7 @@
   "selectPlannedResumeDate": "Valitse päivä, jolloin aiot aloittaa pillerin käytön uudelleen",
   "pauseEndDateLimitIsToday": "Päättymispäivä voi olla viimeistään tänään",
   "pauseEndDateLimitBeforeNextPause": "Päivään, joka ei osu seuraavan pilleritauon ajalle (alkaen {date})",
-  "pauseStartDateLimit": "Aloituspäivän voi valita päivään {date} asti",
+  "pauseStartDateLimit": "Voit valita aloituspäiväksi viimeistään {date}",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flexiä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
   "yazFlexLastRestDurationTitle": "Napauta pilleriä,\njonka otit juuri ennen taukoa",
