@@ -99,7 +99,7 @@
   "viewMore": "Δείτε περισσότερα",
   "afterLastTakenPillNumber": "χάπι αρ. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-αρ. {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ο",
+  "beforeLastTakenPillNumber": "Χάπι αρ. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "αρ. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}αρ.",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",

@@ -99,7 +99,7 @@
   "viewMore": "Прикажи још",
   "afterLastTakenPillNumber": "пилула бр. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-бр. {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
+  "beforeLastTakenPillNumber": "Пилула бр. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → br. {afterDisplayNumberSettingBeginPillNumber}",

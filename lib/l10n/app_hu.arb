@@ -99,7 +99,7 @@
   "viewMore": "Továbbiak megtekintése",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}. tabletta",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}. tabletta",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. szám",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}.",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

@@ -99,7 +99,7 @@
   "viewMore": "Voir plus",
   "afterLastTakenPillNumber": "pilule n° {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-n° {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "#{beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pilule n° {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "Pilules {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",

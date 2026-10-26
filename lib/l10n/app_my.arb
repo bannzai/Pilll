@@ -99,7 +99,7 @@
   "viewMore": "နောက်ထပ်ကြည့်ရန်",
   "afterLastTakenPillNumber": "ဆေးလုံး အမှတ် {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-အမှတ် {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}နံပါတ်",
+  "beforeLastTakenPillNumber": "ဆေးလုံးအမှတ် {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}နံပါတ်",
   "oneToAfterDisplayNumberBeginPillNumber": "၁→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}နံပါတ်",

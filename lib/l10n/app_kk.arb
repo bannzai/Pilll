@@ -99,7 +99,7 @@
   "viewMore": "Толығырақ көру",
   "afterLastTakenPillNumber": "№ {afterLastTakenPillNumber} таблетка",
   "leftDashAfterLastTakenPillNumber": "{left}-№ {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} номері",
+  "beforeLastTakenPillNumber": "№ {beforeLastTakenPillNumber} таблетка",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} нөмір",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}-нөмір",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} нөмірі",

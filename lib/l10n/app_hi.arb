@@ -99,7 +99,7 @@
   "viewMore": "और देखें",
   "afterLastTakenPillNumber": "गोली नंबर {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} नंबर",
+  "beforeLastTakenPillNumber": "गोली नंबर {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} नंबर",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} नंबर",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber} नंबर",

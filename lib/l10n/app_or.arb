@@ -99,7 +99,7 @@
   "viewMore": "ଅଧିକ ଦେଖନ୍ତୁ",
   "afterLastTakenPillNumber": "ବଟି ନମ୍ବର {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ନମ୍ବର",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ନମ୍ବର",
+  "beforeLastTakenPillNumber": "ବଟି ନମ୍ବର {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ନଂ",
   "oneToAfterDisplayNumberBeginPillNumber": "୧→{afterDisplayNumberSettingBeginPillNumber}ନମ୍ବର",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ନମ୍ବର",

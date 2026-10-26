@@ -99,7 +99,7 @@
   "viewMore": "Ver mais",
   "afterLastTakenPillNumber": "pílula nº {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nº {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "nº {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pílula nº {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nº {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

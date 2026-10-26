@@ -99,7 +99,7 @@
   "viewMore": "عرض المزيد",
   "afterLastTakenPillNumber": "الحبة رقم {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-رقم {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "رقم {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "الحبة رقم {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "رقم {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "١ ← {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} رقم",

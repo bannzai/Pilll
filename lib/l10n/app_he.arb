@@ -99,7 +99,7 @@
   "viewMore": "הצגת פרטים נוספים",
   "afterLastTakenPillNumber": "גלולה מספר {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-מס׳ {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "מס׳ {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "גלולה מספר {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "מס' {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1 ל{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "מס׳ {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

@@ -99,7 +99,7 @@
   "viewMore": "Koʻproq koʻrish",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-raqamli tabletka",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-raqam",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-chi",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-raqamli tabletka",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-raqam",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}-raqam",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}-son",

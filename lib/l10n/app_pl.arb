@@ -99,7 +99,7 @@
   "viewMore": "Zobacz więcej",
   "afterLastTakenPillNumber": "tabletka nr {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nr {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "nr {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Tabletka nr {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

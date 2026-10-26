@@ -99,7 +99,7 @@
   "viewMore": "Vezi mai mult",
   "afterLastTakenPillNumber": "pilula nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nr. {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "Pastila {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pilula nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nr. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

@@ -99,7 +99,7 @@
   "viewMore": "Տեսնել ավելին",
   "afterLastTakenPillNumber": "հաբ № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-համար {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-րդ",
+  "beforeLastTakenPillNumber": "Հաբ № {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համար",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} համար",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} համար",

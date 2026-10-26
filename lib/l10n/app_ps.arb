@@ -99,7 +99,7 @@
   "viewMore": "نور وګورئ",
   "afterLastTakenPillNumber": "د {afterLastTakenPillNumber} شمېرې ګولۍ",
   "leftDashAfterLastTakenPillNumber": "{left}-شمېره {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}م",
+  "beforeLastTakenPillNumber": "د {beforeLastTakenPillNumber} شمېرې ګولۍ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} شمېره",
   "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} شمیره",

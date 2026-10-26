@@ -99,7 +99,7 @@
   "viewMore": "Sien meer",
   "afterLastTakenPillNumber": "pil nommer {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}de",
-  "beforeLastTakenPillNumber": "Nommer {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pil nommer {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nommer",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} nommer",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} nommer",

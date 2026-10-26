@@ -99,7 +99,7 @@
   "viewMore": "Показати більше",
   "afterLastTakenPillNumber": "пігулка № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-№ {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "№{beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Пігулка № {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} номери",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "№{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

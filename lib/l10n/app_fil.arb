@@ -99,7 +99,7 @@
   "viewMore": "Tingnan pa",
   "afterLastTakenPillNumber": "tableta blg. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-blg. {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "Bilang {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pildoras blg. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} na bilang",
   "oneToAfterDisplayNumberBeginPillNumber": "1→Bilang {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} na bilang",

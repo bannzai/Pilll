@@ -99,7 +99,7 @@
   "viewMore": "Дэлгэрэнгүй харах",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} дугаартай эм",
   "leftDashAfterLastTakenPillNumber": "{left}-№ {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} дугаар",
+  "beforeLastTakenPillNumber": "№ {beforeLastTakenPillNumber} эм",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} дугаар",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} дугаар",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} дугаар",

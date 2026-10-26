@@ -99,7 +99,7 @@
   "viewMore": "మరిన్ని చూడండి",
   "afterLastTakenPillNumber": "మాత్ర సంఖ్య {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}వ నంబర్",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}వ",
+  "beforeLastTakenPillNumber": "మాత్ర సంఖ్య {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} సంఖ్యలు",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}వ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}నంబర్",

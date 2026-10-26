@@ -99,7 +99,7 @@
   "viewMore": "Tazama zaidi",
   "afterLastTakenPillNumber": "kidonge namba {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nambari {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "Nambari {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Kidonge nambari {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nambari",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Nambari {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

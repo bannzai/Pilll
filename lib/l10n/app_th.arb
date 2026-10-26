@@ -99,7 +99,7 @@
   "viewMore": "ดูเพิ่มเติม",
   "afterLastTakenPillNumber": "ยาเม็ดที่ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-หมายเลข {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "ที่ {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "ยาเม็ดที่ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "เม็ดที่ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}หมายเลข",

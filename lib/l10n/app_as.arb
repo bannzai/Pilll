@@ -99,7 +99,7 @@
   "viewMore": "আৰু চাওক",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} নম্বৰ বড়ি",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} নম্বৰ",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}নং",
+  "beforeLastTakenPillNumber": "পিল নম্বৰ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}নং",
   "oneToAfterDisplayNumberBeginPillNumber": "১→{afterDisplayNumberSettingBeginPillNumber}নং",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}নম্বৰ",

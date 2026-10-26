@@ -99,7 +99,7 @@
   "viewMore": "Daha çoxuna baxın",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} nömrəli həb",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} nömrəli",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} №",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} nömrəli həb",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} №",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} №",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} nömrə",

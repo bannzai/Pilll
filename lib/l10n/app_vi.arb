@@ -99,7 +99,7 @@
   "viewMore": "Xem thêm",
   "afterLastTakenPillNumber": "viên thuốc số {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-số {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "số {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Viên thuốc số {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} số",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → số {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Số {beforeBeginPillNumber}→Số {afterDisplayNumberSettingBeginPillNumber}",

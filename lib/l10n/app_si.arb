@@ -99,7 +99,7 @@
   "viewMore": "තවත් බලන්න",
   "afterLastTakenPillNumber": "පෙති අංක {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} අංකය",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}වන",
+  "beforeLastTakenPillNumber": "පෙති අංක {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}වන",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}වන",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} අංකය",

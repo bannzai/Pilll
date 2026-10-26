@@ -99,7 +99,7 @@
   "viewMore": "더 보기",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번 알약",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}번",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}번",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}번 알약",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}번",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",

@@ -99,7 +99,7 @@
   "viewMore": "ተጨማሪ ይመልከቱ",
   "afterLastTakenPillNumber": "ክኒን ቁጥር {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ኛ",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ኛ",
+  "beforeLastTakenPillNumber": "ክኒን ቁጥር {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ቁጥር",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}ኛ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ኛ",

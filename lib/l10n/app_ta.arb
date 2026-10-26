@@ -99,7 +99,7 @@
   "viewMore": "மேலும் காண்க",
   "afterLastTakenPillNumber": "மாத்திரை எண் {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ஆம் எண்",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} எண்",
+  "beforeLastTakenPillNumber": "மாத்திரை எண் {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} எண்",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}எண்",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} எண்",

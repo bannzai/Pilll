@@ -99,7 +99,7 @@
   "viewMore": "Ikusi gehiago",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}. pilula",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. zk.",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}a",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}. pilula",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} zenbakiak",
   "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}.a",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} zenbakia",

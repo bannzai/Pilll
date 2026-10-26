@@ -99,7 +99,7 @@
   "viewMore": "आणखी पाहा",
   "afterLastTakenPillNumber": "गोळी क्रमांक {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} क्रमांक",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} क्रमांक",
+  "beforeLastTakenPillNumber": "गोळी क्रमांक {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} क्रमांक",
   "oneToAfterDisplayNumberBeginPillNumber": "१→{afterDisplayNumberSettingBeginPillNumber} क्रमांक",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}क्रमांक",

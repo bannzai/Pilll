@@ -99,7 +99,7 @@
   "viewMore": "查看更多",
   "afterLastTakenPillNumber": "第{afterLastTakenPillNumber}粒",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}号",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}号",
+  "beforeLastTakenPillNumber": "第{beforeLastTakenPillNumber}片药",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}号",
   "oneToAfterDisplayNumberBeginPillNumber": "1～第{afterDisplayNumberSettingBeginPillNumber}号",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}号",

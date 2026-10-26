@@ -99,7 +99,7 @@
   "viewMore": "കൂടുതൽ കാണുക",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ാം ഗുളിക",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ാം നമ്പർ",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} നമ്പർ",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-ാം ഗുളിക",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} നമ്പർ",
   "oneToAfterDisplayNumberBeginPillNumber": "1 മുതൽ {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ആം",

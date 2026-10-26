@@ -99,7 +99,7 @@
   "viewMore": "Lihat lainnya",
   "afterLastTakenPillNumber": "pil nomor {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-no. {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "ke-{beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "Pil nomor {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nomor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",

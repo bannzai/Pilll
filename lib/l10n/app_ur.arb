@@ -99,7 +99,7 @@
   "viewMore": "مزید دیکھیں",
   "afterLastTakenPillNumber": "گولی نمبر {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-نمبر {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} نمبر",
+  "beforeLastTakenPillNumber": "گولی نمبر {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} نمبر",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} نمبر",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}نمبر",

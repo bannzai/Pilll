@@ -99,7 +99,7 @@
   "viewMore": "Visa mer",
   "afterLastTakenPillNumber": "piller nr {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-nr {afterLastTakenPillNumber}",
-  "beforeLastTakenPillNumber": "tablett {beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "P-piller nr {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→nummer {afterDisplayNumberSettingBeginPillNumber}",
