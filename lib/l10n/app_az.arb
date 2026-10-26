@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Tətbiqi açmadan bildirişdən qeyd edin",
   "quickRecordFeatureAppealHeadline": "Bildiriş ekranında bir toxunuşla həb qəbulu qeyd edin",
   "quickRecordFeatureAppealBody": "Xatırlatma bildirişini basıb saxladığınızda «Qəbul etdim» seçimi görünür. Tətbiqi açmadan həbi qəbul etdiyinizi qeyd edə bilərsiniz.",
-  "creatingNewPillSheetFeatureAppealTitle": "Həb vərəqini avtomatik əlavə et",
+  "creatingNewPillSheetFeatureAppealTitle": "həb blister avtomatik əlavə edin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Növbəti vərəqi avtomatik yarat",
   "creatingNewPillSheetFeatureAppealHeadline": "Növbəti həb cədvəlini avtomatik yarat",
   "creatingNewPillSheetFeatureAppealBody": "Cari həb listi qrupu bitdikdə, yeni həb listi qrupu avtomatik olaraq yaradılır. Manual keçid əməliyyatına ehtiyac yoxdur və qeydlərdə boşluq əmələ gəlmir.",

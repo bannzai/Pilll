@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Записвайте от известието, без да отваряте приложението",
   "quickRecordFeatureAppealHeadline": "запис на приема с едно докосване от екрана с известия",
   "quickRecordFeatureAppealBody": "Ако натиснете и задържите известието за напомняне, ще се появи опцията „Взех хапчето“. Така можете да отбележите приема, без да отваряте приложението.",
-  "creatingNewPillSheetFeatureAppealTitle": "Автоматично добавяне на листа с хапчета",
+  "creatingNewPillSheetFeatureAppealTitle": "Автоматично добавяне на блистер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично генериране на следващия лист",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматично създаване на следващия лист с таблетки",
   "creatingNewPillSheetFeatureAppealBody": "Когато текущата група с таблетки приключи, автоматично се създава нова група с таблетки. Не е необходимо ръчно превключване и не се допускат пропуски в записите.",

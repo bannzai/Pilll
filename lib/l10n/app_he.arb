@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "רישום ישירות מההתראה בלי לפתוח את האפליקציה",
   "quickRecordFeatureAppealHeadline": "רישום נטילה בנגיעה אחת ממסך ההתראות",
   "quickRecordFeatureAppealBody": "לחיצה ממושכת על התראת התזכור מציגה את האפשרות ״נלקחה״. כך אפשר לתעד את נטילת הגלולה בלי לפתוח את האפליקציה.",
-  "creatingNewPillSheetFeatureAppealTitle": "הוספה אוטומטית של גיליון גלולות",
+  "creatingNewPillSheetFeatureAppealTitle": "הוספה אוטומטית של חפיסת גלולות",
   "creatingNewPillSheetFeatureAppealShortDescription": "יצירה אוטומטית של הגיליון הבא",
   "creatingNewPillSheetFeatureAppealHeadline": "הוספת גליון גלולות הבא באופן אוטומטי",
   "creatingNewPillSheetFeatureAppealBody": "ברגע שקבוצת גיליונות הגלולה הנוכחית מסתיימת, תיווצר באופן אוטומטי קבוצת גיליונות גלולות חדשה. אין צורך בהחלפה ידנית, וכך לא ייווצרו פערים ברישומים.",

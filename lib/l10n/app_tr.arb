@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Uygulamayı açmadan bildirimden kaydedin",
   "quickRecordFeatureAppealHeadline": "Bildirim ekranında tek dokunuşla hap kullanım kaydı",
   "quickRecordFeatureAppealBody": "Hatırlatma bildirimine uzun bastığınızda “Aldım” seçeneği görünür. Uygulamayı açmadan hapı aldığınızı kaydedebilirsiniz.",
-  "creatingNewPillSheetFeatureAppealTitle": "Hap şemasını otomatik ekle",
+  "creatingNewPillSheetFeatureAppealTitle": "blister otomatik ekleyin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Sonraki şerit otomatik oluşturulur",
   "creatingNewPillSheetFeatureAppealHeadline": "Bir sonraki hap şeridini otomatik oluşturun",
   "creatingNewPillSheetFeatureAppealBody": "Mevcut hap şeridi grubu sona erdiğinde, yeni bir hap şeridi grubu otomatik olarak oluşturulur. Manuel geçiş işlemi gerekmez; kayıt atlaması yaşanmaz.",

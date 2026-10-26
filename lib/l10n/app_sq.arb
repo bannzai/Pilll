@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Regjistroni nga njoftimi pa hapur aplikacionin",
   "quickRecordFeatureAppealHeadline": "regjistrimi i marrjes me një prekje në ekranin e njoftimeve",
   "quickRecordFeatureAppealBody": "Mbajeni të shtypur njoftimin e rikujtuesit që të shfaqet opsioni «E mora». Kështu mund të regjistroni marrjen e pilulës pa hapur aplikacionin.",
-  "creatingNewPillSheetFeatureAppealTitle": "Shtim automatik i fletave të pilulave",
+  "creatingNewPillSheetFeatureAppealTitle": "Shtoni automatikisht një blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Gjenero automatikisht fletën e ardhshme",
   "creatingNewPillSheetFeatureAppealHeadline": "Krijo automatikisht fletën e pilulave të ardhshme",
   "creatingNewPillSheetFeatureAppealBody": "Kur përfundon grupi aktual i fletës së pilulave, krijohet automatikisht një grup i ri. Ndërrimi manual nuk është i nevojshëm, kështu që nuk do të ketë mungesa në regjistrime.",

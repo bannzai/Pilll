@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Rexistra desde a notificación sen abrir a aplicación",
   "quickRecordFeatureAppealHeadline": "rexistro de tomas cun toque na pantalla de notificacións",
   "quickRecordFeatureAppealBody": "Mantén premida a notificación do recordatorio para ver a opción «Tomeina». Así podes rexistrar a toma da pílula sen abrir a aplicación.",
-  "creatingNewPillSheetFeatureAppealTitle": "Engadir ficha de pílulas automaticamente",
+  "creatingNewPillSheetFeatureAppealTitle": "Engadir un blíster automaticamente",
   "creatingNewPillSheetFeatureAppealShortDescription": "Xeración automática da seguinte folla",
   "creatingNewPillSheetFeatureAppealHeadline": "Crear automaticamente a seguinte folla de píldoras",
   "creatingNewPillSheetFeatureAppealBody": "Cando o grupo de follas de pílulas actual remata, créase automaticamente un novo grupo de follas de pílulas. Non é necesaria a operación de cambio manual e non se producen lagoas nos rexistros.",

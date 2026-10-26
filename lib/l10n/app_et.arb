@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Märgi üles otse teavitusest ilma rakendust avamata",
   "quickRecordFeatureAppealHeadline": "võtmiskirje ühe puudutusega teavituste ekraanil",
   "quickRecordFeatureAppealBody": "Hoia meeldetuletuse teadet all, et näha valikut „Võetud“. Nii saad pilli võtmise kirja panna rakendust avamata.",
-  "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileht automaatselt",
+  "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileh automaatselt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Järgmise lehe automaatne loomine",
   "creatingNewPillSheetFeatureAppealHeadline": "Järgmise pillilehe automaatne loomine",
   "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehe grupp lõpeb, luuakse automaatselt uus pillilehe grupp. Käsitsi ümberlülitamine pole vajalik ning kirjetes ei teki lünki.",

@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना सूचना से ही दर्ज करें",
   "quickRecordFeatureAppealHeadline": "नोटिफ़िकेशन स्क्रीन पर एक टैप में सेवन रिकॉर्ड",
   "quickRecordFeatureAppealBody": "रिमाइंडर की सूचना को देर तक दबाने पर ‘ले ली’ विकल्प दिखेगा। आप ऐप खोले बिना गोली लेने का रिकॉर्ड दर्ज कर सकती हैं।",
-  "creatingNewPillSheetFeatureAppealTitle": "पिल शीट स्वचालित रूप से जोड़ें",
+  "creatingNewPillSheetFeatureAppealTitle": "पिल स्ट्रिप अपने आप जोड़ें",
   "creatingNewPillSheetFeatureAppealShortDescription": "अगली शीट अपने आप बन जाती है",
   "creatingNewPillSheetFeatureAppealHeadline": "अगली पिल शीट को स्वचालित रूप से बनाएं",
   "creatingNewPillSheetFeatureAppealBody": "वर्तमान पिल शीट समूह खत्म होने पर नया पिल शीट समूह स्वचालित रूप से बन जाएगा। इससे मैन्युअल रूप से स्विच करने की आवश्यकता नहीं रहती और रिकॉर्ड छूटने की समस्या नहीं होती।",

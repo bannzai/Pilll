@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Записывайте из уведомления, не открывая приложение",
   "quickRecordFeatureAppealHeadline": "журнал приёма таблеток в одно касание на экране уведомлений",
   "quickRecordFeatureAppealBody": "Нажмите и удерживайте уведомление с напоминанием — появится действие «Принято». Так вы сможете отметить приём таблетки, не открывая приложение.",
-  "creatingNewPillSheetFeatureAppealTitle": "Автодобавление таблеток",
+  "creatingNewPillSheetFeatureAppealTitle": "Автоматически добавить блистер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматическое создание следующего листа",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматически создать следующий блистер",
   "creatingNewPillSheetFeatureAppealBody": "Когда текущая группа таблеток заканчивается, новая группа таблеток создаётся автоматически. Ручное переключение не требуется, и в записях не будет пропусков.",

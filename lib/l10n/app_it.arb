@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Registra dalla notifica senza aprire l'app",
   "quickRecordFeatureAppealHeadline": "registro delle assunzioni con un tocco dalla schermata delle notifiche",
   "quickRecordFeatureAppealBody": "Tieni premuta la notifica del promemoria per visualizzare l’opzione «Presa». Puoi registrare l’assunzione della pillola senza aprire l’app.",
-  "creatingNewPillSheetFeatureAppealTitle": "Aggiunta automatica del foglio delle pillole",
+  "creatingNewPillSheetFeatureAppealTitle": "Aggiungi automaticamente un blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Aggiungi automaticamente il foglio successivo",
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automaticamente il prossimo foglio di pillole",
   "creatingNewPillSheetFeatureAppealBody": "Quando il gruppo di pillole corrente termina, viene creato automaticamente un nuovo gruppo. Non è necessario eseguire alcuna operazione di cambio manuale e non si verificheranno lacune nelle registrazioni.",

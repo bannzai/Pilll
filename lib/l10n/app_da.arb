@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Registrer direkte fra notifikationen uden at åbne appen",
   "quickRecordFeatureAppealHeadline": "pilleregistrering med ét tryk på notifikationsskærmen",
   "quickRecordFeatureAppealBody": "Når du trykker og holder på påmindelsen, vises handlingen »Taget«. Så kan du registrere, at du har taget din p-pille, uden at åbne appen.",
-  "creatingNewPillSheetFeatureAppealTitle": "Tilføj pilleark automatisk",
+  "creatingNewPillSheetFeatureAppealTitle": "Tilføj pillekort automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Generer næste ark automatisk",
   "creatingNewPillSheetFeatureAppealHeadline": "Opret automatisk det næste pilleark",
   "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",

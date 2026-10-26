@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Direkt in der Benachrichtigung eintragen, ohne die App zu öffnen",
   "quickRecordFeatureAppealHeadline": "Einnahmeprotokoll mit einem Tippen auf dem Benachrichtigungsbildschirm",
   "quickRecordFeatureAppealBody": "Wenn du die Benachrichtigung der Erinnerung gedrückt hältst, erscheint die Option „Eingenommen“. So kannst du die Einnahme eintragen, ohne die App zu öffnen.",
-  "creatingNewPillSheetFeatureAppealTitle": "Pillenblatt automatisch hinzufügen",
+  "creatingNewPillSheetFeatureAppealTitle": "Pillenblister automatisch hinzufügen",
   "creatingNewPillSheetFeatureAppealShortDescription": "Nächstes Blatt automatisch erstellen",
   "creatingNewPillSheetFeatureAppealHeadline": "Nächstes Pillenschema automatisch erstellen",
   "creatingNewPillSheetFeatureAppealBody": "Wenn die aktuelle Pillenblistergruppe endet, wird automatisch eine neue Pillenblistergruppe erstellt. Ein manueller Wechsel ist nicht erforderlich, sodass keine Lücken in der Aufzeichnung entstehen.",

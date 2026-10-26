@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "Zabilježite iz obavijesti bez otvaranja aplikacije",
   "quickRecordFeatureAppealHeadline": "evidencija uzimanja jednim dodirom na ekranu obavijesti",
   "quickRecordFeatureAppealBody": "Kada pritisnete i zadržite obavijest podsjetnika, pojavit će se opcija „Uzela sam“. Uzimanje pilule možete zabilježiti bez otvaranja aplikacije.",
-  "creatingNewPillSheetFeatureAppealTitle": "Automatski dodaj listu pilula",
+  "creatingNewPillSheetFeatureAppealTitle": "Automatsko dodavanje: blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski generiši sljedeći list",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatsko kreiranje sljedećeg lista tableta",
   "creatingNewPillSheetFeatureAppealBody": "Kada se završi trenutna grupa listova pilula, automatski se kreira nova grupa listova pilula. Ručno prebacivanje nije potrebno, a ne dolazi do propuštanja u evidenciji.",

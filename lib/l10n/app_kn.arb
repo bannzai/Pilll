@@ -492,7 +492,7 @@
   "quickRecordFeatureAppealShortDescription": "ಆ್ಯಪ್ ತೆರೆಯದೆಯೇ ಅಧಿಸೂಚನೆಯಿಂದ ದಾಖಲಿಸಿ",
   "quickRecordFeatureAppealHeadline": "ಅಧಿಸೂಚನೆ ಪರದೆಯಲ್ಲಿ ಒಂದೇ ಸ್ಪರ್ಶದಲ್ಲಿ ಸೇವನೆಯ ದಾಖಲೆ",
   "quickRecordFeatureAppealBody": "ಜ್ಞಾಪನೆ ಅಧಿಸೂಚನೆಯನ್ನು ದೀರ್ಘವಾಗಿ ಒತ್ತಿದರೆ ‘ತೆಗೆದುಕೊಂಡಿದ್ದೇನೆ’ ಆಯ್ಕೆ ಕಾಣಿಸುತ್ತದೆ. ಆ್ಯಪ್ ತೆರೆಯದೆಯೇ ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡಿರುವುದನ್ನು ದಾಖಲಿಸಬಹುದು.",
-  "creatingNewPillSheetFeatureAppealTitle": "ಪಿಲ್‌ಶೀಟ್‌ಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರಿಸಿ",
+  "creatingNewPillSheetFeatureAppealTitle": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರಿಸಿ",
   "creatingNewPillSheetFeatureAppealShortDescription": "ಮುಂದಿನ ಶೀಟ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
   "creatingNewPillSheetFeatureAppealHeadline": "ಮುಂದಿನ ಪಿಲ್‌ಶೀಟ್‌ನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
   "creatingNewPillSheetFeatureAppealBody": "ಪ್ರಸ್ತುತ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಮುಗಿದಾಗ, ಹೊಸ ಪಿಲ್‌ಶೀಟ್ ಗುಂಪು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಲಾಗುತ್ತದೆ. ಕೈಯಿಂದ ಮ್ಯಾನುಯಲ್‌ ಬದಲಾವಣೆ ಮಾಡುವ ಅಗತ್ಯವಿಲ್ಲದಿರುವುದರಿಂದ ಯಾವುದೇ ದಾಖಲೆ ಕಳೆದುಹೋಗುವುದಿಲ್ಲ.",
