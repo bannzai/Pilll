@@ -13,7 +13,7 @@
   "userAlreadyExists": "Цей обліковий запис уже існує",
   "medicationHistory": "історія прийому",
   "settings": "Налаштування",
-  "account": "Акаунт",
+  "account": "Обліковий запис",
   "dataTransferRequiresAccount": "Для перенесення та відновлення даних при зміні пристрою або втраті телефону необхідна реєстрація облікового запису.",
   "pillPremium": "Pilll Преміум",
   "unlimitedFeatureDuration": "Про період необмежених функцій",
