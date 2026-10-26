@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Verander die aantal dae wat jy pille uit die strook neem",
   "changedStartAndEndNumbers": "Die begin- en eindnommers is verander",
   "startOfPillDays": "Begin van pildae",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Laaste dag van die vorige pilblad: {beforePillSheetGroupSequentialEstimatedEndPillNumber} dag",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Laaste dag van die vorige pilstrook: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Einde van innamedae",
   "changedToNumber": "Verander na nommer",
   "displayMode": "Vertoonsmode",

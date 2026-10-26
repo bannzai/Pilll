@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "প্রতি স্ট্রিপে পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "changedStartAndEndNumbers": "শুরুর ও শেষের নম্বর পরিবর্তন করা হয়েছে",
   "startOfPillDays": "পিল খাওয়ার দিনগুলোর শুরু",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "পূর্ববর্তী শিটের শেষ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}তম দিন",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "আগের পিলের পাতার শেষ দিন: {beforePillSheetGroupSequentialEstimatedEndPillNumber}তম দিন",
   "endOfPillDays": "সেবনের মেয়াদ শেষ",
   "changedToNumber": "নম্বরে পরিবর্তন",
   "displayMode": "প্রদর্শন মোড",

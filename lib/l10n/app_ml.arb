@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ഓരോ സ്ട്രിപ്പിലെയും ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റുക",
   "changedStartAndEndNumbers": "തുടക്കത്തിലെയും അവസാനത്തിലെയും നമ്പറുകൾ മാറ്റി",
   "startOfPillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ തുടക്കം",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "മുമ്പത്തെ ഷീറ്റിന്റെ അവസാനം: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ദിവസം",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "മുമ്പത്തെ ഗുളിക ഷീറ്റിന്റെ അവസാന ദിവസം: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ാം ദിവസം",
   "endOfPillDays": "സേവനദിവസങ്ങളുടെ അവസാനം",
   "changedToNumber": "നമ്പർ മാറ്റുക",
   "displayMode": "ഡിസ്പ്ലേ മോഡ്",

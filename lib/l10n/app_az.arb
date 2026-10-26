@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Hər blister üçün həb qəbul edilən günlərin sayını dəyişin",
   "changedStartAndEndNumbers": "Başlanğıc və son nömrələr dəyişdirildi",
   "startOfPillDays": "Həb qəbulunun başladığı gün",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Əvvəlki paketin sonu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ci gün",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Əvvəlki həb lövhəsinin son günü: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ci gün",
   "endOfPillDays": "Qəbul dövrünün sonu",
   "changedToNumber": "nömrəyə dəyişdir",
   "displayMode": "Göstərmə rejimi",

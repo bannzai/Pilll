@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "თითოეული ბლისტერიდან აბების მიღების დღეების რაოდენობის შეცვლა",
   "changedStartAndEndNumbers": "საწყისი და საბოლოო ნომრები შეიცვალა",
   "startOfPillDays": "აბების მიღების დღეების დასაწყისი",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "წინა ფურცლის ბოლო: {beforePillSheetGroupSequentialEstimatedEndPillNumber} დღე",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "წინა აბების ფირფიტის ბოლო დღე: დღე {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "მიღების დღეების დასასრული",
   "changedToNumber": "ნომრის შეცვლა",
   "displayMode": "ჩვენების რეჟიმი",

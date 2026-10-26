@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Промяна на броя дни за прием на хапчета от блистера",
   "changedStartAndEndNumbers": "Началният и крайният номер са променени",
   "startOfPillDays": "Начало на дните за прием на хапчета",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Край на предишната опаковка: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ти ден",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Последен ден от предишния блистер с хапчета: ден {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Край на приемния период",
   "changedToNumber": "Промени на номер",
   "displayMode": "Режим на показване",

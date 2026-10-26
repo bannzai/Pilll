@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Промена на бројот на денови за земање таблета по блистер",
   "changedStartAndEndNumbers": "Почетниот и крајниот број се променети",
   "startOfPillDays": "Почеток на деновите за земање таблета",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Крај на претходната листа: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ти ден",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Последен ден од претходниот блистер со таблети: ден {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Крај на денови за прием",
   "changedToNumber": "Промени на број",
   "displayMode": "Режим на приказ",

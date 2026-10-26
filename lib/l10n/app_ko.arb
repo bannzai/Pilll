@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "시트별 복용 일수 변경",
   "changedStartAndEndNumbers": "시작 번호와 끝 번호를 변경했어요",
   "startOfPillDays": "피임약 복용일 시작",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "이전 시트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "이전 피임약 시트의 마지막 날: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
   "endOfPillDays": "복용 기간 종료",
   "changedToNumber": "번으로 변경",
   "displayMode": "표시 모드",

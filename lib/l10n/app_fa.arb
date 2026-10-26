@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "تغییر تعداد روزهای مصرف قرص در هر ورق",
   "changedStartAndEndNumbers": "شماره‌های شروع و پایان تغییر کردند",
   "startOfPillDays": "شروع روزهای مصرف قرص",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "آخر برگه قبلی: روز {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "آخرین روز ورق قرص قبلی: روز {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "پایان دوره مصرف",
   "changedToNumber": "تغییر شماره",
   "displayMode": "حالت نمایش",

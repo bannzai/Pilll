@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Pakeisti tablečių vartojimo dienų skaičių vienoje plokštelėje",
   "changedStartAndEndNumbers": "Pradžios ir pabaigos numeriai pakeisti",
   "startOfPillDays": "Tablečių vartojimo dienų pradžia",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Paskutinės plokštelės pabaiga: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-a diena",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Paskutinė ankstesnės tablečių plokštelės diena: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-oji diena",
   "endOfPillDays": "Vartojimo laikotarpio pabaiga",
   "changedToNumber": "Keisti numerį",
   "displayMode": "Rodymo režimas",

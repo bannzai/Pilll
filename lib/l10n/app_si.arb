@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "එක් පෙත්ත පත්‍රයකින් පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "changedStartAndEndNumbers": "ආරම්භක සහ අවසාන අංක වෙනස් කර ඇත",
   "startOfPillDays": "පෙති ගන්නා දිනවල ආරම්භය",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පත්‍රිකාවේ අවසානය: {beforePillSheetGroupSequentialEstimatedEndPillNumber}වන දවස",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පෙති පත්‍රයේ අවසන් දිනය: {beforePillSheetGroupSequentialEstimatedEndPillNumber} වන දිනය",
   "endOfPillDays": "සේවන කාලයේ අවසානය",
   "changedToNumber": "අංකයට වෙනස් කරන්න",
   "displayMode": "දර්ශන ආකාරය",

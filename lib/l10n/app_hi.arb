@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "हर स्ट्रिप में गोली लेने के दिनों की संख्या बदलें",
   "changedStartAndEndNumbers": "शुरुआत और अंत के नंबर बदल दिए गए हैं",
   "startOfPillDays": "गोली लेने के दिनों की शुरुआत",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "पिछली शीट का अंत: {beforePillSheetGroupSequentialEstimatedEndPillNumber}वां दिन",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "पिछली गोली की स्ट्रिप का आख़िरी दिन: दिन {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "सेवन अवधि का अंत",
   "changedToNumber": "नंबर में बदलें",
   "displayMode": "प्रदर्शन मोड",

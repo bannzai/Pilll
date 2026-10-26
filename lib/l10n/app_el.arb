@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Αλλαγή ημερών λήψης χαπιών ανά συσκευασία",
   "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",
   "startOfPillDays": "Έναρξη ημερών λήψης χαπιού",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Τέλος προηγούμενου φύλλου: {beforePillSheetGroupSequentialEstimatedEndPillNumber}η ημέρα",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Τελευταία ημέρα του προηγούμενου φύλλου χαπιών: ημέρα {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Τέλος ημερών λήψης",
   "changedToNumber": "Αλλαγή σε αριθμό",
   "displayMode": "Τρόπος εμφάνισης",

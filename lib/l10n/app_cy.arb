@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Newid nifer y diwrnodau o gymryd pils o'r pecyn",
   "changedStartAndEndNumbers": "Mae'r rhifau dechrau a diwedd wedi'u newid",
   "startOfPillDays": "Dechrau’r dyddiau cymryd y bilsen",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Diwedd y dalen flaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Diwrnod olaf y pecyn pils blaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Diwedd y dyddiau cymryd",
   "changedToNumber": "Newid i rif",
   "displayMode": "Modd Dangos",

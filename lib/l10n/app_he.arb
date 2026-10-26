@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "שינוי מספר ימי נטילת הגלולות בכל חפיסה",
   "changedStartAndEndNumbers": "המספרים ההתחלתי והסופי שונו",
   "startOfPillDays": "תחילת ימי נטילת הגלולה",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "סוף הגיליון הקודם: יום {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "היום האחרון בחפיסת הגלולות הקודמת: יום {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "סוף תקופת הנטילה",
   "changedToNumber": "שנה למספר",
   "displayMode": "מצב תצוגה",

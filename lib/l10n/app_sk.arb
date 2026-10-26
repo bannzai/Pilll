@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Zmeniť počet dní užívania tabletiek z blistra",
   "changedStartAndEndNumbers": "Počiatočné a koncové číslo boli zmenené",
   "startOfPillDays": "Začiatok dní užívania tabletiek",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Koniec predchádzajúceho blistra: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. deň",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Posledný deň predchádzajúceho blistra tabletiek: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. deň",
   "endOfPillDays": "Koniec obdobia užívania",
   "changedToNumber": "zmeniť na číslo",
   "displayMode": "Režim zobrazenia",

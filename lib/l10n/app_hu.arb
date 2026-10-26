@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "A tablettaszedés napjainak módosítása levélenként",
   "changedStartAndEndNumbers": "A kezdő és a záró szám megváltozott",
   "startOfPillDays": "A tablettaszedési napok kezdete",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Előző csomag vége: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. nap",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Az előző tablettalevél utolsó napja: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. nap",
   "endOfPillDays": "A szedési időszak vége",
   "changedToNumber": "számra módosítás",
   "displayMode": "Megjelenítési mód",

@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Skift antal dage med p-piller pr. pakke",
   "changedStartAndEndNumbers": "Start- og slutnummeret er ændret",
   "startOfPillDays": "Start på p-pilledage",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Sidste af forrige ark: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Sidste dag på den forrige p-pillepakke: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Slutning af pilleperioden",
   "changedToNumber": "Skift til nummer",
   "displayMode": "Visningstilstand",

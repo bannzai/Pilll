@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Alterar o número de dias de uso da pílula por cartela",
   "changedStartAndEndNumbers": "Os números inicial e final foram alterados",
   "startOfPillDays": "Início dos dias de tomar a pílula",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Final da cartela anterior: {beforePillSheetGroupSequentialEstimatedEndPillNumber}º dia",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Último dia da cartela de pílulas anterior: dia {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fim do período de administração",
   "changedToNumber": "Alterar para",
   "displayMode": "Modo de Exibição",

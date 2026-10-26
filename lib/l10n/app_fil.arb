@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Baguhin ang bilang ng araw ng pag-inom ng pildoras sa bawat pakete",
   "changedStartAndEndNumbers": "Nabago na ang panimula at panghuling numero",
   "startOfPillDays": "Simula ng mga araw ng pag-inom ng pildoras",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Katapusan ng nakaraang sheet: ika-{beforePillSheetGroupSequentialEstimatedEndPillNumber} araw",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Huling araw ng nakaraang pakete ng pill: ika-{beforePillSheetGroupSequentialEstimatedEndPillNumber} araw",
   "endOfPillDays": "Katapusan ng mga araw ng pag-inom",
   "changedToNumber": "Baguhin sa bilang",
   "displayMode": "Mode ng Display",

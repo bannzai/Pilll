@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Нэг блистерээс эм уух өдрийн тоог өөрчилнө үү",
   "changedStartAndEndNumbers": "Эхлэх болон дуусах дугаарыг өөрчилсөн",
   "startOfPillDays": "Эм уух өдрүүдийн эхлэл",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Өмнөх шийлэнгийн сүүлийн: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-р өдөр",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Өмнөх эмийн блистерийн сүүлийн өдөр: {beforePillSheetGroupSequentialEstimatedEndPillNumber} дахь өдөр",
   "endOfPillDays": "Эм уух өдрүүдийн төгсгөл",
   "changedToNumber": "дугаарт өөрчлөх",
   "displayMode": "Харуулах горим",

@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Modifica i giorni di assunzione della pillola per blister",
   "changedStartAndEndNumbers": "I numeri iniziale e finale sono stati modificati",
   "startOfPillDays": "Inizio dei giorni di assunzione della pillola",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Fine del blister precedente: {beforePillSheetGroupSequentialEstimatedEndPillNumber}° giorno",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Ultimo giorno del blister precedente: giorno {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fine del periodo di assunzione",
   "changedToNumber": "Cambia al numero",
   "displayMode": "Modalità di visualizzazione",

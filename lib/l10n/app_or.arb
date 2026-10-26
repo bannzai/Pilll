@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ପ୍ରତି ଷ୍ଟ୍ରିପ୍‌ରୁ ବଟିକା ଖାଇବା ଦିନ ସଂଖ୍ୟା ବଦଳାନ୍ତୁ",
   "changedStartAndEndNumbers": "ଆରମ୍ଭ ଓ ଶେଷ ନମ୍ବର ବଦଳାଯାଇଛି",
   "startOfPillDays": "ବଟିକା ଖାଇବା ଦିନଗୁଡ଼ିକର ଆରମ୍ଭ",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "ପୂର୍ବ ଶୀଟ୍‌ର ଶେଷ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ତମ ଦିନ",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "ପୂର୍ବ ଗର୍ଭନିରୋଧକ ବଟିକା ପତାର ଶେଷ ଦିନ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ତମ ଦିନ",
   "endOfPillDays": "ସେବନ ଦିନର ଶେଷ",
   "changedToNumber": "ନମ୍ବରରେ ପରିବର୍ତ୍ତନ",
   "displayMode": "ପ୍ରଦର୍ଶନ ମୋଡ୍",

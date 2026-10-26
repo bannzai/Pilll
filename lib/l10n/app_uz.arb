@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Har bir blisterdagi tabletkalarni qabul qilish kunlari sonini oʻzgartiring",
   "changedStartAndEndNumbers": "Boshlanish va tugash raqamlari oʻzgartirildi",
   "startOfPillDays": "Tabletkalarni qabul qilish kunlarining boshlanishi",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Oldingi varaqaning oxiri: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-kun",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Oldingi tabletkalar blisterining oxirgi kuni: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-kun",
   "endOfPillDays": "Qabul qilish muddatining tugashi",
   "changedToNumber": "Raqamga o'zgartirish",
   "displayMode": "Ko'rsatish rejimi",

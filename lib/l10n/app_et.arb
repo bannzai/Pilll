@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Muuda pillide võtmise päevade arvu pakis",
   "changedStartAndEndNumbers": "Algus- ja lõppnumber on muudetud",
   "startOfPillDays": "Pillivõtmise päevade algus",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Eelmise paki lõpp: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päev",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Eelmise pillilehe viimane päev: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päev",
   "endOfPillDays": "Võtmisperioodi lõpp",
   "changedToNumber": "Muuda numbriks",
   "displayMode": "Kuvamisrežiim",

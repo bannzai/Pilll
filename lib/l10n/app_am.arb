@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ከአንድ የክኒን ማሸጊያ ክኒን የሚወስዱባቸውን ቀናት ይቀይሩ",
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",
   "startOfPillDays": "ክኒን መውሰድ የሚጀምርበት ቀን",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "የቀድሞ ካርድ መጨረሻ፦ {beforePillSheetGroupSequentialEstimatedEndPillNumber}ኛ ቀን",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "የቀደመው የክኒን ሉህ የመጨረሻ ቀን፦ ቀን {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "የመዋቢያ ቀናት መጨረሻ",
   "changedToNumber": "ወደ ቁጥር መቀየር",
   "displayMode": "የማሳያ ዘዴ",

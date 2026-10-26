@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Blister başına hap alınan gün sayısını değiştirin",
   "changedStartAndEndNumbers": "Başlangıç ve bitiş numaraları değiştirildi",
   "startOfPillDays": "Hap alma günlerinin başlangıcı",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Önceki blisterin sonu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. gün",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Önceki blisterin son günü: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. gün",
   "endOfPillDays": "Kullanım süresinin sonu",
   "changedToNumber": "numaraya değiştir",
   "displayMode": "Görüntü Modu",

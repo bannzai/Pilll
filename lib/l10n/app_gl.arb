@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Cambiar os días de toma da pílula por blíster",
   "changedStartAndEndNumbers": "Cambiáronse os números de inicio e fin",
   "startOfPillDays": "Inicio dos días de toma da pílula",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Final da folla anterior: día {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Último día do blíster de pílulas anterior: día {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fin dos días de toma",
   "changedToNumber": "Cambiar ao número",
   "displayMode": "Modo de visualización",

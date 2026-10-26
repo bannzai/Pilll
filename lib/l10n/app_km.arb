@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំក្នុងមួយបន្ទះ",
   "changedStartAndEndNumbers": "លេខចាប់ផ្តើម និងលេខបញ្ចប់ត្រូវបានផ្លាស់ប្តូរ",
   "startOfPillDays": "ថ្ងៃចាប់ផ្តើមលេបថ្នាំគ្រាប់",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "ចុងក្រោយនៃសន្លឹកមុន៖ ថ្ងៃទី{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "ថ្ងៃចុងក្រោយនៃបន្ទះថ្នាំគ្រាប់មុន៖ ថ្ងៃទី{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ចប់ថ្ងៃសេវាថ្នាំ",
   "changedToNumber": "ប្តូរទៅលេខ",
   "displayMode": "ទម្រង់បង្ហាញ",

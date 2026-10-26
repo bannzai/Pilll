@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Бір блистердегі таблетканы қабылдау күндерінің санын өзгертіңіз",
   "changedStartAndEndNumbers": "Бастапқы және соңғы нөмірлер өзгертілді",
   "startOfPillDays": "Таблетка қабылдау күндерінің басталуы",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Алдыңғы парақтың соңы: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ші күн",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Алдыңғы таблетка блистерінің соңғы күні: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-күн",
   "endOfPillDays": "Қабылдау күндерінің соңы",
   "changedToNumber": "нөмірге өзгерту",
   "displayMode": "көрсету режимі",

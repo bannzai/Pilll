@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "Ubah jumlah hari minum pil per kemasan",
   "changedStartAndEndNumbers": "Nomor awal dan akhir telah diubah",
   "startOfPillDays": "Awal hari minum pil",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir lembar sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Hari terakhir pada strip pil sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Akhir periode konsumsi",
   "changedToNumber": "ubah ke nomor",
   "displayMode": "Mode Tampilan",

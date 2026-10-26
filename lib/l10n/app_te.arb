@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ప్రతి స్ట్రిప్‌లో మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "changedStartAndEndNumbers": "ప్రారంభ మరియు చివరి సంఖ్యలు మార్చబడ్డాయి",
   "startOfPillDays": "మాత్రలు తీసుకునే రోజుల ప్రారంభం",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "మునుపటి షీట్ చివరిది: {beforePillSheetGroupSequentialEstimatedEndPillNumber}వ రోజు",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "మునుపటి మాత్రల షీట్‌లో చివరి రోజు: {beforePillSheetGroupSequentialEstimatedEndPillNumber}వ రోజు",
   "endOfPillDays": "మాత్రల కోర్సు ముగింపు",
   "changedToNumber": "సంఖ్యకు మార్చు",
   "displayMode": "ప్రదర్శన మోడ్",

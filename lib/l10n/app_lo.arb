@@ -130,7 +130,7 @@
   "changePillDaysForSheet": "ປ່ຽນຈຳນວນມື້ກິນຢາຕໍ່ແຜງ",
   "changedStartAndEndNumbers": "ປ່ຽນເລກເລີ່ມຕົ້ນ ແລະ ເລກສິ້ນສຸດແລ້ວ",
   "startOfPillDays": "ມື້ເລີ່ມກິນຢາເມັດ",
-  "beforePillSheetGroupSequentialEstimatedEndDay": "ສຸດທ້າຍຂອງແຜ່ນຢາກ່ອນໜ້າ: ວັນທີ່ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "ມື້ສຸດທ້າຍຂອງແຜງຢາເມັດກ່ອນ: ມື້ທີ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ສິ້ນສຸດວັນກິນຢາ",
   "changedToNumber": "ປ່ຽນເປັນເລກ",
   "displayMode": "ໂໝດການສະແດງ",
