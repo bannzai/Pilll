@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Tímabeltinu var breytt í {tz}",
   "changeStartOfPillDays": "Breyta upphafsdegi talningar á pilludögum",
   "changeEndOfPillDays": "Breyta lokum pillutökudaga",
-  "cannotUpdateToReplacePillSheet": "Uppfærsla pillublaðs mistókst, auðkenni: {id}",
+  "cannotUpdateToReplacePillSheet": "Ekki tókst að uppfæra við skipti á pilluspjaldi. ID: {id}",
   "failedToGetPillSheetHistory": "Ekki tókst að sækja taknahald upplýsingar. {error}",
   "cancelTaking": "Afturkalla töku",
   "deletedDiaryCannotBeRestored": "Eydda dagbók er ekki hægt að endurheimta",

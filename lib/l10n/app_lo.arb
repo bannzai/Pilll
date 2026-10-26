@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "ເຂດເວລາຖືກປ່ຽນເປັນ {tz} ແລ້ວ",
   "changeStartOfPillDays": "ປ່ຽນວັນເລີ່ມນັບຈຳນວນມື້ກິນຢາເມັດ",
   "changeEndOfPillDays": "ປ່ຽນມື້ສິ້ນສຸດການກິນຢາເມັດ",
-  "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບເດດແຜ່ນຢາໂດຍການທົດແທນ id: {id}",
+  "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບເດດໃນຂະນະປ່ຽນແຜງຢາຄຸມໄດ້. ID: {id}",
   "failedToGetPillSheetHistory": "ບໍ່ສາມາດດຶງຂໍ້ມູນປະຫວັດການດື່ມຢາໄດ້. {error}",
   "cancelTaking": "ຍົກເລີກການກິນຢາ",
   "deletedDiaryCannotBeRestored": "ບັນທຶກທີ່ລົບອອກແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",

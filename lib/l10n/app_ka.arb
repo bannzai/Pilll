@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "დროის სარტყელი შეიცვალა: {tz}",
   "changeStartOfPillDays": "აბის მიღების დღეების ათვლის დასაწყისის შეცვლა",
   "changeEndOfPillDays": "აბის მიღების დღეების დასრულების შეცვლა",
-  "cannotUpdateToReplacePillSheet": "აბების ფურცლის ჩანაცვლებით განახლება ვერ ხერხდება id: {id}",
+  "cannotUpdateToReplacePillSheet": "აბების ბლისტერის შეცვლისას განახლება ვერ მოხერხდა. ID: {id}",
   "failedToGetPillSheetHistory": "მიღების ისტორიის ჩატვირთვა ვერ მოხერხდა. {error}",
   "cancelTaking": "მიღების გაუქმება",
   "deletedDiaryCannotBeRestored": "წაშლილი დღიური ვერ აღდგება",

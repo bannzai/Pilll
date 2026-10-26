@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "เปลี่ยนเขตเวลาเป็น {tz} แล้วค่ะ",
   "changeStartOfPillDays": "เปลี่ยนวันเริ่มนับจำนวนวันที่ทานยา",
   "changeEndOfPillDays": "เปลี่ยนวันสิ้นสุดการทานยา",
-  "cannotUpdateToReplacePillSheet": "ไม่สามารถอัปเดตจากการเปลี่ยนแผงยาคุม id: {id}",
+  "cannotUpdateToReplacePillSheet": "อัปเดตข้อมูลขณะเปลี่ยนแผงยาไม่สำเร็จค่ะ ID: {id}",
   "failedToGetPillSheetHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานได้ {error}",
   "cancelTaking": "ยกเลิกการรับประทาน",
   "deletedDiaryCannotBeRestored": "บันทึกที่ลบแล้วจะไม่สามารถกู้คืนได้",

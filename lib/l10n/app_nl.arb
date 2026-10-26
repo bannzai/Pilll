@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "De tijdzone is gewijzigd naar {tz}",
   "changeStartOfPillDays": "Begindag van de telling van pilgebruik wijzigen",
   "changeEndOfPillDays": "Einde van de pilinnamedagen wijzigen",
-  "cannotUpdateToReplacePillSheet": "Kan pillenstrip niet bijwerken door vervanging id: {id}",
+  "cannotUpdateToReplacePillSheet": "Bij het vervangen van de pillenstrip kon de update niet worden voltooid. ID: {id}",
   "failedToGetPillSheetHistory": "Het ophalen van de inname geschiedenis is mislukt. {error}",
   "cancelTaking": "Inname annuleren",
   "deletedDiaryCannotBeRestored": "Verwijderde dagboeken kunnen niet worden hersteld",

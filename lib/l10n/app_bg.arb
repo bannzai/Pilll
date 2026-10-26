@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Часовата зона е променена на {tz}",
   "changeStartOfPillDays": "Промяна на началото на броенето на дните за прием",
   "changeEndOfPillDays": "Промяна на края на дните за прием на хапчета",
-  "cannotUpdateToReplacePillSheet": "Не може да се актуализира поради смяна на блистера с хапчета id: {id}",
+  "cannotUpdateToReplacePillSheet": "Неуспешно обновяване при смяна на блистер. ID: {id}",
   "failedToGetPillSheetHistory": "Неуспешно получаване на информацията за историята на приема. {error}",
   "cancelTaking": "Отмени прием",
   "deletedDiaryCannotBeRestored": "Изтритите дневници не могат да бъдат възстановени",

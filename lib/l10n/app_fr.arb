@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Le fuseau horaire a été défini sur {tz}",
   "changeStartOfPillDays": "Modifier le début du décompte des jours de prise de la pilule",
   "changeEndOfPillDays": "Modifier la fin des jours de prise de la pilule",
-  "cannotUpdateToReplacePillSheet": "Impossible de mettre à jour en raison de l'ID de remplacement de la feuille de pilules : {id}",
+  "cannotUpdateToReplacePillSheet": "La mise à jour a échoué lors du remplacement de la plaquette. ID : {id}",
   "failedToGetPillSheetHistory": "Échec de la récupération des informations sur l'historique de prise de pilule. {error}",
   "cancelTaking": "Annuler la dose",
   "deletedDiaryCannotBeRestored": "Les entrées de journal supprimées ne peuvent pas être restaurées",

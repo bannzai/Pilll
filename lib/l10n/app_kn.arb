@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "ಸಮಯ ವಲಯವನ್ನು {tz} ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "changeStartOfPillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಎಣಿಕೆಯ ಆರಂಭವನ್ನು ಬದಲಿಸಿ",
   "changeEndOfPillDays": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಅಂತ್ಯವನ್ನು ಬದಲಿಸಿ",
-  "cannotUpdateToReplacePillSheet": "ಪಿಲ್ ಶೀಟ್ ಬದಲಾಯಿಸುವಿಕೆಯಿಂದ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಲಿಲ್ಲ id: {id}",
+  "cannotUpdateToReplacePillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಬದಲಾಯಿಸುವಾಗ ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ID: {id}",
   "failedToGetPillSheetHistory": "ಸೇವನೆಯ ಇತಿಹಾಸದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ವಿಫಲವಾಗಿದೆ। {error}",
   "cancelTaking": "ಸೇವನೆ ರದ್ದುಮಾಡಿ",
   "deletedDiaryCannotBeRestored": "ಅಳಿಸಿದ ಡೈರಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Fusul orar a fost schimbat la {tz}",
   "changeStartOfPillDays": "Schimbă începutul numărării zilelor de administrare a pilulei",
   "changeEndOfPillDays": "Schimbă sfârșitul zilelor de administrare a pilulei",
-  "cannotUpdateToReplacePillSheet": "Nu se poate actualiza prin înlocuirea pastilei contraceptive id: {id}",
+  "cannotUpdateToReplacePillSheet": "Actualizarea la înlocuirea blisterului nu a reușit. ID: {id}",
   "failedToGetPillSheetHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",
   "cancelTaking": "Anulare administrare",
   "deletedDiaryCannotBeRestored": "Jurnalul șters nu poate fi restaurat",

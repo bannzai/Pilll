@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Ordu-eremua {tz} da orain",
   "changeStartOfPillDays": "Aldatu pilula hartzeko egunen zenbaketaren hasiera",
   "changeEndOfPillDays": "Pilula hartzeko egunen amaiera aldatu",
-  "cannotUpdateToReplacePillSheet": "Ezin da eguneratu pilula-orriaren ordezkapenaren ondorioz, id: {id}",
+  "cannotUpdateToReplacePillSheet": "Ezin izan da eguneratu pilula-blister aldatzean. ID: {id}",
   "failedToGetPillSheetHistory": "Hartzeko historiaren informazioa eskuratzen huts egin du. {error}",
   "cancelTaking": "Hartzea ezeztatu",
   "deletedDiaryCannotBeRestored": "Ezabatutako egunkaria ezin da berreskuratu",

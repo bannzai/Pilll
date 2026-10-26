@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Zon waktu telah ditukar kepada {tz}",
   "changeStartOfPillDays": "Ubah permulaan kiraan hari pengambilan pil",
   "changeEndOfPillDays": "Ubah penghujung hari pengambilan pil",
-  "cannotUpdateToReplacePillSheet": "Tidak dapat mengemaskini dengan penggantian helaian pil id: {id}",
+  "cannotUpdateToReplacePillSheet": "Tidak dapat mengemas kini semasa menukar pek pil. ID: {id}",
   "failedToGetPillSheetHistory": "Gagal memperoleh data sejarah pengambilan. {error}",
   "cancelTaking": "Batalkan Pengambilan",
   "deletedDiaryCannotBeRestored": "Diari yang dipadamkan tidak boleh dipulihkan",

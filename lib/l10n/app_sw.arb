@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Saa za eneo zimebadilishwa kuwa {tz}",
   "changeStartOfPillDays": "Badilisha siku ya kuanza kuhesabu siku za kumeza kidonge",
   "changeEndOfPillDays": "Badilisha mwisho wa siku za kumeza vidonge",
-  "cannotUpdateToReplacePillSheet": "Imeshindwa kusasisha kutokana na kubadilisha karatasi ya vidonge id: {id}",
+  "cannotUpdateToReplacePillSheet": "Imeshindikana kusasisha wakati wa kubadilisha pakiti ya vidonge. ID: {id}",
   "failedToGetPillSheetHistory": "Imeshindwa kupata historia ya kutumia dawa. {error}",
   "cancelTaking": "Batilisha kumeza",
   "deletedDiaryCannotBeRestored": "Kumbuka zilizofutwa haziwezi kurejeshwa",

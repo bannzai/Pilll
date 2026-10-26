@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "O fuso horario cambiouse a {tz}",
   "changeStartOfPillDays": "Cambiar o inicio da conta dos días de toma da pílula",
   "changeEndOfPillDays": "Cambiar o final dos días de toma da pílula",
-  "cannotUpdateToReplacePillSheet": "Non se puido actualizar pola substitución da folla de píldoras id: {id}",
+  "cannotUpdateToReplacePillSheet": "Non se puido actualizar ao cambiar o blíster. ID: {id}",
   "failedToGetPillSheetHistory": "Produciuse un erro ao obter a información do historial de toma. {error}",
   "cancelTaking": "Cancelar toma",
   "deletedDiaryCannotBeRestored": "O diario eliminado non se pode recuperar",

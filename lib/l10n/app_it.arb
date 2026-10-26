@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Il fuso orario è stato cambiato in {tz}",
   "changeStartOfPillDays": "Modifica l'inizio del conteggio dei giorni di assunzione della pillola",
   "changeEndOfPillDays": "Modifica la fine dei giorni di assunzione della pillola",
-  "cannotUpdateToReplacePillSheet": "Impossibile aggiornare sostituendo il blister delle pillole id: {id}",
+  "cannotUpdateToReplacePillSheet": "Impossibile aggiornare durante la sostituzione del blister. ID: {id}",
   "failedToGetPillSheetHistory": "Impossibile recuperare la cronologia di assunzione. {error}",
   "cancelTaking": "Annulla assunzione",
   "deletedDiaryCannotBeRestored": "Il diario eliminato non può essere recuperato",

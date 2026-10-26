@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "সময় অঞ্চল {tz}লৈ সলনি কৰা হৈছে",
   "changeStartOfPillDays": "পিল খোৱাৰ দিন গণনা আৰম্ভ হোৱাৰ দিন সলনি কৰক",
   "changeEndOfPillDays": "পিল খোৱাৰ দিনবোৰৰ শেষ সলনি কৰক",
-  "cannotUpdateToReplacePillSheet": "পিল শীট প্ৰতিস্থাপনৰ দ্বাৰা আপডেট কৰিব পৰা নাই id: {id}",
+  "cannotUpdateToReplacePillSheet": "পিলৰ ষ্ট্ৰিপ সলনি কৰাৰ সময়ত আপডেট কৰিব পৰা নগ’ল। ID: {id}",
   "failedToGetPillSheetHistory": "সেৱনৰ ইতিহাসৰ তথ্য আহৰণত ব্যৰ্থ হ'ল। {error}",
   "cancelTaking": "সেৱন বাতিল",
   "deletedDiaryCannotBeRestored": "মাচি পেলোৱা ডায়েৰী পুনৰুদ্ধাৰ কৰিব নোৱাৰি",

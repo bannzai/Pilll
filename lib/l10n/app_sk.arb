@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Časové pásmo bolo zmenené na {tz}",
   "changeStartOfPillDays": "Zmeniť začiatok počítania dní užívania tabletky",
   "changeEndOfPillDays": "Zmeniť koniec dní užívania tabletiek",
-  "cannotUpdateToReplacePillSheet": "Nepodarilo sa aktualizovať pri výmene tabletového balíčka id: {id}",
+  "cannotUpdateToReplacePillSheet": "Pri výmene blistu sa nepodarilo aktualizovať údaje. ID: {id}",
   "failedToGetPillSheetHistory": "Nepodarilo sa načítať informácie o histórii užívania. {error}",
   "cancelTaking": "Zrušiť užívanie",
   "deletedDiaryCannotBeRestored": "Vymazané záznamy z denníka sa nedajú obnoviť",

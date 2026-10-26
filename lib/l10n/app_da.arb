@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Tidszonen er ændret til {tz}",
   "changeStartOfPillDays": "Skift startdag for optælling af p-pilledage",
   "changeEndOfPillDays": "Ændr slutningen på dagene med p-piller",
-  "cannotUpdateToReplacePillSheet": "Kan ikke opdatere p-pille ark ved udskiftning id: {id}",
+  "cannotUpdateToReplacePillSheet": "Kunne ikke opdatere ved udskiftning af pillekort. ID: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke indlæse indtagehistorik information. {error}",
   "cancelTaking": "Annuller indtag",
   "deletedDiaryCannotBeRestored": "Slettede dagbogsindlæg kan ikke gendannes",

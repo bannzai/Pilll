@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Ajavööndiks on nüüd {tz}",
   "changeStartOfPillDays": "Muuda pillivõtmise päevade arvestuse algust",
   "changeEndOfPillDays": "Muuda pillivõtmispäevade lõppu",
-  "cannotUpdateToReplacePillSheet": "Pillilehe asendamine ebaõnnestus id: {id}",
+  "cannotUpdateToReplacePillSheet": "Pillilehe vahetamisel ei õnnestunud andmeid uuendada. ID: {id}",
   "failedToGetPillSheetHistory": "Tablettide võtmise ajaloo andmete hankimine ebaõnnestus. {error}",
   "cancelTaking": "Tühista võtmine",
   "deletedDiaryCannotBeRestored": "Kustutatud päevikut ei saa taastada",

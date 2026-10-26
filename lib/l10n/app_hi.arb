@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "समय क्षेत्र बदलकर {tz} कर दिया गया है",
   "changeStartOfPillDays": "गोली लेने के दिनों की गिनती शुरू होने का दिन बदलें",
   "changeEndOfPillDays": "गोली लेने के दिनों का अंत बदलें",
-  "cannotUpdateToReplacePillSheet": "गोली शीट के बदलाव से अपडेट नहीं हो सका id: {id}",
+  "cannotUpdateToReplacePillSheet": "पिल स्ट्रिप बदलते समय अपडेट नहीं हो सका। ID: {id}",
   "failedToGetPillSheetHistory": "दवा सेवन का इतिहास प्राप्त करने में असफल। {error}",
   "cancelTaking": "सेवन रद्द करें",
   "deletedDiaryCannotBeRestored": "हटाई गई डायरी को पुनर्प्राप्त नहीं किया जा सकता",

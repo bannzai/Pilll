@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "સમય ઝોન {tz} પર બદલાઈ ગયો છે",
   "changeStartOfPillDays": "ગોળી લેવાના દિવસોની ગણતરીની શરૂઆત બદલો",
   "changeEndOfPillDays": "ગોળી લેવાના દિવસોનો અંત બદલો",
-  "cannotUpdateToReplacePillSheet": "પિલ શીટ બદલવાને કારણે અપડેટ કરી શકાતું નથી id: {id}",
+  "cannotUpdateToReplacePillSheet": "ગોળીની સ્ટ્રિપ બદલતી વખતે અપડેટ થઈ શક્યું નહીં. ID: {id}",
   "failedToGetPillSheetHistory": "દવાના સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ. {error}",
   "cancelTaking": "સેવન રદ કરો",
   "deletedDiaryCannotBeRestored": "કાઢેલી ડાયરી પાછી લાવી શકાતી નથી",

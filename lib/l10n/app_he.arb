@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "אזור הזמן שונה ל־{tz}",
   "changeStartOfPillDays": "שינוי תחילת ספירת ימי נטילת הגלולה",
   "changeEndOfPillDays": "שינוי סוף ימי נטילת הגלולה",
-  "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן באמצעות החלפת גליון הכדורים id: {id}",
+  "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן בעת החלפת חפיסת הגלולות. מזהה: {id}",
   "failedToGetPillSheetHistory": "נכשל בקבלת מידע על היסטוריית הצריכה. {error}",
   "cancelTaking": "ביטול נטילה",
   "deletedDiaryCannotBeRestored": "יומן שנמחק לא ניתן לשחזר",

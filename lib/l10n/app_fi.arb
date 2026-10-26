@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Aikavyöhykkeeksi vaihdettiin {tz}",
   "changeStartOfPillDays": "Vaihda pillereiden käyttöpäivien laskennan aloituspäivää",
   "changeEndOfPillDays": "Muuta pillereiden ottopäivien päättymistä",
-  "cannotUpdateToReplacePillSheet": "Pillerilehden päivittäminen epäonnistui id: {id}",
+  "cannotUpdateToReplacePillSheet": "Pilleriliuskan vaihdon yhteydessä päivittäminen ei onnistunut. ID: {id}",
   "failedToGetPillSheetHistory": "Ottamishistorian tietojen lataaminen epäonnistui. {error}",
   "cancelTaking": "Peruuta ottaminen",
   "deletedDiaryCannotBeRestored": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",

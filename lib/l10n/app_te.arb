@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "సమయ మండలం {tz}కి మార్చబడింది",
   "changeStartOfPillDays": "మాత్రలు తీసుకునే రోజుల లెక్కింపు ప్రారంభ రోజును మార్చండి",
   "changeEndOfPillDays": "మాత్రలు తీసుకునే రోజుల ముగింపును మార్చండి",
-  "cannotUpdateToReplacePillSheet": "పిల్ షీట్ మార్పిడిలో అప్డేట్ విఫలమైంది id: {id}",
+  "cannotUpdateToReplacePillSheet": "మాత్రల స్ట్రిప్ మార్చేటప్పుడు అప్‌డేట్ చేయడం సాధ్యం కాలేదు. ID: {id}",
   "failedToGetPillSheetHistory": "మందు సేవన చరిత్ర సమాచారాన్ని పొందడంలో విఫలమైంది। {error}",
   "cancelTaking": "సేవన రద్దు",
   "deletedDiaryCannotBeRestored": "తొలగించిన డైరీని తిరిగి పొందలేరు",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "সময় অঞ্চল {tz} করা হয়েছে",
   "changeStartOfPillDays": "পিল খাওয়ার দিনের গণনা শুরুর দিন পরিবর্তন করুন",
   "changeEndOfPillDays": "পিল খাওয়ার দিনগুলোর শেষ পরিবর্তন করুন",
-  "cannotUpdateToReplacePillSheet": "পিল শিট প্রতিস্থাপন আপডেট করা যায়নি id: {id}",
+  "cannotUpdateToReplacePillSheet": "পিল শিট বদলানোর সময় আপডেট করা যায়নি। ID: {id}",
   "failedToGetPillSheetHistory": "সেবন ইতিহাসের তথ্য পেতে ব্যর্থ হয়েছে। {error}",
   "cancelTaking": "সেবন বাতিল",
   "deletedDiaryCannotBeRestored": "মুছে ফেলা ডায়েরি আর ফিরিয়ে আনা যাবে না",

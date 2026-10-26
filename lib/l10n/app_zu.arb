@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Indawo yesikhathi ishintshelwe ku-{tz}",
   "changeStartOfPillDays": "Sicela ushintshe usuku okuqala ngalo ukubalwa kwezinsuku zokuphuza iphilisi",
   "changeEndOfPillDays": "Sicela ushintshe ukuphela kwezinsuku zokuphuza amaphilisi",
-  "cannotUpdateToReplacePillSheet": "Akukwazi ukubuyekeza umqulu wamaphilisi ngokuwushintsha i-ID: {id}",
+  "cannotUpdateToReplacePillSheet": "Akukwazekanga ukuvuselela ngesikhathi kushintshwa ishidi lamaphilisi. ID: {id}",
   "failedToGetPillSheetHistory": "Kuhlulekile ukuthola ulwazi lwesimo sokudla amaphilisi. {error}",
   "cancelTaking": "Susa ukuthatha",
   "deletedDiaryCannotBeRestored": "Idayari esusiwe ayikwazi ukubuyiselwa",

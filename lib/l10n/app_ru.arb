@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Часовой пояс изменён на {tz}",
   "changeStartOfPillDays": "Изменить начало отсчёта дней приёма таблетки",
   "changeEndOfPillDays": "Изменить окончание дней приёма таблеток",
-  "cannotUpdateToReplacePillSheet": "Не удается обновить при замене упаковки таблеток id: {id}",
+  "cannotUpdateToReplacePillSheet": "Не удалось обновить данные при замене блистера. ID: {id}",
   "failedToGetPillSheetHistory": "Не удалось получить данные о истории приёма. {error}",
   "cancelTaking": "Отменить прием",
   "deletedDiaryCannotBeRestored": "Удаленные записи дневника невозможно восстановить",

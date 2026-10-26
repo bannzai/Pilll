@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Tidszonen har ändrats till {tz}",
   "changeStartOfPillDays": "Ändra startdag för räkning av p-pillerdagar",
   "changeEndOfPillDays": "Ändra slutet på dagarna för pillerintag",
-  "cannotUpdateToReplacePillSheet": "Kunde inte uppdatera vid byte av p-pillerkort id: {id}",
+  "cannotUpdateToReplacePillSheet": "Det gick inte att uppdatera när p-pillerkartan byttes. ID: {id}",
   "failedToGetPillSheetHistory": "Misslyckades med att hämta intagshistorik. {error}",
   "cancelTaking": "Ångra intag",
   "deletedDiaryCannotBeRestored": "Raderade dagboksanteckningar kan inte återställas",

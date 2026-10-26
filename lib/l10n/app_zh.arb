@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "时区已更改为 {tz}",
   "changeStartOfPillDays": "更改服药天数的起算日",
   "changeEndOfPillDays": "更改服药天数的结束时间",
-  "cannotUpdateToReplacePillSheet": "药片包替换更新失败 ID: {id}",
+  "cannotUpdateToReplacePillSheet": "更换药板时未能完成更新。ID：{id}",
   "failedToGetPillSheetHistory": "获取服用记录信息失败。{error}",
   "cancelTaking": "取消服药",
   "deletedDiaryCannotBeRestored": "已删除的日记无法恢复",

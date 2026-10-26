@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Часовий пояс змінено на {tz}",
   "changeStartOfPillDays": "Змінити початок відліку днів прийому пігулок",
   "changeEndOfPillDays": "Змінити завершення днів прийому пігулок",
-  "cannotUpdateToReplacePillSheet": "Не вдалося оновити через заміну аркуша таблеток ID: {id}",
+  "cannotUpdateToReplacePillSheet": "Не вдалося оновити дані під час заміни блістера. ID: {id}",
   "failedToGetPillSheetHistory": "Не вдалося отримати інформацію про історію прийому. {error}",
   "cancelTaking": "Скасувати прийом",
   "deletedDiaryCannotBeRestored": "Видалені записи неможливо відновити",

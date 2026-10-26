@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Saat qurşağınız {tz} olaraq dəyişdirildi",
   "changeStartOfPillDays": "Həb qəbulu günlərinin sayımının başlanğıcını dəyişin",
   "changeEndOfPillDays": "Həb qəbul etdiyiniz günlərin sonunu dəyişin",
-  "cannotUpdateToReplacePillSheet": "Həb lövhəsinin əvəzlənməsi zamanı yeniləmə uğursuz oldu id: {id}",
+  "cannotUpdateToReplacePillSheet": "həb blister dəyişdirilərkən yeniləmək mümkün olmadı. ID: {id}",
   "failedToGetPillSheetHistory": "Dərman qəbulu tarixçəsi məlumatlarının əldə edilməsi uğursuz oldu. {error}",
   "cancelTaking": "Qəbulu ləğv et",
   "deletedDiaryCannotBeRestored": "Silinmiş gündəlik qeydləri bərpa edilə bilməz",

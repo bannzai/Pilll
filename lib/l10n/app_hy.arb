@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Ժամային գոտին փոխվել է՝ {tz}",
   "changeStartOfPillDays": "Փոխել հաբի ընդունման օրերի հաշվարկի սկիզբը",
   "changeEndOfPillDays": "Փոխել հաբի ընդունման օրերի ավարտը",
-  "cannotUpdateToReplacePillSheet": "Չհաջողվեց թարմացնել դեղահապի թերթի փոխարինումը id: {id}",
+  "cannotUpdateToReplacePillSheet": "հաբերի բլիստեր փոխարինելիս թարմացումը չհաջողվեց։ ID: {id}",
   "failedToGetPillSheetHistory": "Հաբերի ընդունման պատմության տվյալների բեռնումը ձախողվեց։ {error}",
   "cancelTaking": "Չեղարկել ընդունումը",
   "deletedDiaryCannotBeRestored": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Strefa czasowa została zmieniona na {tz}",
   "changeStartOfPillDays": "Zmień początek liczenia dni przyjmowania pigułki",
   "changeEndOfPillDays": "Zmień koniec dni przyjmowania tabletek",
-  "cannotUpdateToReplacePillSheet": "Nie można zaktualizować z powodu wymiany opakowania tabletek id: {id}",
+  "cannotUpdateToReplacePillSheet": "Nie udało się zaktualizować danych podczas wymiany blistu. ID: {id}",
   "failedToGetPillSheetHistory": "Nie udało się pobrać historii przyjmowania tabletek. {error}",
   "cancelTaking": "Anuluj przyjęcie",
   "deletedDiaryCannotBeRestored": "Usuniętego pamiętnika nie można przywrócić",

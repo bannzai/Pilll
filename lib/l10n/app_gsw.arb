@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "D Ziitzoone isch uf {tz} gänderet worde",
   "changeStartOfPillDays": "Afäng vo de Zählig vo de Pilledäg ändere",
   "changeEndOfPillDays": "S Ändi vo de Pille-Iinahmtäg ändere",
-  "cannotUpdateToReplacePillSheet": "Pilleblatt chönd nöd uusgtuuscht werde id: {id}",
+  "cannotUpdateToReplacePillSheet": "Bim Wächsle vom Pilleblister het s Aktualisiere nöd klappt. ID: {id}",
   "failedToGetPillSheetHistory": "D Iinahm-Verlauf het nöd chöne abgrüeft wärde. {error}",
   "cancelTaking": "Innahm rückgängig mache",
   "deletedDiaryCannotBeRestored": "Glöschti Tagebüecher chönd nöd widerhärgstellt wärde",

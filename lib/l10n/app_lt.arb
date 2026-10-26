@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Laiko juosta pakeista į {tz}",
   "changeStartOfPillDays": "Pakeiskite tablečių vartojimo dienų skaičiavimo pradžią",
   "changeEndOfPillDays": "Pakeisti tablečių vartojimo dienų pabaigą",
-  "cannotUpdateToReplacePillSheet": "Tablečių paketo pakeitimo atnaujinimas nepavyko id: {id}",
+  "cannotUpdateToReplacePillSheet": "Keičiant tablečių plokštel nepavyko atnaujinti duomenų. ID: {id}",
   "failedToGetPillSheetHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",
   "cancelTaking": "Atšaukti vartojimą",
   "deletedDiaryCannotBeRestored": "Ištrinta dienoraštis negali būti atkurtas",

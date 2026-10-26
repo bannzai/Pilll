@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "منطقهٔ زمانی به {tz} تغییر کرد",
   "changeStartOfPillDays": "تغییر شروع شمارش روزهای مصرف قرص",
   "changeEndOfPillDays": "تغییر پایان روزهای مصرف قرص",
-  "cannotUpdateToReplacePillSheet": "به‌روزرسانی با جایگزینی ورق قرص امکان‌پذیر نیست id: {id}",
+  "cannotUpdateToReplacePillSheet": "هنگام تعویض ورق قرص، به‌روزرسانی انجام نشد. شناسه: {id}",
   "failedToGetPillSheetHistory": "دریافت اطلاعات سابقه مصرف ناموفق بود. {error}",
   "cancelTaking": "لغو مصرف",
   "deletedDiaryCannotBeRestored": "یادداشت حذف شده قابل بازیابی نیست",

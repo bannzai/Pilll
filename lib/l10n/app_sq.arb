@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Zona kohore u ndryshua në {tz}",
   "changeStartOfPillDays": "Ndryshoni fillimin e numërimit të ditëve të marrjes së pilulës",
   "changeEndOfPillDays": "Ndryshoni fundin e ditëve të marrjes së pilulës",
-  "cannotUpdateToReplacePillSheet": "Nuk mund të përditësohet për shkak të zëvendësimit të fletës së pilulës id: {id}",
+  "cannotUpdateToReplacePillSheet": "Përditësimi gjatë ndërrimit të blisterit nuk u krye. ID: {id}",
   "failedToGetPillSheetHistory": "Dështoi marrja e informacioneve të historikut të dozave. {error}",
   "cancelTaking": "Anulo marrjen",
   "deletedDiaryCannotBeRestored": "Ditarët e fshirë nuk rikthehen",

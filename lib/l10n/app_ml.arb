@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "സമയ മേഖല {tz} ആയി മാറ്റി",
   "changeStartOfPillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണൽ ആരംഭിക്കുന്ന ദിവസം മാറ്റുക",
   "changeEndOfPillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ അവസാനം മാറ്റുക",
-  "cannotUpdateToReplacePillSheet": "ഗുളിക ഷീറ്റ് മാറ്റിസ്ഥാപനം വഴി അപ്ഡേറ്റ് ചെയ്യാൻ കഴിയില്ല id: {id}",
+  "cannotUpdateToReplacePillSheet": "ഗുളിക സ്ട്രിപ്പ മാറ്റുമ്പോൾ വിവരങ്ങൾ പുതുക്കാനായില്ല. ID: {id}",
   "failedToGetPillSheetHistory": "മരുന്ന് കഴിക്കുന്ന ചരിത്ര വിവരങ്ങൾ ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു। {error}",
   "cancelTaking": "സേവനം റദ്ദാക്കുക",
   "deletedDiaryCannotBeRestored": "ഇല്ലാതാക്കിയ ഡയറി പുനഃസ്ഥാപിക്കാൻ കഴിയില്ല",

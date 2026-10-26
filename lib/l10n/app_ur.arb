@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "ٹائم زون {tz} میں تبدیل کر دیا گیا ہے",
   "changeStartOfPillDays": "گولی لینے کے دنوں کی گنتی کا آغاز تبدیل کریں",
   "changeEndOfPillDays": "گولی لینے کے دنوں کا اختتام تبدیل کریں",
-  "cannotUpdateToReplacePillSheet": "پل شیٹ کی تبدیلی سے اپڈیٹ نہیں ہو سکا آئی ڈی: {id}",
+  "cannotUpdateToReplacePillSheet": "گولیوں کی پٹی بدلتے وقت اپ ڈیٹ نہیں ہو سکا۔ ID: {id}",
   "failedToGetPillSheetHistory": "دوا کے استعمال کی تاریخ کی معلومات حاصل کرنے میں ناکامی۔ {error}",
   "cancelTaking": "دوا لینا منسوخ کریں",
   "deletedDiaryCannotBeRestored": "حذف شدہ ڈائری کو بحالی نہیں کیا جا سکتا",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "시간대가 {tz}(으)로 변경됐어요",
   "changeStartOfPillDays": "약 복용 일수 계산 시작일 변경",
   "changeEndOfPillDays": "복용 일수 종료 시점 변경",
-  "cannotUpdateToReplacePillSheet": "피임약 시트 교체로 업데이트할 수 없습니다 id: {id}",
+  "cannotUpdateToReplacePillSheet": "알약 시트를 교체하는 동안 업데이트하지 못했어요. ID: {id}",
   "failedToGetPillSheetHistory": "복용 기록 정보를 가져오는 데 실패했습니다. {error}",
   "cancelTaking": "복용 취소",
   "deletedDiaryCannotBeRestored": "삭제된 일기는 복구할 수 없습니다",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Mae'r parth amser wedi'i newid i {tz}",
   "changeStartOfPillDays": "Newid dechrau cyfrif y dyddiau cymryd y bilsen",
   "changeEndOfPillDays": "Newid diwedd y dyddiau cymryd y bilsen",
-  "cannotUpdateToReplacePillSheet": "Methu diweddaru trwy amnewid taflen pil id: {id}",
+  "cannotUpdateToReplacePillSheet": "Methu diweddaru wrth newid y stribed pils. ID: {id}",
   "failedToGetPillSheetHistory": "Methodd nôl gwybodaeth hanes cymryd. {error}",
   "cancelTaking": "Canslo cymryd",
   "deletedDiaryCannotBeRestored": "Ni ellir adfer dyddiaduron sydd wedi'u dileu",

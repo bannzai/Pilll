@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Vremenska zona je promijenjena na {tz}",
   "changeStartOfPillDays": "Promijenite početak brojanja dana uzimanja pilula",
   "changeEndOfPillDays": "Promijenite kraj dana uzimanja pilula",
-  "cannotUpdateToReplacePillSheet": "Ne može se ažurirati zamjena tabletke id: {id}",
+  "cannotUpdateToReplacePillSheet": "Ažuriranje pri zamjeni blistera nije uspjelo. ID: {id}",
   "failedToGetPillSheetHistory": "Neuspjelo je učitavanje podataka o istoriji uzimanja. {error}",
   "cancelTaking": "Otkaži uzimanje",
   "deletedDiaryCannotBeRestored": "Obrisani dnevnik se ne može vratiti",

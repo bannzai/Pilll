@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Časovni pas je spremenjen na {tz}",
   "changeStartOfPillDays": "Spremenite začetek štetja dni jemanja tablet",
   "changeEndOfPillDays": "Spremenite konec dni jemanja tablet",
-  "cannotUpdateToReplacePillSheet": "Ni mogoče posodobiti zaradi zamenjave tabletnega lista id: {id}",
+  "cannotUpdateToReplacePillSheet": "Pri zamenjavi ploščice podatkov ni bilo mogoče posodobiti. ID: {id}",
   "failedToGetPillSheetHistory": "Pridobivanje podatkov o zgodovini jemanja ni uspelo. {error}",
   "cancelTaking": "Prekliči jemanje",
   "deletedDiaryCannotBeRestored": "Izbrisanega dnevnika ni mogoče obnoviti",

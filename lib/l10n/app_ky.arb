@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Убакыт алкагы {tz} болуп өзгөртүлдү",
   "changeStartOfPillDays": "Таблетка ичкен күндөрдү эсептөөнүн башталышын өзгөртүңүз",
   "changeEndOfPillDays": "Таблетка ичүү күндөрүнүн аягын өзгөртүңүз",
-  "cannotUpdateToReplacePillSheet": "Таблетка парагын алмаштырып жаңырта албадык id: {id}",
+  "cannotUpdateToReplacePillSheet": "таблетка блистери алмаштырылганда жаңыртуу мүмкүн болгон жок. ID: {id}",
   "failedToGetPillSheetHistory": "Дары ичүү тарыхынын маалыматын алуу ийгиликсиз болду. {error}",
   "cancelTaking": "Кабыл алууну жокко чыгаруу",
   "deletedDiaryCannotBeRestored": "Өчүрүлгөн күндөлүк калыбына келтирилбейт",

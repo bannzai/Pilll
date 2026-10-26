@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "የሰዓት ሰቅ ወደ {tz} ተቀይሯል",
   "changeStartOfPillDays": "የክኒን መውሰድ ቀናት ቆጠራ መጀመሪያን ይቀይሩ",
   "changeEndOfPillDays": "የክኒን መውሰጃ ቀናት መጨረሻን ይቀይሩ",
-  "cannotUpdateToReplacePillSheet": "በክኒን ሽርት መተካት ማሻሻል አልተሳካም id: {id}",
+  "cannotUpdateToReplacePillSheet": "ክኒን ሉህ ሲቀየር ማዘመን አልተቻለም። ID: {id}",
   "failedToGetPillSheetHistory": "የመድሃኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",
   "cancelTaking": "መውሰድ መሰረዝ",
   "deletedDiaryCannotBeRestored": "የተሰረዘው ዕለታዊ ማስታወሻ መመለስ አይቻልም",

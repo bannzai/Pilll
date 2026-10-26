@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "La zona horària s'ha canviat a {tz}",
   "changeStartOfPillDays": "Canvia l'inici del recompte de dies de presa de la píndola",
   "changeEndOfPillDays": "Canvia el final dels dies de presa de la píndola",
-  "cannotUpdateToReplacePillSheet": "No es pot actualitzar la substitució del blíster id: {id}",
+  "cannotUpdateToReplacePillSheet": "No s'ha pogut actualitzar en substituir el blíster. ID: {id}",
   "failedToGetPillSheetHistory": "No s'ha pogut obtenir la informació de l'historial de presa. {error}",
   "cancelTaking": "Cancel·l'ús",
   "deletedDiaryCannotBeRestored": "El diari eliminat no es pot recuperar",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Η ζώνη ώρας άλλαξε σε {tz}",
   "changeStartOfPillDays": "Αλλαγή έναρξης μέτρησης ημερών λήψης του χαπιού",
   "changeEndOfPillDays": "Αλλαγή λήξης των ημερών λήψης χαπιού",
-  "cannotUpdateToReplacePillSheet": "Δεν είναι δυνατή η ενημέρωση λόγω αντικατάστασης φύλλου χαπιών id: {id}",
+  "cannotUpdateToReplacePillSheet": "Δεν ήταν δυνατή η ενημέρωση κατά την αντικατάσταση της καρτέλα χαπιών. ID: {id}",
   "failedToGetPillSheetHistory": "Απέτυχε η ανάκτηση των πληροφοριών ιστορικού λήψης. {error}",
   "cancelTaking": "Ακύρωση λήψης",
   "deletedDiaryCannotBeRestored": "Τα διαγραμμένα ημερολόγια δεν μπορούν να αποκατασταθούν",

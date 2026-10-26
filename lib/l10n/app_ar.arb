@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "تم تغيير المنطقة الزمنية إلى {tz}",
   "changeStartOfPillDays": "تغيير بداية عدّ أيام تناول الحبوب",
   "changeEndOfPillDays": "تغيير نهاية أيام تناول الحبوب",
-  "cannotUpdateToReplacePillSheet": "تعذر تحديث شريط الحبوب بسبب الاستبدال المعرف: {id}",
+  "cannotUpdateToReplacePillSheet": "تعذر التحديث عند استبدال الشريط. المعرّف: {id}",
   "failedToGetPillSheetHistory": "فشل في الحصول على بيانات سجل التناول. {error}",
   "cancelTaking": "إلغاء التناول",
   "deletedDiaryCannotBeRestored": "لا يمكن استرداد المذكرات المحذوفة",

@@ -414,7 +414,7 @@
   "timeZoneChangedTo": "Цагийн бүсийг {tz} болгож өөрчилсөн",
   "changeStartOfPillDays": "Эм уусан өдрүүдийг тоолж эхлэх өдрийг өөрчилнө үү",
   "changeEndOfPillDays": "Эм уух өдрүүдийн дуусах хугацааг өөрчлөх",
-  "cannotUpdateToReplacePillSheet": "Эмийн хуудас солихоор шинэчлэх боломжгүй id: {id}",
+  "cannotUpdateToReplacePillSheet": "эмийн блистер солих үед мэдээллийг шинэчилж чадсангүй. ID: {id}",
   "failedToGetPillSheetHistory": "Уулгын түүхийн мэдээллийг авахад амжилтгүй боллоо。{error}",
   "cancelTaking": "Уухыг цуцлах",
   "deletedDiaryCannotBeRestored": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
