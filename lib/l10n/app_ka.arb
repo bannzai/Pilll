@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "მიღების ჩანაწერის დამატება შეტყობინების ღილაკით",
   "quickRecordFeatureAppealPoint2": "დაასრულეთ აპის გახსნის გარეშე",
   "quickRecordFeatureAppealPoint3": "Premium-ზე გამოწერით შეგიძლიათ დაუყოვნებლივ გამოიყენოთ",
-  "creatingNewPillSheetFeatureAppealPoint1": "პლასტინის sheet-ის დასრულების დროს ავტომატურად გადართვა",
+  "creatingNewPillSheetFeatureAppealPoint1": "ავტომატური გადართვა, როცა აბების ბლისტერ დასრულდება",
   "creatingNewPillSheetFeatureAppealPoint2": "ხელით შექმნა საჭირო არ არის",
   "creatingNewPillSheetFeatureAppealPoint3": "პარამეტრების ჩანართში გადამრთველით გადართეთ",
   "alarmKitFeatureAppealPoint1": "სგრილენტ/კონცენტრაციის რეჟიმშიც რეკავს",

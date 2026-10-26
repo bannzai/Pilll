@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Lisää merkintä pillerilokiin ilmoituksen painikkeella",
   "quickRecordFeatureAppealPoint2": "Valmis avaamatta sovellusta",
   "quickRecordFeatureAppealPoint3": "Premiumilla voit käyttää sitä heti",
-  "creatingNewPillSheetFeatureAppealPoint1": "Automaattinen vaihto pillerikortin päätyttyä",
+  "creatingNewPillSheetFeatureAppealPoint1": "Vaihtuu automaattisesti, kun pilleriliuska loppuu",
   "creatingNewPillSheetFeatureAppealPoint2": "Manuaalista luontia ei tarvita",
   "creatingNewPillSheetFeatureAppealPoint3": "Vaihda asetukset-välilehden kytkimellä",
   "alarmKitFeatureAppealPoint1": "Soi myös äänettömässä/Fokus-tilassa",

@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Legg til i pillelogg med knappen i varselet",
   "quickRecordFeatureAppealPoint2": "Ferdig uten å åpne appen",
   "quickRecordFeatureAppealPoint3": "Med Premium kan du bruke det med en gang",
-  "creatingNewPillSheetFeatureAppealPoint1": "Automatisk bytte ved slutt på pilleark",
+  "creatingNewPillSheetFeatureAppealPoint1": "Bytter automatisk når pillebrettet er tomt",
   "creatingNewPillSheetFeatureAppealPoint2": "Ingen manuell opprettelse nødvendig",
   "creatingNewPillSheetFeatureAppealPoint3": "Bytt med bryteren i innstillingsfanen",
   "alarmKitFeatureAppealPoint1": "Ringer selv i stille/fokus-modus",

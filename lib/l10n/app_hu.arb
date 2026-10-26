@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Bejegyzés a tablettaszedési naplóba az értesítés gombjával",
   "quickRecordFeatureAppealPoint2": "Kész az alkalmazás megnyitása nélkül",
   "quickRecordFeatureAppealPoint3": "Premium-előfizetéssel azonnal használhatod",
-  "creatingNewPillSheetFeatureAppealPoint1": "Automatikus váltás tablettacsomag végén",
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatikus váltás, ha elfogy a tablettacsomag",
   "creatingNewPillSheetFeatureAppealPoint2": "Kézi létrehozásra nincs szükség.",
   "creatingNewPillSheetFeatureAppealPoint3": "A Beállítások fül kapcsolójával váltható",
   "alarmKitFeatureAppealPoint1": "Néma/fókusz módban is megszólal",

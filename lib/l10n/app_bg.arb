@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Запис на приема чрез бутона в известието",
   "quickRecordFeatureAppealPoint2": "Готово, без да отваряте приложението",
   "quickRecordFeatureAppealPoint3": "Можете да използвате това веднага с Premium",
-  "creatingNewPillSheetFeatureAppealPoint1": "Автоматично превключване при край на листа с хапчета",
+  "creatingNewPillSheetFeatureAppealPoint1": "Автоматично превключване след края на блистер",
   "creatingNewPillSheetFeatureAppealPoint2": "Не е необходима ръчна операция за създаване",
   "creatingNewPillSheetFeatureAppealPoint3": "Превключете с превключвателя в раздела Настройки",
   "alarmKitFeatureAppealPoint1": "Звъни дори в тих/режим на фокус",

@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Добавить запись в журнал приёма таблеток через уведомление",
   "quickRecordFeatureAppealPoint2": "Готово без открытия приложения",
   "quickRecordFeatureAppealPoint3": "С Premium вы можете пользоваться этим сразу",
-  "creatingNewPillSheetFeatureAppealPoint1": "Автоматическое переключение при завершении листа таблеток",
+  "creatingNewPillSheetFeatureAppealPoint1": "Автоматическое переключение, когда блистер закончится",
   "creatingNewPillSheetFeatureAppealPoint2": "Ручное создание не требуется",
   "creatingNewPillSheetFeatureAppealPoint3": "Переключите с помощью переключателя на вкладке «Настройки».",
   "alarmKitFeatureAppealPoint1": "Звучит даже в беззвучном режиме и режиме фокусировки",

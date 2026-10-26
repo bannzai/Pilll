@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Eintrag im Einnahmeprotokoll über die Benachrichtigung",
   "quickRecordFeatureAppealPoint2": "Erledigt, ohne die App zu öffnen",
   "quickRecordFeatureAppealPoint3": "Mit Premium kannst du es sofort nutzen",
-  "creatingNewPillSheetFeatureAppealPoint1": "Automatischer Wechsel bei Pill-Sheet-Ende",
+  "creatingNewPillSheetFeatureAppealPoint1": "Automatischer Wechsel, wenn der Pillenblister aufgebraucht ist",
   "creatingNewPillSheetFeatureAppealPoint2": "Keine manuelle Erstellung erforderlich",
   "creatingNewPillSheetFeatureAppealPoint3": "Über den Schalter im Einstellungs-Tab umschalten",
   "alarmKitFeatureAppealPoint1": "Klingt auch im Lautlos-/Fokusmodus",

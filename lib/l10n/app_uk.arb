@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Додайте запис прийому через кнопку в сповіщенні",
   "quickRecordFeatureAppealPoint2": "Готово без відкриття застосунку",
   "quickRecordFeatureAppealPoint3": "З Premium ви можете користуватися цим одразу",
-  "creatingNewPillSheetFeatureAppealPoint1": "Переход після закінчення блістера",
+  "creatingNewPillSheetFeatureAppealPoint1": "Автоматичне перемикання, коли блістер закінчиться",
   "creatingNewPillSheetFeatureAppealPoint2": "Не потрібно створювати вручну",
   "creatingNewPillSheetFeatureAppealPoint3": "Перемикайте за допомогою перемикача на вкладці «Налаштування»",
   "alarmKitFeatureAppealPoint1": "Сигнал лунає навіть у беззвучному/режимі концентрації",

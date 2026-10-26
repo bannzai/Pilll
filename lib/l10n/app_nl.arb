@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Voeg een innameregistratie toe via de knop in de melding",
   "quickRecordFeatureAppealPoint2": "Klaar zonder de app te openen",
   "quickRecordFeatureAppealPoint3": "Met Premium kun je het meteen gebruiken",
-  "creatingNewPillSheetFeatureAppealPoint1": "Automatisch wisselen bij einde pilblad",
+  "creatingNewPillSheetFeatureAppealPoint1": "Schakelt automatisch over als de pillenstrip op is",
   "creatingNewPillSheetFeatureAppealPoint2": "Geen handmatige aanmaak nodig",
   "creatingNewPillSheetFeatureAppealPoint3": "Schakel in de instellingentab",
   "alarmKitFeatureAppealPoint1": "Gaat ook af in stille/focusmodus",

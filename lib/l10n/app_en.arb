@@ -538,7 +538,7 @@
   "quickRecordFeatureAppealPoint1": "Add to your pill log from the notification",
   "quickRecordFeatureAppealPoint2": "Done without opening the app",
   "quickRecordFeatureAppealPoint3": "Use it right away with Premium",
-  "creatingNewPillSheetFeatureAppealPoint1": "Auto-switch on pill sheet completion",
+  "creatingNewPillSheetFeatureAppealPoint1": "Switches automatically when the pill pack ends",
   "creatingNewPillSheetFeatureAppealPoint2": "No manual creation needed",
   "creatingNewPillSheetFeatureAppealPoint3": "Toggle with the switch in the Settings tab",
   "alarmKitFeatureAppealPoint1": "Rings even in Silent/Focus Mode",
