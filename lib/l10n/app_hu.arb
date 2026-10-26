@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Adj meg legalább 0 karaktert",
   "changeDailyNotificationMessage": "Módosíthatod az értesítés szövegét, amely akkor jelenik meg, ha időben szeded be a tablettát",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Aznap 9:00-kor értesítést kapok",
+  "receiveDailyNotificationAt9AM": "Értesítés kérése aznap 9:00-kor",
   "save": "Mentés",
   "physicalCondition": "Közérzet",
   "deletedDiaryCannotBeRecovered": "A törölt napló nem állítható vissza",

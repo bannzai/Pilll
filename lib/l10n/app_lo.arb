@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "ກະລຸນາປ້ອນຢ່າງໜ້ອຍ 0 ຕົວອັກສອນ",
   "changeDailyNotificationMessage": "ສາມາດປ່ຽນຂໍ້ຄວາມແຈ້ງເຕືອນທີ່ສະແດງເມື່ອກິນຢາເມັດຕາມເວລາໄດ້",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນເວລາ 9:00 ໃນມື້ນັ້ນ",
+  "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນໃນມື້ດຽວກັນເວລາ 9:00 ໂມງເຊົ້າ",
   "save": "ບັນທຶກ",
   "physicalCondition": "ສຸຂະພາບ",
   "deletedDiaryCannotBeRecovered": "ບັນທຶກປະຈຳວັນທີ່ຖືກລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",

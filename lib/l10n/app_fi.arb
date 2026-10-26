@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Kirjoita vähintään 0 merkkiä",
   "changeDailyNotificationMessage": "Voit muuttaa ilmoitusviestiä, joka näytetään, kun otat pillerin ajallaan",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Saa ilmoituksen samana päivänä kello 9:00",
+  "receiveDailyNotificationAt9AM": "Saat ilmoituksen samana päivänä klo 9.00",
   "save": "Tallenna",
   "physicalCondition": "Olo",
   "deletedDiaryCannotBeRecovered": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",

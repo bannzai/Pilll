@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Παρακαλούμε εισαγάγετε τουλάχιστον 0 χαρακτήρες",
   "changeDailyNotificationMessage": "Μπορείτε να αλλάξετε το μήνυμα ειδοποίησης που εμφανίζεται όταν παίρνετε το χάπι στην ώρα του",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια μέρα",
+  "receiveDailyNotificationAt9AM": "Λήψη ειδοποίησης την ίδια ημέρα στις 9:00 π.μ.",
   "save": "Αποθήκευση",
   "physicalCondition": "υγεία",
   "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να επαναφερθεί",

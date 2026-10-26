@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeiche ii",
   "changeDailyNotificationMessage": "Du chasch d Nachricht i de Erinnerig ändere, wo aazeigt wird, wänn du dini Pille rächtziitig gnoo hesch",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Hüt um 9:00 Benachrichtig übercho",
+  "receiveDailyNotificationAt9AM": "Am gliiche Tag am 9:00 e Mitteilige übercho",
   "save": "spichere",
   "physicalCondition": "Befinde",
   "deletedDiaryCannotBeRecovered": "Glöschti Tagebüecher chönd nöd wiederhergestellt werde",

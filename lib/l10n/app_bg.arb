@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Моля, въведете поне 0 знака",
   "changeDailyNotificationMessage": "Можете да промените текста на известието, което се показва, когато сте взели хапчето навреме",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Уведомление в 9:00 в деня",
+  "receiveDailyNotificationAt9AM": "Получавайте известие в същия ден в 9:00 ч.",
   "save": "Запази",
   "physicalCondition": "самочувствие",
   "deletedDiaryCannotBeRecovered": "Изтритият дневник не може да бъде възстановен",

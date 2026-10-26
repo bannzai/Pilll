@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Unesite barem 0 znakova",
   "changeDailyNotificationMessage": "Možete promijeniti tekst obavijesti koja se prikazuje kada uzmete pilulu na vrijeme",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Primiti obavijest u 9:00 istog dana",
+  "receiveDailyNotificationAt9AM": "Primajte obavijest istog dana u 9:00",
   "save": "Spremi",
   "physicalCondition": "stanje",
   "deletedDiaryCannotBeRecovered": "Obrisani dnevnik se ne može vratiti",

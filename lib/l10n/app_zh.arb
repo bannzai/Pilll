@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "请至少输入0个字符",
   "changeDailyNotificationMessage": "按时服药时显示的通知内容可以修改",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "当天9:00接收通知",
+  "receiveDailyNotificationAt9AM": "当天上午9:00接收通知",
   "save": "保存",
   "physicalCondition": "身体状况",
   "deletedDiaryCannotBeRecovered": "删除的日记无法恢复",

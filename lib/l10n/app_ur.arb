@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "براہِ کرم کم از کم 0 حروف درج کریں",
   "changeDailyNotificationMessage": "گولی وقت پر لینے کی صورت میں دکھایا جانے والا اطلاع کا پیغام آپ بدل سکتی ہیں",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "اسی دن ۹:۰۰ بجے نوٹیفیکیشن حاصل کریں",
+  "receiveDailyNotificationAt9AM": "اسی دن صبح 9:00 بجے اطلاع حاصل کریں",
   "save": "محفوظ کریں",
   "physicalCondition": "طبیعت",
   "deletedDiaryCannotBeRecovered": "حذف شدہ ڈائری کو بحال نہیں کیا جا سکتا",

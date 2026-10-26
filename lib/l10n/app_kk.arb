@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Кемінде 0 таңба енгізіңіз",
   "changeDailyNotificationMessage": "Дәріні уақытында қабылдағанда көрсетілетін хабарландыру мәтінін өзгерте аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарландыру алу",
+  "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарлама алу",
   "save": "Сақтау",
   "physicalCondition": "самсезім",
   "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбалары қалпына келтірілмейді",

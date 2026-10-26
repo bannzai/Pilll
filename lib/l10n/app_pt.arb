@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Digite pelo menos 0 caracteres",
   "changeDailyNotificationMessage": "Você pode alterar a mensagem da notificação exibida quando toma a pílula no horário",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Receber notificação às 9:00 do mesmo dia",
+  "receiveDailyNotificationAt9AM": "Receba uma notificação no mesmo dia às 9h",
   "save": "Salvar",
   "physicalCondition": "Bem-estar",
   "deletedDiaryCannotBeRecovered": "Os diários excluídos não podem ser restaurados",

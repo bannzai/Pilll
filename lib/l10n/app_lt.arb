@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Įveskite bent 0 simbolių",
   "changeDailyNotificationMessage": "Galite pakeisti pranešimo tekstą, kuris rodomas, kai laiku išgeriate tabletę",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Gauti priminimą 9:00 val. tą dieną",
+  "receiveDailyNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
   "save": "Išsaugoti",
   "physicalCondition": "Savijauta",
   "deletedDiaryCannotBeRecovered": "Ištrinti dienoraščiai negali būti atkurti",

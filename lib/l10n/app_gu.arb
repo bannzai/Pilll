@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "કૃપા કરીને ઓછામાં ઓછા 0 અક્ષરો દાખલ કરો",
   "changeDailyNotificationMessage": "તમે ગોળી સમયસર લો ત્યારે દેખાતો સૂચનાનો સંદેશ બદલી શકો છો",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "આજે સવારે ૯:૦૦ વાગ્યે સૂચના મેળવો",
+  "receiveDailyNotificationAt9AM": "તે જ દિવસે સવારે 9:00 વાગ્યે સૂચના મેળવો",
   "save": "સાચવો",
   "physicalCondition": "તબીયત",
   "deletedDiaryCannotBeRecovered": "કાઢી નાખેલી ડાયરી પાછી મેળવી શકાતી નથી",

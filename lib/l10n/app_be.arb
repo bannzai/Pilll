@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Калі ласка, увядзіце не менш за 0 сімвалаў",
   "changeDailyNotificationMessage": "Вы можаце змяніць тэкст апавяшчэння, якое з’яўляецца, калі вы прынялі пігулку своечасова",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Апавяшчэнне ў 9:00 у дзень прыёму",
+  "receiveDailyNotificationAt9AM": "Атрымліваць апавяшчэнне ў той жа дзень а 9:00",
   "save": "Захаваць",
   "physicalCondition": "самачуванне",
   "deletedDiaryCannotBeRecovered": "Выдалены дзённік немагчыма аднавіць",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "कृपया कम्तीमा 0 अक्षर प्रविष्ट गर्नुहोस्",
   "changeDailyNotificationMessage": "चक्की समयमा खाँदा देखिने सूचनाको सन्देश तपाईंले परिवर्तन गर्न सक्नुहुन्छ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "आज ९:०० बजे सूचना प्राप्त गर्नुहोस्",
+  "receiveDailyNotificationAt9AM": "सोही दिन बिहान 9:00 बजे सूचना प्राप्त गर्नुहोस्",
   "save": "सेभ गर्नुहोस्",
   "physicalCondition": "स्वास्थ्य स्थिति",
   "deletedDiaryCannotBeRecovered": "मेटाइएका डायरीहरू फिर्ता ल्याउन सकिंदैन",

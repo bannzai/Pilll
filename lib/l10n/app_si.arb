@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "කරුණාකර අවම වශයෙන් අක්ෂර 0ක් ඇතුළත් කරන්න",
   "changeDailyNotificationMessage": "පෙත්ත නියමිත වේලාවට ගත් විට පෙන්වන දැනුම්දීම් පණිවිඩය ඔබට වෙනස් කළ හැක",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "දිනයේම 9:00 ට දැනුම්දීම ලබා ගන්න",
+  "receiveDailyNotificationAt9AM": "එදිනම උදෑසන 9:00ට දැනුම්දීමක් ලබාගන්න",
   "save": "සුරකින්න",
   "physicalCondition": "ශරීර තත්වය",
   "deletedDiaryCannotBeRecovered": "මකා දමන ලද දිනපොත් ප්‍රතිසාධනය කළ නොහැකිය",

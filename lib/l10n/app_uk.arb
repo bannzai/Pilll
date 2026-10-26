@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Будь ласка, введіть щонайменше 0 символів",
   "changeDailyNotificationMessage": "Ви можете змінити текст сповіщення, яке з’являється, коли ви вчасно приймаєте пігулку",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Отримувати сповіщення о 9:00 того дня",
+  "receiveDailyNotificationAt9AM": "Отримувати сповіщення того ж дня о 9:00",
   "save": "Зберегти",
   "physicalCondition": "самочуття",
   "deletedDiaryCannotBeRecovered": "Видалені записи щоденника не можна відновити",

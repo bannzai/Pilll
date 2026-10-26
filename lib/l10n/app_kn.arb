@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ 0 ಅಕ್ಷರಗಳನ್ನು ನಮೂದಿಸಿ",
   "changeDailyNotificationMessage": "ನೀವು ಮಾತ್ರೆಯನ್ನು ಸಮಯಕ್ಕೆ ತೆಗೆದುಕೊಂಡಾಗ ಕಾಣಿಸುವ ಅಧಿಸೂಚನೆಯ ಸಂದೇಶವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "ಅದೇ ದಿನ 9:00 ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸಿ",
+  "receiveDailyNotificationAt9AM": "ಅದೇ ದಿನ ಬೆಳಿಗ್ಗೆ 9:00ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಪಡೆಯಿರಿ",
   "save": "ಉಳಿಸು",
   "physicalCondition": "ಆರೋಗ್ಯ ಸ್ಥಿತಿ",
   "deletedDiaryCannotBeRecovered": "ಅಳಿಸಲಾದ ಡೈರಿ ಎಂಟ್ರಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",

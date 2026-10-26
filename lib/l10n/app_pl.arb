@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Wpisz co najmniej 0 znaków",
   "changeDailyNotificationMessage": "Możesz zmienić treść powiadomienia wyświetlanego po przyjęciu tabletki na czas",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Otrzymuj powiadomienia o 9:00 tego dnia",
+  "receiveDailyNotificationAt9AM": "Otrzymuj powiadomienie tego samego dnia o 9:00",
   "save": "Zapisz",
   "physicalCondition": "Samopoczucie",
   "deletedDiaryCannotBeRecovered": "Usuniętych wpisów w dzienniku nie można przywrócić",

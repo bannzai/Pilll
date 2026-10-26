@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Introdueix almenys 0 caràcters",
   "changeDailyNotificationMessage": "Pots canviar el text de la notificació que apareix quan has pres la píndola a l’hora",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Rebre notificació a les 9:00 del dia",
+  "receiveDailyNotificationAt9AM": "Rep una notificació el mateix dia a les 9:00",
   "save": "Desar",
   "physicalCondition": "Estat de salut",
   "deletedDiaryCannotBeRecovered": "Els diaris esborrats no es poden recuperar",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Introduce polo menos 0 caracteres",
   "changeDailyNotificationMessage": "Podes cambiar a mensaxe da notificación que aparece cando tomas a pílula á hora",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Recibir notificación ás 9:00 do día",
+  "receiveDailyNotificationAt9AM": "Recibe unha notificación o mesmo día ás 9:00",
   "save": "Gardar",
   "physicalCondition": "Saúde",
   "deletedDiaryCannotBeRecovered": "Os diarios eliminados non se poden restaurar",

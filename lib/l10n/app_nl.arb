@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Vul minimaal 0 tekens in",
   "changeDailyNotificationMessage": "Je kunt de melding aanpassen die verschijnt als je je pil op tijd hebt ingenomen",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Ontvang melding om 9:00 op de dag",
+  "receiveDailyNotificationAt9AM": "Ontvang dezelfde dag om 9:00 een melding",
   "save": "Opslaan",
   "physicalCondition": "Welzijn",
   "deletedDiaryCannotBeRecovered": "Verwijderde dagboeken kunnen niet worden hersteld",

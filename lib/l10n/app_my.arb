@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "အနည်းဆုံး စာလုံး 0 လုံး ထည့်ပါ",
   "changeDailyNotificationMessage": "ဆေးလုံးကို အချိန်မီ သောက်ပြီးတဲ့အခါ ပြသမယ့် အသိပေးစာကို ပြောင်းနိုင်ပါတယ်",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "နံနက် ၉:၀၀ သတိပေးချက် လက်ခံရန်",
+  "receiveDailyNotificationAt9AM": "ထိုနေ့ နံနက် 9:00 နာရီတွင် အကြောင်းကြားချက် ရယူပါ",
   "save": "သိမ်းရန်",
   "physicalCondition": "ကိုယ်အခြေအနေ",
   "deletedDiaryCannotBeRecovered": "ဖျက်လိုက်သောဒိုင်ယာရီများကို ပြန်လည်ရယူ၍မရပါ",

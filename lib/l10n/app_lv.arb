@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Lūdzu, ievadiet vismaz 0 rakstzīmes",
   "changeDailyNotificationMessage": "Varat mainīt paziņojuma tekstu, kas tiek rādīts, kad laikus lietojat tableti",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Saņemt paziņojumu dienā plkst. 9:00",
+  "receiveDailyNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9.00",
   "save": "Saglabāt",
   "physicalCondition": "Pašsajūta",
   "deletedDiaryCannotBeRecovered": "Dzēstos dienasgrāmatas ierakstus nevar atjaunot",

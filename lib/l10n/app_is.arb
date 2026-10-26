@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Sláðu inn að minnsta kosti 0 stafi",
   "changeDailyNotificationMessage": "Þú getur breytt tilkynningunni sem birtist þegar þú tekur pilluna á réttum tíma",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Fá tilkynningu klukkan 9:00 sama dag",
+  "receiveDailyNotificationAt9AM": "Fá tilkynningu sama dag kl. 9:00",
   "save": "Vista",
   "physicalCondition": "líðan",
   "deletedDiaryCannotBeRecovered": "Ekki er hægt að endurheimta eydda dagbók",

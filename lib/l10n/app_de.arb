@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeichen ein",
   "changeDailyNotificationMessage": "Du kannst den Benachrichtigungstext ändern, der angezeigt wird, wenn du deine Pille pünktlich eingenommen hast",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Benachrichtigung um 9:00 Uhr am selben Tag",
+  "receiveDailyNotificationAt9AM": "Am selben Tag um 9:00 Uhr eine Benachrichtigung erhalten",
   "save": "Speichern",
   "physicalCondition": "Befinden",
   "deletedDiaryCannotBeRecovered": "Gelöschte Tagebucheinträge können nicht wiederhergestellt werden.",

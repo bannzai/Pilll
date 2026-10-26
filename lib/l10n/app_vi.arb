@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Vui lòng nhập ít nhất 0 ký tự",
   "changeDailyNotificationMessage": "Bạn có thể thay đổi nội dung thông báo hiển thị khi uống thuốc đúng giờ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Nhận thông báo vào 9:00 sáng cùng ngày",
+  "receiveDailyNotificationAt9AM": "Nhận thông báo lúc 9:00 sáng cùng ngày",
   "save": "Lưu",
   "physicalCondition": "thể trạng",
   "deletedDiaryCannotBeRecovered": "Nhật ký đã xóa không thể khôi phục lại được",

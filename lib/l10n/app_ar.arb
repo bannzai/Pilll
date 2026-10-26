@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "يرجى إدخال 0 أحرف على الأقل",
   "changeDailyNotificationMessage": "يمكنكِ تغيير نص الإشعار الذي يظهر عند تناول الحبة في موعدها",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "تلقي إشعار في نفس اليوم الساعة 9:00 صباحاً",
+  "receiveDailyNotificationAt9AM": "تلقي إشعارًا في اليوم نفسه الساعة 9:00 صباحًا",
   "save": "حفظ",
   "physicalCondition": "حالة صحية",
   "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات بعد حذفها",

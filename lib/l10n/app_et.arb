@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Sisesta vähemalt 0 tähemärki",
   "changeDailyNotificationMessage": "Saad muuta teavituse sõnumit, mis kuvatakse, kui võtad pilli õigel ajal",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Saa teatis kell 9:00",
+  "receiveDailyNotificationAt9AM": "Saa samal päeval kell 9:00 teavitus",
   "save": "Salvesta",
   "physicalCondition": "enesetunne",
   "deletedDiaryCannotBeRecovered": "Kustutatud päevikut ei saa taastada",

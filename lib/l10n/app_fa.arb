@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "لطفاً دست‌کم ۰ نویسه وارد کنید",
   "changeDailyNotificationMessage": "می‌توانید متن اعلانی را که هنگام مصرف به‌موقع قرص نمایش داده می‌شود، تغییر دهید",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "دریافت اطلاع‌رسانی در ساعت 9:00 همان روز",
+  "receiveDailyNotificationAt9AM": "دریافت اعلان در همان روز، ساعت ۹:۰۰ صبح",
   "save": "ذخیره",
   "physicalCondition": "حال عمومی",
   "deletedDiaryCannotBeRecovered": "یادداشت‌های حذف شده قابل بازیابی نیستند",

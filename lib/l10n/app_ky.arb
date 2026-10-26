@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Кеминде 0 белги киргизиңиз",
   "changeDailyNotificationMessage": "Таблетканы убагында ичкениңизде көрсөтүлүүчү билдирүүнүн текстин өзгөртө аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Ошол күнү саат 9:00де эскертүү алуу",
+  "receiveDailyNotificationAt9AM": "Ошол эле күнү саат 9:00дө билдирүү алыңыз",
   "save": "Сактоо",
   "physicalCondition": "ден соолук",
   "deletedDiaryCannotBeRecovered": "Өчүрүлгөн күндөлүктү калыбына келтирүү мүмкүн эмес",

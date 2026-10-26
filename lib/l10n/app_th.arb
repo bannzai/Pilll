@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "กรุณากรอกอย่างน้อย 0 ตัวอักษรค่ะ",
   "changeDailyNotificationMessage": "เปลี่ยนข้อความแจ้งเตือนที่แสดงเมื่อทานยาตรงเวลาได้ค่ะ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันเดียวกัน",
+  "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนในวันเดียวกันเวลา 9:00 น.",
   "save": "บันทึก",
   "physicalCondition": "สุขภาพ",
   "deletedDiaryCannotBeRecovered": "บันทึกที่ถูกลบแล้วไม่สามารถกู้คืนได้",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Ве молиме, внесете најмалку 0 знаци",
   "changeDailyNotificationMessage": "Можете да го промените текстот на известувањето што се прикажува кога ќе ја земете таблета навреме",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Известување во 9:00 истиот ден",
+  "receiveDailyNotificationAt9AM": "Примање известување истиот ден во 9:00",
   "save": "зачувај",
   "physicalCondition": "самочувство",
   "deletedDiaryCannotBeRecovered": "Избришаниот дневник не може да се врати",

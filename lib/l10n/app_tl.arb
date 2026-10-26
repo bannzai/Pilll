@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Pakilagay po ang hindi bababa sa 0 character",
   "changeDailyNotificationMessage": "Maaari ninyong baguhin ang mensahe ng abiso kapag nainom ninyo ang pildoras sa oras",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Tumanggap ng paalala sa 9:00 AM ngayong araw",
+  "receiveDailyNotificationAt9AM": "Makatanggap ng abiso sa araw ding iyon nang 9:00 ng umaga",
   "save": "I-save",
   "physicalCondition": "Pakiramdam",
   "deletedDiaryCannotBeRecovered": "Hindi na maibabalik ang naburang diary",

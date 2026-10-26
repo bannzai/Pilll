@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Indtast mindst 0 tegn",
   "changeDailyNotificationMessage": "Du kan ændre beskeden i notifikationen, der vises, når du har taget din p-pille til tiden",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Få besked kl. 9:00 samme dag",
+  "receiveDailyNotificationAt9AM": "Få en notifikation samme dag kl. 9:00",
   "save": "Gem",
   "physicalCondition": "befindende",
   "deletedDiaryCannotBeRecovered": "Slettede dagbogsindlæg kan ikke gendannes",

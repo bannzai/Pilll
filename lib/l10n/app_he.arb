@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "יש להזין לפחות 0 תווים",
   "changeDailyNotificationMessage": "אפשר לשנות את הודעת ההתראה שמופיעה כשהגלולה ניטלת בזמן",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "קבלת התראה ב-9:00 ביום",
+  "receiveDailyNotificationAt9AM": "קבלת התראה באותו יום בשעה 9:00 בבוקר",
   "save": "שמור",
   "physicalCondition": "רווחה",
   "deletedDiaryCannotBeRecovered": "לא ניתן לשחזר יומנים שנמחקו",

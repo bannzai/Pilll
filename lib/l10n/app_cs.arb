@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Zadejte prosím alespoň 0 znaků",
   "changeDailyNotificationMessage": "Můžete změnit text oznámení, které se zobrazí, když si vezmete pilulku včas",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Upozornění v 9:00 tentýž den",
+  "receiveDailyNotificationAt9AM": "Dostávat oznámení tentýž den v 9:00",
   "save": "Uložit",
   "physicalCondition": "Zdravotní stav",
   "deletedDiaryCannotBeRecovered": "Smazané deníky nelze obnovit",

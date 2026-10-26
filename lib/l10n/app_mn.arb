@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Дор хаяж 0 тэмдэгт оруулна уу",
   "changeDailyNotificationMessage": "Эмээ цагт нь уусан үед харагдах мэдэгдлийн бичвэрийг өөрчилж болно",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Тухайн өдрийн 9:00-д мэдэгдэл хүлээн авах",
+  "receiveDailyNotificationAt9AM": "Тухайн өдрийн 9:00 цагт мэдэгдэл авах",
   "save": "Хадгалах",
   "physicalCondition": "биеийн байдал",
   "deletedDiaryCannotBeRecovered": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Skriv inn minst 0 tegn",
   "changeDailyNotificationMessage": "Du kan endre varselmeldingen som vises når du har tatt p-pillen i tide",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Motta varsling samme dag kl. 09:00",
+  "receiveDailyNotificationAt9AM": "Få et varsel samme dag kl. 09:00",
   "save": "Lagre",
   "physicalCondition": "befinnende",
   "deletedDiaryCannotBeRecovered": "Slettede dagbokinnlegg kan ikke gjenopprettes",

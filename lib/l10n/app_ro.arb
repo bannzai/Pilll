@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Introdu cel puțin 0 caractere",
   "changeDailyNotificationMessage": "Poți schimba mesajul notificării afișate când iei pilula la timp",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Primește notificare la 9:00 în ziua respectivă",
+  "receiveDailyNotificationAt9AM": "Primește o notificare în aceeași zi la 9:00",
   "save": "Salvează",
   "physicalCondition": "Starea fizică",
   "deletedDiaryCannotBeRecovered": "Jurnalele șterse nu pot fi recuperate",

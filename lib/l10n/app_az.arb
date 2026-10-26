@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Zəhmət olmasa, ən azı 0 simvol daxil edin",
   "changeDailyNotificationMessage": "Həbi vaxtında qəbul etdiyiniz zaman göstərilən bildiriş mətnini dəyişə bilərsiniz",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş almaq",
+  "receiveDailyNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş alın",
   "save": "Saxla",
   "physicalCondition": "Hal-həval",
   "deletedDiaryCannotBeRecovered": "Silinmiş gündəlik bərpa edilə bilməz",

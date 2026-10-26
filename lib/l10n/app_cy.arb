@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Rhowch o leiaf 0 nod, os gwelwch yn dda",
   "changeDailyNotificationMessage": "Gallwch newid neges yr hysbysiad a ddangosir pan fyddwch wedi cymryd y bilsen ar amser",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Cael hysbysiad am 9:00 ar y diwrnod",
+  "receiveDailyNotificationAt9AM": "Cael hysbysiad am 9:00 y bore ar yr un diwrnod",
   "save": "Cadw",
   "physicalCondition": "iechyd",
   "deletedDiaryCannotBeRecovered": "Ni ellir adfer y dyddiadur ar ôl ei ddileu",

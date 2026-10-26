@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Sila masukkan sekurang-kurangnya 0 aksara",
   "changeDailyNotificationMessage": "Anda boleh menukar mesej pemberitahuan yang dipaparkan apabila pil diambil tepat pada masanya",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari itu",
+  "receiveDailyNotificationAt9AM": "Terima pemberitahuan pada hari yang sama, pukul 9:00 pagi",
   "save": "Simpan",
   "physicalCondition": "Keadaan Badan",
   "deletedDiaryCannotBeRecovered": "Diari yang telah dipadamkan tidak dapat dipulihkan",

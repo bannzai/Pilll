@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Vnesite vsaj 0 znakov",
   "changeDailyNotificationMessage": "Spremenite lahko besedilo obvestila, ki se prikaže, ko tableto vzamete pravočasno",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Obvestilo isti dan ob 9:00",
+  "receiveDailyNotificationAt9AM": "Prejemajte obvestilo isti dan ob 9:00",
   "save": "Shrani",
   "physicalCondition": "počutje",
   "deletedDiaryCannotBeRecovered": "Izbrisani dnevniški zapisi se ne morejo obnoviti",

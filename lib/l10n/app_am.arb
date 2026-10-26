@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "እባክዎ ቢያንስ 0 ቁምፊዎችን ያስገቡ",
   "changeDailyNotificationMessage": "ክኒን በሰዓቱ ሲወስዱ የሚታየውን የማሳወቂያ መልእክት መቀየር ይችላሉ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "ዛሬ በ9:00 ማሳወቂያ ይቀበላል",
+  "receiveDailyNotificationAt9AM": "በዚያው ቀን ጠዋት 9:00 ላይ ማሳወቂያ ይቀበሉ",
   "save": "አስቀምጥ",
   "physicalCondition": "ጤንነት",
   "deletedDiaryCannotBeRecovered": "የተሰረዘ ማስታወሻ መመለስ አይቻልም",

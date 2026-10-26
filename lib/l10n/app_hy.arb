@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Խնդրում ենք մուտքագրել առնվազն 0 նիշ",
   "changeDailyNotificationMessage": "Դուք կարող եք փոխել ծանուցման տեքստը, որը ցուցադրվում է, երբ հաբը ժամանակին եք ընդունում",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Ծանուցում ստանալ այդ օրը ժամը 9:00-ին",
+  "receiveDailyNotificationAt9AM": "Ստանալ ծանուցում նույն օրը՝ ժամը 9:00-ին",
   "save": "Պահպանել",
   "physicalCondition": "ինքնազգացում",
   "deletedDiaryCannotBeRecovered": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",

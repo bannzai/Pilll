@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Idatzi gutxienez 0 karaktere",
   "changeDailyNotificationMessage": "Pilula garaiz hartu duzunean agertzen den jakinarazpenaren mezua alda dezakezu",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Egunean 9:00etan jakinarazpena jaso",
+  "receiveDailyNotificationAt9AM": "Jaso jakinarazpena egun berean, 9:00etan",
   "save": "Gorde",
   "physicalCondition": "osasunegoera",
   "deletedDiaryCannotBeRecovered": "Ezabatutako egunkaria ezin da berreskuratu",

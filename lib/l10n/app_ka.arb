@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "გთხოვთ, შეიყვანოთ სულ მცირე 0 სიმბოლო",
   "changeDailyNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი, რომელიც აბის დროულად მიღებისას გამოჩნდება",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "იმავე დღეს 9:00 საათზე შეტყობინება",
+  "receiveDailyNotificationAt9AM": "შეტყობინების მიღება იმავე დღეს, 9:00-ზე",
   "save": "შენახვა",
   "physicalCondition": "კონდიცია",
   "deletedDiaryCannotBeRecovered": "წაშლილი დღიურის აღდგენა შეუძლებელია",

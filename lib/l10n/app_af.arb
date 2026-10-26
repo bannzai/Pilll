@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Voer asseblief minstens 0 karakters in",
   "changeDailyNotificationMessage": "Jy kan die kennisgewingboodskap verander vir wanneer jy jou pil betyds geneem het",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Ontvang kennisgewing om 9:00 dieselfde dag",
+  "receiveDailyNotificationAt9AM": "Ontvang dieselfde dag om 9:00 ’n kennisgewing",
   "save": "Stoor",
   "physicalCondition": "Gesondheid",
   "deletedDiaryCannotBeRecovered": "Geskrapte dagboekinskrywings kan nie herstel word nie",

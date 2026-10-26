@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Ange minst 0 tecken",
   "changeDailyNotificationMessage": "Du kan ändra meddelandet som visas när du har tagit ditt p-piller i tid",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Notifiering samma dag kl. 09:00",
+  "receiveDailyNotificationAt9AM": "Få en avisering samma dag kl. 9.00",
   "save": "Spara",
   "physicalCondition": "mående",
   "deletedDiaryCannotBeRecovered": "Borttagna dagboksanteckningar kan inte återställas",

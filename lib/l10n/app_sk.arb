@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Zadajte aspoň 0 znakov",
   "changeDailyNotificationMessage": "Môžete zmeniť text upozornenia, ktoré sa zobrazí, keď si vezmete tabletku načas",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Dostať upozornenie v ten deň o 9:00",
+  "receiveDailyNotificationAt9AM": "Dostávať upozornenie v ten istý deň o 9:00",
   "save": "Uložiť",
   "physicalCondition": "Samopocit",
   "deletedDiaryCannotBeRecovered": "Vymazané denníky sa nedajú obnoviť",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Iltimos, kamida 0 ta belgi kiriting",
   "changeDailyNotificationMessage": "Tabletkani vaqtida ichganingizda ko‘rsatiladigan bildirishnoma matnini o‘zgartirishingiz mumkin",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Shu kun soat 9:00 da bildirishnoma olish",
+  "receiveDailyNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
   "save": "Saqlash",
   "physicalCondition": "Kayfiyat",
   "deletedDiaryCannotBeRecovered": "O'chirilgan kundalikni tiklash mumkin emas",

@@ -246,7 +246,7 @@
   "enterAtLeastOneCharacter": "Sicela ufake okungenani izinhlamvu ezingu-0",
   "changeDailyNotificationMessage": "Ungawushintsha umlayezo wesaziso ovela uma uphuze iphilisi ngesikhathi",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-  "receiveDailyNotificationAt9AM": "Thola isaziso ngo-9:00 ekuseni",
+  "receiveDailyNotificationAt9AM": "Thola isaziso ngalo lolo suku ngo-9:00 ekuseni",
   "save": "Gcina",
   "physicalCondition": "isimo somzimba",
   "deletedDiaryCannotBeRecovered": "Idayari elahliweyo ayikwazi ukubuyiselwa",
