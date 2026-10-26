@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "自动添加药板",
   "creatingNewPillSheetFeatureAppealShortDescription": "自动生成下一板药",
   "creatingNewPillSheetFeatureAppealHeadline": "自动创建下一板药板",
-  "creatingNewPillSheetFeatureAppealBody": "当前的药片组结束后，将自动创建新的药片组。无需手动切换操作，可避免记录遗漏。",
+  "creatingNewPillSheetFeatureAppealBody": "当前药板组用完后，系统会自动创建新的药板组。无需手动切换，服药记录也能保持完整。",
   "alarmKitFeatureAppealTitle": "像闹钟一样响的提醒",
   "alarmKitFeatureAppealShortDescription": "即使处于静音也能响的提醒",
   "alarmKitFeatureAppealHeadline": "像闹钟一样的服药提醒",

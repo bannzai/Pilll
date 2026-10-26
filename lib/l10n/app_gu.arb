@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "ગોળીની સ્ટ્રિપ આપમેળે ઉમેરો",
   "creatingNewPillSheetFeatureAppealShortDescription": "આગળની ગોળીઓની પટ્ટી આપમેળે બનાવો",
   "creatingNewPillSheetFeatureAppealHeadline": "આગળની ગોળીની સ્ટ્રિપ આપમેળે બનાવો",
-  "creatingNewPillSheetFeatureAppealBody": "જ્યારે વર્તમાન પિલ શીટ ગ્રૂપ સમાપ્ત થાય છે, ત્યારે આપોઆપ નવો પિલ શીટ ગ્રૂપ બનાવવામાં આવે છે. હાથે સ્વિચ કરવાની જરૂર નથી, અને રેકોર્ડમાં કોઈ ખૂટ નહીં પડે.",
+  "creatingNewPillSheetFeatureAppealBody": "હાલનું ગોળીની સ્ટ્રિપનું જૂથ પૂરું થાય ત્યારે નવું જૂથ આપમેળે બનાવવામાં આવશે. તમારે જાતે બદલવું નહીં પડે અને ગોળી લેવાની નોંધમાં કોઈ ખાલી જગ્યા નહીં રહે.",
   "alarmKitFeatureAppealTitle": "ઘડિયાળ જેવો વાગતો એલાર્મ",
   "alarmKitFeatureAppealShortDescription": "સાઇલેન્ટ મોડમાં પણ ચોક્કસ વાગે એવી નોટિફિકેશન",
   "alarmKitFeatureAppealHeadline": "અલાર્મ ઘડિયાળ જેવો ગોળી લેવાનો અલાર્મ",

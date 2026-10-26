@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Αυτόματη προσθήκη: καρτέλα χαπιών",
   "creatingNewPillSheetFeatureAppealShortDescription": "Αυτόματη δημιουργία της επόμενης καρτέλας χαπιών",
   "creatingNewPillSheetFeatureAppealHeadline": "Αυτόματη δημιουργία της επόμενης καρτέλα χαπιών",
-  "creatingNewPillSheetFeatureAppealBody": "Όταν ολοκληρωθεί η τρέχουσα ομάδα φύλλων χαπιών, δημιουργείται αυτόματα μια νέα ομάδα. Δεν απαιτείται χειροκίνητη εναλλαγή και δεν υπάρχουν κενά στις καταγραφές σας.",
+  "creatingNewPillSheetFeatureAppealBody": "Όταν τελειώσει η τρέχουσα ομάδα από καρτέλα χαπιών, θα δημιουργηθεί αυτόματα νέα ομάδα. Δεν χρειάζεται να κάνετε αλλαγή χειροκίνητα και το ιστορικό λήψης θα παραμείνει πλήρες.",
   "alarmKitFeatureAppealTitle": "Συναγερμός που χτυπά σαν ξυπνητήρι",
   "alarmKitFeatureAppealShortDescription": "Ειδοποιήσεις που ηχούν ακόμα και σε σίγαση",
   "alarmKitFeatureAppealHeadline": "Συναγερμός λήψης φαρμάκου σαν ξυπνητήρι",

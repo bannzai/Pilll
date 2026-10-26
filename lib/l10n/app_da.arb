@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Tilføj pillekort automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Opret automatisk det næste p-pillekort",
   "creatingNewPillSheetFeatureAppealHeadline": "Opret det næste pillekort automatisk",
-  "creatingNewPillSheetFeatureAppealBody": "Når den nuværende pillearkgruppe slutter, oprettes en ny pillearkgruppe automatisk. Manuel omskiftning er ikke nødvendig, og der opstår ingen huller i registreringerne.",
+  "creatingNewPillSheetFeatureAppealBody": "Når den nuværende gruppe af pillekort er færdig, oprettes en ny gruppe af pillekort automatisk. Du behøver ikke skifte manuelt, og der kommer ingen huller i dine registreringer.",
   "alarmKitFeatureAppealTitle": "Alarm, der ringer som en vækkeur",
   "alarmKitFeatureAppealShortDescription": "Notifikationer der lyder, selv på lydløs",
   "alarmKitFeatureAppealHeadline": "Pillealarmer som et vækkeur",

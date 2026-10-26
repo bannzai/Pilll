@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "إضافة شريط تلقائيًا",
   "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء شريط الحبوب التالي تلقائيا",
   "creatingNewPillSheetFeatureAppealHeadline": "إنشاء شريط الحبوب التالي تلقائيًا",
-  "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة ورقة الدواء الحالية، يتم إنشاء مجموعة ورقة دواء جديدة تلقائيًا. لا حاجة للتبديل اليدوي، ولن تكون هناك فجوات في سجلاتك.",
+  "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة شرائط الحبوب الحالية، تُنشأ مجموعة شريط جديدة تلقائيًا. لن تحتاجي إلى التبديل يدويًا، وستظل سجلات التناول مكتملة.",
   "alarmKitFeatureAppealTitle": "إنذار يرن كالمنبه",
   "alarmKitFeatureAppealShortDescription": "إشعارات تصل حتى في وضع الصامت",
   "alarmKitFeatureAppealHeadline": "تنبيه تناول الدواء مثل المنبه",

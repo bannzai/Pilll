@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "հաբերի բլիստեր ինքնաշխատ ավելացնել",
   "creatingNewPillSheetFeatureAppealShortDescription": "Ավտոմատ ստեղծել հաբերի հաջորդ թերթիկը",
   "creatingNewPillSheetFeatureAppealHeadline": "Հաջորդ հաբերի բլիստեր-ի ավտոմատ ստեղծում",
-  "creatingNewPillSheetFeatureAppealBody": "Երբ ընթացիկ հաբաթերթերի խումբը ավարտվում է, նոր հաբաթերթերի խումբը ավտոմատ կերպով ստեղծվում է։ Ձեռքի միջոցով փոխարինում անել հարկավոր չէ, ուստի գրառումների բացթողումներ չեն լինի։",
+  "creatingNewPillSheetFeatureAppealBody": "Երբ հաբերի բլիստերների ընթացիկ խումբն ավարտվի, ինքնաշխատ կստեղծվի նոր խումբ։ Դուք ձեռքով փոխելու կարիք չեք ունենա, և ընդունման գրառումները կմնան ամբողջական։",
   "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
   "alarmKitFeatureAppealShortDescription": "Լռության ռեժիմում նույնպես վստահաբար հնչող ծանուցումներ",
   "alarmKitFeatureAppealHeadline": "Զարթուցիչի նման ընդունման հիշեցում",

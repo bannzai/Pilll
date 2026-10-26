@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Pillenstrip automatisch toevoegen",
   "creatingNewPillSheetFeatureAppealShortDescription": "Maak de volgende pillenstrip automatisch aan",
   "creatingNewPillSheetFeatureAppealHeadline": "Maak de volgende pillenstrip automatisch aan",
-  "creatingNewPillSheetFeatureAppealBody": "Wanneer de huidige pilvellengroep eindigt, wordt automatisch een nieuwe pilvellengroep aangemaakt. Handmatig omschakelen is niet nodig en er ontstaan geen hiaten in de registratie.",
+  "creatingNewPillSheetFeatureAppealBody": "Als de huidige groep pillenstrips op is, wordt automatisch een nieuwe groep aangemaakt. Je hoeft niet zelf over te schakelen en je innameregistratie blijft volledig.",
   "alarmKitFeatureAppealTitle": "Alarm die klinkt als een wekker",
   "alarmKitFeatureAppealShortDescription": "Melding die zeker afgaat, ook in stille modus",
   "alarmKitFeatureAppealHeadline": "Wekkermelding voor innemen",

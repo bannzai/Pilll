@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automaticky přidat blistr",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvořit další platíčko pilulek",
   "creatingNewPillSheetFeatureAppealHeadline": "Automaticky vytvořit další blistr",
-  "creatingNewPillSheetFeatureAppealBody": "Po skončení aktuální skupiny pilulkových listů se automaticky vytvoří nová skupina. Není potřeba ručního přepínání a v záznamech nevznikají mezery.",
+  "creatingNewPillSheetFeatureAppealBody": "Až skončí aktuální skupina blistrů, automaticky se vytvoří nová skupina blistrů. Nemusíte nic přepínat ručně a v záznamech o užívání nevzniknou mezery.",
   "alarmKitFeatureAppealTitle": "Budík, který zvoní jako probouzení",
   "alarmKitFeatureAppealShortDescription": "Oznámení zazní spolehlivě i v tichém režimu",
   "alarmKitFeatureAppealHeadline": "Alarm na užívání léků jako budík",

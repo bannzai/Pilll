@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automaticky pridať blist",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvoriť ďalší blister tabletiek",
   "creatingNewPillSheetFeatureAppealHeadline": "Automaticky vytvoriť ďalší blist",
-  "creatingNewPillSheetFeatureAppealBody": "Keď sa aktuálna skupina piluliek skončí, automaticky sa vytvorí nová skupina piluliek. Manuálne prepínanie nie je potrebné, takže v záznamoch nevznikajú medzery.",
+  "creatingNewPillSheetFeatureAppealBody": "Keď sa skončí aktuálna skupina blistov, automaticky sa vytvorí nová skupina blistov. Nemusíte ju prepínať ručne a záznamy o užívaní zostanú úplné.",
   "alarmKitFeatureAppealTitle": "Alarm, ktorý znie ako budík",
   "alarmKitFeatureAppealShortDescription": "Upozornenia, ktoré spoľahlivo zaznejú aj v tichom režime",
   "alarmKitFeatureAppealHeadline": "Pripomienka na užitie ako budík",

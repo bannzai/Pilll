@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "ഗുളിക സ്ട്രിപ്പ സ്വയമേവ ചേർക്കുക",
   "creatingNewPillSheetFeatureAppealShortDescription": "അടുത്ത ഗുളിക ഷീറ്റ് സ്വയമേവ സൃഷ്ടിക്കൂ",
   "creatingNewPillSheetFeatureAppealHeadline": "അടുത്ത ഗുളിക സ്ട്രിപ്പ സ്വയമേവ സൃഷ്ടിക്കുക",
-  "creatingNewPillSheetFeatureAppealBody": "നിലവിലെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് അവസാനിക്കുമ്പോൾ, ഒരു പുതിയ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് സ്വയമേ സൃഷ്ടിക്കപ്പെടും. മാനുവൽ മാറ്റൽ ആവശ്യമില്ല, കൂടാതെ രേഖകളിൽ വിടവ് ഉണ്ടാകില്ല.",
+  "creatingNewPillSheetFeatureAppealBody": "നിലവിലെ ഗുളിക സ്ട്രിപ്പുകളുടെ കൂട്ടം തീരുമ്പോൾ, പുതിയൊരു കൂട്ടം സ്വയമേവ സൃഷ്ടിക്കപ്പെടും. നിങ്ങൾ നേരിട്ട് മാറ്റേണ്ടതില്ല; ഗുളിക കഴിച്ചതിന്റെ രേഖകളിൽ വിടവുണ്ടാകില്ല.",
   "alarmKitFeatureAppealTitle": "അലാറം ക്ലോക്കിനെപ്പോലെ മുഴങ്ങുന്ന അലാറം",
   "alarmKitFeatureAppealShortDescription": "സൈലന്റ് മോഡിലും ഉറപ്പായി മുഴങ്ങുന്ന അറിയിപ്പ്",
   "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലുള്ള ഡോസ് അലാറം",

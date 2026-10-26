@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "افزودن خودکار ورق قرص",
   "creatingNewPillSheetFeatureAppealShortDescription": "ساخت خودکار ورق بعدی قرص‌ها",
   "creatingNewPillSheetFeatureAppealHeadline": "ساخت خودکار ورق قرص بعدی",
-  "creatingNewPillSheetFeatureAppealBody": "وقتی گروه برگه قرص فعلی به پایان می‌رسد، یک گروه برگه قرص جدید به‌طور خودکار ایجاد می‌شود. نیازی به تغییر دستی نیست و هیچ خلأی در ثبت‌ها ایجاد نمی‌شود.",
+  "creatingNewPillSheetFeatureAppealBody": "وقتی گروه فعلی ورق قرص تمام شود، گروه جدیدی از ورق قرص به‌طور خودکار ساخته می‌شود. نیازی به جابه‌جایی دستی نیست و ثبت مصرف بدون وقفه ادامه پیدا می‌کند.",
   "alarmKitFeatureAppealTitle": "آلارمی که مثل ساعت بیداری زنگ می‌زند",
   "alarmKitFeatureAppealShortDescription": "اعلان‌های مطمئن حتی در حالت بی‌صدا",
   "alarmKitFeatureAppealHeadline": "هشدار مصرف مانند زنگ بیدارباش",

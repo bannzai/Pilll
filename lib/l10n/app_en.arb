@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automatically add a pill pack",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatically create the next pill sheet",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatically create the next pill pack",
-  "creatingNewPillSheetFeatureAppealBody": "When your current pill sheet group ends, a new one is created for you automatically so you never miss a record.",
+  "creatingNewPillSheetFeatureAppealBody": "When your current group of pill packs is finished, a new pill pack group is created automatically. There’s no need to switch manually, and your tracking stays complete.",
   "alarmKitFeatureAppealTitle": "Wake-up style medication alarm",
   "alarmKitFeatureAppealShortDescription": "Rings even on silent or focus mode",
   "alarmKitFeatureAppealHeadline": "Medication alarm like your wake-up",

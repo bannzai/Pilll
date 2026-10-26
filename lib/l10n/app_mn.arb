@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "эмийн блистер автоматаар нэмэх",
   "creatingNewPillSheetFeatureAppealShortDescription": "Дараагийн эмийн блистерийг автоматаар үүсгэх",
   "creatingNewPillSheetFeatureAppealHeadline": "Дараагийн эмийн блистерийг автоматаар үүсгэнэ",
-  "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн хуудасны бүлэг дуусахад шинэ эмийн хуудасны бүлэг автоматаар үүсгэгдэнэ. Гараар шилжүүлэх үйлдэл хийх шаардлагагүй бөгөөд бүртгэлд алдагдал гарахгүй.",
+  "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн блистерийн бүлэг дуусахад шинэ бүлэг автоматаар үүснэ. Гараар солих шаардлагагүй бөгөөд эм уусан бүртгэл тасалдахгүй.",
   "alarmKitFeatureAppealTitle": "Будильник шиг дуугардаг сэрэмжлүүлэг",
   "alarmKitFeatureAppealShortDescription": "Чимээгүй горимд ч заавал дуугарах мэдэгдэл",
   "alarmKitFeatureAppealHeadline": "Сэрүүлэгтэй адил эм уух дохио",

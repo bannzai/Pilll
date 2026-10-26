@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Adaugă automat un blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Creează automat următoarea folie de pilule",
   "creatingNewPillSheetFeatureAppealHeadline": "Creează automat următorul blister",
-  "creatingNewPillSheetFeatureAppealBody": "Când grupul curent de foi de pastile se termină, un nou grup de foi de pastile este creat automat. Nu este necesară nicio comutare manuală și nu vor exista înregistrări lipsă.",
+  "creatingNewPillSheetFeatureAppealBody": "Când se termină grupul actual de blistere, se creează automat unul nou. Nu trebuie să îl schimbi manual, iar înregistrările administrării rămân complete.",
   "alarmKitFeatureAppealTitle": "Alarmă care sună ca un ceas deșteptător",
   "alarmKitFeatureAppealShortDescription": "Notificări care sună sigur chiar și pe silențios",
   "alarmKitFeatureAppealHeadline": "Alarmă de administrare similară cu cea de trezire",

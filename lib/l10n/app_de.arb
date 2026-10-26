@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Pillenblister automatisch hinzufügen",
   "creatingNewPillSheetFeatureAppealShortDescription": "Nächsten Pillenblister automatisch erstellen",
   "creatingNewPillSheetFeatureAppealHeadline": "Nächsten Pillenblister automatisch erstellen",
-  "creatingNewPillSheetFeatureAppealBody": "Wenn die aktuelle Pillenblistergruppe endet, wird automatisch eine neue Pillenblistergruppe erstellt. Ein manueller Wechsel ist nicht erforderlich, sodass keine Lücken in der Aufzeichnung entstehen.",
+  "creatingNewPillSheetFeatureAppealBody": "Wenn deine aktuelle Gruppe von Pillenblistern aufgebraucht ist, wird automatisch eine neue erstellt. Du musst nicht selbst wechseln, und deine Einnahmen bleiben lückenlos erfasst.",
   "alarmKitFeatureAppealTitle": "Alarm wie ein Wecker",
   "alarmKitFeatureAppealShortDescription": "Benachrichtigungen, die auch im Lautlos-Modus zuverlässig klingeln",
   "alarmKitFeatureAppealHeadline": "Einnahmealarm wie ein Wecker",

@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Dodaj blist automatycznie",
   "creatingNewPillSheetFeatureAppealShortDescription": "Utwórz automatycznie następny blister tabletek",
   "creatingNewPillSheetFeatureAppealHeadline": "Utwórz automatycznie kolejny blist",
-  "creatingNewPillSheetFeatureAppealBody": "Po zakończeniu bieżącej grupy kart tabletek automatycznie tworzona jest nowa grupa. Nie jest wymagane ręczne przełączanie, dzięki czemu nie ma przerw w zapisach.",
+  "creatingNewPillSheetFeatureAppealBody": "Gdy skończy się obecna grupa blistrów, automatycznie powstanie nowa. Nie trzeba przełączać jej ręcznie, a zapisy przyjmowania tabletek pozostaną kompletne.",
   "alarmKitFeatureAppealTitle": "Alarm brzmiący jak budzik",
   "alarmKitFeatureAppealShortDescription": "Powiadomienia działające niezawodnie nawet w trybie cichym",
   "alarmKitFeatureAppealHeadline": "Alarm przyjmowania tabletek jak budzik",

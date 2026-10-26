@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Shtoni automatikisht një blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Krijoni automatikisht blisterin tjetër të pilulave",
   "creatingNewPillSheetFeatureAppealHeadline": "Krijoni automatikisht blister-in e radhës",
-  "creatingNewPillSheetFeatureAppealBody": "Kur përfundon grupi aktual i fletës së pilulave, krijohet automatikisht një grup i ri. Ndërrimi manual nuk është i nevojshëm, kështu që nuk do të ketë mungesa në regjistrime.",
+  "creatingNewPillSheetFeatureAppealBody": "Kur të mbarojë grupi aktual i blisterave, do të krijohet automatikisht një grup i ri. Nuk keni nevojë ta ndërroni vetë dhe shënimet e marrjes do të mbeten të plota.",
   "alarmKitFeatureAppealTitle": "Alarm që tingëllon si një orë zgjimi",
   "alarmKitFeatureAppealShortDescription": "Njoftime që patjetër do të tingëllojnë edhe në modalitetin heshtjeje",
   "alarmKitFeatureAppealHeadline": "Alarm për marrjen e pilulave, si një zgjues",

@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Автоматически добавить блистер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматически создать следующий блистер с таблетками",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматически создать следующий блистер",
-  "creatingNewPillSheetFeatureAppealBody": "Когда текущая группа таблеток заканчивается, новая группа таблеток создаётся автоматически. Ручное переключение не требуется, и в записях не будет пропусков.",
+  "creatingNewPillSheetFeatureAppealBody": "Когда текущая группа блистеров закончится, новая группа создастся автоматически. Вам не придётся переключать её вручную, а записи о приёме останутся полными.",
   "alarmKitFeatureAppealTitle": "Звонит как настоящий будильник",
   "alarmKitFeatureAppealShortDescription": "Уведомления, работающие даже в беззвучном режиме",
   "alarmKitFeatureAppealHeadline": "Будильник для приёма таблеток",

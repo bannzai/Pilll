@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Aggiungi automaticamente un blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Crea automaticamente il prossimo blister di pillole",
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automaticamente il prossimo blister",
-  "creatingNewPillSheetFeatureAppealBody": "Quando il gruppo di pillole corrente termina, viene creato automaticamente un nuovo gruppo. Non è necessario eseguire alcuna operazione di cambio manuale e non si verificheranno lacune nelle registrazioni.",
+  "creatingNewPillSheetFeatureAppealBody": "Quando termina il gruppo attuale di blister, ne viene creato automaticamente uno nuovo. Non dovrai cambiarlo manualmente e il registro delle assunzioni resterà completo.",
   "alarmKitFeatureAppealTitle": "Allarme che suona come una sveglia",
   "alarmKitFeatureAppealShortDescription": "Notifiche che suonano anche in modalità silenziosa",
   "alarmKitFeatureAppealHeadline": "Promemoria per l'assunzione, come una sveglia",

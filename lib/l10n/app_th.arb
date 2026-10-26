@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "เพิ่มแผงยาอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealShortDescription": "สร้างแผงยาถัดไปอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealHeadline": "สร้างแผงยาถัดไปโดยอัตโนมัติ",
-  "creatingNewPillSheetFeatureAppealBody": "เมื่อกลุ่มแผงยาคุมในปัจจุบันสิ้นสุดลง ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติ ไม่ต้องสลับด้วยตนเอง และจะไม่มีการขาดตอนของการบันทึก",
+  "creatingNewPillSheetFeatureAppealBody": "เมื่อใช้กลุ่มแผงยาปัจจุบันหมดแล้ว ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติค่ะ ไม่ต้องสลับเอง และบันทึกการทานยาจะต่อเนื่องครบถ้วนค่ะ",
   "alarmKitFeatureAppealTitle": "เตือนเหมือนนาฬิกาปลุก",
   "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",
   "alarmKitFeatureAppealHeadline": "การแจ้งเตือนการกินยาคล้ายนาฬิกาปลุก",

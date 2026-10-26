@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileh automaatselt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Loo järgmine pillileht automaatselt",
   "creatingNewPillSheetFeatureAppealHeadline": "Loo järgmine pillileht automaatselt",
-  "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehe grupp lõpeb, luuakse automaatselt uus pillilehe grupp. Käsitsi ümberlülitamine pole vajalik ning kirjetes ei teki lünki.",
+  "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehtede rühm saab läbi, luuakse automaatselt uus pillilehtede rühm. Sa ei pea seda käsitsi vahetama ja võtmise kirjed jäävad täielikuks.",
   "alarmKitFeatureAppealTitle": "Äratuskellana helisev alarm",
   "alarmKitFeatureAppealShortDescription": "Teavitused, mis helisevad kindlasti ka vaikses režiimis",
   "alarmKitFeatureAppealHeadline": "Äratuskellaga sarnane pillide võtmise alarm",

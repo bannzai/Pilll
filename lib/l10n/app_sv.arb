@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Lägg till p-pillerkarta automatiskt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Skapa nästa p-pillerkarta automatiskt",
   "creatingNewPillSheetFeatureAppealHeadline": "Skapa nästa p-pillerkarta automatiskt",
-  "creatingNewPillSheetFeatureAppealBody": "När den nuvarande pillerkopsgruppen avslutas skapas automatiskt en ny pillerkopsgrupp. Manuella växlingar behövs inte och inga poster går förlorade.",
+  "creatingNewPillSheetFeatureAppealBody": "När den nuvarande gruppen med p-pillerkartor är slut skapas en ny grupp automatiskt. Du behöver inte byta manuellt, och registreringarna av dina intag förblir kompletta.",
   "alarmKitFeatureAppealTitle": "Låter som en väckarklocka",
   "alarmKitFeatureAppealShortDescription": "Pålitliga notiser som hörs även i tyst läge",
   "alarmKitFeatureAppealHeadline": "Väckarklocksliknande påminnelse för att ta piller",

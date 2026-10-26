@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Tambahkan strip pil secara otomatis",
   "creatingNewPillSheetFeatureAppealShortDescription": "Buat lembar pil berikutnya secara otomatis",
   "creatingNewPillSheetFeatureAppealHeadline": "Buat strip pil berikutnya secara otomatis",
-  "creatingNewPillSheetFeatureAppealBody": "Ketika grup lembar pil saat ini berakhir, grup lembar pil baru akan dibuat secara otomatis. Anda tidak perlu mengganti secara manual, sehingga tidak ada catatan yang terlewat.",
+  "creatingNewPillSheetFeatureAppealBody": "Saat kelompok strip pil saat ini habis, kelompok baru akan dibuat otomatis. Anda tidak perlu beralih secara manual, dan catatan minum pil tetap lengkap.",
   "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",
   "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi meskipun dalam mode senyap",
   "alarmKitFeatureAppealHeadline": "Alarm pengingat minum pil seperti jam weker",

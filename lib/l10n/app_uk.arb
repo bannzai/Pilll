@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Автоматично додати блістер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично створити наступний блістер пігулок",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматично створити наступний блістер",
-  "creatingNewPillSheetFeatureAppealBody": "Коли поточна група упаковок таблеток закінчиться, нова група буде створена автоматично. Ручне перемикання не потрібне, тому не буде пропусків у записах.",
+  "creatingNewPillSheetFeatureAppealBody": "Коли поточна група блістерів закінчиться, нова група створиться автоматично. Вам не доведеться перемикати її вручну, а записи про прийом залишаться повними.",
   "alarmKitFeatureAppealTitle": "Сигнал, що звучить як будильник",
   "alarmKitFeatureAppealShortDescription": "Сповіщення, що пролунає навіть у беззвучному режимі",
   "alarmKitFeatureAppealHeadline": "Нагадування про прийом таблеток, як будильник",

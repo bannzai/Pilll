@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Автоматско додавање: блистер",
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматско создавање на следниот блистер со таблети",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматско создавање на следен блистер",
-  "creatingNewPillSheetFeatureAppealBody": "Кога тековната група листови со таблети ќе заврши, автоматски ќе се креира нова група листови со таблети. Не е потребна рачна промена и нема да има пропусти во евиденцијата.",
+  "creatingNewPillSheetFeatureAppealBody": "Кога ќе заврши тековната група блистер, автоматски ќе се создаде нова група блистер. Нема потреба рачно да менувате, а записите за земање ќе останат целосни.",
   "alarmKitFeatureAppealTitle": "Аларм што ѕвони како будилник",
   "alarmKitFeatureAppealShortDescription": "Известувања што сигурно ќе се огласат дури и во тивок режим",
   "alarmKitFeatureAppealHeadline": "Аларм за земање како будилник",

@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "tabletka blister avtomatik qoʻshilsin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Keyingi tabletkalar varagʻini avtomatik yarating",
   "creatingNewPillSheetFeatureAppealHeadline": "Keyingi tabletka blisterni avtomatik yarating",
-  "creatingNewPillSheetFeatureAppealBody": "Joriy dori varaqalari guruhi tugagach, yangi dori varaqalari guruhi avtomatik ravishda yaratiladi. Qo'lda almashish talab etilmaydi, shuning uchun yozuvlar o'tkazib yuborilmaydi.",
+  "creatingNewPillSheetFeatureAppealBody": "Joriy tabletka blister guruhi tugaganda, yangi guruh avtomatik yaratiladi. Siz uni qoʻlda almashtirishingiz shart emas, qabul qilish qaydlari esa toʻliq saqlanadi.",
   "alarmKitFeatureAppealTitle": "Soat kabi chalinadigan signal",
   "alarmKitFeatureAppealShortDescription": "Jim rejimida ham ishonchli bildirishnoma",
   "alarmKitFeatureAppealHeadline": "Dori ichishni budilnik kabi eslatish",

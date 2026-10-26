@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "აბების ბლისტერ ავტომატურად დამატება",
   "creatingNewPillSheetFeatureAppealShortDescription": "შემდეგი აბების ფირფიტის ავტომატურად შექმნა",
   "creatingNewPillSheetFeatureAppealHeadline": "შემდეგი აბების ბლისტერ-ის ავტომატური შექმნა",
-  "creatingNewPillSheetFeatureAppealBody": "როდესაც მიმდინარე აბების ფურცლების ჯგუფი დასრულდება, ახალი აბების ფურცლების ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ არის საჭირო და ჩანაწერის გამოტოვება არ მოხდება.",
+  "creatingNewPillSheetFeatureAppealBody": "როცა აბების ბლისტერების მიმდინარე ჯგუფი დასრულდება, ახალი ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ დაგჭირდებათ და მიღების ჩანაწერები სრული დარჩება.",
   "alarmKitFeatureAppealTitle": "მაღვიძარას მსგავსი ზარი",
   "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც გარანტირებულად რეკავენ სიჩუმის რეჟიმშიც კი",
   "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი წამლის მიღების შეხსენება",

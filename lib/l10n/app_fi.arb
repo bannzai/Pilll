@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Lisää pilleriliuska automaattisesti",
   "creatingNewPillSheetFeatureAppealShortDescription": "Luo seuraava pilleriliuska automaattisesti",
   "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pilleriliuska automaattisesti",
-  "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pillerikorttisarja päättyy, uusi pillerikorttisarja luodaan automaattisesti. Manuaalista vaihtamista ei tarvita, eikä kirjauksiin tule aukkoja.",
+  "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pilleriliuskaryhmä loppuu, uusi pilleriliuskaryhmä luodaan automaattisesti. Sinun ei tarvitse vaihtaa sitä itse, ja ottomerkinnät pysyvät katkeamattomina.",
   "alarmKitFeatureAppealTitle": "Herätyskellon tavoin soiva hälytys",
   "alarmKitFeatureAppealShortDescription": "Ilmoitukset soivat varmasti myös äänettömässä tilassa",
   "alarmKitFeatureAppealHeadline": "Lääkehälytys kuin herätyskello",

@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automatski dodajte blister",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski izradite sljedeći blister pilula",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatski izradite sljedeći blister",
-  "creatingNewPillSheetFeatureAppealBody": "Kada trenutna grupa listića pilula završi, nova grupa će se automatski stvoriti. Nije potrebna ručna promjena, pa neće doći do propuštanja zapisa.",
+  "creatingNewPillSheetFeatureAppealBody": "Kad završi trenutačna skupina blistera, automatski će se stvoriti nova skupina blistera. Ne morate ih ručno mijenjati, a evidencija uzimanja ostat će potpuna.",
   "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilica",
   "alarmKitFeatureAppealShortDescription": "Obavijest koja pouzdano zvoni čak i u tihom načinu",
   "alarmKitFeatureAppealHeadline": "Alarm za uzimanje – poput budilice",

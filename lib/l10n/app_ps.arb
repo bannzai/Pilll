@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "د ګولیو پاڼ په اتومات ډول ورزیات کړئ",
   "creatingNewPillSheetFeatureAppealShortDescription": "د ګولیو راتلونکې پاڼه په اوتومات ډول جوړه کړئ",
   "creatingNewPillSheetFeatureAppealHeadline": "د ګولیو پاڼ راتلونکې برخه په اوتومات ډول جوړه کړئ",
-  "creatingNewPillSheetFeatureAppealBody": "کله چې اوسنی پیل شیټ ګروپ پای ته ورسیږي، نوی پیل شیټ ګروپ به اتوماتیک جوړ شي. د لاسي بدلون ته اړتیا نشته، او د ریکارډونو کې هیڅ خلا نه پیدا کیږي.",
+  "creatingNewPillSheetFeatureAppealBody": "کله چې د ګولیو پاڼ اوسنی ګروپ پای ته ورسېږي، نوی ګروپ په اوتومات ډول جوړېږي. په لاس یې بدلولو ته اړتیا نشته او د ګولیو د اخیستو ثبت به بشپړ پاتې شي.",
   "alarmKitFeatureAppealTitle": "د ویښولو زنګ غوندې الارم",
   "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې د خاموشۍ حالت کې هم باوري ډول غږیږي",
   "alarmKitFeatureAppealHeadline": "د بیدارۍ الارم غوندې د درملو اخیستلو الارم",

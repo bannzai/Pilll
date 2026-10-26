@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Afegeix el blíster automàticament",
   "creatingNewPillSheetFeatureAppealShortDescription": "Crea automàticament el full següent de píndoles",
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automàticament el blíster següent",
-  "creatingNewPillSheetFeatureAppealBody": "Quan el grup de fulls de pastilles actual acabi, es crearà automàticament un nou grup de fulls de pastilles. No cal cap operació de canvi manual i no es produiran buits en els registres.",
+  "creatingNewPillSheetFeatureAppealBody": "Quan s’acabi el grup actual de blísters, se’n crearà un de nou automàticament. No hauràs de canviar-lo manualment i el registre de les preses quedarà complet.",
   "alarmKitFeatureAppealTitle": "Una alarma que sona com un despertador",
   "alarmKitFeatureAppealShortDescription": "Notificacions que sonen fins i tot en silenci",
   "alarmKitFeatureAppealHeadline": "Alarma de medicació com un despertador",

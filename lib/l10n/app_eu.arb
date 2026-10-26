@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Gehitu pilula-blister automatikoki",
   "creatingNewPillSheetFeatureAppealShortDescription": "Sortu hurrengo pilula-orria automatikoki",
   "creatingNewPillSheetFeatureAppealHeadline": "Sortu hurrengo pilula-blister automatikoki",
-  "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-fitxen taldea amaitzen denean, pilula-fitxen talde berri bat automatikoki sortzen da. Ez da eskuzko aldaketarik egin behar, eta erregistroetan ez dago hutsunerik.",
+  "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-blister multzoa amaitzen denean, beste multzo bat sortuko da automatikoki. Ez duzu eskuz aldatu beharko, eta hartze-erregistroan ez da hutsunerik egongo.",
   "alarmKitFeatureAppealTitle": "Alarma iratzargailuaren moduan jo",
   "alarmKitFeatureAppealShortDescription": "Modu isilan ere ziurtasunez joko duten jakinarazpenak",
   "alarmKitFeatureAppealHeadline": "Esnatzeko alarma bezalako botika-alerta",

@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "blister otomatik ekleyin",
   "creatingNewPillSheetFeatureAppealShortDescription": "Sonraki hap blisterini otomatik oluşturun",
   "creatingNewPillSheetFeatureAppealHeadline": "Sonraki blisteri otomatik oluşturun",
-  "creatingNewPillSheetFeatureAppealBody": "Mevcut hap şeridi grubu sona erdiğinde, yeni bir hap şeridi grubu otomatik olarak oluşturulur. Manuel geçiş işlemi gerekmez; kayıt atlaması yaşanmaz.",
+  "creatingNewPillSheetFeatureAppealBody": "Mevcut blister grubu bittiğinde yeni bir blister grubu otomatik olarak oluşturulur. Elle geçiş yapmanız gerekmez ve kullanım kayıtlarınız eksiksiz devam eder.",
   "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
   "alarmKitFeatureAppealShortDescription": "Sessiz modda bile kesinlikle çalan bildirim",
   "alarmKitFeatureAppealHeadline": "Çalar saate benzer ilaç alma alarmı",

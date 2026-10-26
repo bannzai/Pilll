@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "पिल शीट आपोआप जोडा",
   "creatingNewPillSheetFeatureAppealShortDescription": "पुढील गोळ्यांची पट्टी आपोआप तयार करा",
   "creatingNewPillSheetFeatureAppealHeadline": "पुढील पिल शीट आपोआप तयार करा",
-  "creatingNewPillSheetFeatureAppealBody": "जेव्हा सध्याचा पिल शीट गट संपतो, तेव्हा नवीन पिल शीट गट आपोआप तयार केला जातो. हाताने बदलण्याची क्रिया आवश्यक नसते आणि नोंदींमध्ये खंड पडत नाही.",
+  "creatingNewPillSheetFeatureAppealBody": "सध्याचा पिल शीट गट संपल्यावर नवीन पिल शीट गट आपोआप तयार होईल. तुम्हाला स्वतः बदलण्याची गरज नाही आणि गोळ्या घेतल्याच्या नोंदी सलग राहतील.",
   "alarmKitFeatureAppealTitle": "गजरासारखा वाजणारा अलार्म",
   "alarmKitFeatureAppealShortDescription": "सायलेंट असतानाही नक्की वाजणाऱ्या सूचना",
   "alarmKitFeatureAppealHeadline": "अलार्म घड्याळासारखा औषध सेवन अलार्म",

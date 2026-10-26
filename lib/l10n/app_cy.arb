@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Ychwanegu stribed pils yn awtomatig",
   "creatingNewPillSheetFeatureAppealShortDescription": "Creu eich taflen bilsen nesaf yn awtomatig",
   "creatingNewPillSheetFeatureAppealHeadline": "Creu'r stribed pils nesaf yn awtomatig",
-  "creatingNewPillSheetFeatureAppealBody": "Pan ddaw'r grŵp taflen bilsen bresennol i ben, caiff grŵp taflen bilsen newydd ei greu'n awtomatig. Nid oes angen newid â llaw, ac ni fydd bylchau yn y cofnodion.",
+  "creatingNewPillSheetFeatureAppealBody": "Pan ddaw’r grŵp presennol o stribed pils i ben, caiff grŵp newydd o stribed pils ei greu’n awtomatig. Ni fydd angen i chi newid â llaw, a bydd y cofnodion cymryd pils yn gyflawn.",
   "alarmKitFeatureAppealTitle": "Larwm sy'n canu fel cloc larwm",
   "alarmKitFeatureAppealShortDescription": "Hysbysiadau sy'n canu'n sicr hyd yn oed ar fodd tawel",
   "alarmKitFeatureAppealHeadline": "Larwm cymryd tabledi fel cloc larwm",

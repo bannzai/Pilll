@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Automatiškai pridėti tablečių plokštel",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatiškai sukurti kitą tablečių lapelį",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatiškai sukurti kitą tablečių plokštel",
-  "creatingNewPillSheetFeatureAppealBody": "Kai dabartinė tablečių lapelių grupė pasibaigia, automatiškai sukuriama nauja. Nereikia rankinio perjungimo, todėl nebus praleistų įrašų.",
+  "creatingNewPillSheetFeatureAppealBody": "Pasibaigus dabartinei tablečių plokštel grupei, nauja grupė sukuriama automatiškai. Jums nereikės jos keisti rankiniu būdu, o vartojimo įrašai liks išsamūs.",
   "alarmKitFeatureAppealTitle": "Skamba kaip žadintuvas",
   "alarmKitFeatureAppealShortDescription": "Pranešimas, kuris tikrai skambės net ir tyliame režime",
   "alarmKitFeatureAppealHeadline": "Žadintuvo tipo vartojimo priminimas",

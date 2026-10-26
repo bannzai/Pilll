@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Legg til pillebrett automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Opprett neste p-pillebrett automatisk",
   "creatingNewPillSheetFeatureAppealHeadline": "Opprett neste pillebrett automatisk",
-  "creatingNewPillSheetFeatureAppealBody": "Når den gjeldende pillearket-gruppen er ferdig, opprettes automatisk en ny pillearket-gruppe. Ingen manuell bytteoperasjon er nødvendig, og det vil ikke oppstå hull i registreringen.",
+  "creatingNewPillSheetFeatureAppealBody": "Når den nåværende gruppen med pillebrett er brukt opp, opprettes en ny gruppe automatisk. Du trenger ikke å bytte manuelt, og registreringene av pilleinntak forblir komplette.",
   "alarmKitFeatureAppealTitle": "Alarm som ringer som en vekkerklokke",
   "alarmKitFeatureAppealShortDescription": "Varsler som ringer selv i stillemodus",
   "alarmKitFeatureAppealHeadline": "Medisinalarm som en vekkerklokke",

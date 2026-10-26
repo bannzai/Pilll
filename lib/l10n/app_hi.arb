@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "पिल स्ट्रिप अपने आप जोड़ें",
   "creatingNewPillSheetFeatureAppealShortDescription": "अगली गोली की शीट अपने आप बनाएँ",
   "creatingNewPillSheetFeatureAppealHeadline": "अगली पिल स्ट्रिप अपने आप बनाएँ",
-  "creatingNewPillSheetFeatureAppealBody": "वर्तमान पिल शीट समूह खत्म होने पर नया पिल शीट समूह स्वचालित रूप से बन जाएगा। इससे मैन्युअल रूप से स्विच करने की आवश्यकता नहीं रहती और रिकॉर्ड छूटने की समस्या नहीं होती।",
+  "creatingNewPillSheetFeatureAppealBody": "मौजूदा पिल स्ट्रिप समूह खत्म होने पर नया पिल स्ट्रिप समूह अपने आप बन जाएगा। आपको इसे मैन्युअल रूप से बदलने की ज़रूरत नहीं होगी और गोली लेने के रिकॉर्ड में कोई अंतर नहीं रहेगा।",
   "alarmKitFeatureAppealTitle": "घड़ी की तरह बजने वाला अलार्म",
   "alarmKitFeatureAppealShortDescription": "साइलेंट में भी निश्चित रूप से बजने वाली सूचनाएं",
   "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",

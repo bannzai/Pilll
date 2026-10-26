@@ -495,7 +495,7 @@
   "creatingNewPillSheetFeatureAppealTitle": "Añadir un blíster automáticamente",
   "creatingNewPillSheetFeatureAppealShortDescription": "Crear automáticamente el siguiente blíster de píldoras",
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automáticamente el siguiente blíster",
-  "creatingNewPillSheetFeatureAppealBody": "Cuando el grupo de hojas de píldoras actual finaliza, se crea automáticamente un nuevo grupo de hojas de píldoras. No es necesario realizar ningún cambio manual, por lo que no se producirán omisiones en los registros.",
+  "creatingNewPillSheetFeatureAppealBody": "Cuando se termine el grupo actual de blísteres, se creará uno nuevo automáticamente. No tendrás que cambiarlo manualmente y el registro de tomas quedará completo.",
   "alarmKitFeatureAppealTitle": "Alarma que suena como un despertador",
   "alarmKitFeatureAppealShortDescription": "Notificaciones que suenan incluso en silencio",
   "alarmKitFeatureAppealHeadline": "Alarma de toma como un despertador",
