@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Alarm koji zvoni poput budilice",
   "alarmKitFeatureAppealShortDescription": "Obavijesti koje se čuju i u tihom načinu rada",
   "alarmKitFeatureAppealHeadline": "Alarm za uzimanje pilule poput budilice",
-  "alarmKitFeatureAppealBody": "Pomoću AlarmKita, dostupnog od iOS-a 26, alarm će zazvoniti čak i u tihom načinu rada ili u načinu fokusiranja, tako da nikada nećete propustiti dozu.",
+  "alarmKitFeatureAppealBody": "Uz AlarmKit, dostupan od iOS-a 26, alarm koji se oglašava i u tihom načinu rada ili načinu rada Fokus podsjeća vas da uzmete pilulu.",
   "todayPillNumberFeatureAppealTitle": "Uskladi današnji broj uzimanja",
   "todayPillNumberFeatureAppealShortDescription": "Ako je redni broj pomaknut, ispravite to u postavkama.",
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule koju ćete uzeti danas",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "ສັນຍານເຕືອນທີ່ດັງຄືໂມງປຸກ",
   "alarmKitFeatureAppealShortDescription": "ການແຈ້ງເຕືອນທີ່ມີສຽງແມ່ນແຕ່ໃນໂໝດງຽບ",
   "alarmKitFeatureAppealHeadline": "ສັນຍານເຕືອນກິນຢາເມັດຄືກັບໂມງປຸກ",
-  "alarmKitFeatureAppealBody": "ໃຊ້ AlarmKit ທີ່ມີໃນ iOS 26 ເພື່ອແຈ້ງເຕືອນເວລາກິນຢາດ້ວຍສຽງທີ່ຈະດັ່ງແມ່ນໃນໂມດ Silent ຫຼື Focus.",
+  "alarmKitFeatureAppealBody": "ໂດຍໃຊ້ AlarmKit ທີ່ມີໃຫ້ໃຊ້ຕັ້ງແຕ່ iOS 26 ຂຶ້ນໄປ, ສຽງປຸກທີ່ດັງແມ່ນແຕ່ໃນໂໝດງຽບ ຫຼື ໂໝດຕັ້ງໃຈ ຈະເຕືອນໃຫ້ທ່ານກິນຢາເມັດ.",
   "todayPillNumberFeatureAppealTitle": "ປັບຈຳນວນການກິນມື້ນີ້",
   "todayPillNumberFeatureAppealShortDescription": "ຖ້າໝາຍເລກບໍ່ຕົງ ກະລຸນາແກ້ໄຂໃນການຕັ້ງຄ່າ",
   "todayPillNumberFeatureAppealHeadline": "ສາມາດປ່ຽນໝາຍເລກຢາທີ່ຈະກິນມື້ນີ້",

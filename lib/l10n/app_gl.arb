@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Unha alarma que soa coma un espertador",
   "alarmKitFeatureAppealShortDescription": "Avisos que soan mesmo no modo silencioso",
   "alarmKitFeatureAppealHeadline": "Unha alarma para tomar a pílula coma un espertador",
-  "alarmKitFeatureAppealBody": "Usando AlarmKit, dispoñible en iOS 26 ou posterior, avisarache de tomar a pílula cunha alarma que soa de forma fiable mesmo en modo silencioso ou en modo de concentración.",
+  "alarmKitFeatureAppealBody": "Con AlarmKit, dispoñible desde iOS 26, unha alarma que soa mesmo no modo silencio ou concentración lémbranche que debes tomar a pílula.",
   "todayPillNumberFeatureAppealTitle": "Axustar o número de dose de hoxe",
   "todayPillNumberFeatureAppealShortDescription": "Se o número está desaxustado, corríxeo na configuración",
   "todayPillNumberFeatureAppealHeadline": "Podes cambiar o número de pílula que tomas hoxe",

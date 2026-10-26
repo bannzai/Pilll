@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Opomnik, ki zvoni kot budilka",
   "alarmKitFeatureAppealShortDescription": "Obvestila z zvokom tudi v tihem načinu",
   "alarmKitFeatureAppealHeadline": "Alarm za jemanje tabletke kot budilka",
-  "alarmKitFeatureAppealBody": "Z AlarmKitom (na voljo v iOS 26 in novejših) vas opomnimo na jemanju kontracepcijske tablete z alarmom, ki zveni tudi v načinu tišine ali v načinu osredotočenja.",
+  "alarmKitFeatureAppealBody": "Z AlarmKitom, ki je na voljo od iOS 26, vas na jemanje tabletke opomni alarm, ki zazvoni tudi v tihem načinu ali načinu Osredotočenost.",
   "todayPillNumberFeatureAppealTitle": "Uskladite današnji številki odmerka",
   "todayPillNumberFeatureAppealShortDescription": "Številke se ne ujemajo? Popravite jih v nastavitvah.",
   "todayPillNumberFeatureAppealHeadline": "Sprememba številke tablete za danes",

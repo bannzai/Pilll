@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "자명종처럼 울리는 알람",
   "alarmKitFeatureAppealShortDescription": "무음 모드에서도 소리가 나는 알림",
   "alarmKitFeatureAppealHeadline": "알람 시계처럼 울리는 약 복용 알람",
-  "alarmKitFeatureAppealBody": "iOS 26 이상에서 사용 가능한 AlarmKit을 사용하여 무음 모드나 집중 모드에서도 확실히 울리는 알람으로 피임약 복용을 알려드립니다.",
+  "alarmKitFeatureAppealBody": "iOS 26 이상에서 사용할 수 있는 AlarmKit으로 무음 모드나 집중 모드에서도 울리는 알람이 피임약 복용 시간을 알려줘요.",
   "todayPillNumberFeatureAppealTitle": "오늘 복용 번호 맞추기",
   "todayPillNumberFeatureAppealShortDescription": "번호가 어긋나면 설정에서 수정하세요",
   "todayPillNumberFeatureAppealHeadline": "오늘 복용할 알약 번호를 변경할 수 있습니다",

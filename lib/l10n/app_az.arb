@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Zəngli saat kimi səslənən xatırlatma",
   "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də səslənən bildirişlər",
   "alarmKitFeatureAppealHeadline": "Zəngli saat kimi həb qəbulu xatırlatması",
-  "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit-dən istifadə edərək, səssiz rejim və ya fokus rejimində belə mütləq çalan zəng vasitəsilə həbi qəbul etməyi xatırladır.",
+  "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit sayəsində səssiz və ya fokus rejimində də səslənən siqnal sizə həbi qəbul etmək vaxtını xatırladır.",
   "todayPillNumberFeatureAppealTitle": "Bugünkü qəbul nömrəsini tənzimləyin",
   "todayPillNumberFeatureAppealShortDescription": "Nömrə yanlışdırsa, parametrlərdə düzəldin",
   "todayPillNumberFeatureAppealHeadline": "Bu gün qəbul ediləcək həb nömrəsini dəyişdirə bilərsiniz",

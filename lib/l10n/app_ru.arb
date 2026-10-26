@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Напоминание, которое звонит как будильник",
   "alarmKitFeatureAppealShortDescription": "Уведомления со звуком даже в беззвучном режиме",
   "alarmKitFeatureAppealHeadline": "Напоминание о приёме таблетки, как будильник",
-  "alarmKitFeatureAppealBody": "С помощью AlarmKit, доступного в iOS 26 и новее, вы получите уведомление о приёме таблетки через будильник, который срабатывает даже в беззвучном режиме и режиме фокусировки.",
+  "alarmKitFeatureAppealBody": "С AlarmKit, доступным начиная с iOS 26, будильник, который звучит даже в беззвучном режиме или режиме фокусирования, напоминает вам принять таблетку.",
   "todayPillNumberFeatureAppealTitle": "Настроить номер приёма на сегодня",
   "todayPillNumberFeatureAppealShortDescription": "Если номер сбился — исправьте в настройках",
   "todayPillNumberFeatureAppealHeadline": "Можно изменить номер таблетки на сегодня",

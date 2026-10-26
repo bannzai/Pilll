@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Напамін, які звініць як будзільнік",
   "alarmKitFeatureAppealShortDescription": "Апавяшчэнні са гукам нават у бязгучным рэжыме",
   "alarmKitFeatureAppealHeadline": "Напамін пра пігулку, як будзільнік",
-  "alarmKitFeatureAppealBody": "З дапамогай AlarmKit, даступнага на iOS 26 і больш позніх версіях, праграма паведамляе вам аб прыёме таблеткі праз будільнік, які надзейна спрацоўвае нават у рэжыме бязгучнасці або рэжыме фокусу.",
+  "alarmKitFeatureAppealBody": "AlarmKit, даступны ў iOS 26 і навейшых версіях, нагадае вам прыняць пігулку сігналам, які прагучыць нават у бязгучным рэжыме або рэжыме засяроджвання.",
   "todayPillNumberFeatureAppealTitle": "Наладзіць нумар прыёму на сёння",
   "todayPillNumberFeatureAppealShortDescription": "Калі нумар збіўся, выправіце ў наладах",
   "todayPillNumberFeatureAppealHeadline": "Можна змяніць нумар таблеткі на сёння",

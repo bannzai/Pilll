@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Äratuskellana helisev meeldetuletus",
   "alarmKitFeatureAppealShortDescription": "Märguanded, mis kõlavad ka vaikses režiimis",
   "alarmKitFeatureAppealHeadline": "Pillialarm nagu äratuskell",
-  "alarmKitFeatureAppealBody": "iOS 26 ja uuematel versioonidel saadaoleva AlarmKit-i abil teavitatakse teid pillide võtmisest häirega, mis kõlab kindlasti ka vaikse režiimi või fookusrežiimi korral.",
+  "alarmKitFeatureAppealBody": "Alates iOS 26-st saadaval oleva AlarmKitiga tuletab sulle pilli võtmist meelde äratus, mis kõlab ka vaikses režiimis või keskendumisrežiimis.",
   "todayPillNumberFeatureAppealTitle": "Kohanda tänase pilli numbrit",
   "todayPillNumberFeatureAppealShortDescription": "Kui number on vale, paranda seadetes",
   "todayPillNumberFeatureAppealHeadline": "Saad muuta tänase pilli numbrit",

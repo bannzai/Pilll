@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Um alarme que toca como despertador",
   "alarmKitFeatureAppealShortDescription": "Alertas que tocam mesmo no modo silencioso",
   "alarmKitFeatureAppealHeadline": "Um alarme para tomar a pílula, como um despertador",
-  "alarmKitFeatureAppealBody": "Usando o AlarmKit disponível no iOS 26 ou posterior, você será notificado para tomar sua pílula com um alarme que toca de forma confiável mesmo no Modo Silencioso ou no Modo de Foco.",
+  "alarmKitFeatureAppealBody": "Com o AlarmKit, disponível a partir do iOS 26, um alarme que toca mesmo no modo Silencioso ou Foco lembra você de tomar a pílula.",
   "todayPillNumberFeatureAppealTitle": "Ajustar o número do comprimido de hoje",
   "todayPillNumberFeatureAppealShortDescription": "Ajuste nas configurações se o número estiver incorreto",
   "todayPillNumberFeatureAppealHeadline": "Pode alterar o número do comprimido a tomar hoje",

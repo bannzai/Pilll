@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Herätyskellon tavoin soiva hälytys",
   "alarmKitFeatureAppealShortDescription": "Ilmoitukset kuuluvat myös äänettömässä tilassa",
   "alarmKitFeatureAppealHeadline": "Pillerihälytys kuin herätyskello",
-  "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa käytettävissä olevan AlarmKitin avulla pillerin ottamisesta muistutetaan hälytyksellä, joka soi varmasti myös äänettömässä tilassa ja Keskitystilassa.",
+  "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa saatavilla olevan AlarmKitin avulla myös äänettömässä tilassa tai Keskity-tilassa soiva hälytys muistuttaa sinua ottamaan pillerin.",
   "todayPillNumberFeatureAppealTitle": "Aseta tämän päivän pillerinumero",
   "todayPillNumberFeatureAppealShortDescription": "Korjaa numero asetuksista",
   "todayPillNumberFeatureAppealHeadline": "Voit muuttaa tänään otettavan pillerin numeroa",

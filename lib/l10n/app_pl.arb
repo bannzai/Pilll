@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Alarm dzwoniący jak budzik",
   "alarmKitFeatureAppealShortDescription": "Powiadomienia z dźwiękiem nawet w trybie cichym",
   "alarmKitFeatureAppealHeadline": "Alarm przypominający o tabletce, jak budzik",
-  "alarmKitFeatureAppealBody": "Korzystając z AlarmKit dostępnego w systemie iOS 26 i nowszych, powiadamia Cię o przyjęciu pigułki za pomocą alarmu, który niezawodnie dzwoni nawet w trybie cichym lub trybie skupienia.",
+  "alarmKitFeatureAppealBody": "Dzięki AlarmKit, dostępnemu od iOS 26, alarm dzwoniący także w trybie cichym lub Skupieniu przypomina o zażyciu tabletki.",
   "todayPillNumberFeatureAppealTitle": "Dostosuj numer tabletki na dziś",
   "todayPillNumberFeatureAppealShortDescription": "Jeśli numer się rozjechał, popraw w ustawieniach",
   "todayPillNumberFeatureAppealHeadline": "Możesz zmienić numer tabletki do wzięcia dzisiaj",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
   "alarmKitFeatureAppealShortDescription": "Sessiz modda bile sesli çalan bildirimler",
   "alarmKitFeatureAppealHeadline": "Çalar saat gibi çalışan hap alma alarmı",
-  "alarmKitFeatureAppealBody": "iOS 26 ve sonrası için kullanılabilen AlarmKit'i kullanarak, sessiz modda veya Odak modunda olsa bile kesinlikle çalan alarmlarla hap alımınızı hatırlatır.",
+  "alarmKitFeatureAppealBody": "iOS 26 ve sonraki sürümlerde kullanılabilen AlarmKit sayesinde, Sessiz modda veya Odak modunda da çalan bir alarm hapınızı alma zamanını size hatırlatır.",
   "todayPillNumberFeatureAppealTitle": "Bugünün hap sırasını ayarla",
   "todayPillNumberFeatureAppealShortDescription": "Numara kayarsa ayarlardan düzeltin",
   "todayPillNumberFeatureAppealHeadline": "Bugün alınacak hap numarasını değiştirebilirsiniz",

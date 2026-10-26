@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "နှိုးစက်နာရီလို မြည်မယ့် သတိပေးချက်",
   "alarmKitFeatureAppealShortDescription": "အသံတိတ်မုဒ်တွင်လည်း အသံမြည်သည့် အသိပေးချက်များ",
   "alarmKitFeatureAppealHeadline": "နှိုးစက်နာရီလို အသံမြည်သည့် ဆေးလုံးသောက်ရန် နှိုးစက်",
-  "alarmKitFeatureAppealBody": "iOS 26 နှင့်အထက်တွင် ရရှိနိုင်သော AlarmKit ကိုအသုံးပြု၍ ဆိုင်းငံ့မုဒ် သို့မဟုတ် အာရုံစူးစိုက်မုဒ်တွင်ပင် သေချာပေါက် မြည်သော အချိန်ကိုက်နှိုးစက်ဖြင့် ဆေးသောက်ချိန်ကို အကြောင်းကြားပေးပါသည်။",
+  "alarmKitFeatureAppealBody": "iOS 26 နှင့် နောက်ပိုင်းဗားရှင်းများတွင် ရနိုင်သော AlarmKit ကို အသုံးပြု၍ အသံတိတ်မုဒ် သို့မဟုတ် အာရုံစူးစိုက်မှုမုဒ်တွင်ပင် မြည်သော နှိုးစက်က ဆေးပြားသောက်ချိန်ကို သတိပေးပါတယ်။",
   "todayPillNumberFeatureAppealTitle": "ယနေ့ဆေးသောက်နံပါတ်ချိန်ညှိပါ",
   "todayPillNumberFeatureAppealShortDescription": "နံပါတ်ကွဲလွဲလျှင် ဆက်တင်တွင် ပြင်ဆင်ပါ",
   "todayPillNumberFeatureAppealHeadline": "ယနေ့သောက်သည့် ဆေးပြားနံပါတ်ကို ပြောင်းလဲနိုင်သည်",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Ébresztőóraként csörgő riasztás",
   "alarmKitFeatureAppealShortDescription": "Értesítések, amelyek néma módban is megszólalnak",
   "alarmKitFeatureAppealHeadline": "Ébresztőóraként működő tablettaszedési emlékeztető",
-  "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével olyan riasztás jelzi a tabletta bevételét, amely néma és fókusz módban is biztosan megszólal.",
+  "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével a néma vagy Fókusz módban is megszólaló riasztás emlékeztet, hogy szedd be a tablettát.",
   "todayPillNumberFeatureAppealTitle": "A mai bevétel sorszámának beállítása",
   "todayPillNumberFeatureAppealShortDescription": "Ha a szám elcsúszott, javítsd a Beállításokban.",
   "todayPillNumberFeatureAppealHeadline": "A mai tabletta sorszámának módosítása",

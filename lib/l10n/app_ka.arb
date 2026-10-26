@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "მაღვიძარასავით დარეკილი შეხსენება",
   "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც უხმო რეჟიმშიც ჟღერს",
   "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი შეხსენება აბის მიღებისთვის",
-  "alarmKitFeatureAppealBody": "iOS 26-დან ხელმისაწვდომი AlarmKit-ის გამოყენებით, წამლის მიღების შესახებ გაცნობებთ განგაშით, რომელიც აუცილებლად რეკავს სიჩუმისა და ფოკუსის რეჟიმებშიც კი.",
+  "alarmKitFeatureAppealBody": "iOS 26-დან ხელმისაწვდომი AlarmKit-ის საშუალებით, მაღვიძარა, რომელიც უხმო ან ფოკუსირების რეჟიმშიც რეკავს, აბის მიღების დროს შეგახსენებთ.",
   "todayPillNumberFeatureAppealTitle": "დღევანდელი მიღების ნომრის შესწორება",
   "todayPillNumberFeatureAppealShortDescription": "ნომერი არასწორია? შეასწორეთ პარამეტრებში",
   "todayPillNumberFeatureAppealHeadline": "დღეს მიღებადი აბის ნომრის შეცვლა",

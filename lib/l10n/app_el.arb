@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Ειδοποίηση που χτυπά σαν ξυπνητήρι",
   "alarmKitFeatureAppealShortDescription": "Ειδοποιήσεις με ήχο ακόμα και στην αθόρυβη λειτουργία",
   "alarmKitFeatureAppealHeadline": "Ξυπνητήρι για τη λήψη του χαπιού",
-  "alarmKitFeatureAppealBody": "Χρησιμοποιώντας το AlarmKit που είναι διαθέσιμο σε iOS 26 και νεότερες εκδόσεις, σας ειδοποιεί για τη λήψη του χαπιού σας με έναν συναγερμό που χτυπά αξιόπιστα ακόμα και σε λειτουργία Σίγασης ή λειτουργία Εστίασης.",
+  "alarmKitFeatureAppealBody": "Με το AlarmKit, που είναι διαθέσιμο από το iOS 26 και μετά, μια ειδοποίηση με ήχο ακόμη και στην αθόρυβη λειτουργία ή στη Συγκέντρωση σας θυμίζει να πάρετε το χάπι.",
   "todayPillNumberFeatureAppealTitle": "Συγχρονισμός αριθμού δόσης σήμερα",
   "todayPillNumberFeatureAppealShortDescription": "Αν ο αριθμός δεν είναι σωστός, διορθώστε τον στις ρυθμίσεις",
   "todayPillNumberFeatureAppealHeadline": "Μπορείτε να αλλάξετε τον αριθμό του χαπιού που πρέπει να πάρετε σήμερα",

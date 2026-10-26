@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Una alarma que suena como un despertador",
   "alarmKitFeatureAppealShortDescription": "Avisos que suenan incluso en modo silencio",
   "alarmKitFeatureAppealHeadline": "Una alarma para tomar la píldora como un despertador",
-  "alarmKitFeatureAppealBody": "Con AlarmKit, disponible en iOS 26 y versiones posteriores, recibirás una alarma que suena incluso en modo silencio o modo de enfoque para recordarte que tomes tu píldora.",
+  "alarmKitFeatureAppealBody": "Con AlarmKit, disponible desde iOS 26, una alarma que suena incluso en modo Silencio o Concentración te recuerda que debes tomar la píldora.",
   "todayPillNumberFeatureAppealTitle": "Ajustar el número de toma de hoy",
   "todayPillNumberFeatureAppealShortDescription": "Ajusta el número en ajustes si no coincide",
   "todayPillNumberFeatureAppealHeadline": "Puedes cambiar el número de píldora que tomas hoy",

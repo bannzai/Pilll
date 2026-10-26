@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Сэрүүлэгтэй цаг шиг дуугарах сануулга",
   "alarmKitFeatureAppealShortDescription": "Чимээгүй горимд ч дуугарах мэдэгдэл",
   "alarmKitFeatureAppealHeadline": "Сэрүүлэг шиг ажиллах эм уух сануулга",
-  "alarmKitFeatureAppealBody": "iOS 26 болон түүнээс дээш хувилбарт ашиглах боломжтой AlarmKit-ийг ашиглан, чимээгүй горим болон фокус горимд ч гэсэн заавал дуугарах сэрүүлгээр таблет уухыг сануулна.",
+  "alarmKitFeatureAppealBody": "iOS 26 болон түүнээс хойших хувилбарт ашиглах боломжтой AlarmKit-ийн тусламжтайгаар дуугүй эсвэл төвлөрөх горимд ч дуугарах сэрүүлэг эмээ уух цагийг танд сануулна.",
   "todayPillNumberFeatureAppealTitle": "Өнөөдрийн хэрэглэлтийн дугаарыг тохируулах",
   "todayPillNumberFeatureAppealShortDescription": "Дугаар зөрвөл тохиргоонд засах",
   "todayPillNumberFeatureAppealHeadline": "Өнөөдөр уух эмийн дугаарыг өөрчлөх боломжтой",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Budilnikdek jiringlaydigan eslatma",
   "alarmKitFeatureAppealShortDescription": "Ovozsiz rejimda ham ovoz chiqaradigan bildirishnomalar",
   "alarmKitFeatureAppealHeadline": "Budilnik kabi ishlaydigan tabletka ichish signali",
-  "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit funksiyasi yordamida, sukut rejimida yoki diqqat rejimida bo'lsangiz ham albatta chalinadigan budilnik signali bilan dori ichish vaqtini eslatadi.",
+  "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit yordamida ovozsiz yoki diqqatni jamlash rejimida ham chalinadigan signal sizga tabletkani qabul qilish vaqtini eslatadi.",
   "todayPillNumberFeatureAppealTitle": "Bugungi qabul raqamini sozlash",
   "todayPillNumberFeatureAppealShortDescription": "Raqamlar siljigan bo'lsa, sozlamalarda to'g'rilang",
   "todayPillNumberFeatureAppealHeadline": "Bugun ichiladigan tableta raqamini o'zgartirishingiz mumkin",

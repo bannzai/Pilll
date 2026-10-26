@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Upozornění, které zvoní jako budík",
   "alarmKitFeatureAppealShortDescription": "Oznámení se zvukem i v tichém režimu",
   "alarmKitFeatureAppealHeadline": "Budík pro užití pilulky",
-  "alarmKitFeatureAppealBody": "Díky AlarmKit dostupnému od iOS 26 vás upozorníme na užití pilulky alarmem, který spolehlivě zazvoní i v tichém režimu nebo Režimu soustředění.",
+  "alarmKitFeatureAppealBody": "Díky AlarmKitu, dostupnému od iOS 26, vám užití pilulky připomene budík, který zazvoní i v tichém režimu nebo při zapnutém Soustředění.",
   "todayPillNumberFeatureAppealTitle": "Nastavit číslo dnešní tablety",
   "todayPillNumberFeatureAppealShortDescription": "Pokud číslo nesedí, opravte v nastavení",
   "todayPillNumberFeatureAppealHeadline": "Můžete změnit číslo pilulky, kterou si dnes vezmete",

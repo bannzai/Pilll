@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "像闹钟一样响起的提醒",
   "alarmKitFeatureAppealShortDescription": "静音模式下也会响铃的提醒",
   "alarmKitFeatureAppealHeadline": "像闹钟一样的服药提醒",
-  "alarmKitFeatureAppealBody": "使用可在 iOS 26 及以上版本中使用的 AlarmKit，即使在静音或集中模式下也能通过可靠响铃的闹钟提醒服药。",
+  "alarmKitFeatureAppealBody": "通过 iOS 26 及更高版本提供的 AlarmKit，即使开启静音模式或专注模式，闹钟也会响起，提醒你服用药片。",
   "todayPillNumberFeatureAppealTitle": "对齐今日服用编号",
   "todayPillNumberFeatureAppealShortDescription": "编号错位时可在设置中修正",
   "todayPillNumberFeatureAppealHeadline": "可更改今日服用的药丸编号",

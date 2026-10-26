@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ",
   "alarmKitFeatureAppealShortDescription": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਣ ਵਾਲੀਆਂ ਸੂਚਨਾਵਾਂ",
   "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਗੋਲੀ ਲੈਣ ਦਾ ਅਲਾਰਮ",
-  "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਦੇ ਵਰਜ਼ਨਾਂ ਵਿੱਚ ਉਪਲਬਧ AlarmKit ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਸਾਈਲੈਂਟ ਮੋਡ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਨਿਸ਼ਚਿਤ ਰੂਪ ਨਾਲ ਵੱਜਣ ਵਾਲੇ ਅਲਾਰਮ ਰਾਹੀਂ ਗੋਲੀ ਲੈਣ ਦੀ ਸੂਚਨਾ ਦਿੱਤੀ ਜਾਂਦੀ ਹੈ।",
+  "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਉਪਲਬਧ AlarmKit ਨਾਲ, ਸਾਈਲੈਂਟ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ ਤੁਹਾਨੂੰ ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ ਯਾਦ ਕਰਾਉਂਦਾ ਹੈ।",
   "todayPillNumberFeatureAppealTitle": "ਅੱਜ ਦਾ ਖੁਰਾਕ ਨੰਬਰ ਮਿਲਾਓ",
   "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਨੰਬਰ ਗ਼ਲਤ ਹੋਵੇ ਤਾਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਠੀਕ ਕਰੋ",
   "todayPillNumberFeatureAppealHeadline": "ਅੱਜ ਲੈਣ ਵਾਲੀ ਗੋਲੀ ਦਾ ਨੰਬਰ ਬਦਲ ਸਕਦੇ ਹੋ",

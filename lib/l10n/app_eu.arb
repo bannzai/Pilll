@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Iratzargailu baten moduan jotzen duen alarma",
   "alarmKitFeatureAppealShortDescription": "Modu isilean ere jotzen duten jakinarazpenak",
   "alarmKitFeatureAppealHeadline": "Pilula hartzeko alarma, iratzargailu baten modukoa",
-  "alarmKitFeatureAppealBody": "iOS 26 eta bertsio berriagoetan eskuragarri dagoen AlarmKit erabiliz, isilik moduan edo kontzentrazio moduan ere segurtasunez joko duen alarma batekin jakinarazten dizu pilula hartzeko ordua.",
+  "alarmKitFeatureAppealBody": "iOS 26tik aurrera erabilgarri dagoen AlarmKit erabilita, modu isilean edo kontzentrazio moduan ere jotzen duen alarma batek pilula hartzeko ordua gogorarazten dizu.",
   "todayPillNumberFeatureAppealTitle": "Gaurko pastilla-zenbakia egokitu",
   "todayPillNumberFeatureAppealShortDescription": "Zenbakia desegokia bada, ezarpenetan zuzendu",
   "todayPillNumberFeatureAppealHeadline": "Gaurko pilula-zenbakia alda dezakezu",

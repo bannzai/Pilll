@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "هشداری که مثل ساعت زنگ‌دار به صدا درمی‌آید",
   "alarmKitFeatureAppealShortDescription": "اعلان‌هایی که در حالت بی‌صدا هم صدا دارند",
   "alarmKitFeatureAppealHeadline": "زنگ مصرف قرص، مانند ساعت زنگ‌دار",
-  "alarmKitFeatureAppealBody": "با استفاده از AlarmKit که از iOS 26 به بعد در دسترس است، حتی در حالت بی‌صدا یا حالت تمرکز نیز آلارمی که به‌طور قطعی پخش می‌شود، زمان مصرف قرص را به شما یادآوری می‌کند.",
+  "alarmKitFeatureAppealBody": "با AlarmKit که در iOS 26 و نسخه‌های جدیدتر در دسترس است، زنگ هشداری که حتی در حالت بی‌صدا یا تمرکز هم به صدا درمی‌آید، زمان مصرف قرص را به شما یادآوری می‌کند.",
   "todayPillNumberFeatureAppealTitle": "تنظیم شماره قرص امروز",
   "todayPillNumberFeatureAppealShortDescription": "اگر شماره اشتباه است، در تنظیمات اصلاح کنید",
   "todayPillNumberFeatureAppealHeadline": "می‌توانید شماره قرص امروز را تغییر دهید",

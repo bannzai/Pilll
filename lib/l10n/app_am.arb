@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "እንደ ማንቂያ ሰዓት የሚጮህ ማንቂያ",
   "alarmKitFeatureAppealShortDescription": "በዝምታ ሁነታም የሚሰሙ ማሳወቂያዎች",
   "alarmKitFeatureAppealHeadline": "እንደ ማንቂያ ሰዓት የሚሰማ የክኒን ማንቂያ",
-  "alarmKitFeatureAppealBody": "በ iOS 26 እና ከዚህ በኋላ ሊጠቀሙበት የሚችሉትን AlarmKit በመጠቀም፣ ጸጥ ያለ ሁኔታ ወይም የትኩረት ሁኔታ ውስጥ ቢሆኑም እንኳ በእርግጠኝነት የሚጮህ ቅስቀሳ ክኒን መዋጥዎን ያሳውቅዎታል።",
+  "alarmKitFeatureAppealBody": "ከiOS 26 ጀምሮ በሚገኘው AlarmKit አማካኝነት፣ በዝምታ ሁኔታ ወይም በትኩረት ሁኔታ ላይም የሚሰማ ማንቂያ ክኒን የመውሰጃ ጊዜን ያሳውቅዎታል።",
   "todayPillNumberFeatureAppealTitle": "የዛሬን የዶዝ ቁጥር ያስተካክሉ",
   "todayPillNumberFeatureAppealShortDescription": "ቁጥሩ ካልተስማማ በቅንብሮቹ ያስተካክሉ",
   "todayPillNumberFeatureAppealHeadline": "የዛሬን ክኒን ቁጥር መቀየር ይቻላል",

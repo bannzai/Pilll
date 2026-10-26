@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Alarma na tumutunog na parang orasanang de-alarma",
   "alarmKitFeatureAppealShortDescription": "Mga abisong tutunog kahit nasa silent mode",
   "alarmKitFeatureAppealHeadline": "Alarma sa pag-inom ng pildoras na parang orasan na may alarma",
-  "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na magagamit mula sa iOS 26 pataas, ipapaalala ng app ang pag-inom ng pill gamit ang alarm na tutunog kahit nasa silent mode o focus mode.",
+  "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na available sa iOS 26 o mas bago, ipinapaalala sa inyo ng alarm na tumutunog kahit naka-Silent mode o Focus na oras nang inumin ang pildoras.",
   "todayPillNumberFeatureAppealTitle": "Itugma ang numero ng pill ngayong araw",
   "todayPillNumberFeatureAppealShortDescription": "Kung nagkakaiba ang numero, ayusin ito sa mga setting",
   "todayPillNumberFeatureAppealHeadline": "Maaari mong baguhin ang numero ng pill na iinumin ngayong araw",

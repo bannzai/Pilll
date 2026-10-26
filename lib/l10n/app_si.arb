@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "එලාම් ඔරලෝසුවක් මෙන් නාද වන සිහිකැඳවීමක්",
   "alarmKitFeatureAppealShortDescription": "නිහඬ ප්‍රකාරයේදීත් හඬ නැගෙන දැනුම්දීම්",
   "alarmKitFeatureAppealHeadline": "එලාම් ඔරලෝසුවක් වැනි පෙති ගැනීමේ එලාමයක්",
-  "alarmKitFeatureAppealBody": "iOS 26 සහ ඉන් පසු අනුවාදවල ලැබෙන AlarmKit භාවිතයෙන්, නිහඬ මාදිලියේදී හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේදී වුවත් විශ්වාසවන්තව ඇහෙන ඇලාර්මයකින් පිල් ගැනීමේ වේලාව දන්වනු ලබයි.",
+  "alarmKitFeatureAppealBody": "iOS 26 සහ ඊට පසු අනුවාදවල ලබාගත හැකි AlarmKit භාවිතයෙන්, නිහඬ ප්‍රකාරයේ හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේ පවා නාද වන එලාමයක් ඔබට පෙත්ත ගැනීමේ වේලාව මතක් කර දෙයි.",
   "todayPillNumberFeatureAppealTitle": "අද ගන්නා පිල් අංකය ගළපා ගන්න",
   "todayPillNumberFeatureAppealShortDescription": "අංකය නොගැලපේ නම් සැකසුම්වලින් නිවැරදි කරන්න",
   "todayPillNumberFeatureAppealHeadline": "ඔබට අද ගන්නා පිල් අංකය වෙනස් කළ හැකිය",

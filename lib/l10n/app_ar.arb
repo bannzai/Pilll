@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "منبّه يرنّ مثل ساعة المنبّه",
   "alarmKitFeatureAppealShortDescription": "تنبيهات تُصدر صوتًا حتى في الوضع الصامت",
   "alarmKitFeatureAppealHeadline": "منبّه لتناول الحبة مثل منبّه الاستيقاظ",
-  "alarmKitFeatureAppealBody": "يستخدم AlarmKit المتاح على iOS 26 والإصدارات الأحدث لإعلامك بموعد تناول الحبوب عبر تنبيه يُصدر صوتًا بشكل موثوق حتى في وضع الصامت أو وضع التركيز.",
+  "alarmKitFeatureAppealBody": "باستخدام AlarmKit المتاح في iOS 26 والإصدارات الأحدث، ينبهك منبه يُسمع حتى في الوضع الصامت أو وضع التركيز إلى موعد تناول حبة منع الحمل.",
   "todayPillNumberFeatureAppealTitle": "ضبط رقم الجرعة لليوم",
   "todayPillNumberFeatureAppealShortDescription": "إذا اختلف الرقم، صحّحه من الإعدادات",
   "todayPillNumberFeatureAppealHeadline": "يمكنك تغيير رقم الحبة لليوم",

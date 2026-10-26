@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",
   "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi dalam mode senyap",
   "alarmKitFeatureAppealHeadline": "Alarm minum pil seperti jam weker",
-  "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia di iOS 26 ke atas, akan mengingatkan Anda untuk minum pil dengan alarm yang tetap berbunyi meskipun dalam mode senyap atau mode Fokus.",
+  "alarmKitFeatureAppealBody": "Dengan AlarmKit yang tersedia mulai iOS 26, alarm yang berbunyi meski mode Senyap atau Fokus aktif mengingatkan Anda untuk minum pil.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nomor pil hari ini",
   "todayPillNumberFeatureAppealShortDescription": "Jika nomor bergeser, koreksi di pengaturan",
   "todayPillNumberFeatureAppealHeadline": "Ubah nomor pil untuk hari ini",

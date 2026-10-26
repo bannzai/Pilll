@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "En alarm som ringer som en vekkerklokke",
   "alarmKitFeatureAppealShortDescription": "Varsler med lyd, selv i lydløs modus",
   "alarmKitFeatureAppealHeadline": "P-pillealarm som en vekkerklokke",
-  "alarmKitFeatureAppealBody": "Med AlarmKit, tilgjengelig på iOS 26 og nyere, varsles du om å ta pillene dine med en alarm som alltid ringer – selv i stillemodus eller fokusmodus.",
+  "alarmKitFeatureAppealBody": "Med AlarmKit, som er tilgjengelig fra iOS 26, minner en alarm som ringer også i lydløs modus eller Fokus, deg på å ta p-pillen.",
   "todayPillNumberFeatureAppealTitle": "Juster dagens dosenummer",
   "todayPillNumberFeatureAppealShortDescription": "Feil nummer? Rett opp i innstillinger",
   "todayPillNumberFeatureAppealHeadline": "Du kan endre pillenummeret du tar i dag",

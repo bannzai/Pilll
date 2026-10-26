@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "I-alamu ekhala njengewashi le-alamu",
   "alarmKitFeatureAppealShortDescription": "Izaziso ezizwakalayo ngisho nakumodi ethule",
   "alarmKitFeatureAppealHeadline": "I-alamu yokuphuza iphilisi efana newashi elivusayo",
-  "alarmKitFeatureAppealBody": "Ku-iOS 26 nangaphezulu, i-AlarmKit isikukhumbuza ukuthatha iphilisi ngesixwayiso esishaya ngokuqinisekile, ngisho noma imodi ithule noma imodi yokugxila ivuliwe.",
+  "alarmKitFeatureAppealBody": "Nge-AlarmKit etholakala kusukela ku-iOS 26, i-alamu ekhalayo ngisho nakumodi yokuthula noma yokugxila ikukhumbuza ukuthi uphuze iphilisi.",
   "todayPillNumberFeatureAppealTitle": "Lungisa inombolo yokuthatha yanamuhla",
   "todayPillNumberFeatureAppealShortDescription": "Uma inombolo ingahambelani, lungisa ezilungiselelweni.",
   "todayPillNumberFeatureAppealHeadline": "Ungashintsha inombolo yephilisi ozoyithatha namuhla",

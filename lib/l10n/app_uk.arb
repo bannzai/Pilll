@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Нагадування, що дзвонить як будильник",
   "alarmKitFeatureAppealShortDescription": "Сповіщення зі звуком навіть у беззвучному режимі",
   "alarmKitFeatureAppealHeadline": "Нагадування про прийом пігулки, як будильник",
-  "alarmKitFeatureAppealBody": "Завдяки AlarmKit, доступному з iOS 26, сигнал пролунає навіть у беззвучному режимі чи режимі концентрації, щоб нагадати про прийом таблетки.",
+  "alarmKitFeatureAppealBody": "З AlarmKit, доступним починаючи з iOS 26, будильник, що лунає навіть у беззвучному режимі або режимі зосередження, нагадує вам про прийом пігулки.",
   "todayPillNumberFeatureAppealTitle": "Встановити номер прийому на сьогодні",
   "todayPillNumberFeatureAppealShortDescription": "Налаштуйте у встановленнях, якщо номер збився",
   "todayPillNumberFeatureAppealHeadline": "Змінити номер таблетки на сьогодні",

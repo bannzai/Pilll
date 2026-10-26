@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Ett alarm som ringer som en väckarklocka",
   "alarmKitFeatureAppealShortDescription": "Aviseringar med ljud även i tyst läge",
   "alarmKitFeatureAppealHeadline": "Pillerlarm som en väckarklocka",
-  "alarmKitFeatureAppealBody": "Med AlarmKit, tillgängligt från iOS 26, ringer ett alarm som hörs även i tyst läge och fokusläge, så att du aldrig missar en dos p-piller.",
+  "alarmKitFeatureAppealBody": "Med AlarmKit, som finns från iOS 26, påminner ett alarm som hörs även i tyst läge eller Fokus dig om att ta ditt p-piller.",
   "todayPillNumberFeatureAppealTitle": "Justera dagens pillernummer",
   "todayPillNumberFeatureAppealShortDescription": "Om numreringen är fel, rätta till det i inställningarna.",
   "todayPillNumberFeatureAppealHeadline": "Du kan ändra numret på dagens piller",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "অ্যালার্ম ঘড়ির মতো বেজে ওঠা অ্যালার্ম",
   "alarmKitFeatureAppealShortDescription": "সাইলেন্ট মোডেও শব্দ করে এমন বিজ্ঞপ্তি",
   "alarmKitFeatureAppealHeadline": "অ্যালার্ম ঘড়ির মতো পিল খাওয়ার অ্যালার্ম",
-  "alarmKitFeatureAppealBody": "iOS 26 বা তার পরবর্তী সংস্করণে উপলব্ধ AlarmKit ব্যবহার করে, সাইলেন্ট মোড বা ফোকাস মোডেও নিশ্চিতভাবে বেজে ওঠা অ্যালার্মের মাধ্যমে পিল সেবনের কথা মনে করিয়ে দেয়।",
+  "alarmKitFeatureAppealBody": "iOS 26 বা পরবর্তী সংস্করণে উপলব্ধ AlarmKit ব্যবহার করে, সাইলেন্ট বা ফোকাস মোডেও বেজে ওঠা অ্যালার্ম আপনাকে পিল খাওয়ার সময় জানায়।",
   "todayPillNumberFeatureAppealTitle": "আজকের সেবন নম্বর মেলানো",
   "todayPillNumberFeatureAppealShortDescription": "নম্বর ভুল হলে সেটিংসে ঠিক করুন",
   "todayPillNumberFeatureAppealHeadline": "আজকের গ্রহণ নম্বর পরিবর্তন করা যাবে",

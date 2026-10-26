@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "அலாரம் கடிகாரம் போல ஒலிக்கும் நினைவூட்டல்",
   "alarmKitFeatureAppealShortDescription": "அமைதிப் பயன்முறையிலும் ஒலிக்கும் அறிவிப்புகள்",
   "alarmKitFeatureAppealHeadline": "அலாரம் கடிகாரம் போல மாத்திரை எடுத்துக்கொள்ள நினைவூட்டும் அலாரம்",
-  "alarmKitFeatureAppealBody": "iOS 26 அல்லது அதற்கு மேற்பட்ட பதிப்புகளில் கிடைக்கும் AlarmKit-ஐப் பயன்படுத்தி, சைலெண்ட் முறையிலும் ஃபோகஸ் முறையிலும் நிச்சயமாக ஒலிக்கும் அலாரத்தால் மாத்திரை எடுக்க வேண்டிய நேரத்தை உங்களுக்குத் தெரிவிக்கிறோம்.",
+  "alarmKitFeatureAppealBody": "iOS 26 மற்றும் அதற்குப் பிந்தைய பதிப்புகளில் கிடைக்கும் AlarmKit மூலம், அமைதி நிலை அல்லது கவனக் குவிப்பு நிலையிலும் ஒலிக்கும் அலாரம் மாத்திரை எடுத்துக்கொள்ள வேண்டிய நேரத்தை நினைவூட்டுகிறது.",
   "todayPillNumberFeatureAppealTitle": "இன்றைய மாத்திரை எண்ணை சரிசெய்",
   "todayPillNumberFeatureAppealShortDescription": "எண் தவறியிருந்தால் அமைப்பில் சரிசெய்க",
   "todayPillNumberFeatureAppealHeadline": "இன்று எடுக்கும் மாத்திரையின் எண்ணை மாற்றலாம்",

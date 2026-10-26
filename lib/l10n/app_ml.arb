@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "അലാറം ക്ലോക്ക് പോലെ മുഴങ്ങുന്ന അലാറം",
   "alarmKitFeatureAppealShortDescription": "നിശ്ശബ്ദ മോഡിലും ശബ്ദിക്കുന്ന അറിയിപ്പുകൾ",
   "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലെ ഗുളിക കഴിക്കാനുള്ള അലാറം",
-  "alarmKitFeatureAppealBody": "iOS 26-ഉം അതിനു ശേഷവും ലഭ്യമായ AlarmKit ഉപയോഗിച്ച്, സൈലന്റ് മോഡിലും ഫോക്കസ് മോഡിലും ആണെങ്കിലും ഉറപ്പായും ശബ്ദിക്കുന്ന അലാറം വഴി ഗുളിക കഴിക്കാൻ ഓർമ്മിപ്പിക്കുന്നു.",
+  "alarmKitFeatureAppealBody": "iOS 26 മുതലുള്ള പതിപ്പുകളിൽ ലഭ്യമായ AlarmKit ഉപയോഗിച്ച്, സൈലന്റ് മോഡിലോ ഫോക്കസ് മോഡിലോ പോലും മുഴങ്ങുന്ന അലാറം ഗുളിക കഴിക്കേണ്ട സമയം ഓർമ്മിപ്പിക്കുന്നു.",
   "todayPillNumberFeatureAppealTitle": "ഇന്നത്തെ ഡോസ് നമ്പർ ക്രമീകരിക്കുക",
   "todayPillNumberFeatureAppealShortDescription": "നമ്പർ തെറ്റിയാൽ ക്രമീകരണത്തിൽ ശരിയാക്കുക",
   "todayPillNumberFeatureAppealHeadline": "ഇന്ന് കഴിക്കേണ്ട ഗുളിക നമ്പർ മാറ്റാം",

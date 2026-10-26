@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "O alarmă care sună ca un ceas deșteptător",
   "alarmKitFeatureAppealShortDescription": "Notificări sonore chiar și în modul silențios",
   "alarmKitFeatureAppealHeadline": "O alarmă pentru pilulă, ca un ceas deșteptător",
-  "alarmKitFeatureAppealBody": "Folosind AlarmKit, disponibil pe iOS 26 și versiunile ulterioare, vă reamintim să luați pilula printr-o alarmă care sună cu certitudine chiar și în modul silențios sau în modul Focus.",
+  "alarmKitFeatureAppealBody": "Cu AlarmKit, disponibil începând cu iOS 26, o alarmă care sună chiar și în modul Silențios sau Concentrare îți amintește să iei pilula.",
   "todayPillNumberFeatureAppealTitle": "Ajustează numărul dozei de astăzi",
   "todayPillNumberFeatureAppealShortDescription": "Număr greșit? Corectați din setări",
   "todayPillNumberFeatureAppealHeadline": "Puteți modifica numărul pilulei de astăzi",

@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "د زنګ وهونکي ساعت په څېر غږېدونکی خبرتیا",
   "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې په چوپ حالت کې هم غږېږي",
   "alarmKitFeatureAppealHeadline": "د ویښولو د ساعت په څېر د ګولۍ اخیستو زنګ",
-  "alarmKitFeatureAppealBody": "د iOS 26 او وروستیو نسخو کې د AlarmKit له کارولو سره، د خاموش حالت یا د تمرکز حالت کې هم د ډاډمن اعلام له لارې د حبو د استعمال یادونه کوو.",
+  "alarmKitFeatureAppealBody": "د AlarmKit په کارولو سره، چې په iOS 26 او ورپسې بڼو کې شته، هغه زنګ چې په چوپ حالت یا د تمرکز په حالت کې هم غږېږي، تاسو ته د ګولۍ اخیستو وخت دریادوي.",
   "todayPillNumberFeatureAppealTitle": "د نن ورځې د دوا شمیره سمول",
   "todayPillNumberFeatureAppealShortDescription": "که شمیره ناسمه وي، د ترتیباتو له لارې سمه کړئ",
   "todayPillNumberFeatureAppealHeadline": "نن د حبې شمیره بدلولی شئ",

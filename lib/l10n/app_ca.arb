@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Una alarma que sona com un despertador",
   "alarmKitFeatureAppealShortDescription": "Avisos que sonen fins i tot en mode silenci",
   "alarmKitFeatureAppealHeadline": "Una alarma per prendre la píndola com un despertador",
-  "alarmKitFeatureAppealBody": "Utilitza AlarmKit, disponible a partir d'iOS 26, per avisar-te de prendre la píndola amb una alarma que sona de manera fiable fins i tot en mode silenci o mode de concentració.",
+  "alarmKitFeatureAppealBody": "Amb AlarmKit, disponible a partir d’iOS 26, una alarma que sona fins i tot en mode de silenci o de concentració et recorda que has de prendre la píndola.",
   "todayPillNumberFeatureAppealTitle": "Ajusta el número de la píndola d'avui",
   "todayPillNumberFeatureAppealShortDescription": "Si el número no és correcte, corregeix-lo a la configuració",
   "todayPillNumberFeatureAppealHeadline": "Podeu canviar el número de píndola d'avui",

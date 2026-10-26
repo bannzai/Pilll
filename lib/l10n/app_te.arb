@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "అలారం గడియారంలా మోగే అలారం",
   "alarmKitFeatureAppealShortDescription": "సైలెంట్ మోడ్‌లో కూడా శబ్దం చేసే నోటిఫికేషన్‌లు",
   "alarmKitFeatureAppealHeadline": "అలారం గడియారంలా మాత్ర వేసుకునే అలారం",
-  "alarmKitFeatureAppealBody": "iOS 26 తర్వాత అందుబాటులో ఉండే AlarmKitను ఉపయోగించి, సైలెంట్ మోడ్ లేదా ఫోకస్ మోడ్‌లో ఉండగా కూడా ఖచ్చితంగా కనిపించే అలారం ద్వారా మాత్రలు తీసుకోమని గుర్తుచేస్తుంది.",
+  "alarmKitFeatureAppealBody": "iOS 26 లేదా తర్వాతి వెర్షన్‌లలో అందుబాటులో ఉన్న AlarmKit సహాయంతో, సైలెంట్ మోడ్ లేదా ఫోకస్ మోడ్‌లో కూడా మోగే అలారం మాత్ర తీసుకోవాల్సిన సమయాన్ని గుర్తుచేస్తుంది.",
   "todayPillNumberFeatureAppealTitle": "ఈ రోజు తీసుకోవాల్సిన మాత్ర సంఖ్యను సరಿಹెయ్యండి",
   "todayPillNumberFeatureAppealShortDescription": "సంఖ్య తేడా వస్తే సెట్టింగ్స్‌లో సరిచేయండి",
   "todayPillNumberFeatureAppealHeadline": "ఈ రోజు తాగవలసిన గోలి సంఖ్యను మార్చవచ్చు",

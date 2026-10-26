@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Áminning sem hringir eins og vekjaraklukka",
   "alarmKitFeatureAppealShortDescription": "Tilkynningar sem hljóma líka í hljóðlausri stillingu",
   "alarmKitFeatureAppealHeadline": "Áminning um pilluna eins og vekjaraklukka",
-  "alarmKitFeatureAppealBody": "Við notum AlarmKit, sem er fáanlegt í iOS 26 og síðar, til að minna þig á að taka pilluna með vekjara sem hljómar örugglega jafnvel í þögnarham eða einbeitingarham (Focus).",
+  "alarmKitFeatureAppealBody": "Með AlarmKit, sem er í boði frá iOS 26, minnir vekjari sem hringir líka í hljóðlausri stillingu eða einbeitingarstillingu á að taka pilluna.",
   "todayPillNumberFeatureAppealTitle": "Stilla tölu dagsins",
   "todayPillNumberFeatureAppealShortDescription": "Ef númerin eru úr takti, lagaðu þau í stillingunum.",
   "todayPillNumberFeatureAppealHeadline": "Þú getur breytt númeri pillunnar sem á að taka í dag",

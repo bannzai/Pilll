@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Penggera yang berbunyi seperti jam loceng",
   "alarmKitFeatureAppealShortDescription": "Pemberitahuan yang berbunyi walaupun dalam mod senyap",
   "alarmKitFeatureAppealHeadline": "Penggera makan pil seperti jam loceng",
-  "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia pada iOS 26 dan ke atas, anda akan diberitahu untuk mengambil pil melalui penggera yang pasti berbunyi walaupun dalam mod senyap atau mod Fokus.",
+  "alarmKitFeatureAppealBody": "Dengan AlarmKit yang tersedia mulai iOS 26, penggera yang berbunyi walaupun dalam mod Senyap atau Fokus mengingatkan anda untuk mengambil pil.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nombor pengambilan hari ini",
   "todayPillNumberFeatureAppealShortDescription": "Betulkan dalam tetapan jika nombor tersasar",
   "todayPillNumberFeatureAppealHeadline": "Boleh tukar nombor pil yang diminum hari ini",

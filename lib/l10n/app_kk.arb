@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Оятқыш сияқты шырылдайтын еске салғыш",
   "alarmKitFeatureAppealShortDescription": "Дыбыссыз режимде де естілетін хабарландырулар",
   "alarmKitFeatureAppealHeadline": "Оятқыш сияқты таблетка қабылдау дабылы",
-  "alarmKitFeatureAppealBody": "iOS 26 және одан кейінгі нұсқаларда қолжетімді AlarmKit қолданылып, үнсіз режимде немесе шоғырлану режимінде болса да дыбыс шығаратын ескерту арқылы таблетка қабылдау уақытын дәл ескертіп отырады.",
+  "alarmKitFeatureAppealBody": "iOS 26 және одан кейінгі нұсқаларда қолжетімді AlarmKit арқылы дыбыссыз немесе назар аудару режимінде де шырылдайтын дабыл сізге таблетканы қабылдау уақытын еске салады.",
   "todayPillNumberFeatureAppealTitle": "Бүгін ішетін таблетка нөмірін реттеу",
   "todayPillNumberFeatureAppealShortDescription": "Нөмір ауытқыса, баптаулардан түзетіңіз",
   "todayPillNumberFeatureAppealHeadline": "Бүгін ішетін таблетканың нөмірін өзгертуге болады",

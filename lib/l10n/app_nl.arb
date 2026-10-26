@@ -499,7 +499,7 @@
   "alarmKitFeatureAppealTitle": "Een alarm dat klinkt als een wekker",
   "alarmKitFeatureAppealShortDescription": "Meldingen met geluid, ook in de stille modus",
   "alarmKitFeatureAppealHeadline": "Een pilalarm zoals een wekker",
-  "alarmKitFeatureAppealBody": "Met AlarmKit, beschikbaar vanaf iOS 26, wordt u via een alarm dat zelfs in de stille modus of focusmodus altijd afgaat, herinnerd aan het innemen van uw pil.",
+  "alarmKitFeatureAppealBody": "Met AlarmKit, beschikbaar vanaf iOS 26, herinnert een alarm dat ook in de stille modus of Focus klinkt je eraan om je pil in te nemen.",
   "todayPillNumberFeatureAppealTitle": "Vandaag het pilnummer aanpassen",
   "todayPillNumberFeatureAppealShortDescription": "Nummer onjuist? Pas aan in instellingen",
   "todayPillNumberFeatureAppealHeadline": "Pillnummer van vandaag wijzigen",
