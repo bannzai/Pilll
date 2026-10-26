@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Kuniga",
   "pillTakenCountSuffix": "marta qabul qilish",
   "duringPauseTaking": "Tabletkalarni qabul qilishda tanaffus",
-  "cannotPauseAlreadyTakenToday": "Bugungi dori allaqachon qabul qilingan bo'lgani uchun tanaffus funksiyasini ishlatib bo'lmaydi",
+  "cannotPauseAlreadyTakenToday": "Agar bugungi tabletkani allaqachon ichgan boʻlsangiz,\n«Tabletka ichishni vaqtincha toʻxtatish» funksiyasidan foydalana olmaysiz",
   "pauseTakingStarted": "Tabletka qabul qilishda tanaffus boshlandi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Qabul qilishni to'xtatish boshlanish sanasini tahrirlash",

@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Naponta",
   "pillTakenCountSuffix": "alkalommal szedni",
   "duringPauseTaking": "Szünet a tabletta szedésében",
-  "cannotPauseAlreadyTakenToday": "A mai tabletta bevétele után nem lehet szedési szünetet tartani",
+  "cannotPauseAlreadyTakenToday": "Ha a mai tablettát már szedted,\nnem használhatod a „Szedési szünet” funkciót",
   "pauseTakingStarted": "A tablettaszedési szünet elkezdődött",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Szedési szünet kezdő dátumának szerkesztése",

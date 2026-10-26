@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Za den",
   "pillTakenCountSuffix": "krát užít",
   "duringPauseTaking": "Přestávka v užívání pilulek",
-  "cannotPauseAlreadyTakenToday": "Pokud byl dnešní lék již užit, nelze použít „Přestávka v užívání\"",
+  "cannotPauseAlreadyTakenToday": "Pokud jste si už vzala dnešní pilulku,\nnelze použít „Pauzu v užívání“",
   "pauseTakingStarted": "Byla zahájena pauza v užívání",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upravit datum zahájení přestávky v užívání",

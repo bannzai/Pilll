@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "ຕໍ່ມື້",
   "pillTakenCountSuffix": "ເທື່ອກິນຢາເມັດ",
   "duringPauseTaking": "ກຳລັງພັກການກິນຢາເມັດຊົ່ວຄາວ",
-  "cannotPauseAlreadyTakenToday": "ຖ້າກິນເມັດຢາມື້ນີ້ແລ້ວ ບໍ່ສາມາດ 'ຫຍຸດພັກການກິນຢາ' ໄດ້",
+  "cannotPauseAlreadyTakenToday": "ຖ້າກິນຢາເມັດຂອງມື້ນີ້ແລ້ວ\nຈະບໍ່ສາມາດໃຊ້ «ພັກການກິນຢາ» ໄດ້ເດີ",
   "pauseTakingStarted": "ເລີ່ມພັກການກິນຢາແລ້ວ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ແກ້ໄຂວັນເລີ່ມພັກກິນຢາ",

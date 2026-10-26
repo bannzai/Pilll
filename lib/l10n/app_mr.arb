@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "दिवसातून",
   "pillTakenCountSuffix": "वेळा गोळी घेणे",
   "duringPauseTaking": "गोळी घेण्यापासून सध्या विश्रांती",
-  "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतल्यामुळे 'सेवन विराम' करता येत नाही",
+  "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतली असल्यास,\nतुम्ही ‘गोळी घेण्यास विराम’ वापरू शकत नाही",
   "pauseTakingStarted": "औषध विराम सुरू केला आहे",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "सेवन विराम सुरुवातीचा दिनांक संपादन",

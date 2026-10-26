@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Per hari",
   "pillTakenCountSuffix": "kali minum pil",
   "duringPauseTaking": "Sedang jeda minum pil",
-  "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan \"Jeda Minum\" karena pil hari ini sudah diminum",
+  "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diminum,\nAnda tidak dapat menggunakan “Jeda minum pil”",
   "pauseTakingStarted": "Jeda konsumsi telah dimulai",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit Tanggal Mulai Jeda Konsumsi",

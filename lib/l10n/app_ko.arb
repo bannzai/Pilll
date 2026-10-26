@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "하루에",
   "pillTakenCountSuffix": "회 복용해요",
   "duringPauseTaking": "피임약 복용을 쉬고 있어요",
-  "cannotPauseAlreadyTakenToday": "오늘 복용할 피임약이 이미 복용된 경우 '복용 휴식'을 할 수 없습니다",
+  "cannotPauseAlreadyTakenToday": "오늘 먹을 피임약을 이미 복용했다면\n‘복용 쉬기’를 사용할 수 없어요",
   "pauseTakingStarted": "복용 휴식을 시작했습니다",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "복용 중단 시작일 수정",

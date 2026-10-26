@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "keer neem",
   "duringPauseTaking": "Jy neem tans nie die pil nie",
-  "cannotPauseAlreadyTakenToday": "Kan nie pil onderbreek as vandag se pil reeds geneem is nie",
+  "cannotPauseAlreadyTakenToday": "As jy vandag se pil reeds geneem het,\nkan jy nie \"Pillepouse\" gebruik nie",
   "pauseTakingStarted": "Die pilgebruik-pouse is begin",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Wysig pouse begindatum",

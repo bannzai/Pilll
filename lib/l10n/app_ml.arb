@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "ഒരു ദിവസത്തിൽ",
   "pillTakenCountSuffix": "തവണ ഗുളിക കഴിക്കുക",
   "duringPauseTaking": "ഗുളിക കഴിക്കുന്നതിന് താൽക്കാലിക ഇടവേള",
-  "cannotPauseAlreadyTakenToday": "ഇന്നത്തെ ഗുളിക കഴിച്ചുകഴിഞ്ഞാൽ \"സേവന വിരാമം\" ചെയ്യാൻ കഴിയില്ല",
+  "cannotPauseAlreadyTakenToday": "ഇന്നത്തെ ഗുളിക ഇതിനകം കഴിച്ചിട്ടുണ്ടെങ്കിൽ,\n‘ഗുളിക കഴിക്കുന്നതിന് ഇടവേള’ ഉപയോഗിക്കാനാവില്ല",
   "pauseTakingStarted": "ഗുളിക വിശ്രമം ആരംഭിച്ചു",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ഗുളിക വിശ്രമത്തിന്റെ ആരംഭ തീയതി എഡിറ്റ് ചെയ്യുക",

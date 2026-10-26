@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Egunean",
   "pillTakenCountSuffix": "aldiz hartu",
   "duringPauseTaking": "Pilula hartzeko etenaldia",
-  "cannotPauseAlreadyTakenToday": "Gaurko pilula hartuta dagoenean \"Hartzea pausatu\" ezin da",
+  "cannotPauseAlreadyTakenToday": "Gaurko pilula dagoeneko hartu baduzu,\nezin duzu «Pilulak hartzeko etena» erabili",
   "pauseTakingStarted": "Pilularen hartzea etetea hasi da",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Hartzea eten hasiera data editatu",

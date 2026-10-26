@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Dienā",
   "pillTakenCountSuffix": "reizes lietot",
   "duringPauseTaking": "Tablešu lietošanas pārtraukums",
-  "cannotPauseAlreadyTakenToday": "Tablešu pauze nav iespējama, ja šodienas tabletes jau ir ieņemtas",
+  "cannotPauseAlreadyTakenToday": "Ja šodienas tableti jau esat iedzēruši,\nnevarat izmantot „Lietošanas pārtraukumu“",
   "pauseTakingStarted": "Tablešu lietošanas pauze sākta",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediģēt pārtraukuma sākuma datumu",

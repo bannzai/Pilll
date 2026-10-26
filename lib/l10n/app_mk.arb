@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Дневно",
   "pillTakenCountSuffix": "пати земање",
   "duringPauseTaking": "Пауза во земањето таблета",
-  "cannotPauseAlreadyTakenToday": "Не можете да направите пауза од земање бидејќи денешната пилула е веќе земена",
+  "cannotPauseAlreadyTakenToday": "Ако веќе сте ја зеле денешната таблета,\nне можете да користите „Пауза во земање“",
   "pauseTakingStarted": "Започна паузата од земање на пилулите",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Уреди датум за почеток на паузата во приемот",

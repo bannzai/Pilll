@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Kwa siku",
   "pillTakenCountSuffix": "mara kumeza kidonge",
   "duringPauseTaking": "Mapumziko ya kumeza vidonge",
-  "cannotPauseAlreadyTakenToday": "Huwezi 'Pumzika Kutumia' ikiwa tayari umetumia dawa ya leo",
+  "cannotPauseAlreadyTakenToday": "Ikiwa tayari umemeza kidonge cha leo,\nhuwezi kutumia “Pumziko la kutumia vidonge”",
   "pauseTakingStarted": "Mapumziko wa kunywa vidonge umeanza",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Hariri tarehe ya kuanza mapumziko ya vidonge",

@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "په ورځ کې",
   "pillTakenCountSuffix": "ځله ګولۍ واخلئ",
   "duringPauseTaking": "د ګولیو له اخیستو لنډمهاله وقفه",
-  "cannotPauseAlreadyTakenToday": "که چیرې د نن ورځې ګوټۍ دمخه واخیستل شوي وي\n\"د درملو استعمال ودروول\" نشي کولی",
+  "cannotPauseAlreadyTakenToday": "که د نن ورځې ګولۍ مو لا دمخه خوړلې وي،\nد «ګولیو له خوړلو لنډمهاله وقفه» کارول امکان نه لري",
   "pauseTakingStarted": "د درملو اخیستلو وقفه پیل شوه",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "د دوا د وقفې د پیل نیټه سمون",

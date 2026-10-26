@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Gündə",
   "pillTakenCountSuffix": "dəfə qəbul etmək",
   "duringPauseTaking": "Həb qəbuluna fasilə verilib",
-  "cannotPauseAlreadyTakenToday": "Bu günün həbi artıq qəbul edilibsə, \"Qəbul etməyi dayandırmaq\" mümkün deyil",
+  "cannotPauseAlreadyTakenToday": "Bugünkü həbi artıq qəbul etmisinizsə,\n«Həbə fasilə» funksiyasından istifadə edə bilməzsiniz",
   "pauseTakingStarted": "Həb qəbuluna fasilə başlanıldı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Dərman fasiləsi başlama tarixini redaktə et",

@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Ngosuku",
   "pillTakenCountSuffix": "izikhathi zokugwinya iphilisi",
   "duringPauseTaking": "Ikhefu ekuphuzeni amaphilisi",
-  "cannotPauseAlreadyTakenToday": "Uma iphilisi lanamuhla sele lisetshenzisiwe\nAwukwazi \"ukuyeka ukuphuza\"",
+  "cannotPauseAlreadyTakenToday": "Uma usuliphuzile iphilisi lanamuhla,\nawukwazi ukusebenzisa okuthi “Ukuphumula ekuphuzeni amaphilisi”",
   "pauseTakingStarted": "Siqalile ikhefu lokuthatha amaphilisi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Hlela usuku lokuqala lokuphumula ekuthatheni",

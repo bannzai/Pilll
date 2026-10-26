@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "วันละ",
   "pillTakenCountSuffix": "ครั้ง",
   "duringPauseTaking": "อยู่ในช่วงพักทานยาเม็ด",
-  "cannotPauseAlreadyTakenToday": "ไม่สามารถใช้ฟังก์ชัน \"การพักรับประทาน\" ได้เมื่อได้รับประทานยาเม็ดประจำวันแล้ว",
+  "cannotPauseAlreadyTakenToday": "หากทานยาเม็ดของวันนี้แล้ว\nจะใช้ฟีเจอร์ “พักทานยา” ไม่ได้ค่ะ",
   "pauseTakingStarted": "เริ่มพักการรับประทานยาแล้ว",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "แก้ไขวันเริ่มหยุดรับประทานยา",

@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "در روز",
   "pillTakenCountSuffix": "بار مصرف",
   "duringPauseTaking": "وقفه در مصرف قرص",
-  "cannotPauseAlreadyTakenToday": "وقتی قرص امروز را مصرف کرده‌اید، امکان «استراحت از مصرف» وجود ندارد",
+  "cannotPauseAlreadyTakenToday": "اگر قرص امروز را مصرف کرده‌اید،\nنمی‌توانید از «توقف موقت مصرف قرص» استفاده کنید",
   "pauseTakingStarted": "استراحت مصرف قرص شروع شد",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ویرایش تاریخ شروع توقف مصرف",

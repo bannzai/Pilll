@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Sa isang araw",
   "pillTakenCountSuffix": "beses uminom ng pildoras",
   "duringPauseTaking": "Pahinga muna sa pag-inom ng pildoras",
-  "cannotPauseAlreadyTakenToday": "Kapag nainom na ang ngayong pill\nhindi maaari magpahinga sa pag-inom",
+  "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pill para sa araw na ito,\nhindi ninyo magagamit ang “Pansamantalang paghinto ng pag-inom ng pill”",
   "pauseTakingStarted": "Nagsimula na ang pahinga sa pag-inom",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "I-edit ang petsa ng simula ng pahinga sa pag-inom",

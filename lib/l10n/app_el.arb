@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Την ημέρα",
   "pillTakenCountSuffix": "φορές λήψη",
   "duringPauseTaking": "Παύση στη λήψη του χαπιού",
-  "cannotPauseAlreadyTakenToday": "Δεν μπορείτε να παυσετε τη λήψη αφού έχετε ήδη πάρει το σημερινό χάπι",
+  "cannotPauseAlreadyTakenToday": "Αν έχετε ήδη πάρει το σημερινό χάπι,\nδεν μπορείτε να χρησιμοποιήσετε την «Παύση λήψης»",
   "pauseTakingStarted": "Ξεκίνησε το διάλειμμα λήψης",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης παύσης λήψης",

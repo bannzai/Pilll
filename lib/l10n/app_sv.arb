@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "gånger ta pillret",
   "duringPauseTaking": "Paus från p-piller",
-  "cannotPauseAlreadyTakenToday": "Kan inte pausa intag när dagens p-piller redan är taget",
+  "cannotPauseAlreadyTakenToday": "Om du redan har tagit dagens p-piller\nkan du inte använda ”Pillerpaus”",
   "pauseTakingStarted": "Paus från intag har påbörjats",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Redigera startdatum för medicinpaus",

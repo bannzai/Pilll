@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Á dag",
   "pillTakenCountSuffix": "sinnum taka pilluna",
   "duringPauseTaking": "Hlé á töku pillunnar",
-  "cannotPauseAlreadyTakenToday": "Ekki er hægt að hvíla frá inntöku þegar pilla dagsins hefur þegar verið tekin",
+  "cannotPauseAlreadyTakenToday": "Ef þú hefur þegar tekið pilluna í dag,\ngeturðu ekki notað „Hlé á pillutöku“",
   "pauseTakingStarted": "Pilluhvíld hefur hafist",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Breyta upphafsdegi lyfjahlés",

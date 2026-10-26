@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "ஒரு நாளில்",
   "pillTakenCountSuffix": "முறை மாத்திரை எடுத்துக்கொள்ளுங்கள்",
   "duringPauseTaking": "மாத்திரை எடுத்துக்கொள்வதில் தற்காலிக இடைவெளி",
-  "cannotPauseAlreadyTakenToday": "இன்றைய மாத்திரை ஏற்கனவே எடுத்துக்கொண்டிருந்தால் \"மாத்திரை இடைநிறுத்தம்\" செய்ய முடியாது",
+  "cannotPauseAlreadyTakenToday": "இன்றைய மாத்திரையை ஏற்கெனவே எடுத்திருந்தால்,\n‘மாத்திரை எடுத்துக்கொள்வதில் இடைவேளை’ வசதியைப் பயன்படுத்த முடியாது",
   "pauseTakingStarted": "மாத்திரை எடுத்துக்கொள்ளுதல் ஓய்வு தொடங்கியது",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "மாத்திரை இடைநிறுத்த தொடக்க தேதியைத் திருத்து",

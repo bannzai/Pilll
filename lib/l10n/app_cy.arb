@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Y dydd",
   "pillTakenCountSuffix": "gwaith cymryd y bilsen",
   "duringPauseTaking": "Seibiant rhag cymryd y bilsen",
-  "cannotPauseAlreadyTakenToday": "Os yw pil heddiw wedi'i gymryd eisoes\nNi allwch ddefnyddio 'Seibiant Cymryd'",
+  "cannotPauseAlreadyTakenToday": "Os ydych chi eisoes wedi cymryd pilsen heddiw,\nni allwch ddefnyddio «Seibiant rhag cymryd y bilsen»",
   "pauseTakingStarted": "Wedi dechrau seibiant cymryd",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau seibiant cymryd",

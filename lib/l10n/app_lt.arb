@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Per dieną",
   "pillTakenCountSuffix": "kartus vartoti",
   "duringPauseTaking": "Pertrauka vartojant tabletes",
-  "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletė jau išgerta, negalima padaryti „vartojimo pertraukos\"",
+  "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletę jau išgėrėte,\nnegalite naudoti „Vartojimo pertraukos“",
   "pauseTakingStarted": "Vaistų vartojimo pertrauka pradėta",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Redaguoti vartojimo pertraukos pradžios datą",

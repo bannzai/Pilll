@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Pe zi",
   "pillTakenCountSuffix": "ori să iei pilula",
   "duringPauseTaking": "Pauză în administrarea pilulei",
-  "cannotPauseAlreadyTakenToday": "Pauza de administrare nu este posibilă dacă pastila de azi a fost deja luată",
+  "cannotPauseAlreadyTakenToday": "Dacă ai luat deja pilula de astăzi,\nnu poți folosi „Pauză de la pilulă”",
   "pauseTakingStarted": "Pauza de administrare a fost începută",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editează data de început a pauzei de administrare",

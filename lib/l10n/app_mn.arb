@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Өдөрт",
   "pillTakenCountSuffix": "удаа ууна",
   "duringPauseTaking": "Эм уухаа түр завсарлаж байна",
-  "cannotPauseAlreadyTakenToday": "Өнөөдрийн эмийг аль хэдийн уусан тул \"Эм уухаа завсарлах\" хийх боломжгүй",
+  "cannotPauseAlreadyTakenToday": "Хэрэв та өнөөдрийн эмээ аль хэдийн уусан бол\n«Эм уухыг түр завсарлах» боломжийг ашиглах боломжгүй",
   "pauseTakingStarted": "Эм уухын завсарлагаа эхлүүлэв",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Эм уух дунд тасалгааны эхлэх өдрийг засварлах",

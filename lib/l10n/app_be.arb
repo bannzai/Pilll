@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "За дзень",
   "pillTakenCountSuffix": "разы прымаць",
   "duringPauseTaking": "Перапынак у прыёме пігулак",
-  "cannotPauseAlreadyTakenToday": "Калі сённяшняя пілюля ўжо прынята,\n«Перапынак прыёму» недаступны",
+  "cannotPauseAlreadyTakenToday": "Калі вы ўжо прынялі сённяшнюю пігулку,\nскарыстацца функцыяй «Перапынак у прыёме» не атрымаецца",
   "pauseTakingStarted": "Перапынак у прыёме ліків пачаты",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Рэдагаваць дату пачатку перапынку прыёму",

@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Al dia",
   "pillTakenCountSuffix": "vegades prendre la píndola",
   "duringPauseTaking": "Pausa en la presa de la píndola",
-  "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d'avui\nNo es pot fer el \"descans\" de la presa",
+  "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d'avui,\nno pots fer servir «Pausa de la píndola»",
   "pauseTakingStarted": "He començat un període de descans en la presa del medicament.",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editeu la data d'inici de la pausa de la presa",

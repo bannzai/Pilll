@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Per dag",
   "pillTakenCountSuffix": "keer de pil innemen",
   "duringPauseTaking": "Pauze met de pil",
-  "cannotPauseAlreadyTakenToday": "Als de pil van vandaag al is ingenomen, kan 'Inname Pauze' niet worden gebruikt",
+  "cannotPauseAlreadyTakenToday": "Als je de pil van vandaag al hebt ingenomen,\nkun je 'Pillenpauze' niet gebruiken",
   "pauseTakingStarted": "Innamepauze gestart",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Pauze startdatum bewerken",

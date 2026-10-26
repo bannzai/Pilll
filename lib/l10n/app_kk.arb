@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Күніне",
   "pillTakenCountSuffix": "рет қабылдау",
   "duringPauseTaking": "Таблетка қабылдаудағы үзіліс",
-  "cannotPauseAlreadyTakenToday": "Бүгінгі дәрі қабылданғаннан кейін\n«Дәрі демалысы» мүмкін емес",
+  "cannotPauseAlreadyTakenToday": "Егер бүгінгі таблетканы ішіп қойған болсаңыз,\n«Қабылдауды уақытша тоқтату» мүмкіндігін пайдалана алмайсыз",
   "pauseTakingStarted": "Дәрі қабылдау демалысы басталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Қабылдауды тоқтату басталу күнін өңдеу",

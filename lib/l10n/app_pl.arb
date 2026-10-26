@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Dziennie",
   "pillTakenCountSuffix": "razy przyjąć tabletkę",
   "duringPauseTaking": "Przerwa w przyjmowaniu tabletek",
-  "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza pigułka została już przyjęta\nNie można użyć funkcji „przerwa w przyjmowaniu\"",
+  "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza tabletka została już przyjęta,\nnie można skorzystać z „Przerwy w przyjmowaniu”",
   "pauseTakingStarted": "Rozpoczęto przerwę w przyjmowaniu",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edytuj datę rozpoczęcia przerwy",
