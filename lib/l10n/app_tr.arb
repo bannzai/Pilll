@@ -123,7 +123,7 @@
   "notTaken": "Hap henüz alınmadı",
   "pillSheetSettings": "Blister ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü hapı alınmadı olarak işaretledikten sonra",
-  "pauseTaking": "İlaç Molası",
+  "pauseTaking": "Hap kullanımına ara verin",
   "changePauseStartDate": "Kullanım Molası Başlangıç Tarihini Değiştir",
   "pauseTakingPeriodEnded": "Kullanıma ara verme dönemi sona erdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

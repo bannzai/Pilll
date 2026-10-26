@@ -123,7 +123,7 @@
   "notTaken": "ഗുളിക കഴിച്ചിട്ടില്ല",
   "pillSheetSettings": "ഗുളിക സ്ട്രിപ്പ ക്രമീകരണങ്ങൾ",
   "unmarkTodayPillAsTakenToPause": "ഇന്നത്തെ ഗുളിക കഴിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തിയ ശേഷം",
-  "pauseTaking": "സേവനം വിശ്രമം",
+  "pauseTaking": "ഗുളിക കഴിക്കുന്നതിന് ഇടവേള",
   "changePauseStartDate": "സേവന ഇടവേള ആരംഭ തീയതി മാറ്റൽ",
   "pauseTakingPeriodEnded": "മാത്ര സേവന വിശ്രമ കാലയളവ് പൂർത്തിയായി",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

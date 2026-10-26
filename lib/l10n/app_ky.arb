@@ -123,7 +123,7 @@
   "notTaken": "Таблетка ичиле элек",
   "pillSheetSettings": "таблетка блистери жөндөөлөрү",
   "unmarkTodayPillAsTakenToPause": "Бүгүнкү таблетканы ичиле элек деп белгилегенден кийин",
-  "pauseTaking": "Ичүүнү токтотуу",
+  "pauseTaking": "Таблетка ичүүдөгү тыныгуу",
   "changePauseStartDate": "Дем алуу башталуу күнүн өзгөртүү",
   "pauseTakingPeriodEnded": "Таблетка ичүүдөн тыныгуу мезгили аяктады",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

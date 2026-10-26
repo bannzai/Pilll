@@ -123,7 +123,7 @@
   "notTaken": "Nog nie geneem nie",
   "pillSheetSettings": "pilstrokie-instellings",
   "unmarkTodayPillAsTakenToPause": "Nadat jy vandag se pil as nie geneem nie gemerk het",
-  "pauseTaking": "Pil pouse",
+  "pauseTaking": "Pillepouse",
   "changePauseStartDate": "Verander pouse begindatum",
   "pauseTakingPeriodEnded": "Jou pilpause is verby",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

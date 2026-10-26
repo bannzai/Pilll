@@ -123,7 +123,7 @@
   "notTaken": "Pilleri ottamatta",
   "pillSheetSettings": "pilleriliuskan asetukset",
   "unmarkTodayPillAsTakenToPause": "Kun olet merkinnyt tämän päivän pillerin ottamatta jääneeksi",
-  "pauseTaking": "Lääketauko",
+  "pauseTaking": "Tauko pillereiden otossa",
   "changePauseStartDate": "Muuta käyttötauon aloituspäivää",
   "pauseTakingPeriodEnded": "Lääkkeen taukojakso on päättynyt",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}. saakka",

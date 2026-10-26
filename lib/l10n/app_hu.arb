@@ -123,7 +123,7 @@
   "notTaken": "A tabletta nincs beszedve",
   "pillSheetSettings": "A tablettacsomag beállításai",
   "unmarkTodayPillAsTakenToPause": "Miután a mai tablettát be nem vettként jelölted meg",
-  "pauseTaking": "Szedési szünet",
+  "pauseTaking": "Szünet a tabletta szedésében",
   "changePauseStartDate": "Szedési szünet kezdő dátum módosítása",
   "pauseTakingPeriodEnded": "A tablettaszedési szünet befejeződött",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

@@ -123,7 +123,7 @@
   "notTaken": "មិនទាន់បានលេបថ្នាំគ្រាប់",
   "pillSheetSettings": "ការកំណត់បន្ទះថ្នាំគ្រាប់",
   "unmarkTodayPillAsTakenToPause": "បន្ទាប់ពីសម្គាល់ថ្នាំគ្រាប់សម្រាប់ថ្ងៃនេះថាមិនទាន់បានលេប",
-  "pauseTaking": "សម្រាកញ៉ាំថ្នាំ",
+  "pauseTaking": "ផ្អាកការលេបថ្នាំគ្រាប់",
   "changePauseStartDate": "ផ្លាស់ប្តូរថ្ងៃចាប់ផ្តើមសម្រាកថ្នាំ",
   "pauseTakingPeriodEnded": "រយៈពេលឈប់ញ៉ាំថ្នាំបានបញ្ចប់ហើយ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

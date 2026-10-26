@@ -123,7 +123,7 @@
   "notTaken": "Pil belum diambil",
   "pillSheetSettings": "Tetapan pek pil",
   "unmarkTodayPillAsTakenToPause": "Selepas menandakan pil hari ini sebagai belum diambil",
-  "pauseTaking": "Berehat Pengambilan",
+  "pauseTaking": "Jeda pengambilan pil",
   "changePauseStartDate": "Ubah Tarikh Mula Rehat Pengambilan",
   "pauseTakingPeriodEnded": "Tempoh rehat pengambilan telah tamat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

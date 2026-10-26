@@ -123,7 +123,7 @@
   "notTaken": "ګولۍ نه ده اخیستل شوې",
   "pillSheetSettings": "د ګولیو پاڼ تنظیمات",
   "unmarkTodayPillAsTakenToPause": "د نن ورځې ګولۍ د نه خوړل شوې په توګه تر نښه کولو وروسته",
-  "pauseTaking": "د ګولۍ وقفه",
+  "pauseTaking": "د ګولیو په خوړلو کې وقفه",
   "changePauseStartDate": "د وقفې د پیل نیټه بدلول",
   "pauseTakingPeriodEnded": "ستاسو د درملو د وقفې موده ختمه شوه",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

@@ -123,7 +123,7 @@
   "notTaken": "மாத்திரை இன்னும் எடுத்துக்கொள்ளப்படவில்லை",
   "pillSheetSettings": "மாத்திரை அட்டை அமைப்புகள்",
   "unmarkTodayPillAsTakenToPause": "இன்றைய மாத்திரையை எடுத்துக்கொள்ளவில்லை எனக் குறித்த பிறகு",
-  "pauseTaking": "மருந்து ஓய்வு",
+  "pauseTaking": "மாத்திரை உட்கொள்வதில் இடைவெளி",
   "changePauseStartDate": "மருந்து ஓய்வு தொடக்க தேதி மாற்றம்",
   "pauseTakingPeriodEnded": "மாத்திரை ஓய்வு காலம் முடிந்துவிட்டது",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

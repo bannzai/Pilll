@@ -123,7 +123,7 @@
   "notTaken": "Пилула није узета",
   "pillSheetSettings": "Подешавања за блистер",
   "unmarkTodayPillAsTakenToPause": "Након што данашњу пилулу означите као неузету",
-  "pauseTaking": "Pauza u uzimanju",
+  "pauseTaking": "Пауза у узимању пилуле",
   "changePauseStartDate": "Promena datuma početka pauze uzimanja",
   "pauseTakingPeriodEnded": "Pauza u uzimanju je završena",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

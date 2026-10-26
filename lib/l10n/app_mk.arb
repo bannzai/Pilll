@@ -123,7 +123,7 @@
   "notTaken": "Таблета не е земена",
   "pillSheetSettings": "Поставки за блистер",
   "unmarkTodayPillAsTakenToPause": "Откако ќе ја означите денешната таблета како неземена",
-  "pauseTaking": "Пауза од пилули",
+  "pauseTaking": "Пауза во земање таблета",
   "changePauseStartDate": "Промени почетен датум на паузата",
   "pauseTakingPeriodEnded": "Периодот на пауза заврши",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

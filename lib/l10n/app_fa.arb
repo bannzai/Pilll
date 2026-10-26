@@ -123,7 +123,7 @@
   "notTaken": "قرص مصرف نشده",
   "pillSheetSettings": "تنظیمات ورق قرص",
   "unmarkTodayPillAsTakenToPause": "پس از علامت‌گذاری قرص امروز به‌عنوان مصرف‌نشده",
-  "pauseTaking": "توقف مصرف",
+  "pauseTaking": "وقفه در مصرف قرص",
   "changePauseStartDate": "تغییر تاریخ شروع توقف مصرف",
   "pauseTakingPeriodEnded": "دوره استراحت از مصرف قرص به پایان رسید",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

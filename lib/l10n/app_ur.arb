@@ -123,7 +123,7 @@
   "notTaken": "گولی ابھی نہیں لی گئی",
   "pillSheetSettings": "گولیوں کی پٹی کی ترتیبات",
   "unmarkTodayPillAsTakenToPause": "آج کی گولی کو نہ لی گئی کے طور پر نشان زد کرنے کے بعد",
-  "pauseTaking": "استعمال کا وقفہ",
+  "pauseTaking": "گولی لینے میں وقفہ",
   "changePauseStartDate": "وقفے کی شروعاتی تاریخ تبدیل کریں",
   "pauseTakingPeriodEnded": "دوا کے وقفے کی مدت ختم ہو گئی ہے",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

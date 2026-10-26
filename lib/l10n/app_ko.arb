@@ -123,7 +123,7 @@
   "notTaken": "아직 복용하지 않았어요",
   "pillSheetSettings": "알약 시트 설정",
   "unmarkTodayPillAsTakenToPause": "오늘 먹을 알약을 미복용으로 표시한 후",
-  "pauseTaking": "복용 휴식",
+  "pauseTaking": "피임약 복용 잠시 쉬기",
   "changePauseStartDate": "휴약 시작일 변경",
   "pauseTakingPeriodEnded": "휴약 기간이 종료되었습니다",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

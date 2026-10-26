@@ -123,7 +123,7 @@
   "notTaken": "აბი არ არის მიღებული",
   "pillSheetSettings": "აბების ბლისტერ პარამეტრები",
   "unmarkTodayPillAsTakenToPause": "დღევანდელი აბის მიუღებლად მონიშვნის შემდეგ",
-  "pauseTaking": "მიღების დასვენება",
+  "pauseTaking": "აბების მიღების დროებითი შეჩერება",
   "changePauseStartDate": "მიღების შეყოვნების დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "შესვენების პერიოდი დასრულდა",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

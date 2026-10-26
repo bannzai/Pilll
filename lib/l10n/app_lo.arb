@@ -123,7 +123,7 @@
   "notTaken": "ຍັງບໍ່ໄດ້ກິນຢາເມັດ",
   "pillSheetSettings": "ການຕັ້ງຄ່າແຜງຢາຄຸມ",
   "unmarkTodayPillAsTakenToPause": "ຫຼັງຈາກໝາຍຢາເມັດຂອງມື້ນີ້ວ່າຍັງບໍ່ໄດ້ກິນ",
-  "pauseTaking": "ພັກຢາ",
+  "pauseTaking": "ພັກການກິນຢາເມັດ",
   "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຕົ້ນການພັກກິນຢາ",
   "pauseTakingPeriodEnded": "ໄລຍະພັກຢາສິ້ນສຸດແລ້ວ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

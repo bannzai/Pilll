@@ -123,7 +123,7 @@
   "notTaken": "ဆေးပြား မသောက်ရသေးပါ",
   "pillSheetSettings": "ဆေးပြားကတ် ဆက်တင်များ",
   "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးလုံးကို မသောက်ရသေးဟု မှတ်သားပြီးနောက်",
-  "pauseTaking": "ဆေးရပ်တန့်",
+  "pauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားရန်",
   "changePauseStartDate": "ဆေးလုံးသောက်ခြင်း ရပ်နားမည့် စတင်ရက် ပြောင်းလဲခြင်း",
   "pauseTakingPeriodEnded": "ဆေးသောက်ခြင်း အနားယူကာလ ပြီးဆုံးပါပြီ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

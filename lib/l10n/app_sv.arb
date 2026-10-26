@@ -123,7 +123,7 @@
   "notTaken": "P-pillret är inte taget",
   "pillSheetSettings": "Inställningar för p-pillerkarta",
   "unmarkTodayPillAsTakenToPause": "När du har markerat dagens p-piller som inte taget",
-  "pauseTaking": "Tabletpaus",
+  "pauseTaking": "Pillerpaus",
   "changePauseStartDate": "Ändra startdatum för pillpaus",
   "pauseTakingPeriodEnded": "Pillfria perioden är slut",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

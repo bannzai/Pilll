@@ -123,7 +123,7 @@
   "notTaken": "Iphilisi alikaphuzwa",
   "pillSheetSettings": "Izilungiselelo zeshidi lamaphilisi",
   "unmarkTodayPillAsTakenToPause": "Ngemva kokumaka iphilisi lanamuhla njengelingakaphuzwa",
-  "pauseTaking": "Phumula imithi",
+  "pauseTaking": "Ikhefu lokuphuza amaphilisi",
   "changePauseStartDate": "Shintsha usuku lokuqala lokuphumula ukuthatha amaphilisi",
   "pauseTakingPeriodEnded": "Isikhathi sokuphumula lwamaphilisi luphele",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

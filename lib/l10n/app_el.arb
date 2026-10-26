@@ -123,7 +123,7 @@
   "notTaken": "Το χάπι δεν έχει ληφθεί",
   "pillSheetSettings": "Ρυθμίσεις για την καρτέλα χαπιών",
   "unmarkTodayPillAsTakenToPause": "Αφού σημειώσετε το σημερινό χάπι ως μη ληφθέν",
-  "pauseTaking": "Παύση λήψης",
+  "pauseTaking": "Παύση λήψης χαπιού",
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης διαλείμματος λήψης",
   "pauseTakingPeriodEnded": "Η περίοδος διακοπής της λήψης τελείωσε",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

@@ -123,7 +123,7 @@
   "notTaken": "Пігулку не прийнято",
   "pillSheetSettings": "Налаштування блістера",
   "unmarkTodayPillAsTakenToPause": "Після позначення сьогоднішньої пігулки як неприйнятої",
-  "pauseTaking": "Пауза прийому",
+  "pauseTaking": "Перерва в прийомі пігулок",
   "changePauseStartDate": "Змінити дату початку перерви",
   "pauseTakingPeriodEnded": "Період перерви в прийомі закінчився",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

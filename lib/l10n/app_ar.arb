@@ -123,7 +123,7 @@
   "notTaken": "لم تؤخذ الحبة",
   "pillSheetSettings": "إعدادات الشريط",
   "unmarkTodayPillAsTakenToPause": "بعد تحديد حبة اليوم على أنها لم تؤخذ",
-  "pauseTaking": "إيقاف الدواء",
+  "pauseTaking": "إيقاف تناول الحبوب مؤقتًا",
   "changePauseStartDate": "تغيير تاريخ بداية التوقف",
   "pauseTakingPeriodEnded": "انتهت فترة التوقف عن تناول الحبوب",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

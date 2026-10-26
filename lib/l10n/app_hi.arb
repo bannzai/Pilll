@@ -123,7 +123,7 @@
   "notTaken": "गोली नहीं ली गई",
   "pillSheetSettings": "पिल स्ट्रिप की सेटिंग",
   "unmarkTodayPillAsTakenToPause": "आज की गोली को नहीं ली गई के रूप में चिह्नित करने के बाद",
-  "pauseTaking": "दवा विराम",
+  "pauseTaking": "गोली लेने में विराम",
   "changePauseStartDate": "सेवन विराम प्रारंभ तिथि बदलें",
   "pauseTakingPeriodEnded": "गोली सेवन का विराम अवधि समाप्त हो गई है",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

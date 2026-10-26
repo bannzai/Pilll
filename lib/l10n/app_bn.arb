@@ -123,7 +123,7 @@
   "notTaken": "পিল খাওয়া হয়নি",
   "pillSheetSettings": "পিল শিটের সেটিংস",
   "unmarkTodayPillAsTakenToPause": "আজকের পিলটি খাওয়া হয়নি বলে চিহ্নিত করার পর",
-  "pauseTaking": "সেবন বিরতি",
+  "pauseTaking": "পিল খাওয়ায় বিরতি",
   "changePauseStartDate": "সেবন বিরতি শুরুর তারিখ পরিবর্তন",
   "pauseTakingPeriodEnded": "ওষুধ সেবনের বিরতির সময়কাল শেষ হয়েছে",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

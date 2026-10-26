@@ -123,7 +123,7 @@
   "notTaken": "गोळी घेतलेली नाही",
   "pillSheetSettings": "पिल शीट सेटिंग्ज",
   "unmarkTodayPillAsTakenToPause": "आजची गोळी घेतलेली नाही असे चिन्हांकित केल्यानंतर",
-  "pauseTaking": "सेवन विराम",
+  "pauseTaking": "गोळी घेण्यात विराम",
   "changePauseStartDate": "सेवन विश्राम सुरुवातीची तारीख बदला",
   "pauseTakingPeriodEnded": "सेवनाचा विराम कालावधी संपला आहे",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

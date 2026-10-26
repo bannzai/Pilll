@@ -123,7 +123,7 @@
   "notTaken": "הגלולה לא ניטלה",
   "pillSheetSettings": "הגדרות חפיסת הגלולות",
   "unmarkTodayPillAsTakenToPause": "לאחר סימון הגלולה של היום ככזו שלא ניטלה",
-  "pauseTaking": "הפסקת נטילה",
+  "pauseTaking": "הפסקה בנטילת הגלולות",
   "changePauseStartDate": "שינוי תאריך תחילת ההפסקה",
   "pauseTakingPeriodEnded": "תקופת ההפסקה מנטילת הגלולה הסתיימה",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

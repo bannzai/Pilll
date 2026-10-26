@@ -123,7 +123,7 @@
   "notTaken": "Pille no nöd gnoo",
   "pillSheetSettings": "Iistellige für de Pilleblister",
   "unmarkTodayPillAsTakenToPause": "Wänn du d Pille vo hüt als nöd gno markiert häsch",
-  "pauseTaking": "Pille-Pause",
+  "pauseTaking": "Pillepause",
   "changePauseStartDate": "Iinahm-Pause Startdatum ändere",
   "pauseTakingPeriodEnded": "D Iinham-Pause isch beändet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

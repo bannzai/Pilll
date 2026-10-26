@@ -123,7 +123,7 @@
   "notTaken": "Հաբը չի ընդունվել",
   "pillSheetSettings": "հաբերի բլիստեր կարգավորումներ",
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը որպես չընդունված նշելուց հետո",
-  "pauseTaking": "Դուցի դադար",
+  "pauseTaking": "Դեղահաբի ընդունման դադար",
   "changePauseStartDate": "Դադարի սկսման ամսաթիվը փոխել",
   "pauseTakingPeriodEnded": "Դեղի ընդունման դադարի ժամանակահատվածը ավարտվեց",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",

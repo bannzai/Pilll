@@ -123,7 +123,7 @@
   "notTaken": "Tabletka neužitá",
   "pillSheetSettings": "Nastavenia blistra",
   "unmarkTodayPillAsTakenToPause": "Po označení dnešnej tabletky ako neužitej",
-  "pauseTaking": "Prestávka v užívaní",
+  "pauseTaking": "Prestávka v užívaní tabletiek",
   "changePauseStartDate": "Zmena dátumu začiatku prestávky v užívaní",
   "pauseTakingPeriodEnded": "Prestávka v užívaní sa skončila",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
