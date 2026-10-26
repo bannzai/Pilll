@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה העדכנית ביותר ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה האחרונה ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "יש בעיה בחיבור לאינטרנט. כדאי לבדוק את החיבור ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "אנא עדכן את האפליקציה",
+  "forceUpdateTitle": "יש לעדכן את האפליקציה",
   "forceUpdateMessage": "אנא עדכן את האפליקציה שלך לגרסה החדשה ביותר מ-{storeName}",
   "visitHospital": "לבקר ברופא",
   "receiveNotificationAt9AM": "לקבל התראה בשעה 9:00 באותו היום",

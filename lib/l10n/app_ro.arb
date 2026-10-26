@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "A apărut o eroare necunoscută. Actualizează aplicația la cea mai recentă versiune și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Cod: {errorCode} Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "A apărut o eroare necunoscută. Actualizează aplicația la cea mai recentă versiune și încearcă din nou. Dacă problema continuă, contactează-ne din Setări > Contactează-ne. Cod: {errorCode} Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Este o problemă cu conexiunea la internet. Verifică-ți conexiunea și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Vă rugăm să actualizați aplicația",
+  "forceUpdateTitle": "Actualizează aplicația, te rugăm",
   "forceUpdateMessage": "Vă rugăm să actualizați versiunea aplicației. Actualizați la cea mai recentă versiune din {storeName}.",
   "visitHospital": "Control medical",
   "receiveNotificationAt9AM": "Primesc notificare la 9:00 în aceeași zi",

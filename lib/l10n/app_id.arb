@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Terjadi kesalahan yang tidak diketahui. Silakan perbarui aplikasi ke versi terbaru, lalu coba lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Kode: {errorCode} Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Terjadi kesalahan yang tidak diketahui. Perbarui aplikasi ke versi terbaru, lalu coba lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Kode: {errorCode} Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Ada masalah dengan koneksi internet. Periksa koneksi Anda lalu coba lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Harap perbarui aplikasi",
+  "forceUpdateTitle": "Silakan perbarui aplikasi",
   "forceUpdateMessage": "Mohon perbarui versi aplikasi Anda. Silakan perbarui ke versi terbaru dari {storeName}",
   "visitHospital": "Kontrol ke dokter",
   "receiveNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari yang sama",

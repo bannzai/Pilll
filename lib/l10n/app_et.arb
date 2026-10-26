@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Tekkis tundmatu viga. Uuenda rakendus uusimale versioonile ja proovi uuesti. Kui probleem püsib, võta meiega ühendust menüüs Seaded > Võta ühendust. Kood: {errorCode} Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Tekkis tundmatu viga. Uuenda rakendus uusimale versioonile ja proovi uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Kood: {errorCode} Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Internetiühendusega on probleem. Kontrolli ühendust ja proovi uuesti. Kui probleem püsib, võta meiega ühendust: Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Palun uuendage rakendust",
+  "forceUpdateTitle": "Palun uuenda rakendust",
   "forceUpdateMessage": "Palume teil uuendada oma äpi versiooni. Palun uuendage {storeName} kaudu uusimale versioonile.",
   "visitHospital": "Arsti külastus",
   "receiveNotificationAt9AM": "Saan teate samal päeval kell 9:00",

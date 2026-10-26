@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Det oppsto en ukjent feil. Oppdater appen til nyeste versjon og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Det oppstod en ukjent feil. Oppdater appen til nyeste versjon og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Det er et problem med internettforbindelsen. Sjekk forbindelsen og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Vennligst oppdater appen",
+  "forceUpdateTitle": "Oppdater appen",
   "forceUpdateMessage": "Vi ber deg oppdatere appversjonen din. Vennligst oppdater til den nyeste versjonen fra {storeName}.",
   "visitHospital": "legebesøk",
   "receiveNotificationAt9AM": "Få beskjed samme dag kl. 09:00",

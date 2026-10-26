@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "এটা অজ্ঞাত ত্ৰুটি ঘটিছে। অনুগ্ৰহ কৰি এপটো শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ’লে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। ক’ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "এটা অজ্ঞাত ত্ৰুটি হৈছে। অনুগ্ৰহ কৰি এপটো শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। ক’ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ইণ্টাৰনেট সংযোগত সমস্যা হৈছে। অনুগ্ৰহ কৰি সংযোগটো পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "অনুগ্ৰহ কৰি এপ্প আপডেট কৰক",
+  "forceUpdateTitle": "অনুগ্ৰহ কৰি এপটো আপডেট কৰক",
   "forceUpdateMessage": "আপোনাৰ এপ্লিকেশ্বনৰ সংস্কৰণ আপডেট কৰাৰ প্ৰয়োজন আছে। অনুগ্ৰহ কৰি {storeName}ৰ পৰা শেহতীয়া সংস্কৰণত আপডেট কৰক।",
   "visitHospital": "চিকিৎসালয়লৈ যোৱা",
   "receiveNotificationAt9AM": "সেইদিন ৯:০০ বজাত বিজ্ঞপ্তি পাব",

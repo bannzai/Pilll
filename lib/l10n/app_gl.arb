@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Produciuse un erro descoñecido. Actualiza a aplicación á versión máis recente e téntao de novo. Se o problema continúa, contacta connosco en Axustes > Contacta connosco. Código: {errorCode} Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Produciuse un erro descoñecido. Actualiza a aplicación á última versión e téntao de novo. Se o problema continúa, contacta connosco en Configuración > Contactar. Código: {errorCode} Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Hai un problema coa conexión á internet. Comproba a conexión e téntao de novo. Se o problema continúa, contacta connosco en Axustes > Contactar connosco. Detalles: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Por favor, actualiza a aplicación",
+  "forceUpdateTitle": "Actualiza a aplicación, por favor",
   "forceUpdateMessage": "Solicitámosche que actualices a versión da túa aplicación. Por favor, actualiza á última versión dende {storeName}",
   "visitHospital": "Consulta médica",
   "receiveNotificationAt9AM": "Recibir notificación ás 9:00 do día",

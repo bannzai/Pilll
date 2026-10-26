@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Er is een onbekende fout opgetreden. Werk de app bij naar de nieuwste versie en probeer het opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Er is een onbekende fout opgetreden. Werk de app bij naar de nieuwste versie en probeer het opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Er is een probleem met de internetverbinding. Controleer je verbinding en probeer het opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Update de app alstublieft",
+  "forceUpdateTitle": "Werk de app bij",
   "forceUpdateMessage": "Gelieve uw app bij te werken. Download de nieuwste versie via {storeName}",
   "visitHospital": "Controleafspraak",
   "receiveNotificationAt9AM": "Ontvang melding om 9:00 op de dag",

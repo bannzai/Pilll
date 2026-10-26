@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "May naganap na hindi kilalang error. Paki-update po ang app sa pinakabagong bersyon at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan po kayo sa amin sa Mga Setting > Makipag-ugnayan sa amin. Code: {errorCode} Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Nagkaroon ng hindi matukoy na error. Paki-update po ang app sa pinakabagong bersyon at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan sa amin. Code: {errorCode} Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "May problema sa koneksyon sa internet. Pakisuri po ang koneksyon ninyo at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Mangyaring i-update ang app",
+  "forceUpdateTitle": "Paki-update po ang app",
   "forceUpdateMessage": "Hinihiling namin na i-update ninyo ang bersyon ng inyong app. Mangyaring mag-update sa pinakabagong bersyon mula sa {storeName}.",
   "visitHospital": "Magpatingin sa doktor",
   "receiveNotificationAt9AM": "Tumanggap ng notipikasyon sa 9:00 ng araw",

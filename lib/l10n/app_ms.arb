@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Ralat yang tidak diketahui telah berlaku. Sila kemas kini aplikasi kepada versi terkini dan cuba lagi. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Ralat yang tidak diketahui telah berlaku. Sila kemas kini aplikasi kepada versi terkini dan cuba lagi. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Terdapat masalah dengan sambungan internet. Sila semak sambungan anda dan cuba lagi. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Sila kemaskini aplikasi",
+  "forceUpdateTitle": "Sila kemas kini aplikasi",
   "forceUpdateMessage": "Sila kemaskini aplikasi anda ke versi terkini dari {storeName}",
   "visitHospital": "ke hospital",
   "receiveNotificationAt9AM": "Terima pemberitahuan pada 9:00 pada hari yang sama",

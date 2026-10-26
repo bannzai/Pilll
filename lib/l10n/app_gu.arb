@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "અજાણી ભૂલ આવી છે. કૃપા કરીને ઍપને નવીનતમ આવૃત્તિમાં અપડેટ કરીને ફરી પ્રયાસ કરો. સમસ્યા યથાવત્ રહે તો સેટિંગ્સ > અમારો સંપર્ક કરો દ્વારા અમારો સંપર્ક કરો. કોડ: {errorCode} વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "અજાણી ભૂલ થઈ છે. કૃપા કરીને એપને નવીનતમ આવૃત્તિમાં અપડેટ કરીને ફરી પ્રયાસ કરો. સમસ્યા યથાવત્ રહે તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. કોડ: {errorCode} વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "ઇન્ટરનેટ કનેક્શનમાં સમસ્યા છે. કૃપા કરીને તમારું કનેક્શન તપાસીને ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > સંપર્ક કરો દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "કૃપા કરીને એપ્લિકેશન અપડેટ કરો",
+  "forceUpdateTitle": "કૃપા કરીને ઍપ અપડેટ કરો",
   "forceUpdateMessage": "તમારી એપ્લિકેશનનું વર્ઝન અપડેટ કરવાની વિનંતી છે. કૃપા કરીને {storeName}માંથી લેટેસ્ટ વર્ઝનમાં અપડેટ કરો.",
   "visitHospital": "દવાખાને જવું",
   "receiveNotificationAt9AM": "દિવસે 9:00 વાગ્યે સૂચના મેળવો",

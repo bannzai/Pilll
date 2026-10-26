@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "ایک نامعلوم خرابی پیش آئی ہے۔ براہِ کرم ایپ کو تازہ ترین ورژن میں اپ ڈیٹ کریں اور دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "ایک نامعلوم خرابی پیش آئی ہے۔ براہِ کرم ایپ کو تازہ ترین ورژن میں اپ ڈیٹ کر کے دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "انٹرنیٹ کنکشن میں مسئلہ ہے۔ براہِ کرم اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔ مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "براہ کرم ایپ کو اپڈیٹ کریں",
+  "forceUpdateTitle": "براہِ کرم ایپ اپ ڈیٹ کریں",
   "forceUpdateMessage": "آپ کی ایپ کے ورژن کو اپ ڈیٹ کرنے کی درخواست کی جا رہی ہے۔ برائے کرم {storeName} سے تازہ ترین ورژن میں اپ ڈیٹ کریں۔",
   "visitHospital": "ڈاکٹر سے ملاقات",
   "receiveNotificationAt9AM": "آج 9:00 بجے اطلاع موصول کریں",

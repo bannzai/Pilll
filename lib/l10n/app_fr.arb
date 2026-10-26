@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Une erreur inconnue s’est produite. Veuillez mettre l’application à jour, puis réessayer. Si le problème persiste, contactez-nous depuis Paramètres > Nous contacter. Code : {errorCode} Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Une erreur inconnue s’est produite. Veuillez mettre l’application à jour, puis réessayer. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Code : {errorCode} Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "La connexion Internet rencontre un problème. Vérifiez votre connexion, puis réessayez. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Veuillez mettre à jour l'application",
+  "forceUpdateTitle": "Veuillez mettre l’application à jour",
   "forceUpdateMessage": "Veuillez mettre à jour la version de votre application. Téléchargez la dernière version depuis {storeName}.",
   "visitHospital": "Voir médecin",
   "receiveNotificationAt9AM": "Recevoir une notification à 9h00 le jour même",

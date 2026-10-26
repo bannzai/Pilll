@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "Došlo je do nepoznate greške. Molimo ažurirajte aplikaciju na najnoviju verziju i pokušajte ponovo. Ako problem potraje, kontaktirajte nas putem Postavke > Kontaktirajte nas. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Došlo je do nepoznate greške. Molimo ažurirajte aplikaciju na najnoviju verziju i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Došlo je do problema s internetskom vezom. Provjerite vezu i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "Molimo ažurirajte aplikaciju",
+  "forceUpdateTitle": "Molimo Vas, ažurirajte aplikaciju",
   "forceUpdateMessage": "Molimo vas da ažurirate vašu aplikaciju. Ažurirajte na najnoviju verziju iz {storeName}",
   "visitHospital": "Ići na pregled",
   "receiveNotificationAt9AM": "Primiti notifikaciju u 9:00 istog dana",

@@ -322,7 +322,7 @@
   "purchaseErrorApiEndpointBlocked": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ โปรดอัปเดตแอปเป็นเวอร์ชันล่าสุดแล้วลองอีกครั้งค่ะ หากปัญหายังไม่หาย โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเราค่ะ รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ โปรดอัปเดตแอปเป็นเวอร์ชันล่าสุดแล้วลองอีกครั้งค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเราค่ะ รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "การเชื่อมต่ออินเทอร์เน็ตมีปัญหาค่ะ โปรดตรวจสอบการเชื่อมต่อแล้วลองอีกครั้งค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
-  "forceUpdateTitle": "กรุณาอัปเดตแอป",
+  "forceUpdateTitle": "โปรดอัปเดตแอป",
   "forceUpdateMessage": "กรุณาอัปเดตแอปของคุณเป็นเวอร์ชันล่าสุดจาก{storeName}",
   "visitHospital": "ไปพบแพทย์",
   "receiveNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันนั้น",
