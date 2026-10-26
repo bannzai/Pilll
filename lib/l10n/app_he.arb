@@ -310,7 +310,7 @@
   "purchaseErrorInvalidSubscriberAttributesError": "לא ניתן היה להשלים את הרכישה. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "לא ניתן לקבל את פרטי המשתמש. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "לא ניתן לקבל את פרטי הרכישה. כדאי לנסות שוב בעוד זמן קצר. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnsupportedError": "שגיאה לא ידועה. אנא עדכן לגרסה האחרונה ונסה שנית. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "אירעה שגיאה לא ידועה. מומלץ לעדכן את האפליקציה לגרסה העדכנית ביותר ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "שגיאה לא ידועה. לא ניתן לקבל מידע רכישה מראש. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "שגיאה לא מזוהה. אנא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה לא נפתרת, פנה אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnknownNonNativeError": "שגיאה לא ידועה. אנא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה לא נפתרת, אנא צור קשר דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
