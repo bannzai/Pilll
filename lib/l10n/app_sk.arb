@@ -27,7 +27,7 @@
   "delete": "Odstrániť",
   "doDelete": "Odstráňte",
   "deleteUser": "Odstráňte účet",
-  "deleteDiary": "Denník bude odstránený",
+  "deleteDiary": "Odstrániť záznam v denníku",
   "confirmDeletingMenstruation": "Chcete vymazať menstruačné obdobie?",
   "addNotificationTime": "Pridať čas notifikácie",
   "syncWithDeviceTimeZone": "Chcete synchronizovať s časovým pásmom zariadenia ({deviceTimezoneName})?",

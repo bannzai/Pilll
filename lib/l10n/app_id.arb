@@ -27,7 +27,7 @@
   "delete": "Hapus",
   "doDelete": "Hapus",
   "deleteUser": "Hapus akun",
-  "deleteDiary": "Catatan harian akan dihapus",
+  "deleteDiary": "Hapus entri jurnal",
   "confirmDeletingMenstruation": "Apakah Anda ingin menghapus periode menstruasi?",
   "addNotificationTime": "Tambah Waktu Notifikasi",
   "syncWithDeviceTimeZone": "Sinkronkan dengan zona waktu perangkat ({deviceTimezoneName})?",

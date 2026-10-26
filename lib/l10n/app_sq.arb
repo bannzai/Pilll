@@ -27,7 +27,7 @@
   "delete": "Fshini",
   "doDelete": "Fshini",
   "deleteUser": "Fshini llogarinë",
-  "deleteDiary": "Ditari do të fshihet",
+  "deleteDiary": "Fshini shënimin në ditar",
   "confirmDeletingMenstruation": "A dëshironi të fshini periudhën e menstruacionit?",
   "addNotificationTime": "Shto kohë njoftimi",
   "syncWithDeviceTimeZone": "Doni të sinkronizoni me zonën kohore të pajisjes ({deviceTimezoneName})?",

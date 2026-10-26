@@ -27,7 +27,7 @@
   "delete": "Löschen",
   "doDelete": "Löschen",
   "deleteUser": "Konto löschen",
-  "deleteDiary": "Der Tagebucheintrag wird gelöscht",
+  "deleteDiary": "Tagebucheintrag löschen",
   "confirmDeletingMenstruation": "Möchten Sie die Menstruationsperiode löschen?",
   "addNotificationTime": "Erinnerungszeit hinzufügen",
   "syncWithDeviceTimeZone": "Mit der Zeitzone des Geräts ({deviceTimezoneName}) synchronisieren?",

@@ -27,7 +27,7 @@
   "delete": "මකන්න",
   "doDelete": "මකන්න",
   "deleteUser": "ගිණුම මකන්න",
-  "deleteDiary": "ඩයරි ඇතුළත් කිරීම මකා දමනු ඇත",
+  "deleteDiary": "දිනපොතේ සටහන මකන්න",
   "confirmDeletingMenstruation": "ගර්භාෂයික කාලය මකා දමනවාද？",
   "addNotificationTime": "දැනුම්දීම් කාලය එකතු කරන්න",
   "syncWithDeviceTimeZone": "උපකරණයේ කාල කලාපය ({deviceTimezoneName}) සමඟ සමමුහුර්ත කරන්නද?",

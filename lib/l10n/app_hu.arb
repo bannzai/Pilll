@@ -27,7 +27,7 @@
   "delete": "Törlés",
   "doDelete": "Töröld",
   "deleteUser": "Fiók törlése",
-  "deleteDiary": "A naplót törölni fogjuk",
+  "deleteDiary": "Naplóbejegyzés törlése",
   "confirmDeletingMenstruation": "Biztosan törölni szeretné a menstruációs időszakot?",
   "addNotificationTime": "Értesítési idő hozzáadása",
   "syncWithDeviceTimeZone": "Szinkronizálja az eszköz időzónájával ({deviceTimezoneName})?",

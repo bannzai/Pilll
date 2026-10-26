@@ -27,7 +27,7 @@
   "delete": "Ištrinkite",
   "doDelete": "Ištrinkite",
   "deleteUser": "Ištrinti paskyrą",
-  "deleteDiary": "Dienoraščio įrašas bus ištrintas",
+  "deleteDiary": "Ištrinti dienoraščio įrašą",
   "confirmDeletingMenstruation": "Ar ištrinti menstruacijų periodą?",
   "addNotificationTime": "Pridėti pranešimo laiką",
   "syncWithDeviceTimeZone": "Sinchronizuoti su įrenginio laiko juosta ({deviceTimezoneName})?",

@@ -27,7 +27,7 @@
   "delete": "Verwyder",
   "doDelete": "Vee uit",
   "deleteUser": "Vee jou rekening uit",
-  "deleteDiary": "Dagboek sal verwyder word",
+  "deleteDiary": "Vee die dagboekinskrywing uit",
   "confirmDeletingMenstruation": "Wil jy die menstruasieperiode verwyder?",
   "addNotificationTime": "Voeg kennisgewingstyd by",
   "syncWithDeviceTimeZone": "Wil jy dit aan die toestel se tydsone ({deviceTimezoneName}) aanpas?",

@@ -27,7 +27,7 @@
   "delete": "Ezabatu",
   "doDelete": "Ezabatu",
   "deleteUser": "Ezabatu kontua",
-  "deleteDiary": "Egunerokoa ezabatuko da",
+  "deleteDiary": "Ezabatu egunkariko sarrera",
   "confirmDeletingMenstruation": "Hileko aldia ezabatu nahi duzu?",
   "addNotificationTime": "Abisu-ordua gehitu",
   "syncWithDeviceTimeZone": "Gailuaren ordu-zonarekin ({deviceTimezoneName}) sinkronizatu nahi duzu?",

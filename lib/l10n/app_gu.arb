@@ -27,7 +27,7 @@
   "delete": "કાઢી નાખો",
   "doDelete": "કાઢી નાખો",
   "deleteUser": "ખાતું કાઢી નાખો",
-  "deleteDiary": "ડાયરી કાઢી નાખવામાં આવશે",
+  "deleteDiary": "ડાયરીની નોંધ કાઢી નાખો",
   "confirmDeletingMenstruation": "શું તમે માસિક ધર્મનો સમયગાળો કાઢી નાખવા માંગો છો?",
   "addNotificationTime": "સૂચના સમય ઉમેરો",
   "syncWithDeviceTimeZone": "ઉપકરણના ટાઇમ ઝોન ({deviceTimezoneName}) સાથે સિંક કરશો?",

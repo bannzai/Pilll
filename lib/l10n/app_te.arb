@@ -27,7 +27,7 @@
   "delete": "తొలగించండి",
   "doDelete": "తొలగించండి",
   "deleteUser": "ఖాతాను తొలగించండి",
-  "deleteDiary": "డైరీని తొలగిస్తాము",
+  "deleteDiary": "డైరీ నమోదును తొలగించండి",
   "confirmDeletingMenstruation": "రుతుకాల వ్యవధిని తొలగించాలా？",
   "addNotificationTime": "హెచ్చరిక సమయాన్ని జోడించండి",
   "syncWithDeviceTimeZone": "పరికర టైమ్‌జోన్ ({deviceTimezoneName}) తో సింక్రొనైజ్ చేయాలా?",

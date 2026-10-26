@@ -27,7 +27,7 @@
   "delete": "លុប",
   "doDelete": "លុប",
   "deleteUser": "លុបគណនី",
-  "deleteDiary": "នឹងលុបកំណត់ហេតុនេះ",
+  "deleteDiary": "លុបកំណត់ហេតុប្រចាំថ្ងៃនេះ",
   "confirmDeletingMenstruation": "តើ​អ្នក​ចង់​លុប​កាល​បរិច្ឆេទ​មករដូវ​នេះ​ទេ?",
   "addNotificationTime": "បន្ថែមម៉ោងជូនដំណឹង",
   "syncWithDeviceTimeZone": "តើអ្នកចង់ធ្វើសមកាលកម្មជាមួយតំបន់ពេលវេលាឧបករណ៍ ({deviceTimezoneName}) ទេ?",

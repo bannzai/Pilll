@@ -27,7 +27,7 @@
   "delete": "ହଟାନ୍ତୁ",
   "doDelete": "ହଟାନ୍ତୁ",
   "deleteUser": "ଆକାଉଣ୍ଟ ବିଲୋପ କରନ୍ତୁ",
-  "deleteDiary": "ଡାଏରୀ ବିଲୋପ କରାଯିବ",
+  "deleteDiary": "ଡାଏରୀର ଏହି ଲେଖାଟି ବିଲୋପ କରନ୍ତୁ",
   "confirmDeletingMenstruation": "ମାସିକ ଧର୍ମ ସମୟ ବିଲୋପ କରିବେ କି？",
   "addNotificationTime": "ସୂଚନା ସମୟ ଯୋଗ କରନ୍ତୁ",
   "syncWithDeviceTimeZone": "ଡିଭାଇସ୍ ଟାଇମ୍ ଜୋନ୍ ({deviceTimezoneName}) ସହିତ ସିଙ୍କ କରିବେ କି？",

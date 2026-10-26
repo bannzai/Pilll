@@ -27,7 +27,7 @@
   "delete": "Διαγραφή",
   "doDelete": "Διαγραφή",
   "deleteUser": "Διαγραφή λογαριασμού",
-  "deleteDiary": "Το ημερολόγιο θα διαγραφεί",
+  "deleteDiary": "Διαγραφή καταχώρισης ημερολογίου",
   "confirmDeletingMenstruation": "Θέλετε να διαγράψετε την περίοδο εμμηνόρροιας;",
   "addNotificationTime": "Προσθήκη ώρας ειδοποίησης",
   "syncWithDeviceTimeZone": "Θέλετε να συγχρονίσετε με τη ζώνη ώρας της συσκευής ({deviceTimezoneName});",

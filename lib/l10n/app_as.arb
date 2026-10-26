@@ -27,7 +27,7 @@
   "delete": "মচি পেলাওক",
   "doDelete": "মচি দিয়ক",
   "deleteUser": "একাউণ্ট মচি পেলাওক",
-  "deleteDiary": "ডায়েৰী মচি পেলোৱা হ'ব",
+  "deleteDiary": "ডায়েৰীৰ লিখনি মচি পেলাওক",
   "confirmDeletingMenstruation": "ঋতুস্ৰাৱৰ তথ্য মচি পেলাব নেকি？",
   "addNotificationTime": "জাননী সময় যোগ কৰক",
   "syncWithDeviceTimeZone": "ডিভাইচৰ টাইম জ'ন ({deviceTimezoneName}) ৰ সৈতে সিংক কৰিবনে?",

@@ -27,7 +27,7 @@
   "delete": "წაშლა",
   "doDelete": "წაშლა",
   "deleteUser": "ანგარიშის წაშლა",
-  "deleteDiary": "დღიური წაიშლება",
+  "deleteDiary": "დღიურის ჩანაწერის წაშლა",
   "confirmDeletingMenstruation": "მენსტრუალური პერიოდის წაშლა გსურთ?",
   "addNotificationTime": "შეტყობინების დროის დამატება",
   "syncWithDeviceTimeZone": "სინქრონიზაცია მოწყობილობის დროის ზონასთან ({deviceTimezoneName})?",

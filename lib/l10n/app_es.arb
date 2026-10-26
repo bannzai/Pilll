@@ -27,7 +27,7 @@
   "delete": "Eliminar",
   "doDelete": "Eliminar",
   "deleteUser": "Eliminar cuenta",
-  "deleteDiary": "Se eliminará el registro del diario",
+  "deleteDiary": "Eliminar la entrada del diario",
   "confirmDeletingMenstruation": "¿Desea eliminar este período menstrual?",
   "addNotificationTime": "Agregar horario de notificación",
   "syncWithDeviceTimeZone": "¿Desea sincronizar con la zona horaria del dispositivo ({deviceTimezoneName})?",

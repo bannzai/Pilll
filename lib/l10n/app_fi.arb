@@ -27,7 +27,7 @@
   "delete": "Poista",
   "doDelete": "Poista",
   "deleteUser": "Poista tili",
-  "deleteDiary": "Päiväkirja poistetaan",
+  "deleteDiary": "Poista päiväkirjamerkintä",
   "confirmDeletingMenstruation": "Haluatko poistaa kuukautisjakson?",
   "addNotificationTime": "Lisää ilmoitusaika",
   "syncWithDeviceTimeZone": "Synkronoidaanko laitteen aikavyöhykkeen ({deviceTimezoneName}) kanssa?",

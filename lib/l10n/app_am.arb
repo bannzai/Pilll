@@ -27,7 +27,7 @@
   "delete": "ማጥፋት",
   "doDelete": "ይሰርዙ",
   "deleteUser": "የተጠቃሚ መለያን ሰርዝ",
-  "deleteDiary": "ዳያሪው ይሰረዛል",
+  "deleteDiary": "የማስታወሻ መዝገቡን ይሰርዙ",
   "confirmDeletingMenstruation": "የወር ቀን ጊዜውን ለማጥፋት ይፈልጋሉ?",
   "addNotificationTime": "ማሳወቂያ ሰዓት ማከል",
   "syncWithDeviceTimeZone": "የመሳሪያው የጊዜ ዞን ({deviceTimezoneName}) ማመሳሰል ይፈልጋሉ?",

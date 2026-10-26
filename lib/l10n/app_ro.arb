@@ -27,7 +27,7 @@
   "delete": "Șterge",
   "doDelete": "Șterge",
   "deleteUser": "Șterge contul",
-  "deleteDiary": "Se va șterge jurnalul",
+  "deleteDiary": "Șterge însemnarea din jurnal",
   "confirmDeletingMenstruation": "Doriți să ștergeți perioada menstruală?",
   "addNotificationTime": "Adaugă oră de notificare",
   "syncWithDeviceTimeZone": "Sincronizați cu fusul orar al dispozitivului ({deviceTimezoneName})?",

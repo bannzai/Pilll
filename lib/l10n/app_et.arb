@@ -27,7 +27,7 @@
   "delete": "Kustuta",
   "doDelete": "Kustuta",
   "deleteUser": "Kustuta konto",
-  "deleteDiary": "Kustutan päeviku",
+  "deleteDiary": "Kustuta päevikukanne",
   "confirmDeletingMenstruation": "Kas soovite menstruatsiooniperioodi kustutada?",
   "addNotificationTime": "Lisa teavitusaeg",
   "syncWithDeviceTimeZone": "Kas sünkroniseerida seadme ajavööndiga ({deviceTimezoneName})?",

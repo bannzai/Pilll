@@ -27,7 +27,7 @@
   "delete": "ړنګ کړئ",
   "doDelete": "ړنګ کړئ",
   "deleteUser": "حساب ړنګ کړئ",
-  "deleteDiary": "دا ډايري به ړنګول کیږي",
+  "deleteDiary": "د ورځني یادښت ثبت ړنګ کړئ",
   "confirmDeletingMenstruation": "د میاشتنۍ دوره ړنګول غواړئ؟",
   "addNotificationTime": "د یادونې وخت اضافه کول",
   "syncWithDeviceTimeZone": "ایا تاسو غواړئ چې د دستګاه د وخت سیمې ({deviceTimezoneName}) سره همغږي وکړئ؟",

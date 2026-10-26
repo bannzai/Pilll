@@ -27,7 +27,7 @@
   "delete": "מחיקה",
   "doDelete": "למחוק",
   "deleteUser": "מחיקת החשבון",
-  "deleteDiary": "יומן יימחק",
+  "deleteDiary": "מחיקת הרשומה ביומן",
   "confirmDeletingMenstruation": "האם למחוק את תקופת הווסת?",
   "addNotificationTime": "הוספת זמן התראה",
   "syncWithDeviceTimeZone": "האם לסנכרן עם אזור הזמן של המכשיר ({deviceTimezoneName})?",

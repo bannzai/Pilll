@@ -27,7 +27,7 @@
   "delete": "Устгах",
   "doDelete": "Устгана уу",
   "deleteUser": "Бүртгэлээ устгана уу",
-  "deleteDiary": "Өдрийн тэмдэглэлийг устгана",
+  "deleteDiary": "Өдрийн тэмдэглэлийн бичлэгийг устгана уу",
   "confirmDeletingMenstruation": "Сарын тэмдгийн хугацааг устгах уу？",
   "addNotificationTime": "Мэдэгдэлийн цаг нэмэх",
   "syncWithDeviceTimeZone": "Төхөөрөмжийн цагийн бүс ({deviceTimezoneName})-той синхронлох уу?",

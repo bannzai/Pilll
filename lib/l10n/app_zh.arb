@@ -27,7 +27,7 @@
   "delete": "删除",
   "doDelete": "删除",
   "deleteUser": "删除账号",
-  "deleteDiary": "将删除日记",
+  "deleteDiary": "删除这篇日记",
   "confirmDeletingMenstruation": "您确定要删除这个生理周期吗？",
   "addNotificationTime": "添加通知时间",
   "syncWithDeviceTimeZone": "您要与设备时区({deviceTimezoneName})同步吗？",

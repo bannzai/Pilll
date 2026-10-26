@@ -27,7 +27,7 @@
   "delete": "Burahin",
   "doDelete": "Burahin",
   "deleteUser": "Burahin ang account ninyo",
-  "deleteDiary": "Buburahin ang talaarawan",
+  "deleteDiary": "Burahin ang tala sa talaarawan",
   "confirmDeletingMenstruation": "Tanggalin ang talaan ng regla?",
   "addNotificationTime": "Magdagdag ng Oras ng Paalala",
   "syncWithDeviceTimeZone": "Mag-sync po ba sa timezone ng device ({deviceTimezoneName})?",

@@ -27,7 +27,7 @@
   "delete": "Padam",
   "doDelete": "Padam",
   "deleteUser": "Padam akaun",
-  "deleteDiary": "Diari akan dipadamkan",
+  "deleteDiary": "Padam catatan diari",
   "confirmDeletingMenstruation": "Padam tempoh haid ini?",
   "addNotificationTime": "Tambah Masa Notifikasi",
   "syncWithDeviceTimeZone": "Segerakkan dengan zon waktu peranti ({deviceTimezoneName})?",

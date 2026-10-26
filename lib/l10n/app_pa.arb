@@ -27,7 +27,7 @@
   "delete": "ਮਿਟਾਓ",
   "doDelete": "ਮਿਟਾਓ",
   "deleteUser": "ਖਾਤਾ ਮਿਟਾਓ",
-  "deleteDiary": "ਡਾਇਰੀ ਨੂੰ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ",
+  "deleteDiary": "ਡਾਇਰੀ ਦੀ ਐਂਟਰੀ ਮਿਟਾਓ",
   "confirmDeletingMenstruation": "ਕੀ ਤੁਸੀਂ ਮਾਹਵਾਰੀ ਦੀ ਮਿਆਦ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
   "addNotificationTime": "ਸੂਚਨਾ ਸਮਾਂ ਜੋੜੋ",
   "syncWithDeviceTimeZone": "ਕੀ ਤੁਸੀਂ ਡਿਵਾਈਸ ਦੇ ਟਾਈਮ ਜ਼ੋਨ ({deviceTimezoneName}) ਨਾਲ ਸਿੰਕ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",

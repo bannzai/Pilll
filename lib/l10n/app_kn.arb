@@ -27,7 +27,7 @@
   "delete": "ಅಳಿಸಿ",
   "doDelete": "ಅಳಿಸಿ",
   "deleteUser": "ಖಾತೆಯನ್ನು ಅಳಿಸಿ",
-  "deleteDiary": "ಡೈರಿಯನ್ನು ಅಳಿಸಲಾಗುತ್ತದೆ",
+  "deleteDiary": "ದಿನಚರಿಯ ದಾಖಲೆಯನ್ನು ಅಳಿಸಿ",
   "confirmDeletingMenstruation": "ಮುಟ್ಟಿನ ಅವಧಿಯನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತೀರಾ?",
   "addNotificationTime": "ಸೂಚನೆ ಸಮಯ ಸೇರಿಸು",
   "syncWithDeviceTimeZone": "ಸಾಧನದ ಸಮಯ ವಲಯ ({deviceTimezoneName}) ಜೊತೆ ಸಿಂಕ್ ಮಾಡಬೇಕೇ?",

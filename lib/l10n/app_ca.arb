@@ -27,7 +27,7 @@
   "delete": "Suprimeix",
   "doDelete": "Elimina",
   "deleteUser": "Suprimeix el compte",
-  "deleteDiary": "S'eliminarà el diari",
+  "deleteDiary": "Eliminar l'entrada del diari",
   "confirmDeletingMenstruation": "Vols eliminar aquest període menstrual?",
   "addNotificationTime": "Afegir hora de notificació",
   "syncWithDeviceTimeZone": "Voleu sincronitzar amb la zona horària del dispositiu ({deviceTimezoneName})?",

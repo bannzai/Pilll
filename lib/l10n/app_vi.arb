@@ -27,7 +27,7 @@
   "delete": "Xóa",
   "doDelete": "Xóa",
   "deleteUser": "Xóa tài khoản",
-  "deleteDiary": "Nhật ký sẽ bị xóa",
+  "deleteDiary": "Xóa mục nhật ký",
   "confirmDeletingMenstruation": "Bạn có chắc chắn muốn xóa chu kỳ kinh nguyệt không?",
   "addNotificationTime": "Thêm thời gian thông báo",
   "syncWithDeviceTimeZone": "Bạn có muốn đồng bộ hóa với múi giờ thiết bị ({deviceTimezoneName}) không?",

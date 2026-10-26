@@ -27,7 +27,7 @@
   "delete": "Silin",
   "doDelete": "Silin",
   "deleteUser": "Hesabınızı silin",
-  "deleteDiary": "Gündəlik silinəcək",
+  "deleteDiary": "Gündəlik qeydini silin",
   "confirmDeletingMenstruation": "Aybaşı dövrünü silmək istəyirsiniz?",
   "addNotificationTime": "Bildiriş vaxtı əlavə et",
   "syncWithDeviceTimeZone": "Cihazın saat qurşağı ({deviceTimezoneName}) ilə sinxronlaşdırılsın?",

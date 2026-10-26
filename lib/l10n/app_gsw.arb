@@ -27,7 +27,7 @@
   "delete": "Lösche",
   "doDelete": "Lösche",
   "deleteUser": "Konto lösche",
-  "deleteDiary": "Das Tagebuch wird glöscht",
+  "deleteDiary": "Tagebuechiträg lösche",
   "confirmDeletingMenstruation": "Möchten Sie diese Menstruationsperiode wirklich löschen?",
   "addNotificationTime": "Benachrichtigungszyt hinzuefüege",
   "syncWithDeviceTimeZone": "Möchted Sie mit dr Zytzone vo Ihrem Gerät ({deviceTimezoneName}) synchronisiere?",

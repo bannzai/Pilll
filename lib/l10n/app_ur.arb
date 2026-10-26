@@ -27,7 +27,7 @@
   "delete": "حذف کریں",
   "doDelete": "حذف کریں",
   "deleteUser": "اکاؤنٹ حذف کریں",
-  "deleteDiary": "ڈائری حذف کی جائے گی",
+  "deleteDiary": "ڈائری کا اندراج حذف کریں",
   "confirmDeletingMenstruation": "کیا آپ حیض کی مدت کو حذف کرنا چاہتے ہیں؟",
   "addNotificationTime": "وقت شامل کریں",
   "syncWithDeviceTimeZone": "کیا آپ ڈیوائس کے ٹائم زون ({deviceTimezoneName}) کے ساتھ مطابقت پذیری کرنا چاہتے ہیں؟",

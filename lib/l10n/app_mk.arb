@@ -27,7 +27,7 @@
   "delete": "Бришење",
   "doDelete": "Избриши",
   "deleteUser": "Избришете ја сметката",
-  "deleteDiary": "Дневникот ќе биде избришан",
+  "deleteDiary": "Бришење запис од дневник",
   "confirmDeletingMenstruation": "Дали сакате да го избришете менструалниот период?",
   "addNotificationTime": "Додај време за потсетување",
   "syncWithDeviceTimeZone": "Дали сакате да синхронизирате со временската зона на уредот ({deviceTimezoneName})?",
