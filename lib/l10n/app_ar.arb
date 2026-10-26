@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "بدأت معالجة استرداد المبلغ. يرجى التحقق من الحالة والمحاولة مرة أخرى. إذا استمرت المشكلة، فتواصلي معنا عبر الإعدادات > اتصلي بنا. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "انتهت مهلة الاتصال. يُرجى التحقق من اتصالكِ بالإنترنت والمحاولة مرة أخرى. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "حدث خطأ غير معروف. يرجى تحديث التطبيق إلى أحدث إصدار والمحاولة مرة أخرى. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "حدث خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > استفسار. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "حدث خطأ غير معروف. يُرجى تحديث التطبيق إلى أحدث إصدار ثم المحاولة مرة أخرى. إذا استمرت المشكلة، يمكنكِ التواصل معنا عبر الإعدادات > التواصل معنا. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "يوجد مشكلة في الاتصال. يرجى التحقق من بيئة الاتصال الخاصة بك والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "يرجى تحديث التطبيق",
   "forceUpdateMessage": "نرجو منك تحديث إصدار التطبيق الخاص بك. يرجى التحديث إلى أحدث إصدار من {storeName}",

@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "මුදල් ආපසු ගෙවීමේ ක්‍රියාවලිය ආරම්භ වී ඇත. කරුණාකර තත්ත්වය පරීක්ෂා කර නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප අමතන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "ඉල්ලීමේ කාලය අවසන් වුණා. කරුණාකර ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "නොදන්නා දෝෂයක් ඇති වී ඇත. කරුණාකර යෙදුම නවතම අනුවාදයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසුම් > අප අමතන්න හරහා අප අමතන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "නොදන්නා දෝෂයකි. නවතම සංස්කරණයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටලුව විසඳුම් නොවන්නේ නම්, සැකසුම් > විමසීම් හරහා අප සමග සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "හඳුනා නොගත් දෝෂයක් ඇති වුණා. කරුණාකර යෙදුම නවතම අනුවාදයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "සන්නිවේදන දෝෂයකි. ඔබේ සන්නිවේදන පරිසරය පරීක්ෂා කර නැවත උත්සාහ කරන්න. නොපිළිසදර නම් සැකසීම් > විමසීම් හරහා අපව සම්බන්ධ කරගන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "කරුණාකර යෙදුම යාවත්කාලීන කරන්න",
   "forceUpdateMessage": "ඔබේ යෙදුමේ අනුවාදය යාවත්කාලීන කරන ලෙස ඉල්ලා සිටිමු. කරුණාකර {storeName} වෙතින් නවතම අනුවාදයට යාවත්කාලීන කරන්න",

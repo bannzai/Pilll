@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "თანხის დაბრუნების დამუშავება დაწყებულია. გთხოვთ, შეამოწმოთ სტატუსი და ხელახლა სცადოთ. თუ პრობლემა არ მოგვარდა, დაგვიკავშირდით: პარამეტრები > დაგვიკავშირდით. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "მოთხოვნის დრო ამოიწურა. გთხოვთ, შეამოწმოთ ინტერნეტკავშირი და ხელახლა სცადოთ. თუ პრობლემა გაგრძელდება, დაგვიკავშირდით მენიუდან პარამეტრები > დაგვიკავშირდით. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "უცნობი შეცდომა მოხდა. გთხოვთ, განაახლოთ აპი უახლეს ვერსიამდე და ხელახლა სცადოთ. თუ პრობლემა შენარჩუნდება, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "უცნობი შეცდომაა. განაახლეთ უახლეს ვერსიაზე და სცადეთ ისევ. თუ პრობლემა არ გადაიჭრა, პარამეტრები > მიმართვა -ის მეშვეობით დაგვიკავშირდით. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "დაფიქსირდა უცნობი შეცდომა. გთხოვთ, განაახლოთ აპი უახლეს ვერსიამდე და ხელახლა სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "კომუნიკაციის პრობლემაა. გთხოვთ, შეამოწმოთ ქსელის კავშირი და ხელახლა სცადოთ. თუ პრობლემა არ მოგვარდება, დაგვიკავშირდით პარამეტრები > დაკავშირება მეშვეობით. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "გთხოვთ განაახლოთ აპლიკაცია",
   "forceUpdateMessage": "გთხოვთ განაახლოთ თქვენი აპლიკაციის ვერსია. გთხოვთ ჩამოტვირთოთ უახლესი ვერსია {storeName}-იდან",

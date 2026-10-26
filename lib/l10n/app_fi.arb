@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "Hyvityksen käsittely on alkanut. Tarkista tilanne ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Koodi: {errorCode} Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "Pyyntö aikakatkaistiin. Tarkista internetyhteytesi ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Tapahtui tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "Tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä Asetukset > Ota yhteyttä -kautta. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Tapahtui tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdassa Asetukset > Ota yhteyttä. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Yhteysvirhe. Tarkista internetyhteytesi ja yritä uudelleen. Jos ongelma jatkuu, ota yhteyttä Asetukset > Ota yhteyttä -kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Päivitä sovellus",
   "forceUpdateMessage": "Pyydämme päivittämään sovelluksesi version. Ole hyvä ja päivitä uusimpaan versioon {storeName}sta.",

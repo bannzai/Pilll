@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "رقم کی واپسی پر کارروائی شروع ہو گئی ہے۔ براہِ کرم اس کی صورتِ حال دیکھ کر دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "درخواست کا وقت ختم ہو گیا۔ براہِ کرم اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "ایک نامعلوم خرابی پیش آئی ہے۔ براہِ کرم ایپ کو تازہ ترین ورژن میں اپ ڈیٹ کریں اور دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "نامعلوم وجہ کی خرابی ہے۔ تازہ ترین ورژن میں اپ ڈیٹ کر کے دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو سیٹنگز > رابطہ کریں کے ذریعے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "ایک نامعلوم خرابی پیش آئی ہے۔ براہِ کرم ایپ کو تازہ ترین ورژن میں اپ ڈیٹ کر کے دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "کنکشن کی خرابی ہے۔ اپنا کنکشن چیک کرکے دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو سیٹنگز > رابطہ سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "براہ کرم ایپ کو اپڈیٹ کریں",
   "forceUpdateMessage": "آپ کی ایپ کے ورژن کو اپ ڈیٹ کرنے کی درخواست کی جا رہی ہے۔ برائے کرم {storeName} سے تازہ ترین ورژن میں اپ ڈیٹ کریں۔",

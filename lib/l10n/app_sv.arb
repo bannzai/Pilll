@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "Behandlingen av återbetalningen har påbörjats. Kontrollera statusen och försök igen. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "Tidsgränsen överskreds. Kontrollera din internetanslutning och försök igen. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Ett okänt fel uppstod. Uppdatera appen till den senaste versionen och försök igen. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Kod: {errorCode} Information: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "Ett okänt fel har uppstått. Uppdatera till senaste versionen och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Ett okänt fel uppstod. Uppdatera appen till den senaste versionen och försök igen. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Nätverksproblem. Kontrollera din internetanslutning och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vänligen uppdatera appen",
   "forceUpdateMessage": "Vi ber dig att uppdatera din appversion. Vänligen uppdatera till den senaste versionen från {storeName}.",

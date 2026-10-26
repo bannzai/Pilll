@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "Behandlingen av refusjonen er i gang. Sjekk statusen og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "Forespørselen tok for lang tid. Sjekk internettforbindelsen og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Det oppsto en ukjent feil. Oppdater appen til nyeste versjon og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "En ukjent feil oppstod. Vennligst oppdater til den nyeste versjonen og prøv igjen. Hvis problemet vedvarer, kontakt oss via Innstillinger > Kontakt. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Det oppstod en ukjent feil. Oppdater appen til nyeste versjon og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Nettverksfeil. Kontroller nettverkstilkoblingen din og prøv igjen. Hvis problemet vedvarer, kontakt oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vennligst oppdater appen",
   "forceUpdateMessage": "Vi ber deg oppdatere appversjonen din. Vennligst oppdater til den nyeste versjonen fra {storeName}.",

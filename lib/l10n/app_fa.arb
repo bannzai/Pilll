@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "پردازش بازپرداخت آغاز شده است. لطفاً وضعیت را بررسی کنید و دوباره تلاش کنید. اگر مشکل برطرف نشد، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "مهلت اتصال به پایان رسید. لطفاً اتصال اینترنت خود را بررسی و دوباره تلاش کنید. اگر مشکل ادامه داشت، از تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "خطای نامشخصی رخ داد. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کنید و دوباره تلاش کنید. اگر مشکل برطرف نشد، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "خطای ناشناخته‌ای رخ داده است. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کرده و دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "خطای ناشناخته‌ای رخ داد. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کنید و دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "مشکل در ارتباط شبکه وجود دارد. لطفاً اتصال شبکه خود را بررسی کرده و دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "لطفاً برنامه را به‌روزرسانی کنید",
   "forceUpdateMessage": "به‌روزرسانی نسخه برنامه شما مورد نیاز است. لطفاً از {storeName} آخرین نسخه را دانلود کنید",

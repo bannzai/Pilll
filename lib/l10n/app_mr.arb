@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "परताव्याची प्रक्रिया सुरू झाली आहे. कृपया स्थिती तपासून पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्ज > आमच्याशी संपर्क साधा येथून संपर्क साधा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "विनंतीची वेळ संपली. कृपया तुमची इंटरनेट जोडणी तपासून पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास, सेटिंग्ज > आमच्याशी संपर्क साधा येथून आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "अज्ञात त्रुटी आली आहे. कृपया अॅप नवीनतम आवृत्तीवर अपडेट करून पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्ज > आमच्याशी संपर्क साधा येथून आमच्याशी संपर्क साधा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "अज्ञात त्रुटी आहे. नवीनतम आवृत्तीमध्ये अपडेट करून पुन्हा प्रयत्न करा. जर समस्या निराकरण होत नसेल तर सेटिंग्ज > संपर्क मधून आमच्याशी संपर्क करा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "अज्ञात त्रुटी आली आहे. कृपया ॲप नवीनतम आवृत्तीवर अपडेट करून पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्ज > संपर्क करा येथून आमच्याशी संपर्क साधा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "संपर्क खराब आहे. आपल्या संपर्क वातावरणाची तपासणी करून पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्ज > चौकशी द्वारे संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "कृपया अॅप अपडेट करा",
   "forceUpdateMessage": "आपल्या अॅप्लिकेशनच्या आवृत्तीचे अद्यतन करण्याची विनंती करत आहोत। कृपया {storeName} वरून नवीनतम आवृत्तीमध्ये अद्यतन करा",

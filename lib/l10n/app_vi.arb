@@ -320,7 +320,7 @@
   "purchaseErrorBeginRefundRequestError": "Quá trình hoàn tiền đã bắt đầu. Vui lòng kiểm tra trạng thái rồi thử lại. Nếu vấn đề vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "Yêu cầu đã hết thời gian chờ. Vui lòng kiểm tra kết nối internet và thử lại. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ với chúng tôi. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Đã xảy ra lỗi không xác định. Vui lòng cập nhật ứng dụng lên phiên bản mới nhất rồi thử lại. Nếu sự cố vẫn tiếp diễn, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ với chúng tôi. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInvalidPromotionalOfferError": "Đã xảy ra lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vẫn không giải quyết được, vui lòng liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Đã xảy ra lỗi không xác định. Vui lòng cập nhật ứng dụng lên phiên bản mới nhất rồi thử lại. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOfflineConnectionError": "Lỗi kết nối mạng. Vui lòng kiểm tra kết nối mạng và thử lại. Nếu vấn đề vẫn tiếp tục, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vui lòng cập nhật ứng dụng",
   "forceUpdateMessage": "Vui lòng cập nhật phiên bản ứng dụng của bạn. Hãy cập nhật lên phiên bản mới nhất từ {storeName}.",
