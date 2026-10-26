@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Beskriv ditt andra ärende",
   "emailAddress": "E-postadress",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Meddelande",
+  "inquiryContent": "Detaljer om din förfrågan",
   "inquiryContentPlaceholder": "Beskriv ditt ärende",
   "debugInfoLabel": "Felsökningsinformation (fylls i automatiskt)",
   "inquirySent": "Din förfrågan har skickats",

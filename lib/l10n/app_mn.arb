@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Бусад асуултынхаа талаар дэлгэрэнгүй бичнэ үү",
   "emailAddress": "Цахим шуудангийн хаяг",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Хандалтын агуулга",
+  "inquiryContent": "Таны асуултын дэлгэрэнгүй",
   "inquiryContentPlaceholder": "Асуултын агуулгаа оруулна уу",
   "debugInfoLabel": "Дебаг мэдээлэл (автоматаар бөглөгдсөн)",
   "inquirySent": "Лавлагаа илгээгдлээ",

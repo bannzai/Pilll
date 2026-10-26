@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "براہ کرم اپنی دوسری پوچھ گچھ کی تفصیل لکھیں",
   "emailAddress": "ای میل پتہ",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "استفسار کی تفصیلات",
+  "inquiryContent": "آپ کی پوچھ گچھ کی تفصیلات",
   "inquiryContentPlaceholder": "براہ کرم اپنی انکوائری کی تفصیلات درج کریں",
   "debugInfoLabel": "ڈیبگ کی معلومات (خودکار طور پر بھری گئی)",
   "inquirySent": "استفسار بھیج دی گئی",

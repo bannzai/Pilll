@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "פרטים על הפנייה האחרת",
   "emailAddress": "כתובת אימייל",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "תוכן הפנייה",
+  "inquiryContent": "פרטי הפנייה",
   "inquiryContentPlaceholder": "נא להזין את תוכן הפנייה",
   "debugInfoLabel": "מידע דיבוג (מילוי אוטומטי)",
   "inquirySent": "הפנייה נשלחה",

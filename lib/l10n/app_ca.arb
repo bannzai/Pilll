@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Escriu els detalls de l’altra consulta",
   "emailAddress": "Adreça electrònica",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Contingut de la consulta",
+  "inquiryContent": "Detalls de la consulta",
   "inquiryContentPlaceholder": "Introduïu el contingut de la vostra consulta",
   "debugInfoLabel": "Informació de depuració (omplert automàticament)",
   "inquirySent": "S'ha enviat la consulta",

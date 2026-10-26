@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Lütfen diğer sorunuzun ayrıntılarını yazın",
   "emailAddress": "E-posta adresi",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Mesaj İçeriği",
+  "inquiryContent": "Sorunuzun ayrıntıları",
   "inquiryContentPlaceholder": "Lütfen mesajınızı giriniz",
   "debugInfoLabel": "Hata Ayıklama Bilgileri (otomatik dolduruldu)",
   "inquirySent": "Mesajınız gönderildi",

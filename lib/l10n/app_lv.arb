@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Lūdzu, aprakstiet savu citu jautājumu",
   "emailAddress": "E-pasta adrese",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Jautājuma saturs",
+  "inquiryContent": "Jūsu jautājuma apraksts",
   "inquiryContentPlaceholder": "Ievadiet jautājuma saturu",
   "debugInfoLabel": "Atkļūdošanas informācija (aizpildīta automātiski)",
   "inquirySent": "Vaicājums nosūtīts",

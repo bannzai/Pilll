@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "សូមបញ្ចូលព័ត៌មានលម្អិតអំពីសំណួរផ្សេងទៀត",
   "emailAddress": "អាសយដ្ឋានអ៊ីមែល",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "ខ្លឹមសារសំណួរ",
+  "inquiryContent": "ព័ត៌មានលម្អិតនៃសំណួរ",
   "inquiryContentPlaceholder": "សូមបញ្ចូលមាតិកាសំណួររបស់អ្នក",
   "debugInfoLabel": "ព័ត៌មានបច្ចេកទេស (បំពេញស្វ័យប្រវត្តិ)",
   "inquirySent": "បានផ្ញើសំណើរបស់អ្នកហើយ",

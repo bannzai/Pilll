@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "कृपया तुमच्या इतर चौकशीचा तपशील लिहा",
   "emailAddress": "ईमेल पत्ता",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "चौकशीचा तपशील",
+  "inquiryContent": "तुमच्या चौकशीचा तपशील",
   "inquiryContentPlaceholder": "कृपया तुमची चौकशी प्रविष्ट करा",
   "debugInfoLabel": "डीबग माहिती (स्वयंचलित भरलेली)",
   "inquirySent": "चौकशी पाठवली",

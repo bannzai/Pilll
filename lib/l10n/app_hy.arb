@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Խնդրում ենք նկարագրել Ձեր մյուս հարցումը",
   "emailAddress": "Էլեկտրոնային փոստի հասցե",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Դիմումի բովանդակություն",
+  "inquiryContent": "Ձեր հարցման մանրամասները",
   "inquiryContentPlaceholder": "Մուտքագրեք հարցման բովանդակությունը",
   "debugInfoLabel": "Դիբագի տեղեկություններ (ավտոմատ լրացված)",
   "inquirySent": "Հարցումը ուղարկվել է",

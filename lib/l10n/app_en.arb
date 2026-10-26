@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Enter the details of your other inquiry",
   "emailAddress": "Email address",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Inquiry Details",
+  "inquiryContent": "Inquiry details",
   "inquiryContentPlaceholder": "Please enter your inquiry details",
   "debugInfoLabel": "Debug Information (Auto-filled)",
   "inquirySent": "Your inquiry has been sent",

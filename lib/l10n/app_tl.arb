@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Pakilagay ang mga detalye ng iba ninyong katanungan",
   "emailAddress": "Adres ng email",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Detalye ng Katanungan",
+  "inquiryContent": "Mga detalye ng inyong tanong",
   "inquiryContentPlaceholder": "Ilagay ang inyong katanungan",
   "debugInfoLabel": "Impormasyon ng Debug (awtomatikong napunan)",
   "inquirySent": "Naipadala na ang iyong inquiry",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Ju lutemi, përshkruani pyetjen tuaj tjetër",
   "emailAddress": "Adresa e emailit",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Përmbajtja e kërkesës",
+  "inquiryContent": "Detajet e pyetjes suaj",
   "inquiryContentPlaceholder": "Shkruani përmbajtjen e pyetjes suaj",
   "debugInfoLabel": "Informacion depurimi (plotësohet automatikisht)",
   "inquirySent": "Pyetja është dërguar",

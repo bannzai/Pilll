@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "කරුණාකර ඔබේ වෙනත් විමසීමේ විස්තර ලියන්න",
   "emailAddress": "විද්‍යුත් තැපැල් ලිපිනය",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "විමසීමේ අන්තර්ගතය",
+  "inquiryContent": "ඔබේ විමසීමේ විස්තර",
   "inquiryContentPlaceholder": "කරුණාකර ඔබගේ විචාරණ අන්තර්ගතය ඇතුළත් කරන්න",
   "debugInfoLabel": "නිදොස්කරණ තොරතුරු (ස්වයංක්‍රීයව පුරවා ඇත)",
   "inquirySent": "ඔබේ විමසීම යවන ලදී",

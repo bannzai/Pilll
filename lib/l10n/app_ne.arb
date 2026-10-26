@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "कृपया आफ्नो अन्य सोधपुछको विवरण लेख्नुहोस्",
   "emailAddress": "इमेल ठेगाना",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "सोधपुछको विवरण",
+  "inquiryContent": "तपाईंको सोधपुछको विवरण",
   "inquiryContentPlaceholder": "सोधपुछको विवरण प्रविष्ट गर्नुहोस्",
   "debugInfoLabel": "डिबग जानकारी (स्वचालित रूपमा भरिएको)",
   "inquirySent": "सोधपुछ पठाइयो",

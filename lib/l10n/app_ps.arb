@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "مهرباني وکړئ د خپلې بلې پوښتنې جزییات ولیکئ",
   "emailAddress": "د برېښنالیک پته",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "د پوښتنې منځپانګه",
+  "inquiryContent": "ستاسو د پوښتنې جزئیات",
   "inquiryContentPlaceholder": "د خپلې پوښتنې منځپانګه دلته ولیکئ",
   "debugInfoLabel": "د ډیبګ معلومات (په اتوماتیک ډول ډکېدل)",
   "inquirySent": "ستاسو پوښتنه واستول شوه",

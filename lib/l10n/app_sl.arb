@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Opišite svoje drugo vprašanje",
   "emailAddress": "E-poštni naslov",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Vsebina poizvedbe",
+  "inquiryContent": "Podrobnosti vprašanja",
   "inquiryContentPlaceholder": "Vnesite vsebino sporočila",
   "debugInfoLabel": "Informacije za razhroščevanje (samodejno izpolnjeno)",
   "inquirySent": "Vaša poizvedba je bila poslana",

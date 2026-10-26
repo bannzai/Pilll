@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "请填写其他咨询的具体内容",
   "emailAddress": "电子邮箱地址",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "咨询内容",
+  "inquiryContent": "咨询详情",
   "inquiryContentPlaceholder": "请输入咨询内容",
   "debugInfoLabel": "调试信息（自动填写）",
   "inquirySent": "咨询已发送",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Опишіть ваше інше запитання",
   "emailAddress": "Адреса електронної пошти",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Зміст звернення",
+  "inquiryContent": "Подробиці звернення",
   "inquiryContentPlaceholder": "Введіть текст вашого звернення",
   "debugInfoLabel": "Інформація для налагодження (автоматично заповнено)",
   "inquirySent": "Звернення надіслано",

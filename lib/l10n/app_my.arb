@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "အခြားမေးမြန်းလိုသည့်အကြောင်းအရာကို အသေးစိတ်ရေးပါ",
   "emailAddress": "အီးမေးလ်လိပ်စာ",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "မေးမြန်းချက် အကြောင်းအရာ",
+  "inquiryContent": "မေးမြန်းလိုသည့်အကြောင်းအရာ",
   "inquiryContentPlaceholder": "ဆက်သွယ်လိုသည့် အကြောင်းအရာကို ရေးသွင်းပါ",
   "debugInfoLabel": "ဒီဘာ့ဂ်အချက်အလက် (အလိုအလျောက်ဖြည့်သွင်းထားသည်)",
   "inquirySent": "မေးမြန်းချက်ပေးပို့ပြီးပါပြီ",

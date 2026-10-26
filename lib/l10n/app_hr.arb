@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Opišite svoj drugi upit",
   "emailAddress": "Adresa e-pošte",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Sadržaj upita",
+  "inquiryContent": "Pojedinosti vašeg upita",
   "inquiryContentPlaceholder": "Unesite sadržaj upita",
   "debugInfoLabel": "Debug informacije (automatski ispunjeno)",
   "inquirySent": "Upit je poslan",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Vul asseblief die besonderhede in",
   "emailAddress": "E-posadres",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Navraaginhoud",
+  "inquiryContent": "Besonderhede van jou navraag",
   "inquiryContentPlaceholder": "Voer asseblief u navraaginhoud in",
   "debugInfoLabel": "Ontfoutingsinligting (Outomaties ingevul)",
   "inquirySent": "U navraag is gestuur",

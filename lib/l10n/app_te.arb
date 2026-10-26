@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "దయచేసి మీ ఇతర సందేహం వివరాలను రాయండి",
   "emailAddress": "ఇమెయిల్ చిరునామా",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "విచారణ వివరాలు",
+  "inquiryContent": "మీ ప్రశ్న వివరాలు",
   "inquiryContentPlaceholder": "దయచేసి మీ విచారణను నమోదు చేయండి",
   "debugInfoLabel": "డీబగ్ సమాచారం (స్వయంచాలకంగా నింపబడింది)",
   "inquirySent": "విచారణ పంపబడింది",

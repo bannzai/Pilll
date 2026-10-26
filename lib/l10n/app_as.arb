@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "অন্যান্য বিষয়ৰ বিৱৰণ লিখক",
   "emailAddress": "ইমেইল ঠিকনা",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "সন্ধানৰ বিষয়বস্তু",
+  "inquiryContent": "আপোনাৰ প্ৰশ্নৰ বিৱৰণ",
   "inquiryContentPlaceholder": "আপোনাৰ সমস্যাৰ বিৱৰণ লিখক",
   "debugInfoLabel": "ডিবাগ তথ্য (স্বয়ংক্ৰিয়ভাৱে পূৰণ কৰা)",
   "inquirySent": "সোধপোছ পঠিওৱা হৈছে",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Escribe os detalles da túa outra consulta",
   "emailAddress": "Enderezo de correo electrónico",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Contido da consulta",
+  "inquiryContent": "Detalles da túa consulta",
   "inquiryContentPlaceholder": "Introduza o contido da súa consulta",
   "debugInfoLabel": "Información de depuración (autocompletada)",
   "inquirySent": "Enviouse a consulta",

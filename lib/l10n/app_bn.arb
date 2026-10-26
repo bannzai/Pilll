@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "অন্যান্য বিষয়ের বিস্তারিত লিখুন",
   "emailAddress": "ইমেইল ঠিকানা",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "জিজ্ঞাসার বিবরণ",
+  "inquiryContent": "আপনার জিজ্ঞাসার বিবরণ",
   "inquiryContentPlaceholder": "আপনার জিজ্ঞাসার বিষয়বস্তু লিখুন",
   "debugInfoLabel": "ডিবাগ তথ্য (স্বয়ংক্রিয়ভাবে পূরণ)",
   "inquirySent": "অনুসন্ধান পাঠানো হয়েছে",

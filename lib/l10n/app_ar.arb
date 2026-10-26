@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "يرجى إدخال تفاصيل الاستفسار الآخر",
   "emailAddress": "عنوان البريد الإلكتروني",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "محتوى الاستفسار",
+  "inquiryContent": "تفاصيل الاستفسار",
   "inquiryContentPlaceholder": "يرجى إدخال محتوى الاستفسار",
   "debugInfoLabel": "معلومات التصحيح (ملء تلقائي)",
   "inquirySent": "تم إرسال استفسارك",

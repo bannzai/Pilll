@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "ກະລຸນາປ້ອນລາຍລະອຽດຂອງຄຳຖາມອື່ນ",
   "emailAddress": "ທີ່ຢູ່ອີເມວ",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "ເນື້ອຫາການສອບຖາມ",
+  "inquiryContent": "ລາຍລະອຽດຄຳຖາມ",
   "inquiryContentPlaceholder": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມຂອງທ່ານ",
   "debugInfoLabel": "ຂໍ້ມູນດີບັກ (ປ້ອນອັດຕະໂນມັດ)",
   "inquirySent": "ສົ່ງຄຳຖາມສຳເລັດແລ້ວ",

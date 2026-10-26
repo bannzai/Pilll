@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "გთხოვთ, აღწეროთ თქვენი სხვა შეკითხვა",
   "emailAddress": "ელფოსტის მისამართი",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "მიმართვის შინაარსი",
+  "inquiryContent": "თქვენი შეკითხვის დეტალები",
   "inquiryContentPlaceholder": "გთხოვთ, შეიყვანოთ მიმართვის შინაარსი",
   "debugInfoLabel": "დებაგის ინფორმაცია (ავტომატურად შევსებული)",
   "inquirySent": "მიმართვა გაიგზავნა",

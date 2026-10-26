@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Rhowch fanylion eich ymholiad arall",
   "emailAddress": "Cyfeiriad e-bost",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Cynnwys yr ymholiad",
+  "inquiryContent": "Manylion eich ymholiad",
   "inquiryContentPlaceholder": "Rhowch fanylion eich ymholiad",
   "debugInfoLabel": "Gwybodaeth Ddadfygio (wedi'i llenwi'n awtomatig)",
   "inquirySent": "Mae eich ymholiad wedi'i anfon",

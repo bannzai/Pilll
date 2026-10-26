@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Beskriv den andre henvendelsen din",
   "emailAddress": "E-postadresse",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Henvendelsesinnhold",
+  "inquiryContent": "Detaljer om henvendelsen",
   "inquiryContentPlaceholder": "Beskriv din henvendelse",
   "debugInfoLabel": "Feilsøkingsinformasjon (automatisk utfylt)",
   "inquirySent": "Henvendelsen er sendt",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Iltimos, boshqa savolingiz tafsilotlarini yozing",
   "emailAddress": "Elektron pochta manzili",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Murojaat matni",
+  "inquiryContent": "Savolingiz tafsilotlari",
   "inquiryContentPlaceholder": "Murojaat mazmunini kiriting",
   "debugInfoLabel": "Debug ma'lumotlari (avtomatik to'ldirilgan)",
   "inquirySent": "Murojaat yuborildi",

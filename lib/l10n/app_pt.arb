@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Descreva os detalhes da sua outra dúvida",
   "emailAddress": "Endereço de e-mail",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Conteúdo da consulta",
+  "inquiryContent": "Detalhes da sua dúvida",
   "inquiryContentPlaceholder": "Digite o conteúdo de sua consulta",
   "debugInfoLabel": "Informações de depuração (preenchimento automático)",
   "inquirySent": "Mensagem enviada com sucesso",

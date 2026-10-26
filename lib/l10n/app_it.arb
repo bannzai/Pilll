@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Descrivi la tua altra richiesta",
   "emailAddress": "Indirizzo email",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Contenuto della richiesta",
+  "inquiryContent": "Dettagli della richiesta",
   "inquiryContentPlaceholder": "Inserisci il contenuto della tua richiesta",
   "debugInfoLabel": "Informazioni di debug (compilate automaticamente)",
   "inquirySent": "Richiesta inviata",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Басқа сұрағыңыз туралы толығырақ жазыңыз",
   "emailAddress": "Электрондық пошта мекенжайы",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Сұрау мазмұны",
+  "inquiryContent": "Сұрауыңыздың мәліметтері",
   "inquiryContentPlaceholder": "Сұрау мазмұнын енгізіңіз",
   "debugInfoLabel": "Жөндеу ақпараты (автотолтыру)",
   "inquirySent": "Сұрау жіберілді",

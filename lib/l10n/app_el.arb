@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Περιγράψτε το άλλο σας ερώτημα",
   "emailAddress": "Διεύθυνση ηλεκτρονικού ταχυδρομείου",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Περιεχόμενο επικοινωνίας",
+  "inquiryContent": "Λεπτομέρειες του ερωτήματός σας",
   "inquiryContentPlaceholder": "Εισάγετε το περιεχόμενο του ερωτήματός σας",
   "debugInfoLabel": "Πληροφορίες αποσφαλμάτωσης (αυτόματη συμπλήρωση)",
   "inquirySent": "Το αίτημά σας εστάλη",

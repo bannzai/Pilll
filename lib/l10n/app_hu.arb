@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Írd le a másik kérésed részleteit",
   "emailAddress": "E-mail-cím",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Megkeresés tartalma",
+  "inquiryContent": "Megkeresés részletei",
   "inquiryContentPlaceholder": "Kérem, írja le kérdését",
   "debugInfoLabel": "Debug információk (automatikusan kitöltve)",
   "inquirySent": "Az üzenetet elküldtük",

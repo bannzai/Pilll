@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "لطفاً جزئیات درخواست دیگر را وارد کنید",
   "emailAddress": "نشانی ایمیل",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "محتوای پیام",
+  "inquiryContent": "جزئیات پرسش شما",
   "inquiryContentPlaceholder": "محتوای پیام خود را وارد کنید",
   "debugInfoLabel": "اطلاعات اشکال‌زدایی (تکمیل خودکار)",
   "inquirySent": "درخواست ارسال شد",

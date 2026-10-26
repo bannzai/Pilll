@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Zəhmət olmasa, digər müraciətinizin təfərrüatlarını yazın",
   "emailAddress": "E-poçt ünvanı",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Müraciət məzmunu",
+  "inquiryContent": "Müraciətinizin təfərrüatları",
   "inquiryContentPlaceholder": "Müraciət məzmununu daxil edin",
   "debugInfoLabel": "Debug məlumatı (avtomatik doldurulmuş)",
   "inquirySent": "Müraciət göndərildi",

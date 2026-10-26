@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Kirjelda oma muud küsimust",
   "emailAddress": "E-posti aadress",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Päringu sisu",
+  "inquiryContent": "Päringu üksikasjad",
   "inquiryContentPlaceholder": "Sisestage oma päring",
   "debugInfoLabel": "Silumisinfo (automaatselt täidetud)",
   "inquirySent": "Päring on saadetud",

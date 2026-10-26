@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Descrie cealaltă întrebare",
   "emailAddress": "Adresă de e-mail",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Conținutul solicitării",
+  "inquiryContent": "Detaliile solicitării",
   "inquiryContentPlaceholder": "Vă rugăm să introduceți conținutul întrebării dumneavoastră",
   "debugInfoLabel": "Informații de depanare (completare automată)",
   "inquirySent": "Solicitarea a fost trimisă",

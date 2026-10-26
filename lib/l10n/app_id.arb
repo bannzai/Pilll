@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Tuliskan detail pertanyaan lainnya",
   "emailAddress": "Alamat email",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Isi pertanyaan",
+  "inquiryContent": "Detail pertanyaan Anda",
   "inquiryContentPlaceholder": "Masukkan isi pertanyaan Anda",
   "debugInfoLabel": "Informasi Debug (Terisi Otomatis)",
   "inquirySent": "Pertanyaan telah dikirim",

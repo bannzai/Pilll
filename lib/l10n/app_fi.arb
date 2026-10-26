@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Kerro tarkemmin muusta asiastasi",
   "emailAddress": "Sähköpostiosoite",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Viestin sisältö",
+  "inquiryContent": "Yhteydenoton tiedot",
   "inquiryContentPlaceholder": "Kirjoita kysymyksesi tähän",
   "debugInfoLabel": "Virheenkorjaustiedot (täytetty automaattisesti)",
   "inquirySent": "Yhteydenotto lähetetty",

@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "മറ്റ് അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ എഴുതൂ",
   "emailAddress": "ഇമെയിൽ വിലാസം",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "അന്വേഷണ വിശദാംശങ്ങൾ",
+  "inquiryContent": "അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ",
   "inquiryContentPlaceholder": "അന്വേഷണ വിശദാംശങ്ങൾ നൽകുക",
   "debugInfoLabel": "ഡീബഗ് വിവരങ്ങൾ (സ്വയമേവ പൂരിപ്പിച്ചത്)",
   "inquirySent": "അന്വേഷണം സമർപ്പിച്ചു",

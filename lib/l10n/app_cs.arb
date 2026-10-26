@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Prosím, popište svůj další dotaz",
   "emailAddress": "E-mailová adresa",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Obsah dotazu",
+  "inquiryContent": "Podrobnosti dotazu",
   "inquiryContentPlaceholder": "Zadejte prosím obsah dotazu",
   "debugInfoLabel": "Ladicí informace (automaticky vyplněno)",
   "inquirySent": "Dotaz byl odeslán",

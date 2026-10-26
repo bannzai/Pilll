@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਹੋਰ ਪੁੱਛਗਿੱਛ ਦਾ ਵੇਰਵਾ ਲਿਖੋ",
   "emailAddress": "ਈਮੇਲ ਪਤਾ",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "ਪੁੱਛਗਿੱਛ ਸਮੱਗਰੀ",
+  "inquiryContent": "ਤੁਹਾਡੀ ਪੁੱਛਗਿੱਛ ਦਾ ਵੇਰਵਾ",
   "inquiryContentPlaceholder": "ਕਿਰਪਾ ਕਰਕੇ ਪੁੱਛਗਿੱਛ ਦਾ ਵੇਰਵਾ ਦਰਜ ਕਰੋ",
   "debugInfoLabel": "ਡੀਬੱਗ ਜਾਣਕਾਰੀ (ਸਵੈ-ਭਰੀ)",
   "inquirySent": "ਪੁੱਛਗਿੱਛ ਭੇਜੀ ਗਈ ਹੈ",

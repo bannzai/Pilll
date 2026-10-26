@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "Idatzi beste kontsultaren xehetasunak",
   "emailAddress": "Helbide elektronikoa",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "Kontsultaren edukia",
+  "inquiryContent": "Zure kontsultaren xehetasunak",
   "inquiryContentPlaceholder": "Sartu kontsultaren edukia",
   "debugInfoLabel": "Arazketa-informazioa (automatikoki beteta)",
   "inquirySent": "Kontsulta bidali da",

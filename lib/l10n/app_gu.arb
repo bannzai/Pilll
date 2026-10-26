@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "કૃપા કરીને તમારી અન્ય પૂછપરછની વિગતો લખો",
   "emailAddress": "ઇમેઇલ સરનામું",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "પૂછપરછની વિગતો",
+  "inquiryContent": "તમારી પૂછપરછની વિગતો",
   "inquiryContentPlaceholder": "કૃપા કરીને તમારી પૂછપરછની વિગતો દાખલ કરો",
   "debugInfoLabel": "ડિબગ માહિતી (આપોઆપ ભરાયેલ)",
   "inquirySent": "પૂછપરછ મોકલી દીધી",

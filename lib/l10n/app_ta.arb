@@ -440,7 +440,7 @@
   "otherInquiryPlaceholder": "மற்ற விசாரணையின் விவரங்களை எழுதுங்கள்",
   "emailAddress": "மின்னஞ்சல் முகவரி",
   "emailPlaceholder": "example@example.com",
-  "inquiryContent": "விசாரணை உள்ளடக்கம்",
+  "inquiryContent": "உங்கள் கேள்வியின் விவரங்கள்",
   "inquiryContentPlaceholder": "விசாரணை விவரங்களை உள்ளிடவும்",
   "debugInfoLabel": "பிழைத்திருத்த தகவல் (தானாக நிரப்பப்பட்டது)",
   "inquirySent": "உங்கள் விசாரணை அனுப்பப்பட்டது",
