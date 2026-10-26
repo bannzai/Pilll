@@ -163,7 +163,7 @@
   "recordMenstruation": "पीरियड दर्ज करें",
   "menstruationHistory": "पीरियड का इतिहास",
   "menstruationFromToday": "आज से पीरियड शुरू",
-  "menstruationFromYesterday": "कल से माहवारी",
+  "menstruationFromYesterday": "पीरियड कल शुरू हुआ",
   "selectMenstruationStartDate": "पीरियड्स की शुरुआती तारीख चुनें",
   "menstruationCycle": "{menstruationDuration} दिन का चक्र",
   "login": "लॉग इन",

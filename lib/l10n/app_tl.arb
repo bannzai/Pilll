@@ -163,7 +163,7 @@
   "recordMenstruation": "Itala ang regla ninyo",
   "menstruationHistory": "Kasaysayan ng regla",
   "menstruationFromToday": "Simula ng regla ngayong araw",
-  "menstruationFromYesterday": "Regla mula kahapon",
+  "menstruationFromYesterday": "Nagsimula ang regla kahapon",
   "selectMenstruationStartDate": "Piliin ang petsa ng simula ng regla",
   "menstruationCycle": "{menstruationDuration} araw na siklo",
   "login": "Pumasok",

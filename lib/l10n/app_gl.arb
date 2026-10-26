@@ -163,7 +163,7 @@
   "recordMenstruation": "Rexistra a regra",
   "menstruationHistory": "Historial da regra",
   "menstruationFromToday": "A regra comeza hoxe",
-  "menstruationFromYesterday": "Regra desde onte",
+  "menstruationFromYesterday": "A regra comezou onte",
   "selectMenstruationStartDate": "Seleccionar data de inicio da menstruación",
   "menstruationCycle": "ciclo de {menstruationDuration} días",
   "login": "Iniciar sesión",

@@ -163,7 +163,7 @@
   "recordMenstruation": "לתעד מחזור",
   "menstruationHistory": "היסטוריית המחזור",
   "menstruationFromToday": "תחילת המחזור היום",
-  "menstruationFromYesterday": "וסת מאתמול",
+  "menstruationFromYesterday": "המחזור התחיל אתמול",
   "selectMenstruationStartDate": "בחר תאריך תחילת הווסת",
   "menstruationCycle": "מחזור {menstruationDuration} ימים",
   "login": "התחבר",

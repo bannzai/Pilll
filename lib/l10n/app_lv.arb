@@ -163,7 +163,7 @@
   "recordMenstruation": "Atzīmējiet mēnešreizes",
   "menstruationHistory": "mēnešreižu vēsture",
   "menstruationFromToday": "Mēnešreizes sākas šodien",
-  "menstruationFromYesterday": "Menstruācija no vakar",
+  "menstruationFromYesterday": "Mēnešreizes sākās vakar",
   "selectMenstruationStartDate": "Izvēlēties menstruācijas sākuma dienu",
   "menstruationCycle": "{menstruationDuration} dienu cikls",
   "login": "Pieslēgties",

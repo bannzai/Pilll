@@ -163,7 +163,7 @@
   "recordMenstruation": "ماہواری درج کریں",
   "menstruationHistory": "ماہواری کی تاریخ",
   "menstruationFromToday": "ماہواری آج سے شروع",
-  "menstruationFromYesterday": "کل سے ماہواری",
+  "menstruationFromYesterday": "ماہواری کل شروع ہوئی",
   "selectMenstruationStartDate": "حیض کی شروعات کی تاریخ منتخب کریں",
   "menstruationCycle": "{menstruationDuration} دنوں کا دورانیہ",
   "login": "لاگ ان",

@@ -163,7 +163,7 @@
   "recordMenstruation": "ମାସିକ ରେକର୍ଡ କରନ୍ତୁ",
   "menstruationHistory": "ମାସିକ ଇତିହାସ",
   "menstruationFromToday": "ଆଜିଠାରୁ ମାସିକ ଆରମ୍ଭ",
-  "menstruationFromYesterday": "କାଲିରୁ ମାସିକ",
+  "menstruationFromYesterday": "ମାସିକ ଗତକାଲି ଆରମ୍ଭ ହୋଇଥିଲା",
   "selectMenstruationStartDate": "ମାସିକ ଆରମ୍ଭ ଦିନ ଚୟନ କରନ୍ତୁ",
   "menstruationCycle": "{menstruationDuration}ଦିନ ଚକ୍ର",
   "login": "ଲଗଇନ",

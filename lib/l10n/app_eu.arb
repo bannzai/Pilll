@@ -163,7 +163,7 @@
   "recordMenstruation": "Hilekoa erregistratu",
   "menstruationHistory": "Hilekoaren historia",
   "menstruationFromToday": "Hilekoa gaur hasten da",
-  "menstruationFromYesterday": "Atzotik hilea",
+  "menstruationFromYesterday": "Hilekoa atzo hasi zen",
   "selectMenstruationStartDate": "Menstruazioaren hasiera data hautatu",
   "menstruationCycle": "{menstruationDuration} eguneko zikloa",
   "login": "Saioa hasi",

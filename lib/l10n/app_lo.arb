@@ -163,7 +163,7 @@
   "recordMenstruation": "ບັນທຶກປະຈຳເດືອນ",
   "menstruationHistory": "ປະຫວັດປະຈຳເດືອນ",
   "menstruationFromToday": "ປະຈຳເດືອນເລີ່ມມື້ນີ້",
-  "menstruationFromYesterday": "ມື້ວານມີເດືອນ",
+  "menstruationFromYesterday": "ປະຈຳເດືອນເລີ່ມມື້ວານນີ້",
   "selectMenstruationStartDate": "ເລືອກວັນເລີ່ມຕົ້ນປະຈຳເດືອນ",
   "menstruationCycle": "{menstruationDuration}ວັນ ວົງຈອນ",
   "login": "ເຂົ້າສູ່ລະບົບ",

@@ -163,7 +163,7 @@
   "recordMenstruation": "تسجيل الدورة",
   "menstruationHistory": "سجل الدورة",
   "menstruationFromToday": "بدء الدورة اليوم",
-  "menstruationFromYesterday": "الدورة الشهرية من أمس",
+  "menstruationFromYesterday": "بدأت الدورة أمس",
   "selectMenstruationStartDate": "حدد تاريخ بداية الدورة الشهرية",
   "menstruationCycle": "دورة {menstruationDuration} يوم",
   "login": "تسجيل الدخول",

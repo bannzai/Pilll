@@ -163,7 +163,7 @@
   "recordMenstruation": "Tafadhali rekodi hedhi",
   "menstruationHistory": "Historia ya hedhi",
   "menstruationFromToday": "Hedhi inaanza leo",
-  "menstruationFromYesterday": "Hedhi tangu jana",
+  "menstruationFromYesterday": "Hedhi ilianza jana",
   "selectMenstruationStartDate": "Chagua siku ya mwanzo wa hedhi",
   "menstruationCycle": "Mzunguko wa siku {menstruationDuration}",
   "login": "Ingia",

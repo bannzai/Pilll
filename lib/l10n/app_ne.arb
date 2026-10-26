@@ -163,7 +163,7 @@
   "recordMenstruation": "महिनावारीको विवरण राख्नुहोस्",
   "menstruationHistory": "महिनावारीको इतिहास",
   "menstruationFromToday": "महिनावारी आजदेखि सुरु",
-  "menstruationFromYesterday": "हिजोदेखि महिनावारी",
+  "menstruationFromYesterday": "महिनावारी हिजो सुरु भयो",
   "selectMenstruationStartDate": "मासिक धर्म सुरु मिति छान्नुहोस्",
   "menstruationCycle": "{menstruationDuration} दिनको चक्र",
   "login": "लगइन",

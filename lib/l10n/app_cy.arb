@@ -163,7 +163,7 @@
   "recordMenstruation": "Cofnodi mislif",
   "menstruationHistory": "Hanes mislif",
   "menstruationFromToday": "Mislif yn dechrau heddiw",
-  "menstruationFromYesterday": "Misglwyf ers ddoe",
+  "menstruationFromYesterday": "Dechreuodd y mislif ddoe",
   "selectMenstruationStartDate": "Dewis dyddiad dechrau'r misglwyf",
   "menstruationCycle": "cylch {menstruationDuration} diwrnod",
   "login": "mewngofnodi",

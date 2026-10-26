@@ -163,7 +163,7 @@
   "recordMenstruation": "Hayzni qayd eting",
   "menstruationHistory": "Hayz tarixi",
   "menstruationFromToday": "Hayz bugun boshlanadi",
-  "menstruationFromYesterday": "Kechadan hayz",
+  "menstruationFromYesterday": "Hayz kecha boshlandi",
   "selectMenstruationStartDate": "Hayz boshlanish sanasini tanlang",
   "menstruationCycle": "{menstruationDuration} kunlik sikl",
   "login": "Kirish",

@@ -163,7 +163,7 @@
   "recordMenstruation": "บันทึกประจำเดือน",
   "menstruationHistory": "ประวัติประจำเดือน",
   "menstruationFromToday": "ประจำเดือนเริ่มวันนี้",
-  "menstruationFromYesterday": "เมื่อวานเริ่มมีประจำเดือน",
+  "menstruationFromYesterday": "ประจำเดือนเริ่มเมื่อวาน",
   "selectMenstruationStartDate": "เลือกวันที่เริ่มประจำเดือน",
   "menstruationCycle": "รอบ {menstruationDuration} วัน",
   "login": "เข้าสู่ระบบ",

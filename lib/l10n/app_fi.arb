@@ -163,7 +163,7 @@
   "recordMenstruation": "Kirjaa kuukautiset",
   "menstruationHistory": "kuukautishistoria",
   "menstruationFromToday": "Kuukautiset alkavat tänään",
-  "menstruationFromYesterday": "Kuukautiset eilen alkaen",
+  "menstruationFromYesterday": "Kuukautiset alkoivat eilen",
   "selectMenstruationStartDate": "Valitse kuukautisten alkamispäivä",
   "menstruationCycle": "{menstruationDuration} päivän sykli",
   "login": "Kirjaudu sisään",

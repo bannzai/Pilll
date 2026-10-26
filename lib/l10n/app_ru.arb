@@ -163,7 +163,7 @@
   "recordMenstruation": "Записать месячные",
   "menstruationHistory": "История месячных",
   "menstruationFromToday": "Месячные начинаются сегодня",
-  "menstruationFromYesterday": "Месячные с вчера",
+  "menstruationFromYesterday": "Месячные начались вчера",
   "selectMenstruationStartDate": "Выбрать дату начала менструации",
   "menstruationCycle": "{menstruationDuration}-дневный цикл",
   "login": "Войти",

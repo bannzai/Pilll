@@ -163,7 +163,7 @@
   "recordMenstruation": "Märgi päevad üles",
   "menstruationHistory": "Päevade ajalugu",
   "menstruationFromToday": "Päevad algavad täna",
-  "menstruationFromYesterday": "Menstruatsioon alates eilsest",
+  "menstruationFromYesterday": "Päevad algasid eile",
   "selectMenstruationStartDate": "Vali menstruatsiooni alguskuupäev",
   "menstruationCycle": "{menstruationDuration} päeva tsükkel",
   "login": "Logi sisse",

@@ -163,7 +163,7 @@
   "recordMenstruation": "Zabilježite menstruaciju",
   "menstruationHistory": "Historija menstruacije",
   "menstruationFromToday": "Menstruacija počinje danas",
-  "menstruationFromYesterday": "Od jučer menstruacija",
+  "menstruationFromYesterday": "Menstruacija je počela jučer",
   "selectMenstruationStartDate": "Odaberite datum početka menstruacije",
   "menstruationCycle": "{menstruationDuration}-dnevni ciklus",
   "login": "Prijava",

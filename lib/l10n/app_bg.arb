@@ -163,7 +163,7 @@
   "recordMenstruation": "Запис на мензис",
   "menstruationHistory": "История на мензиса",
   "menstruationFromToday": "Мензисът започва днес",
-  "menstruationFromYesterday": "Менструация от вчера",
+  "menstruationFromYesterday": "Мензисът започна вчера",
   "selectMenstruationStartDate": "Изберете началната дата на менструацията",
   "menstruationCycle": "{menstruationDuration}-дневен цикъл",
   "login": "Вход",

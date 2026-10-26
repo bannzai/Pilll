@@ -163,7 +163,7 @@
   "recordMenstruation": "Regjistroni menstruacionin",
   "menstruationHistory": "Historia e menstruacioneve",
   "menstruationFromToday": "Menstruacioni fillon sot",
-  "menstruationFromYesterday": "Menstruacion nga dje",
+  "menstruationFromYesterday": "Menstruacionet filluan dje",
   "selectMenstruationStartDate": "Zgjidh datën e fillimit të menstruacionit",
   "menstruationCycle": "{menstruationDuration} ditë cikël",
   "login": "Kyçu",

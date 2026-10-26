@@ -163,7 +163,7 @@
   "recordMenstruation": "Zaznamenat menstruaci",
   "menstruationHistory": "Historie menstruace",
   "menstruationFromToday": "Menstruace začíná dnes",
-  "menstruationFromYesterday": "Menstruace od včera",
+  "menstruationFromYesterday": "Menstruace začala včera",
   "selectMenstruationStartDate": "Vyberte datum začátku menstruace",
   "menstruationCycle": "{menstruationDuration}-denní cyklus",
   "login": "Přihlásit se",

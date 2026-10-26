@@ -163,7 +163,7 @@
   "recordMenstruation": "Menstruatie vastleggen",
   "menstruationHistory": "Menstruatiegeschiedenis",
   "menstruationFromToday": "Menstruatie begint vandaag",
-  "menstruationFromYesterday": "Menstruatie vanaf gisteren",
+  "menstruationFromYesterday": "Menstruatie begon gisteren",
   "selectMenstruationStartDate": "Selecteer menstruatiestartdatum",
   "menstruationCycle": "{menstruationDuration}-daagse cyclus",
   "login": "Inloggen",

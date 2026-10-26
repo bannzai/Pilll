@@ -163,7 +163,7 @@
   "recordMenstruation": "ရာသီကို မှတ်တမ်းတင်ပါ",
   "menstruationHistory": "ရာသီမှတ်တမ်း",
   "menstruationFromToday": "ရာသီ ဒီနေ့ စတင်ပါပြီ",
-  "menstruationFromYesterday": "မနေ့က ရာသီ",
+  "menstruationFromYesterday": "ရာသီ မနေ့က စတင်ခဲ့ပါတယ်",
   "selectMenstruationStartDate": "ရာသီစတင်ရက်ရွေးချယ်ပါ",
   "menstruationCycle": "{menstruationDuration}ရက် သံသရာ",
   "login": "ဝင်ရန်",

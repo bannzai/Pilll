@@ -163,7 +163,7 @@
   "recordMenstruation": "मासिक पाळीची नोंद करा",
   "menstruationHistory": "मासिक पाळीचा इतिहास",
   "menstruationFromToday": "आजपासून मासिक पाळी सुरू",
-  "menstruationFromYesterday": "काल पासून मासिक पाळी",
+  "menstruationFromYesterday": "मासिक पाळी काल सुरू झाली",
   "selectMenstruationStartDate": "मासिक पाळीची सुरुवाती तारीख निवडा",
   "menstruationCycle": "{menstruationDuration} दिवसांचे चक्र",
   "login": "लॉगिन",

@@ -163,7 +163,7 @@
   "recordMenstruation": "Užregistruokite mėnesines",
   "menstruationHistory": "mėnesinių istorija",
   "menstruationFromToday": "Mėnesinės prasideda šiandien",
-  "menstruationFromYesterday": "Mėnesinės nuo vakar",
+  "menstruationFromYesterday": "Mėnesinės prasidėjo vakar",
   "selectMenstruationStartDate": "Pasirinkti menstruacijos pradžios datą",
   "menstruationCycle": "{menstruationDuration} dienų ciklas",
   "login": "Prisijungti",

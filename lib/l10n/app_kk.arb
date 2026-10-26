@@ -163,7 +163,7 @@
   "recordMenstruation": "Етеккірді тіркеңіз",
   "menstruationHistory": "Етеккір тарихы",
   "menstruationFromToday": "Етеккір бүгін басталады",
-  "menstruationFromYesterday": "Кешеден етек",
+  "menstruationFromYesterday": "Етеккір кеше басталды",
   "selectMenstruationStartDate": "Айбасу басталу күнін таңдау",
   "menstruationCycle": "{menstruationDuration} күндік цикл",
   "login": "Кіру",

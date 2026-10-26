@@ -163,7 +163,7 @@
   "recordMenstruation": "Teken maandstonde aan",
   "menstruationHistory": "Geskiedenis van maandstonde",
   "menstruationFromToday": "Maandstonde begin vandag",
-  "menstruationFromYesterday": "Menstruasie vanaf gister",
+  "menstruationFromYesterday": "Maandstonde het gister begin",
   "selectMenstruationStartDate": "Kies periode begindatum",
   "menstruationCycle": "{menstruationDuration} dae siklus",
   "login": "Teken in",

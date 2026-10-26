@@ -163,7 +163,7 @@
   "recordMenstruation": "მენსტრუაციის ჩაწერა",
   "menstruationHistory": "მენსტრუაციის ისტორია",
   "menstruationFromToday": "მენსტრუაცია დღეს იწყება",
-  "menstruationFromYesterday": "გუშინიდან მენსტრუაცია",
+  "menstruationFromYesterday": "მენსტრუაცია გუშინ დაიწყო",
   "selectMenstruationStartDate": "აირჩიეთ მენსტრუაციის დაწყების თარიღი",
   "menstruationCycle": "{menstruationDuration} დღის ციკლი",
   "login": "შესვლა",

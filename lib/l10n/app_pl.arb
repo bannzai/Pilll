@@ -163,7 +163,7 @@
   "recordMenstruation": "Zapisz okres",
   "menstruationHistory": "Historia okresu",
   "menstruationFromToday": "Okres zaczyna się dziś",
-  "menstruationFromYesterday": "Od wczoraj menstruacja",
+  "menstruationFromYesterday": "Okres zaczął się wczoraj",
   "selectMenstruationStartDate": "Wybierz początek miesiączki",
   "menstruationCycle": "Cykl {menstruationDuration} dni",
   "login": "Zaloguj się",

@@ -163,7 +163,7 @@
   "recordMenstruation": "Periode eintragen",
   "menstruationHistory": "Verlauf deiner Periode",
   "menstruationFromToday": "Periode beginnt heute",
-  "menstruationFromYesterday": "Periode seit gestern",
+  "menstruationFromYesterday": "Periode hat gestern begonnen",
   "selectMenstruationStartDate": "Periodenstart wählen",
   "menstruationCycle": "{menstruationDuration}-Tage-Zyklus",
   "login": "Anmelden",

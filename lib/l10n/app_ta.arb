@@ -163,7 +163,7 @@
   "recordMenstruation": "மாதவிடாயைப் பதிவு செய்யுங்கள்",
   "menstruationHistory": "மாதவிடாய் வரலாறு",
   "menstruationFromToday": "மாதவிடாய் இன்று தொடங்குகிறது",
-  "menstruationFromYesterday": "நேற்றிலிருந்து மாதவிடாய்",
+  "menstruationFromYesterday": "மாதவிடாய் நேற்று தொடங்கியது",
   "selectMenstruationStartDate": "மாதவிடாய் தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
   "menstruationCycle": "{menstruationDuration} நாள் சுழற்சி",
   "login": "உள்நுழைய",

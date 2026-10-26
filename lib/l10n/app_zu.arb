@@ -163,7 +163,7 @@
   "recordMenstruation": "Sicela uqophe ukuya esikhathini",
   "menstruationHistory": "Umlando wokuya esikhathini",
   "menstruationFromToday": "Ukuya esikhathini kuqala namuhla",
-  "menstruationFromYesterday": "Kusukela izolo",
+  "menstruationFromYesterday": "Ukuya esikhathini kuqale izolo",
   "selectMenstruationStartDate": "Khetha usuku lokuqala kwenyanga",
   "menstruationCycle": "umjikelezo {menstruationDuration} izinsuku",
   "login": "Ngena",

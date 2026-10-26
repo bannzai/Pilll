@@ -163,7 +163,7 @@
   "recordMenstruation": "Registra le mestruazioni",
   "menstruationHistory": "Storico delle mestruazioni",
   "menstruationFromToday": "Le mestruazioni iniziano oggi",
-  "menstruationFromYesterday": "Mestruazioni da ieri",
+  "menstruationFromYesterday": "Le mestruazioni sono iniziate ieri",
   "selectMenstruationStartDate": "Seleziona la data di inizio delle mestruazioni",
   "menstruationCycle": "Ciclo di {menstruationDuration} giorni",
   "login": "Accedi",

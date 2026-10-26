@@ -163,7 +163,7 @@
   "recordMenstruation": "Catat haid",
   "menstruationHistory": "Riwayat haid",
   "menstruationFromToday": "Haid dimulai hari ini",
-  "menstruationFromYesterday": "Haid sejak kemarin",
+  "menstruationFromYesterday": "Haid dimulai kemarin",
   "selectMenstruationStartDate": "Pilih tanggal mulai menstruasi",
   "menstruationCycle": "siklus {menstruationDuration} hari",
   "login": "Masuk",

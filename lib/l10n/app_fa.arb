@@ -163,7 +163,7 @@
   "recordMenstruation": "ثبت پریود",
   "menstruationHistory": "تاریخچه پریود",
   "menstruationFromToday": "شروع پریود از امروز",
-  "menstruationFromYesterday": "قاعدگی از دیروز",
+  "menstruationFromYesterday": "پریود از دیروز شروع شده است",
   "selectMenstruationStartDate": "انتخاب تاریخ شروع قاعدگی",
   "menstruationCycle": "دوره {menstruationDuration} روزه",
   "login": "ورود",

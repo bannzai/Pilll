@@ -163,7 +163,7 @@
   "recordMenstruation": "កត់ត្រារដូវ",
   "menstruationHistory": "ប្រវត្តិរដូវ",
   "menstruationFromToday": "រដូវចាប់ផ្តើមថ្ងៃនេះ",
-  "menstruationFromYesterday": "ម្សិលមិញចាប់ផ្តើមរដូវ",
+  "menstruationFromYesterday": "រដូវចាប់ផ្តើមពីម្សិលមិញ",
   "selectMenstruationStartDate": "ជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationCycle": "{menstruationDuration}ថ្ងៃ វដ្ត",
   "login": "ចូល",

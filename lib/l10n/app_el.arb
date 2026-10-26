@@ -163,7 +163,7 @@
   "recordMenstruation": "Καταγραφή περιόδου",
   "menstruationHistory": "Ιστορικό περιόδου",
   "menstruationFromToday": "Έναρξη περιόδου σήμερα",
-  "menstruationFromYesterday": "Περίοδος από χθες",
+  "menstruationFromYesterday": "Η έναρξη της περιόδου ήταν χθες",
   "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης περιόδου",
   "menstruationCycle": "Κύκλος {menstruationDuration} ημερών",
   "login": "Σύνδεση",

@@ -163,7 +163,7 @@
   "recordMenstruation": "Сарын тэмдгийн бүртгэл хийх",
   "menstruationHistory": "сарын тэмдгийн түүх",
   "menstruationFromToday": "Сарын тэмдгийн эхлэл өнөөдөр",
-  "menstruationFromYesterday": "өчигдрөөс сарын тэмдэг",
+  "menstruationFromYesterday": "Сарын тэмдгийн эхлэл өчигдөр",
   "selectMenstruationStartDate": "Сарын тэмдэг эхлэх өдрийг сонгох",
   "menstruationCycle": "{menstruationDuration} өдрийн мөчлөг",
   "login": "нэвтрэх",

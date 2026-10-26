@@ -163,7 +163,7 @@
   "recordMenstruation": "Ghi lại kinh nguyệt",
   "menstruationHistory": "Lịch sử kinh nguyệt",
   "menstruationFromToday": "Kinh nguyệt bắt đầu hôm nay",
-  "menstruationFromYesterday": "Kinh nguyệt từ hôm qua",
+  "menstruationFromYesterday": "Kinh nguyệt bắt đầu từ hôm qua",
   "selectMenstruationStartDate": "Chọn ngày bắt đầu kinh nguyệt",
   "menstruationCycle": "Chu kỳ {menstruationDuration} ngày",
   "login": "Đăng nhập",
