@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Nabili na po ito, o ginagamit ang impormasyon ng pagbili sa ibang account. Pakitingnan ang account na {accountName}",
   "purchaseErrorInvalidReceiptError": "Hindi wasto ang impormasyon sa pagbili. Pakisuri po ang mga detalye ng inyong pagbili",
   "purchaseErrorMissingReceiptFileError": "Hindi makita ang impormasyon ng bumili. Paki-sign in po sa inyong device gamit ang {accountName}, saka subukan muli",
-  "purchaseErrorNetworkError": "Hindi matatag ang koneksyon sa internet. Pakisuri ang inyong koneksyon at subukan muli.",
+  "purchaseErrorNetworkError": "Hindi matatag ang koneksyon sa network. Pakisuri po ang inyong koneksyon at subukan muli.",
   "purchaseErrorInvalidCredentialsError": "Hindi natagumpay ang pagbili. Maghintay ng kaunti at subukan ulit. Kung patuloy pa ring may problema, makipag-ugnayan sa amin sa pamamagitan ng Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hindi makakabili sa ngayon. Magsandaling hinay at subukang muli. Kung hindi pa rin maayos, makipag-ugnayan sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ginagamit na ng ibang user ang impormasyon ng pagbili. Pakitingnan ang {accountName} na naka-login sa inyong device.",

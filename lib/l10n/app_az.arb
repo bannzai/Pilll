@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Artıq satın alınıb və ya satınalma məlumatı başqa istifadəçi tərəfindən istifadə olunur. Zəhmət olmasa, {accountName} hesabını yoxlayın",
   "purchaseErrorInvalidReceiptError": "Satınalma məlumatı etibarsızdır. Zəhmət olmasa, satınalma məlumatını yoxlayın",
   "purchaseErrorMissingReceiptFileError": "Alıcının məlumatları tapılmadı. Zəhmət olmasa, cihazınızda {accountName} hesabı ilə daxil olub yenidən cəhd edin",
-  "purchaseErrorNetworkError": "Şəbəkə bağlantısı qeyri-sabitdir. Bağlantı vəziyyətinizi yoxlayıb yenidən cəhd edin.",
+  "purchaseErrorNetworkError": "Şəbəkə bağlantısı qeyri-sabitdir. Zəhmət olmasa, bağlantınızı yoxlayıb yenidən cəhd edin.",
   "purchaseErrorInvalidCredentialsError": "Satın alma uğursuz oldu. Bir müddət sonra yenidən cəhd edin. Problem həll olmasa, Tənzimləmələr > Əlaqə bölməsindən bizə müraciət edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hazırda satın alma mümkün deyil. Bir müddət sonra yenidən cəhd edin. Problem həll olunmazsa Tənzimləmələr > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Satın alma məlumatları başqa istifadəçi tərəfindən istifadə edilir. Zəhmət olmasa cihazda daxil olmuş {accountName} hesabını yoxlayın.",

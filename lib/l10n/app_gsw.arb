@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "De Chauf isch scho gmacht worde, oder d Chaufdate wärded bi eme andere Konto bruucht. Lueg bitte s Konto {accountName} aa",
   "purchaseErrorInvalidReceiptError": "D Aagabe zu dim Chauf sind nöd gültig. Lueg bitte dini Chaufdate aa",
   "purchaseErrorMissingReceiptFileError": "D Aagabe zum Chäufer sind nöd gfunde worde. Meld di uf dim Grät mit {accountName} aa und probier s nomal",
-  "purchaseErrorNetworkError": "D Netzwerkverbindig isch instabil. Bitte prüefed Ihri Internetverbindig und versueched es nomal.",
+  "purchaseErrorNetworkError": "D Netzverbindig isch nöd stabil. Lueg bitte dini Verbindig aa und probier's nomal.",
   "purchaseErrorInvalidCredentialsError": "De Kauf isch fäälgschlage. Versuechet es bitte spöter nomol. Falls s Problem nöd glöst werde cha, chönd Ihrs über Iistellige > Afrag mälde. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Chauff isch momentan nid möglich. Bitte warte chli und versueche es spöter nomal. Falls es Problem bliibt, mäld di über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "D Chaufinformatione werded scho vo eme andere Benutzer verwendet. Prüefed de {accountName}, wo uf em Gerät aagmeldet isch.",

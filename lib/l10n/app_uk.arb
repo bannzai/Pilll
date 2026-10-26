@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Покупку вже здійснено або дані про неї використовуються в іншому обліковому записі. Будь ласка, перевірте обліковий запис {accountName}",
   "purchaseErrorInvalidReceiptError": "Дані про покупку недійсні. Будь ласка, перевірте відомості про покупку",
   "purchaseErrorMissingReceiptFileError": "Інформацію про покупця не знайдено. Увійдіть на пристрої в обліковий запис {accountName} і спробуйте ще раз",
-  "purchaseErrorNetworkError": "Нестабільне підключення до мережі. Перевірте з'єднання та спробуйте знову.",
+  "purchaseErrorNetworkError": "З’єднання з мережею нестабільне. Перевірте підключення та спробуйте ще раз.",
   "purchaseErrorInvalidCredentialsError": "Покупка не вдалася. Спробуйте знову через деякий час. Якщо проблема не вирішується, зверніться через Налаштування > Підтримка. Деталі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Наразі неможливо здійснити покупку. Спробуйте ще раз через деякий час. Якщо проблема не вирішиться, зверніться до нас через Налаштування > Зв'язатися з нами. Деталі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Дані про покупку вже використовуються іншим користувачем. Перевірте {accountName}, під яким ви увійшли до пристрою",

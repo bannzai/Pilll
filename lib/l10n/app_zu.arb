@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Ukuthenga sekwenziwe, noma imininingwane yokuthenga isetshenziswa kwenye i-akhawunti. Sicela uhlole i-akhawunti ethi {accountName}",
   "purchaseErrorInvalidReceiptError": "Imininingwane yokuthenga ayivumelekile. Sicela uhlole imininingwane yokuthenga kwakho",
   "purchaseErrorMissingReceiptFileError": "Imininingwane yomthengi ayitholakalanga. Sicela ungene ngemvume kudivayisi yakho nge-akhawunti ethi {accountName}, bese uzama futhi",
-  "purchaseErrorNetworkError": "Inethiwekhi ayisebenzi kahle. Hlola ukuxhumana kwakho bese uzama futhi.",
+  "purchaseErrorNetworkError": "Uxhumano lwenethiwekhi aluzinzile. Sicela uhlole uxhumano lwakho bese uzama futhi.",
   "purchaseErrorInvalidCredentialsError": "Ukuthenga kuhlulekile. Sicela uzame futhi ngemva kwesikhathi. Uma inkinga iqhubeka, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Xhumana Nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Akukho ukuthenga okutholakalayo okwamanje. Sicela uzame futhi emva kwesikhathi. Uma inkinga ingakapheleli, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Imibuzo. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Imininingwane yokuthenga zisetshenziswa umsebenzisi omunye. Sicela uhlole i-{accountName} engene kule divayisi.",

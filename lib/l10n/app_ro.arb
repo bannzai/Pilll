@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Achiziția a fost deja făcută sau informațiile despre achiziție sunt folosite pe alt cont. Verifică acest cont: {accountName}",
   "purchaseErrorInvalidReceiptError": "Informațiile despre achiziție nu sunt valide. Verifică detaliile achiziției",
   "purchaseErrorMissingReceiptFileError": "Informațiile despre cumpărător nu au fost găsite. Conectează-te pe dispozitiv cu {accountName} și încearcă din nou",
-  "purchaseErrorNetworkError": "Conexiunea la rețea este instabilă. Verificați conexiunea internet și încercați din nou.",
+  "purchaseErrorNetworkError": "Conexiunea la rețea este instabilă. Verifică-ți conexiunea și încearcă din nou.",
   "purchaseErrorInvalidCredentialsError": "Achiziția a eșuat. Vă rugăm să încercați din nou mai târziu. Dacă problema persistă, contactați-ne prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "În prezent nu se poate face cumpărătura. Vă rugăm să reîncercați după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informațiile de achiziție sunt deja utilizate de un alt utilizator. Verificați contul {accountName} conectat pe dispozitiv.",

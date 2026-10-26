@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "La compra ja s’ha fet, o bé un altre compte d’usuari fa servir les dades de compra. Comprova el compte {accountName}",
   "purchaseErrorInvalidReceiptError": "La informació de compra no és vàlida. Comprova les dades de la compra",
   "purchaseErrorMissingReceiptFileError": "No s'ha trobat la informació de la compra. Inicia la sessió al dispositiu amb {accountName} i torna-ho a provar",
-  "purchaseErrorNetworkError": "La connexió de xarxa és inestable. Comproveu l'estat de la connexió i torneu-ho a provar.",
+  "purchaseErrorNetworkError": "La connexió de xarxa és inestable. Comprova la connexió i torna-ho a provar, si us plau.",
   "purchaseErrorInvalidCredentialsError": "No s'ha pogut completar la compra. Espereu una estona i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Actualment no es pot realitzar la compra. Espereu un moment i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "La informació de compra ja està sent utilitzada per un altre usuari. Si us plau, comproveu el {accountName} que ha iniciat sessió al dispositiu.",

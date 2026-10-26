@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "വാങ്ങൽ ഇതിനകം പൂർത്തിയായി, അല്ലെങ്കിൽ വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവിന്റെ അക്കൗണ്ടിൽ ഉപയോഗിക്കുന്നുണ്ട്. ദയവായി {accountName} അക്കൗണ്ട് പരിശോധിക്കൂ",
   "purchaseErrorInvalidReceiptError": "വാങ്ങൽ വിവരങ്ങൾ സാധുവല്ല. വാങ്ങലിന്റെ വിശദാംശങ്ങൾ പരിശോധിക്കൂ",
   "purchaseErrorMissingReceiptFileError": "വാങ്ങിയയാളുടെ വിവരങ്ങൾ കണ്ടെത്താനായില്ല. ഉപകരണത്തിൽ {accountName} അക്കൗണ്ട് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്ത ശേഷം വീണ്ടും ശ്രമിക്കൂ",
-  "purchaseErrorNetworkError": "ശൃംഖല കണക്ഷൻ അസ്ഥിരമാണ്. കണക്ഷൻ സ്ഥിതി പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
+  "purchaseErrorNetworkError": "നെറ്റ്‌വർക്ക് കണക്ഷൻ സ്ഥിരമല്ല. ദയവായി കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കൂ.",
   "purchaseErrorInvalidCredentialsError": "വാങ്ങൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പരിഹാരമാകുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ഇപ്പോൾ വാങ്ങാൻ കഴിയുന്നില്ല. കുറച്ച് സമയം കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കുന്നില്ലെങ്കിൽ സെറ്റിംഗ്സ് > ബന്ധപ്പെടുക വഴി ഞങ്ങളെ ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവ് ഉപയോഗിച്ചിരിക്കുന്നു. ഉപകരണത്തിൽ ലോഗിൻ ചെയ്തിരിക്കുന്ന {accountName} പരിശോധിക്കുക",

@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Худалдан авалт аль хэдийн хийгдсэн эсвэл худалдан авалтын мэдээлэл өөр хэрэглэгчийн бүртгэлд ашиглагдаж байна. {accountName} бүртгэлийг шалгана уу",
   "purchaseErrorInvalidReceiptError": "Худалдан авалтын мэдээлэл хүчингүй байна. Худалдан авалтын мэдээллээ шалгана уу",
   "purchaseErrorMissingReceiptFileError": "Худалдан авагчийн мэдээлэл олдсонгүй. Төхөөрөмждөө {accountName} бүртгэлээр нэвтэрч, дахин оролдоно уу",
-  "purchaseErrorNetworkError": "Сүлжээний байдал тогтворгүй байна. Холболтын байдлыг шалгаад дахин оролдоно уу.",
+  "purchaseErrorNetworkError": "Сүлжээний холболт тогтворгүй байна. Холболтоо шалгаад дахин оролдоно уу.",
   "purchaseErrorInvalidCredentialsError": "Худалдан авалт амжилтгүй болсон. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандалт-аар холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Одоогоор худалдаж авах боломжгүй байна. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв асуудал шийдэгдэхгүй бол Тохиргоо > Хариуцлага хэсгээр холбогдоно уу. Дэлгэрэнгүй мэдээлэл: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Худалдан авалтын мэдээлэл өөр хэрэглэгчээр ашиглагдаж байна. Төхөөрөмжид нэвтэрсэн {accountName}-г шалгана уу",

@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "이미 구매했거나 구매 정보가 다른 사용자 계정에서 사용 중이에요. {accountName} 계정을 확인해 주세요",
   "purchaseErrorInvalidReceiptError": "구매 정보가 유효하지 않아요. 구매 내역을 확인해 주세요",
   "purchaseErrorMissingReceiptFileError": "구매자 정보를 찾을 수 없어요. 기기에서 {accountName} 계정으로 로그인한 뒤 다시 시도해 주세요",
-  "purchaseErrorNetworkError": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 다시 시도해 주세요.",
+  "purchaseErrorNetworkError": "네트워크 연결이 불안정해요. 연결 상태를 확인한 뒤 다시 시도해 주세요.",
   "purchaseErrorInvalidCredentialsError": "구매에 실패했습니다. 시간을 두고 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기를 통해 문의해 주세요. 세부 사항: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "현재 구매할 수 없습니다. 시간을 두고 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의를 통해 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "구매 정보가 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",

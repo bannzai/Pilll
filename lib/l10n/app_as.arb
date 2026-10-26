@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "ইতিমধ্যে ক্ৰয় কৰা হৈছে, অথবা ক্ৰয়ৰ তথ্য আন এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। অনুগ্ৰহ কৰি {accountName} একাউণ্টটো পৰীক্ষা কৰক",
   "purchaseErrorInvalidReceiptError": "ক্ৰয়ৰ তথ্য বৈধ নহয়। অনুগ্ৰহ কৰি ক্ৰয়ৰ তথ্য পৰীক্ষা কৰক",
   "purchaseErrorMissingReceiptFileError": "ক্ৰেতাৰ তথ্য পোৱা নগ’ল। অনুগ্ৰহ কৰি আপোনাৰ ডিভাইচত {accountName} ব্যৱহাৰ কৰি ছাইন ইন কৰক আৰু পুনৰ চেষ্টা কৰক",
-  "purchaseErrorNetworkError": "নেটৱৰ্কৰ অৱস্থা অস্থিৰ। সংযোগৰ পৰিস্থিতি পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
+  "purchaseErrorNetworkError": "নেটৱৰ্ক সংযোগ অস্থিৰ হৈ আছে। অনুগ্ৰহ কৰি সংযোগ পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
   "purchaseErrorInvalidCredentialsError": "ক্ৰয় বিফল হৈছে। কিছু সময় পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগ ত যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "বৰ্তমান ক্ৰয় কৰিব নোৱাৰি। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। যদি সমস্যাৰ সমাধান নহয় তেন্তে ছেটিংছ > যোগাযোগ ৰ জৰিয়তে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয় তথ্য অন্য এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰিছে। ডিভাইচত লগ ইন থকা {accountName} পৰীক্ষা কৰক।",

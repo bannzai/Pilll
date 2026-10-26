@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "ဝယ်ယူပြီးသား ဖြစ်သည် သို့မဟုတ် ဝယ်ယူမှုအချက်အလက်ကို အခြားအသုံးပြုသူအကောင့်တွင် အသုံးပြုနေပါတယ်။ ကျေးဇူးပြု၍ {accountName} အကောင့်ကို စစ်ဆေးပါ",
   "purchaseErrorInvalidReceiptError": "ဝယ်ယူမှုအချက်အလက် မမှန်ကန်ပါ။ ဝယ်ယူမှုအသေးစိတ်ကို ကျေးဇူးပြု၍ စစ်ဆေးပါ",
   "purchaseErrorMissingReceiptFileError": "ဝယ်ယူသူ၏ အချက်အလက်ကို မတွေ့ပါ။ စက်တွင် {accountName} အကောင့်ဖြင့် ဝင်ရောက်ပြီး ထပ်မံကြိုးစားကြည့်ပါ",
-  "purchaseErrorNetworkError": "အင်တာနက်ဆက်သွယ်မှုမတည်မြဲဖြစ်နေပါသည်။ ဆက်သွယ်မှုအခြေအနေကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားပါ။",
+  "purchaseErrorNetworkError": "ကွန်ရက်ချိတ်ဆက်မှု မတည်ငြိမ်ပါ။ ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။",
   "purchaseErrorInvalidCredentialsError": "ဝယ်ယူမှုမအောင်မြင်ပါ။ ခဏစောင့်ပြီးနောက်ပြန်လုပ်ကြည့်ပါ။ မဖြေရှင်းနိုင်ပါက ဆက်တင် > မေးမြန်းမှု မှတဆင့်ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "လောလောဆယ် ဝယ်ယူ၍ မရပါ။ ခဏစောင့်၍ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ မပြေလျှင် ဆက်တင် > ဆက်သွယ်မေးမြန်းရန် မှ ဆက်သွယ်ပေးပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ဝယ်ယူမှုအချက်အလက်သည် အခြားအသုံးပြုသူဖြင့် အသုံးပြုထားပါသည်။ စက်ပစ္စည်းတွင် လော့အင်ဝင်ထားသော {accountName} ကို စစ်ဆေးကြည့်ပါ။",

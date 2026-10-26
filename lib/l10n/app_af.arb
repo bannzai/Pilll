@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Reeds gekoop, of die aankoopbesonderhede word deur ’n ander gebruiker gebruik. Gaan asseblief {accountName} na",
   "purchaseErrorInvalidReceiptError": "Die aankoopinligting is ongeldig. Kyk asseblief jou aankoopbesonderhede na",
   "purchaseErrorMissingReceiptFileError": "Die koper se inligting is nie gevind nie. Meld asseblief op jou toestel met {accountName} aan en probeer weer",
-  "purchaseErrorNetworkError": "Die netwerkverbinding is onstabiel. Kontroleer asseblief jou internetverbinding en probeer weer.",
+  "purchaseErrorNetworkError": "Die netwerkverbinding is onstabiel. Gaan asseblief jou verbinding na en probeer weer.",
   "purchaseErrorInvalidCredentialsError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. As dit nie opgelos word nie, gaan na Instellings > Kontak om ondersteuning te kry. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Aankoop is tans nie moontlik nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Die aankoopinligting word reeds deur 'n ander gebruiker gebruik. Kontroleer asseblief die {accountName} wat op hierdie toestel aangemeld is.",

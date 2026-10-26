@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Сатып алуу буга чейин жасалган же сатып алуу маалыматы башка колдонуучунун аккаунтунда колдонулуп жатат. {accountName} аккаунтун текшериңиз",
   "purchaseErrorInvalidReceiptError": "Сатып алуу маалыматы жараксыз. Сураныч, сатып алуу маалыматын текшериңиз",
   "purchaseErrorMissingReceiptFileError": "Сатып алуучунун маалыматы табылган жок. Түзмөгүңүзгө {accountName} аккаунту менен кирип, кайра аракет кылып көрүңүз",
-  "purchaseErrorNetworkError": "Интернет байланышы туруксуз. Байланышты текшерип, кайра аракет кылыңыз.",
+  "purchaseErrorNetworkError": "Тармак байланышы туруктуу эмес. Сураныч, байланышты текшерип, кайра аракет кылыңыз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алуу ийгиликсиз болду. Бир аз убакыт өткөндөн кийин кайрадан аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Байланышуу аркылуу байланышыңыз. Майда-чүйдөлөр: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбей турган болсо Жөндөөлөр > Байланышуу аркылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматы башка колдонуучу тарабынан колдонулган. Түзмөккө кирген {accountName} текшериңиз",

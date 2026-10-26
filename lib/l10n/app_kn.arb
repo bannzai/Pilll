@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "ಖರೀದಿ ಈಗಾಗಲೇ ಆಗಿದೆ ಅಥವಾ ಖರೀದಿಯ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರ ಖಾತೆಯಲ್ಲಿ ಬಳಸಲಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು {accountName} ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorInvalidReceiptError": "ಖರೀದಿ ಮಾಹಿತಿ ಮಾನ್ಯವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಖರೀದಿಯ ವಿವರಗಳನ್ನು ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorMissingReceiptFileError": "ಖರೀದಿದಾರರ ಮಾಹಿತಿ ಕಂಡುಬಂದಿಲ್ಲ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ {accountName} ಖಾತೆಯಿಂದ ಸೈನ್ ಇನ್ ಮಾಡಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
-  "purchaseErrorNetworkError": "ನೆಟ್‌ವರ್ಕ್ ಸ್ಥಿತಿ ಅಸ್ಥಿರವಾಗಿದೆ. ಸಂಪರ್ಕ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "purchaseErrorNetworkError": "ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕ ಸ್ಥಿರವಾಗಿಲ್ಲ. ದಯವಿಟ್ಟು ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorInvalidCredentialsError": "ಖರೀದಿ ವಿಫಲವಾಗಿದೆ. ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಪರಿಹಾರವಾಗದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ಪ್ರಸ್ತುತ ಖರೀದಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ಸಾಧನದಲ್ಲಿ ಲಾಗಿನ್ ಆಗಿರುವ {accountName} ಅನ್ನು ಪರಿಶೀಲಿಸಿ",

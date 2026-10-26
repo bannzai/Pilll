@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Kaupin hafa þegar farið fram eða kaupupplýsingarnar eru notaðar á öðrum notandareikningi. Athugaðu reikninginn {accountName}",
   "purchaseErrorInvalidReceiptError": "Upplýsingar um kaupin eru ógildar. Vinsamlegast athugaðu kaupupplýsingarnar",
   "purchaseErrorMissingReceiptFileError": "Upplýsingar um kaupandann fundust ekki. Skráðu þig inn í tækið með {accountName} og reyndu aftur",
-  "purchaseErrorNetworkError": "Nettenging er óstöðug. Vinsamlegast athugaðu tengingu þína og reyndu aftur.",
+  "purchaseErrorNetworkError": "Nettengingin er óstöðug. Athugaðu tenginguna og reyndu aftur.",
   "purchaseErrorInvalidCredentialsError": "Kaup mistókst. Vinsamlegast reyndu aftur síðar. Ef vandinn heldur áfram, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ekki er hægt að kaupa núna. Vinsamlegast reyndu aftur síðar. Ef vandamálið leysist ekki, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Kaupupplýsingarnar eru þegar í notkun hjá öðrum notanda. Vinsamlegast athugaðu {accountName} sem er innskráður á tækinu.",

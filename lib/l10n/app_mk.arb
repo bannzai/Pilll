@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Купувањето е веќе извршено или податоците за купувањето се користат на друга корисничка сметка. Ве молиме, проверете ја сметката {accountName}",
   "purchaseErrorInvalidReceiptError": "Податоците за купувањето не се валидни. Ве молиме проверете ги податоците за купувањето",
   "purchaseErrorMissingReceiptFileError": "Информациите за купувачот не се пронајдени. Ве молиме, најавете се на уредот со {accountName} и обидете се повторно",
-  "purchaseErrorNetworkError": "Мрежната врска е нестабилна. Проверете ја интернет врската и обидете се повторно.",
+  "purchaseErrorNetworkError": "Мрежната врска е нестабилна. Ве молиме, проверете ја врската и обидете се повторно.",
   "purchaseErrorInvalidCredentialsError": "Купувањето не успеа. Обидете се повторно подоцна. Ако проблемот се задржи, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Моментално не можете да извршите купување. Ве молиме обидете се повторно подоцна. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Информациите за купување веќе се користат од друг корисник. Проверете го {accountName} кој е најавен на уредот.",

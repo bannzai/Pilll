@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "La compra ya se realizó o sus datos se están usando en otra cuenta. Revisa la cuenta {accountName}",
   "purchaseErrorInvalidReceiptError": "La información de compra no es válida. Comprueba los datos de tu compra",
   "purchaseErrorMissingReceiptFileError": "No se encontró la información de la compra. Inicia sesión en tu dispositivo con {accountName} y vuelve a intentarlo",
-  "purchaseErrorNetworkError": "La conexión de red es inestable. Por favor, verifique su conexión e inténtelo de nuevo.",
+  "purchaseErrorNetworkError": "La conexión de red es inestable. Comprueba tu conexión y vuelve a intentarlo.",
   "purchaseErrorInvalidCredentialsError": "La compra ha fallado. Espere un momento e inténtelo de nuevo. Si el problema persiste, póngase en contacto con nosotros desde Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "No se puede realizar la compra en este momento. Por favor, inténtelo de nuevo más tarde. Si el problema persiste, póngase en contacto con nosotros a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "La información de compra ya está siendo utilizada por otro usuario. Verifique la cuenta {accountName} conectada en el dispositivo",

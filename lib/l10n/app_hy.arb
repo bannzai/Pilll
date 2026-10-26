@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Գնումն արդեն կատարվել է, կամ գնման տվյալներն օգտագործվում են մեկ այլ օգտատիրոջ հաշվում։ Խնդրում ենք ստուգել {accountName} հաշիվը",
   "purchaseErrorInvalidReceiptError": "Գնման տվյալները վավեր չեն։ Խնդրում ենք ստուգել Ձեր գնման տվյալները",
   "purchaseErrorMissingReceiptFileError": "Գնորդի տվյալները չեն գտնվել։ Խնդրում ենք սարքում մուտք գործել {accountName} հաշվով և կրկին փորձել",
-  "purchaseErrorNetworkError": "Ցանցի կապակցությունը անկայուն է։ Ստուգեք ձեր ինտերնետ կապակցությունը և նորից փորձեք։",
+  "purchaseErrorNetworkError": "Ցանցային կապն անկայուն է։ Խնդրում ենք ստուգել Ձեր կապը և կրկին փորձել։",
   "purchaseErrorInvalidCredentialsError": "Գնումը ձախողվեց։ Խնդրում ենք մի փոքր սպասել և կրկին փորձել։ Եթե խնդիրը չի լուծվում, ապա Կարգավորումներ > Հարցումներ բաժնից կապվեք մեզ հետ։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ներկայումս գնումը հնարավոր չէ: Խնդրում ենք փորձել մի փոքր ուշ: Եթե խնդիրը չլուծվի, խնդրում ենք դիմել Կարգավորումներ > Հարցումներ բաժնում: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնման տվյալները օգտագործվում են այլ օգտատիրոջ կողմից: Խնդրում ենք հաստատել սարքում մուտք գործած {accountName}-ը:",

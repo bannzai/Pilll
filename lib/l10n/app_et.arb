@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Ost on juba tehtud või ostuandmeid kasutatakse teisel kasutajakontol. Palun kontrolli kontot {accountName}",
   "purchaseErrorInvalidReceiptError": "Ostuteave ei ole kehtiv. Palun kontrolli oma ostuandmeid",
   "purchaseErrorMissingReceiptFileError": "Ostja andmeid ei leitud. Logi seadmes sisse kontoga {accountName} ja proovi uuesti",
-  "purchaseErrorNetworkError": "Võrguühendus on ebastabiilne. Palun kontrollige oma internetiühendust ja proovige uuesti.",
+  "purchaseErrorNetworkError": "Võrguühendus on ebastabiilne. Kontrolli ühendust ja proovi uuesti.",
   "purchaseErrorInvalidCredentialsError": "Ost ebaõnnestus. Palun proovige mõne aja pärast uuesti. Kui probleem ei lahene, võtke ühendust läbi Seaded > Pöördumine. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ostumine pole praegu võimalik. Palun oodake ja proovige hiljem uuesti. Kui probleem püsib, pöörduge meie poole: Seaded > Kontakt. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostuinfo on juba kasutusel teise kasutaja poolt. Palun kontrollige seadmesse sisse logitud {accountName}.",

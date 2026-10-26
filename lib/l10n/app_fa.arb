@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "خرید قبلاً انجام شده است یا اطلاعات خرید در حساب کاربری دیگری استفاده می‌شود. لطفاً حساب {accountName} را بررسی کنید",
   "purchaseErrorInvalidReceiptError": "اطلاعات خرید معتبر نیست. لطفاً اطلاعات خرید را بررسی کنید",
   "purchaseErrorMissingReceiptFileError": "اطلاعات خریدار پیدا نشد. لطفاً در دستگاه خود با حساب {accountName} وارد شوید و دوباره تلاش کنید",
-  "purchaseErrorNetworkError": "وضعیت شبکه ناپایدار است. لطفاً وضعیت اتصال خود را بررسی کرده و مجدداً تلاش کنید.",
+  "purchaseErrorNetworkError": "اتصال شبکه پایدار نیست. لطفاً اتصال خود را بررسی کنید و دوباره تلاش کنید.",
   "purchaseErrorInvalidCredentialsError": "خرید با شکست مواجه شد. لطفاً کمی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "در حال حاضر امکان خرید وجود ندارد. لطفاً پس از مدتی دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > پشتیبانی با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "اطلاعات خرید توسط کاربر دیگری استفاده شده است. لطفاً {accountName} وارد شده در دستگاه را بررسی کنید",

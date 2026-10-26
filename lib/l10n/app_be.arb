@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Купля ўжо зроблена, або звесткі пра яе выкарыстоўваюцца ў іншым уліковым запісе. Калі ласка, праверце ўліковы запіс {accountName}",
   "purchaseErrorInvalidReceiptError": "Інфармацыя пра пакупку несапраўдная. Калі ласка, праверце звесткі пра пакупку",
   "purchaseErrorMissingReceiptFileError": "Звесткі пра пакупніка не знойдзены. Калі ласка, увайдзіце на прыладзе праз {accountName} і паспрабуйце яшчэ раз",
-  "purchaseErrorNetworkError": "Нестабільнае сеткавае злучэнне. Праверце падключэнне і паспрабуйце зноў.",
+  "purchaseErrorNetworkError": "Злучэнне з сеткай нестабільнае. Калі ласка, праверце злучэнне і паспрабуйце яшчэ раз.",
   "purchaseErrorInvalidCredentialsError": "Не ўдалося здзейсніць пакупку. Паспрабуйце зноў праз некаторы час. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "У дадзены момант пакупка немагчыма. Калі ласка, пачакайце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Інфармацыя аб покупцы ўжо выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}, які залагінены на прыладзе",

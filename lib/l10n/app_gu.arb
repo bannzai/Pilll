@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "ખરીદી પહેલેથી થઈ ગઈ છે અથવા ખરીદીની માહિતી બીજા વપરાશકર્તાના ખાતામાં વપરાઈ રહી છે. કૃપા કરીને {accountName} ખાતું તપાસો",
   "purchaseErrorInvalidReceiptError": "ખરીદીની માહિતી માન્ય નથી. કૃપા કરીને તમારી ખરીદીની વિગતો તપાસો",
   "purchaseErrorMissingReceiptFileError": "ખરીદનારની માહિતી મળી નથી. કૃપા કરીને તમારા ઉપકરણમાં {accountName} વડે સાઇન ઇન કરીને ફરી પ્રયાસ કરો",
-  "purchaseErrorNetworkError": "નેટવર્ક કનેક્શન અસ્થિર છે. કૃપા કરીને તમારા કનેક્શનની સ્થિતિ તપાસીને ફરીથી પ્રયાસ કરો.",
+  "purchaseErrorNetworkError": "નેટવર્ક કનેક્શન સ્થિર નથી. કૃપા કરીને તમારું કનેક્શન તપાસીને ફરી પ્રયાસ કરો.",
   "purchaseErrorInvalidCredentialsError": "પરચેઝ નિષ્ફળ થયો. કૃપા કરીને થોડો સમય રાહ જોયા પછી ફરીથી પ્રયાસ કરો. જો સમસ્યા ઉકેલાતી નથી તો સેટિંગ્સ > સંપર્ક થી સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "હાલમાં ખરીદી કરી શકાતી નથી. કૃપા કરીને થોડા સમય બાદ ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > સંપર્ક થી સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ખરીદીની માહિતી અન્ય વપરાશકર્તા દ્વારા ઉપયોગમાં લેવાઈ રહી છે. ઉપકરણમાં લૉગિન કરેલું {accountName} ચકાસો.",

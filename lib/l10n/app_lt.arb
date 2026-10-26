@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Pirkimas jau atliktas arba jo duomenys naudojami kitoje naudotojo paskyroje. Patikrinkite paskyrą {accountName}",
   "purchaseErrorInvalidReceiptError": "Pirkimo duomenys negalioja. Patikrinkite savo pirkimo duomenis",
   "purchaseErrorMissingReceiptFileError": "Pirkėjo informacija nerasta. Prisijunkite prie įrenginio naudodami {accountName} paskyrą ir bandykite dar kartą",
-  "purchaseErrorNetworkError": "Tinklo būklė nestabili. Patikrinkite ryšio būklę ir bandykite dar kartą.",
+  "purchaseErrorNetworkError": "Tinklo ryšys nestabilus. Patikrinkite ryšį ir bandykite dar kartą.",
   "purchaseErrorInvalidCredentialsError": "Pirkimas nepavyko. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite per Nustatymai > Kontaktai. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Šiuo metu negalime apdoroti pirkimo. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kontaktai. Išsamiau: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkimo informacija jau naudojama kito vartotojo. Patikrinkite įrenginyje prisijungusį {accountName}.",

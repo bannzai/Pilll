@@ -296,7 +296,7 @@
   "purchaseErrorReceiptAlreadyInUseError": "Куповина је већ обављена или се подаци о њој користе на другом корисничком налогу. Молимо Вас, проверите налог {accountName}",
   "purchaseErrorInvalidReceiptError": "Подаци о куповини нису важећи. Молимо Вас да проверите податке о куповини",
   "purchaseErrorMissingReceiptFileError": "Подаци о купцу нису пронађени. Молимо Вас, пријавите се на уређају помоћу налога {accountName} и покушајте поново",
-  "purchaseErrorNetworkError": "Stanje mreže je nestabilno. Molimo proverite vašu internet konekciju i pokušajte ponovo.",
+  "purchaseErrorNetworkError": "Мрежна веза је нестабилна. Молимо Вас, проверите везу и покушајте поново.",
   "purchaseErrorInvalidCredentialsError": "Kupovina je neuspešna. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne reši, molimo kontaktirajte nas preko Podešavanja > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Trenutno nije moguće izvršiti kupovinu. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne reši, obratite nam se preko Podešavanja > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Подаци о куповини се већ користе од стране другог корисника. Молимо проверите {accountName} који је пријављен на уређај.",
