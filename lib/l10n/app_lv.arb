@@ -426,7 +426,7 @@
   "pillReminderChanged": "Atgādinājumi par tabletes lietošanu iestatīti uz {value}",
   "silentModeNotificationDescription": "Pat ja ir ieslēgts koncentrēšanās režīms vai jūsu ierīcei ir izslēgta skaņa, paziņojumi tiek rādīti bloķēšanas ekrānā un atskan skaņa.",
   "enableNotificationInSilentMode": "Saņemiet paziņojumus arī klusuma režīmā",
-  "enableNotificationInSilentModeSetting": "Paziņojumi klusajā režīmā",
+  "enableNotificationInSilentModeSetting": "Paziņojumi arī klusuma režīmā",
   "criticalAlertVolume": "Skaļums",
   "logout": "Iziet",
   "goToInitialSettingAndReloginIfNeededMessage": "Atgriezīsimies pie sākotnējām iestatījumiem. Ja nepieciešama pierakstīšanās, lūdzu, izmantojiet sākotnējo iestatījumu apakšdaļu.",

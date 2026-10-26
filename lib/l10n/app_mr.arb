@@ -426,7 +426,7 @@
   "pillReminderChanged": "गोळी घेण्याच्या सूचना {value} वर सेट केल्या आहेत",
   "silentModeNotificationDescription": "फोकस मोड सुरू असला किंवा तुमचे डिव्हाइस सायलेंटवर असले तरी सूचना लॉक स्क्रीनवर दिसतील आणि आवाज वाजेल.",
   "enableNotificationInSilentMode": "सायलेंट मोडमध्येही सूचना मिळवा",
-  "enableNotificationInSilentModeSetting": "साइलेंट मोडमध्ये सूचना सेटिंग",
+  "enableNotificationInSilentModeSetting": "सायलेंट मोडमध्येही सूचना",
   "criticalAlertVolume": "आवाजाचे प्रमाण",
   "logout": "लॉग आउट",
   "goToInitialSettingAndReloginIfNeededMessage": "प्रारंभिक सेटअपवर परत जाईल. लॉग इन करणे आवश्यक असल्यास कृपया प्रारंभिक सेटअपच्या खालच्या भागातून करा",

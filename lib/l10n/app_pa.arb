@@ -426,7 +426,7 @@
   "pillReminderChanged": "ਗੋਲੀ ਲੈਣ ਦੀਆਂ ਸੂਚਨਾਵਾਂ {value} 'ਤੇ ਸੈੱਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ",
   "silentModeNotificationDescription": "ਫੋਕਸ ਮੋਡ ਚਾਲੂ ਹੋਣ ਜਾਂ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਸਾਈਲੈਂਟ ਹੋਣ ’ਤੇ ਵੀ ਸੂਚਨਾਵਾਂ ਲੌਕ ਸਕ੍ਰੀਨ ’ਤੇ ਦਿਖਾਈ ਦੇਣਗੀਆਂ ਅਤੇ ਆਵਾਜ਼ ਵੱਜੇਗੀ।",
   "enableNotificationInSilentMode": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ",
-  "enableNotificationInSilentModeSetting": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗ",
+  "enableNotificationInSilentModeSetting": "ਸਾਈਲੈਂਟ ਮੋਡ ਵਿੱਚ ਵੀ ਸੂਚਨਾਵਾਂ",
   "criticalAlertVolume": "آواز",
   "logout": "ਲਾਗ ਆਉਟ",
   "goToInitialSettingAndReloginIfNeededMessage": "ابتدائی سیٹنگز وچ واپس جا رہے آں۔ جے لاگ ان کرنا ضروری ہے تاں ابتدائی سیٹنگز دے تھلے توں کرو۔",

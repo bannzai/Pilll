@@ -426,7 +426,7 @@
   "pillReminderChanged": "የክኒን ማስታወሻ ወደ {value} ተቀይሯል",
   "silentModeNotificationDescription": "የትኩረት ሁኔታ በርቶ ወይም መሣሪያዎ ድምፅ አልባ ሆኖ ቢሆንም፣ ማሳወቂያዎች በመቆለፊያ ማያ ገጹ ላይ ይታያሉ እና ድምፅ ይሰማል።",
   "enableNotificationInSilentMode": "በዝምታ ሁነታም ማሳወቂያዎችን ይቀበሉ",
-  "enableNotificationInSilentModeSetting": "በጸጥታ ሁኔታም ማሳወቂያ ቅንብር",
+  "enableNotificationInSilentModeSetting": "በዝምታ ሁነታም ማሳወቂያዎች",
   "criticalAlertVolume": "የድምፅ መጠን",
   "logout": "መውጣት",
   "goToInitialSettingAndReloginIfNeededMessage": "ወደ መጀመሪያ ቅንብር እንመለሳለን። መግቢያ ካስፈለገ እባክዎ ከመጀመሪያ ቅንብር ከታች ያድርጉት።",

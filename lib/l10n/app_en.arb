@@ -426,7 +426,7 @@
   "pillReminderChanged": "Pill reminders set to {value}",
   "silentModeNotificationDescription": "Even when Focus is on or your device is muted, notifications appear on the lock screen and play a sound.",
   "enableNotificationInSilentMode": "Get notifications even in silent mode",
-  "enableNotificationInSilentModeSetting": "Enable Notifications in Silent Mode",
+  "enableNotificationInSilentModeSetting": "Notifications even in silent mode",
   "criticalAlertVolume": "Volume",
   "logout": "Log Out",
   "goToInitialSettingAndReloginIfNeededMessage": "Returning to initial setup. If login is required, please use the option at the bottom of the initial setup screen.",

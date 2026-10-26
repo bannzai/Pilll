@@ -426,7 +426,7 @@
   "pillReminderChanged": "ຕັ້ງຄ່າການແຈ້ງເຕືອນໃຫ້ກິນຢາເປັນ {value} ແລ້ວ",
   "silentModeNotificationDescription": "ແມ່ນແຕ່ເມື່ອເປີດໂໝດເນັ້ນວຽກ ຫຼື ປິດສຽງອຸປະກອນ, ການແຈ້ງເຕືອນກໍຈະສະແດງຢູ່ໜ້າຈໍລັອກ ແລະ ມີສຽງດັງຂຶ້ນ.",
   "enableNotificationInSilentMode": "ຮັບການແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
-  "enableNotificationInSilentModeSetting": "ການແຈ້ງເຕືອນໃນໂໝດງຽບ",
+  "enableNotificationInSilentModeSetting": "ແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
   "criticalAlertVolume": "ລະດັບສຽງ",
   "logout": "ອອກຈາກລະບົບ",
   "goToInitialSettingAndReloginIfNeededMessage": "ກັບໄປຫາການຕັ້ງຄ່າເບື້ອງຕົ້ນແລ້ວ. ຫາກຈຳເປັນຕ້ອງເຂົ້າສູ່ລະບົບ, ກະລຸນາເຂົ້າສູ່ລະບົບຈາກພາກລຸ່ມຂອງການຕັ້ງຄ່າເບື້ອງຕົ້ນ",

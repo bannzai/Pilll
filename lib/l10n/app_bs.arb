@@ -426,7 +426,7 @@
   "pillReminderChanged": "Podsjetnici za uzimanje pilule postavljeni su na {value}",
   "silentModeNotificationDescription": "Čak i kada je način fokusiranja uključen ili je Vaš uređaj utišan, obavijesti se prikazuju na zaključanom ekranu i oglašava se zvuk.",
   "enableNotificationInSilentMode": "Primajte obavještenja i u tihom režimu",
-  "enableNotificationInSilentModeSetting": "Obavještenja i u tihom načinu",
+  "enableNotificationInSilentModeSetting": "Obavijesti i u tihom načinu rada",
   "criticalAlertVolume": "Glasnoća",
   "logout": "Odjavi se",
   "goToInitialSettingAndReloginIfNeededMessage": "Vraćanje na početne postavke. Ako je potrebna prijava, molimo koristite opciju na dnu početnih postavki.",

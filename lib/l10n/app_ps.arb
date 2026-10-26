@@ -426,7 +426,7 @@
   "pillReminderChanged": "د ګولۍ اخیستو خبرتیاوې پر {value} وټاکل شوې",
   "silentModeNotificationDescription": "که د تمرکز حالت فعال وي یا مو وسیله غلې وي، خبرتیاوې بیا هم پر تړلې پرده ښکاري او غږ یې اورېدل کېږي.",
   "enableNotificationInSilentMode": "په چوپ حالت کې هم خبرتیاوې ترلاسه کړئ",
-  "enableNotificationInSilentModeSetting": "د خاموش حالت کې د خبرتیاوو فعالول",
+  "enableNotificationInSilentModeSetting": "په چوپ حالت کې هم خبرتیاوې",
   "criticalAlertVolume": "غږ",
   "logout": "ننوتل ودرول",
   "goToInitialSettingAndReloginIfNeededMessage": "دا لومړنۍ تنظیماتو ته بیرته ځي. که د ننوتلو اړتیا وي، مهرباني وکړئ د لومړنیو تنظیماتو ښکته برخې څخه دا وکړئ.",

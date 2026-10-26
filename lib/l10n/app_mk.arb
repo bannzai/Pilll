@@ -426,7 +426,7 @@
   "pillReminderChanged": "Известувањата за земање таблета се поставени на {value}",
   "silentModeNotificationDescription": "Дури и кога е вклучен режимот за фокусирање или уредот Ви е без звук, известувањата се прикажуваат на заклучениот екран и се слуша звук.",
   "enableNotificationInSilentMode": "Добивајте известувања и во тивок режим",
-  "enableNotificationInSilentModeSetting": "Известувања во тивок режим",
+  "enableNotificationInSilentModeSetting": "Известувања и во тивок режим",
   "criticalAlertVolume": "Јачина на звук",
   "logout": "одјави се",
   "goToInitialSettingAndReloginIfNeededMessage": "Враќање на почетното поставување. Ако е потребна најава, ве молиме најавете се од долниот дел на почетното поставување.",

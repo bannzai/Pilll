@@ -426,7 +426,7 @@
   "pillReminderChanged": "ការរំលឹកឱ្យលេបថ្នាំគ្រាប់ត្រូវបានកំណត់ជា {value}",
   "silentModeNotificationDescription": "ទោះបីជាបើកមុខងារផ្តោតអារម្មណ៍ ឬឧបករណ៍របស់អ្នកស្ថិតក្នុងរបៀបស្ងាត់ក៏ដោយ ការជូនដំណឹងនឹងបង្ហាញលើអេក្រង់ចាក់សោ ហើយមានសំឡេងរោទិ៍។",
   "enableNotificationInSilentMode": "ទទួលបានការជូនដំណឹង ទោះនៅក្នុងរបៀបស្ងាត់ក៏ដោយ",
-  "enableNotificationInSilentModeSetting": "ការជូនដំណឹងក្នុងរបៀបស្ងៀម",
+  "enableNotificationInSilentModeSetting": "ការជូនដំណឹងសូម្បីតែក្នុងរបៀបស្ងាត់",
   "criticalAlertVolume": "សំឡេង",
   "logout": "ចេញពីគណនី",
   "goToInitialSettingAndReloginIfNeededMessage": "ត្រលប់ទៅការកំណត់ដំបូងវិញ។ ប្រសិនបើត្រូវការចូលប្រព័ន្ធ សូមធ្វើពីផ្នែកខាងក្រោមនៃការកំណត់ដំបូង",

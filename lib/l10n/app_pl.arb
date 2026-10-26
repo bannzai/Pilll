@@ -426,7 +426,7 @@
   "pillReminderChanged": "Przypomnienia o przyjęciu tabletki ustawiono na {value}",
   "silentModeNotificationDescription": "Nawet gdy tryb skupienia jest włączony lub urządzenie wyciszone, powiadomienia pojawiają się na ekranie blokady i odtwarzają dźwięk.",
   "enableNotificationInSilentMode": "Otrzymuj powiadomienia także w trybie cichym",
-  "enableNotificationInSilentModeSetting": "Powiadomienia w trybie cichym",
+  "enableNotificationInSilentModeSetting": "Powiadomienia także w trybie cichym",
   "criticalAlertVolume": "Głośność",
   "logout": "Wyloguj",
   "goToInitialSettingAndReloginIfNeededMessage": "Powrócisz do ekranu ustawień początkowych. Jeśli wymagane jest logowanie, znajdziesz tę opcję u dołu ekranu ustawień początkowych.",

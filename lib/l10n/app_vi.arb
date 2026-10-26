@@ -426,7 +426,7 @@
   "pillReminderChanged": "Đã đặt lời nhắc uống thuốc thành {value}",
   "silentModeNotificationDescription": "Ngay cả khi chế độ Tập trung đang bật hoặc thiết bị ở chế độ im lặng, thông báo vẫn hiển thị trên màn hình khóa và phát âm thanh.",
   "enableNotificationInSilentMode": "Nhận thông báo ngay cả khi điện thoại ở chế độ im lặng",
-  "enableNotificationInSilentModeSetting": "Thông báo trong chế độ im lặng",
+  "enableNotificationInSilentModeSetting": "Thông báo ngay cả khi ở chế độ im lặng",
   "criticalAlertVolume": "Âm lượng",
   "logout": "Đăng xuất",
   "goToInitialSettingAndReloginIfNeededMessage": "Quay lại thiết lập ban đầu. Nếu cần đăng nhập, vui lòng thực hiện từ phần dưới cùng của màn hình thiết lập ban đầu.",

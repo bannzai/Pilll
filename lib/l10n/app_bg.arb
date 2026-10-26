@@ -426,7 +426,7 @@
   "pillReminderChanged": "Напомнянията за прием на хапчето са зададени на {value}",
   "silentModeNotificationDescription": "Дори когато режимът за фокусиране е включен или устройството ви е заглушено, известията се показват на заключения екран и се възпроизвежда звук.",
   "enableNotificationInSilentMode": "Получавайте известия и в безшумен режим",
-  "enableNotificationInSilentModeSetting": "Уведомления дори в тих режим",
+  "enableNotificationInSilentModeSetting": "Известия и при безшумен режим",
   "criticalAlertVolume": "Сила на звука",
   "logout": "Излизане",
   "goToInitialSettingAndReloginIfNeededMessage": "Връщаме се към първоначалните настройки. Ако е необходимо влизане в профила, моля използвайте опцията в долната част на първоначалните настройки.",

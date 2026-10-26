@@ -426,7 +426,7 @@
   "pillReminderChanged": "تم ضبط إشعارات تناول الحبوب على {value}",
   "silentModeNotificationDescription": "حتى عند تشغيل وضع التركيز أو كتم صوت الجهاز، تظهر الإشعارات على شاشة القفل ويُشغّل صوت التنبيه.",
   "enableNotificationInSilentMode": "تلقي الإشعارات حتى في الوضع الصامت",
-  "enableNotificationInSilentModeSetting": "إعدادات الإشعارات في الوضع الصامت",
+  "enableNotificationInSilentModeSetting": "الإشعارات حتى في الوضع الصامت",
   "criticalAlertVolume": "مستوى الصوت",
   "logout": "تسجيل الخروج",
   "goToInitialSettingAndReloginIfNeededMessage": "سيتم العودة إلى الإعدادات الأولية. إذا كنت بحاجة إلى تسجيل الدخول، يرجى استخدام الخيار الموجود أسفل شاشة الإعدادات الأولية",

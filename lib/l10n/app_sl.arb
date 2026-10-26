@@ -426,7 +426,7 @@
   "pillReminderChanged": "Opomniki za jemanje tabletke so nastavljeni na {value}",
   "silentModeNotificationDescription": "Tudi ko je način osredotočanja vklopljen ali je vaša naprava utišana, se obvestila prikažejo na zaklenjenem zaslonu in oglasi se zvok.",
   "enableNotificationInSilentMode": "Prejemajte obvestila tudi v tihem načinu",
-  "enableNotificationInSilentModeSetting": "Obvestila v tihem načinu",
+  "enableNotificationInSilentModeSetting": "Obvestila tudi v tihem načinu",
   "criticalAlertVolume": "Glasnost",
   "logout": "Odjava",
   "goToInitialSettingAndReloginIfNeededMessage": "Povratek na začetno nastavitev. Če je potrebna prijava, prosim uporabite spodnji del začetne nastavitve.",

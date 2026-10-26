@@ -426,7 +426,7 @@
   "pillReminderChanged": "Tabletka ichish eslatmalari {value} holatiga oʻrnatildi",
   "silentModeNotificationDescription": "Diqqatni jamlash rejimi yoqilgan yoki qurilmangiz ovozsiz holatda boʻlsa ham, bildirishnomalar qulflangan ekranda koʻrinadi va ovoz eshitiladi.",
   "enableNotificationInSilentMode": "Ovozsiz rejimda ham bildirishnomalar oling",
-  "enableNotificationInSilentModeSetting": "Sakin rejimda ham bildirishnoma sozlamalari",
+  "enableNotificationInSilentModeSetting": "Ovozsiz rejimda ham bildirishnomalar",
   "criticalAlertVolume": "Ovoz balandligi",
   "logout": "Chiqish",
   "goToInitialSettingAndReloginIfNeededMessage": "Dastlabki sozlamalarga qaytiladi. Agar tizimga kirish kerak bo'lsa, iltimos dastlabki sozlamalar sahifasining pastki qismidan foydalaning",

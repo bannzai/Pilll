@@ -426,7 +426,7 @@
   "pillReminderChanged": "Pillerimuistutusten asetukseksi vaihdettiin {value}",
   "silentModeNotificationDescription": "Vaikka keskittymistila olisi käytössä tai laitteesi äänettömällä, ilmoitukset näkyvät lukitusnäytöllä ja niistä kuuluu ääni.",
   "enableNotificationInSilentMode": "Saat ilmoituksia myös äänettömässä tilassa",
-  "enableNotificationInSilentModeSetting": "Ilmoitukset hiljaisessa tilassa",
+  "enableNotificationInSilentModeSetting": "Ilmoitukset myös äänettömässä tilassa",
   "criticalAlertVolume": "Äänenvoimakkuus",
   "logout": "Kirjaudu ulos",
   "goToInitialSettingAndReloginIfNeededMessage": "Palaat alkuasetuksiin. Jos kirjautuminen on tarpeen, kirjaudu sisään alkuasetusten alaosasta.",

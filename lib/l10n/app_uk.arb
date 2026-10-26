@@ -426,7 +426,7 @@
   "pillReminderChanged": "Нагадування про прийом пігулки встановлено на {value}",
   "silentModeNotificationDescription": "Навіть коли ввімкнено режим зосередження або звук пристрою вимкнено, сповіщення з’являються на екрані блокування та відтворюється звук.",
   "enableNotificationInSilentMode": "Отримуйте сповіщення навіть у беззвучному режимі",
-  "enableNotificationInSilentModeSetting": "Сповіщення в беззвучному режимі",
+  "enableNotificationInSilentModeSetting": "Сповіщення навіть у беззвучному режимі",
   "criticalAlertVolume": "Гучність",
   "logout": "Вийти",
   "goToInitialSettingAndReloginIfNeededMessage": "Повертаємося до початкових налаштувань. Якщо потрібен вхід в систему, будь ласка, скористайтеся опцією внизу екрана початкових налаштувань",

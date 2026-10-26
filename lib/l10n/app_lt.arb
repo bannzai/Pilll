@@ -426,7 +426,7 @@
   "pillReminderChanged": "Priminimai išgerti piliulę nustatyti į {value}",
   "silentModeNotificationDescription": "Net kai įjungtas susikaupimo režimas arba jūsų įrenginys nutildytas, pranešimai rodomi užrakinimo ekrane ir pasigirsta garsas.",
   "enableNotificationInSilentMode": "Gaukite pranešimus ir tyliuoju režimu",
-  "enableNotificationInSilentModeSetting": "Pranešimai tylaus režimo metu",
+  "enableNotificationInSilentModeSetting": "Pranešimai ir tyliuoju režimu",
   "criticalAlertVolume": "Garsumas",
   "logout": "Atsijungti",
   "goToInitialSettingAndReloginIfNeededMessage": "Sugrįžtama prie pradinių nustatymų. Jei reikės prisijungti, tai galėsite padaryti pradinių nustatymų apačioje.",

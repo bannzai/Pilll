@@ -426,7 +426,7 @@
   "pillReminderChanged": "Upozornenia na užitie tabletky sú nastavené na {value}",
   "silentModeNotificationDescription": "Aj keď je zapnutý režim sústredenia alebo je vaše zariadenie stíšené, oznámenia sa zobrazia na zamknutej obrazovke a prehrá sa zvuk.",
   "enableNotificationInSilentMode": "Dostávajte upozornenia aj v tichom režime",
-  "enableNotificationInSilentModeSetting": "Oznámenia aj v tichom režime",
+  "enableNotificationInSilentModeSetting": "Upozornenia aj v tichom režime",
   "criticalAlertVolume": "Hlasitosť",
   "logout": "Odhlásiť sa",
   "goToInitialSettingAndReloginIfNeededMessage": "Vrátime sa k počiatočnému nastaveniu. V prípade potreby sa prihláste v spodnej časti počiatočného nastavenia.",

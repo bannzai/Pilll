@@ -426,7 +426,7 @@
   "pillReminderChanged": "Les rappels de prise de pilule sont réglés sur {value}",
   "silentModeNotificationDescription": "Même si le mode Concentration est activé ou que votre appareil est en mode silencieux, les notifications s’affichent sur l’écran verrouillé et émettent un son.",
   "enableNotificationInSilentMode": "Recevoir des notifications même en mode silencieux",
-  "enableNotificationInSilentModeSetting": "Activer les notifications en mode silencieux",
+  "enableNotificationInSilentModeSetting": "Notifications même en mode silencieux",
   "criticalAlertVolume": "Volume",
   "logout": "Se déconnecter",
   "goToInitialSettingAndReloginIfNeededMessage": "Retour à la configuration initiale. Si une connexion est requise, veuillez utiliser l'option en bas de l'écran de configuration initiale.",

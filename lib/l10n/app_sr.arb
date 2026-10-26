@@ -426,7 +426,7 @@
   "pillReminderChanged": "Подсетници за узимање пилуле су подешени на {value}",
   "silentModeNotificationDescription": "Чак и када је укључен режим фокусирања или је звук на Вашем уређају искључен, обавештења се приказују на закључаном екрану и чује се звук.",
   "enableNotificationInSilentMode": "Примајте обавештења и у нечујном режиму",
-  "enableNotificationInSilentModeSetting": "Обавештења у тихом режиму",
+  "enableNotificationInSilentModeSetting": "Обавештења и у нечујном режиму",
   "criticalAlertVolume": "Јачина звука",
   "logout": "Odjavi se",
   "goToInitialSettingAndReloginIfNeededMessage": "Vraćamo se na početno podešavanje. Ukoliko je potrebno prijavljivanje, molimo koristite opcije na dnu početnih podešavanja",

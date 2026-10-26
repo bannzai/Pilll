@@ -426,7 +426,7 @@
   "pillReminderChanged": "மாத்திரை எடுத்துக்கொள்வதற்கான அறிவிப்புகள் {value} என அமைக்கப்பட்டுள்ளன",
   "silentModeNotificationDescription": "கவனக் குவிப்பு பயன்முறை இயக்கத்தில் இருந்தாலும் அல்லது உங்கள் சாதனம் அமைதியாக இருந்தாலும், அறிவிப்புகள் பூட்டுத் திரையில் தோன்றும்; ஒலியும் கேட்கும்.",
   "enableNotificationInSilentMode": "அமைதி முறையிலும் அறிவிப்புகளைப் பெறுங்கள்",
-  "enableNotificationInSilentModeSetting": "அமைதி பயன்முறையிலும் அறிவிப்பு அமைப்பு",
+  "enableNotificationInSilentModeSetting": "அமைதிப் பயன்முறையிலும் அறிவிப்புகள்",
   "criticalAlertVolume": "ஒலி அளவு",
   "logout": "வெளியேறுக",
   "goToInitialSettingAndReloginIfNeededMessage": "ஆரம்ப அமைவுகளுக்குத் திரும்பும். உள்நுழைவு தேவைப்பட்டால், ஆரம்ப அமைவுப் பக்கத்தின் கீழ்ப்பகுதியிலிருந்து உள்நுழையவும்",

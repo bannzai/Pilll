@@ -426,7 +426,7 @@
   "pillReminderChanged": "Els avisos per prendre la píndola s'han configurat a {value}",
   "silentModeNotificationDescription": "Encara que el mode de concentració estigui activat o el dispositiu estigui silenciat, les notificacions apareixen a la pantalla de bloqueig i sonen.",
   "enableNotificationInSilentMode": "Rep notificacions també en mode de silenci",
-  "enableNotificationInSilentModeSetting": "Notificacions en mode silenciós",
+  "enableNotificationInSilentModeSetting": "Notificacions també en mode silenci",
   "criticalAlertVolume": "Volum",
   "logout": "Tancar sessió",
   "goToInitialSettingAndReloginIfNeededMessage": "Tornarem a la configuració inicial. Si necessiteu iniciar sessió, si us plau, feu-ho des de la part inferior de la configuració inicial.",

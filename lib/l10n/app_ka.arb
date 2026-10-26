@@ -426,7 +426,7 @@
   "pillReminderChanged": "აბის მიღების შეხსენებები დაყენებულია მნიშვნელობაზე {value}",
   "silentModeNotificationDescription": "მაშინაც კი, როცა ფოკუსირების რეჟიმი ჩართულია ან თქვენს მოწყობილობაზე ხმა გამორთულია, შეტყობინებები დაბლოკილ ეკრანზე გამოჩნდება და ხმა გაისმის.",
   "enableNotificationInSilentMode": "შეტყობინებების მიღება უხმო რეჟიმშიც",
-  "enableNotificationInSilentModeSetting": "უხმო რეჟიმშიც შეტყობინებები",
+  "enableNotificationInSilentModeSetting": "შეტყობინებები უხმო რეჟიმშიც",
   "criticalAlertVolume": "ხმის სიმაღლე",
   "logout": "გამოსვლა",
   "goToInitialSettingAndReloginIfNeededMessage": "დაბრუნება საწყის პარამეტრებზე. ავტორიზაცია საჭიროების შემთხვევაში, გთხოვთ გამოიყენოთ საწყისი პარამეტრების ქვედა ნაწილი",

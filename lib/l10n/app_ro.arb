@@ -426,7 +426,7 @@
   "pillReminderChanged": "Notificările pentru luarea pilulei au fost setate la {value}",
   "silentModeNotificationDescription": "Chiar dacă modul Concentrare este activat sau dispozitivul tău este pe silențios, notificările apar pe ecranul de blocare și se aude un sunet.",
   "enableNotificationInSilentMode": "Primește notificări și în modul silențios",
-  "enableNotificationInSilentModeSetting": "Notificări în modul silențios",
+  "enableNotificationInSilentModeSetting": "Notificări și în modul silențios",
   "criticalAlertVolume": "Volum",
   "logout": "Deconectare",
   "goToInitialSettingAndReloginIfNeededMessage": "Se va reveni la configurarea inițială. Dacă este necesară conectarea, vă rugăm să o faceți din partea de jos a configurării inițiale.",

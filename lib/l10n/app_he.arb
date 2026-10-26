@@ -426,7 +426,7 @@
   "pillReminderChanged": "תזכורות לנטילת הגלולה הוגדרו ל־{value}",
   "silentModeNotificationDescription": "גם כשמצב ריכוז פועל או כשהמכשיר מושתק, ההתראות מופיעות במסך הנעילה ומושמע צליל.",
   "enableNotificationInSilentMode": "קבלת התראות גם במצב שקט",
-  "enableNotificationInSilentModeSetting": "הגדרות התראה במצב שקט",
+  "enableNotificationInSilentModeSetting": "התראות גם במצב שקט",
   "criticalAlertVolume": "עוצמת קול",
   "logout": "יציאה",
   "goToInitialSettingAndReloginIfNeededMessage": "חוזרים להגדרות ראשוניות. במידה ונדרשת התחברות, אנא עשו זאת מתחתית המסך של ההגדרות הראשוניות",

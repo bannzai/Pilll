@@ -426,7 +426,7 @@
   "pillReminderChanged": "ବଟିକା ଖାଇବା ସୂଚନା {value} ଭାବେ ସେଟ୍ ହୋଇଛି",
   "silentModeNotificationDescription": "ଫୋକସ୍ ମୋଡ୍ ଚାଲୁ ଥିଲେ କିମ୍ବା ଆପଣଙ୍କ ଡିଭାଇସ୍ ନିରବ ଥିଲେ ମଧ୍ୟ, ବିଜ୍ଞପ୍ତିଗୁଡ଼ିକ ଲକ୍ ସ୍କ୍ରିନରେ ଦେଖାଯିବ ଏବଂ ଶବ୍ଦ ବାଜିବ।",
   "enableNotificationInSilentMode": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ପାଆନ୍ତୁ",
-  "enableNotificationInSilentModeSetting": "ନିରବ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ସେଟିଂ",
+  "enableNotificationInSilentModeSetting": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି",
   "criticalAlertVolume": "ଭଲ୍ୟୁମ୍",
   "logout": "ଲଗଆଉଟ",
   "goToInitialSettingAndReloginIfNeededMessage": "ପ୍ରାଥମିକ ସେଟଅପ୍‌କୁ ଫେରୁଛି। ଯଦି ଲଗଇନ୍ ଆବଶ୍ୟକ ହୁଏ, ଦୟାକରି ପ୍ରାଥମିକ ସେଟଅପ୍‌ର ତଳ ଭାଗରୁ କରନ୍ତୁ।",

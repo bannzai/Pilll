@@ -426,7 +426,7 @@
   "pillReminderChanged": "Հաբի ընդունման ծանուցումները կարգավորվել են որպես {value}",
   "silentModeNotificationDescription": "Նույնիսկ երբ կենտրոնացման ռեժիմը միացված է կամ Ձեր սարքի ձայնն անջատված է, ծանուցումները ցուցադրվում են կողպէկրանին, և հնչում է ձայնային ազդանշան։",
   "enableNotificationInSilentMode": "Ստացեք ծանուցումներ նաև անձայն ռեժիմում",
-  "enableNotificationInSilentModeSetting": "Լուռ ռեժիմում ծանուցումների կարգավորում",
+  "enableNotificationInSilentModeSetting": "Ծանուցումներ նաև անձայն ռեժիմում",
   "criticalAlertVolume": "ծավալ",
   "logout": "Ելք",
   "goToInitialSettingAndReloginIfNeededMessage": "Կվերադառնանք սկզբնական կարգավորումներին: Մուտք գործելու անհրաժեշտության դեպքում խնդրում ենք այն իրականացնել սկզբնական կարգավորումների ներքևից:",

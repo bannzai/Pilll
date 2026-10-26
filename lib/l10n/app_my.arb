@@ -426,7 +426,7 @@
   "pillReminderChanged": "ဆေးလုံးသောက်ရန် သတိပေးချက်ကို {value} အဖြစ် သတ်မှတ်ထားပါတယ်",
   "silentModeNotificationDescription": "အာရုံစိုက်မုဒ် ဖွင့်ထားချိန် သို့မဟုတ် စက်ကို အသံပိတ်ထားချိန်မှာတောင် အသိပေးချက်တွေကို လော့ခ်မျက်နှာပြင်မှာ ပြသပြီး အသံမြည်ပါမယ်။",
   "enableNotificationInSilentMode": "အသံပိတ်ထားချိန်တွင်လည်း အသိပေးချက်များ ရယူပါ",
-  "enableNotificationInSilentModeSetting": "အသံပိတ်မုဒ်တွင်လည်း သတိပေးချက်ဆက်တင်",
+  "enableNotificationInSilentModeSetting": "အသံပိတ်ထားချိန်တွင်လည်း အသိပေးချက်များ",
   "criticalAlertVolume": "အသံပမာဏ",
   "logout": "ထွက်ရန်",
   "goToInitialSettingAndReloginIfNeededMessage": "ကန်ဦးဆက်တင်သို့ ပြန်သွားပါမည်။ လော့ဂ်အင်လိုအပ်ပါက ကန်ဦးဆက်တင်အောက်ပိုင်းမှ ပြုလုပ်ပါရန် တောင်းဆိုအပ်ပါသည်။",

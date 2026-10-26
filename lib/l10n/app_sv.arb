@@ -426,7 +426,7 @@
   "pillReminderChanged": "Påminnelser om att ta p-pillret har ställts in på {value}",
   "silentModeNotificationDescription": "Även när fokusläget är på eller enheten är ljudlös visas notiser på låsskärmen och ett ljud spelas upp.",
   "enableNotificationInSilentMode": "Få aviseringar även i tyst läge",
-  "enableNotificationInSilentModeSetting": "Aviseringar i tyst läge",
+  "enableNotificationInSilentModeSetting": "Aviseringar även i tyst läge",
   "criticalAlertVolume": "Volym",
   "logout": "Logga ut",
   "goToInitialSettingAndReloginIfNeededMessage": "Återgår till startinställningar. Vid behov av inloggning, använd länken längst ner på inställningssidan.",

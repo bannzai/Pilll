@@ -426,7 +426,7 @@
   "pillReminderChanged": "Izikhumbuzi zokuphuza iphilisi zisethwe ku-{value}",
   "silentModeNotificationDescription": "Ngisho noma imodi yokugxila ivuliwe noma idivayisi yakho ithulisiwe, izaziso zizovela esikrinini sokukhiya futhi umsindo uzodlala.",
   "enableNotificationInSilentMode": "Thola izaziso noma ifoni ikumodi yokuthula",
-  "enableNotificationInSilentModeSetting": "Vumela izaziso nakuma-silent mode",
+  "enableNotificationInSilentModeSetting": "Izaziso noma ifoni ithulisiwe",
   "criticalAlertVolume": "Ivolumu",
   "logout": "Phuma",
   "goToInitialSettingAndReloginIfNeededMessage": "Kubuyela ekusethweni kokuqala. Uma kudingeka ukungena ngemvume, sicela ukwenze lokho ngaphansi kweseteji yokuqala.",

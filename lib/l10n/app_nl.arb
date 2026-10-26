@@ -426,7 +426,7 @@
   "pillReminderChanged": "Herinneringen om je pil in te nemen zijn ingesteld op {value}",
   "silentModeNotificationDescription": "Ook als de focusmodus aanstaat of je apparaat op stil staat, verschijnen meldingen op het toegangsscherm en klinkt er een geluid.",
   "enableNotificationInSilentMode": "Ontvang ook meldingen als je telefoon op stil staat",
-  "enableNotificationInSilentModeSetting": "Meldingen in stille modus",
+  "enableNotificationInSilentModeSetting": "Meldingen ook in stille modus",
   "criticalAlertVolume": "Volume",
   "logout": "Uitloggen",
   "goToInitialSettingAndReloginIfNeededMessage": "Terug naar initiële instellingen. Als inloggen vereist is, doe dit dan via de onderkant van het scherm voor initiële instellingen.",

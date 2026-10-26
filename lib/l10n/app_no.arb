@@ -426,7 +426,7 @@
   "pillReminderChanged": "Påminnelser om p-piller er satt til {value}",
   "silentModeNotificationDescription": "Selv når Fokus er på eller enheten din er satt på lydløs, vises varsler på låseskjermen og spiller av en lyd.",
   "enableNotificationInSilentMode": "Få varsler selv når telefonen er på lydløs",
-  "enableNotificationInSilentModeSetting": "Varsling i stillemodus",
+  "enableNotificationInSilentModeSetting": "Varsler også i lydløs modus",
   "criticalAlertVolume": "Volum",
   "logout": "Logg ut",
   "goToInitialSettingAndReloginIfNeededMessage": "Returnerer til innledende oppsett. Hvis pålogging er nødvendig, vennligst logg inn fra bunnen av oppsettet.",

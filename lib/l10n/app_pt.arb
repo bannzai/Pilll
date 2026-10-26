@@ -426,7 +426,7 @@
   "pillReminderChanged": "Os lembretes para tomar a pílula foram definidos como {value}",
   "silentModeNotificationDescription": "Mesmo com o modo Foco ativado ou o dispositivo no silencioso, as notificações aparecem na tela bloqueada e emitem um som.",
   "enableNotificationInSilentMode": "Receber notificações mesmo no modo silencioso",
-  "enableNotificationInSilentModeSetting": "Notificações no modo silencioso",
+  "enableNotificationInSilentModeSetting": "Notificações mesmo no modo silencioso",
   "criticalAlertVolume": "Volume",
   "logout": "Sair",
   "goToInitialSettingAndReloginIfNeededMessage": "Voltaremos para as configurações iniciais. Se for necessário fazer login, por favor faça-o na parte inferior da tela de configurações iniciais.",

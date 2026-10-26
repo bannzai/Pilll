@@ -426,7 +426,7 @@
   "pillReminderChanged": "Pengingat minum pil telah diatur ke {value}",
   "silentModeNotificationDescription": "Meski mode Fokus aktif atau perangkat Anda dibisukan, notifikasi tetap muncul di layar kunci dan suara peringatan akan terdengar.",
   "enableNotificationInSilentMode": "Terima notifikasi meski ponsel dalam mode senyap",
-  "enableNotificationInSilentModeSetting": "Notifikasi dalam Mode Senyap",
+  "enableNotificationInSilentModeSetting": "Notifikasi meski dalam mode senyap",
   "criticalAlertVolume": "Volume",
   "logout": "Keluar",
   "goToInitialSettingAndReloginIfNeededMessage": "Kembali ke pengaturan awal. Jika login diperlukan, silakan lakukan dari bagian bawah pengaturan awal",

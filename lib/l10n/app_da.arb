@@ -426,7 +426,7 @@
   "pillReminderChanged": "Påmindelser om p-piller er indstillet til {value}",
   "silentModeNotificationDescription": "Selv når fokusfunktion er slået til, eller din enhed er på lydløs, vises notifikationer på låseskærmen, og der afspilles en lyd.",
   "enableNotificationInSilentMode": "Få notifikationer, selv når telefonen er på lydløs",
-  "enableNotificationInSilentModeSetting": "Notifikationer i lydløs tilstand",
+  "enableNotificationInSilentModeSetting": "Notifikationer også i lydløs tilstand",
   "criticalAlertVolume": "Lydstyrke",
   "logout": "Log ud",
   "goToInitialSettingAndReloginIfNeededMessage": "Vender tilbage til den indledende opsætning. Hvis du skal logge ind, kan du gøre det fra bunden af opsætningssiden.",

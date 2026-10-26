@@ -426,7 +426,7 @@
   "pillReminderChanged": "피임약 복용 알림이 {value}으로 설정됐어요",
   "silentModeNotificationDescription": "집중 모드가 켜져 있거나 기기가 무음 상태여도 알림이 잠금 화면에 표시되고 소리가 재생돼요.",
   "enableNotificationInSilentMode": "무음 모드에서도 알림 받기",
-  "enableNotificationInSilentModeSetting": "매너모드에서도 알림 설정",
+  "enableNotificationInSilentModeSetting": "무음 모드에서도 알림 받기",
   "criticalAlertVolume": "음량",
   "logout": "로그아웃",
   "goToInitialSettingAndReloginIfNeededMessage": "초기 설정으로 돌아갑니다. 로그인이 필요한 경우 초기 설정 하단에서 해주세요",

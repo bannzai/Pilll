@@ -426,7 +426,7 @@
   "pillReminderChanged": "Эм уух сануулгыг {value} болгож тохируулсан",
   "silentModeNotificationDescription": "Төвлөрөх горим асаалттай эсвэл таны төхөөрөмжийн дуу хаалттай байсан ч мэдэгдэл түгжээтэй дэлгэц дээр гарч, дохионы дуу дуугарна.",
   "enableNotificationInSilentMode": "Дуугүй горимд ч мэдэгдэл хүлээн авах",
-  "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл тохиргоо",
+  "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл авах",
   "criticalAlertVolume": "дуу хүчин",
   "logout": "Гарах",
   "goToInitialSettingAndReloginIfNeededMessage": "Анхны тохиргоонд буцна. Нэвтрэх шаардлагатай тохиолдолд анхны тохиргооны доод хэсгээс нэвтэрнэ үү",

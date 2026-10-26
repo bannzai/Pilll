@@ -426,7 +426,7 @@
   "pillReminderChanged": "A tablettaszedési értesítések beállítása: {value}",
   "silentModeNotificationDescription": "Az értesítések akkor is megjelennek a zárolási képernyőn, és hangjelzés hallható, ha a Fókusz mód be van kapcsolva, vagy a készülék némítva van.",
   "enableNotificationInSilentMode": "Értesítések fogadása néma módban is",
-  "enableNotificationInSilentModeSetting": "Értesítés csendes módban",
+  "enableNotificationInSilentModeSetting": "Értesítések néma módban is",
   "criticalAlertVolume": "Hangerő",
   "logout": "Kijelentkezés",
   "goToInitialSettingAndReloginIfNeededMessage": "Visszatérés a kezdeti beállításokhoz. Ha bejelentkezésre van szükség, kérjük, használja a kezdeti beállítások alján található opciót.",

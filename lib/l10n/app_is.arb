@@ -426,7 +426,7 @@
   "pillReminderChanged": "Áminningar um pillutöku eru stilltar á {value}",
   "silentModeNotificationDescription": "Jafnvel þegar einbeitingarstilling er virk eða hljóð er slökkt á tækinu birtast tilkynningar á læsiskjánum og hljóð heyrist.",
   "enableNotificationInSilentMode": "Fá tilkynningar þótt síminn sé á hljóðlausri stillingu",
-  "enableNotificationInSilentModeSetting": "Tilkynningar í þögli stillingu",
+  "enableNotificationInSilentModeSetting": "Tilkynningar líka þegar hljóð er slökkt",
   "criticalAlertVolume": "hljóðstyrkur",
   "logout": "Útskrá",
   "goToInitialSettingAndReloginIfNeededMessage": "Snúa aftur til upphafsstillinga. Ef þú þarft að skrá þig inn, vinsamlegast gerðu það í neðri hluta upphafsstillinga.",

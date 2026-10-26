@@ -426,7 +426,7 @@
   "pillReminderChanged": "Напоминания о приёме таблетки переключены на {value}",
   "silentModeNotificationDescription": "Даже если включён режим фокусирования или звук устройства отключён, уведомления отображаются на экране блокировки и сопровождаются звуком.",
   "enableNotificationInSilentMode": "Получать уведомления даже в беззвучном режиме",
-  "enableNotificationInSilentModeSetting": "Уведомления в беззвучном режиме",
+  "enableNotificationInSilentModeSetting": "Уведомления даже в беззвучном режиме",
   "criticalAlertVolume": "Громкость",
   "logout": "Выйти",
   "goToInitialSettingAndReloginIfNeededMessage": "Возврат к начальным настройкам. При необходимости входа в систему воспользуйтесь нижней частью экрана начальных настроек",

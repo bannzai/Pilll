@@ -426,7 +426,7 @@
   "pillReminderChanged": "Upozornění na užití pilulky jsou nastavena na {value}",
   "silentModeNotificationDescription": "I když je zapnutý režim soustředění nebo je zařízení ztlumené, oznámení se zobrazí na zamčené obrazovce a přehraje se zvuk.",
   "enableNotificationInSilentMode": "Dostávat oznámení i v tichém režimu",
-  "enableNotificationInSilentModeSetting": "Upozornění i v tichém režimu",
+  "enableNotificationInSilentModeSetting": "Oznámení i v tichém režimu",
   "criticalAlertVolume": "Hlasitost",
   "logout": "Odhlásit",
   "goToInitialSettingAndReloginIfNeededMessage": "Vrátí se k počátečnímu nastavení. Pokud bude potřeba přihlášení, prosím použijte možnost ve spodní části úvodního nastavení.",

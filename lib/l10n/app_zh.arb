@@ -426,7 +426,7 @@
   "pillReminderChanged": "服药提醒已设为{value}",
   "silentModeNotificationDescription": "即使已开启专注模式或设备处于静音状态，通知仍会显示在锁定屏幕上并发出提示音。",
   "enableNotificationInSilentMode": "静音模式下也接收通知",
-  "enableNotificationInSilentModeSetting": "静音模式通知设置",
+  "enableNotificationInSilentModeSetting": "静音模式下也接收通知",
   "criticalAlertVolume": "音量",
   "logout": "退出登录",
   "goToInitialSettingAndReloginIfNeededMessage": "将返回初始设置界面。如需登录，请在初始设置页面底部进行操作。",

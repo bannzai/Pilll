@@ -426,7 +426,7 @@
   "pillReminderChanged": "Los recordatorios para tomar la píldora están en {value}",
   "silentModeNotificationDescription": "Aunque el modo de concentración esté activado o tu dispositivo esté en silencio, las notificaciones aparecen en la pantalla de bloqueo y suena una alerta.",
   "enableNotificationInSilentMode": "Recibir notificaciones incluso en modo silencio",
-  "enableNotificationInSilentModeSetting": "Notificaciones en modo silencioso",
+  "enableNotificationInSilentModeSetting": "Notificaciones también en modo silencio",
   "criticalAlertVolume": "Volumen",
   "logout": "Cerrar sesión",
   "goToInitialSettingAndReloginIfNeededMessage": "Regresando a la configuración inicial. Si necesita iniciar sesión, por favor hágalo desde la parte inferior de la configuración inicial",
