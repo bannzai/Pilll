@@ -54,7 +54,7 @@
   "changePillNumberForToday": "Ändra tablettnummer för i dag",
   "discardAllPillSheets": "Radera data för alla p-pillerkartor",
   "areYouSureDoing": "Är du säker på att du vill {doing}?",
-  "currentlyDisplayed": "visas för närvarande",
+  "currentlyDisplayed": "Visas just nu",
   "allPillSheets": "Alla p-pillerförpackningar",
   "willBeDiscarded": "kommer att raderas",
   "discard": "Kassera",

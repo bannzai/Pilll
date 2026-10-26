@@ -54,7 +54,7 @@
   "changePillNumberForToday": "Промяна на номер на хапче за днес",
   "discardAllPillSheets": "Изтриване на всички данни за блистерите",
   "areYouSureDoing": "Сигурни ли сте, че искате да {doing}?",
-  "currentlyDisplayed": "текущо показани",
+  "currentlyDisplayed": "Показва се в момента",
   "allPillSheets": "Всички блистери",
   "willBeDiscarded": "ще бъде изтрит",
   "discard": "изхвърли",

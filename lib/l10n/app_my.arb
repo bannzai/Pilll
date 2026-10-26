@@ -54,7 +54,7 @@
   "changePillNumberForToday": "ယနေ့သောက်ရမည့် ဆေးပြားနံပါတ်ကို ပြောင်းပါ",
   "discardAllPillSheets": "ဆေးပြားကတ်အားလုံး၏ အချက်အလက်ကို ဖျက်ပါ",
   "areYouSureDoing": "{doing} လုပ်ချင်တာ သေချာပါသလား?",
-  "currentlyDisplayed": "လက်ရှိပြသနေသော",
+  "currentlyDisplayed": "လက်ရှိ ပြသထားသော",
   "allPillSheets": "ပီလူးစာရွက်အားလုံး",
   "willBeDiscarded": "ကို ဖျက်သိမ်းပါမည်",
   "discard": "ဖျက်သိမ်း",

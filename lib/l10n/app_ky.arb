@@ -54,7 +54,7 @@
   "changePillNumberForToday": "Бүгүн ичиле турган таблетканын номерин өзгөртүңүз",
   "discardAllPillSheets": "Бардык таблетка блистери тууралуу маалыматты өчүрүңүз",
   "areYouSureDoing": "Чын эле {doing} каалайсызбы?",
-  "currentlyDisplayed": "учурда көрсөтүлгөн",
+  "currentlyDisplayed": "Учурда көрсөтүлүп жаткан",
   "allPillSheets": "Бардык пили барактары",
   "willBeDiscarded": "жоюлат",
   "discard": "ташта",

@@ -54,7 +54,7 @@
   "changePillNumberForToday": "Vaihda tämän päivän pillerinumero",
   "discardAllPillSheets": "Poista kaikkien pilleriliuskojen tiedot",
   "areYouSureDoing": "Haluatko varmasti {doing}?",
-  "currentlyDisplayed": "Näkyvillä",
+  "currentlyDisplayed": "Näkyy nyt",
   "allPillSheets": "Kaikki pilleripakkaukset",
   "willBeDiscarded": "poistetaan",
   "discard": "hävitä",

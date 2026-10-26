@@ -54,7 +54,7 @@
   "changePillNumberForToday": "Өнөөдөр уух эмийн дугаарыг өөрчилнө үү",
   "discardAllPillSheets": "Бүх эмийн блистерийн мэдээллийг устгана уу",
   "areYouSureDoing": "Та {doing} гэдэгтээ итгэлтэй байна уу?",
-  "currentlyDisplayed": "одоо харагдаж байгаа",
+  "currentlyDisplayed": "Одоо харагдаж байгаа",
   "allPillSheets": "Бүх эмийн савлага",
   "willBeDiscarded": "устгагдана",
   "discard": "устгах",

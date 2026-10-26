@@ -54,7 +54,7 @@
   "changePillNumberForToday": "更改今天要服用的药片编号",
   "discardAllPillSheets": "删除所有药板信息",
   "areYouSureDoing": "确定要{doing}吗？",
-  "currentlyDisplayed": "正在顯示的",
+  "currentlyDisplayed": "当前显示",
   "allPillSheets": "所有避孕药板",
   "willBeDiscarded": "将被删除",
   "discard": "删除",
