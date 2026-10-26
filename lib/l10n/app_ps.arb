@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "د ګولیو پاڼ راتلونکې برخه په اوتومات ډول جوړه کړئ",
   "creatingNewPillSheetFeatureAppealBody": "کله چې د ګولیو پاڼ اوسنی ګروپ پای ته ورسېږي، نوی ګروپ په اوتومات ډول جوړېږي. په لاس یې بدلولو ته اړتیا نشته او د ګولیو د اخیستو ثبت به بشپړ پاتې شي.",
   "alarmKitFeatureAppealTitle": "د زنګ وهونکي ساعت په څېر غږېدونکی خبرتیا",
-  "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې د خاموشۍ حالت کې هم باوري ډول غږیږي",
+  "alarmKitFeatureAppealShortDescription": "خبرتیاوې چې په چوپ حالت کې هم غږېږي",
   "alarmKitFeatureAppealHeadline": "د بیدارۍ الارم غوندې د درملو اخیستلو الارم",
   "alarmKitFeatureAppealBody": "د iOS 26 او وروستیو نسخو کې د AlarmKit له کارولو سره، د خاموش حالت یا د تمرکز حالت کې هم د ډاډمن اعلام له لارې د حبو د استعمال یادونه کوو.",
   "todayPillNumberFeatureAppealTitle": "د نن ورځې د دوا شمیره سمول",

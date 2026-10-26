@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "পৰৱৰ্তী পিলৰ ষ্ট্ৰিপ স্বয়ংক্ৰিয়ভাৱে তৈয়াৰ কৰক",
   "creatingNewPillSheetFeatureAppealBody": "বৰ্তমানৰ পিলৰ ষ্ট্ৰিপৰ গোট শেষ হ’লে নতুন পিলৰ ষ্ট্ৰিপৰ গোট স্বয়ংক্ৰিয়ভাৱে সৃষ্টি হ’ব। আপুনি নিজে সলনি কৰিব নালাগে, আৰু সেৱনৰ ৰেকৰ্ডত কোনো খালী নাথাকিব।",
   "alarmKitFeatureAppealTitle": "এলাৰ্ম ঘড়ীৰ দৰে বাজি উঠা এলাৰ্ম",
-  "alarmKitFeatureAppealShortDescription": "চাইলেণ্টতো নিশ্চিতকৈ বাজিব পৰা জাননী",
+  "alarmKitFeatureAppealShortDescription": "নীৰৱ ম’ডতো শব্দ হোৱা জাননী",
   "alarmKitFeatureAppealHeadline": "এলাৰ্ম ঘড়ীৰ দৰে পিল সেৱনৰ এলাৰ্ম",
   "alarmKitFeatureAppealBody": "iOS 26 বা তাতকৈ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, চাইলেণ্ট মোড বা ফ'কাছ মোডতো নিশ্চিতভাৱে বাজিব পৰা এলাৰ্মেৰে পিল খোৱাৰ কথা জনায়।",
   "todayPillNumberFeatureAppealTitle": "আজিৰ বড়ি নম্বৰ মিলাওক",

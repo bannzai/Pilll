@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Cipta pek pil seterusnya secara automatik",
   "creatingNewPillSheetFeatureAppealBody": "Apabila kumpulan pek pil semasa habis, kumpulan pek pil baharu akan dibuat secara automatik. Anda tidak perlu menukarnya secara manual dan rekod pengambilan pil akan kekal lengkap.",
   "alarmKitFeatureAppealTitle": "Penggera yang berbunyi seperti jam loceng",
-  "alarmKitFeatureAppealShortDescription": "Pemberitahuan yang pasti berbunyi walaupun dalam mod senyap",
+  "alarmKitFeatureAppealShortDescription": "Pemberitahuan yang berbunyi walaupun dalam mod senyap",
   "alarmKitFeatureAppealHeadline": "Penggera pengambilan ubat seperti jam penggera",
   "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia pada iOS 26 dan ke atas, anda akan diberitahu untuk mengambil pil melalui penggera yang pasti berbunyi walaupun dalam mod senyap atau mod Fokus.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nombor pengambilan hari ini",

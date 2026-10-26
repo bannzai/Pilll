@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "နောက်ထပ် ဆေးပြားကတ်ကို အလိုအလျောက် ဖန်တီးပါ",
   "creatingNewPillSheetFeatureAppealBody": "လက်ရှိ ဆေးပြားကတ်အုပ်စု ကုန်သွားသောအခါ ဆေးပြားကတ်အုပ်စုအသစ်ကို အလိုအလျောက် ဖန်တီးပေးပါမယ်။ ကိုယ်တိုင် ပြောင်းရန်မလိုဘဲ ဆေးသောက်မှတ်တမ်းများလည်း အပြည့်အစုံ ဆက်ရှိနေပါမယ်။",
   "alarmKitFeatureAppealTitle": "နှိုးစက်နာရီလို မြည်မယ့် သတိပေးချက်",
-  "alarmKitFeatureAppealShortDescription": "ဆိုင်လင့်မုဒ်တွင်ပင် သေချာစွာ မြည်သည့် သတိပေးချက်",
+  "alarmKitFeatureAppealShortDescription": "အသံတိတ်မုဒ်တွင်လည်း အသံမြည်သည့် အသိပေးချက်များ",
   "alarmKitFeatureAppealHeadline": "နှိုးဆ်ချိန်နာရီကဲ့သို့ ဆေးသောက်သတိပေး",
   "alarmKitFeatureAppealBody": "iOS 26 နှင့်အထက်တွင် ရရှိနိုင်သော AlarmKit ကိုအသုံးပြု၍ ဆိုင်းငံ့မုဒ် သို့မဟုတ် အာရုံစူးစိုက်မုဒ်တွင်ပင် သေချာပေါက် မြည်သော အချိန်ကိုက်နှိုးစက်ဖြင့် ဆေးသောက်ချိန်ကို အကြောင်းကြားပေးပါသည်။",
   "todayPillNumberFeatureAppealTitle": "ယနေ့ဆေးသောက်နံပါတ်ချိန်ညှိပါ",

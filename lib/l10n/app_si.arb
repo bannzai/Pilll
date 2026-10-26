@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ඊළඟ පෙති කාඩ්පත ස්වයංක්‍රීයව සාදන්න",
   "creatingNewPillSheetFeatureAppealBody": "දැනට ඇති පෙති කාඩ්පතේ කණ්ඩායම අවසන් වූ විට, නව කණ්ඩායමක් ස්වයංක්‍රීයව සෑදේ. ඔබට අතින් මාරු කිරීමට අවශ්‍ය නොවන අතර පෙති ගත් බවට ඇති සටහන් සම්පූර්ණව පවතී.",
   "alarmKitFeatureAppealTitle": "එලාම් ඔරලෝසුවක් මෙන් නාද වන සිහිකැඳවීමක්",
-  "alarmKitFeatureAppealShortDescription": "නිශ්ශබ්ද මෝඩයේදීමත් නියතිව ඇහෙන දැනුම්දීම්",
+  "alarmKitFeatureAppealShortDescription": "නිහඬ ප්‍රකාරයේදීත් හඬ නැගෙන දැනුම්දීම්",
   "alarmKitFeatureAppealHeadline": "ඇලාර්ම් ක්ලොක් වැනි පිල් ගැනීමේ අනතුරු ඇඟවීම",
   "alarmKitFeatureAppealBody": "iOS 26 සහ ඉන් පසු අනුවාදවල ලැබෙන AlarmKit භාවිතයෙන්, නිහඬ මාදිලියේදී හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේදී වුවත් විශ්වාසවන්තව ඇහෙන ඇලාර්මයකින් පිල් ගැනීමේ වේලාව දන්වනු ලබයි.",
   "todayPillNumberFeatureAppealTitle": "අද ගන්නා පිල් අංකය ගළපා ගන්න",

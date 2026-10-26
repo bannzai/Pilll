@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Skapa nästa p-pillerkarta automatiskt",
   "creatingNewPillSheetFeatureAppealBody": "När den nuvarande gruppen med p-pillerkartor är slut skapas en ny grupp automatiskt. Du behöver inte byta manuellt, och registreringarna av dina intag förblir kompletta.",
   "alarmKitFeatureAppealTitle": "Ett alarm som ringer som en väckarklocka",
-  "alarmKitFeatureAppealShortDescription": "Pålitliga notiser som hörs även i tyst läge",
+  "alarmKitFeatureAppealShortDescription": "Aviseringar med ljud även i tyst läge",
   "alarmKitFeatureAppealHeadline": "Väckarklocksliknande påminnelse för att ta piller",
   "alarmKitFeatureAppealBody": "Med AlarmKit, tillgängligt från iOS 26, ringer ett alarm som hörs även i tyst läge och fokusläge, så att du aldrig missar en dos p-piller.",
   "todayPillNumberFeatureAppealTitle": "Justera dagens pillernummer",

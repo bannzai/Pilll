@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Tự động tạo vỉ thuốc tiếp theo",
   "creatingNewPillSheetFeatureAppealBody": "Khi nhóm vỉ thuốc hiện tại dùng hết, nhóm mới sẽ được tạo tự động. Bạn không cần chuyển thủ công và nhật ký uống thuốc vẫn được ghi đầy đủ.",
   "alarmKitFeatureAppealTitle": "Báo thức reo như đồng hồ báo thức",
-  "alarmKitFeatureAppealShortDescription": "Thông báo vang lên ngay cả khi ở chế độ im lặng",
+  "alarmKitFeatureAppealShortDescription": "Thông báo vẫn phát âm thanh khi bật chế độ im lặng",
   "alarmKitFeatureAppealHeadline": "Nhắc uống thuốc như báo thức",
   "alarmKitFeatureAppealBody": "Sử dụng AlarmKit (có sẵn từ iOS 26 trở lên) để thông báo việc uống thuốc bằng báo thức sẽ chắc chắn kêu ngay cả khi ở chế độ im lặng hoặc chế độ Tập trung.",
   "todayPillNumberFeatureAppealTitle": "Đặt số viên đã uống hôm nay",

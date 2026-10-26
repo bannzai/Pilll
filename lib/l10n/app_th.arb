@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "สร้างแผงยาถัดไปโดยอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealBody": "เมื่อใช้กลุ่มแผงยาปัจจุบันหมดแล้ว ระบบจะสร้างกลุ่มแผงยาใหม่ให้อัตโนมัติค่ะ ไม่ต้องสลับเอง และบันทึกการทานยาจะต่อเนื่องครบถ้วนค่ะ",
   "alarmKitFeatureAppealTitle": "การแจ้งเตือนที่ดังเหมือนนาฬิกาปลุก",
-  "alarmKitFeatureAppealShortDescription": "แจ้งเตือนแม้เครื่องอยู่ในโหมดเงียบ",
+  "alarmKitFeatureAppealShortDescription": "การแจ้งเตือนที่มีเสียงแม้อยู่ในโหมดเงียบ",
   "alarmKitFeatureAppealHeadline": "การแจ้งเตือนการกินยาคล้ายนาฬิกาปลุก",
   "alarmKitFeatureAppealBody": "ใช้ AlarmKit ที่มีใน iOS 26 ขึ้นไป เพื่อแจ้งเตือนการทานยาด้วยเสียงเตือนซึ่งจะดังแน่นอนแม้ในโหมดเงียบหรือโหมดโฟกัส",
   "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขการทานวันนี้",

@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Automatiškai sukurti kitą tablečių plokštel",
   "creatingNewPillSheetFeatureAppealBody": "Pasibaigus dabartinei tablečių plokštel grupei, nauja grupė sukuriama automatiškai. Jums nereikės jos keisti rankiniu būdu, o vartojimo įrašai liks išsamūs.",
   "alarmKitFeatureAppealTitle": "Priminimas, skambantis kaip žadintuvas",
-  "alarmKitFeatureAppealShortDescription": "Pranešimas, kuris tikrai skambės net ir tyliame režime",
+  "alarmKitFeatureAppealShortDescription": "Pranešimai, kurie skamba ir tyliuoju režimu",
   "alarmKitFeatureAppealHeadline": "Žadintuvo tipo vartojimo priminimas",
   "alarmKitFeatureAppealBody": "Using AlarmKit available on iOS 26 and later, notify pill intake with alarms that reliably sound even in silent mode or Focus mode.",
   "todayPillNumberFeatureAppealTitle": "Nustatyti šiandienos dozės numerį",

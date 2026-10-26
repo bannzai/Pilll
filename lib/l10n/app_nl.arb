@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Maak de volgende pillenstrip automatisch aan",
   "creatingNewPillSheetFeatureAppealBody": "Als de huidige groep pillenstrips op is, wordt automatisch een nieuwe groep aangemaakt. Je hoeft niet zelf over te schakelen en je innameregistratie blijft volledig.",
   "alarmKitFeatureAppealTitle": "Een alarm dat klinkt als een wekker",
-  "alarmKitFeatureAppealShortDescription": "Melding die zeker afgaat, ook in stille modus",
+  "alarmKitFeatureAppealShortDescription": "Meldingen met geluid, ook in de stille modus",
   "alarmKitFeatureAppealHeadline": "Wekkermelding voor innemen",
   "alarmKitFeatureAppealBody": "Met AlarmKit, beschikbaar vanaf iOS 26, wordt u via een alarm dat zelfs in de stille modus of focusmodus altijd afgaat, herinnerd aan het innemen van uw pil.",
   "todayPillNumberFeatureAppealTitle": "Vandaag het pilnummer aanpassen",

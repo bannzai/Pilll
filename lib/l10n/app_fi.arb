@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Luo seuraava pilleriliuska automaattisesti",
   "creatingNewPillSheetFeatureAppealBody": "Kun nykyinen pilleriliuskaryhmä loppuu, uusi pilleriliuskaryhmä luodaan automaattisesti. Sinun ei tarvitse vaihtaa sitä itse, ja ottomerkinnät pysyvät katkeamattomina.",
   "alarmKitFeatureAppealTitle": "Herätyskellon tavoin soiva hälytys",
-  "alarmKitFeatureAppealShortDescription": "Ilmoitukset soivat varmasti myös äänettömässä tilassa",
+  "alarmKitFeatureAppealShortDescription": "Ilmoitukset kuuluvat myös äänettömässä tilassa",
   "alarmKitFeatureAppealHeadline": "Lääkehälytys kuin herätyskello",
   "alarmKitFeatureAppealBody": "iOS 26:ssa ja uudemmissa käytettävissä olevan AlarmKitin avulla pillerin ottamisesta muistutetaan hälytyksellä, joka soi varmasti myös äänettömässä tilassa ja Keskitystilassa.",
   "todayPillNumberFeatureAppealTitle": "Aseta tämän päivän pillerinumero",

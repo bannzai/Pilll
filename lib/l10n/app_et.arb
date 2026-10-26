@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Loo järgmine pillileht automaatselt",
   "creatingNewPillSheetFeatureAppealBody": "Kui praegune pillilehtede rühm saab läbi, luuakse automaatselt uus pillilehtede rühm. Sa ei pea seda käsitsi vahetama ja võtmise kirjed jäävad täielikuks.",
   "alarmKitFeatureAppealTitle": "Äratuskellana helisev meeldetuletus",
-  "alarmKitFeatureAppealShortDescription": "Teavitused, mis helisevad kindlasti ka vaikses režiimis",
+  "alarmKitFeatureAppealShortDescription": "Märguanded, mis kõlavad ka vaikses režiimis",
   "alarmKitFeatureAppealHeadline": "Äratuskellaga sarnane pillide võtmise alarm",
   "alarmKitFeatureAppealBody": "iOS 26 ja uuematel versioonidel saadaoleva AlarmKit-i abil teavitatakse teid pillide võtmisest häirega, mis kõlab kindlasti ka vaikse režiimi või fookusrežiimi korral.",
   "todayPillNumberFeatureAppealTitle": "Kohanda tänase pilli numbrit",

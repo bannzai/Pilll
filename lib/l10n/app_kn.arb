@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ಮುಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚಿಸಿ",
   "creatingNewPillSheetFeatureAppealBody": "ಪ್ರಸ್ತುತ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಗುಂಪು ಮುಗಿದಾಗ, ಹೊಸ ಗುಂಪು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ರಚನೆಯಾಗುತ್ತದೆ. ನೀವು ಕೈಯಾರೆ ಬದಲಾಯಿಸಬೇಕಾಗಿಲ್ಲ; ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಗಳು ಪೂರ್ಣವಾಗಿರುತ್ತವೆ.",
   "alarmKitFeatureAppealTitle": "ಅಲಾರಾಂ ಗಡಿಯಾರದಂತೆ ಮೊಳಗುವ ಅಲಾರಾಂ",
-  "alarmKitFeatureAppealShortDescription": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಸಿಕೊಳ್ಳುವ ಸೂಚನೆ",
+  "alarmKitFeatureAppealShortDescription": "ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲೂ ಧ್ವನಿಸುವ ಸೂಚನೆಗಳು",
   "alarmKitFeatureAppealHeadline": "ಘಡಿಯ ಅಲಾರ್ಮ್‌ನಂತಹ ಔಷಧ ಸೇವನೆ ಎಚ್ಚರಿಕೆ",
   "alarmKitFeatureAppealBody": "iOS 26 ಮತ್ತು ನಂತರದ ಆವೃತ್ತಿಗಳಲ್ಲಿ ಲಭ್ಯವಿರುವ AlarmKit ಅನ್ನು ಬಳಸಿಕೊಂಡು, ಸೈಲೆಂಟ್ ಮೋಡ್ ಅಥವಾ ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದರೂ ಸಹ ಖಚಿತವಾಗಿ ಕೇಳಿಬರುವ ಎಚ್ಚರಿಕೆ ಆಲಾರ್ಮ್ ಮೂಲಕ ಗೋಳಿ ಸೇವಿಸುವ ಸಮಯವನ್ನು ಸೂಚಿಸುತ್ತದೆ.",
   "todayPillNumberFeatureAppealTitle": "ಇಂದಿನ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿಸಿ",

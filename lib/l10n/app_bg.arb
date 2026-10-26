@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматично създаване на следващия блистер",
   "creatingNewPillSheetFeatureAppealBody": "Когато текущата група блистери свърши, автоматично ще се създаде нова група блистери. Не е нужно да превключвате ръчно и записите за приема ще останат пълни.",
   "alarmKitFeatureAppealTitle": "Аларма, която звъни като будилник",
-  "alarmKitFeatureAppealShortDescription": "Известия, звучащи дори в тих режим",
+  "alarmKitFeatureAppealShortDescription": "Известия със звук дори в безшумен режим",
   "alarmKitFeatureAppealHeadline": "Аларма за прием като будилник",
   "alarmKitFeatureAppealBody": "С помощта на AlarmKit, наличен за iOS 26 и по-нови версии, ще получавате известия за приема на хапчето чрез аларма, която звъни надеждно дори в тих режим или режим на фокусиране.",
   "todayPillNumberFeatureAppealTitle": "Задайте номера на таблетката за днес",

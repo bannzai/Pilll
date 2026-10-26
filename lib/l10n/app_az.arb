@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Növbəti həb blisterini avtomatik yaradın",
   "creatingNewPillSheetFeatureAppealBody": "Cari həb blister qrupu bitdikdə yeni həb blister qrupu avtomatik yaradılır. Əl ilə keçid etməyinizə ehtiyac qalmır və qəbul qeydlərinizdə boşluq yaranmır.",
   "alarmKitFeatureAppealTitle": "Zəngli saat kimi səslənən xatırlatma",
-  "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də mütləq çalınan bildirişlər",
+  "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də səslənən bildirişlər",
   "alarmKitFeatureAppealHeadline": "Zəng saatı kimi dərman qəbulu siqnalı",
   "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit-dən istifadə edərək, səssiz rejim və ya fokus rejimində belə mütləq çalan zəng vasitəsilə həbi qəbul etməyi xatırladır.",
   "todayPillNumberFeatureAppealTitle": "Bugünkü qəbul nömrəsini tənzimləyin",

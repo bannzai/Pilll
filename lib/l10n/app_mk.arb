@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматско создавање на следен блистер",
   "creatingNewPillSheetFeatureAppealBody": "Кога ќе заврши тековната група блистер, автоматски ќе се создаде нова група блистер. Нема потреба рачно да менувате, а записите за земање ќе останат целосни.",
   "alarmKitFeatureAppealTitle": "Аларм што ѕвони како будилник",
-  "alarmKitFeatureAppealShortDescription": "Известувања што сигурно ќе се огласат дури и во тивок режим",
+  "alarmKitFeatureAppealShortDescription": "Известувања што се слушаат и во тивок режим",
   "alarmKitFeatureAppealHeadline": "Аларм за земање како будилник",
   "alarmKitFeatureAppealBody": "Со AlarmKit, достапен на iOS 26 и понатака, ќе ве потсетува да ја земете пилулата со сигнал што сигурно ќе се огласи дури и во тивок или во режимот за фокусирање.",
   "todayPillNumberFeatureAppealTitle": "Постави го денешниот број на земање",

@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automáticamente el siguiente blíster",
   "creatingNewPillSheetFeatureAppealBody": "Cuando se termine el grupo actual de blísteres, se creará uno nuevo automáticamente. No tendrás que cambiarlo manualmente y el registro de tomas quedará completo.",
   "alarmKitFeatureAppealTitle": "Una alarma que suena como un despertador",
-  "alarmKitFeatureAppealShortDescription": "Notificaciones que suenan incluso en silencio",
+  "alarmKitFeatureAppealShortDescription": "Avisos que suenan incluso en modo silencio",
   "alarmKitFeatureAppealHeadline": "Alarma de toma como un despertador",
   "alarmKitFeatureAppealBody": "Con AlarmKit, disponible en iOS 26 y versiones posteriores, recibirás una alarma que suena incluso en modo silencio o modo de enfoque para recordarte que tomes tu píldora.",
   "todayPillNumberFeatureAppealTitle": "Ajustar el número de toma de hoy",

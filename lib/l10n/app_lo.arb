@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "ສ້າງແຜງຢາຄຸມແຜງຕໍ່ໄປໂດຍອັດຕະໂນມັດ",
   "creatingNewPillSheetFeatureAppealBody": "ເມື່ອກຸ່ມແຜງຢາຄຸມປັດຈຸບັນໝົດແລ້ວ ກຸ່ມແຜງຢາຄຸມໃໝ່ຈະຖືກສ້າງໃຫ້ອັດຕະໂນມັດ. ບໍ່ຕ້ອງປ່ຽນເອງ ແລະບັນທຶກການກິນຢາຈະຄົບຖ້ວນ.",
   "alarmKitFeatureAppealTitle": "ສັນຍານເຕືອນທີ່ດັງຄືໂມງປຸກ",
-  "alarmKitFeatureAppealShortDescription": "ແຈ້ງເຕືອນທີ່ຍັງສຽງເມື່ອຢູ່ໃນໂມດງຽບ",
+  "alarmKitFeatureAppealShortDescription": "ການແຈ້ງເຕືອນທີ່ມີສຽງແມ່ນແຕ່ໃນໂໝດງຽບ",
   "alarmKitFeatureAppealHeadline": "ແຈ້ງເຕືອນການກິນຢາ ຄ້າຍຄືນາມເຕືອນ",
   "alarmKitFeatureAppealBody": "ໃຊ້ AlarmKit ທີ່ມີໃນ iOS 26 ເພື່ອແຈ້ງເຕືອນເວລາກິນຢາດ້ວຍສຽງທີ່ຈະດັ່ງແມ່ນໃນໂມດ Silent ຫຼື Focus.",
   "todayPillNumberFeatureAppealTitle": "ປັບຈຳນວນການກິນມື້ນີ້",

@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Buat strip pil berikutnya secara otomatis",
   "creatingNewPillSheetFeatureAppealBody": "Saat kelompok strip pil saat ini habis, kelompok baru akan dibuat otomatis. Anda tidak perlu beralih secara manual, dan catatan minum pil tetap lengkap.",
   "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",
-  "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi meskipun dalam mode senyap",
+  "alarmKitFeatureAppealShortDescription": "Notifikasi yang tetap berbunyi dalam mode senyap",
   "alarmKitFeatureAppealHeadline": "Alarm pengingat minum pil seperti jam weker",
   "alarmKitFeatureAppealBody": "Menggunakan AlarmKit yang tersedia di iOS 26 ke atas, akan mengingatkan Anda untuk minum pil dengan alarm yang tetap berbunyi meskipun dalam mode senyap atau mode Fokus.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nomor pil hari ini",

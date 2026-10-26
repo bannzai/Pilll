@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Opprett neste pillebrett automatisk",
   "creatingNewPillSheetFeatureAppealBody": "Når den nåværende gruppen med pillebrett er brukt opp, opprettes en ny gruppe automatisk. Du trenger ikke å bytte manuelt, og registreringene av pilleinntak forblir komplette.",
   "alarmKitFeatureAppealTitle": "En alarm som ringer som en vekkerklokke",
-  "alarmKitFeatureAppealShortDescription": "Varsler som ringer selv i stillemodus",
+  "alarmKitFeatureAppealShortDescription": "Varsler med lyd, selv i lydløs modus",
   "alarmKitFeatureAppealHeadline": "Medisinalarm som en vekkerklokke",
   "alarmKitFeatureAppealBody": "Med AlarmKit, tilgjengelig på iOS 26 og nyere, varsles du om å ta pillene dine med en alarm som alltid ringer – selv i stillemodus eller fokusmodus.",
   "todayPillNumberFeatureAppealTitle": "Juster dagens dosenummer",

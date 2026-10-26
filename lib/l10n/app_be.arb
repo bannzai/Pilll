@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Аўтаматычна стварыць наступны блістар",
   "creatingNewPillSheetFeatureAppealBody": "Калі бягучая група блістараў скончыцца, новая група блістараў створыцца аўтаматычна. Вам не трэба пераключацца ўручную, а запісы пра прыём застануцца поўнымі.",
   "alarmKitFeatureAppealTitle": "Напамін, які звініць як будзільнік",
-  "alarmKitFeatureAppealShortDescription": "Апавяшчэнні, якія гучаць нават у бясшумным рэжыме",
+  "alarmKitFeatureAppealShortDescription": "Апавяшчэнні са гукам нават у бязгучным рэжыме",
   "alarmKitFeatureAppealHeadline": "Будзільнік для прыёму таблетак",
   "alarmKitFeatureAppealBody": "З дапамогай AlarmKit, даступнага на iOS 26 і больш позніх версіях, праграма паведамляе вам аб прыёме таблеткі праз будільнік, які надзейна спрацоўвае нават у рэжыме бязгучнасці або рэжыме фокусу.",
   "todayPillNumberFeatureAppealTitle": "Наладзіць нумар прыёму на сёння",

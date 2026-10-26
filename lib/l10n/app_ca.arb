@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Crea automàticament el blíster següent",
   "creatingNewPillSheetFeatureAppealBody": "Quan s’acabi el grup actual de blísters, se’n crearà un de nou automàticament. No hauràs de canviar-lo manualment i el registre de les preses quedarà complet.",
   "alarmKitFeatureAppealTitle": "Una alarma que sona com un despertador",
-  "alarmKitFeatureAppealShortDescription": "Notificacions que sonen fins i tot en silenci",
+  "alarmKitFeatureAppealShortDescription": "Avisos que sonen fins i tot en mode silenci",
   "alarmKitFeatureAppealHeadline": "Alarma de medicació com un despertador",
   "alarmKitFeatureAppealBody": "Utilitza AlarmKit, disponible a partir d'iOS 26, per avisar-te de prendre la píndola amb una alarma que sona de manera fiable fins i tot en mode silenci o mode de concentració.",
   "todayPillNumberFeatureAppealTitle": "Ajusta el número de la píndola d'avui",

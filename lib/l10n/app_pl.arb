@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Utwórz automatycznie kolejny blist",
   "creatingNewPillSheetFeatureAppealBody": "Gdy skończy się obecna grupa blistrów, automatycznie powstanie nowa. Nie trzeba przełączać jej ręcznie, a zapisy przyjmowania tabletek pozostaną kompletne.",
   "alarmKitFeatureAppealTitle": "Alarm dzwoniący jak budzik",
-  "alarmKitFeatureAppealShortDescription": "Powiadomienia działające niezawodnie nawet w trybie cichym",
+  "alarmKitFeatureAppealShortDescription": "Powiadomienia z dźwiękiem nawet w trybie cichym",
   "alarmKitFeatureAppealHeadline": "Alarm przyjmowania tabletek jak budzik",
   "alarmKitFeatureAppealBody": "Korzystając z AlarmKit dostępnego w systemie iOS 26 i nowszych, powiadamia Cię o przyjęciu pigułki za pomocą alarmu, który niezawodnie dzwoni nawet w trybie cichym lub trybie skupienia.",
   "todayPillNumberFeatureAppealTitle": "Dostosuj numer tabletki na dziś",

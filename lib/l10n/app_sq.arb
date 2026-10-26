@@ -497,7 +497,7 @@
   "creatingNewPillSheetFeatureAppealHeadline": "Krijoni automatikisht blister-in e radhës",
   "creatingNewPillSheetFeatureAppealBody": "Kur të mbarojë grupi aktual i blisterave, do të krijohet automatikisht një grup i ri. Nuk keni nevojë ta ndërroni vetë dhe shënimet e marrjes do të mbeten të plota.",
   "alarmKitFeatureAppealTitle": "Alarm që bie si orë me zile",
-  "alarmKitFeatureAppealShortDescription": "Njoftime që patjetër do të tingëllojnë edhe në modalitetin heshtjeje",
+  "alarmKitFeatureAppealShortDescription": "Njoftime që dëgjohen edhe në modalitetin pa zë",
   "alarmKitFeatureAppealHeadline": "Alarm për marrjen e pilulave, si një zgjues",
   "alarmKitFeatureAppealBody": "Përdor AlarmKit të disponueshëm në iOS 26 e më lart për t'ju kujtuar të merrni pilulën me një alarm që do të tingëllojë patjetër edhe në modalitetin pa zë dhe në modalitetin Fokus.",
   "todayPillNumberFeatureAppealTitle": "Rregullo numrin e marrjes për sot",
