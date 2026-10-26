@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "L’attivazione dell’acquisto è ancora in corso. Attendi un po’ e verifica di nuovo",
   "launchError": "Si è verificato un errore all'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli:",
   "exampleRestDurationDate": "Per esempio, se fai una pausa di 3 giorni dall’assunzione della pillola a partire dal 1/12",
-  "exampleRestDurationNumber": "Ad esempio \"dalla 18ª per 3 giorni\" in caso di pausa dall'assunzione",
+  "exampleRestDurationNumber": "Per esempio, se fai una pausa di 3 giorni a partire dalla pillola 18",
   "withNumber": "{number}ª",
   "currentPillSheetNotFound": "Non è stata trovata la confezione di pillole attualmente in uso",
   "doNotRevertTakePillInPausePeriod": "Non è possibile annullare l'assunzione della pillola durante il periodo di pausa",

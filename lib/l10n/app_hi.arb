@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "आपकी खरीदारी अभी सक्रिय की जा रही है। कृपया थोड़ी देर बाद फिर जाँच करें",
   "launchError": "ऐप खोलते समय कोई गड़बड़ी हुई।\n{ErrorMessagesConnection}\n\nविवरण:",
   "exampleRestDurationDate": "उदाहरण के लिए, अगर आप 1/12 से 3 दिनों के लिए गोली लेना रोकें",
-  "exampleRestDurationNumber": "उदाहरण के लिए \"18वें से 3 दिन तक\" सेवन बंद करने पर",
+  "exampleRestDurationNumber": "उदाहरण के लिए, अगर 18वीं गोली से शुरू करके 3 दिनों तक गोली लेने से विराम लिया जाए",
   "withNumber": "{number}वां",
   "currentPillSheetNotFound": "वर्तमान में सक्रिय पिल शीट नहीं मिली",
   "doNotRevertTakePillInPausePeriod": "विश्राम अवधि में पिल सेवन रद्द नहीं किया जा सकता",

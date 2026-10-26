@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Xaridingizni faollashtirish hali yakunlanmadi. Iltimos, biroz kutib, qayta tekshiring",
   "launchError": "Ilova ochilayotganda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar:",
   "exampleRestDurationDate": "Masalan, 1/12 dan boshlab 3 kun davomida tabletkani qabul qilishda tanaffus qilsangiz",
-  "exampleRestDurationNumber": "Masalan «18-raqamdan 3 kun» qabul qilishni to'xtatgan holda",
+  "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kun davomida tabletka qabul qilishni toʻxtatsangiz",
   "withNumber": "{number}-chi",
   "currentPillSheetNotFound": "Hozirgi faol pil varag'i topilmadi",
   "doNotRevertTakePillInPausePeriod": "Dam olish davrida hapbalar qabul qilishni bekor qilish amali bajarilmaydi",

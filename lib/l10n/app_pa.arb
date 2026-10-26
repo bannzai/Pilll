@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "ਤੁਹਾਡੀ ਖਰੀਦ ਹਾਲੇ ਸਰਗਰਮ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰੋ",
   "launchError": "ਐਪ ਖੋਲ੍ਹਣ ਵੇਲੇ ਇੱਕ ਗੜਬੜ ਹੋਈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ:",
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ ਰੱਖੋ",
-  "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ \"18ਵੇਂ ਨੰਬਰ ਤੋਂ 3 ਦਿਨ\" ਦਵਾਈ ਬੰਦ ਕਰਨ ਦੇ ਮਾਮਲੇ ਵਿੱਚ",
+  "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 18ਵੀਂ ਗੋਲੀ ਤੋਂ ਸ਼ੁਰੂ ਕਰਕੇ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਲੈਂਦੇ ਹੋ",
   "withNumber": "{number}ਵਾਂ",
   "currentPillSheetNotFound": "ਮੌਜੂਦਾ ਟੀਚੇ ਵਾਲੀ ਗੋਲੀ ਸ਼ੀਟ ਨਹੀਂ ਮਿਲੀ",
   "doNotRevertTakePillInPausePeriod": "ਬ੍ਰੇਕ ਪੀਰੀਅਡ ਦੇ ਦੌਰਾਨ ਪਿੱਲ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",

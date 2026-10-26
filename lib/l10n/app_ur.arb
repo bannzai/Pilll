@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "خریداری کو فعال کرنے کا عمل ابھی مکمل نہیں ہوا۔ براہِ کرم کچھ دیر بعد دوبارہ چیک کریں",
   "launchError": "ایپ کھولتے وقت ایک خرابی پیش آئی۔\n{ErrorMessagesConnection}\n\nتفصیلات:",
   "exampleRestDurationDate": "مثلاً، اگر آپ 1/12 سے 3 دن کے لیے گولی لینا روک دیں",
-  "exampleRestDurationNumber": "مثال کے طور پر «18 نمبر سے 3 دن» دوا لینے میں وقفہ کی صورت میں",
+  "exampleRestDurationNumber": "مثلاً، اگر گولی نمبر 18 سے شروع کرکے 3 دن کے لیے گولیاں لینے میں وقفہ کیا جائے",
   "withNumber": "{number} نمبر",
   "currentPillSheetNotFound": "موجودہ گولی کی شیٹ نہیں ملی",
   "doNotRevertTakePillInPausePeriod": "گولی کے استعمال کو منسوخ کرنے کا عمل آرام کی مدت کے دوران نہیں کیا جا سکتا",

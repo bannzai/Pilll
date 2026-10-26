@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "د پېرود فعالول لا نه دي بشپړ شوي. مهرباني وکړئ لږ انتظار وکړئ او بیا یې وګورئ",
   "launchError": "د اپ د پرانیستلو پر مهال یوه تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nجزییات:",
   "exampleRestDurationDate": "د بېلګې په توګه، که تاسو له 1/12 څخه د 3 ورځو لپاره د ګولۍ اخیستل وځنډوئ",
-  "exampleRestDurationNumber": "د بیلګې په توګه \"د ۱۸ نمبر څخه ۳ ورځې\" د خوړلو د ډنډ کولو په صورت کې",
+  "exampleRestDurationNumber": "د بېلګې په توګه، که د 18مې ګولۍ څخه پیل او د 3 ورځو لپاره د ګولیو اخیستل وځنډوئ",
   "withNumber": "{number}مه",
   "currentPillSheetNotFound": "د اوسنۍ هدف شوي ګولیو پاڼه ونه موندل شوه",
   "doNotRevertTakePillInPausePeriod": "د آرام د دورې پرمهال د ګولۍ اخیستلو لغوه کول نشي کیدی",

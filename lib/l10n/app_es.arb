@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Tu compra aún se está activando. Espera un momento y vuelve a comprobarlo",
   "launchError": "Se produjo un error al abrir la aplicación.\n{ErrorMessagesConnection}\n\nDetalles:",
   "exampleRestDurationDate": "Por ejemplo, si haces una pausa de 3 días en la toma de la píldora a partir del 1 de diciembre",
-  "exampleRestDurationNumber": "Por ejemplo, si pausas la toma \"del número 18 por 3 días\"",
+  "exampleRestDurationNumber": "Por ejemplo, si haces una pausa de 3 días a partir de la píldora 18",
   "withNumber": "No. {number}",
   "currentPillSheetNotFound": "No se encontró la cartela de píldoras actual",
   "doNotRevertTakePillInPausePeriod": "No se puede cancelar el registro de toma de píldora durante el período de descanso",

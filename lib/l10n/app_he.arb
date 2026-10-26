@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "הפעלת הרכישה עדיין לא הושלמה. כדאי להמתין מעט ולבדוק שוב",
   "launchError": "אירעה שגיאה בעת פתיחת האפליקציה.\n{ErrorMessagesConnection}\n\nפרטים:",
   "exampleRestDurationDate": "לדוגמה, במקרה של הפסקה בנטילת הגלולה למשך 3 ימים החל מ־1/12",
-  "exampleRestDurationNumber": "לדוגמה \"הפסקה ממספר 18 למשך 3 ימים\"",
+  "exampleRestDurationNumber": "למשל, במקרה של הפסקה בנטילת הגלולות למשך 3 ימים החל מגלולה מספר 18",
   "withNumber": "מס' {number}",
   "currentPillSheetNotFound": "לא נמצא גליון הכדורים הנוכחי",
   "doNotRevertTakePillInPausePeriod": "לא ניתן לבטל רישום נטילת גלולה במהלך תקופת המנוחה",

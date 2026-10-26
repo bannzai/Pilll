@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Alışın aktivləşdirilməsi hələ tamamlanmayıb. Zəhmət olmasa, bir az gözləyib yenidən yoxlayın",
   "launchError": "Tətbiq açılarkən xəta baş verdi.\n{ErrorMessagesConnection}\n\nTəfərrüatlar:",
   "exampleRestDurationDate": "Məsələn, 1/12 tarixindən başlayaraq 3 gün həb qəbuluna fasilə vermisinizsə",
-  "exampleRestDurationNumber": "Məsələn \"18-ci həbdən 3 gün\" qəbuluna fasilə verildikdə",
+  "exampleRestDurationNumber": "Məsələn, 18-ci həbdən başlayaraq 3 gün həb qəbul etməyə fasilə vermisinizsə",
   "withNumber": "{number} nömrə",
   "currentPillSheetNotFound": "Hazırda hədəflənən həb səhifəsi tapılmadı",
   "doNotRevertTakePillInPausePeriod": "İstirahət dövrü ərzində həb qəbulunun ləğv edilməsi mümkün deyil",

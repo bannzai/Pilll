@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активирането на покупката още не е завършило. Моля, изчакайте малко и проверете отново",
   "launchError": "Възникна грешка при стартирането на приложението.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, ако сте направили пауза в приема на хапчета за 3 дни от 1/12",
-  "exampleRestDurationNumber": "Например, при прекъсване на приема „от номер 18 за 3 дни\"",
+  "exampleRestDurationNumber": "Например, ако сте направили 3-дневна пауза в приема, започвайки от хапче № 18",
   "withNumber": "№{number}",
   "currentPillSheetNotFound": "Не е намерена текущата опаковка хапчета",
   "doNotRevertTakePillInPausePeriod": "Отмяната на приема на пилулата не е възможна по време на почивния период",

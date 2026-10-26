@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Ukusebenza kokuthengile akukapheli. Sicela ulinde kancane bese uhlola futhi",
   "launchError": "Kuvele iphutha ngesikhathi kuvulwa uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane:",
   "exampleRestDurationDate": "Isibonelo, uma uthatha ikhefu lokuphuza iphilisi izinsuku ezi-3 kusukela ngo-1/12",
-  "exampleRestDurationNumber": "Isibonelo, uma uphumula ukuthatha kusukela ku-18 okwezinsuku ezi-3",
+  "exampleRestDurationNumber": "Ngokwesibonelo, uma uthatha ikhefu lezinsuku ezi-3 ekuphuzeni amaphilisi, kusukela kuphilisi le-18",
   "withNumber": "Ipilisi {number}",
   "currentPillSheetNotFound": "Iphakheji lamaphilisi elisetshenzisiwe yamanje alitholakali",
   "doNotRevertTakePillInPausePeriod": "Ukucisha ukuthatha kwamaphilisi akukwazi ukwenziwa ngesikhathi sokuphumula emithini",

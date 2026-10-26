@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Nid yw’r pryniant wedi’i actifadu eto. Arhoswch ychydig ac edrychwch eto",
   "launchError": "Digwyddodd gwall wrth agor yr ap.\n{ErrorMessagesConnection}\n\nManylion:",
   "exampleRestDurationDate": "Er enghraifft, os byddwch chi’n cael seibiant o 3 diwrnod o gymryd y bilsen o 1/12",
-  "exampleRestDurationNumber": "Er enghraifft, os ydych wedi rhoi seibiant \"o rif 18 am 3 diwrnod\"",
+  "exampleRestDurationNumber": "Er enghraifft, os byddwch yn cymryd seibiant o 3 diwrnod gan ddechrau gyda philsen 18",
   "withNumber": "rhif {number}",
   "currentPillSheetNotFound": "Ni chanfuwyd y daflen bilsen gyfredol",
   "doNotRevertTakePillInPausePeriod": "Ni ellir canslo cofnod cymryd y bilsen yn ystod y cyfnod seibiant",

@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активация покупки ещё не завершена. Пожалуйста, подождите немного и проверьте снова",
   "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, если вы сделаете перерыв в приёме таблетки на 3 дня с 1/12",
-  "exampleRestDurationNumber": "Например, в случае перерыва в приёме с 18-й таблетки на 3 дня",
+  "exampleRestDurationNumber": "Например, если вы делаете перерыв в приёме на 3 дня, начиная с таблетки № 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущая упаковка таблеток не найдена",
   "doNotRevertTakePillInPausePeriod": "Невозможно отменить прием таблеток во время периода плацебо",

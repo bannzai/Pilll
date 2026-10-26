@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "فعال‌سازی خرید هنوز کامل نشده است. لطفاً کمی صبر کنید و دوباره بررسی کنید",
   "launchError": "هنگام باز کردن برنامه خطایی رخ داد.\n{ErrorMessagesConnection}\n\nجزئیات:",
   "exampleRestDurationDate": "برای مثال، اگر از ۱/۱۲ به مدت ۳ روز مصرف قرص را متوقف کنید",
-  "exampleRestDurationNumber": "مثلاً در صورت قطع مصرف «از شماره ۱۸ به مدت ۳ روز»",
+  "exampleRestDurationNumber": "برای مثال، اگر از قرص شمارهٔ ۱۸ به‌مدت ۳ روز مصرف قرص را متوقف کنید",
   "withNumber": "شماره {number}",
   "currentPillSheetNotFound": "اطلاعات ورق قرص فعلی یافت نشد",
   "doNotRevertTakePillInPausePeriod": "عملیات لغو مصرف قرص در طول دوره استراحت امکان‌پذیر نیست",

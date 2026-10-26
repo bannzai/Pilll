@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Pirkuma aktivizēšana vēl nav pabeigta. Lūdzu, nedaudz uzgaidiet un pārbaudiet vēlreiz",
   "launchError": "Atverot lietotni, radās kļūda.\n{ErrorMessagesConnection}\n\nPapildinformācija:",
   "exampleRestDurationDate": "Piemēram, ja no 1/12 uz 3 dienām pārtraucat lietot tabletes",
-  "exampleRestDurationNumber": "Piemēram, „no 18. tabletes 3 dienas\" tablešu lietošanas pārtraukuma gadījumā",
+  "exampleRestDurationNumber": "Piemēram, ja, sākot ar 18. tableti, lietošanā ir 3 dienu pārtraukums",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Pašreizējā tablešu plāksne netika atrasta",
   "doNotRevertTakePillInPausePeriod": "Tablešu lietošanas atcelšana nav iespējama pārtraukuma periodā",

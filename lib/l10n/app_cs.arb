@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Aktivace nákupu ještě není dokončena. Počkejte prosím chvíli a zkuste to znovu zkontrolovat",
   "launchError": "Při spouštění aplikace došlo k chybě.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Například pokud od 1/12 na 3 dny přerušíte užívání pilulky",
-  "exampleRestDurationNumber": "Například když si dáte pauzu od užívání „od 18. tablety 3 dny\"",
+  "exampleRestDurationNumber": "Například při 3denní pauze v užívání počínaje tabletou č. 18",
   "withNumber": "č. {number}",
   "currentPillSheetNotFound": "Aktuální pilulkový arch nebyl nalezen",
   "doNotRevertTakePillInPausePeriod": "Během bezpilulkové pauzy nelze zrušit užití pilulky",

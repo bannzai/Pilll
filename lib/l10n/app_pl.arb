@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Aktywacja zakupu jeszcze trwa. Poczekaj chwilę i sprawdź ponownie",
   "launchError": "Podczas uruchamiania aplikacji wystąpił błąd.\n{ErrorMessagesConnection}\n\nSzczegóły:",
   "exampleRestDurationDate": "Na przykład, jeśli od 1/12 zrobisz 3-dniową przerwę w przyjmowaniu pigułki",
-  "exampleRestDurationNumber": "Na przykład „od numeru 18 przez 3 dni\" w przypadku przerwy w przyjmowaniu",
+  "exampleRestDurationNumber": "Na przykład przy 3-dniowej przerwie w przyjmowaniu, zaczynając od tabletki nr 18",
   "withNumber": "nr {number}",
   "currentPillSheetNotFound": "Nie znaleziono aktualnie używanego opakowania tabletek",
   "doNotRevertTakePillInPausePeriod": "Nie można cofnąć przyjęcia tabletki podczas okresu przerwy",

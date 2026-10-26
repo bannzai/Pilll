@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "మీ కొనుగోలు యాక్టివేషన్ ఇంకా పూర్తికాలేదు. దయచేసి కాసేపటి తర్వాత మళ్లీ తనిఖీ చేయండి",
   "launchError": "యాప్‌ను తెరిచేటప్పుడు లోపం ఏర్పడింది.\n{ErrorMessagesConnection}\n\nవివరాలు:",
   "exampleRestDurationDate": "ఉదాహరణకు, 1/12 నుంచి 3 రోజుల పాటు మాత్ర తీసుకోవడం ఆపితే",
-  "exampleRestDurationNumber": "ఉదాహరణకు \"18వ నుండి 3 రోజులు\" మందు తీసుకోవడం ఆపిన సందర్భంలో",
+  "exampleRestDurationNumber": "ఉదాహరణకు, 18వ మాత్ర నుంచి 3 రోజుల పాటు మాత్రలు తీసుకోవడం ఆపితే",
   "withNumber": "గుళిక {number}",
   "currentPillSheetNotFound": "ప్రస్తుత లక్ష్య పిల్ షీట్ కనుగొనబడలేదు",
   "doNotRevertTakePillInPausePeriod": "విరామ కాలంలో మందు తీసుకోవడాన్ని రద్దు చేయలేము",

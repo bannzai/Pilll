@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "તમારી ખરીદી હજી સક્રિય થઈ રહી છે. કૃપા કરીને થોડી વાર પછી ફરી તપાસો",
   "launchError": "ઍપ શરૂ કરતી વખતે ભૂલ આવી છે.\n{ErrorMessagesConnection}\n\nવિગતો:",
   "exampleRestDurationDate": "ઉદાહરણ તરીકે, તમે 1/12થી 3 દિવસ માટે ગોળી લેવાનું બંધ રાખો તો",
-  "exampleRestDurationNumber": "ઉદાહરણ તરીકે '18 નંબરથી 3 દિવસ' દવા લેવાનું બંધ કર્યું હોય તો",
+  "exampleRestDurationNumber": "ઉદાહરણ તરીકે, જો તમે 18મી ગોળીથી શરૂ કરીને 3 દિવસ માટે ગોળી લેવાનું બંધ રાખો",
   "withNumber": "{number} નંબર",
   "currentPillSheetNotFound": "હાલમાં લક્ષ્યાંકિત પિલ શીટ મળી નથી",
   "doNotRevertTakePillInPausePeriod": "વિરામકાળ દરમિયાન ગોળી લેવાનો રેકોર્ડ રદ કરી શકાતો નથી",

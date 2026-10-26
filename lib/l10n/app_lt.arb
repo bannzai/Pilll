@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Pirkinio aktyvinimas dar nebaigtas. Šiek tiek palaukite ir patikrinkite dar kartą",
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija:",
   "exampleRestDurationDate": "Pavyzdžiui, jei nuo gruodžio 1 d. padarote 3 dienų pertrauką nuo piliulių vartojimo",
-  "exampleRestDurationNumber": "Pavyzdžiui, „nuo 18-ojo 3 dienas\" nevartojimo atveju",
+  "exampleRestDurationNumber": "Pavyzdžiui, jei nuo 18-osios tabletės darote 3 dienų vartojimo pertrauką",
   "withNumber": "{number}-oji",
   "currentPillSheetNotFound": "Šiuo metu naudojamas tablečių lapas nerastas",
   "doNotRevertTakePillInPausePeriod": "Negalima atšaukti tablečių vartojimo įrašo pertraukos periodo metu",

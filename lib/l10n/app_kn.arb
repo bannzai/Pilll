@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "ನಿಮ್ಮ ಖರೀದಿ ಇನ್ನೂ ಸಕ್ರಿಯವಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ",
   "launchError": "ಆ್ಯಪ್ ತೆರೆಯುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು:",
   "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ, ನೀವು 1/12ರಿಂದ 3 ದಿನಗಳವರೆಗೆ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನಿಲ್ಲಿಸಿದರೆ",
-  "exampleRestDurationNumber": "ಉದಾಹರಣೆಗೆ「18ನೇಯಿಂದ 3 ದಿನಗಳ」ಸೇವನೆ ವಿರಾಮ ಮಾಡಿದ ಸಂದರ್ಭದಲ್ಲಿ",
+  "exampleRestDurationNumber": "ಉದಾಹರಣೆಗೆ, 18ನೇ ಮಾತ್ರೆಯಿಂದ ಆರಂಭಿಸಿ 3 ದಿನ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನಿಲ್ಲಿಸಿದರೆ",
   "withNumber": "{number}ನೇ",
   "currentPillSheetNotFound": "ಪ್ರಸ್ತುತ ಗುರಿಯಾಗಿರುವ ಮಾತ್ರೆ ಶೀಟ್ ಸಿಗಲಿಲ್ಲ",
   "doNotRevertTakePillInPausePeriod": "ವಿರಾಮ ಅವಧಿಯಲ್ಲಿ ಗೋಳಿ ಸೇವನೆಯ ರದ್ದತಿ ಕಾರ್ಯವನ್ನು ಮಾಡಲಾಗುವುದಿಲ್ಲ",

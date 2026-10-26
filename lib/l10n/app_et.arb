@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Ostu aktiveerimine pole veel lõppenud. Oota veidi ja kontrolli uuesti",
   "launchError": "Rakenduse käivitamisel tekkis viga.\n{ErrorMessagesConnection}\n\nÜksikasjad:",
   "exampleRestDurationDate": "Näiteks kui teed alates 1/12 pillide võtmises 3-päevase pausi",
-  "exampleRestDurationNumber": "Näiteks „18. tabletist alates 3 päevaks\" võtmise peatamine",
+  "exampleRestDurationNumber": "Näiteks kui teed alates pillist 18 pillide võtmisel 3-päevase pausi",
   "withNumber": "nr. {number}",
   "currentPillSheetNotFound": "Aktiivset pillitabletti ei leitud",
   "doNotRevertTakePillInPausePeriod": "Pilli võtmise tühistamine pole pillipause ajal võimalik",

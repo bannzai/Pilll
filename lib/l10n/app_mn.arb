@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Худалдан авалтыг идэвхжүүлэх үйл явц хараахан дуусаагүй байна. Түр хүлээгээд дахин шалгана уу",
   "launchError": "Аппыг нээх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй:",
   "exampleRestDurationDate": "Жишээлбэл, 1/12-ноос эхлэн 3 өдөр эмээ уухгүй завсарлавал",
-  "exampleRestDurationNumber": "Жишээ нь \"18 дугаараас 3 хоног\" эм уухыг завсарлуулсан тохиолдолд",
+  "exampleRestDurationNumber": "Жишээлбэл, 18 дахь шахмалаас эхлэн 3 өдөр уухаа түр зогсоовол",
   "withNumber": "{number} дугаар",
   "currentPillSheetNotFound": "Одоогийн зорилтот эмийн хуудас олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Эмийн хэрэглээг цуцлах үйлдлийг амралтын хугацаанд гүйцэтгэх боломжгүй",

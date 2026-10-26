@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Kjøpet ditt aktiveres fortsatt. Vent litt og sjekk igjen",
   "launchError": "Det oppsto en feil da appen ble åpnet.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra 1/12",
-  "exampleRestDurationNumber": "For eksempel hvis du tar pause fra nummer 18 i 3 dager",
+  "exampleRestDurationNumber": "For eksempel hvis du tar en pause fra p-pillene i 3 dager fra og med pille 18",
   "withNumber": "nr. {number}",
   "currentPillSheetNotFound": "Det gjeldende pilleskjemaet ble ikke funnet",
   "doNotRevertTakePillInPausePeriod": "Du kan ikke avbryte pilleinntak under den tabletfrie perioden",

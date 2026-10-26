@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Aktivacija kupovine još nije završena. Molimo Vas, pričekajte malo pa provjerite ponovo",
   "launchError": "Došlo je do greške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nDetalji:",
   "exampleRestDurationDate": "Naprimjer, ako ste od 1/12 napravili pauzu od 3 dana u uzimanju pilula",
-  "exampleRestDurationNumber": "Na primjer \"od 18. za 3 dana\" kada ste prekinuli uzimanje",
+  "exampleRestDurationNumber": "Na primjer, ako ste napravili pauzu od 3 dana počevši od pilule broj 18",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "Trenutno aktivna tabletka pilula nije pronađena",
   "doNotRevertTakePillInPausePeriod": "Poništavanje uzimanja pilule nije moguće tokom perioda pauze",

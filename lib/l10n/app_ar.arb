@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الشراء بعد. يُرجى الانتظار قليلًا ثم التحقق مرة أخرى",
   "launchError": "حدث خطأ عند فتح التطبيق.\n{ErrorMessagesConnection}\n\nالتفاصيل:",
   "exampleRestDurationDate": "مثلاً، إذا توقفتِ عن تناول الحبوب لمدة 3 أيام بدءًا من 1/12",
-  "exampleRestDurationNumber": "مثلاً \"من الحبة رقم 18 لمدة 3 أيام\" عند التوقف عن التناول",
+  "exampleRestDurationNumber": "مثلًا، إذا توقفتِ عن تناول الحبوب لمدة 3 أيام بدءًا من الحبة رقم 18",
   "withNumber": "رقم {number}",
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستهدف حالياً",
   "doNotRevertTakePillInPausePeriod": "لا يمكن إلغاء تسجيل تناول الحبوب خلال فترة الراحة",

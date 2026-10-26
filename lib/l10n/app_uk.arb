@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активація покупки ще не завершена. Будь ласка, трохи зачекайте й перевірте ще раз",
   "launchError": "Під час запуску застосунку сталася помилка.\n{ErrorMessagesConnection}\n\nДокладніше:",
   "exampleRestDurationDate": "Наприклад, якщо ви зробите перерву в прийомі пігулок на 3 дні з 1/12",
-  "exampleRestDurationNumber": "Наприклад, «з №18 протягом 3 днів» перерва в прийомі",
+  "exampleRestDurationNumber": "Наприклад, якщо ви робите перерву в прийомі пігулок на 3 дні, починаючи з пігулки № 18",
   "withNumber": "№{number}",
   "currentPillSheetNotFound": "Поточний блістер таблеток не знайдено",
   "doNotRevertTakePillInPausePeriod": "Не можна скасувати прийом пілюль під час періоду відміни",

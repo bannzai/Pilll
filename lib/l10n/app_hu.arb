@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "A vásárlás aktiválása még folyamatban van. Várj egy kicsit, majd ellenőrizd újra",
   "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek:",
   "exampleRestDurationDate": "Például ha 1/12-től 3 nap szünetet tartasz a tabletta szedésében",
-  "exampleRestDurationNumber": "Például ha „18. tablettától 3 napig\" szüneteltette a szedést",
+  "exampleRestDurationNumber": "Például ha a 18. tablettától kezdve 3 napig szünetet tartasz a szedésben",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "A jelenleg használt tablettabliszter nem található",
   "doNotRevertTakePillInPausePeriod": "A tabletta bevételének visszavonása nem lehetséges a szünet időszakban",

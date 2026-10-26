@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "কেনাকাটাটি এখনও সক্রিয় হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার দেখুন",
   "launchError": "অ্যাপটি চালু করার সময় একটি সমস্যা হয়েছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত:",
   "exampleRestDurationDate": "যেমন, আপনি ১/১২ থেকে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
-  "exampleRestDurationNumber": "যেমন \"১৮ নম্বর থেকে ৩ দিন\" সেবন বিরতির ক্ষেত্রে",
+  "exampleRestDurationNumber": "যেমন, ১৮ নম্বর পিল থেকে শুরু করে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
   "withNumber": "{number} নম্বর",
   "currentPillSheetNotFound": "বর্তমান পিল শীটটি পাওয়া যায়নি",
   "doNotRevertTakePillInPausePeriod": "বিরতির সময়কালে পিল সেবন বাতিল করার অপারেশন সম্পাদন করা যায় না",

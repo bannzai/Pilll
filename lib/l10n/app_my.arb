@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "ဝယ်ယူမှုကို အသက်သွင်းခြင်း မပြီးသေးပါ။ ခဏစောင့်ပြီး ထပ်မံစစ်ဆေးပေးပါ",
   "launchError": "အက်ပ်ကို ဖွင့်ချိန်မှာ အမှားတစ်ခု ဖြစ်သွားပါတယ်။\n{ErrorMessagesConnection}\n\nအသေးစိတ်:",
   "exampleRestDurationDate": "ဥပမာ၊ 1/12 မှစပြီး 3 ရက်ကြာ ဆေးလုံးသောက်ခြင်းကို ခေတ္တရပ်ထားပါက",
-  "exampleRestDurationNumber": "ဥပမာ 「နံပါတ် ၁၈ မှ ၃ ရက်」 သောက်ခြင်း ရပ်တန့်သောအခါ",
+  "exampleRestDurationNumber": "ဥပမာ၊ အမှတ် 18 ဆေးလုံးကစပြီး 3 ရက်ကြာ ဆေးသောက်ခြင်းကို ခေတ္တရပ်ထားပါက",
   "withNumber": "အမှတ် {number}",
   "currentPillSheetNotFound": "လက်ရှိ သုံးစွဲနေသော ဆေးလုံးပြားစာရင်းကို မတွေ့ရပါ",
   "doNotRevertTakePillInPausePeriod": "ဆေးမသောက်သည့်ကာလအတွင်း ဆေးသောက်မှတ်တမ်းပယ်ဖျက်ခြင်းလုပ်ဆောင်၍မရပါ",

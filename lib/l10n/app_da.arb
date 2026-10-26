@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Dit køb er ikke aktiveret endnu. Vent lidt, og tjek igen",
   "launchError": "Der opstod en fejl, da appen blev åbnet.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "For eksempel hvis du holder 3 dages pause med p-pillerne fra 1/12",
-  "exampleRestDurationNumber": "For eksempel hvis du holder pause med pilleindtagelsen \"fra nummer 18 i 3 dage\"",
+  "exampleRestDurationNumber": "For eksempel hvis du holder 3 dages pause fra p-pillen fra og med pille 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Det nuværende pillekort kunne ikke findes",
   "doNotRevertTakePillInPausePeriod": "Annullering af pilleindtagelse kan ikke udføres under pauseperioden",

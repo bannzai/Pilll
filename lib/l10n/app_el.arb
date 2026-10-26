@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της αγοράς δεν έχει ολοκληρωθεί ακόμη. Περιμένετε λίγο και ελέγξτε ξανά",
   "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση της εφαρμογής.\n{ErrorMessagesConnection}\n\nΛεπτομέρειες:",
   "exampleRestDurationDate": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από τη λήψη του χαπιού από την 1/12",
-  "exampleRestDurationNumber": "Για παράδειγμα, σε περίπτωση διακοπής λήψης «από το 18ο για 3 ημέρες»",
+  "exampleRestDurationNumber": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από το χάπι 18",
   "withNumber": "{number}ο",
   "currentPillSheetNotFound": "Δεν βρέθηκε το τρέχον φύλλο αντισυλληπτικών",
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να ακυρώσετε τη λήψη του χαπιού κατά τη διάρκεια της περιόδου διακοπής",

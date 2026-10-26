@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "የግዢው ማግበር ገና አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ይፈትሹ",
   "launchError": "መተግበሪያው ሲከፈት ስህተት ተፈጥሯል።\n{ErrorMessagesConnection}\n\nዝርዝሮች፦",
   "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ክኒን መውሰድን ካቆሙ",
-  "exampleRestDurationNumber": "ለምሳሌ \"ከ18ኛ ቁጥር ለ3 ቀናት\" መድሃኒት መውሰድ ያቆሙ ከሆነ",
+  "exampleRestDurationNumber": "ለምሳሌ፣ ከክኒን ቁጥር 18 ጀምሮ ለ3 ቀናት መውሰድ ካቆሙ",
   "withNumber": "{number}ኛ",
   "currentPillSheetNotFound": "አሁን የሚወሰደው የክኒን ወረቀት አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በእረፍት ጊዜ ውስጥ የክኒን መውሰድ መሰረዝ ክወና መፈጸም አይቻልም",

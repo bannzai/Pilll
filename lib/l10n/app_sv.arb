@@ -342,7 +342,7 @@
   "purchaseErrorPurchasePendingError": "Ditt köp håller fortfarande på att aktiveras. Vänta en stund och kontrollera igen",
   "launchError": "Ett fel uppstod när appen öppnades.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "Till exempel om du gör ett uppehåll med p-pillren i 3 dagar från 1/12",
-  "exampleRestDurationNumber": "Till exempel om du pausar intaget från piller nr 18 i 3 dagar",
+  "exampleRestDurationNumber": "Till exempel om du gör ett uppehåll på 3 dagar från och med piller 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Den aktuella pillerkarta kunde inte hittas",
   "doNotRevertTakePillInPausePeriod": "Du kan inte avbryta pillintag under viloperiodens gång",
