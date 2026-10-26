@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "Pilleriliuska on hävitetty",
   "aboutMenstruation": "Tietoa kuukautisista",
   "checkPillNumberForMenstruationStart": "Tarkista kuukautisten alkamispäivälle asetettu pillerinumero. Asetettua pillerinumeroa ei ole valitussa pilleriliuskatyypissä",
-  "customizeMedicationNotifications": "Ottoilmoitusten mukauttaminen",
+  "customizeMedicationNotifications": "Mukauta pillerimuistutuksia",
   "medicationNotification": "Lääkemuistutus",
   "xCanBeCustomized": "Voit mukauttaa {x}",
   "thankYouForCooperation": "Kiitoksia yhteistyöstä",

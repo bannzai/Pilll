@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "Η καρτέλα χαπιών απορρίφθηκε",
   "aboutMenstruation": "Πληροφορίες περιόδου",
   "checkPillNumberForMenstruationStart": "Ελέγξτε, παρακαλώ, τον αριθμό χαπιού για την ημέρα έναρξης της περιόδου. Ο καθορισμένος αριθμός χαπιού δεν υπάρχει στον επιλεγμένο τύπο καρτέλας χαπιών",
-  "customizeMedicationNotifications": "Εξατομίκευση ειδοποιήσεων",
+  "customizeMedicationNotifications": "Προσαρμογή ειδοποιήσεων για τη λήψη του χαπιού",
   "medicationNotification": "Ειδοποίηση λήψης",
   "xCanBeCustomized": "Μπορείτε να προσαρμόσετε το {x}",
   "thankYouForCooperation": "Σας ευχαριστούμε για τη συνεργασία σας",

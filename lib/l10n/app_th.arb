@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "ทิ้งแผงยาแล้วค่ะ",
   "aboutMenstruation": "เกี่ยวกับประจำเดือน",
   "checkPillNumberForMenstruationStart": "โปรดตรวจสอบหมายเลขเม็ดยาสำหรับวันเริ่มประจำเดือนค่ะ หมายเลขเม็ดยาที่ตั้งไว้ไม่มีในประเภทแผงยาที่เลือกอยู่ค่ะ",
-  "customizeMedicationNotifications": "ปรับแต่งการแจ้งเตือนทานยา",
+  "customizeMedicationNotifications": "ปรับแต่งการแจ้งเตือนให้ทานยา",
   "medicationNotification": "แจ้งเตือนรับประทาน",
   "xCanBeCustomized": "สามารถปรับแต่ง{x}ได้",
   "thankYouForCooperation": "ขอบคุณสำหรับความร่วมมือของคุณ",

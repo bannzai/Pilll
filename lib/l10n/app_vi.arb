@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "Đã bỏ vỉ thuốc",
   "aboutMenstruation": "Về kinh nguyệt",
   "checkPillNumberForMenstruationStart": "Vui lòng kiểm tra số thứ tự viên thuốc cho ngày bắt đầu kinh nguyệt. Số thứ tự viên thuốc đã đặt không có trong loại vỉ thuốc đang chọn",
-  "customizeMedicationNotifications": "Tùy chỉnh thông báo uống thuốc",
+  "customizeMedicationNotifications": "Tùy chỉnh thông báo nhắc uống thuốc",
   "medicationNotification": "Thông báo uống thuốc",
   "xCanBeCustomized": "Có thể tùy chỉnh {x}",
   "thankYouForCooperation": "Cảm ơn sự hợp tác của bạn",

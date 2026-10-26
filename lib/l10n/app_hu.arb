@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "A tablettacsomag ki lett dobva",
   "aboutMenstruation": "A menstruációról",
   "checkPillNumberForMenstruationStart": "Kérjük, ellenőrizd a menstruáció kezdőnapjához megadott tablettaszámot. A beállított tablettaszám nem szerepel a kiválasztott tablettacsomag típusban",
-  "customizeMedicationNotifications": "Bevételi értesítések testreszabása",
+  "customizeMedicationNotifications": "A tablettaszedési értesítések testreszabása",
   "medicationNotification": "Bevételi értesítés",
   "xCanBeCustomized": "A(z) {x} testreszabható",
   "thankYouForCooperation": "Köszönjük a segítségét!",

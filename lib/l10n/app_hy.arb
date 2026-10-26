@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "հաբերի բլիստեր դեն է նետվել",
   "aboutMenstruation": "Դաշտանի մասին",
   "checkPillNumberForMenstruationStart": "Խնդրում ենք ստուգել դաշտանի սկսվելու օրվա հաբի համարը։ Նշված հաբի համարը չկա ընտրված հաբերի բլիստերի տեսակում",
-  "customizeMedicationNotifications": "Դեղի ընդունման ծանուցումների հարմարեցում",
+  "customizeMedicationNotifications": "Հաբի ընդունման ծանուցումների անհատականացում",
   "medicationNotification": "Ընդունման ծանուցում",
   "xCanBeCustomized": "Կարող եք անհատականացնել {x}-ը",
   "thankYouForCooperation": "Շնորհակալություն ձեր գործակցության համար",

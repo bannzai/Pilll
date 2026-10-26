@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "Блистер выброшен",
   "aboutMenstruation": "О месячных",
   "checkPillNumberForMenstruationStart": "Пожалуйста, проверьте номер таблетки для дня начала месячных. Указанный номер таблетки отсутствует в выбранном типе блистера",
-  "customizeMedicationNotifications": "Настройка уведомлений о приёме",
+  "customizeMedicationNotifications": "Настроить напоминания о приёме таблетки",
   "medicationNotification": "Уведомление о приеме",
   "xCanBeCustomized": "Можно настроить {x}",
   "thankYouForCooperation": "Благодарим вас за сотрудничество",
