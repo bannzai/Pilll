@@ -185,7 +185,7 @@
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Informació segons la llei japonesa de transaccions comercials específiques",
-  "premiumTermsNotice3": "i registreu-vos després de revisar-ho",
+  "premiumTermsNotice3": "Revisa-ho abans de subscriure-t'hi",
   "autoRenewNotice": "・El període contractual es renovarà automàticament llevat que es cancel·li més de 24 hores abans de la data de finalització del període de contracte premium",
   "cancelAutoRenewInfo": "・Després de la compra, la cancel·lació de la renovació automàtica es pot fer a la configuració del compte de l'aplicació {storeName}. (No es pot cancel·lar la renovació automàtica des de l'aplicació).",
   "moreDetails": "Més detalls",

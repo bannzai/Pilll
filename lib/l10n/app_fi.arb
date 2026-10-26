@@ -185,7 +185,7 @@
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
   "premiumTermsNotice2": "Japanin tiettyjä kaupallisia toimia koskevan lain mukaiset tiedot",
-  "premiumTermsNotice3": "ja rekisteröidy tutustuttuasi niihin",
+  "premiumTermsNotice3": "Tutustu niihin ennen tilaamista",
   "autoRenewNotice": "・Tilaus uusitaan automaattisesti, ellei sitä peruuteta vähintään 24 tuntia ennen premium-tilausjakson päättymispäivää",
   "cancelAutoRenewInfo": "・Oston jälkeen automaattisen uudistamisen voi peruuttaa {storeName}-sovelluksen tilin asetuksista. (Automaattista uudistamista ei voi peruuttaa tästä sovelluksesta).",
   "moreDetails": "Lisätietoja",
