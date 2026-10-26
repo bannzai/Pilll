@@ -413,7 +413,7 @@
   "notificationTime": "เวลาแจ้งเตือน",
   "timeZoneChangedTo": "เปลี่ยนเขตเวลาเป็น {tz} แล้วค่ะ",
   "changeStartOfPillDays": "เปลี่ยนวันเริ่มนับจำนวนวันที่ทานยา",
-  "changeEndOfPillDays": "เปลี่ยนแปลงวันสิ้นสุดการรับประทานยา",
+  "changeEndOfPillDays": "เปลี่ยนวันสิ้นสุดการทานยา",
   "cannotUpdateToReplacePillSheet": "ไม่สามารถอัปเดตจากการเปลี่ยนแผงยาคุม id: {id}",
   "failedToGetPillSheetHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานได้ {error}",
   "cancelTaking": "ยกเลิกการรับประทาน",

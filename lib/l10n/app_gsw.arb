@@ -413,7 +413,7 @@
   "notificationTime": "Ziit vo de Erinnerig",
   "timeZoneChangedTo": "D Ziitzoone isch uf {tz} gänderet worde",
   "changeStartOfPillDays": "Afäng vo de Zählig vo de Pilledäg ändere",
-  "changeEndOfPillDays": "Änd vo de Iinahmtäg ändere",
+  "changeEndOfPillDays": "S Ändi vo de Pille-Iinahmtäg ändere",
   "cannotUpdateToReplacePillSheet": "Pilleblatt chönd nöd uusgtuuscht werde id: {id}",
   "failedToGetPillSheetHistory": "D Iinahm-Verlauf het nöd chöne abgrüeft wärde. {error}",
   "cancelTaking": "Innahm rückgängig mache",

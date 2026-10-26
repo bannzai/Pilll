@@ -413,7 +413,7 @@
   "notificationTime": "Amser yr hysbysiad",
   "timeZoneChangedTo": "Mae'r parth amser wedi'i newid i {tz}",
   "changeStartOfPillDays": "Newid dechrau cyfrif y dyddiau cymryd y bilsen",
-  "changeEndOfPillDays": "Newid diwedd cyfnod cymryd",
+  "changeEndOfPillDays": "Newid diwedd y dyddiau cymryd y bilsen",
   "cannotUpdateToReplacePillSheet": "Methu diweddaru trwy amnewid taflen pil id: {id}",
   "failedToGetPillSheetHistory": "Methodd nôl gwybodaeth hanes cymryd. {error}",
   "cancelTaking": "Canslo cymryd",

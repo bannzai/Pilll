@@ -413,7 +413,7 @@
   "notificationTime": "Giờ nhận thông báo",
   "timeZoneChangedTo": "Đã đổi múi giờ thành {tz}",
   "changeStartOfPillDays": "Thay đổi ngày bắt đầu đếm số ngày uống thuốc",
-  "changeEndOfPillDays": "Thay đổi ngày kết thúc uống thuốc",
+  "changeEndOfPillDays": "Thay đổi thời điểm kết thúc các ngày uống thuốc",
   "cannotUpdateToReplacePillSheet": "Không thể cập nhật do thay thế vỉ thuốc id: {id}",
   "failedToGetPillSheetHistory": "Không thể lấy thông tin lịch sử uống thuốc. {error}",
   "cancelTaking": "Hủy việc uống",

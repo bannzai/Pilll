@@ -413,7 +413,7 @@
   "notificationTime": "Paziņojuma laiks",
   "timeZoneChangedTo": "Laika josla mainīta uz {tz}",
   "changeStartOfPillDays": "Mainīt tablešu lietošanas dienu skaitīšanas sākumu",
-  "changeEndOfPillDays": "Mainīt terapijas beigas",
+  "changeEndOfPillDays": "Mainīt tablešu lietošanas dienu beigas",
   "cannotUpdateToReplacePillSheet": "Nevar atjaunināt tablešu plāksni nomaiņas dēļ, ID: {id}",
   "failedToGetPillSheetHistory": "Neizdevās ielādēt lietošanas vēsturi. {error}",
   "cancelTaking": "Atcelt uzņemšanu",

@@ -413,7 +413,7 @@
   "notificationTime": "Čas oznámení",
   "timeZoneChangedTo": "Časové pásmo bylo změněno na {tz}",
   "changeStartOfPillDays": "Změnit začátek počítání dnů užívání pilulek",
-  "changeEndOfPillDays": "Změnit konec doby užívání",
+  "changeEndOfPillDays": "Změnit konec dnů užívání pilulek",
   "cannotUpdateToReplacePillSheet": "Nepodařilo se aktualizovat výměnu balení pilulek id: {id}",
   "failedToGetPillSheetHistory": "Nepodařilo se načíst informace o historii užívání. {error}",
   "cancelTaking": "Zrušit užívání",

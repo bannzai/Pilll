@@ -413,7 +413,7 @@
   "notificationTime": "Pranešimo laikas",
   "timeZoneChangedTo": "Laiko juosta pakeista į {tz}",
   "changeStartOfPillDays": "Pakeiskite tablečių vartojimo dienų skaičiavimo pradžią",
-  "changeEndOfPillDays": "Keisti vartojimo dienų pabaigą",
+  "changeEndOfPillDays": "Pakeisti tablečių vartojimo dienų pabaigą",
   "cannotUpdateToReplacePillSheet": "Tablečių paketo pakeitimo atnaujinimas nepavyko id: {id}",
   "failedToGetPillSheetHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",
   "cancelTaking": "Atšaukti vartojimą",

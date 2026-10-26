@@ -413,7 +413,7 @@
   "notificationTime": "അറിയിപ്പ് സമയം",
   "timeZoneChangedTo": "സമയ മേഖല {tz} ആയി മാറ്റി",
   "changeStartOfPillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണൽ ആരംഭിക്കുന്ന ദിവസം മാറ്റുക",
-  "changeEndOfPillDays": "കഴിക്കുന്ന ദിവസങ്ങളുടെ അവസാനം മാറ്റുക",
+  "changeEndOfPillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ അവസാനം മാറ്റുക",
   "cannotUpdateToReplacePillSheet": "ഗുളിക ഷീറ്റ് മാറ്റിസ്ഥാപനം വഴി അപ്ഡേറ്റ് ചെയ്യാൻ കഴിയില്ല id: {id}",
   "failedToGetPillSheetHistory": "മരുന്ന് കഴിക്കുന്ന ചരിത്ര വിവരങ്ങൾ ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു। {error}",
   "cancelTaking": "സേവനം റദ്ദാക്കുക",

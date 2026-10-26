@@ -413,7 +413,7 @@
   "notificationTime": "Notification time",
   "timeZoneChangedTo": "Time zone changed to {tz}",
   "changeStartOfPillDays": "Change the start of the pill day count",
-  "changeEndOfPillDays": "Change end of dosing days",
+  "changeEndOfPillDays": "Change the end of pill-taking days",
   "cannotUpdateToReplacePillSheet": "Cannot update due to pill sheet replacement id: {id}",
   "failedToGetPillSheetHistory": "Failed to retrieve pill taking history information. {error}",
   "cancelTaking": "Undo Dose",

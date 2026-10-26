@@ -413,7 +413,7 @@
   "notificationTime": "שעת ההתראה",
   "timeZoneChangedTo": "אזור הזמן שונה ל־{tz}",
   "changeStartOfPillDays": "שינוי תחילת ספירת ימי נטילת הגלולה",
-  "changeEndOfPillDays": "שינוי תאריך סיום הנטילה",
+  "changeEndOfPillDays": "שינוי סוף ימי נטילת הגלולה",
   "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן באמצעות החלפת גליון הכדורים id: {id}",
   "failedToGetPillSheetHistory": "נכשל בקבלת מידע על היסטוריית הצריכה. {error}",
   "cancelTaking": "ביטול נטילה",

@@ -413,7 +413,7 @@
   "notificationTime": "Benachrichtigungszeit",
   "timeZoneChangedTo": "Die Zeitzone wurde auf {tz} geändert",
   "changeStartOfPillDays": "Beginn der Zählung deiner Pillentage ändern",
-  "changeEndOfPillDays": "Einnahmeende ändern",
+  "changeEndOfPillDays": "Ende der Pilleneinnahme ändern",
   "cannotUpdateToReplacePillSheet": "Aktualisierung durch Pillentabellen-Ersatz fehlgeschlagen ID: {id}",
   "failedToGetPillSheetHistory": "Das Abrufen der Einnahmehistorie ist fehlgeschlagen. {error}",
   "cancelTaking": "Einnahme stornieren",

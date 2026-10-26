@@ -413,7 +413,7 @@
   "notificationTime": "Час сповіщення",
   "timeZoneChangedTo": "Часовий пояс змінено на {tz}",
   "changeStartOfPillDays": "Змінити початок відліку днів прийому пігулок",
-  "changeEndOfPillDays": "Змінити кінець курсу прийому",
+  "changeEndOfPillDays": "Змінити завершення днів прийому пігулок",
   "cannotUpdateToReplacePillSheet": "Не вдалося оновити через заміну аркуша таблеток ID: {id}",
   "failedToGetPillSheetHistory": "Не вдалося отримати інформацію про історію прийому. {error}",
   "cancelTaking": "Скасувати прийом",

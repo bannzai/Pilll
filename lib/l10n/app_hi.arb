@@ -413,7 +413,7 @@
   "notificationTime": "सूचना का समय",
   "timeZoneChangedTo": "समय क्षेत्र बदलकर {tz} कर दिया गया है",
   "changeStartOfPillDays": "गोली लेने के दिनों की गिनती शुरू होने का दिन बदलें",
-  "changeEndOfPillDays": "सेवन अवधि का अंत बदलें",
+  "changeEndOfPillDays": "गोली लेने के दिनों का अंत बदलें",
   "cannotUpdateToReplacePillSheet": "गोली शीट के बदलाव से अपडेट नहीं हो सका id: {id}",
   "failedToGetPillSheetHistory": "दवा सेवन का इतिहास प्राप्त करने में असफल। {error}",
   "cancelTaking": "सेवन रद्द करें",

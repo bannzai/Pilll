@@ -413,7 +413,7 @@
   "notificationTime": "Kennisgewingstyd",
   "timeZoneChangedTo": "Tydsone verander na {tz}",
   "changeStartOfPillDays": "Verander waar die telling van pildaë begin",
-  "changeEndOfPillDays": "Verander einde van innamedae",
+  "changeEndOfPillDays": "Verander die einde van jou pilneemtyd",
   "cannotUpdateToReplacePillSheet": "Opdatering weens vervanging van die pilvel kon nie voltooi word nie. id: {id}",
   "failedToGetPillSheetHistory": "Kon nie die innamegeskiedenis se inligting ophaal nie. {error}",
   "cancelTaking": "Kanselleer inname",

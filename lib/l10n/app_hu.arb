@@ -413,7 +413,7 @@
   "notificationTime": "Értesítés időpontja",
   "timeZoneChangedTo": "Az időzóna {tz} értékre változott",
   "changeStartOfPillDays": "A tablettaszedési napok számolásának kezdete",
-  "changeEndOfPillDays": "A szedési napok végének módosítása",
+  "changeEndOfPillDays": "A tablettaszedési napok végének módosítása",
   "cannotUpdateToReplacePillSheet": "Tabletta lap csere frissítése sikertelen id: {id}",
   "failedToGetPillSheetHistory": "Nem sikerült lekérni a bevételi előzmények adatait. {error}",
   "cancelTaking": "Szedés visszavonása",

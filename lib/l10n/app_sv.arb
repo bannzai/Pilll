@@ -413,7 +413,7 @@
   "notificationTime": "Tid för avisering",
   "timeZoneChangedTo": "Tidszonen har ändrats till {tz}",
   "changeStartOfPillDays": "Ändra startdag för räkning av p-pillerdagar",
-  "changeEndOfPillDays": "Ändra slutet av intagsperioden",
+  "changeEndOfPillDays": "Ändra slutet på dagarna för pillerintag",
   "cannotUpdateToReplacePillSheet": "Kunde inte uppdatera vid byte av p-pillerkort id: {id}",
   "failedToGetPillSheetHistory": "Misslyckades med att hämta intagshistorik. {error}",
   "cancelTaking": "Ångra intag",

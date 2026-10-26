@@ -413,7 +413,7 @@
   "notificationTime": "Hora de la notificació",
   "timeZoneChangedTo": "La zona horària s'ha canviat a {tz}",
   "changeStartOfPillDays": "Canvia l'inici del recompte de dies de presa de la píndola",
-  "changeEndOfPillDays": "Canvi de final dels dies de presa",
+  "changeEndOfPillDays": "Canvia el final dels dies de presa de la píndola",
   "cannotUpdateToReplacePillSheet": "No es pot actualitzar la substitució del blíster id: {id}",
   "failedToGetPillSheetHistory": "No s'ha pogut obtenir la informació de l'historial de presa. {error}",
   "cancelTaking": "Cancel·l'ús",

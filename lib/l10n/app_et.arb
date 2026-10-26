@@ -413,7 +413,7 @@
   "notificationTime": "Teavituse aeg",
   "timeZoneChangedTo": "Ajavööndiks on nüüd {tz}",
   "changeStartOfPillDays": "Muuda pillivõtmise päevade arvestuse algust",
-  "changeEndOfPillDays": "Muuda võtmispäevade lõppu",
+  "changeEndOfPillDays": "Muuda pillivõtmispäevade lõppu",
   "cannotUpdateToReplacePillSheet": "Pillilehe asendamine ebaõnnestus id: {id}",
   "failedToGetPillSheetHistory": "Tablettide võtmise ajaloo andmete hankimine ebaõnnestus. {error}",
   "cancelTaking": "Tühista võtmine",

@@ -413,7 +413,7 @@
   "notificationTime": "Ora della notifica",
   "timeZoneChangedTo": "Il fuso orario è stato cambiato in {tz}",
   "changeStartOfPillDays": "Modifica l'inizio del conteggio dei giorni di assunzione della pillola",
-  "changeEndOfPillDays": "Modifica fine del periodo di assunzione",
+  "changeEndOfPillDays": "Modifica la fine dei giorni di assunzione della pillola",
   "cannotUpdateToReplacePillSheet": "Impossibile aggiornare sostituendo il blister delle pillole id: {id}",
   "failedToGetPillSheetHistory": "Impossibile recuperare la cronologia di assunzione. {error}",
   "cancelTaking": "Annulla assunzione",

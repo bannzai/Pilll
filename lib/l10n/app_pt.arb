@@ -413,7 +413,7 @@
   "notificationTime": "Horário da notificação",
   "timeZoneChangedTo": "O fuso horário foi alterado para {tz}",
   "changeStartOfPillDays": "Alterar o início da contagem dos dias de uso da pílula",
-  "changeEndOfPillDays": "Alterar fim do período de toma",
+  "changeEndOfPillDays": "Alterar o fim dos dias de uso da pílula",
   "cannotUpdateToReplacePillSheet": "Não foi possível atualizar devido à substituição da cartela de pílulas id: {id}",
   "failedToGetPillSheetHistory": "Falha ao obter as informações do histórico de uso. {error}",
   "cancelTaking": "Cancelar tomada",

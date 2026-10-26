@@ -413,7 +413,7 @@
   "notificationTime": "Muda wa arifa",
   "timeZoneChangedTo": "Saa za eneo zimebadilishwa kuwa {tz}",
   "changeStartOfPillDays": "Badilisha siku ya kuanza kuhesabu siku za kumeza kidonge",
-  "changeEndOfPillDays": "Badilisha mwisho wa kipindi cha umize dawa",
+  "changeEndOfPillDays": "Badilisha mwisho wa siku za kumeza vidonge",
   "cannotUpdateToReplacePillSheet": "Imeshindwa kusasisha kutokana na kubadilisha karatasi ya vidonge id: {id}",
   "failedToGetPillSheetHistory": "Imeshindwa kupata historia ya kutumia dawa. {error}",
   "cancelTaking": "Batilisha kumeza",

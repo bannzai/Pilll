@@ -413,7 +413,7 @@
   "notificationTime": "შეტყობინების დრო",
   "timeZoneChangedTo": "დროის სარტყელი შეიცვალა: {tz}",
   "changeStartOfPillDays": "აბის მიღების დღეების ათვლის დასაწყისის შეცვლა",
-  "changeEndOfPillDays": "მიღების პერიოდის დასასრულის შეცვლა",
+  "changeEndOfPillDays": "აბის მიღების დღეების დასრულების შეცვლა",
   "cannotUpdateToReplacePillSheet": "აბების ფურცლის ჩანაცვლებით განახლება ვერ ხერხდება id: {id}",
   "failedToGetPillSheetHistory": "მიღების ისტორიის ჩატვირთვა ვერ მოხერხდა. {error}",
   "cancelTaking": "მიღების გაუქმება",

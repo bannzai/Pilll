@@ -413,7 +413,7 @@
   "notificationTime": "Jakinarazpenaren ordua",
   "timeZoneChangedTo": "Ordu-eremua {tz} da orain",
   "changeStartOfPillDays": "Aldatu pilula hartzeko egunen zenbaketaren hasiera",
-  "changeEndOfPillDays": "Hartzeko egunen amaiera aldatu",
+  "changeEndOfPillDays": "Pilula hartzeko egunen amaiera aldatu",
   "cannotUpdateToReplacePillSheet": "Ezin da eguneratu pilula-orriaren ordezkapenaren ondorioz, id: {id}",
   "failedToGetPillSheetHistory": "Hartzeko historiaren informazioa eskuratzen huts egin du. {error}",
   "cancelTaking": "Hartzea ezeztatu",

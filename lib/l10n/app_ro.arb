@@ -413,7 +413,7 @@
   "notificationTime": "Ora notificării",
   "timeZoneChangedTo": "Fusul orar a fost schimbat la {tz}",
   "changeStartOfPillDays": "Schimbă începutul numărării zilelor de administrare a pilulei",
-  "changeEndOfPillDays": "Modifică sfârșitul zilelor de administrare",
+  "changeEndOfPillDays": "Schimbă sfârșitul zilelor de administrare a pilulei",
   "cannotUpdateToReplacePillSheet": "Nu se poate actualiza prin înlocuirea pastilei contraceptive id: {id}",
   "failedToGetPillSheetHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",
   "cancelTaking": "Anulare administrare",

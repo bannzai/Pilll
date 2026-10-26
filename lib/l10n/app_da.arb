@@ -413,7 +413,7 @@
   "notificationTime": "Notifikationstidspunkt",
   "timeZoneChangedTo": "Tidszonen er ændret til {tz}",
   "changeStartOfPillDays": "Skift startdag for optælling af p-pilledage",
-  "changeEndOfPillDays": "Ændr slutningen af indtagelsesperioden",
+  "changeEndOfPillDays": "Ændr slutningen på dagene med p-piller",
   "cannotUpdateToReplacePillSheet": "Kan ikke opdatere p-pille ark ved udskiftning id: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke indlæse indtagehistorik information. {error}",
   "cancelTaking": "Annuller indtag",

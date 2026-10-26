@@ -413,7 +413,7 @@
   "notificationTime": "දැනුම්දීමේ වේලාව",
   "timeZoneChangedTo": "වේලා කලාපය {tz} ලෙස වෙනස් කර ඇත",
   "changeStartOfPillDays": "පෙති ගන්නා දින ගණන ගණනය කිරීම ඇරඹෙන දිනය වෙනස් කරන්න",
-  "changeEndOfPillDays": "සේවන දින ගණනේ අවසානය වෙනස් කිරීම",
+  "changeEndOfPillDays": "පෙති ගන්නා දිනවල අවසානය වෙනස් කරන්න",
   "cannotUpdateToReplacePillSheet": "පිල් ශීට් ප්‍රතිස්ථාපනයෙන් යාවත්කාලීන කළ නොහැක id: {id}",
   "failedToGetPillSheetHistory": "ගන්නා මාත්‍රා ඉතිහාස තොරතුරු ලබා ගැනීමට අසමත් විය।{error}",
   "cancelTaking": "ගැනීම අවලංගු කරන්න",

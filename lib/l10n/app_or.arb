@@ -413,7 +413,7 @@
   "notificationTime": "ବିଜ୍ଞପ୍ତିର ସମୟ",
   "timeZoneChangedTo": "ସମୟ ମଣ୍ଡଳ {tz}କୁ ପରିବର୍ତ୍ତନ ହୋଇଛି",
   "changeStartOfPillDays": "ବଟିକା ଖାଇବା ଦିନ ଗଣନାର ଆରମ୍ଭ ଦିନ ବଦଳାନ୍ତୁ",
-  "changeEndOfPillDays": "ସେବନ ଅବଧିର ଶେଷ ପରିବର୍ତ୍ତନ କରନ୍ତୁ",
+  "changeEndOfPillDays": "ବଟିକା ଖାଇବା ଦିନଗୁଡ଼ିକର ଶେଷ ବଦଳାନ୍ତୁ",
   "cannotUpdateToReplacePillSheet": "ଔଷଧ ଶୀଟ ବଦଳାଇବାରେ ଅପଡେଟ ହେଲା ନାହିଁ id: {id}",
   "failedToGetPillSheetHistory": "ସେବନ ଇତିହାସ ତଥ୍ୟ ପ୍ରାପ୍ତିରେ ବିଫଳ ହୋଇଛି। {error}",
   "cancelTaking": "ସେବନ ବାତିଲ",

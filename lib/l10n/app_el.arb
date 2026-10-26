@@ -413,7 +413,7 @@
   "notificationTime": "Ώρα ειδοποίησης",
   "timeZoneChangedTo": "Η ζώνη ώρας άλλαξε σε {tz}",
   "changeStartOfPillDays": "Αλλαγή έναρξης μέτρησης ημερών λήψης του χαπιού",
-  "changeEndOfPillDays": "Αλλαγή τέλους ημερών λήψης",
+  "changeEndOfPillDays": "Αλλαγή λήξης των ημερών λήψης χαπιού",
   "cannotUpdateToReplacePillSheet": "Δεν είναι δυνατή η ενημέρωση λόγω αντικατάστασης φύλλου χαπιών id: {id}",
   "failedToGetPillSheetHistory": "Απέτυχε η ανάκτηση των πληροφοριών ιστορικού λήψης. {error}",
   "cancelTaking": "Ακύρωση λήψης",
