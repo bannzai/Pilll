@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopiér fejlfindingsoplysninger",
   "cancel": "Annuller",
   "signOut": "Log ud",
-  "autoAddPillSheetGroup": "Automatisk tilføjelse af pilleskemagruppe",
+  "autoAddPillSheetGroup": "Tilføj automatisk pillekortgrupper",
   "autoAddNewSheetAfterCurrentEnds": "Når den nuværende pillepakning slutter, tilføjes en ny pakning automatisk",
   "accountSettings": "Kontoindstillinger",
   "linked": "Tilsluttet",

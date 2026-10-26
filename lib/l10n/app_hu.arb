@@ -41,7 +41,7 @@
   "copyDebugInfo": "Hibakeresési adatok másolása",
   "cancel": "Mégse",
   "signOut": "Kijelentkezés",
-  "autoAddPillSheetGroup": "Automatikus tablettacsomag-csoport hozzáadás",
+  "autoAddPillSheetGroup": "Tablettacsomag-csoportok automatikus hozzáadása",
   "autoAddNewSheetAfterCurrentEnds": "A jelenlegi tablettacsomag befejezése után automatikusan új csomagot ad hozzá",
   "accountSettings": "Fiók beállítások",
   "linked": "Összekapcsolva",

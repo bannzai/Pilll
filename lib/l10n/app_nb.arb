@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopier feilsøkingsinformasjon",
   "cancel": "Avbryt",
   "signOut": "Logg ut",
-  "autoAddPillSheetGroup": "Automatisk tillegg av pillepakkegrupper",
+  "autoAddPillSheetGroup": "Legg til pillebrettgrupper automatisk",
   "autoAddNewSheetAfterCurrentEnds": "Når det gjeldende pillearket er ferdig, legges det automatisk til et nytt ark",
   "accountSettings": "Kontoinnstillinger",
   "linked": "Tilkoblet",

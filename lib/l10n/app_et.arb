@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopeeri silumisinfo",
   "cancel": "Tühista",
   "signOut": "Logi välja",
-  "autoAddPillSheetGroup": "Pillilehtede rühmade automaatne lisamine",
+  "autoAddPillSheetGroup": "Pillilehtrühmade automaatne lisamine",
   "autoAddNewSheetAfterCurrentEnds": "Kui praegune pillipakkide grupp lõpeb, lisatakse automaatselt uus pakk",
   "accountSettings": "Konto seaded",
   "linked": "Ühendatud",

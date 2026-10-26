@@ -41,7 +41,7 @@
   "copyDebugInfo": "Պատճենել վրիպազերծման տվյալները",
   "cancel": "Չեղարկել",
   "signOut": "Դուրս գալ հաշվից",
-  "autoAddPillSheetGroup": "Հապի թերթակների խմբի ավտոմատ ավելացում",
+  "autoAddPillSheetGroup": "հաբերի բլիստեր խմբերի ինքնաշխատ ավելացում",
   "autoAddNewSheetAfterCurrentEnds": "Ընթացիկ հապակի փաթեթի ավարտից հետո նոր փաթեթ կավելացվի ավտոմատ",
   "accountSettings": "Հաշվի կարգավորումներ",
   "linked": "Կապակցված",

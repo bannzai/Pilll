@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopirajte informacije za otklanjanje grešaka",
   "cancel": "Otkaži",
   "signOut": "Odjavite se",
-  "autoAddPillSheetGroup": "Automatsko dodavanje grupa lista pilula",
+  "autoAddPillSheetGroup": "Automatsko dodavanje blister grupa",
   "autoAddNewSheetAfterCurrentEnds": "Kada se završi trenutni paket pilula, automatski će se dodati novi paket",
   "accountSettings": "Postavke računa",
   "linked": "Povezano",

@@ -41,7 +41,7 @@
   "copyDebugInfo": "ডিবাগ তথ্য কপি করুন",
   "cancel": "বাতিল করুন",
   "signOut": "সাইন আউট করুন",
-  "autoAddPillSheetGroup": "স্বয়ংক্রিয় পিল শিট গ্রুপ সংযোজন",
+  "autoAddPillSheetGroup": "পিল শিটের গ্রুপ স্বয়ংক্রিয়ভাবে যোগ করা",
   "autoAddNewSheetAfterCurrentEnds": "বর্তমান পিল শিট গ্রুপ শেষ হলে, স্বয়ংক্রিয়ভাবে একটি নতুন শিট যোগ করা হবে",
   "accountSettings": "অ্যাকাউন্ট সেটিংস",
   "linked": "সংযুক্ত",

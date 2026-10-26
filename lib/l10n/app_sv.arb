@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopiera felsökningsinformation",
   "cancel": "Avbryt",
   "signOut": "Logga ut",
-  "autoAddPillSheetGroup": "Automatiskt tillägg av p-pillergrupper",
+  "autoAddPillSheetGroup": "Lägg till grupper med p-pillerkarta automatiskt",
   "autoAddNewSheetAfterCurrentEnds": "När nuvarande p-pillerblister tar slut läggs nästa blister till automatiskt",
   "accountSettings": "Kontoinställningar",
   "linked": "Ansluten",

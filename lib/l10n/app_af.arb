@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopieer ontfoutingsinligting",
   "cancel": "Kanselleer",
   "signOut": "Meld af",
-  "autoAddPillSheetGroup": "Outomatiese byvoeging van pillevelgroep",
+  "autoAddPillSheetGroup": "Voeg pilstrokiegroepe outomaties by",
   "autoAddNewSheetAfterCurrentEnds": "Wanneer die huidige pilbladgroep voltooi is, sal 'n nuwe blad outomaties bygevoeg word",
   "accountSettings": "Rekeninginstellings",
   "linked": "Gekoppel",

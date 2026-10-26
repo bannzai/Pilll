@@ -41,7 +41,7 @@
   "copyDebugInfo": "คัดลอกข้อมูลการแก้ไขข้อบกพร่อง",
   "cancel": "ยกเลิก",
   "signOut": "ออกจากระบบ",
-  "autoAddPillSheetGroup": "การเพิ่มกลุ่มแผ่นยาอัตโนมัติ",
+  "autoAddPillSheetGroup": "เพิ่มกลุ่มแผงยาอัตโนมัติ",
   "autoAddNewSheetAfterCurrentEnds": "เมื่อกลุ่มแผงยาปัจจุบันสิ้นสุดแล้ว ระบบจะเพิ่มแผงใหม่โดยอัตโนมัติ",
   "accountSettings": "ตั้งค่าบัญชี",
   "linked": "เชื่อมต่อแล้ว",

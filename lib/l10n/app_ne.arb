@@ -41,7 +41,7 @@
   "copyDebugInfo": "त्रुटि पत्ता लगाउने जानकारी प्रतिलिपि गर्नुहोस्",
   "cancel": "रद्द गर्नुहोस्",
   "signOut": "साइन आउट गर्नुहोस्",
-  "autoAddPillSheetGroup": "पिल शीट समूहको स्वचालित थप",
+  "autoAddPillSheetGroup": "चक्की पत्ता समूहहरू स्वतः थप्ने",
   "autoAddNewSheetAfterCurrentEnds": "हालको पिल शिट समूह सकिएपछि, नयाँ शिट स्वचालित रूपमा थपिनेछ।",
   "accountSettings": "खाता सेटिंग्स",
   "linked": "जोडिएको",

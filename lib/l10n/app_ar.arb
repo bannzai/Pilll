@@ -41,7 +41,7 @@
   "copyDebugInfo": "انسخي معلومات تصحيح الأخطاء",
   "cancel": "إلغاء",
   "signOut": "تسجيل الخروج",
-  "autoAddPillSheetGroup": "إضافة مجموعة لوحة الحبوب تلقائياً",
+  "autoAddPillSheetGroup": "إضافة مجموعات شريط تلقائيًا",
   "autoAddNewSheetAfterCurrentEnds": "سيتم إضافة شريط حبوب جديد تلقائيًا عند انتهاء المجموعة الحالية",
   "accountSettings": "إعدادات الحساب",
   "linked": "مرتبط",

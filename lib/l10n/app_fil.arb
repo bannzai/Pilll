@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopyahin ang impormasyon sa pag-debug",
   "cancel": "Kanselahin",
   "signOut": "Mag-sign out",
-  "autoAddPillSheetGroup": "Awtomatikong Pagdagdag ng Pill Sheet Group",
+  "autoAddPillSheetGroup": "Awtomatikong pagdagdag ng mga grupo ng pakete ng pildoras",
   "autoAddNewSheetAfterCurrentEnds": "Kapag natapos na ang kasalukuyang pill sheet group, awtomatikong magdadagdag ng bagong sheet",
   "accountSettings": "Account Settings",
   "linked": "Nakakonekta na",

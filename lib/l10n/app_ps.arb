@@ -41,7 +41,7 @@
   "copyDebugInfo": "د تېروتنو د موندلو معلومات کاپي کړئ",
   "cancel": "لغوه کړئ",
   "signOut": "له حسابه ووځئ",
-  "autoAddPillSheetGroup": "د ګولیو د پاڼې ګروپ خودکار اضافه کول",
+  "autoAddPillSheetGroup": "د ګولیو پاڼ ډلې په اوتومات ډول زیاتول",
   "autoAddNewSheetAfterCurrentEnds": "کله چې د اوسني د ګولۍ شیټ ګروپ پای ته ورسیږي، نوی شیټ به په اتوماتیک ډول اضافه شي",
   "accountSettings": "د حساب تنظیمات",
   "linked": "تړلی",

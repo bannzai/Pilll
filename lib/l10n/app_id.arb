@@ -41,7 +41,7 @@
   "copyDebugInfo": "Salin info debug",
   "cancel": "Batal",
   "signOut": "Keluar dari akun",
-  "autoAddPillSheetGroup": "Penambahan Otomatis Grup Lembar Pil",
+  "autoAddPillSheetGroup": "Tambahkan grup strip pil secara otomatis",
   "autoAddNewSheetAfterCurrentEnds": "Lembar pil baru akan ditambahkan secara otomatis setelah grup lembar pil saat ini berakhir",
   "accountSettings": "Pengaturan Akun",
   "linked": "Terhubung",

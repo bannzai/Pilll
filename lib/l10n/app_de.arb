@@ -41,7 +41,7 @@
   "copyDebugInfo": "Debug-Informationen kopieren",
   "cancel": "Abbrechen",
   "signOut": "Abmelden",
-  "autoAddPillSheetGroup": "Automatische Hinzufügung von Pillenblister-Gruppen",
+  "autoAddPillSheetGroup": "Pillenblister-Gruppen automatisch hinzufügen",
   "autoAddNewSheetAfterCurrentEnds": "Nach Abschluss der aktuellen Pillenblistergruppe wird automatisch ein neuer Blister hinzugefügt",
   "accountSettings": "Kontoeinstellungen",
   "linked": "Verknüpft",

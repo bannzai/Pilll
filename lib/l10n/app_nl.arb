@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopieer foutopsporingsinformatie",
   "cancel": "Annuleren",
   "signOut": "Uitloggen",
-  "autoAddPillSheetGroup": "Automatisch toevoegen van pillenstripgroepen",
+  "autoAddPillSheetGroup": "Pillenstripgroepen automatisch toevoegen",
   "autoAddNewSheetAfterCurrentEnds": "Een nieuwe pilstrip wordt automatisch toegevoegd wanneer de huidige strip op is",
   "accountSettings": "Accountinstellingen",
   "linked": "Gekoppeld",

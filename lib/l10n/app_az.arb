@@ -41,7 +41,7 @@
   "copyDebugInfo": "Sazlama məlumatını kopyalayın",
   "cancel": "Ləğv edin",
   "signOut": "Hesabdan çıxın",
-  "autoAddPillSheetGroup": "Həb vərəqi qrupunun avtomatik əlavə edilməsi",
+  "autoAddPillSheetGroup": "həb blister qruplarının avtomatik əlavə edilməsi",
   "autoAddNewSheetAfterCurrentEnds": "Hazırkı həb vərəqi qrupu bitdikdə, yeni vərəq avtomatik əlavə edilir",
   "accountSettings": "Hesab ayarları",
   "linked": "Bağlanmış",

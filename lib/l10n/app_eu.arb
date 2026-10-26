@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopiatu arazketa-informazioa",
   "cancel": "Utzi",
   "signOut": "Amaitu saioa",
-  "autoAddPillSheetGroup": "Pilula orri taldeen gehiketa automatikoa",
+  "autoAddPillSheetGroup": "Pilula-blister taldeak automatikoki gehitzea",
   "autoAddNewSheetAfterCurrentEnds": "Oraingo pilula-orri taldea amaitzen denean, orri berria automatikoki gehituko da",
   "accountSettings": "Kontu ezarpenak",
   "linked": "Konektatuta",

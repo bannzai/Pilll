@@ -41,7 +41,7 @@
   "copyDebugInfo": "Afrita villuleitarupplýsingar",
   "cancel": "Hætta við",
   "signOut": "Skrá út",
-  "autoAddPillSheetGroup": "Sjálfvirk viðbót pillupakaahópa",
+  "autoAddPillSheetGroup": "Bæta pilluspjaldshópum sjálfkrafa við",
   "autoAddNewSheetAfterCurrentEnds": "Nýtt pillublað verður sjálfkrafa bætt við þegar núverandi pilluhópur lýkur",
   "accountSettings": "Reikningsstillingar",
   "linked": "Tengt",

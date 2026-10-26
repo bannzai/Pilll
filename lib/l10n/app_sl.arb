@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopirajte podatke za odpravljanje napak",
   "cancel": "Prekliči",
   "signOut": "Odjavite se",
-  "autoAddPillSheetGroup": "Samodejno dodajanje skupine tablet",
+  "autoAddPillSheetGroup": "Samodejno dodajanje skupin ploščic",
   "autoAddNewSheetAfterCurrentEnds": "Ko se trenutna skupina tablet konča, bo samodejno dodana nova plošča.",
   "accountSettings": "Nastavitve računa",
   "linked": "Povezano",

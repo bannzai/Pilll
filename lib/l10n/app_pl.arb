@@ -41,7 +41,7 @@
   "copyDebugInfo": "Skopiuj informacje do debugowania",
   "cancel": "Anuluj",
   "signOut": "Wyloguj się",
-  "autoAddPillSheetGroup": "Automatyczne dodawanie grup arkuszy tabletek",
+  "autoAddPillSheetGroup": "Automatyczne dodawanie grup blistów",
   "autoAddNewSheetAfterCurrentEnds": "Gdy aktualna grupa opakowań tabletek się skończy, nowe opakowanie zostanie automatycznie dodane",
   "accountSettings": "Ustawienia konta",
   "linked": "Połączono",

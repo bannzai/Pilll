@@ -41,7 +41,7 @@
   "copyDebugInfo": "Kopioi virheenjäljitystiedot",
   "cancel": "Peruuta",
   "signOut": "Kirjaudu ulos",
-  "autoAddPillSheetGroup": "Pillipakkausryhmien automaattinen lisäys",
+  "autoAddPillSheetGroup": "Lisää pilleriliuskaryhmät automaattisesti",
   "autoAddNewSheetAfterCurrentEnds": "Kun nykyinen pillipakkaus päättyy, uusi pakkaus lisätään automaattisesti",
   "accountSettings": "Tiliasetukset",
   "linked": "Yhdistetty",

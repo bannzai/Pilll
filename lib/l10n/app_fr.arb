@@ -41,7 +41,7 @@
   "copyDebugInfo": "Copier les informations de débogage",
   "cancel": "Annuler",
   "signOut": "Se déconnecter",
-  "autoAddPillSheetGroup": "Ajout automatique de groupes de feuilles de pilules",
+  "autoAddPillSheetGroup": "Ajout automatique de groupes de plaquette",
   "autoAddNewSheetAfterCurrentEnds": "Ajouter automatiquement une nouvelle feuille lorsque le groupe de feuilles de pilules actuel est terminé",
   "accountSettings": "Paramètres du compte",
   "linked": "Connecté",

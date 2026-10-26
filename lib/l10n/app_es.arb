@@ -41,7 +41,7 @@
   "copyDebugInfo": "Copiar información de depuración",
   "cancel": "Cancelar",
   "signOut": "Cerrar sesión",
-  "autoAddPillSheetGroup": "Adición automática de grupo de blíster",
+  "autoAddPillSheetGroup": "Añadir grupos de blíster automáticamente",
   "autoAddNewSheetAfterCurrentEnds": "Cuando termine el grupo actual de blísteres de píldoras, se agregará automáticamente un nuevo blíster",
   "accountSettings": "Configuración de cuenta",
   "linked": "Conectado",

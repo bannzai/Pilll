@@ -41,7 +41,7 @@
   "copyDebugInfo": "העתקת מידע לניפוי שגיאות",
   "cancel": "ביטול",
   "signOut": "התנתקות",
-  "autoAddPillSheetGroup": "הוספה אוטומטית של קבוצת גיליון כדורים",
+  "autoAddPillSheetGroup": "הוספה אוטומטית של קבוצות חפיסת גלולות",
   "autoAddNewSheetAfterCurrentEnds": "כאשר קבוצת הגליונות הנוכחית תסתיים, גליון חדש יתווסף אוטומטית",
   "accountSettings": "הגדרות חשבון",
   "linked": "מחובר",

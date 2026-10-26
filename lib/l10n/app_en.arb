@@ -41,7 +41,7 @@
   "copyDebugInfo": "Copy debug info",
   "cancel": "Cancel",
   "signOut": "Sign out",
-  "autoAddPillSheetGroup": "Automatic Pill Sheet Group Addition",
+  "autoAddPillSheetGroup": "Automatically add pill pack groups",
   "autoAddNewSheetAfterCurrentEnds": "Automatically add a new sheet when the current pill sheet group is finished",
   "accountSettings": "Account Settings",
   "linked": "Connected",

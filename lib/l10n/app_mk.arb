@@ -41,7 +41,7 @@
   "copyDebugInfo": "Копирајте информации за отстранување грешки",
   "cancel": "Откажи",
   "signOut": "Одјавување",
-  "autoAddPillSheetGroup": "Автоматско додавање на групи од пилули листови",
+  "autoAddPillSheetGroup": "Автоматско додавање групи за блистер",
   "autoAddNewSheetAfterCurrentEnds": "Автоматски додава нов лист со таблети кога тековната група заврши",
   "accountSettings": "Поставки на сметка",
   "linked": "Поврзано",

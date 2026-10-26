@@ -41,7 +41,7 @@
   "copyDebugInfo": "त्रुटी शोधण्याची माहिती कॉपी करा",
   "cancel": "रद्द करा",
   "signOut": "साइन आउट करा",
-  "autoAddPillSheetGroup": "पिल शीट गटांचे स्वयंचलित जोडणे",
+  "autoAddPillSheetGroup": "पिल शीट गट आपोआप जोडणे",
   "autoAddNewSheetAfterCurrentEnds": "सध्याचा पिल शीट गट संपल्यानंतर, नवीन शीट आपोआप जोडले जाईल",
   "accountSettings": "खाते सेटिंग्स",
   "linked": "जोडलेले",

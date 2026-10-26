@@ -41,7 +41,7 @@
   "copyDebugInfo": "Copia la informació de depuració",
   "cancel": "Cancel·la",
   "signOut": "Tanca la sessió",
-  "autoAddPillSheetGroup": "Addició automàtica de grups de planxa de pastilles",
+  "autoAddPillSheetGroup": "Addició automàtica de grups de blíster",
   "autoAddNewSheetAfterCurrentEnds": "Quan acabi el grup actual de fulls de pastilles, s'afegirà automàticament un nou full",
   "accountSettings": "Configuració del compte",
   "linked": "Connectat",
