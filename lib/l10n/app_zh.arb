@@ -180,7 +180,7 @@
   "annualPlan": "年度套餐",
   "annualPrice": "{annualPackageStoreProductPriceString}/年",
   "monthlyPrice": "{monthlyPriceString}/月",
-  "dailyPrice": "{dailyPriceString}每日",
+  "dailyPrice": "{dailyPriceString}/天",
   "premiumTermsNotice1": "・高级服务合同期间自开始日起算，每1个月或每1年自动续约。",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

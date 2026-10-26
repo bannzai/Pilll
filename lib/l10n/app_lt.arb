@@ -180,7 +180,7 @@
   "annualPlan": "Metinis planas",
   "annualPrice": "{annualPackageStoreProductPriceString}/metus",
   "monthlyPrice": "{monthlyPriceString}/mėn.",
-  "dailyPrice": "{dailyPriceString}/dieną",
+  "dailyPrice": "{dailyPriceString}/d.",
   "premiumTermsNotice1": "• Premium prenumeratos laikotarpis automatiškai atsinaujina kas mėnesį arba kas metus, skaičiuojant nuo pradžios datos",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

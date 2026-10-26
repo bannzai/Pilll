@@ -180,7 +180,7 @@
   "annualPlan": "Жылдық жоспар",
   "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
   "monthlyPrice": "{monthlyPriceString}/ай",
-  "dailyPrice": "{dailyPriceString}/күнде",
+  "dailyPrice": "{dailyPriceString}/күн",
   "premiumTermsNotice1": "・ Премиум келісімшарт мерзімі басталған күннен бастап 1 ай немесе 1 жыл сайын автоматты жаңартылады",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

@@ -180,7 +180,7 @@
   "annualPlan": "سالانہ پلان",
   "annualPrice": "{annualPackageStoreProductPriceString}/سال",
   "monthlyPrice": "{monthlyPriceString}/ماہ",
-  "dailyPrice": "{dailyPriceString}/روز",
+  "dailyPrice": "{dailyPriceString}/دن",
   "premiumTermsNotice1": "• پریمیم سبسکرپشن کی مدت شروع کی تاریخ سے ہر ایک ماہ یا ایک سال کے بعد خودکار طور پر تجدید ہوگی",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

@@ -180,7 +180,7 @@
   "annualPlan": "Taunang plano",
   "annualPrice": "{annualPackageStoreProductPriceString}/taon",
   "monthlyPrice": "{monthlyPriceString}/buwan",
-  "dailyPrice": "{dailyPriceString}/bawat araw",
+  "dailyPrice": "{dailyPriceString}/araw",
   "premiumTermsNotice1": "• Ang Premium subscription period ay awtomatikong mare-renew kada buwan o taon mula sa petsa ng pagsisimula",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

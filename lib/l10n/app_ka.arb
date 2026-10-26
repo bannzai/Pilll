@@ -180,7 +180,7 @@
   "annualPlan": "წლიური გეგმა",
   "annualPrice": "{annualPackageStoreProductPriceString}/წელი",
   "monthlyPrice": "{monthlyPriceString}/თვე",
-  "dailyPrice": "{dailyPriceString} დღეში",
+  "dailyPrice": "{dailyPriceString}/დღე",
   "premiumTermsNotice1": "・პრემიუმ ხელშეკრულების ვადა დაწყების თარიღიდან 1 თვის ან 1 წლის ინტერვალით ავტომატურად განახლდება",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

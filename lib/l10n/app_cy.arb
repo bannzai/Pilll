@@ -180,7 +180,7 @@
   "annualPlan": "Cynllun blynyddol",
   "annualPrice": "{annualPackageStoreProductPriceString}/blwyddyn",
   "monthlyPrice": "{monthlyPriceString}/mis",
-  "dailyPrice": "{dailyPriceString} y dydd",
+  "dailyPrice": "{dailyPriceString}/diwrnod",
   "premiumTermsNotice1": "• Bydd cyfnod tanysgrifiad premiwm yn adnewyddu'n awtomatig bob mis neu bob blwyddyn o'r dyddiad dechrau",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

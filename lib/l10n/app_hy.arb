@@ -180,7 +180,7 @@
   "annualPlan": "Տարեկան պլան",
   "annualPrice": "{annualPackageStoreProductPriceString}/տարի",
   "monthlyPrice": "{monthlyPriceString}/ամիս",
-  "dailyPrice": "{dailyPriceString}/օրը",
+  "dailyPrice": "{dailyPriceString}/օր",
   "premiumTermsNotice1": "• Պրեմիում պայմանագրի ժամկետը սկսելու օրվանից հաշվարկված 1 ամսի կամ 1 տարվა ինքնաշխատ նորացում է",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

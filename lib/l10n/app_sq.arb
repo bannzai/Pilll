@@ -180,7 +180,7 @@
   "annualPlan": "Plani vjetor",
   "annualPrice": "{annualPackageStoreProductPriceString}/vit",
   "monthlyPrice": "{monthlyPriceString}/muaj",
-  "dailyPrice": "{dailyPriceString}/në ditë",
+  "dailyPrice": "{dailyPriceString}/ditë",
   "premiumTermsNotice1": "• Periudha e kontratës Premium do të rinovohet automatikisht çdo 1 muaj ose 1 vit duke filluar nga data e fillimit",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

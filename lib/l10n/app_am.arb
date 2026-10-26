@@ -180,7 +180,7 @@
   "annualPlan": "ዓመታዊ ዕቅድ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ዓመት",
   "monthlyPrice": "{monthlyPriceString}/ወር",
-  "dailyPrice": "{dailyPriceString}/በቀን",
+  "dailyPrice": "{dailyPriceString}/ቀን",
   "premiumTermsNotice1": "• የፕሪሚየም ውል ጊዜ ከጀመረበት ቀን ጀምሮ በየ1 ወር ወይም በየ1 ዓመት በራስ-ሰር ይታደሳል",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

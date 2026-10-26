@@ -180,7 +180,7 @@
   "annualPlan": "Годишњи план",
   "annualPrice": "{annualPackageStoreProductPriceString}/година",
   "monthlyPrice": "{monthlyPriceString}/месец",
-  "dailyPrice": "{dailyPriceString}/dan",
+  "dailyPrice": "{dailyPriceString}/дан",
   "premiumTermsNotice1": "・Премијум период се аутоматски обнавља месечно или годишње рачунајући од датума почетка",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

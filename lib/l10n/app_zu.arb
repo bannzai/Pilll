@@ -180,7 +180,7 @@
   "annualPlan": "Uhlelo lonyaka",
   "annualPrice": "{annualPackageStoreProductPriceString}/unyaka",
   "monthlyPrice": "{monthlyPriceString}/inyanga",
-  "dailyPrice": "{dailyPriceString}/usuku",
+  "dailyPrice": "{dailyPriceString}/ngosuku",
   "premiumTermsNotice1": "• Isikhathi sesivumelwano se-Premium sizovuselelwa ngokuzenzakalela njalo inyanga noma unyaka munye kusukela ngosuku lokuqala.",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",

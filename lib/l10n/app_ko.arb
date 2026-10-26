@@ -180,7 +180,7 @@
   "annualPlan": "연간 요금제",
   "annualPrice": "{annualPackageStoreProductPriceString}/년",
   "monthlyPrice": "{monthlyPriceString}/월",
-  "dailyPrice": "{dailyPriceString}/일",
+  "dailyPrice": "하루 {dailyPriceString}",
   "premiumTermsNotice1": "・프리미엄 계약 기간은 시작일로부터 1개월 또는 1년마다 자동 갱신됩니다",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
