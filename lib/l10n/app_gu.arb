@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}મો દિવસ",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}નો સમયગાળો શરૂ થવામાં {diffPlusOne} દિવસ બાકી છે",
   "remainingDaysAllFeatures": "તમે હજી {diff} દિવસ સુધી બધી સુવિધાઓ વાપરી શકો છો",
-  "todayIsTaking": "💊 આજે સેવન",
+  "todayIsTaking": "💊 આજે ગોળી લેવાનો દિવસ છે",
   "todayPillToTake": "💊 આજની ગોળી",
   "number": "નંબર",
   "dayNumber": "th day",

@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ቀን {restDurationDays}",
   "daysUntilPausePeriod": "የ{activePillSheetPillSheetTypeNotTakenWord} ጊዜ በ{diffPlusOne} ቀናት ይጀምራል",
   "remainingDaysAllFeatures": "ሁሉንም ባህሪያት ለተጨማሪ {diff} ቀናት መጠቀም ይችላሉ",
-  "todayIsTaking": "💊 ዛሬ መውሰድ",
+  "todayIsTaking": "💊 ዛሬ ክኒን የሚወሰድበት ቀን ነው",
   "todayPillToTake": "💊 የዛሬ ክኒን",
   "number": "ኛ",
   "dayNumber": "th day",

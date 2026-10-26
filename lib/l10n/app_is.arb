@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dagur {restDurationDays}",
   "daysUntilPausePeriod": "Tímabilið með {activePillSheetPillSheetTypeNotTakenWord} hefst eftir {diffPlusOne} daga",
   "remainingDaysAllFeatures": "Þú getur notað alla eiginleika í {diff} daga í viðbót",
-  "todayIsTaking": "💊 Taka í dag",
+  "todayIsTaking": "💊 Í dag er dagur til að taka pilluna",
   "todayPillToTake": "💊 Pilla dagsins",
   "number": "nr.",
   "dayNumber": "th day",

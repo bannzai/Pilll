@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · օր {restDurationDays}",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} շրջանը կսկսվի {diffPlusOne} օրից",
   "remainingDaysAllFeatures": "Դուք կարող եք օգտվել բոլոր հնարավորություններից ևս {diff} օր",
-  "todayIsTaking": "💊 Այսօր ընդունում",
+  "todayIsTaking": "💊 Այսօր հաբ ընդունելու օրն է",
   "todayPillToTake": "💊 Այսօրվա հաբ",
   "number": "համար",
   "dayNumber": "th day",

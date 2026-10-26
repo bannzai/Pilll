@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ngày thứ {restDurationDays}",
   "daysUntilPausePeriod": "Giai đoạn {activePillSheetPillSheetTypeNotTakenWord} sẽ bắt đầu sau {diffPlusOne} ngày nữa",
   "remainingDaysAllFeatures": "Bạn có thể dùng tất cả tính năng thêm {diff} ngày nữa",
-  "todayIsTaking": "💊 Uống thuốc hôm nay",
+  "todayIsTaking": "💊 Hôm nay là ngày uống thuốc",
   "todayPillToTake": "💊 Thuốc uống hôm nay",
   "number": "viên",
   "dayNumber": "th day",

@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · دن {restDurationDays}",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} کی مدت {diffPlusOne} دن بعد شروع ہوگی",
   "remainingDaysAllFeatures": "آپ تمام خصوصیات مزید {diff} دن تک استعمال کر سکتی ہیں",
-  "todayIsTaking": "💊 آج استعمال",
+  "todayIsTaking": "💊 آج گولی لینے کا دن ہے",
   "todayPillToTake": "💊 آج کی گولی",
   "number": "نمبر",
   "dayNumber": "th day",

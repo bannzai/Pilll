@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ஆம் நாள்",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} காலம் தொடங்க இன்னும் {diffPlusOne} நாட்கள் உள்ளன",
   "remainingDaysAllFeatures": "மேலும் {diff} நாட்களுக்கு அனைத்து அம்சங்களையும் பயன்படுத்தலாம்",
-  "todayIsTaking": "💊 இன்று எடுக்க வேண்டும்",
+  "todayIsTaking": "💊 இன்று மாத்திரை எடுத்துக்கொள்ள வேண்டிய நாள்",
   "todayPillToTake": "💊 இன்றைய மாத்திரை",
   "number": "வது",
   "dayNumber": "th day",

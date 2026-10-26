@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · اليوم {restDurationDays}",
   "daysUntilPausePeriod": "تبدأ فترة {activePillSheetPillSheetTypeNotTakenWord} بعد {diffPlusOne} أيام",
   "remainingDaysAllFeatures": "يمكنكِ استخدام جميع الميزات لمدة {diff} يومًا إضافيًا",
-  "todayIsTaking": "💊 تناول اليوم",
+  "todayIsTaking": "💊 اليوم موعد تناول الحبة",
   "todayPillToTake": "💊 حبوب اليوم",
   "number": "رقم",
   "dayNumber": "th day",

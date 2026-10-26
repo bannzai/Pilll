@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · дзень {restDurationDays}",
   "daysUntilPausePeriod": "Перыяд {activePillSheetPillSheetTypeNotTakenWord} пачнецца праз {diffPlusOne} дзён",
   "remainingDaysAllFeatures": "Вы можаце карыстацца ўсімі функцыямі яшчэ {diff} дзён",
-  "todayIsTaking": "💊 Сёння прыём",
+  "todayIsTaking": "💊 Сёння дзень прыёму пігулкі",
   "todayPillToTake": "💊 Сённяшняя таблетка",
   "number": "\"\"",
   "dayNumber": "th day",

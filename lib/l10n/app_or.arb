@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ତମ ଦିନ",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ଅବଧି ଆରମ୍ଭ ହେବାକୁ ଆଉ {diffPlusOne} ଦିନ ବାକି ଅଛି",
   "remainingDaysAllFeatures": "ଆପଣ ଆହୁରି {diff} ଦିନ ପର୍ଯ୍ୟନ୍ତ ସମସ୍ତ ସୁବିଧା ବ୍ୟବହାର କରିପାରିବେ",
-  "todayIsTaking": "💊 ଆଜି ସେବନ",
+  "todayIsTaking": "💊 ଆଜି ବଟିକା ଖାଇବାର ଦିନ",
   "todayPillToTake": "💊 ଆଜିର ପିଲ୍‌",
   "number": "ନଂ",
   "dayNumber": "th day",

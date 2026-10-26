@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ziua {restDurationDays}",
   "daysUntilPausePeriod": "Perioada de {activePillSheetPillSheetTypeNotTakenWord} începe peste {diffPlusOne} zile",
   "remainingDaysAllFeatures": "Poți folosi toate funcțiile încă {diff} zile",
-  "todayIsTaking": "💊 De luat astăzi",
+  "todayIsTaking": "💊 Azi este ziua pentru administrarea pilulei",
   "todayPillToTake": "💊 Pilula de astăzi",
   "number": "nr.",
   "dayNumber": "th day",

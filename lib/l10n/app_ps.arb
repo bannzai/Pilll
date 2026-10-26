@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}مه ورځ",
   "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} موده به په {diffPlusOne} ورځو کې پیل شي",
   "remainingDaysAllFeatures": "تاسو کولی شئ ټولې ځانګړنې د نورو {diff} ورځو لپاره وکاروئ",
-  "todayIsTaking": "💊 نن د ګولۍ ورځ",
+  "todayIsTaking": "💊 نن د ګولۍ اخیستو ورځ ده",
   "todayPillToTake": "💊 د نن ورځې ګولۍ",
   "number": "نمبر",
   "dayNumber": "th day",

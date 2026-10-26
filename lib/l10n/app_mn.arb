@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} дахь өдөр",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} үе {diffPlusOne} хоногийн дараа эхэлнэ",
   "remainingDaysAllFeatures": "Та бүх боломжийг дахин {diff} өдөр ашиглах боломжтой",
-  "todayIsTaking": "💊 Өнөөдөр уух",
+  "todayIsTaking": "💊 Өнөөдөр эм уух өдөр",
   "todayPillToTake": "💊 Өнөөдөр уух пилль",
   "number": "дугаар",
   "dayNumber": "th day",

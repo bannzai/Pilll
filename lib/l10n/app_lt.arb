@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} diena",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} laikotarpis prasidės po {diffPlusOne} dienų",
   "remainingDaysAllFeatures": "Visomis funkcijomis galite naudotis dar {diff} dienų",
-  "todayIsTaking": "💊 Šiandien geriu",
+  "todayIsTaking": "💊 Šiandien tabletės vartojimo diena",
   "todayPillToTake": "💊 Šiandienos tabletės",
   "number": "-a",
   "dayNumber": "th day",

@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Tempoh {activePillSheetPillSheetTypeNotTakenWord} bermula dalam {diffPlusOne} hari lagi",
   "remainingDaysAllFeatures": "Anda boleh menggunakan semua ciri selama {diff} hari lagi",
-  "todayIsTaking": "💊 Minum hari ini",
+  "todayIsTaking": "💊 Hari ini hari mengambil pil",
   "todayPillToTake": "💊 Pil hari ini",
   "number": "No.",
   "dayNumber": "th day",

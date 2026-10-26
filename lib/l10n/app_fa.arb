@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · روز {restDurationDays}",
   "daysUntilPausePeriod": "دورهٔ {activePillSheetPillSheetTypeNotTakenWord} تا {diffPlusOne} روز دیگر شروع می‌شود",
   "remainingDaysAllFeatures": "می‌توانید تا {diff} روز دیگر از همهٔ امکانات استفاده کنید",
-  "todayIsTaking": "💊 امروز مصرف",
+  "todayIsTaking": "💊 امروز روز مصرف قرص است",
   "todayPillToTake": "💊 قرص امروز",
   "number": "شماره",
   "dayNumber": "th day",

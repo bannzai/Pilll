@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · day {restDurationDays}",
   "daysUntilPausePeriod": "The {activePillSheetPillSheetTypeNotTakenWord} period starts in {diffPlusOne} days",
   "remainingDaysAllFeatures": "You can use all features for {diff} more days",
-  "todayIsTaking": "💊 Take today",
+  "todayIsTaking": "💊 Pill scheduled for today",
   "todayPillToTake": "💊 Today's Pill",
   "number": "th",
   "dayNumber": "th day",

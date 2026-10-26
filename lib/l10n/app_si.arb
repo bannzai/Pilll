@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} වන දිනය",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} කාලය ආරම්භ වීමට තවත් දින {diffPlusOne}ක් තිබෙනවා",
   "remainingDaysAllFeatures": "ඔබට තවත් {diff} දිනක් සියලු විශේෂාංග භාවිත කළ හැක",
-  "todayIsTaking": "💊 අද ගැනීම",
+  "todayIsTaking": "💊 අද පෙත්ත ගත යුතු දිනයයි",
   "todayPillToTake": "💊 අද ගන්න පිල්",
   "number": "වන",
   "dayNumber": "th day",

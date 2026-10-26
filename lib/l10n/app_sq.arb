@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dita {restDurationDays}",
   "daysUntilPausePeriod": "Periudha e {activePillSheetPillSheetTypeNotTakenWord} fillon pas {diffPlusOne} ditësh",
   "remainingDaysAllFeatures": "Mund t’i përdorni të gjitha veçoritë edhe për {diff} ditë",
-  "todayIsTaking": "💊 Marrje sot",
+  "todayIsTaking": "💊 Sot është dita për të marrë pilulën",
   "todayPillToTake": "💊 Pilula e sotme",
   "number": "-të",
   "dayNumber": "th day",

@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. päivä",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}jakso alkaa {diffPlusOne} päivän kuluttua",
   "remainingDaysAllFeatures": "Voit käyttää kaikkia ominaisuuksia vielä {diff} päivää",
-  "todayIsTaking": "💊 Tänään otetaan",
+  "todayIsTaking": "💊 Tänään on pillerinottopäivä",
   "todayPillToTake": "💊 Tänään otettava pilleri",
   "number": "nro",
   "dayNumber": "th day",

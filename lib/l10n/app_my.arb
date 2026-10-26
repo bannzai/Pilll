@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} ရက်မြောက်နေ့",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ကာလ စတင်ရန် {diffPlusOne} ရက် ကျန်ပါသေးတယ်",
   "remainingDaysAllFeatures": "လုပ်ဆောင်ချက်အားလုံးကို နောက်ထပ် {diff} ရက် အသုံးပြုနိုင်ပါတယ်",
-  "todayIsTaking": "💊 ယနေ့ သောက်ရန်",
+  "todayIsTaking": "💊 ဒီနေ့ ဆေးလုံးသောက်ရမယ့်နေ့ပါ",
   "todayPillToTake": "💊 ယနေ့သောက်ရမည့်ဆေး",
   "number": "နံ",
   "dayNumber": "th day",

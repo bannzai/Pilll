@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Die tydperk van {activePillSheetPillSheetTypeNotTakenWord} begin oor {diffPlusOne} dae",
   "remainingDaysAllFeatures": "Jy kan al die funksies nog {diff} dae lank gebruik",
-  "todayIsTaking": "💊 Vandag neem",
+  "todayIsTaking": "💊 Vandag is jou pildag",
   "todayPillToTake": "💊 Vandag se pil",
   "number": "e",
   "dayNumber": "th day",

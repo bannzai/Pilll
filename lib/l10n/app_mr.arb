@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}वा दिवस",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} कालावधी सुरू होण्यासाठी आणखी {diffPlusOne} दिवस आहेत",
   "remainingDaysAllFeatures": "तुम्ही आणखी {diff} दिवस सर्व सुविधा वापरू शकता",
-  "todayIsTaking": "💊 आज सेवन",
+  "todayIsTaking": "💊 आज गोळी घेण्याचा दिवस आहे",
   "todayPillToTake": "💊 आजची गोळी",
   "number": "वा",
   "dayNumber": "th day",

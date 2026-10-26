@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ημέρα {restDurationDays}",
   "daysUntilPausePeriod": "Η περίοδος {activePillSheetPillSheetTypeNotTakenWord} ξεκινά σε {diffPlusOne} ημέρες",
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες για {diff} ακόμη ημέρες",
-  "todayIsTaking": "💊 Λήψη σήμερα",
+  "todayIsTaking": "💊 Σήμερα είναι ημέρα λήψης του χαπιού",
   "todayPillToTake": "💊 Σημερινό χάπι",
   "number": "ο",
   "dayNumber": "th day",

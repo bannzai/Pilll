@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · siku ya {restDurationDays}",
   "daysUntilPausePeriod": "Kipindi cha {activePillSheetPillSheetTypeNotTakenWord} kitaanza baada ya siku {diffPlusOne}",
   "remainingDaysAllFeatures": "Unaweza kutumia vipengele vyote kwa siku {diff} zaidi",
-  "todayIsTaking": "💊 Leo kunywa dawa",
+  "todayIsTaking": "💊 Leo ni siku ya kumeza kidonge",
   "todayPillToTake": "💊 Vidonge vya leo",
   "number": "nambari",
   "dayNumber": "siku",

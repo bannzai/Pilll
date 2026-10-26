@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-күн",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} кезеңі {diffPlusOne} күннен кейін басталады",
   "remainingDaysAllFeatures": "Сіз барлық мүмкіндікті тағы {diff} күн пайдалана аласыз",
-  "todayIsTaking": "💊 Бүгін қабылдау",
+  "todayIsTaking": "💊 Бүгін таблетка қабылдайтын күн",
   "todayPillToTake": "💊 Бүгінгі таблетка",
   "number": "нөмір",
   "dayNumber": "th day",

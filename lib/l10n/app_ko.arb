@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}일째",
   "daysUntilPausePeriod": "{diffPlusOne}일 후 {activePillSheetPillSheetTypeNotTakenWord} 기간이 시작돼요",
   "remainingDaysAllFeatures": "앞으로 {diff}일 동안 모든 기능을 사용할 수 있어요",
-  "todayIsTaking": "💊 오늘은 복용",
+  "todayIsTaking": "💊 오늘은 약을 복용하는 날이에요",
   "todayPillToTake": "💊 오늘 복용할 피임약",
   "number": "번",
   "dayNumber": "th day",

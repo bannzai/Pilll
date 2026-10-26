@@ -148,7 +148,7 @@
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. gün",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} dönemi {diffPlusOne} gün sonra başlayacak",
   "remainingDaysAllFeatures": "Tüm özellikleri {diff} gün daha kullanabilirsiniz",
-  "todayIsTaking": "💊 Bugün alım",
+  "todayIsTaking": "💊 Bugün hap alma günü",
   "todayPillToTake": "💊 Bugünkü hap",
   "number": ".",
   "dayNumber": "th day",
