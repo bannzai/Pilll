@@ -356,7 +356,7 @@
   "errorOccurred": "Қате орын алды",
   "unknownError": "Белгісіз қате орын алды",
   "unexpectedErrorOccurred": "Күтпеген қате орын алды",
-  "pressAndHoldNotificationToRecordPillTaking": "Хабарландыруды ұзақ бассаңыз, таблетка қабылдау жазбасын жасауға болады",
+  "pressAndHoldNotificationToRecordPillTaking": "Хабарландыруды басып тұрып, қабылдау жазбасын жасай аласыз",
   "letsTryIt": "Міндетті түрде сынап көріңіз",
   "trialDeadlineDateOffsetDay": "{number} күн бойы барлық функцияларды пайдалана аласыз!",
   "inputAndAdd": "енгізіп қосу",

@@ -356,7 +356,7 @@
   "errorOccurred": "Det oppstod en feil",
   "unknownError": "Det oppstod en ukjent feil",
   "unexpectedErrorOccurred": "Det oppstod en uventet feil",
-  "pressAndHoldNotificationToRecordPillTaking": "Trykk og hold varslingen for å registrere pilleinntak",
+  "pressAndHoldNotificationToRecordPillTaking": "Trykk og hold på varselet for å opprette en pillelogg",
   "letsTryIt": "Prøv det gjerne!",
   "trialDeadlineDateOffsetDay": "Alle funksjonene er tilgjengelige i {number} dager!",
   "inputAndAdd": "Skriv inn og legg til",

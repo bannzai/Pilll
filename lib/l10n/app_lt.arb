@@ -356,7 +356,7 @@
   "errorOccurred": "Įvyko klaida",
   "unknownError": "Įvyko nežinoma klaida",
   "unexpectedErrorOccurred": "Įvyko netikėta klaida",
-  "pressAndHoldNotificationToRecordPillTaking": "Ilgai paspaudus pranešimą galite sukurti vartojimo įrašą",
+  "pressAndHoldNotificationToRecordPillTaking": "Palaikykite nuspaudę pranešimą, kad sukurtumėte vartojimo įrašą",
   "letsTryIt": "Išbandykite!",
   "trialDeadlineDateOffsetDay": "{number} dienų galite naudoti visas funkcijas!",
   "inputAndAdd": "Įvesti ir pridėti",

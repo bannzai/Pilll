@@ -356,7 +356,7 @@
   "errorOccurred": "ມີຂໍ້ຜິດພາດເກີດຂຶ້ນ",
   "unknownError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ",
   "unexpectedErrorOccurred": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ",
-  "pressAndHoldNotificationToRecordPillTaking": "ກົດຄ້າງການແຈ້ງເຕືອນເພື່ອບັນທຶກການກິນຢາ",
+  "pressAndHoldNotificationToRecordPillTaking": "ກົດການແຈ້ງເຕືອນຄ້າງໄວ້ ເພື່ອສ້າງບັນທຶກການກິນຢາ",
   "letsTryIt": "ກະລຸນາລອງໃຊ້ເບິ່ງ",
   "trialDeadlineDateOffsetDay": "ໃຊ້ຄຸນສົມບັດທັງໝົດໄດ້ເປັນເວລາ {number} ມື້！",
   "inputAndAdd": "ປ້ອນແລະເພີ່ມ",

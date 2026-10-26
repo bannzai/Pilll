@@ -356,7 +356,7 @@
   "errorOccurred": "A apărut o eroare",
   "unknownError": "A apărut o eroare necunoscută",
   "unexpectedErrorOccurred": "A apărut o eroare neașteptată",
-  "pressAndHoldNotificationToRecordPillTaking": "Apăsând lung pe notificare poți înregistra administrarea dozei",
+  "pressAndHoldNotificationToRecordPillTaking": "Ține apăsată notificarea pentru a crea o înregistrare a administrării pilulei",
   "letsTryIt": "Încercați-o acum!",
   "trialDeadlineDateOffsetDay": "Poți folosi toate funcțiile timp de {number} zile!",
   "inputAndAdd": "Introdu și adaugă",

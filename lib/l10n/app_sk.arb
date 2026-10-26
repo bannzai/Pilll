@@ -356,7 +356,7 @@
   "errorOccurred": "Vyskytla sa chyba",
   "unknownError": "Vyskytla sa neznáma chyba",
   "unexpectedErrorOccurred": "Vyskytla sa neočakávaná chyba",
-  "pressAndHoldNotificationToRecordPillTaking": "Podržaním notifikácie môžete zaznamenať užitie",
+  "pressAndHoldNotificationToRecordPillTaking": "Podržaním oznámenia môžete vytvoriť záznam o užití tabletky",
   "letsTryIt": "Určite to vyskúšajte",
   "trialDeadlineDateOffsetDay": "{number} dní máte prístup ku všetkým funkciám!",
   "inputAndAdd": "Pridať zadaním",

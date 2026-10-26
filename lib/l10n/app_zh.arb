@@ -356,7 +356,7 @@
   "errorOccurred": "发生错误",
   "unknownError": "发生了未知错误",
   "unexpectedErrorOccurred": "出现了意外错误",
-  "pressAndHoldNotificationToRecordPillTaking": "长按通知可创建服药记录",
+  "pressAndHoldNotificationToRecordPillTaking": "长按通知即可创建服药记录",
   "letsTryIt": "请试试看",
   "trialDeadlineDateOffsetDay": "{number}天内畅享全部功能！",
   "inputAndAdd": "输入并添加",

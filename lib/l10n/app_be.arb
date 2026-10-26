@@ -356,7 +356,7 @@
   "errorOccurred": "Адбылася памылка",
   "unknownError": "Узнікла невядомая памылка",
   "unexpectedErrorOccurred": "Узнікла нечаканая памылка",
-  "pressAndHoldNotificationToRecordPillTaking": "Доўгім націскам на апавяшчэнне можна стварыць запис пра прыём",
+  "pressAndHoldNotificationToRecordPillTaking": "Калі націснуць і ўтрымліваць апавяшчэнне, можна стварыць запіс прыёму пігулак",
   "letsTryIt": "Абавязкова паспрабуйце!",
   "trialDeadlineDateOffsetDay": "{number} дзён усе функцыі даступныя!",
   "inputAndAdd": "Увесці і дадаць",

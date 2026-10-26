@@ -356,7 +356,7 @@
   "errorOccurred": "Ocorreu um erro",
   "unknownError": "Ocorreu um erro desconhecido",
   "unexpectedErrorOccurred": "Ocorreu um erro inesperado",
-  "pressAndHoldNotificationToRecordPillTaking": "Mantenha pressionada a notificação para registrar a ingestão",
+  "pressAndHoldNotificationToRecordPillTaking": "Toque e segure a notificação para criar um registro de uso da pílula",
   "letsTryIt": "Experimente!",
   "trialDeadlineDateOffsetDay": "Todas as funcionalidades disponíveis por {number} dias!",
   "inputAndAdd": "Digite e adicione",

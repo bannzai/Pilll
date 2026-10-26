@@ -356,7 +356,7 @@
   "errorOccurred": "දෝෂයක් ඇති වුණා",
   "unknownError": "හඳුනා නොගත් දෝෂයක් ඇති වුණා",
   "unexpectedErrorOccurred": "අනපේක්ෂිත දෝෂයක් ඇති වුණා",
-  "pressAndHoldNotificationToRecordPillTaking": "දැනුම්දීම දිගුව ඔබා ඖෂධ ගැනීමේ වාර්තාව සෑදිය හැකිය",
+  "pressAndHoldNotificationToRecordPillTaking": "දැනුම්දීම දිගු වේලාවක් ඔබාගෙන සිටීමෙන් පෙති ගැනීමේ සටහනක් සෑදිය හැකියි",
   "letsTryIt": "අත්හදා බලන්න",
   "trialDeadlineDateOffsetDay": "දින {number}ක් සියලුම විශේෂාංග භාවිතා කළ හැකිය!",
   "inputAndAdd": "ඇතුළු කර එකතු කරන්න",

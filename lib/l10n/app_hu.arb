@@ -356,7 +356,7 @@
   "errorOccurred": "Hiba történt",
   "unknownError": "Ismeretlen hiba történt",
   "unexpectedErrorOccurred": "Váratlan hiba történt",
-  "pressAndHoldNotificationToRecordPillTaking": "Az értesítés hosszan nyomva tartásával rögzítheti a bevételt",
+  "pressAndHoldNotificationToRecordPillTaking": "Az értesítés hosszan nyomásával bejegyzést készíthetsz a tablettaszedési naplóba",
   "letsTryIt": "Próbálja ki!",
   "trialDeadlineDateOffsetDay": "{number} napig minden funkciót használhatsz!",
   "inputAndAdd": "Beírás és hozzáadás",

@@ -356,7 +356,7 @@
   "errorOccurred": "Kube nephutha",
   "unknownError": "Kuvele iphutha elingaziwa",
   "unexpectedErrorOccurred": "Kwenzeke iphutha elingalindelekile",
-  "pressAndHoldNotificationToRecordPillTaking": "Cindezela isaziso isikhathi eside ukuze wenze irekhodi lokuphuza amaphilisi",
+  "pressAndHoldNotificationToRecordPillTaking": "Sicela ucindezele isaziso isikhathi eside ukuze udale irekhodi lokuphuza amaphilisi",
   "letsTryIt": "Sicela uzame!",
   "trialDeadlineDateOffsetDay": "Ungasebenzisa zonke izici izinsuku ezingu-{number}!",
   "inputAndAdd": "Faka bese wengeza",

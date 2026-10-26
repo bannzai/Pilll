@@ -356,7 +356,7 @@
   "errorOccurred": "Tekkis viga",
   "unknownError": "Tekkis tundmatu viga",
   "unexpectedErrorOccurred": "Tekkis ootamatu viga",
-  "pressAndHoldNotificationToRecordPillTaking": "Teavitust pikalt vajutades saab salvestada pillide võtmise",
+  "pressAndHoldNotificationToRecordPillTaking": "Hoia teadet all, et luua võtmiskirje",
   "letsTryIt": "Palun proovige seda!",
   "trialDeadlineDateOffsetDay": "{number} päeva jooksul saate kasutada kõiki funktsioone!",
   "inputAndAdd": "Lisa sisestades",

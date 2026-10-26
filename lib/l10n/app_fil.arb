@@ -356,7 +356,7 @@
   "errorOccurred": "Nagkaroon ng error",
   "unknownError": "May naganap na hindi kilalang error",
   "unexpectedErrorOccurred": "May naganap na hindi inaasahang error",
-  "pressAndHoldNotificationToRecordPillTaking": "I-long press ang notification para makapagtala ng paginom ng gamot",
+  "pressAndHoldNotificationToRecordPillTaking": "Pindutin nang matagal ang abiso para gumawa ng tala ng pag-inom",
   "letsTryIt": "Subukan mo ito!",
   "trialDeadlineDateOffsetDay": "Magagamit mo ang lahat ng features sa loob ng {number} araw!",
   "inputAndAdd": "Maglagay at Idagdag",

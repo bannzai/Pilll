@@ -356,7 +356,7 @@
   "errorOccurred": "Bir hata oluştu",
   "unknownError": "Bilinmeyen bir hata oluştu",
   "unexpectedErrorOccurred": "Beklenmeyen bir hata oluştu",
-  "pressAndHoldNotificationToRecordPillTaking": "Bildirimi uzun basarak ilaç alma kaydı yapabilirsiniz",
+  "pressAndHoldNotificationToRecordPillTaking": "Bildirime basılı tutarak hap kullanım kaydı oluşturabilirsiniz",
   "letsTryIt": "Mutlaka deneyin!",
   "trialDeadlineDateOffsetDay": "{number} gün boyunca tüm özellikleri kullanabilirsiniz!",
   "inputAndAdd": "Gir ve ekle",

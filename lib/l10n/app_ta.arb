@@ -356,7 +356,7 @@
   "errorOccurred": "பிழை ஏற்பட்டுள்ளது",
   "unknownError": "அறியப்படாத பிழை ஏற்பட்டுள்ளது",
   "unexpectedErrorOccurred": "எதிர்பாராத பிழை ஏற்பட்டுள்ளது",
-  "pressAndHoldNotificationToRecordPillTaking": "அறிவிப்பை அழுத்திப் பிடித்தால் மருந்து எடுத்தல் பதிவு செய்யலாம்",
+  "pressAndHoldNotificationToRecordPillTaking": "அறிவிப்பை அழுத்திப் பிடித்து மாத்திரை உட்கொண்ட பதிவை உருவாக்கலாம்",
   "letsTryIt": "நிச்சயம் முயற்சி செய்து பாருங்கள்",
   "trialDeadlineDateOffsetDay": "{number} நாட்களுக்கு அனைத்து அம்சங்களும் பயன்படுத்தலாம்!",
   "inputAndAdd": "உள்ளீடு செய்து சேர்க்கவும்",

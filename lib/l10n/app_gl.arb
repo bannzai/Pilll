@@ -356,7 +356,7 @@
   "errorOccurred": "Produciuse un erro",
   "unknownError": "Produciuse un erro descoñecido",
   "unexpectedErrorOccurred": "Produciuse un erro inesperado",
-  "pressAndHoldNotificationToRecordPillTaking": "Preme e mantén a notificación para crear un rexistro de toma",
+  "pressAndHoldNotificationToRecordPillTaking": "Mantén premida a notificación para crear un rexistro de tomas",
   "letsTryIt": "Anímate a probalo!",
   "trialDeadlineDateOffsetDay": "Podes usar todas as funcións durante {number} días!",
   "inputAndAdd": "Introducir e engadir",

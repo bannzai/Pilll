@@ -356,7 +356,7 @@
   "errorOccurred": "Terjadi kesalahan",
   "unknownError": "Terjadi kesalahan yang tidak diketahui",
   "unexpectedErrorOccurred": "Terjadi kesalahan yang tidak terduga",
-  "pressAndHoldNotificationToRecordPillTaking": "Tekan lama notifikasi untuk membuat catatan konsumsi",
+  "pressAndHoldNotificationToRecordPillTaking": "Tekan dan tahan notifikasi untuk membuat catatan minum pil",
   "letsTryIt": "Yuk, coba!",
   "trialDeadlineDateOffsetDay": "Semua fitur bisa digunakan selama {number} hari!",
   "inputAndAdd": "Masukkan dan Tambah",

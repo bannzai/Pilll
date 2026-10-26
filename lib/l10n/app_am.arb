@@ -356,7 +356,7 @@
   "errorOccurred": "ስህተት ተፈጥሯል",
   "unknownError": "ያልታወቀ ስህተት ተከስቷል",
   "unexpectedErrorOccurred": "ያልተጠበቀ ስህተት ተከስቷል",
-  "pressAndHoldNotificationToRecordPillTaking": "ማሳወቂያውን ረዥም በመጫን የመድሃኒት መዝገብ መፍጠር ይችላሉ",
+  "pressAndHoldNotificationToRecordPillTaking": "ማሳወቂያውን ተጭነው በመያዝ አወሳሰድ መዝገብ መፍጠር ይችላሉ",
   "letsTryIt": "እባክዎ ይሞክሩት",
   "trialDeadlineDateOffsetDay": "ለ{number} ቀናት ሁሉንም ተግባራት መጠቀም ይችላሉ!",
   "inputAndAdd": "አስገብና ጨምር",

@@ -356,7 +356,7 @@
   "errorOccurred": "Xatolik yuz berdi",
   "unknownError": "Nomaʼlum xatolik yuz berdi",
   "unexpectedErrorOccurred": "Kutilmagan xatolik yuz berdi",
-  "pressAndHoldNotificationToRecordPillTaking": "Bildirishnomani uzoq bosib turib, dori qabul qilish yozuvini yaratish mumkin",
+  "pressAndHoldNotificationToRecordPillTaking": "Bildirishnomani bosib turib, tabletka qabul qilish qaydini yaratishingiz mumkin",
   "letsTryIt": "Albatta sinab ko'ring!",
   "trialDeadlineDateOffsetDay": "{number} kun davomida barcha funksiyalardan foydalanishingiz mumkin!",
   "inputAndAdd": "Kiritib qo'shish",

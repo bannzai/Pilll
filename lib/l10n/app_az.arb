@@ -356,7 +356,7 @@
   "errorOccurred": "Xəta baş verdi",
   "unknownError": "Naməlum xəta baş verdi",
   "unexpectedErrorOccurred": "Gözlənilməz xəta baş verdi",
-  "pressAndHoldNotificationToRecordPillTaking": "Bildirişə uzun bassanız, həb qəbulu qeydi yarada bilərsiniz",
+  "pressAndHoldNotificationToRecordPillTaking": "Bildirişi basılı saxlayaraq həb qəbulu qeydini yarada bilərsiniz",
   "letsTryIt": "Mütləq sınayın!",
   "trialDeadlineDateOffsetDay": "{number} gün ərzində bütün funksiyalar sizindir!",
   "inputAndAdd": "Daxil et və əlavə et",

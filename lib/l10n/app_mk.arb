@@ -356,7 +356,7 @@
   "errorOccurred": "Се појави грешка",
   "unknownError": "Се појави непозната грешка",
   "unexpectedErrorOccurred": "Се појави неочекувана грешка",
-  "pressAndHoldNotificationToRecordPillTaking": "Долго притиснете го известувањето за да забележите земање",
+  "pressAndHoldNotificationToRecordPillTaking": "Притиснете и задржете го известувањето за да создадете Запис за земање",
   "letsTryIt": "Слободно пробајте!",
   "trialDeadlineDateOffsetDay": "{number} дена сите функции се достапни!",
   "inputAndAdd": "Внеси и додај",

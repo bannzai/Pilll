@@ -356,7 +356,7 @@
   "errorOccurred": "Hitilafu imetokea",
   "unknownError": "Hitilafu isiyojulikana imetokea",
   "unexpectedErrorOccurred": "Hitilafu isiyotarajiwa imetokea",
-  "pressAndHoldNotificationToRecordPillTaking": "Finya na ushikilie arifa kurekodi kunywa vidonge",
+  "pressAndHoldNotificationToRecordPillTaking": "Bonyeza na ushikilie arifa ili kuunda rekodi ya kumeza vidonge",
   "letsTryIt": "Karibu ujaribu!",
   "trialDeadlineDateOffsetDay": "Unaweza kutumia vipengele vyote kwa siku {number}!",
   "inputAndAdd": "Ingiza na Ongeza",

@@ -356,7 +356,7 @@
   "errorOccurred": "Si è verificato un errore",
   "unknownError": "Si è verificato un errore sconosciuto",
   "unexpectedErrorOccurred": "Si è verificato un errore imprevisto",
-  "pressAndHoldNotificationToRecordPillTaking": "Tenendo premuta la notifica è possibile registrare l'assunzione",
+  "pressAndHoldNotificationToRecordPillTaking": "Tieni premuta la notifica per creare una voce nel registro delle assunzioni",
   "letsTryIt": "Provalo!",
   "trialDeadlineDateOffsetDay": "Puoi utilizzare tutte le funzioni per {number} giorni!",
   "inputAndAdd": "Inserisci e aggiungi",

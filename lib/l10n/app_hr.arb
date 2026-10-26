@@ -356,7 +356,7 @@
   "errorOccurred": "Došlo je do pogreške",
   "unknownError": "Došlo je do nepoznate pogreške",
   "unexpectedErrorOccurred": "Došlo je do neočekivane pogreške",
-  "pressAndHoldNotificationToRecordPillTaking": "Dugim pritiskom na obavijest možete napraviti zapis o uzimanju",
+  "pressAndHoldNotificationToRecordPillTaking": "Pritisnite i držite obavijest kako biste stvorili evidenciju uzimanja pilule",
   "letsTryIt": "Svakako pokušajte!",
   "trialDeadlineDateOffsetDay": "{number} dana imate pristup svim funkcijama!",
   "inputAndAdd": "Unesi i dodaj",

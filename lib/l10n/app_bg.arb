@@ -356,7 +356,7 @@
   "errorOccurred": "Възникна грешка",
   "unknownError": "Възникна неизвестна грешка",
   "unexpectedErrorOccurred": "Възникна неочаквана грешка",
-  "pressAndHoldNotificationToRecordPillTaking": "Натиснете и задръжте уведомлението, за да записвате приема",
+  "pressAndHoldNotificationToRecordPillTaking": "Натиснете и задръжте известието, за да създадете запис на приема",
   "letsTryIt": "Изпробвайте го!",
   "trialDeadlineDateOffsetDay": "Всички функции са налични за {number} дни!",
   "inputAndAdd": "Въведи и добави",

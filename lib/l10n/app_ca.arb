@@ -356,7 +356,7 @@
   "errorOccurred": "S'ha produït un error",
   "unknownError": "S’ha produït un error desconegut",
   "unexpectedErrorOccurred": "S'ha produït un error inesperat",
-  "pressAndHoldNotificationToRecordPillTaking": "Si manteniu premut la notificació, podreu registrar la presa.",
+  "pressAndHoldNotificationToRecordPillTaking": "Mantén premuda la notificació per crear un registre de preses",
   "letsTryIt": "Proveu-ho!",
   "trialDeadlineDateOffsetDay": "Podeu utilitzar totes les funcions durant {number} dies!",
   "inputAndAdd": "Afegeix introduint",

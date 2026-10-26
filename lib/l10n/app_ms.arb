@@ -356,7 +356,7 @@
   "errorOccurred": "Ralat telah berlaku",
   "unknownError": "Ralat yang tidak diketahui telah berlaku",
   "unexpectedErrorOccurred": "Ralat yang tidak dijangka telah berlaku",
-  "pressAndHoldNotificationToRecordPillTaking": "Tekan lama notifikasi untuk merekod pengambilan",
+  "pressAndHoldNotificationToRecordPillTaking": "Tekan dan tahan pemberitahuan untuk membuat rekod pengambilan pil",
   "letsTryIt": "Jom cuba!",
   "trialDeadlineDateOffsetDay": "Nikmati semua fungsi selama {number} hari!",
   "inputAndAdd": "Masukkan dan tambah",

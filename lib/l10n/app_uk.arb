@@ -356,7 +356,7 @@
   "errorOccurred": "Сталася помилка",
   "unknownError": "Сталася невідома помилка",
   "unexpectedErrorOccurred": "Сталася неочікувана помилка",
-  "pressAndHoldNotificationToRecordPillTaking": "Довго натисніть сповіщення, щоб записати прийом препарату",
+  "pressAndHoldNotificationToRecordPillTaking": "Натисніть і утримуйте сповіщення, щоб створити запис прийому пігулки",
   "letsTryIt": "Обов'язково спробуйте!",
   "trialDeadlineDateOffsetDay": "Усі функції доступні протягом {number} днів!",
   "inputAndAdd": "Ввести та додати",

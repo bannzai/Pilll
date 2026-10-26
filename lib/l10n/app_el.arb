@@ -356,7 +356,7 @@
   "errorOccurred": "Παρουσιάστηκε σφάλμα",
   "unknownError": "Παρουσιάστηκε άγνωστο σφάλμα",
   "unexpectedErrorOccurred": "Παρουσιάστηκε ένα απρόσμενο σφάλμα",
-  "pressAndHoldNotificationToRecordPillTaking": "Πατώντας παρατεταμένα την ειδοποίηση μπορείτε να καταγράψετε τη λήψη",
+  "pressAndHoldNotificationToRecordPillTaking": "Πατήστε παρατεταμένα την ειδοποίηση για να δημιουργήσετε καταγραφή λήψης",
   "letsTryIt": "Δοκιμάστε το οπωσδήποτε!",
   "trialDeadlineDateOffsetDay": "Όλες οι λειτουργίες διαθέσιμες για {number} ημέρες!",
   "inputAndAdd": "Εισάγετε και προσθέστε",

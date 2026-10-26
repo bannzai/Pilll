@@ -356,7 +356,7 @@
   "errorOccurred": "Wystąpił błąd",
   "unknownError": "Wystąpił nieznany błąd",
   "unexpectedErrorOccurred": "Wystąpił nieoczekiwany błąd",
-  "pressAndHoldNotificationToRecordPillTaking": "Przytrzymaj powiadomienie, aby zarejestrować przyjęcie leku",
+  "pressAndHoldNotificationToRecordPillTaking": "Przytrzymaj powiadomienie, aby utworzyć zapis przyjęcia tabletki",
   "letsTryIt": "Koniecznie wypróbuj!",
   "trialDeadlineDateOffsetDay": "Przez {number} dni masz dostęp do wszystkich funkcji!",
   "inputAndAdd": "Wprowadź i dodaj",

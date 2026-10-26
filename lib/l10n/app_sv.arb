@@ -356,7 +356,7 @@
   "errorOccurred": "Ett fel uppstod",
   "unknownError": "Ett okänt fel uppstod",
   "unexpectedErrorOccurred": "Ett oväntat fel uppstod",
-  "pressAndHoldNotificationToRecordPillTaking": "Håll ned notisen för att registrera pillintag",
+  "pressAndHoldNotificationToRecordPillTaking": "Tryck och håll på notisen för att skapa en intagslogg",
   "letsTryIt": "Pröva gärna!",
   "trialDeadlineDateOffsetDay": "Du kan använda alla funktioner i {number} dagar!",
   "inputAndAdd": "Ange och lägg till",

@@ -356,7 +356,7 @@
   "errorOccurred": "Ein Fehler ist aufgetreten",
   "unknownError": "Ein unbekannter Fehler ist aufgetreten",
   "unexpectedErrorOccurred": "Ein unerwarteter Fehler ist aufgetreten",
-  "pressAndHoldNotificationToRecordPillTaking": "Halten Sie die Benachrichtigung gedrückt, um die Einnahme zu protokollieren",
+  "pressAndHoldNotificationToRecordPillTaking": "Halte die Benachrichtigung gedrückt, um ein Einnahmeprotokoll zu erstellen",
   "letsTryIt": "Probieren Sie es aus!",
   "trialDeadlineDateOffsetDay": "Sie können {number} Tage lang alle Funktionen nutzen!",
   "inputAndAdd": "Eingeben und hinzufügen",

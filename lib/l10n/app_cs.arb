@@ -356,7 +356,7 @@
   "errorOccurred": "Došlo k chybě",
   "unknownError": "Došlo k neznámé chybě",
   "unexpectedErrorOccurred": "Došlo k neočekávané chybě",
-  "pressAndHoldNotificationToRecordPillTaking": "Dlouhým stisknutím oznámení můžete zaznamenat užití",
+  "pressAndHoldNotificationToRecordPillTaking": "Podržením oznámení můžete vytvořit záznam užití",
   "letsTryIt": "Vyzkoušejte to!",
   "trialDeadlineDateOffsetDay": "Celých {number} dní můžete používat všechny funkce!",
   "inputAndAdd": "Zadat a přidat",

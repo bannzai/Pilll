@@ -356,7 +356,7 @@
   "errorOccurred": "ದೋಷ ಸಂಭವಿಸಿದೆ",
   "unknownError": "ಅಪರಿಚಿತ ದೋಷ ಸಂಭವಿಸಿದೆ",
   "unexpectedErrorOccurred": "ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ",
-  "pressAndHoldNotificationToRecordPillTaking": "ಅಧಿಸೂಚನೆಯನ್ನು ದೀರ್ಘವಾಗಿ ಒತ್ತಿದರೆ ಸೇವನೆ ದಾಖಲೆ ಮಾಡಬಹುದು",
+  "pressAndHoldNotificationToRecordPillTaking": "ಅಧಿಸೂಚನೆಯನ್ನು ಒತ್ತಿ ಹಿಡಿದು ಸೇವನೆಯ ದಾಖಲೆ ರಚಿಸಬಹುದು",
   "letsTryIt": "ದಯವಿಟ್ಟು ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ",
   "trialDeadlineDateOffsetDay": "{number}ದಿನಗಳವರೆಗೆ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳು ಬಳಸಬಹುದು!",
   "inputAndAdd": "ನಮೂದಿಸಿ ಮತ್ತು ಸೇರಿಸಿ",

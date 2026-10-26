@@ -356,7 +356,7 @@
   "errorOccurred": "Mae gwall wedi digwydd",
   "unknownError": "Digwyddodd gwall anhysbys",
   "unexpectedErrorOccurred": "Mae gwall annisgwyl wedi digwydd",
-  "pressAndHoldNotificationToRecordPillTaking": "Pwysiwch yn hir ar yr hysbysiad i gofnodi cymryd",
+  "pressAndHoldNotificationToRecordPillTaking": "Pwyswch a daliwch yr hysbysiad i greu cofnod cymryd y bilsen",
   "letsTryIt": "Rhowch gynnig arni!",
   "trialDeadlineDateOffsetDay": "Pob nodwedd ar gael am {number} diwrnod!",
   "inputAndAdd": "Rhowch i mewn ac ychwanegu",

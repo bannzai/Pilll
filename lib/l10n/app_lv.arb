@@ -356,7 +356,7 @@
   "errorOccurred": "Radās kļūda",
   "unknownError": "Radās nezināma kļūda",
   "unexpectedErrorOccurred": "Radās neparedzēta kļūda",
-  "pressAndHoldNotificationToRecordPillTaking": "Ilgi spiežot paziņojumu, var izveidot tablešu lietošanas ierakstu",
+  "pressAndHoldNotificationToRecordPillTaking": "Nospiediet un turiet paziņojumu, lai izveidotu tablešu lietošanas ierakstu",
   "letsTryIt": "Noteikti izmēģiniet!",
   "trialDeadlineDateOffsetDay": "Visas funkcijas ir pieejamas {number} dienas!",
   "inputAndAdd": "Ievadi un pievieno",

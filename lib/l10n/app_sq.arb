@@ -356,7 +356,7 @@
   "errorOccurred": "Ndodhi një gabim",
   "unknownError": "Ndodhi një gabim i panjohur",
   "unexpectedErrorOccurred": "Ndodhi një gabim i papritur",
-  "pressAndHoldNotificationToRecordPillTaking": "Shtypni gjatë njoftimin për të regjistruar marrjen e ilaçit",
+  "pressAndHoldNotificationToRecordPillTaking": "Mbajeni shtypur njoftimin për të krijuar regjistrimi i marrjes së pilulës",
   "letsTryIt": "Provoni patjetër!",
   "trialDeadlineDateOffsetDay": "Të gjitha funksionet janë të disponueshme për {number} ditë!",
   "inputAndAdd": "Fut dhe shto",

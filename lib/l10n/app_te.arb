@@ -356,7 +356,7 @@
   "errorOccurred": "లోపం సంభవించింది",
   "unknownError": "తెలియని లోపం సంభవించింది",
   "unexpectedErrorOccurred": "ఊహించని లోపం ఏర్పడింది",
-  "pressAndHoldNotificationToRecordPillTaking": "నోటిఫికేషన్‌ను లాంగ్ ప్రెస్ చేస్తే మందు రికార్డు చేయవచ్చు",
+  "pressAndHoldNotificationToRecordPillTaking": "నోటిఫికేషన్‌ను నొక్కి పట్టుకుని మాత్రల నమోదు చేయవచ్చు",
   "letsTryIt": "తప్పకుండా ప్రయత్నించండి",
   "trialDeadlineDateOffsetDay": "{number} రోజుల పాటు అన్ని ఫీచర్లను ఉపయోగించవచ్చు!",
   "inputAndAdd": "నమోదు చేసి జోడించండి",

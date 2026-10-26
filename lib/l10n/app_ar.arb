@@ -356,7 +356,7 @@
   "errorOccurred": "حدث خطأ",
   "unknownError": "حدث خطأ غير معروف",
   "unexpectedErrorOccurred": "حدث خطأ غير متوقع",
-  "pressAndHoldNotificationToRecordPillTaking": "يمكنك تسجيل تناول الحبوب بالضغط الطويل على الإشعار",
+  "pressAndHoldNotificationToRecordPillTaking": "يمكنكِ إنشاء تسجيل تناول بالضغط مطولًا على الإشعار",
   "letsTryIt": "جربها الآن!",
   "trialDeadlineDateOffsetDay": "يمكنك استخدام جميع الميزات لمدة {number} أيام!",
   "inputAndAdd": "أدخل وأضف",

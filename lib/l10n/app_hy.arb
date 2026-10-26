@@ -356,7 +356,7 @@
   "errorOccurred": "Սխալ է տեղի ունեցել",
   "unknownError": "Անհայտ սխալ է տեղի ունեցել",
   "unexpectedErrorOccurred": "Անսպասելի սխալ է տեղի ունեցել",
-  "pressAndHoldNotificationToRecordPillTaking": "Ծանուցումը երկար սեղմելով կարող եք գրանցել դեղի ընդունումը",
+  "pressAndHoldNotificationToRecordPillTaking": "Սեղմած պահեք ծանուցումը՝ ընդունման գրառում ստեղծելու համար",
   "letsTryIt": "Անպայման փորձեք",
   "trialDeadlineDateOffsetDay": "{number} օր բոլոր ֆունկցիաները հասանելի են:",
   "inputAndAdd": "Մուտքագրել և ավելացնել",

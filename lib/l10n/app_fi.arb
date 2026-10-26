@@ -356,7 +356,7 @@
   "errorOccurred": "Tapahtui virhe",
   "unknownError": "Tapahtui tuntematon virhe",
   "unexpectedErrorOccurred": "Tapahtui odottamaton virhe",
-  "pressAndHoldNotificationToRecordPillTaking": "Ilmoitusta pitkään painamalla voit tallentaa ottamiskirjauksen",
+  "pressAndHoldNotificationToRecordPillTaking": "Luo pilleriloki painamalla ilmoitusta pitkään",
   "letsTryIt": "Kokeile vain!",
   "trialDeadlineDateOffsetDay": "Kaikki ominaisuudet käytettävissäsi {number} päivää!",
   "inputAndAdd": "Syötä ja lisää",

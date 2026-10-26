@@ -356,7 +356,7 @@
   "errorOccurred": "အမှားတစ်ခု ဖြစ်ပွားခဲ့ပါတယ်",
   "unknownError": "မသိသော အမှားတစ်ခု ဖြစ်ပွားခဲ့ပါတယ်",
   "unexpectedErrorOccurred": "မမျှော်လင့်ထားတဲ့ အမှားတစ်ခု ဖြစ်သွားပါတယ်",
-  "pressAndHoldNotificationToRecordPillTaking": "အသိပေးချက်ကို ကြာကြာနှိပ်ခြင်းဖြင့် ဆေးသောက်မှတ်တမ်းတင်နိုင်ပါသည်",
+  "pressAndHoldNotificationToRecordPillTaking": "အသိပေးချက်ကို ဖိထားပြီး ဆေးသောက်မှတ်တမ်း ဖန်တီးနိုင်ပါတယ်",
   "letsTryIt": "စမ်းကြည့်ကြပါ",
   "trialDeadlineDateOffsetDay": "{number} ရက်လုံးလုံး လုပ်ဆောင်ချက်အားလုံးကို အခမဲ့သုံးစွဲနိုင်ပါတယ်!",
   "inputAndAdd": "ထည့်သွင်းရန်",

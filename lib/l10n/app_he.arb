@@ -356,7 +356,7 @@
   "errorOccurred": "אירעה שגיאה",
   "unknownError": "אירעה שגיאה לא ידועה",
   "unexpectedErrorOccurred": "אירעה שגיאה בלתי צפויה",
-  "pressAndHoldNotificationToRecordPillTaking": "בלחיצה ארוכה על ההודעה ניתן לרשום נטילה",
+  "pressAndHoldNotificationToRecordPillTaking": "לחיצה ממושכת על ההתראה מאפשרת ליצור רישום נטילה",
   "letsTryIt": "נסו עכשיו!",
   "trialDeadlineDateOffsetDay": "במשך {number} ימים תוכל להשתמש בכל התכונות!",
   "inputAndAdd": "הכנס והוסף",

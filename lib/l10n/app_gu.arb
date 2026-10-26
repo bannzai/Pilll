@@ -356,7 +356,7 @@
   "errorOccurred": "ભૂલ થઈ છે",
   "unknownError": "અજાણી ભૂલ આવી છે",
   "unexpectedErrorOccurred": "અણધારી ભૂલ આવી છે",
-  "pressAndHoldNotificationToRecordPillTaking": "નોટિફિકેશનને લાંબા સમય સુધી દબાવવાથી તમે પિલ લેવાનો રેકોર્ડ કરી શકશો",
+  "pressAndHoldNotificationToRecordPillTaking": "સૂચનાને દબાવી રાખીને તમે ગોળી સેવનની નોંધ કરી શકો છો",
   "letsTryIt": "જરૂર આજમાવો",
   "trialDeadlineDateOffsetDay": "{number} દિવસ માટે તમામ ફીચર્સ ઉપયોગ કરી શકાય છે!",
   "inputAndAdd": "દાખલ કરી ઉમેરો",

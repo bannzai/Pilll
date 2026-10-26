@@ -356,7 +356,7 @@
   "errorOccurred": "Errore bat gertatu da",
   "unknownError": "Errore ezezagun bat gertatu da",
   "unexpectedErrorOccurred": "Ustekabeko errore bat gertatu da",
-  "pressAndHoldNotificationToRecordPillTaking": "Jakinarazpena luze sakatuta pilula hartzeko erregistroa egin dezakezu",
+  "pressAndHoldNotificationToRecordPillTaking": "Eduki sakatuta jakinarazpena hartze-erregistro bat sortzeko",
   "letsTryIt": "Probatu ezazu",
   "trialDeadlineDateOffsetDay": "{number} egunez funtzio guztiak erabil ditzakezu!",
   "inputAndAdd": "Idatzi eta gehitu",
