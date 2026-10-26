@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Könnun til að bæta þjónustuna",
   "satisfied": "Ég er ánægð",
   "notSatisfied": "Ekki ánægð",
-  "perNumber": "eftir númeri",
+  "perNumber": "fyrir hvert pillunúmer",
   "howManyDaysDoesMenstruationLast": "Hversu marga daga endist tíðin?",
   "daysMenstruationLasts": "dagar tíðablæðingar",
   "selectPillNumberForMenstruationStart": "Ýttu á pillunúmerið þar sem tíðablæðingin byrjar",

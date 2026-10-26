@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Опрос для улучшения сервиса",
   "satisfied": "Меня всё устраивает",
   "notSatisfied": "Не удовлетворена",
-  "perNumber": "по номерам",
+  "perNumber": "для каждого номера таблетки",
   "howManyDaysDoesMenstruationLast": "Сколько дней длится менструация?",
   "daysMenstruationLasts": "дней длится менструация",
   "selectPillNumberForMenstruationStart": "Нажмите номер таблетки, с которой начинается менструация",

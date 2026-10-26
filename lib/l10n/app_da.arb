@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Spørgeskema om forbedring af tjenesten",
   "satisfied": "Tilfreds",
   "notSatisfied": "Ikke tilfreds",
-  "perNumber": "nummervis",
+  "perNumber": "for hvert pillenummer",
   "howManyDaysDoesMenstruationLast": "Hvor mange dage varer din menstruation?",
   "daysMenstruationLasts": "dages menstruation",
   "selectPillNumberForMenstruationStart": "Tryk på pillenummeret hvor mensen begynder",

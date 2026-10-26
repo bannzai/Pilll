@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Кызматты жакшыртуу сурамжылоосу",
   "satisfied": "Канааттанам",
   "notSatisfied": "Канааттанган жокмун",
-  "perNumber": "номер боюнча",
+  "perNumber": "ар бир таблетканын номери үчүн",
   "howManyDaysDoesMenstruationLast": "Айыз ачуу канча күн созулат?",
   "daysMenstruationLasts": "күн бою менструация болот",
   "selectPillNumberForMenstruationStart": "Айыздык башталган таблетка номерин басыңыз",

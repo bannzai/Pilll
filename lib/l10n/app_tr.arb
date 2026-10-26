@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Hizmeti iyileştirme anketi",
   "satisfied": "Memnunum",
   "notSatisfied": "Memnun değilim",
-  "perNumber": "numarasına göre",
+  "perNumber": "her hap numarası için",
   "howManyDaysDoesMenstruationLast": "Adet kaç gün sürer?",
   "daysMenstruationLasts": "gün süren adet",
   "selectPillNumberForMenstruationStart": "Adet başlayan hap numarasına dokunun",

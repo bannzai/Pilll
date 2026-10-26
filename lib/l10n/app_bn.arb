@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "সেবা উন্নয়নের জরিপ",
   "satisfied": "সন্তুষ্ট",
   "notSatisfied": "সন্তুষ্ট নই",
-  "perNumber": "নম্বর অনুযায়ী",
+  "perNumber": "প্রতিটি পিল নম্বর অনুযায়ী",
   "howManyDaysDoesMenstruationLast": "কত দিন মাসিক চলে?",
   "daysMenstruationLasts": "দিন মাসিক চলে",
   "selectPillNumberForMenstruationStart": "মাসিক শুরু হওয়ার পিল নম্বরে ট্যাপ করুন",

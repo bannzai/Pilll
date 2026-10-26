@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Қызметті жақсарту сауалнамасы",
   "satisfied": "Қанағаттанамын",
   "notSatisfied": "Қанағаттанбадым",
-  "perNumber": "нөмір бойынша",
+  "perNumber": "әр таблетка нөмірі үшін",
   "howManyDaysDoesMenstruationLast": "Етеккір неше күн жалғасады?",
   "daysMenstruationLasts": "күн етек көру жалғасады",
   "selectPillNumberForMenstruationStart": "Етіс басталатын дәрі нөмірін басыңыз",

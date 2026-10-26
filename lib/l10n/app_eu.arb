@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Zerbitzua hobetzeko inkesta",
   "satisfied": "Pozik nago",
   "notSatisfied": "Ez nago gustura",
-  "perNumber": "zenbaki bakoitzeko",
+  "perNumber": "pilula zenbaki bakoitzerako",
   "howManyDaysDoesMenstruationLast": "Zenbat egunez irauten du hilekoak?",
   "daysMenstruationLasts": "egunez hileroko irauten du",
   "selectPillNumberForMenstruationStart": "Sakatu hilekoa hasten den pilula zenbakia",

@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Ankieta dotycząca poprawy usługi",
   "satisfied": "Jestem zadowolona",
   "notSatisfied": "Nie jestem zadowolona",
-  "perNumber": "według numerów",
+  "perNumber": "dla każdego numeru tabletki",
   "howManyDaysDoesMenstruationLast": "Ile dni trwa menstruacja?",
   "daysMenstruationLasts": "dni trwa menstruacja",
   "selectPillNumberForMenstruationStart": "Dotknij numer tabletki, od której zaczyna się miesiączka",

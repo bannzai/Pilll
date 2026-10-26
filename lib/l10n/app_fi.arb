@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Kysely palvelun parantamiseksi",
   "satisfied": "Tyytyväinen",
   "notSatisfied": "En ole tyytyväinen",
-  "perNumber": "numerittain",
+  "perNumber": "jokaiselle pillerinumerolle",
   "howManyDaysDoesMenstruationLast": "Kuinka monta päivää kuukautiset kestävät?",
   "daysMenstruationLasts": "päivän kuukautiset",
   "selectPillNumberForMenstruationStart": "Napauta pillerinumeroa, josta kuukautiset alkavat",

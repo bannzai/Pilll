@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Küsitlus teenuse parandamiseks",
   "satisfied": "Rahul",
   "notSatisfied": "Ei ole rahul",
-  "perNumber": "numbri kaupa",
+  "perNumber": "iga pilli numbri jaoks",
   "howManyDaysDoesMenstruationLast": "Mitu päeva kestab menstruatsioon?",
   "daysMenstruationLasts": "päeva kestab menstruatsioon",
   "selectPillNumberForMenstruationStart": "Puuduta menstruatsiooni alguse pilli numbrit",

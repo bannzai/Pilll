@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "د خدمت د ښه کولو سروې",
   "satisfied": "زه راضي یم",
   "notSatisfied": "راضي نه یم",
-  "perNumber": "د نمبر له مخې",
+  "perNumber": "د هرې ګولۍ د شمېرې لپاره",
   "howManyDaysDoesMenstruationLast": "ستاسو میاشتنۍ دوره څومره ورځې روانه وي؟",
   "daysMenstruationLasts": "ورځې حیض دوام کوي",
   "selectPillNumberForMenstruationStart": "د میاشتنۍ د پیل ګولۍ شمېره ټک وکړئ",

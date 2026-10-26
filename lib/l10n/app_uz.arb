@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Xizmatni yaxshilash soʻrovi",
   "satisfied": "Mamnunman",
   "notSatisfied": "Qoniqmadim",
-  "perNumber": "raqam bo'yicha",
+  "perNumber": "har bir tabletka raqami uchun",
   "howManyDaysDoesMenstruationLast": "Hayz davri necha kun davom etadi?",
   "daysMenstruationLasts": "kun hayz davom etadi",
   "selectPillNumberForMenstruationStart": "Hayz boshlanadigan tabletka raqamini bosing",

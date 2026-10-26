@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Help us improve Pilll",
   "satisfied": "Satisfied",
   "notSatisfied": "Not satisfied",
-  "perNumber": "by pill number",
+  "perNumber": "for each pill number",
   "howManyDaysDoesMenstruationLast": "How many days does your period last?",
   "daysMenstruationLasts": "days of period",
   "selectPillNumberForMenstruationStart": "Tap the pill number when menstruation begins",

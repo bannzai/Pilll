@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Apklausa paslaugai gerinti",
   "satisfied": "Esu patenkinta",
   "notSatisfied": "Nesu patenkinta",
-  "perNumber": "pagal numerius",
+  "perNumber": "kiekvienam tabletės numeriui",
   "howManyDaysDoesMenstruationLast": "Kiek dienų trunka mėnesinės?",
   "daysMenstruationLasts": "dienų trunka menstruacija",
   "selectPillNumberForMenstruationStart": "Palieskite tabletės numerį, nuo kurio prasideda menstruacija",

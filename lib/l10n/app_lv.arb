@@ -265,7 +265,7 @@
   "serviceImprovementSurvey": "Aptauja pakalpojuma uzlabošanai",
   "satisfied": "Esmu apmierināta",
   "notSatisfied": "Neesmu apmierināta",
-  "perNumber": "pa numuriem",
+  "perNumber": "katram tabletes numuram",
   "howManyDaysDoesMenstruationLast": "Cik dienas ilgst menstruācijas?",
   "daysMenstruationLasts": "dienu menstruācija",
   "selectPillNumberForMenstruationStart": "Pieskarieties tabletes numuram, kad sākas menstruācija",
