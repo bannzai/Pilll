@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} Nr.",
   "selectPauseStartDate": "Beginn der Pillenpause auswählen",
-  "selectPausePeriod": "Einnahmepause auswählen",
+  "selectPausePeriod": "Wähle die Dauer deiner Pillenpause",
   "pauseStartDate": "Einnahmepause-Startdatum",
   "pauseEndDate": "Ende der Einnahmepause",
   "endPillSheet": "Pillenblister beendet",

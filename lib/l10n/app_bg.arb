@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} номер",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} номер",
   "selectPauseStartDate": "Избор на начална дата на паузата от приема на хапчета",
-  "selectPausePeriod": "Избор на период без прием",
+  "selectPausePeriod": "Изберете продължителност на паузата в приема на хапчета",
   "pauseStartDate": "Начална дата на паузата в приема",
   "pauseEndDate": "Дата за завършване на паузата",
   "endPillSheet": "Пакетът приключи",

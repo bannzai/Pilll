@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "No. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select pill break start date",
-  "selectPausePeriod": "Select Pill-Free Period",
+  "selectPausePeriod": "Select the length of your pill break",
   "pauseStartDate": "Break Start Date",
   "pauseEndDate": "Break End Date",
   "endPillSheet": "Pill Sheet Finished",

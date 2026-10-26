@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nomor 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nomor",
   "selectPauseStartDate": "Pilih tanggal mulai jeda minum pil",
-  "selectPausePeriod": "Pilih Periode Istirahat Konsumsi",
+  "selectPausePeriod": "Pilih lama jeda minum pil",
   "pauseStartDate": "Tanggal Mulai Jeda Konsumsi",
   "pauseEndDate": "Tanggal Berakhir Jeda Konsumsi",
   "endPillSheet": "Pack Pil Selesai",

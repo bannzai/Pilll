@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→núm. {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} núm.",
   "selectPauseStartDate": "Tria la data d'inici de la pausa de la píndola",
-  "selectPausePeriod": "Selecciona el període de descans de medicació",
+  "selectPausePeriod": "Tria la durada de la pausa de la píndola",
   "pauseStartDate": "Data d'inici de la pausa",
   "pauseEndDate": "Data de fi del descans",
   "endPillSheet": "Plaqueta de píndoles finalitzada",

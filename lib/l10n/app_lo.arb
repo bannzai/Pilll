@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ເລກ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ເລກ",
   "selectPauseStartDate": "ກະລຸນາເລືອກວັນເລີ່ມພັກການກິນຢາເມັດ",
-  "selectPausePeriod": "ເລືອກໄລຍະພັກການກິນຢາ",
+  "selectPausePeriod": "ກະລຸນາເລືອກໄລຍະພັກການກິນຢາເມັດ",
   "pauseStartDate": "ວັນເລີ່ມພັກຢາ",
   "pauseEndDate": "ວັນສິ້ນສຸດການພັກຢາ",
   "endPillSheet": "ແຜ່ນຢາຄຸມກໍາເນີດສິ້ນສຸດ",

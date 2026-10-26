@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ከ1→{afterDisplayNumberSettingEndPillNumber} ቁጥር",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ቁጥር",
   "selectPauseStartDate": "ክኒን መውሰድ የሚቆምበትን የመጀመሪያ ቀን ይምረጡ",
-  "selectPausePeriod": "የመድሐኒት እረፍተ ጊዜ ምረጣ",
+  "selectPausePeriod": "ክኒን የማይወሰድበትን ጊዜ ይምረጡ",
   "pauseStartDate": "የመድሃኒት እረፍት መጀመሪያ ቀን",
   "pauseEndDate": "የመድሀኒት እረፍት መጨረሻ ቀን",
   "endPillSheet": "የክኒን ሉህ ተጠናቀቀ",

@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nº 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nº",
   "selectPauseStartDate": "Selecione a data de início da pausa da pílula",
-  "selectPausePeriod": "Selecionar período de pausa",
+  "selectPausePeriod": "Escolha a duração da pausa na pílula",
   "pauseStartDate": "Data de início da pausa",
   "pauseEndDate": "Data de fim da pausa",
   "endPillSheet": "Cartela finalizada",

@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "N.º 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Selecciona la fecha de inicio del descanso de la píldora",
-  "selectPausePeriod": "Seleccionar período de descanso",
+  "selectPausePeriod": "Elige la duración de la pausa de la píldora",
   "pauseStartDate": "Fecha de inicio del descanso",
   "pauseEndDate": "Fecha de fin del descanso",
   "endPillSheet": "Blíster finalizado",

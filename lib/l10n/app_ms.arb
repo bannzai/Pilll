@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nombor 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nombor",
   "selectPauseStartDate": "Pilih tarikh mula rehat daripada mengambil pil",
-  "selectPausePeriod": "Pilih Tempoh Rehat Pengambilan",
+  "selectPausePeriod": "Sila pilih tempoh rehat daripada mengambil pil",
   "pauseStartDate": "Tarikh Mula Berehat Pil",
   "pauseEndDate": "Tarikh Tamat Rehat Pengambilan",
   "endPillSheet": "Helaian Pil Tamat",

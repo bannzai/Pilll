@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "selectPauseStartDate": "বড়ি খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ বাছনি কৰক",
-  "selectPausePeriod": "ঔষধ সেৱন বিৰতিৰ সময়কাল নিৰ্বাচন কৰক",
+  "selectPausePeriod": "বৰি নোখোৱাৰ বিৰতিৰ সময়সীমা বাছনি কৰক",
   "pauseStartDate": "সেৱন বিৰতি আৰম্ভৰ দিন",
   "pauseEndDate": "সেৱন বিৰামৰ সমাপ্তিৰ তাৰিখ",
   "endPillSheet": "পিল শীট সমাপ্ত",

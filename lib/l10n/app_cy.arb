@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "rhif 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} rhif",
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r seibiant rhag cymryd y bilsen",
-  "selectPausePeriod": "Dewis cyfnod saib cymryd",
+  "selectPausePeriod": "Dewiswch hyd yr egwyl rhag cymryd y bilsen",
   "pauseStartDate": "Dyddiad cychwyn seibiant pilsen",
   "pauseEndDate": "Dyddiad Diwedd y Seibiant",
   "endPillSheet": "Taflen biliau wedi gorffen",

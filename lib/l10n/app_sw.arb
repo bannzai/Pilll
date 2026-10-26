@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Namba 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} namba",
   "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza mapumziko ya kumeza vidonge",
-  "selectPausePeriod": "Chagua kipindi cha mapumziko cha dawa",
+  "selectPausePeriod": "Tafadhali chagua muda wa mapumziko ya kumeza vidonge",
   "pauseStartDate": "Tarehe ya kuanza pumziko la dawa",
   "pauseEndDate": "Tarehe ya kumaliza mapumziko",
   "endPillSheet": "Mfuko wa Vidonge Umemaliza",

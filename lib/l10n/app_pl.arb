@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nr 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr",
   "selectPauseStartDate": "Wybierz datę rozpoczęcia przerwy w przyjmowaniu tabletek",
-  "selectPausePeriod": "Wybierz okres przerwy w przyjmowaniu",
+  "selectPausePeriod": "Wybierz długość przerwy w przyjmowaniu tabletek",
   "pauseStartDate": "Data początku przerwy w przyjmowaniu",
   "pauseEndDate": "Data zakończenia przerwy",
   "endPillSheet": "Zakończenie blistra",

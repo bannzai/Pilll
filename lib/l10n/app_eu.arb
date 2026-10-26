@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1.→{afterDisplayNumberSettingEndPillNumber}. pilula",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}. zk.",
   "selectPauseStartDate": "Hautatu pilula hartzeko etenaldiaren hasiera-data",
-  "selectPausePeriod": "Atseden aldia hautatu",
+  "selectPausePeriod": "Aukeratu pilula hartzeko etenaldiaren iraupena",
   "pauseStartDate": "Pilula-atsedenaldiaren hasiera-data",
   "pauseEndDate": "Hartzeko atsedena amaitzeko eguna",
   "endPillSheet": "Pilula-orria amaituta",

@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "နံပါတ် 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} နံပါတ်",
   "selectPauseStartDate": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်ကို ရွေးပါ",
-  "selectPausePeriod": "ဆေးအနားယူကာလ ရွေးချယ်ပါ",
+  "selectPausePeriod": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမည့်ကာလကို ရွေးချယ်ပါ",
   "pauseStartDate": "ဆေးသောက်အားနားစတင်နေ့",
   "pauseEndDate": "ဆေးသောက်ခြင်းနားရပ်မှုပြီးဆုံးနေ့",
   "endPillSheet": "ဆေးပြားချပ် ပြီးဆုံး",

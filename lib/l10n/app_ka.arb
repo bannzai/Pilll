@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ნომერი 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ნომერი",
   "selectPauseStartDate": "აბის მიღების შესვენების დაწყების თარიღის არჩევა",
-  "selectPausePeriod": "მიღების შესვენების პერიოდის არჩევა",
+  "selectPausePeriod": "აირჩიეთ აბების მიღების შესვენების ხანგრძლივობა",
   "pauseStartDate": "შესვენების დაწყების თარიღი",
   "pauseEndDate": "შესვენების დასრულების თარიღი",
   "endPillSheet": "ტაბლეტების პაკეტი დასრულდა",

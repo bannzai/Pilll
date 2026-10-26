@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "شمارهٔ ۱→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شماره",
   "selectPauseStartDate": "انتخاب تاریخ شروع وقفه در مصرف قرص",
-  "selectPausePeriod": "انتخاب دوره توقف مصرف",
+  "selectPausePeriod": "مدت وقفه در مصرف قرص را انتخاب کنید",
   "pauseStartDate": "تاریخ شروع وقفه مصرف",
   "pauseEndDate": "تاریخ پایان وقفه مصرف",
   "endPillSheet": "پایان ورق قرص",

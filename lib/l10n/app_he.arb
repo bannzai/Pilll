@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "מס׳ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} מס׳",
   "selectPauseStartDate": "בחירת תאריך תחילת ההפסקה בנטילת הגלולה",
-  "selectPausePeriod": "בחר תקופת הפסקה",
+  "selectPausePeriod": "בחירת משך ההפסקה בנטילת הגלולה",
   "pauseStartDate": "תאריך תחילת ההפסקה",
   "pauseEndDate": "תאריך סיום ההפסקה",
   "endPillSheet": "סיום אריזת הגלולות",

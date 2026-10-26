@@ -106,7 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
   "selectPauseStartDate": "Veldu upphafsdag hlés frá pillutöku",
-  "selectPausePeriod": "Velja hvíldartíma lyfjatöku",
+  "selectPausePeriod": "Veldu lengd hlés frá pillutöku",
   "pauseStartDate": "Upphafsdagur inntökuhlés",
   "pauseEndDate": "Lokadagur hvíldarskipti",
   "endPillSheet": "Pillublaði lokið",
