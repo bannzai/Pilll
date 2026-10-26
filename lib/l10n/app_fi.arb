@@ -38,7 +38,7 @@
   "pillReminder": "Pillerimuistutus",
   "takePillReminderChannelName": "Pillerimuistutukset",
   "takePillReminder": "On aika ottaa pilleri 💊",
-  "copyDebugInfo": "KOPIOI VIANETSINTÄTIEDOT",
+  "copyDebugInfo": "Kopioi virheenjäljitystiedot",
   "cancel": "Peruuta",
   "signOut": "Kirjaudu ulos",
   "autoAddPillSheetGroup": "Pillipakkausryhmien automaattinen lisäys",

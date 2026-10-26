@@ -38,7 +38,7 @@
   "pillReminder": "Таблетка қабылдау туралы еске салу",
   "takePillReminderChannelName": "Таблетка қабылдау еске салғыштары",
   "takePillReminder": "Таблеткаңызды қабылдайтын уақыт келді 💊",
-  "copyDebugInfo": "DEBUG АҚПАРАТЫН КӨШІРУ",
+  "copyDebugInfo": "Қателерді түзету мәліметін көшіріңіз",
   "cancel": "Болдырмау",
   "signOut": "Шығу",
   "autoAddPillSheetGroup": "Дәрі парақтары тобын автоматты қосу",

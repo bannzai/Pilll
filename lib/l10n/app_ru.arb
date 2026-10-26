@@ -38,7 +38,7 @@
   "pillReminder": "Напоминание о приёме таблетки",
   "takePillReminderChannelName": "Напоминания о приёме таблетки",
   "takePillReminder": "Пора принять таблетку 💊",
-  "copyDebugInfo": "КОПИРОВАТЬ ДАННЫЕ ОТЛАДКИ",
+  "copyDebugInfo": "Скопируйте сведения для отладки",
   "cancel": "Отмена",
   "signOut": "Выйти",
   "autoAddPillSheetGroup": "Автоматическое добавление групп блистеров",

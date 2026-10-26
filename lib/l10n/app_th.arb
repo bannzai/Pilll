@@ -38,7 +38,7 @@
   "pillReminder": "แจ้งเตือนเวลาทานยาเม็ดคุมกำเนิด",
   "takePillReminderChannelName": "การแจ้งเตือนให้ทานยาเม็ด",
   "takePillReminder": "ถึงเวลาทานยาแล้วค่ะ 💊",
-  "copyDebugInfo": "คัดลอกข้อมูลดีบัก",
+  "copyDebugInfo": "คัดลอกข้อมูลการแก้ไขข้อบกพร่อง",
   "cancel": "ยกเลิก",
   "signOut": "ออกจากระบบ",
   "autoAddPillSheetGroup": "การเพิ่มกลุ่มแผ่นยาอัตโนมัติ",
