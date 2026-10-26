@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} ichida xarid qilsangiz, {offPercent}% chegirma olasiz",
   "pillReminderChanged": "Tabletka ichish eslatmalari {value} holatiga oʻrnatildi",
   "silentModeNotificationDescription": "Diqqatni jamlash rejimi yoqilgan yoki qurilmangiz ovozsiz holatda boʻlsa ham, bildirishnomalar qulflangan ekranda koʻrinadi va ovoz eshitiladi.",
-  "enableNotificationInSilentMode": "Jim rejimda ham bildirishnoma yuborish",
+  "enableNotificationInSilentMode": "Ovozsiz rejimda ham bildirishnomalar oling",
   "enableNotificationInSilentModeSetting": "Sakin rejimda ham bildirishnoma sozlamalari",
   "criticalAlertVolume": "Ovoz balandligi",
   "logout": "Chiqish",

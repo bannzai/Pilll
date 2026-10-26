@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "اشتري خلال {countdown} واحصلي على خصم {offPercent}%",
   "pillReminderChanged": "تم ضبط إشعارات تناول الحبوب على {value}",
   "silentModeNotificationDescription": "حتى عند تشغيل وضع التركيز أو كتم صوت الجهاز، تظهر الإشعارات على شاشة القفل ويُشغّل صوت التنبيه.",
-  "enableNotificationInSilentMode": "التنبيه حتى في الوضع الصامت",
+  "enableNotificationInSilentMode": "تلقي الإشعارات حتى في الوضع الصامت",
   "enableNotificationInSilentModeSetting": "إعدادات الإشعارات في الوضع الصامت",
   "criticalAlertVolume": "مستوى الصوت",
   "logout": "تسجيل الخروج",

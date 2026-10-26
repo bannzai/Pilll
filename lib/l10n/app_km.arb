@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "ទិញក្នុងរយៈពេល {countdown} ដើម្បីទទួលបានការបញ្ចុះតម្លៃ {offPercent}%",
   "pillReminderChanged": "ការរំលឹកឱ្យលេបថ្នាំគ្រាប់ត្រូវបានកំណត់ជា {value}",
   "silentModeNotificationDescription": "ទោះបីជាបើកមុខងារផ្តោតអារម្មណ៍ ឬឧបករណ៍របស់អ្នកស្ថិតក្នុងរបៀបស្ងាត់ក៏ដោយ ការជូនដំណឹងនឹងបង្ហាញលើអេក្រង់ចាក់សោ ហើយមានសំឡេងរោទិ៍។",
-  "enableNotificationInSilentMode": "ជូនដំណឹងទោះបីជាស្ងាត់",
+  "enableNotificationInSilentMode": "ទទួលបានការជូនដំណឹង ទោះនៅក្នុងរបៀបស្ងាត់ក៏ដោយ",
   "enableNotificationInSilentModeSetting": "ការជូនដំណឹងក្នុងរបៀបស្ងៀម",
   "criticalAlertVolume": "សំឡេង",
   "logout": "ចេញពីគណនី",

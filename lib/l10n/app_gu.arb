@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown}માં ખરીદશો તો {offPercent}% છૂટ મળશે",
   "pillReminderChanged": "ગોળી લેવાની સૂચનાઓ {value} પર સેટ થઈ છે",
   "silentModeNotificationDescription": "ફોકસ મોડ ચાલુ હોય અથવા તમારું ઉપકરણ સાઇલન્ટ પર હોય ત્યારે પણ સૂચનાઓ લૉક સ્ક્રીન પર દેખાશે અને અવાજ વાગશે.",
-  "enableNotificationInSilentMode": "મૌન મોડમાં પણ નોટિફાઇ કરો",
+  "enableNotificationInSilentMode": "સાઇલન્ટ મોડમાં પણ સૂચનાઓ મેળવો",
   "enableNotificationInSilentModeSetting": "સાઇલન્ટ મોડમાં પણ નોટિફિકેશન",
   "criticalAlertVolume": "વોલ્યુમ",
   "logout": "લૉગઆઉટ",

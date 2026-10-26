@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Придбайте протягом {countdown} і отримайте знижку {offPercent}%",
   "pillReminderChanged": "Нагадування про прийом пігулки встановлено на {value}",
   "silentModeNotificationDescription": "Навіть коли ввімкнено режим зосередження або звук пристрою вимкнено, сповіщення з’являються на екрані блокування та відтворюється звук.",
-  "enableNotificationInSilentMode": "Сповіщати навіть у тихому режимі",
+  "enableNotificationInSilentMode": "Отримуйте сповіщення навіть у беззвучному режимі",
   "enableNotificationInSilentModeSetting": "Сповіщення в беззвучному режимі",
   "criticalAlertVolume": "Гучність",
   "logout": "Вийти",

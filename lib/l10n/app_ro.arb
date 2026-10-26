@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Cumpără în următoarele {countdown} și primești {offPercent}% reducere",
   "pillReminderChanged": "Notificările pentru luarea pilulei au fost setate la {value}",
   "silentModeNotificationDescription": "Chiar dacă modul Concentrare este activat sau dispozitivul tău este pe silențios, notificările apar pe ecranul de blocare și se aude un sunet.",
-  "enableNotificationInSilentMode": "Notifică și în modul silențios",
+  "enableNotificationInSilentMode": "Primește notificări și în modul silențios",
   "enableNotificationInSilentModeSetting": "Notificări în modul silențios",
   "criticalAlertVolume": "Volum",
   "logout": "Deconectare",

@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Kupite u roku od {countdown} uz popust od {offPercent}%",
   "pillReminderChanged": "Podsjetnici za uzimanje pilule postavljeni su na {value}",
   "silentModeNotificationDescription": "Čak i kada je način fokusiranja uključen ili je vaš uređaj utišan, obavijesti se prikazuju na zaključanom zaslonu i reproducira se zvuk.",
-  "enableNotificationInSilentMode": "Obavještavaj u tihom načinu",
+  "enableNotificationInSilentMode": "Primajte obavijesti i u tihom načinu rada",
   "enableNotificationInSilentModeSetting": "Obavijesti u tihom načinu",
   "criticalAlertVolume": "Glasnoća",
   "logout": "Odjava",

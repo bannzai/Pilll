@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Αγοράστε εντός {countdown} με έκπτωση {offPercent}%",
   "pillReminderChanged": "Οι ειδοποιήσεις λήψης χαπιού ορίστηκαν σε {value}",
   "silentModeNotificationDescription": "Ακόμα και όταν είναι ενεργή η λειτουργία συγκέντρωσης ή η συσκευή σας είναι σε σίγαση, οι ειδοποιήσεις εμφανίζονται στην οθόνη κλειδώματος και αναπαράγεται ήχος.",
-  "enableNotificationInSilentMode": "Ειδοποίηση ακόμη και σε σιωπηλή λειτουργία",
+  "enableNotificationInSilentMode": "Λήψη ειδοποιήσεων και στην αθόρυβη λειτουργία",
   "enableNotificationInSilentModeSetting": "Ειδοποιήσεις ακόμη και σε σιωπηλή λειτουργία",
   "criticalAlertVolume": "Ένταση",
   "logout": "Αποσύνδεση",

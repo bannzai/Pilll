@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} ಒಳಗೆ ಖರೀದಿಸಿದರೆ {offPercent}% ರಿಯಾಯಿತಿ ಪಡೆಯಿರಿ",
   "pillReminderChanged": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸೂಚನೆಗಳನ್ನು {value} ಗೆ ಹೊಂದಿಸಲಾಗಿದೆ",
   "silentModeNotificationDescription": "ಫೋಕಸ್ ಮೋಡ್ ಆನ್ ಆಗಿದ್ದರೂ ಅಥವಾ ನಿಮ್ಮ ಸಾಧನ ಮೌನ ಸ್ಥಿತಿಯಲ್ಲಿದ್ದರೂ, ಸೂಚನೆಗಳು ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ ಮತ್ತು ಶಬ್ದ ಕೇಳಿಸುತ್ತದೆ.",
-  "enableNotificationInSilentMode": "ಮೌನ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಸೂಚನೆ ನೀಡಿ",
+  "enableNotificationInSilentMode": "ನಿಶ್ಶಬ್ದ ಸ್ಥಿತಿಯಲ್ಲೂ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಿರಿ",
   "enableNotificationInSilentModeSetting": "ಮೌನ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಅಧಿಸೂಚನೆ ಸೆಟ್ಟಿಂಗ್",
   "criticalAlertVolume": "ಧ್ವನಿ ಪ್ರಮಾಣ",
   "logout": "ಲಾಗ್ ಔಟ್",

@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Kup w ciągu {countdown} i skorzystaj z {offPercent}% zniżki",
   "pillReminderChanged": "Przypomnienia o przyjęciu tabletki ustawiono na {value}",
   "silentModeNotificationDescription": "Nawet gdy tryb skupienia jest włączony lub urządzenie wyciszone, powiadomienia pojawiają się na ekranie blokady i odtwarzają dźwięk.",
-  "enableNotificationInSilentMode": "Powiadomienia w trybie cichym",
+  "enableNotificationInSilentMode": "Otrzymuj powiadomienia także w trybie cichym",
   "enableNotificationInSilentModeSetting": "Powiadomienia w trybie cichym",
   "criticalAlertVolume": "Głośność",
   "logout": "Wyloguj",

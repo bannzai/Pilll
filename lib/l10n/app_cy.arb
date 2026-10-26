@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Prynwch o fewn {countdown} i gael gostyngiad o {offPercent}%",
   "pillReminderChanged": "Mae hysbysiadau cymryd y bilsen wedi'u gosod i {value}",
   "silentModeNotificationDescription": "Hyd yn oed pan fydd y modd ffocws ymlaen neu pan fydd eich dyfais yn dawel, bydd hysbysiadau'n ymddangos ar y sgrin glo a bydd sain yn chwarae.",
-  "enableNotificationInSilentMode": "Hysbysu hyd yn oed mewn modd tawel",
+  "enableNotificationInSilentMode": "Cael hysbysiadau hyd yn oed yn y modd tawel",
   "enableNotificationInSilentModeSetting": "Hysbysiadau yn y modd tawel",
   "criticalAlertVolume": "Sain",
   "logout": "Allgofnodi",

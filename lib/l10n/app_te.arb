@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} లోపు కొనుగోలు చేస్తే {offPercent}% తగ్గింపు పొందండి",
   "pillReminderChanged": "మాత్ర తీసుకునే రిమైండర్‌లు {value}కి సెట్ చేయబడ్డాయి",
   "silentModeNotificationDescription": "ఫోకస్ మోడ్ ఆన్‌లో ఉన్నా లేదా మీ పరికరం సైలెంట్‌లో ఉన్నా, నోటిఫికేషన్‌లు లాక్ స్క్రీన్‌పై కనిపిస్తాయి మరియు శబ్దం వినిపిస్తుంది.",
-  "enableNotificationInSilentMode": "సైలెంట్ మోడ్‌లో కూడా నోటిఫై చేయండి",
+  "enableNotificationInSilentMode": "సైలెంట్ మోడ్‌లో కూడా నోటిఫికేషన్‌లు పొందండి",
   "enableNotificationInSilentModeSetting": "మౌన మోడ్‌లో కూడా నోటిఫికేషన్ సెట్టింగ్",
   "criticalAlertVolume": "వాల్యూమ్",
   "logout": "లాగ్ అవుట్",

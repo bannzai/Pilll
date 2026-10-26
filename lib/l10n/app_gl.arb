@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Compra nos próximos {countdown} cun desconto do {offPercent} %",
   "pillReminderChanged": "Os avisos para tomar a pílula están configurados en {value}",
   "silentModeNotificationDescription": "Aínda que o modo de concentración estea activado ou o dispositivo estea en silencio, as notificacións aparecen na pantalla de bloqueo e soa un aviso.",
-  "enableNotificationInSilentMode": "Notificar en modo silencioso",
+  "enableNotificationInSilentMode": "Recibir notificacións tamén en modo silencio",
   "enableNotificationInSilentModeSetting": "Configuración de notificacións en modo silencioso",
   "criticalAlertVolume": "Volume",
   "logout": "Pechar sesión",

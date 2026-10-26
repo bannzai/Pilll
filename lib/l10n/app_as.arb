@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown}ৰ ভিতৰত ক্ৰয় কৰিলে {offPercent}% ৰেহাই পাব",
   "pillReminderChanged": "পিল খোৱাৰ জাননী {value} কৰা হৈছে",
   "silentModeNotificationDescription": "ফ’কাছ মোড অন থাকিলেও বা আপোনাৰ ডিভাইচ নীৰৱ অৱস্থাত থাকিলেও, জাননী লক স্ক্ৰীনত দেখা যাব আৰু শব্দ বাজিব।",
-  "enableNotificationInSilentMode": "নিৰৱ মোডতো সূচনা দিয়ক",
+  "enableNotificationInSilentMode": "নীৰৱ অৱস্থাতো জাননী লাভ কৰক",
   "enableNotificationInSilentModeSetting": "নীৰব মোডতো জাননী সংস্থাপন",
   "criticalAlertVolume": "আওয়াজ",
   "logout": "লগ আউট",

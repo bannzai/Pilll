@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Acquista entro {countdown} e ottieni uno sconto del {offPercent}%",
   "pillReminderChanged": "I promemoria per prendere la pillola sono impostati su {value}",
   "silentModeNotificationDescription": "Anche quando la modalità Full immersion è attiva o il dispositivo è in silenzioso, le notifiche compaiono nella schermata di blocco e viene riprodotto un suono.",
-  "enableNotificationInSilentMode": "Notifica anche in modalità silenziosa",
+  "enableNotificationInSilentMode": "Ricevi notifiche anche in modalità silenziosa",
   "enableNotificationInSilentModeSetting": "Notifiche anche in modalità silenziosa",
   "criticalAlertVolume": "Volume",
   "logout": "Esci",

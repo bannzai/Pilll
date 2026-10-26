@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "רכישה בתוך {countdown} תזכה בהנחה של {offPercent}%",
   "pillReminderChanged": "תזכורות לנטילת הגלולה הוגדרו ל־{value}",
   "silentModeNotificationDescription": "גם כשמצב ריכוז פועל או כשהמכשיר מושתק, ההתראות מופיעות במסך הנעילה ומושמע צליל.",
-  "enableNotificationInSilentMode": "התראה גם במצב שקט",
+  "enableNotificationInSilentMode": "קבלת התראות גם במצב שקט",
   "enableNotificationInSilentModeSetting": "הגדרות התראה במצב שקט",
   "criticalAlertVolume": "עוצמת קול",
   "logout": "יציאה",

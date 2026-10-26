@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Koop binne {countdown} en kry {offPercent}% afslag",
   "pillReminderChanged": "Pilherinnerings is op {value} gestel",
   "silentModeNotificationDescription": "Selfs wanneer fokusmodus aan is of jou toestel stil is, verskyn kennisgewings op die sluitskerm en speel 'n klank.",
-  "enableNotificationInSilentMode": "Kennisgewing selfs in stil modus",
+  "enableNotificationInSilentMode": "Kry kennisgewings selfs in stilmodus",
   "enableNotificationInSilentModeSetting": "Kennisgewings in stille modus",
   "criticalAlertVolume": "Volume",
   "logout": "Uitlog",

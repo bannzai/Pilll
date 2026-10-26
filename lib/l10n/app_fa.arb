@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "با خرید در {countdown} آینده، {offPercent}٪ تخفیف بگیرید",
   "pillReminderChanged": "اعلان‌های مصرف قرص روی {value} تنظیم شدند",
   "silentModeNotificationDescription": "حتی وقتی حالت تمرکز روشن است یا دستگاه شما بی‌صداست، اعلان‌ها روی صفحهٔ قفل نمایش داده می‌شوند و صدای هشدار پخش می‌شود.",
-  "enableNotificationInSilentMode": "اطلاع‌رسانی در حالت بی‌صدا",
+  "enableNotificationInSilentMode": "دریافت اعلان‌ها حتی در حالت بی‌صدا",
   "enableNotificationInSilentModeSetting": "اعلان در حالت بی‌صدا",
   "criticalAlertVolume": "حجم صدا",
   "logout": "خروج",

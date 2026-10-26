@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "ຊື້ພາຍໃນ {countdown} ເພື່ອຮັບສ່ວນຫຼຸດ {offPercent}%",
   "pillReminderChanged": "ຕັ້ງຄ່າການແຈ້ງເຕືອນໃຫ້ກິນຢາເປັນ {value} ແລ້ວ",
   "silentModeNotificationDescription": "ແມ່ນແຕ່ເມື່ອເປີດໂໝດເນັ້ນວຽກ ຫຼື ປິດສຽງອຸປະກອນ, ການແຈ້ງເຕືອນກໍຈະສະແດງຢູ່ໜ້າຈໍລັອກ ແລະ ມີສຽງດັງຂຶ້ນ.",
-  "enableNotificationInSilentMode": "ແຈ້ງເຕືອນແມ້ໃນໂໝດງຽບ",
+  "enableNotificationInSilentMode": "ຮັບການແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
   "enableNotificationInSilentModeSetting": "ການແຈ້ງເຕືອນໃນໂໝດງຽບ",
   "criticalAlertVolume": "ລະດັບສຽງ",
   "logout": "ອອກຈາກລະບົບ",

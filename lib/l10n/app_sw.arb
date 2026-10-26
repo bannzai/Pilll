@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Ukinunua ndani ya {countdown}, utapata punguzo la {offPercent}%",
   "pillReminderChanged": "Vikumbusho vya kumeza kidonge vimewekwa kuwa {value}",
   "silentModeNotificationDescription": "Hata hali ya Kuzingatia ikiwa imewashwa au kifaa chako kikiwa kimenyamazishwa, arifa zitaonekana kwenye skrini iliyofungwa na sauti italia.",
-  "enableNotificationInSilentMode": "Arifa hata katika hali ya kimya",
+  "enableNotificationInSilentMode": "Pokea arifa hata simu ikiwa katika hali ya kimya",
   "enableNotificationInSilentModeSetting": "Arifa hata katika hali ya kimya",
   "criticalAlertVolume": "sauti",
   "logout": "Ondoka",

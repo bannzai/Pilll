@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Osta {countdown} kuluessa ja saat {offPercent} % alennusta",
   "pillReminderChanged": "Pillerimuistutusten asetukseksi vaihdettiin {value}",
   "silentModeNotificationDescription": "Vaikka keskittymistila olisi käytössä tai laitteesi äänettömällä, ilmoitukset näkyvät lukitusnäytöllä ja niistä kuuluu ääni.",
-  "enableNotificationInSilentMode": "Ilmoita myös hiljaisessa tilassa",
+  "enableNotificationInSilentMode": "Saat ilmoituksia myös äänettömässä tilassa",
   "enableNotificationInSilentModeSetting": "Ilmoitukset hiljaisessa tilassa",
   "criticalAlertVolume": "Äänenvoimakkuus",
   "logout": "Kirjaudu ulos",

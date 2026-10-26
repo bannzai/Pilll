@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Compra en els pròxims {countdown} amb un {offPercent}% de descompte",
   "pillReminderChanged": "Els avisos per prendre la píndola s'han configurat a {value}",
   "silentModeNotificationDescription": "Encara que el mode de concentració estigui activat o el dispositiu estigui silenciat, les notificacions apareixen a la pantalla de bloqueig i sonen.",
-  "enableNotificationInSilentMode": "Notificar en mode silenciós",
+  "enableNotificationInSilentMode": "Rep notificacions també en mode de silenci",
   "enableNotificationInSilentModeSetting": "Notificacions en mode silenciós",
   "criticalAlertVolume": "Volum",
   "logout": "Tancar sessió",

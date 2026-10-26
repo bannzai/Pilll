@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Գնեք {countdown} ընթացքում և ստացեք {offPercent}% զեղչ",
   "pillReminderChanged": "Հաբի ընդունման ծանուցումները կարգավորվել են որպես {value}",
   "silentModeNotificationDescription": "Նույնիսկ երբ կենտրոնացման ռեժիմը միացված է կամ Ձեր սարքի ձայնն անջատված է, ծանուցումները ցուցադրվում են կողպէկրանին, և հնչում է ձայնային ազդանշան։",
-  "enableNotificationInSilentMode": "Ծանուցել լուռ ռեժիմում էլ",
+  "enableNotificationInSilentMode": "Ստացեք ծանուցումներ նաև անձայն ռեժիմում",
   "enableNotificationInSilentModeSetting": "Լուռ ռեժիմում ծանուցումների կարգավորում",
   "criticalAlertVolume": "ծավալ",
   "logout": "Ելք",

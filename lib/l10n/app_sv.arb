@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Köp inom {countdown} och få {offPercent}% rabatt",
   "pillReminderChanged": "Påminnelser om att ta p-pillret har ställts in på {value}",
   "silentModeNotificationDescription": "Även när fokusläget är på eller enheten är ljudlös visas notiser på låsskärmen och ett ljud spelas upp.",
-  "enableNotificationInSilentMode": "Meddela även i tyst läge",
+  "enableNotificationInSilentMode": "Få aviseringar även i tyst läge",
   "enableNotificationInSilentModeSetting": "Aviseringar i tyst läge",
   "criticalAlertVolume": "Volym",
   "logout": "Logga ut",

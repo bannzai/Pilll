@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Kaufe innerhalb von {countdown} und spare {offPercent}%",
   "pillReminderChanged": "Benachrichtigungen zur Pilleneinnahme sind auf {value} eingestellt",
   "silentModeNotificationDescription": "Auch wenn der Fokusmodus aktiviert oder dein Gerät stummgeschaltet ist, erscheinen Mitteilungen auf dem Sperrbildschirm und ein Ton wird abgespielt.",
-  "enableNotificationInSilentMode": "Auch im Lautlos-Modus benachrichtigen",
+  "enableNotificationInSilentMode": "Benachrichtigungen auch im Lautlosmodus erhalten",
   "enableNotificationInSilentModeSetting": "Benachrichtigungen im Stummmodus",
   "criticalAlertVolume": "Lautstärke",
   "logout": "Abmelden",

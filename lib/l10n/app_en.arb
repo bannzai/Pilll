@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Buy within {countdown} to get {offPercent}% off",
   "pillReminderChanged": "Pill reminders set to {value}",
   "silentModeNotificationDescription": "Even when Focus is on or your device is muted, notifications appear on the lock screen and play a sound.",
-  "enableNotificationInSilentMode": "Override silent mode",
+  "enableNotificationInSilentMode": "Get notifications even in silent mode",
   "enableNotificationInSilentModeSetting": "Enable Notifications in Silent Mode",
   "criticalAlertVolume": "Volume",
   "logout": "Log Out",

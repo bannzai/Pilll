@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Uma uthenga phakathi kuka-{countdown}, uzothola isaphulelo sika-{offPercent}%",
   "pillReminderChanged": "Izikhumbuzi zokuphuza iphilisi zisethwe ku-{value}",
   "silentModeNotificationDescription": "Ngisho noma imodi yokugxila ivuliwe noma idivayisi yakho ithulisiwe, izaziso zizovela esikrinini sokukhiya futhi umsindo uzodlala.",
-  "enableNotificationInSilentMode": "Azisa nasemodi ethulile",
+  "enableNotificationInSilentMode": "Thola izaziso noma ifoni ikumodi yokuthula",
   "enableNotificationInSilentModeSetting": "Vumela izaziso nakuma-silent mode",
   "criticalAlertVolume": "Ivolumu",
   "logout": "Phuma",

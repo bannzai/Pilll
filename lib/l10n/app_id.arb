@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Beli dalam {countdown} dan dapatkan diskon {offPercent}%",
   "pillReminderChanged": "Pengingat minum pil telah diatur ke {value}",
   "silentModeNotificationDescription": "Meski mode Fokus aktif atau perangkat Anda dibisukan, notifikasi tetap muncul di layar kunci dan suara peringatan akan terdengar.",
-  "enableNotificationInSilentMode": "Tetap bernotifikasi dalam mode senyap",
+  "enableNotificationInSilentMode": "Terima notifikasi meski ponsel dalam mode senyap",
   "enableNotificationInSilentModeSetting": "Notifikasi dalam Mode Senyap",
   "criticalAlertVolume": "Volume",
   "logout": "Keluar",

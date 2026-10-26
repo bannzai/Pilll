@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "በ{countdown} ውስጥ ሲገዙ {offPercent}% ቅናሽ ያገኛሉ",
   "pillReminderChanged": "የክኒን ማስታወሻ ወደ {value} ተቀይሯል",
   "silentModeNotificationDescription": "የትኩረት ሁኔታ በርቶ ወይም መሣሪያዎ ድምፅ አልባ ሆኖ ቢሆንም፣ ማሳወቂያዎች በመቆለፊያ ማያ ገጹ ላይ ይታያሉ እና ድምፅ ይሰማል።",
-  "enableNotificationInSilentMode": "ፀጥታ ሁኔታ ባለበትም አሳውቅ",
+  "enableNotificationInSilentMode": "በዝምታ ሁነታም ማሳወቂያዎችን ይቀበሉ",
   "enableNotificationInSilentModeSetting": "በጸጥታ ሁኔታም ማሳወቂያ ቅንብር",
   "criticalAlertVolume": "የድምፅ መጠን",
   "logout": "መውጣት",

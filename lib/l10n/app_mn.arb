@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} дотор худалдан авбал {offPercent}% хөнгөлөлт эдэлнэ",
   "pillReminderChanged": "Эм уух сануулгыг {value} болгож тохируулсан",
   "silentModeNotificationDescription": "Төвлөрөх горим асаалттай эсвэл таны төхөөрөмжийн дуу хаалттай байсан ч мэдэгдэл түгжээтэй дэлгэц дээр гарч, дохионы дуу дуугарна.",
-  "enableNotificationInSilentMode": "Чимээгүй горимд ч мэдэгдэх",
+  "enableNotificationInSilentMode": "Дуугүй горимд ч мэдэгдэл хүлээн авах",
   "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл тохиргоо",
   "criticalAlertVolume": "дуу хүчин",
   "logout": "Гарах",

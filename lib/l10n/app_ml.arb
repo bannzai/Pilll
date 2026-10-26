@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown}നുള്ളിൽ വാങ്ങിയാൽ {offPercent}% കിഴിവ് ലഭിക്കും",
   "pillReminderChanged": "ഗുളിക കഴിക്കാനുള്ള അറിയിപ്പുകൾ {value} ആയി സജ്ജമാക്കി",
   "silentModeNotificationDescription": "ഫോക്കസ് മോഡ് ഓണായിരിക്കുമ്പോഴോ ഉപകരണം നിശ്ശബ്ദമായിരിക്കുമ്പോഴോ പോലും അറിയിപ്പുകൾ ലോക്ക് സ്ക്രീനിൽ കാണിക്കുകയും ശബ്ദം കേൾപ്പിക്കുകയും ചെയ്യും.",
-  "enableNotificationInSilentMode": "സൈലന്റ് മോഡിലും അറിയിപ്പ് നൽകുക",
+  "enableNotificationInSilentMode": "നിശ്ശബ്ദ മോഡിലും അറിയിപ്പുകൾ ലഭിക്കൂ",
   "enableNotificationInSilentModeSetting": "സൈലന്റ് മോഡിലും അറിയിപ്പുകൾ പ്രാപ്തമാക്കുക",
   "criticalAlertVolume": "വോള്യം",
   "logout": "ലോഗ്ഔട്ട്",

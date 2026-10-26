@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} အတွင်း ဝယ်ယူပါက {offPercent}% လျှော့ဈေး ရရှိပါမယ်",
   "pillReminderChanged": "ဆေးလုံးသောက်ရန် သတိပေးချက်ကို {value} အဖြစ် သတ်မှတ်ထားပါတယ်",
   "silentModeNotificationDescription": "အာရုံစိုက်မုဒ် ဖွင့်ထားချိန် သို့မဟုတ် စက်ကို အသံပိတ်ထားချိန်မှာတောင် အသိပေးချက်တွေကို လော့ခ်မျက်နှာပြင်မှာ ပြသပြီး အသံမြည်ပါမယ်။",
-  "enableNotificationInSilentMode": "အသံပိတ်မုဒ်တွင်လည်း သတိပေးမည်",
+  "enableNotificationInSilentMode": "အသံပိတ်ထားချိန်တွင်လည်း အသိပေးချက်များ ရယူပါ",
   "enableNotificationInSilentModeSetting": "အသံပိတ်မုဒ်တွင်လည်း သတိပေးချက်ဆက်တင်",
   "criticalAlertVolume": "အသံပမာဏ",
   "logout": "ထွက်ရန်",

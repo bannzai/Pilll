@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "შეიძინეთ {countdown}-ში და მიიღეთ {offPercent}%-იანი ფასდაკლება",
   "pillReminderChanged": "აბის მიღების შეხსენებები დაყენებულია მნიშვნელობაზე {value}",
   "silentModeNotificationDescription": "მაშინაც კი, როცა ფოკუსირების რეჟიმი ჩართულია ან თქვენს მოწყობილობაზე ხმა გამორთულია, შეტყობინებები დაბლოკილ ეკრანზე გამოჩნდება და ხმა გაისმის.",
-  "enableNotificationInSilentMode": "უხმო რეჟიმშიც შეტყობინება",
+  "enableNotificationInSilentMode": "შეტყობინებების მიღება უხმო რეჟიმშიც",
   "enableNotificationInSilentModeSetting": "უხმო რეჟიმშიც შეტყობინებები",
   "criticalAlertVolume": "ხმის სიმაღლე",
   "logout": "გამოსვლა",

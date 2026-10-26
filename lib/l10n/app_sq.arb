@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Blini brenda {countdown} dhe përfitoni {offPercent}% ulje",
   "pillReminderChanged": "Njoftimet për marrjen e pilulës u vendosën në {value}",
   "silentModeNotificationDescription": "Edhe kur modaliteti i përqendrimit është aktiv ose pajisja juaj është pa zë, njoftimet shfaqen në ekranin e kyçjes dhe dëgjohet një tingull.",
-  "enableNotificationInSilentMode": "Njofto edhe në modalitetin heshtur",
+  "enableNotificationInSilentMode": "Merrni njoftime edhe në modalitetin pa zë",
   "enableNotificationInSilentModeSetting": "Njoftimet edhe në mënyrë heshtur",
   "criticalAlertVolume": "Volumi",
   "logout": "Dilni",

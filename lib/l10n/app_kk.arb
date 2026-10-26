@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} ішінде сатып алып, {offPercent}% жеңілдік алыңыз",
   "pillReminderChanged": "Таблетканы қабылдау туралы еске салғыштар {value} күйіне орнатылды",
   "silentModeNotificationDescription": "Зейін қою режимі қосулы болса да немесе құрылғыңыздың дыбысы өшірулі болса да, хабарландырулар құлыптау экранында көрсетіліп, дыбыс шығады.",
-  "enableNotificationInSilentMode": "Дыбыссыз режимде де хабарландыру",
+  "enableNotificationInSilentMode": "Дыбыссыз режимде де хабарландыру алыңыз",
   "enableNotificationInSilentModeSetting": "Дыбыссыз режимде де хабарландыру баптаулары",
   "criticalAlertVolume": "Дыбыс деңгейі",
   "logout": "шығу",

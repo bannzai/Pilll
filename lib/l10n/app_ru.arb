@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Купите в течение {countdown} и получите скидку {offPercent}%",
   "pillReminderChanged": "Напоминания о приёме таблетки переключены на {value}",
   "silentModeNotificationDescription": "Даже если включён режим фокусирования или звук устройства отключён, уведомления отображаются на экране блокировки и сопровождаются звуком.",
-  "enableNotificationInSilentMode": "Уведомления в беззвучном режиме",
+  "enableNotificationInSilentMode": "Получать уведомления даже в беззвучном режиме",
   "enableNotificationInSilentModeSetting": "Уведомления в беззвучном режиме",
   "criticalAlertVolume": "Громкость",
   "logout": "Выйти",

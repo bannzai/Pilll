@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Při nákupu do {countdown} získáte slevu {offPercent}%",
   "pillReminderChanged": "Upozornění na užití pilulky jsou nastavena na {value}",
   "silentModeNotificationDescription": "I když je zapnutý režim soustředění nebo je zařízení ztlumené, oznámení se zobrazí na zamčené obrazovce a přehraje se zvuk.",
-  "enableNotificationInSilentMode": "Upozornění i v tichém režimu",
+  "enableNotificationInSilentMode": "Dostávat oznámení i v tichém režimu",
   "enableNotificationInSilentModeSetting": "Upozornění i v tichém režimu",
   "criticalAlertVolume": "Hlasitost",
   "logout": "Odhlásit",

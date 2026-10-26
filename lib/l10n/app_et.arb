@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Osta järgmise {countdown} jooksul ja saad {offPercent}% soodustust",
   "pillReminderChanged": "Pilli võtmise meeldetuletused on seatud olekusse {value}",
   "silentModeNotificationDescription": "Isegi kui keskendumisrežiim on sisse lülitatud või seade on hääletu, kuvatakse teavitused lukustuskuval ja kostab heli.",
-  "enableNotificationInSilentMode": "Teavita ka vaikses režiimis",
+  "enableNotificationInSilentMode": "Saa teavitusi ka hääletus režiimis",
   "enableNotificationInSilentModeSetting": "Teavitused ka vaikses režiimis",
   "criticalAlertVolume": "Helitugevus",
   "logout": "Logi välja",

@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Koop binnen {countdown} en krijg {offPercent}% korting",
   "pillReminderChanged": "Herinneringen om je pil in te nemen zijn ingesteld op {value}",
   "silentModeNotificationDescription": "Ook als de focusmodus aanstaat of je apparaat op stil staat, verschijnen meldingen op het toegangsscherm en klinkt er een geluid.",
-  "enableNotificationInSilentMode": "Ook meldingen geven in stille modus",
+  "enableNotificationInSilentMode": "Ontvang ook meldingen als je telefoon op stil staat",
   "enableNotificationInSilentModeSetting": "Meldingen in stille modus",
   "criticalAlertVolume": "Volume",
   "logout": "Uitloggen",

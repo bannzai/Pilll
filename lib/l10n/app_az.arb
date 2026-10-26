@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "{countdown} ərzində alın, {offPercent}% endirim qazanın",
   "pillReminderChanged": "Həb qəbulu bildirişləri {value} olaraq təyin edildi",
   "silentModeNotificationDescription": "Fokus rejimi aktiv olduqda və ya cihazınızın səsi söndürüldükdə belə, bildirişlər kilid ekranında görünür və səs səslənir.",
-  "enableNotificationInSilentMode": "Səssiz rejimdə də bildirmək",
+  "enableNotificationInSilentMode": "Səssiz rejimdə də bildiriş alın",
   "enableNotificationInSilentModeSetting": "Səssiz rejimdə də bildiriş ayarları",
   "criticalAlertVolume": "Səs həcmi",
   "logout": "Çıxış",

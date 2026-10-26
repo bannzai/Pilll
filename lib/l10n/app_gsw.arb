@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Wenn du i de nöchschte {countdown} chaufsch, überchunsch {offPercent}% Rabatt",
   "pillReminderChanged": "D Erinnerige für d Pille sind uf {value} igstellt",
   "silentModeNotificationDescription": "Au wänn dr Fokusmodus aa isch oder dis Grät uf stumm staht, chömed d Benachrichtigunge uf em Sperrbildschirm und es git en Ton.",
-  "enableNotificationInSilentMode": "Au im Stummmodus benachrichtige",
+  "enableNotificationInSilentMode": "Au im Stummmodus Benachrichtigunge überchoo",
   "enableNotificationInSilentModeSetting": "Benachrichtung au im stumme Modus",
   "criticalAlertVolume": "Luutstärchi",
   "logout": "Abmälde",

@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Купете в рамките на {countdown} с отстъпка {offPercent}%",
   "pillReminderChanged": "Напомнянията за прием на хапчето са зададени на {value}",
   "silentModeNotificationDescription": "Дори когато режимът за фокусиране е включен или устройството ви е заглушено, известията се показват на заключения екран и се възпроизвежда звук.",
-  "enableNotificationInSilentMode": "Уведомяване дори в тих режим",
+  "enableNotificationInSilentMode": "Получавайте известия и в безшумен режим",
   "enableNotificationInSilentModeSetting": "Уведомления дори в тих режим",
   "criticalAlertVolume": "Сила на звука",
   "logout": "Излизане",

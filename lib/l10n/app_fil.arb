@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Bumili sa loob ng {countdown} para makakuha ng {offPercent}% diskuwento",
   "pillReminderChanged": "Nakatakda sa {value} ang mga paalala sa pag-inom ng pildoras",
   "silentModeNotificationDescription": "Kahit naka-on ang Focus mode o naka-silent ang inyong device, lalabas ang mga notification sa lock screen at tutunog ang alerto.",
-  "enableNotificationInSilentMode": "Mag-notify kahit naka-silent mode",
+  "enableNotificationInSilentMode": "Makatanggap ng mga abiso kahit naka-silent",
   "enableNotificationInSilentModeSetting": "Mga Abiso sa Silent Mode",
   "criticalAlertVolume": "Volume",
   "logout": "Mag-logout",

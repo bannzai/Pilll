@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Ef þú kaupir innan {countdown} færðu {offPercent}% afslátt",
   "pillReminderChanged": "Áminningar um pillutöku eru stilltar á {value}",
   "silentModeNotificationDescription": "Jafnvel þegar einbeitingarstilling er virk eða hljóð er slökkt á tækinu birtast tilkynningar á læsiskjánum og hljóð heyrist.",
-  "enableNotificationInSilentMode": "Tilkynna jafnvel í þögn ham",
+  "enableNotificationInSilentMode": "Fá tilkynningar þótt síminn sé á hljóðlausri stillingu",
   "enableNotificationInSilentModeSetting": "Tilkynningar í þögli stillingu",
   "criticalAlertVolume": "hljóðstyrkur",
   "logout": "Útskrá",

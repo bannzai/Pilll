@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "Beli dalam masa {countdown} untuk diskaun {offPercent}%",
   "pillReminderChanged": "Peringatan mengambil pil ditetapkan kepada {value}",
   "silentModeNotificationDescription": "Walaupun mod Fokus dihidupkan atau peranti anda dalam mod senyap, pemberitahuan akan muncul pada skrin kunci dan bunyi akan dimainkan.",
-  "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun mod senyap",
+  "enableNotificationInSilentMode": "Terima pemberitahuan walaupun dalam mod senyap",
   "enableNotificationInSilentModeSetting": "Tetapan notifikasi mod senyap",
   "criticalAlertVolume": "Volum",
   "logout": "Log Keluar",

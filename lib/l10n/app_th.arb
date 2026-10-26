@@ -425,7 +425,7 @@
   "countdownForDiscountPriceDeadline": "ซื้อภายใน {countdown} รับส่วนลด {offPercent}%",
   "pillReminderChanged": "ตั้งค่าการแจ้งเตือนให้ทานยาเป็น {value} แล้วค่ะ",
   "silentModeNotificationDescription": "แม้เปิดโหมดโฟกัสหรือปิดเสียงอุปกรณ์ การแจ้งเตือนก็จะแสดงบนหน้าจอล็อกและมีเสียงแจ้งเตือนค่ะ",
-  "enableNotificationInSilentMode": "แจ้งเตือนในโหมดปิดเสียง",
+  "enableNotificationInSilentMode": "รับการแจ้งเตือนแม้เปิดโหมดเงียบ",
   "enableNotificationInSilentModeSetting": "การแจ้งเตือนในโหมดเงียบ",
   "criticalAlertVolume": "ระดับเสียง",
   "logout": "ออกจากระบบ",
