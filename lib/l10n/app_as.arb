@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
-  "selectPauseStartDate": "সেৱন বিৰতি আৰম্ভৰ তাৰিখ নিৰ্বাচন",
+  "selectPauseStartDate": "বড়ি খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ বাছনি কৰক",
   "selectPausePeriod": "ঔষধ সেৱন বিৰতিৰ সময়কাল নিৰ্বাচন কৰক",
   "pauseStartDate": "সেৱন বিৰতি আৰম্ভৰ দিন",
   "pauseEndDate": "সেৱন বিৰামৰ সমাপ্তিৰ তাৰিখ",

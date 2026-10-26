@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} номер",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} номер",
-  "selectPauseStartDate": "Избор на дата за започване на пауза в приема",
+  "selectPauseStartDate": "Избор на начална дата на паузата от приема на хапчета",
   "selectPausePeriod": "Избор на период без прием",
   "pauseStartDate": "Начална дата на паузата в приема",
   "pauseEndDate": "Дата за завършване на паузата",

@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} дугаар",
-  "selectPauseStartDate": "Завсрах эхлэх өдөр сонгох",
+  "selectPauseStartDate": "Эм уух завсарлагын эхлэх өдрийг сонгоно уу",
   "selectPausePeriod": "Эмийн амралтын хугацааг сонгох",
   "pauseStartDate": "Эм уухыг завсарлах эхлэх өдөр",
   "pauseEndDate": "Эмийн завсарлага дуусах өдөр",

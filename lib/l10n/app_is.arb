@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
-  "selectPauseStartDate": "Val á upphafsdegi inntökuhvíldar",
+  "selectPauseStartDate": "Veldu upphafsdag hlés frá pillutöku",
   "selectPausePeriod": "Velja hvíldartíma lyfjatöku",
   "pauseStartDate": "Upphafsdagur inntökuhlés",
   "pauseEndDate": "Lokadagur hvíldarskipti",

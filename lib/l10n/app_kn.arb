@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ಸಂಖ್ಯೆ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ಸಂಖ್ಯೆ",
-  "selectPauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನ ಆಯ್ಕೆ",
+  "selectPauseStartDate": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "selectPausePeriod": "ಸೇವನೆ ವಿರಾಮ ಅವಧಿ ಆರಿಸಿ",
   "pauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನ",
   "pauseEndDate": "ಸೇವನೆ ವಿರಾಮ ಮುಕ್ತಾಯ ದಿನ",

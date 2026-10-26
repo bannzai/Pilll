@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→č. {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} číslo",
-  "selectPauseStartDate": "Výběr data začátku přestávky v užívání",
+  "selectPauseStartDate": "Vybrat datum začátku pauzy v užívání pilulek",
   "selectPausePeriod": "Vyberte přestávku v užívání tablet",
   "pauseStartDate": "Datum zahájení přestávky v užívání",
   "pauseEndDate": "Konec přestávky v užívání",

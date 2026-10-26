@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Inombolo 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} inombolo",
-  "selectPauseStartDate": "Khetha Usuku Lokuqala Ukuphumula Kwepilisi",
+  "selectPauseStartDate": "Sicela ukhethe usuku lokuqala kwekhefu lokuphuza amaphilisi",
   "selectPausePeriod": "Khetha isikhathi sokuphumula sokuthatha amaphilisi",
   "pauseStartDate": "Usuku lokuqala kwekhefu lamaphilisi",
   "pauseEndDate": "Usuku lokuphela kokuphumula amaphilisi",

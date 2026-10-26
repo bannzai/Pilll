@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Број 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} број",
-  "selectPauseStartDate": "Izbor datuma početka pauze uzimanja",
+  "selectPauseStartDate": "Изаберите датум почетка паузе у узимању пилуле",
   "selectPausePeriod": "Izaberite period pauze u uzimanju",
   "pauseStartDate": "Datum početka pauze u uzimanju",
   "pauseEndDate": "Završetak pauze uzimanja",

@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "No. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
-  "selectPauseStartDate": "Select Break Start Date",
+  "selectPauseStartDate": "Select pill break start date",
   "selectPausePeriod": "Select Pill-Free Period",
   "pauseStartDate": "Break Start Date",
   "pauseEndDate": "Break End Date",

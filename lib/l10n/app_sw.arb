@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Namba 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} namba",
-  "selectPauseStartDate": "Chagua Tarehe ya Kuanza Mapumziko ya Dawa",
+  "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza mapumziko ya kumeza vidonge",
   "selectPausePeriod": "Chagua kipindi cha mapumziko cha dawa",
   "pauseStartDate": "Tarehe ya kuanza pumziko la dawa",
   "pauseEndDate": "Tarehe ya kumaliza mapumziko",

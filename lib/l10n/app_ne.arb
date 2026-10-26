@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "नम्बर 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नम्बर",
-  "selectPauseStartDate": "सेवन बिदा सुरुवात मिति छनोट",
+  "selectPauseStartDate": "चक्की खाने विश्रामको सुरु मिति छान्नुहोस्",
   "selectPausePeriod": "सेवन विश्राम अवधि छान्नुहोस्",
   "pauseStartDate": "सेवन बिदाको सुरुवात मिति",
   "pauseEndDate": "औषधि विश्राम समाप्ति मिति",

@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "નંબર 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} નંબર",
-  "selectPauseStartDate": "દવા વિરામ શરૂઆત તારીખ પસંદ કરો",
+  "selectPauseStartDate": "ગોળી લેવાના વિરામની શરૂઆતની તારીખ પસંદ કરો",
   "selectPausePeriod": "સેવન વિરામ અવધિ પસંદ કરો",
   "pauseStartDate": "સેવન વિરામ શરૂઆત તારીખ",
   "pauseEndDate": "સેવન વિરામ સમાપ્તિ તારીખ",

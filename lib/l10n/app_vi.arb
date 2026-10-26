@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Số 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} số",
-  "selectPauseStartDate": "Chọn ngày bắt đầu nghỉ uống thuốc",
+  "selectPauseStartDate": "Chọn ngày bắt đầu tạm ngừng uống thuốc",
   "selectPausePeriod": "Chọn thời gian nghỉ uống thuốc",
   "pauseStartDate": "Ngày bắt đầu nghỉ thuốc",
   "pauseEndDate": "Ngày kết thúc nghỉ thuốc",

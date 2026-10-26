@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
-  "selectPauseStartDate": "Vælg startdato for pillefri periode",
+  "selectPauseStartDate": "Vælg startdato for p-pillepausen",
   "selectPausePeriod": "Vælg pauseperiode",
   "pauseStartDate": "Startdato for indtagelsespause",
   "pauseEndDate": "Pause slutdato",

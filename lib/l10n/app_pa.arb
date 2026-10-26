@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ਨੰਬਰ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ਨੰਬਰ",
-  "selectPauseStartDate": "ਸੇਵਨ ਬ੍ਰੇਕ ਸ਼ੁਰੂਆਤ ਤਾਰੀਖ ਚੁਣੋ",
+  "selectPauseStartDate": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਚੁਣੋ",
   "selectPausePeriod": "ਦਵਾਈ ਆਰਾਮ ਪੀਰੀਅਡ ਚੁਣੋ",
   "pauseStartDate": "ਸੇਵਨ ਬਰੇਕ ਸ਼ੁਰੂਆਤ ਦਿਨ",
   "pauseEndDate": "ਗੋਲੀ ਬਰੇਕ ਖਤਮ ਦਿਨ",

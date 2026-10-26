@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}号",
   "oneToAfterDisplayNumberEndPillNumber": "第1→{afterDisplayNumberSettingEndPillNumber}号",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}号",
-  "selectPauseStartDate": "选择停药开始日期",
+  "selectPauseStartDate": "选择停药期开始日期",
   "selectPausePeriod": "选择休药期间",
   "pauseStartDate": "停药开始日期",
   "pauseEndDate": "休药期结束日期",

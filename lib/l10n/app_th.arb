@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "หมายเลข 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} หมายเลข",
-  "selectPauseStartDate": "เลือกวันเริ่มต้นช่วงหยุดยา",
+  "selectPauseStartDate": "เลือกวันที่เริ่มพักทานยา",
   "selectPausePeriod": "เลือกช่วงพักยา",
   "pauseStartDate": "วันเริ่มต้นหยุดยา",
   "pauseEndDate": "วันสิ้นสุดการพักยา",

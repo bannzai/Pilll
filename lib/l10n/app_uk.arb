@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} №",
-  "selectPauseStartDate": "Вибір дати початку перерви в прийомі",
+  "selectPauseStartDate": "Виберіть дату початку перерви в прийомі пігулок",
   "selectPausePeriod": "Вибір періоду перерви в прийомі",
   "pauseStartDate": "Дата початку перерви у прийомі",
   "pauseEndDate": "Дата закінчення перерви прийому",

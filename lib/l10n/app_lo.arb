@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ເລກ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ເລກ",
-  "selectPauseStartDate": "ເລືອກວັນເລີ່ມຕົ້ນການພັກກິນຢາ",
+  "selectPauseStartDate": "ກະລຸນາເລືອກວັນເລີ່ມພັກການກິນຢາເມັດ",
   "selectPausePeriod": "ເລືອກໄລຍະພັກການກິນຢາ",
   "pauseStartDate": "ວັນເລີ່ມພັກຢາ",
   "pauseEndDate": "ວັນສິ້ນສຸດການພັກຢາ",

@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} нөмір",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} нөмір",
-  "selectPauseStartDate": "Дәрі қабылдауды үзіp қалу басталу күнін таңдау",
+  "selectPauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін таңдаңыз",
   "selectPausePeriod": "Дәрі қабылдауды тоқтату кезеңін таңдаңыз",
   "pauseStartDate": "Үзіліс басталу күні",
   "pauseEndDate": "Демалыс кезеңінің аяқталу күні",

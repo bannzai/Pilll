@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Համար 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} համար",
-  "selectPauseStartDate": "Դեղի ընծիջման սկզբի ամսաթվի ընտրություն",
+  "selectPauseStartDate": "Ընտրեք հաբի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "selectPausePeriod": "Ընտրել հանգստի ժամանակահատվածը",
   "pauseStartDate": "Դեղընդունման դադարի սկսման ամսաթիվ",
   "pauseEndDate": "Դադարի ավարտի ամսաթիվ",

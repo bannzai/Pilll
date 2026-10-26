@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} nommer",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nommer",
-  "selectPauseStartDate": "Kies begindatum vir pil-pouse",
+  "selectPauseStartDate": "Kies die begindatum van jou pilpouse",
   "selectPausePeriod": "Kies pilruspause periode",
   "pauseStartDate": "Pil pouse begindatum",
   "pauseEndDate": "Pil pouse einddatum",

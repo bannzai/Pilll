@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "شمېره 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شمېره",
-  "selectPauseStartDate": "د درملو د ناستې د پیل نیټه ټاکنه",
+  "selectPauseStartDate": "د ګولیو د اخیستلو د وقفې د پیل نېټه وټاکئ",
   "selectPausePeriod": "د درملو د وقفې موده وټاکئ",
   "pauseStartDate": "د دوا د وقفې پیل نیټه",
   "pauseEndDate": "د وقفې پای نېټه",

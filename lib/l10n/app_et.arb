@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "nr 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr",
-  "selectPauseStartDate": "Võtmise pausi alguskuupäeva valik",
+  "selectPauseStartDate": "Vali pillipausi alguskuupäev",
   "selectPausePeriod": "Vali pillipause periood",
   "pauseStartDate": "Pausi alguskuupäev",
   "pauseEndDate": "Võtmispausi lõppkuupäev",

@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}. numara",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} numara",
-  "selectPauseStartDate": "Kullanım Arası Başlangıç Tarihi Seçimi",
+  "selectPauseStartDate": "Hap kullanımına ara verilecek başlangıç tarihini seçin",
   "selectPausePeriod": "Dinlenme Süresini Seçin",
   "pauseStartDate": "Ara dönem başlangıç tarihi",
   "pauseEndDate": "Kullanım Arası Bitiş Tarihi",

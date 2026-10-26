@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Bilang 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} bilang",
-  "selectPauseStartDate": "Petsa ng Pagsisimula ng Pahinga sa Pag-inom",
+  "selectPauseStartDate": "Piliin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "selectPausePeriod": "Pumili ng panahon ng pahinga sa pag-inom",
   "pauseStartDate": "Simula ng Pahinga sa Pag-inom",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom",

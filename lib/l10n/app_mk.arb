@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Број 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} број",
-  "selectPauseStartDate": "Избор на почетен датум за пауза од земање",
+  "selectPauseStartDate": "Избор на датум за почеток на паузата од земање таблета",
   "selectPausePeriod": "Избери период на прекин од зимање",
   "pauseStartDate": "Почетен датум на пауза",
   "pauseEndDate": "Датум на завршување на паузата",

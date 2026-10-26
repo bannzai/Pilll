@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ନମ୍ବର 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ନମ୍ବର",
-  "selectPauseStartDate": "ଔଷଧ ବିରତି ଆରମ୍ଭ ତାରିଖ ଚୟନ",
+  "selectPauseStartDate": "ବଟିକା ଖାଇବାର ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
   "selectPausePeriod": "ସେବନ ବିରତି ଅବଧି ଚୟନ କରନ୍ତୁ",
   "pauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ଦିନ",
   "pauseEndDate": "ସେବନ ବିରତି ସମାପ୍ତି ତାରିଖ",

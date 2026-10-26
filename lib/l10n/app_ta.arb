@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "எண் 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} எண்",
-  "selectPauseStartDate": "மருந்து இடைவெளி தொடக்க தேதி தெரிவு",
+  "selectPauseStartDate": "மாத்திரை உட்கொள்வதில் இடைவெளி தொடங்கும் தேதியைத் தேர்ந்தெடுங்கள்",
   "selectPausePeriod": "மாத்திரை ஓய்வு காலத்தை தேர்ந்தெடுக்கவும்",
   "pauseStartDate": "மருந்து ஓய்வு தொடக்க தேதி",
   "pauseEndDate": "ஓய்வு காலம் முடிவு தேதி",

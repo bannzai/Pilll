@@ -105,7 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",
-  "selectPauseStartDate": "Selectarea datei de început a pauzei",
+  "selectPauseStartDate": "Alege data de început a pauzei de pilulă",
   "selectPausePeriod": "Selectează perioada de pauză",
   "pauseStartDate": "Data de începere a pauzei",
   "pauseEndDate": "Data de încheiere a pauzei de administrare",
