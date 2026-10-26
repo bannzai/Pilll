@@ -134,7 +134,7 @@
   "endOfPillDays": "Pillereiden ottopäivien loppu",
   "changedToNumber": "Vaihda tähän numeroon",
   "displayMode": "Näyttötila",
-  "dateDisplay": "Päivämäärämuoto",
+  "dateDisplay": "Päivämäärän näyttö",
   "pillNumber": "Pillerinumero",
   "pillDaysCycle": "Annostuspäivät",
   "pillSheetEnded": "Pilleripakkaus on päättynyt",

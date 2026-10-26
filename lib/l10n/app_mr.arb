@@ -134,7 +134,7 @@
   "endOfPillDays": "गोळ्या घेण्याच्या दिवसांचा शेवट",
   "changedToNumber": "या क्रमांकावर बदला",
   "displayMode": "प्रदर्शन मोड",
-  "dateDisplay": "तारीख प्रदर्शन",
+  "dateDisplay": "तारीख दाखवण्याची पद्धत",
   "pillNumber": "गोळी क्रमांक",
   "pillDaysCycle": "सेवन दिवस",
   "pillSheetEnded": "गोळी शीट संपली",
