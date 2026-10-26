@@ -391,7 +391,7 @@
   "changedToDate": "తేదీని {date}కి మార్చాం",
   "quickRecordTakePillFailed": "మాత్రల నమోదు సేవ్ కాకపోయి ఉండవచ్చు",
   "quickRecordTakePillFailedMessage": "దయచేసి యాప్ తెరిచి మాత్ర తీసుకున్న రికార్డును తనిఖీ చేయండి",
-  "alreadyTaken": "తీసుకున్నది",
+  "alreadyTaken": "మాత్ర వేసుకున్నారు",
   "startPauseTaking": "మందులను విరామం చేయండి",
   "startedPauseTaking": "సేవన విరామం ప్రారంభమైంది",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}వ",

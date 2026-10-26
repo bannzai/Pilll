@@ -391,7 +391,7 @@
   "changedToDate": "Datum je spremenjen na {date}",
   "quickRecordTakePillFailed": "Beleženje jemanja morda ni uspelo",
   "quickRecordTakePillFailedMessage": "Odprite aplikacijo in preverite zapis o zaužitju tabletke",
-  "alreadyTaken": "Vzeto",
+  "alreadyTaken": "Tableta vzeta",
   "startPauseTaking": "Prekini jemanje",
   "startedPauseTaking": "Začeli ste s premorom jemanja",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

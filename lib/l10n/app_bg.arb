@@ -391,7 +391,7 @@
   "changedToDate": "Датата е променена на {date}",
   "quickRecordTakePillFailed": "Запис на приема може да не е запазен",
   "quickRecordTakePillFailedMessage": "Моля, отворете приложението и проверете записа за приема на хапчето",
-  "alreadyTaken": "Прието",
+  "alreadyTaken": "Хапчето е взето",
   "startPauseTaking": "Пауза в приема",
   "startedPauseTaking": "Започнахте почивка от приемането",
   "sequentialLastTakenPlusOnePillNumber": "№{pillSheetGroupSequentialLastTakenPillNumber}",

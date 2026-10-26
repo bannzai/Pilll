@@ -391,7 +391,7 @@
   "changedToDate": "তাৰিখ {date}লৈ সলনি কৰা হৈছে",
   "quickRecordTakePillFailed": "ঔষধ সেৱনৰ ৰেকৰ্ড সংৰক্ষণ কৰোঁতে সমস্যা হোৱা হ’ব পাৰে",
   "quickRecordTakePillFailedMessage": "অনুগ্ৰহ কৰি এপটো খুলি ঔষধ খোৱাৰ ৰেকৰ্ড চাওক",
-  "alreadyTaken": "সেৱিত",
+  "alreadyTaken": "বৰি খোৱা হৈছে",
   "startPauseTaking": "সেৱন বিৰাম কৰক",
   "startedPauseTaking": "ঔষধ সেৱনৰ বিৰাম আৰম্ভ কৰিলো",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} বুলি",

@@ -391,7 +391,7 @@
   "changedToDate": "Tarih {date} olarak değiştirildi",
   "quickRecordTakePillFailed": "Hap kullanım kaydı kaydedilmemiş olabilir",
   "quickRecordTakePillFailedMessage": "Lütfen uygulamayı açıp hap alma kaydınızı kontrol edin",
-  "alreadyTaken": "Alındı",
+  "alreadyTaken": "Hap alındı",
   "startPauseTaking": "İlaç kullanımına ara ver",
   "startedPauseTaking": "Hap kullanımına ara verildi",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

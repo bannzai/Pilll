@@ -391,7 +391,7 @@
   "changedToDate": "La data s'ha canviat a {date}",
   "quickRecordTakePillFailed": "Pot ser que el registre de preses no s’hagi desat",
   "quickRecordTakePillFailedMessage": "Obre l'app i comprova el registre de la píndola",
-  "alreadyTaken": "Prescrit",
+  "alreadyTaken": "Píndola presa",
   "startPauseTaking": "Fer pausa en la presa",
   "startedPauseTaking": "S'ha iniciat un descans de la presa de la píndola",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} número",

@@ -391,7 +391,7 @@
   "changedToDate": "เปลี่ยนวันที่เป็น {date} แล้วค่ะ",
   "quickRecordTakePillFailed": "บันทึกการทานยาอาจไม่สำเร็จค่ะ",
   "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปเพื่อตรวจสอบบันทึกการทานยาค่ะ",
-  "alreadyTaken": "รับประทานแล้ว",
+  "alreadyTaken": "ทานยาแล้ว",
   "startPauseTaking": "พักการรับประทาน",
   "startedPauseTaking": "เริ่มการหยุดพักการรับประทานยาแล้ว",
   "sequentialLastTakenPlusOnePillNumber": "ที่ {pillSheetGroupSequentialLastTakenPillNumber}",

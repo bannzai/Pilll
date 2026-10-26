@@ -391,7 +391,7 @@
   "changedToDate": "Data u ndryshua në {date}",
   "quickRecordTakePillFailed": "Regjistrimi i marrjes mund të mos jetë ruajtur",
   "quickRecordTakePillFailedMessage": "Ju lutemi, hapni aplikacionin dhe kontrolloni shënimin e marrjes së pilulës",
-  "alreadyTaken": "E marrë",
+  "alreadyTaken": "Pilula është marrë",
   "startPauseTaking": "Pushoj marrjen",
   "startedPauseTaking": "Filloi periudha e pushimit të pilulës",
   "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",

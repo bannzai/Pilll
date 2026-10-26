@@ -391,7 +391,7 @@
   "changedToDate": "Datums mainīts uz {date}",
   "quickRecordTakePillFailed": "Tablešu lietošanas ieraksts, iespējams, netika saglabāts",
   "quickRecordTakePillFailedMessage": "Atveriet lietotni un pārbaudiet tabletes lietošanas ierakstu",
-  "alreadyTaken": "ieņemts",
+  "alreadyTaken": "Tablete lietota",
   "startPauseTaking": "Pārtraukt lietošanu",
   "startedPauseTaking": "Tablešu lietošanas pārtraukums ir uzsākts",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

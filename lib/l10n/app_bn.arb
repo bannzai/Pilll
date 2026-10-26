@@ -391,7 +391,7 @@
   "changedToDate": "তারিখ {date}-এ পরিবর্তন করা হয়েছে",
   "quickRecordTakePillFailed": "সেবনের রেকর্ড সংরক্ষণ নাও হতে পারে",
   "quickRecordTakePillFailedMessage": "অনুগ্রহ করে অ্যাপটি খুলে পিল খাওয়ার রেকর্ড দেখুন",
-  "alreadyTaken": "সেবিত",
+  "alreadyTaken": "পিল খাওয়া হয়েছে",
   "startPauseTaking": "সেবন বিরতি নিন",
   "startedPauseTaking": "ওষুধ সেবনে বিরতি শুরু করা হয়েছে",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}নং",

@@ -391,7 +391,7 @@
   "changedToDate": "نېټه {date} ته بدله شوه",
   "quickRecordTakePillFailed": "د ګولۍ اخیستلو ریکارډ ښايي نه وي خوندي شوی",
   "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلېکېشن پرانیزئ او د ګولۍ اخیستلو ثبت وګورئ",
-  "alreadyTaken": "واخیستل شوی",
+  "alreadyTaken": "ګولۍ اخیستل شوې ده",
   "startPauseTaking": "د درملو وقفه پیل کړئ",
   "startedPauseTaking": "د ګولیو د اخیستلو وقفه پیل شوه",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}مه",

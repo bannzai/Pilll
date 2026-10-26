@@ -391,7 +391,7 @@
   "changedToDate": "Dagsetningunni hefur verið breytt í {date}",
   "quickRecordTakePillFailed": "Inntökuskrá hefur hugsanlega ekki vistast",
   "quickRecordTakePillFailedMessage": "Opnaðu appið og athugaðu skráninguna á pillutökunni",
-  "alreadyTaken": "Tekið",
+  "alreadyTaken": "Pillan tekin",
   "startPauseTaking": "Gera hlé á inntöku",
   "startedPauseTaking": "Pillutökuhlé hefur hafist",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

@@ -391,7 +391,7 @@
   "changedToDate": "Tarikh telah ditukar kepada {date}",
   "quickRecordTakePillFailed": "Rekod pengambilan mungkin tidak berjaya disimpan",
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak rekod pengambilan pil",
-  "alreadyTaken": "Sudah diambil",
+  "alreadyTaken": "Pil sudah diambil",
   "startPauseTaking": "Berehat pengambilan",
   "startedPauseTaking": "Rehat pengambilan pil telah dimulakan",
   "sequentialLastTakenPlusOnePillNumber": "ke-{pillSheetGroupSequentialLastTakenPillNumber}",

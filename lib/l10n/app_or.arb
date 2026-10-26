@@ -391,7 +391,7 @@
   "changedToDate": "ତାରିଖ {date}କୁ ବଦଳାଯାଇଛି",
   "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ସଂରକ୍ଷିତ ହୋଇନଥାଇପାରେ",
   "quickRecordTakePillFailedMessage": "ଦୟାକରି ଆପ୍ ଖୋଲି ବଟିକା ସେବନର ରେକର୍ଡ ଯାଞ୍ଚ କରନ୍ତୁ",
-  "alreadyTaken": "ଖାଇଛି",
+  "alreadyTaken": "ବଟିକା ଖିଆଯାଇଛି",
   "startPauseTaking": "ସେବନ ବିରତି କରିବା",
   "startedPauseTaking": "ଔଷଧ ସେବନ ବିରତି ଆରମ୍ଭ ହୋଇଛି",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ନମ୍ବର",

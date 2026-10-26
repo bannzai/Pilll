@@ -391,7 +391,7 @@
   "changedToDate": "Tarix {date} olaraq dəyişdirildi",
   "quickRecordTakePillFailed": "Həb qəbulu qeydi saxlanmamış ola bilər",
   "quickRecordTakePillFailedMessage": "Zəhmət olmasa, tətbiqi açıb həb qəbulunuza dair qeydi yoxlayın",
-  "alreadyTaken": "Qəbul edilib",
+  "alreadyTaken": "Həb qəbul edilib",
   "startPauseTaking": "Qəbulda fasilə vermək",
   "startedPauseTaking": "Qəbul fasiləsi başladıldı",
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber}",

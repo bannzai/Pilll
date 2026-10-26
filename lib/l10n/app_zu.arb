@@ -391,7 +391,7 @@
   "changedToDate": "Usuku lushintshelwe ku-{date}",
   "quickRecordTakePillFailed": "Irekhodi lokuphuza amaphilisi kungenzeka ayigcinwanga",
   "quickRecordTakePillFailedMessage": "Sicela uvule uhlelo lokusebenza uhlole irekhodi lokuphuza iphilisi",
-  "alreadyTaken": "Kusethiwe",
+  "alreadyTaken": "Iphilisi seliphuzwe",
   "startPauseTaking": "Phumula ukuthatha amapilisi",
   "startedPauseTaking": "Kuqale ukuthatha ikhefu lomuthi",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}e",

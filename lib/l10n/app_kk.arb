@@ -391,7 +391,7 @@
   "changedToDate": "Күн {date} болып өзгертілді",
   "quickRecordTakePillFailed": "Қабылдау жазбасы сақталмаған болуы мүмкін",
   "quickRecordTakePillFailedMessage": "Қолданбаны ашып, таблетканы қабылдау жазбасын тексеріңіз",
-  "alreadyTaken": "Ішілді",
+  "alreadyTaken": "Таблетка қабылданды",
   "startPauseTaking": "Қабылдауды тоқтату",
   "startedPauseTaking": "Дәрі қабылдауды тоқтату басталды",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-інші",

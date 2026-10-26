@@ -391,7 +391,7 @@
   "changedToDate": "Das Datum wurde auf {date} geändert",
   "quickRecordTakePillFailed": "Das Einnahmeprotokoll wurde möglicherweise nicht gespeichert",
   "quickRecordTakePillFailedMessage": "Öffne bitte die App und prüfe deinen Einnahmeeintrag",
-  "alreadyTaken": "Eingenommen",
+  "alreadyTaken": "Pille eingenommen",
   "startPauseTaking": "Einnahme pausieren",
   "startedPauseTaking": "Pillenpause wurde gestartet",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

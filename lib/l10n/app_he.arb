@@ -391,7 +391,7 @@
   "changedToDate": "התאריך שונה ל־{date}",
   "quickRecordTakePillFailed": "ייתכן שרישום נטילה לא נשמר",
   "quickRecordTakePillFailedMessage": "נא לפתוח את האפליקציה ולבדוק את רישום נטילת הגלולה",
-  "alreadyTaken": "נטלה",
+  "alreadyTaken": "הגלולה ניטלה",
   "startPauseTaking": "להפסיק נטילה",
   "startedPauseTaking": "הפסקת הנטילה החלה",
   "sequentialLastTakenPlusOnePillNumber": "מס' {pillSheetGroupSequentialLastTakenPillNumber}",

@@ -391,7 +391,7 @@
   "changedToDate": "Tarehe imebadilishwa kuwa {date}",
   "quickRecordTakePillFailed": "Rekodi ya kumeza vidonge huenda haijahifadhiwa",
   "quickRecordTakePillFailedMessage": "Tafadhali fungua programu na uangalie rekodi ya kumeza kidonge",
-  "alreadyTaken": "Imechukuliwa",
+  "alreadyTaken": "Kidonge kimemezwa",
   "startPauseTaking": "Pumzisha kutumia",
   "startedPauseTaking": "Mapumziko ya kutumia tembe umeanza",
   "sequentialLastTakenPlusOnePillNumber": "Namba {pillSheetGroupSequentialLastTakenPillNumber}",

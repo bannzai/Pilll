@@ -391,7 +391,7 @@
   "changedToDate": "ቀኑ ወደ {date} ተቀይሯል",
   "quickRecordTakePillFailed": "የአወሳሰድ መዝገብ ማስቀመጥ ላይሳካ ይችላል",
   "quickRecordTakePillFailedMessage": "እባክዎ መተግበሪያውን ከፍተው የክኒን መውሰድ መዝገብዎን ይመልከቱ",
-  "alreadyTaken": "ተወስዷል",
+  "alreadyTaken": "ክኒን ተወስዷል",
   "startPauseTaking": "መድኃኒት ማረፍ",
   "startedPauseTaking": "የመድሃኒት እረፍት ጊዜ ተጀመረ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ኛ",

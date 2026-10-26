@@ -391,7 +391,7 @@
   "changedToDate": "ရက်စွဲကို {date} သို့ ပြောင်းပြီးပါပြီ",
   "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်းကို မသိမ်းဆည်းနိုင်ခဲ့တာ ဖြစ်နိုင်ပါတယ်",
   "quickRecordTakePillFailedMessage": "ကျေးဇူးပြု၍ အက်ပ်ကိုဖွင့်ပြီး ဆေးလုံးသောက်ထားသည့်မှတ်တမ်းကို စစ်ဆေးပါ",
-  "alreadyTaken": "သောက်ပြီး",
+  "alreadyTaken": "ဆေးလုံး သောက်ပြီးပါပြီ",
   "startPauseTaking": "ဆေးသောက်ခြင်း နားမည်",
   "startedPauseTaking": "ဆေးသောက်ခြင်း ယာယီရပ်နားရန် စတင်ပြီးပါပြီ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}နံပါတ်",

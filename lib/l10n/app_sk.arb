@@ -391,7 +391,7 @@
   "changedToDate": "Dátum bol zmenený na {date}",
   "quickRecordTakePillFailed": "Záznam o užití sa možno nepodarilo uložiť",
   "quickRecordTakePillFailedMessage": "Otvorte aplikáciu a skontrolujte záznam o užití tabletky",
-  "alreadyTaken": "Užité",
+  "alreadyTaken": "Tabletka užitá",
   "startPauseTaking": "Prerušiť užívanie",
   "startedPauseTaking": "Prestávka v užívaní začala",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

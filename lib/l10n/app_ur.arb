@@ -391,7 +391,7 @@
   "changedToDate": "تاریخ بدل کر {date} کر دی گئی ہے",
   "quickRecordTakePillFailed": "گولی لینے کا ریکارڈ شاید محفوظ نہیں ہوا",
   "quickRecordTakePillFailedMessage": "براہِ کرم ایپ کھول کر گولی لینے کا ریکارڈ دیکھیں",
-  "alreadyTaken": "استعمال شدہ",
+  "alreadyTaken": "گولی لے لی گئی ہے",
   "startPauseTaking": "استعمال رک دیں",
   "startedPauseTaking": "دوا کا وقفہ شروع ہو گیا",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} نمبر",

@@ -391,7 +391,7 @@
   "changedToDate": "તારીખ બદલીને {date} કરવામાં આવી છે",
   "quickRecordTakePillFailed": "ગોળી સેવનની નોંધ કદાચ સાચવાઈ નથી",
   "quickRecordTakePillFailedMessage": "કૃપા કરીને ઍપ ખોલીને ગોળી લેવાની નોંધ તપાસો",
-  "alreadyTaken": "લીધેલ",
+  "alreadyTaken": "ગોળી લઈ લીધી છે",
   "startPauseTaking": "દવા લેવાનો વિરામ લેવો",
   "startedPauseTaking": "ગોળીનું સેવન વિરામ શરૂ કર્યું છે",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}મો",

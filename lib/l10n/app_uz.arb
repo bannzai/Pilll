@@ -391,7 +391,7 @@
   "changedToDate": "Sana {date}ga oʻzgartirildi",
   "quickRecordTakePillFailed": "Tabletka qabul qilish qaydi saqlanmagan boʻlishi mumkin",
   "quickRecordTakePillFailedMessage": "Iltimos, ilovani ochib, tabletkani qabul qilish qaydini tekshiring",
-  "alreadyTaken": "Qabul qilindi",
+  "alreadyTaken": "Tabletka ichilgan",
   "startPauseTaking": "Tanaffus qilish",
   "startedPauseTaking": "Tabletkani qabul qilishni to'xtatish boshlandi",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-chi",

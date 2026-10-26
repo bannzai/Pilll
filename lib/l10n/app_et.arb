@@ -391,7 +391,7 @@
   "changedToDate": "Kuupäevaks määrati {date}",
   "quickRecordTakePillFailed": "Võtmiskirje ei pruukinud salvestuda",
   "quickRecordTakePillFailedMessage": "Ava rakendus ja kontrolli pilli võtmise kirjet",
-  "alreadyTaken": "Võetud",
+  "alreadyTaken": "Pill võetud",
   "startPauseTaking": "Võtmist peatada",
   "startedPauseTaking": "Pillide võtmise paus on alustatud",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

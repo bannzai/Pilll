@@ -391,7 +391,7 @@
   "changedToDate": "Data {date} egunera aldatu da",
   "quickRecordTakePillFailed": "Baliteke hartze-erregistroa gorde ez izana",
   "quickRecordTakePillFailedMessage": "Ireki aplikazioa eta egiaztatu pilula hartu izanaren erregistroa",
-  "alreadyTaken": "Hartuta",
+  "alreadyTaken": "Pilula hartuta",
   "startPauseTaking": "Hartzea eten",
   "startedPauseTaking": "Hartzeko atsedena hasi da",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. pilula",

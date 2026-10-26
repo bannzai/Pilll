@@ -391,7 +391,7 @@
   "changedToDate": "La date a été modifiée pour {date}",
   "quickRecordTakePillFailed": "Le journal des prises n’a peut-être pas été enregistré",
   "quickRecordTakePillFailedMessage": "Ouvrez l’application et vérifiez l’enregistrement de la prise de votre pilule",
-  "alreadyTaken": "Pris",
+  "alreadyTaken": "Pilule prise",
   "startPauseTaking": "Faites une pause avec les pilules",
   "startedPauseTaking": "J'ai commencé à prendre une pause pilule",
   "sequentialLastTakenPlusOnePillNumber": "Pilule {pillSheetGroupSequentialLastTakenPillNumber}",

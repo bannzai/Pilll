@@ -391,7 +391,7 @@
   "changedToDate": "ປ່ຽນວັນທີເປັນ {date} ແລ້ວ",
   "quickRecordTakePillFailed": "ບັນທຶກການກິນຢາອາດບໍ່ໄດ້ບັນທຶກໄວ້",
   "quickRecordTakePillFailedMessage": "ກະລຸນາເປີດແອັບ ແລ້ວກວດເບິ່ງບັນທຶກການກິນຢາເມັດ",
-  "alreadyTaken": "ກິນແລ້ວ",
+  "alreadyTaken": "ກິນຢາແລ້ວ",
   "startPauseTaking": "ພັກການກິນຢາ",
   "startedPauseTaking": "ເລີ່ມພັກການກິນຢາແລ້ວ",
   "sequentialLastTakenPlusOnePillNumber": "ທີ່ {pillSheetGroupSequentialLastTakenPillNumber}",

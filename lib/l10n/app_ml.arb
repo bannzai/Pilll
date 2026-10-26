@@ -391,7 +391,7 @@
   "changedToDate": "തീയതി {date} ആക്കി മാറ്റി",
   "quickRecordTakePillFailed": "ഗുളിക കഴിച്ചതിന്റെ രേഖ സേവ് ആയിട്ടുണ്ടാകില്ല",
   "quickRecordTakePillFailedMessage": "ദയവായി ആപ്പ് തുറന്ന് ഗുളിക കഴിച്ചതിന്റെ രേഖ പരിശോധിക്കൂ",
-  "alreadyTaken": "കഴിച്ചു",
+  "alreadyTaken": "ഗുളിക കഴിച്ചു",
   "startPauseTaking": "സേവനം വിശ്രമിക്കുക",
   "startedPauseTaking": "ഗുളിക സേവന വിശ്രമം ആരംഭിച്ചു",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ാം",

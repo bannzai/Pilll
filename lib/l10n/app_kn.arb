@@ -391,7 +391,7 @@
   "changedToDate": "ದಿನಾಂಕವನ್ನು {date} ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "quickRecordTakePillFailed": "ಸೇವನೆಯ ದಾಖಲೆ ಉಳಿಯದೇ ಇರಬಹುದು",
   "quickRecordTakePillFailedMessage": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ತೆರೆದು ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
-  "alreadyTaken": "ಸೇವಿಸಲಾಗಿದೆ",
+  "alreadyTaken": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ",
   "startPauseTaking": "ಸೇವನೆಯನ್ನು ವಿರಾಮಗೊಳಿಸಿ",
   "startedPauseTaking": "ಸೇವನೆ ವಿರಾಮವನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ನೇ",

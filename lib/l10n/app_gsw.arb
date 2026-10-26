@@ -391,7 +391,7 @@
   "changedToDate": "S Datum isch uf {date} gänderet",
   "quickRecordTakePillFailed": "D Iinahm-Ufzeichnig isch villicht nöd gspeicheret worde",
   "quickRecordTakePillFailedMessage": "Mach d App uf und lueg, ob d Iinahm vo de Pille i de Ufzeichnig staht",
-  "alreadyTaken": "Iignoo",
+  "alreadyTaken": "Pille gnoh",
   "startPauseTaking": "Iinahm pausiere",
   "startedPauseTaking": "D'Pillä-Pausä isch aagfange worde",
   "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",

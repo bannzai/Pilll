@@ -391,7 +391,7 @@
   "changedToDate": "Ամսաթիվը փոխվել է՝ {date}",
   "quickRecordTakePillFailed": "Ընդունման գրառում հնարավոր է՝ չի պահպանվել",
   "quickRecordTakePillFailedMessage": "Խնդրում ենք բացեք հավելվածը և ստուգեք հաբի ընդունման գրառումը",
-  "alreadyTaken": "Ընդունված",
+  "alreadyTaken": "Հաբն ընդունված է",
   "startPauseTaking": "Դադարել ընդունումը",
   "startedPauseTaking": "Դեղահատի ընդունման ընդմիջումը սկսվեց",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} համար",

@@ -391,7 +391,7 @@
   "changedToDate": "Datumet har ändrats till {date}",
   "quickRecordTakePillFailed": "Intagsloggen kanske inte sparades",
   "quickRecordTakePillFailedMessage": "Öppna appen och kontrollera registreringen av ditt piller",
-  "alreadyTaken": "Tagen",
+  "alreadyTaken": "P-pillret taget",
   "startPauseTaking": "Pausa intag",
   "startedPauseTaking": "Medicinpausen har påbörjats",
   "sequentialLastTakenPlusOnePillNumber": "nummer {pillSheetGroupSequentialLastTakenPillNumber}",

@@ -391,7 +391,7 @@
   "changedToDate": "De datum is gewijzigd naar {date}",
   "quickRecordTakePillFailed": "De innameregistratie is mogelijk niet opgeslagen",
   "quickRecordTakePillFailedMessage": "Open de app en controleer de registratie van je pil",
-  "alreadyTaken": "Ingenomen",
+  "alreadyTaken": "Pil ingenomen",
   "startPauseTaking": "Inname pauzeren",
   "startedPauseTaking": "Innamepauze is gestart",
   "sequentialLastTakenPlusOnePillNumber": "nummer {pillSheetGroupSequentialLastTakenPillNumber}",

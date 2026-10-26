@@ -391,7 +391,7 @@
   "changedToDate": "Дата изменена на {date}",
   "quickRecordTakePillFailed": "Журнал приёма таблеток, возможно, не сохранился",
   "quickRecordTakePillFailedMessage": "Откройте приложение и проверьте запись о приёме таблетки",
-  "alreadyTaken": "Принято",
+  "alreadyTaken": "Таблетка принята",
   "startPauseTaking": "Приостановить прием",
   "startedPauseTaking": "Начат перерыв в приёме препарата",
   "sequentialLastTakenPlusOnePillNumber": "№{pillSheetGroupSequentialLastTakenPillNumber}",

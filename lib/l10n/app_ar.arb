@@ -391,7 +391,7 @@
   "changedToDate": "تم تغيير التاريخ إلى {date}",
   "quickRecordTakePillFailed": "ربما لم ينجح تسجيل تناول الحبة",
   "quickRecordTakePillFailedMessage": "يرجى فتح التطبيق والتحقق من سجل تناول الحبة",
-  "alreadyTaken": "مُتناول",
+  "alreadyTaken": "تم تناول الحبة",
   "startPauseTaking": "إيقاف التناول",
   "startedPauseTaking": "تم بدء فترة توقف تناول الحبوب",
   "sequentialLastTakenPlusOnePillNumber": "رقم {pillSheetGroupSequentialLastTakenPillNumber}",

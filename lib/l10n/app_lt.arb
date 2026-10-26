@@ -391,7 +391,7 @@
   "changedToDate": "Data pakeista į {date}",
   "quickRecordTakePillFailed": "Vartojimo įrašas galėjo būti neišsaugotas",
   "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite tabletės vartojimo įrašą",
-  "alreadyTaken": "Išgerta",
+  "alreadyTaken": "Tabletė išgerta",
   "startPauseTaking": "Padaryti pertrauką vartojime",
   "startedPauseTaking": "Pradėta tablečių vartojimo pertrauka",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-oji",

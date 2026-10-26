@@ -391,7 +391,7 @@
   "changedToDate": "La fecha se cambió a {date}",
   "quickRecordTakePillFailed": "Es posible que no se haya guardado el registro de toma",
   "quickRecordTakePillFailedMessage": "Abre la app y comprueba el registro de tu píldora",
-  "alreadyTaken": "Tomado",
+  "alreadyTaken": "Píldora tomada",
   "startPauseTaking": "Pausar la toma",
   "startedPauseTaking": "Se ha iniciado el período de descanso de la píldora",
   "sequentialLastTakenPlusOnePillNumber": "Número {pillSheetGroupSequentialLastTakenPillNumber}",

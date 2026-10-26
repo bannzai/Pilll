@@ -391,7 +391,7 @@
   "changedToDate": "Огноог {date} болгон өөрчилсөн",
   "quickRecordTakePillFailed": "Эм уусан бүртгэл хадгалагдаагүй байж магадгүй",
   "quickRecordTakePillFailedMessage": "Аппыг нээж, эм уусан бүртгэлээ шалгана уу",
-  "alreadyTaken": "Уусан",
+  "alreadyTaken": "Эмээ уусан",
   "startPauseTaking": "Эм уухаас амрах",
   "startedPauseTaking": "Эмийн завсарлагыг эхлүүлэв",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} дугаар",

@@ -391,7 +391,7 @@
   "changedToDate": "Date changed to {date}",
   "quickRecordTakePillFailed": "Your pill log may not have been saved",
   "quickRecordTakePillFailedMessage": "Please open the app and check your pill record",
-  "alreadyTaken": "Taken",
+  "alreadyTaken": "Pill taken",
   "startPauseTaking": "Take a break from pills",
   "startedPauseTaking": "Started taking a pill break",
   "sequentialLastTakenPlusOnePillNumber": "Pill {pillSheetGroupSequentialLastTakenPillNumber}",

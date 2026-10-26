@@ -391,7 +391,7 @@
   "changedToDate": "Päivämääräksi vaihdettiin {date}",
   "quickRecordTakePillFailed": "Pilleriloki ei ehkä tallentunut",
   "quickRecordTakePillFailedMessage": "Avaa sovellus ja tarkista pillerin ottomerkintä",
-  "alreadyTaken": "Otettu",
+  "alreadyTaken": "Pilleri otettu",
   "startPauseTaking": "Pidä ottotaukoa",
   "startedPauseTaking": "Ottotauko aloitettu",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",

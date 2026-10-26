@@ -391,7 +391,7 @@
   "changedToDate": "Η ημερομηνία άλλαξε σε {date}",
   "quickRecordTakePillFailed": "Η καταγραφή λήψης ίσως δεν αποθηκεύτηκε",
   "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε την καταγραφή λήψης του χαπιού",
-  "alreadyTaken": "Ληφθέν",
+  "alreadyTaken": "Το χάπι έχει ληφθεί",
   "startPauseTaking": "Παύση λήψης",
   "startedPauseTaking": "Ξεκίνησε η διακοπή λήψης",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ο",

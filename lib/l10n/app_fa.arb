@@ -391,7 +391,7 @@
   "changedToDate": "تاریخ به {date} تغییر کرد",
   "quickRecordTakePillFailed": "ممکن است ثبت مصرف ذخیره نشده باشد",
   "quickRecordTakePillFailedMessage": "لطفاً برنامه را باز کنید و ثبت مصرف قرص را بررسی کنید",
-  "alreadyTaken": "مصرف شده",
+  "alreadyTaken": "قرص مصرف شده",
   "startPauseTaking": "استراحت از مصرف",
   "startedPauseTaking": "دوره استراحت از مصرف دارو شروع شد",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ام",
