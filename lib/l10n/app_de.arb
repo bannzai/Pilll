@@ -46,7 +46,7 @@
   "accountSettings": "Kontoeinstellungen",
   "linked": "Verknüpft",
   "unregistered": "Nicht registriert",
-  "quickRecord": "Schnellerfassung",
+  "quickRecord": "Schnelle Erfassung",
   "quickRecordDescription": "Im Benachrichtigungsbildschirm sehen Sie, welche Pille heute fällig ist, und können die Einnahme direkt dokumentieren.",
   "healthCareIntegration": "Health-Integration",
   "healthCareIntegrationDescription": "Die in Pilll erfassten Periodenaufzeichnungen können automatisch in die Health-App übertragen werden.",

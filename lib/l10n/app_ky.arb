@@ -46,7 +46,7 @@
   "accountSettings": "Аккаунт жөндөөлөрү",
   "linked": "Байланыштырылган",
   "unregistered": "Катталган эмес",
-  "quickRecord": "Тез жазуу",
+  "quickRecord": "Тез каттоо",
   "quickRecordDescription": "Эскертүү экранында бүгүн ичүүгө тийиш болгон таблетканы көрүп, ошол эле жерден ичканын белгилей аласыз.",
   "healthCareIntegration": "Ден соолук интеграциясы",
   "healthCareIntegrationDescription": "Pilll колдонмосунда катталган менструалдык маалыматтарды автоматтык түрдө Health колдонмосуна каттоого болот",

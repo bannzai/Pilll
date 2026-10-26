@@ -46,7 +46,7 @@
   "accountSettings": "Kontoinnstillinger",
   "linked": "Tilknyttet",
   "unregistered": "Ikke registrert",
-  "quickRecord": "Hurtig registrering",
+  "quickRecord": "Hurtigregistrering",
   "quickRecordDescription": "På varslingsiden kan du se hvilke piller du skal ta i dag, og registrere inntaket direkte derfra.",
   "healthCareIntegration": "Helseintegrasjon",
   "healthCareIntegrationDescription": "Menstruasjonsdata registrert i Pilll kan automatisk synkroniseres til Helse-appen",

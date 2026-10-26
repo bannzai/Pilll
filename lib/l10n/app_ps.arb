@@ -46,7 +46,7 @@
   "accountSettings": "د حساب تنظیمات",
   "linked": "نښلول شوی",
   "unregistered": "لا نه دی ثبت شوی",
-  "quickRecord": "ګړندۍ ثبت",
+  "quickRecord": "چټک ثبت",
   "quickRecordDescription": "په اطلاعاتو پاڼه کې تاسو کولی شئ د نن د څښلو ګولۍ وګورئ او سمدلاسه د څښلو ثبت ورسره وکړئ۔",
   "healthCareIntegration": "د روغتیا پاملرنې ترکیب",
   "healthCareIntegrationDescription": "په Pilll کې د میاشتنۍ دورې ثبت شوي ریکارډونه په اتوماتیک ډول د Health اپ ته ثبتولی شي",

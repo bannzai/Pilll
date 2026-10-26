@@ -46,7 +46,7 @@
   "accountSettings": "Hesap ayarları",
   "linked": "Bağlandı",
   "unregistered": "Kayıtlı değil",
-  "quickRecord": "Hızlı Kayıt",
+  "quickRecord": "Hızlı kayıt",
   "quickRecordDescription": "Bildirim ekranında bugün alınacak hapı görebilir ve doğrudan kullanım kaydını yapabilirsiniz.",
   "healthCareIntegration": "Sağlık Entegrasyonu",
   "healthCareIntegrationDescription": "Pilll ile kaydettiğiniz adet kayıtları otomatik olarak Sağlık uygulamasına aktarılabilir",

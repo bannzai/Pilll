@@ -46,7 +46,7 @@
   "accountSettings": "การตั้งค่าบัญชี",
   "linked": "เชื่อมต่อแล้ว",
   "unregistered": "ยังไม่ได้ลงทะเบียน",
-  "quickRecord": "บันทึกด่วน",
+  "quickRecord": "บันทึกการทานยาอย่างรวดเร็ว",
   "quickRecordDescription": "ในหน้าจอการแจ้งเตือน คุณสามารถดูยาเม็ดที่ต้องกินวันนี้ และบันทึกการกินยาได้ทันที",
   "healthCareIntegration": "การเชื่อมโยงสุขภาพ",
   "healthCareIntegrationDescription": "สามารถบันทึกข้อมูลประจำเดือนจาก Pilll ลงในแอป Health Care โดยอัตโนมัติได้",

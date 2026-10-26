@@ -46,7 +46,7 @@
   "accountSettings": "Configurações da conta",
   "linked": "Vinculado",
   "unregistered": "Não cadastrado",
-  "quickRecord": "Registro Rápido",
+  "quickRecord": "Registro rápido",
   "quickRecordDescription": "Na tela de notificação, você pode ver qual pílula deve tomar hoje e registrar a tomada diretamente.",
   "healthCareIntegration": "Integração com Saúde",
   "healthCareIntegrationDescription": "Os dados menstruais registrados no Pilll podem ser automaticamente gravados no app Saúde",

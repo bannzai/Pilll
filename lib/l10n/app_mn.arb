@@ -46,7 +46,7 @@
   "accountSettings": "Бүртгэлийн тохиргоо",
   "linked": "Холбогдсон",
   "unregistered": "Бүртгүүлээгүй",
-  "quickRecord": "Хурдан бүртгэл",
+  "quickRecord": "Хурдан тэмдэглэх",
   "quickRecordDescription": "Мэдэгдлийн дэлгэцэд өнөөдөр уух ширийг харж, шууд хэрэглэсэн тэмдэглэл хийж болно.",
   "healthCareIntegration": "Эрүүл мэндийн холбоо",
   "healthCareIntegrationDescription": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээллийг автоматаар Эрүүл мэндийн аппд тэмдэглэх боломжтой",

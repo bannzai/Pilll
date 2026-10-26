@@ -46,7 +46,7 @@
   "accountSettings": "Tilin asetukset",
   "linked": "Yhdistetty",
   "unregistered": "Ei rekisteröity",
-  "quickRecord": "Pikamerkintä",
+  "quickRecord": "Pikakirjaus",
   "quickRecordDescription": "Ilmoitusnäytössä näkyy tänään otettava pilleri ja voit kirjata ottamisen suoraan.",
   "healthCareIntegration": "Terveysdatan synkronointi",
   "healthCareIntegrationDescription": "Pilllissä tallennetut kuukautistiedot voidaan tallentaa automaattisesti Terveys-sovellukseen",

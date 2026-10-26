@@ -46,7 +46,7 @@
   "accountSettings": "Поставки за сметка",
   "linked": "Поврзано",
   "unregistered": "Не е регистрирано",
-  "quickRecord": "Брз запис",
+  "quickRecord": "Брз запис за земање",
   "quickRecordDescription": "На екранот за известувања можете да видите денешната пилула и веднаш да го запишете приемот.",
   "healthCareIntegration": "Здравствена интеграција",
   "healthCareIntegrationDescription": "Менструалните записи снимени во Pilll можат автоматски да се синхронизираат со Здравје",
