@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ইয়াৰ আগৰ তথ্য চাবলৈ প্ৰিমিয়ামৰ প্ৰয়োজন",
   "viewMoreDetails": "বিতংভাৱে চাওক",
   "viewMore": "আৰু চাওক",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}নং",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} নম্বৰ বড়ি",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}নম্বৰ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}নং",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}নং",

@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Starejše zapise si lahko ogledate s Premium",
   "viewMoreDetails": "Oglejte si podrobnosti",
   "viewMore": "Prikaži več",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "tableta št. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}.-{afterLastTakenPillNumberPlusOne}. tabl.",

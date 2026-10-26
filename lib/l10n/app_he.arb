@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "צפייה ברשומות ישנות יותר זמינה עם פרימיום",
   "viewMoreDetails": "הצגת פרטים",
   "viewMore": "הצגת פרטים נוספים",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}'",
+  "afterLastTakenPillNumber": "גלולה מספר {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}מס'",
   "beforeLastTakenPillNumber": "מס׳ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "מס' {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

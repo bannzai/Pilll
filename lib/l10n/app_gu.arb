@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "વધુ જૂની નોંધો જોવા માટે પ્રીમિયમ જરૂરી છે",
   "viewMoreDetails": "વિગતો જુઓ",
   "viewMore": "વધુ જુઓ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}મો",
+  "afterLastTakenPillNumber": "ગોળી નંબર {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}નંબર",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}નંબર",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}નં",

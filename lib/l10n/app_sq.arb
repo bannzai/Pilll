@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Regjistrimet më të vjetra mund t’i shihni me premium",
   "viewMoreDetails": "Shihni hollësitë",
   "viewMore": "Shihni më shumë",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-të",
+  "afterLastTakenPillNumber": "pilula nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "numri {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

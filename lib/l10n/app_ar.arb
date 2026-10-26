@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "عرض المزيد متاح مع بريميوم",
   "viewMoreDetails": "عرض التفاصيل",
   "viewMore": "عرض المزيد",
-  "afterLastTakenPillNumber": "رقم {afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "الحبة رقم {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} رقم",
   "beforeLastTakenPillNumber": "رقم {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "رقم {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

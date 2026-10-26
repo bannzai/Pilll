@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "더 오래된 기록은 프리미엄에서 볼 수 있어요",
   "viewMoreDetails": "자세히 보기",
   "viewMore": "더 보기",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번 알약",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}번",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}번",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",

@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ການເບິ່ງບັນທຶກເກົ່າກວ່ານີ້ຕ້ອງໃຊ້ Premium",
   "viewMoreDetails": "ເບິ່ງລາຍລະອຽດ",
   "viewMore": "ເບິ່ງເພີ່ມເຕີມ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ທີ່",
+  "afterLastTakenPillNumber": "ຢາເມັດເລກ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-ທີ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ເມັດທີ່ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ເມັດ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

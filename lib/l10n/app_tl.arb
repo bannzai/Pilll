@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Maaari ninyong tingnan ang mas lumang tala gamit ang Premium",
   "viewMoreDetails": "Tingnan ang detalye",
   "viewMore": "Tingnan pa",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "pildoras blg. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Numero {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "bilang {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

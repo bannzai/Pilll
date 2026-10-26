@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Mae angen premiwm i weld cofnodion hŷn",
   "viewMoreDetails": "Gweld y manylion",
   "viewMore": "Gweld mwy",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ed",
+  "afterLastTakenPillNumber": "pilsen rhif {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "rhif {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "rhif {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

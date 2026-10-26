@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ከዚህ በላይ ለማየት ፕሪሚየም ያስፈልጋል",
   "viewMoreDetails": "ዝርዝር መረጃ ይመልከቱ",
   "viewMore": "ተጨማሪ ይመልከቱ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ኛ",
+  "afterLastTakenPillNumber": "ክኒን ቁጥር {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ኛ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ኛ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ቁጥር",

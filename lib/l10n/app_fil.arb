@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Maaari kayong tumingin ng mas lumang tala gamit ang Premium",
   "viewMoreDetails": "Tingnan ang detalye",
   "viewMore": "Tingnan pa",
-  "afterLastTakenPillNumber": "ika-{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "tableta blg. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} na bilang",
   "beforeLastTakenPillNumber": "Bilang {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} na bilang",

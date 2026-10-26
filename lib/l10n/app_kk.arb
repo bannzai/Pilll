@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Бұрынғы жазбаларды көру үшін премиум қажет",
   "viewMoreDetails": "Толығырақ көру",
   "viewMore": "Толығырақ көру",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-ші",
+  "afterLastTakenPillNumber": "№ {afterLastTakenPillNumber} таблетка",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-ші",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} номері",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} нөмір",

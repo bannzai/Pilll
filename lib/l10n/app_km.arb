@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ដើម្បីមើលកំណត់ត្រាចាស់ជាងនេះ ត្រូវការព្រីមៀម",
   "viewMoreDetails": "មើលព័ត៌មានលម្អិត",
   "viewMore": "មើលបន្ថែម",
-  "afterLastTakenPillNumber": "ទី{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "គ្រាប់ថ្នាំលេខ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}លេខ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}លេខ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "គ្រាប់ទី {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

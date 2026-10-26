@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Давніші записи доступні з преміум",
   "viewMoreDetails": "Докладніше",
   "viewMore": "Показати більше",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-й",
+  "afterLastTakenPillNumber": "пігулка № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "№{beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} номери",

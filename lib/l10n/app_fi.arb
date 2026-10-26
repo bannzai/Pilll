@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Voit katsoa vanhempia merkintöjä Premiumilla",
   "viewMoreDetails": "Näytä lisätiedot",
   "viewMore": "Näytä lisää",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "pilleri nro {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "numero {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

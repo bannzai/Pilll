@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "د لا پخوانیو ریکارډونو د لیدو لپاره پریمیم ته اړتیا ده",
   "viewMoreDetails": "نور جزئیات وګورئ",
   "viewMore": "نور وګورئ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ګیرے",
+  "afterLastTakenPillNumber": "د {afterLastTakenPillNumber} شمېرې ګولۍ",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}مه",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}م",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} شمېره",

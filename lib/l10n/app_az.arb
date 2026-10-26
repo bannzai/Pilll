@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Daha əvvəlki qeydlərə baxmaq üçün premium lazımdır",
   "viewMoreDetails": "Ətraflı baxın",
   "viewMore": "Daha çoxuna baxın",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-ci",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} nömrəli həb",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-ci",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} №",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} №",

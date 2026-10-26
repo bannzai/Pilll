@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "കൂടുതൽ പഴയ രേഖകൾ കാണാൻ പ്രീമിയ ആവശ്യമാണ്",
   "viewMoreDetails": "കൂടുതൽ വിവരങ്ങൾ കാണുക",
   "viewMore": "കൂടുതൽ കാണുക",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ാം",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ാം ഗുളിക",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ാം",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} നമ്പർ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} നമ്പർ",

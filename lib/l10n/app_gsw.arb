@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Älteri Ufzeichnige chasch mit Premium aluege",
   "viewMoreDetails": "Details aluege",
   "viewMore": "Meh aaluege",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}er",
+  "afterLastTakenPillNumber": "Pille Nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
   "beforeLastTakenPillNumber": "Nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Прагляд больш ранніх запісаў даступны з прэміум",
   "viewMoreDetails": "Больш падрабязна",
   "viewMore": "Паказаць больш",
-  "afterLastTakenPillNumber": "№{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "пігулка № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "№{beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} нумары",

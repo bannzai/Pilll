@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Unaweza kuona rekodi za zamani zaidi kwa Premium",
   "viewMoreDetails": "Tazama maelezo zaidi",
   "viewMore": "Tazama zaidi",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "kidonge namba {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-Na.{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Nambari {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nambari",

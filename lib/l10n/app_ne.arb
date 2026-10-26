@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "अझ पुराना रेकर्ड हेर्न प्रिमियम आवश्यक छ",
   "viewMoreDetails": "विवरण हेर्नुहोस्",
   "viewMore": "थप हेर्नुहोस्",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}औं",
+  "afterLastTakenPillNumber": "चक्की नम्बर {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}नं",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}नम्बर",

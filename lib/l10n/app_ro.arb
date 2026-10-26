@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Poți vedea înregistrările mai vechi cu premium",
   "viewMoreDetails": "Vezi detaliile",
   "viewMore": "Vezi mai mult",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-a",
+  "afterLastTakenPillNumber": "pilula nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pastila {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nr. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

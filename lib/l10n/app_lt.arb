@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Senesnius įrašus galite peržiūrėti su Premium",
   "viewMoreDetails": "Peržiūrėkite išsamiau",
   "viewMore": "Rodyti daugiau",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-as",
+  "afterLastTakenPillNumber": "tabletė Nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-oji",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} nr.",

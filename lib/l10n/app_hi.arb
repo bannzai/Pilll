@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "पुराने रिकॉर्ड देखने के लिए प्रीमियम चाहिए",
   "viewMoreDetails": "विवरण देखें",
   "viewMore": "और देखें",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}वीं",
+  "afterLastTakenPillNumber": "गोली नंबर {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} नंबर",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} नंबर",

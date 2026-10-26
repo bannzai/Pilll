@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Ավելի հին գրառումները դիտելու համար անհրաժեշտ է պրեմիում",
   "viewMoreDetails": "Դիտել մանրամասները",
   "viewMore": "Տեսնել ավելին",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-րդ",
+  "afterLastTakenPillNumber": "հաբ № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} համար",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-րդ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համար",

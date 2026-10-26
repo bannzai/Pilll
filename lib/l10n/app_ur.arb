@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "مزید پرانے ریکارڈ دیکھنے کے لیے پریمیم درکار ہے",
   "viewMoreDetails": "تفصیلات دیکھیں",
   "viewMore": "مزید دیکھیں",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} نمبر",
+  "afterLastTakenPillNumber": "گولی نمبر {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ویں",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} نمبر",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} نمبر",

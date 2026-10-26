@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "আরও পুরোনো রেকর্ড দেখতে প্রিমিয়াম প্রয়োজন",
   "viewMoreDetails": "বিস্তারিত দেখুন",
   "viewMore": "আরও দেখুন",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}তম",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} নম্বর পিল",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}নং",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}নং",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}নম্বর",

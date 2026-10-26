@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Starsze wpisy możesz przeglądać z premium",
   "viewMoreDetails": "Zobacz szczegóły",
   "viewMore": "Zobacz więcej",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "tabletka nr {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "nr {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

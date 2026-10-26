@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Για να δείτε παλαιότερες καταχωρίσεις, χρειάζεστε Premium",
   "viewMoreDetails": "Δείτε λεπτομέρειες",
   "viewMore": "Δείτε περισσότερα",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ο",
+  "afterLastTakenPillNumber": "χάπι αρ. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ο",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ο",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "αρ. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

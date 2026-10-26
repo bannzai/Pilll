@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Старије записе можете да видите уз премијум",
   "viewMoreDetails": "Погледајте детаље",
   "viewMore": "Прикажи још",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "пилула бр. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

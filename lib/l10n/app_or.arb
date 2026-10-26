@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ଅଧିକ ପୁରୁଣା ରେକର୍ଡ ଦେଖିବାକୁ ପ୍ରିମିୟମ ଆବଶ୍ୟକ",
   "viewMoreDetails": "ବିବରଣୀ ଦେଖନ୍ତୁ",
   "viewMore": "ଅଧିକ ଦେଖନ୍ତୁ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ତମ",
+  "afterLastTakenPillNumber": "ବଟି ନମ୍ବର {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ନଂ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ନମ୍ବର",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ନଂ",

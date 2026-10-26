@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Мурунку жазууларды көрүү үчүн премиум керек",
   "viewMoreDetails": "Кененирээк көрүңүз",
   "viewMore": "Көбүрөөк көрүү",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-чы",
+  "afterLastTakenPillNumber": "№ {afterLastTakenPillNumber} таблетка",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-сан",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-номер",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}номер",

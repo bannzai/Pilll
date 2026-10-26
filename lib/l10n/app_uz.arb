@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Eskiroq qaydlarni koʻrish uchun Premium kerak",
   "viewMoreDetails": "Batafsil koʻring",
   "viewMore": "Koʻproq koʻrish",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-chi",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-raqamli tabletka",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-raqam",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-chi",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}-raqam",

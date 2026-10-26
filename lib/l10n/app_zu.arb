@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Ungabuka amarekhodi amadala nge-i-Premium",
   "viewMoreDetails": "Buka imininingwane",
   "viewMore": "Buka okwengeziwe",
-  "afterLastTakenPillNumber": "Inombolo {afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "iphilisi elingunombolo {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} inombolo",
   "beforeLastTakenPillNumber": "inombolo {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} inombolo",

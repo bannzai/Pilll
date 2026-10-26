@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Более ранние записи доступны с премиум",
   "viewMoreDetails": "Подробнее",
   "viewMore": "Показать ещё",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-я",
+  "afterLastTakenPillNumber": "таблетка № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "№{beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} таблетки",

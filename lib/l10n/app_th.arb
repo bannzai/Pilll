@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ดูบันทึกที่เก่ากว่านี้ได้ด้วยพรีเมียมค่ะ",
   "viewMoreDetails": "ดูรายละเอียด",
   "viewMore": "ดูเพิ่มเติม",
-  "afterLastTakenPillNumber": "ที่{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "ยาเม็ดที่ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ที่ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "เม็ดที่ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ပိုမိုဟောင်းသော မှတ်တမ်းများကို ကြည့်ရန် ပရီမီယံ လိုအပ်ပါတယ်",
   "viewMoreDetails": "အသေးစိတ်ကြည့်ရန်",
   "viewMore": "နောက်ထပ်ကြည့်ရန်",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} အမှတ်",
+  "afterLastTakenPillNumber": "ဆေးလုံး အမှတ် {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}အမှတ်",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}နံပါတ်",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}နံပါတ်",

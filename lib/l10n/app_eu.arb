@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Erregistro zaharragoak ikusteko Premium behar duzu",
   "viewMoreDetails": "Ikusi xehetasunak",
   "viewMore": "Ikusi gehiago",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}garren",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}. pilula",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}a",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}a",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} zenbakiak",

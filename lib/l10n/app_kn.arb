@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "ಇನ್ನಷ್ಟು ಹಳೆಯ ದಾಖಲೆಗಳನ್ನು ನೋಡಲು ಪ್ರೀಮಿಯಂ ಅಗತ್ಯವಿದೆ",
   "viewMoreDetails": "ವಿವರಗಳನ್ನು ನೋಡಿ",
   "viewMore": "ಇನ್ನಷ್ಟು ನೋಡಿ",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ನೇ",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ನೇ ಮಾತ್ರೆ",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ನೇ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ನೇ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ನೇ",

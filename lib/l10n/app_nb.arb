@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Du kan se eldre registreringer med premium",
   "viewMoreDetails": "Se detaljer",
   "viewMore": "Se mer",
-  "afterLastTakenPillNumber": "nr. {afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "p-pille nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} nr.",
   "beforeLastTakenPillNumber": "nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

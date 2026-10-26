@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Rekod yang lebih lama boleh dilihat dengan premium",
   "viewMoreDetails": "Lihat butiran",
   "viewMore": "Lihat lagi",
-  "afterLastTakenPillNumber": "ke-{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "pil nombor {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "No. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "nombor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

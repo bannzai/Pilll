@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Pots consultar registres més antics amb Premium",
   "viewMoreDetails": "Veure'n els detalls",
   "viewMore": "Mostra'n més",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}a",
+  "afterLastTakenPillNumber": "píndola núm. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "núm. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

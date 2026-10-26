@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "برای دیدن سوابق قدیمی‌تر، پریمیوم لازم است",
   "viewMoreDetails": "مشاهده جزئیات",
   "viewMore": "مشاهده بیشتر",
-  "afterLastTakenPillNumber": "شماره {afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "قرص شمارهٔ {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} شماره",
   "beforeLastTakenPillNumber": "شماره {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "شماره {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

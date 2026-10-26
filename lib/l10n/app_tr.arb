@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Daha eski kayıtları Premium ile görüntüleyebilirsiniz",
   "viewMoreDetails": "Ayrıntıları görüntüleyin",
   "viewMore": "Daha fazlasını görün",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} numaralı hap",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} numaralı",

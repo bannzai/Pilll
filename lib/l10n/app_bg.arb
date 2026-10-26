@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Прегледът на по-стари записи е достъпен с премиум",
   "viewMoreDetails": "Вижте подробности",
   "viewMore": "Вижте още",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-та",
+  "afterLastTakenPillNumber": "хапче № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-та",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} номер",

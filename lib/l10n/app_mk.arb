@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "За преглед на постари записи е потребен премиум",
   "viewMoreDetails": "Повеќе детали",
   "viewMore": "Прикажи повеќе",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-то",
+  "afterLastTakenPillNumber": "таблета бр. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}-ти",
   "beforeLastTakenPillNumber": "број {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} број",

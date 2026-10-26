@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Vecākus ierakstus varat skatīt ar Premium",
   "viewMoreDetails": "Skatiet sīkāk",
   "viewMore": "Skatīt vairāk",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "tablete Nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}.-{afterLastTakenPillNumberPlusOne}.",

@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "უფრო ძველი ჩანაწერების სანახავად საჭიროა პრემიუმი",
   "viewMoreDetails": "დეტალების ნახვა",
   "viewMore": "მეტის ნახვა",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-ე",
+  "afterLastTakenPillNumber": "აბი № {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-ე",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ნომერი",

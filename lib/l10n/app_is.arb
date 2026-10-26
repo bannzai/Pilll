@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Þú getur skoðað eldri færslur með Premium",
   "viewMoreDetails": "Skoða nánar",
   "viewMore": "Sjá meira",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "pilla nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. nr.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}. nr.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} númer",

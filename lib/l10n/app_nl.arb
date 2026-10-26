@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Je kunt oudere gegevens bekijken met premium",
   "viewMoreDetails": "Bekijk details",
   "viewMore": "Meer bekijken",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}e",
+  "afterLastTakenPillNumber": "pil nr. {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}e",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",

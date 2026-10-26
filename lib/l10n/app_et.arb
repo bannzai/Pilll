@@ -97,7 +97,7 @@
   "medicationHistoryPremiumFeatureRestriction": "Vanemaid kirjeid saad vaadata premiumiga",
   "viewMoreDetails": "Vaata üksikasju",
   "viewMore": "Vaata rohkem",
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
+  "afterLastTakenPillNumber": "pill nr {afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}. pill",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. tablett",
