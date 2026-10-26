@@ -109,7 +109,7 @@
   "selectPausePeriod": "Επιλέξτε τη διάρκεια της διακοπής λήψης χαπιών",
   "pauseStartDate": "Ημερομηνία έναρξης της παύσης λήψης χαπιών",
   "pauseEndDate": "Ημερομηνία λήξης της διακοπής λήψης χαπιών",
-  "endPillSheet": "Τέλος συσκευασίας χαπιών",
+  "endPillSheet": "Η καρτέλα χαπιών ολοκληρώθηκε",
   "discardPillSheet": "Απόρριψη φύλλου αντισυλληπτικών",
   "takingTime": "Ώρα λήψης",
   "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι premium λειτουργία",

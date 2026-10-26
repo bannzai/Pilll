@@ -109,7 +109,7 @@
   "selectPausePeriod": "Odaberite trajanje pauze u uzimanju pilula",
   "pauseStartDate": "Datum početka pauze u uzimanju pilula",
   "pauseEndDate": "Datum završetka pauze u uzimanju pilula",
-  "endPillSheet": "Pilule završene",
+  "endPillSheet": "blister je završen",
   "discardPillSheet": "Odbacivanje blistera",
   "takingTime": "Vrijeme uzimanja",
   "takingHistoryIsPremiumFeature": "Istorija uzimanja je premium funkcija",

@@ -109,7 +109,7 @@
   "selectPausePeriod": "Vali pillipausi kestus",
   "pauseStartDate": "Pillipausi alguskuupäev",
   "pauseEndDate": "Pillipausi lõppkuupäev",
-  "endPillSheet": "Pillipakk lõppenud",
+  "endPillSheet": "pillileh on lõpetatud",
   "discardPillSheet": "Pillipakendi utiliseerimine",
   "takingTime": "Võtmisaeg",
   "takingHistoryIsPremiumFeature": "Võtmisajalugu on premium funktsioon",

@@ -109,7 +109,7 @@
   "selectPausePeriod": "Wybierz długość przerwy w przyjmowaniu tabletek",
   "pauseStartDate": "Data rozpoczęcia przerwy w braniu tabletek",
   "pauseEndDate": "Data zakończenia przerwy w braniu tabletek",
-  "endPillSheet": "Zakończenie blistra",
+  "endPillSheet": "blist zużyty",
   "discardPillSheet": "Utylizacja blistra",
   "takingTime": "Godzina przyjmowania",
   "takingHistoryIsPremiumFeature": "Historia przyjmowania to funkcja premium",

@@ -109,7 +109,7 @@
   "selectPausePeriod": "Zgjidhni kohëzgjatjen e pushimit nga marrja e pilulave",
   "pauseStartDate": "Data e fillimit të pushimit nga marrja e pilulave",
   "pauseEndDate": "Data e përfundimit të pushimit nga marrja e pilulave",
-  "endPillSheet": "Fleta e pilulës përfundoi",
+  "endPillSheet": "blister ka përfunduar",
   "discardPillSheet": "Heqja e fletës së pilules",
   "takingTime": "Ora e marrjes",
   "takingHistoryIsPremiumFeature": "Historiku i marrjes është një funksion premium",

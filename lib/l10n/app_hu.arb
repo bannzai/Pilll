@@ -109,7 +109,7 @@
   "selectPausePeriod": "Válaszd ki a tablettaszedési szünet hosszát",
   "pauseStartDate": "A tablettaszedési szünet kezdőnapja",
   "pauseEndDate": "A tablettaszedési szünet utolsó napja",
-  "endPillSheet": "Tablettacsomag befejezve",
+  "endPillSheet": "tablettacsomag elfogyott",
   "discardPillSheet": "Tablettacsomag eldobása",
   "takingTime": "Bevételi idő",
   "takingHistoryIsPremiumFeature": "A szedési előzmények prémium funkció",

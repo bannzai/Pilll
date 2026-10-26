@@ -109,7 +109,7 @@
   "selectPausePeriod": "เลือกระยะเวลาหยุดทานยาค่ะ",
   "pauseStartDate": "วันที่เริ่มพักการทานยาเม็ด",
   "pauseEndDate": "วันที่สิ้นสุดช่วงพักทานยา",
-  "endPillSheet": "แผงยาคุมเสร็จสิ้น",
+  "endPillSheet": "แผงยาหมดแล้ว",
   "discardPillSheet": "ทิ้งแผงยา",
   "takingTime": "เวลารับประทานยา",
   "takingHistoryIsPremiumFeature": "ประวัติการรับประทานยาเป็นฟีเจอร์พรีเมียม",

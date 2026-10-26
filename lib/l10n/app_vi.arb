@@ -109,7 +109,7 @@
   "selectPausePeriod": "Vui lòng chọn thời gian tạm ngừng uống thuốc",
   "pauseStartDate": "Ngày bắt đầu tạm ngừng uống thuốc",
   "pauseEndDate": "Ngày kết thúc thời gian tạm ngừng uống thuốc",
-  "endPillSheet": "Kết thúc vỉ thuốc",
+  "endPillSheet": "Vỉ thuốc đã dùng hết",
   "discardPillSheet": "Loại bỏ vỉ thuốc",
   "takingTime": "Giờ uống thuốc",
   "takingHistoryIsPremiumFeature": "Lịch sử uống thuốc là tính năng premium",

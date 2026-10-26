@@ -109,7 +109,7 @@
   "selectPausePeriod": "Виберіть тривалість перерви у прийомі пігулок",
   "pauseStartDate": "Дата початку перерви в прийомі пігулок",
   "pauseEndDate": "Дата завершення перерви в прийомі пігулок",
-  "endPillSheet": "Блістер закінчено",
+  "endPillSheet": "блістер закінчився",
   "discardPillSheet": "Утилізація блістера",
   "takingTime": "Час прийому",
   "takingHistoryIsPremiumFeature": "Історія прийому - преміум функція",

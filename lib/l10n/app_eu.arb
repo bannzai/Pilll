@@ -109,7 +109,7 @@
   "selectPausePeriod": "Aukeratu pilula hartzeko etenaldiaren iraupena",
   "pauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data",
   "pauseEndDate": "Pilulak hartzeko etenaldiaren amaiera-data",
-  "endPillSheet": "Pilula-orria amaituta",
+  "endPillSheet": "pilula-blister amaituta",
   "discardPillSheet": "Pilula-orria baztertu",
   "takingTime": "Hartzeko ordua",
   "takingHistoryIsPremiumFeature": "Hartze-historia premium funtzioa da",

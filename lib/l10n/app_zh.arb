@@ -109,7 +109,7 @@
   "selectPausePeriod": "选择停药期时长",
   "pauseStartDate": "停药期开始日期",
   "pauseEndDate": "停药期结束日期",
-  "endPillSheet": "避孕药片结束",
+  "endPillSheet": "药板已用完",
   "discardPillSheet": "药板处理",
   "takingTime": "服用时间",
   "takingHistoryIsPremiumFeature": "服药记录是高级功能",

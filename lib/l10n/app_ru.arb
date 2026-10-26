@@ -109,7 +109,7 @@
   "selectPausePeriod": "Выберите длительность перерыва в приёме таблеток",
   "pauseStartDate": "Дата начала перерыва в приёме таблеток",
   "pauseEndDate": "Дата окончания перерыва в приёме таблеток",
-  "endPillSheet": "Блистер закончился",
+  "endPillSheet": "блистер закончился",
   "discardPillSheet": "Утилизация блистера",
   "takingTime": "Время приёма",
   "takingHistoryIsPremiumFeature": "История приёма - премиум-функция",

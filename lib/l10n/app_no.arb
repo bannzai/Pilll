@@ -109,7 +109,7 @@
   "selectPausePeriod": "Velg lengden på p-pillepausen",
   "pauseStartDate": "Startdato for p-pillepause",
   "pauseEndDate": "Sluttdato for p-pillepausen",
-  "endPillSheet": "P-pillepakning fullført",
+  "endPillSheet": "pillebrett brukt opp",
   "discardPillSheet": "Avhend pillpakke",
   "takingTime": "Inntakstid",
   "takingHistoryIsPremiumFeature": "Doseringshistorikk er en premium-funksjon",
