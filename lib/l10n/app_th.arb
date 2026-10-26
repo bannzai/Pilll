@@ -195,7 +195,7 @@
   "monthlyPlan": "แพ็กเกจรายเดือน",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/เดือน",
   "lifetimePlan": "ซื้อครั้งเดียว",
-  "lifetimePlanDescription": "ซื้อครั้งเดียว ใช้พรีเมียมตลอดไป",
+  "lifetimePlanDescription": "ซื้อครั้งเดียว ใช้พรีเมียมได้ตลอดไป",
   "lifetimePlanSpecialOffer": "แพ็คเกจซื้อครั้งเดียว\nราคาพิเศษระยะเวลาจำกัด",
   "lifetimePlanStandardPrice": "ราคาปกติ",
   "youArePremiumMember": "คุณเป็นสมาชิกพรีเมียม",

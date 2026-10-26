@@ -195,7 +195,7 @@
   "monthlyPlan": "Месечни план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",
   "lifetimePlan": "Једнократна куповина",
-  "lifetimePlanDescription": "Premium zauvek jednom kupovinom",
+  "lifetimePlanDescription": "Једна куповина, премијум заувек",
   "lifetimePlanSpecialOffer": "Doživotni plan\nSpecijalna cena na ograničeno vreme",
   "lifetimePlanStandardPrice": "Redovna cena",
   "youArePremiumMember": "Vi ste premium član",

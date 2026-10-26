@@ -195,7 +195,7 @@
   "monthlyPlan": "Ամսական պլան",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ամիս",
   "lifetimePlan": "Մեկանգամյա գնում",
-  "lifetimePlanDescription": "Մեկ գնումով՝ ընդմիշտ պրեմիում",
+  "lifetimePlanDescription": "Մեկ գնում, պրեմիում ընդմիշտ",
   "lifetimePlanSpecialOffer": "Մշտական պլան\nԺամանակավոր հատուկ գին",
   "lifetimePlanStandardPrice": "սովորական գին",
   "youArePremiumMember": "Դուք պրեմիում անդամ եք",

@@ -195,7 +195,7 @@
   "monthlyPlan": "월간 요금제",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/월",
   "lifetimePlan": "평생 이용권",
-  "lifetimePlanDescription": "한 번의 구매로 평생 프리미엄",
+  "lifetimePlanDescription": "한 번 구매하면 프리미엄을 평생 이용해요",
   "lifetimePlanSpecialOffer": "평생 플랜 기간 한정 특별 가격",
   "lifetimePlanStandardPrice": "정상가",
   "youArePremiumMember": "프리미엄 멤버입니다",

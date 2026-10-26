@@ -195,7 +195,7 @@
   "monthlyPlan": "လစဉ်အစီအစဉ်",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/လ",
   "lifetimePlan": "တစ်ကြိမ်တည်း ဝယ်ယူမှု",
-  "lifetimePlanDescription": "တစ်ကြိမ်သာဝယ်ယူပြီး အမြဲတမ်းပရီမီယံ",
+  "lifetimePlanDescription": "တစ်ကြိမ်ဝယ်ယူရုံဖြင့် ပရီမီယံကို အမြဲသုံးနိုင်ပါတယ်",
   "lifetimePlanSpecialOffer": "တစ်သက်တည်း သုံးနိုင်သော အစီအစဥ်\nအချိန်ကန့်သတ် အထူးစျေးနှုန်း",
   "lifetimePlanStandardPrice": "ပုံမှန်စျေးနှုန်း",
   "youArePremiumMember": "သင်သည် ပရီမီယံအဖွဲ့ဝင်ဖြစ်ပါသည်",

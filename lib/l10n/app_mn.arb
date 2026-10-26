@@ -195,7 +195,7 @@
   "monthlyPlan": "Сарын төлөвлөгөө",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/сар",
   "lifetimePlan": "Нэг удаагийн худалдан авалт",
-  "lifetimePlanDescription": "Нэг удаагийн төлбөрөөр үүрд премиум",
+  "lifetimePlanDescription": "Нэг удаа худалдаж аваад премиум боломжуудыг үргэлж ашиглаарай",
   "lifetimePlanSpecialOffer": "Нэг удаагийн төлөвлөгөө\nХугацаатай тусгай үнэ",
   "lifetimePlanStandardPrice": "энгийн үнэ",
   "youArePremiumMember": "Та премиум гишүүн байна",

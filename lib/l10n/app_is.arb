@@ -195,7 +195,7 @@
   "monthlyPlan": "Mánaðaráskrift",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuð",
   "lifetimePlan": "Eingreiðslukaup",
-  "lifetimePlanDescription": "Premium fyrir alltaf með einu kaupi",
+  "lifetimePlanDescription": "Ein kaup, Premium til frambúðar",
   "lifetimePlanSpecialOffer": "Einskiptis áætlun\nTakmarkaður tími sérstakt verð",
   "lifetimePlanStandardPrice": "Venjulegt verð",
   "youArePremiumMember": "Þú ert premium-meðlimur",

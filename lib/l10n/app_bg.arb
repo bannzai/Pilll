@@ -195,7 +195,7 @@
   "monthlyPlan": "Месечен план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",
   "lifetimePlan": "Еднократна покупка",
-  "lifetimePlanDescription": "Еднократна покупка за постоянен премиум",
+  "lifetimePlanDescription": "Една покупка — премиум завинаги",
   "lifetimePlanSpecialOffer": "План за еднократна покупка\nСпециална цена за ограничено време",
   "lifetimePlanStandardPrice": "стандартна цена",
   "youArePremiumMember": "Вие сте\nпремиум член",

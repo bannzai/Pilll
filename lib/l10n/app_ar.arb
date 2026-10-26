@@ -195,7 +195,7 @@
   "monthlyPlan": "الخطة الشهرية",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/شهر",
   "lifetimePlan": "شراء لمرة واحدة",
-  "lifetimePlanDescription": "شراء مرة واحدة، بريميوم مدى الحياة",
+  "lifetimePlanDescription": "شراء واحد يمنحكِ بريميوم مدى الحياة",
   "lifetimePlanSpecialOffer": "خطة الشراء الدائمة\nسعر خاص لفترة محدودة",
   "lifetimePlanStandardPrice": "السعر العادي",
   "youArePremiumMember": "أنت عضو مميز",

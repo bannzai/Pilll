@@ -195,7 +195,7 @@
   "monthlyPlan": "Monthly plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/month",
   "lifetimePlan": "One-time purchase",
-  "lifetimePlanDescription": "Lifetime premium with one purchase",
+  "lifetimePlanDescription": "One purchase, Premium forever",
   "lifetimePlanSpecialOffer": "Lifetime Plan\nLimited-time Special Price",
   "lifetimePlanStandardPrice": "Regular Price",
   "youArePremiumMember": "You are a Premium Member",

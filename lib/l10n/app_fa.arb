@@ -195,7 +195,7 @@
   "monthlyPlan": "طرح ماهانه",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماه",
   "lifetimePlan": "خرید یک‌باره",
-  "lifetimePlanDescription": "یکبار خرید، پریمیوم مادام‌العمر",
+  "lifetimePlanDescription": "با یک بار خرید، پریمیوم برای همیشه",
   "lifetimePlanSpecialOffer": "طرح مادام‌العمر\nقیمت ویژه محدودالمدت",
   "lifetimePlanStandardPrice": "قیمت معمولی",
   "youArePremiumMember": "شما\nعضو پریمیوم هستید",

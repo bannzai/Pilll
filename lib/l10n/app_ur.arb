@@ -195,7 +195,7 @@
   "monthlyPlan": "ماہانہ پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماہ",
   "lifetimePlan": "ایک بار کی خریداری",
-  "lifetimePlanDescription": "ایک بار خریدیں، ہمیشہ کے لیے پریمیم",
+  "lifetimePlanDescription": "ایک بار خریدیں، پریمیم ہمیشہ کے لیے استعمال کریں",
   "lifetimePlanSpecialOffer": "ایک بار کی خریداری کا پلان\nمحدود وقت کی خصوصی قیمت",
   "lifetimePlanStandardPrice": "باقاعدہ قیمت",
   "youArePremiumMember": "آپ پریمیم ممبر ہیں",

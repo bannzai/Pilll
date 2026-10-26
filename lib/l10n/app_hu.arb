@@ -195,7 +195,7 @@
   "monthlyPlan": "Havi előfizetés",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hó",
   "lifetimePlan": "Egyszeri vásárlás",
-  "lifetimePlanDescription": "Egyszeri vásárlással örökre Prémium",
+  "lifetimePlanDescription": "Egyetlen vásárlás, prémium örökre",
   "lifetimePlanSpecialOffer": "Élethosszig tartó csomag\nKorlátozott idős akciós ár",
   "lifetimePlanStandardPrice": "Normál ár",
   "youArePremiumMember": "Te\nprémium tag vagy",

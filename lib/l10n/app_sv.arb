@@ -195,7 +195,7 @@
   "monthlyPlan": "Månadsabonnemang",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/månad",
   "lifetimePlan": "Engångsköp",
-  "lifetimePlanDescription": "Premium för alltid med ett köp",
+  "lifetimePlanDescription": "Ett köp, premium för alltid",
   "lifetimePlanSpecialOffer": "Livstidsplan\nTidsbegränsat specialpris",
   "lifetimePlanStandardPrice": "Ordinarie pris",
   "youArePremiumMember": "Du är premiummedlem",

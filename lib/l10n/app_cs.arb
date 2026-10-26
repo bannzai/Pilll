@@ -195,7 +195,7 @@
   "monthlyPlan": "Měsíční plán",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/měsíc",
   "lifetimePlan": "Jednorázový nákup",
-  "lifetimePlanDescription": "Jedním nákupem Premium navždy",
+  "lifetimePlanDescription": "Jednorázový nákup, Premium napořád",
   "lifetimePlanSpecialOffer": "Jednorázový plán\nČasově omezená speciální cena",
   "lifetimePlanStandardPrice": "Běžná cena",
   "youArePremiumMember": "Jste prémiový člen",

@@ -195,7 +195,7 @@
   "monthlyPlan": "Aylık plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",
   "lifetimePlan": "Tek seferlik satın alma",
-  "lifetimePlanDescription": "Tek satın alımla kalıcı premium",
+  "lifetimePlanDescription": "Bir kez satın alın, Premium'u ömür boyu kullanın",
   "lifetimePlanSpecialOffer": "Yaşam Boyu Plan\nSınırlı Süreli Özel Fiyat",
   "lifetimePlanStandardPrice": "Normal Fiyat",
   "youArePremiumMember": "Premium üyesiniz",

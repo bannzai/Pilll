@@ -195,7 +195,7 @@
   "monthlyPlan": "Kuuplaan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kuu",
   "lifetimePlan": "Ühekordne ost",
-  "lifetimePlanDescription": "Premium igaveseks ühe ostuga",
+  "lifetimePlanDescription": "Üks ost, premium alatiseks",
   "lifetimePlanSpecialOffer": "Eluaegne plaan\nPiiratud aja eripakkumine",
   "lifetimePlanStandardPrice": "Tavahind",
   "youArePremiumMember": "Sa oled premium liige",

@@ -195,7 +195,7 @@
   "monthlyPlan": "Айлық жоспар",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",
   "lifetimePlan": "Бір реттік сатып алу",
-  "lifetimePlanDescription": "Бір сатып алумен мәңгілік премиум",
+  "lifetimePlanDescription": "Бір рет сатып алыңыз, премиум мүмкіндіктерін әрдайым пайдаланыңыз",
   "lifetimePlanSpecialOffer": "Мәңгілік жоспар\nУақытша арнайы баға",
   "lifetimePlanStandardPrice": "Әдеттегі баға",
   "youArePremiumMember": "Сіз премиум мүшесіз",

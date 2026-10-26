@@ -195,7 +195,7 @@
   "monthlyPlan": "Månedsabonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/måned",
   "lifetimePlan": "Engangskjøp",
-  "lifetimePlanDescription": "Premium for alltid med ett kjøp",
+  "lifetimePlanDescription": "Ett kjøp, Premium for alltid",
   "lifetimePlanSpecialOffer": "Livstidsplan\nTidsbegrenset spesialpris",
   "lifetimePlanStandardPrice": "Vanlig pris",
   "youArePremiumMember": "Du er premium medlem",

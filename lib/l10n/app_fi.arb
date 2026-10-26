@@ -195,7 +195,7 @@
   "monthlyPlan": "Kuukausitilaus",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kk",
   "lifetimePlan": "Kertaostos",
-  "lifetimePlanDescription": "Premium ikuisesti yhdellä ostoksella",
+  "lifetimePlanDescription": "Yksi ostos, Premium pysyvästi",
   "lifetimePlanSpecialOffer": "Elinaikainen suunnitelma\nRajoitetun ajan erikoishinta",
   "lifetimePlanStandardPrice": "Normaali hinta",
   "youArePremiumMember": "Olet Premium-jäsen",

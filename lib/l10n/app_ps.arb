@@ -195,7 +195,7 @@
   "monthlyPlan": "میاشتنی پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/میاشت",
   "lifetimePlan": "یو ځل پېرود",
-  "lifetimePlanDescription": "د یوځل پیرود سره د تل لپاره پریمیم",
+  "lifetimePlanDescription": "یو ځل یې واخلئ، پریمیم د تل لپاره وکاروئ",
   "lifetimePlanSpecialOffer": "د ژوند پلان\nد محدود وخت ځانګړي بیه",
   "lifetimePlanStandardPrice": "عادي نرخ",
   "youArePremiumMember": "تاسو د پریمیم غړی یاست",

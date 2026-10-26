@@ -195,7 +195,7 @@
   "monthlyPlan": "תוכנית חודשית",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/חודש",
   "lifetimePlan": "רכישה חד־פעמית",
-  "lifetimePlanDescription": "פרמיום לכל החיים ברכישה אחת",
+  "lifetimePlanDescription": "רכישה אחת, פרימיום לתמיד",
   "lifetimePlanSpecialOffer": "תוכנית לכל החיים במחיר מיוחד לזמן מוגבל",
   "lifetimePlanStandardPrice": "מחיר רגיל",
   "youArePremiumMember": "אתה\nחבר פרמיום",

@@ -195,7 +195,7 @@
   "monthlyPlan": "Paket bulanan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/bulan",
   "lifetimePlan": "Pembelian sekali bayar",
-  "lifetimePlanDescription": "Premium selamanya, beli sekali",
+  "lifetimePlanDescription": "Sekali beli, premium selamanya",
   "lifetimePlanSpecialOffer": "Paket Sekali Beli\nHarga Spesial Terbatas Waktu",
   "lifetimePlanStandardPrice": "Harga normal",
   "youArePremiumMember": "Anda adalah member premium",
