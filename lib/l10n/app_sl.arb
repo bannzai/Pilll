@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "Vrsta s 24 tabletami",
   "restPeriod": "premor",
   "placebo": "placebo",
-  "userNotFound": "Uporabnik ni najden",
+  "userNotFound": "Uporabnika ni bilo mogoče najti",
   "userAlreadyExists": "Uporabnik že obstaja",
   "medicationHistory": "Zgodovina jemanja",
   "settings": "Nastavitve",

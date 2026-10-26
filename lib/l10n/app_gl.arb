@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "Tipo de 24 pílulas",
   "restPeriod": "descanso",
   "placebo": "placebo",
-  "userNotFound": "Usuario non encontrado",
+  "userNotFound": "Non se atopou o usuario",
   "userAlreadyExists": "Xa existe un usuario",
   "medicationHistory": "Historial de tomas",
   "settings": "Configuración",

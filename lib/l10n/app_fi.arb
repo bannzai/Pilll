@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "24 pillerin tyyppi",
   "restPeriod": "taukojakso",
   "placebo": "lumetabletit",
-  "userNotFound": "Käyttäjää ei löydy",
+  "userNotFound": "Käyttäjää ei löytynyt",
   "userAlreadyExists": "Käyttäjä on jo olemassa",
   "medicationHistory": "Ottamishistoria",
   "settings": "Asetukset",

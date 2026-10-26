@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "Тип са 24 пилуле",
   "restPeriod": "пауза",
   "placebo": "плацебо",
-  "userNotFound": "Korisnik nije pronađen",
+  "userNotFound": "Корисник није пронађен",
   "userAlreadyExists": "Korisnik već postoji",
   "medicationHistory": "Istorija uzimanja",
   "settings": "Подешавања",

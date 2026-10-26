@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "نوع 24 حبة",
   "restPeriod": "راحة",
   "placebo": "حبوب وهمية",
-  "userNotFound": "المستخدم غير موجود",
+  "userNotFound": "لم يتم العثور على المستخدم",
   "userAlreadyExists": "المستخدم موجود بالفعل",
   "medicationHistory": "سجل التناول",
   "settings": "الإعدادات",

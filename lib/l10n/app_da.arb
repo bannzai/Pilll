@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "Type med 24 p-piller",
   "restPeriod": "pillepause",
   "placebo": "placebo",
-  "userNotFound": "Bruger ikke fundet",
+  "userNotFound": "Brugeren blev ikke fundet",
   "userAlreadyExists": "Der findes allerede en bruger",
   "medicationHistory": "Indtagelseshistorik",
   "settings": "Indstillinger",

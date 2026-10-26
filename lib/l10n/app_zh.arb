@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "24片装",
   "restPeriod": "停药",
   "placebo": "安慰剂",
-  "userNotFound": "用户未找到",
+  "userNotFound": "未找到用户",
   "userAlreadyExists": "用户已存在",
   "medicationHistory": "服用记录",
   "settings": "设置",

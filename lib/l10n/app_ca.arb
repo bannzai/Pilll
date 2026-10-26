@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "Tipus de 24 píndoles",
   "restPeriod": "descans",
   "placebo": "placebo",
-  "userNotFound": "Usuari no trobat",
+  "userNotFound": "No s'ha trobat l'usuari",
   "userAlreadyExists": "Ja existeix un usuari",
   "medicationHistory": "Historial de preses",
   "settings": "Configuració",

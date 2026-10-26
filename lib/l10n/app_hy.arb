@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "24 հաբով տեսակ",
   "restPeriod": "դադար",
   "placebo": "պլացեբո",
-  "userNotFound": "Օգտատերը գտնված չէ",
+  "userNotFound": "Օգտատերը չի գտնվել",
   "userAlreadyExists": "Օգտատերն արդեն գոյություն ունի",
   "medicationHistory": "Ընդունման պատմություն",
   "settings": "կարգավորումներ",

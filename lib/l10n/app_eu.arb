@@ -9,7 +9,7 @@
   "pillSheetType24WithRest4": "24 pilulako mota",
   "restPeriod": "atsedenaldi",
   "placebo": "plazebo",
-  "userNotFound": "Erabiltzailea ez da aurkitu",
+  "userNotFound": "Ez da erabiltzailea aurkitu",
   "userAlreadyExists": "Erabiltzailea jadanik existitzen da",
   "medicationHistory": "Hartze-historia",
   "settings": "Ezarpenak",
