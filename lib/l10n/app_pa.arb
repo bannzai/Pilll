@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ਅਚਾਨਕ ਕੋਈ ਗੜਬੜ ਹੋ ਗਈ ਹੈ",
   "pressAndHoldNotificationToRecordPillTaking": "ਸੂਚਨਾ ਨੂੰ ਦਬਾ ਕੇ ਰੱਖਣ ਨਾਲ ਤੁਸੀਂ ਸੇਵਨ ਰਿਕਾਰਡ ਬਣਾ ਸਕਦੇ ਹੋ",
   "letsTryIt": "ਤੁਸੀਂ ਵੀ ਇੱਕ ਵਾਰ ਵਰਤ ਕੇ ਦੇਖੋ",
-  "trialDeadlineDateOffsetDay": "{number} ਦਿਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਉਪਲਬਧ ਹਨ!",
+  "trialDeadlineDateOffsetDay": "ਤੁਸੀਂ {number} ਦਿਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸਹੂਲਤਾਂ ਵਰਤ ਸਕਦੇ ਹੋ!",
   "inputAndAdd": "ਦਰਜ ਕਰਕੇ ਸ਼ਾਮਲ ਕਰੋ",
   "averagePeriod": "ਔਸਤ ਚੱਕਰ",
   "averageDays": "ਔਸਤ ਦਿਨ",

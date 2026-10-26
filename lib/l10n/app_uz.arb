@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Kutilmagan xatolik yuz berdi",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirishnomani bosib turib, tabletka qabul qilish qaydini yaratishingiz mumkin",
   "letsTryIt": "Siz ham sinab koʻring",
-  "trialDeadlineDateOffsetDay": "{number} kun davomida barcha funksiyalardan foydalanishingiz mumkin!",
+  "trialDeadlineDateOffsetDay": "Barcha imkoniyatlardan {number} kun davomida foydalanishingiz mumkin!",
   "inputAndAdd": "Kiritib qo'shish",
   "averagePeriod": "O'rtacha sikl",
   "averageDays": "O'rtacha kunlar",

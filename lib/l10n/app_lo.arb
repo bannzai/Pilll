@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ",
   "pressAndHoldNotificationToRecordPillTaking": "ກົດການແຈ້ງເຕືອນຄ້າງໄວ້ ເພື່ອສ້າງບັນທຶກການກິນຢາ",
   "letsTryIt": "ລອງໃຊ້ເບິ່ງເດີ",
-  "trialDeadlineDateOffsetDay": "ໃຊ້ຄຸນສົມບັດທັງໝົດໄດ້ເປັນເວລາ {number} ມື້！",
+  "trialDeadlineDateOffsetDay": "ທ່ານສາມາດໃຊ້ທຸກຟັງຊັນໄດ້ເປັນເວລາ {number} ມື້!",
   "inputAndAdd": "ປ້ອນແລະເພີ່ມ",
   "averagePeriod": "ຮອບສະເລ່ຍ",
   "averageDays": "ຈຳນວນວັນສະເລ່ຍ",

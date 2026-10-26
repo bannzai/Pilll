@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ಅನಿರೀಕ್ಷಿತ ದೋಷ ಸಂಭವಿಸಿದೆ",
   "pressAndHoldNotificationToRecordPillTaking": "ಅಧಿಸೂಚನೆಯನ್ನು ಒತ್ತಿ ಹಿಡಿದು ಸೇವನೆಯ ದಾಖಲೆ ರಚಿಸಬಹುದು",
   "letsTryIt": "ನೀವೂ ಒಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ ನೋಡಿ",
-  "trialDeadlineDateOffsetDay": "{number}ದಿನಗಳವರೆಗೆ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳು ಬಳಸಬಹುದು!",
+  "trialDeadlineDateOffsetDay": "ನೀವು {number} ದಿನಗಳವರೆಗೆ ಎಲ್ಲ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನೂ ಬಳಸಬಹುದು!",
   "inputAndAdd": "ನಮೂದಿಸಿ ಮತ್ತು ಸೇರಿಸಿ",
   "averagePeriod": "ಸರಾಸರಿ ಚಕ್ರ",
   "averageDays": "ಸರಾಸರಿ ದಿನಗಳು",

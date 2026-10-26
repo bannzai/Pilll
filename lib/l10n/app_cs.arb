@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Došlo k neočekávané chybě",
   "pressAndHoldNotificationToRecordPillTaking": "Podržením oznámení můžete vytvořit záznam užití",
   "letsTryIt": "Vyzkoušejte to",
-  "trialDeadlineDateOffsetDay": "Celých {number} dní můžete používat všechny funkce!",
+  "trialDeadlineDateOffsetDay": "Všechny funkce můžete využívat po dobu {number} dní!",
   "inputAndAdd": "Zadat a přidat",
   "averagePeriod": "Průměrný cyklus",
   "averageDays": "Průměr dnů",

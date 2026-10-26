@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "অপ্রত্যাশিত একটি সমস্যা হয়েছে",
   "pressAndHoldNotificationToRecordPillTaking": "বিজ্ঞপ্তিটি চেপে ধরে আপনি সেবনের রেকর্ড তৈরি করতে পারেন",
   "letsTryIt": "আপনিও একবার ব্যবহার করে দেখুন",
-  "trialDeadlineDateOffsetDay": "{number} দিনের জন্য সমস্ত ফিচার ব্যবহার করতে পারবেন!",
+  "trialDeadlineDateOffsetDay": "আপনি {number} দিন সব ফিচার ব্যবহার করতে পারবেন!",
   "inputAndAdd": "লিখে যোগ করুন",
   "averagePeriod": "গড় চক্র",
   "averageDays": "গড় দিন সংখ্যা",

@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "May naganap na hindi inaasahang error",
   "pressAndHoldNotificationToRecordPillTaking": "Pindutin nang matagal ang abiso para gumawa ng tala ng pag-inom",
   "letsTryIt": "Subukan din po ninyo",
-  "trialDeadlineDateOffsetDay": "Magagamit mo ang lahat ng features sa loob ng {number} araw!",
+  "trialDeadlineDateOffsetDay": "Magagamit ninyo ang lahat ng feature sa loob ng {number} araw!",
   "inputAndAdd": "Maglagay at Idagdag",
   "averagePeriod": "Karaniwang Siklo",
   "averageDays": "Karaniwang araw",

@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "یوه ناڅاپي تېروتنه رامنځته شوه",
   "pressAndHoldNotificationToRecordPillTaking": "خبرتیا اوږده کېکاږئ، څو د ګولۍ اخیستلو ریکارډ جوړ کړئ",
   "letsTryIt": "تاسو یې هم وازمویئ",
-  "trialDeadlineDateOffsetDay": "د {number} ورځو لپاره ټول امکانات وړیا دی!",
+  "trialDeadlineDateOffsetDay": "تاسو کولی شئ د {number} ورځو لپاره ټولې ځانګړنې وکاروئ!",
   "inputAndAdd": "ورکول او اضافه کول",
   "averagePeriod": "اوسط دوره",
   "averageDays": "اوسط ورځې",

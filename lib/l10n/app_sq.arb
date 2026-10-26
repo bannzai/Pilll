@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Ndodhi një gabim i papritur",
   "pressAndHoldNotificationToRecordPillTaking": "Mbajeni shtypur njoftimin për të krijuar regjistrimi i marrjes së pilulës",
   "letsTryIt": "Provojeni edhe ju",
-  "trialDeadlineDateOffsetDay": "Të gjitha funksionet janë të disponueshme për {number} ditë!",
+  "trialDeadlineDateOffsetDay": "Mund t’i përdorni të gjitha veçoritë për {number} ditë!",
   "inputAndAdd": "Fut dhe shto",
   "averagePeriod": "Ciklë mesatare",
   "averageDays": "Ditë mesatare",

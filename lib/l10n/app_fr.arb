@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Une erreur inattendue s'est produite",
   "pressAndHoldNotificationToRecordPillTaking": "Maintenez la notification appuyée pour créer une entrée dans le journal des prises",
   "letsTryIt": "N'hésitez pas à essayer",
-  "trialDeadlineDateOffsetDay": "Toutes les fonctionnalités disponibles pour les jours {number} !",
+  "trialDeadlineDateOffsetDay": "Profitez de toutes les fonctionnalités pendant {number} jours !",
   "inputAndAdd": "Ajouter une entrée",
   "averagePeriod": "Cycle moyen",
   "averageDays": "Jours moyens",

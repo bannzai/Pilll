@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "অপ্ৰত্যাশিত এটা সমস্যা হৈছে",
   "pressAndHoldNotificationToRecordPillTaking": "জাননীখন টিপি ধৰি আপুনি ঔষধ সেৱনৰ ৰেকৰ্ড সৃষ্টি কৰিব পাৰে",
   "letsTryIt": "আপুনিও এবাৰ চেষ্টা কৰি চাওক",
-  "trialDeadlineDateOffsetDay": "{number} দিনৰ বাবে সকলো বৈশিষ্ট্য ব্যৱহাৰ কৰিব পাৰিব!",
+  "trialDeadlineDateOffsetDay": "আপুনি {number} দিনৰ বাবে সকলো সুবিধা ব্যৱহাৰ কৰিব পাৰিব!",
   "inputAndAdd": "লিখি যোগ কৰক",
   "averagePeriod": "গড় চক্ৰ",
   "averageDays": "গড় দিন",

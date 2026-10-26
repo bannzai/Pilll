@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Gözlənilməz xəta baş verdi",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirişi basılı saxlayaraq həb qəbulu qeydini yarada bilərsiniz",
   "letsTryIt": "Siz də sınayın",
-  "trialDeadlineDateOffsetDay": "{number} gün ərzində bütün funksiyalar sizindir!",
+  "trialDeadlineDateOffsetDay": "Bütün funksiyalardan {number} gün istifadə edə bilərsiniz!",
   "inputAndAdd": "Daxil et və əlavə et",
   "averagePeriod": "Orta dövr",
   "averageDays": "Orta gün sayı",

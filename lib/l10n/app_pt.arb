@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Ocorreu um erro inesperado",
   "pressAndHoldNotificationToRecordPillTaking": "Toque e segure a notificação para criar um registro de uso da pílula",
   "letsTryIt": "Que tal experimentar?",
-  "trialDeadlineDateOffsetDay": "Todas as funcionalidades disponíveis por {number} dias!",
+  "trialDeadlineDateOffsetDay": "Você pode aproveitar todos os recursos por {number} dias!",
   "inputAndAdd": "Digite e adicione",
   "averagePeriod": "Ciclo Médio",
   "averageDays": "Dias médios",

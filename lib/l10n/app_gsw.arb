@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Es isch en unerwartete Fähler passiert",
   "pressAndHoldNotificationToRecordPillTaking": "Drück lang uf d Meldig, zum e Iinahm-Ufzeichnig z mache",
   "letsTryIt": "Probier's doch mal uus",
-  "trialDeadlineDateOffsetDay": "{number} Täg lang chönd Sie alli Funktione nutze!",
+  "trialDeadlineDateOffsetDay": "Du chasch alli Funktione {number} Täg lang bruuche!",
   "inputAndAdd": "Manuell hinzuefüege",
   "averagePeriod": "Durchschnittszyklus",
   "averageDays": "Durchschnitt Täg",

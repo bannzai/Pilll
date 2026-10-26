@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Tapahtui odottamaton virhe",
   "pressAndHoldNotificationToRecordPillTaking": "Luo pilleriloki painamalla ilmoitusta pitkään",
   "letsTryIt": "Kokeile ihmeessä",
-  "trialDeadlineDateOffsetDay": "Kaikki ominaisuudet käytettävissäsi {number} päivää!",
+  "trialDeadlineDateOffsetDay": "Voit käyttää kaikkia ominaisuuksia {number} päivän ajan!",
   "inputAndAdd": "Syötä ja lisää",
   "averagePeriod": "Keskimääräinen sykli",
   "averageDays": "keskimääräiset päivät",

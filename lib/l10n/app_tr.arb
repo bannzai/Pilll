@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Beklenmeyen bir hata oluştu",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirime basılı tutarak hap kullanım kaydı oluşturabilirsiniz",
   "letsTryIt": "Siz de deneyin",
-  "trialDeadlineDateOffsetDay": "{number} gün boyunca tüm özellikleri kullanabilirsiniz!",
+  "trialDeadlineDateOffsetDay": "Tüm özellikleri {number} gün boyunca kullanabilirsiniz!",
   "inputAndAdd": "Gir ve ekle",
   "averagePeriod": "Ortalama Döngü",
   "averageDays": "Ortalama Gün",

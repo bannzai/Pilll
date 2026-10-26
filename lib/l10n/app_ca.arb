@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "S'ha produït un error inesperat",
   "pressAndHoldNotificationToRecordPillTaking": "Mantén premuda la notificació per crear un registre de preses",
   "letsTryIt": "Anima't a provar-ho",
-  "trialDeadlineDateOffsetDay": "Podeu utilitzar totes les funcions durant {number} dies!",
+  "trialDeadlineDateOffsetDay": "Pots fer servir totes les funcions durant {number} dies!",
   "inputAndAdd": "Afegeix introduint",
   "averagePeriod": "Cicle mitjà",
   "averageDays": "Mitjana de dies",

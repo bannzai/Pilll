@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ያልተጠበቀ ስህተት ተከስቷል",
   "pressAndHoldNotificationToRecordPillTaking": "ማሳወቂያውን ተጭነው በመያዝ አወሳሰድ መዝገብ መፍጠር ይችላሉ",
   "letsTryIt": "እባክዎ ይሞክሩት",
-  "trialDeadlineDateOffsetDay": "ለ{number} ቀናት ሁሉንም ተግባራት መጠቀም ይችላሉ!",
+  "trialDeadlineDateOffsetDay": "ሁሉንም ባህሪያት ለ{number} ቀናት መጠቀም ይችላሉ!",
   "inputAndAdd": "አስገብና ጨምር",
   "averagePeriod": "አማካይ ዑደት",
   "averageDays": "አማካይ ቀናት",

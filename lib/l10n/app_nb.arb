@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Det oppstod en uventet feil",
   "pressAndHoldNotificationToRecordPillTaking": "Trykk og hold på varselet for å opprette en pillelogg",
   "letsTryIt": "Prøv det gjerne",
-  "trialDeadlineDateOffsetDay": "Alle funksjonene er tilgjengelige i {number} dager!",
+  "trialDeadlineDateOffsetDay": "Du kan bruke alle funksjonene i {number} dager!",
   "inputAndAdd": "Skriv inn og legg til",
   "averagePeriod": "Gjennomsnittlig syklus",
   "averageDays": "Gjennomsnittsdager",

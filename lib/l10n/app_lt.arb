@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Įvyko netikėta klaida",
   "pressAndHoldNotificationToRecordPillTaking": "Palaikykite nuspaudę pranešimą, kad sukurtumėte vartojimo įrašą",
   "letsTryIt": "Išbandykite ir jūs",
-  "trialDeadlineDateOffsetDay": "{number} dienų galite naudoti visas funkcijas!",
+  "trialDeadlineDateOffsetDay": "Visomis funkcijomis galite naudotis {number} dienų!",
   "inputAndAdd": "Įvesti ir pridėti",
   "averagePeriod": "Vidutinis ciklas",
   "averageDays": "Vidutinis dienų skaičius",

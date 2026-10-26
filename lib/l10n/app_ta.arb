@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "எதிர்பாராத பிழை ஏற்பட்டுள்ளது",
   "pressAndHoldNotificationToRecordPillTaking": "அறிவிப்பை அழுத்திப் பிடித்து மாத்திரை உட்கொண்ட பதிவை உருவாக்கலாம்",
   "letsTryIt": "நீங்களும் முயற்சி செய்து பாருங்கள்",
-  "trialDeadlineDateOffsetDay": "{number} நாட்களுக்கு அனைத்து அம்சங்களும் பயன்படுத்தலாம்!",
+  "trialDeadlineDateOffsetDay": "{number} நாட்களுக்கு எல்லா அம்சங்களையும் பயன்படுத்தலாம்!",
   "inputAndAdd": "உள்ளீடு செய்து சேர்க்கவும்",
   "averagePeriod": "சராசரி சுழற்சி",
   "averageDays": "சராசரி நாட்கள்",

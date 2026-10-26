@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "અણધારી ભૂલ આવી છે",
   "pressAndHoldNotificationToRecordPillTaking": "સૂચનાને દબાવી રાખીને તમે ગોળી સેવનની નોંધ કરી શકો છો",
   "letsTryIt": "તમે પણ અજમાવી જુઓ",
-  "trialDeadlineDateOffsetDay": "{number} દિવસ માટે તમામ ફીચર્સ ઉપયોગ કરી શકાય છે!",
+  "trialDeadlineDateOffsetDay": "તમે {number} દિવસ સુધી બધી સુવિધાઓ વાપરી શકશો!",
   "inputAndAdd": "દાખલ કરી ઉમેરો",
   "averagePeriod": "સરેરાશ ચક્ર",
   "averageDays": "સરેરાશ દિવસો",

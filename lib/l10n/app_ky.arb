@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Күтүлбөгөн ката кетти",
   "pressAndHoldNotificationToRecordPillTaking": "Билдирүүнү басып туруп, таблетка ичүү жазуусун түзө аласыз",
   "letsTryIt": "Сиз да сынап көрүңүз",
-  "trialDeadlineDateOffsetDay": "{number} күн бойу бардык мүмкүнчүлүктөрдү колдонуңуз!",
+  "trialDeadlineDateOffsetDay": "Бардык мүмкүнчүлүктөрдү {number} күн колдоно аласыз!",
   "inputAndAdd": "Киргизип кошуу",
   "averagePeriod": "Орточо циклы",
   "averageDays": "орточо күндөр саны",

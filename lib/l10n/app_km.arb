@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "មានបញ្ហាដែលមិនបានរំពឹងទុកកើតឡើង",
   "pressAndHoldNotificationToRecordPillTaking": "ចុចជាប់លើការជូនដំណឹង ដើម្បីបង្កើតកំណត់ត្រាការលេបថ្នាំ",
   "letsTryIt": "សូមសាកល្បងមើល",
-  "trialDeadlineDateOffsetDay": "អ្នកអាចប្រើប្រាស់គ្រប់មុខងារទាំងអស់រយៈពេល {number} ថ្ងៃ！",
+  "trialDeadlineDateOffsetDay": "អ្នកអាចប្រើមុខងារទាំងអស់បានរយៈពេល {number} ថ្ងៃ!",
   "inputAndAdd": "បញ្ចូលនិងបន្ថែម",
   "averagePeriod": "វដ្តរំលាស់មធ្យម",
   "averageDays": "មធ្យមចំនួនថ្ងៃ",

@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ایک غیر متوقع خرابی پیش آ گئی",
   "pressAndHoldNotificationToRecordPillTaking": "اطلاع کو دیر تک دبائیں تاکہ گولی لینے کا ریکارڈ بنایا جا سکے",
   "letsTryIt": "آپ بھی آزما کر دیکھیں",
-  "trialDeadlineDateOffsetDay": "{number} دن تک تمام فیچرز استعمال کر سکتے ہیں!",
+  "trialDeadlineDateOffsetDay": "آپ {number} دن تک تمام خصوصیات استعمال کر سکتی ہیں!",
   "inputAndAdd": "داخل کر کے شامل کریں",
   "averagePeriod": "اوسط دورانیہ",
   "averageDays": "اوسط دن",

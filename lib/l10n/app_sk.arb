@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Vyskytla sa neočakávaná chyba",
   "pressAndHoldNotificationToRecordPillTaking": "Podržaním oznámenia môžete vytvoriť záznam o užití tabletky",
   "letsTryIt": "Vyskúšajte to",
-  "trialDeadlineDateOffsetDay": "{number} dní máte prístup ku všetkým funkciám!",
+  "trialDeadlineDateOffsetDay": "Všetky funkcie môžete využívať {number} dní!",
   "inputAndAdd": "Pridať zadaním",
   "averagePeriod": "Priemerný cyklus",
   "averageDays": "Priemerný počet dní",

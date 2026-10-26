@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Óvænt villa kom upp",
   "pressAndHoldNotificationToRecordPillTaking": "Haltu tilkynningunni inni til að búa til inntökuskrá",
   "letsTryIt": "Endilega prófaðu",
-  "trialDeadlineDateOffsetDay": "Þú hefur aðgang að öllum eiginleikum í {number} daga!",
+  "trialDeadlineDateOffsetDay": "Þú getur notað alla eiginleika í {number} daga!",
   "inputAndAdd": "Bæta við",
   "averagePeriod": "Meðal hringrás",
   "averageDays": "Meðaldagar",

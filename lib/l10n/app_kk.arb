@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Күтпеген қате орын алды",
   "pressAndHoldNotificationToRecordPillTaking": "Хабарландыруды басып тұрып, қабылдау жазбасын жасай аласыз",
   "letsTryIt": "Сіз де байқап көріңіз",
-  "trialDeadlineDateOffsetDay": "{number} күн бойы барлық функцияларды пайдалана аласыз!",
+  "trialDeadlineDateOffsetDay": "Барлық мүмкіндікті {number} күн бойы пайдалана аласыз!",
   "inputAndAdd": "енгізіп қосу",
   "averagePeriod": "орташа циклі",
   "averageDays": "Орташа күн саны",

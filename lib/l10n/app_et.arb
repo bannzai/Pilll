@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Tekkis ootamatu viga",
   "pressAndHoldNotificationToRecordPillTaking": "Hoia teadet all, et luua võtmiskirje",
   "letsTryIt": "Proovi järele",
-  "trialDeadlineDateOffsetDay": "{number} päeva jooksul saate kasutada kõiki funktsioone!",
+  "trialDeadlineDateOffsetDay": "Saad kõiki funktsioone kasutada {number} päeva!",
   "inputAndAdd": "Lisa sisestades",
   "averagePeriod": "keskmine tsükkel",
   "averageDays": "keskmine päevi",

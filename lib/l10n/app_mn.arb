@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Санаандгүй алдаа гарлаа",
   "pressAndHoldNotificationToRecordPillTaking": "Мэдэгдлийг удаан дарж, эм уусан бүртгэл үүсгэж болно",
   "letsTryIt": "Та ч бас туршаад үзээрэй",
-  "trialDeadlineDateOffsetDay": "{number} өдрийн турш бүх боломжийг ашиглаарай!",
+  "trialDeadlineDateOffsetDay": "Та бүх боломжийг {number} өдөр ашиглах боломжтой!",
   "inputAndAdd": "Оруулж нэмэх",
   "averagePeriod": "Дундаж мөчлөг",
   "averageDays": "дундаж хоног",

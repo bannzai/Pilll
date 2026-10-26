@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Παρουσιάστηκε ένα απρόσμενο σφάλμα",
   "pressAndHoldNotificationToRecordPillTaking": "Πατήστε παρατεταμένα την ειδοποίηση για να δημιουργήσετε καταγραφή λήψης",
   "letsTryIt": "Δοκιμάστε το κι εσείς",
-  "trialDeadlineDateOffsetDay": "Όλες οι λειτουργίες διαθέσιμες για {number} ημέρες!",
+  "trialDeadlineDateOffsetDay": "Μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες για {number} ημέρες!",
   "inputAndAdd": "Εισάγετε και προσθέστε",
   "averagePeriod": "Μέσος κύκλος",
   "averageDays": "Μέσες ημέρες",

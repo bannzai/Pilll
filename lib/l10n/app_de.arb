@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Ein unerwarteter Fehler ist aufgetreten",
   "pressAndHoldNotificationToRecordPillTaking": "Halte die Benachrichtigung gedrückt, um ein Einnahmeprotokoll zu erstellen",
   "letsTryIt": "Probier es gern aus",
-  "trialDeadlineDateOffsetDay": "Sie können {number} Tage lang alle Funktionen nutzen!",
+  "trialDeadlineDateOffsetDay": "Du kannst {number} Tage lang alle Funktionen nutzen!",
   "inputAndAdd": "Eingeben und hinzufügen",
   "averagePeriod": "Durchschnittszyklus",
   "averageDays": "Durchschnittliche Tage",

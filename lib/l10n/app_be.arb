@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Узнікла нечаканая памылка",
   "pressAndHoldNotificationToRecordPillTaking": "Калі націснуць і ўтрымліваць апавяшчэнне, можна стварыць запіс прыёму пігулак",
   "letsTryIt": "Паспрабуйце",
-  "trialDeadlineDateOffsetDay": "{number} дзён усе функцыі даступныя!",
+  "trialDeadlineDateOffsetDay": "Вы можаце карыстацца ўсімі функцыямі на працягу {number} дзён!",
   "inputAndAdd": "Увесці і дадаць",
   "averagePeriod": "Сярэдні цыкл",
   "averageDays": "Сярэдняя колькасць дзён",

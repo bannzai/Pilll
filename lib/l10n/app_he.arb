@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "אירעה שגיאה בלתי צפויה",
   "pressAndHoldNotificationToRecordPillTaking": "לחיצה ממושכת על ההתראה מאפשרת ליצור רישום נטילה",
   "letsTryIt": "כדאי לנסות",
-  "trialDeadlineDateOffsetDay": "במשך {number} ימים תוכל להשתמש בכל התכונות!",
+  "trialDeadlineDateOffsetDay": "אפשר ליהנות מכל התכונות למשך {number} ימים!",
   "inputAndAdd": "הכנס והוסף",
   "averagePeriod": "מחזור ממוצע",
   "averageDays": "ממוצע ימים",

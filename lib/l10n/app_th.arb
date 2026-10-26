@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิดค่ะ",
   "pressAndHoldNotificationToRecordPillTaking": "กดการแจ้งเตือนค้างไว้เพื่อสร้างบันทึกการทานยาได้ค่ะ",
   "letsTryIt": "ลองใช้ดูนะคะ",
-  "trialDeadlineDateOffsetDay": "สามารถใช้ฟีเจอร์ครบทุกอย่างได้เป็นเวลา {number} วัน!",
+  "trialDeadlineDateOffsetDay": "ใช้ทุกฟีเจอร์ได้เต็มที่ตลอด {number} วันค่ะ!",
   "inputAndAdd": "ป้อนและเพิ่ม",
   "averagePeriod": "รอบเฉลี่ย",
   "averageDays": "เฉลี่ยจำนวนวัน",

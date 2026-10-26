@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "ଅପ୍ରତ୍ୟାଶିତ ତ୍ରୁଟି ଘଟିଛି",
   "pressAndHoldNotificationToRecordPillTaking": "ବିଜ୍ଞପ୍ତିକୁ ଚାପି ଧରି ଆପଣ ସେବନ ରେକର୍ଡ ତିଆରି କରିପାରିବେ",
   "letsTryIt": "ଆପଣ ମଧ୍ୟ ଥରେ ବ୍ୟବହାର କରି ଦେଖନ୍ତୁ",
-  "trialDeadlineDateOffsetDay": "{number} ଦିନ ପାଇଁ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ବ୍ୟବହାର କରିପାରିବେ!",
+  "trialDeadlineDateOffsetDay": "ଆପଣ {number} ଦିନ ପର୍ଯ୍ୟନ୍ତ ସମସ୍ତ ସୁବିଧା ବ୍ୟବହାର କରିପାରିବେ!",
   "inputAndAdd": "ଲେଖି ଯୋଗ କରନ୍ତୁ",
   "averagePeriod": "ସାରାସରି ଚକ୍ର",
   "averageDays": "ହାରାହାରି ଦିନ",

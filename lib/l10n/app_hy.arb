@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Անսպասելի սխալ է տեղի ունեցել",
   "pressAndHoldNotificationToRecordPillTaking": "Սեղմած պահեք ծանուցումը՝ ընդունման գրառում ստեղծելու համար",
   "letsTryIt": "Փորձեք նաև Դուք",
-  "trialDeadlineDateOffsetDay": "{number} օր բոլոր ֆունկցիաները հասանելի են:",
+  "trialDeadlineDateOffsetDay": "Դուք կարող եք օգտվել բոլոր հնարավորություններից {number} օր!",
   "inputAndAdd": "Մուտքագրել և ավելացնել",
   "averagePeriod": "Միջին ցիկլ",
   "averageDays": "միջին օրեր",

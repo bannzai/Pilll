@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Er is een onverwachte fout opgetreden",
   "pressAndHoldNotificationToRecordPillTaking": "Houd de melding ingedrukt om een innameregistratie te maken",
   "letsTryIt": "Probeer het gerust eens",
-  "trialDeadlineDateOffsetDay": "{number} dagen kun je alle functies gebruiken!",
+  "trialDeadlineDateOffsetDay": "Je kunt {number} dagen lang alle functies gebruiken!",
   "inputAndAdd": "Handmatig toevoegen",
   "averagePeriod": "Gemiddelde cyclus",
   "averageDays": "gemiddelde dagen",

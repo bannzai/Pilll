@@ -358,7 +358,7 @@
   "unexpectedErrorOccurred": "Се појави неочекувана грешка",
   "pressAndHoldNotificationToRecordPillTaking": "Притиснете и задржете го известувањето за да создадете Запис за земање",
   "letsTryIt": "Можете и Вие да пробате",
-  "trialDeadlineDateOffsetDay": "{number} дена сите функции се достапни!",
+  "trialDeadlineDateOffsetDay": "Можете да ги користите сите функции {number} дена!",
   "inputAndAdd": "Внеси и додај",
   "averagePeriod": "просечен циклус",
   "averageDays": "Просечен број на денови",
