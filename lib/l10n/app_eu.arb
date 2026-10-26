@@ -484,7 +484,7 @@
   "futureScheduleFeatureAppealShortDescription": "Antolatu datozen planak, hala nola medikuaren hitzorduak",
   "futureScheduleFeatureAppealHeadline": "Idatzi etorkizuneko planak egutegian",
   "futureScheduleFeatureAppealBody": "Etorkizuneko planak, hala nola medikuaren hitzorduak eta bidaiak, egutegian idatz ditzakezu. Pilula hartzeko zikloarekin batera ikus ditzakezu, hilekoaren aurreikusitako data ere kontuan hartuta planifikatzeko.",
-  "healthCareIntegrationFeatureAppealTitle": "Osasunarekin sinkronizatu",
+  "healthCareIntegrationFeatureAppealTitle": "Osasunarekin konektatu",
   "healthCareIntegrationFeatureAppealShortDescription": "Hilekoko erregistroak Osasunarekin partekatu",
   "healthCareIntegrationFeatureAppealHeadline": "Osasun aplikazioarekin integratu daiteke",
   "healthCareIntegrationFeatureAppealBody": "Pilll-en erregistratutako hileko-datuak automatikoki sinkroniza daitezke Osasun aplikazioarekin. Osasuneko beste datu batzuekin batera ikusi ahal izango dituzu, eta beste aplikazioetan ere hileko-datuak erabil ditzakezu.",

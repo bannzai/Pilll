@@ -484,7 +484,7 @@
   "futureScheduleFeatureAppealShortDescription": "ഡോക്ടറെ കാണാനുള്ള സമയം പോലുള്ള വരാനിരിക്കുന്ന പദ്ധതികൾ ക്രമീകരിക്കൂ",
   "futureScheduleFeatureAppealHeadline": "വരാനിരിക്കുന്ന പദ്ധതികൾ കലണ്ടറിൽ രേഖപ്പെടുത്തൂ",
   "futureScheduleFeatureAppealBody": "ഡോക്ടറെ കാണുന്നതും യാത്ര ചെയ്യുന്നതും പോലുള്ള വരാനിരിക്കുന്ന പദ്ധതികൾ കലണ്ടറിൽ കുറിച്ചിടാം. ഗുളിക കഴിക്കുന്ന ക്രമത്തിനൊപ്പം അവ കാണാനാകുന്നതിനാൽ, പ്രതീക്ഷിക്കുന്ന ആർത്തവ തീയതിയും കണക്കിലെടുത്ത് പദ്ധതിയിടാം.",
-  "healthCareIntegrationFeatureAppealTitle": "ഹെൽത്ത്കെയറുമായി സമന്വയിപ്പിക്കുക",
+  "healthCareIntegrationFeatureAppealTitle": "ആരോഗ്യ ആപ്പുമായി ബന്ധിപ്പിക്കുക",
   "healthCareIntegrationFeatureAppealShortDescription": "ആർത്തവ രേഖകൾ ഹെൽത്ത്‌കെയറുമായി പങ്കിടുക",
   "healthCareIntegrationFeatureAppealHeadline": "ഹെൽത്ത്‌കെയറുമായി സംയോജിക്കാം",
   "healthCareIntegrationFeatureAppealBody": "Pilll-ൽ രേഖപ്പെടുത്തിയ ആർത്തവ ഡേറ്റ ഹെൽത്ത്‌കെയർ ആപ്പുമായി സ്വയമേവ സമന്വയിപ്പിക്കാൻ കഴിയും. ഹെൽത്ത്‌കെയറിലെ മറ്റ് ആരോഗ്യ ഡേറ്റകളോടൊപ്പം ഇത് പരിശോധിക്കാനും, മറ്റ് ആപ്പുകളിലും ആർത്തവ ഡേറ്റ ഉപയോഗിക്കാനും സാധിക്കും.",

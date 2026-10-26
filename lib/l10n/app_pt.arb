@@ -484,7 +484,7 @@
   "futureScheduleFeatureAppealShortDescription": "Organize seus próximos compromissos, como consultas médicas",
   "futureScheduleFeatureAppealHeadline": "Anote seus próximos planos no calendário",
   "futureScheduleFeatureAppealBody": "Você pode anotar no calendário os planos futuros, como consultas médicas e viagens. Veja esses planos junto com o ciclo de uso da pílula para considerar também a data prevista da menstruação ao se planejar.",
-  "healthCareIntegrationFeatureAppealTitle": "Integrar com Saúde",
+  "healthCareIntegrationFeatureAppealTitle": "Conectar ao app Saúde",
   "healthCareIntegrationFeatureAppealShortDescription": "Compartilhar registro menstrual com o HealthCare",
   "healthCareIntegrationFeatureAppealHeadline": "Integra com o HealthKit",
   "healthCareIntegrationFeatureAppealBody": "Os dados menstruais registrados no Pilll podem ser sincronizados automaticamente com o app de Saúde. Você pode consultá-los junto com outros dados de saúde no app de Saúde ou utilizá-los em outros aplicativos.",

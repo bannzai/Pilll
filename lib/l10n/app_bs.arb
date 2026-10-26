@@ -484,7 +484,7 @@
   "futureScheduleFeatureAppealShortDescription": "Upravljajte predstojećim planovima, poput posjeta ljekaru",
   "futureScheduleFeatureAppealHeadline": "Zabilježite buduće planove u kalendar",
   "futureScheduleFeatureAppealBody": "U kalendar možete upisati buduće planove, poput odlazaka ljekaru i putovanja. Možete ih pregledati uz ciklus uzimanja pilula i planirati imajući na umu termin menstruacije.",
-  "healthCareIntegrationFeatureAppealTitle": "Integracija sa zdravljem",
+  "healthCareIntegrationFeatureAppealTitle": "Povezivanje s aplikacijom Zdravlje",
   "healthCareIntegrationFeatureAppealShortDescription": "Dijeli zapise menstrualnog ciklusa s aplikacijom Health",
   "healthCareIntegrationFeatureAppealHeadline": "Može se integrirati sHealthCareom",
   "healthCareIntegrationFeatureAppealBody": "Podaci o menstruaciji zabilježeni u Pilll-u mogu se automatski sinkronizirati s aplikacijom Zdravlje. Možete ih pregledati zajedno s ostalim zdravstvenim podacima u aplikaciji Zdravlje, a podaci o menstruaciji postaju dostupni i u drugim aplikacijama.",

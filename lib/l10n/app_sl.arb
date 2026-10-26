@@ -484,7 +484,7 @@
   "futureScheduleFeatureAppealShortDescription": "Uredite prihodnje načrte, kot so obiski pri zdravniku",
   "futureScheduleFeatureAppealHeadline": "V koledar zabeležite prihodnje načrte",
   "futureScheduleFeatureAppealBody": "V koledar lahko vpišete prihodnje načrte, kot so obiski zdravnika in potovanja. Oglejte si jih skupaj s ciklom jemanja tablet, da boste pri načrtovanju lahko upoštevali tudi pričakovani čas menstruacije.",
-  "healthCareIntegrationFeatureAppealTitle": "Povezava z zdravstvenimi podatki",
+  "healthCareIntegrationFeatureAppealTitle": "Povezava z aplikacijo Zdravje",
   "healthCareIntegrationFeatureAppealShortDescription": "Delite zapise o menstruaciji z aplikacijo Zdravje",
   "healthCareIntegrationFeatureAppealHeadline": "Povezava z aplikacijami za zdravje",
   "healthCareIntegrationFeatureAppealBody": "Podatke o menstruaciji, ki jih zabeležite v aplikaciji Pilll, lahko samodejno sinhronizirate z aplikacijo Zdravje. Ogledate si jih lahko skupaj z drugimi zdravstvenimi podatki, uporabljate pa jih lahko tudi v drugih aplikacijah, ki berejo podatke iz aplikacije Zdravje.",
