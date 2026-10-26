@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilsen rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Cymryd y bilsen",
   "estimatedEndPillNumber": "Pilsen olaf y pecyn blaenorol: rhif {estimatedEndPillNumber}",
-  "addPillSheetButton": "Ychwanegu Taflen Bilsen",
+  "addPillSheetButton": "Ychwanegwch stribed pils",
   "taken": "Cymerwyd",
   "notTaken": "Heb gymryd",
   "pillSheetSettings": "Gosodiadau Dalen Biliau",

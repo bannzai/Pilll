@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} নম্বৰ পিল",
   "taking": "পিল খোৱা",
   "estimatedEndPillNumber": "আগৰ পিল শ্বীটৰ শেষৰ বড়ি: নম্বৰ {estimatedEndPillNumber}",
-  "addPillSheetButton": "বড়িৰ শীট যোগ কৰক",
+  "addPillSheetButton": "পিলৰ ষ্ট্ৰিপ যোগ কৰক",
   "taken": "খোৱা",
   "notTaken": "নোলোৱা",
   "pillSheetSettings": "পিল শ্বিটৰ ছেটিং",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-raqamli tabletka",
   "taking": "Tabletkani qabul qilish",
   "estimatedEndPillNumber": "Oldingi blisterdagi oxirgi tabletka: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Dori paketini qo'shish",
+  "addPillSheetButton": "tabletka blister qoʻshing",
   "taken": "Ichdi",
   "notTaken": "Qabul qilmagan",
   "pillSheetSettings": "Pill varaqasi sozlamalari",

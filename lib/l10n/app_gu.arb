@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ગોળી નંબર {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ગોળી લેવી",
   "estimatedEndPillNumber": "પાછલી પિલ શીટની છેલ્લી ગોળી: નંબર {estimatedEndPillNumber}",
-  "addPillSheetButton": "ગોળી શીટ ઉમેરો",
+  "addPillSheetButton": "ગોળીની સ્ટ્રિપ ઉમેરો",
   "taken": "લીધું",
   "notTaken": "લીધું નથી",
   "pillSheetSettings": "પિલ શીટ સેટિંગ્સ",

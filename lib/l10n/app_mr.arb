@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "गोळी घेणे",
   "estimatedEndPillNumber": "मागील पिलच्या पट्टीतील शेवटची गोळी: क्रमांक {estimatedEndPillNumber}",
-  "addPillSheetButton": "गोळीचे शीट जोडा",
+  "addPillSheetButton": "पिल शीट जोडा",
   "taken": "घेतले",
   "notTaken": "नाही घेतले",
   "pillSheetSettings": "पिल शीट सेटिंग्ज",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pílula número {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Toma da pílula",
   "estimatedEndPillNumber": "Última pílula do blíster anterior: núm. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Engadir blíster de pílulas",
+  "addPillSheetButton": "Engade un blíster",
   "taken": "Tomada",
   "notTaken": "Non tomada",
   "pillSheetSettings": "Configuración da folla de píldoras",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ยาเม็ดที่ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "การทานยา",
   "estimatedEndPillNumber": "เม็ดสุดท้ายของแผงก่อนหน้า: หมายเลข {estimatedEndPillNumber}",
-  "addPillSheetButton": "เพิ่มแผงยาคุม",
+  "addPillSheetButton": "เพิ่มแผงยา",
   "taken": "กินแล้ว",
   "notTaken": "ยังไม่ได้กิน",
   "pillSheetSettings": "การตั้งค่าแผงยาคุม",

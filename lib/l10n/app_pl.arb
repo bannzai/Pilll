@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Tabletka nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Przyjmowanie tabletki",
   "estimatedEndPillNumber": "Ostatnia tabletka z poprzedniego blistra: nr {estimatedEndPillNumber}",
-  "addPillSheetButton": "Dodaj blister",
+  "addPillSheetButton": "Dodaj blist",
   "taken": "Przyjęta",
   "notTaken": "Nieprzyjęte",
   "pillSheetSettings": "Ustawienia blistra tabletek",

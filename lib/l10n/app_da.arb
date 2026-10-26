@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "P-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Indtagelse af p-pille",
   "estimatedEndPillNumber": "Sidste p-pille på det forrige ark: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Tilføj pillepakke",
+  "addPillSheetButton": "Tilføj pillekort",
   "taken": "taget",
   "notTaken": "ikke taget",
   "pillSheetSettings": "Pilleskema indstillinger",

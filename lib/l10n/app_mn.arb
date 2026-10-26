@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дугаартай эм",
   "taking": "Эм уух",
   "estimatedEndPillNumber": "Өмнөх блистерийн сүүлийн шахмал: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Эмийн хавтанг нэмэх",
+  "addPillSheetButton": "эмийн блистер нэмэх",
   "taken": "уусан",
   "notTaken": "авсангүй",
   "pillSheetSettings": "Пил хуудасны тохиргоо",

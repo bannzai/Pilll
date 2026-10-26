@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. hap",
   "taking": "Hap kullanımı",
   "estimatedEndPillNumber": "Önceki blisterdeki son hap: No. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Hap kartonu ekle",
+  "addPillSheetButton": "blister ekleyin",
   "taken": "Alındı",
   "notTaken": "Alınmadı",
   "pillSheetSettings": "Hap Şeridi Ayarları",

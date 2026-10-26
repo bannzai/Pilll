@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "נטילת גלולה",
   "estimatedEndPillNumber": "הגלולה האחרונה בחפיסה הקודמת: מספר {estimatedEndPillNumber}",
-  "addPillSheetButton": "הוסף גלילת גלולות",
+  "addPillSheetButton": "להוסיף חפיסת גלולות",
   "taken": "שתתה",
   "notTaken": "לא נלקח",
   "pillSheetSettings": "הגדרות גיליון הכדורים",

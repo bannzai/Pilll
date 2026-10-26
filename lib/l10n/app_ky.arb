@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} таблетка",
   "taking": "Таблетка ичүү",
   "estimatedEndPillNumber": "Мурунку блистердеги акыркы таблетка: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Таблетка пакетти кошуу",
+  "addPillSheetButton": "таблетка блистери кошуу",
   "taken": "ичкен",
   "notTaken": "ичкен жок",
   "pillSheetSettings": "Таблетка барагын орнотуулары",

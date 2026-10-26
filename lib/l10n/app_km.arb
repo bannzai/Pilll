@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "គ្រាប់ថ្នាំលេខ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ការលេបថ្នាំគ្រាប់",
   "estimatedEndPillNumber": "គ្រាប់ថ្នាំចុងក្រោយក្នុងបន្ទះមុន៖ លេខ {estimatedEndPillNumber}",
-  "addPillSheetButton": "បន្ថែមសន្លឹកថ្នាំ",
+  "addPillSheetButton": "បន្ថែមបន្ទះថ្នាំគ្រាប់",
   "taken": "ញុំហើយ",
   "notTaken": "មិនបានទទួលទាន",
   "pillSheetSettings": "ការកំណត់បន្ទះថ្នាំ",

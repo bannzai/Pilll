@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. pilula",
   "taking": "Pilula hartzea",
   "estimatedEndPillNumber": "Aurreko blisterreko azken pilula: {estimatedEndPillNumber}. zenbakia",
-  "addPillSheetButton": "Pilula-orria gehitu",
+  "addPillSheetButton": "Gehitu pilula-blister",
   "taken": "Edana",
   "notTaken": "Hartu gabe",
   "pillSheetSettings": "Pilula-orriaren konfigurazioa",

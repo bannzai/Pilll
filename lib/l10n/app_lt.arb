@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Tabletė Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Tabletės vartojimas",
   "estimatedEndPillNumber": "Paskutinė tabletė ankstesnėje plokštelėje: Nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Pridėti tablečių pakuotę",
+  "addPillSheetButton": "Pridėti tablečių plokštel",
   "taken": "Priimta",
   "notTaken": "Neišgerta",
   "pillSheetSettings": "Tablečių pakuotės nustatymai",

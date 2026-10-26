@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Iphilisi elingunombolo {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ukuphuza iphilisi",
   "estimatedEndPillNumber": "Iphilisi lokugcina ephaketheni langaphambilini: inombolo {estimatedEndPillNumber}",
-  "addPillSheetButton": "Engeza ishidi lamaphilisi",
+  "addPillSheetButton": "Engeza shidi lamaphilisi",
   "taken": "Kudliwe",
   "notTaken": "akathathanga",
   "pillSheetSettings": "Izilungiselelo zeshidi lamaphilisi",

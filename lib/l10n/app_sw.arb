@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Kidonge nambari {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Kumeza kidonge",
   "estimatedEndPillNumber": "Kidonge cha mwisho kwenye kifungashio kilichotangulia: namba {estimatedEndPillNumber}",
-  "addPillSheetButton": "Ongeza Karatasi ya Vidonge",
+  "addPillSheetButton": "Ongeza pakiti ya vidonge",
   "taken": "Nimemeza",
   "notTaken": "Hajameza",
   "pillSheetSettings": "Mipangilio ya Uwanda wa Vidonge",

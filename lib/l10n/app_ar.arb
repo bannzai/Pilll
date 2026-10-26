@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "تناول الحبة",
   "estimatedEndPillNumber": "آخر حبة في الشريط السابق: رقم {estimatedEndPillNumber}",
-  "addPillSheetButton": "إضافة شريط الحبوب",
+  "addPillSheetButton": "أضيفي شريط",
   "taken": "شرب",
   "notTaken": "غير مُتناول",
   "pillSheetSettings": "إعدادات شرائط الحبوب",

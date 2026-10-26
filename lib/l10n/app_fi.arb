@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilleri nro {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pillerin ottaminen",
   "estimatedEndPillNumber": "Edellisen läpipainopakkauksen viimeinen pilleri: nro {estimatedEndPillNumber}",
-  "addPillSheetButton": "Lisää pilleripakkaus",
+  "addPillSheetButton": "Lisää pilleriliuska",
   "taken": "Otettu",
   "notTaken": "Ottamatta",
   "pillSheetSettings": "Pillerilevyn asetukset",

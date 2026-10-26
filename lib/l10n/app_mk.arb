@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Таблета бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Земање таблета",
   "estimatedEndPillNumber": "Последна таблета од претходниот блистер: бр. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Додади лист на пилули",
+  "addPillSheetButton": "Додајте блистер",
   "taken": "Земено",
   "notTaken": "не земено",
   "pillSheetSettings": "Поставувања на листот на пилули",

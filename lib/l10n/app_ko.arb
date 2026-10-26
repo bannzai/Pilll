@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번 알약",
   "taking": "복용",
   "estimatedEndPillNumber": "이전 시트의 마지막 알약: {estimatedEndPillNumber}번",
-  "addPillSheetButton": "피임약 시트 추가",
+  "addPillSheetButton": "알약 시트 추가",
   "taken": "먹음",
   "notTaken": "미복용",
   "pillSheetSettings": "피임약 시트 설정",

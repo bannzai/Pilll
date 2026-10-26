@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "گولی نمبر {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "گولی لینا",
   "estimatedEndPillNumber": "پچھلی پٹی کی آخری گولی: نمبر {estimatedEndPillNumber}",
-  "addPillSheetButton": "گولی شیٹ شامل کریں",
+  "addPillSheetButton": "گولیوں کی پٹی شامل کریں",
   "taken": "لیا",
   "notTaken": "نہیں لیا",
   "pillSheetSettings": "پل شیٹ سیٹنگز",

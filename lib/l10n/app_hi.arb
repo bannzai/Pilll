@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "गोली नंबर {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "गोली लेना",
   "estimatedEndPillNumber": "पिछली पिल शीट की आख़िरी गोली: नंबर {estimatedEndPillNumber}",
-  "addPillSheetButton": "पिल शीट जोड़ें",
+  "addPillSheetButton": "पिल स्ट्रिप जोड़ें",
   "taken": "लिया",
   "notTaken": "नहीं लिया",
   "pillSheetSettings": "पिल शीट सेटिंग्स",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilula broj {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Uzimanje pilule",
   "estimatedEndPillNumber": "Posljednja pilula na prethodnom blisteru: br. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Dodaj pakovanje pilula",
+  "addPillSheetButton": "Dodajte blister",
   "taken": "Uzeto",
   "notTaken": "Neuzeto",
   "pillSheetSettings": "Postavke blistera pilula",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Χάπι αρ. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Λήψη χαπιού",
   "estimatedEndPillNumber": "Τελευταίο χάπι στην προηγούμενη καρτέλα: αρ. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Προσθήκη φύλλου χαπιών",
+  "addPillSheetButton": "Προσθήκη καρτέλα χαπιών",
   "taken": "Πήρα",
   "notTaken": "Μη ληφθέν",
   "pillSheetSettings": "Ρυθμίσεις φύλλου χαπιών",

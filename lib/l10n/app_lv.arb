@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Tablete Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Tabletes lietošana",
   "estimatedEndPillNumber": "Pēdējā tablete iepriekšējā plāksnītē: Nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Pievienot tablešu iepakojumu",
+  "addPillSheetButton": "Pievienot tablešu blister",
   "taken": "Ieņemts",
   "notTaken": "Nav pieņēmis",
   "pillSheetSettings": "Tablešu plāksnes iestatījumi",

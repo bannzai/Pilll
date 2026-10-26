@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Marrja e pilulës",
   "estimatedEndPillNumber": "Pilula e fundit në blisterin e mëparshëm: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Shto fletë pilule",
+  "addPillSheetButton": "Shtoni blister",
   "taken": "Marrë",
   "notTaken": "E pamarrë",
   "pillSheetSettings": "Cilësimet e bletores së pilulës",

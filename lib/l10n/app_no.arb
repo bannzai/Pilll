@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "P-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ta p-pille",
   "estimatedEndPillNumber": "Siste p-pille på forrige brett: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Legg til p-pilleark",
+  "addPillSheetButton": "Legg til pillebrett",
   "taken": "Tatt",
   "notTaken": "Ikke tatt",
   "pillSheetSettings": "P-pille ark innstillinger",

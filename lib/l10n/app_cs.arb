@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Tableta č. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Užívání pilulky",
   "estimatedEndPillNumber": "Poslední pilulka na předchozím blistru: č. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Přidat balení pilulek",
+  "addPillSheetButton": "Přidat blistr",
   "taken": "Vzato",
   "notTaken": "Nevzato",
   "pillSheetSettings": "Nastavení balení pilulek",

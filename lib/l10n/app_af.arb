@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pil nommer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilgebruik",
   "estimatedEndPillNumber": "Laaste pil op die vorige pilstrook: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Voeg pilpakkie toe",
+  "addPillSheetButton": "Voeg pilstrokie by",
   "taken": "Geneem",
   "notTaken": "Nie geneem nie",
   "pillSheetSettings": "Pilvél-instellings",

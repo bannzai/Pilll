@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pill {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Taking a pill",
   "estimatedEndPillNumber": "Last pill on the previous sheet: No. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Add Pill Sheet",
+  "addPillSheetButton": "Add pill pack",
   "taken": "Taken",
   "notTaken": "Not taken",
   "pillSheetSettings": "Pill Sheet Settings",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilla númer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Inntaka pillunnar",
   "estimatedEndPillNumber": "Síðasta pillan á fyrra spjaldi: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Bæta við pillublaði",
+  "addPillSheetButton": "Bæta við pilluspjald",
   "taken": "Tekið",
   "notTaken": "Ekki tekið",
   "pillSheetSettings": "Píllublaðsstillingar",

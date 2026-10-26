@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pil nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pil innemen",
   "estimatedEndPillNumber": "Laatste pil op de vorige strip: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Pilstrip toevoegen",
+  "addPillSheetButton": "Pillenstrip toevoegen",
   "taken": "genomen",
   "notTaken": "Niet genomen",
   "pillSheetSettings": "Pilstrip-instellingen",

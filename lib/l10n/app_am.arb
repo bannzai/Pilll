@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ክኒን ቁጥር {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ክኒን መውሰድ",
   "estimatedEndPillNumber": "በቀድሞው ክኒን ሰሌዳ ላይ የመጨረሻው ክኒን፦ ቁጥር {estimatedEndPillNumber}",
-  "addPillSheetButton": "ፊኖ ሺት ማከል",
+  "addPillSheetButton": "ክኒን ሉህ ያክሉ",
   "taken": "ወሰድኩ",
   "notTaken": "አልወሰደም",
   "pillSheetSettings": "የክኒን ሉህ ቅንብር",

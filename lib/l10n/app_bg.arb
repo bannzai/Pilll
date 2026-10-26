@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Хапче № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прием на хапчето",
   "estimatedEndPillNumber": "Последното хапче от предишния блистер: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Добави листче",
+  "addPillSheetButton": "Добавяне на блистер",
   "taken": "Взето",
   "notTaken": "не е взето",
   "pillSheetSettings": "Настройки на опаковката с хапчета",

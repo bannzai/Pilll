@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "चक्की सेवन",
   "estimatedEndPillNumber": "अघिल्लो पाताको अन्तिम चक्की: नम्बर {estimatedEndPillNumber}",
-  "addPillSheetButton": "पिल शीट थप्नुहोस्",
+  "addPillSheetButton": "चक्की पत्ता थप्नुहोस्",
   "taken": "लिएको",
   "notTaken": "लिएको छैन",
   "pillSheetSettings": "पिल शिटको सेटिङ",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ഗുളിക നമ്പർ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ഗുളിക കഴിക്കൽ",
   "estimatedEndPillNumber": "മുമ്പത്തെ സ്ട്രിപ്പിലെ അവസാന ഗുളിക: നമ്പർ {estimatedEndPillNumber}",
-  "addPillSheetButton": "പിൽ ഷീറ്റ് ചേർക്കുക",
+  "addPillSheetButton": "ഗുളിക സ്ട്രിപ്പ ചേർക്കുക",
   "taken": "കഴിച്ചു",
   "notTaken": "കഴിച്ചിട്ടില്ല",
   "pillSheetSettings": "പിൽ ഷീറ്റ് ക്രമീകരണം",

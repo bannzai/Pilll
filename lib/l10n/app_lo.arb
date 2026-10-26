@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ເມັດທີ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ການກິນຢາເມັດ",
   "estimatedEndPillNumber": "ຢາເມັດສຸດທ້າຍໃນແຜງກ່ອນ: ເລກ {estimatedEndPillNumber}",
-  "addPillSheetButton": "ເພີ່ມແຜ່ນຢາ",
+  "addPillSheetButton": "ເພີ່ມແຜງຢາຄຸມ",
   "taken": "ກິນແລ້ວ",
   "notTaken": "ບໍ່ກິນ",
   "pillSheetSettings": "ການຕັ້ງຄ່າແຜ່ນເມັດຢາ",

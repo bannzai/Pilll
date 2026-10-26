@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pengambilan pil",
   "estimatedEndPillNumber": "Pil terakhir pada lepuh sebelumnya: no. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Tambah Pakej Pil",
+  "addPillSheetButton": "Tambah pek pil",
   "taken": "Sudah ambil",
   "notTaken": "Tidak diminum",
   "pillSheetSettings": "Tetapan Lembaran Pil",

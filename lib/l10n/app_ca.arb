@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Píndola número {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Presa de la píndola",
   "estimatedEndPillNumber": "Última píndola del blíster anterior: núm. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Afegir plaqueta de píndoles",
+  "addPillSheetButton": "Afegeix un blíster",
   "taken": "Presa",
   "notTaken": "No presa",
   "pillSheetSettings": "Configuració del blíster",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Tableta št. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Jemanje tabletke",
   "estimatedEndPillNumber": "Zadnja tabletka na prejšnjem omotu: št. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Dodaj tablice",
+  "addPillSheetButton": "Dodajte ploščic",
   "taken": "Vzeto",
   "notTaken": "ni vzeto",
   "pillSheetSettings": "Nastavitve tabličnih plošč",

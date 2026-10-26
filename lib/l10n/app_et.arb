@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pill nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilli võtmine",
   "estimatedEndPillNumber": "Eelmise lehe viimane pill: nr {estimatedEndPillNumber}",
-  "addPillSheetButton": "Lisa pillipakend",
+  "addPillSheetButton": "Lisa pillileh",
   "taken": "võetud",
   "notTaken": "võtmata",
   "pillSheetSettings": "Pillipaki seaded",

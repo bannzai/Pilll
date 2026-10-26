@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Հաբ № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Հաբի ընդունում",
   "estimatedEndPillNumber": "Նախորդ բլիստերի վերջին հաբը՝ № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Ավելացնել հաբերի փաթեթ",
+  "addPillSheetButton": "Ավելացնել հաբերի բլիստեր",
   "taken": "խմեց",
   "notTaken": "չընդունված",
   "pillSheetSettings": "Հապերի թերթի կարգավորումներ",

@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Prise de la pilule",
   "estimatedEndPillNumber": "Dernière pilule de la plaquette précédente : n° {estimatedEndPillNumber}",
-  "addPillSheetButton": "Ajouter une feuille de pilules",
+  "addPillSheetButton": "Ajouter une plaquette",
   "taken": "Pris",
   "notTaken": "Pas pris",
   "pillSheetSettings": "Paramètres de la feuille de pilules",

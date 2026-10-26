@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pille iinäh",
   "estimatedEndPillNumber": "Letschts Pilleli uf em vorige Blister: Nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Pilleblatt hinzuefüege",
+  "addPillSheetButton": "Pilleblister dezue tue",
   "taken": "gnoh",
   "notTaken": "nöd gno",
   "pillSheetSettings": "Pilleblatt-Iistellige",

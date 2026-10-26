@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pildoras bilang {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pag-inom ng pildoras",
   "estimatedEndPillNumber": "Huling pildoras sa nakaraang pakete: blg. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Magdagdag ng Pill Sheet",
+  "addPillSheetButton": "Magdagdag ng pakete ng pildoras",
   "taken": "Nainom",
   "notTaken": "Hindi ininom",
   "pillSheetSettings": "Mga Setting ng Pill Sheet",

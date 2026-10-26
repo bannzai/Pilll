@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "აბი № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "აბის მიღება",
   "estimatedEndPillNumber": "წინა ბლისტერის ბოლო აბი: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "აბების ფურცლის დამატება",
+  "addPillSheetButton": "აბების ბლისტერ დამატება",
   "taken": "დალია",
   "notTaken": "არ მიღებულა",
   "pillSheetSettings": "აბების ფურცლის დაყენება",

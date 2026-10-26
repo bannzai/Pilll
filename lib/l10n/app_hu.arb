@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. tabletta",
   "taking": "Tabletta szedése",
   "estimatedEndPillNumber": "Az előző levél utolsó tablettája: {estimatedEndPillNumber}.",
-  "addPillSheetButton": "Tablettacsomag hozzáadása",
+  "addPillSheetButton": "Új tablettacsomag hozzáadása",
   "taken": "Szedett",
   "notTaken": "Nem bevett",
   "pillSheetSettings": "Tablettafólia beállítások",

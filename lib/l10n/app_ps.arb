@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "د ګولۍ شمېره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "د ګولۍ اخیستل",
   "estimatedEndPillNumber": "د مخکینۍ پاڼې وروستۍ ګولۍ: شمېره {estimatedEndPillNumber}",
-  "addPillSheetButton": "د ګولیو پېک اضافه کول",
+  "addPillSheetButton": "د ګولیو پاڼ ورزیات کړئ",
   "taken": "څښلې",
   "notTaken": "نه نیولی",
   "pillSheetSettings": "د ګولیو شیټ ترتیبات",

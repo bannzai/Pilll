@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "ဆေးလုံးအမှတ် {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ဆေးလုံးသောက်ခြင်း",
   "estimatedEndPillNumber": "ယခင်ဆေးကတ်ရှိ နောက်ဆုံးဆေးလုံး: အမှတ် {estimatedEndPillNumber}",
-  "addPillSheetButton": "ယဉ်ဆေးအိုး ပေါင်းထည့်ရန်",
+  "addPillSheetButton": "ဆေးပြားကတ် ထည့်ပါ",
   "taken": "သောက်ပြီး",
   "notTaken": "မသောက်ဘူး",
   "pillSheetSettings": "ဆေးတောင့်ပြား ဆက်တင်",

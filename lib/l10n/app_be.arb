@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Пігулка № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прыём пігулкі",
   "estimatedEndPillNumber": "Апошняя пігулка ў папярэднім блістары: № {estimatedEndPillNumber}",
-  "addPillSheetButton": "Дадаць блістэр",
+  "addPillSheetButton": "Дадаць блістар",
   "taken": "Выпіла",
   "notTaken": "не прынята",
   "pillSheetSettings": "Налады пластоў з таблеткамі",

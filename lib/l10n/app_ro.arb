@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Administrarea pilulei",
   "estimatedEndPillNumber": "Ultima pilulă de pe folia anterioară: nr. {estimatedEndPillNumber}",
-  "addPillSheetButton": "Adăugă pachet de pilule",
+  "addPillSheetButton": "Adaugă blister",
   "taken": "Luat",
   "notTaken": "Neluată",
   "pillSheetSettings": "Setările blisterului",

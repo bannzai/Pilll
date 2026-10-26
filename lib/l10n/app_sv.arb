@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "P-piller nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ta p-piller",
   "estimatedEndPillNumber": "Sista pillret på föregående karta: nr {estimatedEndPillNumber}",
-  "addPillSheetButton": "Lägg till pillerkarta",
+  "addPillSheetButton": "Lägg till p-pillerkarta",
   "taken": "Tagen",
   "notTaken": "ej tagen",
   "pillSheetSettings": "Pillarks inställningar",

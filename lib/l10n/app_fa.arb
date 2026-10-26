@@ -118,7 +118,7 @@
   "lastTakenPlusOnePillNumber": "قرص شماره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "مصرف قرص",
   "estimatedEndPillNumber": "آخرین قرص بستهٔ قبلی: شمارهٔ {estimatedEndPillNumber}",
-  "addPillSheetButton": "افزودن بسته قرص",
+  "addPillSheetButton": "افزودن ورق قرص",
   "taken": "خورده",
   "notTaken": "نخورده",
   "pillSheetSettings": "تنظیمات ورق قرص",
