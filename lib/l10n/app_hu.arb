@@ -188,7 +188,7 @@
   "premiumTermsNotice3": "Az előfizetés előtt kérjük, olvasd el őket",
   "autoRenewNotice": "・A prémium előfizetés automatikusan megújul, ha nem mondod le legalább 24 órával az előfizetési időszak vége előtt",
   "cancelAutoRenewInfo": "A vásárlás után az automatikus megújítást a {storeName} alkalmazás fiókbeállításaiban mondhatod le. A Pilll alkalmazásban nem lehet lemondani.",
-  "moreDetails": "Bővebben",
+  "moreDetails": "További részletek",
   "restorePurchase": "Vásárlási adatok visszaállítva",
   "previouslyPurchased": "Már vásároltam",
   "noPreviousPurchaseInfo": "Nem találhatók korábbi vásárlások. Kérjük, ellenőrizze a fiókját és próbálja meg újra.",
