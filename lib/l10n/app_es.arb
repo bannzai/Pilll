@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Los registros de la regla en Pilll se pueden sincronizar automáticamente con Salud",
   "viewPremiumPlan": "Ver el plan Premium",
   "changePillNumberForToday": "Cambia el número de píldora de hoy",
-  "discardAllPillSheets": "Eliminar todos los blísteres",
+  "discardAllPillSheets": "Eliminar los datos de todos los blísteres",
   "areYouSureDoing": "¿{doing}?",
   "currentlyDisplayed": "Actualmente mostrado",
   "allPillSheets": "Todas las plaquetas",

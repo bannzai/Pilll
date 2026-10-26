@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Os rexistros da regra en Pilll poden sincronizarse automaticamente con Saúde",
   "viewPremiumPlan": "Ver o plan Premium",
   "changePillNumberForToday": "Cambia o número de pílula que toca tomar hoxe",
-  "discardAllPillSheets": "Eliminar todas as follas de píldoras",
+  "discardAllPillSheets": "Elimina os datos de todos os blísteres",
   "areYouSureDoing": "¿{doing}?",
   "currentlyDisplayed": "actualmente mostrado",
   "allPillSheets": "Todas as follas de píldoras",

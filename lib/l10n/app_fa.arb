@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "اطلاعات پریود ثبت‌شده در Pilll می‌تواند به‌طور خودکار با Apple Health همگام‌سازی شود",
   "viewPremiumPlan": "مشاهدهٔ طرح پریمیوم",
   "changePillNumberForToday": "تغییر شماره قرص امروز",
-  "discardAllPillSheets": "حذف همه ورق‌های قرص",
+  "discardAllPillSheets": "حذف همه اطلاعات ورق قرص",
   "areYouSureDoing": "{doing} را انجام می‌دهید؟",
   "currentlyDisplayed": "در حال نمایش",
   "allPillSheets": "همه بسته‌های قرص",

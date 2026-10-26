@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll에 기록한 생리 정보를 Apple 건강 앱과 자동으로 동기화할 수 있어요",
   "viewPremiumPlan": "프리미엄 플랜 보기",
   "changePillNumberForToday": "오늘 복용할 알약 번호 변경",
-  "discardAllPillSheets": "전체 피임약 시트 삭제",
+  "discardAllPillSheets": "모든 알약 시트 정보 삭제",
   "areYouSureDoing": "{doing}하시겠습니까?",
   "currentlyDisplayed": "현재 표시 중",
   "allPillSheets": "모든 피임약 시트",

@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Záznamy o menstruaci v Pilll se mohou automaticky synchronizovat s aplikací Zdraví",
   "viewPremiumPlan": "Zobrazit plán Premium",
   "changePillNumberForToday": "Změnit číslo tablety pro dnešek",
-  "discardAllPillSheets": "Smazat všechny pilulkové karty",
+  "discardAllPillSheets": "Smazat údaje o všech blistrech",
   "areYouSureDoing": "Opravdu chcete {doing}?",
   "currentlyDisplayed": "aktuálně zobrazené",
   "allPillSheets": "Všechny blistry",

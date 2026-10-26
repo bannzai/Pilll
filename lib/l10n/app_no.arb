@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Mensregistreringer i Pilll kan synkroniseres automatisk med Apple Helse",
   "viewPremiumPlan": "Se Premium-planen",
   "changePillNumberForToday": "Endre pillenummer for i dag",
-  "discardAllPillSheets": "Slett alle pilleark",
+  "discardAllPillSheets": "Slett alle data om pillebrett",
   "areYouSureDoing": "Vil du {doing}?",
   "currentlyDisplayed": "Vises for øyeblikket",
   "allPillSheets": "Alle pillebrett",

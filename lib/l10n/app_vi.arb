@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Dữ liệu kinh nguyệt ghi trong Pilll có thể tự động đồng bộ với ứng dụng Sức khỏe",
   "viewPremiumPlan": "Xem gói Premium",
   "changePillNumberForToday": "Thay đổi số thứ tự viên thuốc cần uống hôm nay",
-  "discardAllPillSheets": "Xóa tất cả vỉ thuốc",
+  "discardAllPillSheets": "Xóa dữ liệu của tất cả vỉ thuốc",
   "areYouSureDoing": "Bạn có muốn {doing} không?",
   "currentlyDisplayed": "Đang hiển thị",
   "allPillSheets": "Tất cả vỉ thuốc tránh thai",

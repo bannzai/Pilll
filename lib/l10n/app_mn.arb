@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll-д бүртгэсэн сарын тэмдгийн мэдээлэл Apple Health-тэй автоматаар синк хийгдэнэ",
   "viewPremiumPlan": "премиум багцыг харах",
   "changePillNumberForToday": "Өнөөдөр уух эмийн дугаарыг өөрчилнө үү",
-  "discardAllPillSheets": "Бүх эмийн хуудсыг устгах",
+  "discardAllPillSheets": "Бүх эмийн блистерийн мэдээллийг устгана уу",
   "areYouSureDoing": "{doing} хийх үү？",
   "currentlyDisplayed": "одоо харагдаж байгаа",
   "allPillSheets": "Бүх эмийн савлага",

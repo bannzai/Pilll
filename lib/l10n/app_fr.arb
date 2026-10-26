@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Vos données sur les règles enregistrées dans Pilll peuvent se synchroniser automatiquement avec Santé",
   "viewPremiumPlan": "Voir l’offre Premium",
   "changePillNumberForToday": "Modifier le numéro de pilule à prendre aujourd’hui",
-  "discardAllPillSheets": "Supprimer toutes les feuilles de pilules",
+  "discardAllPillSheets": "Supprimer les données de toutes les plaquettes",
   "areYouSureDoing": "Voulez-vous {doing} ?",
   "currentlyDisplayed": "Actuellement affiché",
   "allPillSheets": "Toutes les feuilles de pilules",

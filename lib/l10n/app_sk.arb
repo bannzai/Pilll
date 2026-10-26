@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Záznamy o menštruácii v Pilll sa môžu automaticky synchronizovať s aplikáciou Apple Zdravie",
   "viewPremiumPlan": "Zobraziť plán Premium",
   "changePillNumberForToday": "Zmeňte číslo tabletky na dnes",
-  "discardAllPillSheets": "Odstrániť všetky blistre",
+  "discardAllPillSheets": "Vymazať údaje o všetkých blistroch",
   "areYouSureDoing": "Chcete {doing}?",
   "currentlyDisplayed": "aktuálne zobrazené",
   "allPillSheets": "Všetky pilulové balenia",

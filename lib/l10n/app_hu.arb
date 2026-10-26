@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "A Pilllben rögzített menstruációs adatok automatikusan szinkronizálhatók az Apple Egészség alkalmazással",
   "viewPremiumPlan": "A prémium csomag megtekintése",
   "changePillNumberForToday": "A mai tablettaszám módosítása",
-  "discardAllPillSheets": "Minden tablettacsomag törlése",
+  "discardAllPillSheets": "Az összes tablettacsomag adatainak törlése",
   "areYouSureDoing": "{doing}?",
   "currentlyDisplayed": "jelenleg megjelenített",
   "allPillSheets": "Összes tablettacsomag",

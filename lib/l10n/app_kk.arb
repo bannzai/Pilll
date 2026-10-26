@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll ішіндегі етеккір жазбаларын Apple Health қолданбасымен автоматты түрде синхрондауға болады",
   "viewPremiumPlan": "премиум жоспарын қараңыз",
   "changePillNumberForToday": "Бүгін ішілетін таблетка нөмірін өзгертіңіз",
-  "discardAllPillSheets": "Барлық дәрі парақтарын жою",
+  "discardAllPillSheets": "Барлық таблетка блистер деректерін өшіріңіз",
   "areYouSureDoing": "{doing} істейсіз бе?",
   "currentlyDisplayed": "Қазір көрсетілген",
   "allPillSheets": "Барлық дәрі парақтары",

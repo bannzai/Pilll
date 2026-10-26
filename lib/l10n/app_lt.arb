@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll įrašai apie mėnesines gali būti automatiškai sinchronizuojami su Apple Health",
   "viewPremiumPlan": "Peržiūrėti Premium planą",
   "changePillNumberForToday": "Pakeiskite šiandien vartojamos tabletės numerį",
-  "discardAllPillSheets": "Pašalinti visas tablečių pakuotes",
+  "discardAllPillSheets": "Ištrinti visus tablečių plokštel duomenis",
   "areYouSureDoing": "Ar {doing}?",
   "currentlyDisplayed": "Šiuo metu rodoma",
   "allPillSheets": "Visi tablečių pakeliai",

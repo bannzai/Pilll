@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Maaaring awtomatikong i-sync sa Apple Health ang mga tala ng regla sa Pilll",
   "viewPremiumPlan": "Tingnan ang Premium na plano",
   "changePillNumberForToday": "Palitan ang numero ng pildoras para sa araw na ito",
-  "discardAllPillSheets": "Burahin ang lahat ng pill sheet",
+  "discardAllPillSheets": "Burahin ang data ng lahat ng pakete ng pildoras",
   "areYouSureDoing": "Gusto mo bang {doing}?",
   "currentlyDisplayed": "kasalukuyang naipapakita",
   "allPillSheets": "Lahat ng Pill Sheet",

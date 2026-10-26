@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Gellir cysoni cofnodion mislif yn Pilll yn awtomatig ag Apple Health",
   "viewPremiumPlan": "Gweld y cynllun premiwm",
   "changePillNumberForToday": "Newid rhif y bilsen i’w chymryd heddiw",
-  "discardAllPillSheets": "Dileu pob taflen bilsen",
+  "discardAllPillSheets": "Dileu’r holl ddata am stribed pils",
   "areYouSureDoing": "A ydych chi am {doing}?",
   "currentlyDisplayed": "yn cael ei ddangos ar hyn o bryd",
   "allPillSheets": "Pob taflen bils",

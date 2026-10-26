@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Mensregistreringar i Pilll kan synkroniseras automatiskt med Apple Hälsa",
   "viewPremiumPlan": "Visa premiumplanen",
   "changePillNumberForToday": "Ändra tablettnummer för i dag",
-  "discardAllPillSheets": "Ta bort alla p-pillerblad",
+  "discardAllPillSheets": "Radera data för alla p-pillerkartor",
   "areYouSureDoing": "Vill du {doing}?",
   "currentlyDisplayed": "visas för närvarande",
   "allPillSheets": "Alla p-pillerförpackningar",

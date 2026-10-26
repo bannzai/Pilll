@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "ຂໍ້ມູນປະຈຳເດືອນທີ່ບັນທຶກໃນ Pilll ສາມາດຊິງກັບ Apple Health ໄດ້ອັດຕະໂນມັດ",
   "viewPremiumPlan": "ເບິ່ງແຜນ Premium",
   "changePillNumberForToday": "ປ່ຽນເລກເມັດຢາທີ່ຈະກິນມື້ນີ້",
-  "discardAllPillSheets": "ລຶບແຜ່ນຢາຄຸມກຳເນີດທັງໝົດ",
+  "discardAllPillSheets": "ລຶບຂໍ້ມູນແຜງຢາຄຸມທັງໝົດ",
   "areYouSureDoing": "ຈະ {doing} ບໍ?",
   "currentlyDisplayed": "ກຳລັງສະແດງ",
   "allPillSheets": "ທຸກຊີດຢາຄຸມກໍາເນີດ",

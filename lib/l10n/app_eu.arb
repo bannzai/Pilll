@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll-en gordetako hilekoaren erregistroak automatikoki sinkroniza daitezke Apple Health-ekin",
   "viewPremiumPlan": "Ikusi Premium plana",
   "changePillNumberForToday": "Aldatu gaur hartu beharreko pilula-zenbakia",
-  "discardAllPillSheets": "Pillola-orri guztiak ezabatu",
+  "discardAllPillSheets": "Ezabatu pilula-blister guztien datuak",
   "areYouSureDoing": "{doing} egin nahi duzu?",
   "currentlyDisplayed": "Orain erakusten ari dena",
   "allPillSheets": "Pilula orri guztiak",

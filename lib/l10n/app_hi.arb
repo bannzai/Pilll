@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll में दर्ज पीरियड के रिकॉर्ड Apple Health से अपने आप सिंक हो सकते हैं",
   "viewPremiumPlan": "प्रीमियम प्लान देखें",
   "changePillNumberForToday": "आज लेने के लिए गोली नंबर बदलें",
-  "discardAllPillSheets": "सभी पिल शीट हटाएं",
+  "discardAllPillSheets": "सभी पिल स्ट्रिप का डेटा हटाएं",
   "areYouSureDoing": "क्या आप {doing} करना चाहते हैं？",
   "currentlyDisplayed": "वर्तमान में प्रदर्शित",
   "allPillSheets": "सभी पिल शीट",

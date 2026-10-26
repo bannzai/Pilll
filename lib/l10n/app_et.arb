@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilllis salvestatud päevade andmeid saab automaatselt Apple Healthiga sünkroonida",
   "viewPremiumPlan": "Vaata premium-paketti",
   "changePillNumberForToday": "Muuda pillinumbrit tänaseks",
-  "discardAllPillSheets": "Kustuta kõik tablettlehed",
+  "discardAllPillSheets": "Kustuta kõik pillilehe andmed",
   "areYouSureDoing": "Kas {doing}?",
   "currentlyDisplayed": "praegu kuvatud",
   "allPillSheets": "Kõik pillilehed",

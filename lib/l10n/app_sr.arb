@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Записи о менструацији у Pilll могу аутоматски да се синхронизују са апликацијом Apple Health",
   "viewPremiumPlan": "Погледајте премијум план",
   "changePillNumberForToday": "Промените број пилуле за данас",
-  "discardAllPillSheets": "Обриши све листове пилула",
+  "discardAllPillSheets": "Обришите податке о свим блистерима",
   "areYouSureDoing": "Da li {doing}?",
   "currentlyDisplayed": "trenutno prikazane",
   "allPillSheets": "Svi listovi tableta",

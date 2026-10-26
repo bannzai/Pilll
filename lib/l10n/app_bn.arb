@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Pilll-এ রাখা মাসিকের তথ্য Apple Health-এর সঙ্গে স্বয়ংক্রিয়ভাবে সিঙ্ক করা যায়",
   "viewPremiumPlan": "প্রিমিয়াম প্ল্যান দেখুন",
   "changePillNumberForToday": "আজ খাওয়ার পিল নম্বর পরিবর্তন করুন",
-  "discardAllPillSheets": "সমস্ত পিল শিট মুছে ফেলুন",
+  "discardAllPillSheets": "সব পিল শিটের তথ্য মুছুন",
   "areYouSureDoing": "{doing} করবেন?",
   "currentlyDisplayed": "বর্তমানে প্রদর্শিত",
   "allPillSheets": "সব পিল শিট",

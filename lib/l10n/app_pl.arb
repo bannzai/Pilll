@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Dane o okresie zapisane w Pilll mogą automatycznie synchronizować się z Apple Zdrowie",
   "viewPremiumPlan": "Zobacz plan premium",
   "changePillNumberForToday": "Zmień numer tabletki na dziś",
-  "discardAllPillSheets": "Usuń wszystkie blistry",
+  "discardAllPillSheets": "Usuń dane wszystkich blistrów",
   "areYouSureDoing": "Czy {doing}?",
   "currentlyDisplayed": "Obecnie wyświetlane",
   "allPillSheets": "Wszystkie blistry",

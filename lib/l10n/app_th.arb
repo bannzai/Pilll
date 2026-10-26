@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "ข้อมูลประจำเดือนที่บันทึกใน Pilll สามารถซิงค์กับแอปสุขภาพได้โดยอัตโนมัติค่ะ",
   "viewPremiumPlan": "ดูแผนพรีเมียม",
   "changePillNumberForToday": "เปลี่ยนหมายเลขเม็ดยาที่ต้องทานวันนี้",
-  "discardAllPillSheets": "ลบแผงยาเม็ดทั้งหมด",
+  "discardAllPillSheets": "ลบข้อมูลแผงยาทั้งหมด",
   "areYouSureDoing": "คุณต้องการ{doing}หรือไม่？",
   "currentlyDisplayed": "กำลังแสดงอยู่",
   "allPillSheets": "แผงยาเม็ดทั้งหมด",

@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "يمكن مزامنة سجلات الدورة المسجلة في Pilll تلقائيا مع تطبيق صحتي",
   "viewPremiumPlan": "اطلعي على خطة بريميوم",
   "changePillNumberForToday": "تغيير رقم الحبة المقرر تناولها اليوم",
-  "discardAllPillSheets": "حذف جميع أوراق الحبوب",
+  "discardAllPillSheets": "حذف جميع بيانات شريط الحبوب",
   "areYouSureDoing": "هل تريد {doing}؟",
   "currentlyDisplayed": "المعروض حالياً",
   "allPillSheets": "جميع شرائط الحبوب",

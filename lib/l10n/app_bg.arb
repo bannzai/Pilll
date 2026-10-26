@@ -52,7 +52,7 @@
   "healthCareIntegrationDescription": "Записите за мензис в Pilll могат автоматично да се синхронизират с Apple Health",
   "viewPremiumPlan": "Вижте плана премиум",
   "changePillNumberForToday": "Промяна на номер на хапче за днес",
-  "discardAllPillSheets": "Изтрий всички листове с хапчета",
+  "discardAllPillSheets": "Изтриване на всички данни за блистерите",
   "areYouSureDoing": "Ще {doing} ли?",
   "currentlyDisplayed": "текущо показани",
   "allPillSheets": "Всички блистери",
