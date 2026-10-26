@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "عند انتهاء مجموعة الشريط الحالية، ستُضاف مجموعة جديدة تلقائيًا",
   "accountSettings": "إعدادات الحساب",
   "linked": "تم الربط",
-  "unregistered": "غير مسجل",
+  "unregistered": "لم يتم التسجيل",
   "quickRecord": "تسجيل سريع",
   "quickRecordDescription": "يمكنك من شاشة الإشعارات معرفة الحبة المطلوب تناولها اليوم وتسجيل تناولها فورياً.",
   "healthCareIntegration": "تكامل الرعاية الصحية",

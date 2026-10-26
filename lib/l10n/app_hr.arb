@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Kad trenutačna skupina blister pakiranja završi, novi će se blister automatski dodati",
   "accountSettings": "Postavke računa",
   "linked": "Povezano",
-  "unregistered": "Neregistrovan",
+  "unregistered": "Nije registrirano",
   "quickRecord": "Brzi zapis",
   "quickRecordDescription": "Na zaslonu obavijesti vidite koju pilulu danas trebate uzeti i možete odmah zabilježiti da ste je uzeli.",
   "healthCareIntegration": "Zdravstvena integracija",

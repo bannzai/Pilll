@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Amikor a jelenlegi tablettacsomag-csoport véget ér, automatikusan hozzáadunk egy új csomagot",
   "accountSettings": "Fiókbeállítások",
   "linked": "Összekapcsolva",
-  "unregistered": "Regisztrálatlan",
+  "unregistered": "Nincs regisztrálva",
   "quickRecord": "Gyors rögzítés",
   "quickRecordDescription": "Az értesítési képernyőn láthatja a mai tablettát, és közvetlenül rögzítheti a bevételét.",
   "healthCareIntegration": "Egészségügyi integráció",

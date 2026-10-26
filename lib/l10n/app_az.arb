@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Cari həb blister qrupu bitdikdə, yeni blister avtomatik əlavə ediləcək",
   "accountSettings": "Hesab ayarları",
   "linked": "Əlaqələndirilib",
-  "unregistered": "Qeydiyyatsız",
+  "unregistered": "Qeydiyyatdan keçməyib",
   "quickRecord": "Tez Qeyd",
   "quickRecordDescription": "Bildiriş ekranında bugün içməli olduğunuz həbləri görə və dərhal qəbul qeydiyyatı edə bilərsiniz.",
   "healthCareIntegration": "Sağlamlıq inteqrasiyası",

@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "हालको चक्की पत्ता समूह सकिएपछि नयाँ पत्ता स्वतः थपिनेछ",
   "accountSettings": "खाता सेटिङहरू",
   "linked": "लिङ्क गरिएको",
-  "unregistered": "दर्ता नगरिएको",
+  "unregistered": "दर्ता भएको छैन",
   "quickRecord": "छिटो रेकर्ड",
   "quickRecordDescription": "सूचना स्क्रिनमा आज खाने गर्भनिरोधक चक्की देख्न सकिन्छ र सोहैबाट सेवन रेकर्ड गर्न सकिन्छ।",
   "healthCareIntegration": "स्वास्थ्य सेवा जडान",

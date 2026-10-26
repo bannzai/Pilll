@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Quando termina il gruppo di blister attuale, viene aggiunto automaticamente un nuovo blister",
   "accountSettings": "Impostazioni account",
   "linked": "Collegato",
-  "unregistered": "Non registrato",
+  "unregistered": "Registrazione non effettuata",
   "quickRecord": "Registrazione Rapida",
   "quickRecordDescription": "Dalla schermata delle notifiche puoi vedere quale pillola prendere oggi e registrarne direttamente l'assunzione.",
   "healthCareIntegration": "Integrazione Salute",

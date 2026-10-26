@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Po zakończeniu bieżącej grupy blistów nowy blist zostanie dodany automatycznie",
   "accountSettings": "Ustawienia konta",
   "linked": "Połączono",
-  "unregistered": "Niezarejestrowane",
+  "unregistered": "Nie zarejestrowano",
   "quickRecord": "Szybki wpis",
   "quickRecordDescription": "Ekran powiadomień pokazuje dzisiejszą pigułkę i pozwala bezpośrednio zarejestrować jej przyjęcie.",
   "healthCareIntegration": "Integracja ze zdrowiem",

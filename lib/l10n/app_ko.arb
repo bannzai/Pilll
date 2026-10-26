@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "현재 알약 시트 그룹이 끝나면 새 시트가 자동으로 추가돼요",
   "accountSettings": "계정 설정",
   "linked": "연동됨",
-  "unregistered": "미등록",
+  "unregistered": "등록되지 않았어요",
   "quickRecord": "퀵 기록",
   "quickRecordDescription": "알림 화면에서 오늘 복용할 피임약을 확인하고 바로 복용 기록할 수 있습니다.",
   "healthCareIntegration": "헬스케어 연동",

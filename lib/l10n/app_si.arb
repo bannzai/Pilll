@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "දැනට ඇති පෙති කාඩ්පත සමූහය අවසන් වූ විට, නව කාඩ්පතක් ස්වයංක්‍රීයව එකතු වේ",
   "accountSettings": "ගිණුම් සැකසුම්",
   "linked": "සම්බන්ධ කර ඇත",
-  "unregistered": "අලේඛනය",
+  "unregistered": "ලියාපදිංචි වී නැත",
   "quickRecord": "ඉක්මන් සටහන",
   "quickRecordDescription": "දැනුම්දීම් තිරයෙන් අද ගත යුතු පෙති පෙනෙන අතර, එම තැනින්ම ගැනීම සටහන් කළ හැකිය.",
   "healthCareIntegration": "සෞඛ්‍ය සම්බන්ධතාවය",

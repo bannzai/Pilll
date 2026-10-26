@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Երբ ընթացիկ հաբերի բլիստեր խումբն ավարտվի, նոր բլիստերն ինքնաշխատ կավելացվի",
   "accountSettings": "Հաշվի կարգավորումներ",
   "linked": "Կապակցված է",
-  "unregistered": "չգրանցված",
+  "unregistered": "Գրանցված չէ",
   "quickRecord": "Արագ գրառում",
   "quickRecordDescription": "Ծանուցումների էջում տեսնում եք այսօր ընդունելիք հապալնակը և կարող եք անմիջապես գրանցել ընդունումը։",
   "healthCareIntegration": "Առողջության կապակցում",

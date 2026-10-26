@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "सध्याचा पिल शीट गट संपल्यावर नवीन शीट आपोआप जोडली जाईल",
   "accountSettings": "खाते सेटिंग्ज",
   "linked": "जोडलेले",
-  "unregistered": "अनोंदणीकृत",
+  "unregistered": "नोंदणी झालेली नाही",
   "quickRecord": "त्वरित रेकॉर्ड",
   "quickRecordDescription": "सूचना स्क्रीनवर आज घेण्याची गोळी समजते आणि तिथेच सेवन नोंद करता येते.",
   "healthCareIntegration": "आरोग्य एकत्रीकरण",

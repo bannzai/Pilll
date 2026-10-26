@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Quan s’acabi el grup actual de blíster, s’afegirà automàticament un blíster nou",
   "accountSettings": "Configuració del compte",
   "linked": "Enllaçat",
-  "unregistered": "No registrat",
+  "unregistered": "Sense registrar",
   "quickRecord": "Registre ràpid",
   "quickRecordDescription": "A la pantalla de notificacions pots veure quines píndoles has de prendre avui i registrar-ne la presa directament.",
   "healthCareIntegration": "Integració de Salut",

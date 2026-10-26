@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Kada se završi trenutna grupa blistera, novi blister će se automatski dodati",
   "accountSettings": "Postavke računa",
   "linked": "Povezano",
-  "unregistered": "Neregistrovan",
+  "unregistered": "Nije registrovano",
   "quickRecord": "Brzi zapis",
   "quickRecordDescription": "Ekran za obavještenja prikazuje pilule koje treba uzeti danas i omogućava vam da odmah zabilježite uzimanje.",
   "healthCareIntegration": "Zdravstvena integracija",

@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Когда текущая группа блистеров закончится, новый блистер добавится автоматически",
   "accountSettings": "Настройки аккаунта",
   "linked": "Привязано",
-  "unregistered": "Не подключено",
+  "unregistered": "Не зарегистрировано",
   "quickRecord": "Быстрая запись",
   "quickRecordDescription": "На экране уведомлений видно, какие таблетки принять сегодня, и можно сразу отметить их прием.",
   "healthCareIntegration": "Интеграция с Health",

@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Когато текущата група блистери приключи, автоматично ще се добави нов блистер",
   "accountSettings": "Настройки на акаунта",
   "linked": "Свързано",
-  "unregistered": "Нерегистриран",
+  "unregistered": "Няма регистрация",
   "quickRecord": "Бърз запис",
   "quickRecordDescription": "В екрана за известия можете да видите днешните си хапчета и веднага да запишете приема им.",
   "healthCareIntegration": "Здравна интеграция",

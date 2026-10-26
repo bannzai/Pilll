@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Kapag naubos ang kasalukuyang grupo ng pakete ng pildoras, awtomatikong magdaragdag ng bagong pakete",
   "accountSettings": "Mga setting ng account",
   "linked": "Nakaugnay",
-  "unregistered": "Hindi pa naka-rehistro",
+  "unregistered": "Hindi pa nakarehistro",
   "quickRecord": "Mabilis na Pagtala",
   "quickRecordDescription": "Sa notification screen, makikita mo ang mga pills na dapat inumin ngayon at agad mo ring mairerekord ang pag-inom.",
   "healthCareIntegration": "Healthcare Integration",

@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "বৰ্তমানৰ পিলৰ ষ্ট্ৰিপৰ গোট শেষ হ’লে, নতুন ষ্ট্ৰিপ এখন স্বয়ংক্ৰিয়ভাৱে যোগ হ’ব",
   "accountSettings": "একাউণ্টৰ ছেটিংছ",
   "linked": "সংযোগ কৰা হৈছে",
-  "unregistered": "অনিবন্ধিত",
+  "unregistered": "পঞ্জীয়ন কৰা হোৱা নাই",
   "quickRecord": "দ্ৰুত ৰেকৰ্ড",
   "quickRecordDescription": "জাননী পৰ্দাত আজি খাব লগীয়া বড়ি জানিব পাৰি আৰু তাতেই সেৱন ৰেকৰ্ড কৰিব পাৰি।",
   "healthCareIntegration": "স্বাস্থ্যসেৱা সংযোগ",

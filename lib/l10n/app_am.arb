@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "የአሁኑ ክኒን ሉህ ቡድን ሲያበቃ፣ አዲስ ክኒን ሉህ በራስ-ሰር ይጨመራል",
   "accountSettings": "የመለያ ቅንብሮች",
   "linked": "ተገናኝቷል",
-  "unregistered": "ያልተመዘገበ",
+  "unregistered": "አልተመዘገበም",
   "quickRecord": "ፈጣን መዝገብ",
   "quickRecordDescription": "በማሳወቂያ ማሳያ ላይ ዛሬ መውሰድ ያለብዎትን ክኒን ማወቅ እና በቀጥታ የመውሰድ መዝገብ መያዝ ይችላሉ።",
   "healthCareIntegration": "ጤና እንክብካቤ ትስስር",

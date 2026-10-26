@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Кога ќе заврши тековната група блистер, автоматски ќе се додаде нов блистер",
   "accountSettings": "Поставки за сметка",
   "linked": "Поврзано",
-  "unregistered": "Нерегистриран",
+  "unregistered": "Не е регистрирано",
   "quickRecord": "Брз запис",
   "quickRecordDescription": "На екранот за известувања можете да видите денешната пилула и веднаш да го запишете приемот.",
   "healthCareIntegration": "Здравствена интеграција",

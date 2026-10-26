@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Þegar núverandi hópi pilluspjald lýkur bætist nýtt spjald sjálfkrafa við",
   "accountSettings": "Reikningsstillingar",
   "linked": "Tengt",
-  "unregistered": "Óskráð",
+  "unregistered": "Ekki skráð",
   "quickRecord": "Skyndiskráning",
   "quickRecordDescription": "Á tilkynningaskjánum geturðu séð hvaða pillu á að taka í dag og skráð inntökuna beint þar.",
   "healthCareIntegration": "Heilsutenging",

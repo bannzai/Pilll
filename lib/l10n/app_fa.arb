@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "وقتی گروه فعلی ورق قرص تمام شود، ورق جدیدی به‌طور خودکار اضافه می‌شود",
   "accountSettings": "تنظیمات حساب کاربری",
   "linked": "متصل شده",
-  "unregistered": "ثبت نشده",
+  "unregistered": "ثبت‌نام نشده",
   "quickRecord": "ثبت سریع",
   "quickRecordDescription": "در صفحه اعلان‌ها قرص امروزتان را می‌بینید و می‌توانید مستقیماً ثبت مصرف کنید.",
   "healthCareIntegration": "ارتباط با بهداشت",

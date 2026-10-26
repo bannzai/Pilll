@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Одоогийн эмийн блистер бүлэг дуусахад шинэ блистер автоматаар нэмэгдэнэ",
   "accountSettings": "Бүртгэлийн тохиргоо",
   "linked": "Холбогдсон",
-  "unregistered": "бүртгэгдээгүй",
+  "unregistered": "Бүртгүүлээгүй",
   "quickRecord": "Хурдан бүртгэл",
   "quickRecordDescription": "Мэдэгдлийн дэлгэцэд өнөөдөр уух ширийг харж, шууд хэрэглэсэн тэмдэглэл хийж болно.",
   "healthCareIntegration": "Эрүүл мэндийн холбоо",

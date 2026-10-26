@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Kun nykyinen pilleriliuska-ryhmä päättyy, uusi liuska lisätään automaattisesti",
   "accountSettings": "Tilin asetukset",
   "linked": "Yhdistetty",
-  "unregistered": "Rekisteröimätön",
+  "unregistered": "Ei rekisteröity",
   "quickRecord": "Pikamerkintä",
   "quickRecordDescription": "Ilmoitusnäytössä näkyy tänään otettava pilleri ja voit kirjata ottamisen suoraan.",
   "healthCareIntegration": "Terveysdatan synkronointi",

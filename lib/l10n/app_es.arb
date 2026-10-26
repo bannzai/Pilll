@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Cuando termine el grupo actual de blíster, se añadirá automáticamente un blíster nuevo",
   "accountSettings": "Configuración de la cuenta",
   "linked": "Vinculado",
-  "unregistered": "No registrado",
+  "unregistered": "Sin registrar",
   "quickRecord": "Registro Rápido",
   "quickRecordDescription": "En la pantalla de notificaciones puedes ver las pastillas que debes tomar hoy y registrar la toma directamente.",
   "healthCareIntegration": "Integración de salud",
