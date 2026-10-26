@@ -191,7 +191,7 @@
   "moreDetails": "और जानकारी",
   "restorePurchase": "आपकी खरीदारी की जानकारी बहाल हो गई है",
   "previouslyPurchased": "पहले खरीदा है? अपनी खरीदारी यहाँ बहाल करें",
-  "noPreviousPurchaseInfo": "पिछली खरीदारी की जानकारी नहीं मिली। कृपया अपना खाता जांचें और पुनः कोशिश करें।",
+  "noPreviousPurchaseInfo": "पिछली खरीदारी की जानकारी नहीं मिली। कृपया अपना अकाउंट जाँचें और फिर से कोशिश करें।",
   "monthlyPlan": "मासिक प्लान",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/माह",
   "lifetimePlan": "आजीवन खरीद",

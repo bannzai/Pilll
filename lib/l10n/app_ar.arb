@@ -191,7 +191,7 @@
   "moreDetails": "مزيد من التفاصيل",
   "restorePurchase": "تمت استعادة معلومات الشراء",
   "previouslyPurchased": "هل اشتريتِ سابقًا؟ استعيدي مشترياتك من هنا",
-  "noPreviousPurchaseInfo": "لم يتم العثور على معلومات الشراء السابقة. يرجى التحقق من حسابك والمحاولة مرة أخرى",
+  "noPreviousPurchaseInfo": "لم يُعثر على معلومات شراء سابقة. يُرجى التحقق من الحساب ثم المحاولة مرة أخرى.",
   "monthlyPlan": "خطة شهرية",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/شهر",
   "lifetimePlan": "شراء مرة واحدة",

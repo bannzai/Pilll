@@ -191,7 +191,7 @@
   "moreDetails": "Več podrobnosti",
   "restorePurchase": "Podatki o vašem nakupu so obnovljeni",
   "previouslyPurchased": "Ste že opravili nakup? Obnovite ga tukaj",
-  "noPreviousPurchaseInfo": "Prejšnje informacije o nakupu niso bile najdene. Preverite svoj račun in poskusite znova.",
+  "noPreviousPurchaseInfo": "Podatkov o prejšnjem nakupu ni bilo mogoče najti. Preverite svoj račun in poskusite znova.",
   "monthlyPlan": "Mesečni paket",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mesec",
   "lifetimePlan": "enkratni nakup",

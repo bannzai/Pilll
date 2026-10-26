@@ -191,7 +191,7 @@
   "moreDetails": "Plus de détails",
   "restorePurchase": "Votre achat a été restauré",
   "previouslyPurchased": "Vous avez déjà acheté ? Restaurez votre achat ici",
-  "noPreviousPurchaseInfo": "Aucun achat précédent trouvé. Veuillez vérifier votre compte et réessayer.",
+  "noPreviousPurchaseInfo": "Aucune information sur un achat précédent n’a été trouvée. Vérifiez votre compte et réessayez.",
   "monthlyPlan": "Forfait mensuel",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mois",
   "lifetimePlan": "Achat unique",

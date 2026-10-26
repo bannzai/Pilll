@@ -191,7 +191,7 @@
   "moreDetails": "වැඩි විස්තර",
   "restorePurchase": "ඔබේ මිලදී ගැනීමේ තොරතුරු යළි ලබාගෙන ඇත",
   "previouslyPurchased": "කලින් මිලදී ගෙන තිබේද? කරුණාකර මිලදී ගැනීම මෙතැනින් ප්‍රතිසාධනය කරන්න",
-  "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීම් තොරතුරු හමු නොවිණි. කරුණාකර ඔබගේ ගිණුම පරීක්ෂා කර නැවත උත්සාහ කරන්න",
+  "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීමක තොරතුරු හමු නොවීය. කරුණාකර ඔබේ ගිණුම පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "monthlyPlan": "මාසික සැලැස්ම",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/මාසයට",
   "lifetimePlan": "එක්වරම මිලදී ගැනීම",

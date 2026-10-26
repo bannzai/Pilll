@@ -191,7 +191,7 @@
   "moreDetails": "Više detalja",
   "restorePurchase": "Podaci o Vašoj kupovini su vraćeni",
   "previouslyPurchased": "Već ste kupili? Ovdje možete vratiti kupovinu",
-  "noPreviousPurchaseInfo": "Prethodne informacije o kupovini nisu pronađene. Molimo provjerite svoj račun i pokušajte ponovo.",
+  "noPreviousPurchaseInfo": "Podaci o prethodnoj kupovini nisu pronađeni. Molimo, provjerite svoj račun i pokušajte ponovo.",
   "monthlyPlan": "Mjesečna pretplata",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mjesečno",
   "lifetimePlan": "jednokratna kupovina",

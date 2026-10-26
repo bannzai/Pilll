@@ -191,7 +191,7 @@
   "moreDetails": "Дэлгэрэнгүй мэдээлэл",
   "restorePurchase": "Таны худалдан авалтын мэдээллийг сэргээсэн",
   "previouslyPurchased": "Өмнө нь худалдаж авсан уу? Худалдан авалтаа энд сэргээнэ үү",
-  "noPreviousPurchaseInfo": "Өмнөх худалдан авалтын мэдээлэл олдсонгүй. Бүртгэлээ шалгаад дахин оролдож үзнэ үү",
+  "noPreviousPurchaseInfo": "Өмнөх худалдан авалтын мэдээлэл олдсонгүй. Та бүртгэлээ шалгаад дахин оролдоно уу.",
   "monthlyPlan": "Сарын план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/сар",
   "lifetimePlan": "нэг удаагийн худалдан авалт",

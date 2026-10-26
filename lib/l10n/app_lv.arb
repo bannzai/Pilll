@@ -191,7 +191,7 @@
   "moreDetails": "Plašāka informācija",
   "restorePurchase": "Jūsu pirkuma informācija ir atjaunota",
   "previouslyPurchased": "Jau iegādājāties? Atjaunojiet pirkumu šeit",
-  "noPreviousPurchaseInfo": "Iepriekšējo pirkumu informācija nav atrasta. Lūdzu, pārbaudiet savu kontu un mēģiniet vēlreiz.",
+  "noPreviousPurchaseInfo": "Informācija par iepriekšēju pirkumu nav atrasta. Lūdzu, pārbaudiet savu kontu un mēģiniet vēlreiz.",
   "monthlyPlan": "Mēneša plāns",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mēn.",
   "lifetimePlan": "vienreizējs pirkums",

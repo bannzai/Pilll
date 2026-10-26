@@ -191,7 +191,7 @@
   "moreDetails": "Περισσότερες λεπτομέρειες",
   "restorePurchase": "Τα στοιχεία της αγοράς σας αποκαταστάθηκαν",
   "previouslyPurchased": "Έχετε αγοράσει ήδη; Επαναφέρετε την αγορά σας εδώ",
-  "noPreviousPurchaseInfo": "Δεν βρέθηκαν στοιχεία προηγούμενων αγορών. Παρακαλώ ελέγξτε τον λογαριασμό σας και δοκιμάστε ξανά.",
+  "noPreviousPurchaseInfo": "Δεν βρέθηκαν στοιχεία προηγούμενης αγοράς. Ελέγξτε τον λογαριασμό σας και δοκιμάστε ξανά.",
   "monthlyPlan": "Μηνιαία Συνδρομή",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/μήνα",
   "lifetimePlan": "Εφάπαξ αγορά",

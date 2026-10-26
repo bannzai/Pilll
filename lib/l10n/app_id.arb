@@ -191,7 +191,7 @@
   "moreDetails": "Selengkapnya",
   "restorePurchase": "Informasi pembelian Anda berhasil dipulihkan",
   "previouslyPurchased": "Sudah pernah membeli? Pulihkan pembelian Anda di sini",
-  "noPreviousPurchaseInfo": "Informasi pembelian sebelumnya tidak ditemukan. Silakan periksa akun Anda dan coba lagi.",
+  "noPreviousPurchaseInfo": "Informasi pembelian sebelumnya tidak ditemukan. Silakan periksa akun Anda, lalu coba lagi.",
   "monthlyPlan": "Paket Bulanan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/bulan",
   "lifetimePlan": "Pembelian Sekali",

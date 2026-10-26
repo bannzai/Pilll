@@ -191,7 +191,7 @@
   "moreDetails": "დამატებითი ინფორმაცია",
   "restorePurchase": "თქვენი შესყიდვის ინფორმაცია აღდგენილია",
   "previouslyPurchased": "ადრე შეიძინეთ? შენაძენის აღდგენა აქ",
-  "noPreviousPurchaseInfo": "ადრინდელი შესყიდვის ინფორმაცია ვერ მოიძებნა. გთხოვთ, შეამოწმოთ თქვენი ანგარიში და კვლავ სცადოთ.",
+  "noPreviousPurchaseInfo": "წინა შეძენის შესახებ ინფორმაცია ვერ მოიძებნა. გთხოვთ, შეამოწმოთ თქვენი ანგარიში და ხელახლა სცადოთ.",
   "monthlyPlan": "ყოველთვიური ტარიფი",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/თვე",
   "lifetimePlan": "ერთჯერადი შესყიდვა",

@@ -191,7 +191,7 @@
   "moreDetails": "थप जानकारी",
   "restorePurchase": "तपाईंको खरिदसम्बन्धी जानकारी पुनर्स्थापित भएको छ",
   "previouslyPurchased": "पहिले खरिद गर्नुभएको छ? आफ्नो खरिद यहाँ पुनर्स्थापना गर्नुहोस्",
-  "noPreviousPurchaseInfo": "पहिलेको खरिद जानकारी फेला परेन। खाता जाँच गरेर पुनः प्रयास गर्नुहोस्।",
+  "noPreviousPurchaseInfo": "अघिल्लो खरिदको जानकारी फेला परेन। कृपया आफ्नो खाता जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।",
   "monthlyPlan": "मासिक प्लान",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/महिना",
   "lifetimePlan": "एकपटक खरिद",

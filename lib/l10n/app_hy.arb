@@ -191,7 +191,7 @@
   "moreDetails": "Մանրամասներ",
   "restorePurchase": "Ձեր գնման տվյալները վերականգնվել են",
   "previouslyPurchased": "Նախկինում գնե՞լ եք։ Վերականգնեք գնումն այստեղ",
-  "noPreviousPurchaseInfo": "Նախորդ գնման տվյալները չեն գտնվել: Ստուգեք ձեր հաշիվը և կրկին փորձեք:",
+  "noPreviousPurchaseInfo": "Նախորդ գնման մասին տեղեկություն չի գտնվել։ Խնդրում ենք ստուգել Ձեր հաշիվը և կրկին փորձել։",
   "monthlyPlan": "Ամսական պլան",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ամիս",
   "lifetimePlan": "մեկանգամյա գնում",

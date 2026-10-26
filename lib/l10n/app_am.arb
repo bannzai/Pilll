@@ -191,7 +191,7 @@
   "moreDetails": "ለተጨማሪ ዝርዝር መረጃ",
   "restorePurchase": "የግዢ መረጃዎ ተመልሷል",
   "previouslyPurchased": "ከዚህ በፊት ገዝተዋል? ግዢውን እዚህ ይመልሱ",
-  "noPreviousPurchaseInfo": "የቀደመ ግዢ መረጃ አልተገኘም። እባክዎ መለያዎን ይመርምሩ እና እንደገና ይሞክሩ",
+  "noPreviousPurchaseInfo": "የቀድሞ ግዢ መረጃ አልተገኘም። እባክዎ መለያዎን ያረጋግጡና እንደገና ይሞክሩ።",
   "monthlyPlan": "ወርሃዊ እቅድ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ወር",
   "lifetimePlan": "አንድ ጊዜ ክፍያ",

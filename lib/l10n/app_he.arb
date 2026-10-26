@@ -191,7 +191,7 @@
   "moreDetails": "פרטים נוספים",
   "restorePurchase": "פרטי הרכישה שוחזרו",
   "previouslyPurchased": "כבר בוצעה רכישה? שחזור הרכישה כאן",
-  "noPreviousPurchaseInfo": "לא נמצאו רכישות קודמות. אנא ודאו שאתם מחוברים לחשבון הנכון ונסו שוב",
+  "noPreviousPurchaseInfo": "לא נמצא מידע על רכישה קודמת. כדאי לבדוק את החשבון ולנסות שוב.",
   "monthlyPlan": "תכנית חודשית",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/לחודש",
   "lifetimePlan": "רכישה חד-פעמית",

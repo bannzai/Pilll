@@ -191,7 +191,7 @@
   "moreDetails": "Meer besonderhede",
   "restorePurchase": "Jou aankoop is herstel",
   "previouslyPurchased": "Reeds gekoop? Herstel jou aankoop hier",
-  "noPreviousPurchaseInfo": "Kan nie vorige aankope vind nie. Kontroleer jou rekening en probeer weer.",
+  "noPreviousPurchaseInfo": "Geen vorige aankoop is gevind nie. Maak asseblief seker jy gebruik die regte rekening en probeer weer.",
   "monthlyPlan": "Maandelikse Plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",
   "lifetimePlan": "Eenmalige koop",

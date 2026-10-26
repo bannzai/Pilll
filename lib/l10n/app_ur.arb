@@ -191,7 +191,7 @@
   "moreDetails": "مزید تفصیلات",
   "restorePurchase": "آپ کی خریداری کی معلومات بحال ہو گئی ہیں",
   "previouslyPurchased": "پہلے خرید چکے ہیں؟ اپنی خریداری یہاں بحال کریں",
-  "noPreviousPurchaseInfo": "پچھلی خریداری کی معلومات نہیں ملیں۔ اپنے اکاؤنٹ کی تصدیق کرکے دوبارہ کوشش کریں",
+  "noPreviousPurchaseInfo": "پچھلی خریداری کی معلومات نہیں ملیں۔ براہِ کرم اپنا اکاؤنٹ چیک کریں اور دوبارہ کوشش کریں۔",
   "monthlyPlan": "ماہانہ پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/مہینہ",
   "lifetimePlan": "ایک بار خرید",

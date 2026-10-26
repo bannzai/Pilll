@@ -191,7 +191,7 @@
   "moreDetails": "نور جزئیات",
   "restorePurchase": "ستاسو د پېرود معلومات بېرته راګرځول شوي دي",
   "previouslyPurchased": "مخکې مو پېرود کړی؟ خپل پېرود دلته بېرته راولي",
-  "noPreviousPurchaseInfo": "د پخوانۍ پیرودنې معلومات ونه موندل شول. مهرباني وکړئ خپل حساب وګورئ او بیا هڅه وکړئ.",
+  "noPreviousPurchaseInfo": "د پخوانۍ پېرودنې معلومات ونه موندل شول. مهرباني وکړئ خپل حساب وګورئ او بیا هڅه وکړئ.",
   "monthlyPlan": "میاشتنۍ پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/په میاشت کې",
   "lifetimePlan": "یوځل پیرود",

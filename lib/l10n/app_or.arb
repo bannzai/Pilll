@@ -191,7 +191,7 @@
   "moreDetails": "ଅଧିକ ବିବରଣୀ",
   "restorePurchase": "ଆପଣଙ୍କ କ୍ରୟ ସୂଚନା ପୁନରୁଦ୍ଧାର ହୋଇଛି",
   "previouslyPurchased": "ପୂର୍ବରୁ କିଣିଛନ୍ତି କି? ଏଠାରେ ଆପଣଙ୍କ କ୍ରୟ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ",
-  "noPreviousPurchaseInfo": "ପୂର୍ବ କ୍ରୟ ସୂଚନା ମିଳିଲା ନାହିଁ। ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "noPreviousPurchaseInfo": "ପୂର୍ବ କ୍ରୟର ସୂଚନା ମିଳିଲା ନାହିଁ। ଦୟାକରି ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।",
   "monthlyPlan": "ମାସିକ ଯୋଜନା",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ମାସ",
   "lifetimePlan": "ଏକଥର କ୍ରୟ",

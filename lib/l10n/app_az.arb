@@ -191,7 +191,7 @@
   "moreDetails": "Ətraflı məlumat",
   "restorePurchase": "Satınalma məlumatlarınız bərpa edildi",
   "previouslyPurchased": "Əvvəl almısınız? Alışınızı buradan bərpa edin",
-  "noPreviousPurchaseInfo": "Əvvəlki alış məlumatları tapılmadı. Hesabınızı yoxlayın və yenidən cəhd edin",
+  "noPreviousPurchaseInfo": "Əvvəlki alış məlumatı tapılmadı. Zəhmət olmasa, hesabınızı yoxlayıb yenidən cəhd edin.",
   "monthlyPlan": "Aylıq plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",
   "lifetimePlan": "Birdəfəlik satın alma",

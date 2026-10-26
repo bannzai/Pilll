@@ -191,7 +191,7 @@
   "moreDetails": "अधिक तपशील",
   "restorePurchase": "तुमच्या खरेदीची माहिती पुनर्संचयित झाली आहे",
   "previouslyPurchased": "आधी खरेदी केली आहे? तुमची खरेदी येथे पुनर्स्थापित करा",
-  "noPreviousPurchaseInfo": "पूर्वीची खरेदी माहिती आढळली नाही. कृपया आपले खाते तपासून पुन्हा प्रयत्न करा",
+  "noPreviousPurchaseInfo": "मागील खरेदीची माहिती सापडली नाही. कृपया तुमचे खाते तपासा आणि पुन्हा प्रयत्न करा.",
   "monthlyPlan": "मासिक योजना",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/महिना",
   "lifetimePlan": "एकदा खरेदी",

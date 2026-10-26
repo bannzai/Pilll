@@ -191,7 +191,7 @@
   "moreDetails": "Nánari upplýsingar",
   "restorePurchase": "Upplýsingar um kaupin þín hafa verið endurheimtar",
   "previouslyPurchased": "Hefurðu keypt áður? Endurheimtu kaupin hér",
-  "noPreviousPurchaseInfo": "Engar fyrri kaupupplýsingar fundust. Vinsamlegast staðfestu reikninginn þinn og reyndu aftur.",
+  "noPreviousPurchaseInfo": "Engar upplýsingar um fyrri kaup fundust. Athugaðu reikninginn þinn og reyndu aftur.",
   "monthlyPlan": "Mánaðaráskrift",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuður",
   "lifetimePlan": "einnkaup",

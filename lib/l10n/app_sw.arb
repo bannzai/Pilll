@@ -191,7 +191,7 @@
   "moreDetails": "Maelezo zaidi",
   "restorePurchase": "Taarifa za ununuzi wako zimerejeshwa",
   "previouslyPurchased": "Ulishanunua awali? Tafadhali rejesha ununuzi wako hapa",
-  "noPreviousPurchaseInfo": "Taarifa za ununuzi wa awali hazijapatikana. Hakikisha akaunti yako na ujaribu tena",
+  "noPreviousPurchaseInfo": "Hakuna taarifa za ununuzi wa awali zilizopatikana. Tafadhali angalia akaunti yako kisha ujaribu tena.",
   "monthlyPlan": "Mpango wa Mwezi",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mwezi",
   "lifetimePlan": "Ununuzi wa mara moja",

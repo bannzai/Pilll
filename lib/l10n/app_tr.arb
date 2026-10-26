@@ -191,7 +191,7 @@
   "moreDetails": "Ayrıntılı bilgi",
   "restorePurchase": "Satın alma bilgileriniz geri yüklendi",
   "previouslyPurchased": "Daha önce satın aldınız mı? Satın alımınızı buradan geri yükleyin",
-  "noPreviousPurchaseInfo": "Önceki satın alma bilgileri bulunamadı. Lütfen hesabınızı kontrol edin ve tekrar deneyin.",
+  "noPreviousPurchaseInfo": "Önceki satın alma bilgileri bulunamadı. Lütfen hesabınızı kontrol edip tekrar deneyin.",
   "monthlyPlan": "Aylık Plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",
   "lifetimePlan": "Tek Seferlik",

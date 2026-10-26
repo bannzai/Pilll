@@ -191,7 +191,7 @@
   "moreDetails": "Daugiau informacijos",
   "restorePurchase": "Jūsų pirkimo informacija atkurta",
   "previouslyPurchased": "Jau pirkote? Atkurkite pirkinį čia",
-  "noPreviousPurchaseInfo": "Ankstesnės pirkimo informacijos nerasta. Patikrinkite savo paskyrą ir bandykite dar kartą",
+  "noPreviousPurchaseInfo": "Ankstesnio pirkimo informacijos nerasta. Patikrinkite savo paskyrą ir bandykite dar kartą.",
   "monthlyPlan": "Mėnesio planas",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mėn.",
   "lifetimePlan": "Vienkartinis pirkimas",

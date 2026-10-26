@@ -191,7 +191,7 @@
   "moreDetails": "Maggiori dettagli",
   "restorePurchase": "Le informazioni sull'acquisto sono state ripristinate",
   "previouslyPurchased": "Hai già acquistato? Ripristina l'acquisto qui",
-  "noPreviousPurchaseInfo": "Non sono state trovate informazioni sui precedenti acquisti. Verifica il tuo account e riprova.",
+  "noPreviousPurchaseInfo": "Non sono state trovate informazioni su acquisti precedenti. Controlla il tuo account e riprova.",
   "monthlyPlan": "Piano mensile",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mese",
   "lifetimePlan": "acquisto unico",

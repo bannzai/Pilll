@@ -191,7 +191,7 @@
   "moreDetails": "વધુ વિગતો",
   "restorePurchase": "તમારી ખરીદીની માહિતી પુનઃસ્થાપિત થઈ ગઈ છે",
   "previouslyPurchased": "પહેલાં ખરીદ્યું છે? અહીં તમારી ખરીદી પુનઃસ્થાપિત કરો",
-  "noPreviousPurchaseInfo": "અગાઉની ખરીદીની માહિતી મળી નથી. કૃપા કરીને તમારું એકાઉન્ટ ચકાસીને ફરીથી પ્રયાસ કરો",
+  "noPreviousPurchaseInfo": "અગાઉની ખરીદીની માહિતી મળી નથી. કૃપા કરીને તમારું ખાતું તપાસો અને ફરી પ્રયાસ કરો.",
   "monthlyPlan": "માસિક પ્લાન",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/મહિનો",
   "lifetimePlan": "કાયમી ખરીદી",

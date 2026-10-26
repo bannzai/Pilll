@@ -191,7 +191,7 @@
   "moreDetails": "További részletek",
   "restorePurchase": "A vásárlási adataid visszaálltak",
   "previouslyPurchased": "Korábban már megvetted? Itt állíthatod vissza a vásárlást",
-  "noPreviousPurchaseInfo": "Nem találhatók korábbi vásárlások. Kérjük, ellenőrizze a fiókját és próbálja meg újra.",
+  "noPreviousPurchaseInfo": "Nem található korábbi vásárlásra vonatkozó adat. Ellenőrizd a fiókodat, majd próbáld újra.",
   "monthlyPlan": "Havi előfizetés",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hó",
   "lifetimePlan": "Egyszeri vásárlás",

@@ -191,7 +191,7 @@
   "moreDetails": "Толығырақ",
   "restorePurchase": "Сатып алу туралы ақпаратыңыз қалпына келтірілді",
   "previouslyPurchased": "Бұрын сатып алдыңыз ба? Сатып алуды осы жерден қалпына келтіріңіз",
-  "noPreviousPurchaseInfo": "Бұрынғы сатып алу ақпараты табылмады. Тіркелгіңізді тексеріп, қайтадан сынап көріңіз",
+  "noPreviousPurchaseInfo": "Бұрынғы сатып алу туралы ақпарат табылмады. Есептік жазбаңызды тексеріп, қайта көріңіз.",
   "monthlyPlan": "Айлық жоспар",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",
   "lifetimePlan": "бір рет сатып алу",

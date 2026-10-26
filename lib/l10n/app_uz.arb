@@ -191,7 +191,7 @@
   "moreDetails": "Batafsil maʼlumot",
   "restorePurchase": "Xaridingiz haqidagi maʼlumotlar tiklandi",
   "previouslyPurchased": "Avval xarid qilganmisiz? Xaridingizni shu yerda tiklang",
-  "noPreviousPurchaseInfo": "Oldingi xarid ma'lumotlari topilmadi. Hisobingizni tekshirib, qaytadan urinib ko'ring.",
+  "noPreviousPurchaseInfo": "Avvalgi xarid haqida maʼlumot topilmadi. Iltimos, hisobingizni tekshirib, qayta urinib koʻring.",
   "monthlyPlan": "Oylik plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/oy",
   "lifetimePlan": "Bir martalik sotib olish",

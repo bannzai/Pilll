@@ -191,7 +191,7 @@
   "moreDetails": "Mai multe detalii",
   "restorePurchase": "Informațiile despre achiziția ta au fost restabilite",
   "previouslyPurchased": "Ai cumpărat deja? Restabilește achiziția aici",
-  "noPreviousPurchaseInfo": "Nu am găsit informații despre achizițiile anterioare. Te rugăm să îți verifici contul și să încerci din nou.",
+  "noPreviousPurchaseInfo": "Nu au fost găsite informații despre o achiziție anterioară. Verifică-ți contul și încearcă din nou.",
   "monthlyPlan": "Plan lunar",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/lună",
   "lifetimePlan": "achiziție unică",

@@ -191,7 +191,7 @@
   "moreDetails": "Higit pang detalye",
   "restorePurchase": "Naibalik na ang impormasyon ng binili ninyo",
   "previouslyPurchased": "Nakabili na po kayo dati? Ibalik ang inyong binili rito",
-  "noPreviousPurchaseInfo": "Walang nahanap na nakaraang impormasyon ng pagbili. Pakitingnan ang inyong account at subukang muli.",
+  "noPreviousPurchaseInfo": "Walang nakitang impormasyon tungkol sa nauna ninyong pagbili. Pakisuri po ang inyong account at subukang muli.",
   "monthlyPlan": "Buwanang Plano",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/buwan",
   "lifetimePlan": "Isang beses na pagbili",

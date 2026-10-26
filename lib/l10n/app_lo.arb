@@ -191,7 +191,7 @@
   "moreDetails": "ລາຍລະອຽດເພີ່ມເຕີມ",
   "restorePurchase": "ຂໍ້ມູນການຊື້ຂອງທ່ານຖືກກູ້ຄືນແລ້ວ",
   "previouslyPurchased": "ເຄີຍຊື້ແລ້ວບໍ? ກະລຸນາກູ້ຄືນການຊື້ຢູ່ນີ້",
-  "noPreviousPurchaseInfo": "ບໍ່ພົບຂໍ້ມູນການຊື້ກ່ອນໜ້ານີ້. ກະລຸນາກວດສອບບັນຊີຂອງທ່ານແລ້ວລອງໃໝ່ອີກຄັ້ງ",
+  "noPreviousPurchaseInfo": "ບໍ່ພົບຂໍ້ມູນການຊື້ກ່ອນໜ້ານີ້. ກະລຸນາກວດສອບບັນຊີຂອງທ່ານ ແລ້ວລອງອີກຄັ້ງ.",
   "monthlyPlan": "ແຜນປະຈຳເດືອນ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ເດືອນ",
   "lifetimePlan": "ຊື້ຄັ້ງດຽວ",

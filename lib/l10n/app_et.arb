@@ -191,7 +191,7 @@
   "moreDetails": "Lisateave",
   "restorePurchase": "Sinu ostuteave on taastatud",
   "previouslyPurchased": "Oled juba ostnud? Taasta ost siin",
-  "noPreviousPurchaseInfo": "Varasemaid ostuandmeid ei leitud. Kontrollige oma kontot ja proovige uuesti.",
+  "noPreviousPurchaseInfo": "Varasema ostu andmeid ei leitud. Kontrolli oma kontot ja proovi uuesti.",
   "monthlyPlan": "Kuine plaan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kuus",
   "lifetimePlan": "ühekordne ost",

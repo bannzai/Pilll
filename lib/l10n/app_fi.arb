@@ -191,7 +191,7 @@
   "moreDetails": "Lisätietoja",
   "restorePurchase": "Ostotietosi on palautettu",
   "previouslyPurchased": "Oletko ostanut jo aiemmin? Palauta ostos tästä",
-  "noPreviousPurchaseInfo": "Aiempia ostoja ei löydetty. Tarkista tilisi ja yritä uudelleen.",
+  "noPreviousPurchaseInfo": "Aiempaa ostosta ei löytynyt. Tarkista tilisi ja yritä uudelleen.",
   "monthlyPlan": "Kuukausipaketti",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kk",
   "lifetimePlan": "Kertaosto",

@@ -191,7 +191,7 @@
   "moreDetails": "Rhagor o fanylion",
   "restorePurchase": "Mae manylion eich pryniant wedi'u hadfer",
   "previouslyPurchased": "Wedi prynu o'r blaen? Adferwch eich pryniant yma",
-  "noPreviousPurchaseInfo": "Ni chanfuwyd gwybodaeth brynu flaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni",
+  "noPreviousPurchaseInfo": "Ni ddaethpwyd o hyd i wybodaeth am bryniant blaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni.",
   "monthlyPlan": "Cynllun Misol",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mis",
   "lifetimePlan": "pryniant un-tro",

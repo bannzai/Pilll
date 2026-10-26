@@ -191,7 +191,7 @@
   "moreDetails": "အသေးစိတ်အချက်အလက်",
   "restorePurchase": "ဝယ်ယူမှုအချက်အလက်ကို ပြန်လည်ရယူပြီးပါပြီ",
   "previouslyPurchased": "အရင်က ဝယ်ယူထားပါသလား? ဝယ်ယူမှုကို ဒီမှာ ပြန်လည်ရယူပါ",
-  "noPreviousPurchaseInfo": "အရင်က ဝယ်ယူခဲ့သော အချက်အလက်များ မတွေ့ရပါ။ အကောင့်ကို ပြန်လည်စစ်ဆေးပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
+  "noPreviousPurchaseInfo": "ယခင်ဝယ်ယူမှု အချက်အလက်ကို မတွေ့ပါ။ ကျေးဇူးပြု၍ အကောင့်ကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။",
   "monthlyPlan": "လစဉ်အစီအစဉ်",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/တစ်လ",
   "lifetimePlan": "တစ်ကြိမ်သာ ဝယ်ယူမှု",

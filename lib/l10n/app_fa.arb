@@ -191,7 +191,7 @@
   "moreDetails": "جزئیات بیشتر",
   "restorePurchase": "اطلاعات خرید شما بازیابی شد",
   "previouslyPurchased": "قبلاً خرید کرده‌اید؟ خرید خود را اینجا بازیابی کنید",
-  "noPreviousPurchaseInfo": "اطلاعات خرید قبلی یافت نشد. لطفاً حساب کاربری خود را بررسی کرده و دوباره تلاش کنید",
+  "noPreviousPurchaseInfo": "اطلاعاتی از خرید قبلی پیدا نشد. لطفاً حساب خود را بررسی کنید و دوباره تلاش کنید.",
   "monthlyPlan": "اشتراک ماهانه",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماه",
   "lifetimePlan": "خرید یکباره",

@@ -191,7 +191,7 @@
   "moreDetails": "మరిన్ని వివరాలు",
   "restorePurchase": "మీ కొనుగోలు సమాచారం పునరుద్ధరించబడింది",
   "previouslyPurchased": "ఇంతకు ముందు కొనుగోలు చేశారా? మీ కొనుగోలును ఇక్కడ పునరుద్ధరించండి",
-  "noPreviousPurchaseInfo": "పూర్వ కొనుగోలు సమాచారం కనుగొనబడలేదు. దయచేసి మీ ఖాతాను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",
+  "noPreviousPurchaseInfo": "మునుపటి కొనుగోలు వివరాలు కనుగొనబడలేదు. దయచేసి మీ ఖాతాను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
   "monthlyPlan": "మాసిక ప్లాన్",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/నెల",
   "lifetimePlan": "లైఫ్ టైమ్",

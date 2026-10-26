@@ -191,7 +191,7 @@
   "moreDetails": "Повече подробности",
   "restorePurchase": "Информацията за покупката ви е възстановена",
   "previouslyPurchased": "Вече сте закупили? Възстановете покупката тук",
-  "noPreviousPurchaseInfo": "Не са намерени предишни покупки. Моля, проверете акаунта си и опитайте отново.",
+  "noPreviousPurchaseInfo": "Не е намерена информация за предишна покупка. Моля, проверете акаунта си и опитайте отново.",
   "monthlyPlan": "Месечен план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",
   "lifetimePlan": "еднократна покупка",
