@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Volume",
   "logout": "Log out",
   "goToInitialSettingAndReloginIfNeededMessage": "You’ll return to the initial setup. If you need to log in, you can do so at the bottom of the setup screen.",
-  "deleteAccount": "Delete Account",
+  "deleteAccount": "Delete account",
   "logoutCompleted": "Logged out",
   "specialDiscountPriceNow": "Get Premium at a Special Price!",
   "inquiryTypeLabel": "Inquiry Type",

@@ -430,7 +430,7 @@
   "criticalAlertVolume": "የድምፅ መጠን",
   "logout": "ውጣ",
   "goToInitialSettingAndReloginIfNeededMessage": "ወደ መጀመሪያ ማዋቀሪያ ይመለሳሉ። መግባት ካስፈለገዎት፣ እባክዎ በመጀመሪያ ማዋቀሪያ ገጽ ታች በኩል ይግቡ።",
-  "deleteAccount": "መለያ ሰርዝ",
+  "deleteAccount": "መለያ መሰረዝ",
   "logoutCompleted": "ወጥተዋል",
   "specialDiscountPriceNow": "በልዩ ዋጋ ፕሪሚየም እቅዱን ያግኙ！",
   "inquiryTypeLabel": "የጥያቄ አይነት",

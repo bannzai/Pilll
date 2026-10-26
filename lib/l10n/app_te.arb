@@ -430,7 +430,7 @@
   "criticalAlertVolume": "ధ్వని స్థాయి",
   "logout": "లాగ్ అవుట్",
   "goToInitialSettingAndReloginIfNeededMessage": "మీరు ప్రారంభ సెటప్‌కు తిరిగి వెళ్తారు. లాగిన్ కావాల్సి వస్తే, దయచేసి ప్రారంభ సెటప్ స్క్రీన్ దిగువ భాగం నుంచి లాగిన్ అవ్వండి.",
-  "deleteAccount": "ఖాతా తొలగింపు",
+  "deleteAccount": "ఖాతాను తొలగించండి",
   "logoutCompleted": "లాగ్ అవుట్ అయ్యింది",
   "specialDiscountPriceNow": "ప్రత్యేక ధరలో ప్రీమియం ప్లాన్ పొందండి!",
   "inquiryTypeLabel": "విచారణ అంశం",

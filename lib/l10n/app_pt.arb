@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Volume",
   "logout": "Sair da conta",
   "goToInitialSettingAndReloginIfNeededMessage": "Você voltará à configuração inicial. Se precisar entrar na sua conta, poderá fazer isso na parte inferior dessa tela.",
-  "deleteAccount": "Excluir Conta",
+  "deleteAccount": "Excluir conta",
   "logoutCompleted": "Desconectado",
   "specialDiscountPriceNow": "Obtenha o plano premium com preço especial!",
   "inquiryTypeLabel": "Tipo de consulta",

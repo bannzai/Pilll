@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Äänenvoimakkuus",
   "logout": "Kirjaudu ulos",
   "goToInitialSettingAndReloginIfNeededMessage": "Palaat alkuasetuksiin. Jos sinun täytyy kirjautua sisään, voit tehdä sen alkuasetusten näytön alareunasta.",
-  "deleteAccount": "Tilin poisto",
+  "deleteAccount": "Poista tili",
   "logoutCompleted": "Kirjauduttu ulos",
   "specialDiscountPriceNow": "Hanki Premium-paketti erikoishintaan!",
   "inquiryTypeLabel": "Yhteydenoton aihe",

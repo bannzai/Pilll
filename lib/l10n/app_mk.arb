@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Јачина на звук",
   "logout": "Одјавување",
   "goToInitialSettingAndReloginIfNeededMessage": "Ќе се вратите на почетното поставување. Ако треба да се најавите, можете да го направите тоа на дното на екранот за почетно поставување.",
-  "deleteAccount": "Бришење на сметка",
+  "deleteAccount": "Бришење сметка",
   "logoutCompleted": "Се одјавивте",
   "specialDiscountPriceNow": "Добијте го премиум планот по специјална цена!",
   "inquiryTypeLabel": "Тип на барање",

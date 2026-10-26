@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Garsumas",
   "logout": "Atsijungti",
   "goToInitialSettingAndReloginIfNeededMessage": "Grįšite į pradinę sąranką. Jei reikės prisijungti, tai galėsite padaryti pradinės sąrankos ekrano apačioje.",
-  "deleteAccount": "Paskyros ištrinimas",
+  "deleteAccount": "Ištrinti paskyrą",
   "logoutCompleted": "Atsijungėte",
   "specialDiscountPriceNow": "Gauk Premium planą specialia kaina!",
   "inquiryTypeLabel": "Užklausos tema",

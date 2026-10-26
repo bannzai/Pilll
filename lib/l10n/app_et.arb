@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Helitugevus",
   "logout": "Logi välja",
   "goToInitialSettingAndReloginIfNeededMessage": "Naased algseadistusse. Kui pead sisse logima, saad seda teha algseadistuse kuva allosas.",
-  "deleteAccount": "Konto kustutamine",
+  "deleteAccount": "Kustuta konto",
   "logoutCompleted": "Välja logitud",
   "specialDiscountPriceNow": "Hanki Premium-pakett eripakkumisega!",
   "inquiryTypeLabel": "Päringutüüp",

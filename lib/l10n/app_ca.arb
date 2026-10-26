@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Volum",
   "logout": "Tanca la sessió",
   "goToInitialSettingAndReloginIfNeededMessage": "Tornaràs a la configuració inicial. Si has d’iniciar sessió, pots fer-ho a la part inferior de la pantalla de configuració inicial.",
-  "deleteAccount": "Eliminar compte",
+  "deleteAccount": "Eliminar el compte",
   "logoutCompleted": "S'ha tancat la sessió",
   "specialDiscountPriceNow": "Aconsegueix el pla premium a preu especial!",
   "inquiryTypeLabel": "Tipus de consulta",

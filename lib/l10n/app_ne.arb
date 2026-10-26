@@ -430,7 +430,7 @@
   "criticalAlertVolume": "आवाजको स्तर",
   "logout": "लग आउट",
   "goToInitialSettingAndReloginIfNeededMessage": "तपाईं प्रारम्भिक सेटअपमा फर्कनुहुनेछ। लग इन गर्न आवश्यक भएमा, कृपया प्रारम्भिक सेटअप स्क्रिनको तलबाट लग इन गर्नुहोस्।",
-  "deleteAccount": "खाता मेटाउने",
+  "deleteAccount": "खाता मेटाउनुहोस्",
   "logoutCompleted": "लगआउट भयो",
   "specialDiscountPriceNow": "विशेष छुटमा प्रिमियम प्लान पाउनुहोस्！",
   "inquiryTypeLabel": "सोधपुछ विषय",

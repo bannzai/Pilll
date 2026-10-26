@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Гучнасць",
   "logout": "Выйсці",
   "goToInitialSettingAndReloginIfNeededMessage": "Вы вернецеся да пачатковай налады. Калі спатрэбіцца ўвайсці, зрабіце гэта, калі ласка, унізе экрана пачатковай налады.",
-  "deleteAccount": "Выдаленне акаўнта",
+  "deleteAccount": "Выдаліць уліковы запіс",
   "logoutCompleted": "Выйшлі з сістэмы",
   "specialDiscountPriceNow": "Атрымайце прэміум-план па спецыяльнай цане!",
   "inquiryTypeLabel": "Катэгорыя звароту",

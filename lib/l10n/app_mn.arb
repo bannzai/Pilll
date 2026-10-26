@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Дууны түвшин",
   "logout": "Бүртгэлээс гарах",
   "goToInitialSettingAndReloginIfNeededMessage": "Та анхны тохиргоо руу буцна. Нэвтрэх шаардлагатай бол анхны тохиргооны дэлгэцийн доод хэсгээс нэвтэрнэ үү.",
-  "deleteAccount": "Данс устгах",
+  "deleteAccount": "Бүртгэл устгах",
   "logoutCompleted": "Системээс гарлаа",
   "specialDiscountPriceNow": "Тусгай үнээр премиум төлөвлөгөө авах!",
   "inquiryTypeLabel": "Хандалтын төрөл",

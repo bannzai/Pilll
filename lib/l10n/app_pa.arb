@@ -430,7 +430,7 @@
   "criticalAlertVolume": "ਆਵਾਜ਼ ਦਾ ਪੱਧਰ",
   "logout": "ਲੌਗ ਆਊਟ",
   "goToInitialSettingAndReloginIfNeededMessage": "ਤੁਸੀਂ ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅੱਪ ’ਤੇ ਵਾਪਸ ਜਾਓਗੇ। ਜੇ ਲੌਗ ਇਨ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸ਼ੁਰੂਆਤੀ ਸੈੱਟਅੱਪ ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਾਂ ਤੋਂ ਲੌਗ ਇਨ ਕਰੋ।",
-  "deleteAccount": "ਖਾਤਾ ਹਟਾਓ",
+  "deleteAccount": "ਖਾਤਾ ਮਿਟਾਓ",
   "logoutCompleted": "ਲਾਗ ਆਊਟ ਹੋ ਗਏ ਹਨ",
   "specialDiscountPriceNow": "ਵਿਸ਼ੇਸ਼ ਕੀਮਤ ਵਿੱਚ ਪ੍ਰੀਮੀਅਮ ਪਲਾਨ ਲਓ!",
   "inquiryTypeLabel": "ਪੁੱਛਗਿੱਛ ਸ਼੍ਰੇਣੀ",

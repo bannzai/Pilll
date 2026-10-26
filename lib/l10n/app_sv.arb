@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Volym",
   "logout": "Logga ut",
   "goToInitialSettingAndReloginIfNeededMessage": "Du kommer tillbaka till den första inställningen. Om du behöver logga in kan du göra det längst ned på inställningsskärmen.",
-  "deleteAccount": "Ta bort konto",
+  "deleteAccount": "Radera konto",
   "logoutCompleted": "Du har loggats ut",
   "specialDiscountPriceNow": "Få premiumplanen till specialpris!",
   "inquiryTypeLabel": "Ärendekategori",

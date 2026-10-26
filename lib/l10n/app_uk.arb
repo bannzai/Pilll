@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Гучність",
   "logout": "Вийти з облікового запису",
   "goToInitialSettingAndReloginIfNeededMessage": "Ви повернетеся до початкового налаштування. Якщо потрібно буде увійти в обліковий запис, зробіть це внизу екрана початкового налаштування.",
-  "deleteAccount": "Видалити акаунт",
+  "deleteAccount": "Видалити обліковий запис",
   "logoutCompleted": "Ви вийшли з аккаунта",
   "specialDiscountPriceNow": "Отримайте преміум-план за спеціальною ціною!",
   "inquiryTypeLabel": "Категорія звернення",

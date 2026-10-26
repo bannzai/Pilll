@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Hlasitost",
   "logout": "Odhlásit se",
   "goToInitialSettingAndReloginIfNeededMessage": "Vrátíte se k úvodnímu nastavení. Pokud se budete potřebovat přihlásit, udělejte to prosím ve spodní části obrazovky úvodního nastavení.",
-  "deleteAccount": "Smazání účtu",
+  "deleteAccount": "Smazat účet",
   "logoutCompleted": "Byli jste odhlášeni",
   "specialDiscountPriceNow": "Získejte Premium plán za speciální cenu!",
   "inquiryTypeLabel": "Typ dotazu",

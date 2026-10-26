@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Volume",
   "logout": "Keluar",
   "goToInitialSettingAndReloginIfNeededMessage": "Anda akan kembali ke pengaturan awal. Jika perlu masuk, silakan masuk melalui bagian bawah layar pengaturan awal.",
-  "deleteAccount": "Hapus Akun",
+  "deleteAccount": "Hapus akun",
   "logoutCompleted": "Berhasil logout",
   "specialDiscountPriceNow": "Dapatkan Paket Premium dengan Harga Khusus!",
   "inquiryTypeLabel": "Kategori Pertanyaan",

@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Дыбыс деңгейі",
   "logout": "Шығу",
   "goToInitialSettingAndReloginIfNeededMessage": "Сіз бастапқы баптауға ораласыз. Кіру қажет болса, бастапқы баптау экранының төменгі жағынан кіріңіз.",
-  "deleteAccount": "Аккаунтты жою",
+  "deleteAccount": "Есептік жазбаны жою",
   "logoutCompleted": "Жүйеден шықтым",
   "specialDiscountPriceNow": "Премиум жоспарды арнайы бағамен алыңыз!",
   "inquiryTypeLabel": "Өтініш түрі",

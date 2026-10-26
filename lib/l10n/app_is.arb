@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Hljóðstyrkur",
   "logout": "Skrá út",
   "goToInitialSettingAndReloginIfNeededMessage": "Þú ferð aftur í upphafsstillingarnar. Ef þú þarft að skrá þig inn geturðu gert það neðst á skjánum fyrir upphafsstillingar.",
-  "deleteAccount": "Eyða reikningi",
+  "deleteAccount": "Eyða aðgangi",
   "logoutCompleted": "Útskráður",
   "specialDiscountPriceNow": "Fáðu úrvals áætlun á tilboðsverði!",
   "inquiryTypeLabel": "Tegund fyrirspurnar",

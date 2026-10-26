@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Hlasitosť",
   "logout": "Odhlásiť sa",
   "goToInitialSettingAndReloginIfNeededMessage": "Vrátite sa k úvodnému nastaveniu. Ak sa budete potrebovať prihlásiť, môžete tak urobiť v spodnej časti obrazovky úvodného nastavenia.",
-  "deleteAccount": "Vymazanie účtu",
+  "deleteAccount": "Odstrániť účet",
   "logoutCompleted": "Odhlásili ste sa",
   "specialDiscountPriceNow": "Získajte prémiový plán za špeciálnu cenu!",
   "inquiryTypeLabel": "Kategória dotazu",

@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Сила на звука",
   "logout": "Изход",
   "goToInitialSettingAndReloginIfNeededMessage": "Ще се върнете към началната настройка. Ако е нужно да влезете в профила си, можете да го направите в долната част на екрана.",
-  "deleteAccount": "Изтриване на акаунт",
+  "deleteAccount": "Изтриване на акаунта",
   "logoutCompleted": "Успешно излязохте",
   "specialDiscountPriceNow": "Получи премиум плана на специална цена!",
   "inquiryTypeLabel": "Тема на запитването",

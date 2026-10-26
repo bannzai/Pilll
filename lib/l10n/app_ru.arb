@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Громкость",
   "logout": "Выйти из аккаунта",
   "goToInitialSettingAndReloginIfNeededMessage": "Вы вернётесь к первоначальной настройке. Если потребуется войти в аккаунт, сделайте это внизу экрана настройки.",
-  "deleteAccount": "Удаление аккаунта",
+  "deleteAccount": "Удалить аккаунт",
   "logoutCompleted": "Вы вышли из системы",
   "specialDiscountPriceNow": "Получите премиум-план по специальной цене!",
   "inquiryTypeLabel": "Тип обращения",

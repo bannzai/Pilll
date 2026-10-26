@@ -430,7 +430,7 @@
   "criticalAlertVolume": "עוצמת קול",
   "logout": "התנתקות",
   "goToInitialSettingAndReloginIfNeededMessage": "המסך יחזור להגדרות הראשוניות. אם נדרשת כניסה לחשבון, אפשר לעשות זאת בתחתית מסך ההגדרות הראשוניות.",
-  "deleteAccount": "מחיקת חשבון",
+  "deleteAccount": "מחיקת החשבון",
   "logoutCompleted": "התנתקת",
   "specialDiscountPriceNow": "קבל את תוכנית הפרימיום במחיר מיוחד!",
   "inquiryTypeLabel": "סוג הפניה",

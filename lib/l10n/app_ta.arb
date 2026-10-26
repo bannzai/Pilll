@@ -430,7 +430,7 @@
   "criticalAlertVolume": "ஒலி அளவு",
   "logout": "கணக்கிலிருந்து வெளியேறு",
   "goToInitialSettingAndReloginIfNeededMessage": "தொடக்க அமைப்புக்குத் திரும்புவீர்கள். உள்நுழைய வேண்டியிருந்தால், தொடக்க அமைப்புத் திரையின் கீழ்ப்பகுதியில் இருந்து உள்நுழையுங்கள்.",
-  "deleteAccount": "கணக்கு நீக்கம்",
+  "deleteAccount": "கணக்கை நீக்குங்கள்",
   "logoutCompleted": "வெளியேறப்பட்டது",
   "specialDiscountPriceNow": "சிறப்பு விலையில் பிரீமியம் திட்டத்தைப் பெறுங்கள்!",
   "inquiryTypeLabel": "விசாரணை வகை",

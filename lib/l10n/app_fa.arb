@@ -430,7 +430,7 @@
   "criticalAlertVolume": "بلندی صدا",
   "logout": "خروج از حساب",
   "goToInitialSettingAndReloginIfNeededMessage": "به تنظیمات اولیه برمی‌گردید. اگر لازم بود وارد حساب کاربری شوید، لطفاً از پایین صفحهٔ تنظیمات اولیه وارد شوید.",
-  "deleteAccount": "حذف حساب",
+  "deleteAccount": "حذف حساب کاربری",
   "logoutCompleted": "خروج انجام شد",
   "specialDiscountPriceNow": "پلن پریمیوم را با قیمت ویژه دریافت کنید!",
   "inquiryTypeLabel": "موضوع تماس",

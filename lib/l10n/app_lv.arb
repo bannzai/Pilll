@@ -430,7 +430,7 @@
   "criticalAlertVolume": "Skaļums",
   "logout": "Izrakstīties",
   "goToInitialSettingAndReloginIfNeededMessage": "Jūs atgriezīsieties pie sākotnējās iestatīšanas. Ja būs jāpiesakās, to varēsiet izdarīt sākotnējās iestatīšanas ekrāna apakšdaļā.",
-  "deleteAccount": "Konta dzēšana",
+  "deleteAccount": "Dzēst kontu",
   "logoutCompleted": "Izrakstījāties",
   "specialDiscountPriceNow": "Iegūstiet Premium plānu par īpašo cenu!",
   "inquiryTypeLabel": "Pieprasījuma veids",
