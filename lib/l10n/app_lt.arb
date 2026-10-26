@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Automatinis tablečių plokštel grupių pridėjimas",
   "autoAddNewSheetAfterCurrentEnds": "Pasibaigus dabartinei tablečių plokštel grupei, automatiškai bus pridėta nauja plokštelė",
   "accountSettings": "Paskyros nustatymai",
-  "linked": "Prijungtas",
+  "linked": "Susieta",
   "unregistered": "Neregistruotas",
   "quickRecord": "Greitas įrašas",
   "quickRecordDescription": "Pranešimų ekrane matysite šiandien vartojamas tabletes ir galėsite iš karto užregistruoti jų vartojimą.",

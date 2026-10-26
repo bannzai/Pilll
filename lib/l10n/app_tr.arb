@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Blister gruplarını otomatik ekleme",
   "autoAddNewSheetAfterCurrentEnds": "Mevcut blister grubu bittiğinde yeni bir blister otomatik olarak eklenir",
   "accountSettings": "Hesap ayarları",
-  "linked": "Bağlı",
+  "linked": "Bağlandı",
   "unregistered": "Kayıtlı değil",
   "quickRecord": "Hızlı Kayıt",
   "quickRecordDescription": "Bildirim ekranında bugün alınacak hapı görebilir ve doğrudan kullanım kaydını yapabilirsiniz.",

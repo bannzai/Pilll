@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Lägg till grupper med p-pillerkarta automatiskt",
   "autoAddNewSheetAfterCurrentEnds": "När den nuvarande gruppen med p-pillerkarta är slut läggs en ny karta till automatiskt",
   "accountSettings": "Kontoinställningar",
-  "linked": "Ansluten",
+  "linked": "Kopplat",
   "unregistered": "Ej registrerad",
   "quickRecord": "Snabbregistrering",
   "quickRecordDescription": "I notifikationsskärmen ser du vilka piller du ska ta idag och kan registrera intaget direkt.",

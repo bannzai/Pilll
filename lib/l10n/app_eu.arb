@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Pilula-blister taldeak automatikoki gehitzea",
   "autoAddNewSheetAfterCurrentEnds": "Uneko pilula-blister taldea amaitzean, beste blister bat gehituko da automatikoki",
   "accountSettings": "Kontuaren ezarpenak",
-  "linked": "Konektatuta",
+  "linked": "Lotuta",
   "unregistered": "Erregistratu gabe",
   "quickRecord": "Erregistro azkarra",
   "quickRecordDescription": "Jakinarazpen pantailan gaur hartu beharreko pilula ikusi eta zuzenean hartzeko erregistroa egin dezakezu.",

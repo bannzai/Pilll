@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Ajout automatique de groupes de plaquette",
   "autoAddNewSheetAfterCurrentEnds": "Quand le groupe de plaquettes actuel se termine, une nouvelle plaquette est ajoutée automatiquement",
   "accountSettings": "Paramètres du compte",
-  "linked": "Connecté",
+  "linked": "Compte associé",
   "unregistered": "Non inscrit",
   "quickRecord": "Enregistrement rapide",
   "quickRecordDescription": "Consultez la pilule du jour sur l'écran de notification et enregistrez votre consommation ici.",

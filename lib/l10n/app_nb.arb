@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Legg til pillebrettgrupper automatisk",
   "autoAddNewSheetAfterCurrentEnds": "Når den nåværende gruppen med pillebrett er ferdig, legges et nytt brett til automatisk",
   "accountSettings": "Kontoinnstillinger",
-  "linked": "Tilkoblet",
+  "linked": "Tilknyttet",
   "unregistered": "Ikke registrert",
   "quickRecord": "Rask registrering",
   "quickRecordDescription": "I varslingsskjermen ser du hvilke piller du skal ta i dag og kan registrere inntak direkte.",

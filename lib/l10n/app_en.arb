@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Automatically add pill pack groups",
   "autoAddNewSheetAfterCurrentEnds": "When the current pill pack group ends, a new pack is added automatically",
   "accountSettings": "Account settings",
-  "linked": "Connected",
+  "linked": "Linked",
   "unregistered": "Not registered",
   "quickRecord": "Quick Record",
   "quickRecordDescription": "See today's pill on the notification screen and record your intake right there.",

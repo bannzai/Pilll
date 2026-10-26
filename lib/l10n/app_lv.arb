@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Automātiska tablešu blister grupu pievienošana",
   "autoAddNewSheetAfterCurrentEnds": "Kad pašreizējā tablešu blister grupa beigsies, automātiski tiks pievienots jauns blisteris",
   "accountSettings": "Konta iestatījumi",
-  "linked": "Savienots",
+  "linked": "Saistīts",
   "unregistered": "Nav reģistrēts",
   "quickRecord": "Ātrais ieraksts",
   "quickRecordDescription": "Paziņojumu ekrānā ir redzamas šodien lietojamās tabletes, un varat tūlīt atzīmēt to lietošanu.",

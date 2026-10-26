@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Tilføj automatisk pillekortgrupper",
   "autoAddNewSheetAfterCurrentEnds": "Når den nuværende gruppe af pillekort er færdig, tilføjes et nyt pillekort automatisk",
   "accountSettings": "Kontoindstillinger",
-  "linked": "Tilsluttet",
+  "linked": "Tilknyttet",
   "unregistered": "Ikke registreret",
   "quickRecord": "Hurtig registrering",
   "quickRecordDescription": "På notifikationsskærmen kan du se dagens pille og registrere indtagelsen direkte.",

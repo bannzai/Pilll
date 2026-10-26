@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Adicionar grupos de cartela automaticamente",
   "autoAddNewSheetAfterCurrentEnds": "Quando o grupo atual de cartela terminar, uma nova cartela será adicionada automaticamente",
   "accountSettings": "Configurações da conta",
-  "linked": "Conectado",
+  "linked": "Vinculado",
   "unregistered": "Não cadastrado",
   "quickRecord": "Registro Rápido",
   "quickRecordDescription": "Na tela de notificação, você pode ver qual pílula deve tomar hoje e registrar a tomada diretamente.",

@@ -44,7 +44,7 @@
   "autoAddPillSheetGroup": "Añadir grupos de blíster automáticamente",
   "autoAddNewSheetAfterCurrentEnds": "Cuando termine el grupo actual de blíster, se añadirá automáticamente un blíster nuevo",
   "accountSettings": "Configuración de la cuenta",
-  "linked": "Conectado",
+  "linked": "Vinculado",
   "unregistered": "No registrado",
   "quickRecord": "Registro Rápido",
   "quickRecordDescription": "En la pantalla de notificaciones puedes ver las pastillas que debes tomar hoy y registrar la toma directamente.",
