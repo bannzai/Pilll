@@ -380,7 +380,7 @@
   "insomnia": "Αϋπνία",
   "pauseStartingOtherDaysInstructions": "Κάντε μια παύση στη λήψη του χαπιού. Αν θέλετε η παύση να ξεκινήσει άλλη ημέρα και όχι σήμερα, δείτε τις οδηγίες παρακάτω.",
   "seeHowToUsePauseTakingFeature": "Δείτε πώς χρησιμοποιείται η λειτουργία παύσης λήψης χαπιών",
-  "startPauseTakingLabel": "Έναρξη διαλείμματος λήψης",
+  "startPauseTakingLabel": "Έναρξη διακοπής λήψης χαπιών",
   "pauseTakingChanged": "Άλλαξε η περίοδος διακοπής",
   "editPausePeriod": "Επεξεργασία περιόδου διαλείμματος",
   "changePillDays": "Αλλαγή ημερών λήψης",

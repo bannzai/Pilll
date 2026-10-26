@@ -380,7 +380,7 @@
   "insomnia": "Anhunedd",
   "pauseStartingOtherDaysInstructions": "Cymerwch seibiant rhag cymryd y bilsen. Os hoffech ddechrau’r seibiant ar ddiwrnod heblaw heddiw, dilynwch y cyfarwyddiadau isod.",
   "seeHowToUsePauseTakingFeature": "Gweld sut i ddefnyddio'r nodwedd saib cymryd y bilsen",
-  "startPauseTakingLabel": "Dechrau seibiant",
+  "startPauseTakingLabel": "Dechrau seibiant rhag cymryd y bilsen",
   "pauseTakingChanged": "Newidiwyd cyfnod seibiant y tabledi",
   "editPausePeriod": "Golygu cyfnod seibiant",
   "changePillDays": "Newid dyddiau cymryd",

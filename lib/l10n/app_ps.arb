@@ -380,7 +380,7 @@
   "insomnia": "بې خوبي",
   "pauseStartingOtherDaysInstructions": "مهرباني وکړئ د ګولیو له خوړلو لنډه وقفه واخلئ. که غواړئ وقفه له نن پرته په بله ورځ پیل کړئ، لاندې لارښوونې وګورئ.",
   "seeHowToUsePauseTakingFeature": "د ګولیو د خوړلو د لنډمهاله وقفې د ځانګړنې کارولو څرنګوالی وګورئ",
-  "startPauseTakingLabel": "د درملو آرام پیل",
+  "startPauseTakingLabel": "د ګولیو له اخیستو وقفه پیل کړئ",
   "pauseTakingChanged": "د ګولیو د تمولو دوره بدله شوه",
   "editPausePeriod": "د دوا د استراحت دورې سمون",
   "changePillDays": "د درملو ورځې بدلول",

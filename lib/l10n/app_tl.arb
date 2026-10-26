@@ -380,7 +380,7 @@
   "insomnia": "Hirap matulog",
   "pauseStartingOtherDaysInstructions": "Magpahinga muna po kayo sa pag-inom ng pildoras. Kung nais ninyong simulan ang pahinga sa ibang araw bukod sa ngayon, sundin ang mga tagubilin sa ibaba.",
   "seeHowToUsePauseTakingFeature": "Tingnan kung paano gamitin ang tampok na pansamantalang paghinto sa pag-inom ng pildoras",
-  "startPauseTakingLabel": "Simulan ang Pahinga",
+  "startPauseTakingLabel": "Simulan ang pahinga sa pag-inom ng pildoras",
   "pauseTakingChanged": "Nabago na ang takdang pahinga sa pag-inom",
   "editPausePeriod": "I-edit ang Pahinga sa Pag-inom",
   "changePillDays": "Baguhin ang bilang ng araw ng pag-inom",

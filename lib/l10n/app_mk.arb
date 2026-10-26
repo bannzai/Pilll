@@ -380,7 +380,7 @@
   "insomnia": "Несоница",
   "pauseStartingOtherDaysInstructions": "Направете пауза во земањето таблета. Ако сакате паузата да започне друг ден, а не денес, погледнете ги упатствата подолу.",
   "seeHowToUsePauseTakingFeature": "Погледнете како се користи функцијата за пауза во земањето таблета",
-  "startPauseTakingLabel": "Започни пауза од земање",
+  "startPauseTakingLabel": "Започнете пауза во земање таблета",
   "pauseTakingChanged": "Паузата во земањето е променета",
   "editPausePeriod": "Уреди период на пауза",
   "changePillDays": "Промени период на земање",

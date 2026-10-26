@@ -380,7 +380,7 @@
   "insomnia": "Uyqusizlik",
   "pauseStartingOtherDaysInstructions": "Iltimos, dorilarni qabul qilishda tanaffus qiling. Tanaffusni bugun emas, boshqa kuni boshlamoqchi boʻlsangiz, quyidagi koʻrsatmalarga qarang.",
   "seeHowToUsePauseTakingFeature": "Tabletkalarni ichishda vaqtincha tanaffus qilish funksiyasidan qanday foydalanishni koʻring",
-  "startPauseTakingLabel": "Tanaffusni boshlash",
+  "startPauseTakingLabel": "Tabletka qabul qilishdagi tanaffusni boshlang",
   "pauseTakingChanged": "Qabul qilish tanaffusi o'zgartirildi",
   "editPausePeriod": "Qabul qilish tanaffusi davrini tahrirlash",
   "changePillDays": "Qabul qilish kunlarini o'zgartirish",

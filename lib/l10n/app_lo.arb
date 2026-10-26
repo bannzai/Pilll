@@ -380,7 +380,7 @@
   "insomnia": "ນອນບໍ່ຫຼັບ",
   "pauseStartingOtherDaysInstructions": "ກະລຸນາຢຸດກິນຢາເມັດຊົ່ວຄາວ. ຖ້າຕ້ອງການເລີ່ມຢຸດໃນມື້ອື່ນທີ່ບໍ່ແມ່ນມື້ນີ້ ກະລຸນາເບິ່ງຄຳແນະນຳດ້ານລຸ່ມ.",
   "seeHowToUsePauseTakingFeature": "ເບິ່ງວິທີໃຊ້ຟັງຊັນຢຸດກິນຢາເມັດຊົ່ວຄາວ",
-  "startPauseTakingLabel": "ເລີ່ມພັກການກິນຢາ",
+  "startPauseTakingLabel": "ເລີ່ມພັກການກິນຢາເມັດ",
   "pauseTakingChanged": "ໄດ້ປ່ຽນການພັກການກິນຢາແລ້ວ",
   "editPausePeriod": "ແກ້ໄຂໄລຍະພັກຜ່ອນກິນຢາ",
   "changePillDays": "ປ່ຽນແປງຈຳນວນມື້ກິນຢາ",

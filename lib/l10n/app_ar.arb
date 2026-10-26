@@ -380,7 +380,7 @@
   "insomnia": "الأرق",
   "pauseStartingOtherDaysInstructions": "يرجى التوقف مؤقتا عن تناول الحبوب. إذا أردتِ بدء التوقف في يوم غير اليوم، فاطلعي على الإرشادات أدناه.",
   "seeHowToUsePauseTakingFeature": "اطّلعي على طريقة استخدام ميزة إيقاف تناول الحبوب مؤقتًا",
-  "startPauseTakingLabel": "بدء فترة الراحة",
+  "startPauseTakingLabel": "بدء فترة التوقف عن تناول الحبوب",
   "pauseTakingChanged": "تم تغيير فترة التوقف عن تناول الحبوب",
   "editPausePeriod": "تعديل فترة التوقف عن التناول",
   "changePillDays": "تغيير عدد أيام التناول",

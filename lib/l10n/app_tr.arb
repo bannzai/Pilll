@@ -380,7 +380,7 @@
   "insomnia": "Uykusuzluk",
   "pauseStartingOtherDaysInstructions": "Lütfen hap kullanımına ara verin. Arayı bugünden farklı bir günde başlatmak isterseniz aşağıdaki adımları izleyin.",
   "seeHowToUsePauseTakingFeature": "Hap kullanımına ara verme özelliğini nasıl kullanacağınızı görün",
-  "startPauseTakingLabel": "Kullanım Molası Başlat",
+  "startPauseTakingLabel": "İlaç kullanımına ara vermeye başlayın",
   "pauseTakingChanged": "İlaç kullanım molası değiştirildi",
   "editPausePeriod": "Kullanım arasını düzenle",
   "changePillDays": "Alım Gün Sayısını Değiştir",

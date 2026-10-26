@@ -380,7 +380,7 @@
   "insomnia": "นอนไม่หลับ",
   "pauseStartingOtherDaysInstructions": "โปรดพักการทานยาชั่วคราวค่ะ หากต้องการเริ่มพักยาในวันอื่นที่ไม่ใช่วันนี้ โปรดดูคำแนะนำด้านล่างค่ะ",
   "seeHowToUsePauseTakingFeature": "ดูวิธีใช้ฟีเจอร์หยุดทานยาเม็ดชั่วคราว",
-  "startPauseTakingLabel": "เริ่มพักการรับประทานยา",
+  "startPauseTakingLabel": "เริ่มพักการทานยาเม็ด",
   "pauseTakingChanged": "เปลี่ยนช่วงหยุดทานยาแล้ว",
   "editPausePeriod": "แก้ไขช่วงหยุดยา",
   "changePillDays": "เปลี่ยนจำนวนวันรับประทาน",

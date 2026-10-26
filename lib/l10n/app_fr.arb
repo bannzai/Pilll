@@ -380,7 +380,7 @@
   "insomnia": "Insomnie",
   "pauseStartingOtherDaysInstructions": "Faites une pause dans la prise de votre pilule. Si vous souhaitez commencer la pause un autre jour qu’aujourd’hui, suivez les indications ci-dessous.",
   "seeHowToUsePauseTakingFeature": "Voir comment utiliser la fonction de pause de la pilule",
-  "startPauseTakingLabel": "Commencer la pause pilule",
+  "startPauseTakingLabel": "Commencer la pause de la pilule",
   "pauseTakingChanged": "Période de pause modifiée",
   "editPausePeriod": "Modifier la période de pause",
   "changePillDays": "Changer les jours de dosage",

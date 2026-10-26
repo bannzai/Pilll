@@ -380,7 +380,7 @@
   "insomnia": "නින්ද නොයාම",
   "pauseStartingOtherDaysInstructions": "කරුණාකර පෙති ගැනීමෙන් තාවකාලික විරාමයක් ගන්න. අද නොව වෙනත් දිනක සිට විරාමය ආරම්භ කිරීමට අවශ්‍ය නම්, පහත උපදෙස් බලන්න.",
   "seeHowToUsePauseTakingFeature": "පෙති ගැනීම තාවකාලිකව නවත්වන පහසුකම භාවිත කරන ආකාරය බලන්න",
-  "startPauseTakingLabel": "සේවන විරාමය ආරම්භය",
+  "startPauseTakingLabel": "පෙති ගැනීමේ විරාමය අරඹන්න",
   "pauseTakingChanged": "ගෝලි විවේක කාලය වෙනස් කරන ලදී",
   "editPausePeriod": "ගැනීමේ විරාම කාලය සංස්කරණය කරන්න",
   "changePillDays": "සේවන දින ගණන වෙනස් කරන්න",

@@ -380,7 +380,7 @@
   "insomnia": "अनिद्रा",
   "pauseStartingOtherDaysInstructions": "कृपया गोली लेने से कुछ समय के लिए विराम लें। अगर आप यह विराम आज के बजाय किसी और दिन से शुरू करना चाहती हैं, तो नीचे दिए गए निर्देश देखें।",
   "seeHowToUsePauseTakingFeature": "गोली लेने में अस्थायी विराम की सुविधा का इस्तेमाल कैसे करें, देखें",
-  "startPauseTakingLabel": "सेवन विराम शुरू करें",
+  "startPauseTakingLabel": "गोली लेने से विराम शुरू करें",
   "pauseTakingChanged": "सेवन विराम की अवधि बदल दी गई है",
   "editPausePeriod": "सेवन विराम अवधि संपादित करें",
   "changePillDays": "सेवन अवधि बदलें",

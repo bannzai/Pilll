@@ -380,7 +380,7 @@
   "insomnia": "Bezsenność",
   "pauseStartingOtherDaysInstructions": "Zrób przerwę w przyjmowaniu pigułek. Jeśli chcesz rozpocząć przerwę innego dnia niż dziś, skorzystaj z poniższych wskazówek.",
   "seeHowToUsePauseTakingFeature": "Sprawdź, jak korzystać z funkcji przerwy w przyjmowaniu tabletek",
-  "startPauseTakingLabel": "Rozpocznij przerwę",
+  "startPauseTakingLabel": "Rozpocznij przerwę w braniu tabletek",
   "pauseTakingChanged": "Zmieniono przerwę w przyjmowaniu",
   "editPausePeriod": "Edytuj przerwę w zażywaniu",
   "changePillDays": "Zmień liczbę dni przyjmowania",

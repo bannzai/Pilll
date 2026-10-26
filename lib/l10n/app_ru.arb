@@ -380,7 +380,7 @@
   "insomnia": "Бессонница",
   "pauseStartingOtherDaysInstructions": "Сделайте перерыв в приёме таблеток. Если вы хотите начать перерыв не сегодня, а в другой день, воспользуйтесь инструкцией ниже.",
   "seeHowToUsePauseTakingFeature": "Узнайте, как пользоваться функцией паузы в приёме таблеток",
-  "startPauseTakingLabel": "Начать перерыв в приёме",
+  "startPauseTakingLabel": "Начать перерыв в приёме таблеток",
   "pauseTakingChanged": "Перерыв в приёме изменён",
   "editPausePeriod": "Изменить период перерыва в приеме",
   "changePillDays": "Изменить количество дней приема",
