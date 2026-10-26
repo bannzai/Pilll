@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "暂时停用避孕药",
   "restDurationFeatureAppealBody": "可以在药板上记录暂时停药的时间。休息期间药片编号不会前进，重新开始服药时也能立即继续记录。",
   "featureAppealLocationLabel": "在应用中的位置",
-  "criticalAlertFeatureAppealPoint1": "即使在专注模式下也能收到通知",
+  "criticalAlertFeatureAppealPoint1": "专注模式开启时也能收到通知",
   "criticalAlertFeatureAppealPoint2": "确保在设定的时间准时提醒",
   "criticalAlertFeatureAppealPoint3": "一键轻松设置",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "可自由编辑通知消息",

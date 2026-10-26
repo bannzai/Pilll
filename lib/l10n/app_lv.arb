@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Ieturiet pauzi tablešu lietošanā",
   "restDurationFeatureAppealBody": "Laiku, kad uz kādu laiku pārtraucat tablešu lietošanu, varat atzīmēt tablešu blister ierakstā. Pārtraukuma laikā tabletes numurs nemainās, un, atsākot lietošanu, varat uzreiz turpināt atzīmēšanu.",
   "featureAppealLocationLabel": "Kur to atrast lietotnē",
-  "criticalAlertFeatureAppealPoint1": "Paziņojumi tiek saņemti arī fokusēšanas režīmā",
+  "criticalAlertFeatureAppealPoint1": "Saņemsiet paziņojumus arī tad, kad ieslēgts koncentrēšanās režīms",
   "criticalAlertFeatureAppealPoint2": "Atgādinās precīzi iestatītajā laikā",
   "criticalAlertFeatureAppealPoint3": "Viegla iestatīšana ar vienu pieskārienu",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Brīvi rediģēt paziņojumus",

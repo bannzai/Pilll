@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Tabletkani qabul qilishda tanaffus qiling",
   "restDurationFeatureAppealBody": "Tabletkani bir muddat ichmay turadigan davrni tabletka blister bo‘limida qayd etishingiz mumkin. Tanaffus paytida tabletka raqami o‘zgarmaydi, qayta ichishni boshlaganingizda esa qaydlarni darhol davom ettirishingiz mumkin.",
   "featureAppealLocationLabel": "Ilovadagi joylashuvi",
-  "criticalAlertFeatureAppealPoint1": "Diqqat rejimida ham bildirishnomalar keladi",
+  "criticalAlertFeatureAppealPoint1": "Diqqatni jamlash rejimida ham bildirishnomalar olasiz",
   "criticalAlertFeatureAppealPoint2": "Sozlagan vaqtingizda albatta eslatadi",
   "criticalAlertFeatureAppealPoint3": "Bir bosish bilan oson sozlash",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Bildirishnoma xabarini erkin tahrirlash",

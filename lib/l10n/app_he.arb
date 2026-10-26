@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "הפסקה זמנית בנטילת הגלולה",
   "restDurationFeatureAppealBody": "אפשר לתעד בחפיסת הגלולות תקופה שבה מפסיקים את הנטילה לזמן מה. במהלך ההפסקה מספר הגלולה אינו מתקדם, ואפשר לחזור לתיעוד מיד עם חידוש הנטילה.",
   "featureAppealLocationLabel": "איפה למצוא באפליקציה",
-  "criticalAlertFeatureAppealPoint1": "התראות יתקבלו גם במצב מיקוד",
+  "criticalAlertFeatureAppealPoint1": "קבלת התראות גם כשמצב ריכוז פעיל",
   "criticalAlertFeatureAppealPoint2": "תזכורת מהימנה בשעה שקבעת",
   "criticalAlertFeatureAppealPoint3": "הגדרה קלה בלחיצה אחת",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ערוך בחופשיות את הודעת ההתראה",

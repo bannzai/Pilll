@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Berehat seketika daripada mengambil pil",
   "restDurationFeatureAppealBody": "Anda boleh mencatat tempoh berhenti mengambil pil buat sementara waktu pada pek pil. Semasa berehat, nombor pil tidak akan berubah, dan anda boleh terus menyambung catatan apabila mula mengambilnya semula.",
   "featureAppealLocationLabel": "Lokasi dalam aplikasi",
-  "criticalAlertFeatureAppealPoint1": "Notifikasi diterima walaupun dalam Mod Fokus",
+  "criticalAlertFeatureAppealPoint1": "Anda tetap menerima pemberitahuan walaupun mod Fokus dihidupkan",
   "criticalAlertFeatureAppealPoint2": "Peringatan tepat pada masa yang ditetapkan",
   "criticalAlertFeatureAppealPoint3": "Tetapan mudah dengan satu ketukan",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Sunting mesej pemberitahuan secara bebas",

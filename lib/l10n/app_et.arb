@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Tee pillide võtmises paus",
   "restDurationFeatureAppealBody": "Saad märkida pillileh oma pikema pillivõtmise pausi. Pausi ajal pilli number ei muutu ning pillide võtmist uuesti alustades saad kohe jätkata märkimist.",
   "featureAppealLocationLabel": "Asukoht rakenduses",
-  "criticalAlertFeatureAppealPoint1": "Teavitused saabuvad ka fookusrežiimi ajal",
+  "criticalAlertFeatureAppealPoint1": "Saad teavitusi ka keskendumisrežiimis",
   "criticalAlertFeatureAppealPoint2": "Tuletan kindlasti määratud ajal meelde",
   "criticalAlertFeatureAppealPoint3": "Ühe puutega lihtne seadistus",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Redigeeri teavitussõnumeid vabalt",

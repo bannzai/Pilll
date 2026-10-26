@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Сделайте перерыв в приёме таблетки",
   "restDurationFeatureAppealBody": "Вы можете отметить в блистер период, когда на некоторое время прекращаете приём таблеток. Во время перерыва номер таблетки не меняется, а после возобновления приёма можно сразу продолжить записи.",
   "featureAppealLocationLabel": "Где найти в приложении",
-  "criticalAlertFeatureAppealPoint1": "Уведомления приходят даже в режиме фокусировки",
+  "criticalAlertFeatureAppealPoint1": "Вы получаете уведомления даже в режиме фокусирования",
   "criticalAlertFeatureAppealPoint2": "Надёжное напоминание в установленное время",
   "criticalAlertFeatureAppealPoint3": "Простая настройка одним нажатием",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Свободно редактировать сообщения уведомлений",

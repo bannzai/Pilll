@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "ဆေးလုံးသောက်ခြင်းကို ခဏရပ်နားပါ",
   "restDurationFeatureAppealBody": "ဆေးပြားကို ခဏတာ ရပ်ထားမည့်ကာလကို ဆေးပြားကတ်တွင် မှတ်တမ်းတင်နိုင်ပါတယ်။ ရပ်ထားစဉ် ဆေးပြားနံပါတ် မတိုးဘဲ၊ ပြန်သောက်သည့်အခါ မှတ်တမ်းကို ချက်ချင်း ဆက်တင်နိုင်ပါတယ်။",
   "featureAppealLocationLabel": "အက်ပ်ထဲတွင် ရှိသည့်နေရာ",
-  "criticalAlertFeatureAppealPoint1": "အာရုံစူးစိုက်မုဒ်တွင်လည်း အကြောင်းကြားချက်များ ရောက်ရှိနိုင်သည်",
+  "criticalAlertFeatureAppealPoint1": "အာရုံစိုက်မုဒ် ဖွင့်ထားချိန်မှာလည်း အသိပေးချက်တွေ ရရှိပါတယ်",
   "criticalAlertFeatureAppealPoint2": "သတ်မှတ်ထားသောအချိန်တွင် သေချာပေါက်သတိပေးပါမည်",
   "criticalAlertFeatureAppealPoint3": "တစ်ချက်နှိပ်ရုံဖြင့် လွယ်ကူစွာ ဆက်တင်နိုင်",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "သတိပေးချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",

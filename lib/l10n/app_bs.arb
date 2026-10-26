@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Napravite pauzu od uzimanja pilule",
   "restDurationFeatureAppealBody": "Period u kojem neko vrijeme ne uzimate pilule možete zabilježiti u blister. Tokom pauze broj pilule ostaje isti, a kada ponovo počnete s uzimanjem, možete odmah nastaviti bilježenje.",
   "featureAppealLocationLabel": "Gdje pronaći u aplikaciji",
-  "criticalAlertFeatureAppealPoint1": "Obavještenja stižu čak i tokom načina fokusiranja",
+  "criticalAlertFeatureAppealPoint1": "Dobijate obavijesti i dok je uključen način rada za fokusiranje",
   "criticalAlertFeatureAppealPoint2": "Podsjetnik u tačno zakazano vrijeme",
   "criticalAlertFeatureAppealPoint3": "Jednostavno postavljanje jednim dodirom",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Slobodno uredite poruku obavijesti",

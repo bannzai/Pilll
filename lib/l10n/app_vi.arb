@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Tạm ngưng uống thuốc tránh thai",
   "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngừng uống thuốc trên vỉ thuốc. Trong lúc tạm ngừng, số thứ tự viên thuốc sẽ không tăng, và bạn có thể tiếp tục ghi lại ngay khi bắt đầu uống lại.",
   "featureAppealLocationLabel": "Vị trí trong ứng dụng",
-  "criticalAlertFeatureAppealPoint1": "Nhận thông báo ngay cả khi đang ở Chế độ Tập trung",
+  "criticalAlertFeatureAppealPoint1": "Bạn vẫn nhận được thông báo khi bật chế độ Tập trung",
   "criticalAlertFeatureAppealPoint2": "Nhắc nhở chắc chắn đúng giờ đã đặt",
   "criticalAlertFeatureAppealPoint3": "Cài đặt dễ dàng chỉ với một chạm",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Tùy chỉnh nội dung thông báo",

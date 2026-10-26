@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Κάντε μια παύση από τη λήψη του χαπιού",
   "restDurationFeatureAppealBody": "Μπορείτε να καταγράψετε στην καρτέλα χαπιών ένα διάστημα κατά το οποίο σταματάτε προσωρινά τη λήψη. Κατά τη διάρκεια της παύσης, ο αριθμός του χαπιού δεν προχωρά και μπορείτε να συνεχίσετε αμέσως την καταγραφή όταν αρχίσετε ξανά.",
   "featureAppealLocationLabel": "Πού θα το βρείτε στην εφαρμογή",
-  "criticalAlertFeatureAppealPoint1": "Λήψη ειδοποιήσεων ακόμα και σε λειτουργία εστίασης",
+  "criticalAlertFeatureAppealPoint1": "Λαμβάνετε ειδοποιήσεις ακόμη και στη λειτουργία συγκέντρωσης",
   "criticalAlertFeatureAppealPoint2": "Σίγουρη υπενθύμιση στην καθορισμένη ώρα",
   "criticalAlertFeatureAppealPoint3": "Απλή ρύθμιση με ένα άγγιγμα",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Ελεύθερη επεξεργασία μηνύματος ειδοποίησης",

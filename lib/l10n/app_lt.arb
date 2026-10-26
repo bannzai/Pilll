@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Padarykite tablečių vartojimo pertrauką",
   "restDurationFeatureAppealBody": "Laikotarpį, kai kurį laiką nevartojate tablečių, galite pažymėti tablečių plokštel įraše. Per pertrauką tabletės numeris nesikeičia, o vėl pradėję vartoti tabletes galite iškart tęsti žymėjimą.",
   "featureAppealLocationLabel": "Kur rasti programėlėje",
-  "criticalAlertFeatureAppealPoint1": "Gaukite pranešimus net veikiant Focus režimui",
+  "criticalAlertFeatureAppealPoint1": "Pranešimus gausite net įjungę susikaupimo režimą",
   "criticalAlertFeatureAppealPoint2": "Įsitikinkite, kad priminimas bus laiku pagal nustatytą laiką",
   "criticalAlertFeatureAppealPoint3": "Vientyliukas nustatyti vienu bakstelėjimu",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Laisvai redaguokite pranešimo tekstą",

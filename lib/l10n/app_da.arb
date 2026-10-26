@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Hold pause med p-pillerne",
   "restDurationFeatureAppealBody": "Du kan registrere en længere pause fra p-pillerne på dit pillekort. Under pausen ændres pillenummeret ikke, og du kan straks fortsætte registreringen, når du begynder igen.",
   "featureAppealLocationLabel": "Hvor du finder det i appen",
-  "criticalAlertFeatureAppealPoint1": "Notifikationer leveres selv i Fokus-tilstand",
+  "criticalAlertFeatureAppealPoint1": "Du får notifikationer, selv når fokus er slået til",
   "criticalAlertFeatureAppealPoint2": "Pålidelig påmindelse på det indstillede tidspunkt",
   "criticalAlertFeatureAppealPoint3": "Nem opsætning med ét tryk",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Rediger notifikationsbesked frit",

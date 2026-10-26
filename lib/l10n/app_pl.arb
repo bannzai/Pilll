@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Zrób przerwę w przyjmowaniu pigułki",
   "restDurationFeatureAppealBody": "Możesz zapisać na blist dłuższą przerwę w przyjmowaniu tabletek. Podczas przerwy numer tabletki nie zmienia się, a po wznowieniu przyjmowania możesz od razu kontynuować zapisywanie.",
   "featureAppealLocationLabel": "Gdzie znaleźć w aplikacji",
-  "criticalAlertFeatureAppealPoint1": "Powiadomienia docierają nawet w trybie skupienia",
+  "criticalAlertFeatureAppealPoint1": "Otrzymuj powiadomienia także w trybie skupienia",
   "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o ustawionej godzinie",
   "criticalAlertFeatureAppealPoint3": "Łatwa konfiguracja jednym dotknięciem",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Dowolnie edytuj wiadomości powiadomień",

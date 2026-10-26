@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "Fă o pauză de la administrarea pilulei",
   "restDurationFeatureAppealBody": "Poți înregistra în blister perioada în care faci o pauză mai lungă de la pilulă. În timpul pauzei, numărul pilulei nu avansează, iar când reîncepi să o iei, poți continua imediat înregistrarea.",
   "featureAppealLocationLabel": "Unde găsești în aplicație",
-  "criticalAlertFeatureAppealPoint1": "Notificările ajung chiar și în modul Focus",
+  "criticalAlertFeatureAppealPoint1": "Primești notificări chiar și când modul Concentrare este activ",
   "criticalAlertFeatureAppealPoint2": "Reamintire garantată la ora setată",
   "criticalAlertFeatureAppealPoint3": "Configurare simplă cu o singură atingere",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "Editare liberă a mesajelor de notificare",

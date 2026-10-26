@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "गोळी घेण्यापासून थोडा वेळ विश्रांती घ्या",
   "restDurationFeatureAppealBody": "काही काळ गोळी घेणे थांबवण्याचा कालावधी पिल शीटमध्ये नोंदवू शकता. विश्रांतीदरम्यान गोळीचा क्रमांक पुढे जाणार नाही आणि पुन्हा घेणे सुरू करताच नोंद लगेच पुढे चालू ठेवू शकता.",
   "featureAppealLocationLabel": "अ‍ॅपमध्ये कुठे मिळेल",
-  "criticalAlertFeatureAppealPoint1": "फोकस मोड दरम्यान देखील सूचना मिळतात",
+  "criticalAlertFeatureAppealPoint1": "फोकस मोड सुरू असतानाही तुम्हाला सूचना मिळतील",
   "criticalAlertFeatureAppealPoint2": "सेट केलेल्या वेळी निश्चितपणे स्मरणपत्र",
   "criticalAlertFeatureAppealPoint3": "एका टॅपने सहज सेटअप",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "सूचना संदेश मुक्तपणे संपादित करा",

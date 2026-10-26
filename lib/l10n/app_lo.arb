@@ -509,7 +509,7 @@
   "restDurationFeatureAppealHeadline": "ພັກການກິນຢາເມັດຊົ່ວຄາວ",
   "restDurationFeatureAppealBody": "ສາມາດບັນທຶກໄລຍະທີ່ຢຸດກິນຢາຄຸມຊົ່ວຄາວໄວ້ໃນແຜງຢາຄຸມໄດ້. ໃນໄລຍະພັກ ເລກລຳດັບຢາຈະບໍ່ເລື່ອນ ແລະເມື່ອເລີ່ມກິນອີກຄັ້ງ ກໍສາມາດບັນທຶກຕໍ່ໄດ້ທັນທີ.",
   "featureAppealLocationLabel": "ບ່ອນທີ່ພົບໄດ້ໃນແອັບ",
-  "criticalAlertFeatureAppealPoint1": "ຮັບແຈ້ງເຕືອນໄດ້ເຖິງໃນໂໝດເຈາະຈົງ",
+  "criticalAlertFeatureAppealPoint1": "ຍັງໄດ້ຮັບການແຈ້ງເຕືອນ ແມ່ນແຕ່ໃນໂໝດຕັ້ງໃຈ",
   "criticalAlertFeatureAppealPoint2": "เตือนตรงตามเวลาที่ตั้งไว้",
   "criticalAlertFeatureAppealPoint3": "ຕັ້ງຄ່າງ່າຍໆ ດ້ວຍການກົດຄັ້ງດຽວ",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ສາມາດແກ້ໄຂຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້ຕາມຕ້ອງການ",
