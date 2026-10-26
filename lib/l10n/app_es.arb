@@ -184,7 +184,7 @@
   "premiumTermsNotice1": "・La suscripción Premium se renueva automáticamente cada mes o cada año, a partir de la fecha de inicio",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
-  "premiumTermsNotice2": "Información Legal",
+  "premiumTermsNotice2": "Información conforme a la ley japonesa sobre transacciones comerciales específicas",
   "premiumTermsNotice3": "antes de proceder con el registro",
   "autoRenewNotice": "• La suscripción se renovará automáticamente a menos que canceles al menos 24 horas antes de la fecha de finalización del período premium",
   "cancelAutoRenewInfo": "・Después de la compra, la cancelación de la renovación automática se puede realizar en la configuración de la cuenta de la aplicación {storeName}. (No se puede cancelar la renovación automática desde la aplicación).",

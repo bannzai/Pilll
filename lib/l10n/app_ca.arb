@@ -184,7 +184,7 @@
   "premiumTermsNotice1": "・La subscripció Premium es renova automàticament cada mes o cada any a partir de la data d’inici",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
-  "premiumTermsNotice2": "Informació segons la Llei de Transaccions Comercials Específiques",
+  "premiumTermsNotice2": "Informació segons la llei japonesa de transaccions comercials específiques",
   "premiumTermsNotice3": "i registreu-vos després de revisar-ho",
   "autoRenewNotice": "・El període contractual es renovarà automàticament llevat que es cancel·li més de 24 hores abans de la data de finalització del període de contracte premium",
   "cancelAutoRenewInfo": "・Després de la compra, la cancel·lació de la renovació automàtica es pot fer a la configuració del compte de l'aplicació {storeName}. (No es pot cancel·lar la renovació automàtica des de l'aplicació).",

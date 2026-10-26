@@ -184,7 +184,7 @@
   "premiumTermsNotice1": "・高级订阅自开始日期起，每 1 个月或 1 年自动续订",
   "premiumTermsBullet": "•",
   "slashSeparator": "/",
-  "premiumTermsNotice2": "法定商业信息",
+  "premiumTermsNotice2": "根据日本《特定商业交易法》披露的信息",
   "premiumTermsNotice3": "请确认后注册",
   "autoRenewNotice": "・除非在高级会员订阅期结束日24小时之前取消，否则订阅期将自动续订",
   "cancelAutoRenewInfo": "・购买后，可在{storeName}应用的账户设置中取消自动续订。(无法在应用内取消自动续订)。",
