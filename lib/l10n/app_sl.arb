@@ -220,7 +220,7 @@
   "next": "Naprej",
   "notificationIndex": "Obvestilo {number}",
   "takingRecordFromNotification": "Beleženje jemanja lahko opravite kar iz obvestila",
-  "startApp": "Začni z uporabo",
+  "startApp": "Začnite uporabljati aplikacijo",
   "loggedInWithProvider": "Prijavili ste se z {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Prosim, povejte mi\no predpisanih tabletah",
   "existingAccountUsers": "Že imate račun? Prijavite se tukaj",

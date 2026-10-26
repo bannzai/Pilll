@@ -220,7 +220,7 @@
   "next": "Далі",
   "notificationIndex": "Сповіщення {number}",
   "takingRecordFromNotification": "Ви можете додати запис прийому просто зі сповіщення",
-  "startApp": "Розпочати користування додатком",
+  "startApp": "Почніть користуватися застосунком",
   "loggedInWithProvider": "Ви увійшли через {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Розкажіть про призначені блістери",
   "existingAccountUsers": "У вас уже є акаунт?",

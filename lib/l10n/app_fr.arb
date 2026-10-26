@@ -220,7 +220,7 @@
   "next": "Suivant",
   "notificationIndex": "Notification {number}",
   "takingRecordFromNotification": "Vous pouvez compléter votre journal des prises directement depuis la notification",
-  "startApp": "Commencer",
+  "startApp": "Commencer à utiliser l’application",
   "loggedInWithProvider": "Connecté avec {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Veuillez nous parler de votre plaquette de pilules prescrite",
   "existingAccountUsers": "Vous avez déjà un compte ? Connectez-vous ici",

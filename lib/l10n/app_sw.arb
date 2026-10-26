@@ -220,7 +220,7 @@
   "next": "Inayofuata",
   "notificationIndex": "Arifa {number}",
   "takingRecordFromNotification": "Unaweza kuongeza taarifa kwenye rekodi ya kumeza vidonge moja kwa moja kutoka kwenye arifa",
-  "startApp": "Anza programu",
+  "startApp": "Anza kutumia programu",
   "loggedInWithProvider": "Umeingia kwa kutumia {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Tuambie kuhusu karatasi za vidonge ulivyoagizwa",
   "existingAccountUsers": "Uma akaunti tayari? Ingia hapa",

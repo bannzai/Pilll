@@ -220,7 +220,7 @@
   "next": "Далее",
   "notificationIndex": "Уведомление {number}",
   "takingRecordFromNotification": "Вы можете дополнить журнал приёма таблеток прямо из уведомления",
-  "startApp": "Начать",
+  "startApp": "Начать пользоваться приложением",
   "loggedInWithProvider": "Вход выполнен через {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Расскажите о назначенной упаковке",
   "existingAccountUsers": "Уже есть аккаунт?",

@@ -220,7 +220,7 @@
   "next": "Toliau",
   "notificationIndex": "Pranešimas {number}",
   "takingRecordFromNotification": "Vartojimo įrašą galite pridėti tiesiai iš pranešimo",
-  "startApp": "Pradėti naudotis",
+  "startApp": "Pradėkite naudotis programėle",
   "loggedInWithProvider": "Sėkmingai prisijungėte su {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Papasakykite apie praskiriamą plokštelę",
   "existingAccountUsers": "Jau turite paskyrą? Spustelėkite čia",

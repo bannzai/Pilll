@@ -220,7 +220,7 @@
   "next": "ඊළඟ",
   "notificationIndex": "දැනුම්දීම {number}",
   "takingRecordFromNotification": "දැනුම්දීමෙන්ම පෙති ගැනීමේ සටහනක් එක් කළ හැකියි",
-  "startApp": "යෙදුම ආරම්භ කරන්න",
+  "startApp": "යෙදුම භාවිතය අරඹන්න",
   "loggedInWithProvider": "{accountTypeProviderName} හරහා ලොග් වී ඇත",
   "tellAboutPrescribedSheet": "නිර්දේශිත ඖෂධ පත්‍ර ගැන අපට කියන්න",
   "existingAccountUsers": "දැනටමත් ගිණුමක් ඇත්නම් මෙහියින්",

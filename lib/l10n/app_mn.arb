@@ -220,7 +220,7 @@
   "next": "Дараах",
   "notificationIndex": "Мэдэгдэл {number}",
   "takingRecordFromNotification": "Мэдэгдлээс шууд эм уусан бүртгэл нэмэх боломжтой",
-  "startApp": "Эхлэх",
+  "startApp": "Аппыг ашиглаж эхэлнэ үү",
   "loggedInWithProvider": "{accountTypeProviderName} ашиглан нэвтрэв",
   "tellAboutPrescribedSheet": "Жороор олгосон эмийн багцны талаар\nхэлж өгнө үү",
   "existingAccountUsers": "Бүртгэлтэй бол энд дарна уу",

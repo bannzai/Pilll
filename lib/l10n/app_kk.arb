@@ -220,7 +220,7 @@
   "next": "Келесі",
   "notificationIndex": "Хабарландыру {number}",
   "takingRecordFromNotification": "Хабарламадан бірден қабылдау жазбасын қоса аласыз",
-  "startApp": "Қолданбаны бастау",
+  "startApp": "Қолданбаны пайдалана бастаңыз",
   "loggedInWithProvider": "{accountTypeProviderName} арқылы кірдіңіз",
   "tellAboutPrescribedSheet": "Дәрігер жазған дәрі блистері туралы айтып беріңіз",
   "existingAccountUsers": "Тіркелгіңіз бар болса, осы жерден кіріңіз",

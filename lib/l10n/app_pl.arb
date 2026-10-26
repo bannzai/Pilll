@@ -220,7 +220,7 @@
   "next": "Dalej",
   "notificationIndex": "Powiadomienie {number}",
   "takingRecordFromNotification": "Możesz dodać wpis o przyjęciu tabletki bezpośrednio z powiadomienia",
-  "startApp": "Rozpocznij używanie aplikacji",
+  "startApp": "Zacznij korzystać z aplikacji",
   "loggedInWithProvider": "Zalogowano się przez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Opowiedz nam o przepisanych blistrach",
   "existingAccountUsers": "Masz już konto? Kliknij tutaj",

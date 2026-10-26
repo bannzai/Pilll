@@ -220,7 +220,7 @@
   "next": "შემდეგი",
   "notificationIndex": "შეტყობინება {number}",
   "takingRecordFromNotification": "შეტყობინებიდან პირდაპირ შეგიძლიათ მიღების ჩანაწერის დამატება",
-  "startApp": "დაწყება",
+  "startApp": "აპის გამოყენების დაწყება",
   "loggedInWithProvider": "{accountTypeProviderName}-ით შესული ხართ",
   "tellAboutPrescribedSheet": "გთხოვთ, გვითხრათ დანიშნული შეფუთვის შესახებ",
   "existingAccountUsers": "უკვე გაქვთ ანგარიში? დაკლიკეთ აქ",

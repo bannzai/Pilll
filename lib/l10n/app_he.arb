@@ -220,7 +220,7 @@
   "next": "המשך",
   "notificationIndex": "התראה {number}",
   "takingRecordFromNotification": "אפשר להוסיף רישום נטילה ישירות מההתראה",
-  "startApp": "התחל עם האפליקציה",
+  "startApp": "להתחיל להשתמש באפליקציה",
   "loggedInWithProvider": "התחברת באמצעות {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "אנא ספר לנו על האריזה שנרשמה לך",
   "existingAccountUsers": "כבר יש לכם חשבון? לחצו כאן",

@@ -220,7 +220,7 @@
   "next": "Dalje",
   "notificationIndex": "Obavijest {number}",
   "takingRecordFromNotification": "Evidencija uzimanja može se dopuniti izravno iz obavijesti",
-  "startApp": "Počni s aplikacijom",
+  "startApp": "Počnite koristiti aplikaciju",
   "loggedInWithProvider": "Prijavili ste se pomoću {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo vas da nam kažete o propisanim tabletama",
   "existingAccountUsers": "Već imate račun? Prijavite se ovdje",

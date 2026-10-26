@@ -220,7 +220,7 @@
   "next": "Edasi",
   "notificationIndex": "Teavitus {number}",
   "takingRecordFromNotification": "Saad lisada võtmiskirje otse teavitusest",
-  "startApp": "Alusta äppi",
+  "startApp": "Alusta rakenduse kasutamist",
   "loggedInWithProvider": "Logitud sisse {accountTypeProviderName} kaudu",
   "tellAboutPrescribedSheet": "Palun rääkige määratud pillipakist",
   "existingAccountUsers": "Sul on juba konto?",

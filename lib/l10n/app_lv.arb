@@ -220,7 +220,7 @@
   "next": "Tālāk",
   "notificationIndex": "Paziņojums {number}",
   "takingRecordFromNotification": "Tablešu lietošanas ierakstu varat pievienot tieši no paziņojuma",
-  "startApp": "Sākt lietot aplikāciju",
+  "startApp": "Sāciet lietot lietotni",
   "loggedInWithProvider": "Esat veiksmīgi pieslēdzies ar {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pastāstiet par izrakstītajām plāksnītēm",
   "existingAccountUsers": "Jau ir konts? Noklikšķiniet šeit",

@@ -220,7 +220,7 @@
   "next": "ຕໍ່ໄປ",
   "notificationIndex": "ການແຈ້ງເຕືອນ {number}",
   "takingRecordFromNotification": "ທ່ານສາມາດເພີ່ມບັນທຶກການກິນຢາໄດ້ທັນທີຈາກການແຈ້ງເຕືອນ",
-  "startApp": "ເລີມໃຊ້ແອັບ",
+  "startApp": "ເລີ່ມໃຊ້ແອັບ",
   "loggedInWithProvider": "ເຂົ້າສູ່ລະບົບດ້ວຍ {accountTypeProviderName} ແລ້ວ",
   "tellAboutPrescribedSheet": "ກະລຸນາບອກກ່ຽວກັບແຜ່ນຢາທີ່ແພດສັ່ງໃຫ້",
   "existingAccountUsers": "ຜູ້ທີ່ມີບັນຊີແລ້ວກົດທີ່ນີ້",

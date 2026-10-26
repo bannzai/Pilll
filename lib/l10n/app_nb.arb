@@ -220,7 +220,7 @@
   "next": "Neste",
   "notificationIndex": "Varsel {number}",
   "takingRecordFromNotification": "Du kan oppdatere pilleloggen rett fra varselet",
-  "startApp": "Kom i gang",
+  "startApp": "Begynn å bruke appen",
   "loggedInWithProvider": "Logget inn med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortell oss om den utskrevne\npillepakken",
   "existingAccountUsers": "Har du allerede en konto? Logg inn her",

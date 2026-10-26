@@ -220,7 +220,7 @@
   "next": "Næste",
   "notificationIndex": "Notifikation {number}",
   "takingRecordFromNotification": "Du kan opdatere din pilleregistrering direkte fra notifikationen",
-  "startApp": "Kom i gang",
+  "startApp": "Begynd at bruge appen",
   "loggedInWithProvider": "Du har logget ind med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortæl os om din ordinerede pillepakke",
   "existingAccountUsers": "Har du allerede en konto? Log ind her",

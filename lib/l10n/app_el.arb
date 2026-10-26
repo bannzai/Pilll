@@ -220,7 +220,7 @@
   "next": "Επόμενο",
   "notificationIndex": "Ειδοποίηση {number}",
   "takingRecordFromNotification": "Μπορείτε να προσθέσετε καταγραφή λήψης απευθείας από την ειδοποίηση",
-  "startApp": "Ξεκινήστε την εφαρμογή",
+  "startApp": "Ξεκινήστε να χρησιμοποιείτε την εφαρμογή",
   "loggedInWithProvider": "Συνδεθήκατε με {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Πείτε μας για τη συνταγογραφημένη συσκευασία",
   "existingAccountUsers": "Έχετε ήδη λογαριασμό; Κάντε κλικ εδώ",

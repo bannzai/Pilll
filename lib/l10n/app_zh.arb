@@ -220,7 +220,7 @@
   "next": "下一步",
   "notificationIndex": "通知{number}",
   "takingRecordFromNotification": "可以直接从通知中添加服药记录哦",
-  "startApp": "开始使用",
+  "startApp": "开始使用应用",
   "loggedInWithProvider": "使用{accountTypeProviderName}登录成功",
   "tellAboutPrescribedSheet": "请告诉我们关于\n处方药片的信息",
   "existingAccountUsers": "已有账户？点击此处",

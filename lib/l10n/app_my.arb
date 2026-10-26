@@ -220,7 +220,7 @@
   "next": "နောက်တစ်ဆင့်",
   "notificationIndex": "အသိပေးချက် {number}",
   "takingRecordFromNotification": "အကြောင်းကြားချက်ကနေ ဆေးသောက်မှတ်တမ်းကို တိုက်ရိုက်ဖြည့်နိုင်ပါတယ်",
-  "startApp": "အက်ပ်စတင်မည်",
+  "startApp": "အက်ပ်ကို စတင်အသုံးပြုပါ",
   "loggedInWithProvider": "{accountTypeProviderName} ဖြင့် လော့ဂ်အင်ဝင်ပြီးပါပြီ",
   "tellAboutPrescribedSheet": "ညွန်းချက်ပေးထားသော ဆေးလုံးအထုပ်အကြောင်း ပြောပြပါ",
   "existingAccountUsers": "အကောင့်ရှိပြီးသူများအတွက် ဤနေရာတွင်",

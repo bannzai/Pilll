@@ -220,7 +220,7 @@
   "next": "បន្ទាប់",
   "notificationIndex": "ការជូនដំណឹង {number}",
   "takingRecordFromNotification": "អ្នកអាចបន្ថែមទៅកំណត់ត្រាការលេបថ្នាំបានភ្លាមៗពីការជូនដំណឹង",
-  "startApp": "ចាប់ផ្តើម",
+  "startApp": "ចាប់ផ្តើមប្រើកម្មវិធី",
   "loggedInWithProvider": "បានចូលប្រើដោយ{accountTypeProviderName}ហើយ",
   "tellAboutPrescribedSheet": "សូមប្រាប់អំពីបាយសៀត\nដែលពេទ្យចេចេបេសចេ",
   "existingAccountUsers": "សម្រាប់អ្នកដែលមានគណនីរួចហើយ ចុចទីនេះ",

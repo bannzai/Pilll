@@ -220,7 +220,7 @@
   "next": "Nästa",
   "notificationIndex": "Avisering {number}",
   "takingRecordFromNotification": "Du kan uppdatera din intagslogg direkt från notisen",
-  "startApp": "Kom igång",
+  "startApp": "Börja använda appen",
   "loggedInWithProvider": "Inloggad med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Berätta om ditt förskrivna pillblister",
   "existingAccountUsers": "Har du redan ett konto? Logga in här",

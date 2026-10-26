@@ -220,7 +220,7 @@
   "next": "Siguiente",
   "notificationIndex": "Notificación {number}",
   "takingRecordFromNotification": "Puedes añadir una entrada al registro de toma directamente desde la notificación",
-  "startApp": "Empezar",
+  "startApp": "Empieza a usar la aplicación",
   "loggedInWithProvider": "Has iniciado sesión con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Por favor, cuéntanos sobre las pastillas que te recetaron",
   "existingAccountUsers": "¿Ya tienes una cuenta? Inicia sesión aquí",

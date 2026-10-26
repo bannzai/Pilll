@@ -220,7 +220,7 @@
   "next": "다음",
   "notificationIndex": "알림 {number}",
   "takingRecordFromNotification": "알림에서 바로 복용 기록을 남길 수 있어요",
-  "startApp": "시작하기",
+  "startApp": "앱 사용 시작하기",
   "loggedInWithProvider": "{accountTypeProviderName}로 로그인했습니다",
   "tellAboutPrescribedSheet": "처방받은 시트에 대해서 알려주세요",
   "existingAccountUsers": "이미 계정이 있는 분은 여기",

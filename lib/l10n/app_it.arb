@@ -220,7 +220,7 @@
   "next": "Avanti",
   "notificationIndex": "Notifica {number}",
   "takingRecordFromNotification": "Puoi aggiornare il registro delle assunzioni direttamente dalla notifica",
-  "startApp": "Inizia",
+  "startApp": "Inizia a usare l'app",
   "loggedInWithProvider": "Accesso effettuato con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlaci del blister prescritto",
   "existingAccountUsers": "Hai già un account? Accedi qui",

@@ -220,7 +220,7 @@
   "next": "Кийинки",
   "notificationIndex": "Билдирүү {number}",
   "takingRecordFromNotification": "Билдирүүдөн эле таблетка ичүү жазуусун кошо аласыз",
-  "startApp": "Колдонмону баштоо",
+  "startApp": "Колдонмону колдоно баштаңыз",
   "loggedInWithProvider": "{accountTypeProviderName} аркылуу кирдиңиз",
   "tellAboutPrescribedSheet": "Дарыгер берген пилулдар пакети жөнүндө маалымат бериңиз",
   "existingAccountUsers": "Аккаунтуңуз бар болсо, бул жерден",

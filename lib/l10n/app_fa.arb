@@ -220,7 +220,7 @@
   "next": "بعدی",
   "notificationIndex": "اعلان {number}",
   "takingRecordFromNotification": "می‌توانید ثبت مصرف قرص را مستقیم از اعلان انجام دهید",
-  "startApp": "شروع اپلیکیشن",
+  "startApp": "شروع استفاده از برنامه",
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",
   "tellAboutPrescribedSheet": "لطفاً درباره بسته‌های قرص تجویزی اطلاعات دهید",
   "existingAccountUsers": "حساب کاربری دارید؟ ورود",

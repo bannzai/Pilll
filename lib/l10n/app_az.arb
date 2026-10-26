@@ -220,7 +220,7 @@
   "next": "Növbəti",
   "notificationIndex": "Bildiriş {number}",
   "takingRecordFromNotification": "Bildirişdən birbaşa həb qəbulu qeydi apara bilərsiniz",
-  "startApp": "Tətbiqi başla",
+  "startApp": "Tətbiqdən istifadə etməyə başlayın",
   "loggedInWithProvider": "{accountTypeProviderName} ilə daxil oldunuz",
   "tellAboutPrescribedSheet": "Reçete edilən həb lövhəsi haqqında məlumat verin",
   "existingAccountUsers": "Artıq hesabınız varsa, buraya basın",

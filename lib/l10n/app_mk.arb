@@ -220,7 +220,7 @@
   "next": "Следно",
   "notificationIndex": "Известување {number}",
   "takingRecordFromNotification": "Можете да додадете Запис за земање директно од известувањето",
-  "startApp": "Започни со апликацијата",
+  "startApp": "Започнете да ја користите апликацијата",
   "loggedInWithProvider": "Се најавивте со {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Кажете ни за пропишаните листови на пилули",
   "existingAccountUsers": "Веќе имате сметка? Кликнете тука",

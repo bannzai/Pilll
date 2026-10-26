@@ -220,7 +220,7 @@
   "next": "Següent",
   "notificationIndex": "Notificació {number}",
   "takingRecordFromNotification": "Pots afegir una entrada al registre de preses directament des de la notificació",
-  "startApp": "Començar l'aplicació",
+  "startApp": "Comença a fer servir l'aplicació",
   "loggedInWithProvider": "T'has connectat amb {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Si us plau, expliqueu-nos sobre el blíster receptat",
   "existingAccountUsers": "Si ja tens un compte, entra aquí",

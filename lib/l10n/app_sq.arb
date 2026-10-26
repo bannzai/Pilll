@@ -220,7 +220,7 @@
   "next": "Më tej",
   "notificationIndex": "Njoftim {number}",
   "takingRecordFromNotification": "Mund të shtoni regjistrimi i marrjes drejtpërdrejt nga njoftimi",
-  "startApp": "Fillo aplikacionin",
+  "startApp": "Filloni të përdorni aplikacionin",
   "loggedInWithProvider": "U kyçët me {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Ju lutemi na tregoni rreth bllokut që ju është përshkruar",
   "existingAccountUsers": "Keni tashmë një llogari?",

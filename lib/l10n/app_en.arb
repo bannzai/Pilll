@@ -220,7 +220,7 @@
   "next": "Next",
   "notificationIndex": "Notification {number}",
   "takingRecordFromNotification": "You can update your pill log right from the notification",
-  "startApp": "Get Started",
+  "startApp": "Start using the app",
   "loggedInWithProvider": "Logged in with {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Please tell us about your prescribed pill pack",
   "existingAccountUsers": "Already have an account? Sign in here",

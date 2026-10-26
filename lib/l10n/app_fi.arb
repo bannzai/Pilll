@@ -220,7 +220,7 @@
   "next": "Seuraava",
   "notificationIndex": "Ilmoitus {number}",
   "takingRecordFromNotification": "Voit päivittää pillerilokia suoraan ilmoituksesta",
-  "startApp": "Aloita sovellus",
+  "startApp": "Aloita sovelluksen käyttö",
   "loggedInWithProvider": "Kirjauduit sisään {accountTypeProviderName}-palvelun kautta",
   "tellAboutPrescribedSheet": "Kerro määrätyistä tablettipakkauksista",
   "existingAccountUsers": "Minulla on jo tili",

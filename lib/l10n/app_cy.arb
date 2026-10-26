@@ -220,7 +220,7 @@
   "next": "Nesaf",
   "notificationIndex": "Hysbysiad {number}",
   "takingRecordFromNotification": "Gallwch ychwanegu at y cofnod cymryd yn syth o'r hysbysiad",
-  "startApp": "Dechrau'r Ap",
+  "startApp": "Dechreuwch ddefnyddio'r ap",
   "loggedInWithProvider": "Wedi mewngofnodi â {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Dywedwch wrthym am y\nddalennau bilsennau a ragnodwyd",
   "existingAccountUsers": "Os oes gennych gyfrif eisoes, cliciwch yma",

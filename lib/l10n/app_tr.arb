@@ -220,7 +220,7 @@
   "next": "İleri",
   "notificationIndex": "Bildirim {number}",
   "takingRecordFromNotification": "Bildirimden doğrudan hap kullanım kaydı ekleyebilirsiniz",
-  "startApp": "Uygulamaya Başla",
+  "startApp": "Uygulamayı kullanmaya başlayın",
   "loggedInWithProvider": "{accountTypeProviderName} ile giriş yaptınız",
   "tellAboutPrescribedSheet": "Reçete edilen strip hakkında bilgi verin",
   "existingAccountUsers": "Zaten hesabım var",

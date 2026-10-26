@@ -220,7 +220,7 @@
   "next": "Keyingi",
   "notificationIndex": "Bildirishnoma {number}",
   "takingRecordFromNotification": "Bildirishnomadan turib tabletka qabul qilish qaydini qoʻshishingiz mumkin",
-  "startApp": "Boshlash",
+  "startApp": "Ilovadan foydalanishni boshlang",
   "loggedInWithProvider": "{accountTypeProviderName} orqali tizimga kirdingiz",
   "tellAboutPrescribedSheet": "Buyurilgan dori qadoqlari haqida\nma'lumot bering",
   "existingAccountUsers": "Hisobingiz bormi? Shu yerda",

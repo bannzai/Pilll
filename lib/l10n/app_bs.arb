@@ -220,7 +220,7 @@
   "next": "Dalje",
   "notificationIndex": "Obavijest {number}",
   "takingRecordFromNotification": "Evidenciju uzimanja pilule možete dopuniti direktno iz obavijesti",
-  "startApp": "Počnite aplikaciju",
+  "startApp": "Počnite koristiti aplikaciju",
   "loggedInWithProvider": "Prijavljeni ste preko {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo recite nam o propisanom blisteru",
   "existingAccountUsers": "Već imate račun?",

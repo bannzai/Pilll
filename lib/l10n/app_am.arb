@@ -220,7 +220,7 @@
   "next": "ቀጣይ",
   "notificationIndex": "ማሳወቂያ {number}",
   "takingRecordFromNotification": "ከማሳወቂያው በቀጥታ አወሳሰድ መዝገብ ማድረግ ይችላሉ",
-  "startApp": "መተግበሪያውን ጀምር",
+  "startApp": "መተግበሪያውን መጠቀም ይጀምሩ",
   "loggedInWithProvider": "በ{accountTypeProviderName} ገብተዋል",
   "tellAboutPrescribedSheet": "እባክዎን ስለ የተወሰደላችሁ የመድኃኒት ሉህ ያሳውቁን",
   "existingAccountUsers": "አስቀድሞ መለያ ካለዎት እዚህ ጋር",

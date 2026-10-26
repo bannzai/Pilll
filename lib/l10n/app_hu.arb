@@ -220,7 +220,7 @@
   "next": "Tovább",
   "notificationIndex": "Értesítés {number}",
   "takingRecordFromNotification": "A tablettaszedési naplót közvetlenül az értesítésből is frissítheted",
-  "startApp": "Kezdés",
+  "startApp": "Kezdd el használni az alkalmazást",
   "loggedInWithProvider": "Bejelentkeztél a {accountTypeProviderName} fiókkal",
   "tellAboutPrescribedSheet": "A felírt fogamzásgátló csomagról\nkérem, adjon információt",
   "existingAccountUsers": "Aki már rendelkezik fiókkal, kattintson ide",

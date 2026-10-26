@@ -220,7 +220,7 @@
   "next": "अर्को",
   "notificationIndex": "सूचना {number}",
   "takingRecordFromNotification": "तपाईंले सूचनाबाटै सेवन रेकर्ड थप्न सक्नुहुन्छ",
-  "startApp": "एप सुरु गर्नुहोस्",
+  "startApp": "एप प्रयोग गर्न सुरु गर्नुहोस्",
   "loggedInWithProvider": "{accountTypeProviderName} मार्फत लग इन गर्नुभयो",
   "tellAboutPrescribedSheet": "निर्धारित गोलीको पत्ताका बारेमा जानकारी दिनुहोस्",
   "existingAccountUsers": "पहिले देखि खाता भएकाहरुको लागि यहाँ",

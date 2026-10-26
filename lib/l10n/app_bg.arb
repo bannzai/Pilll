@@ -220,7 +220,7 @@
   "next": "Напред",
   "notificationIndex": "Известие {number}",
   "takingRecordFromNotification": "Можете да добавите запис на приема направо от известието",
-  "startApp": "Започни",
+  "startApp": "Започнете да използвате приложението",
   "loggedInWithProvider": "Влязохте с {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Моля, разкажете ни за предписаната опаковка",
   "existingAccountUsers": "Вече имате акаунт? Влезте тук",

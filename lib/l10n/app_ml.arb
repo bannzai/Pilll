@@ -220,7 +220,7 @@
   "next": "അടുത്തത്",
   "notificationIndex": "അറിയിപ്പ് {number}",
   "takingRecordFromNotification": "അറിയിപ്പിൽ നിന്നുതന്നെ ഗുളിക കഴിച്ചതിന്റെ രേഖ ചേർക്കാം",
-  "startApp": "ആപ്പ് ആരംഭിക്കുക",
+  "startApp": "ആപ്പ് ഉപയോഗിച്ച് തുടങ്ങൂ",
   "loggedInWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് ലോഗിൻ ചെയ്തു",
   "tellAboutPrescribedSheet": "നിർദ്ദേശിച്ച ഗുളിക പാക്കിനെക്കുറിച്ച് പറയുക",
   "existingAccountUsers": "ഇതിനകം അക്കൗണ്ടുള്ളവര്‍ ഇവിടെ",
