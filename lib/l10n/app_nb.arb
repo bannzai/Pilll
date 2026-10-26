@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Det finnes ingen tidligere pillebrettgruppe ennå",
   "failedToFetchPillHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
   "seeFAQ": "Se vanlige spørsmål",
-  "reloadScreen": "Last inn på nytt",
+  "reloadScreen": "Last inn skjermen på nytt",
   "contactIfNotResolved": "Hvis det ikke hjelper, klikk her",
   "shareFeedback": "Vi vil gjerne høre hva du synes om Pilll",
   "confirm": "Bekreft",

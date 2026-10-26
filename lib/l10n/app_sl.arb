@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Prejšnja skupina ploščic še ne obstaja",
   "failedToFetchPillHistory": "Podatkov za zgodovino jemanja ni bilo mogoče naložiti. {error}",
   "seeFAQ": "Oglejte si pogosta vprašanja",
-  "reloadScreen": "Ponovno naloži zaslon",
+  "reloadScreen": "Znova naložite zaslon",
   "contactIfNotResolved": "Če se ne reši, kliknite tukaj",
   "shareFeedback": "Povejte nam svoje mnenje o aplikaciji Pilll",
   "confirm": "Potrdi",

@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Претходна група блистера још не постоји",
   "failedToFetchPillHistory": "Нисмо успели да учитамо податке за историја узимања. {error}",
   "seeFAQ": "Погледајте честа питања",
-  "reloadScreen": "Освежи екран",
+  "reloadScreen": "Поново учитајте екран",
   "contactIfNotResolved": "Ako se ne reši, kliknite ovde",
   "shareFeedback": "Поделите ваше мишљење о Pilll",
   "confirm": "Potvrdi",

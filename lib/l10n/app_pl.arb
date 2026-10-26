@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Nie ma jeszcze poprzedniej grupy blistów",
   "failedToFetchPillHistory": "Nie udało się pobrać danych historii przyjmowania tabletek. {error}",
   "seeFAQ": "Zobacz częste pytania",
-  "reloadScreen": "Przeładuj ekran",
+  "reloadScreen": "Wczytaj ekran ponownie",
   "contactIfNotResolved": "Jeśli problem się nie rozwiąże, kliknij tutaj",
   "shareFeedback": "Podziel się swoją opinią o Pilll",
   "confirm": "Potwierdź",

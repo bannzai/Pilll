@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "עדיין אין קבוצה קודמת של חפיסת גלולות",
   "failedToFetchPillHistory": "לא ניתן לטעון את המידע של היסטוריית נטילה. {error}",
   "seeFAQ": "לצפייה בשאלות נפוצות",
-  "reloadScreen": "רענן מסך",
+  "reloadScreen": "לטעון מחדש את המסך",
   "contactIfNotResolved": "אם לא נפתר - לחץ כאן",
   "shareFeedback": "נשמח לשמוע את דעתכם על Pilll",
   "confirm": "אישור",

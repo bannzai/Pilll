@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "لا توجد مجموعة سابقة من شريط الحبوب بعد",
   "failedToFetchPillHistory": "تعذر جلب معلومات سجل تناول الحبوب. {error}",
   "seeFAQ": "اطلعي على الأسئلة الشائعة",
-  "reloadScreen": "إعادة تحميل الصفحة",
+  "reloadScreen": "إعادة تحميل الشاشة",
   "contactIfNotResolved": "إذا لم تحل المشكلة، اضغط هنا",
   "shareFeedback": "يُرجى مشاركة رأيك حول Pilll",
   "confirm": "تأكيد",

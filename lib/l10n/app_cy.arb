@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Nid oes grŵp blaenorol o stribed pils eto",
   "failedToFetchPillHistory": "Nid oedd modd llwytho gwybodaeth hanes cymryd y bilsen. {error}",
   "seeFAQ": "Gweld cwestiynau cyffredin",
-  "reloadScreen": "Ail-lwytho'r sgrin",
+  "reloadScreen": "Ail-lwythwch y sgrin",
   "contactIfNotResolved": "Os nad yw'n datrys, cliciwch yma",
   "shareFeedback": "Hoffem glywed eich barn am Pilll",
   "confirm": "Cadarnhau",

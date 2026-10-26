@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Enginn fyrri hópur pilluspjalda er til enn",
   "failedToFetchPillHistory": "Ekki tókst að sækja upplýsingar í inntökuyfirlitinu. {error}",
   "seeFAQ": "Skoða algengar spurningar",
-  "reloadScreen": "Endurhlada skjá",
+  "reloadScreen": "Hlaða skjáinn aftur",
   "contactIfNotResolved": "Ef þetta leysist ekki, smelltu hér",
   "shareFeedback": "Vinsamlegast deildu álit þínu á Pilll",
   "confirm": "Staðfesta",

@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Мурунку таблетка блистери тобу азырынча жок",
   "failedToFetchPillHistory": "Ичүү тарыхы тууралуу маалыматты жүктөй алган жокпуз. {error}",
   "seeFAQ": "Көп берилүүчү суроолорду көрүңүз",
-  "reloadScreen": "Экранды жаңыртуу",
+  "reloadScreen": "Экранды кайра жүктөңүз",
   "contactIfNotResolved": "Чечилбесе, бул жерден байланышыңыз",
   "shareFeedback": "Pilll жөнүндө пикириңизди билдириңиз",
   "confirm": "Макул",

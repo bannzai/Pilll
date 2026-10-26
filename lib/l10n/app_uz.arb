@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Oldingi tabletka blister guruhi hali mavjud emas",
   "failedToFetchPillHistory": "Qabul qilish tarixi maʼlumotlarini yuklab boʻlmadi. {error}",
   "seeFAQ": "Koʻp soʻraladigan savollarni koʻring",
-  "reloadScreen": "Ekranni yangilash",
+  "reloadScreen": "Ekranni qayta yuklang",
   "contactIfNotResolved": "Hal bo'lmasa, bu yerga murojaat qiling",
   "shareFeedback": "Pilll haqida fikringizni bildiring",
   "confirm": "Tasdiqlash",

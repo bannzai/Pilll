@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Es gibt noch keine vorherige Pillenblistergruppe",
   "failedToFetchPillHistory": "Die Daten für deinen Einnahmeverlauf konnten nicht geladen werden. {error}",
   "seeFAQ": "Häufige Fragen ansehen",
-  "reloadScreen": "Neu laden",
+  "reloadScreen": "Bildschirm neu laden",
   "contactIfNotResolved": "Falls ungelöst, hier klicken",
   "shareFeedback": "Teilen Sie uns Ihre Meinung zu Pilll mit",
   "confirm": "Bestätigen",

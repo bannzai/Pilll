@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Er is nog geen vorige pillenstripgroep",
   "failedToFetchPillHistory": "De gegevens voor je innamegeschiedenis konden niet worden geladen. {error}",
   "seeFAQ": "Bekijk veelgestelde vragen",
-  "reloadScreen": "Scherm herladen",
+  "reloadScreen": "Scherm opnieuw laden",
   "contactIfNotResolved": "Nog steeds problemen? Klik hier",
   "shareFeedback": "Vertel ons wat je van Pilll vindt",
   "confirm": "Bevestigen",

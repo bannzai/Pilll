@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Det finns ingen tidigare grupp med p-pillerkartor än",
   "failedToFetchPillHistory": "Det gick inte att hämta information om din intagshistorik. {error}",
   "seeFAQ": "Se vanliga frågor",
-  "reloadScreen": "Ladda om sidan",
+  "reloadScreen": "Läs in skärmen igen",
   "contactIfNotResolved": "Om det inte löser sig, kontakta oss här",
   "shareFeedback": "Berätta vad du tycker om Pilll",
   "confirm": "Bekräfta",

@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Nu există încă un grup anterior de blistere",
   "failedToFetchPillHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulelor. {error}",
   "seeFAQ": "Vezi întrebările frecvente",
-  "reloadScreen": "Reîncărcați ecranul",
+  "reloadScreen": "Reîncarcă ecranul",
   "contactIfNotResolved": "Dacă nu se rezolvă, apăsați aici",
   "shareFeedback": "Vă rugăm să ne spuneți părerea despre Pilll",
   "confirm": "Confirmare",

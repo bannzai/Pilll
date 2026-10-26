@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Todavía no hay un grupo de blíster anterior",
   "failedToFetchPillHistory": "No se pudo cargar la información del historial de tomas. {error}",
   "seeFAQ": "Ver preguntas frecuentes",
-  "reloadScreen": "Recargar pantalla",
+  "reloadScreen": "Volver a cargar la pantalla",
   "contactIfNotResolved": "Si no se resuelve, contacta aquí",
   "shareFeedback": "Compártenos tu opinión sobre Pilll",
   "confirm": "Confirmar",

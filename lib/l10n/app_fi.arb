@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Aiempaa pilleriliuskojen ryhmää ei vielä ole",
   "failedToFetchPillHistory": "Pillerihistorian tietoja ei voitu ladata. {error}",
   "seeFAQ": "Katso usein kysytyt kysymykset",
-  "reloadScreen": "Päivitä näyttö",
+  "reloadScreen": "Lataa näyttö uudelleen",
   "contactIfNotResolved": "Jos ei auta, klikkaa tähän",
   "shareFeedback": "Anna palautetta Pilll-sovelluksesta",
   "confirm": "Vahvista",

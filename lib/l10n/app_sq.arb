@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Ende nuk ka një grup të mëparshëm blisterësh",
   "failedToFetchPillHistory": "Nuk u arrit të ngarkoheshin të dhënat për historia e marrjes. {error}",
   "seeFAQ": "Shihni pyetjet e shpeshta",
-  "reloadScreen": "Rifresko ekranin",
+  "reloadScreen": "Ringarkoni ekranin",
   "contactIfNotResolved": "Nëse nuk zgjidhet, klikoni këtu",
   "shareFeedback": "Na tregoni mendimin tuaj për Pilll",
   "confirm": "Vendos",

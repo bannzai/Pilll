@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Prethodna grupa za blister još ne postoji",
   "failedToFetchPillHistory": "Nismo uspjeli učitati podatke za historiju uzimanja pilula. {error}",
   "seeFAQ": "Pogledajte česta pitanja",
-  "reloadScreen": "Osvježi ekran",
+  "reloadScreen": "Ponovo učitajte ekran",
   "contactIfNotResolved": "Ako se ne riješi, kliknite ovdje",
   "shareFeedback": "Podijelite vaše mišljenje o Pilll aplikaciji",
   "confirm": "Potvrdi",

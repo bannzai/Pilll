@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Əvvəlki həb blister qrupu hələ yoxdur",
   "failedToFetchPillHistory": "Qəbul tarixçəsi məlumatlarını əldə etmək mümkün olmadı. {error}",
   "seeFAQ": "Tez-tez verilən suallara baxın",
-  "reloadScreen": "Ekranı yenidən yüklə",
+  "reloadScreen": "Ekranı yenidən yükləyin",
   "contactIfNotResolved": "Həll olmadıqda buraya müraciət edin",
   "shareFeedback": "Pilll tətbiqi haqqında fikirlərinizi bizə bildirin",
   "confirm": "Təsdiq",

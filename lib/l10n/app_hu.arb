@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Még nincs korábbi tablettacsomag-csoport",
   "failedToFetchPillHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "seeFAQ": "Gyakori kérdések megtekintése",
-  "reloadScreen": "Képernyő frissítése",
+  "reloadScreen": "Képernyő újratöltése",
   "contactIfNotResolved": "Ha nem oldódik meg, kattintson ide",
   "shareFeedback": "Kérjük, ossza meg véleményét a Pilllről",
   "confirm": "Rendben",

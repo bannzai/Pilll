@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Алдыңғы таблетка блистер тобы әлі жоқ",
   "failedToFetchPillHistory": "Қабылдау тарихы туралы мәліметтерді жүктеу мүмкін болмады. {error}",
   "seeFAQ": "Жиі қойылатын сұрақтарды қараңыз",
-  "reloadScreen": "Экранды қайта жүктеу",
+  "reloadScreen": "Экранды қайта жүктеңіз",
   "contactIfNotResolved": "Шешілмесе, мұнда",
   "shareFeedback": "Pilll туралы пікіріңізді білдіріңіз",
   "confirm": "Жарайды",

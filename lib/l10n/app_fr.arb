@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Il n’y a pas encore de groupe de plaquettes précédent",
   "failedToFetchPillHistory": "Impossible de charger les informations de l’historique des prises. {error}",
   "seeFAQ": "Voir les questions fréquentes",
-  "reloadScreen": "Recharger",
+  "reloadScreen": "Recharger l’écran",
   "contactIfNotResolved": "Contactez-nous si non résolu",
   "shareFeedback": "Nous aimerions connaître vos commentaires sur Pilll",
   "confirm": "D'ACCORD",

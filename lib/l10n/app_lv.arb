@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Iepriekšējās tablešu blister grupas vēl nav",
   "failedToFetchPillHistory": "Neizdevās ielādēt lietošanas vēstures informāciju. {error}",
   "seeFAQ": "Skatiet biežāk uzdotos jautājumus",
-  "reloadScreen": "Atjaunot ekrānu",
+  "reloadScreen": "Ielādējiet ekrānu vēlreiz",
   "contactIfNotResolved": "Ja neatrisina - spiediet šeit",
   "shareFeedback": "Dalieties ar savu viedokli par Pilll",
   "confirm": "Labi",

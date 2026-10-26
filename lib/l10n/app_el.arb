@@ -255,7 +255,7 @@
   "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμη προηγούμενη ομάδα για καρτέλα χαπιών",
   "failedToFetchPillHistory": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών για το ιστορικό λήψης. {error}",
   "seeFAQ": "Δείτε τις συχνές ερωτήσεις",
-  "reloadScreen": "Ανανέωση οθόνης",
+  "reloadScreen": "Επαναφόρτωση οθόνης",
   "contactIfNotResolved": "Αν δεν επιλυθεί, κάντε κλικ εδώ",
   "shareFeedback": "Πείτε μας την άποψή σας για το Pilll",
   "confirm": "Εντάξει",
