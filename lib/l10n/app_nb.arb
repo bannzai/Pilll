@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Et slettet dagboknotat kan ikke gjenopprettes",
   "editMenstruation": "Rediger mensdagene",
   "changedPillNumber": "pillenummer endret",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt fra månedlig abonnement",
+  "offPercentForMonthlyPremiumPackage": "Spar {offPercent} % sammenlignet med det vanlige månedsabonnementet",
   "premiumIntroductionDiscountPriceDeadline": "Med Premium-registrering kan du fortsette å bruke alle funksjoner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabatt ved kjøp innen {countdown}",
   "pillReminderChanged": "Pille påminnelse er satt til {value}",

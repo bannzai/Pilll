@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "ਮਿਟਾਈ ਗਈ ਡਾਇਰੀ ਦੀ ਐਂਟਰੀ ਮੁੜ ਪ੍ਰਾਪਤ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
   "editMenstruation": "ਮਾਹਵਾਰੀ ਦੇ ਦਿਨ ਸੋਧੋ",
   "changedPillNumber": "ਗੋਲੀ ਨੰਬਰ ਬਦਲਿਆ ਗਿਆ",
-  "offPercentForMonthlyPremiumPackage": "ਮਾਸਿਕ ਪਲਾਨ ਨਾਲੋਂ {offPercent}％ ਛੋਟ",
+  "offPercentForMonthlyPremiumPackage": "ਆਮ ਮਹੀਨਾਵਾਰ ਪਲਾਨ ਨਾਲੋਂ {offPercent}% ਛੋਟ",
   "premiumIntroductionDiscountPriceDeadline": "ਪ੍ਰੀਮੀਅਮ ਰਜਿਸਟਰ ਕਰਕੇ ਤੁਸੀਂ ਸਾਰੇ ਫੀਚਰਾਂ ਦੀ ਵਰਤੋਂ ਜਾਰੀ ਰੱਖ ਸਕਦੇ ਹੋ",
   "countdownForDiscountPriceDeadline": "{countdown} ਵਿੱਚ ਖਰੀਦੋ, {offPercent}% ਛੂਟ",
   "pillReminderChanged": "ਸੇਵਨ ਸੂਚਨਾ {value} ਵਜੇ ਸੈੱਟ ਕਰ ਦਿੱਤੀ ਗਈ",

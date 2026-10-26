@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "මකා දැමූ දිනපොත් සටහනක් නැවත ලබා ගත නොහැක",
   "editMenstruation": "ඔසප් දින සංස්කරණය කරන්න",
   "changedPillNumber": "පෙති අංක වෙනස් කිරීම",
-  "offPercentForMonthlyPremiumPackage": "සාමාන්‍ය මාසික සැලසුමට වඩා {offPercent}% අඩු",
+  "offPercentForMonthlyPremiumPackage": "සාමාන්‍ය මාසික සැලැස්මට වඩා {offPercent}%ක වට්ටමක්",
   "premiumIntroductionDiscountPriceDeadline": "ප්‍රිමියම් ලියාපදිංචි වීමෙන් දිගටම සියලුම විශේෂාංග භාවිතා කළ හැකිය",
   "countdownForDiscountPriceDeadline": "{countdown} ට ඇතුළත මිලදී ගැනීමේදී {offPercent}% වට්ටම",
   "pillReminderChanged": "සේවන දැනුම්දීම {value} ට වෙනස් කරන ලදී",

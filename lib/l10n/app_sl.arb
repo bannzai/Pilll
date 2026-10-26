@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Izbrisanega dnevniškega zapisa ni mogoče obnoviti",
   "editMenstruation": "Uredite obdobje menstruacije",
   "changedPillNumber": "sprememba številka tablete",
-  "offPercentForMonthlyPremiumPackage": "{offPercent} % popust v primerjavi z običajno mesečno naročnino",
+  "offPercentForMonthlyPremiumPackage": "{offPercent} % ceneje od običajnega mesečnega paketa",
   "premiumIntroductionDiscountPriceDeadline": "S premium naročnino lahko še naprej uporabljate vse funkcije",
   "countdownForDiscountPriceDeadline": "{offPercent}% popusta pri nakupu v {countdown}",
   "pillReminderChanged": "Opomnik za jemanje tablet je nastavljen na {value}",

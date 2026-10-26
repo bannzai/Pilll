@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "ഇല്ലാതാക്കിയ ഡയറി കുറിപ്പ് തിരികെ കൊണ്ടുവരാൻ കഴിയില്ല",
   "editMenstruation": "ആർത്തവ ദിവസങ്ങൾ തിരുത്തുക",
   "changedPillNumber": "ഗുളിക നമ്പ മാറ്റി",
-  "offPercentForMonthlyPremiumPackage": "സാധാരണ മാസിക വിലയുമായി താരതമ്യപ്പെടുത്തുമ്പോൾ {offPercent}% കിഴിവ്",
+  "offPercentForMonthlyPremiumPackage": "സാധാരണ പ്രതിമാസ പ്ലാനിനേക്കാൾ {offPercent}% കിഴിവ്",
   "premiumIntroductionDiscountPriceDeadline": "പ്രീമിയം സബ്‌സ്‌ക്രിപ്‌ഷൻ വഴി എല്ലാ ഫീച്ചറുകളും തുടർന്നും ഉപയോഗിക്കാം",
   "countdownForDiscountPriceDeadline": "{countdown} ഇനി വാങ്ങിയാൽ {offPercent}% കിഴിവ്",
   "pillReminderChanged": "സേവന റിമൈൻഡർ {value} ആയി സജ്ജീകരിച്ചു",

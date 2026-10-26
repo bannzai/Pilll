@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ein gelöschter Tagebucheintrag kann nicht wiederhergestellt werden",
   "editMenstruation": "Zeitraum der Periode bearbeiten",
   "changedPillNumber": "Pillennummer geändert",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als das Monatsabo",
+  "offPercentForMonthlyPremiumPackage": "{offPercent} % günstiger als der reguläre Monatstarif",
   "premiumIntroductionDiscountPriceDeadline": "Mit der Premium-Registrierung können Sie weiterhin alle Funktionen nutzen",
   "countdownForDiscountPriceDeadline": "{offPercent}% Rabatt bei Kauf innerhalb von {countdown}",
   "pillReminderChanged": "Einnahme-Erinnerung wurde auf {value} eingestellt",

@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "हटवलेली दैनंदिनीतील नोंद पुन्हा मिळवता येणार नाही",
   "editMenstruation": "मासिक पाळीचे दिवस संपादित करा",
   "changedPillNumber": "गोळी क्रमांक बदलला",
-  "offPercentForMonthlyPremiumPackage": "सामान्य मासिक शुल्काच्या तुलनेत {offPercent}% छूट",
+  "offPercentForMonthlyPremiumPackage": "नेहमीच्या मासिक प्लॅनपेक्षा {offPercent}% सवलत",
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम नोंदणीने आपण सर्व वैशिष्ट्ये वापरत राहू शकता",
   "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी करून {offPercent}% सूट मिळवा",
   "pillReminderChanged": "औषध सेवन सूचना {value} ला सेट केली",

@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ett raderat dagboksinlägg kan inte återställas",
   "editMenstruation": "Ändra mensdagar",
   "changedPillNumber": "tablettnummer ändrat",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt jämfört med månadspris",
+  "offPercentForMonthlyPremiumPackage": "Spara {offPercent} % jämfört med det vanliga månadsabonnemanget",
   "premiumIntroductionDiscountPriceDeadline": "Genom att registrera dig för premium kan du fortsätta att använda alla funktioner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabatt vid köp inom {countdown}",
   "pillReminderChanged": "Påminnelsen för medicintag har ställts in till {value}",

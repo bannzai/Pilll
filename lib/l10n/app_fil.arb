@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang naburang tala sa talaarawan",
   "editMenstruation": "I-edit ang mga petsa ng regla",
   "changedPillNumber": "binago ang numero ng tableta",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF kumpara sa regular na monthly",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% na mas mura kaysa sa karaniwang buwanang plano",
   "premiumIntroductionDiscountPriceDeadline": "Sa Premium subscription, patuloy mong magagamit ang lahat ng features",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF kapag bumili sa loob ng {countdown}",
   "pillReminderChanged": "Naitakda na ang paalala sa pag-inom sa {value}",

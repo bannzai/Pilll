@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Silinen günlük kaydı geri yüklenemez",
   "editMenstruation": "Adet günlerini düzenleyin",
   "changedPillNumber": "hap numarası değiştirildi",
-  "offPercentForMonthlyPremiumPackage": "Normal aylık plana kıyasla %{offPercent} İNDİRİM",
+  "offPercentForMonthlyPremiumPackage": "Standart aylık plana göre %{offPercent} indirim",
   "premiumIntroductionDiscountPriceDeadline": "Premium üyelik ile tüm özellikleri kullanmaya devam edebilirsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} içinde satın alırsan %{offPercent} indirim",
   "pillReminderChanged": "İlaç hatırlatıcısı {value} olarak ayarlandı",

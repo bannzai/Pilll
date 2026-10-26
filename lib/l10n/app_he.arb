@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "לא ניתן לשחזר רשומה ביומן לאחר מחיקתה",
   "editMenstruation": "עריכת תאריכי המחזור",
   "changedPillNumber": "שינוי מספר גלולה",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% הנחה לעומת התשלום החודשי הרגיל",
+  "offPercentForMonthlyPremiumPackage": "הנחה של {offPercent}% לעומת התוכנית החודשית הרגילה",
   "premiumIntroductionDiscountPriceDeadline": "הרשמה לפרמיום מאפשרת המשך שימוש בכל התכונות",
   "countdownForDiscountPriceDeadline": "קנה תוך {countdown} וקבל {offPercent}% הנחה",
   "pillReminderChanged": "תזכורת הנטילה הוגדרה ל{value}",

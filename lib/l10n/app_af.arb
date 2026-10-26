@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "’n Dagboekinskrywing wat jy uitvee, kan nie herstel word nie",
   "editMenstruation": "Wysig datums van jou maandstonde",
   "changedPillNumber": "pilnommer verander",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% afslag in vergelyking met die gewone maandelikse plan",
+  "offPercentForMonthlyPremiumPackage": "Bespaar {offPercent}% teenoor die gewone maandelikse plan",
   "premiumIntroductionDiscountPriceDeadline": "Met premium registrasie kan jy voortgaan om alle funksies te gebruik",
   "countdownForDiscountPriceDeadline": "Koop binne {countdown} en kry {offPercent}% afslag",
   "pillReminderChanged": "Innameherinnering is op {value} gestel.",

@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
   "editMenstruation": "сарын тэмдгийн өдрүүдийг засах",
   "changedPillNumber": "эмийн дугаар өөрчлөгдсөн",
-  "offPercentForMonthlyPremiumPackage": "Ердийн сарын төлбөрөөс {offPercent}% хөнгөлөлт",
+  "offPercentForMonthlyPremiumPackage": "Ердийн сарын багцтай харьцуулахад {offPercent}% хямд",
   "premiumIntroductionDiscountPriceDeadline": "Премиум бүртгэл хийснээр бүх функцийг үргэлжлүүлэн ашиглах боломжтой",
   "countdownForDiscountPriceDeadline": "{countdown} дотор худалдан авбал {offPercent}% хөнгөлөлт",
   "pillReminderChanged": "Эм уух сануулгыг {value} болгон тохируулав",

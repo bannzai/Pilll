@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "O însemnare ștearsă din jurnal nu poate fi recuperată",
   "editMenstruation": "Editează perioada menstruației",
   "changedPillNumber": "schimbarea numărul pilulei",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% reducere față de abonamentul lunar",
+  "offPercentForMonthlyPremiumPackage": "Cu {offPercent}% mai ieftin decât planul lunar obișnuit",
   "premiumIntroductionDiscountPriceDeadline": "Cu abonamentul Premium puteți continua să utilizați toate funcțiile",
   "countdownForDiscountPriceDeadline": "{offPercent}% REDUCERE la cumpărarea în {countdown}",
   "pillReminderChanged": "Notificarea de administrare a fost setată la {value}",

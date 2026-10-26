@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Oʻchirilgan kundalik yozuvini qayta tiklab boʻlmaydi",
   "editMenstruation": "Hayz kunlarini tahrirlang",
   "changedPillNumber": "tabletka raqam oʻzgartirildi",
-  "offPercentForMonthlyPremiumPackage": "Oddiy oylik rejaga nisbatan {offPercent}% chegirma",
+  "offPercentForMonthlyPremiumPackage": "Odatdagi oylik rejaga nisbatan {offPercent}% chegirma",
   "premiumIntroductionDiscountPriceDeadline": "Premium obunaga o'tish orqali barcha funksiyalardan foydalanishni davom ettirishingiz mumkin",
   "countdownForDiscountPriceDeadline": "{countdown} vaqt ichida xarid qilsangiz {offPercent}% chegirma",
   "pillReminderChanged": "Tabletka ichish xabari {value} ga o'rnatildi",

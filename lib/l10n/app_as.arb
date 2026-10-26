@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "মচি পেলোৱা ডায়েৰীৰ লিখনি পুনৰ ঘূৰাই আনিব নোৱাৰি",
   "editMenstruation": "মাহেকীয়াৰ সময়সীমা সম্পাদনা কৰক",
   "changedPillNumber": "পিল নম্বৰ সলনি",
-  "offPercentForMonthlyPremiumPackage": "সাধাৰণ মাহেকীয়াৰ তুলনাত {offPercent}% ছাড়",
+  "offPercentForMonthlyPremiumPackage": "সাধাৰণ মাহেকীয়া পৰিকল্পনাৰ তুলনাত {offPercent}% ৰেহাই",
   "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়াম পঞ্জীয়নৰ সৈতে সকলো সুবিধা অব্যাহত ব্যৱহাৰ কৰিব পাৰিব",
   "countdownForDiscountPriceDeadline": "{countdown} ৰ ভিতৰত কিনিলে {offPercent}% ছাৰ",
   "pillReminderChanged": "সেৱন বিজ্ঞপ্তি {value} লৈ সেট কৰিলোঁ",

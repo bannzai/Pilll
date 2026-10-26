@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ջնջված օրագրային գրառումը հնարավոր չէ վերականգնել",
   "editMenstruation": "Փոփոխել դաշտանի օրերը",
   "changedPillNumber": "հաբի համար փոփոխվել է",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ կանոնավոր ամսական վճարման համեմատ",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ՝ սովորական ամսական պլանի համեմատ",
   "premiumIntroductionDiscountPriceDeadline": "Պրեմիում բաժանորդագրությամբ կարող եք շարունակել օգտագործել բոլոր գործառույթները",
   "countdownForDiscountPriceDeadline": "{countdown}ի ընթացքում գնելիս {offPercent}％ զեղչ",
   "pillReminderChanged": "Ծանուցումը տեղադրվեց {value}-ին",

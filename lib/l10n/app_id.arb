@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Catatan harian yang dihapus tidak dapat dipulihkan",
   "editMenstruation": "Edit tanggal haid",
   "changedPillNumber": "nomor pil diubah",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF dari paket bulanan",
+  "offPercentForMonthlyPremiumPackage": "Hemat {offPercent}% dibandingkan paket bulanan biasa",
   "premiumIntroductionDiscountPriceDeadline": "Berlangganan premium untuk terus menggunakan semua fitur",
   "countdownForDiscountPriceDeadline": "Dapatkan diskon {offPercent}% untuk pembelian dalam {countdown}",
   "pillReminderChanged": "Notifikasi minum telah diatur ke {value}",

@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "ບັນທຶກປະຈຳວັນທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "editMenstruation": "ແກ້ໄຂວັນປະຈຳເດືອນ",
   "changedPillNumber": "ປ່ຽນເລກເມັດຢາ",
-  "offPercentForMonthlyPremiumPackage": "ຫຼຸດ {offPercent}% ຈາກລາຍເດືອນປົກກະຕິ",
+  "offPercentForMonthlyPremiumPackage": "ຫຼຸດ {offPercent}% ທຽບກັບແຜນລາຍເດືອນປົກກະຕິ",
   "premiumIntroductionDiscountPriceDeadline": "ດ້ວຍການສະໝັກສະມາຊິກພຣີມຽມ ທ່ານສາມາດໃຊ້ຟີເຈີທັງໝົດໄດ້ຕໍ່ໄປ",
   "countdownForDiscountPriceDeadline": "ຊື້ພາຍໃນ {countdown} ຫຼຸດ {offPercent}％",
   "pillReminderChanged": "ໄດ້ຕັ້ງການແຈ້ງເຕືອນການເສີບຢາເປັນ{value}ແລ້ວ",

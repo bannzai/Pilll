@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "মুছে ফেলা ডায়েরির লেখা আর ফিরিয়ে আনা যাবে না",
   "editMenstruation": "মাসিকের সময়কাল সম্পাদনা করুন",
   "changedPillNumber": "পিল নম্বর পরিবর্তন",
-  "offPercentForMonthlyPremiumPackage": "সাধারণ মাসিক পরিকল্পনার তুলনায় {offPercent}% ছাড়",
+  "offPercentForMonthlyPremiumPackage": "নিয়মিত মাসিক প্ল্যানের তুলনায় {offPercent}% ছাড়",
   "premiumIntroductionDiscountPriceDeadline": "প্রিমিয়াম নিবন্ধনের মাধ্যমে আপনি সমস্ত বৈশিষ্ট্য অব্যাহত ব্যবহার করতে পারবেন",
   "countdownForDiscountPriceDeadline": "{countdown} এর মধ্যে কিনলে {offPercent}% ছাড়",
   "pillReminderChanged": "ওষুধ সেবনের বিজ্ঞপ্তি {value} এ সেট করা হয়েছে",

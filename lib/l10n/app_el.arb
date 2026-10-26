@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Η διαγραμμένη καταχώριση ημερολογίου δεν μπορεί να ανακτηθεί",
   "editMenstruation": "Επεξεργασία ημερών περιόδου",
   "changedPillNumber": "αλλαγή στον αριθμό χαπιού",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% έκπτωση σε σύγκριση με τη μηνιαία συνδρομή",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% φθηνότερα από το κανονικό μηνιαίο πρόγραμμα",
   "premiumIntroductionDiscountPriceDeadline": "Με την εγγραφή premium μπορείτε να συνεχίσετε να χρησιμοποιείτε όλες τις λειτουργίες",
   "countdownForDiscountPriceDeadline": "{offPercent}% έκπτωση με αγορά εντός {countdown}",
   "pillReminderChanged": "Η υπενθύμιση λήψης ορίστηκε στις {value}",

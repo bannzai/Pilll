@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "A törölt naplóbejegyzés nem állítható vissza",
   "editMenstruation": "A menstruáció időszakának szerkesztése",
   "changedPillNumber": "tablettaszám módosítva",
-  "offPercentForMonthlyPremiumPackage": "A normál havi díjhoz képest {offPercent}% kedvezmény",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% kedvezmény a szokásos havi csomaghoz képest",
   "premiumIntroductionDiscountPriceDeadline": "A prémium előfizetéssel továbbra is használhatja az összes funkciót",
   "countdownForDiscountPriceDeadline": "{countdown} alatt {offPercent}% kedvezmény!",
   "pillReminderChanged": "A bevételiértesítést {value}-ra beállítottam",

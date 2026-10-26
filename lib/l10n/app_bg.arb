@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Изтритият запис в дневника не може да бъде възстановен",
   "editMenstruation": "Редактиране на периода на мензиса",
   "changedPillNumber": "промяна на номер на хапче",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% отстъпка спрямо месечния план",
+  "offPercentForMonthlyPremiumPackage": "С {offPercent}% по-евтино от обичайния месечен план",
   "premiumIntroductionDiscountPriceDeadline": "С премиум регистрация можете да продължите да използвате всички функции",
   "countdownForDiscountPriceDeadline": "{offPercent}% отстъпка при покупка до {countdown}",
   "pillReminderChanged": "Напомнянето за приемане е променено на {value}",

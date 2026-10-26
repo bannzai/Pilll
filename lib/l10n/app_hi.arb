@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "मिटाई गई डायरी प्रविष्टि वापस नहीं लाई जा सकती",
   "editMenstruation": "पीरियड की तारीखें बदलें",
   "changedPillNumber": "गोली नंबर बदला गया",
-  "offPercentForMonthlyPremiumPackage": "सामान्य मासिक की तुलना में {offPercent}% छूट",
+  "offPercentForMonthlyPremiumPackage": "नियमित मासिक प्लान के मुकाबले {offPercent}% की छूट",
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम पंजीकरण के साथ सभी सुविधाओं का उपयोग जारी रख सकते हैं",
   "countdownForDiscountPriceDeadline": "{countdown} में खरीदारी करने पर {offPercent}% की छूट",
   "pillReminderChanged": "दवा की अधिसूचना {value} पर सेट कर दी गई है",

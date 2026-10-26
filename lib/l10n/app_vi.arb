@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Không thể khôi phục mục nhật ký đã xóa",
   "editMenstruation": "Chỉnh sửa ngày kinh nguyệt",
   "changedPillNumber": "đã đổi số thứ tự viên thuốc",
-  "offPercentForMonthlyPremiumPackage": "Giảm {offPercent}% so với gói theo tháng thường",
+  "offPercentForMonthlyPremiumPackage": "Tiết kiệm {offPercent}% so với gói hằng tháng thông thường",
   "premiumIntroductionDiscountPriceDeadline": "Đăng ký Premium để tiếp tục sử dụng tất cả các tính năng",
   "countdownForDiscountPriceDeadline": "Giảm {offPercent}% khi mua trong {countdown}",
   "pillReminderChanged": "Thông báo uống thuốc đã được đặt thành {value}",

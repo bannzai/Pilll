@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Une entrée de journal supprimée ne peut pas être restaurée",
   "editMenstruation": "Modifier les dates des règles",
   "changedPillNumber": "modification du numéro de pilule",
-  "offPercentForMonthlyPremiumPackage": "{offPercent} % de réduction par rapport au forfait mensuel",
+  "offPercentForMonthlyPremiumPackage": "Économisez {offPercent} % par rapport à l’abonnement mensuel habituel",
   "premiumIntroductionDiscountPriceDeadline": "L'inscription Premium vous permet de continuer à utiliser toutes les fonctionnalités",
   "countdownForDiscountPriceDeadline": "Achetez dans {countdown} pour {offPercent}% de réduction",
   "pillReminderChanged": "Le rappel de pilule a été réglé sur {value}.",

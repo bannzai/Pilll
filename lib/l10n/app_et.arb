@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Kustutatud päevikukannet ei saa taastada",
   "editMenstruation": "Muuda päevade kuupäevi",
   "changedPillNumber": "pillinumb muudetud",
-  "offPercentForMonthlyPremiumPackage": "Kuumaksuga võrreldes {offPercent}% soodsam",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% soodsam kui tavaline kuupakett",
   "premiumIntroductionDiscountPriceDeadline": "Premium registreerimisega saate jätkuvalt kasutada kõiki funktsioone",
   "countdownForDiscountPriceDeadline": "{countdown} jooksul ostmisel {offPercent}% allahindlust",
   "pillReminderChanged": "Seadsin võtmise teavituse ajaks {value}",

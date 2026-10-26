@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Smazaný záznam v deníku nelze obnovit",
   "editMenstruation": "Upravit období menstruace",
   "changedPillNumber": "změna číslo tablety",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% sleva oproti měsíčnímu plánu",
+  "offPercentForMonthlyPremiumPackage": "O {offPercent} % levnější než běžný měsíční plán",
   "premiumIntroductionDiscountPriceDeadline": "S prémiovou registrací můžete i nadále využívat všechny funkce.",
   "countdownForDiscountPriceDeadline": "Kupte během {countdown} a získejte {offPercent}% slevu",
   "pillReminderChanged": "Upozornění na užití bylo nastaveno na {value}",

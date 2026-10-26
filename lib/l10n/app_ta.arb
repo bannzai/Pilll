@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "நீக்கிய நாட்குறிப்பைப் மீட்டெடுக்க முடியாது",
   "editMenstruation": "மாதவிடாய் நாட்களைத் திருத்துங்கள்",
   "changedPillNumber": "மாத்திரை எண் மாற்றப்பட்டது",
-  "offPercentForMonthlyPremiumPackage": "வழக்கமான மாதக் கட்டணத்துடன் ஒப்பிடும்போது {offPercent}% தள்ளுபடி",
+  "offPercentForMonthlyPremiumPackage": "வழக்கமான மாதாந்திரத் திட்டத்தைவிட {offPercent}% தள்ளுபடி",
   "premiumIntroductionDiscountPriceDeadline": "ப்ரீமியம் பதிவின் மூலம் தொடர்ந்து அனைத்து அம்சங்களையும் பயன்படுத்தலாம்",
   "countdownForDiscountPriceDeadline": "{countdown} க்குள் வாங்கினால் {offPercent}% தள்ளுபடி",
   "pillReminderChanged": "மாத்திரை அறிவிப்பை {value}க்கு மாற்றினோம்",

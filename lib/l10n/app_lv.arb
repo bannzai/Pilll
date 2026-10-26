@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Dzēstu dienasgrāmatas ierakstu nevar atjaunot",
   "editMenstruation": "Rediģēt mēnešreižu datumus",
   "changedPillNumber": "mainīts tabletes numur",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% ATLAIDE salīdzinājumā ar mēneša plānu",
+  "offPercentForMonthlyPremiumPackage": "Par {offPercent} % lētāk nekā parastais mēneša plāns",
   "premiumIntroductionDiscountPriceDeadline": "Ar premium reģistrāciju varēsiet turpināt izmantot visas funkcijas",
   "countdownForDiscountPriceDeadline": "{offPercent}% atlaide pie pirkuma {countdown} laikā",
   "pillReminderChanged": "Lietošanas atgādinājums tika iestatīts uz {value}",

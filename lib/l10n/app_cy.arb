@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ni ellir adfer cofnod dyddiadur ar ôl ei ddileu",
   "editMenstruation": "Golygu dyddiadau'r mislif",
   "changedPillNumber": "newid rhif y bilsen",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% i ffwrdd o gymharu â'r pris misol arferol",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% yn rhatach na'r cynllun misol arferol",
   "premiumIntroductionDiscountPriceDeadline": "Gallwch barhau i ddefnyddio pob nodwedd gyda chofrestriad premiwm",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF wrth brynu o fewn {countdown}",
   "pillReminderChanged": "Wedi gosod yr hysbysiad cymryd i {value}",

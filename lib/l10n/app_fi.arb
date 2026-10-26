@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Poistettua päiväkirjamerkintää ei voi palauttaa",
   "editMenstruation": "Muokkaa kuukautisten ajankohtaa",
   "changedPillNumber": "pillerinumero muutettu",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}％ OFF tavallisesta kuukausimaksusta",
+  "offPercentForMonthlyPremiumPackage": "Säästä {offPercent} % tavalliseen kuukausitilaukseen verrattuna",
   "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella kaikki ominaisuudet pysyvät käytettävissä",
   "countdownForDiscountPriceDeadline": "{offPercent}% alennusta ostamalla {countdown} kuluessa",
   "pillReminderChanged": "Ottamismuistutus asetettu kelloaikaan {value}",

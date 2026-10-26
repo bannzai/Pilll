@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "لا يمكن استعادة اليوميات بعد حذفها",
   "editMenstruation": "تعديل فترة الدورة",
   "changedPillNumber": "تغيير رقم الحبة",
-  "offPercentForMonthlyPremiumPackage": "خصم {offPercent}٪ مقارنة بالخطة الشهرية العادية",
+  "offPercentForMonthlyPremiumPackage": "خصم {offPercent}% مقارنة بالخطة الشهرية المعتادة",
   "premiumIntroductionDiscountPriceDeadline": "التسجيل المميز يتيح لك الاستمرار في استخدام جميع الميزات",
   "countdownForDiscountPriceDeadline": "خصم {offPercent}٪ للشراء خلال {countdown}",
   "pillReminderChanged": "تم تعديل موعد تذكير تناول الحبوب إلى {value}",

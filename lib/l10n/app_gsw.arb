@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "En glöschti Tagebuechufzeichnig chasch nümme zruggbringe",
   "editMenstruation": "Periodezyt aapasse",
   "changedPillNumber": "Pillenummer gänderet",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als s normale Monatsabo",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% günschtiger als s normale Monetsabo",
   "premiumIntroductionDiscountPriceDeadline": "Mit de Premium-Registrierig chönd wiiterhin alli Funktione gnutzt werde.",
   "countdownForDiscountPriceDeadline": "Bis {countdown}: {offPercent}% Rabatt",
   "pillReminderChanged": "Ihnameerinnärig uf {value} gstellt",

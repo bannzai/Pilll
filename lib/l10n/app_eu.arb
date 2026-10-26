@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ezabatutako egunkariko sarrera ezin da berreskuratu",
   "editMenstruation": "Editatu hilekoaren datak",
   "changedPillNumber": "pilula-zenbaki aldatu da",
-  "offPercentForMonthlyPremiumPackage": "Hilabeteko prezioarekin alderatuta %{offPercent} deskontua",
+  "offPercentForMonthlyPremiumPackage": "Ohiko hileko plana baino % {offPercent} merkeago",
   "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzan eginbide guztiak erabiltzen jarrai dezakezu",
   "countdownForDiscountPriceDeadline": "{countdown} barruan erosita % {offPercent} deskontua",
   "pillReminderChanged": "Hartu-jakinarazpena {value}(e)ra aldatu da",

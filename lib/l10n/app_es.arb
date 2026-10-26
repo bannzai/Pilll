@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Una entrada del diario eliminada no se puede recuperar",
   "editMenstruation": "Editar los días de la regla",
   "changedPillNumber": "cambio del número de píldora",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% de descuento comparado con el plan mensual regular",
+  "offPercentForMonthlyPremiumPackage": "Ahorra un {offPercent}% frente al plan mensual habitual",
   "premiumIntroductionDiscountPriceDeadline": "Con la suscripción premium puedes seguir usando todas las funciones",
   "countdownForDiscountPriceDeadline": "Compra dentro de {countdown} y obtén {offPercent}% de descuento",
   "pillReminderChanged": "Notificación de toma configurada en {value}",

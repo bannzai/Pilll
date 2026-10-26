@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Выдалены запіс дзённіка немагчыма аднавіць",
   "editMenstruation": "Змяніць перыяд месячных",
   "changedPillNumber": "змена нумар пігулкі",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% скідка ў параўнанні са звычайным месячным планам",
+  "offPercentForMonthlyPremiumPackage": "На {offPercent}% танней за звычайны месячны план",
   "premiumIntroductionDiscountPriceDeadline": "З прэміум-падпіскай вы можаце па-ранейшаму карыстацца ўсімі функцыямі",
   "countdownForDiscountPriceDeadline": "{offPercent}% скiдка пры покупцы за {countdown}",
   "pillReminderChanged": "Напамін аб прыёме ўсталяваны на {value}",

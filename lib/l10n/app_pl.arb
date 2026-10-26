@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Usuniętego wpisu w dzienniku nie można przywrócić",
   "editMenstruation": "Edytuj dni okresu",
   "changedPillNumber": "zmiana numer",
-  "offPercentForMonthlyPremiumPackage": "O {offPercent}% taniej niż miesięczny plan",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% taniej niż w zwykłym planie miesięcznym",
   "premiumIntroductionDiscountPriceDeadline": "Subskrypcja premium umożliwia dalsze korzystanie ze wszystkich funkcji",
   "countdownForDiscountPriceDeadline": "{offPercent}% zniżki przy zakupie w ciągu {countdown}",
   "pillReminderChanged": "Ustawiono przypomnienie o zażyciu na {value}",

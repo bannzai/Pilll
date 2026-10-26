@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Өчүрүлгөн күндөлүк жазуусун калыбына келтирүү мүмкүн эмес",
   "editMenstruation": "Айыз күндөрүн өзгөртүңүз",
   "changedPillNumber": "таблетканын номери өзгөртүлдү",
-  "offPercentForMonthlyPremiumPackage": "Кадимки айлык акы менен салыштырганда {offPercent}% жеңилдик",
+  "offPercentForMonthlyPremiumPackage": "Кадимки айлык планга салыштырмалуу {offPercent}% арзандатуу",
   "premiumIntroductionDiscountPriceDeadline": "Премиум катталуу менен бардык функцияларды улантуу менен колдоно аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алсаңыз {offPercent}% жеңилдик",
   "pillReminderChanged": "Дары ичүү эскертүүсү {value} убактысына орнотулду",

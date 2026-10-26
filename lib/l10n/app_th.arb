@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "บันทึกประจำวันที่ลบแล้วไม่สามารถกู้คืนได้ค่ะ",
   "editMenstruation": "แก้ไขช่วงประจำเดือน",
   "changedPillNumber": "เปลี่ยนหมายเลขเม็ดยา",
-  "offPercentForMonthlyPremiumPackage": "ลด {offPercent}% จากแพ็กเกจรายเดือน",
+  "offPercentForMonthlyPremiumPackage": "ประหยัด {offPercent}% เมื่อเทียบกับแพ็กเกจรายเดือนปกติ",
   "premiumIntroductionDiscountPriceDeadline": "สมัครสมาชิกพรีเมี่ยมเพื่อใช้ฟีเจอร์ทั้งหมดต่อไป",
   "countdownForDiscountPriceDeadline": "ซื้อภายใน{countdown}ได้ส่วนลด{offPercent}%",
   "pillReminderChanged": "ตั้งการแจ้งเตือนการรับประทานยาเป็น{value}แล้ว",

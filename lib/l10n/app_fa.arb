@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "یادداشت روزانه پس از حذف قابل بازیابی نیست",
   "editMenstruation": "ویرایش روزهای پریود",
   "changedPillNumber": "تغییر شماره قرص",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}٪ تخفیف نسبت به پلان ماهانه معمولی",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}٪ تخفیف نسبت به طرح ماهانهٔ معمول",
   "premiumIntroductionDiscountPriceDeadline": "با ثبت نام پریمیم می‌توانید همچنان از تمام ویژگی‌ها استفاده کنید",
   "countdownForDiscountPriceDeadline": "{offPercent}٪ تخفیف تا {countdown}",
   "pillReminderChanged": "یادآوری مصرف را به {value} تنظیم کردم",

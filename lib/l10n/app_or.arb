@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "ଡିଲିଟ୍ ହୋଇଥିବା ଡାଏରୀ ଟିପ୍ପଣୀକୁ ପୁଣି ଫେରାଇ ଆଣିହେବ ନାହିଁ",
   "editMenstruation": "ମାସିକ ଦିନଗୁଡ଼ିକ ସମ୍ପାଦନ କରନ୍ତୁ",
   "changedPillNumber": "ବଟିକା ନମ୍ବର ପରିବର୍ତ୍ତନ",
-  "offPercentForMonthlyPremiumPackage": "ସାଧାରଣ ମାସିକ ଠାରୁ {offPercent}% ଛାଡ୍",
+  "offPercentForMonthlyPremiumPackage": "ସାଧାରଣ ମାସିକ ପ୍ଲାନ୍‌ ତୁଳନାରେ {offPercent}% ରିହାତି",
   "premiumIntroductionDiscountPriceDeadline": "ପ୍ରିମିୟମ୍ ନିବନ୍ଧନ ସହିତ ସମସ୍ତ ବିଶେଷତାଗୁଡ଼ିକ ଜାରି ବ୍ୟବହାର କରିପାରିବେ",
   "countdownForDiscountPriceDeadline": "{countdown} ଭିତରେ କିଣିଲେ {offPercent}% ଛୁଟ",
   "pillReminderChanged": "ସେବନ ସୂଚନା {value}କୁ ସେଟ୍ କରିଛି",

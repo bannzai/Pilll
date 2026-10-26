@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ekki er hægt að endurheimta dagbókarfærslu eftir að henni hefur verið eytt",
   "editMenstruation": "Breyta blæðingadögum",
   "changedPillNumber": "pillunúmer breytt",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% afsláttur af venjulegu mánaðargjaldi",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% ódýrara en venjuleg mánaðaráskrift",
   "premiumIntroductionDiscountPriceDeadline": "Með Premium áskrift geturðu áfram notað alla eiginleika",
   "countdownForDiscountPriceDeadline": "{offPercent}% afsláttur við kaup innan {countdown}",
   "pillReminderChanged": "Pillutilkynningin stillt á {value}",

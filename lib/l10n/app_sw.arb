@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Ingizo la shajara lililofutwa haliwezi kurejeshwa",
   "editMenstruation": "Badilisha siku za hedhi",
   "changedPillNumber": "nambari ya kidonge imebadilishwa",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% punguzo kutoka bei ya kila mwezi ya kawaida",
+  "offPercentForMonthlyPremiumPackage": "Punguzo la {offPercent}% ikilinganishwa na mpango wa kawaida wa kila mwezi",
   "premiumIntroductionDiscountPriceDeadline": "Kusajili Premium kutakuwezesha kuendelea kutumia vipengele vyote",
   "countdownForDiscountPriceDeadline": "Nunua ndani ya {countdown} na upate punguzo la {offPercent}%",
   "pillReminderChanged": "Arifa ya vidonge imewekwa {value}",

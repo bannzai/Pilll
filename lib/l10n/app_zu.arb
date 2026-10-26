@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Okubhalwe edayari okususiwe ngeke kubuyiselwe",
   "editMenstruation": "Sicela ulungise izinsuku zokuya esikhathini",
   "changedPillNumber": "nombolo yephilisi ishintshiwe",
-  "offPercentForMonthlyPremiumPackage": "Isehlo sika-{offPercent}% uma kuqhathaniswa nenyanga ejwayelekile",
+  "offPercentForMonthlyPremiumPackage": "Yonga u-{offPercent}% uma kuqhathaniswa nohlelo olujwayelekile lwanyanga zonke",
   "premiumIntroductionDiscountPriceDeadline": "Ngokubhalisa premium uzobe usuqhubeka usebenzisa zonke izici",
   "countdownForDiscountPriceDeadline": "Thenga ngaphakathi kuka-{countdown} uzothole {offPercent}% OFF",
   "pillReminderChanged": "Sishibeke isaziso lokuthatha amaphilisi ku-{value}",

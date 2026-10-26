@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Deleted diary entries can’t be restored",
   "editMenstruation": "Edit period dates",
   "changedPillNumber": "Pill number changed",
-  "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF compared to monthly plan",
+  "offPercentForMonthlyPremiumPackage": "Save {offPercent}% compared with the regular monthly plan",
   "premiumIntroductionDiscountPriceDeadline": "Premium registration allows you to continue using all features",
   "countdownForDiscountPriceDeadline": "Purchase within {countdown} for {offPercent}% OFF",
   "pillReminderChanged": "Pill reminder has been set to {value}",

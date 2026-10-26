@@ -420,7 +420,7 @@
   "deletedDiaryCannotBeRestored": "Удалённую запись дневника нельзя восстановить",
   "editMenstruation": "Изменить даты месячных",
   "changedPillNumber": "изменение номера таблетки",
-  "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевле месячной подписки",
+  "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевле обычного месячного плана",
   "premiumIntroductionDiscountPriceDeadline": "С премиум-подпиской вы сможете продолжить пользоваться всеми функциями",
   "countdownForDiscountPriceDeadline": "Скидка {offPercent}% при покупке в течение {countdown}",
   "pillReminderChanged": "Напоминание о приёме установлено на {value}",
