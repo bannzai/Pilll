@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Bildirişdən birbaşa həb qəbulu qeydi apara bilərsiniz",
   "startApp": "Tətbiqdən istifadə etməyə başlayın",
   "loggedInWithProvider": "{accountTypeProviderName} ilə daxil oldunuz",
-  "tellAboutPrescribedSheet": "Reçete edilən həb lövhəsi haqqında məlumat verin",
+  "tellAboutPrescribedSheet": "Sizə təyin edilən həb qablaşdırması barədə məlumat verin",
   "existingAccountUsers": "Artıq hesabınız varsa, buraya basın",
   "selectTodayPillNumber": "Bu gün ({todayString})\nİçəcəyiniz və ya içdiyiniz həbin nömrəsinə toxunun",
   "notYetKnown": "Hələ məlum deyil",

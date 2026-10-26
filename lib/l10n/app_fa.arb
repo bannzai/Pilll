@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "می‌توانید ثبت مصرف قرص را مستقیم از اعلان انجام دهید",
   "startApp": "شروع استفاده از برنامه",
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",
-  "tellAboutPrescribedSheet": "لطفاً درباره بسته‌های قرص تجویزی اطلاعات دهید",
+  "tellAboutPrescribedSheet": "لطفاً درباره بسته قرص تجویزشده‌تان به ما بگویید",
   "existingAccountUsers": "حساب کاربری دارید؟ ورود",
   "selectTodayPillNumber": "شماره قرص امروز ({todayString}) را لمس کنید",
   "notYetKnown": "هنوز مشخص نیست",

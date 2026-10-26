@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "เพิ่มบันทึกการทานยาได้จากการแจ้งเตือนโดยตรงค่ะ",
   "startApp": "เริ่มใช้แอป",
   "loggedInWithProvider": "เข้าสู่ระบบด้วย {accountTypeProviderName} แล้วค่ะ",
-  "tellAboutPrescribedSheet": "โปรดแจ้งข้อมูลเกี่ยวกับแผงยาที่แพทย์สั่ง",
+  "tellAboutPrescribedSheet": "กรุณาบอกข้อมูลเกี่ยวกับแผงยาคุมที่แพทย์สั่งให้ค่ะ",
   "existingAccountUsers": "หากมีบัญชีแล้ว คลิกที่นี่",
   "selectTodayPillNumber": "วันนี้ ({todayString})\nแตะหมายเลขยาเม็ดที่จะกินหรือกินแล้ว",
   "notYetKnown": "ยังไม่ทราบ",

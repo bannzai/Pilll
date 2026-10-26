@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "You can update your pill log right from the notification",
   "startApp": "Start using the app",
   "loggedInWithProvider": "You're signed in with {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Please tell us about your prescribed pill pack",
+  "tellAboutPrescribedSheet": "Tell us about your prescribed pill pack",
   "existingAccountUsers": "Already have an account? Sign in here",
   "selectTodayPillNumber": "Today ({todayString}) Tap the number of the pill to take or taken",
   "notYetKnown": "Unknown",

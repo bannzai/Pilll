@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Je kunt je innameregistratie direct vanuit de melding bijwerken",
   "startApp": "Begin de app te gebruiken",
   "loggedInWithProvider": "Je bent ingelogd met {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Vertel ons over uw voorgeschreven pilstrip",
+  "tellAboutPrescribedSheet": "Vertel ons over de pillenstrip die je voorgeschreven hebt gekregen",
   "existingAccountUsers": "Al een account? Klik hier",
   "selectTodayPillNumber": "Vandaag ({todayString}): tik op het nummer van de pil die je moet innemen of hebt ingenomen",
   "notYetKnown": "Nog niet bekend",

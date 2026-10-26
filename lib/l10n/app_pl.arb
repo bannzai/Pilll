@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Możesz dodać wpis o przyjęciu tabletki bezpośrednio z powiadomienia",
   "startApp": "Zacznij korzystać z aplikacji",
   "loggedInWithProvider": "Zalogowano przez {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Opowiedz nam o przepisanych blistrach",
+  "tellAboutPrescribedSheet": "Opowiedz nam o opakowaniu przepisanych tabletek",
   "existingAccountUsers": "Masz już konto? Kliknij tutaj",
   "selectTodayPillNumber": "Dzisiaj ({todayString})\nDotknij numer tabletki, którą masz wziąć lub już wzięłaś",
   "notYetKnown": "Jeszcze nieznane",

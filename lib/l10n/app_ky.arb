@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Билдирүүдөн эле таблетка ичүү жазуусун кошо аласыз",
   "startApp": "Колдонмону колдоно баштаңыз",
   "loggedInWithProvider": "Сиз {accountTypeProviderName} аркылуу кирдиңиз",
-  "tellAboutPrescribedSheet": "Дарыгер берген пилулдар пакети жөнүндө маалымат бериңиз",
+  "tellAboutPrescribedSheet": "Сизге жазылган таблеткалардын таңгагы жөнүндө айтып бериңиз",
   "existingAccountUsers": "Аккаунтуңуз бар болсо, бул жерден",
   "selectTodayPillNumber": "Бүгүн ({todayString}) ичүү керек болгон же ичилген дарынын номерин басыңыз",
   "notYetKnown": "Белгисиз",

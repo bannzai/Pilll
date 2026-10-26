@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "জাননীৰ পৰাই আপুনি ঔষধ সেৱনৰ ৰেকৰ্ড ৰাখিব পাৰে",
   "startApp": "এপটো ব্যৱহাৰ কৰিবলৈ আৰম্ভ কৰক",
   "loggedInWithProvider": "{accountTypeProviderName}ৰ জৰিয়তে আপুনি লগ ইন কৰিছে",
-  "tellAboutPrescribedSheet": "নিৰ্দেশিত শীটৰ বিষয়ে জনাওক",
+  "tellAboutPrescribedSheet": "আপোনাক প্ৰেছক্ৰাইব কৰা পিলৰ পেকেটটোৰ বিষয়ে অনুগ্ৰহ কৰি জনাওক",
   "existingAccountUsers": "ইতিমধ্যে একাউণ্ট আছে? ইয়াত ক্লিক কৰক",
   "selectTodayPillNumber": "আজি ({todayString}) খোৱা বা খাব লগীয়া পিলৰ নম্বৰত টেপ কৰক",
   "notYetKnown": "এতিয়াও জনা নাই",

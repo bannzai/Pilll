@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Záznam o užití môžete pridať priamo z upozornenia",
   "startApp": "Začnite používať aplikáciu",
   "loggedInWithProvider": "Prihlásili ste sa cez {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Zadajte informácie o predpisovanom balení",
+  "tellAboutPrescribedSheet": "Povedzte nám o balení predpísaných tabletiek",
   "existingAccountUsers": "Už máte účet? Prihláste sa tu",
   "selectTodayPillNumber": "Dnes ({todayString}) ťuknite na číslo tabletky, ktorú máte vziať/ste vzali",
   "notYetKnown": "Zatiaľ neurčené",

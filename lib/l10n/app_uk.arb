@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Ви можете додати запис прийому просто зі сповіщення",
   "startApp": "Почніть користуватися застосунком",
   "loggedInWithProvider": "Ви увійшли через {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Розкажіть про призначені блістери",
+  "tellAboutPrescribedSheet": "Розкажіть про упаковку призначених вам пігулок",
   "existingAccountUsers": "У вас уже є акаунт?",
   "selectTodayPillNumber": "Торкніться номера пілюлі, яку потрібно прийняти чи вже прийняли сьогодні ({todayString})",
   "notYetKnown": "Ще не визначено",

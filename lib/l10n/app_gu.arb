@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "તમે સૂચનામાંથી જ ગોળી સેવનની નોંધ કરી શકો છો",
   "startApp": "ઍપનો ઉપયોગ શરૂ કરો",
   "loggedInWithProvider": "તમે {accountTypeProviderName} વડે લૉગ ઇન કર્યું છે",
-  "tellAboutPrescribedSheet": "તમારા ડૉક્ટર દ્વારા પ્રિસ્ક્રાઇબ કરેલી\nશીટ વિશે જણાવો",
+  "tellAboutPrescribedSheet": "તમને લખી આપેલા ગોળીઓના પૅક વિશે જણાવો",
   "existingAccountUsers": "પહેલેથી એકાઉન્ટ ધરાવો છો? અહીં ક્લિક કરો",
   "selectTodayPillNumber": "આજે ({todayString}) લેવાની/લીધેલી ગોળીનો નંબર ટેપ કરો",
   "notYetKnown": "હજુ ખબર નથી",

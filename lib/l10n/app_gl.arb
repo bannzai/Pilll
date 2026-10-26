@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Podes engadir unha entrada ao rexistro de tomas directamente desde a notificación",
   "startApp": "Comeza a usar a aplicación",
   "loggedInWithProvider": "Iniciaches sesión con {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Fálenos sobre o envase receitado",
+  "tellAboutPrescribedSheet": "Cóntanos como é o envase das pílulas que che receitaron",
   "existingAccountUsers": "Xa tes unha conta?",
   "selectTodayPillNumber": "Toca o número da pastilla de hoxe ({todayString})",
   "notYetKnown": "Aínda descoñecido",

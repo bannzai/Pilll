@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Unaweza kuongeza taarifa kwenye rekodi ya kumeza vidonge moja kwa moja kutoka kwenye arifa",
   "startApp": "Anza kutumia programu",
   "loggedInWithProvider": "Umeingia kwa kutumia {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Tuambie kuhusu karatasi za vidonge ulivyoagizwa",
+  "tellAboutPrescribedSheet": "Tafadhali tuambie kuhusu pakiti ya vidonge ulivyoandikiwa",
   "existingAccountUsers": "Uma akaunti tayari? Ingia hapa",
   "selectTodayPillNumber": "Leo ({todayString}) gusa nambari ya dawa unayotumia au uliyotumia",
   "notYetKnown": "Bado haijulikani",

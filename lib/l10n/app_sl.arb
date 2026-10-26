@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Beleženje jemanja lahko opravite kar iz obvestila",
   "startApp": "Začnite uporabljati aplikacijo",
   "loggedInWithProvider": "Prijava prek {accountTypeProviderName} je uspela",
-  "tellAboutPrescribedSheet": "Prosim, povejte mi\no predpisanih tabletah",
+  "tellAboutPrescribedSheet": "Povejte nam več o omotu predpisanih tablet",
   "existingAccountUsers": "Že imate račun? Prijavite se tukaj",
   "selectTodayPillNumber": "Danes ({todayString})\nDotaknite se številke tablete, ki jo morate vzeti ali ste jo že vzeli",
   "notYetKnown": "Še ni znano",

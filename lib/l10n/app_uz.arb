@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Bildirishnomadan turib tabletka qabul qilish qaydini qoʻshishingiz mumkin",
   "startApp": "Ilovadan foydalanishni boshlang",
   "loggedInWithProvider": "Siz {accountTypeProviderName} orqali tizimga kirdingiz",
-  "tellAboutPrescribedSheet": "Buyurilgan dori qadoqlari haqida\nma'lumot bering",
+  "tellAboutPrescribedSheet": "Sizga buyurilgan tabletkalar qadoği haqida aytib bering",
   "existingAccountUsers": "Hisobingiz bormi? Shu yerda",
   "selectTodayPillNumber": "Bugun ({todayString}) qabul qilish kerak bo'lgan yoki qabul qilingan tabletka raqamini bosing",
   "notYetKnown": "Hali ma'lum emas",

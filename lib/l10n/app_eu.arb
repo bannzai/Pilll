@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Jakinarazpenetik bertatik gehi dezakezu hartze-erregistro bat",
   "startApp": "Hasi aplikazioa erabiltzen",
   "loggedInWithProvider": "{accountTypeProviderName} bidez hasi duzu saioa",
-  "tellAboutPrescribedSheet": "Errezetatutako txartelari buruz esan iezaguzu",
+  "tellAboutPrescribedSheet": "Esaguzu agindu dizuten pilula sortari buruz",
   "existingAccountUsers": "Dagoeneko kontua baduzu? Hemen klik egin",
   "selectTodayPillNumber": "Gaur ({todayString})\\nHartu beharreko/hartutako pilularen zenbakia sakatu",
   "notYetKnown": "Oraindik ez da jakina",

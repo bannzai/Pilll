@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Þú getur bætt við inntökuskrá beint úr tilkynningunni",
   "startApp": "Byrja að nota appið",
   "loggedInWithProvider": "Þú ert skráð inn með {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Vinsamlegast segðu okkur um\návísaða pillupakkann",
+  "tellAboutPrescribedSheet": "Segðu okkur frá pakkningunni með pillunum sem þér var ávísað",
   "existingAccountUsers": "Ertu nú þegar með reikning?",
   "selectTodayPillNumber": "Í dag ({todayString}) - pikkaðu á númer pillunnar sem þú tekur/tókst",
   "notYetKnown": "Ekki vitað ennþá",

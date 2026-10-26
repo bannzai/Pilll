@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Μπορείτε να προσθέσετε καταγραφή λήψης απευθείας από την ειδοποίηση",
   "startApp": "Ξεκινήστε να χρησιμοποιείτε την εφαρμογή",
   "loggedInWithProvider": "Συνδεθήκατε μέσω {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Πείτε μας για τη συνταγογραφημένη συσκευασία",
+  "tellAboutPrescribedSheet": "Πείτε μας για τη συσκευασία των χαπιών που σας έχουν συνταγογραφηθεί",
   "existingAccountUsers": "Έχετε ήδη λογαριασμό; Κάντε κλικ εδώ",
   "selectTodayPillNumber": "Σήμερα ({todayString}) πατήστε τον αριθμό του χαπιού που πρέπει να πάρετε ή πήρατε",
   "notYetKnown": "Άγνωστο",

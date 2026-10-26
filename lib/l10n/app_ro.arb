@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Poți adăuga o înregistrare direct din notificare",
   "startApp": "Începe să folosești aplicația",
   "loggedInWithProvider": "Te-ai conectat cu {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Despre blisterul prescris\nvă rugăm să ne spuneți",
+  "tellAboutPrescribedSheet": "Spune-ne despre folia de pilule care ți-a fost prescrisă",
   "existingAccountUsers": "Aveți deja un cont? Conectați-vă aici",
   "selectTodayPillNumber": "Atinge numărul pilulei pentru astăzi ({todayString})",
   "notYetKnown": "Încă nespecificat",

@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Вы можете дополнить журнал приёма таблеток прямо из уведомления",
   "startApp": "Начать пользоваться приложением",
   "loggedInWithProvider": "Вы вошли через {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Расскажите о назначенной упаковке",
+  "tellAboutPrescribedSheet": "Расскажите об упаковке назначенных вам таблеток",
   "existingAccountUsers": "Уже есть аккаунт?",
   "selectTodayPillNumber": "Сегодня ({todayString}) нажмите на номер таблетки для приема или уже принятой",
   "notYetKnown": "Пока неизвестно",

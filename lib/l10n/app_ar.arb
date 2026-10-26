@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "يمكنكِ تسجيل تناول الحبة مباشرة من الإشعار",
   "startApp": "ابدئي استخدام التطبيق",
   "loggedInWithProvider": "تم تسجيل الدخول باستخدام {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "أخبرينا عن الشريط الموصوف لك",
+  "tellAboutPrescribedSheet": "أخبرينا عن عبوة حبوب منع الحمل الموصوفة لكِ",
   "existingAccountUsers": "لديك حساب بالفعل؟ اضغط هنا",
   "selectTodayPillNumber": "انقر على رقم الحبة المراد تناولها اليوم ({todayString})",
   "notYetKnown": "غير محدد بعد",

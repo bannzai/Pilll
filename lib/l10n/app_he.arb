@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "אפשר להוסיף רישום נטילה ישירות מההתראה",
   "startApp": "להתחיל להשתמש באפליקציה",
   "loggedInWithProvider": "הכניסה באמצעות {accountTypeProviderName} הושלמה",
-  "tellAboutPrescribedSheet": "אנא ספר לנו על האריזה שנרשמה לך",
+  "tellAboutPrescribedSheet": "נשמח לשמוע על חפיסת הגלולות שנרשמה לך",
   "existingAccountUsers": "כבר יש לכם חשבון? לחצו כאן",
   "selectTodayPillNumber": "היום ({todayString})\nהקש על מספר הגלולה לנטילה היום",
   "notYetKnown": "עדיין לא ידוע",

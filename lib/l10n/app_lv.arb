@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Tablešu lietošanas ierakstu varat pievienot tieši no paziņojuma",
   "startApp": "Sāciet lietot lietotni",
   "loggedInWithProvider": "Jūs pierakstījāties ar {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Pastāstiet par izrakstītajām plāksnītēm",
+  "tellAboutPrescribedSheet": "Pastāstiet par jums izrakstīto tablešu iepakojumu",
   "existingAccountUsers": "Jau ir konts? Noklikšķiniet šeit",
   "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties pie pilules numura, ko jāizdzer vai jau izdzēra",
   "notYetKnown": "Vēl nav zināms",

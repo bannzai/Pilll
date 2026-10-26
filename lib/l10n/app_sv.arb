@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Du kan uppdatera din intagslogg direkt från notisen",
   "startApp": "Börja använda appen",
   "loggedInWithProvider": "Du är inloggad med {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Berätta om ditt förskrivna pillblister",
+  "tellAboutPrescribedSheet": "Berätta om förpackningen med de p-piller du fått på recept",
   "existingAccountUsers": "Har du redan ett konto? Logga in här",
   "selectTodayPillNumber": "Tryck på numret för dagens piller ({todayString})",
   "notYetKnown": "Okänt ännu",

@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "A tablettaszedési naplót közvetlenül az értesítésből is frissítheted",
   "startApp": "Kezdd el használni az alkalmazást",
   "loggedInWithProvider": "Bejelentkeztél a(z) {accountTypeProviderName} használatával",
-  "tellAboutPrescribedSheet": "A felírt fogamzásgátló csomagról\nkérem, adjon információt",
+  "tellAboutPrescribedSheet": "Mesélj a felírt tabletták csomagolásáról",
   "existingAccountUsers": "Aki már rendelkezik fiókkal, kattintson ide",
   "selectTodayPillNumber": "Koppintson a ma ({todayString}) beveendő vagy bevett tabletta számára",
   "notYetKnown": "Még nem ismert",

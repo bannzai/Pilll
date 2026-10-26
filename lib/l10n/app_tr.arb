@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Bildirimden doğrudan hap kullanım kaydı ekleyebilirsiniz",
   "startApp": "Uygulamayı kullanmaya başlayın",
   "loggedInWithProvider": "{accountTypeProviderName} ile giriş yaptınız",
-  "tellAboutPrescribedSheet": "Reçete edilen strip hakkında bilgi verin",
+  "tellAboutPrescribedSheet": "Size reçete edilen hap paketini bize anlatın",
   "existingAccountUsers": "Zaten hesabım var",
   "selectTodayPillNumber": "Bugün ({todayString})\nAlacağınız veya aldığınız hapın numarasına dokunun",
   "notYetKnown": "Henüz belli değil",

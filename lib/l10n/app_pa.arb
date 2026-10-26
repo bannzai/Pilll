@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "ਤੁਸੀਂ ਸੂਚਨਾ ਤੋਂ ਹੀ ਸੇਵਨ ਰਿਕਾਰਡ ਵਿੱਚ ਜਾਣਕਾਰੀ ਜੋੜ ਸਕਦੇ ਹੋ",
   "startApp": "ਐਪ ਵਰਤਣਾ ਸ਼ੁਰੂ ਕਰੋ",
   "loggedInWithProvider": "ਤੁਸੀਂ {accountTypeProviderName} ਨਾਲ ਲੌਗ ਇਨ ਕੀਤਾ ਹੈ",
-  "tellAboutPrescribedSheet": "ਤਜਵੀਜ਼ ਕੀਤੇ ਗਏ ਸ਼ੀਟ ਬਾਰੇ\nਜਾਣਕਾਰੀ ਦਿਓ ਜੀ",
+  "tellAboutPrescribedSheet": "ਤੁਹਾਨੂੰ ਡਾਕਟਰ ਵੱਲੋਂ ਲਿਖੀਆਂ ਗੋਲੀਆਂ ਦੇ ਪੱਤੇ ਬਾਰੇ ਦੱਸੋ",
   "existingAccountUsers": "ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ? ਇੱਥੇ ਲਾਗਇਨ ਕਰੋ",
   "selectTodayPillNumber": "ਅੱਜ ({todayString}) ਲੈਣ ਵਾਲੀ ਜਾਂ ਲਈ ਗਈ ਗੋਲੀ ਦਾ ਨੰਬਰ ਟੈਪ ਕਰੋ",
   "notYetKnown": "ਅਜੇ ਪਤਾ ਨਹੀਂ",

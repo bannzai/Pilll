@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "可以直接从通知中添加服药记录哦",
   "startApp": "开始使用应用",
   "loggedInWithProvider": "已通过 {accountTypeProviderName} 登录",
-  "tellAboutPrescribedSheet": "请告诉我们关于\n处方药片的信息",
+  "tellAboutPrescribedSheet": "请告诉我们医生为你开的避孕药包装信息",
   "existingAccountUsers": "已有账户？点击此处",
   "selectTodayPillNumber": "请点击今天({todayString})要服用或已服用的药片编号",
   "notYetKnown": "还不清楚",

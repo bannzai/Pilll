@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Jy kan jou innamerekord direk vanuit die kennisgewing bywerk",
   "startApp": "Begin die app gebruik",
   "loggedInWithProvider": "Jy is met {accountTypeProviderName} aangemeld",
-  "tellAboutPrescribedSheet": "Vertel ons asseblief oor\ndie voorgeskrewe pillefoelie",
+  "tellAboutPrescribedSheet": "Vertel ons asseblief van jou voorgeskrewe pilverpakking",
   "existingAccountUsers": "Het jy reeds 'n rekening? Klik hier",
   "selectTodayPillNumber": "Vandag({todayString})\nTik die nommer van die pil wat jy gaan neem of al geneem het",
   "notYetKnown": "Nog onbekend",

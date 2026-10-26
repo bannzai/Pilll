@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Vartojimo įrašą galite pridėti tiesiai iš pranešimo",
   "startApp": "Pradėkite naudotis programėle",
   "loggedInWithProvider": "Prisijungėte per {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Papasakykite apie praskiriamą plokštelę",
+  "tellAboutPrescribedSheet": "Papasakokite apie jums išrašytų tablečių pakuotę",
   "existingAccountUsers": "Jau turite paskyrą? Spustelėkite čia",
   "selectTodayPillNumber": "Palieskite šiandien ({todayString}) vartojamos ar išvartojamos tabletės numerį",
   "notYetKnown": "Dar nežinoma",

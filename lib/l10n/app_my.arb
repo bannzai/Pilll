@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "အကြောင်းကြားချက်ကနေ ဆေးသောက်မှတ်တမ်းကို တိုက်ရိုက်ဖြည့်နိုင်ပါတယ်",
   "startApp": "အက်ပ်ကို စတင်အသုံးပြုပါ",
   "loggedInWithProvider": "{accountTypeProviderName} ဖြင့် အကောင့်ဝင်ပြီးပါပြီ",
-  "tellAboutPrescribedSheet": "ညွန်းချက်ပေးထားသော ဆေးလုံးအထုပ်အကြောင်း ပြောပြပါ",
+  "tellAboutPrescribedSheet": "ဆရာဝန်ညွှန်ကြားထားသော ဆေးပြားကတ်အကြောင်း ပြောပြပေးပါ",
   "existingAccountUsers": "အကောင့်ရှိပြီးသူများအတွက် ဤနေရာတွင်",
   "selectTodayPillNumber": "ဒီနေ့ ({todayString}) သောက်ရန်/သောက်ပြီး ဆေးပြားနံပါတ်ကို နှိပ်ပါ",
   "notYetKnown": "မသိသေးပါ",

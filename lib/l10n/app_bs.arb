@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Evidenciju uzimanja pilule možete dopuniti direktno iz obavijesti",
   "startApp": "Počnite koristiti aplikaciju",
   "loggedInWithProvider": "Prijavili ste se putem {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Molimo recite nam o propisanom blisteru",
+  "tellAboutPrescribedSheet": "Recite nam nešto o pakovanju pilula koje su Vam propisane",
   "existingAccountUsers": "Već imate račun?",
   "selectTodayPillNumber": "Danas ({todayString})\nDodirnite broj tablete koju trebate uzeti ili ste već uzeli",
   "notYetKnown": "Još nepoznato",

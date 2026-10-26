@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "నోటిఫికేషన్ నుంచే మాత్రల నమోదు చేయవచ్చు",
   "startApp": "యాప్‌ను ఉపయోగించడం ప్రారంభించండి",
   "loggedInWithProvider": "మీరు {accountTypeProviderName} ద్వారా లాగిన్ అయ్యారు",
-  "tellAboutPrescribedSheet": "సూచించిన షీట్ గురించి\nదయచేసి చెప్పండి",
+  "tellAboutPrescribedSheet": "మీకు వైద్యుడు సూచించిన మాత్రల ప్యాక్ గురించి చెప్పండి",
   "existingAccountUsers": "ఇప్పటికే ఖాతా ఉన్న వారు ఇక్కడ",
   "selectTodayPillNumber": "ఈరోజు ({todayString}) తీసుకోవాల్సిన/తీసుకున్న మాత్ర సంఖ్యను తాకండి",
   "notYetKnown": "ఇంకా తెలియదు",

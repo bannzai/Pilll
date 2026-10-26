@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "ከማሳወቂያው በቀጥታ አወሳሰድ መዝገብ ማድረግ ይችላሉ",
   "startApp": "መተግበሪያውን መጠቀም ይጀምሩ",
   "loggedInWithProvider": "በ{accountTypeProviderName} ገብተዋል",
-  "tellAboutPrescribedSheet": "እባክዎን ስለ የተወሰደላችሁ የመድኃኒት ሉህ ያሳውቁን",
+  "tellAboutPrescribedSheet": "ስለታዘዘልዎት የክኒን ማሸጊያ እባክዎ ይንገሩን",
   "existingAccountUsers": "አስቀድሞ መለያ ካለዎት እዚህ ጋር",
   "selectTodayPillNumber": "ዛሬ ({todayString}) የሚወስዱትን ወይም የወሰዱትን ክኒን ቁጥር ተጫኑ",
   "notYetKnown": "ገና አይታወቅም",

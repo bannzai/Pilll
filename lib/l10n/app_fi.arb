@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Voit päivittää pillerilokia suoraan ilmoituksesta",
   "startApp": "Aloita sovelluksen käyttö",
   "loggedInWithProvider": "Olet kirjautunut sisään palvelulla {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Kerro määrätyistä tablettipakkauksista",
+  "tellAboutPrescribedSheet": "Kerro sinulle määrätystä pilleripakkauksesta",
   "existingAccountUsers": "Minulla on jo tili",
   "selectTodayPillNumber": "Napauta tänään ({todayString}) otettavan tai otetun pillerin numeroa",
   "notYetKnown": "Ei vielä tiedossa",

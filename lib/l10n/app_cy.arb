@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Gallwch ychwanegu at y cofnod cymryd yn syth o'r hysbysiad",
   "startApp": "Dechreuwch ddefnyddio'r ap",
   "loggedInWithProvider": "Rydych chi wedi mewngofnodi gyda {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Dywedwch wrthym am y\nddalennau bilsennau a ragnodwyd",
+  "tellAboutPrescribedSheet": "Dywedwch wrthym am y pecyn pils sydd wedi'i ragnodi i chi",
   "existingAccountUsers": "Os oes gennych gyfrif eisoes, cliciwch yma",
   "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen i'w gymryd neu sydd wedi'i gymryd",
   "notYetKnown": "Ddim yn gwybod eto",

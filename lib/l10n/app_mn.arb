@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Мэдэгдлээс шууд эм уусан бүртгэл нэмэх боломжтой",
   "startApp": "Аппыг ашиглаж эхэлнэ үү",
   "loggedInWithProvider": "Та {accountTypeProviderName}-ээр нэвтэрсэн",
-  "tellAboutPrescribedSheet": "Жороор олгосон эмийн багцны талаар\nхэлж өгнө үү",
+  "tellAboutPrescribedSheet": "Танд бичиж өгсөн эмийн блистерийн талаар хэлж өгнө үү",
   "existingAccountUsers": "Бүртгэлтэй бол энд дарна уу",
   "selectTodayPillNumber": "Өнөөдөр ({todayString}) уух/уусан эмийн дугаарыг дарна уу",
   "notYetKnown": "Хараахан тодорхойгүй",

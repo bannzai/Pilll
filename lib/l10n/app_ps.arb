@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "تاسو کولای شئ د خبرتیا له لارې نېغ په نېغه د ګولۍ اخیستلو ریکارډ ته معلومات ورزیات کړئ",
   "startApp": "د اپ کارول پیل کړئ",
   "loggedInWithProvider": "تاسو د {accountTypeProviderName} له لارې ننوتلي یاست",
-  "tellAboutPrescribedSheet": "د ورکړل شویو درملو پېکت په اړه\nراته ووایاست",
+  "tellAboutPrescribedSheet": "مهرباني وکړئ د درته تجویز شوې د ګولیو بستې په اړه راته ووایئ",
   "existingAccountUsers": "دمخه حساب لرې؟ دلته ننوتل وکړئ",
   "selectTodayPillNumber": "نن ({todayString}) د اخیستلو یا اخیستل شوي ګولۍ شمیره ټپ وکړئ",
   "notYetKnown": "نامعلوم",

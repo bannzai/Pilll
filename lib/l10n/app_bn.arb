@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "বিজ্ঞপ্তি থেকেই আপনি সেবনের রেকর্ড রাখতে পারেন",
   "startApp": "অ্যাপটি ব্যবহার শুরু করুন",
   "loggedInWithProvider": "আপনি {accountTypeProviderName} দিয়ে লগ ইন করেছেন",
-  "tellAboutPrescribedSheet": "নির্ধারিত শিট সম্পর্কে\nজানান",
+  "tellAboutPrescribedSheet": "আপনাকে প্রেসক্রাইব করা পিলের প্যাকেট সম্পর্কে জানান",
   "existingAccountUsers": "ইতিমধ্যে অ্যাকাউন্ট আছে? এখানে ক্লিক করুন",
   "selectTodayPillNumber": "আজ ({todayString})\nখাওয়ার বা খাওয়া পিলের নম্বরে ট্যাপ করুন",
   "notYetKnown": "এখনও জানা নেই",

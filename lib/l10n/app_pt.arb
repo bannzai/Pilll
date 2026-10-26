@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Você pode atualizar o registro de uso direto pela notificação",
   "startApp": "Comece a usar o aplicativo",
   "loggedInWithProvider": "Você entrou com {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Conte-nos sobre a cartela prescrita",
+  "tellAboutPrescribedSheet": "Conte para nós sobre a cartela de pílulas receitada para você",
   "existingAccountUsers": "Já tem uma conta? Entre aqui",
   "selectTodayPillNumber": "Hoje ({todayString})\nToque no número do comprimido que você deve tomar ou já tomou",
   "notYetKnown": "Ainda não definido",

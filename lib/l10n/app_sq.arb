@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Mund të shtoni regjistrimi i marrjes drejtpërdrejt nga njoftimi",
   "startApp": "Filloni të përdorni aplikacionin",
   "loggedInWithProvider": "U identifikuat përmes {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Ju lutemi na tregoni rreth bllokut që ju është përshkruar",
+  "tellAboutPrescribedSheet": "Na tregoni për paketimin e pilulave që ju janë përshkruar",
   "existingAccountUsers": "Keni tashmë një llogari?",
   "selectTodayPillNumber": "Prekni numrin e pilulës për sot ({todayString})",
   "notYetKnown": "Ende nuk dihet",

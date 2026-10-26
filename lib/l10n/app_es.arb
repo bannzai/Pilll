@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Puedes añadir una entrada al registro de toma directamente desde la notificación",
   "startApp": "Empieza a usar la aplicación",
   "loggedInWithProvider": "Has iniciado sesión con {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Por favor, cuéntanos sobre las pastillas que te recetaron",
+  "tellAboutPrescribedSheet": "Cuéntanos sobre el envase de las píldoras que te recetaron",
   "existingAccountUsers": "¿Ya tienes una cuenta? Inicia sesión aquí",
   "selectTodayPillNumber": "Hoy ({todayString}) - Toca el número de la píldora que debes tomar o has tomado",
   "notYetKnown": "Sin determinar",

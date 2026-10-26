@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Anda boleh mengemas kini rekod pengambilan terus daripada pemberitahuan",
   "startApp": "Mula gunakan aplikasi",
   "loggedInWithProvider": "Anda telah log masuk dengan {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Sila nyatakan maklumat tentang pakej pil yang dipreskripsikan",
+  "tellAboutPrescribedSheet": "Ceritakan tentang pek pil yang dipreskripsikan untuk anda",
   "existingAccountUsers": "Sudah ada akaun? Klik di sini",
   "selectTodayPillNumber": "Ketuk nombor pil yang perlu/telah diminum hari ini ({todayString})",
   "notYetKnown": "Belum ditentukan",

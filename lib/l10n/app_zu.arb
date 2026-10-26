@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Ungakwazi ukwengeza ku-rekhodi lokuphuza amaphilisi ngokuqondile esazisweni",
   "startApp": "Sicela uqale ukusebenzisa uhlelo lokusebenza",
   "loggedInWithProvider": "Ungene ngemvume usebenzisa {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Sitshele mayelana neshidi lezidakamizwa ezikunikezwe udokotela",
+  "tellAboutPrescribedSheet": "Sicela usitshele ngephakethe lamaphilisi owalinikezwa udokotela",
   "existingAccountUsers": "Senayo i-akhawunti? Chofoza lapha",
   "selectTodayPillNumber": "Thepha inombolo yepilisi ozoyiphuza noma osuyiphuzile namuhla ({todayString})",
   "notYetKnown": "Akusazakali",

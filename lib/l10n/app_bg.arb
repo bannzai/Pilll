@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Можете да добавите запис на приема направо от известието",
   "startApp": "Започнете да използвате приложението",
   "loggedInWithProvider": "Влязохте с {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Моля, разкажете ни за предписаната опаковка",
+  "tellAboutPrescribedSheet": "Разкажете ни за опаковката с предписаните ви хапчета",
   "existingAccountUsers": "Вече имате акаунт? Влезте тук",
   "selectTodayPillNumber": "Докоснете номера на хапчето за днес ({todayString})",
   "notYetKnown": "Все още неясно",

@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Záznam užití můžete přidat přímo z oznámení",
   "startApp": "Začít používat aplikaci",
   "loggedInWithProvider": "Přihlášení přes {accountTypeProviderName} proběhlo úspěšně",
-  "tellAboutPrescribedSheet": "Sdělte nám prosím o předepsaném blistrovém balení",
+  "tellAboutPrescribedSheet": "Řekněte nám prosím něco o předepsaném balení pilulek",
   "existingAccountUsers": "Již máte účet? Klikněte zde",
   "selectTodayPillNumber": "Klepněte na číslo pilulky pro dnes ({todayString})",
   "notYetKnown": "Zatím neznámé",

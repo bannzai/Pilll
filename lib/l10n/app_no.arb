@@ -222,7 +222,7 @@
   "takingRecordFromNotification": "Du kan oppdatere pilleloggen rett fra varselet",
   "startApp": "Begynn å bruke appen",
   "loggedInWithProvider": "Du er logget inn med {accountTypeProviderName}",
-  "tellAboutPrescribedSheet": "Fortell oss om den\nforskrevne pillepakken",
+  "tellAboutPrescribedSheet": "Fortell oss om p-pillebrettet du har fått på resept",
   "existingAccountUsers": "Har du allerede en konto? Klikk her",
   "selectTodayPillNumber": "Trykk på nummeret til dagens ({todayString}) pille",
   "notYetKnown": "Ukjent",
