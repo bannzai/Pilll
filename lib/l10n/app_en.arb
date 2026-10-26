@@ -577,7 +577,7 @@
   "yazFlexResting": "Still on a pill break and haven't resumed taking pills",
   "yazFlexRestingDaysLabel": "Which day of your pill break is today",
   "yazFlexSkipRestDuration": "Skip entering the pill break",
-  "yazFlexSkipRestDurationDialogTitle": "Skip entering the break period",
+  "yazFlexSkipRestDurationDialogTitle": "Skip entering the pill break",
   "yazFlexSkipRestDurationDialogMessage": "You can enter the break period later from “Break from Taking” on the Home screen.",
   "yazFlexSkipRestDurationDialogSkip": "Skip",
   "yazFlexBeginPillNumberPageTitle": "Which dose number in the cycle is the start of the sheet?",

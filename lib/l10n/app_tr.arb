@@ -577,7 +577,7 @@
   "yazFlexResting": "Ara dönem hâlâ sürüyor, hapı almaya henüz yeniden başlamadınız",
   "yazFlexRestingDaysLabel": "Bugün ara dönemin kaçıncı günü",
   "yazFlexSkipRestDuration": "Ara dönem bilgilerini girmeden geçin",
-  "yazFlexSkipRestDurationDialogTitle": "Ara dönem girişini atla",
+  "yazFlexSkipRestDurationDialogTitle": "Ara dönem bilgilerini girmeyi atlayın",
   "yazFlexSkipRestDurationDialogMessage": "Kullanıma ara verme dönemini daha sonra Ana Ekran’daki “Kullanıma ara verme” bölümünden girebilirsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Atla",
   "yazFlexBeginPillNumberPageTitle": "Döngüde yaprağın başlangıcı kaçıncı kullanıma denk geliyor?",

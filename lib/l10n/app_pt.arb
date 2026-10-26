@@ -577,7 +577,7 @@
   "yazFlexResting": "Você ainda está na pausa e não voltou a tomar a pílula",
   "yazFlexRestingDaysLabel": "Qual é o dia da pausa hoje",
   "yazFlexSkipRestDuration": "Pular o registro da pausa",
-  "yazFlexSkipRestDurationDialogTitle": "Ignorar o registo da pausa",
+  "yazFlexSkipRestDurationDialogTitle": "Pular o registro da pausa",
   "yazFlexSkipRestDurationDialogMessage": "Pode introduzir mais tarde o período de pausa da toma em “Pausa da toma”, no ecrã principal.",
   "yazFlexSkipRestDurationDialogSkip": "Pular",
   "yazFlexBeginPillNumberPageTitle": "A que toma do ciclo corresponde o início da cartela?",

@@ -577,7 +577,7 @@
   "yazFlexResting": "휴약 중이고 아직 복용을 다시 시작하지 않았어요",
   "yazFlexRestingDaysLabel": "오늘은 휴약 며칠째인가요",
   "yazFlexSkipRestDuration": "휴약 정보 입력 건너뛰기",
-  "yazFlexSkipRestDurationDialogTitle": "휴약 입력을 건너뛸게요",
+  "yazFlexSkipRestDurationDialogTitle": "휴약 정보 입력을 건너뛸게요",
   "yazFlexSkipRestDurationDialogMessage": "복용 휴약 기간은 나중에 홈의 ‘복용 휴약’에서 입력할 수 있어요.",
   "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
   "yazFlexBeginPillNumberPageTitle": "시트의 시작은 주기상 몇 번째 복용인가요?",

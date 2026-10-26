@@ -577,7 +577,7 @@
   "yazFlexResting": "עדיין בהפסק, בלי לחדש את נטילת הגלולה",
   "yazFlexRestingDaysLabel": "איזה יום של ההפסק הוא היום",
   "yazFlexSkipRestDuration": "דילוג על הזנת פרטי ההפסק",
-  "yazFlexSkipRestDurationDialogTitle": "לדלג על הזנת תקופת ההפסקה",
+  "yazFlexSkipRestDurationDialogTitle": "דילוג על הזנת ההפסק",
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין אחר כך את תקופת ההפסקה בנטילה דרך „הפסקה בנטילה” במסך הבית.",
   "yazFlexSkipRestDurationDialogSkip": "דלגי",
   "yazFlexBeginPillNumberPageTitle": "איזו נטילה במחזור היא תחילת המגשית?",

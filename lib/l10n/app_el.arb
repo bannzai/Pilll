@@ -577,7 +577,7 @@
   "yazFlexResting": "Το διάλειμμα συνεχίζεται και δεν έχετε αρχίσει ξανά να παίρνετε το χάπι",
   "yazFlexRestingDaysLabel": "Ποια ημέρα του διαλείμματος είναι σήμερα",
   "yazFlexSkipRestDuration": "Παράλειψη καταχώρισης του διαλείμματος",
-  "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης της διακοπής",
+  "yazFlexSkipRestDurationDialogTitle": "Παράλειψη εισαγωγής του διαλείμματος",
   "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε αργότερα την περίοδο διακοπής λήψης από το «Διακοπή λήψης» στην αρχική οθόνη.",
   "yazFlexSkipRestDurationDialogSkip": "Παράβλεψη",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια λήψη του κύκλου αντιστοιχεί η αρχή του blister;",

@@ -577,7 +577,7 @@
   "yazFlexResting": "Все още сте в пауза и не сте подновили приема на хапчето",
   "yazFlexRestingDaysLabel": "Кой ден от паузата е днес",
   "yazFlexSkipRestDuration": "Пропускане на въвеждането на пауза",
-  "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на почивката",
+  "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на паузата",
   "yazFlexSkipRestDurationDialogMessage": "Периодът на пауза в приема може да бъде въведен по-късно от „Пауза в приема“ на началния екран.",
   "yazFlexSkipRestDurationDialogSkip": "Пропусни",
   "yazFlexBeginPillNumberPageTitle": "Началото на листа на кой пореден прием от цикъла е?",

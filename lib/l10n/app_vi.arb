@@ -577,7 +577,7 @@
   "yazFlexResting": "Vẫn đang nghỉ thuốc và chưa uống lại",
   "yazFlexRestingDaysLabel": "Hôm nay là ngày thứ mấy trong đợt nghỉ thuốc",
   "yazFlexSkipRestDuration": "Bỏ qua việc nhập thông tin nghỉ thuốc",
-  "yazFlexSkipRestDurationDialogTitle": "Bỏ qua nhập thời gian nghỉ thuốc",
+  "yazFlexSkipRestDurationDialogTitle": "Bỏ qua việc nhập thông tin nghỉ thuốc",
   "yazFlexSkipRestDurationDialogMessage": "Bạn có thể nhập thời gian nghỉ uống sau trong mục “Nghỉ uống” ở Trang chủ.",
   "yazFlexSkipRestDurationDialogSkip": "Bỏ qua",
   "yazFlexBeginPillNumberPageTitle": "Đầu vỉ tương ứng với lần uống thứ mấy trong chu kỳ?",

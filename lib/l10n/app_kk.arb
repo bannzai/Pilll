@@ -577,7 +577,7 @@
   "yazFlexResting": "Үзіліс әлі жалғасуда, таблетканы қабылдауды қайта бастамадыңыз",
   "yazFlexRestingDaysLabel": "Бүгін үзілістің нешінші күні",
   "yazFlexSkipRestDuration": "Үзіліс туралы ақпаратты енгізуді өткізіп жіберіңіз",
-  "yazFlexSkipRestDurationDialogTitle": "Үзіліс кезеңін енгізуді өткізіп жіберу",
+  "yazFlexSkipRestDurationDialogTitle": "Үзіліс туралы мәліметті енгізуді өткізіп жіберу",
   "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexBeginPillNumberPageTitle": "Циклдегі парақтың басы нешінші қабылдауға сәйкес келеді?",

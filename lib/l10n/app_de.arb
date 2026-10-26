@@ -577,7 +577,7 @@
   "yazFlexResting": "Noch in der Einnahmepause und die Pille noch nicht wieder eingenommen",
   "yazFlexRestingDaysLabel": "Der wievielte Tag deiner Einnahmepause ist heute",
   "yazFlexSkipRestDuration": "Eingabe der Einnahmepause überspringen",
-  "yazFlexSkipRestDurationDialogTitle": "Eingabe der Pause überspringen",
+  "yazFlexSkipRestDurationDialogTitle": "Eingabe der Einnahmepause überspringen",
   "yazFlexSkipRestDurationDialogMessage": "Den Zeitraum der Einnahmepause können Sie später unter „Einnahmepause“ auf dem Startbildschirm eingeben.",
   "yazFlexSkipRestDurationDialogSkip": "Überspringen",
   "yazFlexBeginPillNumberPageTitle": "Die wievielte Einnahme im Zyklus ist der Beginn des Blisters?",

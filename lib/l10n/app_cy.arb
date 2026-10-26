@@ -577,7 +577,7 @@
   "yazFlexResting": "Mae'r seibiant yn parhau, ac nid ydych wedi ailddechrau cymryd y bilsen",
   "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r seibiant yw heddiw",
   "yazFlexSkipRestDuration": "Hepgor cofnodi'r seibiant",
-  "yazFlexSkipRestDurationDialogTitle": "Hepgor mewnbynnu’r egwyl",
+  "yazFlexSkipRestDurationDialogTitle": "Hepgor nodi'r seibiant",
   "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi cyfnod saib y tabledi yn nes ymlaen o “Saib cymryd” ar y sgrin gartref.",
   "yazFlexSkipRestDurationDialogSkip": "Hepgor",
   "yazFlexBeginPillNumberPageTitle": "Pa rif rhif yn y cylch yw dechrau'r pecyn?",

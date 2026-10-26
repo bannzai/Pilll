@@ -577,7 +577,7 @@
   "yazFlexResting": "Jeni ende në pushim dhe nuk e keni rifilluar marrjen e pilulës",
   "yazFlexRestingDaysLabel": "Cila ditë e pushimit është sot",
   "yazFlexSkipRestDuration": "Kapërceni futjen e të dhënave për pushimin",
-  "yazFlexSkipRestDurationDialogTitle": "Kalo futjen e periudhës së pauzës",
+  "yazFlexSkipRestDurationDialogTitle": "Anashkaloni futjen e të dhënave për pushimin",
   "yazFlexSkipRestDurationDialogMessage": "Periudhën e pauzës së marrjes mund ta vendosni më vonë te “Pauza e marrjes” në ekranin kryesor.",
   "yazFlexSkipRestDurationDialogSkip": "Kaloje",
   "yazFlexBeginPillNumberPageTitle": "Fillimi i fletës me cilën marrje në cikël përkon?",

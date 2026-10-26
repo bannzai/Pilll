@@ -577,7 +577,7 @@
   "yazFlexResting": "لا هم په وقفه کې یاست او د ګولۍ اخیستل مو نه دي بیا پیل کړي",
   "yazFlexRestingDaysLabel": "نن د وقف څویمه ورځ ده",
   "yazFlexSkipRestDuration": "د وقف د معلوماتو له ثبتولو پرته مخکې لاړ شئ",
-  "yazFlexSkipRestDurationDialogTitle": "د وقفې مودې ننوتل پرېږدئ",
+  "yazFlexSkipRestDurationDialogTitle": "د وقف د معلوماتو ثبتول پرېږدئ",
   "yazFlexSkipRestDurationDialogMessage": "تاسې کولی شئ د درملو د وقفې موده وروسته د کور سکرین له “د درملو وقفه” څخه دننه کړئ.",
   "yazFlexSkipRestDurationDialogSkip": "تېرول",
   "yazFlexBeginPillNumberPageTitle": "د دورې له مخې د پاڼې پیل څویم ځل اخیستل دي؟",
