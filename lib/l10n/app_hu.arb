@@ -268,7 +268,7 @@
   "perNumber": "minden tablettaszámhoz",
   "howManyDaysDoesMenstruationLast": "Hány napig tart a menstruációd?",
   "daysMenstruationLasts": "napig tart a menstruáció",
-  "selectPillNumberForMenstruationStart": "Koppintson a menstruáció kezdetének tabletta számára",
+  "selectPillNumberForMenstruationStart": "Koppints arra a tablettaszámra, amelynél kezdődik a menstruáció",
   "countOfSheet": "{number}. lap",
   "newPillSheetStart": "Új csomag kezdése ▶︎",
   "selectPillType": "Tabletta típus kiválasztása",

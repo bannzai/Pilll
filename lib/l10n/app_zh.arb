@@ -268,7 +268,7 @@
   "perNumber": "按药片编号",
   "howManyDaysDoesMenstruationLast": "你的经期持续几天？",
   "daysMenstruationLasts": "天的经期",
-  "selectPillNumberForMenstruationStart": "点击月经开始的药片编号",
+  "selectPillNumberForMenstruationStart": "请点击经期开始时的药片编号",
   "countOfSheet": "第{number}片",
   "newPillSheetStart": "开始新药板 ▶︎",
   "selectPillType": "选择避孕药类型",

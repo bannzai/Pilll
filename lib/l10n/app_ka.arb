@@ -268,7 +268,7 @@
   "perNumber": "თითოეული აბის ნომრისთვის",
   "howManyDaysDoesMenstruationLast": "რამდენ დღეს გრძელდება თქვენი მენსტრუაცია?",
   "daysMenstruationLasts": "დღე გრძელდება მენსტრუაცია",
-  "selectPillNumberForMenstruationStart": "შეეხეთ მენსტრუაციის დაწყების აბის ნომერს",
+  "selectPillNumberForMenstruationStart": "შეეხეთ აბის ნომერს, რომლის დროსაც მენსტრუაცია იწყება",
   "countOfSheet": "{number}-ე",
   "newPillSheetStart": "ახალი ფოთლის დაწყება ▶︎",
   "selectPillType": "აბის ტიპის არჩევა",

@@ -268,7 +268,7 @@
   "perNumber": "ສຳລັບແຕ່ລະເລກຂອງເມັດຢາ",
   "howManyDaysDoesMenstruationLast": "ປະຈຳເດືອນຂອງທ່ານເປັນຈັກມື້?",
   "daysMenstruationLasts": "ມື້ ປະຈຳເດືອນດຳເນີນຕໍ່",
-  "selectPillNumberForMenstruationStart": "ແຕະເລກຢາທີ່ເລີ່ມປະຈຳເດືອນ",
+  "selectPillNumberForMenstruationStart": "ກະລຸນາແຕະເລກເມັດຢາທີ່ເລີ່ມມີປະຈຳເດືອນ",
   "countOfSheet": "ແຜ່ນທີ່ {number}",
   "newPillSheetStart": "ເລີ່ມແຜ່ນຢາໃໝ່ ▶︎",
   "selectPillType": "ເລືອກປະເພດຢາຄຸມກຳເນີດ",

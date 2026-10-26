@@ -268,7 +268,7 @@
   "perNumber": "iga pilli numbri jaoks",
   "howManyDaysDoesMenstruationLast": "Mitu päeva su päevad kestavad?",
   "daysMenstruationLasts": "päeva kestavad päevad",
-  "selectPillNumberForMenstruationStart": "Puuduta menstruatsiooni alguse pilli numbrit",
+  "selectPillNumberForMenstruationStart": "Puuduta pillinumbrit, mille juures päevad algavad",
   "countOfSheet": "{number}. leht",
   "newPillSheetStart": "Alusta uut pillipakki ▶︎",
   "selectPillType": "Vali tableti tüüp",

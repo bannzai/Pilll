@@ -268,7 +268,7 @@
   "perNumber": "ဆေးပြားနံပါတ်တစ်ခုချင်းစီအတွက်",
   "howManyDaysDoesMenstruationLast": "ရာသီလာတာ ဘယ်နှရက်ကြာပါသလဲ?",
   "daysMenstruationLasts": "ရက် ရာသီလာပါမယ်",
-  "selectPillNumberForMenstruationStart": "ရာသီလာသောပီးနံပါတ်ကိုနှိပ်ပါ",
+  "selectPillNumberForMenstruationStart": "ရာသီစတင်ချိန်နှင့် ကိုက်ညီသော ဆေးပြားနံပါတ်ကို နှိပ်ပါ",
   "countOfSheet": "စာရွက်စု {number} ခုမြောက်",
   "newPillSheetStart": "ဆေးလုံးအစုအသစ် စတင် ▶︎",
   "selectPillType": "ပီးအမျိုးအစားရွေးချယ်ပါ",

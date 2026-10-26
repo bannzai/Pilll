@@ -268,7 +268,7 @@
   "perNumber": "әр таблетка нөмірі үшін",
   "howManyDaysDoesMenstruationLast": "Етеккіріңіз неше күнге созылады?",
   "daysMenstruationLasts": "күн етеккір жалғасады",
-  "selectPillNumberForMenstruationStart": "Етіс басталатын дәрі нөмірін басыңыз",
+  "selectPillNumberForMenstruationStart": "Етеккір басталатын таблетка нөмірін түртіңіз",
   "countOfSheet": "{number}-ші",
   "newPillSheetStart": "Жаңа таблетка пакетін бастау ▶︎",
   "selectPillType": "Пилюля түрін таңдаңыз",

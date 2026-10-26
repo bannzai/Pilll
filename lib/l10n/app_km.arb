@@ -268,7 +268,7 @@
   "perNumber": "សម្រាប់លេខគ្រាប់ថ្នាំនីមួយៗ",
   "howManyDaysDoesMenstruationLast": "រដូវរបស់អ្នកមានរយៈពេលប៉ុន្មានថ្ងៃ?",
   "daysMenstruationLasts": "ថ្ងៃដែលរដូវបន្ត",
-  "selectPillNumberForMenstruationStart": "ចុចលេខថ្នាំពពុមដែលរដូវចាប់ផ្តើម",
+  "selectPillNumberForMenstruationStart": "សូមចុចលើលេខគ្រាប់ថ្នាំដែលរដូវចាប់ផ្តើម",
   "countOfSheet": "សន្លឹកទី{number}",
   "newPillSheetStart": "ចាប់ផ្តើមសន្លឹកថ្នាំថ្មី ▶︎",
   "selectPillType": "ជ្រើសរើសប្រភេទថ្នាំពន្យារកំណើត",

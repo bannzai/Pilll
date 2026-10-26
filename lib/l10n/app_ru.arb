@@ -268,7 +268,7 @@
   "perNumber": "для каждого номера таблетки",
   "howManyDaysDoesMenstruationLast": "Сколько дней длятся ваши месячные?",
   "daysMenstruationLasts": "дней длятся месячные",
-  "selectPillNumberForMenstruationStart": "Нажмите номер таблетки, с которой начинается менструация",
+  "selectPillNumberForMenstruationStart": "Нажмите на номер таблетки, с которой начинаются месячные",
   "countOfSheet": "{number}-й лист",
   "newPillSheetStart": "Начать новый блистер ▶︎",
   "selectPillType": "Выберите тип таблеток",

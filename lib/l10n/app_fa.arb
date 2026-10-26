@@ -268,7 +268,7 @@
   "perNumber": "برای هر شمارهٔ قرص",
   "howManyDaysDoesMenstruationLast": "پریود شما چند روز طول می‌کشد؟",
   "daysMenstruationLasts": "روز پریود ادامه دارد",
-  "selectPillNumberForMenstruationStart": "شماره قرص شروع قاعدگی را لمس کنید",
+  "selectPillNumberForMenstruationStart": "لطفاً روی شماره قرصِ شروع پریود بزنید",
   "countOfSheet": "بسته {number}ام",
   "newPillSheetStart": "شروع بسته جدید ▶︎",
   "selectPillType": "انتخاب نوع قرص",

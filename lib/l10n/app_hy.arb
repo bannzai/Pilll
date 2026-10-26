@@ -268,7 +268,7 @@
   "perNumber": "յուրաքանչյուր հաբի համարի համար",
   "howManyDaysDoesMenstruationLast": "Քանի՞ օր է տևում Ձեր դաշտանը:",
   "daysMenstruationLasts": "օր տևում է դաշտանը",
-  "selectPillNumberForMenstruationStart": "Սեղմեք դաշտանային ցիկլի սկզբի հապակի համարը",
+  "selectPillNumberForMenstruationStart": "Հպեք հաբի համարին, որից սկսվում է դաշտանը",
   "countOfSheet": "{number}-րդ",
   "newPillSheetStart": "Սկսել նոր դեղահապի թերթ ▶︎",
   "selectPillType": "Ընտրել պիլի տեսակը",

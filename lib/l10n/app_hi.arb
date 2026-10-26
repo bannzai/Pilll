@@ -268,7 +268,7 @@
   "perNumber": "हर गोली नंबर के लिए",
   "howManyDaysDoesMenstruationLast": "आपका पीरियड कितने दिन रहता है?",
   "daysMenstruationLasts": "दिन पीरियड रहता है",
-  "selectPillNumberForMenstruationStart": "मासिक धर्म शुरू होने वाली गोली संख्या पर टैप करें",
+  "selectPillNumberForMenstruationStart": "जिस गोली नंबर पर पीरियड शुरू होता है, उस पर टैप करें",
   "countOfSheet": "{number}वीं",
   "newPillSheetStart": "नई पिल शीट शुरू करें ▶︎",
   "selectPillType": "पिल का प्रकार चुनें",

@@ -268,7 +268,7 @@
   "perNumber": "za svaki broj pilule",
   "howManyDaysDoesMenstruationLast": "Koliko dana traje Vaša menstruacija?",
   "daysMenstruationLasts": "dana traje menstruacija",
-  "selectPillNumberForMenstruationStart": "Tapnite broj pilule kada počinje menstruacija",
+  "selectPillNumberForMenstruationStart": "Dodirnite broj pilule uz koji počinje menstruacija",
   "countOfSheet": "{number}. blister",
   "newPillSheetStart": "Počni novi paket pilula ▶︎",
   "selectPillType": "Odaberite vrstu pilule",

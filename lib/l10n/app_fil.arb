@@ -268,7 +268,7 @@
   "perNumber": "para sa bawat numero ng tableta",
   "howManyDaysDoesMenstruationLast": "Ilang araw tumatagal ang regla ninyo?",
   "daysMenstruationLasts": "araw tumatagal ang regla",
-  "selectPillNumberForMenstruationStart": "I-tap ang numero ng pill kapag nagsisimula ang regla",
+  "selectPillNumberForMenstruationStart": "Pindutin po ang numero ng tableta kung kailan nagsisimula ang regla",
   "countOfSheet": "ika-{number} na sheet",
   "newPillSheetStart": "Simulang Bagong Pill Sheet ▶︎",
   "selectPillType": "Pumili ng uri ng pildoras",

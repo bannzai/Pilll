@@ -268,7 +268,7 @@
   "perNumber": "jokaiselle pillerinumerolle",
   "howManyDaysDoesMenstruationLast": "Kuinka monta päivää kuukautisesi kestävät?",
   "daysMenstruationLasts": "päivää kestävät kuukautiset",
-  "selectPillNumberForMenstruationStart": "Napauta pillerinumeroa, josta kuukautiset alkavat",
+  "selectPillNumberForMenstruationStart": "Napauta pillerinumeroa, jonka kohdalla kuukautiset alkavat",
   "countOfSheet": "{number}.",
   "newPillSheetStart": "Aloita uusi pilleripakkaus ▶︎",
   "selectPillType": "Valitse pillerin tyyppi",
