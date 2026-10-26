@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Puoi cambiare il numero della pillola di oggi",
   "todayPillNumberFeatureAppealBody": "Se una pillola non è stata presa o le pillole sono state confuse e il numero sul blister non corrisponde più a quella assunta, puoi correggere manualmente il numero della pillola di oggi. Puoi aprire la stessa schermata anche dal numero della pillola nella schermata iniziale.",
   "restDurationFeatureAppealTitle": "Registra il periodo di pausa dalla pillola",
-  "restDurationFeatureAppealShortDescription": "Gestisci con precisione pause e interruzioni",
+  "restDurationFeatureAppealShortDescription": "Tieni traccia con precisione della pausa e delle interruzioni della pillola",
   "restDurationFeatureAppealHeadline": "Pausa dall'assunzione della pillola",
   "restDurationFeatureAppealBody": "Puoi registrare sul foglio delle pillole un periodo in cui interrompi l'assunzione. Durante la pausa il numero di assunzioni non avanza e, al momento della ripresa, potrai riprendere subito la registrazione.",
   "featureAppealLocationLabel": "Posizione nell'app",

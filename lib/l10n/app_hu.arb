@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Megváltoztathatod a mai tablettaszámot",
   "todayPillNumberFeatureAppealBody": "Ha kimaradt egy tabletta, vagy összekeveredtek a tabletták, és a tablettacsomag száma már nem egyezik a ténylegesen beszedett tablettával, kézzel módosíthatod a mai tablettaszámot. Ugyanezt a képernyőt a kezdőlapon látható tablettaszámról is megnyithatod.",
   "restDurationFeatureAppealTitle": "Tablettaszedési szünet rögzítése",
-  "restDurationFeatureAppealShortDescription": "Szünetek és megszakítások pontos kezelése",
+  "restDurationFeatureAppealShortDescription": "A szünet és a tablettaszedés megszakításának pontos követése",
   "restDurationFeatureAppealHeadline": "Szünet a fogamzásgátló szedésében",
   "restDurationFeatureAppealBody": "A tablettasorban rögzítheti a szedés szüneteltetésének időszakát. A szünet alatt a tabletta sorszáma nem halad előre, és újrakezdéskor a rögzítést azonnal folytathatja.",
   "featureAppealLocationLabel": "Alkalmazáson belüli hely",

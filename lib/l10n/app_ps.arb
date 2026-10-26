@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "تاسو د نن ورځې ګولۍ شمېر بدلولی شئ",
   "todayPillNumberFeatureAppealBody": "که د ګولۍ خوړل هېر شوي وي یا ګولۍ سره ګډې شوې وي او پر ګولیو پاڼې لیکل شوی شمېر له خوړل شوې ګولۍ سره سمون نه لري، تاسو کولی شئ د نن ورځې ګولۍ شمېر په لاس سم کړئ. همدا پاڼه د کور پر سکرین له ښودل شوي ګولۍ شمېر څخه هم پرانیستلی شئ.",
   "restDurationFeatureAppealTitle": "د ګولۍ اخیستلو د وقفې موده ثبت کړئ",
-  "restDurationFeatureAppealShortDescription": "د دوا د وقفې او بندولو دقیق مدیریت",
+  "restDurationFeatureAppealShortDescription": "د وقفې او د ګولیو د اخیستلو د بندېدو وختونه په کره ډول ثبت کړئ",
   "restDurationFeatureAppealHeadline": "د حبو د خوړلو وقفه کول",
   "restDurationFeatureAppealBody": "تاسو کولی شئ د پیل شیټ کې د یوې مودې لپاره د حبوبو اخیستلو درولو دوره ثبت کړئ. د وقفې پر مهال، د حبوبو شمیره مخ نه ځي، او کله چې بیا پیل کړئ، سمدلاسه کولی شئ ثبتول بیا پیل کړئ.",
   "featureAppealLocationLabel": "د اپلیکیشن دننه ځای",

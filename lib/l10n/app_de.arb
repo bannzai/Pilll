@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Du kannst die Pillennummer für heute ändern",
   "todayPillNumberFeatureAppealBody": "Wenn du eine Pille ausgelassen oder verwechselt hast und die Nummer auf dem Pillenblister nicht mehr zur tatsächlich eingenommenen Pille passt, kannst du die heutige Pillennummer selbst anpassen. Dieselbe Ansicht erreichst du auch über die Pillennummer auf der Startseite.",
   "restDurationFeatureAppealTitle": "Pillenpause eintragen",
-  "restDurationFeatureAppealShortDescription": "Pausen & Unterbrechungen genau verwalten",
+  "restDurationFeatureAppealShortDescription": "Einnahmepause und Unterbrechungen genau erfassen",
   "restDurationFeatureAppealHeadline": "Einnahme pausieren",
   "restDurationFeatureAppealBody": "Sie können einen Zeitraum, in dem Sie die Einnahme pausieren, im Pillenblatt festhalten. Während der Pause schreitet die Einnahmenummer nicht voran, und bei der Wiederaufnahme können Sie die Aufzeichnung sofort fortsetzen.",
   "featureAppealLocationLabel": "Ort in der App",

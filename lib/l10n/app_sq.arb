@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Mund ta ndryshoni numri i pilulës për sot",
   "todayPillNumberFeatureAppealBody": "Nëse keni harruar të merrni një pilulë ose i keni ngatërruar pilulat dhe numri në blister nuk përputhet më me pilulën e marrë, mund ta rregulloni me dorë numrin e pilulës për sot. Të njëjtin ekran mund ta hapni edhe nga numri i pilulës në ekranin kryesor.",
   "restDurationFeatureAppealTitle": "Regjistroni periudhën e pushimit nga marrja e pilulës",
-  "restDurationFeatureAppealShortDescription": "Menaxho saktë pushimet dhe ndërprerjet",
+  "restDurationFeatureAppealShortDescription": "Ndiqni me saktësi pushimin dhe ndërprerjet e marrjes së pilulës",
   "restDurationFeatureAppealHeadline": "Pauzë në marrjen e pilulave",
   "restDurationFeatureAppealBody": "Mund të regjistroni në fletën e pilulave një periudhë pushimi gjatë së cilës ndaloni marrjen e pilulave. Gjatë pushimit, numri i ditëve të marrjes nuk përparon, dhe kur e rifilloni, regjistrimi mund të vazhdojë menjëherë.",
   "featureAppealLocationLabel": "Pjesët e aplikacionit",

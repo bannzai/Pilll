@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Saad muuta tänast pillinumbrit",
   "todayPillNumberFeatureAppealBody": "Kui pill jäi võtmata või pillid läksid segamini ja pillilehel olev number ei vasta enam võetud pillile, saad tänase pillinumbri käsitsi õigeks seada. Sama vaate saad avada ka avakuval kuvatava pillinumbri kaudu.",
   "restDurationFeatureAppealTitle": "Märgi pillipaus kirja",
-  "restDurationFeatureAppealShortDescription": "Ravimipauside ja katkestuste täpne haldamine",
+  "restDurationFeatureAppealShortDescription": "Jälgi pillipause ja võtmise katkestusi täpselt",
   "restDurationFeatureAppealHeadline": "Pillide võtmise paus",
   "restDurationFeatureAppealBody": "Saate pillilehele märkida perioodi, millal te tablettide võtmise ajutiselt katkestite. Pausi ajal annuse number ei edene ning jätkamisel saate kohe kirjete tegemist taasalustada.",
   "featureAppealLocationLabel": "Asukoht rakenduses",

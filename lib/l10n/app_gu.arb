@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "તમે આજનો ગોળી નંબર બદલી શકો છો",
   "todayPillNumberFeatureAppealBody": "ગોળી લેવાનું રહી ગયું હોય અથવા ગોળીઓમાં ગૂંચવણ થઈ હોય અને ગોળીની સ્ટ્રિપ પરનો નંબર લીધેલી ગોળી સાથે મેળ ન ખાતો હોય, તો તમે આજનો ગોળી નંબર જાતે સુધારી શકો છો. હોમ સ્ક્રીન પર દેખાતા ગોળી નંબરમાંથી પણ એ જ સ્ક્રીન ખોલી શકો છો.",
   "restDurationFeatureAppealTitle": "ગોળી લેવાનો વિરામ નોંધો",
-  "restDurationFeatureAppealShortDescription": "વિરામ અને વિક્ષેપ ચોક્કસ રીતે સંચાલિત કરો",
+  "restDurationFeatureAppealShortDescription": "વિરામ અને ગોળી લેવાનું બંધ રાખવાનો સમય ચોક્કસ રીતે નોંધો",
   "restDurationFeatureAppealHeadline": "ગોળીઓ લેવાનો વિરામ",
   "restDurationFeatureAppealBody": "પિલ શીટ પર થોડા સમય માટે ગોળી લેવાનું બંધ કરવાનો સમયગાળો નોંધી શકાય છે. વિરામ દરમિયાન ગોળી નંબર આગળ વધતો નથી, અને ફરીથી શરૂ કરતી વખતે તરત જ નોંધ ફરી શરૂ કરી શકાય છે.",
   "featureAppealLocationLabel": "એપ્લિકેશનમાં સ્થાન",

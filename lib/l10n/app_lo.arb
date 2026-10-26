@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "ທ່ານສາມາດປ່ຽນເລກເມັດຢາຂອງມື້ນີ້ໄດ້",
   "todayPillNumberFeatureAppealBody": "ຖ້າລືມກິນຢາ ຫຼື ສັບສົນເມັດຢາ ແລ້ວເລກໃນແຜງຢາຄຸມບໍ່ກົງກັບເມັດຢາທີ່ກິນແລ້ວ ທ່ານສາມາດປັບເລກເມັດຢາຂອງມື້ນີ້ເອງໄດ້. ສາມາດເປີດໜ້າດຽວກັນຈາກເລກເມັດຢາໃນໜ້າຫຼັກໄດ້ເຊັ່ນກັນ.",
   "restDurationFeatureAppealTitle": "ບັນທຶກໄລຍະພັກການກິນຢາເມັດ",
-  "restDurationFeatureAppealShortDescription": "ຄວບຄຸມການຢຸດການຮັບຢາແລະການຂາດຕໍ່ໄດ້ຢ່າງແນ່ນອນ",
+  "restDurationFeatureAppealShortDescription": "ຕິດຕາມຊ່ວງພັກຢາ ແລະ ຊ່ວງຢຸດກິນຢາໃຫ້ຖືກຕ້ອງ",
   "restDurationFeatureAppealHeadline": "ຢຸດການກິນຢາ",
   "restDurationFeatureAppealBody": "ທ່ານສາມາດບັນທຶກຊ່ວງເວລາທີ່ເປັນການຢຸດການຮັບຢາໄວ້ໃນຊີດຢາ. ໃນໄລຍະພັກ, ລຳດັບການຮັບຢາຈະບໍ່ຖືກນັບ, ແລະເມື່ອທ່ານເລີ່ມກັບມາອີກຄັ້ງ ການບັນທຶກຈະສາມາດດຳເນີນຕໍ່ໄດ້ທັນທີ.",
   "featureAppealLocationLabel": "ຕຳແໜ່ງໃນແອັບ",

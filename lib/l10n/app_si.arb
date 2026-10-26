@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "ඔබට අද දින පෙති අංකය වෙනස් කළ හැකියි",
   "todayPillNumberFeatureAppealBody": "පෙත්තක් ගැනීම අමතක වූ විට හෝ පෙති මාරු වූ විට, පෙති කාඩ්පතේ අංකය ඇත්තටම ගත් පෙත්තට නොගැළපෙන්න පුළුවන්. එවිට ඔබට අද පෙති අංකය අතින් නිවැරදි කළ හැකිය. මුල් තිරයේ පෙන්වන පෙති අංකයෙන්ද එම තිරය විවෘත කළ හැකිය.",
   "restDurationFeatureAppealTitle": "පෙති ගැනීමෙන් විරාම ගන්නා කාලය සටහන් කරන්න",
-  "restDurationFeatureAppealShortDescription": "විරාම සහ අස්වීම් නිවැරදිව කළමනාකරණය කරන්න",
+  "restDurationFeatureAppealShortDescription": "විරාම සහ පෙති ගැනීම නතර කළ කාලය නිවැරදිව සටහන් කරන්න",
   "restDurationFeatureAppealHeadline": "පිල් භාවිතය අත්හිටුවන්න",
   "restDurationFeatureAppealBody": "ඔබට කාලයකට පිල් ගැනීම අත්හිටුවා තිබේද? ඒක පිල් ශීට් එකට සටහන් කළ හැක. නිවාඩුවේදී, පිල් අංකය ඉදිරිපත් නොවේ, නැවත ආරම්භ කළ පසු සටහන නැවත ආරම්භ කළ හැක.",
   "featureAppealLocationLabel": "යෙදුම තුළ ස්ථානය",

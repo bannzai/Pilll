@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Bugünkü həb nömrəsini dəyişə bilərsiniz",
   "todayPillNumberFeatureAppealBody": "Həbi qəbul etməyi unutduğunuz və ya həbləri qarışdırdığınız üçün həb blister üzərindəki nömrə qəbul etdiyiniz həblə uyğun gəlmirsə, bugünkü həb nömrə göstəricisini əl ilə düzəldə bilərsiniz. Eyni ekranı ana səhifədəki həb nömrə göstəricisindən də aça bilərsiniz.",
   "restDurationFeatureAppealTitle": "Həb qəbuluna fasilə müddətini qeyd edin",
-  "restDurationFeatureAppealShortDescription": "İstirahət və fasilələri dəqiq idarə edin",
+  "restDurationFeatureAppealShortDescription": "Fasilə və qəbulun dayandırılmasını dəqiq izləyin",
   "restDurationFeatureAppealHeadline": "Həbi qəbuluna fasilə vermək",
   "restDurationFeatureAppealBody": "Həb cədvəlinizə dərman qəbulunu müvəqqəti dayandırdığınız dövrü qeyd edə bilərsiniz. İstirahət dövründə dərman nömrəsi irəliləmir, yenidən başladıqda isə qeydi dərhal bərpa edə bilərsiniz.",
   "featureAppealLocationLabel": "Tətbiq daxilindəki yer",

@@ -505,7 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Puedes cambiar el número de píldora de hoy",
   "todayPillNumberFeatureAppealBody": "Si olvidaste tomar una píldora o confundiste las píldoras y el número del blíster ya no coincide con la que tomaste, puedes ajustar manualmente el número de píldora de hoy. También puedes abrir la misma pantalla desde el número de píldora que aparece en la pantalla de inicio.",
   "restDurationFeatureAppealTitle": "Registra el período de descanso de la píldora",
-  "restDurationFeatureAppealShortDescription": "Gestiona con precisión las pausas e interrupciones",
+  "restDurationFeatureAppealShortDescription": "Lleva un registro preciso del descanso y las interrupciones de la píldora",
   "restDurationFeatureAppealHeadline": "Pausar la toma de pastillas",
   "restDurationFeatureAppealBody": "Puedes registrar en la ficha de píldoras un período de descanso en el que dejes de tomar las pastillas. Durante el descanso, el número de dosis no avanza y podrás reanudar el registro de inmediato cuando reinicies la toma.",
   "featureAppealLocationLabel": "Ubicación en la app",
