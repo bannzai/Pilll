@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Puoi inserire la durata della pausa più tardi da “Pausa dalla pillola” nella schermata Home.",
   "yazFlexSkipRestDurationDialogSkip": "Salta",
   "yazFlexBeginPillNumberPageTitle": "In quale giorno del tuo ciclo di assunzione della pillola inizia il blister?",
-  "yazFlexBeginPillNumberPageNote": "Rispondi in base al numero di giorni trascorsi dalla pausa prima di iniziare il blister.",
+  "yazFlexBeginPillNumberPageNote": "Rispondi in base ai giorni trascorsi dalla fine della pausa prima di iniziare il blister",
   "yazFlexNextInputIsRestDuration": "Successivamente, inserisci la pausa precedente"
 }

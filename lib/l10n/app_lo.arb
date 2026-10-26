@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "ສາມາດປ້ອນໄລຍະເວລາພັກພາຍຫຼັງໄດ້ທີ່ “ພັກການກິນຢາເມັດ” ໃນໜ້າຫຼັກເດີ",
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
   "yazFlexBeginPillNumberPageTitle": "ແຜງຢາເລີ່ມຢູ່ມື້ທີເທົ່າໃດຂອງຮອບການກິນຢາຂອງທ່ານ?",
-  "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບໂດຍອີງຕາມຈຳນວນມື້ທີ່ຜ່ານມານັບຈາກໄລຍະພັກກ່ອນເລີ່ມຊີດ.",
+  "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບຕາມຈຳນວນມື້ທີ່ຜ່ານມານັບແຕ່ຊ່ວງພັກຢາກ່ອນເລີ່ມແຜງຢາສິ້ນສຸດລົງ",
   "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນຊ່ວງຢຸດກິນຄັ້ງກ່ອນ"
 }

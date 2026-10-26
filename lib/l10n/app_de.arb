@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Den Zeitraum kannst du später unter „Pillenpause“ auf dem Startbildschirm eingeben.",
   "yazFlexSkipRestDurationDialogSkip": "Überspringen",
   "yazFlexBeginPillNumberPageTitle": "An welchem Tag deines Pillenzyklus beginnt der Blister?",
-  "yazFlexBeginPillNumberPageNote": "Bitte antworten Sie anhand der Anzahl der Tage seit der Pause vor Beginn des Blisters.",
+  "yazFlexBeginPillNumberPageNote": "Bitte antworte anhand der Tage seit dem Ende der Einnahmepause vor Beginn des Blisters",
   "yazFlexNextInputIsRestDuration": "Als Nächstes gibst du die letzte Einnahmepause ein"
 }

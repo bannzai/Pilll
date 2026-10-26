@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോം സ്ക്രീനിലെ “ഗുളിക കഴിക്കുന്നതിന് ഇടവേള” എന്നതിൽ നൽകാം.",
   "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
   "yazFlexBeginPillNumberPageTitle": "ഗുളിക കഴിക്കുന്ന ചക്രത്തിലെ എത്രാമത്തെ ദിവസമാണ് സ്ട്രിപ്പ് തുടങ്ങുന്നത്?",
-  "yazFlexBeginPillNumberPageNote": "ഷീറ്റ് ആരംഭിക്കുന്നതിന് മുമ്പുള്ള ഇടവേള കഴിഞ്ഞ് എത്ര ദിവസം ആയെന്നത് അടിസ്ഥാനമാക്കി ദയവായി മറുപടി നൽകുക.",
+  "yazFlexBeginPillNumberPageNote": "ഗുളിക സ്ട്രിപ്പ് തുടങ്ങുന്നതിന് മുമ്പുള്ള ഇടവേള അവസാനിച്ചിട്ട് എത്ര ദിവസം കഴിഞ്ഞു എന്നതിന്റെ അടിസ്ഥാനത്തിൽ ഉത്തരം നൽകൂ",
   "yazFlexNextInputIsRestDuration": "അടുത്തതായി, മുമ്പത്തെ ഇടവേള നൽകുക"
 }

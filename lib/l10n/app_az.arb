@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Fasilənin müddətini daha sonra əsas səhifədəki “Həb qəbuluna fasilə” bölməsində daxil edə bilərsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Ötürün",
   "yazFlexBeginPillNumberPageTitle": "Həb qəbulu dövrünüzün neçənci günündə blister başlayır?",
-  "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, vərəqə başlamazdan əvvəlki fasilədən sonra keçən günlərin sayına əsasən cavab verin.",
+  "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, həb vərəqinə başlamazdan əvvəlki fasilə bitəndən neçə gün keçdiyinə əsasən cavab verin",
   "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin"
 }

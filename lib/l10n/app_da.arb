@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Du kan indtaste perioden senere under “Pillepause” på hjemmeskærmen.",
   "yazFlexSkipRestDurationDialogSkip": "Spring over",
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag i din p-pillecyklus begynder pakken?",
-  "yazFlexBeginPillNumberPageNote": "Svar venligst ud fra, hvor mange dage der er gået siden pausen før start af arket.",
+  "yazFlexBeginPillNumberPageNote": "Svar ud fra, hvor mange dage der er gået, siden pillepausen før du begyndte på kortet, sluttede",
   "yazFlexNextInputIsRestDuration": "Derefter skal du indtaste din seneste pause"
 }

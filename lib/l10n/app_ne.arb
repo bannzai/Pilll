@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "विरामको अवधि तपाईंले पछि गृह स्क्रिनको “चक्की खान केही समय रोक्ने” बाट प्रविष्ट गर्न सक्नुहुन्छ।",
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंको चक्की लिने चक्रको कति औँ दिनमा पत्ता सुरु हुन्छ?",
-  "yazFlexBeginPillNumberPageNote": "कृपया सिट सुरु गर्नु अघिको विश्रामपछि बितेका दिनहरूको संख्याका आधारमा उत्तर दिनुहोस्।",
+  "yazFlexBeginPillNumberPageNote": "चक्कीको पत्ता सुरु गर्नुअघिको विश्राम सकिएको कति दिन भयो, त्यसका आधारमा कृपया जवाफ दिनुहोस्",
   "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि प्रविष्ट गर्नुहोस्"
 }

@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Pārtraukuma ilgumu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Pārtraukums tablešu lietošanā”.",
   "yazFlexSkipRestDurationDialogSkip": "Izlaist",
   "yazFlexBeginPillNumberPageTitle": "Kurā jūsu tablešu lietošanas cikla dienā sākas plāksnīte?",
-  "yazFlexBeginPillNumberPageNote": "Lūdzu, atbildiet, pamatojoties uz dienu skaitu kopš pārtraukuma pirms plāksnītes sākšanas.",
+  "yazFlexBeginPillNumberPageNote": "Lūdzu, atbildiet, ņemot vērā, cik dienu pagājušas kopš pārtraukuma pirms jaunā blistera sākšanas beigām",
   "yazFlexNextInputIsRestDuration": "Tālāk ievadiet iepriekšējo pārtraukumu"
 }

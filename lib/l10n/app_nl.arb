@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Je kunt de duur van de pauze later invoeren via ‘Pillenpauze’ op het startscherm.",
   "yazFlexSkipRestDurationDialogSkip": "Overslaan",
   "yazFlexBeginPillNumberPageTitle": "Op welke dag van je pilcyclus begint de strip?",
-  "yazFlexBeginPillNumberPageNote": "Beantwoord dit op basis van het aantal dagen sinds de stopperiode vóór de start van de strip.",
+  "yazFlexBeginPillNumberPageNote": "Beantwoord de vraag op basis van het aantal dagen sinds de stopweek vóór de start van de strip eindigde",
   "yazFlexNextInputIsRestDuration": "Voer daarna je vorige stopweek in"
 }

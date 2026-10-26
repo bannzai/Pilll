@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "休药时长可以稍后在首页的“暂停服用药片”中填写。",
   "yazFlexSkipRestDurationDialogSkip": "跳过",
   "yazFlexBeginPillNumberPageTitle": "这板药从服药周期的第几天开始？",
-  "yazFlexBeginPillNumberPageNote": "请根据开始药板前的停药期结束后经过的天数作答。",
+  "yazFlexBeginPillNumberPageNote": "请根据开始服用这板药之前的停药期结束后经过的天数回答",
   "yazFlexNextInputIsRestDuration": "接下来请输入上一次停药期"
 }

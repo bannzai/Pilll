@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Можете да въведете периода на паузата по-късно от „Пауза в приема на хапчета“ на началния екран.",
   "yazFlexSkipRestDurationDialogSkip": "Пропускане",
   "yazFlexBeginPillNumberPageTitle": "На кой ден от цикъла ви на прием на хапчета започва блистерът?",
-  "yazFlexBeginPillNumberPageNote": "Моля, отговорете според броя дни, изминали от почивката преди започване на блистера.",
+  "yazFlexBeginPillNumberPageNote": "Моля, отговорете според броя дни, изминали от края на паузата преди началото на блистера",
   "yazFlexNextInputIsRestDuration": "След това въведете предишния период на пауза"
 }

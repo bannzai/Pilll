@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "A szünet időtartamát később a kezdőképernyő „Szünet a tabletta szedésében” menüpontjában adhatod meg.",
   "yazFlexSkipRestDurationDialogSkip": "Kihagyás",
   "yazFlexBeginPillNumberPageTitle": "A tablettaszedési ciklusod hányadik napján kezdődik a levél?",
-  "yazFlexBeginPillNumberPageNote": "Kérjük, a lap megkezdése előtti szünet óta eltelt napok száma alapján válaszoljon.",
+  "yazFlexBeginPillNumberPageNote": "A válaszhoz vedd alapul, hány nap telt el a levél megkezdése előtti szünet vége óta",
   "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet"
 }

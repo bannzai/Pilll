@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "وقفے کی مدت بعد میں ہوم اسکرین پر ”گولی لینے میں وقفہ“ سے درج کی جا سکتی ہے۔",
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
   "yazFlexBeginPillNumberPageTitle": "گولیاں لینے کے چکر کے کس دن سے پتا شروع ہوتا ہے؟",
-  "yazFlexBeginPillNumberPageNote": "براہِ کرم شیٹ شروع کرنے سے پہلے والے وقفے کے بعد گزرے دنوں کی تعداد کی بنیاد پر جواب دیں۔",
+  "yazFlexBeginPillNumberPageNote": "براہِ کرم گولیوں کی پٹی شروع کرنے سے پہلے کا وقف ختم ہونے کے بعد گزرے دنوں کی تعداد کے مطابق جواب دیں",
   "yazFlexNextInputIsRestDuration": "اگلے مرحلے میں پچھلا وقفہ درج کریں"
 }

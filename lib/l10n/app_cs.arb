@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Délku přestávky můžete zadat později v části „Přestávka v užívání pilulek“ na domovské obrazovce.",
   "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
   "yazFlexBeginPillNumberPageTitle": "Který den cyklu užívání pilulek začíná blistr?",
-  "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní, které uplynuly od přestávky před zahájením plata.",
+  "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní od konce pauzy před začátkem blistru",
   "yazFlexNextInputIsRestDuration": "Dále zadejte předchozí pauzu v užívání"
 }

@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Tanaffus muddatini keyinroq bosh sahifadagi “Tabletkalarni ichishda tanaffus” bo‘limida kiritishingiz mumkin.",
   "yazFlexSkipRestDurationDialogSkip": "Oʻtkazib yuboring",
   "yazFlexBeginPillNumberPageTitle": "Tabletka ichish davringizning nechanchi kunida blister boshlanadi?",
-  "yazFlexBeginPillNumberPageNote": "Iltimos, varaqni boshlashdan oldingi tanaffusdan beri o‘tgan kunlar soniga qarab javob bering.",
+  "yazFlexBeginPillNumberPageNote": "Iltimos, tabletkalar varagʻini boshlashdan oldingi tanaffus tugaganidan beri necha kun oʻtganiga qarab javob bering",
   "yazFlexNextInputIsRestDuration": "Keyingi bosqichda avvalgi tanaffusni kiriting"
 }

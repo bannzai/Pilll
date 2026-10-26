@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Etenaldiaren iraupena geroago sar dezakezu hasierako pantailako «Pilula hartzeko etenaldia» atalean.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
   "yazFlexBeginPillNumberPageTitle": "Pilulak hartzeko zikloko zein egunetan hasten da blisterra?",
-  "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, orria hasi aurreko atsedenalditik igaro diren egunen kopuruaren arabera.",
+  "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, pilula orria hasi aurreko atsedenaldi amaitu zenetik igaro diren egunen arabera",
   "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
 }

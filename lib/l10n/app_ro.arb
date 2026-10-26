@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Poți introduce durata pauzei mai târziu la „Pauză în administrarea pilulei”, pe ecranul principal.",
   "yazFlexSkipRestDurationDialogSkip": "Omite",
   "yazFlexBeginPillNumberPageTitle": "În ce zi a ciclului de administrare a pilulei începe folia?",
-  "yazFlexBeginPillNumberPageNote": "Vă rugăm să răspundeți în funcție de numărul de zile trecute de la pauza de dinainte de începerea foliei.",
+  "yazFlexBeginPillNumberPageNote": "Răspunde în funcție de câte zile au trecut de la sfârșitul pauzei dinaintea începerii blisterului",
   "yazFlexNextInputIsRestDuration": "În continuare, introduceți pauza anterioară"
 }

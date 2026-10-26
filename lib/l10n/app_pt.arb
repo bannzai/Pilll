@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Você pode informar a duração da pausa mais tarde em “Pausar o uso da pílula”, na tela inicial.",
   "yazFlexSkipRestDurationDialogSkip": "Pular",
   "yazFlexBeginPillNumberPageTitle": "Em que dia do seu ciclo de uso da pílula começa a cartela?",
-  "yazFlexBeginPillNumberPageNote": "Responda com base no número de dias decorridos desde a pausa antes de começar a cartela.",
+  "yazFlexBeginPillNumberPageNote": "Responda com base nos dias que se passaram desde o fim da pausa antes de iniciar a cartela",
   "yazFlexNextInputIsRestDuration": "Em seguida, insira a pausa anterior"
 }

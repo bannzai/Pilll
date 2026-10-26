@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Ara verme süresini daha sonra ana ekrandaki “Hap kullanımına ara verin” bölümünden girebilirsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Atlayın",
   "yazFlexBeginPillNumberPageTitle": "Hap kullanma döngünüzün kaçıncı gününde blister başlıyor?",
-  "yazFlexBeginPillNumberPageNote": "Lütfen, blistere başlamadan önceki aradan bu yana geçen gün sayısına göre yanıt verin.",
+  "yazFlexBeginPillNumberPageNote": "Lütfen blistere başlamadan önceki ara dönem bittikten sonra kaç gün geçtiğine göre yanıtlayın",
   "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
 }

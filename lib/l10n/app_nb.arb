@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Du kan legge inn perioden senere under «Pillepause» på hjemskjermen.",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag i p-pillesyklusen din begynner brettet?",
-  "yazFlexBeginPillNumberPageNote": "Vennligst svar basert på hvor mange dager som har gått siden pausen før du startet brettet.",
+  "yazFlexBeginPillNumberPageNote": "Svar ut fra hvor mange dager det er siden pillepausen før du startet på brettet, tok slutt",
   "yazFlexNextInputIsRestDuration": "Deretter legger du inn forrige pause"
 }

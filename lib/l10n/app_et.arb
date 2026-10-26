@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Pausi kestuse saad hiljem sisestada avakuva jaotises „Pillide võtmise paus”.",
   "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
   "yazFlexBeginPillNumberPageTitle": "Millisel sinu pillivõtmise tsükli päeval algab pillileht?",
-  "yazFlexBeginPillNumberPageNote": "Palun vastake selle põhjal, mitu päeva on möödunud enne lehe alustamist olnud pausist.",
+  "yazFlexBeginPillNumberPageNote": "Vasta selle järgi, mitu päeva on möödunud enne pillilehe alustamist olnud pillipausi lõpust",
   "yazFlexNextInputIsRestDuration": "Järgmisena sisestage oma eelmine paus"
 }

@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Завсарлагын хугацааг дараа нь нүүр хуудасны “Эм уух түр завсарлага” хэсэгт оруулж болно.",
   "yazFlexSkipRestDurationDialogSkip": "Алгасах",
   "yazFlexBeginPillNumberPageTitle": "Эм уух мөчлөгийн хэд дэх өдөр блистер эхэлж байна вэ?",
-  "yazFlexBeginPillNumberPageNote": "Шахмалыг эхлэхийн өмнөх завсарлагаанаас хойш өнгөрсөн хоногийн тоонд үндэслэн хариулна уу.",
+  "yazFlexBeginPillNumberPageNote": "Блистерыг эхлүүлэхийн өмнөх завсарлага дууссанаас хойш хэдэн өдөр өнгөрснийг үндэслэн хариулна уу",
   "yazFlexNextInputIsRestDuration": "Дараа нь өмнөх завсарлагаа оруулна уу"
 }

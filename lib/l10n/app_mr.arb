@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "विरामाचा कालावधी तुम्ही नंतर होम स्क्रीनवरील “गोळी घेण्यात विराम” येथे नोंदवू शकता.",
   "yazFlexSkipRestDurationDialogSkip": "वगळा",
   "yazFlexBeginPillNumberPageTitle": "गोळ्या घेण्याच्या तुमच्या चक्रातील कितव्या दिवशी पट्टी सुरू होते?",
-  "yazFlexBeginPillNumberPageNote": "कृपया शीट सुरू करण्यापूर्वीच्या विश्रांतीनंतर गेलेल्या दिवसांच्या संख्येनुसार उत्तर द्या.",
+  "yazFlexBeginPillNumberPageNote": "गोळ्यांची पट्टी सुरू करण्यापूर्वीचा विराम संपल्यापासून किती दिवस झाले आहेत, यानुसार कृपया उत्तर द्या",
   "yazFlexNextInputIsRestDuration": "पुढे, मागील विराम प्रविष्ट करा"
 }

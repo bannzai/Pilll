@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Du kan ange hur länge pausen varar senare under ”Pillerpaus” på hemskärmen.",
   "yazFlexSkipRestDurationDialogSkip": "Hoppa över",
   "yazFlexBeginPillNumberPageTitle": "Vilken dag i din p-pillercykel börjar kartan?",
-  "yazFlexBeginPillNumberPageNote": "Svara utifrån hur många dagar som har gått sedan uppehållet innan du började med kartan.",
+  "yazFlexBeginPillNumberPageNote": "Svara utifrån hur många dagar som gått sedan uppehållet före kartans start tog slut",
   "yazFlexNextInputIsRestDuration": "Därefter anger du föregående uppehåll"
 }

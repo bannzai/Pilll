@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Máis adiante podes introducir a duración da pausa en «Pausa na toma da pílula», na pantalla de inicio.",
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
   "yazFlexBeginPillNumberPageTitle": "En que día do teu ciclo de toma da pílula comeza o blíster?",
-  "yazFlexBeginPillNumberPageNote": "Responde en función do número de días transcorridos desde o descanso antes de comezar o blíster.",
+  "yazFlexBeginPillNumberPageNote": "Responde segundo os días transcorridos desde que rematou o descanso anterior ao inicio do blíster",
   "yazFlexNextInputIsRestDuration": "A continuación, introduce a pausa anterior"
 }

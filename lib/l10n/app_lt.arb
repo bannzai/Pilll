@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Pertraukos trukmę vėliau galėsite įvesti pradžios ekrano skiltyje „Tablečių vartojimo pertrauka“.",
   "yazFlexSkipRestDurationDialogSkip": "Praleiskite",
   "yazFlexBeginPillNumberPageTitle": "Kurią jūsų tablečių vartojimo ciklo dieną prasideda lizdinė plokštelė?",
-  "yazFlexBeginPillNumberPageNote": "Prašome atsakyti pagal dienų skaičių, praėjusį nuo pertraukos prieš pradedant lapelį.",
+  "yazFlexBeginPillNumberPageNote": "Atsakykite pagal tai, kiek dienų praėjo nuo pertraukos prieš pradedant naują lizdinę plokštelę pabaigos",
   "yazFlexNextInputIsRestDuration": "Toliau įveskite ankstesnę pertrauką"
 }

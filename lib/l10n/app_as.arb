@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "বিৰতিৰ সময়সীমা আপুনি পিছত মুখ্য পৃষ্ঠাৰ «বড়ি খোৱাত বিৰতি»ত লিখিব পাৰিব।",
   "yazFlexSkipRestDurationDialogSkip": "এৰি যাওক",
   "yazFlexBeginPillNumberPageTitle": "আপোনাৰ বড়ি খোৱাৰ চক্ৰৰ কিমান নম্বৰ দিনত পেকেটখন আৰম্ভ হয়?",
-  "yazFlexBeginPillNumberPageNote": "অনুগ্ৰহ কৰি শ্বীট আৰম্ভ কৰাৰ আগৰ বিৰতিৰ পিছত পাৰ হোৱা দিনৰ সংখ্যাৰ ভিত্তিত উত্তৰ দিয়ক।",
+  "yazFlexBeginPillNumberPageNote": "শ্বীটখন আৰম্ভ কৰাৰ আগৰ বিৰতি শেষ হোৱাৰ পৰা কিমান দিন পাৰ হৈছে, তাৰ ভিত্তিত অনুগ্ৰহ কৰি উত্তৰ দিয়ক",
   "yazFlexNextInputIsRestDuration": "ইয়াৰ পিছত আগৰ ঔষধ-বিৰতি লিখক"
 }

@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "विराम की अवधि बाद में होम स्क्रीन पर “गोली लेने में विराम” से दर्ज की जा सकती है।",
   "yazFlexSkipRestDurationDialogSkip": "छोड़ें",
   "yazFlexBeginPillNumberPageTitle": "आपके गोली लेने के चक्र के किस दिन से यह पत्ता शुरू होता है?",
-  "yazFlexBeginPillNumberPageNote": "कृपया शीट शुरू करने से पहले के ब्रेक के बाद बीते दिनों की संख्या के आधार पर उत्तर दें।",
+  "yazFlexBeginPillNumberPageNote": "पिल की स्ट्रिप शुरू करने से पहले का विराम खत्म हुए जितने दिन हुए हैं, उसी आधार पर कृपया जवाब दें",
   "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला ब्रेक दर्ज करें"
 }

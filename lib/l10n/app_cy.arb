@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi hyd y saib yn nes ymlaen drwy “Seibiant o gymryd y bilsen” ar y sgrin gartref.",
   "yazFlexSkipRestDurationDialogSkip": "Hepgorwch",
   "yazFlexBeginPillNumberPageTitle": "Ar ba ddiwrnod o'ch cylch cymryd pils y mae'r stribed yn dechrau?",
-  "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau sydd wedi mynd heibio ers yr egwyl cyn dechrau’r pecyn, os gwelwch yn dda.",
+  "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau ers i'r seibiant cyn dechrau'r stribed pils ddod i ben",
   "yazFlexNextInputIsRestDuration": "Nesaf, nodwch y cyfnod seibiant diwethaf"
 }

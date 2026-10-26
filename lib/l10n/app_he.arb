@@ -581,6 +581,6 @@
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין את משך ההפסקה מאוחר יותר דרך ״הפסקה בנטילת הגלולות״ במסך הבית.",
   "yazFlexSkipRestDurationDialogSkip": "לדלג",
   "yazFlexBeginPillNumberPageTitle": "באיזה יום במחזור נטילת הגלולות מתחילה החפיסה?",
-  "yazFlexBeginPillNumberPageNote": "אנא השיבי לפי מספר הימים שחלפו מאז ההפסקה שלפני תחילת החפיסה.",
+  "yazFlexBeginPillNumberPageNote": "יש לענות לפי מספר הימים שחלפו מאז שהסתיים ההפסק שלפני תחילת חפיסת הגלולות",
   "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
 }
