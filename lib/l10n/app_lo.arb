@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງພາຍຫຼັງ. ຖ້າບັນຫາຍັງຢູ່, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ຕອນນີ້ຍັງບໍ່ສາມາດຊື້ໄດ້. ກະລຸນາລອງອີກຄັ້ງພາຍຫຼັງ. ຖ້າບັນຫາຍັງບໍ່ຫາຍ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ຂໍ້ມູນການຊື້ນີ້ຖືກໃຊ້ໂດຍຜູ້ໃຊ້ອື່ນແລ້ວ. ກະລຸນາກວດເບິ່ງບັນຊີ {accountName} ທີ່ເຂົ້າລະບົບຢູ່ໃນອຸປະກອນຂອງທ່ານ.",
-  "purchaseErrorInvalidAppUserIdError": "ບໍ່ສາມາດຢັ້ງຢືນຜູ້ໃຊ້ໄດ້. ກະລຸນາລອງໃໝ່ຫຼັງຈາກເລີ່ມຕົ້ນແອັບໃໝ່. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "ບໍ່ສາມາດຢືນຢັນບັນຊີຂອງທ່ານໄດ້. ກະລຸນາເປີດແອັບຄືນໃໝ່ແລ້ວລອງອີກຄັ້ງ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ການດຳເນີນການຊື້ອື່ນກຳລັງດຳເນີນຢູ່. ກະລຸນາລໍຖ້າແລ້ວກວດສອບໃໝ່ອີກຄັ້ງ",
   "purchaseErrorUnknownBackendError": "ຕອນນີ້ບໍ່ສາມາດຊື້ໄດ້. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ການຊື້ລົ້ມເຫລວ. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກ. ຫາກບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",

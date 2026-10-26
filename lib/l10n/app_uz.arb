@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Xaridni yakunlab boʻlmadi. Iltimos, birozdan keyin qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hozir xaridni amalga oshirib boʻlmaydi. Birozdan keyin qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Bu xarid maʼlumotlaridan boshqa foydalanuvchi foydalanmoqda. Iltimos, qurilmangizda qaysi {accountName} hisobiga kirilganini tekshiring.",
-  "purchaseErrorInvalidAppUserIdError": "Foydalanuvchini tasdiqlash mumkin emas edi. Ilovani qayta ishga tushiring va qayta urinib ko'ring. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Hisobingizni tasdiqlab boʻlmadi. Iltimos, ilovani qayta ishga tushiring va yana urinib koʻring. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Alohida xarid jarayoni amalga oshirilmoqda. Iltimos, biroz kutib qaytadan urinib ko'ring",
   "purchaseErrorUnknownBackendError": "Hozirda xarid qilib bo'lmaydi. Biroz vaqt o'tkazib, yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Xarid amalga oshmadi. Biroz vaqtdan so'ng qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali biz bilan bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",

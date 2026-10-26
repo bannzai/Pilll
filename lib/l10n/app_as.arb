@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "ক্ৰয় সম্পূৰ্ণ নহ’ল। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক যোগে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "বৰ্তমান ক্ৰয় কৰিব পৰা নাযায়। অনুগ্ৰহ কৰি কিছু সময় পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ’লে, ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয়ৰ তথ্য আন এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। অনুগ্ৰহ কৰি আপোনাৰ ডিভাইচত লগ ইন কৰা {accountName} পৰীক্ষা কৰক।",
-  "purchaseErrorInvalidAppUserIdError": "ব্যৱহাৰকাৰীক নিশ্চিত কৰিব পৰা নগ'ল। এপটো পুনৰাম্ভ কৰি পুনৰ চেষ্টা কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "আপোনাৰ পৰিচয় নিশ্চিত কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি এপটো পুনৰ আৰম্ভ কৰি আকৌ চেষ্টা কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "এটা ক্ৰয় প্ৰক্ৰিয়া ইতিমধ্যে চলি আছে। অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি পুনৰায় চেষ্টা কৰক।",
   "purchaseErrorUnknownBackendError": "বৰ্তমান ক্ৰয় কৰিব পৰা নাই। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সোধা-পোছা ৰ পৰা যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ক্ৰয় কৰাত বিফল হ'ল। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয় তেন্তে ছেটিংছ > যোগাযোগৰ যোগেদি আমাৰ লগত যোগাযোগ কৰক। বিতং: {exceptionMessage}:{exceptionDetails}",

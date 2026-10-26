@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Blerja nuk u përfundua. Ju lutemi, provoni përsëri pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësitë: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Blerja nuk mund të kryhet për momentin. Ju lutemi, provoni përsëri më vonë. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Të dhënat e blerjes po përdoren tashmë nga një përdorues tjetër. Ju lutemi, kontrolloni llogarinë {accountName} me të cilën jeni identifikuar në pajisje.",
-  "purchaseErrorInvalidAppUserIdError": "Përdoruesi nuk mund të verifikohet. Ju lutemi rinisni aplikacionin dhe provoni përsëri. Detajet: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Nuk mundëm ta verifikonim llogarinë tuaj. Ju lutemi, rinisni aplikacionin dhe provoni përsëri. Hollësitë: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Një blerje tjetër është duke u procesuar. Ju lutemi prisni pak dhe provoni përsëri.",
   "purchaseErrorUnknownBackendError": "Aktualisht blerja nuk është e mundur. Ju lutem prisni pak dhe provoni përsëri. Nëse problemi nuk zgjidhet, na kontaktoni përmes Cilësimet > Kontakti. Detajet: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Blerja dështoi. Provoni përsëri pas një kohe. Nëse problemi nuk zgjidhet, kontaktoni përmes Cilësimet > Kontakti. Detaje: {exceptionMessage}:{exceptionDetails}",

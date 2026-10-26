@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ବର୍ତ୍ତମାନ କିଣିବା ସମ୍ଭବ ହେଉନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମକୁ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ଏହି କ୍ରୟ ସୂଚନା ଅନ୍ୟ ଜଣେ ବ୍ୟବହାରକାରୀ ବ୍ୟବହାର କରୁଛନ୍ତି। ଦୟାକରି ଆପଣଙ୍କ ଡିଭାଇସ୍‌ରେ ସାଇନ୍ ଇନ୍ ହୋଇଥିବା {accountName} ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରନ୍ତୁ।",
-  "purchaseErrorInvalidAppUserIdError": "ଉପଯୋଗକର୍ତ୍ତା ଯାଞ୍ଚ କରିହେଲା ନାହିଁ। ଆପ୍ ପୁନଃଚାଳୁ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ବିସ୍ତାର: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "ଆପଣଙ୍କ ଖାତା ଯାଞ୍ଚ କରିହେଲା ନାହିଁ। ଦୟାକରି ଆପ୍‌ଟି ପୁଣି ଚାଲୁ କରି ଆଉଥରେ ଚେଷ୍ଟା କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "କ୍ରୟ ପ୍ରକ୍ରିୟା ଅନ୍ୟତ୍ର ଚାଲୁଅଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁନଃ ଯାଞ୍ଚ କରନ୍ତୁ।",
   "purchaseErrorUnknownBackendError": "ବର୍ତ୍ତମାନ କ୍ରୟ କରିପାରୁନାହିଁ। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହୁଏ ନାହିଁ, ସେଟିଙ୍ଗ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "କିଣିବାରେ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ନହୁଏ, ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ରୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତୃତ ତଥ୍ୟ: {exceptionMessage}:{exceptionDetails}",

@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Satınalma baş tutmadı. Zəhmət olmasa, bir müddət sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hazırda alış-veriş etmək mümkün deyil. Zəhmət olmasa, bir az sonra yenidən cəhd edin. Problem həll olunmasa, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Satınalma məlumatı başqa bir istifadəçi tərəfindən istifadə olunur. Zəhmət olmasa, cihazınızda daxil olduğunuz {accountName} hesabını yoxlayın.",
-  "purchaseErrorInvalidAppUserIdError": "İstifadəçi təsdiqlənə bilmədi. Tətbiqi yenidən başladın və yenidən cəhd edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Hesabınızı təsdiqləmək mümkün olmadı. Zəhmət olmasa, tətbiqi yenidən başladın və təkrar cəhd edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Başqa satınalma prosesi hazırda davam edir. Zəhmət olmasa, bir az gözləyib yenidən cəhd edin.",
   "purchaseErrorUnknownBackendError": "Hazırda alış-veriş mümkün deyil. Bir müddət sonra yenidən cəhd edin. Problem həll olmursa Ayarlar > Müraciət vasitəsilə bizə müraciət edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma uğursuz oldu. Bir müddət sonra yenidən cəhd edin. Problemin həlli olmadıqda Tənzimləmələr > Müraciət bölməsindən bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",

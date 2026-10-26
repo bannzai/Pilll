@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Pembelian tidak berjaya. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pembelian tidak dapat dibuat buat masa ini. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Maklumat pembelian ini sudah digunakan oleh pengguna lain. Sila semak akaun {accountName} yang telah dilog masuk pada peranti anda.",
-  "purchaseErrorInvalidAppUserIdError": "Pengguna tidak dapat disahkan. Sila mulakan semula aplikasi dan cuba lagi. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Akaun anda tidak dapat disahkan. Sila mulakan semula aplikasi dan cuba lagi. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Pemprosesan pembelian sedang dijalankan. Sila tunggu sebentar dan semak semula.",
   "purchaseErrorUnknownBackendError": "Pembelian tidak boleh dibuat pada masa ini. Sila tunggu sebentar dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi Kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian gagal. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",

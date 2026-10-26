@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Nepavyko užbaigti pirkimo. Po kurio laiko pabandykite dar kartą. Jei problema išliks, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Šiuo metu įsigyti nepavyksta. Bandykite dar kartą vėliau. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkimo informacija jau naudojama kito naudotojo. Patikrinkite, prie kurios {accountName} paskyros esate prisijungę savo įrenginyje.",
-  "purchaseErrorInvalidAppUserIdError": "Nepavyko patvirtinti vartotojo. Paleiskite programą iš naujo ir bandykite dar kartą. Išsamiau: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Nepavyko patvirtinti jūsų paskyros. Paleiskite programėlę iš naujo ir bandykite dar kartą. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Šiuo metu vyksta kitas pirkimo procesas. Palaukite ir pabandykite vėl.",
   "purchaseErrorUnknownBackendError": "Šiuo metu pirkimas nepasiekiamas. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kontaktai. Detalės: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkimas nepavyko. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kreipimasis. Išsamiau: {exceptionMessage}:{exceptionDetails}",

@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Куповина није успела. Молимо Вас да покушате поново мало касније. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Куповина тренутно није могућа. Покушајте поново касније. Ако проблем потраје, контактирајте нас преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Податке о куповини већ користи други корисник. Молимо Вас, проверите на који сте {accountName} налог пријављени на уређају.",
-  "purchaseErrorInvalidAppUserIdError": "Korisnik nije mogao biti potvrđen. Molimo ponovo pokušajte nakon restartovanja aplikacije. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Нисмо могли да потврдимо Ваш налог. Молимо Вас да поново покренете апликацију и покушате још једном. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Postupak kupovine je trenutno u toku. Molimo vas da sačekate malo vremena i ponovo proverite.",
   "purchaseErrorUnknownBackendError": "Купovina тренутно није могућа. Покушајте поново након неког времена. Ако се проблем не реши, контактирајте нас преко Подешавања > Контакт. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Kupovina nije uspela. Pokušajte ponovo nakon kratke pauze. Ako se problem ne reši, kontaktirajte nas preko Podešavanja > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",

@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "შეძენა ვერ დასრულდა. გთხოვთ, ცოტა ხნის შემდეგ ისევ სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ამჟამად შეძენა ვერ ხერხდება. გთხოვთ, ცოტა ხნის შემდეგ ხელახლა სცადოთ. თუ პრობლემა გაგრძელდება, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "შეძენის ინფორმაცია უკვე გამოიყენება სხვა მომხმარებლის მიერ. გთხოვთ, შეამოწმოთ, რომელი {accountName} ანგარიშით ხართ შესული მოწყობილობაზე.",
-  "purchaseErrorInvalidAppUserIdError": "მომხმარებლის ვერიფიკაცია ვერ მოხერხდა. გთხოვთ, ხელახლა გაუშვათ აპლიკაცია და კიდევ სცადოთ. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "თქვენი ანგარიშის დადასტურება ვერ მოხერხდა. გთხოვთ, ხელახლა გაუშვათ აპი და კიდევ სცადოთ. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "შესყიდვის პროცესი უკვე მიმდინარეობს. გთხოვთ, გარკვეული დროის შემდეგ ხელახლა შეამოწმოთ",
   "purchaseErrorUnknownBackendError": "ამჟამად შეძენა შეუძლებელია. გთხოვთ, მოგვიანებით სცადოთ ხელახლა. თუ პრობლემა არ მოგვარდება, დაგვიკავშირდით პარამეტრები > კონტაქტი მეშვეობით. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "შენაძენი ვერ მოხერხდა. გთხოვთ ცოტა ხანს დაელოდოთ და ხელახლა სცადოთ. თუ პრობლემა არ მოგვარდება, გთხოვთ დაგვიკავშირდეთ პარამეტრები > დახმარება მეშვეობით. დეტალები: {exceptionMessage}:{exceptionDetails}",

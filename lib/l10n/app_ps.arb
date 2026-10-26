@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "اوس مهال پېرود نه شي کېدای. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "د دې پېرود معلومات بل کاروونکی کاروي. مهرباني وکړئ په خپل وسیله کې ننوتلی د {accountName} حساب وګورئ.",
-  "purchaseErrorInvalidAppUserIdError": "کاروونکي تصدیق نه شو. اپ ریسټارټ کړئ او بیا هڅه وکړئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "ستاسو حساب تایید نه شو. مهرباني وکړئ اپ بیا پیل کړئ او بیا هڅه وکړئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "د پېرودلو پروسه دمخه روانه ده. مهرباني وکړئ د یو څه وخت وروسته بیا وګورئ",
   "purchaseErrorUnknownBackendError": "اوس مهال د پیرودلو توان نشته. د یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي نو د تنظیمات > پوښتنې څخه اړیکه ونیسئ. توضیحات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "د پیرودلو ناکامي. مهرباني وروسته بیا هڅه وکړئ. که دا حل نشي نو د تنظیمات > پوښتنه څخه موږ سره اړیکه ونیسئ. توضیحات: {exceptionMessage}:{exceptionDetails}",

@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Ezin izan da erosketa burutu. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan aukeraren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Une honetan ezin da erosketa egin. Saiatu berriro geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Erosketa hau beste erabiltzaile bati lotuta dago. Begiratu gailuan zein {accountName} konturekin hasi duzun saioa.",
-  "purchaseErrorInvalidAppUserIdError": "Erabiltzailea ezin izan da egiaztatu. Aplikazioa berrabiarazi eta saiatu berriro. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Ezin izan dugu zure kontua egiaztatu. Berrabiarazi aplikazioa eta saiatu berriro, mesedez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Erosketa-prozesua abian da beste leku batean. Denbora pixka bat itxaron eta berriro saiatu.",
   "purchaseErrorUnknownBackendError": "Momentu honetan ezin da erosketarik egin. Itxaron pixka bat eta saiatu berriro. Arazoa konpontzen ez bada, Ezarpenak > Kontsultak bidez jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Erosketa huts egin du. Denbora pixka bat itxaron eta saiatu berriz. Konpontzen ez bada, Ezarpenak > Kontsultak bidez jarri gurekin harremanetan. Xehetasunak: {exceptionMessage}:{exceptionDetails}",

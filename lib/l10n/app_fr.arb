@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "L’achat n’a pas pu être effectué. Veuillez réessayer un peu plus tard. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "L’achat est indisponible pour le moment. Veuillez réessayer plus tard. Si le problème persiste, contactez-nous depuis Réglages > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Cet achat est déjà associé à un autre compte utilisateur. Vérifiez le compte {accountName} connecté sur votre appareil.",
-  "purchaseErrorInvalidAppUserIdError": "La vérification de l'utilisateur a échoué. Veuillez redémarrer l'application et réessayer. Détails : {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Nous n’avons pas pu vérifier votre compte. Veuillez redémarrer l’application et réessayer. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Un autre achat est en cours. Veuillez patienter un moment et réessayer.",
   "purchaseErrorUnknownBackendError": "L'achat est actuellement indisponible. Veuillez réessayer plus tard. Si le problème persiste, veuillez nous contacter via Paramètres > Contact. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "L'achat a échoué. Veuillez réessayer plus tard. Si le problème persiste, veuillez nous contacter via Paramètres > Contact. Détails : {exceptionMessage}:{exceptionDetails}",

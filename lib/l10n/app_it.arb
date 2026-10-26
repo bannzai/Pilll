@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Non è stato possibile completare l’acquisto. Riprova più tardi. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Al momento non è possibile completare l’acquisto. Riprova più tardi. Se il problema continua, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Questo acquisto è già associato a un altro utente. Controlla l'account {accountName} con cui hai effettuato l'accesso sul dispositivo.",
-  "purchaseErrorInvalidAppUserIdError": "Non è stato possibile verificare l'utente. Riavvia l'app e riprova. Dettagli: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Non siamo riusciti a verificare il tuo account. Riavvia l’app e riprova. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "È in corso un altro processo di acquisto. Si prega di attendere un momento e riprovare.",
   "purchaseErrorUnknownBackendError": "Al momento non è possibile effettuare l'acquisto. Riprova più tardi. Se il problema persiste, contattaci tramite Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Non è stato possibile completare l'acquisto. Riprova più tardi. Se il problema persiste, contattaci tramite Impostazioni > Supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",

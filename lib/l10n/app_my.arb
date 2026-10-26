@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏကြာပြီးမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "လောလောဆယ် ဝယ်ယူ၍မရနိုင်ပါ။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ကျွန်ုပ်တို့ကို ဆက်သွယ်ရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ဤဝယ်ယူမှုအချက်အလက်ကို အခြားအသုံးပြုသူတစ်ဦးက အသုံးပြုနေပါပြီ။ စက်ပစ္စည်းတွင် ဝင်ရောက်ထားသော {accountName} အကောင့်ကို စစ်ဆေးပေးပါ။",
-  "purchaseErrorInvalidAppUserIdError": "အသုံးပြုသူအား အတည်မပြုနိုင်ပါ။ အက်ပ်ကို ပြန်လည်စတင်ပြီး ထပ်မံကြိုးစားပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "အကောင့်ကို အတည်ပြု၍ မရပါ။ ကျေးဇူးပြု၍ အက်ပ်ကို ပြန်လည်စတင်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "အခြားဝယ်ယူမှုလုပ်ငန်းစဉ်လုပ်ဆောင်နေပါသည်။ အချိန်အနည်းငယ်စောင့်ပြီးပြန်လည်စစ်ဆေးပါ",
   "purchaseErrorUnknownBackendError": "လောလောဆယ် ဝယ်ယူမှု မလုပ်နိုင်ပါ။ အချိန်ကြာပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ မရှင်းလင်းပါက ဆက်တင်များ > မေးမြန်းချက် မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏကြာပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ ပြဿနာ မရှင်းလင်းပါက ဆက်တင်များ > ဆက်သွယ်မေးမြန်းရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်အချက်အလက်များ- {exceptionMessage}:{exceptionDetails}",

@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Сатып алуу ишке ашкан жок. Бир аз убакыттан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Бир аздан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу бөлүмү аркылуу кайрылыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматын башка колдонуучу колдонуп жатат. Түзмөгүңүздө кирген {accountName} каттоо эсебин текшериңиз.",
-  "purchaseErrorInvalidAppUserIdError": "Колдонуучуну текшерүү мүмкүн болбоду. Колдонмону кайра ишке киргизип, кайрадан аракет кылыныз. Детали: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Каттоо эсебиңизди ырастоо мүмкүн болгон жок. Колдонмону кайра иштетип, дагы бир жолу аракет кылып көрүңүз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Сатып алуу процесси жүрүп жатат. Бир аз күтүп, кайрадан текшериңиз.",
   "purchaseErrorUnknownBackendError": "Азырдакы учурда сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Байланыш арқылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алуу ийгиликсиз аяктады. Убакыт өткөзүп кайра аракет кылыңыз. Эгер маселе чечилбесе Жөндөөлөр > Кайрылуу аркылуу байланышыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",

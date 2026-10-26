@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "לא ניתן היה להשלים את הרכישה. כדאי לנסות שוב מאוחר יותר. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "לא ניתן לבצע רכישה כרגע. כדאי לנסות שוב מאוחר יותר. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "פרטי הרכישה כבר משמשים משתמש אחר. כדאי לבדוק איזה חשבון {accountName} מחובר במכשיר.",
-  "purchaseErrorInvalidAppUserIdError": "לא ניתן היה לאמת את המשתמש. אנא הפעל מחדש את האפליקציה ונסה שוב. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "לא ניתן לאמת את החשבון. כדאי להפעיל מחדש את האפליקציה ולנסות שוב. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "תהליך רכישה אחר כבר מתבצע. אנא המתינו ונסו שוב",
   "purchaseErrorUnknownBackendError": "כעת לא ניתן לבצע רכישה. אנא נסו שוב לאחר זמן מה. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > צור קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "הרכישה נכשלה. אנא נסה שוב לאחר זמן קצר. אם הבעיה לא נפתרת, צור קשר דרך הגדרות > פנייה לתמיכה. פרטים: {exceptionMessage}:{exceptionDetails}",

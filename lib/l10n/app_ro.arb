@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Achiziția nu a putut fi finalizată. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Cumpărarea nu este posibilă acum. Încearcă din nou mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informațiile despre această achiziție sunt deja folosite de alt utilizator. Verifică ce cont {accountName} este conectat pe dispozitivul tău.",
-  "purchaseErrorInvalidAppUserIdError": "Utilizatorul nu a putut fi verificat. Vă rugăm să reporniți aplicația și să încercați din nou. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Nu am putut verifica contul tău. Repornește aplicația și încearcă din nou. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "O achiziție este deja în curs de procesare. Vă rugăm să așteptați un moment și să verificați din nou.",
   "purchaseErrorUnknownBackendError": "În prezent, achiziția nu este posibilă. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Achiziția a eșuat. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",

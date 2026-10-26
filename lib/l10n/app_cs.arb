@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Nákup se nepodařilo dokončit. Zkuste to prosím za chvíli znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Nákup teď není možný. Zkuste to prosím později znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Údaje o nákupu už používá jiný uživatel. Zkontrolujte prosím účet {accountName}, ke kterému jste na zařízení přihlášeni.",
-  "purchaseErrorInvalidAppUserIdError": "Uživatel nemohl být ověřen. Restartujte aplikaci a zkuste to znovu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Váš účet se nepodařilo ověřit. Restartujte prosím aplikaci a zkuste to znovu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Právě probíhá jiný nákupní proces. Počkejte prosím chvíli a zkuste to znovu.",
   "purchaseErrorUnknownBackendError": "Nákup momentálně není možný. Zkuste to prosím později znovu. Pokud se problém nevyřeší, kontaktujte nás prostřednictvím Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup se nezdařil. Zkuste to prosím znovu za chvíli. Pokud se problém nevyřeší, kontaktujte nás přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

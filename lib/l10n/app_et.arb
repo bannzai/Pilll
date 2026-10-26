@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Ostu ei õnnestunud lõpule viia. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Praegu ei saa ostu sooritada. Proovi hiljem uuesti. Kui probleem püsib, võta meiega ühendust menüüs Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostuteavet kasutab juba teine kasutaja. Palun kontrolli, millise {accountName} kontoga oled oma seadmes sisse logitud.",
-  "purchaseErrorInvalidAppUserIdError": "Kasutajat ei õnnestunud kinnitada. Palun taaskäivitage rakendus ja proovige uuesti. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Sinu kontot ei õnnestunud kinnitada. Palun taaskäivita rakendus ja proovi uuesti. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Teine ostuprotsess on juba käimas. Palun oodake mõne aja ja kontrollige uuesti.",
   "purchaseErrorUnknownBackendError": "Hetkel ei saa osta. Palun proovige hiljem uuesti. Kui probleem püsib, võtke meiega ühendust läbi Seaded > Kontakt. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ost ebaõnnestus. Palun proovige hiljem uuesti. Kui probleem ei lahene, võtke ühendust läbi Seaded > Pöördumine. Üksikasjad: {exceptionMessage}:{exceptionDetails}",

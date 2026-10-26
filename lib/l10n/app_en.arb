@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Your purchase couldn’t be completed. Please try again later. If the issue continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Purchases aren’t available right now. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "This purchase is already linked to another user. Please check the {accountName} account signed in on your device.",
-  "purchaseErrorInvalidAppUserIdError": "User verification failed. Please restart the app and try again. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "We couldn’t verify your account. Please restart the app and try again. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Another purchase is in progress. Please wait a moment and try again.",
   "purchaseErrorUnknownBackendError": "Purchase is currently unavailable. Please try again later. If the issue persists, please contact us through Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Purchase failed. Please try again later. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",

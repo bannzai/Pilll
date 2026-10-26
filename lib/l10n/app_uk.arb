@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Не вдалося завершити покупку. Будь ласка, спробуйте ще раз трохи пізніше. Якщо проблема залишиться, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Зараз покупка недоступна. Будь ласка, спробуйте ще раз пізніше. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Дані про покупку вже використовує інший користувач. Перевірте, у який обліковий запис {accountName} ви ввійшли на пристрої.",
-  "purchaseErrorInvalidAppUserIdError": "Не вдалося підтвердити користувача. Будь ласка, перезапустіть додаток і спробуйте знову. Деталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Не вдалося підтвердити ваш обліковий запис. Перезапустіть застосунок і спробуйте ще раз. Докладніше: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Обробка покупки вже виконується. Зачекайте трохи та спробуйте ще раз",
   "purchaseErrorUnknownBackendError": "Зараз неможливо здійснити покупку. Спробуйте ще раз через деякий час. Якщо проблема не вирішується, зв'яжіться з нами через Налаштування > Зв'язатися з нами. Деталі: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Покупка не вдалася. Спробуйте знову пізніше. Якщо проблема не вирішується, зверніться до нас через Налаштування > Звернення. Деталі: {exceptionMessage}:{exceptionDetails}",

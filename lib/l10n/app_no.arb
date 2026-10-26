@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Kjøpet kunne ikke fullføres. Prøv igjen om litt. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Du kan ikke kjøpe akkurat nå. Prøv igjen senere. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Kjøpsinformasjonen brukes allerede av en annen bruker. Sjekk hvilken {accountName}-konto du er logget inn med på enheten din.",
-  "purchaseErrorInvalidAppUserIdError": "Brukeren kunne ikke bekreftes. Start appen på nytt og prøv igjen. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Vi kunne ikke bekrefte kontoen din. Start appen på nytt og prøv igjen. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Det pågår allerede en kjøpsprosess. Vennligst vent et øyeblikk og sjekk igjen.",
   "purchaseErrorUnknownBackendError": "Kan ikke kjøpe for øyeblikket. Vennligst vent og prøv igjen. Hvis problemet vedvarer, kontakt oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Kjøpet mislyktes. Vennligst prøv igjen senere. Hvis problemet vedvarer, kontakt oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",

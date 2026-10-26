@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "De aankoop kon niet worden afgerond. Probeer het later nog eens. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Je kunt op dit moment geen aankoop doen. Probeer het later nog eens. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Deze aankoop wordt al door een andere gebruiker gebruikt. Controleer met welk {accountName}-account je bent ingelogd op je apparaat.",
-  "purchaseErrorInvalidAppUserIdError": "De gebruiker kon niet worden geverifieerd. Herstart de app en probeer het opnieuw. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "We konden je account niet verifiëren. Start de app opnieuw en probeer het nog eens. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Er loopt al een aankoopproces. Wacht even en probeer het opnieuw.",
   "purchaseErrorUnknownBackendError": "Er kan momenteel geen aankoop worden gedaan. Probeer het na een tijdje opnieuw. Als het probleem aanhoudt, neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "De aankoop is mislukt. Probeer het later opnieuw. Als dit probleem blijft bestaan, neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",

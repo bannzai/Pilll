@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "Non se puido completar a compra. Téntao de novo dentro dun anaco. Se o problema continúa, contacta connosco en Axustes > Contacta connosco. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Agora mesmo non se pode completar a compra. Téntao de novo máis tarde. Se o problema continúa, contacta connosco en Axustes > Contacta connosco. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Esta compra xa está asociada a outra persoa usuaria. Comproba a conta de {accountName} coa que iniciaches sesión no dispositivo.",
-  "purchaseErrorInvalidAppUserIdError": "Non se puido verificar o usuario. Reinicia a aplicación e téntao de novo. Detalles: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Non puidemos verificar a túa conta. Reinicia a aplicación e téntao de novo, por favor. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Hai outro proceso de compra en curso. Por favor, agarde un momento e volva intentalo máis tarde.",
   "purchaseErrorUnknownBackendError": "Non é posible realizar a compra neste momento. Agarde un intre e ténteo de novo. Se o problema persiste, póñase en contacto a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "A compra fallou. Téntao de novo pasado un tempo. Se o problema persiste, contacta connosco en Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",

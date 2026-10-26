@@ -300,7 +300,7 @@
   "purchaseErrorInvalidCredentialsError": "ግዢው አልተሳካም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "አሁን ግዢ ማድረግ አይቻልም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "የግዢ መረጃው በሌላ ተጠቃሚ ጥቅም ላይ ነው። እባክዎ በመሣሪያዎ ላይ የገቡበትን {accountName} ያረጋግጡ።",
-  "purchaseErrorInvalidAppUserIdError": "ተጠቃሚው መረጋገጥ አልቻለም። እባክዎ መተግበሪያውን እንደገና ጀምረው ይሞክሩ። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "የተጠቃሚውን መለያ ማረጋገጥ አልተቻለም። እባክዎ መተግበሪያውን እንደገና ያስጀምሩና ይሞክሩ። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ሌላ ግዢ ሂደት በመካሄድ ላይ ነው። እባክዎ ትንሽ ጊዜ ይጠብቁ እና እንደገና ይሞክሩ።",
   "purchaseErrorUnknownBackendError": "በአሁኑ ጊዜ መግዛት አይቻልም። ትንሽ ጊዜ ሰጥተው እንደገና ይሞክሩ። ችግሩ ካልተፈተ ቅንብሮች > ጥያቄ ከዚያ ያግኙን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ግዢ አልተሳካም። ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያናግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
