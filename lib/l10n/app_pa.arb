@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "ਗੋਲੀ ਸਮੇਂ ਸਿਰ ਲੈਣ ’ਤੇ ਦਿਖਣ ਵਾਲਾ ਸੂਚਨਾ ਸੁਨੇਹਾ ਤੁਸੀਂ ਬਦਲ ਸਕਦੇ ਹੋ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ਉਸੇ ਦਿਨ ਸਵੇਰੇ 9:00 ਵਜੇ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ",
-  "save": "ਸੇਵ ਕਰੋ",
+  "save": "ਸੰਭਾਲੋ",
   "physicalCondition": "ਸਿਹਤ",
   "deletedDiaryCannotBeRecovered": "ਮਿਟਾਈ ਗਈ ਡਾਇਰੀ ਵਾਪਸ ਨਹੀਂ ਮਿਲ ਸਕਦੀ",
   "sex": "ਸੈਕਸ",

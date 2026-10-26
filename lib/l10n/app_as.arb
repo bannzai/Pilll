@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "সময়মতে পিল খালে দেখুওৱা জাননীৰ বাৰ্তা আপুনি সলনি কৰিব পাৰে",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "সেইদিনাই পুৱা 9:00 বজাত জাননী পাওক",
-  "save": "সংৰক্ষণ",
+  "save": "সংৰক্ষণ কৰক",
   "physicalCondition": "স্বাস্থ্য",
   "deletedDiaryCannotBeRecovered": "মোচা কৰা ডায়েৰী পুনৰুদ্ধাৰ কৰিব নোৱাৰি",
   "sex": "যৌন",

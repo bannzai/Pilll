@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Hapınızı zamanında aldığınızda gösterilen bildirim mesajını değiştirebilirsiniz",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Aynı gün saat 09.00'da bildirim alın",
-  "save": "Kaydet",
+  "save": "Kaydedin",
   "physicalCondition": "Durum",
   "deletedDiaryCannotBeRecovered": "Silinen günlük geri yüklenemez",
   "sex": "seks",

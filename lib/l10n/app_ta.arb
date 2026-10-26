@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "மாத்திரையைச் சரியான நேரத்தில் எடுத்துக்கொள்ளும்போது காட்டப்படும் அறிவிப்புச் செய்தியை மாற்றலாம்",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "அன்றே காலை 9:00 மணிக்கு அறிவிப்பைப் பெறுங்கள்",
-  "save": "சேமி",
+  "save": "சேமியுங்கள்",
   "physicalCondition": "உடல் நிலை",
   "deletedDiaryCannotBeRecovered": "நீக்கப்பட்ட டைரியை மீட்டெடுக்க முடியாது",
   "sex": "பாலியல்",

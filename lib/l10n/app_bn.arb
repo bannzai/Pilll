@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "সময়মতো পিল খেলে যে বিজ্ঞপ্তি দেখানো হয়, তার লেখা আপনি বদলাতে পারেন",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "সেদিনই সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
-  "save": "সেভ",
+  "save": "সংরক্ষণ করুন",
   "physicalCondition": "স্বাস্থ্য",
   "deletedDiaryCannotBeRecovered": "মুছে ফেলা ডায়েরি আর ফিরিয়ে আনা যাবে না",
   "sex": "সেক্স",

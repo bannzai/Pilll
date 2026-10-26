@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Varat mainīt paziņojuma tekstu, kas tiek rādīts, kad laikus lietojat tableti",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9.00",
-  "save": "Saglabāt",
+  "save": "Saglabājiet",
   "physicalCondition": "Pašsajūta",
   "deletedDiaryCannotBeRecovered": "Dzēstos dienasgrāmatas ierakstus nevar atjaunot",
   "sex": "sekss",

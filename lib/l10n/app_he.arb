@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "אפשר לשנות את הודעת ההתראה שמופיעה כשהגלולה ניטלת בזמן",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "קבלת התראה באותו יום בשעה 9:00 בבוקר",
-  "save": "שמור",
+  "save": "לשמור",
   "physicalCondition": "רווחה",
   "deletedDiaryCannotBeRecovered": "לא ניתן לשחזר יומנים שנמחקו",
   "sex": "מין",

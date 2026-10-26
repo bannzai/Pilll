@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Galite pakeisti pranešimo tekstą, kuris rodomas, kai laiku išgeriate tabletę",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
-  "save": "Išsaugoti",
+  "save": "Išsaugokite",
   "physicalCondition": "Savijauta",
   "deletedDiaryCannotBeRecovered": "Ištrinti dienoraščiai negali būti atkurti",
   "sex": "seksas",

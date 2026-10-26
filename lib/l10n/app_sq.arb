@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Mund ta ndryshoni mesazhin e njoftimit që shfaqet kur e merrni pilulën në kohë",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Merrni një njoftim po atë ditë në orën 9:00",
-  "save": "Ruaj",
+  "save": "Ruani",
   "physicalCondition": "Shëndeti",
   "deletedDiaryCannotBeRecovered": "Ditari i fshirë nuk mund të rikthehet",
   "sex": "seks",

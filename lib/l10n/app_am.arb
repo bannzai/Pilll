@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "ክኒን በሰዓቱ ሲወስዱ የሚታየውን የማሳወቂያ መልእክት መቀየር ይችላሉ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "በዚያው ቀን ጠዋት 9:00 ላይ ማሳወቂያ ይቀበሉ",
-  "save": "አስቀምጥ",
+  "save": "ያስቀምጡ",
   "physicalCondition": "ጤንነት",
   "deletedDiaryCannotBeRecovered": "የተሰረዘ ማስታወሻ መመለስ አይቻልም",
   "sex": "ወሲብ",

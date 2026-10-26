@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "మాత్రను సమయానికి తీసుకున్నప్పుడు కనిపించే నోటిఫికేషన్ సందేశాన్ని మార్చుకోవచ్చు",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "అదే రోజు ఉదయం 9:00 గంటలకు నోటిఫికేషన్ పొందండి",
-  "save": "సేవ్",
+  "save": "భద్రపరచండి",
   "physicalCondition": "శరీర స్థితి",
   "deletedDiaryCannotBeRecovered": "తొలగించిన డైరీని పునరుద్ధరించలేము",
   "sex": "లైంగిక",

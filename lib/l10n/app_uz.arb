@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Tabletkani vaqtida ichganingizda ko‘rsatiladigan bildirishnoma matnini o‘zgartirishingiz mumkin",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
-  "save": "Saqlash",
+  "save": "Saqlang",
   "physicalCondition": "Kayfiyat",
   "deletedDiaryCannotBeRecovered": "O'chirilgan kundalikni tiklash mumkin emas",
   "sex": "jinsiy aloqa",

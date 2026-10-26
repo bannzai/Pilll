@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Pots canviar el text de la notificació que apareix quan has pres la píndola a l’hora",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Rep una notificació el mateix dia a les 9:00",
-  "save": "Desar",
+  "save": "Desa",
   "physicalCondition": "Estat de salut",
   "deletedDiaryCannotBeRecovered": "Els diaris esborrats no es poden recuperar",
   "sex": "sexe",

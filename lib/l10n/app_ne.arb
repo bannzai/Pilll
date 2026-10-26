@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "चक्की समयमा खाँदा देखिने सूचनाको सन्देश तपाईंले परिवर्तन गर्न सक्नुहुन्छ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "सोही दिन बिहान 9:00 बजे सूचना प्राप्त गर्नुहोस्",
-  "save": "सेभ गर्नुहोस्",
+  "save": "सुरक्षित गर्नुहोस्",
   "physicalCondition": "स्वास्थ्य स्थिति",
   "deletedDiaryCannotBeRecovered": "मेटाइएका डायरीहरू फिर्ता ल्याउन सकिंदैन",
   "sex": "यौन",

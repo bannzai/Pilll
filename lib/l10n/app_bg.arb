@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Можете да промените текста на известието, което се показва, когато сте взели хапчето навреме",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Получавайте известие в същия ден в 9:00 ч.",
-  "save": "Запази",
+  "save": "Запазете",
   "physicalCondition": "самочувствие",
   "deletedDiaryCannotBeRecovered": "Изтритият дневник не може да бъде възстановен",
   "sex": "секс",

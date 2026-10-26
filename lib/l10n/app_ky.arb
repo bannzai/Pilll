@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Таблетканы убагында ичкениңизде көрсөтүлүүчү билдирүүнүн текстин өзгөртө аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ошол эле күнү саат 9:00дө билдирүү алыңыз",
-  "save": "Сактоо",
+  "save": "Сактаңыз",
   "physicalCondition": "ден соолук",
   "deletedDiaryCannotBeRecovered": "Өчүрүлгөн күндөлүктү калыбына келтирүү мүмкүн эмес",
   "sex": "секс",

@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "تاسو کولی شئ هغه د خبرتیا پیغام بدل کړئ چې د ګولۍ پر وخت له اخیستو وروسته ښکاري",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "په هماغه ورځ د سهار په 9:00 بجو خبرتیا ترلاسه کړئ",
-  "save": "ساتل",
+  "save": "خوندي کړئ",
   "physicalCondition": "حالت",
   "deletedDiaryCannotBeRecovered": "پاک شوی ډايری بیا نشي راګرځېدای",
   "sex": "جنس",

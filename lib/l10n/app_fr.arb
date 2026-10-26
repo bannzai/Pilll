@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Vous pouvez modifier le message de la notification affichée lorsque vous prenez votre pilule à l’heure",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Recevoir une notification le jour même à 9 h",
-  "save": "Sauvegarder",
+  "save": "Enregistrer",
   "physicalCondition": "Comment tu te sens",
   "deletedDiaryCannotBeRecovered": "Les entrées de journal supprimées ne peuvent pas être restaurées",
   "sex": "activité sexuelle",

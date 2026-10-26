@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "ഗുളിക കൃത്യസമയത്ത് കഴിക്കുമ്പോൾ കാണിക്കുന്ന അറിയിപ്പ് സന്ദേശം മാറ്റാം",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "അതേ ദിവസം രാവിലെ 9:00-ന് അറിയിപ്പ് ലഭിക്കുക",
-  "save": "സേവ്",
+  "save": "സംരക്ഷിക്കുക",
   "physicalCondition": "ആരോഗ്യാവസ്ഥ",
   "deletedDiaryCannotBeRecovered": "ഇല്ലാതാക്കിയ ഡയറി പുനഃസ്ഥാപിക്കാൻ കഴിയില്ല",
   "sex": "ലൈംഗികത",

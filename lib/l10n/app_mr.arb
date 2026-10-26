@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "गोळी वेळेवर घेतल्यावर दिसणारा सूचना संदेश तुम्ही बदलू शकता",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना मिळवा",
-  "save": "साठवा",
+  "save": "जतन करा",
   "physicalCondition": "तब्येत",
   "deletedDiaryCannotBeRecovered": "काढलेली डायरी पुनर्स्थापित करता येत नाही",
   "sex": "लैंगिक",

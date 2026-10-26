@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "Можете да промените текст обавештења које се приказује када узмете пилулу на време",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Примање обавештења истог дана у 9:00",
-  "save": "сачувај",
+  "save": "Сачувајте",
   "physicalCondition": "самоосећање",
   "deletedDiaryCannotBeRecovered": "Obrisani dnevnik se ne može vratiti",
   "sex": "seks",

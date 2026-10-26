@@ -247,7 +247,7 @@
   "changeDailyNotificationMessage": "ଠିକ୍ ସମୟରେ ବଟିକା ଖାଇଲେ ଦେଖାଯାଉଥିବା ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା ଆପଣ ବଦଳାଇ ପାରିବେ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ସେହି ଦିନ ସକାଳ 9:00ଟାରେ ବିଜ୍ଞପ୍ତି ପାଆନ୍ତୁ",
-  "save": "ସେଭ୍",
+  "save": "ସଂରକ୍ଷଣ କରନ୍ତୁ",
   "physicalCondition": "ସ୍ୱାସ୍ଥ୍ୟ",
   "deletedDiaryCannotBeRecovered": "ମିଟାଯାଇଥିବା ଡାଏରି ପୁନଃପ୍ରାପ୍ତି କରାଯାଇପାରିବ ନାହିଁ",
   "sex": "ଯୌନ",
