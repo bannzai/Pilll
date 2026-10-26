@@ -431,7 +431,7 @@
   "logout": "Бүртгэлээс гарах",
   "goToInitialSettingAndReloginIfNeededMessage": "Та анхны тохиргоо руу буцна. Нэвтрэх шаардлагатай бол анхны тохиргооны дэлгэцийн доод хэсгээс нэвтэрнэ үү.",
   "deleteAccount": "Бүртгэл устгах",
-  "logoutCompleted": "Системээс гарлаа",
+  "logoutCompleted": "Та бүртгэлээсээ гарсан байна",
   "specialDiscountPriceNow": "Тусгай үнээр премиум төлөвлөгөө авах!",
   "inquiryTypeLabel": "Хандалтын төрөл",
   "bugReport": "Согог мэдээлэх",

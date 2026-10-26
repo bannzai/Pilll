@@ -431,7 +431,7 @@
   "logout": "გასვლა",
   "goToInitialSettingAndReloginIfNeededMessage": "თქვენ დაბრუნდებით საწყის პარამეტრებთან. თუ ანგარიშში შესვლა დაგჭირდებათ, ამის გაკეთება საწყისი პარამეტრების ეკრანის ქვედა ნაწილიდან შეგიძლიათ.",
   "deleteAccount": "ანგარიშის წაშლა",
-  "logoutCompleted": "გამოვედით",
+  "logoutCompleted": "თქვენ გახვედით ანგარიშიდან",
   "specialDiscountPriceNow": "სპეციალურ ფასად მიიღეთ პრემიუმ პლანი!",
   "inquiryTypeLabel": "მიმართვის ტიპი",
   "bugReport": "ხარვეზის შეტყობინება",

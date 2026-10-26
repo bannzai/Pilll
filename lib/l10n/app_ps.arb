@@ -431,7 +431,7 @@
   "logout": "له حسابه وتل",
   "goToInitialSettingAndReloginIfNeededMessage": "تاسو به لومړنیو ترتیباتو ته ستانه شئ. که ننوتلو ته اړتیا وي، مهرباني وکړئ د لومړنیو ترتیباتو د پردې له ښکته برخې څخه ننوځئ.",
   "deleteAccount": "حساب ړنګول",
-  "logoutCompleted": "وتلاست",
+  "logoutCompleted": "تاسو له خپل حساب څخه وتلي یاست",
   "specialDiscountPriceNow": "د ځانګړي بیه سره پریمیم پلان واخلئ!",
   "inquiryTypeLabel": "د پوښتنې ډول",
   "bugReport": "د ستونزې راپور",

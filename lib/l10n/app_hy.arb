@@ -431,7 +431,7 @@
   "logout": "Դուրս գալ հաշվից",
   "goToInitialSettingAndReloginIfNeededMessage": "Դուք կվերադառնաք սկզբնական կարգավորման էջ։ Եթե անհրաժեշտ լինի մուտք գործել, խնդրում ենք դա անել էջի ներքևի մասից։",
   "deleteAccount": "Հաշվի ջնջում",
-  "logoutCompleted": "Դուրս եկաք",
+  "logoutCompleted": "Դուք դուրս եք եկել Ձեր հաշվից",
   "specialDiscountPriceNow": "Ստացիր պրեմիում ծրագիրը հատուկ գնով:",
   "inquiryTypeLabel": "Հարցման տեսակ",
   "bugReport": "Սխալների հաղորդում",

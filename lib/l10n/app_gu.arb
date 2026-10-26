@@ -431,7 +431,7 @@
   "logout": "લૉગ આઉટ",
   "goToInitialSettingAndReloginIfNeededMessage": "તમે પ્રારંભિક સેટઅપ પર પાછા જશો. જો લૉગ ઇન કરવાની જરૂર હોય, તો કૃપા કરીને પ્રારંભિક સેટઅપ સ્ક્રીનના નીચેના ભાગમાંથી લૉગ ઇન કરો.",
   "deleteAccount": "ખાતું કાઢી નાખો",
-  "logoutCompleted": "લૉગ આઉટ થઈ ગયું",
+  "logoutCompleted": "તમે લૉગ આઉટ કર્યું છે",
   "specialDiscountPriceNow": "વિશેષ કિંમતે પ્રીમિયમ પ્લાન મેળવો!",
   "inquiryTypeLabel": "પૂછપરછ વિષય",
   "bugReport": "ખામીનો અહેવાલ",

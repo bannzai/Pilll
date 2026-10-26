@@ -431,7 +431,7 @@
   "logout": "Выйти из аккаунта",
   "goToInitialSettingAndReloginIfNeededMessage": "Вы вернётесь к первоначальной настройке. Если потребуется войти в аккаунт, сделайте это внизу экрана настройки.",
   "deleteAccount": "Удалить аккаунт",
-  "logoutCompleted": "Вы вышли из системы",
+  "logoutCompleted": "Вы вышли из аккаунта",
   "specialDiscountPriceNow": "Получите премиум-план по специальной цене!",
   "inquiryTypeLabel": "Тип обращения",
   "bugReport": "Сообщение об ошибке",

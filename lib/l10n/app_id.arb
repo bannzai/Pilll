@@ -431,7 +431,7 @@
   "logout": "Keluar",
   "goToInitialSettingAndReloginIfNeededMessage": "Anda akan kembali ke pengaturan awal. Jika perlu masuk, silakan masuk melalui bagian bawah layar pengaturan awal.",
   "deleteAccount": "Hapus akun",
-  "logoutCompleted": "Berhasil logout",
+  "logoutCompleted": "Anda telah keluar dari akun",
   "specialDiscountPriceNow": "Dapatkan Paket Premium dengan Harga Khusus!",
   "inquiryTypeLabel": "Kategori Pertanyaan",
   "bugReport": "Laporan Bug",

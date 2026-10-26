@@ -431,7 +431,7 @@
   "logout": "Se déconnecter",
   "goToInitialSettingAndReloginIfNeededMessage": "Vous allez revenir à la configuration initiale. Si vous devez vous connecter, vous pourrez le faire en bas de cet écran.",
   "deleteAccount": "Supprimer le compte",
-  "logoutCompleted": "Déconnecté",
+  "logoutCompleted": "Vous êtes déconnecté de votre compte",
   "specialDiscountPriceNow": "Obtenez Premium à un prix spécial !",
   "inquiryTypeLabel": "Type de demande",
   "bugReport": "Rapport de bug",

@@ -431,7 +431,7 @@
   "logout": "Dilni nga llogaria",
   "goToInitialSettingAndReloginIfNeededMessage": "Do të ktheheni te konfigurimi fillestar. Nëse duhet të hyni në llogari, mund ta bëni këtë në fund të ekranit të konfigurimit fillestar.",
   "deleteAccount": "Fshini llogarinë",
-  "logoutCompleted": "U çkyçët",
+  "logoutCompleted": "Dolët nga llogaria",
   "specialDiscountPriceNow": "Merrni planin premium me çmim të veçantë!",
   "inquiryTypeLabel": "Lloji i pyetjes",
   "bugReport": "Raportim problemi",

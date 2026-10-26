@@ -431,7 +431,7 @@
   "logout": "Logga ut",
   "goToInitialSettingAndReloginIfNeededMessage": "Du kommer tillbaka till den första inställningen. Om du behöver logga in kan du göra det längst ned på inställningsskärmen.",
   "deleteAccount": "Radera konto",
-  "logoutCompleted": "Du har loggats ut",
+  "logoutCompleted": "Du är utloggad",
   "specialDiscountPriceNow": "Få premiumplanen till specialpris!",
   "inquiryTypeLabel": "Ärendekategori",
   "bugReport": "Buggrapport",

@@ -431,7 +431,7 @@
   "logout": "Đăng xuất",
   "goToInitialSettingAndReloginIfNeededMessage": "Bạn sẽ quay lại phần thiết lập ban đầu. Nếu cần đăng nhập, vui lòng đăng nhập ở cuối màn hình thiết lập ban đầu.",
   "deleteAccount": "Xóa tài khoản",
-  "logoutCompleted": "Đã đăng xuất",
+  "logoutCompleted": "Bạn đã đăng xuất",
   "specialDiscountPriceNow": "Nhận ngay gói Premium với giá đặc biệt!",
   "inquiryTypeLabel": "Chủ đề liên hệ",
   "bugReport": "Báo cáo lỗi",

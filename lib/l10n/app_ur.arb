@@ -431,7 +431,7 @@
   "logout": "لاگ آؤٹ",
   "goToInitialSettingAndReloginIfNeededMessage": "آپ ابتدائی سیٹ اپ پر واپس جائیں گے۔ اگر لاگ اِن کرنا ضروری ہو تو براہِ کرم ابتدائی سیٹ اپ کی اسکرین کے نچلے حصے سے لاگ اِن کریں۔",
   "deleteAccount": "اکاؤنٹ حذف کریں",
-  "logoutCompleted": "لاگ آؤٹ ہو گیا",
+  "logoutCompleted": "آپ کے اکاؤنٹ سے لاگ آؤٹ ہو گیا ہے",
   "specialDiscountPriceNow": "خصوصی قیمت پر پریمیم پلان حاصل کریں!",
   "inquiryTypeLabel": "استفسار کی قسم",
   "bugReport": "خرابی کی رپورٹ",

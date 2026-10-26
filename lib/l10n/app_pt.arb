@@ -431,7 +431,7 @@
   "logout": "Sair da conta",
   "goToInitialSettingAndReloginIfNeededMessage": "Você voltará à configuração inicial. Se precisar entrar na sua conta, poderá fazer isso na parte inferior dessa tela.",
   "deleteAccount": "Excluir conta",
-  "logoutCompleted": "Desconectado",
+  "logoutCompleted": "Você saiu da sua conta",
   "specialDiscountPriceNow": "Obtenha o plano premium com preço especial!",
   "inquiryTypeLabel": "Tipo de consulta",
   "bugReport": "Relatar um problema",

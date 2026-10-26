@@ -431,7 +431,7 @@
   "logout": "Abmelden",
   "goToInitialSettingAndReloginIfNeededMessage": "Du kehrst zur Ersteinrichtung zurück. Falls du dich anmelden musst, kannst du das unten auf dem Einrichtungsbildschirm tun.",
   "deleteAccount": "Konto löschen",
-  "logoutCompleted": "Erfolgreich abgemeldet",
+  "logoutCompleted": "Du bist abgemeldet",
   "specialDiscountPriceNow": "Hol dir den Premium-Plan zum Sonderpreis!",
   "inquiryTypeLabel": "Kategorie",
   "bugReport": "Fehlerbericht",

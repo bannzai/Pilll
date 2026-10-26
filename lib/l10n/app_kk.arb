@@ -431,7 +431,7 @@
   "logout": "Шығу",
   "goToInitialSettingAndReloginIfNeededMessage": "Сіз бастапқы баптауға ораласыз. Кіру қажет болса, бастапқы баптау экранының төменгі жағынан кіріңіз.",
   "deleteAccount": "Есептік жазбаны жою",
-  "logoutCompleted": "Жүйеден шықтым",
+  "logoutCompleted": "Сіз есептік жазбаңыздан шықтыңыз",
   "specialDiscountPriceNow": "Премиум жоспарды арнайы бағамен алыңыз!",
   "inquiryTypeLabel": "Өтініш түрі",
   "bugReport": "Ақаулық туралы хабарлау",

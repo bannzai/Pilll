@@ -431,7 +431,7 @@
   "logout": "ออกจากระบบ",
   "goToInitialSettingAndReloginIfNeededMessage": "จะกลับไปยังหน้าตั้งค่าเริ่มต้นค่ะ หากต้องเข้าสู่ระบบ โปรดเข้าสู่ระบบจากด้านล่างของหน้าตั้งค่าเริ่มต้นค่ะ",
   "deleteAccount": "ลบบัญชี",
-  "logoutCompleted": "ออกจากระบบแล้ว",
+  "logoutCompleted": "ออกจากระบบแล้วค่ะ",
   "specialDiscountPriceNow": "รับแผนพรีเมียมในราคาพิเศษ!",
   "inquiryTypeLabel": "หัวข้อการติดต่อ",
   "bugReport": "รายงานข้อผิดพลาด",

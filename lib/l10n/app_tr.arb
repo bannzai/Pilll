@@ -431,7 +431,7 @@
   "logout": "Çıkış",
   "goToInitialSettingAndReloginIfNeededMessage": "İlk kuruluma döneceksiniz. Giriş yapmanız gerekirse ilk kurulum ekranının alt kısmından giriş yapabilirsiniz.",
   "deleteAccount": "Hesabı silin",
-  "logoutCompleted": "Oturum kapatıldı",
+  "logoutCompleted": "Oturumunuz kapatıldı",
   "specialDiscountPriceNow": "Özel fiyatlarla Premium planı edinin!",
   "inquiryTypeLabel": "İletişim Konusu",
   "bugReport": "Hata Raporu",

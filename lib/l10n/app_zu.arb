@@ -431,7 +431,7 @@
   "logout": "Phuma ku-akhawunti",
   "goToInitialSettingAndReloginIfNeededMessage": "Uzobuyela ekusethweni kokuqala. Uma kudingeka ungene ku-akhawunti, sicela ungene ngezansi kwesikrini sokusetha kokuqala.",
   "deleteAccount": "Susa i-akhawunti",
-  "logoutCompleted": "Ngiphumile",
+  "logoutCompleted": "Usuphumile ku-akhawunti",
   "specialDiscountPriceNow": "Zuza uhlelo lwe-Premium ngentego ekhethekile!",
   "inquiryTypeLabel": "Uhlobo lombuzo",
   "bugReport": "Bika Inkinga",

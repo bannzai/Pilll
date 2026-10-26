@@ -431,7 +431,7 @@
   "logout": "Izrakstīties",
   "goToInitialSettingAndReloginIfNeededMessage": "Jūs atgriezīsieties pie sākotnējās iestatīšanas. Ja būs jāpiesakās, to varēsiet izdarīt sākotnējās iestatīšanas ekrāna apakšdaļā.",
   "deleteAccount": "Dzēst kontu",
-  "logoutCompleted": "Izrakstījāties",
+  "logoutCompleted": "Jūs esat izrakstījušies",
   "specialDiscountPriceNow": "Iegūstiet Premium plānu par īpašo cenu!",
   "inquiryTypeLabel": "Pieprasījuma veids",
   "bugReport": "Kļūdas ziņojums",

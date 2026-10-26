@@ -431,7 +431,7 @@
   "logout": "အကောင့်မှ ထွက်ရန်",
   "goToInitialSettingAndReloginIfNeededMessage": "ကနဦးသတ်မှတ်မှုသို့ ပြန်သွားပါမယ်။ အကောင့်ဝင်ရန် လိုအပ်ပါက ကနဦးသတ်မှတ်မှု မျက်နှာပြင်အောက်ခြေမှ ဝင်ပါ။",
   "deleteAccount": "အကောင့်ဖျက်ရန်",
-  "logoutCompleted": "ထွက်ခဲ့ပါပြီ",
+  "logoutCompleted": "အကောင့်မှ ထွက်ပြီးပါပြီ",
   "specialDiscountPriceNow": "အထူးလျှော့စျေးဖြင့် ပရီမီယံအစီအစဉ်ကို ရယူပါ！",
   "inquiryTypeLabel": "စုံစမ်းမေးမြန်းမှုအမျိုးအစား",
   "bugReport": "ချို့ယွင်းချက်တင်ပြခြင်း",

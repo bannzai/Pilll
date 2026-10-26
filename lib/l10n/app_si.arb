@@ -431,7 +431,7 @@
   "logout": "ගිණුමෙන් ඉවත් වන්න",
   "goToInitialSettingAndReloginIfNeededMessage": "ආරම්භක සැකසුම් වෙත ආපසු යනු ඇත. පුරනය වීමට අවශ්‍ය නම්, කරුණාකර ආරම්භක සැකසුම් තිරයේ පහළින් පුරනය වන්න.",
   "deleteAccount": "ගිණුම මකන්න",
-  "logoutCompleted": "ලොග් අවුට් වෙලා",
+  "logoutCompleted": "ඔබ ගිණුමෙන් ඉවත් වී ඇත",
   "specialDiscountPriceNow": "විශේෂ මිලකට ප්‍රීමියම් සැලසුම ලබා ගන්න!",
   "inquiryTypeLabel": "විමසුම් වර්ගය",
   "bugReport": "දෝෂ වාර්තාව",

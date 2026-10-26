@@ -431,7 +431,7 @@
   "logout": "Çıxış",
   "goToInitialSettingAndReloginIfNeededMessage": "İlkin quraşdırmaya qayıdacaqsınız. Daxil olmağınız lazım olsa, zəhmət olmasa ilkin quraşdırma ekranının aşağı hissəsindən daxil olun.",
   "deleteAccount": "Hesabı silmək",
-  "logoutCompleted": "Sistemdən çıxdınız",
+  "logoutCompleted": "Hesabınızdan çıxış etdiniz",
   "specialDiscountPriceNow": "Xüsusi qiymətə premium planı əldə edin!",
   "inquiryTypeLabel": "Müraciət mövzusu",
   "bugReport": "Xəta bildirişi",

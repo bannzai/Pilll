@@ -431,7 +431,7 @@
   "logout": "Esci",
   "goToInitialSettingAndReloginIfNeededMessage": "Tornerai alla configurazione iniziale. Se devi accedere, puoi farlo nella parte inferiore di quella schermata.",
   "deleteAccount": "Elimina account",
-  "logoutCompleted": "Disconnesso",
+  "logoutCompleted": "Hai effettuato la disconnessione",
   "specialDiscountPriceNow": "Ottieni il piano premium con l'offerta speciale!",
   "inquiryTypeLabel": "Tipo di richiesta",
   "bugReport": "Segnalazione di bug",

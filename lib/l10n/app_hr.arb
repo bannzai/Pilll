@@ -431,7 +431,7 @@
   "logout": "Odjava",
   "goToInitialSettingAndReloginIfNeededMessage": "Vratit ćete se na početno postavljanje. Ako se trebate prijaviti, to možete učiniti pri dnu zaslona početnog postavljanja.",
   "deleteAccount": "Brisanje računa",
-  "logoutCompleted": "Odjavljeni ste",
+  "logoutCompleted": "Odjavili ste se",
   "specialDiscountPriceNow": "Nabavite Premium plan po posebnoj cijeni!",
   "inquiryTypeLabel": "Vrsta upita",
   "bugReport": "Prijava greške",

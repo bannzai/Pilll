@@ -431,7 +431,7 @@
   "logout": "Logi välja",
   "goToInitialSettingAndReloginIfNeededMessage": "Naased algseadistusse. Kui pead sisse logima, saad seda teha algseadistuse kuva allosas.",
   "deleteAccount": "Kustuta konto",
-  "logoutCompleted": "Välja logitud",
+  "logoutCompleted": "Oled välja logitud",
   "specialDiscountPriceNow": "Hanki Premium-pakett eripakkumisega!",
   "inquiryTypeLabel": "Päringutüüp",
   "bugReport": "Vearaport",

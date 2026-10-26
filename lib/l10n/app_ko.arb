@@ -431,7 +431,7 @@
   "logout": "로그아웃",
   "goToInitialSettingAndReloginIfNeededMessage": "초기 설정 화면으로 돌아가요. 로그인이 필요하다면 초기 설정 화면 아래에서 로그인해 주세요.",
   "deleteAccount": "계정 삭제",
-  "logoutCompleted": "로그아웃되었습니다",
+  "logoutCompleted": "로그아웃했어요",
   "specialDiscountPriceNow": "특가로 프리미엄 플랜을 만나보세요!",
   "inquiryTypeLabel": "문의 항목",
   "bugReport": "버그 신고",

@@ -431,7 +431,7 @@
   "logout": "Amaitu saioa",
   "goToInitialSettingAndReloginIfNeededMessage": "Hasierako konfiguraziora itzuliko zara. Saioa hasi behar baduzu, hasierako konfigurazio-pantailaren behealdean egin dezakezu.",
   "deleteAccount": "Kontua ezabatu",
-  "logoutCompleted": "Saioa itxi da",
+  "logoutCompleted": "Saioa amaitu duzu",
   "specialDiscountPriceNow": "Lortu premium plana prezio bereziarekin!",
   "inquiryTypeLabel": "Kontsultaren gaia",
   "bugReport": "Akatsen txostena",

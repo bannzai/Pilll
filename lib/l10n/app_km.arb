@@ -431,7 +431,7 @@
   "logout": "ចេញពីគណនី",
   "goToInitialSettingAndReloginIfNeededMessage": "អ្នកនឹងត្រឡប់ទៅការកំណត់ដំបូងវិញ។ ប្រសិនបើត្រូវចូលគណនី សូមចូលតាមផ្នែកខាងក្រោមនៃអេក្រង់ការកំណត់ដំបូង។",
   "deleteAccount": "លុបគណនី",
-  "logoutCompleted": "បានចេញពីប្រព័ន្ធ",
+  "logoutCompleted": "អ្នកបានចេញពីគណនីហើយ",
   "specialDiscountPriceNow": "ទទួលបានផែនការ Premium ក្នុងតម្លៃពិសេស！",
   "inquiryTypeLabel": "ប្រភេទសំណួរ",
   "bugReport": "រាយការណ៍បញ្ហា",

@@ -431,7 +431,7 @@
   "logout": "Hisobdan chiqish",
   "goToInitialSettingAndReloginIfNeededMessage": "Siz dastlabki sozlashga qaytasiz. Hisobga kirish kerak boʻlsa, dastlabki sozlash ekranining pastki qismidan kiring.",
   "deleteAccount": "Hisobni oʻchirish",
-  "logoutCompleted": "Tizimdan chiqdingiz",
+  "logoutCompleted": "Siz hisobingizdan chiqdingiz",
   "specialDiscountPriceNow": "Premium rejani maxsus narxda oling!",
   "inquiryTypeLabel": "Murojaat turi",
   "bugReport": "Nosozlik hisoboti",

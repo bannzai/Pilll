@@ -431,7 +431,7 @@
   "logout": "ውጣ",
   "goToInitialSettingAndReloginIfNeededMessage": "ወደ መጀመሪያ ማዋቀሪያ ይመለሳሉ። መግባት ካስፈለገዎት፣ እባክዎ በመጀመሪያ ማዋቀሪያ ገጽ ታች በኩል ይግቡ።",
   "deleteAccount": "መለያ መሰረዝ",
-  "logoutCompleted": "ወጥተዋል",
+  "logoutCompleted": "ከመለያዎ ወጥተዋል",
   "specialDiscountPriceNow": "በልዩ ዋጋ ፕሪሚየም እቅዱን ያግኙ！",
   "inquiryTypeLabel": "የጥያቄ አይነት",
   "bugReport": "ስህተት ሪፖርት",
