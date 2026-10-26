@@ -124,7 +124,7 @@
   "pillSheetSettings": "pilleriliuskan asetukset",
   "unmarkTodayPillAsTakenToPause": "Kun olet merkinnyt tämän päivän pillerin ottamatta jääneeksi",
   "pauseTaking": "Tauko pillereiden otossa",
-  "changePauseStartDate": "Muuta käyttötauon aloituspäivää",
+  "changePauseStartDate": "Vaihda pilleritauon alkamispäivää",
   "pauseTakingPeriodEnded": "Lääkkeen taukojakso on päättynyt",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}. saakka",
   "changePillDaysForSheet": "Muuta käyttöpäivien määrää",

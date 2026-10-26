@@ -124,7 +124,7 @@
   "pillSheetSettings": "Innstillinger for pillebrett",
   "unmarkTodayPillAsTakenToPause": "Når du har merket dagens p-pille som ikke tatt",
   "pauseTaking": "P-pillepause",
-  "changePauseStartDate": "Endre startdato for pillepause",
+  "changePauseStartDate": "Endre startdato for p-pillepause",
   "pauseTakingPeriodEnded": "Pauseperioden er avsluttet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Endre arkens behandlingsperiode",

@@ -124,7 +124,7 @@
   "pillSheetSettings": "Configuració del blíster",
   "unmarkTodayPillAsTakenToPause": "Després de marcar la píndola d’avui com a no presa",
   "pauseTaking": "Pausa de la píndola",
-  "changePauseStartDate": "Canviar data d'inici del descans",
+  "changePauseStartDate": "Canvia la data d'inici de la pausa de la píndola",
   "pauseTakingPeriodEnded": "El període de descans ha finalitzat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Canviar els dies de presa del full",

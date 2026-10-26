@@ -124,7 +124,7 @@
   "pillSheetSettings": "Подешавања за блистер",
   "unmarkTodayPillAsTakenToPause": "Након што данашњу пилулу означите као неузету",
   "pauseTaking": "Пауза у узимању пилуле",
-  "changePauseStartDate": "Promena datuma početka pauze uzimanja",
+  "changePauseStartDate": "Промените датум почетка паузе у узимању пилула",
   "pauseTakingPeriodEnded": "Pauza u uzimanju je završena",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Promena broja dana uzimanja",

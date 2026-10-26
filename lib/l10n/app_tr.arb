@@ -124,7 +124,7 @@
   "pillSheetSettings": "Blister ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü hapı alınmadı olarak işaretledikten sonra",
   "pauseTaking": "Hap kullanımına ara verin",
-  "changePauseStartDate": "Kullanım Molası Başlangıç Tarihini Değiştir",
+  "changePauseStartDate": "Hap kullanımına ara verme başlangıç tarihini değiştirin",
   "pauseTakingPeriodEnded": "Kullanıma ara verme dönemi sona erdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Blister paketi kullanım süresini değiştir",

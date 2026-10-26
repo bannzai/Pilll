@@ -124,7 +124,7 @@
   "pillSheetSettings": "Instellingen voor de pillenstrip",
   "unmarkTodayPillAsTakenToPause": "Nadat je de pil van vandaag als niet ingenomen hebt gemarkeerd",
   "pauseTaking": "Pillenpauze",
-  "changePauseStartDate": "Startdatum pauze wijzigen",
+  "changePauseStartDate": "Begindatum van de pillenpauze wijzigen",
   "pauseTakingPeriodEnded": "De pilvrije periode is beëindigd",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Strip innameduur wijzigen",

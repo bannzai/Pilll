@@ -124,7 +124,7 @@
   "pillSheetSettings": "चक्की पत्ता सेटिङ",
   "unmarkTodayPillAsTakenToPause": "आजको चक्की नलिएको भनेर चिन्ह लगाइसकेपछि",
   "pauseTaking": "चक्की खान केही समय रोक्ने",
-  "changePauseStartDate": "सेवन बिदा सुरुआत मिति परिवर्तन",
+  "changePauseStartDate": "चक्की खाने विश्राम सुरु हुने मिति परिवर्तन गर्नुहोस्",
   "pauseTakingPeriodEnded": "औषधि खाने बिदाको समय सकियो",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "शीटको सेवन अवधि परिवर्तन",

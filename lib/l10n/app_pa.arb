@@ -124,7 +124,7 @@
   "pillSheetSettings": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀਆਂ ਸੈਟਿੰਗਾਂ",
   "unmarkTodayPillAsTakenToPause": "ਅੱਜ ਦੀ ਗੋਲੀ ਨਾ ਲਈ ਹੋਈ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰਨ ਤੋਂ ਬਾਅਦ",
   "pauseTaking": "ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ",
-  "changePauseStartDate": "ਦਵਾਈ ਛੁੱਟੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਬਦਲੋ",
+  "changePauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ ਬਦਲੋ",
   "pauseTakingPeriodEnded": "ਦਵਾਈ ਲੈਣ ਦਾ ਬਰੇਕ ਖਤਮ ਹੋ ਗਿਆ ਹੈ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ਸ਼ੀਟ ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸੰਖਿਆ ਬਦਲੋ",

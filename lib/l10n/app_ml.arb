@@ -124,7 +124,7 @@
   "pillSheetSettings": "ഗുളിക സ്ട്രിപ്പ ക്രമീകരണങ്ങൾ",
   "unmarkTodayPillAsTakenToPause": "ഇന്നത്തെ ഗുളിക കഴിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തിയ ശേഷം",
   "pauseTaking": "ഗുളിക കഴിക്കുന്നതിന് ഇടവേള",
-  "changePauseStartDate": "സേവന ഇടവേള ആരംഭ തീയതി മാറ്റൽ",
+  "changePauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി മാറ്റുക",
   "pauseTakingPeriodEnded": "മാത്ര സേവന വിശ്രമ കാലയളവ് പൂർത്തിയായി",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ഷീറ്റ് സേവന ദിവസങ്ങൾ മാറ്റുക",

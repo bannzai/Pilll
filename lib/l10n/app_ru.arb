@@ -124,7 +124,7 @@
   "pillSheetSettings": "Настройки блистера",
   "unmarkTodayPillAsTakenToPause": "После того как отметите сегодняшнюю таблетку как непринятую",
   "pauseTaking": "Перерыв в приёме таблеток",
-  "changePauseStartDate": "Изменить дату начала перерыва",
+  "changePauseStartDate": "Изменить дату начала перерыва в приёме таблеток",
   "pauseTakingPeriodEnded": "Перерыв в приеме закончился",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Изменение количества дней приёма блистера",

@@ -124,7 +124,7 @@
   "pillSheetSettings": "ការកំណត់បន្ទះថ្នាំគ្រាប់",
   "unmarkTodayPillAsTakenToPause": "បន្ទាប់ពីសម្គាល់ថ្នាំគ្រាប់សម្រាប់ថ្ងៃនេះថាមិនទាន់បានលេប",
   "pauseTaking": "ផ្អាកការលេបថ្នាំគ្រាប់",
-  "changePauseStartDate": "ផ្លាស់ប្តូរថ្ងៃចាប់ផ្តើមសម្រាកថ្នាំ",
+  "changePauseStartDate": "ប្តូរកាលបរិច្ឆេទចាប់ផ្តើមផ្អាកលេបថ្នាំគ្រាប់",
   "pauseTakingPeriodEnded": "រយៈពេលឈប់ញ៉ាំថ្នាំបានបញ្ចប់ហើយ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ផ្លាស់ប្តូរចំនួនថ្ងៃទទួលទានសំប៉ែត",

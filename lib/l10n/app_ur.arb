@@ -124,7 +124,7 @@
   "pillSheetSettings": "گولیوں کی پٹی کی ترتیبات",
   "unmarkTodayPillAsTakenToPause": "آج کی گولی کو نہ لی گئی کے طور پر نشان زد کرنے کے بعد",
   "pauseTaking": "گولی لینے میں وقفہ",
-  "changePauseStartDate": "وقفے کی شروعاتی تاریخ تبدیل کریں",
+  "changePauseStartDate": "گولیاں لینے کے وقفے کی تاریخِ آغاز بدلیں",
   "pauseTakingPeriodEnded": "دوا کے وقفے کی مدت ختم ہو گئی ہے",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "شیٹ کے استعمال کے دنوں کو تبدیل کریں",

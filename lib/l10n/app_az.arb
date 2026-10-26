@@ -124,7 +124,7 @@
   "pillSheetSettings": "həb blister ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü həbi qəbul edilməyib kimi qeyd etdikdən sonra",
   "pauseTaking": "Həb qəbuluna fasilə",
-  "changePauseStartDate": "Qəbul fasiləsi başlama tarixini dəyişdir",
+  "changePauseStartDate": "Həb fasiləsinin başlama tarixini dəyişin",
   "pauseTakingPeriodEnded": "Dərman qəbuluna fasilə dövrü bitdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Vərəqin qəbul müddətini dəyişdir",

@@ -124,7 +124,7 @@
   "pillSheetSettings": "የክኒን ሉህ ቅንብሮች",
   "unmarkTodayPillAsTakenToPause": "የዛሬውን ክኒን እንዳልተወሰደ ከመለከትዎ በኋላ",
   "pauseTaking": "የክኒን አወሳሰድ እረፍት",
-  "changePauseStartDate": "እርፍት መጀመሪያ ቀን መቀየር",
+  "changePauseStartDate": "ክኒን መውሰድ የሚቆምበትን መጀመሪያ ቀን ይቀይሩ",
   "pauseTakingPeriodEnded": "የመድሃኒት እረፍት ጊዜ ተጠናቃል",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "የሉሃ አገልግሎት ቀናት መቀየር",

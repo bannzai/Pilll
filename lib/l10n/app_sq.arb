@@ -124,7 +124,7 @@
   "pillSheetSettings": "Cilësimet e blisterit",
   "unmarkTodayPillAsTakenToPause": "Pasi ta shënoni pilulën e sotme si të pamarrë",
   "pauseTaking": "Pauzë në marrjen e pilulës",
-  "changePauseStartDate": "Ndrysho datën e fillimit të pushimit",
+  "changePauseStartDate": "Ndryshoni datën e fillimit të pushimit nga pilulat",
   "pauseTakingPeriodEnded": "Periudha e pushimit nga marrja ka përfunduar",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ndrysho ditët e marrjes së paketës",

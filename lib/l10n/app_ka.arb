@@ -124,7 +124,7 @@
   "pillSheetSettings": "აბების ბლისტერ პარამეტრები",
   "unmarkTodayPillAsTakenToPause": "დღევანდელი აბის მიუღებლად მონიშვნის შემდეგ",
   "pauseTaking": "აბების მიღების დროებითი შეჩერება",
-  "changePauseStartDate": "მიღების შეყოვნების დაწყების თარიღის შეცვლა",
+  "changePauseStartDate": "აბების მიღების შესვენების დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "შესვენების პერიოდი დასრულდა",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "აბის მიღების ვადის შეცვლა",

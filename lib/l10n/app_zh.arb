@@ -124,7 +124,7 @@
   "pillSheetSettings": "药板设置",
   "unmarkTodayPillAsTakenToPause": "将今天的药片标记为未服用后",
   "pauseTaking": "暂停服用药片",
-  "changePauseStartDate": "更改休药开始日期",
+  "changePauseStartDate": "更改停药期开始日期",
   "pauseTakingPeriodEnded": "停药期已结束",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "更改药片包装服用天数",

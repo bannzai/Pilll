@@ -124,7 +124,7 @@
   "pillSheetSettings": "மாத்திரை அட்டை அமைப்புகள்",
   "unmarkTodayPillAsTakenToPause": "இன்றைய மாத்திரையை எடுத்துக்கொள்ளவில்லை எனக் குறித்த பிறகு",
   "pauseTaking": "மாத்திரை உட்கொள்வதில் இடைவெளி",
-  "changePauseStartDate": "மருந்து ஓய்வு தொடக்க தேதி மாற்றம்",
+  "changePauseStartDate": "மாத்திரை உட்கொள்வதற்கான இடைவேளை தொடங்கும் தேதியை மாற்றுங்கள்",
   "pauseTakingPeriodEnded": "மாத்திரை ஓய்வு காலம் முடிந்துவிட்டது",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "தாள் உட்கொள்ளும் நாட்களை மாற்றவும்",

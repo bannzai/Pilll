@@ -124,7 +124,7 @@
   "pillSheetSettings": "Inställningar för p-pillerkarta",
   "unmarkTodayPillAsTakenToPause": "När du har markerat dagens p-piller som inte taget",
   "pauseTaking": "Pillerpaus",
-  "changePauseStartDate": "Ändra startdatum för pillpaus",
+  "changePauseStartDate": "Ändra startdatum för pilleruppehåll",
   "pauseTakingPeriodEnded": "Pillfria perioden är slut",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ändra förpackningens intagsdagar",

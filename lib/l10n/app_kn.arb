@@ -124,7 +124,7 @@
   "pillSheetSettings": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
   "unmarkTodayPillAsTakenToPause": "ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿದ ನಂತರ",
   "pauseTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ",
-  "changePauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನಾಂಕ ಬದಲಾವಣೆ",
+  "changePauseStartDate": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಬದಲಿಸಿ",
   "pauseTakingPeriodEnded": "ಔಷಧ ಸೇವನೆಯ ವಿರಾಮ ಅವಧಿ ಮುಗಿದಿದೆ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ಶೀಟ್ ಸೇವನೆಯ ದಿನಗಳನ್ನು ಬದಲಾಯಿಸಿ",

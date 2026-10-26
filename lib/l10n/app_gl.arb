@@ -124,7 +124,7 @@
   "pillSheetSettings": "Configuración do blíster",
   "unmarkTodayPillAsTakenToPause": "Despois de marcar a pílula de hoxe como non tomada",
   "pauseTaking": "Pausa na toma da pílula",
-  "changePauseStartDate": "Cambiar data de inicio da pausa",
+  "changePauseStartDate": "Cambia a data de inicio da pausa da pílula",
   "pauseTakingPeriodEnded": "Rematou o período de descanso da pílula",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Cambiar os días de toma do blíster",

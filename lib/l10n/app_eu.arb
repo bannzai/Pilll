@@ -124,7 +124,7 @@
   "pillSheetSettings": "pilula-blister ezarpenak",
   "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe dagoela markatu ondoren",
   "pauseTaking": "Pilula hartzeko etenaldia",
-  "changePauseStartDate": "Atseden hasiera data aldatu",
+  "changePauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data aldatu",
   "pauseTakingPeriodEnded": "Pilularen etenaldia amaitu da",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Txartelaren hartzeko egunak aldatu",

@@ -124,7 +124,7 @@
   "pillSheetSettings": "পিলৰ ষ্ট্ৰিপৰ ছেটিংছ",
   "unmarkTodayPillAsTakenToPause": "আজিৰ খাবলগীয়া পিলটো নোখোৱা বুলি চিহ্নিত কৰাৰ পিছত",
   "pauseTaking": "বড়ি খোৱাত বিৰতি",
-  "changePauseStartDate": "সেৱন বিৰতিৰ আৰম্ভ তাৰিখ সালসলনি",
+  "changePauseStartDate": "বিৰতিৰ আৰম্ভণিৰ তাৰিখ সলনি কৰক",
   "pauseTakingPeriodEnded": "ড্রাগ নিয়ে বিরতির সময় শেষ হয়ে গেছে",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "শীটৰ সেৱন দিন সলনি কৰক",

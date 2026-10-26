@@ -124,7 +124,7 @@
   "pillSheetSettings": "pilstrokie-instellings",
   "unmarkTodayPillAsTakenToPause": "Nadat jy vandag se pil as nie geneem nie gemerk het",
   "pauseTaking": "Pillepouse",
-  "changePauseStartDate": "Verander pouse begindatum",
+  "changePauseStartDate": "Verander begindatum van pilpouse",
   "pauseTakingPeriodEnded": "Jou pilpause is verby",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Verander pakkie inneemdae",

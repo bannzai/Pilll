@@ -124,7 +124,7 @@
   "pillSheetSettings": "Налады блістара",
   "unmarkTodayPillAsTakenToPause": "Пасля таго як пазначыце сённяшнюю пігулку як непрынятую",
   "pauseTaking": "Перапынак у прыёме пігулак",
-  "changePauseStartDate": "Змена даты пачатку перапынку прыёму",
+  "changePauseStartDate": "Змяніць дату пачатку перапынку ў прыёме пігулак",
   "pauseTakingPeriodEnded": "Перыяд перапынку ў прыёме завершыўся",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Змяніць колькасць дзён прыёму блістэра",

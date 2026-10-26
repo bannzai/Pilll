@@ -124,7 +124,7 @@
   "pillSheetSettings": "पिल शीट सेटिंग्ज",
   "unmarkTodayPillAsTakenToPause": "आजची गोळी घेतलेली नाही असे चिन्हांकित केल्यानंतर",
   "pauseTaking": "गोळी घेण्यात विराम",
-  "changePauseStartDate": "सेवन विश्राम सुरुवातीची तारीख बदला",
+  "changePauseStartDate": "गोळ्या घेण्याच्या विश्रांतीची सुरुवातीची तारीख बदला",
   "pauseTakingPeriodEnded": "सेवनाचा विराम कालावधी संपला आहे",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "शीटचे सेवन दिवस बदला",

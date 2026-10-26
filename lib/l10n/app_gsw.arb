@@ -124,7 +124,7 @@
   "pillSheetSettings": "Iistellige für de Pilleblister",
   "unmarkTodayPillAsTakenToPause": "Wänn du d Pille vo hüt als nöd gno markiert häsch",
   "pauseTaking": "Pillepause",
-  "changePauseStartDate": "Iinahm-Pause Startdatum ändere",
+  "changePauseStartDate": "Startdatum vo de Pillepaus ändere",
   "pauseTakingPeriodEnded": "D Iinham-Pause isch beändet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Pilleblatt Iinahmdauer ändere",

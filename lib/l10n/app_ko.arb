@@ -124,7 +124,7 @@
   "pillSheetSettings": "알약 시트 설정",
   "unmarkTodayPillAsTakenToPause": "오늘 먹을 알약을 미복용으로 표시한 후",
   "pauseTaking": "피임약 복용 잠시 쉬기",
-  "changePauseStartDate": "휴약 시작일 변경",
+  "changePauseStartDate": "복용 휴식 시작일 변경",
   "pauseTakingPeriodEnded": "휴약 기간이 종료되었습니다",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "시트 복용 기간 변경",

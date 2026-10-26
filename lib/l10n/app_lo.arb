@@ -124,7 +124,7 @@
   "pillSheetSettings": "ການຕັ້ງຄ່າແຜງຢາຄຸມ",
   "unmarkTodayPillAsTakenToPause": "ຫຼັງຈາກໝາຍຢາເມັດຂອງມື້ນີ້ວ່າຍັງບໍ່ໄດ້ກິນ",
   "pauseTaking": "ພັກການກິນຢາເມັດ",
-  "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຕົ້ນການພັກກິນຢາ",
+  "changePauseStartDate": "ປ່ຽນວັນເລີ່ມພັກການກິນຢາເມັດ",
   "pauseTakingPeriodEnded": "ໄລຍະພັກຢາສິ້ນສຸດແລ້ວ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ປ່ຽນແປງຈຳນວນມື້ການກິນແຜ່ນຢາ",

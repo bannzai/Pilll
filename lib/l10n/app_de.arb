@@ -124,7 +124,7 @@
   "pillSheetSettings": "Einstellungen für den Pillenblister",
   "unmarkTodayPillAsTakenToPause": "Nachdem du die Pille für heute als nicht eingenommen markiert hast",
   "pauseTaking": "Pillenpause",
-  "changePauseStartDate": "Einnahmepause-Startdatum ändern",
+  "changePauseStartDate": "Beginn der Pillenpause ändern",
   "pauseTakingPeriodEnded": "Die Einnahmepause ist beendet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Blister-Einnahmedauer ändern",

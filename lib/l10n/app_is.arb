@@ -124,7 +124,7 @@
   "pillSheetSettings": "Stillingar fyrir pilluspjald",
   "unmarkTodayPillAsTakenToPause": "Eftir að þú hefur merkt pilluna í dag sem ótekna",
   "pauseTaking": "Hlé á pillutöku",
-  "changePauseStartDate": "Breyta upphafsdegi pilluhléš",
+  "changePauseStartDate": "Breyta upphafsdegi pilluhléss",
   "pauseTakingPeriodEnded": "Pilluhléið er lokið",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Breyta fjölda inntökudaga",

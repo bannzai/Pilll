@@ -124,7 +124,7 @@
   "pillSheetSettings": "таблетка блистер параметрлері",
   "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы қабылданбаған деп белгілегеннен кейін",
   "pauseTaking": "Таблетка қабылдаудағы үзіліс",
-  "changePauseStartDate": "Пилл қабылдау үзілісінің басталу күнін өзгерту",
+  "changePauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін өзгертіңіз",
   "pauseTakingPeriodEnded": "Дәрі қабылдаудан демалыс кезеңі аяқталды",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Таблетка пластинкасының қабылдау күндерін өзгерту",

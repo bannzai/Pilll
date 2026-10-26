@@ -124,7 +124,7 @@
   "pillSheetSettings": "A tablettacsomag beállításai",
   "unmarkTodayPillAsTakenToPause": "Miután a mai tablettát be nem vettként jelölted meg",
   "pauseTaking": "Szünet a tabletta szedésében",
-  "changePauseStartDate": "Szedési szünet kezdő dátum módosítása",
+  "changePauseStartDate": "A tablettaszedési szünet kezdőnapjának módosítása",
   "pauseTakingPeriodEnded": "A tablettaszedési szünet befejeződött",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Csomag szedési napjainak módosítása",

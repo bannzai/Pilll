@@ -124,7 +124,7 @@
   "pillSheetSettings": "հաբերի բլիստեր կարգավորումներ",
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը որպես չընդունված նշելուց հետո",
   "pauseTaking": "Դեղահաբի ընդունման դադար",
-  "changePauseStartDate": "Դադարի սկսման ամսաթիվը փոխել",
+  "changePauseStartDate": "Փոխել հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "pauseTakingPeriodEnded": "Դեղի ընդունման դադարի ժամանակահատվածը ավարտվեց",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Փոփոխել փաթեթի ընդունման օրերի քանակը",

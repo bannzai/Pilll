@@ -124,7 +124,7 @@
   "pillSheetSettings": "Pill pack settings",
   "unmarkTodayPillAsTakenToPause": "After marking today’s pill as not taken",
   "pauseTaking": "Pause taking pills",
-  "changePauseStartDate": "Change Pause Start Date",
+  "changePauseStartDate": "Change pill break start date",
   "pauseTakingPeriodEnded": "Your pill break period has ended",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Change sheet duration",

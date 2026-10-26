@@ -124,7 +124,7 @@
   "pillSheetSettings": "Ustawienia blistra",
   "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej tabletki jako nieprzyjętej",
   "pauseTaking": "Przerwa w przyjmowaniu tabletek",
-  "changePauseStartDate": "Zmień datę rozpoczęcia przerwy",
+  "changePauseStartDate": "Zmień datę rozpoczęcia przerwy w braniu tabletek",
   "pauseTakingPeriodEnded": "Przerwa w przyjmowaniu zakończyła się",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmiana okresu przyjmowania opakowania",

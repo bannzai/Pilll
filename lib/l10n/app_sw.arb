@@ -124,7 +124,7 @@
   "pillSheetSettings": "Mipangilio ya pakiti ya vidonge",
   "unmarkTodayPillAsTakenToPause": "Baada ya kuweka alama kuwa kidonge cha leo hakijamezwa",
   "pauseTaking": "Mapumziko ya kumeza vidonge",
-  "changePauseStartDate": "Badilisha Tarehe ya Kuanza Mapumziko ya Vidonge",
+  "changePauseStartDate": "Badilisha tarehe ya kuanza mapumziko ya kumeza vidonge",
   "pauseTakingPeriodEnded": "Kipindi cha mapumziko ya kunywa dawa kimeisha",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Badilisha siku za kunywa kipande",

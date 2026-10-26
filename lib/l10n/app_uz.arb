@@ -124,7 +124,7 @@
   "pillSheetSettings": "tabletka blister sozlamalari",
   "unmarkTodayPillAsTakenToPause": "Bugungi tabletkani qabul qilinmagan deb belgilaganingizdan soʻng",
   "pauseTaking": "Tabletkalarni ichishda tanaffus",
-  "changePauseStartDate": "Tanaffus boshlash sanasini o'zgartirish",
+  "changePauseStartDate": "Tabletkalarni ichish tanaffusi boshlanadigan sanani oʻzgartiring",
   "pauseTakingPeriodEnded": "Dori qabul qilishda tanaffus davri tugadi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Paket ichish kunlarini o'zgartirish",

@@ -124,7 +124,7 @@
   "pillSheetSettings": "tablešu blister iestatījumi",
   "unmarkTodayPillAsTakenToPause": "Pēc šodienas tabletes atzīmēšanas kā nelietotas",
   "pauseTaking": "Pārtraukums tablešu lietošanā",
-  "changePauseStartDate": "Pārtraukuma sākuma datuma maiņa",
+  "changePauseStartDate": "Mainīt tablešu lietošanas pārtraukuma sākuma datumu",
   "pauseTakingPeriodEnded": "Lietošanas pārtraukuma periods ir beidzies",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Mainīt plāksnītes lietošanas dienu skaitu",

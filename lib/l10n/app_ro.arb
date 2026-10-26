@@ -124,7 +124,7 @@
   "pillSheetSettings": "Setările pentru blister",
   "unmarkTodayPillAsTakenToPause": "După ce marchezi pilula de astăzi ca neluată",
   "pauseTaking": "Pauză în administrarea pilulei",
-  "changePauseStartDate": "Modifică data început pauză",
+  "changePauseStartDate": "Schimbă data de început a pauzei de la pilulă",
   "pauseTakingPeriodEnded": "Perioada de pauză s-a încheiat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Modificarea zilelor de administrare ale blisterului",

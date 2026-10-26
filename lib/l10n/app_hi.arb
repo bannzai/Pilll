@@ -124,7 +124,7 @@
   "pillSheetSettings": "पिल स्ट्रिप की सेटिंग",
   "unmarkTodayPillAsTakenToPause": "आज की गोली को नहीं ली गई के रूप में चिह्नित करने के बाद",
   "pauseTaking": "गोली लेने में विराम",
-  "changePauseStartDate": "सेवन विराम प्रारंभ तिथि बदलें",
+  "changePauseStartDate": "गोली लेने के विराम की शुरुआत की तारीख बदलें",
   "pauseTakingPeriodEnded": "गोली सेवन का विराम अवधि समाप्त हो गई है",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "शीट के सेवन दिन बदलें",
