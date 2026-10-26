@@ -193,7 +193,7 @@
   "previouslyPurchased": "Мурда сатып алдыңыз беле? Сатып алууну бул жерден калыбына келтириңиз",
   "noPreviousPurchaseInfo": "Мурунку сатып алуу тууралуу маалымат табылган жок. Аккаунтуңузду текшерип, кайра аракет кылып көрүңүз.",
   "monthlyPlan": "Айлык план",
-  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/айына",
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",
   "lifetimePlan": "Бир жолу төлөө",
   "lifetimePlanDescription": "Бир жолку сатып алып, дайыма премиум",
   "lifetimePlanSpecialOffer": "Бир жолкулук план\nМөөнөтү чектелген атайын баа",

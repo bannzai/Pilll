@@ -193,7 +193,7 @@
   "previouslyPurchased": "Hefurðu keypt áður? Endurheimtu kaupin hér",
   "noPreviousPurchaseInfo": "Engar upplýsingar um fyrri kaup fundust. Athugaðu reikninginn þinn og reyndu aftur.",
   "monthlyPlan": "Mánaðaráskrift",
-  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuður",
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuð",
   "lifetimePlan": "einnkaup",
   "lifetimePlanDescription": "Premium fyrir alltaf með einu kaupi",
   "lifetimePlanSpecialOffer": "Einskiptis áætlun\nTakmarkaður tími sérstakt verð",

@@ -193,7 +193,7 @@
   "previouslyPurchased": "කලින් මිලදී ගෙන තිබේද? කරුණාකර මිලදී ගැනීම මෙතැනින් ප්‍රතිසාධනය කරන්න",
   "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීමක තොරතුරු හමු නොවීය. කරුණාකර ඔබේ ගිණුම පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "monthlyPlan": "මාසික සැලැස්ම",
-  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/මාසයට",
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/මස",
   "lifetimePlan": "එක්වරම මිලදී ගැනීම",
   "lifetimePlanDescription": "එක් වරක් මිලදී ගැනීමකින් සදාකාලික ප්‍රිමියම්",
   "lifetimePlanSpecialOffer": "ජීවිත කාල සැලැස්ම\nකාල සීමිත විශේෂ මිල",
