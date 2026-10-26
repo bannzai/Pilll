@@ -419,7 +419,7 @@
   "cancelTaking": "Poništite zabilježeno uzimanje pilule",
   "deletedDiaryCannotBeRestored": "Izbrisani zapis u dnevniku nije moguće vratiti",
   "editMenstruation": "Uredite razdoblje menstruacije",
-  "changedPillNumber": "Promjena broja pilule",
+  "changedPillNumber": "promjena broj pilule",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% popusta u odnosu na mjesečni plan",
   "premiumIntroductionDiscountPriceDeadline": "S Premium pretplatom i dalje možete koristiti sve funkcije",
   "countdownForDiscountPriceDeadline": "Kupite u sljedećih {countdown} i ostvarite {offPercent}% popusta",

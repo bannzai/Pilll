@@ -419,7 +419,7 @@
   "cancelTaking": "گولی لینے کا ریکارڈ منسوخ کریں",
   "deletedDiaryCannotBeRestored": "حذف شدہ ڈائری کا اندراج واپس نہیں لایا جا سکتا",
   "editMenstruation": "ماہواری کی تاریخیں تبدیل کریں",
-  "changedPillNumber": "گولی نمبر تبدیلی",
+  "changedPillNumber": "گولی نمبر تبدیل کیا گیا",
   "offPercentForMonthlyPremiumPackage": "عام ماہانہ پلان کے مقابلے میں {offPercent}٪ رعایت",
   "premiumIntroductionDiscountPriceDeadline": "پریمیم رجسٹریشن کے ساتھ تمام فیچرز کا استعمال جاری رکھ سکتے ہیں",
   "countdownForDiscountPriceDeadline": "{countdown} میں خریداری پر {offPercent}% چھوٹ",

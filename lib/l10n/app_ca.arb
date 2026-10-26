@@ -419,7 +419,7 @@
   "cancelTaking": "Desfer el registre de la píndola",
   "deletedDiaryCannotBeRestored": "No es pot recuperar una entrada del diari un cop eliminada",
   "editMenstruation": "Edita els dies de la regla",
-  "changedPillNumber": "Canvi de número de píndola",
+  "changedPillNumber": "canvi del número de píndola",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de descompte respecte al preu mensual",
   "premiumIntroductionDiscountPriceDeadline": "Amb la subscripció premium podeu continuar utilitzant totes les funcions",
   "countdownForDiscountPriceDeadline": "{offPercent}% de descompte amb la compra dins de {countdown}",

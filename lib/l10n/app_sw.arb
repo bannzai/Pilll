@@ -419,7 +419,7 @@
   "cancelTaking": "Tafadhali futa rekodi ya kumeza kidonge",
   "deletedDiaryCannotBeRestored": "Ingizo la shajara lililofutwa haliwezi kurejeshwa",
   "editMenstruation": "Badilisha siku za hedhi",
-  "changedPillNumber": "Mabadiliko ya Namba ya Kidonge",
+  "changedPillNumber": "nambari ya kidonge imebadilishwa",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% punguzo kutoka bei ya kila mwezi ya kawaida",
   "premiumIntroductionDiscountPriceDeadline": "Kusajili Premium kutakuwezesha kuendelea kutumia vipengele vyote",
   "countdownForDiscountPriceDeadline": "Nunua ndani ya {countdown} na upate punguzo la {offPercent}%",

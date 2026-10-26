@@ -419,7 +419,7 @@
   "cancelTaking": "गोळी घेतल्याची नोंद रद्द करा",
   "deletedDiaryCannotBeRestored": "हटवलेली दैनंदिनीतील नोंद पुन्हा मिळवता येणार नाही",
   "editMenstruation": "मासिक पाळीचे दिवस संपादित करा",
-  "changedPillNumber": "पिल्ल क्रमांक बदल",
+  "changedPillNumber": "गोळी क्रमांक बदलला",
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक शुल्काच्या तुलनेत {offPercent}% छूट",
   "premiumIntroductionDiscountPriceDeadline": "प्रीमियम नोंदणीने आपण सर्व वैशिष्ट्ये वापरत राहू शकता",
   "countdownForDiscountPriceDeadline": "{countdown}मध्ये खरेदी करून {offPercent}% सूट मिळवा",

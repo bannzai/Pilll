@@ -419,7 +419,7 @@
   "cancelTaking": "Annuler la prise enregistrée",
   "deletedDiaryCannotBeRestored": "Une entrée de journal supprimée ne peut pas être restaurée",
   "editMenstruation": "Modifier les dates des règles",
-  "changedPillNumber": "Changement de numéro de pilule",
+  "changedPillNumber": "modification du numéro de pilule",
   "offPercentForMonthlyPremiumPackage": "{offPercent} % de réduction par rapport au forfait mensuel",
   "premiumIntroductionDiscountPriceDeadline": "L'inscription Premium vous permet de continuer à utiliser toutes les fonctionnalités",
   "countdownForDiscountPriceDeadline": "Achetez dans {countdown} pour {offPercent}% de réduction",

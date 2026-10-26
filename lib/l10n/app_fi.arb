@@ -419,7 +419,7 @@
   "cancelTaking": "Kumoa pillerin ottomerkintä",
   "deletedDiaryCannotBeRestored": "Poistettua päiväkirjamerkintää ei voi palauttaa",
   "editMenstruation": "Muokkaa kuukautisten ajankohtaa",
-  "changedPillNumber": "Pillerinumeron muutos",
+  "changedPillNumber": "pillerinumero muutettu",
   "offPercentForMonthlyPremiumPackage": "{offPercent}％ OFF tavallisesta kuukausimaksusta",
   "premiumIntroductionDiscountPriceDeadline": "Premium-tilauksella kaikki ominaisuudet pysyvät käytettävissä",
   "countdownForDiscountPriceDeadline": "{offPercent}% alennusta ostamalla {countdown} kuluessa",

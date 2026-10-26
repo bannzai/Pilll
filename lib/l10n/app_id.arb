@@ -419,7 +419,7 @@
   "cancelTaking": "Batalkan catatan minum pil",
   "deletedDiaryCannotBeRestored": "Catatan harian yang dihapus tidak dapat dipulihkan",
   "editMenstruation": "Edit tanggal haid",
-  "changedPillNumber": "Perubahan Nomor Pil",
+  "changedPillNumber": "nomor pil diubah",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF dari paket bulanan",
   "premiumIntroductionDiscountPriceDeadline": "Berlangganan premium untuk terus menggunakan semua fitur",
   "countdownForDiscountPriceDeadline": "Dapatkan diskon {offPercent}% untuk pembelian dalam {countdown}",

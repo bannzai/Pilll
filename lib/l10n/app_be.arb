@@ -419,7 +419,7 @@
   "cancelTaking": "Скасаваць запіс аб прыёме пігулкі",
   "deletedDiaryCannotBeRestored": "Выдалены запіс дзённіка немагчыма аднавіць",
   "editMenstruation": "Змяніць перыяд месячных",
-  "changedPillNumber": "Змена нумара таблетак",
+  "changedPillNumber": "змена нумар пігулкі",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% скідка ў параўнанні са звычайным месячным планам",
   "premiumIntroductionDiscountPriceDeadline": "З прэміум-падпіскай вы можаце па-ранейшаму карыстацца ўсімі функцыямі",
   "countdownForDiscountPriceDeadline": "{offPercent}% скiдка пры покупцы за {countdown}",

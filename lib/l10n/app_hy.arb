@@ -419,7 +419,7 @@
   "cancelTaking": "Չեղարկել հաբի ընդունման գրառումը",
   "deletedDiaryCannotBeRestored": "Ջնջված օրագրային գրառումը հնարավոր չէ վերականգնել",
   "editMenstruation": "Փոփոխել դաշտանի օրերը",
-  "changedPillNumber": "Հապի համարի փոփոխում",
+  "changedPillNumber": "հաբի համար փոփոխվել է",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% զեղչ կանոնավոր ամսական վճարման համեմատ",
   "premiumIntroductionDiscountPriceDeadline": "Պրեմիում բաժանորդագրությամբ կարող եք շարունակել օգտագործել բոլոր գործառույթները",
   "countdownForDiscountPriceDeadline": "{countdown}ի ընթացքում գնելիս {offPercent}％ զեղչ",

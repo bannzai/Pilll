@@ -419,7 +419,7 @@
   "cancelTaking": "Отменить запись о приёме таблетки",
   "deletedDiaryCannotBeRestored": "Удалённую запись дневника нельзя восстановить",
   "editMenstruation": "Изменить даты месячных",
-  "changedPillNumber": "Изменение номера таблетки",
+  "changedPillNumber": "изменение номера таблетки",
   "offPercentForMonthlyPremiumPackage": "На {offPercent}% дешевле месячной подписки",
   "premiumIntroductionDiscountPriceDeadline": "С премиум-подпиской вы сможете продолжить пользоваться всеми функциями",
   "countdownForDiscountPriceDeadline": "Скидка {offPercent}% при покупке в течение {countdown}",

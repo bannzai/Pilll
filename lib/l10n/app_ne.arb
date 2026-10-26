@@ -419,7 +419,7 @@
   "cancelTaking": "चक्की खाएको रेकर्ड रद्द गर्नुहोस्",
   "deletedDiaryCannotBeRestored": "मेटिएको डायरीको टिपोट फेरि प्राप्त गर्न सकिँदैन",
   "editMenstruation": "महिनावारीका दिनहरू सम्पादन गर्नुहोस्",
-  "changedPillNumber": "गोली नम्बर परिवर्तन",
+  "changedPillNumber": "चक्की नम्बर परिवर्तन",
   "offPercentForMonthlyPremiumPackage": "सामान्य मासिक भन्दा {offPercent}% छूट",
   "premiumIntroductionDiscountPriceDeadline": "प्रिमियम दर्ता गरेर तपाईंले सबै सुविधाहरू निरन्तर प्रयोग गर्न सक्नुहुन्छ",
   "countdownForDiscountPriceDeadline": "{countdown} भित्र खरिद गर्दा {offPercent}% छुट",

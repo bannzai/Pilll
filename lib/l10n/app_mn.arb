@@ -419,7 +419,7 @@
   "cancelTaking": "Эм уусан бүртгэлийг цуцлах",
   "deletedDiaryCannotBeRestored": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
   "editMenstruation": "сарын тэмдгийн өдрүүдийг засах",
-  "changedPillNumber": "Эмийн дугаар өөрчлөлт",
+  "changedPillNumber": "эмийн дугаар өөрчлөгдсөн",
   "offPercentForMonthlyPremiumPackage": "Ердийн сарын төлбөрөөс {offPercent}% хөнгөлөлт",
   "premiumIntroductionDiscountPriceDeadline": "Премиум бүртгэл хийснээр бүх функцийг үргэлжлүүлэн ашиглах боломжтой",
   "countdownForDiscountPriceDeadline": "{countdown} дотор худалдан авбал {offPercent}% хөнгөлөлт",

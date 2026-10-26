@@ -419,7 +419,7 @@
   "cancelTaking": "ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കുക",
   "deletedDiaryCannotBeRestored": "ഇല്ലാതാക്കിയ ഡയറി കുറിപ്പ് തിരികെ കൊണ്ടുവരാൻ കഴിയില്ല",
   "editMenstruation": "ആർത്തവ ദിവസങ്ങൾ തിരുത്തുക",
-  "changedPillNumber": "പിൽ നമ്പർ മാറ്റം",
+  "changedPillNumber": "ഗുളിക നമ്പ മാറ്റി",
   "offPercentForMonthlyPremiumPackage": "സാധാരണ മാസിക വിലയുമായി താരതമ്യപ്പെടുത്തുമ്പോൾ {offPercent}% കിഴിവ്",
   "premiumIntroductionDiscountPriceDeadline": "പ്രീമിയം സബ്‌സ്‌ക്രിപ്‌ഷൻ വഴി എല്ലാ ഫീച്ചറുകളും തുടർന്നും ഉപയോഗിക്കാം",
   "countdownForDiscountPriceDeadline": "{countdown} ഇനി വാങ്ങിയാൽ {offPercent}% കിഴിവ്",

@@ -419,7 +419,7 @@
   "cancelTaking": "Tabletta szedésének visszavonása",
   "deletedDiaryCannotBeRestored": "A törölt naplóbejegyzés nem állítható vissza",
   "editMenstruation": "A menstruáció időszakának szerkesztése",
-  "changedPillNumber": "Tablettaszám módosítása",
+  "changedPillNumber": "tablettaszám módosítva",
   "offPercentForMonthlyPremiumPackage": "A normál havi díjhoz képest {offPercent}% kedvezmény",
   "premiumIntroductionDiscountPriceDeadline": "A prémium előfizetéssel továbbra is használhatja az összes funkciót",
   "countdownForDiscountPriceDeadline": "{countdown} alatt {offPercent}% kedvezmény!",

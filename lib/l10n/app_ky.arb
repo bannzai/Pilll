@@ -419,7 +419,7 @@
   "cancelTaking": "Таблетка ичүү жазуусун жокко чыгарыңыз",
   "deletedDiaryCannotBeRestored": "Өчүрүлгөн күндөлүк жазуусун калыбына келтирүү мүмкүн эмес",
   "editMenstruation": "Айыз күндөрүн өзгөртүңүз",
-  "changedPillNumber": "Таблетка номерин өзгөртүү",
+  "changedPillNumber": "таблетканын номери өзгөртүлдү",
   "offPercentForMonthlyPremiumPackage": "Кадимки айлык акы менен салыштырганда {offPercent}% жеңилдик",
   "premiumIntroductionDiscountPriceDeadline": "Премиум катталуу менен бардык функцияларды улантуу менен колдоно аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ичинде сатып алсаңыз {offPercent}% жеңилдик",

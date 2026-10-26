@@ -419,7 +419,7 @@
   "cancelTaking": "Αναίρεση καταγραφής λήψης χαπιού",
   "deletedDiaryCannotBeRestored": "Η διαγραμμένη καταχώριση ημερολογίου δεν μπορεί να ανακτηθεί",
   "editMenstruation": "Επεξεργασία ημερών περιόδου",
-  "changedPillNumber": "Αλλαγή αριθμού χαπιού",
+  "changedPillNumber": "αλλαγή στον αριθμό χαπιού",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% έκπτωση σε σύγκριση με τη μηνιαία συνδρομή",
   "premiumIntroductionDiscountPriceDeadline": "Με την εγγραφή premium μπορείτε να συνεχίσετε να χρησιμοποιείτε όλες τις λειτουργίες",
   "countdownForDiscountPriceDeadline": "{offPercent}% έκπτωση με αγορά εντός {countdown}",

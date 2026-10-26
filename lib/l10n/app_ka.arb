@@ -419,7 +419,7 @@
   "cancelTaking": "აბის მიღების ჩანაწერის გაუქმება",
   "deletedDiaryCannotBeRestored": "წაშლილი დღიურის ჩანაწერის აღდგენა შეუძლებელია",
   "editMenstruation": "მენსტრუაციის პერიოდის რედაქტირება",
-  "changedPillNumber": "ტაბლეტის ნომრის ცვლილება",
+  "changedPillNumber": "აბის ნომერ შეიცვალა",
   "offPercentForMonthlyPremiumPackage": "ყოველთვიურ გეგმასთან შედარებით {offPercent}% ფასდაკლება",
   "premiumIntroductionDiscountPriceDeadline": "პრემიუმ რეგისტრაციით შეგიძლიათ განაგრძოთ ყველა ფუნქციის გამოყენება",
   "countdownForDiscountPriceDeadline": "{countdown}-ის განმავლობაში შესყიდვით მიიღეთ {offPercent}% ფასდაკლება",

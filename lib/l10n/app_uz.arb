@@ -419,7 +419,7 @@
   "cancelTaking": "Tabletka qabul qilish qaydini bekor qiling",
   "deletedDiaryCannotBeRestored": "Oʻchirilgan kundalik yozuvini qayta tiklab boʻlmaydi",
   "editMenstruation": "Hayz kunlarini tahrirlang",
-  "changedPillNumber": "Tabletka raqamini o'zgartirish",
+  "changedPillNumber": "tabletka raqam oʻzgartirildi",
   "offPercentForMonthlyPremiumPackage": "Oddiy oylik rejaga nisbatan {offPercent}% chegirma",
   "premiumIntroductionDiscountPriceDeadline": "Premium obunaga o'tish orqali barcha funksiyalardan foydalanishni davom ettirishingiz mumkin",
   "countdownForDiscountPriceDeadline": "{countdown} vaqt ichida xarid qilsangiz {offPercent}% chegirma",

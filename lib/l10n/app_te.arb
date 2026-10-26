@@ -419,7 +419,7 @@
   "cancelTaking": "మాత్ర తీసుకున్న రికార్డును రద్దు చేయండి",
   "deletedDiaryCannotBeRestored": "తొలగించిన డైరీ నమోదును తిరిగి పొందలేరు",
   "editMenstruation": "నెలసరి రోజులను సవరించండి",
-  "changedPillNumber": "మాత్ర సంఖ్య మార్పు",
+  "changedPillNumber": "మాత్ర సంఖ్య మార్చబడింది",
   "offPercentForMonthlyPremiumPackage": "నెలవారీ ప్లాన్‌తో పోలిస్తే {offPercent}% తగ్గింపు",
   "premiumIntroductionDiscountPriceDeadline": "ప్రీమియం సభ్యత్వంతో అన్ని ఫీచర్లను కొనసాగించి ఉపయోగించవచ్చు",
   "countdownForDiscountPriceDeadline": "{countdown}లో కొనుగోలు చేస్తే {offPercent}% తగ్గింపు",

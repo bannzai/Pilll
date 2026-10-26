@@ -419,7 +419,7 @@
   "cancelTaking": "Поништите запис о узимању пилуле",
   "deletedDiaryCannotBeRestored": "Избрисани запис у дневнику не може да се врати",
   "editMenstruation": "Измените датуме менструације",
-  "changedPillNumber": "Promena broja pilule",
+  "changedPillNumber": "промена број пилуле",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% popusta u poređenju sa redovnom mesečnom pretplatom",
   "premiumIntroductionDiscountPriceDeadline": "Са премиум претплатом можете и даље користити све функције",
   "countdownForDiscountPriceDeadline": "Kupovinom u roku od {countdown} dobijate {offPercent}% popusta",

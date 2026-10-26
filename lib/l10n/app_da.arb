@@ -419,7 +419,7 @@
   "cancelTaking": "Fortryd registreret p-pille",
   "deletedDiaryCannotBeRestored": "Et slettet dagbogsnotat kan ikke gendannes",
   "editMenstruation": "Rediger menstruationsperioden",
-  "changedPillNumber": "Pillenummer ændret",
+  "changedPillNumber": "pillenummer ændret",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabat sammenlignet med månedlig pris",
   "premiumIntroductionDiscountPriceDeadline": "Med Premium-registrering kan du fortsat bruge alle funktioner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabat ved køb inden for {countdown}",

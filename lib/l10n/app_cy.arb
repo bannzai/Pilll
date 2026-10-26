@@ -419,7 +419,7 @@
   "cancelTaking": "Dadwneud cofnod cymryd y bilsen",
   "deletedDiaryCannotBeRestored": "Ni ellir adfer cofnod dyddiadur ar ôl ei ddileu",
   "editMenstruation": "Golygu dyddiadau'r mislif",
-  "changedPillNumber": "Newid Rhif y Bilsen",
+  "changedPillNumber": "newid rhif y bilsen",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% i ffwrdd o gymharu â'r pris misol arferol",
   "premiumIntroductionDiscountPriceDeadline": "Gallwch barhau i ddefnyddio pob nodwedd gyda chofrestriad premiwm",
   "countdownForDiscountPriceDeadline": "{offPercent}% OFF wrth brynu o fewn {countdown}",

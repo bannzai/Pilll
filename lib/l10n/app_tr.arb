@@ -419,7 +419,7 @@
   "cancelTaking": "Hap alım kaydını geri alın",
   "deletedDiaryCannotBeRestored": "Silinen günlük kaydı geri yüklenemez",
   "editMenstruation": "Adet günlerini düzenleyin",
-  "changedPillNumber": "Hap Numarası Değişikliği",
+  "changedPillNumber": "hap numarası değiştirildi",
   "offPercentForMonthlyPremiumPackage": "Normal aylık plana kıyasla %{offPercent} İNDİRİM",
   "premiumIntroductionDiscountPriceDeadline": "Premium üyelik ile tüm özellikleri kullanmaya devam edebilirsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} içinde satın alırsan %{offPercent} indirim",

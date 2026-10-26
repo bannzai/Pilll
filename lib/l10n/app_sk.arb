@@ -419,7 +419,7 @@
   "cancelTaking": "Zrušiť záznam o užití tabletky",
   "deletedDiaryCannotBeRestored": "Vymazaný záznam v denníku nie je možné obnoviť",
   "editMenstruation": "Upraviť obdobie menštruácie",
-  "changedPillNumber": "Zmena číslovania piluliek",
+  "changedPillNumber": "zmena číslo tabletky",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% zľava oproti mesačnému plánu",
   "premiumIntroductionDiscountPriceDeadline": "S premium registráciou budú naďalej k dispozícii všetky funkcie",
   "countdownForDiscountPriceDeadline": "{offPercent}% zľava pri nákupe do {countdown}",

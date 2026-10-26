@@ -419,7 +419,7 @@
   "cancelTaking": "Həb qəbulunu ləğv edin",
   "deletedDiaryCannotBeRestored": "Sildiyiniz gündəlik qeydini bərpa etmək mümkün deyil",
   "editMenstruation": "Aybaşı dövrünü redaktə edin",
-  "changedPillNumber": "Həb nömrəsi dəyişikliyi",
+  "changedPillNumber": "həb nömrə dəyişikliyi",
   "offPercentForMonthlyPremiumPackage": "Adi aylıq planla müqayisədə {offPercent}% endirim",
   "premiumIntroductionDiscountPriceDeadline": "Premium abunəlik ilə bütün funksiyalardan istifadə etməyə davam edə bilərsiniz",
   "countdownForDiscountPriceDeadline": "{countdown} ərzində alışda {offPercent}% OFF",

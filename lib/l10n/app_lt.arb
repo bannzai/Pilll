@@ -419,7 +419,7 @@
   "cancelTaking": "Atšaukti tabletės vartojimo įrašą",
   "deletedDiaryCannotBeRestored": "Ištrinto dienoraščio įrašo atkurti nepavyks",
   "editMenstruation": "Redaguoti mėnesinių datas",
-  "changedPillNumber": "Piliulės numerio pakeitimas",
+  "changedPillNumber": "pakeistas tabletės numer",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% nuolaida nuo mėnesinio mokesčio",
   "premiumIntroductionDiscountPriceDeadline": "Su Premium prenumerata galėsite toliau naudoti visas funkcijas",
   "countdownForDiscountPriceDeadline": "{offPercent}% nuolaida įsigyjant per {countdown}",

@@ -419,7 +419,7 @@
   "cancelTaking": "Таблетканы қабылдау жазбасын болдырмаңыз",
   "deletedDiaryCannotBeRestored": "Жойылған күнделік жазбасын қалпына келтіру мүмкін емес",
   "editMenstruation": "Етеккір күндерін өзгертіңіз",
-  "changedPillNumber": "Дәрі нөмірін өзгерту",
+  "changedPillNumber": "таблетка нөмір өзгертілді",
   "offPercentForMonthlyPremiumPackage": "Әдеттегі айлық жоспармен салыстырғанда {offPercent}% жеңілдік",
   "premiumIntroductionDiscountPriceDeadline": "Премиум тіркелімі арқылы барлық мүмкіндіктерді әрі қарай пайдалана аласыз",
   "countdownForDiscountPriceDeadline": "{countdown} ішінде сатып алса {offPercent}% жеңілдік",

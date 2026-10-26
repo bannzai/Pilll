@@ -419,7 +419,7 @@
   "cancelTaking": "Pilularen hartzea desegin",
   "deletedDiaryCannotBeRestored": "Ezabatutako egunkariko sarrera ezin da berreskuratu",
   "editMenstruation": "Editatu hilekoaren datak",
-  "changedPillNumber": "Pilula zenbakia aldatu",
+  "changedPillNumber": "pilula-zenbaki aldatu da",
   "offPercentForMonthlyPremiumPackage": "Hilabeteko prezioarekin alderatuta %{offPercent} deskontua",
   "premiumIntroductionDiscountPriceDeadline": "Premium harpidetzan eginbide guztiak erabiltzen jarrai dezakezu",
   "countdownForDiscountPriceDeadline": "{countdown} barruan erosita % {offPercent} deskontua",

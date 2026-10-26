@@ -419,7 +419,7 @@
   "cancelTaking": "Tühista pilli võtmise kirje",
   "deletedDiaryCannotBeRestored": "Kustutatud päevikukannet ei saa taastada",
   "editMenstruation": "Muuda päevade kuupäevi",
-  "changedPillNumber": "Pilli numbri muutmine",
+  "changedPillNumber": "pillinumb muudetud",
   "offPercentForMonthlyPremiumPackage": "Kuumaksuga võrreldes {offPercent}% soodsam",
   "premiumIntroductionDiscountPriceDeadline": "Premium registreerimisega saate jätkuvalt kasutada kõiki funktsioone",
   "countdownForDiscountPriceDeadline": "{countdown} jooksul ostmisel {offPercent}% allahindlust",

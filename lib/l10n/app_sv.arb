@@ -419,7 +419,7 @@
   "cancelTaking": "Ångra registrerat pillerintag",
   "deletedDiaryCannotBeRestored": "Ett raderat dagboksinlägg kan inte återställas",
   "editMenstruation": "Ändra mensdagar",
-  "changedPillNumber": "P-pillernummer ändrad",
+  "changedPillNumber": "tablettnummer ändrat",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt jämfört med månadspris",
   "premiumIntroductionDiscountPriceDeadline": "Genom att registrera dig för premium kan du fortsätta att använda alla funktioner",
   "countdownForDiscountPriceDeadline": "{offPercent}% rabatt vid köp inom {countdown}",

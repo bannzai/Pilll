@@ -419,7 +419,7 @@
   "cancelTaking": "Deshacer registro de la píldora",
   "deletedDiaryCannotBeRestored": "Una entrada del diario eliminada no se puede recuperar",
   "editMenstruation": "Editar los días de la regla",
-  "changedPillNumber": "Cambio de número de píldora",
+  "changedPillNumber": "cambio del número de píldora",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% de descuento comparado con el plan mensual regular",
   "premiumIntroductionDiscountPriceDeadline": "Con la suscripción premium puedes seguir usando todas las funciones",
   "countdownForDiscountPriceDeadline": "Compra dentro de {countdown} y obtén {offPercent}% de descuento",

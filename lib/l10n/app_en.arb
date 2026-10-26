@@ -419,7 +419,7 @@
   "cancelTaking": "Undo pill taken",
   "deletedDiaryCannotBeRestored": "Deleted diary entries can’t be restored",
   "editMenstruation": "Edit period dates",
-  "changedPillNumber": "Pill Number Change",
+  "changedPillNumber": "Pill number changed",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF compared to monthly plan",
   "premiumIntroductionDiscountPriceDeadline": "Premium registration allows you to continue using all features",
   "countdownForDiscountPriceDeadline": "Purchase within {countdown} for {offPercent}% OFF",

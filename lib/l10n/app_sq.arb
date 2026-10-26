@@ -419,7 +419,7 @@
   "cancelTaking": "Anuloni regjistrimin e marrjes së pilulës",
   "deletedDiaryCannotBeRestored": "Shënimi i fshirë në ditar nuk mund të rikthehet",
   "editMenstruation": "Ndryshoni datat e menstruacionit",
-  "changedPillNumber": "Ndryshimi i numrit të pilulës",
+  "changedPillNumber": "ndryshim i numri i pilulës",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% zbritje nga plani mujor i rregullt",
   "premiumIntroductionDiscountPriceDeadline": "Me regjistrimin premium mund të vazhdoni të përdorni të gjitha funksionet",
   "countdownForDiscountPriceDeadline": "{offPercent}% zbritje për blerjet brenda {countdown}",

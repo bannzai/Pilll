@@ -419,7 +419,7 @@
   "cancelTaking": "Hủy ghi nhận đã uống thuốc",
   "deletedDiaryCannotBeRestored": "Không thể khôi phục mục nhật ký đã xóa",
   "editMenstruation": "Chỉnh sửa ngày kinh nguyệt",
-  "changedPillNumber": "Thay đổi số thuốc",
+  "changedPillNumber": "đã đổi số thứ tự viên thuốc",
   "offPercentForMonthlyPremiumPackage": "Giảm {offPercent}% so với gói theo tháng thường",
   "premiumIntroductionDiscountPriceDeadline": "Đăng ký Premium để tiếp tục sử dụng tất cả các tính năng",
   "countdownForDiscountPriceDeadline": "Giảm {offPercent}% khi mua trong {countdown}",

@@ -419,7 +419,7 @@
   "cancelTaking": "Atcelt tabletes lietošanas ierakstu",
   "deletedDiaryCannotBeRestored": "Dzēstu dienasgrāmatas ierakstu nevar atjaunot",
   "editMenstruation": "Rediģēt mēnešreižu datumus",
-  "changedPillNumber": "Tablešu numura maiņa",
+  "changedPillNumber": "mainīts tabletes numur",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% ATLAIDE salīdzinājumā ar mēneša plānu",
   "premiumIntroductionDiscountPriceDeadline": "Ar premium reģistrāciju varēsiet turpināt izmantot visas funkcijas",
   "countdownForDiscountPriceDeadline": "{offPercent}% atlaide pie pirkuma {countdown} laikā",

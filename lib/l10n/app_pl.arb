@@ -419,7 +419,7 @@
   "cancelTaking": "Cofnij zapis przyjęcia tabletki",
   "deletedDiaryCannotBeRestored": "Usuniętego wpisu w dzienniku nie można przywrócić",
   "editMenstruation": "Edytuj dni okresu",
-  "changedPillNumber": "Zmiana numeru pigułki",
+  "changedPillNumber": "zmiana numer",
   "offPercentForMonthlyPremiumPackage": "O {offPercent}% taniej niż miesięczny plan",
   "premiumIntroductionDiscountPriceDeadline": "Subskrypcja premium umożliwia dalsze korzystanie ze wszystkich funkcji",
   "countdownForDiscountPriceDeadline": "{offPercent}% zniżki przy zakupie w ciągu {countdown}",

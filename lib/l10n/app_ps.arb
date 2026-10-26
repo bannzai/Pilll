@@ -419,7 +419,7 @@
   "cancelTaking": "د ګولۍ د اخیستو ثبت لغوه کړئ",
   "deletedDiaryCannotBeRestored": "د ورځني یادښت له ړنګولو وروسته یې بېرته ترلاسه کول امکان نه لري",
   "editMenstruation": "د حیض ورځې سمې کړئ",
-  "changedPillNumber": "د ګولۍ شمېره بدلون",
+  "changedPillNumber": "د ګولۍ شمېر بدلول",
   "offPercentForMonthlyPremiumPackage": "د عادي میاشتنۍ پیسو په پرتله {offPercent}٪ تخفیف",
   "premiumIntroductionDiscountPriceDeadline": "د پریمیم ثبت سره ټولې دندې کارولی شي",
   "countdownForDiscountPriceDeadline": "د {countdown} دننه پیرودل {offPercent}％ تخفیف",

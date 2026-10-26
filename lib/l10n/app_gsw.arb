@@ -419,7 +419,7 @@
   "cancelTaking": "Iitreiti Pille-Iinahm rückgängig mache",
   "deletedDiaryCannotBeRestored": "En glöschti Tagebuechufzeichnig chasch nümme zruggbringe",
   "editMenstruation": "Periodezyt aapasse",
-  "changedPillNumber": "Pillennummere gänderet",
+  "changedPillNumber": "Pillenummer gänderet",
   "offPercentForMonthlyPremiumPackage": "{offPercent}% günstiger als s normale Monatsabo",
   "premiumIntroductionDiscountPriceDeadline": "Mit de Premium-Registrierig chönd wiiterhin alli Funktione gnutzt werde.",
   "countdownForDiscountPriceDeadline": "Bis {countdown}: {offPercent}% Rabatt",
