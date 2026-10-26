@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "មិនអាចបញ្ចប់ការទិញបាននៅពេលនេះទេ។ សូមសាកល្បងម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ការទិញមិនបានសម្រេចទេ។ សូមព្យាយាមម្តងទៀតបន្តិចទៀត។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "មិនអាចបញ្ចប់ការទិញដោយប្រើគណនីរបស់អ្នកបានទេ។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "{accountName} របស់អ្នកមិនអាចចូលរួមក្នុងផែនការនេះបានទេ។ សូមពិនិត្យព័ត៌មានការទូទាត់របស់អ្នក រួចព្យាយាមម្តងទៀត។",
+  "purchaseErrorInsufficientPermissionsError": "មិនអាចជាវគម្រោងដោយប្រើគណនី {accountName} របស់អ្នកបានទេ។ សូមពិនិត្យព័ត៌មានទូទាត់ រួចព្យាយាមម្ដងទៀត",
   "purchaseErrorPaymentPendingError": "ការទូទាត់ត្រូវបានផ្អាក។ សូមពិនិត្យមើល {storeName} នៅក្នុងគណនី {accountName} របស់អ្នក",
   "purchaseErrorInvalidSubscriberAttributesError": "ការទិញបានបរាជ័យ។ សូមរងចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការពិគ្រោះយោបល់។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "មិនអាចទទួលបានព័ត៌មានអ្នកប្រើប្រាស់បានទេ។ សូមរង់ចាំបន្តិច រួចព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានៅតែមាន សូមទាក់ទងមកយើងតាម ការកំណត់ > សំណួរ។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Ezin da erosketa osatu une honetan. Saiatu berriro geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Kontaktua ataletik. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Erosketa ezin izan da burutu. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ezin izan da erosketa zure kontuarekin burutu. Saiatu berriro pixka bat geroago. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Zure {accountName} kontuarekin ezin da planean sartu. Mesedez, ordainketa informazioa egiaztatu eta saiatu berriro.",
+  "purchaseErrorInsufficientPermissionsError": "Ezin duzu planean izena eman {accountName} kontuarekin. Egiaztatu ordainketa-datuak eta saiatu berriro",
   "purchaseErrorPaymentPendingError": "Ordainketa erdian gelditu da. {accountName} kontuan saioa hasita duzula {storeName} egiaztatu ezazu",
   "purchaseErrorInvalidSubscriberAttributesError": "Erosketak huts egin du. Itxaron pixka bat eta saiatu berriro. Konpondu ezin bada, joan Ezarpenak > Kontsultatu atalera eta jarri harremanetan gurekin. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Erabiltzailearen informazioa lortzeak huts egin du. Pixka bat itxaron eta berriro saiatu. Konpondu ezin bada, Ezarpenak > Kontsultak bidez jar zaitez gurekin harremanetan. Xehetasunak: {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "در حال حاضر امکان تکمیل خرید نیست. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "خرید انجام نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "خرید با حساب شما انجام نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "امکان اشتراک در طرح با {accountName} شما وجود ندارد. لطفاً اطلاعات پرداخت خود را بررسی کرده و مجدداً تلاش کنید.",
+  "purchaseErrorInsufficientPermissionsError": "با حساب {accountName} خود نمی‌توانید در این طرح مشترک شوید. لطفاً اطلاعات پرداخت را بررسی کنید و دوباره تلاش کنید",
   "purchaseErrorPaymentPendingError": "پرداخت ناتمام باقی مانده است. لطفاً {storeName} را با حساب {accountName} که وارد شده‌اید بررسی کنید",
   "purchaseErrorInvalidSubscriberAttributesError": "خرید ناموفق بود. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با پشتیبانی با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "دریافت اطلاعات کاربر ناموفق بود. لطفاً پس از مدتی دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",

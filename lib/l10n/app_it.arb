@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Non è possibile completare l’acquisto in questo momento. Riprova tra poco. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Non è stato possibile completare l’acquisto. Riprova tra poco. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Non è stato possibile completare l'acquisto con il tuo account. Riprova tra un po'. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Non è possibile iscriversi al piano con il tuo {accountName}. Verifica le informazioni di pagamento e riprova.",
+  "purchaseErrorInsufficientPermissionsError": "Non puoi abbonarti al piano con il tuo account {accountName}. Controlla i dati di pagamento e riprova",
   "purchaseErrorPaymentPendingError": "Il pagamento è stato interrotto. Controlla {storeName} con l'account {accountName} attualmente collegato",
   "purchaseErrorInvalidSubscriberAttributesError": "L'acquisto è fallito. Attendi un momento e riprova. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Impossibile recuperare le informazioni utente. Riprova tra qualche minuto. Se il problema persiste, contattaci tramite Impostazioni > Supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",

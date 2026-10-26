@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Сейчас не удаётся завершить покупку. Пожалуйста, попробуйте ещё раз позже. Если проблема не исчезнет, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Не удалось завершить покупку. Пожалуйста, попробуйте ещё раз немного позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Не удалось завершить покупку с вашей учётной записью. Пожалуйста, попробуйте ещё раз позже. Если проблема сохранится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Невозможно оформить подписку на план с вашим {accountName}. Проверьте платёжную информацию и попробуйте снова.",
+  "purchaseErrorInsufficientPermissionsError": "Вы не можете оформить подписку на план с помощью аккаунта {accountName}. Проверьте платёжные данные и попробуйте ещё раз",
   "purchaseErrorPaymentPendingError": "Платеж был прерван. Пожалуйста, проверьте {storeName} под учетной записью {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "Не удалось совершить покупку. Попробуйте еще раз через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Не удалось получить пользовательские данные. Пожалуйста, попробуйте снова через некоторое время. Если проблема не решается, обратитесь к нам через Настройки > Обратная связь. Подробности: {exceptionMessage}:{exceptionDetails}",

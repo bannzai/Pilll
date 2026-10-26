@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "මේ මොහොතේ මිලදී ගැනීම සම්පූර්ණ කළ නොහැක. කරුණාකර ටික වේලාවකින් නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > සම්බන්ධ වන්න හරහා අප අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "මිලදී ගැනීම සම්පූර්ණ කළ නොහැකි විය. කරුණාකර මඳ වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ඔබේ ගිණුමෙන් මිලදී ගැනීම සම්පූර්ණ කළ නොහැකි විය. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "ඔබගේ {accountName} සමඟ සැලැස්මට සම්බන්ධ වීමට නොහැකිය. කරුණාකර ඔබගේ ගෙවීම් තොරතුරු පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
+  "purchaseErrorInsufficientPermissionsError": "ඔබගේ {accountName} ගිණුමෙන් මෙම සැලැස්මට දායක විය නොහැක. කරුණාකර ගෙවීම් තොරතුරු පරීක්ෂා කර නැවත උත්සාහ කරන්න",
   "purchaseErrorPaymentPendingError": "ගෙවීම අවසන් නොවී නතර වී ඇත. ලොගින් වී ඇති {accountName} සමඟ {storeName} තුළ පරීක්ෂා කරන්න",
   "purchaseErrorInvalidSubscriberAttributesError": "මිලදී ගැනීම අසාර්ථක විය. කරුණාකර ටික වේලාවක් ගත වූ පසු නැවත උත්සාහ කරන්න. එය විසඳී නොගියහොත් සැකසීම් > විමසීම් හරහා අපව සම්බන්ධ කරන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "පරිශීලක තොරතුරු ලබා ගැනීමට අසමත් විය. කරුණාකර වේලාවක් යනතුරු බලා නැවත උත්සාහ කරන්න. ගැටලුව විසඳී නොගියහොත් සැකසුම් > අපගෙන් විමසීම හරහා අපගෙන් අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "De Chauf gaht im Momänt nöd dure. Probier's bitte spöter nomal. Wänn s Problem bliibt, chasch üs under Iistellige > Kontakt schriibe. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "De Chauf hät nöd klappt. Probier’s bitte spöter nomal. Wänn s Problem bliibt, chasch üs über Iistellige > Kontakt schriibe. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "De Chauf hät mit dim Konto nöd klappt. Probier's bitte spöter nomal. Wänn s Problem bliibt, meld di bi eus über Iistellige > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Mit Ihrem {accountName} isch kei Plan-Aameldig möglich. Bitte prüefe Sie Ihri Zaligsinformatione und versuche Sie es nomol.",
+  "purchaseErrorInsufficientPermissionsError": "Mit dim {accountName}-Konto chasch de Plan nöd abonniere. Lueg bitte dini Zahligsaagabe aa und probier’s nomal",
   "purchaseErrorPaymentPendingError": "D Zahlig isch mittendrin stäggebliibe. Bitte lueg mit dim aagemeldete {accountName} i {storeName} naa.",
   "purchaseErrorInvalidSubscriberAttributesError": "Dr Chauf isch fählgschlage. Probier's bitte spöter nomol. Falls sich ds Problem nöd löst, chönd Ihr under Istellige > Afrog öis kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "D'Benutzerinformatione chönd nöd abgruefe werde. Bitte warted e chli und versuecht's denn nomol. Falls sich das Problem nöd löst, chönd Ihr üs über Iistellige > Kontakt kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",

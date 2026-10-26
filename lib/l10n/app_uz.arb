@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Hozir xaridni yakunlab bo‘lmaydi. Iltimos, birozdan keyin qayta urinib ko‘ring. Muammo davom etsa, Sozlamalar > Bogʻlanish orqali biz bilan bogʻlaning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Xaridni yakunlab bo‘lmadi. Iltimos, birozdan keyin yana urinib ko‘ring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Hisobingiz orqali xaridni yakunlab boʻlmadi. Iltimos, birozdan keyin yana urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Sizning {accountName} hisobingizda rejaga obuna bo'lish mumkin emas. To'lov ma'lumotlaringizni tekshirib, qayta urinib ko'ring.",
+  "purchaseErrorInsufficientPermissionsError": "{accountName} hisobingiz bilan rejaga obuna boʻla olmaysiz. Iltimos, toʻlov maʼlumotlarini tekshirib, qayta urinib koʻring",
   "purchaseErrorPaymentPendingError": "To'lov jarayoni uzildi. {accountName} hisobi bilan {storeName}da tekshirib ko'ring",
   "purchaseErrorInvalidSubscriberAttributesError": "Xarid amalga oshmadi. Biroz vaqtdan keyin qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Foydalanuvchi ma'lumotlarini olishda xatolik yuz berdi. Biroz kutib, qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",

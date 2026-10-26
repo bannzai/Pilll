@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Pašlaik pirkumu nevar pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma turpinās, sazinieties ar mums sadaļā Iestatījumi > Sazināties. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pirkumu neizdevās pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma turpinās, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Detalizēta informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Pirkumu ar jūsu kontu neizdevās pabeigt. Lūdzu, pēc brīža mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Ar jūsu {accountName} kontu nevar pievienoties plānam. Lūdzu, pārbaudiet maksājumu informāciju un mēģiniet vēlreiz.",
+  "purchaseErrorInsufficientPermissionsError": "Ar savu {accountName} kontu nevarat abonēt plānu. Lūdzu, pārbaudiet maksājuma informāciju un mēģiniet vēlreiz",
   "purchaseErrorPaymentPendingError": "Maksājums ir pārtraukts. Lūdzu, pārbaudiet {storeName} ar pieteikušos kontu {accountName}",
   "purchaseErrorInvalidSubscriberAttributesError": "Pirkums neizdevās. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma nepāriet, lūdzu, sazinieties ar mums sadaļā Iestatījumi > Kontakti. Detaļas: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Neizdevās iegūt lietotāja informāciju. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz. Ja problēma turpinās, lūdzu, sazinieties ar mums caur Iestatījumi > Kontakti. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",

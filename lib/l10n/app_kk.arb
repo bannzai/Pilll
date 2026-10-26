@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Қазір сатып алуды аяқтау мүмкін емес. Сәлден кейін қайта көріңіз. Мәселе шешілмесе, Баптаулар > Бізбен байланысу арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алу аяқталмады. Біраз уақыттан кейін қайтадан көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу арқылы бізге жазыңыз. Толығырақ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Сіздің есептік жазбаңызбен сатып алуды аяқтау мүмкін болмады. Сәлден кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу бөлімі арқылы хабарласыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Сіздің {accountName} арқылы жоспарға жазылу мүмкін емес. Төлем ақпаратын тексеріп, қайталап көріңіз",
+  "purchaseErrorInsufficientPermissionsError": "{accountName} есептік жазбаңызбен жоспарға жазыла алмайсыз. Төлем деректерін тексеріп, қайтадан байқап көріңіз",
   "purchaseErrorPaymentPendingError": "Төлем аяқталмай қалды. Кірген {accountName} арқылы {storeName} дүкенін тексеріңіз",
   "purchaseErrorInvalidSubscriberAttributesError": "Сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайталап көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Пайдаланушы ақпаратын алу сәтсіз аяқталды. Біраз уақыттан кейін қайта көріңіз. Егер мәселе шешілмесе, Баптаулар > Сұрау жіберу арқылы хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",

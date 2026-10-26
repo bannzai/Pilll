@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Hazırda alış-verişi tamamlamaq mümkün deyil. Zəhmət olmasa, bir az sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Əlaqə bölməsindən bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Satınalma baş tutmadı. Zəhmət olmasa, bir müddət sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Hesabınızla alış tamamlanmadı. Zəhmət olmasa, bir az sonra yenidən cəhd edin. Problem davam edərsə, Parametrlər > Bizimlə əlaqə bölməsindən bizə yazın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Sizin {accountName} hesabınızla plana qoşulmaq mümkün deyil. Ödəniş məlumatlarınızı yoxlayın və yenidən cəhd edin",
+  "purchaseErrorInsufficientPermissionsError": "{accountName} hesabınızla plana abunə ola bilmirsiniz. Zəhmət olmasa, ödəniş məlumatlarınızı yoxlayıb yenidən cəhd edin",
   "purchaseErrorPaymentPendingError": "Ödəniş prosesi yarımçıq qalıb. {accountName} hesabınızla {storeName} mağazasını yoxlayın",
   "purchaseErrorInvalidSubscriberAttributesError": "Satın alma uğursuz oldu. Bir müddət sonra yenidən cəhd edin. Əgər problem həll olunmursa, Tənzimləmələr > Sorğu vasitəsilə bizə müraciət edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "İstifadəçi məlumatlarını əldə etmək uğursuz oldu. Bir az vaxt keçdikdən sonra yenidən cəhd edin. Əgər problem həll olunmazsa, Tənzimləmələr > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "አሁን ግዢውን ማጠናቀቅ አይቻልም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > እገዛ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ግዢው አልተሳካም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "በእርስዎ መለያ ግዢውን ማጠናቀቅ አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ ከቅንብሮች > አግኙን ያግኙን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "{accountName} በተባለው መለያዎ በዚህ እቅድ ላይ መቀላቀል አይችሉም። የክፍያ መረጃዎን ያረጋግጡ እና እንደገና ይሞክሩ።",
+  "purchaseErrorInsufficientPermissionsError": "በ{accountName} መለያዎ ለዕቅዱ መመዝገብ አይችሉም። እባክዎ የክፍያ መረጃዎን ይፈትሹና እንደገና ይሞክሩ",
   "purchaseErrorPaymentPendingError": "ክፍያው በመሀል ተቋርጧል። በመለያ {accountName} ውስጥ {storeName}ን ያረጋግጡ።",
   "purchaseErrorInvalidSubscriberAttributesError": "ግዢ አልተሳካም። ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "የተጠቃሚ መረጃ ማግኘት አልተሳካም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄዎች በኩል ያግኙን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",

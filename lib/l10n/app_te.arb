@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "ప్రస్తుతం కొనుగోలును పూర్తి చేయడం సాధ్యం కావడం లేదు. దయచేసి కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "కొనుగోలు పూర్తి కాలేదు. దయచేసి కొద్దిసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > మమ్మల్ని సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "మీ ఖాతాతో కొనుగోలును పూర్తి చేయలేకపోయాము. దయచేసి కాసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > మమ్మల్ని సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "మీ {accountName}తో ప్లాన్‌కు చేరలేరు. దయచేసి మీ చెల్లింపు వివరాలను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",
+  "purchaseErrorInsufficientPermissionsError": "మీ {accountName} ఖాతాతో ఈ ప్లాన్‌కు సభ్యత్వం తీసుకోవడం సాధ్యం కావడం లేదు. దయచేసి చెల్లింపు వివరాలను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",
   "purchaseErrorPaymentPendingError": "చెల్లింపు మధ్యలో ఆగిపోయింది. లాగిన్ చేసిన {accountName}లో {storeName}ని దయచేసి తనిఖీ చేయండి",
   "purchaseErrorInvalidSubscriberAttributesError": "కొనుగోలు విఫలమైంది. కొంత సమయం తర్వాత మళ్ళీ ప్రయత్నించండి. పరిష్కరించబడకపోతే సెట్టింగ్‌లు > సంప్రదింపు నుండి సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "వినియోగదారు సమాచారాన్ని పొందడంలో విఫలమైంది. కొంత సమయం వేచి ఉండి మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కరించకుంటే సెట్టింగులు > సంప్రదింపుల ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",

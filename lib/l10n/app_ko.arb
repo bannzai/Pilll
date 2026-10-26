@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "지금은 구매를 완료할 수 없어요. 잠시 후 다시 시도해 주세요. 문제가 계속되면 설정 > 문의하기에서 연락해 주세요. 자세한 내용: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "구매를 완료하지 못했어요. 잠시 후 다시 시도해 주세요. 문제가 계속되면 설정 > 문의하기에서 연락해 주세요. 상세 정보: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "현재 계정으로 구매를 완료하지 못했어요. 잠시 후 다시 시도해 주세요. 문제가 계속되면 설정 > 문의하기에서 연락해 주세요. 상세 정보: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "사용 중인 {accountName}로는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
+  "purchaseErrorInsufficientPermissionsError": "{accountName} 계정으로는 요금제에 가입할 수 없어요. 결제 정보를 확인한 뒤 다시 시도해 주세요",
   "purchaseErrorPaymentPendingError": "결제가 중단되었습니다. 로그인된 {accountName}에서 {storeName}를 확인해 주세요",
   "purchaseErrorInvalidSubscriberAttributesError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않는 경우 설정 > 문의하기를 통해 문의해 주세요. 세부사항: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "사용자 정보를 가져오는데 실패했습니다. 시간을 두고 다시 시도해주세요. 해결되지 않는 경우 설정 > 문의를 통해 문의해주세요. 세부사항: {exceptionMessage}:{exceptionDetails}",

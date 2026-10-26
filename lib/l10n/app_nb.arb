@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Kjøpet kan ikke fullføres akkurat nå. Prøv igjen om litt. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Kjøpet kunne ikke fullføres. Prøv igjen om litt. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kjøpet kunne ikke fullføres med kontoen din. Prøv igjen om litt. Hvis problemet vedvarer, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Med din {accountName} kan du ikke abonnere på planen. Vennligst sjekk betalingsinformasjonen din og prøv igjen.",
+  "purchaseErrorInsufficientPermissionsError": "Du kan ikke abonnere på planen med {accountName}-kontoen din. Sjekk betalingsopplysningene dine og prøv igjen",
   "purchaseErrorPaymentPendingError": "Betalingen ble avbrutt underveis. Vennligst sjekk {storeName} med den påloggede {accountName} kontoen",
   "purchaseErrorInvalidSubscriberAttributesError": "Kjøpet mislyktes. Prøv igjen senere. Hvis problemet vedvarer, kontakt oss via Innstillinger > Support. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Kunne ikke hente brukerinformasjon. Vent litt og prøv igjen. Hvis problemet vedvarer, ta kontakt med oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "目前无法完成购买，请稍后再试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "购买未能完成，请稍后重试。如果问题仍未解决，请通过“设置 > 联系我们”与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "暂时无法使用你的账号完成购买，请稍后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "您的 {accountName} 无法加入此计划。请检查您的付款信息后重试。",
+  "purchaseErrorInsufficientPermissionsError": "你的 {accountName} 账号无法订阅此方案。请检查付款信息后重试",
   "purchaseErrorPaymentPendingError": "支付过程已中断，请在已登录的{accountName}中确认{storeName}的支付状态",
   "purchaseErrorInvalidSubscriberAttributesError": "购买失败。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 联系我们。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "获取用户信息失败。请稍后重试。如果问题仍然存在，请通过 设置 > 联系我们 与我们联系。详细信息：{exceptionMessage}:{exceptionDetails}",

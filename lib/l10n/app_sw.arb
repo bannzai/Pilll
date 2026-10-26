@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Ununuzi hauwezi kukamilika kwa sasa. Tafadhali jaribu tena baada ya muda. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ununuzi haujakamilika. Tafadhali jaribu tena baada ya muda mfupi. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ununuzi haukuweza kukamilika kwa akaunti yako. Tafadhali jaribu tena baadaye. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Huwezi kujiunga na mpango kwa kutumia {accountName} yako. Tafadhali kagua taarifa za malipo yako na ujaribu tena.",
+  "purchaseErrorInsufficientPermissionsError": "Huwezi kujisajili kwa mpango huu ukitumia akaunti yako ya {accountName}. Tafadhali angalia taarifa zako za malipo kisha ujaribu tena",
   "purchaseErrorPaymentPendingError": "Malipo yamekwama katikati. Tafadhali angalia {storeName} kwa {accountName} ulioanzisha mfumo.",
   "purchaseErrorInvalidSubscriberAttributesError": "Ununuzi umeshindwa. Tafadhali jaribu tena baada ya muda. Ikiwa tatizo halitatatuliwa, wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Imeshindwa kupata taarifa za mtumiaji. Tafadhali subiri kidogo kisha jaribu tena. Ikiwa tatizo halitatatuliwa, tafadhali wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",

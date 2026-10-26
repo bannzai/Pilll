@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "L’achat ne peut pas être effectué pour le moment. Veuillez réessayer un peu plus tard. Si le problème persiste, contactez-nous depuis Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "L’achat n’a pas pu être effectué. Veuillez réessayer dans quelques instants. Si le problème persiste, contactez-nous via Réglages > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "L'achat n'a pas pu être effectué avec votre compte. Veuillez réessayer un peu plus tard. Si le problème persiste, contactez-nous depuis Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Vous ne pouvez pas souscrire au forfait avec votre {accountName}. Veuillez vérifier vos informations de paiement et réessayer.",
+  "purchaseErrorInsufficientPermissionsError": "Vous ne pouvez pas souscrire à l’abonnement avec votre compte {accountName}. Vérifiez vos informations de paiement, puis réessayez",
   "purchaseErrorPaymentPendingError": "Le traitement du paiement a été interrompu. Veuillez vérifier {storeName} avec votre compte courant {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "L'achat a échoué. Veuillez réessayer plus tard. Si le problème persiste, veuillez nous contacter via Paramètres > Contact. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Échec de la récupération des informations utilisateur. Veuillez réessayer après un certain temps. Si le problème persiste, veuillez nous contacter via Paramètres > Contactez-nous. Détails : {exceptionMessage}:{exceptionDetails}",

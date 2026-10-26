@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Kupovinu trenutno nije moguće završiti. Molimo, pokušajte ponovo kasnije. Ako se problem nastavi, možete nas kontaktirati putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Kupovina nije uspjela. Molimo pokušajte ponovo malo kasnije. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Kupovina putem Vašeg računa nije uspjela. Molimo pokušajte ponovo malo kasnije. Ako se problem nastavi, javite nam se putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "Sa vašim {accountName} ne možete se pretplatiti na plan. Molimo provjerite vaše informacije o plaćanju i pokušajte ponovo.",
+  "purchaseErrorInsufficientPermissionsError": "Ne možete se pretplatiti na plan putem svog {accountName} računa. Molimo provjerite podatke za plaćanje i pokušajte ponovo",
   "purchaseErrorPaymentPendingError": "Plaćanje je prekinuto. Molimo provjerite {storeName} sa računom {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "Kupovina nije uspjela. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, molimo kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Neuspjelo dohvatanje korisničkih informacija. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",

@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "Зараз не ўдаецца завяршыць пакупку. Калі ласка, паспрабуйце яшчэ раз пазней. Калі праблема не знікне, звяжыцеся з намі праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Не ўдалося завяршыць куплю. Калі ласка, паспрабуйце яшчэ раз крыху пазней. Калі праблема не знікне, звяжыцеся з намі праз Налады > Звязацца з намі. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Не ўдалося завяршыць пакупку з вашым уліковым запісам. Калі ласка, паспрабуйце яшчэ раз пазней. Калі праблема не знікне, звяжыцеся з намі праз Налады > Звязацца з намі. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "З вашым {accountName} немагчыма падпісацца на план. Калі ласка, праверце інфармацыю аб аплаце і паспрабуйце яшчэ раз.",
+  "purchaseErrorInsufficientPermissionsError": "Вы не можаце аформіць падпіску на план праз свой уліковы запіс {accountName}. Калі ласка, праверце плацежныя даныя і паспрабуйце яшчэ раз",
   "purchaseErrorPaymentPendingError": "Плацёж быў спынены. Калі ласка, праверце ў {storeName} пад акаўнтам {accountName}",
   "purchaseErrorInvalidSubscriberAttributesError": "Пакупка не ўдалася. Паспрабуйце яшчэ раз праз некаторы час. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звярнуцца. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Не ўдалося атрымаць інфармацыю карыстальніка. Пачакайце некаторы час і паспрабуйце яшчэ раз. Калі праблема не вырашаецца, звярнуцеся да нас праз Налады > Звярнуцца. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",

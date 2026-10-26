@@ -305,7 +305,7 @@
   "purchaseErrorUnknownBackendError": "હાલમાં ખરીદી પૂર્ણ થઈ શકતી નથી. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ખરીદી પૂર્ણ થઈ શકી નથી. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > અમારો સંપર્ક કરો દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "તમારા ખાતાથી ખરીદી પૂર્ણ થઈ શકી નથી. કૃપા કરીને થોડી વાર પછી ફરી પ્રયાસ કરો. સમસ્યા ચાલુ રહે તો સેટિંગ્સ > અમારો સંપર્ક કરો દ્વારા અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorInsufficientPermissionsError": "તમારા {accountName} માં પ્લાનમાં જોડાઈ શકાતું નથી. ચુકવણીની માહિતી ચકાસીને ફરીથી પ્રયાસ કરો",
+  "purchaseErrorInsufficientPermissionsError": "તમારા {accountName} એકાઉન્ટથી પ્લાનમાં જોડાઈ શકાતું નથી. કૃપા કરીને તમારી ચુકવણીની માહિતી તપાસીને ફરી પ્રયાસ કરો",
   "purchaseErrorPaymentPendingError": "ચુકવણી પ્રક્રિયા અધૂરી રહી ગઈ છે. કૃપા કરીને લૉગ ઇન કરેલા {accountName} સાથે {storeName}ની તપાસ કરો",
   "purchaseErrorInvalidSubscriberAttributesError": "ખરીદી નિષ્ફળ ગઈ. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો. જો તે હલ ન થાય તો સેટિંગ્સ > પૂછપરછ દ્વારા સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "વપરાશકર્તાની માહિતી મેળવવામાં નિષ્ફળ. કૃપા કરીને થોડો સમય રાહ જોયા પછી ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > સંપર્ક થી સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
