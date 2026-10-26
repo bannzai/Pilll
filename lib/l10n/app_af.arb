@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "As jy ophou om die pil te neem, skuif die pilnommer nie aan nie",
   "pauseTakingFromNumber": "Wil jy van pil {number} af ’n pouse neem?",
   "lastTakenPlusOnePillNumber": "Pil nommer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "inneem",
+  "taking": "Pilgebruik",
   "estimatedEndPillNumber": "Laaste pil van die vorige blisterpak: {estimatedEndPillNumber}",
   "addPillSheetButton": "Voeg pilpakkie toe",
   "taken": "Geneem",

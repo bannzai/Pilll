@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "หากพักการทานยาชั่วคราว หมายเลขเม็ดยาจะไม่เลื่อนไปข้างหน้าค่ะ",
   "pauseTakingFromNumber": "ต้องการพักการทานยาชั่วคราวตั้งแต่เม็ดที่ {number} ไหมคะ",
   "lastTakenPlusOnePillNumber": "ยาเม็ดที่ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "การรับประทาน",
+  "taking": "การทานยา",
   "estimatedEndPillNumber": "แผงก่อน เม็ดสุดท้าย: เม็ดที่ {estimatedEndPillNumber}",
   "addPillSheetButton": "เพิ่มแผงยาคุม",
   "taken": "กินแล้ว",

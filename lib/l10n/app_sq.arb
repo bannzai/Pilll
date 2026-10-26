@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Nëse bëni një pauzë nga marrja e pilulave, numri i pilulës nuk do të ecë përpara",
   "pauseTakingFromNumber": "Dëshironi të bëni një pushim nga marrja e pilulave duke filluar nga pilula numër {number}?",
   "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "marrje",
+  "taking": "Marrja e pilulës",
   "estimatedEndPillNumber": "Fundi i fletës së mëparshme: numri {estimatedEndPillNumber}",
   "addPillSheetButton": "Shto fletë pilule",
   "taken": "Marrë",

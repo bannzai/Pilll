@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Se fai una pausa nell'assunzione, il numero della pillola non avanzerà",
   "pauseTakingFromNumber": "Vuoi fare una pausa nell’assunzione della pillola a partire dalla numero {number}?",
   "lastTakenPlusOnePillNumber": "Pillola n. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "assunzione",
+  "taking": "Assunzione della pillola",
   "estimatedEndPillNumber": "Ultima pillola del blister precedente: n. {estimatedEndPillNumber}",
   "addPillSheetButton": "Aggiungi blister",
   "taken": "Preso",

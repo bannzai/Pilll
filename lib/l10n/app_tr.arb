@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Hap almaya ara verirseniz hap numarası ilerlemez",
   "pauseTakingFromNumber": "{number} numaralı haptan itibaren hap almaya ara vermek ister misiniz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. hap",
-  "taking": "alma",
+  "taking": "Hap kullanımı",
   "estimatedEndPillNumber": "Önceki paketin sonu: {estimatedEndPillNumber}. hap",
   "addPillSheetButton": "Hap kartonu ekle",
   "taken": "Alındı",

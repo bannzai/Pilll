@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "ဆေးပြားသောက်တာကို ခဏနားထားရင် ဆေးပြားနံပါတ်က ရှေ့မတိုးပါဘူး",
   "pauseTakingFromNumber": "နံပါတ် {number} ဆေးလုံးမှစပြီး ဆေးသောက်ခြင်းကို ခဏရပ်နားလိုပါသလား?",
   "lastTakenPlusOnePillNumber": "ဆေးလုံးအမှတ် {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "သုံး",
+  "taking": "ဆေးလုံးသောက်ခြင်း",
   "estimatedEndPillNumber": "ယခင်အေးစ်၏နောက်ဆုံး - {estimatedEndPillNumber}နံပါတ်",
   "addPillSheetButton": "ယဉ်ဆေးအိုး ပေါင်းထည့်ရန်",
   "taken": "သောက်ပြီး",

@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Wänn du e Pause bi de Iinahm machsch, gaht d Pillenummer nöd wiiter",
   "pauseTakingFromNumber": "Wotsch ab Pille {number} e Pause mit em Iinäh mache?",
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "Inahm",
+  "taking": "Pille iinäh",
   "estimatedEndPillNumber": "Letscht Pille vom vorherige Blatt: {estimatedEndPillNumber}",
   "addPillSheetButton": "Pilleblatt hinzuefüege",
   "taken": "gnoh",

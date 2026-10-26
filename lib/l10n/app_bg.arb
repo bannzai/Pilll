@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Ако направите пауза в приема, номер на хапче няма да се промени",
   "pauseTakingFromNumber": "Искате ли да направите пауза в приема на хапчетата от номер {number}?",
   "lastTakenPlusOnePillNumber": "Хапче № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "приемане",
+  "taking": "Прием на хапчето",
   "estimatedEndPillNumber": "Последно от предишната опаковка: {estimatedEndPillNumber}",
   "addPillSheetButton": "Добави листче",
   "taken": "Взето",

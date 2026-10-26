@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Həb qəbuluna fasilə versəniz, həb nömrəsi irəliləməyəcək",
   "pauseTakingFromNumber": "{number} nömrəli həbdən başlayaraq qəbula fasilə vermək istəyirsiniz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} nömrəli həb",
-  "taking": "qəbul",
+  "taking": "Həb qəbulu",
   "estimatedEndPillNumber": "Əvvəlki lövhənin sonu: {estimatedEndPillNumber} nömrə",
   "addPillSheetButton": "Həb paketini əlavə et",
   "taken": "İçdi",

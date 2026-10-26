@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "בהפסקה זמנית של נטילת הגלולות, מספר גלולה לא יתקדם",
   "pauseTakingFromNumber": "להפסיק זמנית את נטילת הגלולות החל מגלולה מספר {number}?",
   "lastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "נטילה",
+  "taking": "נטילת גלולה",
   "estimatedEndPillNumber": "הגלולה האחרונה בגיליון הקודם: {estimatedEndPillNumber}",
   "addPillSheetButton": "הוסף גלילת גלולות",
   "taken": "שתתה",

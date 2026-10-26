@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Om du gör ett uppehåll med pillren går tablettnumret inte vidare",
   "pauseTakingFromNumber": "Vill du göra ett uppehåll med pillren från piller nummer {number}?",
   "lastTakenPlusOnePillNumber": "P-piller nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "intag",
+  "taking": "Ta p-piller",
   "estimatedEndPillNumber": "Senaste från föregående förpackning: {estimatedEndPillNumber}",
   "addPillSheetButton": "Lägg till pillerkarta",
   "taken": "Tagen",

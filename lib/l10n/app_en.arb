@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "If you pause taking your pill, the pill number won't advance",
   "pauseTakingFromNumber": "Pause taking pills starting with pill {number}?",
   "lastTakenPlusOnePillNumber": "Pill {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "taking",
+  "taking": "Taking a pill",
   "estimatedEndPillNumber": "Last pill from previous sheet: #{estimatedEndPillNumber}",
   "addPillSheetButton": "Add Pill Sheet",
   "taken": "Taken",

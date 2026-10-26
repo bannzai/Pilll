@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "თუ აბების მიღებას დროებით შეაჩერებთ, აბის ნომერი წინ არ წავა",
   "pauseTakingFromNumber": "გსურთ, დროებით შეწყვიტოთ აბების მიღება {number} ნომრიდან?",
   "lastTakenPlusOnePillNumber": "აბი № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "მიღება",
+  "taking": "აბის მიღება",
   "estimatedEndPillNumber": "წინა პაკეტის ბოლო: {estimatedEndPillNumber} ნომერი",
   "addPillSheetButton": "აბების ფურცლის დამატება",
   "taken": "დალია",

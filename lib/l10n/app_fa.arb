@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "اگر مصرف قرص را موقتاً متوقف کنید، شماره قرص جلو نمی‌رود",
   "pauseTakingFromNumber": "می‌خواهید مصرف قرص‌ها را از قرص شمارهٔ {number} به‌طور موقت متوقف کنید؟",
   "lastTakenPlusOnePillNumber": "قرص شماره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "مصرف",
+  "taking": "مصرف قرص",
   "estimatedEndPillNumber": "آخر ورق قبلی: شماره {estimatedEndPillNumber}",
   "addPillSheetButton": "افزودن بسته قرص",
   "taken": "خورده",

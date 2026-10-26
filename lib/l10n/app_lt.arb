@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Jei padarysite tablečių vartojimo pertrauką, tabletės numeris nepasikeis",
   "pauseTakingFromNumber": "Ar norite laikinai nustoti vartoti tabletes nuo {number}-osios tabletės?",
   "lastTakenPlusOnePillNumber": "Tabletė Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "vartojimas",
+  "taking": "Tabletės vartojimas",
   "estimatedEndPillNumber": "Ankstesnės plokštelės pabaiga: {estimatedEndPillNumber}",
   "addPillSheetButton": "Pridėti tablečių pakuotę",
   "taken": "Priimta",

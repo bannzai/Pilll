@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Si vous faites une pause dans la prise, le numéro de pilule n'avancera pas",
   "pauseTakingFromNumber": "Souhaitez-vous faire une pause dans la prise des pilules à partir de la pilule nº {number} ?",
   "lastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "prise",
+  "taking": "Prise de la pilule",
   "estimatedEndPillNumber": "Dernière pilule de la feuille précédente : #{estimatedEndPillNumber}",
   "addPillSheetButton": "Ajouter une feuille de pilules",
   "taken": "Pris",

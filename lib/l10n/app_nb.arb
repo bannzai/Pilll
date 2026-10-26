@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Hvis du tar en pause fra pillene, går pillenummeret ikke videre",
   "pauseTakingFromNumber": "Vil du ta en pause fra p-pillene fra pille nummer {number}?",
   "lastTakenPlusOnePillNumber": "P-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "inntak",
+  "taking": "Ta p-pille",
   "estimatedEndPillNumber": "Forrige pakke sluttet på: {estimatedEndPillNumber}",
   "addPillSheetButton": "Legg til pillepakke",
   "taken": "Tatt",

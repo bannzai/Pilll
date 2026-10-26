@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Si fas una pausa en la presa de la píndola, el número de píndola no avançarà",
   "pauseTakingFromNumber": "Vols fer una pausa en la presa de la píndola a partir del número {number}?",
   "lastTakenPlusOnePillNumber": "Píndola número {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "presa",
+  "taking": "Presa de la píndola",
   "estimatedEndPillNumber": "Final de la caixa anterior: {estimatedEndPillNumber}",
   "addPillSheetButton": "Afegir plaqueta de píndoles",
   "taken": "Presa",

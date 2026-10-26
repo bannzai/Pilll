@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "පෙති ගැනීම තාවකාලිකව නතර කළහොත්, පෙති අංකය ඉදිරියට නොයයි",
   "pauseTakingFromNumber": "ඔබට {number} අංකයේ පෙත්තේ සිට පෙති ගැනීම තාවකාලිකව නවත්වන්න අවශ්‍යද?",
   "lastTakenPlusOnePillNumber": "පෙති අංක {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "සේවනය",
+  "taking": "පෙත්ත ගැනීම",
   "estimatedEndPillNumber": "පෙර ෂීට් එකේ අවසාන: {estimatedEndPillNumber} අංකය",
   "addPillSheetButton": "පෙති ශීට් එකතු කරන්න",
   "taken": "ගත්තා",

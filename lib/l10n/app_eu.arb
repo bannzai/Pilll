@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Pilula hartzeari atseden hartzen badiozu, pilula-zenbakia ez da aurreratuko",
   "pauseTakingFromNumber": "{number}. pilulatik aurrera hartzeari utzi nahi diozu aldi baterako?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. pilula",
-  "taking": "hartu",
+  "taking": "Pilula hartzea",
   "estimatedEndPillNumber": "Aurreko orriaren azkena: {estimatedEndPillNumber}",
   "addPillSheetButton": "Pilula-orria gehitu",
   "taken": "Edana",

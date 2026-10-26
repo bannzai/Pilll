@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Ha szünetet tartasz a tabletta szedésében, a tablettaszám nem lép tovább",
   "pauseTakingFromNumber": "Szeretnél szünetet tartani a tabletták szedésében a(z) {number}. tablettától?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. tabletta",
-  "taking": "bevétel",
+  "taking": "Tabletta szedése",
   "estimatedEndPillNumber": "Előző lap vége: {estimatedEndPillNumber}. szám",
   "addPillSheetButton": "Tablettacsomag hozzáadása",
   "taken": "Szedett",

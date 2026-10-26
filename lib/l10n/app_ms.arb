@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Jika anda berhenti mengambil pil buat sementara waktu, nombor pil tidak akan bertambah",
   "pauseTakingFromNumber": "Ingin berhenti mengambil pil buat sementara waktu bermula dengan pil nombor {number}?",
   "lastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "pengambilan",
+  "taking": "Pengambilan pil",
   "estimatedEndPillNumber": "Terakhir dari paket sebelumnya: pil nombor {estimatedEndPillNumber}",
   "addPillSheetButton": "Tambah Pakej Pil",
   "taken": "Sudah ambil",

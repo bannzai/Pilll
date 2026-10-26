@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Dacă faci o pauză de la administrare, numărul pilulei nu va avansa",
   "pauseTakingFromNumber": "Vrei să faci o pauză de la administrarea pilulelor începând cu pilula numărul {number}?",
   "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "administrare",
+  "taking": "Administrarea pilulei",
   "estimatedEndPillNumber": "Ultima din placheta precedentă: {estimatedEndPillNumber}",
   "addPillSheetButton": "Adăugă pachet de pilule",
   "taken": "Luat",

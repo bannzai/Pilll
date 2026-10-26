@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Si haces una pausa en la toma, el número de píldora no avanzará",
   "pauseTakingFromNumber": "¿Quieres hacer una pausa en la toma de píldoras a partir de la número {number}?",
   "lastTakenPlusOnePillNumber": "Píldora n.º {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "toma",
+  "taking": "Toma de la píldora",
   "estimatedEndPillNumber": "Último del blíster anterior: {estimatedEndPillNumber}",
   "addPillSheetButton": "Agregar nuevo blister",
   "taken": "Tomada",

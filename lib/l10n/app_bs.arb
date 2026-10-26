@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Ako napravite pauzu u uzimanju pilula, broj pilule neće se pomjeriti",
   "pauseTakingFromNumber": "Želite li napraviti pauzu u uzimanju pilula počevši od broja {number}?",
   "lastTakenPlusOnePillNumber": "Pilula broj {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "uzimanje",
+  "taking": "Uzimanje pilule",
   "estimatedEndPillNumber": "Poslednja iz prethodne blistere: {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodaj pakovanje pilula",
   "taken": "Uzeto",

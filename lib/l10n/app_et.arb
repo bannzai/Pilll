@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Kui teed pillide võtmisel pausi, siis pillinumber edasi ei liigu",
   "pauseTakingFromNumber": "Kas soovid alates pillist nr {number} pillide võtmises pausi teha?",
   "lastTakenPlusOnePillNumber": "Pill nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "võtmine",
+  "taking": "Pilli võtmine",
   "estimatedEndPillNumber": "Eelmise pakendi lõpp: {estimatedEndPillNumber}",
   "addPillSheetButton": "Lisa pillipakend",
   "taken": "võetud",

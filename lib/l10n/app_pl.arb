@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Jeśli zrobisz przerwę w przyjmowaniu tabletek, numer tabletki nie przesunie się dalej",
   "pauseTakingFromNumber": "Czy chcesz zrobić przerwę w przyjmowaniu tabletek od tabletki numer {number}?",
   "lastTakenPlusOnePillNumber": "Tabletka nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "zażywanie",
+  "taking": "Przyjmowanie tabletki",
   "estimatedEndPillNumber": "Ostatnia z poprzedniej blisterki: {estimatedEndPillNumber}",
   "addPillSheetButton": "Dodaj blister",
   "taken": "Przyjęta",

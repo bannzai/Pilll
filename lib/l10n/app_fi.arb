@@ -116,7 +116,7 @@
   "pauseTakingDoesNotAdvancePillNumber": "Jos pidät tauon pillereiden ottamisesta, pillerinumero ei siirry eteenpäin",
   "pauseTakingFromNumber": "Haluatko pitää tauon pillereiden ottamisesta pilleristä {number} alkaen?",
   "lastTakenPlusOnePillNumber": "Pilleri nro {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
-  "taking": "ottaminen",
+  "taking": "Pillerin ottaminen",
   "estimatedEndPillNumber": "Edellisen paketin loppu: {estimatedEndPillNumber}. pilleri",
   "addPillSheetButton": "Lisää pilleripakkaus",
   "taken": "Otettu",
