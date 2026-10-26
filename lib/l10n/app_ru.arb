@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Не удалось загрузить данные для истории приёма. {error}",
   "seeFAQ": "Посмотреть частые вопросы",
   "reloadScreen": "Обновить экран",
-  "contactIfNotResolved": "Если не помогло, обратитесь сюда",
+  "contactIfNotResolved": "Если проблема сохраняется, обратитесь в поддержку",
   "shareFeedback": "Поделитесь своими впечатлениями о Pilll",
   "confirm": "Подтвердить",
   "surveyForServiceImprovement": "При желании, пожалуйста, поучаствуйте в опросе для улучшения сервиса",

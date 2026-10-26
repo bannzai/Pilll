@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Qəbul tarixçəsi məlumatlarını əldə etmək mümkün olmadı. {error}",
   "seeFAQ": "Tez-tez verilən suallara baxın",
   "reloadScreen": "Ekranı yenidən yükləyin",
-  "contactIfNotResolved": "Həll olmadıqda buraya müraciət edin",
+  "contactIfNotResolved": "Problem həll olunmayıbsa, dəstək xidməti ilə əlaqə saxlayın",
   "shareFeedback": "Pilll tətbiqi haqqında fikirlərinizi bizə bildirin",
   "confirm": "Təsdiq",
   "surveyForServiceImprovement": "Xahiş edirik, xidmətin yaxşılaşdırılması üçün anketdə də iştirak edin",

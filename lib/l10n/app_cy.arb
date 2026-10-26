@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nid oedd modd llwytho gwybodaeth hanes cymryd y bilsen. {error}",
   "seeFAQ": "Gweld cwestiynau cyffredin",
   "reloadScreen": "Ail-lwythwch y sgrin",
-  "contactIfNotResolved": "Os nad yw'n datrys, cliciwch yma",
+  "contactIfNotResolved": "Os yw’r broblem yn parhau, cysylltwch â’r tîm cymorth",
   "shareFeedback": "Hoffem glywed eich barn am Pilll",
   "confirm": "Cadarnhau",
   "surveyForServiceImprovement": "A fyddech cystal â chymryd rhan yn ein harolwg i wella'r gwasanaeth, os gwelwch yn dda?",

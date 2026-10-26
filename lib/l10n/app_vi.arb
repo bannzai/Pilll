@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Không thể tải thông tin lịch sử uống thuốc. {error}",
   "seeFAQ": "Xem câu hỏi thường gặp",
   "reloadScreen": "Tải lại màn hình",
-  "contactIfNotResolved": "Liên hệ hỗ trợ nếu chưa giải quyết được",
+  "contactIfNotResolved": "Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ bộ phận hỗ trợ",
   "shareFeedback": "Vui lòng chia sẻ cảm nghĩ của bạn về Pilll",
   "confirm": "Xác nhận",
   "surveyForServiceImprovement": "Nếu thuận tiện, xin hãy tham gia khảo sát để giúp chúng tôi cải thiện dịch vụ",

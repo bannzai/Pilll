@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "ไม่สามารถโหลดข้อมูลประวัติการทานยาได้ค่ะ {error}",
   "seeFAQ": "ดูคำถามที่พบบ่อย",
   "reloadScreen": "โหลดหน้าจออีกครั้ง",
-  "contactIfNotResolved": "หากยังแก้ไขไม่ได้ให้ติดต่อที่นี่",
+  "contactIfNotResolved": "หากปัญหายังไม่คลี่คลาย โปรดติดต่อทีมช่วยเหลือค่ะ",
   "shareFeedback": "โปรดแบ่งปันความคิดเห็นของคุณเกี่ยวกับ Pilll",
   "confirm": "ตกลง",
   "surveyForServiceImprovement": "หากสะดวก กรุณาร่วมมือตอบแบบสำรวจเพื่อปรับปรุงบริการให้ดีขึ้น",

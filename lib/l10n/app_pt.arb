@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
   "seeFAQ": "Ver perguntas frequentes",
   "reloadScreen": "Recarregar a tela",
-  "contactIfNotResolved": "Se não conseguir resolver, clique aqui",
+  "contactIfNotResolved": "Se o problema continuar, entre em contato com o suporte",
   "shareFeedback": "Conte-nos sua opinião sobre o Pilll",
   "confirm": "Confirmar",
   "surveyForServiceImprovement": "Se desejar, colabore também conosco com a pesquisa para melhoria do serviço",

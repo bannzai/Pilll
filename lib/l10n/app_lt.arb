@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nepavyko įkelti vartojimo istorijos duomenų. {error}",
   "seeFAQ": "Peržiūrėkite dažniausiai užduodamus klausimus",
   "reloadScreen": "Įkelkite ekraną iš naujo",
-  "contactIfNotResolved": "Jei nepavyko išspręsti, kreipkitės čia",
+  "contactIfNotResolved": "Jei problema išlieka, susisiekite su pagalbos komanda",
   "shareFeedback": "Pasidalinkite savo nuomonėmis apie Pilll",
   "confirm": "Patvirtinti",
   "surveyForServiceImprovement": "Jei galite, būtume dėkingi, jei prisidėtumėte prie mūsų apklausos, skirtos paslaugos gerinimui",

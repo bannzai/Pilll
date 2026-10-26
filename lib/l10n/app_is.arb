@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Ekki tókst að sækja upplýsingar í inntökuyfirlitinu. {error}",
   "seeFAQ": "Skoða algengar spurningar",
   "reloadScreen": "Hlaða skjáinn aftur",
-  "contactIfNotResolved": "Ef þetta leysist ekki, smelltu hér",
+  "contactIfNotResolved": "Ef vandinn er enn til staðar geturðu haft samband við þjónustuver",
   "shareFeedback": "Vinsamlegast deildu álit þínu á Pilll",
   "confirm": "Staðfesta",
   "surveyForServiceImprovement": "Ef þú vilt, vinsamlegast taktu þátt í könnun til að bæta þjónustu okkar",

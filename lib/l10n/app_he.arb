@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "לא ניתן לטעון את המידע של היסטוריית נטילה. {error}",
   "seeFAQ": "לצפייה בשאלות נפוצות",
   "reloadScreen": "לטעון מחדש את המסך",
-  "contactIfNotResolved": "אם לא נפתר - לחץ כאן",
+  "contactIfNotResolved": "אם הבעיה נמשכת, ניתן לפנות לתמיכה",
   "shareFeedback": "נשמח לשמוע את דעתכם על Pilll",
   "confirm": "אישור",
   "surveyForServiceImprovement": "אם תרצו, נשמח לעזרתכם בסקר לשיפור השירות שלנו",

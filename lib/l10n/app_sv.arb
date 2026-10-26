@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Det gick inte att hämta information om din intagshistorik. {error}",
   "seeFAQ": "Se vanliga frågor",
   "reloadScreen": "Läs in skärmen igen",
-  "contactIfNotResolved": "Om det inte löser sig, kontakta oss här",
+  "contactIfNotResolved": "Kontakta supporten om problemet kvarstår",
   "shareFeedback": "Berätta vad du tycker om Pilll",
   "confirm": "Bekräfta",
   "surveyForServiceImprovement": "Vi skulle uppskatta om du vill delta i vår enkät för att förbättra vår service",

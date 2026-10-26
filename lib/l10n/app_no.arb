@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
   "seeFAQ": "Se vanlige spørsmål",
   "reloadScreen": "Last inn skjermen på nytt",
-  "contactIfNotResolved": "Hvis dette ikke hjelper",
+  "contactIfNotResolved": "Kontakt brukerstøtte hvis problemet fortsetter",
   "shareFeedback": "Fortell oss hva du synes om Pilll",
   "confirm": "OK",
   "surveyForServiceImprovement": "Hvis du har lyst, vil vi gjerne at du deltar i en undersøkelse for å forbedre tjenesten",

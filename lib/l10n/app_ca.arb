@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "No s’ha pogut carregar la informació de l’historial de preses. {error}",
   "seeFAQ": "Consulta les preguntes freqüents",
   "reloadScreen": "Torna a carregar la pantalla",
-  "contactIfNotResolved": "Si el problema persisteix, feu clic aquí",
+  "contactIfNotResolved": "Si el problema continua, contacta amb l’assistència",
   "shareFeedback": "Comparteix la teva opinió sobre Pilll",
   "confirm": "D'acord",
   "surveyForServiceImprovement": "Si voleu, us agrairíem que participéssiu en la nostra enquesta per millorar el servei",

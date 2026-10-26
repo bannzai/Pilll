@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulelor. {error}",
   "seeFAQ": "Vezi întrebările frecvente",
   "reloadScreen": "Reîncarcă ecranul",
-  "contactIfNotResolved": "Dacă nu se rezolvă, apăsați aici",
+  "contactIfNotResolved": "Dacă problema persistă, contactează echipa de asistență",
   "shareFeedback": "Vă rugăm să ne spuneți părerea despre Pilll",
   "confirm": "Confirmare",
   "surveyForServiceImprovement": "Dacă doriți, vă rugăm să ne ajutați și cu un sondaj pentru îmbunătățirea serviciului",

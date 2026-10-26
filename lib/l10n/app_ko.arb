@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "복용 내역 정보를 불러오지 못했어요. {error}",
   "seeFAQ": "자주 묻는 질문 보기",
   "reloadScreen": "화면 새로고침",
-  "contactIfNotResolved": "해결되지 않으면 여기로",
+  "contactIfNotResolved": "문제가 계속되면 고객 지원팀에 문의해 주세요",
   "shareFeedback": "Pilll에 대한 의견을 말씀해 주세요",
   "confirm": "확인",
   "surveyForServiceImprovement": "괜찮으시다면 서비스 개선을 위한 설문조사에도 협조해 주세요",

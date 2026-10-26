@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "No se pudo cargar la información del historial de tomas. {error}",
   "seeFAQ": "Ver preguntas frecuentes",
   "reloadScreen": "Volver a cargar la pantalla",
-  "contactIfNotResolved": "Si no se resuelve, contacta aquí",
+  "contactIfNotResolved": "Si el problema continúa, contacta con soporte",
   "shareFeedback": "Compártenos tu opinión sobre Pilll",
   "confirm": "Confirmar",
   "surveyForServiceImprovement": "Si no le importa, le agradeceríamos mucho su colaboración en una encuesta para mejorar nuestro servicio",

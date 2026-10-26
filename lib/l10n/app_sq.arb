@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nuk u arrit të ngarkoheshin të dhënat për historia e marrjes. {error}",
   "seeFAQ": "Shihni pyetjet e shpeshta",
   "reloadScreen": "Ringarkoni ekranin",
-  "contactIfNotResolved": "Nëse nuk zgjidhet, klikoni këtu",
+  "contactIfNotResolved": "Nëse problemi vazhdon, kontaktoni ekipin e mbështetjes",
   "shareFeedback": "Na tregoni mendimin tuaj për Pilll",
   "confirm": "Vendos",
   "surveyForServiceImprovement": "Po të doni, do të vlerësonim bashkëpunimin tuaj në sondazhin për përmirësimin e shërbimit",

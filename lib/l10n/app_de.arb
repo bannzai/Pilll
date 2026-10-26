@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Die Daten für deinen Einnahmeverlauf konnten nicht geladen werden. {error}",
   "seeFAQ": "Häufige Fragen ansehen",
   "reloadScreen": "Bildschirm neu laden",
-  "contactIfNotResolved": "Falls ungelöst, hier klicken",
+  "contactIfNotResolved": "Wenn das Problem weiter besteht, kontaktiere den Support",
   "shareFeedback": "Teilen Sie uns Ihre Meinung zu Pilll mit",
   "confirm": "Bestätigen",
   "surveyForServiceImprovement": "Falls Sie möchten, würden wir uns sehr über Ihre Teilnahme an einer Umfrage zur Verbesserung unseres Services freuen",

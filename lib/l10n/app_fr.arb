@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Impossible de charger les informations de l’historique des prises. {error}",
   "seeFAQ": "Voir les questions fréquentes",
   "reloadScreen": "Recharger l’écran",
-  "contactIfNotResolved": "Contactez-nous si non résolu",
+  "contactIfNotResolved": "Si le problème persiste, contactez l’assistance",
   "shareFeedback": "Nous aimerions connaître vos commentaires sur Pilll",
   "confirm": "D'ACCORD",
   "surveyForServiceImprovement": "Nous apprécierions que vous nous aidiez à améliorer notre service en participant à notre enquête",

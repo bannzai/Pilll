@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Qabul qilish tarixi maʼlumotlarini yuklab boʻlmadi. {error}",
   "seeFAQ": "Koʻp soʻraladigan savollarni koʻring",
   "reloadScreen": "Ekranni qayta yuklang",
-  "contactIfNotResolved": "Hal bo'lmasa, bu yerga murojaat qiling",
+  "contactIfNotResolved": "Muammo hali ham hal bo‘lmagan bo‘lsa, qo‘llab-quvvatlash xizmatiga murojaat qiling",
   "shareFeedback": "Pilll haqida fikringizni bildiring",
   "confirm": "Tasdiqlash",
   "surveyForServiceImprovement": "Agar qulay bo'lsa, xizmat sifatini yaxshilash maqsadida o'tkaziladigan so'rovda ham ishtirok etishingiz mumkin",

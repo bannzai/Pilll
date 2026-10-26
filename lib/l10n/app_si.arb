@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "පෙති ගැනීමේ ඉතිහාසය පිළිබඳ තොරතුරු ලබාගත නොහැකි වුණා. {error}",
   "seeFAQ": "නිතර අසන ප්‍රශ්න බලන්න",
   "reloadScreen": "තිරය නැවත පූරණය කරන්න",
-  "contactIfNotResolved": "විසඳන්නේ නැත්නම් මෙතනින්",
+  "contactIfNotResolved": "ගැටලුව තවමත් විසඳී නැත්නම්, කරුණාකර සහාය කණ්ඩායම අමතන්න",
   "shareFeedback": "Pilll ගැන ඔබේ අදහස් අපට කියන්න",
   "confirm": "තීරණය",
   "surveyForServiceImprovement": "ඔබට කැමති නම්, සේවා වැඩිදියුණු කිරීම සඳහා වන සමීක්ෂණයට සහයෝගය දෙන්න",

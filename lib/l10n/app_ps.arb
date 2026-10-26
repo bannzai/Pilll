@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "د ګولۍ اخیستلو تاریخچې معلومات ترلاسه نه شول. {error}",
   "seeFAQ": "ډېرې پوښتل کېدونکې پوښتنې وګورئ",
   "reloadScreen": "پاڼه بیا پورته کړئ",
-  "contactIfNotResolved": "که حل نه شي، دلته ټک ورکړئ",
+  "contactIfNotResolved": "که ستونزه لا هم نه وي حل شوې، له ملاتړ سره اړیکه ونیسئ",
   "shareFeedback": "ستاسو د Pilll تاثرات موږ ته ووایاست",
   "confirm": "پریکړه",
   "surveyForServiceImprovement": "که تاسو غواړئ، مهرباني وکړئ زموږ د خدماتو د ښه والي لپاره د پوښتنلیک سره هم همکاري وکړئ",

@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "seeFAQ": "Gyakori kérdések megtekintése",
   "reloadScreen": "Képernyő újratöltése",
-  "contactIfNotResolved": "Ha nem oldódik meg, kattintson ide",
+  "contactIfNotResolved": "Ha a probléma továbbra is fennáll, lépj kapcsolatba az ügyfélszolgálattal",
   "shareFeedback": "Kérjük, ossza meg véleményét a Pilllről",
   "confirm": "Rendben",
   "surveyForServiceImprovement": "Amennyiben lehetősége engedi, kérjük, segítsen nekünk a szolgáltatás fejlesztését célzó kérdőívünk kitöltésében",

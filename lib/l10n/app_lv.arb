@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Neizdevās ielādēt lietošanas vēstures informāciju. {error}",
   "seeFAQ": "Skatiet biežāk uzdotos jautājumus",
   "reloadScreen": "Ielādējiet ekrānu vēlreiz",
-  "contactIfNotResolved": "Ja neatrisina - spiediet šeit",
+  "contactIfNotResolved": "Ja problēma joprojām pastāv, sazinieties ar atbalsta dienestu",
   "shareFeedback": "Dalieties ar savu viedokli par Pilll",
   "confirm": "Labi",
   "surveyForServiceImprovement": "Lūdzu, ja vēlaties, palīdziet mums ar pakalpojuma uzlabošanas aptauju",

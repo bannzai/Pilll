@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Kunne ikke hente oplysninger om din pillehistorik. {error}",
   "seeFAQ": "Se ofte stillede spørgsmål",
   "reloadScreen": "Genindlæs skærmen",
-  "contactIfNotResolved": "Hvis ikke løst, kontakt os",
+  "contactIfNotResolved": "Kontakt support, hvis problemet fortsætter",
   "shareFeedback": "Fortæl os, hvad du synes om Pilll",
   "confirm": "OK",
   "surveyForServiceImprovement": "Vi vil være taknemlige for din hjælp med en undersøgelse til forbedring af vores service, hvis du ønsker det",

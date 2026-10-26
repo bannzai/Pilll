@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Nie udało się pobrać danych historii przyjmowania tabletek. {error}",
   "seeFAQ": "Zobacz częste pytania",
   "reloadScreen": "Wczytaj ekran ponownie",
-  "contactIfNotResolved": "Jeśli problem się nie rozwiąże, kliknij tutaj",
+  "contactIfNotResolved": "Jeśli problem nadal występuje, skontaktuj się z pomocą",
   "shareFeedback": "Podziel się swoją opinią o Pilll",
   "confirm": "Potwierdź",
   "surveyForServiceImprovement": "Jeśli będziesz miał(a) ochotę, prosimy również o udział w ankiecie służącej poprawie jakości naszych usług",

@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Podatkov za zgodovino jemanja ni bilo mogoče naložiti. {error}",
   "seeFAQ": "Oglejte si pogosta vprašanja",
   "reloadScreen": "Znova naložite zaslon",
-  "contactIfNotResolved": "Če se ne reši, kliknite tukaj",
+  "contactIfNotResolved": "Če težava še vedno traja, se obrnite na podporo",
   "shareFeedback": "Povejte nam svoje mnenje o aplikaciji Pilll",
   "confirm": "Potrdi",
   "surveyForServiceImprovement": "Če vam odgovarja, prosimo vas za sodelovanje v anketi za izboljšanje naše storitve.",

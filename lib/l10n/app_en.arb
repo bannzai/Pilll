@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "Couldn’t load your pill history. {error}",
   "seeFAQ": "View FAQs",
   "reloadScreen": "Reload screen",
-  "contactIfNotResolved": "Contact us if unresolved",
+  "contactIfNotResolved": "Still having trouble? Contact support",
   "shareFeedback": "We'd love to hear your feedback about Pilll",
   "confirm": "OK",
   "surveyForServiceImprovement": "We would appreciate it if you could help us improve our service by participating in our survey",

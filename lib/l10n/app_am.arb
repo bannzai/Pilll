@@ -256,7 +256,7 @@
   "failedToFetchPillHistory": "የአወሳሰድ ታሪክ መረጃን ማግኘት አልተቻለም። {error}",
   "seeFAQ": "ተደጋጋሚ ጥያቄዎችን ይመልከቱ",
   "reloadScreen": "ማያ ገጹን እንደገና ጫን",
-  "contactIfNotResolved": "ካልተፈታ እዚህ ያግኙን",
+  "contactIfNotResolved": "ችግሩ ካልተፈታ፣ ድጋፍን ያግኙ",
   "shareFeedback": "ስለ Pilll ያለዎትን አስተያየት ያካፍሉን",
   "confirm": "ውሳኔ",
   "surveyForServiceImprovement": "ከፈለጉ የአገልግሎት ማሻሻያ ጥናትም እንዲተባበሩን እንጠይቃለን",
