@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Գնորդի տվյալները չեն գտնվել։ Խնդրում ենք սարքում մուտք գործել {accountName} հաշվով և կրկին փորձել",
   "purchaseErrorNetworkError": "Ցանցային կապն անկայուն է։ Խնդրում ենք ստուգել Ձեր կապը և կրկին փորձել։",
   "purchaseErrorInvalidCredentialsError": "Չհաջողվեց ավարտել գնումը։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Ներկայումս գնումը հնարավոր չէ: Խնդրում ենք փորձել մի փոքր ուշ: Եթե խնդիրը չլուծվի, խնդրում ենք դիմել Կարգավորումներ > Հարցումներ բաժնում: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Այս պահին գնում կատարել հնարավոր չէ։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։ Եթե խնդիրը չլուծվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնման տվյալները օգտագործվում են այլ օգտատիրոջ կողմից: Խնդրում ենք հաստատել սարքում մուտք գործած {accountName}-ը:",
   "purchaseErrorInvalidAppUserIdError": "Օգտատիրոջ հաստատումը ձախողվեց: Վերագործարկեք հավելվածը և փորձեք կրկին: Մանրամասները՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Մեկ այլ գնման գործընթաց արդեն ընթանում է: Խնդրում ենք որոշ ժամանակ սպասել և կրկին փորձել:",

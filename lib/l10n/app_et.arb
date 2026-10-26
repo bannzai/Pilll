@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Ostja andmeid ei leitud. Logi seadmes sisse kontoga {accountName} ja proovi uuesti",
   "purchaseErrorNetworkError": "Võrguühendus on ebastabiilne. Kontrolli ühendust ja proovi uuesti.",
   "purchaseErrorInvalidCredentialsError": "Ostu ei õnnestunud lõpule viia. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Ostumine pole praegu võimalik. Palun oodake ja proovige hiljem uuesti. Kui probleem püsib, pöörduge meie poole: Seaded > Kontakt. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Praegu ei saa ostu sooritada. Proovi hiljem uuesti. Kui probleem püsib, võta meiega ühendust menüüs Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostuinfo on juba kasutusel teise kasutaja poolt. Palun kontrollige seadmesse sisse logitud {accountName}.",
   "purchaseErrorInvalidAppUserIdError": "Kasutajat ei õnnestunud kinnitada. Palun taaskäivitage rakendus ja proovige uuesti. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Teine ostuprotsess on juba käimas. Palun oodake mõne aja ja kontrollige uuesti.",

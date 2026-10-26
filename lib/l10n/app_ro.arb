@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Informațiile despre cumpărător nu au fost găsite. Conectează-te pe dispozitiv cu {accountName} și încearcă din nou",
   "purchaseErrorNetworkError": "Conexiunea la rețea este instabilă. Verifică-ți conexiunea și încearcă din nou.",
   "purchaseErrorInvalidCredentialsError": "Achiziția nu a putut fi finalizată. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "În prezent nu se poate face cumpărătura. Vă rugăm să reîncercați după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Cumpărarea nu este posibilă acum. Încearcă din nou mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informațiile de achiziție sunt deja utilizate de un alt utilizator. Verificați contul {accountName} conectat pe dispozitiv.",
   "purchaseErrorInvalidAppUserIdError": "Utilizatorul nu a putut fi verificat. Vă rugăm să reporniți aplicația și să încercați din nou. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "O achiziție este deja în curs de procesare. Vă rugăm să așteptați un moment și să verificați din nou.",

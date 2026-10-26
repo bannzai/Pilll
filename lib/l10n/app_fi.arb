@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Ostajan tietoja ei löytynyt. Kirjaudu laitteellasi sisään tilillä {accountName} ja yritä uudelleen",
   "purchaseErrorNetworkError": "Verkkoyhteys on epävakaa. Tarkista yhteys ja yritä uudelleen.",
   "purchaseErrorInvalidCredentialsError": "Ostoa ei voitu viimeistellä. Kokeile hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Ostoa ei voi tällä hetkellä suorittaa. Yritä hetken kuluttua uudelleen. Jos ongelma ei ratkeaa, ota yhteyttä kohdasta Asetukset > Yhteydenotto. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Ostaminen ei onnistu juuri nyt. Yritä myöhemmin uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ostotiedot ovat jo toisen käyttäjän käytössä. Tarkista laitteeseen kirjautunut {accountName}.",
   "purchaseErrorInvalidAppUserIdError": "Käyttäjää ei voitu vahvistaa. Käynnistä sovellus uudelleen ja yritä uudestaan. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ostoprosessi on jo meneillään. Odota hetki ja yritä uudelleen.",

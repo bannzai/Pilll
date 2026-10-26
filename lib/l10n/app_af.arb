@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Die koper se inligting is nie gevind nie. Meld asseblief op jou toestel met {accountName} aan en probeer weer",
   "purchaseErrorNetworkError": "Die netwerkverbinding is onstabiel. Gaan asseblief jou verbinding na en probeer weer.",
   "purchaseErrorInvalidCredentialsError": "Die aankoop het nie geslaag nie. Probeer asseblief later weer. As die probleem aanhou, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Aankoop is tans nie moontlik nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Jy kan tans nie 'n aankoop doen nie. Probeer asseblief later weer. As die probleem voortduur, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Die aankoopinligting word reeds deur 'n ander gebruiker gebruik. Kontroleer asseblief die {accountName} wat op hierdie toestel aangemeld is.",
   "purchaseErrorInvalidAppUserIdError": "Gebruiker kon nie geverifieer word nie. Herbegin asseblief die app en probeer weer. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "'n Aankoop proses is reeds aan die gang. Wag asseblief 'n rukkie en probeer weer.",

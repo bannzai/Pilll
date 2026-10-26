@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "We couldn't find the purchaser's information. Sign in to your device with {accountName} and try again",
   "purchaseErrorNetworkError": "Your network connection is unstable. Check your connection and try again.",
   "purchaseErrorInvalidCredentialsError": "Your purchase couldn’t be completed. Please try again later. If the issue continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Purchase is currently unavailable. Please wait a moment and try again. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Purchases aren’t available right now. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "This purchase is already associated with another user. Please verify the {accountName} account logged in on this device.",
   "purchaseErrorInvalidAppUserIdError": "User verification failed. Please restart the app and try again. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Another purchase is in progress. Please wait a moment and try again.",

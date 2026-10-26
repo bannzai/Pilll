@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "خریدار کی معلومات نہیں ملیں۔ براہِ کرم اپنے آلے پر {accountName} اکاؤنٹ سے سائن اِن کریں اور دوبارہ کوشش کریں",
   "purchaseErrorNetworkError": "نیٹ ورک کنکشن مستحکم نہیں ہے۔ براہِ کرم کنکشن چیک کریں اور دوبارہ کوشش کریں۔",
   "purchaseErrorInvalidCredentialsError": "خریداری مکمل نہیں ہو سکی۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "فی الوقت خریداری دستیاب نہیں ہے۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کے ذریعے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "فی الحال خریداری ممکن نہیں ہے۔ براہِ کرم کچھ دیر بعد دوبارہ کوشش کریں۔ اگر مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "یہ خریداری کی معلومات دوسرے صارف کے ذریعے استعمال کی جا رہی ہے۔ براہ کرم اپنے ڈیوائس پر لاگ ان {accountName} کی تصدیق کریں۔",
   "purchaseErrorInvalidAppUserIdError": "صارف کی تصدیق نہیں ہو سکی۔ ایپ کو دوبارہ شروع کرنے کے بعد دوبارہ کوشش کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "دوسرا خرید کا عمل پہلے سے جاری ہے۔ براہ کرم کچھ وقت بعد دوبارہ چیک کریں",

@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "కొనుగోలుదారుని సమాచారం కనుగొనబడలేదు. దయచేసి మీ పరికరంలో {accountName} ఖాతాతో సైన్ ఇన్ చేసి మళ్లీ ప్రయత్నించండి",
   "purchaseErrorNetworkError": "నెట్‌వర్క్ కనెక్షన్ స్థిరంగా లేదు. దయచేసి కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.",
   "purchaseErrorInvalidCredentialsError": "కొనుగోలు పూర్తి కాలేదు. దయచేసి కొంతసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > మమ్మల్ని సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "ప్రస్తుతం కొనుగోలు చేయలేము. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి. పరిష్కరించకపోతే సెట్టింగులు > సంప్రదింపులు నుండి మాను సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "ప్రస్తుతం కొనుగోలు చేయడం సాధ్యం కావడం లేదు. దయచేసి కొంతసేపటి తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే, సెట్టింగ్‌లు > మమ్మల్ని సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "కొనుగోలు సమాచారం వేరే వినియోగదారునిచే ఉపయోగించబడుతోంది. పరికరంలోకి లాగిన్ అయిన {accountName}ని ధృవీకరించండి",
   "purchaseErrorInvalidAppUserIdError": "వినియోగదారుని ధృవీకరించలేకపోయాము. యాప్‌ని పునఃప్రారంభించిన తర్వాత మళ్ళీ ప్రయత్నించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "మరొక కొనుగోలు ప్రక్రియ ప్రగతిలో ఉంది. దయచేసి కొంత సమయం వేచి ఉండి మళ్లీ ప్రయత్నించండి",

@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Informacioni i blerësit nuk u gjet. Ju lutemi, hyni në pajisje me llogarinë {accountName} dhe provoni përsëri",
   "purchaseErrorNetworkError": "Lidhja me rrjetin është e paqëndrueshme. Ju lutemi, kontrolloni lidhjen dhe provoni përsëri.",
   "purchaseErrorInvalidCredentialsError": "Blerja nuk u përfundua. Ju lutemi, provoni përsëri pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësitë: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Aktualisht blerja nuk është e mundur. Ju lutemi provoni përsëri pas pak kohe. Nëse problemi nuk zgjidhet, ju lutemi na kontaktoni përmes Cilësimet > Kontakti. Detajet: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Blerja nuk mund të kryhet për momentin. Ju lutemi, provoni përsëri më vonë. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Informacionet e blerjes janë duke u përdorur nga një përdorues tjetër. Ju lutemi kontrolloni {accountName} që është i loguar në pajisje.",
   "purchaseErrorInvalidAppUserIdError": "Përdoruesi nuk mund të verifikohet. Ju lutemi rinisni aplikacionin dhe provoni përsëri. Detajet: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Një blerje tjetër është duke u procesuar. Ju lutemi prisni pak dhe provoni përsëri.",

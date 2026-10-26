@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Худалдан авагчийн мэдээлэл олдсонгүй. Төхөөрөмждөө {accountName} бүртгэлээр нэвтэрч, дахин оролдоно уу",
   "purchaseErrorNetworkError": "Сүлжээний холболт тогтворгүй байна. Холболтоо шалгаад дахин оролдоно уу.",
   "purchaseErrorInvalidCredentialsError": "Худалдан авалт амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Асуудал хэвээр байвал Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнтэй холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Одоогоор худалдаж авах боломжгүй байна. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв асуудал шийдэгдэхгүй бол Тохиргоо > Хариуцлага хэсгээр холбогдоно уу. Дэлгэрэнгүй мэдээлэл: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Одоогоор худалдан авалт хийх боломжгүй байна. Түр хүлээгээд дахин оролдоно уу. Асуудал арилахгүй бол Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнтэй холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Худалдан авалтын мэдээлэл өөр хэрэглэгчээр ашиглагдаж байна. Төхөөрөмжид нэвтэрсэн {accountName}-г шалгана уу",
   "purchaseErrorInvalidAppUserIdError": "Хэрэглэгчийг баталгаажуулах боломжгүй боллоо. Апп-ыг дахин эхлүүлж, дахин оролдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Өөр худалдан авалт явагдаж байна. Хэсэг хүлээгээд дахин шалгана уу.",

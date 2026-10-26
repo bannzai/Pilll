@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "A vásárló adatai nem találhatók. Jelentkezz be a készülékeden a(z) {accountName} fiókkal, majd próbáld újra",
   "purchaseErrorNetworkError": "A hálózati kapcsolat instabil. Ellenőrizd a kapcsolatot, majd próbáld újra.",
   "purchaseErrorInvalidCredentialsError": "A vásárlás nem sikerült. Kérjük, próbáld meg később újra. Ha a probléma továbbra is fennáll, lépj velünk kapcsolatba a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Jelenleg nem lehet vásárolni. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Jelenleg nem lehet vásárolni. Kérjük, próbáld újra később. Ha a probléma továbbra is fennáll, lépj kapcsolatba velünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "A vásárlási információkat már egy másik felhasználó használja. Kérjük, ellenőrizze a készülékre bejelentkezett {accountName} fiókot.",
   "purchaseErrorInvalidAppUserIdError": "A felhasználó nem volt ellenőrizhető. Indítsa újra az alkalmazást és próbálja újra. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Másik vásárlási folyamat fut. Kérjük, várjon, majd próbálja újra.",

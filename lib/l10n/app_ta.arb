@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "வாங்கியவரின் தகவல் கிடைக்கவில்லை. உங்கள் சாதனத்தில் {accountName} கணக்கில் உள்நுழைந்து மீண்டும் முயற்சி செய்யுங்கள்",
   "purchaseErrorNetworkError": "நெட்வொர்க் இணைப்பு நிலையாக இல்லை. இணைப்பைச் சரிபார்த்துவிட்டு மீண்டும் முயற்சி செய்யுங்கள்.",
   "purchaseErrorInvalidCredentialsError": "வாங்குதலை முடிக்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள். சிக்கல் தொடர்ந்தால், அமைப்புகள் > எங்களைத் தொடர்புகொள்ளவும் வழியாக எங்களைத் தொடர்புகொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "தற்போது வாங்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். இது தீர்க்கப்படவில்லை எனில் அமைப்புகள் > தொடர்பு கொள்ளுங்கள் மூலம் எங்களை தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "தற்போது வாங்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள். சிக்கல் தொடர்ந்தால், அமைப்புகள் > எங்களைத் தொடர்புகொள்ளவும் வழியாக எங்களைத் தொடர்புகொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "வாங்குதல் தகவல் வேறு பயனரால் ஏற்கனவே பயன்படுத்தப்பட்டுள்ளது. சாதனத்தில் உள்நுழைந்துள்ள {accountName} ஐ சரிபார்க்கவும்",
   "purchaseErrorInvalidAppUserIdError": "பயனர் சரிபார்க்க முடியவில்லை. ஆப்பை மறுதொடக்கம் செய்து மீண்டும் முயற்சிக்கவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "வேறொரு கொள்முதல் செயல்முறை நடைபெற்றுக்கொண்டிருக்கிறது. சிறிது நேரம் கழித்து மீண்டும் சரிபார்க்கவும்",

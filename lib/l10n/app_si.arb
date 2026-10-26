@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "මිලදී ගත් අයගේ තොරතුරු හමු නොවීය. කරුණාකර ඔබේ උපාංගයේ {accountName} ගිණුමෙන් පුරනය වී නැවත උත්සාහ කරන්න",
   "purchaseErrorNetworkError": "ජාල සම්බන්ධතාව ස්ථාවර නැහැ. කරුණාකර සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "purchaseErrorInvalidCredentialsError": "මිලදී ගැනීම සම්පූර්ණ කළ නොහැකි විය. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "දැනට මිළදී ගැනීමට නොහැක. කරුණාකර ටික වේලාවකින් නැවත උත්සාහ කරන්න. ගැටලුව විසඳී නොමැති නම් සැකසීම් > අපගෙන් විමසන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "මේ මොහොතේ මිලදී ගැනීම කළ නොහැක. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසීම් > අප අමතන්න හරහා අප අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "මිලදී ගැනීමේ තොරතුරු වෙනත් පරිශීලකයෙකු විසින් භාවිතා කර ඇත. උපාංගයට ලොග් වී ඇති {accountName} පරීක්ෂා කරන්න",
   "purchaseErrorInvalidAppUserIdError": "පරිශීලකයා සත්‍යාපනය කළ නොහැකි විය. යෙදුම නැවත ආරම්භ කර නැවත උත්සාහ කරන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "වෙනත් මිලදී ගැනීමේ ක්‍රියාවලියක් ප්‍රගතියේ ඇත. කරුණාකර ටික වේලාවකින් නැවත පරීක්ෂා කරන්න",

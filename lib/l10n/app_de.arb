@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Die Käuferinformationen wurden nicht gefunden. Melde dich auf deinem Gerät mit {accountName} an und versuche es erneut",
   "purchaseErrorNetworkError": "Die Netzwerkverbindung ist instabil. Prüfe bitte deine Verbindung und versuche es erneut.",
   "purchaseErrorInvalidCredentialsError": "Der Kauf konnte nicht abgeschlossen werden. Versuch es bitte später noch einmal. Falls das Problem weiterhin besteht, kontaktiere uns über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Derzeit ist ein Kauf nicht möglich. Bitte versuchen Sie es später erneut. Falls das Problem weiterhin besteht, kontaktieren Sie uns bitte über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Der Kauf ist derzeit nicht möglich. Bitte versuche es später erneut. Wenn das Problem weiterhin besteht, kontaktiere uns über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Die Kaufinformationen werden bereits von einem anderen Benutzer verwendet. Bitte überprüfen Sie das auf dem Gerät angemeldete Konto {accountName}.",
   "purchaseErrorInvalidAppUserIdError": "Der Benutzer konnte nicht verifiziert werden. Bitte starten Sie die App neu und versuchen Sie es erneut. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ein Kaufvorgang ist bereits im Gange. Bitte warten Sie einen Moment und überprüfen Sie es erneut.",

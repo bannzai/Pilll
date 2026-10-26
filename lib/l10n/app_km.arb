@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "រកមិនឃើញព័ត៌មានរបស់អ្នកទិញទេ។ សូមចូលគណនី {accountName} នៅលើឧបករណ៍របស់អ្នក រួចព្យាយាមម្តងទៀត",
   "purchaseErrorNetworkError": "ការតភ្ជាប់បណ្ដាញមិនមានស្ថិរភាពទេ។ សូមពិនិត្យការតភ្ជាប់ រួចសាកល្បងម្ដងទៀត។",
   "purchaseErrorInvalidCredentialsError": "ការទិញមិនបានសម្រេចទេ។ សូមព្យាយាមម្ដងទៀតបន្តិចក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "បច្ចុប្បន្ននេះមិនអាចធ្វើការទិញបានទេ។ សូមព្យាយាមម្តងទៀតបន្ទាប់ពីរយៈពេលមួយ។ ប្រសិនបើបញ្ហានៅតែមិនដោះស្រាយបាន សូមទាក់ទងមកយើងខ្ញុំតាមរយៈ ការកំណត់ > ការទាក់ទង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "មិនអាចទិញបាននៅពេលនេះទេ។ សូមសាកល្បងម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "ព័ត៌មានការទិញត្រូវបានប្រើប្រាស់ដោយអ្នកប្រើប្រាស់ផ្សេង។ សូមពិនិត្យ {accountName} ដែលបានចូលលើឧបករណ៍។",
   "purchaseErrorInvalidAppUserIdError": "មិនអាចផ្ទៀងផ្ទាត់អ្នកប្រើប្រាស់បានទេ។ សូមបិទដើម និងបើកកម្មវិធីម្តងទៀត រួចព្យាយាមម្តងទៀត។ ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "ដំណើរការទិញផ្សេងទៀតកំពុងដំណើរការ។ សូមរងចាំបន្តិចហើយពិនិត្យមើលម្តងទៀត",

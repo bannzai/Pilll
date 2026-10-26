@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Pirkėjo informacija nerasta. Prisijunkite prie įrenginio naudodami {accountName} paskyrą ir bandykite dar kartą",
   "purchaseErrorNetworkError": "Tinklo ryšys nestabilus. Patikrinkite ryšį ir bandykite dar kartą.",
   "purchaseErrorInvalidCredentialsError": "Nepavyko užbaigti pirkimo. Po kurio laiko pabandykite dar kartą. Jei problema išliks, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Šiuo metu negalime apdoroti pirkimo. Palaukite ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Kontaktai. Išsamiau: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Šiuo metu įsigyti nepavyksta. Bandykite dar kartą vėliau. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkimo informacija jau naudojama kito vartotojo. Patikrinkite įrenginyje prisijungusį {accountName}.",
   "purchaseErrorInvalidAppUserIdError": "Nepavyko patvirtinti vartotojo. Paleiskite programą iš naujo ir bandykite dar kartą. Išsamiau: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Šiuo metu vyksta kitas pirkimo procesas. Palaukite ir pabandykite vėl.",

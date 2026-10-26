@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Oplysningerne om køberen blev ikke fundet. Log ind på din enhed med {accountName}, og prøv igen",
   "purchaseErrorNetworkError": "Netværksforbindelsen er ustabil. Tjek din forbindelse, og prøv igen.",
   "purchaseErrorInvalidCredentialsError": "Købet kunne ikke gennemføres. Prøv igen om lidt. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Du kan ikke foretage køb i øjeblikket. Prøv igen om et øjeblik. Hvis problemet fortsætter, skal du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Du kan ikke gennemføre købet lige nu. Prøv igen senere. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Købsinformationen er allerede i brug af en anden bruger. Kontroller venligst {accountName}, som er logget ind på enheden",
   "purchaseErrorInvalidAppUserIdError": "Brugeren kunne ikke bekræftes. Genstart appen og prøv igen. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Der er allerede et køb i gang. Vent venligst og prøv igen senere",

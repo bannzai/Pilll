@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Сатып алуучунун маалыматы табылган жок. Түзмөгүңүзгө {accountName} аккаунту менен кирип, кайра аракет кылып көрүңүз",
   "purchaseErrorNetworkError": "Тармак байланышы туруктуу эмес. Сураныч, байланышты текшерип, кайра аракет кылыңыз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алуу ишке ашкан жок. Бир аз убакыттан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбей турган болсо Жөндөөлөр > Байланышуу аркылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Бир аздан кийин кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу бөлүмү аркылуу кайрылыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатып алуу маалыматы башка колдонуучу тарабынан колдонулган. Түзмөккө кирген {accountName} текшериңиз",
   "purchaseErrorInvalidAppUserIdError": "Колдонуучуну текшерүү мүмкүн болбоду. Колдонмону кайра ишке киргизип, кайрадан аракет кылыныз. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Сатып алуу процесси жүрүп жатат. Бир аз күтүп, кайрадан текшериңиз.",

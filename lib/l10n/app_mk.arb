@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Информациите за купувачот не се пронајдени. Ве молиме, најавете се на уредот со {accountName} и обидете се повторно",
   "purchaseErrorNetworkError": "Мрежната врска е нестабилна. Ве молиме, проверете ја врската и обидете се повторно.",
   "purchaseErrorInvalidCredentialsError": "Купувањето не успеа. Ве молиме, обидете се повторно малку подоцна. Ако проблемот продолжи, контактирајте нè преку Поставки > Контактирајте нè. Детали: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Моментално не можете да извршите купување. Ве молиме обидете се повторно подоцна. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Во моментов не е можно да се изврши купување. Ве молиме, обидете се повторно подоцна. Ако проблемот продолжи, контактирајте нè преку Поставки > Контактирајте нè. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Информациите за купување веќе се користат од друг корисник. Проверете го {accountName} кој е најавен на уредот.",
   "purchaseErrorInvalidAppUserIdError": "Корисникот не може да биде потврден. Рестартирајте ја апликацијата и обидете се повторно. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Веќе се одвива процес на купување. Ве молиме почекајте малку и обидете се повторно.",

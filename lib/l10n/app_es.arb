@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "No se encontró la información de la compra. Inicia sesión en tu dispositivo con {accountName} y vuelve a intentarlo",
   "purchaseErrorNetworkError": "La conexión de red es inestable. Comprueba tu conexión y vuelve a intentarlo.",
   "purchaseErrorInvalidCredentialsError": "No se pudo completar la compra. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contáctanos. Detalles: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "No se puede realizar la compra en este momento. Por favor, inténtelo de nuevo más tarde. Si el problema persiste, póngase en contacto con nosotros a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "No es puede completar la compra en este momento. Vuelve a intentarlo más tarde. Si el problema continúa, contáctanos desde Configuración > Contáctanos. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "La información de compra ya está siendo utilizada por otro usuario. Verifique la cuenta {accountName} conectada en el dispositivo",
   "purchaseErrorInvalidAppUserIdError": "No se pudo verificar al usuario. Por favor, reinicia la aplicación e inténtalo de nuevo. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Ya se está procesando una compra. Por favor, espere un momento y vuelva a intentarlo.",

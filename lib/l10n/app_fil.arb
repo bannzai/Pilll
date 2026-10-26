@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Hindi makita ang impormasyon ng bumili. Paki-sign in po sa inyong device gamit ang {accountName}, saka subukan muli",
   "purchaseErrorNetworkError": "Hindi matatag ang koneksyon sa network. Pakisuri po ang inyong koneksyon at subukan muli.",
   "purchaseErrorInvalidCredentialsError": "Hindi natuloy ang pagbili. Pakisubukan po ulit makalipas ang ilang sandali. Kung magpapatuloy ang problema, makipag-ugnayan sa amin sa Mga setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Hindi makakabili sa ngayon. Magsandaling hinay at subukang muli. Kung hindi pa rin maayos, makipag-ugnayan sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Hindi po makabili sa ngayon. Pakisubukan ulit mamaya. Kung magpatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Ginagamit na ng ibang user ang impormasyon ng pagbili. Pakitingnan ang {accountName} na naka-login sa inyong device.",
   "purchaseErrorInvalidAppUserIdError": "Hindi nakumpirma ang user. Paki-restart ang app at subukan ulit. Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "May iba pang proseso ng pagbili na kasalukuyang tumatakbo. Mangyaring maghintay ng ilang sandali at subukan muli.",

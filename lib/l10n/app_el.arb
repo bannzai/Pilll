@@ -298,7 +298,7 @@
   "purchaseErrorMissingReceiptFileError": "Δεν βρέθηκαν τα στοιχεία του αγοραστή. Συνδεθείτε στη συσκευή σας με τον λογαριασμό {accountName} και δοκιμάστε ξανά",
   "purchaseErrorNetworkError": "Η σύνδεση δικτύου δεν είναι σταθερή. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.",
   "purchaseErrorInvalidCredentialsError": "Η αγορά δεν ολοκληρώθηκε. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorUnexpectedBackendResponseError": "Δεν είναι δυνατή η αγορά αυτή τη στιγμή. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Η αγορά δεν είναι διαθέσιμη αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorReceiptInUseByOtherSubscriberError": "Οι πληροφορίες αγοράς χρησιμοποιούνται ήδη από άλλον χρήστη. Παρακαλώ επιβεβαιώστε το {accountName} που είναι συνδεδεμένο στη συσκευή σας.",
   "purchaseErrorInvalidAppUserIdError": "Ο χρήστης δεν μπόρεσε να επαληθευτεί. Παρακαλώ επανεκκινήστε την εφαρμογή και δοκιμάστε ξανά. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorOperationAlreadyInProgressError": "Εκτελείται ήδη μια διαδικασία αγοράς. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά",
