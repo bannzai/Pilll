@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Til en dato som ikke overlapper med neste p-pillepause (fra {date})",
   "pauseStartDateLimit": "Du kan velge startdato til og med {date}",
   "initialSettingAskYazFlex": "Bruker du Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Hvis du velger «Ja»,\nsetter vi det opp slik at det viser hvor mange dager det er siden pausen tok slutt.",
+  "initialSettingAskYazFlexDescription": "Hvis du velger «Ja», viser appen hvor mange dager det har gått siden pillepausen var over",
   "yazFlexLastRestDurationTitle": "Trykk på pillen\ndu tok rett før pausen",
   "yazFlexLastRestDurationNote": "Velg pillen du tok sist før pausen startet",
   "yazFlexRestDurationDaysLabel": "Antall pausedager",

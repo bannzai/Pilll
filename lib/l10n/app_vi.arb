@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Đến ngày không trùng với kỳ nghỉ thuốc tiếp theo (từ {date})",
   "pauseStartDateLimit": "Bạn có thể chọn ngày bắt đầu muộn nhất là {date}",
   "initialSettingAskYazFlex": "Bạn có đang dùng Yaz Flex không?",
-  "initialSettingAskYazFlexDescription": "Nếu bạn chọn “Có”,\nchúng tôi sẽ cài đặt để hiển thị đang là ngày thứ bao nhiêu kể từ khi hết thời gian nghỉ thuốc.",
+  "initialSettingAskYazFlexDescription": "Nếu chọn “Có”, ứng dụng sẽ hiển thị số ngày kể từ khi kết thúc đợt nghỉ thuốc",
   "yazFlexLastRestDurationTitle": "Vui lòng chạm vào viên thuốc\nbạn đã uống ngay trước khi bắt đầu nghỉ",
   "yazFlexLastRestDurationNote": "Vui lòng chọn viên thuốc cuối cùng bạn đã uống trước khi bắt đầu thời gian nghỉ",
   "yazFlexRestDurationDaysLabel": "Số ngày tạm ngừng thuốc",

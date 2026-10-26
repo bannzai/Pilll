@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгууга ({date} башталат) дал келбеген күнгө чейин",
   "pauseStartDateLimit": "Башталыш күнүн {date} чейин тандай аласыз",
   "initialSettingAskYazFlex": "Сиз Yaz Flex ичесизби?",
-  "initialSettingAskYazFlexDescription": "“Ооба” дегенди тандасаңыз,\nтыныгуудан кийин канчанчы күн экенин көрсөтө тургандай кылып жөндөйбүз.",
+  "initialSettingAskYazFlexDescription": "«Ооба» дегенди тандасаңыз, тыныгуу аяктагандан бери канча күн өткөнү көрсөтүлөт",
   "yazFlexLastRestDurationTitle": "Тыныгуу башталардын алдында ичкен таблетканы\nтаптаңыз",
   "yazFlexLastRestDurationNote": "Тыныгуу башталганга чейин акыркы ичкен таблеткаңызды тандаңыз",
   "yazFlexRestDurationDaysLabel": "Тыныгуу күндөрүнүн саны",

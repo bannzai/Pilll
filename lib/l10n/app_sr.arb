@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "До датума који се не преклапа са следећом паузом (од {date})",
   "pauseStartDateLimit": "Можете да изаберете датум почетка најкасније до {date}",
   "initialSettingAskYazFlex": "Да ли узимате Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ako izaberete „Da“,\npodesićemo prikaz koliko je dana prošlo od završetka pauze.",
+  "initialSettingAskYazFlexDescription": "Ако изаберете „Да“, приказиваће се колико је дана прошло од краја паузе",
   "yazFlexLastRestDurationTitle": "Додирните пилулу\nкоју сте узели непосредно пре паузе",
   "yazFlexLastRestDurationNote": "Изаберите последњу пилулу коју сте узели пре почетка паузе",
   "yazFlexRestDurationDaysLabel": "Број дана паузе",

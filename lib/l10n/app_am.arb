@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "ከቀጣዩ የክኒን እረፍት ({date} ጀምሮ) ጋር እስከማይደራረብ ቀን ድረስ",
   "pauseStartDateLimit": "የመጀመሪያ ቀን እስከ {date} መሆን ይችላል",
   "initialSettingAskYazFlex": "የሚወስዱት ክኒን Yaz Flex ነው?",
-  "initialSettingAskYazFlexDescription": "«አዎ»ን ከመረጡ\nከመድኃኒት እረፍቱ በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ እናስተካክላለን",
+  "initialSettingAskYazFlexDescription": "«አዎ» ሲመርጡ፣ ከክኒን እረፍት በኋላ ስንተኛ ቀን እንደሆነ እንዲታይ ይዘጋጃል",
   "yazFlexLastRestDurationTitle": "የእረፍት ጊዜውን ከጀመሩ በፊት የወሰዱትን ክኒን\nእባክዎ ይንኩ",
   "yazFlexLastRestDurationNote": "የእረፍት ጊዜውን ከመጀመርዎ በፊት መጨረሻ የወሰዱትን ክኒን ይምረጡ",
   "yazFlexRestDurationDaysLabel": "የመድኃኒት መቋረጥ ቀናት",

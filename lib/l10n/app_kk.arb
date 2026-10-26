@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Келесі үзіліспен ({date} бастап) қабаттаспайтын күнге дейін",
   "pauseStartDateLimit": "Басталу күнін {date} дейін таңдай аласыз",
   "initialSettingAskYazFlex": "Сіз Yaz Flex қабылдайсыз ба?",
-  "initialSettingAskYazFlexDescription": "Егер «Иә» таңдасаңыз,\nүзіліс аяқталғаннан бері нешінші күн екенін көрсететіндей етіп баптаймыз.",
+  "initialSettingAskYazFlexDescription": "«Иә» дегенді таңдасаңыз, үзіліс аяқталғаннан бері қанша күн өткені көрсетіледі",
   "yazFlexLastRestDurationTitle": "Үзіліс басталардың алдында ішкен таблетканы\nтүртіңіз",
   "yazFlexLastRestDurationNote": "Үзіліс басталар алдында қабылдаған соңғы таблетканы таңдаңыз",
   "yazFlexRestDurationDaysLabel": "Үзіліс күндерінің саны",

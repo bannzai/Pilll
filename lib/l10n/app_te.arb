@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "తదుపరి విరామంతో ({date} నుంచి) అతివ్యాప్తి చెందని తేదీ వరకు",
   "pauseStartDateLimit": "ప్రారంభ తేదీని {date} వరకు ఎంచుకోవచ్చు",
   "initialSettingAskYazFlex": "మీరు Yaz Flex మాత్రలు తీసుకుంటున్నారా?",
-  "initialSettingAskYazFlexDescription": "“అవును” ఎంచుకుంటే\nవిరామం ముగిసిన తర్వాత ఎన్ని రోజులు అయ్యిందో చూపించేలా సెటప్ చేస్తాము",
+  "initialSettingAskYazFlexDescription": "“అవును” ఎంచుకుంటే, విరామం ముగిసిన తర్వాత ఎన్ని రోజులు గడిచాయో చూపించేలా సెట్ అవుతుంది",
   "yazFlexLastRestDurationTitle": "విరామం ప్రారంభానికి ముందు తీసుకున్న మాత్రను\nట్యాప్ చేయండి",
   "yazFlexLastRestDurationNote": "విరామం ప్రారంభించే ముందు మీరు చివరిగా తీసుకున్న మాత్రను దయచేసి ఎంచుకోండి",
   "yazFlexRestDurationDaysLabel": "విరామ రోజుల సంఖ్య",

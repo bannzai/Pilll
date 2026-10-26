@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Up to a date that doesn’t overlap with the next break (from {date})",
   "pauseStartDateLimit": "You can choose a start date up to {date}",
   "initialSettingAskYazFlex": "Do you take Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "If you choose “Yes”,\nwe’ll set it to show how many days it has been since the end of your break.",
+  "initialSettingAskYazFlexDescription": "Choose “Yes” to show how many days it’s been since your pill break ended",
   "yazFlexLastRestDurationTitle": "Please tap the pill\nyou took just before the break",
   "yazFlexLastRestDurationNote": "Please select the last pill you took before starting the break",
   "yazFlexRestDurationDaysLabel": "Number of break days",

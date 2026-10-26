@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffusga ({date}dan boshlab) toʻgʻri kelmaydigan sanagacha",
   "pauseStartDateLimit": "Boshlanish sanasini {date} gacha tanlashingiz mumkin",
   "initialSettingAskYazFlex": "Siz Yaz Flex tabletkasini qabul qilasizmi?",
-  "initialSettingAskYazFlexDescription": "Agar “Ha” ni tanlasangiz,\ntanaffus tugaganidan keyin nechinchi kun ekanini ko‘rsatadigan qilib sozlaymiz.",
+  "initialSettingAskYazFlexDescription": "“Ha”ni tanlasangiz, tanaffus tugaganidan beri necha kun oʻtgani koʻrsatiladi",
   "yazFlexLastRestDurationTitle": "Tanaffus boshlanishidan oldin ichgan tabletkani\nbosing",
   "yazFlexLastRestDurationNote": "Tanaffusni boshlashdan oldin oxirgi qabul qilgan tabletkangizni tanlang",
   "yazFlexRestDurationDaysLabel": "Tanaffus kunlari soni",

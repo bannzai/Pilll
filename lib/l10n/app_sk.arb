@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Najneskôr do dňa pred ďalšou prestávkou (od {date})",
   "pauseStartDateLimit": "Dátum začiatku môžete vybrať najneskôr na {date}",
   "initialSettingAskYazFlex": "Užívate Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“,\nnastavíme zobrazovanie, ktorý deň je od konca prestávky.",
+  "initialSettingAskYazFlexDescription": "Ak vyberiete „Áno“, nastaví sa zobrazenie počtu dní od konca prestávky",
   "yazFlexLastRestDurationTitle": "Ťuknite na pilulku,\nktorú ste užili tesne pred prestávkou",
   "yazFlexLastRestDurationNote": "Vyberte prosím poslednú tabletku, ktorú ste užili pred začiatkom prestávky",
   "yazFlexRestDurationDaysLabel": "Počet dní prestávky",

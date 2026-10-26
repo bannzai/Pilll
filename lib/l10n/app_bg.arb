@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "До дата, която не се припокрива със следващата пауза (от {date})",
   "pauseStartDateLimit": "Можете да изберете начална дата до {date} включително",
   "initialSettingAskYazFlex": "Приемате ли Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ако изберете „Да“,\nще настроим показването на това кой ден е след края на паузата.",
+  "initialSettingAskYazFlexDescription": "Ако изберете „Да“, ще настроим показването на дните след края на паузата",
   "yazFlexLastRestDurationTitle": "Моля, докоснете хапчето,\nкоето сте приели преди началото на паузата",
   "yazFlexLastRestDurationNote": "Моля, изберете последното хапче, което сте приели преди началото на паузата",
   "yazFlexRestDurationDaysLabel": "Брой дни на пауза",

@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Tot een datum die niet overlapt met de volgende pillenpauze (vanaf {date})",
   "pauseStartDateLimit": "Je kunt een startdatum kiezen tot en met {date}",
   "initialSettingAskYazFlex": "Gebruik je Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Als je “Ja” kiest,\nstellen we het zo in dat je kunt zien hoeveel dagen het sinds het einde van de stopweek is.",
+  "initialSettingAskYazFlexDescription": "Als je ‘Ja’ kiest, stellen we de weergave in op het aantal dagen sinds het einde van de stopweek",
   "yazFlexLastRestDurationTitle": "Tik op de pil\ndie je vlak voor de stopperiode hebt ingenomen",
   "yazFlexLastRestDurationNote": "Selecteer de laatste pil die je hebt ingenomen voordat je met de pauze begon",
   "yazFlexRestDurationDaysLabel": "Aantal stopdagen",

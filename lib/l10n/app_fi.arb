@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Päivään, joka ei osu seuraavan pilleritauon ajalle (alkaen {date})",
   "pauseStartDateLimit": "Voit valita aloituspäiväksi viimeistään {date}",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flex -pillereitä?",
-  "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”,\nasetamme näytettäväksi, monesko päivä tauon päättymisestä on menossa.",
+  "initialSettingAskYazFlexDescription": "Kun valitset ”Kyllä”, näyttö asetetaan kertomaan, montako päivää taukojakson päättymisestä on kulunut",
   "yazFlexLastRestDurationTitle": "Napauta pilleriä,\njonka otit juuri ennen taukoa",
   "yazFlexLastRestDurationNote": "Valitse viimeinen pilleri, jonka otit ennen tauon alkamista",
   "yazFlexRestDurationDaysLabel": "Taukopäivien määrä",

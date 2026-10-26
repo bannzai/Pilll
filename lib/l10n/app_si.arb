@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date} සිට) සමඟ නොගැටෙන දිනයක් දක්වා",
   "pauseStartDateLimit": "ඔබට ආරම්භක දිනය ලෙස {date} දක්වා දිනයක් තෝරාගත හැකියි",
   "initialSettingAskYazFlex": "ඔබ ගන්නා පෙත්ත Yaz Flex ද?",
-  "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට\nවිවේක කාලය අවසන් වූ පසු කීවැනි දිනදැයි පෙන්වන ලෙස සකසනු ඇත",
+  "initialSettingAskYazFlexDescription": "“ඔව්” තේරුවොත්, විරාමය අවසන් වූ දා සිට ගත වූ දින ගණන පෙන්වීමට සැකසෙනවා",
   "yazFlexLastRestDurationTitle": "විරාමය ආරම්භ කිරීමට පෙර ගත් ගෝලිය\nතට්ටු කරන්න",
   "yazFlexLastRestDurationNote": "කරුණාකර විරාමය ආරම්භ කිරීමට පෙර අවසන් වරට ගත් ගුලිය තෝරන්න",
   "yazFlexRestDurationDaysLabel": "විරාම දින ගණන",

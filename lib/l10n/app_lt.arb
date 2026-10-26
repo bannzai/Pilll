@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita pertrauka (nuo {date})",
   "pauseStartDateLimit": "Pradžios datą galite pasirinkti ne vėlesnę kaip {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Jei pasirinksite „Taip“,\nsukonfigūruosime, kad būtų rodoma, kelinta diena po pertraukos pabaigos.",
+  "initialSettingAskYazFlexDescription": "Pasirinkus „Taip“, bus rodoma, kiek dienų praėjo nuo tada, kai baigėsi pertrauka",
   "yazFlexLastRestDurationTitle": "Palieskite tabletę,\nkurią išgėrėte prieš pat pertrauką",
   "yazFlexLastRestDurationNote": "Pasirinkite paskutinę tabletę, kurią išgėrėte prieš pradėdama pertrauką",
   "yazFlexRestDurationDaysLabel": "Pertraukos dienų skaičius",

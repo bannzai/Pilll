@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Hasta una fecha que no coincida con la próxima pausa (desde el {date})",
   "pauseStartDateLimit": "Puedes elegir una fecha de inicio hasta el {date}",
   "initialSettingAskYazFlex": "¿Tomas Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Si eliges “Sí”,\nlo configuraremos para que puedas ver cuántos días han pasado desde que terminó el descanso.",
+  "initialSettingAskYazFlexDescription": "Si eliges «Sí», configuraremos la pantalla para mostrar cuántos días han pasado desde que terminó el descanso",
   "yazFlexLastRestDurationTitle": "Toca la pastilla\nque tomaste justo antes del descanso",
   "yazFlexLastRestDurationNote": "Selecciona la última píldora que tomaste antes de empezar el descanso",
   "yazFlexRestDurationDaysLabel": "Número de días de descanso",

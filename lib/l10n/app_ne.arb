@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "अर्को विश्राम अवधि ({date} देखि) सँग नजुध्ने मितिसम्म",
   "pauseStartDateLimit": "सुरु हुने मिति {date} सम्मको रोज्न सक्नुहुन्छ",
   "initialSettingAskYazFlex": "तपाईंले खाने चक्की Yaz Flex हो?",
-  "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने\nविश्राम अवधि सकिएपछि कति दिन भयो भन्ने देखिने गरी सेट गरिनेछ",
+  "initialSettingAskYazFlexDescription": "“हो” छान्दा विश्राम सकिएपछि कति दिन बिते भनेर देखिने गरी सेट हुनेछ",
   "yazFlexLastRestDurationTitle": "ब्रेक सुरु हुनुअघि खाएको चक्कीमा\nट्याप गर्नुहोस्",
   "yazFlexLastRestDurationNote": "कृपया विश्राम सुरु गर्नु अघि तपाईंले अन्तिम पटक खाएको पिल छान्नुहोस्",
   "yazFlexRestDurationDaysLabel": "ब्रेक दिनहरूको संख्या",

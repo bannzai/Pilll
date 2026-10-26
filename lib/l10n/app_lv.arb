@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Līdz datumam, kas nepārklājas ar nākamo pārtraukumu (no {date})",
   "pauseStartDateLimit": "Sākuma datumu varat izvēlēties ne vēlāku par {date}",
   "initialSettingAskYazFlex": "Vai jūs lietojat Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Ja izvēlēsieties “Jā”,\nmēs iestatīsim, lai varētu rādīt, kura diena ir pēc pārtraukuma beigām.",
+  "initialSettingAskYazFlexDescription": "Izvēloties “Jā”, tiks iestatīts, lai rādītu, cik dienu pagājušas kopš pārtraukuma beigām",
   "yazFlexLastRestDurationTitle": "Pieskarieties tabletei,\nko lietojāt tieši pirms pārtraukuma",
   "yazFlexLastRestDurationNote": "Lūdzu, izvēlieties pēdējo tableti, ko lietojāt pirms pārtraukuma sākuma",
   "yazFlexRestDurationDaysLabel": "Pārtraukuma dienu skaits",

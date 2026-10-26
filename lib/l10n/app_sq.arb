@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Deri në një datë që nuk përkon me pushimin e radhës (nga {date})",
   "pauseStartDateLimit": "Mund të zgjidhni datën e fillimit deri më {date}",
   "initialSettingAskYazFlex": "A merrni Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”,\ndo ta caktojmë që të shfaqet sa ditë kanë kaluar që nga përfundimi i pushimit.",
+  "initialSettingAskYazFlexDescription": "Nëse zgjidhni “Po”, do të shfaqet numri i ditëve që kanë kaluar që nga përfundimi i pushimit",
   "yazFlexLastRestDurationTitle": "Prekni pilulën\nqë e more pak para pushimit",
   "yazFlexLastRestDurationNote": "Ju lutemi, zgjidhni pilulën e fundit që keni marrë para se të filloni pushimin",
   "yazFlexRestDurationDaysLabel": "Numri i ditëve të pauzës",

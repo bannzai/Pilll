@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Да даты, якая не перасякаецца з наступным перапынкам (з {date})",
   "pauseStartDateLimit": "Вы можаце выбраць дату пачатку не пазней за {date}",
   "initialSettingAskYazFlex": "Вы прымаеце Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так»,\nмы наладзім паказ колькасці дзён пасля заканчэння перапынку.",
+  "initialSettingAskYazFlexDescription": "Калі вы выбераце «Так», наладзім паказ колькасці дзён пасля таго, як скончыўся перапын",
   "yazFlexLastRestDurationTitle": "Націсніце, калі ласка, на таблетку,\nякую вы прынялі перад пачаткам перапынку",
   "yazFlexLastRestDurationNote": "Калі ласка, абярыце апошнюю таблетку, якую вы прынялі перад пачаткам перапынку",
   "yazFlexRestDurationDaysLabel": "Колькасць дзён перапынку",

@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "اگلے وقفے ({date} سے) سے نہ ٹکرانے والی تاریخ تک",
   "pauseStartDateLimit": "آپ آغاز کی تاریخ {date} تک منتخب کر سکتی ہیں",
   "initialSettingAskYazFlex": "کیا آپ کی گولی Yaz Flex ہے؟",
-  "initialSettingAskYazFlexDescription": "اگر آپ “ہاں” منتخب کریں\nتو ہم اسے اس طرح سیٹ کریں گے کہ وقفہ ختم ہونے کے بعد کون سا دن ہے، یہ دکھایا جا سکے",
+  "initialSettingAskYazFlexDescription": "“ہاں” منتخب کرنے پر وقف ختم ہونے کے بعد گزرے ہوئے دنوں کی تعداد دکھانے کی ترتیب ہو جائے گی",
   "yazFlexLastRestDurationTitle": "براہ کرم اس گولی پر ٹیپ کریں\nجو آپ نے وقفہ شروع ہونے سے ٹھیک پہلے لی تھی",
   "yazFlexLastRestDurationNote": "براہ کرم وقفہ شروع کرنے سے پہلے لی گئی آخری گولی منتخب کریں",
   "yazFlexRestDurationDaysLabel": "وقفے کے دنوں کی تعداد",

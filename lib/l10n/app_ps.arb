@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "تر هغې نېټې پورې چې له راتلونکې وقفې (له {date} څخه) سره نه ګډېږي",
   "pauseStartDateLimit": "تاسو د پیل نېټه تر {date} پورې ټاکلی شئ",
   "initialSettingAskYazFlex": "ایا تاسو Yaz Flex ګولۍ اخلئ؟",
-  "initialSettingAskYazFlexDescription": "که «هو» وټاکئ،\nموږ به داسې یې تنظیم کړو چې د وقفې له پای ته رسېدو وروسته څویمه ورځ ده، وښيي.",
+  "initialSettingAskYazFlexDescription": "که «هو» وټاکئ، له وقف پای ته رسېدو وروسته د تېر شوو ورځو شمېر به ښودل کېږي",
   "yazFlexLastRestDurationTitle": "مهرباني وکړئ هغه ګولۍ ټیپ کړئ\nچې تاسو د وقفې له پیل مخکې اخیستې وه",
   "yazFlexLastRestDurationNote": "مهرباني وکړئ هغه وروستۍ ګولۍ وټاکئ چې تاسو د وقفې له پیل مخکې خوړلې وه",
   "yazFlexRestDurationDaysLabel": "د وقفې د ورځو شمېر",

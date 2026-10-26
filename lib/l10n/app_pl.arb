@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie pokrywa się z kolejną przerwą (od {date})",
   "pauseStartDateLimit": "Możesz wybrać datę rozpoczęcia najpóźniej {date}",
   "initialSettingAskYazFlex": "Czy bierzesz Yaz Flex?",
-  "initialSettingAskYazFlexDescription": "Jeśli wybierzesz „Tak”,\nustawimy wyświetlanie, który to dzień od zakończenia przerwy.",
+  "initialSettingAskYazFlexDescription": "Po wybraniu „Tak” ustawimy wyświetlanie liczby dni od końca przerwy",
   "yazFlexLastRestDurationTitle": "Stuknij tabletkę,\nktórą przyjęłaś tuż przed przerwą",
   "yazFlexLastRestDurationNote": "Wybierz ostatnią tabletkę, którą przyjęłaś przed rozpoczęciem przerwy",
   "yazFlexRestDurationDaysLabel": "Liczba dni przerwy",

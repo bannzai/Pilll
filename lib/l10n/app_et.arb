@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "Kuni kuupäevani, mis ei kattu järgmise pillipausiga (alates {date})",
   "pauseStartDateLimit": "Alguskuupäevaks saad valida hiljemalt {date}",
   "initialSettingAskYazFlex": "Kas võtad Yaz Flexi pille?",
-  "initialSettingAskYazFlexDescription": "Kui valite „Jah“,\nseadistame selle nii, et kuvatakse, mitmes päev on pausijärgselt.",
+  "initialSettingAskYazFlexDescription": "Kui valid „Jah“, seadistatakse kuva näitama, mitu päeva on pillipausi lõpust möödunud",
   "yazFlexLastRestDurationTitle": "Puudutage pilli,\nmille võtsite vahetult enne pausi",
   "yazFlexLastRestDurationNote": "Palun valige viimane pill, mille võtsite enne pausi alustamist",
   "yazFlexRestDurationDaysLabel": "Pausipäevade arv",
