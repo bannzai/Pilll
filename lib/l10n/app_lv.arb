@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Cik dienas ilgst jūsu mēnešreizes?",
   "daysMenstruationLasts": "dienas ilgst mēnešreizes",
   "selectPillNumberForMenstruationStart": "Pieskarieties tabletes numuram, pie kura sākas mēnešreizes",
-  "countOfSheet": "{number}. lapa",
+  "countOfSheet": "Tablešu plāksnīte Nr. {number}",
   "newPillSheetStart": "Sākt jaunu tablešu blisteri ▶︎",
   "selectPillType": "Izvēlēties tablešu veidu",
   "twentyOnePills": "21 tabletes",

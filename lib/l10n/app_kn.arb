@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ನಿಮ್ಮ ಮುಟ್ಟಿನ ಅವಧಿ ಎಷ್ಟು ದಿನ ಇರುತ್ತದೆ?",
   "daysMenstruationLasts": "ದಿನ ಮುಟ್ಟಿನ ಅವಧಿ",
   "selectPillNumberForMenstruationStart": "ಮುಟ್ಟಿನ ಆರಂಭವಾಗುವ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
-  "countOfSheet": "{number}ನೇ ಶೀಟ್",
+  "countOfSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸಂಖ್ಯೆ {number}",
   "newPillSheetStart": "ಹೊಸ ಮಾತ್ರೆ ಶೀಟ್ ಪ್ರಾರಂಭ ▶︎",
   "selectPillType": "ಮಾತ್ರೆಯ ಪ್ರಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "twentyOnePills": "21 ಮಾತ್ರೆಗಳು",

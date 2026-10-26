@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Quants dies et dura la regla?",
   "daysMenstruationLasts": "dies dura la regla",
   "selectPillNumberForMenstruationStart": "Toca el número de píndola amb què comença la regla",
-  "countOfSheet": "{number}è full",
+  "countOfSheet": "Blíster de píndoles núm. {number}",
   "newPillSheetStart": "Començar nou blíster ▶︎",
   "selectPillType": "Selecciona el tipus de píndola",
   "twentyOnePills": "21 comprimits",

@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ଆପଣଙ୍କ ମାସିକ କେତେ ଦିନ ରହେ?",
   "daysMenstruationLasts": "ଦିନ ମାସିକ ଚାଲିଥାଏ",
   "selectPillNumberForMenstruationStart": "ମାସିକ ଆରମ୍ଭ ହେଉଥିବା ବଟିକା ନମ୍ବରକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ",
-  "countOfSheet": "{number}ତମ ସିଟ୍",
+  "countOfSheet": "ବଟି ପତ୍ର ନମ୍ବର {number}",
   "newPillSheetStart": "ନୂତନ ପିଲ ସିଟ ଆରମ୍ଭ ▶︎",
   "selectPillType": "ପିଲ୍‌ର ପ୍ରକାର ଚୟନ କରନ୍ତୁ",
   "twentyOnePills": "୨୧ ଗୋଟି",

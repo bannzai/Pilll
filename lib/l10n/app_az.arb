@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Aybaşınız neçə gün davam edir?",
   "daysMenstruationLasts": "gün aybaşı davam edir",
   "selectPillNumberForMenstruationStart": "Aybaşı başladığı həb nömrəsinə toxunun",
-  "countOfSheet": "{number}-ci paket",
+  "countOfSheet": "{number} nömrəli həb lövhəsi",
   "newPillSheetStart": "Yeni həb paketini başla ▶︎",
   "selectPillType": "Həb növünü seçin",
   "twentyOnePills": "21 tablet",

@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Câte zile durează menstruația ta?",
   "daysMenstruationLasts": "zile durează menstruația",
   "selectPillNumberForMenstruationStart": "Atinge numărul pilulei la care începe menstruația",
-  "countOfSheet": "a {number}-a",
+  "countOfSheet": "Folie de pilule nr. {number}",
   "newPillSheetStart": "Începe blister nou ▶︎",
   "selectPillType": "Selectează tipul de pilulă",
   "twentyOnePills": "21 de comprimate",

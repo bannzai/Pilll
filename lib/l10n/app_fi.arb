@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Kuinka monta päivää kuukautisesi kestävät?",
   "daysMenstruationLasts": "päivää kestävät kuukautiset",
   "selectPillNumberForMenstruationStart": "Napauta pillerinumeroa, jonka kohdalla kuukautiset alkavat",
-  "countOfSheet": "{number}.",
+  "countOfSheet": "Pilleriliuska nro {number}",
   "newPillSheetStart": "Aloita uusi pilleripakkaus ▶︎",
   "selectPillType": "Valitse pillerin tyyppi",
   "twentyOnePills": "21 tablettia",

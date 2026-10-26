@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ستاسو حیض څو ورځې دوام کوي؟",
   "daysMenstruationLasts": "ورځې حیض دوام کوي",
   "selectPillNumberForMenstruationStart": "د حیض د پیل کېدو د ګولۍ شمېر وټاکئ",
-  "countOfSheet": "{number}مه پاڼه",
+  "countOfSheet": "د ګولیو پاڼه شمېره {number}",
   "newPillSheetStart": "نوی پل شیټ پیل ▶︎",
   "selectPillType": "د ګولیو ډول غوره کړئ",
   "twentyOnePills": "شل ګولۍ",

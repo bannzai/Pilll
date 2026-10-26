@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Quantos dias dura sua menstruação?",
   "daysMenstruationLasts": "dias de menstruação",
   "selectPillNumberForMenstruationStart": "Toque no número da pílula em que a menstruação começa",
-  "countOfSheet": "{number}ª cartela",
+  "countOfSheet": "Cartela de pílulas nº {number}",
   "newPillSheetStart": "Iniciar nova cartela ▶︎",
   "selectPillType": "Selecionar tipo de pílula",
   "twentyOnePills": "21 comprimidos",

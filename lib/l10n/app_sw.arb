@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Hedhi yako hudumu kwa siku ngapi?",
   "daysMenstruationLasts": "siku za hedhi",
   "selectPillNumberForMenstruationStart": "Tafadhali gusa nambari ya kidonge ambacho hedhi huanza",
-  "countOfSheet": "ya {number}",
+  "countOfSheet": "Karatasi ya vidonge nambari {number}",
   "newPillSheetStart": "Anza Kipindi Kipya cha Vidonge ▶︎",
   "selectPillType": "Chagua aina ya vidonge vya kuzuia mimba",
   "twentyOnePills": "21 vidonge",

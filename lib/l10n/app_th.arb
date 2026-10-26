@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ประจำเดือนมานานกี่วันคะ?",
   "daysMenstruationLasts": "วัน ประจำเดือนจะมาต่อเนื่องค่ะ",
   "selectPillNumberForMenstruationStart": "แตะหมายเลขเม็ดยาที่ประจำเดือนเริ่มมาค่ะ",
-  "countOfSheet": "ใบที่ {number}",
+  "countOfSheet": "แผงยาเม็ดที่ {number}",
   "newPillSheetStart": "เริ่มแผงยาใหม่ ▶︎",
   "selectPillType": "เลือกประเภทยาคุม",
   "twentyOnePills": "21 เม็ด",

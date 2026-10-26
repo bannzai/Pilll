@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "మీ నెలసరి ఎన్ని రోజులు ఉంటుంది?",
   "daysMenstruationLasts": "రోజులు నెలసరి కొనసాగుతుంది",
   "selectPillNumberForMenstruationStart": "నెలసరి మొదలయ్యే మాత్ర సంఖ్యపై నొక్కండి",
-  "countOfSheet": "{number}వ",
+  "countOfSheet": "మాత్రల షీట్ సంఖ్య {number}",
   "newPillSheetStart": "కొత్త పిల్ షీట్ ప్రారంభం ▶︎",
   "selectPillType": "గుళిక రకాన్ని ఎంచుకోండి",
   "twentyOnePills": "21 మాత్రలు",

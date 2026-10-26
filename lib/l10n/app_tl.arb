@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Ilang araw tumatagal ang regla ninyo?",
   "daysMenstruationLasts": "araw tumatagal ang regla",
   "selectPillNumberForMenstruationStart": "Pakipindot po ang numero ng pildoras kung kailan nagsisimula ang regla",
-  "countOfSheet": "ika-{number}",
+  "countOfSheet": "Pakete ng pildoras bilang {number}",
   "newPillSheetStart": "Simulan ang Bagong Pill Sheet ▶︎",
   "selectPillType": "Pumili ng uri ng pill",
   "twentyOnePills": "21 tableta",

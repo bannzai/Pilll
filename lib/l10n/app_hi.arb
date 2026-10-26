@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "आपका पीरियड कितने दिन रहता है?",
   "daysMenstruationLasts": "दिन पीरियड रहता है",
   "selectPillNumberForMenstruationStart": "जिस गोली नंबर पर पीरियड शुरू होता है, उस पर टैप करें",
-  "countOfSheet": "{number}वीं",
+  "countOfSheet": "पिल शीट क्रमांक {number}",
   "newPillSheetStart": "नई पिल शीट शुरू करें ▶︎",
   "selectPillType": "पिल का प्रकार चुनें",
   "twentyOnePills": "21 टैबलेट",

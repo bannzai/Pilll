@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Koliko dni traja vaša menstruacija?",
   "daysMenstruationLasts": "dni trajanja menstruacije",
   "selectPillNumberForMenstruationStart": "Dotaknite se številke tablete, pri kateri se začne menstruacija",
-  "countOfSheet": "{number}. list",
+  "countOfSheet": "Omot s tabletami št. {number}",
   "newPillSheetStart": "Začni novo škatlico ▶︎",
   "selectPillType": "Izberi vrsto pilule",
   "twentyOnePills": "21 tablet",

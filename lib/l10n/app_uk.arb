@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Скільки днів тривають ваші місячні?",
   "daysMenstruationLasts": "днів тривають місячні",
   "selectPillNumberForMenstruationStart": "Торкніться номера пігулки, з якої починаються місячні",
-  "countOfSheet": "{number}-й блістер",
+  "countOfSheet": "Блістер із пігулками № {number}",
   "newPillSheetStart": "Почати новий блістер ▶︎",
   "selectPillType": "Оберіть тип таблеток",
   "twentyOnePills": "21 таблетка",

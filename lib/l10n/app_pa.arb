@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ਤੁਹਾਡੀ ਮਾਹਵਾਰੀ ਕਿੰਨੇ ਦਿਨ ਰਹਿੰਦੀ ਹੈ?",
   "daysMenstruationLasts": "ਦਿਨ ਮਾਹਵਾਰੀ ਰਹਿੰਦੀ ਹੈ",
   "selectPillNumberForMenstruationStart": "ਜਿਸ ਗੋਲੀ ਨੰਬਰ 'ਤੇ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ, ਉਸ 'ਤੇ ਟੈਪ ਕਰੋ",
-  "countOfSheet": "{number}ਵੀਂ ਸ਼ੀਟ",
+  "countOfSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨੰਬਰ {number}",
   "newPillSheetStart": "ਨਵੀਂ ਪਿੱਲ ਸ਼ੀਟ ਸ਼ੁਰੂ ਕਰੋ ▶︎",
   "selectPillType": "ਗੋਲੀ ਦੀ ਕਿਸਮ ਚੁਣੋ",
   "twentyOnePills": "21 ਗੋਲੀਆਂ",

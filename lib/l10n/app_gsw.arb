@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Wie vil Täg duurt dini Periode?",
   "daysMenstruationLasts": "Täg duurt d Periode",
   "selectPillNumberForMenstruationStart": "Tipp uf d Pillenummer, bi dere dini Periode aafangt",
-  "countOfSheet": "{number}. Packung",
+  "countOfSheet": "Pilleblister Nr. {number}",
   "newPillSheetStart": "Nöis Pilleblatt aafaa ▶︎",
   "selectPillType": "Pille-Art uswähle",
   "twentyOnePills": "21 Tablette",

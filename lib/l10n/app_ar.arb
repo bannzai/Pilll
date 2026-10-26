@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "كم يومًا تستمر الدورة الخاصة بكِ؟",
   "daysMenstruationLasts": "أيام تستمر فيها الدورة",
   "selectPillNumberForMenstruationStart": "اضغطي على رقم الحبة الذي تبدأ عنده الدورة",
-  "countOfSheet": "الورقة {number}",
+  "countOfSheet": "شريط الحبوب رقم {number}",
   "newPillSheetStart": "بدء شريط حبوب جديد ▶︎",
   "selectPillType": "اختر نوع الحبوب",
   "twentyOnePills": "21 قرصاً",

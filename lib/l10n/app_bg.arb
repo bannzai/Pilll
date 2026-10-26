@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Колко дни продължава мензисът ви?",
   "daysMenstruationLasts": "дни продължава мензисът",
   "selectPillNumberForMenstruationStart": "Докоснете номера на хапчето, при което започва мензисът",
-  "countOfSheet": "{number}-та опаковка",
+  "countOfSheet": "Блистер с хапчета № {number}",
   "newPillSheetStart": "Започни нова опаковка ▶︎",
   "selectPillType": "Изберете вид хапче",
   "twentyOnePills": "21 таблетки",

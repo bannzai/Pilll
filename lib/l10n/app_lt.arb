@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Kiek dienų trunka jūsų mėnesinės?",
   "daysMenstruationLasts": "dienas trunka mėnesinės",
   "selectPillNumberForMenstruationStart": "Palieskite tabletės numerį, nuo kurio prasideda mėnesinės",
-  "countOfSheet": "{number}-as lapas",
+  "countOfSheet": "Tablečių lapelis Nr. {number}",
   "newPillSheetStart": "Pradėti naują tabletės pakuotę ▶︎",
   "selectPillType": "Pasirinkite tablečių tipą",
   "twentyOnePills": "21 tabletės",

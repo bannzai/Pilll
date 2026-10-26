@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Ukuya esikhathini kwakho kuthatha izinsuku ezingaki?",
   "daysMenstruationLasts": "izinsuku zokuqhubeka kokuya esikhathini",
   "selectPillNumberForMenstruationStart": "Sicela uthephe inombolo yephilisi lapho kuqala khona ukuya esikhathini",
-  "countOfSheet": "Lesi-{number}",
+  "countOfSheet": "Iphakethe lamaphilisi elingunombolo {number}",
   "newPillSheetStart": "Qala ishidi lepilisi elisha ▶︎",
   "selectPillType": "Khetha uhlobo lwepilisi",
   "twentyOnePills": "21 amaqweci",

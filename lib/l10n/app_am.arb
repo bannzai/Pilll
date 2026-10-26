@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ወር አበባ ለስንት ቀናት ይቆያል?",
   "daysMenstruationLasts": "ቀናት ወር አበባ ይቆያል",
   "selectPillNumberForMenstruationStart": "ወር አበባ የሚጀምርበትን ክኒን ቁጥር ይንኩ",
-  "countOfSheet": "{number}ኛ",
+  "countOfSheet": "የክኒን ሉህ ቁጥር {number}",
   "newPillSheetStart": "አዲስ ክብ መድሃኒት ጀምር ▶︎",
   "selectPillType": "የክንፍ አይነት ይምረጡ",
   "twentyOnePills": "21 ኮምጣጤ",

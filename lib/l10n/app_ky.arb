@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Айызыңыз канча күнгө созулат?",
   "daysMenstruationLasts": "күн айыз созулат",
   "selectPillNumberForMenstruationStart": "Айыз башталган таблетканын номерин басыңыз",
-  "countOfSheet": "{number}-чы",
+  "countOfSheet": "Таблетка блистери № {number}",
   "newPillSheetStart": "Жаңы пилюля баракчасын баштоо ▶︎",
   "selectPillType": "Таблетканын түрүн тандаңыз",
   "twentyOnePills": "21 таблетка",

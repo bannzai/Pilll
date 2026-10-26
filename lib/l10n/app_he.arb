@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "כמה ימים נמשך המחזור?",
   "daysMenstruationLasts": "ימים נמשך המחזור",
   "selectPillNumberForMenstruationStart": "ללחוץ על מספר גלולה שבו מתחיל המחזור",
-  "countOfSheet": "גליון מספר {number}",
+  "countOfSheet": "חפיסת גלולות מספר {number}",
   "newPillSheetStart": "התחל גליון כדורים חדש ▶︎",
   "selectPillType": "בחר סוג גלולה",
   "twentyOnePills": "21 גלולות",

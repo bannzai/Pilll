@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "پریود شما چند روز طول می‌کشد؟",
   "daysMenstruationLasts": "روز پریود ادامه دارد",
   "selectPillNumberForMenstruationStart": "لطفاً روی شماره قرصِ شروع پریود بزنید",
-  "countOfSheet": "بسته {number}ام",
+  "countOfSheet": "ورق قرص شمارهٔ {number}",
   "newPillSheetStart": "شروع بسته جدید ▶︎",
   "selectPillType": "انتخاب نوع قرص",
   "twentyOnePills": "بیست و یک قرص",

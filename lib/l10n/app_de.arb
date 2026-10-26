@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Wie viele Tage dauert deine Periode?",
   "daysMenstruationLasts": "Tage dauert die Periode",
   "selectPillNumberForMenstruationStart": "Tippe auf die Pillennummer, bei der deine Periode beginnt",
-  "countOfSheet": "{number}. Packung",
+  "countOfSheet": "Pillenblister Nr. {number}",
   "newPillSheetStart": "Neue Pillenpackung starten ▶︎",
   "selectPillType": "Pillentyp auswählen",
   "twentyOnePills": "21 Tabletten",

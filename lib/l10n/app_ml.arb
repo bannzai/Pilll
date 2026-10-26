@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "നിങ്ങളുടെ ആർത്തവം എത്ര ദിവസം നീണ്ടുനിൽക്കും?",
   "daysMenstruationLasts": "ദിവസം ആർത്തവം നീണ്ടുനിൽക്കും",
   "selectPillNumberForMenstruationStart": "ആർത്തവം തുടങ്ങുന്ന ഗുളിക നമ്പറിൽ ടാപ്പ് ചെയ്യൂ",
-  "countOfSheet": "{number}ാം",
+  "countOfSheet": "ഗുളിക ഷീറ്റ് നമ്പർ {number}",
   "newPillSheetStart": "പുതിയ പിൽ ഷീറ്റ് ആരംഭിക്കുക ▶︎",
   "selectPillType": "പിൽ തരം തിരഞ്ഞെടുക്കുക",
   "twentyOnePills": "21 മാത്രകൾ",

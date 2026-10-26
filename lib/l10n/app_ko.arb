@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "생리는 며칠 동안 지속되나요?",
   "daysMenstruationLasts": "일간 생리가 계속돼요",
   "selectPillNumberForMenstruationStart": "생리가 시작되는 알약 번호를 탭해 주세요",
-  "countOfSheet": "{number}번째",
+  "countOfSheet": "{number}번째 피임약 시트",
   "newPillSheetStart": "새 피임약 시트 시작 ▶︎",
   "selectPillType": "피임약 종류 선택",
   "twentyOnePills": "21정",

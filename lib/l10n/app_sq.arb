@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Sa ditë zgjat menstruacioni juaj?",
   "daysMenstruationLasts": "ditë zgjat menstruacioni",
   "selectPillNumberForMenstruationStart": "Prekni numri i pilulës me të cilën fillon menstruacioni",
-  "countOfSheet": "Fletë {number}",
+  "countOfSheet": "Fleta e pilulave nr. {number}",
   "newPillSheetStart": "Fillo fletë të re pilulash ▶︎",
   "selectPillType": "Zgjidhni llojin e pilulës",
   "twentyOnePills": "21 tableta",

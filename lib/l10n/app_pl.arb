@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Ile dni trwa twój okres?",
   "daysMenstruationLasts": "dni trwa okres",
   "selectPillNumberForMenstruationStart": "Dotknij numeru tabletki, przy której zaczyna się okres",
-  "countOfSheet": "{number}. arkusz",
+  "countOfSheet": "Blister z tabletkami nr {number}",
   "newPillSheetStart": "Rozpocznij nowy blister ▶︎",
   "selectPillType": "Wybierz typ pigułki",
   "twentyOnePills": "21 tabletek",

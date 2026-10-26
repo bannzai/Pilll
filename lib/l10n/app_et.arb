@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Mitu päeva su päevad kestavad?",
   "daysMenstruationLasts": "päeva kestavad päevad",
   "selectPillNumberForMenstruationStart": "Puuduta pillinumbrit, mille juures päevad algavad",
-  "countOfSheet": "{number}. leht",
+  "countOfSheet": "Pillileht nr {number}",
   "newPillSheetStart": "Alusta uut pillipakki ▶︎",
   "selectPillType": "Vali tableti tüüp",
   "twentyOnePills": "21 tabletti",

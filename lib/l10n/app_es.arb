@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "¿Cuántos días dura tu regla?",
   "daysMenstruationLasts": "días de regla",
   "selectPillNumberForMenstruationStart": "Toca el número de píldora con el que empieza la regla",
-  "countOfSheet": "Blíster {number}",
+  "countOfSheet": "Blíster de píldoras n.º {number}",
   "newPillSheetStart": "Iniciar nuevo blíster ▶︎",
   "selectPillType": "Seleccionar tipo de píldora",
   "twentyOnePills": "21 comprimidos",

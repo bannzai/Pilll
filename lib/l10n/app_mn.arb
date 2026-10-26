@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Таны сарын тэмдгийн хугацаа хэдэн өдөр үргэлжилдэг вэ?",
   "daysMenstruationLasts": "өдөр сарын тэмдгийн хугацаа үргэлжилнэ",
   "selectPillNumberForMenstruationStart": "Сарын тэмдгийн эхлэх эмийн дугаарыг товшино уу",
-  "countOfSheet": "{number}-дахь хуудас",
+  "countOfSheet": "Эмийн блистерийн дугаар {number}",
   "newPillSheetStart": "Шинэ эмийн хуудас эхлэх ▶︎",
   "selectPillType": "Эмийн төрлийг сонгох",
   "twentyOnePills": "21 таблет",

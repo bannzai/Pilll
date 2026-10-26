@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "ປະຈຳເດືອນຂອງທ່ານເປັນຈັກມື້?",
   "daysMenstruationLasts": "ມື້ ປະຈຳເດືອນດຳເນີນຕໍ່",
   "selectPillNumberForMenstruationStart": "ກະລຸນາແຕະເລກເມັດຢາທີ່ເລີ່ມມີປະຈຳເດືອນ",
-  "countOfSheet": "ແຜ່ນທີ່ {number}",
+  "countOfSheet": "ແຜງຢາເມັດໝາຍເລກ {number}",
   "newPillSheetStart": "ເລີ່ມແຜ່ນຢາໃໝ່ ▶︎",
   "selectPillType": "ເລືອກປະເພດຢາຄຸມກຳເນີດ",
   "twentyOnePills": "21 ເມັດ",

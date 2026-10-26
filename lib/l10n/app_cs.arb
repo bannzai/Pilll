@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Kolik dní trvá vaše menstruace?",
   "daysMenstruationLasts": "dní trvá menstruace",
   "selectPillNumberForMenstruationStart": "Klepněte na číslo tablety, při které začíná menstruace",
-  "countOfSheet": "{number}. balení",
+  "countOfSheet": "Blistr s pilulkami č. {number}",
   "newPillSheetStart": "Začít nové balení pilulek ▶︎",
   "selectPillType": "Vybrat typ pilulky",
   "twentyOnePills": "21 tablet",

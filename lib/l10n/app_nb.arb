@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Hvor mange dager varer mensen din?",
   "daysMenstruationLasts": "dager varer mensen",
   "selectPillNumberForMenstruationStart": "Trykk på pillenummeret der mensen begynner",
-  "countOfSheet": "{number}. pakke",
+  "countOfSheet": "Pillebrett nr. {number}",
   "newPillSheetStart": "Start nytt pilleark ▶︎",
   "selectPillType": "Velg pilletype",
   "twentyOnePills": "21 tabletter",

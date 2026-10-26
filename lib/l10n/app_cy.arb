@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Am sawl diwrnod mae eich mislif yn para?",
   "daysMenstruationLasts": "diwrnod y bydd y mislif yn para",
   "selectPillNumberForMenstruationStart": "Tapiwch y rhif y bilsen pan fydd y mislif yn dechrau",
-  "countOfSheet": "Dalen {number}",
+  "countOfSheet": "Pecyn tabledi rhif {number}",
   "newPillSheetStart": "Dechrau taflen bilsen newydd ▶︎",
   "selectPillType": "Dewiswch fath y bilsen",
   "twentyOnePills": "21 tabled",

@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Сколько дней длятся ваши месячные?",
   "daysMenstruationLasts": "дней длятся месячные",
   "selectPillNumberForMenstruationStart": "Нажмите на номер таблетки, с которой начинаются месячные",
-  "countOfSheet": "{number}-й лист",
+  "countOfSheet": "Блистер с таблетками № {number}",
   "newPillSheetStart": "Начать новый блистер ▶︎",
   "selectPillType": "Выберите тип таблеток",
   "twentyOnePills": "21 таблетка",

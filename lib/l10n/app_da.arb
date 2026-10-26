@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Hvor mange dage varer din menstruation?",
   "daysMenstruationLasts": "dage varer menstruationen",
   "selectPillNumberForMenstruationStart": "Tryk på det pillenummer, hvor din menstruation begynder",
-  "countOfSheet": "{number}. pakke",
+  "countOfSheet": "Pillekort nr. {number}",
   "newPillSheetStart": "Start ny p-pille pakke ▶︎",
   "selectPillType": "Vælg pilletage",
   "twentyOnePills": "21 tabletter",

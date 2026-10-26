@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Етеккіріңіз неше күнге созылады?",
   "daysMenstruationLasts": "күн етеккір жалғасады",
   "selectPillNumberForMenstruationStart": "Етеккір басталатын таблетка нөмірін түртіңіз",
-  "countOfSheet": "{number}-ші",
+  "countOfSheet": "Таблетка блистері № {number}",
   "newPillSheetStart": "Жаңа таблетка пакетін бастау ▶︎",
   "selectPillType": "Пилюля түрін таңдаңыз",
   "twentyOnePills": "21 таблетка",

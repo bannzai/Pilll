@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Hány napig tart a menstruációd?",
   "daysMenstruationLasts": "napig tart a menstruáció",
   "selectPillNumberForMenstruationStart": "Koppints arra a tablettaszámra, amelynél kezdődik a menstruáció",
-  "countOfSheet": "{number}. lap",
+  "countOfSheet": "{number}. tablettalevél",
   "newPillSheetStart": "Új csomag kezdése ▶︎",
   "selectPillType": "Tabletta típus kiválasztása",
   "twentyOnePills": "21 tabletta",

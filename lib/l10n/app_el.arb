@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Πόσες ημέρες διαρκεί η περίοδός σας;",
   "daysMenstruationLasts": "ημέρες διάρκειας της περιόδου",
   "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό χαπιού με τον οποίο ξεκινά η περίοδος",
-  "countOfSheet": "{number}η",
+  "countOfSheet": "Καρτέλα χαπιών αρ. {number}",
   "newPillSheetStart": "Έναρξη νέου φύλλου χαπιών ▶︎",
   "selectPillType": "Επιλογή τύπου χαπιού",
   "twentyOnePills": "21 δισκία",

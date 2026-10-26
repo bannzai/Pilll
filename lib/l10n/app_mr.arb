@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "तुमची मासिक पाळी किती दिवस चालते?",
   "daysMenstruationLasts": "दिवस मासिक पाळी चालते",
   "selectPillNumberForMenstruationStart": "मासिक पाळी सुरू होते तो गोळी क्रमांक टॅप करा",
-  "countOfSheet": "{number} वा",
+  "countOfSheet": "गोळ्यांची पट्टी क्रमांक {number}",
   "newPillSheetStart": "नवीन पिल शीट सुरुवात ▶︎",
   "selectPillType": "गोळीचा प्रकार निवडा",
   "twentyOnePills": "21 टॅब्लेट",

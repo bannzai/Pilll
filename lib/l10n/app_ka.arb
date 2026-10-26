@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "რამდენ დღეს გრძელდება თქვენი მენსტრუაცია?",
   "daysMenstruationLasts": "დღე გრძელდება მენსტრუაცია",
   "selectPillNumberForMenstruationStart": "შეეხეთ აბის ნომერს, რომლის დროსაც მენსტრუაცია იწყება",
-  "countOfSheet": "{number}-ე",
+  "countOfSheet": "აბების ფირფიტა № {number}",
   "newPillSheetStart": "ახალი ფოთლის დაწყება ▶︎",
   "selectPillType": "აბის ტიპის არჩევა",
   "twentyOnePills": "21 ტაბლეტი",

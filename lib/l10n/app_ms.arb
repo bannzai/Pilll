@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Berapa hari haid anda berlangsung?",
   "daysMenstruationLasts": "hari haid berlangsung",
   "selectPillNumberForMenstruationStart": "Sila ketik nombor pil ketika haid bermula",
-  "countOfSheet": "Lembar {number}",
+  "countOfSheet": "Pek pil nombor {number}",
   "newPillSheetStart": "Mula Pakej Pil Baru ▶︎",
   "selectPillType": "Pilih Jenis Pil",
   "twentyOnePills": "21 tablet",

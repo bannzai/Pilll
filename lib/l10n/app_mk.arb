@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Колку дена трае Вашата менструација?",
   "daysMenstruationLasts": "дена трае менструација",
   "selectPillNumberForMenstruationStart": "Допрете го број на таблета со кој започнува менструација",
-  "countOfSheet": "{number}-ти блистер",
+  "countOfSheet": "Блистер со таблети број {number}",
   "newPillSheetStart": "Започни ново пакување пилули ▶︎",
   "selectPillType": "Избери тип на пилула",
   "twentyOnePills": "21 таблети",

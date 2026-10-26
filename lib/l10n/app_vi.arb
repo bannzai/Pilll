@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Kinh nguyệt của bạn kéo dài bao nhiêu ngày?",
   "daysMenstruationLasts": "ngày là thời gian kinh nguyệt kéo dài",
   "selectPillNumberForMenstruationStart": "Chạm vào số thứ tự viên thuốc khi kinh nguyệt bắt đầu",
-  "countOfSheet": "Tờ thứ {number}",
+  "countOfSheet": "Vỉ thuốc số {number}",
   "newPillSheetStart": "Bắt đầu vỉ thuốc mới ▶︎",
   "selectPillType": "Chọn loại thuốc tránh thai",
   "twentyOnePills": "21 viên",

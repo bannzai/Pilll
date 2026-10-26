@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Քանի՞ օր է տևում Ձեր դաշտանը:",
   "daysMenstruationLasts": "օր տևում է դաշտանը",
   "selectPillNumberForMenstruationStart": "Հպեք հաբի համարին, որից սկսվում է դաշտանը",
-  "countOfSheet": "{number}-րդ",
+  "countOfSheet": "Հաբերի թերթիկ № {number}",
   "newPillSheetStart": "Սկսել նոր դեղահապի թերթ ▶︎",
   "selectPillType": "Ընտրել պիլի տեսակը",
   "twentyOnePills": "21 հաբ",

@@ -269,7 +269,7 @@
   "howManyDaysDoesMenstruationLast": "Hoeveel dagen duurt je menstruatie?",
   "daysMenstruationLasts": "dagen duurt de menstruatie",
   "selectPillNumberForMenstruationStart": "Tik op het pilnummer waarbij je menstruatie begint",
-  "countOfSheet": "{number}e blister",
+  "countOfSheet": "Pillenstrip nummer {number}",
   "newPillSheetStart": "Nieuwe pillenstrip starten ▶︎",
   "selectPillType": "Selecteer het type pil",
   "twentyOnePills": "21 tabletten",
