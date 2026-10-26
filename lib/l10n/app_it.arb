@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Informazioni ai sensi della legge giapponese sulle transazioni commerciali specifiche",
   "premiumTermsNotice3": "Ti invitiamo a leggerli prima di abbonarti",
   "autoRenewNotice": "・L’abbonamento Premium si rinnova automaticamente, a meno che tu non lo annulli almeno 24 ore prima della fine del periodo di abbonamento",
-  "cancelAutoRenewInfo": "・Dopo l'acquisto, la cancellazione del rinnovo automatico può essere effettuata nelle impostazioni dell'account dell'app {storeName}. (La cancellazione del rinnovo automatico non può essere effettuata dall'interno dell'app).",
+  "cancelAutoRenewInfo": "Dopo l’acquisto, puoi annullare il rinnovo automatico nelle impostazioni dell’account dell’app {storeName}. Non puoi annullarlo da Pilll.",
   "moreDetails": "Maggiori dettagli",
   "restorePurchase": "Informazioni di acquisto ripristinate",
   "previouslyPurchased": "Hai già acquistato? Clicca qui",

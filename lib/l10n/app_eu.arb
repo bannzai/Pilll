@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Japoniako merkataritza eragiketa zehatzei buruzko legearen araberako informazioa",
   "premiumTermsNotice3": "Berrikusi itzazu harpidetu aurretik",
   "autoRenewNotice": "・Premium harpidetza automatikoki berrituko da, harpidetza-aldia amaitu baino gutxienez 24 ordu lehenago bertan behera uzten ez baduzu",
-  "cancelAutoRenewInfo": "・Erosketa egin ondoren, berritzapen automatikoa ezeztatzeko {storeName} aplikazioaren kontu ezarpenak erabili behar dituzu. (Aplikazioaren barnean ezin da berritzapen automatikoa ezeztatu).",
+  "cancelAutoRenewInfo": "Erosi ondoren, berritze automatikoa {storeName} aplikazioko kontuaren ezarpenetan bertan behera utz dezakezu. Ezin da Pilll aplikaziotik bertan behera utzi.",
   "moreDetails": "Xehetasun gehiago",
   "restorePurchase": "Erosketa informazioa berreskuratu da",
   "previouslyPurchased": "Aurretik erositakoak hemen",

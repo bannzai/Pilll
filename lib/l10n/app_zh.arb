@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "根据日本《特定商业交易法》披露的信息",
   "premiumTermsNotice3": "请确认相关内容后再订阅",
   "autoRenewNotice": "・高级订阅将在订阅期结束时自动续订，除非你在结束前至少 24 小时取消",
-  "cancelAutoRenewInfo": "・购买后，可在{storeName}应用的账户设置中取消自动续订。(无法在应用内取消自动续订)。",
+  "cancelAutoRenewInfo": "购买后，你可以在 {storeName} App 的账户设置中取消自动续订。无法在 Pilll 内取消。",
   "moreDetails": "查看详情",
   "restorePurchase": "已恢复购买信息",
   "previouslyPurchased": "已购买用户请点此",

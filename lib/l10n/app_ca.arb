@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Informació segons la llei japonesa de transaccions comercials específiques",
   "premiumTermsNotice3": "Revisa-ho abans de subscriure-t'hi",
   "autoRenewNotice": "・La subscripció Premium es renova automàticament si no la cancel·les almenys 24 hores abans que acabi el període de subscripció",
-  "cancelAutoRenewInfo": "・Després de la compra, la cancel·lació de la renovació automàtica es pot fer a la configuració del compte de l'aplicació {storeName}. (No es pot cancel·lar la renovació automàtica des de l'aplicació).",
+  "cancelAutoRenewInfo": "Després de la compra, pots cancel·lar la renovació automàtica a la configuració del compte de l’app {storeName}. No es pot cancel·lar des de Pilll.",
   "moreDetails": "Més detalls",
   "restorePurchase": "S'ha restaurat la informació de compra",
   "previouslyPurchased": "Restaurar compra anterior",

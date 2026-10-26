@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Upplýsingar samkvæmt japönskum lögum um tiltekin viðskipti",
   "premiumTermsNotice3": "Kynntu þér þau áður en þú gerist áskrifandi",
   "autoRenewNotice": "・Premium-áskriftin endurnýjast sjálfkrafa nema þú segir henni upp að minnsta kosti 24 klukkustundum áður en áskriftartímabilinu lýkur",
-  "cancelAutoRenewInfo": "・Eftir kaup er hægt að hætta við sjálfvirka endurnýjun í reikningsstillingum {storeName} appsins. (Ekki er hægt að hætta við sjálfvirka endurnýjun innan appsins).",
+  "cancelAutoRenewInfo": "Eftir kaupin geturðu sagt upp sjálfvirkri endurnýjun í reikningsstillingum {storeName}-appsins. Ekki er hægt að segja henni upp í Pilll.",
   "moreDetails": "Nánar hér",
   "restorePurchase": "Kaupupplýsingar hafa verið endurheimtar",
   "previouslyPurchased": "Fyrri kaupendur - hér",

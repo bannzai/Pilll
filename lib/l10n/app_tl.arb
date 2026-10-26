@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Impormasyon ayon sa batas ng Japan sa mga partikular na transaksyong pangkalakalan",
   "premiumTermsNotice3": "Pakibasa po muna ang mga ito bago kayo mag-subscribe",
   "autoRenewNotice": "・Awtomatikong magre-renew ang inyong Premium na subscription maliban kung kanselahin ninyo ito nang hindi bababa sa 24 na oras bago matapos ang panahon ng subscription",
-  "cancelAutoRenewInfo": "・Pagkatapos ng pagbili, ang pagkansela ng awtomatikong pag-renew ay maaaring gawin sa account settings ng {storeName} app. (Hindi makakansela ang awtomatikong pag-renew mula sa loob ng app).",
+  "cancelAutoRenewInfo": "Pagkatapos bumili, maaari ninyong kanselahin ang awtomatikong pag-renew sa mga setting ng account sa app na {storeName}. Hindi ito maaaring kanselahin sa Pilll.",
   "moreDetails": "Tingnan ang detalye",
   "restorePurchase": "Naibalik na ang impormasyon ng pagbili",
   "previouslyPurchased": "Para sa mga dating bumili, dito",

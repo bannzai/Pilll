@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Taarifa kwa mujibu wa sheria ya Japani kuhusu miamala maalumu ya kibiashara",
   "premiumTermsNotice3": "Tafadhali zisome kabla ya kujisajili",
   "autoRenewNotice": "・Usajili wa Premium utajisasisha kiotomatiki isipokuwa uughairi angalau saa 24 kabla ya kipindi cha usajili kuisha",
-  "cancelAutoRenewInfo": "・Baada ya ununuzi, kusitisha upyaji otomatiki kunaweza kufanywa katika mipangilio ya akaunti ya programu ya {storeName}. (Kusitisha upyaji otomatiki hakuwezi kufanywa ndani ya programu).",
+  "cancelAutoRenewInfo": "Baada ya kununua, unaweza kughairi usasishaji wa moja kwa moja kwenye mipangilio ya akaunti katika programu ya {storeName}. Huwezi kuug hairi ndani ya Pilll.",
   "moreDetails": "Maelezo zaidi",
   "restorePurchase": "Taarifa za ununuzi zimerudishwa",
   "previouslyPurchased": "Waliokuwa wamenunua zamani",

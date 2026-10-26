@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Podatki v skladu z japonskim zakonom o določenih trgovinskih poslih",
   "premiumTermsNotice3": "Pred sklenitvijo naročnine jih, prosimo, preberite",
   "autoRenewNotice": "・Naročnina Premium se samodejno obnovi, če je ne prekličete vsaj 24 ur pred koncem naročniškega obdobja",
-  "cancelAutoRenewInfo": "・Po nakupu lahko preklic samodejne podaljšave opravite v nastavitvah računa aplikacije {storeName}. (Preklic samodejne podaljšave iz aplikacije ni mogoč).",
+  "cancelAutoRenewInfo": "Po nakupu lahko samodejno podaljšanje prekličete v nastavitvah računa v aplikaciji {storeName}. V aplikaciji Pilll ga ni mogoče preklicati.",
   "moreDetails": "Več podrobnosti",
   "restorePurchase": "Nakupni podatki so bili obnovljeni",
   "previouslyPurchased": "Obnovitev nakupa",

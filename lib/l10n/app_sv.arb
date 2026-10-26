@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Uppgifter enligt Japans lag om särskilda handelstransaktioner",
   "premiumTermsNotice3": "Läs igenom dem innan du börjar prenumerera",
   "autoRenewNotice": "・Din premiumprenumeration förnyas automatiskt om du inte säger upp den minst 24 timmar innan prenumerationsperioden löper ut",
-  "cancelAutoRenewInfo": "• Efter köpet kan automatisk förnyelse avbrytas i kontoinställningarna i {storeName}-appen. (Automatisk förnyelse kan inte avbrytas inifrån appen).",
+  "cancelAutoRenewInfo": "Efter köpet kan du avsluta den automatiska förnyelsen i kontoinställningarna i {storeName}-appen. Du kan inte avsluta den i Pilll.",
   "moreDetails": "Läs mer",
   "restorePurchase": "Köpinformation har återställts",
   "previouslyPurchased": "Återställ tidigare köp",

@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Teave Jaapani määratletud äritehingute seaduse alusel",
   "premiumTermsNotice3": "Vaata need enne tellimist üle",
   "autoRenewNotice": "・Sinu premium-tellimus uueneb automaatselt, kui sa ei tühista seda vähemalt 24 tundi enne tellimusperioodi lõppu",
-  "cancelAutoRenewInfo": "・Pärast ostu saab automaatse uuendamise tühistada {storeName} rakenduse konto seadetes. (Rakendusest automaatse uuendamise tühistamine ei ole võimalik).",
+  "cancelAutoRenewInfo": "Pärast ostu saad automaatse uuendamise tühistada {storeName}i rakenduse kontoseadetes. Pilllis seda tühistada ei saa.",
   "moreDetails": "Loe lähemalt",
   "restorePurchase": "Ostud on taastatud",
   "previouslyPurchased": "Varem ostnud kasutajatele",

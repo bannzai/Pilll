@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "일본 특정상거래법에 따른 표시",
   "premiumTermsNotice3": "내용을 확인한 후 구독해 주세요",
   "autoRenewNotice": "・프리미엄 구독 기간이 끝나기 최소 24시간 전까지 취소하지 않으면 구독이 자동으로 갱신돼요",
-  "cancelAutoRenewInfo": "・구매 후, 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 할 수 있습니다. (앱 내에서는 자동 갱신 해지를 할 수 없습니다).",
+  "cancelAutoRenewInfo": "구매 후 자동 갱신은 {storeName} 앱의 계정 설정에서 해지할 수 있어요. Pilll 앱 안에서는 해지할 수 없어요.",
   "moreDetails": "자세히 보기",
   "restorePurchase": "구매 정보를 복원했습니다",
   "previouslyPurchased": "이전에 구매하신 분은 여기",

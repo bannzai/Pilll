@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Informacija pagal Japonijos įstatymą dėl tam tikrų komercinių sandorių",
   "premiumTermsNotice3": "Prieš užsisakydami prenumeratą, susipažinkite su jomis",
   "autoRenewNotice": "・Premium prenumerata automatiškai pratęsiama, jei jos neatšaukiate likus bent 24 valandoms iki prenumeratos laikotarpio pabaigos",
-  "cancelAutoRenewInfo": "・Po pirkimo automatinio atnaujinimo atšaukimą galite atlikti {storeName} programėlės paskyros nustatymuose (automatinio atnaujinimo negalima atšaukti programėlės viduje).",
+  "cancelAutoRenewInfo": "Įsigiję prenumeratą, automatinį atnaujinimą galite atšaukti programėlės {storeName} paskyros nustatymuose. Programėlėje Pilll jo atšaukti negalima.",
   "moreDetails": "Išsamiau",
   "restorePurchase": "Pirkimai sėkmingai atkurti",
   "previouslyPurchased": "Atkurti pirkimą",

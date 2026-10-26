@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Gwybodaeth yn unol â chyfraith Japan ar drafodion masnachol penodol",
   "premiumTermsNotice3": "Darllenwch nhw cyn tanysgrifio, os gwelwch yn dda",
   "autoRenewNotice": "・Bydd eich tanysgrifiad premiwm yn adnewyddu'n awtomatig oni bai eich bod yn ei ganslo o leiaf 24 awr cyn diwedd cyfnod y tanysgrifiad",
-  "cancelAutoRenewInfo": "・Ar ôl prynu, gellir canslo'r adnewyddu awtomatig yng ngosodiadau cyfrif yr ap {storeName}. (Ni ellir canslo'r adnewyddu awtomatig o fewn yr ap).",
+  "cancelAutoRenewInfo": "Ar ôl prynu, gallwch ganslo’r adnewyddiad awtomatig yng ngosodiadau eich cyfrif yn ap {storeName}. Ni ellir ei ganslo o ap Pilll.",
   "moreDetails": "Manylion pellach",
   "restorePurchase": "Mae'r wybodaeth brynu wedi'i hadfer",
   "previouslyPurchased": "Os prynoch chi eisoes",

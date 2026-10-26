@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Informacje wymagane japońską ustawą o określonych transakcjach handlowych",
   "premiumTermsNotice3": "Zapoznaj się z nimi przed wykupieniem subskrypcji",
   "autoRenewNotice": "・Subskrypcja premium odnawia się automatycznie, chyba że anulujesz ją co najmniej 24 godziny przed końcem okresu subskrypcji",
-  "cancelAutoRenewInfo": "・Po zakupie anulowanie automatycznego odnawiania można wykonać w ustawieniach konta aplikacji {storeName} (nie można anulować automatycznego odnawiania z poziomu aplikacji).",
+  "cancelAutoRenewInfo": "Po zakupie automatyczne odnawianie można wyłączyć w ustawieniach konta w aplikacji {storeName}. Nie można go wyłączyć w Pilll.",
   "moreDetails": "Zobacz szczegóły",
   "restorePurchase": "Przywrócono informacje o zakupie",
   "previouslyPurchased": "Przywróć wcześniejszy zakup",

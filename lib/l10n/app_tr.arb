@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Japonya’nın Belirli Ticari İşlemler Yasası kapsamındaki bilgiler",
   "premiumTermsNotice3": "Abone olmadan önce lütfen bunları inceleyin",
   "autoRenewNotice": "・Premium aboneliğiniz, abonelik dönemi bitmeden en az 24 saat önce iptal etmediğiniz sürece otomatik olarak yenilenir",
-  "cancelAutoRenewInfo": "・Satın alma sonrası, otomatik yenilemenin iptali {storeName} uygulamasının hesap ayarlarından yapılabilir. (Uygulama içinden otomatik yenileme iptal edilemez).",
+  "cancelAutoRenewInfo": "Satın aldıktan sonra otomatik yenilemeyi {storeName} uygulamasındaki hesap ayarlarından iptal edebilirsiniz. Pilll içinden iptal edemezsiniz.",
   "moreDetails": "Detaylar",
   "restorePurchase": "Satın alma bilgileri geri yüklendi",
   "previouslyPurchased": "Daha önce satın alanlar",

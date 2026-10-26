@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Yaponiyanın xüsusi kommersiya əməliyyatları haqqında qanununa əsasən məlumat",
   "premiumTermsNotice3": "Abunə olmamışdan əvvəl zəhmət olmasa nəzərdən keçirin",
   "autoRenewNotice": "・Premium abunəliyiniz abunə müddətinin bitməsinə ən azı 24 saat qalmış ləğv edilməzsə, avtomatik yenilənəcək",
-  "cancelAutoRenewInfo": "・Satın alma-dan sonra avtomatik yenilənməni ləğv etmək {storeName} tətbiqinin hesab parametrlərində aparılır. (Tətbiq daxilindən avtomatik yenilənməni ləğv etmək mümkün deyil).",
+  "cancelAutoRenewInfo": "Satın aldıqdan sonra avtomatik yenilənməni {storeName} tətbiqinin hesab ayarlarından ləğv edə bilərsiniz. Bunu Pilll tətbiqindən ləğv etmək mümkün deyil.",
   "moreDetails": "Ətraflı məlumat",
   "restorePurchase": "Satın alma məlumatları bərpa edildi",
   "previouslyPurchased": "Əvvəl satın alanlar üçün",

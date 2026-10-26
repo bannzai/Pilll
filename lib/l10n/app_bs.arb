@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Podaci u skladu s japanskim zakonom o određenim trgovačkim transakcijama",
   "premiumTermsNotice3": "Molimo Vas da ih pregledate prije pretplate",
   "autoRenewNotice": "・Vaša premium pretplata automatski se obnavlja ako je ne otkažete najmanje 24 sata prije isteka perioda pretplate",
-  "cancelAutoRenewInfo": "・Nakon kupovine, otkazivanje automatskog obnavljanja možete izvršiti u postavkama računa {storeName} aplikacije. (Otkazivanje automatskog obnavljanja iz aplikacije nije moguće).",
+  "cancelAutoRenewInfo": "Nakon kupovine možete otkazati automatsku obnovu u postavkama računa u aplikaciji {storeName}. Ne možete je otkazati u aplikaciji Pilll.",
   "moreDetails": "Vidi detalje",
   "restorePurchase": "Informacije o kupovini su uspješno obnovljene",
   "previouslyPurchased": "Za prethodne kupce - ovdje",

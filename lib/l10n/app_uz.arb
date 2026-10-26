@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Yaponiyaning ayrim tijorat bitimlari toʻgʻrisidagi qonuniga muvofiq maʼlumotlar",
   "premiumTermsNotice3": "Obuna bo‘lishdan oldin ularni ko‘rib chiqing",
   "autoRenewNotice": "・Premium obuna muddati tugashidan kamida 24 soat oldin uni bekor qilmasangiz, obuna avtomatik ravishda yangilanadi",
-  "cancelAutoRenewInfo": "• Sotib olgandan so'ng, avtomatik yangilanishni bekor qilishni {storeName} ilovasining hisob sozlamalarida amalga oshirishingiz mumkin. (Ilovaning o'zidan avtomatik yangilanishni bekor qilib bo'lmaydi).",
+  "cancelAutoRenewInfo": "Xariddan soʻng avtomatik yangilanishni {storeName} ilovasidagi hisob sozlamalarida bekor qilishingiz mumkin. Uni Pilll ilovasi ichida bekor qilib boʻlmaydi.",
   "moreDetails": "Tafsilotlar",
   "restorePurchase": "Sotib olish ma'lumotlari tiklandi",
   "previouslyPurchased": "Avval sotib olganlar",

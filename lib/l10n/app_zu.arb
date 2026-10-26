@@ -187,7 +187,7 @@
   "premiumTermsNotice2": "Ulwazi ngokomthetho waseJapane ophathelene nokuhwebelana okuthile",
   "premiumTermsNotice3": "Sicela ukufunde ngaphambi kokubhalisela uhlelo",
   "autoRenewNotice": "・Ukubhalisa kwakho ku-i-Premium kuzovuselelwa ngokuzenzakalelayo ngaphandle uma ukukhansela okungenani amahora angu-24 ngaphambi kokuphela kwesikhathi sokubhalisa",
-  "cancelAutoRenewInfo": "• Ngemuva kokuthengwa, ungakhansela ukuvuselela ngokuzenzakalayo ezilungiselelweni ze-akhawunti kuhlelo lokusebenza lwe-{storeName}. (Awukwazi ukukhansela ukuvuselela ngokuzenzakalayo ngaphakathi kuhlelo lokusebenza).",
+  "cancelAutoRenewInfo": "Ngemva kokuthenga, ungakhansela ukuvuselelwa okuzenzakalelayo kuzilungiselelo ze-akhawunti kuhlelo lokusebenza lwe-{storeName}. Awukwazi ukukukhansela ngaphakathi kwe-Pilll.",
   "moreDetails": "Imininingwane lapha",
   "restorePurchase": "Imininingwane yokuthenga ibuyisiwe",
   "previouslyPurchased": "Uma senguthenge ngaphambili, chofoza lapha",
