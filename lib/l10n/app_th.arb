@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "การแจ้งเตือนที่มีเสียงแม้อยู่ในโหมดเงียบ",
   "alarmKitFeatureAppealHeadline": "การแจ้งเตือนให้ทานยาแบบนาฬิกาปลุก",
   "alarmKitFeatureAppealBody": "เมื่อใช้ AlarmKit ที่มีให้ใช้ตั้งแต่ iOS 26 เป็นต้นไป นาฬิกาปลุกที่ดังแม้เปิดโหมดเงียบหรือโหมดโฟกัสจะช่วยเตือนเวลาทานยาค่ะ",
-  "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขการทานวันนี้",
+  "todayPillNumberFeatureAppealTitle": "ปรับหมายเลขยาเม็ดของวันนี้",
   "todayPillNumberFeatureAppealShortDescription": "หากหมายเลขไม่ตรง ให้แก้ไขได้ที่การตั้งค่า",
   "todayPillNumberFeatureAppealHeadline": "เปลี่ยนหมายเลขเม็ดยาที่จะทานวันนี้",
   "todayPillNumberFeatureAppealBody": "หากหมายเลขบนแผ่นยาหรือการนับเม็ดไม่ตรงกับการกินจริง เนื่องจากการลืมกินหรือการสลับเม็ด คุณสามารถปรับหมายเลขเม็ดยาสำหรับวันนี้ด้วยตนเองได้ นอกจากนี้ คุณยังสามารถเปิดหน้าจอเดียวกันนี้จากการแสดงหมายเลขเม็ดบนหน้าหลักได้",

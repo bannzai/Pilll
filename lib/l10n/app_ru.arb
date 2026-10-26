@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Уведомления со звуком даже в беззвучном режиме",
   "alarmKitFeatureAppealHeadline": "Напоминание о приёме таблетки, как будильник",
   "alarmKitFeatureAppealBody": "С AlarmKit, доступным начиная с iOS 26, будильник, который звучит даже в беззвучном режиме или режиме фокусирования, напоминает вам принять таблетку.",
-  "todayPillNumberFeatureAppealTitle": "Настроить номер приёма на сегодня",
+  "todayPillNumberFeatureAppealTitle": "Настройте номер сегодняшней таблетки",
   "todayPillNumberFeatureAppealShortDescription": "Если номер сбился — исправьте в настройках",
   "todayPillNumberFeatureAppealHeadline": "Можно изменить номер таблетки на сегодня",
   "todayPillNumberFeatureAppealBody": "Если из-за пропущенного приёма или ошибки номер на листке таблеток не совпадает с фактическим приёмом, вы можете вручную скорректировать номер таблетки на сегодня. Этот же экран можно открыть через отображение номера таблетки на главном экране.",

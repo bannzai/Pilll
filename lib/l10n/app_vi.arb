@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Thông báo vẫn phát âm thanh khi bật chế độ im lặng",
   "alarmKitFeatureAppealHeadline": "Báo thức uống thuốc như đồng hồ báo thức",
   "alarmKitFeatureAppealBody": "Với AlarmKit có trên iOS 26 trở lên, chuông báo vẫn reo khi bật chế độ Im lặng hoặc Tập trung để nhắc bạn uống thuốc.",
-  "todayPillNumberFeatureAppealTitle": "Đặt số viên đã uống hôm nay",
+  "todayPillNumberFeatureAppealTitle": "Điều chỉnh số thứ tự viên thuốc hôm nay",
   "todayPillNumberFeatureAppealShortDescription": "Nếu số bị lệch, hãy sửa trong Cài đặt",
   "todayPillNumberFeatureAppealHeadline": "Có thể thay đổi số thứ tự viên thuốc cho hôm nay",
   "todayPillNumberFeatureAppealBody": "Khi số trên vỉ thuốc và việc uống thực tế bị lệch do quên uống hoặc nhầm lẫn, bạn có thể điều chỉnh thủ công số viên cần uống hôm nay. Bạn cũng có thể mở cùng màn hình này từ phần hiển thị số viên trên trang chủ.",

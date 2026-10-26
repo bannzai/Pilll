@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "התראות שנשמעות גם במצב שקט",
   "alarmKitFeatureAppealHeadline": "התראה לנטילת הגלולה שפועלת כמו שעון מעורר",
   "alarmKitFeatureAppealBody": "בעזרת AlarmKit, הזמין מ־iOS 26 ואילך, שעון מעורר שנשמע גם במצב שקט או במצב ריכוז מזכיר את מועד נטילת הגלולה.",
-  "todayPillNumberFeatureAppealTitle": "התאם את מספר הנטילה של היום",
+  "todayPillNumberFeatureAppealTitle": "התאמת מספר הגלולה של היום",
   "todayPillNumberFeatureAppealShortDescription": "אם המספר אינו תואם, תקנו אותו בהגדרות.",
   "todayPillNumberFeatureAppealHeadline": "ניתן לשנות את מספר הגלולה של היום",
   "todayPillNumberFeatureAppealBody": "אם המספר בגליון הגלולות אינו תואם את מה שלקחת בפועל — בגלל ששכחת או שבלבלת בין הגלולות — ניתן להתאים ידנית את מספר הגלולה של היום. ניתן גם לפתוח את אותו מסך מתצוגת המספר של הגלולה בדף הבית.",

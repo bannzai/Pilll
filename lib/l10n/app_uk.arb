@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Сповіщення зі звуком навіть у беззвучному режимі",
   "alarmKitFeatureAppealHeadline": "Нагадування про прийом пігулки, як будильник",
   "alarmKitFeatureAppealBody": "З AlarmKit, доступним починаючи з iOS 26, будильник, що лунає навіть у беззвучному режимі або режимі зосередження, нагадує вам про прийом пігулки.",
-  "todayPillNumberFeatureAppealTitle": "Встановити номер прийому на сьогодні",
+  "todayPillNumberFeatureAppealTitle": "Налаштуйте номер сьогоднішньої пігулки",
   "todayPillNumberFeatureAppealShortDescription": "Налаштуйте у встановленнях, якщо номер збився",
   "todayPillNumberFeatureAppealHeadline": "Змінити номер таблетки на сьогодні",
   "todayPillNumberFeatureAppealBody": "Можна вручну відкоригувати номер пігулки на сьогодні, якщо через пропуск прийому або помилку номери на блістері не відповідають фактично прийнятим. Той самий екран також можна відкрити з відображення номера пігулки на головному екрані.",

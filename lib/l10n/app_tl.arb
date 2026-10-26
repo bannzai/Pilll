@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Mga abisong tutunog kahit nasa silent mode",
   "alarmKitFeatureAppealHeadline": "Alarma sa pag-inom ng pildoras na parang orasan na may alarma",
   "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na available sa iOS 26 o mas bago, ipinapaalala sa inyo ng alarm na tumutunog kahit naka-Silent mode o Focus na oras nang inumin ang pildoras.",
-  "todayPillNumberFeatureAppealTitle": "Itugma ang numero ng pill ngayong araw",
+  "todayPillNumberFeatureAppealTitle": "Pakibagay ang numero ng pildoras para ngayong araw",
   "todayPillNumberFeatureAppealShortDescription": "Kung nagkakaiba ang numero, ayusin ito sa mga setting",
   "todayPillNumberFeatureAppealHeadline": "Maaari mong baguhin ang numero ng pill na iinumin ngayong araw",
   "todayPillNumberFeatureAppealBody": "Kapag nagkaiba ang numero sa pill sheet at ang aktwal na pag-inom dahil sa nakalimutan o maling pagkakuha, maaari mong mano-manong itugma ang numero ng pill na iinumin ngayong araw. Maaari mo ring buksan ang parehong screen mula sa ipinapakitang numero ng pill sa home.",

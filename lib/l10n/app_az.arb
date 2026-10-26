@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Səssiz rejimdə də səslənən bildirişlər",
   "alarmKitFeatureAppealHeadline": "Zəngli saat kimi həb qəbulu xatırlatması",
   "alarmKitFeatureAppealBody": "iOS 26 və sonrakı versiyalarda mövcud olan AlarmKit sayəsində səssiz və ya fokus rejimində də səslənən siqnal sizə həbi qəbul etmək vaxtını xatırladır.",
-  "todayPillNumberFeatureAppealTitle": "Bugünkü qəbul nömrəsini tənzimləyin",
+  "todayPillNumberFeatureAppealTitle": "Bugünkü həb nömrəsini uyğunlaşdırın",
   "todayPillNumberFeatureAppealShortDescription": "Nömrə yanlışdırsa, parametrlərdə düzəldin",
   "todayPillNumberFeatureAppealHeadline": "Bu gün qəbul ediləcək həb nömrəsini dəyişdirə bilərsiniz",
   "todayPillNumberFeatureAppealBody": "Həb vərəqəsindəki nömrə ilə faktiki qəbul arasında uyğunsuzluq baş verdikdə (həb içməyi unutduqda və ya səhv həb götürdükdə), bu günün həb nömrəsini əl ilə düzəltmək mümkündür. Eyni ekranı ana ekrandakı həb rəqəmi göstəricisindən də açmaq olar.",

@@ -500,7 +500,7 @@
   "alarmKitFeatureAppealShortDescription": "Notificări sonore chiar și în modul silențios",
   "alarmKitFeatureAppealHeadline": "O alarmă pentru pilulă, ca un ceas deșteptător",
   "alarmKitFeatureAppealBody": "Cu AlarmKit, disponibil începând cu iOS 26, o alarmă care sună chiar și în modul Silențios sau Concentrare îți amintește să iei pilula.",
-  "todayPillNumberFeatureAppealTitle": "Ajustează numărul dozei de astăzi",
+  "todayPillNumberFeatureAppealTitle": "Ajustează numărul pilulei de azi",
   "todayPillNumberFeatureAppealShortDescription": "Număr greșit? Corectați din setări",
   "todayPillNumberFeatureAppealHeadline": "Puteți modifica numărul pilulei de astăzi",
   "todayPillNumberFeatureAppealBody": "Când numărul de pe fișa de pastile nu corespunde cu administrarea reală, din cauza uitării sau confuziei, puteți ajusta manual numărul pastilei pe care trebuie să o luați astăzi. Același ecran poate fi deschis și din afișajul numărului de pastile de pe ecranul principal.",
