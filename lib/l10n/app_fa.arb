@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} ورق قرص",
   "connectionError": "اتصال اینترنت ناپایدار است. لطفاً کمی صبر کرده و دوباره تلاش کنید.",
   "unknownErrorAndRetryAfter": "خطایی رخ داد. لطفاً کمی بعد دوباره تلاش کنید",
-  "errorOccurred": "خطایی رخ داده است",
+  "errorOccurred": "خطایی رخ داد",
   "unknownError": "خطای نامشخصی رخ داده است",
   "unexpectedErrorOccurred": "خطای غیرمنتظره‌ای رخ داد",
   "pressAndHoldNotificationToRecordPillTaking": "با فشار طولانی روی اطلاعیه، می‌توانید مصرف دارو را ثبت کنید",

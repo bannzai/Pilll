@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} блистери со таблети",
   "connectionError": "Мрежната врска изгледа нестабилна. Ве молиме почекајте малку и обидете се повторно.",
   "unknownErrorAndRetryAfter": "Се појави грешка. Ве молиме, обидете се повторно подоцна",
-  "errorOccurred": "Се случи грешка",
+  "errorOccurred": "Се појави грешка",
   "unknownError": "Настана непозната грешка",
   "unexpectedErrorOccurred": "Настана неочекувана грешка",
   "pressAndHoldNotificationToRecordPillTaking": "Долго притиснете го известувањето за да забележите земање",

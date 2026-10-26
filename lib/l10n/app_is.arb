@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pilluspjöld",
   "connectionError": "Nettengingin virðist vera óstöðug. Vinsamlegast reyndu aftur eftir smá stund.",
   "unknownErrorAndRetryAfter": "Villa kom upp. Prófaðu aftur síðar",
-  "errorOccurred": "Villa hefur komið upp",
+  "errorOccurred": "Villa kom upp",
   "unknownError": "Óþekkt villa kom upp",
   "unexpectedErrorOccurred": "Óvænt villa kom upp",
   "pressAndHoldNotificationToRecordPillTaking": "Haltu niðri tilkynningunni til að skrá inntekningu",

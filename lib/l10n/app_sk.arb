@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} blistrov tabletiek",
   "connectionError": "Pripojenie k internetu je nestabilné. Skúste to prosím znova o chvíľu.",
   "unknownErrorAndRetryAfter": "Vyskytla sa chyba. Skúste to znova neskôr",
-  "errorOccurred": "Došlo k chybe",
+  "errorOccurred": "Vyskytla sa chyba",
   "unknownError": "Vyskytla sa neznáma chyba",
   "unexpectedErrorOccurred": "Vyskytla sa neočakávaná chyba",
   "pressAndHoldNotificationToRecordPillTaking": "Podržaním notifikácie môžete zaznamenať užitie",

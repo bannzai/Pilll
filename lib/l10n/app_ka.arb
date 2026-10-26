@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} აბების ფირფიტა",
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",
   "unknownErrorAndRetryAfter": "შეცდომა მოხდა. გთხოვთ, მოგვიანებით კვლავ სცადოთ",
-  "errorOccurred": "შეცდომა მოხდა",
+  "errorOccurred": "მოხდა შეცდომა",
   "unknownError": "უცნობი შეცდომა მოხდა",
   "unexpectedErrorOccurred": "მოულოდნელი შეცდომა მოხდა",
   "pressAndHoldNotificationToRecordPillTaking": "შეტყობინების ხანგრძლივი დაჭერით შეგიძლიათ მიღების ჩანაწერის შექმნა",

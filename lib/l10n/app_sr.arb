@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} блистера таблета",
   "connectionError": "Veza sa internetom je nestabilna. Molimo sačekajte malo i pokušajte ponovo.",
   "unknownErrorAndRetryAfter": "Дошло је до грешке. Молимо Вас, покушајте поново касније",
-  "errorOccurred": "Došlo je do greške",
+  "errorOccurred": "Дошло је до грешке",
   "unknownError": "Dogodila se nepoznata greška",
   "unexpectedErrorOccurred": "Dogodila se neočekivana greška",
   "pressAndHoldNotificationToRecordPillTaking": "Дугим притиском на нотификацију можете креирати запис узимања",

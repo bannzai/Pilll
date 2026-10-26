@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} Pilleblister",
   "connectionError": "D Netzwerkverbindig isch unstabil. Bitte warte churz und versuech's nomol.",
   "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Probier s bitte spöter nomal",
-  "errorOccurred": "Es isch en Fehler ufträte",
+  "errorOccurred": "Es isch en Fähler passiert",
   "unknownError": "En unbekannte Fähler isch uftrete",
   "unexpectedErrorOccurred": "En unerwartete Fähler isch ufträte",
   "pressAndHoldNotificationToRecordPillTaking": "Mäldig lang drücke zum d'Iinahm z'notiere",

@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pillilehte",
   "connectionError": "Tundub, et võrguühendus on ebastabiilne. Palun proovige mõne aja pärast uuesti.",
   "unknownErrorAndRetryAfter": "Tekkis viga. Proovi hiljem uuesti",
-  "errorOccurred": "Ilmnes viga",
+  "errorOccurred": "Tekkis viga",
   "unknownError": "Esines teadmatu viga",
   "unexpectedErrorOccurred": "Tekkis ootamatu viga",
   "pressAndHoldNotificationToRecordPillTaking": "Teavitust pikalt vajutades saab salvestada pillide võtmise",

@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number}টি পিলের পাতা",
   "connectionError": "ইন্টারনেট সংযোগ অস্থির বলে মনে হচ্ছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন।",
   "unknownErrorAndRetryAfter": "একটি সমস্যা হয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন",
-  "errorOccurred": "ত্রুটি ঘটেছে",
+  "errorOccurred": "একটি ত্রুটি হয়েছে",
   "unknownError": "একটি অজানা ত্রুটি ঘটেছে",
   "unexpectedErrorOccurred": "একটি অপ্রত্যাশিত ত্রুটি ঘটেছে",
   "pressAndHoldNotificationToRecordPillTaking": "বিজ্ঞপ্তিতে দীর্ঘ চাপ দিলে সেবনের রেকর্ড করতে পারবেন",

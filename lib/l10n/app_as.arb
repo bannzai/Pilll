@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number}খন পিলৰ পাত",
   "connectionError": "ইন্টাৰনেট সংযোগ অস্থিৰ যেন লাগিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
   "unknownErrorAndRetryAfter": "কিবা এটা ভুল হৈছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক",
-  "errorOccurred": "ত্ৰুটি হৈছে",
+  "errorOccurred": "এটা ত্ৰুটি হৈছে",
   "unknownError": "অজ্ঞাত ত্ৰুটি ঘটিছে",
   "unexpectedErrorOccurred": "অপ্ৰত্যাশিত সমস্যা হৈছে",
   "pressAndHoldNotificationToRecordPillTaking": "নটিফিকেশ্যন দীৰ্ঘ চাপিলে সেৱনৰ ৰেকৰ্ড কৰিব পাৰি",

@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} បន្ទះថ្នាំគ្រាប់",
   "connectionError": "ការតភ្ជាប់អ៊ីនធឺណិតហាក់ដូចជាមិនស្ថិរ។ សូមរង់ចាំមួយរយៈ រួចព្យាយាមម្តងទៀត",
   "unknownErrorAndRetryAfter": "មានបញ្ហាកើតឡើង។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ",
-  "errorOccurred": "មានកំហុសកើតឡើង",
+  "errorOccurred": "មានបញ្ហាកើតឡើង",
   "unknownError": "មានកំហុសមិនស្គាល់បានកើតឡើង",
   "unexpectedErrorOccurred": "កំហុសមិនរំពឹងបានកើតឡើង",
   "pressAndHoldNotificationToRecordPillTaking": "ចុចជាយូរលើការជូនដំណឹងដើម្បីកត់ត្រាការទទួលថ្នាំ",

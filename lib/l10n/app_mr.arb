@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} गोळ्यांच्या पट्ट्या",
   "connectionError": "नेटवर्क कनेक्शन अस्थिर आहे. कृपया थोडा वेळ थांबून पुन्हा प्रयत्न करा",
   "unknownErrorAndRetryAfter": "काहीतरी चूक झाली आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा",
-  "errorOccurred": "त्रुटी आली",
+  "errorOccurred": "त्रुटी आली आहे",
   "unknownError": "अज्ञात त्रुटी उद्भवली आहे",
   "unexpectedErrorOccurred": "अनपेक्षित त्रुटि झाली",
   "pressAndHoldNotificationToRecordPillTaking": "सूचना लांब दाबल्यास गोळी घेतल्याची नोंद करू शकता",

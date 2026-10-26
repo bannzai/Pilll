@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pilvelle",
   "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",
   "unknownErrorAndRetryAfter": "Daar was ’n fout. Probeer asseblief later weer",
-  "errorOccurred": "'n Fout het voorgekom",
+  "errorOccurred": "Daar was 'n fout",
   "unknownError": "'n Onbekende fout het voorgekom",
   "unexpectedErrorOccurred": "'n Onverwagse fout het voorgekom",
   "pressAndHoldNotificationToRecordPillTaking": "Hou die kennisgewing ingedruk om 'n inname rekord te skep",

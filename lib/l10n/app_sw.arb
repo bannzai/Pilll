@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} vifurushi vya vidonge",
   "connectionError": "Muunganisho wa mtandao hauwa thabiti. Tafadhali subiri kidogo na ujaribu tena.",
   "unknownErrorAndRetryAfter": "Hitilafu imetokea. Tafadhali jaribu tena baadaye",
-  "errorOccurred": "Kosa limetokea",
+  "errorOccurred": "Hitilafu imetokea",
   "unknownError": "Hitilafu isiyojulikana imetokea",
   "unexpectedErrorOccurred": "Hitilafu isiyotarajiwa imetokea",
   "pressAndHoldNotificationToRecordPillTaking": "Finya na ushikilie arifa kurekodi kunywa vidonge",

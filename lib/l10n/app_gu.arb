@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} ગોળીની પટ્ટીઓ",
   "connectionError": "નેટવર્ક કનેક્શન અસ્થિર લાગે છે. કૃપા કરીને થોડા સમય પછી ફરીથી પ્રયાસ કરો.",
   "unknownErrorAndRetryAfter": "કોઈ ભૂલ થઈ છે. કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો",
-  "errorOccurred": "ભૂલ આવી છે",
+  "errorOccurred": "ભૂલ થઈ છે",
   "unknownError": "અજાણી ભૂલ થઈ છે",
   "unexpectedErrorOccurred": "અણધારી ભૂલ થઈ છે",
   "pressAndHoldNotificationToRecordPillTaking": "નોટિફિકેશનને લાંબા સમય સુધી દબાવવાથી તમે પિલ લેવાનો રેકોર્ડ કરી શકશો",

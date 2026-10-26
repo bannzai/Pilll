@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} חפיסות גלולות",
   "connectionError": "החיבור לאינטרנט נראה לא יציב. אנא המתינו ונסו שוב",
   "unknownErrorAndRetryAfter": "אירעה שגיאה. אפשר לנסות שוב מאוחר יותר",
-  "errorOccurred": "התרחשה שגיאה",
+  "errorOccurred": "אירעה שגיאה",
   "unknownError": "אירעה שגיאה לא ידועה",
   "unexpectedErrorOccurred": "אירעה שגיאה בלתי צפויה",
   "pressAndHoldNotificationToRecordPillTaking": "בלחיצה ארוכה על ההודעה ניתן לרשום נטילה",

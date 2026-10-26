@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pilula-blister",
   "connectionError": "Konexioa ezegonkorra dirudi. Pixka bat itxaron eta berriz saiatu, mesedez.",
   "unknownErrorAndRetryAfter": "Errore bat gertatu da. Saiatu berriro geroago, mesedez",
-  "errorOccurred": "Akatsa bat gertatu da",
+  "errorOccurred": "Errore bat gertatu da",
   "unknownError": "Errore ezezagun bat gertatu da",
   "unexpectedErrorOccurred": "Ustekabeko errore bat gertatu da",
   "pressAndHoldNotificationToRecordPillTaking": "Jakinarazpena luze sakatuta pilula hartzeko erregistroa egin dezakezu",

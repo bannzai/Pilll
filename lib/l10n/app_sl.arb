@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} omotov tablet",
   "connectionError": "Zdi se, da je internetna povezava nestabilna. Prosimo, poskusite znova čez nekaj časa.",
   "unknownErrorAndRetryAfter": "Prišlo je do napake. Poskusite znova pozneje",
-  "errorOccurred": "Nastala je napaka",
+  "errorOccurred": "Prišlo je do napake",
   "unknownError": "Prišlo je do neznane napake",
   "unexpectedErrorOccurred": "Prišlo je do nepričakovane napake",
   "pressAndHoldNotificationToRecordPillTaking": "Z dolgim pritiskom na obvestilo lahko ustvarite zapis jemanja.",

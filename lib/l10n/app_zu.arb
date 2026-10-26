@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} amaphakethe amaphilisi",
   "connectionError": "Kubonakala sengathi uxhumano lunenkinga. Sicela uzame futhi kamuva.",
   "unknownErrorAndRetryAfter": "Kuvele iphutha. Sicela uzame futhi ngokuhamba kwesikhathi",
-  "errorOccurred": "Iphutha lenzekile",
+  "errorOccurred": "Kube nephutha",
   "unknownError": "Kuvele iphutha elingaziwa",
   "unexpectedErrorOccurred": "Iphutha elingalindelwe lenzekile",
   "pressAndHoldNotificationToRecordPillTaking": "Cindezela isaziso isikhathi eside ukuze wenze irekhodi lokuphuza amaphilisi",

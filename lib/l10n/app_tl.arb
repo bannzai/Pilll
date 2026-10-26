@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pakete ng pildoras",
   "connectionError": "Mukhang hindi matatag ang koneksyon sa internet. Subukan ulit mamaya.",
   "unknownErrorAndRetryAfter": "Nagkaroon ng problema. Pakisubukan po ulit mamaya",
-  "errorOccurred": "May error na naganap",
+  "errorOccurred": "Nagkaroon ng pagkakamali",
   "unknownError": "May naganap na hindi kilalang error",
   "unexpectedErrorOccurred": "Nagkaroon ng hindi inaasahang problema",
   "pressAndHoldNotificationToRecordPillTaking": "I-long press ang notification para makatala ng pag-inom ng pill",

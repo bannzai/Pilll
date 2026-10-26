@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} pillebrett",
   "connectionError": "Nettverkstilkoblingen ser ut til å være ustabil. Vennligst vent litt og prøv igjen.",
   "unknownErrorAndRetryAfter": "Det oppstod en feil. Prøv igjen senere",
-  "errorOccurred": "En feil oppstod",
+  "errorOccurred": "Det oppstod en feil",
   "unknownError": "Det oppstod en ukjent feil",
   "unexpectedErrorOccurred": "En uventet feil oppstod",
   "pressAndHoldNotificationToRecordPillTaking": "Du kan registrere inntak ved å holde inne varselet",

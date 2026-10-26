@@ -353,7 +353,7 @@
   "withPillSheetCount": "{number} የክኒን ካርዶች",
   "connectionError": "የኢንተርኔት ግንኙነት ተረጋጋ አይደለም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ።",
   "unknownErrorAndRetryAfter": "ስህተት ተፈጥሯል። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ",
-  "errorOccurred": "ስሕተት ተከስቷል",
+  "errorOccurred": "ስህተት ተፈጥሯል",
   "unknownError": "ያልታወቀ ስህተት ተከስቷል",
   "unexpectedErrorOccurred": "ያልተጠበቀ ችግር ተከስቷል",
   "pressAndHoldNotificationToRecordPillTaking": "ማሳወቂያውን ረዥም በመጫን የመድሃኒት መዝገብ መፍጠር ይችላሉ",
