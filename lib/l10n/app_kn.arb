@@ -71,7 +71,7 @@
   "reLogin": "ಮತ್ತೆ ಲಾಗಿನ್ ಆಗಿ",
   "authenticationInfoUpdated": "ನಿಮ್ಮ ಲಾಗಿನ್ ಮಾಹಿತಿ ನವೀಕರಿಸಲಾಗಿದೆ",
   "updateAuthenticationInformation": "ಲಾಗಿನ್ ಮಾಹಿತಿಯನ್ನು ನವೀಕರಿಸಿ",
-  "registeredWithProvider": "{accountTypeProviderName}ನಲ್ಲಿ ನೋಂದಣಿ ಮಾಡಿದೆ",
+  "registeredWithProvider": "ನೀವು {accountTypeProviderName} ಮೂಲಕ ನೋಂದಾಯಿಸಿದ್ದೀರಿ",
   "linkAccount": "ಸಂಪರ್ಕಿಸು",
   "withdraw": "ಖಾತೆ ಅಳಿಸು",
   "withdrawalCompleted": "ಖಾತೆ ಅಳಿಸಲಾಗಿದೆ",

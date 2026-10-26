@@ -71,7 +71,7 @@
   "reLogin": "Кайра кириңиз",
   "authenticationInfoUpdated": "Кирүү маалыматыңыз жаңыртылды",
   "updateAuthenticationInformation": "Кирүү маалыматын жаңыртыңыз",
-  "registeredWithProvider": "{accountTypeProviderName} аркылуу катталдыңыз",
+  "registeredWithProvider": "Сиз {accountTypeProviderName} аркылуу катталдыңыз",
   "linkAccount": "Байланыштыруу",
   "withdraw": "Чыгуу",
   "withdrawalCompleted": "Аккаунт жок кылынды",

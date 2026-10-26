@@ -71,7 +71,7 @@
   "reLogin": "Log in again",
   "authenticationInfoUpdated": "Your sign-in details have been updated",
   "updateAuthenticationInformation": "Update sign-in details",
-  "registeredWithProvider": "Registered with {accountTypeProviderName}",
+  "registeredWithProvider": "You've signed up with {accountTypeProviderName}",
   "linkAccount": "Connect",
   "withdraw": "Delete Account",
   "withdrawalCompleted": "Withdrawn",

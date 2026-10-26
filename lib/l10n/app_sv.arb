@@ -71,7 +71,7 @@
   "reLogin": "Logga in igen",
   "authenticationInfoUpdated": "Dina inloggningsuppgifter har uppdaterats",
   "updateAuthenticationInformation": "Uppdatera dina inloggningsuppgifter",
-  "registeredWithProvider": "Registrerad med {accountTypeProviderName}",
+  "registeredWithProvider": "Du har registrerat dig med {accountTypeProviderName}",
   "linkAccount": "Anslut",
   "withdraw": "Avregistrera",
   "withdrawalCompleted": "Avregistrerad",

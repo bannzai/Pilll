@@ -71,7 +71,7 @@
   "reLogin": "Skráðu þig inn aftur",
   "authenticationInfoUpdated": "Innskráningarupplýsingarnar þínar hafa verið uppfærðar",
   "updateAuthenticationInformation": "Uppfærðu innskráningarupplýsingar",
-  "registeredWithProvider": "Skráður með {accountTypeProviderName}",
+  "registeredWithProvider": "Skráning með {accountTypeProviderName} tókst",
   "linkAccount": "Tengja",
   "withdraw": "Segja úr",
   "withdrawalCompleted": "Afskráning lokið",

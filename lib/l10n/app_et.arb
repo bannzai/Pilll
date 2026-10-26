@@ -71,7 +71,7 @@
   "reLogin": "Logi uuesti sisse",
   "authenticationInfoUpdated": "Sinu sisselogimisandmed on uuendatud",
   "updateAuthenticationInformation": "Uuenda sisselogimisandmeid",
-  "registeredWithProvider": "Registreeritud {accountTypeProviderName} kaudu",
+  "registeredWithProvider": "Registreerusid teenuse {accountTypeProviderName} kaudu",
   "linkAccount": "Linkida",
   "withdraw": "Lahkuda",
   "withdrawalCompleted": "Konto on kustutatud",

@@ -71,7 +71,7 @@
   "reLogin": "আবার লগ ইন করুন",
   "authenticationInfoUpdated": "লগইন তথ্য আপডেট হয়েছে",
   "updateAuthenticationInformation": "লগইন তথ্য হালনাগাদ করুন",
-  "registeredWithProvider": "{accountTypeProviderName} দিয়ে নিবন্ধন সম্পন্ন হয়েছে",
+  "registeredWithProvider": "আপনি {accountTypeProviderName} দিয়ে নিবন্ধন করেছেন",
   "linkAccount": "সংযুক্ত করুন",
   "withdraw": "অ্যাকাউন্ট মুছুন",
   "withdrawalCompleted": "প্রত্যাহার করা হয়েছে",

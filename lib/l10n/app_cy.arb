@@ -71,7 +71,7 @@
   "reLogin": "Mewngofnodwch eto",
   "authenticationInfoUpdated": "Mae eich manylion mewngofnodi wedi'u diweddaru",
   "updateAuthenticationInformation": "Diweddarwch eich manylion mewngofnodi",
-  "registeredWithProvider": "Wedi cofrestru gyda {accountTypeProviderName}",
+  "registeredWithProvider": "Rydych wedi cofrestru drwy {accountTypeProviderName}",
   "linkAccount": "Cysylltu",
   "withdraw": "Ymddiswyddo",
   "withdrawalCompleted": "Wedi gadael",

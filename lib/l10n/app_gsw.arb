@@ -71,7 +71,7 @@
   "reLogin": "Meld di nomal aa",
   "authenticationInfoUpdated": "Dini Aamälddate sind aktualisiert",
   "updateAuthenticationInformation": "Dini Aamäldaagabe aktualisiere",
-  "registeredWithProvider": "Mit {accountTypeProviderName} aagmeldet",
+  "registeredWithProvider": "Du hesch di mit {accountTypeProviderName} registriert",
   "linkAccount": "verchnüpfe",
   "withdraw": "Konto lösche",
   "withdrawalCompleted": "Abgmäldet",

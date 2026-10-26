@@ -71,7 +71,7 @@
   "reLogin": "Sicela ungene ngemvume futhi",
   "authenticationInfoUpdated": "Imininingwane yakho yokungena ibuyekeziwe",
   "updateAuthenticationInformation": "Sicela ubuyekeze imininingwane yakho yokungena",
-  "registeredWithProvider": "Ubhalisiwe nge-{accountTypeProviderName}",
+  "registeredWithProvider": "Usuzibhalise nge-{accountTypeProviderName}",
   "linkAccount": "Xhuma",
   "withdraw": "Susa i-akhawunti",
   "withdrawalCompleted": "Ususinile",

@@ -71,7 +71,7 @@
   "reLogin": "Mag-log in po muli",
   "authenticationInfoUpdated": "Na-update na ang inyong impormasyon sa pag-sign in",
   "updateAuthenticationInformation": "Paki-update ang inyong impormasyon sa pag-log in",
-  "registeredWithProvider": "Nagparehistro ka na gamit ang {accountTypeProviderName}",
+  "registeredWithProvider": "Nakapagrehistro na kayo gamit ang {accountTypeProviderName}",
   "linkAccount": "Magkonekta",
   "withdraw": "Tanggalin ang Account",
   "withdrawalCompleted": "Nag-withdraw na",

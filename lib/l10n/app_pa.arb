@@ -71,7 +71,7 @@
   "reLogin": "ਦੁਬਾਰਾ ਲੌਗ ਇਨ ਕਰੋ",
   "authenticationInfoUpdated": "ਤੁਹਾਡੀ ਲੌਗਇਨ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਹੋ ਗਈ ਹੈ",
   "updateAuthenticationInformation": "ਲੌਗਇਨ ਜਾਣਕਾਰੀ ਅੱਪਡੇਟ ਕਰੋ",
-  "registeredWithProvider": "{accountTypeProviderName} ਨਾਲ ਰਜਿਸਟਰ ਹੋ ਗਿਆ",
+  "registeredWithProvider": "ਤੁਸੀਂ {accountTypeProviderName} ਰਾਹੀਂ ਰਜਿਸਟਰ ਕਰ ਲਿਆ ਹੈ",
   "linkAccount": "ਜੋੜੋ",
   "withdraw": "ਖਾਤਾ ਮਿਟਾਓ",
   "withdrawalCompleted": "ਖਾਤਾ ਬੰਦ ਕੀਤਾ ਗਿਆ",

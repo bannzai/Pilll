@@ -71,7 +71,7 @@
   "reLogin": "다시 로그인해요",
   "authenticationInfoUpdated": "로그인 정보가 업데이트됐어요",
   "updateAuthenticationInformation": "로그인 정보를 업데이트해요",
-  "registeredWithProvider": "{accountTypeProviderName}로 가입했습니다",
+  "registeredWithProvider": "{accountTypeProviderName}로 가입했어요",
   "linkAccount": "연동하기",
   "withdraw": "탈퇴하기",
   "withdrawalCompleted": "탈퇴했습니다",

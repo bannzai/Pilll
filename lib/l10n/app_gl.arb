@@ -71,7 +71,7 @@
   "reLogin": "Volve iniciar sesión",
   "authenticationInfoUpdated": "Actualizáronse os teus datos de acceso",
   "updateAuthenticationInformation": "Actualiza os datos de acceso",
-  "registeredWithProvider": "Rexistrouse con {accountTypeProviderName}",
+  "registeredWithProvider": "Rexistrácheste con {accountTypeProviderName}",
   "linkAccount": "Conectar",
   "withdraw": "Darse de baixa",
   "withdrawalCompleted": "Déronse de baixa",

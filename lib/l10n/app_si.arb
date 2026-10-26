@@ -71,7 +71,7 @@
   "reLogin": "නැවත පිවිසෙන්න",
   "authenticationInfoUpdated": "ඔබේ පිවිසුම් තොරතුරු යාවත්කාලීන කර ඇත",
   "updateAuthenticationInformation": "පිවිසුම් තොරතුරු යාවත්කාලීන කරන්න",
-  "registeredWithProvider": "{accountTypeProviderName} සමඟ ලියාපදිංචි කරන ලදී",
+  "registeredWithProvider": "ඔබ {accountTypeProviderName} හරහා ලියාපදිංචි වී ඇත",
   "linkAccount": "සම්බන්ධ කරන්න",
   "withdraw": "ගිණුම මකන්න",
   "withdrawalCompleted": "ගිණුම ඉවත් කර ඇත",

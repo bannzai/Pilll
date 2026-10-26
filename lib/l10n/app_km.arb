@@ -71,7 +71,7 @@
   "reLogin": "សូមចូលគណនីម្ដងទៀត",
   "authenticationInfoUpdated": "ព័ត៌មានចូលគណនីរបស់អ្នកត្រូវបានធ្វើបច្ចុប្បន្នភាព",
   "updateAuthenticationInformation": "សូមធ្វើបច្ចុប្បន្នភាពព័ត៌មានចូលគណនី",
-  "registeredWithProvider": "បានចុះឈ្មោះដោយ{accountTypeProviderName}",
+  "registeredWithProvider": "អ្នកបានចុះឈ្មោះដោយប្រើ {accountTypeProviderName} រួចហើយ",
   "linkAccount": "ភ្ជាប់",
   "withdraw": "លុបគណនី",
   "withdrawalCompleted": "បានលុបគណនីរួច",

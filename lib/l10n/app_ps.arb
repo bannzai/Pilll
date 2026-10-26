@@ -71,7 +71,7 @@
   "reLogin": "بیا ننوتل",
   "authenticationInfoUpdated": "ستاسو د ننوتلو معلومات تازه شول",
   "updateAuthenticationInformation": "د ننوتلو معلومات تازه کړئ",
-  "registeredWithProvider": "د {accountTypeProviderName} سره ثبت شوي",
+  "registeredWithProvider": "ستاسو نوم‌لیکنه د {accountTypeProviderName} له لارې بشپړه شوه",
   "linkAccount": "تړل",
   "withdraw": "حساب ړنګول",
   "withdrawalCompleted": "غړیتوب لغو شو",

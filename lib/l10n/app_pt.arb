@@ -71,7 +71,7 @@
   "reLogin": "Entre novamente",
   "authenticationInfoUpdated": "Seus dados de acesso foram atualizados",
   "updateAuthenticationInformation": "Atualize seus dados de acesso",
-  "registeredWithProvider": "Cadastrado com {accountTypeProviderName}",
+  "registeredWithProvider": "Seu cadastro com {accountTypeProviderName} foi concluído",
   "linkAccount": "Conectar",
   "withdraw": "Excluir conta",
   "withdrawalCompleted": "Desvinculação concluída",

@@ -71,7 +71,7 @@
   "reLogin": "మళ్లీ లాగిన్ అవ్వండి",
   "authenticationInfoUpdated": "మీ లాగిన్ సమాచారం నవీకరించబడింది",
   "updateAuthenticationInformation": "లాగిన్ సమాచారాన్ని నవీకరించండి",
-  "registeredWithProvider": "{accountTypeProviderName}తో నమోదు చేయబడింది",
+  "registeredWithProvider": "మీరు {accountTypeProviderName} ద్వారా నమోదు చేసుకున్నారు",
   "linkAccount": "అనుసంధానం చేయండి",
   "withdraw": "నిష్క్రమించు",
   "withdrawalCompleted": "విలువిడిచిపెట్టాను",

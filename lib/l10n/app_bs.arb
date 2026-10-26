@@ -71,7 +71,7 @@
   "reLogin": "Prijavite se ponovo",
   "authenticationInfoUpdated": "Vaši podaci za prijavu su ažurirani",
   "updateAuthenticationInformation": "Ažurirajte podatke za prijavu",
-  "registeredWithProvider": "Registrovali ste se putem {accountTypeProviderName}",
+  "registeredWithProvider": "Registrirali ste se putem {accountTypeProviderName}",
   "linkAccount": "Povezati",
   "withdraw": "Obriši račun",
   "withdrawalCompleted": "Uspješno ste se odjavili",

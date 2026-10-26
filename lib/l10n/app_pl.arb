@@ -71,7 +71,7 @@
   "reLogin": "Zaloguj się ponownie",
   "authenticationInfoUpdated": "Dane logowania zostały zaktualizowane",
   "updateAuthenticationInformation": "Zaktualizuj dane logowania",
-  "registeredWithProvider": "Zarejestrowano przez {accountTypeProviderName}",
+  "registeredWithProvider": "Rejestracja przez {accountTypeProviderName} zakończyła się pomyślnie",
   "linkAccount": "Połącz",
   "withdraw": "Usuń konto",
   "withdrawalCompleted": "Konto zostało usunięte",

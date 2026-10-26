@@ -71,7 +71,7 @@
   "reLogin": "Најавете се повторно",
   "authenticationInfoUpdated": "Податоците за најава се ажурирани",
   "updateAuthenticationInformation": "Ажурирајте ги податоците за најава",
-  "registeredWithProvider": "Се регистриравте со {accountTypeProviderName}",
+  "registeredWithProvider": "Се регистриравте преку {accountTypeProviderName}",
   "linkAccount": "Поврзи",
   "withdraw": "Се повлече",
   "withdrawalCompleted": "Се отпишавте",

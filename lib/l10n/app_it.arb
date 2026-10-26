@@ -71,7 +71,7 @@
   "reLogin": "Accedi di nuovo",
   "authenticationInfoUpdated": "I tuoi dati di accesso sono stati aggiornati",
   "updateAuthenticationInformation": "Aggiorna i dati di accesso",
-  "registeredWithProvider": "Ti sei registrato con {accountTypeProviderName}",
+  "registeredWithProvider": "Ti sei registrata con {accountTypeProviderName}",
   "linkAccount": "Collega",
   "withdraw": "Elimina account",
   "withdrawalCompleted": "Ti sei disiscritto",

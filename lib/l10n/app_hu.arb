@@ -71,7 +71,7 @@
   "reLogin": "Jelentkezz be újra",
   "authenticationInfoUpdated": "A bejelentkezési adataid frissültek",
   "updateAuthenticationInformation": "Bejelentkezési adatok frissítése",
-  "registeredWithProvider": "Regisztráltál {accountTypeProviderName}-val",
+  "registeredWithProvider": "Sikeresen regisztráltál a(z) {accountTypeProviderName} segítségével",
   "linkAccount": "Összekapcsolás",
   "withdraw": "Kilép",
   "withdrawalCompleted": "Fiók törölve",

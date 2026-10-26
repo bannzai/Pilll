@@ -71,7 +71,7 @@
   "reLogin": "Log masuk semula",
   "authenticationInfoUpdated": "Maklumat log masuk anda telah dikemas kini",
   "updateAuthenticationInformation": "Sila kemas kini maklumat log masuk",
-  "registeredWithProvider": "Berjaya didaftar dengan {accountTypeProviderName}",
+  "registeredWithProvider": "Anda telah mendaftar menggunakan {accountTypeProviderName}",
   "linkAccount": "Hubungkan",
   "withdraw": "Padam akaun",
   "withdrawalCompleted": "Akaun telah dipadamkan",

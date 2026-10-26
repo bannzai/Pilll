@@ -71,7 +71,7 @@
   "reLogin": "വീണ്ടും ലോഗിൻ ചെയ്യൂ",
   "authenticationInfoUpdated": "നിങ്ങളുടെ ലോഗിൻ വിവരങ്ങൾ പുതുക്കി",
   "updateAuthenticationInformation": "ലോഗിൻ വിവരങ്ങൾ പുതുക്കൂ",
-  "registeredWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് രജിസ്റ്റർ ചെയ്തു",
+  "registeredWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് രജിസ്ട്രേഷൻ പൂർത്തിയായി",
   "linkAccount": "സമന്വയിപ്പിക്കുക",
   "withdraw": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
   "withdrawalCompleted": "അക്കൗണ്ട് ഇല്ലാതാക്കി",

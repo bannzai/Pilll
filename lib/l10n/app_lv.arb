@@ -71,7 +71,7 @@
   "reLogin": "Piesakieties vēlreiz",
   "authenticationInfoUpdated": "Jūsu pieteikšanās dati ir atjaunināti",
   "updateAuthenticationInformation": "Atjauniniet pierakstīšanās datus",
-  "registeredWithProvider": "Reģistrējies ar {accountTypeProviderName}",
+  "registeredWithProvider": "Jūs reģistrējāties, izmantojot {accountTypeProviderName}",
   "linkAccount": "Savienot",
   "withdraw": "Dzēst kontu",
   "withdrawalCompleted": "Konts ir dzēsts",

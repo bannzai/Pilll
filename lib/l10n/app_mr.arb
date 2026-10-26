@@ -71,7 +71,7 @@
   "reLogin": "पुन्हा लॉग इन करा",
   "authenticationInfoUpdated": "तुमची लॉगिन माहिती अपडेट झाली आहे",
   "updateAuthenticationInformation": "लॉगिन माहिती अद्ययावत करा",
-  "registeredWithProvider": "{accountTypeProviderName} वापरून नोंदणी केली",
+  "registeredWithProvider": "तुमची {accountTypeProviderName} वापरून नोंदणी झाली आहे",
   "linkAccount": "जोडा",
   "withdraw": "खाते हटवा",
   "withdrawalCompleted": "खाते हटविले आहे",

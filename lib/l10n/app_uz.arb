@@ -71,7 +71,7 @@
   "reLogin": "Qayta kiring",
   "authenticationInfoUpdated": "Kirish maʼlumotlaringiz yangilandi",
   "updateAuthenticationInformation": "Kirish maʼlumotlarini yangilang",
-  "registeredWithProvider": "{accountTypeProviderName} orqali ro'yxatdan o'tdingiz",
+  "registeredWithProvider": "Siz {accountTypeProviderName} orqali roʻyxatdan oʻtdingiz",
   "linkAccount": "Bog'lash",
   "withdraw": "Chiqib ketish",
   "withdrawalCompleted": "A'zolikdan chiqib ketdim",

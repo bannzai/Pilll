@@ -71,7 +71,7 @@
   "reLogin": "להתחבר מחדש",
   "authenticationInfoUpdated": "פרטי ההתחברות עודכנו",
   "updateAuthenticationInformation": "עדכון פרטי ההתחברות",
-  "registeredWithProvider": "נרשמת באמצעות {accountTypeProviderName}",
+  "registeredWithProvider": "ההרשמה באמצעות {accountTypeProviderName} הושלמה",
   "linkAccount": "חבר",
   "withdraw": "לפרוש",
   "withdrawalCompleted": "החשבון בוטל",

@@ -71,7 +71,7 @@
   "reLogin": "Znovu se přihlásit",
   "authenticationInfoUpdated": "Přihlašovací údaje byly aktualizovány",
   "updateAuthenticationInformation": "Aktualizovat přihlašovací údaje",
-  "registeredWithProvider": "Zaregistrovali jste se přes {accountTypeProviderName}",
+  "registeredWithProvider": "Registrace přes {accountTypeProviderName} proběhla úspěšně",
   "linkAccount": "Propojit",
   "withdraw": "Smazat účet",
   "withdrawalCompleted": "Účet byl smazán",

@@ -71,7 +71,7 @@
   "reLogin": "Meld weer aan",
   "authenticationInfoUpdated": "Jou aanmeldbesonderhede is opgedateer",
   "updateAuthenticationInformation": "Werk jou aanmeldbesonderhede by",
-  "registeredWithProvider": "Geregistreer met {accountTypeProviderName}",
+  "registeredWithProvider": "Jy is met {accountTypeProviderName} geregistreer",
   "linkAccount": "Koppel",
   "withdraw": "Uittree",
   "withdrawalCompleted": "Uitgemeld",

@@ -71,7 +71,7 @@
   "reLogin": "Войдите снова",
   "authenticationInfoUpdated": "Ваши данные для входа обновлены",
   "updateAuthenticationInformation": "Обновите данные для входа",
-  "registeredWithProvider": "Зарегистрировано через {accountTypeProviderName}",
+  "registeredWithProvider": "Вы зарегистрировались через {accountTypeProviderName}",
   "linkAccount": "Связать",
   "withdraw": "Удалить аккаунт",
   "withdrawalCompleted": "Аккаунт удалён",

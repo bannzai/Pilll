@@ -71,7 +71,7 @@
   "reLogin": "重新登录",
   "authenticationInfoUpdated": "登录信息已更新",
   "updateAuthenticationInformation": "更新登录信息",
-  "registeredWithProvider": "已通过{accountTypeProviderName}注册",
+  "registeredWithProvider": "已通过{accountTypeProviderName}注册成功",
   "linkAccount": "关联",
   "withdraw": "注销",
   "withdrawalCompleted": "已注销",

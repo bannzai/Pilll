@@ -71,7 +71,7 @@
   "reLogin": "ફરીથી લૉગ ઇન કરો",
   "authenticationInfoUpdated": "તમારી લૉગિન માહિતી અપડેટ થઈ ગઈ છે",
   "updateAuthenticationInformation": "પ્રવેશ વિગતો અપડેટ કરો",
-  "registeredWithProvider": "{accountTypeProviderName}સાથે નોંધણી કરવામાં આવી",
+  "registeredWithProvider": "તમે {accountTypeProviderName} દ્વારા નોંધણી કરી છે",
   "linkAccount": "જોડાવવું",
   "withdraw": "ખાતું ડિલીટ કરવું",
   "withdrawalCompleted": "અકાઉન્ટ કાઢી નાખ્યું",

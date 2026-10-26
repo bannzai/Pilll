@@ -71,7 +71,7 @@
   "reLogin": "Masuk lagi",
   "authenticationInfoUpdated": "Informasi login Anda berhasil diperbarui",
   "updateAuthenticationInformation": "Perbarui informasi masuk Anda",
-  "registeredWithProvider": "Berhasil mendaftar dengan {accountTypeProviderName}",
+  "registeredWithProvider": "Anda berhasil mendaftar dengan {accountTypeProviderName}",
   "linkAccount": "Hubungkan",
   "withdraw": "Hapus Akun",
   "withdrawalCompleted": "Berhasil menghapus akun",

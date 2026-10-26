@@ -71,7 +71,7 @@
   "reLogin": "ପୁଣି ଲଗ୍ ଇନ୍ କରନ୍ତୁ",
   "authenticationInfoUpdated": "ଆପଣଙ୍କ ଲଗଇନ୍ ସୂଚନା ଅପଡେଟ୍ ହୋଇଛି",
   "updateAuthenticationInformation": "ଲଗ୍‌ଇନ୍‌ ସୂଚନା ଅପଡେଟ୍‌ କରନ୍ତୁ",
-  "registeredWithProvider": "{accountTypeProviderName} ସହିତ ପଞ୍ଜୀକୃତ ହୋଇଛି",
+  "registeredWithProvider": "ଆପଣ {accountTypeProviderName} ମାଧ୍ୟମରେ ପଞ୍ଜୀକରଣ କରିଛନ୍ତି",
   "linkAccount": "ସଂଯୋଗ କରନ୍ତୁ",
   "withdraw": "ବାହାରିବା",
   "withdrawalCompleted": "ଖାତା ବନ୍ଦ କରାଯାଇଛି",

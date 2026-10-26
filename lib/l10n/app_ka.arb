@@ -71,7 +71,7 @@
   "reLogin": "ხელახლა შესვლა",
   "authenticationInfoUpdated": "თქვენი შესვლის მონაცემები განახლდა",
   "updateAuthenticationInformation": "შესვლის მონაცემების განახლება",
-  "registeredWithProvider": "{accountTypeProviderName}-ით დარეგისტრირდით",
+  "registeredWithProvider": "თქვენ დარეგისტრირდით {accountTypeProviderName}-ის მეშვეობით",
   "linkAccount": "დაკავშირება",
   "withdraw": "გაწყვეტა",
   "withdrawalCompleted": "ანგარიში წაიშალა",

@@ -71,7 +71,7 @@
   "reLogin": "Log opnieuw in",
   "authenticationInfoUpdated": "Je inloggegevens zijn bijgewerkt",
   "updateAuthenticationInformation": "Werk je inloggegevens bij",
-  "registeredWithProvider": "Geregistreerd met {accountTypeProviderName}",
+  "registeredWithProvider": "Je bent geregistreerd met {accountTypeProviderName}",
   "linkAccount": "Koppelen",
   "withdraw": "Account verwijderen",
   "withdrawalCompleted": "Account verwijderd",

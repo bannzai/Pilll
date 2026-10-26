@@ -71,7 +71,7 @@
   "reLogin": "Tafadhali ingia tena",
   "authenticationInfoUpdated": "Taarifa zako za kuingia zimesasishwa",
   "updateAuthenticationInformation": "Tafadhali sasisha taarifa zako za kuingia",
-  "registeredWithProvider": "Umesajiliwa kwa kutumia {accountTypeProviderName}",
+  "registeredWithProvider": "Umejisajili kupitia {accountTypeProviderName}",
   "linkAccount": "Unganisha",
   "withdraw": "Jiondoe",
   "withdrawalCompleted": "Umejiondoa",

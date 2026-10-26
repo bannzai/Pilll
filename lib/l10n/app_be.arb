@@ -71,7 +71,7 @@
   "reLogin": "Увайсці зноў",
   "authenticationInfoUpdated": "Даныя для ўваходу абноўлены",
   "updateAuthenticationInformation": "Абнавіць даныя для ўваходу",
-  "registeredWithProvider": "Зарэгістраваны з дапамогай {accountTypeProviderName}",
+  "registeredWithProvider": "Вы зарэгістраваліся праз {accountTypeProviderName}",
   "linkAccount": "Звязаць",
   "withdraw": "Выдаліць акаўнт",
   "withdrawalCompleted": "Акаўнт выдалены",

@@ -71,7 +71,7 @@
   "reLogin": "Log ind igen",
   "authenticationInfoUpdated": "Dine loginoplysninger er opdateret",
   "updateAuthenticationInformation": "Opdater dine loginoplysninger",
-  "registeredWithProvider": "Registreret med {accountTypeProviderName}",
+  "registeredWithProvider": "Du er registreret med {accountTypeProviderName}",
   "linkAccount": "Forbind",
   "withdraw": "Slet konto",
   "withdrawalCompleted": "Kontoen er slettet",

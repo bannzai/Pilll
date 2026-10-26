@@ -71,7 +71,7 @@
   "reLogin": "Hasi saioa berriro",
   "authenticationInfoUpdated": "Saioa hasteko zure datuak eguneratu dira",
   "updateAuthenticationInformation": "Eguneratu saioa hasteko datuak",
-  "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu da",
+  "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu zara",
   "linkAccount": "Konektatu",
   "withdraw": "Kontua ezabatu",
   "withdrawalCompleted": "Baja eman duzu",

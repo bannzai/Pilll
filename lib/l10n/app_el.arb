@@ -71,7 +71,7 @@
   "reLogin": "Συνδεθείτε ξανά",
   "authenticationInfoUpdated": "Τα στοιχεία σύνδεσής σας ενημερώθηκαν",
   "updateAuthenticationInformation": "Ενημέρωση στοιχείων σύνδεσης",
-  "registeredWithProvider": "Εγγραφήκατε μέσω {accountTypeProviderName}",
+  "registeredWithProvider": "Η εγγραφή σας μέσω {accountTypeProviderName} ολοκληρώθηκε",
   "linkAccount": "Σύνδεση",
   "withdraw": "Διαγραφή λογαριασμού",
   "withdrawalCompleted": "Διαγράφηκατε επιτυχώς",

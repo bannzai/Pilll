@@ -71,7 +71,7 @@
   "reLogin": "Дахин нэвтэрнэ үү",
   "authenticationInfoUpdated": "Таны нэвтрэх мэдээлэл шинэчлэгдлээ",
   "updateAuthenticationInformation": "Нэвтрэх мэдээллээ шинэчилнэ үү",
-  "registeredWithProvider": "{accountTypeProviderName}-аар бүртгүүлсэн",
+  "registeredWithProvider": "Та {accountTypeProviderName}-ээр бүртгүүллээ",
   "linkAccount": "Холбох",
   "withdraw": "гарах",
   "withdrawalCompleted": "Бүртгэлээ устгалаа",

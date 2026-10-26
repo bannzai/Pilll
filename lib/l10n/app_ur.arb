@@ -71,7 +71,7 @@
   "reLogin": "دوبارہ لاگ اِن کریں",
   "authenticationInfoUpdated": "آپ کی لاگ اِن معلومات اپ ڈیٹ ہو گئی ہیں",
   "updateAuthenticationInformation": "لاگ اِن کی معلومات اپ ڈیٹ کریں",
-  "registeredWithProvider": "{accountTypeProviderName} کے ساتھ رجسٹریشن مکمل ہوگئی",
+  "registeredWithProvider": "{accountTypeProviderName} کے ذریعے آپ کی رجسٹریشن مکمل ہو گئی ہے",
   "linkAccount": "منسلک کریں",
   "withdraw": "اکاؤنٹ ڈیلیٹ کریں",
   "withdrawalCompleted": "اکاؤنٹ حذف ہو گیا",

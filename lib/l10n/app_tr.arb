@@ -71,7 +71,7 @@
   "reLogin": "Yeniden giriş yapın",
   "authenticationInfoUpdated": "Giriş bilgileriniz güncellendi",
   "updateAuthenticationInformation": "Giriş bilgilerinizi güncelleyin",
-  "registeredWithProvider": "{accountTypeProviderName} ile kayıt oldunuz",
+  "registeredWithProvider": "{accountTypeProviderName} ile kaydoldunuz",
   "linkAccount": "Bağla",
   "withdraw": "Hesabı Sil",
   "withdrawalCompleted": "Hesabınız silindi",

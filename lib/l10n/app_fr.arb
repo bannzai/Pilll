@@ -71,7 +71,7 @@
   "reLogin": "Reconnectez-vous",
   "authenticationInfoUpdated": "Vos informations de connexion ont été mises à jour",
   "updateAuthenticationInformation": "Mettre à jour les informations de connexion",
-  "registeredWithProvider": "Enregistré auprès de {accountTypeProviderName}",
+  "registeredWithProvider": "Votre inscription avec {accountTypeProviderName} est terminée",
   "linkAccount": "Connecter",
   "withdraw": "Supprimer le compte",
   "withdrawalCompleted": "Retiré",

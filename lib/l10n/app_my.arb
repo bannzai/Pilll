@@ -71,7 +71,7 @@
   "reLogin": "ပြန်လည်ဝင်ရောက်ပါ",
   "authenticationInfoUpdated": "အကောင့်ဝင်ရန် အချက်အလက်ကို အပ်ဒိတ်လုပ်ပြီးပါပြီ",
   "updateAuthenticationInformation": "အကောင့်ဝင်ရန် အချက်အလက်ကို အပ်ဒိတ်လုပ်ပါ",
-  "registeredWithProvider": "{accountTypeProviderName} ဖြင့် မှတ်ပုံတင်ပြီးပါပြီ",
+  "registeredWithProvider": "{accountTypeProviderName} ဖြင့် စာရင်းသွင်းပြီးပါပြီ",
   "linkAccount": "ချိတ်ဆက်ရန်",
   "withdraw": "အကောင့်ဖျက်ရန်",
   "withdrawalCompleted": "ထွက်လိုက်ပြီ",

@@ -71,7 +71,7 @@
   "reLogin": "Қайта кіріңіз",
   "authenticationInfoUpdated": "Кіру деректеріңіз жаңартылды",
   "updateAuthenticationInformation": "Кіру деректерін жаңартыңыз",
-  "registeredWithProvider": "{accountTypeProviderName} арқылы тіркелдіңіз",
+  "registeredWithProvider": "Сіз {accountTypeProviderName} арқылы тіркелдіңіз",
   "linkAccount": "Байланыстыру",
   "withdraw": "Аккаунтты жою",
   "withdrawalCompleted": "Аккаунт жойылды",

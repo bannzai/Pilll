@@ -71,7 +71,7 @@
   "reLogin": "Kirjaudu uudelleen",
   "authenticationInfoUpdated": "Kirjautumistietosi on päivitetty",
   "updateAuthenticationInformation": "Päivitä kirjautumistiedot",
-  "registeredWithProvider": "Rekisteröidyttiin {accountTypeProviderName}lla",
+  "registeredWithProvider": "Rekisteröidyit palvelun {accountTypeProviderName} kautta",
   "linkAccount": "Yhdistä",
   "withdraw": "Poista tili",
   "withdrawalCompleted": "Tili on poistettu",

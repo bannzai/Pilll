@@ -71,7 +71,7 @@
   "reLogin": "ເຂົ້າລະບົບອີກຄັ້ງ",
   "authenticationInfoUpdated": "ຂໍ້ມູນເຂົ້າລະບົບຂອງທ່ານໄດ້ອັບເດດແລ້ວ",
   "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນເຂົ້າລະບົບ",
-  "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ແລ້ວ",
+  "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ສຳເລັດແລ້ວເດີ",
   "linkAccount": "ເຊື່ອມຕໍ່",
   "withdraw": "ອອກຈາກສະມາຊິກ",
   "withdrawalCompleted": "ລົບບັນຊີແລ້ວ",

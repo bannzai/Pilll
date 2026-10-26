@@ -71,7 +71,7 @@
   "reLogin": "تسجيل الدخول مجددًا",
   "authenticationInfoUpdated": "تم تحديث بيانات تسجيل الدخول",
   "updateAuthenticationInformation": "تحديث بيانات تسجيل الدخول",
-  "registeredWithProvider": "تم التسجيل باستخدام {accountTypeProviderName}",
+  "registeredWithProvider": "تم تسجيل حسابكِ باستخدام {accountTypeProviderName}",
   "linkAccount": "ربط",
   "withdraw": "إلغاء الحساب",
   "withdrawalCompleted": "تم حذف الحساب",

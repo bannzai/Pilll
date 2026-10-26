@@ -71,7 +71,7 @@
   "reLogin": "Logg inn igjen",
   "authenticationInfoUpdated": "Innloggingsopplysningene dine er oppdatert",
   "updateAuthenticationInformation": "Oppdater innloggingsopplysningene dine",
-  "registeredWithProvider": "Registrert med {accountTypeProviderName}",
+  "registeredWithProvider": "Du har registrert deg med {accountTypeProviderName}",
   "linkAccount": "Koble til",
   "withdraw": "Meld av",
   "withdrawalCompleted": "Du har meldt deg ut",

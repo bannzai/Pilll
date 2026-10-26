@@ -71,7 +71,7 @@
   "reLogin": "फिर से लॉग इन करें",
   "authenticationInfoUpdated": "आपकी लॉगिन जानकारी अपडेट हो गई है",
   "updateAuthenticationInformation": "लॉगिन जानकारी अपडेट करें",
-  "registeredWithProvider": "{accountTypeProviderName} के साथ पंजीकरण पूरा हुआ",
+  "registeredWithProvider": "{accountTypeProviderName} से आपका पंजीकरण हो गया है",
   "linkAccount": "जोड़ें",
   "withdraw": "खाता हटाएं",
   "withdrawalCompleted": "खाता हटा दिया गया है",

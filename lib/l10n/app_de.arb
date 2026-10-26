@@ -71,7 +71,7 @@
   "reLogin": "Erneut anmelden",
   "authenticationInfoUpdated": "Deine Anmeldedaten wurden aktualisiert",
   "updateAuthenticationInformation": "Anmeldedaten aktualisieren",
-  "registeredWithProvider": "Mit {accountTypeProviderName} registriert",
+  "registeredWithProvider": "Du hast dich mit {accountTypeProviderName} registriert",
   "linkAccount": "Verknüpfen",
   "withdraw": "Konto löschen",
   "withdrawalCompleted": "Konto gelöscht",

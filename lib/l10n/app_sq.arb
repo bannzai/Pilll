@@ -71,7 +71,7 @@
   "reLogin": "Hyni përsëri",
   "authenticationInfoUpdated": "Të dhënat tuaja të hyrjes u përditësuan",
   "updateAuthenticationInformation": "Përditësoni të dhënat e hyrjes",
-  "registeredWithProvider": "U regjistruat me {accountTypeProviderName}",
+  "registeredWithProvider": "U regjistruat përmes {accountTypeProviderName}",
   "linkAccount": "Lidh",
   "withdraw": "Fshij llogarinë",
   "withdrawalCompleted": "U larguat",

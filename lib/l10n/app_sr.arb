@@ -71,7 +71,7 @@
   "reLogin": "Поново се пријавите",
   "authenticationInfoUpdated": "Ваши подаци за пријаву су ажурирани",
   "updateAuthenticationInformation": "Ажурирајте податке за пријаву",
-  "registeredWithProvider": "Registrovani sa {accountTypeProviderName}",
+  "registeredWithProvider": "Регистровали сте се преко {accountTypeProviderName}",
   "linkAccount": "Poveži",
   "withdraw": "Obriši nalog",
   "withdrawalCompleted": "Налог је обрисан",

@@ -71,7 +71,7 @@
   "reLogin": "ورود دوباره",
   "authenticationInfoUpdated": "اطلاعات ورود شما به‌روزرسانی شد",
   "updateAuthenticationInformation": "به‌روزرسانی اطلاعات ورود",
-  "registeredWithProvider": "با {accountTypeProviderName} ثبت نام شدید",
+  "registeredWithProvider": "ثبت‌نام شما با {accountTypeProviderName} انجام شد",
   "linkAccount": "پیوند دادن",
   "withdraw": "حذف حساب",
   "withdrawalCompleted": "حساب کاربری حذف شد",

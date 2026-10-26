@@ -71,7 +71,7 @@
   "reLogin": "পুনৰ লগ ইন কৰক",
   "authenticationInfoUpdated": "লগইন তথ্য আপডেট কৰা হৈছে",
   "updateAuthenticationInformation": "প্ৰৱেশৰ তথ্য আপডেট কৰক",
-  "registeredWithProvider": "{accountTypeProviderName}ৰে নিবন্ধন সম্পূৰ্ণ হ'ল",
+  "registeredWithProvider": "আপুনি {accountTypeProviderName}ৰ জৰিয়তে সফলভাৱে পঞ্জীয়ন কৰিছে",
   "linkAccount": "সংযোগ কৰক",
   "withdraw": "একাউন্ট ডিলিট কৰক",
   "withdrawalCompleted": "প্রত্যাহাৰ কৰা হ'ল",

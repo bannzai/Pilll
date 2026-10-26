@@ -71,7 +71,7 @@
   "reLogin": "Prisijunkite dar kartą",
   "authenticationInfoUpdated": "Jūsų prisijungimo duomenys atnaujinti",
   "updateAuthenticationInformation": "Atnaujinkite prisijungimo duomenis",
-  "registeredWithProvider": "Užsiregistravote per {accountTypeProviderName}",
+  "registeredWithProvider": "Užsiregistravote naudodami {accountTypeProviderName}",
   "linkAccount": "Susieti",
   "withdraw": "Ištrinti paskyrą",
   "withdrawalCompleted": "Atsijungėte",
