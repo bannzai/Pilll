@@ -543,7 +543,7 @@
   "creatingNewPillSheetFeatureAppealPoint3": "Перемкніть за допомогою перемикача на вкладці «Налаштування»",
   "alarmKitFeatureAppealPoint1": "Лунає навіть у беззвучному режимі/режимі зосередження",
   "alarmKitFeatureAppealPoint2": "Звук сигналу, як у будильника",
-  "alarmKitFeatureAppealPoint3": "iOS 26 і новіше · Увімкніть у вкладці «Налаштування»",
+  "alarmKitFeatureAppealPoint3": "iOS 26 або новіша версія · Увімкніть на вкладці «Налаштування»",
   "todayPillNumberFeatureAppealPoint1": "Безкоштовна функція зіставлення номерів",
   "todayPillNumberFeatureAppealPoint2": "Можна змінити на вкладці «Налаштування»",
   "todayPillNumberFeatureAppealPoint3": "Можна також відкрити, торкнувшись цифри на головному екрані",

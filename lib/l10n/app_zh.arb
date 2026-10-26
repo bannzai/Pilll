@@ -543,7 +543,7 @@
   "creatingNewPillSheetFeatureAppealPoint3": "可通过设置标签页中的开关切换",
   "alarmKitFeatureAppealPoint1": "静音/专注模式下也会响铃",
   "alarmKitFeatureAppealPoint2": "像闹钟一样的铃声",
-  "alarmKitFeatureAppealPoint3": "在 iOS 26 及更高版本，从“设置”选项卡启用",
+  "alarmKitFeatureAppealPoint3": "iOS 26 或更高版本 · 可在“设置”标签页开启",
   "todayPillNumberFeatureAppealPoint1": "免费使用的编号对齐功能",
   "todayPillNumberFeatureAppealPoint2": "请从“设置”选项卡更改",
   "todayPillNumberFeatureAppealPoint3": "点击主屏幕的数字也可打开",
