@@ -108,7 +108,7 @@
   "selectPauseStartDate": "گولی لینے میں وقفے کی شروعات کی تاریخ منتخب کریں",
   "selectPausePeriod": "گولی لینے میں وقفے کی مدت منتخب کریں",
   "pauseStartDate": "گولیاں لینے میں وقفہ شروع ہونے کی تاریخ",
-  "pauseEndDate": "دوا کے وقفے کی اختتام کی تاریخ",
+  "pauseEndDate": "گولی لینے کے وقفے کی آخری تاریخ",
   "endPillSheet": "پل شیٹ مکمل",
   "discardPillSheet": "پِل شیٹ ضائع کریں",
   "takingTime": "دوا کا وقت",

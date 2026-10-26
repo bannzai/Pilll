@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Valitse pilleritauon alkamispäivä",
   "selectPausePeriod": "Valitse pilleritauon pituus",
   "pauseStartDate": "Pilleritauon alkamispäivä",
-  "pauseEndDate": "Käyttötauon päättymispäivä",
+  "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "Ehkäisytablettipakkaus loppu",
   "discardPillSheet": "Pilleriarkin hävittäminen",
   "takingTime": "Ottamisaika",

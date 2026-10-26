@@ -108,7 +108,7 @@
   "selectPauseStartDate": "د ګولیو د اخیستلو د وقفې د پیل نېټه وټاکئ",
   "selectPausePeriod": "د ګولیو له اخیستو د وقفې موده وټاکئ",
   "pauseStartDate": "د ګولیو له اخیستو د وقفې د پیل نېټه",
-  "pauseEndDate": "د وقفې پای نېټه",
+  "pauseEndDate": "د ګولیو اخیستلو د دمې د پای نېټه",
   "endPillSheet": "د ګولیو پاڼه پای ته ورسېده",
   "discardPillSheet": "د ګولیو پاکټ تلفول",
   "takingTime": "د درملو وخت",

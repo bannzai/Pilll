@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Select pill break start date",
   "selectPausePeriod": "Select the length of your pill break",
   "pauseStartDate": "Pill break start date",
-  "pauseEndDate": "Break End Date",
+  "pauseEndDate": "Pill break end date",
   "endPillSheet": "Pill Sheet Finished",
   "discardPillSheet": "Discard Pill Sheet",
   "takingTime": "Dosage Time",

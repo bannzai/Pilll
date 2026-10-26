@@ -108,7 +108,7 @@
   "selectPauseStartDate": "בחירת תאריך תחילת ההפסקה בנטילת הגלולה",
   "selectPausePeriod": "בחירת משך ההפסקה בנטילת הגלולה",
   "pauseStartDate": "תאריך תחילת ההפסקה בנטילת הגלולות",
-  "pauseEndDate": "תאריך סיום ההפסקה",
+  "pauseEndDate": "תאריך סיום ההפסקה בנטילת הגלולה",
   "endPillSheet": "סיום אריזת הגלולות",
   "discardPillSheet": "פינוי עלה כדורים",
   "takingTime": "זמן נטילה",

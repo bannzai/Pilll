@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Choisir la date de début de la pause de pilule",
   "selectPausePeriod": "Choisissez la durée de la pause dans la prise de pilule",
   "pauseStartDate": "Date de début de la pause de pilule",
-  "pauseEndDate": "Date de fin de pause",
+  "pauseEndDate": "Date de fin de la pause de la pilule",
   "endPillSheet": "Pack de pilules terminé",
   "discardPillSheet": "Jeter le paquet de pilules",
   "takingTime": "Temps de dosage",

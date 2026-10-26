@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Beginn der Pillenpause auswählen",
   "selectPausePeriod": "Wähle die Dauer deiner Pillenpause",
   "pauseStartDate": "Beginn der Pillenpause",
-  "pauseEndDate": "Ende der Einnahmepause",
+  "pauseEndDate": "Enddatum der Pillenpause",
   "endPillSheet": "Pillenblister beendet",
   "discardPillSheet": "Blister entsorgen",
   "takingTime": "Einnahmezeit",

@@ -108,7 +108,7 @@
   "selectPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය තෝරන්න",
   "selectPausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය තෝරන්න",
   "pauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය",
-  "pauseEndDate": "ඖෂධ විරාමයේ අවසන් දිනය",
+  "pauseEndDate": "පෙති ගැනීමේ විරාමය අවසන් වන දිනය",
   "endPillSheet": "ගුලි පත්‍ර අවසන්",
   "discardPillSheet": "පෙති පත්‍රය ඉවත් කිරීම",
   "takingTime": "සේවන වේලාව",

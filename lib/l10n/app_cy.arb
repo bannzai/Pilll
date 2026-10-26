@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r seibiant rhag cymryd y bilsen",
   "selectPausePeriod": "Dewiswch hyd yr egwyl rhag cymryd y bilsen",
   "pauseStartDate": "Dyddiad dechrau'r seibiant rhag cymryd y bilsen",
-  "pauseEndDate": "Dyddiad Diwedd y Seibiant",
+  "pauseEndDate": "Dyddiad gorffen y seibiant o gymryd y bilsen",
   "endPillSheet": "Taflen biliau wedi gorffen",
   "discardPillSheet": "Gwaredu Pacer Piliau",
   "takingTime": "Amser cymryd",

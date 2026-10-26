@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Vali pillipausi alguskuupäev",
   "selectPausePeriod": "Vali pillipausi kestus",
   "pauseStartDate": "Pillipausi alguskuupäev",
-  "pauseEndDate": "Võtmispausi lõppkuupäev",
+  "pauseEndDate": "Pillipausi lõppkuupäev",
   "endPillSheet": "Pillipakk lõppenud",
   "discardPillSheet": "Pillipakendi utiliseerimine",
   "takingTime": "Võtmisaeg",

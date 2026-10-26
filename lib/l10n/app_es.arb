@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Selecciona la fecha de inicio del descanso de la píldora",
   "selectPausePeriod": "Elige la duración de la pausa de la píldora",
   "pauseStartDate": "Fecha de inicio de la pausa de la píldora",
-  "pauseEndDate": "Fecha de fin del descanso",
+  "pauseEndDate": "Fecha de fin de la pausa de la píldora",
   "endPillSheet": "Blíster finalizado",
   "discardPillSheet": "Descarte del blíster",
   "takingTime": "Hora de toma",

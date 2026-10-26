@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Hap kullanımına ara verilecek başlangıç tarihini seçin",
   "selectPausePeriod": "Hap kullanımına ara verme süresini seçin",
   "pauseStartDate": "Hap kullanımına ara verme başlangıç tarihi",
-  "pauseEndDate": "Kullanım Arası Bitiş Tarihi",
+  "pauseEndDate": "Hap kullanımına ara verme bitiş tarihi",
   "endPillSheet": "Hap paketi tamamlandı",
   "discardPillSheet": "Hap Paketi İmhası",
   "takingTime": "İlaç Saati",

@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Hautatu pilula hartzeko etenaldiaren hasiera-data",
   "selectPausePeriod": "Aukeratu pilula hartzeko etenaldiaren iraupena",
   "pauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data",
-  "pauseEndDate": "Hartzeko atsedena amaitzeko eguna",
+  "pauseEndDate": "Pilulak hartzeko etenaldiaren amaiera-data",
   "endPillSheet": "Pilula-orria amaituta",
   "discardPillSheet": "Pilula-orria baztertu",
   "takingTime": "Hartzeko ordua",

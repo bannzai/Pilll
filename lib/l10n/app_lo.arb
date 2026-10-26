@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ກະລຸນາເລືອກວັນເລີ່ມພັກການກິນຢາເມັດ",
   "selectPausePeriod": "ກະລຸນາເລືອກໄລຍະພັກການກິນຢາເມັດ",
   "pauseStartDate": "ວັນທີເລີ່ມພັກກິນຢາເມັດ",
-  "pauseEndDate": "ວັນສິ້ນສຸດການພັກຢາ",
+  "pauseEndDate": "ວັນສິ້ນສຸດຊ່ວງພັກກິນຢາເມັດ",
   "endPillSheet": "ແຜ່ນຢາຄຸມກໍາເນີດສິ້ນສຸດ",
   "discardPillSheet": "ກຳຈັດແຜ່ນຢາເມັດ",
   "takingTime": "ເວລາກິນຢາ",

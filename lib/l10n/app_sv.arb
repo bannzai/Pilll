@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Välj startdatum för pilleruppehållet",
   "selectPausePeriod": "Välj längd på pilleruppehållet",
   "pauseStartDate": "Startdatum för pilleruppehåll",
-  "pauseEndDate": "Slutdatum för intagsuppehåll",
+  "pauseEndDate": "Slutdatum för pillerpausen",
   "endPillSheet": "Blister avslutad",
   "discardPillSheet": "Kassera blisterförpackning",
   "takingTime": "Intagstid",

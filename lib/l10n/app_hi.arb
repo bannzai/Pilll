@@ -108,7 +108,7 @@
   "selectPauseStartDate": "गोली लेने के विराम की शुरुआत की तारीख चुनें",
   "selectPausePeriod": "गोली लेने के बीच विराम की अवधि चुनें",
   "pauseStartDate": "गोली लेने में विराम शुरू होने की तारीख",
-  "pauseEndDate": "सेवन विराम समाप्ति तारीख",
+  "pauseEndDate": "गोली लेने के विराम की समाप्ति तिथि",
   "endPillSheet": "पिल शीट समाप्त",
   "discardPillSheet": "पिल्ल शीट निपटान",
   "takingTime": "दवा का समय",

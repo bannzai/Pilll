@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Həb qəbuluna fasilənin başlanğıc tarixini seçin",
   "selectPausePeriod": "Həb qəbuluna fasilənin müddətini seçin",
   "pauseStartDate": "Həb qəbuluna fasilənin başlama tarixi",
-  "pauseEndDate": "Dərman fasiləsinin bitiş tarixi",
+  "pauseEndDate": "Həb qəbuluna fasilənin bitmə tarixi",
   "endPillSheet": "Həb planşeti tamamlandı",
   "discardPillSheet": "Həb lövhəsinin imhası",
   "takingTime": "Qəbul vaxtı",

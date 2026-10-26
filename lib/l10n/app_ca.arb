@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Tria la data d'inici de la pausa de la píndola",
   "selectPausePeriod": "Tria la durada de la pausa de la píndola",
   "pauseStartDate": "Data d'inici de la pausa de la píndola",
-  "pauseEndDate": "Data de fi del descans",
+  "pauseEndDate": "Data de finalització de la pausa de la píndola",
   "endPillSheet": "Plaqueta de píndoles finalitzada",
   "discardPillSheet": "Eliminació del blíster",
   "takingTime": "Hora de presa",

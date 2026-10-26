@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Zgjidhni datën e fillimit të pushimit nga marrja e pilulës",
   "selectPausePeriod": "Zgjidhni kohëzgjatjen e pushimit nga marrja e pilulave",
   "pauseStartDate": "Data e fillimit të pushimit nga marrja e pilulave",
-  "pauseEndDate": "Data e përfundimit të pushimit",
+  "pauseEndDate": "Data e përfundimit të pushimit nga marrja e pilulave",
   "endPillSheet": "Fleta e pilulës përfundoi",
   "discardPillSheet": "Heqja e fletës së pilules",
   "takingTime": "Ora e marrjes",

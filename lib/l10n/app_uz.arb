@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Tabletkani ichishdagi tanaffus boshlanadigan sanani tanlang",
   "selectPausePeriod": "Tabletkalarni qabul qilishdagi tanaffus muddatini tanlang",
   "pauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanadigan sana",
-  "pauseEndDate": "Dori tanaffusi tugash kuni",
+  "pauseEndDate": "Tabletkalarni qabul qilishdagi tanaffus tugash sanasi",
   "endPillSheet": "Tabletka paketi tugadi",
   "discardPillSheet": "Dori varag'ini tashlash",
   "takingTime": "Qabul vaqti",
