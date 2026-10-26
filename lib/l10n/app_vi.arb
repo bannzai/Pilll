@@ -141,7 +141,7 @@
   "checkLastTakenDate": "Xem ngày uống thuốc gần nhất",
   "pleaseRegisterAccount": "Vui lòng tạo tài khoản",
   "cannotTransferPremiumWithoutAccount": "Nếu đổi hoặc mất điện thoại, bạn sẽ không thể chuyển các tính năng Premium sang điện thoại mới",
-  "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng Premium trong 14 ngày!\nHãy nhấn để chia sẻ lên mạng xã hội!",
+  "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng Premium trong 14 ngày!\nChạm để chia sẻ lên mạng xã hội!",
   "whereToShare": "Chia sẻ đến đâu?",
   "pauseTakingDay": "🌙 Nghỉ uống thuốc ngày thứ {day}",
   "withDay": "ngày thứ {word}",

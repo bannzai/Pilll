@@ -141,7 +141,7 @@
   "checkLastTakenDate": "Sprawdź datę ostatniego przyjęcia tabletki",
   "pleaseRegisterAccount": "Utwórz konto",
   "cannotTransferPremiumWithoutAccount": "Po zmianie lub utracie telefonu nie będzie można przenieść funkcji premium",
-  "reexperiencePremiumFeatures": "Możesz ponownie doświadczyć funkcji premium przez 14 dni! Dotknij, aby udostępnić w mediach społecznościowych!",
+  "reexperiencePremiumFeatures": "Możesz ponownie korzystać z funkcji premium przez 14 dni!\nDotknij, aby udostępnić w mediach społecznościowych!",
   "whereToShare": "Gdzie chcesz udostępnić?",
   "pauseTakingDay": "🌙 Przerwa dzień {day}",
   "withDay": "dzień {word}",

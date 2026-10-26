@@ -141,7 +141,7 @@
   "checkLastTakenDate": "마지막으로 약을 복용한 날짜 확인하기",
   "pleaseRegisterAccount": "계정을 등록해 주세요",
   "cannotTransferPremiumWithoutAccount": "휴대전화를 바꾸거나 분실하면 프리미엄 기능을 옮길 수 없어요",
-  "reexperiencePremiumFeatures": "프리미엄 기능을 14일간 다시 체험해보세요!\n탭해서 SNS에 공유하세요!",
+  "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 다시 이용할 수 있어요!\n탭해서 SNS에 공유해 보세요!",
   "whereToShare": "어디에 공유하시겠어요?",
   "pauseTakingDay": "🌙 휴약 {day}일차",
   "withDay": "{word}일째",

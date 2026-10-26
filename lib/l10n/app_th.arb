@@ -141,7 +141,7 @@
   "checkLastTakenDate": "ดูวันที่ทานยาครั้งล่าสุด",
   "pleaseRegisterAccount": "กรุณาสร้างบัญชีค่ะ",
   "cannotTransferPremiumWithoutAccount": "หากเปลี่ยนหรือทำโทรศัพท์หาย จะไม่สามารถโอนฟีเจอร์พรีเมียมไปยังเครื่องใหม่ได้ค่ะ",
-  "reexperiencePremiumFeatures": "ทดลองใช้ฟีเจอร์พรีเมียมได้อีกครั้งเป็นเวลา 14 วัน！\nแตะเพื่อแชร์ในโซเชียลมีเดียกันเถอะ！",
+  "reexperiencePremiumFeatures": "ทดลองใช้ฟีเจอร์พรีเมียมอีกครั้งได้ 14 วันค่ะ!\nแตะเพื่อแชร์บนโซเชียลมีเดียค่ะ!",
   "whereToShare": "คุณต้องการแชร์ไปที่ไหน?",
   "pauseTakingDay": "🌙 หยุดทานยา วันที่ {day}",
   "withDay": "วันที่ {word}",

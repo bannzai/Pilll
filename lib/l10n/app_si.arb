@@ -141,7 +141,7 @@
   "checkLastTakenDate": "අවසන් වරට පෙත්ත ගත් දිනය බලන්න",
   "pleaseRegisterAccount": "කරුණාකර ගිණුමක් සාදන්න",
   "cannotTransferPremiumWithoutAccount": "දුරකථනය මාරු කළහොත් හෝ නැති වුවහොත් ප්‍රීමියම් පහසුකම් නව දුරකථනයට මාරු කළ නොහැක",
-  "reexperiencePremiumFeatures": "ප්‍රිමියම් විශේෂාංග දින 14ක් නැවත අත්දකින්න පුළුවන්! සමාජ මාධ්‍ය වලට බෙදාගන්නට ටැප් කරන්න!",
+  "reexperiencePremiumFeatures": "ඔබට ප්‍රීමියම් විශේෂාංග දින 14ක් නැවත භාවිත කළ හැකියි!\nසමාජ මාධ්‍යවල බෙදා ගැනීමට තට්ටු කරන්න!",
   "whereToShare": "කොහේ බෙදාගන්නද?",
   "pauseTakingDay": "🌙 පෙති විශ්‍රාම {day} වන දිනය",
   "withDay": "{word}වන දිනය",

@@ -141,7 +141,7 @@
   "checkLastTakenDate": "Se när du tog ditt p-piller senast",
   "pleaseRegisterAccount": "Skapa gärna ett konto",
   "cannotTransferPremiumWithoutAccount": "Om du byter eller tappar bort din telefon kan du inte föra över premiumfunktionerna",
-  "reexperiencePremiumFeatures": "Du kan återuppleva Premium-funktionerna i 14 dagar! Tryck för att dela på sociala medier!",
+  "reexperiencePremiumFeatures": "Du kan prova premiumfunktionerna igen i 14 dagar!\nTryck för att dela i sociala medier!",
   "whereToShare": "Var vill du dela?",
   "pauseTakingDay": "🌙 Pillpaus dag {day}",
   "withDay": "dag {word}",
