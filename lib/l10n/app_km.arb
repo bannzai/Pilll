@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "រដូវចាប់ផ្តើមពីម្សិលមិញ",
   "selectMenstruationStartDate": "សូមជ្រើសរើសថ្ងៃចាប់ផ្តើមរដូវ",
   "menstruationCycle": "វដ្តរដូវ {menstruationDuration} ថ្ងៃ",
-  "login": "ចូល",
+  "login": "ចូលគណនី",
   "beforePremiumRegistration": "មុនពេលចុះឈ្មោះបុរេមៀម...",
   "createNewAccountIfNotLoggedIn": "ប្រសិនបើអ្នកមិនដែលចូលប្រើ Pilll ពីមុនមកទេ គណនីថ្មីនឹងត្រូវបានបង្កើតឡើង",
   "registerAccountForDataTransfer": "ការចុះឈ្មោះគណនីនឹងអនុញ្ញាតឱ្យអ្នកផ្ទេរទិន្នន័យបាន",

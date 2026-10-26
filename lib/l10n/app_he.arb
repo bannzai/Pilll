@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "המחזור התחיל אתמול",
   "selectMenstruationStartDate": "לבחור את תאריך תחילת המחזור",
   "menstruationCycle": "מחזור חודשי של {menstruationDuration} ימים",
-  "login": "התחבר",
+  "login": "כניסה לחשבון",
   "beforePremiumRegistration": "לפני הרשמה לפרימיום...",
   "createNewAccountIfNotLoggedIn": "אם עדיין לא התחברת ל-Pilll, יווצר חשבון חדש",
   "registerAccountForDataTransfer": "רישום חשבון מאפשר העברת נתונים",

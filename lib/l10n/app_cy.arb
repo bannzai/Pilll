@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Dechreuodd y mislif ddoe",
   "selectMenstruationStartDate": "Dewiswch ddyddiad dechrau eich mislif",
   "menstruationCycle": "Cylch mislif o {menstruationDuration} diwrnod",
-  "login": "mewngofnodi",
+  "login": "Mewngofnodi",
   "beforePremiumRegistration": "Cyn cofrestru premiwm...",
   "createNewAccountIfNotLoggedIn": "Os nad ydych chi wedi mewngofnodi i Pilll o'r blaen, bydd cyfrif newydd yn cael ei greu",
   "registerAccountForDataTransfer": "Mae cofrestru cyfrif yn galluogi trosglwyddo data",

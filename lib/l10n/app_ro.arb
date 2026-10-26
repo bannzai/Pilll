@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Menstruația a început ieri",
   "selectMenstruationStartDate": "Alege data de început a menstruației",
   "menstruationCycle": "Ciclu menstrual de {menstruationDuration} zile",
-  "login": "Conectare",
+  "login": "Autentifică-te",
   "beforePremiumRegistration": "Înainte de abonarea Premium...",
   "createNewAccountIfNotLoggedIn": "Dacă nu v-ați conectat încă la Pilll, va fi creat un cont nou.",
   "registerAccountForDataTransfer": "Înregistrarea unui cont permite sincronizarea datelor",

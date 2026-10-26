@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Menstruacija je počela jučer",
   "selectMenstruationStartDate": "Odaberite datum početka menstruacije",
   "menstruationCycle": "Menstrualni ciklus od {menstruationDuration} dana",
-  "login": "Prijava",
+  "login": "Prijavite se",
   "beforePremiumRegistration": "Prije premium registracije...",
   "createNewAccountIfNotLoggedIn": "Ako se još niste prijavljivali u Pilll, bit će stvoren novi račun",
   "registerAccountForDataTransfer": "Registracija računa omogućava prenošenje podataka",

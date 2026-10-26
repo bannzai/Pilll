@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Menštruácia sa začala včera",
   "selectMenstruationStartDate": "Vyberte dátum začiatku menštruácie",
   "menstruationCycle": "Menštruačný cyklus: {menstruationDuration} dní",
-  "login": "Prihlásenie",
+  "login": "Prihlásiť sa",
   "beforePremiumRegistration": "Pred registráciou premium...",
   "createNewAccountIfNotLoggedIn": "Ak sa do aplikácie Pilll prihlasujete prvýkrát, automaticky sa vytvorí nový účet.",
   "registerAccountForDataTransfer": "Registráciou účtu môžete prenášať svoje dáta",

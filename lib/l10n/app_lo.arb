@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "ປະຈຳເດືອນເລີ່ມມື້ວານນີ້",
   "selectMenstruationStartDate": "ກະລຸນາເລືອກວັນເລີ່ມປະຈຳເດືອນ",
   "menstruationCycle": "ຮອບປະຈຳເດືອນ {menstruationDuration} ມື້",
-  "login": "ເຂົ້າສູ່ລະບົບ",
+  "login": "ເຂົ້າລະບົບ",
   "beforePremiumRegistration": "ກ່ອນການລົງທະບຽນພຣີມຽມ...",
   "createNewAccountIfNotLoggedIn": "ຖ້າທ່ານຍັງບໍ່ເຄີຍເຂົ້າສູ່ລະບົບ Pilll, ບັນຊີໃໝ່ຈະຖືກສ້າງໂດຍອັດຕະໂນມັດ",
   "registerAccountForDataTransfer": "ການລົງທະບຽນບັນຊີຈະເຮັດໃຫ້ສາມາດຖ່າຍທອດຂໍ້ມູນໄດ້",

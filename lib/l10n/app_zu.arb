@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Ukuya esikhathini kuqale izolo",
   "selectMenstruationStartDate": "Sicela ukhethe usuku lokuqala lokuya esikhathini",
   "menstruationCycle": "Umjikelezo wokuya esikhathini wezinsuku ezingu-{menstruationDuration}",
-  "login": "Ngena",
+  "login": "Ngena ngemvume",
   "beforePremiumRegistration": "Ngaphambi kokubhalisa i-premium...",
   "createNewAccountIfNotLoggedIn": "Uma ungakaze ungene ku-Pilll, kuzokwakhiwa i-akhawunti entsha",
   "registerAccountForDataTransfer": "Uma ubhalisa i-akhawunti, uzokwazi ukuhambisa idatha yakho",

@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "Menstruacionet filluan dje",
   "selectMenstruationStartDate": "Zgjidhni datën e fillimit të menstruacioneve",
   "menstruationCycle": "Cikli menstrual prej {menstruationDuration} ditësh",
-  "login": "Kyçu",
+  "login": "Hyni",
   "beforePremiumRegistration": "Para regjistrimit premium...",
   "createNewAccountIfNotLoggedIn": "Nëse nuk keni kryer ende hyrjen në Pilll, do të krijohet automatikisht një llogari e re",
   "registerAccountForDataTransfer": "Regjistrimi i llogarisë mundëson transferimin e të dhënave",

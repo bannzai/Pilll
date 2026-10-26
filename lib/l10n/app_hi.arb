@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "पीरियड कल शुरू हुआ",
   "selectMenstruationStartDate": "पीरियड शुरू होने की तारीख चुनें",
   "menstruationCycle": "{menstruationDuration} दिनों का पीरियड चक्र",
-  "login": "लॉग इन",
+  "login": "लॉग इन करें",
   "beforePremiumRegistration": "प्रीमियम रजिस्ट्रेशन से पहले...",
   "createNewAccountIfNotLoggedIn": "यदि आपने Pilll में अभी तक लॉगिन नहीं किया है तो एक नया खाता बनाया जाएगा",
   "registerAccountForDataTransfer": "खाता पंजीकरण करने से डेटा ट्रांसफर संभव हो जाता है",

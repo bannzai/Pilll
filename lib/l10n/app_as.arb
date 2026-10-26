@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "মাহেকীয়া কালি আৰম্ভ হৈছে",
   "selectMenstruationStartDate": "মাহেকীয়া আৰম্ভ হোৱাৰ তাৰিখ বাছনি কৰক",
   "menstruationCycle": "{menstruationDuration} দিনীয়া মাহেকীয়া চক্ৰ",
-  "login": "লগইন",
+  "login": "লগ ইন কৰক",
   "beforePremiumRegistration": "প্ৰিমিয়াম ৰেজিষ্ট্ৰেচনৰ আগতে...",
   "createNewAccountIfNotLoggedIn": "যদি Pilll ত এতিয়াও লগইন কৰা নাই তেন্তে নতুন একাউন্ট সৃষ্টি হ'ব",
   "registerAccountForDataTransfer": "একাউন্ট পঞ্জীয়ন কৰিলে ডাটা স্থানান্তৰ সম্ভৱ হ'ব",

@@ -166,7 +166,7 @@
   "menstruationFromYesterday": "ඔසප් වීම ඊයේ ආරම්භ වුණා",
   "selectMenstruationStartDate": "ඔසප් වීම ආරම්භ වූ දිනය තෝරන්න",
   "menstruationCycle": "දින {menstruationDuration}ක ඔසප් චක්‍රය",
-  "login": "ප්‍රවේශය",
+  "login": "පිවිසෙන්න",
   "beforePremiumRegistration": "ප්‍රිමියම් ලියාපදිංචි කිරීමට පෙර...",
   "createNewAccountIfNotLoggedIn": "ඔබ තවම Pilll වෙත පිවිසී නොමැති නම් නව ගිණුමක් සාදනු ලැබේ",
   "registerAccountForDataTransfer": "ගිණුමක් ලියාපදිංචි කළහොත් දත්ත ස්ථානාන්තරණය කළ හැකිය",
