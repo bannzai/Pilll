@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-No. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pill {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "Pills {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "Numbers 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 to {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",

@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} नंबर",
   "beforeLastTakenPillNumber": "गोली नंबर {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "गोली संख्या {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} नंबर",
+  "oneToAfterDisplayNumberBeginPillNumber": "नंबर 1 से {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber} नंबर",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नंबर",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} नं",

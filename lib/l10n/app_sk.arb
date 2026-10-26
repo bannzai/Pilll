@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-č. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Tabletka č. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "tabletky č. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "čísla 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1 → {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "č. {beforeEndPillNumber} → č. {afterDisplayNumberSettingEndPillNumber}",

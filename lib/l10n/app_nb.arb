@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-nr. {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "P-pille nr. {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "p-piller nr. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→nr. {afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "nummer 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} nr.",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nr.",

@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-شمېره {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "د {beforeLastTakenPillNumber} شمېرې ګولۍ",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "د ګولیو شمېرې {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "له 1 تر {afterDisplayNumberSettingBeginPillNumber} شمېرې",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} شمیره",
   "oneToAfterDisplayNumberEndPillNumber": "۱→{afterDisplayNumberSettingEndPillNumber}ګ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شمېره",

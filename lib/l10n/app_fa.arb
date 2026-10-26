@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-شمارهٔ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "قرص شمارهٔ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "قرص‌های شمارهٔ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "شماره‌های ۱ تا {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "شماره {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "از ۱ تا {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "شماره {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",

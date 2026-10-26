@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}వ నంబర్",
   "beforeLastTakenPillNumber": "మాత్ర సంఖ్య {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} నంబరు మాత్రలు",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}వ",
+  "oneToAfterDisplayNumberBeginPillNumber": "1 నుండి {afterDisplayNumberSettingBeginPillNumber} వరకు సంఖ్యలు",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}నంబర్",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}వ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",

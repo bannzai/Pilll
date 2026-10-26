@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-رقم {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "الحبة رقم {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "الحبوب رقم {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "١ ← {afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "الأرقام من 1 إلى {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} رقم",
   "oneToAfterDisplayNumberEndPillNumber": "١ ← {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} رقم",

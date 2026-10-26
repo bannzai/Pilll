@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} අංකය",
   "beforeLastTakenPillNumber": "පෙති අංක {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "පෙති අංක {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}වන",
+  "oneToAfterDisplayNumberBeginPillNumber": "අංක 1 සිට {afterDisplayNumberSettingBeginPillNumber} දක්වා",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} අංකය",
   "oneToAfterDisplayNumberEndPillNumber": "1වන සිට {afterDisplayNumberSettingEndPillNumber}වන දක්වා",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}අංකය",

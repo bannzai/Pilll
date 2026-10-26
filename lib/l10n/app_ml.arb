@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ാം നമ്പർ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-ാം ഗുളിക",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} നമ്പർ ഗുളികകൾ",
-  "oneToAfterDisplayNumberBeginPillNumber": "1 മുതൽ {afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "1 മുതൽ {afterDisplayNumberSettingBeginPillNumber} വരെയുള്ള നമ്പറുകൾ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ആം",
   "oneToAfterDisplayNumberEndPillNumber": "൧→{afterDisplayNumberSettingEndPillNumber}നമ്പർ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ാം",

@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ਨੰਬਰ",
   "beforeLastTakenPillNumber": "ਗੋਲੀ ਨੰਬਰ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ਗੋਲੀਆਂ ਨੰਬਰ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}ਨੰਬਰ",
+  "oneToAfterDisplayNumberBeginPillNumber": "੧ ਤੋਂ {afterDisplayNumberSettingBeginPillNumber} ਨੰਬਰ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} ਨੰਬਰ",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ਨੰਬਰ",

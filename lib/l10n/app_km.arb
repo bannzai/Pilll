@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-លេខ {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "គ្រាប់ថ្នាំលេខ {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "គ្រាប់ថ្នាំលេខ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "១→លេខ{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "លេខ 1 ដល់ {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}ច្រកាំ",
   "oneToAfterDisplayNumberEndPillNumber": "1 ដល់ {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "លេខ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",

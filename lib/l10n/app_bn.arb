@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} নম্বর",
   "beforeLastTakenPillNumber": "পিল নম্বর {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "পিল নং {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "১→{afterDisplayNumberSettingBeginPillNumber} নং",
+  "oneToAfterDisplayNumberBeginPillNumber": "১ থেকে {afterDisplayNumberSettingBeginPillNumber} নম্বর",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} নং",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber}নং",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}নং",

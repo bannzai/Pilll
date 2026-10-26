@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-inombolo {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Iphilisi elingunombolo {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "amaphilisi enombolo {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "1 → {afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "izinombolo 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} inombolo",
   "oneToAfterDisplayNumberEndPillNumber": "1-{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Inombolo {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",

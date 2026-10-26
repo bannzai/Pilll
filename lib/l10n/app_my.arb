@@ -101,7 +101,7 @@
   "leftDashAfterLastTakenPillNumber": "{left}-အမှတ် {afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "ဆေးလုံးအမှတ် {beforeLastTakenPillNumber}",
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ဆေးလုံးအမှတ် {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
-  "oneToAfterDisplayNumberBeginPillNumber": "၁→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "နံပါတ် ၁ မှ {afterDisplayNumberSettingBeginPillNumber} အထိ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}နံပါတ်",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} နံပါတ်",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}နံပါတ်",
