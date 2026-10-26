@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Выдаленыя запісы ў дзённіку нельга аднавіць",
   "sex": "Сэксуальныя адносіны",
   "previousPillSheetGroup": "Папярэдняя група блістараў",
-  "noPreviousPillSheetGroup": "Папярэдняя група аркушоў таблетак яшчэ не існуе",
+  "noPreviousPillSheetGroup": "Папярэдняй групы блістар пакуль няма",
   "failedToFetchPillHistory": "Не ўдалося атрымаць інформацыю пра гісторыю прыёму. {error}",
   "seeFAQ": "Паглядзець ЧАП",
   "reloadScreen": "Перазагрузіць экран",

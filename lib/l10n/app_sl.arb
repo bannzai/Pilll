@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Izbrisanih dnevniških zapisov ni mogoče obnoviti",
   "sex": "Spolni odnos",
   "previousPillSheetGroup": "Prejšnja skupina ploščic",
-  "noPreviousPillSheetGroup": "Prejšnja skupina blister tablet še ne obstaja",
+  "noPreviousPillSheetGroup": "Prejšnja skupina ploščic še ne obstaja",
   "failedToFetchPillHistory": "Pridobivanje podatkov o zgodovini jemanja ni uspelo. {error}",
   "seeFAQ": "Poglej FAQ",
   "reloadScreen": "Ponovno naloži zaslon",

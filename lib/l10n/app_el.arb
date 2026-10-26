@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Οι διαγραμμένες καταχωρίσεις ημερολογίου δεν μπορούν να ανακτηθούν",
   "sex": "Σεξουαλική επαφή",
   "previousPillSheetGroup": "Προηγούμενη ομάδα από καρτέλα χαπιών",
-  "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμα προηγούμενη ομάδα φύλλων χαπιών",
+  "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμη προηγούμενη ομάδα για καρτέλα χαπιών",
   "failedToFetchPillHistory": "Απέτυχε η ανάκτηση των στοιχείων ιστορικού λήψης. {error}",
   "seeFAQ": "Δείτε τις Συχνές Ερωτήσεις",
   "reloadScreen": "Ανανέωση οθόνης",

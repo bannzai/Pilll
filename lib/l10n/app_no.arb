@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Slettede dagboknotater kan ikke gjenopprettes",
   "sex": "Sex",
   "previousPillSheetGroup": "Forrige gruppe pillebrett",
-  "noPreviousPillSheetGroup": "Forrige pillearkgruppe finnes ikke ennå",
+  "noPreviousPillSheetGroup": "Det finnes ingen tidligere pillebrettgruppe ennå",
   "failedToFetchPillHistory": "Kunne ikke hente medikamenthistorikk. {error}",
   "seeFAQ": "Se FAQ",
   "reloadScreen": "Oppdater skjerm",

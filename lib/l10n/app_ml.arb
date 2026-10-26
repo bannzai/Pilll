@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "ഇല്ലാതാക്കിയ ഡയറി കുറിപ്പുകൾ വീണ്ടെടുക്കാനാവില്ല",
   "sex": "ലൈംഗിക ബന്ധം",
   "previousPillSheetGroup": "മുമ്പത്തെ ഗുളിക സ്ട്രിപ്പുകളുടെ കൂട്ടം",
-  "noPreviousPillSheetGroup": "മുമ്പത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് ഇതുവരെ നിലവിലില്ല",
+  "noPreviousPillSheetGroup": "മുമ്പത്തെ ഗുളിക സ്ട്രിപ്പ ഗ്രൂപ്പ് ഇതുവരെ ഇല്ല",
   "failedToFetchPillHistory": "സേവന ചരിത്രം ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. {error}",
   "seeFAQ": "FAQ കാണുക",
   "reloadScreen": "വീണ്ടും ലോഡ് ചെയ്യുക",

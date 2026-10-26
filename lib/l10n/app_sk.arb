@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Vymazané záznamy v denníku nie je možné obnoviť",
   "sex": "Pohlavný styk",
   "previousPillSheetGroup": "Predchádzajúca skupina blistov",
-  "noPreviousPillSheetGroup": "Predchádzajúca skupina tabliet ešte neexistuje",
+  "noPreviousPillSheetGroup": "Predchádzajúca skupina blistov ešte neexistuje",
   "failedToFetchPillHistory": "Nepodarilo sa načítať informácie o histórii užívania. {error}",
   "seeFAQ": "Zobraziť FAQ",
   "reloadScreen": "Obnoviť obrazovku",

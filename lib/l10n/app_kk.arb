@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбаларын қалпына келтіру мүмкін емес",
   "sex": "Жыныстық қатынас",
   "previousPillSheetGroup": "Алдыңғы таблетка блистер тобы",
-  "noPreviousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы әлі жоқ",
+  "noPreviousPillSheetGroup": "Алдыңғы таблетка блистер тобы әлі жоқ",
   "failedToFetchPillHistory": "Дәрі қабылдау тарихы ақпаратын алу сәтсіз аяқталды. {error}",
   "seeFAQ": "FAQ көру",
   "reloadScreen": "Экранды қайта жүктеу",

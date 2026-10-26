@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Smazané záznamy v deníku nelze obnovit",
   "sex": "Pohlavní styk",
   "previousPillSheetGroup": "Předchozí skupina blistrů",
-  "noPreviousPillSheetGroup": "Předchozí skupina balení pilulek zatím neexistuje",
+  "noPreviousPillSheetGroup": "Předchozí skupina blistrů zatím neexistuje",
   "failedToFetchPillHistory": "Nepodařilo se načíst historii užívání. {error}",
   "seeFAQ": "Zobrazit FAQ",
   "reloadScreen": "Obnovit obrazovku",

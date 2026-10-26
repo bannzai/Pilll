@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "நீக்கப்பட்ட நாட்குறிப்புப் பதிவுகளை மீட்டெடுக்க முடியாது",
   "sex": "பாலியல் உறவு",
   "previousPillSheetGroup": "முந்தைய மாத்திரை அட்டைத் தொகுப்பு",
-  "noPreviousPillSheetGroup": "முந்தைய மாத்திரை தாள் குழு இன்னும் இல்லை",
+  "noPreviousPillSheetGroup": "முந்தைய மாத்திரை அட்டை குழு இன்னும் இல்லை",
   "failedToFetchPillHistory": "மருந்து உட்கொள்ளல் வரலாறு தகவலை பெறுவதில் தோல்வி. {error}",
   "seeFAQ": "FAQ பார்க்க",
   "reloadScreen": "திரையை மீண்டும் ஏற்றவும்",

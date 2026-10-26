@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Silinmiş gündəlik qeydlərini bərpa etmək mümkün deyil",
   "sex": "Cinsi əlaqə",
   "previousPillSheetGroup": "Əvvəlki həb blister qrupu",
-  "noPreviousPillSheetGroup": "Əvvəlki həb vərəqi qrupu hələ mövcud deyil",
+  "noPreviousPillSheetGroup": "Əvvəlki həb blister qrupu hələ yoxdur",
   "failedToFetchPillHistory": "Dərman qəbulu tarixçəsi məlumatları yüklənə bilmədi. {error}",
   "seeFAQ": "FAQ-ya bax",
   "reloadScreen": "Ekranı yenidən yüklə",

@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Geskrapte dagboekinskrywings kan nie herstel word nie",
   "sex": "Seks",
   "previousPillSheetGroup": "Vorige pilstrokiegroep",
-  "noPreviousPillSheetGroup": "Die vorige pilblad groep bestaan nog nie",
+  "noPreviousPillSheetGroup": "Daar is nog geen vorige pilstrokiegroep nie",
   "failedToFetchPillHistory": "Kon nie die inligting oor die pilgebruikgeskiedenis laai nie. {error}",
   "seeFAQ": "Sien FAQ",
   "reloadScreen": "Herlaai skerm",

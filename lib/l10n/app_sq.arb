@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Shënimet e fshira të ditarit nuk mund të rikthehen",
   "sex": "Marrëdhënie seksuale",
   "previousPillSheetGroup": "Grupi i mëparshëm i blisterëve",
-  "noPreviousPillSheetGroup": "Grupi i mëparshëm i fletës së pilulës nuk ekziston ende",
+  "noPreviousPillSheetGroup": "Ende nuk ka një grup të mëparshëm blisterësh",
   "failedToFetchPillHistory": "Dështoi në marrjen e të dhënave të historisë së marrjes. {error}",
   "seeFAQ": "Shiko FAQ",
   "reloadScreen": "Rifresko ekranin",

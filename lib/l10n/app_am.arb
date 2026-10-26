@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "የተሰረዙ የማስታወሻ መዝገቦችን መመለስ አይቻልም",
   "sex": "ወሲባዊ ግንኙነት",
   "previousPillSheetGroup": "የቀድሞው ክኒን ሉህ ቡድን",
-  "noPreviousPillSheetGroup": "የቀደመው የክኒን ቡድን አሁንም የለም",
+  "noPreviousPillSheetGroup": "የቀድሞው ክኒን ሉህ ቡድን ገና የለም",
   "failedToFetchPillHistory": "የመድሐኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",
   "seeFAQ": "ተደጋጋሚ ጥያቄዎችን ይመልከቱ",
   "reloadScreen": "ማያን ማደስ",

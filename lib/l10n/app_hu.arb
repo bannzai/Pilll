@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "A törölt naplóbejegyzések nem állíthatók vissza",
   "sex": "Szexuális együttlét",
   "previousPillSheetGroup": "Előző tablettacsomag-csoport",
-  "noPreviousPillSheetGroup": "Az előző pilulacsoport még nem létezik",
+  "noPreviousPillSheetGroup": "Még nincs korábbi tablettacsomag-csoport",
   "failedToFetchPillHistory": "A szedési előzmények betöltése sikertelen volt. {error}",
   "seeFAQ": "GYIK megtekintése",
   "reloadScreen": "Képernyő frissítése",

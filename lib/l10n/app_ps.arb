@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "د ورځني یادښتونو ړنګ شوي لیکنې بېرته نه شي راګرځېدلی",
   "sex": "جنسي اړیکه",
   "previousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله",
-  "noPreviousPillSheetGroup": "د پخوانی ګولیو د پاڼو ګروپ لا تر اوسه شتون نلري",
+  "noPreviousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله لا نشته",
   "failedToFetchPillHistory": "د خوراکي درملو تاریخچې معلوماتو ترلاسه کول ناکام شو. {error}",
   "seeFAQ": "ډېر پوښتنې وګورئ",
   "reloadScreen": "سکرین بیا لوډول",

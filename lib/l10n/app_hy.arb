@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Ջնջված օրագրային գրառումները հնարավոր չէ վերականգնել",
   "sex": "Սեռական հարաբերություն",
   "previousPillSheetGroup": "Հաբերի բլիստերների նախորդ խումբ",
-  "noPreviousPillSheetGroup": "Նախորդ հաբերի խումբը դեռ գոյություն չունի",
+  "noPreviousPillSheetGroup": "Նախորդ հաբերի բլիստեր խումբը դեռ չկա",
   "failedToFetchPillHistory": "Հաբերի ընդունման պատմության տվյալները ստանալը ձախողվեց: {error}",
   "seeFAQ": "FAQ-ը դիտել",
   "reloadScreen": "Վերաբեռնել էկրանը",

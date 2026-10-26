@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Verwijderde dagboeknotities kun je niet herstellen",
   "sex": "Seks",
   "previousPillSheetGroup": "Vorige groep pillenstrips",
-  "noPreviousPillSheetGroup": "De vorige pillenstripgroep bestaat nog niet",
+  "noPreviousPillSheetGroup": "Er is nog geen vorige pillenstripgroep",
   "failedToFetchPillHistory": "Kan inname geschiedenis niet ophalen. {error}",
   "seeFAQ": "FAQ bekijken",
   "reloadScreen": "Scherm herladen",

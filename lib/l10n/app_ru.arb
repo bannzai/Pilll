@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Удалённые записи дневника нельзя восстановить",
   "sex": "Половой контакт",
   "previousPillSheetGroup": "Предыдущая группа блистеров",
-  "noPreviousPillSheetGroup": "Предыдущая группа блистеров ещё не существует",
+  "noPreviousPillSheetGroup": "Предыдущей группы блистеров пока нет",
   "failedToFetchPillHistory": "Не удалось получить информацию об истории приема. {error}",
   "seeFAQ": "Посмотреть FAQ",
   "reloadScreen": "Обновить экран",

@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "წაშლილი დღიურის ჩანაწერების აღდგენა შეუძლებელია",
   "sex": "სქესობრივი კავშირი",
   "previousPillSheetGroup": "აბების ბლისტერების წინა ჯგუფი",
-  "noPreviousPillSheetGroup": "წინა აბების ფურცლის ჯგუფი ჯერ არ არსებობს",
+  "noPreviousPillSheetGroup": "წინა აბების ბლისტერის ჯგუფი ჯერ არ არსებობს",
   "failedToFetchPillHistory": "მიღების ისტორიის ინფორმაციის მიღება ვერ მოხერხდა. {error}",
   "seeFAQ": "ხშირად დასმული კითხვების ნახვა",
   "reloadScreen": "ეკრანის ხელახალი ჩატვირთვა",

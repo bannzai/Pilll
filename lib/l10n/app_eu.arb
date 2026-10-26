@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Ezabatutako egunkariko sarrerak ezin dira berreskuratu",
   "sex": "Sexu harremanak",
   "previousPillSheetGroup": "Aurreko pilula-blister taldea",
-  "noPreviousPillSheetGroup": "Aurreko pilula orriko taldea oraindik ez dago",
+  "noPreviousPillSheetGroup": "Oraindik ez dago aurreko pilula-blister talderik",
   "failedToFetchPillHistory": "Ezin izan da hartzeen historiaren informazioa eskuratu. {error}",
   "seeFAQ": "FAQ-ak ikusi",
   "reloadScreen": "Pantaila berritu",

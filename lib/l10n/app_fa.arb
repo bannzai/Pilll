@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "یادداشت‌های حذف‌شدهٔ دفترچه خاطرات قابل بازیابی نیستند",
   "sex": "رابطه جنسی",
   "previousPillSheetGroup": "گروه قبلی ورق قرص",
-  "noPreviousPillSheetGroup": "هنوز گروه برگه قرص قبلی وجود ندارد",
+  "noPreviousPillSheetGroup": "هنوز گروه قبلی ورق قرص وجود ندارد",
   "failedToFetchPillHistory": "دریافت اطلاعات سابقه مصرف ناموفق بود. {error}",
   "seeFAQ": "مشاهده سؤالات متداول",
   "reloadScreen": "بارگیری مجدد صفحه",

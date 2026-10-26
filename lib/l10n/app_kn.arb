@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "ಅಳಿಸಿದ ದಿನಚರಿ ದಾಖಲಾತಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುವುದಿಲ್ಲ",
   "sex": "ಲೈಂಗಿಕ ಸಂಪರ್ಕ",
   "previousPillSheetGroup": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಗುಂಪು",
-  "noPreviousPillSheetGroup": "ಹಿಂದಿನ ಪಿಲ್ ಶೀಟ್ ಗುಂಪು ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ",
+  "noPreviousPillSheetGroup": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಗುಂಪು ಇನ್ನೂ ಇಲ್ಲ",
   "failedToFetchPillHistory": "ಸೇವನೆ ಇತಿಹಾಸ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯುವಲ್ಲಿ ವಿಫಲವಾಗಿದೆ। {error}",
   "seeFAQ": "FAQ ನೋಡಿ",
   "reloadScreen": "ಪರದೆಯನ್ನು ಮರುಲೋಡ್ ಮಾಡಿ",

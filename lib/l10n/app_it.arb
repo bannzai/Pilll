@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Le voci del diario eliminate non possono essere recuperate",
   "sex": "Rapporti sessuali",
   "previousPillSheetGroup": "Gruppo precedente di blister",
-  "noPreviousPillSheetGroup": "Il gruppo del blister precedente non esiste ancora",
+  "noPreviousPillSheetGroup": "Non c’è ancora un gruppo di blister precedente",
   "failedToFetchPillHistory": "Non è stato possibile recuperare le informazioni della cronologia delle assunzioni. {error}",
   "seeFAQ": "Vedi FAQ",
   "reloadScreen": "Ricarica la schermata",

@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Usuniętych wpisów w dzienniku nie można przywrócić",
   "sex": "Współżycie",
   "previousPillSheetGroup": "Poprzednia grupa blistów",
-  "noPreviousPillSheetGroup": "Poprzednia grupa arkusza tabletek jeszcze nie istnieje",
+  "noPreviousPillSheetGroup": "Nie ma jeszcze poprzedniej grupy blistów",
   "failedToFetchPillHistory": "Nie udało się pobrać historii przyjmowania. {error}",
   "seeFAQ": "Zobacz FAQ",
   "reloadScreen": "Przeładuj ekran",

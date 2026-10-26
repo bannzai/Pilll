@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "As entradas do diario eliminadas non se poden recuperar",
   "sex": "Relacións sexuais",
   "previousPillSheetGroup": "Grupo anterior de blísters",
-  "noPreviousPillSheetGroup": "O grupo de píldoras anterior aínda non existe",
+  "noPreviousPillSheetGroup": "Aínda non hai ningún grupo anterior de blíster",
   "failedToFetchPillHistory": "Fallou a obtención da información do historial de toma. {error}",
   "seeFAQ": "Ver as preguntas frecuentes",
   "reloadScreen": "Recargar pantalla",

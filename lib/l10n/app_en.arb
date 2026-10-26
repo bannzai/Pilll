@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Deleted diary entries can’t be restored",
   "sex": "Sex",
   "previousPillSheetGroup": "Previous pill pack group",
-  "noPreviousPillSheetGroup": "No previous pill sheet group exists yet",
+  "noPreviousPillSheetGroup": "There’s no previous pill pack group yet",
   "failedToFetchPillHistory": "Failed to retrieve medication history information. {error}",
   "seeFAQ": "View FAQ",
   "reloadScreen": "Reload",

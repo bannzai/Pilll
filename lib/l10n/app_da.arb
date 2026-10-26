@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Slettede dagbogsnotater kan ikke gendannes",
   "sex": "Sex",
   "previousPillSheetGroup": "Forrige gruppe pillekort",
-  "noPreviousPillSheetGroup": "Den forrige p-pillekort gruppe findes ikke endnu",
+  "noPreviousPillSheetGroup": "Der er endnu ingen tidligere pillekortgruppe",
   "failedToFetchPillHistory": "Kunne ikke hente indtagelseshistorik. {error}",
   "seeFAQ": "Se FAQ",
   "reloadScreen": "Genindlæs skærm",

@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "حذف شدہ ڈائری کے اندراجات بحال نہیں کیے جا سکتے",
   "sex": "جنسی تعلق",
   "previousPillSheetGroup": "گولیوں کی پٹی کا پچھلا گروپ",
-  "noPreviousPillSheetGroup": "پچھلا گولی شیٹ گروپ ابھی موجود نہیں ہے",
+  "noPreviousPillSheetGroup": "گولیوں کی پٹی کا پچھلا گروپ ابھی موجود نہیں ہے",
   "failedToFetchPillHistory": "دوائی لینے کی تاریخ کی معلومات حاصل کرنے میں ناکامی۔ {error}",
   "seeFAQ": "اکثر پوچھے جانے والے سوالات دیکھیں",
   "reloadScreen": "دوبارہ لوڈ کریں",

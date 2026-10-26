@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "ບັນທຶກໃນໄດອາຣີທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "sex": "ການຮ່ວມເພດ",
   "previousPillSheetGroup": "ກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
-  "noPreviousPillSheetGroup": "ຍັງບໍ່ມີກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນ",
+  "noPreviousPillSheetGroup": "ຍັງບໍ່ມີກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
   "failedToFetchPillHistory": "ການໂຫລດຂໍ້ມູນປະຫວັດການກິນຢາລົ້ມເຫລວ。{error}",
   "seeFAQ": "ເບິ່ງ FAQ",
   "reloadScreen": "ໂຫຼດໃໝ່",

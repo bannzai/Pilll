@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Raderade dagboksanteckningar kan inte återställas",
   "sex": "Sex",
   "previousPillSheetGroup": "Föregående grupp p-pillerkartor",
-  "noPreviousPillSheetGroup": "Det finns ingen tidigare p-pillerpaketsgrupp",
+  "noPreviousPillSheetGroup": "Det finns ingen tidigare grupp med p-pillerkartor än",
   "failedToFetchPillHistory": "Kunde inte hämta intag/doseringshistorik. {error}",
   "seeFAQ": "Se FAQ",
   "reloadScreen": "Ladda om sidan",

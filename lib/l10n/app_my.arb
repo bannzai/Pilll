@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "ဖျက်လိုက်သော ဒိုင်ယာရီမှတ်တမ်းများကို ပြန်လည်ရယူ၍ မရပါ",
   "sex": "လိင်ဆက်ဆံမှု",
   "previousPillSheetGroup": "ယခင် ဆေးပြားကတ်အုပ်စု",
-  "noPreviousPillSheetGroup": "ယခင်က ဆေးပြားအုပ်စုမရှိသေးပါ",
+  "noPreviousPillSheetGroup": "ယခင် ဆေးပြားကတ်အုပ်စု မရှိသေးပါ",
   "failedToFetchPillHistory": "ဆေးသောက်သမိုင်း အချက်အလက်များ ရယူရာတွင် ပြဿနာ ရှိပါသည်။ {error}",
   "seeFAQ": "FAQ ကြည့်ရန်",
   "reloadScreen": "ပြန်လည်ဖွင့်ရန်",

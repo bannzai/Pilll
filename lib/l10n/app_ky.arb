@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Өчүрүлгөн күндөлүк жазууларын калыбына келтирүү мүмкүн эмес",
   "sex": "Жыныстык катнаш",
   "previousPillSheetGroup": "Мурунку таблетка блистери тобу",
-  "noPreviousPillSheetGroup": "Мурунку таблетка тобу али жок",
+  "noPreviousPillSheetGroup": "Мурунку таблетка блистери тобу азырынча жок",
   "failedToFetchPillHistory": "Дары кабыл алуу тарыхын жүктөө ишке ашпады. {error}",
   "seeFAQ": "FAQди көрүү",
   "reloadScreen": "Экранды жаңыртуу",

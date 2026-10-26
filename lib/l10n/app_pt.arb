@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "As entradas do diário excluídas não podem ser recuperadas",
   "sex": "Relação sexual",
   "previousPillSheetGroup": "Grupo anterior de cartelas",
-  "noPreviousPillSheetGroup": "O grupo de cartela anterior ainda não existe",
+  "noPreviousPillSheetGroup": "Ainda não há um grupo anterior de cartelas",
   "failedToFetchPillHistory": "Falha ao obter informações do histórico de medicação. {error}",
   "seeFAQ": "Ver FAQ",
   "reloadScreen": "Recarregar tela",

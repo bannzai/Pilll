@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Silinen günlük kayıtları geri yüklenemez",
   "sex": "Cinsel ilişki",
   "previousPillSheetGroup": "Önceki blister grubu",
-  "noPreviousPillSheetGroup": "Önceki hap levhası grubu henüz mevcut değil",
+  "noPreviousPillSheetGroup": "Önceki blister grubu henüz yok",
   "failedToFetchPillHistory": "Kullanım geçmişi bilgileri alınamadı. {error}",
   "seeFAQ": "SSS'yi Görüntüle",
   "reloadScreen": "Ekranı yeniden yükle",

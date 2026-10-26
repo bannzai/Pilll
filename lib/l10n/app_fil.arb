@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Hindi na maibabalik ang mga binurang tala sa diary",
   "sex": "Pakikipagtalik",
   "previousPillSheetGroup": "Nakaraang grupo ng pakete ng pildoras",
-  "noPreviousPillSheetGroup": "Wala pang nakaraang pill sheet group",
+  "noPreviousPillSheetGroup": "Wala pang naunang grupo ng pakete ng pildoras",
   "failedToFetchPillHistory": "Nabigo ang pagkuha ng impormasyon ng kasaysayan ng pag-inom. {error}",
   "seeFAQ": "Tingnan ang FAQ",
   "reloadScreen": "I-refresh ang screen",

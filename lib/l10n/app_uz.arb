@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Oʻchirilgan kundalik yozuvlarini qayta tiklab boʻlmaydi",
   "sex": "Jinsiy aloqa",
   "previousPillSheetGroup": "Oldingi tabletka blister guruhi",
-  "noPreviousPillSheetGroup": "Oldingi pill varag'i guruhi hali mavjud emas",
+  "noPreviousPillSheetGroup": "Oldingi tabletka blister guruhi hali mavjud emas",
   "failedToFetchPillHistory": "Qabul qilish tarixi ma'lumotlarini olishda xatolik yuz berdi. {error}",
   "seeFAQ": "FAQ ko'rish",
   "reloadScreen": "Ekranni yangilash",

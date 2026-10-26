@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "บันทึกไดอารีที่ลบแล้วไม่สามารถกู้คืนได้ค่ะ",
   "sex": "การมีเพศสัมพันธ์",
   "previousPillSheetGroup": "กลุ่มแผงยาก่อนหน้า",
-  "noPreviousPillSheetGroup": "ยังไม่มีกลุ่มแผงยาครั้งก่อน",
+  "noPreviousPillSheetGroup": "ยังไม่มีกลุ่มแผงยาก่อนหน้าค่ะ",
   "failedToFetchPillHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานยาได้ {error}",
   "seeFAQ": "ดู FAQ",
   "reloadScreen": "โหลดใหม่",

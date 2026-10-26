@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
   "sex": "Бэлгийн харьцаа",
   "previousPillSheetGroup": "Өмнөх эмийн блистерийн бүлэг",
-  "noPreviousPillSheetGroup": "Өмнөх эмийн хуудасны бүлэг хараахан байхгүй байна",
+  "noPreviousPillSheetGroup": "Өмнөх эмийн блистер бүлэг хараахан байхгүй байна",
   "failedToFetchPillHistory": "Уулгын түүхийн мэдээллийг авахад амжилтгүй боллоо. {error}",
   "seeFAQ": "FAQ-г үзэх",
   "reloadScreen": "Дэлгэцийг дахин ачаалах",

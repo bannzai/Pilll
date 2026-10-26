@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Видалені записи щоденника неможливо відновити",
   "sex": "Статевий акт",
   "previousPillSheetGroup": "Попередня група блістерів",
-  "noPreviousPillSheetGroup": "Попередня група блістерів з таблетками ще не існує",
+  "noPreviousPillSheetGroup": "Попередньої групи блістерів ще немає",
   "failedToFetchPillHistory": "Не вдалося отримати інформацію про історію прийому. {error}",
   "seeFAQ": "Переглянути FAQ",
   "reloadScreen": "Оновити екран",

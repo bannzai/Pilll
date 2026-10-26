@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Maandishi ya shajara yaliyofutwa hayawezi kurejeshwa",
   "sex": "Tendo la ndoa",
   "previousPillSheetGroup": "Kundi la awali la pakiti ya vidonge",
-  "noPreviousPillSheetGroup": "Kundi la karatasi za vidonge la awali bado halipo",
+  "noPreviousPillSheetGroup": "Bado hakuna kundi la awali la pakiti ya vidonge",
   "failedToFetchPillHistory": "Imeshindwa kupata taarifa za historia ya kutumia dawa. {error}",
   "seeFAQ": "Angalia FAQ",
   "reloadScreen": "Pakia upya",

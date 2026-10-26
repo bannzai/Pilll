@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Gelöschte Tagebucheinträge können nicht wiederhergestellt werden",
   "sex": "Sex",
   "previousPillSheetGroup": "Vorherige Pillenblistergruppe",
-  "noPreviousPillSheetGroup": "Vorherige Pillengruppe existiert noch nicht",
+  "noPreviousPillSheetGroup": "Es gibt noch keine vorherige Pillenblistergruppe",
   "failedToFetchPillHistory": "Das Abrufen der Einnahmehistorie-Informationen ist fehlgeschlagen. {error}",
   "seeFAQ": "FAQ ansehen",
   "reloadScreen": "Neu laden",

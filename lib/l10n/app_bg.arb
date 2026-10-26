@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Изтритите записи в дневника не могат да бъдат възстановени",
   "sex": "Сексуален контакт",
   "previousPillSheetGroup": "Предишна група блистери",
-  "noPreviousPillSheetGroup": "Предишната група хапчета все още не съществува",
+  "noPreviousPillSheetGroup": "Все още няма предишна група блистер",
   "failedToFetchPillHistory": "Неуспешно получаване на информацията за историята на приема. {error}",
   "seeFAQ": "Разгледай ЧЗВ",
   "reloadScreen": "Презареди екран",

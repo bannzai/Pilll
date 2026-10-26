@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Ekki er hægt að endurheimta eyddar dagbókarfærslur",
   "sex": "Kynlíf",
   "previousPillSheetGroup": "Fyrri hópur pilluspjalda",
-  "noPreviousPillSheetGroup": "Fyrri pillublað hópur er ekki til",
+  "noPreviousPillSheetGroup": "Enginn fyrri hópur pilluspjalda er til enn",
   "failedToFetchPillHistory": "Mistókst að sækja lyfjanotkunarsögu. {error}",
   "seeFAQ": "Skoða algengar spurningar",
   "reloadScreen": "Endurhlada skjá",

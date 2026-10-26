@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Les notes du journal supprimées ne peuvent pas être récupérées",
   "sex": "Rapport sexuel",
   "previousPillSheetGroup": "Groupe précédent de plaquettes",
-  "noPreviousPillSheetGroup": "Il n'existe pas encore de groupe de feuilles de pilules précédent.",
+  "noPreviousPillSheetGroup": "Il n’y a pas encore de groupe de plaquettes précédent",
   "failedToFetchPillHistory": "Échec de la récupération des informations sur l'historique des médicaments. {error}",
   "seeFAQ": "Voir la FAQ",
   "reloadScreen": "Recharger",

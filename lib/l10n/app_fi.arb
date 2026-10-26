@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",
   "sex": "Seksi",
   "previousPillSheetGroup": "Edellinen pilleriliuskaryhmä",
-  "noPreviousPillSheetGroup": "Edellistä pillipakkausryhmää ei ole vielä olemassa",
+  "noPreviousPillSheetGroup": "Aiempaa pilleriliuskojen ryhmää ei vielä ole",
   "failedToFetchPillHistory": "Ottamishistorian tietojen hakeminen epäonnistui. {error}",
   "seeFAQ": "Katso FAQ",
   "reloadScreen": "Päivitä näyttö",

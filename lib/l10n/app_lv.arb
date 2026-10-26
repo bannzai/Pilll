@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Izdzēstos dienasgrāmatas ierakstus nevar atjaunot",
   "sex": "Dzimumattiecības",
   "previousPillSheetGroup": "Iepriekšējā tablešu blister grupa",
-  "noPreviousPillSheetGroup": "Iepriekšējā tablešu grupa vēl neeksistē",
+  "noPreviousPillSheetGroup": "Iepriekšējās tablešu blister grupas vēl nav",
   "failedToFetchPillHistory": "Neizdevās iegūt tablešu lietošanas vēstures informāciju. {error}",
   "seeFAQ": "Skatīt FAQ",
   "reloadScreen": "Atjaunot ekrānu",

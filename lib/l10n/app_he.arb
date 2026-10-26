@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "אי אפשר לשחזר רשומות יומן שנמחקו",
   "sex": "יחסי מין",
   "previousPillSheetGroup": "הקבוצה הקודמת של חפיסת גלולות",
-  "noPreviousPillSheetGroup": "קבוצת גיליון הכדורים הקודמת אינה קיימת עדיין",
+  "noPreviousPillSheetGroup": "עדיין אין קבוצה קודמת של חפיסת גלולות",
   "failedToFetchPillHistory": "שליפת מידע היסטוריית הנטילה נכשלה. {error}",
   "seeFAQ": "צפה בשאלות נפוצות",
   "reloadScreen": "רענן מסך",

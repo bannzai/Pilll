@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "已删除的日记无法恢复",
   "sex": "性行为",
   "previousPillSheetGroup": "上一组药板",
-  "noPreviousPillSheetGroup": "上次的药片组尚不存在",
+  "noPreviousPillSheetGroup": "还没有上一组药板",
   "failedToFetchPillHistory": "获取服药记录信息失败。{error}",
   "seeFAQ": "查看常见问题",
   "reloadScreen": "重新加载页面",

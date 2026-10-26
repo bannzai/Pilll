@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Избрисане белешке у дневнику не могу да се врате",
   "sex": "Сексуални однос",
   "previousPillSheetGroup": "Претходна група блистера",
-  "noPreviousPillSheetGroup": "Prethodna grupa pilula još ne postoji",
+  "noPreviousPillSheetGroup": "Претходна група блистера још не постоји",
   "failedToFetchPillHistory": "Neuspešno dohvatanje informacija o istoriji uzimanja. {error}",
   "seeFAQ": "Pogledajte FAQ",
   "reloadScreen": "Освежи екран",

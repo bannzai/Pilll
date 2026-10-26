@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Kustutatud päevikukirjeid ei saa taastada",
   "sex": "Seksuaalvahekord",
   "previousPillSheetGroup": "Eelmine pillilehtede rühm",
-  "noPreviousPillSheetGroup": "Eelmine pillilehtede grupp ei ole veel olemas",
+  "noPreviousPillSheetGroup": "Eelmist pillilehe rühma veel ei ole",
   "failedToFetchPillHistory": "Tablettide võtmisajaloo laadimine ebaõnnestus. {error}",
   "seeFAQ": "Vaata FAQ",
   "reloadScreen": "Värskenda ekraani",

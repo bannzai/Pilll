@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Ištrintų dienoraščio įrašų atkurti negalima",
   "sex": "Lytiniai santykiai",
   "previousPillSheetGroup": "Ankstesnė tablečių plokštel grupė",
-  "noPreviousPillSheetGroup": "Ankstesnė tablečių lakšto grupė dar nėra",
+  "noPreviousPillSheetGroup": "Ankstesnės tablečių plokštel grupės dar nėra",
   "failedToFetchPillHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",
   "seeFAQ": "DUK peržiūra",
   "reloadScreen": "Atnaujinti",

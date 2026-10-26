@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Însemnările șterse din jurnal nu pot fi recuperate",
   "sex": "Relații sexuale",
   "previousPillSheetGroup": "Grupul anterior de blistere",
-  "noPreviousPillSheetGroup": "Grupul anterior de blistere de pastile nu există încă",
+  "noPreviousPillSheetGroup": "Nu există încă un grup anterior de blistere",
   "failedToFetchPillHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",
   "seeFAQ": "Vezi FAQ",
   "reloadScreen": "Reîncărcați ecranul",

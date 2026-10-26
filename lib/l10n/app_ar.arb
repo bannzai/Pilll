@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات المحذوفة",
   "sex": "العلاقة الجنسية",
   "previousPillSheetGroup": "مجموعة الشريط السابقة",
-  "noPreviousPillSheetGroup": "لا توجد مجموعة شرائح الحبوب السابقة بعد",
+  "noPreviousPillSheetGroup": "لا توجد مجموعة سابقة من شريط الحبوب بعد",
   "failedToFetchPillHistory": "فشل في الحصول على معلومات سجل تناول الأقراص. {error}",
   "seeFAQ": "عرض الأسئلة الشائعة",
   "reloadScreen": "إعادة تحميل الصفحة",

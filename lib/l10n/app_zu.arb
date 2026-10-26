@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Okubhalwe kudayari okususiwe ngeke kuphinde kubuyiswe",
   "sex": "Ukuya ocansini",
   "previousPillSheetGroup": "Iqembu langaphambilini le-shidi lamaphilisi",
-  "noPreviousPillSheetGroup": "Iqembu lamaphilisi elidlule alikho okwamanje",
+  "noPreviousPillSheetGroup": "Alikakabi khona iqembu langaphambilini leshidi lamaphilisi",
   "failedToFetchPillHistory": "Kwehlulekile ukuthola ulwazi lomlando wokuphuzwa kwamaphilisi. {error}",
   "seeFAQ": "Bheka i-FAQ",
   "reloadScreen": "Vuselela isiskrini",

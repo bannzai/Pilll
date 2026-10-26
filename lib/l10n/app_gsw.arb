@@ -252,7 +252,7 @@
   "deletedDiaryCannotBeRecovered": "Glöschti Tagebuechiiträg chasch nümme zrugg hole",
   "sex": "Sex",
   "previousPillSheetGroup": "Vorigi Pilleblistergruppe",
-  "noPreviousPillSheetGroup": "S letschte Pilleblatt-Gruppe isch no nöd vorhande",
+  "noPreviousPillSheetGroup": "Es git no kei früeneri Pilleblistergruppe",
   "failedToFetchPillHistory": "Fähler bim Lade vo de Iinahm-Gschicht. {error}",
   "seeFAQ": "FAQ aaluege",
   "reloadScreen": "Syte neu lade",
