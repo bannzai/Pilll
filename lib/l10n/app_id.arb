@@ -481,7 +481,7 @@
   "calendarDiaryFeatureAppealHeadline": "Catat kondisi tubuh setiap hari di kalender",
   "calendarDiaryFeatureAppealBody": "Ketuk tanggal di kalender untuk mencatat kondisi tubuh, suasana hati, dan gejala Anda. Lihat bersama catatan minum pil dan catatan haid agar Anda lebih memahami ritme tubuh.",
   "futureScheduleFeatureAppealTitle": "Catat rencana Anda mendatang",
-  "futureScheduleFeatureAppealShortDescription": "Kelola jadwal mendatang, seperti kunjungan ke dokter.",
+  "futureScheduleFeatureAppealShortDescription": "Atur rencana mendatang, seperti jadwal kunjungan dokter",
   "futureScheduleFeatureAppealHeadline": "Simpan jadwal di kalender untuk rencana di masa depan",
   "futureScheduleFeatureAppealBody": "Anda dapat menuliskan jadwal mendatang seperti janji kunjungan ke dokter atau rencana perjalanan ke kalender. Karena dapat dilihat bersama siklus pemakaian pil, Anda bisa merencanakan dengan mempertimbangkan perkiraan haid juga.",
   "healthCareIntegrationFeatureAppealTitle": "Integrasi Kesehatan",

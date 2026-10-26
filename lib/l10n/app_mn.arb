@@ -481,7 +481,7 @@
   "calendarDiaryFeatureAppealHeadline": "Өдөр бүр биеийн байдлаа хуанлид тэмдэглэнэ үү",
   "calendarDiaryFeatureAppealBody": "Хуанли дээрх өдрийг товшиж, биеийн байдал, сэтгэл санаа болон шинж тэмдгээ тэмдэглэж болно. Эм уусан бүртгэл болон сарын тэмдгийн бүртгэлтэй хамт харснаар биеийнхээ хэмнэлийг илүү сайн ойлгоно.",
   "futureScheduleFeatureAppealTitle": "Ирээдүйн төлөвлөгөөгөө бичиж тэмдэглэнэ үү",
-  "futureScheduleFeatureAppealShortDescription": "Эмчид очих зэрэг ирээдүйн цаг товыг удирдах",
+  "futureScheduleFeatureAppealShortDescription": "Эмчид үзүүлэх зэрэг ойрын төлөвлөгөөгөө зохицуулна уу",
   "futureScheduleFeatureAppealHeadline": "Ирээдүйн төлөвлөгөөг календарьт бүртгэх",
   "futureScheduleFeatureAppealBody": "Эмнэлгийн цаг захиалга, аялалын төлөвлөгөө зэрэг ирээдүйн төлөвлөгөөгөө календарт бичиж болно. Эмийн уух мөчлөгтэй хамт харах боломжтой тул сарын тэмдгийн хуваарийг харгалзан төлөвлөгөө гаргаж болно.",
   "healthCareIntegrationFeatureAppealTitle": "Эрүүл мэндтэй холбох",

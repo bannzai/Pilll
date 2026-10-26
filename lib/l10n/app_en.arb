@@ -481,7 +481,7 @@
   "calendarDiaryFeatureAppealHeadline": "Track how you feel each day in the calendar",
   "calendarDiaryFeatureAppealBody": "Tap a date on the calendar to log how you feel, your mood, and any symptoms. View these alongside your pill log and period records to better understand your body’s rhythm.",
   "futureScheduleFeatureAppealTitle": "Add your upcoming plans",
-  "futureScheduleFeatureAppealShortDescription": "Manage upcoming appointments and trips",
+  "futureScheduleFeatureAppealShortDescription": "Keep track of upcoming plans, like doctor’s appointments",
   "futureScheduleFeatureAppealHeadline": "Add future plans to your calendar",
   "futureScheduleFeatureAppealBody": "Record upcoming events such as clinic appointments or trips on the calendar. View them alongside your pill schedule to plan around your predicted period as well.",
   "healthCareIntegrationFeatureAppealTitle": "Sync with Health",

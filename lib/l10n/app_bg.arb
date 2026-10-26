@@ -481,7 +481,7 @@
   "calendarDiaryFeatureAppealHeadline": "Отбелязвайте в календара как се чувствате всеки ден",
   "calendarDiaryFeatureAppealBody": "Докоснете дата в календара, за да отбележите как се чувствате, настроението си и симптомите си. Можете да видите тези данни заедно със запис на приема на хапчето и записите за мензис, за да разбирате по-добре ритъма на тялото си.",
   "futureScheduleFeatureAppealTitle": "Запишете предстоящите си планове",
-  "futureScheduleFeatureAppealShortDescription": "Управление на бъдещи планове като медицински прегледи",
+  "futureScheduleFeatureAppealShortDescription": "Планирайте предстоящите си ангажименти, като посещения при лекар",
   "futureScheduleFeatureAppealHeadline": "Записвайте бъдещи планове в календара",
   "futureScheduleFeatureAppealBody": "Можете да записвате бъдещи планове в календара, като посещения при лекар и пътувания. Тъй като можете да ги преглеждате заедно с цикъла на приема на хапчета, можете да правите планове, които вземат предвид и менструалния ви цикъл.",
   "healthCareIntegrationFeatureAppealTitle": "Интеграция с HealthKit",
