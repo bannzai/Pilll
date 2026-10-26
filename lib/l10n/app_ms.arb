@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini",
   "purchaseErrorPurchaseInvalidError": "Pembayaran tidak berjaya. Sila semak sama ada kaedah pembayaran anda sah, kemudian cuba lagi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Pelan yang dipilih tidak tersedia untuk dibeli buat masa ini. Sila mulakan semula aplikasi dan cuba lagi.",
-  "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila klik 'Bagi yang sudah membeli sebelum ini' untuk memulihkan maklumat pembelian anda.",
+  "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila pilih “Pernah membeli sebelum ini?”",
   "purchaseErrorReceiptAlreadyInUseError": "Telah dibeli atau maklumat pembelian sedang digunakan oleh pengguna lain. Sila sahkan {accountName}",
   "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak maklumat pembelian anda.",
   "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak dijumpai. Sila log masuk ke peranti menggunakan {accountName} dan cuba lagi.",

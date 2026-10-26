@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Bu qurilmada xarid qilishga ruxsat berilmagan",
   "purchaseErrorPurchaseInvalidError": "Toʻlov amalga oshmadi. Toʻlov usulingiz yaroqli ekanini tekshirib, qayta urinib koʻring.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Tanlangan rejani hozircha xarid qilib boʻlmaydi. Iltimos, ilovani qayta ishga tushiring va yana urinib koʻring.",
-  "purchaseErrorProductAlreadyPurchasedError": "Siz allaqachon rejani sotib olgan ekansiz. Agar bu qurilmada sotib olish ma'lumotlarini tiklash kerak bo'lsa, \"Oldin sotib olganlar uchun\" dan sotib olish ma'lumotlarini tiklang",
+  "purchaseErrorProductAlreadyPurchasedError": "Siz bu rejani allaqachon xarid qilgansiz. Xarid maʼlumotlarini ushbu qurilmada tiklash uchun «Avval xarid qilganmisiz?» bandini tanlang",
   "purchaseErrorReceiptAlreadyInUseError": "Allaqachon sotib olingan yoki sotib olish ma'lumotlari boshqa foydalanuvchi tomonidan ishlatilmoqda. {accountName}ni tekshirib ko'ring.",
   "purchaseErrorInvalidReceiptError": "Yaroqsiz xarid ma'lumotlari. Xarid ma'lumotlarini tekshirib ko'ring",
   "purchaseErrorMissingReceiptFileError": "Xaridorning ma'lumotlari mavjud emas. {accountName} bilan qurilmaga kirib, qaytadan urinib ko'ring",

@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda alış-verişə icazə verilmir",
   "purchaseErrorPurchaseInvalidError": "Ödəniş baş tutmadı. Ödəniş üsulunuzun etibarlı olduğunu yoxlayıb yenidən cəhd edin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Seçdiyiniz plan hazırda satınalma üçün əlçatan deyil. Zəhmət olmasa, tətbiqi yenidən başladın və təkrar cəhd edin.",
-  "purchaseErrorProductAlreadyPurchasedError": "Siz artıq plan satın almısınız. Bu cihazda satın alma məlumatlarını bərpa etmək üçün \"Əvvəl satın alanlar üçün\" seçimindən satın alma məlumatlarını bərpa edin",
+  "purchaseErrorProductAlreadyPurchasedError": "Siz planı artıq almısınız. Bu cihazda alış məlumatlarını bərpa etmək üçün zəhmət olmasa «Əvvəl almısınız?» bölməsini seçin",
   "purchaseErrorReceiptAlreadyInUseError": "Artıq satın alınıb və ya satın alma məlumatları başqa istifadəçi tərəfindən istifadə edilir. {accountName} hesabınızı yoxlayın.",
   "purchaseErrorInvalidReceiptError": "Satınalma məlumatları etibarsızdır. Zəhmət olmasa, satınalma məlumatlarınızı yoxlayın.",
   "purchaseErrorMissingReceiptFileError": "Alıcı məlumatları mövcud deyil. {accountName} hesabı ilə cihaza daxil olduqdan sonra yenidən cəhd edin",

@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Selles seadmes pole ostud lubatud",
   "purchaseErrorPurchaseInvalidError": "Makse ebaõnnestus. Kontrolli, kas sinu makseviis on kehtiv, ja proovi uuesti.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Valitud paketti ei saa praegu osta. Taaskäivita rakendus ja proovi uuesti.",
-  "purchaseErrorProductAlreadyPurchasedError": "Plaan on juba ostetud. Ostuinfo taastamiseks selles seadmes valige „Varem ostnud kasutajatele\" ja taastage oma ostuinfo.",
+  "purchaseErrorProductAlreadyPurchasedError": "Oled selle paketi juba ostnud. Ostu taastamiseks selles seadmes vali „Oled varem ostnud?”",
   "purchaseErrorReceiptAlreadyInUseError": "Juba ostetud või ostuteave on kasutusel teise kasutaja poolt. Palun kontrollige kontot {accountName}.",
   "purchaseErrorInvalidReceiptError": "Kehtetu ostuteave. Palun kontrollige oma ostuandmeid.",
   "purchaseErrorMissingReceiptFileError": "Ostja andmed puuduvad. Palun logige seadmesse sisse kontoga {accountName} ja proovige uuesti.",

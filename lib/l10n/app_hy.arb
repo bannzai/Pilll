@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Այս սարքում գնումներ կատարել չի թույլատրվում",
   "purchaseErrorPurchaseInvalidError": "Վճարումը չհաջողվեց։ Ստուգեք՝ արդյոք Ձեր վճարման եղանակը վավեր է, ապա կրկին փորձեք։",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ընտրված պլանն այս պահին հասանելի չէ գնման համար։ Խնդրում ենք վերագործարկել հավելվածը և կրկին փորձել։",
-  "purchaseErrorProductAlreadyPurchasedError": "Ծրագիրն արդեն գնված է: Այս սարքում գնման տեղեկությունները վերականգնելու համար խնդրում ենք օգտագործել «Նախկինում գնածների համար այստեղ» հղումը:",
+  "purchaseErrorProductAlreadyPurchasedError": "Դուք արդեն գնել եք այս պլանը։ Այս սարքում գնման տվյալները վերականգնելու համար ընտրեք «Նախկինում գնե՞լ եք»",
   "purchaseErrorReceiptAlreadyInUseError": "Արդեն գնված է կամ գնման տեղեկությունները օգտագործվում են այլ օգտատիրոջ կողմից: Խնդրում ենք ստուգել {accountName}-ը:",
   "purchaseErrorInvalidReceiptError": "Անվավեր գնման տեղեկություններ: Խնդրում ենք ստուգել ձեր գնման տվյալները:",
   "purchaseErrorMissingReceiptFileError": "Գնորդի տեղեկությունները չեն գտնվել։ Խնդրում ենք {accountName} հաշվով սարքում մուտք գործել և կրկին փորձել։",

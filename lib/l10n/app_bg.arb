@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Покупките не са разрешени на това устройство",
   "purchaseErrorPurchaseInvalidError": "Плащането не бе успешно. Проверете дали начинът ви на плащане е валиден и опитайте отново.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Избраният план временно не е достъпен за покупка. Моля, рестартирайте приложението и опитайте отново.",
-  "purchaseErrorProductAlreadyPurchasedError": "Вече сте закупили план. За да възстановите информацията за покупката на това устройство, моля използвайте \"За вече купили потребители\".",
+  "purchaseErrorProductAlreadyPurchasedError": "Вече сте закупили плана. За да възстановите покупката на това устройство, изберете „Вече сте купували?“",
   "purchaseErrorReceiptAlreadyInUseError": "Вече е закупен или информацията за покупката се използва от друг потребител. Моля, проверете {accountName}.",
   "purchaseErrorInvalidReceiptError": "Невалидна информация за покупка. Моля, проверете информацията за покупката.",
   "purchaseErrorMissingReceiptFileError": "Информацията за купувача не съществува. Моля, влезте в устройството с {accountName} и опитайте отново.",

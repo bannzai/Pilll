@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Les achats ne sont pas autorisés sur cet appareil",
   "purchaseErrorPurchaseInvalidError": "Le paiement a échoué. Vérifiez que votre moyen de paiement est valide, puis réessayez.",
   "purchaseErrorProductNotAvailableForPurchaseError": "L’offre sélectionnée n’est pas disponible à l’achat pour le moment. Veuillez redémarrer l’application et réessayer.",
-  "purchaseErrorProductAlreadyPurchasedError": "Vous avez déjà acheté un forfait. Pour restaurer vos informations d'achat sur cet appareil, veuillez restaurer vos informations d'achat à partir de « Pour les acheteurs précédents ».",
+  "purchaseErrorProductAlreadyPurchasedError": "Vous avez déjà acheté cette formule. Pour restaurer votre achat sur cet appareil, sélectionnez « Vous avez déjà acheté ? »",
   "purchaseErrorReceiptAlreadyInUseError": "Les informations déjà achetées ou achetées sont utilisées par un autre utilisateur. Veuillez vérifier {accountName}.",
   "purchaseErrorInvalidReceiptError": "Informations d'achat invalides. Veuillez vérifier les détails de votre achat.",
   "purchaseErrorMissingReceiptFileError": "Aucune information sur l'acheteur trouvée. Veuillez vous connecter à votre appareil avec {accountName} et réessayer.",

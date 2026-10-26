@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "לא ניתן לבצע רכישות במכשיר הזה",
   "purchaseErrorPurchaseInvalidError": "התשלום לא הושלם. כדאי לבדוק שאמצעי התשלום תקף ולנסות שוב.",
   "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית שנבחרה אינה זמינה כרגע לרכישה. כדאי להפעיל מחדש את האפליקציה ולנסות שוב.",
-  "purchaseErrorProductAlreadyPurchasedError": "כבר רכשת תוכנית. אם ברצונך לשחזר מידע רכישה במכשיר זה, אנא שחזר את מידע הרכישה מ'לרוכשים קודמים'",
+  "purchaseErrorProductAlreadyPurchasedError": "התוכנית כבר נרכשה. לשחזור פרטי הרכישה במכשיר הזה, יש לבחור ב״כבר רכשת בעבר?״",
   "purchaseErrorReceiptAlreadyInUseError": "כבר נרכש או שמידע הרכישה משמש על ידי משתמש אחר. אנא בדקו את {accountName}",
   "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדקו את פרטי הרכישה שלכם",
   "purchaseErrorMissingReceiptFileError": "מידע הרוכש לא נמצא. אנא התחבר למכשיר באמצעות {accountName} ונסה שוב",

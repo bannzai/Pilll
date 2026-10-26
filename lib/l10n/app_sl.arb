@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Nakupi v tej napravi niso dovoljeni",
   "purchaseErrorPurchaseInvalidError": "Plačilo ni uspelo. Preverite, ali je vaš način plačila veljaven, in poskusite znova.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Izbranega paketa trenutno ni mogoče kupiti. Znova zaženite aplikacijo in poskusite ponovno.",
-  "purchaseErrorProductAlreadyPurchasedError": "Paket je že kupljen. Za obnovitev podatkov o nakupu na tej napravi uporabite povezavo \"Za tiste, ki ste že kupili prej\".",
+  "purchaseErrorProductAlreadyPurchasedError": "Ta paket je že kupljen. Če želite obnoviti nakup v tej napravi, izberite »Ste že kupili?«",
   "purchaseErrorReceiptAlreadyInUseError": "Že kupljeno ali informacije o nakupu uporabljajo pri drugem uporabniku. Preverite {accountName}.",
   "purchaseErrorInvalidReceiptError": "Neveljavni podatki o nakupu. Preverite podatke o nakupu.",
   "purchaseErrorMissingReceiptFileError": "Podatki o kupcu ne obstajajo. Prosimo, prijavite se v napravo z {accountName} in poskusite znova.",

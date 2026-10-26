@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Куповине нису дозвољене на овом уређају",
   "purchaseErrorPurchaseInvalidError": "Плаћање није успело. Проверите да ли је Ваш начин плаћања важећи, па покушајте поново.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Изабрани план тренутно није доступан за куповину. Молимо Вас да поново покренете апликацију и покушате поново.",
-  "purchaseErrorProductAlreadyPurchasedError": "Već ste kupili plan. Ako želite da obnovite informacije o kupovini na ovom uređaju, kliknite na \"Za one koji su već kupili\" da obnovite svoje informacije o kupovini.",
+  "purchaseErrorProductAlreadyPurchasedError": "Већ сте купили овај план. Да бисте вратили податке о куповини на овом уређају, изаберите „Већ сте купили?“",
   "purchaseErrorReceiptAlreadyInUseError": "Već kupljeno. Ili su informacije o kupovini u upotrebi od strane drugog korisnika. Molimo proverite {accountName}.",
   "purchaseErrorInvalidReceiptError": "Neispravne informacije o kupovini. Molimo proverite podatke o kupovini.",
   "purchaseErrorMissingReceiptFileError": "Informacije o kupcu ne postoje. Molimo prijavite se na uređaj sa {accountName} nalogom i pokušajte ponovo.",

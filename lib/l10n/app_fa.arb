@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "خرید در این دستگاه مجاز نیست",
   "purchaseErrorPurchaseInvalidError": "پرداخت انجام نشد. لطفاً معتبر بودن روش پرداخت خود را بررسی کنید و دوباره تلاش کنید.",
   "purchaseErrorProductNotAvailableForPurchaseError": "طرح انتخاب‌شده در حال حاضر برای خرید در دسترس نیست. لطفاً برنامه را دوباره راه‌اندازی کنید و باز هم امتحان کنید.",
-  "purchaseErrorProductAlreadyPurchasedError": "شما قبلاً این طرح را خریداری کرده‌اید. برای بازیابی اطلاعات خرید در این دستگاه از «کسانی که قبلاً خریداری کرده‌اند» استفاده کنید",
+  "purchaseErrorProductAlreadyPurchasedError": "این طرح را قبلاً خریده‌اید. برای بازیابی اطلاعات خرید در این دستگاه، لطفاً «قبلاً خرید کرده‌اید؟» را انتخاب کنید",
   "purchaseErrorReceiptAlreadyInUseError": "قبلاً خریداری شده است یا اطلاعات خرید توسط کاربر دیگری استفاده می‌شود. لطفاً {accountName} را بررسی کنید.",
   "purchaseErrorInvalidReceiptError": "اطلاعات خرید نامعتبر است. لطفاً اطلاعات خرید خود را بررسی کنید",
   "purchaseErrorMissingReceiptFileError": "اطلاعات خریدار موجود نیست. لطفاً با {accountName} وارد دستگاه شوید و دوباره تلاش کنید",

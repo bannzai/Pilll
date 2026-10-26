@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Купувањето не е дозволено на овој уред",
   "purchaseErrorPurchaseInvalidError": "Плаќањето не успеа. Проверете дали Вашиот начин на плаќање е важечки, па обидете се повторно.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Избраниот план во моментов не е достапен за купување. Ве молиме, рестартирајте ја апликацијата и обидете се повторно.",
-  "purchaseErrorProductAlreadyPurchasedError": "Веќе имате купено план. За да ги вратите информациите за купување на овој уред, кликнете на „За претходни купувачи кликнете тука\" за да ги вратите информациите за купување.",
+  "purchaseErrorProductAlreadyPurchasedError": "Веќе сте го купиле планот. За да ги вратите податоците за купувањето на овој уред, изберете „Претходно сте купиле?“",
   "purchaseErrorReceiptAlreadyInUseError": "Веќе купено или информациите за купување се користат од друг корисник. Проверете го {accountName}.",
   "purchaseErrorInvalidReceiptError": "Невалидни податоци за купување. Ве молиме проверете ги информациите за купување.",
   "purchaseErrorMissingReceiptFileError": "Информациите за купувачот не постојат. Ве молиме најавете се на уредот со {accountName} и обидете се повторно",

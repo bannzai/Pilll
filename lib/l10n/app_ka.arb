@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "ამ მოწყობილობაზე შესყიდვები დაშვებული არ არის",
   "purchaseErrorPurchaseInvalidError": "გადახდა ვერ შესრულდა. გთხოვთ, შეამოწმოთ, მოქმედია თუ არა თქვენი გადახდის მეთოდი, და ხელახლა სცადოთ.",
   "purchaseErrorProductNotAvailableForPurchaseError": "არჩეული გეგმა ამჟამად შესაძენად ხელმისაწვდომი არ არის. გთხოვთ, ხელახლა ჩართოთ აპი და კიდევ სცადოთ.",
-  "purchaseErrorProductAlreadyPurchasedError": "უკვე გაქვთ შეძენილი გეგმა. ამ მოწყობილობაზე ყიდვის ინფორმაციის აღდგენისთვის გამოიყენეთ \"ადრე შემძენებლისთვის აქ\"",
+  "purchaseErrorProductAlreadyPurchasedError": "ეს გეგმა უკვე შეძენილი გაქვთ. ამ მოწყობილობაზე შეძენის მონაცემების აღსადგენად აირჩიეთ „ადრე შეიძინეთ?“",
   "purchaseErrorReceiptAlreadyInUseError": "უკვე შეძენილია ან შესყიდვის ინფორმაცია სხვა მომხმარებლის მიერ არის გამოყენებული. გთხოვთ შეამოწმოთ {accountName}",
   "purchaseErrorInvalidReceiptError": "არასწორი შეძენის ინფორმაცია. გთხოვთ შეამოწმოთ შეძენის მონაცემები.",
   "purchaseErrorMissingReceiptFileError": "მყიდველის ინფორმაცია არ არსებობს. გთხოვთ, შედით სისტემაში {accountName}-ით და სცადეთ ხელახლა",

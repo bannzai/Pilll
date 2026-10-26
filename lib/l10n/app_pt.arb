@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Não é permitido fazer compras neste dispositivo",
   "purchaseErrorPurchaseInvalidError": "Não foi possível concluir o pagamento. Confira se a forma de pagamento é válida e tente novamente.",
   "purchaseErrorProductNotAvailableForPurchaseError": "O plano selecionado não está disponível para compra no momento. Reinicie o aplicativo e tente novamente.",
-  "purchaseErrorProductAlreadyPurchasedError": "Você já possui um plano ativo. Para restaurar as informações de compra neste dispositivo, utilize \"Para usuários que já compraram anteriormente\" para restaurar suas informações de compra.",
+  "purchaseErrorProductAlreadyPurchasedError": "Você já comprou este plano. Para restaurar a compra neste dispositivo, selecione “Já comprou antes?”",
   "purchaseErrorReceiptAlreadyInUseError": "Já adquirido ou as informações de compra já estão sendo utilizadas por outro usuário. Verifique {accountName}.",
   "purchaseErrorInvalidReceiptError": "Informações de compra inválidas. Verifique os dados da sua compra.",
   "purchaseErrorMissingReceiptFileError": "Informações do comprador não encontradas. Faça login no dispositivo com {accountName} e tente novamente.",

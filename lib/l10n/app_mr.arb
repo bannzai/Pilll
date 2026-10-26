@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "या डिव्हाइसवर खरेदी करण्याची परवानगी नाही",
   "purchaseErrorPurchaseInvalidError": "पेमेंट पूर्ण झाले नाही. कृपया तुमची पेमेंट पद्धत वैध आहे का ते तपासा आणि पुन्हा प्रयत्न करा.",
   "purchaseErrorProductNotAvailableForPurchaseError": "निवडलेला प्लॅन सध्या खरेदीसाठी उपलब्ध नाही. कृपया अ‍ॅप पुन्हा सुरू करून पुन्हा प्रयत्न करा.",
-  "purchaseErrorProductAlreadyPurchasedError": "तुम्ही आधीच प्लॅन खरेदी केलेला आहे. या डिव्हाइसवर खरेदी माहिती पुनर्स्थापित करण्यासाठी \"पूर्वी खरेदी केलेल्यांसाठी इथे\" वरून खरेदी माहिती पुनर्स्थापित करा",
+  "purchaseErrorProductAlreadyPurchasedError": "तुम्ही हा प्लॅन आधीच खरेदी केला आहे. या डिव्हाइसवर खरेदीची माहिती पुनर्संचयित करण्यासाठी कृपया ‘आधी खरेदी केली आहे?’ निवडा",
   "purchaseErrorReceiptAlreadyInUseError": "आधीच खरेदी केले आहे किंवा खरेदी माहिती दुसर्‍या वापरकर्त्याने वापरली आहे. {accountName} तपासा.",
   "purchaseErrorInvalidReceiptError": "अवैध खरेदी माहिती आहे. कृपया आपली खरेदी माहिती तपासा",
   "purchaseErrorMissingReceiptFileError": "खरेदीदाराची माहिती उपलब्ध नाही. कृपया {accountName} वर डिव्हाइसमध्ये साइन इन करून पुन्हा प्रयत्न करा",

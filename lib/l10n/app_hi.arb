@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "इस डिवाइस पर खरीदारी की अनुमति नहीं है",
   "purchaseErrorPurchaseInvalidError": "भुगतान पूरा नहीं हो सका। कृपया जाँचें कि आपका भुगतान तरीका मान्य है, फिर दोबारा कोशिश करें।",
   "purchaseErrorProductNotAvailableForPurchaseError": "चुना गया प्लान अभी खरीदने के लिए उपलब्ध नहीं है। कृपया ऐप फिर से शुरू करके दोबारा कोशिश करें।",
-  "purchaseErrorProductAlreadyPurchasedError": "आपने पहले से ही प्लान खरीद लिया है। इस डिवाइस पर खरीदारी की जानकारी को पुनर्स्थापित करने के लिए कृपया \"पहले से खरीदारी करने वाले यहाँ क्लिक करें\" से खरीदारी की जानकारी को पुनर्स्थापित करें",
+  "purchaseErrorProductAlreadyPurchasedError": "यह प्लान पहले ही खरीदा जा चुका है। इस डिवाइस पर खरीदारी की जानकारी पुनर्स्थापित करने के लिए कृपया “पहले खरीदा है?” चुनें",
   "purchaseErrorReceiptAlreadyInUseError": "पहले से खरीदा जा चुका है या खरीदारी की जानकारी किसी अन्य उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया {accountName} की जांच करें।",
   "purchaseErrorInvalidReceiptError": "अमान्य खरीदारी जानकारी है। कृपया अपनी खरीदारी जानकारी की जांच करें।",
   "purchaseErrorMissingReceiptFileError": "खरीदार की जानकारी उपलब्ध नहीं है। कृपया {accountName} से डिवाइस में साइन इन करके पुनः प्रयास करें।",

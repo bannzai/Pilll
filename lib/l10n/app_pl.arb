@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Zakupy nie są dozwolone na tym urządzeniu",
   "purchaseErrorPurchaseInvalidError": "Płatność nie powiodła się. Sprawdź, czy metoda płatności jest ważna, i spróbuj ponownie.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Wybrany plan nie jest obecnie dostępny do kupienia. Uruchom ponownie aplikację i spróbuj jeszcze raz.",
-  "purchaseErrorProductAlreadyPurchasedError": "Plan został już wykupiony. Aby przywrócić zakup na tym urządzeniu, wybierz „Już wcześniej kupiłem\".",
+  "purchaseErrorProductAlreadyPurchasedError": "Ten plan został już kupiony. Aby przywrócić zakup na tym urządzeniu, wybierz „Kupiono wcześniej?”",
   "purchaseErrorReceiptAlreadyInUseError": "Już zakupione lub informacje o zakupie są używane przez inne konto. Sprawdź {accountName}.",
   "purchaseErrorInvalidReceiptError": "Nieprawidłowe informacje o zakupie. Sprawdź dane zakupu.",
   "purchaseErrorMissingReceiptFileError": "Informacje o kupującym nie zostały znalezione. Zaloguj się na urządzeniu przy użyciu konta {accountName} i spróbuj ponownie.",

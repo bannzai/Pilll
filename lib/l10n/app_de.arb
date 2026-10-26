@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Käufe sind auf diesem Gerät nicht erlaubt",
   "purchaseErrorPurchaseInvalidError": "Die Zahlung hat nicht geklappt. Prüfe bitte, ob deine Zahlungsmethode gültig ist, und versuche es erneut.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Der ausgewählte Plan kann derzeit nicht gekauft werden. Starte die App bitte neu und versuche es noch einmal.",
-  "purchaseErrorProductAlreadyPurchasedError": "Sie haben bereits ein Abonnement erworben. Um die Kaufinformationen auf diesem Gerät wiederherzustellen, verwenden Sie bitte „Für bereits gekaufte Nutzer\".",
+  "purchaseErrorProductAlreadyPurchasedError": "Du hast den Plan bereits gekauft. Um deinen Kauf auf diesem Gerät wiederherzustellen, wähle „Bereits gekauft?“",
   "purchaseErrorReceiptAlreadyInUseError": "Bereits gekauft oder die Kaufinformationen werden von einem anderen Benutzer verwendet. Bitte überprüfen Sie {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ungültige Kaufinformationen. Bitte überprüfen Sie Ihre Kaufdaten.",
   "purchaseErrorMissingReceiptFileError": "Es wurden keine Käuferinformationen gefunden. Bitte melden Sie sich mit {accountName} auf Ihrem Gerät an und versuchen Sie es erneut.",

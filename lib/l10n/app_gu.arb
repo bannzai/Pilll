@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "આ ઉપકરણ પર ખરીદી કરવાની મંજૂરી નથી",
   "purchaseErrorPurchaseInvalidError": "ચુકવણી થઈ શકી નથી. તમારી ચુકવણીની રીત માન્ય છે કે નહીં તે તપાસો અને ફરી પ્રયાસ કરો.",
   "purchaseErrorProductNotAvailableForPurchaseError": "તમે પસંદ કરેલો પ્લાન હાલમાં ખરીદી માટે ઉપલબ્ધ નથી. કૃપા કરીને એપ ફરી શરૂ કરીને ફરી પ્રયાસ કરો.",
-  "purchaseErrorProductAlreadyPurchasedError": "તમે પહેલેથી જ પ્લાન ખરીદ્યો છે. આ ડિવાઇસ પર તમારી ખરીદારીની માહિતી પુનઃસ્થાપિત કરવા માટે \"પહેલાં ખરીદેલા લોકો માટે અહીં\" થી તમારી ખરીદારીની માહિતી પુનઃસ્થાપિત કરો",
+  "purchaseErrorProductAlreadyPurchasedError": "તમે આ પ્લાન પહેલેથી ખરીદ્યો છે. આ ઉપકરણ પર ખરીદીની માહિતી પુનઃસ્થાપિત કરવા માટે કૃપા કરીને “પહેલેથી ખરીદ્યું છે?” પસંદ કરો",
   "purchaseErrorReceiptAlreadyInUseError": "પહેલેથી ખરીદાયેલ છે. અથવા ખરીદીની માહિતી બીજા વપરાશકર્તા દ્વારા ઉપયોગમાં લેવાઈ રહી છે. {accountName} ની તપાસ કરો.",
   "purchaseErrorInvalidReceiptError": "અમાન્ય ખરીદી માહિતી છે. કૃપયા તમારી ખરીદી માહિતીની ચકાસણી કરો.",
   "purchaseErrorMissingReceiptFileError": "ખરીદદારની માહિતી અસ્તિત્વમાં નથી. {accountName} સાથે ડિવાઇસમાં સાઇન ઇન કરીને પ્રયાસ કરો",

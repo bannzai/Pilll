@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Aankope word nie op hierdie toestel toegelaat nie",
   "purchaseErrorPurchaseInvalidError": "Die betaling het misluk. Maak asseblief seker jou betaalmetode is geldig en probeer weer.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Die gekose plan is tans nie beskikbaar nie. Herbegin asseblief die app en probeer weer.",
-  "purchaseErrorProductAlreadyPurchasedError": "Jy het reeds 'n plan gekoop. As jy koop-inligting op hierdie toestel wil herstel, herstel die koop-inligting asseblief via 'Vir diegene wat voorheen gekoop het'.",
+  "purchaseErrorProductAlreadyPurchasedError": "Jy het reeds die plan gekoop. As jy jou aankoop op hierdie toestel wil herstel, kan jy asseblief op “Reeds gekoop?” tik",
   "purchaseErrorReceiptAlreadyInUseError": "Reeds aangekoop, of die aankoopinligting word deur 'n ander gebruiker gebruik. Kontroleer asseblief {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinligting. Kontroleer asseblief jou aankoopinligting.",
   "purchaseErrorMissingReceiptFileError": "Daar is geen inligting oor die koper nie. Meld asseblief by hierdie toestel aan met {accountName} en probeer weer.",

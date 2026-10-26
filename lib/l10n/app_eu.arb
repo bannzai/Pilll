@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Gailu honetan ezin da erosketarik egin",
   "purchaseErrorPurchaseInvalidError": "Ordainketa ez da burutu. Egiaztatu ordainketa-metodoa baliozkoa dela eta saiatu berriro.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Aukeratu duzun plana ezin da une honetan erosi. Berrabiarazi aplikazioa, mesedez, eta saiatu berriro.",
-  "purchaseErrorProductAlreadyPurchasedError": "Plana dagoeneko erosita duzu. Gailu honetan erosketa informazioa berreskuratu nahi baduzu, sakatu \"Lehenago erosi zutenek hemen\" erosketa informazioa berreskuratzeko",
+  "purchaseErrorProductAlreadyPurchasedError": "Dagoeneko erosi duzu plana. Erosketa gailu honetan berrezartzeko, hautatu «Lehenago erosi duzu?»",
   "purchaseErrorReceiptAlreadyInUseError": "Dagoeneko erosita. Edo erosketa informazioa beste erabiltzaile batek erabiltzen du. Egiaztatu {accountName}.",
   "purchaseErrorInvalidReceiptError": "Erosketa informazioa ez da baliozkoa. Mesedez, egiaztatu erosketa datuak.",
   "purchaseErrorMissingReceiptFileError": "Eroslearen informazioa ez dago eskuragarri. {accountName} kontuarekin gailuan saioa hasi eta berriz saiatu.",

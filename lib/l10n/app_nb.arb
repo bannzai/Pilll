@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Kjøp er ikke tillatt på denne enheten",
   "purchaseErrorPurchaseInvalidError": "Betalingen mislyktes. Sjekk om betalingsmåten din er gyldig, og prøv igjen.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Den valgte planen kan ikke kjøpes akkurat nå. Start appen på nytt og prøv igjen.",
-  "purchaseErrorProductAlreadyPurchasedError": "Du har allerede kjøpt en plan. For å gjenopprette kjøpsinformasjon på denne enheten, bruk \"For deg som har kjøpt tidligere\".",
+  "purchaseErrorProductAlreadyPurchasedError": "Du har allerede kjøpt abonnementet. For å gjenopprette kjøpet på denne enheten kan du velge «Kjøpt tidligere?»",
   "purchaseErrorReceiptAlreadyInUseError": "Allerede kjøpt, eller kjøpsinformasjonen brukes av en annen bruker. Vennligst sjekk {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ugyldig kjøpsinformasjon. Vennligst kontroller kjøpsinformasjonen din.",
   "purchaseErrorMissingReceiptFileError": "Kjøperinformasjon finnes ikke. Vennligst logg inn på enheten med {accountName} og prøv igjen",

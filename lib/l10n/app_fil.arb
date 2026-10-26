@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Hindi pinapayagan ang pagbili sa device na ito",
   "purchaseErrorPurchaseInvalidError": "Hindi natuloy ang pagbabayad. Pakitingnan po kung wasto ang paraan ninyo ng pagbabayad, at subukan muli.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Hindi muna mabibili ang napili ninyong plano. Pakisuyong i-restart ang app at subukan muli.",
-  "purchaseErrorProductAlreadyPurchasedError": "Nabili mo na ang plano. Kung nais mong ibalik ang impormasyon ng pagbili sa device na ito, pumunta sa \"Para sa mga dating bumili, dito\" upang maibalik ang impormasyon ng pagbili.",
+  "purchaseErrorProductAlreadyPurchasedError": "Nabili na ninyo ang planong ito. Para maibalik ang impormasyon ng pagbili sa device na ito, piliin po ang “Nakabili na dati?”",
   "purchaseErrorReceiptAlreadyInUseError": "Nabili na. O ginagamit ng ibang user ang impormasyon ng pagbili. Pakitingnan ang {accountName}.",
   "purchaseErrorInvalidReceiptError": "Invalid na impormasyon ng pagbili. Mangyaring suriin ang impormasyon ng pagbili.",
   "purchaseErrorMissingReceiptFileError": "Walang nakitang impormasyon ng mamimili. Mangyaring mag-sign in gamit ang {accountName} sa inyong device at subukan ulit.",

@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "በዚህ መሣሪያ ላይ ግዢ አይፈቀድም",
   "purchaseErrorPurchaseInvalidError": "ክፍያው አልተሳካም። የክፍያ ዘዴዎ ትክክለኛ መሆኑን አረጋግጠው እንደገና ይሞክሩ።",
   "purchaseErrorProductNotAvailableForPurchaseError": "የተመረጠው እቅድ ለጊዜው ለግዢ አይገኝም። እባክዎ መተግበሪያውን እንደገና ከፍተው ይሞክሩ።",
-  "purchaseErrorProductAlreadyPurchasedError": "ቀደም ብለው ፕላኑን ገዝተዋል። በዚህ መሳሪያ ላይ የግዢ መረጃውን መልሰው ማግኘት ከፈለጉ «ቀደም ብለው የገዙ ግለሰቦች እዚህ ይጫኑ» የሚለውን ተጠቅመው የግዢ መረጃውን መልሰው ያግኙ።",
+  "purchaseErrorProductAlreadyPurchasedError": "ዕቅዱን አስቀድመው ገዝተዋል። በዚህ መሣሪያ ላይ የግዢ መረጃን ለመመለስ «ከዚህ በፊት ገዝተዋል?» የሚለውን ይጠቀሙ።",
   "purchaseErrorReceiptAlreadyInUseError": "ቀደም ሲል የተገዛ ነው። ወይም የግዢ መረጃው በሌላ ተጠቃሚ ጥቅም ላይ ውሏል። እባክዎ {accountName}ን ያረጋግጡ።",
   "purchaseErrorInvalidReceiptError": "የተሳሳተ የግዢ መረጃ ነው። እባክዎን የግዢ መረጃዎትን ያረጋግጡ።",
   "purchaseErrorMissingReceiptFileError": "የገዢ መረጃ አልተገኘም። እባኮትን በ{accountName} ወደ መሳሪያዎ ሲገቡ እንደገና ይሞክሩ።",

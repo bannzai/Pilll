@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Gli acquisti non sono consentiti su questo dispositivo",
   "purchaseErrorPurchaseInvalidError": "Il pagamento non è andato a buon fine. Verifica che il metodo di pagamento sia valido e riprova.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Il piano selezionato non è acquistabile al momento. Riavvia l'app e riprova.",
-  "purchaseErrorProductAlreadyPurchasedError": "Piano già acquistato. Per ripristinare le informazioni di acquisto su questo dispositivo, utilizza \"Per chi ha già acquistato, clicca qui\" per ripristinare le informazioni di acquisto.",
+  "purchaseErrorProductAlreadyPurchasedError": "Hai già acquistato questo piano. Per ripristinare l’acquisto su questo dispositivo, seleziona «Hai già acquistato?»",
   "purchaseErrorReceiptAlreadyInUseError": "Già acquistato o le informazioni di acquisto sono già utilizzate da un altro utente. Verifica {accountName}.",
   "purchaseErrorInvalidReceiptError": "Informazioni di acquisto non valide. Verifica i dati di acquisto.",
   "purchaseErrorMissingReceiptFileError": "Non sono state trovate informazioni sull'acquirente. Accedi al dispositivo con {accountName} e riprova",

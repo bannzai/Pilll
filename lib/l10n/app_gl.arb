@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Non se permiten compras neste dispositivo",
   "purchaseErrorPurchaseInvalidError": "Non se puido completar o pagamento. Comproba que o método de pagamento sexa válido e volve intentalo.",
   "purchaseErrorProductNotAvailableForPurchaseError": "O plan que escolliches non está dispoñible para mercalo neste momento. Reinicia a aplicación e téntao de novo, por favor.",
-  "purchaseErrorProductAlreadyPurchasedError": "Xa compraches o plan. Para restaurar a información de compra neste dispositivo, selecciona 'Se xa compraches antes, preme aquí'.",
+  "purchaseErrorProductAlreadyPurchasedError": "Xa compraches o plan. Para restaurar a compra neste dispositivo, selecciona «Xa o compraches?»",
   "purchaseErrorReceiptAlreadyInUseError": "Xa comprado ou a información de compra está sendo usada por outro usuario. Verifica {accountName}.",
   "purchaseErrorInvalidReceiptError": "A información de compra non é válida. Comprobe a información de compra.",
   "purchaseErrorMissingReceiptFileError": "Non se atopa información do comprador. Inicia sesión no dispositivo con {accountName} e téntao de novo.",

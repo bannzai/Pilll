@@ -292,7 +292,7 @@
   "purchaseErrorPurchaseNotAllowedError": "Покупки на цьому пристрої не дозволені",
   "purchaseErrorPurchaseInvalidError": "Оплата не пройшла. Перевірте, чи дійсний ваш спосіб оплати, і спробуйте ще раз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Вибраний план наразі недоступний для покупки. Будь ласка, перезапустіть застосунок і спробуйте ще раз.",
-  "purchaseErrorProductAlreadyPurchasedError": "Ви вже придбали план. Щоб відновити інформацію про покупку на цьому пристрої, скористайтеся посиланням «Для тих, хто вже купував».",
+  "purchaseErrorProductAlreadyPurchasedError": "Ви вже придбали цей план. Щоб відновити покупку на цьому пристрої, виберіть «Уже купували?»",
   "purchaseErrorReceiptAlreadyInUseError": "Уже придбано або інформація про покупку використовується іншим користувачем. Будь ласка, перевірте {accountName}",
   "purchaseErrorInvalidReceiptError": "Недійсна інформація про покупку. Будь ласка, перевірте інформацію про покупку.",
   "purchaseErrorMissingReceiptFileError": "Інформація про покупця не знайдена. Будь ласка, увійдіть в акаунт {accountName} на цьому пристрої та спробуйте знову",
