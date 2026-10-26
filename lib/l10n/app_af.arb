@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Selfs wanneer fokusmodus aan is of jou toestel stil is, verskyn kennisgewings op die sluitskerm en speel 'n klank.",
   "enableNotificationInSilentMode": "Kry kennisgewings selfs in stilmodus",
   "enableNotificationInSilentModeSetting": "Kennisgewings selfs in stilmodus",
-  "criticalAlertVolume": "Volume",
+  "criticalAlertVolume": "Klankvolume",
   "logout": "Uitlog",
   "goToInitialSettingAndReloginIfNeededMessage": "Keer terug na aanvanklike instellings. Indien teken in benodig word, doen dit asseblief vanaf die onderkant van die aanvanklike instellingsskerm.",
   "deleteAccount": "Rekening verwyder",

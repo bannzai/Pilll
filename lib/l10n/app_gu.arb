@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "ફોકસ મોડ ચાલુ હોય અથવા તમારું ઉપકરણ સાઇલન્ટ પર હોય ત્યારે પણ સૂચનાઓ લૉક સ્ક્રીન પર દેખાશે અને અવાજ વાગશે.",
   "enableNotificationInSilentMode": "સાઇલન્ટ મોડમાં પણ સૂચનાઓ મેળવો",
   "enableNotificationInSilentModeSetting": "સાઇલન્ટ મોડમાં પણ સૂચનાઓ",
-  "criticalAlertVolume": "વોલ્યુમ",
+  "criticalAlertVolume": "અવાજનું સ્તર",
   "logout": "લૉગઆઉટ",
   "goToInitialSettingAndReloginIfNeededMessage": "પ્રારંભિક સેટઅપ પર પાછા જશે। જો લોગિન જરૂરી હોય તો કૃપા કરીને પ્રારંભિક સેટઅપની નીચેથી કરો",
   "deleteAccount": "એકાઉન્ટ કાઢો",

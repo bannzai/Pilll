@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "ফ’কাছ মোড অন থাকিলেও বা আপোনাৰ ডিভাইচ নীৰৱ অৱস্থাত থাকিলেও, জাননী লক স্ক্ৰীনত দেখা যাব আৰু শব্দ বাজিব।",
   "enableNotificationInSilentMode": "নীৰৱ অৱস্থাতো জাননী লাভ কৰক",
   "enableNotificationInSilentModeSetting": "নীৰৱ অৱস্থাতো জাননী",
-  "criticalAlertVolume": "আওয়াজ",
+  "criticalAlertVolume": "শব্দৰ মাত্ৰা",
   "logout": "লগ আউট",
   "goToInitialSettingAndReloginIfNeededMessage": "প্ৰাৰম্ভিক ছেটিংলৈ উভতি যাম। যদি লগইনৰ প্ৰয়োজন হয়, তেন্তে প্ৰাৰম্ভিক ছেটিংৰ তলৰ অংশৰ পৰা কৰক",
   "deleteAccount": "একাউন্ট মোছা",

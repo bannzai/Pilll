@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "फ़ोकस मोड चालू होने या आपका डिवाइस साइलेंट पर होने पर भी, सूचनाएँ लॉक स्क्रीन पर दिखाई देंगी और अलर्ट की आवाज़ बजेगी।",
   "enableNotificationInSilentMode": "साइलेंट मोड में भी सूचनाएं पाएं",
   "enableNotificationInSilentModeSetting": "साइलेंट मोड में भी सूचनाएँ",
-  "criticalAlertVolume": "वॉल्यूम",
+  "criticalAlertVolume": "आवाज़ की तीव्रता",
   "logout": "लॉग आउट",
   "goToInitialSettingAndReloginIfNeededMessage": "प्रारंभिक सेटअप पर वापस जा रहे हैं। यदि लॉगिन आवश्यक है तो कृपया प्रारंभिक सेटअप के नीचे से करें।",
   "deleteAccount": "खाता हटाएं",

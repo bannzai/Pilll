@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "फोकस मोड चालु हुँदा वा तपाईंको उपकरण साइलेन्टमा हुँदा पनि सूचनाहरू लक स्क्रिनमा देखिन्छन् र आवाज बज्छ।",
   "enableNotificationInSilentMode": "साइलेन्ट मोडमा पनि सूचनाहरू प्राप्त गर्नुहोस्",
   "enableNotificationInSilentModeSetting": "साइलेन्ट मोडमा पनि सूचना",
-  "criticalAlertVolume": "भोल्युम",
+  "criticalAlertVolume": "आवाजको स्तर",
   "logout": "लग आउट",
   "goToInitialSettingAndReloginIfNeededMessage": "प्रारम्भिक सेटअपमा फर्कनेछ। लगइन आवश्यक भएमा कृपया प्रारम्भिक सेटअपको तलबाट गर्नुहोस्।",
   "deleteAccount": "खाता मेटाउने",

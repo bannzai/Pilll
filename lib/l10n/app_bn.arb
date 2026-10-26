@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "ফোকাস মোড চালু থাকলেও বা আপনার ডিভাইস নীরব থাকলেও, বিজ্ঞপ্তি লক স্ক্রিনে দেখানো হবে এবং শব্দ বাজবে।",
   "enableNotificationInSilentMode": "সাইলেন্ট মোডেও বিজ্ঞপ্তি পান",
   "enableNotificationInSilentModeSetting": "সাইলেন্ট মোডেও বিজ্ঞপ্তি",
-  "criticalAlertVolume": "ভলিউম",
+  "criticalAlertVolume": "শব্দের মাত্রা",
   "logout": "লগ আউট",
   "goToInitialSettingAndReloginIfNeededMessage": "প্রাথমিক সেটআপে ফিরে যাবে। যদি লগইন প্রয়োজন হয়, তাহলে প্রাথমিক সেটআপের নিচ থেকে লগইন করুন।",
   "deleteAccount": "অ্যাকাউন্ট মুছুন",

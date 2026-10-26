@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Odak modu açıkken veya cihazınız sessizdeyken bile bildirimler kilit ekranında görünür ve ses çalar.",
   "enableNotificationInSilentMode": "Sessiz modda da bildirim alın",
   "enableNotificationInSilentModeSetting": "Sessiz modda da bildirimler",
-  "criticalAlertVolume": "Ses Seviyesi",
+  "criticalAlertVolume": "Ses düzeyi",
   "logout": "Çıkış",
   "goToInitialSettingAndReloginIfNeededMessage": "İlk kuruluma geri dönülüyor. Giriş yapmanız gerekirse, lütfen ilk kurulum ekranının alt kısmından giriş yapın.",
   "deleteAccount": "Hesap Silme",

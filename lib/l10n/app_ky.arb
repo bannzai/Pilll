@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Көңүл топтоо режими күйүп турса же түзмөгүңүз үнсүз режимде болсо да, эскертмелер кулпу экранында көрсөтүлүп, үн чыгат.",
   "enableNotificationInSilentMode": "Үнсүз режимде да эскертмелерди алыңыз",
   "enableNotificationInSilentModeSetting": "Үнсүз режимде да эскертмелер",
-  "criticalAlertVolume": "үн көлөмү",
+  "criticalAlertVolume": "Үндүн деңгээли",
   "logout": "чыгуу",
   "goToInitialSettingAndReloginIfNeededMessage": "Баштапкы жөндөөгө кайтып жатабыз. Кирүү керек болсо, баштапкы жөндөөнүн астынан кириңиз",
   "deleteAccount": "Аккаунтты жок кылуу",

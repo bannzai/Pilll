@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Walaupun mod Fokus dihidupkan atau peranti anda dalam mod senyap, pemberitahuan akan muncul pada skrin kunci dan bunyi akan dimainkan.",
   "enableNotificationInSilentMode": "Terima pemberitahuan walaupun dalam mod senyap",
   "enableNotificationInSilentModeSetting": "Pemberitahuan walaupun dalam mod senyap",
-  "criticalAlertVolume": "Volum",
+  "criticalAlertVolume": "Kelantangan",
   "logout": "Log Keluar",
   "goToInitialSettingAndReloginIfNeededMessage": "Kembali kepada tetapan awal. Sekiranya log masuk diperlukan, sila lakukan daripada bahagian bawah tetapan awal",
   "deleteAccount": "Padam Akaun",

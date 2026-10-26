@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Նույնիսկ երբ կենտրոնացման ռեժիմը միացված է կամ Ձեր սարքի ձայնն անջատված է, ծանուցումները ցուցադրվում են կողպէկրանին, և հնչում է ձայնային ազդանշան։",
   "enableNotificationInSilentMode": "Ստացեք ծանուցումներ նաև անձայն ռեժիմում",
   "enableNotificationInSilentModeSetting": "Ծանուցումներ նաև անձայն ռեժիմում",
-  "criticalAlertVolume": "ծավալ",
+  "criticalAlertVolume": "Ձայնի ուժգնություն",
   "logout": "Ելք",
   "goToInitialSettingAndReloginIfNeededMessage": "Կվերադառնանք սկզբնական կարգավորումներին: Մուտք գործելու անհրաժեշտության դեպքում խնդրում ենք այն իրականացնել սկզբնական կարգավորումների ներքևից:",
   "deleteAccount": "Հաշվի ջնջում",

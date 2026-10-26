@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Ngisho noma imodi yokugxila ivuliwe noma idivayisi yakho ithulisiwe, izaziso zizovela esikrinini sokukhiya futhi umsindo uzodlala.",
   "enableNotificationInSilentMode": "Thola izaziso noma ifoni ikumodi yokuthula",
   "enableNotificationInSilentModeSetting": "Izaziso noma ifoni ithulisiwe",
-  "criticalAlertVolume": "Ivolumu",
+  "criticalAlertVolume": "Izinga lomsindo",
   "logout": "Phuma",
   "goToInitialSettingAndReloginIfNeededMessage": "Kubuyela ekusethweni kokuqala. Uma kudingeka ukungena ngemvume, sicela ukwenze lokho ngaphansi kweseteji yokuqala.",
   "deleteAccount": "Susa i-akhawunti",

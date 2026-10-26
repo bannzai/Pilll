@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Au wänn dr Fokusmodus aa isch oder dis Grät uf stumm staht, chömed d Benachrichtigunge uf em Sperrbildschirm und es git en Ton.",
   "enableNotificationInSilentMode": "Au im Stummmodus Benachrichtigunge überchoo",
   "enableNotificationInSilentModeSetting": "Mitteilige au im Stummmodus",
-  "criticalAlertVolume": "Luutstärchi",
+  "criticalAlertVolume": "Luutschtärchi",
   "logout": "Abmälde",
   "goToInitialSettingAndReloginIfNeededMessage": "Zrugg zu de Grundiistellige. Falls Aalogge nötig isch, bitte unde bi de Grundiistellige.",
   "deleteAccount": "Konto löschen",

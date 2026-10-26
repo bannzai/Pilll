@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Kahit naka-on ang Focus mode o naka-silent ang inyong device, lalabas ang mga abiso sa lock screen at tutunog ang alerto.",
   "enableNotificationInSilentMode": "Makatanggap ng mga abiso kahit naka-silent",
   "enableNotificationInSilentModeSetting": "Mga abiso kahit naka-silent mode",
-  "criticalAlertVolume": "Volume",
+  "criticalAlertVolume": "Lakas ng tunog",
   "logout": "Mag-logout",
   "goToInitialSettingAndReloginIfNeededMessage": "Babalik sa simualang pag-setup. Kung kailangan mag-login, mangyaring gawin ito sa ibabang bahagi ng simualang pag-setup.",
   "deleteAccount": "Tanggalin ang Account",

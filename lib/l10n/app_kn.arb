@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "ಫೋಕಸ್ ಮೋಡ್ ಆನ್ ಆಗಿದ್ದರೂ ಅಥವಾ ನಿಮ್ಮ ಸಾಧನ ಮೌನ ಸ್ಥಿತಿಯಲ್ಲಿದ್ದರೂ, ಸೂಚನೆಗಳು ಲಾಕ್ ಪರದೆಯಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ ಮತ್ತು ಶಬ್ದ ಕೇಳಿಸುತ್ತದೆ.",
   "enableNotificationInSilentMode": "ನಿಶ್ಶಬ್ದ ಸ್ಥಿತಿಯಲ್ಲೂ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಿರಿ",
   "enableNotificationInSilentModeSetting": "ನಿಶ್ಶಬ್ದ ಮೋಡ್‌ನಲ್ಲೂ ಸೂಚನೆಗಳು",
-  "criticalAlertVolume": "ಧ್ವನಿ ಪ್ರಮಾಣ",
+  "criticalAlertVolume": "ಧ್ವನಿಯ ಮಟ್ಟ",
   "logout": "ಲಾಗ್ ಔಟ್",
   "goToInitialSettingAndReloginIfNeededMessage": "ಆರಂಭಿಕ ಸೆಟಪ್‌ಗೆ ಹಿಂತಿರುಗುತ್ತದೆ. ಲಾಗಿನ್ ಅಗತ್ಯವಿದ್ದರೆ ಆರಂಭಿಕ ಸೆಟಪ್‌ನ ಕೆಳಭಾಗದಿಂದ ದಯವಿಟ್ಟು ಮಾಡಿ",
   "deleteAccount": "ಖಾತೆ ಅಳಿಸುವಿಕೆ",

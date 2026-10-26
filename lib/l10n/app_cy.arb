@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Hyd yn oed pan fydd y modd ffocws ymlaen neu pan fydd eich dyfais yn dawel, bydd hysbysiadau'n ymddangos ar y sgrin glo a bydd sain yn chwarae.",
   "enableNotificationInSilentMode": "Cael hysbysiadau hyd yn oed yn y modd tawel",
   "enableNotificationInSilentModeSetting": "Hysbysiadau hyd yn oed yn y modd tawel",
-  "criticalAlertVolume": "Sain",
+  "criticalAlertVolume": "Lefel sain",
   "logout": "Allgofnodi",
   "goToInitialSettingAndReloginIfNeededMessage": "Bydd yn dychwelyd i'r gosodiadau cychwynnol. Os oes angen mewngofnodi, gwnewch hynny o waelod y gosodiadau cychwynnol os gwelwch yn dda.",
   "deleteAccount": "Dileu Cyfrif",

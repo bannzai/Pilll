@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Hata hali ya Kuzingatia ikiwa imewashwa au kifaa chako kikiwa kimenyamazishwa, arifa zitaonekana kwenye skrini iliyofungwa na sauti italia.",
   "enableNotificationInSilentMode": "Pokea arifa hata simu ikiwa katika hali ya kimya",
   "enableNotificationInSilentModeSetting": "Arifa hata simu ikiwa kimya",
-  "criticalAlertVolume": "sauti",
+  "criticalAlertVolume": "Kiwango cha sauti",
   "logout": "Ondoka",
   "goToInitialSettingAndReloginIfNeededMessage": "Kurudi kwenye mipangilio ya awali. Ikiwa unahitaji kuingia, tafadhali fanya hivyo kutoka sehemu ya chini ya mipangilio ya awali.",
   "deleteAccount": "Futa Akaunti",

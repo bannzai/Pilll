@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Fokus rejimi aktiv olduqda və ya cihazınızın səsi söndürüldükdə belə, bildirişlər kilid ekranında görünür və səs səslənir.",
   "enableNotificationInSilentMode": "Səssiz rejimdə də bildiriş alın",
   "enableNotificationInSilentModeSetting": "Səssiz rejimdə də bildirişlər",
-  "criticalAlertVolume": "Səs həcmi",
+  "criticalAlertVolume": "Səs səviyyəsi",
   "logout": "Çıxış",
   "goToInitialSettingAndReloginIfNeededMessage": "İlkin ayarlara qayıdılır. Giriş tələb olunarsa, lütfən ilkin ayarların aşağı hissəsindən daxil olun.",
   "deleteAccount": "Hesabı sil",

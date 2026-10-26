@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "فوکس موڈ آن ہونے یا آپ کے آلے کے خاموش ہونے پر بھی اطلاعات لاک اسکرین پر نظر آئیں گی اور آواز بجے گی۔",
   "enableNotificationInSilentMode": "خاموش موڈ میں بھی اطلاعات حاصل کریں",
   "enableNotificationInSilentModeSetting": "خاموش موڈ میں بھی اطلاعات",
-  "criticalAlertVolume": "آواز",
+  "criticalAlertVolume": "آواز کی سطح",
   "logout": "لاگ آؤٹ",
   "goToInitialSettingAndReloginIfNeededMessage": "ابتدائی سیٹ اپ پر واپس آ رہے ہیں۔ اگر لاگ ان کی ضرورت ہو تو برائے کرم ابتدائی سیٹ اپ کے نیچے سے لاگ ان کریں",
   "deleteAccount": "اکاؤنٹ حذف کریں",

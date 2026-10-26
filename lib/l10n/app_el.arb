@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Ακόμα και όταν είναι ενεργή η λειτουργία συγκέντρωσης ή η συσκευή σας είναι σε σίγαση, οι ειδοποιήσεις εμφανίζονται στην οθόνη κλειδώματος και αναπαράγεται ήχος.",
   "enableNotificationInSilentMode": "Λήψη ειδοποιήσεων και στην αθόρυβη λειτουργία",
   "enableNotificationInSilentModeSetting": "Ειδοποιήσεις και στην αθόρυβη λειτουργία",
-  "criticalAlertVolume": "Ένταση",
+  "criticalAlertVolume": "Ένταση ήχου",
   "logout": "Αποσύνδεση",
   "goToInitialSettingAndReloginIfNeededMessage": "Θα επιστρέψετε στις αρχικές ρυθμίσεις. Εάν απαιτείται σύνδεση, παρακαλώ συνδεθείτε από το κάτω μέρος των αρχικών ρυθμίσεων.",
   "deleteAccount": "Διαγραφή λογαριασμού",

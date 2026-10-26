@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Нават калі ўключаны рэжым канцэнтрацыі або гук прылады адключаны, апавяшчэнні з’яўляюцца на экране блакіроўкі і суправаджаюцца гукам.",
   "enableNotificationInSilentMode": "Атрымліваць апавяшчэнні нават у бязгучным рэжыме",
   "enableNotificationInSilentModeSetting": "Апавяшчэнні нават у бязгучным рэжыме",
-  "criticalAlertVolume": "гучнасць",
+  "criticalAlertVolume": "Гучнасць",
   "logout": "выхад",
   "goToInitialSettingAndReloginIfNeededMessage": "Вяртаемся да пачатковых налад. Калі неабходна аўтарызацыя, выканайце яе ў ніжняй частцы пачатковых налад",
   "deleteAccount": "Выдаленне акаўнта",

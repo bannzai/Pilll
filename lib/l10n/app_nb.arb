@@ -427,7 +427,7 @@
   "silentModeNotificationDescription": "Selv når Fokus er på eller enheten din er satt på lydløs, vises varsler på låseskjermen og spiller av en lyd.",
   "enableNotificationInSilentMode": "Få varsler selv når telefonen er på lydløs",
   "enableNotificationInSilentModeSetting": "Varsler også i lydløs modus",
-  "criticalAlertVolume": "Lydstyrke",
+  "criticalAlertVolume": "Volum",
   "logout": "Logg ut",
   "goToInitialSettingAndReloginIfNeededMessage": "Går tilbake til innledende oppsett. Hvis innlogging er nødvendig, gjør dette fra bunnen av oppsettsiden",
   "deleteAccount": "Slett konto",
