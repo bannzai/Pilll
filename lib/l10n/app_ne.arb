@@ -530,7 +530,7 @@
   "calendarDiaryFeatureAppealLocationHint": "आफूलाई कस्तो महसुस भइरहेको छ भनेर लेख्न मितिमा ट्याप गर्नुहोस्",
   "futureScheduleFeatureAppealPoint1": "पात्रोमा आफ्ना योजनाहरू थप्नुहोस्",
   "futureScheduleFeatureAppealPoint2": "डाक्टरलाई भेट्ने मितिहरू सजिलै सम्झनुहोस्",
-  "futureScheduleFeatureAppealPoint3": "रिमाइन्डरद्वारा सूचना",
+  "futureScheduleFeatureAppealPoint3": "सम्झाउने सूचनामार्फत जानकारी",
   "futureScheduleFeatureAppealLocationHint": "मिति ट्याप गरेर तालिका लेख्नुहोस्",
   "healthCareIntegrationFeatureAppealPoint1": "मासिक धर्म रेकर्डको स्वचालित डेटा सिङ्क",
   "healthCareIntegrationFeatureAppealPoint2": "हेल्थकेयर एपमा सिंक",
