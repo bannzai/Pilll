@@ -437,7 +437,7 @@
   "bugReport": "گزارش مشکل برنامه",
   "featureRequest": "نظرها و پیشنهادها",
   "otherInquiry": "سایر",
-  "otherInquiryPlaceholder": "لطفاً سایر موارد را وارد کنید",
+  "otherInquiryPlaceholder": "لطفاً جزئیات درخواست دیگر را وارد کنید",
   "emailAddress": "آدرس ایمیل",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "محتوای پیام",

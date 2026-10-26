@@ -437,7 +437,7 @@
   "bugReport": "යෙදුමේ දෝෂයක් වාර්තා කරන්න",
   "featureRequest": "අදහස් සහ යෝජනා",
   "otherInquiry": "වෙනත්",
-  "otherInquiryPlaceholder": "කරුණාකර වෙනත් විස්තර ඇතුළත් කරන්න",
+  "otherInquiryPlaceholder": "කරුණාකර ඔබේ වෙනත් විමසීමේ විස්තර ලියන්න",
   "emailAddress": "ඊ-මේල් ලිපිනය",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "විමසීමේ අන්තර්ගතය",

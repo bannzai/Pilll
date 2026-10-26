@@ -437,7 +437,7 @@
   "bugReport": "Report a bug",
   "featureRequest": "Feedback and requests",
   "otherInquiry": "Other",
-  "otherInquiryPlaceholder": "Please enter other details",
+  "otherInquiryPlaceholder": "Enter the details of your other inquiry",
   "emailAddress": "Email Address",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Inquiry Details",

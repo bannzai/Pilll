@@ -437,7 +437,7 @@
   "bugReport": "Prijava greške",
   "featureRequest": "Povratne informacije i prijedlozi",
   "otherInquiry": "Ostalo",
-  "otherInquiryPlaceholder": "Molimo unesite detalje",
+  "otherInquiryPlaceholder": "Molimo, opišite svoj drugi upit",
   "emailAddress": "E-mail adresa",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Sadržaj upita",

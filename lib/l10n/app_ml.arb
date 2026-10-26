@@ -437,7 +437,7 @@
   "bugReport": "ആപ്പിലെ തകരാർ അറിയിക്കുക",
   "featureRequest": "അഭിപ്രായങ്ങളും നിർദേശങ്ങളും",
   "otherInquiry": "മറ്റുള്ളവ",
-  "otherInquiryPlaceholder": "മറ്റ് വിശദാംശങ്ങൾ നൽകുക",
+  "otherInquiryPlaceholder": "മറ്റ് അന്വേഷണത്തിന്റെ വിശദാംശങ്ങൾ എഴുതൂ",
   "emailAddress": "ഇമെയിൽ വിലാസം",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "അന്വേഷണ വിശദാംശങ്ങൾ",

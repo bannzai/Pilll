@@ -437,7 +437,7 @@
   "bugReport": "Fejlrapport",
   "featureRequest": "Feedback og forslag",
   "otherInquiry": "Andet",
-  "otherInquiryPlaceholder": "Indtast andre oplysninger",
+  "otherInquiryPlaceholder": "Beskriv venligst din anden henvendelse",
   "emailAddress": "E-mailadresse",
   "emailPlaceholder": "eksempel@eksempel.com",
   "inquiryContent": "Indhold af henvendelse",

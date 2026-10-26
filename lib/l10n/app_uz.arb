@@ -437,7 +437,7 @@
   "bugReport": "Xatolik haqida xabar berish",
   "featureRequest": "Fikr va takliflar",
   "otherInquiry": "Boshqa",
-  "otherInquiryPlaceholder": "Boshqa ma'lumotni kiriting",
+  "otherInquiryPlaceholder": "Iltimos, boshqa savolingiz tafsilotlarini yozing",
   "emailAddress": "Elektron pochta manzili",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Murojaat matni",

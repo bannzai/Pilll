@@ -437,7 +437,7 @@
   "bugReport": "Nahlásit chybu",
   "featureRequest": "Připomínky a návrhy",
   "otherInquiry": "Jiné",
-  "otherInquiryPlaceholder": "Zadejte prosím podrobnosti",
+  "otherInquiryPlaceholder": "Prosím, popište svůj další dotaz",
   "emailAddress": "E-mailová adresa",
   "emailPlaceholder": "priklad@priklad.cz",
   "inquiryContent": "Obsah dotazu",

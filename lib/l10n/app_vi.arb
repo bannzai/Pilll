@@ -437,7 +437,7 @@
   "bugReport": "Báo lỗi ứng dụng",
   "featureRequest": "Ý kiến và đề xuất",
   "otherInquiry": "Khác",
-  "otherInquiryPlaceholder": "Vui lòng nhập nội dung khác",
+  "otherInquiryPlaceholder": "Vui lòng nhập chi tiết câu hỏi khác",
   "emailAddress": "Địa chỉ email",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Nội dung liên hệ",

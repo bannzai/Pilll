@@ -437,7 +437,7 @@
   "bugReport": "דיווח על תקלה",
   "featureRequest": "משוב והצעות",
   "otherInquiry": "אחר",
-  "otherInquiryPlaceholder": "הזן/י פרטים נוספים",
+  "otherInquiryPlaceholder": "פרטים על הפנייה האחרת",
   "emailAddress": "כתובת אימייל",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "תוכן הפנייה",

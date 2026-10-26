@@ -437,7 +437,7 @@
   "bugReport": "Ilmoita virheestä",
   "featureRequest": "Palaute ja toiveet",
   "otherInquiry": "Muu",
-  "otherInquiryPlaceholder": "Syötä muu sisältö",
+  "otherInquiryPlaceholder": "Kerro tarkemmin muusta asiastasi",
   "emailAddress": "Sähköpostiosoite",
   "emailPlaceholder": "esimerkki@esimerkki.fi",
   "inquiryContent": "Viestin sisältö",

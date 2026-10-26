@@ -437,7 +437,7 @@
   "bugReport": "செயலியின் பிழையைப் புகாரளிக்கவும்",
   "featureRequest": "கருத்துகளும் பரிந்துரைகளும்",
   "otherInquiry": "மற்றவை",
-  "otherInquiryPlaceholder": "மற்ற விவரங்களை உள்ளிடவும்",
+  "otherInquiryPlaceholder": "மற்ற விசாரணையின் விவரங்களை எழுதுங்கள்",
   "emailAddress": "மின்னஞ்சல் முகவரி",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "விசாரணை உள்ளடக்கம்",

@@ -437,7 +437,7 @@
   "bugReport": "រាយការណ៍បញ្ហាកម្មវិធី",
   "featureRequest": "មតិយោបល់ និងសំណើ",
   "otherInquiry": "ផ្សេងៗ",
-  "otherInquiryPlaceholder": "សូមបញ្ចូលខ្លឹមសារផ្សេងទៀត",
+  "otherInquiryPlaceholder": "សូមបញ្ចូលព័ត៌មានលម្អិតអំពីសំណួរផ្សេងទៀត",
   "emailAddress": "អាសយដ្ឋានអ៊ីមែល",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ខ្លឹមសារសំណួរ",

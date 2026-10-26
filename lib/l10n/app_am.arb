@@ -437,7 +437,7 @@
   "bugReport": "የመተግበሪያ ችግር ሪፖርት",
   "featureRequest": "አስተያየቶች እና ጥያቄዎች",
   "otherInquiry": "ሌላ",
-  "otherInquiryPlaceholder": "ሌላ ይዘትን ያስገቡ",
+  "otherInquiryPlaceholder": "እባክዎ ስለ ሌላው ጉዳይ ዝርዝር ያስገቡ",
   "emailAddress": "ኢሜይል አድራሻ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "የመልእክት ይዘት",

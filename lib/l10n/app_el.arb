@@ -437,7 +437,7 @@
   "bugReport": "Αναφορά σφάλματος",
   "featureRequest": "Σχόλια και προτάσεις",
   "otherInquiry": "Άλλο",
-  "otherInquiryPlaceholder": "Παρακαλώ εισάγετε λεπτομέρειες",
+  "otherInquiryPlaceholder": "Περιγράψτε το άλλο σας ερώτημα",
   "emailAddress": "Διεύθυνση email",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Περιεχόμενο επικοινωνίας",

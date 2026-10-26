@@ -437,7 +437,7 @@
   "bugReport": "Съобщаване за проблем",
   "featureRequest": "Мнения и предложения",
   "otherInquiry": "Друго",
-  "otherInquiryPlaceholder": "Моля, въведете детайли",
+  "otherInquiryPlaceholder": "Моля, опишете другото си запитване",
   "emailAddress": "Имейл адрес",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Съдържание на запитването",

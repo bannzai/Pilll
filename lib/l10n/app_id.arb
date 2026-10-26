@@ -437,7 +437,7 @@
   "bugReport": "Laporkan masalah aplikasi",
   "featureRequest": "Masukan dan saran",
   "otherInquiry": "Lainnya",
-  "otherInquiryPlaceholder": "Silakan masukkan konten lainnya",
+  "otherInquiryPlaceholder": "Tuliskan detail pertanyaan lainnya",
   "emailAddress": "Alamat Email",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Isi pertanyaan",

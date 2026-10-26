@@ -437,7 +437,7 @@
   "bugReport": "ລາຍງານບັນຫາແອັບ",
   "featureRequest": "ຄຳຄິດເຫັນ ແລະຂໍ້ສະເໜີ",
   "otherInquiry": "ອື່ນໆ",
-  "otherInquiryPlaceholder": "ກະລຸນາໃສ່ລາຍລະອຽດອື່ນໆ",
+  "otherInquiryPlaceholder": "ກະລຸນາປ້ອນລາຍລະອຽດຂອງຄຳຖາມອື່ນ",
   "emailAddress": "ທີ່ຢູ່ອີເມວ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "ເນື້ອຫາການສອບຖາມ",

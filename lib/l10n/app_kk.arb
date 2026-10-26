@@ -437,7 +437,7 @@
   "bugReport": "Қате туралы хабарлау",
   "featureRequest": "Пікірлер мен ұсыныстар",
   "otherInquiry": "Басқа",
-  "otherInquiryPlaceholder": "Басқа мазмұнды енгізіңіз",
+  "otherInquiryPlaceholder": "Басқа сұрағыңыз туралы толығырақ жазыңыз",
   "emailAddress": "Электрондық пошта",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Сұрау мазмұны",

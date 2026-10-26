@@ -437,7 +437,7 @@
   "bugReport": "Pag-ulat ng problema sa app",
   "featureRequest": "Mga puna at mungkahi",
   "otherInquiry": "Iba pa",
-  "otherInquiryPlaceholder": "Mangyaring ilagay ang iba pang detalye",
+  "otherInquiryPlaceholder": "Pakilagay ang mga detalye ng iba ninyong katanungan",
   "emailAddress": "Email address",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detalye ng Katanungan",

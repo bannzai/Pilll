@@ -437,7 +437,7 @@
   "bugReport": "오류 신고",
   "featureRequest": "의견 및 요청 사항",
   "otherInquiry": "기타",
-  "otherInquiryPlaceholder": "기타 내용을 입력해 주세요",
+  "otherInquiryPlaceholder": "기타 문의 내용을 입력해 주세요",
   "emailAddress": "이메일 주소",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "문의 내용",

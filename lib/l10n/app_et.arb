@@ -437,7 +437,7 @@
   "bugReport": "Veast teatamine",
   "featureRequest": "Tagasiside ja ettepanekud",
   "otherInquiry": "Muu",
-  "otherInquiryPlaceholder": "Palun sisestage muu sisu",
+  "otherInquiryPlaceholder": "Kirjelda oma muud küsimust",
   "emailAddress": "E-posti aadress",
   "emailPlaceholder": "kasutaja@example.ee",
   "inquiryContent": "Päringu sisu",

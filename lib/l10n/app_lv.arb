@@ -437,7 +437,7 @@
   "bugReport": "Ziņot par kļūdu",
   "featureRequest": "Atsauksmes un ierosinājumi",
   "otherInquiry": "Cits",
-  "otherInquiryPlaceholder": "Lūdzu, ievadiet citu informāciju",
+  "otherInquiryPlaceholder": "Lūdzu, aprakstiet savu citu jautājumu",
   "emailAddress": "E-pasta adrese",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Jautājuma saturs",

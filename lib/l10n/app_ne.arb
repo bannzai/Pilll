@@ -437,7 +437,7 @@
   "bugReport": "एपको समस्या रिपोर्ट",
   "featureRequest": "प्रतिक्रिया र सुझाव",
   "otherInquiry": "अन्य",
-  "otherInquiryPlaceholder": "अन्य विवरणहरू प्रविष्ट गर्नुहोस्",
+  "otherInquiryPlaceholder": "कृपया आफ्नो अन्य सोधपुछको विवरण लेख्नुहोस्",
   "emailAddress": "इमेल ठेगाना",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "सोधपुछको विवरण",

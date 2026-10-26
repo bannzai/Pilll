@@ -437,7 +437,7 @@
   "bugReport": "Rapportera ett fel",
   "featureRequest": "Synpunkter och önskemål",
   "otherInquiry": "Övrigt",
-  "otherInquiryPlaceholder": "Beskriv ditt ärende här",
+  "otherInquiryPlaceholder": "Beskriv ditt andra ärende",
   "emailAddress": "E-postadress",
   "emailPlaceholder": "exempel@exempel.com",
   "inquiryContent": "Meddelande",

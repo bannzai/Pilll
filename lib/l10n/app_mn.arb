@@ -437,7 +437,7 @@
   "bugReport": "Алдааны мэдээлэх",
   "featureRequest": "Санал, хүсэлт",
   "otherInquiry": "Бусад",
-  "otherInquiryPlaceholder": "Бусад агуулгыг оруулна уу",
+  "otherInquiryPlaceholder": "Бусад асуултынхаа талаар дэлгэрэнгүй бичнэ үү",
   "emailAddress": "Имэйл хаяг",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Хандалтын агуулга",

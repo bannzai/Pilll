@@ -437,7 +437,7 @@
   "bugReport": "Raportim i një gabimi",
   "featureRequest": "Mendime dhe sugjerime",
   "otherInquiry": "Tjetër",
-  "otherInquiryPlaceholder": "Ju lutem shkruani detajet tuaja këtu",
+  "otherInquiryPlaceholder": "Ju lutemi, përshkruani pyetjen tuaj tjetër",
   "emailAddress": "Adresa e emailit",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Përmbajtja e kërkesës",

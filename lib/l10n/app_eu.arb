@@ -437,7 +437,7 @@
   "bugReport": "Akats baten berri eman",
   "featureRequest": "Iritziak eta iradokizunak",
   "otherInquiry": "Bestelakoak",
-  "otherInquiryPlaceholder": "Sartu beste edukia",
+  "otherInquiryPlaceholder": "Idatzi beste kontsultaren xehetasunak",
   "emailAddress": "Helbide elektronikoa",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Kontsultaren edukia",

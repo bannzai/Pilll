@@ -437,7 +437,7 @@
   "bugReport": "Пријава на грешка",
   "featureRequest": "Мислења и предлози",
   "otherInquiry": "Друго",
-  "otherInquiryPlaceholder": "Ве молиме внесете други содржини",
+  "otherInquiryPlaceholder": "Ве молиме, опишете го другото прашање",
   "emailAddress": "Е-пошта",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Содржина на барањето",

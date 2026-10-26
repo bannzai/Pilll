@@ -437,7 +437,7 @@
   "bugReport": "د اپلېکېشن د ستونزې راپور",
   "featureRequest": "نظرونه او وړاندیزونه",
   "otherInquiry": "نور",
-  "otherInquiryPlaceholder": "مهرباني وکړئ خپل نور مطلب دلته ولیکئ",
+  "otherInquiryPlaceholder": "مهرباني وکړئ د خپلې بلې پوښتنې جزییات ولیکئ",
   "emailAddress": "ایمیل پته",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "د پوښتنې منځپانګه",

@@ -437,7 +437,7 @@
   "bugReport": "အက်ပ်ချို့ယွင်းချက်ကို တိုင်ကြားရန်",
   "featureRequest": "အကြံပြုချက်များနှင့် တောင်းဆိုချက်များ",
   "otherInquiry": "အခြား",
-  "otherInquiryPlaceholder": "အခြားအကြောင်းအရာကို ထည့်သွင်းပါ",
+  "otherInquiryPlaceholder": "အခြားမေးမြန်းလိုသည့်အကြောင်းအရာကို အသေးစိတ်ရေးပါ",
   "emailAddress": "အီးမေးလ်လိပ်စာ",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "မေးမြန်းချက် အကြောင်းအရာ",

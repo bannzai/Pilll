@@ -437,7 +437,7 @@
   "bugReport": "الإبلاغ عن خلل",
   "featureRequest": "الآراء والاقتراحات",
   "otherInquiry": "أخرى",
-  "otherInquiryPlaceholder": "يرجى إدخال المحتوى الآخر",
+  "otherInquiryPlaceholder": "يرجى إدخال تفاصيل الاستفسار الآخر",
   "emailAddress": "عنوان البريد الإلكتروني",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "محتوى الاستفسار",

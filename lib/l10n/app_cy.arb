@@ -437,7 +437,7 @@
   "bugReport": "Rhoi gwybod am nam",
   "featureRequest": "Adborth ac awgrymiadau",
   "otherInquiry": "Arall",
-  "otherInquiryPlaceholder": "Rhowch fanylion eraill yma",
+  "otherInquiryPlaceholder": "Rhowch fanylion eich ymholiad arall",
   "emailAddress": "Cyfeiriad e-bost",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Cynnwys yr ymholiad",

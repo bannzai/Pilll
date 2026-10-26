@@ -437,7 +437,7 @@
   "bugReport": "Повідомити про помилку",
   "featureRequest": "Відгуки та пропозиції",
   "otherInquiry": "Інше",
-  "otherInquiryPlaceholder": "Будь ласка, опишіть вашу ситуацію",
+  "otherInquiryPlaceholder": "Опишіть ваше інше запитання",
   "emailAddress": "Електронна адреса",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Зміст звернення",

@@ -437,7 +437,7 @@
   "bugReport": "Hata bildirimi",
   "featureRequest": "Görüş ve öneriler",
   "otherInquiry": "Diğer",
-  "otherInquiryPlaceholder": "Lütfen içeriğinizi giriniz",
+  "otherInquiryPlaceholder": "Lütfen diğer sorunuzun ayrıntılarını yazın",
   "emailAddress": "E-posta adresi",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Mesaj İçeriği",

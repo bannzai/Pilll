@@ -437,7 +437,7 @@
   "bugReport": "ხარვეზის შეტყობინება",
   "featureRequest": "მოსაზრებები და წინადადებები",
   "otherInquiry": "სხვა",
-  "otherInquiryPlaceholder": "ჩაწერეთ დამატებითი ინფორმაცია",
+  "otherInquiryPlaceholder": "გთხოვთ, აღწეროთ თქვენი სხვა შეკითხვა",
   "emailAddress": "ელფოსტის მისამართი",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "მიმართვის შინაარსი",

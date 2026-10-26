@@ -437,7 +437,7 @@
   "bugReport": "Hibabejelentés",
   "featureRequest": "Visszajelzések és javaslatok",
   "otherInquiry": "Egyéb",
-  "otherInquiryPlaceholder": "Kérjük, adja meg az egyéb információkat",
+  "otherInquiryPlaceholder": "Írd le a másik kérésed részleteit",
   "emailAddress": "E-mail cím",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Megkeresés tartalma",

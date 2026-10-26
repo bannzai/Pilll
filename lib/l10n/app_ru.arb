@@ -437,7 +437,7 @@
   "bugReport": "Сообщить об ошибке",
   "featureRequest": "Отзывы и предложения",
   "otherInquiry": "Другое",
-  "otherInquiryPlaceholder": "Введите содержание запроса",
+  "otherInquiryPlaceholder": "Опишите ваш другой вопрос",
   "emailAddress": "Электронная почта",
   "emailPlaceholder": "primer@primer.ru",
   "inquiryContent": "Содержание обращения",

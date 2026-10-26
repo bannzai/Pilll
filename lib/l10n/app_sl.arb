@@ -437,7 +437,7 @@
   "bugReport": "Prijava napake",
   "featureRequest": "Mnenja in predlogi",
   "otherInquiry": "Drugo",
-  "otherInquiryPlaceholder": "Prosimo, vnesite drugo vsebino",
+  "otherInquiryPlaceholder": "Opišite svoje drugo vprašanje",
   "emailAddress": "E-poštni naslov",
   "emailPlaceholder": "primer@primer.si",
   "inquiryContent": "Vsebina poizvedbe",

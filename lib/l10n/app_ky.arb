@@ -437,7 +437,7 @@
   "bugReport": "Ката жөнүндө билдирүү",
   "featureRequest": "Пикирлер жана сунуштар",
   "otherInquiry": "Башка",
-  "otherInquiryPlaceholder": "Башка маалыматты киргизиңиз",
+  "otherInquiryPlaceholder": "Башка сурооңузду кененирээк жазыңыз",
   "emailAddress": "Электрондук почта дареги",
   "emailPlaceholder": "example@example.com",
   "inquiryContent": "Кайрылуунун мазмуну",
