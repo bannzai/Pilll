@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Zəhmət olmasa, hesab yaradın",
   "cannotTransferPremiumWithoutAccount": "Telefonunuzu dəyişsəniz və ya itirsəniz, premium funksiyalarınızı köçürə bilməyəcəksiniz",
   "reexperiencePremiumFeatures": "Premium imkanlardan 14 gün ərzində yenidən yararlana bilərsiniz!\nSosial mediada paylaşmaq üçün toxunun!",
-  "whereToShare": "Harda paylaşırsınız?",
+  "whereToShare": "Harada paylaşmaq istərdiniz",
   "pauseTakingDay": "🌙 Qəbul fasiləsi {day}-ci gün",
   "withDay": "{word}. gün",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ci gün",

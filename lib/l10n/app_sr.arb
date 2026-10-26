@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Молимо Вас, направите налог",
   "cannotTransferPremiumWithoutAccount": "Ако промените или изгубите телефон, нећете моћи да пренесете премијум функције",
   "reexperiencePremiumFeatures": "Можете поново да користите премијум функције 14 дана!\nДодирните да поделите на друштвеним мрежама!",
-  "whereToShare": "Gde želite da podelite?",
+  "whereToShare": "Где желите да поделите",
   "pauseTakingDay": "🌙 Pauza od pilula {day}. dan",
   "withDay": "{word}. dan",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. дан",

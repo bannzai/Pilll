@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Будь ласка, створіть обліковий запис",
   "cannotTransferPremiumWithoutAccount": "Якщо ви зміните або втратите телефон, перенести преміум функції не вдасться",
   "reexperiencePremiumFeatures": "Ви можете знову користуватися преміумфункціями протягом 14 днів!\nТоркніться, щоб поділитися в соцмережах!",
-  "whereToShare": "Куди поділитися?",
+  "whereToShare": "Де ви хочете поділитися",
   "pauseTakingDay": "🌙 Перерва у прийомі {day} день",
   "withDay": "{word}-й день",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}-й день",

@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Prašome susikurti paskyrą",
   "cannotTransferPremiumWithoutAccount": "Jei pakeisite ar pamesite telefoną, negalėsite perkelti Premium funkcijų",
   "reexperiencePremiumFeatures": "Galite vėl 14 dienų išbandyti Premium funkcijas!\nPalieskite, jei norite pasidalyti socialiniuose tinkluose!",
-  "whereToShare": "Kur dalintis?",
+  "whereToShare": "Kur norite bendrinti",
   "pauseTakingDay": "🌙 Tablečių pertrauka {day} diena",
   "withDay": "{word} diena",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} diena",

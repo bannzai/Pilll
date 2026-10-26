@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "សូមបង្កើតគណនី",
   "cannotTransferPremiumWithoutAccount": "ប្រសិនបើអ្នកប្តូរ ឬបាត់ទូរសព្ទ អ្នកមិនអាចផ្ទេរមុខងារព្រីមៀមទៅទូរសព្ទថ្មីបានទេ",
   "reexperiencePremiumFeatures": "អ្នកអាចសាកល្បងមុខងារព្រីមៀមម្តងទៀតរយៈពេល 14 ថ្ងៃ!\nសូមចុចដើម្បីចែករំលែកនៅលើបណ្តាញសង្គម!",
-  "whereToShare": "ចែករំលែកទៅណា？",
+  "whereToShare": "តើអ្នកចង់ចែករំលែកនៅទីណា",
   "pauseTakingDay": "🌙 ការញាំថ្នាំសម្រាក ថ្ងៃទី{day}",
   "withDay": "ថ្ងៃទី{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ថ្ងៃទី",

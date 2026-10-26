@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "कृपया एक खाता बनाएँ",
   "cannotTransferPremiumWithoutAccount": "फ़ोन बदलने या खो जाने पर प्रीमियम सुविधाएँ दूसरे फ़ोन में स्थानांतरित नहीं की जा सकेंगी",
   "reexperiencePremiumFeatures": "आप 14 दिनों तक प्रीमियम सुविधाएँ फिर से आज़मा सकते हैं!\nसोशल मीडिया पर शेयर करने के लिए टैप करें!",
-  "whereToShare": "कहाँ शेयर करें?",
+  "whereToShare": "आप कहाँ शेयर करना चाहेंगी",
   "pauseTakingDay": "🌙 दवा विराम {day}वां दिन",
   "withDay": "दिन {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}वां दिन",

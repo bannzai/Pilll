@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Sortu kontu bat, mesedez",
   "cannotTransferPremiumWithoutAccount": "Telefonoa aldatzen edo galtzen baduzu, ezin izango dituzu Premium funtzioak transferitu",
   "reexperiencePremiumFeatures": "Premium eginbideak berriro proba ditzakezu 14 egunez!\nUkitu sare sozialetan partekatzeko!",
-  "whereToShare": "Kien vi volas dividi?",
+  "whereToShare": "Non partekatu nahi duzu",
   "pauseTakingDay": "🌙 Hartzea atsedena {day}. eguna",
   "withDay": "{word}garren eguna",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. eguna",

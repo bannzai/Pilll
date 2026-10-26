@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "ກະລຸນາສ້າງບັນຊີ",
   "cannotTransferPremiumWithoutAccount": "ຖ້າປ່ຽນໂທລະສັບ ຫຼື ເຮັດໂທລະສັບເສຍ ຈະບໍ່ສາມາດໂອນຟີເຈີ Premium ໄປເຄື່ອງໃໝ່ໄດ້",
   "reexperiencePremiumFeatures": "ທ່ານສາມາດລອງໃຊ້ຄຸນສົມບັດ Premium ອີກຄັ້ງໄດ້ 14 ມື້!\nກະລຸນາແຕະເພື່ອແບ່ງປັນໃນສື່ສັງຄົມ!",
-  "whereToShare": "ແບ່ງປັນໄປທີ່ໃດ?",
+  "whereToShare": "ຢາກແບ່ງປັນຢູ່ໃສ",
   "pauseTakingDay": "🌙 ພັກການກິນຢາ ວັນທີ່ {day}",
   "withDay": "ວັນທີ່{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ມື້ທີ {restDurationDays}",

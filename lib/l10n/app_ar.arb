@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "يرجى إنشاء حساب",
   "cannotTransferPremiumWithoutAccount": "إذا غيّرتِ هاتفكِ أو فقدتِه، فلن تتمكني من نقل ميزات بريميوم",
   "reexperiencePremiumFeatures": "يمكنكِ تجربة ميزات بريميوم مجددًا لمدة 14 يومًا!\nاضغطي للمشاركة على وسائل التواصل الاجتماعي!",
-  "whereToShare": "أين تريد المشاركة؟",
+  "whereToShare": "أين ترغبين في المشاركة",
   "pauseTakingDay": "🌙 فترة الراحة من الحبوب - اليوم {day}",
   "withDay": "اليوم {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}اليوم الـ{restDurationDays}",

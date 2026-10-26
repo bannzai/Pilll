@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "దయచేసి ఖాతాను సృష్టించండి",
   "cannotTransferPremiumWithoutAccount": "ఫోన్ మార్చినా లేదా పోగొట్టుకున్నా, ప్రీమియం సదుపాయాలను కొత్త ఫోన్‌కు బదిలీ చేయలేరు",
   "reexperiencePremiumFeatures": "ప్రీమియం ఫీచర్‌లను 14 రోజుల పాటు మళ్లీ ఉపయోగించి చూడవచ్చు!\nసోషల్ మీడియాలో పంచుకోవడానికి నొక్కండి!",
-  "whereToShare": "ఎక్కడికి షేర్ చేస్తారు?",
+  "whereToShare": "మీరు ఎక్కడ షేర్ చేయాలనుకుంటున్నారు",
   "pauseTakingDay": "🌙 సేవన విరామం {day}వ రోజు",
   "withDay": "{word}వ రోజు",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}వ రోజు",

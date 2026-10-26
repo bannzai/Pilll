@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Zaregistrujte si prosím účet",
   "cannotTransferPremiumWithoutAccount": "Při výměně nebo ztrátě telefonu nebude možné převést funkce Premium",
   "reexperiencePremiumFeatures": "Funkce Premium můžete znovu vyzkoušet na 14 dní!\nKlepnutím je můžete sdílet na sociálních sítích!",
-  "whereToShare": "Kam chcete sdílet?",
+  "whereToShare": "Kde chcete sdílet",
   "pauseTakingDay": "🌙 {day}. den pauzy",
   "withDay": "{word}. den",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. den",

@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "გთხოვთ, შექმნათ ანგარიში",
   "cannotTransferPremiumWithoutAccount": "თუ ტელეფონს შეცვლით ან დაკარგავთ, პრემიუმ ფუნქციებს ვერ გადაიტანთ",
   "reexperiencePremiumFeatures": "შეგიძლიათ პრემიუმ ფუნქციები კვლავ გამოიყენოთ 14 დღის განმავლობაში!\nშეეხეთ სოციალურ ქსელებში გასაზიარებლად!",
-  "whereToShare": "სად გსურთ გაზიარება?",
+  "whereToShare": "სად გსურთ გაზიარება",
   "pauseTakingDay": "🌙 შესვენების {day}-ე დღე",
   "withDay": "{word}-ე დღე",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ე დღე",

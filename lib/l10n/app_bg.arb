@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Моля, създайте си акаунт",
   "cannotTransferPremiumWithoutAccount": "Ако смените или изгубите телефона си, няма да можете да прехвърлите премиум функциите",
   "reexperiencePremiumFeatures": "Можете отново да ползвате премиум функциите за 14 дни!\nДокоснете, за да споделите в социалните мрежи!",
-  "whereToShare": "Къде искате да споделите?",
+  "whereToShare": "Къде искате да споделите",
   "pauseTakingDay": "🌙 Пауза от хапчета {day} ден",
   "withDay": "{word} ден",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ти ден",

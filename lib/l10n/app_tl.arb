@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Pakiusap, gumawa po kayo ng account",
   "cannotTransferPremiumWithoutAccount": "Kung magpapalit kayo ng telepono o mawala ito, hindi ninyo maililipat ang mga feature ng Premium",
   "reexperiencePremiumFeatures": "Maaari ninyong subukang muli ang mga tampok ng Premium sa loob ng 14 na araw!\nPaki-tap para ibahagi sa social media!",
-  "whereToShare": "Saan mo ito ishashare?",
+  "whereToShare": "Saan ninyo gustong ibahagi ito",
   "pauseTakingDay": "🌙 Pahinga sa pag-inom {day} na araw",
   "withDay": "Araw {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} na araw",

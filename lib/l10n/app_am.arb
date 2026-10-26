@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "እባክዎ መለያ ይመዝገቡ",
   "cannotTransferPremiumWithoutAccount": "ስልክዎን ሲቀይሩ ወይም ሲጠፋብዎ የፕሪሚየም ባህሪያትን ማስተላለፍ አይችሉም",
   "reexperiencePremiumFeatures": "የፕሪሚየም ባህሪያትን ለ14 ቀናት እንደገና መጠቀም ይችላሉ!\nበማኅበራዊ ሚዲያ ለማጋራት ይንኩ!",
-  "whereToShare": "ወዴት ማጋራት ይፈልጋሉ？",
+  "whereToShare": "የት ማጋራት ይፈልጋሉ",
   "pauseTakingDay": "🌙 መድሃኒት እረፍት {day}ኛ ቀን",
   "withDay": "{word}ኛ ቀን",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ኛ ቀን",

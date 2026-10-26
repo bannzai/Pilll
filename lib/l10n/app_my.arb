@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "ကျေးဇူးပြု၍ အကောင့်ဖွင့်ပါ",
   "cannotTransferPremiumWithoutAccount": "ဖုန်းပြောင်းသုံးတာ ဒါမှမဟုတ် ဖုန်းပျောက်သွားတာမျိုးမှာ ပရီမီယံ လုပ်ဆောင်ချက်တွေကို ဖုန်းအသစ်ဆီ လွှဲပြောင်းလို့ မရပါဘူး",
   "reexperiencePremiumFeatures": "ပရီမီယံ လုပ်ဆောင်ချက်တွေကို 14 ရက်ကြာ ထပ်မံအသုံးပြုနိုင်ပါတယ်!\nလူမှုကွန်ရက်မှာ မျှဝေဖို့ နှိပ်ပါ!",
-  "whereToShare": "ဘယ်ဆီသို့ မျှဝေမလဲ？",
+  "whereToShare": "ဘယ်မှာ မျှဝေချင်ပါသလဲ",
   "pauseTakingDay": "🌙 နားရက် {day} ရက်မြောက်",
   "withDay": "{word}ရက်မြောက်",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ရက်မြောက်",

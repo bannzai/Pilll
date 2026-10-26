@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Crea un account, per favore",
   "cannotTransferPremiumWithoutAccount": "Se cambi telefono o lo perdi, non potrai trasferire le funzioni Premium",
   "reexperiencePremiumFeatures": "Puoi provare di nuovo le funzioni Premium per 14 giorni!\nTocca per condividere sui social!",
-  "whereToShare": "Dove vuoi condividere?",
+  "whereToShare": "Dove vuoi condividerlo",
   "pauseTakingDay": "🌙 Giorno {day} di pausa",
   "withDay": "{word}° giorno",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}° giorno",

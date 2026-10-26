@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Խնդրում ենք գրանցել հաշիվ",
   "cannotTransferPremiumWithoutAccount": "Եթե փոխեք կամ կորցնեք հեռախոսը, չեք կարողանա փոխանցել պրեմիում գործառույթները",
   "reexperiencePremiumFeatures": "Դուք կարող եք կրկին օգտվել պրեմիում գործառույթներից 14 օր!\nՀպվեք՝ սոցիալական ցանցերում կիսվելու համար!",
-  "whereToShare": "Որտե՞ղ կիսեք:",
+  "whereToShare": "Որտե՞ղ եք ցանկանում կիսվել",
   "pauseTakingDay": "🌙 Դեղի ընդմիջում {day}-րդ օր",
   "withDay": "{word} օր",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-րդ օր",

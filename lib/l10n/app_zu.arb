@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Sicela udale i-akhawunti",
   "cannotTransferPremiumWithoutAccount": "Uma ushintsha noma ulahlekelwa yifoni, ngeke ukwazi ukudlulisela izici ze-Premium kwenye ifoni",
   "reexperiencePremiumFeatures": "Ungaphinde uzame izici ze-i-Premium izinsuku ezingu-14!\nSicela uthephe ukuze wabelane ezinkundleni zokuxhumana!",
-  "whereToShare": "Uzokwabelana kuphi?",
+  "whereToShare": "Ufuna ukwabelana kuphi",
   "pauseTakingDay": "🌙 Ukuphumula kwamaphilisi usuku {day}",
   "withDay": "usuku lwe{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}usuku lwe-{restDurationDays}",

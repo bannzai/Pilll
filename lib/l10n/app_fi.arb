@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Luo tili, kiitos",
   "cannotTransferPremiumWithoutAccount": "Jos vaihdat puhelinta tai kadotat sen, et voi siirtää Premium-ominaisuuksia",
   "reexperiencePremiumFeatures": "Voit kokeilla Premium-ominaisuuksia uudelleen 14 päivän ajan!\nJaa somessa napauttamalla!",
-  "whereToShare": "Mihin jaetaan?",
+  "whereToShare": "Missä haluat jakaa tämän",
   "pauseTakingDay": "🌙 {day}. taukopäivä",
   "withDay": "{word}. päivä",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. päivä",

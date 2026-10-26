@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Prosimo, ustvarite račun",
   "cannotTransferPremiumWithoutAccount": "Če zamenjate ali izgubite telefon, funkcij Premium ne boste mogli prenesti",
   "reexperiencePremiumFeatures": "Funkcije Premium lahko znova preizkusite za 14 dni!\nTapnite za deljenje na družbenih omrežjih!",
-  "whereToShare": "Kje želite deliti?",
+  "whereToShare": "Kje želite deliti",
   "pauseTakingDay": "🌙 {day}. dan odmora od jemanja",
   "withDay": "{word}. dan",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dan",

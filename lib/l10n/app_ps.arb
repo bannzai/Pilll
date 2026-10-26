@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "مهرباني وکړئ یو حساب جوړ کړئ",
   "cannotTransferPremiumWithoutAccount": "که ټېلېفون بدل یا ورک شي، د پریمیم ځانګړنې نوي ټېلېفون ته نه شئ لېږدولی",
   "reexperiencePremiumFeatures": "تاسو کولی شئ د پریمیم ځانګړنې بیا د 14 ورځو لپاره وکاروئ!\nپه ټولنیزو رسنیو کې د شریکولو لپاره ټېپ وکړئ!",
-  "whereToShare": "چېرته شریک کړئ؟",
+  "whereToShare": "تاسو یې چېرته شریکول غواړئ",
   "pauseTakingDay": "🌙 د آرام {day}مه ورځ",
   "withDay": "{word}مه ورځ",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}د {restDurationDays} ورځه",

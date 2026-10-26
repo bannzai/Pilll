@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Crie uma conta, por favor",
   "cannotTransferPremiumWithoutAccount": "Se você trocar ou perder o celular, não poderá transferir os recursos Premium",
   "reexperiencePremiumFeatures": "Você pode aproveitar os recursos Premium novamente por 14 dias!\nToque para compartilhar nas redes sociais!",
-  "whereToShare": "Para onde você quer compartilhar?",
+  "whereToShare": "Onde você quer compartilhar",
   "pauseTakingDay": "🌙 Pausa na medicação - {day}º dia",
   "withDay": "Dia {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}º dia",

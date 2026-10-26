@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Opprett gjerne en konto",
   "cannotTransferPremiumWithoutAccount": "Hvis du bytter eller mister telefonen, kan du ikke overføre premiumfunksjonene",
   "reexperiencePremiumFeatures": "Du kan prøve premiumfunksjonene igjen i 14 dager!\nTrykk for å dele i sosiale medier!",
-  "whereToShare": "Hvor vil du dele?",
+  "whereToShare": "Hvor vil du dele",
   "pauseTakingDay": "🌙 Pillpause dag {day}",
   "withDay": "{word}. dag",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dag",

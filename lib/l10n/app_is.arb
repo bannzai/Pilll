@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "Viltu stofna aðgang?",
   "cannotTransferPremiumWithoutAccount": "Ef þú skiptir um síma eða týnir honum geturðu ekki flutt Premium-eiginleikana",
   "reexperiencePremiumFeatures": "Þú getur prófað Premium-eiginleikana aftur í 14 daga!\nPikkaðu til að deila á samfélagsmiðlum!",
-  "whereToShare": "Hvert viltu deila þessu?",
+  "whereToShare": "Hvar viltu deila þessu",
   "pauseTakingDay": "🌙 Pilluhvíld dagur {day}",
   "withDay": "{word}. dagur",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dagur",

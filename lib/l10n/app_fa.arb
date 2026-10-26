@@ -142,7 +142,7 @@
   "pleaseRegisterAccount": "لطفاً یک حساب کاربری بسازید",
   "cannotTransferPremiumWithoutAccount": "اگر گوشی‌تان را عوض کنید یا گم کنید، نمی‌توانید ویژگی‌های پریمیوم را منتقل کنید",
   "reexperiencePremiumFeatures": "می‌توانید قابلیت‌های پریمیوم را دوباره به‌مدت ۱۴ روز تجربه کنید!\nبرای اشتراک‌گذاری در شبکه‌های اجتماعی ضربه بزنید!",
-  "whereToShare": "کجا به اشتراک بگذارید؟",
+  "whereToShare": "کجا می‌خواهید به اشتراک بگذارید",
   "pauseTakingDay": "🌙 دوره استراحت روز {day}",
   "withDay": "روز {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}روز",
