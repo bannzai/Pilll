@@ -513,7 +513,7 @@
   "criticalAlertFeatureAppealPoint2": "เตือนอย่างมั่นใจตามเวลาที่ตั้งไว้",
   "criticalAlertFeatureAppealPoint3": "ตั้งค่าง่าย ๆ ด้วยการแตะครั้งเดียว",
   "reminderNotificationCustomizeWordFeatureAppealPoint1": "ปรับข้อความแจ้งเตือนได้ตามต้องการ",
-  "reminderNotificationCustomizeWordFeatureAppealPoint2": "ทุกวันในการแจ้งเตือนการทานยา",
+  "reminderNotificationCustomizeWordFeatureAppealPoint2": "แสดงในการแจ้งเตือนทานยาทุกวัน",
   "reminderNotificationCustomizeWordFeatureAppealPoint3": "ตั้งเป็นข้อความแจ้งเตือนส่วนตัวของคุณ",
   "appearanceModeDateFeatureAppealPoint1": "แสดงตารางยาคุมตามวันที่",
   "appearanceModeDateFeatureAppealPoint2": "รู้วันที่ได้โดยไม่ต้องดูปฏิทิน",
