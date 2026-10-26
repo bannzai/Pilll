@@ -113,7 +113,7 @@
   "discardPillSheet": "पिल स्ट्रिप फेंकें",
   "takingTime": "गोली लेने का समय",
   "takingHistoryIsPremiumFeature": "सेवन इतिहास प्रीमियम सुविधा है",
-  "pauseTakingDoesNotAdvancePillNumber": "दवा का सेवन बंद करने पर पिल नंबर आगे नहीं बढ़ता",
+  "pauseTakingDoesNotAdvancePillNumber": "गोली लेना कुछ समय के लिए रोकने पर गोली नंबर आगे नहीं बढ़ेगा",
   "pauseTakingFromNumber": "क्या आप {number} से गोली लेना बंद करना चाहते हैं?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}नंबर",
   "taking": "सेवन",

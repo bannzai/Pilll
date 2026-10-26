@@ -113,7 +113,7 @@
   "discardPillSheet": "ગોળીની સ્ટ્રિપનો નિકાલ",
   "takingTime": "ગોળી લેવાનો સમય",
   "takingHistoryIsPremiumFeature": "સેવન ઇતિહાસ પ્રીમિયમ સુવિધા છે",
-  "pauseTakingDoesNotAdvancePillNumber": "ગોળી લેવાનો વિરામ લેવાથી ગોળીનો નંબર આગળ વધશે નહીં",
+  "pauseTakingDoesNotAdvancePillNumber": "તમે ગોળી લેવાનું થોડા સમય માટે બંધ રાખશો તો ગોળી નંબર આગળ વધશે નહીં",
   "pauseTakingFromNumber": "શું તમે {number} થી ગોળી લેવાનું બંધ કરવા માગો છો?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}નંબર",
   "taking": "સેવન",

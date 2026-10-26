@@ -113,7 +113,7 @@
   "discardPillSheet": "ክኒን ሉህ ማስወገድ",
   "takingTime": "የክኒን መውሰጃ ሰዓት",
   "takingHistoryIsPremiumFeature": "አወሳሰድ ታሪክ የፕሪሚየም ባህሪ ነው",
-  "pauseTakingDoesNotAdvancePillNumber": "መድሃኒት መውሰድ ማቆም ሲሆን የመድሃኒት ቁጥሩ አይቀጥልም",
+  "pauseTakingDoesNotAdvancePillNumber": "ክኒን መውሰድን ለጊዜው ካቆሙ፣ ክኒን ቁጥር ወደ ቀጣዩ አይሄድም",
   "pauseTakingFromNumber": "ከ{number} ጀምሮ መድኃኒቱን መውሰድ ማቆም ይፈልጋሉ?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ኛ",
   "taking": "መውሰድ",

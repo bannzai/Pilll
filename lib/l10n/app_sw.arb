@@ -113,7 +113,7 @@
   "discardPillSheet": "kutupa pakiti ya vidonge",
   "takingTime": "Wakati wa kumeza kidonge",
   "takingHistoryIsPremiumFeature": "Historia ya kumeza vidonge ni kipengele cha Premium",
-  "pauseTakingDoesNotAdvancePillNumber": "Ukipumzika kutumia vidonge, nambari ya kidonge haziongezeki",
+  "pauseTakingDoesNotAdvancePillNumber": "Ukisitisha kumeza vidonge kwa muda, nambari ya kidonge haitasonga mbele",
   "pauseTakingFromNumber": "Je, utasimamisha kutumia dawa kutoka {number}?",
   "lastTakenPlusOnePillNumber": "Namba {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "kumeza",

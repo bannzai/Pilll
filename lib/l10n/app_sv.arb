@@ -113,7 +113,7 @@
   "discardPillSheet": "släng p-pillerkartan",
   "takingTime": "Tid för att ta p-pillret",
   "takingHistoryIsPremiumFeature": "Intagshistorik är en premiumfunktion",
-  "pauseTakingDoesNotAdvancePillNumber": "Pillnumret går inte framåt när du pausar intaget",
+  "pauseTakingDoesNotAdvancePillNumber": "Om du gör ett uppehåll med pillren går tablettnumret inte vidare",
   "pauseTakingFromNumber": "Vill du pausa intaget från {number}?",
   "lastTakenPlusOnePillNumber": "nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "intag",

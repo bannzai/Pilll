@@ -113,7 +113,7 @@
   "discardPillSheet": "buang pek pil",
   "takingTime": "Masa makan pil",
   "takingHistoryIsPremiumFeature": "Sejarah pengambilan pil ialah ciri premium",
-  "pauseTakingDoesNotAdvancePillNumber": "Apabila anda melewatkan pengambilan, nombor pil tidak akan maju",
+  "pauseTakingDoesNotAdvancePillNumber": "Jika anda berhenti mengambil pil buat sementara waktu, nombor pil tidak akan bertambah",
   "pauseTakingFromNumber": "Adakah anda ingin berhenti mengambil dari {number}?",
   "lastTakenPlusOnePillNumber": "ke-{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "pengambilan",

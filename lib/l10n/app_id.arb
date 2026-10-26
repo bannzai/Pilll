@@ -113,7 +113,7 @@
   "discardPillSheet": "buang strip pil",
   "takingTime": "Waktu minum pil",
   "takingHistoryIsPremiumFeature": "Riwayat minum pil adalah fitur premium",
-  "pauseTakingDoesNotAdvancePillNumber": "Ketika melewatkan konsumsi, nomor pil tidak akan maju",
+  "pauseTakingDoesNotAdvancePillNumber": "Jika Anda berhenti minum pil untuk sementara, nomor pil tidak akan bertambah",
   "pauseTakingFromNumber": "Berhenti minum pil mulai dari {number}?",
   "lastTakenPlusOnePillNumber": "ke-{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "konsumsi",

@@ -113,7 +113,7 @@
   "discardPillSheet": "ବଟିକା ସିଟ ଫିଙ୍ଗିଦିଅନ୍ତୁ",
   "takingTime": "ବଟିକା ଖାଇବା ସମୟ",
   "takingHistoryIsPremiumFeature": "ସେବନ ଇତିହାସ ଏକ ପ୍ରିମିୟମ୍ ସୁବିଧା",
-  "pauseTakingDoesNotAdvancePillNumber": "ସେବନ ବିରତି କଲେ ବଟିକା ନମ୍ବର ଆଗକୁ ବଢିବ ନାହିଁ",
+  "pauseTakingDoesNotAdvancePillNumber": "ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ ରଖିଲେ ବଟିକା ନମ୍ବର ଆଗକୁ ବଢ଼ିବ ନାହିଁ",
   "pauseTakingFromNumber": "{number}ରୁ ସେବନ ବନ୍ଦ କରିବେ କି?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ତମ",
   "taking": "ସେବନ",

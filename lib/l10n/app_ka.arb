@@ -113,7 +113,7 @@
   "discardPillSheet": "აბების ბლისტერ გადაგდება",
   "takingTime": "აბის მიღების დრო",
   "takingHistoryIsPremiumFeature": "მიღების ისტორია პრემიუმ ფუნქციაა",
-  "pauseTakingDoesNotAdvancePillNumber": "მიღების შეჩერებისას აბის ნომერი არ გაგრძელდება",
+  "pauseTakingDoesNotAdvancePillNumber": "თუ აბების მიღებას დროებით შეაჩერებთ, აბის ნომერი წინ არ წავა",
   "pauseTakingFromNumber": "{number}-დან აბების მიღების შეწყვეტა გსურთ?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-ე",
   "taking": "მიღება",

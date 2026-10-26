@@ -113,7 +113,7 @@
   "discardPillSheet": "фрлање блистер",
   "takingTime": "Време за земање таблета",
   "takingHistoryIsPremiumFeature": "Историја на земање е премиум функција",
-  "pauseTakingDoesNotAdvancePillNumber": "Кога ја прескокнувате дозата, бројот на пилулата не напредува",
+  "pauseTakingDoesNotAdvancePillNumber": "Ако направите пауза во земањето, број на таблета нема да се помести",
   "pauseTakingFromNumber": "Дали сакате да направите пауза во земањето таблети од {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-та",
   "taking": "земање",

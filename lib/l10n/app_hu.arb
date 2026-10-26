@@ -113,7 +113,7 @@
   "discardPillSheet": "tablettacsomag kidobása",
   "takingTime": "A tabletta szedésének ideje",
   "takingHistoryIsPremiumFeature": "A szedési előzmények prémium funkció",
-  "pauseTakingDoesNotAdvancePillNumber": "A szedés szüneteltetése esetén a tabletta sorszáma nem halad tovább.",
+  "pauseTakingDoesNotAdvancePillNumber": "Ha szünetet tartasz a tabletta szedésében, a tablettaszám nem lép tovább",
   "pauseTakingFromNumber": "Szünetet tart a szedésben a {number}. tablettától?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. szám",
   "taking": "bevétel",

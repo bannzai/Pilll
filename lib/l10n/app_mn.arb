@@ -113,7 +113,7 @@
   "discardPillSheet": "эмийн блистер хаях",
   "takingTime": "Эм уух цаг",
   "takingHistoryIsPremiumFeature": "Эм уусан түүх нь премиум боломж юм",
-  "pauseTakingDoesNotAdvancePillNumber": "Пилл ууухаа зогсоовол дугаар урагшлахгүй",
+  "pauseTakingDoesNotAdvancePillNumber": "Эм уухаа түр завсарлавал эмийн дугаар урагшлахгүй",
   "pauseTakingFromNumber": "{number}-аас эхлэн эм ууж амрах уу？",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дэх",
   "taking": "уух",

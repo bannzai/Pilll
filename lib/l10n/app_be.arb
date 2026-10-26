@@ -113,7 +113,7 @@
   "discardPillSheet": "утылізаваць блістар",
   "takingTime": "Час прыёму пігулкі",
   "takingHistoryIsPremiumFeature": "Гісторыя прыёму пігулак — прэміум-функцыя",
-  "pauseTakingDoesNotAdvancePillNumber": "Пры перапынку прыёму нумар таблеткі не прасоўваецца",
+  "pauseTakingDoesNotAdvancePillNumber": "Калі вы зробіце перапынак у прыёме пігулак, нумар пігулкі не зменіцца",
   "pauseTakingFromNumber": "Спыніць прыём з {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-я",
   "taking": "прыём",

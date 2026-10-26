@@ -113,7 +113,7 @@
   "discardPillSheet": "pilula-blister botatzea",
   "takingTime": "Pilula hartzeko ordua",
   "takingHistoryIsPremiumFeature": "Hartze-historia Premium eginbidea da",
-  "pauseTakingDoesNotAdvancePillNumber": "Pilula hartzea pausatzen baduzu, pilula zenbakia ez da aurreratuko",
+  "pauseTakingDoesNotAdvancePillNumber": "Pilula hartzeari atseden hartzen badiozu, pilula-zenbakia ez da aurreratuko",
   "pauseTakingFromNumber": "{number}tik aurrera hartzea pausatu nahi duzu?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}a",
   "taking": "hartu",

@@ -113,7 +113,7 @@
   "discardPillSheet": "həb blister atılması",
   "takingTime": "Həb qəbul etmə vaxtı",
   "takingHistoryIsPremiumFeature": "Qəbul tarixçəsi premium funksiyadır",
-  "pauseTakingDoesNotAdvancePillNumber": "Qəbulu dayandırdığınızda həb nömrəsi irəliləmir",
+  "pauseTakingDoesNotAdvancePillNumber": "Həb qəbuluna fasilə versəniz, həb nömrəsi irəliləməyəcək",
   "pauseTakingFromNumber": "{number}-ci nömrədən dərman qəbuluna fasilə verəsiniz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-cı",
   "taking": "qəbul",

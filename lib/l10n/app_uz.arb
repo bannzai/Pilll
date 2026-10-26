@@ -113,7 +113,7 @@
   "discardPillSheet": "tabletka blisterni tashlang",
   "takingTime": "Tabletkani ichish vaqti",
   "takingHistoryIsPremiumFeature": "Qabul qilish tarixi Premium funksiyasidir",
-  "pauseTakingDoesNotAdvancePillNumber": "Qabul qilishni to'xtatganingizda, tabletka raqami oldinga siljimaydi",
+  "pauseTakingDoesNotAdvancePillNumber": "Agar tabletkalarni qabul qilishda vaqtincha tanaffus qilsangiz, tabletka raqami keyingisiga oʻtmaydi",
   "pauseTakingFromNumber": "{number}-dan dori qabul qilishni to'xtatasizmi?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-chi",
   "taking": "qabul qilish",

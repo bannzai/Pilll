@@ -113,7 +113,7 @@
   "discardPillSheet": "Pilleblister entsorge",
   "takingTime": "Ziit für d Iinahm vo de Pille",
   "takingHistoryIsPremiumFeature": "De Iinahm-Verlauf isch e Premium-Funktion",
-  "pauseTakingDoesNotAdvancePillNumber": "Bei einer Einnahmepause wird die Pillennummer nicht fortgesetzt",
+  "pauseTakingDoesNotAdvancePillNumber": "Wänn du e Pause bi de Iinahm machsch, gaht d Pillenummer nöd wiiter",
   "pauseTakingFromNumber": "Wönd Sie ab {number} mit de Iinahm pausiere?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
   "taking": "Inahm",

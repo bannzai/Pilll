@@ -113,7 +113,7 @@
   "discardPillSheet": "jeter la plaquette",
   "takingTime": "Heure de prise de la pilule",
   "takingHistoryIsPremiumFeature": "L’historique des prises est une fonctionnalité Premium",
-  "pauseTakingDoesNotAdvancePillNumber": "Les numéros de pilules n'avancent pas lorsque vous sautez des doses",
+  "pauseTakingDoesNotAdvancePillNumber": "Si vous faites une pause dans la prise, le numéro de pilule n'avancera pas",
   "pauseTakingFromNumber": "Faire une pause à partir de la pilule {number} ?",
   "lastTakenPlusOnePillNumber": "Pilule {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "prise",

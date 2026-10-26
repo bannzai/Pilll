@@ -113,7 +113,7 @@
   "discardPillSheet": "հաբերի բլիստեր դեն նետել",
   "takingTime": "Հաբն ընդունելու ժամը",
   "takingHistoryIsPremiumFeature": "Ընդունման պատմությունը պրեմիում գործառույթ է",
-  "pauseTakingDoesNotAdvancePillNumber": "Հապի ընդունումը դադարեցնելիս համարը չի առաջ գնա",
+  "pauseTakingDoesNotAdvancePillNumber": "Եթե ժամանակավորապես դադարեցնեք հաբի ընդունումը, հաբի համարը առաջ չի անցնի",
   "pauseTakingFromNumber": "{number}-ից դեղի ընդունումը դադարեցնե՞լ:",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-րդ",
   "taking": "ընդունում",

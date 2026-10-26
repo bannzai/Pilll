@@ -113,7 +113,7 @@
   "discardPillSheet": "odlaganje blistera",
   "takingTime": "Vrijeme uzimanja pilule",
   "takingHistoryIsPremiumFeature": "Historija uzimanja pilula je premium funkcija",
-  "pauseTakingDoesNotAdvancePillNumber": "Kada pauziraš uzimanje pilula, broj pilule se ne mijenja",
+  "pauseTakingDoesNotAdvancePillNumber": "Ako napravite pauzu u uzimanju pilula, broj pilule neće se pomjeriti",
   "pauseTakingFromNumber": "Da li želite pauzirati uzimanje od {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",
   "taking": "uzimanje",

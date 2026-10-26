@@ -113,7 +113,7 @@
   "discardPillSheet": "পিলৰ ষ্ট্ৰিপ পেলোৱা",
   "takingTime": "পিল খোৱাৰ সময়",
   "takingHistoryIsPremiumFeature": "সেৱনৰ ইতিহাস প্ৰিমিয়াম সুবিধা",
-  "pauseTakingDoesNotAdvancePillNumber": "সেৱন বিৰতি দিলে পিল নম্বৰ আগ নবঢ়ে",
+  "pauseTakingDoesNotAdvancePillNumber": "পিল খোৱা সাময়িকভাৱে বন্ধ কৰিলে পিল নম্বৰ আগবাঢ়ি নাযায়",
   "pauseTakingFromNumber": "{number} নম্বৰৰ পৰা ঔষধ খোৱা বন্ধ কৰিব নেকি?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}নং",
   "taking": "সেৱন",

@@ -113,7 +113,7 @@
   "discardPillSheet": "smid pillekort ud",
   "takingTime": "Tid til at tage p-pillen",
   "takingHistoryIsPremiumFeature": "Pillehistorik er en Premium-funktion",
-  "pauseTakingDoesNotAdvancePillNumber": "Pillenummeret går ikke fremad, når du pauser med at tage pillerne",
+  "pauseTakingDoesNotAdvancePillNumber": "Hvis du holder pause med p-pillerne, går pillenummeret ikke videre",
   "pauseTakingFromNumber": "Vil du holde pause med at tage pillen fra {number}?",
   "lastTakenPlusOnePillNumber": "nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "indtag",

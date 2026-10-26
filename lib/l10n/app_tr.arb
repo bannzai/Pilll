@@ -113,7 +113,7 @@
   "discardPillSheet": "Kullanılmış blisteri atın",
   "takingTime": "Hap alma saati",
   "takingHistoryIsPremiumFeature": "Kullanım geçmişi bir Premium özelliğidir",
-  "pauseTakingDoesNotAdvancePillNumber": "Kullanımı duraklattığınızda hap numarası ilerlemez",
+  "pauseTakingDoesNotAdvancePillNumber": "Hap almaya ara verirseniz hap numarası ilerlemez",
   "pauseTakingFromNumber": "{number}'den itibaren alımı durduracak mısınız?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. hap",
   "taking": "alma",

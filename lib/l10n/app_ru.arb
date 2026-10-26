@@ -113,7 +113,7 @@
   "discardPillSheet": "выбросить блистер",
   "takingTime": "Время приёма таблетки",
   "takingHistoryIsPremiumFeature": "История приёма — функция премиум-плана",
-  "pauseTakingDoesNotAdvancePillNumber": "При пропуске приема номер таблетки не продвигается",
+  "pauseTakingDoesNotAdvancePillNumber": "Если вы сделаете перерыв в приёме, номер таблетки не изменится",
   "pauseTakingFromNumber": "Приостановить приём с {number}?",
   "lastTakenPlusOnePillNumber": "№{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "прием",

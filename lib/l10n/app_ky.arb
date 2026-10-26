@@ -113,7 +113,7 @@
   "discardPillSheet": "таблетка блистери ыргытуу",
   "takingTime": "Таблетка ичүү убактысы",
   "takingHistoryIsPremiumFeature": "Ичүү тарыхы — премиум мүмкүнчүлүк",
-  "pauseTakingDoesNotAdvancePillNumber": "Дарыны ичүүнү токтотсоңуз, таблетканын номери алдыга жылбайт",
+  "pauseTakingDoesNotAdvancePillNumber": "Эгер дары ичүүнү убактылуу токтотсоңуз, таблетканын номери алдыга жылбайт",
   "pauseTakingFromNumber": "{number}-дан ичүүнү токтотосузбу?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-чи",
   "taking": "кабыл алуу",

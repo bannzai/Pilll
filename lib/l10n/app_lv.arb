@@ -113,7 +113,7 @@
   "discardPillSheet": "Izmest tablešu blisteri",
   "takingTime": "Tabletes lietošanas laiks",
   "takingHistoryIsPremiumFeature": "Lietošanas vēsture ir Premium funkcija",
-  "pauseTakingDoesNotAdvancePillNumber": "Pārtraucot tablešu lietošanu, tabletes numurs nepalielinās",
+  "pauseTakingDoesNotAdvancePillNumber": "Ja ieturēsiet pārtraukumu tablešu lietošanā, tabletes numurs nemainīsies",
   "pauseTakingFromNumber": "Vai pārtraukt lietošanu no {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. tablete",
   "taking": "lietošana",

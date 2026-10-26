@@ -113,7 +113,7 @@
   "discardPillSheet": "hidhni blisterin",
   "takingTime": "Ora e marrjes së pilulës",
   "takingHistoryIsPremiumFeature": "Historia e marrjes është veçori premium",
-  "pauseTakingDoesNotAdvancePillNumber": "Kur ndaloni marrjen e pilulës, numri i pilulës nuk përparon",
+  "pauseTakingDoesNotAdvancePillNumber": "Nëse bëni një pauzë nga marrja e pilulave, numri i pilulës nuk do të ecë përpara",
   "pauseTakingFromNumber": "A dëshironi të pushoni marrjen duke filluar nga {number}?",
   "lastTakenPlusOnePillNumber": "numri {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "marrje",

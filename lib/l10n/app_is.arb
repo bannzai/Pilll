@@ -113,7 +113,7 @@
   "discardPillSheet": "farga pilluspjaldi",
   "takingTime": "Tími til að taka pilluna",
   "takingHistoryIsPremiumFeature": "Inntökuyfirlit er Premium-eiginleiki",
-  "pauseTakingDoesNotAdvancePillNumber": "Þegar inntaka er í hvíld færist pillunúmerið ekki áfram",
+  "pauseTakingDoesNotAdvancePillNumber": "Ef þú gerir hlé á að taka pilluna færist pillunúmer ekki áfram",
   "pauseTakingFromNumber": "Viltu gera hlé á töku frá {number}?",
   "lastTakenPlusOnePillNumber": "nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "inntaka",
