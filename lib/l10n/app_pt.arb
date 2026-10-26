@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Não mostrar novamente",
   "pauseStartDateMustBeOnOrBefore": "Escolha {date} ou uma data anterior para o início da pausa da pílula",
   "addPausePeriod": "Adicionar pausa na pílula",
-  "addedPausePeriod": "O período de pausa da toma foi adicionado",
+  "addedPausePeriod": "O período de pausa da pílula foi adicionado",
   "pausePeriodOverlapsOther": "Não é possível selecionar um período que se sobreponha a outro período de pausa da toma",
   "pauseEndDateMustBeAfterStartDate": "Por favor, selecione uma data posterior à data de início como data de término da pausa de toma.",
   "plannedResumeDateOptional": "Data prevista para retomar a toma (opcional)",

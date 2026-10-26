@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി കാണിക്കരുത്",
   "pauseStartDateMustBeOnOrBefore": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങാൻ {date} അല്ലെങ്കിൽ അതിനു മുമ്പുള്ള തീയതി തിരഞ്ഞെടുക്കൂ",
   "addPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള ചേർക്കുക",
-  "addedPausePeriod": "സേവന ഇടവേള കാലയളവ് ചേർത്തു",
+  "addedPausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള ചേർത്തു",
   "pausePeriodOverlapsOther": "മറ്റൊരു കഴിവ് ഇടവേളയുമായി മൂടിമുട്ടുന്ന കാലയളവ് തിരഞ്ഞെടുക്കാൻ കഴിയില്ല",
   "pauseEndDateMustBeAfterStartDate": "ദയവായി കഴിക്കൽ ഇടവേളയുടെ അവസാന തീയതിയായി ആരംഭ തീയതിക്ക് ശേഷമുള്ള ഒരു തീയതി തിരഞ്ഞെടുക്കുക.",
   "plannedResumeDateOptional": "വീണ്ടും കഴിക്കൽ ആരംഭിക്കാൻ നിശ്ചയിച്ച തീയതി (ഐച്ഛികം)",

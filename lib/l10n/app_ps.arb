@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "بیا یې مه ښایئ",
   "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د ګولیو د اخیستلو د وقفې د پیل لپاره {date} یا تر هغې مخکې نېټه وټاکئ",
   "addPausePeriod": "د ګولیو اخیستلو دمه ورزیاته کړئ",
-  "addedPausePeriod": "د کارونې د وقفې موده اضافه شوه",
+  "addedPausePeriod": "د ګولیو د اخیستلو دمه ورزیاته شوه",
   "pausePeriodOverlapsOther": "له بلې د اخيستلو د وقفې مودې سره يوځای کېدونکې موده نه شي ټاکل کېدای",
   "pauseEndDateMustBeAfterStartDate": "مهرباني وکړئ د استعمال د وقفې د پای نېټې لپاره د پیل نېټې نه وروسته نېټه وټاکئ.",
   "plannedResumeDateOptional": "د بیا اخیستلو ټاکل شوې نېټه (اختیاري)",

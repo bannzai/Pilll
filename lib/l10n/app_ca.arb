@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "No ho tornis a mostrar",
   "pauseStartDateMustBeOnOrBefore": "Tria {date} o una data anterior per començar la pausa de la píndola",
   "addPausePeriod": "Afegeix una pausa de la píndola",
-  "addedPausePeriod": "S'ha afegit el període de descans de la presa",
+  "addedPausePeriod": "S’ha afegit el període de descans de la píndola",
   "pausePeriodOverlapsOther": "No es pot seleccionar un període que se solapi amb un altre període de pausa de presa",
   "pauseEndDateMustBeAfterStartDate": "Si us plau, seleccioneu una data posterior a la data d'inici com a data de finalització de la pausa de presa.",
   "plannedResumeDateOptional": "Data prevista de represa de la presa (opcional)",

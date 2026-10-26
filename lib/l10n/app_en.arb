@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Don't show again",
   "pauseStartDateMustBeOnOrBefore": "Please choose {date} or an earlier date for the start of your pill break",
   "addPausePeriod": "Add a pill break",
-  "addedPausePeriod": "Pill break period added",
+  "addedPausePeriod": "Pill break added",
   "pausePeriodOverlapsOther": "The selected period overlaps another pill break period",
   "pauseEndDateMustBeAfterStartDate": "Please select a break end date after the start date",
   "plannedResumeDateOptional": "Planned date to resume taking it (optional)",

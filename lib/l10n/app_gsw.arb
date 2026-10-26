@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nüme aazeige",
   "pauseStartDateMustBeOnOrBefore": "Wähl bitte {date} oder es früehers Datum für de Aafang vo dinere Pillepause",
   "addPausePeriod": "Pillepause dezue tue",
-  "addedPausePeriod": "D Paus für d Einnahm isch zuegfiegt worde",
+  "addedPausePeriod": "D Pillepause isch dezuechoo",
   "pausePeriodOverlapsOther": "Du chasch kei Zytabschnitt uuswähle, wo sich mit eme andere Einnahmepause-Zytabschnitt überlappt",
   "pauseEndDateMustBeAfterStartDate": "Bitte wähled Sie als Änddatum vo de Ihnahmepause es Datum noch em Aafangsdatum us.",
   "plannedResumeDateOptional": "Vorgsehns Datum fürs Widrufneh vo de Iinnahm (optional)",

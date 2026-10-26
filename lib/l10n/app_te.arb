@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపవద్దు",
   "pauseStartDateMustBeOnOrBefore": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభమయ్యే తేదీగా దయచేసి {date} లేదా అంతకంటే ముందు తేదీని ఎంచుకోండి",
   "addPausePeriod": "మాత్రలు తీసుకునే విరామాన్ని జోడించండి",
-  "addedPausePeriod": "సేవన విరామ కాలం జోడించబడింది",
+  "addedPausePeriod": "మాత్రలు తీసుకోవడంలో విరామ కాలం జోడించబడింది",
   "pausePeriodOverlapsOther": "మరొక తీసుకునే విరామ కాలంతో పొరపడే కాలాన్ని ఎంచుకోలేరు",
   "pauseEndDateMustBeAfterStartDate": "దయచేసి సేవన విరామం ముగింపు తేదీగా ప్రారంభ తేదీ తర్వాతి తేదీని ఎంచుకోండి.",
   "plannedResumeDateOptional": "మళ్లీ సేవనం ప్రారంభించే నిర్ణయించిన తేదీ (ఐచ్ఛికం)",

@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa",
   "pauseStartDateMustBeOnOrBefore": "Alege {date} sau o dată anterioară pentru începutul pauzei de la pilulă",
   "addPausePeriod": "Adaugă o pauză în administrarea pilulei",
-  "addedPausePeriod": "Perioada de pauză a administrării a fost adăugată",
+  "addedPausePeriod": "A fost adăugată perioada de pauză de la pilulă",
   "pausePeriodOverlapsOther": "Nu puteți selecta o perioadă care se suprapune cu o altă perioadă de pauză de administrare",
   "pauseEndDateMustBeAfterStartDate": "Vă rugăm să selectați o dată ulterioară datei de început ca dată de încheiere a pauzei de administrare.",
   "plannedResumeDateOptional": "Data planificată pentru reluarea administrării (opțional)",

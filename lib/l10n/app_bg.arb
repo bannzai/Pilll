@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Да не се показва отново",
   "pauseStartDateMustBeOnOrBefore": "Моля, изберете {date} или по-ранна дата за начало на паузата в приема на хапчета",
   "addPausePeriod": "Добавяне на пауза в приема на хапчета",
-  "addedPausePeriod": "Добавен е период за почивка от приема",
+  "addedPausePeriod": "Периодът на почивка от хапчетата е добавен",
   "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друг период на почивка от приема",
   "pauseEndDateMustBeAfterStartDate": "Моля, изберете дата след началната дата за край на паузата в приема.",
   "plannedResumeDateOptional": "Планирана дата за подновяване на приема (по избор)",

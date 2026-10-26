@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
   "pauseStartDateMustBeOnOrBefore": "Пожалуйста, выберите {date} или более раннюю дату начала перерыва в приёме таблеток",
   "addPausePeriod": "Добавить перерыв в приёме таблеток",
-  "addedPausePeriod": "Добавлен период перерыва в приёме",
+  "addedPausePeriod": "Период перерыва в приёме таблеток добавлен",
   "pausePeriodOverlapsOther": "Нельзя выбрать период, который пересекается с другим периодом перерыва в приеме",
   "pauseEndDateMustBeAfterStartDate": "Пожалуйста, выберите дату окончания перерыва в приёме позже даты начала.",
   "plannedResumeDateOptional": "Планируемая дата возобновления приёма (необязательно)",

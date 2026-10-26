@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu {date} eða fyrri dagsetningu sem upphaf pilluhléssins",
   "addPausePeriod": "Bæta við hléi á pillutöku",
-  "addedPausePeriod": "Bætt var við hléum á inntöku",
+  "addedPausePeriod": "Hléi frá pillutöku var bætt við",
   "pausePeriodOverlapsOther": "Ekki er hægt að velja tímabil sem skarast við annað hlé tímabil",
   "pauseEndDateMustBeAfterStartDate": "Vinsamlegast veldu dagsetningu eftir upphafsdagsetningu sem lokadag hlés á inntöku.",
   "plannedResumeDateOptional": "Áætluð dagsetning til að hefja töku aftur (valfrjálst)",

@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "pauseStartDateMustBeOnOrBefore": "Hap kullanımına ara verme başlangıcı için lütfen {date} veya daha önceki bir tarihi seçin",
   "addPausePeriod": "Hap kullanma arası ekleyin",
-  "addedPausePeriod": "Alım arası süresi eklendi",
+  "addedPausePeriod": "Hap kullanımına ara verme dönemi eklendi",
   "pausePeriodOverlapsOther": "Başka bir kullanım arası dönemiyle çakışan bir dönem seçilemez",
   "pauseEndDateMustBeAfterStartDate": "Lütfen kullanım molasının bitiş tarihi olarak başlangıç tarihinden sonraki bir tarih seçin.",
   "plannedResumeDateOptional": "Yeniden kullanıma başlama planlanan tarihi (isteğe bağlı)",

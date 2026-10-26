@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Pilih {date} atau tanggal sebelumnya sebagai awal jeda minum pil",
   "addPausePeriod": "Tambahkan jeda minum pil",
-  "addedPausePeriod": "Periode jeda minum telah ditambahkan",
+  "addedPausePeriod": "Masa jeda minum pil telah ditambahkan",
   "pausePeriodOverlapsOther": "Periode yang tumpang tindih dengan periode jeda konsumsi lain tidak dapat dipilih",
   "pauseEndDateMustBeAfterStartDate": "Silakan pilih tanggal setelah tanggal mulai sebagai tanggal berakhirnya jeda konsumsi.",
   "plannedResumeDateOptional": "Tanggal rencana mulai minum lagi (opsional)",

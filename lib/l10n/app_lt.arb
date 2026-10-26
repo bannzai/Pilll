@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "pauseStartDateMustBeOnOrBefore": "Prašome pasirinkti {date} arba ankstesnę datą kaip tablečių vartojimo pertraukos pradžią",
   "addPausePeriod": "Pridėti tablečių vartojimo pertrauką",
-  "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis",
+  "addedPausePeriod": "Pridėtas tablečių vartojimo pertraukos laikotarpis",
   "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu",
   "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data.",
   "plannedResumeDateOptional": "Planuojama vartojimo atnaujinimo data (nebūtina)",

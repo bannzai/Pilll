@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "pauseStartDateMustBeOnOrBefore": "Molimo, odaberite {date} ili raniji datum za početak pauze u uzimanju pilula",
   "addPausePeriod": "Dodajte pauzu u uzimanju pilula",
-  "addedPausePeriod": "Dodano je razdoblje pauze od uzimanja",
+  "addedPausePeriod": "Period pauze u uzimanju pilula je dodan",
   "pausePeriodOverlapsOther": "Ne možete izabrati period koji se preklapa s drugim periodom pauze u uzimanju",
   "pauseEndDateMustBeAfterStartDate": "Molimo odaberite datum nakon početnog datuma kao datum završetka pauze u uzimanju.",
   "plannedResumeDateOptional": "Planirani datum ponovnog početka uzimanja (opcionalno)",

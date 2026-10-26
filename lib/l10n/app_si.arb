@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "නැවත නොපෙන්වන්න",
   "pauseStartDateMustBeOnOrBefore": "පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට කරුණාකර {date} හෝ ඊට පෙර දිනයක් තෝරන්න",
   "addPausePeriod": "පෙති ගැනීමේ විරාමයක් එක් කරන්න",
-  "addedPausePeriod": "ගැනීමේ විරාම කාලය එක් කර ඇත",
+  "addedPausePeriod": "පෙති ගැනීමේ විවේක කාලය එක් කර ඇත",
   "pausePeriodOverlapsOther": "වෙනත් භාවිත විරාම කාලසීමාවක් සමඟ එකිනෙක මැලවෙන කාලසීමාවක් තේරිය නොහැක",
   "pauseEndDateMustBeAfterStartDate": "කරුණාකර सेवन විරාමයේ අවසන් දිනය ලෙස ආරම්භක දිනයට පසු දිනයක් තෝරන්න.",
   "plannedResumeDateOptional": "නැවත ගැනීම ආරම්භ කිරීමට සැලසුම් කළ දිනය (විකල්ප)",

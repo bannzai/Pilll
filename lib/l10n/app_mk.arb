@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
   "pauseStartDateMustBeOnOrBefore": "Ве молиме изберете {date} или претходен датум за почеток на паузата во земањето таблета",
   "addPausePeriod": "Додајте пауза во земање таблета",
-  "addedPausePeriod": "Додаден е период на пауза од земање",
+  "addedPausePeriod": "Додаден е периодот на пауза од земање таблета",
   "pausePeriodOverlapsOther": "Не може да изберете период што се преклопува со друг период на пауза во земањето",
   "pauseEndDateMustBeAfterStartDate": "Ве молиме изберете датум по почетниот датум како датум на завршување на паузата во земањето.",
   "plannedResumeDateOptional": "Планиран датум за продолжување со земање (изборно)",

@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
   "pauseStartDateMustBeOnOrBefore": "Будь ласка, виберіть {date} або ранішу дату початку перерви в прийомі пігулок",
   "addPausePeriod": "Додати перерву в прийомі пігулок",
-  "addedPausePeriod": "Додано період перерви в прийомі",
+  "addedPausePeriod": "Період перерви в прийомі пігулок додано",
   "pausePeriodOverlapsOther": "Не можна вибрати період, який перетинається з іншим періодом перерви в прийомі",
   "pauseEndDateMustBeAfterStartDate": "Будь ласка, виберіть дату завершення перерви в прийомі пізніше за дату початку.",
   "plannedResumeDateOptional": "Запланована дата відновлення прийому (необов’язково)",

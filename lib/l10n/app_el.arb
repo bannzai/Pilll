@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
   "pauseStartDateMustBeOnOrBefore": "Επιλέξτε την {date} ή προγενέστερη ημερομηνία για την έναρξη της παύσης λήψης χαπιών",
   "addPausePeriod": "Προσθήκη διαλείμματος από τα χάπια",
-  "addedPausePeriod": "Προστέθηκε περίοδος διακοπής λήψης",
+  "addedPausePeriod": "Προστέθηκε η περίοδος διακοπής των χαπιών",
   "pausePeriodOverlapsOther": "Δεν μπορείτε να επιλέξετε περίοδο που επικαλύπτεται με άλλη περίοδο διακοπής λήψης",
   "pauseEndDateMustBeAfterStartDate": "Παρακαλώ επιλέξτε ως ημερομηνία λήξης της παύσης λήψης μια ημερομηνία μετά την ημερομηνία έναρξης.",
   "plannedResumeDateOptional": "Προγραμματισμένη ημερομηνία επανέναρξης λήψης (προαιρετικό)",

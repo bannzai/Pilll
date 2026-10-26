@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
   "pauseStartDateMustBeOnOrBefore": "Калі ласка, выберыце {date} або ранейшую дату пачатку перапынку ў прыёме пігулак",
   "addPausePeriod": "Дадаць перапынак у прыёме пігулак",
-  "addedPausePeriod": "Перыяд перапынку ў прыёме дададзены",
+  "addedPausePeriod": "Перыяд перапынку ў прыёме пігулак дададзены",
   "pausePeriodOverlapsOther": "Нельга выбраць перыяд, які перакрываецца з іншым перыядам перапынку прыёму",
   "pauseEndDateMustBeAfterStartDate": "Калі ласка, абярыце дату заканчэння перапынку ў прыёме пазней за дату пачатку.",
   "plannedResumeDateOptional": "Запланаваная дата аднаўлення прыёму (неабавязкова)",

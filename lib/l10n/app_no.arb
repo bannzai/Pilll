@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis igjen",
   "pauseStartDateMustBeOnOrBefore": "Velg {date} eller en tidligere dato som start på pillepausen",
   "addPausePeriod": "Legg til p-pillepause",
-  "addedPausePeriod": "Pauseperiode for inntak er lagt til",
+  "addedPausePeriod": "Pillepausen er lagt til",
   "pausePeriodOverlapsOther": "Du kan ikke velge en periode som overlapper med en annen pauseperiode",
   "pauseEndDateMustBeAfterStartDate": "Velg en dato etter startdatoen som sluttdato for pause i inntaket.",
   "plannedResumeDateOptional": "Planlagt dato for å gjenoppta inntak (valgfritt)",

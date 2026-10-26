@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più",
   "pauseStartDateMustBeOnOrBefore": "Scegli {date} o una data precedente per l'inizio della pausa dalla pillola",
   "addPausePeriod": "Aggiungi una pausa dall’assunzione della pillola",
-  "addedPausePeriod": "È stato aggiunto il periodo di pausa nell'assunzione",
+  "addedPausePeriod": "È stato aggiunto il periodo di pausa dalla pillola",
   "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un altro periodo di pausa di assunzione",
   "pauseEndDateMustBeAfterStartDate": "Seleziona una data successiva alla data di inizio come data di fine della pausa di assunzione.",
   "plannedResumeDateOptional": "Data prevista per riprendere l’assunzione (facoltativo)",

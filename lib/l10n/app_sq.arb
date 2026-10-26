@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaq më",
   "pauseStartDateMustBeOnOrBefore": "Ju lutemi, zgjidhni {date} ose një datë më të hershme për fillimin e pushimit nga pilulat",
   "addPausePeriod": "Shtoni një pauzë në marrjen e pilulave",
-  "addedPausePeriod": "U shtua periudha e pushimit nga marrja",
+  "addedPausePeriod": "U shtua periudha e pushimit nga marrja e pilulës",
   "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një periudhë tjetër pauze të marrjes",
   "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë pas datës së fillimit si datë përfundimi të pushimit të marrjes.",
   "plannedResumeDateOptional": "Data e planifikuar për rifillimin e marrjes (opsionale)",

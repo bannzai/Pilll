@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "ਮੁੜ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਸ਼ੁਰੂਆਤ ਲਈ ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
   "addPausePeriod": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਸ਼ਾਮਲ ਕਰੋ",
-  "addedPausePeriod": "ਸੇਵਨ ਵਿਰਾਮ ਅਵਧੀ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਹੈ",
+  "addedPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਦਾ ਸਮਾਂ ਜੋੜ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "pausePeriodOverlapsOther": "ਦੂਜੇ ਸੇਵਨ-ਵਿਰਾਮ ਅਵਧੀ ਨਾਲ ਓਵਰਲੈਪ ਕਰਨ ਵਾਲੀ ਅਵਧੀ ਨਹੀਂ ਚੁਣੀ ਜਾ ਸਕਦੀ",
   "pauseEndDateMustBeAfterStartDate": "ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਵਿਸ਼ਰਾਮ ਦੀ ਸਮਾਪਤੀ ਤਾਰੀਖ ਲਈ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਤੋਂ ਬਾਅਦ ਦੀ ਤਾਰੀਖ ਚੁਣੋ।",
   "plannedResumeDateOptional": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਯਤ ਮਿਤੀ (ਵਿਕਲਪਿਕ)",

@@ -559,7 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa koʻrsatmang",
   "pauseStartDateMustBeOnOrBefore": "Tabletkalarni qabul qilishdagi tanaffus boshlanishi uchun {date} yoki undan oldingi sanani tanlang",
   "addPausePeriod": "Tabletka qabul qilishdagi tanaffusni qoʻshing",
-  "addedPausePeriod": "Qabul qilish tanaffusi muddati qoʻshildi",
+  "addedPausePeriod": "Tabletkalarni qabul qilishdagi tanaffus davri qoʻshildi",
   "pausePeriodOverlapsOther": "Boshqa qabul tanaffusi davri bilan ustma-ust tushadigan davrni tanlab bo‘lmaydi",
   "pauseEndDateMustBeAfterStartDate": "Iltimos, qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang.",
   "plannedResumeDateOptional": "Qabulni qayta boshlash rejalashtirilgan sana (ixtiyoriy)",
