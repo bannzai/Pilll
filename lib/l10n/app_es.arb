@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Se produjo un error. Inténtalo de nuevo más tarde",
   "errorOccurred": "Se produjo un error",
   "unknownError": "Se produjo un error desconocido",
-  "unexpectedErrorOccurred": "Ha ocurrido un error inesperado",
+  "unexpectedErrorOccurred": "Se produjo un error inesperado",
   "pressAndHoldNotificationToRecordPillTaking": "Mantén presionada la notificación para registrar la toma",
   "letsTryIt": "¡Pruébalo!",
   "trialDeadlineDateOffsetDay": "¡Puedes usar todas las funciones durante {number} días!",

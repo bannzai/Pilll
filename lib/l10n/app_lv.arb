@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Radās kļūda. Lūdzu, mēģiniet vēlreiz vēlāk",
   "errorOccurred": "Radās kļūda",
   "unknownError": "Radās nezināma kļūda",
-  "unexpectedErrorOccurred": "Radās negaidīta kļūda",
+  "unexpectedErrorOccurred": "Radās neparedzēta kļūda",
   "pressAndHoldNotificationToRecordPillTaking": "Ilgi spiežot paziņojumu, var izveidot tablešu lietošanas ierakstu",
   "letsTryIt": "Noteikti izmēģiniet!",
   "trialDeadlineDateOffsetDay": "Visas funkcijas ir pieejamas {number} dienas!",

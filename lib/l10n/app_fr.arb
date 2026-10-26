@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Une erreur s’est produite. Veuillez réessayer plus tard",
   "errorOccurred": "Une erreur s'est produite",
   "unknownError": "Une erreur inconnue s’est produite",
-  "unexpectedErrorOccurred": "Quelque chose s'est mal passé",
+  "unexpectedErrorOccurred": "Une erreur inattendue s'est produite",
   "pressAndHoldNotificationToRecordPillTaking": "Appuyez longuement sur la notification pour enregistrer la prise de pilules",
   "letsTryIt": "Essayez-le !",
   "trialDeadlineDateOffsetDay": "Toutes les fonctionnalités disponibles pour les jours {number} !",

@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Iltimos, birozdan keyin qayta urinib koʻring",
   "errorOccurred": "Xatolik yuz berdi",
   "unknownError": "Nomaʼlum xatolik yuz berdi",
-  "unexpectedErrorOccurred": "Kutilmagan xato yuz berdi",
+  "unexpectedErrorOccurred": "Kutilmagan xatolik yuz berdi",
   "pressAndHoldNotificationToRecordPillTaking": "Bildirishnomani uzoq bosib turib, dori qabul qilish yozuvini yaratish mumkin",
   "letsTryIt": "Albatta sinab ko'ring!",
   "trialDeadlineDateOffsetDay": "{number} kun davomida barcha funksiyalardan foydalanishingiz mumkin!",

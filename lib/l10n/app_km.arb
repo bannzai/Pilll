@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "មានបញ្ហាកើតឡើង។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ",
   "errorOccurred": "មានបញ្ហាកើតឡើង",
   "unknownError": "មានបញ្ហាដែលមិនស្គាល់បានកើតឡើង",
-  "unexpectedErrorOccurred": "កំហុសមិនរំពឹងបានកើតឡើង",
+  "unexpectedErrorOccurred": "មានបញ្ហាដែលមិនបានរំពឹងទុកកើតឡើង",
   "pressAndHoldNotificationToRecordPillTaking": "ចុចជាយូរលើការជូនដំណឹងដើម្បីកត់ត្រាការទទួលថ្នាំ",
   "letsTryIt": "សូមសាកល្បងមើល",
   "trialDeadlineDateOffsetDay": "អ្នកអាចប្រើប្រាស់គ្រប់មុខងារទាំងអស់រយៈពេល {number} ថ្ងៃ！",

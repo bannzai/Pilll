@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Something went wrong. Please try again later",
   "errorOccurred": "An error occurred",
   "unknownError": "An unknown error occurred",
-  "unexpectedErrorOccurred": "Something went wrong",
+  "unexpectedErrorOccurred": "Something unexpected happened",
   "pressAndHoldNotificationToRecordPillTaking": "Long press the notification to record pill intake",
   "letsTryIt": "Give it a try!",
   "trialDeadlineDateOffsetDay": "All features available for {number} days!",

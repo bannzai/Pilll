@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Ndodhi një gabim. Ju lutemi, provoni përsëri më vonë",
   "errorOccurred": "Ndodhi një gabim",
   "unknownError": "Ndodhi një gabim i panjohur",
-  "unexpectedErrorOccurred": "Ka ndodhur një gabim i papritur",
+  "unexpectedErrorOccurred": "Ndodhi një gabim i papritur",
   "pressAndHoldNotificationToRecordPillTaking": "Shtypni gjatë njoftimin për të regjistruar marrjen e ilaçit",
   "letsTryIt": "Provoni patjetër!",
   "trialDeadlineDateOffsetDay": "Të gjitha funksionet janë të disponueshme për {number} ditë!",

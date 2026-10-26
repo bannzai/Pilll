@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Daar was ’n fout. Probeer asseblief later weer",
   "errorOccurred": "Daar was 'n fout",
   "unknownError": "Daar was ’n onbekende fout",
-  "unexpectedErrorOccurred": "'n Onverwagse fout het voorgekom",
+  "unexpectedErrorOccurred": "Daar was ’n onverwagte fout",
   "pressAndHoldNotificationToRecordPillTaking": "Hou die kennisgewing ingedruk om 'n inname rekord te skep",
   "letsTryIt": "Probeer dit gerus!",
   "trialDeadlineDateOffsetDay": "Geniet alle funksies vir {number} dae!",

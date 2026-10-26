@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Ката кетти. Бир аздан кийин кайра аракет кылып көрүңүз",
   "errorOccurred": "Ката кетти",
   "unknownError": "Белгисиз ката кетти",
-  "unexpectedErrorOccurred": "Күтүлбөгөн ката пайда болду",
+  "unexpectedErrorOccurred": "Күтүлбөгөн ката кетти",
   "pressAndHoldNotificationToRecordPillTaking": "Эскертмени узак бассаңыз, дары ичүү жазуусун жасай аласыз",
   "letsTryIt": "Сынап көрүңүз!",
   "trialDeadlineDateOffsetDay": "{number} күн бойу бардык мүмкүнчүлүктөрдү колдонуңуз!",

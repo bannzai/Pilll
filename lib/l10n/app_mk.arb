@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Се појави грешка. Ве молиме, обидете се повторно подоцна",
   "errorOccurred": "Се појави грешка",
   "unknownError": "Се појави непозната грешка",
-  "unexpectedErrorOccurred": "Настана неочекувана грешка",
+  "unexpectedErrorOccurred": "Се појави неочекувана грешка",
   "pressAndHoldNotificationToRecordPillTaking": "Долго притиснете го известувањето за да забележите земање",
   "letsTryIt": "Слободно пробајте!",
   "trialDeadlineDateOffsetDay": "{number} дена сите функции се достапни!",

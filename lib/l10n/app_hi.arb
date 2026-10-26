@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "कुछ गड़बड़ हुई है। कृपया थोड़ी देर बाद फिर कोशिश करें",
   "errorOccurred": "कोई गड़बड़ी हुई है",
   "unknownError": "एक अज्ञात त्रुटि हुई है",
-  "unexpectedErrorOccurred": "अप्रत्याशित त्रुटि हुई है",
+  "unexpectedErrorOccurred": "एक अनपेक्षित समस्या आ गई है",
   "pressAndHoldNotificationToRecordPillTaking": "सूचना को लंबे समय तक दबाकर सेवन रिकॉर्ड कर सकते हैं",
   "letsTryIt": "ज़रूर आज़माएं",
   "trialDeadlineDateOffsetDay": "{number} दिनों तक सभी फीचर्स उपलब्ध हैं!",

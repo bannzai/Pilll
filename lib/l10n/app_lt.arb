@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Įvyko klaida. Bandykite dar kartą vėliau",
   "errorOccurred": "Įvyko klaida",
   "unknownError": "Įvyko nežinoma klaida",
-  "unexpectedErrorOccurred": "Atsiprašome, įvyko klaida",
+  "unexpectedErrorOccurred": "Įvyko netikėta klaida",
   "pressAndHoldNotificationToRecordPillTaking": "Ilgai paspaudus pranešimą galite sukurti vartojimo įrašą",
   "letsTryIt": "Išbandykite!",
   "trialDeadlineDateOffsetDay": "{number} dienų galite naudoti visas funkcijas!",

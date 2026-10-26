@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Παρουσιάστηκε σφάλμα. Δοκιμάστε ξανά αργότερα",
   "errorOccurred": "Παρουσιάστηκε σφάλμα",
   "unknownError": "Παρουσιάστηκε άγνωστο σφάλμα",
-  "unexpectedErrorOccurred": "Συνέβη ένα απροσδόκητο σφάλμα",
+  "unexpectedErrorOccurred": "Παρουσιάστηκε ένα απρόσμενο σφάλμα",
   "pressAndHoldNotificationToRecordPillTaking": "Πατώντας παρατεταμένα την ειδοποίηση μπορείτε να καταγράψετε τη λήψη",
   "letsTryIt": "Δοκιμάστε το οπωσδήποτε!",
   "trialDeadlineDateOffsetDay": "Όλες οι λειτουργίες διαθέσιμες για {number} ημέρες!",

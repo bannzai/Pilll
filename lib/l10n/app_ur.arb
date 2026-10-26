@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "کوئی خرابی پیش آئی ہے۔ براہ کرم کچھ دیر بعد دوبارہ کوشش کریں",
   "errorOccurred": "ایک خرابی پیش آئی ہے",
   "unknownError": "ایک نامعلوم خرابی پیش آئی ہے",
-  "unexpectedErrorOccurred": "غیر متوقع خرابی ہوئی ہے",
+  "unexpectedErrorOccurred": "ایک غیر متوقع خرابی پیش آ گئی",
   "pressAndHoldNotificationToRecordPillTaking": "نوٹیفکیشن کو لمبا دبانے سے دوا لینے کا ریکارڈ بنا سکتے ہیں",
   "letsTryIt": "ضرور آزما کر دیکھیں",
   "trialDeadlineDateOffsetDay": "{number} دن تک تمام فیچرز استعمال کر سکتے ہیں!",

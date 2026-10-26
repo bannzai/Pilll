@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "કોઈ ભૂલ થઈ છે. કૃપા કરીને થોડા સમય પછી ફરી પ્રયાસ કરો",
   "errorOccurred": "ભૂલ થઈ છે",
   "unknownError": "અજાણી ભૂલ આવી છે",
-  "unexpectedErrorOccurred": "અણધારી ભૂલ થઈ છે",
+  "unexpectedErrorOccurred": "અણધારી ભૂલ આવી છે",
   "pressAndHoldNotificationToRecordPillTaking": "નોટિફિકેશનને લાંબા સમય સુધી દબાવવાથી તમે પિલ લેવાનો રેકોર્ડ કરી શકશો",
   "letsTryIt": "જરૂર આજમાવો",
   "trialDeadlineDateOffsetDay": "{number} દિવસ માટે તમામ ફીચર્સ ઉપયોગ કરી શકાય છે!",

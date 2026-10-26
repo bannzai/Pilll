@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Произошла ошибка. Пожалуйста, попробуйте ещё раз позже",
   "errorOccurred": "Произошла ошибка",
   "unknownError": "Произошла неизвестная ошибка",
-  "unexpectedErrorOccurred": "Произошла неожиданная ошибка",
+  "unexpectedErrorOccurred": "Произошла непредвиденная ошибка",
   "pressAndHoldNotificationToRecordPillTaking": "Длительное нажатие на уведомление позволяет записать прием",
   "letsTryIt": "Обязательно попробуйте!",
   "trialDeadlineDateOffsetDay": "Все функции доступны в течение {number} дней!",

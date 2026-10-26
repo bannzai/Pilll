@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Дошло је до грешке. Молимо Вас, покушајте поново касније",
   "errorOccurred": "Дошло је до грешке",
   "unknownError": "Дошло је до непознате грешке",
-  "unexpectedErrorOccurred": "Dogodila se neočekivana greška",
+  "unexpectedErrorOccurred": "Дошло је до неочекиване грешке",
   "pressAndHoldNotificationToRecordPillTaking": "Дугим притиском на нотификацију можете креирати запис узимања",
   "letsTryIt": "Slobodno probajte",
   "trialDeadlineDateOffsetDay": "Можете користити све функције {number} дана!",

@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "දෝෂයක් ඇති වුණා. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න",
   "errorOccurred": "දෝෂයක් ඇති වුණා",
   "unknownError": "හඳුනා නොගත් දෝෂයක් ඇති වුණා",
-  "unexpectedErrorOccurred": "අනපේක්ෂිත දෝෂයක් සිදු වුණා",
+  "unexpectedErrorOccurred": "අනපේක්ෂිත දෝෂයක් ඇති වුණා",
   "pressAndHoldNotificationToRecordPillTaking": "දැනුම්දීම දිගුව ඔබා ඖෂධ ගැනීමේ වාර්තාව සෑදිය හැකිය",
   "letsTryIt": "අත්හදා බලන්න",
   "trialDeadlineDateOffsetDay": "දින {number}ක් සියලුම විශේෂාංග භාවිතා කළ හැකිය!",

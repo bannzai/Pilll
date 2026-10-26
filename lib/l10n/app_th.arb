@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาดขึ้น โปรดลองอีกครั้งในภายหลังค่ะ",
   "errorOccurred": "เกิดข้อผิดพลาด",
   "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ",
-  "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
+  "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิดค่ะ",
   "pressAndHoldNotificationToRecordPillTaking": "กดค้างการแจ้งเตือนเพื่อบันทึกการทานยา",
   "letsTryIt": "ลองใช้ดูนะ",
   "trialDeadlineDateOffsetDay": "สามารถใช้ฟีเจอร์ครบทุกอย่างได้เป็นเวลา {number} วัน!",

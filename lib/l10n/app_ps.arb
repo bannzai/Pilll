@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ",
   "errorOccurred": "یوه تېروتنه رامنځته شوه",
   "unknownError": "یوه نامعلومه تېروتنه رامنځته شوه",
-  "unexpectedErrorOccurred": "یو غیر متوقع خطا پیښ شوې",
+  "unexpectedErrorOccurred": "یوه ناڅاپي تېروتنه رامنځته شوه",
   "pressAndHoldNotificationToRecordPillTaking": "د خبرتیاوو په اوږد فشار سره د ګولۍ اخیستلو ثبت کولی شئ",
   "letsTryIt": "دا حتماً وآزمویئ",
   "trialDeadlineDateOffsetDay": "د {number} ورځو لپاره ټول امکانات وړیا دی!",

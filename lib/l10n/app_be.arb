@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Адбылася памылка. Калі ласка, паспрабуйце яшчэ раз пазней",
   "errorOccurred": "Адбылася памылка",
   "unknownError": "Узнікла невядомая памылка",
-  "unexpectedErrorOccurred": "Адбылася нечаканая памылка",
+  "unexpectedErrorOccurred": "Узнікла нечаканая памылка",
   "pressAndHoldNotificationToRecordPillTaking": "Доўгім націскам на апавяшчэнне можна стварыць запис пра прыём",
   "letsTryIt": "Абавязкова паспрабуйце!",
   "trialDeadlineDateOffsetDay": "{number} дзён усе функцыі даступныя!",

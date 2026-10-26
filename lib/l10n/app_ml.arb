@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ",
   "errorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
   "unknownError": "അജ്ഞാതമായ ഒരു പിശക് സംഭവിച്ചു",
-  "unexpectedErrorOccurred": "എന്തോ കുഴപ്പം സംഭവിച്ചു",
+  "unexpectedErrorOccurred": "അപ്രതീക്ഷിതമായ ഒരു പിശക് സംഭവിച്ചു",
   "pressAndHoldNotificationToRecordPillTaking": "അറിയിപ്പ് നീണ്ട് അമർത്തിയാൽ സേവന രേഖപ്പെടുത്താം",
   "letsTryIt": "ഒന്ന് പരീക്ഷിച്ചു നോക്കൂ",
   "trialDeadlineDateOffsetDay": "{number} ദിവസത്തേക്ക് എല്ലാ സവിശേഷതകളും ലഭ്യമാണ്！",

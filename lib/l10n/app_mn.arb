@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Алдаа гарлаа. Та түр хүлээгээд дахин оролдоно уу",
   "errorOccurred": "Алдаа гарлаа",
   "unknownError": "Үл мэдэгдэх алдаа гарлаа",
-  "unexpectedErrorOccurred": "Санамсаргүй алдаа гарлаа",
+  "unexpectedErrorOccurred": "Санаандгүй алдаа гарлаа",
   "pressAndHoldNotificationToRecordPillTaking": "Мэдэгдлийг удаан дарж эм уусан бүртгэл хийж болно",
   "letsTryIt": "Заавал туршиж үзээрэй",
   "trialDeadlineDateOffsetDay": "{number} өдрийн турш бүх боломжийг ашиглаарай!",

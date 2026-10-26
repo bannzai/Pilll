@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "ਕੁਝ ਗੜਬੜ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "errorOccurred": "ਕੋਈ ਗੜਬੜ ਹੋਈ ਹੈ",
   "unknownError": "ਇੱਕ ਅਣਜਾਣ ਗੜਬੜ ਹੋਈ ਹੈ",
-  "unexpectedErrorOccurred": "ਇੱਕ ਅਚਾਨਕ ਗਲਤੀ ਹੋਈ ਹੈ",
+  "unexpectedErrorOccurred": "ਅਚਾਨਕ ਕੋਈ ਗੜਬੜ ਹੋ ਗਈ ਹੈ",
   "pressAndHoldNotificationToRecordPillTaking": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਉਣ ਨਾਲ ਦਵਾਈ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ",
   "letsTryIt": "ਇਸ ਨੂੰ ਜ਼ਰੂਰ ਅਜ਼ਮਾਓ!",
   "trialDeadlineDateOffsetDay": "{number} ਦਿਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਉਪਲਬਧ ਹਨ!",

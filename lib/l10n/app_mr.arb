@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "काहीतरी चूक झाली आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा",
   "errorOccurred": "त्रुटी आली आहे",
   "unknownError": "अज्ञात त्रुटी आली आहे",
-  "unexpectedErrorOccurred": "अनपेक्षित त्रुटि झाली",
+  "unexpectedErrorOccurred": "अनपेक्षित त्रुटी आली आहे",
   "pressAndHoldNotificationToRecordPillTaking": "सूचना लांब दाबल्यास गोळी घेतल्याची नोंद करू शकता",
   "letsTryIt": "नक्की वापरून पहा!",
   "trialDeadlineDateOffsetDay": "{number} दिवसांसाठी सर्व फीचर्स मिळतात!",

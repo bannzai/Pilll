@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "केही समस्या भयो। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्",
   "errorOccurred": "त्रुटि भएको छ",
   "unknownError": "अज्ञात त्रुटि भयो",
-  "unexpectedErrorOccurred": "अप्रत्याशित त्रुटि भएको छ",
+  "unexpectedErrorOccurred": "अनपेक्षित समस्या आएको छ",
   "pressAndHoldNotificationToRecordPillTaking": "सूचनालाई लामो समय दबाएर राखेर औषधि सेवनको रेकर्ड गर्न सकिन्छ",
   "letsTryIt": "जरूर प्रयास गर्नुहोस्",
   "trialDeadlineDateOffsetDay": "{number} दिनसम्म सबै सुविधाहरू प्रयोग गर्न सक्नुहुन्छ！",

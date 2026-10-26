@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Сталася помилка. Будь ласка, спробуйте ще раз пізніше",
   "errorOccurred": "Сталася помилка",
   "unknownError": "Сталася невідома помилка",
-  "unexpectedErrorOccurred": "Виникла неочікувана помилка",
+  "unexpectedErrorOccurred": "Сталася неочікувана помилка",
   "pressAndHoldNotificationToRecordPillTaking": "Довго натисніть сповіщення, щоб записати прийом препарату",
   "letsTryIt": "Обов'язково спробуйте!",
   "trialDeadlineDateOffsetDay": "Усі функції доступні протягом {number} днів!",

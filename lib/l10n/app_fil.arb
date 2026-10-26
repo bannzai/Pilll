@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Nagkaroon ng error. Pakisubukan po ulit mamaya",
   "errorOccurred": "Nagkaroon ng error",
   "unknownError": "May naganap na hindi kilalang error",
-  "unexpectedErrorOccurred": "Nagkaroon ng hindi inaasahang suliranin",
+  "unexpectedErrorOccurred": "May naganap na hindi inaasahang error",
   "pressAndHoldNotificationToRecordPillTaking": "I-long press ang notification para makapagtala ng paginom ng gamot",
   "letsTryIt": "Subukan mo ito!",
   "trialDeadlineDateOffsetDay": "Magagamit mo ang lahat ng features sa loob ng {number} araw!",

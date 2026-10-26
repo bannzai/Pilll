@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä myöhemmin uudelleen",
   "errorOccurred": "Tapahtui virhe",
   "unknownError": "Tapahtui tuntematon virhe",
-  "unexpectedErrorOccurred": "Odottamaton virhe tapahtui",
+  "unexpectedErrorOccurred": "Tapahtui odottamaton virhe",
   "pressAndHoldNotificationToRecordPillTaking": "Ilmoitusta pitkään painamalla voit tallentaa ottamiskirjauksen",
   "letsTryIt": "Kokeile vain!",
   "trialDeadlineDateOffsetDay": "Kaikki ominaisuudet käytettävissäsi {number} päivää!",

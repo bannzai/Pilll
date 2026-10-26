@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Kuvele iphutha. Sicela uzame futhi ngokuhamba kwesikhathi",
   "errorOccurred": "Kube nephutha",
   "unknownError": "Kuvele iphutha elingaziwa",
-  "unexpectedErrorOccurred": "Iphutha elingalindelwe lenzekile",
+  "unexpectedErrorOccurred": "Kwenzeke iphutha elingalindelekile",
   "pressAndHoldNotificationToRecordPillTaking": "Cindezela isaziso isikhathi eside ukuze wenze irekhodi lokuphuza amaphilisi",
   "letsTryIt": "Sicela uzame!",
   "trialDeadlineDateOffsetDay": "Ungasebenzisa zonke izici izinsuku ezingu-{number}!",

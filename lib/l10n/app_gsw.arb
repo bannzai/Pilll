@@ -355,7 +355,7 @@
   "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Probier s bitte spöter nomal",
   "errorOccurred": "Es isch en Fähler passiert",
   "unknownError": "Es isch en unbekannte Fähler passiert",
-  "unexpectedErrorOccurred": "En unerwartete Fähler isch ufträte",
+  "unexpectedErrorOccurred": "Es isch en unerwartete Fähler passiert",
   "pressAndHoldNotificationToRecordPillTaking": "Mäldig lang drücke zum d'Iinahm z'notiere",
   "letsTryIt": "Probiered's doch eifach uus!",
   "trialDeadlineDateOffsetDay": "{number} Täg lang chönd Sie alli Funktione nutze!",
