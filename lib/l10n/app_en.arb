@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Get notifications even in silent mode",
   "criticalAlertFeatureAppealShortDescription": "Remember your pill even in Do Not Disturb mode",
   "criticalAlertFeatureAppealHeadline": "Get notifications even in silent mode",
-  "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you can receive medication reminders even while Do Not Disturb or silent mode is active. Try enabling it to make sure you never miss an important dose.",
+  "criticalAlertFeatureAppealBody": "With Critical Alerts on, you can receive pill reminders even when Do Not Disturb or Silent mode is on. Try turning them on to stay on top of your pill schedule.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Customize your notification message",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Customize your notification wording",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edit the wording of your medication reminders",

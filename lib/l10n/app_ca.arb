@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Rep notificacions fins i tot en mode silenci",
   "criticalAlertFeatureAppealShortDescription": "Recorda prendre la píndola fins i tot amb el mode No molestar activat",
   "criticalAlertFeatureAppealHeadline": "Rep notificacions fins i tot en mode silenci",
-  "criticalAlertFeatureAppealBody": "Si activeu les Alertes crítiques, podreu rebre notificacions de presa de medicació fins i tot en mode No molestar o mode silenciós. Configureu-les per no perdre cap moment important de presa de la píndola.",
+  "criticalAlertFeatureAppealBody": "Si actives les alertes crítiques, podràs rebre avisos per prendre la píndola fins i tot amb el mode No molestar o el mode silenci activats. Pots activar aquesta opció per tenir presents les hores importants de presa.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalitza el missatge de notificació",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Podeu personalitzar el text de les notificacions",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita lliurement el missatge de notificació de presa",

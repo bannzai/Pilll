@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "קבלת התראות גם במצב שקט",
   "criticalAlertFeatureAppealShortDescription": "תזכורת לנטילת הגלולה גם במצב נא לא להפריע",
   "criticalAlertFeatureAppealHeadline": "התראות מתקבלות גם במצב שקט",
-  "criticalAlertFeatureAppealBody": "הפעלת Critical Alert מאפשרת לך לקבל התראות נטילת גלולות גם במצב ״אל תפריע״ או במצב שקט. כדי לא לפספס את זמן נטילת הגלולה החשוב, כדאי להגדיר זאת.",
+  "criticalAlertFeatureAppealBody": "כשמפעילים התראות קריטיות, אפשר לקבל תזכורות לנטילת הגלולה גם במצב ״נא לא להפריע״ או במצב שקט. כדאי להפעיל את ההגדרה כדי לזכור את זמני הנטילה החשובים.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "התאמה אישית של הודעות התראות",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ניתן להתאים אישית את הודעות ההתראות",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ערוך בחופשיות את הודעת תזכורת נטילת הגלולה",

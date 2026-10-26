@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "รับการแจ้งเตือนแม้เปิดโหมดเงียบ",
   "criticalAlertFeatureAppealShortDescription": "เตือนให้ทานยาได้แม้เปิดโหมดห้ามรบกวน",
   "criticalAlertFeatureAppealHeadline": "รับการแจ้งเตือนได้แม้เปิดโหมดปิดเสียง",
-  "criticalAlertFeatureAppealBody": "เมื่อเปิดใช้งาน Critical Alert คุณจะได้รับการแจ้งเตือนการรับประทานยาแม้อยู่ในโหมดห้ามรบกวนหรือโหมดเงียบ ลองเปิดใช้งานดูเพื่อไม่ให้พลาดเวลาสำคัญในการทานยาคุมกำเนิด",
+  "criticalAlertFeatureAppealBody": "เมื่อเปิดการแจ้งเตือนสำคัญ คุณจะได้รับการเตือนให้ทานยาเม็ดคุมกำเนิด แม้จะเปิดโหมดห้ามรบกวนหรือโหมดปิดเสียงอยู่ค่ะ ลองเปิดการตั้งค่านี้เพื่อช่วยให้จำเวลาทานยาที่สำคัญได้นะคะ",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "แจ้งเตือนข้อความที่กำหนดเอง",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "คุณสามารถปรับแต่งข้อความการแจ้งเตือนได้",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาได้อย่างอิสระ",

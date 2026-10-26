@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Terima notifikasi meski ponsel dalam mode senyap",
   "criticalAlertFeatureAppealShortDescription": "Ingat minum pil meski mode Jangan Ganggu aktif",
   "criticalAlertFeatureAppealHeadline": "Terima notifikasi bahkan saat mode senyap aktif",
-  "criticalAlertFeatureAppealBody": "Dengan mengaktifkan Critical Alert, Anda akan menerima pemberitahuan minum pil bahkan saat mode Jangan Ganggu atau mode senyap aktif. Agar tidak melewatkan waktu penting untuk minum pil, silakan aktifkan fitur ini.",
+  "criticalAlertFeatureAppealBody": "Dengan mengaktifkan Peringatan Penting, Anda dapat menerima pengingat minum pil meski mode Jangan Ganggu atau mode senyap aktif. Coba aktifkan pengaturan ini agar waktu penting untuk minum pil tetap teringat.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalisasi pesan notifikasi",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Anda dapat menyesuaikan teks notifikasi",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edit bebas pesan pengingat minum",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Modtag notifikationer, selv når telefonen er på lydløs",
   "criticalAlertFeatureAppealShortDescription": "Husk din p-pille, selv når Forstyr ikke er slået til",
   "criticalAlertFeatureAppealHeadline": "Du får notifikationer selv i lydløs tilstand",
-  "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du modtage påmindelser om at tage din pille, selv når Forstyr ikke-tilstand eller lydløs tilstand er aktiveret. For ikke at gå glip af vigtige tidspunkter for at tage din pille anbefaler vi, at du konfigurerer denne indstilling.",
+  "criticalAlertFeatureAppealBody": "Når du slår kritiske advarsler til, kan du få påmindelser om at tage din p-pille, selv når Forstyr ikke eller lydløs tilstand er slået til. Prøv at slå funktionen til, så du husker de vigtige tidspunkter.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpas beskednotifikation",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse ordlyden i notifikationer",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger din påmindelsesbesked om piller frit",

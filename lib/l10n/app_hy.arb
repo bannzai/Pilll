@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Ստացեք ծանուցումներ նույնիսկ անձայն ռեժիմում",
   "criticalAlertFeatureAppealShortDescription": "Հիշեցում հաբն ընդունելու մասին նաև «Չանհանգստացնել» ռեժիմում",
   "criticalAlertFeatureAppealHeadline": "Ծանուցումները հասնում են նաև անձայն ռեժիմում",
-  "criticalAlertFeatureAppealBody": "Critical Alert-ը միացնելով՝ կարող եք ստանալ դեղերի ընդունման ծանուցումներ նույնիսկ երբ սարքը «Չխանգարել» (Do Not Disturb) կամ «Լուռ» ռեժիմում է։ Որպեսզի չմոռանաք կարևոր դեղերի ընդունման ժամանակները, խորհուրդ ենք տալիս միացնել այն։",
+  "criticalAlertFeatureAppealBody": "Եթե միացնեք կարևոր ազդանշանները, կկարողանաք հաբն ընդունելու հիշեցումներ ստանալ նույնիսկ «Չանհանգստացնել» կամ անձայն ռեժիմում։ Փորձեք միացնել այս կարգավորումը, որպեսզի հիշեք հաբն ընդունելու կարևոր ժամերը։",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Ծանուցման հաղորդագրությունը հարմարեցնել",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Կարող եք հարմարեցնել ծանուցման տեքտը",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Ձեր ընդունման ծանուցումների հաղորդագրությունը ազատորեն խմբագրեք",

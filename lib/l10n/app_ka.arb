@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "შეტყობინებების მიღება უხმო რეჟიმშიც",
   "criticalAlertFeatureAppealShortDescription": "გახსოვდეთ აბის მიღება „არ შემაწუხოთ“ რეჟიმშიც",
   "criticalAlertFeatureAppealHeadline": "შეტყობინებებს უხმო რეჟიმშიც მიიღებთ",
-  "criticalAlertFeatureAppealBody": "Critical Alert-ის ჩართვის შემთხვევაში, წამლის მიღების შეტყობინებებს მიიღებთ 'არ შემაწუხო' (Do Not Disturb) და ჩუმი რეჟიმების დროსაც. რათა არ გამოტოვოთ მნიშვნელოვანი წამლის მიღების დრო, გთხოვთ, ჩართოთ ეს ფუნქცია.",
+  "criticalAlertFeatureAppealBody": "კრიტიკული გაფრთხილებების ჩართვისას აბის მიღების შეხსენებებს მიიღებთ მაშინაც, როცა ჩართულია „არ შემაწუხოთ“ ან უხმო რეჟიმი. სცადეთ ამ პარამეტრის ჩართვა, რომ აბის მიღების მნიშვნელოვანი დრო გახსოვდეთ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "შეტყობინების ტექსტის მორგება",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "შეგიძლიათ შეცვალოთ შეხსენების ტექსტი",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "შეგიძლიათ შეხსენების შეტყობინება თავისუფლად დაარედაქტიროთ",

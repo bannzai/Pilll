@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Gaukite pranešimus net ir įjungę begarsį režimą",
   "criticalAlertFeatureAppealShortDescription": "Nepamirškite tabletės net įjungus režimą „Netrukdyti“",
   "criticalAlertFeatureAppealHeadline": "Pranešimai pasiekia ir tyliuoju režimu",
-  "criticalAlertFeatureAppealBody": "Įgalinus Critical Alert, priminimai apie vaistų vartojimą bus gaunami net ir Miego režimo arba Tyliųjų pranešimų metu. Nustatykite šią funkciją, kad nepraleistumėte svarbių vaisto vartojimo laikų.",
+  "criticalAlertFeatureAppealBody": "Įjungę svarbius įspėjimus, priminimus išgerti tabletę galite gauti net tada, kai įjungtas režimas „Netrukdyti“ arba begarsis režimas. Išbandykite šį nustatymą, kad prisimintumėte svarbų tabletės vartojimo laiką.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Pranešimų žinučių tinkinimas",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Galite suasmeninti pranešimų tekstą",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Editing reminders message freely",

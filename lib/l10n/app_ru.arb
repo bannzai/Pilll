@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Получайте уведомления даже в беззвучном режиме",
   "criticalAlertFeatureAppealShortDescription": "Помните о таблетке даже в режиме «Не беспокоить»",
   "criticalAlertFeatureAppealHeadline": "Уведомления приходят даже в беззвучном режиме",
-  "criticalAlertFeatureAppealBody": "При включении Critical Alert вы будете получать уведомления о приёме таблеток даже в режиме «Не беспокоить» или беззвучном режиме. Чтобы не пропустить важный момент приёма таблеток, обязательно настройте эту функцию.",
+  "criticalAlertFeatureAppealBody": "Если включить критические уведомления, вы сможете получать напоминания о приёме таблетки даже в режиме «Не беспокоить» или беззвучном режиме. Попробуйте включить эту настройку, чтобы помнить о важном времени приёма.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Настроить сообщение уведомления",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Вы можете настроить текст уведомлений",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Редактирование сообщения уведомления о приёме таблетки",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "साइलेंट मोड में भी सूचनाएँ पाएँ",
   "criticalAlertFeatureAppealShortDescription": "परेशान न करें मोड में भी गोली लेना याद रखें",
   "criticalAlertFeatureAppealHeadline": "साइलेंट मोड में भी सूचनाएँ पाएँ",
-  "criticalAlertFeatureAppealBody": "Critical Alert सक्रिय करने पर, आप डू नॉट डिस्टर्ब (Do Not Disturb) या साइलेंट मोड में होने पर भी पिल लेने की सूचनाएँ प्राप्त कर पाएँगे। महत्वपूर्ण पिल लेने के समय न चूकने के लिए, कृपया इसे सक्षम करें।",
+  "criticalAlertFeatureAppealBody": "गंभीर अलर्ट चालू करने पर, ‘परेशान न करें’ या साइलेंट मोड में भी गोली लेने की सूचनाएँ मिल सकती हैं। गोली लेने के ज़रूरी समय याद रखने के लिए यह सेटिंग चालू करके देखें।",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "सूचना संदेश अनुकूलित करें",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "आप सूचनाओं के संदेशों को अनुकूलित कर सकते हैं।",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "दवा लेने के रिमाइंडर संदेश को अपनी इच्छानुसार संपादित करें",

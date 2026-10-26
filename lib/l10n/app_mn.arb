@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Дуугүй горимд ч мэдэгдэл хүлээн авна уу",
   "criticalAlertFeatureAppealShortDescription": "«Бүү саад бол» горимд ч эмээ уухаа санаарай",
   "criticalAlertFeatureAppealHeadline": "Дуугүй горимд ч мэдэгдэл ирнэ",
-  "criticalAlertFeatureAppealBody": "Critical Alert-ийг идэвхжүүлбэл, нойрны горим эсвэл чимээгүй горимд байхдаа ч эм уух тухай мэдэгдэл хүлээн авах боломжтой болно. Чухал эмийн уух цагийг алдахгүйн тулд заавал тохируулж үзээрэй。",
+  "criticalAlertFeatureAppealBody": "Чухал сэрэмжлүүлгийг асаавал «Бүү саад бол» эсвэл чимээгүй горимд байсан ч эм уух сануулга хүлээн авч болно. Эм уух чухал цагаа санахад туслахын тулд энэ тохиргоог асааж үзнэ үү.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Мэдэгдлийн мессежийг тохируулах",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Мэдэгдлийн текстийг тохируулах боломжтой",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Эмийн мэдэгдлийн мессежийг чөлөөтэй засварлах",

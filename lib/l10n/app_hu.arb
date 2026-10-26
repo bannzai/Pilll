@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Értesítések fogadása néma módban is",
   "criticalAlertFeatureAppealShortDescription": "Ne feledkezz meg a tablettáról Ne zavarjanak módban sem",
   "criticalAlertFeatureAppealHeadline": "Néma módban is megérkeznek az értesítések",
-  "criticalAlertFeatureAppealBody": "Critical Alert engedélyezésével még alvó vagy némított módban is megkaphatja a szedésről szóló értesítéseket. Ne maradjon le a fontos fogamzásgátló bevételéről — kapcsolja be ezt a beállítást!",
+  "criticalAlertFeatureAppealBody": "A kritikus jelzések bekapcsolásával akkor is kaphatsz emlékeztetőt a tabletta szedésére, ha a Ne zavarjanak mód vagy a néma üzemmód aktív. Érdemes bekapcsolni ezt a beállítást, hogy a fontos időpontok ne maradjanak ki.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Értesítési üzenet testreszabása",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Az értesítések szövegét testreszabhatja",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Értesítési üzenet szabad szerkesztése",

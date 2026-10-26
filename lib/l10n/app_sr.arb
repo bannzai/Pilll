@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Примајте обавештења и у нечујном режиму",
   "criticalAlertFeatureAppealShortDescription": "Сетите се пилуле и у режиму Не узнемиравај",
   "criticalAlertFeatureAppealHeadline": "Обавештења стижу и у нечујном режиму",
-  "criticalAlertFeatureAppealBody": "Ако омогућите Critical Alert, добијаћете обавештења о узимању лекова чак и када је телефон у режиму „Не узнемиравај“ или у тихом режиму. Подесите га да не бисте пропустили важан тренутак за узимање пилуле.",
+  "criticalAlertFeatureAppealBody": "Ако укључите критична обавештења, можете да добијате подсетнике за узимање пилуле чак и када су укључени режим Не узнемиравај или тихи режим. Покушајте да укључите ово подешавање како бисте лакше запамтили важно време за узимање.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodite poruke obaveštenja",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да прилагодите текст обавештења",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Slobodno uredite poruku podsetnika o uzimanju pilule",

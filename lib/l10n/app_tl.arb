@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Makatanggap ng mga abiso kahit naka-silent mode",
   "criticalAlertFeatureAppealShortDescription": "Paalala sa pag-inom ng pildoras kahit naka-on ang Huwag Istorbohin",
   "criticalAlertFeatureAppealHeadline": "Makakatanggap kayo ng mga abiso kahit naka-silent mode",
-  "criticalAlertFeatureAppealBody": "Kapag pinagana ang Critical Alert, matatanggap mo ang mga paalala sa pag-inom kahit naka \"Do Not Disturb\" o silent/manner mode ang telepono. I-on ito upang hindi mo makalimutang uminom sa tamang oras ng mahalagang pill.",
+  "criticalAlertFeatureAppealBody": "Kapag naka-on ang mga kritikal na alerto, makakatanggap kayo ng mga paalala sa pag-inom ng pildoras kahit naka-on ang Huwag Istorbohin o silent mode. Pakisubukang i-on ang setting na ito para maalala ninyo ang mahahalagang oras ng pag-inom.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Ipasadya ang mensahe ng paalala",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Maaari mong i-customize ang mensahe ng paalala",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Please translate the input text into Tagalog (tl).",

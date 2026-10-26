@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "ទទួលបានការជូនដំណឹង សូម្បីតែក្នុងរបៀបស្ងាត់",
   "criticalAlertFeatureAppealShortDescription": "សូមកុំភ្លេចលេបថ្នាំ ទោះបីបើកមុខងារកុំរំខានក៏ដោយ",
   "criticalAlertFeatureAppealHeadline": "ទទួលបានការជូនដំណឹង ទោះបីបើកមុខងារស្ងាត់ក៏ដោយ",
-  "criticalAlertFeatureAppealBody": "បើ​អ្នក​បើក Critical Alert អ្នក​នឹង​ទទួល​ការ​រំលឹក​ពេល​ទទួលថ្នាំ ទោះបី​នៅ​ក្នុង​ម៉ូដ​មិនរំខាន (Do Not Disturb) ឬ​ម៉ូដ​ស្ងាត់​ក៏ដោយ។ សូមកំណត់​មុខងារ​នេះ ដើម្បី​មិន​ឲ្យ​អ្នក​ភ្លេច​ពេលវេលាទទួលថ្នាំ​សំខាន់ៗ។",
+  "criticalAlertFeatureAppealBody": "ពេលបើកការជូនដំណឹងសំខាន់ អ្នកអាចទទួលបានការរំលឹកឱ្យលេបថ្នាំគ្រាប់ ទោះបីបើកមុខងារកុំរំខាន ឬមុខងារស្ងាត់ក៏ដោយ។ សូមសាកល្បងបើកការកំណត់នេះ ដើម្បីចងចាំម៉ោងសំខាន់ៗសម្រាប់លេបថ្នាំគ្រាប់។",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "កែសម្រួលសារ​ជូនដំណឹង",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "អ្នក​អាច​កែសម្រួល​អត្ថបទ​នៃ​ការ​ជូន​ដំណឹង​បាន",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "កែសម្រួលសារ​ជូនដំណឹង​សម្រាប់​ការ​ទទួលថ្នាំ​របស់អ្នក",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Получавайте известия и в безшумен режим",
   "criticalAlertFeatureAppealShortDescription": "Напомняне за хапчето дори в режим „Не безпокойте“",
   "criticalAlertFeatureAppealHeadline": "Получавате известия дори в безшумен режим",
-  "criticalAlertFeatureAppealBody": "Ако активирате Critical Alert, ще получавате известия за приемане на хапчета дори когато е включен режим „Не безпокойте\" или безшумен режим. Настройте го, за да не пропускате важните моменти за приемане на хапчетата си.",
+  "criticalAlertFeatureAppealBody": "Ако включите критичните известия, ще получавате напомняния за прием на хапчето дори в режим „Не безпокойте“ или безшумен режим. Можете да включите тази настройка, за да помните важните часове за прием.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Персонализирайте съобщенията за известия",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Можете да персонализирате текста на известията",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Свободно редактирайте съобщението за известие за прием",

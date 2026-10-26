@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Saat ilmoituksia myös äänettömässä tilassa",
   "criticalAlertFeatureAppealShortDescription": "Muista ottaa pilleri myös Älä häiritse -tilassa",
   "criticalAlertFeatureAppealHeadline": "Saat ilmoituksia myös äänettömässä tilassa",
-  "criticalAlertFeatureAppealBody": "Kun otat Critical Alertin käyttöön, voit vastaanottaa pillereiden ottamisilmoituksia myös Älä häiritse -tilan tai äänettömän tilan aikana. Jotta et missaa tärkeitä pillereiden ottoaikoja, suosittelemme ottamaan tämän ominaisuuden käyttöön.",
+  "criticalAlertFeatureAppealBody": "Kun otat kriittiset ilmoitukset käyttöön, saat muistutukset pillerin ottamisesta myös Älä häiritse -tilassa ja äänettömässä tilassa. Kokeile ottaa asetus käyttöön, jotta tärkeät ottoajat pysyvät mielessä.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Mukauta ilmoitusviestiä",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Voit muokata ilmoitustekstejä",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Muokkaa lääkkeidenottomuistutuksen viestiä vapaasti",

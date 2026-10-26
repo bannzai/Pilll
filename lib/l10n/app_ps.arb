@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "په چوپ حالت کې هم خبرتیاوې ترلاسه کړئ",
   "criticalAlertFeatureAppealShortDescription": "د «مه ګډوډوئ» حالت کې هم د ګولۍ اخیستل په یاد ولرئ",
   "criticalAlertFeatureAppealHeadline": "خبرتیاوې په غلي حالت کې هم دررسېږي",
-  "criticalAlertFeatureAppealBody": "که چیرې Critical Alert فعال کړئ، نو د آرامۍ حالت (Do Not Disturb) یا د خاموشۍ حالت کې هم د دوا د خوړلو خبرتیاوې ترلاسه کولی شئ. د مهمو پیلونو د خوړلو وخت له لاسه مه ورکوئ، نو خامخا یې ترتیب کړئ.",
+  "criticalAlertFeatureAppealBody": "که مهم خبرتیاوې فعالې کړئ، د «مه ګډوډوئ» یا چوپ حالت پر مهال هم د ګولۍ اخیستلو خبرتیاوې ترلاسه کولی شئ. د ګولۍ اخیستلو مهم وختونه د یاد ساتلو لپاره دا امستنه فعاله کړئ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "د خبرتیا پیغام دودیز کړئ",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "د خبرتیا متن دودیز کولی شئ",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "د دوا د خبرتیا پیغام آزادانه سمول",

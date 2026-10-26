@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Recibe notificacións mesmo en modo silencio",
   "criticalAlertFeatureAppealShortDescription": "Lembra tomar a pílula mesmo co modo Non molestar activado",
   "criticalAlertFeatureAppealHeadline": "Recibe notificacións mesmo no modo silencio",
-  "criticalAlertFeatureAppealBody": "Ao activar Critical Alert, poderás recibir notificacións de toma aínda co modo Non molestar ou o modo silencioso activados. Para non perder o momento importante de tomar a túa pílula, non dubides en configuralo.",
+  "criticalAlertFeatureAppealBody": "Se activas as alertas críticas, poderás recibir avisos para tomar a pílula mesmo co modo Non molestar ou o modo silencio activados. Proba a activar esta opción para ter presentes as horas importantes de toma.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizar mensaxes de notificación",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Podes personalizar o texto das notificacións",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita libremente o mensaxe de notificación de toma",

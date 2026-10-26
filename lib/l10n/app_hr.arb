@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Primajte obavijesti i u tihom načinu rada",
   "criticalAlertFeatureAppealShortDescription": "Podsjetnik za pilulu čak i u načinu Ne ometaj",
   "criticalAlertFeatureAppealHeadline": "Obavijesti stižu i u tihom načinu rada",
-  "criticalAlertFeatureAppealBody": "Omogućavanjem Critical Alert-a primit ćete podsjetnike za uzimanje čak i kad su uređaj u načinu Ne ometaj ili u tihom načinu rada. Preporučujemo da ga uključite kako ne biste propustili važne termine za uzimanje pilula.",
+  "criticalAlertFeatureAppealBody": "Ako uključite kritična upozorenja, možete primati podsjetnike za uzimanje pilule čak i kada su uključeni način Ne ometaj ili tihi način rada. Isprobajte ovu postavku kako biste lakše zapamtili važno vrijeme uzimanja.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodi poruku obavijesti",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Možete prilagoditi tekst obavijesti",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Slobodno uredite poruku podsjetnika za uzimanje",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "ຮັບການແຈ້ງເຕືອນໄດ້ແມ່ນແຕ່ໃນໂໝດງຽບ",
   "criticalAlertFeatureAppealShortDescription": "ຢ່າລືມກິນຢາ ແມ່ນແຕ່ໃນໂໝດຫ້າມລົບກວນ",
   "criticalAlertFeatureAppealHeadline": "ໄດ້ຮັບການແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດປິດສຽງ",
-  "criticalAlertFeatureAppealBody": "ເມື່ອເປີດໃຊ້ Critical Alert, ທ່ານຈະຍັງຄົງຮັບການແຈ້ງເຕືອນການທາບຢາໄດ້ເຖິງແມ່ນໃນໂມດ Do Not Disturb ຫຼືໂມດ Silent. ເພື່ອບໍ່ໃຫ້ທ່ານພາດເວລາການທາບຢາທີ່ສຳຄັນ, ຂໍແນະນໍາໃຫ້ທ່ານລອງເປີດການຕັ້ງຄ່ານີ້.",
+  "criticalAlertFeatureAppealBody": "ເມື່ອເປີດການແຈ້ງເຕືອນສຳຄັນ ທ່ານຈະຮັບການເຕືອນໃຫ້ກິນຢາເມັດໄດ້ ເຖິງແມ່ນວ່າເປີດໂໝດຫ້າມລົບກວນ ຫຼື ໂໝດປິດສຽງຢູ່ກໍຕາມ. ລອງເປີດການຕັ້ງຄ່ານີ້ເພື່ອຊ່ວຍຈື່ເວລາກິນຢາທີ່ສຳຄັນເດີ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ປັບແຕ່ງຂໍ້ຄວາມແຈ້ງເຕືອນ",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ທ່ານສາມາດປັບແກ້ຂໍ້ຄວາມແຈ້ງເຕືອນໄດ້",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "แก้ไขข้อความแจ้งเตือนการทานยาตามต้องการ",

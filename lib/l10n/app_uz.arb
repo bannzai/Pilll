@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Ovozsiz rejimda ham bildirishnomalar oling",
   "criticalAlertFeatureAppealShortDescription": "Bezovta qilmang rejimida ham tabletkani ichishni unutmang",
   "criticalAlertFeatureAppealHeadline": "Ovozsiz rejimda ham bildirishnomalar keladi",
-  "criticalAlertFeatureAppealBody": "Critical Alert-ni yoqish orqali uyqu rejimi yoki jim rejimda bo'lsangiz ham dori qabul qilish eslatmalarini olasiz. Muhim tabletkalarni qabul qilish vaqtini o'tkazib yubormaslik uchun, iltimos, ushbu funksiyani yoqib ko'ring.",
+  "criticalAlertFeatureAppealBody": "Muhim ogohlantirishlarni yoqsangiz, Bezovta qilmang yoki ovozsiz rejim yoqilganida ham tabletka ichish eslatmalarini olishingiz mumkin. Tabletkani ichishning muhim vaqtlarini eslab qolish uchun bu sozlamani yoqib koʻring.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirishnoma xabarini sozlash",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirishnoma matnini moslashtirishingiz mumkin",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Dori qabul qilish eslatmasi matnini erkin tahrirlash",

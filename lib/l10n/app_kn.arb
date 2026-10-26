@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "ನಿಶ್ಶಬ್ದ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಅಧಿಸೂಚನೆಗಳನ್ನು ಪಡೆಯಿರಿ",
   "criticalAlertFeatureAppealShortDescription": "ತೊಂದರೆ ನೀಡಬೇಡಿ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ನೆನಪಿಡಿ",
   "criticalAlertFeatureAppealHeadline": "ನಿಶ್ಶಬ್ದ ಮೋಡ್‌ನಲ್ಲಿಯೂ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಿರಿ",
-  "criticalAlertFeatureAppealBody": "Critical Alert ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿದರೆ, ನಿದ್ರೆ ಮೋಡ್ ಅಥವಾ ಮ್ಯಾನರ್ ಮೋಡ್‌ನಲ್ಲಿ ಇದ್ದರೂ ಕೂಡ ಪಿಲ್ ಸೇವಿಸುವ ಕುರಿತು ನೆನಪಿಸುವ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಬಹುದು. ಪ್ರಮುಖ ಪಿಲ್ ಸೇವಿಸುವ ಸಮಯವನ್ನು ತಪ್ಪಿಸಿಕೊಳ್ಳದಿರಲು, ದಯವಿಟ್ಟು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ.",
+  "criticalAlertFeatureAppealBody": "ತುರ್ತು ಎಚ್ಚರಿಕೆಗಳನ್ನು ಆನ್ ಮಾಡಿದರೆ, ತೊಂದರೆ ಕೊಡಬೇಡಿ ಅಥವಾ ನಿಶ್ಶಬ್ದ ಮೋಡ್ ಆನ್ ಇದ್ದಾಗಲೂ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ನೆನಪಿನ ಸೂಚನೆಗಳನ್ನು ಪಡೆಯಬಹುದು. ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಮುಖ್ಯ ಸಮಯಗಳನ್ನು ನೆನಪಿಟ್ಟುಕೊಳ್ಳಲು ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ಆನ್ ಮಾಡಿ ನೋಡಿ.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ಸೂಚನೆ ಸಂದೇಶವನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಿ",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "ಅಧಿಸೂಚನೆಯ ಸಂದೇಶವನ್ನು ಕಸ್ಟಮೈಸ್ ಮಾಡಬಹುದು",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ಸೇವನೆ ಸೂಚನೆಯ ಸಂದೇಶವನ್ನು ಮುಕ್ತವಾಗಿ ಸಂಪಾದಿಸಿ",

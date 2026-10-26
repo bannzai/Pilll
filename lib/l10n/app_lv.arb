@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Saņemiet paziņojumus arī klusuma režīmā",
   "criticalAlertFeatureAppealShortDescription": "Atcerieties iedzert tableti arī režīmā Netraucēt",
   "criticalAlertFeatureAppealHeadline": "Paziņojumi pienāk arī klusuma režīmā",
-  "criticalAlertFeatureAppealBody": "Ieslēdzot Critical Alert, jūs varēsiet saņemt paziņojumus par tabletes lietošanu pat tad, kad ir ieslēgts “Netraucēt” vai klusuma režīms. Lai nepalaistu garām svarīgu tabletes lietošanas laiku, lūdzu, aktivizējiet šo iestatījumu.",
+  "criticalAlertFeatureAppealBody": "Ieslēdzot kritiskos brīdinājumus, jūs varat saņemt atgādinājumus par tabletes lietošanu arī tad, ja ir ieslēgts režīms Netraucēt vai klusuma režīms. Izmēģiniet šo iestatījumu, lai atcerētos svarīgo tabletes lietošanas laiku.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Pielāgot paziņojuma tekstu",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Varat pielāgot paziņojumu tekstu.",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Brīvi rediģējiet zāļu lietošanas atgādinājuma ziņojumu",

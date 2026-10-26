@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Primește notificări chiar și în modul silențios",
   "criticalAlertFeatureAppealShortDescription": "Amintește-ți de pilulă chiar și în modul Nu deranja",
   "criticalAlertFeatureAppealHeadline": "Primești notificări chiar și în modul silențios",
-  "criticalAlertFeatureAppealBody": "Activând Critical Alert, puteți primi notificări de administrare a pilulelor chiar și în modul Nu deranjați sau modul silențios. Vă recomandăm să configurați această funcție pentru a nu rata momentele importante de administrare a pilulelor.",
+  "criticalAlertFeatureAppealBody": "Dacă activezi alertele critice, poți primi notificări pentru administrarea pilulei chiar și când modul Nu deranja sau modul silențios este activ. Încearcă să activezi această setare ca să îți amintești orele importante de administrare.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizați mesajul de notificare",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puteți personaliza textul notificărilor",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Editați liber mesajul de notificare a dozei",

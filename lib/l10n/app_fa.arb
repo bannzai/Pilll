@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "دریافت اعلان‌ها حتی در حالت بی‌صدا",
   "criticalAlertFeatureAppealShortDescription": "حتی در حالت مزاحم نشوید هم مصرف قرص را به خاطر داشته باشید",
   "criticalAlertFeatureAppealHeadline": "اعلان‌ها حتی در حالت بی‌صدا هم به شما می‌رسند",
-  "criticalAlertFeatureAppealBody": "با فعال کردن Critical Alert، می‌توانید اعلان‌های مصرف قرص را حتی در حالت مزاحم نشوید یا سکوت نیز دریافت کنید. برای اینکه زمان مهم مصرف قرص را از دست ندهید، حتماً این قابلیت را تنظیم کنید.",
+  "criticalAlertFeatureAppealBody": "با فعال کردن هشدارهای مهم، حتی وقتی حالت «مزاحم نشوید» یا حالت بی‌صدا روشن است، می‌توانید اعلان‌های زمان مصرف قرص را دریافت کنید. پیشنهاد می‌کنیم این تنظیم را فعال کنید تا زمان‌های مهم مصرف قرص را به خاطر داشته باشید.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "سفارشی‌سازی پیام اعلان",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "می‌توانید متن اعلان را سفارشی کنید",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ویرایش آزادانه پیام یادآوری مصرف دارو",

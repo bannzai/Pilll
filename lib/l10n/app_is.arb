@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Fáðu tilkynningar þótt síminn sé hljóðlaus",
   "criticalAlertFeatureAppealShortDescription": "Mundu eftir pillunni þótt Ekki trufla sé virkt",
   "criticalAlertFeatureAppealHeadline": "Tilkynningar berast líka í hljóðlausri stillingu",
-  "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you will receive medication reminders even in Do Not Disturb or Silent mode. Please enable it to avoid missing important pill-taking times.",
+  "criticalAlertFeatureAppealBody": "Þegar þú kveikir á mikilvægum tilkynningum geturðu fengið áminningar um að taka pilluna jafnvel þótt Ónáðið ekki eða hljóðlaus stilling sé virk. Prófaðu að kveikja á þessu svo mikilvægu pillutímarnir gleymist síður.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Sérsníddu tilkynningaskilaboðin",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Þú getur sérsniðið tilkynningaskilaboðin",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Sérsníddu áminningarskilaboðin",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Sessiz modda bile bildirim alın",
   "criticalAlertFeatureAppealShortDescription": "Rahatsız Etmeyin modunda bile hapınızı almayı hatırlayın",
   "criticalAlertFeatureAppealHeadline": "Sessiz modda bile bildirim alabilirsiniz",
-  "criticalAlertFeatureAppealBody": "Kritik Uyarıyı etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modunda olsanız bile doz alma bildirimleri alabilirsiniz. Önemli hap alma zamanlarını kaçırmamak için lütfen bu ayarı etkinleştirin.",
+  "criticalAlertFeatureAppealBody": "Kritik Uyarıları etkinleştirdiğinizde, Rahatsız Etmeyin veya Sessiz modundayken de hap alma bildirimleri alabilirsiniz. Önemli hap alma saatlerini hatırlamak için bu ayarı etkinleştirmeyi deneyin.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Bildirim mesajını özelleştir",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Bildirim metnini özelleştirebilirsiniz",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hatırlatma mesajını istediğiniz gibi düzenleyin",

@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "නිහඬ ප්‍රකාරයේදීත් දැනුම්දීම් ලබා ගන්න",
   "criticalAlertFeatureAppealShortDescription": "බාධා නොකරන්න ප්‍රකාරයේදීත් පෙත්ත ගැනීමට මතක තබා ගන්න",
   "criticalAlertFeatureAppealHeadline": "නිහඬ මාදිලියේදීත් දැනුම්දීම් ලැබේ",
-  "criticalAlertFeatureAppealBody": "Critical Alert සක්‍රීය කළහොත්, Do Not Disturb මාදිලියේ හෝ නිහඬ මාදිලියේ පවතින විටත් ඔබට පිල් ගැනීමේ දැනුම්දීම් ලැබේ. වැදගත් පිල් ගැනීමේ මොහොත මග නොහැරෙන පිණිස, කරුණාකර මෙය සකසා බලන්න.",
+  "criticalAlertFeatureAppealBody": "වැදගත් දැනුම්දීම් සක්‍රිය කළ විට, බාධා නොකරන්න හෝ නිහඬ ප්‍රකාරය ක්‍රියාත්මක වුවත් පෙති ගැනීමේ මතක් කිරීම් ලබාගත හැකිය. පෙති ගත යුතු වැදගත් වේලාවන් මතක තබා ගැනීමට කරුණාකර මෙම සැකසුම සක්‍රිය කර බලන්න.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "ඇඟවීම් පණිවිඩය සකසන්න",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "දැනුම්දීමේ පණිවුඩ අභිරුචි කළ හැකිය",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "පිල් මතක් කිරීමේ පණිවිඩය ඔබට කැමති පරිදි සංස්කරණය කරන්න",

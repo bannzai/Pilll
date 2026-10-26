@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Få varsler selv når telefonen er på lydløs",
   "criticalAlertFeatureAppealShortDescription": "Husk p-pillen selv når Ikke forstyrr er på",
   "criticalAlertFeatureAppealHeadline": "Du får varsler selv i lydløs modus",
-  "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du motta varsler om å ta pillen selv under Ikke forstyrr-modus eller stillemodus. Aktiver dette for å unngå å gå glipp av viktige tidspunkt for å ta pillen din.",
+  "criticalAlertFeatureAppealBody": "Når du slår på kritiske varsler, kan du få påminnelser om å ta p-pillen selv om Ikke forstyrr eller lydløs modus er på. Prøv å slå på innstillingen, så blir det lettere å huske de viktige tidspunktene.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpass varslingsmeldingen",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Du kan tilpasse varselteksten",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Rediger varslingsmeldingen for pilleinntak fritt",

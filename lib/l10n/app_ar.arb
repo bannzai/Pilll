@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "تلقي الإشعارات حتى في الوضع الصامت",
   "criticalAlertFeatureAppealShortDescription": "تذكري تناول الحبة حتى في وضع عدم الإزعاج",
   "criticalAlertFeatureAppealHeadline": "تصلكِ الإشعارات حتى في الوضع الصامت",
-  "criticalAlertFeatureAppealBody": "عند تفعيل التنبيهات الحرجة (Critical Alert)، ستتلقى إشعارات تناول الدواء حتى في وضع عدم الإزعاج أو الوضع الصامت. لا تفوّت مواعيد تناول حبوبك المهمة، لذا ننصحك بتفعيل هذه الميزة.",
+  "criticalAlertFeatureAppealBody": "عند تفعيل التنبيهات الحرجة، يمكنكِ تلقي إشعارات تناول الحبوب حتى أثناء تشغيل وضع عدم الإزعاج أو الوضع الصامت. جرّبي تفعيلها لتصلكِ التذكيرات في أوقات تناول الحبوب المهمة.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "تخصيص رسالة الإشعار",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "يمكنك تخصيص نص الإشعارات",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "تعديل رسالة إشعار تناول الدواء بحرية",

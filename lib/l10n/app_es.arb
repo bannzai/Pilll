@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Recibe notificaciones incluso en modo silencioso",
   "criticalAlertFeatureAppealShortDescription": "Recuerda tomar la píldora incluso en el modo No molestar",
   "criticalAlertFeatureAppealHeadline": "Recibe notificaciones incluso en modo silencio",
-  "criticalAlertFeatureAppealBody": "Al activar las Alertas Críticas, podrás recibir notificaciones de toma de pastillas incluso en modo No Molestar o en modo silencio. Para no perderte ninguna toma importante de tu píldora, te recomendamos configurarlo.",
+  "criticalAlertFeatureAppealBody": "Si activas las alertas críticas, podrás recibir recordatorios para tomar la píldora incluso con el modo No molestar o el modo silencio activados. Prueba a activarlas para tener presentes las horas importantes de toma.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizar mensaje de notificación",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Puedes personalizar el mensaje de notificación",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Edita libremente el mensaje de notificación de toma",

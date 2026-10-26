@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "အသံပိတ်ထားချိန်မှာလည်း အသိပေးချက်များ ရယူပါ",
   "criticalAlertFeatureAppealShortDescription": "မနှောင့်ယှက်ရန် မုဒ်ဖွင့်ထားချိန်မှာလည်း ဆေးသောက်ဖို့ သတိရပါ",
   "criticalAlertFeatureAppealHeadline": "အသံတိတ်မုဒ်မှာလည်း အသိပေးချက်များ ရရှိနိုင်ပါတယ်",
-  "criticalAlertFeatureAppealBody": "Critical Alert ကို ဖွင့်ထားလျှင်၊ မနှောင့်မယှက်မုဒ် သို့မဟုတ် အသံတိတ်မုဒ်တွင်ပင် ဆေးသောက်ရမည့် အကြောင်းကြားချက်များကို လက်ခံနိုင်မည်ဖြစ်သည်။ အရေးကြီးသောဆေးသောက်ချိန်ကို မမေ့မလျော့စေရန်၊ ကျေးဇူးပြု၍ ချိန်ညှိပေးပါ။",
+  "criticalAlertFeatureAppealBody": "အရေးကြီးသတိပေးချက်များကို ဖွင့်ထားပါက မနှောင့်ယှက်ရန်မုဒ် သို့မဟုတ် အသံပိတ်မုဒ် ဖွင့်ထားချိန်တွင်လည်း ဆေးလုံးသောက်ရန် အသိပေးချက်များကို လက်ခံရရှိနိုင်ပါတယ်။ ဆေးလုံးသောက်ရမည့် အရေးကြီးသောအချိန်များကို မှတ်မိနေစေရန် ဤဆက်တင်ကို ဖွင့်ကြည့်ပါ။",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "အကြောင်းကြားချက် မက်ဆေ့ချ်ကို စိတ်တိုင်းကျပြင်ဆင်ပါ",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "အကြောင်းကြားချက် စာသားကို စိတ်ကြိုက်ပြင်ဆင်နိုင်သည်",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ဆေးသောက်ရန် အကြောင်းကြားချက် မက်ဆေ့ချ်ကို လွတ်လပ်စွာ တည်းဖြတ်ပါ",

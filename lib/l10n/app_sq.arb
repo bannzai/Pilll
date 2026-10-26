@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Merrni njoftime edhe në modalitetin pa zë",
   "criticalAlertFeatureAppealShortDescription": "Kujtohuni të merrni pilulën edhe në modalitetin Mos shqetëso",
   "criticalAlertFeatureAppealHeadline": "Njoftimet mbërrijnë edhe në modalitetin pa zë",
-  "criticalAlertFeatureAppealBody": "Nëse aktivizoni Critical Alert, do të merrni njoftimet për marrjen e pilulës edhe kur telefoni është në modalitetin 'Mos shqetësoni' ose në modalitetin pa zë. Aktivizojeni për të mos humbur kohët e rëndësishme të marrjes së pilulës.",
+  "criticalAlertFeatureAppealBody": "Nëse aktivizoni njoftimet kritike, mund të merrni kujtesa për marrjen e pilulës edhe kur është aktiv modaliteti Mos shqetëso ose modaliteti pa zë. Provoni ta aktivizoni këtë cilësim që t’i mbani mend oraret e rëndësishme të marrjes.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalizoni mesazhin e njoftimit",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Mund të personalizoni tekstin e njoftimeve.",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Redaktoni lirshëm mesazhin e kujtuesit për marrjen",

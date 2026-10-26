@@ -459,7 +459,7 @@
   "criticalAlertFeatureAppealTitle": "Jaso jakinarazpenak modu isilean ere",
   "criticalAlertFeatureAppealShortDescription": "Gogoan izan pilula hartzea Ez molestatu moduan ere",
   "criticalAlertFeatureAppealHeadline": "Jakinarazpenak modu isilean ere jasoko dituzu",
-  "criticalAlertFeatureAppealBody": "Critical Alert aktibatuz gero, Ez molestatu moduan edo isilik moduan egon arren ere, pastillak hartzeko jakinarazpenak jaso ditzakezu. Pastillak hartzearen une garrantzitsua ez galtzeko, ezarri ezazu orain.",
+  "criticalAlertFeatureAppealBody": "Alerta kritikoak aktibatzen badituzu, pilula hartzeko jakinarazpenak jaso ditzakezu Ez molestatu modua edo modu isila aktibatuta egonda ere. Aktibatu ezarpen hau pilula hartzeko une garrantzitsuak gogoan izateko.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Jakinarazpen mezuak pertsonalizatu",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Jakinarazpenen testua pertsonalizatu dezakezu",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Hartze-jakinarazpenaren mezua libreki editatu",
