@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Худалдан авсны дараа автомат сунгалтыг {storeName} аппын бүртгэлийн тохиргооноос цуцалж болно. Pilll апп дотроос цуцлах боломжгүй.",
   "moreDetails": "Дэлгэрэнгүй мэдээлэл",
   "restorePurchase": "Таны худалдан авалтын мэдээллийг сэргээсэн",
-  "previouslyPurchased": "Худалдан авалтыг сэргээх",
+  "previouslyPurchased": "Өмнө нь худалдаж авсан уу? Худалдан авалтаа энд сэргээнэ үү",
   "noPreviousPurchaseInfo": "Өмнөх худалдан авалтын мэдээлэл олдсонгүй. Бүртгэлээ шалгаад дахин оролдож үзнэ үү",
   "monthlyPlan": "Сарын план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/сар",

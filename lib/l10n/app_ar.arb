@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "بعد الشراء، يمكنكِ إلغاء التجديد التلقائي من إعدادات الحساب في تطبيق {storeName}. لا يمكن إلغاؤه من داخل Pilll.",
   "moreDetails": "مزيد من التفاصيل",
   "restorePurchase": "تمت استعادة معلومات الشراء",
-  "previouslyPurchased": "للمشترين السابقين، انقر هنا",
+  "previouslyPurchased": "هل اشتريتِ سابقًا؟ استعيدي مشترياتك من هنا",
   "noPreviousPurchaseInfo": "لم يتم العثور على معلومات الشراء السابقة. يرجى التحقق من حسابك والمحاولة مرة أخرى",
   "monthlyPlan": "خطة شهرية",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/شهر",

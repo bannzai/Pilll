@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Po nákupu můžete automatické obnovení zrušit v nastavení účtu v aplikaci {storeName}. V aplikaci Pilll ho zrušit nelze.",
   "moreDetails": "Více informací",
   "restorePurchase": "Informace o nákupu byly obnoveny",
-  "previouslyPurchased": "Pro ty, kteří již zakoupili",
+  "previouslyPurchased": "Už jste zakoupili? Obnovit nákup",
   "noPreviousPurchaseInfo": "Informace o předchozím nákupu nebyly nalezeny. Zkontrolujte prosím svůj účet a zkuste to znovu.",
   "monthlyPlan": "Měsíční plán",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/měsíc",

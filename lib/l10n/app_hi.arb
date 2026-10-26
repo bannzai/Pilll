@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "खरीदारी के बाद, आप {storeName} ऐप की खाता सेटिंग में अपने आप होने वाला नवीनीकरण रद्द कर सकते हैं। इसे Pilll ऐप से रद्द नहीं किया जा सकता।",
   "moreDetails": "और जानकारी",
   "restorePurchase": "आपकी खरीदारी की जानकारी बहाल हो गई है",
-  "previouslyPurchased": "पहले खरीदारी करने वाले यहाँ क्लिक करें",
+  "previouslyPurchased": "पहले खरीदा है? अपनी खरीदारी यहाँ बहाल करें",
   "noPreviousPurchaseInfo": "पिछली खरीदारी की जानकारी नहीं मिली। कृपया अपना खाता जांचें और पुनः कोशिश करें।",
   "monthlyPlan": "मासिक प्लान",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/माह",

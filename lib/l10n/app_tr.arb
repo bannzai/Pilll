@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Satın aldıktan sonra otomatik yenilemeyi {storeName} uygulamasındaki hesap ayarlarından iptal edebilirsiniz. Pilll içinden iptal edemezsiniz.",
   "moreDetails": "Ayrıntılı bilgi",
   "restorePurchase": "Satın alma bilgileriniz geri yüklendi",
-  "previouslyPurchased": "Daha önce satın alanlar",
+  "previouslyPurchased": "Daha önce satın aldınız mı? Satın alımınızı buradan geri yükleyin",
   "noPreviousPurchaseInfo": "Önceki satın alma bilgileri bulunamadı. Lütfen hesabınızı kontrol edin ve tekrar deneyin.",
   "monthlyPlan": "Aylık Plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ay",

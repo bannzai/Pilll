@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Sau khi mua, bạn có thể hủy gia hạn tự động trong phần cài đặt tài khoản của ứng dụng {storeName}. Bạn không thể hủy trong Pilll.",
   "moreDetails": "Xem thêm chi tiết",
   "restorePurchase": "Đã khôi phục thông tin mua hàng của bạn",
-  "previouslyPurchased": "Dành cho người đã mua trước đây",
+  "previouslyPurchased": "Bạn đã mua trước đây? Vui lòng khôi phục giao dịch mua tại đây",
   "noPreviousPurchaseInfo": "Không tìm thấy thông tin mua hàng trước đó. Vui lòng kiểm tra tài khoản và thử lại.",
   "monthlyPlan": "Gói hàng tháng",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/tháng",

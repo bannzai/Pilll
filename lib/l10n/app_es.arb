@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Después de la compra, puedes cancelar la renovación automática en la configuración de tu cuenta de la app {storeName}. No puedes cancelarla desde Pilll.",
   "moreDetails": "Más detalles",
   "restorePurchase": "Se ha restaurado tu compra",
-  "previouslyPurchased": "Restaurar compras",
+  "previouslyPurchased": "¿Ya compraste? Restaura tu compra aquí",
   "noPreviousPurchaseInfo": "No se encontró información de compras anteriores. Verifique su cuenta e inténtelo de nuevo.",
   "monthlyPlan": "Plan mensual",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mes",

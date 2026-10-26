@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "କିଣିବା ପରେ ଆପଣ {storeName} ଆପ୍‌ର ଆକାଉଣ୍ଟ ସେଟିଂସ୍‌ରୁ ସ୍ୱୟଂଚାଳିତ ନବୀକରଣ ବାତିଲ କରିପାରିବେ। Pilll ଆପ୍‌ ଭିତରୁ ଏହାକୁ ବାତିଲ କରିହେବ ନାହିଁ।",
   "moreDetails": "ଅଧିକ ବିବରଣୀ",
   "restorePurchase": "ଆପଣଙ୍କ କ୍ରୟ ସୂଚନା ପୁନରୁଦ୍ଧାର ହୋଇଛି",
-  "previouslyPurchased": "ପୂର୍ବରୁ କିଣିଥିବା ବ୍ୟକ୍ତିମାନେ ଏଠାରେ",
+  "previouslyPurchased": "ପୂର୍ବରୁ କିଣିଛନ୍ତି କି? ଏଠାରେ ଆପଣଙ୍କ କ୍ରୟ ପୁନଃସ୍ଥାପନ କରନ୍ତୁ",
   "noPreviousPurchaseInfo": "ପୂର୍ବ କ୍ରୟ ସୂଚନା ମିଳିଲା ନାହିଁ। ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
   "monthlyPlan": "ମାସିକ ଯୋଜନା",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ମାସ",

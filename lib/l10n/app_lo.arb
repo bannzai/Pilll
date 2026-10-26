@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "ຫຼັງຈາກຊື້ແລ້ວ ສາມາດຍົກເລີກການຕໍ່ອາຍຸອັດຕະໂນມັດໄດ້ໃນການຕັ້ງຄ່າບັນຊີຂອງແອັບ {storeName} ເດີ. ບໍ່ສາມາດຍົກເລີກຈາກໃນ Pilll ໄດ້.",
   "moreDetails": "ລາຍລະອຽດເພີ່ມເຕີມ",
   "restorePurchase": "ຂໍ້ມູນການຊື້ຂອງທ່ານຖືກກູ້ຄືນແລ້ວ",
-  "previouslyPurchased": "ສຳລັບຜູ້ຊື້ທີ່ຜ່ານມາ",
+  "previouslyPurchased": "ເຄີຍຊື້ແລ້ວບໍ? ກະລຸນາກູ້ຄືນການຊື້ຢູ່ນີ້",
   "noPreviousPurchaseInfo": "ບໍ່ພົບຂໍ້ມູນການຊື້ກ່ອນໜ້ານີ້. ກະລຸນາກວດສອບບັນຊີຂອງທ່ານແລ້ວລອງໃໝ່ອີກຄັ້ງ",
   "monthlyPlan": "ແຜນປະຈຳເດືອນ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ເດືອນ",

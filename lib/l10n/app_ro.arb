@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "După cumpărare, poți anula reînnoirea automată din setările contului în aplicația {storeName}. Nu o poți anula din Pilll.",
   "moreDetails": "Mai multe detalii",
   "restorePurchase": "Informațiile despre achiziția ta au fost restabilite",
-  "previouslyPurchased": "Am cumpărat anterior",
+  "previouslyPurchased": "Ai cumpărat deja? Restabilește achiziția aici",
   "noPreviousPurchaseInfo": "Nu am găsit informații despre achizițiile anterioare. Te rugăm să îți verifici contul și să încerci din nou.",
   "monthlyPlan": "Plan lunar",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/lună",

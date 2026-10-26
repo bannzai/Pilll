@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Ar ôl prynu, gallwch ganslo’r adnewyddiad awtomatig yng ngosodiadau eich cyfrif yn ap {storeName}. Ni ellir ei ganslo o ap Pilll.",
   "moreDetails": "Rhagor o fanylion",
   "restorePurchase": "Mae manylion eich pryniant wedi'u hadfer",
-  "previouslyPurchased": "Os prynoch chi eisoes",
+  "previouslyPurchased": "Wedi prynu o'r blaen? Adferwch eich pryniant yma",
   "noPreviousPurchaseInfo": "Ni chanfuwyd gwybodaeth brynu flaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni",
   "monthlyPlan": "Cynllun Misol",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mis",

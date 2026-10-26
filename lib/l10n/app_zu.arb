@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Ngemva kokuthenga, ungakhansela ukuvuselelwa okuzenzakalelayo kuzilungiselelo ze-akhawunti kuhlelo lokusebenza lwe-{storeName}. Awukwazi ukukukhansela ngaphakathi kwe-Pilll.",
   "moreDetails": "Imininingwane eyengeziwe",
   "restorePurchase": "Ulwazi lokuthenga kwakho selubuyiselwe",
-  "previouslyPurchased": "Uma senguthenge ngaphambili, chofoza lapha",
+  "previouslyPurchased": "Usuke wathenga ngaphambilini? Sicela ubuyisele ukuthenga kwakho lapha",
   "noPreviousPurchaseInfo": "Asikatholanga ulwazi lokuthenga kwangaphambilini. Sicela uhlole i-akhawunti yakho bese uzama futhi.",
   "monthlyPlan": "Uhlelo lwenyanga",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ngenyanga",

@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "По купувањето, можете да го откажете автоматското обновување во поставките за сметката во апликацијата {storeName}. Не може да го откажете во Pilll.",
   "moreDetails": "Повеќе детали",
   "restorePurchase": "Информациите за Вашето купување се вратени",
-  "previouslyPurchased": "Претходно купувале? Кликнете тука",
+  "previouslyPurchased": "Веќе сте купиле? Вратете го купувањето тука",
   "noPreviousPurchaseInfo": "Не можат да се најдат претходни информации за купување. Ве молиме проверете ја вашата сметка и обидете се повторно",
   "monthlyPlan": "месечен план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",

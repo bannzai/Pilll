@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "A vásárlás után az automatikus megújítást a {storeName} alkalmazás fiókbeállításaiban mondhatod le. A Pilll alkalmazásban nem lehet lemondani.",
   "moreDetails": "További részletek",
   "restorePurchase": "A vásárlási adataid visszaálltak",
-  "previouslyPurchased": "Már vásároltam",
+  "previouslyPurchased": "Korábban már megvetted? Itt állíthatod vissza a vásárlást",
   "noPreviousPurchaseInfo": "Nem találhatók korábbi vásárlások. Kérjük, ellenőrizze a fiókját és próbálja meg újra.",
   "monthlyPlan": "Havi előfizetés",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hó",

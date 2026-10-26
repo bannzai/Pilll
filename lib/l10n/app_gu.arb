@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "ખરીદી પછી તમે {storeName} ઍપના ખાતાની સેટિંગમાં આપમેળે થતા નવીનીકરણને રદ કરી શકો છો. Pilllમાંથી તેને રદ કરી શકાતું નથી.",
   "moreDetails": "વધુ વિગતો",
   "restorePurchase": "તમારી ખરીદીની માહિતી પુનઃસ્થાપિત થઈ ગઈ છે",
-  "previouslyPurchased": "પહેલાં ખરીદનારાઓ માટે અહીં",
+  "previouslyPurchased": "પહેલાં ખરીદ્યું છે? અહીં તમારી ખરીદી પુનઃસ્થાપિત કરો",
   "noPreviousPurchaseInfo": "અગાઉની ખરીદીની માહિતી મળી નથી. કૃપા કરીને તમારું એકાઉન્ટ ચકાસીને ફરીથી પ્રયાસ કરો",
   "monthlyPlan": "માસિક પ્લાન",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/મહિનો",

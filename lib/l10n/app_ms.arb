@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Selepas pembelian, anda boleh membatalkan pembaharuan automatik dalam tetapan akaun aplikasi {storeName}. Pembatalan tidak boleh dibuat dalam Pilll.",
   "moreDetails": "Maklumat lanjut",
   "restorePurchase": "Maklumat pembelian anda telah dipulihkan",
-  "previouslyPurchased": "Telah membeli sebelumnya? Klik di sini",
+  "previouslyPurchased": "Pernah membeli sebelum ini? Pulihkan pembelian anda di sini",
   "noPreviousPurchaseInfo": "Maklumat pembelian sebelumnya tidak dijumpai. Sila semak akaun anda dan cuba lagi.",
   "monthlyPlan": "Pelan Bulanan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/bulan",

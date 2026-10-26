@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Сатып алғаннан кейін автоматты жаңартудан {storeName} қолданбасының есептік жазба баптауларында бас тарта аласыз. Оны Pilll ішінде тоқтату мүмкін емес.",
   "moreDetails": "Толығырақ",
   "restorePurchase": "Сатып алу туралы ақпаратыңыз қалпына келтірілді",
-  "previouslyPurchased": "Бұрын сатып алғандар үшін",
+  "previouslyPurchased": "Бұрын сатып алдыңыз ба? Сатып алуды осы жерден қалпына келтіріңіз",
   "noPreviousPurchaseInfo": "Бұрынғы сатып алу ақпараты табылмады. Тіркелгіңізді тексеріп, қайтадан сынап көріңіз",
   "monthlyPlan": "Айлық жоспар",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",

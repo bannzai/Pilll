@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Ná aankoop kan jy outomatiese hernuwing in die rekeninginstellings van die {storeName}-app kanselleer. Jy kan dit nie in Pilll kanselleer nie.",
   "moreDetails": "Meer besonderhede",
   "restorePurchase": "Jou aankoop is herstel",
-  "previouslyPurchased": "Herstel vorige aankoop",
+  "previouslyPurchased": "Reeds gekoop? Herstel jou aankoop hier",
   "noPreviousPurchaseInfo": "Kan nie vorige aankope vind nie. Kontroleer jou rekening en probeer weer.",
   "monthlyPlan": "Maandelikse Plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",

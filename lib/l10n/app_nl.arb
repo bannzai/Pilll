@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Na je aankoop kun je automatische verlenging opzeggen via de accountinstellingen in de {storeName}-app. Opzeggen in Pilll is niet mogelijk.",
   "moreDetails": "Meer informatie",
   "restorePurchase": "Je aankoopgegevens zijn hersteld",
-  "previouslyPurchased": "Eerdere aankoop herstellen",
+  "previouslyPurchased": "Al eerder gekocht? Herstel je aankoop hier",
   "noPreviousPurchaseInfo": "Er zijn geen eerdere aankopen gevonden. Controleer uw account en probeer het opnieuw.",
   "monthlyPlan": "Maandelijks abonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",

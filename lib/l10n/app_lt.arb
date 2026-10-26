@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Įsigiję prenumeratą, automatinį atnaujinimą galite atšaukti programėlės {storeName} paskyros nustatymuose. Programėlėje Pilll jo atšaukti negalima.",
   "moreDetails": "Daugiau informacijos",
   "restorePurchase": "Jūsų pirkimo informacija atkurta",
-  "previouslyPurchased": "Atkurti pirkimą",
+  "previouslyPurchased": "Jau pirkote? Atkurkite pirkinį čia",
   "noPreviousPurchaseInfo": "Ankstesnės pirkimo informacijos nerasta. Patikrinkite savo paskyrą ir bandykite dar kartą",
   "monthlyPlan": "Mėnesio planas",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mėn.",

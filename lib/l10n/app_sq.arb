@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Pas blerjes, mund ta anuloni rinovimin automatik te cilësimet e llogarisë në aplikacionin {storeName}. Nuk mund ta anuloni nga Pilll.",
   "moreDetails": "Më shumë hollësi",
   "restorePurchase": "Informacionet e blerjes suaj u rikthyen",
-  "previouslyPurchased": "Për blerësit e mëparshëm",
+  "previouslyPurchased": "Keni blerë më parë? Riktheni blerjen këtu",
   "noPreviousPurchaseInfo": "Nuk u gjetën informacione për blerjen e mëparshme. Ju lutem kontrolloni llogarinë tuaj dhe provoni përsëri.",
   "monthlyPlan": "Plani Mujor",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/muaj",

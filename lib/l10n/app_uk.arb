@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Після покупки ви можете скасувати автоматичне поновлення в налаштуваннях облікового запису в застосунку {storeName}. У Pilll скасувати його не можна.",
   "moreDetails": "Докладніше",
   "restorePurchase": "Інформацію про вашу покупку відновлено",
-  "previouslyPurchased": "Для тих, хто вже купував",
+  "previouslyPurchased": "Уже купували? Відновіть покупку тут",
   "noPreviousPurchaseInfo": "Попередні покупки не знайдено. Перевірте свій акаунт та спробуйте ще раз",
   "monthlyPlan": "Місячний план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/міс",

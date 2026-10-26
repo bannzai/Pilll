@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Baada ya kununua, unaweza kughairi usasishaji wa moja kwa moja kwenye mipangilio ya akaunti katika programu ya {storeName}. Huwezi kuug hairi ndani ya Pilll.",
   "moreDetails": "Maelezo zaidi",
   "restorePurchase": "Taarifa za ununuzi wako zimerejeshwa",
-  "previouslyPurchased": "Waliokuwa wamenunua zamani",
+  "previouslyPurchased": "Ulishanunua awali? Tafadhali rejesha ununuzi wako hapa",
   "noPreviousPurchaseInfo": "Taarifa za ununuzi wa awali hazijapatikana. Hakikisha akaunti yako na ujaribu tena",
   "monthlyPlan": "Mpango wa Mwezi",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mwezi",

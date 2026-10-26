@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Xariddan soʻng avtomatik yangilanishni {storeName} ilovasidagi hisob sozlamalarida bekor qilishingiz mumkin. Uni Pilll ilovasi ichida bekor qilib boʻlmaydi.",
   "moreDetails": "Batafsil maʼlumot",
   "restorePurchase": "Xaridingiz haqidagi maʼlumotlar tiklandi",
-  "previouslyPurchased": "Avval sotib olganlar",
+  "previouslyPurchased": "Avval xarid qilganmisiz? Xaridingizni shu yerda tiklang",
   "noPreviousPurchaseInfo": "Oldingi xarid ma'lumotlari topilmadi. Hisobingizni tekshirib, qaytadan urinib ko'ring.",
   "monthlyPlan": "Oylik plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/oy",

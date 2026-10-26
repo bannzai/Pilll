@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "له پېرود وروسته، تاسو کولای شئ اتومات نوي کېدل د {storeName} اپلېکېشن د حساب په امستنو کې لغوه کړئ. په Pilll کې یې لغوه کول امکان نه لري.",
   "moreDetails": "نور جزئیات",
   "restorePurchase": "ستاسو د پېرود معلومات بېرته راګرځول شوي دي",
-  "previouslyPurchased": "دمخه پیرودونکي دلته",
+  "previouslyPurchased": "مخکې مو پېرود کړی؟ خپل پېرود دلته بېرته راولي",
   "noPreviousPurchaseInfo": "د پخوانۍ پیرودنې معلومات ونه موندل شول. مهرباني وکړئ خپل حساب وګورئ او بیا هڅه وکړئ.",
   "monthlyPlan": "میاشتنۍ پلان",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/په میاشت کې",

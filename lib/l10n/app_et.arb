@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Pärast ostu saad automaatse uuendamise tühistada {storeName}i rakenduse kontoseadetes. Pilllis seda tühistada ei saa.",
   "moreDetails": "Lisateave",
   "restorePurchase": "Sinu ostuteave on taastatud",
-  "previouslyPurchased": "Varem ostnud kasutajatele",
+  "previouslyPurchased": "Oled juba ostnud? Taasta ost siin",
   "noPreviousPurchaseInfo": "Varasemaid ostuandmeid ei leitud. Kontrollige oma kontot ja proovige uuesti.",
   "monthlyPlan": "Kuine plaan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kuus",

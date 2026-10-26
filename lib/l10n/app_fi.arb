@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Oston jälkeen voit perua automaattisen uusimisen {storeName}-sovelluksen tiliasetuksissa. Sitä ei voi perua Pilllissä.",
   "moreDetails": "Lisätietoja",
   "restorePurchase": "Ostotietosi on palautettu",
-  "previouslyPurchased": "Palauta aiemmat ostokset",
+  "previouslyPurchased": "Oletko ostanut jo aiemmin? Palauta ostos tästä",
   "noPreviousPurchaseInfo": "Aiempia ostoja ei löydetty. Tarkista tilisi ja yritä uudelleen.",
   "monthlyPlan": "Kuukausipaketti",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kk",

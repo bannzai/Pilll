@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "לאחר הרכישה אפשר לבטל את החידוש האוטומטי בהגדרות החשבון באפליקציית {storeName}. אי אפשר לבטל אותו מתוך Pilll.",
   "moreDetails": "פרטים נוספים",
   "restorePurchase": "פרטי הרכישה שוחזרו",
-  "previouslyPurchased": "לרוכשים קודמים - כאן",
+  "previouslyPurchased": "כבר בוצעה רכישה? שחזור הרכישה כאן",
   "noPreviousPurchaseInfo": "לא נמצאו רכישות קודמות. אנא ודאו שאתם מחוברים לחשבון הנכון ונסו שוב",
   "monthlyPlan": "תכנית חודשית",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/לחודש",

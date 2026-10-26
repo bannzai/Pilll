@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Eftir kaupin geturðu sagt upp sjálfvirkri endurnýjun í reikningsstillingum {storeName}-appsins. Ekki er hægt að segja henni upp í Pilll.",
   "moreDetails": "Nánari upplýsingar",
   "restorePurchase": "Upplýsingar um kaupin þín hafa verið endurheimtar",
-  "previouslyPurchased": "Fyrri kaupendur - hér",
+  "previouslyPurchased": "Hefurðu keypt áður? Endurheimtu kaupin hér",
   "noPreviousPurchaseInfo": "Engar fyrri kaupupplýsingar fundust. Vinsamlegast staðfestu reikninginn þinn og reyndu aftur.",
   "monthlyPlan": "Mánaðaráskrift",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mánuður",

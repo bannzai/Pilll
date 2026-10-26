@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "මිලදී ගැනීමෙන් පසු, {storeName} යෙදුමේ ගිණුම් සැකසුම් තුළ ස්වයංක්‍රීය අලුත් කිරීම අවලංගු කළ හැකිය. Pilll යෙදුම තුළින් එය අවලංගු කළ නොහැකිය.",
   "moreDetails": "වැඩි විස්තර",
   "restorePurchase": "ඔබේ මිලදී ගැනීමේ තොරතුරු යළි ලබාගෙන ඇත",
-  "previouslyPurchased": "කලින් මිලදී ගත් අයට මෙතන",
+  "previouslyPurchased": "කලින් මිලදී ගෙන තිබේද? කරුණාකර මිලදී ගැනීම මෙතැනින් ප්‍රතිසාධනය කරන්න",
   "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීම් තොරතුරු හමු නොවිණි. කරුණාකර ඔබගේ ගිණුම පරීක්ෂා කර නැවත උත්සාහ කරන්න",
   "monthlyPlan": "මාසික සැලැස්ම",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/මාසයට",

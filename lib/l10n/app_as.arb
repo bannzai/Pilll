@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "ক্ৰয়ৰ পাছত আপুনি {storeName} এপৰ একাউণ্ট ছেটিংছত স্বয়ংক্ৰিয় নবীকৰণ বাতিল কৰিব পাৰে। Pilll এপৰ ভিতৰৰ পৰা ইয়াক বাতিল কৰিব নোৱাৰি।",
   "moreDetails": "অধিক বিৱৰণ",
   "restorePurchase": "আপোনাৰ ক্ৰয়ৰ তথ্য পুনৰুদ্ধাৰ কৰা হৈছে",
-  "previouslyPurchased": "আগতে ক্ৰয় কৰা গ্ৰাহকসকলৰ বাবে ইয়াত",
+  "previouslyPurchased": "আগতে ক্ৰয় কৰিছিল নেকি? ইয়াত ক্ৰয় পুনৰুদ্ধাৰ কৰক",
   "noPreviousPurchaseInfo": "আগৰ ক্ৰয় তথ্য পোৱা নগ'ল। আপোনাৰ একাউণ্ট পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক",
   "monthlyPlan": "মাসিক পৰিকল্পনা",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/মাহ",

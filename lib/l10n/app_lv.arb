@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Pēc iegādes automātisko atjaunošanu varat atcelt lietotnes {storeName} konta iestatījumos. Lietotnē Pilll to atcelt nevar.",
   "moreDetails": "Plašāka informācija",
   "restorePurchase": "Jūsu pirkuma informācija ir atjaunota",
-  "previouslyPurchased": "Iepriekšējie pircēji - šeit",
+  "previouslyPurchased": "Jau iegādājāties? Atjaunojiet pirkumu šeit",
   "noPreviousPurchaseInfo": "Iepriekšējo pirkumu informācija nav atrasta. Lūdzu, pārbaudiet savu kontu un mēģiniet vēlreiz.",
   "monthlyPlan": "Mēneša plāns",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mēn.",

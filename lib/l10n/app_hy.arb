@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Գնումից հետո Դուք կարող եք չեղարկել ավտոմատ երկարաձգումը {storeName} հավելվածի հաշվի կարգավորումներում։ Pilll հավելվածից այն չեղարկել հնարավոր չէ։",
   "moreDetails": "Մանրամասներ",
   "restorePurchase": "Ձեր գնման տվյալները վերականգնվել են",
-  "previouslyPurchased": "Նախկին գնումների վերականգնում",
+  "previouslyPurchased": "Նախկինում գնե՞լ եք։ Վերականգնեք գնումն այստեղ",
   "noPreviousPurchaseInfo": "Նախորդ գնման տվյալները չեն գտնվել: Ստուգեք ձեր հաշիվը և կրկին փորձեք:",
   "monthlyPlan": "Ամսական պլան",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ամիս",

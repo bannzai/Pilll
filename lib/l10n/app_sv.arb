@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Efter köpet kan du avsluta den automatiska förnyelsen i kontoinställningarna i {storeName}-appen. Du kan inte avsluta den i Pilll.",
   "moreDetails": "Mer information",
   "restorePurchase": "Din köpinformation har återställts",
-  "previouslyPurchased": "Återställ tidigare köp",
+  "previouslyPurchased": "Har du köpt tidigare? Återställ köpet här",
   "noPreviousPurchaseInfo": "Vi kunde inte hitta någon tidigare köpinformation. Kontrollera ditt konto och försök igen",
   "monthlyPlan": "Månadsplan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/månad",

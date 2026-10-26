@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Erosi ondoren, berritze automatikoa {storeName} aplikazioko kontuaren ezarpenetan bertan behera utz dezakezu. Ezin da Pilll aplikaziotik bertan behera utzi.",
   "moreDetails": "Xehetasun gehiago",
   "restorePurchase": "Zure erosketaren datuak berrezarri dira",
-  "previouslyPurchased": "Aurretik erositakoak hemen",
+  "previouslyPurchased": "Lehenago erosi duzu? Berreskuratu erosketa hemen",
   "noPreviousPurchaseInfo": "Aurreko erosketa-informazioa ez da aurkitu. Kontua egiaztatu eta berriz saiatu.",
   "monthlyPlan": "Hilabeteko plana",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hileko",

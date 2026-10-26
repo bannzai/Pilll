@@ -190,7 +190,7 @@
   "cancelAutoRenewInfo": "Nakon kupnje automatsku obnovu možete otkazati u postavkama računa u aplikaciji {storeName}. Ne možete je otkazati u aplikaciji Pilll.",
   "moreDetails": "Više pojedinosti",
   "restorePurchase": "Podaci o vašoj kupnji su vraćeni",
-  "previouslyPurchased": "Obnovi kupovinu",
+  "previouslyPurchased": "Već ste kupili? Ovdje vratite kupnju",
   "noPreviousPurchaseInfo": "Prethodne informacije o kupovini nisu pronađene. Molimo provjerite vaš račun i pokušajte ponovno.",
   "monthlyPlan": "Mjesečni plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mjesec",
