@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "لا يمكنكِ الاشتراك في الخطة باستخدام حساب {accountName}. يُرجى التحقق من معلومات الدفع والمحاولة مرة أخرى",
   "purchaseErrorPaymentPendingError": "توقفت عملية الدفع قبل اكتمالها. يُرجى التحقق من حالة الدفع في {storeName} باستخدام حساب {accountName} الذي سجلتِ الدخول إليه.",
   "purchaseErrorInvalidSubscriberAttributesError": "لم تكتمل عملية الشراء. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، يُرجى التواصل معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "فشل في الحصول على معلومات المستخدم. يرجى المحاولة مرة أخرى بعد مرور بعض الوقت. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > الاستفسار. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "تعذّر الحصول على معلومات المستخدم. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، تواصلي معنا من الإعدادات > تواصلي معنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "فشل في استرداد معلومات الشراء. يرجى الانتظار والمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "حدث خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "خطأ غير معروف السبب. لم نتمكن من الحصول على معلومات الشراء مسبقاً. التفاصيل: {exceptionMessage}:{exceptionDetails}",

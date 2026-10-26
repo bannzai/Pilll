@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "Su savo {accountName} paskyra negalite užsisakyti plano. Patikrinkite mokėjimo duomenis ir bandykite dar kartą",
   "purchaseErrorPaymentPendingError": "Mokėjimas nutrūko. Patikrinkite jo būseną „{storeName}“ naudodami paskyrą {accountName}, prie kurios esate prisijungę.",
   "purchaseErrorInvalidSubscriberAttributesError": "Nepavyko užbaigti pirkimo. Po kiek laiko bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "Nepavyko gauti vartotojo informacijos. Palaukite ir bandykite dar kartą. Jei problema išlieka, kreipkitės į mus per Nustatymai > Kontaktai. Detalės: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Nepavyko gauti naudotojo informacijos. Po kurio laiko bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Nepavyko gauti pirkimo informacijos. Palaukite ir bandykite dar kartą. Jei problema neišsprendžiama, kreipkitės per Nustatymai > Užklausa. Detalės: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Išėjo nežinoma klaida. Prašome atnaujinti programą iki naujausios versijos ir bandyti dar kartą. Jei problema išlieka, kreipkitės per Nustatymai > Pagalba. Kodas: {errorCode} Detalės: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Nežinoma klaida. Nepavyko iš anksto gauti pirkimo informacijos. Detalės: {exceptionMessage}:{exceptionDetails}",

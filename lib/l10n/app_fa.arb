@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "با حساب {accountName} خود نمی‌توانید در این طرح مشترک شوید. لطفاً اطلاعات پرداخت را بررسی کنید و دوباره تلاش کنید",
   "purchaseErrorPaymentPendingError": "پرداخت پیش از تکمیل متوقف شده است. لطفاً وضعیت آن را در {storeName} با حساب {accountName} که با آن وارد شده‌اید بررسی کنید.",
   "purchaseErrorInvalidSubscriberAttributesError": "خرید انجام نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل برطرف نشد، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "دریافت اطلاعات کاربر ناموفق بود. لطفاً پس از مدتی دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "دریافت اطلاعات کاربر ممکن نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "دریافت اطلاعات خرید با شکست مواجه شد. لطفاً کمی صبر کرده و مجدداً تلاش کنید. در صورت ادامه مشکل، از طریق تنظیمات > پشتیبانی با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "خطای نامشخصی رخ داده است. لطفاً به آخرین نسخه به‌روزرسانی کرده و دوباره امتحان کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما با پشتیبانی تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "خطای نامشخص است. امکان دریافت اطلاعات خرید از قبل وجود نداشت. جزئیات: {exceptionMessage}:{exceptionDetails}",

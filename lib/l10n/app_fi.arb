@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "Et voi tilata pakettia {accountName}-tililläsi. Tarkista maksutietosi ja yritä uudelleen",
   "purchaseErrorPaymentPendingError": "Maksu keskeytyi. Tarkista sen tila {storeName}sta sillä {accountName}-tilillä, jolla olet kirjautunut sisään.",
   "purchaseErrorInvalidSubscriberAttributesError": "Ostosta ei voitu viimeistellä. Kokeile hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "Käyttäjätietojen hakeminen epäonnistui. Odota hetki ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä Asetukset > Ota yhteyttä -osiossa. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Käyttäjätietoja ei saatu haettua. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Ostotietojen hakeminen epäonnistui. Yritä uudelleen hetken kuluttua. Jos ongelma ei ratkea, ota yhteyttä kohdasta Asetukset > Yhteydenotto. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma ei ratkeaa, ota yhteyttä tukeen kohdasta Asetukset > Yhteydenotto. Koodi: {errorCode} Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Tuntematon virhe. Ostotietojen ennakkohaku epäonnistui. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",

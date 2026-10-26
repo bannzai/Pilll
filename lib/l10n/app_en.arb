@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "You can’t subscribe to the plan with your {accountName} account. Check your payment details and try again",
   "purchaseErrorPaymentPendingError": "The payment was interrupted. Please check its status in {storeName} with the {accountName} account you're signed in to.",
   "purchaseErrorInvalidSubscriberAttributesError": "The purchase couldn’t be completed. Please try again in a little while. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "Failed to retrieve user information. Please try again after some time. If the issue persists, please contact us via Settings > Contact Us. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "We couldn’t retrieve your account information. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Failed to retrieve purchase information. Please try again after some time. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "An unknown error has occurred. Please update to the latest version and try again. If the issue persists, please contact us through Settings > Contact Us. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Unknown error occurred. Failed to retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",

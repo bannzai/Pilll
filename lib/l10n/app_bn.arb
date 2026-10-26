@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "আপনার {accountName} অ্যাকাউন্ট দিয়ে প্ল্যানে যোগ দেওয়া যাচ্ছে না। অনুগ্রহ করে পেমেন্টের তথ্য দেখে আবার চেষ্টা করুন",
   "purchaseErrorPaymentPendingError": "পেমেন্টের প্রক্রিয়া মাঝপথে থেমে গেছে। আপনি যে {accountName} অ্যাকাউন্টে লগ ইন করেছেন, সেটি দিয়ে {storeName}-এ পেমেন্টের অবস্থা দেখুন।",
   "purchaseErrorInvalidSubscriberAttributesError": "কেনাকাটা সম্পন্ন হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "ব্যবহারকারীর তথ্য পেতে ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "ব্যবহারকারীর তথ্য পাওয়া যায়নি। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "ক্রয় তথ্য পুনরুদ্ধার করতে ব্যর্থ হয়েছে। অনুগ্রহ করে কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন। সমস্যার সমাধান না হলে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "অজানা কারণে একটি ত্রুটি ঘটেছে। সর্বশেষ সংস্করণে আপডেট করে আবার চেষ্টা করুন। যদি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "অজানা কারণে ত্রুটি হয়েছে। ক্রয়ের তথ্য আগে থেকে সংগ্রহ করা যায়নি। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",

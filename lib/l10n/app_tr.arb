@@ -308,7 +308,7 @@
   "purchaseErrorInsufficientPermissionsError": "{accountName} hesabınızla plana abone olamıyorsunuz. Lütfen ödeme bilgilerinizi kontrol edip tekrar deneyin",
   "purchaseErrorPaymentPendingError": "Ödeme tamamlanmadan durdu. Lütfen giriş yaptığınız {accountName} hesabıyla {storeName} üzerinden ödeme durumunu kontrol edin.",
   "purchaseErrorInvalidSubscriberAttributesError": "Satın alma tamamlanamadı. Lütfen kısa bir süre sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorLogOutWithAnonymousUserError": "Kullanıcı bilgileri alınamadı. Lütfen biraz bekleyip tekrar deneyin. Sorun devam ederse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Kullanıcı bilgileri alınamadı. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > İletişim bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Satın alma bilgileri alınamadı. Lütfen bir süre bekleyip tekrar deneyin. Sorun çözülmezse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Bilinmeyen bir hata oluştu. Lütfen en son sürüme güncelleyin ve tekrar deneyin. Sorun devam ederse Ayarlar > İletişim'den bizimle iletişime geçin. Kod: {errorCode} Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Bilinmeyen bir hata oluştu. Satın alma bilgileri önceden alınamadı. Detaylar: {exceptionMessage}:{exceptionDetails}",
