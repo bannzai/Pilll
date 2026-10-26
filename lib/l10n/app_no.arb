@@ -153,7 +153,7 @@
   "number": " (p-pille)",
   "dayNumber": ". dag",
   "recordedMenstruationStartDate": "Starten på mensen er registrert fra {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Menstruasjonsstartdato",
+  "menstruationStartDate": "Startdato for mens",
   "menstruationEndDate": "Menstruasjonssluttdato",
   "menstruationScheduleDate": "Forventet menstruasjonsdato",
   "menstruationScheduleDateWithNumber": "Menstruasjon om: {diffPlusOne} dag",

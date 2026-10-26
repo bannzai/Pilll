@@ -153,7 +153,7 @@
   "number": " (пігулка)",
   "dayNumber": " дзень",
   "recordedMenstruationStartDate": "Пачатак месячных запісаны з {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "дзень пачатку месячных",
+  "menstruationStartDate": "Дата пачатку месячных",
   "menstruationEndDate": "Дата заканчэння менструацыі",
   "menstruationScheduleDate": "Планавая дата месячных",
   "menstruationScheduleDateWithNumber": "Чаканыя месячныя: {diffPlusOne}-ы дзень",

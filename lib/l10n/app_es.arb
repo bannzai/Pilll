@@ -153,7 +153,7 @@
   "number": " (píldora)",
   "dayNumber": " día",
   "recordedMenstruationStartDate": "Se registró el inicio de la regla el {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Fecha de inicio de menstruación",
+  "menstruationStartDate": "Fecha de inicio de la regla",
   "menstruationEndDate": "Fecha de fin de la menstruación",
   "menstruationScheduleDate": "Fecha prevista de menstruación",
   "menstruationScheduleDateWithNumber": "Menstruación prevista: día {diffPlusOne}",

@@ -153,7 +153,7 @@
   "number": " (tableta)",
   "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Unang araw ng regla",
+  "menstruationStartDate": "Petsa ng simula ng regla",
   "menstruationEndDate": "Petsa ng Pagtatapos ng Regla",
   "menstruationScheduleDate": "Inaasahang Petsa ng Regla",
   "menstruationScheduleDateWithNumber": "Inaasahang regla: {diffPlusOne} araw",

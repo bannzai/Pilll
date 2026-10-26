@@ -153,7 +153,7 @@
   "number": " (pilsen)",
   "dayNumber": " diwrnod",
   "recordedMenstruationStartDate": "Mae dechrau'r mislif wedi'i gofnodi o {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Dyddiad Dechrau'r Cyfnod",
+  "menstruationStartDate": "Dyddiad dechrau'r mislif",
   "menstruationEndDate": "Dyddiad diwedd mislif",
   "menstruationScheduleDate": "Dyddiad Disgwyliedig y Mislif",
   "menstruationScheduleDateWithNumber": "Rheolif ddisgwyliedig: diwrnod {diffPlusOne}",

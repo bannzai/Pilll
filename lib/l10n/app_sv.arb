@@ -153,7 +153,7 @@
   "number": " (piller)",
   "dayNumber": ":e dagen",
   "recordedMenstruationStartDate": "Mensens start har registrerats för {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Mens startdatum",
+  "menstruationStartDate": "Startdatum för mens",
   "menstruationEndDate": "Slutdag för mens",
   "menstruationScheduleDate": "Förväntat mensdatum",
   "menstruationScheduleDateWithNumber": "Förväntad mens: dag {diffPlusOne}",

@@ -153,7 +153,7 @@
   "number": " (ਗੋਲੀ)",
   "dayNumber": "ਵਾਂ ਦਿਨ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ਤੋਂ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਰਿਕਾਰਡ ਦਰਜ ਹੋ ਗਿਆ ਹੈ",
-  "menstruationStartDate": "ਮਾਸਿਕ ਧਰਮ ਸ਼ੁਰੂਆਤ ਦੀ ਤਾਰੀਖ",
+  "menstruationStartDate": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ",
   "menstruationEndDate": "ਮਾਹਵਾਰੀ ਦੀ ਸਮਾਪਤੀ ਦੀ ਤਰੀਕ",
   "menstruationScheduleDate": "ਮਾਹਵਾਰੀ ਦੀ ਤਾਰੀਖ",
   "menstruationScheduleDateWithNumber": "ਮਾਸਿਕ ਧਰਮ: {diffPlusOne}ਵਾਂ ਦਿਨ",

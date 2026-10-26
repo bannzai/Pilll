@@ -153,7 +153,7 @@
   "number": " (pil)",
   "dayNumber": " hari",
   "recordedMenstruationStartDate": "Awal haid tercatat pada {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Tanggal Mulai Menstruasi",
+  "menstruationStartDate": "Tanggal mulai haid",
   "menstruationEndDate": "Tanggal Akhir Menstruasi",
   "menstruationScheduleDate": "Perkiraan Tanggal Haid",
   "menstruationScheduleDateWithNumber": "Prediksi Menstruasi: Hari ke-{diffPlusOne}",

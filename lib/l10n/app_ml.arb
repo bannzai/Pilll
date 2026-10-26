@@ -153,7 +153,7 @@
   "number": " (ഗുളിക)",
   "dayNumber": "ാം ദിവസം",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} മുതൽ ആർത്തവം ആരംഭിച്ചതായി രേഖപ്പെടുത്തി",
-  "menstruationStartDate": "ആർത്തവ ആരംഭ ദിനം",
+  "menstruationStartDate": "ആർത്തവം തുടങ്ങുന്ന തീയതി",
   "menstruationEndDate": "ആർത്തവ അവസാന ദിനം",
   "menstruationScheduleDate": "ആർത്തവ പ്രതീക്ഷിത തീയതി",
   "menstruationScheduleDateWithNumber": "മാസിക പ്രതീക്‌ഷ: {diffPlusOne}ാം ദിവസം",

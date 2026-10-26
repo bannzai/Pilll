@@ -153,7 +153,7 @@
   "number": ". tabletka",
   "dayNumber": ". deň",
   "recordedMenstruationStartDate": "Začiatok menštruácie bol zaznamenaný k dátumu {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Začiatok menštruácie",
+  "menstruationStartDate": "Dátum začiatku menštruácie",
   "menstruationEndDate": "Dátum ukončenia menštruácie",
   "menstruationScheduleDate": "Predpokladaný dátum menštruácie",
   "menstruationScheduleDateWithNumber": "Očakávaná menštruácia: {diffPlusOne}. deň",

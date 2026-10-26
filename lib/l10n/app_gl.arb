@@ -153,7 +153,7 @@
   "number": " (pílula)",
   "dayNumber": " día",
   "recordedMenstruationStartDate": "Rexistrouse o inicio da regra o {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Data de inicio da menstruación",
+  "menstruationStartDate": "Data de inicio da regra",
   "menstruationEndDate": "Data de fin da menstruación",
   "menstruationScheduleDate": "Data prevista da menstruación",
   "menstruationScheduleDateWithNumber": "Regra prevista: día {diffPlusOne}",

@@ -153,7 +153,7 @@
   "number": ". pill",
   "dayNumber": ". päev",
   "recordedMenstruationStartDate": "Päevade algus on märgitud kuupäevale {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Menstruatsiooni alguskuupäev",
+  "menstruationStartDate": "Päevade alguskuupäev",
   "menstruationEndDate": "menstratsiooni lõppkuupäev",
   "menstruationScheduleDate": "Eeldatav menstruatsioon",
   "menstruationScheduleDateWithNumber": "Eeldatav menstruatsioon: {diffPlusOne}. päev",

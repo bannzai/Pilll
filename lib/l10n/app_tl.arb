@@ -153,7 +153,7 @@
   "number": " (pildoras)",
   "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Simula ng regla",
+  "menstruationStartDate": "Petsa ng simula ng regla",
   "menstruationEndDate": "Huling araw ng regla",
   "menstruationScheduleDate": "Susunod na Regla",
   "menstruationScheduleDateWithNumber": "Inaasahang regla: Ika-{diffPlusOne} araw",

@@ -153,7 +153,7 @@
   "number": " (गोली)",
   "dayNumber": "वाँ दिन",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} से पीरियड शुरू होने का रिकॉर्ड दर्ज हो गया है",
-  "menstruationStartDate": "माहवारी शुरुआत की तारीख",
+  "menstruationStartDate": "पीरियड शुरू होने की तारीख",
   "menstruationEndDate": "मासिक धर्म समाप्ति दिनांक",
   "menstruationScheduleDate": "पीरियड की अनुमानित तारीख",
   "menstruationScheduleDateWithNumber": "पीरियड अनुसूची: {diffPlusOne} दिन",

@@ -153,7 +153,7 @@
   "number": " (ክኒን)",
   "dayNumber": "ኛ ቀን",
   "recordedMenstruationStartDate": "ወር አበባ ከ{DateTimeFormatterMonthAndDay} ጀምሮ እንደተጀመረ ተመዝግቧል",
-  "menstruationStartDate": "ወር አበባ መጀመሪያ ቀን",
+  "menstruationStartDate": "ወር አበባ የሚጀምርበት ቀን",
   "menstruationEndDate": "የወርሐዊ መጨረሻ ቀን",
   "menstruationScheduleDate": "የወርሃዊ ምልከታ ቀን",
   "menstruationScheduleDateWithNumber": "የወር መውጫ፡ {diffPlusOne}ኛ ቀን",

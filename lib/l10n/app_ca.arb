@@ -153,7 +153,7 @@
   "number": " (píndola)",
   "dayNumber": " dia",
   "recordedMenstruationStartDate": "S'ha registrat que la regla va començar el {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Data d'inici de la menstruació",
+  "menstruationStartDate": "Data d'inici de la regla",
   "menstruationEndDate": "Data de fi de la menstruació",
   "menstruationScheduleDate": "Data prevista de la menstruació",
   "menstruationScheduleDateWithNumber": "Menstruació prevista: dia {diffPlusOne}",

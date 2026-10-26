@@ -153,7 +153,7 @@
   "number": ". pilla",
   "dayNumber": ". dagur",
   "recordedMenstruationStartDate": "Upphaf blæðinga var skráð {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Byrjunardagur tíðablæðinga",
+  "menstruationStartDate": "Upphafsdagur blæðinga",
   "menstruationEndDate": "Lokadagur tíðablæðinga",
   "menstruationScheduleDate": "Væntanlegur tíðablæðingadagur",
   "menstruationScheduleDateWithNumber": "Áætlaðar tíðablæðingar: dagur {diffPlusOne}",

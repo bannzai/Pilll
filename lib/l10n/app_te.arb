@@ -153,7 +153,7 @@
   "number": " (మాత్ర)",
   "dayNumber": "వ రోజు",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుంచి నెలసరి ప్రారంభమైనట్లు నమోదు చేయబడింది",
-  "menstruationStartDate": "మాసిక ధర్మ ప్రారంభ తేదీ",
+  "menstruationStartDate": "నెలసరి ప్రారంభ తేదీ",
   "menstruationEndDate": "రుతువు ముగింపు తేదీ",
   "menstruationScheduleDate": "రుతుక్రమ సంభవిత తేదీ",
   "menstruationScheduleDateWithNumber": "మాసిక ధర్మం అంచనా: {diffPlusOne} రోజు",

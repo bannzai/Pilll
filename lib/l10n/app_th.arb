@@ -153,7 +153,7 @@
   "number": " (เม็ด)",
   "dayNumber": " วันที่",
   "recordedMenstruationStartDate": "บันทึกว่าประจำเดือนเริ่มวันที่ {DateTimeFormatterMonthAndDay} แล้วค่ะ",
-  "menstruationStartDate": "วันเริ่มประจำเดือน",
+  "menstruationStartDate": "วันที่เริ่มประจำเดือน",
   "menstruationEndDate": "วันสิ้นสุดประจำเดือน",
   "menstruationScheduleDate": "วันคาดการณ์ประจำเดือน",
   "menstruationScheduleDateWithNumber": "ประจำเดือนคาด: วันที่ {diffPlusOne}",

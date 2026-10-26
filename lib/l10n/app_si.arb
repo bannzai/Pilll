@@ -153,7 +153,7 @@
   "number": " (පෙත්ත)",
   "dayNumber": "වන දිනය",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} සිට ඔසප් වීම ආරම්භ වූ බව සටහන් කර ඇත",
-  "menstruationStartDate": "මසිකපේ ආරම්භක දිනය",
+  "menstruationStartDate": "ඔසප් ආරම්භ වන දිනය",
   "menstruationEndDate": "ආර්තව අවසන් දිනය",
   "menstruationScheduleDate": "ඔසප් නියමිත දිනය",
   "menstruationScheduleDateWithNumber": "නියමිත ඔසප්: {diffPlusOne} වන දිනය",

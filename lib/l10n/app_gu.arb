@@ -153,7 +153,7 @@
   "number": " (ગોળી)",
   "dayNumber": "મો દિવસ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}થી માસિક શરૂ થયું હોવાનું નોંધાયું છે",
-  "menstruationStartDate": "માસિક ધર્મ શરુઆતની તારીખ",
+  "menstruationStartDate": "માસિક શરૂ થવાની તારીખ",
   "menstruationEndDate": "માસિક ધર્મ સમાપ્તિ તારીખ",
   "menstruationScheduleDate": "માસિક ધર્મની અપેક્ષિત તારીખ",
   "menstruationScheduleDateWithNumber": "માસિક સ્રાવની અપેક્ષા: {diffPlusOne} દિવસ",

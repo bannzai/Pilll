@@ -153,7 +153,7 @@
   "number": " (ဆေးလုံး)",
   "dayNumber": " ရက်မြောက်နေ့",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} မှ ရာသီစတင်ကြောင်း မှတ်တမ်းတင်ပြီးပါပြီ",
-  "menstruationStartDate": "ရာသီစတင်ရက်",
+  "menstruationStartDate": "ရာသီစတင်သည့်ရက်",
   "menstruationEndDate": "လာရက်အဆုံးရက်",
   "menstruationScheduleDate": "ရာသီလာမည့်ရက်",
   "menstruationScheduleDateWithNumber": "ရာသီမျှော်မှန်းချိန်း - {diffPlusOne}ရက်မြောက်",

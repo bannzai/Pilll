@@ -153,7 +153,7 @@
   "number": ". hap",
   "dayNumber": ". gün",
   "recordedMenstruationStartDate": "Adet başlangıcı {DateTimeFormatterMonthAndDay} olarak kaydedildi",
-  "menstruationStartDate": "Adet Başlangıcı",
+  "menstruationStartDate": "Adetin başlangıç tarihi",
   "menstruationEndDate": "Adet bitiş tarihi",
   "menstruationScheduleDate": "Tahmini menstrüasyon tarihi",
   "menstruationScheduleDateWithNumber": "Adet tahmini: {diffPlusOne}. gün",

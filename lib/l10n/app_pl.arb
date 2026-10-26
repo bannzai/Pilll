@@ -153,7 +153,7 @@
   "number": ". tabletka",
   "dayNumber": ". dzień",
   "recordedMenstruationStartDate": "Początek okresu zapisano na {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Data rozpoczęcia miesiączki",
+  "menstruationStartDate": "Data rozpoczęcia okresu",
   "menstruationEndDate": "Data zakończenia miesiączki",
   "menstruationScheduleDate": "Przewidywana data miesiączki",
   "menstruationScheduleDateWithNumber": "Przewidywana miesiączka: dzień {diffPlusOne}",

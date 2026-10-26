@@ -153,7 +153,7 @@
   "number": " (גלולה)",
   "dayNumber": " יום",
   "recordedMenstruationStartDate": "תחילת המחזור נרשמה בתאריך {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "תאריך תחילת הוסת",
+  "menstruationStartDate": "תאריך תחילת המחזור",
   "menstruationEndDate": "תאריך סיום הוסת",
   "menstruationScheduleDate": "תאריך הוסת הצפוי",
   "menstruationScheduleDateWithNumber": "וסת צפויה: יום {diffPlusOne}",

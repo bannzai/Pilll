@@ -153,7 +153,7 @@
   "number": " (قرص)",
   "dayNumber": " روز",
   "recordedMenstruationStartDate": "شروع پریود از {DateTimeFormatterMonthAndDay} ثبت شد",
-  "menstruationStartDate": "تاریخ شروع قاعدگی",
+  "menstruationStartDate": "تاریخ شروع پریود",
   "menstruationEndDate": "تاریخ پایان قاعدگی",
   "menstruationScheduleDate": "تاریخ مقرر قاعدگی",
   "menstruationScheduleDateWithNumber": "برنامه قاعدگی: روز {diffPlusOne}",

@@ -153,7 +153,7 @@
   "number": " (गोळी)",
   "dayNumber": "वा दिवस",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} पासून मासिक पाळी सुरू झाल्याची नोंद झाली आहे",
-  "menstruationStartDate": "पाळी सुरुवातीची तारीख",
+  "menstruationStartDate": "मासिक पाळी सुरू झाल्याची तारीख",
   "menstruationEndDate": "मासिक पाळी समाप्तीची तारीख",
   "menstruationScheduleDate": "मासिक पाळीची अपेक्षित तारीख",
   "menstruationScheduleDateWithNumber": "पीरियड अपेक्षित: {diffPlusOne} दिवस",

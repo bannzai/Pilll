@@ -153,7 +153,7 @@
   "number": " (pilule)",
   "dayNumber": " jour",
   "recordedMenstruationStartDate": "Le début des règles a été enregistré au {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Date de début de période",
+  "menstruationStartDate": "Date de début des règles",
   "menstruationEndDate": "Date de fin de période",
   "menstruationScheduleDate": "Prochaines règles",
   "menstruationScheduleDateWithNumber": "Période prévue : Jour {diffPlusOne}",

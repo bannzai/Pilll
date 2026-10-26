@@ -153,7 +153,7 @@
   "number": " (таблетка)",
   "dayNumber": "-й день",
   "recordedMenstruationStartDate": "Начало месячных записано на {DateTimeFormatterMonthAndDay}",
-  "menstruationStartDate": "Дата начала менструации",
+  "menstruationStartDate": "Дата начала месячных",
   "menstruationEndDate": "Дата окончания менструации",
   "menstruationScheduleDate": "Ожидаемая дата месячных",
   "menstruationScheduleDateWithNumber": "Ожидаемая менструация: {diffPlusOne} день",

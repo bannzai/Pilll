@@ -153,7 +153,7 @@
   "number": " (таблетка)",
   "dayNumber": "-күн",
   "recordedMenstruationStartDate": "Етеккірдің басталуы {DateTimeFormatterMonthAndDay} күніне тіркелді",
-  "menstruationStartDate": "Айыз басталу күні",
+  "menstruationStartDate": "Етеккірдің басталу күні",
   "menstruationEndDate": "Менструация аяқталған күні",
   "menstruationScheduleDate": "менструация күтілетін күні",
   "menstruationScheduleDateWithNumber": "Етістік жоспары: {diffPlusOne} күні",

@@ -153,7 +153,7 @@
   "number": " (चक्की)",
   "dayNumber": "औँ दिन",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि महिनावारी सुरु भएको भनेर रेकर्ड गरिएको छ",
-  "menstruationStartDate": "मासिकधर्म शुरु मिति",
+  "menstruationStartDate": "महिनावारी सुरु भएको मिति",
   "menstruationEndDate": "महिनावारी समाप्ति मिति",
   "menstruationScheduleDate": "अनुमानित महिनावारी मिति",
   "menstruationScheduleDateWithNumber": "अपेक्षित महिनावारी: {diffPlusOne} दिन",
