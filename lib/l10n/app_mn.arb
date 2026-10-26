@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Биеийн байдлын дэлгэрэнгүй",
   "medicationHistoryPremiumFeatureRestriction": "Илүү хуучин бүртгэлийг үзэхэд премиум шаардлагатай",
   "viewMoreDetails": "Дэлгэрэнгүй харах",
-  "viewMore": "Илүү харах",
+  "viewMore": "Дэлгэрэнгүй харах",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} дугаар",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} дугаар",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} дугаар",

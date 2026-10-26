@@ -96,7 +96,7 @@
   "physicalConditionDetail": "د بدني حالت تفصیل",
   "medicationHistoryPremiumFeatureRestriction": "د لا پخوانیو ریکارډونو د لیدو لپاره پریمیم ته اړتیا ده",
   "viewMoreDetails": "نور جزئیات وګورئ",
-  "viewMore": "زیات وګوره",
+  "viewMore": "نور وګورئ",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ګیرے",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}مه",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}م",

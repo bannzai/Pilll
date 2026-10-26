@@ -96,7 +96,7 @@
   "physicalConditionDetail": "ფიზიკური მდგომარეობის დეტალები",
   "medicationHistoryPremiumFeatureRestriction": "უფრო ძველი ჩანაწერების სანახავად საჭიროა პრემიუმი",
   "viewMoreDetails": "დეტალების ნახვა",
-  "viewMore": "მეტი",
+  "viewMore": "მეტის ნახვა",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-ე",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-ე",

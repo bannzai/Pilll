@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Detail kondisi fisik",
   "medicationHistoryPremiumFeatureRestriction": "Catatan yang lebih lama dapat dilihat dengan premium",
   "viewMoreDetails": "Lihat detail",
-  "viewMore": "Selengkapnya",
+  "viewMore": "Lihat lainnya",
   "afterLastTakenPillNumber": "ke-{afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} nomor",
   "beforeLastTakenPillNumber": "ke-{beforeLastTakenPillNumber}",

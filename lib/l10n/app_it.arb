@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Dettagli sullo stato fisico",
   "medicationHistoryPremiumFeatureRestriction": "Puoi vedere le registrazioni precedenti con Premium",
   "viewMoreDetails": "Vedi i dettagli",
-  "viewMore": "Visualizza altro",
+  "viewMore": "Mostra di più",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}°",
   "leftDashAfterLastTakenPillNumber": "{left}-n°{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}°",

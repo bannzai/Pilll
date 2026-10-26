@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Ֆիզիկական վիճակի մանրամասներ",
   "medicationHistoryPremiumFeatureRestriction": "Ավելի հին գրառումները դիտելու համար անհրաժեշտ է պրեմիում",
   "viewMoreDetails": "Դիտել մանրամասները",
-  "viewMore": "Ավելին տեսնել",
+  "viewMore": "Տեսնել ավելին",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-րդ",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} համար",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-րդ",

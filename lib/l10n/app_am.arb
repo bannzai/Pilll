@@ -96,7 +96,7 @@
   "physicalConditionDetail": "የጤና ሁኔታ ዝርዝር",
   "medicationHistoryPremiumFeatureRestriction": "ከዚህ በላይ ለማየት ፕሪሚየም ያስፈልጋል",
   "viewMoreDetails": "ዝርዝር መረጃ ይመልከቱ",
-  "viewMore": "ተጨማሪ እይ",
+  "viewMore": "ተጨማሪ ይመልከቱ",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ኛ",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ኛ",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ኛ",

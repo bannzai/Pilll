@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Detalii despre starea fizică",
   "medicationHistoryPremiumFeatureRestriction": "Poți vedea înregistrările mai vechi cu premium",
   "viewMoreDetails": "Vezi detaliile",
-  "viewMore": "Vedeți mai mult",
+  "viewMore": "Vezi mai mult",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-a",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
   "beforeLastTakenPillNumber": "Pastila {beforeLastTakenPillNumber}",

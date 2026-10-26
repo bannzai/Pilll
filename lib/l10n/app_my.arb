@@ -96,7 +96,7 @@
   "physicalConditionDetail": "ကိုယ်ခန္ဓာအခြေအနေ အသေးစိတ်",
   "medicationHistoryPremiumFeatureRestriction": "ပိုမိုဟောင်းသော မှတ်တမ်းများကို ကြည့်ရန် ပရီမီယံ လိုအပ်ပါတယ်",
   "viewMoreDetails": "အသေးစိတ်ကြည့်ရန်",
-  "viewMore": "ပို၍ကြည့်ရန်",
+  "viewMore": "နောက်ထပ်ကြည့်ရန်",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} အမှတ်",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}အမှတ်",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}နံပါတ်",

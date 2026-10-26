@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Детаљи о физичком стању",
   "medicationHistoryPremiumFeatureRestriction": "Старије записе можете да видите уз премијум",
   "viewMoreDetails": "Погледајте детаље",
-  "viewMore": "Погледај више",
+  "viewMore": "Прикажи још",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}.",
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}.",

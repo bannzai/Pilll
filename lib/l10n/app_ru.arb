@@ -96,7 +96,7 @@
   "physicalConditionDetail": "Подробности о самочувствии",
   "medicationHistoryPremiumFeatureRestriction": "Более ранние записи доступны с премиум",
   "viewMoreDetails": "Подробнее",
-  "viewMore": "Показать больше",
+  "viewMore": "Показать ещё",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-я",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}№",
   "beforeLastTakenPillNumber": "№{beforeLastTakenPillNumber}",
