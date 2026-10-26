@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Możesz ponownie korzystać z funkcji premium przez 14 dni!\nDotknij, aby udostępnić w mediach społecznościowych!",
   "whereToShare": "Gdzie chcesz udostępnić",
   "pauseTakingDay": "🌙 {day}. dzień przerwy w przyjmowaniu tabletek",
-  "withDay": "dzień {word}",
+  "withDay": "Dzień {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dzień",
   "daysUntilPausePeriod": "Za {diffPlusOne} dni będzie okres {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Pozostało {diff} dni dostępu do wszystkich funkcji",

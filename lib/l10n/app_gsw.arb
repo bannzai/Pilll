@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Du chasch d Premium-Funktione 14 Täg lang nomal usprobiere!\nTipp druf, zum's uf Social Media z teile!",
   "whereToShare": "Wo wottsch es teile",
   "pauseTakingDay": "🌙 Tag {day} vo de Pillepause",
-  "withDay": "{word}. Tag",
+  "withDay": "Tag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. Tag",
   "daysUntilPausePeriod": "No {diffPlusOne} Täg isch d {activePillSheetPillSheetTypeNotTakenWord}-Zyt",
   "remainingDaysAllFeatures": "Sie chönd no {diff} Täg alli Funktione nutze",

@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Voit kokeilla Premium-ominaisuuksia uudelleen 14 päivän ajan!\nJaa somessa napauttamalla!",
   "whereToShare": "Missä haluat jakaa tämän",
   "pauseTakingDay": "🌙 Pilleritauon päivä {day}",
-  "withDay": "{word}. päivä",
+  "withDay": "Päivä {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. päivä",
   "daysUntilPausePeriod": "Vielä {diffPlusOne} päivää {activePillSheetPillSheetTypeNotTakenWord}jaksoon",
   "remainingDaysAllFeatures": "Voit käyttää kaikkia ominaisuuksia vielä {diff} päivää",

@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "تاسو کولی شئ د پریمیم ځانګړنې بیا د 14 ورځو لپاره وکاروئ!\nپه ټولنیزو رسنیو کې د شریکولو لپاره ټېپ وکړئ!",
   "whereToShare": "تاسو یې چېرته شریکول غواړئ",
   "pauseTakingDay": "🌙 د ګولیو د اخیستو د وقفې {day}مه ورځ",
-  "withDay": "{word}مه ورځ",
+  "withDay": "ورځ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}د {restDurationDays} ورځه",
   "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} دورې ته نور {diffPlusOne} ورځې پاتې دي",
   "remainingDaysAllFeatures": "د {diff} ورځو لپاره ټولې فعالیتونه کارولای شئ",

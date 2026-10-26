@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng Premium trong 14 ngày!\nChạm để chia sẻ lên mạng xã hội!",
   "whereToShare": "Bạn muốn chia sẻ ở đâu",
   "pauseTakingDay": "🌙 Ngày {day} tạm ngưng uống thuốc",
-  "withDay": "ngày thứ {word}",
+  "withDay": "Ngày {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ngày thứ {restDurationDays}",
   "daysUntilPausePeriod": "Còn {diffPlusOne} ngày nữa là thời kỳ {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Bạn còn {diff} ngày để sử dụng tất cả các tính năng",

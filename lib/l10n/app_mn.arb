@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Та премиум боломжуудыг 14 хоног дахин ашиглаж үзэх боломжтой!\nОлон нийтийн сүлжээнд хуваалцахын тулд товшино уу!",
   "whereToShare": "Хаана хуваалцах вэ",
   "pauseTakingDay": "🌙 Эм уух завсарлагын {day} дэх өдөр",
-  "withDay": "{word} дахь өдөр",
+  "withDay": "{word} дэх өдөр",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} дахь өдөр",
   "daysUntilPausePeriod": "Дахиад {diffPlusOne} хоногийн дараа {activePillSheetPillSheetTypeNotTakenWord} хугацаа болно",
   "remainingDaysAllFeatures": "{diff} хоногийн турш бүх функцийг ашиглах боломжтой",

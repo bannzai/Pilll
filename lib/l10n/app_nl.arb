@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Je kunt de premiumfuncties opnieuw 14 dagen proberen!\nTik om te delen op sociale media!",
   "whereToShare": "Waar wil je dit delen",
   "pauseTakingDay": "🌙 Dag {day} van de stopweek",
-  "withDay": "{word}e dag",
+  "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} dag {restDurationDays}",
   "daysUntilPausePeriod": "Nog {diffPlusOne} dagen tot {activePillSheetPillSheetTypeNotTakenWord}periode",
   "remainingDaysAllFeatures": "Je hebt nog {diff} dagen toegang tot alle functies",

@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Saad premium-funktsioone taas 14 päeva kasutada!\nPuuduta, et jagada sotsiaalmeedias!",
   "whereToShare": "Kus soovid seda jagada",
   "pauseTakingDay": "🌙 Pillipausi {day}. päev",
-  "withDay": "{word}. päev",
+  "withDay": "Päev {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. päev",
   "daysUntilPausePeriod": "Veel {diffPlusOne} päeva pärast algab {activePillSheetPillSheetTypeNotTakenWord} periood",
   "remainingDaysAllFeatures": "Veel {diff} päeva saab kasutada kõiki funktsioone",

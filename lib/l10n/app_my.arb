@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "ပရီမီယံ လုပ်ဆောင်ချက်တွေကို 14 ရက်ကြာ ထပ်မံအသုံးပြုနိုင်ပါတယ်!\nလူမှုကွန်ရက်မှာ မျှဝေဖို့ နှိပ်ပါ!",
   "whereToShare": "ဘယ်မှာ မျှဝေချင်ပါသလဲ",
   "pauseTakingDay": "🌙 ဆေးလုံးသောက်ခြင်း ခေတ္တနားသည့် {day} ရက်မြောက်နေ့",
-  "withDay": "{word}ရက်မြောက်",
+  "withDay": "နေ့ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ရက်မြောက်",
   "daysUntilPausePeriod": "နောက် {diffPlusOne} ရက်တွင် {activePillSheetPillSheetTypeNotTakenWord} ကာလ စတင်ပါမည်",
   "remainingDaysAllFeatures": "{diff} ရက်ကျန်ရှိပြီး လုပ်ဆောင်ချက်အားလုံးကို အသုံးပြုနိုင်ပါသည်",

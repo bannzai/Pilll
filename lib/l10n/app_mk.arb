@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Можете повторно да ги користите премиум функциите 14 дена!\nДопрете за да споделите на социјалните мрежи!",
   "whereToShare": "Каде сакате да споделите",
   "pauseTakingDay": "🌙 {day}. ден од паузата во земањето таблета",
-  "withDay": "{word}. ден",
+  "withDay": "Ден {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ден",
   "daysUntilPausePeriod": "Уште {diffPlusOne} дена до {activePillSheetPillSheetTypeNotTakenWord} периодот",
   "remainingDaysAllFeatures": "Уште {diff} дена можете да ги користите сите функции",

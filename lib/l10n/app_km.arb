@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "អ្នកអាចសាកល្បងមុខងារព្រីមៀមម្តងទៀតរយៈពេល 14 ថ្ងៃ!\nសូមចុចដើម្បីចែករំលែកនៅលើបណ្តាញសង្គម!",
   "whereToShare": "តើអ្នកចង់ចែករំលែកនៅទីណា",
   "pauseTakingDay": "🌙 ថ្ងៃទី {day} នៃការផ្អាកលេបថ្នាំគ្រាប់",
-  "withDay": "ថ្ងៃទី{word}",
+  "withDay": "ថ្ងៃទី {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ថ្ងៃទី",
   "daysUntilPausePeriod": "នៅសល់ {diffPlusOne} ថ្ងៃទៀត នឹងដល់រយៈពេល {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "នៅសល់ {diff} ថ្ងៃទៀត អ្នកអាចប្រើមុខងារទាំងអស់បាន",

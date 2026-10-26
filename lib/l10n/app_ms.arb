@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Anda boleh mencuba semula ciri premium selama 14 hari!\nKetik untuk berkongsi di media sosial!",
   "whereToShare": "Di mana anda ingin berkongsi",
   "pauseTakingDay": "🌙 Hari ke-{day} rehat daripada pil",
-  "withDay": "hari ke-{word}",
+  "withDay": "Hari ke-{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Lagi {diffPlusOne} hari ke tempoh {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Tinggal {diff} hari lagi untuk menggunakan semua ciri",

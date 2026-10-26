@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Вы можаце зноў карыстацца прэміум-функцыямі 14 дзён!\nДакраніцеся, каб падзяліцца ў сацсетках!",
   "whereToShare": "Дзе вы хочаце падзяліцца",
   "pauseTakingDay": "🌙 {day}-ы дзень перапынку ў прыёме пігулак",
-  "withDay": "{word}-ы дзень",
+  "withDay": "Дзень {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ы дзень",
   "daysUntilPausePeriod": "Засталося {diffPlusOne} дзён да перыяду {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Засталося {diff} дзён поўнага доступу да ўсіх функцый",

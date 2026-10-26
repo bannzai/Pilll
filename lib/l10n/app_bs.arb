@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Možete ponovo koristiti premium funkcije tokom 14 dana!\nDodirnite za dijeljenje na društvenim mrežama!",
   "whereToShare": "Gdje želite podijeliti",
   "pauseTakingDay": "🌙 {day}. dan pauze od uzimanja pilula",
-  "withDay": "{word}. dan",
+  "withDay": "Dan {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dan",
   "daysUntilPausePeriod": "Još {diffPlusOne} dana do {activePillSheetPillSheetTypeNotTakenWord} perioda",
   "remainingDaysAllFeatures": "Još {diff} dana možete koristiti sve funkcije",

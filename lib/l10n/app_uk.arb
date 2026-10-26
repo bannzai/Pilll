@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Ви можете знову користуватися преміумфункціями протягом 14 днів!\nТоркніться, щоб поділитися в соцмережах!",
   "whereToShare": "Де ви хочете поділитися",
   "pauseTakingDay": "🌙 {day}-й день перерви у прийомі пігулок",
-  "withDay": "{word}-й день",
+  "withDay": "День {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}-й день",
   "daysUntilPausePeriod": "Через {diffPlusOne} днів розпочнеться період {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Залишилось {diff} днів для використання всіх функцій",

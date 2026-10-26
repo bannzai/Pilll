@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Funkce Premium můžete znovu vyzkoušet na 14 dní!\nKlepnutím je můžete sdílet na sociálních sítích!",
   "whereToShare": "Kde chcete sdílet",
   "pauseTakingDay": "🌙 {day}. den přestávky v užívání pilulek",
-  "withDay": "{word}. den",
+  "withDay": "Den {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. den",
   "daysUntilPausePeriod": "Za {diffPlusOne} dní začne {activePillSheetPillSheetTypeNotTakenWord} období",
   "remainingDaysAllFeatures": "Všechny funkce můžete používat ještě {diff} dní",

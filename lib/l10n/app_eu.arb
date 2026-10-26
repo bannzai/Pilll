@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Premium eginbideak berriro proba ditzakezu 14 egunez!\nUkitu sare sozialetan partekatzeko!",
   "whereToShare": "Non partekatu nahi duzu",
   "pauseTakingDay": "🌙 Pilula hartzeko etenaldiaren {day}. eguna",
-  "withDay": "{word}garren eguna",
+  "withDay": "{word}. eguna",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. eguna",
   "daysUntilPausePeriod": "{diffPlusOne} egun barru {activePillSheetPillSheetTypeNotTakenWord} aldia hasiko da",
   "remainingDaysAllFeatures": "Oraindik {diff} egun funtzio guztiak erabilgarri dituzu",

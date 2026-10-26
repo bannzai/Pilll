@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Μπορείτε να δοκιμάσετε ξανά τις λειτουργίες Premium για 14 ημέρες!\nΠατήστε για κοινοποίηση στα κοινωνικά δίκτυα!",
   "whereToShare": "Πού θέλετε να το κοινοποιήσετε",
   "pauseTakingDay": "🌙 Ημέρα {day} της διακοπής λήψης του χαπιού",
-  "withDay": "{word}η ημέρα",
+  "withDay": "Ημέρα {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}η ημέρα",
   "daysUntilPausePeriod": "Υπολείπονται {diffPlusOne} ημέρες για την περίοδο {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις λειτουργίες για άλλες {diff} ημέρες",

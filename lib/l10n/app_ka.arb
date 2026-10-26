@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "შეგიძლიათ პრემიუმ ფუნქციები კვლავ გამოიყენოთ 14 დღის განმავლობაში!\nშეეხეთ სოციალურ ქსელებში გასაზიარებლად!",
   "whereToShare": "სად გსურთ გაზიარება",
   "pauseTakingDay": "🌙 აბების მიღების შესვენების {day}-ე დღე",
-  "withDay": "{word}-ე დღე",
+  "withDay": "დღე {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ე დღე",
   "daysUntilPausePeriod": "კიდევ {diffPlusOne} დღეში იწყება {activePillSheetPillSheetTypeNotTakenWord} პერიოდი",
   "remainingDaysAllFeatures": "კიდევ {diff} დღე ყველა ფუნქცია ხელმისაწვდომია",

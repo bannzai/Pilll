@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "آپ پریمیم خصوصیات دوبارہ 14 دن تک استعمال کر سکتی ہیں!\nسوشل میڈیا پر شیئر کرنے کے لیے ٹیپ کریں!",
   "whereToShare": "آپ کہاں شیئر کرنا چاہیں گی",
   "pauseTakingDay": "🌙 گولی لینے کے وقفے کا {day}واں دن",
-  "withDay": "{word}واں دن",
+  "withDay": "دن {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}واں دن",
   "daysUntilPausePeriod": "{diffPlusOne} دن بعد {activePillSheetPillSheetTypeNotTakenWord} کی مدت ہے",
   "remainingDaysAllFeatures": "باقی {diff} دن تک تمام فیچرز دستیاب ہیں",

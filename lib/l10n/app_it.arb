@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Puoi provare di nuovo le funzioni Premium per 14 giorni!\nTocca per condividere sui social!",
   "whereToShare": "Dove vuoi condividerlo",
   "pauseTakingDay": "🌙 Giorno {day} della pausa dalla pillola",
-  "withDay": "{word}° giorno",
+  "withDay": "Giorno {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}° giorno",
   "daysUntilPausePeriod": "Mancano {diffPlusOne} giorni al periodo di {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Puoi usare tutte le funzioni per altri {diff} giorni",

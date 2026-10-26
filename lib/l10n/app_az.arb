@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Premium imkanlardan 14 gün ərzində yenidən yararlana bilərsiniz!\nSosial mediada paylaşmaq üçün toxunun!",
   "whereToShare": "Harada paylaşmaq istərdiniz",
   "pauseTakingDay": "🌙 Həb qəbuluna fasilənin {day}-ci günü",
-  "withDay": "{word}. gün",
+  "withDay": "Gün {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ci gün",
   "daysUntilPausePeriod": "Daha {diffPlusOne} gün sonra {activePillSheetPillSheetTypeNotTakenWord} dövrü başlayır",
   "remainingDaysAllFeatures": "Qalan {diff} gün ərzində bütün funksiyalardan istifadə edə bilərsiniz",

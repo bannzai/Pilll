@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Gallwch ddefnyddio nodweddion premiwm eto am 14 diwrnod!\nTapiwch i rannu ar y cyfryngau cymdeithasol!",
   "whereToShare": "Ble hoffech chi rannu",
   "pauseTakingDay": "🌙 Diwrnod {day} o'r saib rhag cymryd y bilsen",
-  "withDay": "diwrnod {word}",
+  "withDay": "Diwrnod {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}diwrnod {restDurationDays}",
   "daysUntilPausePeriod": "Mewn {diffPlusOne} diwrnod bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Gallwch ddefnyddio pob swyddogaeth am {diff} diwrnod eto",

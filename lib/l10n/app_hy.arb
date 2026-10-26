@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Դուք կարող եք կրկին օգտվել պրեմիում գործառույթներից 14 օր!\nՀպվեք՝ սոցիալական ցանցերում կիսվելու համար!",
   "whereToShare": "Որտե՞ղ եք ցանկանում կիսվել",
   "pauseTakingDay": "🌙 Հաբերի ընդունման ընդմիջման {day}-րդ օրը",
-  "withDay": "{word} օր",
+  "withDay": "Օր {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-րդ օր",
   "daysUntilPausePeriod": "ԵՒս {diffPlusOne} օր մնացել է {activePillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
   "remainingDaysAllFeatures": "Մնացած {diff} օր բոլոր գործառույթները օգտագործելի են",

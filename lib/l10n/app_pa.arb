@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "ਤੁਸੀਂ 14 ਦਿਨਾਂ ਲਈ ਪ੍ਰੀਮੀਅਮ ਸੁਵਿਧਾਵਾਂ ਮੁੜ ਵਰਤ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ!\nਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਂਝਾ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ!",
   "whereToShare": "ਤੁਸੀਂ ਕਿੱਥੇ ਸਾਂਝਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ",
   "pauseTakingDay": "🌙 ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਦਾ {day}ਵਾਂ ਦਿਨ",
-  "withDay": "{word}ਵਾਂ ਦਿਨ",
+  "withDay": "ਦਿਨ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ਵਾਂ ਦਿਨ",
   "daysUntilPausePeriod": "{diffPlusOne} ਦਿਨਾਂ ਬਾਅਦ {activePillSheetPillSheetTypeNotTakenWord} ਦਾ ਸਮਾਂ ਸ਼ੁਰੂ ਹੋਵੇਗਾ",
   "remainingDaysAllFeatures": "ਤੁਸੀਂ ਬਾਕੀ {diff} ਦਿਨਾਂ ਤੱਕ ਸਾਰੇ ਫੀਚਰ ਵਰਤ ਸਕਦੇ ਹੋ",

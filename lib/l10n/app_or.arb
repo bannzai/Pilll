@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "ଆପଣ 14 ଦିନ ପାଇଁ ପ୍ରିମିୟମ ସୁବିଧାଗୁଡ଼ିକୁ ପୁଣି ବ୍ୟବହାର କରିପାରିବେ!\nସାମାଜିକ ମାଧ୍ୟମରେ ସେୟାର କରିବାକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ!",
   "whereToShare": "ଆପଣ କେଉଁଠି ସେୟାର କରିବାକୁ ଚାହାନ୍ତି",
   "pauseTakingDay": "🌙 ବଟିକା ଖାଇବାରୁ ବିରତିର {day}ତମ ଦିନ",
-  "withDay": "{word}ତମ ଦିନ",
+  "withDay": "ଦିନ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ତମ ଦିନ",
   "daysUntilPausePeriod": "ଆଉ {diffPlusOne} ଦିନରେ {activePillSheetPillSheetTypeNotTakenWord} ସମୟ",
   "remainingDaysAllFeatures": "ବାକି {diff} ଦିନ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ବ୍ୟବହାର କରିପାରିବେ",

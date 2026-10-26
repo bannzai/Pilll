@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Maaari ninyong subukang muli ang mga feature ng Premium sa loob ng 14 na araw!\nI-tap para ibahagi sa social media!",
   "whereToShare": "Saan ninyo gustong ibahagi ito",
   "pauseTakingDay": "🌙 Araw {day} ng pahinga sa pag-inom ng pill",
-  "withDay": "Ika-{word} araw",
+  "withDay": "Araw {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ika-{restDurationDays} na araw",
   "daysUntilPausePeriod": "Sa loob ng {diffPlusOne} araw, magsisimula ang {activePillSheetPillSheetTypeNotTakenWord} period",
   "remainingDaysAllFeatures": "Natitira pang {diff} araw para magamit ang lahat ng features",

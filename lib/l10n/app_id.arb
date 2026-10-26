@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Anda bisa kembali menikmati fitur premium selama 14 hari!\nKetuk untuk membagikannya di media sosial!",
   "whereToShare": "Di mana Anda ingin membagikannya",
   "pauseTakingDay": "🌙 Hari ke-{day} jeda minum pil",
-  "withDay": "hari ke-{word}",
+  "withDay": "Hari ke-{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Tinggal {diffPlusOne} hari lagi menuju periode {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Anda dapat menggunakan semua fitur selama {diff} hari tersisa",

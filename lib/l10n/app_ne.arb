@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "तपाईंले प्रिमियम सुविधाहरू फेरि 14 दिनसम्म प्रयोग गरेर हेर्न सक्नुहुन्छ!\nसामाजिक सञ्जालमा सेयर गर्न ट्याप गर्नुहोस्!",
   "whereToShare": "तपाईं कहाँ साझा गर्न चाहनुहुन्छ",
   "pauseTakingDay": "🌙 चक्की सेवनको विश्रामको {day}औँ दिन",
-  "withDay": "{word}औं दिन",
+  "withDay": "दिन {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}औं दिन",
   "daysUntilPausePeriod": "अझै {diffPlusOne} दिनमा {activePillSheetPillSheetTypeNotTakenWord} अवधि हुनेछ",
   "remainingDaysAllFeatures": "बाँकी {diff} दिन सबै सुविधाहरू प्रयोग गर्न सकिन्छ",

@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Премиум мүмкүнчүлүктөрдү 14 күн кайра колдонуп көрө аласыз!\nСоциалдык тармактарда бөлүшүү үчүн басыңыз!",
   "whereToShare": "Кайда бөлүшкүңүз келет",
   "pauseTakingDay": "🌙 Таблетка ичүүдөгү тыныгуунун {day}-күнү",
-  "withDay": "{word}-чү күнү",
+  "withDay": "{word}-күн",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}-күнү",
   "daysUntilPausePeriod": "Дагы {diffPlusOne} күндөн кийин {activePillSheetPillSheetTypeNotTakenWord} мезгили башталат",
   "remainingDaysAllFeatures": "Дагы {diff} күн бардык функцияларды колдоно аласыз",

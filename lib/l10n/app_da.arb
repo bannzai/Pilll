@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Du kan prøve Premium-funktionerne igen i 14 dage!\nTryk for at dele på sociale medier!",
   "whereToShare": "Hvor vil du dele",
   "pauseTakingDay": "🌙 Dag {day} i pillepausen",
-  "withDay": "{word}. dag",
+  "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} dag {restDurationDays}",
   "daysUntilPausePeriod": "Om {diffPlusOne} dage starter {activePillSheetPillSheetTypeNotTakenWord}perioden",
   "remainingDaysAllFeatures": "Alle funktioner tilgængelige i {diff} dage tilbage",

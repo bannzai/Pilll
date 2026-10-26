@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "የፕሪሚየም ባህሪያትን ለ14 ቀናት እንደገና መጠቀም ይችላሉ!\nበማኅበራዊ ሚዲያ ለማጋራት ይንኩ!",
   "whereToShare": "የት ማጋራት ይፈልጋሉ",
   "pauseTakingDay": "🌙 ክኒን ከመውሰድ የእረፍት ቀን {day}",
-  "withDay": "{word}ኛ ቀን",
+  "withDay": "ቀን {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ኛ ቀን",
   "daysUntilPausePeriod": "{diffPlusOne} ቀን ቀርቶ {activePillSheetPillSheetTypeNotTakenWord} ጊዜ ነው",
   "remainingDaysAllFeatures": "ለቀሪዎቹ {diff} ቀናት ሁሉንም ተግባራት መጠቀም ይችላሉ",

@@ -144,7 +144,7 @@
   "reexperiencePremiumFeatures": "Þú getur prófað Premium-eiginleikana aftur í 14 daga!\nPikkaðu til að deila á samfélagsmiðlum!",
   "whereToShare": "Hvar viltu deila þessu",
   "pauseTakingDay": "🌙 Dagur {day} í pilluhléi",
-  "withDay": "{word}. dagur",
+  "withDay": "Dagur {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dagur",
   "daysUntilPausePeriod": "Eftir {diffPlusOne} daga byrjar {activePillSheetPillSheetTypeNotTakenWord} tímabilið",
   "remainingDaysAllFeatures": "Þú getur notað alla eiginleika í {diff} daga eftir",
