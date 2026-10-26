@@ -309,7 +309,7 @@
   "purchaseErrorPaymentPendingError": "توقفت عملية الدفع قبل اكتمالها. يُرجى التحقق من حالة الدفع في {storeName} باستخدام حساب {accountName} الذي سجلتِ الدخول إليه.",
   "purchaseErrorInvalidSubscriberAttributesError": "لم تكتمل عملية الشراء. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، يُرجى التواصل معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "تعذّر الحصول على معلومات المستخدم. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، تواصلي معنا من الإعدادات > تواصلي معنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorConfigurationError": "فشل في استرداد معلومات الشراء. يرجى الانتظار والمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "تعذر الحصول على معلومات الشراء. يرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "حدث خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "خطأ غير معروف السبب. لم نتمكن من الحصول على معلومات الشراء مسبقاً. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. في حالة عدم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",

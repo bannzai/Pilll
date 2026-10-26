@@ -309,7 +309,7 @@
   "purchaseErrorPaymentPendingError": "Makse katkes. Vaata selle olekut {storeName}is kontoga {accountName}, millega oled sisse logitud.",
   "purchaseErrorInvalidSubscriberAttributesError": "Ostu ei õnnestunud. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Kasutajaandmeid ei õnnestunud hankida. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Kontakt. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorConfigurationError": "Ostutoetide hankimine ebaõnnestus. Palun proovige mõne aja pärast uuesti. Kui probleem ei lahene, võtke ühendust toe teenusega menüüst Seaded > Pöördumine. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Ostuteavet ei õnnestunud laadida. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Teadmatu viga. Palun uuendage rakendus uusimale versioonile ja proovige uuesti. Kui probleem ei lahene, võtke meiega ühendust: Seaded > Kontakt. Kood: {errorCode} Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Teadmatu viga. Ostu andmeid ei õnnestunud eelnevalt hankida. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "Teadmatu viga. Palun värskendage rakendust uusimale versioonile ja proovige uuesti. Kui probleem ei lahene, võtke ühendust läbi Seaded > Kontakt. Kood: {errorCode} Üksikasjad: {exceptionMessage}:{exceptionDetails}",

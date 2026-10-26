@@ -309,7 +309,7 @@
   "purchaseErrorPaymentPendingError": "Betalningen avbröts. Kontrollera statusen i {storeName} med det {accountName}-konto du är inloggad på.",
   "purchaseErrorInvalidSubscriberAttributesError": "Köpet kunde inte slutföras. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Det gick inte att hämta dina användaruppgifter. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorConfigurationError": "Misslyckades med att hämta köpinformation. Vänta lite och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Det gick inte att hämta köpinformationen. Försök igen om en stund. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "Ett okänt fel har inträffat. Uppdatera till senaste versionen och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "Okänt fel. Kunde inte hämta köpinformation i förväg. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "Okänt fel. Uppdatera till den senaste versionen och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Kod: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",

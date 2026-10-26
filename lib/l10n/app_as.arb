@@ -309,7 +309,7 @@
   "purchaseErrorPaymentPendingError": "পেমেণ্টৰ প্ৰক্ৰিয়া মাজতে ৰৈ গৈছে। আপুনি লগ ইন কৰি থকা {accountName} একাউণ্টেৰে {storeName}ত পেমেণ্টৰ অৱস্থা চাওক।",
   "purchaseErrorInvalidSubscriberAttributesError": "ক্ৰয় সম্পূৰ্ণ নহ’ল। অনুগ্ৰহ কৰি কিছু সময়ৰ পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ’লে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "ব্যৱহাৰকাৰীৰ তথ্য লাভ কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি অলপ পাছত আকৌ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorConfigurationError": "ক্ৰয় তথ্য সংগ্ৰহত বিফল হৈছে। কিছুসময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ'লে সেটিংছ > যোগাযোগ ৰ জৰিয়তে যোগাযোগ কৰক। বিশদবিৱৰণ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "ক্ৰয়ৰ তথ্য লাভ কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি কিছু সময় পাছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnsupportedError": "এইটো এটা অজ্ঞাত কাৰণৰ ত্ৰুটি। শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগ ৰ পৰা যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorEmptySubscriberAttributesError": "অজ্ঞাত ত্ৰুটি। ক্ৰয় তথ্য পূৰ্বে সংগ্ৰহ কৰিব পৰা নগ'ল। বিস্তাৰিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingIdentifierError": "এইটো এটা অজ্ঞাত কাৰণৰ ত্ৰুটি। শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সহায় ৰ পৰা যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
