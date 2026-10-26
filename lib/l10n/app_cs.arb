@@ -364,7 +364,7 @@
   "averageDays": "Průměrný počet dní",
   "days": "dní",
   "memo": "Poznámka",
-  "failedToUpdate": "Aktualizace se nezdařila. Zkontrolujte prosím své připojení k internetu a zkuste to znovu.",
+  "failedToUpdate": "Změnu se nepodařilo uložit. Zkontrolujte prosím připojení k internetu a zkuste to znovu.",
   "headache": "bolest hlavy",
   "abdominalPain": "bolest břicha",
   "nausea": "nevolnost",

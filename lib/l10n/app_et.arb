@@ -364,7 +364,7 @@
   "averageDays": "Keskmine päevade arv",
   "days": "päeva",
   "memo": "Märkus",
-  "failedToUpdate": "Värskendamine ebaõnnestus. Palun kontrollige oma internetiühendust ja proovige uuesti.",
+  "failedToUpdate": "Muudatust ei õnnestunud salvestada. Kontrolli internetiühendust ja proovi uuesti.",
   "headache": "peavalu",
   "abdominalPain": "kõhuvalu",
   "nausea": "iiveldus",

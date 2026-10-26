@@ -364,7 +364,7 @@
   "averageDays": "Päivien keskiarvo",
   "days": "päivää",
   "memo": "Muistiinpano",
-  "failedToUpdate": "Päivitys epäonnistui. Tarkista internetyhteytesi ja yritä uudelleen.",
+  "failedToUpdate": "Muutosta ei voitu tallentaa. Tarkista internetyhteys ja yritä uudelleen.",
   "headache": "päänsärky",
   "abdominalPain": "vatsakipu",
   "nausea": "pahoinvointi",

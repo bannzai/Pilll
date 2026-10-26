@@ -364,7 +364,7 @@
   "averageDays": "Napok átlagos száma",
   "days": "nap",
   "memo": "Jegyzet",
-  "failedToUpdate": "Frissítés sikertelen. Kérjük, ellenőrizze internetkapcsolatát, majd próbálja meg újra.",
+  "failedToUpdate": "A módosítást nem sikerült menteni. Ellenőrizd az internetkapcsolatot, majd próbáld újra.",
   "headache": "fejfájás",
   "abdominalPain": "hasfájás",
   "nausea": "hányinger",

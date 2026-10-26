@@ -364,7 +364,7 @@
   "averageDays": "Genomsnittligt antal dagar",
   "days": "dagar",
   "memo": "Anteckning",
-  "failedToUpdate": "Uppdateringen misslyckades. Kontrollera din internetanslutning och försök igen.",
+  "failedToUpdate": "Ändringen kunde inte sparas. Kontrollera internetanslutningen och försök igen.",
   "headache": "huvudvärk",
   "abdominalPain": "buksmärta",
   "nausea": "illamående",

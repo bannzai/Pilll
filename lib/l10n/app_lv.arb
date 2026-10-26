@@ -364,7 +364,7 @@
   "averageDays": "Vidējais dienu skaits",
   "days": "dienas",
   "memo": "Piezīme",
-  "failedToUpdate": "Atjaunošana neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz.",
+  "failedToUpdate": "Neizdevās saglabāt izmaiņas. Pārbaudiet interneta savienojumu un mēģiniet vēlreiz.",
   "headache": "galvassāpes",
   "abdominalPain": "vēdersāpes",
   "nausea": "nelabums",

@@ -364,7 +364,7 @@
   "averageDays": "Média de dias",
   "days": "dias",
   "memo": "Nota",
-  "failedToUpdate": "Falha na atualização. Verifique sua conexão com a internet e tente novamente.",
+  "failedToUpdate": "Não foi possível salvar a alteração. Confira sua conexão com a internet e tente novamente.",
   "headache": "dor de cabeça",
   "abdominalPain": "Dor abdominal",
   "nausea": "náusea",

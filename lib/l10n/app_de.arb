@@ -364,7 +364,7 @@
   "averageDays": "Durchschnittliche Anzahl Tage",
   "days": "Tage",
   "memo": "Notiz",
-  "failedToUpdate": "Die Aktualisierung ist fehlgeschlagen. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+  "failedToUpdate": "Die Änderung konnte nicht gespeichert werden. Prüfe bitte deine Internetverbindung und versuche es erneut.",
   "headache": "Kopfschmerzen",
   "abdominalPain": "Bauchschmerzen",
   "nausea": "Übelkeit",

@@ -364,7 +364,7 @@
   "averageDays": "平均天数",
   "days": "天",
   "memo": "备注",
-  "failedToUpdate": "更新失败，请检查网络连接状态后重新操作",
+  "failedToUpdate": "更改未能保存。请检查网络连接后重试。",
   "headache": "头痛",
   "abdominalPain": "腹痛",
   "nausea": "恶心",

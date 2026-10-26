@@ -364,7 +364,7 @@
   "averageDays": "Rata-rata hari",
   "days": "hari",
   "memo": "Catatan",
-  "failedToUpdate": "Gagal memperbarui data. Silakan periksa koneksi internet Anda dan coba lagi.",
+  "failedToUpdate": "Perubahan tidak dapat disimpan. Periksa koneksi internet Anda, lalu coba lagi.",
   "headache": "sakit kepala",
   "abdominalPain": "Nyeri perut",
   "nausea": "mual",

@@ -364,7 +364,7 @@
   "averageDays": "Număr mediu de zile",
   "days": "zile",
   "memo": "Notiță",
-  "failedToUpdate": "Actualizarea a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou.",
+  "failedToUpdate": "Modificarea nu a putut fi salvată. Verifică conexiunea la internet și încearcă din nou.",
   "headache": "durere de cap",
   "abdominalPain": "durere abdominală",
   "nausea": "greață",

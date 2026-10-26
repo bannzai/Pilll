@@ -364,7 +364,7 @@
   "averageDays": "Average days",
   "days": "days",
   "memo": "Note",
-  "failedToUpdate": "Update failed. Please check your network connection and try again.",
+  "failedToUpdate": "Couldn't save the change. Check your internet connection and try again.",
   "headache": "headache",
   "abdominalPain": "abdominal pain",
   "nausea": "nausea",

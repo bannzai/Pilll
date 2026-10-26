@@ -364,7 +364,7 @@
   "averageDays": "Số ngày trung bình",
   "days": "ngày",
   "memo": "Ghi chú",
-  "failedToUpdate": "Cập nhật thất bại. Vui lòng kiểm tra kết nối mạng và thử lại.",
+  "failedToUpdate": "Không thể lưu thay đổi. Vui lòng kiểm tra kết nối internet rồi thử lại.",
   "headache": "đau đầu",
   "abdominalPain": "đau bụng",
   "nausea": "buồn nôn",

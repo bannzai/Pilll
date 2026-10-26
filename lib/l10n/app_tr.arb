@@ -364,7 +364,7 @@
   "averageDays": "Ortalama gün sayısı",
   "days": "gün",
   "memo": "Not",
-  "failedToUpdate": "Güncelleme yapılamadı. Lütfen internet bağlantınızı kontrol ederek tekrar deneyin.",
+  "failedToUpdate": "Değişiklik kaydedilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.",
   "headache": "baş ağrısı",
   "abdominalPain": "karın ağrısı",
   "nausea": "mide bulantısı",

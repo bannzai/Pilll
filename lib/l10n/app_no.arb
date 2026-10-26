@@ -364,7 +364,7 @@
   "averageDays": "Gjennomsnittlig antall dager",
   "days": "dager",
   "memo": "Notat",
-  "failedToUpdate": "Oppdateringen feilet. Kontroller internettforbindelsen din og prøv igjen.",
+  "failedToUpdate": "Endringen kunne ikke lagres. Sjekk internettforbindelsen og prøv igjen.",
   "headache": "hodepine",
   "abdominalPain": "magesmerter",
   "nausea": "kvalme",

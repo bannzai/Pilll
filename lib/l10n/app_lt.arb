@@ -364,7 +364,7 @@
   "averageDays": "Vidutinis dienų skaičius",
   "days": "d.",
   "memo": "Pastaba",
-  "failedToUpdate": "Atnaujinimas nepavyko. Prašome patikrinti savo interneto ryšį ir bandyti dar kartą.",
+  "failedToUpdate": "Nepavyko išsaugoti pakeitimo. Patikrinkite interneto ryšį ir bandykite dar kartą.",
   "headache": "galvos skausmas",
   "abdominalPain": "pilvo skausmas",
   "nausea": "pykinimas",

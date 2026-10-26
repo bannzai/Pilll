@@ -364,7 +364,7 @@
   "averageDays": "평균 일수",
   "days": "일",
   "memo": "메모",
-  "failedToUpdate": "업데이트에 실패했습니다. 네트워크 연결 상태를 확인한 후 다시 시도해 주세요.",
+  "failedToUpdate": "변경 사항을 저장하지 못했어요. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.",
   "headache": "두통",
   "abdominalPain": "복통",
   "nausea": "메스꺼움",

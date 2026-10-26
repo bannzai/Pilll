@@ -364,7 +364,7 @@
   "averageDays": "Prosječan broj dana",
   "days": "dana",
   "memo": "Bilješka",
-  "failedToUpdate": "Ažuriranje nije uspjelo. Molimo provjerite internetsku vezu i pokušajte ponovo.",
+  "failedToUpdate": "Promjena se nije mogla sačuvati. Molimo, provjerite internetsku vezu i pokušajte ponovo.",
   "headache": "glavobolja",
   "abdominalPain": "bol u trbuhu",
   "nausea": "mučnina",

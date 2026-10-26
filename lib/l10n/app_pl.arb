@@ -364,7 +364,7 @@
   "averageDays": "Średnia liczba dni",
   "days": "dni",
   "memo": "Notatka",
-  "failedToUpdate": "Aktualizacja nie powiodła się. Sprawdź połączenie internetowe i spróbuj ponownie.",
+  "failedToUpdate": "Nie udało się zapisać zmiany. Sprawdź połączenie z internetem i spróbuj ponownie.",
   "headache": "ból głowy",
   "abdominalPain": "ból brzucha",
   "nausea": "nudności",

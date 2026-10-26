@@ -364,7 +364,7 @@
   "averageDays": "Batez besteko egun kopurua",
   "days": "egun",
   "memo": "Oharra",
-  "failedToUpdate": "Eguneratzeak huts egin du. Mesedez, egiaztatu zure interneteko konexioa eta saiatu berriro.",
+  "failedToUpdate": "Ezin izan da aldaketa gorde. Egiaztatu Interneteko konexioa eta saiatu berriro.",
   "headache": "buruko mina",
   "abdominalPain": "sabelmina",
   "nausea": "Goragalea",
