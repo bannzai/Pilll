@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Údaje o menštruácii zaznamenané v Pilll môžete automaticky synchronizovať s aplikáciou Zdravie. Môžete si ich prezerať spolu s ďalšími zdravotnými údajmi a používať ich aj v iných aplikáciách.",
   "quickRecordFeatureAppealTitle": "Záznam o užití priamo z upozornenia",
   "quickRecordFeatureAppealShortDescription": "Zaznamenajte priamo z upozornenia bez otvorenia aplikácie",
-  "quickRecordFeatureAppealHeadline": "Zaznamenanie užitia jedným ťuknutím priamo v notifikácii",
+  "quickRecordFeatureAppealHeadline": "záznam o užití jedným ťuknutím na obrazovke upozornení",
   "quickRecordFeatureAppealBody": "Pri dlhom stlačení upozornenia sa zobrazí akcia \"Označiť ako užité\", vďaka čomu si môžete zaznamenať užitie bez otvorenia aplikácie.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatické pridanie pilulkového listu",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky pridať nasledujúci blister",

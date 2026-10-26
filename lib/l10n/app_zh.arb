@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "你可以将 Pilll 中记录的经期数据自动同步到健康 App，与其他健康数据一起查看，也可以在其他 App 中使用。",
   "quickRecordFeatureAppealTitle": "从通知直接添加服药记录",
   "quickRecordFeatureAppealShortDescription": "无需打开应用，直接在通知中记录",
-  "quickRecordFeatureAppealHeadline": "在通知上一键记录服药",
+  "quickRecordFeatureAppealHeadline": "在通知界面轻点一下即可添加服药记录",
   "quickRecordFeatureAppealBody": "长按提醒通知时，会出现“已服用”操作，您可以在不打开应用的情况下记录服药。",
   "creatingNewPillSheetFeatureAppealTitle": "自动添加药片表",
   "creatingNewPillSheetFeatureAppealShortDescription": "自动生成下一张药片表",

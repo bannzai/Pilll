@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll įrašytus mėnesinių duomenis galite automatiškai sinchronizuoti su programėle „Sveikata“. Ten galite juos peržiūrėti kartu su kitais sveikatos duomenimis ir naudoti kitose programėlėse.",
   "quickRecordFeatureAppealTitle": "Vartojimo įrašas tiesiai iš pranešimo",
   "quickRecordFeatureAppealShortDescription": "Pažymėkite pranešime neatidarę programėlės",
-  "quickRecordFeatureAppealHeadline": "Vieno palietimo vartojimo įrašymas pranešimų ekrane",
+  "quickRecordFeatureAppealHeadline": "vartojimo įrašas vienu palietimu pranešimų ekrane",
   "quickRecordFeatureAppealBody": "Ilgai paspaudus priminimo pranešimą, bus rodoma veiksmo parinktis „Vartojau“, kuri leidžia užregistruoti vartojimą neatidarant programėlės.",
   "creatingNewPillSheetFeatureAppealTitle": "Automatiškai pridėti tablečių lapelius",
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatiškai sukurti kitą tablečių lapelį",

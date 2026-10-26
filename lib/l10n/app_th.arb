@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "ข้อมูลประจำเดือนที่บันทึกใน Pilll สามารถซิงค์กับแอปสุขภาพได้โดยอัตโนมัติค่ะ คุณสามารถดูข้อมูลนี้ควบคู่กับข้อมูลสุขภาพอื่น ๆ และใช้ในแอปอื่นได้ด้วยค่ะ",
   "quickRecordFeatureAppealTitle": "บันทึกการทานยาจากการแจ้งเตือนได้ทันที",
   "quickRecordFeatureAppealShortDescription": "บันทึกผ่านการแจ้งเตือนโดยไม่ต้องเปิดแอป",
-  "quickRecordFeatureAppealHeadline": "แตะครั้งเดียวบนหน้าการแจ้งเตือนเพื่อบันทึกการรับประทาน",
+  "quickRecordFeatureAppealHeadline": "บันทึกการทานยาในแตะเดียวจากหน้าจอการแจ้งเตือน",
   "quickRecordFeatureAppealBody": "เมื่อกดค้างที่การแจ้งเตือน จะมีตัวเลือก 'ทานแล้ว' ให้เลือก ซึ่งช่วยให้คุณบันทึกการรับประทานยาได้โดยไม่ต้องเปิดแอป",
   "creatingNewPillSheetFeatureAppealTitle": "เพิ่มแผงยาคุมอัตโนมัติ",
   "creatingNewPillSheetFeatureAppealShortDescription": "สร้างแผ่นยาถัดไปโดยอัตโนมัติ",

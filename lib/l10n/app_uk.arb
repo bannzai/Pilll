@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Дані про місячні, записані в Pilll, можна автоматично синхронізувати з програмою «Здоров’я». Ви зможете переглядати їх разом з іншими даними про здоров’я та використовувати в інших програмах.",
   "quickRecordFeatureAppealTitle": "Запис прийому просто зі сповіщення",
   "quickRecordFeatureAppealShortDescription": "Записуйте зі сповіщення, не відкриваючи застосунок",
-  "quickRecordFeatureAppealHeadline": "Запис прийому одним дотиком на екрані сповіщень",
+  "quickRecordFeatureAppealHeadline": "запис прийому пігулки одним дотиком на екрані сповіщень",
   "quickRecordFeatureAppealBody": "Якщо натиснути й утримувати сповіщення-нагадування, з’явиться дія «Прийнято», яка дозволить зафіксувати прийом без відкриття додатка.",
   "creatingNewPillSheetFeatureAppealTitle": "Автоматичне додавання аркуша для таблеток",
   "creatingNewPillSheetFeatureAppealShortDescription": "Наступний аркуш буде створено автоматично",

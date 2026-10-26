@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Data haid yang Anda catat di Pilll dapat disinkronkan secara otomatis dengan aplikasi Kesehatan. Anda dapat melihatnya bersama data kesehatan lain dan menggunakannya di aplikasi lain.",
   "quickRecordFeatureAppealTitle": "Catatan minum pil langsung dari notifikasi",
   "quickRecordFeatureAppealShortDescription": "Catat langsung dari notifikasi tanpa membuka aplikasi",
-  "quickRecordFeatureAppealHeadline": "Catat pemakaian dengan sekali ketuk di layar notifikasi",
+  "quickRecordFeatureAppealHeadline": "catatan minum pil dengan satu ketukan di layar notifikasi",
   "quickRecordFeatureAppealBody": "Jika Anda menekan dan menahan notifikasi pengingat, tindakan \"Sudah minum\" akan muncul sehingga Anda dapat mencatat pemakaian tanpa membuka aplikasi.",
   "creatingNewPillSheetFeatureAppealTitle": "Tambahkan lembar pil secara otomatis",
   "creatingNewPillSheetFeatureAppealShortDescription": "Lembar pil berikutnya dibuat secara otomatis",

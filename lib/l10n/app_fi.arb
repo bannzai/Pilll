@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Voit synkronoida Pillliin kirjaamasi kuukautistiedot automaattisesti Terveys-sovellukseen. Näet ne muiden terveystietojesi rinnalla ja voit käyttää niitä myös muissa sovelluksissa.",
   "quickRecordFeatureAppealTitle": "Pilleriloki suoraan ilmoituksesta",
   "quickRecordFeatureAppealShortDescription": "Kirjaa suoraan ilmoituksesta avaamatta sovellusta",
-  "quickRecordFeatureAppealHeadline": "Merkitse annos napauttamalla ilmoitusta",
+  "quickRecordFeatureAppealHeadline": "pilleriloki yhdellä napautuksella ilmoitusnäytöltä",
   "quickRecordFeatureAppealBody": "Kun painat muistutusilmoitusta pitkään, näkyviin tulee \"Otettu\"-toiminto, jonka avulla voit kirjata pillerin otetuksi avaamatta sovellusta.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisää pillerisivu automaattisesti",
   "creatingNewPillSheetFeatureAppealShortDescription": "Luo seuraava arkki automaattisesti",

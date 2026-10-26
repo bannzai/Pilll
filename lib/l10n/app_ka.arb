@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Pilll-ში ჩაწერილი მენსტრუაციის მონაცემები შეგიძლიათ ავტომატურად დაასინქრონოთ ჯანმრთელობის აპთან. იქ მათ ჯანმრთელობის სხვა მონაცემებთან ერთად ნახავთ და სხვა აპებშიც გამოიყენებთ.",
   "quickRecordFeatureAppealTitle": "მიღების ჩანაწერის დამატება პირდაპირ შეტყობინებიდან",
   "quickRecordFeatureAppealShortDescription": "ჩაწერეთ შეტყობინებიდან აპის გახსნის გარეშე",
-  "quickRecordFeatureAppealHeadline": "შეტყობინების ეკრანიდან მიღების ჩაწერა ერთი დაწკაპუნებით",
+  "quickRecordFeatureAppealHeadline": "მიღების ჩანაწერი ერთი შეხებით შეტყობინებების ეკრანზე",
   "quickRecordFeatureAppealBody": "შეტყობინებაზე ხანგრძლივად დაჭერისას გამოჩნდება მოქმედება „მიიღე“, რაც საშუალებას მოგცემთ დაარეგისტრიროთ აბის მიღება აპლიკაციის გახსნის გარეშე.",
   "creatingNewPillSheetFeatureAppealTitle": "ტაბლეტების ფურცლის ავტომატური დამატება",
   "creatingNewPillSheetFeatureAppealShortDescription": "შემდეგი ფურცელი ავტომატურად იქმნება",

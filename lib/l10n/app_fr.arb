@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Vous pouvez synchroniser automatiquement les données de vos règles enregistrées dans Pilll avec l’app Santé. Vous pourrez les consulter avec vos autres données de santé et les utiliser dans d’autres apps.",
   "quickRecordFeatureAppealTitle": "Journal des prises directement depuis la notification",
   "quickRecordFeatureAppealShortDescription": "Enregistrez depuis la notification sans ouvrir l'application",
-  "quickRecordFeatureAppealHeadline": "Appuyez sur la notification pour enregistrer",
+  "quickRecordFeatureAppealHeadline": "journal des prises en un geste depuis l’écran des notifications",
   "quickRecordFeatureAppealBody": "Appuyez longuement sur la notification de rappel pour révéler une action « effectuée » et enregistrez votre dose sans ouvrir l'application.",
   "creatingNewPillSheetFeatureAppealTitle": "Ajouter automatiquement une nouvelle feuille de pilules",
   "creatingNewPillSheetFeatureAppealShortDescription": "La feuille suivante apparaît automatiquement",

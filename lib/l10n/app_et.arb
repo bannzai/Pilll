@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Saad Pilllis kirja pandud päevade andmed automaatselt Tervise rakendusega sünkroonida. Seal saad neid vaadata koos teiste terviseandmetega ja kasutada ka teistes rakendustes.",
   "quickRecordFeatureAppealTitle": "Võtmiskirje otse teavitusest",
   "quickRecordFeatureAppealShortDescription": "Märgi üles otse teavitusest ilma rakendust avamata",
-  "quickRecordFeatureAppealHeadline": "Teatise ekraanilt ühe puudutusega tarbimise registreerimine",
+  "quickRecordFeatureAppealHeadline": "võtmiskirje ühe puudutusega teavituste ekraanil",
   "quickRecordFeatureAppealBody": "Meeldetuletusteatist pikalt vajutades kuvatakse toiming „Võetud\" ja saate tableti võtmise registreerida rakendust avamata.",
   "creatingNewPillSheetFeatureAppealTitle": "Lisa pillileht automaatselt",
   "creatingNewPillSheetFeatureAppealShortDescription": "Järgmise lehe automaatne loomine",

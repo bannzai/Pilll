@@ -490,7 +490,7 @@
   "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere mensdataene du har registrert i Pilll, med Helse-appen. Der kan du se dem sammen med andre helsedata og bruke dem i andre apper.",
   "quickRecordFeatureAppealTitle": "Pillelogg rett fra varselet",
   "quickRecordFeatureAppealShortDescription": "Registrer fra varselet uten å åpne appen",
-  "quickRecordFeatureAppealHeadline": "Registrer medisininntak med ett trykk fra varslingsskjermen",
+  "quickRecordFeatureAppealHeadline": "pillelogg med ett trykk på varslingsskjermen",
   "quickRecordFeatureAppealBody": "Hold inne påminnelsesvarselet for å vise handlingen «Tatt», slik at du kan registrere inntak uten å åpne appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Legg til pilleark automatisk",
   "creatingNewPillSheetFeatureAppealShortDescription": "Generer neste ark automatisk",
