@@ -395,7 +395,7 @@
   "startPauseTaking": "Hefja hlé á pillutöku",
   "startedPauseTaking": "Hlé á inntöku pillunnar er hafið",
   "sequentialLastTakenPlusOnePillNumber": "pilla nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Byrja frá númeri",
+  "startFromNumber": "Byrja á þessu númeri",
   "add": "Bæta við",
   "addPillSheet": "Bæta við pillupakka",
   "pillTakenCountPrefix": "Á dag",

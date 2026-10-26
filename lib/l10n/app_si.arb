@@ -395,7 +395,7 @@
   "startPauseTaking": "පෙති ගැනීමේ විරාමය අරඹන්න",
   "startedPauseTaking": "පෙති ගැනීමේ විරාමය ඇරඹුණා",
   "sequentialLastTakenPlusOnePillNumber": "පෙති අංක {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "අංකයෙන් ආරම්භය",
+  "startFromNumber": "මෙම අංකයෙන් ආරම්භ කරන්න",
   "add": "එකතු කරන්න",
   "addPillSheet": "ගුලිය පත්‍රය එකතු කරන්න",
   "pillTakenCountPrefix": "1දිනකට",

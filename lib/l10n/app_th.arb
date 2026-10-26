@@ -395,7 +395,7 @@
   "startPauseTaking": "เริ่มช่วงพักทานยา",
   "startedPauseTaking": "เริ่มช่วงพักทานยาเม็ดแล้วค่ะ",
   "sequentialLastTakenPlusOnePillNumber": "ยาเม็ดที่ {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "เริ่มต้นจากเม็ดที่",
+  "startFromNumber": "เริ่มจากหมายเลขนี้",
   "add": "เพิ่ม",
   "addPillSheet": "เพิ่มแผงยา",
   "pillTakenCountPrefix": "วันละ",

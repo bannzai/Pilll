@@ -395,7 +395,7 @@
   "startPauseTaking": "Sicela uqale ikhefu lokuphuza amaphilisi",
   "startedPauseTaking": "Isikhathi sokuphumula ekuphuzeni amaphilisi sesiqalile",
   "sequentialLastTakenPlusOnePillNumber": "iphilisi elingunombolo {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Qala ngenombolo",
+  "startFromNumber": "Sicela uqale kule nombolo",
   "add": "Engeza",
   "addPillSheet": "Engeza ishidi lephilisi",
   "pillTakenCountPrefix": "Ngosuku ngalinye",

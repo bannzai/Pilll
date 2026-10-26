@@ -395,7 +395,7 @@
   "startPauseTaking": "Begin jou pilpouse",
   "startedPauseTaking": "Jou pilpouse het begin",
   "sequentialLastTakenPlusOnePillNumber": "nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Start vanaf",
+  "startFromNumber": "Begin by hierdie nommer",
   "add": "Voeg by",
   "addPillSheet": "Voeg pilpakket by",
   "pillTakenCountPrefix": "1 dag",

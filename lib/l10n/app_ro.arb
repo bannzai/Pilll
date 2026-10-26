@@ -395,7 +395,7 @@
   "startPauseTaking": "Începe pauza de la pilulă",
   "startedPauseTaking": "A început pauza de la administrarea pilulei",
   "sequentialLastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Începe de la numărul",
+  "startFromNumber": "Începe de la acest număr",
   "add": "Adaugă",
   "addPillSheet": "Adaugă folie de pastile",
   "pillTakenCountPrefix": "Într-o zi",

@@ -395,7 +395,7 @@
   "startPauseTaking": "Bắt đầu thời gian tạm ngừng uống thuốc",
   "startedPauseTaking": "Đã bắt đầu thời gian tạm ngừng uống thuốc",
   "sequentialLastTakenPlusOnePillNumber": "Viên thuốc số {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Bắt đầu từ số",
+  "startFromNumber": "Bắt đầu từ số này",
   "add": "Thêm",
   "addPillSheet": "Thêm vỉ thuốc",
   "pillTakenCountPrefix": "Mỗi ngày",

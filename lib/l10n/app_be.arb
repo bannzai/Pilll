@@ -395,7 +395,7 @@
   "startPauseTaking": "Пачаць перапынак у прыёме пігулак",
   "startedPauseTaking": "Перапынак у прыёме пігулак пачаўся",
   "sequentialLastTakenPlusOnePillNumber": "пігулка № {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Стартаваць з нумара",
+  "startFromNumber": "Пачаць з гэтага нумара",
   "add": "Дадаць",
   "addPillSheet": "Дадаць блістэр таблетак",
   "pillTakenCountPrefix": "На дзень",

@@ -395,7 +395,7 @@
   "startPauseTaking": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభించండి",
   "startedPauseTaking": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభమైంది",
   "sequentialLastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "నంబర్ నుండి ప్రారంభం",
+  "startFromNumber": "ఈ సంఖ్య నుంచి ప్రారంభించండి",
   "add": "జోడించు",
   "addPillSheet": "పిల్ షీట్ జోడించండి",
   "pillTakenCountPrefix": "రోజుకు",

@@ -395,7 +395,7 @@
   "startPauseTaking": "Starta pilleruppehåll",
   "startedPauseTaking": "Pillerpausen har börjat",
   "sequentialLastTakenPlusOnePillNumber": "piller nr {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Börja från nummer",
+  "startFromNumber": "Börja från det här numret",
   "add": "Lägg till",
   "addPillSheet": "Lägg till tablettark",
   "pillTakenCountPrefix": "En dag att ta",

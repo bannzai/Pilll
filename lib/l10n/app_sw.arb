@@ -395,7 +395,7 @@
   "startPauseTaking": "Tafadhali anza mapumziko ya kumeza vidonge",
   "startedPauseTaking": "Mapumziko ya kumeza vidonge yameanza",
   "sequentialLastTakenPlusOnePillNumber": "kidonge namba {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Anza kutoka nambari",
+  "startFromNumber": "Tafadhali anza kwenye nambari hii",
   "add": "Ongeza",
   "addPillSheet": "Ongeza Karatasi ya Vidonge",
   "pillTakenCountPrefix": "Kwa siku moja",

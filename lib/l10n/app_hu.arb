@@ -395,7 +395,7 @@
   "startPauseTaking": "Tablettaszedési szünet indítása",
   "startedPauseTaking": "Elkezdődött a tablettaszedési szünet",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tabletta",
-  "startFromNumber": "Kezdőszám",
+  "startFromNumber": "Kezdés ettől a számtól",
   "add": "Hozzáadás",
   "addPillSheet": "Tablettás lemez hozzáadása",
   "pillTakenCountPrefix": "Naponta",

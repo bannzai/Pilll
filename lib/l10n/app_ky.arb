@@ -395,7 +395,7 @@
   "startPauseTaking": "Таблетка ичүүдөгү тыныгууну баштаңыз",
   "startedPauseTaking": "Таблетка ичүүдөгү тыныгуу башталды",
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber} таблетка",
-  "startFromNumber": "Номердөн башталуу",
+  "startFromNumber": "Ушул номерден баштаңыз",
   "add": "Кошуу",
   "addPillSheet": "Таблетка листин кошуу",
   "pillTakenCountPrefix": "Күнүнө",

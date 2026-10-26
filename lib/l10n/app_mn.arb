@@ -395,7 +395,7 @@
   "startPauseTaking": "Эм уух завсарлагыг эхлүүлнэ үү",
   "startedPauseTaking": "Эм уух завсарлага эхэлсэн",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} дугаартай эм",
-  "startFromNumber": "дугаараас эхлэх",
+  "startFromNumber": "Энэ дугаараас эхлүүлэх",
   "add": "нэмэх",
   "addPillSheet": "Эм хаягдас нэмэх",
   "pillTakenCountPrefix": "1 өдөрт",

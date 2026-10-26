@@ -395,7 +395,7 @@
   "startPauseTaking": "Mulai jeda minum pil",
   "startedPauseTaking": "Jeda minum pil dimulai",
   "sequentialLastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Mulai dari nomor",
+  "startFromNumber": "Mulai dari nomor ini",
   "add": "Tambah",
   "addPillSheet": "Tambah Strip Pil",
   "pillTakenCountPrefix": "1日に",

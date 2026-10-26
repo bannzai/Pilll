@@ -395,7 +395,7 @@
   "startPauseTaking": "Alusta pillipausi",
   "startedPauseTaking": "Pillipaus algas",
   "sequentialLastTakenPlusOnePillNumber": "pill nr {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Alusta numbrist",
+  "startFromNumber": "Alusta sellest numbrist",
   "add": "Lisa",
   "addPillSheet": "Lisa pillipakk",
   "pillTakenCountPrefix": "1 päevas",

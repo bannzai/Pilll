@@ -395,7 +395,7 @@
   "startPauseTaking": "Започнете пауза во земањето таблети",
   "startedPauseTaking": "Започна паузата во земањето таблета",
   "sequentialLastTakenPlusOnePillNumber": "таблета бр. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Започни од број",
+  "startFromNumber": "Почеток од овој број",
   "add": "Додај",
   "addPillSheet": "Додај пакување",
   "pillTakenCountPrefix": "На ден",

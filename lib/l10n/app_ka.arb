@@ -395,7 +395,7 @@
   "startPauseTaking": "აბების მიღების შესვენების დაწყება",
   "startedPauseTaking": "აბების მიღების შესვენება დაიწყო",
   "sequentialLastTakenPlusOnePillNumber": "აბი № {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "ნომრიდან დაწყება",
+  "startFromNumber": "ამ ნომრიდან დაწყება",
   "add": "დამატება",
   "addPillSheet": "აბების ფურცლის დამატება",
   "pillTakenCountPrefix": "1 დღეში",

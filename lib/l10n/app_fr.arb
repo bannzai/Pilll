@@ -395,7 +395,7 @@
   "startPauseTaking": "Commencer la pause de la pilule",
   "startedPauseTaking": "La pause dans la prise de la pilule a commencé",
   "sequentialLastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Commencer par la pilule",
+  "startFromNumber": "Commencer à ce numéro",
   "add": "Ajouter",
   "addPillSheet": "Ajouter un pack de pilules",
   "pillTakenCountPrefix": "Prendre",

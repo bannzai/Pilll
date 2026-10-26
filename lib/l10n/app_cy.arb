@@ -395,7 +395,7 @@
   "startPauseTaking": "Dechrau seibiant o gymryd y bilsen",
   "startedPauseTaking": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
   "sequentialLastTakenPlusOnePillNumber": "pilsen rhif {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Cychwyn o rif",
+  "startFromNumber": "Dechrau o'r rhif hwn",
   "add": "Ychwanegu",
   "addPillSheet": "Ychwanegu Taflen Biliau",
   "pillTakenCountPrefix": "Un diwrnod",

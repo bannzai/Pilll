@@ -395,7 +395,7 @@
   "startPauseTaking": "ເລີ່ມຊ່ວງພັກການກິນຢາເມັດ",
   "startedPauseTaking": "ເລີ່ມຊ່ວງພັກການກິນຢາເມັດແລ້ວ",
   "sequentialLastTakenPlusOnePillNumber": "ເມັດເລກ {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "ເລີ່ມຈາກເລກ",
+  "startFromNumber": "ເລີ່ມຈາກເລກນີ້",
   "add": "ເພີ່ມ",
   "addPillSheet": "ເພີ່ມແຜ່ນຢາເມັດ",
   "pillTakenCountPrefix": "້ານໜຶ່ງ",

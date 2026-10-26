@@ -395,7 +395,7 @@
   "startPauseTaking": "የክኒን እረፍት ጀምሩ",
   "startedPauseTaking": "የክኒን እረፍት ተጀምሯል",
   "sequentialLastTakenPlusOnePillNumber": "ክኒን ቁጥር {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "ከቁጥር ይጀምር",
+  "startFromNumber": "ከዚህ ቁጥር ጀምሮ",
   "add": "ጨምር",
   "addPillSheet": "የክኒን ሰሌዳ መጨመር",
   "pillTakenCountPrefix": "በቀን",

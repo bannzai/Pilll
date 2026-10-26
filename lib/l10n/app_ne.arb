@@ -395,7 +395,7 @@
   "startPauseTaking": "चक्की खाने विश्राम सुरु गर्नुहोस्",
   "startedPauseTaking": "चक्की सेवनको विश्राम सुरु भएको छ",
   "sequentialLastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "नम्बरदेखि सुरु",
+  "startFromNumber": "यो नम्बरबाट सुरु गर्नुहोस्",
   "add": "थप्नुहोस्",
   "addPillSheet": "पिल सिट थप्नुहोस्",
   "pillTakenCountPrefix": "1 दिनमा",

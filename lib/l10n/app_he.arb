@@ -395,7 +395,7 @@
   "startPauseTaking": "להתחיל הפסקה בנטילת הגלולה",
   "startedPauseTaking": "החלה ההפסקה בנטילת הגלולה",
   "sequentialLastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "התחלה ממספר",
+  "startFromNumber": "להתחיל ממספר זה",
   "add": "הוסף",
   "addPillSheet": "הוסף גיליון כדורים",
   "pillTakenCountPrefix": "他言語(アラビア語)では「في اليوم」(1日に)+「مرات تؤخذ」(回服用する)という構成でした。ヘブライ語も同じ構造で自然な表現にします。\n\n**ביום**",

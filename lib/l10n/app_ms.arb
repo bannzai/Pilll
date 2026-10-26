@@ -395,7 +395,7 @@
   "startPauseTaking": "Mulakan rehat daripada mengambil pil",
   "startedPauseTaking": "Tempoh rehat daripada mengambil pil telah bermula",
   "sequentialLastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Mulai dari nombor",
+  "startFromNumber": "Mula dari nombor ini",
   "add": "Tambah",
   "addPillSheet": "Tambah Pek Pil",
   "pillTakenCountPrefix": "Sehari sekali",

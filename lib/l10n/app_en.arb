@@ -395,7 +395,7 @@
   "startPauseTaking": "Start pill break",
   "startedPauseTaking": "Your pill break has started",
   "sequentialLastTakenPlusOnePillNumber": "Pill #{pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Start from pill",
+  "startFromNumber": "Start from this number",
   "add": "Add",
   "addPillSheet": "Add Pill Sheet",
   "pillTakenCountPrefix": "Take",

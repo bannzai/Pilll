@@ -395,7 +395,7 @@
   "startPauseTaking": "Start pillepause",
   "startedPauseTaking": "Pillepausen har startet",
   "sequentialLastTakenPlusOnePillNumber": "p-pille nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Start fra nummer",
+  "startFromNumber": "Start fra dette nummeret",
   "add": "Legg til",
   "addPillSheet": "Legg til p-pillepakke",
   "pillTakenCountPrefix": "1 dagen",

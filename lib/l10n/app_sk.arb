@@ -395,7 +395,7 @@
   "startPauseTaking": "Začať prestávku v užívaní tabletiek",
   "startedPauseTaking": "Začala sa prestávka v užívaní tabletiek",
   "sequentialLastTakenPlusOnePillNumber": "tabletka č. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Začať od čísla",
+  "startFromNumber": "Začať od tohto čísla",
   "add": "Pridať",
   "addPillSheet": "Pridať balenie piluliek",
   "pillTakenCountPrefix": "Denne aplikáciu užíva denne",

@@ -395,7 +395,7 @@
   "startPauseTaking": "گولیاں لینے میں وقفہ شروع کریں",
   "startedPauseTaking": "گولیاں لینے کا وقفہ شروع ہو گیا ہے",
   "sequentialLastTakenPlusOnePillNumber": "گولی نمبر {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "نمبر سے شروع کریں",
+  "startFromNumber": "اس نمبر سے شروع کریں",
   "add": "اضافہ",
   "addPillSheet": "پل شیٹ شامل کریں",
   "pillTakenCountPrefix": "1日میں",

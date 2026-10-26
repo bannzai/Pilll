@@ -395,7 +395,7 @@
   "startPauseTaking": "পিল খোৱাৰ বিৰতি আৰম্ভ কৰক",
   "startedPauseTaking": "পিল খোৱাৰ বিৰতি আৰম্ভ হৈছে",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} নম্বৰ গৰ্ভনিৰোধক বড়ি",
-  "startFromNumber": "নম্বৰৰ পৰা আৰম্ভ",
+  "startFromNumber": "এই নম্বৰৰ পৰা আৰম্ভ কৰক",
   "add": "যোগ কৰক",
   "addPillSheet": "পিল শীট যোগ কৰক",
   "pillTakenCountPrefix": "1日に",

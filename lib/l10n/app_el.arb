@@ -395,7 +395,7 @@
   "startPauseTaking": "Ξεκινήστε διάλειμμα από το χάπι",
   "startedPauseTaking": "Ξεκίνησε η παύση λήψης του χαπιού",
   "sequentialLastTakenPlusOnePillNumber": "χάπι αρ. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Ξεκίνημα από αριθμό",
+  "startFromNumber": "Έναρξη από αυτόν τον αριθμό",
   "add": "Προσθήκη",
   "addPillSheet": "Προσθέστε συσκευασία",
   "pillTakenCountPrefix": "Μία φορά την ημέρα",

@@ -395,7 +395,7 @@
   "startPauseTaking": "Simulan ang pahinga sa pag-inom ng pildoras",
   "startedPauseTaking": "Nagsimula na po ang pahinga sa pag-inom ng pildoras",
   "sequentialLastTakenPlusOnePillNumber": "Pildoras bilang {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Magsimula sa numero",
+  "startFromNumber": "Magsimula sa numerong ito",
   "add": "Magdagdag",
   "addPillSheet": "Magdagdag ng Pill Sheet",
   "pillTakenCountPrefix": "Isang beses sa isang araw",

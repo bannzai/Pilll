@@ -395,7 +395,7 @@
   "startPauseTaking": "Aloita pilleritauko",
   "startedPauseTaking": "Pilleritauko alkoi",
   "sequentialLastTakenPlusOnePillNumber": "pilleri nro {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Aloita numerosta",
+  "startFromNumber": "Aloita tästä numerosta",
   "add": "Lisää",
   "addPillSheet": "Lisää pilleripakkaus",
   "pillTakenCountPrefix": "1 päivässä",

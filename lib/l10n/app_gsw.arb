@@ -395,7 +395,7 @@
   "startPauseTaking": "Pillepause aafange",
   "startedPauseTaking": "D Pillenpause hät aagfange",
   "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Ab Nummere",
+  "startFromNumber": "Bi dere Nummere aafange",
   "add": "Hinzufüege",
   "addPillSheet": "Pilleblischter hinzuefüege",
   "pillTakenCountPrefix": "1 Tag",

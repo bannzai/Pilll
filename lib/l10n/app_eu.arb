@@ -395,7 +395,7 @@
   "startPauseTaking": "Hasi pilulen atsedenaldia",
   "startedPauseTaking": "Pilula hartzeko atsedenaldia hasi da",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. pilula",
-  "startFromNumber": "zenbakitik hasi",
+  "startFromNumber": "Hasi zenbaki honetatik",
   "add": "Gehitu",
   "addPillSheet": "Pilula-orria gehitu",
   "pillTakenCountPrefix": "1日に",

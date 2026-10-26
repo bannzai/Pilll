@@ -395,7 +395,7 @@
   "startPauseTaking": "Iniciar el descanso de la píldora",
   "startedPauseTaking": "Comenzó tu descanso de la píldora",
   "sequentialLastTakenPlusOnePillNumber": "Píldora n.º {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Empezar desde el número",
+  "startFromNumber": "Empezar desde este número",
   "add": "Agregar",
   "addPillSheet": "Añadir blíster de píldoras",
   "pillTakenCountPrefix": "1 día al",

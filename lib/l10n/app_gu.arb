@@ -395,7 +395,7 @@
   "startPauseTaking": "ગોળી લેવાનો વિરામ શરૂ કરો",
   "startedPauseTaking": "ગોળી લેવાનો વિરામ શરૂ થયો છે",
   "sequentialLastTakenPlusOnePillNumber": "ગોળી નંબર {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "નંબર થી શરૂ",
+  "startFromNumber": "આ નંબરથી શરૂ કરો",
   "add": "ઉમેરો",
   "addPillSheet": "પિલ શીટ ઉમેરો",
   "pillTakenCountPrefix": "1日に",

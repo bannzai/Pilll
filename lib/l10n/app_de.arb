@@ -395,7 +395,7 @@
   "startPauseTaking": "Pillenpause beginnen",
   "startedPauseTaking": "Die Pillenpause hat begonnen",
   "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "Start ab Nummer",
+  "startFromNumber": "Ab dieser Nummer starten",
   "add": "Hinzufügen",
   "addPillSheet": "Pillenpackung hinzufügen",
   "pillTakenCountPrefix": "Einmal täglich",

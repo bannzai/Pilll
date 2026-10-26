@@ -395,7 +395,7 @@
   "startPauseTaking": "ابدئي فترة التوقف عن تناول الحبوب",
   "startedPauseTaking": "بدأت فترة التوقف عن تناول الحبوب",
   "sequentialLastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "ابدأ من الرقم",
+  "startFromNumber": "البدء من هذا الرقم",
   "add": "إضافة",
   "addPillSheet": "أضف شريط الحبوب",
   "pillTakenCountPrefix": "في اليوم",

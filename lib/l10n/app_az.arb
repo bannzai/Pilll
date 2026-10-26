@@ -395,7 +395,7 @@
   "startPauseTaking": "Həb qəbuluna fasilə verin",
   "startedPauseTaking": "Həb qəbuluna fasilə başladı",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} nömrəli həb",
-  "startFromNumber": "Nömrədən başla",
+  "startFromNumber": "Bu nömrədən başlayın",
   "add": "Əlavə et",
   "addPillSheet": "Həb paketi əlavə et",
   "pillTakenCountPrefix": "Gündə",

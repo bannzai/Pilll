@@ -395,7 +395,7 @@
   "startPauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမှု စတင်ပါ",
   "startedPauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားချိန် စတင်ပါပြီ",
   "sequentialLastTakenPlusOnePillNumber": "ဆေးပြားအမှတ် {pillSheetGroupSequentialLastTakenPillNumber}",
-  "startFromNumber": "နံပါတ်မှစ",
+  "startFromNumber": "ဒီနံပါတ်ကနေ စတင်ပါ",
   "add": "ထပ်ထည့်",
   "addPillSheet": "မီးမိုးဆေးပြား ထပ်ထည့်",
   "pillTakenCountPrefix": "1 ရက်လျှင်",
