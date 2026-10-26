@@ -219,7 +219,7 @@
   "readAndStartUsing": "Pakibasa ang impormasyon at\nsimulan nang gamitin ang app",
   "next": "Susunod",
   "notificationIndex": "Abiso {number}",
-  "takingRecordFromNotification": "\\ Makatala ng pag-inom sa notipikasyon /",
+  "takingRecordFromNotification": "Maaari kayong magdagdag sa tala ng pag-inom nang direkta mula sa abiso",
   "startApp": "Simulan ang app",
   "loggedInWithProvider": "Naka-login na gamit ang {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pakikwento mo sa amin ang tungkol sa inireresetang sheet",

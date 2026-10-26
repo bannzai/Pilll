@@ -219,7 +219,7 @@
   "readAndStartUsing": "Прочитајте информације и\nпочните да користите апликацију",
   "next": "Даље",
   "notificationIndex": "Обавештење {number}",
-  "takingRecordFromNotification": "\\ Забележите узимање директно са обавештења /",
+  "takingRecordFromNotification": "Можете да допуните евиденција узимања директно из обавештења",
   "startApp": "Започни",
   "loggedInWithProvider": "Prijavili ste se pomoću {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo recite nam\no propisanom blisteru",

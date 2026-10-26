@@ -219,7 +219,7 @@
   "readAndStartUsing": "Прочитайте информацию и\nначните пользоваться приложением",
   "next": "Далее",
   "notificationIndex": "Уведомление {number}",
-  "takingRecordFromNotification": "\\ Отметка приема через уведомления /",
+  "takingRecordFromNotification": "Вы можете дополнить журнал приёма таблеток прямо из уведомления",
   "startApp": "Начать",
   "loggedInWithProvider": "Вход выполнен через {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Расскажите о назначенной упаковке",

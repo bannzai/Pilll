@@ -219,7 +219,7 @@
   "readAndStartUsing": "Darllenwch y wybodaeth a\nDechreuwch ddefnyddio’r ap",
   "next": "Nesaf",
   "notificationIndex": "Hysbysiad {number}",
-  "takingRecordFromNotification": "\\ Gallwch chi gofnodi cymryd o hysbysiadau /",
+  "takingRecordFromNotification": "Gallwch ychwanegu at y cofnod cymryd yn syth o'r hysbysiad",
   "startApp": "Dechrau'r Ap",
   "loggedInWithProvider": "Wedi mewngofnodi â {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Dywedwch wrthym am y\nddalennau bilsennau a ragnodwyd",

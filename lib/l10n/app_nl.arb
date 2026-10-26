@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lees de informatie en\nbegin de app te gebruiken",
   "next": "Volgende",
   "notificationIndex": "Melding {number}",
-  "takingRecordFromNotification": "\\ Je kunt innames registreren via meldingen /",
+  "takingRecordFromNotification": "Je kunt je innameregistratie direct vanuit de melding bijwerken",
   "startApp": "App starten",
   "loggedInWithProvider": "Ingelogd met {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vertel ons over uw voorgeschreven pilstrip",

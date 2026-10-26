@@ -219,7 +219,7 @@
   "readAndStartUsing": "Läs informationen och\nbörja använda appen",
   "next": "Nästa",
   "notificationIndex": "Avisering {number}",
-  "takingRecordFromNotification": "\\ Registrera intag från notifieringen /",
+  "takingRecordFromNotification": "Du kan uppdatera din intagslogg direkt från notisen",
   "startApp": "Kom igång",
   "loggedInWithProvider": "Inloggad med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Berätta om ditt förskrivna pillblister",

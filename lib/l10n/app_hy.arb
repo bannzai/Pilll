@@ -219,7 +219,7 @@
   "readAndStartUsing": "Կարդացեք տեղեկությունները և\nսկսեք օգտվել հավելվածից",
   "next": "Հաջորդը",
   "notificationIndex": "Ծանուցում {number}",
-  "takingRecordFromNotification": "\\ Ծանուցումներից հնարավոր է դեղերի ընդունումը գրանցել /",
+  "takingRecordFromNotification": "Դուք կարող եք ընդունման գրառում ավելացնել անմիջապես ծանուցումից",
   "startApp": "Սկսել հավելվածը",
   "loggedInWithProvider": "{accountTypeProviderName}-ի միջոցով մուտք գործեցիք",
   "tellAboutPrescribedSheet": "Խնդրում եմ պատմեք նշանակված դեղահաբերի թերթիկի մասին",

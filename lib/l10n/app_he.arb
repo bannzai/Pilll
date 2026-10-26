@@ -219,7 +219,7 @@
   "readAndStartUsing": "לקרוא את המידע\nולהתחיל להשתמש באפליקציה",
   "next": "המשך",
   "notificationIndex": "התראה {number}",
-  "takingRecordFromNotification": "רישום נטילה מההודעה",
+  "takingRecordFromNotification": "אפשר להוסיף רישום נטילה ישירות מההתראה",
   "startApp": "התחל עם האפליקציה",
   "loggedInWithProvider": "התחברת באמצעות {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "אנא ספר לנו על האריזה שנרשמה לך",

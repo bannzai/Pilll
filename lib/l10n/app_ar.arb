@@ -219,7 +219,7 @@
   "readAndStartUsing": "اقرئي المعلومات ثم\nابدئي استخدام التطبيق",
   "next": "التالي",
   "notificationIndex": "إشعار {number}",
-  "takingRecordFromNotification": "\\ يمكنك تسجيل تناول الحبوب من الإشعار /",
+  "takingRecordFromNotification": "يمكنكِ تسجيل تناول الحبة مباشرة من الإشعار",
   "startApp": "ابدأ التطبيق",
   "loggedInWithProvider": "تم تسجيل الدخول باستخدام {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "أخبرينا عن الشريط الموصوف لك",

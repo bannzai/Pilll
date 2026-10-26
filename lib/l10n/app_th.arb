@@ -219,7 +219,7 @@
   "readAndStartUsing": "โปรดอ่านข้อมูลก่อน\nแล้วเริ่มใช้งานแอป",
   "next": "ถัดไป",
   "notificationIndex": "การแจ้งเตือน {number}",
-  "takingRecordFromNotification": "\\ บันทึกการรับประทานยาจากการแจ้งเตือนได้ /",
+  "takingRecordFromNotification": "เพิ่มบันทึกการทานยาได้จากการแจ้งเตือนโดยตรงค่ะ",
   "startApp": "เริ่มใช้แอป",
   "loggedInWithProvider": "เข้าสู่ระบบผ่าน{accountTypeProviderName}แล้ว",
   "tellAboutPrescribedSheet": "โปรดแจ้งข้อมูลเกี่ยวกับแผงยาที่แพทย์สั่ง",

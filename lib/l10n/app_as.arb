@@ -219,7 +219,7 @@
   "readAndStartUsing": "অনুগ্ৰহ কৰি পঢ়ি\nএপটো ব্যৱহাৰ কৰিবলৈ আৰম্ভ কৰক",
   "next": "পৰৱৰ্তী",
   "notificationIndex": "জাননী {number}",
-  "takingRecordFromNotification": "\\ জাননীৰ পৰা সেৱনৰ তথ্য লিপিবদ্ধ কৰিব পাৰিব /",
+  "takingRecordFromNotification": "জাননীৰ পৰাই আপুনি ঔষধ সেৱনৰ ৰেকৰ্ড ৰাখিব পাৰে",
   "startApp": "এপ্পটো আৰম্ভ কৰক",
   "loggedInWithProvider": "{accountTypeProviderName}ৰ সৈতে লগইন কৰা হ'ল",
   "tellAboutPrescribedSheet": "নিৰ্দেশিত শীটৰ বিষয়ে জনাওক",

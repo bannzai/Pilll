@@ -219,7 +219,7 @@
   "readAndStartUsing": "Prečítajte si informácie a\nzačnite používať aplikáciu",
   "next": "Ďalej",
   "notificationIndex": "Upozornenie {number}",
-  "takingRecordFromNotification": "\\ Môžete zaznamenať užitie z notifikácie /",
+  "takingRecordFromNotification": "Záznam o užití môžete pridať priamo z upozornenia",
   "startApp": "Začať",
   "loggedInWithProvider": "Prihlásili ste sa cez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Zadajte informácie o predpisovanom balení",

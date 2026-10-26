@@ -219,7 +219,7 @@
   "readAndStartUsing": "Leggi le informazioni e\ninizia a usare l’app",
   "next": "Avanti",
   "notificationIndex": "Notifica {number}",
-  "takingRecordFromNotification": "\\ Registra l'assunzione dalle notifiche /",
+  "takingRecordFromNotification": "Puoi aggiornare il registro delle assunzioni direttamente dalla notifica",
   "startApp": "Inizia",
   "loggedInWithProvider": "Accesso effettuato con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlaci del blister prescritto",

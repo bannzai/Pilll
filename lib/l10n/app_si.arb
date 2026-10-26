@@ -219,7 +219,7 @@
   "readAndStartUsing": "කරුණාකර තොරතුරු කියවා\nයෙදුම භාවිත කිරීම අරඹන්න",
   "next": "ඊළඟ",
   "notificationIndex": "දැනුම්දීම {number}",
-  "takingRecordFromNotification": "\\ නිවේදනයෙන් ගත කිරීමේ වාර්තා කළ හැකියි /",
+  "takingRecordFromNotification": "දැනුම්දීමෙන්ම පෙති ගැනීමේ සටහනක් එක් කළ හැකියි",
   "startApp": "යෙදුම ආරම්භ කරන්න",
   "loggedInWithProvider": "{accountTypeProviderName} හරහා ලොග් වී ඇත",
   "tellAboutPrescribedSheet": "නිර්දේශිත ඖෂධ පත්‍ර ගැන අපට කියන්න",

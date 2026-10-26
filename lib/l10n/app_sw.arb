@@ -219,7 +219,7 @@
   "readAndStartUsing": "Tafadhali soma taarifa kisha\nuanze kutumia programu",
   "next": "Inayofuata",
   "notificationIndex": "Arifa {number}",
-  "takingRecordFromNotification": "/ Unaweza kurekodi matumizi kutoka kwa taarifa /",
+  "takingRecordFromNotification": "Unaweza kuongeza taarifa kwenye rekodi ya kumeza vidonge moja kwa moja kutoka kwenye arifa",
   "startApp": "Anza programu",
   "loggedInWithProvider": "Umeingia kwa kutumia {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Tuambie kuhusu karatasi za vidonge ulivyoagizwa",

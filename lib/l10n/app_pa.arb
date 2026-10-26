@@ -219,7 +219,7 @@
   "readAndStartUsing": "ਕਿਰਪਾ ਕਰਕੇ ਜਾਣਕਾਰੀ ਪੜ੍ਹੋ ਅਤੇ\nਐਪ ਵਰਤਣਾ ਸ਼ੁਰੂ ਕਰੋ",
   "next": "ਅੱਗੇ",
   "notificationIndex": "ਸੂਚਨਾ {number}",
-  "takingRecordFromNotification": "\\ ਨੋਟੀਫਿਕੇਸ਼ਨ ਤੋਂ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਕਰ ਸਕਦੇ ਹੋ /",
+  "takingRecordFromNotification": "ਤੁਸੀਂ ਸੂਚਨਾ ਤੋਂ ਹੀ ਸੇਵਨ ਰਿਕਾਰਡ ਵਿੱਚ ਜਾਣਕਾਰੀ ਜੋੜ ਸਕਦੇ ਹੋ",
   "startApp": "ਐਪ ਸ਼ੁਰੂ ਕਰੋ",
   "loggedInWithProvider": "{accountTypeProviderName} ਨਾਲ ਲੌਗ ਇਨ ਹੋ ਗਏ",
   "tellAboutPrescribedSheet": "ਤਜਵੀਜ਼ ਕੀਤੇ ਗਏ ਸ਼ੀਟ ਬਾਰੇ\nਜਾਣਕਾਰੀ ਦਿਓ ਜੀ",

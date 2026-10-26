@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lies es dir durch und\nleg mit der App los",
   "next": "Weiter",
   "notificationIndex": "Benachrichtigung {number}",
-  "takingRecordFromNotification": "\\ Einnahme über Benachrichtigungen aufzeichnen /",
+  "takingRecordFromNotification": "Du kannst dein Einnahmeprotokoll direkt über die Benachrichtigung ergänzen",
   "startApp": "Loslegen",
   "loggedInWithProvider": "Mit {accountTypeProviderName} angemeldet",
   "tellAboutPrescribedSheet": "Über Ihre verschriebene\nPillenpackung",

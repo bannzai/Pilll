@@ -219,7 +219,7 @@
   "readAndStartUsing": "Oxuyun və\nətbiqdən istifadə etməyə başlayın",
   "next": "Növbəti",
   "notificationIndex": "Bildiriş {number}",
-  "takingRecordFromNotification": "\\ Bildirişdən həb qəbulunu qeyd edə bilərsiniz /",
+  "takingRecordFromNotification": "Bildirişdən birbaşa həb qəbulu qeydi apara bilərsiniz",
   "startApp": "Tətbiqi başla",
   "loggedInWithProvider": "{accountTypeProviderName} ilə daxil oldunuz",
   "tellAboutPrescribedSheet": "Reçete edilən həb lövhəsi haqqında məlumat verin",

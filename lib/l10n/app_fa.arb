@@ -219,7 +219,7 @@
   "readAndStartUsing": "لطفاً اطلاعات را بخوانید و\nاستفاده از برنامه را شروع کنید",
   "next": "بعدی",
   "notificationIndex": "اعلان {number}",
-  "takingRecordFromNotification": "\\ امکان ثبت مصرف از طریق اعلان /",
+  "takingRecordFromNotification": "می‌توانید ثبت مصرف قرص را مستقیم از اعلان انجام دهید",
   "startApp": "شروع اپلیکیشن",
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",
   "tellAboutPrescribedSheet": "لطفاً درباره بسته‌های قرص تجویزی اطلاعات دهید",

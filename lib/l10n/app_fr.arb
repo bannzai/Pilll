@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lisez les informations et\ncommencez à utiliser l’application",
   "next": "Suivant",
   "notificationIndex": "Notification {number}",
-  "takingRecordFromNotification": "\\ Enregistrez votre dose à partir des notifications /",
+  "takingRecordFromNotification": "Vous pouvez compléter votre journal des prises directement depuis la notification",
   "startApp": "Commencer",
   "loggedInWithProvider": "Connecté avec {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Veuillez nous parler de votre plaquette de pilules prescrite",

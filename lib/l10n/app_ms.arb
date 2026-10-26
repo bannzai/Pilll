@@ -219,7 +219,7 @@
   "readAndStartUsing": "Sila baca maklumat ini, kemudian\nmula gunakan aplikasi",
   "next": "Seterusnya",
   "notificationIndex": "Pemberitahuan {number}",
-  "takingRecordFromNotification": "\\ Rekod pengambilan boleh dibuat dari notifikasi /",
+  "takingRecordFromNotification": "Anda boleh mengemas kini rekod pengambilan terus daripada pemberitahuan",
   "startApp": "Mulakan Aplikasi",
   "loggedInWithProvider": "Berjaya log masuk dengan {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sila nyatakan maklumat tentang pakej pil yang dipreskripsikan",

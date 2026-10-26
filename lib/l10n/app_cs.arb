@@ -219,7 +219,7 @@
   "readAndStartUsing": "Přečtěte si informace a\nzačněte aplikaci používat",
   "next": "Pokračovat",
   "notificationIndex": "Oznámení {number}",
-  "takingRecordFromNotification": "\\ Z oznámení můžete zaznamenat užívání /",
+  "takingRecordFromNotification": "Záznam užití můžete přidat přímo z oznámení",
   "startApp": "Začít používat aplikaci",
   "loggedInWithProvider": "Přihlášen pomocí {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sdělte nám prosím o předepsaném blistrovém balení",

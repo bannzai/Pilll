@@ -219,7 +219,7 @@
   "readAndStartUsing": "Olvasd el a tájékoztatót, és\nkezdd el használni az alkalmazást",
   "next": "Tovább",
   "notificationIndex": "Értesítés {number}",
-  "takingRecordFromNotification": "\\ Értesítésből rögzítheti a bevételt /",
+  "takingRecordFromNotification": "A tablettaszedési naplót közvetlenül az értesítésből is frissítheted",
   "startApp": "Kezdés",
   "loggedInWithProvider": "Bejelentkeztél a {accountTypeProviderName} fiókkal",
   "tellAboutPrescribedSheet": "A felírt fogamzásgátló csomagról\nkérem, adjon információt",

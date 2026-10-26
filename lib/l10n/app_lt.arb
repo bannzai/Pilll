@@ -219,7 +219,7 @@
   "readAndStartUsing": "Perskaitykite informaciją ir\npradėkite naudotis programėle",
   "next": "Toliau",
   "notificationIndex": "Pranešimas {number}",
-  "takingRecordFromNotification": "\\ Galite įrašyti vartojimą per pranešimus /",
+  "takingRecordFromNotification": "Vartojimo įrašą galite pridėti tiesiai iš pranešimo",
   "startApp": "Pradėti naudotis",
   "loggedInWithProvider": "Sėkmingai prisijungėte su {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Papasakykite apie praskiriamą plokštelę",

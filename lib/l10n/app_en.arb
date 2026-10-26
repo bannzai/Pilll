@@ -219,7 +219,7 @@
   "readAndStartUsing": "Read the information and\nstart using the app",
   "next": "Next",
   "notificationIndex": "Notification {number}",
-  "takingRecordFromNotification": "\\ Record your dose from notifications /",
+  "takingRecordFromNotification": "You can update your pill log right from the notification",
   "startApp": "Get Started",
   "loggedInWithProvider": "Logged in with {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Please tell us about your prescribed pill pack",

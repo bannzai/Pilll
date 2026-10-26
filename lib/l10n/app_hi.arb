@@ -219,7 +219,7 @@
   "readAndStartUsing": "कृपया जानकारी पढ़ें और\nऐप का उपयोग शुरू करें",
   "next": "आगे",
   "notificationIndex": "सूचना {number}",
-  "takingRecordFromNotification": "\\ सूचना से सेवन रिकॉर्ड कर सकते हैं /",
+  "takingRecordFromNotification": "आप सूचना से ही सेवन रिकॉर्ड में जानकारी जोड़ सकती हैं",
   "startApp": "शुरू करें",
   "loggedInWithProvider": "{accountTypeProviderName} के साथ लॉग इन हो गए",
   "tellAboutPrescribedSheet": "निर्धारित शीट के बारे में\nकृपया बताएं",

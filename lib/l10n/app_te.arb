@@ -219,7 +219,7 @@
   "readAndStartUsing": "దయచేసి సమాచారాన్ని చదివి\nయాప్‌ను ఉపయోగించడం ప్రారంభించండి",
   "next": "తదుపరి",
   "notificationIndex": "నోటిఫికేషన్ {number}",
-  "takingRecordFromNotification": "\\ నోటిఫికేషన్ నుండి సేవన రికార్డ్ చేయవచ్చు /",
+  "takingRecordFromNotification": "నోటిఫికేషన్ నుంచే మాత్రల నమోదు చేయవచ్చు",
   "startApp": "యాప్ ప్రారంభించండి",
   "loggedInWithProvider": "{accountTypeProviderName} తో లాగిన్ అయ్యారు",
   "tellAboutPrescribedSheet": "సూచించిన షీట్ గురించి\nదయచేసి చెప్పండి",

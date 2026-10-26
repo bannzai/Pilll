@@ -219,7 +219,7 @@
   "readAndStartUsing": "Vui lòng đọc thông tin rồi\nbắt đầu sử dụng ứng dụng",
   "next": "Tiếp theo",
   "notificationIndex": "Thông báo {number}",
-  "takingRecordFromNotification": "\\ Có thể ghi lại việc uống thuốc từ thông báo /",
+  "takingRecordFromNotification": "Bạn có thể thêm vào nhật ký uống thuốc ngay từ thông báo",
   "startApp": "Bắt đầu sử dụng",
   "loggedInWithProvider": "Đã đăng nhập thành công bằng {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vui lòng cho biết thông tin về vỉ thuốc được kê đơn",

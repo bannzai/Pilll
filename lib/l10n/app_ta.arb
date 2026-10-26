@@ -219,7 +219,7 @@
   "readAndStartUsing": "தகவலைப் படித்துவிட்டு\nசெயலியைப் பயன்படுத்தத் தொடங்குங்கள்",
   "next": "அடுத்து",
   "notificationIndex": "அறிவிப்பு {number}",
-  "takingRecordFromNotification": "அறிவிப்பு மூலம் மாத்திரை எடுத்த பதிவைச் செய்யலாம்",
+  "takingRecordFromNotification": "அறிவிப்பிலிருந்தே மாத்திரை உட்கொண்ட பதிவு சேர்க்கலாம்",
   "startApp": "ஆப்பைத் தொடங்குங்கள்",
   "loggedInWithProvider": "{accountTypeProviderName} மூலம் உள்நுழைந்தீர்கள்",
   "tellAboutPrescribedSheet": "உங்களுக்கு பரிந்துரைக்கப்பட்ட மாத்திரை தாள் பற்றி தெரிவிக்கவும்",

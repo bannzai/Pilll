@@ -219,7 +219,7 @@
   "readAndStartUsing": "Bilgileri okuyup\nuygulamayı kullanmaya başlayın",
   "next": "İleri",
   "notificationIndex": "Bildirim {number}",
-  "takingRecordFromNotification": "\\ Bildirimden ilaç alımını kaydedebilirsiniz /",
+  "takingRecordFromNotification": "Bildirimden doğrudan hap kullanım kaydı ekleyebilirsiniz",
   "startApp": "Uygulamaya Başla",
   "loggedInWithProvider": "{accountTypeProviderName} ile giriş yaptınız",
   "tellAboutPrescribedSheet": "Reçete edilen strip hakkında bilgi verin",

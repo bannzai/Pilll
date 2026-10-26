@@ -219,7 +219,7 @@
   "readAndStartUsing": "Leia as informações e\ncomece a usar o aplicativo",
   "next": "Próximo",
   "notificationIndex": "Notificação {number}",
-  "takingRecordFromNotification": "\\ Registre a tomada pela notificação /",
+  "takingRecordFromNotification": "Você pode atualizar o registro de uso direto pela notificação",
   "startApp": "Começar",
   "loggedInWithProvider": "Login realizado com {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Conte-nos sobre a cartela prescrita",

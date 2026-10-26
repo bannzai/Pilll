@@ -219,7 +219,7 @@
   "readAndStartUsing": "Мэдээллийг уншаад\nаппыг ашиглаж эхэлнэ үү",
   "next": "Дараах",
   "notificationIndex": "Мэдэгдэл {number}",
-  "takingRecordFromNotification": "\\ Мэдэгдлээс эм уух тэмдэглэл хийж болно /",
+  "takingRecordFromNotification": "Мэдэгдлээс шууд эм уусан бүртгэл нэмэх боломжтой",
   "startApp": "Эхлэх",
   "loggedInWithProvider": "{accountTypeProviderName} ашиглан нэвтрэв",
   "tellAboutPrescribedSheet": "Жороор олгосон эмийн багцны талаар\nхэлж өгнө үү",

@@ -219,7 +219,7 @@
   "readAndStartUsing": "Sicela ufunde imininingwane bese\nuqala ukusebenzisa uhlelo lokusebenza",
   "next": "Okulandelayo",
   "notificationIndex": "Isaziso {number}",
-  "takingRecordFromNotification": "\\ Ungakwazi ukuqopha ukudla komuthi ngesaziso /",
+  "takingRecordFromNotification": "Ungakwazi ukwengeza ku-rekhodi lokuphuza amaphilisi ngokuqondile esazisweni",
   "startApp": "Qalisa uhlelo",
   "loggedInWithProvider": "Ungenile ngo{accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sitshele mayelana neshidi lezidakamizwa ezikunikezwe udokotela",

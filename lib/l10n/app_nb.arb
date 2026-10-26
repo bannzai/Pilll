@@ -219,7 +219,7 @@
   "readAndStartUsing": "Les informasjonen, og\nbegynn å bruke appen",
   "next": "Neste",
   "notificationIndex": "Varsel {number}",
-  "takingRecordFromNotification": "\\ Du kan registrere inntak fra varslinger /",
+  "takingRecordFromNotification": "Du kan oppdatere pilleloggen rett fra varselet",
   "startApp": "Kom i gang",
   "loggedInWithProvider": "Logget inn med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortell oss om den utskrevne\npillepakken",

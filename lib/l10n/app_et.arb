@@ -219,7 +219,7 @@
   "readAndStartUsing": "Loe teave läbi ja\nalusta rakenduse kasutamist",
   "next": "Edasi",
   "notificationIndex": "Teavitus {number}",
-  "takingRecordFromNotification": "Teatisest saab pillide võtmist registreerida!",
+  "takingRecordFromNotification": "Saad lisada võtmiskirje otse teavitusest",
   "startApp": "Alusta äppi",
   "loggedInWithProvider": "Logitud sisse {accountTypeProviderName} kaudu",
   "tellAboutPrescribedSheet": "Palun rääkige määratud pillipakist",

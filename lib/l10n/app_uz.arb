@@ -219,7 +219,7 @@
   "readAndStartUsing": "Maʼlumotni oʻqing va\nilovadan foydalanishni boshlang",
   "next": "Keyingi",
   "notificationIndex": "Bildirishnoma {number}",
-  "takingRecordFromNotification": "\\ Bildirishnoma orqali dori qabul qilishni qayd etishingiz mumkin /",
+  "takingRecordFromNotification": "Bildirishnomadan turib tabletka qabul qilish qaydini qoʻshishingiz mumkin",
   "startApp": "Boshlash",
   "loggedInWithProvider": "{accountTypeProviderName} orqali tizimga kirdingiz",
   "tellAboutPrescribedSheet": "Buyurilgan dori qadoqlari haqida\nma'lumot bering",

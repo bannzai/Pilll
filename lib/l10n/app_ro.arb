@@ -219,7 +219,7 @@
   "readAndStartUsing": "Citește informațiile și\nîncepe să folosești aplicația",
   "next": "Înainte",
   "notificationIndex": "Notificare {number}",
-  "takingRecordFromNotification": "\\ Puteți înregistra administrarea din notificare /",
+  "takingRecordFromNotification": "Poți adăuga o înregistrare direct din notificare",
   "startApp": "Începe aplicația",
   "loggedInWithProvider": "V-ați conectat cu {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Despre blisterul prescris\nvă rugăm să ne spuneți",

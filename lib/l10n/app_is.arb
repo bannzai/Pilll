@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lestu upplýsingarnar og\nbyrjaðu að nota appið",
   "next": "Áfram",
   "notificationIndex": "Tilkynning {number}",
-  "takingRecordFromNotification": "\\ Þú getur skráð inntak úr tilkynningu /",
+  "takingRecordFromNotification": "Þú getur bætt við inntökuskrá beint úr tilkynningunni",
   "startApp": "Byrja",
   "loggedInWithProvider": "Skráði inn með {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vinsamlegast segðu okkur um\návísaða pillupakkann",

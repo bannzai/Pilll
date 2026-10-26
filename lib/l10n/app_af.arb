@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lees dit en\nbegin asseblief die app gebruik",
   "next": "Volgende",
   "notificationIndex": "Kennisgewing {number}",
-  "takingRecordFromNotification": "\\ Jy kan jou pil-inname direk vanaf kennisgewings aanteken /",
+  "takingRecordFromNotification": "Jy kan jou innamerekord direk vanuit die kennisgewing bywerk",
   "startApp": "Begin die app",
   "loggedInWithProvider": "Aangemeld met {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vertel ons asseblief oor\ndie voorgeskrewe pillefoelie",

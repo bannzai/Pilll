@@ -219,7 +219,7 @@
   "readAndStartUsing": "Pročitajte informacije i\npočnite koristiti aplikaciju",
   "next": "Dalje",
   "notificationIndex": "Obavijest {number}",
-  "takingRecordFromNotification": "\\ Zabilježite uzimanje iz notifikacije /",
+  "takingRecordFromNotification": "Evidencija uzimanja može se dopuniti izravno iz obavijesti",
   "startApp": "Počni s aplikacijom",
   "loggedInWithProvider": "Prijavili ste se pomoću {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo vas da nam kažete o propisanim tabletama",

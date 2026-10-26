@@ -219,7 +219,7 @@
   "readAndStartUsing": "እባክዎ ያንብቡና\nመተግበሪያውን መጠቀም ይጀምሩ",
   "next": "ቀጣይ",
   "notificationIndex": "ማሳወቂያ {number}",
-  "takingRecordFromNotification": "\\ ከማሳወቂያ መድኃኒት ወሰዳት መመዝገብ ይቻላል /",
+  "takingRecordFromNotification": "ከማሳወቂያው በቀጥታ አወሳሰድ መዝገብ ማድረግ ይችላሉ",
   "startApp": "መተግበሪያውን ጀምር",
   "loggedInWithProvider": "በ{accountTypeProviderName} ገብተዋል",
   "tellAboutPrescribedSheet": "እባክዎን ስለ የተወሰደላችሁ የመድኃኒት ሉህ ያሳውቁን",

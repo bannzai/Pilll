@@ -219,7 +219,7 @@
   "readAndStartUsing": "Pročitajte i\npočnite koristiti aplikaciju",
   "next": "Dalje",
   "notificationIndex": "Obavijest {number}",
-  "takingRecordFromNotification": "\\ Možete zabilježiti uzimanje iz notifikacije /",
+  "takingRecordFromNotification": "Evidenciju uzimanja pilule možete dopuniti direktno iz obavijesti",
   "startApp": "Počnite aplikaciju",
   "loggedInWithProvider": "Prijavljeni ste preko {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Molimo recite nam o propisanom blisteru",

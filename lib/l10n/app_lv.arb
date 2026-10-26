@@ -219,7 +219,7 @@
   "readAndStartUsing": "Izlasiet informāciju un\nsāciet lietot lietotni",
   "next": "Tālāk",
   "notificationIndex": "Paziņojums {number}",
-  "takingRecordFromNotification": "\\ Ieņemšanu var reģistrēt no paziņojuma /",
+  "takingRecordFromNotification": "Tablešu lietošanas ierakstu varat pievienot tieši no paziņojuma",
   "startApp": "Sākt lietot aplikāciju",
   "loggedInWithProvider": "Esat veiksmīgi pieslēdzies ar {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pastāstiet par izrakstītajām plāksnītēm",

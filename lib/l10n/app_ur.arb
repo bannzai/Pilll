@@ -219,7 +219,7 @@
   "readAndStartUsing": "براہِ کرم معلومات پڑھیں اور\nایپ استعمال کرنا شروع کریں",
   "next": "اگلا",
   "notificationIndex": "اطلاع {number}",
-  "takingRecordFromNotification": "\\ آپ نوٹیفکیشن سے دوا کا ریکارڈ کر سکتے ہیں /",
+  "takingRecordFromNotification": "آپ اطلاع سے ہی گولی لینے کا ریکارڈ درج کر سکتی ہیں",
   "startApp": "ایپ شروع کریں",
   "loggedInWithProvider": "{accountTypeProviderName} کے ذریعے لاگ ان ہو گئے",
   "tellAboutPrescribedSheet": "براہ کرم تجویز کیے گئے شیٹ کے بارے میں بتائیں",

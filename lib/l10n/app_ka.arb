@@ -219,7 +219,7 @@
   "readAndStartUsing": "გაეცანით ინფორმაციას და\nდაიწყეთ აპის გამოყენება",
   "next": "შემდეგი",
   "notificationIndex": "შეტყობინება {number}",
-  "takingRecordFromNotification": "\\ შეტყობინებით მიღების რეგისტრაცია /",
+  "takingRecordFromNotification": "შეტყობინებიდან პირდაპირ შეგიძლიათ მიღების ჩანაწერის დამატება",
   "startApp": "დაწყება",
   "loggedInWithProvider": "{accountTypeProviderName}-ით შესული ხართ",
   "tellAboutPrescribedSheet": "გთხოვთ, გვითხრათ დანიშნული შეფუთვის შესახებ",

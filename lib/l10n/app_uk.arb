@@ -219,7 +219,7 @@
   "readAndStartUsing": "Прочитайте інформацію та\nпочніть користуватися застосунком",
   "next": "Далі",
   "notificationIndex": "Сповіщення {number}",
-  "takingRecordFromNotification": "\\ Запис прийому з повідомлень /",
+  "takingRecordFromNotification": "Ви можете додати запис прийому просто зі сповіщення",
   "startApp": "Розпочати користування додатком",
   "loggedInWithProvider": "Ви увійшли через {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Розкажіть про призначені блістери",

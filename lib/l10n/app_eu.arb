@@ -219,7 +219,7 @@
   "readAndStartUsing": "Irakurri informazioa eta\nhasi aplikazioa erabiltzen",
   "next": "Hurrengoa",
   "notificationIndex": "Jakinarazpena {number}",
-  "takingRecordFromNotification": "/ Jakinarazpenetik hartu erregistroa egin dezakezu /",
+  "takingRecordFromNotification": "Jakinarazpenetik bertatik gehi dezakezu hartze-erregistro bat",
   "startApp": "Aplikazioa hasi",
   "loggedInWithProvider": "{accountTypeProviderName}(r)ekin saioa hasi duzu",
   "tellAboutPrescribedSheet": "Errezetatutako txartelari buruz esan iezaguzu",

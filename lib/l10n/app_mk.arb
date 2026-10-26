@@ -219,7 +219,7 @@
   "readAndStartUsing": "Прочитајте ги информациите и\nпочнете да ја користите апликацијата",
   "next": "Следно",
   "notificationIndex": "Известување {number}",
-  "takingRecordFromNotification": "\\ Можете да забележите земање од известувањето /",
+  "takingRecordFromNotification": "Можете да додадете Запис за земање директно од известувањето",
   "startApp": "Започни со апликацијата",
   "loggedInWithProvider": "Се најавивте со {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Кажете ни за пропишаните листови на пилули",

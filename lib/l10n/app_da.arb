@@ -219,7 +219,7 @@
   "readAndStartUsing": "Læs det, og\nbegynd at bruge appen",
   "next": "Næste",
   "notificationIndex": "Notifikation {number}",
-  "takingRecordFromNotification": "\\ Registrer medicintag fra notifikationer /",
+  "takingRecordFromNotification": "Du kan opdatere din pilleregistrering direkte fra notifikationen",
   "startApp": "Kom i gang",
   "loggedInWithProvider": "Du har logget ind med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortæl os om din ordinerede pillepakke",

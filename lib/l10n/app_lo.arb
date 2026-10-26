@@ -219,7 +219,7 @@
   "readAndStartUsing": "ກະລຸນາອ່ານຂໍ້ມູນ ແລ້ວ\nເລີ່ມໃຊ້ແອັບ",
   "next": "ຕໍ່ໄປ",
   "notificationIndex": "ການແຈ້ງເຕືອນ {number}",
-  "takingRecordFromNotification": "\\ ສາມາດບັນທຶກການກິນຢາຈາກການແຈ້ງເຕືອນໄດ້ /",
+  "takingRecordFromNotification": "ທ່ານສາມາດເພີ່ມບັນທຶກການກິນຢາໄດ້ທັນທີຈາກການແຈ້ງເຕືອນ",
   "startApp": "ເລີມໃຊ້ແອັບ",
   "loggedInWithProvider": "ເຂົ້າສູ່ລະບົບດ້ວຍ {accountTypeProviderName} ແລ້ວ",
   "tellAboutPrescribedSheet": "ກະລຸນາບອກກ່ຽວກັບແຜ່ນຢາທີ່ແພດສັ່ງໃຫ້",

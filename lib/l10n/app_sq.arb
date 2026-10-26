@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lexoni informacionin dhe\nfilloni të përdorni aplikacionin",
   "next": "Më tej",
   "notificationIndex": "Njoftim {number}",
-  "takingRecordFromNotification": "\\ Regjistroni marrjen direkt nga njoftimet /",
+  "takingRecordFromNotification": "Mund të shtoni regjistrimi i marrjes drejtpërdrejt nga njoftimi",
   "startApp": "Fillo aplikacionin",
   "loggedInWithProvider": "U kyçët me {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Ju lutemi na tregoni rreth bllokut që ju është përshkruar",

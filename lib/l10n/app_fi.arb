@@ -219,7 +219,7 @@
   "readAndStartUsing": "Lue tiedot ja\naloita sovelluksen käyttö",
   "next": "Seuraava",
   "notificationIndex": "Ilmoitus {number}",
-  "takingRecordFromNotification": "\\ Voit kirjata pillerin oton suoraan ilmoituksesta /",
+  "takingRecordFromNotification": "Voit päivittää pillerilokia suoraan ilmoituksesta",
   "startApp": "Aloita sovellus",
   "loggedInWithProvider": "Kirjauduit sisään {accountTypeProviderName}-palvelun kautta",
   "tellAboutPrescribedSheet": "Kerro määrätyistä tablettipakkauksista",

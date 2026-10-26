@@ -219,7 +219,7 @@
   "readAndStartUsing": "Ақпаратты оқып шығып,\nқолданбаны пайдалануды бастаңыз",
   "next": "Келесі",
   "notificationIndex": "Хабарландыру {number}",
-  "takingRecordFromNotification": "\\ Хабарландырудан дәрі қабылдауды тіркей аласыз /",
+  "takingRecordFromNotification": "Хабарламадан бірден қабылдау жазбасын қоса аласыз",
   "startApp": "Қолданбаны бастау",
   "loggedInWithProvider": "{accountTypeProviderName} арқылы кірдіңіз",
   "tellAboutPrescribedSheet": "Дәрігер жазған дәрі блистері туралы айтып беріңіз",

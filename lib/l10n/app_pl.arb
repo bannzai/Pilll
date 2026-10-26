@@ -219,7 +219,7 @@
   "readAndStartUsing": "Przeczytaj informacje i\nzacznij korzystać z aplikacji",
   "next": "Dalej",
   "notificationIndex": "Powiadomienie {number}",
-  "takingRecordFromNotification": "\\ Możesz zapisać przyjęcie z powiadomień /",
+  "takingRecordFromNotification": "Możesz dodać wpis o przyjęciu tabletki bezpośrednio z powiadomienia",
   "startApp": "Rozpocznij używanie aplikacji",
   "loggedInWithProvider": "Zalogowano się przez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Opowiedz nam o przepisanych blistrach",

@@ -219,7 +219,7 @@
   "readAndStartUsing": "অনুগ্রহ করে পড়ুন এবং\nঅ্যাপটি ব্যবহার শুরু করুন",
   "next": "পরবর্তী",
   "notificationIndex": "বিজ্ঞপ্তি {number}",
-  "takingRecordFromNotification": "\\ বিজ্ঞপ্তি থেকে সেবনের রেকর্ড করুন /",
+  "takingRecordFromNotification": "বিজ্ঞপ্তি থেকেই আপনি সেবনের রেকর্ড রাখতে পারেন",
   "startApp": "অ্যাপ শুরু করুন",
   "loggedInWithProvider": "{accountTypeProviderName} দিয়ে সফলভাবে লগইন করেছেন",
   "tellAboutPrescribedSheet": "নির্ধারিত শিট সম্পর্কে\nজানান",

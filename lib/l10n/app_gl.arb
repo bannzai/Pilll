@@ -219,7 +219,7 @@
   "readAndStartUsing": "Le a información e\ncomeza a usar a aplicación",
   "next": "Seguinte",
   "notificationIndex": "Notificación {number}",
-  "takingRecordFromNotification": "\\ Podes rexistrar a toma dende as notificacións /",
+  "takingRecordFromNotification": "Podes engadir unha entrada ao rexistro de tomas directamente desde a notificación",
   "startApp": "Comezar",
   "loggedInWithProvider": "Iniciou sesión con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fálenos sobre o envase receitado",

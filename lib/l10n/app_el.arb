@@ -219,7 +219,7 @@
   "readAndStartUsing": "Διαβάστε τις πληροφορίες και\nξεκινήστε να χρησιμοποιείτε την εφαρμογή",
   "next": "Επόμενο",
   "notificationIndex": "Ειδοποίηση {number}",
-  "takingRecordFromNotification": "\\ Μπορείτε να καταγράψετε τη λήψη από την ειδοποίηση /",
+  "takingRecordFromNotification": "Μπορείτε να προσθέσετε καταγραφή λήψης απευθείας από την ειδοποίηση",
   "startApp": "Ξεκινήστε την εφαρμογή",
   "loggedInWithProvider": "Συνδεθήκατε με {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Πείτε μας για τη συνταγογραφημένη συσκευασία",

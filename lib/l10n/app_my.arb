@@ -219,7 +219,7 @@
   "readAndStartUsing": "အချက်အလက်များကို ဖတ်ရှုပြီး\nအက်ပ်ကို စတင်အသုံးပြုပါ",
   "next": "နောက်တစ်ဆင့်",
   "notificationIndex": "အသိပေးချက် {number}",
-  "takingRecordFromNotification": "\\ အကြောင်းကြားစာမှ ဆေးသုံးမှတ်တမ်းတင်နိုင်သည် /",
+  "takingRecordFromNotification": "အကြောင်းကြားချက်ကနေ ဆေးသောက်မှတ်တမ်းကို တိုက်ရိုက်ဖြည့်နိုင်ပါတယ်",
   "startApp": "အက်ပ်စတင်မည်",
   "loggedInWithProvider": "{accountTypeProviderName} ဖြင့် လော့ဂ်အင်ဝင်ပြီးပါပြီ",
   "tellAboutPrescribedSheet": "ညွန်းချက်ပေးထားသော ဆေးလုံးအထုပ်အကြောင်း ပြောပြပါ",

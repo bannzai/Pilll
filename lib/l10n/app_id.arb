@@ -219,7 +219,7 @@
   "readAndStartUsing": "Baca informasinya, lalu\nmulai gunakan aplikasi",
   "next": "Lanjut",
   "notificationIndex": "Notifikasi {number}",
-  "takingRecordFromNotification": "\\ Dapat mencatat konsumsi dari notifikasi /",
+  "takingRecordFromNotification": "Anda bisa menambahkan catatan minum pil langsung dari notifikasi",
   "startApp": "Mulai Aplikasi",
   "loggedInWithProvider": "Berhasil masuk dengan {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Mohon ceritakan tentang kemasan pil yang diresepkan",

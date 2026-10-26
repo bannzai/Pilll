@@ -219,7 +219,7 @@
   "readAndStartUsing": "വിവരങ്ങൾ വായിച്ച്\nആപ്പ് ഉപയോഗിക്കാൻ തുടങ്ങൂ",
   "next": "അടുത്തത്",
   "notificationIndex": "അറിയിപ്പ് {number}",
-  "takingRecordFromNotification": "\\ അറിയിപ്പിൽ നിന്ന് സേവന രേഖ ചെയ്യാം /",
+  "takingRecordFromNotification": "അറിയിപ്പിൽ നിന്നുതന്നെ ഗുളിക കഴിച്ചതിന്റെ രേഖ ചേർക്കാം",
   "startApp": "ആപ്പ് ആരംഭിക്കുക",
   "loggedInWithProvider": "{accountTypeProviderName} ഉപയോഗിച്ച് ലോഗിൻ ചെയ്തു",
   "tellAboutPrescribedSheet": "നിർദ്ദേശിച്ച ഗുളിക പാക്കിനെക്കുറിച്ച് പറയുക",
