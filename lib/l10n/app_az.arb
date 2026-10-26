@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} gün",
   "yazFlexResting": "Fasilə davam edir, həb qəbuluna hələ başlamamısınız",
   "yazFlexRestingDaysLabel": "Bu gün fasilənin neçənci günüdür",
-  "yazFlexSkipRestDuration": "Fasilə dövrünün daxil edilməsini keçin",
+  "yazFlexSkipRestDuration": "fasilə məlumatını daxil etmədən keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə dövrü daxiletməsini keçin",
   "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Keçin",

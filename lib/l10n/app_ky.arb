@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} күн",
   "yazFlexResting": "Тыныгуу дагы эле уланууда, таблетка ичүүнү кайра баштай элексиз",
   "yazFlexRestingDaysLabel": "Бүгүн тыныгуунун канчанчы күнү",
-  "yazFlexSkipRestDuration": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
+  "yazFlexSkipRestDuration": "Тыныгуу тууралуу маалыматты киргизүүнү өткөрүп жибериңиз",
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу мезгилин киргизүүнү өткөрүп жиберүү",
   "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",

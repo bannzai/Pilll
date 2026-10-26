@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} రోజులు",
   "yazFlexResting": "ఇంకా విరామంలో ఉన్నారు, మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించలేదు",
   "yazFlexRestingDaysLabel": "ఈ రోజు విరామంలో ఎన్నవ రోజు",
-  "yazFlexSkipRestDuration": "విరామ కాలాన్ని నమోదు చేయడం దాటవేయండి",
+  "yazFlexSkipRestDuration": "విరామ వివరాలను నమోదు చేయకుండా కొనసాగండి",
   "yazFlexSkipRestDurationDialogTitle": "విరామ కాలం నమోదు చేయడం దాటవేయండి",
   "yazFlexSkipRestDurationDialogMessage": "మందు తీసుకునే విరామ కాలాన్ని తర్వాత హోమ్‌లోని “మందు తీసుకునే విరామం” నుంచి నమోదు చేయవచ్చు.",
   "yazFlexSkipRestDurationDialogSkip": "దాటవేయండి",

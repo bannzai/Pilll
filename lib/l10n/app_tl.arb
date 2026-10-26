@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} araw",
   "yazFlexResting": "Nasa pahinga pa kayo at hindi pa muling umiinom ng pildoras",
   "yazFlexRestingDaysLabel": "Pang-ilang araw na po ng pahinga ngayong araw",
-  "yazFlexSkipRestDuration": "Laktawan ang paglalagay ng panahon ng pahinga",
+  "yazFlexSkipRestDuration": "Laktawan ang paglalagay ng detalye ng pahinga",
   "yazFlexSkipRestDurationDialogTitle": "Laktawan ang paglalagay ng panahon ng pahinga",
   "yazFlexSkipRestDurationDialogMessage": "Maaari mong ilagay mamaya ang panahon ng pahinga sa pag-inom mula sa “Pahinga sa pag-inom” sa Home.",
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",

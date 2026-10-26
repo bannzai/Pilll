@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dage",
   "yazFlexResting": "Stadig i pillepause og ikke begyndt på p-pillerne igen",
   "yazFlexRestingDaysLabel": "Hvilken dag i din pillepause er det i dag",
-  "yazFlexSkipRestDuration": "Spring indtastning af pause over",
+  "yazFlexSkipRestDuration": "Spring indtastning af pillepause over",
   "yazFlexSkipRestDurationDialogTitle": "Spring registrering af pause over",
   "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i indtagelse kan indtastes senere under “Pause i indtagelse” på hjemmeskærmen.",
   "yazFlexSkipRestDurationDialogSkip": "Spring over",

@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Hléið stendur enn yfir og þú ert ekki byrjuð að taka pilluna aftur",
   "yazFlexRestingDaysLabel": "Hvaða dagur hlésins er í dag",
-  "yazFlexSkipRestDuration": "Sleppa innslætti á hléi",
+  "yazFlexSkipRestDuration": "Sleppa því að skrá hlé",
   "yazFlexSkipRestDurationDialogTitle": "Sleppa skráningu hlés",
   "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð hlé á töku síðar undir „Hlé á töku“ á heimaskjánum.",
   "yazFlexSkipRestDurationDialogSkip": "Sleppa",

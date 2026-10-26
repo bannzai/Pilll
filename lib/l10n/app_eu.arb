@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} egunez",
   "yazFlexResting": "Atsedenaldiak jarraitzen du eta oraindik ez duzu pilula hartzen hasi",
   "yazFlexRestingDaysLabel": "Atsedenaldiko zenbatgarren eguna da gaur",
-  "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren sarrera",
+  "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren datuak sartzea",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren sarrera saltatu",
   "yazFlexSkipRestDurationDialogMessage": "Hartzeko atsedenaldia geroago sar dezakezu hasierako pantailako «Hartzeko atsedenaldia» aukeratik.",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",

@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dienų",
   "yazFlexResting": "Pertrauka vis dar tęsiasi, piliulės vartojimas dar neatnaujintas",
   "yazFlexRestingDaysLabel": "Kelinta pertraukos diena šiandien",
-  "yazFlexSkipRestDuration": "Praleisti pertraukos laikotarpio įvedimą",
+  "yazFlexSkipRestDuration": "Praleisti pertraukos duomenų įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos laikotarpio įvedimą",
   "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",
   "yazFlexSkipRestDurationDialogSkip": "Praleisti",

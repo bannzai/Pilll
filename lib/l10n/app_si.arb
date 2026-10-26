@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "දින {days}ක්",
   "yazFlexResting": "තවමත් විරාමයේ සිටින අතර පෙති ගැනීම නැවත ආරම්භ කර නැහැ",
   "yazFlexRestingDaysLabel": "අද විරාමයේ කීවැනි දිනයද",
-  "yazFlexSkipRestDuration": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
+  "yazFlexSkipRestDuration": "විරාමයේ තොරතුරු ඇතුළත් නොකර ඉදිරියට යන්න",
   "yazFlexSkipRestDurationDialogTitle": "විරාම කාලය ඇතුළත් කිරීම මඟ හරින්න",
   "yazFlexSkipRestDurationDialogMessage": "ඖෂධ ගැනීමේ විරාම කාලය පසුව මුල් පිටුවේ “ඖෂධ ගැනීමේ විරාමය” වෙතින් ඇතුළත් කළ හැකියි.",
   "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",

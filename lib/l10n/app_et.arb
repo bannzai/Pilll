@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} päeva",
   "yazFlexResting": "Pillipaus veel kestab ja pillide võtmine pole veel alanud",
   "yazFlexRestingDaysLabel": "Mitmes pillipausi päev on täna",
-  "yazFlexSkipRestDuration": "Jäta pausi sisestamine vahele",
+  "yazFlexSkipRestDuration": "Jäta pillipausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pausiperioodi sisestamine vahele",
   "yazFlexSkipRestDurationDialogMessage": "Võtmispausi perioodi saate hiljem sisestada avalehe jaotises „Võtmispaus”.",
   "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",

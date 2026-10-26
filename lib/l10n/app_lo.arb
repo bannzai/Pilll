@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "ເປັນເວລາ {days} ວັນ",
   "yazFlexResting": "ຍັງຢູ່ໃນໄລຍະພັກຢາ ແລະຍັງບໍ່ໄດ້ເລີ່ມກິນຢາຄືນ",
   "yazFlexRestingDaysLabel": "ມື້ນີ້ເປັນມື້ທີ່ເທົ່າໃດຂອງການພັກຢາ",
-  "yazFlexSkipRestDuration": "ຂ້າມການປ້ອນໄລຍະພັກຢາ",
+  "yazFlexSkipRestDuration": "ຂ້າມການປ້ອນຂໍ້ມູນພັກຢາ",
   "yazFlexSkipRestDurationDialogTitle": "ຂ້າມການປ້ອນໄລຍະພັກຢາ",
   "yazFlexSkipRestDurationDialogMessage": "ທ່ານສາມາດປ້ອນໄລຍະເວລາພັກການກິນໄດ້ພາຍຫຼັງ ຈາກ “ພັກການກິນ” ໃນໜ້າຫຼັກ",
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",

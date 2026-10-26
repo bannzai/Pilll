@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dagen",
   "yazFlexResting": "Nog in de stopweek en nog niet opnieuw begonnen met de pil",
   "yazFlexRestingDaysLabel": "Welke dag van je stopweek is het vandaag",
-  "yazFlexSkipRestDuration": "Invoeren van de stopweek overslaan",
+  "yazFlexSkipRestDuration": "Registratie van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogTitle": "Invoer van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogMessage": "De stopperiode kun je later invoeren via ‘Stopperiode’ op het startscherm.",
   "yazFlexSkipRestDurationDialogSkip": "Overslaan",

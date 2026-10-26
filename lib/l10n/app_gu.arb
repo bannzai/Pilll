@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} દિવસ",
   "yazFlexResting": "હજુ વિરામમાં છો અને ગોળી લેવાનું ફરી શરૂ કર્યું નથી",
   "yazFlexRestingDaysLabel": "આજે વિરામનો કેટલામો દિવસ છે",
-  "yazFlexSkipRestDuration": "વિરામ અવધિ દાખલ કરવું છોડો",
+  "yazFlexSkipRestDuration": "વિરામની વિગતો દાખલ કરવાનું છોડો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામ અવધિની નોંધ છોડો",
   "yazFlexSkipRestDurationDialogMessage": "દવા લેવાનું વિરામ સમયગાળો પછીથી હોમમાં “દવા લેવાનું વિરામ” માંથી દાખલ કરી શકશો.",
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",

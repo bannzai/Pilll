@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} দিনৰ বাবে",
   "yazFlexResting": "বিৰতিত আছে, এতিয়াও বড়ি খোৱা পুনৰ আৰম্ভ কৰা নাই",
   "yazFlexRestingDaysLabel": "আজি বিৰতিৰ কিমানতম দিন",
-  "yazFlexSkipRestDuration": "ঔষধ বন্ধৰ সময়ছোৱাৰ ইনপুট এৰি দিয়ক",
+  "yazFlexSkipRestDuration": "বিৰতিৰ তথ্য নিদিয়াকৈ আগবাঢ়ক",
   "yazFlexSkipRestDurationDialogTitle": "ঔষধ-বিৰতিৰ ইনপুট এৰি যাব",
   "yazFlexSkipRestDurationDialogMessage": "ঔষধ সেৱন বিৰতিৰ সময়সীমা পিছত হোমৰ «ঔষধ সেৱন বিৰতি»ৰ পৰা লিখিব পাৰিব।",
   "yazFlexSkipRestDurationDialogSkip": "এৰি দিয়ক",

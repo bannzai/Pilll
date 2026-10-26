@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dana",
   "yazFlexResting": "Još ste na pauzi i niste ponovo počeli uzimati pilulu",
   "yazFlexRestingDaysLabel": "Koji je danas dan pauza",
-  "yazFlexSkipRestDuration": "Preskoči unos pauze",
+  "yazFlexSkipRestDuration": "Preskočite unos podataka o pauzi",
   "yazFlexSkipRestDurationDialogTitle": "Preskočite unos pauze",
   "yazFlexSkipRestDurationDialogMessage": "Period pauze uzimanja možete unijeti kasnije u odjeljku „Pauza uzimanja“ na početnom ekranu.",
   "yazFlexSkipRestDurationDialogSkip": "Preskoči",

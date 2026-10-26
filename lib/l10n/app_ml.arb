@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} ദിവസം",
   "yazFlexResting": "ഇപ്പോഴും ഇടവേളയിലാണ്, ഗുളിക കഴിക്കുന്നത് വീണ്ടും തുടങ്ങിയിട്ടില്ല",
   "yazFlexRestingDaysLabel": "ഇന്ന് ഇടവേളയുടെ എത്രാമത്തെ ദിവസമാണ്",
-  "yazFlexSkipRestDuration": "ഇടവേള കാലയളവ് നൽകുന്നത് ഒഴിവാക്കുക",
+  "yazFlexSkipRestDuration": "ഇടവേളയുടെ വിവരങ്ങൾ നൽകാതെ തുടരാം",
   "yazFlexSkipRestDurationDialogTitle": "ഇടവേള കാലയളവിന്റെ എൻട്രി ഒഴിവാക്കുക",
   "yazFlexSkipRestDurationDialogMessage": "മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേളയുടെ കാലയളവ് പിന്നീട് ഹോമിലെ “മരുന്ന് കഴിക്കുന്നതിലെ ഇടവേള”യിൽ നിന്ന് നൽകാം.",
   "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",

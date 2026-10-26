@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} दिन",
   "yazFlexResting": "अभी विराम चल रहा है और गोली लेना फिर से शुरू नहीं हुआ है",
   "yazFlexRestingDaysLabel": "आज विराम का कौन सा दिन है",
-  "yazFlexSkipRestDuration": "ब्रेक अवधि दर्ज करना छोड़ें",
+  "yazFlexSkipRestDuration": "विराम की जानकारी दर्ज किए बिना आगे बढ़ें",
   "yazFlexSkipRestDurationDialogTitle": "ब्रेक अवधि की प्रविष्टि छोड़ें",
   "yazFlexSkipRestDurationDialogMessage": "दवा लेने के विराम की अवधि बाद में होम के “दवा लेने का विराम” से दर्ज की जा सकती है।",
   "yazFlexSkipRestDurationDialogSkip": "छोड़ें",

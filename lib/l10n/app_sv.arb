@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} dagar",
   "yazFlexResting": "Fortfarande i uppehåll och har inte börjat ta pillren igen",
   "yazFlexRestingDaysLabel": "Vilken dag i uppehållet är det i dag",
-  "yazFlexSkipRestDuration": "Hoppa över att ange uppehållet",
+  "yazFlexSkipRestDuration": "Hoppa över registrering av uppehåll",
   "yazFlexSkipRestDurationDialogTitle": "Hoppa över registrering av uppehållsperioden",
   "yazFlexSkipRestDurationDialogMessage": "Perioden för uppehåll i intaget kan du ange senare under ”Uppehåll i intaget” på hemskärmen.",
   "yazFlexSkipRestDurationDialogSkip": "Hoppa över",

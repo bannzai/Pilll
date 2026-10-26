@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "រយៈពេល {days} ថ្ងៃ",
   "yazFlexResting": "កំពុងផ្អាកលេបថ្នាំ ហើយមិនទាន់ចាប់ផ្តើមលេបឡើងវិញ",
   "yazFlexRestingDaysLabel": "ថ្ងៃនេះជាថ្ងៃទីប៉ុន្មាននៃការផ្អាកលេបថ្នាំ",
-  "yazFlexSkipRestDuration": "រំលងការបញ្ចូលរយៈពេលឈប់ថ្នាំ",
+  "yazFlexSkipRestDuration": "រំលងការបញ្ចូលព័ត៌មានអំពីការផ្អាកលេបថ្នាំ",
   "yazFlexSkipRestDurationDialogTitle": "រំលងការបញ្ចូលរយៈពេលសម្រាក",
   "yazFlexSkipRestDurationDialogMessage": "អ្នកអាចបញ្ចូលរយៈពេលផ្អាកការទទួលទាននៅពេលក្រោយពី “ផ្អាកការទទួលទាន” នៅលើទំព័រដើម។",
   "yazFlexSkipRestDurationDialogSkip": "រំលង",

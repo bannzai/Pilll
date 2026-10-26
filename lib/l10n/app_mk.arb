@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} дена",
   "yazFlexResting": "Сè уште сте во пауза и не сте продолжиле со земање таблета",
   "yazFlexRestingDaysLabel": "Кој ден од пауза е денес",
-  "yazFlexSkipRestDuration": "Прескокни внесување на паузата",
+  "yazFlexSkipRestDuration": "Прескокнете внесување податоци за пауза",
   "yazFlexSkipRestDurationDialogTitle": "Прескокни го внесувањето на паузата",
   "yazFlexSkipRestDurationDialogMessage": "Периодот на пауза во земањето може подоцна да го внесете од „Пауза во земањето“ на почетниот екран.",
   "yazFlexSkipRestDurationDialogSkip": "Прескокни",

@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} päivää",
   "yazFlexResting": "Taukojakso jatkuu, etkä ole vielä aloittanut pillereitä uudelleen",
   "yazFlexRestingDaysLabel": "Monesko taukojakson päivä on tänään",
-  "yazFlexSkipRestDuration": "Ohita tauon syöttäminen",
+  "yazFlexSkipRestDuration": "Ohita taukojakson tietojen syöttö",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson kirjaaminen",
   "yazFlexSkipRestDurationDialogMessage": "Taukojakson voi syöttää myöhemmin Koti-näytön ”Tauko ottamisesta” -kohdasta.",
   "yazFlexSkipRestDurationDialogSkip": "Ohita",

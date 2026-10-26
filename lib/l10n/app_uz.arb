@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} kun",
   "yazFlexResting": "Tanaffus hali davom etmoqda, tabletkani ichishni qayta boshlamagansiz",
   "yazFlexRestingDaysLabel": "Bugun tanaffusning nechanchi kuni",
-  "yazFlexSkipRestDuration": "Tanaffus davrini kiritishni oʻtkazib yuborish",
+  "yazFlexSkipRestDuration": "Tanaffus maʼlumotlarini kiritmasdan davom eting",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus davrini kiritishni oʻtkazib yuborish",
   "yazFlexSkipRestDurationDialogMessage": "Qabul qilish tanaffusi muddatini keyinroq Bosh sahifadagi “Qabul qilish tanaffusi” bo‘limidan kiritishingiz mumkin.",
   "yazFlexSkipRestDurationDialogSkip": "O‘tkazib yuborish",

@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} днів",
   "yazFlexResting": "Перерва ще триває, прийом пігулки не відновлено",
   "yazFlexRestingDaysLabel": "Який сьогодні день перерви",
-  "yazFlexSkipRestDuration": "Пропустити введення перерви",
+  "yazFlexSkipRestDuration": "Пропустити введення даних про перерву",
   "yazFlexSkipRestDurationDialogTitle": "Пропустити введення періоду перерви",
   "yazFlexSkipRestDurationDialogMessage": "Період перерви в прийомі можна буде ввести пізніше в розділі «Перерва в прийомі» на головному екрані.",
   "yazFlexSkipRestDurationDialogSkip": "Пропустити",

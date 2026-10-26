@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "kwa siku {days}",
   "yazFlexResting": "Bado uko kwenye mapumziko na hujaanza tena kumeza kidonge",
   "yazFlexRestingDaysLabel": "Leo ni siku ya ngapi ya mapumziko",
-  "yazFlexSkipRestDuration": "Ruka kuingiza kipindi cha mapumziko",
+  "yazFlexSkipRestDuration": "Ruka kuingiza taarifa za mapumziko",
   "yazFlexSkipRestDurationDialogTitle": "Ruka kuingiza kipindi cha mapumziko",
   "yazFlexSkipRestDurationDialogMessage": "Unaweza kuingiza baadaye kipindi cha mapumziko ya matumizi kutoka “Mapumziko ya matumizi” kwenye Skrini ya Mwanzo.",
   "yazFlexSkipRestDurationDialogSkip": "Ruka",

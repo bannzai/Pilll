@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} დღე",
   "yazFlexResting": "ჯერ კიდევ შესვენებაში ხართ და აბის მიღება არ განგიახლებიათ",
   "yazFlexRestingDaysLabel": "დღეს შესვენების მერამდენე დღეა",
-  "yazFlexSkipRestDuration": "გამოტოვეთ შესვენების პერიოდის შეყვანა",
+  "yazFlexSkipRestDuration": "შესვენების მონაცემების შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogTitle": "შესვენების პერიოდის შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogMessage": "მიღების შესვენების პერიოდის შეყვანა მოგვიანებითაც შეგიძლიათ მთავარ ეკრანზე „მიღების შესვენება“-დან.",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",

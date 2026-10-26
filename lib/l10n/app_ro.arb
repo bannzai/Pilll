@@ -576,7 +576,7 @@
   "yazFlexRestDurationDaysValue": "{days} zile",
   "yazFlexResting": "Ești încă în pauză și nu ai reluat pilula",
   "yazFlexRestingDaysLabel": "A câta zi de pauză este astăzi",
-  "yazFlexSkipRestDuration": "Omite introducerea perioadei de pauză",
+  "yazFlexSkipRestDuration": "Omite introducerea datelor despre pauză",
   "yazFlexSkipRestDurationDialogTitle": "Omiteți introducerea perioadei de pauză",
   "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",
   "yazFlexSkipRestDurationDialogSkip": "Omite",
