@@ -138,7 +138,7 @@
   "pillNumber": "numer",
   "pillDaysCycle": "Liczba dni przyjmowania tabletek",
   "pillSheetEnded": "blist jest już pusty",
-  "checkLastTakenDate": "Sprawdź ostatni dzień przyjęcia",
+  "checkLastTakenDate": "Sprawdź datę ostatniego przyjęcia tabletki",
   "pleaseRegisterAccount": "Zarejestruj konto",
   "cannotTransferPremiumWithoutAccount": "W przypadku zmiany urządzenia lub utraty telefonu funkcje premium nie będą przeniesione",
   "reexperiencePremiumFeatures": "Możesz ponownie doświadczyć funkcji premium przez 14 dni! Dotknij, aby udostępnić w mediach społecznościowych!",

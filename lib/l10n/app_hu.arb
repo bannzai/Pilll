@@ -138,7 +138,7 @@
   "pillNumber": "tablettaszám",
   "pillDaysCycle": "A tablettaszedés napjainak száma",
   "pillSheetEnded": "A tablettacsomag elfogyott",
-  "checkLastTakenDate": "Utoljára szedett nap ellenőrzése",
+  "checkLastTakenDate": "Nézd meg, mikor szedted utoljára a tablettát",
   "pleaseRegisterAccount": "Kérjük, regisztráljon fiókot",
   "cannotTransferPremiumWithoutAccount": "Készülékváltás vagy telefon elvesztése esetén a prémium funkciók nem vihetők át",
   "reexperiencePremiumFeatures": "Újra kipróbálhatod a prémium funkciókat 14 napig!\nKoppints ide, hogy megoszd a közösségi médiában!",

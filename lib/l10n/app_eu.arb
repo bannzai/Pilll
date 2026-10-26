@@ -138,7 +138,7 @@
   "pillNumber": "pilula-zenbaki",
   "pillDaysCycle": "Pilula hartzeko egun kopurua",
   "pillSheetEnded": "pilula-blister amaitu da",
-  "checkLastTakenDate": "Azken hartu zen eguna ikusi",
+  "checkLastTakenDate": "Ikusi pilula azkenekoz noiz hartu duzun",
   "pleaseRegisterAccount": "Kontua erregistratu, mesedez",
   "cannotTransferPremiumWithoutAccount": "Gailua aldatu edo smartphonea galdu ezkero, premium funtzioak ezin dira transferitu",
   "reexperiencePremiumFeatures": "Premium funtzionalitateetan 14 egunez berrizko esperientzia izan dezakezu! Sakatu sare sozialetan partekatzeko!",

@@ -138,7 +138,7 @@
   "pillNumber": "药片编号",
   "pillDaysCycle": "服药天数",
   "pillSheetEnded": "药板已用完",
-  "checkLastTakenDate": "确认最后服用日期",
+  "checkLastTakenDate": "查看上次服药日期",
   "pleaseRegisterAccount": "请注册账户",
   "cannotTransferPremiumWithoutAccount": "换机或手机丢失时，无法继承高级功能",
   "reexperiencePremiumFeatures": "可以重新体验14天高级功能！点击分享到社交媒体！",

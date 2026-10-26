@@ -138,7 +138,7 @@
   "pillNumber": "hap numarası",
   "pillDaysCycle": "Hap kullanılan gün sayısı",
   "pillSheetEnded": "blister bitti",
-  "checkLastTakenDate": "Son alım tarihini kontrol et",
+  "checkLastTakenDate": "Hapı en son aldığınız tarihi kontrol edin",
   "pleaseRegisterAccount": "Lütfen hesap oluşturun",
   "cannotTransferPremiumWithoutAccount": "Cihaz değiştirme veya telefon kayıp durumlarında premium özellikleri taşıyamazsınız",
   "reexperiencePremiumFeatures": "Premium özellikleri 14 gün boyunca yeniden deneyimleyebilirsiniz!\nSosyal medyada paylaşmak için dokunun!",
