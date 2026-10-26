@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "هناك عملية شراء أخرى قيد المعالجة. يُرجى الانتظار قليلًا ثم المحاولة مجددًا",
   "purchaseErrorUnknownBackendError": "لا يمكن إتمام الشراء الآن. يرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، يمكنكِ التواصل معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "تعذّر إتمام الشراء. يُرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "فشل الشراء لحسابك. يرجى المحاولة مرة أخرى بعد قليل. إذا لم تحل المشكلة، يرجى التواصل معنا من خلال الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "تعذر إتمام الشراء باستخدام حسابكِ. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "لا يمكن الاشتراك في الباقة باستخدام {accountName} الخاص بك. يرجى التحقق من معلومات الدفع والمحاولة مرة أخرى",
   "purchaseErrorPaymentPendingError": "توقف الدفع أثناء المعالجة. يرجى التحقق من {storeName} بحساب {accountName} المسجل حالياً",
   "purchaseErrorInvalidSubscriberAttributesError": "فشل في الشراء. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",

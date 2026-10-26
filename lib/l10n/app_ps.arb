@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "بله پېرودنه روانه ده. مهرباني وکړئ لږ شېبه انتظار وکړئ او بیا هڅه وکړئ",
   "purchaseErrorUnknownBackendError": "اوس مهال پېرود بشپړېدای نه شي. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > اړیکه له لارې له موږ سره اړیکه ونیسئ. جزیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنو > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "ستاسو د کارونکي لپاره پیرود ناکام شو. لږ وروسته بیا هڅه وکړئ. که دا حل نشي نو ترتیبات > اړیکه څخه موږ سره اړیکه ونیسئ. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "ستاسو له حساب سره پېرود بشپړ نه شو. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ستاسو د {accountName} څخه د پلان غړیتوب نشي کیدی. مهرباني وکړئ خپل د تادیاتو معلومات وګورئ او بیا هڅه وکړئ",
   "purchaseErrorPaymentPendingError": "ورکړه په مینځ کی ودریده. د {accountName} سره ننوتل شوي {storeName} وګورئ",
   "purchaseErrorInvalidSubscriberAttributesError": "پیرودونه ناکامه شوه. یو څه وخت وروسته بیا هڅه وکړئ. که دا حل نشي، د تنظیمات > پوښتنه څخه موږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",

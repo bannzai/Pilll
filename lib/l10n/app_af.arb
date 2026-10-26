@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Nog ’n aankoop word verwerk. Probeer asseblief oor ’n rukkie weer",
   "purchaseErrorUnknownBackendError": "Die aankoop kan tans nie voltooi word nie. Probeer asseblief later weer. As die probleem voortduur, kan jy ons via Instellings > Kontak kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Die aankoop het misluk. Probeer asseblief later weer. As die probleem aanhou, kan jy ons via Instellings > Kontak ons bereik. Besonderhede: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Die aankoop vir u gebruiker het nie geslaag nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Die aankoop kon nie met jou rekening voltooi word nie. Probeer asseblief later weer. As dit steeds nie werk nie, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "U kan nie met {accountName} by die plan aansluit nie. Kontroleer asseblief u betaalinligting en probeer weer.",
   "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Kontroleer asseblief by {storeName} terwyl jy met {accountName} aangemeld is.",
   "purchaseErrorInvalidSubscriberAttributesError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. As dit nie opgelos word nie, neem asseblief kontak op via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",

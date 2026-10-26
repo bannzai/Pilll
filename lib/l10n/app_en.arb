@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Another purchase is being processed. Please wait a moment and try again",
   "purchaseErrorUnknownBackendError": "Your purchase can't be completed right now. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "The purchase didn’t go through. Please try again in a little while. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Purchase failed for your user. Please try again after some time. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "The purchase couldn't be completed with your account. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "You cannot subscribe to the plan with your {accountName}. Please check your payment information and try again.",
   "purchaseErrorPaymentPendingError": "Payment processing was interrupted. Please check {storeName} with your current account {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "Purchase failed. Please try again later. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",

@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Trwa przetwarzanie innego zakupu. Poczekaj chwilę i spróbuj ponownie",
   "purchaseErrorUnknownBackendError": "Nie można teraz sfinalizować zakupu. Spróbuj ponownie za chwilę. Jeśli problem będzie się powtarzał, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nie udało się dokończyć zakupu. Spróbuj ponownie za chwilę. Jeśli problem będzie się powtarzać, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Zakup nie powiódł się dla Twojego użytkownika. Spróbuj ponownie po chwili. Jeśli problem się nie rozwiąże, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Nie udało się dokończyć zakupu na tym koncie. Spróbuj ponownie za jakiś czas. Jeśli problem nie ustąpi, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nie można zapisać się do planu za pomocą {accountName}. Sprawdź dane płatności i spróbuj ponownie.",
   "purchaseErrorPaymentPendingError": "Płatność została przerwana. Sprawdź {storeName} na zalogowanym koncie {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "Zakup nie powiódł się. Proszę spróbować ponownie po chwili. Jeśli problem nadal występuje, skontaktuj się z nami poprzez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",

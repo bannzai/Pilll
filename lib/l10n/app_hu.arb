@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Egy másik vásárlás feldolgozása folyamatban van. Várj egy kicsit, majd próbáld újra",
   "purchaseErrorUnknownBackendError": "A vásárlás most nem fejezhető be. Kérjük, próbáld újra később. Ha a probléma továbbra is fennáll, írj nekünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "A vásárlás nem sikerült. Kérjük, próbáld újra egy kis idő múlva. Ha a probléma továbbra is fennáll, írj nekünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "A vásárlás sikertelen volt az Ön felhasználójával. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, kérjük, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "A vásárlás nem sikerült a fiókoddal. Próbáld meg újra később. Ha a probléma továbbra is fennáll, írj nekünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "A(z) {accountName} fiókjával nem lehet előfizetni. Kérjük, ellenőrizze a fizetési adatait és próbálja újra.",
   "purchaseErrorPaymentPendingError": "A fizetési folyamat megszakadt. Kérjük, ellenőrizze a {storeName} áruházban a bejelentkezett {accountName} fiókjával.",
   "purchaseErrorInvalidSubscriberAttributesError": "A vásárlás sikertelen volt. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüpont alatt. Részletek: {exceptionMessage}:{exceptionDetails}",

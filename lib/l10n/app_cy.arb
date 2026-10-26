@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Mae pryniant arall yn cael ei brosesu. Arhoswch ychydig cyn rhoi cynnig arall arni",
   "purchaseErrorUnknownBackendError": "Nid oes modd cwblhau'r pryniant ar hyn o bryd. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ni fu’r pryniant yn llwyddiannus. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Methodd y bryniant gyda'ch defnyddiwr. Rhowch gynnig arall arni eto ymhen ychydig. Os nad yw'n datrys, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Ni fu modd cwblhau'r pryniant gyda'ch cyfrif. Rhowch gynnig arall arni ymhen ychydig. Os yw'r broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Ni all eich {accountName} ymuno â'r cynllun. Gwiriwch eich gwybodaeth dalu a rhowch gynnig arall arni.",
   "purchaseErrorPaymentPendingError": "Mae'r taliad wedi atal. Gwiriwch {storeName} gan ddefnyddio {accountName} yr ydych wedi mewngofnodi iddo",
   "purchaseErrorInvalidSubscriberAttributesError": "Methodd y pryniant. Rhowch gynnig arall arni ymhen ychydig. Os yw'r broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Ymholiadau. Manylion: {exceptionMessage}:{exceptionDetails}",

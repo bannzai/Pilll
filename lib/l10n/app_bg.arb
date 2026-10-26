@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Друга покупка се обработва. Моля, изчакайте малко и опитайте отново",
   "purchaseErrorUnknownBackendError": "В момента покупката не може да бъде завършена. Моля, опитайте отново след малко. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Покупката не бе успешна. Моля, опитайте отново след малко. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Покупката за вашия потребител не бе успешна. Моля, изчакайте малко и опитайте отново. Ако проблемът продължава, свържете се с нас чрез Настройки > Контакт. Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Покупката с вашия акаунт не можа да бъде завършена. Моля, опитайте отново след малко. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Не можете да се абонирате за план с вашия {accountName}. Моля, проверете информацията за плащане и опитайте отново.",
   "purchaseErrorPaymentPendingError": "Плащането е прекъснато. Моля, проверете в {storeName} с влезлия акаунт {accountName}",
   "purchaseErrorInvalidSubscriberAttributesError": "Покупката не беше успешна. Моля, изчакайте и опитайте отново. Ако проблемът не се реши, моля, свържете се с нас чрез Настройки > Запитване. Подробности: {exceptionMessage}:{exceptionDetails}",

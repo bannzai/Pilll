@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Një blerje tjetër është në proces. Ju lutemi, prisni pak dhe provoni përsëri",
   "purchaseErrorUnknownBackendError": "Blerja nuk mund të përfundojë për momentin. Ju lutemi, provoni përsëri pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Kontakt. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Blerja nuk u përfundua. Ju lutemi, provoni sërish pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësitë: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Blerja dështoi për përdoruesin tuaj. Ju lutemi provoni përsëri më vonë. Nëse problemi nuk zgjidhet, ju lutemi na kontaktoni tek Cilësimet > Kontakti. Detajet: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Blerja me llogarinë tuaj nuk u përfundua. Ju lutemi, provoni sërish pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Llogaria juaj {accountName} nuk mund të abonohet në plan. Ju lutemi kontrolloni informacionet e pagesës dhe provoni përsëri.",
   "purchaseErrorPaymentPendingError": "Pagesa është ndërprerë. Ju lutemi kontrolloni {storeName} me llogarinë {accountName} me të cilën jeni të kyçur.",
   "purchaseErrorInvalidSubscriberAttributesError": "Blerja dështoi. Ju lutem, provoni përsëri pas pak kohësh. Nëse problemi vazhdon, na kontaktoni nga Parametrat > Kontakt. Detajet: {exceptionMessage}:{exceptionDetails}",

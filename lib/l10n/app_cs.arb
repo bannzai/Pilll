@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Probíhá zpracování jiného nákupu. Počkejte prosím chvíli a zkuste to znovu",
   "purchaseErrorUnknownBackendError": "Nákup teď nelze dokončit. Zkuste to prosím za chvíli znovu. Pokud potíže přetrvají, kontaktujte nás přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup se nezdařil. Zkuste to prosím za chvíli znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Nákup pro vašeho uživatele se nezdařil. Zkuste to prosím znovu za chvíli. Pokud se problém nevyřeší, kontaktujte nás přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Nákup pomocí vašeho účtu se nepodařilo dokončit. Zkuste to prosím za chvíli znovu. Pokud problém přetrvá, napište nám přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "S vaším účtem {accountName} nelze přihlásit se k plánu. Zkontrolujte prosím své platební údaje a zkuste to znovu.",
   "purchaseErrorPaymentPendingError": "Platba byla přerušena. Zkontrolujte prosím stav v {storeName} s účtem {accountName}.",
   "purchaseErrorInvalidSubscriberAttributesError": "Nákup se nezdařil. Zkuste to prosím znovu za chvíli. Pokud se problém nevyřeší, obraťte se na nás prostřednictvím Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

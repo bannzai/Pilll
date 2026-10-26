@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Okunye ukuthenga kuyacutshungulwa. Sicela ulinde isikhashana bese uzama futhi",
   "purchaseErrorUnknownBackendError": "Ukuthenga akukwazi ukuqedwa okwamanje. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, sicela usithinte kokuthi Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ukuthenga akuphumelelanga. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, xhumana nathi ngokuthi Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Ukuthenga kwe-akhawunti yakho yemsebenzisi akuphumelelanga. Sicela uzame futhi ngemuva kwesikhathi. Uma le nkinga ingalungiseki, sicela uxhumane nathi ngokungena ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Ukuthenga akukwazanga ukuphothulwa nge-akhawunti yakho. Sicela uzame futhi ngemva kwesikhashana. Uma inkinga iqhubeka, xhumana nathi kokuthi Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nge-akhawunti yakho {accountName} awukwazi ukubhalisa esichuninini. Sicela uhlole imininingwane yakho yokukhokha bese uzama futhi.",
   "purchaseErrorPaymentPendingError": "Inkokhelo imile phakathi. Sicela uhlole i-{storeName} nge-{accountName} engene nayo",
   "purchaseErrorInvalidSubscriberAttributesError": "Ukuthenga akuphumelelanga. Sicela uzame futhi ngemva kwesikhathi. Uma inkinga isaqhubeka, vakashela Izilungiselelo > Sithinte ukuze uzothola usizo. Imininingwane: {exceptionMessage}:{exceptionDetails}",

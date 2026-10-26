@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Μια άλλη αγορά βρίσκεται σε εξέλιξη. Περιμένετε λίγο και δοκιμάστε ξανά",
   "purchaseErrorUnknownBackendError": "Η αγορά δεν μπορεί να ολοκληρωθεί αυτήν τη στιγμή. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Η αγορά δεν ολοκληρώθηκε. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Η αγορά απέτυχε για τον χρήστη σας. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά. Εάν το πρόβλημα παραμείνει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Δεν ήταν δυνατή η ολοκλήρωση της αγοράς με τον λογαριασμό σας. Δοκιμάστε ξανά σε λίγο. Αν το πρόβλημα συνεχιστεί, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Δεν είναι δυνατή η εγγραφή σε πλάνο με τον λογαριασμό σας {accountName}. Παρακαλώ ελέγξτε τα στοιχεία πληρωμής σας και δοκιμάστε ξανά.",
   "purchaseErrorPaymentPendingError": "Η πληρωμή έχει διακοπεί. Παρακαλώ ελέγξτε το {storeName} με τον λογαριασμό {accountName}",
   "purchaseErrorInvalidSubscriberAttributesError": "Η αγορά απέτυχε. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",

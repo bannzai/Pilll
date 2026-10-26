@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "O altă achiziție este în curs de procesare. Așteaptă puțin și încearcă din nou",
   "purchaseErrorUnknownBackendError": "Achiziția nu poate fi finalizată acum. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Achiziția nu a putut fi finalizată. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Achiziția a eșuat pentru utilizatorul dvs. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Achiziția nu a putut fi finalizată cu contul tău. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nu puteți să vă abonați la plan cu contul dvs. {accountName}. Vă rugăm să verificați informațiile de plată și să încercați din nou.",
   "purchaseErrorPaymentPendingError": "Plata a fost întreruptă. Vă rugăm să verificați {storeName} pentru contul {accountName} cu care sunteți conectat.",
   "purchaseErrorInvalidSubscriberAttributesError": "Achiziția a eșuat. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",

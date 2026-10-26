@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Toista ostoa käsitellään parhaillaan. Odota hetki ja yritä uudelleen",
   "purchaseErrorUnknownBackendError": "Ostoa ei voi viimeistellä juuri nyt. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Osto ei onnistunut. Kokeile hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Ostaminen käyttäjätililläsi epäonnistui. Odota hetki ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä kohdasta Asetukset > Yhteydenotto. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Ostoa ei voitu viimeistellä tililläsi. Yritä hetken kuluttua uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Käyttämälläsi {accountName}-tilillä ei voi liittyä tilaukseen. Tarkista maksutietosi ja yritä uudelleen.",
   "purchaseErrorPaymentPendingError": "Maksu on keskeytetty. Tarkistakaa maksun tila {storeName}:sta {accountName}-tilillä.",
   "purchaseErrorInvalidSubscriberAttributesError": "Osto epäonnistui. Yritä myöhemmin uudelleen. Jos ongelma ei ratkea, ota yhteyttä Asetukset > Yhteydenotto kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",

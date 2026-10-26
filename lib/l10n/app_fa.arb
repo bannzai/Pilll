@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "خرید دیگری در حال پردازش است. لطفاً کمی صبر کنید و دوباره امتحان کنید",
   "purchaseErrorUnknownBackendError": "در حال حاضر امکان تکمیل خرید نیست. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "خرید انجام نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "خرید برای کاربر شما شکست خورد. لطفاً مدتی صبر کرده و دوباره تلاش کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "خرید با حساب شما انجام نشد. لطفاً کمی بعد دوباره تلاش کنید. اگر مشکل ادامه داشت، از مسیر تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "امکان اشتراک در طرح با {accountName} شما وجود ندارد. لطفاً اطلاعات پرداخت خود را بررسی کرده و مجدداً تلاش کنید.",
   "purchaseErrorPaymentPendingError": "پرداخت ناتمام باقی مانده است. لطفاً {storeName} را با حساب {accountName} که وارد شده‌اید بررسی کنید",
   "purchaseErrorInvalidSubscriberAttributesError": "خرید ناموفق بود. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با پشتیبانی با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",

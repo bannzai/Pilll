@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "სხვა შესყიდვა მუშავდება. გთხოვთ, ცოტა ხანს დაელოდოთ და ხელახლა სცადოთ",
   "purchaseErrorUnknownBackendError": "ამჟამად შეძენის დასრულება ვერ ხერხდება. გთხოვთ, ცოტა ხანში ხელახლა სცადოთ. თუ პრობლემა გაგრძელდება, დაგვიკავშირდით პარამეტრები > დაკავშირება განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "შეძენა ვერ დასრულდა. გთხოვთ, ცოტა ხანში ხელახლა სცადოთ. თუ პრობლემა გაგრძელდა, მოგვწერეთ პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "თქვენი მომხმარებლისთვის შეძენა ვერ მოხერხდა. გთხოვთ, დაელოდოთ და კვლავ სცადოთ. თუ პრობლემა არ გადაიჭრება, მოგვმართოთ პარამეტრები > კონტაქტი გვერდიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "თქვენი ანგარიშით შეძენის დასრულება ვერ მოხერხდა. გთხოვთ, ცოტა ხანში კვლავ სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "თქვენი {accountName}-ით გეგმაზე ხელმოწერა შეუძლებელია. გთხოვთ, გადაამოწმოთ თქვენი გადახდის ინფორმაცია და სცადოთ ხელახლა.",
   "purchaseErrorPaymentPendingError": "გადახდა შეწყვეტილია. გთხოვთ, შეამოწმოთ {storeName} შესული {accountName} ანგარიშით",
   "purchaseErrorInvalidSubscriberAttributesError": "შეძენა ვერ განხორციელდა. გთხოვთ, სცადოთ თავიდან დროის შემდეგ. თუ პრობლემა არ მოგვარდება, მიმართეთ პარამეტრები > კონტაქტის საშუალებით. დეტალები: {exceptionMessage}:{exceptionDetails}",

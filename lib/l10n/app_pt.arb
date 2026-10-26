@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Outra compra está sendo processada. Aguarde um momento e tente novamente",
   "purchaseErrorUnknownBackendError": "Não é possível concluir a compra no momento. Tente novamente daqui a pouco. Se o problema continuar, fale com a gente em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Não foi possível concluir a compra. Tente novamente daqui a pouco. Se o problema continuar, fale conosco em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "A compra falhou para o seu usuário. Tente novamente mais tarde. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Não foi possível concluir a compra com sua conta. Tente novamente daqui a pouco. Se o problema continuar, fale com a gente em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Não é possível assinar o plano com sua conta {accountName}. Por favor, verifique suas informações de pagamento e tente novamente.",
   "purchaseErrorPaymentPendingError": "O pagamento foi interrompido durante o processo. Verifique na {storeName} com a conta {accountName} que está conectada",
   "purchaseErrorInvalidSubscriberAttributesError": "A compra falhou. Aguarde um momento e tente novamente. Se o problema persistir, entre em contato conosco através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",

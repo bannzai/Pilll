@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Башка сатып алуу иштетилип жатат. Бир аз күтүп, кайра аракет кылыңыз",
   "purchaseErrorUnknownBackendError": "Азыр сатып алууну аяктоо мүмкүн болбой жатат. Бир аздан кийин кайра аракет кылып көрүңүз. Маселе чечилбесе, Жөндөөлөр > Байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алуу ишке ашкан жок. Бир аздан кийин кайра аракет кылып көрүңүз. Маселе чечилбесе, Жөндөөлөр > Биз менен байланышуу аркылуу бизге кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Сиздин колдонуучу менен сатып алуу ийгиликсиз аяктады. Убакыт өткөрүп кайра аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Кайрылуу аркылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Сиздин каттоо эсебиңиз менен сатып алууну аяктоо мүмкүн болгон жок. Бир аздан кийин кайра аракет кылыңыз. Маселе чечилбесе, Жөндөөлөр > Биз менен байланышуу аркылуу кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Сиздин {accountName} аркылуу планга жазылуу мүмкүн эмес. Төлөм маалыматыңызды текшерип, кайра аракет кылыңыз",
   "purchaseErrorPaymentPendingError": "Төлөм ортодо токтоп калды. Кирген {accountName} аккаунтуңуз менен {storeName} текшериңиз",
   "purchaseErrorInvalidSubscriberAttributesError": "Сатып алуу ийгиликсиз болду. Убакыт өткөрүп кайра аракет кылыңыз. Эгер чечилбесе Тууралоолор > Суроо-талап аркылуу байланышыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",

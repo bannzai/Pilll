@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "ការទិញមួយផ្សេងទៀតកំពុងដំណើរការ។ សូមរង់ចាំបន្តិច ហើយព្យាយាមម្ដងទៀត",
   "purchaseErrorUnknownBackendError": "មិនអាចបញ្ចប់ការទិញបាននៅពេលនេះទេ។ សូមសាកល្បងម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ការទិញមិនបានសម្រេចទេ។ សូមព្យាយាមម្តងទៀតបន្តិចទៀត។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "ការទិញសម្រាប់អ្នកប្រើប្រាស់របស់អ្នកបានបរាជ័យ។ សូមរង់ចាំបន្តិច ហើយព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានៅតែមាន សូមទាក់ទងមកយើង តាមរយៈ ការកំណត់ > សួរសំណួរ។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "មិនអាចបញ្ចប់ការទិញដោយប្រើគណនីរបស់អ្នកបានទេ។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។ ប្រសិនបើបញ្ហានៅតែបន្ត សូមទាក់ទងមកយើងតាម ការកំណត់ > ទាក់ទងមកយើង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} របស់អ្នកមិនអាចចូលរួមក្នុងផែនការនេះបានទេ។ សូមពិនិត្យព័ត៌មានការទូទាត់របស់អ្នក រួចព្យាយាមម្តងទៀត។",
   "purchaseErrorPaymentPendingError": "ការទូទាត់ត្រូវបានផ្អាក។ សូមពិនិត្យមើល {storeName} នៅក្នុងគណនី {accountName} របស់អ្នក",
   "purchaseErrorInvalidSubscriberAttributesError": "ការទិញបានបរាជ័យ។ សូមរងចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការពិគ្រោះយោបល់។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",

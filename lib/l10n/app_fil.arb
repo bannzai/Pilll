@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "May isa pang pagbiling pinoproseso. Pakihintay po sandali bago subukan muli",
   "purchaseErrorUnknownBackendError": "Hindi makumpleto ang pagbili sa ngayon. Pakisubukan po muli pagkalipas ng ilang sandali. Kung magpapatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Hindi natuloy ang pagbili. Pakisubukan po ulit pagkalipas ng ilang sandali. Kung magpapatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Nabigo ang pagbili para sa inyong user. Pakisubok ulit pagkatapos ng ilang sandali. Kung hindi pa rin naayos, makipag-ugnayan sa amin sa Settings > Contact Us. Detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Hindi nakumpleto ang pagbili gamit ang account ninyo. Pakisubukan po ulit maya-maya. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Hindi makapag-subscribe sa plan ang inyong {accountName}. Pakisuri ang inyong impormasyon sa pagbabayad at subukan ulit.",
   "purchaseErrorPaymentPendingError": "Naputol ang pagbabayad. Pakitingnan ang {storeName} sa inyong nakalog-in na {accountName}",
   "purchaseErrorInvalidSubscriberAttributesError": "Nabigo ang pagbili. Pakisubukan ulit mamaya. Kung hindi pa rin maayos, makipag-ugnayan sa amin sa Settings > Magtanong. Mga detalye: {exceptionMessage}:{exceptionDetails}",

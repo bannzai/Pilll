@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Մեկ այլ գնում է մշակվում։ Խնդրում ենք մի փոքր սպասել և կրկին փորձել",
   "purchaseErrorUnknownBackendError": "Այս պահին հնարավոր չէ ավարտել գնումը։ Խնդրում ենք մի փոքր ուշ կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ Կարգավորումներ > Հետադարձ կապ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Չհաջողվեց ավարտել գնումը։ Խնդրում ենք մի փոքր անց կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Ձեր օգտատիրոջ համար գնումը ձախողվեց: Խնդրում ենք կրկին փորձել որոշ ժամանակ անց: Եթե խնդիրը չլուծվի, խնդրում ենք դիմել Կարգավորումներ > Հարցում բաժնում: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Ձեր հաշվով գնումը չհաջողվեց ավարտել։ Խնդրում ենք մի փոքր ուշ կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ՝ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Ձեր {accountName} հաշվով չեք կարող բաժանորդագրվել պլանին: Խնդրում եմ ստուգեք ձեր վճարման տվյալները և կրկին փորձեք:",
   "purchaseErrorPaymentPendingError": "Վճարումը կիսատ է մնացել: Խնդրում ենք ստուգել {storeName}-ը ձեր մտնելու {accountName} հաշվով:",
   "purchaseErrorInvalidSubscriberAttributesError": "Գնումը ձախողվեց: Խնդրում ենք սպասել և նորից փորձել: Եթե խնդիրը չի լուծվում՝ Կարգավորումներ > Հարցում բաժնից դիմեք մեզ: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",

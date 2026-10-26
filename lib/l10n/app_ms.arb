@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "Pembelian lain sedang diproses. Sila tunggu sebentar dan cuba lagi",
   "purchaseErrorUnknownBackendError": "Pembelian tidak dapat diselesaikan buat masa ini. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian tidak berjaya. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "Pembelian gagal untuk pengguna anda. Sila cuba lagi selepas beberapa masa. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Hubungi. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Pembelian menggunakan akaun anda tidak dapat diselesaikan. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Akaun {accountName} anda tidak dapat melanggan pelan ini. Sila semak maklumat pembayaran anda dan cuba lagi.",
   "purchaseErrorPaymentPendingError": "Pembayaran telah terhenti di tengah jalan. Sila semak {storeName} dengan {accountName} yang sedang log masuk.",
   "purchaseErrorInvalidSubscriberAttributesError": "Pembelian gagal. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",

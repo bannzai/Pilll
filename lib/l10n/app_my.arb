@@ -304,7 +304,7 @@
   "purchaseErrorOperationAlreadyInProgressError": "အခြားဝယ်ယူမှုတစ်ခုကို ဆောင်ရွက်နေပါတယ်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ",
   "purchaseErrorUnknownBackendError": "ယခု ဝယ်ယူမှုကို အပြီးသတ်၍ မရသေးပါ။ ခဏကြာမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏနေပြီးမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorIneligibleError": "သင့်အကောင့်ဖြင့် ဝယ်ယူခြင်းမှာ ပျက်ကွက်သွားပါသည်။ ခေတ္တစောင့်ပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ ပြဿနာမရှင်းလင်းပါက ဆက်တင် > စုံစမ်းမေးမြန်းရန် တွင် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်အချက်အလက်များ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "သင့်အကောင့်ဖြင့် ဝယ်ယူမှုကို အပြီးသတ်၍ မရပါ။ ခဏကြာမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ကျွန်ုပ်တို့ကို ဆက်သွယ်ရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "သင့် {accountName} ဖြင့် ပလန်သို့ ပါဝင်ခြင်းမပြုနိုင်ပါ။ ငွေပေးချေမှုအချက်အလက်များကို စစ်ဆေးပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
   "purchaseErrorPaymentPendingError": "ငွေပေးချေမှုသည် ရပ်တန့်နေပါသည်။ လောဂ်အင်ဝင်ရောက်နေသော {accountName} တွင် {storeName} ကို စစ်ဆေးပါ",
   "purchaseErrorInvalidSubscriberAttributesError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏစောင့်ပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ မဖြေရှင်းနိုင်ပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
