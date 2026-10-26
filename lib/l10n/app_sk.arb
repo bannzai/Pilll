@@ -337,7 +337,7 @@
   "todaySchedule": "Váš dnešný plán",
   "calendarSchedule": "Udalosti v kalendári",
   "newPillSheetNotificationTitle": "Dnes sa začína nové balenie tabletiek",
-  "newPillSheetNotificationMessage": "🆕 Dnes začína nový blister\nNezabudnite na užitie👍",
+  "newPillSheetNotificationMessage": "🆕 Dnes začínate nové balenie tabletiek\nNezabudnite užiť tabletku 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Prémiové informácie sa nenašli",
   "purchaseErrorPurchasePendingError": "Aktivácia predplatného ešte nie je dokončená. Prosím, počkajte chvíľu a následne skontrolujte stav.",
   "launchError": "Pri spustení aplikácie došlo k chybe.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",

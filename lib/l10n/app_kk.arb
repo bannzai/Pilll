@@ -337,7 +337,7 @@
   "todaySchedule": "Бүгінгі жоспарыңыз",
   "calendarSchedule": "Күнтізбедегі жоспарлар",
   "newPillSheetNotificationTitle": "Бүгін жаңа таблетка қаптамасы басталады",
-  "newPillSheetNotificationMessage": "🆕 Бүгіннен жаңа дәрі парағы басталады\nҚабылдауды ұмытпаңыз👍",
+  "newPillSheetNotificationMessage": "🆕 Бүгін таблеткалардың жаңа қаптамасы басталады\nТаблетканы қабылдауды ұмытпаңыз 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум ақпараты табылмады",
   "purchaseErrorPurchasePendingError": "Ақылы қызметті қосу орындалмады. Біраз уақыттан кейін қайта тексеріңіз",
   "launchError": "Қолданбаны іске қосу кезінде қате орын алды.\n{ErrorMessagesConnection}\n\nТолық ақпарат: ",

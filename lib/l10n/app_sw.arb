@@ -337,7 +337,7 @@
   "todaySchedule": "Ratiba yako ya leo",
   "calendarSchedule": "Ratiba ya kalenda",
   "newPillSheetNotificationTitle": "Pakiti mpya ya vidonge inaanza leo",
-  "newPillSheetNotificationMessage": "🆕 Leo kuanzia karatasi mpya ya dawa inaanza\nUsisahau kuchukua dawa yako👍",
+  "newPillSheetNotificationMessage": "🆕 Leo unaanza pakiti mpya ya vidonge\nTafadhali kumbuka kumeza kidonge 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Taarifa za premium hazikupatikana",
   "purchaseErrorPurchasePendingError": "Kuwezesha malipo hakujakamilika. Tafadhali subiri muda kidogo halafu jaribu tena.",
   "launchError": "Hitilafu imetokea wakati wa kuzindua programu.\n{ErrorMessagesConnection}\n\nMaelezo: ",

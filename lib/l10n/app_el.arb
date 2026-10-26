@@ -337,7 +337,7 @@
   "todaySchedule": "Το πρόγραμμά σας για σήμερα",
   "calendarSchedule": "Συμβάντα ημερολογίου",
   "newPillSheetNotificationTitle": "Σήμερα ξεκινά η νέα συσκευασία χαπιών",
-  "newPillSheetNotificationMessage": "🆕 Από σήμερα ξεκινά μια νέα συσκευασία\nΜην ξεχάσετε να πάρετε το χάπι σας👍",
+  "newPillSheetNotificationMessage": "🆕 Σήμερα ξεκινάτε νέα συσκευασία χαπιών\nΘυμηθείτε να πάρετε το χάπι σας 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Δεν βρέθηκαν πληροφορίες premium",
   "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της συνδρομής δεν έχει ολοκληρωθεί. Παρακαλώ περιμένετε λίγο και ελέγξτε ξανά.",
   "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση της εφαρμογής.\n{ErrorMessagesConnection}\n\nΛεπτομέρειες: ",

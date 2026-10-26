@@ -337,7 +337,7 @@
   "todaySchedule": "Šiandienos planai",
   "calendarSchedule": "Kalendoriaus įvykiai",
   "newPillSheetNotificationTitle": "Šiandien pradedate naują tablečių pakuotę",
-  "newPillSheetNotificationMessage": "🆕 Šiandien prasideda naujas vaistų paketas\nNepamirškite juos išgerti👍",
+  "newPillSheetNotificationMessage": "🆕 Šiandien pradedate naują tablečių pakuotę\nNepamirškite išgerti tabletės 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informacijos nerasta",
   "purchaseErrorPurchasePendingError": "Mokėjimo aktyvinimas dar neužbaigtas. Prašome palaukti ir patikrinti vėliau.",
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija: ",

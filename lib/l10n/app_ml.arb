@@ -337,7 +337,7 @@
   "todaySchedule": "ഇന്നത്തെ പരിപാടികൾ",
   "calendarSchedule": "കലണ്ടറിലെ പരിപാടികൾ",
   "newPillSheetNotificationTitle": "പുതിയ ഗുളിക പാക്ക് ഇന്ന് തുടങ്ങുന്നു",
-  "newPillSheetNotificationMessage": "🆕 ഇന്നു മുതൽ പുതിയ ഷീറ്റ് തുടങ്ങുന്നു\nമറക്കാതെ കഴിക്കാൻ ശ്രദ്ധിക്കുക👍",
+  "newPillSheetNotificationMessage": "🆕 ഇന്ന് മുതൽ ഗുളികകളുടെ പുതിയ പാക്ക് ആരംഭിക്കുന്നു\nഗുളിക കഴിക്കാൻ മറക്കരുതേ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "പ്രീമിയം വിവരങ്ങൾ കണ്ടെത്തിയില്ല",
   "purchaseErrorPurchasePendingError": "പേയ്‌മെന്റ് സജീവമാക്കൽ പൂർത്തിയായിട്ടില്ല. കുറച്ച് സമയത്തിന് ശേഷം ദയവായി വീണ്ടും പരിശോധിക്കുക",
   "launchError": "ആപ്പ് ആരംഭിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു.\n{ErrorMessagesConnection}\n\nവിശദാംശങ്ങൾ: ",

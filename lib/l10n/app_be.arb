@@ -337,7 +337,7 @@
   "todaySchedule": "Вашы планы на сёння",
   "calendarSchedule": "Падзеі календара",
   "newPillSheetNotificationTitle": "Сёння пачынаецца новая ўпакоўка пігулак",
-  "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая пачка\nНе забывайце прыняць таблетку👍",
+  "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая ўпакоўка пігулак\nНе забудзьцеся прыняць пігулку 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Прэміум інфармацыя не знойдзена",
   "purchaseErrorPurchasePendingError": "Актывацыя плацяжоў яшчэ не завершана. Калі ласка, пачакайце некаторы час і праверце зноў.",
   "launchError": "Пры запуску прыкладання ўзнікла тэхнічная памылка. {ErrorMessagesConnection}",

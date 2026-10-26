@@ -337,7 +337,7 @@
   "todaySchedule": "Таны өнөөдрийн төлөвлөгөө",
   "calendarSchedule": "Хуанлийн тов",
   "newPillSheetNotificationTitle": "Өнөөдөр шинэ эмийн блистер эхэлнэ",
-  "newPillSheetNotificationMessage": "🆕 Өнөөдрөөс шинэ хавтасны курс эхэлнэ\nМартахгүйгээр уухаа👍",
+  "newPillSheetNotificationMessage": "🆕 Өнөөдөр эмийн шинэ блистер эхэлнэ\nЭмээ уухаа санаарай 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум мэдээлэл олдсонгүй",
   "purchaseErrorPurchasePendingError": "Төлбөрийн идэвхжүүлэлт хараахан дуусаагүй байна. Хэсэг хугацааны дараа дахин шалгана уу.",
   "launchError": "Апп эхлэх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "আজিৰ কাৰ্যসূচী",
   "calendarSchedule": "কেলেণ্ডাৰৰ সূচী",
   "newPillSheetNotificationTitle": "আজিৰ পৰা নতুন পিলৰ পেকেট আৰম্ভ হ’ব",
-  "newPillSheetNotificationMessage": "🆕 আজিৰ পৰা নতুন শ্বীট আৰম্ভ হ'ল\nসেৱন কৰিবলৈ নাপাহৰিব👍",
+  "newPillSheetNotificationMessage": "🆕 আজিৰ পৰা নতুন পিলৰ পেকেট আৰম্ভ হৈছে\nপিল খাবলৈ মনত ৰাখিব 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "প্ৰিমিয়াম তথ্য পোৱা নগ'ল",
   "purchaseErrorPurchasePendingError": "পেমেণ্ট সক্ৰিয়কৰণ এতিয়াও সম্পূৰ্ণ হোৱা নাই। অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি পুনৰ পৰীক্ষা কৰক।",
   "launchError": "এপটো চালু হ'ওতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nবিৱৰণ: ",

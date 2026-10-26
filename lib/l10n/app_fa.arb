@@ -337,7 +337,7 @@
   "todaySchedule": "برنامه امروز شما",
   "calendarSchedule": "رویدادهای تقویم",
   "newPillSheetNotificationTitle": "بسته جدید قرص‌ها از امروز شروع می‌شود",
-  "newPillSheetNotificationMessage": "🆕 امروز بسته جدید شروع می‌شود\nفراموش نکنید مصرف کنید 👍",
+  "newPillSheetNotificationMessage": "🆕 بستهٔ جدید قرص‌ها از امروز شروع می‌شود\nلطفاً مصرف قرص را فراموش نکنید 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم یافت نشد",
   "purchaseErrorPurchasePendingError": "فعال‌سازی پرداخت هنوز تکمیل نشده است. لطفاً مدتی صبر کرده و دوباره بررسی کنید",
   "launchError": "هنگام راه‌اندازی برنامه خطایی رخ داد.\n{ErrorMessagesConnection}\n\nجزئیات: ",

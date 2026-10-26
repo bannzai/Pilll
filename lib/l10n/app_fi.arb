@@ -337,7 +337,7 @@
   "todaySchedule": "Tämän päivän suunnitelmat",
   "calendarSchedule": "Kalenterin tapahtumat",
   "newPillSheetNotificationTitle": "Uusi pilleripakkaus alkaa tänään",
-  "newPillSheetNotificationMessage": "🆕 Uusi pillikierto alkaa tänään\nMuista ottaa pillisi👍",
+  "newPillSheetNotificationMessage": "🆕 Uusi pilleripakkaus alkaa tänään\nMuistathan ottaa pillerin 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-tietoja ei löytynyt",
   "purchaseErrorPurchasePendingError": "Maksun aktivointi ei ole vielä valmistunut. Odota hetki ja tarkista tilanne uudelleen.",
   "launchError": "Sovelluksen käynnistyksessä tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot: ",

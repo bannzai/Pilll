@@ -337,7 +337,7 @@
   "todaySchedule": "თქვენი დღევანდელი გეგმები",
   "calendarSchedule": "კალენდრის გეგმები",
   "newPillSheetNotificationTitle": "დღეს აბების ახალი შეფუთვა იწყება",
-  "newPillSheetNotificationMessage": "🆕 დღეს იწყება ახალი შიტი\nნუ დაივიწყებთ მიღებას👍",
+  "newPillSheetNotificationMessage": "🆕 დღეს აბების ახალი შეფუთვა იწყება\nგთხოვთ, გახსოვდეთ აბის მიღება 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმ ინფორმაცია ვერ მოიძებნა",
   "purchaseErrorPurchasePendingError": "გადახდის დადასტურება ჯერ კიდევ დასრულებული არ არის. გთხოვთ, ცოტა ხანში ხელახლა შეამოწმოთ.",
   "launchError": "აპლიკაციის გაშვებისას მოხდა შეცდომა.\n{ErrorMessagesConnection}\n\nდეტალები: ",

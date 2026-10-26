@@ -337,7 +337,7 @@
   "todaySchedule": "Iskedyul ninyo ngayong araw",
   "calendarSchedule": "Mga iskedyul sa kalendaryo",
   "newPillSheetNotificationTitle": "Magsisimula na po ngayon ang bagong pakete ng pildoras",
-  "newPillSheetNotificationMessage": "🆕 Magsisimula na ang bagong sheet ngayon\nHuwag kalimutang uminom 👍",
+  "newPillSheetNotificationMessage": "🆕 Ngayon po magsisimula ang bagong pakete ng mga pildoras\nPakiusap, tandaan po ninyong inumin ang pildoras 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Hindi natagpuan ang premium na impormasyon",
   "purchaseErrorPurchasePendingError": "Hindi pa nakumpleto ang pagpapatunay ng bayad. Mangyaring maghintay sandali at subukan ulit.",
   "launchError": "Nabigo ang paglunsad ng app. Pakisuri ang inyong network connection at subukang muli. {ErrorMessagesConnection}",

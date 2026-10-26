@@ -337,7 +337,7 @@
   "todaySchedule": "আজকের সময়সূচি",
   "calendarSchedule": "ক্যালেন্ডারের সময়সূচি",
   "newPillSheetNotificationTitle": "আজ থেকে পিলের নতুন পাতা শুরু হচ্ছে",
-  "newPillSheetNotificationMessage": "🆕 আজ থেকে নতুন শিট শুরু হচ্ছে\nভুলে যাবেন না, নিয়মিত সেবন করুন👍",
+  "newPillSheetNotificationMessage": "🆕 আজ থেকে পিলের নতুন পাতা শুরু হচ্ছে\nপিল খেতে মনে রাখুন 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "প্রিমিয়াম তথ্য পাওয়া যায়নি",
   "purchaseErrorPurchasePendingError": "পেমেন্ট সক্রিয়করণ এখনও সম্পূর্ণ হয়নি। দয়া করে কিছুক্ষণ অপেক্ষা করে আবার পরীক্ষা করুন।",
   "launchError": "অ্যাপ চালু করার সময় একটি ত্রুটি ঘটেছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত: ",

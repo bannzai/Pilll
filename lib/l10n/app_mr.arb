@@ -337,7 +337,7 @@
   "todaySchedule": "आजचे तुमचे वेळापत्रक",
   "calendarSchedule": "दिनदर्शिकेतील नियोजित गोष्टी",
   "newPillSheetNotificationTitle": "आजपासून गोळ्यांचे नवीन पाकीट सुरू होते",
-  "newPillSheetNotificationMessage": "🆕 आजपासून नवीन शीट सुरू होत आहे\nविसरू नका आणि गोळ्या घ्या👍",
+  "newPillSheetNotificationMessage": "🆕 आजपासून गोळ्यांचे नवीन पाकीट सुरू होत आहे\nगोळी घ्यायला विसरू नका 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम माहिती सापडली नाही",
   "purchaseErrorPurchasePendingError": "बिलिंग सक्रियकरण अजून पूर्ण झाले नाही. कृपया काही वेळ प्रतीक्षा करून पुन्हा तपासा",
   "launchError": "अॅप सुरू होताना त्रुटी आली आहे.\n{ErrorMessagesConnection}\n\nतपशील: ",

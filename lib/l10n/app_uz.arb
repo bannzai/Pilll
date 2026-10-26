@@ -337,7 +337,7 @@
   "todaySchedule": "Bugungi rejalaringiz",
   "calendarSchedule": "Taqvimdagi rejalar",
   "newPillSheetNotificationTitle": "Yangi tabletkalar oʻrami bugun boshlanadi",
-  "newPillSheetNotificationMessage": "🆕 Bugun yangi dori kursi boshlanadi\nIchishni unutmang👍",
+  "newPillSheetNotificationMessage": "🆕 Bugun yangi tabletkalar oʻramini boshlaysiz\nTabletkani qabul qilishni unutmang 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium ma'lumoti topilmadi",
   "purchaseErrorPurchasePendingError": "Obuna faollashtirish hali tugallanmagan. Biroz vaqt o'tgach, qaytadan tekshirib ko'ring.",
   "launchError": "Ilovani ishga tushirishda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar: ",

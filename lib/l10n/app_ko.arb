@@ -337,7 +337,7 @@
   "todaySchedule": "오늘의 일정이에요",
   "calendarSchedule": "캘린더 일정",
   "newPillSheetNotificationTitle": "오늘부터 새 피임약 팩을 시작해요",
-  "newPillSheetNotificationMessage": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍",
+  "newPillSheetNotificationMessage": "🆕 오늘부터 새 피임약 팩을 시작해요\n약 챙겨 드시는 것 잊지 마세요 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보를 찾을 수 없습니다",
   "purchaseErrorPurchasePendingError": "결제 활성화가 아직 완료되지 않았습니다. 잠시 후 다시 확인해 주세요",
   "launchError": "앱 실행 중 오류가 발생했습니다.\n{ErrorMessagesConnection}\n\n상세 정보: ",

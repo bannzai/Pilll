@@ -337,7 +337,7 @@
   "todaySchedule": "Sua agenda de hoje",
   "calendarSchedule": "Eventos do calendário",
   "newPillSheetNotificationTitle": "Sua nova cartela de pílulas começa hoje",
-  "newPillSheetNotificationMessage": "🆕 Hoje começa uma nova cartela\nNão esqueça de tomar sua pílula 👍",
+  "newPillSheetNotificationMessage": "🆕 Hoje você começa uma nova cartela de pílulas\nLembre-se de tomar a pílula 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informações premium não foram encontradas",
   "purchaseErrorPurchasePendingError": "A ativação do pagamento ainda não foi concluída. Aguarde um momento e verifique novamente.",
   "launchError": "Ocorreu um erro ao iniciar o aplicativo.\n{ErrorMessagesConnection}\n\nDetalhes: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "ستاسو د نن ورځې مهالویش",
   "calendarSchedule": "د کلیزې مهالویش",
   "newPillSheetNotificationTitle": "د ګولیو نوی بسته نن پیلېږي",
-  "newPillSheetNotificationMessage": "🆕 نن د نوي شیټ پیل دی\nهیر مه کړئ چې دا واخلئ 👍",
+  "newPillSheetNotificationMessage": "🆕 نن د ګولیو نوې بسته پیلېږي\nمهرباني وکړئ د ګولۍ اخیستل په یاد ولرئ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "د پریمیم معلومات ونه موندل شول",
   "purchaseErrorPurchasePendingError": "د پیسو ورکولو پروسه لا تر اوسه بشپړه نده. مهرباني وکړئ یو څه وخت انتظار وکړئ او بیا یې وګورئ.",
   "launchError": "د اپلیکیشن پرانیستلو پر مهال تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nتفصیلات: ",

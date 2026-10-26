@@ -337,7 +337,7 @@
   "todaySchedule": "今天的日程",
   "calendarSchedule": "日历日程",
   "newPillSheetNotificationTitle": "今天开始服用新的一板药",
-  "newPillSheetNotificationMessage": "🆕 今天开始新的服用周期\n请不要忘记服用👍",
+  "newPillSheetNotificationMessage": "🆕 今天开始服用新的一板药\n记得按时服药哦 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "未找到高级版信息",
   "purchaseErrorPurchasePendingError": "付费功能激活尚未完成，请稍后再次确认",
   "launchError": "应用启动时发生技术故障。详细信息：{ErrorMessagesConnection}",

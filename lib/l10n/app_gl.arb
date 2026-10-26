@@ -337,7 +337,7 @@
   "todaySchedule": "Os teus plans de hoxe",
   "calendarSchedule": "Eventos do calendario",
   "newPillSheetNotificationTitle": "Hoxe comezas unha nova caixa de pílulas",
-  "newPillSheetNotificationMessage": "🆕 Hoxe comeza un novo blíster\nNon esquezas tomalo👍",
+  "newPillSheetNotificationMessage": "🆕 Hoxe comezas un novo envase de pílulas\nLembra tomar a pílula 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Non se atopou información premium",
   "purchaseErrorPurchasePendingError": "A activación da subscrición non foi completada. Por favor, agarde un momento e volva verificar.",
   "launchError": "Produciuse un erro ao iniciar a aplicación.\n{ErrorMessagesConnection}\n\nDetalles: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "Gaurko zure plana",
   "calendarSchedule": "Egutegiko gertaerak",
   "newPillSheetNotificationTitle": "Gaur hasten da pilulen kutxa berria",
-  "newPillSheetNotificationMessage": "🆕 Gaurtik txartel berria hasten da\nAhaztu gabe har ezazu👍",
+  "newPillSheetNotificationMessage": "🆕 Gaur pilula kaxa berria hasiko duzu\nGogoratu pilula hartzea 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ez da premium informaziorik aurkitu",
   "purchaseErrorPurchasePendingError": "Ordainketaren aktibaketa ez da oraindik osatu. Itxaron ezazu denbora pixka bat eta gero begiratu berriro, mesedez.",
   "launchError": "Errore bat gertatu da aplikazioa abiaraztean.\n{ErrorMessagesConnection}\n\nXehetasunak: ",

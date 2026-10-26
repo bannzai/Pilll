@@ -337,7 +337,7 @@
   "todaySchedule": "I tuoi impegni di oggi",
   "calendarSchedule": "Eventi del calendario",
   "newPillSheetNotificationTitle": "Oggi inizi una nuova confezione di pillole",
-  "newPillSheetNotificationMessage": "🆕 Oggi inizia una nuova confezione\nRicordati di prenderla 👍",
+  "newPillSheetNotificationMessage": "🆕 Oggi inizi una nuova confezione di pillole\nRicordati di prendere la pillola 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informazioni premium non trovate",
   "purchaseErrorPurchasePendingError": "L'attivazione del pagamento non è ancora completata. Ti preghiamo di attendere qualche momento e verificare nuovamente.",
   "launchError": "Si è verificato un errore durante l'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli: ",

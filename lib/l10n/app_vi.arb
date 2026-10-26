@@ -337,7 +337,7 @@
   "todaySchedule": "Lịch trình hôm nay của bạn",
   "calendarSchedule": "Lịch trình trong lịch",
   "newPillSheetNotificationTitle": "Hôm nay bắt đầu vỉ thuốc mới",
-  "newPillSheetNotificationMessage": "🆕 Hôm nay bắt đầu chu kỳ viên thuốc mới\nĐừng quên uống thuốc nhé👍",
+  "newPillSheetNotificationMessage": "🆕 Hôm nay bạn bắt đầu vỉ thuốc mới\nHãy nhớ uống thuốc nhé 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Không tìm thấy thông tin premium",
   "purchaseErrorPurchasePendingError": "Việc kích hoạt thanh toán chưa hoàn thành. Vui lòng đợi một chút và kiểm tra lại sau.",
   "launchError": "Đã xảy ra lỗi khi khởi động ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "आज के आपके कार्यक्रम",
   "calendarSchedule": "कैलेंडर में तय कार्यक्रम",
   "newPillSheetNotificationTitle": "आज से गोलियों का नया पैक शुरू होता है",
-  "newPillSheetNotificationMessage": "🆕 आज से नया शीट शुरू हो रहा है\nइसे लेना न भूलें👍",
+  "newPillSheetNotificationMessage": "🆕 आज से गोलियों का नया पैक शुरू हो रहा है\nगोली लेना याद रखें 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम जानकारी नहीं मिली",
   "purchaseErrorPurchasePendingError": "आपका भुगतान सक्रियण अभी तक पूरा नहीं हुआ है। कृपया कुछ समय बाद पुनः जांचें।",
   "launchError": "ऐप शुरू करते समय त्रुटि हुई।\n{ErrorMessagesConnection}\n\nविवरण: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "Jadual anda hari ini",
   "calendarSchedule": "Jadual dalam kalendar",
   "newPillSheetNotificationTitle": "Pek pil baharu bermula hari ini",
-  "newPillSheetNotificationMessage": "🆕 Lembaran baharu bermula hari ini\nJangan lupa minum pil anda👍",
+  "newPillSheetNotificationMessage": "🆕 Pek pil baharu bermula hari ini\nJangan lupa ambil pil anda ya 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Maklumat premium tidak ditemui",
   "purchaseErrorPurchasePendingError": "Aktivasi pembayaran belum selesai. Sila tunggu sebentar dan cuba semula.",
   "launchError": "Ralat berlaku semasa melancarkan aplikasi.\n{ErrorMessagesConnection}\n\nButiran: ",

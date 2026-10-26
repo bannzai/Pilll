@@ -337,7 +337,7 @@
   "todaySchedule": "ଆଜିର ଆପଣଙ୍କ କାର୍ଯ୍ୟସୂଚୀ",
   "calendarSchedule": "କ୍ୟାଲେଣ୍ଡରର କାର୍ଯ୍ୟସୂଚୀ",
   "newPillSheetNotificationTitle": "ଆଜିଠାରୁ ବଟିକାର ନୂଆ ପ୍ୟାକେଟ୍ ଆରମ୍ଭ ହେଉଛି",
-  "newPillSheetNotificationMessage": "🆕 ଆଜିଠାରୁ ନୂଆ ସିଟ୍ ଆରମ୍ଭ ହେଉଛି\nଭୁଲିଯିବା ବିନା ସେବନ କରନ୍ତୁ👍",
+  "newPillSheetNotificationMessage": "🆕 ଆଜିଠାରୁ ବଟିକାର ନୂଆ ପ୍ୟାକ୍ ଆରମ୍ଭ ହେଉଛି\nବଟିକା ନେବାକୁ ମନେ ରଖନ୍ତୁ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ପ୍ରିମିୟମ୍ ସୂଚନା ମିଳିଲା ନାହିଁ",
   "purchaseErrorPurchasePendingError": "ପେମେଣ୍ଟ ସକ୍ରିୟକରଣ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇନାହିଁ। ଦୟାକରି କିଛି ସମୟ ଅପେକ୍ଷା କରି ପୁଣି ଯାଞ୍ଚ କରନ୍ତୁ।",
   "launchError": "ଆପ୍ ଆରମ୍ଭ ସମୟରେ ଏକ ତ୍ରୁଟି ଘଟିଛି।\n{ErrorMessagesConnection}\n\nବିବରଣୀ: ",

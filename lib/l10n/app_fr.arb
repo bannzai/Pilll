@@ -337,7 +337,7 @@
   "todaySchedule": "Votre programme du jour",
   "calendarSchedule": "Événements du calendrier",
   "newPillSheetNotificationTitle": "Votre nouvelle plaquette de pilules commence aujourd’hui",
-  "newPillSheetNotificationMessage": "🆕 Votre nouvelle feuille de pilule commence aujourd'hui\nN'oubliez pas de prendre votre pilule👍",
+  "newPillSheetNotificationMessage": "🆕 Une nouvelle plaquette de pilules commence aujourd’hui\nPensez à prendre votre pilule 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informations premium introuvables",
   "purchaseErrorPurchasePendingError": "L'activation Premium n'est pas terminée. Veuillez vérifier à nouveau après un certain temps.",
   "launchError": "Une erreur s'est produite lors du lancement de l'application.\n{ErrorMessagesConnection}\n\nDétails :",

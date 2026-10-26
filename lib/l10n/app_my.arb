@@ -337,7 +337,7 @@
   "todaySchedule": "ဒီနေ့အတွက် အစီအစဉ်",
   "calendarSchedule": "ပြက္ခဒိန်ရှိ အစီအစဉ်များ",
   "newPillSheetNotificationTitle": "ဆေးပြားကတ်အသစ်ကို ဒီနေ့ စတင်ပါမယ်",
-  "newPillSheetNotificationMessage": "🆕 ဒီနေ့ကစပြီး ဆေးအချပ်အသစ် စပါပြီ\nမမေ့ဘဲ သောက်ကြပါစို့👍",
+  "newPillSheetNotificationMessage": "🆕 ဒီနေ့ ဆေးပြားကတ်အသစ် စတင်ပါပြီ\nဆေးပြားသောက်ဖို့ မမေ့ပါနဲ့ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ပရီမီယံအချက်အလက်များ မတွေ့ရှိပါ",
   "purchaseErrorPurchasePendingError": "ငွေပေးချေမှုအတည်ပြုခြင်း မပြီးစီးသေးပါ။ ခဏကြာပြီးမှ ပြန်လည်စစ်ဆေးပါ",
   "launchError": "အက်ပ်ဖွင့်သည့်အချိန်တွင် အမှားတစ်ခု ဖြစ်ပေါ်ခဲ့ပါသည်။\n{ErrorMessagesConnection}\n\nအသေးစိတ်: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "Бүгүнкү планыңыз",
   "calendarSchedule": "Жылнаамадагы пландар",
   "newPillSheetNotificationTitle": "Бүгүн жаңы таблетка таңгагы башталат",
-  "newPillSheetNotificationMessage": "🆕 Бүгүндөн жаңы дары пачкасы башталат\nУнутпай ичели 👍",
+  "newPillSheetNotificationMessage": "🆕 Бүгүн таблеткалардын жаңы таңгагы башталат\nТаблетканы ичүүнү унутпаңыз 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум маалымат табылбады",
   "purchaseErrorPurchasePendingError": "Премиум кызматтарды иштетүү аяктала элек. Бир аз убакыт күтүп, кайрадан текшерип көрүңүз.",
   "launchError": "Колдонмону иштетүү учурунда ката кетти.\n{ErrorMessagesConnection}\n\nМайда-чүйдөлөрү: ",

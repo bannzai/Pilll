@@ -337,7 +337,7 @@
   "todaySchedule": "Dagens planer",
   "calendarSchedule": "Kalenderaftaler",
   "newPillSheetNotificationTitle": "En ny pakke p-piller begynder i dag",
-  "newPillSheetNotificationMessage": "🆕 Din nye pille pakke begynder i dag\nHusk at tage dine piller👍",
+  "newPillSheetNotificationMessage": "🆕 I dag starter du på en ny pakke p-piller\nHusk at tage din p-pille 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-oplysninger blev ikke fundet",
   "purchaseErrorPurchasePendingError": "Abonnementsaktiveringen er ikke gennemført endnu. Vent venligst et øjeblik og tjek igen.",
   "launchError": "Der opstod en fejl under start af appen.\n{ErrorMessagesConnection}\n\nDetaljer: ",

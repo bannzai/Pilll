@@ -337,7 +337,7 @@
   "todaySchedule": "Uhlelo lwakho lwanamuhla",
   "calendarSchedule": "Izinhlelo zekhalenda",
   "newPillSheetNotificationTitle": "Iphakethe elisha lamaphilisi liqala namuhla",
-  "newPillSheetNotificationMessage": "🆕 Ishidi elisha lepilisi liqala namuhla\nKhumbula ukuthatha👍",
+  "newPillSheetNotificationMessage": "🆕 Iphakethe elisha lamaphilisi liqala namuhla\nSicela ukhumbule ukuphuza iphilisi 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ulwazi lwe-premium alutholakanga",
   "purchaseErrorPurchasePendingError": "Ukusebenza kokukhokha akukaqedwa. Sicela ulinde isikhathi bese uhlola futhi.",
   "launchError": "Kwenzeke iphutha ngesikhathi sokuqala uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane: ",

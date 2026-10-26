@@ -337,7 +337,7 @@
   "todaySchedule": "Bugünkü programınız",
   "calendarSchedule": "Takvimdeki etkinlikler",
   "newPillSheetNotificationTitle": "Yeni hap paketiniz bugün başlıyor",
-  "newPillSheetNotificationMessage": "🆕 Bugün yeni paket başlıyor\nAlmayı unutmayın👍",
+  "newPillSheetNotificationMessage": "🆕 Bugün yeni hap paketinize başlıyorsunuz\nHapınızı almayı unutmayın 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium bilgisi bulunamadı",
   "purchaseErrorPurchasePendingError": "Ödeme aktivasyonu henüz tamamlanmamıştır. Lütfen bir süre bekledikten sonra tekrar kontrol edin.",
   "launchError": "Uygulama başlatılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar: ",

@@ -337,7 +337,7 @@
   "todaySchedule": "Eich amserlen heddiw",
   "calendarSchedule": "Digwyddiadau’r calendr",
   "newPillSheetNotificationTitle": "Mae pecyn newydd o bilsen yn dechrau heddiw",
-  "newPillSheetNotificationMessage": "🆕 Mae pecyn newydd yn dechrau heddiw\nPeidiwch ag anghofio ei gymryd 👍",
+  "newPillSheetNotificationMessage": "🆕 Mae pecyn newydd o bilsenni'n dechrau heddiw\nCofiwch gymryd eich pilsen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ni chanfuwyd gwybodaeth premiwm",
   "purchaseErrorPurchasePendingError": "Nid yw actifadu'r taliad wedi'i gwblhau. Arhoswch am ychydig ac yna gwiriwch eto.",
   "launchError": "Digwyddodd gwall wrth lansio'r app\n{ErrorMessagesConnection}\n\nManylion:",

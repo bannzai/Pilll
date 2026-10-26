@@ -337,7 +337,7 @@
   "todaySchedule": "Mai teendőid",
   "calendarSchedule": "Naptári események",
   "newPillSheetNotificationTitle": "Ma kezdődik az új tablettalevél",
-  "newPillSheetNotificationMessage": "🆕 Ma új csomag kezdődik\nNe felejtsd el bevenni! 👍",
+  "newPillSheetNotificationMessage": "🆕 Ma új levél tablettát kezdesz\nNe felejtsd el szedni a tablettát 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "A prémium információ nem található",
   "purchaseErrorPurchasePendingError": "Az előfizetés aktiválása még nem fejeződött be. Kérjük, várjon egy kis ideig, majd ellenőrizze újra.",
   "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek: ",

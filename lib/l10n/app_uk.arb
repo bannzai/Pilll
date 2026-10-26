@@ -337,7 +337,7 @@
   "todaySchedule": "Ваші плани на сьогодні",
   "calendarSchedule": "Події календаря",
   "newPillSheetNotificationTitle": "Сьогодні починається нова упаковка пігулок",
-  "newPillSheetNotificationMessage": "🆕 Сьогодні починається новий блістер\nНе забудьте прийняти таблетки👍",
+  "newPillSheetNotificationMessage": "🆕 Сьогодні починається нова упаковка пігулок\nНе забудьте прийняти пігулку 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Інформацію про преміум не знайдено",
   "purchaseErrorPurchasePendingError": "Активація оплати ще не завершена. Будь ласка, перевірте через деякий час",
   "launchError": "Під час запуску додатку сталася помилка.\n{ErrorMessagesConnection}\n\nДеталі: ",

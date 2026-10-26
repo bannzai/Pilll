@@ -337,7 +337,7 @@
   "todaySchedule": "Dzisiejszy plan",
   "calendarSchedule": "Wydarzenia w kalendarzu",
   "newPillSheetNotificationTitle": "Dziś zaczyna się nowe opakowanie tabletek",
-  "newPillSheetNotificationMessage": "🆕 Dzisiaj rozpoczyna się nowa blaszka\nPamiętaj o przyjęciu👍",
+  "newPillSheetNotificationMessage": "🆕 Dziś zaczynasz nowe opakowanie tabletek\nPamiętaj o przyjęciu tabletki 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Nie znaleziono informacji o premium",
   "purchaseErrorPurchasePendingError": "Aktywacja płatności nie została jeszcze zakończona. Proszę sprawdzić ponownie za chwilę.",
   "launchError": "Wystąpił błąd podczas uruchamiania aplikacji\n{ErrorMessagesConnection}\n\nSzczegóły:",

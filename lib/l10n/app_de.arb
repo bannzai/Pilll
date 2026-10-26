@@ -337,7 +337,7 @@
   "todaySchedule": "Deine Termine heute",
   "calendarSchedule": "Kalendertermine",
   "newPillSheetNotificationTitle": "Heute beginnt deine neue Pillenpackung",
-  "newPillSheetNotificationMessage": "🆕 Ab heute beginnt ein neues Blister\nVergiss nicht, sie einzunehmen 👍",
+  "newPillSheetNotificationMessage": "🆕 Heute beginnst du mit einer neuen Pillenpackung\nDenk daran, deine Pille zu nehmen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-Informationen wurden nicht gefunden",
   "purchaseErrorPurchasePendingError": "Die Aktivierung der Bezahlung ist noch nicht abgeschlossen. Bitte warten Sie einen Moment und überprüfen Sie dann erneut.",
   "launchError": "Beim Start der App ist ein Fehler aufgetreten.\n{ErrorMessagesConnection}\n\nDetails: ",

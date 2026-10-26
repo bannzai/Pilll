@@ -337,7 +337,7 @@
   "todaySchedule": "ຕາຕະລາງຂອງມື້ນີ້",
   "calendarSchedule": "ນັດໝາຍໃນປະຕິທິນ",
   "newPillSheetNotificationTitle": "ຊອງຢາເມັດໃໝ່ເລີ່ມມື້ນີ້",
-  "newPillSheetNotificationMessage": "🆕 ແຜ່ນຢາໃໝ່ເລີ່ມຕົ້ນຈາກມື້ນີ້\nຢ່າລືມກິນຢານະ👍",
+  "newPillSheetNotificationMessage": "🆕 ຢາເມັດຊຸດໃໝ່ເລີ່ມມື້ນີ້\nກະລຸນາຢ່າລືມກິນຢາເມັດ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ຫາຂໍ້ມູນພຣີມຽມບໍ່ພົບ",
   "purchaseErrorPurchasePendingError": "ການເປີດນຳໃຊ້ການຊຳລະເງິນຍັງບໍ່ທັນສຳເລັດ. ກະລຸນາລໍຖ້າສັກຄູ່ແລ້ວກວດສອບອີກຄັ້ງ",
   "launchError": "ເກີດຂໍ້ຜິດພາດເວລາເປີດແອັບ\n{ErrorMessagesConnection}\n\nລາຍລະອຽດ:",

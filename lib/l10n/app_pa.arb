@@ -337,7 +337,7 @@
   "todaySchedule": "ਅੱਜ ਦਾ ਤੁਹਾਡਾ ਸਮਾਂ-ਸਾਰਣੀ",
   "calendarSchedule": "ਕੈਲੰਡਰ ਦੇ ਪ੍ਰੋਗਰਾਮ",
   "newPillSheetNotificationTitle": "ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੈਕ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ",
-  "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਨਵੀਂ ਸ਼ੀਟ ਸ਼ੁਰੂ ਹੋ ਰਹੀ ਹੈ\nਲੈਣਾ ਨਾ ਭੁੱਲੋ👍",
+  "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੱਤਾ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ\nਗੋਲੀ ਲੈਣੀ ਯਾਦ ਰੱਖੋ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
   "purchaseErrorPurchasePendingError": "ਚਾਰਜ ਦੀ ਐਕਟੀਵੇਸ਼ਨ ਅਜੇ ਪੂਰੀ ਨਹੀਂ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰੋ ਅਤੇ ਫਿਰ ਚੈਕ ਕਰੋ।",
   "launchError": "ਐਪ ਸ਼ੁਰੂ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਹੋਈ ਹੈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ: ",

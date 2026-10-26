@@ -337,7 +337,7 @@
   "todaySchedule": "අද දින ඔබේ කාලසටහන",
   "calendarSchedule": "දින දර්ශනයේ සැලසුම්",
   "newPillSheetNotificationTitle": "අලුත් පෙති පැකට්ටුව අද සිට ආරම්භ වේ",
-  "newPillSheetNotificationMessage": "🆕 අද සිට නව ෂීට් එකක් ආරම්භ වේ\nසේවනය කිරීමට අමතක නොකරන්න👍",
+  "newPillSheetNotificationMessage": "🆕 අද සිට අලුත් පෙති පැකට්ටුවක් ආරම්භ වෙනවා\nපෙත්ත ගැනීමට මතක තබාගන්න 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රිමියම් තොරතුරු සොයා ගත නොහැකි විය",
   "purchaseErrorPurchasePendingError": "ගෙවීම සක්‍රිය කිරීම නිම වී නැත. කරුණාකර ටික වේලාවක් බලාගෙන නැවතත් පරීක්‍ෂා කරන්න.",
   "launchError": "යෙදුම ආරම්භ වන අවස්ථාවේ දෝෂයක් සිදු විය.\n{ErrorMessagesConnection}\n\nවිස්තර: ",

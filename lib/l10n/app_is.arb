@@ -337,7 +337,7 @@
   "todaySchedule": "Dagskráin þín í dag",
   "calendarSchedule": "Viðburðir í dagatali",
   "newPillSheetNotificationTitle": "Ný pillupakkning hefst í dag",
-  "newPillSheetNotificationMessage": "🆕 Nýtt blað byrjar í dag\nMundu að taka lyfið👍",
+  "newPillSheetNotificationMessage": "🆕 Ný pakkning af pillum hefst í dag\nMundu að taka pilluna 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium upplýsingar fundust ekki",
   "purchaseErrorPurchasePendingError": "Greiðslan hefur ekki verið staðfest. Vinsamlegast reyndu aftur eftir smá stund.",
   "launchError": "Villa kom upp við ræsingu forritsins.\n{ErrorMessagesConnection}\n\nNánar: ",

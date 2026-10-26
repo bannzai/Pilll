@@ -337,7 +337,7 @@
   "todaySchedule": "Vaš današnji raspored",
   "calendarSchedule": "Događaji u kalendaru",
   "newPillSheetNotificationTitle": "Danas započinje novo pakiranje pilula",
-  "newPillSheetNotificationMessage": "🆕 Danas počinje nova blister\nNe zaboravite uzeti!👍",
+  "newPillSheetNotificationMessage": "🆕 Danas počinjete novo pakiranje pilula\nNe zaboravite uzeti pilulu 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informacije nisu pronađene",
   "purchaseErrorPurchasePendingError": "Aktivacija pretplate još nije završena. Molimo pričekajte malo pa zatim provjerite.",
   "launchError": "Došlo je do greške prilikom pokretanja aplikacije.\n{ErrorMessagesConnection}\n\nDetalji: ",

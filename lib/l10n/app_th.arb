@@ -337,7 +337,7 @@
   "todaySchedule": "กำหนดการวันนี้",
   "calendarSchedule": "กำหนดการในปฏิทิน",
   "newPillSheetNotificationTitle": "เริ่มแผงยาใหม่วันนี้ค่ะ",
-  "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มแผงยาใหม่แล้ว\nอย่าลืมรับประทานนะ👍",
+  "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มยาแผงใหม่ค่ะ\nอย่าลืมทานยานะคะ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียม",
   "purchaseErrorPurchasePendingError": "การชำระเงินยังไม่เสร็จสิ้น กรุณารอสักครู่แล้วตรวจสอบอีกครั้ง",
   "launchError": "เกิดข้อผิดพลาดขณะเปิดแอป\n{ErrorMessagesConnection}\n\nรายละเอียด:",

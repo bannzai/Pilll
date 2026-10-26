@@ -337,7 +337,7 @@
   "todaySchedule": "Programi juaj për sot",
   "calendarSchedule": "Ngjarjet e kalendarit",
   "newPillSheetNotificationTitle": "Sot fillon paketa e re e pilulave",
-  "newPillSheetNotificationMessage": "🆕 Sot fillon një fletë e re\nMos harroni ta merrni👍",
+  "newPillSheetNotificationMessage": "🆕 Sot filloni një paketë të re pilulash\nJu lutemi, mos harroni ta merrni pilulën 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informacionet premium nuk u gjetën",
   "purchaseErrorPurchasePendingError": "Aktivimi i pagesës nuk është përfunduar ende. Ju lutemi prisni pak kohë dhe kontrolloni përsëri.",
   "launchError": "Ka ndodhur një gabim gjatë nisjes së aplikacionit.\n{ErrorMessagesConnection}\n\nDetajet: ",

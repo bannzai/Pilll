@@ -337,7 +337,7 @@
   "todaySchedule": "Vaš današnji urnik",
   "calendarSchedule": "Dogodki v koledarju",
   "newPillSheetNotificationTitle": "Danes se začne novo pakiranje tablet",
-  "newPillSheetNotificationMessage": "🆕 Danes se začne nova škatlica\nNe pozabite vzeti👍",
+  "newPillSheetNotificationMessage": "🆕 Danes začnete nov zavojček tablet\nNe pozabite vzeti tablete 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informacije niso najdene",
   "purchaseErrorPurchasePendingError": "Aktivacija nakupa še ni dokončana. Počakajte nekaj časa in nato preverite ponovno.",
   "launchError": "Med zagonom aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti: ",

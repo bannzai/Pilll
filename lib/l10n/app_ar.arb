@@ -337,7 +337,7 @@
   "todaySchedule": "مواعيد اليوم",
   "calendarSchedule": "مواعيد التقويم",
   "newPillSheetNotificationTitle": "تبدأ عبوة جديدة من الحبوب اليوم",
-  "newPillSheetNotificationMessage": "🆕 تبدأ دورة جديدة اليوم\nلا تنسي تناول حبوبك👍",
+  "newPillSheetNotificationMessage": "🆕 تبدأ اليوم عبوة جديدة من الحبوب\nتذكري تناول الحبة 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "لم يتم العثور على معلومات البريميوم",
   "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الاشتراك بعد. يرجى الانتظار قليلاً ثم المحاولة مرة أخرى",
   "launchError": "حدث خطأ عند بدء التشغيل\n{ErrorMessagesConnection}\n\nالتفاصيل:",
