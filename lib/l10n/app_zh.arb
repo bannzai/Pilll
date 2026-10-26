@@ -378,7 +378,7 @@
   "lossOfAppetite": "食欲不振",
   "chestTightness": "乳房胀痛",
   "insomnia": "失眠",
-  "pauseStartingOtherDaysInstructions": "请暂停服用。如果您想从今天以外的日期开始暂停服用，请参考以下内容。",
+  "pauseStartingOtherDaysInstructions": "请暂停服药。如果想从今天以外的日期开始暂停服药，请参考下方说明。",
   "seeHowToUsePauseTakingFeature": "查看服药暂停功能的使用方法",
   "startPauseTakingLabel": "开始暂停服用",
   "pauseTakingChanged": "已修改服用暂停期间",

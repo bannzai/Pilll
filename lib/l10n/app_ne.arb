@@ -378,7 +378,7 @@
   "lossOfAppetite": "भोक नलाग्नु",
   "chestTightness": "स्तनमा कसिलोपन",
   "insomnia": "अनिद्रा",
-  "pauseStartingOtherDaysInstructions": "विश्राम लिनुहोस्। यदि तपाईं आजको बाहेक अन्य दिनदेखि औषधि सेवन रोक्न चाहनुहुन्छ भने तलको जानकारीलाई सन्दर्भ गर्नुहोस्।",
+  "pauseStartingOtherDaysInstructions": "कृपया चक्की खानबाट केही समय विश्राम लिनुहोस्। विश्राम आजको सट्टा अर्को दिनबाट सुरु गर्न चाहनुहुन्छ भने तलका निर्देशनहरू हेर्नुहोस्।",
   "seeHowToUsePauseTakingFeature": "सेवन बिराम सुविधाको प्रयोग तरिका हेर्नुहोस्",
   "startPauseTakingLabel": "सेवन विश्राम सुरु",
   "pauseTakingChanged": "सेवन विराम अवधि परिवर्तन भयो",

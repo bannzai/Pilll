@@ -378,7 +378,7 @@
   "lossOfAppetite": "ক্ষুধামন্দা",
   "chestTightness": "স্তনে টানটান ভাব",
   "insomnia": "অনিদ্রা",
-  "pauseStartingOtherDaysInstructions": "অনুগ্রহ করে বিরতি নিন। আজ ছাড়া অন্য দিন থেকে পিল সেবন বন্ধ করতে চাইলে নিচের তথ্য দেখুন।",
+  "pauseStartingOtherDaysInstructions": "অনুগ্রহ করে পিল খাওয়া থেকে বিরতি নিন। আপনি আজ ছাড়া অন্য কোনো দিন থেকে বিরতি শুরু করতে চাইলে নিচের নির্দেশনা দেখুন।",
   "seeHowToUsePauseTakingFeature": "সেবন বিরতি ফিচারের ব্যবহার দেখুন",
   "startPauseTakingLabel": "গ্রহণ বিরতি শুরু",
   "pauseTakingChanged": "সেবনের বিরতি পরিবর্তন করা হয়েছে",

@@ -378,7 +378,7 @@
   "lossOfAppetite": "Isutus",
   "chestTightness": "Rindade pinge",
   "insomnia": "Unetus",
-  "pauseStartingOtherDaysInstructions": "Tehke paus. Kui soovite tablettide võtmisega pausi teha alates mõnest muust päevast kui täna, vaadake allolevat.",
+  "pauseStartingOtherDaysInstructions": "Tee pillide võtmisel paus. Kui soovid alustada pausi mõnel muul päeval kui täna, järgi allolevaid juhiseid.",
   "seeHowToUsePauseTakingFeature": "Vaata annuse peatamise funktsiooni kasutusjuhendit",
   "startPauseTakingLabel": "Alusta võtmispausi",
   "pauseTakingChanged": "Võtmispaus on muudetud",

@@ -378,7 +378,7 @@
   "lossOfAppetite": "Nedsatt matlyst",
   "chestTightness": "Spreng i brystene",
   "insomnia": "Søvnløshet",
-  "pauseStartingOtherDaysInstructions": "Vennligst ta en pause. Hvis du ønsker å pause pilleinntak fra en annen dag enn i dag, vennligst se informasjonen nedenfor.",
+  "pauseStartingOtherDaysInstructions": "Ta en pause fra p-pillene. Hvis du vil starte pausen en annen dag enn i dag, kan du følge veiledningen nedenfor.",
   "seeHowToUsePauseTakingFeature": "Se hvordan du bruker pause-funksjonen",
   "startPauseTakingLabel": "Start pillepause",
   "pauseTakingChanged": "Inntak-pausen er endret",

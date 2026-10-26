@@ -378,7 +378,7 @@
   "lossOfAppetite": "የምግብ ፍላጎት መቀነስ",
   "chestTightness": "የጡት መጠንከር",
   "insomnia": "እንቅልፍ ማጣት",
-  "pauseStartingOtherDaysInstructions": "እረፍት ያድርጉ። ከዛሬ ውጭ በሌላ ቀን መድሃኒት መውሰድ ማቆም ከፈለጉ የሚከተለውን ይመልከቱ።",
+  "pauseStartingOtherDaysInstructions": "እባክዎ ክኒን ከመውሰድ ትንሽ እረፍት ያድርጉ። እረፍቱን ከዛሬ በተለየ ቀን መጀመር ከፈለጉ፣ እባክዎ ከታች ያለውን መመሪያ ይመልከቱ።",
   "seeHowToUsePauseTakingFeature": "ኪኒን ማረፍ ባህሪውን እንዴት እንደሚጠቀሙ ይመልከቱ",
   "startPauseTakingLabel": "እረፍት ጅምር",
   "pauseTakingChanged": "የመድሃኒት እረፍት ወቅት ተለውጧል",

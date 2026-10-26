@@ -378,7 +378,7 @@
   "lossOfAppetite": "เบื่ออาหาร",
   "chestTightness": "คัดตึงเต้านม",
   "insomnia": "นอนไม่หลับ",
-  "pauseStartingOtherDaysInstructions": "พักการรับประทานยาได้เลย หากต้องการหยุดพักการรับประทานจากวันอื่นที่ไม่ใช่วันนี้ กรุณาดูข้อมูลด้านล่าง",
+  "pauseStartingOtherDaysInstructions": "โปรดพักการทานยาชั่วคราวค่ะ หากต้องการเริ่มพักยาในวันอื่นที่ไม่ใช่วันนี้ โปรดดูคำแนะนำด้านล่างค่ะ",
   "seeHowToUsePauseTakingFeature": "ดูวิธีการใช้ฟังก์ชันหยุดรับประทานยา",
   "startPauseTakingLabel": "เริ่มพักการรับประทานยา",
   "pauseTakingChanged": "เปลี่ยนช่วงหยุดทานยาแล้ว",

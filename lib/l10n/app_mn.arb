@@ -378,7 +378,7 @@
   "lossOfAppetite": "Хоолны дуршил буурах",
   "chestTightness": "Хөх хөндүүрлэж чинэрэх",
   "insomnia": "Нойргүйдэл",
-  "pauseStartingOtherDaysInstructions": "Эм уухаа зогсооно уу. Өнөөдрөөс өөр өдрөөс эм уухаа зогсоохыг хүсвэл доорхи зааврыг харна уу.",
+  "pauseStartingOtherDaysInstructions": "Эм уухаа түр завсарлана уу. Хэрэв завсарлагаа өнөөдрөөс өөр өдөр эхлүүлэхийг хүсвэл доорх зааврыг харна уу.",
   "seeHowToUsePauseTakingFeature": "Эм хэрэглэхээ түр зогсоох функцийн заавар үзэх",
   "startPauseTakingLabel": "Уух амралт эхлэх",
   "pauseTakingChanged": "Эм уухаа амрах хугацааг өөрчлөв",

@@ -378,7 +378,7 @@
   "lossOfAppetite": "Loss of appetite",
   "chestTightness": "Breast tenderness",
   "insomnia": "Insomnia",
-  "pauseStartingOtherDaysInstructions": "Please take a break from your medication. If you want to start the break from a day other than today, please refer to the information below.",
+  "pauseStartingOtherDaysInstructions": "Take a break from taking your pill. If you’d like the break to start on a day other than today, follow the steps below.",
   "seeHowToUsePauseTakingFeature": "View how to use the medication break feature",
   "startPauseTakingLabel": "Start Pill Break",
   "pauseTakingChanged": "Break period changed",
