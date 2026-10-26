@@ -533,7 +533,7 @@
   "futureScheduleFeatureAppealPoint3": "Известувања преку потсетник",
   "futureScheduleFeatureAppealLocationHint": "Допрете датум за да додадете план",
   "healthCareIntegrationFeatureAppealPoint1": "Автоматско усогласување на записи за менструација",
-  "healthCareIntegrationFeatureAppealPoint2": "Синхронизирај со апликацијата за здравје",
+  "healthCareIntegrationFeatureAppealPoint2": "Синхронизација со апликацијата Здравје",
   "healthCareIntegrationFeatureAppealPoint3": "Поддршка за Apple Health",
   "quickRecordFeatureAppealPoint1": "Забележи како земено",
   "quickRecordFeatureAppealPoint2": "Завршено без отворање на апликацијата",

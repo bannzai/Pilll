@@ -533,7 +533,7 @@
   "futureScheduleFeatureAppealPoint3": "通过提醒发送通知",
   "futureScheduleFeatureAppealLocationHint": "轻点日期，添加日程",
   "healthCareIntegrationFeatureAppealPoint1": "自动同步经期记录",
-  "healthCareIntegrationFeatureAppealPoint2": "将与健康应用同步",
+  "healthCareIntegrationFeatureAppealPoint2": "同步到健康 App",
   "healthCareIntegrationFeatureAppealPoint3": "支持 Apple 健康",
   "quickRecordFeatureAppealPoint1": "通过通知操作记录服药",
   "quickRecordFeatureAppealPoint2": "无需打开应用即可完成",

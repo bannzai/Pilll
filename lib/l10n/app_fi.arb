@@ -533,7 +533,7 @@
   "futureScheduleFeatureAppealPoint3": "Ilmoitukset muistutuksella",
   "futureScheduleFeatureAppealLocationHint": "Lisää suunnitelma napauttamalla päivämäärää",
   "healthCareIntegrationFeatureAppealPoint1": "Synkronoi kuukautismerkinnät automaattisesti",
-  "healthCareIntegrationFeatureAppealPoint2": "Synkronoi terveyssovellukseen",
+  "healthCareIntegrationFeatureAppealPoint2": "Synkronoi Terveys-sovellukseen",
   "healthCareIntegrationFeatureAppealPoint3": "Apple Health -tuki",
   "quickRecordFeatureAppealPoint1": "Kirjaa lääkkeenotto ilmoituksesta",
   "quickRecordFeatureAppealPoint2": "Valmis avaamatta sovellusta",
