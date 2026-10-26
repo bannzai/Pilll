@@ -483,7 +483,7 @@
   "futureScheduleFeatureAppealTitle": "Kirjaa tulevat suunnitelmasi",
   "futureScheduleFeatureAppealShortDescription": "Pidä tulevat menot, kuten lääkärikäynnit, järjestyksessä",
   "futureScheduleFeatureAppealHeadline": "Merkitse tulevat suunnitelmasi kalenteriin",
-  "futureScheduleFeatureAppealBody": "Voit kirjata tulevat suunnitelmat kalenteriin, kuten lääkärikäynnit ja matkat. Voit tarkastella niitä yhdessä pillereiden ottosyklin kanssa, joten voit suunnitella myös kuukautisten ajankohdan huomioiden.",
+  "futureScheduleFeatureAppealBody": "Voit merkitä kalenteriin tulevat suunnitelmat, kuten lääkärikäynnit ja matkat. Näet ne pillereiden ottorytmin rinnalla, joten voit huomioida suunnittelussa myös odotettujen kuukautisten ajankohdan.",
   "healthCareIntegrationFeatureAppealTitle": "Terveyden integraatio",
   "healthCareIntegrationFeatureAppealShortDescription": "Jaa kuukautistiedot Health-sovellukseen",
   "healthCareIntegrationFeatureAppealHeadline": "Voidaan yhdistää terveyssovellukseen",

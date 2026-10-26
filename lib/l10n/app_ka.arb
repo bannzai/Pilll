@@ -483,7 +483,7 @@
   "futureScheduleFeatureAppealTitle": "ჩაწერეთ მომავალი გეგმები",
   "futureScheduleFeatureAppealShortDescription": "მართეთ მომავალი გეგმები, მაგალითად ექიმთან ვიზიტები",
   "futureScheduleFeatureAppealHeadline": "მომავალი გეგმების კალენდარში ჩაწერა",
-  "futureScheduleFeatureAppealBody": "მომავლში დაგეგმილი ვიზიტები, მოგზაურობები და სხვა გეგმები შეგიძლიათ კალენდარში ჩაწეროთ. პილის მიღების ციკლის თანმიმდევრობით ეს შეუძლიათ ერთად შეამოწმოთ, რათა მენსტრუაციის პროგნოზი გათვალოთ და შესაბამისი გეგმები ღონისძიების ფარგლებში დაგეგმოთ.",
+  "futureScheduleFeatureAppealBody": "კალენდარში შეგიძლიათ ჩაიწეროთ სამომავლო გეგმები, მაგალითად, ექიმთან ვიზიტი და მოგზაურობა. ისინი აბების მიღების ციკლთან ერთად შეგიძლიათ ნახოთ, რათა დაგეგმვისას მენსტრუაციის მოსალოდნელი პერიოდიც გაითვალისწინოთ.",
   "healthCareIntegrationFeatureAppealTitle": "ჯანმრთელობის მონაცემებთან სინქრონიზაცია",
   "healthCareIntegrationFeatureAppealShortDescription": "პერიოდის ჩანაწერების გაზიარება ჯანმრთელობის აპლიკაციასთან",
   "healthCareIntegrationFeatureAppealHeadline": "სინქრონიზაცია Apple Health-თან",

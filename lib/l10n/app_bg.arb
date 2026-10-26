@@ -483,7 +483,7 @@
   "futureScheduleFeatureAppealTitle": "Запишете предстоящите си планове",
   "futureScheduleFeatureAppealShortDescription": "Планирайте предстоящите си ангажименти, като посещения при лекар",
   "futureScheduleFeatureAppealHeadline": "Запишете предстоящите си планове в календара",
-  "futureScheduleFeatureAppealBody": "Можете да записвате бъдещи планове в календара, като посещения при лекар и пътувания. Тъй като можете да ги преглеждате заедно с цикъла на приема на хапчета, можете да правите планове, които вземат предвид и менструалния ви цикъл.",
+  "futureScheduleFeatureAppealBody": "Можете да записвате в календара предстоящи планове, като посещения при лекар и пътувания. Ще ги виждате заедно с цикъла на прием на хапчето, за да планирате и според очаквания мензис.",
   "healthCareIntegrationFeatureAppealTitle": "Интеграция с HealthKit",
   "healthCareIntegrationFeatureAppealShortDescription": "Споделяне на менструалния запис с HealthCare",
   "healthCareIntegrationFeatureAppealHeadline": "Може да се свърже с приложението Здраве",

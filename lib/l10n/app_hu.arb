@@ -483,7 +483,7 @@
   "futureScheduleFeatureAppealTitle": "Írd be a közelgő terveidet",
   "futureScheduleFeatureAppealShortDescription": "Tartsd számon a közelgő programokat, például az orvosi időpontokat",
   "futureScheduleFeatureAppealHeadline": "Rögzítsd a jövőbeli terveidet a naptárban",
-  "futureScheduleFeatureAppealBody": "Beírhatod a naptárba a jövőbeli eseményeket, például orvosi viziteket vagy utazásokat. Mivel ezeket együtt láthatod a fogamzásgátló szedési ciklusával, olyan terveket készíthetsz, amelyek figyelembe veszik a várható menstruációs időszakodat.",
+  "futureScheduleFeatureAppealBody": "A naptárba felírhatod a közelgő terveidet, például az orvosi időpontokat és az utazásokat. A tablettaszedési ciklussal együtt láthatod őket, így a várható menstruáció időpontját is figyelembe veheted a tervezésnél.",
   "healthCareIntegrationFeatureAppealTitle": "Kapcsolódás az Egészség alkalmazáshoz",
   "healthCareIntegrationFeatureAppealShortDescription": "Menstruációs feljegyzések megosztása az Egészség alkalmazással",
   "healthCareIntegrationFeatureAppealHeadline": "Kapcsolódás az egészségügyi adatokhoz",

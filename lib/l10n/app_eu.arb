@@ -483,7 +483,7 @@
   "futureScheduleFeatureAppealTitle": "Idatzi datozen planak",
   "futureScheduleFeatureAppealShortDescription": "Antolatu datozen planak, hala nola medikuaren hitzorduak",
   "futureScheduleFeatureAppealHeadline": "Idatzi etorkizuneko planak egutegian",
-  "futureScheduleFeatureAppealBody": "Etorkizuneko hitzorduak, hala nola medikuarengana joateko bisitaldiak eta bidaia-planak, egutegian idatz ditzakezu. Pilula hartzeko zikloarekin batera ikusi daitezkeenez, hilekoen egutegia ere kontuan hartuta planak egin ditzakezu.",
+  "futureScheduleFeatureAppealBody": "Etorkizuneko planak, hala nola medikuaren hitzorduak eta bidaiak, egutegian idatz ditzakezu. Pilula hartzeko zikloarekin batera ikus ditzakezu, hilekoaren aurreikusitako data ere kontuan hartuta planifikatzeko.",
   "healthCareIntegrationFeatureAppealTitle": "Osasunarekin sinkronizatu",
   "healthCareIntegrationFeatureAppealShortDescription": "Hilekoko erregistroak Osasunarekin partekatu",
   "healthCareIntegrationFeatureAppealHeadline": "Osasun aplikazioarekin integratu daiteke",
