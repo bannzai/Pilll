@@ -460,7 +460,7 @@
   "criticalAlertFeatureAppealShortDescription": "Pensez à prendre votre pilule même en mode Ne pas déranger",
   "criticalAlertFeatureAppealHeadline": "Recevez des notifications même en mode silencieux",
   "criticalAlertFeatureAppealBody": "En activant les alertes critiques, vous pouvez recevoir des rappels de prise de pilule même lorsque le mode Ne pas déranger ou le mode silencieux est activé. Essayez d’activer ce réglage pour garder en tête les heures de prise importantes.",
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personnalisez votre message de notification",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "Personnaliser les messages des notifications",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "Personnalisez le libellé de votre notification",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Modifier le libellé de vos rappels de médicaments",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Remplacez le message par défaut « Il est temps de prendre votre pilule » par le message de votre choix. Utilisez des phrases de motivation ou même le nom de votre animal pour rendre les médicaments quotidiens un peu plus agréables.",

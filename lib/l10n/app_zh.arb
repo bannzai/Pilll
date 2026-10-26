@@ -460,7 +460,7 @@
   "criticalAlertFeatureAppealShortDescription": "开启勿扰模式时，也能提醒你按时服药",
   "criticalAlertFeatureAppealHeadline": "静音模式下也能收到通知",
   "criticalAlertFeatureAppealBody": "开启重要警报后，即使处于勿扰模式或静音模式，你也能收到服药提醒。建议开启这项设置，帮助你记住重要的服药时间。",
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "自定义提醒消息",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "自定义通知内容",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "您可以自定义通知文案",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "自由编辑服药提醒消息",
   "reminderNotificationCustomizeWordFeatureAppealBody": "您可以把默认的“该吃药了”提示自定义为您喜欢的文字。可以换成鼓舞您的话语、宠物的名字等，让每天服药更有趣。",

@@ -460,7 +460,7 @@
   "criticalAlertFeatureAppealShortDescription": "გახსოვდეთ აბის მიღება „არ შემაწუხოთ“ რეჟიმშიც",
   "criticalAlertFeatureAppealHeadline": "შეტყობინებებს უხმო რეჟიმშიც მიიღებთ",
   "criticalAlertFeatureAppealBody": "კრიტიკული გაფრთხილებების ჩართვისას აბის მიღების შეხსენებებს მიიღებთ მაშინაც, როცა ჩართულია „არ შემაწუხოთ“ ან უხმო რეჟიმი. სცადეთ ამ პარამეტრის ჩართვა, რომ აბის მიღების მნიშვნელოვანი დრო გახსოვდეთ.",
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "შეტყობინების ტექსტის მორგება",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "შეტყობინებების ტექსტის მორგება",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "შეგიძლიათ შეცვალოთ შეხსენების ტექსტი",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "შეგიძლიათ შეხსენების შეტყობინება თავისუფლად დაარედაქტიროთ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "სტანდარტულ შეტყობინებას „პილის მიღების დროა“ შეგიძლიათ მოარგოთ თქვენთვის სასურველი ტექსტით. გამოიყენეთ მოტივაციური ფრაზა ან შინაური ცხოველის სახელი — ასე ყოველდღიური მიღება უფრო სასიამოვნო და მხიარული იქნება.",

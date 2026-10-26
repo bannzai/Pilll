@@ -460,7 +460,7 @@
   "criticalAlertFeatureAppealShortDescription": "សូមកុំភ្លេចលេបថ្នាំ ទោះបីបើកមុខងារកុំរំខានក៏ដោយ",
   "criticalAlertFeatureAppealHeadline": "ទទួលបានការជូនដំណឹង ទោះបីបើកមុខងារស្ងាត់ក៏ដោយ",
   "criticalAlertFeatureAppealBody": "ពេលបើកការជូនដំណឹងសំខាន់ អ្នកអាចទទួលបានការរំលឹកឱ្យលេបថ្នាំគ្រាប់ ទោះបីបើកមុខងារកុំរំខាន ឬមុខងារស្ងាត់ក៏ដោយ។ សូមសាកល្បងបើកការកំណត់នេះ ដើម្បីចងចាំម៉ោងសំខាន់ៗសម្រាប់លេបថ្នាំគ្រាប់។",
-  "reminderNotificationCustomizeWordFeatureAppealTitle": "កែសម្រួលសារ​ជូនដំណឹង",
+  "reminderNotificationCustomizeWordFeatureAppealTitle": "កែសម្រួលសារជូនដំណឹងតាមចិត្តអ្នក",
   "reminderNotificationCustomizeWordFeatureAppealShortDescription": "អ្នក​អាច​កែសម្រួល​អត្ថបទ​នៃ​ការ​ជូន​ដំណឹង​បាន",
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "កែសម្រួលសារ​ជូនដំណឹង​សម្រាប់​ការ​ទទួលថ្នាំ​របស់អ្នក",
   "reminderNotificationCustomizeWordFeatureAppealBody": "អ្នកអាចប្ដូរពាក្យសម្រាប់សារ​រំលឹក​ផ្ទាល់ «ពេលត្រូវយកថ្នាំ» ទៅជា​ពាក្យ​ដែល​អ្នក​ចូលចិត្ត។ អ្នកអាចប្រើពាក្យលើកទឹកចិត្ត ឈ្មោះសត្វចិញ្ចឹម ឬពាក្យផ្សេងៗ ដើម្បីធ្វើឲ្យការយកថ្នាំប្រចាំថ្ងៃរបស់អ្នកកាន់តែរីករាយ។",
