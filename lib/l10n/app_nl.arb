@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
   "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",
   "googleAccount": "Google-account",
-  "diaryRecord": "Dagboek invullen",
+  "diaryRecord": "Dagboeknotitie toevoegen",
   "scheduleRecord": "Afspraak invoeren",
   "previousPillSheetGroupNotFound": "De vorige pilbladgroep bestaat nog niet",
   "withPillSheetCount": "{number} strips",

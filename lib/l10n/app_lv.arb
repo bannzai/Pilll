@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Pašlaik lietotais tablešu blisteris nav atrasts",
   "doNotRevertTakePillInPausePeriod": "Pārtraukuma laikā nevar atcelt ierakstu par tabletes lietošanu",
   "googleAccount": "Google konts",
-  "diaryRecord": "Ierakstīt dienasgrāmatā",
+  "diaryRecord": "Pievienojiet dienasgrāmatas ierakstu",
   "scheduleRecord": "Ierakstīt plānu",
   "previousPillSheetGroupNotFound": "Iepriekšējā tablešu pakas grupa neeksistē",
   "withPillSheetCount": "{number} lapas",

@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Қазір қолданылып жатқан таблетка блистер табылмады",
   "doNotRevertTakePillInPausePeriod": "Үзіліс кезінде таблетканы қабылдау жазбасын болдырмау мүмкін емес",
   "googleAccount": "Google есептік жазбасы",
-  "diaryRecord": "Күнделік жазу",
+  "diaryRecord": "Күнделікке жазба қосыңыз",
   "scheduleRecord": "Жоспар енгізу",
   "previousPillSheetGroupNotFound": "Алдыңғы дәрі парағы тобы табылмады",
   "withPillSheetCount": "{number} парақ",

@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Nuk u gjet blisteri që po përdorni tani",
   "doNotRevertTakePillInPausePeriod": "Gjatë pushimit nuk mund të anuloni regjistrimin e marrjes së pilulës",
   "googleAccount": "Llogaria e Google",
-  "diaryRecord": "Regjistro ditarin",
+  "diaryRecord": "Shtoni një shënim në ditar",
   "scheduleRecord": "Shto planin",
   "previousPillSheetGroupNotFound": "Grupi i mëparshëm i fletës së pilulës ende nuk ekziston",
   "withPillSheetCount": "{number} fletë",

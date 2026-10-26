@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Den p-pillerkarta du använder nu kunde inte hittas",
   "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",
   "googleAccount": "Google-konto",
-  "diaryRecord": "Registrera dagbok",
+  "diaryRecord": "Lägg till dagboksanteckning",
   "scheduleRecord": "Lägg till schema",
   "previousPillSheetGroupNotFound": "Den föregående p-pillerark gruppen finns inte än",
   "withPillSheetCount": "{number} blister",

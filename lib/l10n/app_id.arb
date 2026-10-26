@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Strip pil yang sedang Anda gunakan tidak ditemukan",
   "doNotRevertTakePillInPausePeriod": "Catatan minum pil tidak dapat dibatalkan selama jeda",
   "googleAccount": "Akun Google",
-  "diaryRecord": "Catat Diari",
+  "diaryRecord": "Tambah catatan harian",
   "scheduleRecord": "Masukkan jadwal",
   "previousPillSheetGroupNotFound": "Grup lembar pil sebelumnya belum ditemukan",
   "withPillSheetCount": "{number} lembar",

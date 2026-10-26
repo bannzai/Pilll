@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "לא נמצאה חפיסת הגלולות שבשימוש כעת",
   "doNotRevertTakePillInPausePeriod": "אי אפשר לבטל רישום נטילה של גלולה במהלך ההפסק",
   "googleAccount": "חשבון Google",
-  "diaryRecord": "רישום יומן",
+  "diaryRecord": "הוספת רשומה ליומן",
   "scheduleRecord": "הוסף אירועים",
   "previousPillSheetGroupNotFound": "קבוצת גיליון הגלולות הקודמת עדיין לא קיימת",
   "withPillSheetCount": "{number} דפים",

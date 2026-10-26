@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "सध्या वापरत असलेली पिल शीट सापडली नाही",
   "doNotRevertTakePillInPausePeriod": "विरामादरम्यान गोळी घेतल्याची नोंद रद्द करता येत नाही",
   "googleAccount": "Google खाते",
-  "diaryRecord": "डायरी नोंदवा",
+  "diaryRecord": "दैनंदिनीत नोंद जोडा",
   "scheduleRecord": "योजना नोंदवा",
   "previousPillSheetGroupNotFound": "मागील पिल शीट ग्रुप उपलब्ध नाही",
   "withPillSheetCount": "{number} शीट",

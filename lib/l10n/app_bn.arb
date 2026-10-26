@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "বর্তমানে ব্যবহার করা পিল শিট পাওয়া যায়নি",
   "doNotRevertTakePillInPausePeriod": "বিরতির সময় পিল খাওয়ার রেকর্ড বাতিল করা যাবে না",
   "googleAccount": "Google অ্যাকাউন্ট",
-  "diaryRecord": "ডায়রি রেকর্ড করুন",
+  "diaryRecord": "ডায়েরিতে লিখুন",
   "scheduleRecord": "সময়সূচী লিখুন",
   "previousPillSheetGroupNotFound": "পূর্ববর্তী পিল শিট গ্রুপ এখনও বিদ্যমান নেই",
   "withPillSheetCount": "{number}টি",

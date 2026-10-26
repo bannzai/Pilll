@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
   "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",
   "googleAccount": "Google-tili",
-  "diaryRecord": "Kirjaa päiväkirja",
+  "diaryRecord": "Lisää päiväkirjamerkintä",
   "scheduleRecord": "Merkitse tapaaminen",
   "previousPillSheetGroupNotFound": "Edellisen pilleriarkin ryhmää ei ole vielä olemassa",
   "withPillSheetCount": "{number} arkkia",

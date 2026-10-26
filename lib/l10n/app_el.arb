@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Δεν βρέθηκε η καρτέλα χαπιών που χρησιμοποιείτε αυτή τη στιγμή",
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταγραφή λήψης του χαπιού κατά τη διάρκεια του διαλείμματος",
   "googleAccount": "Λογαριασμός Google",
-  "diaryRecord": "Καταγραφή ημερολογίου",
+  "diaryRecord": "Προσθήκη καταχώρισης στο ημερολόγιο",
   "scheduleRecord": "Προσθήκη συμβάντος",
   "previousPillSheetGroupNotFound": "Η προηγούμενη ομάδα φύλλων χαπιών δεν υπάρχει ακόμη",
   "withPillSheetCount": "{number} φύλλα",

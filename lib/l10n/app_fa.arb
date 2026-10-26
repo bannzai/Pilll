@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
   "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",
   "googleAccount": "حساب Google",
-  "diaryRecord": "ثبت روزنامه",
+  "diaryRecord": "افزودن یادداشت روزانه",
   "scheduleRecord": "ثبت برنامه",
   "previousPillSheetGroupNotFound": "گروه برگه قرص قبلی هنوز وجود ندارد",
   "withPillSheetCount": "{number} بلیستر",

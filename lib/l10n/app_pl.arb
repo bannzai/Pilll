@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Nie znaleziono blistra, który jest teraz używany",
   "doNotRevertTakePillInPausePeriod": "Podczas przerwy nie można cofnąć zapisu o przyjęciu tabletki",
   "googleAccount": "Konto Google",
-  "diaryRecord": "Zapisz w dzienniku",
+  "diaryRecord": "Dodaj wpis do dziennika",
   "scheduleRecord": "Dodaj termin",
   "previousPillSheetGroupNotFound": "Poprzednia grupa blistrów tabletek jeszcze nie istnieje",
   "withPillSheetCount": "{number} opakowań",

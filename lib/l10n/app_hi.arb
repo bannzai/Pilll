@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "अभी इस्तेमाल की जा रही पिल स्ट्रिप नहीं मिली",
   "doNotRevertTakePillInPausePeriod": "विराम के दौरान गोली लेने का रिकॉर्ड रद्द नहीं किया जा सकता",
   "googleAccount": "Google खाता",
-  "diaryRecord": "डायरी रिकॉर्ड करें",
+  "diaryRecord": "डायरी में लिखें",
   "scheduleRecord": "योजना दर्ज करें",
   "previousPillSheetGroupNotFound": "पिछला पिल शीट ग्रुप अभी तक मौजूद नहीं है",
   "withPillSheetCount": "{number} शीट",

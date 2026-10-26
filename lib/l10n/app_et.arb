@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
   "doNotRevertTakePillInPausePeriod": "Pillipausi ajal ei saa pilli võtmise kirjet tagasi võtta",
   "googleAccount": "Google'i konto",
-  "diaryRecord": "Salvesta päevik",
+  "diaryRecord": "Lisa päevikukanne",
   "scheduleRecord": "Lisa sündmus",
   "previousPillSheetGroupNotFound": "Eelmine pillitablettide rühm ei ole veel olemas",
   "withPillSheetCount": "{number} lehte",

@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
   "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",
   "googleAccount": "Google account",
-  "diaryRecord": "I-record ang Diary",
+  "diaryRecord": "Magdagdag ng tala sa talaarawan",
   "scheduleRecord": "Magdagdag ng Schedule",
   "previousPillSheetGroupNotFound": "Hindi pa natagpuan ang nakaraang pill sheet group",
   "withPillSheetCount": "{number} piraso",

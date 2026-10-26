@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Heb ddod o hyd i'r stribed pils rydych chi'n ei ddefnyddio ar hyn o bryd",
   "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",
   "googleAccount": "Cyfrif Google",
-  "diaryRecord": "Cofnodi dyddiadur",
+  "diaryRecord": "Ychwanegwch gofnod dyddiadur",
   "scheduleRecord": "Cofnodi apwyntiad",
   "previousPillSheetGroupNotFound": "Dyw grŵp taflen bilsen y tro diwethaf ddim yn bodoli",
   "withPillSheetCount": "{number} dalen",

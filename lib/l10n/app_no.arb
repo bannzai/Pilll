@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Pillebrettet du bruker nå, ble ikke funnet",
   "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en p-pille under en pillepause",
   "googleAccount": "Google-konto",
-  "diaryRecord": "Registrer dagbok",
+  "diaryRecord": "Legg til dagboknotat",
   "scheduleRecord": "Legg til avtale",
   "previousPillSheetGroupNotFound": "Forrige p-pille gruppe finnes ikke",
   "withPillSheetCount": "{number} pilleark",

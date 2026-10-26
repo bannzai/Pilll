@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "ບໍ່ພົບແຜງຢາຄຸມທີ່ກຳລັງໃຊ້ຢູ່",
   "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",
   "googleAccount": "ບັນຊີ Google",
-  "diaryRecord": "ບັນທຶກບັນທຶກການ",
+  "diaryRecord": "ເພີ່ມບັນທຶກປະຈຳວັນ",
   "scheduleRecord": "ບັນທຶກກຳນົດການ",
   "previousPillSheetGroupNotFound": "ກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນຍັງບໍ່ມີ",
   "withPillSheetCount": "{number}ແຜ່ນ",

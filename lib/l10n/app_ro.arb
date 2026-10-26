@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Nu a fost găsit blisterul pe care îl folosești acum",
   "doNotRevertTakePillInPausePeriod": "În timpul pauzei nu poți anula înregistrarea administrării pilulei",
   "googleAccount": "Cont Google",
-  "diaryRecord": "Înregistrează jurnalul",
+  "diaryRecord": "Adaugă o însemnare în jurnal",
   "scheduleRecord": "Introdu programare",
   "previousPillSheetGroupNotFound": "Grupul precedent de plici de pastile nu există încă",
   "withPillSheetCount": "{number} blistere",

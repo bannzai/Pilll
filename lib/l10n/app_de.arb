@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Der Pillenblister, den du gerade verwendest, wurde nicht gefunden",
   "doNotRevertTakePillInPausePeriod": "Während der Einnahmepause kannst du die erfasste Pilleneinnahme nicht rückgängig machen",
   "googleAccount": "Google-Konto",
-  "diaryRecord": "Tagebuch eintragen",
+  "diaryRecord": "Tagebucheintrag hinzufügen",
   "scheduleRecord": "Termin eintragen",
   "previousPillSheetGroupNotFound": "Die vorherige Pillenblatt-Gruppe existiert noch nicht",
   "withPillSheetCount": "{number} Packungen",

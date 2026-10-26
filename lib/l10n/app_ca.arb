@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "No s'ha trobat el blíster que fas servir ara",
   "doNotRevertTakePillInPausePeriod": "Durant el descans no pots desfer el registre de la presa de la píndola",
   "googleAccount": "Compte de Google",
-  "diaryRecord": "Registrar diari",
+  "diaryRecord": "Afegeix una entrada al diari",
   "scheduleRecord": "Afegir cita",
   "previousPillSheetGroupNotFound": "El grup de la placa de píndoles anterior encara no existeix",
   "withPillSheetCount": "{number} plaquetes",

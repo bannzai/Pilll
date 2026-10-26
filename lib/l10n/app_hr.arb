@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Blister koji trenutačno koristite nije pronađen",
   "doNotRevertTakePillInPausePeriod": "Tijekom pauze ne možete poništiti zapis o uzimanju pilule",
   "googleAccount": "Google račun",
-  "diaryRecord": "Zapisati dnevnik",
+  "diaryRecord": "Dodajte zapis u dnevnik",
   "scheduleRecord": "Unesi događaj",
   "previousPillSheetGroupNotFound": "Prethodna grupa pilula još ne postoji",
   "withPillSheetCount": "{number} paketa",

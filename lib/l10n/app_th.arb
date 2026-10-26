@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "ไม่พบแผงยาที่ใช้อยู่ในขณะนี้ค่ะ",
   "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกบันทึกการทานยาระหว่างช่วงหยุดยาได้ค่ะ",
   "googleAccount": "บัญชี Google",
-  "diaryRecord": "บันทึกไดอารี่",
+  "diaryRecord": "เพิ่มบันทึกประจำวัน",
   "scheduleRecord": "กรอกกำหนดการ",
   "previousPillSheetGroupNotFound": "ยังไม่พบกลุ่มแผ่นยาคุมกำเนิดก่อนหน้า",
   "withPillSheetCount": "{number}แผ่น",

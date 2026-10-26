@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "اوس مهال کارېدونکې د ګولیو پاڼه ونه موندل شوه",
   "doNotRevertTakePillInPausePeriod": "د وقف پر مهال د ګولۍ اخیستلو ثبت بېرته نه شي لغوه کېدای",
   "googleAccount": "د Google حساب",
-  "diaryRecord": "ډايري ثبتول",
+  "diaryRecord": "د ورځني یادښت لیکنه زیاته کړئ",
   "scheduleRecord": "ټاکنه ننوتل",
   "previousPillSheetGroupNotFound": "وروستي د ګولیو د پاڼې ګروپ لا تر اوسه شتون نلري",
   "withPillSheetCount": "{number} ټوټې",

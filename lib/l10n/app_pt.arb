@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Não foi encontrada a cartela que você está usando agora",
   "doNotRevertTakePillInPausePeriod": "Durante a pausa, não é possível desfazer o registro de que a pílula foi tomada",
   "googleAccount": "Conta do Google",
-  "diaryRecord": "Registrar diário",
+  "diaryRecord": "Adicionar anotação ao diário",
   "scheduleRecord": "Adicionar evento",
   "previousPillSheetGroupNotFound": "O grupo da cartela de pílulas anterior ainda não existe",
   "withPillSheetCount": "{number} cartelas",

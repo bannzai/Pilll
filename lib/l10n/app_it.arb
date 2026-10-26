@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Non è stato trovato il blister che stai usando",
   "doNotRevertTakePillInPausePeriod": "Durante la pausa non puoi annullare la registrazione dell’assunzione della pillola",
   "googleAccount": "Account Google",
-  "diaryRecord": "Scrivi diario",
+  "diaryRecord": "Aggiungi una voce al diario",
   "scheduleRecord": "Aggiungi evento",
   "previousPillSheetGroupNotFound": "Il gruppo del blister precedente non esiste",
   "withPillSheetCount": "{number} blister",

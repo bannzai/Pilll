@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
   "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",
   "googleAccount": "Google hesabı",
-  "diaryRecord": "Günlük kaydet",
+  "diaryRecord": "Günlük kaydı ekleyin",
   "scheduleRecord": "Plan Ekle",
   "previousPillSheetGroupNotFound": "Önceki hap paketi grubu bulunamadı",
   "withPillSheetCount": "{number} adet",

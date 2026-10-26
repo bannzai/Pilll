@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Nepodarilo sa nájsť blist, ktorý práve používate",
   "doNotRevertTakePillInPausePeriod": "Počas prestávky nemožno zrušiť záznam o užití tabletky",
   "googleAccount": "Účet Google",
-  "diaryRecord": "Zaznamenať denník",
+  "diaryRecord": "Pridajte záznam do denníka",
   "scheduleRecord": "Zadať termín",
   "previousPillSheetGroupNotFound": "Predchádzajúca skupina pilulkových balení ešte neexistuje",
   "withPillSheetCount": "{number} balení",

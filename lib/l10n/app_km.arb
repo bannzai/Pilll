@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "រកមិនឃើញបន្ទះថ្នាំគ្រាប់ដែលកំពុងប្រើទេ",
   "doNotRevertTakePillInPausePeriod": "មិនអាចលុបចោលកំណត់ត្រាលេបថ្នាំគ្រាប់ក្នុងអំឡុងពេលផ្អាកលេបថ្នាំបានទេ",
   "googleAccount": "គណនី Google",
-  "diaryRecord": "កត់ត្រាកំណត់ហេតុ",
+  "diaryRecord": "បន្ថែមកំណត់ហេតុប្រចាំថ្ងៃ",
   "scheduleRecord": "បញ្ចូលកាលវិភាគ",
   "previousPillSheetGroupNotFound": "ក្រុមសន្លឹកថ្នាំគ្រាប់ពងលើកមុនមិនទាន់មានទេ",
   "withPillSheetCount": "{number}សន្លឹក",

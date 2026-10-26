@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Није пронађен блистер који тренутно користите",
   "doNotRevertTakePillInPausePeriod": "Током паузе није могуће поништити запис о узимању пилуле",
   "googleAccount": "Google налог",
-  "diaryRecord": "Zapisati dnevnik",
+  "diaryRecord": "Додајте запис у дневник",
   "scheduleRecord": "Унеси план",
   "previousPillSheetGroupNotFound": "Prethodna grupa listova pilula još uvek ne postoji",
   "withPillSheetCount": "{number} листова",

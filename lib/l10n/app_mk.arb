@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Не е пронајден блистер што моментално го користите",
   "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",
   "googleAccount": "Сметка на Google",
-  "diaryRecord": "Запиши дневник",
+  "diaryRecord": "Запис во дневник",
   "scheduleRecord": "Внеси термин",
   "previousPillSheetGroupNotFound": "Претходната група на пилули сè уште не постои",
   "withPillSheetCount": "{number} листови",

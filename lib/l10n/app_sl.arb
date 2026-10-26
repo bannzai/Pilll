@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
   "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tabletke",
   "googleAccount": "Račun Google",
-  "diaryRecord": "Zapisati v dnevnik",
+  "diaryRecord": "Dodajte zapis v dnevnik",
   "scheduleRecord": "Vnesi načrt",
   "previousPillSheetGroupNotFound": "Prejšnja skupina tablet še ne obstaja",
   "withPillSheetCount": "{number} listov",

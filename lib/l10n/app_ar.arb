@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستخدم حاليًا",
   "doNotRevertTakePillInPausePeriod": "لا يمكن التراجع عن تسجيل تناول الحبة خلال فترة الراحة",
   "googleAccount": "حساب Google",
-  "diaryRecord": "تسجيل اليوميات",
+  "diaryRecord": "تسجيل يومياتك",
   "scheduleRecord": "إضافة موعد",
   "previousPillSheetGroupNotFound": "لا توجد مجموعة ألواح الحبوب السابقة بعد",
   "withPillSheetCount": "{number} شريط",

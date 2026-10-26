@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "ഇപ്പോൾ ഉപയോഗിക്കുന്ന ഗുളിക സ്ട്രിപ്പ് കണ്ടെത്താനായില്ല",
   "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",
   "googleAccount": "Google അക്കൗണ്ട്",
-  "diaryRecord": "ഡയറി രേഖപെടുത്തുക",
+  "diaryRecord": "ഡയറിയിൽ കുറിപ്പ് ചേർക്കുക",
   "scheduleRecord": "ഷെഡ്യൂൾ ചേർക്കുക",
   "previousPillSheetGroupNotFound": "മുമ്പത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് ഇതുവരെ നിലവിലില്ല",
   "withPillSheetCount": "{number} ഷീറ്റ്",

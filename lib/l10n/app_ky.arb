@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Учурда колдонулуп жаткан таблетка блистери табылган жок",
   "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",
   "googleAccount": "Google аккаунту",
-  "diaryRecord": "Күндөлүк жазуу",
+  "diaryRecord": "Күндөлүккө жазуу кошуңуз",
   "scheduleRecord": "Планды жазуу",
   "previousPillSheetGroupNotFound": "Мурунку таблетка барагынын тобу дагы деле жок",
   "withPillSheetCount": "{number} барак",

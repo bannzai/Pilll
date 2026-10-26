@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "လက်ရှိအသုံးပြုနေသော ဆေးပြားကတ်ကို မတွေ့ပါ",
   "doNotRevertTakePillInPausePeriod": "ဆေးနားရက်အတွင်း ဆေးပြားသောက်ထားသည့်မှတ်တမ်းကို ပယ်ဖျက်၍မရပါ",
   "googleAccount": "Google အကောင့်",
-  "diaryRecord": "နေ့စဉ်မှတ်တမ်းတင်",
+  "diaryRecord": "နေ့စဉ်မှတ်တမ်းတွင် မှတ်စုထည့်ပါ",
   "scheduleRecord": "အစီအစဉ်ရေးသွင်း",
   "previousPillSheetGroupNotFound": "အရင်က ဆေးစီးအုပ်စုမှ မတည်ရှိပါ",
   "withPillSheetCount": "{number}ရွက်",

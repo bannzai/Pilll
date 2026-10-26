@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Не вдалося знайти блістер, який ви зараз використовуєте",
   "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",
   "googleAccount": "Обліковий запис Google",
-  "diaryRecord": "Записати щоденник",
+  "diaryRecord": "Додати запис у щоденник",
   "scheduleRecord": "Записати подію",
   "previousPillSheetGroupNotFound": "Попередня група аркушів таблеток ще не існує",
   "withPillSheetCount": "{number} упаковок",

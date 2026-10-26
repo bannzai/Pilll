@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Այժմ օգտագործվող հաբերի բլիստեր չի գտնվել",
   "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",
   "googleAccount": "Google հաշիվ",
-  "diaryRecord": "օրագիր գրանցել",
+  "diaryRecord": "Ավելացնել օրագրի գրառում",
   "scheduleRecord": "Ծրագիր ավելացնել",
   "previousPillSheetGroupNotFound": "Նախորդ հաբահերթի խումբը դեռ գոյություն չունի",
   "withPillSheetCount": "{number} բլիթ",

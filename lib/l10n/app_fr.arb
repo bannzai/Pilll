@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "La plaquette que vous utilisez actuellement est introuvable",
   "doNotRevertTakePillInPausePeriod": "Vous ne pouvez pas annuler l’enregistrement de la prise de pilule pendant la pause",
   "googleAccount": "Compte Google",
-  "diaryRecord": "Journal d'enregistrement",
+  "diaryRecord": "Ajouter une entrée au journal",
   "scheduleRecord": "Ajouter un événement",
   "previousPillSheetGroupNotFound": "Groupe de feuille de pilules précédent introuvable",
   "withPillSheetCount": "Feuilles {number}",

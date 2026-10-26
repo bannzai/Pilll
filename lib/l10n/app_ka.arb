@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "ამჟამად გამოყენებული აბების ბლისტერი ვერ მოიძებნა",
   "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",
   "googleAccount": "Google ანგარიში",
-  "diaryRecord": "დღიურის ჩაწერა",
+  "diaryRecord": "დღიურში ჩანაწერის დამატება",
   "scheduleRecord": "გეგმის შეყვანა",
   "previousPillSheetGroupNotFound": "წინა ტაბლეტების ფურცლის ჯგუფი ჯერ კიდევ არ არსებობს",
   "withPillSheetCount": "{number} ფურცელი",

@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Không tìm thấy vỉ thuốc bạn đang dùng",
   "doNotRevertTakePillInPausePeriod": "Không thể hủy bản ghi uống thuốc trong thời gian nghỉ thuốc",
   "googleAccount": "Tài khoản Google",
-  "diaryRecord": "Ghi nhật ký",
+  "diaryRecord": "Thêm ghi chép vào nhật ký",
   "scheduleRecord": "Nhập lịch trình",
   "previousPillSheetGroupNotFound": "Nhóm bảng thuốc tránh thai trước đó chưa tồn tại",
   "withPillSheetCount": "{number} vỉ",

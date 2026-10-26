@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "A jelenleg használt tablettacsomag nem található",
   "doNotRevertTakePillInPausePeriod": "A szünet alatt a tabletta bevételének rögzítése nem vonható vissza",
   "googleAccount": "Google-fiók",
-  "diaryRecord": "Napló rögzítése",
+  "diaryRecord": "Naplóbejegyzés hozzáadása",
   "scheduleRecord": "Esemény hozzáadása",
   "previousPillSheetGroupNotFound": "Az előző tablettacsomag csoport nem található",
   "withPillSheetCount": "{number} darab",

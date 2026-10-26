@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Завсарлагааны үеэр эм уусан бүртгэлийг цуцлах боломжгүй",
   "googleAccount": "Google бүртгэл",
-  "diaryRecord": "Өдрийн тэмдэглэл бичих",
+  "diaryRecord": "Өдрийн тэмдэглэлд бичлэг нэмнэ үү",
   "scheduleRecord": "Төлөвлөгөө оруулах",
   "previousPillSheetGroupNotFound": "Өмнөх эмийн хуудасны бүлэг олдсонгүй",
   "withPillSheetCount": "{number} хуудас",

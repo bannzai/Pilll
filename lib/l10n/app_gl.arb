@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Non se atopou o blíster que estás a usar agora",
   "doNotRevertTakePillInPausePeriod": "Durante o descanso non podes desfacer o rexistro da toma da pílula",
   "googleAccount": "Conta de Google",
-  "diaryRecord": "Escribir diario",
+  "diaryRecord": "Engadir unha entrada ao diario",
   "scheduleRecord": "Introducir evento",
   "previousPillSheetGroupNotFound": "Aínda non existe o grupo da cartela de píldoras anterior",
   "withPillSheetCount": "{number} envases",

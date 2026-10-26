@@ -347,7 +347,7 @@
   "currentPillSheetNotFound": "Не удалось найти блистер, который вы сейчас используете",
   "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",
   "googleAccount": "Аккаунт Google",
-  "diaryRecord": "Записать дневник",
+  "diaryRecord": "Добавить запись в дневник",
   "scheduleRecord": "Записать планы",
   "previousPillSheetGroupNotFound": "Предыдущая группа блистеров еще не создана",
   "withPillSheetCount": "{number} упаковок",
