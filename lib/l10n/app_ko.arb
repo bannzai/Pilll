@@ -471,7 +471,7 @@
   "recordPillFeatureAppealTitle": "복용 내역을 간편하게 돌아봐요",
   "recordPillFeatureAppealShortDescription": "언제 약을 먹었는지 바로 확인할 수 있어요",
   "recordPillFeatureAppealHeadline": "홈 화면에서 피임약 복용을 기록해요",
-  "recordPillFeatureAppealBody": "홈 화면의 피임약 시트를 탭하기만 하면 그날의 복용을 기록할 수 있습니다. 잘못 기록한 경우에는 한 번 더 탭해서 취소할 수 있습니다. 복용 기록은 나중에 언제든 확인할 수 있으니 안심하고 꾸준히 사용할 수 있습니다.",
+  "recordPillFeatureAppealBody": "홈 화면의 알약 시트를 탭하면 오늘의 복용을 기록할 수 있어요. 실수로 기록했다면 다시 탭해 취소할 수 있어요. 복용 내역은 나중에도 확인할 수 있으니 안심하고 이어가세요.",
   "menstruationFeatureAppealTitle": "생리 기록·예측",
   "menstruationFeatureAppealShortDescription": "생리 시작일을 기록해 생리 주기를 파악하세요",
   "menstruationFeatureAppealHeadline": "생리 기록 및 예측",
