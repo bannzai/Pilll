@@ -32,7 +32,7 @@
   "addNotificationTime": "Meldingstijd toevoegen",
   "syncWithDeviceTimeZone": "Wil je synchroniseren met de tijdzone van je apparaat ({deviceTimezoneName})?",
   "currentTimeZone": "Huidig ingestelde tijdzone",
-  "yes": "ja",
+  "yes": "Ja",
   "no": "Nee",
   "unsubscribeInfo": "Over opzeggen",
   "pillReminder": "Pilherinnering",

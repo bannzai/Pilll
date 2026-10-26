@@ -32,7 +32,7 @@
   "addNotificationTime": "Dodajte vrijeme obavijesti",
   "syncWithDeviceTimeZone": "Želite li uskladiti s vremenskom zonom Vašeg uređaja ({deviceTimezoneName})?",
   "currentTimeZone": "Trenutno postavljena vremenska zona",
-  "yes": "da",
+  "yes": "Da",
   "no": "Ne",
   "unsubscribeInfo": "O otkazivanju",
   "pillReminder": "Obavještenje o uzimanju pilule",

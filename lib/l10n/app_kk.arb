@@ -32,7 +32,7 @@
   "addNotificationTime": "Хабарландыру уақытын қосыңыз",
   "syncWithDeviceTimeZone": "Құрылғының уақыт белдеуімен ({deviceTimezoneName}) синхрондағыңыз келе ме?",
   "currentTimeZone": "Қазір орнатылған уақыт белдеуі",
-  "yes": "иә",
+  "yes": "Иә",
   "no": "жоқ",
   "unsubscribeInfo": "Жазылымды жою туралы",
   "pillReminder": "Дәрі қабылдау хабарландыруы",

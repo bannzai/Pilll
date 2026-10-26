@@ -32,7 +32,7 @@
   "addNotificationTime": "បន្ថែមម៉ោងជូនដំណឹង",
   "syncWithDeviceTimeZone": "តើអ្នកចង់ធ្វើសមកាលកម្មជាមួយតំបន់ពេលវេលារបស់ឧបករណ៍ ({deviceTimezoneName}) ទេ?",
   "currentTimeZone": "តំបន់ម៉ោងដែលបានកំណត់បច្ចុប្បន្ន",
-  "yes": "បាទ",
+  "yes": "បាទ/ចាស",
   "no": "ទេ",
   "unsubscribeInfo": "អំពីការលុបចោល",
   "pillReminder": "ការជូនដំណឹងញុាំថ្នាំពីល",

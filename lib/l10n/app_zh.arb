@@ -32,7 +32,7 @@
   "addNotificationTime": "添加通知时间",
   "syncWithDeviceTimeZone": "要与设备时区（{deviceTimezoneName}）同步吗？",
   "currentTimeZone": "当前设置的时区",
-  "yes": "确定",
+  "yes": "是",
   "no": "否",
   "unsubscribeInfo": "关于取消订阅",
   "pillReminder": "避孕药服用通知",

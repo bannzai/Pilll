@@ -32,7 +32,7 @@
   "addNotificationTime": "اطلاع کا وقت شامل کریں",
   "syncWithDeviceTimeZone": "کیا آپ اپنے آلے کے ٹائم زون ({deviceTimezoneName}) کے مطابق مطابقت پذیری کرنا چاہیں گی؟",
   "currentTimeZone": "فی الحال سیٹ کردہ ٹائم زون",
-  "yes": "ہاں",
+  "yes": "جی ہاں",
   "no": "نہیں",
   "unsubscribeInfo": "منسوخی کے بارے میں",
   "pillReminder": "گولی کی یاد دہانی",
