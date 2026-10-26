@@ -112,7 +112,7 @@
   "endPillSheet": "Vỉ thuốc đã dùng hết",
   "discardPillSheet": "bỏ vỉ thuốc",
   "takingTime": "Giờ uống thuốc",
-  "takingHistoryIsPremiumFeature": "Lịch sử uống thuốc là tính năng premium",
+  "takingHistoryIsPremiumFeature": "Lịch sử uống thuốc là tính năng Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Khi tạm dừng uống thuốc, số thứ tự viên thuốc sẽ không tăng lên",
   "pauseTakingFromNumber": "Bạn có muốn tạm dừng uống thuốc từ viên số {number} không?",
   "lastTakenPlusOnePillNumber": "số {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

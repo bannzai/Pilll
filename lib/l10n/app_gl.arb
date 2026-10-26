@@ -112,7 +112,7 @@
   "endPillSheet": "Blíster rematado",
   "discardPillSheet": "botar o blíster",
   "takingTime": "Hora de tomar a pílula",
-  "takingHistoryIsPremiumFeature": "O historial de medicación é unha función premium",
+  "takingHistoryIsPremiumFeature": "O historial de tomas é unha función Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ao pausar a toma, o número da píldora non avanza",
   "pauseTakingFromNumber": "¿Queres pausar a toma desde {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

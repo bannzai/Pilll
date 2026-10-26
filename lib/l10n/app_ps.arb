@@ -112,7 +112,7 @@
   "endPillSheet": "د ګولیو پاڼ پای ته ورسېد",
   "discardPillSheet": "د ګولیو پاڼ وغورځوئ",
   "takingTime": "د ګولۍ اخیستلو وخت",
-  "takingHistoryIsPremiumFeature": "د دوا نیولو تاریخچه پریمیم فیچر دی",
+  "takingHistoryIsPremiumFeature": "د ګولۍ اخیستلو تاریخچه د پریمیم ځانګړنه ده",
   "pauseTakingDoesNotAdvancePillNumber": "د دوا اخیستل کله چې ودروئ، د ګولۍ شمېره پرمخ نه ځي",
   "pauseTakingFromNumber": "له {number} څخه د ګولیو اخیستل ودروئ؟",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}م",

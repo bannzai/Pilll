@@ -112,7 +112,7 @@
   "endPillSheet": "Naubos na ang pakete ng pildoras",
   "discardPillSheet": "itapon ang pakete ng pildoras",
   "takingTime": "Oras ng pag-inom ng pildoras",
-  "takingHistoryIsPremiumFeature": "Ang kasaysayan ng pag-inom ay premium na feature",
+  "takingHistoryIsPremiumFeature": "Ang kasaysayan ng pag-inom ng pill ay isang feature ng Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Kapag natigil ang pag-inom, hindi magpapatuloy ang numero ng pill",
   "pauseTakingFromNumber": "Titigil ka ba sa pag-inom simula sa {number}?",
   "lastTakenPlusOnePillNumber": "Bilang {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

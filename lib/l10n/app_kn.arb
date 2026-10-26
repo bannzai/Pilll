@@ -112,7 +112,7 @@
   "endPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಮುಗಿದಿದೆ",
   "discardPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ವಿಲೇವಾರಿ",
   "takingTime": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ",
-  "takingHistoryIsPremiumFeature": "ಸೇವನೆಯ ಇತಿಹಾಸವು ಪ್ರೀಮಿಯಂ ವೈಶಿಷ್ಟ್ಯವಾಗಿದೆ",
+  "takingHistoryIsPremiumFeature": "ಸೇವನೆಯ ಇತಿಹಾಸ ಪ್ರೀಮಿಯಂ ವೈಶಿಷ್ಟ್ಯವಾಗಿದೆ",
   "pauseTakingDoesNotAdvancePillNumber": "ಸೇವನೆಯನ್ನು ವಿರಾಮ ಮಾಡಿದಾಗ ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಮುಂದಕ್ಕೆ ಬರುವುದಿಲ್ಲ",
   "pauseTakingFromNumber": "{number}ರಿಂದ ಔಷಧ ಸೇವನೆಯನ್ನು ವಿರಾಮ ಮಾಡುವುದೇ?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ನೇ",

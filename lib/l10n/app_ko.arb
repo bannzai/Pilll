@@ -112,7 +112,7 @@
   "endPillSheet": "알약 시트 복용 완료",
   "discardPillSheet": "알약 시트 폐기",
   "takingTime": "약 복용 시간",
-  "takingHistoryIsPremiumFeature": "복용 기록은 프리미엄 기능입니다",
+  "takingHistoryIsPremiumFeature": "복용 내역은 프리미엄 기능이에요",
   "pauseTakingDoesNotAdvancePillNumber": "복용을 건너뛰면 피임약 번호가 진행되지 않습니다",
   "pauseTakingFromNumber": "{number}번부터 복용을 중단하시겠습니까?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",

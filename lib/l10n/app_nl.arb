@@ -112,7 +112,7 @@
   "endPillSheet": "pillenstrip is op",
   "discardPillSheet": "pillenstrip weggooien",
   "takingTime": "Tijd om je pil te nemen",
-  "takingHistoryIsPremiumFeature": "De inname geschiedenis is een premium functie",
+  "takingHistoryIsPremiumFeature": "Innamegeschiedenis is een premiumfunctie",
   "pauseTakingDoesNotAdvancePillNumber": "Wanneer je de inname pauzeert, gaat het pilnummer niet verder",
   "pauseTakingFromNumber": "Wilt u vanaf {number} pauzeren met de inname?",
   "lastTakenPlusOnePillNumber": "nummer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

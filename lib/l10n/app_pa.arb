@@ -112,7 +112,7 @@
   "endPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਖ਼ਤਮ ਹੋ ਗਈ",
   "discardPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸੁੱਟੋ",
   "takingTime": "ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ",
-  "takingHistoryIsPremiumFeature": "ਦਵਾਈ ਦਾ ਰਿਕਾਰਡ ਇੱਕ ਪ੍ਰੀਮੀਅਮ ਫੀਚਰ ਹੈ",
+  "takingHistoryIsPremiumFeature": "ਸੇਵਨ ਇਤਿਹਾਸ ਪ੍ਰੀਮੀਅਮ ਸਹੂਲਤ ਹੈ",
   "pauseTakingDoesNotAdvancePillNumber": "ਗੋਲੀ ਦਾ ਸੇਵਨ ਬੰਦ ਕਰਨ 'ਤੇ ਗੋਲੀ ਨੰਬਰ ਅੱਗੇ ਨਹੀਂ ਵਧੇਗਾ",
   "pauseTakingFromNumber": "ਕੀ ਤੁਸੀਂ {number} ਤੋਂ ਦਵਾਈ ਲੈਣਾ ਬੰਦ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ？",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ਵੀਂ",

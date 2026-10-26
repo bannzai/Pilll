@@ -112,7 +112,7 @@
   "endPillSheet": "pilstrokie voltooi",
   "discardPillSheet": "pilstrokie weggooi",
   "takingTime": "Tyd om die pil te neem",
-  "takingHistoryIsPremiumFeature": "Dosis geskiedenis is 'n premium funksie",
+  "takingHistoryIsPremiumFeature": "Innamegeskiedenis is ’n Premiumfunksie",
   "pauseTakingDoesNotAdvancePillNumber": "As jy die pille pouse, sal die pilnommer nie vorder nie",
   "pauseTakingFromNumber": "Wil jy vanaf {number} ophou om die pil te neem?",
   "lastTakenPlusOnePillNumber": "nommer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

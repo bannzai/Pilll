@@ -112,7 +112,7 @@
   "endPillSheet": "stribed pils wedi gorffen",
   "discardPillSheet": "Gwaredu stribed pils",
   "takingTime": "Amser cymryd y bilsen",
-  "takingHistoryIsPremiumFeature": "Mae hanes y bilsen yn nodwedd premiwm",
+  "takingHistoryIsPremiumFeature": "Mae hanes cymryd y bilsen yn nodwedd premiwm",
   "pauseTakingDoesNotAdvancePillNumber": "Ni fydd rhif y bilsen yn symud ymlaen pan fyddwch yn peidio â'i chymryd",
   "pauseTakingFromNumber": "A ydych chi am roi saib i gymryd y piliau o {number}?",
   "lastTakenPlusOnePillNumber": "Rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

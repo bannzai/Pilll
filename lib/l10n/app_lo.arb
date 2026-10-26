@@ -112,7 +112,7 @@
   "endPillSheet": "ແຜງຢາຄຸມໝົດແລ້ວ",
   "discardPillSheet": "ຖິ້ມແຜງຢາຄຸມ",
   "takingTime": "ເວລາກິນຢາເມັດ",
-  "takingHistoryIsPremiumFeature": "ປະຫວັດການກິນຢາແມ່ນຟັງຊັນພຣີມຽມ",
+  "takingHistoryIsPremiumFeature": "ປະຫວັດການກິນຢາເປັນຄຸນສົມບັດ Premium ເດີ",
   "pauseTakingDoesNotAdvancePillNumber": "ເມື່ອຢຸດພັກການກິນຢາ, ເລກລຳດັບຢາຈະບໍ່ດຳເນີນຕໍ່",
   "pauseTakingFromNumber": "ຈະພັກການກິນຢາຈາກເລກທີ່ {number} ບໍ?",
   "lastTakenPlusOnePillNumber": "ເມັດທີ່ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

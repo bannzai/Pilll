@@ -112,7 +112,7 @@
   "endPillSheet": "блістер закінчився",
   "discardPillSheet": "викинути блістер",
   "takingTime": "Час прийому пігулки",
-  "takingHistoryIsPremiumFeature": "Історія прийому - преміум функція",
+  "takingHistoryIsPremiumFeature": "Історія прийому — функція преміум-плану",
   "pauseTakingDoesNotAdvancePillNumber": "Якщо ви пропускаєте прийом, номер пігулки не просувається",
   "pauseTakingFromNumber": "Припинити прийом з {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-а",

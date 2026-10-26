@@ -112,7 +112,7 @@
   "endPillSheet": "चक्की पत्ता सकियो",
   "discardPillSheet": "चक्की पत्ता फाल्नुहोस्",
   "takingTime": "चक्की खाने समय",
-  "takingHistoryIsPremiumFeature": "सेवन इतिहास प्रिमियम सुविधा हो।",
+  "takingHistoryIsPremiumFeature": "सेवन इतिहास प्रिमियम सुविधा हो",
   "pauseTakingDoesNotAdvancePillNumber": "सेवन बन्द गरेमा पिल नम्बर अगाडि बढ्दैन",
   "pauseTakingFromNumber": "के तपाईं {number} देखि सेवन रोक्नुहुन्छ？",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}नम्बर",

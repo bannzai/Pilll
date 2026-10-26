@@ -112,7 +112,7 @@
   "endPillSheet": "tablečių plokštel baigta",
   "discardPillSheet": "Išmesti tablečių plokštelę",
   "takingTime": "Tabletės vartojimo laikas",
-  "takingHistoryIsPremiumFeature": "Vartojimo istorija yra premium funkcija",
+  "takingHistoryIsPremiumFeature": "Vartojimo istorija yra Premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Praleidžiant vartojimą, tablečių numeris nepažengės",
   "pauseTakingFromNumber": "Ar sustabdysite vartojimą nuo {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-a",

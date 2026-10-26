@@ -112,7 +112,7 @@
   "endPillSheet": "ورق قرص تمام شد",
   "discardPillSheet": "دور انداختن ورق قرص",
   "takingTime": "زمان مصرف قرص",
-  "takingHistoryIsPremiumFeature": "تاریخچه مصرف ویژگی پریمیوم است",
+  "takingHistoryIsPremiumFeature": "تاریخچه مصرف از امکانات پریمیوم است",
   "pauseTakingDoesNotAdvancePillNumber": "هنگام توقف مصرف، شماره قرص تغییر نخواهد کرد",
   "pauseTakingFromNumber": "آیا از {number} مصرف را متوقف می‌کنید؟",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}‌ام",

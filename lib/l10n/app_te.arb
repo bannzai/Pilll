@@ -112,7 +112,7 @@
   "endPillSheet": "మాత్రల స్ట్రిప్ పూర్తయింది",
   "discardPillSheet": "మాత్రల స్ట్రిప్ పారవేయండి",
   "takingTime": "మాత్ర తీసుకునే సమయం",
-  "takingHistoryIsPremiumFeature": "సేవన చరిత్ర ప్రీమియం ఫీచర్‌లో ఉంది",
+  "takingHistoryIsPremiumFeature": "మాత్రల సేవన చరిత్ర ప్రీమియం ఫీచర్",
   "pauseTakingDoesNotAdvancePillNumber": "మందు తీసుకోవడం ఆపేస్తే గుళిక నంబర్ ముందుకు వెళ్లదు",
   "pauseTakingFromNumber": "{number}నుండి మందు తీసుకోవడం ఆపేస్తారా?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}వ",

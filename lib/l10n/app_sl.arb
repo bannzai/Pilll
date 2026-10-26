@@ -112,7 +112,7 @@
   "endPillSheet": "ploščic je porabljen",
   "discardPillSheet": "zavrzite ploščico",
   "takingTime": "Čas za jemanje tabletke",
-  "takingHistoryIsPremiumFeature": "Zgodovina jemanja je premium funkcija",
+  "takingHistoryIsPremiumFeature": "Zgodovina jemanja je funkcija Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ko preskočite jemanje, se številka tabletke ne pomakne",
   "pauseTakingFromNumber": "Ali želite narediti premor v jemanju od {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}.",

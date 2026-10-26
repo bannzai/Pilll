@@ -112,7 +112,7 @@
   "endPillSheet": "Η καρτέλα χαπιών ολοκληρώθηκε",
   "discardPillSheet": "απόρριψη για καρτέλα χαπιών",
   "takingTime": "Ώρα λήψης του χαπιού",
-  "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι premium λειτουργία",
+  "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι λειτουργία Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Όταν παύσετε τη λήψη, ο αριθμός χαπιού δεν προχωρεί",
   "pauseTakingFromNumber": "Θέλετε να παύσετε τη λήψη από το {number};",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ο",

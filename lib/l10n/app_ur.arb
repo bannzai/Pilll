@@ -112,7 +112,7 @@
   "endPillSheet": "گولیوں کی پٹی ختم ہو گئی",
   "discardPillSheet": "گولیوں کی پٹی پھینک دیں",
   "takingTime": "گولی لینے کا وقت",
-  "takingHistoryIsPremiumFeature": "خوراک کی تاریخ پریمیم فیچر ہے",
+  "takingHistoryIsPremiumFeature": "گولی لینے کی ہسٹری پریمیم فیچر ہے",
   "pauseTakingDoesNotAdvancePillNumber": "پل کا استعمال روک دینے سے پل نمبر آگے نہیں بڑھے گا",
   "pauseTakingFromNumber": "{number} سے دوا لینا بند کر دیں گے؟",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} نمبر",

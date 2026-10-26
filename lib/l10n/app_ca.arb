@@ -112,7 +112,7 @@
   "endPillSheet": "blíster acabat",
   "discardPillSheet": "llençar el blíster",
   "takingTime": "Hora de prendre la píndola",
-  "takingHistoryIsPremiumFeature": "L'historial de presa és una funció premium",
+  "takingHistoryIsPremiumFeature": "L’historial de preses és una funció Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Quan pauseu la presa, el número de píndola no avança",
   "pauseTakingFromNumber": "Vols pausar la presa a partir del {number}?",
   "lastTakenPlusOnePillNumber": "Nº {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

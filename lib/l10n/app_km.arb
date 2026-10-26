@@ -112,7 +112,7 @@
   "endPillSheet": "បន្ទះថ្នាំគ្រាប់អស់ហើយ",
   "discardPillSheet": "បោះចោលបន្ទះថ្នាំគ្រាប់",
   "takingTime": "ម៉ោងលេបថ្នាំគ្រាប់",
-  "takingHistoryIsPremiumFeature": "ប្រវត្តិការទទួលទានថ្នាំគឺជាមុខងារ Premium",
+  "takingHistoryIsPremiumFeature": "ប្រវត្តិលេបថ្នាំគឺជាមុខងារព្រីមៀម",
   "pauseTakingDoesNotAdvancePillNumber": "នៅពេលអ្នកផ្អាកការលេបថ្នាំគ្រាប់ លេខថ្នាំគ្រាប់នឹងមិនបន្តទេ",
   "pauseTakingFromNumber": "តើអ្នកចង់ផ្អាកការទទួលថ្នាំចាប់ពី {number} មែនទេ?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ទី",

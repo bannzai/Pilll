@@ -112,7 +112,7 @@
   "endPillSheet": "Pill pack finished",
   "discardPillSheet": "Discard pill pack",
   "takingTime": "Time to take your pill",
-  "takingHistoryIsPremiumFeature": "Taking history is a premium feature",
+  "takingHistoryIsPremiumFeature": "Pill history is a Premium feature",
   "pauseTakingDoesNotAdvancePillNumber": "Pill numbers do not advance when you skip doses",
   "pauseTakingFromNumber": "Take a break starting from pill {number}?",
   "lastTakenPlusOnePillNumber": "Pill {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

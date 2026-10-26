@@ -112,7 +112,7 @@
   "endPillSheet": "Pillenblister aufgebraucht",
   "discardPillSheet": "Pillenblister entsorgen",
   "takingTime": "Zeit für die Pille",
-  "takingHistoryIsPremiumFeature": "Die Einnahmehistorie ist eine Premium-Funktion",
+  "takingHistoryIsPremiumFeature": "Der Einnahmeverlauf ist eine Premium-Funktion",
   "pauseTakingDoesNotAdvancePillNumber": "Bei einer Einnahmepause wird die Pillennummer nicht fortgesetzt.",
   "pauseTakingFromNumber": "Möchten Sie ab {number} mit der Einnahme pausieren?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

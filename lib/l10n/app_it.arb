@@ -112,7 +112,7 @@
   "endPillSheet": "Blister terminato",
   "discardPillSheet": "getta il blister",
   "takingTime": "Orario di assunzione della pillola",
-  "takingHistoryIsPremiumFeature": "La cronologia delle assunzioni è una funzione premium",
+  "takingHistoryIsPremiumFeature": "Lo storico delle assunzioni è una funzione Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Quando sospendi l'assunzione, il numero della pillola non avanza",
   "pauseTakingFromNumber": "Vuoi sospendere l'assunzione dal {number}?",
   "lastTakenPlusOnePillNumber": "n. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",

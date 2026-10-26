@@ -112,7 +112,7 @@
   "endPillSheet": "pillebrett brukt opp",
   "discardPillSheet": "kast pillebrett",
   "takingTime": "Tid for å ta p-pillen",
-  "takingHistoryIsPremiumFeature": "Inntakshistorikk er en premium-funksjon",
+  "takingHistoryIsPremiumFeature": "Inntakshistorikk er en premiumfunksjon",
   "pauseTakingDoesNotAdvancePillNumber": "Når du pauser inntak, går ikke pillenummeret fremover",
   "pauseTakingFromNumber": "Vil du ta en pause fra {number}?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. pille",
