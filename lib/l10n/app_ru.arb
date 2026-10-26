@@ -57,7 +57,7 @@
   "currentlyDisplayed": "Сейчас отображается",
   "allPillSheets": "Все блистеры",
   "willBeDiscarded": "будет удалено",
-  "discard": "Отбросить",
+  "discard": "Удалить",
   "pillSheetDiscarded": "Блистер с таблетками был выброшен",
   "aboutMenstruation": "О менструации",
   "checkPillNumberForMenstruationStart": "Пожалуйста, проверьте номер таблетки дня начала менструации. Установленный номер таблетки не существует в выбранном типе блистера.",

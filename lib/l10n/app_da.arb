@@ -57,7 +57,7 @@
   "currentlyDisplayed": "Vises lige nu",
   "allPillSheets": "Alle pillekort",
   "willBeDiscarded": "bliver slettet",
-  "discard": "kassér",
+  "discard": "Slet",
   "pillSheetDiscarded": "Pillekortet er blevet kasseret",
   "aboutMenstruation": "Om menstruation",
   "checkPillNumberForMenstruationStart": "Kontroller venligst pillenummeret for menstruationsstartdatoen. Der er indstillet et pillenummer, som ikke eksisterer i den aktuelt valgte pilletype.",

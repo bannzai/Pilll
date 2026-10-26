@@ -57,7 +57,7 @@
   "currentlyDisplayed": "Показва се в момента",
   "allPillSheets": "Всички блистери",
   "willBeDiscarded": "ще бъде изтрито",
-  "discard": "изхвърли",
+  "discard": "Изтриване",
   "pillSheetDiscarded": "Блистерът с хапчета беше изхвърлен",
   "aboutMenstruation": "За менструацията",
   "checkPillNumberForMenstruationStart": "Моля, проверете номера на хапчето за датата на започване на менструацията. Зададеният номер на хапчето не съществува в текущо избрания тип блистер",

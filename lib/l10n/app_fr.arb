@@ -57,7 +57,7 @@
   "currentlyDisplayed": "Actuellement affiché",
   "allPillSheets": "Toutes les plaquettes",
   "willBeDiscarded": "sera supprimé",
-  "discard": "Jeter",
+  "discard": "Supprimer",
   "pillSheetDiscarded": "Pilulier jeté",
   "aboutMenstruation": "À propos des menstruations",
   "checkPillNumberForMenstruationStart": "Veuillez vérifier le numéro de pilule correspondant à la date de début de vos règles. Le numéro de pilule défini n'existe pas dans le type de feuille de pilules actuellement sélectionné.",
