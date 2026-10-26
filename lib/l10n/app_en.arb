@@ -542,7 +542,7 @@
   "creatingNewPillSheetFeatureAppealPoint2": "No need to create it manually",
   "creatingNewPillSheetFeatureAppealPoint3": "Toggle it with the switch in the Settings tab",
   "alarmKitFeatureAppealPoint1": "Sounds even in Silent/Focus mode",
-  "alarmKitFeatureAppealPoint2": "Alarm clock-style alert sound",
+  "alarmKitFeatureAppealPoint2": "Alarm sound like an alarm clock",
   "alarmKitFeatureAppealPoint3": "iOS 26 or later · Enable from Settings tab",
   "todayPillNumberFeatureAppealPoint1": "Free pill number adjustment feature",
   "todayPillNumberFeatureAppealPoint2": "Can be changed from the settings tab",
