@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Kilo interneto ryšio problema. Patikrinkite ryšį ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Atnaujinkite programėlę",
   "forceUpdateMessage": "Programėlę reikia atnaujinti. Atsisiųskite naujausią versiją iš {storeName}",
-  "visitHospital": "Lankytis pas gydytoją",
+  "visitHospital": "Reguliariai lankytis pas gydytoją",
   "receiveNotificationAt9AM": "Gauti pranešimą tą dieną 9:00 val.",
   "deletedScheduleCannotBeRestored": "Ištrinti planai negali būti atkurti",
   "deleteSchedule": "Ištrinti planą",

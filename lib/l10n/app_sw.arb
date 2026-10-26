@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Kuna tatizo la muunganisho wa intaneti. Tafadhali angalia muunganisho wako ujaribu tena. Tatizo likiendelea, wasiliana nasi kupitia Mipangilio > Wasiliana nasi. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Tafadhali sasisha programu",
   "forceUpdateMessage": "Programu inahitaji kusasishwa. Tafadhali pakua toleo jipya zaidi kutoka {storeName}",
-  "visitHospital": "Kutembelea hospitali",
+  "visitHospital": "Kwenda kwa uchunguzi wa daktari wa mara kwa mara",
   "receiveNotificationAt9AM": "Pokea arifa saa 9:00 siku hiyo",
   "deletedScheduleCannotBeRestored": "Ratiba zilizofutwa haziwezi kurejeshwa",
   "deleteSchedule": "Futa ratiba",

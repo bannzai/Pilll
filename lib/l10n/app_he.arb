@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "יש בעיה בחיבור לאינטרנט. כדאי לבדוק את החיבור ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "יש לעדכן את האפליקציה",
   "forceUpdateMessage": "יש לעדכן את האפליקציה. אפשר להוריד את הגרסה העדכנית ביותר דרך {storeName}",
-  "visitHospital": "לבקר ברופא",
+  "visitHospital": "להגיע לביקור מעקב רפואי",
   "receiveNotificationAt9AM": "לקבל התראה בשעה 9:00 באותו היום",
   "deletedScheduleCannotBeRestored": "אירועים שנמחקו לא ניתנים לשחזור",
   "deleteSchedule": "מחק תור",

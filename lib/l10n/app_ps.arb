@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "د انټرنېټ په اړیکه کې ستونزه ده. مهرباني وکړئ خپله اړیکه وڅېړئ او بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "مهرباني وکړئ اپلېکېشن تازه کړئ",
   "forceUpdateMessage": "اپلېکېشن تازه کولو ته اړتیا لري. مهرباني وکړئ وروستۍ نسخه له {storeName} څخه ښکته کړئ",
-  "visitHospital": "ډاکټر ته ورتلل",
+  "visitHospital": "د ډاکټر منظمې کتنې ته تلل",
   "receiveNotificationAt9AM": "د ورځې په ۹:۰۰ بجه خبرتیا ترلاسه کول",
   "deletedScheduleCannotBeRestored": "پاک شوي پروګرامونه بیرته رانه اوړېدی شي",
   "deleteSchedule": "پروګرام ړنګول",

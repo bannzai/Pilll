@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Има проблем с интернет връзката. Проверете връзката си и опитайте отново. Ако проблемът продължи, свържете се с нас чрез Настройки > Свържете се с нас. Подробности: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Моля, актуализирайте приложението",
   "forceUpdateMessage": "Моля, актуализирайте приложението до най-новата версия чрез {storeName}",
-  "visitHospital": "ходя на лекар",
+  "visitHospital": "Редовен преглед при лекар",
   "receiveNotificationAt9AM": "Получаване на известие в 9:00 в деня",
   "deletedScheduleCannotBeRestored": "Изтритите планове не могат да бъдат възстановени",
   "deleteSchedule": "Изтриване на събитието",

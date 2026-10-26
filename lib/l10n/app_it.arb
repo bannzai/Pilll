@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "C'è un problema con la connessione Internet. Controlla la connessione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aggiorna l’app, per favore",
   "forceUpdateMessage": "È necessario aggiornare l’app. Puoi scaricare la versione più recente da {storeName}",
-  "visitHospital": "Visita medica",
+  "visitHospital": "Andare a una visita medica di controllo",
   "receiveNotificationAt9AM": "Ricevi notifica alle 9:00 lo stesso giorno",
   "deletedScheduleCannotBeRestored": "Gli appuntamenti cancellati non possono essere ripristinati",
   "deleteSchedule": "Elimina appuntamento",

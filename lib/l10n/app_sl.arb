@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Prišlo je do težave z internetno povezavo. Preverite povezavo in poskusite znova. Če se težava nadaljuje, stopite v stik z nami prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Prosimo, posodobite aplikacijo",
   "forceUpdateMessage": "Aplikacijo je treba posodobiti. Prosimo, prenesite najnovejšo različico iz {storeName}",
-  "visitHospital": "Obisk zdravnika",
+  "visitHospital": "Hoditi na redne zdravniške preglede",
   "receiveNotificationAt9AM": "Prejmi obvestilo ob 9:00 istega dne",
   "deletedScheduleCannotBeRestored": "Izbrisani termini se ne morejo obnoviti",
   "deleteSchedule": "Izbriši termin",

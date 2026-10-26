@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "የኢንተርኔት ግንኙነቱ ተቋርጧል። እባክዎ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "እባክዎ መተግበሪያውን ያዘምኑ",
   "forceUpdateMessage": "የሚጠቀሙበትን መተግበሪያ እንዲያዘምኑ እንጠይቃለን። እባክዎ ከ{storeName} ወደ አዲሱ ስሪት ያዘምኑት",
-  "visitHospital": "ሆስፒታል መሄድ",
+  "visitHospital": "ለቀጣይ የሕክምና ቀጠሮ መሄድ",
   "receiveNotificationAt9AM": "ዛሬ በ9:00 ሰዓት ማሳወቂያ ተቀበል",
   "deletedScheduleCannotBeRestored": "የተሰረዙ መርሃ ግብሮች መመለስ አይችሉም",
   "deleteSchedule": "ቀን ሰቀንን ይሰርዙ",

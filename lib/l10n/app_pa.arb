@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਵਿੱਚ ਸਮੱਸਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਸਮੱਸਿਆ ਬਣੀ ਰਹੇ ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸੰਪਰਕ ਕਰੋ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਅੱਪਡੇਟ ਕਰੋ",
   "forceUpdateMessage": "ਐਪ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {storeName} ਤੋਂ ਨਵਾਂ ਵਰਜਨ ਡਾਊਨਲੋਡ ਕਰੋ",
-  "visitHospital": "ਡਾਕਟਰੀ ਮੁਲਾਕਾਤ",
+  "visitHospital": "ਨਿਯਮਿਤ ਜਾਂਚ ਲਈ ਡਾਕਟਰ ਕੋਲ ਜਾਣਾ",
   "receiveNotificationAt9AM": "ਉਸ ਦਿਨ 9:00 ਵਜੇ ਸੂਚਨਾ ਪ੍ਰਾਪਤ ਕਰੋ",
   "deletedScheduleCannotBeRestored": "ਮਿਟਾਇਆ ਗਿਆ ਸ਼ੈਡਿਊਲ ਵਾਪਸ ਨਹੀਂ ਲਿਆਇਆ ਜਾ ਸਕਦਾ",
   "deleteSchedule": "ਯੋਜਨਾ ਮਿਟਾਓ",

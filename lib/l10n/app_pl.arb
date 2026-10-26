@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Wystąpił problem z połączeniem internetowym. Sprawdź połączenie i spróbuj ponownie. Jeśli problem nie ustąpi, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Zaktualizuj aplikację",
   "forceUpdateMessage": "Aplikacja wymaga aktualizacji. Pobierz najnowszą wersję z {storeName}",
-  "visitHospital": "Kontrola lekarska",
+  "visitHospital": "Chodzić na regularne wizyty kontrolne",
   "receiveNotificationAt9AM": "Otrzymuj powiadomienie o 9:00 w dniu przyjmowania",
   "deletedScheduleCannotBeRestored": "Usuniętego wydarzenia nie można przywrócić",
   "deleteSchedule": "Usuń termin",

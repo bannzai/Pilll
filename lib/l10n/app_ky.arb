@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Интернет байланышы үзгүлтүккө учурады. Байланышыңызды текшерип, кайра аракет кылып көрүңүз. Көйгөй чечилбесе, Жөндөөлөр > Биз менен байланышуу бөлүмү аркылуу кайрылыңыз. Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Колдонмону жаңыртыңыз",
   "forceUpdateMessage": "Колдонмону жаңыртуу керек. Сураныч, эң акыркы версиясын {storeName} дүкөнүнөн жүктөп алыңыз",
-  "visitHospital": "дарыгерге баруу",
+  "visitHospital": "Дарыгерге үзгүлтүксүз көрүнүү",
   "receiveNotificationAt9AM": "Ошол күнү саат 9:00де эскертме алуу",
   "deletedScheduleCannotBeRestored": "Өчүрүлгөн пландарды кайра орнотуу мүмкүн эмес",
   "deleteSchedule": "Планды өчүрүү",

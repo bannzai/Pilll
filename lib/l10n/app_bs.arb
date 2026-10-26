@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Došlo je do problema s internetskom vezom. Provjerite vezu i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontaktirajte nas. Detalji: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Molimo Vas, ažurirajte aplikaciju",
   "forceUpdateMessage": "Molimo Vas da ažurirate aplikaciju na najnoviju verziju putem {storeName}",
-  "visitHospital": "Ići na pregled",
+  "visitHospital": "Redovna posjeta ljekaru",
   "receiveNotificationAt9AM": "Primiti notifikaciju u 9:00 istog dana",
   "deletedScheduleCannotBeRestored": "Obrisani rasporedi se ne mogu vratiti",
   "deleteSchedule": "Obriši termin",

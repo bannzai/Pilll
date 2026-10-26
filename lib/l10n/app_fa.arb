@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "اتصال اینترنت با مشکل روبه‌رو شده است. لطفاً اتصال خود را بررسی کنید و دوباره تلاش کنید. اگر مشکل ادامه داشت، از بخش تنظیمات > تماس با ما با ما در ارتباط باشید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "لطفاً برنامه را به‌روزرسانی کنید",
   "forceUpdateMessage": "لازم است برنامه به‌روزرسانی شود. لطفاً جدیدترین نسخه را از {storeName} دریافت کنید",
-  "visitHospital": "مراجعه پزشکی",
+  "visitHospital": "مراجعه برای پیگیری درمان",
   "receiveNotificationAt9AM": "دریافت اعلان در ساعت ۹:۰۰ همان روز",
   "deletedScheduleCannotBeRestored": "برنامه‌های حذف شده قابل بازیابی نیستند",
   "deleteSchedule": "حذف برنامه",

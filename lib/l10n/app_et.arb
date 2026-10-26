@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Internetiühendusega on probleem. Kontrolli ühendust ja proovi uuesti. Kui probleem püsib, võta meiega ühendust: Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Palun uuenda rakendust",
   "forceUpdateMessage": "Rakendust tuleb uuendada. Palun hanki uusim versioon poest {storeName}",
-  "visitHospital": "Arsti külastus",
+  "visitHospital": "Käia regulaarses arstlikus kontrollis",
   "receiveNotificationAt9AM": "Saan teate samal päeval kell 9:00",
   "deletedScheduleCannotBeRestored": "Kustutatud plaane ei saa taastada",
   "deleteSchedule": "Kustutan plaani",

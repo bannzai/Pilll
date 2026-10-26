@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Узнікла праблема з інтэрнэт-злучэннем. Праверце злучэнне і паспрабуйце яшчэ раз. Калі праблема застанецца, звяжыцеся з намі праз Налады > Зварот у падтрымку. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Калі ласка, абнавіце праграму",
   "forceUpdateMessage": "Просім абнавіць праграму. Калі ласка, усталюйце апошнюю версію праз {storeName}",
-  "visitHospital": "наведваць лекара",
+  "visitHospital": "Наведваць лекара рэгулярна",
   "receiveNotificationAt9AM": "Атрымліваць апавяшчэнне сёння ў 9:00",
   "deletedScheduleCannotBeRestored": "Выдаленыя планы нельга аднавіць",
   "deleteSchedule": "Выдаліць план",

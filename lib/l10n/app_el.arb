@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Υπάρχει πρόβλημα με τη σύνδεση στο διαδίκτυο. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά. Αν το πρόβλημα συνεχιστεί, επικοινωνήστε μαζί μας από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Παρακαλούμε ενημερώστε την εφαρμογή",
   "forceUpdateMessage": "Χρειάζεται ενημέρωση της εφαρμογής. Ενημερώστε την στην πιο πρόσφατη έκδοση μέσω του {storeName}",
-  "visitHospital": "ιατρική επίσκεψη",
+  "visitHospital": "Τακτική επίσκεψη στον γιατρό",
   "receiveNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια ημέρα",
   "deletedScheduleCannotBeRestored": "Τα διαγραμμένα σχέδια δεν μπορούν να ανακτηθούν",
   "deleteSchedule": "Διαγραφή προγράμματος",

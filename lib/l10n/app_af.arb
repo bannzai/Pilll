@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Die verbinding werk nie goed nie. Gaan asseblief jou internetverbinding na en probeer weer. As die probleem voortduur, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Dateer asseblief die app op",
   "forceUpdateMessage": "Ons vra jou asseblief om die app op te dateer. Werk dit via {storeName} op na die nuutste weergawe",
-  "visitHospital": "Na dokter gaan",
+  "visitHospital": "Gaan vir 'n opvolgbesoek",
   "receiveNotificationAt9AM": "Ontvang kennisgewing om 9:00 op die dag",
   "deletedScheduleCannotBeRestored": "Geskrapte afsprake kan nie herstel word nie",
   "deleteSchedule": "Verwyder afspraak",

@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Este o problemă cu conexiunea la internet. Verifică-ți conexiunea și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Actualizează aplicația, te rugăm",
   "forceUpdateMessage": "Aplicația trebuie actualizată. Poți descărca cea mai recentă versiune din {storeName}",
-  "visitHospital": "Control medical",
+  "visitHospital": "Mergi la controlul medical periodic",
   "receiveNotificationAt9AM": "Primesc notificare la 9:00 în aceeași zi",
   "deletedScheduleCannotBeRestored": "Programările șterse nu pot fi restaurate",
   "deleteSchedule": "Șterge programarea",

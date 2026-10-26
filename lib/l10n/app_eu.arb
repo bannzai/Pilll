@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Interneteko konexioarekin arazo bat dago. Egiaztatu konexioa eta saiatu berriro. Arazoak jarraitzen badu, jarri gurekin harremanetan Ezarpenak > Jarri harremanetan atalaren bidez. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Eguneratu aplikazioa, mesedez",
   "forceUpdateMessage": "Aplikazioa eguneratu behar da. Mesedez, eskuratu azken bertsioa {storeName} dendan",
-  "visitHospital": "Medikura joan",
+  "visitHospital": "Medikuaren jarraipen-kontsultara joatea",
   "receiveNotificationAt9AM": "Egun berean 9:00etan jakinarazpena jaso",
   "deletedScheduleCannotBeRestored": "Ezabatutako gertaerak ezin dira berreskuratu",
   "deleteSchedule": "Hitzordua ezabatu",

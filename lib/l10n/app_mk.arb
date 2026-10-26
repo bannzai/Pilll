@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Има проблем со интернет-врската. Проверете ја врската и обидете се повторно. Ако проблемот продолжи, контактирајте нè преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Ве молиме, ажурирајте ја апликацијата",
   "forceUpdateMessage": "Потребно е ажурирање на апликацијата. Ве молиме, преземете ја најновата верзија преку {storeName}",
-  "visitHospital": "одам на преглед",
+  "visitHospital": "Редовна посета на лекар",
   "receiveNotificationAt9AM": "Известување во 9:00 истиот ден",
   "deletedScheduleCannotBeRestored": "Избришаните термини не можат да се вратат",
   "deleteSchedule": "Избриши термин",

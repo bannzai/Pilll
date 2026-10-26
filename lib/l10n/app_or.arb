@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗରେ ସମସ୍ୟା ହେଉଛି। ଦୟାକରି ଆପଣଙ୍କ ସଂଯୋଗ ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ରହିଲେ ସେଟିଂସ୍ > ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ଦୟାକରି ଆପ୍‌ଟି ଅପଡେଟ୍ କରନ୍ତୁ",
   "forceUpdateMessage": "ଆପ୍‌ଟି ଅପଡେଟ୍ କରିବା ଆବଶ୍ୟକ। ଦୟାକରି {storeName} ରୁ ସର୍ବଶେଷ ସଂସ୍କରଣ ଡାଉନଲୋଡ୍ କରନ୍ତୁ",
-  "visitHospital": "ଡାକ୍ତର ଦେଖାଇବା",
+  "visitHospital": "ନିୟମିତ ଡାକ୍ତରୀ ଯାଞ୍ଚ ପାଇଁ ଯିବା",
   "receiveNotificationAt9AM": "ସେହି ଦିନ ୯:୦୦ରେ ବିଜ୍ଞପ୍ତି ପାଇବେ",
   "deletedScheduleCannotBeRestored": "ବିଲୋପିତ କାର୍ଯ୍ୟସୂଚୀ ପୁନଃସ୍ଥାପନ କରାଯାଇପାରିବ ନାହିଁ",
   "deleteSchedule": "ଯୋଜନା ଡିଲିଟ୍ କରନ୍ତୁ",

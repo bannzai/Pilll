@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Ada masalah dengan koneksi internet. Periksa koneksi Anda lalu coba lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Silakan perbarui aplikasi",
   "forceUpdateMessage": "Aplikasi perlu diperbarui. Silakan unduh versi terbaru dari {storeName}",
-  "visitHospital": "Kontrol ke dokter",
+  "visitHospital": "Pergi ke pemeriksaan dokter rutin",
   "receiveNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari yang sama",
   "deletedScheduleCannotBeRestored": "Jadwal yang dihapus tidak dapat dipulihkan",
   "deleteSchedule": "Hapus jadwal",

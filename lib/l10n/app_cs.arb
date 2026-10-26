@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Došlo k potížím s internetovým připojením. Zkontrolujte připojení a zkuste to prosím znovu. Pokud potíže přetrvají, kontaktujte nás přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aktualizujte prosím aplikaci",
   "forceUpdateMessage": "Je potřeba aktualizovat aplikaci. Nainstalujte si prosím nejnovější verzi z {storeName}",
-  "visitHospital": "Navštívit lékaře",
+  "visitHospital": "Chodit na pravidelné kontroly",
   "receiveNotificationAt9AM": "Upozornění v 9:00 téhož dne",
   "deletedScheduleCannotBeRestored": "Smazané termíny nelze obnovit",
   "deleteSchedule": "Smazat plán",

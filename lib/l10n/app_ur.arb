@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "انٹرنیٹ کنکشن میں مسئلہ ہے۔ براہِ کرم اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔ مسئلہ برقرار رہے تو ترتیبات > ہم سے رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "براہِ کرم ایپ اپ ڈیٹ کریں",
   "forceUpdateMessage": "ایپ کو اپ ڈیٹ کرنے کی ضرورت ہے۔ براہِ کرم {storeName} سے تازہ ترین ورژن ڈاؤن لوڈ کریں",
-  "visitHospital": "ڈاکٹر سے ملاقات",
+  "visitHospital": "باقاعدہ طبی معائنے کے لیے جانا",
   "receiveNotificationAt9AM": "آج 9:00 بجے اطلاع موصول کریں",
   "deletedScheduleCannotBeRestored": "ڈیلیٹ شدہ شیڈول کو بحال نہیں کیا جا سکتا",
   "deleteSchedule": "شیڈول حذف کریں",

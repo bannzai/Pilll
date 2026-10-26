@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Интернэт холболтод асуудал гарлаа. Холболтоо шалгаад дахин оролдоно уу. Асуудал үргэлжилбэл Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнд хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Аппыг шинэчилнэ үү",
   "forceUpdateMessage": "Аппыг шинэчлэх шаардлагатай. {storeName}-ээс хамгийн сүүлийн хувилбарыг татаж авна уу",
-  "visitHospital": "Эмчлүүлэг",
+  "visitHospital": "Эмчийн тогтмол үзлэгт орох",
   "receiveNotificationAt9AM": "Тухайн өдрийн 9:00 цагт мэдэгдэл авах",
   "deletedScheduleCannotBeRestored": "Устгасан төлөвлөгөөг сэргээх боломжгүй",
   "deleteSchedule": "Хуваарийг устгах",

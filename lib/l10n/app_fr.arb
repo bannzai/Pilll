@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "La connexion Internet rencontre un problème. Vérifiez votre connexion, puis réessayez. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Veuillez mettre l’application à jour",
   "forceUpdateMessage": "L’application doit être mise à jour. Veuillez installer la dernière version depuis {storeName}",
-  "visitHospital": "Voir médecin",
+  "visitHospital": "Aller à un rendez-vous médical de suivi",
   "receiveNotificationAt9AM": "Recevoir une notification à 9h00 le jour même",
   "deletedScheduleCannotBeRestored": "Les horaires supprimés ne peuvent pas être restaurés",
   "deleteSchedule": "Supprimer le programme",

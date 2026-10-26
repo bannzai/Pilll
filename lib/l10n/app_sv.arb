@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Det är problem med internetanslutningen. Kontrollera anslutningen och försök igen. Om problemet kvarstår kan du kontakta oss via Inställningar > Kontakta oss. Information: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Uppdatera gärna appen",
   "forceUpdateMessage": "Appen behöver uppdateras. Du kan hämta den senaste versionen från {storeName}",
-  "visitHospital": "Läkarbesök",
+  "visitHospital": "Gå på regelbundna läkarbesök",
   "receiveNotificationAt9AM": "Få påminnelse kl. 9:00 samma dag",
   "deletedScheduleCannotBeRestored": "Raderade händelser kan inte återställas",
   "deleteSchedule": "Ta bort händelse",

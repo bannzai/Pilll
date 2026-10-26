@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Há um problema com a conexão à internet. Verifique sua conexão e tente novamente. Se o problema continuar, fale conosco em Configurações > Entre em contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Atualize o aplicativo, por favor",
   "forceUpdateMessage": "O aplicativo precisa de uma atualização. Baixe a versão mais recente na {storeName}",
-  "visitHospital": "Consulta médica",
+  "visitHospital": "Ir à consulta médica de acompanhamento",
   "receiveNotificationAt9AM": "Receber notificação às 9:00 do dia",
   "deletedScheduleCannotBeRestored": "Os agendamentos excluídos não podem ser restaurados",
   "deleteSchedule": "Excluir agendamento",

@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Виникла проблема з підключенням до інтернету. Перевірте з’єднання та спробуйте ще раз. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Докладніше: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Будь ласка, оновіть застосунок",
   "forceUpdateMessage": "Застосунок потрібно оновити. Будь ласка, завантажте останню версію з {storeName}",
-  "visitHospital": "візит до лікаря",
+  "visitHospital": "Регулярно відвідувати лікаря",
   "receiveNotificationAt9AM": "Отримувати сповіщення того дня о 9:00",
   "deletedScheduleCannotBeRestored": "Видалені записи не можна відновити",
   "deleteSchedule": "Видалити план",

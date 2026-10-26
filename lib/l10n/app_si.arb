@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "අන්තර්ජාල සම්බන්ධතාවයේ ගැටලුවක් තිබේ. කරුණාකර සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න. ගැටලුව දිගටම පවතී නම්, සැකසුම් > අප අමතන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "කරුණාකර යෙදුම යාවත්කාලීන කරන්න",
   "forceUpdateMessage": "යෙදුම යාවත්කාලීන කිරීමට අවශ්‍යයි. කරුණාකර {storeName} වෙතින් නවතම අනුවාදය බාගන්න",
-  "visitHospital": "වෛද්‍යවරයා හමුවීම",
+  "visitHospital": "නිතිපතා වෛද්‍ය පරීක්ෂාවට යාම",
   "receiveNotificationAt9AM": "එදිනම 9:00ට දැනුම්දීම ලබාගන්න",
   "deletedScheduleCannotBeRestored": "ඉවත් කරන ලද කාර්ය සැලසුම් ප්‍රතිස්ථාපනය කළ නොහැක",
   "deleteSchedule": "කාලසටහන මකන්න",

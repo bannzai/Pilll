@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "인터넷 연결에 문제가 있어요. 연결 상태를 확인한 뒤 다시 시도해 주세요. 문제가 계속되면 설정 > 문의하기에서 연락해 주세요. 자세한 내용: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "앱을 업데이트해 주세요",
   "forceUpdateMessage": "앱을 업데이트해야 해요. {storeName}에서 최신 버전으로 업데이트해 주세요",
-  "visitHospital": "통원하다",
+  "visitHospital": "정기적으로 병원에 가기",
   "receiveNotificationAt9AM": "당일 9:00에 알림 받기",
   "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
   "deleteSchedule": "예정을 삭제합니다",

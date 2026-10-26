@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "May problema sa koneksyon sa internet. Pakisuri po ang koneksyon ninyo at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Paki-update po ang app",
   "forceUpdateMessage": "Kailangang i-update ang app. Paki-download po ang pinakabagong bersyon mula sa {storeName}",
-  "visitHospital": "Magpatingin sa doktor",
+  "visitHospital": "Pumunta sa regular na pagpapatingin",
   "receiveNotificationAt9AM": "Tumanggap ng notipikasyon sa 9:00 ng araw",
   "deletedScheduleCannotBeRestored": "Hindi na maibabalik ang mga natanggal na iskedyul",
   "deleteSchedule": "Tanggalin ang iskedyul",

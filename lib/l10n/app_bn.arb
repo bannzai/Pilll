@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ইন্টারনেট সংযোগে সমস্যা হচ্ছে। অনুগ্রহ করে সংযোগ পরীক্ষা করে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "অনুগ্রহ করে অ্যাপটি আপডেট করুন",
   "forceUpdateMessage": "অ্যাপটি আপডেট করা প্রয়োজন। অনুগ্রহ করে {storeName} থেকে সর্বশেষ সংস্করণে আপডেট করুন",
-  "visitHospital": "ডাক্তার দেখানো",
+  "visitHospital": "নিয়মিত চিকিৎসকের কাছে যাওয়া",
   "receiveNotificationAt9AM": "সেই দিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",
   "deletedScheduleCannotBeRestored": "মুছে ফেলা সময়সূচী আর ফিরিয়ে আনা যাবে না",
   "deleteSchedule": "সময়সূচি মুছে ফেলুন",

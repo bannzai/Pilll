@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "There's a problem with your internet connection. Check your connection and try again. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Please update the app",
   "forceUpdateMessage": "This app needs an update. Please get the latest version from {storeName}",
-  "visitHospital": "See doctor",
+  "visitHospital": "Attend a follow-up appointment",
   "receiveNotificationAt9AM": "Receive notification at 9:00 AM on the day",
   "deletedScheduleCannotBeRestored": "Deleted schedules cannot be restored",
   "deleteSchedule": "Delete Schedule",

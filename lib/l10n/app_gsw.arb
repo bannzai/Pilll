@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Mit em Internet hät's es Problem. Lueg bitte dini Verbindig aa und probier's nomal. Wänn's wiiterhin nöd gaht, chasch üs under Iistellige > Kontakt erreiche. Detail: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Bitte aktualisier d App",
   "forceUpdateMessage": "D App brucht es Update. Du chasch di nöischti Version über {storeName} abelade",
-  "visitHospital": "Arzttermin",
+  "visitHospital": "Zur regelmässige Kontroll bim Dokter gah",
   "receiveNotificationAt9AM": "Am gliche Tag um 9:00 Benachrichtigung überchoo",
   "deletedScheduleCannotBeRestored": "Gelöschti Termin chönd nid wiiderhergestellt werde",
   "deleteSchedule": "Termin lösche",

@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Возникла проблема с подключением к интернету. Проверьте соединение и попробуйте ещё раз. Если проблема не исчезнет, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Пожалуйста, обновите приложение",
   "forceUpdateMessage": "Приложение необходимо обновить. Пожалуйста, установите последнюю версию через {storeName}",
-  "visitHospital": "посещать врача",
+  "visitHospital": "Ходить на регулярные осмотры к врачу",
   "receiveNotificationAt9AM": "Получать уведомление в 9:00 в день приёма",
   "deletedScheduleCannotBeRestored": "Удаленные записи не могут быть восстановлены",
   "deleteSchedule": "Удалить событие",

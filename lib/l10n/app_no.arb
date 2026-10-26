@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Det er et problem med internettforbindelsen. Sjekk forbindelsen og prøv igjen. Hvis problemet fortsetter, kan du kontakte oss via Innstillinger > Kontakt oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Oppdater appen",
   "forceUpdateMessage": "Appen må oppdateres. Du kan hente den nyeste versjonen fra {storeName}",
-  "visitHospital": "Legebesøk",
+  "visitHospital": "Gå til regelmessig legekontroll",
   "receiveNotificationAt9AM": "Motta varsel klokka 9:00 samme dag",
   "deletedScheduleCannotBeRestored": "Slettede avtaler kan ikke gjenopprettes",
   "deleteSchedule": "Slett avtale",

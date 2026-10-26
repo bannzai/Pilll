@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Er is een probleem met de internetverbinding. Controleer je verbinding en probeer het opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Werk de app bij",
   "forceUpdateMessage": "De app moet worden bijgewerkt. Je kunt de nieuwste versie downloaden via {storeName}",
-  "visitHospital": "Controleafspraak",
+  "visitHospital": "Naar een regelmatige controle bij de arts gaan",
   "receiveNotificationAt9AM": "Ontvang melding om 9:00 op de dag",
   "deletedScheduleCannotBeRestored": "Verwijderde afspraken kunnen niet worden hersteld",
   "deleteSchedule": "Afspraak verwijderen",

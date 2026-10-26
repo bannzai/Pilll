@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Vandamál kom upp með nettenginguna. Athugaðu tenginguna og reyndu aftur. Ef vandamálið heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vinsamlegast uppfærðu appið",
   "forceUpdateMessage": "Það þarf að uppfæra appið. Þú getur sótt nýjustu útgáfuna í {storeName}",
-  "visitHospital": "Lækniskonum",
+  "visitHospital": "Fara í reglulegt eftirlit hjá lækni",
   "receiveNotificationAt9AM": "Fá tilkynningu á sama degi klukkan 9:00",
   "deletedScheduleCannotBeRestored": "Eyddar áætlanir er ekki hægt að endurheimta",
   "deleteSchedule": "Eyða áætlun",

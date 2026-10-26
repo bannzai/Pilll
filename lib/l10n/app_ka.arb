@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ინტერნეტკავშირთან დაკავშირებით პრობლემა წარმოიშვა. გთხოვთ, შეამოწმოთ კავშირი და ხელახლა სცადოთ. თუ პრობლემა გაგრძელდა, დაგვიკავშირდით პარამეტრები > დაგვიკავშირდით განყოფილებიდან. დეტალები: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "გთხოვთ, განაახლოთ აპი",
   "forceUpdateMessage": "აპის განახლებაა საჭირო. გთხოვთ, უახლესი ვერსია {storeName}-დან ჩამოტვირთოთ",
-  "visitHospital": "ვიზიტი ექიმთან",
+  "visitHospital": "ექიმთან გეგმურ შემოწმებაზე მისვლა",
   "receiveNotificationAt9AM": "იმავე დღეს 9:00-ზე შეტყობინება",
   "deletedScheduleCannotBeRestored": "წაშლილი განრიგი ვერ აღდგება",
   "deleteSchedule": "განრიგის წაშლა",

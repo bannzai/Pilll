@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Radusies interneta savienojuma problēma. Pārbaudiet savienojumu un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Detalizēta informācija: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Lūdzu, atjauniniet lietotni",
   "forceUpdateMessage": "Lietotne ir jāatjaunina. Lūdzu, lejupielādējiet jaunāko versiju no {storeName}",
-  "visitHospital": "apmeklēt ārstu",
+  "visitHospital": "Regulāri apmeklēt ārstu",
   "receiveNotificationAt9AM": "Saņemt paziņojumu šodien plkst. 9:00",
   "deletedScheduleCannotBeRestored": "Dzēstie plāni nav atjaunojami",
   "deleteSchedule": "Dzēst plānu",

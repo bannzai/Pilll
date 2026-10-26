@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດມີບັນຫາ. ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ ແລ້ວລອງໃໝ່. ຖ້າບັນຫາຍັງຄົງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ກະລຸນາອັບເດດແອັບ",
   "forceUpdateMessage": "ແອັບຕ້ອງການການອັບເດດ. ກະລຸນາດາວໂຫຼດເວີຊັນຫຼ້າສຸດຈາກ {storeName}",
-  "visitHospital": "ໄປໂຮງໝໍ",
+  "visitHospital": "ໄປພົບແພດຕາມນັດເປັນປະຈຳ",
   "receiveNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນໃນມື້ນີ້ເວລາ 9:00",
   "deletedScheduleCannotBeRestored": "ລາຍການທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "deleteSchedule": "ລົບກຳນົດການ",

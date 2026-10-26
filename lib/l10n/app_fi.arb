@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Internet-yhteydessä on ongelma. Tarkista yhteys ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Päivitä sovellus",
   "forceUpdateMessage": "Sovellus on päivitettävä. Saat uusimman version palvelusta {storeName}",
-  "visitHospital": "Hoitokäynti",
+  "visitHospital": "Käydä seurantakäynnillä",
   "receiveNotificationAt9AM": "Saa muistutus samana päivänä kello 9:00",
   "deletedScheduleCannotBeRestored": "Poistettua aikataulua ei voi palauttaa",
   "deleteSchedule": "Poista aikataulu",

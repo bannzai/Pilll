@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕದಲ್ಲಿ ಸಮಸ್ಯೆ ಇದೆ. ದಯವಿಟ್ಟು ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಮುಂದುವರಿದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ಅನ್ನು ನವೀಕರಿಸಿ",
   "forceUpdateMessage": "ಆ್ಯಪ್‌ ಅನ್ನು ನವೀಕರಿಸುವ ಅಗತ್ಯವಿದೆ. ದಯವಿಟ್ಟು {storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ಪಡೆಯಿರಿ",
-  "visitHospital": "ವೈದ್ಯಾಲಯ ಭೇಟಿ",
+  "visitHospital": "ನಿಯಮಿತ ವೈದ್ಯಕೀಯ ತಪಾಸಣೆಗೆ ಹೋಗುವುದು",
   "receiveNotificationAt9AM": "ಅದೇ ದಿನ ೯:೦೦ ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸಿ",
   "deletedScheduleCannotBeRestored": "ಅಳಿಸಿದ ಯೋಜನೆಗಳನ್ನು ಮರುಪ್ರಾಪ್ತಿ ಮಾಡಲಾಗುವುದಿಲ್ಲ",
   "deleteSchedule": "ವೇಳಾಪಟ್ಟಿ ಅಳಿಸಿ",

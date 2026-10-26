@@ -324,7 +324,7 @@
   "purchaseErrorOfflineConnectionError": "Probléma van az internetkapcsolattal. Ellenőrizd a kapcsolatot, majd próbáld újra. Ha a probléma továbbra is fennáll, lépj kapcsolatba velünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Kérjük, frissítsd az alkalmazást",
   "forceUpdateMessage": "Az alkalmazást frissíteni kell. Kérjük, töltsd le a legújabb verziót a {storeName} áruházból",
-  "visitHospital": "Orvosi vizit",
+  "visitHospital": "Rendszeres orvosi ellenőrzésre járni",
   "receiveNotificationAt9AM": "Értesítés fogadása aznap 9:00-kor",
   "deletedScheduleCannotBeRestored": "A törölt időpontok nem állíthatók vissza",
   "deleteSchedule": "Időpont törlése",
