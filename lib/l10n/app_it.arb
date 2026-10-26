@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mese",
   "lifetimePlan": "Acquisto una tantum",
   "lifetimePlanDescription": "Un solo acquisto, Premium per sempre",
-  "lifetimePlanSpecialOffer": "Piano una tantum\nPrezzo speciale a tempo limitato",
+  "lifetimePlanSpecialOffer": "Piano con acquisto una tantum\nPrezzo speciale per un periodo limitato",
   "lifetimePlanStandardPrice": "Prezzo normale",
   "youArePremiumMember": "Sei\nun membro Premium",
   "thankYouMessage": "Grazie per aver utilizzato Pilll.\nGrazie al vostro prezioso supporto, possiamo continuare a mantenere attivo Pilll.",

@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mjesec",
   "lifetimePlan": "Jednokratna kupnja",
   "lifetimePlanDescription": "Jedna kupnja, Premium zauvijek",
-  "lifetimePlanSpecialOffer": "Doživotni plan\nPosebna cijena - ograničeno vrijeme",
+  "lifetimePlanSpecialOffer": "Plan s jednokratnom kupnjom\nPosebna cijena na ograničeno vrijeme",
   "lifetimePlanStandardPrice": "Redovna cijena",
   "youArePremiumMember": "Vi ste premium korisnik",
   "thankYouMessage": "Hvala vam na korištenju.\nZahvaljujući vašoj podršci možemo nastaviti s radom aplikacije Pilll.",

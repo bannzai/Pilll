@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/เดือน",
   "lifetimePlan": "ซื้อครั้งเดียว",
   "lifetimePlanDescription": "ซื้อครั้งเดียว ใช้พรีเมียมได้ตลอดไป",
-  "lifetimePlanSpecialOffer": "แพ็คเกจซื้อครั้งเดียว\nราคาพิเศษระยะเวลาจำกัด",
+  "lifetimePlanSpecialOffer": "แพ็กเกจซื้อครั้งเดียว\nราคาพิเศษในช่วงเวลาจำกัด",
   "lifetimePlanStandardPrice": "ราคาปกติ",
   "youArePremiumMember": "คุณเป็นสมาชิกพรีเมียม",
   "thankYouMessage": "ขอบคุณสำหรับการใช้บริการ\nด้วยความสนับสนุนของคุณ เราจึงสามารถดำเนิน Pilll ต่อไปได้",

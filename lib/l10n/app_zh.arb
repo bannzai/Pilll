@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/月",
   "lifetimePlan": "一次性购买",
   "lifetimePlanDescription": "购买一次，永久使用高级功能",
-  "lifetimePlanSpecialOffer": "终身套餐\n限时特价",
+  "lifetimePlanSpecialOffer": "一次性购买方案\n限时特惠价",
   "lifetimePlanStandardPrice": "原价",
   "youArePremiumMember": "您是高级会员",
   "thankYouMessage": "感谢您的使用。\n多亏了您的支持，Pilll得以持续运营。",

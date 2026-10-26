@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kk",
   "lifetimePlan": "Kertaostos",
   "lifetimePlanDescription": "Yksi ostos, Premium pysyvästi",
-  "lifetimePlanSpecialOffer": "Elinaikainen suunnitelma\nRajoitetun ajan erikoishinta",
+  "lifetimePlanSpecialOffer": "Kertamaksullinen tilaus\nErikoishinta rajoitetun ajan",
   "lifetimePlanStandardPrice": "Normaali hinta",
   "youArePremiumMember": "Olet Premium-jäsen",
   "thankYouMessage": "Kiitämme käyttämisestä.\nTeidän ansiostanne voimme jatkaa Pilll:n toimintaa.",

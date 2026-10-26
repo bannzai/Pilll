@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mesiac",
   "lifetimePlan": "Jednorazový nákup",
   "lifetimePlanDescription": "Jeden nákup, Premium navždy",
-  "lifetimePlanSpecialOffer": "Doživotný plán\nČasovo obmedzená špeciálna cena",
+  "lifetimePlanSpecialOffer": "Plán s jednorazovou platbou\nŠpeciálna cena na obmedzený čas",
   "lifetimePlanStandardPrice": "Bežná cena",
   "youArePremiumMember": "Ste prémiový člen",
   "thankYouMessage": "Ďakujeme vám za používanie. Vďaka vám môžeme pokračovať v prevádzke Pilll.",

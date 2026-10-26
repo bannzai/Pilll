@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hó",
   "lifetimePlan": "Egyszeri vásárlás",
   "lifetimePlanDescription": "Egyetlen vásárlás, prémium örökre",
-  "lifetimePlanSpecialOffer": "Élethosszig tartó csomag\nKorlátozott idős akciós ár",
+  "lifetimePlanSpecialOffer": "Egyszeri vásárlású csomag\nKülönleges ár korlátozott ideig",
   "lifetimePlanStandardPrice": "Normál ár",
   "youArePremiumMember": "Te\nprémium tag vagy",
   "thankYouMessage": "Köszönjük, hogy használja szolgáltatásunkat.\nAz Ön támogatásának köszönhetően folytathatjuk a Pilll működtetését.",

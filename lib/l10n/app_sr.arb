@@ -196,7 +196,7 @@
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",
   "lifetimePlan": "Једнократна куповина",
   "lifetimePlanDescription": "Једна куповина, премијум заувек",
-  "lifetimePlanSpecialOffer": "Doživotni plan\nSpecijalna cena na ograničeno vreme",
+  "lifetimePlanSpecialOffer": "План са једнократном куповином\nПосебна цена на ограничено време",
   "lifetimePlanStandardPrice": "Redovna cena",
   "youArePremiumMember": "Vi ste premium član",
   "thankYouMessage": "Хвала вам на коришћењу.\nЗахваљујући вама можемо да наставимо са радом Pilll-а.",
