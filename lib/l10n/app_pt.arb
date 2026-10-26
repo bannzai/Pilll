@@ -90,7 +90,7 @@
   "menstruationPage": "Menstruação",
   "calendarPage": "Calendário",
   "settingsPage": "Configurações",
-  "menstruationDeleted": "Período menstrual excluído",
+  "menstruationDeleted": "O registro do período de menstruação foi excluído",
   "editMenstruationPeriod": "Editar período menstrual",
   "menstruationEdited": "Período menstrual editado com sucesso",
   "physicalConditionDetail": "Detalhes da Saúde",

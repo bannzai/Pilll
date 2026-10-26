@@ -90,7 +90,7 @@
   "menstruationPage": "Kuukautiset",
   "calendarPage": "Kalenteri",
   "settingsPage": "Asetukset",
-  "menstruationDeleted": "Kuukautiset poistettiin",
+  "menstruationDeleted": "Kuukautisjakson merkintä poistettiin",
   "editMenstruationPeriod": "Muokkaa kuukautisia",
   "menstruationEdited": "Kuukautiskierto muokattu",
   "physicalConditionDetail": "Vointitiedot",

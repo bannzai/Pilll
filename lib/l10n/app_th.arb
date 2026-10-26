@@ -90,7 +90,7 @@
   "menstruationPage": "ประจำเดือน",
   "calendarPage": "ปฏิทิน",
   "settingsPage": "การตั้งค่า",
-  "menstruationDeleted": "ลบรอบประจำเดือนแล้ว",
+  "menstruationDeleted": "ลบบันทึกช่วงประจำเดือนแล้วค่ะ",
   "editMenstruationPeriod": "แก้ไขช่วงประจำเดือน",
   "menstruationEdited": "แก้ไขรอบเดือนเรียบร้อยแล้ว",
   "physicalConditionDetail": "รายละเอียดสุขภาพ",
