@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Låt oss se tillbaka på den här p-pillerkartan",
   "endedPillSheetDialogSummaryMessage": "intagslogg: {recordedDays} dagar · utan registrering: {missedDays} dagar",
   "midnightTakenWarningDialogTitle": "Observera",
-  "midnightTakenWarningDialogBody": "Dina piller har registrerats som tagna till och med {takenDate}. Dagens påminnelse ({takenDate}) klockan {reminderTimes} kommer inte att skickas.\nOm detta var ett misstag, ångra registreringen av intaget.",
+  "midnightTakenWarningDialogBody": "En intagslogg skapades också för {takenDate}. Du får ingen påminnelse kl. {reminderTimes} i dag, {takenDate}.\nOm det blev fel kan du ångra det registrerade intaget",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
   "pauseStartDateMustBeOnOrBefore": "Välj ett startdatum för pausen {date} eller tidigare",

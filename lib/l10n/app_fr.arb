@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Revenons sur cette plaquette",
   "endedPillSheetDialogSummaryMessage": "journal des prises : {recordedDays} jours · sans entrée : {missedDays} jours",
   "midnightTakenWarningDialogTitle": "À noter",
-  "midnightTakenWarningDialogBody": "Vos pilules ont été enregistrées comme prises via {takenDate}. La notification de rappel d'aujourd'hui ({takenDate}) à {reminderTimes} ne sera pas envoyée.\nS'il s'agit d'une erreur, veuillez annuler l'enregistrement pris.",
+  "midnightTakenWarningDialogBody": "Une entrée a aussi été ajoutée au journal des prises pour le {takenDate}. Aujourd’hui, {takenDate}, vous ne recevrez pas le rappel de {reminderTimes}.\nSi c’est une erreur, vous pouvez annuler la prise enregistrée",
   "midnightTakenWarningDialogSeeHowToRevert": "Découvrez comment restaurer un enregistrement pris",
   "midnightTakenWarningDialogNeverShowAgain": "Ne montre plus ça",
   "pauseStartDateMustBeOnOrBefore": "Veuillez choisir une date de début de pause le {date} ou avant",

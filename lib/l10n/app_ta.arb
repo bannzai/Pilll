@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "இந்த மாத்திரை அட்டையின் பதிவுகளை மீண்டும் பார்ப்போம்",
   "endedPillSheetDialogSummaryMessage": "மாத்திரை உட்கொண்ட பதிவு: {recordedDays} நாட்கள் · பதிவு இல்லாதவை: {missedDays} நாட்கள்",
   "midnightTakenWarningDialogTitle": "தயவுசெய்து கவனியுங்கள்",
-  "midnightTakenWarningDialogBody": "{takenDate} வரை மாத்திரை எடுத்ததாக பதிவு செய்யப்பட்டுள்ளது. {takenDate} ஆன இன்று {reminderTimes} அறிவிப்பு உங்களுக்கு வராது.\nதவறாக பதிவானது எனில், உட்கொள்ளுதலை ரத்து செய்யவும்.",
+  "midnightTakenWarningDialogBody": "{takenDate} தேதிக்கும் மாத்திரை உட்கொண்ட பதிவு செய்யப்பட்டுள்ளது. இன்று {takenDate} அன்று {reminderTimes} நேர அறிவிப்பு உங்களுக்கு வராது.\nதவறுதலாகப் பதிவு செய்திருந்தால், பதிவு செய்யப்பட்ட மாத்திரை உட்கொள்ளலை ரத்து செய்யுங்கள்",
   "midnightTakenWarningDialogSeeHowToRevert": "உட்கொள்ளுதலை ரத்து செய்யும் முறையைக் காண்க",
   "midnightTakenWarningDialogNeverShowAgain": "இதை மீண்டும் காட்ட வேண்டாம்",
   "pauseStartDateMustBeOnOrBefore": "தயவுசெய்து {date} அல்லது அதற்கு முந்தைய இடைவேளை தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",

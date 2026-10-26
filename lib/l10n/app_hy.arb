@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս հաբերի բլիստեր օգտագործման գրառումները",
   "endedPillSheetDialogSummaryMessage": "ընդունման գրառում՝ {recordedDays} օր · առանց գրառման՝ {missedDays} օր",
   "midnightTakenWarningDialogTitle": "Խնդրում ենք ուշադրություն դարձրեք",
-  "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",
+  "midnightTakenWarningDialogBody": "{takenDate}-ի համար նույնպես ստեղծվել է ընդունման գրառում։ Այսօր՝ {takenDate}-ին, {reminderTimes}-ի ծանուցումը Դուք չեք ստանա։\nԵթե գրառումը սխալմամբ է արվել, խնդրում ենք չեղարկել գրանցված ընդունումը",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս երբեք չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընտրել դադարի մեկնարկի ամսաթիվ {date}-ը կամ ավելի վաղ",

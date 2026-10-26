@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Gəlin bu həb blister üzrə qeydlərinizə nəzər salaq",
   "endedPillSheetDialogSummaryMessage": "həb qəbulu qeyd: {recordedDays} gün · qeyd olunmayan: {missedDays} gün",
   "midnightTakenWarningDialogTitle": "Zəhmət olmasa, diqqət edin",
-  "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
+  "midnightTakenWarningDialogBody": "{takenDate} üçün həb qəbulu qeyd edilib. Bu gün, {takenDate}, saat {reminderTimes} üçün bildiriş almayacaqsınız.\nSəhvən qeyd etmisinizsə, zəhmət olmasa həb qəbulunu ləğv edin",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərmə",
   "pauseStartDateMustBeOnOrBefore": "Zəhmət olmasa fasilənin başlama tarixini {date} və ya ondan əvvəl seçin",

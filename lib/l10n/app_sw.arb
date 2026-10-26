@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Turejee matumizi ya pakiti ya vidonge hii",
   "endedPillSheetDialogSummaryMessage": "rekodi ya kumeza vidonge: siku {recordedDays} · bila rekodi: siku {missedDays}",
   "midnightTakenWarningDialogTitle": "Tafadhali zingatia",
-  "midnightTakenWarningDialogBody": "Vidonge vimerekodiwa kama vimechukuliwa hadi {takenDate}. Arifa ya ukumbusho ya leo ({takenDate}) saa {reminderTimes} haitatumwa.\nIkiwa hii ni kosa, tafadhali batilisha rekodi ya kuchukua kidonge.",
+  "midnightTakenWarningDialogBody": "Rekodi ya kumeza vidonge imeundwa pia kwa tarehe {takenDate}. Leo, {takenDate}, hutapokea ukumbusho wa saa {reminderTimes}.\nIkiwa hii ni kosa, tafadhali batilisha umezaji uliorekodiwa",
   "midnightTakenWarningDialogSeeHowToRevert": "Ona jinsi ya kubatilisha rekodi ya kuchukua",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua tarehe ya kuanza mapumziko {date} au kabla yake",

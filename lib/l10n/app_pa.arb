@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "ਆਓ, ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀਆਂ ਇਸ ਵਾਰ ਦੀਆਂ ਐਂਟਰੀਆਂ ਵੇਖੀਏ",
   "endedPillSheetDialogSummaryMessage": "ਸੇਵਨ ਰਿਕਾਰਡ: {recordedDays} ਦਿਨ · ਬਿਨਾਂ ਰਿਕਾਰਡ: {missedDays} ਦਿਨ",
   "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ",
-  "midnightTakenWarningDialogBody": "{takenDate} ਤੱਕ ਦੀ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਹੋ ਚੁੱਕਾ ਹੈ। ਅੱਜ ({takenDate}) {reminderTimes} ਦੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਹੋਇਆ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਰਿਕਾਰਡ ਨੂੰ ਰੱਦ ਕਰੋ",
+  "midnightTakenWarningDialogBody": "{takenDate} ਲਈ ਵੀ ਸੇਵਨ ਰਿਕਾਰਡ ਬਣ ਗਿਆ ਹੈ। ਅੱਜ {takenDate} ਨੂੰ {reminderTimes} ਵਾਲੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਦਰਜ ਹੋਇਆ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਦਰਜ ਕੀਤਾ ਗੋਲੀ ਦਾ ਸੇਵਨ ਰੱਦ ਕਰੋ",
   "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਇਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਵਿਰਾਮ ਸ਼ੁਰੂਆਤ ਮਿਤੀ ਚੁਣੋ",

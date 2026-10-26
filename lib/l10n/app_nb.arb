@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "La oss se tilbake på dette pillebrettet",
   "endedPillSheetDialogSummaryMessage": "pillelogg: {recordedDays} dager · uten registrering: {missedDays} dager",
   "midnightTakenWarningDialogTitle": "Vær oppmerksom",
-  "midnightTakenWarningDialogBody": "Pillene dine er registrert som tatt til og med {takenDate}. Dagens ({takenDate}) varsel kl. {reminderTimes} vil ikke bli sendt.\nHvis dette var en feil, kan du angre inntaksregistreringen.",
+  "midnightTakenWarningDialogBody": "Det er også opprettet en pillelogg for {takenDate}. Du får ikke påminnelsen kl. {reminderTimes} i dag, {takenDate}.\nHvis dette var en feil, kan du angre den registrerte pillen",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du angrer en inntaksregistrering",
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis dette igjen",
   "pauseStartDateMustBeOnOrBefore": "Velg en startdato for pausen {date} eller tidligere",

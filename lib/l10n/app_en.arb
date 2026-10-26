@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Let’s look back at this pill pack",
   "endedPillSheetDialogSummaryMessage": "pill log: {recordedDays} days recorded · {missedDays} days unrecorded",
   "midnightTakenWarningDialogTitle": "Please note",
-  "midnightTakenWarningDialogBody": "Your pills have been recorded as taken through {takenDate}. Today's ({takenDate}) reminder notification at {reminderTimes} will not be delivered.\nIf this was a mistake, please revert the taken record.",
+  "midnightTakenWarningDialogBody": "A pill log was also created for {takenDate}. You won’t receive the {reminderTimes} reminder today, {takenDate}.\nIf this was a mistake, please undo the recorded dose",
   "midnightTakenWarningDialogSeeHowToRevert": "See how to revert a taken record",
   "midnightTakenWarningDialogNeverShowAgain": "Don't show this again",
   "pauseStartDateMustBeOnOrBefore": "Please select a pause start date on or before {date}",

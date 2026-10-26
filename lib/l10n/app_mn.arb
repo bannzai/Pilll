@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Энэ эмийн блистерийн хэрэглээг эргэн харцгаая",
   "endedPillSheetDialogSummaryMessage": "эм уусан бүртгэлтэй: {recordedDays} өдөр · бүртгэлгүй: {missedDays} өдөр",
   "midnightTakenWarningDialogTitle": "Анхаарна уу",
-  "midnightTakenWarningDialogBody": "{takenDate}-ы хүртэлх уусан бүртгэл хийгдсэн байна. Өнөөдөр буюу {takenDate}-ны {reminderTimes} цагийн мэдэгдэл тань ирэхгүй.\nХэрэв алдаатай бол уусан бүртгэлээ цуцлана уу",
+  "midnightTakenWarningDialogBody": "{takenDate} өдрийн эм уусан бүртгэл мөн хийгдлээ. Өнөөдөр буюу {takenDate}-нд {reminderTimes} цагийн сануулга танд ирэхгүй.\nХэрэв андуурч бүртгэсэн бол эм уусан бүртгэлийг цуцална уу",
   "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин бүү харуул",
   "pauseStartDateMustBeOnOrBefore": "Завсарлагын эхлэх огноог {date} буюу түүнээс өмнө сонгоно уу",

@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Lítum yfir þetta pilluspjald",
   "endedPillSheetDialogSummaryMessage": "inntökuskrá: {recordedDays} dagar · án skráningar: {missedDays} dagar",
   "midnightTakenWarningDialogTitle": "Athugaðu þetta",
-  "midnightTakenWarningDialogBody": "Þú hefur skráð pillutöku til og með {takenDate}. Tilkynningin fyrir daginn í dag ({takenDate}) klukkan {reminderTimes} berst þér ekki.\nEf þetta voru mistök skaltu afturkalla tökuskráninguna.",
+  "midnightTakenWarningDialogBody": "Inntökuskrá var einnig gerð fyrir {takenDate}. Í dag, {takenDate}, færðu ekki áminningu kl. {reminderTimes}.\nEf þetta var óvart geturðu afturkallað skráða inntöku",
   "midnightTakenWarningDialogSeeHowToRevert": "Skoða leiðbeiningar um að afturkalla tökuskráningu",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna þetta aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu upphafsdag hlés {date} eða fyrr",

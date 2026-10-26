@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "ଆସନ୍ତୁ, ଏହି ବଟିକା ସିଟର ରେକର୍ଡକୁ ଥରେ ଦେଖିବା",
   "endedPillSheetDialogSummaryMessage": "ସେବନ ରେକର୍ଡ: {recordedDays} ଦିନ · ରେକର୍ଡ ନଥିବା: {missedDays} ଦିନ",
   "midnightTakenWarningDialogTitle": "ଦୟାକରି ଧ୍ୟାନ ଦିଅନ୍ତୁ",
-  "midnightTakenWarningDialogBody": "{takenDate} ପର୍ଯ୍ୟନ୍ତ ପିଲ୍ ସେବନ ରେକର୍ଡ ହୋଇସାରିଛି। ଆଜି ({takenDate}) ର {reminderTimes} ବିଜ୍ଞପ୍ତି ଆପଣଙ୍କ ପାଖରେ ପହଞ୍ଚିବ ନାହିଁ।\nଯଦି ଏହା ଭୁଲ ହୋଇଥାଏ, ଦୟାକରି ସେବନ ରେକର୍ଡ ବାତିଲ କରନ୍ତୁ।",
+  "midnightTakenWarningDialogBody": "{takenDate} ପାଇଁ ମଧ୍ୟ ସେବନ ରେକର୍ଡ ହୋଇଛି। ଆଜି {takenDate} ରେ {reminderTimes} ସମୟର ସୂଚନା ଆପଣଙ୍କୁ ମିଳିବ ନାହିଁ।\nଭୁଲରେ ରେକର୍ଡ ହୋଇଥିଲେ, ଦୟାକରି ରେକର୍ଡ ହୋଇଥିବା ବଟିକା ସେବନକୁ ବାତିଲ କରନ୍ତୁ",
   "midnightTakenWarningDialogSeeHowToRevert": "ସେବନ ବାତିଲ କରିବାର ବିଧି ଦେଖନ୍ତୁ",
   "midnightTakenWarningDialogNeverShowAgain": "ଏହା ଆଉ ଦେଖାନ୍ତୁ ନାହିଁ",
   "pauseStartDateMustBeOnOrBefore": "ଦୟାକରି {date} କିମ୍ବା ତା ପୂର୍ବର ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",

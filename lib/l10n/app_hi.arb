@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "आइए, इस पिल स्ट्रिप के सेवन पर एक नज़र डालें",
   "endedPillSheetDialogSummaryMessage": "सेवन रिकॉर्ड: {recordedDays} दिन · बिना रिकॉर्ड: {missedDays} दिन",
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
-  "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
+  "midnightTakenWarningDialogBody": "{takenDate} के लिए भी सेवन रिकॉर्ड दर्ज हो गया है। आज, {takenDate} को {reminderTimes} वाला रिमाइंडर आपको नहीं मिलेगा।\nअगर यह गलती से दर्ज हुआ है, तो कृपया दर्ज किया गया गोली सेवन रद्द करें",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",
   "midnightTakenWarningDialogNeverShowAgain": "दोबारा न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} या उससे पहले की विराम शुरुआत तिथि चुनें",

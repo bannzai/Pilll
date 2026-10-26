@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "لنراجع شريط الحبوب هذا",
   "endedPillSheetDialogSummaryMessage": "تسجيل تناول: {recordedDays} أيام · أيام بلا تسجيل: {missedDays}",
   "midnightTakenWarningDialogTitle": "يرجى الانتباه",
-  "midnightTakenWarningDialogBody": "تم تسجيل تناول الحبوب حتى تاريخ {takenDate}. لن يصلك إشعار التذكير اليوم ({takenDate}) في {reminderTimes}.\nإذا كان هذا خطأً، يرجى إلغاء تسجيل التناول",
+  "midnightTakenWarningDialogBody": "تم أيضًا إنشاء تسجيل تناول ليوم {takenDate}. لن يصلكِ إشعار الساعة {reminderTimes} اليوم، {takenDate}.\nإذا كان التسجيل بالخطأ، يُرجى إلغاء تسجيل تناول الحبة",
   "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول",
   "midnightTakenWarningDialogNeverShowAgain": "عدم العرض مرة أخرى",
   "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء الاستراحة في {date} أو قبله",

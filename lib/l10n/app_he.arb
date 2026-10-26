@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "בואי נעבור על חפיסת הגלולות הזו",
   "endedPillSheetDialogSummaryMessage": "רישום נטילה: {recordedDays} ימים · ללא רישום: {missedDays} ימים",
   "midnightTakenWarningDialogTitle": "לתשומת לב",
-  "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
+  "midnightTakenWarningDialogBody": "נוצר גם רישום נטילה לתאריך {takenDate}. היום, {takenDate}, לא תתקבל התזכורת של {reminderTimes}.\nאם הרישום נעשה בטעות, אפשר לבטל את הנטילה שנרשמה",
   "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",
   "midnightTakenWarningDialogNeverShowAgain": "אל תציג הודעה זו שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור תאריך התחלת הפסקה ב-{date} או לפני כן",

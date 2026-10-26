@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Fem un repàs d’aquest blíster",
   "endedPillSheetDialogSummaryMessage": "registre de preses: {recordedDays} dies · sense registrar: {missedDays} dies",
   "midnightTakenWarningDialogTitle": "Tingues-ho en compte",
-  "midnightTakenWarningDialogBody": "S'ha registrat la presa de la píndola fins al {takenDate}. La notificació d'avui ({takenDate}) de les {reminderTimes} no arribarà.\nSi ha estat un error, cancel·leu el registre de presa.",
+  "midnightTakenWarningDialogBody": "També s’ha creat un registre de preses per al {takenDate}. Avui, {takenDate}, no rebràs l’avís de les {reminderTimes}.\nSi ha estat un error, pots anul·lar la presa registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa",
   "midnightTakenWarningDialogNeverShowAgain": "No tornis a mostrar-ho",
   "pauseStartDateMustBeOnOrBefore": "Selecciona una data d'inici de la pausa el {date} o abans",

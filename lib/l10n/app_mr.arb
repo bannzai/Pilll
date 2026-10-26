@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "या पिल शीटमधील नोंदींवर एक नजर टाकूया",
   "endedPillSheetDialogSummaryMessage": "सेवन नोंद: {recordedDays} दिवस · नोंद नसलेले: {missedDays} दिवस",
   "midnightTakenWarningDialogTitle": "कृपया लक्ष द्या",
-  "midnightTakenWarningDialogBody": "{takenDate} पर्यंतच्या सेवनाची नोंद झाली आहे. आज ({takenDate}) {reminderTimes} वाजताची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया सेवन रद्द करा",
+  "midnightTakenWarningDialogBody": "{takenDate} साठीही सेवन नोंद झाली आहे. आज, {takenDate} रोजी, {reminderTimes} ची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया नोंदवलेले गोळीचे सेवन रद्द करा",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
   "pauseStartDateMustBeOnOrBefore": "कृपया {date} किंवा त्यापूर्वीची विश्रांती सुरू होण्याची तारीख निवडा",

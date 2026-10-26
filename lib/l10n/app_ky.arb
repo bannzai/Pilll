@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Бул таблетка блистери боюнча жазууларды чогуу карап көрөлү",
   "endedPillSheetDialogSummaryMessage": "таблетка ичүү жазуусу бар: {recordedDays} күн · жазуусу жок: {missedDays} күн",
   "midnightTakenWarningDialogTitle": "Көңүл буруңуз",
-  "midnightTakenWarningDialogBody": "{takenDate}күнгө чейинки дары ичүү катталды. Бүгүн ({takenDate}) {reminderTimes} убагындагы эскертүү сизге келбейт.\nЭгер ката менен болсо, дары ичкенди жокко чыгарыңыз",
+  "midnightTakenWarningDialogBody": "{takenDate} күнүнө да таблетка ичүү жазуусу түзүлдү. Бүгүн, {takenDate} күнү, {reminderTimes} убактысындагы эскертмени албайсыз.\nЭгер бул жаңылыштык болсо, катталган таблетка ичүүнү жокко чыгарыңыз",
   "midnightTakenWarningDialogSeeHowToRevert": "Дары ичкенди жокко чыгаруу жолун көрүү",
   "midnightTakenWarningDialogNeverShowAgain": "Экинчи көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Тыныгуунун башталуу күнүн {date} же андан мурун тандаңыз",

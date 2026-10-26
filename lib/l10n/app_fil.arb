@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Balikan natin ang pakete ng pildoras na ito",
   "endedPillSheetDialogSummaryMessage": "tala ng pag-inom: {recordedDays} araw · walang tala: {missedDays} araw",
   "midnightTakenWarningDialogTitle": "Pakitandaan po",
-  "midnightTakenWarningDialogBody": "Naitala na ang inyong pag-inom ng pills hanggang sa {takenDate}. Hindi na maipapadala ang paalala ngayong araw ({takenDate}) sa {reminderTimes}.\nKung nagkamali, mangyaring i-cancel ang record ng pag-inom.",
+  "midnightTakenWarningDialogBody": "Nagawa rin ang tala ng pag-inom para sa {takenDate}. Ngayong {takenDate}, hindi ninyo matatanggap ang abiso para sa {reminderTimes}.\nKung nagkamali sa pagtatala, maaari po ninyong kanselahin ang naitalang pag-inom",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan ang paraan ng pag-cancel ng record ng pag-inom",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "pauseStartDateMustBeOnOrBefore": "Pumili ng start date ng pahinga sa {date} o mas maaga",

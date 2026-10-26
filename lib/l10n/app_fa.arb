@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "بیایید این ورق قرص را مرور کنیم",
   "endedPillSheetDialogSummaryMessage": "ثبت مصرف: {recordedDays} روز · بدون ثبت: {missedDays} روز",
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",
-  "midnightTakenWarningDialogBody": "مصرف قرص تا تاریخ {takenDate} ثبت شده است. اعلان یادآوری امروز ({takenDate}) در ساعت {reminderTimes} برای شما ارسال نخواهد شد.\nدر صورت اشتباه بودن، لطفاً مصرف را لغو کنید.",
+  "midnightTakenWarningDialogBody": "برای {takenDate} هم ثبت مصرف انجام شد. امروز، {takenDate}، اعلان ساعت {reminderTimes} را دریافت نمی‌کنید.\nاگر اشتباهی ثبت شده است، لطفاً مصرف ثبت‌شده را لغو کنید",
   "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نمایش داده نشود",
   "pauseStartDateMustBeOnOrBefore": "لطفاً تاریخ شروع استراحت را {date} یا قبل از آن انتخاب کنید",

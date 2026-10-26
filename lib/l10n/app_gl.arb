@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "rexistro de tomas: {recordedDays} días · sen rexistrar: {missedDays} días",
   "midnightTakenWarningDialogTitle": "Ten isto en conta",
-  "midnightTakenWarningDialogBody": "Rexistrouse a toma de píldoras ata o {takenDate}. A notificación de hoxe ({takenDate}) ás {reminderTimes} non chegará.\nSe foi un erro, cancela o rexistro de toma.",
+  "midnightTakenWarningDialogBody": "Tamén se creou un rexistro de tomas para o {takenDate}. Hoxe, {takenDate}, non recibirás o aviso das {reminderTimes}.\nSe foi un erro, podes anular a toma rexistrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como cancelar o rexistro de toma",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrar isto de novo",
   "pauseStartDateMustBeOnOrBefore": "Selecciona unha data de inicio da pausa o {date} ou antes",

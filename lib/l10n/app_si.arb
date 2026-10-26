@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "මේ පෙති කාඩ්පතේ භාවිතය නැවත බලමු",
   "endedPillSheetDialogSummaryMessage": "පෙති ගැනීමේ සටහන: දින {recordedDays}ක් · සටහන් නොවූ දින {missedDays}ක්",
   "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න",
-  "midnightTakenWarningDialogBody": "{takenDate} දක්වා පිල් ගැනීම් සටහන් වී ඇත. අද දිනය {takenDate} බැවින්, අද {reminderTimes} හි දැනුම්දීම ඔබට නොලැබෙනු ඇත.\nවැරදීමකින් නම්, කරුණාකර ගැනීම අවලංගු කරන්න",
+  "midnightTakenWarningDialogBody": "{takenDate} සඳහා ද පෙති ගැනීමේ සටහනක් එක් කර ඇත. අද {takenDate} දින {reminderTimes} දැනුම්දීම ඔබට නොලැබේ.\nමෙය වැරදීමකින් සටහන් වී ඇත්නම්, කරුණාකර සටහන් කළ පෙති ගැනීම අවලංගු කරන්න",
   "midnightTakenWarningDialogSeeHowToRevert": "ගැනීම අවලංගු කරන ආකාරය බලන්න",
   "midnightTakenWarningDialogNeverShowAgain": "නැවත මෙය නොපෙන්වන්න",
   "pauseStartDateMustBeOnOrBefore": "කරුණාකර {date} හෝ ඊට පෙර විවේක ආරම්භක දිනයක් තෝරන්න",

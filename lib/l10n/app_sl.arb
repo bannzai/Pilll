@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Poglejmo si to ploščico za nazaj",
   "endedPillSheetDialogSummaryMessage": "beleženje jemanja: {recordedDays} dni · brez zapisa: {missedDays} dni",
   "midnightTakenWarningDialogTitle": "Bodite pozorni",
-  "midnightTakenWarningDialogBody": "Jemanje je zabeleženo do {takenDate}. Današnje ({takenDate}) obvestilo ob {reminderTimes} zato ne bo prejeto.\nČe je prišlo do napake, prosimo, razveljavite zapis o jemanju.",
+  "midnightTakenWarningDialogBody": "Za {takenDate} je bilo ustvarjeno tudi beleženje jemanja. Danes, {takenDate}, obvestila za {reminderTimes} ne boste prejeli.\nČe je šlo za pomoto, lahko zabeleženo jemanje prekličete",
   "midnightTakenWarningDialogSeeHowToRevert": "Poglejte, kako razveljaviti zapis o jemanju",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikaži več",
   "pauseStartDateMustBeOnOrBefore": "Izberite datum začetka premora {date} ali prej",

@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Keling, bu tabletka blister boʻyicha qaydlarni koʻrib chiqamiz",
   "endedPillSheetDialogSummaryMessage": "tabletka qabul qilish qaydi: {recordedDays} kun · qaydsiz: {missedDays} kun",
   "midnightTakenWarningDialogTitle": "Iltimos, eʼtibor bering",
-  "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",
+  "midnightTakenWarningDialogBody": "{takenDate} uchun ham tabletka qabul qilish qaydi yaratildi. Bugun, {takenDate} kuni, {reminderTimes} dagi eslatmani olmaysiz.\nAgar bu xato bo‘lsa, qayd etilgan tabletka qabulini bekor qiling",
   "midnightTakenWarningDialogSeeHowToRevert": "Qabulni bekor qilish usulini ko'rish",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko'rsatmaslik",
   "pauseStartDateMustBeOnOrBefore": "Iltimos, tanaffus boshlanish sanasini {date} yoki undan oldin tanlang",

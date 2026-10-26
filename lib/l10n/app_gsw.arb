@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Luege mer zrugg uf dä Pilleblister",
   "endedPillSheetDialogSummaryMessage": "Iinahm-Ufzeichnig: {recordedDays} Täg · ohni Iitrag: {missedDays} Täg",
   "midnightTakenWarningDialogTitle": "Lueg bitte gnau",
-  "midnightTakenWarningDialogBody": "D'Iinahm isch bis und mit {takenDate} als gnaa erfasst worde. D'Benachrichtigung vo hüt, am {takenDate}, um {reminderTimes} wird Ihne dromit nöd zuegstellt.\nFalls das aus Versehe passiert isch, mached Sie bitte d'Iinahm rückgängig.",
+  "midnightTakenWarningDialogBody": "Für de {takenDate} isch au e Iinahm-Ufzeichnig gmacht worde. Hüt, am {takenDate}, chunnt d Erinnerig vo {reminderTimes} nöd bi dir aa.\nWänn das es Versee gsi isch, chasch d iitreiti Iinahm rückgängig mache",
   "midnightTakenWarningDialogSeeHowToRevert": "Aaleitig zum Rückgängigmache vo de Iinahm aaluege",
   "midnightTakenWarningDialogNeverShowAgain": "Nie me aazeige",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähl es Startdatum vo de Pause am {date} oder dervor",

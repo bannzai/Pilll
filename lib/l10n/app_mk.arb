@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Да го разгледаме користењето на овој блистер",
   "endedPillSheetDialogSummaryMessage": "Запис за земање: {recordedDays} дена · без запис: {missedDays} дена",
   "midnightTakenWarningDialogTitle": "Ве молиме, обрнете внимание",
-  "midnightTakenWarningDialogBody": "Земањето на пилулите е запишано до {takenDate}. Денешното известување ({takenDate}) закажано за {reminderTimes} нема да биде испратено.\nАко ова е грешка, Ве молиме откажете го записот за земање.",
+  "midnightTakenWarningDialogBody": "Создаден е и Запис за земање за {takenDate}. Денес, {takenDate}, нема да добиете известување во {reminderTimes}.\nАко ова е грешка, можете да го откажете запишаното земање",
   "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
   "pauseStartDateMustBeOnOrBefore": "Изберете датум на почеток на паузата на {date} или порано",

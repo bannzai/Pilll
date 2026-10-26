@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Katsotaan yhdessä tätä pilleriliuskaa",
   "endedPillSheetDialogSummaryMessage": "pilleriloki: {recordedDays} päivää · ilman merkintää: {missedDays} päivää",
   "midnightTakenWarningDialogTitle": "Huomaa tämä",
-  "midnightTakenWarningDialogBody": "Pillerit on kirjattu otetuiksi {takenDate} asti. Tämän päivän ({takenDate}) klo {reminderTimes} ilmoitus ei saavu sinulle.\nJos tämä on virhe, peruuta merkintä.",
+  "midnightTakenWarningDialogBody": "Myös päivälle {takenDate} luotiin pilleriloki. Et saa tänään {takenDate} muistutusta klo {reminderTimes}.\nJos merkintä tehtiin vahingossa, voit perua kirjatun pillerin oton",
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten peruutat merkinnän",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä tätä uudelleen",
   "pauseStartDateMustBeOnOrBefore": "Valitse tauon aloituspäivä {date} tai aiemmin",

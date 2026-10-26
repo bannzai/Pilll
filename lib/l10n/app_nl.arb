@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Laten we terugkijken op deze pillenstrip",
   "endedPillSheetDialogSummaryMessage": "innameregistratie: {recordedDays} dagen · zonder registratie: {missedDays} dagen",
   "midnightTakenWarningDialogTitle": "Let even op",
-  "midnightTakenWarningDialogBody": "Uw pillen zijn geregistreerd als ingenomen tot en met {takenDate}. De melding van vandaag ({takenDate}) om {reminderTimes} wordt niet verzonden.\nAls dit een vergissing was, maak dan de inname-registratie ongedaan.",
+  "midnightTakenWarningDialogBody": "Er is ook een innameregistratie gemaakt voor {takenDate}. Je krijgt vandaag, {takenDate}, geen herinnering om {reminderTimes}.\nIs dit per ongeluk gebeurd? Dan kun je de geregistreerde inname ongedaan maken",
   "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe u een inname-registratie ongedaan kunt maken",
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
   "pauseStartDateMustBeOnOrBefore": "Kies een startdatum van de pauze op {date} of eerder",

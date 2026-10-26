@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Ας δούμε πώς πήγε αυτή η καρτέλα χαπιών",
   "endedPillSheetDialogSummaryMessage": "καταγραφή λήψης: {recordedDays} ημέρες · χωρίς καταγραφή: {missedDays} ημέρες",
   "midnightTakenWarningDialogTitle": "Παρακαλούμε, προσέξτε",
-  "midnightTakenWarningDialogBody": "Η λήψη έχει καταγραφεί έως {takenDate}. Η σημερινή ({takenDate}) ειδοποίηση υπενθύμισης στις {reminderTimes} δεν θα σας αποσταλεί.\nΕάν έγινε κατά λάθος, παρακαλώ ακυρώστε την καταγραφή λήψης.",
+  "midnightTakenWarningDialogBody": "Δημιουργήθηκε επίσης καταγραφή λήψης για τις {takenDate}. Σήμερα, {takenDate}, δεν θα λάβετε την ειδοποίηση των {reminderTimes}.\nΑν έγινε κατά λάθος, μπορείτε να ακυρώσετε την καταγεγραμμένη λήψη",
   "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης",
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
   "pauseStartDateMustBeOnOrBefore": "Επιλέξτε ημερομηνία έναρξης της παύσης στις {date} ή νωρίτερα",

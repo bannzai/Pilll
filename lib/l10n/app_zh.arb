@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "一起来回顾这板药板的服用记录吧",
   "endedPillSheetDialogSummaryMessage": "服药记录：{recordedDays} 天 · 未记录：{missedDays} 天",
   "midnightTakenWarningDialogTitle": "请注意",
-  "midnightTakenWarningDialogBody": "已记录服用至{takenDate}。今天（{takenDate}）{reminderTimes}的提醒通知将不会推送。\n如果是误操作，请撤销服用记录。",
+  "midnightTakenWarningDialogBody": "已为 {takenDate} 添加服药记录。今天是 {takenDate}，你将不会收到 {reminderTimes} 的提醒。\n如果记录有误，请撤销这次服药记录",
   "midnightTakenWarningDialogSeeHowToRevert": "查看取消服用记录的方法",
   "midnightTakenWarningDialogNeverShowAgain": "不再提示",
   "pauseStartDateMustBeOnOrBefore": "请选择{date}或之前的日期作为停药开始日",

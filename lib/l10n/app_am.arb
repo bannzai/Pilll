@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "የዚህን ክኒን ሉህ አጠቃቀም እንመልከት",
   "endedPillSheetDialogSummaryMessage": "አወሳሰድ መዝገብ፦ {recordedDays} ቀናት · ያልተመዘገቡ፦ {missedDays} ቀናት",
   "midnightTakenWarningDialogTitle": "እባክዎ ያስተውሉ",
-  "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",
+  "midnightTakenWarningDialogBody": "ለ{takenDate} አወሳሰድ መዝገብ ተፈጥሯል። ዛሬ {takenDate} ስለሆነ፣ የ{reminderTimes} ማሳወቂያ አይደርስዎትም።\nበስህተት ከተመዘገበ፣ የክኒን መውሰድ መዝገቡን ይሰርዙ",
   "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አያሳዩ",
   "pauseStartDateMustBeOnOrBefore": "እባክዎ የእረፍት መጀመሪያ ቀን {date} ወይም ከዚያ በፊት ይምረጡ",

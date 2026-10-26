@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Lad os se tilbage på dette pillekort",
   "endedPillSheetDialogSummaryMessage": "pilleregistrering: {recordedDays} dage · uden registrering: {missedDays} dage",
   "midnightTakenWarningDialogTitle": "Vær opmærksom",
-  "midnightTakenWarningDialogBody": "Dine piller er blevet registreret som taget frem til {takenDate}. Dagens ({takenDate}) påmindelse kl. {reminderTimes} bliver ikke sendt.\nHvis dette var en fejl, skal du annullere indtagelsesregistreringen.",
+  "midnightTakenWarningDialogBody": "Der er også lavet en pilleregistrering for {takenDate}. Du får ikke påmindelsen kl. {reminderTimes} i dag, {takenDate}.\nHvis det var en fejl, kan du annullere den registrerede indtagelse",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du annullerer en indtagelsesregistrering",
   "midnightTakenWarningDialogNeverShowAgain": "Vis ikke dette igen",
   "pauseStartDateMustBeOnOrBefore": "Vælg en startdato for pausen den {date} eller tidligere",

@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Nézzük át ezt a tablettacsomagot",
   "endedPillSheetDialogSummaryMessage": "tablettaszedési napló: {recordedDays} nap · bejegyzés nélkül: {missedDays} nap",
   "midnightTakenWarningDialogTitle": "Kérjük, figyelj erre",
-  "midnightTakenWarningDialogBody": "A bevétel rögzítve lett {takenDate}-ig bezárólag. A mai napi ({takenDate}) {reminderTimes} órakor esedékes értesítés emiatt nem fog megérkezni.\nHa ez tévedésből történt, kérjük, vonja vissza a bevétel rögzítését.",
+  "midnightTakenWarningDialogBody": "A(z) {takenDate} napra is bekerült egy bejegyzés a tablettaszedési naplóba. Ma, {takenDate} napján nem érkezik értesítés {reminderTimes} időpontban.\nHa ez tévedés volt, visszavonhatod a rögzített tablettaszedést",
   "midnightTakenWarningDialogSeeHowToRevert": "A bevétel visszavonásának módja",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg többé",
   "pauseStartDateMustBeOnOrBefore": "Válassz {date} vagy korábbi szünetkezdő dátumot",

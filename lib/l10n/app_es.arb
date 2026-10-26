@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "registro de toma: {recordedDays} días · sin registrar: {missedDays} días",
   "midnightTakenWarningDialogTitle": "Tenlo en cuenta",
-  "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
+  "midnightTakenWarningDialogBody": "También se creó un registro de toma para el {takenDate}. Hoy, {takenDate}, no recibirás el aviso de las {reminderTimes}.\nSi fue un error, puedes anular la toma registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar esto",
   "pauseStartDateMustBeOnOrBefore": "Selecciona una fecha de inicio de la pausa el {date} o antes",

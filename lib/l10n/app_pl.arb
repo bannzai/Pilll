@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Przyjrzyjmy się temu blistrowi",
   "endedPillSheetDialogSummaryMessage": "Dni z zapisem przyjęcia: {recordedDays} · bez zapisu: {missedDays}",
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",
-  "midnightTakenWarningDialogBody": "Zarejestrowano przyjęcie pigułek do dnia {takenDate}. Dzisiejsze ({takenDate}) powiadomienie o godzinie {reminderTimes} nie zostanie dostarczone.\nJeśli to pomyłka, cofnij przyjęcie.",
+  "midnightTakenWarningDialogBody": "Dodano także wpis do rejestru przyjęciа tabletki na {takenDate}. Dziś, {takenDate}, nie otrzymasz przypomnienia o {reminderTimes}.\nJeśli to pomyłka, możesz cofnąć zarejestrowane przyjęcie tabletki",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
   "pauseStartDateMustBeOnOrBefore": "Wybierz datę rozpoczęcia przerwy {date} lub wcześniejszą",

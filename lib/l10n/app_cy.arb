@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Beth am edrych yn ôl ar y stribed pils hwn",
   "endedPillSheetDialogSummaryMessage": "cofnod cymryd: {recordedDays} diwrnod · heb gofnod: {missedDays} diwrnod",
   "midnightTakenWarningDialogTitle": "Sylwch, os gwelwch yn dda",
-  "midnightTakenWarningDialogBody": "Mae cofnod cymryd y bilsen wedi'i wneud hyd at {takenDate}. Ni fyddwch yn derbyn hysbysiad atgoffa heddiw ({takenDate}) am {reminderTimes}.\nOs camgymeriad oedd hyn, canslwch y cofnod cymryd os gwelwch yn dda.",
+  "midnightTakenWarningDialogBody": "Mae cofnod cymryd wedi’i wneud ar gyfer {takenDate} hefyd. Heddiw, {takenDate}, ni fyddwch yn cael yr hysbysiad am {reminderTimes}.\nOs oedd hyn yn gamgymeriad, gallwch ganslo’r cofnod cymryd",
   "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ganslo cofnod cymryd",
   "midnightTakenWarningDialogNeverShowAgain": "Peidiwch â dangos hwn eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch ddyddiad dechrau'r saib ar {date} neu cyn hynny",

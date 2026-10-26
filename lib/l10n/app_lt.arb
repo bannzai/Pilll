@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Apžvelkime šią tablečių plokštel",
   "endedPillSheetDialogSummaryMessage": "vartojimo įrašų turinčių dienų: {recordedDays} · be įrašo: {missedDays}",
   "midnightTakenWarningDialogTitle": "Atkreipkite dėmesį",
-  "midnightTakenWarningDialogBody": "Vartojimas užregistruotas iki {takenDate}. Šiandienos ({takenDate}) priminimas {reminderTimes} nebus pristatytas.\nJei tai klaida, atšaukite vartojimo įrašą.",
+  "midnightTakenWarningDialogBody": "Taip pat sukurtas vartojimo įrašas, skirtas {takenDate}. Šiandien, {takenDate}, {reminderTimes} val. priminimo negausite.\nJei tai klaida, galite atšaukti užregistruotą tabletės vartojimą",
   "midnightTakenWarningDialogSeeHowToRevert": "Peržiūrėti, kaip atšaukti vartojimo įrašą",
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "pauseStartDateMustBeOnOrBefore": "Pasirinkite pertraukos pradžios datą {date} arba ankstesnę",

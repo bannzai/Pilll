@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Давайте посмотрим, как прошёл приём таблеток из этого блистера",
   "endedPillSheetDialogSummaryMessage": "журнал приёма таблеток: {recordedDays} дней · без записи: {missedDays} дней",
   "midnightTakenWarningDialogTitle": "Обратите внимание",
-  "midnightTakenWarningDialogBody": "Приём таблеток отмечен как выполненный по {takenDate} включительно. Сегодняшнее ({takenDate}) уведомление-напоминание в {reminderTimes} не будет отправлено.\nЕсли это ошибка, отмените запись о приёме.",
+  "midnightTakenWarningDialogBody": "Для {takenDate} также создан журнал приёма таблеток. Сегодня, {takenDate}, уведомление на {reminderTimes} вам не придёт.\nЕсли запись сделана по ошибке, отмените отмеченный приём таблетки",
   "midnightTakenWarningDialogSeeHowToRevert": "Посмотреть, как отменить запись о приёме",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
   "pauseStartDateMustBeOnOrBefore": "Выберите дату начала перерыва {date} или раньше",

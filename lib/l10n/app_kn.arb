@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ದಾಖಲೆಯನ್ನು ಒಮ್ಮೆ ನೋಡೋಣ",
   "endedPillSheetDialogSummaryMessage": "ಸೇವನೆಯ ದಾಖಲೆ: {recordedDays} ದಿನ · ದಾಖಲಾಗದವು: {missedDays} ದಿನ",
   "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ",
-  "midnightTakenWarningDialogBody": "{takenDate} ವರೆಗಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಾಗಿದೆ. ಇಂದು ({takenDate}) {reminderTimes} ಸಮಯದ ಸೂಚನೆ ನಿಮಗೆ ತಲುಪುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೇವನೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",
+  "midnightTakenWarningDialogBody": "{takenDate} ಗಾಗಿಯೂ ಸೇವನೆಯ ದಾಖಲೆ ಮಾಡಲಾಗಿದೆ. ಇಂದು {takenDate} ರಂದು {reminderTimes} ಸಮಯದ ನೆನಪಿನ ಸೂಚನೆ ನಿಮಗೆ ಬರುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿ ದಾಖಲಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ದಾಖಲಾದ ಮಾತ್ರೆ ಸೇವನೆಯನ್ನು ರದ್ದುಪಡಿಸಿ",
   "midnightTakenWarningDialogSeeHowToRevert": "ಸೇವನೆ ರದ್ದುಗೊಳಿಸುವ ವಿಧಾನವನ್ನು ನೋಡಿ",
   "midnightTakenWarningDialogNeverShowAgain": "ಇನ್ನು ಮುಂದೆ ತೋರಿಸಬೇಡಿ",
   "pauseStartDateMustBeOnOrBefore": "ದಯವಿಟ್ಟು {date} ಅಥವಾ ಅದಕ್ಕೂ ಮೊದಲಿನ ವಿರಾಮ ಆರಂಭ ದಿನಾಂಕ ಆಯ್ಕೆಮಾಡಿ",

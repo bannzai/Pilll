@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Mari lihat kembali strip pil ini",
   "endedPillSheetDialogSummaryMessage": "catatan minum pil: {recordedDays} hari · belum tercatat: {missedDays} hari",
   "midnightTakenWarningDialogTitle": "Mohon perhatikan",
-  "midnightTakenWarningDialogBody": "Catatan konsumsi pil hingga {takenDate} telah dibuat. Notifikasi pengingat pukul {reminderTimes} untuk hari ini ({takenDate}) tidak akan dikirim.\nJika ini adalah kesalahan, silakan batalkan catatan konsumsi tersebut",
+  "midnightTakenWarningDialogBody": "Catatan minum pil untuk {takenDate} juga sudah dibuat. Hari ini, {takenDate}, Anda tidak akan menerima pengingat pukul {reminderTimes}.\nJika ini keliru, silakan batalkan catatan minum pil tersebut",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan konsumsi",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tampilkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Pilih tanggal mulai jeda pada {date} atau sebelumnya",

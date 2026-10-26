@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Vamos rever esta cartela",
   "endedPillSheetDialogSummaryMessage": "registro de uso: {recordedDays} dias · sem registro: {missedDays} dias",
   "midnightTakenWarningDialogTitle": "Atenção",
-  "midnightTakenWarningDialogBody": "O registro de tomada foi feito até {takenDate}. O lembrete de hoje ({takenDate}) às {reminderTimes} não será enviado.\nSe isso foi um engano, desfaça o registro de tomada.",
+  "midnightTakenWarningDialogBody": "Também foi criado um registro de uso para {takenDate}. Hoje, {takenDate}, você não receberá o lembrete das {reminderTimes}.\nSe foi um engano, você pode cancelar a dose registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como desfazer o registro de tomada",
   "midnightTakenWarningDialogNeverShowAgain": "Não mostrar novamente",
   "pauseStartDateMustBeOnOrBefore": "Selecione uma data de início da pausa em {date} ou antes",

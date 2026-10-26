@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Давайце ўспомнім, як вы прымалі пігулкі з гэтага блістара",
   "endedPillSheetDialogSummaryMessage": "Запісы прыёму пігулак: {recordedDays} дзён · без запісу: {missedDays} дзён",
   "midnightTakenWarningDialogTitle": "Звярніце ўвагу",
-  "midnightTakenWarningDialogBody": "Прыём таблетак быў запісаны ўключна да {takenDate}. Сённяшняе паведамленне ({takenDate}) у {reminderTimes} не прыйдзе.\nКалі гэта памылка, скасуйце прыём.",
+  "midnightTakenWarningDialogBody": "Для {takenDate} таксама зроблены запіс прыёму пігулак. Сёння, {takenDate}, апавяшчэнне на {reminderTimes} вам не прыйдзе.\nКалі гэта памылка, калі ласка, скасуйце запіс пра прыём пігулкі",
   "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём",
   "midnightTakenWarningDialogNeverShowAgain": "Больш не паказваць",
   "pauseStartDateMustBeOnOrBefore": "Выберыце дату пачатку перапынку не пазней за {date}",

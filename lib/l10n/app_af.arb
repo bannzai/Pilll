@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Kom ons kyk terug na hierdie pilstrokie",
   "endedPillSheetDialogSummaryMessage": "innamerekord: {recordedDays} dae · nie aangeteken nie: {missedDays} dae",
   "midnightTakenWarningDialogTitle": "Let asseblief op",
-  "midnightTakenWarningDialogBody": "Jou pille is aangeteken as geneem tot en met {takenDate}. Vandag se ({takenDate}) kennisgewing om {reminderTimes} sal nie afgelewer word nie.\nAs dit 'n fout was, keer asseblief die innameaantekening terug.",
+  "midnightTakenWarningDialogBody": "Die innamerekord vir {takenDate} is ook gemaak. Jy sal vandag, {takenDate}, nie die kennisgewing vir {reminderTimes} ontvang nie.\nAs dit ’n fout was, kan jy asseblief die aangetekende inname kanselleer",
   "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie dit weer wys nie",
   "pauseStartDateMustBeOnOrBefore": "Kies 'n begindatum vir die ruskans op of voor {date}",

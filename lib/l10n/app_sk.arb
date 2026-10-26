@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Pozrime sa späť na tento blist",
   "endedPillSheetDialogSummaryMessage": "záznam o užití: {recordedDays} dní · bez záznamu: {missedDays} dní",
   "midnightTakenWarningDialogTitle": "Venujte, prosím, pozornosť",
-  "midnightTakenWarningDialogBody": "Záznam o užití bol vykonaný až do dňa {takenDate}. Dnešné upozornenie ({takenDate}) o {reminderTimes} preto nebude doručené.\nAk ide o omyl, zrušte prosím záznam o užití.",
+  "midnightTakenWarningDialogBody": "Pre {takenDate} bol vytvorený aj záznam o užití. Dnes, {takenDate}, vám upozornenie na {reminderTimes} nepríde.\nAk ide o omyl, môžete zaznamenané užitie zrušiť",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrieť návod na zrušenie záznamu o užití",
   "midnightTakenWarningDialogNeverShowAgain": "Túto správu už nezobrazovať",
   "pauseStartDateMustBeOnOrBefore": "Vyberte dátum začiatku prestávky {date} alebo skorší",

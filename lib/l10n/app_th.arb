@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "มาทบทวนการใช้แผงยานี้กันค่ะ",
   "endedPillSheetDialogSummaryMessage": "บันทึกการทานยา {recordedDays} วัน · ไม่ได้บันทึก {missedDays} วันค่ะ",
   "midnightTakenWarningDialogTitle": "โปรดทราบ",
-  "midnightTakenWarningDialogBody": "มีการบันทึกว่าคุณได้รับประทานยาจนถึงวันที่ {takenDate} แล้ว การแจ้งเตือนของวันนี้ ({takenDate}) เวลา {reminderTimes} จะไม่ถูกส่งถึงคุณ\nหากเป็นการบันทึกผิดพลาด กรุณายกเลิกการบันทึกการรับประทานยา",
+  "midnightTakenWarningDialogBody": "มีบันทึกการทานยาสำหรับ {takenDate} แล้วค่ะ วันนี้ {takenDate} คุณจะไม่ได้รับการแจ้งเตือนเวลา {reminderTimes} ค่ะ\nหากบันทึกผิด โปรดยกเลิกการทานยาที่บันทึกไว้ค่ะ",
   "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธีการยกเลิกการบันทึกการรับประทานยา",
   "midnightTakenWarningDialogNeverShowAgain": "ไม่แสดงข้อความนี้อีก",
   "pauseStartDateMustBeOnOrBefore": "โปรดเลือกวันเริ่มพักยาเป็นวันที่ {date} หรือก่อนหน้านั้น",

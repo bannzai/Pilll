@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "ఈ మాత్రల స్ట్రిప్‌కి సంబంధించిన నమోదులను ఒకసారి చూద్దాం",
   "endedPillSheetDialogSummaryMessage": "మాత్రల నమోదు: {recordedDays} రోజులు · నమోదు కానివి: {missedDays} రోజులు",
   "midnightTakenWarningDialogTitle": "దయచేసి గమనించండి",
-  "midnightTakenWarningDialogBody": "{takenDate} వరకు మాత్ర తీసుకున్నట్లు నమోదు చేయబడింది. {takenDate} అయిన ఈ రోజు {reminderTimes}కి వచ్చే నోటిఫికేషన్ మీకు అందదు.\nపొరపాటు జరిగితే, దయచేసి తీసుకున్న రికార్డును రద్దు చేయండి",
+  "midnightTakenWarningDialogBody": "{takenDate} కోసం కూడా మాత్రల నమోదు జరిగింది. ఈ రోజు {takenDate}న {reminderTimes} సమయానికి మీకు రిమైండర్ రాదు.\nపొరపాటున నమోదు చేసి ఉంటే, నమోదు చేసిన మాత్ర తీసుకోవడాన్ని రద్దు చేయండి",
   "midnightTakenWarningDialogSeeHowToRevert": "తీసుకున్న రికార్డును ఎలా రద్దు చేయాలో చూడండి",
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపించవద్దు",
   "pauseStartDateMustBeOnOrBefore": "దయచేసి {date} లేదా అంతకు ముందు విరామ ప్రారంభ తేదీని ఎంచుకోండి",

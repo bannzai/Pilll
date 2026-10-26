@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Bu blister kullanımını birlikte gözden geçirelim",
   "endedPillSheetDialogSummaryMessage": "hap kullanım kaydı: {recordedDays} gün · kayıtsız: {missedDays} gün",
   "midnightTakenWarningDialogTitle": "Lütfen dikkat edin",
-  "midnightTakenWarningDialogBody": "{takenDate} tarihine kadar olan hap alım kayıtlarınız oluşturuldu. Bugün ({takenDate}) için {reminderTimes} saatindeki hatırlatma bildirimi gönderilmeyecek.\nBu bir hataysa lütfen alım kaydını geri alın.",
+  "midnightTakenWarningDialogBody": "{takenDate} için de hap kullanım kaydı oluşturuldu. Bugün, {takenDate} tarihinde, {reminderTimes} bildirimini almayacaksınız.\nBu bir hataysa lütfen kaydedilen hap alımını iptal edin",
   "midnightTakenWarningDialogSeeHowToRevert": "Alım kaydını geri alma yöntemini görüntüle",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha gösterme",
   "pauseStartDateMustBeOnOrBefore": "Lütfen ara başlangıç tarihini {date} veya öncesi olarak seçin",

@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Mari lihat semula pek pil ini",
   "endedPillSheetDialogSummaryMessage": "rekod pengambilan: {recordedDays} hari · tanpa rekod: {missedDays} hari",
   "midnightTakenWarningDialogTitle": "Sila ambil perhatian",
-  "midnightTakenWarningDialogBody": "Rekod pengambilan pil anda telah disimpan sehingga {takenDate}. Pemberitahuan peringatan pada {reminderTimes} untuk hari ini ({takenDate}) tidak akan dihantar.\nJika ini adalah kesilapan, sila batalkan rekod pengambilan tersebut.",
+  "midnightTakenWarningDialogBody": "Rekod pengambilan untuk {takenDate} juga telah dibuat. Hari ini, {takenDate}, anda tidak akan menerima peringatan pada {reminderTimes}.\nJika tersilap, sila batalkan pengambilan yang direkodkan",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Sila pilih tarikh mula rehat pada {date} atau sebelumnya",

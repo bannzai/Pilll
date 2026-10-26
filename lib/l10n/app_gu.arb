@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "ચાલો, ગોળીની સ્ટ્રિપની આ વખતની નોંધો જોઈએ",
   "endedPillSheetDialogSummaryMessage": "ગોળી સેવનની નોંધ: {recordedDays} દિવસ · નોંધ વગર: {missedDays} દિવસ",
   "midnightTakenWarningDialogTitle": "કૃપા કરીને ધ્યાન આપો",
-  "midnightTakenWarningDialogBody": "{takenDate} સુધીની ગોળીઓ સેવન તરીકે નોંધાઈ ગઈ છે. આજે એટલે કે {takenDate} ના રોજ {reminderTimes} ની સૂચના તમને નહીં મળે.\nજો આ ભૂલથી થયું હોય, તો કૃપા કરીને સેવન રેકોર્ડ રદ કરો",
+  "midnightTakenWarningDialogBody": "{takenDate} માટે પણ ગોળી સેવનની નોંધ થઈ ગઈ છે. આજે, {takenDate}ના રોજ, {reminderTimes} વાગ્યાની સૂચના તમને મળશે નહીં.\nજો આ ભૂલથી થયું હોય, તો કૃપા કરીને નોંધાયેલું ગોળી સેવન રદ કરો",
   "midnightTakenWarningDialogSeeHowToRevert": "સેવન રદ કરવાની રીત જુઓ",
   "midnightTakenWarningDialogNeverShowAgain": "ફરીથી બતાવશો નહીં",
   "pauseStartDateMustBeOnOrBefore": "કૃપા કરીને {date} અથવા તે પહેલાંની વિરામ શરૂઆતની તારીખ પસંદ કરો",

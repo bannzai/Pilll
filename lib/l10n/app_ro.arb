@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Să privim înapoi la acest blister",
   "endedPillSheetDialogSummaryMessage": "înregistrare: {recordedDays} zile · fără înregistrare: {missedDays} zile",
   "midnightTakenWarningDialogTitle": "Te rugăm să fii atentă",
-  "midnightTakenWarningDialogBody": "Administrarea pilulei a fost înregistrată ca fiind luată până în data de {takenDate}. Notificarea de reamintire de astăzi ({takenDate}), programată pentru ora {reminderTimes}, nu va fi trimisă.\nDacă aceasta este o greșeală, vă rugăm să anulați administrarea.",
+  "midnightTakenWarningDialogBody": "A fost adăugată și o înregistrare pentru {takenDate}. Astăzi, {takenDate}, nu vei primi notificarea de la {reminderTimes}.\nDacă a fost o greșeală, poți anula administrarea înregistrată",
   "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum să anulezi administrarea",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa din nou",
   "pauseStartDateMustBeOnOrBefore": "Selectați o dată de început a pauzei pe {date} sau mai devreme",

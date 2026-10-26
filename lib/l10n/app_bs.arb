@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Pogledajmo zajedno kako ste koristili ovaj blister",
   "endedPillSheetDialogSummaryMessage": "Dana u evidenciji: {recordedDays} · dana bez evidencije: {missedDays}",
   "midnightTakenWarningDialogTitle": "Molimo Vas, obratite pažnju",
-  "midnightTakenWarningDialogBody": "Zapisi o uzimanju su izvršeni zaključno sa {takenDate}. Današnje ({takenDate}) obavještenje u {reminderTimes} neće biti dostavljeno.\nAko je ovo greška, molimo poništite zapis o uzimanju.",
+  "midnightTakenWarningDialogBody": "Unos je dodat i u evidencijу uzimanja za {takenDate}. Danas, {takenDate}, nećete dobiti obavijest za {reminderTimes}.\nAko je ovo greška, molimo Vas da poništite zabilježeno uzimanje",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovo",
   "pauseStartDateMustBeOnOrBefore": "Odaberite datum početka pauze na dan {date} ili ranije",

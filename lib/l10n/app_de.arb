@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Schauen wir uns diesen Pillenblister noch einmal an",
   "endedPillSheetDialogSummaryMessage": "Einnahmeprotokoll: {recordedDays} Tage · ohne Eintrag: {missedDays} Tage",
   "midnightTakenWarningDialogTitle": "Bitte beachte",
-  "midnightTakenWarningDialogBody": "Die Einnahme wurde bis einschließlich {takenDate} aufgezeichnet. Die heutige ({takenDate}) Benachrichtigung um {reminderTimes} wird nicht zugestellt.\nFalls dies ein Versehen war, stornieren Sie bitte die Einnahme.",
+  "midnightTakenWarningDialogBody": "Für {takenDate} wurde ebenfalls ein Einnahmeprotokoll angelegt. Die Erinnerung um {reminderTimes} erhältst du heute, am {takenDate}, nicht.\nFalls das ein Versehen war, kannst du die erfasste Einnahme rückgängig machen",
   "midnightTakenWarningDialogSeeHowToRevert": "Anleitung zum Stornieren der Einnahme ansehen",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "pauseStartDateMustBeOnOrBefore": "Bitte wähle ein Startdatum der Pause am {date} oder davor",

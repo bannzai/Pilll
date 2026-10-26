@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Ake sibheke ukusetshenziswa kwaleli shidi lamaphilisi",
   "endedPillSheetDialogSummaryMessage": "rekhodi lokuphuza amaphilisi: izinsuku ezingu-{recordedDays} · ezingabhalisiwe: ezingu-{missedDays}",
   "midnightTakenWarningDialogTitle": "Sicela uqaphele",
-  "midnightTakenWarningDialogBody": "Amaphilisi akho arekhodiwe njengokuthathiwe kuze kube ku-{takenDate}. Isaziso sanamuhla ({takenDate}) ngo-{reminderTimes} ngeke sifike.\nUma lokhu kwenzeke ngephutha, sicela ususe irekhodi lokuthatha.",
+  "midnightTakenWarningDialogBody": "Kwenziwe ne-rekhodi lokuphuza amaphilisi lika-{takenDate}. Namuhla, {takenDate}, ngeke uthole isikhumbuzi sika-{reminderTimes}.\nUma lokhu kube yiphutha, sicela ukhansele ukuphuza okurekhodiwe",
   "midnightTakenWarningDialogSeeHowToRevert": "Bona indlela yokususa irekhodi lokuthatha",
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukhombise lokhu",
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe usuku lokuqala kwekhefu ngo-{date} noma ngaphambili",

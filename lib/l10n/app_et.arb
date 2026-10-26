@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Vaatame sellele pillilehele tagasi",
   "endedPillSheetDialogSummaryMessage": "võtmiskirje: {recordedDays} päeva · kirjeta: {missedDays} päeva",
   "midnightTakenWarningDialogTitle": "Pane tähele",
-  "midnightTakenWarningDialogBody": "Teie tabletid on märgitud võetuks kuni {takenDate}. Tänase ({takenDate}) päeva teavitus kell {reminderTimes} jääb saatmata.\nKui see oli eksitus, palun tühistage võtmiskirje.",
+  "midnightTakenWarningDialogBody": "Ka kuupäeva {takenDate} jaoks loodi võtmiskirje. Täna, {takenDate}, ei saa sa kell {reminderTimes} meeldetuletust.\nKui see juhtus kogemata, saad märgitud pillivõtmise tühistada",
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas võtmiskirjet tühistada",
   "midnightTakenWarningDialogNeverShowAgain": "Ära näita seda enam",
   "pauseStartDateMustBeOnOrBefore": "Vali pausi alguskuupäev {date} või varasem",

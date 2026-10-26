@@ -554,7 +554,7 @@
   "endedPillSheetDialogSummaryTitle": "Rivediamo insieme questo blister",
   "endedPillSheetDialogSummaryMessage": "registro delle assunzioni: {recordedDays} giorni · senza registrazione: {missedDays} giorni",
   "midnightTakenWarningDialogTitle": "Fai attenzione",
-  "midnightTakenWarningDialogBody": "Le pillole risultano registrate come assunte fino al {takenDate}. La notifica di oggi ({takenDate}) delle {reminderTimes} non ti verrà consegnata.\nSe si tratta di un errore, annulla l'assunzione registrata.",
+  "midnightTakenWarningDialogBody": "È stata creata anche una voce nel registro delle assunzioni per il {takenDate}. Oggi, {takenDate}, non riceverai la notifica delle {reminderTimes}.\nSe si tratta di un errore, puoi annullare l’assunzione registrata",
   "midnightTakenWarningDialogSeeHowToRevert": "Vedi come annullare l'assunzione registrata",
   "midnightTakenWarningDialogNeverShowAgain": "Non mostrare più questo messaggio",
   "pauseStartDateMustBeOnOrBefore": "Seleziona una data di inizio pausa il {date} o prima",
