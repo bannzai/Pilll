@@ -445,7 +445,7 @@
   "debugInfoLabel": "പിശക് കണ്ടെത്താനുള്ള വിവരങ്ങൾ (സ്വയമേവ പൂരിപ്പിച്ചത്)",
   "inquirySent": "നിങ്ങളുടെ സന്ദേശം അയച്ചു",
   "sendInquiry": "അയയ്ക്കൂ",
-  "invalidEmailFormat": "ദയവായി സാധുവായ ഇമെയിൽ വിലാസം നൽകുക",
+  "invalidEmailFormat": "സാധുവായ ഇമെയിൽ വിലാസം നൽകൂ",
   "emailCannotReceiveICloud": "ദയവായി @icloud.com ഒഴികെയുള്ള ഇമെയിൽ വിലാസം ഉപയോഗിക്കുക. മറുപടി മെയിലുകൾ പതിവായി തടയപ്പെടുന്നു",
   "emailReceiveSettingNote": "pilll.reminder.app@gmail.com എന്ന വിലാസത്തിൽ നിന്നുള്ള ഇമെയിലുകൾ സ്വീകരിക്കാൻ കഴിയുന്ന വിധം ക്രമീകരണങ്ങൾ നടത്തുക",
   "inquiryContentRequired": "ദയവായി അന്വേഷണ ഉള്ളടക്കം നൽകുക",

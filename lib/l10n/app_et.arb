@@ -445,7 +445,7 @@
   "debugInfoLabel": "Silumisteave (täidetakse automaatselt)",
   "inquirySent": "Sinu päring on saadetud",
   "sendInquiry": "Saada",
-  "invalidEmailFormat": "Palun sisestage kehtiv e-posti aadress",
+  "invalidEmailFormat": "Sisesta palun kehtiv e-posti aadress",
   "emailCannotReceiveICloud": "※Palun kasutage muud meiliaadress kui @icloud.com. Blokeerimisi esineb sageli.",
   "emailReceiveSettingNote": "※Palun seadistage oma e-posti nii, et saaksite vastu võtta kirju aadressilt pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Palun sisestage päringusisu",

@@ -445,7 +445,7 @@
   "debugInfoLabel": "Arazketa-informazioa (automatikoki beteta)",
   "inquirySent": "Zure kontsulta bidali da",
   "sendInquiry": "Bidali",
-  "invalidEmailFormat": "Mesedez, sartu baliozko helbide elektroniko bat",
+  "invalidEmailFormat": "Idatzi baliozko helbide elektroniko bat, mesedez",
   "emailCannotReceiveICloud": "※Mesedez, erabili @icloud.com ez den helbide elektronikoa. Blokeoak sarri gertatzen dira",
   "emailReceiveSettingNote": "※Mesedez, konfiguratu zure harpidetza pilll.reminder.app@gmail.com helbidetik datozen mezuak jaso ahal izateko",
   "inquiryContentRequired": "Mesedez, sartu kontsultaren edukia",

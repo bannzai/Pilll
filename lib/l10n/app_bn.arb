@@ -445,7 +445,7 @@
   "debugInfoLabel": "সমস্যা সমাধানের তথ্য (স্বয়ংক্রিয়ভাবে পূরণ করা হয়েছে)",
   "inquirySent": "আপনার বার্তা পাঠানো হয়েছে",
   "sendInquiry": "পাঠান",
-  "invalidEmailFormat": "অনুগ্রহ করে একটি বৈধ ইমেল ঠিকানা প্রবেশ করান",
+  "invalidEmailFormat": "অনুগ্রহ করে একটি সঠিক ইমেইল ঠিকানা লিখুন",
   "emailCannotReceiveICloud": "※অনুগ্রহ করে @icloud.com ছাড়া অন্য ইমেল ঠিকানা ব্যবহার করুন। ব্লক হওয়ার সমস্যা ঘন ঘন ঘটছে",
   "emailReceiveSettingNote": "※অনুগ্রহ করে pilll.reminder.app@gmail.com থেকে ইমেল গ্রহণ করার জন্য আপনার সেটিংস কনফিগার করুন",
   "inquiryContentRequired": "অনুগ্রহ করে জিজ্ঞাসার বিষয়বস্তু প্রবেশ করান",

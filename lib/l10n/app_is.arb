@@ -445,7 +445,7 @@
   "debugInfoLabel": "Villuleitarupplýsingar (fyllt út sjálfkrafa)",
   "inquirySent": "Fyrirspurnin þín hefur verið send",
   "sendInquiry": "Senda",
-  "invalidEmailFormat": "Vinsamlegast sláðu inn gilt netfang",
+  "invalidEmailFormat": "Sláðu inn gilt netfang",
   "emailCannotReceiveICloud": "Vinsamlegast notaðu annað netfang en @icloud.com. Svör berast oft ekki.",
   "emailReceiveSettingNote": "Vinsamlegast tryggðu að þú getir móttekið tölvupóst frá pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vinsamlegast sláðu inn efni fyrirspurnar",

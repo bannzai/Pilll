@@ -445,7 +445,7 @@
   "debugInfoLabel": "የስህተት ማረሚያ መረጃ (በራስ-ሰር የተሞላ)",
   "inquirySent": "ጥያቄዎ ተልኳል",
   "sendInquiry": "ይላኩ",
-  "invalidEmailFormat": "ትክክለኛ የኢሜይል አድራሻ ያስገቡ",
+  "invalidEmailFormat": "እባክዎ ትክክለኛ የኢሜይል አድራሻ ያስገቡ",
   "emailCannotReceiveICloud": "※እባክዎ ከ@icloud.com በስተቀር ሌላ የኢሜይል አድራሻ ይጠቀሙ። መልዕክቶች ብዙ ጊዜ ይታገዳሉ።",
   "emailReceiveSettingNote": "※ ከ pilll.reminder.app@gmail.com የሚመጡ ኢሜይሎችን መቀበል እንዲችሉ እባክዎን ቅንብሮችዎን ያዋቅሩ",
   "inquiryContentRequired": "እባክዎን የጥያቄ ይዘትን ያስገቡ",

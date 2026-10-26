@@ -445,7 +445,7 @@
   "debugInfoLabel": "调试信息（自动填写）",
   "inquirySent": "你的咨询已发送",
   "sendInquiry": "发送",
-  "invalidEmailFormat": "请输入有效的电子邮件地址",
+  "invalidEmailFormat": "请输入有效的电子邮箱地址",
   "emailCannotReceiveICloud": "请使用@icloud.com以外的电子邮箱地址，该邮箱的回复邮件经常被屏蔽",
   "emailReceiveSettingNote": "请设置以接收来自pilll.reminder.app@gmail.com的邮件",
   "inquiryContentRequired": "请输入咨询内容",

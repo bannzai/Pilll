@@ -445,7 +445,7 @@
   "debugInfoLabel": "ព័ត៌មានសម្រាប់ស្វែងរកកំហុស (បំពេញដោយស្វ័យប្រវត្តិ)",
   "inquirySent": "សាររបស់អ្នកត្រូវបានផ្ញើហើយ",
   "sendInquiry": "ផ្ញើ",
-  "invalidEmailFormat": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវ",
+  "invalidEmailFormat": "សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ",
   "emailCannotReceiveICloud": "សូមប្រើអាសយដ្ឋានអ៊ីមែលក្រៅពី @icloud.com ។ អ៊ីមែលឆ្លើយតបត្រូវបានទប់ស្កាត់ញឹកញាប់។",
   "emailReceiveSettingNote": "សូមធ្វើការកំណត់ដើម្បីអាចទទួលអ៊ីមែលពី pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "សូមបញ្ចូលខ្លឹមសារសំណួរ",

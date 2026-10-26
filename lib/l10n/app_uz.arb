@@ -445,7 +445,7 @@
   "debugInfoLabel": "Xatolarni aniqlash maʼlumotlari (avtomatik toʻldirilgan)",
   "inquirySent": "Murojaatingiz yuborildi",
   "sendInquiry": "Yuboring",
-  "invalidEmailFormat": "Yaroqli elektron pochta manzilini kiriting",
+  "invalidEmailFormat": "Iltimos, toʻgʻri elektron pochta manzilini kiriting",
   "emailCannotReceiveICloud": "Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",
   "emailReceiveSettingNote": "Iltimos, pilll.reminder.app@gmail.com dan xat qabul qilish uchun sozlamalarni o'rnating",
   "inquiryContentRequired": "Murojaat mazmunini kiriting",

@@ -445,7 +445,7 @@
   "debugInfoLabel": "Informații pentru depanare (completate automat)",
   "inquirySent": "Mesajul tău a fost trimis",
   "sendInquiry": "Trimite",
-  "invalidEmailFormat": "Vă rugăm să introduceți o adresă de e-mail validă",
+  "invalidEmailFormat": "Introdu o adresă de e-mail validă",
   "emailCannotReceiveICloud": "Vă rugăm să utilizați o altă adresă de email decât @icloud.com. Blocările sunt frecvente",
   "emailReceiveSettingNote": "Vă rugăm să configurați setările pentru a primi e-mailuri de la pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vă rugăm să introduceți conținutul mesajului",

@@ -445,7 +445,7 @@
   "debugInfoLabel": "خرابی کی جانچ کی معلومات (خودکار طور پر بھری گئی)",
   "inquirySent": "آپ کا پیغام بھیج دیا گیا ہے",
   "sendInquiry": "بھیجیں",
-  "invalidEmailFormat": "براہ کرم ایک درست ای میل ایڈریس درج کریں",
+  "invalidEmailFormat": "براہِ کرم درست ای میل پتہ درج کریں",
   "emailCannotReceiveICloud": "براہ کرم @icloud.com کے علاوہ ای میل ایڈریس استعمال کریں۔ اس سے اکثر بلاک کیا جا رہا ہے",
   "emailReceiveSettingNote": "براہ کرم اس بات کو یقینی بنائیں کہ آپ pilll.reminder.app@gmail.com سے ای میلز وصول کر سکیں",
   "inquiryContentRequired": "براہ کرم استفسار کا مواد درج کریں",

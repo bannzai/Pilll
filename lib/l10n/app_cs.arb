@@ -445,7 +445,7 @@
   "debugInfoLabel": "Informace pro ladění (vyplněno automaticky)",
   "inquirySent": "Váš dotaz byl odeslán",
   "sendInquiry": "Odeslat",
-  "invalidEmailFormat": "Zadejte platnou e-mailovou adresu",
+  "invalidEmailFormat": "Zadejte prosím platnou e-mailovou adresu",
   "emailCannotReceiveICloud": "※Prosím použijte jinou e-mailovou adresu než @icloud.com. Dochází k častému blokování.",
   "emailReceiveSettingNote": "※ Nastavte si prosím příjem e-mailů z adresy pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Zadejte prosím obsah dotazu",

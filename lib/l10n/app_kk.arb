@@ -445,7 +445,7 @@
   "debugInfoLabel": "Қателерді түзету ақпараты (автоматты түрде толтырылған)",
   "inquirySent": "Сіздің сұрауыңыз жіберілді",
   "sendInquiry": "Жіберу",
-  "invalidEmailFormat": "Дұрыс электрондық пошта мекенжайын енгізіңіз",
+  "invalidEmailFormat": "Жарамды электрондық пошта мекенжайын енгізіңіз",
   "emailCannotReceiveICloud": "@icloud.com-нан басқа электрондық пошта мекенжайын пайдаланыңыз. Блоктау жиі орын алуда",
   "emailReceiveSettingNote": "pilll.reminder.app@gmail.com мекенжайынан хат алуға баптауларды орнатуыңызды сұраймыз",
   "inquiryContentRequired": "Сұрау мазмұнын енгізіңіз",

@@ -445,7 +445,7 @@
   "debugInfoLabel": "Impormasyon para sa pag-aayos ng error (awtomatikong pinunan)",
   "inquirySent": "Naipadala na ang inyong mensahe",
   "sendInquiry": "Ipadala",
-  "invalidEmailFormat": "Mangyaring magpasok ng wastong email address",
+  "invalidEmailFormat": "Pakilagay po ang wastong email address",
   "emailCannotReceiveICloud": "※ Mangyaring gumamit ng email address maliban sa @icloud.com. Madalas ma-block ang mga email mula rito.",
   "emailReceiveSettingNote": "※Mangyaring siguraduhing makakatanggap kayo ng email mula sa pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Mangyaring ipasok ang nilalaman ng inyong katanungan",

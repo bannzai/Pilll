@@ -445,7 +445,7 @@
   "debugInfoLabel": "מידע לאיתור תקלות (ממולא אוטומטית)",
   "inquirySent": "הפנייה נשלחה",
   "sendInquiry": "שליחה",
-  "invalidEmailFormat": "אנא הזן כתובת אימייל תקפה",
+  "invalidEmailFormat": "נא להזין כתובת אימייל תקינה",
   "emailCannotReceiveICloud": "* נא להשתמש בכתובת דוא״ל שאינה @icloud.com. חסימות מתרחשות לעתים קרובות",
   "emailReceiveSettingNote": "※נא לוודא שתוכלו לקבל הודעות דוא\"ל מהכתובת pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "נא להזין את תוכן הפנייה",

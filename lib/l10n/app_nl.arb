@@ -445,7 +445,7 @@
   "debugInfoLabel": "Foutopsporingsgegevens (automatisch ingevuld)",
   "inquirySent": "Je bericht is verzonden",
   "sendInquiry": "Verzenden",
-  "invalidEmailFormat": "Voer een geldig e-mailadres in",
+  "invalidEmailFormat": "Vul een geldig e-mailadres in",
   "emailCannotReceiveICloud": "Gebruik alstublieft een ander e-mailadres dan @icloud.com. Berichten worden vaak geblokkeerd",
   "emailReceiveSettingNote": "Zorg ervoor dat u e-mails van pilll.reminder.app@gmail.com kunt ontvangen",
   "inquiryContentRequired": "Voer de inhoud van uw bericht in",

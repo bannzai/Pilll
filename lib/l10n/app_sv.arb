@@ -445,7 +445,7 @@
   "debugInfoLabel": "Felsökningsinformation (fylls i automatiskt)",
   "inquirySent": "Ditt meddelande har skickats",
   "sendInquiry": "Skicka",
-  "invalidEmailFormat": "Vänligen ange en giltig e-postadress",
+  "invalidEmailFormat": "Ange en giltig e-postadress",
   "emailCannotReceiveICloud": "Vänligen använd en annan e-postadress än @icloud.com. Det förekommer ofta blockering.",
   "emailReceiveSettingNote": "Se till att du kan ta emot e-post från pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Vänligen ange ditt meddelande",

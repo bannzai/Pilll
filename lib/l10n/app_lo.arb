@@ -445,7 +445,7 @@
   "debugInfoLabel": "ຂໍ້ມູນສຳລັບກວດຫາຂໍ້ຜິດພາດ (ຕື່ມອັດຕະໂນມັດ)",
   "inquirySent": "ສົ່ງຂໍ້ຄວາມຂອງທ່ານແລ້ວ",
   "sendInquiry": "ສົ່ງ",
-  "invalidEmailFormat": "ກະລຸນາໃສ່ທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
+  "invalidEmailFormat": "ກະລຸນາປ້ອນທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
   "emailCannotReceiveICloud": "ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມລນອກເໜືອຈາກ @icloud.com ເນື່ອງຈາກມີການບລັອກເກີດຂຶ້ນເປັນປະຈໍາ",
   "emailReceiveSettingNote": "ກະລຸນາຕັ້ງຄ່າເພື່ອສາມາດຮັບອີເມວຈາກ pilll.reminder.app@gmail.com ໄດ້",
   "inquiryContentRequired": "ກະລຸນາປ້ອນເນື້ອຫາການສອບຖາມ",

@@ -445,7 +445,7 @@
   "debugInfoLabel": "Informacije za otklanjanje grešaka (automatski popunjeno)",
   "inquirySent": "Vaš upit je poslan",
   "sendInquiry": "Pošaljite",
-  "invalidEmailFormat": "Molimo unesite važeću e-mail adresu",
+  "invalidEmailFormat": "Molimo Vas, unesite ispravnu adresu e-pošte",
   "emailCannotReceiveICloud": "※ Molimo koristite email adresu koja nije @icloud.com. Često dolazi do blokiranja.",
   "emailReceiveSettingNote": "※Molimo vas da podesite postavke kako biste mogli primati e-mailove sa adrese pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Molimo unesite sadržaj upita",

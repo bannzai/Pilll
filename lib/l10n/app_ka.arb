@@ -445,7 +445,7 @@
   "debugInfoLabel": "შეცდომების გამართვის ინფორმაცია (ავტომატურად შევსებული)",
   "inquirySent": "თქვენი შეტყობინება გაიგზავნა",
   "sendInquiry": "გაგზავნა",
-  "invalidEmailFormat": "გთხოვთ, შეიყვანოთ სწორი ელფოსტის მისამართი",
+  "invalidEmailFormat": "გთხოვთ, შეიყვანოთ ელფოსტის სწორი მისამართი",
   "emailCannotReceiveICloud": "გთხოვთ, გამოიყენოთ ელფოსტის მისამართი @icloud.com-ის გარდა. ხშირად ხდება დაბლოკვა",
   "emailReceiveSettingNote": "გთხოვთ, დააკონფიგურიროთ თქვენი პარამეტრები pilll.reminder.app@gmail.com-დან ელ. ფოსტის მისაღებად",
   "inquiryContentRequired": "გთხოვთ შეიყვანოთ მიმართვის შინაარსი",

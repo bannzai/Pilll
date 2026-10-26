@@ -445,7 +445,7 @@
   "debugInfoLabel": "Gwybodaeth dadfygio (wedi'i llenwi'n awtomatig)",
   "inquirySent": "Mae eich ymholiad wedi'i anfon",
   "sendInquiry": "Anfonwch",
-  "invalidEmailFormat": "Rhowch gyfeiriad e-bost dilys",
+  "invalidEmailFormat": "Rhowch gyfeiriad e-bost dilys, os gwelwch yn dda",
   "emailCannotReceiveICloud": "※ Defnyddiwch gyfeiriad e-bost heblaw @icloud.com. Mae e-byst ateb yn cael eu blocio'n aml",
   "emailReceiveSettingNote": "※Sicrhewch eich bod yn gallu derbyn e-byst o pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Nodwch gynnwys eich ymholiad",

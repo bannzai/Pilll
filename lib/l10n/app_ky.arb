@@ -445,7 +445,7 @@
   "debugInfoLabel": "Каталарды оңдоо маалыматы (автоматтык түрдө толтурулат)",
   "inquirySent": "Сиздин кайрылууңуз жөнөтүлдү",
   "sendInquiry": "Жөнөтүңүз",
-  "invalidEmailFormat": "Туура электрондук почта дарегин киргизиңиз",
+  "invalidEmailFormat": "Жарактуу электрондук почта дарегин киргизиңиз",
   "emailCannotReceiveICloud": "@icloud.com дарегинен башка электрондук почта дарегин колдонуңуз. Блоктолуулар көп болуп жатат",
   "emailReceiveSettingNote": "pilll.reminder.app@gmail.com дарегинен келген катты кабыл алуу үчүн, жөндөөлөрдү текшериңиз",
   "inquiryContentRequired": "Кайрылуу мазмунун киргизиңиз",

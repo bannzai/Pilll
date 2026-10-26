@@ -445,7 +445,7 @@
   "debugInfoLabel": "දෝෂ සෙවීමේ තොරතුරු (ස්වයංක්‍රීයව පුරවා ඇත)",
   "inquirySent": "ඔබේ පණිවිඩය යවා ඇත",
   "sendInquiry": "යවන්න",
-  "invalidEmailFormat": "වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න",
+  "invalidEmailFormat": "කරුණාකර වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න",
   "emailCannotReceiveICloud": "කරුණාකර @icloud.com හැර වෙනත් ඊමේල් ලිපිනයක් භාවිතා කරන්න. අවහිර කිරීම් නිතර සිදු වේ",
   "emailReceiveSettingNote": "කරුණාකර pilll.reminder.app@gmail.com වෙතින් ඊමේල් ලබා ගත හැකි වන පරිදි සැකසුම් සකස් කරන්න",
   "inquiryContentRequired": "කරුණාකර විමසීමේ අන්තර්ගතය ඇතුළත් කරන්න",

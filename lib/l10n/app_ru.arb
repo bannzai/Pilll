@@ -445,7 +445,7 @@
   "debugInfoLabel": "Данные для отладки (заполняются автоматически)",
   "inquirySent": "Ваше обращение отправлено",
   "sendInquiry": "Отправить",
-  "invalidEmailFormat": "Введите корректный адрес электронной почты",
+  "invalidEmailFormat": "Пожалуйста, введите действительный адрес электронной почты",
   "emailCannotReceiveICloud": "Пожалуйста, используйте адрес электронной почты, отличный от @icloud.com. Письма часто блокируются",
   "emailReceiveSettingNote": "Пожалуйста, настройте получение писем с адреса pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Пожалуйста, введите текст обращения",

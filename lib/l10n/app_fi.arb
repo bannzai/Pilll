@@ -445,7 +445,7 @@
   "debugInfoLabel": "Virheenjäljitystiedot (täytetään automaattisesti)",
   "inquirySent": "Yhteydenottosi on lähetetty",
   "sendInquiry": "Lähetä",
-  "invalidEmailFormat": "Syötä kelvollinen sähköpostiosoite",
+  "invalidEmailFormat": "Anna kelvollinen sähköpostiosoite",
   "emailCannotReceiveICloud": "※Käytä muuta sähköpostiosoitetta kuin @icloud.com. Viestit estetään usein.",
   "emailReceiveSettingNote": "※Varmistathan, että voit vastaanottaa sähköposteja osoitteesta pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Anna yhteydenoton sisältö",

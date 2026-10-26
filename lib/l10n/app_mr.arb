@@ -445,7 +445,7 @@
   "debugInfoLabel": "त्रुटी शोधण्याची माहिती (आपोआप भरलेली)",
   "inquirySent": "तुमचा संदेश पाठवला आहे",
   "sendInquiry": "पाठवा",
-  "invalidEmailFormat": "कृपया वैध ईमेल पत्ता प्रविष्ट करा",
+  "invalidEmailFormat": "कृपया वैध ईमेल पत्ता टाका",
   "emailCannotReceiveICloud": "कृपया @icloud.com व्यतिरिक्त ईमेल पत्ता वापरा. वारंवार ब्लॉक होत आहे",
   "emailReceiveSettingNote": "कृपया pilll.reminder.app@gmail.com पासून ईमेल प्राप्त करण्यासाठी सेटिंग्ज कॉन्फिगर करा",
   "inquiryContentRequired": "कृपया चौकशी विषय प्रविष्ट करा",

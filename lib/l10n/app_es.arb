@@ -445,7 +445,7 @@
   "debugInfoLabel": "Información de depuración (completada automáticamente)",
   "inquirySent": "Tu consulta se ha enviado",
   "sendInquiry": "Enviar",
-  "invalidEmailFormat": "Por favor, introduce una dirección de correo electrónico válida",
+  "invalidEmailFormat": "Introduce una dirección de correo electrónico válida",
   "emailCannotReceiveICloud": "*Por favor, utilice una dirección de correo diferente a @icloud.com, ya que los mensajes suelen ser bloqueados con frecuencia",
   "emailReceiveSettingNote": "※Por favor, configure su correo para poder recibir mensajes de pilll.reminder.app@gmail.com",
   "inquiryContentRequired": "Por favor, ingrese el contenido de su consulta",
