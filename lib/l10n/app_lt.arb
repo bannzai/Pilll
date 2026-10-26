@@ -561,7 +561,7 @@
   "addPausePeriod": "Pridėti tablečių vartojimo pertrauką",
   "addedPausePeriod": "Pridėtas tablečių vartojimo pertraukos laikotarpis",
   "pausePeriodOverlapsOther": "Negalite pasirinkti laikotarpio, kuris sutampa su kita tablečių vartojimo pertrauka",
-  "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data.",
+  "pauseEndDateMustBeAfterStartDate": "Pasirinkite tablečių vartojimo pertraukos pabaigos datą, vėlesnę už pradžios datą",
   "plannedResumeDateOptional": "Planuojama vartojimo atnaujinimo data (nebūtina)",
   "plannedResumeDateNotSet": "Nenustatyta",
   "selectPlannedResumeDate": "Pasirinkite numatytą vartojimo atnaujinimo datą",

@@ -561,7 +561,7 @@
   "addPausePeriod": "Добавяне на пауза в приема на хапчета",
   "addedPausePeriod": "Периодът на почивка от хапчетата е добавен",
   "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друга пауза в приема на хапчета",
-  "pauseEndDateMustBeAfterStartDate": "Моля, изберете дата след началната дата за край на паузата в приема.",
+  "pauseEndDateMustBeAfterStartDate": "Моля, изберете крайна дата на почивката от хапчетата след началната дата",
   "plannedResumeDateOptional": "Планирана дата за подновяване на приема (по избор)",
   "plannedResumeDateNotSet": "Не е зададено",
   "selectPlannedResumeDate": "Изберете планираната дата за подновяване на приема",

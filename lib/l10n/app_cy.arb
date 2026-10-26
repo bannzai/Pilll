@@ -561,7 +561,7 @@
   "addPausePeriod": "Ychwanegu cyfnod o saib o gymryd y bilsen",
   "addedPausePeriod": "Mae’r cyfnod saib rhag cymryd y bilsen wedi’i ychwanegu",
   "pausePeriodOverlapsOther": "Ni allwch ddewis cyfnod sy’n gorgyffwrdd â chyfnod arall o seibiant rhag cymryd y bilsen",
-  "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad ar ôl y dyddiad cychwyn ar gyfer dyddiad gorffen yr egwyl cymryd, os gwelwch yn dda.",
+  "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad gorffen y seibiant o gymryd y bilsen sydd ar ôl y dyddiad dechrau",
   "plannedResumeDateOptional": "Dyddiad ailddechrau cymryd wedi’i gynllunio (dewisol)",
   "plannedResumeDateNotSet": "Heb ei osod",
   "selectPlannedResumeDate": "Dewiswch y dyddiad a drefnwyd i ailddechrau cymryd",

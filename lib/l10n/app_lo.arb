@@ -561,7 +561,7 @@
   "addPausePeriod": "ເພີ່ມໄລຍະພັກກິນຢາເມັດ",
   "addedPausePeriod": "ເພີ່ມໄລຍະພັກການກິນຢາເມັດແລ້ວ",
   "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກຊ່ວງເວລາທີ່ຊ້ອນກັບຊ່ວງພັກການກິນຢາເມັດອື່ນໄດ້",
-  "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນທີຫຼັງຈາກວັນເລີ່ມຕົ້ນເປັນວັນສິ້ນສຸດຂອງໄລຍະພັກການຮັບປະທານ.",
+  "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນສິ້ນສຸດຊ່ວງພັກການກິນຢາເມັດ ໃຫ້ຢູ່ຫຼັງວັນເລີ່ມຕົ້ນ",
   "plannedResumeDateOptional": "ວັນທີວາງແຜນຈະເລີ່ມຮັບປະທານອີກຄັ້ງ (ບໍ່ບັງຄັບ)",
   "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ຕັ້ງ",
   "selectPlannedResumeDate": "ເລືອກວັນທີທີ່ວາງແຜນຈະກັບມາຮັບປະທານ",

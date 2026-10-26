@@ -561,7 +561,7 @@
   "addPausePeriod": "Tabletka qabul qilishdagi tanaffusni qoʻshing",
   "addedPausePeriod": "Tabletkalarni qabul qilishdagi tanaffus davri qoʻshildi",
   "pausePeriodOverlapsOther": "Siz tabletkalarni qabul qilishdagi boshqa tanaffus bilan ustma-ust keladigan davrni tanlay olmaysiz",
-  "pauseEndDateMustBeAfterStartDate": "Iltimos, qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang.",
+  "pauseEndDateMustBeAfterStartDate": "Tabletka qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang",
   "plannedResumeDateOptional": "Qabulni qayta boshlash rejalashtirilgan sana (ixtiyoriy)",
   "plannedResumeDateNotSet": "Belgilanmagan",
   "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",

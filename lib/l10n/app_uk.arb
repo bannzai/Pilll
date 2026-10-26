@@ -561,7 +561,7 @@
   "addPausePeriod": "Додати перерву в прийомі пігулок",
   "addedPausePeriod": "Період перерви в прийомі пігулок додано",
   "pausePeriodOverlapsOther": "Ви не можете вибрати період, який збігається з іншою перервою в прийомі пігулок",
-  "pauseEndDateMustBeAfterStartDate": "Будь ласка, виберіть дату завершення перерви в прийомі пізніше за дату початку.",
+  "pauseEndDateMustBeAfterStartDate": "Виберіть дату завершення перерви в прийомі пігулок пізніше за дату початку",
   "plannedResumeDateOptional": "Запланована дата відновлення прийому (необов’язково)",
   "plannedResumeDateNotSet": "Не задано",
   "selectPlannedResumeDate": "Виберіть заплановану дату відновлення прийому",

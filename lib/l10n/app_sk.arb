@@ -561,7 +561,7 @@
   "addPausePeriod": "Pridať prestávku v užívaní tabletiek",
   "addedPausePeriod": "Prestávka v užívaní tabletiek bola pridaná",
   "pausePeriodOverlapsOther": "Nemôžete vybrať obdobie, ktoré sa prekrýva s inou prestávkou v užívaní tabletiek",
-  "pauseEndDateMustBeAfterStartDate": "Prosím, vyberte dátum po dátume začiatku ako dátum ukončenia prestávky v užívaní.",
+  "pauseEndDateMustBeAfterStartDate": "Vyberte dátum konca prestávky v užívaní tabletiek, ktorý je po dátume začiatku",
   "plannedResumeDateOptional": "Plánovaný dátum obnovenia užívania (voliteľné)",
   "plannedResumeDateNotSet": "Nenastavené",
   "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania",

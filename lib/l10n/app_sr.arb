@@ -561,7 +561,7 @@
   "addPausePeriod": "Додајте паузу у узимању пилула",
   "addedPausePeriod": "Додат је период паузе у узимању пилула",
   "pausePeriodOverlapsOther": "Не можете да изаберете период који се преклапа са другом паузом у узимању пилула",
-  "pauseEndDateMustBeAfterStartDate": "Молимо вас да као датум завршетка паузе у узимању изаберете датум након почетног датума.",
+  "pauseEndDateMustBeAfterStartDate": "Молимо Вас, изаберите датум завршетка паузе у узимању пилула који је после датума почетка",
   "plannedResumeDateOptional": "Планирани датум поновног почетка узимања (опционо)",
   "plannedResumeDateNotSet": "Није подешено",
   "selectPlannedResumeDate": "Изаберите планирани датум наставка узимања",

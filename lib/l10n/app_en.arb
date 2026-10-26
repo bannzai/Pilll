@@ -561,7 +561,7 @@
   "addPausePeriod": "Add a pill break",
   "addedPausePeriod": "Pill break added",
   "pausePeriodOverlapsOther": "You can’t select a period that overlaps another pill break",
-  "pauseEndDateMustBeAfterStartDate": "Please select a break end date after the start date",
+  "pauseEndDateMustBeAfterStartDate": "Choose a pill break end date after the start date",
   "plannedResumeDateOptional": "Planned date to resume taking it (optional)",
   "plannedResumeDateNotSet": "Not set",
   "selectPlannedResumeDate": "Select the scheduled date to resume taking",

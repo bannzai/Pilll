@@ -561,7 +561,7 @@
   "addPausePeriod": "Lisää pilleritauko",
   "addedPausePeriod": "Pillereiden tauko lisättiin",
   "pausePeriodOverlapsOther": "Et voi valita ajanjaksoa, joka osuu päällekkäin toisen pilleritauon kanssa",
-  "pauseEndDateMustBeAfterStartDate": "Valitse tauon päättymispäiväksi aloituspäivän jälkeinen päivämäärä.",
+  "pauseEndDateMustBeAfterStartDate": "Valitse pilleritauon päättymispäiväksi alkamispäivää myöhempi päivä",
   "plannedResumeDateOptional": "Suunniteltu käytön jatkamispäivä (valinnainen)",
   "plannedResumeDateNotSet": "Ei asetettu",
   "selectPlannedResumeDate": "Valitse suunniteltu käytön aloituspäivä uudelleen",

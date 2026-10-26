@@ -561,7 +561,7 @@
   "addPausePeriod": "Pillenpauze toevoegen",
   "addedPausePeriod": "De pillenpauze is toegevoegd",
   "pausePeriodOverlapsOther": "Je kunt geen periode kiezen die overlapt met een andere pillenpauze",
-  "pauseEndDateMustBeAfterStartDate": "Kies als einddatum van de innamestop een datum na de startdatum.",
+  "pauseEndDateMustBeAfterStartDate": "Kies voor het einde van de pillenpauze een datum na de begindatum",
   "plannedResumeDateOptional": "Geplande datum om weer te beginnen met innemen (optioneel)",
   "plannedResumeDateNotSet": "Niet ingesteld",
   "selectPlannedResumeDate": "Selecteer de geplande datum om weer te beginnen",

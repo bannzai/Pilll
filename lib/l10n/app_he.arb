@@ -561,7 +561,7 @@
   "addPausePeriod": "הוספת הפסקה בנטילת גלולות",
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילת הגלולה",
   "pausePeriodOverlapsOther": "אי אפשר לבחור תקופה שחופפת להפסקה אחרת בנטילת הגלולה",
-  "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך מאוחר מתאריך ההתחלה כתאריך סיום ההפסקה בנטילה.",
+  "pauseEndDateMustBeAfterStartDate": "יש לבחור לתום ההפסקה בנטילת הגלולה תאריך מאוחר מתאריך ההתחלה",
   "plannedResumeDateOptional": "תאריך מתוכנן לחידוש הנטילה (אופציונלי)",
   "plannedResumeDateNotSet": "לא הוגדר",
   "selectPlannedResumeDate": "בחרי את התאריך המתוכנן לחידוש הנטילה",

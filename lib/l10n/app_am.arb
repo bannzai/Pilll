@@ -561,7 +561,7 @@
   "addPausePeriod": "የክኒን ዕረፍት ጊዜ ያክሉ",
   "addedPausePeriod": "የክኒን እረፍት ጊዜ ታክሏል",
   "pausePeriodOverlapsOther": "ከሌላ የክኒን እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም",
-  "pauseEndDateMustBeAfterStartDate": "እባክዎ የመውሰድ እረፍቱ መጨረሻ ቀን ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ።",
+  "pauseEndDateMustBeAfterStartDate": "ለክኒን እረፍት የማብቂያ ቀን፣ ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ",
   "plannedResumeDateOptional": "የመውሰድ እንደገና የሚጀምርበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተቀናበረም",
   "selectPlannedResumeDate": "የመውሰድ ዳግም መጀመሪያ የታቀደበትን ቀን ይምረጡ",

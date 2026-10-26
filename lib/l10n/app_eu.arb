@@ -561,7 +561,7 @@
   "addPausePeriod": "Gehitu pilulen hartzeko atsedenaldia",
   "addedPausePeriod": "Pilula hartzeko etenaldia gehitu da",
   "pausePeriodOverlapsOther": "Ezin duzu hautatu pilula hartzeko beste etenaldi batekin gainjartzen den aldirik",
-  "pauseEndDateMustBeAfterStartDate": "Mesedez, aukeratu hasiera-data baino geroagoko data bat hartzearen etenaldiaren amaiera-datatzat.",
+  "pauseEndDateMustBeAfterStartDate": "Aukeratu pilulak hartzeko etenaldiaren amaiera-data hasiera-dataren ondoren",
   "plannedResumeDateOptional": "Hartzea berriro hasteko aurreikusitako data (aukerakoa)",
   "plannedResumeDateNotSet": "Ezarri gabe",
   "selectPlannedResumeDate": "Hautatu berriro hartzeko aurreikusitako data",

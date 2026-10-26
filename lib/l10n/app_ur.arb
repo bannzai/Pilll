@@ -561,7 +561,7 @@
   "addPausePeriod": "گولی لینے میں وقفہ شامل کریں",
   "addedPausePeriod": "گولی لینے میں وقفے کی مدت شامل کر دی گئی ہے",
   "pausePeriodOverlapsOther": "آپ ایسی مدت منتخب نہیں کر سکتیں جو گولیاں لینے کے کسی دوسرے وقفے سے ملتی ہو",
-  "pauseEndDateMustBeAfterStartDate": "براہ کرم استعمال کے وقفے کی اختتامی تاریخ کے لیے آغاز کی تاریخ کے بعد کی کوئی تاریخ منتخب کریں۔",
+  "pauseEndDateMustBeAfterStartDate": "براہِ کرم گولی لینے کے وقفے کی آخری تاریخ، شروع ہونے کی تاریخ کے بعد کی منتخب کریں",
   "plannedResumeDateOptional": "دوبارہ استعمال شروع کرنے کی متوقع تاریخ (اختیاری)",
   "plannedResumeDateNotSet": "سیٹ نہیں ہے",
   "selectPlannedResumeDate": "دوبارہ استعمال شروع کرنے کی طے شدہ تاریخ منتخب کریں",

@@ -561,7 +561,7 @@
   "addPausePeriod": "Voeg ’n pilpouse by",
   "addedPausePeriod": "Die pilpouse is bygevoeg",
   "pausePeriodOverlapsOther": "Jy kan nie ’n tydperk kies wat met ’n ander pilpouse oorvleuel nie",
-  "pauseEndDateMustBeAfterStartDate": "Kies asseblief ’n datum ná die begindatum as die einddatum van die pouse in inname.",
+  "pauseEndDateMustBeAfterStartDate": "Kies asseblief ’n einddatum vir jou pilpouse wat ná die begindatum is",
   "plannedResumeDateOptional": "Beplande hervatdatum (opsioneel)",
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die beplande hervatdatum",

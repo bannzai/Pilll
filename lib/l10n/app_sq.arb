@@ -561,7 +561,7 @@
   "addPausePeriod": "Shtoni një pauzë në marrjen e pilulave",
   "addedPausePeriod": "U shtua periudha e pushimit nga marrja e pilulës",
   "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një pushim tjetër nga marrja e pilulës",
-  "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë pas datës së fillimit si datë përfundimi të pushimit të marrjes.",
+  "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë përfundimi të pushimit nga pilulat që është pas datës së fillimit",
   "plannedResumeDateOptional": "Data e planifikuar për rifillimin e marrjes (opsionale)",
   "plannedResumeDateNotSet": "Nuk është caktuar",
   "selectPlannedResumeDate": "Zgjidhni datën e planifikuar për rifillimin e marrjes",

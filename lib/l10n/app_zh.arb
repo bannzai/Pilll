@@ -561,7 +561,7 @@
   "addPausePeriod": "添加停药期",
   "addedPausePeriod": "已添加停药期",
   "pausePeriodOverlapsOther": "无法选择与其他停药期重叠的时间段",
-  "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的日期作为服用休息结束日。",
+  "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的停药期结束日期",
   "plannedResumeDateOptional": "预计恢复服用日期（可选）",
   "plannedResumeDateNotSet": "未设置",
   "selectPlannedResumeDate": "选择预计恢复服用日期",

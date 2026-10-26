@@ -561,7 +561,7 @@
   "addPausePeriod": "Tilføj pillepause",
   "addedPausePeriod": "Pillepausen er tilføjet",
   "pausePeriodOverlapsOther": "Du kan ikke vælge en periode, der overlapper med en anden pillepause",
-  "pauseEndDateMustBeAfterStartDate": "Vælg venligst en dato efter startdatoen som slutdato for pausen i indtagelsen.",
+  "pauseEndDateMustBeAfterStartDate": "Vælg en slutdato for p-pillepausen, der ligger efter startdatoen",
   "plannedResumeDateOptional": "Planlagt dato for genoptagelse (valgfrit)",
   "plannedResumeDateNotSet": "Ikke indstillet",
   "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",

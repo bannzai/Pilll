@@ -561,7 +561,7 @@
   "addPausePeriod": "Добавить перерыв в приёме таблеток",
   "addedPausePeriod": "Период перерыва в приёме таблеток добавлен",
   "pausePeriodOverlapsOther": "Нельзя выбрать период, который пересекается с другим перерывом в приёме таблеток",
-  "pauseEndDateMustBeAfterStartDate": "Пожалуйста, выберите дату окончания перерыва в приёме позже даты начала.",
+  "pauseEndDateMustBeAfterStartDate": "Выберите дату окончания перерыва в приёме таблеток позже даты начала",
   "plannedResumeDateOptional": "Планируемая дата возобновления приёма (необязательно)",
   "plannedResumeDateNotSet": "Не задано",
   "selectPlannedResumeDate": "Выберите предполагаемую дату возобновления приёма",

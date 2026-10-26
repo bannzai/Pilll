@@ -561,7 +561,7 @@
   "addPausePeriod": "Aggiungi una pausa dall’assunzione della pillola",
   "addedPausePeriod": "È stato aggiunto il periodo di pausa dalla pillola",
   "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un’altra pausa dalla pillola",
-  "pauseEndDateMustBeAfterStartDate": "Seleziona una data successiva alla data di inizio come data di fine della pausa di assunzione.",
+  "pauseEndDateMustBeAfterStartDate": "Scegli una data di fine pausa dalla pillola successiva alla data di inizio",
   "plannedResumeDateOptional": "Data prevista per riprendere l’assunzione (facoltativo)",
   "plannedResumeDateNotSet": "Non impostato",
   "selectPlannedResumeDate": "Seleziona la data prevista per riprendere l’assunzione",

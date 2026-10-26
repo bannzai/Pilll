@@ -561,7 +561,7 @@
   "addPausePeriod": "피임약 복용 휴식 기간 추가",
   "addedPausePeriod": "약 복용 휴식 기간을 추가했어요",
   "pausePeriodOverlapsOther": "다른 피임약 복용 휴식 기간과 겹치는 기간은 선택할 수 없어요",
-  "pauseEndDateMustBeAfterStartDate": "복용 휴식 종료일은 시작일보다 이후 날짜를 선택해 주세요.",
+  "pauseEndDateMustBeAfterStartDate": "복용 휴식 종료일은 시작일보다 늦은 날짜로 선택해 주세요",
   "plannedResumeDateOptional": "복용 재개 예정일 (선택)",
   "plannedResumeDateNotSet": "미설정",
   "selectPlannedResumeDate": "복용 재개 예정일을 선택해 주세요",
