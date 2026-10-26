@@ -379,7 +379,7 @@
   "chestTightness": "Хөх хөндүүрлэж чинэрэх",
   "insomnia": "Нойргүйдэл",
   "pauseStartingOtherDaysInstructions": "Эм уухаа түр завсарлана уу. Хэрэв завсарлагаа өнөөдрөөс өөр өдөр эхлүүлэхийг хүсвэл доорх зааврыг харна уу.",
-  "seeHowToUsePauseTakingFeature": "Эм хэрэглэхээ түр зогсоох функцийн заавар үзэх",
+  "seeHowToUsePauseTakingFeature": "Эм уухыг түр завсарлах функцийг хэрхэн ашиглахыг харна уу",
   "startPauseTakingLabel": "Уух амралт эхлэх",
   "pauseTakingChanged": "Эм уухаа амрах хугацааг өөрчлөв",
   "editPausePeriod": "Эм уух амралтын хугацааг засах",

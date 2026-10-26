@@ -379,7 +379,7 @@
   "chestTightness": "მკერდის დაჭიმულობა",
   "insomnia": "უძილობა",
   "pauseStartingOtherDaysInstructions": "გთხოვთ, დროებით შეისვენოთ აბების მიღებისგან. თუ შესვენების დაწყება დღევანდელის გარდა სხვა დღიდან გსურთ, იხილეთ ქვემოთ მოცემული მითითებები.",
-  "seeHowToUsePauseTakingFeature": "მიღების პაუზის ფუნქციის გამოყენება იხილეთ",
+  "seeHowToUsePauseTakingFeature": "ნახეთ, როგორ გამოიყენოთ აბების მიღების დროებით შეჩერების ფუნქცია",
   "startPauseTakingLabel": "მიღების შესვენების დაწყება",
   "pauseTakingChanged": "აბების მიღების შესვენება შეიცვალა",
   "editPausePeriod": "შესვენების პერიოდის რედაქტირება",
