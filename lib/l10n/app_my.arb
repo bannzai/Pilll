@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "ဆေးလုံးသောက်ရမည့်ရက်များ၏ အဆုံးကို ပြောင်းပါ",
   "cannotUpdateToReplacePillSheet": "ဆေးပြားကတ် လဲနေစဉ် အချက်အလက်ကို အပ်ဒိတ်လုပ်၍ မရပါ။ ID: {id}",
   "failedToGetPillSheetHistory": "ဆေးသောက်ခဲ့သည့်စာရင်း အချက်အလက်ကို ရယူ၍ မရပါ။ {error}",
-  "cancelTaking": "သောက်မှုပယ်ဖျက်ရန်",
+  "cancelTaking": "ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပါ",
   "deletedDiaryCannotBeRestored": "ဖျက်လိုက်သော ဒိုင်အရီမှတ်တမ်းများကို ပြန်လည်ရယူ၍မရပါ",
   "editMenstruation": "ရာသီလာချိန် ပြင်ဆင်ရန်",
   "changedPillNumber": "ဆေးပြားနံပါတ်ပြောင်းလဲခြင်း",

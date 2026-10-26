@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Endre slutten på dagene med p-piller",
   "cannotUpdateToReplacePillSheet": "Kunne ikke oppdatere ved bytte av pillebrett. ID: {id}",
   "failedToGetPillSheetHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
-  "cancelTaking": "Angre inntak",
+  "cancelTaking": "Angre registrert p-pille",
   "deletedDiaryCannotBeRestored": "Slettede dagbøker kan ikke gjenopprettes",
   "editMenstruation": "Rediger menstruasjonsperiode",
   "changedPillNumber": "Pillenummer endret",

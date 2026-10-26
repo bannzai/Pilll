@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Hap alma günlerinin bitişini değiştirin",
   "cannotUpdateToReplacePillSheet": "Blister değiştirilirken güncelleme yapılamadı. ID: {id}",
   "failedToGetPillSheetHistory": "Kullanım geçmişi bilgileri yüklenemedi. {error}",
-  "cancelTaking": "Alımı İptal Et",
+  "cancelTaking": "Hap alım kaydını geri alın",
   "deletedDiaryCannotBeRestored": "Silinen günlük geri getirilemez",
   "editMenstruation": "Adet dönemini düzenle",
   "changedPillNumber": "Hap Numarası Değişikliği",

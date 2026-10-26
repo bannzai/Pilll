@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Baguhin ang pagtatapos ng mga araw ng pag-inom ng pildoras",
   "cannotUpdateToReplacePillSheet": "Hindi na-update habang pinapalitan ang pakete ng pildoras. ID: {id}",
   "failedToGetPillSheetHistory": "Hindi makuha ang impormasyon sa kasaysayan ng pag-inom ng pildoras. {error}",
-  "cancelTaking": "Bawiin ang Pag-inom",
+  "cancelTaking": "Pakibawi ang tala ng pag-inom ng pildoras",
   "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang nabura na diary",
   "editMenstruation": "I-edit ang Regla",
   "changedPillNumber": "Pagbabago ng Numero ng Pill",

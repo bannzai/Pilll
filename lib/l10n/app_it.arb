@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Modifica la fine dei giorni di assunzione della pillola",
   "cannotUpdateToReplacePillSheet": "Impossibile aggiornare durante la sostituzione del blister. ID: {id}",
   "failedToGetPillSheetHistory": "Impossibile caricare le informazioni dello storico delle assunzioni. {error}",
-  "cancelTaking": "Annulla assunzione",
+  "cancelTaking": "Annulla l'assunzione registrata",
   "deletedDiaryCannotBeRestored": "Il diario eliminato non può essere recuperato",
   "editMenstruation": "Modifica periodo mestruale",
   "changedPillNumber": "Modifica numero pillola",

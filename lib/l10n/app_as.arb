@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "পিল খোৱাৰ দিনবোৰৰ শেষ সলনি কৰক",
   "cannotUpdateToReplacePillSheet": "পিলৰ ষ্ট্ৰিপ সলনি কৰাৰ সময়ত আপডেট কৰিব পৰা নগ’ল। ID: {id}",
   "failedToGetPillSheetHistory": "সেৱনৰ ইতিহাসৰ তথ্য আনিব পৰা নগ’ল। {error}",
-  "cancelTaking": "সেৱন বাতিল",
+  "cancelTaking": "ঔষধ খোৱাৰ ৰেকৰ্ড বাতিল কৰক",
   "deletedDiaryCannotBeRestored": "মাচি পেলোৱা ডায়েৰী পুনৰুদ্ধাৰ কৰিব নোৱাৰি",
   "editMenstruation": "ঋতুস্রাবৰ সময় সম্পাদনা কৰক",
   "changedPillNumber": "পিল নম্বৰ সলনি",

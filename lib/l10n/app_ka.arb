@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "აბის მიღების დღეების დასრულების შეცვლა",
   "cannotUpdateToReplacePillSheet": "აბების ბლისტერის შეცვლისას განახლება ვერ მოხერხდა. ID: {id}",
   "failedToGetPillSheetHistory": "მიღების ისტორიის მონაცემების ჩატვირთვა ვერ მოხერხდა. {error}",
-  "cancelTaking": "მიღების გაუქმება",
+  "cancelTaking": "აბის მიღების ჩანაწერის გაუქმება",
   "deletedDiaryCannotBeRestored": "წაშლილი დღიური ვერ აღდგება",
   "editMenstruation": "მენსტრუაციის პერიოდის რედაქტირება",
   "changedPillNumber": "ტაბლეტის ნომრის ცვლილება",

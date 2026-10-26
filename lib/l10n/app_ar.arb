@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "تغيير نهاية أيام تناول الحبوب",
   "cannotUpdateToReplacePillSheet": "تعذر التحديث عند استبدال الشريط. المعرّف: {id}",
   "failedToGetPillSheetHistory": "تعذر جلب معلومات سجل تناول الحبوب. {error}",
-  "cancelTaking": "إلغاء التناول",
+  "cancelTaking": "التراجع عن تسجيل تناول الحبة",
   "deletedDiaryCannotBeRestored": "لا يمكن استرداد المذكرات المحذوفة",
   "editMenstruation": "تعديل فترة الدورة الشهرية",
   "changedPillNumber": "تغيير رقم الحبة",

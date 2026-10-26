@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Ubah penghujung hari pengambilan pil",
   "cannotUpdateToReplacePillSheet": "Tidak dapat mengemas kini semasa menukar pek pil. ID: {id}",
   "failedToGetPillSheetHistory": "Maklumat sejarah pengambilan tidak dapat dimuatkan. {error}",
-  "cancelTaking": "Batalkan Pengambilan",
+  "cancelTaking": "Batalkan rekod pengambilan pil",
   "deletedDiaryCannotBeRestored": "Diari yang dipadamkan tidak boleh dipulihkan",
   "editMenstruation": "Sunting Tempoh Haid",
   "changedPillNumber": "Perubahan Nombor Pil",

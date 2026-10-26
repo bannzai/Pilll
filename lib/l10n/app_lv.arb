@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Mainīt tablešu lietošanas dienu beigas",
   "cannotUpdateToReplacePillSheet": "Mainot tablešu blister, neizdevās atjaunināt datus. ID: {id}",
   "failedToGetPillSheetHistory": "Neizdevās ielādēt informāciju par lietošanas vēsturi. {error}",
-  "cancelTaking": "Atcelt uzņemšanu",
+  "cancelTaking": "Atcelt tabletes lietošanas ierakstu",
   "deletedDiaryCannotBeRestored": "Dzēsto dienasgrāmatu nevar atjaunot",
   "editMenstruation": "Rediģēt menstruācijas periodu",
   "changedPillNumber": "Tablešu numura maiņa",

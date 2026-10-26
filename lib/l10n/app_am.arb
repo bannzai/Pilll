@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "የክኒን መውሰጃ ቀናት መጨረሻን ይቀይሩ",
   "cannotUpdateToReplacePillSheet": "ክኒን ሉህ ሲቀየር ማዘመን አልተቻለም። ID: {id}",
   "failedToGetPillSheetHistory": "የአወሳሰድ ታሪክ መረጃ ማግኘት አልተቻለም። {error}",
-  "cancelTaking": "መውሰድ መሰረዝ",
+  "cancelTaking": "የክኒን መውሰድን ቀልብስ",
   "deletedDiaryCannotBeRestored": "የተሰረዘው ዕለታዊ ማስታወሻ መመለስ አይቻልም",
   "editMenstruation": "የወር አበባ ጊዜን ማስተካከል",
   "changedPillNumber": "የክኒን ቁጥር ለውጥ",

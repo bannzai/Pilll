@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "మాత్రలు తీసుకునే రోజుల ముగింపును మార్చండి",
   "cannotUpdateToReplacePillSheet": "మాత్రల స్ట్రిప్ మార్చేటప్పుడు అప్‌డేట్ చేయడం సాధ్యం కాలేదు. ID: {id}",
   "failedToGetPillSheetHistory": "మాత్రల సేవన చరిత్ర సమాచారాన్ని పొందలేకపోయాము. {error}",
-  "cancelTaking": "సేవన రద్దు",
+  "cancelTaking": "మాత్ర తీసుకున్న రికార్డును రద్దు చేయండి",
   "deletedDiaryCannotBeRestored": "తొలగించిన డైరీని తిరిగి పొందలేరు",
   "editMenstruation": "రుతుకాల కాలం సవరించు",
   "changedPillNumber": "మాత్ర సంఖ్య మార్పు",

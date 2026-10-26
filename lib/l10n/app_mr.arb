@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "गोळी घेण्याच्या दिवसांचा शेवट बदला",
   "cannotUpdateToReplacePillSheet": "पिल शीट बदलताना अपडेट करता आले नाही. ID: {id}",
   "failedToGetPillSheetHistory": "सेवन इतिहासाची माहिती मिळवता आली नाही. {error}",
-  "cancelTaking": "सेवन रद्द करा",
+  "cancelTaking": "गोळी घेतल्याची नोंद रद्द करा",
   "deletedDiaryCannotBeRestored": "हटवलेल्या डायरी पुन्हा मिळवता येणार नाहीत",
   "editMenstruation": "मासिक पाळी कालावधी संपादित करा",
   "changedPillNumber": "पिल्ल क्रमांक बदल",

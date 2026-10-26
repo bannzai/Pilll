@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "පෙති ගන්නා දිනවල අවසානය වෙනස් කරන්න",
   "cannotUpdateToReplacePillSheet": "පෙති කාඩ්පත මාරු කිරීමේදී දත්ත යාවත්කාලීන කළ නොහැකි විය. ID: {id}",
   "failedToGetPillSheetHistory": "පෙති ගැනීමේ ඉතිහාසය පිළිබඳ තොරතුරු ලබා ගැනීමට නොහැකි විය. {error}",
-  "cancelTaking": "ගැනීම අවලංගු කරන්න",
+  "cancelTaking": "පෙත්ත ගත් බවට ඇති සටහන අවලංගු කරන්න",
   "deletedDiaryCannotBeRestored": "මකා දමන ලද දිනපොත නැවත ලබා ගත නොහැක",
   "editMenstruation": "ආර්තව කාලය සංස්කරණය කරන්න",
   "changedPillNumber": "පීල් අංකය වෙනස් කළා",

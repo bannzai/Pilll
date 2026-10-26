@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Change the end of pill-taking days",
   "cannotUpdateToReplacePillSheet": "Couldn't update when replacing the pill pack. ID: {id}",
   "failedToGetPillSheetHistory": "Couldn’t load pill history information. {error}",
-  "cancelTaking": "Undo Dose",
+  "cancelTaking": "Undo pill taken",
   "deletedDiaryCannotBeRestored": "Deleted diary entries cannot be restored",
   "editMenstruation": "Edit Period",
   "changedPillNumber": "Pill Number Change",

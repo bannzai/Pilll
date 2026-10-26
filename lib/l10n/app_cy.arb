@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Newid diwedd y dyddiau cymryd y bilsen",
   "cannotUpdateToReplacePillSheet": "Methu diweddaru wrth newid y stribed pils. ID: {id}",
   "failedToGetPillSheetHistory": "Methu llwytho gwybodaeth hanes cymryd y bilsen. {error}",
-  "cancelTaking": "Canslo cymryd",
+  "cancelTaking": "Dadwneud cofnod cymryd y bilsen",
   "deletedDiaryCannotBeRestored": "Ni ellir adfer dyddiaduron sydd wedi'u dileu",
   "editMenstruation": "Golygu cyfnod misglwyf",
   "changedPillNumber": "Newid Rhif y Bilsen",

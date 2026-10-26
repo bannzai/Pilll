@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Verander die einde van jou pilneemtyd",
   "cannotUpdateToReplacePillSheet": "Kon nie opdateer toe die pilstrokie vervang is nie. ID: {id}",
   "failedToGetPillSheetHistory": "Kon nie die innamegeskiedenis laai nie. {error}",
-  "cancelTaking": "Kanselleer inname",
+  "cancelTaking": "Maak inname ongedaan",
   "deletedDiaryCannotBeRestored": "Verwyderde dagboekinskrywings kan nie herstel word nie",
   "editMenstruation": "Wysig menstruasieperiode",
   "changedPillNumber": "Pilnommer wysiging",

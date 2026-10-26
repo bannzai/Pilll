@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "שינוי סוף ימי נטילת הגלולה",
   "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן בעת החלפת חפיסת הגלולות. מזהה: {id}",
   "failedToGetPillSheetHistory": "לא ניתן לטעון מידע על היסטוריית נטילה. {error}",
-  "cancelTaking": "ביטול נטילה",
+  "cancelTaking": "ביטול רישום נטילת הגלולה",
   "deletedDiaryCannotBeRestored": "יומן שנמחק לא ניתן לשחזר",
   "editMenstruation": "עריכת תקופת הווסת",
   "changedPillNumber": "שינוי מספר גלולה",

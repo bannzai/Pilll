@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Փոխել հաբի ընդունման օրերի ավարտը",
   "cannotUpdateToReplacePillSheet": "հաբերի բլիստեր փոխարինելիս թարմացումը չհաջողվեց։ ID: {id}",
   "failedToGetPillSheetHistory": "Չհաջողվեց ստանալ ընդունման պատմություն բաժնի տվյալները։ {error}",
-  "cancelTaking": "Չեղարկել ընդունումը",
+  "cancelTaking": "Չեղարկել հաբի ընդունման գրառումը",
   "deletedDiaryCannotBeRestored": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",
   "editMenstruation": "Մենստրուացիայի ժամանակաշրջանի խմբագրում",
   "changedPillNumber": "Հապի համարի փոփոխում",

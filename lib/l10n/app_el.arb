@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Αλλαγή λήξης των ημερών λήψης χαπιού",
   "cannotUpdateToReplacePillSheet": "Δεν ήταν δυνατή η ενημέρωση κατά την αντικατάσταση της καρτέλα χαπιών. ID: {id}",
   "failedToGetPillSheetHistory": "Δεν ήταν δυνατή η φόρτωση πληροφοριών για το ιστορικό λήψης. {error}",
-  "cancelTaking": "Ακύρωση λήψης",
+  "cancelTaking": "Αναίρεση καταγραφής λήψης χαπιού",
   "deletedDiaryCannotBeRestored": "Τα διαγραμμένα ημερολόγια δεν μπορούν να αποκατασταθούν",
   "editMenstruation": "Επεξεργασία περιόδου",
   "changedPillNumber": "Αλλαγή αριθμού χαπιού",

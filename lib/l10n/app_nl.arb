@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Einde van de pilinnamedagen wijzigen",
   "cannotUpdateToReplacePillSheet": "Bij het vervangen van de pillenstrip kon de update niet worden voltooid. ID: {id}",
   "failedToGetPillSheetHistory": "De gegevens van de innamegeschiedenis konden niet worden geladen. {error}",
-  "cancelTaking": "Inname annuleren",
+  "cancelTaking": "Geregistreerde pilinname ongedaan maken",
   "deletedDiaryCannotBeRestored": "Verwijderde dagboeken kunnen niet worden hersteld",
   "editMenstruation": "Menstruatieperiode bewerken",
   "changedPillNumber": "Pilnummer aangepast",

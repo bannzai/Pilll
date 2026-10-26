@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Cambiar o final dos días de toma da pílula",
   "cannotUpdateToReplacePillSheet": "Non se puido actualizar ao cambiar o blíster. ID: {id}",
   "failedToGetPillSheetHistory": "Non se puido cargar a información do historial de tomas. {error}",
-  "cancelTaking": "Cancelar toma",
+  "cancelTaking": "Desfacer o rexistro da pílula",
   "deletedDiaryCannotBeRestored": "O diario eliminado non se pode recuperar",
   "editMenstruation": "Editar período menstrual",
   "changedPillNumber": "Cambio de número de píldora",

@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "گولی لینے کے دنوں کا اختتام تبدیل کریں",
   "cannotUpdateToReplacePillSheet": "گولیوں کی پٹی بدلتے وقت اپ ڈیٹ نہیں ہو سکا۔ ID: {id}",
   "failedToGetPillSheetHistory": "گولی لینے کی ہسٹری کی معلومات حاصل نہیں ہو سکیں۔ {error}",
-  "cancelTaking": "دوا لینا منسوخ کریں",
+  "cancelTaking": "گولی لینے کا ریکارڈ منسوخ کریں",
   "deletedDiaryCannotBeRestored": "حذف شدہ ڈائری کو بحالی نہیں کیا جا سکتا",
   "editMenstruation": "حیض کی مدت میں ترمیم کریں",
   "changedPillNumber": "گولی نمبر تبدیلی",

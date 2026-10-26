@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "S Ändi vo de Pille-Iinahmtäg ändere",
   "cannotUpdateToReplacePillSheet": "Bim Wächsle vom Pilleblister het s Aktualisiere nöd klappt. ID: {id}",
   "failedToGetPillSheetHistory": "D Informatione zum Iinahm-Verlauf händ nöd chöne glade werde. {error}",
-  "cancelTaking": "Innahm rückgängig mache",
+  "cancelTaking": "Iitreiti Pille-Iinahm rückgängig mache",
   "deletedDiaryCannotBeRestored": "Glöschti Tagebüecher chönd nöd widerhärgstellt wärde",
   "editMenstruation": "Periode bearbeite",
   "changedPillNumber": "Pillennummere gänderet",

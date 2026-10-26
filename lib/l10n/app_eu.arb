@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Pilula hartzeko egunen amaiera aldatu",
   "cannotUpdateToReplacePillSheet": "Ezin izan da eguneratu pilula-blister aldatzean. ID: {id}",
   "failedToGetPillSheetHistory": "Ezin izan da hartze-historia informazioa kargatu. {error}",
-  "cancelTaking": "Hartzea ezeztatu",
+  "cancelTaking": "Pilularen hartzea desegin",
   "deletedDiaryCannotBeRestored": "Ezabatutako egunkaria ezin da berreskuratu",
   "editMenstruation": "Hilekoaren aldia editatu",
   "changedPillNumber": "Pilula zenbakia aldatu",

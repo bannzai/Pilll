@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "更改服药天数的结束时间",
   "cannotUpdateToReplacePillSheet": "更换药板时未能完成更新。ID：{id}",
   "failedToGetPillSheetHistory": "暂时无法获取服药历史信息。{error}",
-  "cancelTaking": "取消服药",
+  "cancelTaking": "撤销服药记录",
   "deletedDiaryCannotBeRestored": "已删除的日记无法恢复",
   "editMenstruation": "编辑月经期间",
   "changedPillNumber": "药片编号更改",

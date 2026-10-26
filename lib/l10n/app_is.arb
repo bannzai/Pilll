@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Breyta lokum pillutökudaga",
   "cannotUpdateToReplacePillSheet": "Ekki tókst að uppfæra við skipti á pilluspjaldi. ID: {id}",
   "failedToGetPillSheetHistory": "Ekki tókst að sækja upplýsingar um inntökuyfirlit. {error}",
-  "cancelTaking": "Afturkalla töku",
+  "cancelTaking": "Afturkalla skráða inntöku pillu",
   "deletedDiaryCannotBeRestored": "Eydda dagbók er ekki hægt að endurheimta",
   "editMenstruation": "Breyta tíðarblæðingu",
   "changedPillNumber": "Píllunúmer breytt",

@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Ndryshoni fundin e ditëve të marrjes së pilulës",
   "cannotUpdateToReplacePillSheet": "Përditësimi gjatë ndërrimit të blisterit nuk u krye. ID: {id}",
   "failedToGetPillSheetHistory": "Nuk u arrit të ngarkoheshin të dhënat e historisë së marrjes. {error}",
-  "cancelTaking": "Anulo marrjen",
+  "cancelTaking": "Anuloni regjistrimin e marrjes së pilulës",
   "deletedDiaryCannotBeRestored": "Ditarët e fshirë nuk rikthehen",
   "editMenstruation": "Redakto periudhën menstruale",
   "changedPillNumber": "Ndryshimi i numrit të pilulës",

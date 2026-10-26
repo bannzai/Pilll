@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "ផ្លាស់ប្តូរថ្ងៃបញ្ចប់នៃការលេបថ្នាំគ្រាប់",
   "cannotUpdateToReplacePillSheet": "មិនអាចធ្វើបច្ចុប្បន្នភាពពេលប្ដូរបន្ទះថ្នាំគ្រាប់បានទេ។ ID: {id}",
   "failedToGetPillSheetHistory": "មិនអាចទាញយកព័ត៌មានប្រវត្តិលេបថ្នាំបានទេ។ {error}",
-  "cancelTaking": "លុបចោលការសេវា",
+  "cancelTaking": "លុបចោលកំណត់ត្រាលេបថ្នាំគ្រាប់",
   "deletedDiaryCannotBeRestored": "កំណត់ត្រាដែលបានលុបមិនអាចស្ដារឡើងវិញបានទេ",
   "editMenstruation": "កែសម្រួលរដូវ",
   "changedPillNumber": "ផ្លាស់ប្តូរលេខថ្នាំគន្ត្រកកំណើត",

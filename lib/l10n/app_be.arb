@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Змяніць заканчэнне дзён прыёму пігулак",
   "cannotUpdateToReplacePillSheet": "Не ўдалося абнавіць даныя пры замене блістара. ID: {id}",
   "failedToGetPillSheetHistory": "Не ўдалося атрымаць інфармацыю пра гісторыю прыёму. {error}",
-  "cancelTaking": "Скасаваць прыём",
+  "cancelTaking": "Скасаваць запіс аб прыёме пігулкі",
   "deletedDiaryCannotBeRestored": "Выдаленыя запісы дзённіка немагчыма аднавіць",
   "editMenstruation": "Рэдагаваць менструальны перыяд",
   "changedPillNumber": "Змена нумара таблетак",

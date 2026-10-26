@@ -416,7 +416,7 @@
   "changeEndOfPillDays": "Badilisha mwisho wa siku za kumeza vidonge",
   "cannotUpdateToReplacePillSheet": "Imeshindikana kusasisha wakati wa kubadilisha pakiti ya vidonge. ID: {id}",
   "failedToGetPillSheetHistory": "Imeshindikana kupata taarifa za historia ya kumeza vidonge. {error}",
-  "cancelTaking": "Batilisha kumeza",
+  "cancelTaking": "Tafadhali futa rekodi ya kumeza kidonge",
   "deletedDiaryCannotBeRestored": "Kumbuka zilizofutwa haziwezi kurejeshwa",
   "editMenstruation": "Hariri kipindi cha hedhi",
   "changedPillNumber": "Mabadiliko ya Namba ya Kidonge",
