@@ -28,7 +28,7 @@
   "doDelete": "ลบ",
   "deleteUser": "ลบบัญชี",
   "deleteDiary": "ลบบันทึกประจำวันนี้",
-  "confirmDeletingMenstruation": "คุณต้องการลบช่วงเวลาประจำเดือนหรือไม่?",
+  "confirmDeletingMenstruation": "ต้องการลบบันทึกช่วงประจำเดือนนี้ไหมคะ",
   "addNotificationTime": "เพิ่มเวลาแจ้งเตือน",
   "syncWithDeviceTimeZone": "ต้องการซิงค์กับโซนเวลาของอุปกรณ์ ({deviceTimezoneName}) หรือไม่？",
   "currentTimeZone": "เขตเวลาที่ตั้งในปัจจุบัน",

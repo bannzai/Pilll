@@ -28,7 +28,7 @@
   "doDelete": "Ջնջել",
   "deleteUser": "Ջնջել հաշիվը",
   "deleteDiary": "Ջնջել օրագրի գրառումը",
-  "confirmDeletingMenstruation": "Ցանկանու՞մ եք ջնջել դաշտանային շրջանը:",
+  "confirmDeletingMenstruation": "Ցանկանո՞ւմ եք ջնջել այս դաշտանի ժամանակահատվածի գրառումը։",
   "addNotificationTime": "Ծանուցման ժամ ավելացնել",
   "syncWithDeviceTimeZone": "Համաժամեցնե՞լ սարքի ժամային գոտու ({deviceTimezoneName}) հետ։",
   "currentTimeZone": "Ներկայումս սահմանված ժամային գոտին",

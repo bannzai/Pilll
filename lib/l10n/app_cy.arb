@@ -28,7 +28,7 @@
   "doDelete": "Dileu",
   "deleteUser": "Dileu eich cyfrif",
   "deleteDiary": "Dileu'r cofnod dyddiadur",
-  "confirmDeletingMenstruation": "A ydych chi'n siŵr eich bod am ddileu'r cyfnod misglwyf hwn?",
+  "confirmDeletingMenstruation": "Ydych chi am ddileu cofnod cyfnod y mislif?",
   "addNotificationTime": "Ychwanegu amser hysbysiad",
   "syncWithDeviceTimeZone": "A hoffech chi gysoni â chylchfa amser y ddyfais ({deviceTimezoneName})?",
   "currentTimeZone": "Cylchfa amser gyfredol",

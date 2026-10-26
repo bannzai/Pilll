@@ -28,7 +28,7 @@
   "doDelete": "삭제해요",
   "deleteUser": "계정 삭제",
   "deleteDiary": "일기 기록 삭제",
-  "confirmDeletingMenstruation": "생리 기간을 삭제하시겠습니까?",
+  "confirmDeletingMenstruation": "이 생리 기간 기록을 삭제할까요?",
   "addNotificationTime": "알림 시간 추가",
   "syncWithDeviceTimeZone": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
   "currentTimeZone": "현재 설정된 시간대",

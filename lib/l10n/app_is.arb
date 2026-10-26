@@ -28,7 +28,7 @@
   "doDelete": "Eyða",
   "deleteUser": "Eyða reikningi",
   "deleteDiary": "Eyða dagbókarfærslu",
-  "confirmDeletingMenstruation": "Viltu eyða tíðablæðingatímabilinu?",
+  "confirmDeletingMenstruation": "Viltu eyða skráningu þessa blæðingatímabils?",
   "addNotificationTime": "Bæta við tilkynningatíma",
   "syncWithDeviceTimeZone": "Samstilla við tímabelti tækisins ({deviceTimezoneName})?",
   "currentTimeZone": "Núverandi tímabelti",

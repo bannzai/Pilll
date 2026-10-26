@@ -28,7 +28,7 @@
   "doDelete": "Видалити",
   "deleteUser": "Видалити обліковий запис",
   "deleteDiary": "Видалити запис у щоденнику",
-  "confirmDeletingMenstruation": "Видалити менструальний період?",
+  "confirmDeletingMenstruation": "Видалити запис про цей період місячних?",
   "addNotificationTime": "Додати час нагадування",
   "syncWithDeviceTimeZone": "Синхронізувати з часовим поясом пристрою ({deviceTimezoneName})?",
   "currentTimeZone": "Поточний часовий пояс",

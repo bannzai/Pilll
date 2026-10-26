@@ -28,7 +28,7 @@
   "doDelete": "ഇല്ലാതാക്കുക",
   "deleteUser": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
   "deleteDiary": "ഡയറി കുറിപ്പ് ഇല്ലാതാക്കുക",
-  "confirmDeletingMenstruation": "മാസിക കാലാവധി നീക്കം ചെയ്യണമോ？",
+  "confirmDeletingMenstruation": "ഈ ആർത്തവ കാലയളവിന്റെ രേഖ ഇല്ലാതാക്കണോ?",
   "addNotificationTime": "അറിയിപ്പ് സമയം ചേർക്കുക",
   "syncWithDeviceTimeZone": "ഉപകരണത്തിന്റെ സമയമേഖലയുമായി ({deviceTimezoneName}) സമന്വയിപ്പിക്കുമോ？",
   "currentTimeZone": "നിലവിലെ ടൈം സോൺ",

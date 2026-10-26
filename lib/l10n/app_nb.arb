@@ -28,7 +28,7 @@
   "doDelete": "Slett",
   "deleteUser": "Slett konto",
   "deleteDiary": "Slett dagbokinnlegget",
-  "confirmDeletingMenstruation": "Vil du slette menstruasjonsperioden?",
+  "confirmDeletingMenstruation": "Vil du slette registreringen av denne mensperioden?",
   "addNotificationTime": "Legg til påminnelsestid",
   "syncWithDeviceTimeZone": "Synkroniser med enhetens tidssone ({deviceTimezoneName})?",
   "currentTimeZone": "Gjeldende tidssone",

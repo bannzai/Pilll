@@ -28,7 +28,7 @@
   "doDelete": "Smazat",
   "deleteUser": "Smazat účet",
   "deleteDiary": "Smazat záznam v deníku",
-  "confirmDeletingMenstruation": "Opravdu chcete odstranit záznam menstruačního období?",
+  "confirmDeletingMenstruation": "Chcete smazat záznam období menstruace?",
   "addNotificationTime": "Přidat čas upozornění",
   "syncWithDeviceTimeZone": "Chcete synchronizovat s časovým pásmem zařízení ({deviceTimezoneName})?",
   "currentTimeZone": "Aktuálně nastavené časové pásmo",

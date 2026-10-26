@@ -28,7 +28,7 @@
   "doDelete": "हटवा",
   "deleteUser": "खाते हटवा",
   "deleteDiary": "दैनंदिनीतील नोंद हटवा",
-  "confirmDeletingMenstruation": "मासिक पाळीचा कालावधी हटवायचा का?",
+  "confirmDeletingMenstruation": "मासिक पाळीच्या या कालावधीची नोंद हटवायची आहे का?",
   "addNotificationTime": "सूचना वेळ जोडा",
   "syncWithDeviceTimeZone": "डिव्हाइसच्या टाइम झोन ({deviceTimezoneName}) सह समक्रमित करायचे का?",
   "currentTimeZone": "सध्या सेट केलेला टाइम झोन",

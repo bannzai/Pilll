@@ -28,7 +28,7 @@
   "doDelete": "Sicela ususe",
   "deleteUser": "Sicela ususe i-akhawunti",
   "deleteDiary": "Sicela ususe okubhalwe edayari",
-  "confirmDeletingMenstruation": "Ingabe ufuna ukususa isikhathi sokugeza?",
+  "confirmDeletingMenstruation": "Ungathanda ukususa irekhodi lalesi sikhathi sokuya esikhathini?",
   "addNotificationTime": "Engeza Isikhathi Sesaziso",
   "syncWithDeviceTimeZone": "Ufuna ukuxhumanisa nesikhathi somshini wakho ({deviceTimezoneName})?",
   "currentTimeZone": "I-timezone esetiwe njengamanje",

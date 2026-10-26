@@ -28,7 +28,7 @@
   "doDelete": "Delete",
   "deleteUser": "Delete account",
   "deleteDiary": "Delete diary entry",
-  "confirmDeletingMenstruation": "Are you sure you want to delete this menstrual period?",
+  "confirmDeletingMenstruation": "Delete this period record?",
   "addNotificationTime": "Add Notification Time",
   "syncWithDeviceTimeZone": "Sync with device timezone ({deviceTimezoneName})?",
   "currentTimeZone": "Current time zone",

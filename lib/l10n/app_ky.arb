@@ -28,7 +28,7 @@
   "doDelete": "Өчүрүңүз",
   "deleteUser": "Каттоо эсебин өчүрүңүз",
   "deleteDiary": "Күндөлүк жазуусун өчүрүңүз",
-  "confirmDeletingMenstruation": "Ай көрүү мезгилин өчүрөсүзбү?",
+  "confirmDeletingMenstruation": "Айыз мезгилинин жазуусун өчүргүңүз келеби?",
   "addNotificationTime": "Эскертүү убактысын кошуу",
   "syncWithDeviceTimeZone": "Түзмөктүн убакыт алкагы ({deviceTimezoneName}) менен шайкештирилсинби?",
   "currentTimeZone": "Учурда орнотулган убакыт зонасы",

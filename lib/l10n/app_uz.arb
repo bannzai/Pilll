@@ -28,7 +28,7 @@
   "doDelete": "Oʻchiring",
   "deleteUser": "Hisobni oʻchiring",
   "deleteDiary": "Kundalik yozuvini oʻchiring",
-  "confirmDeletingMenstruation": "Hayz davrini o'chirib tashlaysizmi?",
+  "confirmDeletingMenstruation": "Ushbu hayz davri qaydini oʻchirmoqchimisiz?",
   "addNotificationTime": "Bildirishnoma vaqti qo'shish",
   "syncWithDeviceTimeZone": "Qurilma vaqt mintaqasi ({deviceTimezoneName}) bilan sinxronlashtirmoqchimisiz?",
   "currentTimeZone": "Joriy o'rnatilgan vaqt zonasi",

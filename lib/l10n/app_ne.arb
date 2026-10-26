@@ -28,7 +28,7 @@
   "doDelete": "मेटाउनुहोस्",
   "deleteUser": "खाता मेटाउनुहोस्",
   "deleteDiary": "डायरीको टिपोट मेटाउनुहोस्",
-  "confirmDeletingMenstruation": "के तपाईं माहावारी अवधि हटाउन चाहनुहुन्छ?",
+  "confirmDeletingMenstruation": "के तपाईं यो महिनावारी अवधिको रेकर्ड मेटाउन चाहनुहुन्छ?",
   "addNotificationTime": "सूचना समय थप्नुहोस्",
   "syncWithDeviceTimeZone": "डिभाइसको टाइमजोन ({deviceTimezoneName}) सँग समक्रमण गर्नुहुन्छ?",
   "currentTimeZone": "हाल सेट गरिएको समय क्षेत्र",

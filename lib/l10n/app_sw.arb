@@ -28,7 +28,7 @@
   "doDelete": "Futa",
   "deleteUser": "Tafadhali futa akaunti",
   "deleteDiary": "Tafadhali futa ingizo la shajara",
-  "confirmDeletingMenstruation": "Je, ungependa kufuta kipindi hiki cha hedhi?",
+  "confirmDeletingMenstruation": "Je, ungependa kufuta rekodi ya kipindi hiki cha hedhi?",
   "addNotificationTime": "Ongeza Muda wa Arifa",
   "syncWithDeviceTimeZone": "Je, ungependa kuoanisha na timezone ya kifaa chako ({deviceTimezoneName})?",
   "currentTimeZone": "Mkoa wa wakati wa sasa",

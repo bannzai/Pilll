@@ -28,7 +28,7 @@
   "doDelete": "ລຶບ",
   "deleteUser": "ລຶບບັນຊີ",
   "deleteDiary": "ລຶບບັນທຶກປະຈຳວັນນີ້",
-  "confirmDeletingMenstruation": "ທ່ານຕ້ອງການລົບໄລຍະການມີປະຈຳເດືອນນີ້ບໍ່?",
+  "confirmDeletingMenstruation": "ທ່ານຕ້ອງການລຶບບັນທຶກຊ່ວງປະຈຳເດືອນນີ້ບໍ?",
   "addNotificationTime": "ເພີ່ມເວລາການແຈ້ງເຕືອນ",
   "syncWithDeviceTimeZone": "ຕ້ອງການປະສານກັບໂຊນເວລາຂອງອຸປະກອນ ({deviceTimezoneName}) ບໍ?",
   "currentTimeZone": "ເຂດເວລາທີ່ຕັ້ງຄ່າໃນປັດຈຸບັນ",

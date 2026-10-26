@@ -28,7 +28,7 @@
   "doDelete": "حذف",
   "deleteUser": "حذف حساب کاربری",
   "deleteDiary": "حذف یادداشت روزانه",
-  "confirmDeletingMenstruation": "آیا دوره قاعدگی را حذف می‌کنید؟",
+  "confirmDeletingMenstruation": "آیا می‌خواهید سابقهٔ این دورهٔ پریود را حذف کنید؟",
   "addNotificationTime": "افزودن زمان تذکر",
   "syncWithDeviceTimeZone": "با منطقه زمانی دستگاه ({deviceTimezoneName}) همگام‌سازی کنید؟",
   "currentTimeZone": "منطقه زمانی تنظیم شده فعلی",

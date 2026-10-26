@@ -28,7 +28,7 @@
   "doDelete": "احذفي",
   "deleteUser": "حذف الحساب",
   "deleteDiary": "حذف تدوينة اليوميات",
-  "confirmDeletingMenstruation": "هل تريد حذف فترة الحيض؟",
+  "confirmDeletingMenstruation": "هل تريدين حذف فترة الدورة المسجلة؟",
   "addNotificationTime": "إضافة وقت الإشعار",
   "syncWithDeviceTimeZone": "هل تريد المزامنة مع المنطقة الزمنية للجهاز ({deviceTimezoneName})؟",
   "currentTimeZone": "المنطقة الزمنية الحالية",
