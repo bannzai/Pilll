@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "hartze-erregistro ukitu bakarrarekin jakinarazpenen pantailan",
   "quickRecordFeatureAppealBody": "Luze sakatuta gogorarazpenaren jakinarazpena «Hartu dut» aukera agertzeko. Horrela, pilula hartu duzula erregistra dezakezu aplikazioa ireki gabe.",
   "creatingNewPillSheetFeatureAppealTitle": "Gehitu pilula-blister automatikoki",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Hurrengo orria automatikoki sortu",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Sortu hurrengo pilula-orria automatikoki",
   "creatingNewPillSheetFeatureAppealHeadline": "Hurrengo pilula-orria automatikoki sortu",
   "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-fitxen taldea amaitzen denean, pilula-fitxen talde berri bat automatikoki sortzen da. Ez da eskuzko aldaketarik egin behar, eta erregistroetan ez dago hutsunerik.",
   "alarmKitFeatureAppealTitle": "Alarma iratzargailuaren moduan jo",

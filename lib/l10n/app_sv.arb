@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "intagslogg med ett tryck på aviseringsskärmen",
   "quickRecordFeatureAppealBody": "Håll ned aviseringen från din påminnelse så visas alternativet ”Tagen”. Då kan du registrera att du tagit ditt p-piller utan att öppna appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Lägg till p-pillerkarta automatiskt",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Skapa nästa pillerark automatiskt",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Skapa nästa p-pillerkarta automatiskt",
   "creatingNewPillSheetFeatureAppealHeadline": "Skapa nästa pillerförpackning automatiskt",
   "creatingNewPillSheetFeatureAppealBody": "När den nuvarande pillerkopsgruppen avslutas skapas automatiskt en ny pillerkopsgrupp. Manuella växlingar behövs inte och inga poster går förlorade.",
   "alarmKitFeatureAppealTitle": "Låter som en väckarklocka",

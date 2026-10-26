@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "pillelogg med ett trykk på varslingsskjermen",
   "quickRecordFeatureAppealBody": "Når du trykker og holder på varslet om påminnelse, vises valget «Tatt». Da kan du registrere at du har tatt p-pillen uten å åpne appen.",
   "creatingNewPillSheetFeatureAppealTitle": "Legg til pillebrett automatisk",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Autogenerer neste ark",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Opprett neste p-pillebrett automatisk",
   "creatingNewPillSheetFeatureAppealHeadline": "Opprett neste pilleark automatisk",
   "creatingNewPillSheetFeatureAppealBody": "Når den gjeldende pilleark-gruppen avsluttes, opprettes en ny pilleark-gruppe automatisk. Det er ikke nødvendig med manuell bytting, og det vil ikke oppstå huller i registreringen.",
   "alarmKitFeatureAppealTitle": "Alarm som ringer som en vekkerklokke",

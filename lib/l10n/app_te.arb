@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "నోటిఫికేషన్ స్క్రీన్‌లో ఒక్కసారి నొక్కి మాత్రల నమోదు",
   "quickRecordFeatureAppealBody": "రిమైండర్ నోటిఫికేషన్‌ను నొక్కి పట్టుకుంటే ‘తీసుకున్నాను’ అనే ఎంపిక కనిపిస్తుంది. యాప్ తెరవకుండానే మాత్ర తీసుకున్నట్లు నమోదు చేయవచ్చు.",
   "creatingNewPillSheetFeatureAppealTitle": "మాత్రల స్ట్రిప్‌ను స్వయంచాలకంగా జోడించండి",
-  "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి షీట్‌ను స్వయంచాలకంగా జోడించండి",
+  "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి మాత్రల షీట్‌ను ఆటోమేటిక్‌గా సృష్టించండి",
   "creatingNewPillSheetFeatureAppealHeadline": "తరువాతి పిల్‌షీట్‌ను స్వయంచాలకంగా సృష్టించండి",
   "creatingNewPillSheetFeatureAppealBody": "ప్రస్తుత పిల్ షీట్ గ్రూప్ ముగిసిన తర్వాత, కొత్త పిల్ షీట్ గ్రూప్ ఆటోమేటిగ్గా సృష్టించబడుతుంది. మాన్యువల్‌గా మార్పిడి చేయాల్సిన అవసరం లేదు, అందువల్ల రికార్డింగ్ మిస్ కావడం జరగదు.",
   "alarmKitFeatureAppealTitle": "అలారం‌లా వినిపించే హెచ్చరిక",

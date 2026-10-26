@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "záznam užití jedním klepnutím na obrazovce oznámení",
   "quickRecordFeatureAppealBody": "Když podržíte oznámení připomínky, zobrazí se možnost „Užito“. Užívání pilulky tak můžete zaznamenat bez otevření aplikace.",
   "creatingNewPillSheetFeatureAppealTitle": "Automaticky přidat blistr",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvořit další arch",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvořit další platíčko pilulek",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatické vytvoření dalšího pilulkového listu",
   "creatingNewPillSheetFeatureAppealBody": "Po skončení aktuální skupiny pilulkových listů se automaticky vytvoří nová skupina. Není potřeba ručního přepínání a v záznamech nevznikají mezery.",
   "alarmKitFeatureAppealTitle": "Budík, který zvoní jako probouzení",

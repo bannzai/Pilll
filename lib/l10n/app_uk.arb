@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "запис прийому пігулки одним дотиком на екрані сповіщень",
   "quickRecordFeatureAppealBody": "Натисніть і утримуйте сповіщення нагадування — з’явиться дія «Прийнято». Так ви зможете записати прийом пігулки, не відкриваючи застосунок.",
   "creatingNewPillSheetFeatureAppealTitle": "Автоматично додати блістер",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Наступний аркуш буде створено автоматично",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично створити наступний блістер пігулок",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматичне створення наступного листа таблеток",
   "creatingNewPillSheetFeatureAppealBody": "Коли поточна група упаковок таблеток закінчиться, нова група буде створена автоматично. Ручне перемикання не потрібне, тому не буде пропусків у записах.",
   "alarmKitFeatureAppealTitle": "Сигнал, що звучить як будильник",

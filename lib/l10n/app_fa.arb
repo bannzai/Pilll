@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "ثبت مصرف با یک لمس در صفحه اعلان‌ها",
   "quickRecordFeatureAppealBody": "با نگه‌داشتن انگشت روی اعلان یادآور، گزینهٔ «مصرف کردم» نمایش داده می‌شود و می‌توانید مصرف قرص را بدون باز کردن برنامه ثبت کنید.",
   "creatingNewPillSheetFeatureAppealTitle": "افزودن خودکار ورق قرص",
-  "creatingNewPillSheetFeatureAppealShortDescription": "تولید خودکار برگه بعدی",
+  "creatingNewPillSheetFeatureAppealShortDescription": "ساخت خودکار ورق بعدی قرص‌ها",
   "creatingNewPillSheetFeatureAppealHeadline": "ایجاد خودکار برگه قرص بعدی",
   "creatingNewPillSheetFeatureAppealBody": "وقتی گروه برگه قرص فعلی به پایان می‌رسد، یک گروه برگه قرص جدید به‌طور خودکار ایجاد می‌شود. نیازی به تغییر دستی نیست و هیچ خلأی در ثبت‌ها ایجاد نمی‌شود.",
   "alarmKitFeatureAppealTitle": "آلارمی که مثل ساعت بیداری زنگ می‌زند",

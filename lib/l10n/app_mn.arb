@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "Мэдэгдлийн дэлгэцээс нэг товшилтоор эм уусан бүртгэл",
   "quickRecordFeatureAppealBody": "Сануулгын мэдэгдлийг удаан дарвал «Уусан» сонголт гарч ирнэ. Та аппыг нээхгүйгээр эмээ ууснаа бүртгэж болно.",
   "creatingNewPillSheetFeatureAppealTitle": "эмийн блистер автоматаар нэмэх",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Дараагийн хүснэгтийг автоматаар үүсгэх",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Дараагийн эмийн блистерийг автоматаар үүсгэх",
   "creatingNewPillSheetFeatureAppealHeadline": "Дараагийн эмийн хуудасыг автоматаар үүсгэх",
   "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн хуудасны бүлэг дуусахад шинэ эмийн хуудасны бүлэг автоматаар үүсгэгдэнэ. Гараар шилжүүлэх үйлдэл хийх шаардлагагүй бөгөөд бүртгэлд алдагдал гарахгүй.",
   "alarmKitFeatureAppealTitle": "Будильник шиг дуугардаг сэрэмжлүүлэг",

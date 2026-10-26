@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "tablettaszedési napló egy érintéssel az értesítési képernyőn",
   "quickRecordFeatureAppealBody": "Ha hosszan megnyomod az emlékeztető értesítését, megjelenik a „Beszedtem” lehetőség. Így az alkalmazás megnyitása nélkül rögzítheted a tabletta bevételét.",
   "creatingNewPillSheetFeatureAppealTitle": "tablettacsomag automatikus hozzáadása",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Következő lap automatikus létrehozása",
+  "creatingNewPillSheetFeatureAppealShortDescription": "A következő tablettalevél automatikus létrehozása",
   "creatingNewPillSheetFeatureAppealHeadline": "Következő bliszter automatikus létrehozása",
   "creatingNewPillSheetFeatureAppealBody": "Amikor a jelenlegi tabletta-csoport véget ér, az alkalmazás automatikusan létrehoz egy újat. Nincs szükség kézi váltásra, így nem maradnak ki bejegyzések.",
   "alarmKitFeatureAppealTitle": "Ébresztőóra-szerű riasztás",

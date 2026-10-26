@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "beleženje jemanja z enim dotikom na zaslonu z obvestili",
   "quickRecordFeatureAppealBody": "Če pridržite obvestilo opomnika, se prikaže možnost »Vzeto«. Tako lahko zabeležite jemanje tabletke, ne da bi odprli aplikacijo.",
   "creatingNewPillSheetFeatureAppealTitle": "Samodejno dodaj ploščic",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Samodejno doda naslednji trak tablet",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Samodejno ustvarite naslednji omot tablet",
   "creatingNewPillSheetFeatureAppealHeadline": "Samodejno ustvarite naslednji list tabletk",
   "creatingNewPillSheetFeatureAppealBody": "Ko se trenutna skupina lističev za končajo, se samodejno ustvari nova skupina lističev. Ročnega preklapljanja ni treba izvajati, zato ne pride do izpustov pri vodenju evidenc.",
   "alarmKitFeatureAppealTitle": "Alarm, ki zvoni kot budilka",

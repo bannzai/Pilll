@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "在通知界面轻点一下即可添加服药记录",
   "quickRecordFeatureAppealBody": "长按提醒通知，即可看到“已服用”选项，无需打开应用也能记录服药。",
   "creatingNewPillSheetFeatureAppealTitle": "自动添加药板",
-  "creatingNewPillSheetFeatureAppealShortDescription": "自动生成下一张药片表",
+  "creatingNewPillSheetFeatureAppealShortDescription": "自动生成下一板药",
   "creatingNewPillSheetFeatureAppealHeadline": "自动创建下一个药片表",
   "creatingNewPillSheetFeatureAppealBody": "当前的药片组结束后，将自动创建新的药片组。无需手动切换操作，可避免记录遗漏。",
   "alarmKitFeatureAppealTitle": "像闹钟一样响的提醒",

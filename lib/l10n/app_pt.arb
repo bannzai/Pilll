@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "registro de uso com um toque na tela de notificações",
   "quickRecordFeatureAppealBody": "Toque e segure a notificação do lembrete para ver a opção “Tomei”. Assim, você pode registrar a tomada da pílula sem abrir o aplicativo.",
   "creatingNewPillSheetFeatureAppealTitle": "Adicionar cartela automaticamente",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Gerar próxima cartela automaticamente",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Criar a próxima cartela de pílulas automaticamente",
   "creatingNewPillSheetFeatureAppealHeadline": "Criar próxima cartela de pílulas automaticamente",
   "creatingNewPillSheetFeatureAppealBody": "Quando o grupo de cartelas atual termina, um novo grupo de cartelas é criado automaticamente. Não é necessária nenhuma operação manual de troca, evitando lacunas no registro.",
   "alarmKitFeatureAppealTitle": "Alarme que toca como um despertador",

@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "catatan minum pil dengan satu ketukan di layar notifikasi",
   "quickRecordFeatureAppealBody": "Tekan lama notifikasi pengingat untuk menampilkan pilihan “Sudah diminum”. Anda dapat mencatat konsumsi pil tanpa membuka aplikasi.",
   "creatingNewPillSheetFeatureAppealTitle": "Tambahkan strip pil secara otomatis",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Lembar pil berikutnya dibuat secara otomatis",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Buat lembar pil berikutnya secara otomatis",
   "creatingNewPillSheetFeatureAppealHeadline": "Buat lembar pil berikutnya secara otomatis",
   "creatingNewPillSheetFeatureAppealBody": "Ketika grup lembar pil saat ini berakhir, grup lembar pil baru akan dibuat secara otomatis. Anda tidak perlu mengganti secara manual, sehingga tidak ada catatan yang terlewat.",
   "alarmKitFeatureAppealTitle": "Alarm yang berbunyi seperti jam weker",

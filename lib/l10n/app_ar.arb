@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "تسجيل تناول بلمسة واحدة من شاشة الإشعارات",
   "quickRecordFeatureAppealBody": "عند الضغط مطولًا على إشعار التذكير، يظهر خيار «تناولت الحبة»، ويمكنكِ تسجيل تناولها دون فتح التطبيق.",
   "creatingNewPillSheetFeatureAppealTitle": "إضافة شريط تلقائيًا",
-  "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء الورقة التالية تلقائيًا",
+  "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء شريط الحبوب التالي تلقائيا",
   "creatingNewPillSheetFeatureAppealHeadline": "إنشاء ورقة الحبوب التالية تلقائيًا",
   "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة ورقة الدواء الحالية، يتم إنشاء مجموعة ورقة دواء جديدة تلقائيًا. لا حاجة للتبديل اليدوي، ولن تكون هناك فجوات في سجلاتك.",
   "alarmKitFeatureAppealTitle": "إنذار يرن كالمنبه",

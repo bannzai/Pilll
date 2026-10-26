@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "বিজ্ঞপ্তির স্ক্রিনে এক ট্যাপেই সেবনের রেকর্ড",
   "quickRecordFeatureAppealBody": "রিমাইন্ডারের বিজ্ঞপ্তি চেপে ধরে রাখলে ‘খেয়েছি’ বিকল্পটি দেখাবে। অ্যাপ না খুলেই আপনি পিল খাওয়ার তথ্য নথিভুক্ত করতে পারবেন।",
   "creatingNewPillSheetFeatureAppealTitle": "পিল শিট স্বয়ংক্রিয়ভাবে যোগ করুন",
-  "creatingNewPillSheetFeatureAppealShortDescription": "পরবর্তী শিট স্বয়ংক্রিয়ভাবে তৈরি করুন",
+  "creatingNewPillSheetFeatureAppealShortDescription": "পরবর্তী পিলের পাতা স্বয়ংক্রিয়ভাবে তৈরি করুন",
   "creatingNewPillSheetFeatureAppealHeadline": "পরবর্তী পিল শিট স্বয়ংক্রিয়ভাবে তৈরি করুন",
   "creatingNewPillSheetFeatureAppealBody": "বর্তমান পিল শিট গ্রুপ শেষ হলে, একটি নতুন পিল শিট গ্রুপ স্বয়ংক্রিয়ভাবে তৈরি হয়। ম্যানুয়াল স্যুইচিং অপারেশনের প্রয়োজন নেই, এবং রেকর্ডে কোনো ফাঁক থাকবে না।",
   "alarmKitFeatureAppealTitle": "অ্যালার্মের মতো বাজে এমন সতর্কতা",

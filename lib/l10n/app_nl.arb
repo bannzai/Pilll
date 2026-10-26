@@ -493,7 +493,7 @@
   "quickRecordFeatureAppealHeadline": "innameregistratie met één tik op het meldingsscherm",
   "quickRecordFeatureAppealBody": "Houd de melding van de herinnering ingedrukt om de optie ‘Ingenomen’ te zien. Zo kun je het innemen van je pil vastleggen zonder de app te openen.",
   "creatingNewPillSheetFeatureAppealTitle": "Pillenstrip automatisch toevoegen",
-  "creatingNewPillSheetFeatureAppealShortDescription": "Volgend vel automatisch genereren",
+  "creatingNewPillSheetFeatureAppealShortDescription": "Maak de volgende pillenstrip automatisch aan",
   "creatingNewPillSheetFeatureAppealHeadline": "Volgende pillenstrip automatisch aanmaken",
   "creatingNewPillSheetFeatureAppealBody": "Wanneer de huidige pilvellengroep eindigt, wordt automatisch een nieuwe pilvellengroep aangemaakt. Handmatig omschakelen is niet nodig en er ontstaan geen hiaten in de registratie.",
   "alarmKitFeatureAppealTitle": "Alarm die klinkt als een wekker",
