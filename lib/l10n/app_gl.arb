@@ -127,7 +127,7 @@
   "changePauseStartDate": "Cambia a data de inicio da pausa da pílula",
   "pauseTakingPeriodEnded": "Rematou a pausa na toma da pílula",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Cambiar os días de toma do blíster",
+  "changePillDaysForSheet": "Cambiar os días de toma da pílula por blíster",
   "changedStartAndEndNumbers": "Cambiáronse os números de inicio e fin",
   "startOfPillDays": "Inicio dos días de toma",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Final da folla anterior: día {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

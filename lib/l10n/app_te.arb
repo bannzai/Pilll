@@ -127,7 +127,7 @@
   "changePauseStartDate": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభమయ్యే తేదీని మార్చండి",
   "pauseTakingPeriodEnded": "మాత్రలు తీసుకోవడంలో విరామం ముగిసింది",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "షీట్ సేవన దినాలను మార్చండి",
+  "changePillDaysForSheet": "ప్రతి స్ట్రిప్‌లో మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "changedStartAndEndNumbers": "ప్రారంభ మరియు ముగింపు సంఖ్యలు మార్చబడ్డాయి",
   "startOfPillDays": "సేవన ప్రారంభం",
   "beforePillSheetGroupSequentialEstimatedEndDay": "మునుపటి షీట్ చివరిది: {beforePillSheetGroupSequentialEstimatedEndPillNumber}వ రోజు",

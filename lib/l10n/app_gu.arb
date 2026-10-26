@@ -127,7 +127,7 @@
   "changePauseStartDate": "ગોળી લેવાનો વિરામ શરૂ થવાની તારીખ બદલો",
   "pauseTakingPeriodEnded": "ગોળી લેવાનો વિરામ પૂરો થયો છે",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "શીટના સેવનના દિવસો બદલો",
+  "changePillDaysForSheet": "દરેક સ્ટ્રિપમાંથી ગોળી લેવાના દિવસોની સંખ્યા બદલો",
   "changedStartAndEndNumbers": "શરૂઆત અને અંતના નંબર બદલ્યા છે",
   "startOfPillDays": "સેવન દિવસોની શરૂઆત",
   "beforePillSheetGroupSequentialEstimatedEndDay": "પાછલી શીટનો છેલ્લો: {beforePillSheetGroupSequentialEstimatedEndPillNumber} દિવસ",

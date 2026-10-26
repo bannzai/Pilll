@@ -127,7 +127,7 @@
   "changePauseStartDate": "Canvia la data d'inici de la pausa de la píndola",
   "pauseTakingPeriodEnded": "La pausa de la píndola s’ha acabat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Canviar els dies de presa del full",
+  "changePillDaysForSheet": "Canvia el nombre de dies de presa de la píndola per blíster",
   "changedStartAndEndNumbers": "S'han canviat els números d'inici i final",
   "startOfPillDays": "Inici de la presa",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Final del full anterior: dia {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

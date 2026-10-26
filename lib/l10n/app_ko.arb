@@ -127,7 +127,7 @@
   "changePauseStartDate": "복용 휴식 시작일 변경",
   "pauseTakingPeriodEnded": "복용 휴식 기간이 끝났어요",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "시트 복용 기간 변경",
+  "changePillDaysForSheet": "시트별 복용 일수 변경",
   "changedStartAndEndNumbers": "시작과 끝 번호가 변경되었습니다",
   "startOfPillDays": "복용 시작 일수",
   "beforePillSheetGroupSequentialEstimatedEndDay": "이전 시트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",

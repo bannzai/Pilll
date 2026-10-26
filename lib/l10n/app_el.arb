@@ -127,7 +127,7 @@
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της διακοπής λήψης χαπιών",
   "pauseTakingPeriodEnded": "Το διάλειμμα από τη λήψη του χαπιού ολοκληρώθηκε",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Αλλαγή ημερών λήψης συσκευασίας",
+  "changePillDaysForSheet": "Αλλαγή ημερών λήψης χαπιών ανά συσκευασία",
   "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",
   "startOfPillDays": "Αρχή λήψης",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Τέλος προηγούμενου φύλλου: {beforePillSheetGroupSequentialEstimatedEndPillNumber}η ημέρα",

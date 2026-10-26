@@ -127,7 +127,7 @@
   "changePauseStartDate": "Ubah tanggal mulai jeda minum pil",
   "pauseTakingPeriodEnded": "Masa jeda minum pil Anda telah berakhir",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Ubah durasi konsumsi lembar",
+  "changePillDaysForSheet": "Ubah jumlah hari minum pil per kemasan",
   "changedStartAndEndNumbers": "Nomor awal dan akhir telah diubah",
   "startOfPillDays": "Hari mulai konsumsi",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir lembar sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",

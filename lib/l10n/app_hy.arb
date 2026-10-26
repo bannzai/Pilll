@@ -127,7 +127,7 @@
   "changePauseStartDate": "Փոխել հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "pauseTakingPeriodEnded": "Հաբերի ընդունման ընդմիջումն ավարտվել է",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Փոփոխել փաթեթի ընդունման օրերի քանակը",
+  "changePillDaysForSheet": "Փոխել յուրաքանչյուր փաթեթից հաբ ընդունելու օրերի քանակը",
   "changedStartAndEndNumbers": "Սկսման և ավարտման համարները փոխվել են",
   "startOfPillDays": "Ընդունման սկիզբ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "նախորդ թերթի վերջը՝ {beforePillSheetGroupSequentialEstimatedEndPillNumber}-րդ օր",

@@ -127,7 +127,7 @@
   "changePauseStartDate": "更改停药期开始日期",
   "pauseTakingPeriodEnded": "暂停服药的时间已结束",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "更改药片包装服用天数",
+  "changePillDaysForSheet": "更改每板药的服用天数",
   "changedStartAndEndNumbers": "已更改开始和结束编号",
   "startOfPillDays": "服用开始日数",
   "beforePillSheetGroupSequentialEstimatedEndDay": "上一板最后：第{beforePillSheetGroupSequentialEstimatedEndPillNumber}天",

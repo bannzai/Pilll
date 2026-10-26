@@ -127,7 +127,7 @@
   "changePauseStartDate": "Pakeiskite tablečių vartojimo pertraukos pradžios datą",
   "pauseTakingPeriodEnded": "Tablečių vartojimo pertrauka baigėsi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Keisti lakšto vartojimo dienų skaičių",
+  "changePillDaysForSheet": "Pakeisti tablečių vartojimo dienų skaičių vienoje plokštelėje",
   "changedStartAndEndNumbers": "Pradžios ir pabaigos numeriai pakeisti",
   "startOfPillDays": "Vartojimo dienų pradžia",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Paskutinės plokštelės pabaiga: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-a diena",

@@ -127,7 +127,7 @@
   "changePauseStartDate": "Змінити дату початку перерви в прийомі пігулок",
   "pauseTakingPeriodEnded": "Перерва в прийомі пігулок завершилася",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Змінити кількість днів прийому блістера",
+  "changePillDaysForSheet": "Змінити кількість днів прийому пігулок з блістера",
   "changedStartAndEndNumbers": "Початковий та кінцевий номери змінено",
   "startOfPillDays": "Початок прийому",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Кінець попереднього блістера: {beforePillSheetGroupSequentialEstimatedEndPillNumber} день",

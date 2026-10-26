@@ -127,7 +127,7 @@
   "changePauseStartDate": "Shintsha usuku lokuqala kwekhefu lokuphuza amaphilisi",
   "pauseTakingPeriodEnded": "Isikhathi sokuphumula ekuphuzeni amaphilisi sesiphelile",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Guqula izinsuku zokuphuza ishidi",
+  "changePillDaysForSheet": "Sicela ushintshe inani lezinsuku zokuphuza amaphilisi ephaketheni ngalinye",
   "changedStartAndEndNumbers": "Izinombolo zokuqala nokuphela zishintshiwe",
   "startOfPillDays": "Ukuqala kwezinsuku zokuthatha",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Okokugcina kweshidi langaphambili: usuku {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

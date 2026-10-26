@@ -127,7 +127,7 @@
   "changePauseStartDate": "تغيير تاريخ بدء فترة التوقف عن تناول الحبوب",
   "pauseTakingPeriodEnded": "انتهت فترة التوقف عن تناول الحبوب",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "تغيير عدد أيام تناول الحبوب",
+  "changePillDaysForSheet": "تغيير عدد أيام تناول الحبوب من الشريط",
   "changedStartAndEndNumbers": "تم تغيير أرقام البداية والنهاية",
   "startOfPillDays": "بداية أيام التناول",
   "beforePillSheetGroupSequentialEstimatedEndDay": "نهاية الشريط السابق: اليوم {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

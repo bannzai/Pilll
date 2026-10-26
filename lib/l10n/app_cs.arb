@@ -127,7 +127,7 @@
   "changePauseStartDate": "Změnit datum začátku pauzy v užívání pilulek",
   "pauseTakingPeriodEnded": "Pauza v užívání pilulek skončila",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Změnit počet dní užívání balení",
+  "changePillDaysForSheet": "Změnit počet dní užívání pilulek z plata",
   "changedStartAndEndNumbers": "Počáteční a koncové číslo bylo změněno",
   "startOfPillDays": "Začátek užívání",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Konec předchozího balení: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. den",

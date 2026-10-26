@@ -127,7 +127,7 @@
   "changePauseStartDate": "Modifica la data di inizio della pausa dalla pillola",
   "pauseTakingPeriodEnded": "La pausa dall’assunzione della pillola è terminata",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Modifica giorni di assunzione del blister",
+  "changePillDaysForSheet": "Modifica i giorni di assunzione della pillola per blister",
   "changedStartAndEndNumbers": "I numeri di inizio e fine sono stati modificati",
   "startOfPillDays": "Inizio assunzione",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Fine del blister precedente: {beforePillSheetGroupSequentialEstimatedEndPillNumber}° giorno",

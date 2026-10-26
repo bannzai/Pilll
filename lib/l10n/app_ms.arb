@@ -127,7 +127,7 @@
   "changePauseStartDate": "Ubah tarikh mula berhenti seketika mengambil pil",
   "pauseTakingPeriodEnded": "Tempoh rehat daripada mengambil pil telah tamat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Ubah tempoh pengambilan lembaran",
+  "changePillDaysForSheet": "Ubah bilangan hari pengambilan pil bagi setiap pek",
   "changedStartAndEndNumbers": "Nombor permulaan dan akhir telah diubah",
   "startOfPillDays": "Permulaan hari pengambilan",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir set sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",

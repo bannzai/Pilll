@@ -127,7 +127,7 @@
   "changePauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data aldatu",
   "pauseTakingPeriodEnded": "Pilula hartzeko atsedenaldia amaitu da",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Txartelaren hartzeko egunak aldatu",
+  "changePillDaysForSheet": "Aldatu blister bakoitzeko pilulak hartzeko egun kopurua",
   "changedStartAndEndNumbers": "Hasierako eta amaierako zenbakiak aldatu dira",
   "startOfPillDays": "Hartze-egunen hasiera",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Aurreko txartelaren amaiera: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. eguna",

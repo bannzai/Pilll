@@ -127,7 +127,7 @@
   "changePauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ পরিবর্তন করুন",
   "pauseTakingPeriodEnded": "পিল খাওয়ার বিরতি শেষ হয়েছে",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "শিট সেবনের দিন পরিবর্তন",
+  "changePillDaysForSheet": "প্রতি স্ট্রিপে পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "changedStartAndEndNumbers": "শুরু এবং শেষের নম্বর পরিবর্তন করা হয়েছে",
   "startOfPillDays": "সেবনের দিনের শুরু",
   "beforePillSheetGroupSequentialEstimatedEndDay": "পূর্ববর্তী শিটের শেষ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}তম দিন",

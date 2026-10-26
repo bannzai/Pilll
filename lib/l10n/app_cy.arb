@@ -127,7 +127,7 @@
   "changePauseStartDate": "Newid dyddiad dechrau'r saib o gymryd y bilsen",
   "pauseTakingPeriodEnded": "Mae’r cyfnod o seibiant rhag cymryd y bilsen wedi dod i ben",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Newid cyfnod cymryd y daflen",
+  "changePillDaysForSheet": "Newid nifer y diwrnodau o gymryd pils o'r pecyn",
   "changedStartAndEndNumbers": "Wedi newid rhifau'r cychwyn a'r diwedd",
   "startOfPillDays": "Dechrau'r dyddiau cymryd",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Diwedd y dalen flaenorol: diwrnod {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

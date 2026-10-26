@@ -127,7 +127,7 @@
   "changePauseStartDate": "Schimbă data de început a pauzei de la pilulă",
   "pauseTakingPeriodEnded": "Pauza de la administrarea pilulei s-a încheiat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Modificarea zilelor de administrare ale blisterului",
+  "changePillDaysForSheet": "Schimbă numărul de zile de administrare a pilulei per folie",
   "changedStartAndEndNumbers": "Numerele de început și de sfârșit au fost modificate",
   "startOfPillDays": "Începutul zilelor de administrare",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Sfârșitul blisterului precedent: ziua {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

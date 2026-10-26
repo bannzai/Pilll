@@ -127,7 +127,7 @@
   "changePauseStartDate": "เปลี่ยนวันที่เริ่มพักทานยา",
   "pauseTakingPeriodEnded": "ช่วงพักทานยาคุมสิ้นสุดแล้วค่ะ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "เปลี่ยนจำนวนวันรับประทานแผงยา",
+  "changePillDaysForSheet": "เปลี่ยนจำนวนวันที่ทานยาในแต่ละแผง",
   "changedStartAndEndNumbers": "ได้เปลี่ยนหมายเลขเริ่มต้นและสิ้นสุดแล้ว",
   "startOfPillDays": "วันเริ่มต้นการรับประทาน",
   "beforePillSheetGroupSequentialEstimatedEndDay": "วันสุดท้ายของแผงครั้งก่อน: วันที่ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

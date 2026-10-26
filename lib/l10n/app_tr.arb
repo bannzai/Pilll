@@ -127,7 +127,7 @@
   "changePauseStartDate": "Hap kullanımına ara verme başlangıç tarihini değiştirin",
   "pauseTakingPeriodEnded": "Hap kullanımına verdiğiniz ara sona erdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Blister paketi kullanım süresini değiştir",
+  "changePillDaysForSheet": "Blister başına hap alınan gün sayısını değiştirin",
   "changedStartAndEndNumbers": "Başlangıç ve bitiş numaraları değiştirildi",
   "startOfPillDays": "Kullanım başlangıcı",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Önceki blisterin sonu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. gün",

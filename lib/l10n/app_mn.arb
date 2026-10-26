@@ -127,7 +127,7 @@
   "changePauseStartDate": "Эм уух завсарлага эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эм уух завсарлага дууссан",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Савхны хэрэглэх өдрийн тоог өөрчлөх",
+  "changePillDaysForSheet": "Нэг блистерээс эм уух өдрийн тоог өөрчилнө үү",
   "changedStartAndEndNumbers": "Эхлэх болон төгсгөлийн дугаарыг өөрчиллөө",
   "startOfPillDays": "Уусан өдрийн эхлэл",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Өмнөх шийлэнгийн сүүлийн: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-р өдөр",

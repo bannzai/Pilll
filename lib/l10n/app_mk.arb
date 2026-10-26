@@ -127,7 +127,7 @@
   "changePauseStartDate": "Промена на датумот на почеток на паузата од земање таблета",
   "pauseTakingPeriodEnded": "Паузата во земањето таблета заврши",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Промени ги деновите за земање на листот",
+  "changePillDaysForSheet": "Промена на бројот на денови за земање таблета по блистер",
   "changedStartAndEndNumbers": "Почетниот и крајниот број се сменети",
   "startOfPillDays": "Почеток на земање",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Крај на претходната листа: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ти ден",

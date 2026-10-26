@@ -127,7 +127,7 @@
   "changePauseStartDate": "A tablettaszedési szünet kezdőnapjának módosítása",
   "pauseTakingPeriodEnded": "Véget ért a tablettaszedési szünet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Csomag szedési napjainak módosítása",
+  "changePillDaysForSheet": "A tablettaszedés napjainak módosítása levélenként",
   "changedStartAndEndNumbers": "A kezdő és befejező számokat megváltoztatta",
   "startOfPillDays": "Szedés kezdete",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Előző csomag vége: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. nap",

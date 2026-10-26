@@ -127,7 +127,7 @@
   "changePauseStartDate": "Promijenite datum početka pauze u uzimanju pilula",
   "pauseTakingPeriodEnded": "Pauza u uzimanju pilula je završena",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Promjena trajanja uzimanja lista",
+  "changePillDaysForSheet": "Promijenite broj dana uzimanja pilula iz pakovanja",
   "changedStartAndEndNumbers": "Početni i završni brojevi su promijenjeni",
   "startOfPillDays": "Početak uzimanja",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Kraj prethodnog lista: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",

@@ -127,7 +127,7 @@
   "changePauseStartDate": "गोळ्या घेण्याच्या विश्रांतीची सुरुवातीची तारीख बदला",
   "pauseTakingPeriodEnded": "गोळी घेण्याचा विराम संपला आहे",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "शीटचे सेवन दिवस बदला",
+  "changePillDaysForSheet": "प्रत्येक स्ट्रिपमधील गोळ्या घेण्याच्या दिवसांची संख्या बदला",
   "changedStartAndEndNumbers": "सुरुवात आणि शेवटचे क्रमांक बदलले आहेत",
   "startOfPillDays": "सेवनाची सुरुवात",
   "beforePillSheetGroupSequentialEstimatedEndDay": "मागील शीटचा शेवट: {beforePillSheetGroupSequentialEstimatedEndPillNumber} दिवस",

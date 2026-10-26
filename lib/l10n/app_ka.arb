@@ -127,7 +127,7 @@
   "changePauseStartDate": "აბების მიღების შესვენების დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "აბების მიღების შესვენება დასრულდა",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "აბის მიღების ვადის შეცვლა",
+  "changePillDaysForSheet": "თითოეული ბლისტერიდან აბების მიღების დღეების რაოდენობის შეცვლა",
   "changedStartAndEndNumbers": "საწყისისა და ბოლო ნომრები შეიცვალა",
   "startOfPillDays": "მიღების დღეების დაწყება",
   "beforePillSheetGroupSequentialEstimatedEndDay": "წინა ფურცლის ბოლო: {beforePillSheetGroupSequentialEstimatedEndPillNumber} დღე",

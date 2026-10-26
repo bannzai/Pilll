@@ -127,7 +127,7 @@
   "changePauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ ਬਦਲੋ",
   "pauseTakingPeriodEnded": "ਗੋਲੀ ਲੈਣ ਦਾ ਵਿਰਾਮ ਖ਼ਤਮ ਹੋ ਗਿਆ ਹੈ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "ਸ਼ੀਟ ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸੰਖਿਆ ਬਦਲੋ",
+  "changePillDaysForSheet": "ਹਰ ਸਟ੍ਰਿਪ ਵਿੱਚ ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
   "changedStartAndEndNumbers": "ਸ਼ੁਰੂਆਤ ਅਤੇ ਅੰਤ ਦੇ ਨੰਬਰ ਬਦਲ ਦਿੱਤੇ ਗਏ",
   "startOfPillDays": "ਸੇਵਨ ਦਿਨਾਂ ਦੀ ਸ਼ੁਰੂਆਤ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ਪਿਛਲੀ ਸ਼ੀਟ ਦਾ ਅੰਤ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ਵਾਂ ਦਿਨ",

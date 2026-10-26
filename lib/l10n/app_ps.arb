@@ -127,7 +127,7 @@
   "changePauseStartDate": "د ګولیو د اخیستلو د وقفې د پیل نېټه بدله کړئ",
   "pauseTakingPeriodEnded": "د ګولیو د اخیستو دمه پای ته رسېدلې ده",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "د گولۍ شيټ د استعمال ورځې بدلول",
+  "changePillDaysForSheet": "په هر پټۍ کې د ګولیو د اخیستو د ورځو شمېر بدل کړئ",
   "changedStartAndEndNumbers": "د پیل او ختم شمېرې بدلې شوې",
   "startOfPillDays": "د استعمال ورځو پیل",
   "beforePillSheetGroupSequentialEstimatedEndDay": "د پخوانۍ شیټ وروستی: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ورځ",

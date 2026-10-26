@@ -127,7 +127,7 @@
   "changePauseStartDate": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်ကို ပြောင်းပါ",
   "pauseTakingPeriodEnded": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားထားသည့်ကာလ ပြီးဆုံးပါပြီ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "ပြားပုံးသုံးရက်ကိုပြောင်းလဲရန်",
+  "changePillDaysForSheet": "တစ်ကတ်တွင် ဆေးပြားသောက်ရမည့် ရက်အရေအတွက်ကို ပြောင်းပါ",
   "changedStartAndEndNumbers": "အစနှင့်အဆုံးနံပါတ်များကို ပြောင်းလဲလိုက်ပါပြီ",
   "startOfPillDays": "သောက်စရက်",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ယခင်စားရွက်၏ နောက်ဆုံး： {beforePillSheetGroupSequentialEstimatedEndPillNumber}ရက်မြောက်",

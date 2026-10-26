@@ -127,7 +127,7 @@
   "changePauseStartDate": "Đổi ngày bắt đầu tạm ngừng uống thuốc",
   "pauseTakingPeriodEnded": "Thời gian tạm ngừng uống thuốc đã kết thúc",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Thay đổi số ngày uống vỉ thuốc",
+  "changePillDaysForSheet": "Thay đổi số ngày uống thuốc cho mỗi vỉ",
   "changedStartAndEndNumbers": "Đã thay đổi số thứ tự bắt đầu và kết thúc",
   "startOfPillDays": "Ngày bắt đầu uống thuốc",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Cuối vỉ trước đó: ngày thứ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

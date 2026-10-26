@@ -127,7 +127,7 @@
   "changePauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін өзгертіңіз",
   "pauseTakingPeriodEnded": "Таблетка қабылдаудағы үзіліс аяқталды",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Таблетка пластинкасының қабылдау күндерін өзгерту",
+  "changePillDaysForSheet": "Бір блистердегі таблетканы қабылдау күндерінің санын өзгертіңіз",
   "changedStartAndEndNumbers": "Бастапқы және соңғы нөмірлер өзгертілді",
   "startOfPillDays": "Қабылдау күндерінің басталуы",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Алдыңғы парақтың соңы: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ші күн",

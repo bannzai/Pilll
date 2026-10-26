@@ -127,7 +127,7 @@
   "changePauseStartDate": "Həb fasiləsinin başlama tarixini dəyişin",
   "pauseTakingPeriodEnded": "Həb qəbuluna fasilə müddəti bitdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Vərəqin qəbul müddətini dəyişdir",
+  "changePillDaysForSheet": "Hər blister üçün həb qəbul edilən günlərin sayını dəyişin",
   "changedStartAndEndNumbers": "Başlanğıc və son nömrələri dəyişdirildi",
   "startOfPillDays": "Qəbul etmə günlərinin başlanğıcı",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Əvvəlki paketin sonu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-ci gün",

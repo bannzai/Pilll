@@ -127,7 +127,7 @@
   "changePauseStartDate": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಬದಲಿಸಿ",
   "pauseTakingPeriodEnded": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮ ಮುಗಿದಿದೆ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "ಶೀಟ್ ಸೇವನೆಯ ದಿನಗಳನ್ನು ಬದಲಾಯಿಸಿ",
+  "changePillDaysForSheet": "ಪ್ರತಿ ಸ್ಟ್ರಿಪ್‌ನಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಿ",
   "changedStartAndEndNumbers": "ಆರಂಭ ಮತ್ತು ಅಂತ್ಯದ ಸಂಖ್ಯೆಗಳನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "startOfPillDays": "ಸೇವನೆಯ ಆರಂಭ",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ಹಿಂದಿನ ಶೀಟ್‌ನ ಕೊನೆಯದು: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ನೇ ದಿನ",

@@ -127,7 +127,7 @@
   "changePauseStartDate": "Ändra startdatum för pilleruppehåll",
   "pauseTakingPeriodEnded": "Ditt pilleruppehåll är över",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Ändra förpackningens intagsdagar",
+  "changePillDaysForSheet": "Ändra antal dagar med piller per karta",
   "changedStartAndEndNumbers": "Start- och slutnummer har ändrats",
   "startOfPillDays": "Början på intag",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Slutet av förra kuren: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

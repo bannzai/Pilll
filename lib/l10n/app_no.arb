@@ -127,7 +127,7 @@
   "changePauseStartDate": "Endre startdato for p-pillepause",
   "pauseTakingPeriodEnded": "P-pillepausen din er over",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Endre arkens behandlingsperiode",
+  "changePillDaysForSheet": "Endre antall dager med p-piller per brett",
   "changedStartAndEndNumbers": "Start- og sluttnummer er endret",
   "startOfPillDays": "Start av inntagelsesdager",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Slutten av forrige plate: dag {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

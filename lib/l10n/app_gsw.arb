@@ -127,7 +127,7 @@
   "changePauseStartDate": "Startdatum vo de Pillepaus ändere",
   "pauseTakingPeriodEnded": "Dini Pillepause isch verbii",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Pilleblatt Iinahmdauer ändere",
+  "changePillDaysForSheet": "D Aazahl Täg für d Iinahm pro Blister ändere",
   "changedStartAndEndNumbers": "Afangs- und Endnummere sind gänderet worde",
   "startOfPillDays": "Aafang vo de Iinahm-Täg",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Läschte vom vorige Blatt: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. Tag",

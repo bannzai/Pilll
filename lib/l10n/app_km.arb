@@ -127,7 +127,7 @@
   "changePauseStartDate": "ប្តូរកាលបរិច្ឆេទចាប់ផ្តើមផ្អាកលេបថ្នាំគ្រាប់",
   "pauseTakingPeriodEnded": "រយៈពេលផ្អាកលេបថ្នាំគ្រាប់បានបញ្ចប់ហើយ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "ផ្លាស់ប្តូរចំនួនថ្ងៃទទួលទានសំប៉ែត",
+  "changePillDaysForSheet": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំក្នុងមួយបន្ទះ",
   "changedStartAndEndNumbers": "បានផ្លាស់ប្តូរលេខចាប់ផ្តើមនិងបញ្ចប់",
   "startOfPillDays": "ថ្ងៃចាប់ផ្តើមទទួលទាន",
   "beforePillSheetGroupSequentialEstimatedEndDay": "ចុងក្រោយនៃសន្លឹកមុន៖ ថ្ងៃទី{beforePillSheetGroupSequentialEstimatedEndPillNumber}",

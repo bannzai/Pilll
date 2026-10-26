@@ -127,7 +127,7 @@
   "changePauseStartDate": "Spremenite datum začetka premora pri jemanju tablet",
   "pauseTakingPeriodEnded": "Premor pri jemanju tablet je končan",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Spremeni trajanje jemanja lista",
+  "changePillDaysForSheet": "Spremenite število dni jemanja tablet iz omota",
   "changedStartAndEndNumbers": "Začetna in končna številka sta spremenjeni",
   "startOfPillDays": "Začetek jemanja",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Konec prejšnjega lista: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. dan",

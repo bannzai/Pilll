@@ -127,7 +127,7 @@
   "changePauseStartDate": "Mainīt tablešu lietošanas pārtraukuma sākuma datumu",
   "pauseTakingPeriodEnded": "Tablešu lietošanas pārtraukums ir beidzies",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Mainīt plāksnītes lietošanas dienu skaitu",
+  "changePillDaysForSheet": "Mainīt tablešu lietošanas dienu skaitu vienā plāksnītē",
   "changedStartAndEndNumbers": "Sākuma un beigu numuri tika mainīti",
   "startOfPillDays": "Lietošanas dienu sākums",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Iepriekšējās plāksnes beigas: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. diena",

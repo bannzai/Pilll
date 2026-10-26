@@ -127,7 +127,7 @@
   "changePauseStartDate": "Ndryshoni datën e fillimit të pushimit nga pilulat",
   "pauseTakingPeriodEnded": "Pauza nga marrja e pilulës ka përfunduar",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Ndrysho ditët e marrjes së paketës",
+  "changePillDaysForSheet": "Ndryshoni numrin e ditëve të marrjes së pilulave për çdo paketë",
   "changedStartAndEndNumbers": "Numrat e fillimit dhe të fundit janë ndryshuar",
   "startOfPillDays": "Fillimi i ditëve të marrjes",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Fundi i fletës së mëparshme: dita {beforePillSheetGroupSequentialEstimatedEndPillNumber}",

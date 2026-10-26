@@ -127,7 +127,7 @@
   "changePauseStartDate": "Vaihda pilleritauon alkamispäivää",
   "pauseTakingPeriodEnded": "Pilleritauko on päättynyt",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Muuta käyttöpäivien määrää",
+  "changePillDaysForSheet": "Muuta liuskan pillereiden käyttöpäivien määrää",
   "changedStartAndEndNumbers": "Alku- ja loppunumerot on muutettu",
   "startOfPillDays": "Ottopäivien alku",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Edellisen pakkauksen loppu: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. päivä",

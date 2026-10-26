@@ -127,7 +127,7 @@
   "changePauseStartDate": "Modifier la date de début de la pause de la pilule",
   "pauseTakingPeriodEnded": "Votre pause dans la prise de la pilule est terminée",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-  "changePillDaysForSheet": "Modifier la durée de la feuille",
+  "changePillDaysForSheet": "Modifier le nombre de jours de prise par plaquette",
   "changedStartAndEndNumbers": "Les numéros de début et de fin ont été modifiés",
   "startOfPillDays": "Début des journées de traitement",
   "beforePillSheetGroupSequentialEstimatedEndDay": "Fin de feuille précédente : Jour {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
