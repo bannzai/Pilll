@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "आज विरामाचा कितवा दिवस आहे",
   "yazFlexSkipRestDuration": "विरामाची माहिती न भरता पुढे जा",
   "yazFlexSkipRestDurationDialogTitle": "विरामाची माहिती भरणे वगळा",
-  "yazFlexSkipRestDurationDialogMessage": "गोळी घेण्याच्या विश्रांतीचा कालावधी नंतर होममधील “गोळी घेण्याची विश्रांती” मधून भरू शकता.",
+  "yazFlexSkipRestDurationDialogMessage": "विरामाचा कालावधी तुम्ही नंतर होम स्क्रीनवरील “गोळी घेण्यात विराम” येथे नोंदवू शकता.",
   "yazFlexSkipRestDurationDialogSkip": "वगळा",
   "yazFlexBeginPillNumberPageTitle": "चक्रानुसार शीटची सुरुवात कितवी गोळी घेणे आहे?",
   "yazFlexBeginPillNumberPageNote": "कृपया शीट सुरू करण्यापूर्वीच्या विश्रांतीनंतर गेलेल्या दिवसांच्या संख्येनुसार उत्तर द्या.",

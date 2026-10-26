@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Які сёння дзень перапыну",
   "yazFlexSkipRestDuration": "Прапусціць увод звестак пра перапын",
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод даных пра перапын",
-  "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку ў прыёме можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме» на галоўнай старонцы.",
+  "yazFlexSkipRestDurationDialogMessage": "Перыяд перапынку можна будзе ўвесці пазней у раздзеле «Перапынак у прыёме пігулак» на галоўным экране.",
   "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
   "yazFlexBeginPillNumberPageTitle": "Пачатак блістара — гэта які па ліку прыём у цыкле?",
   "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце на падставе колькасці дзён, што прайшлі з моманту перапынку перад пачаткам блістара.",

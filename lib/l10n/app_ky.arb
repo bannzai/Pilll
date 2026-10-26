@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Бүгүн тыныгуунун канчанчы күнү",
   "yazFlexSkipRestDuration": "Тыныгуу тууралуу маалыматты киргизүүнү өткөрүп жибериңиз",
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу тууралуу маалыматты киргизүүнү өткөрүп жибериңиз",
-  "yazFlexSkipRestDurationDialogMessage": "Ичүүнү тыныгуу мөөнөтүн кийинчерээк Башкы беттеги “Ичүүнү тыныгуу” бөлүмүнөн киргизе аласыз.",
+  "yazFlexSkipRestDurationDialogMessage": "Тыныгуунун мөөнөтүн кийинчерээк башкы беттеги «Таблетка ичүүдөгү тыныгуу» бөлүмүнөн киргизе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
   "yazFlexBeginPillNumberPageTitle": "Цикл боюнча барактын башталышы канчанчы кабыл алуу болот?",
   "yazFlexBeginPillNumberPageNote": "Сураныч, таңгакты баштоонун алдындагы тыныгуудан бери өткөн күндөрдүн санына жараша жооп бериңиз.",

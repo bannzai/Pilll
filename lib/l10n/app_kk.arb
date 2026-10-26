@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Бүгін үзілістің нешінші күні",
   "yazFlexSkipRestDuration": "Үзіліс туралы ақпаратты енгізуді өткізіп жіберіңіз",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс туралы мәліметті енгізуді өткізіп жіберу",
-  "yazFlexSkipRestDurationDialogMessage": "Қабылдау үзілісінің мерзімін кейінірек Басты беттегі «Қабылдау үзілісі» бөлімінен енгізе аласыз.",
+  "yazFlexSkipRestDurationDialogMessage": "Үзіліс мерзімін кейінірек басты беттегі «Таблетка қабылдаудағы үзіліс» бөлімінде енгізе аласыз.",
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexBeginPillNumberPageTitle": "Циклдегі парақтың басы нешінші қабылдауға сәйкес келеді?",
   "yazFlexBeginPillNumberPageNote": "Өтінеміз, парақты бастар алдындағы үзілістен бері өткен күндер санына қарай жауап беріңіз.",

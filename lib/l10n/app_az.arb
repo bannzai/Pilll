@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Bu gün fasilənin neçənci günüdür",
   "yazFlexSkipRestDuration": "fasilə məlumatını daxil etmədən keçin",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə məlumatını daxil etməyi ötürün",
-  "yazFlexSkipRestDurationDialogMessage": "Qəbul fasiləsi müddətini sonra Ana səhifədəki “Qəbul fasiləsi” bölməsindən daxil edə bilərsiniz.",
+  "yazFlexSkipRestDurationDialogMessage": "Fasilənin müddətini daha sonra əsas səhifədəki “Həb qəbuluna fasilə” bölməsində daxil edə bilərsiniz.",
   "yazFlexSkipRestDurationDialogSkip": "Keçin",
   "yazFlexBeginPillNumberPageTitle": "Sikl üzrə vərəqin başlanğıcı neçənci qəbuldur?",
   "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, vərəqə başlamazdan əvvəlki fasilədən sonra keçən günlərin sayına əsasən cavab verin.",

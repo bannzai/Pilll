@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Kelinta pertraukos diena šiandien",
   "yazFlexSkipRestDuration": "Praleisti pertraukos duomenų įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos įvedimą",
-  "yazFlexSkipRestDurationDialogMessage": "Vartojimo pertraukos laikotarpį vėliau galėsite įvesti pradžios ekrano skiltyje „Vartojimo pertrauka“.",
+  "yazFlexSkipRestDurationDialogMessage": "Pertraukos trukmę vėliau galėsite įvesti pradžios ekrano skiltyje „Tablečių vartojimo pertrauka“.",
   "yazFlexSkipRestDurationDialogSkip": "Praleisti",
   "yazFlexBeginPillNumberPageTitle": "Kelintas vartojimas cikle yra lapelio pradžia?",
   "yazFlexBeginPillNumberPageNote": "Prašome atsakyti pagal dienų skaičių, praėjusį nuo pertraukos prieš pradedant lapelį.",

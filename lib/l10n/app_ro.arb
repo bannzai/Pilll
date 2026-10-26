@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "A câta zi de pauză este astăzi",
   "yazFlexSkipRestDuration": "Omite introducerea datelor despre pauză",
   "yazFlexSkipRestDurationDialogTitle": "Omite introducerea pauzei",
-  "yazFlexSkipRestDurationDialogMessage": "Perioada de pauză a administrării poate fi introdusă mai târziu din „Pauză administrare” de pe ecranul principal.",
+  "yazFlexSkipRestDurationDialogMessage": "Poți introduce durata pauzei mai târziu la „Pauză în administrarea pilulei”, pe ecranul principal.",
   "yazFlexSkipRestDurationDialogSkip": "Omite",
   "yazFlexBeginPillNumberPageTitle": "În ciclul de administrare, începutul foliei corespunde cărei prize?",
   "yazFlexBeginPillNumberPageNote": "Vă rugăm să răspundeți în funcție de numărul de zile trecute de la pauza de dinainte de începerea foliei.",

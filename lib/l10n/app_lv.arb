@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Kura pārtraukuma diena ir šodien",
   "yazFlexSkipRestDuration": "Izlaist pārtraukuma datu ievadi",
   "yazFlexSkipRestDurationDialogTitle": "Izlaist pārtraukuma ievadīšanu",
-  "yazFlexSkipRestDurationDialogMessage": "Lietošanas pārtraukuma periodu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Lietošanas pārtraukums”.",
+  "yazFlexSkipRestDurationDialogMessage": "Pārtraukuma ilgumu vēlāk varēsiet ievadīt sākuma ekrāna sadaļā “Pārtraukums tablešu lietošanā”.",
   "yazFlexSkipRestDurationDialogSkip": "Izlaist",
   "yazFlexBeginPillNumberPageTitle": "Kurā lietošanas reizē ciklā ir plāksnītes sākums?",
   "yazFlexBeginPillNumberPageNote": "Lūdzu, atbildiet, pamatojoties uz dienu skaitu kopš pārtraukuma pirms plāksnītes sākšanas.",

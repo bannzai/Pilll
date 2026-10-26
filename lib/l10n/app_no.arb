@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Hvilken dag i pillepausen er det i dag",
   "yazFlexSkipRestDuration": "Hopp over registrering av pillepause",
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pillepause",
-  "yazFlexSkipRestDurationDialogMessage": "Perioden for pause i inntak kan legges inn senere under «Pause i inntak» på hjemmeskjermen.",
+  "yazFlexSkipRestDurationDialogMessage": "Du kan legge inn perioden senere under «P-pillepause» på hjemmeskjermen.",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
   "yazFlexBeginPillNumberPageTitle": "Hvilket nummer i syklusen er starten på brettet?",
   "yazFlexBeginPillNumberPageNote": "Vennligst svar basert på hvor mange dager som har gått siden pausen før du startet brettet.",

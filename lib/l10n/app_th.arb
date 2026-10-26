@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "วันนี้เป็นวันที่เท่าไรของการหยุดยา",
   "yazFlexSkipRestDuration": "ข้ามการกรอกข้อมูลช่วงหยุดยา",
   "yazFlexSkipRestDurationDialogTitle": "ข้ามการกรอกข้อมูลช่วงหยุดยา",
-  "yazFlexSkipRestDurationDialogMessage": "คุณสามารถกรอกช่วงพักการรับประทานได้ภายหลังจาก “พักการรับประทาน” บนหน้าหลัก",
+  "yazFlexSkipRestDurationDialogMessage": "สามารถกรอกระยะเวลาที่พักทานยาในภายหลังได้ที่ “พักทานยาเม็ดชั่วคราว” บนหน้าหลักค่ะ",
   "yazFlexSkipRestDurationDialogSkip": "ข้าม",
   "yazFlexBeginPillNumberPageTitle": "จุดเริ่มต้นของแผง ตรงกับการรับประทานครั้งที่เท่าไรในรอบ?",
   "yazFlexBeginPillNumberPageNote": "โปรดตอบโดยอิงตามจำนวนวันที่ผ่านไปนับจากช่วงหยุดยาก่อนเริ่มแผงยา",

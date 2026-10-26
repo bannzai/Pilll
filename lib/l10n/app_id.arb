@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Hari ke berapa jeda pil hari ini",
   "yazFlexSkipRestDuration": "Lewati pengisian informasi jeda",
   "yazFlexSkipRestDurationDialogTitle": "Lewati pengisian jeda",
-  "yazFlexSkipRestDurationDialogMessage": "Periode jeda minum dapat diisi nanti dari “Jeda minum” di Beranda.",
+  "yazFlexSkipRestDurationDialogMessage": "Anda dapat mengisi lama jeda nanti melalui “Jeda minum pil” di Beranda.",
   "yazFlexSkipRestDurationDialogSkip": "Lewati",
   "yazFlexBeginPillNumberPageTitle": "Awal lembar pada siklus ini adalah konsumsi ke berapa?",
   "yazFlexBeginPillNumberPageNote": "Silakan jawab berdasarkan jumlah hari sejak jeda sebelum memulai lembar.",

@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "ថ្ងៃនេះជាថ្ងៃទីប៉ុន្មាននៃការផ្អាកលេបថ្នាំ",
   "yazFlexSkipRestDuration": "រំលងការបញ្ចូលព័ត៌មានអំពីការផ្អាកលេបថ្នាំ",
   "yazFlexSkipRestDurationDialogTitle": "រំលងការបញ្ចូលរយៈពេលផ្អាកលេបថ្នាំ",
-  "yazFlexSkipRestDurationDialogMessage": "អ្នកអាចបញ្ចូលរយៈពេលផ្អាកការទទួលទាននៅពេលក្រោយពី “ផ្អាកការទទួលទាន” នៅលើទំព័រដើម។",
+  "yazFlexSkipRestDurationDialogMessage": "អ្នកអាចបញ្ចូលរយៈពេលផ្អាកនៅពេលក្រោយតាម «ផ្អាកការលេបថ្នាំគ្រាប់» នៅលើទំព័រដើម។",
   "yazFlexSkipRestDurationDialogSkip": "រំលង",
   "yazFlexBeginPillNumberPageTitle": "ការចាប់ផ្ដើមសន្លឹក ត្រូវនឹងការលេបលើកទីប៉ុន្មានក្នុងវដ្ត?",
   "yazFlexBeginPillNumberPageNote": "សូមឆ្លើយដោយផ្អែកលើចំនួនថ្ងៃដែលបានកន្លងផុតចាប់តាំងពីរយៈពេលឈប់មុនពេលចាប់ផ្តើមសន្លឹក។",

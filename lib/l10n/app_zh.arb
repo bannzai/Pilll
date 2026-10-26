@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "今天是停药的第几天",
   "yazFlexSkipRestDuration": "跳过填写停药信息",
   "yazFlexSkipRestDurationDialogTitle": "跳过填写停药信息",
-  "yazFlexSkipRestDurationDialogMessage": "休药期间可稍后在首页的“服用休息”中输入。",
+  "yazFlexSkipRestDurationDialogMessage": "休药时长可以稍后在首页的“暂停服用药片”中填写。",
   "yazFlexSkipRestDurationDialogSkip": "跳过",
   "yazFlexBeginPillNumberPageTitle": "这板药的开始对应周期中的第几次服用？",
   "yazFlexBeginPillNumberPageNote": "请根据开始药板前的停药期结束后经过的天数作答。",

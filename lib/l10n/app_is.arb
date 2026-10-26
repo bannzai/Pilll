@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Hvaða dagur hlésins er í dag",
   "yazFlexSkipRestDuration": "Sleppa því að skrá hlé",
   "yazFlexSkipRestDurationDialogTitle": "Sleppa því að skrá hlé",
-  "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð hlé á töku síðar undir „Hlé á töku“ á heimaskjánum.",
+  "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð lengd hlésins síðar undir „Hlé á pillutöku“ á heimaskjánum.",
   "yazFlexSkipRestDurationDialogSkip": "Sleppa",
   "yazFlexBeginPillNumberPageTitle": "Hvaða númer inntaka í hringnum er upphaf spjaldsins?",
   "yazFlexBeginPillNumberPageNote": "Vinsamlegast svarið út frá fjölda daga sem hafa liðið frá hléinu áður en pakkinn var hafinn.",

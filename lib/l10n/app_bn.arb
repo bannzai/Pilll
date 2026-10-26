@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "আজ বিরতির কততম দিন",
   "yazFlexSkipRestDuration": "বিরতির তথ্য না দিয়ে এগিয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "বিরতির তথ্য দেওয়া এড়িয়ে যান",
-  "yazFlexSkipRestDurationDialogMessage": "পিল খাওয়া বিরতির সময়কাল পরে হোমের «পিল খাওয়া বিরতি» থেকে লিখতে পারবেন।",
+  "yazFlexSkipRestDurationDialogMessage": "বিরতির সময়কাল আপনি পরে হোম স্ক্রিনের «পিল খাওয়ায় বিরতি» থেকে লিখতে পারবেন।",
   "yazFlexSkipRestDurationDialogSkip": "এড়িয়ে যান",
   "yazFlexBeginPillNumberPageTitle": "চক্র অনুযায়ী শিটের শুরু কোন নম্বর সেবন?",
   "yazFlexBeginPillNumberPageNote": "অনুগ্রহ করে শিট শুরু করার আগের বিরতি থেকে কত দিন কেটেছে, তার ভিত্তিতে উত্তর দিন।",

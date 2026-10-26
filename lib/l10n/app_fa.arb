@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "امروز چندمین روز وقفه است",
   "yazFlexSkipRestDuration": "رد شدن از ثبت وقفه",
   "yazFlexSkipRestDurationDialogTitle": "رد کردن ثبت وقفه",
-  "yazFlexSkipRestDurationDialogMessage": "می‌توانید دوره توقف مصرف را بعداً از «توقف مصرف» در صفحه اصلی وارد کنید.",
+  "yazFlexSkipRestDurationDialogMessage": "می‌توانید مدت وقفه را بعداً از بخش «وقفه در مصرف قرص» در صفحه اصلی وارد کنید.",
   "yazFlexSkipRestDurationDialogSkip": "رد کردن",
   "yazFlexBeginPillNumberPageTitle": "شروع شیت در چرخه، چندمین نوبت مصرف است؟",
   "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهای گذشته از دورهٔ وقفه قبل از شروع شیت پاسخ دهید.",

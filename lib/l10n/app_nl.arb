@@ -578,7 +578,7 @@
   "yazFlexRestingDaysLabel": "Welke dag van je stopweek is het vandaag",
   "yazFlexSkipRestDuration": "Registratie van de stopweek overslaan",
   "yazFlexSkipRestDurationDialogTitle": "Invoer van de stopweek overslaan",
-  "yazFlexSkipRestDurationDialogMessage": "De stopperiode kun je later invoeren via ‘Stopperiode’ op het startscherm.",
+  "yazFlexSkipRestDurationDialogMessage": "Je kunt de duur van de pauze later invoeren via ‘Pillenpauze’ op het startscherm.",
   "yazFlexSkipRestDurationDialogSkip": "Overslaan",
   "yazFlexBeginPillNumberPageTitle": "Met welke inname in de cyclus begint deze strip?",
   "yazFlexBeginPillNumberPageNote": "Beantwoord dit op basis van het aantal dagen sinds de stopperiode vóór de start van de strip.",
