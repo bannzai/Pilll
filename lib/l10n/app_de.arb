@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Du kannst alle Funktionen noch {diff} Tage nutzen",
   "todayIsTaking": "💊 Heute ist Zeit für deine Pille",
   "todayPillToTake": "💊 Deine Pille für heute",
-  "number": ".",
+  "number": ". Pille",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruationsbeginn ab {DateTimeFormatterMonthAndDay} wurde erfasst",
   "menstruationStartDate": "Periodenbeginn",

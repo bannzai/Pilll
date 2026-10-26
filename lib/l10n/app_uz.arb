@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Barcha imkoniyatlardan yana {diff} kun foydalanishingiz mumkin",
   "todayIsTaking": "💊 Bugun tabletka ichish kuni",
   "todayPillToTake": "💊 Bugungi tabletka",
-  "number": "chi",
+  "number": " (tabletka)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} dan hayz boshlanishi sifatida qayd qilindi",
   "menstruationStartDate": "Hayz boshlanish sanasi",

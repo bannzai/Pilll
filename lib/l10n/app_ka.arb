@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "ყველა ფუნქციის გამოყენება კიდევ {diff} დღის განმავლობაში შეგიძლიათ",
   "todayIsTaking": "💊 დღეს აბის მიღების დღეა",
   "todayPillToTake": "💊 დღევანდელი აბი",
-  "number": "ე",
+  "number": " (აბი)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-იდან მენსტრუაციის დაწყება ჩაიწერა",
   "menstruationStartDate": "მენსტრუაციის დაწყების თარიღი",

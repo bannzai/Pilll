@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Сиз бардык мүмкүнчүлүктөрдү дагы {diff} күн колдоно аласыз",
   "todayIsTaking": "💊 Бүгүн таблетка иче турган күн",
   "todayPillToTake": "💊 Бүгүнкү таблетка",
-  "number": "номер",
+  "number": " (таблетка)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} дан айыз башталышы катталды",
   "menstruationStartDate": "Айыз башталган күн",

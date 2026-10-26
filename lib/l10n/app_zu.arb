@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinye izinsuku ezingu-{diff}",
   "todayIsTaking": "💊 Namuhla usuku lokuphuza iphilisi",
   "todayPillToTake": "💊 Iphilisi lanamuhla",
-  "number": "inombolo",
+  "number": " (iphilisi)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Kurekhodiwe ukuqala kokuhamba kwezikhathi kusukela ku-{DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Usuku lokuqala lwehla",

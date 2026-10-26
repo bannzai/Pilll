@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "می‌توانید تا {diff} روز دیگر از همهٔ امکانات استفاده کنید",
   "todayIsTaking": "💊 امروز روز مصرف قرص است",
   "todayPillToTake": "💊 قرص امروز",
-  "number": "شماره",
+  "number": " (قرص)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "شروع قاعدگی از {DateTimeFormatterMonthAndDay} ثبت شد",
   "menstruationStartDate": "تاریخ شروع قاعدگی",

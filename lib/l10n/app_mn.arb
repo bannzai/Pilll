@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Та бүх боломжийг дахин {diff} өдөр ашиглах боломжтой",
   "todayIsTaking": "💊 Өнөөдөр эм уух өдөр",
   "todayPillToTake": "💊 Өнөөдөр уух эм",
-  "number": "дугаар",
+  "number": " (эм)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-аас эхлэн сарын тэмдгийг бүртгэлээ",
   "menstruationStartDate": "Сарын тэмдэгийн эхлэх өдөр",

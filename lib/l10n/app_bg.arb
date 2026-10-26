@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Можете да използвате всички функции още {diff} дни",
   "todayIsTaking": "💊 Днес е ден за прием на хапчето",
   "todayPillToTake": "💊 Хапчето за днес",
-  "number": "№",
+  "number": " (хапче)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Записах началото на менструацията от {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Начална дата на менструацията",

@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "तुम्ही आणखी {diff} दिवस सर्व सुविधा वापरू शकता",
   "todayIsTaking": "💊 आज गोळी घेण्याचा दिवस आहे",
   "todayPillToTake": "💊 आजची गोळी",
-  "number": "वा",
+  "number": " (गोळी)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}पासून मासिक पाळीची सुरुवात नोंदवली आहे",
   "menstruationStartDate": "पाळी सुरुवातीची तारीख",

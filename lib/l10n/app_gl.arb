@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Podes usar todas as funcións durante {diff} días máis",
   "todayIsTaking": "💊 Hoxe toca tomar a pílula",
   "todayPillToTake": "💊 A pílula de hoxe",
-  "number": "º",
+  "number": " (pílula)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Rexistrouse o inicio da menstruación o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data de inicio da menstruación",

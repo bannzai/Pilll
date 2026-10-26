@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Bütün funksiyalardan daha {diff} gün istifadə edə bilərsiniz",
   "todayIsTaking": "💊 Bu gün həb qəbul etmə günüdür",
   "todayPillToTake": "💊 Bu gün qəbul ediləcək həb",
-  "number": "nömrə",
+  "number": " (həb)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} tarixindən etibarən adet başlanğıcı kimi qeyd edildi",
   "menstruationStartDate": "Aybaşı başlama tarixi",

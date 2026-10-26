@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Du kan använda alla funktioner i {diff} dagar till",
   "todayIsTaking": "💊 I dag är det dags att ta p-piller",
   "todayPillToTake": "💊 Dagens p-piller",
-  "number": "nr",
+  "number": " (piller)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruationsstart registrerad från {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Mens startdatum",

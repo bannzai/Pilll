@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Możesz korzystać ze wszystkich funkcji jeszcze przez {diff} dni",
   "todayIsTaking": "💊 Dziś dzień przyjęcia tabletki",
   "todayPillToTake": "💊 Dzisiejsza tabletka",
-  "number": "nr",
+  "number": ". tabletka",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Zarejestrowano początek menstruacji od {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data rozpoczęcia miesiączki",

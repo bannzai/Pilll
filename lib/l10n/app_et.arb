@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Saad kõiki funktsioone kasutada veel {diff} päeva",
   "todayIsTaking": "💊 Täna on pilli võtmise päev",
   "todayPillToTake": "💊 Tänane pill",
-  "number": ".",
+  "number": ". pill",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruatsiooni algus salvestatud alates {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Menstruatsiooni alguskuupäev",

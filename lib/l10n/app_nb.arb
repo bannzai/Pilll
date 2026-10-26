@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Du kan bruke alle funksjonene i {diff} dager til",
   "todayIsTaking": "💊 I dag er det tid for p-pillen",
   "todayPillToTake": "💊 Dagens p-pille",
-  "number": "nr.",
+  "number": " (p-pille)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Registrert menstruasjonsstart fra {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Menstruasjonsstartdato",

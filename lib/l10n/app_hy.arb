@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Դուք կարող եք օգտվել բոլոր հնարավորություններից ևս {diff} օր",
   "todayIsTaking": "💊 Այսօր հաբ ընդունելու օրն է",
   "todayPillToTake": "💊 Այսօրվա հաբը",
-  "number": "համար",
+  "number": " (հաբ)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-ից կանամսի սկիզբը գրանցվել է",
   "menstruationStartDate": "Դաշտանային ցիկլի սկիզբ",

@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Még {diff} napig használhatod az összes funkciót",
   "todayIsTaking": "💊 Ma esedékes a tabletta szedése",
   "todayPillToTake": "💊 A mai tabletta",
-  "number": ".",
+  "number": ". tabletta",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "A menstruáció kezdete {DateTimeFormatterMonthAndDay} dátummal rögzítve lett",
   "menstruationStartDate": "Menstruáció kezdete",

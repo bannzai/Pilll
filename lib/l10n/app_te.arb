@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "మీరు మరో {diff} రోజుల పాటు అన్ని ఫీచర్‌లను ఉపయోగించవచ్చు",
   "todayIsTaking": "💊 ఈ రోజు మాత్ర తీసుకోవాల్సిన రోజు",
   "todayPillToTake": "💊 ఈ రోజు వేసుకోవాల్సిన మాత్ర",
-  "number": "వ",
+  "number": " (మాత్ర)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుండి మాహవారీ ప్రారంభంగా రికార్డ్ చేశాము",
   "menstruationStartDate": "మాసిక ధర్మ ప్రారంభ తేదీ",

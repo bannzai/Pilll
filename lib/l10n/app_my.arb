@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "လုပ်ဆောင်ချက်အားလုံးကို နောက်ထပ် {diff} ရက် အသုံးပြုနိုင်ပါတယ်",
   "todayIsTaking": "💊 ဒီနေ့ ဆေးလုံးသောက်ရမယ့်နေ့ပါ",
   "todayPillToTake": "💊 ယနေ့သောက်ရမည့်ဆေးပြား",
-  "number": "နံ",
+  "number": " (ဆေးလုံး)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}မှ ဒေတ်စတင်ခြင်းကို မှတ်တမ်းတင်ပါပြီ",
   "menstruationStartDate": "ရာသီစတင်ရက်",

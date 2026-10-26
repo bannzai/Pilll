@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Bạn có thể dùng tất cả tính năng thêm {diff} ngày nữa",
   "todayIsTaking": "💊 Hôm nay là ngày uống thuốc",
   "todayPillToTake": "💊 Viên thuốc hôm nay",
-  "number": "viên",
+  "number": " (viên thuốc)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Đã ghi nhận bắt đầu kinh nguyệt từ {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ngày bắt đầu kinh nguyệt",

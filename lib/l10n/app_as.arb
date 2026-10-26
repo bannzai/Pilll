@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "আপুনি আৰু {diff} দিনলৈ সকলো সুবিধা ব্যৱহাৰ কৰিব পাৰিব",
   "todayIsTaking": "💊 আজি পিল খোৱাৰ দিন",
   "todayPillToTake": "💊 আজি খাবলগীয়া পিল",
-  "number": "নং",
+  "number": " (বড়ি)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ৰ পৰা মাহেকীয়া আৰম্ভ হিচাপে ৰেকৰ্ড কৰিলোঁ",
   "menstruationStartDate": "রজঃস্রাব আৰম্ভৰ তাৰিখ",

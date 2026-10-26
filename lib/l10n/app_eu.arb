@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Funtzio guztiak beste {diff} egunez erabil ditzakezu",
   "todayIsTaking": "💊 Gaur pilula hartzeko eguna da",
   "todayPillToTake": "💊 Gaurko pilula",
-  "number": "a",
+  "number": ". pilula",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-tik hilekoa hasi bezala erregistratu da",
   "menstruationStartDate": "Hileko hasiera data",

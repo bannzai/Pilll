@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "तपाईं अझै {diff} दिनसम्म सबै सुविधाहरू प्रयोग गर्न सक्नुहुन्छ",
   "todayIsTaking": "💊 आज चक्की खाने दिन हो",
   "todayPillToTake": "💊 आजको चक्की",
-  "number": "नं",
+  "number": " (चक्की)",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि मासिक धर्म सुरुवात भएको रूपमा रेकर्ड गरियो",
   "menstruationStartDate": "मासिकधर्म शुरु मिति",
