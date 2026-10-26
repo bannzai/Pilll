@@ -529,7 +529,7 @@
   "calendarDiaryFeatureAppealPoint3": "Tafadhali angalia rekodi za awali kwenye kalenda",
   "calendarDiaryFeatureAppealLocationHint": "Tafadhali gusa tarehe ili kurekodi jinsi unavyojisikia",
   "futureScheduleFeatureAppealPoint1": "Tafadhali ongeza mipango yako kwenye kalenda",
-  "futureScheduleFeatureAppealPoint2": "Simamia kwa urahisi siku za kutembelea kliniki",
+  "futureScheduleFeatureAppealPoint2": "Fuatilia kwa urahisi tarehe za miadi ya daktari",
   "futureScheduleFeatureAppealPoint3": "Taarifa za kumbusho",
   "futureScheduleFeatureAppealLocationHint": "Tafadhali bonyeza tarehe kuandika ratiba",
   "healthCareIntegrationFeatureAppealPoint1": "Unganisha rekodi za hedhi kiotomatiki",

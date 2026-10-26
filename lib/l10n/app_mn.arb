@@ -529,7 +529,7 @@
   "calendarDiaryFeatureAppealPoint3": "Өмнөх тэмдэглэлүүдээ хуанлиас харах боломжтой",
   "calendarDiaryFeatureAppealLocationHint": "Биеийн байдлаа тэмдэглэхийн тулд огноо дээр дарна уу",
   "futureScheduleFeatureAppealPoint1": "Төлөвлөгөөгөө хуанлид нэмнэ үү",
-  "futureScheduleFeatureAppealPoint2": "Эмнэлэгт очих өдрийг хялбархан удирдах",
+  "futureScheduleFeatureAppealPoint2": "Эмчид үзүүлэх өдрүүдээ хялбархан хянаарай",
   "futureScheduleFeatureAppealPoint3": "Сануулагчаар мэдэгдэл",
   "futureScheduleFeatureAppealLocationHint": "Огноог дарж хуваарь бичих",
   "healthCareIntegrationFeatureAppealPoint1": "Сарын тэмдгийн бичлэгийг автоматаар синхрончлох",
