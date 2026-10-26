@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Si cambias de teléfono o lo pierdes, no podrás transferir las funciones Premium",
   "reexperiencePremiumFeatures": "¡Puedes volver a disfrutar de las funciones Premium durante 14 días!\n¡Toca para compartirlo en redes sociales!",
   "whereToShare": "Dónde quieres compartirlo",
-  "pauseTakingDay": "🌙 Descanso de la píldora día {day}",
+  "pauseTakingDay": "🌙 Día {day} del descanso de la píldora",
   "withDay": "Día {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}día {restDurationDays}",
   "daysUntilPausePeriod": "Faltan {diffPlusOne} días para el {activePillSheetPillSheetTypeNotTakenWord}",

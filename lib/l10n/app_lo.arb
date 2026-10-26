@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ຖ້າປ່ຽນໂທລະສັບ ຫຼື ເຮັດໂທລະສັບເສຍ ຈະບໍ່ສາມາດໂອນຟີເຈີ Premium ໄປເຄື່ອງໃໝ່ໄດ້",
   "reexperiencePremiumFeatures": "ທ່ານສາມາດລອງໃຊ້ຄຸນສົມບັດ Premium ອີກຄັ້ງໄດ້ 14 ມື້!\nກະລຸນາແຕະເພື່ອແບ່ງປັນໃນສື່ສັງຄົມ!",
   "whereToShare": "ຢາກແບ່ງປັນຢູ່ໃສ",
-  "pauseTakingDay": "🌙 ພັກການກິນຢາ ວັນທີ່ {day}",
+  "pauseTakingDay": "🌙 ມື້ທີ {day} ຂອງໄລຍະພັກການກິນຢາເມັດ",
   "withDay": "ວັນທີ່{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ມື້ທີ {restDurationDays}",
   "daysUntilPausePeriod": "ອີກ {diffPlusOne} ມື້ຈະເຖິງໄລຍະ {activePillSheetPillSheetTypeNotTakenWord}",

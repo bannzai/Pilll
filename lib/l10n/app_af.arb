@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "As jy van foon verander of jou foon verloor, kan jy nie jou Premium-funksies oordra nie",
   "reexperiencePremiumFeatures": "Jy kan Premium-kenmerke weer vir 14 dae geniet!\nTik om dit op sosiale media te deel!",
   "whereToShare": "Waar wil jy dit deel",
-  "pauseTakingDay": "🌙 Pouse van inname — dag {day}",
+  "pauseTakingDay": "🌙 Dag {day} van jou pilpouse",
   "withDay": "Dag {word}",
   "restDurationDays": "Dag {restDurationDays} van {activePillSheetPillSheetTypeNotTakenWord}",
   "daysUntilPausePeriod": "Nog {diffPlusOne} dae tot die {activePillSheetPillSheetTypeNotTakenWord}-periode.",

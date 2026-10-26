@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Jika anda menukar atau kehilangan telefon, ciri premium tidak dapat dipindahkan",
   "reexperiencePremiumFeatures": "Anda boleh mencuba semula ciri premium selama 14 hari!\nKetik untuk berkongsi di media sosial!",
   "whereToShare": "Di mana anda ingin berkongsi",
-  "pauseTakingDay": "🌙 Hari ke-{day} rehat pengambilan",
+  "pauseTakingDay": "🌙 Hari ke-{day} rehat daripada pil",
   "withDay": "hari ke-{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Lagi {diffPlusOne} hari ke tempoh {activePillSheetPillSheetTypeNotTakenWord}",

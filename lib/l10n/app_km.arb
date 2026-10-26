@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ប្រសិនបើអ្នកប្តូរ ឬបាត់ទូរសព្ទ អ្នកមិនអាចផ្ទេរមុខងារព្រីមៀមទៅទូរសព្ទថ្មីបានទេ",
   "reexperiencePremiumFeatures": "អ្នកអាចសាកល្បងមុខងារព្រីមៀមម្តងទៀតរយៈពេល 14 ថ្ងៃ!\nសូមចុចដើម្បីចែករំលែកនៅលើបណ្តាញសង្គម!",
   "whereToShare": "តើអ្នកចង់ចែករំលែកនៅទីណា",
-  "pauseTakingDay": "🌙 ការញាំថ្នាំសម្រាក ថ្ងៃទី{day}",
+  "pauseTakingDay": "🌙 ថ្ងៃទី {day} នៃការផ្អាកលេបថ្នាំគ្រាប់",
   "withDay": "ថ្ងៃទី{word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ថ្ងៃទី",
   "daysUntilPausePeriod": "នៅសល់ {diffPlusOne} ថ្ងៃទៀត នឹងដល់រយៈពេល {activePillSheetPillSheetTypeNotTakenWord}",

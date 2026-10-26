@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ফোন বদলালে বা হারিয়ে গেলে আপনি প্রিমিয়াম সুবিধাগুলো অন্য ফোনে নিতে পারবেন না",
   "reexperiencePremiumFeatures": "আপনি ১৪ দিনের জন্য আবার প্রিমিয়াম সুবিধাগুলো ব্যবহার করতে পারবেন!\nসামাজিক মাধ্যমে শেয়ার করতে ট্যাপ করুন!",
   "whereToShare": "আপনি কোথায় শেয়ার করতে চান",
-  "pauseTakingDay": "🌙 সেবন বিরতি {day} দিন",
+  "pauseTakingDay": "🌙 পিল খাওয়ার বিরতির {day}তম দিন",
   "withDay": "{word}তম দিন",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}তম দিন",
   "daysUntilPausePeriod": "আরও {diffPlusOne} দিনে {activePillSheetPillSheetTypeNotTakenWord} সময়কাল",

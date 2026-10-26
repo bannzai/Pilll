@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "আপুনি ফোন সলনি কৰিলে বা হেৰুৱালে প্ৰিমিয়াম সুবিধাসমূহ নতুন ফোনলৈ স্থানান্তৰ কৰিব নোৱাৰিব",
   "reexperiencePremiumFeatures": "আপুনি 14 দিনলৈ প্ৰিমিয়াম সুবিধাসমূহ পুনৰ ব্যৱহাৰ কৰিব পাৰে!\nছ'চিয়েল মিডিয়াত শ্বেয়াৰ কৰিবলৈ টেপ কৰক!",
   "whereToShare": "আপুনি ক’ত শ্বেয়াৰ কৰিব বিচাৰে",
-  "pauseTakingDay": "🌙 সেৱন বিৰতি {day}তম দিন",
+  "pauseTakingDay": "🌙 বড়ি খোৱাৰ বিৰতিৰ {day} নম্বৰ দিন",
   "withDay": "{word}তম দিন",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}তম দিন",
   "daysUntilPausePeriod": "আৰু {diffPlusOne} দিনত {activePillSheetPillSheetTypeNotTakenWord} সময়",

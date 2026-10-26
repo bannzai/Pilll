@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Kui vahetad telefoni või kaotad selle, ei saa sa premium-funktsioone üle kanda",
   "reexperiencePremiumFeatures": "Saad premium-funktsioone taas 14 päeva kasutada!\nPuuduta, et jagada sotsiaalmeedias!",
   "whereToShare": "Kus soovid seda jagada",
-  "pauseTakingDay": "🌙 Tablettide paus {day}. päev",
+  "pauseTakingDay": "🌙 Pillipausi {day}. päev",
   "withDay": "{word}. päev",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. päev",
   "daysUntilPausePeriod": "Veel {diffPlusOne} päeva pärast algab {activePillSheetPillSheetTypeNotTakenWord} periood",

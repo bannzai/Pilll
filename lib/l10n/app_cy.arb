@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Os byddwch chi'n newid neu'n colli'ch ffôn, ni fydd modd trosglwyddo'r nodweddion premiwm",
   "reexperiencePremiumFeatures": "Gallwch ddefnyddio nodweddion premiwm eto am 14 diwrnod!\nTapiwch i rannu ar y cyfryngau cymdeithasol!",
   "whereToShare": "Ble hoffech chi rannu",
-  "pauseTakingDay": "🌙 Seibiant bilsen diwrnod {day}",
+  "pauseTakingDay": "🌙 Diwrnod {day} o'r saib rhag cymryd y bilsen",
   "withDay": "diwrnod {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}diwrnod {restDurationDays}",
   "daysUntilPausePeriod": "Mewn {diffPlusOne} diwrnod bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord}",

@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Při výměně nebo ztrátě telefonu nebude možné převést funkce Premium",
   "reexperiencePremiumFeatures": "Funkce Premium můžete znovu vyzkoušet na 14 dní!\nKlepnutím je můžete sdílet na sociálních sítích!",
   "whereToShare": "Kde chcete sdílet",
-  "pauseTakingDay": "🌙 {day}. den pauzy",
+  "pauseTakingDay": "🌙 {day}. den přestávky v užívání pilulek",
   "withDay": "{word}. den",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. den",
   "daysUntilPausePeriod": "Za {diffPlusOne} dní začne {activePillSheetPillSheetTypeNotTakenWord} období",

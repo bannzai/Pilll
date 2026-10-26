@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ଫୋନ୍ ବଦଳାଇଲେ କିମ୍ବା ହଜିଗଲେ, ପ୍ରିମିୟମ୍ ସୁବିଧାଗୁଡ଼ିକୁ ନୂଆ ଫୋନ୍‌କୁ ସ୍ଥାନାନ୍ତର କରିହେବ ନାହିଁ",
   "reexperiencePremiumFeatures": "ଆପଣ 14 ଦିନ ପାଇଁ ପ୍ରିମିୟମ ସୁବିଧାଗୁଡ଼ିକୁ ପୁଣି ବ୍ୟବହାର କରିପାରିବେ!\nସାମାଜିକ ମାଧ୍ୟମରେ ସେୟାର କରିବାକୁ ଟ୍ୟାପ୍ କରନ୍ତୁ!",
   "whereToShare": "ଆପଣ କେଉଁଠି ସେୟାର କରିବାକୁ ଚାହାନ୍ତି",
-  "pauseTakingDay": "🌙 ସେବନ ବିରାମ {day} ତମ ଦିନ",
+  "pauseTakingDay": "🌙 ବଟିକା ଖାଇବାରୁ ବିରତିର {day}ତମ ଦିନ",
   "withDay": "{word}ତମ ଦିନ",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ତମ ଦିନ",
   "daysUntilPausePeriod": "ଆଉ {diffPlusOne} ଦିନରେ {activePillSheetPillSheetTypeNotTakenWord} ସମୟ",

@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Wenn du dein Handy wechselst oder verlierst, kannst du deine Premium-Funktionen nicht übertragen",
   "reexperiencePremiumFeatures": "Du kannst die Premium-Funktionen 14 Tage lang erneut ausprobieren!\nTippe, um es in sozialen Medien zu teilen!",
   "whereToShare": "Wo möchtest du es teilen",
-  "pauseTakingDay": "🌙 Pillenpause Tag {day}",
+  "pauseTakingDay": "🌙 Tag {day} der Pillenpause",
   "withDay": "Tag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. Tag",
   "daysUntilPausePeriod": "In {diffPlusOne} Tag(en) beginnt die {activePillSheetPillSheetTypeNotTakenWord}",

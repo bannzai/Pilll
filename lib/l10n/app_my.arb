@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ဖုန်းပြောင်းသုံးတာ ဒါမှမဟုတ် ဖုန်းပျောက်သွားတာမျိုးမှာ ပရီမီယံ လုပ်ဆောင်ချက်တွေကို ဖုန်းအသစ်ဆီ လွှဲပြောင်းလို့ မရပါဘူး",
   "reexperiencePremiumFeatures": "ပရီမီယံ လုပ်ဆောင်ချက်တွေကို 14 ရက်ကြာ ထပ်မံအသုံးပြုနိုင်ပါတယ်!\nလူမှုကွန်ရက်မှာ မျှဝေဖို့ နှိပ်ပါ!",
   "whereToShare": "ဘယ်မှာ မျှဝေချင်ပါသလဲ",
-  "pauseTakingDay": "🌙 နားရက် {day} ရက်မြောက်",
+  "pauseTakingDay": "🌙 ဆေးလုံးသောက်ခြင်း ခေတ္တနားသည့် {day} ရက်မြောက်နေ့",
   "withDay": "{word}ရက်မြောက်",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ရက်မြောက်",
   "daysUntilPausePeriod": "နောက် {diffPlusOne} ရက်တွင် {activePillSheetPillSheetTypeNotTakenWord} ကာလ စတင်ပါမည်",

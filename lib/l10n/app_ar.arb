@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "إذا غيّرتِ هاتفكِ أو فقدتِه، فلن تتمكني من نقل ميزات بريميوم",
   "reexperiencePremiumFeatures": "يمكنكِ تجربة ميزات بريميوم مجددًا لمدة 14 يومًا!\nاضغطي للمشاركة على وسائل التواصل الاجتماعي!",
   "whereToShare": "أين ترغبين في المشاركة",
-  "pauseTakingDay": "🌙 فترة الراحة من الحبوب - اليوم {day}",
+  "pauseTakingDay": "🌙 اليوم {day} من فترة التوقف عن تناول الحبوب",
   "withDay": "اليوم {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}اليوم الـ{restDurationDays}",
   "daysUntilPausePeriod": "بعد {diffPlusOne} أيام ستبدأ فترة {activePillSheetPillSheetTypeNotTakenWord}",

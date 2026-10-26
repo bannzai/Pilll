@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Als je van telefoon wisselt of je telefoon kwijtraakt, kun je je premiumfuncties niet overzetten",
   "reexperiencePremiumFeatures": "Je kunt de premiumfuncties opnieuw 14 dagen proberen!\nTik om te delen op sociale media!",
   "whereToShare": "Waar wil je dit delen",
-  "pauseTakingDay": "🌙 Pilpauze dag {day}",
+  "pauseTakingDay": "🌙 Dag {day} van de stopweek",
   "withDay": "{word}e dag",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} dag {restDurationDays}",
   "daysUntilPausePeriod": "Nog {diffPlusOne} dagen tot {activePillSheetPillSheetTypeNotTakenWord}periode",

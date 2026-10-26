@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ukibadilisha au kupoteza simu, hutaweza kuhamisha vipengele vya Premium",
   "reexperiencePremiumFeatures": "Unaweza kutumia vipengele vya Premium tena kwa siku 14!\nTafadhali gusa ili ushiriki kwenye mitandao ya kijamii!",
   "whereToShare": "Ungependa kushiriki wapi",
-  "pauseTakingDay": "🌙 Mapumziko wa dawa siku ya {day}",
+  "pauseTakingDay": "🌙 Siku ya {day} ya mapumziko ya kumeza vidonge",
   "withDay": "Siku ya {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}siku ya {restDurationDays}",
   "daysUntilPausePeriod": "Baada ya siku {diffPlusOne} itakuwa kipindi cha {activePillSheetPillSheetTypeNotTakenWord}",

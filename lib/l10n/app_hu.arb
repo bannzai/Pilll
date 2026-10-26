@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ha telefont váltasz, vagy elveszíted a telefonodat, a prémium funkciókat nem tudod átvinni",
   "reexperiencePremiumFeatures": "Újra kipróbálhatod a prémium funkciókat 14 napig!\nKoppints ide, és oszd meg a közösségi médiában!",
   "whereToShare": "Hol szeretnéd megosztani",
-  "pauseTakingDay": "🌙 Szünet {day}. napja",
+  "pauseTakingDay": "🌙 A tablettaszedési szünet {day}. napja",
   "withDay": "{word}. nap",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. nap",
   "daysUntilPausePeriod": "Még {diffPlusOne} nap a {activePillSheetPillSheetTypeNotTakenWord} időszakig",

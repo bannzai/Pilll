@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Kung magpapalit kayo ng telepono o mawala ito, hindi ninyo maililipat ang mga feature ng Premium",
   "reexperiencePremiumFeatures": "Maaari ninyong subukang muli ang mga tampok ng Premium sa loob ng 14 na araw!\nPaki-tap para ibahagi sa social media!",
   "whereToShare": "Saan ninyo gustong ibahagi ito",
-  "pauseTakingDay": "🌙 Pahinga sa pag-inom {day} na araw",
+  "pauseTakingDay": "🌙 Ika-{day} araw ng pahinga sa pag-inom ng pildoras",
   "withDay": "Araw {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} na araw",
   "daysUntilPausePeriod": "Mga {diffPlusOne} araw na lang bago ang {activePillSheetPillSheetTypeNotTakenWord} na panahon",

@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ако го смените или изгубите телефонот, нема да можете да ги пренесете премиум функциите",
   "reexperiencePremiumFeatures": "Можете повторно да ги користите премиум функциите 14 дена!\nДопрете за да споделите на социјалните мрежи!",
   "whereToShare": "Каде сакате да споделите",
-  "pauseTakingDay": "🌙 Пауза од земање {day} ден",
+  "pauseTakingDay": "🌙 {day}. ден од паузата во земањето таблета",
   "withDay": "{word}. ден",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ден",
   "daysUntilPausePeriod": "Уште {diffPlusOne} дена до {activePillSheetPillSheetTypeNotTakenWord} периодот",

@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "휴대전화를 바꾸거나 분실하면 프리미엄 기능을 옮길 수 없어요",
   "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 다시 이용할 수 있어요!\n탭해서 SNS에 공유해 보세요!",
   "whereToShare": "어디에 공유할까요",
-  "pauseTakingDay": "🌙 휴약 {day}일차",
+  "pauseTakingDay": "🌙 복용 휴식 {day}일째",
   "withDay": "{word}일째",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
   "daysUntilPausePeriod": "{diffPlusOne}일 후 {activePillSheetPillSheetTypeNotTakenWord}기간입니다",

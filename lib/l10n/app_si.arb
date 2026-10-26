@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "දුරකථනය මාරු කළහොත් හෝ නැති වුවහොත් ප්‍රීමියම් පහසුකම් නව දුරකථනයට මාරු කළ නොහැක",
   "reexperiencePremiumFeatures": "ඔබට ප්‍රීමියම් විශේෂාංග දින 14ක් නැවත භාවිත කළ හැකියි!\nසමාජ මාධ්‍යවල බෙදා ගැනීමට තට්ටු කරන්න!",
   "whereToShare": "ඔබට මෙය බෙදාගැනීමට අවශ්‍ය කොතැනද",
-  "pauseTakingDay": "🌙 පෙති විශ්‍රාම {day} වන දිනය",
+  "pauseTakingDay": "🌙 පෙති ගැනීමේ විරාමයේ {day} වන දිනය",
   "withDay": "{word}වන දිනය",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}වන දින",
   "daysUntilPausePeriod": "තවත් {diffPlusOne} දිනකින් {activePillSheetPillSheetTypeNotTakenWord} කාලය පටන් ගනී",

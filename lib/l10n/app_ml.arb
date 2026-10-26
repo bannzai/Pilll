@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ഫോൺ മാറ്റുകയോ നഷ്ടപ്പെടുകയോ ചെയ്താൽ പ്രീമിയ ഫീച്ചറുകൾ പുതിയ ഫോണിലേക്ക് മാറ്റാനാകില്ല",
   "reexperiencePremiumFeatures": "പ്രീമിയ ഫീച്ചറുകൾ 14 ദിവസത്തേക്ക് വീണ്ടും ഉപയോഗിക്കാം!\nസമൂഹമാധ്യമങ്ങളിൽ പങ്കിടാൻ ടാപ്പ് ചെയ്യൂ!",
   "whereToShare": "എവിടെ പങ്കിടാൻ ആഗ്രഹിക്കുന്നു",
-  "pauseTakingDay": "🌙 സേവന വിശ്രമം {day}ാം ദിവസം",
+  "pauseTakingDay": "🌙 ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ {day}ാം ദിവസം",
   "withDay": "{word}ാം ദിവസം",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ാമത്തെ ദിവസം",
   "daysUntilPausePeriod": "{diffPlusOne} ദിവസം കൂടി കഴിഞ്ഞാൽ {activePillSheetPillSheetTypeNotTakenWord} കാലയളവ് ആയിരിക്കും",

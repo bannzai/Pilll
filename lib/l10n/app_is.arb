@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ef þú skiptir um síma eða týnir honum geturðu ekki flutt Premium-eiginleikana",
   "reexperiencePremiumFeatures": "Þú getur prófað Premium-eiginleikana aftur í 14 daga!\nPikkaðu til að deila á samfélagsmiðlum!",
   "whereToShare": "Hvar viltu deila þessu",
-  "pauseTakingDay": "🌙 Pilluhvíld dagur {day}",
+  "pauseTakingDay": "🌙 Dagur {day} í pilluhléi",
   "withDay": "{word}. dagur",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dagur",
   "daysUntilPausePeriod": "Eftir {diffPlusOne} daga byrjar {activePillSheetPillSheetTypeNotTakenWord} tímabilið",

@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Si canvies de mòbil o el perds, no podràs transferir les funcions Premium",
   "reexperiencePremiumFeatures": "Pots tornar a gaudir de les funcions Premium durant 14 dies!\nToca per compartir-ho a les xarxes socials!",
   "whereToShare": "On vols compartir-ho",
-  "pauseTakingDay": "🌙 Descans de la píndola dia {day}",
+  "pauseTakingDay": "🌙 Dia {day} de la pausa de la píndola",
   "withDay": "Dia {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}dia {restDurationDays}",
   "daysUntilPausePeriod": "Falten {diffPlusOne} dies per al període de {activePillSheetPillSheetTypeNotTakenWord}",

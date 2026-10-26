@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Telefoningizni almashtirsangiz yoki yoʻqotib qoʻysangiz, Premium imkoniyatlarini yangi telefonga oʻtkaza olmaysiz",
   "reexperiencePremiumFeatures": "Premium imkoniyatlardan yana 14 kun foydalanib koʻrishingiz mumkin!\nIjtimoiy tarmoqlarda ulashish uchun bosing!",
   "whereToShare": "Qayerda ulashmoqchisiz",
-  "pauseTakingDay": "🌙 Qabul qilish tanaffusi {day}-kun",
+  "pauseTakingDay": "🌙 Tabletkani qabul qilishdagi tanaffusning {day}-kuni",
   "withDay": "{word}-kun",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-inchi kun",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} davrigacha yana {diffPlusOne} kun qoldi",

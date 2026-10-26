@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Dacă schimbi sau pierzi telefonul, nu vei putea transfera funcțiile premium",
   "reexperiencePremiumFeatures": "Poți încerca din nou funcțiile premium timp de 14 zile!\nAtinge pentru a distribui pe rețelele sociale!",
   "whereToShare": "Unde vrei să distribui",
-  "pauseTakingDay": "🌙 Ziua {day} fără pilule",
+  "pauseTakingDay": "🌙 Ziua {day} a pauzei de la pilulă",
   "withDay": "Ziua {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ziua {restDurationDays}",
   "daysUntilPausePeriod": "Încă {diffPlusOne} zile până la perioada {activePillSheetPillSheetTypeNotTakenWord}",

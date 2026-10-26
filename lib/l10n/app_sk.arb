@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ak zmeníte alebo stratíte telefón, funkcie Premium nebudete môcť preniesť",
   "reexperiencePremiumFeatures": "Funkcie Premium môžete znova skúšať 14 dní!\nŤuknite a zdieľajte na sociálnych sieťach!",
   "whereToShare": "Kde chcete zdieľať",
-  "pauseTakingDay": "🌙 Prestávka v užívaní {day}. deň",
+  "pauseTakingDay": "🌙 {day}. deň prestávky v užívaní tabletiek",
   "withDay": "{word}. deň",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. deň",
   "daysUntilPausePeriod": "Za {diffPlusOne} dní bude {activePillSheetPillSheetTypeNotTakenWord} obdobie",

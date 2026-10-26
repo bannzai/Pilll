@@ -143,7 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "בהחלפת הטלפון או במקרה של אובדן, לא תהיה אפשרות להעביר את תכונות הפרימיום",
   "reexperiencePremiumFeatures": "אפשר ליהנות שוב מתכונות פרימיום למשך 14 ימים!\nיש להקיש כדי לשתף ברשתות החברתיות!",
   "whereToShare": "איפה לשתף",
-  "pauseTakingDay": "🌙 הפסקה יום {day}",
+  "pauseTakingDay": "🌙 יום {day} בהפסקה מנטילת הגלולה",
   "withDay": "יום {word}",
   "restDurationDays": "יום {restDurationDays} {activePillSheetPillSheetTypeNotTakenWord}",
   "daysUntilPausePeriod": "עוד {diffPlusOne} ימים עד תקופת {activePillSheetPillSheetTypeNotTakenWord}",
