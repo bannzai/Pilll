@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "If the pill number is off, you can fix it in Settings",
   "todayPillNumberFeatureAppealHeadline": "You can change today's pill number",
   "todayPillNumberFeatureAppealBody": "If a pill was skipped or mixed up and the number on your pill pack no longer matches the pill you took, you can adjust today’s pill number manually. You can also open the same screen from the pill number on the home screen.",
-  "restDurationFeatureAppealTitle": "Log a pause in your medication",
+  "restDurationFeatureAppealTitle": "Record a pill break",
   "restDurationFeatureAppealShortDescription": "Track breaks and interruptions",
   "restDurationFeatureAppealHeadline": "Pause your pill schedule",
   "restDurationFeatureAppealBody": "Record a pause in your medication on your pill sheet. The pill number stops advancing while you're on break and resumes the moment you restart.",

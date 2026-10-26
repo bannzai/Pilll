@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Si le numéro de la pilule ne correspond pas, vous pouvez le corriger dans les réglages",
   "todayPillNumberFeatureAppealHeadline": "Vous pouvez modifier le numéro de pilule du jour",
   "todayPillNumberFeatureAppealBody": "Si une pilule n’a pas été prise ou si les pilules ont été confondues et que le numéro sur la plaquette ne correspond plus à celle que vous avez prise, vous pouvez ajuster manuellement le numéro de pilule du jour. Vous pouvez aussi ouvrir le même écran depuis le numéro de pilule affiché sur l’accueil.",
-  "restDurationFeatureAppealTitle": "Enregistrez une pause dans votre traitement",
+  "restDurationFeatureAppealTitle": "Enregistrer une pause dans la prise de la pilule",
   "restDurationFeatureAppealShortDescription": "Suivre les pauses et les interruptions",
   "restDurationFeatureAppealHeadline": "Suspendez votre programme de pilule",
   "restDurationFeatureAppealBody": "Enregistrez une pause dans votre traitement. Le numéro de pilule cesse d'avancer pendant que vous êtes en pause et reprend dès que vous redémarrez.",

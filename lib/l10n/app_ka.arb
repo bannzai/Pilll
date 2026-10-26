@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "თუ აბის ნომერი არ ემთხვევა, მისი შესწორება პარამეტრებში შეგიძლიათ",
   "todayPillNumberFeatureAppealHeadline": "შეგიძლიათ შეცვალოთ დღევანდელი აბის ნომერი",
   "todayPillNumberFeatureAppealBody": "თუ აბის მიღება გამოგრჩათ ან აბები აგერიათ და აბების ბლისტერზე მითითებული ნომერი მიღებულ აბს აღარ ემთხვევა, შეგიძლიათ დღევანდელი აბის ნომერი ხელით შეასწოროთ. იმავე ეკრანის გახსნა მთავარი ეკრანზე ნაჩვენები აბის ნომრიდანაც შეგიძლიათ.",
-  "restDurationFeatureAppealTitle": "მიღების შესვენების პერიოდის ჩანაწერა",
+  "restDurationFeatureAppealTitle": "აბის მიღების შესვენების პერიოდის ჩაწერა",
   "restDurationFeatureAppealShortDescription": "დასვენებისა და შეჩერებების ზუსტი კონტროლი",
   "restDurationFeatureAppealHeadline": "პილის მიღების შესვენება",
   "restDurationFeatureAppealBody": "წყეულება ვიღოთ",

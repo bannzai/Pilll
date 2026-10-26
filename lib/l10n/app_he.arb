@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "אם מספר הגלולה אינו תואם, אפשר לתקן אותו בהגדרות",
   "todayPillNumberFeatureAppealHeadline": "אפשר לשנות את מספר גלולה של היום",
   "todayPillNumberFeatureAppealBody": "אם גלולה לא ניטלה או שהגלולות התחלפו ומספר הגלולה שעל חפיסת הגלולות כבר לא תואם לגלולה שניטלה בפועל, אפשר לעדכן ידנית את מספר גלולה של היום. אפשר לפתוח את אותו המסך גם דרך מספר הגלולה שמופיע במסך הבית.",
-  "restDurationFeatureAppealTitle": "רישום תקופת הפסקת נטילת גלולות",
+  "restDurationFeatureAppealTitle": "לתעד תקופת הפסקה בנטילת הגלולה",
   "restDurationFeatureAppealShortDescription": "ניהול מדויק של הפסקות ושיבושים בנטילת גלולות",
   "restDurationFeatureAppealHeadline": "לקחת הפסקה מנטילת גלולות",
   "restDurationFeatureAppealBody": "ניתן לתעד בגליון הגלולות תקופת הפסקת נטילה. במהלך ההפסקה מספר הנטילה אינו מתקדם, וברגע שחוזרים לנטילה ניתן לחדש את הרישום מיד.",

@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Jos pillerin numero ei täsmää, voit korjata sen asetuksissa",
   "todayPillNumberFeatureAppealHeadline": "Voit vaihtaa tämän päivän pillerinumeron",
   "todayPillNumberFeatureAppealBody": "Jos pilleri jäi ottamatta tai pillerit menivät sekaisin eikä pilleriliuskan numero enää vastaa ottamaasi pilleriä, voit korjata tämän päivän pillerinumeron käsin. Voit avata saman näkymän myös etusivulla näkyvästä pillerinumerosta.",
-  "restDurationFeatureAppealTitle": "Kirjaa taukojakso",
+  "restDurationFeatureAppealTitle": "Kirjaa pilleritauko",
   "restDurationFeatureAppealShortDescription": "Hallitse taukoja ja keskeytyksiä tarkasti",
   "restDurationFeatureAppealHeadline": "Pitää taukoa pillerien ottamisesta",
   "restDurationFeatureAppealBody": "Voit merkitä taukojakson pillereiden ottamisesta pilleriarkkiin. Tauon aikana pillerin numero ei etene, ja voit jatkaa kirjaamista heti tauon päätyttyä.",

@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Se o número da pílula não estiver certo, você pode ajustá-lo nas configurações",
   "todayPillNumberFeatureAppealHeadline": "Você pode mudar o número da pílula de hoje",
   "todayPillNumberFeatureAppealBody": "Se uma pílula não foi tomada ou houve uma troca e o número na cartela não corresponde à pílula tomada, você pode ajustar manualmente o número da pílula de hoje. Também é possível abrir a mesma tela pelo número da pílula exibido na tela inicial.",
-  "restDurationFeatureAppealTitle": "Registrar período de pausa na ingestão",
+  "restDurationFeatureAppealTitle": "Registre o período de pausa da pílula",
   "restDurationFeatureAppealShortDescription": "Gerenciar pausas e interrupções com precisão",
   "restDurationFeatureAppealHeadline": "Pausar a ingestão da pílula",
   "restDurationFeatureAppealBody": "Você pode registrar na cartela de comprimidos o período em que parou de tomar por algum tempo. Durante a pausa, o número de doses não avança e, ao retomar, você pode reiniciar o registro imediatamente.",

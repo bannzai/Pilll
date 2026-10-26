@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Hvis pillenummeret ikke stemmer, kan du rette det i innstillingene",
   "todayPillNumberFeatureAppealHeadline": "Du kan endre dagens pillenummer",
   "todayPillNumberFeatureAppealBody": "Hvis du har glemt en p-pille eller tatt feil pille, slik at nummeret på pillebrettet ikke stemmer med pillen du tok, kan du justere dagens pillenummer manuelt. Du kan også åpne den samme skjermen via pillenummeret på hjemskjermen.",
-  "restDurationFeatureAppealTitle": "Registrer pillefri periode",
+  "restDurationFeatureAppealTitle": "Registrer pillepause",
   "restDurationFeatureAppealShortDescription": "Administrer pauser og avbrudd nøyaktig",
   "restDurationFeatureAppealHeadline": "Ta pause fra pilleinntaket",
   "restDurationFeatureAppealBody": "Du kan registrere en pause i pillearket når du slutter å ta pillene for en periode. Under pausen vil ikke pillnummeret gå fremover, og du kan gjenoppta registreringen umiddelbart når du begynner igjen.",

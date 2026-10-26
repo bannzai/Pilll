@@ -504,7 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "चक्कीको नम्बर नमिलेमा सेटिङमा सच्याउन सक्नुहुन्छ",
   "todayPillNumberFeatureAppealHeadline": "तपाईं आजको चक्की नम्बर परिवर्तन गर्न सक्नुहुन्छ",
   "todayPillNumberFeatureAppealBody": "चक्की खान बिर्सनुभएको वा चक्कीहरू झुक्किनुभएको कारण चक्की पत्तामा भएको नम्बर र वास्तवमा खाएको चक्की नमिलेमा, तपाईं आजको चक्की नम्बर आफैँ मिलाउन सक्नुहुन्छ। गृह स्क्रिनमा देखिने चक्की नम्बरबाट पनि यही स्क्रिन खोल्न सक्नुहुन्छ।",
-  "restDurationFeatureAppealTitle": "गोली नखाने अवधि रेकर्ड गर्नुहोस्",
+  "restDurationFeatureAppealTitle": "चक्की सेवनको विराम अवधि दर्ता गर्नुहोस्",
   "restDurationFeatureAppealShortDescription": "विराम र अवरोधको सटीक व्यवस्थापन",
   "restDurationFeatureAppealHeadline": "पिल सेवन बिराम गर्ने",
   "restDurationFeatureAppealBody": "तपाईंले पिल शिटमा केही समयका लागि पिल खान बन्द गर्ने अवधि रेकर्ड गर्न सक्नुहुन्छ। बिदाको समयमा सेवन नम्बर अघि बढ्दैन, र पुनः सुरु गर्दा तुरुन्त रेकर्ड जारी राख्न सकिन्छ।",
