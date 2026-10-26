@@ -403,7 +403,7 @@
   "duringPauseTaking": "गोली लेने में फिलहाल विराम",
   "cannotPauseAlreadyTakenToday": "अगर आज की गोली पहले ही ली जा चुकी है,\nतो आप ‘गोली लेने पर विराम’ इस्तेमाल नहीं कर सकतीं",
   "pauseTakingStarted": "गोली लेने से विराम शुरू हो गया है",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "सेवन विराम की प्रारंभ तिथि संपादित करें",
   "shareWithFriends": "दोस्तों को बताएं",
   "termsOfService": "उपयोग की शर्तें",

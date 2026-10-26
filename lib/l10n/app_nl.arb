@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pauze met de pil",
   "cannotPauseAlreadyTakenToday": "Als je de pil van vandaag al hebt ingenomen,\nkun je 'Pillenpauze' niet gebruiken",
   "pauseTakingStarted": "Je pillenpauze is begonnen",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Pauze startdatum bewerken",
   "shareWithFriends": "Deel met vrienden",
   "termsOfService": "Gebruiksvoorwaarden",

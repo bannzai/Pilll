@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pausa na toma da pílula",
   "cannotPauseAlreadyTakenToday": "Se xa tomaches a pílula de hoxe,\nnon podes usar «Pausa da pílula»",
   "pauseTakingStarted": "Comezou a pausa da pílula",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar data de inicio da pausa da toma",
   "shareWithFriends": "Dicir aos amigos",
   "termsOfService": "Termos de uso",

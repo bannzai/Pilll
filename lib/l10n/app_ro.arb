@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pauză în administrarea pilulei",
   "cannotPauseAlreadyTakenToday": "Dacă ai luat deja pilula de astăzi,\nnu poți folosi „Pauză de la pilulă”",
   "pauseTakingStarted": "A început pauza de la pilulă",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editează data de început a pauzei de administrare",
   "shareWithFriends": "Recomandă prietenilor",
   "termsOfService": "Termeni de utilizare",

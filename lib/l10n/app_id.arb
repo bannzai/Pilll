@@ -403,7 +403,7 @@
   "duringPauseTaking": "Sedang jeda minum pil",
   "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diminum,\nAnda tidak dapat menggunakan “Jeda minum pil”",
   "pauseTakingStarted": "Jeda minum pil telah dimulai",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit Tanggal Mulai Jeda Konsumsi",
   "shareWithFriends": "Beritahu Teman",
   "termsOfService": "Syarat dan Ketentuan",

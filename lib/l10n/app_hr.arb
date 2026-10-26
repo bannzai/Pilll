@@ -403,7 +403,7 @@
   "duringPauseTaking": "Stanka u uzimanju pilule",
   "cannotPauseAlreadyTakenToday": "Ako ste već uzeli današnju pilulu,\nne možete koristiti „Pauzu u uzimanju“",
   "pauseTakingStarted": "Počela je pauza u uzimanju pilula",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uredi datum početka pauze uzimanja",
   "shareWithFriends": "Preporuči prijatelju",
   "termsOfService": "Uvjeti korištenja",

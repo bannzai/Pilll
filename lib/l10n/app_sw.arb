@@ -403,7 +403,7 @@
   "duringPauseTaking": "Mapumziko ya kumeza vidonge",
   "cannotPauseAlreadyTakenToday": "Ikiwa tayari umemeza kidonge cha leo,\nhuwezi kutumia “Pumziko la kutumia vidonge”",
   "pauseTakingStarted": "Mapumziko ya kumeza vidonge yameanza",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Hariri tarehe ya kuanza mapumziko ya vidonge",
   "shareWithFriends": "Mwambie rafiki",
   "termsOfService": "Masharti ya Matumizi",

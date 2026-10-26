@@ -403,7 +403,7 @@
   "duringPauseTaking": "Přestávka v užívání pilulek",
   "cannotPauseAlreadyTakenToday": "Pokud jste si už vzala dnešní pilulku,\nnelze použít „Pauzu v užívání“",
   "pauseTakingStarted": "Pauza v užívání pilulek začala",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upravit datum zahájení přestávky v užívání",
   "shareWithFriends": "Doporučit přátelům",
   "termsOfService": "Podmínky použití",

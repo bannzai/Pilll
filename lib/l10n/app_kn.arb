@@ -403,7 +403,7 @@
   "duringPauseTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ತಾತ್ಕಾಲಿಕ ವಿರಾಮ",
   "cannotPauseAlreadyTakenToday": "ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ಈಗಾಗಲೇ ತೆಗೆದುಕೊಂಡಿದ್ದರೆ,\n‘ಮಾತ್ರೆ ಸೇವನೆಗೆ ತಾತ್ಕಾಲಿಕ ವಿರಾಮ’ ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "pauseTakingStarted": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮ ಪ್ರಾರಂಭವಾಗಿದೆ",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ಸೇವನೆ ವಿರಾಮ ಪ್ರಾರಂಭ ದಿನಾಂಕವನ್ನು ಸಂಪಾದಿಸಿ",
   "shareWithFriends": "ಸ್ನೇಹಿತರಿಗೆ ಹೇಳಿ",
   "termsOfService": "ಬಳಕೆಯ ನಿಯಮಗಳು",

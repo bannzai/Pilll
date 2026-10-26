@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pause fra p-piller",
   "cannotPauseAlreadyTakenToday": "Hvis du allerede har taget dagens p-pille,\nkan du ikke bruge \"Pillepause\"",
   "pauseTakingStarted": "Din p-pillepause er begyndt",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediger startdato for indtagelsespause",
   "shareWithFriends": "Fortæl en ven",
   "termsOfService": "Servicevilkår",

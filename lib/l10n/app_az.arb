@@ -403,7 +403,7 @@
   "duringPauseTaking": "Həb qəbuluna fasilə verilib",
   "cannotPauseAlreadyTakenToday": "Bugünkü həbi artıq qəbul etmisinizsə,\n«Həbə fasilə» funksiyasından istifadə edə bilməzsiniz",
   "pauseTakingStarted": "Həb qəbuluna fasilə başladı",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Dərman fasiləsi başlama tarixini redaktə et",
   "shareWithFriends": "Dostlara tövsiyə et",
   "termsOfService": "İstifadə Şərtləri",

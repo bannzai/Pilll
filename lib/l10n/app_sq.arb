@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pauzë në marrjen e pilulës",
   "cannotPauseAlreadyTakenToday": "Nëse e keni marrë tashmë pilulën e sotme,\nnuk mund të përdorni «Pushim nga marrja e pilulës»",
   "pauseTakingStarted": "Filloi pushimi nga marrja e pilulës",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Redakto datën e fillimit të pushimit të marrjes",
   "shareWithFriends": "Trego miqve",
   "termsOfService": "Kushtet e përdorimit",

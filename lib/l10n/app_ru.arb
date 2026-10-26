@@ -403,7 +403,7 @@
   "duringPauseTaking": "Перерыв в приёме таблеток",
   "cannotPauseAlreadyTakenToday": "Если вы уже приняли сегодняшнюю таблетку,\n«Паузу в приёме» использовать нельзя",
   "pauseTakingStarted": "Начался перерыв в приёме таблеток",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редактировать дату начала перерыва в приеме",
   "shareWithFriends": "Рассказать друзьям",
   "termsOfService": "Условия использования",

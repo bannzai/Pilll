@@ -403,7 +403,7 @@
   "duringPauseTaking": "Sedang berehat daripada mengambil pil",
   "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diambil,\nanda tidak boleh menggunakan “Jeda pengambilan pil”",
   "pauseTakingStarted": "Jeda pengambilan pil telah bermula",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Sunting Tarikh Mula Jeda Pengambilan",
   "shareWithFriends": "Beritahu kawan",
   "termsOfService": "Terma dan Syarat",

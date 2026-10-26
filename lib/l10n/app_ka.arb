@@ -403,7 +403,7 @@
   "duringPauseTaking": "აბების მიღების დროებითი შესვენება",
   "cannotPauseAlreadyTakenToday": "თუ დღევანდელი აბი უკვე მიიღეთ,\n„აბების მიღების დროებით შეჩერებას“ ვერ გამოიყენებთ",
   "pauseTakingStarted": "აბების მიღების შესვენება დაიწყო",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "შესვენების დაწყების თარიღის რედაქტირება",
   "shareWithFriends": "მეგობრებს გაუზიარე",
   "termsOfService": "გამოყენების პირობები",

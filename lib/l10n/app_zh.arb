@@ -403,7 +403,7 @@
   "duringPauseTaking": "正在暂停服用药片",
   "cannotPauseAlreadyTakenToday": "如果今天的药已经服用，\n就无法使用“暂停服药”功能",
   "pauseTakingStarted": "已开始暂停服药",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}（{DateTimeFormatterWeekday}）",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "编辑停药开始日期",
   "shareWithFriends": "告诉朋友",
   "termsOfService": "使用条款",

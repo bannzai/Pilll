@@ -403,7 +403,7 @@
   "duringPauseTaking": "Pilula hartzeko etenaldia",
   "cannotPauseAlreadyTakenToday": "Gaurko pilula dagoeneko hartu baduzu,\nezin duzu «Pilulak hartzeko etena» erabili",
   "pauseTakingStarted": "Pilula hartzeko etenaldia hasi da",
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Hartzea eten hasiera data editatu",
   "shareWithFriends": "Lagunei erakutsi",
   "termsOfService": "Erabilpen baldintzak",
