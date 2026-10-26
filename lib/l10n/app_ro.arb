@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Spune-ne despre folia de pilule care ți-a fost prescrisă",
   "existingAccountUsers": "Ai deja un cont? Autentifică-te",
   "selectTodayPillNumber": "Astăzi ({todayString})\nAtinge numărul pilulei pe care o vei lua sau ai luat-o deja",
-  "notYetKnown": "Încă nespecificat",
+  "notYetKnown": "Încă nu știu",
   "pillForToday": "Pilulele de luat pe {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Previzualizare",

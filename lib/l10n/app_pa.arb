@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "ਤੁਹਾਨੂੰ ਡਾਕਟਰ ਵੱਲੋਂ ਲਿਖੀਆਂ ਗੋਲੀਆਂ ਦੇ ਪੱਤੇ ਬਾਰੇ ਦੱਸੋ",
   "existingAccountUsers": "ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਤੋਂ ਖਾਤਾ ਹੈ? ਸਾਈਨ ਇਨ ਕਰੋ",
   "selectTodayPillNumber": "ਅੱਜ ({todayString})\nਤੁਸੀਂ ਜਿਹੜੀ ਗੋਲੀ ਲੈਣੀ ਹੈ ਜਾਂ ਪਹਿਲਾਂ ਹੀ ਲੈ ਲਈ ਹੈ, ਉਸ ਦੇ ਨੰਬਰ 'ਤੇ ਟੈਪ ਕਰੋ",
-  "notYetKnown": "ਅਜੇ ਪਤਾ ਨਹੀਂ",
+  "notYetKnown": "ਹਾਲੇ ਪਤਾ ਨਹੀਂ",
   "pillForToday": "{today} ਨੂੰ ਲੈਣ ਵਾਲੀ ਗੋਲੀ",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ਝਲਕ",

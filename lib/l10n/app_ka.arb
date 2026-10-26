@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "გთხოვთ, გვიამბოთ თქვენთვის გამოწერილი აბების შეფუთვის შესახებ",
   "existingAccountUsers": "უკვე გაქვთ ანგარიში? შესვლა",
   "selectTodayPillNumber": "დღეს ({todayString})\nშეეხეთ იმ აბის ნომერს, რომელსაც მიიღებთ ან უკვე მიიღეთ",
-  "notYetKnown": "ჯერ უცნობია",
+  "notYetKnown": "ჯერ არ ვიცი",
   "pillForToday": "{today}-ზე მისაღები ტაბლეტები",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "პრევიუ",

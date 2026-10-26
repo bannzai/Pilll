@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Tafadhali tuambie kuhusu pakiti ya vidonge ulivyoandikiwa",
   "existingAccountUsers": "Una akaunti tayari? Tafadhali ingia",
   "selectTodayPillNumber": "Leo ({todayString})\nTafadhali gusa namba ya kidonge utakachomeza au ambacho tayari umemeza",
-  "notYetKnown": "Bado haijulikani",
+  "notYetKnown": "Bado sijui",
   "pillForToday": "Vidonge vya {today} ni",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Hakiki",

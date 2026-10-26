@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "നിങ്ങൾക്ക് നിർദേശിച്ച ഗുളികകളുടെ പാക്കറ്റിനെക്കുറിച്ച് പറയൂ",
   "existingAccountUsers": "ഇതിനകം അക്കൗണ്ട് ഉണ്ടോ? ലോഗിൻ ചെയ്യൂ",
   "selectTodayPillNumber": "ഇന്ന് ({todayString})\nകഴിക്കാനിരിക്കുന്നതോ ഇതിനകം കഴിച്ചതോ ആയ ഗുളികയുടെ നമ്പറിൽ തൊടൂ",
-  "notYetKnown": "ഇനിയും അറിയില്ല",
+  "notYetKnown": "ഇതുവരെ അറിയില്ല",
   "pillForToday": "{today}ൽ കഴിക്കേണ്ട മാത്ര",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "പ്രിവ്യൂ",

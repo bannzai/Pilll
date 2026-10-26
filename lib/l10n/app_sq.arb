@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Na tregoni për paketimin e pilulave që ju janë përshkruar",
   "existingAccountUsers": "Keni tashmë një llogari? Hyni",
   "selectTodayPillNumber": "Sot ({todayString})\nPrekni numrin e pilulës që do të merrni ose e keni marrë tashmë",
-  "notYetKnown": "Ende nuk dihet",
+  "notYetKnown": "Ende nuk e di",
   "pillForToday": "Pillat për t'u marrë në {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Parashikim",

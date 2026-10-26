@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Räägi meile oma väljakirjutatud pillipakist",
   "existingAccountUsers": "Kas sul on juba konto? Logi sisse",
   "selectTodayPillNumber": "Täna ({todayString})\nPuuduta pilli numbrit, mille võtad või oled juba võtnud",
-  "notYetKnown": "Veel pole teada",
+  "notYetKnown": "Ma ei tea veel",
   "pillForToday": "{today}l võetav pill on",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Eelvaade",

@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "សូមប្រាប់យើងអំពីកញ្ចប់ថ្នាំគ្រាប់ដែលគ្រូពេទ្យបានចេញវេជ្ជបញ្ជាឱ្យអ្នក",
   "existingAccountUsers": "មានគណនីរួចហើយឬ? សូមចូលគណនី",
   "selectTodayPillNumber": "ថ្ងៃនេះ ({todayString})\nសូមចុចលេខគ្រាប់ថ្នាំដែលអ្នកនឹងលេប ឬបានលេបរួច",
-  "notYetKnown": "មិនទាន់ដឹង",
+  "notYetKnown": "នៅមិនទាន់ដឹងទេ",
   "pillForToday": "ថ្នាំពីលុលសម្រាប់{today}គឺ",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "មើលមុន",

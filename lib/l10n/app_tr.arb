@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Size reçete edilen hap paketini bize anlatın",
   "existingAccountUsers": "Zaten hesabınız var mı? Giriş yapın",
   "selectTodayPillNumber": "Bugün ({todayString})\nAlacağınız veya aldığınız hapın numarasına dokunun",
-  "notYetKnown": "Henüz belli değil",
+  "notYetKnown": "Henüz bilmiyorum",
   "pillForToday": "{today} günü alınacak hap",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Önizleme",

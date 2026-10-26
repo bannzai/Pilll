@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "أخبرينا عن عبوة حبوب منع الحمل الموصوفة لكِ",
   "existingAccountUsers": "لديكِ حساب بالفعل؟ سجلي الدخول",
   "selectTodayPillNumber": "اليوم ({todayString})\nاضغطي على رقم الحبة التي ستتناولينها أو تناولتِها",
-  "notYetKnown": "غير محدد بعد",
+  "notYetKnown": "لا أعرف بعد",
   "pillForToday": "أقراص يوم {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "معاينة",

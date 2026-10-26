@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Расскажите об упаковке назначенных вам таблеток",
   "existingAccountUsers": "У вас уже есть аккаунт? Войдите",
   "selectTodayPillNumber": "Сегодня ({todayString})\nНажмите на номер таблетки, которую собираетесь принять или уже приняли",
-  "notYetKnown": "Пока неизвестно",
+  "notYetKnown": "Пока не знаю",
   "pillForToday": "Таблетки на {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Просмотр",

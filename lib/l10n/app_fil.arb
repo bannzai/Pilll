@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Pakikwento po ang tungkol sa pakete ng pildoras na inireseta sa inyo",
   "existingAccountUsers": "May account na kayo? Mag-sign in",
   "selectTodayPillNumber": "Ngayon ({todayString})\nPaki-tap po ang numero ng pill na iinumin ninyo o nainom na ninyo",
-  "notYetKnown": "Hindi pa alam",
+  "notYetKnown": "Hindi ko pa po alam",
   "pillForToday": "Ang pill para sa {today} ay",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Paunang-tingin",

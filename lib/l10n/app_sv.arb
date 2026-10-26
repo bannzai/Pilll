@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Berätta om förpackningen med de p-piller du fått på recept",
   "existingAccountUsers": "Har du redan ett konto? Logga in",
   "selectTodayPillNumber": "I dag ({todayString})\nTryck på numret för pillret du ska ta eller redan har tagit",
-  "notYetKnown": "Okänt ännu",
+  "notYetKnown": "Jag vet inte än",
   "pillForToday": "Piller för {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Förhandsvisning",

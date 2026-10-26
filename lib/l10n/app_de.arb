@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Erzähl uns von deiner verschriebenen Pillenpackung",
   "existingAccountUsers": "Du hast schon ein Konto? Melde dich an",
   "selectTodayPillNumber": "Heute ({todayString})\nTippe auf die Nummer der Pille, die du heute nimmst oder schon genommen hast",
-  "notYetKnown": "Noch unbekannt",
+  "notYetKnown": "Ich weiß es noch nicht",
   "pillForToday": "Die Pille für {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vorschau",

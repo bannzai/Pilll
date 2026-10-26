@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Πείτε μας για τη συσκευασία των χαπιών που σας έχουν συνταγογραφηθεί",
   "existingAccountUsers": "Έχετε ήδη λογαριασμό; Συνδεθείτε",
   "selectTodayPillNumber": "Σήμερα ({todayString})\nΠατήστε τον αριθμό του χαπιού που θα πάρετε ή έχετε ήδη πάρει",
-  "notYetKnown": "Άγνωστο",
+  "notYetKnown": "Δεν γνωρίζω ακόμα",
   "pillForToday": "Το χάπι για τις {today} είναι",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Προεπισκόπηση",

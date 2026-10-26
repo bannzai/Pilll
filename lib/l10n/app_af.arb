@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Vertel ons asseblief van jou voorgeskrewe pilverpakking",
   "existingAccountUsers": "Het jy reeds ’n rekening? Meld aan",
   "selectTodayPillNumber": "Vandag ({todayString})\nTik op die nommer van die pil wat jy vandag gaan drink of reeds gedrink het",
-  "notYetKnown": "Nog onbekend",
+  "notYetKnown": "Ek weet nog nie",
   "pillForToday": "Pille vir {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet} pil",
   "preview": "Voorskou",

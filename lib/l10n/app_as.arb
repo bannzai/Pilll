@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "আপোনাক প্ৰেছক্ৰাইব কৰা পিলৰ পেকেটটোৰ বিষয়ে অনুগ্ৰহ কৰি জনাওক",
   "existingAccountUsers": "আপোনাৰ ইতিমধ্যে একাউণ্ট আছে নেকি? লগ ইন কৰক",
   "selectTodayPillNumber": "আজি ({todayString})\nআপুনি খাবলগীয়া বা খোৱা পিলৰ নম্বৰটোত টেপ কৰক",
-  "notYetKnown": "এতিয়াও জনা নাই",
+  "notYetKnown": "এতিয়াও নাজানো",
   "pillForToday": "{today}ত সেৱন কৰিবলগীয়া পিল হ'ল",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}নং বটি",
   "preview": "পূৰ্বদৰ্শন",

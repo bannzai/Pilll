@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Ceritakan tentang kemasan pil yang diresepkan untuk Anda",
   "existingAccountUsers": "Sudah punya akun? Masuk",
   "selectTodayPillNumber": "Hari ini ({todayString})\nKetuk nomor pil yang akan Anda minum atau sudah diminum",
-  "notYetKnown": "Belum diketahui",
+  "notYetKnown": "Belum tahu",
   "pillForToday": "Pil untuk {today}",
   "todayPillNumber": "Pil ke-{todayPillNumberPillNumberInPillSheet}",
   "preview": "Pratinjau",

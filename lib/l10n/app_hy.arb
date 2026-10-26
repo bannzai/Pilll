@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Խնդրում ենք պատմել Ձեզ նշանակված հաբերի փաթեթի մասին",
   "existingAccountUsers": "Արդեն հաշիվ ունե՞ք։ Մուտք գործեք",
   "selectTodayPillNumber": "Այսօր ({todayString})\nՀպեք այն հաբի համարին, որը պատրաստվում եք ընդունել կամ արդեն ընդունել եք",
-  "notYetKnown": "Դեռ անհայտ է",
+  "notYetKnown": "Դեռ չգիտեմ",
   "pillForToday": "{today}-ին ընդունելիք հաբերը",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "նախադիտում",

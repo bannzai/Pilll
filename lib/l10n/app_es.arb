@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Cuéntanos sobre el envase de las píldoras que te recetaron",
   "existingAccountUsers": "¿Ya tienes una cuenta? Inicia sesión",
   "selectTodayPillNumber": "Hoy ({todayString})\nToca el número de la píldora que vas a tomar o que ya tomaste",
-  "notYetKnown": "Sin determinar",
+  "notYetKnown": "Aún no lo sé",
   "pillForToday": "Píldoras para tomar el {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vista previa",

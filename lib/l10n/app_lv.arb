@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Pastāstiet par jums izrakstīto tablešu iepakojumu",
   "existingAccountUsers": "Jums jau ir konts? Piesakieties",
   "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties tās tabletes numuram, kuru lietosiet vai jau esat lietojuši",
-  "notYetKnown": "Vēl nav zināms",
+  "notYetKnown": "Pagaidām nezinu",
   "pillForToday": "{today} dzert tabletes ir",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Priekšskatījums",

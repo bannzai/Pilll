@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Povejte nam več o omotu predpisanih tablet",
   "existingAccountUsers": "Že imate račun? Prijavite se",
   "selectTodayPillNumber": "Danes ({todayString})\nTapnite številko tabletke, ki jo boste vzeli ali ste jo že vzeli",
-  "notYetKnown": "Še ni znano",
+  "notYetKnown": "Za zdaj še ne vem",
   "pillForToday": "Pilule za {today} so",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Predogled",

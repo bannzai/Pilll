@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Sicela usitshele ngephakethe lamaphilisi owalinikezwa udokotela",
   "existingAccountUsers": "Usunayo i-akhawunti? Sicela ungene",
   "selectTodayPillNumber": "Namuhla ({todayString})\nSicela uthephe inombolo yephilisi ozoliphuza noma oseliphuzile",
-  "notYetKnown": "Akusazakali",
+  "notYetKnown": "Angikazi okwamanje",
   "pillForToday": "Amaphilisi a{today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Hlola",

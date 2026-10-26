@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "तपाईंलाई सिफारिस गरिएको चक्कीको पत्ताबारे बताउनुहोस्",
   "existingAccountUsers": "तपाईंसँग पहिले नै खाता छ? लग इन गर्नुहोस्",
   "selectTodayPillNumber": "आज ({todayString})\nतपाईंले लिन लाग्नुभएको वा लिइसक्नुभएको चक्कीको नम्बरमा ट्याप गर्नुहोस्",
-  "notYetKnown": "अझै थाहा छैन",
+  "notYetKnown": "अहिले थाहा छैन",
   "pillForToday": "{today} मा सेवन गर्ने गोली",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "पूर्वावलोकन",

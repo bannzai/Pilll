@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "ስለታዘዘልዎት የክኒን ማሸጊያ እባክዎ ይንገሩን",
   "existingAccountUsers": "አስቀድሞ መለያ ካለዎት፣ ይግቡ",
   "selectTodayPillNumber": "ዛሬ ({todayString})\nየሚወስዱትን ወይም የወሰዱትን ክኒን ቁጥር ይንኩ",
-  "notYetKnown": "ገና አይታወቅም",
+  "notYetKnown": "ገና አላውቅም",
   "pillForToday": "{today}ላይ የሚወሰደው ክኒን",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "ቅድመ እይታ",

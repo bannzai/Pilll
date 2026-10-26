@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Kerro sinulle määrätystä pilleripakkauksesta",
   "existingAccountUsers": "Onko sinulla jo tili? Kirjaudu sisään",
   "selectTodayPillNumber": "Tänään ({todayString})\nNapauta sen pillerin numeroa, jonka aiot ottaa tai olet jo ottanut",
-  "notYetKnown": "Ei vielä tiedossa",
+  "notYetKnown": "En tiedä vielä",
   "pillForToday": "{today}n pilleri:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "esikatselu",

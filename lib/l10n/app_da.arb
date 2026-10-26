@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Fortæl os om den p-pillepakke, du har fået ordineret",
   "existingAccountUsers": "Har du allerede en konto? Log ind",
   "selectTodayPillNumber": "I dag ({todayString})\nTryk på nummeret på den p-pille, du skal tage eller allerede har taget",
-  "notYetKnown": "Endnu ikke kendt",
+  "notYetKnown": "Jeg ved det ikke endnu",
   "pillForToday": "Pillen til {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Forhåndsvisning",

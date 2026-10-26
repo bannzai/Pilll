@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Sizə təyin edilən həb qablaşdırması barədə məlumat verin",
   "existingAccountUsers": "Artıq hesabınız var? Daxil olun",
   "selectTodayPillNumber": "Bu gün ({todayString})\nİçəcəyiniz və ya içdiyiniz həbin nömrəsinə toxunun",
-  "notYetKnown": "Hələ məlum deyil",
+  "notYetKnown": "Hələ bilmirəm",
   "pillForToday": "{today} günü içməli olan həb",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Önizləmə",

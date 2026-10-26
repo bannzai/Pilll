@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Segðu okkur frá pakkningunni með pillunum sem þér var ávísað",
   "existingAccountUsers": "Ertu nú þegar með aðgang? Skráðu þig inn",
   "selectTodayPillNumber": "Í dag ({todayString})\nPikkaðu á númer pillunnar sem þú ætlar að taka eða hefur þegar tekið",
-  "notYetKnown": "Ekki vitað ennþá",
+  "notYetKnown": "Ég veit það ekki enn",
   "pillForToday": "Pilla fyrir {today} er",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Forskoðun",

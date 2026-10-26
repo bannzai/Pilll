@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Сізге тағайындалған таблеткалардың қаптамасы туралы айтып беріңіз",
   "existingAccountUsers": "Есептік жазбаңыз бар ма? Кіріңіз",
   "selectTodayPillNumber": "Бүгін ({todayString})\nІшетін немесе ішіп қойған таблетканың нөмірін түртіңіз",
-  "notYetKnown": "Әлі белгісіз",
+  "notYetKnown": "Әзірге білмеймін",
   "pillForToday": "{today} күні ішетін таблетка",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "көрініс",

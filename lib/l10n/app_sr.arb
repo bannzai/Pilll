@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Реците нам нешто о паковању пилула које су Вам прописане",
   "existingAccountUsers": "Већ имате налог? Пријавите се",
   "selectTodayPillNumber": "Данас ({todayString})\nДодирните број пилуле коју ћете узети или сте је већ узели",
-  "notYetKnown": "Још није познато",
+  "notYetKnown": "Још не знам",
   "pillForToday": "Pilule za {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Преглед",

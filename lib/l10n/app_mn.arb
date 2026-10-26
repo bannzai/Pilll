@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Танд бичиж өгсөн эмийн блистерийн талаар хэлж өгнө үү",
   "existingAccountUsers": "Та бүртгэлтэй юу? Нэвтэрнэ үү",
   "selectTodayPillNumber": "Өнөөдөр ({todayString})\nУух гэж байгаа эсвэл уусан эмийн дугаарыг дарна уу",
-  "notYetKnown": "Хараахан тодорхойгүй",
+  "notYetKnown": "Одоохондоо мэдэхгүй байна",
   "pillForToday": "{today}-д уух эм нь",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Урьдчилан үзэх",

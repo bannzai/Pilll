@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Řekněte nám prosím něco o předepsaném balení pilulek",
   "existingAccountUsers": "Už máte účet? Přihlásit se",
   "selectTodayPillNumber": "Dnes ({todayString})\nKlepněte na číslo pilulky, kterou si vezmete nebo jste si ji už vzali",
-  "notYetKnown": "Zatím neznámé",
+  "notYetKnown": "Zatím nevím",
   "pillForToday": "Pilulka na {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Náhled",

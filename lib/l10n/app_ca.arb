@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Explica'ns com és el blíster de píndoles que t'han receptat",
   "existingAccountUsers": "Ja tens un compte? Inicia sessió",
   "selectTodayPillNumber": "Avui ({todayString})\nToca el número de la píndola que prendràs o que ja has pres",
-  "notYetKnown": "Encara desconegut",
+  "notYetKnown": "Encara no ho sé",
   "pillForToday": "La pastilla per {today} és",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Vista prèvia",

@@ -225,7 +225,7 @@
   "tellAboutPrescribedSheet": "Sizga buyurilgan tabletkalar qadoği haqida aytib bering",
   "existingAccountUsers": "Hisobingiz bormi? Tizimga kiring",
   "selectTodayPillNumber": "Bugun ({todayString})\nIchmoqchi boʻlgan yoki allaqachon ichgan tabletkangiz raqamiga bosing",
-  "notYetKnown": "Hali ma'lum emas",
+  "notYetKnown": "Hali bilmayman",
   "pillForToday": "{today} kuni qabul qilinadigan dorilar",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Oldindan ko'rish",
