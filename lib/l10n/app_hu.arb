@@ -467,7 +467,7 @@
   "appearanceModeDateFeatureAppealTitle": "Dátumok megjelenítése a tablettacsomagon",
   "appearanceModeDateFeatureAppealShortDescription": "Egy pillantással láthatod, mikor kell szedned a tablettát",
   "appearanceModeDateFeatureAppealHeadline": "Láthatod a dátumokat a tablettacsomagon",
-  "appearanceModeDateFeatureAppealBody": "A tablettarács celláiban dátumok megjelenítésével egy pillantással áttekintheti a múltbeli bevételeket és a jövőbeli bevételi időpontokat. Váltson a „sorszám” és a „dátum” nézet között, és válassza ki az Önnek legmegfelelőbbet.",
+  "appearanceModeDateFeatureAppealBody": "Ha a dátumok megjelennek a tablettacsomag mezőiben, egy pillantással átláthatod a szedési előzmények adatait és a tervezett bevételeket. Válts a „Szám” és a „Dátum” mód között, és válaszd a neked megfelelő nézetet.",
   "recordPillFeatureAppealTitle": "Szedési előzmények egyszerű áttekintése",
   "recordPillFeatureAppealShortDescription": "Azonnal láthatod, mikor szedted be.",
   "recordPillFeatureAppealHeadline": "Pillabevétel rögzítése a kezdőképernyőn",

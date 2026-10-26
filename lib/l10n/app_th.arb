@@ -467,7 +467,7 @@
   "appearanceModeDateFeatureAppealTitle": "แสดงวันที่บนแผงยา",
   "appearanceModeDateFeatureAppealShortDescription": "ดูได้ทันทีว่าควรทานยาเม็ดเมื่อไร",
   "appearanceModeDateFeatureAppealHeadline": "ดูวันที่บนแผงยาได้",
-  "appearanceModeDateFeatureAppealBody": "หน้าตารางเม็ดยาแสดงวันที่ในช่อง ทำให้คุณสามารถดูประวัติการทานยาในอดีตและกำหนดการทานยาในอนาคตได้ในครั้งเดียว เปลี่ยนสลับระหว่างโหมด \"หมายเลข\" และโหมด \"วันที่\" เพื่อเลือกการแสดงผลที่เหมาะกับคุณ",
+  "appearanceModeDateFeatureAppealBody": "เมื่อแสดงวันที่ในช่องของแผงยา คุณจะดูประวัติการทานยาและกำหนดการทานยาครั้งต่อไปได้ในพริบตาค่ะ สลับระหว่างโหมด “หมายเลข” และ “วันที่” เพื่อเลือกมุมมองที่เหมาะกับคุณค่ะ",
   "recordPillFeatureAppealTitle": "ย้อนดูประวัติการรับประทานยาได้อย่างง่ายดาย",
   "recordPillFeatureAppealShortDescription": "คุณจะทราบได้ทันทีว่าได้ทานเมื่อไหร่",
   "recordPillFeatureAppealHeadline": "บันทึกการรับประทานยาคุมกำเนิดที่หน้าหลัก",

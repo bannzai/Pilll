@@ -467,7 +467,7 @@
   "appearanceModeDateFeatureAppealTitle": "Mostra les dates al blíster",
   "appearanceModeDateFeatureAppealShortDescription": "Consulta d’un cop d’ull quan has de prendre la píndola",
   "appearanceModeDateFeatureAppealHeadline": "Pots veure les dates al blíster",
-  "appearanceModeDateFeatureAppealBody": "En mostrar la data a les caselles del full de píndoles, podeu consultar d'un cop d'ull l'historial de preses passades i el programa de preses futures. Canvieu entre el mode «número» i el mode «data» per triar la visualització que millor s'adapti a vosaltres.",
+  "appearanceModeDateFeatureAppealBody": "Si mostres les dates a les caselles del blíster, pots veure d'un cop d'ull l'historial de preses i les preses previstes. Alterna entre els modes «Número» i «Data» i tria la vista que et vagi millor.",
   "recordPillFeatureAppealTitle": "Revisa fàcilment l'historial de presa",
   "recordPillFeatureAppealShortDescription": "Sàpigues immediatament quan has pres la píndola",
   "recordPillFeatureAppealHeadline": "Registra la presa de píndoles a la pantalla d'inici",

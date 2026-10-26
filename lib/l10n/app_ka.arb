@@ -467,7 +467,7 @@
   "appearanceModeDateFeatureAppealTitle": "თარიღების ჩვენება აბების ბლისტერზე",
   "appearanceModeDateFeatureAppealShortDescription": "ერთი შეხედვით ნახეთ, როდის უნდა მიიღოთ აბი",
   "appearanceModeDateFeatureAppealHeadline": "თარიღები შეგიძლიათ ნახოთ აბების ბლისტერ ზე",
-  "appearanceModeDateFeatureAppealBody": "პილ-შიტის უჯრებში თარიღების ჩვენებით შეგიძლიათ ერთი შეხედვით დაათვალიეროთ წარსული მიღებების ჩანაწერები და მომავალი მიღებების გრაფიკი. გადართეთ „ნომერი“ და „თარიღი“ რეჟიმებს შორის და შეარჩიეთ ის ჩვენება, რომელიც თქვენთვის მოსახერხებელია.",
+  "appearanceModeDateFeatureAppealBody": "თუ თარიღები აბების ბლისტერ უჯრებში გამოჩნდება, ერთი შეხედვით დაინახავთ მიღების ისტორი და დაგეგმილ მიღებებს. გადაერთეთ „ნომერი“ და „თარიღი“ რეჟიმებს შორის და აირჩიეთ თქვენთვის მოსახერხებელი ხედი.",
   "recordPillFeatureAppealTitle": "პილების მიღების ისტორიის მარტივი მიმოხილვა",
   "recordPillFeatureAppealShortDescription": "ერთი შეხედვით გაიგებთ, როდის მიიღეთ თითოეული აბი",
   "recordPillFeatureAppealHeadline": "მთავარ ეკრანზე პილულის მიღების ჩანაწერი",
