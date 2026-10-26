@@ -122,7 +122,7 @@
   "taken": "Tabletė išgerta",
   "notTaken": "Tabletė neišgerta",
   "pillSheetSettings": "tablečių plokštel nustatymai",
-  "unmarkTodayPillAsTakenToPause": "Po to, kai šiandienos tabletę pažymėsite kaip neišgertą",
+  "unmarkTodayPillAsTakenToPause": "Pažymėjus šiandienos tabletę kaip neišgertą",
   "pauseTaking": "Vaistų pertrauka",
   "changePauseStartDate": "Keisti pertraukos pradžios datą",
   "pauseTakingPeriodEnded": "Tablečių vartojimo pertrauka pasibaigė",

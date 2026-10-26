@@ -122,7 +122,7 @@
   "taken": "Tabletka przyjęta",
   "notTaken": "Tabletka nieprzyjęta",
   "pillSheetSettings": "Ustawienia blistra",
-  "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej pigułki jako nieprzyjętej",
+  "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej tabletki jako nieprzyjętej",
   "pauseTaking": "Przerwa",
   "changePauseStartDate": "Zmień datę rozpoczęcia przerwy",
   "pauseTakingPeriodEnded": "Przerwa w przyjmowaniu zakończyła się",

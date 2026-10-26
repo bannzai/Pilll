@@ -122,7 +122,7 @@
   "taken": "복용했어요",
   "notTaken": "아직 복용하지 않았어요",
   "pillSheetSettings": "알약 시트 설정",
-  "unmarkTodayPillAsTakenToPause": "오늘 복용할 피임약을 미복용으로 변경한 후",
+  "unmarkTodayPillAsTakenToPause": "오늘 먹을 알약을 미복용으로 표시한 후",
   "pauseTaking": "복용 휴식",
   "changePauseStartDate": "휴약 시작일 변경",
   "pauseTakingPeriodEnded": "휴약 기간이 종료되었습니다",

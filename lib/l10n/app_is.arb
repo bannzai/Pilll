@@ -122,7 +122,7 @@
   "taken": "Pilla tekin",
   "notTaken": "Pillan ekki tekin",
   "pillSheetSettings": "Stillingar fyrir pilluspjald",
-  "unmarkTodayPillAsTakenToPause": "Merktu fyrst pilluna í dag sem ótekna",
+  "unmarkTodayPillAsTakenToPause": "Eftir að þú hefur merkt pilluna í dag sem ótekna",
   "pauseTaking": "Töku hlé",
   "changePauseStartDate": "Breyta upphafsdegi pilluhléš",
   "pauseTakingPeriodEnded": "Pilluhléið er lokið",

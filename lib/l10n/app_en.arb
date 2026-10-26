@@ -122,7 +122,7 @@
   "taken": "Pill taken",
   "notTaken": "Not taken",
   "pillSheetSettings": "Pill pack settings",
-  "unmarkTodayPillAsTakenToPause": "After marking today's pill as not taken",
+  "unmarkTodayPillAsTakenToPause": "After marking today’s pill as not taken",
   "pauseTaking": "Take Break",
   "changePauseStartDate": "Change Pause Start Date",
   "pauseTakingPeriodEnded": "Your pill break period has ended",

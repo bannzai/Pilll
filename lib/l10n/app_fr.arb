@@ -122,7 +122,7 @@
   "taken": "Pilule prise",
   "notTaken": "Pilule non prise",
   "pillSheetSettings": "Paramètres de la plaquette",
-  "unmarkTodayPillAsTakenToPause": "Après avoir marqué la pilule d'aujourd'hui comme non prise",
+  "unmarkTodayPillAsTakenToPause": "Après avoir indiqué que la pilule d’aujourd’hui n’a pas été prise",
   "pauseTaking": "Faites une pause",
   "changePauseStartDate": "Modifier la date de début de la pause",
   "pauseTakingPeriodEnded": "Votre période d’arrêt de pilule est terminée",

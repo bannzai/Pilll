@@ -122,7 +122,7 @@
   "taken": "Pilula hartuta",
   "notTaken": "Pilula hartu gabe",
   "pillSheetSettings": "pilula-blister ezarpenak",
-  "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe markatu eta gero",
+  "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe dagoela markatu ondoren",
   "pauseTaking": "Hartze-atsedenaldia",
   "changePauseStartDate": "Atseden hasiera data aldatu",
   "pauseTakingPeriodEnded": "Pilularen etenaldia amaitu da",

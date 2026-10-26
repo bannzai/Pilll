@@ -122,7 +122,7 @@
   "taken": "Эмээ уусан",
   "notTaken": "Эмээ уугаагүй",
   "pillSheetSettings": "эмийн блистер тохиргоо",
-  "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй болгосны дараа",
+  "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй гэж тэмдэглэсний дараа",
   "pauseTaking": "Түр амрах",
   "changePauseStartDate": "Эм амрах эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эмийн амралтын хугацаа дууслаа",

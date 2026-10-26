@@ -122,7 +122,7 @@
   "taken": "Tablete lietota",
   "notTaken": "Tablete nav lietota",
   "pillSheetSettings": "tablešu blister iestatījumi",
-  "unmarkTodayPillAsTakenToPause": "Pēc tam, kad šodienas tabletes atzīmējat kā neuzņemtas",
+  "unmarkTodayPillAsTakenToPause": "Pēc šodienas tabletes atzīmēšanas kā nelietotas",
   "pauseTaking": "Lietošanas pārtraukums",
   "changePauseStartDate": "Pārtraukuma sākuma datuma maiņa",
   "pauseTakingPeriodEnded": "Lietošanas pārtraukuma periods ir beidzies",

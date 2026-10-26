@@ -122,7 +122,7 @@
   "taken": "Хапчето е взето",
   "notTaken": "Хапчето не е взето",
   "pillSheetSettings": "Настройки на блистер",
-  "unmarkTodayPillAsTakenToPause": "След като маркирате днешните хапчета като неприети",
+  "unmarkTodayPillAsTakenToPause": "След като отбележите днешното хапче като неприето",
   "pauseTaking": "Пауза от приемане",
   "changePauseStartDate": "Промяна на началната дата на пауза в приема",
   "pauseTakingPeriodEnded": "Периодът на прекъсване на приемането приключи",

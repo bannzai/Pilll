@@ -122,7 +122,7 @@
   "taken": "تم تناول الحبة",
   "notTaken": "لم تؤخذ الحبة",
   "pillSheetSettings": "إعدادات الشريط",
-  "unmarkTodayPillAsTakenToPause": "بعد تعيين حبة اليوم كغير مأخوذة",
+  "unmarkTodayPillAsTakenToPause": "بعد تحديد حبة اليوم على أنها لم تؤخذ",
   "pauseTaking": "إيقاف الدواء",
   "changePauseStartDate": "تغيير تاريخ بداية التوقف",
   "pauseTakingPeriodEnded": "انتهت فترة التوقف عن تناول الحبوب",

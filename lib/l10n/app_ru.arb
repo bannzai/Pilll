@@ -122,7 +122,7 @@
   "taken": "Таблетка принята",
   "notTaken": "Таблетка не принята",
   "pillSheetSettings": "Настройки блистера",
-  "unmarkTodayPillAsTakenToPause": "Отметив сегодняшнюю таблетку как не принятую",
+  "unmarkTodayPillAsTakenToPause": "После того как отметите сегодняшнюю таблетку как непринятую",
   "pauseTaking": "Перерыв в приеме",
   "changePauseStartDate": "Изменить дату начала перерыва",
   "pauseTakingPeriodEnded": "Перерыв в приеме закончился",

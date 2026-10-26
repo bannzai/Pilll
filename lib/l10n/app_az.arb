@@ -122,7 +122,7 @@
   "taken": "Həb qəbul edilib",
   "notTaken": "Həb qəbul edilməyib",
   "pillSheetSettings": "həb blister ayarları",
-  "unmarkTodayPillAsTakenToPause": "Bu gün qəbul ediləcək həb hələ qəbul edilməyib",
+  "unmarkTodayPillAsTakenToPause": "Bugünkü həbi qəbul edilməyib kimi qeyd etdikdən sonra",
   "pauseTaking": "Fasilə",
   "changePauseStartDate": "Qəbul fasiləsi başlama tarixini dəyişdir",
   "pauseTakingPeriodEnded": "Dərman qəbuluna fasilə dövrü bitdi",

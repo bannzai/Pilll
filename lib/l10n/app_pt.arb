@@ -122,7 +122,7 @@
   "taken": "Pílula tomada",
   "notTaken": "Pílula ainda não tomada",
   "pillSheetSettings": "Configurações da cartela",
-  "unmarkTodayPillAsTakenToPause": "Marque a pílula de hoje como não tomada antes de",
+  "unmarkTodayPillAsTakenToPause": "Depois de marcar a pílula de hoje como não tomada",
   "pauseTaking": "Pausar Pílula",
   "changePauseStartDate": "Alterar Data de Início da Pausa",
   "pauseTakingPeriodEnded": "O período de pausa da pílula terminou",

@@ -122,7 +122,7 @@
   "taken": "Pill võetud",
   "notTaken": "Pill võtmata",
   "pillSheetSettings": "pillilehe seaded",
-  "unmarkTodayPillAsTakenToPause": "Pärast tänase pilli võtmata märkimist",
+  "unmarkTodayPillAsTakenToPause": "Pärast tänase pilli märkimist võtmata pilliks",
   "pauseTaking": "Võtmise paus",
   "changePauseStartDate": "Puhkeaja alguskuupäeva muutmine",
   "pauseTakingPeriodEnded": "Tablettide võtmise paus on lõppenud",

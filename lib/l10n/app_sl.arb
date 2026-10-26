@@ -122,7 +122,7 @@
   "taken": "Tableta vzeta",
   "notTaken": "Tableta ni bila vzeta",
   "pillSheetSettings": "Nastavitve za ploščic",
-  "unmarkTodayPillAsTakenToPause": "Potem ko označite današnjo tableto kot neužito",
+  "unmarkTodayPillAsTakenToPause": "Ko današnjo tableto označite kot nevzeto",
   "pauseTaking": "Premor jemanja",
   "changePauseStartDate": "Spremeni datum začetka premora",
   "pauseTakingPeriodEnded": "Premor pri jemanju se je končal",

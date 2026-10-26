@@ -122,7 +122,7 @@
   "taken": "Pilula je uzeta",
   "notTaken": "Pilula nije uzeta",
   "pillSheetSettings": "Postavke za blister",
-  "unmarkTodayPillAsTakenToPause": "Prvo označite današnju pilulu kao neuzetu",
+  "unmarkTodayPillAsTakenToPause": "Nakon što današnju pilulu označite kao neuzetu",
   "pauseTaking": "Pauza uzimanja",
   "changePauseStartDate": "Promjena datuma početka pauze",
   "pauseTakingPeriodEnded": "Period prestanka uzimanja je završen",

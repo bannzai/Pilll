@@ -122,7 +122,7 @@
   "taken": "පෙත්ත ගෙන ඇත",
   "notTaken": "පෙත්ත තවම ගෙන නැත",
   "pillSheetSettings": "පෙති කාඩ්පතේ සැකසුම්",
-  "unmarkTodayPillAsTakenToPause": "අද ගත යුතු පෙති නොගත් ලෙස ලකුණු කළ පසු",
+  "unmarkTodayPillAsTakenToPause": "අදට නියමිත පෙත්ත නොගත් බව සලකුණු කළ පසු",
   "pauseTaking": "ගැනීම අත්හිටුවන්න",
   "changePauseStartDate": "සේවන විරාම ආරම්භක දිනය වෙනස් කිරීම",
   "pauseTakingPeriodEnded": "ගුලි ගැනීමේ විරාම කාලය අවසන් වී ඇත",

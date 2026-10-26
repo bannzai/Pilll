@@ -122,7 +122,7 @@
   "taken": "Pilsen wedi'i chymryd",
   "notTaken": "Heb gymryd y bilsen",
   "pillSheetSettings": "Gosodiadau'r stribed pils",
-  "unmarkTodayPillAsTakenToPause": "Ar ôl marcio pil heddiw fel heb ei gymryd",
+  "unmarkTodayPillAsTakenToPause": "Ar ôl nodi pilsen heddiw fel un sydd heb ei chymryd",
   "pauseTaking": "Seibiant cymryd",
   "changePauseStartDate": "Newid dyddiad dechrau'r egwyl",
   "pauseTakingPeriodEnded": "Mae'r cyfnod seibiant wedi dod i ben",

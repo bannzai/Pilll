@@ -122,7 +122,7 @@
   "taken": "Таблетка ичилди",
   "notTaken": "Таблетка ичиле элек",
   "pillSheetSettings": "таблетка блистери жөндөөлөрү",
-  "unmarkTodayPillAsTakenToPause": "Бүгүнкү пиллди ичилбеген абалга келтиргенден кийин",
+  "unmarkTodayPillAsTakenToPause": "Бүгүнкү таблетканы ичиле элек деп белгилегенден кийин",
   "pauseTaking": "Ичүүнү токтотуу",
   "changePauseStartDate": "Дем алуу башталуу күнүн өзгөртүү",
   "pauseTakingPeriodEnded": "Таблетка ичүүдөн тыныгуу мезгили аяктады",

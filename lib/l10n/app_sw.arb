@@ -122,7 +122,7 @@
   "taken": "Kidonge kimemezwa",
   "notTaken": "Kidonge bado hakijamezwa",
   "pillSheetSettings": "Mipangilio ya pakiti ya vidonge",
-  "unmarkTodayPillAsTakenToPause": "Baada ya kurudisha vidonge vya leo katika hali ya kutojamezwa",
+  "unmarkTodayPillAsTakenToPause": "Baada ya kuweka alama kuwa kidonge cha leo hakijamezwa",
   "pauseTaking": "Pumzika dawa",
   "changePauseStartDate": "Badilisha Tarehe ya Kuanza Mapumziko ya Vidonge",
   "pauseTakingPeriodEnded": "Kipindi cha mapumziko ya kunywa dawa kimeisha",

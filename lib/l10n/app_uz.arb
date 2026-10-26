@@ -122,7 +122,7 @@
   "taken": "Tabletka qabul qilindi",
   "notTaken": "Hap hali ichilmagan",
   "pillSheetSettings": "tabletka blister sozlamalari",
-  "unmarkTodayPillAsTakenToPause": "Bugungi dorini ichilmagan holga keltirgandan so'ng",
+  "unmarkTodayPillAsTakenToPause": "Bugungi tabletkani qabul qilinmagan deb belgilaganingizdan soʻng",
   "pauseTaking": "Dam olish",
   "changePauseStartDate": "Tanaffus boshlash sanasini o'zgartirish",
   "pauseTakingPeriodEnded": "Dori qabul qilishda tanaffus davri tugadi",

@@ -122,7 +122,7 @@
   "taken": "Таблетка қабылданды",
   "notTaken": "Таблетка қабылданбаған",
   "pillSheetSettings": "таблетка блистер параметрлері",
-  "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы ішпеген деп белгілегеннен кейін",
+  "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы қабылданбаған деп белгілегеннен кейін",
   "pauseTaking": "Тоқтату",
   "changePauseStartDate": "Пилл қабылдау үзілісінің басталу күнін өзгерту",
   "pauseTakingPeriodEnded": "Дәрі қабылдаудан демалыс кезеңі аяқталды",

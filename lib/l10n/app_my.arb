@@ -122,7 +122,7 @@
   "taken": "ဆေးပြား သောက်ပြီးပါပြီ",
   "notTaken": "ဆေးပြား မသောက်ရသေးပါ",
   "pillSheetSettings": "ဆေးပြားကတ် ဆက်တင်များ",
-  "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးတောင့်ကို မသောက်ရသေးအဖြစ်သတ်မှတ်ပြီးမှ",
+  "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးလုံးကို မသောက်ရသေးဟု မှတ်သားပြီးနောက်",
   "pauseTaking": "ဆေးရပ်တန့်",
   "changePauseStartDate": "ဆေးလုံးသောက်ခြင်း ရပ်နားမည့် စတင်ရက် ပြောင်းလဲခြင်း",
   "pauseTakingPeriodEnded": "ဆေးသောက်ခြင်း အနားယူကာလ ပြီးဆုံးပါပြီ",
