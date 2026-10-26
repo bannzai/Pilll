@@ -53,7 +53,7 @@
   "viewPremiumPlan": "премиум планын көрүңүз",
   "changePillNumberForToday": "Бүгүн ичиле турган таблетканын номерин өзгөртүңүз",
   "discardAllPillSheets": "Бардык таблетка блистери тууралуу маалыматты өчүрүңүз",
-  "areYouSureDoing": "{doing} кыласызбы?",
+  "areYouSureDoing": "Чын эле {doing} каалайсызбы?",
   "currentlyDisplayed": "учурда көрсөтүлгөн",
   "allPillSheets": "Бардык пили барактары",
   "willBeDiscarded": "жоюлат",

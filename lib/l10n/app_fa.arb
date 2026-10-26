@@ -53,7 +53,7 @@
   "viewPremiumPlan": "مشاهدهٔ طرح پریمیوم",
   "changePillNumberForToday": "تغییر شماره قرص امروز",
   "discardAllPillSheets": "حذف همه اطلاعات ورق قرص",
-  "areYouSureDoing": "{doing} را انجام می‌دهید؟",
+  "areYouSureDoing": "آیا مطمئن هستید که می‌خواهید {doing}؟",
   "currentlyDisplayed": "در حال نمایش",
   "allPillSheets": "همه بسته‌های قرص",
   "willBeDiscarded": "حذف می‌شود",

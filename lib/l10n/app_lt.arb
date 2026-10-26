@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Peržiūrėti Premium planą",
   "changePillNumberForToday": "Pakeiskite šiandien vartojamos tabletės numerį",
   "discardAllPillSheets": "Ištrinti visus tablečių plokštel duomenis",
-  "areYouSureDoing": "Ar {doing}?",
+  "areYouSureDoing": "Ar tikrai norite {doing}?",
   "currentlyDisplayed": "Šiuo metu rodoma",
   "allPillSheets": "Visi tablečių pakeliai",
   "willBeDiscarded": "bus ištrinta",

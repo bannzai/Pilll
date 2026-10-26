@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Посмотреть план премиум",
   "changePillNumberForToday": "Изменить номер таблетки на сегодня",
   "discardAllPillSheets": "Удалить данные обо всех блистерах",
-  "areYouSureDoing": "{doing}?",
+  "areYouSureDoing": "Вы уверены, что хотите {doing}?",
   "currentlyDisplayed": "Сейчас отображается",
   "allPillSheets": "Все блистеры",
   "willBeDiscarded": "будет удалено",

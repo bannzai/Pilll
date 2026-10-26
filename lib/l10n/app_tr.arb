@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Premium planı görüntüleyin",
   "changePillNumberForToday": "Bugün alınacak hap numarasını değiştirin",
   "discardAllPillSheets": "Tüm blister verilerini silin",
-  "areYouSureDoing": "{doing} yapacak mısınız?",
+  "areYouSureDoing": "Gerçekten {doing} istiyor musunuz?",
   "currentlyDisplayed": "Şu anda görüntülenen",
   "allPillSheets": "Tüm Hap Paketleri",
   "willBeDiscarded": "silinecektir",

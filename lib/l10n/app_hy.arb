@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Դիտեք պրեմիում պլանը",
   "changePillNumberForToday": "Փոխել այսօր ընդունվող հաբի համար",
   "discardAllPillSheets": "Ջնջել բոլոր հաբերի բլիստեր տվյալները",
-  "areYouSureDoing": "{doing}ե՞ք:",
+  "areYouSureDoing": "Վստա՞հ եք, որ ցանկանում եք {doing}։",
   "currentlyDisplayed": "Ցուցադրվող",
   "allPillSheets": "բոլոր փաթեթները",
   "willBeDiscarded": "կոչնչացվի",

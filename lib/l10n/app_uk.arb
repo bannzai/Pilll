@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Переглянути план преміум",
   "changePillNumberForToday": "Змінити номер пігулки на сьогодні",
   "discardAllPillSheets": "Видалити дані про всі блістери",
-  "areYouSureDoing": "{doing}?",
+  "areYouSureDoing": "Ви впевнені, що хочете {doing}?",
   "currentlyDisplayed": "Наразі відображено",
   "allPillSheets": "Усі блістери",
   "willBeDiscarded": "буде видалено",

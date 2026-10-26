@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Gweld y cynllun premiwm",
   "changePillNumberForToday": "Newid rhif y bilsen i’w chymryd heddiw",
   "discardAllPillSheets": "Dileu’r holl ddata am stribed pils",
-  "areYouSureDoing": "A ydych chi am {doing}?",
+  "areYouSureDoing": "Ydych chi'n siŵr eich bod am {doing}?",
   "currentlyDisplayed": "yn cael ei ddangos ar hyn o bryd",
   "allPillSheets": "Pob taflen bils",
   "willBeDiscarded": "fydd yn cael ei ddileu",

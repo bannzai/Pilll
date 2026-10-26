@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Погледајте премијум план",
   "changePillNumberForToday": "Промените број пилуле за данас",
   "discardAllPillSheets": "Обришите податке о свим блистерима",
-  "areYouSureDoing": "Da li {doing}?",
+  "areYouSureDoing": "Да ли сте сигурни да желите да {doing}?",
   "currentlyDisplayed": "trenutno prikazane",
   "allPillSheets": "Svi listovi tableta",
   "willBeDiscarded": "biće obrisano",

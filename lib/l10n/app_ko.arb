@@ -53,7 +53,7 @@
   "viewPremiumPlan": "프리미엄 플랜 보기",
   "changePillNumberForToday": "오늘 복용할 알약 번호 변경",
   "discardAllPillSheets": "모든 알약 시트 정보 삭제",
-  "areYouSureDoing": "{doing}하시겠습니까?",
+  "areYouSureDoing": "정말 {doing} 하시겠어요?",
   "currentlyDisplayed": "현재 표시 중",
   "allPillSheets": "모든 피임약 시트",
   "willBeDiscarded": "삭제됩니다",

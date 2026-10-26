@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Katso Premium-tilaus",
   "changePillNumberForToday": "Vaihda tämän päivän pillerinumero",
   "discardAllPillSheets": "Poista kaikkien pilleriliuskojen tiedot",
-  "areYouSureDoing": "Haluatko {doing}?",
+  "areYouSureDoing": "Haluatko varmasti {doing}?",
   "currentlyDisplayed": "Näkyvillä",
   "allPillSheets": "Kaikki pilleripakkaukset",
   "willBeDiscarded": "poistetaan",

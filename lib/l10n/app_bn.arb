@@ -53,7 +53,7 @@
   "viewPremiumPlan": "প্রিমিয়াম প্ল্যান দেখুন",
   "changePillNumberForToday": "আজ খাওয়ার পিল নম্বর পরিবর্তন করুন",
   "discardAllPillSheets": "সব পিল শিটের তথ্য মুছুন",
-  "areYouSureDoing": "{doing} করবেন?",
+  "areYouSureDoing": "আপনি কি নিশ্চিত যে {doing} করতে চান?",
   "currentlyDisplayed": "বর্তমানে প্রদর্শিত",
   "allPillSheets": "সব পিল শিট",
   "willBeDiscarded": "মুছে ফেলা হবে",

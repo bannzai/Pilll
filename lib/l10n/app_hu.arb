@@ -53,7 +53,7 @@
   "viewPremiumPlan": "A prémium csomag megtekintése",
   "changePillNumberForToday": "A mai tablettaszám módosítása",
   "discardAllPillSheets": "Az összes tablettacsomag adatainak törlése",
-  "areYouSureDoing": "{doing}?",
+  "areYouSureDoing": "Biztosan szeretnéd {doing}?",
   "currentlyDisplayed": "jelenleg megjelenített",
   "allPillSheets": "Összes tablettacsomag",
   "willBeDiscarded": "törölve lesz",

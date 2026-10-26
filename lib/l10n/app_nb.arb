@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Se premium-abonnementet",
   "changePillNumberForToday": "Endre pillenummer for i dag",
   "discardAllPillSheets": "Slett alle data om pillebrett",
-  "areYouSureDoing": "Vil du {doing}?",
+  "areYouSureDoing": "Er du sikker på at du vil {doing}?",
   "currentlyDisplayed": "Vises for øyeblikket",
   "allPillSheets": "Alle p-pilleark",
   "willBeDiscarded": "vil bli slettet",

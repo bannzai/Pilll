@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Вижте плана премиум",
   "changePillNumberForToday": "Промяна на номер на хапче за днес",
   "discardAllPillSheets": "Изтриване на всички данни за блистерите",
-  "areYouSureDoing": "Ще {doing} ли?",
+  "areYouSureDoing": "Сигурни ли сте, че искате да {doing}?",
   "currentlyDisplayed": "текущо показани",
   "allPillSheets": "Всички блистери",
   "willBeDiscarded": "ще бъде изтрит",

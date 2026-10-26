@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Vaata premium-paketti",
   "changePillNumberForToday": "Muuda pillinumbrit tänaseks",
   "discardAllPillSheets": "Kustuta kõik pillilehe andmed",
-  "areYouSureDoing": "Kas {doing}?",
+  "areYouSureDoing": "Kas soovid kindlasti {doing}?",
   "currentlyDisplayed": "praegu kuvatud",
   "allPillSheets": "Kõik pillilehed",
   "willBeDiscarded": "kustutatakse",

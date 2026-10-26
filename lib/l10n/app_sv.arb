@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Visa premiumplanen",
   "changePillNumberForToday": "Ändra tablettnummer för i dag",
   "discardAllPillSheets": "Radera data för alla p-pillerkartor",
-  "areYouSureDoing": "Vill du {doing}?",
+  "areYouSureDoing": "Är du säker på att du vill {doing}?",
   "currentlyDisplayed": "visas för närvarande",
   "allPillSheets": "Alla p-pillerförpackningar",
   "willBeDiscarded": "kommer att raderas",

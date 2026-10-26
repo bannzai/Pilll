@@ -53,7 +53,7 @@
   "viewPremiumPlan": "प्रीमियम प्लान देखें",
   "changePillNumberForToday": "आज लेने के लिए गोली नंबर बदलें",
   "discardAllPillSheets": "सभी पिल स्ट्रिप का डेटा हटाएं",
-  "areYouSureDoing": "क्या आप {doing} करना चाहते हैं？",
+  "areYouSureDoing": "क्या आप वाकई {doing} चाहते हैं?",
   "currentlyDisplayed": "वर्तमान में प्रदर्शित",
   "allPillSheets": "सभी पिल शीट",
   "willBeDiscarded": "हटा दिया जाएगा",

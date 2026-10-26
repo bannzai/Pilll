@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Ver el plan Premium",
   "changePillNumberForToday": "Cambia el número de píldora de hoy",
   "discardAllPillSheets": "Eliminar los datos de todos los blísteres",
-  "areYouSureDoing": "¿{doing}?",
+  "areYouSureDoing": "¿Seguro que quieres {doing}?",
   "currentlyDisplayed": "Actualmente mostrado",
   "allPillSheets": "Todas las plaquetas",
   "willBeDiscarded": "será eliminado",

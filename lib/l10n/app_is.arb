@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Skoða Premium-áskrift",
   "changePillNumberForToday": "Breyta pillunúmeri dagsins",
   "discardAllPillSheets": "Eyða gögnum um öll pilluspjöld",
-  "areYouSureDoing": "Viltu {doing}?",
+  "areYouSureDoing": "Ertu viss um að þú viljir {doing}?",
   "currentlyDisplayed": "Nú sýnt",
   "allPillSheets": "Öll pillublöð",
   "willBeDiscarded": "verður eytt",

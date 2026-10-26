@@ -53,7 +53,7 @@
   "viewPremiumPlan": "ดูแผนพรีเมียม",
   "changePillNumberForToday": "เปลี่ยนหมายเลขเม็ดยาที่ต้องทานวันนี้",
   "discardAllPillSheets": "ลบข้อมูลแผงยาทั้งหมด",
-  "areYouSureDoing": "คุณต้องการ{doing}หรือไม่？",
+  "areYouSureDoing": "ต้องการ{doing}จริง ๆ หรือคะ?",
   "currentlyDisplayed": "กำลังแสดงอยู่",
   "allPillSheets": "แผงยาเม็ดทั้งหมด",
   "willBeDiscarded": "จะถูกลบ",

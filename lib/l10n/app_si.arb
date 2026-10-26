@@ -53,7 +53,7 @@
   "viewPremiumPlan": "ප්‍රීමියම් සැලැස්ම බලන්න",
   "changePillNumberForToday": "අද ගත යුතු පෙති අංකය වෙනස් කරන්න",
   "discardAllPillSheets": "සියලුම පෙති කාඩ්පත් දත්ත මකන්න",
-  "areYouSureDoing": "{doing} කරනවාද?",
+  "areYouSureDoing": "ඔබට ඇත්තටම {doing} කිරීමට අවශ්‍යද?",
   "currentlyDisplayed": "දැනට පෙන්වා ඇති",
   "allPillSheets": "සියලුම පෙති පත්‍ර",
   "willBeDiscarded": "ඉවත් කරනු ලැබේ",

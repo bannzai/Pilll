@@ -53,7 +53,7 @@
   "viewPremiumPlan": "ເບິ່ງແຜນ Premium",
   "changePillNumberForToday": "ປ່ຽນເລກເມັດຢາທີ່ຈະກິນມື້ນີ້",
   "discardAllPillSheets": "ລຶບຂໍ້ມູນແຜງຢາຄຸມທັງໝົດ",
-  "areYouSureDoing": "ຈະ {doing} ບໍ?",
+  "areYouSureDoing": "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການ {doing}?",
   "currentlyDisplayed": "ກຳລັງສະແດງ",
   "allPillSheets": "ທຸກຊີດຢາຄຸມກໍາເນີດ",
   "willBeDiscarded": "ຈະຖືກລຶບ",

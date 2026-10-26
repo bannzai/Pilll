@@ -53,7 +53,7 @@
   "viewPremiumPlan": "לצפייה בתוכנית פרימיום",
   "changePillNumberForToday": "שינוי מספר גלולה לנטילה היום",
   "discardAllPillSheets": "מחיקת הנתונים של כל חפיסת גלולות",
-  "areYouSureDoing": "ל{doing}?",
+  "areYouSureDoing": "האם לבצע {doing}?",
   "currentlyDisplayed": "מוצג כעת",
   "allPillSheets": "כל דפי הגלולות",
   "willBeDiscarded": "יימחק",

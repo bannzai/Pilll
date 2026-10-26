@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Δείτε το πρόγραμμα Premium",
   "changePillNumberForToday": "Αλλάξτε τον αριθμό χαπιού για σήμερα",
   "discardAllPillSheets": "Διαγραφή όλων των δεδομένων για καρτέλα χαπιών",
-  "areYouSureDoing": "Θα {doing};",
+  "areYouSureDoing": "Θέλετε σίγουρα να {doing};",
   "currentlyDisplayed": "Εμφανίζεται τώρα",
   "allPillSheets": "Όλα τα φύλλα χαπιών",
   "willBeDiscarded": "θα διαγραφεί",

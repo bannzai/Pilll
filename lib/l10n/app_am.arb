@@ -53,7 +53,7 @@
   "viewPremiumPlan": "የፕሪሚየም ዕቅድን ይመልከቱ",
   "changePillNumberForToday": "ዛሬ የሚወሰደውን ክኒን ቁጥር መቀየር",
   "discardAllPillSheets": "ሁሉንም ክኒን ሉህ ያስወግዱ",
-  "areYouSureDoing": "{doing} ይፈልጋሉ?",
+  "areYouSureDoing": "እርግጠኛ ነዎት {doing} ማድረግ ይፈልጋሉ?",
   "currentlyDisplayed": "አሁን የሚታየው",
   "allPillSheets": "ሁሉም ክኒን ሉሆች",
   "willBeDiscarded": "ይሰረዛል",

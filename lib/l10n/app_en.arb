@@ -53,7 +53,7 @@
   "viewPremiumPlan": "View Premium plan",
   "changePillNumberForToday": "Change the pill number for today",
   "discardAllPillSheets": "Delete all pill pack data",
-  "areYouSureDoing": "Do you want to {doing}?",
+  "areYouSureDoing": "Are you sure you want to {doing}?",
   "currentlyDisplayed": "Currently displayed",
   "allPillSheets": "All Pill Sheets",
   "willBeDiscarded": "will be discarded",

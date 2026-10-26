@@ -53,7 +53,7 @@
   "viewPremiumPlan": "د پریمیم پلان وګورئ",
   "changePillNumberForToday": "د نن ورځې د ګولۍ شمېر بدل کړئ",
   "discardAllPillSheets": "د ټولو ګولیو پاڼو معلومات ړنګ کړئ",
-  "areYouSureDoing": "ایا تاسو {doing} کول غواړئ؟",
+  "areYouSureDoing": "ایا ډاډه یاست چې {doing} غواړئ؟",
   "currentlyDisplayed": "اوس ښودل شوی",
   "allPillSheets": "ټولې د ګولۍ پاڼې",
   "willBeDiscarded": "له منځه وړل کیږي",

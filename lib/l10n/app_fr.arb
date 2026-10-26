@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Voir l’offre Premium",
   "changePillNumberForToday": "Modifier le numéro de pilule à prendre aujourd’hui",
   "discardAllPillSheets": "Supprimer les données de toutes les plaquettes",
-  "areYouSureDoing": "Voulez-vous {doing} ?",
+  "areYouSureDoing": "Voulez-vous vraiment {doing} ?",
   "currentlyDisplayed": "Actuellement affiché",
   "allPillSheets": "Toutes les feuilles de pilules",
   "willBeDiscarded": "sera rejeté",

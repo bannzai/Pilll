@@ -53,7 +53,7 @@
   "viewPremiumPlan": "премиум багцыг харах",
   "changePillNumberForToday": "Өнөөдөр уух эмийн дугаарыг өөрчилнө үү",
   "discardAllPillSheets": "Бүх эмийн блистерийн мэдээллийг устгана уу",
-  "areYouSureDoing": "{doing} хийх үү？",
+  "areYouSureDoing": "Та {doing} гэдэгтээ итгэлтэй байна уу?",
   "currentlyDisplayed": "одоо харагдаж байгаа",
   "allPillSheets": "Бүх эмийн савлага",
   "willBeDiscarded": "устгагдана",

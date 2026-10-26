@@ -53,7 +53,7 @@
   "viewPremiumPlan": "Ikusi Premium plana",
   "changePillNumberForToday": "Aldatu gaur hartu beharreko pilula-zenbakia",
   "discardAllPillSheets": "Ezabatu pilula-blister guztien datuak",
-  "areYouSureDoing": "{doing} egin nahi duzu?",
+  "areYouSureDoing": "Ziur zaude {doing} nahi duzula?",
   "currentlyDisplayed": "Orain erakusten ari dena",
   "allPillSheets": "Pilula orri guztiak",
   "willBeDiscarded": "ezabatuko da",

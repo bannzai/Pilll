@@ -53,7 +53,7 @@
   "viewPremiumPlan": "премиум жоспарын қараңыз",
   "changePillNumberForToday": "Бүгін ішілетін таблетка нөмірін өзгертіңіз",
   "discardAllPillSheets": "Барлық таблетка блистер деректерін өшіріңіз",
-  "areYouSureDoing": "{doing} істейсіз бе?",
+  "areYouSureDoing": "Шынымен {doing} қалайсыз ба?",
   "currentlyDisplayed": "Қазір көрсетілген",
   "allPillSheets": "Барлық дәрі парақтары",
   "willBeDiscarded": "жойылады",
