@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Automaticky vytvořit další platíčko pilulek",
   "creatingNewPillSheetFeatureAppealHeadline": "Automaticky vytvořit další blistr",
   "creatingNewPillSheetFeatureAppealBody": "Až skončí aktuální skupina blistrů, automaticky se vytvoří nová skupina blistrů. Nemusíte nic přepínat ručně a v záznamech o užívání nevzniknou mezery.",
-  "alarmKitFeatureAppealTitle": "Budík, který zvoní jako probouzení",
+  "alarmKitFeatureAppealTitle": "Upozornění, které zvoní jako budík",
   "alarmKitFeatureAppealShortDescription": "Oznámení zazní spolehlivě i v tichém režimu",
   "alarmKitFeatureAppealHeadline": "Alarm na užívání léků jako budík",
   "alarmKitFeatureAppealBody": "Díky AlarmKit dostupnému od iOS 26 vás upozorníme na užití pilulky alarmem, který spolehlivě zazvoní i v tichém režimu nebo Režimu soustředění.",

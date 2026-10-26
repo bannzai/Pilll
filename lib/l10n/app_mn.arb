@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Дараагийн эмийн блистерийг автоматаар үүсгэх",
   "creatingNewPillSheetFeatureAppealHeadline": "Дараагийн эмийн блистерийг автоматаар үүсгэнэ",
   "creatingNewPillSheetFeatureAppealBody": "Одоогийн эмийн блистерийн бүлэг дуусахад шинэ бүлэг автоматаар үүснэ. Гараар солих шаардлагагүй бөгөөд эм уусан бүртгэл тасалдахгүй.",
-  "alarmKitFeatureAppealTitle": "Будильник шиг дуугардаг сэрэмжлүүлэг",
+  "alarmKitFeatureAppealTitle": "Сэрүүлэгтэй цаг шиг дуугарах сануулга",
   "alarmKitFeatureAppealShortDescription": "Чимээгүй горимд ч заавал дуугарах мэдэгдэл",
   "alarmKitFeatureAppealHeadline": "Сэрүүлэгтэй адил эм уух дохио",
   "alarmKitFeatureAppealBody": "iOS 26 болон түүнээс дээш хувилбарт ашиглах боломжтой AlarmKit-ийг ашиглан, чимээгүй горим болон фокус горимд ч гэсэн заавал дуугарах сэрүүлгээр таблет уухыг сануулна.",

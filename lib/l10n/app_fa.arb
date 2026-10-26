@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "ساخت خودکار ورق بعدی قرص‌ها",
   "creatingNewPillSheetFeatureAppealHeadline": "ساخت خودکار ورق قرص بعدی",
   "creatingNewPillSheetFeatureAppealBody": "وقتی گروه فعلی ورق قرص تمام شود، گروه جدیدی از ورق قرص به‌طور خودکار ساخته می‌شود. نیازی به جابه‌جایی دستی نیست و ثبت مصرف بدون وقفه ادامه پیدا می‌کند.",
-  "alarmKitFeatureAppealTitle": "آلارمی که مثل ساعت بیداری زنگ می‌زند",
+  "alarmKitFeatureAppealTitle": "هشداری که مثل ساعت زنگ‌دار به صدا درمی‌آید",
   "alarmKitFeatureAppealShortDescription": "اعلان‌های مطمئن حتی در حالت بی‌صدا",
   "alarmKitFeatureAppealHeadline": "هشدار مصرف مانند زنگ بیدارباش",
   "alarmKitFeatureAppealBody": "با استفاده از AlarmKit که از iOS 26 به بعد در دسترس است، حتی در حالت بی‌صدا یا حالت تمرکز نیز آلارمی که به‌طور قطعی پخش می‌شود، زمان مصرف قرص را به شما یادآوری می‌کند.",

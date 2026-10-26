@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Ավտոմատ ստեղծել հաբերի հաջորդ թերթիկը",
   "creatingNewPillSheetFeatureAppealHeadline": "Հաջորդ հաբերի բլիստեր-ի ավտոմատ ստեղծում",
   "creatingNewPillSheetFeatureAppealBody": "Երբ հաբերի բլիստերների ընթացիկ խումբն ավարտվի, ինքնաշխատ կստեղծվի նոր խումբ։ Դուք ձեռքով փոխելու կարիք չեք ունենա, և ընդունման գրառումները կմնան ամբողջական։",
-  "alarmKitFeatureAppealTitle": "Զարթուցիչի նման զանգող ահազանգ",
+  "alarmKitFeatureAppealTitle": "Զարթուցիչի պես հնչող ազդանշան",
   "alarmKitFeatureAppealShortDescription": "Լռության ռեժիմում նույնպես վստահաբար հնչող ծանուցումներ",
   "alarmKitFeatureAppealHeadline": "Զարթուցիչի նման ընդունման հիշեցում",
   "alarmKitFeatureAppealBody": "iOS 26 և ավելի ուշ հասանելի AlarmKit-ն օգտագործելով՝ հավելվածը կհիշեցնի պիլ վերցնելը՝ այնպիսի ազդարարումներով, որոնք վստահաբար կհնչեն նույնիսկ լուռ ռեժիմում կամ կենտրոնացման ռեժիմում։",

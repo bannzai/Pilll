@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Sortu hurrengo pilula-orria automatikoki",
   "creatingNewPillSheetFeatureAppealHeadline": "Sortu hurrengo pilula-blister automatikoki",
   "creatingNewPillSheetFeatureAppealBody": "Uneko pilula-blister multzoa amaitzen denean, beste multzo bat sortuko da automatikoki. Ez duzu eskuz aldatu beharko, eta hartze-erregistroan ez da hutsunerik egongo.",
-  "alarmKitFeatureAppealTitle": "Alarma iratzargailuaren moduan jo",
+  "alarmKitFeatureAppealTitle": "Iratzargailu baten moduan jotzen duen alarma",
   "alarmKitFeatureAppealShortDescription": "Modu isilan ere ziurtasunez joko duten jakinarazpenak",
   "alarmKitFeatureAppealHeadline": "Esnatzeko alarma bezalako botika-alerta",
   "alarmKitFeatureAppealBody": "iOS 26 eta bertsio berriagoetan eskuragarri dagoen AlarmKit erabiliz, isilik moduan edo kontzentrazio moduan ere segurtasunez joko duen alarma batekin jakinarazten dizu pilula hartzeko ordua.",

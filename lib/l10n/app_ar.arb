@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "إنشاء شريط الحبوب التالي تلقائيا",
   "creatingNewPillSheetFeatureAppealHeadline": "إنشاء شريط الحبوب التالي تلقائيًا",
   "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة شرائط الحبوب الحالية، تُنشأ مجموعة شريط جديدة تلقائيًا. لن تحتاجي إلى التبديل يدويًا، وستظل سجلات التناول مكتملة.",
-  "alarmKitFeatureAppealTitle": "إنذار يرن كالمنبه",
+  "alarmKitFeatureAppealTitle": "منبّه يرنّ مثل ساعة المنبّه",
   "alarmKitFeatureAppealShortDescription": "إشعارات تصل حتى في وضع الصامت",
   "alarmKitFeatureAppealHeadline": "تنبيه تناول الدواء مثل المنبه",
   "alarmKitFeatureAppealBody": "يستخدم AlarmKit المتاح على iOS 26 والإصدارات الأحدث لإعلامك بموعد تناول الحبوب عبر تنبيه يُصدر صوتًا بشكل موثوق حتى في وضع الصامت أو وضع التركيز.",

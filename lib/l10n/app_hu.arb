@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "A következő tablettalevél automatikus létrehozása",
   "creatingNewPillSheetFeatureAppealHeadline": "A következő tablettacsomag automatikus létrehozása",
   "creatingNewPillSheetFeatureAppealBody": "Amikor elfogy a jelenlegi tablettacsomag-csoport, automatikusan létrejön egy új. Nem kell kézzel átváltanod, és a szedési naplóban sem lesz kihagyás.",
-  "alarmKitFeatureAppealTitle": "Ébresztőóra-szerű riasztás",
+  "alarmKitFeatureAppealTitle": "Ébresztőóraként csörgő riasztás",
   "alarmKitFeatureAppealShortDescription": "Némített módban is biztosan megszólaló értesítések",
   "alarmKitFeatureAppealHeadline": "Ébresztő-szerű szedési emlékeztető",
   "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével olyan riasztás jelzi a tabletta bevételét, amely néma és fókusz módban is biztosan megszólal.",

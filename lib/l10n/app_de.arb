@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Nächsten Pillenblister automatisch erstellen",
   "creatingNewPillSheetFeatureAppealHeadline": "Nächsten Pillenblister automatisch erstellen",
   "creatingNewPillSheetFeatureAppealBody": "Wenn deine aktuelle Gruppe von Pillenblistern aufgebraucht ist, wird automatisch eine neue erstellt. Du musst nicht selbst wechseln, und deine Einnahmen bleiben lückenlos erfasst.",
-  "alarmKitFeatureAppealTitle": "Alarm wie ein Wecker",
+  "alarmKitFeatureAppealTitle": "Ein Alarm, der wie ein Wecker klingelt",
   "alarmKitFeatureAppealShortDescription": "Benachrichtigungen, die auch im Lautlos-Modus zuverlässig klingeln",
   "alarmKitFeatureAppealHeadline": "Einnahmealarm wie ein Wecker",
   "alarmKitFeatureAppealBody": "Mit AlarmKit, das ab iOS 26 verfügbar ist, werden Sie durch einen Alarm, der auch im Stumm- und Fokusmodus zuverlässig ertönt, an die Einnahme Ihrer Pille erinnert.",

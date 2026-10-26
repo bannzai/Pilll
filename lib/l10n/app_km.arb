@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "បង្កើតបន្ទះថ្នាំគ្រាប់បន្ទាប់ដោយស្វ័យប្រវត្តិ",
   "creatingNewPillSheetFeatureAppealHeadline": "បង្កើតបន្ទះថ្នាំគ្រាប់បន្ទាប់ដោយស្វ័យប្រវត្តិ",
   "creatingNewPillSheetFeatureAppealBody": "នៅពេលក្រុមបន្ទះថ្នាំគ្រាប់បច្ចុប្បន្នអស់ ប្រព័ន្ធនឹងបង្កើតក្រុមបន្ទះថ្នាំគ្រាប់ថ្មីដោយស្វ័យប្រវត្តិ។ អ្នកមិនចាំបាច់ប្ដូរដោយដៃទេ ហើយកំណត់ត្រាការលេបថ្នាំនឹងនៅពេញលេញ។",
-  "alarmKitFeatureAppealTitle": "អាឡាមដែលដូចម៉ោងរោទ",
+  "alarmKitFeatureAppealTitle": "សំឡេងរោទិ៍ដែលលឺដូចនាឡិការោទិ៍",
   "alarmKitFeatureAppealShortDescription": "ការជូនដំណឹងដែលធានាថានឹងមានសំឡេង ទោះបីនៅម៉ូដស្ងាត់ក៏ដោយ",
   "alarmKitFeatureAppealHeadline": "រំលឹកការទទួលថ្នាំដូចនាឡិកា",
   "alarmKitFeatureAppealBody": "យើងប្រើ AlarmKit ដែលអាចប្រើបាននៅលើ iOS 26 ឡើងទៅ ដើម្បីជូនដំណឹងអំពីការយកថ្នាំជាមួយអាឡាមដែលនឹងប្រាកដលឺ ទោះបីនៅក្នុងម៉ូដស្ងាត់ ឬម៉ូដផ្តោតក៏ដោយ។",

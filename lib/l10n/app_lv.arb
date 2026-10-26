@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Automātiski izveidot nākamo tablešu plāksnīti",
   "creatingNewPillSheetFeatureAppealHeadline": "Automātiski izveidot nākamo tablešu blister",
   "creatingNewPillSheetFeatureAppealBody": "Kad pašreizējā tablešu blister grupa beigsies, automātiski tiks izveidota jauna grupa. Jums nekas nebūs jāpārslēdz manuāli, un lietošanas ieraksti paliks pilnīgi.",
-  "alarmKitFeatureAppealTitle": "Zvana kā modinātājs",
+  "alarmKitFeatureAppealTitle": "Atgādinājums, kas zvana kā modinātājs",
   "alarmKitFeatureAppealShortDescription": "Paziņojumi, kas skanēs pat klusajā režīmā",
   "alarmKitFeatureAppealHeadline": "Atgādinājums par lietošanu — gluži kā modinātājs",
   "alarmKitFeatureAppealBody": "Izmantojot AlarmKit, kas pieejams sākot ar iOS 26, šis modinātājs atskanēs pat klusuma vai fokusēšanās režīmā, lai jūs nepalaistu garām tabletes lietošanas laiku.",

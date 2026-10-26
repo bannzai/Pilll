@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Awtomatikong gumawa ng susunod na pakete ng pildoras",
   "creatingNewPillSheetFeatureAppealHeadline": "Awtomatikong gawin ang susunod na pakete ng pildoras",
   "creatingNewPillSheetFeatureAppealBody": "Kapag naubos ang kasalukuyang grupo ng pakete ng pildoras, awtomatikong gagawa ng bagong grupo. Hindi na ninyo kailangang magpalit nang manu-mano, at mananatiling kumpleto ang tala ng pag-inom.",
-  "alarmKitFeatureAppealTitle": "Alarm na tumutunog na parang alarm clock",
+  "alarmKitFeatureAppealTitle": "Alarma na tumutunog na parang orasanang de-alarma",
   "alarmKitFeatureAppealShortDescription": "Abiso na tutunog kahit naka-silent",
   "alarmKitFeatureAppealHeadline": "Paalalang pag-inom na tulad ng alarm clock",
   "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na magagamit mula sa iOS 26 pataas, ipapaalala ng app ang pag-inom ng pill gamit ang alarm na tutunog kahit nasa silent mode o focus mode.",

@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "יצירה אוטומטית של חפיסת הגלולות הבאה",
   "creatingNewPillSheetFeatureAppealHeadline": "יצירה אוטומטית של חפיסת הגלולות הבאה",
   "creatingNewPillSheetFeatureAppealBody": "כשקבוצת חפיסת הגלולות הנוכחית תסתיים, תיווצר אוטומטית קבוצה חדשה של חפיסת גלולות. אין צורך לעבור אליה ידנית, ורישומי הנטילה יישארו מלאים.",
-  "alarmKitFeatureAppealTitle": "התראה שנשמעת כמו שעון מעורר",
+  "alarmKitFeatureAppealTitle": "התראה שמצלצלת כמו שעון מעורר",
   "alarmKitFeatureAppealShortDescription": "התראות שישמעו גם במצב שקט",
   "alarmKitFeatureAppealHeadline": "התראה לנטילה בדומה לשעון מעורר",
   "alarmKitFeatureAppealBody": "באמצעות AlarmKit הזמין ב‑iOS 26 ומעלה, נודיע לך על נטילת הגלולה באמצעות התראה שתשמע באופן אמין גם במצב שקט או במצב ריכוז.",

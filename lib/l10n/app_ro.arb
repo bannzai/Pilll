@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Creează automat următoarea folie de pilule",
   "creatingNewPillSheetFeatureAppealHeadline": "Creează automat următorul blister",
   "creatingNewPillSheetFeatureAppealBody": "Când se termină grupul actual de blistere, se creează automat unul nou. Nu trebuie să îl schimbi manual, iar înregistrările administrării rămân complete.",
-  "alarmKitFeatureAppealTitle": "Alarmă care sună ca un ceas deșteptător",
+  "alarmKitFeatureAppealTitle": "O alarmă care sună ca un ceas deșteptător",
   "alarmKitFeatureAppealShortDescription": "Notificări care sună sigur chiar și pe silențios",
   "alarmKitFeatureAppealHeadline": "Alarmă de administrare similară cu cea de trezire",
   "alarmKitFeatureAppealBody": "Folosind AlarmKit, disponibil pe iOS 26 și versiunile ulterioare, vă reamintim să luați pilula printr-o alarmă care sună cu certitudine chiar și în modul silențios sau în modul Focus.",

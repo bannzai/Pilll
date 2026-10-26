@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Criar a próxima cartela de pílulas automaticamente",
   "creatingNewPillSheetFeatureAppealHeadline": "Crie a próxima cartela automaticamente",
   "creatingNewPillSheetFeatureAppealBody": "Quando o grupo atual de cartelas acabar, um novo grupo será criado automaticamente. Você não precisará trocar manualmente, e o registro das tomadas continuará completo.",
-  "alarmKitFeatureAppealTitle": "Alarme que toca como um despertador",
+  "alarmKitFeatureAppealTitle": "Um alarme que toca como despertador",
   "alarmKitFeatureAppealShortDescription": "Notificação garantida mesmo no modo silencioso",
   "alarmKitFeatureAppealHeadline": "Alarme de medicação como despertador",
   "alarmKitFeatureAppealBody": "Usando o AlarmKit disponível no iOS 26 ou posterior, você será notificado para tomar sua pílula com um alarme que toca de forma confiável mesmo no Modo Silencioso ou no Modo de Foco.",

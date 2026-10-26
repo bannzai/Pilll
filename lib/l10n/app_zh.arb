@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "自动生成下一板药",
   "creatingNewPillSheetFeatureAppealHeadline": "自动创建下一板药板",
   "creatingNewPillSheetFeatureAppealBody": "当前药板组用完后，系统会自动创建新的药板组。无需手动切换，服药记录也能保持完整。",
-  "alarmKitFeatureAppealTitle": "像闹钟一样响的提醒",
+  "alarmKitFeatureAppealTitle": "像闹钟一样响起的提醒",
   "alarmKitFeatureAppealShortDescription": "即使处于静音也能响的提醒",
   "alarmKitFeatureAppealHeadline": "像闹钟一样的服药提醒",
   "alarmKitFeatureAppealBody": "使用可在 iOS 26 及以上版本中使用的 AlarmKit，即使在静音或集中模式下也能通过可靠响铃的闹钟提醒服药。",

@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Автоматично створити наступний блістер пігулок",
   "creatingNewPillSheetFeatureAppealHeadline": "Автоматично створити наступний блістер",
   "creatingNewPillSheetFeatureAppealBody": "Коли поточна група блістерів закінчиться, нова група створиться автоматично. Вам не доведеться перемикати її вручну, а записи про прийом залишаться повними.",
-  "alarmKitFeatureAppealTitle": "Сигнал, що звучить як будильник",
+  "alarmKitFeatureAppealTitle": "Нагадування, що дзвонить як будильник",
   "alarmKitFeatureAppealShortDescription": "Сповіщення, що пролунає навіть у беззвучному режимі",
   "alarmKitFeatureAppealHeadline": "Нагадування про прийом таблеток, як будильник",
   "alarmKitFeatureAppealBody": "Завдяки AlarmKit, доступному з iOS 26, сигнал пролунає навіть у беззвучному режимі чи режимі концентрації, щоб нагадати про прийом таблетки.",

@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Automatski kreirajte sljedeći list pilula",
   "creatingNewPillSheetFeatureAppealHeadline": "Automatski kreirajte sljedeći blister",
   "creatingNewPillSheetFeatureAppealBody": "Kad se trenutna grupa blistera završi, automatski će se napraviti nova grupa blistera. Ne morate je ručno mijenjati, a evidencija uzimanja ostat će potpuna.",
-  "alarmKitFeatureAppealTitle": "Alarm koji zvoni kao budilnik",
+  "alarmKitFeatureAppealTitle": "Alarm koji zvoni poput budilnika",
   "alarmKitFeatureAppealShortDescription": "Notifikacije koje zvone čak i u tihom načinu",
   "alarmKitFeatureAppealHeadline": "Alarm za uzimanje tableta poput budilnika",
   "alarmKitFeatureAppealBody": "Koristeći AlarmKit dostupan na iOS 26 i novijim verzijama, obavještava vas o uzimanju pilule alarmom koji se pouzdano oglašava čak i u tihom načinu rada i načinu fokusa.",

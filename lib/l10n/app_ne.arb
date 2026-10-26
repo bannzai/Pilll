@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "अर्को चक्कीको पत्ता स्वतः बनाउनुहोस्",
   "creatingNewPillSheetFeatureAppealHeadline": "अर्को चक्की पत्ता स्वतः बनाउनुहोस्",
   "creatingNewPillSheetFeatureAppealBody": "हालको चक्की पत्ताको समूह सकिएपछि नयाँ समूह आफैँ बनिन्छ। तपाईंले हातैले परिवर्तन गर्नु पर्दैन र चक्की लिएको विवरणमा कुनै छुट हुँदैन।",
-  "alarmKitFeatureAppealTitle": "अलार्म घडीजस्तै बज्ने अलार्म",
+  "alarmKitFeatureAppealTitle": "अलार्म घडीझैँ बज्ने अलार्म",
   "alarmKitFeatureAppealShortDescription": "साइलेन्टमा पनि निश्चित रूपमा बज्ने सूचना",
   "alarmKitFeatureAppealHeadline": "अलार्म घडी जस्तै औषधि सेवन अलार्म",
   "alarmKitFeatureAppealBody": "iOS 26 वा पछिको संस्करणमा उपलब्ध AlarmKit प्रयोग गरी, साइलेन्ट मोड वा फोकस मोडमा पनि निश्चित रूपमा बज्ने अलार्मले पिल सेवनको समय सूचित गर्दछ।",

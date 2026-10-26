@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Búa næsta pilluspjald til sjálfkrafa",
   "creatingNewPillSheetFeatureAppealHeadline": "Búa næsta pilluspjald til sjálfkrafa",
   "creatingNewPillSheetFeatureAppealBody": "Þegar núverandi hópur pilluspjalda klárast verður nýr hópur pilluspjalda búinn til sjálfkrafa. Þú þarft ekki að skipta um hóp handvirkt og skráning á pillutöku helst samfelld.",
-  "alarmKitFeatureAppealTitle": "Hringir eins og vekjaraklukka",
+  "alarmKitFeatureAppealTitle": "Áminning sem hringir eins og vekjaraklukka",
   "alarmKitFeatureAppealShortDescription": "Tilkynning sem hljómar örugglega, jafnvel þegar síminn er á þögn.",
   "alarmKitFeatureAppealHeadline": "Tökuáminning eins og vekjaraklukka",
   "alarmKitFeatureAppealBody": "Við notum AlarmKit, sem er fáanlegt í iOS 26 og síðar, til að minna þig á að taka pilluna með vekjara sem hljómar örugglega jafnvel í þögnarham eða einbeitingarham (Focus).",

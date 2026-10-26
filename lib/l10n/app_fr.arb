@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Créer automatiquement la prochaine plaquette de pilules",
   "creatingNewPillSheetFeatureAppealHeadline": "Création automatique de la prochaine plaquette",
   "creatingNewPillSheetFeatureAppealBody": "Lorsque le groupe actuel de plaquettes est terminé, un nouveau groupe est créé automatiquement. Vous n’avez rien à changer manuellement et votre suivi des prises reste complet.",
-  "alarmKitFeatureAppealTitle": "Alarme médicamenteuse de type réveil",
+  "alarmKitFeatureAppealTitle": "Une alarme qui sonne comme un réveil",
   "alarmKitFeatureAppealShortDescription": "Sonne même en mode silencieux ou focus",
   "alarmKitFeatureAppealHeadline": "Alarme médicamenteuse comme votre réveil",
   "alarmKitFeatureAppealBody": "Propulsée par AlarmKit sur iOS 26+, cette alarme sonne en mode silencieux et en modes de mise au point pour que vous ne manquiez aucune dose.",

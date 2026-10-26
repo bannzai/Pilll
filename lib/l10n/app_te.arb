@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "తదుపరి మాత్రల షీట్‌ను ఆటోమేటిక్‌గా సృష్టించండి",
   "creatingNewPillSheetFeatureAppealHeadline": "తదుపరి మాత్రల స్ట్రిప్‌ను ఆటోమేటిక్‌గా సృష్టించండి",
   "creatingNewPillSheetFeatureAppealBody": "ప్రస్తుత మాత్రల స్ట్రిప్‌ల సమూహం పూర్తయినప్పుడు, కొత్త సమూహం ఆటోమేటిక్‌గా సృష్టించబడుతుంది. మీరు స్వయంగా మార్చాల్సిన అవసరం లేదు; మాత్రలు తీసుకున్న రికార్డుల్లో ఖాళీలు ఉండవు.",
-  "alarmKitFeatureAppealTitle": "అలారం‌లా వినిపించే హెచ్చరిక",
+  "alarmKitFeatureAppealTitle": "అలారం గడియారంలా మోగే అలారం",
   "alarmKitFeatureAppealShortDescription": "సైలెంట్‌లో ఉన్నా ఖచ్చితంగా మోగే నోటిఫికేషన్",
   "alarmKitFeatureAppealHeadline": "అలారం లాగా ఉండే మందు తీసుకునే రిమైండర్",
   "alarmKitFeatureAppealBody": "iOS 26 తర్వాత అందుబాటులో ఉండే AlarmKitను ఉపయోగించి, సైలెంట్ మోడ్ లేదా ఫోకస్ మోడ్‌లో ఉండగా కూడా ఖచ్చితంగా కనిపించే అలారం ద్వారా మాత్రలు తీసుకోమని గుర్తుచేస్తుంది.",

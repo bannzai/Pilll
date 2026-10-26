@@ -496,7 +496,7 @@
   "creatingNewPillSheetFeatureAppealShortDescription": "Keyingi tabletkalar varagʻini avtomatik yarating",
   "creatingNewPillSheetFeatureAppealHeadline": "Keyingi tabletka blisterni avtomatik yarating",
   "creatingNewPillSheetFeatureAppealBody": "Joriy tabletka blister guruhi tugaganda, yangi guruh avtomatik yaratiladi. Siz uni qoʻlda almashtirishingiz shart emas, qabul qilish qaydlari esa toʻliq saqlanadi.",
-  "alarmKitFeatureAppealTitle": "Soat kabi chalinadigan signal",
+  "alarmKitFeatureAppealTitle": "Budilnikdek jiringlaydigan eslatma",
   "alarmKitFeatureAppealShortDescription": "Jim rejimida ham ishonchli bildirishnoma",
   "alarmKitFeatureAppealHeadline": "Dori ichishni budilnik kabi eslatish",
   "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit funksiyasi yordamida, sukut rejimida yoki diqqat rejimida bo'lsangiz ham albatta chalinadigan budilnik signali bilan dori ichish vaqtini eslatadi.",
