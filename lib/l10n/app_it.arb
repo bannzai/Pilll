@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Quando termina il gruppo attuale di blister, ne viene creato automaticamente uno nuovo. Non dovrai cambiarlo manualmente e il registro delle assunzioni resterà completo.",
   "alarmKitFeatureAppealTitle": "Una sveglia che suona come una normale sveglia",
   "alarmKitFeatureAppealShortDescription": "Avvisi sonori anche in modalità silenziosa",
-  "alarmKitFeatureAppealHeadline": "Promemoria per l'assunzione, come una sveglia",
+  "alarmKitFeatureAppealHeadline": "Una sveglia per prendere la pillola",
   "alarmKitFeatureAppealBody": "Grazie ad AlarmKit, disponibile da iOS 26, la sveglia suona con certezza anche in modalità silenziosa o Focus, per non dimenticare mai di prendere la pillola.",
   "todayPillNumberFeatureAppealTitle": "Oggi, allinea il numero di assunzione",
   "todayPillNumberFeatureAppealShortDescription": "Se i numeri sono sbagliati, correggili nelle impostazioni.",

@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Қазіргі таблетка блистер тобы аяқталғанда, жаңа таблетка блистер тобы автоматты түрде жасалады. Қолмен ауыстырудың қажеті жоқ, қабылдау жазбалары толық сақталады.",
   "alarmKitFeatureAppealTitle": "Оятқыш сияқты шырылдайтын еске салғыш",
   "alarmKitFeatureAppealShortDescription": "Дыбыссыз режимде де естілетін хабарландырулар",
-  "alarmKitFeatureAppealHeadline": "Оятқыш сияқты қабылдау ескертуі",
+  "alarmKitFeatureAppealHeadline": "Оятқыш сияқты таблетка қабылдау дабылы",
   "alarmKitFeatureAppealBody": "iOS 26 және одан кейінгі нұсқаларда қолжетімді AlarmKit қолданылып, үнсіз режимде немесе шоғырлану режимінде болса да дыбыс шығаратын ескерту арқылы таблетка қабылдау уақытын дәл ескертіп отырады.",
   "todayPillNumberFeatureAppealTitle": "Бүгін ішетін таблетка нөмірін реттеу",
   "todayPillNumberFeatureAppealShortDescription": "Нөмір ауытқыса, баптаулардан түзетіңіз",

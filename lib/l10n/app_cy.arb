@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Pan ddaw’r grŵp presennol o stribed pils i ben, caiff grŵp newydd o stribed pils ei greu’n awtomatig. Ni fydd angen i chi newid â llaw, a bydd y cofnodion cymryd pils yn gyflawn.",
   "alarmKitFeatureAppealTitle": "Larwm sy’n canu fel cloc larwm",
   "alarmKitFeatureAppealShortDescription": "Hysbysiadau sy’n canu hyd yn oed yn y modd tawel",
-  "alarmKitFeatureAppealHeadline": "Larwm cymryd tabledi fel cloc larwm",
+  "alarmKitFeatureAppealHeadline": "Larwm cymryd y bilsen fel cloc larwm",
   "alarmKitFeatureAppealBody": "Gan ddefnyddio AlarmKit sydd ar gael ar iOS 26 ac uwch, byddwch yn cael eich atgoffa i gymryd eich pilsen gyda larwm sy'n canu yn sicr hyd yn oed yn y modd tawel neu'r modd ffocws.",
   "todayPillNumberFeatureAppealTitle": "Addasu rhif dos heddiw",
   "todayPillNumberFeatureAppealShortDescription": "Cywirwch yn y gosodiadau os yw'r rhif yn anghywir",

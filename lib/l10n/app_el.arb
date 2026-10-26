@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Όταν τελειώσει η τρέχουσα ομάδα από καρτέλα χαπιών, θα δημιουργηθεί αυτόματα νέα ομάδα. Δεν χρειάζεται να κάνετε αλλαγή χειροκίνητα και το ιστορικό λήψης θα παραμείνει πλήρες.",
   "alarmKitFeatureAppealTitle": "Ειδοποίηση που χτυπά σαν ξυπνητήρι",
   "alarmKitFeatureAppealShortDescription": "Ειδοποιήσεις με ήχο ακόμα και στην αθόρυβη λειτουργία",
-  "alarmKitFeatureAppealHeadline": "Συναγερμός λήψης φαρμάκου σαν ξυπνητήρι",
+  "alarmKitFeatureAppealHeadline": "Ξυπνητήρι για τη λήψη του χαπιού",
   "alarmKitFeatureAppealBody": "Χρησιμοποιώντας το AlarmKit που είναι διαθέσιμο σε iOS 26 και νεότερες εκδόσεις, σας ειδοποιεί για τη λήψη του χαπιού σας με έναν συναγερμό που χτυπά αξιόπιστα ακόμα και σε λειτουργία Σίγασης ή λειτουργία Εστίασης.",
   "todayPillNumberFeatureAppealTitle": "Συγχρονισμός αριθμού δόσης σήμερα",
   "todayPillNumberFeatureAppealShortDescription": "Αν ο αριθμός δεν είναι σωστός, διορθώστε τον στις ρυθμίσεις",

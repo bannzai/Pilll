@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Cando remate o grupo actual de blísteres, crearase outro automaticamente. Non terás que cambialo á man e o rexistro das tomas quedará completo.",
   "alarmKitFeatureAppealTitle": "Unha alarma que soa coma un espertador",
   "alarmKitFeatureAppealShortDescription": "Avisos que soan mesmo no modo silencioso",
-  "alarmKitFeatureAppealHeadline": "Alarma de toma como un espertador",
+  "alarmKitFeatureAppealHeadline": "Unha alarma para tomar a pílula coma un espertador",
   "alarmKitFeatureAppealBody": "Usando AlarmKit, dispoñible en iOS 26 ou posterior, avisarache de tomar a pílula cunha alarma que soa de forma fiable mesmo en modo silencioso ou en modo de concentración.",
   "todayPillNumberFeatureAppealTitle": "Axustar o número de dose de hoxe",
   "todayPillNumberFeatureAppealShortDescription": "Se o número está desaxustado, corríxeo na configuración",

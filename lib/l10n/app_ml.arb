@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "നിലവിലെ ഗുളിക സ്ട്രിപ്പുകളുടെ കൂട്ടം തീരുമ്പോൾ, പുതിയൊരു കൂട്ടം സ്വയമേവ സൃഷ്ടിക്കപ്പെടും. നിങ്ങൾ നേരിട്ട് മാറ്റേണ്ടതില്ല; ഗുളിക കഴിച്ചതിന്റെ രേഖകളിൽ വിടവുണ്ടാകില്ല.",
   "alarmKitFeatureAppealTitle": "അലാറം ക്ലോക്ക് പോലെ മുഴങ്ങുന്ന അലാറം",
   "alarmKitFeatureAppealShortDescription": "നിശ്ശബ്ദ മോഡിലും ശബ്ദിക്കുന്ന അറിയിപ്പുകൾ",
-  "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലുള്ള ഡോസ് അലാറം",
+  "alarmKitFeatureAppealHeadline": "അലാറം ക്ലോക്ക് പോലെ ഗുളിക കഴിക്കാനുള്ള അലാറം",
   "alarmKitFeatureAppealBody": "iOS 26-ഉം അതിനു ശേഷവും ലഭ്യമായ AlarmKit ഉപയോഗിച്ച്, സൈലന്റ് മോഡിലും ഫോക്കസ് മോഡിലും ആണെങ്കിലും ഉറപ്പായും ശബ്ദിക്കുന്ന അലാറം വഴി ഗുളിക കഴിക്കാൻ ഓർമ്മിപ്പിക്കുന്നു.",
   "todayPillNumberFeatureAppealTitle": "ഇന്നത്തെ ഡോസ് നമ്പർ ക്രമീകരിക്കുക",
   "todayPillNumberFeatureAppealShortDescription": "നമ്പർ തെറ്റിയാൽ ക്രമീകരണത്തിൽ ശരിയാക്കുക",

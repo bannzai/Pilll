@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Учурдагы таблетка блистери тобу бүткөндө, жаңы таблетка блистери тобу автоматтык түрдө түзүлөт. Кол менен алмаштыруунун кереги жок, кабыл алуу жазуулары толук сакталат.",
   "alarmKitFeatureAppealTitle": "Ойготкучтай шыңгыраган эскертме",
   "alarmKitFeatureAppealShortDescription": "Үнсүз режимде да угулган билдирмелер",
-  "alarmKitFeatureAppealHeadline": "Будильник сыяктуу дары ичүүнү эскерткеч",
+  "alarmKitFeatureAppealHeadline": "Ойготкучтай иштеген таблетка ичүү эскертмеси",
   "alarmKitFeatureAppealBody": "iOS 26 жана андан кийинки нускааларда жеткиликтүү AlarmKit аркылуу үнсүз режимде же Фокус режиминде да иштеген, ишенимдүү ойготкучтар менен таблетканы ичүү убактын эскертет.",
   "todayPillNumberFeatureAppealTitle": "Бүгүнкү кабыл алуу номерин орнотуу",
   "todayPillNumberFeatureAppealShortDescription": "Сандар туура эмес болсо, Орнотуулардан түздөңүз.",

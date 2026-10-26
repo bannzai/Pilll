@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Lorsque le groupe actuel de plaquettes est terminé, un nouveau groupe est créé automatiquement. Vous n’avez rien à changer manuellement et votre suivi des prises reste complet.",
   "alarmKitFeatureAppealTitle": "Une alarme qui sonne comme un réveil",
   "alarmKitFeatureAppealShortDescription": "Des alertes sonores même en mode silencieux",
-  "alarmKitFeatureAppealHeadline": "Alarme médicamenteuse comme votre réveil",
+  "alarmKitFeatureAppealHeadline": "Une alarme pour la prise de la pilule, comme un réveil",
   "alarmKitFeatureAppealBody": "Propulsée par AlarmKit sur iOS 26+, cette alarme sonne en mode silencieux et en modes de mise au point pour que vous ne manquiez aucune dose.",
   "todayPillNumberFeatureAppealTitle": "Alignez le numéro de pilule d'aujourd'hui",
   "todayPillNumberFeatureAppealShortDescription": "Corrigez le numéro s'il a dérivé",

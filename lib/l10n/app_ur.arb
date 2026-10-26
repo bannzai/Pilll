@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "موجودہ گولیوں کی پٹیوں کا گروپ ختم ہونے پر نیا گروپ خودکار طور پر بن جائے گا۔ آپ کو خود تبدیل کرنے کی ضرورت نہیں ہوگی اور گولیاں لینے کا ریکارڈ مکمل رہے گا۔",
   "alarmKitFeatureAppealTitle": "الارم گھڑی کی طرح بجنے والا الارم",
   "alarmKitFeatureAppealShortDescription": "خاموش موڈ میں بھی آواز دینے والی اطلاعات",
-  "alarmKitFeatureAppealHeadline": "جاگنے والے الارم جیسی دوائی لینے کی یاد دہانی",
+  "alarmKitFeatureAppealHeadline": "الارم گھڑی جیسا گولی لینے کا الارم",
   "alarmKitFeatureAppealBody": "iOS 26 یا بعد کے ورژنز میں دستیاب AlarmKit کو استعمال کر کے، ایک ایسا الارم جو خاموش موڈ یا فوکس موڈ میں بھی یقینی طور پر بجتا ہے، آپ کو گولی لینے کی یاد دہانی کراتا ہے۔",
   "todayPillNumberFeatureAppealTitle": "آج کا خوراک نمبر سیٹ کریں",
   "todayPillNumberFeatureAppealShortDescription": "نمبر آگے پیچھے ہو جائے تو سیٹنگز میں درست کریں",

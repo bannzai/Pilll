@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "When your current group of pill packs is finished, a new pill pack group is created automatically. There’s no need to switch manually, and your tracking stays complete.",
   "alarmKitFeatureAppealTitle": "An alarm that rings like an alarm clock",
   "alarmKitFeatureAppealShortDescription": "Alerts that sound even in silent mode",
-  "alarmKitFeatureAppealHeadline": "Medication alarm like your wake-up",
+  "alarmKitFeatureAppealHeadline": "A pill alarm that works like an alarm clock",
   "alarmKitFeatureAppealBody": "Powered by AlarmKit on iOS 26+, this alarm rings through silent mode and focus modes so you won't miss a dose.",
   "todayPillNumberFeatureAppealTitle": "Align today's pill number",
   "todayPillNumberFeatureAppealShortDescription": "Fix the number if it drifted",

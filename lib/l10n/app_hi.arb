@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "मौजूदा पिल स्ट्रिप समूह खत्म होने पर नया पिल स्ट्रिप समूह अपने आप बन जाएगा। आपको इसे मैन्युअल रूप से बदलने की ज़रूरत नहीं होगी और गोली लेने के रिकॉर्ड में कोई अंतर नहीं रहेगा।",
   "alarmKitFeatureAppealTitle": "अलार्म घड़ी की तरह बजने वाला अलार्म",
   "alarmKitFeatureAppealShortDescription": "साइलेंट मोड में भी बजने वाली सूचनाएँ",
-  "alarmKitFeatureAppealHeadline": "घड़ी की तरह दवा लेने की याद दिलाने वाला अलार्म",
+  "alarmKitFeatureAppealHeadline": "अलार्म घड़ी जैसा गोली लेने का अलार्म",
   "alarmKitFeatureAppealBody": "iOS 26 और उसके बाद के संस्करणों में उपलब्ध AlarmKit का उपयोग करके, साइलेंट मोड और फोकस मोड में भी निश्चित रूप से बजे वाले अलार्म के जरिए पिल लेने की याद दिलाता है।",
   "todayPillNumberFeatureAppealTitle": "आज की गोली का नंबर सही करें",
   "todayPillNumberFeatureAppealShortDescription": "यदि संख्या गड़बड़ा गई है तो सेटिंग्स में जाकर ठीक करें",

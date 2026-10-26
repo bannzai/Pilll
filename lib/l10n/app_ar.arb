@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "عند انتهاء مجموعة شرائط الحبوب الحالية، تُنشأ مجموعة شريط جديدة تلقائيًا. لن تحتاجي إلى التبديل يدويًا، وستظل سجلات التناول مكتملة.",
   "alarmKitFeatureAppealTitle": "منبّه يرنّ مثل ساعة المنبّه",
   "alarmKitFeatureAppealShortDescription": "تنبيهات تُصدر صوتًا حتى في الوضع الصامت",
-  "alarmKitFeatureAppealHeadline": "تنبيه تناول الدواء مثل المنبه",
+  "alarmKitFeatureAppealHeadline": "منبّه لتناول الحبة مثل منبّه الاستيقاظ",
   "alarmKitFeatureAppealBody": "يستخدم AlarmKit المتاح على iOS 26 والإصدارات الأحدث لإعلامك بموعد تناول الحبوب عبر تنبيه يُصدر صوتًا بشكل موثوق حتى في وضع الصامت أو وضع التركيز.",
   "todayPillNumberFeatureAppealTitle": "ضبط رقم الجرعة لليوم",
   "todayPillNumberFeatureAppealShortDescription": "إذا اختلف الرقم، صحّحه من الإعدادات",

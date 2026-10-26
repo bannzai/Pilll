@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "როცა აბების ბლისტერების მიმდინარე ჯგუფი დასრულდება, ახალი ჯგუფი ავტომატურად შეიქმნება. ხელით გადართვა არ დაგჭირდებათ და მიღების ჩანაწერები სრული დარჩება.",
   "alarmKitFeatureAppealTitle": "მაღვიძარასავით დარეკილი შეხსენება",
   "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც უხმო რეჟიმშიც ჟღერს",
-  "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი წამლის მიღების შეხსენება",
+  "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი შეხსენება აბის მიღებისთვის",
   "alarmKitFeatureAppealBody": "iOS 26-დან ხელმისაწვდომი AlarmKit-ის გამოყენებით, წამლის მიღების შესახებ გაცნობებთ განგაშით, რომელიც აუცილებლად რეკავს სიჩუმისა და ფოკუსის რეჟიმებშიც კი.",
   "todayPillNumberFeatureAppealTitle": "დღევანდელი მიღების ნომრის შესწორება",
   "todayPillNumberFeatureAppealShortDescription": "ნომერი არასწორია? შეასწორეთ პარამეტრებში",

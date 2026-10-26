@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Mevcut blister grubu bittiğinde yeni bir blister grubu otomatik olarak oluşturulur. Elle geçiş yapmanız gerekmez ve kullanım kayıtlarınız eksiksiz devam eder.",
   "alarmKitFeatureAppealTitle": "Çalar saat gibi çalan alarm",
   "alarmKitFeatureAppealShortDescription": "Sessiz modda bile sesli çalan bildirimler",
-  "alarmKitFeatureAppealHeadline": "Çalar saate benzer ilaç alma alarmı",
+  "alarmKitFeatureAppealHeadline": "Çalar saat gibi çalışan hap alma alarmı",
   "alarmKitFeatureAppealBody": "iOS 26 ve sonrası için kullanılabilen AlarmKit'i kullanarak, sessiz modda veya Odak modunda olsa bile kesinlikle çalan alarmlarla hap alımınızı hatırlatır.",
   "todayPillNumberFeatureAppealTitle": "Bugünün hap sırasını ayarla",
   "todayPillNumberFeatureAppealShortDescription": "Numara kayarsa ayarlardan düzeltin",

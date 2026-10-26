@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Wänn dini aktuelli Gruppe vo Pilleblister fertig isch, wird automatisch e nöii Gruppe aagleit. Du muesch nüt vo Hand wächsle, und dini Iinahme-Ufzeichnige bliibed vollständig.",
   "alarmKitFeatureAppealTitle": "En Alarm, wo wie en Wecker lüütet",
   "alarmKitFeatureAppealShortDescription": "Meldigä, wo au im Stummmodus tööned",
-  "alarmKitFeatureAppealHeadline": "Innahme-Alarm wie e Wecker",
+  "alarmKitFeatureAppealHeadline": "En Alarm für d Pille, wie en Wecker",
   "alarmKitFeatureAppealBody": "Mit em AlarmKit, wo ab iOS 26 verfiegbar isch, werde Sie mit emm Alarm, wo au im Stumm-Modus oder Fokus-Modus sicher lütet, dra eriineret, Ihri Pille z'nemme.",
   "todayPillNumberFeatureAppealTitle": "Hütige Innahmenummere aaglîche",
   "todayPillNumberFeatureAppealShortDescription": "Wann d'Nummer nit stimmt, in de Yystellige korrigiere",

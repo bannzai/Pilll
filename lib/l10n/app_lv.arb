@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Kad pašreizējā tablešu blister grupa beigsies, automātiski tiks izveidota jauna grupa. Jums nekas nebūs jāpārslēdz manuāli, un lietošanas ieraksti paliks pilnīgi.",
   "alarmKitFeatureAppealTitle": "Atgādinājums, kas zvana kā modinātājs",
   "alarmKitFeatureAppealShortDescription": "Paziņojumi ar skaņu arī klusuma režīmā",
-  "alarmKitFeatureAppealHeadline": "Atgādinājums par lietošanu — gluži kā modinātājs",
+  "alarmKitFeatureAppealHeadline": "Tabletes lietošanas atgādinājums kā modinātājs",
   "alarmKitFeatureAppealBody": "Izmantojot AlarmKit, kas pieejams sākot ar iOS 26, šis modinātājs atskanēs pat klusuma vai fokusēšanās režīmā, lai jūs nepalaistu garām tabletes lietošanas laiku.",
   "todayPillNumberFeatureAppealTitle": "Pielāgot šodienas tabletes numuru",
   "todayPillNumberFeatureAppealShortDescription": "Ja numuri ir nobīdīti, labojiet tos iestatījumos.",

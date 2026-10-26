@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "Ko se trenutna skupina ploščic izteče, se samodejno ustvari nova skupina ploščic. Ni vam treba preklapljati ročno, zapisi o jemanju pa ostanejo popolni.",
   "alarmKitFeatureAppealTitle": "Opomnik, ki zvoni kot budilka",
   "alarmKitFeatureAppealShortDescription": "Obvestila z zvokom tudi v tihem načinu",
-  "alarmKitFeatureAppealHeadline": "Opomnik za jemanje – deluje kot budilka",
+  "alarmKitFeatureAppealHeadline": "Alarm za jemanje tabletke kot budilka",
   "alarmKitFeatureAppealBody": "Z AlarmKitom (na voljo v iOS 26 in novejših) vas opomnimo na jemanju kontracepcijske tablete z alarmom, ki zveni tudi v načinu tišine ali v načinu osredotočenja.",
   "todayPillNumberFeatureAppealTitle": "Uskladite današnji številki odmerka",
   "todayPillNumberFeatureAppealShortDescription": "Številke se ne ujemajo? Popravite jih v nastavitvah.",

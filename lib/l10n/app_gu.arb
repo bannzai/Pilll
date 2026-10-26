@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "હાલનું ગોળીની સ્ટ્રિપનું જૂથ પૂરું થાય ત્યારે નવું જૂથ આપમેળે બનાવવામાં આવશે. તમારે જાતે બદલવું નહીં પડે અને ગોળી લેવાની નોંધમાં કોઈ ખાલી જગ્યા નહીં રહે.",
   "alarmKitFeatureAppealTitle": "અલાર્મ ઘડિયાળની જેમ વાગતું અલાર્મ",
   "alarmKitFeatureAppealShortDescription": "સાયલન્ટ મોડમાં પણ અવાજ સાથે આવતી સૂચનાઓ",
-  "alarmKitFeatureAppealHeadline": "અલાર્મ ઘડિયાળ જેવો ગોળી લેવાનો અલાર્મ",
+  "alarmKitFeatureAppealHeadline": "અલાર્મ ઘડિયાળ જેવું ગોળી લેવાનું અલાર્મ",
   "alarmKitFeatureAppealBody": "iOS 26 અને તેથી વધુ પર ઉપલબ્ધ AlarmKit નો ઉપયોગ કરીને, સાઇલન્ટ મોડ અને ફોકસ મોડમાં પણ ચોક્કસ રીતે વાગતા એલાર્મ દ્વારા ગોળી લેવાની યાદ અપાવે છે.",
   "todayPillNumberFeatureAppealTitle": "આજની ગોળીનો નંબર ગોઠવો",
   "todayPillNumberFeatureAppealShortDescription": "નંબર ખોટો હોય તો સેટિંગ્સમાં સુધારો",

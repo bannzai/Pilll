@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "বর্তমান পিল শিটের গ্রুপ শেষ হলে নতুন পিল শিটের গ্রুপ স্বয়ংক্রিয়ভাবে তৈরি হবে। আপনাকে নিজে থেকে বদলাতে হবে না, আর খাওয়ার রেকর্ডেও কোনো ফাঁক থাকবে না।",
   "alarmKitFeatureAppealTitle": "অ্যালার্ম ঘড়ির মতো বেজে ওঠা অ্যালার্ম",
   "alarmKitFeatureAppealShortDescription": "সাইলেন্ট মোডেও শব্দ করে এমন বিজ্ঞপ্তি",
-  "alarmKitFeatureAppealHeadline": "অ্যালার্ম ঘড়ির মতো ওষুধ সেবনের অ্যালার্ম",
+  "alarmKitFeatureAppealHeadline": "অ্যালার্ম ঘড়ির মতো পিল খাওয়ার অ্যালার্ম",
   "alarmKitFeatureAppealBody": "iOS 26 বা তার পরবর্তী সংস্করণে উপলব্ধ AlarmKit ব্যবহার করে, সাইলেন্ট মোড বা ফোকাস মোডেও নিশ্চিতভাবে বেজে ওঠা অ্যালার্মের মাধ্যমে পিল সেবনের কথা মনে করিয়ে দেয়।",
   "todayPillNumberFeatureAppealTitle": "আজকের সেবন নম্বর মেলানো",
   "todayPillNumberFeatureAppealShortDescription": "নম্বর ভুল হলে সেটিংসে ঠিক করুন",

@@ -498,7 +498,7 @@
   "creatingNewPillSheetFeatureAppealBody": "የአሁኑ ክኒን ሉህ ቡድን ሲያልቅ፣ አዲስ የክኒን ሉህ ቡድን በራስ-ሰር ይፈጠራል። በእጅ መቀየር አያስፈልግም፣ የአወሳሰድ መዝገቦችም ሳይቋረጡ ይቀጥላሉ።",
   "alarmKitFeatureAppealTitle": "እንደ ማንቂያ ሰዓት የሚጮህ ማንቂያ",
   "alarmKitFeatureAppealShortDescription": "በዝምታ ሁነታም የሚሰሙ ማሳወቂያዎች",
-  "alarmKitFeatureAppealHeadline": "እንደ መነቃቂያ ሰዓት ያለ የመድሃኒት አላርም",
+  "alarmKitFeatureAppealHeadline": "እንደ ማንቂያ ሰዓት የሚሰማ የክኒን ማንቂያ",
   "alarmKitFeatureAppealBody": "በ iOS 26 እና ከዚህ በኋላ ሊጠቀሙበት የሚችሉትን AlarmKit በመጠቀም፣ ጸጥ ያለ ሁኔታ ወይም የትኩረት ሁኔታ ውስጥ ቢሆኑም እንኳ በእርግጠኝነት የሚጮህ ቅስቀሳ ክኒን መዋጥዎን ያሳውቅዎታል።",
   "todayPillNumberFeatureAppealTitle": "የዛሬን የዶዝ ቁጥር ያስተካክሉ",
   "todayPillNumberFeatureAppealShortDescription": "ቁጥሩ ካልተስማማ በቅንብሮቹ ያስተካክሉ",
