@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "таблетка блистердің жоғарғы оң жақ бұрышындағы тісті дөңгелек белгішесінен бастаңыз",
   "restDurationFeatureAppealPoint3": "Үзіліс мерзімін өзгерту және қайта жалғастыру да оңай",
   "endedPillSheetDialogHistoryTitle": "Таблетка блистер тарихын көргіңіз келе ме?",
-  "endedPillSheetDialogSummaryTitle": "Осы дәрі парағын шолып шығайық",
+  "endedPillSheetDialogSummaryTitle": "Осы таблетка блистер бойынша жазбаларды бірге қарайық",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн өткізілді",
   "midnightTakenWarningDialogTitle": "Назар аударыңыз",
   "midnightTakenWarningDialogBody": "{takenDate} дейінгі қабылдау жазбалары тіркелді. Бүгінгі ({takenDate}) {reminderTimes} хабарландыруы жеткізілмейді.\nҚате болса, қабылдауды болдырмаңыз",

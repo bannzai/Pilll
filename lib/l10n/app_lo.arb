@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "ກະລຸນາເລີ່ມຈາກໄອຄອນຮູບເຟືອງຢູ່ມຸມຂວາເທິງຂອງແຜງຢາຄຸມ",
   "restDurationFeatureAppealPoint3": "ການແກ້ໄຂ ແລະ ເລີ່ມໄລຍະພັກຢາຄືນໃໝ່ກໍງ່າຍ",
   "endedPillSheetDialogHistoryTitle": "ຢາກເບິ່ງປະຫວັດແຜງຢາຄຸມບໍ?",
-  "endedPillSheetDialogSummaryTitle": "ມາເບິ່ງແຜງຢານີ້ຄືນກັນ",
+  "endedPillSheetDialogSummaryTitle": "ມາທົບທວນແຜງຢາຄຸມນີ້ນຳກັນ",
   "endedPillSheetDialogSummaryMessage": "ບັນທຶກແລ້ວ {recordedDays} ມື້, ພາດ {missedDays} ມື້",
   "midnightTakenWarningDialogTitle": "ກະລຸນາຮັບຊາບ",
   "midnightTakenWarningDialogBody": "ໄດ້ບັນທຶກການກິນຢາໃຫ້ຮອດວັນທີ {takenDate} ແລ້ວ. ການແຈ້ງເຕືອນເວລາ {reminderTimes} ຂອງມື້ນີ້ ({takenDate}) ຈະບໍ່ຖືກສົ່ງໄປຫາທ່ານ.\nຖ້າແມ່ນຄວາມຜິດພາດ, ກະລຸນາຍົກເລີກການບັນທຶກການກິນຢາ",

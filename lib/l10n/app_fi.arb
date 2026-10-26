@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Aloita pilleriliuskan oikean yläkulman rataskuvakkeesta",
   "restDurationFeatureAppealPoint3": "Voit myös helposti muokata ja jatkaa pilleritaukoa",
   "endedPillSheetDialogHistoryTitle": "Haluaisitko nähdä pilleriliuskojen historian?",
-  "endedPillSheetDialogSummaryTitle": "Katsotaanpa tätä pilleriliuskaa",
+  "endedPillSheetDialogSummaryTitle": "Katsotaan yhdessä tätä pilleriliuskaa",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} päivää kirjattu, {missedDays} päivää väliin",
   "midnightTakenWarningDialogTitle": "Huomioithan",
   "midnightTakenWarningDialogBody": "Pillerit on kirjattu otetuiksi {takenDate} asti. Tämän päivän ({takenDate}) klo {reminderTimes} ilmoitus ei saavu sinulle.\nJos tämä on virhe, peruuta merkintä.",

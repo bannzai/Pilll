@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "សូមចាប់ផ្តើមពីរូបសញ្ញាកង់ធ្មេញនៅជ្រុងខាងលើស្តាំនៃបន្ទះថ្នាំគ្រាប់",
   "restDurationFeatureAppealPoint3": "ការកែប្រែ និងបន្តរយៈពេលឈប់លេបថ្នាំក៏ងាយស្រួលដែរ",
   "endedPillSheetDialogHistoryTitle": "តើអ្នកចង់មើលប្រវត្តិបន្ទះថ្នាំគ្រាប់ទេ?",
-  "endedPillSheetDialogSummaryTitle": "តោះមើលសន្លឹកថ្នាំនេះឡើងវិញ",
+  "endedPillSheetDialogSummaryTitle": "តោះពិនិត្យមើលបន្ទះថ្នាំគ្រាប់នេះឡើងវិញ",
   "endedPillSheetDialogSummaryMessage": "បានកត់ត្រា {recordedDays} ថ្ងៃ ខកខាន {missedDays} ថ្ងៃ",
   "midnightTakenWarningDialogTitle": "សូមចំណាំ",
   "midnightTakenWarningDialogBody": "កំណត់ត្រាការទទួលថ្នាំត្រូវបានធ្វើរហូតដល់ថ្ងៃ {takenDate}។ ដោយសារថ្ងៃនេះគឺ {takenDate} ការជូនដំណឹងម៉ោង {reminderTimes} នឹងមិនមកដល់ទេ។\nប្រសិនបើជាកំហុស សូមលុបចោលកំណត់ត្រាការទទួលថ្នាំ",

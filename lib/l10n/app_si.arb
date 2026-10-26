@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "පෙති කාඩ්පතේ ඉහළ දකුණු කෙළවරේ ඇති දැති රෝද සලකුණෙන් ආරම්භ කරන්න",
   "restDurationFeatureAppealPoint3": "පෙති ගැනීමේ විරාමය වෙනස් කර නැවත ආරම්භ කිරීමත් පහසුයි",
   "endedPillSheetDialogHistoryTitle": "පෙති කාඩ්පතේ ඉතිහාසය බලන්න කැමතිද?",
-  "endedPillSheetDialogSummaryTitle": "මෙම පෙති පත්‍රය දෙස ආපසු හැරී බලමු",
+  "endedPillSheetDialogSummaryTitle": "මේ පෙති කාඩ්පතේ භාවිතය නැවත බලමු",
   "endedPillSheetDialogSummaryMessage": "දින {recordedDays}ක් සටහන් විය, දින {missedDays}ක් මඟ හැරුණි",
   "midnightTakenWarningDialogTitle": "කරුණාකර සැලකිල්ලට ගන්න",
   "midnightTakenWarningDialogBody": "{takenDate} දක්වා පිල් ගැනීම් සටහන් වී ඇත. අද දිනය {takenDate} බැවින්, අද {reminderTimes} හි දැනුම්දීම ඔබට නොලැබෙනු ඇත.\nවැරදීමකින් නම්, කරුණාකර ගැනීම අවලංගු කරන්න",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "таблетка блистеринин жогорку оң бурчундагы тиштүү дөңгөлөк белгисинен баштаңыз",
   "restDurationFeatureAppealPoint3": "Тыныгуу мөөнөтүн өзгөртүп, кайра улантуу да оңой",
   "endedPillSheetDialogHistoryTitle": "Таблетка блистери тарыхын көргүңүз келеби?",
-  "endedPillSheetDialogSummaryTitle": "Бул дары барагын карап чыгалы",
+  "endedPillSheetDialogSummaryTitle": "Бул таблетка блистери боюнча жазууларды чогуу карап көрөлү",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн калтырылды",
   "midnightTakenWarningDialogTitle": "Көңүл буруңуз",
   "midnightTakenWarningDialogBody": "{takenDate}күнгө чейинки дары ичүү катталды. Бүгүн ({takenDate}) {reminderTimes} убагындагы эскертүү сизге келбейт.\nЭгер ката менен болсо, дары ичкенди жокко чыгарыңыз",

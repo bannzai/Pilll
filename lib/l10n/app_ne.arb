@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "चक्की पत्ताको माथिल्लो दायाँ कुनामा रहेको गियर चिन्हबाट सुरु गर्नुहोस्",
   "restDurationFeatureAppealPoint3": "चक्कीको विश्राम अवधि बदल्न र फेरि सुरु गर्न पनि सजिलो छ",
   "endedPillSheetDialogHistoryTitle": "के तपाईं चक्की पत्ता इतिहास हेर्न चाहनुहुन्छ?",
-  "endedPillSheetDialogSummaryTitle": "यो चक्की पानालाई फर्केर हेरौं",
+  "endedPillSheetDialogSummaryTitle": "यो चक्की पत्ताको प्रयोगलाई एकपटक फर्केर हेरौँ",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन रेकर्ड भयो, {missedDays} दिन छुट्यो",
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दिनुहोस्",
   "midnightTakenWarningDialogBody": "{takenDate} सम्मको सेवन रेकर्ड गरिसकिएको छ। आजको ({takenDate}) {reminderTimes} को सूचना तपाईंलाई प्राप्त हुनेछैन।\nयदि यो गल्तीले भएको हो भने, सेवन रद्द गर्नुहोस्",

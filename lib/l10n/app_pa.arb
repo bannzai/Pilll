@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੇ ਉੱਪਰ ਸੱਜੇ ਪਾਸੇ ਗੀਅਰ ਚਿੰਨ੍ਹ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
   "restDurationFeatureAppealPoint3": "ਗੋਲੀ ਦੇ ਵਿਰਾਮ ਦਾ ਸਮਾਂ ਬਦਲਣਾ ਅਤੇ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨਾ ਵੀ ਆਸਾਨ ਹੈ",
   "endedPillSheetDialogHistoryTitle": "ਕੀ ਤੁਸੀਂ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦਾ ਇਤਿਹਾਸ ਦੇਖਣਾ ਚਾਹੋਗੇ?",
-  "endedPillSheetDialogSummaryTitle": "ਆਓ ਇਸ ਗੋਲੀ ਸ਼ੀਟ 'ਤੇ ਝਾਤ ਮਾਰੀਏ",
+  "endedPillSheetDialogSummaryTitle": "ਆਓ, ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀਆਂ ਇਸ ਵਾਰ ਦੀਆਂ ਐਂਟਰੀਆਂ ਵੇਖੀਏ",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ਦਿਨ ਦਰਜ ਹੋਏ, {missedDays} ਦਿਨ ਖੁੰਝ ਗਏ",
   "midnightTakenWarningDialogTitle": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ",
   "midnightTakenWarningDialogBody": "{takenDate} ਤੱਕ ਦੀ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਹੋ ਚੁੱਕਾ ਹੈ। ਅੱਜ ({takenDate}) {reminderTimes} ਦੀ ਸੂਚਨਾ ਤੁਹਾਨੂੰ ਨਹੀਂ ਮਿਲੇਗੀ।\nਜੇ ਇਹ ਗਲਤੀ ਨਾਲ ਹੋਇਆ ਹੈ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੇਵਨ ਰਿਕਾਰਡ ਨੂੰ ਰੱਦ ਕਰੋ",

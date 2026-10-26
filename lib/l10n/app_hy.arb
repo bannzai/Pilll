@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Սկսեք հաբերի բլիստեր-ի վերևի աջ անկյունում գտնվող ատամնանիվի նշանից",
   "restDurationFeatureAppealPoint3": "Դադարի տևողությունը փոփոխելն ու վերսկսելը նույնպես հեշտ է",
   "endedPillSheetDialogHistoryTitle": "Կցանկանա՞ք տեսնել հաբերի բլիստեր պատմությունը։",
-  "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս դեղաթերթիկը",
+  "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս հաբերի բլիստեր օգտագործման գրառումները",
   "endedPillSheetDialogSummaryMessage": "Գրանցված է {recordedDays} օր, բաց է թողնվել {missedDays} օր",
   "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք",
   "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Sila mula dengan ikon gear di bahagian atas kanan pek pil",
   "restDurationFeatureAppealPoint3": "Tempoh rehat pil juga mudah diubah dan disambung semula",
   "endedPillSheetDialogHistoryTitle": "Ingin lihat sejarah pek pil anda?",
-  "endedPillSheetDialogSummaryTitle": "Mari imbas kembali helaian pil ini",
+  "endedPillSheetDialogSummaryTitle": "Mari lihat semula pek pil ini",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} hari direkodkan, {missedDays} hari terlepas",
   "midnightTakenWarningDialogTitle": "Sila ambil perhatian",
   "midnightTakenWarningDialogBody": "Rekod pengambilan pil anda telah disimpan sehingga {takenDate}. Pemberitahuan peringatan pada {reminderTimes} untuk hari ini ({takenDate}) tidak akan dihantar.\nJika ini adalah kesilapan, sila batalkan rekod pengambilan tersebut.",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Tafadhali anza kwenye ikoni ya gia iliyo juu kulia kwenye pakiti ya vidonge",
   "restDurationFeatureAppealPoint3": "Ni rahisi pia kubadili na kuendelea na kipindi cha mapumziko ya vidonge",
   "endedPillSheetDialogHistoryTitle": "Je, ungependa kuona historia ya pakiti ya vidonge?",
-  "endedPillSheetDialogSummaryTitle": "Hebu tuangalie tena karatasi hii ya vidonge",
+  "endedPillSheetDialogSummaryTitle": "Turejee matumizi ya pakiti ya vidonge hii",
   "endedPillSheetDialogSummaryMessage": "Siku {recordedDays} zimerekodiwa, siku {missedDays} zimekosekana",
   "midnightTakenWarningDialogTitle": "Tafadhali zingatia",
   "midnightTakenWarningDialogBody": "Vidonge vimerekodiwa kama vimechukuliwa hadi {takenDate}. Arifa ya ukumbusho ya leo ({takenDate}) saa {reminderTimes} haitatumwa.\nIkiwa hii ni kosa, tafadhali batilisha rekodi ya kuchukua kidonge.",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Inizia dall'icona a forma di ingranaggio in alto a destra del blister",
   "restDurationFeatureAppealPoint3": "Puoi anche modificare e riprendere facilmente la pausa dalla pillola",
   "endedPillSheetDialogHistoryTitle": "Ti va di vedere la cronologia dei blister?",
-  "endedPillSheetDialogSummaryTitle": "Ripercorriamo questo blister",
+  "endedPillSheetDialogSummaryTitle": "Rivediamo insieme questo blister",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} giorni registrati, {missedDays} giorni mancati",
   "midnightTakenWarningDialogTitle": "Attenzione",
   "midnightTakenWarningDialogBody": "Le pillole risultano registrate come assunte fino al {takenDate}. La notifica di oggi ({takenDate}) delle {reminderTimes} non ti verrà consegnata.\nSe si tratta di un errore, annulla l'assunzione registrata.",

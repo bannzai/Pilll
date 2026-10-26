@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Magsimula po sa icon na gear sa kanang itaas ng pakete ng pildoras",
   "restDurationFeatureAppealPoint3": "Madali rin ninyong baguhin at ipagpatuloy ang pahinga sa pag-inom ng pildoras",
   "endedPillSheetDialogHistoryTitle": "Gusto po ba ninyong tingnan ang kasaysayan ng pakete ng pildoras?",
-  "endedPillSheetDialogSummaryTitle": "Balikan natin ang pill sheet na ito",
+  "endedPillSheetDialogSummaryTitle": "Balikan natin ang pakete ng pildoras na ito",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} araw na naitala, {missedDays} araw na nakaligtaan",
   "midnightTakenWarningDialogTitle": "Paalala",
   "midnightTakenWarningDialogBody": "Naitala na ang inyong pag-inom ng pills hanggang sa {takenDate}. Hindi na maipapadala ang paalala ngayong araw ({takenDate}) sa {reminderTimes}.\nKung nagkamali, mangyaring i-cancel ang record ng pag-inom.",

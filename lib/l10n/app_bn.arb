@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "পিল শিটের ওপরের ডান দিকে থাকা গিয়ার চিহ্ন থেকে শুরু করুন",
   "restDurationFeatureAppealPoint3": "বিরতির সময় বদলানো ও আবার শুরু করাও সহজ",
   "endedPillSheetDialogHistoryTitle": "আপনি কি পিল শিটের ইতিহাস দেখতে চান?",
-  "endedPillSheetDialogSummaryTitle": "এই পিল শীটটি ফিরে দেখা যাক",
+  "endedPillSheetDialogSummaryTitle": "এই পিল শিটের তথ্য একবার দেখে নেওয়া যাক",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} দিন রেকর্ড হয়েছে, {missedDays} দিন বাদ পড়েছে",
   "midnightTakenWarningDialogTitle": "অনুগ্রহ করে লক্ষ্য করুন",
   "midnightTakenWarningDialogBody": "{takenDate} পর্যন্ত সেবনের রেকর্ড করা হয়ে গেছে। আজ, {takenDate}-এর {reminderTimes} সময়ের বিজ্ঞপ্তি আপনার কাছে পৌঁছাবে না।\nভুল হয়ে থাকলে সেবন বাতিল করুন",

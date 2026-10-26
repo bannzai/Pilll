@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "从药板右上角的齿轮图标开始吧",
   "restDurationFeatureAppealPoint3": "休药期也能轻松调整和重新开始",
   "endedPillSheetDialogHistoryTitle": "想看看药板的使用记录吗？",
-  "endedPillSheetDialogSummaryTitle": "回顾一下这板药吧",
+  "endedPillSheetDialogSummaryTitle": "一起来回顾这板药板的服用记录吧",
   "endedPillSheetDialogSummaryMessage": "已记录 {recordedDays} 天，漏记 {missedDays} 天",
   "midnightTakenWarningDialogTitle": "请注意",
   "midnightTakenWarningDialogBody": "已记录服用至{takenDate}。今天（{takenDate}）{reminderTimes}的提醒通知将不会推送。\n如果是误操作，请撤销服用记录。",

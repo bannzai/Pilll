@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "ବଟିକା ସିଟର ଉପର ଡାହାଣ କୋଣରେ ଥିବା ଗିଅର୍ ଚିହ୍ନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
   "restDurationFeatureAppealPoint3": "ବଟିକାର ବିରତି ଅବଧି ବଦଳାଇବା ଓ ପୁଣି ଆରମ୍ଭ କରିବା ମଧ୍ୟ ସହଜ",
   "endedPillSheetDialogHistoryTitle": "ଆପଣ ବଟିକା ସିଟର ଇତିହାସ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
-  "endedPillSheetDialogSummaryTitle": "ଏହି ପିଲ୍ ସିଟ୍ କୁ ଫେରି ଦେଖିବା",
+  "endedPillSheetDialogSummaryTitle": "ଆସନ୍ତୁ, ଏହି ବଟିକା ସିଟର ରେକର୍ଡକୁ ଥରେ ଦେଖିବା",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ଦିନ ରେକର୍ଡ ହୋଇଛି, {missedDays} ଦିନ ଛାଡି ଯାଇଛି",
   "midnightTakenWarningDialogTitle": "ଦୟାକରି ଧ୍ୟାନ ଦିଅନ୍ତୁ",
   "midnightTakenWarningDialogBody": "{takenDate} ପର୍ଯ୍ୟନ୍ତ ପିଲ୍ ସେବନ ରେକର୍ଡ ହୋଇସାରିଛି। ଆଜି ({takenDate}) ର {reminderTimes} ବିଜ୍ଞପ୍ତି ଆପଣଙ୍କ ପାଖରେ ପହଞ୍ଚିବ ନାହିଁ।\nଯଦି ଏହା ଭୁଲ ହୋଇଥାଏ, ଦୟାକରି ସେବନ ରେକର୍ଡ ବାତିଲ କରନ୍ତୁ।",

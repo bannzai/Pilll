@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Fang bim Zahnrädli obe rächts uf em Pilleblister aa",
   "restDurationFeatureAppealPoint3": "D Pilläpouse chasch au eifach aapasse und wiitermache",
   "endedPillSheetDialogHistoryTitle": "Wetsch d Gschicht vo dim Pilleblister aluege?",
-  "endedPillSheetDialogSummaryTitle": "Luege mer uf das Pilleblatt zrugg",
+  "endedPillSheetDialogSummaryTitle": "Luege mer zrugg uf dä Pilleblister",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} Täg erfasst, {missedDays} Täg verpasst",
   "midnightTakenWarningDialogTitle": "Bitte beachten",
   "midnightTakenWarningDialogBody": "D'Iinahm isch bis und mit {takenDate} als gnaa erfasst worde. D'Benachrichtigung vo hüt, am {takenDate}, um {reminderTimes} wird Ihne dromit nöd zuegstellt.\nFalls das aus Versehe passiert isch, mached Sie bitte d'Iinahm rückgängig.",

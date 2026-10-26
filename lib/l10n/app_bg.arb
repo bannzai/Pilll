@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Започнете от иконата със зъбно колело горе вдясно на блистера",
   "restDurationFeatureAppealPoint3": "Можете лесно да промените или подновите периода на пауза",
   "endedPillSheetDialogHistoryTitle": "Искате ли да видите историята на блистерите?",
-  "endedPillSheetDialogSummaryTitle": "Да погледнем този блистер",
+  "endedPillSheetDialogSummaryTitle": "Нека прегледаме приема от този блистер",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} дни записани, {missedDays} дни пропуснати",
   "midnightTakenWarningDialogTitle": "Внимание",
   "midnightTakenWarningDialogBody": "Записан е прием на хапчета до {takenDate}. Днешното ({takenDate}) напомняне в {reminderTimes} няма да бъде изпратено.\nАко това е грешка, моля отменете записа за приема.",

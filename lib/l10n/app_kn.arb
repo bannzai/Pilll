@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಮೇಲಿನ ಬಲ ಮೂಲೆಯಲ್ಲಿರುವ ಗೇರ್ ಗುರುತಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "restDurationFeatureAppealPoint3": "ಮಾತ್ರೆಗಳ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಿಸಿ ಮತ್ತೆ ಮುಂದುವರಿಸುವುದೂ ಸುಲಭ",
   "endedPillSheetDialogHistoryTitle": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಇತಿಹಾಸವನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?",
-  "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆ ಶೀಟ್ ಅನ್ನು ಹಿಂತಿರುಗಿ ನೋಡೋಣ",
+  "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ದಾಖಲೆಯನ್ನು ಒಮ್ಮೆ ನೋಡೋಣ",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ದಿನ ದಾಖಲಾಗಿದೆ, {missedDays} ದಿನ ತಪ್ಪಿದೆ",
   "midnightTakenWarningDialogTitle": "ದಯವಿಟ್ಟು ಗಮನಿಸಿ",
   "midnightTakenWarningDialogBody": "{takenDate} ವರೆಗಿನ ಪಿಲ್ ಸೇವನೆ ದಾಖಲಾಗಿದೆ. ಇಂದು ({takenDate}) {reminderTimes} ಸಮಯದ ಸೂಚನೆ ನಿಮಗೆ ತಲುಪುವುದಿಲ್ಲ.\nಇದು ತಪ್ಪಾಗಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೇವನೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ",

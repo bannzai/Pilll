@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "מתחילים מסמל גלגל השיניים בפינה השמאלית העליונה של חפיסת הגלולות",
   "restDurationFeatureAppealPoint3": "קל גם לערוך את תקופת ההפסקה ולחדש אותה",
   "endedPillSheetDialogHistoryTitle": "רוצה לראות את היסטוריית חפיסת הגלולות?",
-  "endedPillSheetDialogSummaryTitle": "בואי נסקור את מארז הגלולות הזה",
+  "endedPillSheetDialogSummaryTitle": "בואי נעבור על חפיסת הגלולות הזו",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ימים תועדו, {missedDays} ימים הוחמצו",
   "midnightTakenWarningDialogTitle": "שים לב",
   "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",

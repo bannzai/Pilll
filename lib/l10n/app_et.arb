@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas olevast hammasrattaikoonist",
   "restDurationFeatureAppealPoint3": "Pillipausi saab hõlpsalt muuta ja jätkata",
   "endedPillSheetDialogHistoryTitle": "Kas soovid vaadata oma pillilehe ajalugu?",
-  "endedPillSheetDialogSummaryTitle": "Vaatame sellele tabletilehele tagasi",
+  "endedPillSheetDialogSummaryTitle": "Vaatame sellele pillilehele tagasi",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} päeva kirjas, {missedDays} päeva vahele jäänud",
   "midnightTakenWarningDialogTitle": "Pange tähele",
   "midnightTakenWarningDialogBody": "Teie tabletid on märgitud võetuks kuni {takenDate}. Tänase ({takenDate}) päeva teavitus kell {reminderTimes} jääb saatmata.\nKui see oli eksitus, palun tühistage võtmiskirje.",

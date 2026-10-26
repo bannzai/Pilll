@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "ဆေးပြားကတ်၏ အပေါ်ညာဘက်ရှိ ဂီယာပုံကို နှိပ်ပြီး စတင်ပါ",
   "restDurationFeatureAppealPoint3": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားချိန်ကို ပြင်ဆင်ပြီး ပြန်လည်စတင်ရန်လည်း လွယ်ကူပါတယ်",
   "endedPillSheetDialogHistoryTitle": "ဆေးပြားကတ်မှတ်တမ်းကို ကြည့်ချင်ပါသလား?",
-  "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားစာရွက်ကို ပြန်ကြည့်ကြရအောင်",
+  "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားကတ်ကို ပြန်လည်ကြည့်ရှုကြရအောင်",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ရက် မှတ်တမ်းတင်ပြီး၊ {missedDays} ရက် လွတ်သွားသည်",
   "midnightTakenWarningDialogTitle": "သတိပြုပါ",
   "midnightTakenWarningDialogBody": "{takenDate} အထိ ဆေးသောက်မှတ်တမ်း ထည့်ပြီးဖြစ်ပါသည်။ ယနေ့ {takenDate} ၏ {reminderTimes} အချိန် သတိပေးချက်ကို လက်ခံရရှိမည်မဟုတ်ပါ။\nအမှားဖြစ်ပါက ဆေးသောက်မှတ်တမ်းကို ပယ်ဖျက်ပေးပါ",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Pradėkite nuo krumpliaračio piktogramos tablečių plokštelės viršutiniame dešiniajame kampe",
   "restDurationFeatureAppealPoint3": "Pertraukos laikotarpį taip pat lengva pakeisti ir pratęsti",
   "endedPillSheetDialogHistoryTitle": "Ar norėtumėte peržiūrėti tablečių plokštel istoriją?",
-  "endedPillSheetDialogSummaryTitle": "Apžvelkime šį tablečių lakštą",
+  "endedPillSheetDialogSummaryTitle": "Apžvelkime šią tablečių plokštel",
   "endedPillSheetDialogSummaryMessage": "Užfiksuota dienų: {recordedDays}, praleista: {missedDays}",
   "midnightTakenWarningDialogTitle": "Atkreipkite dėmesį",
   "midnightTakenWarningDialogBody": "Vartojimas užregistruotas iki {takenDate}. Šiandienos ({takenDate}) priminimas {reminderTimes} nebus pristatytas.\nJei tai klaida, atšaukite vartojimo įrašą.",

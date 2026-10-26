@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Kezdd a tablettacsomag jobb felső sarkában lévő fogaskerék ikonnál",
   "restDurationFeatureAppealPoint3": "A tablettaszünetet is könnyen módosíthatod és folytathatod",
   "endedPillSheetDialogHistoryTitle": "Szeretnéd megnézni a tablettacsomagok előzményeit?",
-  "endedPillSheetDialogSummaryTitle": "Nézzük vissza ezt a tablettalevelet",
+  "endedPillSheetDialogSummaryTitle": "Nézzük át ezt a tablettacsomagot",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} nap rögzítve, {missedDays} nap kimaradt",
   "midnightTakenWarningDialogTitle": "Figyelem",
   "midnightTakenWarningDialogBody": "A bevétel rögzítve lett {takenDate}-ig bezárólag. A mai napi ({takenDate}) {reminderTimes} órakor esedékes értesítés emiatt nem fog megérkezni.\nHa ez tévedésből történt, kérjük, vonja vissza a bevétel rögzítését.",

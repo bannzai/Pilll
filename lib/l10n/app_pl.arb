@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Zacznij od ikony koła zębatego w prawym górnym rogu blistra",
   "restDurationFeatureAppealPoint3": "Przerwę w przyjmowaniu tabletek można też łatwo zmienić i wznowić",
   "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię blistów?",
-  "endedPillSheetDialogSummaryTitle": "Spójrzmy na ten listek tabletek",
+  "endedPillSheetDialogSummaryTitle": "Przyjrzyjmy się temu blistrowi",
   "endedPillSheetDialogSummaryMessage": "Zapisane dni: {recordedDays}, pominięte: {missedDays}",
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",
   "midnightTakenWarningDialogBody": "Zarejestrowano przyjęcie pigułek do dnia {takenDate}. Dzisiejsze ({takenDate}) powiadomienie o godzinie {reminderTimes} nie zostanie dostarczone.\nJeśli to pomyłka, cofnij przyjęcie.",

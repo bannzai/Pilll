@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Commencez par l'icône en forme d'engrenage en haut à droite de la plaquette",
   "restDurationFeatureAppealPoint3": "Vous pouvez aussi modifier et reprendre facilement votre pause de pilule",
   "endedPillSheetDialogHistoryTitle": "Souhaitez-vous consulter l’historique de vos plaquettes ?",
-  "endedPillSheetDialogSummaryTitle": "Faisons le point sur cette plaquette",
+  "endedPillSheetDialogSummaryTitle": "Revenons sur cette plaquette",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} jours enregistrés, {missedDays} jours manqués",
   "midnightTakenWarningDialogTitle": "Veuillez noter",
   "midnightTakenWarningDialogBody": "Vos pilules ont été enregistrées comme prises via {takenDate}. La notification de rappel d'aujourd'hui ({takenDate}) à {reminderTimes} ne sera pas envoyée.\nS'il s'agit d'une erreur, veuillez annuler l'enregistrement pris.",

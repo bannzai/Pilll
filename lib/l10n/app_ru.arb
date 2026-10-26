@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Начните со значка шестерёнки в правом верхнем углу блистера",
   "restDurationFeatureAppealPoint3": "Период перерыва также легко изменить и возобновить",
   "endedPillSheetDialogHistoryTitle": "Хотите посмотреть историю блистеров?",
-  "endedPillSheetDialogSummaryTitle": "Давайте взглянем на этот блистер",
+  "endedPillSheetDialogSummaryTitle": "Давайте посмотрим, как прошёл приём таблеток из этого блистера",
   "endedPillSheetDialogSummaryMessage": "Записано дней: {recordedDays}, пропущено: {missedDays}",
   "midnightTakenWarningDialogTitle": "Обратите внимание",
   "midnightTakenWarningDialogBody": "Приём таблеток отмечен как выполненный по {takenDate} включительно. Сегодняшнее ({takenDate}) уведомление-напоминание в {reminderTimes} не будет отправлено.\nЕсли это ошибка, отмените запись о приёме.",

@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "დაიწყეთ აბების ბლისტერ-ის ზედა მარჯვენა კუთხეში მდებარე კბილანის ხატულიდან",
   "restDurationFeatureAppealPoint3": "შესვენების პერიოდის შეცვლა და გაგრძელებაც მარტივია",
   "endedPillSheetDialogHistoryTitle": "გსურთ ნახოთ აბების ბლისტერის ისტორია?",
-  "endedPillSheetDialogSummaryTitle": "მოდით გადავხედოთ ამ აბების ფურცელს",
+  "endedPillSheetDialogSummaryTitle": "მოდით, გადავხედოთ ამ აბების ბლისტერს",
   "endedPillSheetDialogSummaryMessage": "ჩაწერილია {recordedDays} დღე, გამოტოვებულია {missedDays} დღე",
   "midnightTakenWarningDialogTitle": "გთხოვთ გაითვალისწინოთ",
   "midnightTakenWarningDialogBody": "აბების მიღება ჩაწერილია {takenDate}-ის ჩათვლით. დღევანდელი ({takenDate}) შეხსენება {reminderTimes} საათზე არ მოგივათ.\nშეცდომის შემთხვევაში, გთხოვთ გააუქმოთ მიღების ჩანაწერი",

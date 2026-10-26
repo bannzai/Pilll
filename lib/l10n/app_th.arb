@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "เริ่มจากไอคอนรูปเฟืองที่มุมขวาบนของแผงยาค่ะ",
   "restDurationFeatureAppealPoint3": "แก้ไขและเริ่มช่วงหยุดยาใหม่ได้ง่ายค่ะ",
   "endedPillSheetDialogHistoryTitle": "อยากดูประวัติแผงยาไหมคะ",
-  "endedPillSheetDialogSummaryTitle": "มาย้อนดูแผงยานี้กัน",
+  "endedPillSheetDialogSummaryTitle": "มาทบทวนการใช้แผงยานี้กันค่ะ",
   "endedPillSheetDialogSummaryMessage": "บันทึกแล้ว {recordedDays} วัน พลาดไป {missedDays} วัน",
   "midnightTakenWarningDialogTitle": "โปรดทราบ",
   "midnightTakenWarningDialogBody": "มีการบันทึกว่าคุณได้รับประทานยาจนถึงวันที่ {takenDate} แล้ว การแจ้งเตือนของวันนี้ ({takenDate}) เวลา {reminderTimes} จะไม่ถูกส่งถึงคุณ\nหากเป็นการบันทึกผิดพลาด กรุณายกเลิกการบันทึกการรับประทานยา",

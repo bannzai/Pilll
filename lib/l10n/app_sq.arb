@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Filloni nga ikona e ingranazhit lart djathtas në blister",
   "restDurationFeatureAppealPoint3": "Mund ta ndryshoni dhe ta rifilloni lehtësisht periudhën e pushimit",
   "endedPillSheetDialogHistoryTitle": "Dëshironi të shihni historikun e blisterëve?",
-  "endedPillSheetDialogSummaryTitle": "Le t'i hedhim një sy kësaj flete pilulash",
+  "endedPillSheetDialogSummaryTitle": "Le ta shohim sërish këtë blister",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ditë të regjistruara, {missedDays} ditë të humbura",
   "midnightTakenWarningDialogTitle": "Kini parasysh",
   "midnightTakenWarningDialogBody": "Pilulat janë regjistruar si të marra deri më {takenDate}. Njoftimi i sotëm ({takenDate}) në orën {reminderTimes} nuk do të dërgohet.\nNëse ky ishte një gabim, ju lutemi anuloni regjistrimin e marrjes.",

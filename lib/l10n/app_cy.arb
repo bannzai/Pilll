@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Dechreuwch o'r eicon gêr ar ochr dde uchaf y stribed pils",
   "restDurationFeatureAppealPoint3": "Mae'n hawdd newid cyfnod yr egwyl a'i ailddechrau hefyd",
   "endedPillSheetDialogHistoryTitle": "Hoffech chi weld hanes eich stribed pils?",
-  "endedPillSheetDialogSummaryTitle": "Gadewch i ni edrych yn ôl ar y ddalen bils hon",
+  "endedPillSheetDialogSummaryTitle": "Beth am edrych yn ôl ar y stribed pils hwn",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} diwrnod wedi'u cofnodi, {missedDays} diwrnod wedi'u methu",
   "midnightTakenWarningDialogTitle": "Sylwch, os gwelwch yn dda",
   "midnightTakenWarningDialogBody": "Mae cofnod cymryd y bilsen wedi'i wneud hyd at {takenDate}. Ni fyddwch yn derbyn hysbysiad atgoffa heddiw ({takenDate}) am {reminderTimes}.\nOs camgymeriad oedd hyn, canslwch y cofnod cymryd os gwelwch yn dda.",

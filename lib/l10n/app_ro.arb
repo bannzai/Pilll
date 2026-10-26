@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Începe de la pictograma roată dințată din dreapta sus a blisterului",
   "restDurationFeatureAppealPoint3": "Poți modifica și relua ușor pauza de la pilulă",
   "endedPillSheetDialogHistoryTitle": "Vrei să vezi istoricul pentru blister?",
-  "endedPillSheetDialogSummaryTitle": "Să aruncăm o privire asupra acestui blister",
+  "endedPillSheetDialogSummaryTitle": "Să privim înapoi la acest blister",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} zile înregistrate, {missedDays} zile omise",
   "midnightTakenWarningDialogTitle": "Vă rugăm să rețineți",
   "midnightTakenWarningDialogBody": "Administrarea pilulei a fost înregistrată ca fiind luată până în data de {takenDate}. Notificarea de reamintire de astăzi ({takenDate}), programată pentru ora {reminderTimes}, nu va fi trimisă.\nDacă aceasta este o greșeală, vă rugăm să anulați administrarea.",

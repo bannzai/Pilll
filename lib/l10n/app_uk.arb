@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Почніть зі значка шестерні у правому верхньому куті блістера",
   "restDurationFeatureAppealPoint3": "Період перерви також легко змінити й відновити",
   "endedPillSheetDialogHistoryTitle": "Хочете переглянути історію блістерів?",
-  "endedPillSheetDialogSummaryTitle": "Погляньмо на цей блістер",
+  "endedPillSheetDialogSummaryTitle": "Перегляньмо записи про прийом пігулок із цього блістера",
   "endedPillSheetDialogSummaryMessage": "Записано днів: {recordedDays}, пропущено: {missedDays}",
   "midnightTakenWarningDialogTitle": "Зверніть увагу",
   "midnightTakenWarningDialogBody": "Прийом таблеток зафіксовано до {takenDate} включно. Сьогоднішнє ({takenDate}) нагадування о {reminderTimes} не надійде.\nЯкщо це сталося помилково, будь ласка, скасуйте запис про прийом",

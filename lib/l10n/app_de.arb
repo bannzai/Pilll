@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Starte über das Zahnrad oben rechts auf dem Pillenblister",
   "restDurationFeatureAppealPoint3": "Du kannst die Pause auch ganz einfach ändern und fortsetzen",
   "endedPillSheetDialogHistoryTitle": "Möchtest du den Verlauf deiner Pillenblister ansehen?",
-  "endedPillSheetDialogSummaryTitle": "Blicken wir auf dieses Pillenblatt zurück",
+  "endedPillSheetDialogSummaryTitle": "Schauen wir uns diesen Pillenblister noch einmal an",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} Tage erfasst, {missedDays} Tage verpasst",
   "midnightTakenWarningDialogTitle": "Bitte beachten",
   "midnightTakenWarningDialogBody": "Die Einnahme wurde bis einschließlich {takenDate} aufgezeichnet. Die heutige ({takenDate}) Benachrichtigung um {reminderTimes} wird nicht zugestellt.\nFalls dies ein Versehen war, stornieren Sie bitte die Einnahme.",

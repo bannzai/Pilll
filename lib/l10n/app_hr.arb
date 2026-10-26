@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "Započnite od ikone zupčanika gore desno na blisteru",
   "restDurationFeatureAppealPoint3": "Razdoblje pauze možete jednostavno urediti i nastaviti",
   "endedPillSheetDialogHistoryTitle": "Želite li pogledati povijest blistera?",
-  "endedPillSheetDialogSummaryTitle": "Osvrnimo se na ovaj blister",
+  "endedPillSheetDialogSummaryTitle": "Pogledajmo zajedno ovaj blister",
   "endedPillSheetDialogSummaryMessage": "Zabilježeno dana: {recordedDays}, propušteno: {missedDays}",
   "midnightTakenWarningDialogTitle": "Napomena",
   "midnightTakenWarningDialogBody": "Zapisano je uzimanje pilula zaključno s {takenDate}. Obavijest za danas, {takenDate}, u {reminderTimes} neće stići.\nAko je ovo pogreška, poništite zapis o uzimanju.",

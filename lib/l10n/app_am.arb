@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "በክኒን ሉህ ላይኛው ቀኝ ያለውን የማስተካከያ ምልክት በመንካት ይጀምሩ",
   "restDurationFeatureAppealPoint3": "የእረፍት ጊዜውን ማስተካከልና እንደገና መጀመርም ቀላል ነው",
   "endedPillSheetDialogHistoryTitle": "የክኒን ሉህ ታሪክን ማየት ይፈልጋሉ?",
-  "endedPillSheetDialogSummaryTitle": "ይህን የክኒን ሉህ እንመልከት",
+  "endedPillSheetDialogSummaryTitle": "የዚህን ክኒን ሉህ አጠቃቀም እንመልከት",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ቀናት ተመዝግቧል፣ {missedDays} ቀናት ተዘሏል",
   "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",
   "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",

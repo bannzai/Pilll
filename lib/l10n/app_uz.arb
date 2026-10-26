@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "tabletka blisterining yuqori o‘ng burchagidagi tishli g‘ildirak belgisidan boshlang",
   "restDurationFeatureAppealPoint3": "Tanaffus muddatini oʻzgartirish va qayta boshlash ham oson",
   "endedPillSheetDialogHistoryTitle": "Tabletka blister tarixini koʻrishni xohlaysizmi?",
-  "endedPillSheetDialogSummaryTitle": "Ushbu dori varag'ini ko'rib chiqaylik",
+  "endedPillSheetDialogSummaryTitle": "Keling, bu tabletka blister boʻyicha qaydlarni koʻrib chiqamiz",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} kun qayd etildi, {missedDays} kun o'tkazib yuborildi",
   "midnightTakenWarningDialogTitle": "Ehtiyot bo'ling",
   "midnightTakenWarningDialogBody": "{takenDate} sanasigacha dorilaringiz qabul qilingan deb qayd etildi. Bugungi ({takenDate}) kuni soat {reminderTimes} dagi eslatma bildirishnomasi kelmaydi.\nAgar bu xato bo'lgan bo'lsa, iltimos, qabul yozuvini bekor qiling.",

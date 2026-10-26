@@ -551,7 +551,7 @@
   "restDurationFeatureAppealPoint2": "د ګولیو پاڼې په پورتنۍ ښي خوا کې د ګېر له نښې څخه پیل وکړئ",
   "restDurationFeatureAppealPoint3": "د ګولیو د وقفې موده بدلول او بیا پیلول هم اسانه دي",
   "endedPillSheetDialogHistoryTitle": "غواړئ د ګولیو پاڼ تاریخ وګورئ؟",
-  "endedPillSheetDialogSummaryTitle": "راځئ دې د ګولیو پاڼې ته یو ځل بیا وګورو",
+  "endedPillSheetDialogSummaryTitle": "راځئ چې د ګولیو پاڼ د دې دورې ثبتونه وګورو",
   "endedPillSheetDialogSummaryMessage": "{recordedDays} ورځې ثبت شوې، {missedDays} ورځې پاتې شوې",
   "midnightTakenWarningDialogTitle": "پام وکړئ",
   "midnightTakenWarningDialogBody": "ستاسو د ګولۍ اخیستل تر {takenDate} پورې ثبت شوي دي. نن ({takenDate}) د {reminderTimes} خبرتیا به تاسو ته ونه رسیږي.\nکه دا یوه تېروتنه وه، مهرباني وکړئ د اخیستلو ثبت لغوه کړئ",
