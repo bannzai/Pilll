@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
   "yazFlexBeginPillNumberPageTitle": "복용 주기의 몇 번째 날에 피임약 시트가 시작되나요?",
   "yazFlexBeginPillNumberPageNote": "시트를 시작하기 전 휴약이 끝난 후 며칠이 지났는지에 따라 답해 주세요",
-  "yazFlexNextInputIsRestDuration": "다음으로 이전 휴약 기간을 입력해 주세요"
+  "yazFlexNextInputIsRestDuration": "다음으로 지난 휴약 기간을 입력해요"
 }

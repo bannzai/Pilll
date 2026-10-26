@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Ohita",
   "yazFlexBeginPillNumberPageTitle": "Mille pillerinottopäivälle liuskan alku osuu?",
   "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, montako päivää on kulunut ennen liuskan aloittamista pidetyn taukojakson päättymisestä",
-  "yazFlexNextInputIsRestDuration": "Seuraavaksi syötä edellinen taukosi"
+  "yazFlexNextInputIsRestDuration": "Seuraavaksi voit lisätä edellisen taukojakson"
 }

@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "ข้าม",
   "yazFlexBeginPillNumberPageTitle": "แผงยาเริ่มตรงกับวันที่เท่าไรของรอบการทานยาคะ",
   "yazFlexBeginPillNumberPageNote": "กรุณาตอบตามจำนวนวันที่ผ่านไปนับจากช่วงหยุดยาก่อนเริ่มแผงยาสิ้นสุดลงค่ะ",
-  "yazFlexNextInputIsRestDuration": "ถัดไป กรอกช่วงเว้นยาครั้งก่อน"
+  "yazFlexNextInputIsRestDuration": "ถัดไปจะให้กรอกช่วงหยุดยาครั้งก่อนค่ะ"
 }

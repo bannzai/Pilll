@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Παράλειψη",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια ημέρα του κύκλου λήψης χαπιών αρχίζει η συσκευασία;",
   "yazFlexBeginPillNumberPageNote": "Απαντήστε με βάση τις ημέρες που πέρασαν από το τέλος του διαλείμματος πριν ξεκινήσετε την καρτέλα",
-  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, εισαγάγετε την προηγούμενη διακοπή"
+  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, καταχωρίστε το προηγούμενο διάλειμμα από τα χάπια"
 }

@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Пропустить",
   "yazFlexBeginPillNumberPageTitle": "На какой день цикла приёма таблеток начинается блистер?",
   "yazFlexBeginPillNumberPageNote": "Пожалуйста, ответьте с учётом количества дней с конца перерыва перед началом блистера",
-  "yazFlexNextInputIsRestDuration": "Далее введите предыдущий перерыв"
+  "yazFlexNextInputIsRestDuration": "Затем укажите предыдущий перерыв в приёме таблеток"
 }

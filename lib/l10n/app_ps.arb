@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "پرېږدئ",
   "yazFlexBeginPillNumberPageTitle": "د ګولیو د اخیستو د دورې په څویمه ورځ د ګولیو پاڼه پیلېږي؟",
   "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د ګولیو د پټې له پیل مخکې د وقف له پای ته رسېدو راهیسې د تېرو ورځو د شمېر پر بنسټ ځواب ورکړئ",
-  "yazFlexNextInputIsRestDuration": "بل پړاو کې خپله پخوانۍ وقفه دننه کړئ"
+  "yazFlexNextInputIsRestDuration": "ورپسې د ګولیو له اخیستلو پخوانی وقف وخت ولیکئ"
 }

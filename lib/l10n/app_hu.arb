@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Kihagyás",
   "yazFlexBeginPillNumberPageTitle": "A tablettaszedési ciklusod hányadik napján kezdődik a levél?",
   "yazFlexBeginPillNumberPageNote": "A válaszhoz vedd alapul, hány nap telt el a levél megkezdése előtti szünet vége óta",
-  "yazFlexNextInputIsRestDuration": "Ezután adja meg az előző szünetet"
+  "yazFlexNextInputIsRestDuration": "Ezután add meg a legutóbbi szünet időtartamát"
 }

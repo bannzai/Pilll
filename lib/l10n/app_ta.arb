@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "தவிர்க்கவும்",
   "yazFlexBeginPillNumberPageTitle": "மாத்திரை எடுத்துக்கொள்ளும் சுழற்சியின் எத்தனையாவது நாளில் அட்டை தொடங்குகிறது?",
   "yazFlexBeginPillNumberPageNote": "மாத்திரை அட்டையைத் தொடங்குவதற்கு முன்பிருந்த இடைவேளை முடிந்து எத்தனை நாட்கள் கடந்துள்ளன என்பதன் அடிப்படையில் பதிலளியுங்கள்",
-  "yazFlexNextInputIsRestDuration": "அடுத்து, முந்தைய இடைவேளையை உள்ளிடவும்"
+  "yazFlexNextInputIsRestDuration": "அடுத்து, மாத்திரை எடுத்துக்கொள்வதில் முந்தைய இடைவேளை காலத்தைப் பதிவு செய்யுங்கள்"
 }

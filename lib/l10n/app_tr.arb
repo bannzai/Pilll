@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Atlayın",
   "yazFlexBeginPillNumberPageTitle": "Hap kullanma döngünüzün kaçıncı gününde blister başlıyor?",
   "yazFlexBeginPillNumberPageNote": "Lütfen blistere başlamadan önceki ara dönem bittikten sonra kaç gün geçtiğine göre yanıtlayın",
-  "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemini girin"
+  "yazFlexNextInputIsRestDuration": "Ardından önceki ara dönem sürenizi girin"
 }

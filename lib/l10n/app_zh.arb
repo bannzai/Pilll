@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "跳过",
   "yazFlexBeginPillNumberPageTitle": "这板药从服药周期的第几天开始？",
   "yazFlexBeginPillNumberPageNote": "请根据开始服用这板药之前的停药期结束后经过的天数回答",
-  "yazFlexNextInputIsRestDuration": "接下来请输入上一次停药期"
+  "yazFlexNextInputIsRestDuration": "接下来，请填写上一次停药的时间"
 }

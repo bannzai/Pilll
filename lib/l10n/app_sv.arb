@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Hoppa över",
   "yazFlexBeginPillNumberPageTitle": "Vilken dag i din p-pillercykel börjar kartan?",
   "yazFlexBeginPillNumberPageNote": "Svara utifrån hur många dagar som gått sedan uppehållet före kartans start tog slut",
-  "yazFlexNextInputIsRestDuration": "Därefter anger du föregående uppehåll"
+  "yazFlexNextInputIsRestDuration": "Därefter kan du ange ditt senaste uppehåll med p-piller"
 }

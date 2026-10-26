@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
   "yazFlexBeginPillNumberPageTitle": "Pilulak hartzeko zikloko zein egunetan hasten da blisterra?",
   "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, pilula orria hasi aurreko atsedenaldi amaitu zenetik igaro diren egunen arabera",
-  "yazFlexNextInputIsRestDuration": "Ondoren, aurreko atsedenaldia sartu"
+  "yazFlexNextInputIsRestDuration": "Ondoren, sartu aurreko atsedenaldia"
 }

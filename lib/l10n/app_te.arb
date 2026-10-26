@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "దాటవేయండి",
   "yazFlexBeginPillNumberPageTitle": "మాత్రలు తీసుకునే చక్రంలో ఎన్నో రోజున స్ట్రిప్ ప్రారంభమవుతుంది?",
   "yazFlexBeginPillNumberPageNote": "మాత్రల పట్టీని ప్రారంభించే ముందు ఉన్న విరామం ముగిసినప్పటి నుంచి ఎన్ని రోజులు గడిచాయో దాని ఆధారంగా దయచేసి సమాధానం ఇవ్వండి",
-  "yazFlexNextInputIsRestDuration": "తర్వాత, మునుపటి విరామాన్ని నమోదు చేయండి"
+  "yazFlexNextInputIsRestDuration": "తర్వాత, మాత్రలు తీసుకోవడంలో గత విరామ కాలాన్ని నమోదు చేయండి"
 }

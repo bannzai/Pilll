@@ -582,5 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "ကျော်ရန်",
   "yazFlexBeginPillNumberPageTitle": "ဆေးလုံးသောက်သည့် စက်ဝန်း၏ ဘယ်နှရက်မြောက်နေ့တွင် ဆေးကတ် စတင်ပါသလဲ?",
   "yazFlexBeginPillNumberPageNote": "ဆေးကတ်ကို မစတင်မီရှိခဲ့သော ဆေးနားရက် ပြီးဆုံးချိန်မှစ၍ ရက်ဘယ်နှရက် ကြာခဲ့ပြီလဲဆိုသည့်အပေါ် မူတည်၍ ဖြေပါ",
-  "yazFlexNextInputIsRestDuration": "ထို့နောက် ယခင်နားရက်ကာလကို ထည့်ပါ"
+  "yazFlexNextInputIsRestDuration": "နောက်တစ်ဆင့်တွင် ယခင် ဆေးနားရက်ကို ထည့်သွင်းပါ"
 }
