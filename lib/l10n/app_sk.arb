@@ -439,7 +439,7 @@
   "otherInquiry": "Iné",
   "otherInquiryPlaceholder": "Opíšte svoju ďalšiu otázku",
   "emailAddress": "E-mailová adresa",
-  "emailPlaceholder": "priklad@priklad.sk",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Obsah požiadavky",
   "inquiryContentPlaceholder": "Zadajte obsah vášho dotazu",
   "debugInfoLabel": "Ladiace informácie (automaticky vyplnené)",

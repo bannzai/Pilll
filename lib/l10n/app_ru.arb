@@ -439,7 +439,7 @@
   "otherInquiry": "Другое",
   "otherInquiryPlaceholder": "Опишите ваш другой вопрос",
   "emailAddress": "Адрес электронной почты",
-  "emailPlaceholder": "primer@primer.ru",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Содержание обращения",
   "inquiryContentPlaceholder": "Введите текст обращения",
   "debugInfoLabel": "Отладочная информация (автозаполнение)",

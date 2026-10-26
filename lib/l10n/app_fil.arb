@@ -439,7 +439,7 @@
   "otherInquiry": "Iba pa",
   "otherInquiryPlaceholder": "Pakilagay ang mga detalye ng iba ninyong katanungan",
   "emailAddress": "Email address",
-  "emailPlaceholder": "halimbawa@halimbawa.com",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Detalye ng Katanungan",
   "inquiryContentPlaceholder": "Pakilagay ang detalye ng inyong katanungan",
   "debugInfoLabel": "Impormasyon para sa Debug (Awtomatikong Napunan)",

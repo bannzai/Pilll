@@ -439,7 +439,7 @@
   "otherInquiry": "Jiné",
   "otherInquiryPlaceholder": "Prosím, popište svůj další dotaz",
   "emailAddress": "E-mailová adresa",
-  "emailPlaceholder": "priklad@priklad.cz",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Obsah dotazu",
   "inquiryContentPlaceholder": "Zadejte prosím obsah dotazu",
   "debugInfoLabel": "Ladicí informace (automaticky vyplněno)",

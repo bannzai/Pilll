@@ -439,7 +439,7 @@
   "otherInquiry": "Outro",
   "otherInquiryPlaceholder": "Descreva os detalhes da sua outra dúvida",
   "emailAddress": "Endereço de e-mail",
-  "emailPlaceholder": "exemplo@exemplo.com",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Conteúdo da consulta",
   "inquiryContentPlaceholder": "Digite o conteúdo de sua consulta",
   "debugInfoLabel": "Informações de depuração (preenchimento automático)",

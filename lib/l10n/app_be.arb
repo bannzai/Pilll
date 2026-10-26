@@ -439,7 +439,7 @@
   "otherInquiry": "Іншае",
   "otherInquiryPlaceholder": "Калі ласка, апішыце іншае пытанне",
   "emailAddress": "Адрас электроннай пошты",
-  "emailPlaceholder": "прыклад@прыклад.com",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Змест звароту",
   "inquiryContentPlaceholder": "Увядзіце змест запыту",
   "debugInfoLabel": "Адладачная інфармацыя (аўтаматычна запоўнена)",

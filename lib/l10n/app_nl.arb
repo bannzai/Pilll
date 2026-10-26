@@ -439,7 +439,7 @@
   "otherInquiry": "Overig",
   "otherInquiryPlaceholder": "Beschrijf je andere vraag",
   "emailAddress": "E-mailadres",
-  "emailPlaceholder": "voorbeeld@voorbeeld.nl",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Bericht",
   "inquiryContentPlaceholder": "Voer de inhoud van uw bericht in",
   "debugInfoLabel": "Debug-informatie (automatisch ingevuld)",

@@ -439,7 +439,7 @@
   "otherInquiry": "Inne",
   "otherInquiryPlaceholder": "Opisz swoją inną sprawę",
   "emailAddress": "Adres e-mail",
-  "emailPlaceholder": "przyklad@przyklad.pl",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Treść zapytania",
   "inquiryContentPlaceholder": "Wprowadź treść zapytania",
   "debugInfoLabel": "Informacje debugowania (wypełniane automatycznie)",

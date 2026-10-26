@@ -439,7 +439,7 @@
   "otherInquiry": "Annað",
   "otherInquiryPlaceholder": "Lýstu hinu erindinu nánar",
   "emailAddress": "Netfang",
-  "emailPlaceholder": "daemi@daemi.is",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Efni fyrirspurnar",
   "inquiryContentPlaceholder": "Vinsamlegast skrifaðu inn fyrirspurn þína",
   "debugInfoLabel": "Villuleitarupplýsingar (sjálfkrafa útfyllt)",

@@ -439,7 +439,7 @@
   "otherInquiry": "Drugo",
   "otherInquiryPlaceholder": "Opišite svoje drugo vprašanje",
   "emailAddress": "E-poštni naslov",
-  "emailPlaceholder": "primer@primer.si",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Vsebina poizvedbe",
   "inquiryContentPlaceholder": "Vnesite vsebino sporočila",
   "debugInfoLabel": "Informacije za razhroščevanje (samodejno izpolnjeno)",

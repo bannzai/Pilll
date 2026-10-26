@@ -439,7 +439,7 @@
   "otherInquiry": "Muu",
   "otherInquiryPlaceholder": "Kerro tarkemmin muusta asiastasi",
   "emailAddress": "Sähköpostiosoite",
-  "emailPlaceholder": "esimerkki@esimerkki.fi",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Viestin sisältö",
   "inquiryContentPlaceholder": "Kirjoita kysymyksesi tähän",
   "debugInfoLabel": "Virheenkorjaustiedot (täytetty automaattisesti)",

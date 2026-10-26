@@ -439,7 +439,7 @@
   "otherInquiry": "Annet",
   "otherInquiryPlaceholder": "Beskriv den andre henvendelsen din",
   "emailAddress": "E-postadresse",
-  "emailPlaceholder": "eksempel@eksempel.com",
+  "emailPlaceholder": "example@example.com",
   "inquiryContent": "Henvendelse",
   "inquiryContentPlaceholder": "Vennligst beskriv henvendelsen din",
   "debugInfoLabel": "Feilsøkingsinformasjon (automatisk utfylt)",
