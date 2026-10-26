@@ -465,7 +465,7 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Personalitza el missatge del recordatori de la píndola",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Pots personalitzar el missatge estàndard «És hora de prendre la píndola» amb les paraules que t'agradin. Canvia'l per frases que et motivin, el nom de la teva mascota o qualsevol text que faci que prendre la medicació cada dia sigui més agradable.",
   "appearanceModeDateFeatureAppealTitle": "Mostra les dates al blíster",
-  "appearanceModeDateFeatureAppealShortDescription": "Comprova d'un cop d'ull quan prendre-la",
+  "appearanceModeDateFeatureAppealShortDescription": "Consulta d’un cop d’ull quan has de prendre la píndola",
   "appearanceModeDateFeatureAppealHeadline": "Podeu mostrar les dates a la fitxa de pastilles",
   "appearanceModeDateFeatureAppealBody": "En mostrar la data a les caselles del full de píndoles, podeu consultar d'un cop d'ull l'historial de preses passades i el programa de preses futures. Canvieu entre el mode «número» i el mode «data» per triar la visualització que millor s'adapti a vosaltres.",
   "recordPillFeatureAppealTitle": "Revisa fàcilment l'historial de presa",

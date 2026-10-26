@@ -465,7 +465,7 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Tilpass meldingen i p-pillepåminnelsen",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Du kan tilpasse standardmeldingen «Det er på tide å ta pillen» til dine egne ord. Prøv å endre den til noe som motiverer deg, som et kjæledyrnavn eller en oppmuntrende setning, for å gjøre den daglige pilleinntaket morsommere.",
   "appearanceModeDateFeatureAppealTitle": "Vis datoer på pillebrettet",
-  "appearanceModeDateFeatureAppealShortDescription": "Sjekk med ett blikk når du skal ta pillen",
+  "appearanceModeDateFeatureAppealShortDescription": "Se med et blikk når du skal ta p-pillen",
   "appearanceModeDateFeatureAppealHeadline": "Kan vise datoer på pillearket",
   "appearanceModeDateFeatureAppealBody": "Ved å vise datoer i pillearkfeltene kan du enkelt se din tidligere inntakshistorikk og fremtidige inntaksplan med ett blikk. Bytt mellom «nummer»-modus og «dato»-modus for å velge visningen som passer deg best.",
   "recordPillFeatureAppealTitle": "Se gjennom inntakshistorikken enkelt",

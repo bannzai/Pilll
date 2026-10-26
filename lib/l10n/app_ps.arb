@@ -465,7 +465,7 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "د ګولۍ اخیستلو د یادونې پیغام د خپلې خوښې سره سم بدل کړئ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "تاسو کولی شئ چې معیاري \"د حبوبو د خوړلو وخت دی\" خپلې خوښې کلمو ته بدل کړئ. هڅوونکې کلمې، د خپل ګرانپیژندلي ژوي نوم، یا نورې جملې هڅه وکړئ چې ستاسو ورځنۍ دوا اخیستل ډیر خوندور کوي.",
   "appearanceModeDateFeatureAppealTitle": "د ګولیو پاڼ پر مخ نېټې وښایئ",
-  "appearanceModeDateFeatureAppealShortDescription": "یو نظر کې وګورئ چې کله دوا وخورئ",
+  "appearanceModeDateFeatureAppealShortDescription": "په یوه نظر وګورئ چې ګولۍ کله واخلئ",
   "appearanceModeDateFeatureAppealHeadline": "د پیل شیټ پر نیټه ښودل کیدای شي",
   "appearanceModeDateFeatureAppealBody": "د پیل شیټ د خانو کې نیټې ښودلو سره، تاسې کولای شئ د تیرو دوا اخیستلو ریکارډ او د راتلونکو دوا اخیستلو مهالویش یوه کتنه کې وګورئ. د «شمیره» حالت او «نیټه» حالت تر مینځ بدلون راولئ او خپل لپاره مناسب ډول غوره کړئ.",
   "recordPillFeatureAppealTitle": "د درملو د کارولو تاریخچه اسانه وګورئ",

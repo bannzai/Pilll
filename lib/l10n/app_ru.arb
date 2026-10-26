@@ -465,7 +465,7 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "Настройте текст напоминания о приёме таблетки",
   "reminderNotificationCustomizeWordFeatureAppealBody": "Вы можете настроить стандартное сообщение «Время принять таблетку» по своему вкусу. Попробуйте изменить его на вдохновляющую фразу, имя питомца или любые слова, которые сделают ежедневный приём таблеток более приятным.",
   "appearanceModeDateFeatureAppealTitle": "Показывать даты на блистере",
-  "appearanceModeDateFeatureAppealShortDescription": "Когда принимать — с первого взгляда",
+  "appearanceModeDateFeatureAppealShortDescription": "С первого взгляда видно, когда принять таблетку",
   "appearanceModeDateFeatureAppealHeadline": "Отображение дат на листе таблеток",
   "appearanceModeDateFeatureAppealBody": "Отображая даты в ячейках таблетного листа, вы можете сразу увидеть историю приёма таблеток в прошлом и запланированные приёмы в будущем. Переключайтесь между режимом «Номер» и режимом «Дата», чтобы выбрать наиболее удобный вариант отображения.",
   "recordPillFeatureAppealTitle": "Легко просматривайте историю приёма",

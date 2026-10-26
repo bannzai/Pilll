@@ -465,7 +465,7 @@
   "reminderNotificationCustomizeWordFeatureAppealHeadline": "ปรับข้อความแจ้งเตือนให้ทานยาตามต้องการ",
   "reminderNotificationCustomizeWordFeatureAppealBody": "คุณสามารถปรับข้อความเริ่มต้น 'ถึงเวลาทานยาแล้ว' ให้เป็นคำที่คุณชอบได้ ลองเปลี่ยนเป็นคำที่ช่วยสร้างแรงจูงใจ หรือชื่อสัตว์เลี้ยง เพื่อทำให้การทานยาประจำวันสนุกขึ้น",
   "appearanceModeDateFeatureAppealTitle": "แสดงวันที่บนแผงยา",
-  "appearanceModeDateFeatureAppealShortDescription": "ดูเวลาในการทานได้ทันที",
+  "appearanceModeDateFeatureAppealShortDescription": "ดูได้ทันทีว่าควรทานยาเม็ดเมื่อไร",
   "appearanceModeDateFeatureAppealHeadline": "แสดงวันที่บนตารางยาคุม",
   "appearanceModeDateFeatureAppealBody": "หน้าตารางเม็ดยาแสดงวันที่ในช่อง ทำให้คุณสามารถดูประวัติการทานยาในอดีตและกำหนดการทานยาในอนาคตได้ในครั้งเดียว เปลี่ยนสลับระหว่างโหมด \"หมายเลข\" และโหมด \"วันที่\" เพื่อเลือกการแสดงผลที่เหมาะกับคุณ",
   "recordPillFeatureAppealTitle": "ย้อนดูประวัติการรับประทานยาได้อย่างง่ายดาย",
