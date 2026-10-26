@@ -475,7 +475,7 @@
   "menstruationFeatureAppealTitle": "Hilekoa erregistratu eta aurreikusi",
   "menstruationFeatureAppealShortDescription": "Idatzi hilekoaren hasiera data zure zikloa jarraitzeko",
   "menstruationFeatureAppealHeadline": "Hilekoa erregistratu eta noiz etorriko den aurreikusi",
-  "menstruationFeatureAppealBody": "Hilekoa heltzean erregistratu besterik ez duzu, eta iraganeko hileko historia osoa ikusi ahal izango duzu. Hurrengo hilekoa noiz izango den ere automatikoki aurreikusten da, eta horrela planifikatuta bizi ahal izango zara.",
+  "menstruationFeatureAppealBody": "Hilekoa hasten denean, erregistratu besterik ez duzu egin behar. Aurreko hilekoen erregistroak zerrendan ikus ditzakezu. Hurrengo hilekoaren gutxi gorabeherako data automatikoki kalkulatzen da, aldez aurretik antolatu ahal izateko.",
   "calendarDiaryFeatureAppealTitle": "Egutegian gorputz-egoera erregistratu",
   "calendarDiaryFeatureAppealShortDescription": "Gorde eguneroko osasun-egoera egutegian",
   "calendarDiaryFeatureAppealHeadline": "Eguneroko osasun-egoera egutegian erregistratu",
