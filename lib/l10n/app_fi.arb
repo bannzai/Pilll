@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Pyyntö aikakatkaistiin. Tarkista internetyhteytesi ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Tapahtui tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Tapahtui tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdassa Asetukset > Ota yhteyttä. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Yhteysvirhe. Tarkista internetyhteytesi ja yritä uudelleen. Jos ongelma jatkuu, ota yhteyttä Asetukset > Ota yhteyttä -kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Internet-yhteydessä on ongelma. Tarkista yhteys ja yritä uudelleen. Jos ongelma jatkuu, ota meihin yhteyttä kohdasta Asetukset > Ota yhteyttä. Lisätiedot: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Päivitä sovellus",
   "forceUpdateMessage": "Pyydämme päivittämään sovelluksesi version. Ole hyvä ja päivitä uusimpaan versioon {storeName}sta.",
   "visitHospital": "Hoitokäynti",

@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Čas čakanja je potekel. Preverite internetno povezavo in poskusite znova. Če težava ostaja, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Prišlo je do neznane napake. Posodobite aplikacijo na najnovejšo različico in poskusite znova. Če težava ostaja, se obrnite na nas v Nastavitve > Stik z nami. Koda: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Prišlo je do neznane napake. Posodobite aplikacijo na najnovejšo različico in poskusite znova. Če težava ostane, se obrnite na nas v Nastavitve > Stik z nami. Koda: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Težava z internetno povezavo. Preverite internetno povezavo in poskusite znova. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Prišlo je do težave z internetno povezavo. Preverite povezavo in poskusite znova. Če se težava nadaljuje, stopite v stik z nami prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Prosimo, posodobite aplikacijo",
   "forceUpdateMessage": "Potrebna je posodobitev vaše aplikacije. Prosimo, posodobite na najnovejšo različico iz {storeName}.",
   "visitHospital": "Obisk zdravnika",

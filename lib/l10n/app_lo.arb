@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "ການຮ້ອງຂໍໝົດເວລາລໍຖ້າແລ້ວ. ກະລຸນາກວດເບິ່ງການເຊື່ອມຕໍ່ອິນເຕີເນັດ ແລ້ວລອງໃໝ່ເດີ. ຖ້າບັນຫາຍັງມີຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດແອັບເປັນລຸ້ນຫຼ້າສຸດແລ້ວລອງອີກຄັ້ງ. ຖ້າຍັງມີບັນຫາ, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດແອັບເປັນເວີຊັນຫຼ້າສຸດ ແລ້ວລອງໃໝ່. ຖ້າບັນຫາຍັງຢູ່, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "ການສື່ສານບໍ່ດີ. ກະລຸນາກວດສອບສະພາບການສື່ສານແລະລອງໃໝ່ອີກຄັ້ງ. ຖ້າບໍ່ໄດ້ແກ້ໄຂ ກະລຸນາຕິດຕໍ່ຜ່ານ ການຕັ້ງຄ່າ > ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດມີບັນຫາ. ກະລຸນາກວດສອບການເຊື່ອມຕໍ່ ແລ້ວລອງໃໝ່. ຖ້າບັນຫາຍັງຄົງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "ກະລຸນາອັບເດດແອັບພລິເຄຊັນ",
   "forceUpdateMessage": "ກະລຸນາອັບເດດເວີຊັນແອັບພລິເຄຊັນຂອງທ່ານ. ກະລຸນາອັບເດດເປັນເວີຊັນລ່າສຸດຈາກ {storeName}",
   "visitHospital": "ໄປໂຮງໝໍ",

@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Die versoek het te lank geneem. Gaan asseblief jou internetverbinding na en probeer weer. As die probleem aanhou, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "’n Onbekende fout het voorgekom. Werk asseblief die app op na die nuutste weergawe en probeer weer. As dit nie help nie, kontak ons via Instellings > Kontak ons. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Daar was ’n onbekende fout. Dateer asseblief die app op na die nuutste weergawe en probeer weer. As dit nie help nie, kontak ons via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Verbindingsfout. Kontroleer asseblief jou netwerkverbinding en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Die verbinding werk nie goed nie. Gaan asseblief jou internetverbinding na en probeer weer. As die probleem voortduur, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Werk asseblief die program by",
   "forceUpdateMessage": "Ons vra dat u u app opdateer. Werk asseblief vanaf {storeName} op na die nuutste weergawe.",
   "visitHospital": "Na dokter gaan",

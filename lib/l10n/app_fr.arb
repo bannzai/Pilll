@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Le délai d’attente a expiré. Vérifiez votre connexion Internet et réessayez. Si le problème persiste, contactez-nous depuis Réglages > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Une erreur inconnue s’est produite. Veuillez mettre l’application à jour, puis réessayer. Si le problème persiste, contactez-nous depuis Paramètres > Nous contacter. Code : {errorCode} Détails : {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Une erreur inconnue s’est produite. Veuillez mettre l’application à jour, puis réessayer. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Code : {errorCode} Détails : {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Erreur de connexion réseau. Veuillez vérifier votre connexion réseau et réessayer. Si le problème persiste, veuillez nous contacter via Paramètres > Contactez-nous. Détails : {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "La connexion Internet rencontre un problème. Vérifiez votre connexion, puis réessayez. Si le problème persiste, contactez-nous via Paramètres > Nous contacter. Détails : {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Veuillez mettre à jour l'application",
   "forceUpdateMessage": "Veuillez mettre à jour la version de votre application. Téléchargez la dernière version depuis {storeName}.",
   "visitHospital": "Voir médecin",

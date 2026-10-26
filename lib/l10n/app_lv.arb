@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Pieprasījuma gaidīšanas laiks ir beidzies. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz. Ja problēma joprojām pastāv, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Radās nezināma kļūda. Lūdzu, atjauniniet lietotni uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Kods: {errorCode} Informācija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Radās nezināma kļūda. Lūdzu, atjauniniet lietotni uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Kods: {errorCode} Informācija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Savienojuma problēmas. Lūdzu, pārbaudiet savu interneta savienojumu un mēģiniet vēlreiz. Ja problēma turpinās, sazinieties ar mums: Iestatījumi > Atbalsts. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Radusies interneta savienojuma problēma. Pārbaudiet savienojumu un mēģiniet vēlreiz. Ja problēma saglabājas, sazinieties ar mums sadaļā Iestatījumi > Sazināties ar mums. Detalizēta informācija: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Lūdzu, atjaunojiet lietotni",
   "forceUpdateMessage": "Lūdzam atjaunināt jūsu lietotnes versiju. Lūdzu, atjauniniet uz jaunāko versiju no {storeName}.",
   "visitHospital": "apmeklēt ārstu",

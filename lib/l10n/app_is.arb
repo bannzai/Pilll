@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Beiðnin rann út á tíma. Athugaðu nettenginguna og reyndu aftur. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Óþekkt villa kom upp. Uppfærðu appið í nýjustu útgáfu og reyndu aftur. Ef vandinn er enn til staðar geturðu haft samband við okkur í Stillingar > Hafa samband. Kóði: {errorCode} Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Óþekkt villa kom upp. Uppfærðu appið í nýjustu útgáfu og reyndu aftur. Ef vandinn heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Kóði: {errorCode} Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Samskiptavilla. Vinsamlegast athugaðu internettengingarnar þínar og reyndu aftur. Ef vandamálið helst, vinsamlegast hafðu samband í gegnum Stillingar > Fyrirspurnir. Upplýsingar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Vandamál kom upp með nettenginguna. Athugaðu tenginguna og reyndu aftur. Ef vandamálið heldur áfram geturðu haft samband við okkur í Stillingar > Hafa samband. Nánari upplýsingar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vinsamlegast uppfærðu appið",
   "forceUpdateMessage": "Vinsamlegast uppfærðu forritið þitt. Uppfærðu í nýjustu útgáfuna úr {storeName}",
   "visitHospital": "Lækniskonum",

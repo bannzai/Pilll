@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "د غوښتنې د انتظار وخت پای ته ورسېد. مهرباني وکړئ خپل انټرنېټ پیوستون وګورئ او بیا هڅه وکړئ. که ستونزه پاتې شي، د امستنو > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "نامعلومه تېروتنه رامنځته شوې ده. مهرباني وکړئ اپ وروستۍ نسخې ته تازه کړئ او بیا هڅه وکړئ. که ستونزه پاتې شي، د امستنو > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. کوډ: {errorCode} جزیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "یوه ناپېژندل شوې تېروتنه رامنځته شوه. مهرباني وکړئ اپ وروستۍ نسخې ته تازه کړئ او بیا هڅه وکړئ. که ستونزه پاتې شي، د امستنو > له موږ سره اړیکه له لارې راسره اړیکه ونیسئ. کوډ: {errorCode} جزییات: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "د ارتباطاتو ستونزه ده. د خپل ارتباطي چاپیریال وګورئ او بیا هڅه وکړئ. که ستونزه نه حلیږي نو د تنظیمات > پوښتنه څخه اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "د انټرنېټ په اړیکه کې ستونزه ده. مهرباني وکړئ خپله اړیکه وڅېړئ او بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې موږ سره اړیکه ونیسئ. جزییات: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "مهربانی وکړئ خپل اپلیکیشن تازه کړئ",
   "forceUpdateMessage": "ستاسو د اپلیکیشن نسخه تازه کولو ته اړتیا ده. مهرباني وکړئ د {storeName} څخه تر ټولو وروستۍ نسخې ته تازه کړئ",
   "visitHospital": "ډاکټر ته ورتلل",

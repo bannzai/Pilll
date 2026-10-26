@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Daeth yr amser aros i ben. Gwiriwch eich cysylltiad rhyngrwyd a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Mae gwall anhysbys wedi digwydd. Diweddarwch yr ap i’r fersiwn ddiweddaraf a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Cod: {errorCode} Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Mae gwall anhysbys wedi digwydd. Diweddarwch yr ap i’r fersiwn ddiweddaraf a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Cod: {errorCode} Manylion: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Cysylltiad gwael. Gwiriwch eich amgylchedd rhwydwaith a rhowch gynnig arall arni. Os nad yw'n datrys, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Mae problem gyda'r cysylltiad rhyngrwyd. Gwiriwch eich cysylltiad a rhowch gynnig arall arni. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Diweddarwch yr ap os gwelwch yn dda",
   "forceUpdateMessage": "Mae angen i chi ddiweddaru fersiwn eich ap. Diweddarwch i'r fersiwn ddiweddaraf o {storeName}.",
   "visitHospital": "Mynd at y meddyg",

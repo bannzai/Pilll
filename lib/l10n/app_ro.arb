@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Timpul de așteptare a expirat. Verifică conexiunea la internet și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "A apărut o eroare necunoscută. Actualizează aplicația la cea mai recentă versiune și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Cod: {errorCode} Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "A apărut o eroare necunoscută. Actualizează aplicația la cea mai recentă versiune și încearcă din nou. Dacă problema continuă, contactează-ne din Setări > Contactează-ne. Cod: {errorCode} Detalii: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Eroare de conexiune. Vă rugăm să verificați conexiunea la internet și să încercați din nou. Dacă problema persistă, contactați-ne prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Este o problemă cu conexiunea la internet. Verifică-ți conexiunea și încearcă din nou. Dacă problema persistă, contactează-ne din Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Vă rugăm să actualizați aplicația",
   "forceUpdateMessage": "Vă rugăm să actualizați versiunea aplicației. Actualizați la cea mai recentă versiune din {storeName}.",
   "visitHospital": "Control medical",

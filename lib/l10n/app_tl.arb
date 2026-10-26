@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Nag-expire ang oras ng paghihintay. Pakisuri po ang inyong koneksyon sa internet at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "May naganap na hindi kilalang error. Paki-update po ang app sa pinakabagong bersyon at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan po kayo sa amin sa Mga Setting > Makipag-ugnayan sa amin. Code: {errorCode} Detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Nagkaroon ng hindi matukoy na error. Paki-update po ang app sa pinakabagong bersyon at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan po sa amin sa Mga Setting > Makipag-ugnayan sa amin. Kodigo: {errorCode} Mga detalye: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "May problema sa koneksyon. Pakisuri ang inyong network connection at subukang muli. Kung hindi pa rin gumagana, makipag-ugnayan sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "May problema sa koneksyon sa internet. Pakisuri po ang koneksyon ninyo at subukan muli. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Mangyaring i-update po ang app",
   "forceUpdateMessage": "Mangyaring i-update ang inyong app sa pinakabagong version mula sa {storeName}.",
   "visitHospital": "Magcheck-up",

@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Време чекања је истекло. Проверите интернет везу и покушајте поново. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Дошло је до непознате грешке. Молимо Вас да ажурирате апликацију на најновију верзију и покушате поново. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Код: {errorCode} Детаљи: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Дошло је до непознате грешке. Ажурирајте апликацију на најновију верзију и покушајте поново. Ако се проблем настави, контактирајте нас преко Подешавања > Контактирајте нас. Код: {errorCode} Детаљи: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Грешка у комуникацији. Проверите интернет везу и покушајте поново. Ако се проблем не реши, контактирајте нас преко Подешавања > Упит. Детаљи: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Постоји проблем са интернет везом. Проверите везу и покушајте поново. Ако се проблем настави, обратите нам се преко Подешавања > Контактирајте нас. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Molimo ažurirajte aplikaciju",
   "forceUpdateMessage": "Molimo vas da ažurirate vašu aplikaciju. Preuzmite najnoviju verziju iz {storeName}",
   "visitHospital": "Poseta lekaru",

@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Baigėsi užklausos laukimo laikas. Patikrinkite interneto ryšį ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Įvyko nežinoma klaida. Atnaujinkite programėlę iki naujausios versijos ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekite su mumis. Kodas: {errorCode} Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Įvyko nežinoma klaida. Atnaujinkite programėlę į naujausią versiją ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti. Kodas: {errorCode} Išsami informacija: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Ryšio problemų. Patikrinkite savo interneto ryšį ir bandykite dar kartą. Jei problema išlieka, kreipkitės per Nustatymai > Kreiptis. Išsamiau: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Kilo interneto ryšio problema. Patikrinkite ryšį ir bandykite dar kartą. Jei problema išlieka, susisiekite su mumis per Nustatymai > Susisiekti su mumis. Išsami informacija: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Prašome atnaujinti programėlę",
   "forceUpdateMessage": "Prašome atnaujinti savo programėlės versiją. Atsisiųskite naujausią versiją iš {storeName}.",
   "visitHospital": "Lankytis pas gydytoją",

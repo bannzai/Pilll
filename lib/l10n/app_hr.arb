@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Vrijeme čekanja je isteklo. Provjerite internetsku vezu i pokušajte ponovno. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Došlo je do nepoznate pogreške. Ažurirajte aplikaciju na najnoviju verziju i pokušajte ponovno. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Kod: {errorCode} Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Došlo je do nepoznate pogreške. Ažurirajte aplikaciju na najnoviju verziju i pokušajte ponovno. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Kôd: {errorCode} Pojedinosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Problemi s mrežom. Molimo provjerite internetsku vezu i pokušajte ponovno. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Došlo je do problema s internetskom vezom. Provjerite vezu i pokušajte ponovno. Ako se problem nastavi, obratite nam se putem Postavke > Kontaktirajte nas. Pojedinosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Molimo ažurirajte aplikaciju",
   "forceUpdateMessage": "Molimo vas da ažurirate verziju vaše aplikacije. Ažurirajte na najnoviju verziju iz {storeName}.",
   "visitHospital": "ići na pregled",

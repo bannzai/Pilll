@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "अनुरोध का समय समाप्त हो गया। कृपया अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें। समस्या बनी रहे तो सेटिंग > हमसे संपर्क करें के ज़रिए संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "एक अज्ञात त्रुटि हुई है। कृपया ऐप को नवीनतम संस्करण में अपडेट करें और फिर से कोशिश करें। समस्या बनी रहे तो सेटिंग्स > हमसे संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "कोई अज्ञात त्रुटि हुई है। कृपया ऐप को नवीनतम संस्करण में अपडेट करके फिर कोशिश करें। समस्या बनी रहे तो सेटिंग्स > संपर्क करें से हमसे संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "नेटवर्क कनेक्टिविटी की समस्या है। कृपया अपने नेटवर्क कनेक्शन की जांच करके फिर से कोशिश करें। यदि समस्या बनी रहे तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "इंटरनेट कनेक्शन में समस्या है। कृपया अपना कनेक्शन जाँचें और फिर से कोशिश करें। समस्या बनी रहे तो सेटिंग्स > संपर्क करें से हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "कृपया ऐप को अपडेट करें",
   "forceUpdateMessage": "कृपया अपने ऐप का वर्जन अपडेट करें। {storeName} से नवीनतम वर्जन में अपडेट करें।",
   "visitHospital": "डॉक्टर के पास जाना",

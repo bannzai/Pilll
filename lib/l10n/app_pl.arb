@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Upłynął czas oczekiwania. Sprawdź połączenie z internetem i spróbuj ponownie. Jeśli problem nie ustąpi, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Wystąpił nieznany błąd. Zaktualizuj aplikację do najnowszej wersji i spróbuj ponownie. Jeśli problem nie ustąpi, skontaktuj się z nami przez Ustawienia > Kontakt. Kod: {errorCode} Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Wystąpił nieznany błąd. Zaktualizuj aplikację do najnowszej wersji i spróbuj ponownie. Jeśli problem nadal występuje, skontaktuj się z nami przez Ustawienia > Kontakt. Kod: {errorCode} Szczegóły: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Wystąpił błąd połączenia. Sprawdź połączenie internetowe i spróbuj ponownie. Jeśli problem nadal występuje, skontaktuj się z nami w Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Wystąpił problem z połączeniem internetowym. Sprawdź połączenie i spróbuj ponownie. Jeśli problem nie ustąpi, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Prosimy o aktualizację aplikacji",
   "forceUpdateMessage": "Konieczna jest aktualizacja Twojej aplikacji. Pobierz najnowszą wersję z {storeName}.",
   "visitHospital": "Kontrola lekarska",

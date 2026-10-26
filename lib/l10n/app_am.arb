@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "ጥያቄው ጊዜው አልፎበታል። እባክዎ የበይነመረብ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያግኙን። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "ያልታወቀ ስህተት ተፈጥሯል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት ያዘምኑና እንደገና ይሞክሩ። ችግሩ ካልተፈታ በቅንብሮች > ያግኙን በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት ያዘምኑና እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ ከቅንብሮች > ያግኙን በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "የኔትወርክ ግንኙነት ችግር አለ። የኔትወርክ ሁኔታዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ከቀጠለ ቅንብሮች > አግኙን በመሄድ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "የኢንተርኔት ግንኙነቱ ተቋርጧል። እባክዎ ግንኙነትዎን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ዝርዝሮች፦ {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "እባክዎ መተግበሪያውን ያዘምኑ",
   "forceUpdateMessage": "የመተግበሪያዎን ስሪት ማሻሻል እንጠይቅዎታለን። እባክዎን ከ{storeName} ዘመናዊውን ስሪት ያውርዱ።",
   "visitHospital": "ሆስፒታል መሄድ",

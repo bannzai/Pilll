@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Tidsfristen udløb. Tjek din internetforbindelse, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Der opstod en ukendt fejl. Opdater appen til den nyeste version, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Der opstod en ukendt fejl. Opdater appen til den nyeste version, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Netværksfejl. Tjek venligst din internetforbindelse og prøv igen. Hvis problemet fortsætter, kontakt os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Der er problemer med internetforbindelsen. Tjek din forbindelse, og prøv igen. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Opdater venligst appen",
   "forceUpdateMessage": "Opdater venligst din appversion. Download den nyeste version fra {storeName}.",
   "visitHospital": "Lægebesøg",

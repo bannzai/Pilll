@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Isikhathi sokulinda isicelo siphelile. Sicela uhlole uxhumano lwakho lwe-inthanethi bese uzama futhi. Uma inkinga iqhubeka, sicela usithinte ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Kuvele iphutha elingaziwa. Sicela ubuyekeze uhlelo lokusebenza lube yinguqulo yakamuva bese uzama futhi. Uma inkinga iqhubeka, sicela uxhumane nathi ngokuthi Izilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Kuvele iphutha elingaziwa. Sicela ubuyekeze uhlelo lokusebenza lube yinguqulo yakamuva bese uzama futhi. Uma inkinga iqhubeka, sicela usithinte kokuthi Izilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Kunenkinga yokuxhumana. Sicela uhlole isimo sakho sokuxhumana bese uzama futhi. Uma inkinga ingaqhubeka, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Kunenkinga ngoxhumo lwe-inthanethi. Sicela uhlole uxhumano lwakho bese uzama futhi. Uma inkinga iqhubeka, xhumana nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Sicela ubuyekeze uhlelo lokusebenza",
   "forceUpdateMessage": "Siyacela ukuthi ubuyekeze i-app yakho. Sicela ulande inguqulo entsha ku-{storeName}",
   "visitHospital": "ukuya esibhedlela",

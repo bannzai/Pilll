@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Soʻrovni kutish vaqti tugadi. Iltimos, internet aloqangizni tekshirib, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Nomaʼlum xatolik yuz berdi. Iltimos, ilovani eng soʻnggi versiyaga yangilab, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Kod: {errorCode} Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Nomaʼlum xatolik yuz berdi. Iltimos, ilovani eng soʻnggi versiyaga yangilab, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Kod: {errorCode} Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Aloqa muammosi yuzaga keldi. Internetga ulanish holatini tekshiring va qayta urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat qilish orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Internet aloqasida muammo bor. Iltimos, aloqangizni tekshirib, qayta urinib koʻring. Muammo davom etsa, Sozlamalar > Biz bilan bogʻlanish orqali bizga murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Iltimos, ilovani yangilang",
   "forceUpdateMessage": "Ilovangizning versiyasini yangilash talab qilinadi. Iltimos, {storeName}dan eng yangi versiyaga yangilang.",
   "visitHospital": "Shifokorga borish",

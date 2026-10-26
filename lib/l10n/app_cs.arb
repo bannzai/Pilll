@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Časový limit vypršel. Zkontrolujte prosím připojení k internetu a zkuste to znovu. Pokud potíže přetrvávají, kontaktujte nás přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Došlo k neznámé chybě. Aktualizujte prosím aplikaci na nejnovější verzi a zkuste to znovu. Pokud potíže přetrvají, kontaktujte nás přes Nastavení > Kontaktovat nás. Kód: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Došlo k neznámé chybě. Aktualizujte prosím aplikaci na nejnovější verzi a zkuste to znovu. Pokud problém přetrvá, kontaktujte nás přes Nastavení > Kontaktovat nás. Kód: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Problém s připojením. Zkontrolujte prosím připojení k internetu a zkuste to znovu. Pokud problém přetrvává, kontaktujte nás prostřednictvím Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Došlo k potížím s internetovým připojením. Zkontrolujte připojení a zkuste to prosím znovu. Pokud potíže přetrvají, kontaktujte nás přes Nastavení > Kontaktovat podporu. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Aktualizujte prosím aplikaci",
   "forceUpdateMessage": "Prosíme o aktualizaci verze vaší aplikace. Aktualizujte prosím na nejnovější verzi z {storeName}.",
   "visitHospital": "Navštívit lékaře",

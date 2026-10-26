@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "S'ha esgotat el temps d'espera. Comprova la connexió a internet i torna-ho a provar. Si el problema continua, contacta amb nosaltres des de Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "S’ha produït un error desconegut. Actualitza l’aplicació a la versió més recent i torna-ho a provar. Si el problema continua, contacta amb nosaltres a Configuració > Contacta amb nosaltres. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "S’ha produït un error desconegut. Actualitza l’aplicació a la versió més recent i torna-ho a provar. Si el problema continua, contacta amb nosaltres des de Configuració > Contacta amb nosaltres. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Error de connexió. Comprovi la connexió a internet i torneu-ho a intentar. Si el problema persisteix, aneu a Configuració > Contacte per contactar-nos. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Hi ha un problema amb la connexió a internet. Comprova la connexió i torna-ho a provar. Si el problema continua, contacta amb nosaltres a Configuració > Contacta amb nosaltres. Detalls: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Si us plau, actualitzeu l'aplicació",
   "forceUpdateMessage": "Us demanem que actualitzeu la versió de l'aplicació. Si us plau, actualitzeu a la versió més recent des de {storeName}",
   "visitHospital": "Anar al metge",

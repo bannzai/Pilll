@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "请求超时了。请检查网络连接后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "发生了未知错误。请将应用更新到最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "出现未知错误。请将应用更新至最新版本后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。代码：{errorCode} 详情：{exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "网络连接异常。请检查网络环境后重试。如问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "网络连接出现问题。请检查网络后重试。如果问题仍未解决，请通过设置 > 联系我们与我们联系。详情：{exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "请更新应用",
   "forceUpdateMessage": "请更新您的应用版本。请前往{storeName}下载最新版本",
   "visitHospital": "就医",

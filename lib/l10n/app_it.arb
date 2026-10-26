@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "Il tempo di attesa è scaduto. Controlla la connessione Internet e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "Si è verificato un errore sconosciuto. Aggiorna l’app all’ultima versione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Codice: {errorCode} Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Si è verificato un errore sconosciuto. Aggiorna l’app all’ultima versione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Codice: {errorCode} Dettagli: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Errore di comunicazione. Verifica la tua connessione internet e riprova. Se il problema persiste, contattaci tramite Impostazioni > Contatta il supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "C'è un problema con la connessione Internet. Controlla la connessione e riprova. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Si prega di aggiornare l'app",
   "forceUpdateMessage": "Ti chiediamo di aggiornare la versione della tua app. Aggiorna alla versione più recente tramite {storeName}",
   "visitHospital": "Visita medica",

@@ -321,7 +321,7 @@
   "purchaseErrorProductRequestTimeout": "The request timed out. Check your internet connection and try again. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "An unknown error occurred. Please update the app to the latest version and try again. If the problem continues, contact us through Settings > Contact us. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "Something went wrong. Please update the app to the latest version and try again. If the problem continues, contact us through Settings > Contact us. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "Network connection error. Please check your network connection and try again. If the issue persists, please contact us via Settings > Contact Us. Details: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "There's a problem with your internet connection. Check your connection and try again. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "forceUpdateTitle": "Please update the app",
   "forceUpdateMessage": "Please update your app version. Download the latest version from {storeName}.",
   "visitHospital": "See doctor",
