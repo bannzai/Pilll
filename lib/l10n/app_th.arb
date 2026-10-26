@@ -434,7 +434,7 @@
   "logoutCompleted": "ออกจากระบบแล้วค่ะ",
   "specialDiscountPriceNow": "รับแพ็กเกจพรีเมียมในราคาพิเศษ!",
   "inquiryTypeLabel": "ประเภทคำถาม",
-  "bugReport": "รายงานข้อผิดพลาด",
+  "bugReport": "แจ้งปัญหาแอป",
   "featureRequest": "ความคิดเห็นและข้อเสนอแนะ",
   "otherInquiry": "อื่นๆ",
   "otherInquiryPlaceholder": "กรุณากรอกรายละเอียดอื่นๆ",
