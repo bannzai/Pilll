@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Адрас электроннай пошты, які вы выкарыстоўваеце для ўліковага запісу {accountTypeProviderName}, ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца не атрымаецца. Калі ласка, зазірніце таксама ў частыя пытанні. Падрабязнасці: {exceptionMessage}",
   "todaySchedule": "Вашы планы на сёння",
   "calendarSchedule": "Падзеі календара",
-  "newPillSheetNotificationTitle": "Сёння пачынаецца новы блістэр",
+  "newPillSheetNotificationTitle": "Сёння пачынаецца новая ўпакоўка пігулак",
   "newPillSheetNotificationMessage": "🆕 Сёння пачынаецца новая пачка\nНе забывайце прыняць таблетку👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Прэміум інфармацыя не знойдзена",
   "purchaseErrorPurchasePendingError": "Актывацыя плацяжоў яшчэ не завершана. Калі ласка, пачакайце некаторы час і праверце зноў.",

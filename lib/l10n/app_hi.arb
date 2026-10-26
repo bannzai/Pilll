@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "आपके {accountTypeProviderName} खाते में इस्तेमाल किया जाने वाला ईमेल पता पहले से किसी दूसरे Pilll खाते से जुड़ा है, इसलिए पंजीकरण नहीं हो सकता। कृपया अक्सर पूछे जाने वाले सवाल भी देखें। विवरण: {exceptionMessage}",
   "todaySchedule": "आज के आपके कार्यक्रम",
   "calendarSchedule": "कैलेंडर में तय कार्यक्रम",
-  "newPillSheetNotificationTitle": "आज से नई शीट शुरू होती है",
+  "newPillSheetNotificationTitle": "आज से गोलियों का नया पैक शुरू होता है",
   "newPillSheetNotificationMessage": "🆕 आज से नया शीट शुरू हो रहा है\nइसे लेना न भूलें👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम जानकारी नहीं मिली",
   "purchaseErrorPurchasePendingError": "आपका भुगतान सक्रियण अभी तक पूरा नहीं हुआ है। कृपया कुछ समय बाद पुनः जांचें।",

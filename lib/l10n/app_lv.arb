@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Reģistrēties neizdodas, jo e-pasta adrese, ko izmantojat savā {accountTypeProviderName} kontā, jau ir saistīta ar citu Pilll kontu. Ieskatieties arī bieži uzdotajos jautājumos. Detalizēta informācija: {exceptionMessage}",
   "todaySchedule": "Jūsu šodienas plāni",
   "calendarSchedule": "Kalendāra notikumi",
-  "newPillSheetNotificationTitle": "Šodien sākas jauns blisteris",
+  "newPillSheetNotificationTitle": "Šodien sākas jauns tablešu iepakojums",
   "newPillSheetNotificationMessage": "🆕 Šodien sākas jauna tablešu plāksne\nNeaizmirstiet lietot👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informācija netika atrasta",
   "purchaseErrorPurchasePendingError": "Maksājuma aktivizācija nav pabeigta. Lūdzu, uzgaidiet un pārbaudiet vēlreiz pēc brīža.",

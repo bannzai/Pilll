@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Hindi po kayo makapagrehistro dahil naka-link na sa ibang Pilll account ang email address na ginagamit ninyo sa {accountTypeProviderName} account. Pakitingnan din ang mga madalas itanong. Mga detalye: {exceptionMessage}",
   "todaySchedule": "Iskedyul ninyo ngayong araw",
   "calendarSchedule": "Mga iskedyul sa kalendaryo",
-  "newPillSheetNotificationTitle": "Magsisimula ang bagong sheet ngayon",
+  "newPillSheetNotificationTitle": "Magsisimula na po ngayon ang bagong pakete ng pildoras",
   "newPillSheetNotificationMessage": "🆕 Simula na ng bagong sheet ngayong araw\nHuwag kalimutang uminom! 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Hindi natagpuan ang premium na impormasyon",
   "purchaseErrorPurchasePendingError": "Hindi pa nakumpleto ang pag-activate ng bayad. Mangyaring maghintay ng ilang sandali at tingnan muli.",

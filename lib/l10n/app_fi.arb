@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Rekisteröityminen ei onnistu, koska {accountTypeProviderName}-tililläsi käyttämäsi sähköpostiosoite on jo liitetty toiseen Pilll-tiliin. Katso myös usein kysytyt kysymykset. Lisätiedot: {exceptionMessage}",
   "todaySchedule": "Tämän päivän suunnitelmat",
   "calendarSchedule": "Kalenterin tapahtumat",
-  "newPillSheetNotificationTitle": "Uusi pilleriloppu alkaa tänään",
+  "newPillSheetNotificationTitle": "Uusi pilleripakkaus alkaa tänään",
   "newPillSheetNotificationMessage": "🆕 Uusi pillikierto alkaa tänään\nMuista ottaa pillisi👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-tietoja ei löytynyt",
   "purchaseErrorPurchasePendingError": "Maksun aktivointi ei ole vielä valmistunut. Odota hetki ja tarkista tilanne uudelleen.",

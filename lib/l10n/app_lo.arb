@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ບໍ່ສາມາດລົງທະບຽນໄດ້ ເພາະອີເມວທີ່ໃຊ້ກັບບັນຊີ {accountTypeProviderName} ເຊື່ອມກັບບັນຊີ Pilll ອື່ນແລ້ວ. ກະລຸນາເບິ່ງຄຳຖາມທີ່ພົບເລື້ອຍໆດ້ວຍເດີ. ລາຍລະອຽດ: {exceptionMessage}",
   "todaySchedule": "ຕາຕະລາງຂອງມື້ນີ້",
   "calendarSchedule": "ນັດໝາຍໃນປະຕິທິນ",
-  "newPillSheetNotificationTitle": "ວັນນີ້ເລີ່ມຊີດໃໝ່",
+  "newPillSheetNotificationTitle": "ຊອງຢາເມັດໃໝ່ເລີ່ມມື້ນີ້",
   "newPillSheetNotificationMessage": "🆕 ແຜ່ນຢາໃໝ່ເລີ່ມຕົ້ນຈາກມື້ນີ້\nຢ່າລືມກິນຢານະ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ຫາຂໍ້ມູນພຣີມຽມບໍ່ພົບ",
   "purchaseErrorPurchasePendingError": "ການເປີດນຳໃຊ້ການຊຳລະເງິນຍັງບໍ່ທັນສຳເລັດ. ກະລຸນາລໍຖ້າສັກຄູ່ແລ້ວກວດສອບອີກຄັ້ງ",

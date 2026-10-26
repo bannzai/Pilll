@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Não é possível concluir o cadastro porque o endereço de e-mail que você usa na conta {accountTypeProviderName} já está vinculado a outra conta do Pilll. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "todaySchedule": "Sua agenda de hoje",
   "calendarSchedule": "Eventos do calendário",
-  "newPillSheetNotificationTitle": "Uma nova cartela começa hoje",
+  "newPillSheetNotificationTitle": "Sua nova cartela de pílulas começa hoje",
   "newPillSheetNotificationMessage": "🆕 Hoje começa uma nova cartela\nNão esqueça de tomar sua pílula 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informações premium não foram encontradas",
   "purchaseErrorPurchasePendingError": "A ativação do pagamento ainda não foi concluída. Aguarde um momento e verifique novamente.",

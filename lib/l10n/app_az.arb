@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda istifadə etdiyiniz e-poçt ünvanı artıq başqa bir Pilll hesabına bağlı olduğu üçün qeydiyyatdan keçə bilmirsiniz. Zəhmət olmasa, tez-tez verilən suallara da baxın. Təfərrüatlar: {exceptionMessage}",
   "todaySchedule": "Bugünkü planlarınız",
   "calendarSchedule": "Təqvimdəki planlar",
-  "newPillSheetNotificationTitle": "Bugündən yeni paket başlayır",
+  "newPillSheetNotificationTitle": "Yeni həb qutusuna bu gün başlayırsınız",
   "newPillSheetNotificationMessage": "🆕 Bugündən yeni həb vərəqi başlayır\nUnutmadan qəbul edək👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium məlumatı tapılmadı",
   "purchaseErrorPurchasePendingError": "Ödəniş aktivasiyası hələ tamamlanmayıb. Xahiş edirik, bir qədər gözlədikdən sonra yenidən yoxlayın.",

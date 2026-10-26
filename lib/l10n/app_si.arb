@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ඔබේ {accountTypeProviderName} ගිණුමේ භාවිත වන ඊමේල් ලිපිනය දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ වී ඇති නිසා ලියාපදිංචි විය නොහැක. කරුණාකර නිතර අසන ප්‍රශ්නද බලන්න. විස්තර: {exceptionMessage}",
   "todaySchedule": "අද දින ඔබේ කාලසටහන",
   "calendarSchedule": "දින දර්ශනයේ සැලසුම්",
-  "newPillSheetNotificationTitle": "අද අලුත් සීට් එකක් ආරම්භ වේ",
+  "newPillSheetNotificationTitle": "අලුත් පෙති පැකට්ටුව අද සිට ආරම්භ වේ",
   "newPillSheetNotificationMessage": "🆕 අද සිට නව ෂීට් එකක් ආරම්භ වේ\nසේවනය කිරීමට අමතක නොකරන්න👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රිමියම් තොරතුරු සොයා ගත නොහැකි විය",
   "purchaseErrorPurchasePendingError": "ගෙවීම සක්‍රිය කිරීම නිම වී නැත. කරුණාකර ටික වේලාවක් බලාගෙන නැවතත් පරීක්‍ෂා කරන්න.",

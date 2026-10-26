@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Не можете да се регистрирате бидејќи адресата на е-пошта што ја користите со сметката {accountTypeProviderName} веќе е поврзана со друга сметка на Pilll. Погледнете ги и често поставуваните прашања. Детали: {exceptionMessage}",
   "todaySchedule": "Вашиот распоред за денес",
   "calendarSchedule": "Настани во календарот",
-  "newPillSheetNotificationTitle": "Од денес започнува нова листче",
+  "newPillSheetNotificationTitle": "Денес започнува ново пакување таблети",
   "newPillSheetNotificationMessage": "🆕 Денес започнува нов лист\nНе заборавајте да ги земете👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум информациите не се пронајдени",
   "purchaseErrorPurchasePendingError": "Активирањето на наплаќањето сè уште не е комплетирано. Ве молиме почекајте малку и проверете повторно.",

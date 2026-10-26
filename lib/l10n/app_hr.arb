@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Ne možete se registrirati jer je adresa e-pošte koju upotrebljavate za račun {accountTypeProviderName} već povezana s drugim računom za Pilll. Pogledajte i često postavljana pitanja. Pojedinosti: {exceptionMessage}",
   "todaySchedule": "Vaš današnji raspored",
   "calendarSchedule": "Događaji u kalendaru",
-  "newPillSheetNotificationTitle": "Danas počinje nova blister",
+  "newPillSheetNotificationTitle": "Danas započinje novo pakiranje pilula",
   "newPillSheetNotificationMessage": "🆕 Danas počinje nova blister\nNe zaboravite uzeti!👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informacije nisu pronađene",
   "purchaseErrorPurchasePendingError": "Aktivacija pretplate još nije završena. Molimo pričekajte malo pa zatim provjerite.",

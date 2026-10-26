@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "មិនអាចចុះឈ្មោះបានទេ ព្រោះអាសយដ្ឋានអ៊ីមែលដែលអ្នកប្រើជាមួយគណនី {accountTypeProviderName} បានភ្ជាប់ទៅគណនី Pilll ផ្សេងរួចហើយ។ សូមមើលសំណួរដែលសួរញឹកញាប់ផងដែរ។ ព័ត៌មានលម្អិត៖ {exceptionMessage}",
   "todaySchedule": "កាលវិភាគរបស់អ្នកសម្រាប់ថ្ងៃនេះ",
   "calendarSchedule": "កាលវិភាគក្នុងប្រតិទិន",
-  "newPillSheetNotificationTitle": "សន្លឹកថ្នាំថ្មីចាប់ផ្តើមពីថ្ងៃនេះ",
+  "newPillSheetNotificationTitle": "កញ្ចប់ថ្នាំគ្រាប់ថ្មីចាប់ផ្តើមនៅថ្ងៃនេះ",
   "newPillSheetNotificationMessage": "🆕 ថ្ងៃនេះ ចាប់ផ្តើមជីថ្នាំថ្មី\nកុំភ្លេចពិសារថ្នាំ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានពិសេស",
   "purchaseErrorPurchasePendingError": "ការធ្វើឱ្យការបង់ប្រាក់មានប្រសិទ្ធភាពមិនទាន់បាន​បញ្ចប់នៅឡើយទេ។ សូមរង់ចាំបន្តិច រួចពិនិត្យមើលម្តងទៀត។",

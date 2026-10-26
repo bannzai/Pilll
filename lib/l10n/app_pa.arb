@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ਤੁਹਾਡੇ {accountTypeProviderName} ਖਾਤੇ ਨਾਲ ਵਰਤਿਆ ਜਾਂਦਾ ਈਮੇਲ ਪਤਾ ਪਹਿਲਾਂ ਹੀ ਕਿਸੇ ਹੋਰ Pilll ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ, ਇਸ ਲਈ ਰਜਿਸਟਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ। ਕਿਰਪਾ ਕਰਕੇ ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ ਵੀ ਦੇਖੋ। ਵੇਰਵੇ: {exceptionMessage}",
   "todaySchedule": "ਅੱਜ ਦਾ ਤੁਹਾਡਾ ਸਮਾਂ-ਸਾਰਣੀ",
   "calendarSchedule": "ਕੈਲੰਡਰ ਦੇ ਪ੍ਰੋਗਰਾਮ",
-  "newPillSheetNotificationTitle": "ਅੱਜ ਤੋਂ ਨਵੀਂ ਸ਼ੀਟ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ",
+  "newPillSheetNotificationTitle": "ਅੱਜ ਤੋਂ ਗੋਲੀਆਂ ਦਾ ਨਵਾਂ ਪੈਕ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ",
   "newPillSheetNotificationMessage": "🆕 ਅੱਜ ਤੋਂ ਨਵੀਂ ਸ਼ੀਟ ਸ਼ੁਰੂ ਹੋ ਰਹੀ ਹੈ\nਲੈਣਾ ਨਾ ਭੁੱਲੋ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
   "purchaseErrorPurchasePendingError": "ਚਾਰਜ ਦੀ ਐਕਟੀਵੇਸ਼ਨ ਅਜੇ ਪੂਰੀ ਨਹੀਂ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰੋ ਅਤੇ ਫਿਰ ਚੈਕ ਕਰੋ।",

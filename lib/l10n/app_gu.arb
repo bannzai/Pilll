@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "તમારા {accountTypeProviderName} ખાતામાં વપરાતું ઈમેલ સરનામું પહેલેથી જ બીજા Pilll ખાતા સાથે જોડાયેલું હોવાથી નોંધણી થઈ શકતી નથી. કૃપા કરીને વારંવાર પૂછાતા પ્રશ્નો પણ જુઓ. વિગતો: {exceptionMessage}",
   "todaySchedule": "આજનું તમારું સમયપત્રક",
   "calendarSchedule": "કૅલેન્ડરની નોંધો",
-  "newPillSheetNotificationTitle": "આજથી નવું શીટ શરૂ થાય છે",
+  "newPillSheetNotificationTitle": "આજથી ગોળીઓનું નવું પૅક શરૂ થાય છે",
   "newPillSheetNotificationMessage": "🆕 આજથી નવી શીટ શરૂ થાય છે\nલેવાનું ભૂલશો નહીં👍",
   "unexpectedPremiumEntitlementsIsNotExists": "પ્રીમિયમ માહિતી મળી શકી નથી",
   "purchaseErrorPurchasePendingError": "પેમેન્ટનું સક્રિયકરણ હજુ પૂર્ણ થયું નથી. કૃપા કરીને થોડા સમય પછી ફરીથી તપાસો.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ستاسو د {accountTypeProviderName} حساب برېښنالیک پته له مخکې څخه له بل Pilll حساب سره تړلې ده، نو نوم‌لیکنه نه شي کېدای. مهرباني وکړئ ډېرې پوښتل کېدونکې پوښتنې هم وګورئ. جزییات: {exceptionMessage}",
   "todaySchedule": "ستاسو د نن ورځې مهالویش",
   "calendarSchedule": "د کلیزې مهالویش",
-  "newPillSheetNotificationTitle": "نن د نوي شیټ پیل کیږي",
+  "newPillSheetNotificationTitle": "د ګولیو نوی بسته نن پیلېږي",
   "newPillSheetNotificationMessage": "🆕 نن د نوي شیټ پیل دی\nهیر مه کړئ چې دا واخلئ 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "د پریمیم معلومات ونه موندل شول",
   "purchaseErrorPurchasePendingError": "د پیسو ورکولو پروسه لا تر اوسه بشپړه نده. مهرباني وکړئ یو څه وخت انتظار وکړئ او بیا یې وګورئ.",

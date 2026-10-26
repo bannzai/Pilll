@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Nuk mund të regjistroheni sepse adresa e emailit që përdorni me llogarinë {accountTypeProviderName} është lidhur tashmë me një llogari tjetër Pilll. Shihni edhe pyetjet e shpeshta. Hollësi: {exceptionMessage}",
   "todaySchedule": "Programi juaj për sot",
   "calendarSchedule": "Ngjarjet e kalendarit",
-  "newPillSheetNotificationTitle": "Sot fillon fletë e re",
+  "newPillSheetNotificationTitle": "Sot fillon paketa e re e pilulave",
   "newPillSheetNotificationMessage": "🆕 Sot fillon një fletë e re\nMos harroni ta merrni👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informacionet premium nuk u gjetën",
   "purchaseErrorPurchasePendingError": "Aktivimi i pagesës nuk është përfunduar ende. Ju lutemi prisni pak kohë dhe kontrolloni përsëri.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Nem tudsz regisztrálni, mert a {accountTypeProviderName}-fiókodhoz használt e-mail-cím már egy másik Pilll-fiókhoz kapcsolódik. Nézd meg a gyakori kérdéseket is. Részletek: {exceptionMessage}",
   "todaySchedule": "Mai teendőid",
   "calendarSchedule": "Naptári események",
-  "newPillSheetNotificationTitle": "Ma új tablettacsomag kezdődik",
+  "newPillSheetNotificationTitle": "Ma kezdődik az új tablettalevél",
   "newPillSheetNotificationMessage": "🆕 Ma új csomag kezdődik\nNe felejtsd el bevenni! 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "A prémium információ nem található",
   "purchaseErrorPurchasePendingError": "Az előfizetés aktiválása még nem fejeződött be. Kérjük, várjon egy kis ideig, majd ellenőrizze újra.",

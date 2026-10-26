@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} каттоо эсебиңизде колдонгон электрондук почта дареги башка Pilll каттоо эсебине мурунтан эле байланып тургандыктан, каттала албайсыз. Көп берилүүчү суроолорду да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "todaySchedule": "Бүгүнкү планыңыз",
   "calendarSchedule": "Жылнаамадагы пландар",
-  "newPillSheetNotificationTitle": "Бүгүндөн жаңы курс башталат",
+  "newPillSheetNotificationTitle": "Бүгүн жаңы таблетка таңгагы башталат",
   "newPillSheetNotificationMessage": "🆕 Бүгүндөн жаңы дары пачкасы башталат\nУнутпай ичели 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум маалымат табылбады",
   "purchaseErrorPurchasePendingError": "Премиум кызматтарды иштетүү аяктала элек. Бир аз убакыт күтүп, кайрадан текшерип көрүңүз.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Գրանցվել հնարավոր չէ, քանի որ {accountTypeProviderName} հաշվում Ձեր օգտագործած էլփոստի հասցեն արդեն կապված է Pilll-ի մեկ այլ հաշվի հետ։ Խնդրում ենք ծանոթանալ նաև հաճախ տրվող հարցերին։ Մանրամասներ՝ {exceptionMessage}",
   "todaySchedule": "Ձեր այսօրվա ծրագիրը",
   "calendarSchedule": "Օրացույցի իրադարձություններ",
-  "newPillSheetNotificationTitle": "Այսօր սկսվում է նոր պաշարակը",
+  "newPillSheetNotificationTitle": "Այսօր սկսվում է հաբերի նոր տուփը",
   "newPillSheetNotificationMessage": "🆕 Այսօր սկսվում է նոր շերտը\nՄի մոռացեք ընդունել👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Պրեմիում տեղեկությունները չեն գտնվել",
   "purchaseErrorPurchasePendingError": "Վճարման ակտիվացումը դեռ չի ավարտվել: Խնդրում ենք սպասել և նորից ստուգել:",

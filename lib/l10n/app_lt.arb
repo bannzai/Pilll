@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Užsiregistruoti nepavyksta, nes el. pašto adresas, kurį naudojate su {accountTypeProviderName} paskyra, jau susietas su kita Pilll paskyra. Peržiūrėkite ir dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
   "todaySchedule": "Šiandienos planai",
   "calendarSchedule": "Kalendoriaus įvykiai",
-  "newPillSheetNotificationTitle": "Šiandien prasideda nauja pakuotė",
+  "newPillSheetNotificationTitle": "Šiandien pradedate naują tablečių pakuotę",
   "newPillSheetNotificationMessage": "🆕 Šiandien prasideda naujas vaistų paketas\nNepamirškite juos išgerti👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informacijos nerasta",
   "purchaseErrorPurchasePendingError": "Mokėjimo aktyvinimas dar neužbaigtas. Prašome palaukti ir patikrinti vėliau.",

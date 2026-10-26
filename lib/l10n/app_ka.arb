@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "რეგისტრაცია ვერ სრულდება, რადგან ელფოსტის მისამართი, რომელსაც {accountTypeProviderName} ანგარიშისთვის იყენებთ, უკვე დაკავშირებულია Pilll-ის სხვა ანგარიშთან. გთხოვთ, გაეცნოთ ხშირად დასმულ კითხვებსაც. დეტალები: {exceptionMessage}",
   "todaySchedule": "თქვენი დღევანდელი გეგმები",
   "calendarSchedule": "კალენდრის გეგმები",
-  "newPillSheetNotificationTitle": "დღეს ახალი ბლისტერი იწყება",
+  "newPillSheetNotificationTitle": "დღეს აბების ახალი შეფუთვა იწყება",
   "newPillSheetNotificationMessage": "🆕 დღეს იწყება ახალი შიტი\nნუ დაივიწყებთ მიღებას👍",
   "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმ ინფორმაცია ვერ მოიძებნა",
   "purchaseErrorPurchasePendingError": "გადახდის დადასტურება ჯერ კიდევ დასრულებული არ არის. გთხოვთ, ცოტა ხანში ხელახლა შეამოწმოთ.",

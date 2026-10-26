@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Huwezi kujisajili kwa sababu anwani ya barua pepe unayotumia kwenye akaunti yako ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll. Tafadhali angalia pia maswali yanayoulizwa mara kwa mara. Maelezo: {exceptionMessage}",
   "todaySchedule": "Ratiba yako ya leo",
   "calendarSchedule": "Ratiba ya kalenda",
-  "newPillSheetNotificationTitle": "Leo kanda mpya ya dawa inaanza",
+  "newPillSheetNotificationTitle": "Pakiti mpya ya vidonge inaanza leo",
   "newPillSheetNotificationMessage": "🆕 Leo kuanzia karatasi mpya ya dawa inaanza\nUsisahau kuchukua dawa yako👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Taarifa za premium hazikupatikana",
   "purchaseErrorPurchasePendingError": "Kuwezesha malipo hakujakamilika. Tafadhali subiri muda kidogo halafu jaribu tena.",

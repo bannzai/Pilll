@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "በ{accountTypeProviderName} መለያዎ የሚጠቀሙበት የኢሜይል አድራሻ ከሌላ የPilll መለያ ጋር አስቀድሞ ተያይዟል። ስለዚህ መመዝገብ አይችሉም። እባክዎ ተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "todaySchedule": "የዛሬ መርሃ ግብር",
   "calendarSchedule": "የቀን መቁጠሪያ ቀጠሮዎች",
-  "newPillSheetNotificationTitle": "ዛሬ አዲስ ሺት ይጀምራል",
+  "newPillSheetNotificationTitle": "አዲስ የክኒን ጥቅል ዛሬ ይጀምራል",
   "newPillSheetNotificationMessage": "🆕 ዛሬ አዲስ የመድሃኒት ሉህ ይጀምራል\nመውሰድዎን አይርሱ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ፕሪሚየም መረጃ አልተገኘም",
   "purchaseErrorPurchasePendingError": "የክፍያ ማግበሪያ አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ያረጋግጡ",

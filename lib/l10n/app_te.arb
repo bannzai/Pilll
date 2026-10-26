@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "మీ {accountTypeProviderName} ఖాతాలో ఉపయోగించే ఇమెయిల్ చిరునామా ఇప్పటికే మరో Pilll ఖాతాతో అనుసంధానమై ఉన్నందున నమోదు చేసుకోలేరు. దయచేసి తరచుగా అడిగే ప్రశ్నలను కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "todaySchedule": "ఈ రోజు మీ కార్యక్రమాలు",
   "calendarSchedule": "క్యాలెండర్‌లోని కార్యక్రమాలు",
-  "newPillSheetNotificationTitle": "ఈ రోజు నుండి కొత్త షీట్ మొదలవుతుంది",
+  "newPillSheetNotificationTitle": "కొత్త మాత్రల స్ట్రిప్ ఈ రోజు ప్రారంభమవుతుంది",
   "newPillSheetNotificationMessage": "🆕 ఈరోజు నుండి కొత్త షీట్ ప్రారంభమవుతుంది\nమర్చిపోకుండా తీసుకోండి👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ప్రీమియం సమాచారం కనుగొనబడలేదు",
   "purchaseErrorPurchasePendingError": "చెల్లింపు సక్రియీకరణ ఇంకా పూర్తి కాలేదు. దయచేసి కొంత సమయం వేచి ఉండి మళ్లీ తనిఖీ చేయండి.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Registrace není možná, protože e-mailová adresa používaná s účtem {accountTypeProviderName} je už propojená s jiným účtem Pilll. Podívejte se prosím také na časté dotazy. Podrobnosti: {exceptionMessage}",
   "todaySchedule": "Dnešní plán",
   "calendarSchedule": "Události v kalendáři",
-  "newPillSheetNotificationTitle": "Dnes začíná nové balení",
+  "newPillSheetNotificationTitle": "Dnes začíná nové platíčko pilulek",
   "newPillSheetNotificationMessage": "🆕 Dnes začíná nový blistr\nNezapomeňte na užití👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium informace nebyly nalezeny",
   "purchaseErrorPurchasePendingError": "Aktivace předplatného není dokončena. Prosím počkejte chvíli a zkuste to znovu.",

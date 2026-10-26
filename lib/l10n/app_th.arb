@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ไม่สามารถสมัครได้เนื่องจากอีเมลที่ใช้กับบัญชี {accountTypeProviderName} เชื่อมกับบัญชี Pilll อื่นอยู่แล้วค่ะ โปรดดูคำถามที่พบบ่อยเพิ่มเติมด้วยค่ะ รายละเอียด: {exceptionMessage}",
   "todaySchedule": "กำหนดการวันนี้",
   "calendarSchedule": "กำหนดการในปฏิทิน",
-  "newPillSheetNotificationTitle": "วันนี้เริ่มแผงยาใหม่แล้ว",
+  "newPillSheetNotificationTitle": "เริ่มแผงยาใหม่วันนี้ค่ะ",
   "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มแผงยาใหม่แล้ว\nอย่าลืมรับประทานนะ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียม",
   "purchaseErrorPurchasePendingError": "การชำระเงินยังไม่เสร็จสิ้น กรุณารอสักครู่แล้วตรวจสอบอีกครั้ง",

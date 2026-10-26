@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} hisobingizda ishlatadigan elektron pochta manzili allaqachon boshqa Pilll hisobiga bogʻlangan, shu sababli roʻyxatdan oʻta olmaysiz. Koʻp soʻraladigan savollarni ham koʻring. Tafsilotlar: {exceptionMessage}",
   "todaySchedule": "Bugungi rejalaringiz",
   "calendarSchedule": "Taqvimdagi rejalar",
-  "newPillSheetNotificationTitle": "Bugundan yangi qadoq boshlanadi",
+  "newPillSheetNotificationTitle": "Yangi tabletkalar oʻrami bugun boshlanadi",
   "newPillSheetNotificationMessage": "🆕 Bugun yangi dori kursi boshlanadi\nIchishni unutmang👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium ma'lumoti topilmadi",
   "purchaseErrorPurchasePendingError": "Obuna faollashtirish hali tugallanmagan. Biroz vaqt o'tgach, qaytadan tekshirib ko'ring.",

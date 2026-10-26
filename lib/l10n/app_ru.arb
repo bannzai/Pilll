@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Зарегистрироваться не получится: адрес электронной почты, который вы используете в учётной записи {accountTypeProviderName}, уже привязан к другой учётной записи Pilll. Загляните также в раздел частых вопросов. Подробности: {exceptionMessage}",
   "todaySchedule": "Ваши планы на сегодня",
   "calendarSchedule": "События календаря",
-  "newPillSheetNotificationTitle": "Сегодня начинается новая упаковка",
+  "newPillSheetNotificationTitle": "Сегодня начинается новая упаковка таблеток",
   "newPillSheetNotificationMessage": "🆕 Сегодня начинается новая упаковка\nНе забудьте принять таблетку👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Данные премиум-подписки не найдены",
   "purchaseErrorPurchasePendingError": "Активация подписки еще не завершена. Пожалуйста, подождите и попробуйте снова через некоторое время.",

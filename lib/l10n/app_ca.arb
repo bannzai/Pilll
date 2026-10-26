@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "No et pots registrar perquè l’adreça electrònica que fas servir amb el compte de {accountTypeProviderName} ja està vinculada a un altre compte de Pilll. Pots consultar també les preguntes freqüents. Detalls: {exceptionMessage}",
   "todaySchedule": "El teu programa d’avui",
   "calendarSchedule": "Esdeveniments del calendari",
-  "newPillSheetNotificationTitle": "Avui comença un nou full",
+  "newPillSheetNotificationTitle": "Avui comences un envàs nou de píndoles",
   "newPillSheetNotificationMessage": "🆕 Avui comença una nova plaqueta\nNo oblidis prendre-la👍",
   "unexpectedPremiumEntitlementsIsNotExists": "No s'ha trobat la informació premium",
   "purchaseErrorPurchasePendingError": "L'activació del pagament encara no s'ha completat. Si us plau, espereu una estona i torneu a comprovar-ho.",

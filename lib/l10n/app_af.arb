@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Jy kan nie registreer nie, want die e-posadres wat jy met jou {accountTypeProviderName}-rekening gebruik, is reeds aan ’n ander Pilll-rekening gekoppel. Kyk asseblief ook na die algemene vrae. Besonderhede: {exceptionMessage}",
   "todaySchedule": "Vandag se beplanning",
   "calendarSchedule": "Kalenderafsprake",
-  "newPillSheetNotificationTitle": "Vanaf vandag begin 'n nuwe pil-pakkie",
+  "newPillSheetNotificationTitle": "Jou nuwe pilpak begin vandag",
   "newPillSheetNotificationMessage": "🆕 'n Nuwe blad begin vandag\nOnthou om dit te neem👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium inligting nie gevind nie",
   "purchaseErrorPurchasePendingError": "Die betalingsaktivering is nog nie voltooi nie. Wag asseblief 'n rukkie en kontroleer weer.",

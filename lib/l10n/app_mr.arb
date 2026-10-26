@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "तुमच्या {accountTypeProviderName} खात्यासाठी वापरला जाणारा ईमेल पत्ता आधीच दुसऱ्या Pilll खात्याशी जोडलेला असल्याने नोंदणी करता येत नाही. कृपया वारंवार विचारले जाणारे प्रश्नही पाहा. तपशील: {exceptionMessage}",
   "todaySchedule": "आजचे तुमचे वेळापत्रक",
   "calendarSchedule": "दिनदर्शिकेतील नियोजित गोष्टी",
-  "newPillSheetNotificationTitle": "आज नवीन शीट सुरू होत आहे",
+  "newPillSheetNotificationTitle": "आजपासून गोळ्यांचे नवीन पाकीट सुरू होते",
   "newPillSheetNotificationMessage": "🆕 आजपासून नवीन शीट सुरू होत आहे\nविसरू नका आणि गोळ्या घ्या👍",
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम माहिती सापडली नाही",
   "purchaseErrorPurchasePendingError": "बिलिंग सक्रियकरण अजून पूर्ण झाले नाही. कृपया काही वेळ प्रतीक्षा करून पुन्हा तपासा",

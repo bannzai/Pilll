@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Allwch chi ddim cofrestru oherwydd bod y cyfeiriad e-bost rydych chi’n ei ddefnyddio gyda chyfrif {accountTypeProviderName} eisoes wedi’i gysylltu â chyfrif Pilll arall. Edrychwch ar y cwestiynau cyffredin hefyd. Manylion: {exceptionMessage}",
   "todaySchedule": "Eich amserlen heddiw",
   "calendarSchedule": "Digwyddiadau’r calendr",
-  "newPillSheetNotificationTitle": "Mae taflen newydd yn dechrau heddiw",
+  "newPillSheetNotificationTitle": "Mae pecyn newydd o bilsen yn dechrau heddiw",
   "newPillSheetNotificationMessage": "🆕 Mae pecyn newydd yn dechrau heddiw\nPeidiwch ag anghofio ei gymryd 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ni chanfuwyd gwybodaeth premiwm",
   "purchaseErrorPurchasePendingError": "Nid yw actifadu'r taliad wedi'i gwblhau. Arhoswch am ychydig ac yna gwiriwch eto.",

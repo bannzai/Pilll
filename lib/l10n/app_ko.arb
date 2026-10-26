@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} 계정에서 사용하는 이메일 주소가 이미 다른 Pilll 계정에 연결되어 있어 가입할 수 없어요. 자주 묻는 질문도 확인해 주세요. 자세한 내용: {exceptionMessage}",
   "todaySchedule": "오늘의 일정이에요",
   "calendarSchedule": "캘린더 일정",
-  "newPillSheetNotificationTitle": "오늘부터 새로운 시트가 시작됩니다",
+  "newPillSheetNotificationTitle": "오늘부터 새 피임약 팩을 시작해요",
   "newPillSheetNotificationMessage": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍",
   "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보를 찾을 수 없습니다",
   "purchaseErrorPurchasePendingError": "결제 활성화가 아직 완료되지 않았습니다. 잠시 후 다시 확인해 주세요",

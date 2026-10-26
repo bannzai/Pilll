@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Не можете да се регистрирате, защото имейл адресът, който използвате с акаунта си в {accountTypeProviderName}, вече е свързан с друг акаунт в Pilll. Можете да разгледате и често задаваните въпроси. Подробности: {exceptionMessage}",
   "todaySchedule": "Планът ви за днес",
   "calendarSchedule": "Събития в календара",
-  "newPillSheetNotificationTitle": "От днес започва нова опаковка",
+  "newPillSheetNotificationTitle": "Днес започва новата опаковка с хапчета",
   "newPillSheetNotificationMessage": "🆕 Днес започва нова опаковка\nНе забравяйте да я приемете👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум информацията не е намерена",
   "purchaseErrorPurchasePendingError": "Активирането на плащането все още не е завършено. Моля, изчакайте малко и проверете отново.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Du chasch di nöd registriere, will d E-Mail-Adräss vo dim {accountTypeProviderName}-Konto scho mit eme andere Pilll-Konto verbunde isch. Lueg au i d hüüfige Frage. Details: {exceptionMessage}",
   "todaySchedule": "Dini Termin für hüt",
   "calendarSchedule": "Kaländertermin",
-  "newPillSheetNotificationTitle": "Hüt fangt es nöie Blister aa",
+  "newPillSheetNotificationTitle": "Hüt fangt dini nöii Pillipackig aa",
   "newPillSheetNotificationMessage": "🆕 Hüt fangt es neus Pilleheft aa\nVergäss nöd z'neh👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-Informatione nöd gfunde",
   "purchaseErrorPurchasePendingError": "D Aktivierig vo de Bezahlig isch no nöd abgschlosse. Bitte wartet e bitzeli und lueget denn nomal.",

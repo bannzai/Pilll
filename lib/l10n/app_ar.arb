@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "لا يمكن إتمام التسجيل لأن عنوان البريد الإلكتروني المستخدم مع حساب {accountTypeProviderName} مرتبط بالفعل بحساب Pilll آخر. يُرجى الاطلاع أيضًا على الأسئلة الشائعة. التفاصيل: {exceptionMessage}",
   "todaySchedule": "مواعيد اليوم",
   "calendarSchedule": "مواعيد التقويم",
-  "newPillSheetNotificationTitle": "يبدأ شريط جديد اليوم",
+  "newPillSheetNotificationTitle": "تبدأ عبوة جديدة من الحبوب اليوم",
   "newPillSheetNotificationMessage": "🆕 تبدأ دورة جديدة اليوم\nلا تنسي تناول حبوبك👍",
   "unexpectedPremiumEntitlementsIsNotExists": "لم يتم العثور على معلومات البريميوم",
   "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الاشتراك بعد. يرجى الانتظار قليلاً ثم المحاولة مرة أخرى",

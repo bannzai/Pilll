@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} အကောင့်တွင် အသုံးပြုနေသော အီးမေးလ်လိပ်စာသည် အခြား Pilll အကောင့်တစ်ခုနှင့် ချိတ်ဆက်ပြီးသားဖြစ်သောကြောင့် အကောင့်အသစ် ဖွင့်၍မရပါ။ အမေးများသော မေးခွန်းများကိုလည်း ကြည့်ရှုပေးပါ။ အသေးစိတ်: {exceptionMessage}",
   "todaySchedule": "ဒီနေ့အတွက် အစီအစဉ်",
   "calendarSchedule": "ပြက္ခဒိန်ရှိ အစီအစဉ်များ",
-  "newPillSheetNotificationTitle": "ယနေ့မှ ပီလူးစာရွက်အသစ် စတင်မည်",
+  "newPillSheetNotificationTitle": "ဆေးပြားကတ်အသစ်ကို ဒီနေ့ စတင်ပါမယ်",
   "newPillSheetNotificationMessage": "🆕 ဒီနေ့ကစပြီး ဆေးအချပ်အသစ် စပါပြီ\nမမေ့ဘဲ သောက်ကြပါစို့👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ပရီမီယံအချက်အလက်များ မတွေ့ရှိပါ",
   "purchaseErrorPurchasePendingError": "ငွေပေးချေမှုအတည်ပြုခြင်း မပြီးစီးသေးပါ။ ခဏကြာပြီးမှ ပြန်လည်စစ်ဆေးပါ",

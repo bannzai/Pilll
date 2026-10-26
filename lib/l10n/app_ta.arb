@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "உங்கள் {accountTypeProviderName} கணக்கில் பயன்படுத்தும் மின்னஞ்சல் முகவரி ஏற்கெனவே வேறொரு Pilll கணக்குடன் இணைக்கப்பட்டுள்ளதால் பதிவு செய்ய முடியவில்லை. அடிக்கடி கேட்கப்படும் கேள்விகளையும் பார்க்கவும். விவரங்கள்: {exceptionMessage}",
   "todaySchedule": "இன்றைய உங்கள் அட்டவணை",
   "calendarSchedule": "நாள்காட்டி நிகழ்வுகள்",
-  "newPillSheetNotificationTitle": "இன்றிலிருந்து புதிய தாள் தொடங்குகிறது",
+  "newPillSheetNotificationTitle": "புதிய மாத்திரைப் பட்டை இன்று தொடங்குகிறது",
   "newPillSheetNotificationMessage": "🆕 இன்றிலிருந்து புதிய ஷீட் தொடங்குகிறது\nமறக்காமல் மாத்திரை எடுத்துக் கொள்ளுங்கள்👍",
   "unexpectedPremiumEntitlementsIsNotExists": "பிரீமியம் தகவல் கிடைக்கவில்லை",
   "purchaseErrorPurchasePendingError": "சந்தா செயல்படுத்தல் முழுமையடையவில்லை. சிறிது நேரம் கழித்து மீண்டும் சரிபார்க்கவும்",

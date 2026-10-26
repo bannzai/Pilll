@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "آپ کے {accountTypeProviderName} اکاؤنٹ میں استعمال ہونے والا ای میل پتہ پہلے ہی ایک دوسرے Pilll اکاؤنٹ سے منسلک ہے، اس لیے رجسٹریشن ممکن نہیں۔ براہِ کرم اکثر پوچھے جانے والے سوالات بھی دیکھیں۔ تفصیلات: {exceptionMessage}",
   "todaySchedule": "آج کا آپ کا شیڈول",
   "calendarSchedule": "کیلنڈر کے شیڈول",
-  "newPillSheetNotificationTitle": "آج سے نیا شیٹ شروع ہو رہا ہے",
+  "newPillSheetNotificationTitle": "گولیوں کا نیا پیک آج سے شروع ہو رہا ہے",
   "newPillSheetNotificationMessage": "🆕 آج سے نئی شیٹ شروع ہو رہی ہے\nاسے لینا مت بھولیں👍",
   "unexpectedPremiumEntitlementsIsNotExists": "پریمیم کی معلومات نہیں ملیں",
   "purchaseErrorPurchasePendingError": "آپ کی ادائیگی کی تصدیق ابھی مکمل نہیں ہوئی۔ براہ کرم کچھ دیر انتظار کے بعد دوبارہ چیک کریں",

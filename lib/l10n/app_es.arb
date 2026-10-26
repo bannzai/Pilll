@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "No puedes registrarte porque la dirección de correo que usas con tu cuenta de {accountTypeProviderName} ya está vinculada a otra cuenta de Pilll. Consulta también las preguntas frecuentes. Detalles: {exceptionMessage}",
   "todaySchedule": "Tus planes de hoy",
   "calendarSchedule": "Eventos del calendario",
-  "newPillSheetNotificationTitle": "Hoy comienza un nuevo blister",
+  "newPillSheetNotificationTitle": "Hoy comienzas un nuevo envase de píldoras",
   "newPillSheetNotificationMessage": "🆕 Hoy comienza un nuevo paquete\n¡No olvides tomarlo! 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "No se encontró información premium",
   "purchaseErrorPurchasePendingError": "La activación del pago no se ha completado. Por favor, espere un momento y vuelva a verificar.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "{accountTypeProviderName} അക്കൗണ്ടിൽ ഉപയോഗിക്കുന്ന ഇമെയിൽ വിലാസം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ഇതിനകം ബന്ധിപ്പിച്ചിരിക്കുന്നതിനാൽ രജിസ്റ്റർ ചെയ്യാനാകില്ല. പതിവുചോദ്യങ്ങളും നോക്കൂ. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "todaySchedule": "ഇന്നത്തെ പരിപാടികൾ",
   "calendarSchedule": "കലണ്ടറിലെ പരിപാടികൾ",
-  "newPillSheetNotificationTitle": "ഇന്നു മുതൽ പുതിയ ഷീറ്റ് ആരംഭിക്കുന്നു",
+  "newPillSheetNotificationTitle": "പുതിയ ഗുളിക പാക്ക് ഇന്ന് തുടങ്ങുന്നു",
   "newPillSheetNotificationMessage": "🆕 ഇന്നു മുതൽ പുതിയ ഷീറ്റ് തുടങ്ങുന്നു\nമറക്കാതെ കഴിക്കാൻ ശ്രദ്ധിക്കുക👍",
   "unexpectedPremiumEntitlementsIsNotExists": "പ്രീമിയം വിവരങ്ങൾ കണ്ടെത്തിയില്ല",
   "purchaseErrorPurchasePendingError": "പേയ്‌മെന്റ് സജീവമാക്കൽ പൂർത്തിയായിട്ടില്ല. കുറച്ച് സമയത്തിന് ശേഷം ദയവായി വീണ്ടും പരിശോധിക്കുക",

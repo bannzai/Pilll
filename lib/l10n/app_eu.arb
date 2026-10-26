@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Ezin duzu izena eman, {accountTypeProviderName} kontuarekin erabiltzen duzun helbide elektronikoa beste Pilll kontu bati lotuta dagoelako. Begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
   "todaySchedule": "Gaurko zure plana",
   "calendarSchedule": "Egutegiko gertaerak",
-  "newPillSheetNotificationTitle": "Gaurtik plaka berri bat hasten da",
+  "newPillSheetNotificationTitle": "Gaur hasten da pilulen kutxa berria",
   "newPillSheetNotificationMessage": "🆕 Gaurtik txartel berria hasten da\nAhaztu gabe har ezazu👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ez da premium informaziorik aurkitu",
   "purchaseErrorPurchasePendingError": "Ordainketaren aktibaketa ez da oraindik osatu. Itxaron ezazu denbora pixka bat eta gero begiratu berriro, mesedez.",

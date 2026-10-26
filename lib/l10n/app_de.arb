@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Du kannst dich nicht registrieren, weil die E-Mail-Adresse deines {accountTypeProviderName}-Kontos bereits mit einem anderen Pilll-Konto verknüpft ist. Weitere Hilfe findest du in den häufig gestellten Fragen. Details: {exceptionMessage}",
   "todaySchedule": "Deine Termine heute",
   "calendarSchedule": "Kalendertermine",
-  "newPillSheetNotificationTitle": "Heute startet eine neue Pillenpackung",
+  "newPillSheetNotificationTitle": "Heute beginnt deine neue Pillenpackung",
   "newPillSheetNotificationMessage": "🆕 Ab heute beginnt ein neues Blister\nVergiss nicht, sie einzunehmen 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premium-Informationen wurden nicht gefunden",
   "purchaseErrorPurchasePendingError": "Die Aktivierung der Bezahlung ist noch nicht abgeschlossen. Bitte warten Sie einen Moment und überprüfen Sie dann erneut.",

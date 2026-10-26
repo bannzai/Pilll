@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ثبت‌نام ممکن نیست، چون نشانی ایمیلی که با حساب {accountTypeProviderName} استفاده می‌کنید، از قبل به حساب دیگری در Pilll پیوند داده شده است. لطفاً پرسش‌های متداول را هم ببینید. جزئیات: {exceptionMessage}",
   "todaySchedule": "برنامه امروز شما",
   "calendarSchedule": "رویدادهای تقویم",
-  "newPillSheetNotificationTitle": "دوره جدید از امروز شروع می‌شود",
+  "newPillSheetNotificationTitle": "بسته جدید قرص‌ها از امروز شروع می‌شود",
   "newPillSheetNotificationMessage": "🆕 امروز بسته جدید شروع می‌شود\nفراموش نکنید مصرف کنید 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم یافت نشد",
   "purchaseErrorPurchasePendingError": "فعال‌سازی پرداخت هنوز تکمیل نشده است. لطفاً مدتی صبر کرده و دوباره بررسی کنید",

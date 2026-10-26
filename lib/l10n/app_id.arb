@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan karena alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung ke akun Pilll lain. Silakan lihat juga pertanyaan umum. Detail: {exceptionMessage}",
   "todaySchedule": "Jadwal Anda hari ini",
   "calendarSchedule": "Jadwal di kalender",
-  "newPillSheetNotificationTitle": "Paket baru dimulai hari ini",
+  "newPillSheetNotificationTitle": "Kemasan pil baru dimulai hari ini",
   "newPillSheetNotificationMessage": "🆕 Lembar baru dimulai hari ini\nJangan lupa meminumnya👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Informasi premium tidak ditemukan",
   "purchaseErrorPurchasePendingError": "Aktivasi pembayaran belum selesai. Mohon tunggu beberapa saat dan periksa kembali.",

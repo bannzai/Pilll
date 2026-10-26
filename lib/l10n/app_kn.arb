@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "ನಿಮ್ಮ {accountTypeProviderName} ಖಾತೆಯಲ್ಲಿ ಬಳಸುವ ಇಮೇಲ್ ವಿಳಾಸವು ಈಗಾಗಲೇ ಮತ್ತೊಂದು Pilll ಖಾತೆಗೆ ಸಂಪರ್ಕಗೊಂಡಿರುವುದರಿಂದ ನೋಂದಣಿ ಸಾಧ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಪದೇಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳನ್ನೂ ನೋಡಿ. ವಿವರಗಳು: {exceptionMessage}",
   "todaySchedule": "ಇಂದಿನ ನಿಮ್ಮ ವೇಳಾಪಟ್ಟಿ",
   "calendarSchedule": "ಕ್ಯಾಲೆಂಡರ್‌ನ ಕಾರ್ಯಕ್ರಮಗಳು",
-  "newPillSheetNotificationTitle": "ಇಂದಿನಿಂದ ಹೊಸ ಶೀಟ್ ಆರಂಭವಾಗುತ್ತದೆ",
+  "newPillSheetNotificationTitle": "ಇಂದಿನಿಂದ ಹೊಸ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ",
   "newPillSheetNotificationMessage": "🆕 ಇಂದಿನಿಂದ ಹೊಸ ಶೀಟ್ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ\nಮರೆಯದೆ ಸೇವಿಸಿ👍",
   "unexpectedPremiumEntitlementsIsNotExists": "ಪ್ರೀಮಿಯಂ ಮಾಹಿತಿ ಸಿಗಲಿಲ್ಲ",
   "purchaseErrorPurchasePendingError": "ಪಾವತಿ ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆ ಪೂರ್ಣಗೊಂಡಿಲ್ಲ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ.",

@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Du kan inte registrera dig eftersom e-postadressen du använder med ditt {accountTypeProviderName}-konto redan är kopplad till ett annat Pilll-konto. Läs gärna också vanliga frågor. Information: {exceptionMessage}",
   "todaySchedule": "Dagens schema",
   "calendarSchedule": "Kalenderhändelser",
-  "newPillSheetNotificationTitle": "Ny förpackning börjar idag",
+  "newPillSheetNotificationTitle": "En ny pillerkarta börjar i dag",
   "newPillSheetNotificationMessage": "🆕 Din nya tablettförpackning börjar idag\nGlöm inte att ta dina tabletter 👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Premiumuppgifter hittades inte",
   "purchaseErrorPurchasePendingError": "Din prenumeration har inte aktiverats ännu. Vänligen vänta en stund och försök igen.",

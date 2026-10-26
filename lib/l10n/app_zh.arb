@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "你用于 {accountTypeProviderName} 账号的邮箱已关联另一个 Pilll 账号，因此无法注册。也请查看常见问题。详情：{exceptionMessage}",
   "todaySchedule": "今天的日程",
   "calendarSchedule": "日历日程",
-  "newPillSheetNotificationTitle": "从今天开始新药板",
+  "newPillSheetNotificationTitle": "今天开始服用新的一板药",
   "newPillSheetNotificationMessage": "🆕 今天开始新的服用周期\n请不要忘记服用👍",
   "unexpectedPremiumEntitlementsIsNotExists": "未找到高级版信息",
   "purchaseErrorPurchasePendingError": "付费功能激活尚未完成，请稍后再次确认",

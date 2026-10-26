@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Таны {accountTypeProviderName} бүртгэлд ашигладаг имэйл хаяг өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул шинээр бүртгүүлэх боломжгүй. Түгээмэл асуултуудыг мөн үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
   "todaySchedule": "Таны өнөөдрийн төлөвлөгөө",
   "calendarSchedule": "Хуанлийн тов",
-  "newPillSheetNotificationTitle": "Өнөөдрөөс шинэ багц эхэлнэ",
+  "newPillSheetNotificationTitle": "Өнөөдөр шинэ эмийн блистер эхэлнэ",
   "newPillSheetNotificationMessage": "🆕 Өнөөдрөөс шинэ хавтасны курс эхэлнэ\nМартахгүйгээр уухаа👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Премиум мэдээлэл олдсонгүй",
   "purchaseErrorPurchasePendingError": "Төлбөрийн идэвхжүүлэлт хараахан дуусаагүй байна. Хэсэг хугацааны дараа дахин шалгана уу.",

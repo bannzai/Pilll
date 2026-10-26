@@ -336,7 +336,7 @@
   "emailAlreadyInUse": "Awukwazi ukubhalisa ngoba ikheli le-imeyili olisebenzisa ku-akhawunti yakho ye-{accountTypeProviderName} selixhunywe kwenye i-akhawunti ye-Pilll. Sicela ubheke nemibuzo evame ukubuzwa. Imininingwane: {exceptionMessage}",
   "todaySchedule": "Uhlelo lwakho lwanamuhla",
   "calendarSchedule": "Izinhlelo zekhalenda",
-  "newPillSheetNotificationTitle": "Ishidi elisha liqala namuhla",
+  "newPillSheetNotificationTitle": "Iphakethe elisha lamaphilisi liqala namuhla",
   "newPillSheetNotificationMessage": "🆕 Ishidi elisha lepilisi liqala namuhla\nKhumbula ukuthatha👍",
   "unexpectedPremiumEntitlementsIsNotExists": "Ulwazi lwe-premium alutholakanga",
   "purchaseErrorPurchasePendingError": "Ukusebenza kokukhokha akukaqedwa. Sicela ulinde isikhathi bese uhlola futhi.",
