@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "அமைதி முறையிலும் அறிவிப்புகளைப் பெறுங்கள்",
   "enableNotificationInSilentModeSetting": "அமைதிப் பயன்முறையிலும் அறிவிப்புகள்",
   "criticalAlertVolume": "ஒலி அளவு",
-  "logout": "வெளியேறுக",
+  "logout": "கணக்கிலிருந்து வெளியேறு",
   "goToInitialSettingAndReloginIfNeededMessage": "ஆரம்ப அமைவுகளுக்குத் திரும்பும். உள்நுழைவு தேவைப்பட்டால், ஆரம்ப அமைவுப் பக்கத்தின் கீழ்ப்பகுதியிலிருந்து உள்நுழையவும்",
   "deleteAccount": "கணக்கு நீக்கம்",
   "logoutCompleted": "வெளியேறப்பட்டது",

@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Дуугүй горимд ч мэдэгдэл хүлээн авах",
   "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл авах",
   "criticalAlertVolume": "Дууны түвшин",
-  "logout": "Гарах",
+  "logout": "Бүртгэлээс гарах",
   "goToInitialSettingAndReloginIfNeededMessage": "Анхны тохиргоонд буцна. Нэвтрэх шаардлагатай тохиолдолд анхны тохиргооны доод хэсгээс нэвтэрнэ үү",
   "deleteAccount": "Данс устгах",
   "logoutCompleted": "Системээс гарлаа",

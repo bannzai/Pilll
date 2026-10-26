@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "အသံပိတ်ထားချိန်တွင်လည်း အသိပေးချက်များ ရယူပါ",
   "enableNotificationInSilentModeSetting": "အသံပိတ်ထားချိန်တွင်လည်း အသိပေးချက်များ",
   "criticalAlertVolume": "အသံအတိုးအကျယ်",
-  "logout": "ထွက်ရန်",
+  "logout": "အကောင့်မှ ထွက်ရန်",
   "goToInitialSettingAndReloginIfNeededMessage": "ကန်ဦးဆက်တင်သို့ ပြန်သွားပါမည်။ လော့ဂ်အင်လိုအပ်ပါက ကန်ဦးဆက်တင်အောက်ပိုင်းမှ ပြုလုပ်ပါရန် တောင်းဆိုအပ်ပါသည်။",
   "deleteAccount": "အကောင့်ဖျက်ရန်",
   "logoutCompleted": "ထွက်ခဲ့ပါပြီ",

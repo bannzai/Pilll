@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Saņemiet paziņojumus arī klusuma režīmā",
   "enableNotificationInSilentModeSetting": "Paziņojumi arī klusuma režīmā",
   "criticalAlertVolume": "Skaļums",
-  "logout": "Iziet",
+  "logout": "Izrakstīties",
   "goToInitialSettingAndReloginIfNeededMessage": "Atgriezīsimies pie sākotnējām iestatījumiem. Ja nepieciešama pierakstīšanās, lūdzu, izmantojiet sākotnējo iestatījumu apakšdaļu.",
   "deleteAccount": "Konta dzēšana",
   "logoutCompleted": "Izrakstījāties",

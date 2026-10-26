@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "შეტყობინებების მიღება უხმო რეჟიმშიც",
   "enableNotificationInSilentModeSetting": "შეტყობინებები უხმო რეჟიმშიც",
   "criticalAlertVolume": "ხმის სიმაღლე",
-  "logout": "გამოსვლა",
+  "logout": "გასვლა",
   "goToInitialSettingAndReloginIfNeededMessage": "დაბრუნება საწყის პარამეტრებზე. ავტორიზაცია საჭიროების შემთხვევაში, გთხოვთ გამოიყენოთ საწყისი პარამეტრების ქვედა ნაწილი",
   "deleteAccount": "ანგარიშის წაშლა",
   "logoutCompleted": "გამოვედით",

@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Дыбыссыз режимде де хабарландыру алыңыз",
   "enableNotificationInSilentModeSetting": "Дыбыссыз режимде де хабарландырулар",
   "criticalAlertVolume": "Дыбыс деңгейі",
-  "logout": "шығу",
+  "logout": "Шығу",
   "goToInitialSettingAndReloginIfNeededMessage": "Бастапқы баптауға оралады. Кіру қажет болса, бастапқы баптаудың төменгі бөлімінен жасаңыз",
   "deleteAccount": "Аккаунтты жою",
   "logoutCompleted": "Жүйеден шықтым",

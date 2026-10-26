@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "በዝምታ ሁነታም ማሳወቂያዎችን ይቀበሉ",
   "enableNotificationInSilentModeSetting": "በዝምታ ሁነታም ማሳወቂያዎች",
   "criticalAlertVolume": "የድምፅ መጠን",
-  "logout": "መውጣት",
+  "logout": "ውጣ",
   "goToInitialSettingAndReloginIfNeededMessage": "ወደ መጀመሪያ ቅንብር እንመለሳለን። መግቢያ ካስፈለገ እባክዎ ከመጀመሪያ ቅንብር ከታች ያድርጉት።",
   "deleteAccount": "መለያ ሰርዝ",
   "logoutCompleted": "ወጥተዋል",

@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Merrni njoftime edhe në modalitetin pa zë",
   "enableNotificationInSilentModeSetting": "Njoftime edhe në modalitetin pa zë",
   "criticalAlertVolume": "Volumi",
-  "logout": "Dilni",
+  "logout": "Dilni nga llogaria",
   "goToInitialSettingAndReloginIfNeededMessage": "Do të kthehemi te cilësimet fillestare. Nëse kërkohet identifikimi, ju lutemi bëjeni atë nga poshtë e cilësimeve fillestare",
   "deleteAccount": "Fshi llogarinë",
   "logoutCompleted": "U çkyçët",

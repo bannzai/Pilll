@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Примајте обавештења и у нечујном режиму",
   "enableNotificationInSilentModeSetting": "Обавештења и у нечујном режиму",
   "criticalAlertVolume": "Јачина звука",
-  "logout": "Odjavi se",
+  "logout": "Одјавите се",
   "goToInitialSettingAndReloginIfNeededMessage": "Vraćamo se na početno podešavanje. Ukoliko je potrebno prijavljivanje, molimo koristite opcije na dnu početnih podešavanja",
   "deleteAccount": "Brisanje naloga",
   "logoutCompleted": "Odjavili ste se",

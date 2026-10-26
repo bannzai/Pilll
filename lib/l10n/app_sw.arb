@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Pokea arifa hata simu ikiwa katika hali ya kimya",
   "enableNotificationInSilentModeSetting": "Arifa hata simu ikiwa kimya",
   "criticalAlertVolume": "Kiwango cha sauti",
-  "logout": "Ondoka",
+  "logout": "Ondoka kwenye akaunti",
   "goToInitialSettingAndReloginIfNeededMessage": "Kurudi kwenye mipangilio ya awali. Ikiwa unahitaji kuingia, tafadhali fanya hivyo kutoka sehemu ya chini ya mipangilio ya awali.",
   "deleteAccount": "Futa Akaunti",
   "logoutCompleted": "Umejitoa",

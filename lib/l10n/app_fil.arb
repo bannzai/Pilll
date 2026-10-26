@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Makatanggap ng mga abiso kahit naka-silent",
   "enableNotificationInSilentModeSetting": "Mga abiso kahit naka-silent mode",
   "criticalAlertVolume": "Lakas ng tunog",
-  "logout": "Mag-logout",
+  "logout": "Mag-log out",
   "goToInitialSettingAndReloginIfNeededMessage": "Babalik sa paunang pag-setup. Kung kailangan mag-login, mangyaring gawin ito sa ibabang bahagi ng paunang pag-setup.",
   "deleteAccount": "Burahin ang Account",
   "logoutCompleted": "Naka-logout na",

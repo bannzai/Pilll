@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Terima pemberitahuan walaupun dalam mod senyap",
   "enableNotificationInSilentModeSetting": "Pemberitahuan walaupun dalam mod senyap",
   "criticalAlertVolume": "Kelantangan",
-  "logout": "Log Keluar",
+  "logout": "Log keluar",
   "goToInitialSettingAndReloginIfNeededMessage": "Kembali kepada tetapan awal. Sekiranya log masuk diperlukan, sila lakukan daripada bahagian bawah tetapan awal",
   "deleteAccount": "Padam Akaun",
   "logoutCompleted": "Telah log keluar",

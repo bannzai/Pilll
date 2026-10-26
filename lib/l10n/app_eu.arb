@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Jaso jakinarazpenak modu isilean ere",
   "enableNotificationInSilentModeSetting": "Jakinarazpenak modu isilean ere",
   "criticalAlertVolume": "Bolumena",
-  "logout": "Saioa itxi",
+  "logout": "Amaitu saioa",
   "goToInitialSettingAndReloginIfNeededMessage": "Hasierako konfiguraziora itzuliko da. Saioa hasi behar baduzu, hasierako konfigurazio pantailaren beheko aldetik egin dezakezu.",
   "deleteAccount": "Kontua ezabatu",
   "logoutCompleted": "Saioa itxi da",

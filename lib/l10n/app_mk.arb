@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Добивајте известувања и во тивок режим",
   "enableNotificationInSilentModeSetting": "Известувања и во тивок режим",
   "criticalAlertVolume": "Јачина на звук",
-  "logout": "одјави се",
+  "logout": "Одјавување",
   "goToInitialSettingAndReloginIfNeededMessage": "Враќање на почетното поставување. Ако е потребна најава, ве молиме најавете се од долниот дел на почетното поставување.",
   "deleteAccount": "Бришење на сметка",
   "logoutCompleted": "Се одјавивте",

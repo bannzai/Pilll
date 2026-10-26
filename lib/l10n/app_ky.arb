@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Үнсүз режимде да эскертмелерди алыңыз",
   "enableNotificationInSilentModeSetting": "Үнсүз режимде да эскертмелер",
   "criticalAlertVolume": "Үндүн деңгээли",
-  "logout": "чыгуу",
+  "logout": "Чыгуу",
   "goToInitialSettingAndReloginIfNeededMessage": "Баштапкы жөндөөгө кайтып жатабыз. Кирүү керек болсо, баштапкы жөндөөнүн астынан кириңиз",
   "deleteAccount": "Аккаунтты жок кылуу",
   "logoutCompleted": "Чыгуу болду",

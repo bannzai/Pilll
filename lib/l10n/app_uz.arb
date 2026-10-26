@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Ovozsiz rejimda ham bildirishnomalar oling",
   "enableNotificationInSilentModeSetting": "Ovozsiz rejimda ham bildirishnomalar",
   "criticalAlertVolume": "Ovoz balandligi",
-  "logout": "Chiqish",
+  "logout": "Hisobdan chiqish",
   "goToInitialSettingAndReloginIfNeededMessage": "Dastlabki sozlamalarga qaytiladi. Agar tizimga kirish kerak bo'lsa, iltimos dastlabki sozlamalar sahifasining pastki qismidan foydalaning",
   "deleteAccount": "Hisobni o'chirish",
   "logoutCompleted": "Tizimdan chiqdingiz",

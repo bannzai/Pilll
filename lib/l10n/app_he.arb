@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "קבלת התראות גם במצב שקט",
   "enableNotificationInSilentModeSetting": "התראות גם במצב שקט",
   "criticalAlertVolume": "עוצמת קול",
-  "logout": "יציאה",
+  "logout": "התנתקות",
   "goToInitialSettingAndReloginIfNeededMessage": "חוזרים להגדרות ראשוניות. במידה ונדרשת התחברות, אנא עשו זאת מתחתית המסך של ההגדרות הראשוניות",
   "deleteAccount": "מחיקת חשבון",
   "logoutCompleted": "התנתקת",

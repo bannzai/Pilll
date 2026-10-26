@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି ପାଆନ୍ତୁ",
   "enableNotificationInSilentModeSetting": "ସାଇଲେଣ୍ଟ ମୋଡ୍‌ରେ ମଧ୍ୟ ବିଜ୍ଞପ୍ତି",
   "criticalAlertVolume": "ଶବ୍ଦର ତୀବ୍ରତା",
-  "logout": "ଲଗଆଉଟ",
+  "logout": "ଲଗ୍ ଆଉଟ୍",
   "goToInitialSettingAndReloginIfNeededMessage": "ପ୍ରାଥମିକ ସେଟଅପ୍‌କୁ ଫେରୁଛି। ଯଦି ଲଗଇନ୍ ଆବଶ୍ୟକ ହୁଏ, ଦୟାକରି ପ୍ରାଥମିକ ସେଟଅପ୍‌ର ତଳ ଭାଗରୁ କରନ୍ତୁ।",
   "deleteAccount": "ଖାତା ବିଲୋପ",
   "logoutCompleted": "ଲଗ୍‌ଆଉଟ୍ ହୋଇଗଲା",

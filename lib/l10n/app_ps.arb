@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "په چوپ حالت کې هم خبرتیاوې ترلاسه کړئ",
   "enableNotificationInSilentModeSetting": "په چوپ حالت کې هم خبرتیاوې",
   "criticalAlertVolume": "د غږ کچه",
-  "logout": "ننوتل ودرول",
+  "logout": "له حسابه وتل",
   "goToInitialSettingAndReloginIfNeededMessage": "دا لومړنۍ تنظیماتو ته بیرته ځي. که د ننوتلو اړتیا وي، مهرباني وکړئ د لومړنیو تنظیماتو ښکته برخې څخه دا وکړئ.",
   "deleteAccount": "د حساب ډیلیټ کول",
   "logoutCompleted": "وتلاست",

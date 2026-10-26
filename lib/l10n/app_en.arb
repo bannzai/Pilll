@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Get notifications even in silent mode",
   "enableNotificationInSilentModeSetting": "Notifications even in silent mode",
   "criticalAlertVolume": "Volume",
-  "logout": "Log Out",
+  "logout": "Log out",
   "goToInitialSettingAndReloginIfNeededMessage": "Returning to initial setup. If login is required, please use the option at the bottom of the initial setup screen.",
   "deleteAccount": "Delete Account",
   "logoutCompleted": "Logged out",

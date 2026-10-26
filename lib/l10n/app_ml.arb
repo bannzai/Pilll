@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "നിശ്ശബ്ദ മോഡിലും അറിയിപ്പുകൾ ലഭിക്കൂ",
   "enableNotificationInSilentModeSetting": "നിശ്ശബ്ദ മോഡിലും അറിയിപ്പുകൾ",
   "criticalAlertVolume": "ശബ്ദത്തിന്റെ തോത്",
-  "logout": "ലോഗ്ഔട്ട്",
+  "logout": "ലോഗ് ഔട്ട്",
   "goToInitialSettingAndReloginIfNeededMessage": "പ്രാരംഭിക സജ്ജീകരണത്തിലേക്ക് മടങ്ങുന്നു. ലോഗിൻ ആവശ്യമാണെങ്കിൽ പ്രാരംഭിക സജ്ജീകരണത്തിന്റെ താഴെ നിന്ന് ദയവായി ചെയ്യുക",
   "deleteAccount": "അക്കൗണ്ട് ഇല്ലാതാക്കുക",
   "logoutCompleted": "ലോഗ് ഔട്ട് ചെയ്തു",

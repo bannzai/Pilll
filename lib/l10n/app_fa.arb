@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "دریافت اعلان‌ها حتی در حالت بی‌صدا",
   "enableNotificationInSilentModeSetting": "اعلان‌ها حتی در حالت بی‌صدا",
   "criticalAlertVolume": "بلندی صدا",
-  "logout": "خروج",
+  "logout": "خروج از حساب",
   "goToInitialSettingAndReloginIfNeededMessage": "به تنظیمات اولیه برمی‌گردیم. در صورت نیاز به ورود، لطفاً از قسمت پایین تنظیمات اولیه اقدام کنید",
   "deleteAccount": "حذف حساب",
   "logoutCompleted": "خروج انجام شد",

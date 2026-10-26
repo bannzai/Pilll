@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Ստացեք ծանուցումներ նաև անձայն ռեժիմում",
   "enableNotificationInSilentModeSetting": "Ծանուցումներ նաև անձայն ռեժիմում",
   "criticalAlertVolume": "Ձայնի ուժգնություն",
-  "logout": "Ելք",
+  "logout": "Դուրս գալ հաշվից",
   "goToInitialSettingAndReloginIfNeededMessage": "Կվերադառնանք սկզբնական կարգավորումներին: Մուտք գործելու անհրաժեշտության դեպքում խնդրում ենք այն իրականացնել սկզբնական կարգավորումների ներքևից:",
   "deleteAccount": "Հաշվի ջնջում",
   "logoutCompleted": "Դուրս եկաք",

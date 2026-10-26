@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Otrzymuj powiadomienia także w trybie cichym",
   "enableNotificationInSilentModeSetting": "Powiadomienia także w trybie cichym",
   "criticalAlertVolume": "Głośność",
-  "logout": "Wyloguj",
+  "logout": "Wyloguj się",
   "goToInitialSettingAndReloginIfNeededMessage": "Powrócisz do ekranu ustawień początkowych. Jeśli wymagane jest logowanie, znajdziesz tę opcję u dołu ekranu ustawień początkowych.",
   "deleteAccount": "Usuń konto",
   "logoutCompleted": "Wylogowano",

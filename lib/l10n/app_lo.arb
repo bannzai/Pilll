@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "ຮັບການແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
   "enableNotificationInSilentModeSetting": "ແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
   "criticalAlertVolume": "ລະດັບສຽງ",
-  "logout": "ອອກຈາກລະບົບ",
+  "logout": "ອອກຈາກບັນຊີ",
   "goToInitialSettingAndReloginIfNeededMessage": "ກັບໄປຫາການຕັ້ງຄ່າເບື້ອງຕົ້ນແລ້ວ. ຫາກຈຳເປັນຕ້ອງເຂົ້າສູ່ລະບົບ, ກະລຸນາເຂົ້າສູ່ລະບົບຈາກພາກລຸ່ມຂອງການຕັ້ງຄ່າເບື້ອງຕົ້ນ",
   "deleteAccount": "ລຶບບັນຊີ",
   "logoutCompleted": "ອອກຈາກລະບົບແລ້ວ",

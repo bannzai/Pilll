@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Receber notificações mesmo no modo silencioso",
   "enableNotificationInSilentModeSetting": "Notificações mesmo no modo silencioso",
   "criticalAlertVolume": "Volume",
-  "logout": "Sair",
+  "logout": "Sair da conta",
   "goToInitialSettingAndReloginIfNeededMessage": "Voltaremos para as configurações iniciais. Se for necessário fazer login, por favor faça-o na parte inferior da tela de configurações iniciais.",
   "deleteAccount": "Excluir Conta",
   "logoutCompleted": "Desconectado",

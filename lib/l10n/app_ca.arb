@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Rep notificacions també en mode de silenci",
   "enableNotificationInSilentModeSetting": "Notificacions també en mode silenci",
   "criticalAlertVolume": "Volum",
-  "logout": "Tancar sessió",
+  "logout": "Tanca la sessió",
   "goToInitialSettingAndReloginIfNeededMessage": "Tornarem a la configuració inicial. Si necessiteu iniciar sessió, si us plau, feu-ho des de la part inferior de la configuració inicial.",
   "deleteAccount": "Eliminar compte",
   "logoutCompleted": "S'ha tancat la sessió",

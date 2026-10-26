@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Primește notificări și în modul silențios",
   "enableNotificationInSilentModeSetting": "Notificări și în modul silențios",
   "criticalAlertVolume": "Volum",
-  "logout": "Deconectare",
+  "logout": "Deconectează-te",
   "goToInitialSettingAndReloginIfNeededMessage": "Se va reveni la configurarea inițială. Dacă este necesară conectarea, vă rugăm să o faceți din partea de jos a configurării inițiale.",
   "deleteAccount": "Ștergere cont",
   "logoutCompleted": "V-ați deconectat",

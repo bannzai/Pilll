@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Атрымліваць апавяшчэнні нават у бязгучным рэжыме",
   "enableNotificationInSilentModeSetting": "Апавяшчэнні нават у бязгучным рэжыме",
   "criticalAlertVolume": "Гучнасць",
-  "logout": "выхад",
+  "logout": "Выйсці",
   "goToInitialSettingAndReloginIfNeededMessage": "Вяртаемся да пачатковых налад. Калі неабходна аўтарызацыя, выканайце яе ў ніжняй частцы пачатковых налад",
   "deleteAccount": "Выдаленне акаўнта",
   "logoutCompleted": "Выйшлі з сістэмы",

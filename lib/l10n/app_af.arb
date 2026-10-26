@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Kry kennisgewings selfs in stilmodus",
   "enableNotificationInSilentModeSetting": "Kennisgewings selfs in stilmodus",
   "criticalAlertVolume": "Klankvolume",
-  "logout": "Uitlog",
+  "logout": "Meld af",
   "goToInitialSettingAndReloginIfNeededMessage": "Keer terug na aanvanklike instellings. Indien teken in benodig word, doen dit asseblief vanaf die onderkant van die aanvanklike instellingsskerm.",
   "deleteAccount": "Rekening verwyder",
   "logoutCompleted": "Afgemeld",

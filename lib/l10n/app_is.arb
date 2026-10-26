@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Fá tilkynningar þótt síminn sé á hljóðlausri stillingu",
   "enableNotificationInSilentModeSetting": "Tilkynningar líka þegar hljóð er slökkt",
   "criticalAlertVolume": "Hljóðstyrkur",
-  "logout": "Útskrá",
+  "logout": "Skrá út",
   "goToInitialSettingAndReloginIfNeededMessage": "Snúa aftur til upphafsstillinga. Ef þú þarft að skrá þig inn, vinsamlegast gerðu það í neðri hluta upphafsstillinga.",
   "deleteAccount": "Eyða reikningi",
   "logoutCompleted": "Útskráður",

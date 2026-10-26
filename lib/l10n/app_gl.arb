@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Recibir notificacións tamén en modo silencio",
   "enableNotificationInSilentModeSetting": "Notificacións tamén en modo silencio",
   "criticalAlertVolume": "Volume",
-  "logout": "Pechar sesión",
+  "logout": "Pechar a sesión",
   "goToInitialSettingAndReloginIfNeededMessage": "Volverá á configuración inicial. Se precisas iniciar sesión, podes facelo desde a parte inferior da configuración inicial.",
   "deleteAccount": "Eliminar conta",
   "logoutCompleted": "Pechouse a sesión",

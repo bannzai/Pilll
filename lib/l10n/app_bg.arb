@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Получавайте известия и в безшумен режим",
   "enableNotificationInSilentModeSetting": "Известия и при безшумен режим",
   "criticalAlertVolume": "Сила на звука",
-  "logout": "Излизане",
+  "logout": "Изход",
   "goToInitialSettingAndReloginIfNeededMessage": "Връщаме се към първоначалните настройки. Ако е необходимо влизане в профила, моля използвайте опцията в долната част на първоначалните настройки.",
   "deleteAccount": "Изтриване на акаунт",
   "logoutCompleted": "Успешно излязохте",

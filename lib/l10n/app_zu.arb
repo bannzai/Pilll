@@ -428,7 +428,7 @@
   "enableNotificationInSilentMode": "Thola izaziso noma ifoni ikumodi yokuthula",
   "enableNotificationInSilentModeSetting": "Izaziso noma ifoni ithulisiwe",
   "criticalAlertVolume": "Izinga lomsindo",
-  "logout": "Phuma",
+  "logout": "Phuma ku-akhawunti",
   "goToInitialSettingAndReloginIfNeededMessage": "Kubuyela ekusethweni kokuqala. Uma kudingeka ukungena ngemvume, sicela ukwenze lokho ngaphansi kweseteji yokuqala.",
   "deleteAccount": "Susa i-akhawunti",
   "logoutCompleted": "Ngiphumile",
