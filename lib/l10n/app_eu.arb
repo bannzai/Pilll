@@ -85,7 +85,7 @@
   "withdrawalMessage": "Kontua ezabatzen baduzu, zure datu guztiak ezabatuko dira, eta ezingo duzu inoiz berriro kontu berarekin saioa hasi.",
   "recordPage": "Pilulen erregistroa",
   "doReLogin": "Hasi saioa berriro, mesedez",
-  "reLoginMessage": "Kontua ezabatu aurretik, identitatea egiaztatzeko berriro saioa hasi behar duzu. Saioa berriro hasi ondoren, kontuaren ezabaketa-prozesua automatikoki hasiko da.",
+  "reLoginMessage": "Hasi berriro saioa zure nortasuna egiaztatzeko, kontua ezabatu aurretik. Saioa hasi ondoren, ezabatzea automatikoki hasiko da.",
   "updateAuthenticationAfterReLogin": "Berriz saioa hasi eta egiaztapen informazioa eguneratuko dugu",
   "menstruationPage": "Hileroko",
   "calendarPage": "Egutegia",

@@ -85,7 +85,7 @@
   "withdrawalMessage": "Hesabınızı silerseniz tüm verileriniz silinir ve aynı hesapla bir daha asla giriş yapamazsınız.",
   "recordPage": "Hap kullanma kayıtları",
   "doReLogin": "Lütfen yeniden giriş yapın",
-  "reLoginMessage": "Hesabınızı silmeden önce kimlik doğrulaması için lütfen tekrar giriş yapın. Yeniden giriş yaptıktan sonra hesap silme işlemi otomatik olarak başlayacaktır.",
+  "reLoginMessage": "Hesabınız silinmeden önce kimliğinizi doğrulamak için lütfen yeniden giriş yapın. Giriş yaptıktan sonra silme işlemi otomatik olarak başlayacak.",
   "updateAuthenticationAfterReLogin": "Kimlik doğrulama bilgilerinizi güncellemek için lütfen yeniden giriş yapın",
   "menstruationPage": "Adet Sayfası",
   "calendarPage": "Takvim",

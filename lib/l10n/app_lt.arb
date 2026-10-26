@@ -85,7 +85,7 @@
   "withdrawalMessage": "Jei ištrinsite paskyrą, visi jūsų duomenys bus ištrinti ir su ta pačia paskyra daugiau niekada negalėsite prisijungti.",
   "recordPage": "Tablečių vartojimo įrašai",
   "doReLogin": "Prašome prisijungti dar kartą",
-  "reLoginMessage": "Prieš ištrindami paskyrą, pakartotinai prisijunkite tapatybės patvirtinimui. Po pakartotinio prisijungimo automatiškai prasidės paskyros ištrynimo procesas",
+  "reLoginMessage": "Prieš ištrinant paskyrą, prisijunkite dar kartą, kad patvirtintumėte savo tapatybę. Prisijungus paskyros trynimas prasidės automatiškai.",
   "updateAuthenticationAfterReLogin": "Pakartotinai prisijunkite ir atnaujinkite autentifikavimo duomenis",
   "menstruationPage": "Menstruacija",
   "calendarPage": "Kalendorius",

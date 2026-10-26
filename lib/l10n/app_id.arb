@@ -85,7 +85,7 @@
   "withdrawalMessage": "Jika Anda menghapus akun, semua data Anda akan dihapus dan Anda tidak akan pernah bisa masuk lagi dengan akun yang sama.",
   "recordPage": "Catatan minum pil",
   "doReLogin": "Silakan masuk kembali",
-  "reLoginMessage": "Harap login kembali untuk verifikasi identitas sebelum menghapus akun. Setelah berhasil login kembali, proses penghapusan akun akan dimulai secara otomatis",
+  "reLoginMessage": "Silakan masuk kembali untuk memverifikasi identitas Anda sebelum akun dihapus. Setelah masuk, proses penghapusan akun akan dimulai secara otomatis.",
   "updateAuthenticationAfterReLogin": "Silakan login kembali untuk memperbarui informasi autentikasi Anda",
   "menstruationPage": "Menstruasi",
   "calendarPage": "Kalender",

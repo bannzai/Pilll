@@ -85,7 +85,7 @@
   "withdrawalMessage": "As jy jou rekening sluit, word al jou data uitgevee en kan jy nooit weer met dieselfde rekening aanmeld nie.",
   "recordPage": "Pilrekords",
   "doReLogin": "Meld asseblief weer aan",
-  "reLoginMessage": "Teken asseblief weer aan vir identiteitsverifikasie voor u rekening gesluit word. Die rekening sluitingspreses sal outomaties begin nadat u weer aangemeld het.",
+  "reLoginMessage": "Meld asseblief weer aan om jou identiteit te bevestig voordat jou rekening uitgevee word. Daarna begin die uitvee van jou rekening outomaties.",
   "updateAuthenticationAfterReLogin": "Log weer in om jou verifikasie-inligting by te werk",
   "menstruationPage": "Menstruasie",
   "calendarPage": "Kalenderblad",

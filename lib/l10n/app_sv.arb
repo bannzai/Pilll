@@ -85,7 +85,7 @@
   "withdrawalMessage": "Om du raderar ditt konto raderas alla dina uppgifter, och du kan aldrig logga in med samma konto igen.",
   "recordPage": "Pillerhistorik",
   "doReLogin": "Logga in igen, tack",
-  "reLoginMessage": "Vänligen logga in igen för att verifiera din identitet innan kontot avslutas. Avslutningsprocessen startar automatiskt efter återinloggningen.",
+  "reLoginMessage": "Logga in igen för att bekräfta din identitet innan kontot tas bort. Borttagningen startar automatiskt när du har loggat in.",
   "updateAuthenticationAfterReLogin": "Logga in igen för att uppdatera din autentiseringsinformation",
   "menstruationPage": "Mens",
   "calendarPage": "Kalender",

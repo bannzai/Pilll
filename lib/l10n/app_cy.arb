@@ -85,7 +85,7 @@
   "withdrawalMessage": "Os byddwch yn cau eich cyfrif, caiff eich holl ddata ei ddileu ac ni fyddwch byth yn gallu mewngofnodi gyda’r un cyfrif eto.",
   "recordPage": "Cofnod cymryd pils",
   "doReLogin": "Mewngofnodwch eto, os gwelwch yn dda",
-  "reLoginMessage": "Rhowch ail-fewngofnodi i gadarnhau eich hunaniaeth cyn gadael. Ar ôl ail-fewngofnodi, bydd y broses gadael yn dechrau'n awtomatig",
+  "reLoginMessage": "Mewngofnodwch eto i gadarnhau pwy ydych chi cyn dileu eich cyfrif. Ar ôl i chi fewngofnodi, bydd y broses ddileu yn dechrau'n awtomatig.",
   "updateAuthenticationAfterReLogin": "Mewngofnodwch eto i ddiweddaru eich manylion dilysu",
   "menstruationPage": "Misglwyf",
   "calendarPage": "Calendr",

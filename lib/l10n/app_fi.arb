@@ -85,7 +85,7 @@
   "withdrawalMessage": "Jos poistat tilisi, kaikki tietosi poistetaan etkä voi enää koskaan kirjautua sisään samalla tilillä.",
   "recordPage": "Pillereiden ottomerkinnät",
   "doReLogin": "Kirjaudu uudelleen, kiitos",
-  "reLoginMessage": "Vahvista henkilöllisyytesi kirjautumalla uudelleen sisään ennen tilin poistamista. Uudelleenkirjautumisen jälkeen tilin poistoprosessi alkaa automaattisesti.",
+  "reLoginMessage": "Kirjaudu uudelleen sisään henkilöllisyytesi vahvistamiseksi ennen tilin poistamista. Poistaminen alkaa automaattisesti kirjautumisen jälkeen.",
   "updateAuthenticationAfterReLogin": "Kirjaudu uudelleen sisään päivittääksesi todentamistietosi",
   "menstruationPage": "Kuukautiset",
   "calendarPage": "Kalenteri",

@@ -85,7 +85,7 @@
   "withdrawalMessage": "Kui kustutad oma konto, kustutatakse kõik sinu andmed ja sa ei saa enam kunagi sama kontoga sisse logida.",
   "recordPage": "Pillide võtmise kirjed",
   "doReLogin": "Palun logi uuesti sisse",
-  "reLoginMessage": "Enne konto kustutamist palun logige isiku tuvastamiseks uuesti sisse. Pärast uuesti sisselogimist algab automaatselt konto kustutamise protsess.",
+  "reLoginMessage": "Logi enne konto kustutamist oma isiku kinnitamiseks uuesti sisse. Pärast sisselogimist algab kustutamine automaatselt.",
   "updateAuthenticationAfterReLogin": "Autentimisandmete uuendamiseks logige palun uuesti sisse",
   "menstruationPage": "Menstruatsioon",
   "calendarPage": "Kalender",

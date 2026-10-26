@@ -85,7 +85,7 @@
   "withdrawalMessage": "Wenn du dein Konto löschst, werden alle deine Daten gelöscht. Mit demselben Konto kannst du dich danach nie wieder anmelden.",
   "recordPage": "Pilleneinnahmen",
   "doReLogin": "Melde dich bitte erneut an",
-  "reLoginMessage": "Zur Identitätsverifikation melden Sie sich bitte vor der Kontolöschung erneut an. Nach der erneuten Anmeldung beginnt der Löschungsvorgang automatisch.",
+  "reLoginMessage": "Melde dich bitte erneut an, um deine Identität zu bestätigen, bevor dein Konto gelöscht wird. Danach beginnt die Löschung automatisch.",
   "updateAuthenticationAfterReLogin": "Bitte melden Sie sich erneut an, um Ihre Anmeldedaten zu aktualisieren",
   "menstruationPage": "Menstruation",
   "calendarPage": "Kalender",

@@ -85,7 +85,7 @@
   "withdrawalMessage": "Jika anda memadamkan akaun, semua data anda akan dipadamkan dan anda tidak akan dapat log masuk lagi menggunakan akaun yang sama.",
   "recordPage": "Rekod pengambilan pil",
   "doReLogin": "Sila log masuk semula",
-  "reLoginMessage": "Sila log masuk semula untuk pengesahan identiti sebelum membatalkan akaun. Selepas log masuk semula, proses pembatalan akaun akan bermula secara automatik.",
+  "reLoginMessage": "Sila log masuk semula untuk mengesahkan identiti anda sebelum akaun dipadamkan. Selepas log masuk, proses pemadaman akan bermula secara automatik.",
   "updateAuthenticationAfterReLogin": "Log masuk semula untuk mengemaskini maklumat pengesahan anda",
   "menstruationPage": "Menstruasi",
   "calendarPage": "Kalendar",

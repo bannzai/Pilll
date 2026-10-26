@@ -85,7 +85,7 @@
   "withdrawalMessage": "Se eliminas a túa conta, borraranse todos os teus datos e nunca máis poderás iniciar sesión coa mesma conta.",
   "recordPage": "Rexistro de pílulas",
   "doReLogin": "Volve iniciar sesión, por favor",
-  "reLoginMessage": "Por favor, inicia sesión de novo para verificar a túa identidade antes de darte de baixa. Despois de iniciar sesión de novo, o proceso de baixa comezará automaticamente.",
+  "reLoginMessage": "Volve iniciar sesión para confirmar a túa identidade antes de eliminar a conta. Despois, a eliminación comezará automaticamente.",
   "updateAuthenticationAfterReLogin": "Inicia sesión de novo para actualizar a información de autenticación",
   "menstruationPage": "Menstruación",
   "calendarPage": "Calendario",

@@ -85,7 +85,7 @@
   "withdrawalMessage": "Če izbrišete svoj račun, bodo vsi vaši podatki izbrisani in z istim računom se ne boste mogli nikoli več prijaviti.",
   "recordPage": "Evidenca jemanja tablet",
   "doReLogin": "Prosimo, znova se prijavite",
-  "reLoginMessage": "Pred ukinitvijo računa se prosimo ponovno prijavite za preverjanje identitete. Po ponovni prijavi se bo samodejno začel postopek ukinitve računa.",
+  "reLoginMessage": "Pred izbrisom računa se znova prijavite, da potrdite svojo identiteto. Po prijavi se bo brisanje začelo samodejno.",
   "updateAuthenticationAfterReLogin": "Ponovno se prijavite za posodobitev avtentikacijskih podatkov",
   "menstruationPage": "Menstruacija",
   "calendarPage": "Koledar",

@@ -85,7 +85,7 @@
   "withdrawalMessage": "Ja dzēsīsiet savu kontu, visi jūsu dati tiks dzēsti un ar to pašu kontu vairs nekad nevarēsiet pieteikties.",
   "recordPage": "Tablešu lietošanas ieraksti",
   "doReLogin": "Lūdzu, piesakieties vēlreiz",
-  "reLoginMessage": "Pirms konta dzēšanas, lūdzu piesakieties atkārtoti identitātes pārbaudei. Pēc atkārtotas pieteikšanās automātiski sāksies konta dzēšanas process.",
+  "reLoginMessage": "Pirms konta dzēšanas, lūdzu, piesakieties vēlreiz, lai apstiprinātu savu identitāti. Pēc pieteikšanās dzēšana sāksies automātiski.",
   "updateAuthenticationAfterReLogin": "Pieslēdzieties vēlreiz un atjauniniet autentifikācijas informāciju",
   "menstruationPage": "Menstruācija",
   "calendarPage": "Kalendārs",

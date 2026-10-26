@@ -85,7 +85,7 @@
   "withdrawalMessage": "Jeśli usuniesz konto, wszystkie Twoje dane zostaną usunięte i już nigdy nie zalogujesz się na to samo konto.",
   "recordPage": "Historia przyjmowania tabletek",
   "doReLogin": "Zaloguj się ponownie",
-  "reLoginMessage": "Przed usunięciem konta zaloguj się ponownie w celu weryfikacji tożsamości. Po ponownym zalogowaniu proces usunięcia konta zostanie automatycznie rozpoczęty.",
+  "reLoginMessage": "Zaloguj się ponownie, aby potwierdzić tożsamość przed usunięciem konta. Po zalogowaniu usuwanie rozpocznie się automatycznie.",
   "updateAuthenticationAfterReLogin": "Proszę zalogować się ponownie, aby zaktualizować dane uwierzytelniające",
   "menstruationPage": "Menstruacja",
   "calendarPage": "Kalendarz",

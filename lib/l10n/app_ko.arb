@@ -85,7 +85,7 @@
   "withdrawalMessage": "계정을 탈퇴하면 모든 데이터가 삭제되며, 같은 계정으로는 다시 로그인할 수 없어요.",
   "recordPage": "피임약 복용 기록",
   "doReLogin": "다시 로그인해 주세요",
-  "reLoginMessage": "탈퇴 전에 본인 확인을 위해 다시 로그인해 주세요. 재로그인 후 자동으로 탈퇴 처리가 시작됩니다.",
+  "reLoginMessage": "계정을 삭제하기 전에 본인 확인을 위해 다시 로그인해 주세요. 로그인하면 계정 삭제 절차가 자동으로 시작돼요.",
   "updateAuthenticationAfterReLogin": "재로그인하여 인증 정보를 업데이트합니다",
   "menstruationPage": "생리",
   "calendarPage": "달력",

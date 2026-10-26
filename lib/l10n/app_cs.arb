@@ -85,7 +85,7 @@
   "withdrawalMessage": "Pokud svůj účet zrušíte, všechna vaše data budou smazána a ke stejnému účtu se už nikdy nepřihlásíte.",
   "recordPage": "Záznamy užívání pilulek",
   "doReLogin": "Přihlaste se prosím znovu",
-  "reLoginMessage": "Pro ověření totožnosti se prosím před deaktivací účtu znovu přihlaste. Po opětovném přihlášení se automaticky spustí proces deaktivace.",
+  "reLoginMessage": "Před smazáním účtu se prosím znovu přihlaste, abychom ověřili vaši totožnost. Po přihlášení se mazání spustí automaticky.",
   "updateAuthenticationAfterReLogin": "Znovu se přihlaste pro aktualizaci autentizačních údajů",
   "menstruationPage": "Menstruace",
   "calendarPage": "Kalendář",

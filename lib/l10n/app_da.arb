@@ -85,7 +85,7 @@
   "withdrawalMessage": "Hvis du sletter din konto, bliver alle dine data slettet, og du kan aldrig logge ind med den samme konto igen.",
   "recordPage": "Pillehistorik",
   "doReLogin": "Log venligst ind igen",
-  "reLoginMessage": "Venligst log ind igen for identitetsverifikation før sletning af din konto. Sletningsprocessen starter automatisk efter genindlogning.",
+  "reLoginMessage": "Log ind igen for at bekræfte din identitet, før din konto slettes. Når du er logget ind, starter sletningen automatisk.",
   "updateAuthenticationAfterReLogin": "Log ind igen for at opdatere dine godkendelsesoplysninger",
   "menstruationPage": "Menstruationsside",
   "calendarPage": "Kalender",
