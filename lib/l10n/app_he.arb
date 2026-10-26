@@ -239,7 +239,7 @@
   "option": "אפשרויות",
   "completed": "סיום",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ניתן לערוך הודעות התראה על שכחת נטילה",
+  "changeMissedNotificationMessage": "אפשר לשנות את נוסח ההתראה שמופיעה כשהגלולה עדיין לא ניטלה",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ניתן לערוך את תחילת הודעת ההתראה",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

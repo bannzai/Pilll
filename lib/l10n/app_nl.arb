@@ -239,7 +239,7 @@
   "option": "Opties",
   "completed": "Gereed",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Je kunt de meldingstekst wijzigen voor wanneer je vergeet je pil in te nemen",
+  "changeMissedNotificationMessage": "Je kunt de tekst aanpassen van de melding die verschijnt als je je pil nog niet hebt ingenomen",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Je kunt het begin van de melding aanpassen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

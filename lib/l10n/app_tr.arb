@@ -239,7 +239,7 @@
   "option": "Seçenekler",
   "completed": "Bitti",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "İlaç unutulduğunda gösterilecek bildirim mesajını özelleştirebilirsiniz",
+  "changeMissedNotificationMessage": "Hapınızı henüz almadığınızda gösterilen bildirim metnini değiştirebilirsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirim başlığını özelleştirebilirsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

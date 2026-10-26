@@ -239,7 +239,7 @@
   "option": "Opcje",
   "completed": "Gotowe",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Możesz dostosować treść powiadomień o zapomnieniu wzięcia tabletki",
+  "changeMissedNotificationMessage": "Możesz zmienić tekst powiadomienia wyświetlanego, gdy tabletka nie została jeszcze przyjęta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Możesz zmienić początek powiadomień",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Aukerak",
   "completed": "Eginda",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Pilulak hartzea ahaztutako kasuetarako jakinarazpen mezua aldatu dezakezu",
+  "changeMissedNotificationMessage": "Pilula oraindik hartu ez duzunean agertzen den jakinarazpenaren testua alda dezakezu",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jakinarazpenen hasierako mezua alda dezakezu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

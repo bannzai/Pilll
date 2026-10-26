@@ -239,7 +239,7 @@
   "option": "اختیارات",
   "completed": "مکمل",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "آپ گولی بھول جانے پر اطلاع کے پیغام کو تبدیل کر سکتے ہیں",
+  "changeMissedNotificationMessage": "آپ گولی ابھی نہ لینے کی صورت میں دکھائے جانے والے نوٹیفکیشن کا متن بدل سکتی ہیں",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "آپ نوٹیفیکیشن کے شروعاتی حصے میں تبدیلی کر سکتے ہیں",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

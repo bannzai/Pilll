@@ -239,7 +239,7 @@
   "option": "Opcijas",
   "completed": "Gatavs",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Varat mainīt paziņojuma tekstu pilulu lietošanas aizmiršanas gadījumam",
+  "changeMissedNotificationMessage": "Varat mainīt paziņojuma tekstu, kas tiek rādīts, ja tablete vēl nav iedzerta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Varat mainīt paziņojuma sākuma daļu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Možnosti",
   "completed": "Končano",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Besedilo obvestila za pozabljeno jemanje lahko prilagodite",
+  "changeMissedNotificationMessage": "Spremenite lahko besedilo obvestila, ki se prikaže, ko tableta še ni bila vzeta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Lahko spremenite začetni del obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

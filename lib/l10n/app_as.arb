@@ -239,7 +239,7 @@
   "option": "বিকল্পসমূহ",
   "completed": "সম্পূৰ্ণ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "পিল খোৱা পাহৰি গ'লে পঠোৱা জাননী বাৰ্তা সলনি কৰিব পাৰে",
+  "changeMissedNotificationMessage": "পিল খাবলৈ বাকী থাকিলে দেখা দিয়া জাননীৰ লিখনি আপুনি সলনি কৰিব পাৰে",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "জাননীৰ প্ৰথম অংশ সলনি কৰিব পাৰে",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

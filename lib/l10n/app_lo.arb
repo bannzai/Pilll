@@ -239,7 +239,7 @@
   "option": "ຕົວເລືອກ",
   "completed": "ສຳເລັດ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ສາມາດປ່ຽນແປງຂໍ້ຄວາມແຈ້ງເຕືອນເມື່ອລືມກິນຢາໄດ້",
+  "changeMissedNotificationMessage": "ທ່ານສາມາດປ່ຽນຂໍ້ຄວາມແຈ້ງເຕືອນທີ່ສະແດງເມື່ອຍັງບໍ່ທັນກິນຢາເມັດ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ສາມາດປ່ຽນແປງສ່ວນຫົວຂອງການແຈ້ງເຕືອນໄດ້",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

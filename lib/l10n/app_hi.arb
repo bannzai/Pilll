@@ -239,7 +239,7 @@
   "option": "विकल्प",
   "completed": "पूरा हुआ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "पिल लेना भूलने की स्थिति में मिलने वाली सूचना के संदेश को आप बदल सकते हैं",
+  "changeMissedNotificationMessage": "गोली लेना बाकी होने पर दिखने वाली सूचना का संदेश आप बदल सकती हैं",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "आप अपनी सूचनाओं का शुरुआती हिस्सा बदल सकते हैं",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

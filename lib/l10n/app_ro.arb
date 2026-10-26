@@ -239,7 +239,7 @@
   "option": "Opțiuni",
   "completed": "Gata",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Poți personaliza mesajul de notificare pentru când uiți să iei pilula",
+  "changeMissedNotificationMessage": "Poți schimba textul notificării afișate când încă nu ai luat pilula",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Puteți personaliza începutul notificărilor",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

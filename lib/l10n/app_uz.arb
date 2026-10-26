@@ -239,7 +239,7 @@
   "option": "Variantlar",
   "completed": "Tayyor",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Dori ichishni unutganda keluvchi bildirishnoma matnini o'zgartirishingiz mumkin",
+  "changeMissedNotificationMessage": "Siz hapni hali qabul qilmaganingizda koʻrsatiladigan bildirishnoma matnini oʻzgartirishingiz mumkin",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirishnoma sarlavhasini o'zgartirish mumkin",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

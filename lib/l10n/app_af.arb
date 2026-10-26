@@ -239,7 +239,7 @@
   "option": "Opsies",
   "completed": "Klaar",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Jy kan die kennisgewing boodskap verander vir wanneer jy vergeet het om te neem",
+  "changeMissedNotificationMessage": "Jy kan die kennisgewingteks verander vir wanneer jy nog nie jou pil gedrink het nie",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jy kan die begin van die kennisgewing verander",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

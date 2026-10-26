@@ -239,7 +239,7 @@
   "option": "ਵਿਕਲਪ",
   "completed": "ਮੁਕੰਮਲ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ਦਵਾਈ ਛੁੱਟਣ 'ਤੇ ਸੂਚਨਾ ਮੈਸੇਜ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "changeMissedNotificationMessage": "ਗੋਲੀ ਲੈਣੀ ਬਾਕੀ ਹੋਣ ’ਤੇ ਦਿਖਾਈ ਦੇਣ ਵਾਲੀ ਸੂਚਨਾ ਦਾ ਸੁਨੇਹਾ ਤੁਸੀਂ ਬਦਲ ਸਕਦੇ ਹੋ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ਸੂਚਨਾ ਦੇ ਸ਼ੁਰੂਆਤੀ ਹਿੱਸੇ ਨੂੰ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Chaguo",
   "completed": "Imekamilika",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa wakati wa kusahau kumeza vidonge",
+  "changeMissedNotificationMessage": "Unaweza kubadilisha maandishi ya arifa inayoonekana wakati bado hujameza kidonge",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Unaweza kubadilisha kichwa cha arifa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

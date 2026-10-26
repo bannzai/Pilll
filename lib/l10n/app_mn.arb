@@ -239,7 +239,7 @@
   "option": "Сонголтууд",
   "completed": "Дууссан",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Эм уухаа мартсан үед илгээх мэдэгдлийн текстийг өөрчлөх боломжтой",
+  "changeMissedNotificationMessage": "Эмээ хараахан уугаагүй үед харагдах мэдэгдлийн текстийг өөрчилж болно",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Мэдэгдлийн эхний хэсгийг өөрчлөх боломжтой",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Izinketho",
   "completed": "Kuqediwe",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Ungashintsha umlayezo wokwazisa uma ukhohlwe ukuphuza amaphilisi",
+  "changeMissedNotificationMessage": "Ungawushintsha umbhalo wesaziso esivela lapho ungakaliphuzi iphilisi",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Ungakwazi ukushintsha isiqalo sesaziso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

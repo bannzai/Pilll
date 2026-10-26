@@ -239,7 +239,7 @@
   "option": "Опции",
   "completed": "Готово",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Можете да ги персонализирате пораките за известување кога заборавате да ги земете пилулите",
+  "changeMissedNotificationMessage": "Можете да го промените текстот на известувањето што се прикажува кога сè уште не сте ја земале таблетата",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да го менувате насловниот дел од нотификациите",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

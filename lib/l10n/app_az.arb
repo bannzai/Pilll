@@ -239,7 +239,7 @@
   "option": "Seçimlər",
   "completed": "Tamam",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Dərman qəbulunu unutduğunuz halda bildiriş mətnini dəyişdirə bilərsiniz",
+  "changeMissedNotificationMessage": "Həbi qəbul etmədiyiniz zaman göstərilən bildiriş mətnini dəyişə bilərsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirişlərin başlanğıc hissəsini dəyişdirə bilərsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Επιλογές",
   "completed": "Τέλος",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το μήνυμα ειδοποίησης όταν ξεχνάτε να πάρετε το χάπι",
+  "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το κείμενο της ειδοποίησης που εμφανίζεται όταν δεν έχετε πάρει ακόμη το χάπι",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Μπορείτε να προσαρμόσετε το αρχικό μέρος της ειδοποίησης",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

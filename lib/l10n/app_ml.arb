@@ -239,7 +239,7 @@
   "option": "ഓപ്ഷനുകൾ",
   "completed": "പൂർത്തിയായി",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "മരുന്ന് കഴിക്കാൻ മറക്കുമ്പോഴുള്ള അറിയിപ്പ് സന്ദേശം മാറ്റാവുന്നതാണ്",
+  "changeMissedNotificationMessage": "ഗുളിക ഇനിയും കഴിച്ചിട്ടില്ലെങ്കിൽ കാണിക്കുന്ന അറിയിപ്പിലെ വാചകം മാറ്റാം",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "അറിയിപ്പിന്റെ തുടക്കഭാഗം മാറ്റാൻ കഴിയും",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Tùy chọn",
   "completed": "Xong",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Có thể thay đổi nội dung thông báo khi quên uống thuốc",
+  "changeMissedNotificationMessage": "Bạn có thể thay đổi nội dung thông báo hiển thị khi chưa uống thuốc",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Có thể thay đổi phần đầu thông báo",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

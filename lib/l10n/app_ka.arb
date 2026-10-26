@@ -239,7 +239,7 @@
   "option": "ვარიანტები",
   "completed": "დასრულება",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინება, რომელიც გამოჩნდება აბის დავიწყებისას",
+  "changeMissedNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი, რომელიც გამოჩნდება, როცა აბი ჯერ არ მიგიღიათ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "შეტყობინების დასაწყისის შეცვლა შესაძლებელია",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

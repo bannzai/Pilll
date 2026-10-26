@@ -239,7 +239,7 @@
   "option": "Opsi",
   "completed": "Selesai",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Anda dapat mengubah pesan notifikasi ketika lupa minum pil",
+  "changeMissedNotificationMessage": "Anda dapat mengubah teks notifikasi yang muncul saat pil belum diminum",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Anda dapat mengubah bagian awal notifikasi",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

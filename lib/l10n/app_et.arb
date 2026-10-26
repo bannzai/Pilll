@@ -239,7 +239,7 @@
   "option": "Valikud",
   "completed": "Valmis",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Saate kohandada unustamise teavitussõnumit",
+  "changeMissedNotificationMessage": "Saad muuta teavituse teksti, mida näidatakse siis, kui pill on veel võtmata",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Teavituste algust saab muuta",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Opsiynau",
   "completed": "Wedi gorffen",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Gallwch newid neges yr hysbysiad pan fyddwch yn anghofio cymryd y bilsen",
+  "changeMissedNotificationMessage": "Gallwch newid testun yr hysbysiad sy’n ymddangos pan nad ydych wedi cymryd y bilsen eto",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Gallwch newid dechrau'r hysbysiad",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

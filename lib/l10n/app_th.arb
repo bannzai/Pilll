@@ -239,7 +239,7 @@
   "option": "ตัวเลือก",
   "completed": "เสร็จสิ้น",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "สามารถเปลี่ยนแปลงข้อความแจ้งเตือนเมื่อลืมทานยาได้",
+  "changeMissedNotificationMessage": "สามารถเปลี่ยนข้อความแจ้งเตือนที่แสดงเมื่อยังไม่ได้ทานยาได้ค่ะ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "สามารถเปลี่ยนแปลงข้อความต้นของการแจ้งเตือนได้",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

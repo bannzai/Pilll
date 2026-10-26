@@ -239,7 +239,7 @@
   "option": "पर्याय",
   "completed": "पूर्ण",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "गोळी विसरल्यावरचे सूचना संदेश बदलता येतात",
+  "changeMissedNotificationMessage": "गोळी घेणे बाकी असताना दिसणाऱ्या सूचनेतील मजकूर तुम्ही बदलू शकता",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "सूचनांच्या सुरुवातीचा भाग बदलू शकता",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

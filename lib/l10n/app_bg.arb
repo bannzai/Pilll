@@ -239,7 +239,7 @@
   "option": "Опции",
   "completed": "Готово",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Можете да променяте текста на известяването при пропусната доза",
+  "changeMissedNotificationMessage": "Можете да промените текста на известието, което се показва, когато хапчето още не е взето",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да промените началната част на известията",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "ಆಯ್ಕೆಗಳು",
   "completed": "ಮುಗಿದಿದೆ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ಗೋಳಿ ಮರೆಯಾದಾಗ ಅಧಿಸೂಚನೆ ಸಂದೇಶವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
+  "changeMissedNotificationMessage": "ಮಾತ್ರೆಯನ್ನು ಇನ್ನೂ ತೆಗೆದುಕೊಂಡಿಲ್ಲದಿದ್ದಾಗ ಕಾಣಿಸುವ ಅಧಿಸೂಚನೆಯ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ಅಧಿಸೂಚನೆಯ ಮೊದಲ ಭಾಗವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Možnosti",
   "completed": "Hotovo",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Můžete změnit text oznámení při zapomenutí užití",
+  "changeMissedNotificationMessage": "Můžete změnit text oznámení, které se zobrazí, když tableta ještě nebyla užita",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Můžete změnit úvodní část oznámení",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

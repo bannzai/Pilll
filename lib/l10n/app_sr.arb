@@ -239,7 +239,7 @@
   "option": "Опције",
   "completed": "Готово",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Можете прилагодити текст обавештења када заборавите пилуле",
+  "changeMissedNotificationMessage": "Можете да промените текст обавештења које се приказује када још нисте узели пилулу",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Možete da promenite početak obaveštenja",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

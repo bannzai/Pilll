@@ -239,7 +239,7 @@
   "option": "ఎంపికలు",
   "completed": "పూర్తయింది",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "మర్చిపోయిన డోస్ నోటిఫికేషన్ సందేశాన్ని కస్టమైజ్ చేయవచ్చు",
+  "changeMissedNotificationMessage": "మాత్ర ఇంకా తీసుకోనప్పుడు కనిపించే నోటిఫికేషన్ సందేశాన్ని మీరు మార్చుకోవచ్చు",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "నోటిఫికేషన్ ప్రారంభ వచనాన్ని మార్చవచ్చు",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

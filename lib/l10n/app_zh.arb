@@ -239,7 +239,7 @@
   "option": "选项",
   "completed": "完成",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "可以自定义忘记服药时的通知内容",
+  "changeMissedNotificationMessage": "你可以修改尚未服药时显示的通知文案",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "可以更改通知的开头部分",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

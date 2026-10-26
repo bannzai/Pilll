@@ -239,7 +239,7 @@
   "option": "Mga opsyon",
   "completed": "Tapos na",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Maaari mong baguhin ang mensahe ng notification para sa nakakalimutang pag-inom",
+  "changeMissedNotificationMessage": "Maaari ninyong baguhin ang text ng abisong lumalabas kapag hindi pa ninyo naiinom ang pill",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Maaaring baguhin ang unang bahagi ng mga abiso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

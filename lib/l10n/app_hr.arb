@@ -239,7 +239,7 @@
   "option": "Opcije",
   "completed": "Gotovo",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Možete prilagoditi poruku obavijesti kada zaboravite uzeti tabletu",
+  "changeMissedNotificationMessage": "Možete promijeniti tekst obavijesti koja se prikazuje kada još niste uzeli pilulu",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Možete promijeniti početni dio obavijesti",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "ବିକଳ୍ପଗୁଡ଼ିକ",
   "completed": "ସମ୍ପୂର୍ଣ୍ଣ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ଗୋଲି ଖାଇବାକୁ ଭୁଲିଗଲେ ବିଜ୍ଞପ୍ତି ବାର୍ତ୍ତା ପରିବର୍ତ୍ତନ କରିପାରିବେ",
+  "changeMissedNotificationMessage": "ବଟିକା ଖାଇବା ବାକି ଥିଲେ ଦେଖାଯାଉଥିବା ବିଜ୍ଞପ୍ତିର ଲେଖା ଆପଣ ବଦଳାଇ ପାରିବେ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ବିଜ୍ଞପ୍ତିର ଆରମ୍ଭ ଅଂଶ ପରିବର୍ତ୍ତନ କରିପାରିବେ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

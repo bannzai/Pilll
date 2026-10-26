@@ -239,7 +239,7 @@
   "option": "ရွေးချယ်စရာများ",
   "completed": "ပြီးပါပြီ",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ဆေးမသောက်ရန်မေ့လျော့သွားသည့်အခါ အကြောင်းကြားစာသားကို ပြောင်းလဲနိုင်ပါသည်",
+  "changeMissedNotificationMessage": "ဆေးလုံး မသောက်ရသေးသည့်အခါ ပေါ်လာမည့် အသိပေးချက်စာသားကို ပြောင်းလဲနိုင်ပါတယ်",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "သတိပေးချက်ခေါင်းစီးကို ပြောင်းလဲနိုင်သည်",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

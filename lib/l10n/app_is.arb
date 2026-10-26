@@ -239,7 +239,7 @@
   "option": "Valkostir",
   "completed": "Lokið",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Þú getur breytt tilkynningatextanum þegar þú gleymir að taka töfluna",
+  "changeMissedNotificationMessage": "Þú getur breytt texta tilkynningarinnar sem birtist þegar þú átt enn eftir að taka pilluna",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Þú getur breytt byrjun tilkynninga",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Valgmuligheder",
   "completed": "Færdig",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Du kan tilpasse notifikationsbeskeden når du glemmer at tage pillen",
+  "changeMissedNotificationMessage": "Du kan ændre teksten i den besked, der vises, når du endnu ikke har taget din p-pille",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan ændre begyndelsen af notifikationer",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

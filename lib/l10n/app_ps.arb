@@ -239,7 +239,7 @@
   "option": "غوراوي",
   "completed": "بشپړ شو",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "د ګولیو د هیرولو د اطلاعیې پیغام بدلولی شو",
+  "changeMissedNotificationMessage": "تاسو کولی شئ د هغه خبرتیا متن بدل کړئ چې د ګولۍ د نه اخیستو پر مهال ښکاري",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "تاسو کولی شئ د خبرتیاوو لومړۍ برخه بدله کړئ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

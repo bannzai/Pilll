@@ -239,7 +239,7 @@
   "option": "አማራጮች",
   "completed": "ተጠናቋል",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ክኒን መውሰድ ስትረሱ የሚላክ ማሳወቂያ መልዕክት መቀየር ይችላሉ",
+  "changeMissedNotificationMessage": "ክኒን ሳይወሰድ ሲቀር የሚታየውን የማሳወቂያ ጽሑፍ መቀየር ይችላሉ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "የማሳወቂያ ርዕስ መቀየር ይችላሉ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

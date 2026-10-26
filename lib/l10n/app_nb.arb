@@ -239,7 +239,7 @@
   "option": "Alternativer",
   "completed": "Ferdig",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Du kan tilpasse varselteksten som vises når du glemmer å ta pillen",
+  "changeMissedNotificationMessage": "Du kan endre teksten i varselet som vises når du ennå ikke har tatt p-pillen",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan endre starten på varslingen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

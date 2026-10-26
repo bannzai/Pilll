@@ -239,7 +239,7 @@
   "option": "گزینه‌ها",
   "completed": "انجام شد",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "می‌توانید پیام اعلان فراموشی مصرف را تغییر دهید",
+  "changeMissedNotificationMessage": "می‌توانید متن اعلانی را که هنگام مصرف‌نشدن قرص نمایش داده می‌شود تغییر دهید",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "می‌توانید قسمت ابتدایی اعلان‌ها را تغییر دهید",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Valinnat",
   "completed": "Valmis",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Voit muokata pillerin unohtamisen ilmoitusviestin",
+  "changeMissedNotificationMessage": "Voit muuttaa ilmoituksen tekstiä, joka näkyy, kun pilleri on vielä ottamatta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Voit muuttaa ilmoituksen alkuosaa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

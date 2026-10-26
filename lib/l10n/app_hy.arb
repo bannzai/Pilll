@@ -239,7 +239,7 @@
   "option": "Ընտրանքներ",
   "completed": "Պատրաստ է",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Կարող եք փոխել դեղահաբի ընդունումը բաց թողնելու ծանուցման տեքստը",
+  "changeMissedNotificationMessage": "Դուք կարող եք փոխել ծանուցման տեքստը, որը ցուցադրվում է, երբ հաբը դեռ չեք ընդունել",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Կարող եք փոփոխել ծանուցումների գլխամասը",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

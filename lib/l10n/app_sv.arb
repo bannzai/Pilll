@@ -239,7 +239,7 @@
   "option": "Alternativ",
   "completed": "Klart",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Du kan anpassa påminnelsemeddelandet för missade doser",
+  "changeMissedNotificationMessage": "Du kan ändra texten i aviseringen som visas när du inte har tagit ditt p-piller än",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan ändra aviseringarnas början",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

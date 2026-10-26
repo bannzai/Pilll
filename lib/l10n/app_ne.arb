@@ -239,7 +239,7 @@
   "option": "विकल्पहरू",
   "completed": "सम्पन्न",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "ौषधि लिन बिर्सिएका बेलाको सूचना सन्देश परिवर्तन गर्न सकिन्छ",
+  "changeMissedNotificationMessage": "चक्की खान बाँकी हुँदा देखिने सूचनाको सन्देश तपाईं परिवर्तन गर्न सक्नुहुन्छ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "सूचनाको सुरुवाती भाग परिवर्तन गर्न सकिन्छ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

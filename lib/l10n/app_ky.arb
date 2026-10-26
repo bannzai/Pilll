@@ -239,7 +239,7 @@
   "option": "Тандоолор",
   "completed": "Даяр",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Дары ичүүнү унуткан учурдагы билдирүү тексттерин өзгөртүүгө болот",
+  "changeMissedNotificationMessage": "Таблетканы иче элек кезде көрсөтүлүүчү билдирменин текстин өзгөртө аласыз",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Билдирүүнүн башталгычын өзгөртсө болот",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

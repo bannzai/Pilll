@@ -239,7 +239,7 @@
   "option": "الخيارات",
   "completed": "تم",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "يمكنك تخصيص رسالة الإشعار عند نسيان تناول الحبوب",
+  "changeMissedNotificationMessage": "يمكنكِ تغيير نص الإشعار الذي يظهر عند عدم تناول الحبة",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "يمكنك تخصيص بداية الإشعارات",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

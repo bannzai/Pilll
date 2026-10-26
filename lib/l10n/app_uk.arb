@@ -239,7 +239,7 @@
   "option": "Параметри",
   "completed": "Готово",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Ви можете змінити текст сповіщення у випадку пропуску прийому",
+  "changeMissedNotificationMessage": "Ви можете змінити текст сповіщення, яке з’являється, коли пігулку ще не прийнято",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можна змінити початкову частину сповіщень",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

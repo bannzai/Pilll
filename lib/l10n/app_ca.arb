@@ -239,7 +239,7 @@
   "option": "Opcions",
   "completed": "Fet",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Podeu personalitzar el missatge de notificació quan us oblideu de prendre la píndola",
+  "changeMissedNotificationMessage": "Pots canviar el text de la notificació que apareix quan encara no has pres la píndola",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Pots personalitzar el text inicial de les notificacions",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

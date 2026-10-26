@@ -239,7 +239,7 @@
   "option": "Options",
   "completed": "Done",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "You can customize the notification message for missed pills",
+  "changeMissedNotificationMessage": "You can change the notification text shown when you haven’t taken your pill yet",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "You can customize the notification header",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

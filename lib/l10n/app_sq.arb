@@ -239,7 +239,7 @@
   "option": "Opsionet",
   "completed": "U krye",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Mund të ndryshoni mesazhin e njoftimit kur harroni të merrni pilulën",
+  "changeMissedNotificationMessage": "Mund ta ndryshoni tekstin e njoftimit që shfaqet kur pilula nuk është marrë ende",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Mund të ndryshoni fillimin e njoftimit",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -239,7 +239,7 @@
   "option": "Možnosti",
   "completed": "Hotovo",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Text notifikácie pri zabudnutí na užitie si môžete zmeniť",
+  "changeMissedNotificationMessage": "Môžete zmeniť text upozornenia, ktoré sa zobrazí, keď tabletka ešte nebola užitá",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Môžete si upraviť začiatok oznámení",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

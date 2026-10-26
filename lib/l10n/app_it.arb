@@ -239,7 +239,7 @@
   "option": "Opzioni",
   "completed": "Fine",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Puoi modificare il messaggio di notifica per quando dimentichi di prendere la pillola",
+  "changeMissedNotificationMessage": "Puoi modificare il testo della notifica che appare quando non hai ancora preso la pillola",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "È possibile modificare la parte iniziale delle notifiche",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

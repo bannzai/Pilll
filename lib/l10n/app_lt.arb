@@ -239,7 +239,7 @@
   "option": "Parinktys",
   "completed": "Atlikta",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Galite keisti pranešimo tekstą, kai pamirštate išgerti tabletes",
+  "changeMissedNotificationMessage": "Galite pakeisti pranešimo tekstą, rodomą, kai tabletė dar neišgerta",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Galite keisti pranešimų pradžios tekstą",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

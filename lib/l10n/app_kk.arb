@@ -239,7 +239,7 @@
   "option": "Параметрлер",
   "completed": "Дайын",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Дәрі-дәрмекті ұмытқан жағдайда хабарландыру мәтінін өзгертуге болады",
+  "changeMissedNotificationMessage": "Сіз таблетканы әлі қабылдамаған кезде көрсетілетін хабарлама мәтінін өзгерте аласыз",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Хабарландыру басын өзгертуге болады",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

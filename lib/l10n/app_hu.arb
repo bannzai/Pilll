@@ -239,7 +239,7 @@
   "option": "Beállítások",
   "completed": "Kész",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Módosíthatja az elmaradás esetén megjelenő értesítési szöveget",
+  "changeMissedNotificationMessage": "Módosíthatod az értesítés szövegét, amely akkor jelenik meg, ha még nem szedted be a tablettát",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Az értesítések kezdő részét módosíthatja",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

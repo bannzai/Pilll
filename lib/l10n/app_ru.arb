@@ -239,7 +239,7 @@
   "option": "Параметры",
   "completed": "Готово",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Вы можете изменить текст уведомления о пропуске приёма",
+  "changeMissedNotificationMessage": "Вы можете изменить текст уведомления, которое появляется, если таблетка ещё не принята",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можно изменить заголовок уведомления",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

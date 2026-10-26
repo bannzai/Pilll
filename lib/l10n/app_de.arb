@@ -239,7 +239,7 @@
   "option": "Optionen",
   "completed": "Fertig",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Sie können den Benachrichtigungstext für vergessene Pilleneinnahmen anpassen",
+  "changeMissedNotificationMessage": "Du kannst den Benachrichtigungstext ändern, der angezeigt wird, wenn du deine Pille noch nicht genommen hast",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Sie können den Anfang der Benachrichtigung anpassen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
