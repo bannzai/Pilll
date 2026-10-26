@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nakupa ni bilo mogoče dokončati. Poskusite znova čez nekaj časa. Če težava ostane, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nakupa z vašim računom ni bilo mogoče dokončati. Poskusite znova čez nekaj časa. Če težava ostane, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Z računom {accountName} se ne morete naročiti na paket. Preverite podatke za plačilo in poskusite znova",
-  "purchaseErrorPaymentPendingError": "Plačilo je bilo prekinjeno. Preverite {storeName} z računu {accountName}, s katerim ste prijavljeni.",
+  "purchaseErrorPaymentPendingError": "Plačilo je bilo prekinjeno. Preverite njegovo stanje v {storeName} z računom {accountName}, v katerega ste prijavljeni.",
   "purchaseErrorInvalidSubscriberAttributesError": "Nakup ni uspel. Poskusite znova čez nekaj časa. Če se težava ne reši, se obrnite na nas prek Nastavitve > Poizvedbe. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Pridobivanje uporabniških podatkov ni uspelo. Počakajte malo in poskusite znova. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Pridobivanje podatkov o nakupu ni uspelo. Počakajte malo in poskusite znova. Če se težava ne reši, se obrnite na nas preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

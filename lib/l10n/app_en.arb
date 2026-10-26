@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "The purchase didn’t go through. Please try again in a little while. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "The purchase couldn't be completed with your account. Please try again later. If the problem continues, contact us through Settings > Contact us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "You can’t subscribe to the plan with your {accountName} account. Check your payment details and try again",
-  "purchaseErrorPaymentPendingError": "Payment processing was interrupted. Please check {storeName} with your current account {accountName}.",
+  "purchaseErrorPaymentPendingError": "The payment was interrupted. Please check its status in {storeName} with the {accountName} account you're signed in to.",
   "purchaseErrorInvalidSubscriberAttributesError": "Purchase failed. Please try again later. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Failed to retrieve user information. Please try again after some time. If the issue persists, please contact us via Settings > Contact Us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Failed to retrieve purchase information. Please try again after some time. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",

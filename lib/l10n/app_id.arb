@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian tidak berhasil. Silakan coba lagi beberapa saat lagi. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Pembelian tidak dapat diselesaikan dengan akun Anda. Silakan coba lagi nanti. Jika masalah berlanjut, hubungi kami melalui Pengaturan > Hubungi kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Anda tidak dapat berlangganan paket dengan akun {accountName}. Periksa informasi pembayaran Anda, lalu coba lagi",
-  "purchaseErrorPaymentPendingError": "Pembayaran sedang tertunda. Silakan periksa {storeName} dengan akun {accountName} yang sedang login",
+  "purchaseErrorPaymentPendingError": "Pembayaran terhenti sebelum selesai. Silakan periksa statusnya di {storeName} dengan akun {accountName} yang sedang Anda gunakan.",
   "purchaseErrorInvalidSubscriberAttributesError": "Pembelian gagal. Silakan tunggu sebentar dan coba lagi. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Kontak. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Gagal mengambil informasi pengguna. Silakan coba lagi setelah beberapa waktu. Jika masih belum teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Gagal mengambil informasi pembelian. Silakan coba lagi nanti. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",

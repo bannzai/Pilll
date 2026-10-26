@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ক্ৰয় সম্পূৰ্ণ নহ’ল। অনুগ্ৰহ কৰি কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "আপোনাৰ একাউণ্টেৰে ক্ৰয় সম্পূৰ্ণ কৰিব পৰা নগ’ল। অনুগ্ৰহ কৰি কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। সমস্যাটো থাকিলে ছেটিংছ > যোগাযোগ কৰক-ৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "আপোনাৰ {accountName} একাউণ্টেৰে প্লেনটোত যোগদান কৰিব নোৱাৰি। অনুগ্ৰহ কৰি পেমেণ্টৰ তথ্য পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক",
-  "purchaseErrorPaymentPendingError": "পেমেণ্ট প্ৰক্ৰিয়া মাজতে বন্ধ হৈ গৈছে। লগইন থকা {accountName}ৰ জৰিয়তে {storeName}ত পৰীক্ষা কৰক।",
+  "purchaseErrorPaymentPendingError": "পেমেণ্টৰ প্ৰক্ৰিয়া মাজতে ৰৈ গৈছে। আপুনি লগ ইন কৰি থকা {accountName} একাউণ্টেৰে {storeName}ত পেমেণ্টৰ অৱস্থা চাওক।",
   "purchaseErrorInvalidSubscriberAttributesError": "ক্ৰয় সম্পূৰ্ণ কৰিব পৰা নগ'ল। অনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমস্যাৰ সমাধান নহ'লে ছেটিংছ > যোগাযোগ ৰ জৰিয়তে আমাৰ লগত যোগাযোগ কৰক। বিতং তথ্য: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "ব্যৱহাৰকাৰীৰ তথ্য আহৰণ কৰিবলৈ ব্যৰ্থ হল। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, ছেটিংছ > যোগাযোগৰ জৰিয়তে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "ক্ৰয় তথ্য সংগ্ৰহত বিফল হৈছে। কিছুসময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ'লে সেটিংছ > যোগাযোগ ৰ জৰিয়তে যোগাযোগ কৰক। বিশদবিৱৰণ: {exceptionMessage}:{exceptionDetails}",

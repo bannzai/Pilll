@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Satın alma işlemi tamamlanamadı. Lütfen bir süre sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Hesabınızla satın alma işlemi tamamlanamadı. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın bölümünden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} hesabınızla plana abone olamıyorsunuz. Lütfen ödeme bilgilerinizi kontrol edip tekrar deneyin",
-  "purchaseErrorPaymentPendingError": "Ödeme işlemi yarıda kaldı. Lütfen giriş yaptığınız {accountName} hesabıyla {storeName}'da kontrol edin",
+  "purchaseErrorPaymentPendingError": "Ödeme tamamlanmadan durdu. Lütfen giriş yaptığınız {accountName} hesabıyla {storeName} üzerinden ödeme durumunu kontrol edin.",
   "purchaseErrorInvalidSubscriberAttributesError": "Satın alma işlemi başarısız oldu. Lütfen biraz bekledikten sonra tekrar deneyin. Sorun devam ederse, Ayarlar > İletişim üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Kullanıcı bilgileri alınamadı. Lütfen biraz bekleyip tekrar deneyin. Sorun devam ederse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Satın alma bilgileri alınamadı. Lütfen bir süre bekleyip tekrar deneyin. Sorun çözülmezse Ayarlar > İletişim üzerinden bizimle iletişime geçin. Detaylar: {exceptionMessage}:{exceptionDetails}",

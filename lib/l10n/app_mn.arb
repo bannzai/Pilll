@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Худалдан авалт амжилтгүй боллоо. Та түр хүлээгээд дахин оролдоно уу. Асуудал үргэлжилбэл Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнд хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Таны бүртгэлээр худалдан авалтыг дуусгаж чадсангүй. Түр хүлээгээд дахин оролдоно уу. Асуудал хэвээр байвал Тохиргоо > Бидэнтэй холбогдох хэсгээр бидэнтэй холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Та {accountName} бүртгэлээрээ энэ төлөвлөгөөнд бүртгүүлэх боломжгүй байна. Төлбөрийн мэдээллээ шалгаад дахин оролдоно уу",
-  "purchaseErrorPaymentPendingError": "Төлбөр дунд зогссон байна. Нэвтэрсэн {accountName}-ээр {storeName}-г шалгана уу",
+  "purchaseErrorPaymentPendingError": "Төлбөр дуусахаас өмнө тасалдлаа. Нэвтэрсэн {accountName} бүртгэлээрээ {storeName} дотор төлбөрийн төлөвийг шалгана уу.",
   "purchaseErrorInvalidSubscriberAttributesError": "Худалдан авалт амжилтгүй боллоо. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Лавлагаанаас асуулт асуулна уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Хэрэглэгчийн мэдээллийг авахад алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандалт хэсгээр холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Худалдан авалтын мэдээлэл авахад алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв асуудал шийдэгдэхгүй бол Тохиргоо > Лавлагаа-аар холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",

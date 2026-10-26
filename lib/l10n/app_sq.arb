@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Blerja nuk u përfundua. Ju lutemi, provoni sërish pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësitë: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Blerja me llogarinë tuaj nuk u përfundua. Ju lutemi, provoni sërish pas pak. Nëse problemi vazhdon, na kontaktoni te Cilësimet > Na kontaktoni. Hollësi: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nuk mund të abonoheni në plan me llogarinë tuaj {accountName}. Ju lutemi, kontrolloni të dhënat e pagesës dhe provoni përsëri",
-  "purchaseErrorPaymentPendingError": "Pagesa është ndërprerë. Ju lutemi kontrolloni {storeName} me llogarinë {accountName} me të cilën jeni të kyçur.",
+  "purchaseErrorPaymentPendingError": "Pagesa u ndërpre para se të përfundonte. Ju lutemi, kontrolloni gjendjen e saj në {storeName} me llogarinë {accountName} ku jeni identifikuar.",
   "purchaseErrorInvalidSubscriberAttributesError": "Blerja dështoi. Ju lutem, provoni përsëri pas pak kohësh. Nëse problemi vazhdon, na kontaktoni nga Parametrat > Kontakt. Detajet: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Dështoi marrja e informacioneve të përdoruesit. Ju lutemi prisni pak dhe provoni përsëri. Nëse problemi nuk zgjidhet, kontaktoni nëpërmjet Cilësimet > Kontakti. Detajet: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Dështoi marrja e informacionit të blerjes. Ju lutemi, pritni pak dhe provojeni përsëri. Nëse problemi nuk zgjidhet, ju lutemi na kontaktoni përmes Cilësimet > Kontakti. Detajet: {exceptionMessage}:{exceptionDetails}",

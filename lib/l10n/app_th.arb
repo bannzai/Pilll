@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "การซื้อไม่สำเร็จค่ะ โปรดลองอีกครั้งในภายหลังค่ะ หากปัญหายังไม่หายไป โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ไม่สามารถซื้อผ่านบัญชีของคุณได้ค่ะ โปรดลองอีกครั้งในภายหลังค่ะ หากยังพบปัญหา โปรดติดต่อเราผ่าน ตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ไม่สามารถสมัครแพ็กเกจด้วยบัญชี {accountName} ของคุณได้ค่ะ กรุณาตรวจสอบข้อมูลการชำระเงินแล้วลองอีกครั้งค่ะ",
-  "purchaseErrorPaymentPendingError": "การชำระเงินถูกหยุดกลางทาง กรุณาตรวจสอบใน {storeName} ด้วยบัญชี {accountName} ที่เข้าสู่ระบบอยู่",
+  "purchaseErrorPaymentPendingError": "การชำระเงินหยุดลงก่อนเสร็จสมบูรณ์ โปรดตรวจสอบสถานะใน {storeName} ด้วยบัญชี {accountName} ที่ลงชื่อเข้าใช้อยู่ค่ะ",
   "purchaseErrorInvalidSubscriberAttributesError": "การซื้อไม่สำเร็จ กรุณาลองใหม่อีกครั้งในภายหลัง หากยังแก้ไขไม่ได้ กรุณาติดต่อสอบถามผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "ไม่สามารถดึงข้อมูลผู้ใช้ได้ กรุณารอสักครู่แล้วลองใหม่อีกครั้ง หากปัญหายังไม่หายไป กรุณาติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "ไม่สามารถรับข้อมูลการซื้อได้ กรุณาลองใหม่อีกครั้งในภายหลัง หากปัญหายังไม่หายไป กรุณาติดต่อเราที่ การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",

@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Achiziția nu a putut fi finalizată. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Achiziția nu a putut fi finalizată cu contul tău. Încearcă din nou puțin mai târziu. Dacă problema persistă, contactează-ne din Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nu te poți abona la plan folosind contul {accountName}. Verifică datele de plată și încearcă din nou",
-  "purchaseErrorPaymentPendingError": "Plata a fost întreruptă. Vă rugăm să verificați {storeName} pentru contul {accountName} cu care sunteți conectat.",
+  "purchaseErrorPaymentPendingError": "Plata s-a întrerupt. Verifică starea ei în {storeName} folosind contul {accountName} cu care te-ai conectat.",
   "purchaseErrorInvalidSubscriberAttributesError": "Achiziția a eșuat. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "A eșuat obținerea informațiilor utilizatorului. Vă rugăm să încercați din nou după o perioadă de timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Nu s-au putut obține informațiile de achiziție. Vă rugăm să încercați din nou mai târziu. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contact. Detalii: {exceptionMessage}:{exceptionDetails}",

@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Ni fu’r pryniant yn llwyddiannus. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Ni fu modd cwblhau'r pryniant gyda'ch cyfrif. Rhowch gynnig arall arni ymhen ychydig. Os yw'r broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Nid yw’n bosibl tanysgrifio i’r cynllun gyda’ch cyfrif {accountName}. Gwiriwch eich manylion talu a rhowch gynnig arall arni",
-  "purchaseErrorPaymentPendingError": "Mae'r taliad wedi atal. Gwiriwch {storeName} gan ddefnyddio {accountName} yr ydych wedi mewngofnodi iddo",
+  "purchaseErrorPaymentPendingError": "Mae'r taliad wedi'i atal cyn iddo gael ei gwblhau. Gwiriwch ei statws yn {storeName} gan ddefnyddio'r cyfrif {accountName} rydych wedi mewngofnodi iddo.",
   "purchaseErrorInvalidSubscriberAttributesError": "Methodd y pryniant. Rhowch gynnig arall arni ymhen ychydig. Os yw'r broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Ymholiadau. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Ni lwyddwyd i gael gwybodaeth defnyddiwr. Arhoswch ychydig ac yna ceisiwch eto. Os nad yw'n datrys y broblem, cysylltwch â ni trwy Gosodiadau > Ymholiadau. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Methodd cael gwybodaeth brynu. Arhoswch ychydig ac yna ceisiwch eto. Os na ddatrysir hyn, cysylltwch â ni drwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",

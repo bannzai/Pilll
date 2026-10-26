@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "לא ניתן להשלים את הרכישה. כדאי לנסות שוב בעוד זמן קצר. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "לא ניתן להשלים את הרכישה באמצעות החשבון שלך. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "לא ניתן להירשם לתוכנית באמצעות חשבון {accountName}. כדאי לבדוק את פרטי התשלום ולנסות שוב",
-  "purchaseErrorPaymentPendingError": "התשלום נעצר באמצע. אנא בדק/י ב-{storeName} עם החשבון {accountName} שמחובר כעת",
+  "purchaseErrorPaymentPendingError": "התשלום הופסק לפני שהושלם. כדאי לבדוק את מצבו ב־{storeName} באמצעות חשבון {accountName} שמחובר כעת.",
   "purchaseErrorInvalidSubscriberAttributesError": "הרכישה נכשלה. אנא נסה שוב מאוחר יותר. אם הבעיה נמשכת, אנא פנה אלינו דרך הגדרות > צור קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "נכשל באחזור מידע המשתמש. אנא נסו שוב לאחר זמן מה. אם הבעיה ממשיכה, אנא פנו אלינו דרך הגדרות > צור קשר. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "נכשל בקבלת מידע רכישה. אנא נסה שוב לאחר זמן מה. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > פנייה. פרטים: {exceptionMessage}:{exceptionDetails}",

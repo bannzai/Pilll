@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ଜାରି ରହିଲେ, ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମକୁ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ଆପଣଙ୍କ ଆକାଉଣ୍ଟରେ କ୍ରୟ ସମ୍ପୂର୍ଣ୍ଣ ହୋଇପାରିଲା ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ସମସ୍ୟା ରହିଲେ ସେଟିଂସ୍ > ଆମ ସହ ଯୋଗାଯୋଗ କରନ୍ତୁ ମାଧ୍ୟମରେ ଜଣାନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ଆପଣଙ୍କ {accountName} ଖାତାରେ ଏହି ପ୍ଲାନ୍‌ର ସଦସ୍ୟତା ନେଇ ହେଉନାହିଁ। ଦୟାକରି ଦେୟ ସୂଚନା ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ",
-  "purchaseErrorPaymentPendingError": "ପେମେଣ୍ଟ ଅସମ୍ପୂର୍ଣ୍ଣ ରହିଯାଇଛି। ଲଗଇନ୍ ହୋଇଥିବା {accountName} ସହିତ {storeName} କୁ ଦୟାକରି ଯାଞ୍ଚ କରନ୍ତୁ",
+  "purchaseErrorPaymentPendingError": "ଦେୟ ପ୍ରକ୍ରିୟା ସମ୍ପୂର୍ଣ୍ଣ ହେବା ପୂର୍ବରୁ ଅଟକିଯାଇଛି। ଆପଣ ଲଗ୍ ଇନ୍ କରିଥିବା {accountName} ଆକାଉଣ୍ଟ ଦ୍ୱାରା {storeName}ରେ ଦେୟର ସ୍ଥିତି ଯାଞ୍ଚ କରନ୍ତୁ।",
   "purchaseErrorInvalidSubscriberAttributesError": "ক্রয় ব্যর্থ হয়েছে। কিছু সময় অপেক্ষা করে আবার চেষ্টা করুন। সমস্যার সমাধান না হলে সেটিংস > যোগাযোগ থেকে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "ବ୍ୟବହାରକାରୀ ତଥ୍ୟ ପ୍ରାପ୍ତ କରିବାରେ ବିଫଳ ହୋଇଛି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାର ସମାଧାନ ନହୁଏ, ସେଟିଂ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "କ୍ରୟ ସୂଚନା ପାଇବାରେ ବିଫଳ। କିଛି ସମୟ ପରେ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ନହୁଏ ତେବେ ସେଟିଙ୍ଗ > ଯୋଗାଯୋଗ ମାଧ୍ୟମରେ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",

@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Non è stato possibile completare l’acquisto. Riprova tra poco. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Non è stato possibile completare l'acquisto con il tuo account. Riprova tra un po'. Se il problema persiste, contattaci da Impostazioni > Contattaci. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Non puoi abbonarti al piano con il tuo account {accountName}. Controlla i dati di pagamento e riprova",
-  "purchaseErrorPaymentPendingError": "Il pagamento è stato interrotto. Controlla {storeName} con l'account {accountName} attualmente collegato",
+  "purchaseErrorPaymentPendingError": "Il pagamento si è interrotto. Controllane lo stato su {storeName} con l'account {accountName} con cui hai effettuato l'accesso.",
   "purchaseErrorInvalidSubscriberAttributesError": "L'acquisto è fallito. Attendi un momento e riprova. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Impossibile recuperare le informazioni utente. Riprova tra qualche minuto. Se il problema persiste, contattaci tramite Impostazioni > Supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Impossibile recuperare le informazioni di acquisto. Attendi qualche minuto e riprova. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",

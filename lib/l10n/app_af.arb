@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Die aankoop het misluk. Probeer asseblief later weer. As die probleem aanhou, kan jy ons via Instellings > Kontak ons bereik. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Die aankoop kon nie met jou rekening voltooi word nie. Probeer asseblief later weer. As dit steeds nie werk nie, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Jy kan nie met jou {accountName} by die plan aansluit nie. Gaan asseblief jou betaalbesonderhede na en probeer weer",
-  "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Kontroleer asseblief by {storeName} terwyl jy met {accountName} aangemeld is.",
+  "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Kyk asseblief by {storeName} met die {accountName}-rekening waarmee jy aangemeld is.",
   "purchaseErrorInvalidSubscriberAttributesError": "Aankoop kon nie voltooi word nie. Probeer asseblief later weer. As dit nie opgelos word nie, neem asseblief kontak op via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Gebruikersinligting kon nie opgehaal word nie. Probeer asseblief later weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Kon nie aankoopinligting verkry nie. Probeer asseblief later weer. Indien die probleem voortduur, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",

@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Купувањето не успеа. Ве молиме обидете се повторно по кратко време. Ако проблемот продолжи, контактирајте нè преку Поставки > Контактирајте нè. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Купувањето со Вашата сметка не можеше да се заврши. Обидете се повторно малку подоцна. Ако проблемот продолжи, контактирајте нè преку Поставки > Контактирајте нè. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Не можете да се претплатите на планот со Вашата сметка {accountName}. Ве молиме проверете ги податоците за плаќање и обидете се повторно",
-  "purchaseErrorPaymentPendingError": "Плаќањето е прекинато. Ве молиме проверете го {storeName} со најавената сметка {accountName}",
+  "purchaseErrorPaymentPendingError": "Плаќањето беше прекинато пред да заврши. Ве молиме, проверете го неговиот статус во {storeName} со сметката {accountName} на која сте најавени.",
   "purchaseErrorInvalidSubscriberAttributesError": "Купувањето неуспешно. Обидете се повторно по неколку време. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Неуспешно земање на корисничките информации. Ве молиме обидете се повторно подоцна. Ако проблемот не се реши, ве молиме контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Неуспешно преземање на информации за купувањето. Обидете се повторно по кратко време. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Детали: {exceptionMessage}:{exceptionDetails}",

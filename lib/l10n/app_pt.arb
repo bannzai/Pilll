@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Não foi possível concluir a compra. Tente novamente daqui a pouco. Se o problema continuar, fale conosco em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Não foi possível concluir a compra com sua conta. Tente novamente daqui a pouco. Se o problema continuar, fale com a gente em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Não é possível assinar o plano com sua conta {accountName}. Confira seus dados de pagamento e tente novamente",
-  "purchaseErrorPaymentPendingError": "O pagamento foi interrompido durante o processo. Verifique na {storeName} com a conta {accountName} que está conectada",
+  "purchaseErrorPaymentPendingError": "O pagamento foi interrompido. Confira o status em {storeName} com a conta {accountName} em que você está conectado.",
   "purchaseErrorInvalidSubscriberAttributesError": "A compra falhou. Aguarde um momento e tente novamente. Se o problema persistir, entre em contato conosco através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Falha ao obter informações do usuário. Tente novamente após um tempo. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Falha ao obter informações de compra. Aguarde um momento e tente novamente. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",

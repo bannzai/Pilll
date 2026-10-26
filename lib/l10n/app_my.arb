@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏနေပြီးမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ကျွန်ုပ်တို့ထံ ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "သင့်အကောင့်ဖြင့် ဝယ်ယူမှုကို အပြီးသတ်၍ မရပါ။ ခဏကြာမှ ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာ ဆက်ရှိနေပါက ဆက်တင်များ > ကျွန်ုပ်တို့ကို ဆက်သွယ်ရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "{accountName} အကောင့်ဖြင့် ဤအစီအစဉ်ကို စာရင်းသွင်း၍ မရပါ။ ငွေပေးချေမှုအချက်အလက်ကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ",
-  "purchaseErrorPaymentPendingError": "ငွေပေးချေမှုသည် ရပ်တန့်နေပါသည်။ လောဂ်အင်ဝင်ရောက်နေသော {accountName} တွင် {storeName} ကို စစ်ဆေးပါ",
+  "purchaseErrorPaymentPendingError": "ငွေပေးချေမှု မပြီးဆုံးမီ ရပ်တန့်သွားပါတယ်။ အကောင့်ဝင်ထားသော {accountName} အကောင့်ဖြင့် {storeName} တွင် ငွေပေးချေမှုအခြေအနေကို စစ်ဆေးပေးပါ။",
   "purchaseErrorInvalidSubscriberAttributesError": "ဝယ်ယူမှု မအောင်မြင်ပါ။ ခဏစောင့်ပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ မဖြေရှင်းနိုင်ပါက ဆက်တင်များ > ဆက်သွယ်ရန် မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "အသုံးပြုသူ၏ အချက်အလက်များ ရယူ၍မရပါ။ ခဏစောင့်ပြီး ပြန်လည်ကြိုးစားပါ။ ပြဿနာမရှင်းလင်းပါက ဆက်တင်များ > မေးမြန်းမှု မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်- {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "ဝယ်ယူမှုအချက်အလက်များ ရယူခြင်းမှ မအောင်မြင်ပါ။ အချိန်အနည်းငယ်စောင့်ပြီး ပြန်လည်ကြိုးစားပါ။ ပြဿနာ မပြေရှင်းပါက ဆက်တင် > ဆက်သွယ်မေးမြန်းရန် မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",

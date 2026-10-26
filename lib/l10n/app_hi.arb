@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "खरीदारी पूरी नहीं हो सकी। कृपया थोड़ी देर बाद फिर कोशिश करें। समस्या बनी रहे, तो सेटिंग > हमसे संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "आपके खाते से खरीदारी पूरी नहीं हो सकी। कृपया कुछ देर बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग्स > हमसे संपर्क करें के ज़रिए संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "आपके {accountName} खाते से इस प्लान की सदस्यता नहीं ली जा सकती। कृपया भुगतान संबंधी जानकारी जाँचें और फिर से कोशिश करें",
-  "purchaseErrorPaymentPendingError": "भुगतान बीच में रुक गया है। कृपया लॉगिन किए गए {accountName} के साथ {storeName} पर जांच करें",
+  "purchaseErrorPaymentPendingError": "भुगतान की प्रक्रिया बीच में रुक गई है। कृपया जिस {accountName} खाते से आप लॉग इन हैं, उससे {storeName} में भुगतान की स्थिति देखें।",
   "purchaseErrorInvalidSubscriberAttributesError": "खरीदारी असफल हुई। कुछ समय बाद पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "उपयोगकर्ता जानकारी प्राप्त करने में विफल। कुछ समय बाद पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "खरीदारी की जानकारी प्राप्त करने में असफल हुआ। कुछ समय बाद पुन: प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",

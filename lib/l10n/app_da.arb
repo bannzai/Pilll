@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Købet kunne ikke gennemføres. Prøv igen om lidt. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Købet kunne ikke gennemføres med din konto. Prøv igen lidt senere. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Du kan ikke tilmelde dig abonnementet med din {accountName}-konto. Tjek dine betalingsoplysninger, og prøv igen",
-  "purchaseErrorPaymentPendingError": "Betalingen er blevet afbrudt. Kontroller venligst {storeName} med din {accountName}-konto",
+  "purchaseErrorPaymentPendingError": "Betalingen blev afbrudt. Tjek dens status i {storeName} med den {accountName}-konto, du er logget ind på.",
   "purchaseErrorInvalidSubscriberAttributesError": "Købet mislykkedes. Vent et øjeblik og prøv igen. Hvis problemet ikke løses, kontakt os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Kunne ikke hente brugeroplysninger. Prøv igen senere. Hvis problemet fortsætter, skal du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Kunne ikke hente købsinformation. Prøv igen senere. Hvis problemet fortsætter, skal du kontakte os via Indstillinger > Kontakt os. Detaljer: {exceptionMessage}:{exceptionDetails}",

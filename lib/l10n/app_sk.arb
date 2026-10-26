@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Nákup sa nepodarilo dokončiť. Skúste to, prosím, o chvíľu znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Nákup pomocou vášho účtu sa nepodarilo dokončiť. Skúste to, prosím, neskôr znova. Ak problém pretrváva, kontaktujte nás cez Nastavenia > Kontaktujte nás. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "S účtom {accountName} sa nemôžete prihlásiť na odber plánu. Skontrolujte platobné údaje a skúste to znova",
-  "purchaseErrorPaymentPendingError": "Platba sa zastavila uprostred procesu. Skontrolujte prosím {storeName} s prihláseným účtom {accountName}.",
+  "purchaseErrorPaymentPendingError": "Platba sa prerušila. Skontrolujte, prosím, jej stav v {storeName} pomocou účtu {accountName}, do ktorého ste prihlásení.",
   "purchaseErrorInvalidSubscriberAttributesError": "Nákup zlyhal. Skúste to znova o chvíľu. Ak problém pretrváva, obráťte sa na nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Nepodarilo sa načítať informácie o používateľovi. Skúste to znova o chvíľu. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Nepodarilo sa získať informácie o nákupe. Skúste to znova neskôr. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

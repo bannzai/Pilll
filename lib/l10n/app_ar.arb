@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "تعذّر إتمام الشراء. يُرجى المحاولة مجددًا بعد قليل. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "تعذر إتمام الشراء باستخدام حسابكِ. يُرجى المحاولة مرة أخرى بعد قليل. إذا استمرت المشكلة، تواصلي معنا عبر الإعدادات > اتصلي بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "لا يمكنكِ الاشتراك في الخطة باستخدام حساب {accountName}. يُرجى التحقق من معلومات الدفع والمحاولة مرة أخرى",
-  "purchaseErrorPaymentPendingError": "توقف الدفع أثناء المعالجة. يرجى التحقق من {storeName} بحساب {accountName} المسجل حالياً",
+  "purchaseErrorPaymentPendingError": "توقفت عملية الدفع قبل اكتمالها. يُرجى التحقق من حالة الدفع في {storeName} باستخدام حساب {accountName} الذي سجلتِ الدخول إليه.",
   "purchaseErrorInvalidSubscriberAttributesError": "فشل في الشراء. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "فشل في الحصول على معلومات المستخدم. يرجى المحاولة مرة أخرى بعد مرور بعض الوقت. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > الاستفسار. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "فشل في استرداد معلومات الشراء. يرجى الانتظار والمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",

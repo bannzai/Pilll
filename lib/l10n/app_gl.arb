@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "Non se puido completar a compra. Téntao de novo dentro dun anaco. Se o problema continúa, contacta connosco en Axustes > Contactar connosco. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "Non se puido completar a compra coa túa conta. Téntao de novo dentro dun anaco. Se o problema continúa, ponte en contacto connosco en Configuración > Contacta connosco. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "Non podes subscribirte ao plan coa túa conta de {accountName}. Revisa os datos de pagamento e téntao de novo",
-  "purchaseErrorPaymentPendingError": "O pagamento foi interrompido. Comproba {storeName} coa conta {accountName} conectada.",
+  "purchaseErrorPaymentPendingError": "O pagamento interrompeuse. Consulta o seu estado en {storeName} coa conta {accountName} coa que iniciaches sesión.",
   "purchaseErrorInvalidSubscriberAttributesError": "A compra fallou. Tenta de novo máis tarde. Se o problema persiste, contacta connosco en Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "Fallou ao obter a información do usuario. Téntao de novo máis tarde. Se o problema persiste, contacta connosco a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "Fallou a obtención da información de compra. Téntao de novo máis tarde. Se o problema persiste, ponte en contacto connosco a través de Configuración > Contacto. Detalles: {exceptionMessage}:{exceptionDetails}",

@@ -306,7 +306,7 @@
   "purchaseErrorInvalidAppleSubscriptionKeyError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລອງອີກຄັ້ງໃນອີກບໍ່ດົນ. ຖ້າບັນຫາຍັງຢູ່ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorIneligibleError": "ບໍ່ສາມາດຊື້ດ້ວຍບັນຊີຂອງທ່ານໄດ້. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ. ຖ້າຍັງມີບັນຫາ ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInsufficientPermissionsError": "ບໍ່ສາມາດສະໝັກແຜນນີ້ດ້ວຍບັນຊີ {accountName} ຂອງທ່ານໄດ້. ກະລຸນາກວດສອບຂໍ້ມູນການຊຳລະເງິນ ແລ້ວລອງໃໝ່",
-  "purchaseErrorPaymentPendingError": "ການຈ່າຍເງິນໄດ້ຢຸດກາງທາງແລ້ວ. ກະລຸນາກວດສອບໃນ{storeName}ດ້ວຍບັນຊີ{accountName}ທີ່ເຂົ້າສູ່ລະບົບຢູ່",
+  "purchaseErrorPaymentPendingError": "ການຊຳລະເງິນຢຸດກ່ອນຈະສຳເລັດ. ກະລຸນາກວດສອບສະຖານະຢູ່ {storeName} ໂດຍໃຊ້ບັນຊີ {accountName} ທີ່ທ່ານເຂົ້າໃຊ້ຢູ່.",
   "purchaseErrorInvalidSubscriberAttributesError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງຫຼັງຈາກທີ່ໃຊ້ເວລາຜ່ານໄປແລ້ວ. ຖ້າບັນຫາຍັງບໍ່ຫາຍ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorLogOutWithAnonymousUserError": "ບໍ່ສາມາດດຶງຂໍ້ມູນຜູ້ໃຊ້ໄດ້. ກາລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຫາກບັນຫາຍັງຄົງມີຢູ່, ກາລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorConfigurationError": "ການດຶງຂໍ້ມູນການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຖ້າບັນຫາບໍ່ຫາຍ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
