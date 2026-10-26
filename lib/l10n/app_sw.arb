@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Tunapendekeza ufungue akaunti",
   "recommendSignupGeneralDescription": "Ukijisajili, unaweza kuhifadhi nakala rudufu ya data yako",
   "criticalAlertFeatureAppealTitle": "Pokea arifa hata simu ikiwa katika hali ya kimya",
-  "criticalAlertFeatureAppealShortDescription": "Zuia kusahau kuchukua vidonge hata ukiwa kwenye hali ya 'Usisumbuliwe' (Do Not Disturb).",
+  "criticalAlertFeatureAppealShortDescription": "Kumbuka kumeza kidonge hata hali ya Usisumbue ikiwa imewashwa",
   "criticalAlertFeatureAppealHeadline": "Arifa zinakufikia hata ukiwa kwenye hali ya kimya",
   "criticalAlertFeatureAppealBody": "Ikiwa utawezeshwa 'Critical Alert', utapokea arifa za kuchukua kidonge hata wakati simu yako iko katika hali ya 'Do Not Disturb' au kwenye mode ya kimya. Ili usikose wakati muhimu wa kuchukua kidonge, tafadhali iwashe.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Binafsisha ujumbe wa arifa",

@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Vi anbefaler, at du opretter en konto",
   "recommendSignupGeneralDescription": "Når du opretter dig, kan du sikkerhedskopiere dine data",
   "criticalAlertFeatureAppealTitle": "Modtag notifikationer, selv når telefonen er på lydløs",
-  "criticalAlertFeatureAppealShortDescription": "Undgå glemte piller selv i forstyrrelsesfri tilstand",
+  "criticalAlertFeatureAppealShortDescription": "Husk din p-pille, selv når Forstyr ikke er slået til",
   "criticalAlertFeatureAppealHeadline": "Modtag notifikationer selv i lydløs tilstand",
   "criticalAlertFeatureAppealBody": "Når du aktiverer Critical Alert, kan du modtage påmindelser om at tage din pille, selv når Forstyr ikke-tilstand eller lydløs tilstand er aktiveret. For ikke at gå glip af vigtige tidspunkter for at tage din pille anbefaler vi, at du konfigurerer denne indstilling.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Tilpas beskednotifikation",

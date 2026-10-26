@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Soovitame sul konto luua",
   "recommendSignupGeneralDescription": "Pärast registreerumist saad oma andmed varundada",
   "criticalAlertFeatureAppealTitle": "Saa teavitusi ka vaikses režiimis",
-  "criticalAlertFeatureAppealShortDescription": "Ära unusta pillivõtmist isegi öörahul",
+  "criticalAlertFeatureAppealShortDescription": "Pea pilli võtmist meeles ka režiimis Mitte segada",
   "criticalAlertFeatureAppealHeadline": "Märguanded saabuvad ka vaikses režiimis",
   "criticalAlertFeatureAppealBody": "Kriitiliste teavituste lubamisel saate tableti võtmise meeldetuletusi ka siis, kui „Mitte segada\" või vaikne režiim on aktiveeritud. Seadistage see kindlasti, et mitte jätta vahele ühtegi olulist tableti võtmise hetke.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Kohanda teavitussõnumeid",

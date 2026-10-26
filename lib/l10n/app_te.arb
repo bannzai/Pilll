@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "మీరు ఖాతా సృష్టించుకోవాలని మేము సూచిస్తున్నాము",
   "recommendSignupGeneralDescription": "నమోదు చేసుకున్న తర్వాత మీ డేటాను బ్యాకప్ చేసుకోవచ్చు",
   "criticalAlertFeatureAppealTitle": "సైలెంట్ మోడ్‌లో ఉన్నా నోటిఫికేషన్‌లు పొందండి",
-  "criticalAlertFeatureAppealShortDescription": "నిశ్శబ్ధ మోడ్‌లో అయినా మాత్రలు మర్చిపోకుండా ఉండండి",
+  "criticalAlertFeatureAppealShortDescription": "అంతరాయం కలిగించవద్దు మోడ్‌లోనూ మాత్ర తీసుకోవడం గుర్తుంచుకోండి",
   "criticalAlertFeatureAppealHeadline": "సైలెంట్ మోడ్‌లో కూడా నోటిఫికేషన్లు అందుతాయి",
   "criticalAlertFeatureAppealBody": "Critical Alert‌ను సక్రియం చేస్తే, డూ-నాట్-డిస్టర్బ్ లేదా మానర్ మోడ్‌లో ఉన్నప్పటికీ మాత్ర తీసుకునే నోటిఫికేషన్లు మీకు లభ్యమవుతాయి. ముఖ్యమైన మాత్ర తీసుకునే సమయాన్ని మిస్ కాకుండా ఉండేందుకు, దయచేసి దీన్ని సెట్ చేయండి。",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "సూచన సందేశాన్ని అనుకూలీకరించండి",

@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Сізге есептік жазба ашуды ұсынамыз",
   "recommendSignupGeneralDescription": "Тіркелгеннен кейін деректеріңіздің сақтық көшірмесін жасай аласыз",
   "criticalAlertFeatureAppealTitle": "Дыбыссыз режимде де хабарландырулар алыңыз",
-  "criticalAlertFeatureAppealShortDescription": "Ұйықтау режимінде де дәрі қабылдауды ұмытпаңыз",
+  "criticalAlertFeatureAppealShortDescription": "«Мазаламау» режимінде де таблетканы қабылдауды ұмытпаңыз",
   "criticalAlertFeatureAppealHeadline": "Үнсіз режимде де ескертулер жеткізіледі",
   "criticalAlertFeatureAppealBody": "Critical Alert-ты қоссаңыз, ұйықтап жатқан режимде немесе үнсіз режимде болғанда да қабылдау туралы ескертулер аласыз. Маңызды таблетканы қабылдау уақытын өткізіп алмау үшін міндетті түрде орнатып көріңіз.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Хабарландыру мәтінін теңшеу",

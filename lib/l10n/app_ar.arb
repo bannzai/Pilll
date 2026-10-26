@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "ننصحكِ بإنشاء حساب",
   "recommendSignupGeneralDescription": "يمكنكِ نسخ بياناتكِ احتياطيًا بعد التسجيل",
   "criticalAlertFeatureAppealTitle": "تلقي الإشعارات حتى في الوضع الصامت",
-  "criticalAlertFeatureAppealShortDescription": "امنع نسيان الحبوب حتى في وضع عدم الإزعاج",
+  "criticalAlertFeatureAppealShortDescription": "تذكري تناول الحبة حتى في وضع عدم الإزعاج",
   "criticalAlertFeatureAppealHeadline": "تصلك الإشعارات حتى في وضع الصمت",
   "criticalAlertFeatureAppealBody": "عند تفعيل التنبيهات الحرجة (Critical Alert)، ستتلقى إشعارات تناول الدواء حتى في وضع عدم الإزعاج أو الوضع الصامت. لا تفوّت مواعيد تناول حبوبك المهمة، لذا ننصحك بتفعيل هذه الميزة.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "تخصيص رسالة الإشعار",

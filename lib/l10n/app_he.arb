@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "מומלץ ליצור חשבון",
   "recommendSignupGeneralDescription": "לאחר ההרשמה אפשר לגבות את הנתונים שלך",
   "criticalAlertFeatureAppealTitle": "קבלת התראות גם במצב שקט",
-  "criticalAlertFeatureAppealShortDescription": "מנעי שכחת גלולה גם במצב שקט",
+  "criticalAlertFeatureAppealShortDescription": "תזכורת לנטילת הגלולה גם במצב נא לא להפריע",
   "criticalAlertFeatureAppealHeadline": "התראות מגיעות גם במצב שקט",
   "criticalAlertFeatureAppealBody": "הפעלת Critical Alert מאפשרת לך לקבל התראות נטילת גלולות גם במצב ״אל תפריע״ או במצב שקט. כדי לא לפספס את זמן נטילת הגלולה החשוב, כדאי להגדיר זאת.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "התאמה אישית של הודעות התראות",

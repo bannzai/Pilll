@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Препоръчваме ви да си създадете акаунт",
   "recommendSignupGeneralDescription": "След регистрация можете да запазите резервно копие на данните си",
   "criticalAlertFeatureAppealTitle": "Получавайте известия и в безшумен режим",
-  "criticalAlertFeatureAppealShortDescription": "Не пропускайте хапчетата дори в режим „Не безпокой\"",
+  "criticalAlertFeatureAppealShortDescription": "Напомняне за хапчето дори в режим „Не безпокойте“",
   "criticalAlertFeatureAppealHeadline": "Уведомленията пристигат дори в безшумен режим",
   "criticalAlertFeatureAppealBody": "Ако активирате Critical Alert, ще получавате известия за приемане на хапчета дори когато е включен режим „Не безпокойте\" или безшумен режим. Настройте го, за да не пропускате важните моменти за приемане на хапчетата си.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Персонализирайте съобщенията за известия",

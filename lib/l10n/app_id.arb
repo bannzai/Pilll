@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Kami menyarankan Anda membuat akun",
   "recommendSignupGeneralDescription": "Setelah mendaftar, Anda dapat mencadangkan data Anda",
   "criticalAlertFeatureAppealTitle": "Terima notifikasi meski ponsel dalam mode senyap",
-  "criticalAlertFeatureAppealShortDescription": "Cegah lupa minum pil meski dalam Mode Jangan Ganggu",
+  "criticalAlertFeatureAppealShortDescription": "Ingat minum pil meski mode Jangan Ganggu aktif",
   "criticalAlertFeatureAppealHeadline": "Pemberitahuan tetap diterima meskipun dalam mode senyap",
   "criticalAlertFeatureAppealBody": "Dengan mengaktifkan Critical Alert, Anda akan menerima pemberitahuan minum pil bahkan saat mode Jangan Ganggu atau mode senyap aktif. Agar tidak melewatkan waktu penting untuk minum pil, silakan aktifkan fitur ini.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Personalisasi pesan notifikasi",

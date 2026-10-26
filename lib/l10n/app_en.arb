@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "We recommend creating an account",
   "recommendSignupGeneralDescription": "Sign up to back up your data",
   "criticalAlertFeatureAppealTitle": "Get notifications even in silent mode",
-  "criticalAlertFeatureAppealShortDescription": "Never miss a dose, even on Do Not Disturb",
+  "criticalAlertFeatureAppealShortDescription": "Remember your pill even in Do Not Disturb mode",
   "criticalAlertFeatureAppealHeadline": "Receive notifications even in silent mode",
   "criticalAlertFeatureAppealBody": "When Critical Alert is enabled, you can receive medication reminders even while Do Not Disturb or silent mode is active. Try enabling it to make sure you never miss an important dose.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Customize your notification message",

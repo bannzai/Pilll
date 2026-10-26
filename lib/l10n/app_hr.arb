@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Preporučujemo vam da izradite račun",
   "recommendSignupGeneralDescription": "Nakon registracije možete izraditi sigurnosnu kopiju svojih podataka",
   "criticalAlertFeatureAppealTitle": "Primajte obavijesti i u tihom načinu rada",
-  "criticalAlertFeatureAppealShortDescription": "Ne propustite dozu ni u načinu 'Ne ometaj'.",
+  "criticalAlertFeatureAppealShortDescription": "Podsjetnik za pilulu čak i u načinu Ne ometaj",
   "criticalAlertFeatureAppealHeadline": "Obavijesti stižu čak i u tihom načinu rada",
   "criticalAlertFeatureAppealBody": "Omogućavanjem Critical Alert-a primit ćete podsjetnike za uzimanje čak i kad su uređaj u načinu Ne ometaj ili u tihom načinu rada. Preporučujemo da ga uključite kako ne biste propustili važne termine za uzimanje pilula.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Prilagodi poruku obavijesti",

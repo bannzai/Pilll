@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Inirerekomenda naming gumawa kayo ng account",
   "recommendSignupGeneralDescription": "Kapag nagparehistro kayo, maaari ninyong i-back up ang inyong data",
   "criticalAlertFeatureAppealTitle": "Makatanggap ng mga abiso kahit naka-silent mode",
-  "criticalAlertFeatureAppealShortDescription": "Iwasang makalimutan ang pag-inom kahit naka-Do Not Disturb.",
+  "criticalAlertFeatureAppealShortDescription": "Paalala sa pag-inom ng pildoras kahit naka-on ang Huwag Istorbohin",
   "criticalAlertFeatureAppealHeadline": "Makakatanggap ng mga abiso kahit naka-silent mode",
   "criticalAlertFeatureAppealBody": "Kapag pinagana ang Critical Alert, matatanggap mo ang mga paalala sa pag-inom kahit naka \"Do Not Disturb\" o silent/manner mode ang telepono. I-on ito upang hindi mo makalimutang uminom sa tamang oras ng mahalagang pill.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Ipasadya ang mensahe ng paalala",

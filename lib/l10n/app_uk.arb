@@ -457,7 +457,7 @@
   "recommendSignupGeneralTitle": "Радимо вам створити обліковий запис",
   "recommendSignupGeneralDescription": "Після реєстрації ви зможете створити резервну копію своїх даних",
   "criticalAlertFeatureAppealTitle": "Отримуйте сповіщення навіть у беззвучному режимі",
-  "criticalAlertFeatureAppealShortDescription": "Не пропускайте прийом навіть у режимі «Не турбувати»",
+  "criticalAlertFeatureAppealShortDescription": "Пам’ятайте про прийом пігулки навіть у режимі «Не турбувати»",
   "criticalAlertFeatureAppealHeadline": "Сповіщення надходять навіть у беззвучному режимі",
   "criticalAlertFeatureAppealBody": "Увімкнувши Критичні сповіщення (Critical Alert), ви отримуватимете нагадування про прийом навіть під час режиму «Не турбувати» або беззвучного режиму. Щоб не пропустити важливий час прийому пігулки, обов'язково увімкніть цю опцію.",
   "reminderNotificationCustomizeWordFeatureAppealTitle": "Сповіщення: налаштуйте повідомлення",
