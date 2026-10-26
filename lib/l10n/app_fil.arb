@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Nakaraang grupo ng pakete ng pildoras",
   "noPreviousPillSheetGroup": "Wala pang naunang grupo ng pakete ng pildoras",
   "failedToFetchPillHistory": "Hindi nakuha ang impormasyon sa kasaysayan ng pag-inom ng pill. {error}",
-  "seeFAQ": "Tingnan ang FAQ",
+  "seeFAQ": "Tingnan ang mga madalas itanong",
   "reloadScreen": "I-refresh ang screen",
   "contactIfNotResolved": "Kung hindi pa rin masosolve, mag-contact dito",
   "shareFeedback": "Ibahagi ninyo sa amin ang inyong mga saloobin sa Pilll",

@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Eelmine pillilehtede rühm",
   "noPreviousPillSheetGroup": "Eelmist pillilehe rühma veel ei ole",
   "failedToFetchPillHistory": "Võtmislogi andmeid ei õnnestunud laadida. {error}",
-  "seeFAQ": "Vaata FAQ",
+  "seeFAQ": "Vaata korduma kippuvaid küsimusi",
   "reloadScreen": "Värskenda ekraani",
   "contactIfNotResolved": "Kui ei lahene, siis siia",
   "shareFeedback": "Palun andke tagasisidet Pilli kohta",

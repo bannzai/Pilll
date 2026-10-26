@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Nhóm vỉ thuốc trước",
   "noPreviousPillSheetGroup": "Chưa có nhóm vỉ thuốc trước đó",
   "failedToFetchPillHistory": "Không thể tải thông tin lịch sử uống thuốc. {error}",
-  "seeFAQ": "Xem FAQ",
+  "seeFAQ": "Xem câu hỏi thường gặp",
   "reloadScreen": "Tải lại màn hình",
   "contactIfNotResolved": "Liên hệ hỗ trợ nếu chưa giải quyết được",
   "shareFeedback": "Vui lòng chia sẻ cảm nghĩ của bạn về Pilll",

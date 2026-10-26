@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Grupo anterior de cartelas",
   "noPreviousPillSheetGroup": "Ainda não há um grupo anterior de cartelas",
   "failedToFetchPillHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
-  "seeFAQ": "Ver FAQ",
+  "seeFAQ": "Ver perguntas frequentes",
   "reloadScreen": "Recarregar tela",
   "contactIfNotResolved": "Se não conseguir resolver, clique aqui",
   "shareFeedback": "Conte-nos sua opinião sobre o Pilll",

@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Previous pill pack group",
   "noPreviousPillSheetGroup": "There’s no previous pill pack group yet",
   "failedToFetchPillHistory": "Couldn’t load your pill history. {error}",
-  "seeFAQ": "View FAQ",
+  "seeFAQ": "View FAQs",
   "reloadScreen": "Reload",
   "contactIfNotResolved": "Contact us if unresolved",
   "shareFeedback": "We'd love to hear your feedback about Pilll",

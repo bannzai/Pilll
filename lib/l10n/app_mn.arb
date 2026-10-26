@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Өмнөх эмийн блистерийн бүлэг",
   "noPreviousPillSheetGroup": "Өмнөх эмийн блистер бүлэг хараахан байхгүй байна",
   "failedToFetchPillHistory": "эм уусан түүхийн мэдээллийг ачаалж чадсангүй. {error}",
-  "seeFAQ": "FAQ-г үзэх",
+  "seeFAQ": "Түгээмэл асуултуудыг үзнэ үү",
   "reloadScreen": "Дэлгэцийг дахин ачаалах",
   "contactIfNotResolved": "Шийдэгдэхгүй бол энд дарна уу",
   "shareFeedback": "Pilll-ийн тухай таны сэтгэгдлийг хуваалцаарай",

@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Gruppo precedente di blister",
   "noPreviousPillSheetGroup": "Non c’è ancora un gruppo di blister precedente",
   "failedToFetchPillHistory": "Non è stato possibile caricare le informazioni dello storico delle assunzioni. {error}",
-  "seeFAQ": "Vedi FAQ",
+  "seeFAQ": "Vedi le domande frequenti",
   "reloadScreen": "Ricarica la schermata",
   "contactIfNotResolved": "Se il problema persiste, clicca qui",
   "shareFeedback": "Condividi la tua opinione su Pilll",

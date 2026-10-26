@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Forrige gruppe pillekort",
   "noPreviousPillSheetGroup": "Der er endnu ingen tidligere pillekortgruppe",
   "failedToFetchPillHistory": "Kunne ikke hente oplysninger om din pillehistorik. {error}",
-  "seeFAQ": "Se FAQ",
+  "seeFAQ": "Se ofte stillede spørgsmål",
   "reloadScreen": "Genindlæs skærm",
   "contactIfNotResolved": "Hvis ikke løst, kontakt os",
   "shareFeedback": "Fortæl os, hvad du synes om Pilll",

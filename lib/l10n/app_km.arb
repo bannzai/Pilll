@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "ក្រុមបន្ទះថ្នាំគ្រាប់មុន",
   "noPreviousPillSheetGroup": "មិនទាន់មានក្រុមបន្ទះថ្នាំគ្រាប់ពីមុនទេ",
   "failedToFetchPillHistory": "មិនអាចទាញយកព័ត៌មានប្រវត្តិលេបថ្នាំបានទេ។ {error}",
-  "seeFAQ": "មើលសំណួរដែលសួរជាញឹកញាប់",
+  "seeFAQ": "មើលសំណួរដែលសួរញឹកញាប់",
   "reloadScreen": "ផ្ទុកអេក្រង់ឡើងវិញ",
   "contactIfNotResolved": "ប្រសិនបើមិនអាចដោះស្រាយបាន ទីនេះ",
   "shareFeedback": "សូមចែករំលែកមតិយោបល់របស់អ្នកអំពី Pilll",

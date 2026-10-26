@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Папярэдняя група блістараў",
   "noPreviousPillSheetGroup": "Папярэдняй групы блістар пакуль няма",
   "failedToFetchPillHistory": "Не ўдалося загрузіць даныя для гісторыі прыёму пігулак. {error}",
-  "seeFAQ": "Паглядзець ЧАП",
+  "seeFAQ": "Паглядзець частыя пытанні",
   "reloadScreen": "Перазагрузіць экран",
   "contactIfNotResolved": "Калі не вырашаецца - тут",
   "shareFeedback": "Падзяліцеся сваім меркаваннем пра Pilll",

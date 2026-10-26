@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Предыдущая группа блистеров",
   "noPreviousPillSheetGroup": "Предыдущей группы блистеров пока нет",
   "failedToFetchPillHistory": "Не удалось загрузить данные для истории приёма. {error}",
-  "seeFAQ": "Посмотреть FAQ",
+  "seeFAQ": "Посмотреть частые вопросы",
   "reloadScreen": "Обновить экран",
   "contactIfNotResolved": "Если не помогло, обратитесь сюда",
   "shareFeedback": "Поделитесь своими впечатлениями о Pilll",

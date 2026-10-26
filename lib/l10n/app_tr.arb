@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Önceki blister grubu",
   "noPreviousPillSheetGroup": "Önceki blister grubu henüz yok",
   "failedToFetchPillHistory": "Kullanım geçmişi bilgileri yüklenemedi. {error}",
-  "seeFAQ": "SSS'yi Görüntüle",
+  "seeFAQ": "Sık sorulan soruları görüntüleyin",
   "reloadScreen": "Ekranı yeniden yükle",
   "contactIfNotResolved": "Sorun devam ederse buraya başvurun",
   "shareFeedback": "Pilll hakkındaki görüşlerinizi bizimle paylaşın",

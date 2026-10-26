@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله",
   "noPreviousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله لا نشته",
   "failedToFetchPillHistory": "د ګولۍ اخیستلو تاریخچې معلومات ترلاسه نه شول. {error}",
-  "seeFAQ": "ډېر پوښتنې وګورئ",
+  "seeFAQ": "ډېرې پوښتل کېدونکې پوښتنې وګورئ",
   "reloadScreen": "سکرین بیا لوډول",
   "contactIfNotResolved": "که حل نه شي، دلته ټک ورکړئ",
   "shareFeedback": "ستاسو د Pilll تاثرات موږ ته ووایاست",

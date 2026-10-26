@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "گروه قبلی ورق قرص",
   "noPreviousPillSheetGroup": "هنوز گروه قبلی ورق قرص وجود ندارد",
   "failedToFetchPillHistory": "دریافت اطلاعات تاریخچه مصرف ممکن نشد. {error}",
-  "seeFAQ": "مشاهده سؤالات متداول",
+  "seeFAQ": "مشاهده پرسش‌های متداول",
   "reloadScreen": "بارگیری مجدد صفحه",
   "contactIfNotResolved": "اگر مشکل حل نشد، اینجا کلیک کنید",
   "shareFeedback": "لطفاً نظرات خود را درباره Pilll با ما در میان بگذارید",

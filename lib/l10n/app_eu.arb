@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Aurreko pilula-blister taldea",
   "noPreviousPillSheetGroup": "Oraindik ez dago aurreko pilula-blister talderik",
   "failedToFetchPillHistory": "Ezin izan da hartze-historiaren informazioa kargatu. {error}",
-  "seeFAQ": "FAQ-ak ikusi",
+  "seeFAQ": "Ikusi ohiko galderak",
   "reloadScreen": "Pantaila berritu",
   "contactIfNotResolved": "Konpontzen ez bada, hemen",
   "shareFeedback": "Eman iezaguzu Pilllari buruzko zure iritzia",

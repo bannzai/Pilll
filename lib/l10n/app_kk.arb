@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Алдыңғы таблетка блистер тобы",
   "noPreviousPillSheetGroup": "Алдыңғы таблетка блистер тобы әлі жоқ",
   "failedToFetchPillHistory": "Қабылдау тарихы туралы мәліметтерді жүктеу мүмкін болмады. {error}",
-  "seeFAQ": "FAQ көру",
+  "seeFAQ": "Жиі қойылатын сұрақтарды қараңыз",
   "reloadScreen": "Экранды қайта жүктеу",
   "contactIfNotResolved": "Шешілмесе, мұнда",
   "shareFeedback": "Pilll туралы пікіріңізді білдіріңіз",

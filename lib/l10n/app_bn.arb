@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "আগের পিল শিটের গ্রুপ",
   "noPreviousPillSheetGroup": "আগের পিল শিটের গ্রুপ এখনও নেই",
   "failedToFetchPillHistory": "সেবনের ইতিহাসের তথ্য আনা যায়নি। {error}",
-  "seeFAQ": "FAQ দেখুন",
+  "seeFAQ": "সাধারণ প্রশ্নগুলো দেখুন",
   "reloadScreen": "স্ক্রিন রিফ্রেশ করুন",
   "contactIfNotResolved": "সমাধান না হলে এখানে",
   "shareFeedback": "Pilll সম্পর্কে আপনার মতামত শেয়ার করুন",

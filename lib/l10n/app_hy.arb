@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Հաբերի բլիստերների նախորդ խումբ",
   "noPreviousPillSheetGroup": "Նախորդ հաբերի բլիստեր խումբը դեռ չկա",
   "failedToFetchPillHistory": "Չհաջողվեց բեռնել ընդունման պատմություն բաժնի տվյալները։ {error}",
-  "seeFAQ": "FAQ-ը դիտել",
+  "seeFAQ": "Դիտեք հաճախ տրվող հարցերը",
   "reloadScreen": "Վերաբեռնել էկրանը",
   "contactIfNotResolved": "Եթե խնդիրը չի լուծվում, սեղմեք այստեղ",
   "shareFeedback": "Pilllի մասին ձեր կարծիքը կիսեք",

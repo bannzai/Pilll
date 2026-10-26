@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "पिछला पिल स्ट्रिप समूह",
   "noPreviousPillSheetGroup": "पिछला पिल स्ट्रिप समूह अभी मौजूद नहीं है",
   "failedToFetchPillHistory": "सेवन इतिहास की जानकारी लोड नहीं हो सकी। {error}",
-  "seeFAQ": "FAQ देखें",
+  "seeFAQ": "अक्सर पूछे जाने वाले सवाल देखें",
   "reloadScreen": "पुनः लोड करें",
   "contactIfNotResolved": "समाधान नहीं मिलने पर यहाँ संपर्क करें",
   "shareFeedback": "कृपया Pilll के बारे में अपना फीडबैक साझा करें",

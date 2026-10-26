@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Претходна група блистер",
   "noPreviousPillSheetGroup": "Претходна група блистер сè уште не постои",
   "failedToFetchPillHistory": "Не успеавме да ги вчитаме податоците за Историја на земање. {error}",
-  "seeFAQ": "Видете ЧПП",
+  "seeFAQ": "Погледнете ги честите прашања",
   "reloadScreen": "Обнови го екранот",
   "contactIfNotResolved": "Ако проблемот не се реши, кликнете тука",
   "shareFeedback": "Споделете го вашето мислење за Pilll",

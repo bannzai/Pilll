@@ -254,7 +254,7 @@
   "previousPillSheetGroup": "Predchádzajúca skupina blistov",
   "noPreviousPillSheetGroup": "Predchádzajúca skupina blistov ešte neexistuje",
   "failedToFetchPillHistory": "Nepodarilo sa načítať údaje pre históriu užívania. {error}",
-  "seeFAQ": "Zobraziť FAQ",
+  "seeFAQ": "Pozrite si časté otázky",
   "reloadScreen": "Obnoviť obrazovku",
   "contactIfNotResolved": "Ak sa problém nevyrieši",
   "shareFeedback": "Povedzte nám váš názor na aplikáciu Pilll",
