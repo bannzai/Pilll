@@ -227,7 +227,7 @@
   "selectTodayPillNumber": "Vandaag ({todayString})\nTik op het nummer van de pil die je gaat innemen of al hebt ingenomen",
   "notYetKnown": "Ik weet het nog niet",
   "pillForToday": "De pil voor {today}",
-  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}e pil",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Voorbeeld",
   "normal": "Normaal",
   "missed": "gemist",

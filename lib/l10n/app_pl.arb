@@ -227,7 +227,7 @@
   "selectTodayPillNumber": "Dzisiaj ({todayString})\nDotknij numeru tabletki, którą dziś weźmiesz lub już została przyjęta",
   "notYetKnown": "Jeszcze nie wiem",
   "pillForToday": "Tabletka do przyjęcia {today}",
-  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}. tabletka",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "Podgląd",
   "normal": "normalne",
   "missed": "Pominięto",

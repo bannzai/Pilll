@@ -227,7 +227,7 @@
   "selectTodayPillNumber": "امروز ({todayString})\nروی شماره قرصی که قرار است مصرف کنید یا مصرف کرده‌اید بزنید",
   "notYetKnown": "هنوز نمی‌دانم",
   "pillForToday": "قرص مربوط به {today}",
-  "todayPillNumber": "قرص شماره {todayPillNumberPillNumberInPillSheet}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "پیش‌نمایش",
   "normal": "عادی",
   "missed": "فراموش شده",

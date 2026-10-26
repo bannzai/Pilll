@@ -227,7 +227,7 @@
   "selectTodayPillNumber": "আজি ({todayString})\nআপুনি খাবলগীয়া বা খোৱা পিলৰ নম্বৰটোত টেপ কৰক",
   "notYetKnown": "এতিয়াও নাজানো",
   "pillForToday": "{today} তাৰিখে খাবলগীয়া পিলটো",
-  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}নং বটি",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "পূৰ্বদৰ্শন",
   "normal": "সাধাৰণ",
   "missed": "সেৱন পাহৰা",
