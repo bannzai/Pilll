@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Értesítések néma módban is",
   "criticalAlertVolume": "Hangerő",
   "logout": "Kijelentkezés",
-  "goToInitialSettingAndReloginIfNeededMessage": "Visszatérés a kezdeti beállításokhoz. Ha bejelentkezésre van szükség, kérjük, használja a kezdeti beállítások alján található opciót.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Visszatérsz a kezdeti beállításokhoz. Ha be kell jelentkezned, ezt a beállítási képernyő alján teheted meg.",
   "deleteAccount": "Fiók törlése",
   "logoutCompleted": "Sikeresen kijelentkeztél",
   "specialDiscountPriceNow": "Szerezd meg a Prémium csomagot különleges áron!",

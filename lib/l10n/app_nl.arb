@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Meldingen ook in stille modus",
   "criticalAlertVolume": "Volume",
   "logout": "Uitloggen",
-  "goToInitialSettingAndReloginIfNeededMessage": "Terug naar initiële instellingen. Als inloggen vereist is, doe dit dan via de onderkant van het scherm voor initiële instellingen.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Je gaat terug naar de eerste installatie. Als je moet inloggen, kan dat onderaan het installatiescherm.",
   "deleteAccount": "Account verwijderen",
   "logoutCompleted": "Je bent uitgelogd",
   "specialDiscountPriceNow": "Krijg Premium tegen een speciale prijs!",

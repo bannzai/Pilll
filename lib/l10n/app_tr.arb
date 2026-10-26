@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Sessiz modda da bildirimler",
   "criticalAlertVolume": "Ses düzeyi",
   "logout": "Çıkış",
-  "goToInitialSettingAndReloginIfNeededMessage": "İlk kuruluma geri dönülüyor. Giriş yapmanız gerekirse, lütfen ilk kurulum ekranının alt kısmından giriş yapın.",
+  "goToInitialSettingAndReloginIfNeededMessage": "İlk kuruluma döneceksiniz. Giriş yapmanız gerekirse ilk kurulum ekranının alt kısmından giriş yapabilirsiniz.",
   "deleteAccount": "Hesap Silme",
   "logoutCompleted": "Oturum kapatıldı",
   "specialDiscountPriceNow": "Özel fiyatlarla Premium planı edinin!",

@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notificacions també en mode silenci",
   "criticalAlertVolume": "Volum",
   "logout": "Tanca la sessió",
-  "goToInitialSettingAndReloginIfNeededMessage": "Tornarem a la configuració inicial. Si necessiteu iniciar sessió, si us plau, feu-ho des de la part inferior de la configuració inicial.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Tornaràs a la configuració inicial. Si has d’iniciar sessió, pots fer-ho a la part inferior de la pantalla de configuració inicial.",
   "deleteAccount": "Eliminar compte",
   "logoutCompleted": "S'ha tancat la sessió",
   "specialDiscountPriceNow": "Aconsegueix el pla premium a preu especial!",

@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notifikasi meski dalam mode senyap",
   "criticalAlertVolume": "Volume",
   "logout": "Keluar",
-  "goToInitialSettingAndReloginIfNeededMessage": "Kembali ke pengaturan awal. Jika login diperlukan, silakan lakukan dari bagian bawah pengaturan awal",
+  "goToInitialSettingAndReloginIfNeededMessage": "Anda akan kembali ke pengaturan awal. Jika perlu masuk, silakan masuk melalui bagian bawah layar pengaturan awal.",
   "deleteAccount": "Hapus Akun",
   "logoutCompleted": "Berhasil logout",
   "specialDiscountPriceNow": "Dapatkan Paket Premium dengan Harga Khusus!",

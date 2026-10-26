@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Известувања и во тивок режим",
   "criticalAlertVolume": "Јачина на звук",
   "logout": "Одјавување",
-  "goToInitialSettingAndReloginIfNeededMessage": "Враќање на почетното поставување. Ако е потребна најава, ве молиме најавете се од долниот дел на почетното поставување.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Ќе се вратите на почетното поставување. Ако треба да се најавите, можете да го направите тоа на дното на екранот за почетно поставување.",
   "deleteAccount": "Бришење на сметка",
   "logoutCompleted": "Се одјавивте",
   "specialDiscountPriceNow": "Добијте го премиум планот по специјална цена!",

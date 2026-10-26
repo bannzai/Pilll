@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Дыбыссыз режимде де хабарландырулар",
   "criticalAlertVolume": "Дыбыс деңгейі",
   "logout": "Шығу",
-  "goToInitialSettingAndReloginIfNeededMessage": "Бастапқы баптауға оралады. Кіру қажет болса, бастапқы баптаудың төменгі бөлімінен жасаңыз",
+  "goToInitialSettingAndReloginIfNeededMessage": "Сіз бастапқы баптауға ораласыз. Кіру қажет болса, бастапқы баптау экранының төменгі жағынан кіріңіз.",
   "deleteAccount": "Аккаунтты жою",
   "logoutCompleted": "Жүйеден шықтым",
   "specialDiscountPriceNow": "Премиум жоспарды арнайы бағамен алыңыз!",

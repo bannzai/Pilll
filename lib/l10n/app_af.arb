@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Kennisgewings selfs in stilmodus",
   "criticalAlertVolume": "Klankvolume",
   "logout": "Meld af",
-  "goToInitialSettingAndReloginIfNeededMessage": "Keer terug na aanvanklike instellings. Indien teken in benodig word, doen dit asseblief vanaf die onderkant van die aanvanklike instellingsskerm.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Jy gaan terug na die aanvanklike opstelling. As jy moet aanmeld, kan jy dit asseblief onderaan die opstellingskerm doen.",
   "deleteAccount": "Rekening verwyder",
   "logoutCompleted": "Afgemeld",
   "specialDiscountPriceNow": "Kry die premiumplan teen 'n spesiale prys!",

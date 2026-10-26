@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notifiche anche in modalità silenziosa",
   "criticalAlertVolume": "Volume",
   "logout": "Esci",
-  "goToInitialSettingAndReloginIfNeededMessage": "Si ritorna alle impostazioni iniziali. Se è necessario effettuare il login, si prega di farlo dalla parte inferiore delle impostazioni iniziali",
+  "goToInitialSettingAndReloginIfNeededMessage": "Tornerai alla configurazione iniziale. Se devi accedere, puoi farlo nella parte inferiore di quella schermata.",
   "deleteAccount": "Elimina account",
   "logoutCompleted": "Disconnesso",
   "specialDiscountPriceNow": "Ottieni il piano premium con l'offerta speciale!",

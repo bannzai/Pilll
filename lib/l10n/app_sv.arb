@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Aviseringar även i tyst läge",
   "criticalAlertVolume": "Volym",
   "logout": "Logga ut",
-  "goToInitialSettingAndReloginIfNeededMessage": "Återgår till startinställningar. Vid behov av inloggning, använd länken längst ner på inställningssidan.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Du kommer tillbaka till den första inställningen. Om du behöver logga in kan du göra det längst ned på inställningsskärmen.",
   "deleteAccount": "Ta bort konto",
   "logoutCompleted": "Du har loggats ut",
   "specialDiscountPriceNow": "Få premiumplanen till specialpris!",

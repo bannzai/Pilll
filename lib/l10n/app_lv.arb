@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Paziņojumi arī klusuma režīmā",
   "criticalAlertVolume": "Skaļums",
   "logout": "Izrakstīties",
-  "goToInitialSettingAndReloginIfNeededMessage": "Atgriezīsimies pie sākotnējām iestatījumiem. Ja nepieciešama pierakstīšanās, lūdzu, izmantojiet sākotnējo iestatījumu apakšdaļu.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Jūs atgriezīsieties pie sākotnējās iestatīšanas. Ja būs jāpiesakās, to varēsiet izdarīt sākotnējās iestatīšanas ekrāna apakšdaļā.",
   "deleteAccount": "Konta dzēšana",
   "logoutCompleted": "Izrakstījāties",
   "specialDiscountPriceNow": "Iegūstiet Premium plānu par īpašo cenu!",

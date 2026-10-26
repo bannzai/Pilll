@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "การแจ้งเตือนแม้เปิดโหมดเงียบ",
   "criticalAlertVolume": "ระดับเสียง",
   "logout": "ออกจากระบบ",
-  "goToInitialSettingAndReloginIfNeededMessage": "กลับไปที่การตั้งค่าเริ่มต้น หากจำเป็นต้องเข้าสู่ระบบ กรุณาดำเนินการที่ส่วนล่างของหน้าการตั้งค่าเริ่มต้น",
+  "goToInitialSettingAndReloginIfNeededMessage": "จะกลับไปยังหน้าตั้งค่าเริ่มต้นค่ะ หากต้องเข้าสู่ระบบ โปรดเข้าสู่ระบบจากด้านล่างของหน้าตั้งค่าเริ่มต้นค่ะ",
   "deleteAccount": "ลบบัญชี",
   "logoutCompleted": "ออกจากระบบแล้ว",
   "specialDiscountPriceNow": "รับแผนพรีเมียมในราคาพิเศษ!",

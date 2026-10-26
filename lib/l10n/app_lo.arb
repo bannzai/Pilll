@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "ແຈ້ງເຕືອນແມ່ນແຕ່ໃນໂໝດງຽບ",
   "criticalAlertVolume": "ລະດັບສຽງ",
   "logout": "ອອກຈາກບັນຊີ",
-  "goToInitialSettingAndReloginIfNeededMessage": "ກັບໄປຫາການຕັ້ງຄ່າເບື້ອງຕົ້ນແລ້ວ. ຫາກຈຳເປັນຕ້ອງເຂົ້າສູ່ລະບົບ, ກະລຸນາເຂົ້າສູ່ລະບົບຈາກພາກລຸ່ມຂອງການຕັ້ງຄ່າເບື້ອງຕົ້ນ",
+  "goToInitialSettingAndReloginIfNeededMessage": "ຈະກັບໄປຫາການຕັ້ງຄ່າເບື້ອງຕົ້ນ. ຖ້າຕ້ອງເຂົ້າສູ່ບັນຊີ, ກະລຸນາເຂົ້າຈາກດ້ານລຸ່ມຂອງໜ້າການຕັ້ງຄ່າເບື້ອງຕົ້ນ.",
   "deleteAccount": "ລຶບບັນຊີ",
   "logoutCompleted": "ອອກຈາກລະບົບແລ້ວ",
   "specialDiscountPriceNow": "ໄດ້ຮັບແຜນພຣີເມຍມດ້ວຍລາຄາພິເສດ！",

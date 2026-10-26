@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Izaziso noma ifoni ithulisiwe",
   "criticalAlertVolume": "Izinga lomsindo",
   "logout": "Phuma ku-akhawunti",
-  "goToInitialSettingAndReloginIfNeededMessage": "Kubuyela ekusethweni kokuqala. Uma kudingeka ukungena ngemvume, sicela ukwenze lokho ngaphansi kweseteji yokuqala.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Uzobuyela ekusethweni kokuqala. Uma kudingeka ungene ku-akhawunti, sicela ungene ngezansi kwesikrini sokusetha kokuqala.",
   "deleteAccount": "Susa i-akhawunti",
   "logoutCompleted": "Ngiphumile",
   "specialDiscountPriceNow": "Zuza uhlelo lwe-Premium ngentego ekhethekile!",

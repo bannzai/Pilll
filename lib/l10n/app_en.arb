@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notifications even in silent mode",
   "criticalAlertVolume": "Volume",
   "logout": "Log out",
-  "goToInitialSettingAndReloginIfNeededMessage": "Returning to initial setup. If login is required, please use the option at the bottom of the initial setup screen.",
+  "goToInitialSettingAndReloginIfNeededMessage": "You’ll return to the initial setup. If you need to log in, you can do so at the bottom of the setup screen.",
   "deleteAccount": "Delete Account",
   "logoutCompleted": "Logged out",
   "specialDiscountPriceNow": "Get Premium at a Special Price!",

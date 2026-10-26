@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notifikationer også i lydløs tilstand",
   "criticalAlertVolume": "Lydstyrke",
   "logout": "Log ud",
-  "goToInitialSettingAndReloginIfNeededMessage": "Vender tilbage til den indledende opsætning. Hvis du skal logge ind, kan du gøre det fra bunden af opsætningssiden.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Du vender tilbage til den første opsætning. Hvis du skal logge ind, kan du gøre det nederst på opsætningsskærmen.",
   "deleteAccount": "Slet konto",
   "logoutCompleted": "Du er blevet logget ud",
   "specialDiscountPriceNow": "Få Premium-planen til specialpris!",

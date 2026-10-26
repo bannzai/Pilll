@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Benachrichtigungen auch im Stummmodus",
   "criticalAlertVolume": "Lautstärke",
   "logout": "Abmelden",
-  "goToInitialSettingAndReloginIfNeededMessage": "Die App kehrt zur Ersteinrichtung zurück. Falls eine Anmeldung erforderlich ist, nutzen Sie bitte den Login-Bereich am unteren Ende der Ersteinrichtung.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Du kehrst zur Ersteinrichtung zurück. Falls du dich anmelden musst, kannst du das unten auf dem Einrichtungsbildschirm tun.",
   "deleteAccount": "Konto löschen",
   "logoutCompleted": "Erfolgreich abgemeldet",
   "specialDiscountPriceNow": "Hol dir den Premium-Plan zum Sonderpreis!",

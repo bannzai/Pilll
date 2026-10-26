@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Upozornenia aj v tichom režime",
   "criticalAlertVolume": "Hlasitosť",
   "logout": "Odhlásiť sa",
-  "goToInitialSettingAndReloginIfNeededMessage": "Vrátime sa k počiatočnému nastaveniu. V prípade potreby sa prihláste v spodnej časti počiatočného nastavenia.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Vrátite sa k úvodnému nastaveniu. Ak sa budete potrebovať prihlásiť, môžete tak urobiť v spodnej časti obrazovky úvodného nastavenia.",
   "deleteAccount": "Vymazanie účtu",
   "logoutCompleted": "Odhlásili ste sa",
   "specialDiscountPriceNow": "Získajte prémiový plán za špeciálnu cenu!",

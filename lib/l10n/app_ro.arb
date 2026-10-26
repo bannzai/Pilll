@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notificări și în modul silențios",
   "criticalAlertVolume": "Volum",
   "logout": "Deconectează-te",
-  "goToInitialSettingAndReloginIfNeededMessage": "Se va reveni la configurarea inițială. Dacă este necesară conectarea, vă rugăm să o faceți din partea de jos a configurării inițiale.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Vei reveni la configurarea inițială. Dacă trebuie să te conectezi, poți face asta în partea de jos a ecranului de configurare.",
   "deleteAccount": "Ștergere cont",
   "logoutCompleted": "V-ați deconectat",
   "specialDiscountPriceNow": "Obține planul premium la preț special!",

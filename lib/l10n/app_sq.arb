@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Njoftime edhe në modalitetin pa zë",
   "criticalAlertVolume": "Volumi",
   "logout": "Dilni nga llogaria",
-  "goToInitialSettingAndReloginIfNeededMessage": "Do të kthehemi te cilësimet fillestare. Nëse kërkohet identifikimi, ju lutemi bëjeni atë nga poshtë e cilësimeve fillestare",
+  "goToInitialSettingAndReloginIfNeededMessage": "Do të ktheheni te konfigurimi fillestar. Nëse duhet të hyni në llogari, mund ta bëni këtë në fund të ekranit të konfigurimit fillestar.",
   "deleteAccount": "Fshi llogarinë",
   "logoutCompleted": "U çkyçët",
   "specialDiscountPriceNow": "Merrni planin premium me çmim të veçantë!",

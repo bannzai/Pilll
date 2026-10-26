@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Уведомления даже в беззвучном режиме",
   "criticalAlertVolume": "Громкость",
   "logout": "Выйти из аккаунта",
-  "goToInitialSettingAndReloginIfNeededMessage": "Возврат к начальным настройкам. При необходимости входа в систему воспользуйтесь нижней частью экрана начальных настроек",
+  "goToInitialSettingAndReloginIfNeededMessage": "Вы вернётесь к первоначальной настройке. Если потребуется войти в аккаунт, сделайте это внизу экрана настройки.",
   "deleteAccount": "Удаление аккаунта",
   "logoutCompleted": "Вы вышли из системы",
   "specialDiscountPriceNow": "Получите премиум-план по специальной цене!",

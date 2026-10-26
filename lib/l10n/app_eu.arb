@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Jakinarazpenak modu isilean ere",
   "criticalAlertVolume": "Bolumena",
   "logout": "Amaitu saioa",
-  "goToInitialSettingAndReloginIfNeededMessage": "Hasierako konfiguraziora itzuliko da. Saioa hasi behar baduzu, hasierako konfigurazio pantailaren beheko aldetik egin dezakezu.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Hasierako konfiguraziora itzuliko zara. Saioa hasi behar baduzu, hasierako konfigurazio-pantailaren behealdean egin dezakezu.",
   "deleteAccount": "Kontua ezabatu",
   "logoutCompleted": "Saioa itxi da",
   "specialDiscountPriceNow": "Lortu premium plana prezio bereziarekin!",

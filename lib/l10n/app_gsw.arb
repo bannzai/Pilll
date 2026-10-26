@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Mitteilige au im Stummmodus",
   "criticalAlertVolume": "Luutschtärchi",
   "logout": "Abmälde",
-  "goToInitialSettingAndReloginIfNeededMessage": "Zrugg zu de Grundiistellige. Falls Aalogge nötig isch, bitte unde bi de Grundiistellige.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Du chunsch zrugg zur erschte Iirichtig. Wänn du di muesch aamälde, chasch das unde uf em Iirichtigsschirm mache.",
   "deleteAccount": "Konto löschen",
   "logoutCompleted": "Sie sind abgmeldet",
   "specialDiscountPriceNow": "Hole dir de Premium-Plan zum Spezialpriis!",

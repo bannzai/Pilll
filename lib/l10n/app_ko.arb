@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "무음 모드에서도 알림 받기",
   "criticalAlertVolume": "음량",
   "logout": "로그아웃",
-  "goToInitialSettingAndReloginIfNeededMessage": "초기 설정으로 돌아갑니다. 로그인이 필요한 경우 초기 설정 하단에서 해주세요",
+  "goToInitialSettingAndReloginIfNeededMessage": "초기 설정 화면으로 돌아가요. 로그인이 필요하다면 초기 설정 화면 아래에서 로그인해 주세요.",
   "deleteAccount": "계정 삭제",
   "logoutCompleted": "로그아웃되었습니다",
   "specialDiscountPriceNow": "특가로 프리미엄 플랜을 만나보세요!",

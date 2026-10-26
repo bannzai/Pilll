@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Үнсүз режимде да эскертмелер",
   "criticalAlertVolume": "Үндүн деңгээли",
   "logout": "Чыгуу",
-  "goToInitialSettingAndReloginIfNeededMessage": "Баштапкы жөндөөгө кайтып жатабыз. Кирүү керек болсо, баштапкы жөндөөнүн астынан кириңиз",
+  "goToInitialSettingAndReloginIfNeededMessage": "Сиз баштапкы жөндөөлөргө кайтасыз. Кирүү керек болсо, баштапкы жөндөөлөр экранынын төмөн жагынан кириңиз.",
   "deleteAccount": "Аккаунтты жок кылуу",
   "logoutCompleted": "Чыгуу болду",
   "specialDiscountPriceNow": "Атайын баа менен премиум планды алыңыз!",

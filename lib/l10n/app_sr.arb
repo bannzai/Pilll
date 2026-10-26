@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Обавештења и у нечујном режиму",
   "criticalAlertVolume": "Јачина звука",
   "logout": "Одјавите се",
-  "goToInitialSettingAndReloginIfNeededMessage": "Vraćamo se na početno podešavanje. Ukoliko je potrebno prijavljivanje, molimo koristite opcije na dnu početnih podešavanja",
+  "goToInitialSettingAndReloginIfNeededMessage": "Вратићете се на почетно подешавање. Ако треба да се пријавите, можете то да урадите на дну екрана за почетно подешавање.",
   "deleteAccount": "Brisanje naloga",
   "logoutCompleted": "Odjavili ste se",
   "specialDiscountPriceNow": "Nabavite premium plan po posebnoj ceni!",

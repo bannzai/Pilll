@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notifications même en mode silencieux",
   "criticalAlertVolume": "Volume",
   "logout": "Se déconnecter",
-  "goToInitialSettingAndReloginIfNeededMessage": "Retour à la configuration initiale. Si une connexion est requise, veuillez utiliser l'option en bas de l'écran de configuration initiale.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Vous allez revenir à la configuration initiale. Si vous devez vous connecter, vous pourrez le faire en bas de cet écran.",
   "deleteAccount": "Supprimer le compte",
   "logoutCompleted": "Déconnecté",
   "specialDiscountPriceNow": "Obtenez Premium à un prix spécial !",

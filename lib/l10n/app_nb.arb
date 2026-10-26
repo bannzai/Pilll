@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Varsler også i lydløs modus",
   "criticalAlertVolume": "Volum",
   "logout": "Logg ut",
-  "goToInitialSettingAndReloginIfNeededMessage": "Går tilbake til innledende oppsett. Hvis innlogging er nødvendig, gjør dette fra bunnen av oppsettsiden",
+  "goToInitialSettingAndReloginIfNeededMessage": "Du går tilbake til førstegangsoppsettet. Hvis du må logge inn, kan du gjøre det nederst på oppsettskjermen.",
   "deleteAccount": "Slett konto",
   "logoutCompleted": "Du er logget ut",
   "specialDiscountPriceNow": "Få Premium-plan til spesialpris!",

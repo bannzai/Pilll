@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "साइलेन्ट मोडमा पनि सूचना",
   "criticalAlertVolume": "आवाजको स्तर",
   "logout": "लग आउट",
-  "goToInitialSettingAndReloginIfNeededMessage": "प्रारम्भिक सेटअपमा फर्कनेछ। लगइन आवश्यक भएमा कृपया प्रारम्भिक सेटअपको तलबाट गर्नुहोस्।",
+  "goToInitialSettingAndReloginIfNeededMessage": "तपाईं प्रारम्भिक सेटअपमा फर्कनुहुनेछ। लग इन गर्न आवश्यक भएमा, कृपया प्रारम्भिक सेटअप स्क्रिनको तलबाट लग इन गर्नुहोस्।",
   "deleteAccount": "खाता मेटाउने",
   "logoutCompleted": "लगआउट भयो",
   "specialDiscountPriceNow": "विशेष छुटमा प्रिमियम प्लान पाउनुहोस्！",

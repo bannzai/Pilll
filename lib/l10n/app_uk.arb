@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Сповіщення навіть у беззвучному режимі",
   "criticalAlertVolume": "Гучність",
   "logout": "Вийти з облікового запису",
-  "goToInitialSettingAndReloginIfNeededMessage": "Повертаємося до початкових налаштувань. Якщо потрібен вхід в систему, будь ласка, скористайтеся опцією внизу екрана початкових налаштувань",
+  "goToInitialSettingAndReloginIfNeededMessage": "Ви повернетеся до початкового налаштування. Якщо потрібно буде увійти в обліковий запис, зробіть це внизу екрана початкового налаштування.",
   "deleteAccount": "Видалити акаунт",
   "logoutCompleted": "Ви вийшли з аккаунта",
   "specialDiscountPriceNow": "Отримайте преміум-план за спеціальною ціною!",

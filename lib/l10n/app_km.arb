@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "ការជូនដំណឹងសូម្បីតែក្នុងរបៀបស្ងាត់",
   "criticalAlertVolume": "កម្រិតសំឡេង",
   "logout": "ចេញពីគណនី",
-  "goToInitialSettingAndReloginIfNeededMessage": "ត្រលប់ទៅការកំណត់ដំបូងវិញ។ ប្រសិនបើត្រូវការចូលប្រព័ន្ធ សូមធ្វើពីផ្នែកខាងក្រោមនៃការកំណត់ដំបូង",
+  "goToInitialSettingAndReloginIfNeededMessage": "អ្នកនឹងត្រឡប់ទៅការកំណត់ដំបូងវិញ។ ប្រសិនបើត្រូវចូលគណនី សូមចូលតាមផ្នែកខាងក្រោមនៃអេក្រង់ការកំណត់ដំបូង។",
   "deleteAccount": "លុបគណនី",
   "logoutCompleted": "បានចេញពីប្រព័ន្ធ",
   "specialDiscountPriceNow": "ទទួលបានផែនការ Premium ក្នុងតម្លៃពិសេស！",

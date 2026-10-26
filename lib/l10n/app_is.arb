@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Tilkynningar líka þegar hljóð er slökkt",
   "criticalAlertVolume": "Hljóðstyrkur",
   "logout": "Skrá út",
-  "goToInitialSettingAndReloginIfNeededMessage": "Snúa aftur til upphafsstillinga. Ef þú þarft að skrá þig inn, vinsamlegast gerðu það í neðri hluta upphafsstillinga.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Þú ferð aftur í upphafsstillingarnar. Ef þú þarft að skrá þig inn geturðu gert það neðst á skjánum fyrir upphafsstillingar.",
   "deleteAccount": "Eyða reikningi",
   "logoutCompleted": "Útskráður",
   "specialDiscountPriceNow": "Fáðu úrvals áætlun á tilboðsverði!",

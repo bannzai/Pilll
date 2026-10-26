@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Notificacións tamén en modo silencio",
   "criticalAlertVolume": "Volume",
   "logout": "Pechar a sesión",
-  "goToInitialSettingAndReloginIfNeededMessage": "Volverá á configuración inicial. Se precisas iniciar sesión, podes facelo desde a parte inferior da configuración inicial.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Volverás á configuración inicial. Se precisas iniciar sesión, podes facelo na parte inferior desa pantalla.",
   "deleteAccount": "Eliminar conta",
   "logoutCompleted": "Pechouse a sesión",
   "specialDiscountPriceNow": "Consigue o plan premium a prezo especial!",

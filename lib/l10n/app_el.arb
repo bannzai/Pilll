@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Ειδοποιήσεις και στην αθόρυβη λειτουργία",
   "criticalAlertVolume": "Ένταση ήχου",
   "logout": "Αποσύνδεση",
-  "goToInitialSettingAndReloginIfNeededMessage": "Θα επιστρέψετε στις αρχικές ρυθμίσεις. Εάν απαιτείται σύνδεση, παρακαλώ συνδεθείτε από το κάτω μέρος των αρχικών ρυθμίσεων.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Θα επιστρέψετε στην αρχική ρύθμιση. Αν χρειαστεί να συνδεθείτε, μπορείτε να το κάνετε από το κάτω μέρος της οθόνης αρχικής ρύθμισης.",
   "deleteAccount": "Διαγραφή λογαριασμού",
   "logoutCompleted": "Αποσυνδεθήκατε",
   "specialDiscountPriceNow": "Αποκτήστε το Premium πρόγραμμα σε ειδική τιμή!",

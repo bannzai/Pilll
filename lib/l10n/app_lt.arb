@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Pranešimai ir tyliuoju režimu",
   "criticalAlertVolume": "Garsumas",
   "logout": "Atsijungti",
-  "goToInitialSettingAndReloginIfNeededMessage": "Sugrįžtama prie pradinių nustatymų. Jei reikės prisijungti, tai galėsite padaryti pradinių nustatymų apačioje.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Grįšite į pradinę sąranką. Jei reikės prisijungti, tai galėsite padaryti pradinės sąrankos ekrano apačioje.",
   "deleteAccount": "Paskyros ištrinimas",
   "logoutCompleted": "Atsijungėte",
   "specialDiscountPriceNow": "Gauk Premium planą specialia kaina!",

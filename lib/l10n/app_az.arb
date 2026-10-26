@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Səssiz rejimdə də bildirişlər",
   "criticalAlertVolume": "Səs səviyyəsi",
   "logout": "Çıxış",
-  "goToInitialSettingAndReloginIfNeededMessage": "İlkin ayarlara qayıdılır. Giriş tələb olunarsa, lütfən ilkin ayarların aşağı hissəsindən daxil olun.",
+  "goToInitialSettingAndReloginIfNeededMessage": "İlkin quraşdırmaya qayıdacaqsınız. Daxil olmağınız lazım olsa, zəhmət olmasa ilkin quraşdırma ekranının aşağı hissəsindən daxil olun.",
   "deleteAccount": "Hesabı sil",
   "logoutCompleted": "Sistemdən çıxdınız",
   "specialDiscountPriceNow": "Xüsusi qiymətə premium planı əldə edin!",

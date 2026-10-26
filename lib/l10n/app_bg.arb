@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Известия и при безшумен режим",
   "criticalAlertVolume": "Сила на звука",
   "logout": "Изход",
-  "goToInitialSettingAndReloginIfNeededMessage": "Връщаме се към първоначалните настройки. Ако е необходимо влизане в профила, моля използвайте опцията в долната част на първоначалните настройки.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Ще се върнете към началната настройка. Ако е нужно да влезете в профила си, можете да го направите в долната част на екрана.",
   "deleteAccount": "Изтриване на акаунт",
   "logoutCompleted": "Успешно излязохте",
   "specialDiscountPriceNow": "Получи премиум плана на специална цена!",

@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "خاموش موڈ میں بھی اطلاعات",
   "criticalAlertVolume": "آواز کی سطح",
   "logout": "لاگ آؤٹ",
-  "goToInitialSettingAndReloginIfNeededMessage": "ابتدائی سیٹ اپ پر واپس آ رہے ہیں۔ اگر لاگ ان کی ضرورت ہو تو برائے کرم ابتدائی سیٹ اپ کے نیچے سے لاگ ان کریں",
+  "goToInitialSettingAndReloginIfNeededMessage": "آپ ابتدائی سیٹ اپ پر واپس جائیں گے۔ اگر لاگ اِن کرنا ضروری ہو تو براہِ کرم ابتدائی سیٹ اپ کی اسکرین کے نچلے حصے سے لاگ اِن کریں۔",
   "deleteAccount": "اکاؤنٹ حذف کریں",
   "logoutCompleted": "لاگ آؤٹ ہو گیا",
   "specialDiscountPriceNow": "خصوصی قیمت پر پریمیم پلان حاصل کریں!",

@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Апавяшчэнні нават у бязгучным рэжыме",
   "criticalAlertVolume": "Гучнасць",
   "logout": "Выйсці",
-  "goToInitialSettingAndReloginIfNeededMessage": "Вяртаемся да пачатковых налад. Калі неабходна аўтарызацыя, выканайце яе ў ніжняй частцы пачатковых налад",
+  "goToInitialSettingAndReloginIfNeededMessage": "Вы вернецеся да пачатковай налады. Калі спатрэбіцца ўвайсці, зрабіце гэта, калі ласка, унізе экрана пачатковай налады.",
   "deleteAccount": "Выдаленне акаўнта",
   "logoutCompleted": "Выйшлі з сістэмы",
   "specialDiscountPriceNow": "Атрымайце прэміум-план па спецыяльнай цане!",

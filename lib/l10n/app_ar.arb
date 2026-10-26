@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "الإشعارات حتى في الوضع الصامت",
   "criticalAlertVolume": "مستوى الصوت",
   "logout": "تسجيل الخروج",
-  "goToInitialSettingAndReloginIfNeededMessage": "سيتم العودة إلى الإعدادات الأولية. إذا كنت بحاجة إلى تسجيل الدخول، يرجى استخدام الخيار الموجود أسفل شاشة الإعدادات الأولية",
+  "goToInitialSettingAndReloginIfNeededMessage": "ستعودين إلى شاشة الإعداد الأولي. إذا احتجتِ إلى تسجيل الدخول، فيُرجى القيام بذلك من أسفل الشاشة.",
   "deleteAccount": "حذف الحساب",
   "logoutCompleted": "تم تسجيل الخروج",
   "specialDiscountPriceNow": "احصل على الباقة المميزة بسعر خاص！",

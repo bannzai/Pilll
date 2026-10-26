@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Powiadomienia także w trybie cichym",
   "criticalAlertVolume": "Głośność",
   "logout": "Wyloguj się",
-  "goToInitialSettingAndReloginIfNeededMessage": "Powrócisz do ekranu ustawień początkowych. Jeśli wymagane jest logowanie, znajdziesz tę opcję u dołu ekranu ustawień początkowych.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Wrócisz do konfiguracji początkowej. Jeśli trzeba będzie się zalogować, możesz to zrobić u dołu ekranu konfiguracji.",
   "deleteAccount": "Usuń konto",
   "logoutCompleted": "Wylogowano",
   "specialDiscountPriceNow": "Zdobądź plan Premium w specjalnej cenie!",

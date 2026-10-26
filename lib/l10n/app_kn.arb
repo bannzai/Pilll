@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "ನಿಶ್ಶಬ್ದ ಮೋಡ್‌ನಲ್ಲೂ ಸೂಚನೆಗಳು",
   "criticalAlertVolume": "ಧ್ವನಿಯ ಮಟ್ಟ",
   "logout": "ಲಾಗ್ ಔಟ್",
-  "goToInitialSettingAndReloginIfNeededMessage": "ಆರಂಭಿಕ ಸೆಟಪ್‌ಗೆ ಹಿಂತಿರುಗುತ್ತದೆ. ಲಾಗಿನ್ ಅಗತ್ಯವಿದ್ದರೆ ಆರಂಭಿಕ ಸೆಟಪ್‌ನ ಕೆಳಭಾಗದಿಂದ ದಯವಿಟ್ಟು ಮಾಡಿ",
+  "goToInitialSettingAndReloginIfNeededMessage": "ನೀವು ಆರಂಭಿಕ ಸೆಟಪ್‌ಗೆ ಹಿಂತಿರುಗುತ್ತೀರಿ. ಲಾಗ್ ಇನ್ ಮಾಡುವ ಅಗತ್ಯವಿದ್ದರೆ, ದಯವಿಟ್ಟು ಆರಂಭಿಕ ಸೆಟಪ್ ಪರದೆಯ ಕೆಳಭಾಗದಿಂದ ಲಾಗ್ ಇನ್ ಮಾಡಿ.",
   "deleteAccount": "ಖಾತೆ ಅಳಿಸುವಿಕೆ",
   "logoutCompleted": "ಲಾಗ್ ಔಟ್ ಆಗಿದೆ",
   "specialDiscountPriceNow": "ವಿಶೇಷ ಬೆಲೆಯಲ್ಲಿ ಪ್ರೀಮಿಯಂ ಪ್ಲಾನ್ ಪಡೆಯಿರಿ!",

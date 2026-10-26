@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Ծանուցումներ նաև անձայն ռեժիմում",
   "criticalAlertVolume": "Ձայնի ուժգնություն",
   "logout": "Դուրս գալ հաշվից",
-  "goToInitialSettingAndReloginIfNeededMessage": "Կվերադառնանք սկզբնական կարգավորումներին: Մուտք գործելու անհրաժեշտության դեպքում խնդրում ենք այն իրականացնել սկզբնական կարգավորումների ներքևից:",
+  "goToInitialSettingAndReloginIfNeededMessage": "Դուք կվերադառնաք սկզբնական կարգավորման էջ։ Եթե անհրաժեշտ լինի մուտք գործել, խնդրում ենք դա անել էջի ներքևի մասից։",
   "deleteAccount": "Հաշվի ջնջում",
   "logoutCompleted": "Դուրս եկաք",
   "specialDiscountPriceNow": "Ստացիր պրեմիում ծրագիրը հատուկ գնով:",

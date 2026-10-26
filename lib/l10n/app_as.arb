@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "নীৰৱ অৱস্থাতো জাননী",
   "criticalAlertVolume": "শব্দৰ মাত্ৰা",
   "logout": "লগ আউট",
-  "goToInitialSettingAndReloginIfNeededMessage": "প্ৰাৰম্ভিক ছেটিংলৈ উভতি যাম। যদি লগইনৰ প্ৰয়োজন হয়, তেন্তে প্ৰাৰম্ভিক ছেটিংৰ তলৰ অংশৰ পৰা কৰক",
+  "goToInitialSettingAndReloginIfNeededMessage": "আপুনি প্ৰাৰম্ভিক ছেটআপলৈ উভতি যাব। লগ ইন কৰাৰ প্ৰয়োজন হ’লে, অনুগ্ৰহ কৰি প্ৰাৰম্ভিক ছেটআপৰ পৰ্দাৰ তলৰ পৰা লগ ইন কৰক।",
   "deleteAccount": "একাউন্ট মোছা",
   "logoutCompleted": "লগ আউট হৈছে",
   "specialDiscountPriceNow": "বিশেষ মূল্যত প্ৰিমিয়াম পৰিকল্পনা পাওক!",

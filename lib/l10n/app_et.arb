@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Teavitused ka vaikses režiimis",
   "criticalAlertVolume": "Helitugevus",
   "logout": "Logi välja",
-  "goToInitialSettingAndReloginIfNeededMessage": "Naaseme algseadistustesse. Kui on vaja sisse logida, palun tehke seda algseadistuste alaosas.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Naased algseadistusse. Kui pead sisse logima, saad seda teha algseadistuse kuva allosas.",
   "deleteAccount": "Konto kustutamine",
   "logoutCompleted": "Välja logitud",
   "specialDiscountPriceNow": "Hanki Premium-pakett eripakkumisega!",

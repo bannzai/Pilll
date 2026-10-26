@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Thông báo ngay cả khi ở chế độ im lặng",
   "criticalAlertVolume": "Âm lượng",
   "logout": "Đăng xuất",
-  "goToInitialSettingAndReloginIfNeededMessage": "Quay lại thiết lập ban đầu. Nếu cần đăng nhập, vui lòng thực hiện từ phần dưới cùng của màn hình thiết lập ban đầu.",
+  "goToInitialSettingAndReloginIfNeededMessage": "Bạn sẽ quay lại phần thiết lập ban đầu. Nếu cần đăng nhập, vui lòng đăng nhập ở cuối màn hình thiết lập ban đầu.",
   "deleteAccount": "Xóa tài khoản",
   "logoutCompleted": "Đã đăng xuất",
   "specialDiscountPriceNow": "Nhận ngay gói Premium với giá đặc biệt!",

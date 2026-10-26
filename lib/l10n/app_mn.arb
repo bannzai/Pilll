@@ -429,7 +429,7 @@
   "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдэгдэл авах",
   "criticalAlertVolume": "Дууны түвшин",
   "logout": "Бүртгэлээс гарах",
-  "goToInitialSettingAndReloginIfNeededMessage": "Анхны тохиргоонд буцна. Нэвтрэх шаардлагатай тохиолдолд анхны тохиргооны доод хэсгээс нэвтэрнэ үү",
+  "goToInitialSettingAndReloginIfNeededMessage": "Та анхны тохиргоо руу буцна. Нэвтрэх шаардлагатай бол анхны тохиргооны дэлгэцийн доод хэсгээс нэвтэрнэ үү.",
   "deleteAccount": "Данс устгах",
   "logoutCompleted": "Системээс гарлаа",
   "specialDiscountPriceNow": "Тусгай үнээр премиум төлөвлөгөө авах!",
