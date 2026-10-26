@@ -410,7 +410,7 @@
   "privacyPolicy": "Privātuma politika",
   "linkCopiedToClipboard": "Nokopēts starpliktuvē",
   "notificationNumber": "Paziņojums {number}",
-  "notificationTime": "Atgādinājuma laiks",
+  "notificationTime": "Paziņojuma laiks",
   "timeZoneChangedTo": "Nomainīts uz {tz}",
   "changeStartOfPillDays": "Izmainīt lietošanas dienu skaitīšanas sākumu",
   "changeEndOfPillDays": "Mainīt terapijas beigas",

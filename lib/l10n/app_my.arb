@@ -410,7 +410,7 @@
   "privacyPolicy": "ကိုယ်ရေးအချက်အလက် မူဝါဒ",
   "linkCopiedToClipboard": "ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ",
   "notificationNumber": "အသိပေးချက် {number}",
-  "notificationTime": "သတိပေးချိန်",
+  "notificationTime": "အသိပေးချက်အချိန်",
   "timeZoneChangedTo": "{tz} သို့ ပြောင်းလဲပြီးပါပြီ",
   "changeStartOfPillDays": "သောက်သုံးရက်ပေါင်း၏ အစကို ပြောင်းလဲခြင်း",
   "changeEndOfPillDays": "သောက်သုံးရက်နေ့အဆုံးကို ပြောင်းလဲရန်",

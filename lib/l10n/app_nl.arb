@@ -410,7 +410,7 @@
   "privacyPolicy": "Privacybeleid",
   "linkCopiedToClipboard": "Gekopieerd naar het klembord",
   "notificationNumber": "Melding {number}",
-  "notificationTime": "Notificatietijd",
+  "notificationTime": "Meldingstijd",
   "timeZoneChangedTo": "Gewijzigd naar {tz}",
   "changeStartOfPillDays": "Startdatum van inname wijzigen",
   "changeEndOfPillDays": "Einde innamedagen wijzigen",

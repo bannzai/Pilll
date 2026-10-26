@@ -410,7 +410,7 @@
   "privacyPolicy": "Privaatheidsbeleid",
   "linkCopiedToClipboard": "Na die knipbord gekopieer",
   "notificationNumber": "Kennisgewing {number}",
-  "notificationTime": "Herinnertyd",
+  "notificationTime": "Kennisgewingstyd",
   "timeZoneChangedTo": "Tydsone is verander na {tz}",
   "changeStartOfPillDays": "Verander die begin van doseringsdae",
   "changeEndOfPillDays": "Verander einde van innamedae",

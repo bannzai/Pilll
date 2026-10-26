@@ -410,7 +410,7 @@
   "privacyPolicy": "Politika privatnosti",
   "linkCopiedToClipboard": "Kopirano u međuspremnik",
   "notificationNumber": "Obavijest {number}",
-  "notificationTime": "Vrijeme notifikacije",
+  "notificationTime": "Vrijeme obavijesti",
   "timeZoneChangedTo": "Promjenjeno na {tz}",
   "changeStartOfPillDays": "Promjena početka dana uzimanja",
   "changeEndOfPillDays": "Promijeni kraj uzimanja",

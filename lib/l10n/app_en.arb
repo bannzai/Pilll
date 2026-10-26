@@ -410,7 +410,7 @@
   "privacyPolicy": "Privacy policy",
   "linkCopiedToClipboard": "Copied to clipboard",
   "notificationNumber": "Notification {number}",
-  "notificationTime": "Notification Time",
+  "notificationTime": "Notification time",
   "timeZoneChangedTo": "Changed to {tz}",
   "changeStartOfPillDays": "Change start of dosage days",
   "changeEndOfPillDays": "Change end of dosing days",

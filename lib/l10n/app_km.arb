@@ -410,7 +410,7 @@
   "privacyPolicy": "គោលការណ៍ឯកជនភាព",
   "linkCopiedToClipboard": "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់",
   "notificationNumber": "ការជូនដំណឹង {number}",
-  "notificationTime": "ពេលជូនដំណឹង",
+  "notificationTime": "ម៉ោងជូនដំណឹង",
   "timeZoneChangedTo": "បានប្តូរទៅ{tz}ហើយ",
   "changeStartOfPillDays": "ផ្លាស់ប្តូរថ្ងៃចាប់ផ្តើមសេវា",
   "changeEndOfPillDays": "កែប្រែថ្ងៃបញ្ចប់ការលេបថ្នាំ",

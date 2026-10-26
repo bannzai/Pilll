@@ -410,7 +410,7 @@
   "privacyPolicy": "गोपनीयता नीति",
   "linkCopiedToClipboard": "क्लिपबोर्ड पर कॉपी हो गया",
   "notificationNumber": "सूचना {number}",
-  "notificationTime": "सूचना समय",
+  "notificationTime": "सूचना का समय",
   "timeZoneChangedTo": "{tz} में बदल दिया गया",
   "changeStartOfPillDays": "सेवन अवधि की शुरुआत बदलें",
   "changeEndOfPillDays": "सेवन अवधि का अंत बदलें",

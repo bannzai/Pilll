@@ -410,7 +410,7 @@
   "privacyPolicy": "Política de privacidade",
   "linkCopiedToClipboard": "Copiado para a área de transferência",
   "notificationNumber": "Notificação {number}",
-  "notificationTime": "Hora da notificação",
+  "notificationTime": "Horário da notificação",
   "timeZoneChangedTo": "Alterado para {tz}",
   "changeStartOfPillDays": "Alterar início da contagem de dias",
   "changeEndOfPillDays": "Alterar fim do período de toma",

@@ -410,7 +410,7 @@
   "privacyPolicy": "Kebijakan privasi",
   "linkCopiedToClipboard": "Disalin ke papan klip",
   "notificationNumber": "Notifikasi {number}",
-  "notificationTime": "Waktu Notifikasi",
+  "notificationTime": "Waktu notifikasi",
   "timeZoneChangedTo": "Diubah ke {tz}",
   "changeStartOfPillDays": "Ubah Awal Hari Konsumsi",
   "changeEndOfPillDays": "Ubah Akhir Periode Minum",

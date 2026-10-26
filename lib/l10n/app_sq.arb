@@ -410,7 +410,7 @@
   "privacyPolicy": "Politika e privatësisë",
   "linkCopiedToClipboard": "U kopjua në kujtesën e përkohshme",
   "notificationNumber": "Njoftim {number}",
-  "notificationTime": "Koha e njoftimit",
+  "notificationTime": "Ora e njoftimit",
   "timeZoneChangedTo": "Ndryshuar në {tz}",
   "changeStartOfPillDays": "Ndrysho datën e fillimit të marrjes",
   "changeEndOfPillDays": "Ndrysho fundin e dozimit",

@@ -410,7 +410,7 @@
   "privacyPolicy": "Құпиялық саясаты",
   "linkCopiedToClipboard": "Алмасу буферіне көшірілді",
   "notificationNumber": "Хабарландыру {number}",
-  "notificationTime": "хабарландыру уақыты",
+  "notificationTime": "Хабарландыру уақыты",
   "timeZoneChangedTo": "{tz} уақыт белдеуіне өзгертілді",
   "changeStartOfPillDays": "Қабылдау күндерінің басталуын өзгерту",
   "changeEndOfPillDays": "Қабылдау мерзімінің соңын өзгерту",

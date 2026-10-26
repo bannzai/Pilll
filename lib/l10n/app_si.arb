@@ -410,7 +410,7 @@
   "privacyPolicy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",
   "linkCopiedToClipboard": "පසුරු පුවරුවට පිටපත් කළා",
   "notificationNumber": "දැනුම්දීම {number}",
-  "notificationTime": "දැනුම්දීම් වේලාව",
+  "notificationTime": "දැනුම්දීමේ වේලාව",
   "timeZoneChangedTo": "{tz} ට වෙනස් කරන ලදී",
   "changeStartOfPillDays": "ගැනීමේ දින ගණනේ ආරම්භය වෙනස් කරන්න",
   "changeEndOfPillDays": "සේවන දින ගණනේ අවසානය වෙනස් කිරීම",

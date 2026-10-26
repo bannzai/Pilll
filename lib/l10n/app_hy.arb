@@ -410,7 +410,7 @@
   "privacyPolicy": "Գաղտնիության քաղաքականություն",
   "linkCopiedToClipboard": "Պատճենվել է փոխանակման բուֆերում",
   "notificationNumber": "Ծանուցում {number}",
-  "notificationTime": "ծանուցման ժամանակ",
+  "notificationTime": "Ծանուցման ժամը",
   "timeZoneChangedTo": "{tz}-ին փոխված է",
   "changeStartOfPillDays": "Ընդունման օրերի սկիզբը փոփոխել",
   "changeEndOfPillDays": "Փոփոխել ընդունման ավարտը",

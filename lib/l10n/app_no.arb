@@ -410,7 +410,7 @@
   "privacyPolicy": "Personvernerklæring",
   "linkCopiedToClipboard": "Kopiert til utklippstavlen",
   "notificationNumber": "Varsel {number}",
-  "notificationTime": "Varslingstid",
+  "notificationTime": "Varslingstidspunkt",
   "timeZoneChangedTo": "Endret til {tz}",
   "changeStartOfPillDays": "Endre start på inntaksperioden",
   "changeEndOfPillDays": "Endre slutten på brukeperioden",

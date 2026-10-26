@@ -410,7 +410,7 @@
   "privacyPolicy": "Integritetspolicy",
   "linkCopiedToClipboard": "Kopierat till urklipp",
   "notificationNumber": "Avisering {number}",
-  "notificationTime": "Notifikationstid",
+  "notificationTime": "Tid för avisering",
   "timeZoneChangedTo": "Tidszonen har ändrats till {tz}",
   "changeStartOfPillDays": "Ändra startdatum för medicinering",
   "changeEndOfPillDays": "Ändra slutet av intagsperioden",

@@ -410,7 +410,7 @@
   "privacyPolicy": "Chính sách quyền riêng tư",
   "linkCopiedToClipboard": "Đã sao chép vào bộ nhớ tạm",
   "notificationNumber": "Thông báo {number}",
-  "notificationTime": "Thời gian thông báo",
+  "notificationTime": "Giờ nhận thông báo",
   "timeZoneChangedTo": "Đã thay đổi sang {tz}",
   "changeStartOfPillDays": "Thay đổi ngày bắt đầu uống thuốc",
   "changeEndOfPillDays": "Thay đổi ngày kết thúc uống thuốc",

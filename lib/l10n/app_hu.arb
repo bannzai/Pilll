@@ -410,7 +410,7 @@
   "privacyPolicy": "Adatvédelmi szabályzat",
   "linkCopiedToClipboard": "A vágólapra másolva",
   "notificationNumber": "{number}. értesítés",
-  "notificationTime": "Értesítési idő",
+  "notificationTime": "Értesítés időpontja",
   "timeZoneChangedTo": "{tz}-re módosítva",
   "changeStartOfPillDays": "A bevételi napok kezdetének módosítása",
   "changeEndOfPillDays": "A szedési napok végének módosítása",

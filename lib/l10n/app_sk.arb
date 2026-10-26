@@ -410,7 +410,7 @@
   "privacyPolicy": "Zásady ochrany osobných údajov",
   "linkCopiedToClipboard": "Skopírované do schránky",
   "notificationNumber": "Upozornenie {number}",
-  "notificationTime": "Čas oznámenia",
+  "notificationTime": "Čas upozornenia",
   "timeZoneChangedTo": "Zmenené na {tz}",
   "changeStartOfPillDays": "Zmeniť začiatok dní užívania",
   "changeEndOfPillDays": "Zmeniť koniec doby užívania",

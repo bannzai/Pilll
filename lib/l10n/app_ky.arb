@@ -410,7 +410,7 @@
   "privacyPolicy": "Купуялык саясаты",
   "linkCopiedToClipboard": "Алмашуу буферине көчүрүлдү",
   "notificationNumber": "Билдирүү {number}",
-  "notificationTime": "эскертүү убактысы",
+  "notificationTime": "Билдирүү убактысы",
   "timeZoneChangedTo": "{tz} убакыт алкагына өзгөртүлдү",
   "changeStartOfPillDays": "Дары ичүүнүн башталуу күнүн өзгөртүү",
   "changeEndOfPillDays": "Ичүү мөөнөтүнүн аягын өзгөртүү",

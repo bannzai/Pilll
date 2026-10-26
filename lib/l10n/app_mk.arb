@@ -410,7 +410,7 @@
   "privacyPolicy": "Политика за приватност",
   "linkCopiedToClipboard": "Копирано во таблата со исечоци",
   "notificationNumber": "Известување {number}",
-  "notificationTime": "Време за известување",
+  "notificationTime": "Време на известување",
   "timeZoneChangedTo": "Временската зона е променета на {tz}",
   "changeStartOfPillDays": "Промени почеток на бројот на денови за земање",
   "changeEndOfPillDays": "Промени крај на периодот на земање",

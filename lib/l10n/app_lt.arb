@@ -410,7 +410,7 @@
   "privacyPolicy": "Privatumo politika",
   "linkCopiedToClipboard": "Nukopijuota į iškarpinę",
   "notificationNumber": "Pranešimas {number}",
-  "notificationTime": "Priminimo laikas",
+  "notificationTime": "Pranešimo laikas",
   "timeZoneChangedTo": "Pakeista į {tz}",
   "changeStartOfPillDays": "Keisti vartojimo pradžią",
   "changeEndOfPillDays": "Keisti vartojimo dienų pabaigą",

@@ -410,7 +410,7 @@
   "privacyPolicy": "Política de privacitat",
   "linkCopiedToClipboard": "S'ha copiat al porta-retalls",
   "notificationNumber": "Notificació {number}",
-  "notificationTime": "hora de notificació",
+  "notificationTime": "Hora de la notificació",
   "timeZoneChangedTo": "S'ha canviat a {tz}",
   "changeStartOfPillDays": "Canviar l'inici dels dies de presa",
   "changeEndOfPillDays": "Canvi de final dels dies de presa",

@@ -410,7 +410,7 @@
   "privacyPolicy": "Polisi preifatrwydd",
   "linkCopiedToClipboard": "Wedi copïo i'r clipfwrdd",
   "notificationNumber": "Hysbysiad {number}",
-  "notificationTime": "Amser Hysbysiad",
+  "notificationTime": "Amser yr hysbysiad",
   "timeZoneChangedTo": "Newidiwyd i {tz}",
   "changeStartOfPillDays": "Newid dechrau'r dyddiau cymryd",
   "changeEndOfPillDays": "Newid diwedd cyfnod cymryd",

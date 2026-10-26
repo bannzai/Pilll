@@ -410,7 +410,7 @@
   "privacyPolicy": "Patakaran sa privacy",
   "linkCopiedToClipboard": "Nakopya na sa clipboard",
   "notificationNumber": "Abiso {number}",
-  "notificationTime": "Oras ng Notipikasyon",
+  "notificationTime": "Oras ng abiso",
   "timeZoneChangedTo": "Binago sa {tz}",
   "changeStartOfPillDays": "Baguhin ang simula ng bilang ng araw ng pag-inom",
   "changeEndOfPillDays": "Baguhin ang katapusan ng mga araw ng pag-inom",

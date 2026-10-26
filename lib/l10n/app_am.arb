@@ -410,7 +410,7 @@
   "privacyPolicy": "የግላዊነት ፖሊሲ",
   "linkCopiedToClipboard": "ወደ ቅንጥብ ሰሌዳ ተቀድቷል",
   "notificationNumber": "ማሳወቂያ {number}",
-  "notificationTime": "ማስታወቂያ ሰዓት",
+  "notificationTime": "የማሳወቂያ ሰዓት",
   "timeZoneChangedTo": "ወደ {tz} ተቀይሯል",
   "changeStartOfPillDays": "የአወሳሰድ መጀመሪያ ቀን መቀየር",
   "changeEndOfPillDays": "የመድሃኒት መውሰጃ ቀናት መጨረሻ መቀየር",

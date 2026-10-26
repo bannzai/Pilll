@@ -410,7 +410,7 @@
   "privacyPolicy": "د محرمیت تګلاره",
   "linkCopiedToClipboard": "کلیپبورډ ته کاپي شو",
   "notificationNumber": "خبرتیا {number}",
-  "notificationTime": "خبرتیا وخت",
+  "notificationTime": "د خبرتیا وخت",
   "timeZoneChangedTo": "{tz} ته بدل شو",
   "changeStartOfPillDays": "د اخستلو د پیل ورځ بدلول",
   "changeEndOfPillDays": "د استعمال ورځو د پای بدلون",

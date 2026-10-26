@@ -410,7 +410,7 @@
   "privacyPolicy": "Persónuverndarstefna",
   "linkCopiedToClipboard": "Afritað á klippiborð",
   "notificationNumber": "Tilkynning {number}",
-  "notificationTime": "Tilkynningatími",
+  "notificationTime": "Tími tilkynningar",
   "timeZoneChangedTo": "Breytt í {tz}",
   "changeStartOfPillDays": "Breyta upphafi inntökudaga",
   "changeEndOfPillDays": "Breyta loki inntökutímabils",

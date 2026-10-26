@@ -410,7 +410,7 @@
   "privacyPolicy": "מדיניות פרטיות",
   "linkCopiedToClipboard": "הועתק ללוח",
   "notificationNumber": "התראה {number}",
-  "notificationTime": "זמן התראה",
+  "notificationTime": "שעת ההתראה",
   "timeZoneChangedTo": "שונה ל{tz}",
   "changeStartOfPillDays": "שינוי תחילת ימי הנטילה",
   "changeEndOfPillDays": "שינוי תאריך סיום הנטילה",
