@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "Да бисте сачували податке о свом налогу, молимо Вас да направите налог",
   "signInWith": "Пријавите се преко {loginName}",
   "registerWith": "Региструјте се преко {loginName}",
-  "premiumRegistrationComplete": "Pilll Premium uspešno registrovano",
+  "premiumRegistrationComplete": "Регистрација за Pilll премијум је завршена",
   "thankYouForRegistration": "Hvala vam na registraciji.\nSve funkcije su sada dostupne!",
   "limitedTimeDiscount": "Sada po ograničenoj ceni zauvek",
   "standardMonthlyPlan": "Редован месечни план",

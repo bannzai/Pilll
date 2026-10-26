@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "ನಿಮ್ಮ ಖಾತೆಯ ಮಾಹಿತಿಯನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ದಯವಿಟ್ಟು ಖಾತೆಯನ್ನು ನೋಂದಾಯಿಸಿ",
   "signInWith": "{loginName} ಮೂಲಕ ಸೈನ್ ಇನ್ ಮಾಡಿ",
   "registerWith": "{loginName} ಮೂಲಕ ನೋಂದಾಯಿಸಿಕೊಳ್ಳಿ",
-  "premiumRegistrationComplete": "Pilll ಪ್ರೀಮಿಯಂ ನೋಂದಣಿ ಯಶಸ್ವಿಯಾಗಿದೆ",
+  "premiumRegistrationComplete": "Pilll ಪ್ರೀಮಿಯಂ ನೋಂದಣಿ ಪೂರ್ಣಗೊಂಡಿದೆ",
   "thankYouForRegistration": "ನೋಂದಣಿಗಾಗಿ ಧನ್ಯವಾದಗಳು.\nಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳು ಈಗ ಬಳಸಲು ಲಭ್ಯವಿದೆ!",
   "limitedTimeDiscount": "ಈಗ ವಿಶೇಷ ಬೆಲೆಯಲ್ಲಿ ಎಂದೆಂದಿಗೂ ಬಳಸಿ",
   "standardMonthlyPlan": "ಸಾಮಾನ್ಯ ಮಾಸಿಕ ಯೋಜನೆ",

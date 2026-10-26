@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "Kontuaren informazioa gordetzeko, sortu kontu bat, mesedez",
   "signInWith": "Hasi saioa {loginName} bidez",
   "registerWith": "Eman izena {loginName} bidez",
-  "premiumRegistrationComplete": "Pilll Premium erregistroa osatuta",
+  "premiumRegistrationComplete": "Pilll Premiumen erregistroa osatu da",
   "thankYouForRegistration": "Mila esker erregistratzeagatik.\nFuntzio guztiak eskuragarri daude orain!",
   "limitedTimeDiscount": "Orain prezio bereziarekin betirako erabil dezakezu",
   "standardMonthlyPlan": "Hilabeteko plan arrunta",

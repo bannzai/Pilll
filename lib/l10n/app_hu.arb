@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "Hozz létre egy fiókot, hogy a fiókadataid megmaradjanak",
   "signInWith": "Bejelentkezés {loginName}-fiókkal",
   "registerWith": "Regisztráció {loginName} használatával",
-  "premiumRegistrationComplete": "Pilll prémium feliratkozás sikeres",
+  "premiumRegistrationComplete": "A Pilll prémium regisztráció befejeződött",
   "thankYouForRegistration": "Köszönjük a regisztrációt!\nMost már minden funkció elérhető!",
   "limitedTimeDiscount": "Most különleges áron mindörökre használható",
   "standardMonthlyPlan": "Normál havi csomag",

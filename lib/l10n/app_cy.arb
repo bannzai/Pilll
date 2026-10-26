@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "I gadw gwybodaeth eich cyfrif, cofrestrwch gyfrif os gwelwch yn dda",
   "signInWith": "Mewngofnodwch gyda {loginName}",
   "registerWith": "Cofrestrwch gyda {loginName}",
-  "premiumRegistrationComplete": "Pilll Premium wedi'i gofrestu'n llwyddiannus",
+  "premiumRegistrationComplete": "Cofrestru ar gyfer Pilll premiwm wedi'i gwblhau",
   "thankYouForRegistration": "Diolch am gofrestru.\nMae'r holl nodweddion ar gael i chi nawr!",
   "limitedTimeDiscount": "Pris arbennig nawr - cadwch am byth",
   "standardMonthlyPlan": "Cynllun Misol Safonol",

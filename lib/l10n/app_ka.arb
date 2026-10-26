@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "თქვენი ანგარიშის ინფორმაციის შესანარჩუნებლად, გთხოვთ, შექმნათ ანგარიში",
   "signInWith": "{loginName}-ით შესვლა",
   "registerWith": "რეგისტრაცია {loginName}-ით",
-  "premiumRegistrationComplete": "Pilll პრემიუმ რეგისტრაცია დასრულდა",
+  "premiumRegistrationComplete": "Pilll პრემიუმზე რეგისტრაცია დასრულდა",
   "thankYouForRegistration": "რეგისტრაციისთვის გმადლობთ.\nყველა ფუნქცია ხელმისაწვდომი გახდა!",
   "limitedTimeDiscount": "ახლა შეზღუდული ფასით სამუდამოდ გამოიყენება",
   "standardMonthlyPlan": "ჩვეულებრივი თვიური პლანი",

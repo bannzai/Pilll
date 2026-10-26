@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "Loo konto, et sinu kontoandmed säiliksid",
   "signInWith": "Logi sisse {loginName}iga",
   "registerWith": "Registreeru {loginName} kaudu",
-  "premiumRegistrationComplete": "Pilll Premium registreerimine lõppenud",
+  "premiumRegistrationComplete": "Pilll premiumiga registreerumine on lõpetatud",
   "thankYouForRegistration": "Täname registreerumise eest.\nKõik funktsioonid on nüüd kasutamiseks saadaval!",
   "limitedTimeDiscount": "Nüüd piiratud hinnaga igaveseks",
   "standardMonthlyPlan": "Tavaline kuutasu",

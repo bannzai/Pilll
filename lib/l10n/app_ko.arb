@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "계정 정보를 보관할 수 있도록 계정을 등록해 주세요",
   "signInWith": "{loginName}로 로그인해요",
   "registerWith": "{loginName}(으)로 가입해요",
-  "premiumRegistrationComplete": "Pilll 프리미엄 등록 완료",
+  "premiumRegistrationComplete": "Pilll 프리미엄 가입이 완료됐어요",
   "thankYouForRegistration": "가입해 주셔서 감사합니다.\n모든 기능을 이용하실 수 있습니다!",
   "limitedTimeDiscount": "지금이면 특가로 평생 이용",
   "standardMonthlyPlan": "일반 월액 플랜",

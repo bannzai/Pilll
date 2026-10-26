@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "Skapa ett konto för att behålla dina kontouppgifter",
   "signInWith": "Logga in med {loginName}",
   "registerWith": "Registrera dig med {loginName}",
-  "premiumRegistrationComplete": "Pilll Premium registrering slutförd",
+  "premiumRegistrationComplete": "Registreringen för Pilll premium är klar",
   "thankYouForRegistration": "Tack för din registrering.\nNu kan du använda alla funktioner!",
   "limitedTimeDiscount": "Nu till specialpris för alltid",
   "standardMonthlyPlan": "Standard månadsplan",

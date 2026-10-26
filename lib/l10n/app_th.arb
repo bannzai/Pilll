@@ -173,7 +173,7 @@
   "registerAccountToKeepData": "โปรดสมัครบัญชีเพื่อเก็บข้อมูลบัญชีของคุณไว้ค่ะ",
   "signInWith": "ลงชื่อเข้าใช้ด้วย {loginName}",
   "registerWith": "สมัครด้วย {loginName}",
-  "premiumRegistrationComplete": "ลงทะเบียน Pilll พรีเมียมเสร็จสมบูรณ์แล้ว",
+  "premiumRegistrationComplete": "สมัคร Pilll พรีเมียมเรียบร้อยแล้ว",
   "thankYouForRegistration": "ขอบคุณสำหรับการลงทะเบียน\nตอนนี้คุณสามารถใช้ฟีเจอร์ทั้งหมดได้แล้ว！",
   "limitedTimeDiscount": "ตอนนี้ราคาพิเศษ ใช้ได้ตลอดไป",
   "standardMonthlyPlan": "แผนรายเดือนปกติ",
