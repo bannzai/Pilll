@@ -165,7 +165,7 @@
   "menstruationFromToday": "经期从今天开始",
   "menstruationFromYesterday": "经期从昨天开始",
   "selectMenstruationStartDate": "选择经期开始日期",
-  "menstruationCycle": "{menstruationDuration}天周期",
+  "menstruationCycle": "{menstruationDuration}天的月经周期",
   "login": "登录",
   "beforePremiumRegistration": "开通高级版前...",
   "createNewAccountIfNotLoggedIn": "如果您还没有登录过Pilll，将为您创建新账户",

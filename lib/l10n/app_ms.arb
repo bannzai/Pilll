@@ -165,7 +165,7 @@
   "menstruationFromToday": "Haid bermula hari ini",
   "menstruationFromYesterday": "Haid bermula semalam",
   "selectMenstruationStartDate": "Pilih tarikh mula haid",
-  "menstruationCycle": "kitaran {menstruationDuration} hari",
+  "menstruationCycle": "Kitaran haid {menstruationDuration} hari",
   "login": "Log masuk",
   "beforePremiumRegistration": "Sebelum melanggan premium...",
   "createNewAccountIfNotLoggedIn": "Jika anda belum pernah log masuk ke Pilll, akaun baru akan dibuat",

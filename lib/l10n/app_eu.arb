@@ -165,7 +165,7 @@
   "menstruationFromToday": "Hilekoa gaur hasten da",
   "menstruationFromYesterday": "Hilekoa atzo hasi zen",
   "selectMenstruationStartDate": "Aukeratu hilekoaren hasiera-data",
-  "menstruationCycle": "{menstruationDuration} eguneko zikloa",
+  "menstruationCycle": "{menstruationDuration} eguneko hilekoaren zikloa",
   "login": "Saioa hasi",
   "beforePremiumRegistration": "Premium erregistroaren aurretik...",
   "createNewAccountIfNotLoggedIn": "Pilll-en oraindik ez baduzu saioa hasi, kontu berri bat sortuko da",

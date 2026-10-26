@@ -165,7 +165,7 @@
   "menstruationFromToday": "Haid dimulai hari ini",
   "menstruationFromYesterday": "Haid dimulai kemarin",
   "selectMenstruationStartDate": "Pilih tanggal mulai haid",
-  "menstruationCycle": "siklus {menstruationDuration} hari",
+  "menstruationCycle": "Siklus menstruasi {menstruationDuration} hari",
   "login": "Masuk",
   "beforePremiumRegistration": "Sebelum mendaftar premium...",
   "createNewAccountIfNotLoggedIn": "Jika belum pernah login ke Pilll, akun baru akan dibuat",

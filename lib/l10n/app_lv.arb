@@ -165,7 +165,7 @@
   "menstruationFromToday": "Mēnešreizes sākas šodien",
   "menstruationFromYesterday": "Mēnešreizes sākās vakar",
   "selectMenstruationStartDate": "Izvēlieties mēnešreižu sākuma datumu",
-  "menstruationCycle": "{menstruationDuration} dienu cikls",
+  "menstruationCycle": "{menstruationDuration} dienu menstruālais cikls",
   "login": "Pieslēgties",
   "beforePremiumRegistration": "Pirms premium abonēšanas...",
   "createNewAccountIfNotLoggedIn": "Ja jūs vēl neesat pieteicies Pilll lietotnē, tiks automātiski izveidots jauns konts",

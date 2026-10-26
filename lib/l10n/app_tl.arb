@@ -165,7 +165,7 @@
   "menstruationFromToday": "Simula ng regla ngayong araw",
   "menstruationFromYesterday": "Nagsimula ang regla kahapon",
   "selectMenstruationStartDate": "Piliin ang petsa ng simula ng regla",
-  "menstruationCycle": "{menstruationDuration} araw na siklo",
+  "menstruationCycle": "Siklo ng regla na {menstruationDuration} araw",
   "login": "Pumasok",
   "beforePremiumRegistration": "Bago mag-register sa Premium...",
   "createNewAccountIfNotLoggedIn": "Kung hindi ka pa nakakapag-login sa Pilll, makakagawa ng bagong account",

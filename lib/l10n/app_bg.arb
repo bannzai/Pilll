@@ -165,7 +165,7 @@
   "menstruationFromToday": "Мензисът започва днес",
   "menstruationFromYesterday": "Мензисът започна вчера",
   "selectMenstruationStartDate": "Изберете начална дата на мензиса",
-  "menstruationCycle": "{menstruationDuration}-дневен цикъл",
+  "menstruationCycle": "Менструален цикъл от {menstruationDuration} дни",
   "login": "Вход",
   "beforePremiumRegistration": "Преди да се регистрирате за премиум...",
   "createNewAccountIfNotLoggedIn": "Ако все още не сте влизали в Pilll, ще бъде създаден нов акаунт",

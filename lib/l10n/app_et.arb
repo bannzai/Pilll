@@ -165,7 +165,7 @@
   "menstruationFromToday": "Päevad algavad täna",
   "menstruationFromYesterday": "Päevad algasid eile",
   "selectMenstruationStartDate": "Vali päevade alguskuupäev",
-  "menstruationCycle": "{menstruationDuration} päeva tsükkel",
+  "menstruationCycle": "{menstruationDuration}-päevane menstruaaltsükkel",
   "login": "Logi sisse",
   "beforePremiumRegistration": "Enne premiumi tellimist...",
   "createNewAccountIfNotLoggedIn": "Kui te ei ole veel Pillisse sisse loginud, luuakse teile automaatselt uus konto",

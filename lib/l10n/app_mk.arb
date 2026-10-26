@@ -165,7 +165,7 @@
   "menstruationFromToday": "Менструација почнува денес",
   "menstruationFromYesterday": "Менструација започна вчера",
   "selectMenstruationStartDate": "Изберете датум за почеток на менструација",
-  "menstruationCycle": "{menstruationDuration}-дневен циклус",
+  "menstruationCycle": "Менструален циклус од {menstruationDuration} дена",
   "login": "Најави се",
   "beforePremiumRegistration": "Пред премиум регистрацијата…",
   "createNewAccountIfNotLoggedIn": "Ако сè уште не сте се најавени во Pilll, ќе биде креиран нов профил",

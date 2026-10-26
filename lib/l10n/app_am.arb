@@ -165,7 +165,7 @@
   "menstruationFromToday": "ወር አበባ ከዛሬ ጀምሮ",
   "menstruationFromYesterday": "ወር አበባ ትናንት ጀመረ",
   "selectMenstruationStartDate": "የወር አበባ መጀመሪያ ቀን ይምረጡ",
-  "menstruationCycle": "{menstruationDuration} ቀን ዑደት",
+  "menstruationCycle": "የ{menstruationDuration} ቀን የወር አበባ ዑደት",
   "login": "ግባት",
   "beforePremiumRegistration": "ከፕሪሚየም ምዝገባ በፊት...",
   "createNewAccountIfNotLoggedIn": "ለመጀመሪያ ጊዜ Pilll ውስጥ ከገቡ አዲስ መለያ ይፈጠራልዎት።",

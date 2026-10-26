@@ -165,7 +165,7 @@
   "menstruationFromToday": "Periode fangt hüt aa",
   "menstruationFromYesterday": "D Periode hät geschter aagfange",
   "selectMenstruationStartDate": "Wähl s Aafangsdatum vo diner Periode",
-  "menstruationCycle": "{menstruationDuration} Täg Zyklus",
+  "menstruationCycle": "Menstruationszyklus vo {menstruationDuration} Täg",
   "login": "Aalogge",
   "beforePremiumRegistration": "Vor der Premium-Aameldung...",
   "createNewAccountIfNotLoggedIn": "Falls Sie sich no nie bi Pilll aagmäldet händ, wird automatisch es neus Konto für Sie erstellt.",

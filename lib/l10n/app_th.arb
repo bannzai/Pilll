@@ -165,7 +165,7 @@
   "menstruationFromToday": "ประจำเดือนเริ่มวันนี้",
   "menstruationFromYesterday": "ประจำเดือนเริ่มเมื่อวาน",
   "selectMenstruationStartDate": "เลือกวันที่เริ่มประจำเดือน",
-  "menstruationCycle": "รอบ {menstruationDuration} วัน",
+  "menstruationCycle": "รอบเดือน {menstruationDuration} วัน",
   "login": "เข้าสู่ระบบ",
   "beforePremiumRegistration": "ก่อนลงทะเบียนพรีเมียม...",
   "createNewAccountIfNotLoggedIn": "หากคุณยังไม่เคยเข้าสู่ระบบ Pilll จะสร้างบัญชีใหม่ให้โดยอัตโนมัติ",

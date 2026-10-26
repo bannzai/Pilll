@@ -165,7 +165,7 @@
   "menstruationFromToday": "Месячные начинаются сегодня",
   "menstruationFromYesterday": "Месячные начались вчера",
   "selectMenstruationStartDate": "Выберите дату начала месячных",
-  "menstruationCycle": "{menstruationDuration}-дневный цикл",
+  "menstruationCycle": "Менструальный цикл: {menstruationDuration} дней",
   "login": "Войти",
   "beforePremiumRegistration": "Перед оформлением премиум-подписки...",
   "createNewAccountIfNotLoggedIn": "Если вы впервые используете Pilll, для вас будет автоматически создан новый аккаунт",

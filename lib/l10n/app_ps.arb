@@ -165,7 +165,7 @@
   "menstruationFromToday": "حیض له نن څخه پیلېږي",
   "menstruationFromYesterday": "حیض پرون پیل شو",
   "selectMenstruationStartDate": "د حیض د پیل نېټه وټاکئ",
-  "menstruationCycle": "{menstruationDuration} ورځې دوره",
+  "menstruationCycle": "د {menstruationDuration} ورځو میاشتنی دوران",
   "login": "لاګ ان",
   "beforePremiumRegistration": "د پریمیم ثبت نوم څخه مخکې...",
   "createNewAccountIfNotLoggedIn": "که تاسو دمخه Pilll ته لاګ ان نه یاست کړي، نو یو نوی حساب به جوړ شي",

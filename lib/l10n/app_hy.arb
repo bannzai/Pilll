@@ -165,7 +165,7 @@
   "menstruationFromToday": "Դաշտանը սկսվում է այսօր",
   "menstruationFromYesterday": "Դաշտանը սկսվել է երեկ",
   "selectMenstruationStartDate": "Ընտրեք դաշտանի սկսվելու օրը",
-  "menstruationCycle": "{menstruationDuration}օրյա ցիկլ",
+  "menstruationCycle": "{menstruationDuration} օրվա դաշտանային ցիկլ",
   "login": "Մուտք",
   "beforePremiumRegistration": "Պրեմիում գրանցումից առաջ...",
   "createNewAccountIfNotLoggedIn": "Եթե դուք դեռ չեք մուտք գործել Pilll-ում, նոր հաշիվ կստեղծվի",

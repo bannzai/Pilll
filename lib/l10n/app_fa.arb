@@ -165,7 +165,7 @@
   "menstruationFromToday": "شروع پریود از امروز",
   "menstruationFromYesterday": "پریود از دیروز شروع شده است",
   "selectMenstruationStartDate": "تاریخ شروع پریود را انتخاب کنید",
-  "menstruationCycle": "دوره {menstruationDuration} روزه",
+  "menstruationCycle": "چرخهٔ قاعدگی {menstruationDuration} روزه",
   "login": "ورود",
   "beforePremiumRegistration": "قبل از ثبت‌نام پریمیوم...",
   "createNewAccountIfNotLoggedIn": "در صورتی که هنوز وارد Pilll نشده‌اید، حساب کاربری جدیدی ایجاد خواهد شد",

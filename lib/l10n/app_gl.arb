@@ -165,7 +165,7 @@
   "menstruationFromToday": "A regra comeza hoxe",
   "menstruationFromYesterday": "A regra comezou onte",
   "selectMenstruationStartDate": "Escolle a data de inicio da regra",
-  "menstruationCycle": "ciclo de {menstruationDuration} días",
+  "menstruationCycle": "Ciclo menstrual de {menstruationDuration} días",
   "login": "Iniciar sesión",
   "beforePremiumRegistration": "Antes de rexistrarte no premium…",
   "createNewAccountIfNotLoggedIn": "Se aínda non iniciaches sesión en Pilll, crearase unha nova conta",

@@ -165,7 +165,7 @@
   "menstruationFromToday": "오늘부터 생리 시작",
   "menstruationFromYesterday": "어제부터 생리",
   "selectMenstruationStartDate": "생리 시작일 선택",
-  "menstruationCycle": "{menstruationDuration}일 주기",
+  "menstruationCycle": "{menstruationDuration}일 생리 주기",
   "login": "로그인",
   "beforePremiumRegistration": "프리미엄 등록 전에…",
   "createNewAccountIfNotLoggedIn": "Pilll에 처음 로그인하시는 경우 새로운 계정이 자동으로 생성됩니다",

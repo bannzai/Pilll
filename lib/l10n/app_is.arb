@@ -165,7 +165,7 @@
   "menstruationFromToday": "Blæðingar hefjast í dag",
   "menstruationFromYesterday": "Blæðingar hófust í gær",
   "selectMenstruationStartDate": "Veldu upphafsdag blæðinga",
-  "menstruationCycle": "{menstruationDuration} daga hringrás",
+  "menstruationCycle": "{menstruationDuration} daga tíðahringur",
   "login": "Innskrá",
   "beforePremiumRegistration": "Áður en þú skráir þig í Premium...",
   "createNewAccountIfNotLoggedIn": "Ef þú hefur aldrei skráð þig inn í Pilll verður nýr reikningur búinn til",

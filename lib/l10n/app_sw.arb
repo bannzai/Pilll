@@ -165,7 +165,7 @@
   "menstruationFromToday": "Hedhi inaanza leo",
   "menstruationFromYesterday": "Hedhi ilianza jana",
   "selectMenstruationStartDate": "Tafadhali chagua tarehe ya kuanza kwa hedhi",
-  "menstruationCycle": "Mzunguko wa siku {menstruationDuration}",
+  "menstruationCycle": "Mzunguko wa hedhi wa siku {menstruationDuration}",
   "login": "Ingia",
   "beforePremiumRegistration": "Kabla ya usajili wa premium...",
   "createNewAccountIfNotLoggedIn": "Ikiwa bado hujaingia kwenye Pilll, akaunti mpya itaundwa",

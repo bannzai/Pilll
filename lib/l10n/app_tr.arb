@@ -165,7 +165,7 @@
   "menstruationFromToday": "Adet bugün başlıyor",
   "menstruationFromYesterday": "Adet dün başladı",
   "selectMenstruationStartDate": "Adet başlangıç tarihini seçin",
-  "menstruationCycle": "{menstruationDuration} günlük döngü",
+  "menstruationCycle": "{menstruationDuration} günlük adet döngüsü",
   "login": "Giriş",
   "beforePremiumRegistration": "Premium aboneliğinden önce...",
   "createNewAccountIfNotLoggedIn": "Pilll'e daha önce giriş yapmadıysanız, yeni bir hesap oluşturulacaktır",

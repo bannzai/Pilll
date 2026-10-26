@@ -165,7 +165,7 @@
   "menstruationFromToday": "Έναρξη περιόδου σήμερα",
   "menstruationFromYesterday": "Η έναρξη της περιόδου ήταν χθες",
   "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης της περιόδου",
-  "menstruationCycle": "Κύκλος {menstruationDuration} ημερών",
+  "menstruationCycle": "Έμμηνος κύκλος {menstruationDuration} ημερών",
   "login": "Σύνδεση",
   "beforePremiumRegistration": "Πριν από την εγγραφή premium…",
   "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί αυτόματα ένας νέος λογαριασμός",

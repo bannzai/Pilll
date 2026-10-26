@@ -165,7 +165,7 @@
   "menstruationFromToday": "Kuukautiset alkavat tänään",
   "menstruationFromYesterday": "Kuukautiset alkoivat eilen",
   "selectMenstruationStartDate": "Valitse kuukautisten alkamispäivä",
-  "menstruationCycle": "{menstruationDuration} päivän sykli",
+  "menstruationCycle": "{menstruationDuration} päivän kuukautiskierto",
   "login": "Kirjaudu sisään",
   "beforePremiumRegistration": "Ennen premium-tilausta...",
   "createNewAccountIfNotLoggedIn": "Jos et ole vielä kirjautunut Pillliin, luodaan uusi tili",

@@ -165,7 +165,7 @@
   "menstruationFromToday": "Kinh nguyệt bắt đầu hôm nay",
   "menstruationFromYesterday": "Kinh nguyệt bắt đầu từ hôm qua",
   "selectMenstruationStartDate": "Chọn ngày bắt đầu kinh nguyệt",
-  "menstruationCycle": "Chu kỳ {menstruationDuration} ngày",
+  "menstruationCycle": "Chu kỳ kinh nguyệt {menstruationDuration} ngày",
   "login": "Đăng nhập",
   "beforePremiumRegistration": "Trước khi đăng ký Premium…",
   "createNewAccountIfNotLoggedIn": "Nếu bạn chưa từng đăng nhập vào Pilll, một tài khoản mới sẽ được tự động tạo",

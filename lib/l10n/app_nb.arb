@@ -165,7 +165,7 @@
   "menstruationFromToday": "Mensen starter i dag",
   "menstruationFromYesterday": "Mensen startet i går",
   "selectMenstruationStartDate": "Velg startdato for mens",
-  "menstruationCycle": "{menstruationDuration} dagers syklus",
+  "menstruationCycle": "Menssyklus på {menstruationDuration} dager",
   "login": "Logg inn",
   "beforePremiumRegistration": "Før du registrerer deg for Premium...",
   "createNewAccountIfNotLoggedIn": "Hvis du ikke har logget inn på Pilll tidligere, vil det bli opprettet en ny konto",

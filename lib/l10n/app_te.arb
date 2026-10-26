@@ -165,7 +165,7 @@
   "menstruationFromToday": "నెలసరి ఈ రోజు ప్రారంభమవుతుంది",
   "menstruationFromYesterday": "నెలసరి నిన్న ప్రారంభమైంది",
   "selectMenstruationStartDate": "నెలసరి ప్రారంభమైన తేదీని ఎంచుకోండి",
-  "menstruationCycle": "{menstruationDuration}రోజుల చక్రం",
+  "menstruationCycle": "{menstruationDuration} రోజుల రుతుచక్రం",
   "login": "లాగిన్",
   "beforePremiumRegistration": "ప్రీమియం నమోదుకు ముందు...",
   "createNewAccountIfNotLoggedIn": "Pilllలో మీరు ఇంకా లాగిన్ చేయకుంటే కొత్త ఖాతా సృష్టించబడుతుంది",

@@ -165,7 +165,7 @@
   "menstruationFromToday": "Hayz bugun boshlanadi",
   "menstruationFromYesterday": "Hayz kecha boshlandi",
   "selectMenstruationStartDate": "Hayz boshlangan sanani tanlang",
-  "menstruationCycle": "{menstruationDuration} kunlik sikl",
+  "menstruationCycle": "{menstruationDuration} kunlik hayz sikli",
   "login": "Kirish",
   "beforePremiumRegistration": "Premium obunadan oldin...",
   "createNewAccountIfNotLoggedIn": "Agar siz Pillga hali kirmagan bo'lsangiz, yangi hisob yaratiladi",

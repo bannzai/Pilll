@@ -165,7 +165,7 @@
   "menstruationFromToday": "Етеккір бүгін басталады",
   "menstruationFromYesterday": "Етеккір кеше басталды",
   "selectMenstruationStartDate": "Етеккірдің басталу күнін таңдаңыз",
-  "menstruationCycle": "{menstruationDuration} күндік цикл",
+  "menstruationCycle": "{menstruationDuration} күндік етеккір циклі",
   "login": "Кіру",
   "beforePremiumRegistration": "Premium жазылуы алдында…",
   "createNewAccountIfNotLoggedIn": "Pilll-де әлі аккаунтыңыз жоқ болса, жаңа аккаунт жасалады",

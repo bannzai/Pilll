@@ -165,7 +165,7 @@
   "menstruationFromToday": "მენსტრუაცია დღეს იწყება",
   "menstruationFromYesterday": "მენსტრუაცია გუშინ დაიწყო",
   "selectMenstruationStartDate": "მენსტრუაციის დაწყების თარიღის არჩევა",
-  "menstruationCycle": "{menstruationDuration} დღის ციკლი",
+  "menstruationCycle": "{menstruationDuration}-დღიანი მენსტრუალური ციკლი",
   "login": "შესვლა",
   "beforePremiumRegistration": "პრემიუმ რეგისტრაციამდე...",
   "createNewAccountIfNotLoggedIn": "თუ Pilll-ში ჯერ არ გაქვთ შესული, ახალი ანგარიში შეიქმნება",

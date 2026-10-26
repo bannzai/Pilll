@@ -165,7 +165,7 @@
   "menstruationFromToday": "Menstruatie begint vandaag",
   "menstruationFromYesterday": "Menstruatie begon gisteren",
   "selectMenstruationStartDate": "Kies de startdatum van je menstruatie",
-  "menstruationCycle": "{menstruationDuration}-daagse cyclus",
+  "menstruationCycle": "Menstruatiecyclus van {menstruationDuration} dagen",
   "login": "Inloggen",
   "beforePremiumRegistration": "Voor de premium registratie...",
   "createNewAccountIfNotLoggedIn": "Als je nog nooit bij Pilll bent ingelogd, wordt er automatisch een nieuw account voor je aangemaakt.",

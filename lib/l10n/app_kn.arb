@@ -165,7 +165,7 @@
   "menstruationFromToday": "ಮುಟ್ಟಿನ ದಿನಗಳು ಇಂದಿನಿಂದ ಆರಂಭ",
   "menstruationFromYesterday": "ಮುಟ್ಟಿನ ಅವಧಿ ನಿನ್ನೆ ಆರಂಭವಾಯಿತು",
   "selectMenstruationStartDate": "ಮುಟ್ಟಿನ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
-  "menstruationCycle": "{menstruationDuration}ದಿನಗಳ ಚಕ್ರ",
+  "menstruationCycle": "{menstruationDuration} ದಿನಗಳ ಋತುಚಕ್ರ",
   "login": "ಲಾಗಿನ್",
   "beforePremiumRegistration": "ಪ್ರೀಮಿಯಂ ನೋಂದಣಿಗೆ ಮೊದಲು...",
   "createNewAccountIfNotLoggedIn": "Pilll ಗೆ ನೀವು ಇನ್ನೂ ಲಾಗಿನ್ ಮಾಡಿಲ್ಲದಿದ್ದರೆ ಹೊಸ ಖಾತೆ ರಚಿಸಲಾಗುತ್ತದೆ",

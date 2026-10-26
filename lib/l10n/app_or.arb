@@ -165,7 +165,7 @@
   "menstruationFromToday": "ଆଜିଠାରୁ ମାସିକ ଆରମ୍ଭ",
   "menstruationFromYesterday": "ମାସିକ ଗତକାଲି ଆରମ୍ଭ ହୋଇଥିଲା",
   "selectMenstruationStartDate": "ମାସିକ ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
-  "menstruationCycle": "{menstruationDuration}ଦିନ ଚକ୍ର",
+  "menstruationCycle": "{menstruationDuration} ଦିନର ମାସିକ ଚକ୍ର",
   "login": "ଲଗଇନ",
   "beforePremiumRegistration": "ପ୍ରିମିୟମ ପଞ୍ଜୀକରଣ ପୂର୍ବରୁ...",
   "createNewAccountIfNotLoggedIn": "ଯଦି ଆପଣ ପୂର୍ବରୁ Pilll ରେ ଲଗିନ କରିନାହାନ୍ତି, ତେବେ ଏକ ନତୁନ ଖାତା ସୃଷ୍ଟି ହେବ",

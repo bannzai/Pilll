@@ -165,7 +165,7 @@
   "menstruationFromToday": "Menstruacioni fillon sot",
   "menstruationFromYesterday": "Menstruacionet filluan dje",
   "selectMenstruationStartDate": "Zgjidhni datën e fillimit të menstruacioneve",
-  "menstruationCycle": "{menstruationDuration} ditë cikël",
+  "menstruationCycle": "Cikli menstrual prej {menstruationDuration} ditësh",
   "login": "Kyçu",
   "beforePremiumRegistration": "Para regjistrimit premium...",
   "createNewAccountIfNotLoggedIn": "Nëse nuk keni kryer ende hyrjen në Pilll, do të krijohet automatikisht një llogari e re",

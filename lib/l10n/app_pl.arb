@@ -165,7 +165,7 @@
   "menstruationFromToday": "Okres zaczyna się dziś",
   "menstruationFromYesterday": "Okres zaczął się wczoraj",
   "selectMenstruationStartDate": "Wybierz datę rozpoczęcia okresu",
-  "menstruationCycle": "Cykl {menstruationDuration} dni",
+  "menstruationCycle": "Cykl miesiączkowy: {menstruationDuration} dni",
   "login": "Zaloguj się",
   "beforePremiumRegistration": "Przed rejestracją Premium...",
   "createNewAccountIfNotLoggedIn": "Jeśli nie zalogowałeś się jeszcze do Pilll, zostanie utworzone nowe konto",

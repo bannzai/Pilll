@@ -165,7 +165,7 @@
   "menstruationFromToday": "Aybaşı bu gün başlayır",
   "menstruationFromYesterday": "Aybaşı dünən başlayıb",
   "selectMenstruationStartDate": "Aybaşının başlama tarixini seçin",
-  "menstruationCycle": "{menstruationDuration} günlük tsikl",
+  "menstruationCycle": "{menstruationDuration} günlük aybaşı dövrü",
   "login": "Giriş",
   "beforePremiumRegistration": "Premium qeydiyyatından öncə...",
   "createNewAccountIfNotLoggedIn": "Pilll-ə əvvəl daxil olmamışsınızsa, yeni hesab yaradılacaq",

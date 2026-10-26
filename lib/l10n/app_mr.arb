@@ -165,7 +165,7 @@
   "menstruationFromToday": "आजपासून मासिक पाळी सुरू",
   "menstruationFromYesterday": "मासिक पाळी काल सुरू झाली",
   "selectMenstruationStartDate": "मासिक पाळी सुरू झाल्याची तारीख निवडा",
-  "menstruationCycle": "{menstruationDuration} दिवसांचे चक्र",
+  "menstruationCycle": "{menstruationDuration} दिवसांचे मासिक पाळीचे चक्र",
   "login": "लॉगिन",
   "beforePremiumRegistration": "प्रीमियम नोंदणीपूर्वी...",
   "createNewAccountIfNotLoggedIn": "जर तुम्ही अजूनपर्यंत Pilll मध्ये लॉगिन केले नसेल तर नवीन खाते तयार केले जाईल",

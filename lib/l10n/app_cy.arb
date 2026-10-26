@@ -165,7 +165,7 @@
   "menstruationFromToday": "Mislif yn dechrau heddiw",
   "menstruationFromYesterday": "Dechreuodd y mislif ddoe",
   "selectMenstruationStartDate": "Dewiswch ddyddiad dechrau eich mislif",
-  "menstruationCycle": "cylch {menstruationDuration} diwrnod",
+  "menstruationCycle": "Cylch mislif o {menstruationDuration} diwrnod",
   "login": "mewngofnodi",
   "beforePremiumRegistration": "Cyn cofrestru premiwm...",
   "createNewAccountIfNotLoggedIn": "Os nad ydych chi wedi mewngofnodi i Pilll o'r blaen, bydd cyfrif newydd yn cael ei greu",

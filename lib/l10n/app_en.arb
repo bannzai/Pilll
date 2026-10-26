@@ -165,7 +165,7 @@
   "menstruationFromToday": "Period starts today",
   "menstruationFromYesterday": "Period started yesterday",
   "selectMenstruationStartDate": "Select period start date",
-  "menstruationCycle": "{menstruationDuration}-day cycle",
+  "menstruationCycle": "{menstruationDuration}-day menstrual cycle",
   "login": "Log In",
   "beforePremiumRegistration": "Before premium registration...",
   "createNewAccountIfNotLoggedIn": "If you haven't logged into Pilll yet, a new account will be created for you",

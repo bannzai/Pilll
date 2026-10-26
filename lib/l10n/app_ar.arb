@@ -165,7 +165,7 @@
   "menstruationFromToday": "بدء الدورة اليوم",
   "menstruationFromYesterday": "بدأت الدورة أمس",
   "selectMenstruationStartDate": "اختاري تاريخ بدء الدورة",
-  "menstruationCycle": "دورة {menstruationDuration} يوم",
+  "menstruationCycle": "دورة شهرية كل {menstruationDuration} يومًا",
   "login": "تسجيل الدخول",
   "beforePremiumRegistration": "قبل الاشتراك المميز...",
   "createNewAccountIfNotLoggedIn": "إذا لم تقم بتسجيل الدخول إلى Pilll من قبل، فسيتم إنشاء حساب جديد لك",

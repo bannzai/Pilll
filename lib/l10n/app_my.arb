@@ -165,7 +165,7 @@
   "menstruationFromToday": "ရာသီ ဒီနေ့ စတင်ပါပြီ",
   "menstruationFromYesterday": "ရာသီ မနေ့က စတင်ခဲ့ပါတယ်",
   "selectMenstruationStartDate": "ရာသီစတင်သည့်ရက်ကို ရွေးချယ်ပါ",
-  "menstruationCycle": "{menstruationDuration}ရက် သံသရာ",
+  "menstruationCycle": "{menstruationDuration} ရက်ကြာ ရာသီစက်ဝန်း",
   "login": "ဝင်ရန်",
   "beforePremiumRegistration": "ပရီမီယမ် စာရင်းသွင်းခြင်းမတိုင်မီ...",
   "createNewAccountIfNotLoggedIn": "Pilll အက်ပ်တွင် အရင်က လော်ဂ်အင် မဝင်ဖူးပါက အကောင့်အသစ် အလိုအလျောက် ပြုလုပ်ပေးမည်ဖြစ်သည်",

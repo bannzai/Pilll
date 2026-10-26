@@ -165,7 +165,7 @@
   "menstruationFromToday": "महिनावारी आजदेखि सुरु",
   "menstruationFromYesterday": "महिनावारी हिजो सुरु भयो",
   "selectMenstruationStartDate": "महिनावारी सुरु भएको मिति छान्नुहोस्",
-  "menstruationCycle": "{menstruationDuration} दिनको चक्र",
+  "menstruationCycle": "{menstruationDuration} दिनको महिनावारी चक्र",
   "login": "लगइन",
   "beforePremiumRegistration": "प्रिमियम दर्ता गर्नु अघि...",
   "createNewAccountIfNotLoggedIn": "Pilll मा पहिलो पटक लगइन गर्दा नयाँ खाता स्वतः सिर्जना हुनेछ",

@@ -165,7 +165,7 @@
   "menstruationFromToday": "La regla comença avui",
   "menstruationFromYesterday": "La regla va començar ahir",
   "selectMenstruationStartDate": "Tria la data d'inici de la regla",
-  "menstruationCycle": "cicle de {menstruationDuration} dies",
+  "menstruationCycle": "Cicle menstrual de {menstruationDuration} dies",
   "login": "Inicia sessió",
   "beforePremiumRegistration": "Abans de la subscripció premium...",
   "createNewAccountIfNotLoggedIn": "Si encara no has iniciat sessió a Pilll, es crearà un compte nou automàticament",

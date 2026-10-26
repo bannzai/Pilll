@@ -165,7 +165,7 @@
   "menstruationFromToday": "மாதவிடாய் இன்று தொடங்குகிறது",
   "menstruationFromYesterday": "மாதவிடாய் நேற்று தொடங்கியது",
   "selectMenstruationStartDate": "மாதவிடாய் தொடங்கிய தேதியைத் தேர்ந்தெடுங்கள்",
-  "menstruationCycle": "{menstruationDuration} நாள் சுழற்சி",
+  "menstruationCycle": "{menstruationDuration} நாள் மாதவிடாய் சுழற்சி",
   "login": "உள்நுழைய",
   "beforePremiumRegistration": "பிரீமியம் பதிவுக்கு முன்...",
   "createNewAccountIfNotLoggedIn": "Pilllஇல் முன்பு உள்நுழையாதிருந்தால், புதிய கணக்கு உருவாக்கப்படும்",

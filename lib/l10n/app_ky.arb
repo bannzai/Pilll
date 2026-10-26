@@ -165,7 +165,7 @@
   "menstruationFromToday": "Айыз бүгүн башталат",
   "menstruationFromYesterday": "Айыз кечээ башталды",
   "selectMenstruationStartDate": "Айыз башталган күндү тандаңыз",
-  "menstruationCycle": "{menstruationDuration} күнлүк циклi",
+  "menstruationCycle": "{menstruationDuration} күндүк этек кир цикли",
   "login": "Кирүү",
   "beforePremiumRegistration": "Премиум катталуудан мурун...",
   "createNewAccountIfNotLoggedIn": "Эгер сиз Pilll'ге мурда кирбесеңиз, жаңы аккаунт түзүлөт",
