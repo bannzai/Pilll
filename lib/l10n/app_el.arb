@@ -201,7 +201,7 @@
   "youArePremiumMember": "Έχετε συνδρομή Premium",
   "thankYouMessage": "Σας ευχαριστούμε που χρησιμοποιείτε το Pilll.\nΧάρη στην υποστήριξή σας, μπορούμε να συνεχίσουμε τη λειτουργία του Pilll.",
   "premiumFeaturesList": "Λίστα λειτουργιών Premium",
-  "pushNotificationForTakingRecord": "📩 Καταγραφή λήψης από ειδοποιήσεις",
+  "pushNotificationForTakingRecord": "📩 καταγραφή λήψης από ειδοποίηση push",
   "viewAndRecordTakingHistory": "🗂 Καταγραφή και Προβολή Ιστορικού Λήψης",
   "displayDateOnPillSheet": "📆 Εμφάνιση ημερομηνίας στο φύλλο χαπιών",
   "autoRefillNewPillSheet": "📦 Αυτόματη προσθήκη νέας συσκευασίας χαπιών",

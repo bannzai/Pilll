@@ -201,7 +201,7 @@
   "youArePremiumMember": "Sul on premium-liikmesus",
   "thankYouMessage": "Aitäh, et kasutad Pilll-i.\nSinu toel saame Pilll-i töös hoida.",
   "premiumFeaturesList": "Premium funktsioonide loend",
-  "pushNotificationForTakingRecord": "📩 Tablettide võtmise salvestamine tõuke teatistest",
+  "pushNotificationForTakingRecord": "📩 võtmiskirje tõuketeavitusest",
   "viewAndRecordTakingHistory": "🗂 Pillide võtmise ajalugu",
   "displayDateOnPillSheet": "📆 Kuupäevakuva pillikaardil",
   "autoRefillNewPillSheet": "📦 Uute pilliplaatide automaatne täiendamine",

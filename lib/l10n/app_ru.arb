@@ -201,7 +201,7 @@
   "youArePremiumMember": "У вас есть подписка премиум",
   "thankYouMessage": "Спасибо, что пользуетесь Pilll.\nБлагодаря вашей поддержке мы можем продолжать работу Pilll.",
   "premiumFeaturesList": "Список премиум-функций",
-  "pushNotificationForTakingRecord": "📩 Запись приема из push-уведомлений",
+  "pushNotificationForTakingRecord": "📩 журнал приёма таблеток из уведомления",
   "viewAndRecordTakingHistory": "🗂 История приема таблеток",
   "displayDateOnPillSheet": "📆 Отображение даты на блистере с таблетками",
   "autoRefillNewPillSheet": "📦 Автоматическое пополнение новых блистеров",
