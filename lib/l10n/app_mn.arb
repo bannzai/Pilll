@@ -270,7 +270,7 @@
   "daysMenstruationLasts": "өдөр сарын тэмдгийн хугацаа үргэлжилнэ",
   "selectPillNumberForMenstruationStart": "Сарын тэмдгийн эхлэх эмийн дугаарыг товшино уу",
   "countOfSheet": "Эмийн блистерийн дугаар {number}",
-  "newPillSheetStart": "Шинэ эмийн хуудас эхлэх ▶︎",
+  "newPillSheetStart": "Шинэ эмийн блистер эхлүүлнэ үү ▶︎",
   "selectPillType": "Эмийн төрлийг сонгох",
   "twentyOnePills": "21 таблет",
   "twentyEightPills": "28 эм",

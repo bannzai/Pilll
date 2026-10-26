@@ -270,7 +270,7 @@
   "daysMenstruationLasts": "ورځې حیض دوام کوي",
   "selectPillNumberForMenstruationStart": "د حیض د پیل کېدو د ګولۍ شمېر وټاکئ",
   "countOfSheet": "د ګولیو پاڼه شمېره {number}",
-  "newPillSheetStart": "نوی پل شیټ پیل ▶︎",
+  "newPillSheetStart": "د ګولیو نوې پاڼه پیل کړئ ▶︎",
   "selectPillType": "د ګولیو ډول غوره کړئ",
   "twentyOnePills": "شل ګولۍ",
   "twentyEightPills": "۲۸ ګولۍ",

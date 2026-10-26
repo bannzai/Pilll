@@ -270,7 +270,7 @@
   "daysMenstruationLasts": "ມື້ ປະຈຳເດືອນດຳເນີນຕໍ່",
   "selectPillNumberForMenstruationStart": "ກະລຸນາແຕະເລກເມັດຢາທີ່ເລີ່ມມີປະຈຳເດືອນ",
   "countOfSheet": "ແຜງຢາເມັດໝາຍເລກ {number}",
-  "newPillSheetStart": "ເລີ່ມແຜ່ນຢາໃໝ່ ▶︎",
+  "newPillSheetStart": "ເລີ່ມແຜງຢາຄຸມໃໝ່ ▶︎",
   "selectPillType": "ເລືອກປະເພດຢາຄຸມກຳເນີດ",
   "twentyOnePills": "21 ເມັດ",
   "twentyEightPills": "28 ເມັດ",

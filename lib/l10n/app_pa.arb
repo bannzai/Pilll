@@ -270,7 +270,7 @@
   "daysMenstruationLasts": "ਦਿਨ ਮਾਹਵਾਰੀ ਰਹਿੰਦੀ ਹੈ",
   "selectPillNumberForMenstruationStart": "ਜਿਸ ਗੋਲੀ ਨੰਬਰ 'ਤੇ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ, ਉਸ 'ਤੇ ਟੈਪ ਕਰੋ",
   "countOfSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨੰਬਰ {number}",
-  "newPillSheetStart": "ਨਵੀਂ ਪਿੱਲ ਸ਼ੀਟ ਸ਼ੁਰੂ ਕਰੋ ▶︎",
+  "newPillSheetStart": "ਗੋਲੀਆਂ ਦੀ ਨਵੀਂ ਪੱਤੀ ਸ਼ੁਰੂ ਕਰੋ ▶︎",
   "selectPillType": "ਗੋਲੀ ਦੀ ਕਿਸਮ ਚੁਣੋ",
   "twentyOnePills": "21 ਗੋਲੀਆਂ",
   "twentyEightPills": "28 ਟੈਬਲੇਟ",
