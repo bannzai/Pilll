@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Această funcție nu este disponibilă pe dispozitivele care nu acceptă date de sănătate",
   "enableHealthKitFromSettings": "Poți activa accesul la Sănătate din aplicația Configurări",
   "accountAlreadyLinked": "Acest cont {accountTypeProviderName} este deja conectat la contul tău Pilll. Încearcă să reîmprospătezi ecranul și consultă și întrebările frecvente. Detalii: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Acest cont {accountTypeProviderName} este deja conectat la un alt cont Pilll, prin urmare înregistrarea nu este posibilă. Vă rugăm să consultați și FAQ-ul. Detalii: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Acest cont {accountTypeProviderName} este deja asociat cu un alt cont Pilll, așa că nu te poți înregistra cu el. Consultă și FAQ. Detalii: {exceptionMessage}",
   "emailAlreadyInUse": "Nu vă puteți înregistra deoarece adresa de e-mail pe care o folosiți cu contul {accountTypeProviderName} este deja asociată cu un alt cont Pilll. Vă rugăm să consultați și FAQ-ul. Detalii: {exceptionMessage}",
   "todaySchedule": "Programul de astăzi",
   "calendarSchedule": "Evenimente din calendar",

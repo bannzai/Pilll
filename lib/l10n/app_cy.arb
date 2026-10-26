@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Nid yw'r nodwedd hon ar gael ar ddyfeisiau nad ydynt yn cefnogi data iechyd",
   "enableHealthKitFromSettings": "Galluogwch fynediad at Iechyd yn yr ap Gosodiadau, os gwelwch yn dda",
   "accountAlreadyLinked": "Mae’r cyfrif {accountTypeProviderName} hwn eisoes wedi’i gysylltu â’ch cyfrif Pilll. Rhowch gynnig ar adnewyddu’r sgrin ac edrychwch ar y cwestiynau cyffredin hefyd. Manylion: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Mae'r cyfrif {accountTypeProviderName} hwn eisoes wedi'i gysylltu â chyfrif Pilll arall, felly ni ellir ei gofrestru. Gwelwch hefyd y FAQ. Manylion: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Mae’r cyfrif {accountTypeProviderName} hwn eisoes wedi’i gysylltu â chyfrif Pilll arall, felly ni ellir ei ddefnyddio i gofrestru. Edrychwch ar y FAQ hefyd, os gwelwch yn dda. Manylion: {exceptionMessage}",
   "emailAlreadyInUse": "Ni allwch gofrestru oherwydd bod eich cyfeiriad e-bost a ddefnyddir eisoes gyda chyfrif {accountTypeProviderName} wedi'i gysylltu â chyfrif Pilll arall. Gwelwch hefyd y cwestiynau cyffredin. Manylion: {exceptionMessage}",
   "todaySchedule": "Amserlen heddiw",
   "calendarSchedule": "Digwyddiadau'r calendr",

@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Hindi available ang feature na ito sa mga device na hindi sumusuporta sa datos ng kalusugan",
   "enableHealthKitFromSettings": "Pakibuksan po ang access sa Kalusugan sa app na Mga Setting",
   "accountAlreadyLinked": "Nakaugnay na ang {accountTypeProviderName} account na ito sa inyong Pilll account. Pakisubukang i-refresh ang screen at tingnan din ang FAQ. Mga detalye: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Ang {accountTypeProviderName} account na ito ay nakakonekta na sa ibang Pilll account kaya hindi ka makapag-register. Tingnan din ang FAQ. Detalye: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Nakaugnay na ang {accountTypeProviderName} account na ito sa ibang Pilll account, kaya hindi kayo makakapagrehistro gamit ito. Pakitingnan din po ang FAQ. Mga detalye: {exceptionMessage}",
   "emailAlreadyInUse": "Ang email address na ginagamit mo sa {accountTypeProviderName} account ay nakakonekta na sa ibang Pilll account kaya hindi ka makapag-register. Tingnan din ang FAQ. Detalye: {exceptionMessage}",
   "todaySchedule": "Mga Plano Ngayong Araw",
   "calendarSchedule": "Mga Schedule sa Kalendaryo",

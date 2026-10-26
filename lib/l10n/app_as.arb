@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "স্বাস্থ্য তথ্য সমৰ্থন নকৰা ডিভাইচত এই সুবিধা উপলব্ধ নহয়",
   "enableHealthKitFromSettings": "অনুগ্ৰহ কৰি ছেটিংছ এপৰ পৰা স্বাস্থ্যৰ প্ৰৱেশাধিকাৰ সক্ৰিয় কৰক",
   "accountAlreadyLinked": "এই {accountTypeProviderName} একাউণ্টটো ইতিমধ্যে আপোনাৰ Pilll একাউণ্টৰ সৈতে সংযোগ কৰা আছে। অনুগ্ৰহ কৰি স্ক্ৰীণখন ৰিফ্ৰেছ কৰি চাওক। FAQ-টোও চাওক। বিৱৰণ: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} একাউণ্টটো ইতিমধ্যে Pilll ৰ অন্য একাউণ্টৰ সৈতে সংযুক্ত হৈ আছে, সেয়ে নিবন্ধন কৰিব নোৱাৰি। FAQ ও চাওক। বিৱৰণ: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} একাউণ্টটো ইতিমধ্যে আন এটা Pilll একাউণ্টৰ সৈতে সংযুক্ত, সেয়ে ইয়াৰে পঞ্জীয়ন কৰিব নোৱাৰি। অনুগ্ৰহ কৰি FAQ-ও চাওক। সবিশেষ: {exceptionMessage}",
   "emailAlreadyInUse": "আপুনি ইতিমধ্যে {accountTypeProviderName} একাউণ্টত ব্যৱহাৰ কৰা ইমেইল ঠিকনাটো আন এটা Pilll একাউণ্টৰ সৈতে সংযুক্ত হৈ আছে বাবে পঞ্জীয়ন কৰিব পৰা নাই। FAQ চাওক। বিৱৰণ: {exceptionMessage}",
   "todaySchedule": "আজৰ কাৰ্যসূচী",
   "calendarSchedule": "কেলেণ্ডাৰৰ কাৰ্যসূচী",

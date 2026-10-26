@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Այս գործառույթը հասանելի չէ առողջության տվյալները չաջակցող սարքերում",
   "enableHealthKitFromSettings": "Խնդրում ենք «Կարգավորումներ» հավելվածում միացնել «Առողջություն» հավելվածի հասանելիությունը",
   "accountAlreadyLinked": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է Ձեր Pilll հաշվի հետ։ Խնդրում ենք փորձել թարմացնել էկրանը և դիտել նաև հաճախ տրվող հարցերը։ Մանրամասներ՝ {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է այլ Pilll հաշվի հետ, ուստի գրանցումը հնարավոր չէ: Խնդրում ենք դիտել նաև ՀՏՀ բաժինը: Մանրամասները՝ {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName}-ի այս հաշիվն արդեն կապված է Pilll-ի մեկ այլ հաշվի հետ, ուստի դրանով գրանցվել հնարավոր չէ։ Խնդրում ենք ծանոթանալ նաև FAQ-ին։ Մանրամասներ՝ {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} հաշվի էլ․փոստի հասցեն արդեն կապված է այլ Pilll հաշվի հետ, ուստի գրանցումը հնարավոր չէ։ Տես նաև ՀՏՀ բաժինը։ Մանրամասներ՝ {exceptionMessage}",
   "todaySchedule": "Այսօրվա ծրագիրը",
   "calendarSchedule": "Օրացույցի ծրագրեր",

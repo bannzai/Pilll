@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "یہ سہولت ان ڈیوائسز پر دستیاب نہیں ہے جو صحت کے ڈیٹا کو سپورٹ نہیں کرتیں",
   "enableHealthKitFromSettings": "براہِ کرم ترتیبات ایپ میں صحت ایپ تک رسائی فعال کریں",
   "accountAlreadyLinked": "یہ {accountTypeProviderName} اکاؤنٹ پہلے ہی آپ کے Pilll اکاؤنٹ سے منسلک ہے۔ براہِ کرم اسکرین ریفریش کر کے دیکھیں اور اکثر پوچھے جانے والے سوالات بھی پڑھیں۔ تفصیل: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "یہ {accountTypeProviderName} اکاؤنٹ پہلے سے ہی دوسرے Pilll اکاؤنٹ سے جڑا ہوا ہے، اس لیے رجسٹریشن نہیں ہو سکتی۔ برائے کرم FAQ بھی دیکھیں۔ تفصیلات: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "یہ {accountTypeProviderName} اکاؤنٹ پہلے ہی کسی دوسرے Pilll اکاؤنٹ سے منسلک ہے، اس لیے اس سے رجسٹریشن نہیں ہو سکتی۔ براہِ کرم FAQ بھی دیکھیں۔ تفصیلات: {exceptionMessage}",
   "emailAlreadyInUse": "آپ کا {accountTypeProviderName} اکاؤنٹ کا ای میل ایڈریس پہلے سے کسی اور Pilll اکاؤنٹ سے منسلک ہے اس لیے رجسٹریشن نہیں ہو سکتی۔ براہ کرم FAQ بھی دیکھیں۔ تفصیلات: {exceptionMessage}",
   "todaySchedule": "آج کا شیڈول",
   "calendarSchedule": "کیلنڈر کے شیڈول",

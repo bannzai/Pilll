@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Tämä toiminto ei ole käytettävissä laitteilla, jotka eivät tue terveystietoja",
   "enableHealthKitFromSettings": "Ota Terveys-sovelluksen käyttöoikeus käyttöön Asetuksissa",
   "accountAlreadyLinked": "Tämä {accountTypeProviderName}-tili on jo yhdistetty Pilll-tiliisi. Kokeile päivittää näkymä ja tutustu myös usein kysyttyihin kysymyksiin. Lisätiedot: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joten rekisteröityminen ei ole mahdollista. Katso myös UKK. Yksityiskohdat: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joten et voi rekisteröityä sillä. Katso myös FAQ. Lisätiedot: {exceptionMessage}",
   "emailAlreadyInUse": "Käyttämäsi {accountTypeProviderName}-tilin sähköpostiosoite on jo yhdistetty toiseen Pilll-tiliin, joten rekisteröinti ei ole mahdollista. Katso myös UKK. Lisätietoja: {exceptionMessage}",
   "todaySchedule": "Tämän päivän ohjelma",
   "calendarSchedule": "Kalenterin tapahtumat",

@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "የጤና መረጃን በማይደግፉ መሣሪያዎች ላይ ይህን ባህሪ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎ በቅንብሮች መተግበሪያ ውስጥ የጤና መዳረሻን ያንቁ",
   "accountAlreadyLinked": "ይህ የ{accountTypeProviderName} መለያ ከእርስዎ የPilll መለያ ጋር አስቀድሞ ተገናኝቷል። እባክዎ ማያ ገጹን እንደገና ያድሱ። FAQንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ ቀድሞውንም ከሌላ Pilll መለያ ጋር የተገናኘ ስለሆነ መመዝገብ አይችሉም። እባክዎ የተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ የ{accountTypeProviderName} መለያ ከሌላ የPilll መለያ ጋር አስቀድሞ ተገናኝቷል፣ ስለዚህ በዚህ መለያ መመዝገብ አይቻልም። እባክዎ FAQንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "emailAlreadyInUse": "የ{accountTypeProviderName} መለያዎ ኢሜል አድራሻ በሌላ Pilll መለያ ተጠቅሟል፤ ስለዚህ ይህን መለያ መመዝገብ አይቻልም። FAQ ን ይመልከቱ። ዝርዝር: {exceptionMessage}",
   "todaySchedule": "የዛሬ ፕሮግራም",
   "calendarSchedule": "የካሌንደር ቀጠሮዎች",

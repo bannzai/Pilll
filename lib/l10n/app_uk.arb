@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Ця функція недоступна на пристроях, які не підтримують дані про здоров’я",
   "enableHealthKitFromSettings": "Увімкніть доступ до програми «Здоров’я» в налаштуваннях",
   "accountAlreadyLinked": "Цей обліковий запис {accountTypeProviderName} уже пов’язаний із вашим обліковим записом Pilll. Спробуйте оновити екран і перегляньте також поширені запитання. Докладніше: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Цей обліковий запис {accountTypeProviderName} вже пов'язаний з іншим обліковим записом Pilll, тому реєстрація неможлива. Також перегляньте FAQ. Деталі: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Цей обліковий запис {accountTypeProviderName} уже пов’язаний з іншим обліковим записом Pilll, тому зареєструватися з його допомогою не можна. Перегляньте також FAQ. Подробиці: {exceptionMessage}",
   "emailAlreadyInUse": "Електронна пошта, яку ви використовуєте для облікового запису {accountTypeProviderName}, вже прив'язана до іншого облікового запису Pilll, тому реєстрація неможлива. Перегляньте також часті запитання. Подробиці: {exceptionMessage}",
   "todaySchedule": "План на сьогодні",
   "calendarSchedule": "Події календаря",

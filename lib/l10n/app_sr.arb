@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Ова функција није доступна на уређајима који не подржавају здравствене податке",
   "enableHealthKitFromSettings": "Молимо Вас да у апликацији Подешавања омогућите приступ апликацији Здравље",
   "accountAlreadyLinked": "Овај {accountTypeProviderName} налог је већ повезан са Вашим Pilll налогом. Покушајте да освежите екран и погледајте честа питања. Детаљи: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Ovaj {accountTypeProviderName} nalog je već povezan sa drugim Pilll nalogom, te registracija nije moguća. Molimo pogledajte i FAQ. Detalji: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Овај {accountTypeProviderName} налог је већ повезан са другим Pilll налогом, па не можете да се региструјете помоћу њега. Погледајте и FAQ. Детаљи: {exceptionMessage}",
   "emailAlreadyInUse": "E-mail adresa koju već koristite za {accountTypeProviderName} nalog je povezana sa drugim Pilll nalogom, zbog čega registracija nije moguća. Molimo pogledajte i naš FAQ. Detalji: {exceptionMessage}",
   "todaySchedule": "Današnji raspored",
   "calendarSchedule": "Календарски догађаји",

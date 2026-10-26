@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Kipengele hiki hakipatikani kwenye vifaa visivyotumia data za afya",
   "enableHealthKitFromSettings": "Tafadhali ruhusu ufikiaji wa Afya kwenye programu ya Mipangilio",
   "accountAlreadyLinked": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti yako ya Pilll. Tafadhali jaribu kuonyesha skrini upya na uangalie pia maswali yanayoulizwa mara kwa mara. Maelezo: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll, kwa hiyo haiwezi kusajiliwa. Tafadhali angalia pia FAQ. Maelezo: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Akaunti hii ya {accountTypeProviderName} tayari imeunganishwa na akaunti nyingine ya Pilll, kwa hivyo haiwezi kutumika kujisajili. Tafadhali angalia pia FAQ. Maelezo: {exceptionMessage}",
   "emailAlreadyInUse": "Anwani ya barua pepe ambayo tayari unatumia kwa akaunti ya {accountTypeProviderName} imeunganishwa na akaunti nyingine ya Pilll, kwa hivyo haiwezi kusajiliwa. Tafadhali tazama pia FAQ. Maelezo: {exceptionMessage}",
   "todaySchedule": "Ratiba za Leo",
   "calendarSchedule": "Ratiba za kalenda",

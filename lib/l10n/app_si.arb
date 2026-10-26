@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "සෞඛ්‍ය දත්ත සඳහා සහය නොදක්වන උපාංගවල මෙම පහසුකම භාවිත කළ නොහැක",
   "enableHealthKitFromSettings": "කරුණාකර සැකසුම් යෙදුමෙන් සෞඛ්‍ය යෙදුමට ප්‍රවේශය සක්‍රිය කරන්න",
   "accountAlreadyLinked": "මෙම {accountTypeProviderName} ගිණුම ඔබේ Pilll ගිණුමට දැනටමත් සම්බන්ධ කර ඇත. කරුණාකර තිරය නැවුම් කර බලන්න. නිතර අසන ප්‍රශ්නද බලන්න. විස්තර: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "මෙම {accountTypeProviderName} ගිණුම දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ වී ඇති නිසා ලියාපදිංචි කළ නොහැකිය. FAQ ද බලන්න. විස්තර: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "මෙම {accountTypeProviderName} ගිණුම දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ කර ඇති නිසා, එයින් ලියාපදිංචි විය නොහැක. කරුණාකර FAQ ද බලන්න. විස්තර: {exceptionMessage}",
   "emailAlreadyInUse": "ඔබගේ {accountTypeProviderName} ගිණුමේ ඊමේල් ලිපිනය දැනටමත් වෙනත් Pilll ගිණුමකට සම්බන්ධ කර ඇති බැවින් ලියාපදිංචි කළ නොහැක. කරුණාකර FAQ ද බලන්න. විස්තර: {exceptionMessage}",
   "todaySchedule": "අද දිනයේ සැලසුම්",
   "calendarSchedule": "දින දර්ශන සැලසුම්",

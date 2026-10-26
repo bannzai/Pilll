@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "ఆరోగ్య డేటాకు మద్దతు లేని పరికరాల్లో ఈ సదుపాయం అందుబాటులో లేదు",
   "enableHealthKitFromSettings": "దయచేసి సెట్టింగ్‌ల యాప్‌లో ఆరోగ్యం యాప్‌కు యాక్సెస్‌ను ప్రారంభించండి",
   "accountAlreadyLinked": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మీ Pilll ఖాతాతో అనుసంధానించబడింది. దయచేసి స్క్రీన్‌ను రిఫ్రెష్ చేసి చూడండి. తరచుగా అడిగే ప్రశ్నలను కూడా చూడండి. వివరాలు: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే ఇతర Pilll ఖాతాతో అనుసంధానించబడి ఉందని నమోదు చేయలేము. దయచేసి FAQను కూడా చూడండి. వివరాలు: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "ఈ {accountTypeProviderName} ఖాతా ఇప్పటికే మరో Pilll ఖాతాకు లింక్ అయి ఉంది. కాబట్టి దీనితో నమోదు చేసుకోవడం సాధ్యం కాదు. దయచేసి FAQ కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "emailAlreadyInUse": "మీరు {accountTypeProviderName} ఖాతాతో ఉపయోగిస్తున్న ఇమెయిల్ చిరునామా ఇప్పటికే మరొక Pilll ఖాతాతో లింక్ చేయబడింది, కాబట్టి నమోదు చేయలేకపోతున్నాము. దయచేసి FAQ కూడా చూడండి. వివరాలు: {exceptionMessage}",
   "todaySchedule": "ఈరోజు కార్యక్రమాలు",
   "calendarSchedule": "క్యాలెండర్ ప్రణాళికలు",

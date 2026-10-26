@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Denne funktion er ikke tilgængelig på enheder, der ikke understøtter sundhedsdata",
   "enableHealthKitFromSettings": "Du kan slå adgang til Sundhed til i appen Indstillinger",
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-konto er allerede knyttet til din Pilll-konto. Prøv at opdatere skærmen, og se også FAQ. Detaljer: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-konto er allerede knyttet til en anden Pilll-konto og kan ikke registreres. Se også FAQ. Detaljer: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-konto er allerede knyttet til en anden Pilll-konto, så du kan ikke oprette dig med den. Se også FAQ. Detaljer: {exceptionMessage}",
   "emailAlreadyInUse": "E-mailadressen fra din {accountTypeProviderName}-konto er allerede tilknyttet en anden Pilll-konto, derfor kan du ikke registrere dig. Se også FAQ'en. Detaljer: {exceptionMessage}",
   "todaySchedule": "Dagens plan",
   "calendarSchedule": "Kalenderbegivenheder",

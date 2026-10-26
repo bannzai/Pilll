@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong data kesihatan",
   "enableHealthKitFromSettings": "Sila benarkan akses kepada Kesihatan dalam aplikasi Tetapan",
   "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dipautkan ke akaun Pilll anda. Sila cuba segar semula skrin dan lihat juga soalan lazim. Butiran: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll yang lain, oleh itu tidak dapat didaftarkan. Sila rujuk FAQ juga. Butiran: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dipautkan kepada akaun Pilll yang lain, jadi anda tidak boleh mendaftar dengannya. Sila lihat FAQ juga. Butiran: {exceptionMessage}",
   "emailAlreadyInUse": "Alamat e-mel yang digunakan dengan akaun {accountTypeProviderName} anda sudah dikaitkan dengan akaun Pilll lain, oleh itu pendaftaran tidak dapat dilakukan. Sila rujuk FAQ untuk maklumat lanjut. Butiran: {exceptionMessage}",
   "todaySchedule": "Jadual Hari Ini",
   "calendarSchedule": "Jadual kalendar",

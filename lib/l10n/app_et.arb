@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "See funktsioon pole saadaval seadmetes, mis ei toeta terviseandmeid",
   "enableHealthKitFromSettings": "Luba palun rakenduses Seaded juurdepääs Tervisele",
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba sinu Pilll kontoga seotud. Proovi ekraani värskendada ja vaata ka korduma kippuvaid küsimusi. Üksikasjad: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on juba teise Pilll kontoga seotud, seega registreerimine ei ole võimalik. Vaadake ka KKK. Üksikasjad: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on juba seotud teise Pilll kontoga, seega ei saa sellega registreeruda. Vaata ka FAQ-d. Üksikasjad: {exceptionMessage}",
   "emailAlreadyInUse": "Teie {accountTypeProviderName} kontoga kasutatav e-posti aadress on juba seotud teise Pilli kontoga, mistõttu registreerimine ei ole võimalik. Vaadake ka KKK-d. Üksikasjad: {exceptionMessage}",
   "todaySchedule": "Tänased plaanid",
   "calendarSchedule": "Kalendri sündmused",

@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Tato funkce není dostupná na zařízeních, která nepodporují zdravotní údaje",
   "enableHealthKitFromSettings": "Povolte prosím přístup ke Zdraví v aplikaci Nastavení",
   "accountAlreadyLinked": "Tento účet {accountTypeProviderName} je už propojený s vaším účtem Pilll. Zkuste obnovit obrazovku a podívejte se také do častých dotazů. Podrobnosti: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Tento {accountTypeProviderName} účet je již propojen s jiným Pilll účtem, proto registrace není možná. Prosím, podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Tento účet {accountTypeProviderName} je už propojený s jiným účtem Pilll, proto se s ním nelze zaregistrovat. Podívejte se prosím také do FAQ. Podrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "E-mailová adresa používaná s vaším {accountTypeProviderName} účtem je již propojena s jiným Pilll účtem, proto se nelze zaregistrovat. Prosím, podívejte se také na FAQ. Podrobnosti: {exceptionMessage}",
   "todaySchedule": "Dnešní plány",
   "calendarSchedule": "Kalendářní události",

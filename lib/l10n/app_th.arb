@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "ไม่สามารถใช้ฟีเจอร์นี้บนอุปกรณ์ที่ไม่รองรับข้อมูลสุขภาพได้ค่ะ",
   "enableHealthKitFromSettings": "โปรดเปิดการเข้าถึงแอปสุขภาพในแอปการตั้งค่าค่ะ",
   "accountAlreadyLinked": "บัญชี {accountTypeProviderName} นี้เชื่อมกับบัญชี Pilll ของคุณอยู่แล้วค่ะ ลองรีเฟรชหน้าจอและดูคำถามที่พบบ่อยด้วยนะคะ รายละเอียด: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "บัญชี{accountTypeProviderName}นี้เชื่อมโยงกับบัญชี Pilll อื่นอยู่แล้ว จึงไม่สามารถลงทะเบียนได้ โปรดดู FAQ ด้วย รายละเอียด: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "บัญชี {accountTypeProviderName} นี้เชื่อมกับบัญชี Pilll อื่นอยู่แล้ว จึงใช้สมัครบัญชีไม่ได้ค่ะ โปรดดู FAQ เพิ่มเติมด้วยค่ะ รายละเอียด: {exceptionMessage}",
   "emailAlreadyInUse": "อีเมลที่ใช้ในบัญชี{accountTypeProviderName}ได้เชื่อมโยงกับบัญชี Pilll อื่นอยู่แล้ว จึงไม่สามารถลงทะเบียนได้ กรุณาดู FAQ ด้วย รายละเอียด: {exceptionMessage}",
   "todaySchedule": "กำหนดการวันนี้",
   "calendarSchedule": "กำหนดการในปฏิทิน",

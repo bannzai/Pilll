@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Hierdie funksie is nie beskikbaar op toestelle wat nie gesondheidsdata ondersteun nie",
   "enableHealthKitFromSettings": "Aktiveer asseblief Gesondheid in die Instellingsapp",
   "accountAlreadyLinked": "Hierdie {accountTypeProviderName}-rekening is reeds aan jou Pilll-rekening gekoppel. Probeer asseblief die skerm verfris en kyk ook na die FAQ. Besonderhede: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Hierdie {accountTypeProviderName}-rekening kan nie geregistreer word nie omdat dit reeds aan 'n ander Pilll-rekening gekoppel is. Sien asseblief ook die FAQ. Besonderhede: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Hierdie {accountTypeProviderName}-rekening is reeds aan ’n ander Pilll-rekening gekoppel, daarom kan jy nie daarmee registreer nie. Kyk asseblief ook na die FAQ. Besonderhede: {exceptionMessage}",
   "emailAlreadyInUse": "Die e-posadres wat u reeds met u {accountTypeProviderName}-rekening gebruik, is aan 'n ander Pilll-rekening gekoppel, daarom kan u nie registreer nie. Raadpleeg asseblief ons FAQ. Besonderhede: {exceptionMessage}",
   "todaySchedule": "Vandag se skedule",
   "calendarSchedule": "Kalendergebeure",

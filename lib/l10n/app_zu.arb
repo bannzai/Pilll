@@ -332,7 +332,7 @@
   "healthKitDoesNotSupport": "Lesi sici asitholakali kumadivayisi angasekeli idatha yezempilo",
   "enableHealthKitFromSettings": "Sicela uvule ukufinyelela kuhlelo lokusebenza Lwezempilo kuhlelo lokusebenza Lwezilungiselelo",
   "accountAlreadyLinked": "Le akhawunti ye-{accountTypeProviderName} isivele ixhunywe ku-akhawunti yakho ye-Pilll. Sicela uzame ukuvuselela isikrini, ubheke nemibuzo evame ukubuzwa. Imininingwane: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Leli {accountTypeProviderName} akhawunti sele lexhunyelwe kwenye akhawunti yePilll ngakho-ke awukwazi ukubhalisela. Buka ne-FAQ futhi. Imininingwane: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Le akhawunti ye-{accountTypeProviderName} isivele ixhunywe kwenye i-akhawunti ye-Pilll, ngakho ngeke ukwazi ukubhalisa ngayo. Sicela ubheke ne-FAQ. Imininingwane: {exceptionMessage}",
   "emailAlreadyInUse": "I-imeyili address osebenzisa nge-akhawunti ye-{accountTypeProviderName} isivele ixhunywe kwelinye i-akhawunti ye-Pilll, ngakho-ke ayikwazi ukubhalisa. Sicela ubheke ne-FAQ. Imininingwane: {exceptionMessage}",
   "todaySchedule": "Ishedyuli yanamuhla",
   "calendarSchedule": "Amahlandlakwazi ekhalendeni",
