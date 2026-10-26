@@ -94,7 +94,7 @@
   "editMenstruationPeriod": "Golygu cyfnod y mislif",
   "menstruationEdited": "Mae cyfnod y mislif wedi'i olygu",
   "physicalConditionDetail": "Manylion eich cyflwr corfforol",
-  "medicationHistoryPremiumFeatureRestriction": "Mae gwylio pellach yn nodwedd premiwm yn unig",
+  "medicationHistoryPremiumFeatureRestriction": "Mae angen premiwm i weld cofnodion hŷn",
   "viewMoreDetails": "Gweld mwy",
   "viewMore": "Gweld mwy",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ed",

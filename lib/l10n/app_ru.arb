@@ -94,7 +94,7 @@
   "editMenstruationPeriod": "Изменить даты месячных",
   "menstruationEdited": "Период месячных изменён",
   "physicalConditionDetail": "Подробности о самочувствии",
-  "medicationHistoryPremiumFeatureRestriction": "Для дальнейшего просмотра требуется премиум подписка",
+  "medicationHistoryPremiumFeatureRestriction": "Более ранние записи доступны с премиум",
   "viewMoreDetails": "Подробнее",
   "viewMore": "Показать больше",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}-я",

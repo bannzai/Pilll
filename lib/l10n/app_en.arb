@@ -94,7 +94,7 @@
   "editMenstruationPeriod": "Edit period dates",
   "menstruationEdited": "Period dates updated",
   "physicalConditionDetail": "Physical condition details",
-  "medicationHistoryPremiumFeatureRestriction": "Further viewing requires premium features",
+  "medicationHistoryPremiumFeatureRestriction": "View older records with Premium",
   "viewMoreDetails": "Learn more",
   "viewMore": "See more",
   "afterLastTakenPillNumber": "#{afterLastTakenPillNumber}",

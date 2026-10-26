@@ -94,7 +94,7 @@
   "editMenstruationPeriod": "Muokkaa kuukautisjaksoa",
   "menstruationEdited": "Kuukautisten ajanjakso on muokattu",
   "physicalConditionDetail": "Voinnin tiedot",
-  "medicationHistoryPremiumFeatureRestriction": "Pidemmän historian tarkastelu vaatii premium-tilauksen",
+  "medicationHistoryPremiumFeatureRestriction": "Voit katsoa vanhempia merkintöjä Premiumilla",
   "viewMoreDetails": "Katso lisää",
   "viewMore": "Näytä lisää",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}.",

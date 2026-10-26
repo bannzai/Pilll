@@ -94,7 +94,7 @@
   "editMenstruationPeriod": "แก้ไขช่วงประจำเดือน",
   "menstruationEdited": "แก้ไขช่วงประจำเดือนแล้วค่ะ",
   "physicalConditionDetail": "รายละเอียดอาการทางร่างกาย",
-  "medicationHistoryPremiumFeatureRestriction": "การเข้าดูข้อมูลเพิ่มเติมต้องใช้ฟีเจอร์พรีเมียม",
+  "medicationHistoryPremiumFeatureRestriction": "ดูบันทึกที่เก่ากว่านี้ได้ด้วยพรีเมียมค่ะ",
   "viewMoreDetails": "ดูรายละเอียด",
   "viewMore": "ดูเพิ่มเติม",
   "afterLastTakenPillNumber": "ที่{afterLastTakenPillNumber}",
