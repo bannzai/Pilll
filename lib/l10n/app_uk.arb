@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Ви можете змінити текст на початку сповіщення",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Будь ласка, введіть принаймні 0 символів",
+  "enterAtLeastOneCharacter": "Будь ласка, введіть щонайменше 0 символів",
   "changeDailyNotificationMessage": "Можна налаштувати текст сповіщення, коли ви не забули прийняти таблетку",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Отримувати сповіщення о 9:00 того дня",

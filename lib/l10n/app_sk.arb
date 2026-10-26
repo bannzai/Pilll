@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Môžete zmeniť text na začiatku upozornenia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Prosím, zadajte text",
+  "enterAtLeastOneCharacter": "Zadajte aspoň 0 znakov",
   "changeDailyNotificationMessage": "Môžete zmeniť text notifikácií v prípadoch, keď nezabudnete na užitie",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Dostať upozornenie v ten deň o 9:00",

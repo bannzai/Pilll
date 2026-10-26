@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "तुम्ही सूचनेच्या सुरुवातीला दिसणारा मजकूर बदलू शकता",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "कृपया 0 अक्षर किंवा अधिक प्रविष्ट करा",
+  "enterAtLeastOneCharacter": "कृपया किमान 0 अक्षरे टाका",
   "changeDailyNotificationMessage": "गोळी घेतल्यावर येणारे सूचना संदेश बदलू शकता",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना प्राप्त करा",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jakinarazpenaren hasierako testua alda dezakezu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Gutxienez 0 karaktere idatzi, mesedez",
+  "enterAtLeastOneCharacter": "Idatzi gutxienez 0 karaktere",
   "changeDailyNotificationMessage": "Pilula hartzea ahaztu ez duzunean jakinarazpen mezua aldatu dezakezu.",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Egunean 9:00etan jakinarazpena jaso",

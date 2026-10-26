@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "အကြောင်းကြားချက်အစတွင် ပေါ်မည့်စာသားကို ပြောင်းလဲနိုင်ပါတယ်",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "တစ်ခုခု ရိုက်ထည့်ပါ",
+  "enterAtLeastOneCharacter": "အနည်းဆုံး စာလုံး 0 လုံး ထည့်ပါ",
   "changeDailyNotificationMessage": "ဆေးမပျက်သောအခါ အကြောင်းကြားချက်စာသားကို ပြောင်းလဲနိုင်သည်",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "နံနက် ၉:၀၀ သတိပေးချက် လက်ခံရန်",

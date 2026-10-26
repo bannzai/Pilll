@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "የማሳወቂያውን መጀመሪያ መልዕክት መቀየር ይችላሉ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "ቢያንስ 0 ቁምፊ ያስገቡ",
+  "enterAtLeastOneCharacter": "እባክዎ ቢያንስ 0 ቁምፊዎችን ያስገቡ",
   "changeDailyNotificationMessage": "መይምነን ለማስታወሻ ቃልን ማሻሻያ ይችላሉ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ዛሬ በ9:00 ማሳወቂያ ይቀበላል",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "آپ اطلاع کے آغاز میں آنے والا متن تبدیل کر سکتی ہیں",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "برائے کرم کچھ درج کریں",
+  "enterAtLeastOneCharacter": "براہِ کرم کم از کم 0 حروف درج کریں",
   "changeDailyNotificationMessage": "آپ اس صورت میں اطلاعی پیغام تبدیل کر سکتے ہیں جب آپ نے گولی لینا نہیں بھولا ہو",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "اسی دن ۹:۰۰ بجے نوٹیفیکیشن حاصل کریں",

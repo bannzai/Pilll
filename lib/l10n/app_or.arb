@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ଆପଣ ବିଜ୍ଞପ୍ତିର ଆରମ୍ଭରେ ଥିବା ଲେଖା ବଦଳାଇ ପାରିବେ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "ଦୟାକରି କିଛି ଲେଖନ୍ତୁ",
+  "enterAtLeastOneCharacter": "ଦୟାକରି ଅତି କମରେ 0ଟି ଅକ୍ଷର ଲେଖନ୍ତୁ",
   "changeDailyNotificationMessage": "ଭୁଲି ନଯାଇଥିବା ବେଳେ ସୂଚନା ବାର୍ତ୍ତା ବଦଳାଇ ପାରିବେ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ସେହି ଦିନ ୯:୦୦ରେ ସୂଚନା ପାଇବ",

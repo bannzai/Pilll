@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "เปลี่ยนข้อความตอนต้นของการแจ้งเตือนได้ค่ะ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "กรุณาใส่ข้อมูลอย่างน้อย 0 ตัวอักษร",
+  "enterAtLeastOneCharacter": "กรุณากรอกอย่างน้อย 0 ตัวอักษรค่ะ",
   "changeDailyNotificationMessage": "คุณสามารถเปลี่ยนแปลงข้อความแจ้งเตือนสำหรับกรณีที่ไม่ลืมทานยาได้",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนเวลา 09:00 น. ในวันเดียวกัน",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "আপনি বিজ্ঞপ্তির শুরুর লেখাটি বদলাতে পারেন",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "কমপক্ষে ০টি অক্ষর প্রবেশ করান",
+  "enterAtLeastOneCharacter": "অনুগ্রহ করে অন্তত ০টি অক্ষর লিখুন",
   "changeDailyNotificationMessage": "পিল খেতে ভুলে না গেলে বিজ্ঞপ্তির বার্তা কাস্টমাইজ করতে পারেন",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/১০০",
   "receiveDailyNotificationAt9AM": "একই দিন সকাল ৯:০০টায় বিজ্ঞপ্তি পান",

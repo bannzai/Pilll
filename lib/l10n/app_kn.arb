@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ಅಧಿಸೂಚನೆಯ ಆರಂಭದಲ್ಲಿ ಕಾಣುವ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "ದಯವಿಟ್ಟು ೦ ಅಕ್ಷರಗಳು ಅಥವಾ ಅದಕ್ಕಿಂತ ಹೆಚ್ಚು ನಮೂದಿಸಿ",
+  "enterAtLeastOneCharacter": "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ 0 ಅಕ್ಷರಗಳನ್ನು ನಮೂದಿಸಿ",
   "changeDailyNotificationMessage": "ಮಾತ್ರೆಗಳನ್ನು ಮರೆಯದೆ ತೆಗೆದುಕೊಂಡಾಗ ಅಧಿಸೂಚನೆ ಸಂದೇಶವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ಅದೇ ದಿನ 9:00 ಕ್ಕೆ ಅಧಿಸೂಚನೆ ಸ್ವೀಕರಿಸಿ",

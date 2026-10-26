@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Spremenite lahko besedilo na začetku obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Prosim, vnesite vsaj 0 znakov",
+  "enterAtLeastOneCharacter": "Vnesite vsaj 0 znakov",
   "changeDailyNotificationMessage": "Lahko spremenite besedilo obvestila za primere, ko niste pozabili vzeti tabletke",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Obvestilo isti dan ob 9:00",

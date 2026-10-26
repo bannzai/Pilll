@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "તમે સૂચનાની શરૂઆતનું લખાણ બદલી શકો છો",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "કૃપા કરીને 0 અક્ષરો કે તેથી વધુ દાખલ કરો",
+  "enterAtLeastOneCharacter": "કૃપા કરીને ઓછામાં ઓછા 0 અક્ષરો દાખલ કરો",
   "changeDailyNotificationMessage": "ગોળી સાચી રીતે લીધી હોય ત્યારેના નોટિફિકેશન મેસેજ બદલી શકાય છે",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "આજે સવારે ૯:૦૦ વાગ્યે સૂચના મેળવો",

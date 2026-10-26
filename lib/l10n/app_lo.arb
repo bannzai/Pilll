@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ສາມາດປ່ຽນຂໍ້ຄວາມຕອນຕົ້ນຂອງການແຈ້ງເຕືອນໄດ້",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "ກະລຸນາປ້ອນຂໍ້ມູນ",
+  "enterAtLeastOneCharacter": "ກະລຸນາປ້ອນຢ່າງໜ້ອຍ 0 ຕົວອັກສອນ",
   "changeDailyNotificationMessage": "ສາມາດປ່ຽນຂໍ້ຄວາມການແຈ້ງເຕືອນໃນກໍລະນີທີ່ບໍ່ລືມກິນ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນເວລາ 9:00 ໃນມື້ນັ້ນ",

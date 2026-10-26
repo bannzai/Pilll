@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Мэдэгдлийн эхэнд харагдах бичвэрийг өөрчилж болно",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "0-ээс дээш тэмдэгт оруулна уу",
+  "enterAtLeastOneCharacter": "Дор хаяж 0 тэмдэгт оруулна уу",
   "changeDailyNotificationMessage": "Эм дутуугаагүй үеийн мэдэгдлийн мессежийг өөрчлөх боломжтой",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Тухайн өдрийн 9:00-д мэдэгдэл хүлээн авах",

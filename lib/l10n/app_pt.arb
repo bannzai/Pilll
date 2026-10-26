@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Você pode alterar o texto no início da notificação",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Por favor, digite pelo menos um caractere",
+  "enterAtLeastOneCharacter": "Digite pelo menos 0 caracteres",
   "changeDailyNotificationMessage": "Pode personalizar a mensagem de notificação para quando não esquecer de tomar",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Receber notificação às 9:00 do mesmo dia",

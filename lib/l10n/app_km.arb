@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "អ្នកអាចផ្លាស់ប្ដូរអត្ថបទនៅដើមការជូនដំណឹង",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "សូមបញ្ចូលអក្សរចាប់ពី 0 ឬច្រើនជាងនេះ",
+  "enterAtLeastOneCharacter": "សូមបញ្ចូលយ៉ាងហោចណាស់ 0 តួអក្សរ",
   "changeDailyNotificationMessage": "អ្នកអាចផ្លាស់ប្តូរសេចក្តីជូនដំណឹងសម្រាប់ពេលដែលមិនបានភ្លេចញុំថ្នាំ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ទទួលការជូនដំណឹងនៅម៉ោង៩:០០ព្រឹក",

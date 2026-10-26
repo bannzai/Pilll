@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Билдирменин башындагы текстти өзгөртө аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Кеминде бир тамга киргизиңиз",
+  "enterAtLeastOneCharacter": "Кеминде 0 белги киргизиңиз",
   "changeDailyNotificationMessage": "Унутпай ичкен учурдагы билдирүү текстин өзгөртө аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ошол күнү саат 9:00де эскертүү алуу",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Varat mainīt paziņojuma sākumā redzamo tekstu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Lūdzu ievadiet vismaz 0 rakstzīmes",
+  "enterAtLeastOneCharacter": "Lūdzu, ievadiet vismaz 0 rakstzīmes",
   "changeDailyNotificationMessage": "Varat mainīt paziņojuma tekstu, ja neesat aizmirsis ieņemt tabletes",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saņemt paziņojumu dienā plkst. 9:00",

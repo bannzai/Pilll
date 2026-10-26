@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Poți schimba textul de la începutul notificării",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Introduceți cel puțin 0 caractere",
+  "enterAtLeastOneCharacter": "Introdu cel puțin 0 caractere",
   "changeDailyNotificationMessage": "Poți modifica mesajul de notificare când iei pilula la timp",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Primește notificare la 9:00 în ziua respectivă",

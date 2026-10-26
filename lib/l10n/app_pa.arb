@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ਤੁਸੀਂ ਸੂਚਨਾ ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ ਦਿਖਣ ਵਾਲਾ ਸੁਨੇਹਾ ਬਦਲ ਸਕਦੇ ਹੋ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "ਘੱਟੋ ਘੱਟ 0 ਅੱਖਰ ਦਾਖਲ ਕਰੋ",
+  "enterAtLeastOneCharacter": "ਕਿਰਪਾ ਕਰਕੇ ਘੱਟੋ-ਘੱਟ 0 ਅੱਖਰ ਦਾਖਲ ਕਰੋ",
   "changeDailyNotificationMessage": "ਜਦੋਂ ਤੁਸੀਂ ਗੋਲੀ ਲੈਣਾ ਨਹੀਂ ਭੁੱਲਦੇ ਤਾਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਦਾ ਸੰਦੇਸ਼ ਬਦਲ ਸਕਦੇ ਹੋ",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ਉਸੇ ਦਿਨ ਸਵੇਰੇ 9:00 ਨੂੰ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪ੍ਰਾਪਤ ਕਰੋ",

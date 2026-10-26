@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Możesz zmienić tekst na początku powiadomienia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Proszę wprowadzić co najmniej 0 znaków",
+  "enterAtLeastOneCharacter": "Wpisz co najmniej 0 znaków",
   "changeDailyNotificationMessage": "Możesz zmienić treść powiadomień gdy regularnie bierzesz pigułkę",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Otrzymuj powiadomienia o 9:00 tego dnia",

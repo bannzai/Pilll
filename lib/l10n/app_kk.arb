@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Хабарламаның басындағы мәтінді өзгерте аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Кем дегенде 0 таңба енгізіңіз",
+  "enterAtLeastOneCharacter": "Кемінде 0 таңба енгізіңіз",
   "changeDailyNotificationMessage": "Дәрі ішуді ұмытпаған жағдайдағы хабарландыру мәтінін өзгерте аласыз",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарландыру алу",

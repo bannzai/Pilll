@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "আপুনি জাননীৰ আৰম্ভণিৰ বাৰ্তা সলনি কৰিব পাৰে",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "কিবা এটা লিখক",
+  "enterAtLeastOneCharacter": "অনুগ্ৰহ কৰি কমেও 0টা আখৰ লিখক",
   "changeDailyNotificationMessage": "বড়ি নিয়মীয়াকৈ সেৱন কৰা অৱস্থাত জাননী বাৰ্তা পৰিৱৰ্তন কৰিব পাৰে",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "আজি ৯:০০ বজাত জাননী পাম",

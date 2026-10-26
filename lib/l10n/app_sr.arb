@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да промените текст на почетку обавештења",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Molimo unesite 0 ili više karaktera",
+  "enterAtLeastOneCharacter": "Молимо Вас, унесите најмање 0 знакова",
   "changeDailyNotificationMessage": "Možete promeniti poruku obaveštenja kada niste zaboravili da uzmete pilulu",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Primi obaveštenje u 9:00 istog dana",

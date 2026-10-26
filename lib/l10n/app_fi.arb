@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Voit muuttaa ilmoituksen alussa näkyvää tekstiä",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Syötä vähintään 0 merkkiä",
+  "enterAtLeastOneCharacter": "Kirjoita vähintään 0 merkkiä",
   "changeDailyNotificationMessage": "Voit muokata ilmoitusviestiä, kun otat pillerin ajallaan",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saa ilmoituksen samana päivänä kello 9:00",

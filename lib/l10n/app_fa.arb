@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "می‌توانید متن ابتدای اعلان را تغییر دهید",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "لطفاً متنی وارد کنید",
+  "enterAtLeastOneCharacter": "لطفاً دست‌کم ۰ نویسه وارد کنید",
   "changeDailyNotificationMessage": "می‌توانید پیام اطلاع‌رسانی مربوط به مصرف به‌موقع قرص را تغییر دهید",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "دریافت اطلاع‌رسانی در ساعت 9:00 همان روز",

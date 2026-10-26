@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да го промените текстот на почетокот на известувањето",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Ве молиме внесете 0 или повеќе знаци",
+  "enterAtLeastOneCharacter": "Ве молиме, внесете најмалку 0 знаци",
   "changeDailyNotificationMessage": "Можете да ја промените пораката за известување кога не сте заборавиле да ја земете пилулата",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Известување во 9:00 истиот ден",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Вы можаце змяніць тэкст у пачатку апавяшчэння",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Увядзіце 0 або больш сімвалаў",
+  "enterAtLeastOneCharacter": "Калі ласка, увядзіце не менш за 0 сімвалаў",
   "changeDailyNotificationMessage": "Можна змяніць тэкст паведамлення, калі пілюля была прынята вчасова",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Апавяшчэнне ў 9:00 у дзень прыёму",

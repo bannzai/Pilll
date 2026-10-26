@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirishnoma boshidagi matnni oʻzgartirishingiz mumkin",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Iltimos, matn kiriting",
+  "enterAtLeastOneCharacter": "Iltimos, kamida 0 ta belgi kiriting",
   "changeDailyNotificationMessage": "Dori vaqtida ichilgan holatlar uchun bildirishnoma matnini o'zgartirishingiz mumkin",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Shu kun soat 9:00 da bildirishnoma olish",

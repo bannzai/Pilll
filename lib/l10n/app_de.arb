@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kannst den Text am Anfang der Benachrichtigung ändern",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Bitte geben Sie mindestens 0 Zeichen ein",
+  "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeichen ein",
   "changeDailyNotificationMessage": "Sie können den Benachrichtigungstext für die ordnungsgemäße Einnahme anpassen",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Benachrichtigung um 9:00 Uhr am selben Tag",

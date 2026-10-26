@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "आप सूचना की शुरुआत में दिखने वाला संदेश बदल सकती हैं",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "कृपया 0 अक्षर या अधिक लिखें",
+  "enterAtLeastOneCharacter": "कृपया कम से कम 0 अक्षर दर्ज करें",
   "changeDailyNotificationMessage": "गोली न भूलने पर मिलने वाले नोटिफिकेशन मैसेज को बदला जा सकता है",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "उसी दिन सुबह 9:00 बजे सूचना प्राप्त करें",

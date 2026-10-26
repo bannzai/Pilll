@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Pots canviar el text inicial de la notificació",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Si us plau, introduïu algun text",
+  "enterAtLeastOneCharacter": "Introdueix almenys 0 caràcters",
   "changeDailyNotificationMessage": "Pots personalitzar el missatge de notificació quan has pres la píndola correctament",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Rebre notificació a les 9:00 del dia",

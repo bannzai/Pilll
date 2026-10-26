@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Þú getur breytt textanum í upphafi tilkynningarinnar",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Vinsamlegast sláðu inn 0 stafi eða fleiri",
+  "enterAtLeastOneCharacter": "Sláðu inn að minnsta kosti 0 stafi",
   "changeDailyNotificationMessage": "Þú getur breytt tilkynningatextanum þegar pillur eru teknar rétt",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Fá tilkynningu klukkan 9:00 sama dag",

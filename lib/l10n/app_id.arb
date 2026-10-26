@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Anda dapat mengubah teks di awal notifikasi",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Harap masukkan 0 karakter atau lebih",
+  "enterAtLeastOneCharacter": "Masukkan setidaknya 0 karakter",
   "changeDailyNotificationMessage": "Anda dapat mengubah pesan notifikasi ketika tidak lupa minum pil",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Terima notifikasi pukul 9:00 hari yang sama",

@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Вы можете изменить текст в начале уведомления",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Введите не менее 0 символов",
+  "enterAtLeastOneCharacter": "Пожалуйста, введите не менее 0 символов",
   "changeDailyNotificationMessage": "Можно изменить текст уведомления при своевременном приёме таблетки",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Уведомление в 9:00 в день приема",

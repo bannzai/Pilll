@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Megváltoztathatod az értesítés elején megjelenő szöveget",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Kérjük, írjon be legalább 0 karaktert",
+  "enterAtLeastOneCharacter": "Adj meg legalább 0 karaktert",
   "changeDailyNotificationMessage": "Módosíthatja a rendszeres bevétel értesítésének szövegét",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Aznap 9:00-kor értesítést kapok",

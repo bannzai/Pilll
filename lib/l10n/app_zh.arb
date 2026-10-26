@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "可以更改通知开头的文字",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "请输入至少0个字符",
+  "enterAtLeastOneCharacter": "请至少输入0个字符",
   "changeDailyNotificationMessage": "可以自定义正常服用时的通知消息",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "当天9:00接收通知",

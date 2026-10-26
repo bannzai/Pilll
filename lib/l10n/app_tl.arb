@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Maaari ninyong baguhin ang teksto sa simula ng abiso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Mangyaring maglagay ng 0 o higit pang karakter",
+  "enterAtLeastOneCharacter": "Pakilagay po ang hindi bababa sa 0 character",
   "changeDailyNotificationMessage": "Maaaring baguhin ang mensahe ng notification para sa mga araw na hindi nakalimutan uminom",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Tumanggap ng paalala sa 9:00 AM ngayong araw",

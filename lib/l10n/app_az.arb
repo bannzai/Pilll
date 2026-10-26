@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirişin başlanğıc mətnini dəyişə bilərsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Mətn daxil edin",
+  "enterAtLeastOneCharacter": "Zəhmət olmasa, ən azı 0 simvol daxil edin",
   "changeDailyNotificationMessage": "Həbləri düzgün qəbul etdiyiniz zaman göstəriləcək bildiriş mətnini dəyişdirə bilərsiniz",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş almaq",

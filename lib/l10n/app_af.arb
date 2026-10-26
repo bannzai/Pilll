@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jy kan die begin van die kennisgewing verander",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Voer asseblief iets in",
+  "enterAtLeastOneCharacter": "Voer asseblief minstens 0 karakters in",
   "changeDailyNotificationMessage": "Jy kan die kennisgewing boodskap aanpas vir wanneer jy nie jou pil vergeet het nie",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ontvang kennisgewing om 9:00 dieselfde dag",

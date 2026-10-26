@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Galite pakeisti pranešimo pradžioje rodomą tekstą",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Įveskite 0 ar daugiau simbolių",
+  "enterAtLeastOneCharacter": "Įveskite bent 0 simbolių",
   "changeDailyNotificationMessage": "Galite keisti pranešimo tekstą, kai nepamirštate gerti tablečių",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Gauti priminimą 9:00 val. tą dieną",
