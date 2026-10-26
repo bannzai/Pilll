@@ -436,7 +436,7 @@
   "inquiryTypeLabel": "Tipo de consulta",
   "bugReport": "Comunicar un erro",
   "featureRequest": "Opinións e suxestións",
-  "otherInquiry": "Outros",
+  "otherInquiry": "Outro",
   "otherInquiryPlaceholder": "Introduza outros detalles",
   "emailAddress": "Correo electrónico",
   "emailPlaceholder": "exemplo@exemplo.com",

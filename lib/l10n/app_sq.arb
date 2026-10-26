@@ -436,7 +436,7 @@
   "inquiryTypeLabel": "Lloji i pyetjes",
   "bugReport": "Raportim i një gabimi",
   "featureRequest": "Mendime dhe sugjerime",
-  "otherInquiry": "Tjera",
+  "otherInquiry": "Tjetër",
   "otherInquiryPlaceholder": "Ju lutem shkruani detajet tuaja këtu",
   "emailAddress": "Adresa e emailit",
   "emailPlaceholder": "example@example.com",

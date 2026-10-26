@@ -436,7 +436,7 @@
   "inquiryTypeLabel": "Врста упита",
   "bugReport": "Пријава грешке",
   "featureRequest": "Мишљења и предлози",
-  "otherInquiry": "Ostalo",
+  "otherInquiry": "Друго",
   "otherInquiryPlaceholder": "Unesite detalje",
   "emailAddress": "Email adresa",
   "emailPlaceholder": "primer@primer.com",
