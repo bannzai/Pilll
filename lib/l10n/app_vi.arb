@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Đã xảy ra lỗi tại {storeName}. Vui lòng thử lại sau ít phút.",
   "purchaseErrorPurchaseNotAllowedError": "Thiết bị này không cho phép mua hàng",
   "purchaseErrorPurchaseInvalidError": "Thanh toán không thành công. Vui lòng kiểm tra xem phương thức thanh toán của bạn còn hợp lệ không rồi thử lại.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Gói dịch vụ này hiện không có sẵn. Vui lòng khởi động lại ứng dụng và thử lại.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Gói bạn chọn hiện chưa thể mua. Vui lòng khởi động lại ứng dụng rồi thử lại.",
   "purchaseErrorProductAlreadyPurchasedError": "Bạn đã mua gói này rồi. Nếu muốn khôi phục thông tin mua hàng trên thiết bị này, vui lòng khôi phục thông tin mua hàng từ \"Dành cho người đã mua trước đây\"",
   "purchaseErrorReceiptAlreadyInUseError": "Đã được mua hoặc thông tin mua hàng đang được sử dụng bởi người dùng khác. Vui lòng kiểm tra {accountName}.",
   "purchaseErrorInvalidReceiptError": "Thông tin mua hàng không hợp lệ. Vui lòng kiểm tra lại thông tin mua hàng của bạn.",

@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Nagkaroon ng error sa {storeName}. Pakisubukan po ulit pagkalipas ng ilang sandali.",
   "purchaseErrorPurchaseNotAllowedError": "Hindi pinapayagan ang pagbili sa device na ito",
   "purchaseErrorPurchaseInvalidError": "Hindi natuloy ang pagbabayad. Pakitingnan po kung wasto ang paraan ninyo ng pagbabayad, at subukan muli.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Hindi available ang napiling plan sa ngayon. Pakisuyo na i-restart ang app at subukan muli.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Hindi muna mabibili ang napili ninyong plano. Pakisuyong buksan muli ang app at subukan ulit.",
   "purchaseErrorProductAlreadyPurchasedError": "Nakabili mo na ang plano. Kung gusto mong i-restore ang impormasyon ng pagbili sa device na ito, i-click ang \"Para sa mga dating bumili\" para ma-restore ang impormasyon ng pagbili",
   "purchaseErrorReceiptAlreadyInUseError": "Nabili na o ginagamit ng ibang user ang purchase information. Pakitingnan ang {accountName}",
   "purchaseErrorInvalidReceiptError": "Hindi wastong impormasyon ng pagbili. Pakisuri ang inyong impormasyon ng pagbili.",

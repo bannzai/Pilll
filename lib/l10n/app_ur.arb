@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} میں خرابی پیش آئی ہے۔ براہِ کرم تھوڑی دیر بعد دوبارہ کوشش کریں۔",
   "purchaseErrorPurchaseNotAllowedError": "اس ڈیوائس پر خریداری کی اجازت نہیں ہے",
   "purchaseErrorPurchaseInvalidError": "ادائیگی مکمل نہیں ہو سکی۔ براہِ کرم چیک کریں کہ آپ کا ادائیگی کا طریقہ درست ہے، پھر دوبارہ کوشش کریں۔",
-  "purchaseErrorProductNotAvailableForPurchaseError": "منتخب کردہ پلان فی الوقت دستیاب نہیں ہے۔ براہ کرم ایپ کو دوبارہ شروع کر کے دوبارہ کوشش کریں۔",
+  "purchaseErrorProductNotAvailableForPurchaseError": "منتخب کردہ پلان فی الحال خریداری کے لیے دستیاب نہیں ہے۔ براہِ کرم ایپ دوبارہ شروع کریں اور پھر کوشش کریں۔",
   "purchaseErrorProductAlreadyPurchasedError": "آپ پہلے سے ہی پلان خرید چکے ہیں۔ اگر آپ اس ڈیوائس پر خریداری کی معلومات بحال کرنا چاہتے ہیں تو \"پہلے خریداری کرنے والوں کے لیے یہاں\" سے خریداری کی معلومات بحال کریں",
   "purchaseErrorReceiptAlreadyInUseError": "پہلے سے خریدا گیا۔ یا خریداری کی معلومات کسی اور صارف کے ذریعے استعمال ہو رہی ہیں۔ برائے کرم {accountName} کی تصدیق کریں۔",
   "purchaseErrorInvalidReceiptError": "غیر درست خریداری کی معلومات۔ برائے کرم اپنی خریداری کی تفصیلات کی تصدیق کریں۔",

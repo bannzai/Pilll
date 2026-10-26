@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Kuvele iphutha ku-{storeName}. Sicela uzame futhi ngemva kwesikhashana.",
   "purchaseErrorPurchaseNotAllowedError": "Ukuthenga akuvunyelwe kule divayisi",
   "purchaseErrorPurchaseInvalidError": "Inkokhelo ayiphumelelanga. Sicela uhlole ukuthi indlela yakho yokukhokha isasebenza, bese uzama futhi.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Iplani oyikhethile ayitholakali njengamanje. Sicela uqalise kabusha i-app uphinde uzame.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Uhlelo olukhethiwe alutholakali ukuthi luthengwe okwamanje. Sicela uqale kabusha uhlelo lokusebenza bese uzama futhi.",
   "purchaseErrorProductAlreadyPurchasedError": "Usuvele uthenga uhlelo. Uma ufuna ukubuyisela ulwazi lokuthengwa kule divayisi, sicela ubuyisele ulwazi lokuthengwa kusuka ku-\"Abathenga ngaphambilini lapha\"",
   "purchaseErrorReceiptAlreadyInUseError": "Sekuthengwe ngaphambili. Noma ulwazi lokuthenga lusetshenziswa ngomsebenzisi omunye. Sicela uhlole {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ulwazi lokuthenga alulungile. Sicela uhlole ulwazi lwakho lokuthenga.",

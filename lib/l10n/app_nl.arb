@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Er is een fout opgetreden bij {storeName}. Probeer het over een tijdje opnieuw.",
   "purchaseErrorPurchaseNotAllowedError": "Aankopen zijn niet toegestaan op dit apparaat",
   "purchaseErrorPurchaseInvalidError": "De betaling is niet gelukt. Controleer of je betaalmethode geldig is en probeer het opnieuw.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Het geselecteerde abonnement is momenteel niet beschikbaar. Herstart de app en probeer het opnieuw.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Het gekozen abonnement is momenteel niet te koop. Start de app opnieuw en probeer het nog eens.",
   "purchaseErrorProductAlreadyPurchasedError": "U heeft al een plan aangeschaft. Om de aankoopinformatie op dit apparaat te herstellen, klik op 'Voor eerdere kopers' om uw aankoopinformatie te herstellen.",
   "purchaseErrorReceiptAlreadyInUseError": "Al gekocht. De aankoopinformatie wordt al gebruikt door een andere gebruiker. Controleer {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinformatie. Controleer uw aankoopgegevens.",

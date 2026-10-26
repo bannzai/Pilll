@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "មានបញ្ហាកើតឡើងនៅក្នុង {storeName}។ សូមព្យាយាមម្តងទៀតនៅពេលបន្តិចទៀត។",
   "purchaseErrorPurchaseNotAllowedError": "មិនអនុញ្ញាតឱ្យទិញនៅលើឧបករណ៍នេះទេ",
   "purchaseErrorPurchaseInvalidError": "ការទូទាត់មិនបានសម្រេចទេ។ សូមពិនិត្យមើលថាវិធីទូទាត់របស់អ្នកមានសុពលភាព រួចព្យាយាមម្ដងទៀត។",
-  "purchaseErrorProductNotAvailableForPurchaseError": "គម្រោងនេះមិនអាចប្រើបានក្នុងពេលបច្ចុប្បន្ននេះទេ។ សូមចាប់ផ្តើមកម្មវិធីឡើងវិញហើយព្យាយាមម្តងទៀត។",
+  "purchaseErrorProductNotAvailableForPurchaseError": "គម្រោងដែលបានជ្រើសរើសមិនអាចទិញបាននៅពេលនេះទេ។ សូមបើកកម្មវិធីឡើងវិញ ហើយសាកល្បងម្តងទៀត។",
   "purchaseErrorProductAlreadyPurchasedError": "អ្នកបានទិញគម្រោងរួចហើយ។ ប្រសិនបើអ្នកចង់ស្តារព័ត៌មានការទិញនៅលើឧបករណ៍នេះ សូមចុច「សម្រាប់អ្នកដែលបានទិញពីមុន」",
   "purchaseErrorReceiptAlreadyInUseError": "បានទិញរួចហើយ ឬព័ត៌មានការទិញត្រូវបានប្រើប្រាស់ដោយអ្នកប្រើប្រាស់ផ្សេង។ សូមពិនិត្យ {accountName}។",
   "purchaseErrorInvalidReceiptError": "ព័ត៌មានការទិញមិនត្រឹមត្រូវ។ សូមពិនិត្យព័ត៌មានការទិញរបស់អ្នក។",

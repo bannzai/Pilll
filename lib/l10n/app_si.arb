@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} හි දෝෂයක් ඇති වී ඇත. කරුණාකර ටික වේලාවකට පසු නැවත උත්සාහ කරන්න.",
   "purchaseErrorPurchaseNotAllowedError": "මෙම උපාංගයෙන් මිලදී ගැනීමට අවසර නැත",
   "purchaseErrorPurchaseInvalidError": "ගෙවීම සම්පූර්ණ කළ නොහැකි විය. කරුණාකර ඔබේ ගෙවීම් ක්‍රමය වලංගු දැයි පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "ඉලක්කගත සැලැස්ම දැනට විකිණීමට නොමැත. කරුණාකර යෙදුම යළි ආරම්භ කර නැවත උත්සාහ කරන්න.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "තෝරාගත් සැලැස්ම දැනට මිලදී ගැනීමට නොමැත. කරුණාකර යෙදුම නැවත ආරම්භ කර යළි උත්සාහ කරන්න.",
   "purchaseErrorProductAlreadyPurchasedError": "ඔබ දැනටම සැලැස්ම මිලදී ගෙන ඇත. මෙම උපකරණයේ මිලදී ගැනීමේ තොරතුරු ප්‍රතිසාධනය කිරීමට \"පෙර මිලදී ගත් අය මෙතනින්\" සිට මිලදී ගැනීමේ තොරතුරු ප්‍රතිසාධනය කරන්න",
   "purchaseErrorReceiptAlreadyInUseError": "මේ දැනටමත් මිලදී ගෙන ඇත. නැතහොත් මිලදී ගැනීමේ තොරතුරු වෙනත් පරිශීලකයෙකු භාවිතා කර ඇත. කරුණාකර {accountName} පරීක්ෂා කරන්න.",
   "purchaseErrorInvalidReceiptError": "වලංගු නොවන මිලදී ගැනීමේ තොරතුරුයි. කරුණාකර ඔබේ මිලදී ගැනීමේ විස්තර පරීක්ෂා කරන්න.",

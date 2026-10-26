@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Palvelussa {storeName} tapahtui virhe. Yritä hetken kuluttua uudelleen.",
   "purchaseErrorPurchaseNotAllowedError": "Ostot eivät ole sallittuja tällä laitteella",
   "purchaseErrorPurchaseInvalidError": "Maksu epäonnistui. Tarkista, että maksutapasi on voimassa, ja yritä uudelleen.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Valittu paketti ei ole tällä hetkellä saatavilla. Käynnistä sovellus uudelleen ja yritä uudelleen.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Valittua tilausta ei voi ostaa juuri nyt. Käynnistä sovellus uudelleen ja yritä uudestaan.",
   "purchaseErrorProductAlreadyPurchasedError": "Paketti on jo tilattu. Palauttaaksesi ostotiedot tälle laitteelle, valitse \"Jos olet ostanut aiemmin, klikkaa tästä\".",
   "purchaseErrorReceiptAlreadyInUseError": "Jo ostettu tai ostotiedot ovat toisen käyttäjän käytössä. Tarkista {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ostotiedot ovat virheelliset. Tarkista ostotietosi.",

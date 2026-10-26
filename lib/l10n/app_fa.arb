@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "در {storeName} خطایی رخ داده است. لطفاً کمی بعد دوباره امتحان کنید.",
   "purchaseErrorPurchaseNotAllowedError": "خرید در این دستگاه مجاز نیست",
   "purchaseErrorPurchaseInvalidError": "پرداخت انجام نشد. لطفاً معتبر بودن روش پرداخت خود را بررسی کنید و دوباره تلاش کنید.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "طرح مورد نظر در حال حاضر در دسترس نیست. لطفاً اپلیکیشن را مجدداً راه‌اندازی کرده و دوباره تلاش کنید",
+  "purchaseErrorProductNotAvailableForPurchaseError": "طرح انتخاب‌شده در حال حاضر برای خرید در دسترس نیست. لطفاً برنامه را دوباره راه‌اندازی کنید و باز هم امتحان کنید.",
   "purchaseErrorProductAlreadyPurchasedError": "شما قبلاً این طرح را خریداری کرده‌اید. برای بازیابی اطلاعات خرید در این دستگاه از «کسانی که قبلاً خریداری کرده‌اند» استفاده کنید",
   "purchaseErrorReceiptAlreadyInUseError": "قبلاً خریداری شده است یا اطلاعات خرید توسط کاربر دیگری استفاده می‌شود. لطفاً {accountName} را بررسی کنید.",
   "purchaseErrorInvalidReceiptError": "اطلاعات خرید نامعتبر است. لطفاً اطلاعات خرید خود را بررسی کنید",

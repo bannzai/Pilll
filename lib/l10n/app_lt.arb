@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Parduotuvėje {storeName} įvyko klaida. Po kurio laiko bandykite dar kartą.",
   "purchaseErrorPurchaseNotAllowedError": "Šiame įrenginyje pirkti neleidžiama",
   "purchaseErrorPurchaseInvalidError": "Mokėjimas nepavyko. Patikrinkite, ar jūsų mokėjimo būdas galioja, ir bandykite dar kartą.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Šis planas šiuo metu neprieinamas. Prašome perkrauti programėlę ir bandyti dar kartą.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Pasirinkto plano šiuo metu įsigyti negalima. Paleiskite programėlę iš naujo ir bandykite dar kartą.",
   "purchaseErrorProductAlreadyPurchasedError": "Planas jau nupirktas. Jei norite atkurti pirkimo informaciją šiame įrenginyje, spustelėkite „Anksčiau pirkusiems čia\" ir atkurkite pirkimo informaciją.",
   "purchaseErrorReceiptAlreadyInUseError": "Jau nupirkta arba pirkimo informacija naudojama kito vartotojo. Patikrinkite {accountName}.",
   "purchaseErrorInvalidReceiptError": "Neteisingi pirkimo duomenys. Patikrinkite pirkimo informaciją.",

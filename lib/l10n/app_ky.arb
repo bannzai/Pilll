@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} дүкөнүндө ката кетти. Бир аздан кийин кайра аракет кылып көрүңүз.",
   "purchaseErrorPurchaseNotAllowedError": "Бул түзмөктө сатып алууга уруксат берилбейт",
   "purchaseErrorPurchaseInvalidError": "Төлөм ишке ашкан жок. Төлөм ыкмаңыз жарактуу экенин текшерип, кайра аракет кылыңыз.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Тандалган план азыркы учурда сатылбайт. Кыйналып, колдонмону кайра иштетип, кайрадан аракет кылыңыз",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Тандалган планды азыр сатып алуу мүмкүн эмес. Колдонмону кайра иштетип, дагы бир жолу аракет кылып көрүңүз.",
   "purchaseErrorProductAlreadyPurchasedError": "Сиз планды мурунтан эле сатып алгансыз. Бул түзмөктө сатып алуу маалыматын калыбына келтирүү үчүн \"Мурда сатып алган адамдар үчүн\" бөлүмүнөн сатып алуу маалыматын тиричилеңиз",
   "purchaseErrorReceiptAlreadyInUseError": "Мурда эле сатып алынган же сатып алуу маалыматы башка колдонуучу тарабынан колдонулууда. {accountName} текшериңиз.",
   "purchaseErrorInvalidReceiptError": "Сатып алуу маалыматы туура эмес. Сатып алуу маалыматын текшерип көрүңүз",

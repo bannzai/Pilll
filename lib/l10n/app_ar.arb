@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "حدث خطأ في {storeName}. يُرجى المحاولة مرة أخرى بعد قليل.",
   "purchaseErrorPurchaseNotAllowedError": "عمليات الشراء غير مسموح بها على هذا الجهاز",
   "purchaseErrorPurchaseInvalidError": "تعذّر إتمام الدفع. يُرجى التأكد من صلاحية طريقة الدفع ثم المحاولة مرة أخرى.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "الخطة المحددة غير متاحة للبيع حاليًا. يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى",
+  "purchaseErrorProductNotAvailableForPurchaseError": "الخطة المحددة غير متاحة للشراء حاليًا. يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى.",
   "purchaseErrorProductAlreadyPurchasedError": "لقد تم شراء الخطة بالفعل. إذا كنت تريد استعادة معلومات الشراء على هذا الجهاز، يرجى استعادة معلومات الشراء من \"للمستخدمين الذين اشتروا سابقاً، اضغط هنا\"",
   "purchaseErrorReceiptAlreadyInUseError": "تم الشراء بالفعل، أو تم استخدام معلومات الشراء من قبل مستخدم آخر. يرجى التحقق من {accountName}",
   "purchaseErrorInvalidReceiptError": "معلومات الشراء غير صالحة. يرجى التحقق من تفاصيل الشراء",

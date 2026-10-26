@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Došlo je do greške u {storeName}. Molimo Vas da pokušate ponovo malo kasnije.",
   "purchaseErrorPurchaseNotAllowedError": "Kupovine nisu dozvoljene na ovom uređaju",
   "purchaseErrorPurchaseInvalidError": "Plaćanje nije uspjelo. Provjerite je li Vaš način plaćanja važeći pa pokušajte ponovo.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Odabrani plan trenutno nije dostupan za kupovinu. Molimo restartajte aplikaciju i pokušajte ponovo.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Odabrani plan trenutno nije dostupan za kupovinu. Molimo Vas da ponovo pokrenete aplikaciju i pokušate opet.",
   "purchaseErrorProductAlreadyPurchasedError": "Plan je već kupljen. Za obnovu informacija o kupovini na ovom uređaju, koristite opciju 'Za one koji su već kupili'.",
   "purchaseErrorReceiptAlreadyInUseError": "Već kupljeno ili informacije o kupovini koristi drugi korisnik. Molimo provjerite {accountName}.",
   "purchaseErrorInvalidReceiptError": "Nevažeće informacije o kupovini. Molimo provjerite podatke o kupovini.",

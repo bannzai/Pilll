@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} တွင် အမှားတစ်ခု ဖြစ်ပွားနေပါတယ်။ ခဏနေပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
   "purchaseErrorPurchaseNotAllowedError": "ဤစက်တွင် ဝယ်ယူခွင့်မပြုပါ",
   "purchaseErrorPurchaseInvalidError": "ငွေပေးချေမှု မအောင်မြင်ပါ။ ငွေပေးချေမှုနည်းလမ်း အကျုံးဝင်ကြောင်း စစ်ဆေးပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
-  "purchaseErrorProductNotAvailableForPurchaseError": "ရွေးချယ်ထားသောပလန်သည် လက်ရှိတွင် ရောင်းချမှုမရှိပါ။ အပ်ပလီကေးရှင်းကို ပြန်လည်စတင်ပြီး ပြန်လည်ကြိုးစားပါ။",
+  "purchaseErrorProductNotAvailableForPurchaseError": "ရွေးထားသော အစီအစဉ်ကို လောလောဆယ် ဝယ်ယူ၍ မရနိုင်ပါ။ အက်ပ်ကို ပြန်လည်ဖွင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။",
   "purchaseErrorProductAlreadyPurchasedError": "အစီအစဉ်ကို ဝယ်ယူပြီးပါပြီ။ ဤစက်ပစ္စည်းတွင် ဝယ်ယူမှုအချက်အလက်များကို ပြန်လည်ရယူရန် \"ယခင်က ဝယ်ယူခဲ့သူများအတွက်\" မှ ဝယ်ယူမှုအချက်အလက်များကို ပြန်လည်ရယူပါ။",
   "purchaseErrorReceiptAlreadyInUseError": "ဝယ်ယူပြီးပါပြီ။ သို့မဟုတ် ဝယ်ယူမှုအချက်အလက်ကို အခြားအသုံးပြုသူမှ အသုံးပြုနေပါသည်။ {accountName} ကို စစ်ဆေးပါ",
   "purchaseErrorInvalidReceiptError": "ဝယ်ယူမှုအချက်အလက်များ မမှန်ကန်ပါ။ ဝယ်ယူမှုအချက်အလက်များကို စစ်ဆေးကြည့်ပါ။",

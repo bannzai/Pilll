@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "เกิดข้อผิดพลาดใน {storeName} กรุณาลองอีกครั้งในอีกสักครู่นะคะ",
   "purchaseErrorPurchaseNotAllowedError": "ไม่อนุญาตให้ซื้อสินค้าบนอุปกรณ์นี้ค่ะ",
   "purchaseErrorPurchaseInvalidError": "ชำระเงินไม่สำเร็จค่ะ กรุณาตรวจสอบว่าวิธีชำระเงินยังใช้ได้ แล้วลองอีกครั้งค่ะ",
-  "purchaseErrorProductNotAvailableForPurchaseError": "แพ็คเกจที่เลือกไม่สามารถใช้งานได้ในขณะนี้ กรุณาปิดแอปฯ และเปิดใหม่อีกครั้ง",
+  "purchaseErrorProductNotAvailableForPurchaseError": "แพ็กเกจที่เลือกยังไม่พร้อมให้ซื้อในขณะนี้ค่ะ กรุณาเปิดแอปใหม่แล้วลองอีกครั้งค่ะ",
   "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อในอุปกรณ์นี้ กรุณากู้คืนข้อมูลการซื้อจาก \"สำหรับผู้ที่เคยซื้อแล้ว\"",
   "purchaseErrorReceiptAlreadyInUseError": "ซื้อเรียบร้อยแล้ว หรือข้อมูลการซื้อถูกใช้งานโดยผู้ใช้คนอื่นแล้ว กรุณาตรวจสอบ {accountName}",
   "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้อง กรุณาตรวจสอบข้อมูลการซื้อของคุณ",

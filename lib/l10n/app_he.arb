@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "אירעה שגיאה ב־{storeName}. כדאי לנסות שוב בעוד זמן קצר.",
   "purchaseErrorPurchaseNotAllowedError": "לא ניתן לבצע רכישות במכשיר הזה",
   "purchaseErrorPurchaseInvalidError": "התשלום לא הושלם. כדאי לבדוק שאמצעי התשלום תקף ולנסות שוב.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית הנבחרת אינה זמינה כרגע למכירה. אנא הפעל מחדש את האפליקציה ונסה שוב",
+  "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית שנבחרה אינה זמינה כרגע לרכישה. כדאי להפעיל מחדש את האפליקציה ולנסות שוב.",
   "purchaseErrorProductAlreadyPurchasedError": "כבר רכשת תוכנית. אם ברצונך לשחזר מידע רכישה במכשיר זה, אנא שחזר את מידע הרכישה מ'לרוכשים קודמים'",
   "purchaseErrorReceiptAlreadyInUseError": "כבר נרכש או שמידע הרכישה משמש על ידי משתמש אחר. אנא בדקו את {accountName}",
   "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדקו את פרטי הרכישה שלכם",

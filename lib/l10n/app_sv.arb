@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Ett fel uppstod i {storeName}. Försök igen om en liten stund.",
   "purchaseErrorPurchaseNotAllowedError": "Köp är inte tillåtna på den här enheten",
   "purchaseErrorPurchaseInvalidError": "Betalningen gick inte igenom. Kontrollera att din betalningsmetod är giltig och försök igen.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Detta abonnemang är för närvarande inte tillgängligt. Vänligen starta om appen och försök igen.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Den valda planen går inte att köpa just nu. Starta om appen och försök igen.",
   "purchaseErrorProductAlreadyPurchasedError": "Du har redan köpt ett abonnemang. För att återställa köpinformationen på den här enheten, använd \"För tidigare köpare\" för att återställa din köpinformation.",
   "purchaseErrorReceiptAlreadyInUseError": "Redan köpt eller köpinformationen används av en annan användare. Vänligen kontrollera {accountName}.",
   "purchaseErrorInvalidReceiptError": "Felaktig köpinformation. Vänligen kontrollera dina köpuppgifter.",

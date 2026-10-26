@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} मा त्रुटि भएको छ। कृपया केही बेरपछि फेरि प्रयास गर्नुहोस्।",
   "purchaseErrorPurchaseNotAllowedError": "यो उपकरणमा खरिद गर्न अनुमति छैन",
   "purchaseErrorPurchaseInvalidError": "भुक्तानी पूरा हुन सकेन। कृपया तपाईंको भुक्तानी विधि मान्य छ कि छैन जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।",
-  "purchaseErrorProductNotAvailableForPurchaseError": "यो योजना हाल उपलब्ध छैन। कृपया एपलाई रिस्टार्ट गरेर फेरि प्रयास गर्नुहोस्।",
+  "purchaseErrorProductNotAvailableForPurchaseError": "छनोट गरिएको योजना अहिले खरिदका लागि उपलब्ध छैन। कृपया एप फेरि सुरु गरेर पुनः प्रयास गर्नुहोस्।",
   "purchaseErrorProductAlreadyPurchasedError": "पहिले नै प्लान खरिद गरिसकिएको छ। यस डिभाइसमा खरिद जानकारी पुनर्स्थापना गर्न \"पहिले खरिद गर्नुभएका व्यक्तिहरूका लागि यहाँ\" बाट खरिद जानकारी पुनर्स्थापना गर्नुहोस्।",
   "purchaseErrorReceiptAlreadyInUseError": "पहिले नै किनिसकेको छ वा खरिद जानकारी अर्को प्रयोगकर्ताले प्रयोग गरिरहेको छ। {accountName} जाँच गर्नुहोस्।",
   "purchaseErrorInvalidReceiptError": "अमान्य खरीद जानकारी छ। कृपया आफ्नो खरीद जानकारी जाँच गर्नुहोस्।",

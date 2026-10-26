@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Veikalā {storeName} radās kļūda. Lūdzu, pēc brīža mēģiniet vēlreiz.",
   "purchaseErrorPurchaseNotAllowedError": "Šajā ierīcē pirkumi nav atļauti",
   "purchaseErrorPurchaseInvalidError": "Maksājums neizdevās. Pārbaudiet, vai jūsu maksājuma veids ir derīgs, un mēģiniet vēlreiz.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Izvēlētais plāns pašlaik nav pieejams. Lūdzam restartēt lietotni un mēģināt vēlreiz.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Izvēlēto plānu pašlaik nevar iegādāties. Lūdzu, restartējiet lietotni un mēģiniet vēlreiz.",
   "purchaseErrorProductAlreadyPurchasedError": "Plāns jau ir iegādāts. Lai atjaunotu pirkuma informāciju šajā ierīcē, lūdzu atjaunojiet pirkuma informāciju no \"Tiem, kas iegādājušies iepriekš\".",
   "purchaseErrorReceiptAlreadyInUseError": "Jau iegādāts vai pirkuma informācija tiek izmantota ar citu lietotāju. Lūdzu, pārbaudiet {accountName}.",
   "purchaseErrorInvalidReceiptError": "Nederīga pirkuma informācija. Lūdzu, pārbaudiet savu pirkuma informāciju.",

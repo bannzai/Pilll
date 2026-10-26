@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName}-д алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу.",
   "purchaseErrorPurchaseNotAllowedError": "Энэ төхөөрөмжөөс худалдан авалт хийхийг зөвшөөрөөгүй байна",
   "purchaseErrorPurchaseInvalidError": "Төлбөр амжилтгүй боллоо. Төлбөрийн хэрэгсэл тань хүчинтэй эсэхийг шалгаад дахин оролдоно уу.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Сонгосон төлөвлөгөө одоогоор боломжтой биш байна. Аппликейшнийг дахин эхлүүлээд дахин оролдоно уу.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Сонгосон багцыг одоогоор худалдаж авах боломжгүй байна. Аппыг дахин эхлүүлээд дахин оролдоно уу.",
   "purchaseErrorProductAlreadyPurchasedError": "Та аль хэдийн багц худалдаж авсан байна. Энэ төхөөрөмж дээр худалдан авалтын мэдээллээ сэргээхийн тулд \"Өмнө нь худалдаж авсан хүмүүст\" дээр дарж сэргээнэ үү",
   "purchaseErrorReceiptAlreadyInUseError": "Худалдан авалт хийгдсэн эсвэл худалдан авалтын мэдээлэл өөр хэрэглэгчээр ашиглагдаж байна. {accountName}-г шалгана уу.",
   "purchaseErrorInvalidReceiptError": "Худалдан авалтын мэдээлэл буруу байна. Худалдан авалтын мэдээллээ шалгана уу.",

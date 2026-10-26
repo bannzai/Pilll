@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} mağazasında bir hata oluştu. Lütfen biraz sonra tekrar deneyin.",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma işlemine izin verilmiyor",
   "purchaseErrorPurchaseInvalidError": "Ödeme tamamlanamadı. Ödeme yönteminizin geçerli olup olmadığını kontrol edip tekrar deneyin.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Seçilen plan şu anda mevcut değildir. Lütfen uygulamayı yeniden başlatın ve tekrar deneyin.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Seçtiğiniz plan şu anda satın alınamıyor. Lütfen uygulamayı yeniden başlatıp tekrar deneyin.",
   "purchaseErrorProductAlreadyPurchasedError": "Zaten bir plan satın almışsınız. Bu cihazda satın alma bilgilerinizi geri yüklemek için \"Daha önce satın alanlar için buraya\" seçeneğinden satın alma bilgilerinizi geri yükleyin.",
   "purchaseErrorReceiptAlreadyInUseError": "Zaten satın alındı veya satın alma bilgileri başka bir kullanıcı tarafından kullanılıyor. {accountName} hesabını kontrol edin.",
   "purchaseErrorInvalidReceiptError": "Geçersiz satın alma bilgisi. Lütfen satın alma bilgilerinizi kontrol edin.",

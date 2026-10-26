@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Bi {storeName} isch en Fähler passiert. Probier’s bitte spöter nomal.",
   "purchaseErrorPurchaseNotAllowedError": "Uf däm Grät sind Chäuf nöd erlaubt",
   "purchaseErrorPurchaseInvalidError": "S Zahle hät nöd klappt. Lueg bitte, öb dini Zahligsmethode gültig isch, und probiers nomal.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "S gwählte Abo isch momentan nöd verfüegbar. Bitte start d App neu und probier's nomol.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "De uusgwählti Plan chasch im Momänt nöd chaufe. Start d App bitte neu und probier's nomal.",
   "purchaseErrorProductAlreadyPurchasedError": "Sie händ bereits es Abo kauft. Um d'Chaufinformatione uf dem Gerät z'widerherstellä, chönd Sie uf 'Für vorherigi Chäufer da' klickä.",
   "purchaseErrorReceiptAlreadyInUseError": "Scho chauft oder d'Chaufinfo wird vo emne andere Benutzer bruucht. Prüef bitte {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ungültigi Chaufinformation. Bitte überprüefed Eui Chaufinformation.",

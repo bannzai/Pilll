@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName}ನಲ್ಲಿ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorPurchaseNotAllowedError": "ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿಗೆ ಅನುಮತಿ ಇಲ್ಲ",
   "purchaseErrorPurchaseInvalidError": "ಪಾವತಿ ಪೂರ್ಣಗೊಳ್ಳಲಿಲ್ಲ. ನಿಮ್ಮ ಪಾವತಿ ವಿಧಾನ ಮಾನ್ಯವಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "ಆಯ್ಕೆಮಾಡಿದ ಯೋಜನೆಯು ಪ್ರಸ್ತುತ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮರುಪಾರಂಭಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "purchaseErrorProductNotAvailableForPurchaseError": "ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ಯೋಜನೆ ಈಗ ಖರೀದಿಗೆ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಆ್ಯಪ್ ಅನ್ನು ಮರುಪ್ರಾರಂಭಿಸಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
   "purchaseErrorProductAlreadyPurchasedError": "ಈಗಾಗಲೇ ಯೋಜನೆಯನ್ನು ಖರೀದಿಸಲಾಗಿದೆ. ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು \"ಹಿಂದೆ ಖರೀದಿಸಿದವರು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ\" ನಿಂದ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಿ",
   "purchaseErrorReceiptAlreadyInUseError": "ಈಗಾಗಲೇ ಖರೀದಿಸಲಾಗಿದೆ. ಅಥವಾ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ದಯವಿಟ್ಟು {accountName} ಅನ್ನು ಪರಿಶೀಲಿಸಿ",
   "purchaseErrorInvalidReceiptError": "ಅಮಾನ್ಯ ಖರೀದಿ ಮಾಹಿತಿ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ",

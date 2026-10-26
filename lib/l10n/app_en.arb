@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "There’s a problem with {storeName}. Please try again in a little while.",
   "purchaseErrorPurchaseNotAllowedError": "Purchases aren't allowed on this device",
   "purchaseErrorPurchaseInvalidError": "Payment failed. Check that your payment method is valid, then try again.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "The selected plan is currently not available for purchase. Please restart the app and try again.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "The selected plan isn't available for purchase right now. Please restart the app and try again.",
   "purchaseErrorProductAlreadyPurchasedError": "You have already purchased a plan. To restore your purchase information on this device, please restore your purchase information from \"For Previous Purchasers\".",
   "purchaseErrorReceiptAlreadyInUseError": "Already purchased or purchase information is being used by another user. Please check {accountName}.",
   "purchaseErrorInvalidReceiptError": "Invalid purchase information. Please verify your purchase details.",

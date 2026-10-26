@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} ਵਿੱਚ ਕੋਈ ਗੜਬੜ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorPurchaseNotAllowedError": "ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ",
   "purchaseErrorPurchaseInvalidError": "ਭੁਗਤਾਨ ਪੂਰਾ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚ ਕਰੋ ਕਿ ਤੁਹਾਡਾ ਭੁਗਤਾਨ ਤਰੀਕਾ ਵੈਧ ਹੈ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-  "purchaseErrorProductNotAvailableForPurchaseError": "ਚੁਣਿਆ ਗਿਆ ਪਲਾਨ ਫਿਲਹਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਰੀਸਟਾਰਟ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "purchaseErrorProductNotAvailableForPurchaseError": "ਚੁਣਿਆ ਗਿਆ ਪਲਾਨ ਇਸ ਵੇਲੇ ਖਰੀਦਣ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਮੁੜ ਚਾਲੂ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "purchaseErrorProductAlreadyPurchasedError": "ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਪਲਾਨ ਖਰੀਦ ਚੁੱਕੇ ਹੋ। ਇਸ ਡਿਵਾਈਸ ਤੇ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਬਹਾਲ ਕਰਨ ਲਈ \"ਪਹਿਲਾਂ ਖਰੀਦਣ ਵਾਲੇ ਇੱਥੇ ਕਲਿੱਕ ਕਰੋ\" ਤੋਂ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਨੂੰ ਬਹਾਲ ਕਰੋ।",
   "purchaseErrorReceiptAlreadyInUseError": "ਪਹਿਲਾਂ ਹੀ ਖਰੀਦਿਆ ਹੋਇਆ ਹੈ। ਜਾਂ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਕਿਸੇ ਹੋਰ ਉਪਭੋਗਤਾ ਦੁਆਰਾ ਵਰਤੀ ਜਾ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ {accountName} ਨੂੰ ਚੈੱਕ ਕਰੋ।",
   "purchaseErrorInvalidReceiptError": "ਗਲਤ ਖਰੀਦਦਾਰੀ ਜਾਣਕਾਰੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਜਾਣਕਾਰੀ ਦੀ ਜਾਂਚ ਕਰੋ।",

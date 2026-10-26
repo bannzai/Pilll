@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} 出现了错误，请稍后再试。",
   "purchaseErrorPurchaseNotAllowedError": "此设备不允许购买",
   "purchaseErrorPurchaseInvalidError": "支付未成功。请确认支付方式是否有效，然后重试。",
-  "purchaseErrorProductNotAvailableForPurchaseError": "该套餐当前暂停销售，请重新启动应用后重试",
+  "purchaseErrorProductNotAvailableForPurchaseError": "所选方案暂时无法购买。请重启应用后再试。",
   "purchaseErrorProductAlreadyPurchasedError": "您已购买订阅服务。如需在此设备恢复购买信息，请通过\"已购买用户点此处\"恢复购买记录。",
   "purchaseErrorReceiptAlreadyInUseError": "已经购买过了，或者购买信息已被其他用户使用。请确认{accountName}。",
   "purchaseErrorInvalidReceiptError": "购买信息无效，请确认您的购买信息",

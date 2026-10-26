@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova tra poco.",
   "purchaseErrorPurchaseNotAllowedError": "Gli acquisti non sono consentiti su questo dispositivo",
   "purchaseErrorPurchaseInvalidError": "Il pagamento non è andato a buon fine. Verifica che il metodo di pagamento sia valido e riprova.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Il piano selezionato non è attualmente disponibile. Ci scusiamo per l'inconveniente, riavvia l'app e riprova.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Il piano selezionato non è acquistabile al momento. Riavvia l'app e riprova.",
   "purchaseErrorProductAlreadyPurchasedError": "Piano già acquistato. Per ripristinare le informazioni di acquisto su questo dispositivo, utilizza \"Per chi ha già acquistato, clicca qui\" per ripristinare le informazioni di acquisto.",
   "purchaseErrorReceiptAlreadyInUseError": "Già acquistato o le informazioni di acquisto sono già utilizzate da un altro utente. Verifica {accountName}.",
   "purchaseErrorInvalidReceiptError": "Informazioni di acquisto non valide. Verifica i dati di acquisto.",

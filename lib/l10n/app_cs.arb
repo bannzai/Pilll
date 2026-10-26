@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "V {storeName} došlo k chybě. Zkuste to prosím za chvíli znovu.",
   "purchaseErrorPurchaseNotAllowedError": "Na tomto zařízení nejsou povoleny nákupy",
   "purchaseErrorPurchaseInvalidError": "Platba se nezdařila. Zkontrolujte prosím, zda je vaše platební metoda platná, a zkuste to znovu.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Vybraný plán není momentálně dostupný. Prosím restartujte aplikaci a zkuste to znovu.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Vybraný plán momentálně nelze zakoupit. Restartujte prosím aplikaci a zkuste to znovu.",
   "purchaseErrorProductAlreadyPurchasedError": "Plán již máte zakoupený. Chcete-li obnovit informace o nákupu na tomto zařízení, použijte možnost „Pro předchozí kupující\" k obnovení vašich nákupních informací.",
   "purchaseErrorReceiptAlreadyInUseError": "Již zakoupeno nebo jsou informace o nákupu používány jiným uživatelem. Zkontrolujte prosím {accountName}.",
   "purchaseErrorInvalidReceiptError": "Neplatné údaje o nákupu. Zkontrolujte prosím své údaje o nákupu.",

@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "A apărut o eroare în {storeName}. Încearcă din nou peste puțin timp.",
   "purchaseErrorPurchaseNotAllowedError": "Achizițiile nu sunt permise pe acest dispozitiv",
   "purchaseErrorPurchaseInvalidError": "Plata nu a putut fi efectuată. Verifică dacă metoda de plată este validă și încearcă din nou.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Planul selectat nu este disponibil în acest moment. Vă rugăm să reporniți aplicația și să încercați din nou.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Planul ales nu poate fi cumpărat momentan. Repornește aplicația și încearcă din nou.",
   "purchaseErrorProductAlreadyPurchasedError": "Aveți deja un plan cumpărat. Pentru a restaura informațiile de cumpărare pe acest dispozitiv, vă rugăm să restaurați informațiile de cumpărare prin „Pentru cei care au cumpărat anterior\".",
   "purchaseErrorReceiptAlreadyInUseError": "Deja achiziționat sau informațiile de achiziție sunt utilizate de un alt utilizator. Vă rugăm să verificați {accountName}.",
   "purchaseErrorInvalidReceiptError": "Informațiile de achiziție sunt invalide. Vă rugăm să verificați informațiile de achiziție.",

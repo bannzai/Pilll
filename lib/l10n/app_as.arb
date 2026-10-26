@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName}ত এটা সমস্যা হৈছে। অনুগ্ৰহ কৰি কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
   "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইচত ক্ৰয় কৰাৰ অনুমতি নাই",
   "purchaseErrorPurchaseInvalidError": "পেমেণ্ট সম্পূৰ্ণ নহ’ল। আপোনাৰ পেমেণ্টৰ পদ্ধতিটো বৈধ নে নহয় চাওক আৰু পুনৰ চেষ্টা কৰক।",
-  "purchaseErrorProductNotAvailableForPurchaseError": "লক্ষ্যিত প্লেনটো বৰ্তমান বিক্ৰয়ৰ বাবে উপলব্ধ নহয়। অসুবিধাৰ বাবে দুঃখিত, অনুগ্ৰহ কৰি এপটো পুনৰাৰম্ভ কৰি আকৌ চেষ্টা কৰক।",
+  "purchaseErrorProductNotAvailableForPurchaseError": "আপুনি বাছি লোৱা প্লেনটো বৰ্তমান কিনিবলৈ উপলব্ধ নহয়। অনুগ্ৰহ কৰি এপটো পুনৰ আৰম্ভ কৰি আকৌ চেষ্টা কৰক।",
   "purchaseErrorProductAlreadyPurchasedError": "আপুনি ইতিমধ্যে এটা পৰিকল্পনা ক্ৰয় কৰিছে। এই ডিভাইচত ক্ৰয় তথ্য পুনৰুদ্ধাৰ কৰিবলৈ \"পূৰ্বে ক্ৰয় কৰা সকলৰ বাবে ইয়াত ক্লিক কৰক\"ৰ পৰা ক্ৰয় তথ্য পুনৰুদ্ধাৰ কৰক",
   "purchaseErrorReceiptAlreadyInUseError": "আগতেই কিনা হৈছে। অথবা ক্ৰয় তথ্য অন্য ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰি আছে। {accountName} পৰীক্ষা কৰক।",
   "purchaseErrorInvalidReceiptError": "ক্ৰয় তথ্য ভুল হৈছে। অনুগ্ৰহ কৰি আপোনাৰ ক্ৰয় তথ্য পৰীক্ষা কৰক।",

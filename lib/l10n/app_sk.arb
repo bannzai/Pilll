@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "V obchode {storeName} sa vyskytla chyba. Skúste to, prosím, o chvíľu znova.",
   "purchaseErrorPurchaseNotAllowedError": "Na tomto zariadení nie sú povolené nákupy",
   "purchaseErrorPurchaseInvalidError": "Platba sa nepodarila. Skontrolujte, či je váš spôsob platby platný, a skúste to znova.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Tento plán momentálne nie je k dispozícii na predaj. Prosíme, reštartujte aplikáciu a skúste to znova.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Vybraný plán momentálne nie je možné zakúpiť. Reštartujte aplikáciu a skúste to znova.",
   "purchaseErrorProductAlreadyPurchasedError": "Už máte zakúpený plán. Ak chcete obnoviť informácie o nákupe na tomto zariadení, použite možnosť \"Už som nakupoval/a\"",
   "purchaseErrorReceiptAlreadyInUseError": "Už zakúpené alebo informácie o nákupe sú používané iným používateľom. Skontrolujte {accountName}.",
   "purchaseErrorInvalidReceiptError": "Neplatné informácie o nákupe. Prosím, skontrolujte informácie o nákupe.",

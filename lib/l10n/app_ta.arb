@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} இல் பிழை ஏற்பட்டுள்ளது. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள்.",
   "purchaseErrorPurchaseNotAllowedError": "இந்தச் சாதனத்தில் வாங்க அனுமதி இல்லை",
   "purchaseErrorPurchaseInvalidError": "பணம் செலுத்த முடியவில்லை. உங்கள் கட்டண முறை செல்லுபடியாகிறதா என்பதைச் சரிபார்த்து, மீண்டும் முயற்சி செய்யுங்கள்.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "குறிப்பிட்ட திட்டம் தற்போது விற்பனையில் இல்லை. தயவுசெய்து ஆப்ஸை மீண்டும் தொடங்கி முயற்சிக்கவும்",
+  "purchaseErrorProductNotAvailableForPurchaseError": "தேர்ந்தெடுத்த திட்டத்தை இப்போது வாங்க முடியவில்லை. செயலியை மீண்டும் தொடங்கி, மறுபடியும் முயற்சி செய்யுங்கள்.",
   "purchaseErrorProductAlreadyPurchasedError": "ஏற்கனவே திட்டம் வாங்கியுள்ளீர்கள். இந்த சாதனத்தில் வாங்கிய தகவலை மீட்டெடுக்க «முன்பு வாங்கியவர்கள் இங்கே» இலிருந்து வாங்கிய தகவலை மீட்டெடுக்கவும்",
   "purchaseErrorReceiptAlreadyInUseError": "ஏற்கனவே வாங்கப்பட்டுவிட்டது அல்லது வாங்குதல் தகவல் வேறு பயனரால் பயன்படுத்தப்படுகிறது. {accountName} கணக்கை சரிபார்க்கவும்",
   "purchaseErrorInvalidReceiptError": "செல்லாத கொள்முதல் தகவல். கொள்முதல் தகவலை சரிபார்க்கவும்",

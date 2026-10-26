@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "У {storeName} узнікла памылка. Калі ласка, паспрабуйце яшчэ раз крыху пазней.",
   "purchaseErrorPurchaseNotAllowedError": "На гэтай прыладзе пакупкі не дазволены",
   "purchaseErrorPurchaseInvalidError": "Аплата не прайшла. Праверце, ці сапраўдны ваш спосаб аплаты, і паспрабуйце яшчэ раз.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Выбраны план цяпер недаступны для покупкі. Калі ласка, перазапусціць прыкладанне і паспрабаваць зноў.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Абраны план зараз недаступны для пакупкі. Калі ласка, перазапусціце праграму і паспрабуйце яшчэ раз.",
   "purchaseErrorProductAlreadyPurchasedError": "Вы ўжо набылі план. Каб аднавіць інфармацыю аб покупцы на гэтай прыладзе, калі ласка, выкарыстоўвайце «Для тых, хто купіў раней».",
   "purchaseErrorReceiptAlreadyInUseError": "Ужо куплена ці інфармацыя аб пакупцы выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}.",
   "purchaseErrorInvalidReceiptError": "Недзейсныя даныя аб пакупцы. Калі ласка, праверце інфармацыю аб пакупцы.",

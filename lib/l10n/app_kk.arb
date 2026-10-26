@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName} дүкенінде қате орын алды. Сәлден кейін қайта көріңіз.",
   "purchaseErrorPurchaseNotAllowedError": "Бұл құрылғыда сатып алуға рұқсат етілмейді",
   "purchaseErrorPurchaseInvalidError": "Төлем орындалмады. Төлем әдісіңіздің жарамды екенін тексеріп, қайта көріңіз.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Мақсатты жоспар қазіргі уақытта сатылмайды. Қолданбаны қайта іске қосып, қайталап көріңіз",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Таңдалған жоспарды қазір сатып алу мүмкін емес. Қолданбаны қайта іске қосып, тағы бір рет көріңіз.",
   "purchaseErrorProductAlreadyPurchasedError": "Жоспар әлдеқашан сатып алынды. Осы құрылғыда сатып алу ақпаратын қалпына келтіру үшін \"Бұрын сатып алғандар үшін\" бөлімінен сатып алу ақпаратын қалпына келтіріңіз",
   "purchaseErrorReceiptAlreadyInUseError": "Әлдеқашан сатып алынған немесе сатып алу ақپараты басқа пайдаланушымен пайдаланылуда. {accountName} тексеріңіз",
   "purchaseErrorInvalidReceiptError": "Жарамсыз сатып алу ақпараты. Сатып алу ақпаратын тексеріңіз.",

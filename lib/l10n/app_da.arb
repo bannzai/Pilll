@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Der er opstået en fejl i {storeName}. Prøv igen om lidt.",
   "purchaseErrorPurchaseNotAllowedError": "Køb er ikke tilladt på denne enhed",
   "purchaseErrorPurchaseInvalidError": "Betalingen mislykkedes. Tjek, om din betalingsmetode er gyldig, og prøv igen.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Det valgte abonnement er ikke tilgængeligt i øjeblikket. Genstart venligst appen og prøv igen.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Den valgte plan kan ikke købes lige nu. Genstart appen, og prøv igen.",
   "purchaseErrorProductAlreadyPurchasedError": "Du har allerede købt et abonnement. Hvis du vil gendanne dine købsoplysninger på denne enhed, skal du gendanne dem fra \"Tidligere købere klik her\".",
   "purchaseErrorReceiptAlreadyInUseError": "Allerede købt eller købsinformationen bruges af en anden bruger. Kontroller {accountName}.",
   "purchaseErrorInvalidReceiptError": "Ugyldige købsoplysninger. Kontroller venligst din købsinformation.",

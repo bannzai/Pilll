@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "{storeName}-ში შეცდომა მოხდა. გთხოვთ, ცოტა ხნის შემდეგ ხელახლა სცადოთ.",
   "purchaseErrorPurchaseNotAllowedError": "ამ მოწყობილობაზე შესყიდვები დაშვებული არ არის",
   "purchaseErrorPurchaseInvalidError": "გადახდა ვერ შესრულდა. გთხოვთ, შეამოწმოთ, მოქმედია თუ არა თქვენი გადახდის მეთოდი, და ხელახლა სცადოთ.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "სამიზნე პლანი ამჟამად არ იყიდება. გთხოვთ, თავიდან გაუშვით აპლიკაცია და ისევ სცადეთ",
+  "purchaseErrorProductNotAvailableForPurchaseError": "არჩეული გეგმა ამჟამად შესაძენად ხელმისაწვდომი არ არის. გთხოვთ, ხელახლა ჩართოთ აპი და კიდევ სცადოთ.",
   "purchaseErrorProductAlreadyPurchasedError": "უკვე გაქვთ შეძენილი გეგმა. ამ მოწყობილობაზე ყიდვის ინფორმაციის აღდგენისთვის გამოიყენეთ \"ადრე შემძენებლისთვის აქ\"",
   "purchaseErrorReceiptAlreadyInUseError": "უკვე შეძენილია ან შესყიდვის ინფორმაცია სხვა მომხმარებლის მიერ არის გამოყენებული. გთხოვთ შეამოწმოთ {accountName}",
   "purchaseErrorInvalidReceiptError": "არასწორი შეძენის ინფორმაცია. გთხოვთ შეამოწმოთ შეძენის მონაცემები.",

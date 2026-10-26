@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Hiba történt a(z) {storeName} áruházban. Kérjük, próbáld újra egy kis idő múlva.",
   "purchaseErrorPurchaseNotAllowedError": "Ezen az eszközön nem engedélyezett a vásárlás",
   "purchaseErrorPurchaseInvalidError": "A fizetés nem sikerült. Ellenőrizd, hogy érvényes-e a fizetési módod, majd próbáld újra.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "A kiválasztott csomag jelenleg nem elérhető. Kérjük, indítsa újra az alkalmazást és próbálja újra.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "A kiválasztott csomag jelenleg nem vásárolható meg. Kérjük, indítsd újra az alkalmazást, majd próbáld meg ismét.",
   "purchaseErrorProductAlreadyPurchasedError": "Már megvásárolta a tervet. A vásárlási információk ezen az eszközön történő visszaállításához használja a „Korábbi vásárlók ide\" opciót.",
   "purchaseErrorReceiptAlreadyInUseError": "Már megvásárolt, vagy a vásárlási információt másik felhasználó használja. Kérjük, ellenőrizze a(z) {accountName} fiókot.",
   "purchaseErrorInvalidReceiptError": "Érvénytelen vásárlási információ. Kérjük, ellenőrizze a vásárlási adatokat.",

@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "В {storeName} произошла ошибка. Пожалуйста, попробуйте ещё раз немного позже.",
   "purchaseErrorPurchaseNotAllowedError": "Покупки на этом устройстве не разрешены",
   "purchaseErrorPurchaseInvalidError": "Оплата не прошла. Проверьте, действителен ли ваш способ оплаты, и попробуйте ещё раз.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Данный план в настоящее время недоступен для покупки. Пожалуйста, перезапустите приложение и попробуйте ещё раз.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Выбранный план сейчас недоступен для покупки. Пожалуйста, перезапустите приложение и попробуйте ещё раз.",
   "purchaseErrorProductAlreadyPurchasedError": "План уже приобретен. Для восстановления информации о покупке на этом устройстве используйте «Если вы уже приобретали ранее»",
   "purchaseErrorReceiptAlreadyInUseError": "Уже приобретено или информация о покупке используется другим пользователем. Пожалуйста, проверьте {accountName}",
   "purchaseErrorInvalidReceiptError": "Недействительная информация о покупке. Проверьте данные покупки",

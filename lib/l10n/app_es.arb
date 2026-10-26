@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Se ha producido un error en {storeName}. Vuelve a intentarlo dentro de un rato.",
   "purchaseErrorPurchaseNotAllowedError": "No se permiten compras en este dispositivo",
   "purchaseErrorPurchaseInvalidError": "No se pudo completar el pago. Comprueba que tu método de pago sea válido e inténtalo de nuevo.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "El plan seleccionado no está disponible en este momento. Por favor, reinicia la aplicación e inténtalo de nuevo.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "El plan que elegiste no está disponible para comprarlo en este momento. Reinicia la aplicación y vuelve a intentarlo.",
   "purchaseErrorProductAlreadyPurchasedError": "Ya has adquirido el plan. Para restaurar la información de compra en este dispositivo, selecciona \"Para usuarios que compraron anteriormente\" y restaura tu información de compra.",
   "purchaseErrorReceiptAlreadyInUseError": "Ya fue comprado o la información de compra está siendo utilizada por otro usuario. Por favor verifique {accountName}.",
   "purchaseErrorInvalidReceiptError": "Información de compra inválida. Por favor, verifique los datos de su compra.",

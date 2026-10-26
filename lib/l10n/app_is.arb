@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Villa kom upp í {storeName}. Prófaðu aftur eftir smástund.",
   "purchaseErrorPurchaseNotAllowedError": "Kaup eru ekki leyfð í þessu tæki",
   "purchaseErrorPurchaseInvalidError": "Greiðslan tókst ekki. Athugaðu hvort greiðslumátinn þinn sé gildur og reyndu aftur.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Valda áætlunin er ekki til sölu í augnablikinu. Vinsamlegast endurræstu forritið og reyndu aftur.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Ekki er hægt að kaupa valda áskrift eins og er. Prófaðu að endurræsa appið og reyna aftur.",
   "purchaseErrorProductAlreadyPurchasedError": "Áskrift er þegar keypt. Til að endurheimta kaupupplýsingar á þessu tæki skaltu fara í \"Hér fyrir þá sem hafa keypt áður\" og endurheimta kaupupplýsingarnar.",
   "purchaseErrorReceiptAlreadyInUseError": "Þegar keypt eða kaupupplýsingarnar eru nú þegar í notkun hjá öðrum notanda. Vinsamlegast staðfestu {accountName}.",
   "purchaseErrorInvalidReceiptError": "Rangar kaupupplýsingar. Vinsamlegast athugaðu kaupupplýsingarnar þínar.",

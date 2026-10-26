@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Се појави грешка во {storeName}. Ве молиме, обидете се повторно по кратко време.",
   "purchaseErrorPurchaseNotAllowedError": "Купувањето не е дозволено на овој уред",
   "purchaseErrorPurchaseInvalidError": "Плаќањето не успеа. Проверете дали Вашиот начин на плаќање е важечки, па обидете се повторно.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Целниот план моментално не е достапен за продажба. Ве молиме рестартирајте ја апликацијата и обидете се повторно.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Избраниот план во моментов не е достапен за купување. Ве молиме, рестартирајте ја апликацијата и обидете се повторно.",
   "purchaseErrorProductAlreadyPurchasedError": "Веќе имате купено план. За да ги вратите информациите за купување на овој уред, кликнете на „За претходни купувачи кликнете тука\" за да ги вратите информациите за купување.",
   "purchaseErrorReceiptAlreadyInUseError": "Веќе купено или информациите за купување се користат од друг корисник. Проверете го {accountName}.",
   "purchaseErrorInvalidReceiptError": "Невалидни податоци за купување. Ве молиме проверете ги информациите за купување.",

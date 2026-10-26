@@ -291,7 +291,7 @@
   "purchaseErrorStoreProblemError": "Hitilafu imetokea kwenye {storeName}. Tafadhali jaribu tena baada ya muda mfupi.",
   "purchaseErrorPurchaseNotAllowedError": "Ununuzi hauruhusiwi kwenye kifaa hiki",
   "purchaseErrorPurchaseInvalidError": "Malipo hayakukamilika. Tafadhali hakikisha kuwa njia yako ya kulipa ni halali, kisha ujaribu tena.",
-  "purchaseErrorProductNotAvailableForPurchaseError": "Mpango uliochagua haupatikani kwa sasa. Tafadhali zindua upya programu na ujaribu tena.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Mpango uliochagua haupatikani kwa ununuzi kwa sasa. Tafadhali anzisha upya programu kisha ujaribu tena.",
   "purchaseErrorProductAlreadyPurchasedError": "Tayari umeshajinunua mpango. Ili kurejesha maelezo ya ununuzi katika kifaa hiki, bofya 'Wale walionunua awali bofya hapa'",
   "purchaseErrorReceiptAlreadyInUseError": "Imesha nunuliwa. Au taarifa ya ununuzi inatumika na mtumiaji mwingine. Tafadhali kagua {accountName}",
   "purchaseErrorInvalidReceiptError": "Taarifa za ununuzi ni batili. Tafadhali hakiki taarifa zako za ununuzi",
