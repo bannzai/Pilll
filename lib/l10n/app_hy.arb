@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} շրջանը կսկսվի {diffPlusOne} օրից",
   "remainingDaysAllFeatures": "Դուք կարող եք օգտվել բոլոր հնարավորություններից ևս {diff} օր",
   "todayIsTaking": "💊 Այսօր հաբ ընդունելու օրն է",
-  "todayPillToTake": "💊 Այսօրվա հաբ",
+  "todayPillToTake": "💊 Այսօրվա հաբը",
   "number": "համար",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-ից կանամսի սկիզբը գրանցվել է",

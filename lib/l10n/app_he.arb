@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "תקופת {activePillSheetPillSheetTypeNotTakenWord} תתחיל בעוד {diffPlusOne} ימים",
   "remainingDaysAllFeatures": "אפשר להשתמש בכל התכונות למשך {diff} ימים נוספים",
   "todayIsTaking": "💊 היום יום נטילת הגלולה",
-  "todayPillToTake": "💊 הגלולה להיום",
+  "todayPillToTake": "💊 הגלולה של היום",
   "number": "\"\"",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "נרשמה תחילת הווסת החל מ-{DateTimeFormatterMonthAndDay}",

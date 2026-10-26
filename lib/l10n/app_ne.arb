@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} अवधि सुरु हुन अझै {diffPlusOne} दिन बाँकी छ",
   "remainingDaysAllFeatures": "तपाईं अझै {diff} दिनसम्म सबै सुविधाहरू प्रयोग गर्न सक्नुहुन्छ",
   "todayIsTaking": "💊 आज चक्की खाने दिन हो",
-  "todayPillToTake": "💊 आज खाने गोली",
+  "todayPillToTake": "💊 आजको चक्की",
   "number": "नं",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} देखि मासिक धर्म सुरुवात भएको रूपमा रेकर्ड गरियो",

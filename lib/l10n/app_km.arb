@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "រយៈពេល{activePillSheetPillSheetTypeNotTakenWord}នឹងចាប់ផ្តើមក្នុងរយៈពេល {diffPlusOne} ថ្ងៃទៀត",
   "remainingDaysAllFeatures": "អ្នកអាចប្រើមុខងារទាំងអស់បានរយៈពេល {diff} ថ្ងៃទៀត",
   "todayIsTaking": "💊 ថ្ងៃនេះជាថ្ងៃលេបថ្នាំគ្រាប់",
-  "todayPillToTake": "💊 ថ្នាំថ្ងៃនេះ",
+  "todayPillToTake": "💊 គ្រាប់ថ្នាំសម្រាប់ថ្ងៃនេះ",
   "number": "ទី",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "បានកត់ត្រាជាការចាប់ផ្តើមរដូវពីថ្ងៃ {DateTimeFormatterMonthAndDay}",

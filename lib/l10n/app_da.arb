@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Perioden med {activePillSheetPillSheetTypeNotTakenWord} begynder om {diffPlusOne} dage",
   "remainingDaysAllFeatures": "Du kan bruge alle funktioner i {diff} dage mere",
   "todayIsTaking": "💊 I dag er det tid til din p-pille",
-  "todayPillToTake": "💊 Dagens pille",
+  "todayPillToTake": "💊 Dagens p-pille",
   "number": "Nr.",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruationsstart registreret fra {DateTimeFormatterMonthAndDay}",

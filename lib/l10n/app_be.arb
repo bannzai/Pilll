@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Перыяд {activePillSheetPillSheetTypeNotTakenWord} пачнецца праз {diffPlusOne} дзён",
   "remainingDaysAllFeatures": "Вы можаце карыстацца ўсімі функцыямі яшчэ {diff} дзён",
   "todayIsTaking": "💊 Сёння дзень прыёму пігулкі",
-  "todayPillToTake": "💊 Сённяшняя таблетка",
+  "todayPillToTake": "💊 Пігулка на сёння",
   "number": "\"\"",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "З {DateTimeFormatterMonthAndDay} зафіксаваны пачатак менструацыі",

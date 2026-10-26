@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "De periode met {activePillSheetPillSheetTypeNotTakenWord} begint over {diffPlusOne} dagen",
   "remainingDaysAllFeatures": "Je kunt alle functies nog {diff} dagen gebruiken",
   "todayIsTaking": "💊 Vandaag is het tijd voor je pil",
-  "todayPillToTake": "💊 Pil voor vandaag",
+  "todayPillToTake": "💊 De pil van vandaag",
   "number": "e",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruatiestart geregistreerd vanaf {DateTimeFormatterMonthAndDay}",

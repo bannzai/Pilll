@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Magsisimula ang panahon ng {activePillSheetPillSheetTypeNotTakenWord} sa loob ng {diffPlusOne} araw",
   "remainingDaysAllFeatures": "Magagamit ninyo ang lahat ng feature sa loob pa ng {diff} araw",
   "todayIsTaking": "💊 Ngayon ang araw ng pag-inom ng pildoras",
-  "todayPillToTake": "💊 Mga pildoras ngayong araw",
+  "todayPillToTake": "💊 Pildoras para sa araw na ito",
   "number": "bilang",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla mula sa {DateTimeFormatterMonthAndDay}",

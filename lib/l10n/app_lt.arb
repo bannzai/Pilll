@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} laikotarpis prasidės po {diffPlusOne} dienų",
   "remainingDaysAllFeatures": "Visomis funkcijomis galite naudotis dar {diff} dienų",
   "todayIsTaking": "💊 Šiandien tabletės vartojimo diena",
-  "todayPillToTake": "💊 Šiandienos tabletės",
+  "todayPillToTake": "💊 Šiandienos tabletė",
   "number": "-a",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruacijų pradžia užregistruota nuo {DateTimeFormatterMonthAndDay}",

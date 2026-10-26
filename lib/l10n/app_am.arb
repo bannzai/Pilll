@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "የ{activePillSheetPillSheetTypeNotTakenWord} ጊዜ በ{diffPlusOne} ቀናት ይጀምራል",
   "remainingDaysAllFeatures": "ሁሉንም ባህሪያት ለተጨማሪ {diff} ቀናት መጠቀም ይችላሉ",
   "todayIsTaking": "💊 ዛሬ ክኒን የሚወሰድበት ቀን ነው",
-  "todayPillToTake": "💊 የዛሬ ክኒን",
+  "todayPillToTake": "💊 ዛሬ የሚወሰድ ክኒን",
   "number": "ኛ",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ወርሃዊ ዑደት መጀመሪያ ተመዝግቧል",

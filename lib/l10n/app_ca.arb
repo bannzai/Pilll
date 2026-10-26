@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "El període de {activePillSheetPillSheetTypeNotTakenWord} començarà d’aquí a {diffPlusOne} dies",
   "remainingDaysAllFeatures": "Pots fer servir totes les funcions durant {diff} dies més",
   "todayIsTaking": "💊 Avui toca prendre la píndola",
-  "todayPillToTake": "💊 Píndola d'avui",
+  "todayPillToTake": "💊 La píndola d’avui",
   "number": "núm.",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "S'ha enregistrat l'inici de la menstruació des de {DateTimeFormatterMonthAndDay}",

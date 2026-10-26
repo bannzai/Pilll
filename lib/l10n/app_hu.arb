@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "A(z) {activePillSheetPillSheetTypeNotTakenWord} időszaka {diffPlusOne} nap múlva kezdődik",
   "remainingDaysAllFeatures": "Még {diff} napig használhatod az összes funkciót",
   "todayIsTaking": "💊 Ma esedékes a tabletta szedése",
-  "todayPillToTake": "💊 Mai pirula",
+  "todayPillToTake": "💊 A mai tabletta",
   "number": ".",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "A menstruáció kezdete {DateTimeFormatterMonthAndDay} dátummal rögzítve lett",

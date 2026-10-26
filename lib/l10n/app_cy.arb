@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord} yn dechrau ymhen {diffPlusOne} diwrnod",
   "remainingDaysAllFeatures": "Gallwch ddefnyddio pob nodwedd am {diff} diwrnod arall",
   "todayIsTaking": "💊 Mae'n ddiwrnod cymryd y bilsen heddiw",
-  "todayPillToTake": "💊 Pilen heddiw",
+  "todayPillToTake": "💊 Pilsen heddiw",
   "number": "rhif",
   "dayNumber": "diwrnod",
   "recordedMenstruationStartDate": "Cofnodwyd dechrau'r mislif o {DateTimeFormatterMonthAndDay}",

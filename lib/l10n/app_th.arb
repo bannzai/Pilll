@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "อีก {diffPlusOne} วันจะเริ่มช่วง{activePillSheetPillSheetTypeNotTakenWord}ค่ะ",
   "remainingDaysAllFeatures": "ใช้ฟีเจอร์ทั้งหมดได้อีก {diff} วันค่ะ",
   "todayIsTaking": "💊 วันนี้เป็นวันทานยา",
-  "todayPillToTake": "💊 ยาคุมวันนี้",
+  "todayPillToTake": "💊 ยาเม็ดสำหรับวันนี้",
   "number": "ที่",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "บันทึกการเริ่มประจำเดือนตั้งแต่{DateTimeFormatterMonthAndDay}เรียบร้อยแล้ว",

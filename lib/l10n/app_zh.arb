@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "还有 {diffPlusOne} 天就进入{activePillSheetPillSheetTypeNotTakenWord}期了",
   "remainingDaysAllFeatures": "所有功能还可使用 {diff} 天",
   "todayIsTaking": "💊 今天是服药日",
-  "todayPillToTake": "💊 今天要服用的避孕药",
+  "todayPillToTake": "💊 今天要服用的药片",
   "number": "号",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "已记录{DateTimeFormatterMonthAndDay}为月经开始日",

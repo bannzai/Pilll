@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Perioada de {activePillSheetPillSheetTypeNotTakenWord} începe peste {diffPlusOne} zile",
   "remainingDaysAllFeatures": "Poți folosi toate funcțiile încă {diff} zile",
   "todayIsTaking": "💊 Azi este ziua pentru administrarea pilulei",
-  "todayPillToTake": "💊 Pilula de astăzi",
+  "todayPillToTake": "💊 Pilula de azi",
   "number": "nr.",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Începutul menstruației a fost înregistrat de la {DateTimeFormatterMonthAndDay}",

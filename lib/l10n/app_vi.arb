@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Giai đoạn {activePillSheetPillSheetTypeNotTakenWord} sẽ bắt đầu sau {diffPlusOne} ngày nữa",
   "remainingDaysAllFeatures": "Bạn có thể dùng tất cả tính năng thêm {diff} ngày nữa",
   "todayIsTaking": "💊 Hôm nay là ngày uống thuốc",
-  "todayPillToTake": "💊 Thuốc uống hôm nay",
+  "todayPillToTake": "💊 Viên thuốc hôm nay",
   "number": "viên",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Đã ghi nhận bắt đầu kinh nguyệt từ {DateTimeFormatterMonthAndDay}",

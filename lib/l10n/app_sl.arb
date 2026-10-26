@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Obdobje {activePillSheetPillSheetTypeNotTakenWord} se začne čez {diffPlusOne} dni",
   "remainingDaysAllFeatures": "Vse funkcije lahko uporabljate še {diff} dni",
   "todayIsTaking": "💊 Danes je dan za jemanje tabletke",
-  "todayPillToTake": "💊 Današnja pilula",
+  "todayPillToTake": "💊 Današnja tabletka",
   "number": ".",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Od {DateTimeFormatterMonthAndDay} je zabeležen začetek menstruacije",

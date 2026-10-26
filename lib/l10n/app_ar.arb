@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "تبدأ فترة {activePillSheetPillSheetTypeNotTakenWord} بعد {diffPlusOne} أيام",
   "remainingDaysAllFeatures": "يمكنكِ استخدام جميع الميزات لمدة {diff} يومًا إضافيًا",
   "todayIsTaking": "💊 اليوم موعد تناول الحبة",
-  "todayPillToTake": "💊 حبوب اليوم",
+  "todayPillToTake": "💊 حبة اليوم",
   "number": "رقم",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "تم تسجيل بداية الدورة الشهرية من {DateTimeFormatterMonthAndDay}",

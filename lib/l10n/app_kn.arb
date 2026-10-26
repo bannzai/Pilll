@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ಅವಧಿ ಆರಂಭವಾಗಲು ಇನ್ನೂ {diffPlusOne} ದಿನಗಳಿವೆ",
   "remainingDaysAllFeatures": "ನೀವು ಇನ್ನೂ {diff} ದಿನಗಳವರೆಗೆ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಬಹುದು",
   "todayIsTaking": "💊 ಇಂದು ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ",
-  "todayPillToTake": "💊 ಇವತ್ತಿನ ಮಾತ್ರೆ",
+  "todayPillToTake": "💊 ಇಂದಿನ ಮಾತ್ರೆ",
   "number": "ನೆ",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ಇಂದ ಮಾಸಿಕ ಪ್ರಾರಂಭವಾಗಿ ದಾಖಲಿಸಲಾಗಿದೆ",

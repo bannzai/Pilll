@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} পর্ব শুরু হতে আর {diffPlusOne} দিন বাকি",
   "remainingDaysAllFeatures": "আপনি আরও {diff} দিন সব সুবিধা ব্যবহার করতে পারবেন",
   "todayIsTaking": "💊 আজ পিল খাওয়ার দিন",
-  "todayPillToTake": "💊 আজের পিল",
+  "todayPillToTake": "💊 আজকের পিল",
   "number": "নং",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} থেকে ঋতুস্রাব শুরু হিসেবে রেকর্ড করা হয়েছে",

@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} dövrünün başlamasına {diffPlusOne} gün qalıb",
   "remainingDaysAllFeatures": "Bütün funksiyalardan daha {diff} gün istifadə edə bilərsiniz",
   "todayIsTaking": "💊 Bu gün həb qəbul etmə günüdür",
-  "todayPillToTake": "💊 Bugün həb",
+  "todayPillToTake": "💊 Bu gün qəbul ediləcək həb",
   "number": "nömrə",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} tarixindən etibarən adet başlanğıcı kimi qeyd edildi",

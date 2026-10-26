@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Kipindi cha {activePillSheetPillSheetTypeNotTakenWord} kitaanza baada ya siku {diffPlusOne}",
   "remainingDaysAllFeatures": "Unaweza kutumia vipengele vyote kwa siku {diff} zaidi",
   "todayIsTaking": "💊 Leo ni siku ya kumeza kidonge",
-  "todayPillToTake": "💊 Vidonge vya leo",
+  "todayPillToTake": "💊 Kidonge cha leo",
   "number": "nambari",
   "dayNumber": "siku",
   "recordedMenstruationStartDate": "Imeandikwa mwanzo wa hedhi kuanzia {DateTimeFormatterMonthAndDay}",

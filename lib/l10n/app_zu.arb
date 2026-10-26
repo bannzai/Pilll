@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Isikhathi se-{activePillSheetPillSheetTypeNotTakenWord} sizoqala ezinsukwini ezingu-{diffPlusOne}",
   "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinye izinsuku ezingu-{diff}",
   "todayIsTaking": "💊 Namuhla usuku lokuphuza iphilisi",
-  "todayPillToTake": "💊 Amaphilisi zanamuhla",
+  "todayPillToTake": "💊 Iphilisi lanamuhla",
   "number": "inombolo",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Kurekhodiwe ukuqala kokuhamba kwezikhathi kusukela ku-{DateTimeFormatterMonthAndDay}",

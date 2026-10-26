@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} కాలం ప్రారంభం కావడానికి ఇంకా {diffPlusOne} రోజులు ఉన్నాయి",
   "remainingDaysAllFeatures": "మీరు మరో {diff} రోజుల పాటు అన్ని ఫీచర్‌లను ఉపయోగించవచ్చు",
   "todayIsTaking": "💊 ఈ రోజు మాత్ర తీసుకోవాల్సిన రోజు",
-  "todayPillToTake": "💊 నేడు తీసుకోవాల్సిన పిల్",
+  "todayPillToTake": "💊 ఈ రోజు వేసుకోవాల్సిన మాత్ర",
   "number": "వ",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} నుండి మాహవారీ ప్రారంభంగా రికార్డ్ చేశాము",

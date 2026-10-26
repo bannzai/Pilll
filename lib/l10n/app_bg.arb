@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Периодът на {activePillSheetPillSheetTypeNotTakenWord} започва след {diffPlusOne} дни",
   "remainingDaysAllFeatures": "Можете да използвате всички функции още {diff} дни",
   "todayIsTaking": "💊 Днес е ден за прием на хапчето",
-  "todayPillToTake": "💊 Хапче за днес",
+  "todayPillToTake": "💊 Хапчето за днес",
   "number": "№",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Записах началото на менструацията от {DateTimeFormatterMonthAndDay}",

@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} periods sāksies pēc {diffPlusOne} dienām",
   "remainingDaysAllFeatures": "Visas iespējas varat izmantot vēl {diff} dienas",
   "todayIsTaking": "💊 Šodien jālieto tablete",
-  "todayPillToTake": "💊 Šodienas tabletes",
+  "todayPillToTake": "💊 Šodienas tablete",
   "number": ".",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Menstruācijas sākums no {DateTimeFormatterMonthAndDay} ir ierakstīts",

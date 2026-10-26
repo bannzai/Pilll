@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "El período de {activePillSheetPillSheetTypeNotTakenWord} comienza en {diffPlusOne} días",
   "remainingDaysAllFeatures": "Puedes usar todas las funciones durante {diff} días más",
   "todayIsTaking": "💊 Hoy toca tomar la píldora",
-  "todayPillToTake": "💊 Píldora de hoy",
+  "todayPillToTake": "💊 La píldora de hoy",
   "number": "nº",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Se registró el inicio de la menstruación desde {DateTimeFormatterMonthAndDay}",

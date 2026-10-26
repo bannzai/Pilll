@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "Periode {activePillSheetPillSheetTypeNotTakenWord} dimulai dalam {diffPlusOne} hari",
   "remainingDaysAllFeatures": "Anda dapat menggunakan semua fitur selama {diff} hari lagi",
   "todayIsTaking": "💊 Hari ini jadwal minum pil",
-  "todayPillToTake": "💊 Pil hari ini",
+  "todayPillToTake": "💊 Pil untuk hari ini",
   "number": "ke",
   "dayNumber": "Hari ke",
   "recordedMenstruationStartDate": "Telah dicatat sebagai awal menstruasi mulai {DateTimeFormatterMonthAndDay}",

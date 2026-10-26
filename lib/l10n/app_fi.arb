@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}jakso alkaa {diffPlusOne} päivän kuluttua",
   "remainingDaysAllFeatures": "Voit käyttää kaikkia ominaisuuksia vielä {diff} päivää",
   "todayIsTaking": "💊 Tänään on pillerinottopäivä",
-  "todayPillToTake": "💊 Tänään otettava pilleri",
+  "todayPillToTake": "💊 Tämän päivän pilleri",
   "number": "nro",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Kuukautiset merkitty alkamaan {DateTimeFormatterMonthAndDay}",

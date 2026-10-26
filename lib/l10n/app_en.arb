@@ -149,7 +149,7 @@
   "daysUntilPausePeriod": "The {activePillSheetPillSheetTypeNotTakenWord} period starts in {diffPlusOne} days",
   "remainingDaysAllFeatures": "You can use all features for {diff} more days",
   "todayIsTaking": "💊 Pill scheduled for today",
-  "todayPillToTake": "💊 Today's Pill",
+  "todayPillToTake": "💊 Today’s pill",
   "number": "th",
   "dayNumber": "th day",
   "recordedMenstruationStartDate": "Recorded period start from {DateTimeFormatterMonthAndDay}",
