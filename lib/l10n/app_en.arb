@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Easily edit and resume your pill break",
   "endedPillSheetDialogHistoryTitle": "Would you like to see your pill pack history?",
   "endedPillSheetDialogSummaryTitle": "Let’s look back at this pill pack",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} days recorded, {missedDays} days missed",
+  "endedPillSheetDialogSummaryMessage": "pill log: {recordedDays} days recorded · {missedDays} days unrecorded",
   "midnightTakenWarningDialogTitle": "Please note",
   "midnightTakenWarningDialogBody": "Your pills have been recorded as taken through {takenDate}. Today's ({takenDate}) reminder notification at {reminderTimes} will not be delivered.\nIf this was a mistake, please revert the taken record.",
   "midnightTakenWarningDialogSeeHowToRevert": "See how to revert a taken record",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Também é fácil ajustar e retomar a pausa da pílula",
   "endedPillSheetDialogHistoryTitle": "Que tal ver o histórico das suas cartelas?",
   "endedPillSheetDialogSummaryTitle": "Vamos rever esta cartela",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dias registrados, {missedDays} dias esquecidos",
+  "endedPillSheetDialogSummaryMessage": "registro de uso: {recordedDays} dias · sem registro: {missedDays} dias",
   "midnightTakenWarningDialogTitle": "Atenção",
   "midnightTakenWarningDialogBody": "O registro de tomada foi feito até {takenDate}. O lembrete de hoje ({takenDate}) às {reminderTimes} não será enviado.\nSe isso foi um engano, desfaça o registro de tomada.",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver como desfazer o registro de tomada",

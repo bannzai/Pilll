@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Du kan också enkelt ändra och återuppta pillerpausen",
   "endedPillSheetDialogHistoryTitle": "Vill du se historiken för dina p-pillerkartor?",
   "endedPillSheetDialogSummaryTitle": "Låt oss se tillbaka på den här p-pillerkartan",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dagar registrerade, {missedDays} dagar missade",
+  "endedPillSheetDialogSummaryMessage": "intagslogg: {recordedDays} dagar · utan registrering: {missedDays} dagar",
   "midnightTakenWarningDialogTitle": "Observera",
   "midnightTakenWarningDialogBody": "Dina piller har registrerats som tagna till och med {takenDate}. Dagens påminnelse ({takenDate}) klockan {reminderTimes} kommer inte att skickas.\nOm detta var ett misstag, ångra registreringen av intaget.",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrering",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "קל גם לערוך את תקופת ההפסקה ולחדש אותה",
   "endedPillSheetDialogHistoryTitle": "רוצה לראות את היסטוריית חפיסת הגלולות?",
   "endedPillSheetDialogSummaryTitle": "בואי נעבור על חפיסת הגלולות הזו",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} ימים תועדו, {missedDays} ימים הוחמצו",
+  "endedPillSheetDialogSummaryMessage": "רישום נטילה: {recordedDays} ימים · ללא רישום: {missedDays} ימים",
   "midnightTakenWarningDialogTitle": "שים לב",
   "midnightTakenWarningDialogBody": "נרשמה נטילת הגלולות עד {takenDate}. הודעת התזכורת של היום ({takenDate}) בשעה {reminderTimes} לא תישלח אליך.\nאם מדובר בטעות, אנא בטל את רישום הנטילה",
   "midnightTakenWarningDialogSeeHowToRevert": "לראות איך לבטל רישום נטילה",

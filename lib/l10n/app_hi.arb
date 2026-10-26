@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "गोली लेने का विराम बदलना और फिर से शुरू करना भी आसान है",
   "endedPillSheetDialogHistoryTitle": "क्या आप पिल स्ट्रिप का इतिहास देखना चाहेंगी?",
   "endedPillSheetDialogSummaryTitle": "आइए, इस पिल स्ट्रिप के सेवन पर एक नज़र डालें",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} दिन दर्ज हुए, {missedDays} दिन छूट गए",
+  "endedPillSheetDialogSummaryMessage": "सेवन रिकॉर्ड: {recordedDays} दिन · बिना रिकॉर्ड: {missedDays} दिन",
   "midnightTakenWarningDialogTitle": "कृपया ध्यान दें",
   "midnightTakenWarningDialogBody": "{takenDate} तक की गोलियां सेवन के रूप में दर्ज हो चुकी हैं। आज ({takenDate}) के {reminderTimes} बजे की सूचना आपको नहीं मिलेगी।\nअगर यह गलती से हुआ है, तो कृपया सेवन रद्द करें।",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करने का तरीका देखें",

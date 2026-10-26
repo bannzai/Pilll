@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "गोळ्यांचा विराम बदलणे आणि पुन्हा सुरू करणेही सोपे आहे",
   "endedPillSheetDialogHistoryTitle": "तुम्हाला पिल शीटचा इतिहास पाहायचा आहे का?",
   "endedPillSheetDialogSummaryTitle": "या पिल शीटमधील नोंदींवर एक नजर टाकूया",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} दिवस नोंदवले, {missedDays} दिवस चुकले",
+  "endedPillSheetDialogSummaryMessage": "सेवन नोंद: {recordedDays} दिवस · नोंद नसलेले: {missedDays} दिवस",
   "midnightTakenWarningDialogTitle": "कृपया लक्ष द्या",
   "midnightTakenWarningDialogBody": "{takenDate} पर्यंतच्या सेवनाची नोंद झाली आहे. आज ({takenDate}) {reminderTimes} वाजताची सूचना तुम्हाला मिळणार नाही.\nचुकून नोंद झाली असल्यास, कृपया सेवन रद्द करा",
   "midnightTakenWarningDialogSeeHowToRevert": "सेवन रद्द करण्याची पद्धत पहा",

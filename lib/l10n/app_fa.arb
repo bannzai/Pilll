@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "تغییر و ازسرگیری دورهٔ وقفه هم آسان است",
   "endedPillSheetDialogHistoryTitle": "مایلید سابقه ورق قرص‌ها را ببینید؟",
   "endedPillSheetDialogSummaryTitle": "بیایید این ورق قرص را مرور کنیم",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} روز ثبت شده، {missedDays} روز ثبت نشده",
+  "endedPillSheetDialogSummaryMessage": "ثبت مصرف: {recordedDays} روز · بدون ثبت: {missedDays} روز",
   "midnightTakenWarningDialogTitle": "لطفاً توجه کنید",
   "midnightTakenWarningDialogBody": "مصرف قرص تا تاریخ {takenDate} ثبت شده است. اعلان یادآوری امروز ({takenDate}) در ساعت {reminderTimes} برای شما ارسال نخواهد شد.\nدر صورت اشتباه بودن، لطفاً مصرف را لغو کنید.",
   "midnightTakenWarningDialogSeeHowToRevert": "مشاهده روش لغو ثبت مصرف",

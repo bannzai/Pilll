@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Завсарлагын хугацааг өөрчилж, дахин үргэлжлүүлэхэд ч амархан",
   "endedPillSheetDialogHistoryTitle": "Эмийн блистерийн түүхийг харах уу?",
   "endedPillSheetDialogSummaryTitle": "Энэ эмийн блистерийн хэрэглээг эргэн харцгаая",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} өдөр бүртгэгдсэн, {missedDays} өдөр алгассан",
+  "endedPillSheetDialogSummaryMessage": "эм уусан бүртгэлтэй: {recordedDays} өдөр · бүртгэлгүй: {missedDays} өдөр",
   "midnightTakenWarningDialogTitle": "Анхаарна уу",
   "midnightTakenWarningDialogBody": "{takenDate}-ы хүртэлх уусан бүртгэл хийгдсэн байна. Өнөөдөр буюу {takenDate}-ны {reminderTimes} цагийн мэдэгдэл тань ирэхгүй.\nХэрэв алдаатай бол уусан бүртгэлээ цуцлана уу",
   "midnightTakenWarningDialogSeeHowToRevert": "Уусан бүртгэлийг цуцлах аргыг үзэх",

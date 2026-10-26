@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Obdobje premora lahko preprosto uredite in nadaljujete",
   "endedPillSheetDialogHistoryTitle": "Bi si želeli ogledati zgodovino ploščic?",
   "endedPillSheetDialogSummaryTitle": "Poglejmo si to ploščico za nazaj",
-  "endedPillSheetDialogSummaryMessage": "Zabeleženih dni: {recordedDays}, izpuščenih: {missedDays}",
+  "endedPillSheetDialogSummaryMessage": "beleženje jemanja: {recordedDays} dni · brez zapisa: {missedDays} dni",
   "midnightTakenWarningDialogTitle": "Bodite pozorni",
   "midnightTakenWarningDialogBody": "Jemanje je zabeleženo do {takenDate}. Današnje ({takenDate}) obvestilo ob {reminderTimes} zato ne bo prejeto.\nČe je prišlo do napake, prosimo, razveljavite zapis o jemanju.",
   "midnightTakenWarningDialogSeeHowToRevert": "Poglejte, kako razveljaviti zapis o jemanju",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "ഗുളിക ഇടവേള മാറ്റുന്നതും വീണ്ടും തുടരുന്നതും എളുപ്പമാണ്",
   "endedPillSheetDialogHistoryTitle": "ഗുളിക സ്ട്രിപ്പുകളുടെ ചരിത്രം കാണാൻ താൽപ്പര്യമുണ്ടോ?",
   "endedPillSheetDialogSummaryTitle": "ഈ ഗുളിക സ്ട്രിപ്പിനെക്കുറിച്ച് ഒന്നു തിരിഞ്ഞുനോക്കാം",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} ദിവസം രേഖപ്പെടുത്തി, {missedDays} ദിവസം വിട്ടുപോയി",
+  "endedPillSheetDialogSummaryMessage": "ഗുളിക കഴിച്ചതിന്റെ രേഖ: {recordedDays} ദിവസം · രേഖപ്പെടുത്താത്തത്: {missedDays} ദിവസം",
   "midnightTakenWarningDialogTitle": "ദയവായി ശ്രദ്ധിക്കുക",
   "midnightTakenWarningDialogBody": "{takenDate} വരെയുള്ള ഗുളിക സേവന രേഖ ചെയ്യപ്പെട്ടിരിക്കുന്നു. ഇന്ന് ({takenDate}) {reminderTimes}-ന് ലഭിക്കേണ്ട അറിയിപ്പ് നിങ്ങൾക്ക് ലഭിക്കില്ല.\nഇത് തെറ്റാണെങ്കിൽ, ദയവായി സേവന രേഖ റദ്ദാക്കുക",
   "midnightTakenWarningDialogSeeHowToRevert": "സേവനം റദ്ദാക്കുന്ന വിധം കാണുക",

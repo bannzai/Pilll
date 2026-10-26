@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "휴약 기간을 수정하고 다시 시작하기도 쉬워요",
   "endedPillSheetDialogHistoryTitle": "알약 시트 기록을 확인해 보실래요?",
   "endedPillSheetDialogSummaryTitle": "이번 알약 시트를 함께 돌아봐요",
-  "endedPillSheetDialogSummaryMessage": "복용 기록 {recordedDays}일, 기록 누락 {missedDays}일",
+  "endedPillSheetDialogSummaryMessage": "복용 기록 {recordedDays}일 · 기록 없는 날 {missedDays}일이에요",
   "midnightTakenWarningDialogTitle": "확인해 주세요",
   "midnightTakenWarningDialogBody": "{takenDate}분까지 복용 기록이 완료되었습니다. {takenDate}인 오늘의 {reminderTimes} 알림은 전송되지 않습니다.\n실수하신 경우에는 복용 기록을 취소해 주세요",
   "midnightTakenWarningDialogSeeHowToRevert": "복용 취소 방법 보기",

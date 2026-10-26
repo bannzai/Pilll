@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Змяніць або аднавіць перыяд перапынку таксама лёгка",
   "endedPillSheetDialogHistoryTitle": "Хочаце паглядзець гісторыю блістараў?",
   "endedPillSheetDialogSummaryTitle": "Давайце ўспомнім, як вы прымалі пігулкі з гэтага блістара",
-  "endedPillSheetDialogSummaryMessage": "Запісана дзён: {recordedDays}, прапушчана: {missedDays}",
+  "endedPillSheetDialogSummaryMessage": "Запісы прыёму пігулак: {recordedDays} дзён · без запісу: {missedDays} дзён",
   "midnightTakenWarningDialogTitle": "Звярніце ўвагу",
   "midnightTakenWarningDialogBody": "Прыём таблетак быў запісаны ўключна да {takenDate}. Сённяшняе паведамленне ({takenDate}) у {reminderTimes} не прыйдзе.\nКалі гэта памылка, скасуйце прыём.",
   "midnightTakenWarningDialogSeeHowToRevert": "Паглядзець, як скасаваць прыём",

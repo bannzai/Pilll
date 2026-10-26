@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Madali rin ninyong baguhin at ipagpatuloy ang pahinga sa pag-inom ng pildoras",
   "endedPillSheetDialogHistoryTitle": "Gusto po ba ninyong tingnan ang kasaysayan ng pakete ng pildoras?",
   "endedPillSheetDialogSummaryTitle": "Balikan natin ang pakete ng pildoras na ito",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} araw na naitala, {missedDays} araw na nakaligtaan",
+  "endedPillSheetDialogSummaryMessage": "tala ng pag-inom: {recordedDays} araw · walang tala: {missedDays} araw",
   "midnightTakenWarningDialogTitle": "Mangyaring tandaan",
   "midnightTakenWarningDialogBody": "Naitala na ang pag-inom ng pill hanggang {takenDate}. Hindi maihahatid ang paalala ngayong {takenDate} sa oras na {reminderTimes}.\nKung pagkakamali ito, mangyaring bawiin ang naitalang pag-inom.",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang pag-inom",

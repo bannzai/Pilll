@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Лесно е и да го измените и продолжите периодот на пауза",
   "endedPillSheetDialogHistoryTitle": "Дали сакате да ја видите историјата на блистер?",
   "endedPillSheetDialogSummaryTitle": "Да го разгледаме користењето на овој блистер",
-  "endedPillSheetDialogSummaryMessage": "Забележани {recordedDays} дена, пропуштени {missedDays} дена",
+  "endedPillSheetDialogSummaryMessage": "Запис за земање: {recordedDays} дена · без запис: {missedDays} дена",
   "midnightTakenWarningDialogTitle": "Внимание",
   "midnightTakenWarningDialogBody": "Земањето на пилулите е запишано до {takenDate}. Денешното известување ({takenDate}) закажано за {reminderTimes} нема да биде испратено.\nАко ова е грешка, Ве молиме откажете го записот за земање.",
   "midnightTakenWarningDialogSeeHowToRevert": "Видете како да го откажете записот за земање",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Možete lako urediti i nastaviti period pauze",
   "endedPillSheetDialogHistoryTitle": "Želite li pogledati historiju blistera?",
   "endedPillSheetDialogSummaryTitle": "Pogledajmo zajedno kako ste koristili ovaj blister",
-  "endedPillSheetDialogSummaryMessage": "Zabilježeno dana: {recordedDays}, propušteno: {missedDays}",
+  "endedPillSheetDialogSummaryMessage": "Dana u evidenciji: {recordedDays} · dana bez evidencije: {missedDays}",
   "midnightTakenWarningDialogTitle": "Napomena",
   "midnightTakenWarningDialogBody": "Zapisi o uzimanju su izvršeni zaključno sa {takenDate}. Današnje ({takenDate}) obavještenje u {reminderTimes} neće biti dostavljeno.\nAko je ovo greška, molimo poništite zapis o uzimanju.",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju",

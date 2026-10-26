@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Dobu přestávky lze snadno upravit i obnovit",
   "endedPillSheetDialogHistoryTitle": "Chcete se podívat na historii blistrů?",
   "endedPillSheetDialogSummaryTitle": "Podívejme se zpět na tento blistr",
-  "endedPillSheetDialogSummaryMessage": "Zaznamenáno dní: {recordedDays}, vynecháno: {missedDays}",
+  "endedPillSheetDialogSummaryMessage": "záznam užití: {recordedDays} dní · bez záznamu: {missedDays} dní",
   "midnightTakenWarningDialogTitle": "Upozornění",
   "midnightTakenWarningDialogBody": "Užití pilulek je zaznamenáno až do data {takenDate}. Dnešní ({takenDate}) upozornění na užití v {reminderTimes} vám proto nepřijde.\nPokud šlo o omyl, zrušte prosím záznam o užití.",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit návod, jak zrušit záznam o užití",

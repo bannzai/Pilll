@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Fasilə müddətini dəyişmək və yenidən başlatmaq da asandır",
   "endedPillSheetDialogHistoryTitle": "Həb blister tarixçəsinə baxmaq istərdiniz?",
   "endedPillSheetDialogSummaryTitle": "Gəlin bu həb blister üzrə qeydlərinizə nəzər salaq",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} gün qeyd olunub, {missedDays} gün buraxılıb",
+  "endedPillSheetDialogSummaryMessage": "həb qəbulu qeyd: {recordedDays} gün · qeyd olunmayan: {missedDays} gün",
   "midnightTakenWarningDialogTitle": "Diqqət edin",
   "midnightTakenWarningDialogBody": "Həb qəbulunuz {takenDate} tarixinədək qeydə alınıb. Bu günə ({takenDate}) aid saat {reminderTimes}-dəki bildiriş sizə çatmayacaq.\nSəhvən olubsa, zəhmət olmasa qəbul qeydini ləğv edin.",
   "midnightTakenWarningDialogSeeHowToRevert": "Qəbul qeydinin necə ləğv ediləcəyini görün",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "የእረፍት ጊዜውን ማስተካከልና እንደገና መጀመርም ቀላል ነው",
   "endedPillSheetDialogHistoryTitle": "የክኒን ሉህ ታሪክን ማየት ይፈልጋሉ?",
   "endedPillSheetDialogSummaryTitle": "የዚህን ክኒን ሉህ አጠቃቀም እንመልከት",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} ቀናት ተመዝግቧል፣ {missedDays} ቀናት ተዘሏል",
+  "endedPillSheetDialogSummaryMessage": "አወሳሰድ መዝገብ፦ {recordedDays} ቀናት · ያልተመዘገቡ፦ {missedDays} ቀናት",
   "midnightTakenWarningDialogTitle": "እባክዎ ልብ ይበሉ",
   "midnightTakenWarningDialogBody": "እስከ {takenDate} ድረስ የመድሃኒት አወሳሰድ ተመዝግቧል። ዛሬ ({takenDate}) በ{reminderTimes} ሰዓት የሚደርስዎት ማሳወቂያ አይደርስዎትም።\nበስህተት ከሆነ፣ እባክዎ የመውሰድ መዝገቡን ይሰርዙ።",
   "midnightTakenWarningDialogSeeHowToRevert": "የመውሰድ መዝገብን እንዴት እንደሚሰርዙ ይመልከቱ",

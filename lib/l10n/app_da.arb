@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Du kan også nemt ændre og genoptage pillepausen",
   "endedPillSheetDialogHistoryTitle": "Har du lyst til at se historikken for dit pillekort?",
   "endedPillSheetDialogSummaryTitle": "Lad os se tilbage på dette pillekort",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dage registreret, {missedDays} dage sprunget over",
+  "endedPillSheetDialogSummaryMessage": "pilleregistrering: {recordedDays} dage · uden registrering: {missedDays} dage",
   "midnightTakenWarningDialogTitle": "Bemærk venligst",
   "midnightTakenWarningDialogBody": "Dine piller er blevet registreret som taget frem til {takenDate}. Dagens ({takenDate}) påmindelse kl. {reminderTimes} bliver ikke sendt.\nHvis dette var en fejl, skal du annullere indtagelsesregistreringen.",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du annullerer en indtagelsesregistrering",

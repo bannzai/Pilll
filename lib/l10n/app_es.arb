@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "También puedes ajustar y reanudar la pausa de la píldora fácilmente",
   "endedPillSheetDialogHistoryTitle": "¿Te gustaría ver el historial de tus blísteres?",
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} días registrados, {missedDays} días omitidos",
+  "endedPillSheetDialogSummaryMessage": "registro de toma: {recordedDays} días · sin registrar: {missedDays} días",
   "midnightTakenWarningDialogTitle": "Atención",
   "midnightTakenWarningDialogBody": "Se ha registrado la toma hasta el {takenDate}. La notificación de hoy ({takenDate}) programada para las {reminderTimes} no se recibirá.\nSi esto fue un error, cancele el registro de toma.",
   "midnightTakenWarningDialogSeeHowToRevert": "Ver cómo cancelar el registro de toma",

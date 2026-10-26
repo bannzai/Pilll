@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Үзіліс мерзімін өзгерту және қайта жалғастыру да оңай",
   "endedPillSheetDialogHistoryTitle": "Таблетка блистер тарихын көргіңіз келе ме?",
   "endedPillSheetDialogSummaryTitle": "Осы таблетка блистер бойынша жазбаларды бірге қарайық",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} күн жазылды, {missedDays} күн өткізілді",
+  "endedPillSheetDialogSummaryMessage": "қабылдау жазбасы бар: {recordedDays} күн · жазбасыз: {missedDays} күн",
   "midnightTakenWarningDialogTitle": "Назар аударыңыз",
   "midnightTakenWarningDialogBody": "{takenDate} дейінгі қабылдау жазбалары тіркелді. Бүгінгі ({takenDate}) {reminderTimes} хабарландыруы жеткізілмейді.\nҚате болса, қабылдауды болдырмаңыз",
   "midnightTakenWarningDialogSeeHowToRevert": "Қабылдауды болдырмау тәсілін көру",

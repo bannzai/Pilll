@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Μπορείτε επίσης να αλλάξετε και να συνεχίσετε εύκολα την περίοδο διακοπής",
   "endedPillSheetDialogHistoryTitle": "Θα θέλατε να δείτε το ιστορικό για την καρτέλα χαπιών;",
   "endedPillSheetDialogSummaryTitle": "Ας δούμε πώς πήγε αυτή η καρτέλα χαπιών",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} ημέρες καταγράφηκαν, {missedDays} ημέρες παραλείφθηκαν",
+  "endedPillSheetDialogSummaryMessage": "καταγραφή λήψης: {recordedDays} ημέρες · χωρίς καταγραφή: {missedDays} ημέρες",
   "midnightTakenWarningDialogTitle": "Παρακαλώ προσέξτε",
   "midnightTakenWarningDialogBody": "Η λήψη έχει καταγραφεί έως {takenDate}. Η σημερινή ({takenDate}) ειδοποίηση υπενθύμισης στις {reminderTimes} δεν θα σας αποσταλεί.\nΕάν έγινε κατά λάθος, παρακαλώ ακυρώστε την καταγραφή λήψης.",
   "midnightTakenWarningDialogSeeHowToRevert": "Δείτε τον τρόπο ακύρωσης της καταγραφής λήψης",

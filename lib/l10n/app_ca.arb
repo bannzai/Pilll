@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "També pots ajustar i reprendre el període de pausa fàcilment",
   "endedPillSheetDialogHistoryTitle": "Vols veure l’historial del blíster?",
   "endedPillSheetDialogSummaryTitle": "Fem un repàs d’aquest blíster",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dies registrats, {missedDays} dies omesos",
+  "endedPillSheetDialogSummaryMessage": "registre de preses: {recordedDays} dies · sense registrar: {missedDays} dies",
   "midnightTakenWarningDialogTitle": "Tingueu-ho en compte",
   "midnightTakenWarningDialogBody": "S'ha registrat la presa de la píndola fins al {takenDate}. La notificació d'avui ({takenDate}) de les {reminderTimes} no arribarà.\nSi ha estat un error, cancel·leu el registre de presa.",
   "midnightTakenWarningDialogSeeHowToRevert": "Veure com cancel·lar un registre de presa",

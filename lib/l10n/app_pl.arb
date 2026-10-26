@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Przerwę w przyjmowaniu tabletek można też łatwo zmienić i wznowić",
   "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię blistów?",
   "endedPillSheetDialogSummaryTitle": "Przyjrzyjmy się temu blistrowi",
-  "endedPillSheetDialogSummaryMessage": "Zapisane dni: {recordedDays}, pominięte: {missedDays}",
+  "endedPillSheetDialogSummaryMessage": "Dni z zapisem przyjęcia: {recordedDays} · bez zapisu: {missedDays}",
   "midnightTakenWarningDialogTitle": "Zwróć uwagę",
   "midnightTakenWarningDialogBody": "Zarejestrowano przyjęcie pigułek do dnia {takenDate}. Dzisiejsze ({takenDate}) powiadomienie o godzinie {reminderTimes} nie zostanie dostarczone.\nJeśli to pomyłka, cofnij przyjęcie.",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć przyjęcie",

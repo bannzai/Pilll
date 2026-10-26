@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Du kan også enkelt endre og fortsette p-pillepausen",
   "endedPillSheetDialogHistoryTitle": "Vil du se historikken for pillebrettene dine?",
   "endedPillSheetDialogSummaryTitle": "La oss se tilbake på dette pillebrettet",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dager registrert, {missedDays} dager glemt",
+  "endedPillSheetDialogSummaryMessage": "pillelogg: {recordedDays} dager · uten registrering: {missedDays} dager",
   "midnightTakenWarningDialogTitle": "Vær oppmerksom",
   "midnightTakenWarningDialogBody": "Pillene dine er registrert som tatt til og med {takenDate}. Dagens ({takenDate}) varsel klokken {reminderTimes} vil ikke bli sendt.\nHvis dette var en feil, kan du avbryte inntaksregistreringen.",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du avbryter en inntaksregistrering",

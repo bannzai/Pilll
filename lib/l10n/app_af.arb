@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Jy kan die pouse ook maklik verander of hervat",
   "endedPillSheetDialogHistoryTitle": "Wil jy jou pilstrokiegeskiedenis sien?",
   "endedPillSheetDialogSummaryTitle": "Kom ons kyk terug na hierdie pilstrokie",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dae aangeteken, {missedDays} dae gemis",
+  "endedPillSheetDialogSummaryMessage": "innamerekord: {recordedDays} dae · nie aangeteken nie: {missedDays} dae",
   "midnightTakenWarningDialogTitle": "Let asseblief op",
   "midnightTakenWarningDialogBody": "Jou pille is aangeteken as geneem tot en met {takenDate}. Vandag se ({takenDate}) kennisgewing om {reminderTimes} sal nie afgelewer word nie.\nAs dit 'n fout was, keer asseblief die innameaantekening terug.",
   "midnightTakenWarningDialogSeeHowToRevert": "Sien hoe om 'n innameaantekening terug te keer",

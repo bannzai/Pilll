@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "گولیوں کے وقفے کی مدت میں تبدیلی اور اسے دوبارہ شروع کرنا بھی آسان ہے",
   "endedPillSheetDialogHistoryTitle": "کیا آپ گولیوں کی پٹی کی تاریخ دیکھنا چاہیں گی؟",
   "endedPillSheetDialogSummaryTitle": "آئیے اس گولیوں کی پٹی کا ریکارڈ دیکھیں",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} دن ریکارڈ ہوئے، {missedDays} دن چھوٹ گئے",
+  "endedPillSheetDialogSummaryMessage": "گولی لینے کا ریکارڈ: {recordedDays} دن · ریکارڈ کے بغیر: {missedDays} دن",
   "midnightTakenWarningDialogTitle": "براہِ کرم توجہ دیں",
   "midnightTakenWarningDialogBody": "{takenDate} تک کی خوراک ریکارڈ کر دی گئی ہے۔ آج، یعنی {takenDate}، کو {reminderTimes} پر ہونے والی اطلاع موصول نہیں ہوگی۔\nاگر یہ غلطی سے ہوا ہے تو براہِ کرم خوراک کا ریکارڈ منسوخ کریں",
   "midnightTakenWarningDialogSeeHowToRevert": "خوراک منسوخ کرنے کا طریقہ دیکھیں",

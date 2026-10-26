@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Pilulen atsedenaldia erraz aldatu eta berrabiarazi dezakezu",
   "endedPillSheetDialogHistoryTitle": "Pilula-blister historikoa ikusi nahi duzu?",
   "endedPillSheetDialogSummaryTitle": "Ikus dezagun nolakoa izan den pilula-blister hau",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} egun erregistratuta, {missedDays} egun galduta",
+  "endedPillSheetDialogSummaryMessage": "hartze-erregistro: {recordedDays} egun · erregistratu gabe: {missedDays} egun",
   "midnightTakenWarningDialogTitle": "Kontuan izan",
   "midnightTakenWarningDialogBody": "Zure pilulak hartu bezala erregistratu dira {takenDate} arte. Gaurko ({takenDate}) {reminderTimes}etako jakinarazpena ez zaizu bidaliko.\nOkerra bada, mesedez, ezeztatu hartzea.",
   "midnightTakenWarningDialogSeeHowToRevert": "Hartzea ezeztatzeko modua ikusi",

@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Masa jeda minum pil juga mudah diubah dan dilanjutkan",
   "endedPillSheetDialogHistoryTitle": "Ingin melihat riwayat strip pil Anda?",
   "endedPillSheetDialogSummaryTitle": "Mari lihat kembali strip pil ini",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} hari tercatat, {missedDays} hari terlewat",
+  "endedPillSheetDialogSummaryMessage": "catatan minum pil: {recordedDays} hari · belum tercatat: {missedDays} hari",
   "midnightTakenWarningDialogTitle": "Perhatian",
   "midnightTakenWarningDialogBody": "Catatan konsumsi pil hingga {takenDate} telah dibuat. Notifikasi pengingat pukul {reminderTimes} untuk hari ini ({takenDate}) tidak akan dikirim.\nJika ini adalah kesalahan, silakan batalkan catatan konsumsi tersebut",
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan catatan konsumsi",

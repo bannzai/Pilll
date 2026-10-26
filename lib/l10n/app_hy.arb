@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Դադարի տևողությունը փոփոխելն ու վերսկսելը նույնպես հեշտ է",
   "endedPillSheetDialogHistoryTitle": "Կցանկանա՞ք տեսնել հաբերի բլիստեր պատմությունը։",
   "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս հաբերի բլիստեր օգտագործման գրառումները",
-  "endedPillSheetDialogSummaryMessage": "Գրանցված է {recordedDays} օր, բաց է թողնվել {missedDays} օր",
+  "endedPillSheetDialogSummaryMessage": "ընդունման գրառում՝ {recordedDays} օր · առանց գրառման՝ {missedDays} օր",
   "midnightTakenWarningDialogTitle": "Ուշադրություն դարձրեք",
   "midnightTakenWarningDialogBody": "Ընդունման գրառումն արվել է մինչև {takenDate}-ը ներառյալ։ Այսօրվա՝ {takenDate}-ի, ժամը {reminderTimes}-ի ծանուցումն այլևս ձեզ չի հասնի։\nԵթե դա սխալմամբ է եղել, խնդրում ենք չեղարկել ընդունման գրառումը",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսնել՝ ինչպես չեղարկել ընդունման գրառումը",

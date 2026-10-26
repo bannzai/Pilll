@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Bạn cũng có thể dễ dàng chỉnh sửa và tiếp tục thời gian tạm ngừng uống thuốc",
   "endedPillSheetDialogHistoryTitle": "Bạn muốn xem lịch sử vỉ thuốc không?",
   "endedPillSheetDialogSummaryTitle": "Cùng nhìn lại vỉ thuốc này nhé",
-  "endedPillSheetDialogSummaryMessage": "Đã ghi {recordedDays} ngày, bỏ lỡ {missedDays} ngày",
+  "endedPillSheetDialogSummaryMessage": "nhật ký uống thuốc: {recordedDays} ngày · chưa ghi lại: {missedDays} ngày",
   "midnightTakenWarningDialogTitle": "Xin lưu ý",
   "midnightTakenWarningDialogBody": "Đã ghi nhận uống thuốc đến hết {takenDate}. Thông báo lúc {reminderTimes} của hôm nay ({takenDate}) sẽ không được gửi tới bạn.\nNếu đây là nhầm lẫn, vui lòng hủy ghi nhận uống thuốc.",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy ghi nhận uống thuốc",

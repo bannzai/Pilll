@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "Je kunt de pilpauze ook makkelijk aanpassen en hervatten",
   "endedPillSheetDialogHistoryTitle": "Wil je de geschiedenis van je pillenstrip bekijken?",
   "endedPillSheetDialogSummaryTitle": "Laten we terugkijken op deze pillenstrip",
-  "endedPillSheetDialogSummaryMessage": "{recordedDays} dagen geregistreerd, {missedDays} dagen gemist",
+  "endedPillSheetDialogSummaryMessage": "innameregistratie: {recordedDays} dagen · zonder registratie: {missedDays} dagen",
   "midnightTakenWarningDialogTitle": "Let op",
   "midnightTakenWarningDialogBody": "Uw pillen zijn geregistreerd als ingenomen tot en met {takenDate}. De melding van vandaag ({takenDate}) om {reminderTimes} wordt niet verzonden.\nAls dit een vergissing was, maak dan de inname-registratie ongedaan.",
   "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe u een inname-registratie ongedaan kunt maken",

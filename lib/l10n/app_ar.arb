@@ -552,7 +552,7 @@
   "restDurationFeatureAppealPoint3": "يمكنكِ تعديل فترة التوقف واستئنافها بسهولة أيضًا",
   "endedPillSheetDialogHistoryTitle": "هل تودين الاطلاع على سجل شريط الحبوب؟",
   "endedPillSheetDialogSummaryTitle": "لنراجع شريط الحبوب هذا",
-  "endedPillSheetDialogSummaryMessage": "تم تسجيل {recordedDays} يومًا، وفات تسجيل {missedDays} يومًا",
+  "endedPillSheetDialogSummaryMessage": "تسجيل تناول: {recordedDays} أيام · أيام بلا تسجيل: {missedDays}",
   "midnightTakenWarningDialogTitle": "يرجى الانتباه",
   "midnightTakenWarningDialogBody": "تم تسجيل تناول الحبوب حتى تاريخ {takenDate}. لن يصلك إشعار التذكير اليوم ({takenDate}) في {reminderTimes}.\nإذا كان هذا خطأً، يرجى إلغاء تسجيل التناول",
   "midnightTakenWarningDialogSeeHowToRevert": "عرض كيفية إلغاء تسجيل التناول",
