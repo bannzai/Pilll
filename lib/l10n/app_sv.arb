@@ -50,7 +50,7 @@
   "quickRecordDescription": "På aviseringsskärmen ser du vilket p-piller du ska ta i dag och kan lägga till det direkt i din intagslogg.",
   "healthCareIntegration": "Anslutning till hälsoappar",
   "healthCareIntegrationDescription": "Mensregistreringar i Pilll kan synkroniseras automatiskt med Apple Hälsa",
-  "viewPremiumPlan": "Se premiumplan",
+  "viewPremiumPlan": "Visa premiumplanen",
   "changePillNumberForToday": "Ändra dagens pillnummer",
   "discardAllPillSheets": "Ta bort alla p-pillerblad",
   "areYouSureDoing": "Vill du {doing}?",

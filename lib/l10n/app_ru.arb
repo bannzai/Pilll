@@ -50,7 +50,7 @@
   "quickRecordDescription": "На экране уведомлений вы можете увидеть, какую таблетку принять сегодня, и сразу добавить запись в журнал приёма таблеток.",
   "healthCareIntegration": "Подключение к приложениям здоровья",
   "healthCareIntegrationDescription": "Записи о месячных в Pilll можно автоматически синхронизировать с приложением «Здоровье»",
-  "viewPremiumPlan": "Посмотреть премиум-план",
+  "viewPremiumPlan": "Посмотреть план премиум",
   "changePillNumberForToday": "Изменение номера таблетки на сегодня",
   "discardAllPillSheets": "Удалить все блистеры",
   "areYouSureDoing": "{doing}?",

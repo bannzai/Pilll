@@ -50,7 +50,7 @@
   "quickRecordDescription": "På notifikationsskærmen kan du se, hvilken p-pille du skal tage i dag, og straks opdatere din pilleregistrering.",
   "healthCareIntegration": "Forbindelse til sundhedsapps",
   "healthCareIntegrationDescription": "Dine menstruationsregistreringer i Pilll kan automatisk synkroniseres med Apple Sundhed",
-  "viewPremiumPlan": "Se premium plan",
+  "viewPremiumPlan": "Se Premium-planen",
   "changePillNumberForToday": "Ændre dagens pillenummer",
   "discardAllPillSheets": "Slet alle p-pille pakker",
   "areYouSureDoing": "Vil du {doing}?",

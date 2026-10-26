@@ -50,7 +50,7 @@
   "quickRecordDescription": "Paziņojumu ekrānā varat redzēt, kura tablete jālieto šodien, un uzreiz pievienot tablešu lietošanas ierakstu.",
   "healthCareIntegration": "Savienojums ar veselības lietotnēm",
   "healthCareIntegrationDescription": "Pilll ierakstus par mēnešreizēm var automātiski sinhronizēt ar Apple Health",
-  "viewPremiumPlan": "Apskatīt Premium plānu",
+  "viewPremiumPlan": "Skatīt Premium plānu",
   "changePillNumberForToday": "Šodienas pilules numura maiņa",
   "discardAllPillSheets": "Dzēst visas tablešu plāksnes",
   "areYouSureDoing": "Vai {doing}?",

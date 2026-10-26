@@ -50,7 +50,7 @@
   "quickRecordDescription": "Sur l’écran des notifications, vous pouvez voir quelle pilule prendre aujourd’hui et l’ajouter directement au journal des prises.",
   "healthCareIntegration": "Connexion aux applications de santé",
   "healthCareIntegrationDescription": "Vos données sur les règles enregistrées dans Pilll peuvent se synchroniser automatiquement avec Santé",
-  "viewPremiumPlan": "Voir le forfait Premium",
+  "viewPremiumPlan": "Voir l’offre Premium",
   "changePillNumberForToday": "Changer le numéro de pilule du jour",
   "discardAllPillSheets": "Supprimer toutes les feuilles de pilules",
   "areYouSureDoing": "Voulez-vous {doing} ?",

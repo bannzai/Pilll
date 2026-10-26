@@ -50,7 +50,7 @@
   "quickRecordDescription": "در صفحه اعلان‌ها می‌توانید ببینید امروز کدام قرص را باید مصرف کنید و همان‌جا ثبت مصرف را انجام دهید.",
   "healthCareIntegration": "اتصال به برنامه‌های سلامت",
   "healthCareIntegrationDescription": "اطلاعات پریود ثبت‌شده در Pilll می‌تواند به‌طور خودکار با Apple Health همگام‌سازی شود",
-  "viewPremiumPlan": "مشاهده پلن پرمیوم",
+  "viewPremiumPlan": "مشاهدهٔ طرح پریمیوم",
   "changePillNumberForToday": "تغییر شماره قرص امروز",
   "discardAllPillSheets": "حذف همه ورق‌های قرص",
   "areYouSureDoing": "{doing} را انجام می‌دهید؟",

@@ -50,7 +50,7 @@
   "quickRecordDescription": "Билдирме экранынан бүгүн кайсы таблетканы ичүү керектигин көрүп, дароо таблетка ичүү жазуусун кошо аласыз.",
   "healthCareIntegration": "Ден соолук колдонмолору менен байланыш",
   "healthCareIntegrationDescription": "Pilll колдонмосундагы айыз жазуулары Apple Health менен автоматтык түрдө шайкештештирилет",
-  "viewPremiumPlan": "Премиум планды көрүү",
+  "viewPremiumPlan": "премиум планын көрүңүз",
   "changePillNumberForToday": "Бүгүнкү таблетка номурун өзгөртүү",
   "discardAllPillSheets": "Бардык таблетка барактарын өчүрүү",
   "areYouSureDoing": "{doing} кыласызбы?",

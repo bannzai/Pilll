@@ -50,7 +50,7 @@
   "quickRecordDescription": "Auf dem Mitteilungsbildschirm siehst du, welche Pille heute dran ist, und kannst sie direkt im Einnahmeprotokoll eintragen.",
   "healthCareIntegration": "Verbindung mit Gesundheitsapps",
   "healthCareIntegrationDescription": "Deine Einträge zur Periode in Pilll können automatisch mit Apple Health synchronisiert werden",
-  "viewPremiumPlan": "Premium-Plan ansehen",
+  "viewPremiumPlan": "Premium-Tarif ansehen",
   "changePillNumberForToday": "Pillennummer für heute ändern",
   "discardAllPillSheets": "Alle Pillenblister löschen",
   "areYouSureDoing": "Möchten Sie {doing}?",

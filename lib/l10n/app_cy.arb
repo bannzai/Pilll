@@ -50,7 +50,7 @@
   "quickRecordDescription": "Ar y sgrin hysbysiadau gallwch weld pa bilsen sydd i’w chymryd heddiw a’i hychwanegu’n syth at eich cofnod cymryd.",
   "healthCareIntegration": "Cysylltu ag apiau iechyd",
   "healthCareIntegrationDescription": "Gellir cysoni cofnodion mislif yn Pilll yn awtomatig ag Apple Health",
-  "viewPremiumPlan": "Gweld cynllun premiwm",
+  "viewPremiumPlan": "Gweld y cynllun premiwm",
   "changePillNumberForToday": "Newid rhif y bilsen ar gyfer heddiw",
   "discardAllPillSheets": "Dileu pob taflen bilsen",
   "areYouSureDoing": "A ydych chi am {doing}?",

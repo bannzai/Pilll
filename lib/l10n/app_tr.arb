@@ -50,7 +50,7 @@
   "quickRecordDescription": "Bildirim ekranında bugün alacağınız hapı görebilir ve hemen hap kullanım kaydına ekleyebilirsiniz.",
   "healthCareIntegration": "Sağlık uygulamalarıyla bağlantı",
   "healthCareIntegrationDescription": "Pilll'de kaydettiğiniz adet kayıtları Apple Sağlık ile otomatik olarak eşzamanlanabilir",
-  "viewPremiumPlan": "Premium Planı Görüntüle",
+  "viewPremiumPlan": "Premium planı görüntüleyin",
   "changePillNumberForToday": "Bugün alınacak hap numarasını değiştir",
   "discardAllPillSheets": "Tüm hap kartlarını sil",
   "areYouSureDoing": "{doing} yapacak mısınız?",

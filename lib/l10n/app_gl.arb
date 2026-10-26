@@ -50,7 +50,7 @@
   "quickRecordDescription": "Na pantalla de notificacións podes ver que pílula che toca hoxe e anotala directamente no rexistro de tomas.",
   "healthCareIntegration": "Conexión con aplicacións de saúde",
   "healthCareIntegrationDescription": "Os rexistros da regra en Pilll poden sincronizarse automaticamente con Saúde",
-  "viewPremiumPlan": "Ver o plan premium",
+  "viewPremiumPlan": "Ver o plan Premium",
   "changePillNumberForToday": "Cambiar o número da píldora de hoxe",
   "discardAllPillSheets": "Eliminar todas as follas de píldoras",
   "areYouSureDoing": "¿{doing}?",

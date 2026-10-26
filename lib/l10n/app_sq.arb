@@ -50,7 +50,7 @@
   "quickRecordDescription": "Në ekranin e njoftimeve mund të shihni cilën pilulë duhet të merrni sot dhe ta shtoni menjëherë te regjistrimi i marrjes.",
   "healthCareIntegration": "Lidhja me aplikacionet e shëndetit",
   "healthCareIntegrationDescription": "Të dhënat e menstruacionit në Pilll mund të sinkronizohen automatikisht me Apple Health",
-  "viewPremiumPlan": "Shiko Planin Premium",
+  "viewPremiumPlan": "Shikoni planin premium",
   "changePillNumberForToday": "Ndryshimi i numrit të pilulës së sotme",
   "discardAllPillSheets": "Fshij të gjitha fletët e pilulës",
   "areYouSureDoing": "A doni të {doing}?",
