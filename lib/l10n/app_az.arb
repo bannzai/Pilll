@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Pilll hesabınıza əvvəllər daxil olmamısınızsa, sizin üçün yeni hesab yaradılacaq",
   "registerAccountForDataTransfer": "Hesab yaratdıqdan sonra məlumatlarınızı başqa cihaza köçürə bilərsiniz",
   "registerAccountToKeepData": "Hesab məlumatlarınızı saxlamaq üçün zəhmət olmasa hesab yaradın",
-  "signInWith": "{loginName} ilə daxil ol",
+  "signInWith": "{loginName} ilə daxil olun",
   "registerWith": "{loginName} ilə qeydiyyat",
   "premiumRegistrationComplete": "Pilll Premium qeydiyyatı tamamlandı",
   "thankYouForRegistration": "Qeydiyyatdan keçdiyiniz üçün təşəkkür edirik!\nİndi bütün funksiyalardan istifadə edə bilərsiniz!",

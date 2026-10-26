@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Jei anksčiau nesate prisijungę prie Pilll, jums bus sukurta nauja paskyra",
   "registerAccountForDataTransfer": "Sukūrę paskyrą galėsite perkelti savo duomenis į kitą įrenginį",
   "registerAccountToKeepData": "Kad išsaugotumėte savo paskyros informaciją, susikurkite paskyrą",
-  "signInWith": "Prisijungti su {loginName}",
+  "signInWith": "Prisijunkite naudodami {loginName}",
   "registerWith": "Registruotis su {loginName}",
   "premiumRegistrationComplete": "Pilll premium registracija sėkminga",
   "thankYouForRegistration": "Ačiū už registraciją.\nDabar galite naudoti visas funkcijas!",

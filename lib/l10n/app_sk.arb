@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Ak ste sa do Pilll ešte nikdy neprihlásili, vytvorí sa vám nový účet",
   "registerAccountForDataTransfer": "Po vytvorení účtu môžete preniesť svoje údaje do iného zariadenia",
   "registerAccountToKeepData": "Ak si chcete uchovať údaje o svojom účte, vytvorte si účet",
-  "signInWith": "Prihlásiť sa cez {loginName}",
+  "signInWith": "Prihláste sa cez {loginName}",
   "registerWith": "Zaregistrovať sa cez {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registrácia dokončená",
   "thankYouForRegistration": "Ďakujeme za registráciu.\nTeraz môžete používať všetky funkcie!",

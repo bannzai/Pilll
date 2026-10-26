@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Uma ungakaze ungene ku-Pilll ngaphambilini, uzokwakhelwa i-akhawunti entsha",
   "registerAccountForDataTransfer": "Uma uvula i-akhawunti, ungadlulisela idatha yakho kwenye idivayisi",
   "registerAccountToKeepData": "Sicela ubhalise i-akhawunti ukuze ugcine imininingwane ye-akhawunti yakho",
-  "signInWith": "Ngena nge-{loginName}",
+  "signInWith": "Sicela ungene usebenzisa i-{loginName}",
   "registerWith": "Bhalisa ngo-{loginName}",
   "premiumRegistrationComplete": "Ukubhalisela kwe-Pilll Premium kuphelelisiwe",
   "thankYouForRegistration": "Siyabonga ngokubhalisa kwakho.\nZonke izici sezitholakala manje!",

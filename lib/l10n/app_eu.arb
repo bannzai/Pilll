@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Pilll-en inoiz saioa hasi ez baduzu, kontu berri bat sortuko zaizu",
   "registerAccountForDataTransfer": "Kontu bat sortuz gero, zure datuak beste gailu batera eraman ditzakezu",
   "registerAccountToKeepData": "Kontuaren informazioa gordetzeko, sortu kontu bat, mesedez",
-  "signInWith": "{loginName}(e)kin saioa hasi",
+  "signInWith": "Hasi saioa {loginName} bidez",
   "registerWith": "{loginName}z erregistratu",
   "premiumRegistrationComplete": "Pilll Premium erregistroa osatuta",
   "thankYouForRegistration": "Mila esker erregistratzeagatik.\nFuntzio guztiak eskuragarri daude orain!",

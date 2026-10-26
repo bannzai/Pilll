@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Dacă nu te-ai conectat până acum la Pilll, se va crea un cont nou pentru tine",
   "registerAccountForDataTransfer": "Dacă îți creezi un cont, îți poți transfera datele pe alt dispozitiv",
   "registerAccountToKeepData": "Creează un cont pentru a păstra informațiile contului tău",
-  "signInWith": "Conectare cu {loginName}",
+  "signInWith": "Conectează-te cu {loginName}",
   "registerWith": "Înregistrează-te cu {loginName}",
   "premiumRegistrationComplete": "Înregistrare Pilll Premium completă",
   "thankYouForRegistration": "Mulțumim pentru înregistrare.\nToate funcțiile sunt acum disponibile!",

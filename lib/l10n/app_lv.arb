@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Ja iepriekš neesat pierakstījušies Pilll, jums tiks izveidots jauns konts",
   "registerAccountForDataTransfer": "Izveidojot kontu, varēsiet pārcelt savus datus uz citu ierīci",
   "registerAccountToKeepData": "Lai saglabātu sava konta informāciju, lūdzu, izveidojiet kontu",
-  "signInWith": "Pierakstīties ar {loginName}",
+  "signInWith": "Pierakstieties ar {loginName}",
   "registerWith": "Reģistrēties ar {loginName}",
   "premiumRegistrationComplete": "Pilll Premium reģistrācija pabeigta",
   "thankYouForRegistration": "Paldies par reģistrēšanos!\nTagad jums ir pieejamas visas funkcijas!",

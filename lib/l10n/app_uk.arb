@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Якщо ви ще жодного разу не входили в Pilll, для вас буде створено новий обліковий запис",
   "registerAccountForDataTransfer": "Після створення облікового запису ви зможете перенести свої дані на інший пристрій",
   "registerAccountToKeepData": "Щоб зберегти дані облікового запису, будь ласка, створіть обліковий запис",
-  "signInWith": "Увійти через {loginName}",
+  "signInWith": "Увійдіть через {loginName}",
   "registerWith": "Зареєструватися через {loginName}",
   "premiumRegistrationComplete": "Реєстрація Pilll Premium завершена",
   "thankYouForRegistration": "Дякуємо за реєстрацію.\nТепер вам доступні всі функції!",

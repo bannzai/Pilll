@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "که تاسو مخکې Pilll ته ننوتي نه یاست، ستاسو لپاره به نوی حساب جوړ شي",
   "registerAccountForDataTransfer": "د حساب په جوړولو سره تاسو کولی شئ خپل معلومات بلې وسیلې ته ولېږدوئ",
   "registerAccountToKeepData": "د خپل حساب د معلوماتو د ساتلو لپاره، مهرباني وکړئ حساب جوړ کړئ",
-  "signInWith": "د {loginName} سره ننوتل",
+  "signInWith": "د {loginName} له لارې ننوزئ",
   "registerWith": "په {loginName} ثبت نوم",
   "premiumRegistrationComplete": "د Pilll پریمیم ثبت نام بشپړ شو",
   "thankYouForRegistration": "د ثبت نوم لپاره ډېر مننه.\nټولې فعالیتونه اوس فعاله شوې!",

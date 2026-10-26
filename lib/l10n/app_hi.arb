@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "अगर आपने पहले कभी Pilll में लॉग इन नहीं किया है, तो आपके लिए नया खाता बनाया जाएगा",
   "registerAccountForDataTransfer": "खाता बनाने पर आप अपना डेटा दूसरे डिवाइस में स्थानांतरित कर सकेंगी",
   "registerAccountToKeepData": "अपने खाते की जानकारी सुरक्षित रखने के लिए कृपया खाता बनाएँ",
-  "signInWith": "{loginName}से साइन इन करें",
+  "signInWith": "{loginName} से साइन इन करें",
   "registerWith": "{loginName} से साइन अप करें",
   "premiumRegistrationComplete": "Pilll प्रीमियम पंजीकरण पूरा हुआ",
   "thankYouForRegistration": "पंजीकरण के लिए धन्यवाद।\nअब सभी सुविधाएं उपलब्ध हैं!",

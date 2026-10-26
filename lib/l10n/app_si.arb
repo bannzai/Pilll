@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "ඔබ මීට පෙර Pilll වෙත පිවිස නොමැති නම්, ඔබ වෙනුවෙන් නව ගිණුමක් සාදනු ලැබේ",
   "registerAccountForDataTransfer": "ගිණුමක් සාදාගත් පසු ඔබේ දත්ත වෙනත් උපාංගයකට මාරු කළ හැකියි",
   "registerAccountToKeepData": "ඔබේ ගිණුමේ තොරතුරු රඳවා තබා ගැනීමට කරුණාකර ගිණුමක් සාදන්න",
-  "signInWith": "{loginName} මගින් ප්‍රවේශ වන්න",
+  "signInWith": "කරුණාකර {loginName} භාවිතයෙන් පුරන්න",
   "registerWith": "{loginName} සමඟ ලියාපදිංචි කරන්න",
   "premiumRegistrationComplete": "Pilll Premium ලියාපදිංචිය සාර්ථකයි",
   "thankYouForRegistration": "ලියාපදිංචිය සඳහා ස්තුතියි।\nදැන් සියලුම විශේෂාංග භාවිතා කළ හැකිය!",

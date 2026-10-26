@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "ຖ້າທ່ານຍັງບໍ່ເຄີຍເຂົ້າສູ່ Pilll, ຈະມີການສ້າງບັນຊີໃໝ່ໃຫ້ທ່ານ",
   "registerAccountForDataTransfer": "ເມື່ອສ້າງບັນຊີແລ້ວ ທ່ານສາມາດຍ້າຍຂໍ້ມູນໄປອຸປະກອນອື່ນໄດ້",
   "registerAccountToKeepData": "ກະລຸນາສ້າງບັນຊີເພື່ອເກັບຮັກສາຂໍ້ມູນບັນຊີຂອງທ່ານ",
-  "signInWith": "ເຂົ້າສູ່ລະບົບດ້ວຍ {loginName}",
+  "signInWith": "ເຂົ້າລະບົບດ້ວຍ {loginName}",
   "registerWith": "ລົງທະບຽນດ້ວຍ {loginName}",
   "premiumRegistrationComplete": "ລົງທະບຽນ Pilll ພຣີມຽມສຳເລັດແລ້ວ",
   "thankYouForRegistration": "ຂອບໃຈທີ່ໄດ້ລົງທະບຽນ.\nຕອນນີ້ທ່ານສາມາດໃຊ້ຄຸນສົມບັດທັງໝົດໄດ້ແລ້ວ!",

@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Егер сіз Pilll қолданбасына бұрын кірмеген болсаңыз, сізге жаңа есептік жазба жасалады",
   "registerAccountForDataTransfer": "Тіркелгі ашқаннан кейін деректеріңізді басқа құрылғыға көшіре аласыз",
   "registerAccountToKeepData": "Есептік жазбаңыздың ақпаратын сақтау үшін, есептік жазба ашыңыз",
-  "signInWith": "{loginName} арқылы кіру",
+  "signInWith": "{loginName} арқылы кіріңіз",
   "registerWith": "{loginName} арқылы тіркелу",
   "premiumRegistrationComplete": "Pilll Premium тіркеуі аяқталды",
   "thankYouForRegistration": "Тіркелгеніңіз үшін рахмет.\nБарлық функциялар қолжетімді болды!",

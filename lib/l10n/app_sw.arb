@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "Ikiwa hujawahi kuingia kwenye Pilll, akaunti mpya itaundwa kwa ajili yako",
   "registerAccountForDataTransfer": "Ukifungua akaunti, unaweza kuhamishia data yako kwenye kifaa kingine",
   "registerAccountToKeepData": "Tafadhali fungua akaunti ili kuhifadhi taarifa za akaunti yako",
-  "signInWith": "Ingia kwa {loginName}",
+  "signInWith": "Tafadhali ingia kwa kutumia {loginName}",
   "registerWith": "Jiandikishe na {loginName}",
   "premiumRegistrationComplete": "Usajili wa Pilll Premium umekamilika",
   "thankYouForRegistration": "Asante kwa kujiandikisha.\nSasa unaweza kutumia vipengele vyote!",

@@ -171,7 +171,7 @@
   "createNewAccountIfNotLoggedIn": "As jy nog nooit by Pilll aangemeld het nie, word ’n nuwe rekening vir jou geskep",
   "registerAccountForDataTransfer": "As jy ’n rekening skep, kan jy jou data na ’n ander toestel oordra",
   "registerAccountToKeepData": "Registreer asseblief ’n rekening om jou rekeninginligting te behou",
-  "signInWith": "Teken in met {loginName}",
+  "signInWith": "Meld aan met {loginName}",
   "registerWith": "Registreer met {loginName}",
   "premiumRegistrationComplete": "Pilll Premium registrasie voltooi",
   "thankYouForRegistration": "Dankie vir jou registrasie.\nAlle funksies is nou beskikbaar!",
