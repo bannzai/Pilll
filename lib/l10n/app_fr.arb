@@ -579,7 +579,7 @@
   "yazFlexSkipRestDuration": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogTitle": "Ignorer la saisie de la pause",
   "yazFlexSkipRestDurationDialogMessage": "Vous pourrez saisir la durée de la pause plus tard dans « Pause dans la prise de la pilule », sur l’écran d’accueil.",
-  "yazFlexSkipRestDurationDialogSkip": "Ignorer",
+  "yazFlexSkipRestDurationDialogSkip": "Passer",
   "yazFlexBeginPillNumberPageTitle": "À quelle prise du cycle correspond le début de la plaquette ?",
   "yazFlexBeginPillNumberPageNote": "Veuillez répondre en fonction du nombre de jours écoulés depuis la pause avant le début de la plaquette.",
   "yazFlexNextInputIsRestDuration": "Ensuite, indiquez votre dernière pause"

@@ -579,7 +579,7 @@
   "yazFlexSkipRestDuration": "Preskočite vnos podatkov o premoru",
   "yazFlexSkipRestDurationDialogTitle": "Preskočiti vnos premora",
   "yazFlexSkipRestDurationDialogMessage": "Trajanje premora lahko pozneje vnesete v razdelku »Premor pri jemanju tablet« na domačem zaslonu.",
-  "yazFlexSkipRestDurationDialogSkip": "Preskoči",
+  "yazFlexSkipRestDurationDialogSkip": "Preskočite",
   "yazFlexBeginPillNumberPageTitle": "Kateri po vrsti odmerek v ciklu je začetek pretisnega omota?",
   "yazFlexBeginPillNumberPageNote": "Prosimo, odgovorite glede na število dni, ki so minili od premora pred začetkom zavojčka.",
   "yazFlexNextInputIsRestDuration": "Nato vnesite prejšnji premor"

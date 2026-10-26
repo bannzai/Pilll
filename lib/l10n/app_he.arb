@@ -579,7 +579,7 @@
   "yazFlexSkipRestDuration": "דילוג על הזנת פרטי ההפסק",
   "yazFlexSkipRestDurationDialogTitle": "דילוג על הזנת ההפסק",
   "yazFlexSkipRestDurationDialogMessage": "אפשר להזין את משך ההפסקה מאוחר יותר דרך ״הפסקה בנטילת הגלולות״ במסך הבית.",
-  "yazFlexSkipRestDurationDialogSkip": "דלגי",
+  "yazFlexSkipRestDurationDialogSkip": "לדלג",
   "yazFlexBeginPillNumberPageTitle": "איזו נטילה במחזור היא תחילת המגשית?",
   "yazFlexBeginPillNumberPageNote": "אנא השיבי לפי מספר הימים שחלפו מאז ההפסקה שלפני תחילת החפיסה.",
   "yazFlexNextInputIsRestDuration": "בשלב הבא, יש להזין את ההפסקה הקודמת"
