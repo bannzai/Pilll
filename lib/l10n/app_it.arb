@@ -466,7 +466,7 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "La notifica predefinita \"È ora di prendere la pillola\" può essere personalizzata con le parole che preferisci. Prova a sostituirla con frasi che ti motivano, il nome del tuo animale domestico o qualsiasi testo che renda più piacevole l'assunzione quotidiana.",
   "appearanceModeDateFeatureAppealTitle": "Mostra le date sul blister",
   "appearanceModeDateFeatureAppealShortDescription": "Vedi a colpo d’occhio quando prendere la pillola",
-  "appearanceModeDateFeatureAppealHeadline": "Mostra la data sul foglio delle pillole",
+  "appearanceModeDateFeatureAppealHeadline": "Puoi vedere le date sul blister",
   "appearanceModeDateFeatureAppealBody": "Mostrando la data nelle caselle della griglia delle pillole puoi controllare a colpo d'occhio sia la cronologia delle assunzioni passate sia le assunzioni programmate per il futuro. Passa dalla modalità \"Numero\" a quella \"Data\" e scegli la visualizzazione più adatta a te.",
   "recordPillFeatureAppealTitle": "Ripercorri facilmente la cronologia delle assunzioni",
   "recordPillFeatureAppealShortDescription": "Vedi subito quando l'hai assunta",

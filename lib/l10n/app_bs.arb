@@ -466,7 +466,7 @@
   "reminderNotificationCustomizeWordFeatureAppealBody": "Možete prilagoditi standardnu poruku „Vrijeme je za uzimanje pilule\" riječima koje volite. Pokušajte je zamijeniti motivirajućim riječima, imenom svog ljubimca ili bilo kojom frazom koja će vaše svakodnevno uzimanje lijekova učiniti ugodnijim.",
   "appearanceModeDateFeatureAppealTitle": "Prikažite datume na blister pakovanju",
   "appearanceModeDateFeatureAppealShortDescription": "Na prvi pogled vidite kada trebate uzeti pilulu",
-  "appearanceModeDateFeatureAppealHeadline": "Prikaz datuma na listu pilula",
+  "appearanceModeDateFeatureAppealHeadline": "Možete vidjeti datume na blisteru",
   "appearanceModeDateFeatureAppealBody": "Prikazivanjem datuma u ćelijama lista tableta možete jednim pogledom provjeriti historiju uzimanja u prošlosti i buduće planove uzimanja. Prebacujte između načina „Broj\" i „Datum\" i odaberite prikaz koji vam odgovara.",
   "recordPillFeatureAppealTitle": "Lako pregledajte historiju uzimanja",
   "recordPillFeatureAppealShortDescription": "Odmah saznajte kada ste uzeli tabletu",
