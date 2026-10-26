@@ -316,7 +316,7 @@
   "purchaseErrorUnknownNonNativeError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት አዘምነው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ያልታወቀ ስህተት ተከስቷል። እባክዎ መተግበሪያውን ወደ አዲሱ ስሪት አዘምነው እንደገና ይሞክሩ። ችግሩ ካልተፈታ፣ በቅንብሮች > ያግኙን በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorCustomerInfoError": "የደንበኛ መረጃ ማግኘት አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ከቀጠለ፣ ከቅንብሮች > እኛን ያግኙ በኩል ያግኙን። ዝርዝሮች፦ ኮድ፦ {errorCode} {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorSystemInfoError": "በተሳሪያዎ ቅንብር ላይ ችግር ተከስቷል። እባክዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብር > መጠየቂያ በሚለው መንገድ ያናግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "በመሣሪያዎ ቅንብሮች ላይ ችግር አለ። እባክዎ ቅንብሮቹን ያረጋግጡና እንደገና ይሞክሩ። ችግሩ ካልተፈታ በቅንብሮች > እኛን ያግኙ በኩል ያግኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "ገንዘብ መመለስ ሂደት ተጀምሯል። እባክዎ ያረጋግጡ እና እንደገና ይሞክሩ། ችግሩ ካልተፈታ ቅንብሮች > ይጠይቁ በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "ጊዜ ያለቀ። የመገናኛ አካባቢዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በማድረግ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "አልታወቀ ስህተት ነው። ወደ ቅርብ ስሪት ወርድ እና እንደገና ሞክር። ካልተፈታ ቅንብሮች > ጥያቄ በኩል አግኝን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",

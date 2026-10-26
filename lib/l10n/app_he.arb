@@ -316,7 +316,7 @@
   "purchaseErrorUnknownNonNativeError": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה העדכנית ביותר ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "אירעה שגיאה לא ידועה. כדאי לעדכן את האפליקציה לגרסה האחרונה ולנסות שוב. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorCustomerInfoError": "לא ניתן לקבל את פרטי הלקוח. כדאי לנסות שוב בעוד זמן מה. אם הבעיה נמשכת, אפשר לפנות אלינו דרך הגדרות > יצירת קשר. פרטים: קוד: {errorCode} {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorSystemInfoError": "יש בעיה בהגדרות המכשיר. אנא בדוק ונסה שוב. אם הבעיה לא נפתרת, פנה אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "יש בעיה בהגדרות המכשיר. כדאי לבדוק אותן ולנסות שוב. אם הבעיה נמשכת, אפשר ליצור איתנו קשר דרך הגדרות > יצירת קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorBeginRefundRequestError": "תהליך ההחזר החל. אנא בדקו ונסו שוב. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > צור קשר. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorProductRequestTimeout": "פג זמן הקשר. אנא בדקו את סביבת התקשורת שלכם ונסו שוב. אם הבעיה לא נפתרת, אנא פנו אלינו דרך הגדרות > פנייה. פרטים: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "שגיאה לא ידועה. אנא עדכן לגרסה החדשה ביותר ונסה שוב. במידה והבעיה לא נפתרת, אנא צור קשר דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
