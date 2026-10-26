@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Ngemva kokumaka iphilisi lanamuhla njengelingakaphuzwa",
   "pauseTaking": "Ikhefu lokuphuza amaphilisi",
   "changePauseStartDate": "Shintsha usuku lokuqala kwekhefu lokuphuza amaphilisi",
-  "pauseTakingPeriodEnded": "Isikhathi sokuphumula lwamaphilisi luphele",
+  "pauseTakingPeriodEnded": "Isikhathi sokuphumula ekuphuzeni amaphilisi sesiphelile",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Guqula izinsuku zokuphuza ishidi",
   "changedStartAndEndNumbers": "Izinombolo zokuqala nokuphela zishintshiwe",

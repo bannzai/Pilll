@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးလုံးကို မသောက်ရသေးဟု မှတ်သားပြီးနောက်",
   "pauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားရန်",
   "changePauseStartDate": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်ကို ပြောင်းပါ",
-  "pauseTakingPeriodEnded": "ဆေးသောက်ခြင်း အနားယူကာလ ပြီးဆုံးပါပြီ",
+  "pauseTakingPeriodEnded": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားထားသည့်ကာလ ပြီးဆုံးပါပြီ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ပြားပုံးသုံးရက်ကိုပြောင်းလဲရန်",
   "changedStartAndEndNumbers": "အစနှင့်အဆုံးနံပါတ်များကို ပြောင်းလဲလိုက်ပါပြီ",

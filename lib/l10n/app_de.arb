@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Nachdem du die Pille für heute als nicht eingenommen markiert hast",
   "pauseTaking": "Pillenpause",
   "changePauseStartDate": "Beginn der Pillenpause ändern",
-  "pauseTakingPeriodEnded": "Die Einnahmepause ist beendet",
+  "pauseTakingPeriodEnded": "Deine Pillenpause ist vorbei",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Blister-Einnahmedauer ändern",
   "changedStartAndEndNumbers": "Die Start- und Endnummern wurden geändert",

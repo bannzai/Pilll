@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Pärast tänase pilli märkimist võtmata pilliks",
   "pauseTaking": "Pillide võtmise paus",
   "changePauseStartDate": "Muuda pillipausi alguskuupäeva",
-  "pauseTakingPeriodEnded": "Tablettide võtmise paus on lõppenud",
+  "pauseTakingPeriodEnded": "Pillipaus on lõppenud",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuda võtmisperioodi",
   "changedStartAndEndNumbers": "Algus- ja lõpunumbrid on muudetud",

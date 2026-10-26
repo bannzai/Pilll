@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej tabletki jako nieprzyjętej",
   "pauseTaking": "Przerwa w przyjmowaniu tabletek",
   "changePauseStartDate": "Zmień datę rozpoczęcia przerwy w braniu tabletek",
-  "pauseTakingPeriodEnded": "Przerwa w przyjmowaniu zakończyła się",
+  "pauseTakingPeriodEnded": "Przerwa w przyjmowaniu tabletek dobiegła końca",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmiana okresu przyjmowania opakowania",
   "changedStartAndEndNumbers": "Zmieniono numery początku i końca",

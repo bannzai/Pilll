@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Ko današnjo tableto označite kot nevzeto",
   "pauseTaking": "Premor pri jemanju tablet",
   "changePauseStartDate": "Spremenite datum začetka premora pri jemanju tablet",
-  "pauseTakingPeriodEnded": "Premor pri jemanju se je končal",
+  "pauseTakingPeriodEnded": "Premor pri jemanju tablet je končan",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Spremeni trajanje jemanja lista",
   "changedStartAndEndNumbers": "Začetna in končna številka sta spremenjeni",

@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ഇന്നത്തെ ഗുളിക കഴിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തിയ ശേഷം",
   "pauseTaking": "ഗുളിക കഴിക്കുന്നതിന് ഇടവേള",
   "changePauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി മാറ്റുക",
-  "pauseTakingPeriodEnded": "മാത്ര സേവന വിശ്രമ കാലയളവ് പൂർത്തിയായി",
+  "pauseTakingPeriodEnded": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള അവസാനിച്ചു",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ഷീറ്റ് സേവന ദിവസങ്ങൾ മാറ്റുക",
   "changedStartAndEndNumbers": "ആരംഭവും അവസാനവുമായ നമ്പറുകൾ മാറ്റിയിട്ടുണ്ട്",

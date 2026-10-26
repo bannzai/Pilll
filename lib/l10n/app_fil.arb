@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Pagkatapos markahan ang pildoras para ngayong araw bilang hindi pa nainom",
   "pauseTaking": "Pahinga muna sa pag-inom ng pill",
   "changePauseStartDate": "Palitan ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
-  "pauseTakingPeriodEnded": "Natapos na ang panahon ng pahinga sa pag-inom",
+  "pauseTakingPeriodEnded": "Tapos na ang pahinga ninyo sa pag-inom ng pildoras",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Baguhin ang bilang ng araw ng pag-inom ng sheet",
   "changedStartAndEndNumbers": "Binago ang mga numero ng simula at katapusan",

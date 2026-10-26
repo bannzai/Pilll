@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Eftir að þú hefur merkt pilluna í dag sem ótekna",
   "pauseTaking": "Hlé á pillutöku",
   "changePauseStartDate": "Breyta upphafsdegi pilluhléss",
-  "pauseTakingPeriodEnded": "Pilluhléið er lokið",
+  "pauseTakingPeriodEnded": "Hléi frá pillutöku er lokið",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Breyta fjölda inntökudaga",
   "changedStartAndEndNumbers": "Byrjunar- og endanúmerum var breytt",

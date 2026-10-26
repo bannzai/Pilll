@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "დღევანდელი აბის მიუღებლად მონიშვნის შემდეგ",
   "pauseTaking": "აბების მიღების დროებითი შეჩერება",
   "changePauseStartDate": "აბების მიღების შესვენების დაწყების თარიღის შეცვლა",
-  "pauseTakingPeriodEnded": "შესვენების პერიოდი დასრულდა",
+  "pauseTakingPeriodEnded": "აბების მიღების შესვენება დასრულდა",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "აბის მიღების ვადის შეცვლა",
   "changedStartAndEndNumbers": "საწყისისა და ბოლო ნომრები შეიცვალა",

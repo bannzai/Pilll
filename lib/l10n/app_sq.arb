@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Pasi ta shënoni pilulën e sotme si të pamarrë",
   "pauseTaking": "Pauzë në marrjen e pilulës",
   "changePauseStartDate": "Ndryshoni datën e fillimit të pushimit nga pilulat",
-  "pauseTakingPeriodEnded": "Periudha e pushimit nga marrja ka përfunduar",
+  "pauseTakingPeriodEnded": "Pauza nga marrja e pilulës ka përfunduar",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ndrysho ditët e marrjes së paketës",
   "changedStartAndEndNumbers": "Numrat e fillimit dhe të fundit janë ndryshuar",

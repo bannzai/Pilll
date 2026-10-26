@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "After marking today’s pill as not taken",
   "pauseTaking": "Pause taking pills",
   "changePauseStartDate": "Change pill break start date",
-  "pauseTakingPeriodEnded": "Your pill break period has ended",
+  "pauseTakingPeriodEnded": "Your pill break has ended",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Change sheet duration",
   "changedStartAndEndNumbers": "Start and end numbers have been changed",

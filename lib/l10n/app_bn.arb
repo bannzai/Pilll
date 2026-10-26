@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "আজকের পিলটি খাওয়া হয়নি বলে চিহ্নিত করার পর",
   "pauseTaking": "পিল খাওয়ায় বিরতি",
   "changePauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ পরিবর্তন করুন",
-  "pauseTakingPeriodEnded": "ওষুধ সেবনের বিরতির সময়কাল শেষ হয়েছে",
+  "pauseTakingPeriodEnded": "পিল খাওয়ার বিরতি শেষ হয়েছে",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "শিট সেবনের দিন পরিবর্তন",
   "changedStartAndEndNumbers": "শুরু এবং শেষের নম্বর পরিবর্তন করা হয়েছে",

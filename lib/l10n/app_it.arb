@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Dopo aver segnato la pillola di oggi come non assunta",
   "pauseTaking": "Pausa dalla pillola",
   "changePauseStartDate": "Modifica la data di inizio della pausa dalla pillola",
-  "pauseTakingPeriodEnded": "La pausa dall'assunzione è terminata",
+  "pauseTakingPeriodEnded": "La pausa dall’assunzione della pillola è terminata",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Modifica giorni di assunzione del blister",
   "changedStartAndEndNumbers": "I numeri di inizio e fine sono stati modificati",

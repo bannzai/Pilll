@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿದ ನಂತರ",
   "pauseTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ",
   "changePauseStartDate": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಬದಲಿಸಿ",
-  "pauseTakingPeriodEnded": "ಔಷಧ ಸೇವನೆಯ ವಿರಾಮ ಅವಧಿ ಮುಗಿದಿದೆ",
+  "pauseTakingPeriodEnded": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮ ಮುಗಿದಿದೆ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ಶೀಟ್ ಸೇವನೆಯ ದಿನಗಳನ್ನು ಬದಲಾಯಿಸಿ",
   "changedStartAndEndNumbers": "ಆರಂಭ ಮತ್ತು ಅಂತ್ಯದ ಸಂಖ್ಯೆಗಳನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",

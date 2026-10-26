@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը որպես չընդունված նշելուց հետո",
   "pauseTaking": "Դեղահաբի ընդունման դադար",
   "changePauseStartDate": "Փոխել հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
-  "pauseTakingPeriodEnded": "Դեղի ընդունման դադարի ժամանակահատվածը ավարտվեց",
+  "pauseTakingPeriodEnded": "Հաբերի ընդունման ընդմիջումն ավարտվել է",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Փոփոխել փաթեթի ընդունման օրերի քանակը",
   "changedStartAndEndNumbers": "Սկսման և ավարտման համարները փոխվել են",

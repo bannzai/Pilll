@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "የዛሬውን ክኒን እንዳልተወሰደ ከመለከትዎ በኋላ",
   "pauseTaking": "የክኒን አወሳሰድ እረፍት",
   "changePauseStartDate": "ክኒን መውሰድ የሚቆምበትን መጀመሪያ ቀን ይቀይሩ",
-  "pauseTakingPeriodEnded": "የመድሃኒት እረፍት ጊዜ ተጠናቃል",
+  "pauseTakingPeriodEnded": "የክኒን እረፍት ጊዜ ተጠናቋል",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "የሉሃ አገልግሎት ቀናት መቀየር",
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",

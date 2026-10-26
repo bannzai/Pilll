@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Pažymėjus šiandienos tabletę kaip neišgertą",
   "pauseTaking": "Tablečių vartojimo pertrauka",
   "changePauseStartDate": "Pakeiskite tablečių vartojimo pertraukos pradžios datą",
-  "pauseTakingPeriodEnded": "Tablečių vartojimo pertrauka pasibaigė",
+  "pauseTakingPeriodEnded": "Tablečių vartojimo pertrauka baigėsi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Keisti lakšto vartojimo dienų skaičių",
   "changedStartAndEndNumbers": "Pradžios ir pabaigos numeriai pakeisti",

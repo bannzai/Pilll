@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы қабылданбаған деп белгілегеннен кейін",
   "pauseTaking": "Таблетка қабылдаудағы үзіліс",
   "changePauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін өзгертіңіз",
-  "pauseTakingPeriodEnded": "Дәрі қабылдаудан демалыс кезеңі аяқталды",
+  "pauseTakingPeriodEnded": "Таблетка қабылдаудағы үзіліс аяқталды",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Таблетка пластинкасының қабылдау күндерін өзгерту",
   "changedStartAndEndNumbers": "Бастапқы және соңғы нөмірлер өзгертілді",

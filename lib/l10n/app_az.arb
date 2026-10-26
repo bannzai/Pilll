@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Bugünkü həbi qəbul edilməyib kimi qeyd etdikdən sonra",
   "pauseTaking": "Həb qəbuluna fasilə",
   "changePauseStartDate": "Həb fasiləsinin başlama tarixini dəyişin",
-  "pauseTakingPeriodEnded": "Dərman qəbuluna fasilə dövrü bitdi",
+  "pauseTakingPeriodEnded": "Həb qəbuluna fasilə müddəti bitdi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Vərəqin qəbul müddətini dəyişdir",
   "changedStartAndEndNumbers": "Başlanğıc və son nömrələri dəyişdirildi",

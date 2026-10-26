@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "આજની ગોળી લીધી નથી એવું ચિહ્નિત કર્યા પછી",
   "pauseTaking": "ગોળી લેવામાં વિરામ",
   "changePauseStartDate": "ગોળી લેવાનો વિરામ શરૂ થવાની તારીખ બદલો",
-  "pauseTakingPeriodEnded": "દવા સેવનનો વિરામ અવધિ સમાપ્ત થઈ ગયો છે",
+  "pauseTakingPeriodEnded": "ગોળી લેવાનો વિરામ પૂરો થયો છે",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "શીટના સેવનના દિવસો બદલો",
   "changedStartAndEndNumbers": "શરૂઆત અને અંતના નંબર બદલ્યા છે",

@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ଆଜିର ବଟିକା ଖାଇନାହାନ୍ତି ବୋଲି ଚିହ୍ନିତ କରିବା ପରେ",
   "pauseTaking": "ବଟିକା ଖାଇବାରେ ବିରତି",
   "changePauseStartDate": "ବଟିକା ଖାଇବାର ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",
-  "pauseTakingPeriodEnded": "ସେବନ ବିଶ୍ରାମ ଅବଧି ସମାପ୍ତ ହୋଇଛି",
+  "pauseTakingPeriodEnded": "ବଟିକା ଖାଇବାର ବିରତି ଶେଷ ହୋଇଛି",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ସିଟ୍ ସେବନ ଦିନ ପରିବର୍ତ୍ତନ",
   "changedStartAndEndNumbers": "ଆରମ୍ଭ ଏବଂ ଶେଷ ନମ୍ବର ପରିବର୍ତ୍ତନ କରାଯାଇଛି",

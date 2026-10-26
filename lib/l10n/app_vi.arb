@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Sau khi đánh dấu viên thuốc hôm nay là chưa uống",
   "pauseTaking": "Tạm ngừng uống thuốc",
   "changePauseStartDate": "Đổi ngày bắt đầu tạm ngừng uống thuốc",
-  "pauseTakingPeriodEnded": "Kỳ nghỉ thuốc đã kết thúc",
+  "pauseTakingPeriodEnded": "Thời gian tạm ngừng uống thuốc đã kết thúc",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Thay đổi số ngày uống vỉ thuốc",
   "changedStartAndEndNumbers": "Đã thay đổi số thứ tự bắt đầu và kết thúc",

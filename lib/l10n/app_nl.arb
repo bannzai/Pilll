@@ -125,7 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Nadat je de pil van vandaag als niet ingenomen hebt gemarkeerd",
   "pauseTaking": "Pillenpauze",
   "changePauseStartDate": "Begindatum van de pillenpauze wijzigen",
-  "pauseTakingPeriodEnded": "De pilvrije periode is beëindigd",
+  "pauseTakingPeriodEnded": "Je pillenpauze is voorbij",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Strip innameduur wijzigen",
   "changedStartAndEndNumbers": "Begin- en eindnummers zijn gewijzigd",
