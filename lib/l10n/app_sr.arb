@@ -251,7 +251,7 @@
   "physicalCondition": "Физичко стање",
   "deletedDiaryCannotBeRecovered": "Избрисане белешке у дневнику не могу да се врате",
   "sex": "Сексуални однос",
-  "previousPillSheetGroup": "Prethodna grupa pilula",
+  "previousPillSheetGroup": "Претходна група блистера",
   "noPreviousPillSheetGroup": "Prethodna grupa pilula još ne postoji",
   "failedToFetchPillHistory": "Neuspešno dohvatanje informacija o istoriji uzimanja. {error}",
   "seeFAQ": "Pogledajte FAQ",

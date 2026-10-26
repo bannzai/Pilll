@@ -251,7 +251,7 @@
   "physicalCondition": "Gjendja fizike",
   "deletedDiaryCannotBeRecovered": "Shënimet e fshira të ditarit nuk mund të rikthehen",
   "sex": "Marrëdhënie seksuale",
-  "previousPillSheetGroup": "Grupi i mëparshëm i paketave të pilulash",
+  "previousPillSheetGroup": "Grupi i mëparshëm i blisterëve",
   "noPreviousPillSheetGroup": "Grupi i mëparshëm i fletës së pilulës nuk ekziston ende",
   "failedToFetchPillHistory": "Dështoi në marrjen e të dhënave të historisë së marrjes. {error}",
   "seeFAQ": "Shiko FAQ",

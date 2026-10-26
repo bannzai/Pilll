@@ -251,7 +251,7 @@
   "physicalCondition": "Fysiskt mående",
   "deletedDiaryCannotBeRecovered": "Raderade dagboksanteckningar kan inte återställas",
   "sex": "Sex",
-  "previousPillSheetGroup": "Föregående p-pillergrupp",
+  "previousPillSheetGroup": "Föregående grupp p-pillerkartor",
   "noPreviousPillSheetGroup": "Det finns ingen tidigare p-pillerpaketsgrupp",
   "failedToFetchPillHistory": "Kunde inte hämta intag/doseringshistorik. {error}",
   "seeFAQ": "Se FAQ",

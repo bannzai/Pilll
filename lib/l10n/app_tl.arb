@@ -251,7 +251,7 @@
   "physicalCondition": "Kalagayan ng katawan",
   "deletedDiaryCannotBeRecovered": "Hindi na maibabalik ang mga binurang tala sa talaarawan",
   "sex": "Pakikipagtalik",
-  "previousPillSheetGroup": "Nakaraang Grupo ng Pill Sheet",
+  "previousPillSheetGroup": "Nakaraang pangkat ng pakete ng pildoras",
   "noPreviousPillSheetGroup": "Wala pang nakaraang pill sheet group",
   "failedToFetchPillHistory": "Nabigo ang pagkuha ng impormasyon ng kasaysayan ng pag-inom. {error}",
   "seeFAQ": "Tingnan ang FAQ",

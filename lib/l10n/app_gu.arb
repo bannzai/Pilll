@@ -251,7 +251,7 @@
   "physicalCondition": "શારીરિક સ્થિતિ",
   "deletedDiaryCannotBeRecovered": "કાઢી નાખેલી ડાયરીની નોંધો પાછી મેળવી શકાતી નથી",
   "sex": "જાતીય સંબંધ",
-  "previousPillSheetGroup": "પાછલું પિલ શીટ જૂથ",
+  "previousPillSheetGroup": "ગોળીની સ્ટ્રિપનું અગાઉનું જૂથ",
   "noPreviousPillSheetGroup": "પાછલું પિલ શીટ ગ્રૂપ હજુ અસ્તિત્વમાં નથી",
   "failedToFetchPillHistory": "સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ થયું. {error}",
   "seeFAQ": "FAQ જુઓ",

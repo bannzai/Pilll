@@ -251,7 +251,7 @@
   "physicalCondition": "מצב גופני",
   "deletedDiaryCannotBeRecovered": "אי אפשר לשחזר רשומות יומן שנמחקו",
   "sex": "יחסי מין",
-  "previousPillSheetGroup": "קבוצת אריזות הכדורים הקודמת",
+  "previousPillSheetGroup": "הקבוצה הקודמת של חפיסת גלולות",
   "noPreviousPillSheetGroup": "קבוצת גיליון הכדורים הקודמת אינה קיימת עדיין",
   "failedToFetchPillHistory": "שליפת מידע היסטוריית הנטילה נכשלה. {error}",
   "seeFAQ": "צפה בשאלות נפוצות",

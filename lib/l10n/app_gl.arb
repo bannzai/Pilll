@@ -251,7 +251,7 @@
   "physicalCondition": "Estado físico",
   "deletedDiaryCannotBeRecovered": "As entradas do diario eliminadas non se poden recuperar",
   "sex": "Relacións sexuais",
-  "previousPillSheetGroup": "Anterior grupo de cartelas",
+  "previousPillSheetGroup": "Grupo anterior de blísters",
   "noPreviousPillSheetGroup": "O grupo de píldoras anterior aínda non existe",
   "failedToFetchPillHistory": "Fallou a obtención da información do historial de toma. {error}",
   "seeFAQ": "Ver as preguntas frecuentes",

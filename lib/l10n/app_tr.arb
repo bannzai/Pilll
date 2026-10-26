@@ -251,7 +251,7 @@
   "physicalCondition": "Fiziksel durum",
   "deletedDiaryCannotBeRecovered": "Silinen günlük kayıtları geri yüklenemez",
   "sex": "Cinsel ilişki",
-  "previousPillSheetGroup": "Önceki Hap Şeridi Grubu",
+  "previousPillSheetGroup": "Önceki blister grubu",
   "noPreviousPillSheetGroup": "Önceki hap levhası grubu henüz mevcut değil",
   "failedToFetchPillHistory": "Kullanım geçmişi bilgileri alınamadı. {error}",
   "seeFAQ": "SSS'yi Görüntüle",

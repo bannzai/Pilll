@@ -251,7 +251,7 @@
   "physicalCondition": "Fizikai állapot",
   "deletedDiaryCannotBeRecovered": "A törölt naplóbejegyzések nem állíthatók vissza",
   "sex": "Szexuális együttlét",
-  "previousPillSheetGroup": "Előző tablettacsoport",
+  "previousPillSheetGroup": "Előző tablettacsomag-csoport",
   "noPreviousPillSheetGroup": "Az előző pilulacsoport még nem létezik",
   "failedToFetchPillHistory": "A szedési előzmények betöltése sikertelen volt. {error}",
   "seeFAQ": "GYIK megtekintése",

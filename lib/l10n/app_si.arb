@@ -251,7 +251,7 @@
   "physicalCondition": "ශාරීරික තත්ත්වය",
   "deletedDiaryCannotBeRecovered": "මකා දැමූ දිනපොත් සටහන් නැවත ලබා ගත නොහැක",
   "sex": "ලිංගික සම්බන්ධතාව",
-  "previousPillSheetGroup": "පසුගිය ගෝලි පත්‍ර කණ්ඩායම",
+  "previousPillSheetGroup": "පෙර පෙති කාඩ්පත සමූහය",
   "noPreviousPillSheetGroup": "පෙර පිල් පත්‍ර කණ්ඩායම තවමත් නොමැත",
   "failedToFetchPillHistory": "ගැනීමේ ඉතිහාස තොරතුරු ලබා ගැනීමට අසමත් විය. {error}",
   "seeFAQ": "FAQ බලන්න",

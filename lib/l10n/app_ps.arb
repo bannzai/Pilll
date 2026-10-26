@@ -251,7 +251,7 @@
   "physicalCondition": "د بدن حالت",
   "deletedDiaryCannotBeRecovered": "د ورځني یادښتونو ړنګ شوي لیکنې بېرته نه شي راګرځېدلی",
   "sex": "جنسي اړیکه",
-  "previousPillSheetGroup": "پخوانۍ د ګولیو د پاڼو ډله",
+  "previousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله",
   "noPreviousPillSheetGroup": "د پخوانی ګولیو د پاڼو ګروپ لا تر اوسه شتون نلري",
   "failedToFetchPillHistory": "د خوراکي درملو تاریخچې معلوماتو ترلاسه کول ناکام شو. {error}",
   "seeFAQ": "ډېر پوښتنې وګورئ",

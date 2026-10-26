@@ -251,7 +251,7 @@
   "physicalCondition": "Cyflwr corfforol",
   "deletedDiaryCannotBeRecovered": "Ni ellir adfer cofnodion dyddiadur sydd wedi'u dileu",
   "sex": "Cyfathrach rywiol",
-  "previousPillSheetGroup": "Grŵp taflenni pils blaenorol",
+  "previousPillSheetGroup": "Grŵp blaenorol o stribed pils",
   "noPreviousPillSheetGroup": "Nid yw'r grŵp taflen bilsen blaenorol yn bodoli eto",
   "failedToFetchPillHistory": "Methodd â chael gwybodaeth hanes cymryd y bilsen. {error}",
   "seeFAQ": "Gweld FAQ",

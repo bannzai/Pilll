@@ -251,7 +251,7 @@
   "physicalCondition": "Lichamelijke conditie",
   "deletedDiaryCannotBeRecovered": "Verwijderde dagboeknotities kun je niet herstellen",
   "sex": "Seks",
-  "previousPillSheetGroup": "Vorige pilstripgroep",
+  "previousPillSheetGroup": "Vorige groep pillenstrips",
   "noPreviousPillSheetGroup": "De vorige pillenstripgroep bestaat nog niet",
   "failedToFetchPillHistory": "Kan inname geschiedenis niet ophalen. {error}",
   "seeFAQ": "FAQ bekijken",

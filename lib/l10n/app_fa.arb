@@ -251,7 +251,7 @@
   "physicalCondition": "وضعیت جسمی",
   "deletedDiaryCannotBeRecovered": "یادداشت‌های حذف‌شدهٔ دفترچه خاطرات قابل بازیابی نیستند",
   "sex": "رابطه جنسی",
-  "previousPillSheetGroup": "گروه بسته‌های قرص قبلی",
+  "previousPillSheetGroup": "گروه قبلی ورق قرص",
   "noPreviousPillSheetGroup": "هنوز گروه برگه قرص قبلی وجود ندارد",
   "failedToFetchPillHistory": "دریافت اطلاعات سابقه مصرف ناموفق بود. {error}",
   "seeFAQ": "مشاهده سؤالات متداول",

@@ -251,7 +251,7 @@
   "physicalCondition": "Physical condition",
   "deletedDiaryCannotBeRecovered": "Deleted diary entries can’t be restored",
   "sex": "Sex",
-  "previousPillSheetGroup": "Previous Pill Sheet Group",
+  "previousPillSheetGroup": "Previous pill pack group",
   "noPreviousPillSheetGroup": "No previous pill sheet group exists yet",
   "failedToFetchPillHistory": "Failed to retrieve medication history information. {error}",
   "seeFAQ": "View FAQ",

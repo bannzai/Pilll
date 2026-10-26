@@ -251,7 +251,7 @@
   "physicalCondition": "Samopoczucie fizyczne",
   "deletedDiaryCannotBeRecovered": "Usuniętych wpisów w dzienniku nie można przywrócić",
   "sex": "Współżycie",
-  "previousPillSheetGroup": "Poprzednia grupa blistrów",
+  "previousPillSheetGroup": "Poprzednia grupa blistów",
   "noPreviousPillSheetGroup": "Poprzednia grupa arkusza tabletek jeszcze nie istnieje",
   "failedToFetchPillHistory": "Nie udało się pobrać historii przyjmowania. {error}",
   "seeFAQ": "Zobacz FAQ",

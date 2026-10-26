@@ -251,7 +251,7 @@
   "physicalCondition": "Tình trạng thể chất",
   "deletedDiaryCannotBeRecovered": "Không thể khôi phục các mục nhật ký đã xóa",
   "sex": "Quan hệ tình dục",
-  "previousPillSheetGroup": "Nhóm vỉ thuốc trước đó",
+  "previousPillSheetGroup": "Nhóm vỉ thuốc trước",
   "noPreviousPillSheetGroup": "Chưa có nhóm vỉ thuốc tránh thai trước đó",
   "failedToFetchPillHistory": "Không thể tải thông tin lịch sử uống thuốc. {error}",
   "seeFAQ": "Xem FAQ",

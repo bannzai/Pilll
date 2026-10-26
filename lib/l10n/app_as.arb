@@ -251,7 +251,7 @@
   "physicalCondition": "শাৰীৰিক অৱস্থা",
   "deletedDiaryCannotBeRecovered": "মচি পেলোৱা ডায়েৰীৰ লিখনি পুনৰুদ্ধাৰ কৰিব নোৱাৰি",
   "sex": "যৌন সম্পৰ্ক",
-  "previousPillSheetGroup": "আগৰ পিল শ্বিট গোট",
+  "previousPillSheetGroup": "আগৰ পিলৰ ষ্ট্ৰিপৰ গোট",
   "noPreviousPillSheetGroup": "আগৰ পিল শ্বীট গ্ৰুপ এতিয়াও নাই",
   "failedToFetchPillHistory": "ঔষধ সেৱনৰ ইতিহাসৰ তথ্য সংগ্ৰহত ব্যৰ্থ হৈছে। {error}",
   "seeFAQ": "FAQ চাওক",

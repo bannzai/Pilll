@@ -251,7 +251,7 @@
   "physicalCondition": "สภาพร่างกาย",
   "deletedDiaryCannotBeRecovered": "บันทึกไดอารีที่ลบแล้วไม่สามารถกู้คืนได้ค่ะ",
   "sex": "การมีเพศสัมพันธ์",
-  "previousPillSheetGroup": "กลุ่มแผ่นยาครั้งก่อน",
+  "previousPillSheetGroup": "กลุ่มแผงยาก่อนหน้า",
   "noPreviousPillSheetGroup": "ยังไม่มีกลุ่มแผงยาครั้งก่อน",
   "failedToFetchPillHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานยาได้ {error}",
   "seeFAQ": "ดู FAQ",

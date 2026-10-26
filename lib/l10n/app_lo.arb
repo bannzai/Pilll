@@ -251,7 +251,7 @@
   "physicalCondition": "ສະພາບຮ່າງກາຍ",
   "deletedDiaryCannotBeRecovered": "ບັນທຶກໃນໄດອາຣີທີ່ລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "sex": "ການຮ່ວມເພດ",
-  "previousPillSheetGroup": "ກຸ່ມແຜ່ນຢາກ່ອນໜ້າ",
+  "previousPillSheetGroup": "ກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
   "noPreviousPillSheetGroup": "ຍັງບໍ່ມີກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນ",
   "failedToFetchPillHistory": "ການໂຫລດຂໍ້ມູນປະຫວັດການກິນຢາລົ້ມເຫລວ。{error}",
   "seeFAQ": "ເບິ່ງ FAQ",

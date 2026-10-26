@@ -251,7 +251,7 @@
   "physicalCondition": "Fiziskā pašsajūta",
   "deletedDiaryCannotBeRecovered": "Izdzēstos dienasgrāmatas ierakstus nevar atjaunot",
   "sex": "Dzimumattiecības",
-  "previousPillSheetGroup": "Iepriekšējā tablešu grupa",
+  "previousPillSheetGroup": "Iepriekšējā tablešu blister grupa",
   "noPreviousPillSheetGroup": "Iepriekšējā tablešu grupa vēl neeksistē",
   "failedToFetchPillHistory": "Neizdevās iegūt tablešu lietošanas vēstures informāciju. {error}",
   "seeFAQ": "Skatīt FAQ",

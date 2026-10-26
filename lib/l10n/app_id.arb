@@ -251,7 +251,7 @@
   "physicalCondition": "Kondisi fisik",
   "deletedDiaryCannotBeRecovered": "Catatan harian yang dihapus tidak dapat dipulihkan",
   "sex": "Hubungan seksual",
-  "previousPillSheetGroup": "Grup Lembar Pil Sebelumnya",
+  "previousPillSheetGroup": "Grup strip pil sebelumnya",
   "noPreviousPillSheetGroup": "Kelompok lembar pil sebelumnya belum ada",
   "failedToFetchPillHistory": "Gagal mengambil informasi riwayat konsumsi. {error}",
   "seeFAQ": "Lihat FAQ",

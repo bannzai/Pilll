@@ -251,7 +251,7 @@
   "physicalCondition": "Hali ya mwili",
   "deletedDiaryCannotBeRecovered": "Maandishi ya shajara yaliyofutwa hayawezi kurejeshwa",
   "sex": "Tendo la ndoa",
-  "previousPillSheetGroup": "Kundi la awali la karatasi za dawa",
+  "previousPillSheetGroup": "Kundi la awali la pakiti ya vidonge",
   "noPreviousPillSheetGroup": "Kundi la karatasi za vidonge la awali bado halipo",
   "failedToFetchPillHistory": "Imeshindwa kupata taarifa za historia ya kutumia dawa. {error}",
   "seeFAQ": "Angalia FAQ",

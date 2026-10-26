@@ -251,7 +251,7 @@
   "physicalCondition": "몸 상태",
   "deletedDiaryCannotBeRecovered": "삭제한 일기는 복원할 수 없어요",
   "sex": "성관계",
-  "previousPillSheetGroup": "이전 피임약 시트 그룹",
+  "previousPillSheetGroup": "이전 알약 시트 그룹",
   "noPreviousPillSheetGroup": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",
   "failedToFetchPillHistory": "복용 기록 정보를 가져오는데 실패했습니다. {error}",
   "seeFAQ": "FAQ 보기",

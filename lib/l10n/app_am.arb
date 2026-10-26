@@ -251,7 +251,7 @@
   "physicalCondition": "የሰውነት ሁኔታ",
   "deletedDiaryCannotBeRecovered": "የተሰረዙ የማስታወሻ መዝገቦችን መመለስ አይቻልም",
   "sex": "ወሲባዊ ግንኙነት",
-  "previousPillSheetGroup": "ያለፈው የክኒን ሳህን ቡድን",
+  "previousPillSheetGroup": "የቀድሞው ክኒን ሉህ ቡድን",
   "noPreviousPillSheetGroup": "የቀደመው የክኒን ቡድን አሁንም የለም",
   "failedToFetchPillHistory": "የመድሐኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",
   "seeFAQ": "ተደጋጋሚ ጥያቄዎችን ይመልከቱ",

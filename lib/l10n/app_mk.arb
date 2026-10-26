@@ -251,7 +251,7 @@
   "physicalCondition": "Физичка состојба",
   "deletedDiaryCannotBeRecovered": "Избришаните записи во дневникот не може да се вратат",
   "sex": "Сексуален однос",
-  "previousPillSheetGroup": "Претходна група таблети",
+  "previousPillSheetGroup": "Претходна група блистер",
   "noPreviousPillSheetGroup": "Претходната grupa на пилули сè уште не постои",
   "failedToFetchPillHistory": "Неуспешно преземање на информациите за историјата на земање. {error}",
   "seeFAQ": "Видете ЧПП",

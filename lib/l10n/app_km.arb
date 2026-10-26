@@ -251,7 +251,7 @@
   "physicalCondition": "ស្ថានភាពរាងកាយ",
   "deletedDiaryCannotBeRecovered": "កំណត់ហេតុដែលបានលុបមិនអាចស្ដារឡើងវិញបានទេ",
   "sex": "ការរួមភេទ",
-  "previousPillSheetGroup": "ក្រុមបន្ទះថ្នាំពីមុន",
+  "previousPillSheetGroup": "ក្រុមបន្ទះថ្នាំគ្រាប់មុន",
   "noPreviousPillSheetGroup": "ក្រុមថ្នាំពីលើកមុនមិនទាន់មាននៅឡើយទេ",
   "failedToFetchPillHistory": "មិនអាចទាញយកព័ត៌មានប្រវត្តិការញុំថ្នាំបានទេ។ {error}",
   "seeFAQ": "មើលសំណួរដែលសួរជាញឹកញាប់",

@@ -251,7 +251,7 @@
   "physicalCondition": "शारीरिक स्थिती",
   "deletedDiaryCannotBeRecovered": "हटवलेल्या डायरीतील नोंदी पुन्हा मिळवता येणार नाहीत",
   "sex": "लैंगिक संबंध",
-  "previousPillSheetGroup": "मागील गोळी शीट गट",
+  "previousPillSheetGroup": "मागील पिल शीट गट",
   "noPreviousPillSheetGroup": "मागील पिल शीट गट अजूनही अस्तित्वात नाही",
   "failedToFetchPillHistory": "सेवन इतिहासाची माहिती मिळवता आली नाही। {error}",
   "seeFAQ": "FAQ पहा",

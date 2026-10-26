@@ -251,7 +251,7 @@
   "physicalCondition": "Chörperlichs Befinde",
   "deletedDiaryCannotBeRecovered": "Glöschti Tagebuechiiträg chasch nümme zrugg hole",
   "sex": "Sex",
-  "previousPillSheetGroup": "Letschti Pilleblatt-Gruppe",
+  "previousPillSheetGroup": "Vorigi Pilleblistergruppe",
   "noPreviousPillSheetGroup": "S letschte Pilleblatt-Gruppe isch no nöd vorhande",
   "failedToFetchPillHistory": "Fähler bim Lade vo de Iinahm-Gschicht. {error}",
   "seeFAQ": "FAQ aaluege",

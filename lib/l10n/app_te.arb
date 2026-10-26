@@ -251,7 +251,7 @@
   "physicalCondition": "శారీరక స్థితి",
   "deletedDiaryCannotBeRecovered": "తొలగించిన డైరీ నమోదులను తిరిగి పొందలేరు",
   "sex": "లైంగిక సంబంధం",
-  "previousPillSheetGroup": "మునుపటి పిల్ షీట్ గ్రూప్",
+  "previousPillSheetGroup": "మునుపటి మాత్రల స్ట్రిప్‌ల సమూహం",
   "noPreviousPillSheetGroup": "మునుపటి పిల్ షీట్ గ్రూప్ ఇంకా అందుబాటులో లేదు",
   "failedToFetchPillHistory": "మందుల సేవన చరిత్ర సమాచారం పొందడంలో విఫలమైంది। {error}",
   "seeFAQ": "FAQ చూడండి",
