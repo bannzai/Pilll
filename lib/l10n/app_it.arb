@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Hai effettuato l’accesso con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlaci della confezione di pillole che ti è stata prescritta",
   "existingAccountUsers": "Hai già un account? Accedi",
-  "selectTodayPillNumber": "Tocca il numero della pillola di oggi ({todayString})",
+  "selectTodayPillNumber": "Oggi ({todayString})\nTocca il numero della pillola che prenderai o hai già preso",
   "notYetKnown": "Non ancora noto",
   "pillForToday": "La pillola per {today} è",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

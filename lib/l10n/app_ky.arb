@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Сиз {accountTypeProviderName} аркылуу кирдиңиз",
   "tellAboutPrescribedSheet": "Сизге жазылган таблеткалардын таңгагы жөнүндө айтып бериңиз",
   "existingAccountUsers": "Аккаунтуңуз барбы? Кириңиз",
-  "selectTodayPillNumber": "Бүгүн ({todayString}) ичүү керек болгон же ичилген дарынын номерин басыңыз",
+  "selectTodayPillNumber": "Бүгүн ({todayString})\nИче турган же ичип койгон таблетканын номерин басыңыз",
   "notYetKnown": "Белгисиз",
   "pillForToday": "{today} күнү ичилүүчү дары:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

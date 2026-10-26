@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Jūs pierakstījāties ar {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Pastāstiet par jums izrakstīto tablešu iepakojumu",
   "existingAccountUsers": "Jums jau ir konts? Piesakieties",
-  "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties pie pilules numura, ko jāizdzer vai jau izdzēra",
+  "selectTodayPillNumber": "Šodien ({todayString})\nPieskarieties tās tabletes numuram, kuru lietosiet vai jau esat lietojuši",
   "notYetKnown": "Vēl nav zināms",
   "pillForToday": "{today} dzert tabletes ir",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Je bent ingelogd met {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vertel ons over de pillenstrip die je voorgeschreven hebt gekregen",
   "existingAccountUsers": "Heb je al een account? Log in",
-  "selectTodayPillNumber": "Vandaag ({todayString}): tik op het nummer van de pil die je moet innemen of hebt ingenomen",
+  "selectTodayPillNumber": "Vandaag ({todayString})\nTik op het nummer van de pil die je gaat innemen of al hebt ingenomen",
   "notYetKnown": "Nog niet bekend",
   "pillForToday": "Pil voor {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}e pil",

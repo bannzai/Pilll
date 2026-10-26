@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Du er logget inn med {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Fortell oss om p-pillebrettet du har fått på resept",
   "existingAccountUsers": "Har du allerede en konto? Logg inn",
-  "selectTodayPillNumber": "Trykk på nummeret til dagens ({todayString}) pille",
+  "selectTodayPillNumber": "I dag ({todayString})\nTrykk på nummeret til p-pillen du skal ta eller allerede har tatt",
   "notYetKnown": "Ukjent",
   "pillForToday": "Pillen for {today} er",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

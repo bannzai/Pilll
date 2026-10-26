@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Du bisch mit {accountTypeProviderName} aagmäldet",
   "tellAboutPrescribedSheet": "Verzell üs vo dim verschribne Pilleblister",
   "existingAccountUsers": "Häsch scho es Konto? Mäld di aa",
-  "selectTodayPillNumber": "Hüt ({todayString})\nDrück d Pill-Nummer wo du nimmsch oder scho gnoh hesch",
+  "selectTodayPillNumber": "Hüt ({todayString})\nTipp uf d Nummere vo de Pille, wo du hüt nimmsch oder scho gnoh hesch",
   "notYetKnown": "Noch nöd bekannt",
   "pillForToday": "D'Pille am {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

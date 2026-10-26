@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Prisijungėte per {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Papasakokite apie jums išrašytų tablečių pakuotę",
   "existingAccountUsers": "Jau turite paskyrą? Prisijunkite",
-  "selectTodayPillNumber": "Palieskite šiandien ({todayString}) vartojamos ar išvartojamos tabletės numerį",
+  "selectTodayPillNumber": "Šiandien ({todayString})\nPalieskite tabletės, kurią vartosite arba jau pavartojote, numerį",
   "notYetKnown": "Dar nežinoma",
   "pillForToday": "{today} vartotinos tabletes",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

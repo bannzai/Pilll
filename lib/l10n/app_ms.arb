@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Anda telah log masuk dengan {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Ceritakan tentang pek pil yang dipreskripsikan untuk anda",
   "existingAccountUsers": "Sudah ada akaun? Log masuk",
-  "selectTodayPillNumber": "Ketuk nombor pil yang perlu/telah diminum hari ini ({todayString})",
+  "selectTodayPillNumber": "Hari ini ({todayString})\nSila ketik nombor pil yang akan atau sudah anda ambil",
   "notYetKnown": "Belum ditentukan",
   "pillForToday": "Pil untuk {today} ialah",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

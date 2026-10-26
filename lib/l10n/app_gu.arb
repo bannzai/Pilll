@@ -224,7 +224,7 @@
   "loggedInWithProvider": "તમે {accountTypeProviderName} વડે લૉગ ઇન કર્યું છે",
   "tellAboutPrescribedSheet": "તમને લખી આપેલા ગોળીઓના પૅક વિશે જણાવો",
   "existingAccountUsers": "તમારું પહેલેથી એકાઉન્ટ છે? સાઇન ઇન કરો",
-  "selectTodayPillNumber": "આજે ({todayString}) લેવાની/લીધેલી ગોળીનો નંબર ટેપ કરો",
+  "selectTodayPillNumber": "આજે ({todayString})\nતમે જે ગોળી લેવાના છો અથવા લઈ લીધી છે, તેના નંબર પર ટેપ કરો",
   "notYetKnown": "હજુ ખબર નથી",
   "pillForToday": "{today}માં લેવાની ગોળી",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

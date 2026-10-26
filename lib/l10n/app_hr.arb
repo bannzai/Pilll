@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Prijavili ste se putem {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Recite nam nešto o pakiranju pilula koje su vam propisane",
   "existingAccountUsers": "Već imate račun? Prijavite se",
-  "selectTodayPillNumber": "Danas ({todayString})\nDodirnite broj tablete koju trebate uzeti ili ste već uzeli",
+  "selectTodayPillNumber": "Danas ({todayString})\nDodirnite broj pilule koju ćete uzeti ili ste je već uzeli",
   "notYetKnown": "Još nije poznato",
   "pillForToday": "Pilule za {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

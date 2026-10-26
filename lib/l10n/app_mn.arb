@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Та {accountTypeProviderName}-ээр нэвтэрсэн",
   "tellAboutPrescribedSheet": "Танд бичиж өгсөн эмийн блистерийн талаар хэлж өгнө үү",
   "existingAccountUsers": "Та бүртгэлтэй юу? Нэвтэрнэ үү",
-  "selectTodayPillNumber": "Өнөөдөр ({todayString}) уух/уусан эмийн дугаарыг дарна уу",
+  "selectTodayPillNumber": "Өнөөдөр ({todayString})\nУух гэж байгаа эсвэл уусан эмийн дугаарыг дарна уу",
   "notYetKnown": "Хараахан тодорхойгүй",
   "pillForToday": "{today}-д уух эм нь",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

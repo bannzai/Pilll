@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Դուք մուտք եք գործել {accountTypeProviderName}‑ով",
   "tellAboutPrescribedSheet": "Խնդրում ենք պատմել Ձեզ նշանակված հաբերի փաթեթի մասին",
   "existingAccountUsers": "Արդեն հաշիվ ունե՞ք։ Մուտք գործեք",
-  "selectTodayPillNumber": "Հպեք այսօր ({todayString}) խմելու կամ խմած դեղահատի համարին",
+  "selectTodayPillNumber": "Այսօր ({todayString})\nՀպեք այն հաբի համարին, որը պատրաստվում եք ընդունել կամ արդեն ընդունել եք",
   "notYetKnown": "Դեռ անհայտ է",
   "pillForToday": "{today}-ին ընդունելիք հաբերը",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

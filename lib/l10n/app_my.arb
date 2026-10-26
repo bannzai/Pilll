@@ -224,7 +224,7 @@
   "loggedInWithProvider": "{accountTypeProviderName} ဖြင့် အကောင့်ဝင်ပြီးပါပြီ",
   "tellAboutPrescribedSheet": "ဆရာဝန်ညွှန်ကြားထားသော ဆေးပြားကတ်အကြောင်း ပြောပြပေးပါ",
   "existingAccountUsers": "အကောင့်ရှိပြီးသားလား? အကောင့်ဝင်ပါ",
-  "selectTodayPillNumber": "ဒီနေ့ ({todayString}) သောက်ရန်/သောက်ပြီး ဆေးပြားနံပါတ်ကို နှိပ်ပါ",
+  "selectTodayPillNumber": "ယနေ့ ({todayString})\nသောက်မည့် သို့မဟုတ် သောက်ပြီးသား ဆေးလုံး၏ နံပါတ်ကို နှိပ်ပါ",
   "notYetKnown": "မသိသေးပါ",
   "pillForToday": "{today} တွင် သောက်ရမည့် ဆေး သည်",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

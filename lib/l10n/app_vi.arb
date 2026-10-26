@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Bạn đã đăng nhập bằng {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Vui lòng cho biết về vỉ thuốc tránh thai được kê cho bạn",
   "existingAccountUsers": "Đã có tài khoản? Đăng nhập",
-  "selectTodayPillNumber": "Hôm nay ({todayString})\nChạm vào số viên thuốc cần uống hoặc đã uống",
+  "selectTodayPillNumber": "Hôm nay ({todayString})\nVui lòng chạm vào số của viên thuốc bạn sắp uống hoặc đã uống",
   "notYetKnown": "Chưa rõ",
   "pillForToday": "Thuốc cần uống vào {today} là",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Rydych chi wedi mewngofnodi gyda {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Dywedwch wrthym am y pecyn pils sydd wedi'i ragnodi i chi",
   "existingAccountUsers": "Oes gennych gyfrif eisoes? Mewngofnodwch",
-  "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen i'w gymryd neu sydd wedi'i gymryd",
+  "selectTodayPillNumber": "Heddiw ({todayString})\nTapiwch rif y bilsen rydych chi am ei chymryd neu wedi ei chymryd",
   "notYetKnown": "Ddim yn gwybod eto",
   "pillForToday": "Y bilsen ar gyfer {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

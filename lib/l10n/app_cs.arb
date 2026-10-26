@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Přihlášení přes {accountTypeProviderName} proběhlo úspěšně",
   "tellAboutPrescribedSheet": "Řekněte nám prosím něco o předepsaném balení pilulek",
   "existingAccountUsers": "Už máte účet? Přihlásit se",
-  "selectTodayPillNumber": "Klepněte na číslo pilulky pro dnes ({todayString})",
+  "selectTodayPillNumber": "Dnes ({todayString})\nKlepněte na číslo pilulky, kterou si vezmete nebo jste si ji už vzali",
   "notYetKnown": "Zatím neznámé",
   "pillForToday": "Pilulka na {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

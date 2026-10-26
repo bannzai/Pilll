@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Oled sisse logitud teenusega {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Räägi meile oma väljakirjutatud pillipakist",
   "existingAccountUsers": "Kas sul on juba konto? Logi sisse",
-  "selectTodayPillNumber": "Puuduta täna ({todayString}) võetava või võetud tableti numbrit",
+  "selectTodayPillNumber": "Täna ({todayString})\nPuuduta pilli numbrit, mille võtad või oled juba võtnud",
   "notYetKnown": "Veel pole teada",
   "pillForToday": "{today}l võetav pill on",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

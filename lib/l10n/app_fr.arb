@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Vous êtes connecté via {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Parlez-nous de la plaquette de pilules qui vous a été prescrite",
   "existingAccountUsers": "Vous avez déjà un compte ? Connectez-vous",
-  "selectTodayPillNumber": "Aujourd'hui ({todayString}) Appuyez sur le numéro de la pilule à prendre ou à prendre",
+  "selectTodayPillNumber": "Aujourd’hui ({todayString})\nTouchez le numéro de la pilule que vous allez prendre ou avez déjà prise",
   "notYetKnown": "Inconnu",
   "pillForToday": "Pilules pour {today} :",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

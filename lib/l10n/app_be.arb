@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Вы ўвайшлі праз {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Раскажыце, калі ласка, пра ўпакоўку прызначаных вам пігулак",
   "existingAccountUsers": "У вас ужо ёсць уліковы запіс? Увайдзіце",
-  "selectTodayPillNumber": "Сёння ({todayString})\nНацісніце нумар пілюлі, якую трэба прыняць/прынялі",
+  "selectTodayPillNumber": "Сёння ({todayString})\nНацісніце на нумар пігулкі, якую збіраецеся прыняць або ўжо прынялі",
   "notYetKnown": "Яшчэ невядома",
   "pillForToday": "Таблетка на {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

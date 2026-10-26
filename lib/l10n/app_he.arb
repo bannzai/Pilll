@@ -224,7 +224,7 @@
   "loggedInWithProvider": "הכניסה באמצעות {accountTypeProviderName} הושלמה",
   "tellAboutPrescribedSheet": "נשמח לשמוע על חפיסת הגלולות שנרשמה לך",
   "existingAccountUsers": "יש כבר חשבון? כניסה לחשבון",
-  "selectTodayPillNumber": "היום ({todayString})\nהקש על מספר הגלולה לנטילה היום",
+  "selectTodayPillNumber": "היום ({todayString})\nללחוץ על מספר הגלולה שמיועדת לנטילה או שכבר ניטלה",
   "notYetKnown": "עדיין לא ידוע",
   "pillForToday": "הגלולה ל{today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

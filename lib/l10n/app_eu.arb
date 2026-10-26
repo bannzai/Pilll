@@ -224,7 +224,7 @@
   "loggedInWithProvider": "{accountTypeProviderName} bidez hasi duzu saioa",
   "tellAboutPrescribedSheet": "Esaguzu agindu dizuten pilula sortari buruz",
   "existingAccountUsers": "Baduzu kontu bat? Hasi saioa",
-  "selectTodayPillNumber": "Gaur ({todayString})\\nHartu beharreko/hartutako pilularen zenbakia sakatu",
+  "selectTodayPillNumber": "Gaur ({todayString})\nUkitu hartuko duzun edo dagoeneko hartu duzun pilularen zenbakia",
   "notYetKnown": "Oraindik ez da jakina",
   "pillForToday": "{today}(e)an hartu beharreko pilula",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

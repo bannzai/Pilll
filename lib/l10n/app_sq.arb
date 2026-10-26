@@ -224,7 +224,7 @@
   "loggedInWithProvider": "U identifikuat përmes {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Na tregoni për paketimin e pilulave që ju janë përshkruar",
   "existingAccountUsers": "Keni tashmë një llogari? Hyni",
-  "selectTodayPillNumber": "Prekni numrin e pilulës për sot ({todayString})",
+  "selectTodayPillNumber": "Sot ({todayString})\nPrekni numrin e pilulës që do të merrni ose e keni marrë tashmë",
   "notYetKnown": "Ende nuk dihet",
   "pillForToday": "Pillat për t'u marrë në {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Влязохте с {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Разкажете ни за опаковката с предписаните ви хапчета",
   "existingAccountUsers": "Вече имате профил? Влезте",
-  "selectTodayPillNumber": "Докоснете номера на хапчето за днес ({todayString})",
+  "selectTodayPillNumber": "Днес ({todayString})\nДокоснете номера на хапчето, което ще вземете или вече сте взели",
   "notYetKnown": "Все още неясно",
   "pillForToday": "Хапчето за {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

@@ -224,7 +224,7 @@
   "loggedInWithProvider": "You're signed in with {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Tell us about your prescribed pill pack",
   "existingAccountUsers": "Already have an account? Sign in",
-  "selectTodayPillNumber": "Today ({todayString}) Tap the number of the pill to take or taken",
+  "selectTodayPillNumber": "Today ({todayString})\nTap the number of the pill you're taking or have already taken",
   "notYetKnown": "Unknown",
   "pillForToday": "Pills for {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Umeingia kwa kutumia {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Tafadhali tuambie kuhusu pakiti ya vidonge ulivyoandikiwa",
   "existingAccountUsers": "Una akaunti tayari? Tafadhali ingia",
-  "selectTodayPillNumber": "Leo ({todayString}) gusa nambari ya dawa unayotumia au uliyotumia",
+  "selectTodayPillNumber": "Leo ({todayString})\nTafadhali gusa namba ya kidonge utakachomeza au ambacho tayari umemeza",
   "notYetKnown": "Bado haijulikani",
   "pillForToday": "Vidonge vya {today} ni",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

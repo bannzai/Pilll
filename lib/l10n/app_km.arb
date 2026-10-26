@@ -224,7 +224,7 @@
   "loggedInWithProvider": "អ្នកបានចូលគណនីតាមរយៈ {accountTypeProviderName} ហើយ",
   "tellAboutPrescribedSheet": "សូមប្រាប់យើងអំពីកញ្ចប់ថ្នាំគ្រាប់ដែលគ្រូពេទ្យបានចេញវេជ្ជបញ្ជាឱ្យអ្នក",
   "existingAccountUsers": "មានគណនីរួចហើយឬ? សូមចូលគណនី",
-  "selectTodayPillNumber": "ចុចលេខថ្នាំគ្រាប់ដែលត្រូវទទួលទាន ឬ បានទទួលទានថ្ងៃនេះ ({todayString})",
+  "selectTodayPillNumber": "ថ្ងៃនេះ ({todayString})\nសូមចុចលេខគ្រាប់ថ្នាំដែលអ្នកនឹងលេប ឬបានលេបរួច",
   "notYetKnown": "មិនទាន់ដឹង",
   "pillForToday": "ថ្នាំពីលុលសម្រាប់{today}គឺ",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

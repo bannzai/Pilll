@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Bejelentkeztél a(z) {accountTypeProviderName} használatával",
   "tellAboutPrescribedSheet": "Mesélj a felírt tabletták csomagolásáról",
   "existingAccountUsers": "Már van fiókod? Jelentkezz be",
-  "selectTodayPillNumber": "Koppintson a ma ({todayString}) beveendő vagy bevett tabletta számára",
+  "selectTodayPillNumber": "Ma ({todayString})\nKoppints annak a tablettának a számára, amelyet ma szedsz vagy már beszedtél",
   "notYetKnown": "Még nem ismert",
   "pillForToday": "A {today} napján szedendő pirula:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

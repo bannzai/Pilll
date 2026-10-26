@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Συνδεθήκατε μέσω {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Πείτε μας για τη συσκευασία των χαπιών που σας έχουν συνταγογραφηθεί",
   "existingAccountUsers": "Έχετε ήδη λογαριασμό; Συνδεθείτε",
-  "selectTodayPillNumber": "Σήμερα ({todayString}) πατήστε τον αριθμό του χαπιού που πρέπει να πάρετε ή πήρατε",
+  "selectTodayPillNumber": "Σήμερα ({todayString})\nΠατήστε τον αριθμό του χαπιού που θα πάρετε ή έχετε ήδη πάρει",
   "notYetKnown": "Άγνωστο",
   "pillForToday": "Το χάπι για τις {today} είναι",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

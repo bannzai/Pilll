@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Has iniciado sesión con {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Cuéntanos sobre el envase de las píldoras que te recetaron",
   "existingAccountUsers": "¿Ya tienes una cuenta? Inicia sesión",
-  "selectTodayPillNumber": "Hoy ({todayString}) - Toca el número de la píldora que debes tomar o has tomado",
+  "selectTodayPillNumber": "Hoy ({todayString})\nToca el número de la píldora que vas a tomar o que ya tomaste",
   "notYetKnown": "Sin determinar",
   "pillForToday": "Píldoras para tomar el {today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

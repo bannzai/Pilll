@@ -224,7 +224,7 @@
   "loggedInWithProvider": "تاسو د {accountTypeProviderName} له لارې ننوتلي یاست",
   "tellAboutPrescribedSheet": "مهرباني وکړئ د درته تجویز شوې د ګولیو بستې په اړه راته ووایئ",
   "existingAccountUsers": "له مخکې حساب لرئ؟ ننوځئ",
-  "selectTodayPillNumber": "نن ({todayString}) د اخیستلو یا اخیستل شوي ګولۍ شمیره ټپ وکړئ",
+  "selectTodayPillNumber": "نن ({todayString})\nمهرباني وکړئ د هغې ګولۍ پر شمېره ټېپ وکړئ چې اخلئ یا مو لا مخکې اخیستې ده",
   "notYetKnown": "نامعلوم",
   "pillForToday": "د {today} ګولۍ:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

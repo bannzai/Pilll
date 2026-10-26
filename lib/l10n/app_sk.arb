@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Prihlásili ste sa cez {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Povedzte nám o balení predpísaných tabletiek",
   "existingAccountUsers": "Už máte účet? Prihláste sa",
-  "selectTodayPillNumber": "Dnes ({todayString}) ťuknite na číslo tabletky, ktorú máte vziať/ste vzali",
+  "selectTodayPillNumber": "Dnes ({todayString})\nŤuknite na číslo tabletky, ktorú užijete alebo ste už užili",
   "notYetKnown": "Zatiaľ neurčené",
   "pillForToday": "Pilulka na {today} je",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

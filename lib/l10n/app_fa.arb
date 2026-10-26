@@ -224,7 +224,7 @@
   "loggedInWithProvider": "با {accountTypeProviderName} وارد شدید",
   "tellAboutPrescribedSheet": "لطفاً درباره بسته قرص تجویزشده‌تان به ما بگویید",
   "existingAccountUsers": "از قبل حساب کاربری دارید؟ وارد شوید",
-  "selectTodayPillNumber": "شماره قرص امروز ({todayString}) را لمس کنید",
+  "selectTodayPillNumber": "امروز ({todayString})\nروی شماره قرصی که قرار است مصرف کنید یا مصرف کرده‌اید بزنید",
   "notYetKnown": "هنوز مشخص نیست",
   "pillForToday": "قرص‌های {today}",
   "todayPillNumber": "قرص شماره {todayPillNumberPillNumberInPillSheet}",

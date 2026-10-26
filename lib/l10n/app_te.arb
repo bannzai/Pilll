@@ -224,7 +224,7 @@
   "loggedInWithProvider": "మీరు {accountTypeProviderName} ద్వారా లాగిన్ అయ్యారు",
   "tellAboutPrescribedSheet": "మీకు వైద్యుడు సూచించిన మాత్రల ప్యాక్ గురించి చెప్పండి",
   "existingAccountUsers": "మీకు ఇప్పటికే ఖాతా ఉందా? లాగిన్ అవ్వండి",
-  "selectTodayPillNumber": "ఈరోజు ({todayString}) తీసుకోవాల్సిన/తీసుకున్న మాత్ర సంఖ్యను తాకండి",
+  "selectTodayPillNumber": "ఈ రోజు ({todayString})\nమీరు వేసుకోబోయే లేదా ఇప్పటికే వేసుకున్న మాత్ర సంఖ్యను నొక్కండి",
   "notYetKnown": "ఇంకా తెలియదు",
   "pillForToday": "{today}న తీసుకోవాల్సిన గుళికలు",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",

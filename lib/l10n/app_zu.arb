@@ -224,7 +224,7 @@
   "loggedInWithProvider": "Ungene ngemvume usebenzisa {accountTypeProviderName}",
   "tellAboutPrescribedSheet": "Sicela usitshele ngephakethe lamaphilisi owalinikezwa udokotela",
   "existingAccountUsers": "Usunayo i-akhawunti? Sicela ungene",
-  "selectTodayPillNumber": "Thepha inombolo yepilisi ozoyiphuza noma osuyiphuzile namuhla ({todayString})",
+  "selectTodayPillNumber": "Namuhla ({todayString})\nSicela uthephe inombolo yephilisi ozoliphuza noma oseliphuzile",
   "notYetKnown": "Akusazakali",
   "pillForToday": "Amaphilisi a{today}:",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
