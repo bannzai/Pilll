@@ -202,7 +202,7 @@
   "thankYouMessage": "Hvala Vam što koristite Pilll.\nZahvaljujući Vašoj podršci, možemo nastaviti održavati Pilll.",
   "premiumFeaturesList": "Lista premium funkcija",
   "pushNotificationForTakingRecord": "📩 Unos u evidencij putem push obavijesti",
-  "viewAndRecordTakingHistory": "🗂 Evidencija i pregled historije uzimanja",
+  "viewAndRecordTakingHistory": "🗂 Bilježenje i pregled historije uzimanja (historij)",
   "displayDateOnPillSheet": "📆 Prikaz datuma na blisteru pilula",
   "autoRefillNewPillSheet": "📦 Automatska dopuna novog blistera",
   "viewPastData": "👀 Pregled prethodnih podataka",

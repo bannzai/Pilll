@@ -202,7 +202,7 @@
   "thankYouMessage": "ขอบคุณที่ใช้ Pilll ค่ะ\nด้วยการสนับสนุนของคุณ เราจึงสามารถให้บริการ Pilll ต่อไปได้ค่ะ",
   "premiumFeaturesList": "รายการฟีเจอร์พรีเมียม",
   "pushNotificationForTakingRecord": "📩 บันทึกการทานยาจากการแจ้งเตือน",
-  "viewAndRecordTakingHistory": "🗂 การบันทึกและดูประวัติการรับประทาน",
+  "viewAndRecordTakingHistory": "🗂 บันทึกและดูประวัติการทานยา",
   "displayDateOnPillSheet": "📆 แสดงวันที่บนแผนยา",
   "autoRefillNewPillSheet": "📦 เติมแผงยาใหม่อัตโนมัติ",
   "viewPastData": "👀 เรียกดูข้อมูลในอดีต",

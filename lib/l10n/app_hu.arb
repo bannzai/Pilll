@@ -202,7 +202,7 @@
   "thankYouMessage": "Köszönjük, hogy használod a Pilll-t.\nA támogatásodnak köszönhetően tovább működtethetjük a Pilll-t.",
   "premiumFeaturesList": "A prémium funkciók listája",
   "pushNotificationForTakingRecord": "📩 tablettaszedési napló push értesítésből",
-  "viewAndRecordTakingHistory": "🗂 Bevételi előzmények rögzítése és megtekintése",
+  "viewAndRecordTakingHistory": "🗂 Szedési előzmények rögzítése és megtekintése (szedési előzmények)",
   "displayDateOnPillSheet": "📆 Dátum megjelenítése a tablettacsomagokon",
   "autoRefillNewPillSheet": "📦 Új tablettacsomag automatikus utántöltése",
   "viewPastData": "👀 Korábbi adatok megtekintése",

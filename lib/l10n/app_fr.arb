@@ -202,7 +202,7 @@
   "thankYouMessage": "Merci d’utiliser Pilll.\nGrâce à votre soutien, nous pouvons continuer à faire fonctionner Pilll.",
   "premiumFeaturesList": "Liste des fonctionnalités Premium",
   "pushNotificationForTakingRecord": "📩 journal des prises depuis une notification",
-  "viewAndRecordTakingHistory": "🗂 Enregistrez et consultez l'historique des médicaments",
+  "viewAndRecordTakingHistory": "🗂 Enregistrer et consulter l’historique des prises",
   "displayDateOnPillSheet": "📆 Affichage de la date sur la feuille de pilules",
   "autoRefillNewPillSheet": "📦 Recharge automatique d'une nouvelle feuille de pilules",
   "viewPastData": "👀 Afficher les données passées",
