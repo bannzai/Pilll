@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Очекивани датум следеће менструације",
   "menstruationScheduleDateWithNumber": "Очекивана менструација: дан {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Очекивана менструација: дан {diffPlusOne}, пилула {pillNumber}",
-  "menstruationRemainingDay": "још {diff} дана",
+  "menstruationRemainingDay": "Остало је {diff} дана",
   "menstruationProgressingDay": "{diffPlusOne}. dan",
   "recordMenstruation": "Zabeleži menstruaciju",
   "menstruationHistory": "Историја менструације",

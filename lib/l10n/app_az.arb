@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Növbəti aybaşının gözlənilən tarixi",
   "menstruationScheduleDateWithNumber": "Gözlənilən aybaşı: {diffPlusOne}-ci gün",
   "menstruationScheduleDateWithNumberAndPillNumber": "Gözlənilən aybaşı: {diffPlusOne}-ci gün, {pillNumber}-ci həb",
-  "menstruationRemainingDay": "daha {diff} gün",
+  "menstruationRemainingDay": "{diff} gün qalıb",
   "menstruationProgressingDay": "{diffPlusOne}-ci gün",
   "recordMenstruation": "Menstruasiyanı qeyd et",
   "menstruationHistory": "Menstruasiya tarixi",

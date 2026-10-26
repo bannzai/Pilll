@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "ପରବର୍ତ୍ତୀ ମାସିକ ଆରମ୍ଭ ହେବାର ଅନୁମାନିତ ତାରିଖ",
   "menstruationScheduleDateWithNumber": "ମାସିକ ଆସିବାର ଆନୁମାନିକ ଦିନ: {diffPlusOne}ତମ ଦିନ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ଆଶା କରାଯାଉଥିବା ମାସିକ: {diffPlusOne}ତମ ଦିନ, {pillNumber} ନମ୍ବର ବଟିକା",
-  "menstruationRemainingDay": "ଆଉ {diff} ଦିନ",
+  "menstruationRemainingDay": "ଆଉ {diff} ଦିନ ବାକି",
   "menstruationProgressingDay": "{diffPlusOne}ଦିନ",
   "recordMenstruation": "ମାସିକ ରେକର୍ଡ କରନ୍ତୁ",
   "menstruationHistory": "ମାସିକ ଇତିହାସ",

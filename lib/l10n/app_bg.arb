@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Очаквана дата на следващия мензис",
   "menstruationScheduleDateWithNumber": "Очакван мензис: ден {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Очакван мензис: ден {diffPlusOne}, хапче {pillNumber}",
-  "menstruationRemainingDay": "Още {diff} дни",
+  "menstruationRemainingDay": "Остават {diff} дни",
   "menstruationProgressingDay": "{diffPlusOne}-ти ден",
   "recordMenstruation": "Записване на менструация",
   "menstruationHistory": "Менструална история",

@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Järgmiste päevade eeldatav alguskuupäev",
   "menstruationScheduleDateWithNumber": "Oodatavad päevad: {diffPlusOne}. päev",
   "menstruationScheduleDateWithNumberAndPillNumber": "Oodatavad päevad: {diffPlusOne}. päev, pill {pillNumber}",
-  "menstruationRemainingDay": "veel {diff} päeva",
+  "menstruationRemainingDay": "{diff} päeva jäänud",
   "menstruationProgressingDay": "{diffPlusOne}. päev",
   "recordMenstruation": "Märgi menstruatsioon",
   "menstruationHistory": "Menstruatsiooni ajalugu",

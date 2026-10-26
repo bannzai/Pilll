@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "A következő menstruáció várható kezdete",
   "menstruationScheduleDateWithNumber": "Várható menstruáció: {diffPlusOne}. nap",
   "menstruationScheduleDateWithNumberAndPillNumber": "Várható menstruáció: {diffPlusOne}. nap, {pillNumber}. tabletta",
-  "menstruationRemainingDay": "még {diff} nap",
+  "menstruationRemainingDay": "Még {diff} nap",
   "menstruationProgressingDay": "{diffPlusOne}. nap",
   "recordMenstruation": "Menstruáció rögzítése",
   "menstruationHistory": "Menstruációs előzmények",

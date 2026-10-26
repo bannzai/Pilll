@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Predpokladaný dátum ďalšej menštruácie",
   "menstruationScheduleDateWithNumber": "Očakávaná menštruácia: deň {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Očakávaná menštruácia: deň {diffPlusOne}, tabletka {pillNumber}",
-  "menstruationRemainingDay": "Za {diff} dní",
+  "menstruationRemainingDay": "Zostáva {diff} dní",
   "menstruationProgressingDay": "{diffPlusOne}. deň",
   "recordMenstruation": "Zaznamenať menstruáciu",
   "menstruationHistory": "História menštruácie",

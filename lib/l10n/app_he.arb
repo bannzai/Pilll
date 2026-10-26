@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "תאריך משוער לתחילת המחזור הבא",
   "menstruationScheduleDateWithNumber": "מועד המחזור המשוער: יום {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "מחזור צפוי: יום {diffPlusOne}, גלולה {pillNumber}",
-  "menstruationRemainingDay": "עוד {diff} ימים",
+  "menstruationRemainingDay": "נותרו {diff} ימים",
   "menstruationProgressingDay": "יום {diffPlusOne}",
   "recordMenstruation": "רישום וסת",
   "menstruationHistory": "היסטוריית וסת",

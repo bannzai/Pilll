@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Data prevista delle prossime mestruazioni",
   "menstruationScheduleDateWithNumber": "Mestruazioni previste: giorno {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Mestruazioni previste: giorno {diffPlusOne}, pillola {pillNumber}",
-  "menstruationRemainingDay": "Tra {diff} giorni",
+  "menstruationRemainingDay": "Mancano {diff} giorni",
   "menstruationProgressingDay": "{diffPlusOne}° giorno",
   "recordMenstruation": "Registra il ciclo",
   "menstruationHistory": "Cronologia mestruazioni",

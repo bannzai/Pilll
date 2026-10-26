@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Keyingi hayzning taxminiy boshlanish sanasi",
   "menstruationScheduleDateWithNumber": "Kutilayotgan hayz: {diffPlusOne}-kun",
   "menstruationScheduleDateWithNumberAndPillNumber": "Kutilayotgan hayz: {diffPlusOne}-kun, {pillNumber}-tabletka",
-  "menstruationRemainingDay": "{diff} kun qoldi",
+  "menstruationRemainingDay": "Yana {diff} kun qoldi",
   "menstruationProgressingDay": "{diffPlusOne}-kun",
   "recordMenstruation": "Hayz davrini qayd qilish",
   "menstruationHistory": "Hayz tarixi",

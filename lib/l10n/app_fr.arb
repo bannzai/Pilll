@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Date prévue des prochaines règles",
   "menstruationScheduleDateWithNumber": "Règles prévues : jour {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Règles prévues : jour {diffPlusOne}, pilule {pillNumber}",
-  "menstruationRemainingDay": "dans {diff} jours",
+  "menstruationRemainingDay": "Encore {diff} jours",
   "menstruationProgressingDay": "Jour {diffPlusOne}",
   "recordMenstruation": "Noter les règles",
   "menstruationHistory": "Histoire menstruelle",

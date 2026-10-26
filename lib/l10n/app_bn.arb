@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "পরবর্তী মাসিক শুরুর সম্ভাব্য তারিখ",
   "menstruationScheduleDateWithNumber": "মাসিক শুরুর সম্ভাব্য দিন: {diffPlusOne}তম দিন",
   "menstruationScheduleDateWithNumberAndPillNumber": "মাসিকের সম্ভাব্য সময়: {diffPlusOne}তম দিন, পিল {pillNumber}",
-  "menstruationRemainingDay": "আরও {diff} দিন",
+  "menstruationRemainingDay": "আর {diff} দিন বাকি",
   "menstruationProgressingDay": "{diffPlusOne}তম দিন",
   "recordMenstruation": "মাসিক রেকর্ড করুন",
   "menstruationHistory": "মাসিকের ইতিহাস",

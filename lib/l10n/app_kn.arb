@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "ಮುಂದಿನ ಮುಟ್ಟಿನ ನಿರೀಕ್ಷಿತ ಆರಂಭದ ದಿನಾಂಕ",
   "menstruationScheduleDateWithNumber": "ಮುಟ್ಟಿನ ನಿರೀಕ್ಷಿತ ದಿನ: {diffPlusOne}ನೇ ದಿನ",
   "menstruationScheduleDateWithNumberAndPillNumber": "ನಿರೀಕ್ಷಿತ ಮುಟ್ಟಿನ ದಿನ: {diffPlusOne}ನೇ ದಿನ, {pillNumber}ನೇ ಮಾತ್ರೆ",
-  "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನ",
+  "menstruationRemainingDay": "ಇನ್ನೂ {diff} ದಿನಗಳು ಬಾಕಿ",
   "menstruationProgressingDay": "{diffPlusOne}ನೇ ದಿನ",
   "recordMenstruation": "ಮಾಸಿಕ ಧರ್ಮ ದಾಖಲಿಸಿ",
   "menstruationHistory": "ಮಾಸಿಕ ಧರ್ಮದ ಇತಿಹಾಸ",

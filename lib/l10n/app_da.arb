@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "Forventet dato for næste menstruation",
   "menstruationScheduleDateWithNumber": "Forventet menstruation: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Forventet menstruation: dag {diffPlusOne}, p-pille {pillNumber}",
-  "menstruationRemainingDay": "Om {diff} dage",
+  "menstruationRemainingDay": "{diff} dage tilbage",
   "menstruationProgressingDay": "dag {diffPlusOne}",
   "recordMenstruation": "Registrer menstruation",
   "menstruationHistory": "Menstruationshistorie",

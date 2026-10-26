@@ -158,7 +158,7 @@
   "menstruationScheduleDate": "შემდეგი მენსტრუაციის სავარაუდო დაწყების თარიღი",
   "menstruationScheduleDateWithNumber": "მოსალოდნელი მენსტრუაცია: დღე {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "მოსალოდნელი მენსტრუაცია: დღე {diffPlusOne}, აბი {pillNumber}",
-  "menstruationRemainingDay": "კიდევ {diff} დღე",
+  "menstruationRemainingDay": "დარჩენილია {diff} დღე",
   "menstruationProgressingDay": "{diffPlusOne}-ე დღე",
   "recordMenstruation": "მენსტრუაციის ჩაწერა",
   "menstruationHistory": "მენსტრუაციის ისტორია",
