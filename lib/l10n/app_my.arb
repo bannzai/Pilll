@@ -30,7 +30,7 @@
   "deleteDiary": "နေ့စဉ်မှတ်တမ်းကို ဖျက်ပါ",
   "confirmDeletingMenstruation": "ဒီရာသီကာလရဲ့ မှတ်တမ်းကို ဖျက်ချင်ပါသလား?",
   "addNotificationTime": "အသိပေးချက်အချိန် ထည့်ပါ",
-  "syncWithDeviceTimeZone": "စက်ပစ္စည်း၏ အချိန်ဇုန်း ({deviceTimezoneName}) နှင့် ချိတ်ဆက်မည်လား။",
+  "syncWithDeviceTimeZone": "စက်၏ အချိန်ဇုန် ({deviceTimezoneName}) နှင့် ထပ်တူပြုလိုပါသလား?",
   "currentTimeZone": "လက်ရှိသတ်မှတ်ထားသည့်အချိန်ဇုန်",
   "yes": "ဟုတ်",
   "no": "မဟုတ်ပါ",

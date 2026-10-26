@@ -30,7 +30,7 @@
   "deleteDiary": "Usuń wpis z dziennika",
   "confirmDeletingMenstruation": "Czy chcesz usunąć zapis tego okresu?",
   "addNotificationTime": "Dodaj godzinę powiadomienia",
-  "syncWithDeviceTimeZone": "Czy zsynchronizować ze strefą czasową urządzenia ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Zsynchronizować ze strefą czasową urządzenia ({deviceTimezoneName})?",
   "currentTimeZone": "Obecnie ustawiona strefa czasowa",
   "yes": "Tak",
   "no": "Nie",

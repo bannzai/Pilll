@@ -30,7 +30,7 @@
   "deleteDiary": "Eyða dagbókarfærslu",
   "confirmDeletingMenstruation": "Viltu eyða skráningu þessa blæðingatímabils?",
   "addNotificationTime": "Bæta við tilkynningartíma",
-  "syncWithDeviceTimeZone": "Samstilla við tímabelti tækisins ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Viltu samstilla við tímabelti tækisins ({deviceTimezoneName})?",
   "currentTimeZone": "Núverandi tímabelti",
   "yes": "Já",
   "no": "Nei",

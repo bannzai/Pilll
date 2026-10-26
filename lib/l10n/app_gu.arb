@@ -30,7 +30,7 @@
   "deleteDiary": "ડાયરીની નોંધ કાઢી નાખો",
   "confirmDeletingMenstruation": "શું તમે આ માસિક સમયગાળાનો રેકોર્ડ કાઢી નાખવા માંગો છો?",
   "addNotificationTime": "સૂચનાનો સમય ઉમેરો",
-  "syncWithDeviceTimeZone": "ઉપકરણના ટાઇમ ઝોન ({deviceTimezoneName}) સાથે સિંક કરશો?",
+  "syncWithDeviceTimeZone": "શું તમે તમારા ઉપકરણના સમય ક્ષેત્ર ({deviceTimezoneName}) સાથે સમન્વય કરવા માંગો છો?",
   "currentTimeZone": "હાલમાં સેટ કરેલ ટાઇમ ઝોન",
   "yes": "હા",
   "no": "ના",

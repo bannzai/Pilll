@@ -30,7 +30,7 @@
   "deleteDiary": "दैनंदिनीतील नोंद हटवा",
   "confirmDeletingMenstruation": "मासिक पाळीच्या या कालावधीची नोंद हटवायची आहे का?",
   "addNotificationTime": "सूचनेची वेळ जोडा",
-  "syncWithDeviceTimeZone": "डिव्हाइसच्या टाइम झोन ({deviceTimezoneName}) सह समक्रमित करायचे का?",
+  "syncWithDeviceTimeZone": "तुमच्या डिव्हाइसच्या वेळ क्षेत्राशी ({deviceTimezoneName}) समक्रमित करायचे आहे का?",
   "currentTimeZone": "सध्या सेट केलेला टाइम झोन",
   "yes": "होय",
   "no": "नाही",

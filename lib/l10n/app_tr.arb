@@ -30,7 +30,7 @@
   "deleteDiary": "Günlük kaydını silin",
   "confirmDeletingMenstruation": "Bu adet döneminin kaydını silmek istiyor musunuz?",
   "addNotificationTime": "Bildirim saati ekleyin",
-  "syncWithDeviceTimeZone": "Cihaz saat dilimi ({deviceTimezoneName}) ile senkronize edilsin mi?",
+  "syncWithDeviceTimeZone": "Cihazınızın saat dilimiyle ({deviceTimezoneName}) eşitlemek ister misiniz?",
   "currentTimeZone": "Mevcut zaman dilimi",
   "yes": "Evet",
   "no": "Hayır",

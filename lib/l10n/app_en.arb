@@ -30,7 +30,7 @@
   "deleteDiary": "Delete diary entry",
   "confirmDeletingMenstruation": "Delete this period record?",
   "addNotificationTime": "Add notification time",
-  "syncWithDeviceTimeZone": "Sync with device timezone ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Sync with your device’s time zone ({deviceTimezoneName})?",
   "currentTimeZone": "Current time zone",
   "yes": "Yes",
   "no": "No",

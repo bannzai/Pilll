@@ -30,7 +30,7 @@
   "deleteDiary": "删除这篇日记",
   "confirmDeletingMenstruation": "要删除这段经期记录吗？",
   "addNotificationTime": "添加通知时间",
-  "syncWithDeviceTimeZone": "您要与设备时区({deviceTimezoneName})同步吗？",
+  "syncWithDeviceTimeZone": "要与设备时区（{deviceTimezoneName}）同步吗？",
   "currentTimeZone": "当前设置的时区",
   "yes": "确定",
   "no": "否",

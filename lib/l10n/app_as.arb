@@ -30,7 +30,7 @@
   "deleteDiary": "ডায়েৰীৰ লিখনি মচি পেলাওক",
   "confirmDeletingMenstruation": "আপুনি মাহেকীয়া সময়ছোৱাৰ ৰেকৰ্ড মচিব বিচাৰেনে?",
   "addNotificationTime": "জাননীৰ সময় যোগ কৰক",
-  "syncWithDeviceTimeZone": "ডিভাইচৰ টাইম জ'ন ({deviceTimezoneName}) ৰ সৈতে সিংক কৰিবনে?",
+  "syncWithDeviceTimeZone": "আপোনাৰ ডিভাইচৰ সময় অঞ্চল ({deviceTimezoneName})ৰ সৈতে মিলাব বিচাৰেনে?",
   "currentTimeZone": "বৰ্তমানে নিৰ্ধাৰিত সময় অঞ্চল",
   "yes": "হয়",
   "no": "নহয়",

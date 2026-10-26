@@ -30,7 +30,7 @@
   "deleteDiary": "Brisanje zapisa iz dnevnika",
   "confirmDeletingMenstruation": "Želite li izbrisati zapis o razdoblju menstruacije?",
   "addNotificationTime": "Dodajte vrijeme obavijesti",
-  "syncWithDeviceTimeZone": "Želite li sinkronizirati s vremenskom zonom uređaja ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Želite li uskladiti s vremenskom zonom svojeg uređaja ({deviceTimezoneName})?",
   "currentTimeZone": "Trenutno postavljena vremenska zona",
   "yes": "Da",
   "no": "Ne",

@@ -30,7 +30,7 @@
   "deleteDiary": "Ištrinti dienoraščio įrašą",
   "confirmDeletingMenstruation": "Ar norite ištrinti šio mėnesinių laikotarpio įrašą?",
   "addNotificationTime": "Pridėti pranešimo laiką",
-  "syncWithDeviceTimeZone": "Sinchronizuoti su įrenginio laiko juosta ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Ar norite sinchronizuoti su įrenginio laiko juosta ({deviceTimezoneName})?",
   "currentTimeZone": "Dabartinė nustatyta laiko juosta",
   "yes": "Taip",
   "no": "Ne",

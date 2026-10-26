@@ -30,7 +30,7 @@
   "deleteDiary": "ڈائری کا اندراج حذف کریں",
   "confirmDeletingMenstruation": "کیا آپ ماہواری کے اس دورانیے کا ریکارڈ حذف کرنا چاہتی ہیں؟",
   "addNotificationTime": "اطلاع کا وقت شامل کریں",
-  "syncWithDeviceTimeZone": "کیا آپ ڈیوائس کے ٹائم زون ({deviceTimezoneName}) کے ساتھ مطابقت پذیری کرنا چاہتے ہیں؟",
+  "syncWithDeviceTimeZone": "کیا آپ اپنے آلے کے ٹائم زون ({deviceTimezoneName}) کے مطابق مطابقت پذیری کرنا چاہیں گی؟",
   "currentTimeZone": "موجودہ سیٹ شدہ ٹائم زون",
   "yes": "ہاں",
   "no": "نہیں",

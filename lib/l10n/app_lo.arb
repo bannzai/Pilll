@@ -30,7 +30,7 @@
   "deleteDiary": "ລຶບບັນທຶກປະຈຳວັນນີ້",
   "confirmDeletingMenstruation": "ທ່ານຕ້ອງການລຶບບັນທຶກຊ່ວງປະຈຳເດືອນນີ້ບໍ?",
   "addNotificationTime": "ເພີ່ມເວລາແຈ້ງເຕືອນ",
-  "syncWithDeviceTimeZone": "ຕ້ອງການປະສານກັບໂຊນເວລາຂອງອຸປະກອນ ({deviceTimezoneName}) ບໍ?",
+  "syncWithDeviceTimeZone": "ຕ້ອງການຊິງກັບເຂດເວລາຂອງອຸປະກອນ ({deviceTimezoneName}) ບໍ?",
   "currentTimeZone": "ເຂດເວລາທີ່ຕັ້ງຄ່າໃນປັດຈຸບັນ",
   "yes": "ແມ່ນ",
   "no": "ບໍ່",

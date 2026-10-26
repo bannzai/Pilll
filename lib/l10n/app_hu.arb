@@ -30,7 +30,7 @@
   "deleteDiary": "Naplóbejegyzés törlése",
   "confirmDeletingMenstruation": "Törlöd a menstruációs időszak bejegyzését?",
   "addNotificationTime": "Értesítési időpont hozzáadása",
-  "syncWithDeviceTimeZone": "Szinkronizálja az eszköz időzónájával ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Szinkronizálod az eszközöd időzónájával ({deviceTimezoneName})?",
   "currentTimeZone": "Jelenleg beállított időzóna",
   "yes": "Igen",
   "no": "Nem",

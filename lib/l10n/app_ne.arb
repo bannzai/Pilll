@@ -30,7 +30,7 @@
   "deleteDiary": "डायरीको टिपोट मेटाउनुहोस्",
   "confirmDeletingMenstruation": "के तपाईं यो महिनावारी अवधिको रेकर्ड मेटाउन चाहनुहुन्छ?",
   "addNotificationTime": "सूचनाको समय थप्नुहोस्",
-  "syncWithDeviceTimeZone": "डिभाइसको टाइमजोन ({deviceTimezoneName}) सँग समक्रमण गर्नुहुन्छ?",
+  "syncWithDeviceTimeZone": "तपाईंको उपकरणको समय क्षेत्र ({deviceTimezoneName}) सँग समक्रमण गर्न चाहनुहुन्छ?",
   "currentTimeZone": "हाल सेट गरिएको समय क्षेत्र",
   "yes": "हो",
   "no": "होइन",

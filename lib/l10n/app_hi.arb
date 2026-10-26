@@ -30,7 +30,7 @@
   "deleteDiary": "डायरी की प्रविष्टि हटाएँ",
   "confirmDeletingMenstruation": "क्या आप इस पीरियड की अवधि का रिकॉर्ड हटाना चाहती हैं?",
   "addNotificationTime": "सूचना का समय जोड़ें",
-  "syncWithDeviceTimeZone": "क्या आप डिवाइस टाइम जोन ({deviceTimezoneName}) के साथ सिंक करना चाहते हैं?",
+  "syncWithDeviceTimeZone": "क्या आप अपने डिवाइस के समय क्षेत्र ({deviceTimezoneName}) से सिंक करना चाहेंगी?",
   "currentTimeZone": "वर्तमान में सेट टाइम ज़ोन",
   "yes": "हाँ",
   "no": "नहीं",

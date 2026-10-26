@@ -30,7 +30,7 @@
   "deleteDiary": "Ջնջել օրագրի գրառումը",
   "confirmDeletingMenstruation": "Ցանկանո՞ւմ եք ջնջել այս դաշտանի ժամանակահատվածի գրառումը։",
   "addNotificationTime": "Ավելացնել ծանուցման ժամ",
-  "syncWithDeviceTimeZone": "Համաժամեցնե՞լ սարքի ժամային գոտու ({deviceTimezoneName}) հետ։",
+  "syncWithDeviceTimeZone": "Ցանկանո՞ւմ եք համաժամեցնել սարքի ժամային գոտու ({deviceTimezoneName}) հետ։",
   "currentTimeZone": "Ներկայումս սահմանված ժամային գոտին",
   "yes": "Այո",
   "no": "ոչ",

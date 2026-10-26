@@ -30,7 +30,7 @@
   "deleteDiary": "លុបកំណត់ហេតុប្រចាំថ្ងៃនេះ",
   "confirmDeletingMenstruation": "តើអ្នកចង់លុបកំណត់ត្រារយៈពេលរដូវនេះឬ?",
   "addNotificationTime": "បន្ថែមម៉ោងជូនដំណឹង",
-  "syncWithDeviceTimeZone": "តើអ្នកចង់ធ្វើសមកាលកម្មជាមួយតំបន់ពេលវេលាឧបករណ៍ ({deviceTimezoneName}) ទេ?",
+  "syncWithDeviceTimeZone": "តើអ្នកចង់ធ្វើសមកាលកម្មជាមួយតំបន់ពេលវេលារបស់ឧបករណ៍ ({deviceTimezoneName}) ទេ?",
   "currentTimeZone": "តំបន់ពេលវេលាបច្ចុប្បន្ន",
   "yes": "បាទ",
   "no": "ទេ",

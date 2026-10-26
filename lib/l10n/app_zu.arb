@@ -30,7 +30,7 @@
   "deleteDiary": "Sicela ususe okubhalwe edayari",
   "confirmDeletingMenstruation": "Ungathanda ukususa irekhodi lalesi sikhathi sokuya esikhathini?",
   "addNotificationTime": "Sicela ungeze isikhathi sesaziso",
-  "syncWithDeviceTimeZone": "Ufuna ukuxhumanisa nesikhathi somshini wakho ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Ungathanda yini ukuvumelanisa nezoni yesikhathi yedivayisi yakho ({deviceTimezoneName})?",
   "currentTimeZone": "I-timezone esetiwe njengamanje",
   "yes": "Yebo",
   "no": "Cha",

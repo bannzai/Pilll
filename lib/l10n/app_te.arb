@@ -30,7 +30,7 @@
   "deleteDiary": "డైరీ నమోదును తొలగించండి",
   "confirmDeletingMenstruation": "ఈ నెలసరి కాలపు రికార్డును తొలగించాలనుకుంటున్నారా?",
   "addNotificationTime": "నోటిఫికేషన్ సమయాన్ని జోడించండి",
-  "syncWithDeviceTimeZone": "పరికర టైమ్‌జోన్ ({deviceTimezoneName}) తో సింక్రొనైజ్ చేయాలా?",
+  "syncWithDeviceTimeZone": "మీ పరికరం సమయ మండలంతో ({deviceTimezoneName}) సమకాలీకరించాలనుకుంటున్నారా?",
   "currentTimeZone": "ప్రస్తుతం సెట్ చేయబడిన టైమ్ జోన్",
   "yes": "అవును",
   "no": "లేదు",

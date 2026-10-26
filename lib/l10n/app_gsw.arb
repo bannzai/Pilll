@@ -30,7 +30,7 @@
   "deleteDiary": "Tagebuechiträg lösche",
   "confirmDeletingMenstruation": "Wotsch d Ufzeichnig vo dere Periode lösche?",
   "addNotificationTime": "Ziit für e Erinnerig dezue tue",
-  "syncWithDeviceTimeZone": "Möchted Sie mit dr Zytzone vo Ihrem Gerät ({deviceTimezoneName}) synchronisiere?",
+  "syncWithDeviceTimeZone": "Wetsch d Ziitzoone vo dim Grät ({deviceTimezoneName}) übernäh?",
   "currentTimeZone": "Aktuelli Ziitzone",
   "yes": "Ja",
   "no": "Nei",

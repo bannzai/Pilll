@@ -30,7 +30,7 @@
   "deleteDiary": "Kustuta päevikukanne",
   "confirmDeletingMenstruation": "Kas soovid selle päevade perioodi kirje kustutada?",
   "addNotificationTime": "Lisa teavituse aeg",
-  "syncWithDeviceTimeZone": "Kas sünkroniseerida seadme ajavööndiga ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Kas soovid sünkroonida seadme ajavööndiga ({deviceTimezoneName})?",
   "currentTimeZone": "Praegu seadistatud ajavöönd",
   "yes": "Jah",
   "no": "Ei",

@@ -30,7 +30,7 @@
   "deleteDiary": "Vee die dagboekinskrywing uit",
   "confirmDeletingMenstruation": "Wil jy hierdie maandstondeperiode uitvee?",
   "addNotificationTime": "Voeg kennisgewingtyd by",
-  "syncWithDeviceTimeZone": "Wil jy dit aan die toestel se tydsone ({deviceTimezoneName}) aanpas?",
+  "syncWithDeviceTimeZone": "Wil jy met die tydsone van jou toestel ({deviceTimezoneName}) sinkroniseer?",
   "currentTimeZone": "Huidige tydsone",
   "yes": "Ja",
   "no": "Nee",

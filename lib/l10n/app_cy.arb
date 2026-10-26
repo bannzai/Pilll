@@ -30,7 +30,7 @@
   "deleteDiary": "Dileu'r cofnod dyddiadur",
   "confirmDeletingMenstruation": "Ydych chi am ddileu cofnod cyfnod y mislif?",
   "addNotificationTime": "Ychwanegwch amser hysbysiad",
-  "syncWithDeviceTimeZone": "A hoffech chi gysoni â chylchfa amser y ddyfais ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Hoffech chi gysoni â pharth amser eich dyfais ({deviceTimezoneName})?",
   "currentTimeZone": "Cylchfa amser gyfredol",
   "yes": "Ie",
   "no": "Na",

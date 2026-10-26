@@ -30,7 +30,7 @@
   "deleteDiary": "Tafadhali futa ingizo la shajara",
   "confirmDeletingMenstruation": "Je, ungependa kufuta rekodi ya kipindi hiki cha hedhi?",
   "addNotificationTime": "Tafadhali ongeza muda wa arifa",
-  "syncWithDeviceTimeZone": "Je, ungependa kuoanisha na timezone ya kifaa chako ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Je, ungependa kusawazisha na saa za eneo la kifaa chako ({deviceTimezoneName})?",
   "currentTimeZone": "Mkoa wa wakati wa sasa",
   "yes": "Ndio",
   "no": "Hapana",

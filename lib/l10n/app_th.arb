@@ -30,7 +30,7 @@
   "deleteDiary": "ลบบันทึกประจำวันนี้",
   "confirmDeletingMenstruation": "ต้องการลบบันทึกช่วงประจำเดือนนี้ไหมคะ",
   "addNotificationTime": "เพิ่มเวลาแจ้งเตือน",
-  "syncWithDeviceTimeZone": "ต้องการซิงค์กับโซนเวลาของอุปกรณ์ ({deviceTimezoneName}) หรือไม่？",
+  "syncWithDeviceTimeZone": "ต้องการซิงค์กับเขตเวลาของอุปกรณ์ ({deviceTimezoneName}) ไหมคะ",
   "currentTimeZone": "เขตเวลาที่ตั้งในปัจจุบัน",
   "yes": "ใช่",
   "no": "ไม่",

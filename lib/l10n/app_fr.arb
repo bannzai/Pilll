@@ -30,7 +30,7 @@
   "deleteDiary": "Supprimer l'entrée du journal",
   "confirmDeletingMenstruation": "Voulez-vous supprimer l’enregistrement de cette période de règles ?",
   "addNotificationTime": "Ajouter une heure de notification",
-  "syncWithDeviceTimeZone": "Synchroniser avec le fuseau horaire de l'appareil ({deviceTimezoneName}) ?",
+  "syncWithDeviceTimeZone": "Voulez-vous synchroniser avec le fuseau horaire de votre appareil ({deviceTimezoneName}) ?",
   "currentTimeZone": "Fuseau horaire actuel",
   "yes": "Oui",
   "no": "Non",

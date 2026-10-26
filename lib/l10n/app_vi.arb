@@ -30,7 +30,7 @@
   "deleteDiary": "Xóa mục nhật ký",
   "confirmDeletingMenstruation": "Bạn có muốn xóa bản ghi kỳ kinh nguyệt này không?",
   "addNotificationTime": "Thêm giờ thông báo",
-  "syncWithDeviceTimeZone": "Bạn có muốn đồng bộ hóa với múi giờ thiết bị ({deviceTimezoneName}) không?",
+  "syncWithDeviceTimeZone": "Bạn có muốn đồng bộ với múi giờ của thiết bị ({deviceTimezoneName}) không?",
   "currentTimeZone": "Múi giờ hiện tại được thiết lập",
   "yes": "Có",
   "no": "Không",

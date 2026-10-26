@@ -30,7 +30,7 @@
   "deleteDiary": "Padam catatan diari",
   "confirmDeletingMenstruation": "Adakah anda mahu memadamkan rekod tempoh haid ini?",
   "addNotificationTime": "Tambah masa pemberitahuan",
-  "syncWithDeviceTimeZone": "Segerakkan dengan zon waktu peranti ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Adakah anda mahu menyegerakkan dengan zon waktu peranti ({deviceTimezoneName})?",
   "currentTimeZone": "Zon masa yang ditetapkan sekarang",
   "yes": "Ya",
   "no": "Tidak",

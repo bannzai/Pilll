@@ -30,7 +30,7 @@
   "deleteDiary": "Eliminar a entrada do diario",
   "confirmDeletingMenstruation": "Queres eliminar o rexistro deste período de regra?",
   "addNotificationTime": "Engadir unha hora de notificación",
-  "syncWithDeviceTimeZone": "Queres sincronizar coa zona horaria do dispositivo ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Queres sincronizar coa zona horaria do teu dispositivo ({deviceTimezoneName})?",
   "currentTimeZone": "Zona horaria actual",
   "yes": "Si",
   "no": "Non",

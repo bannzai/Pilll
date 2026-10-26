@@ -30,7 +30,7 @@
   "deleteDiary": "Dagboeknotitie verwijderen",
   "confirmDeletingMenstruation": "Wil je de registratie van deze menstruatieperiode verwijderen?",
   "addNotificationTime": "Meldingstijd toevoegen",
-  "syncWithDeviceTimeZone": "Synchroniseren met de tijdzone van uw apparaat ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Wil je synchroniseren met de tijdzone van je apparaat ({deviceTimezoneName})?",
   "currentTimeZone": "Huidige tijdzone",
   "yes": "ja",
   "no": "Nee",

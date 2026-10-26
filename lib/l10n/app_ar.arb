@@ -30,7 +30,7 @@
   "deleteDiary": "حذف تدوينة اليوميات",
   "confirmDeletingMenstruation": "هل تريدين حذف فترة الدورة المسجلة؟",
   "addNotificationTime": "إضافة وقت تنبيه",
-  "syncWithDeviceTimeZone": "هل تريد المزامنة مع المنطقة الزمنية للجهاز ({deviceTimezoneName})؟",
+  "syncWithDeviceTimeZone": "هل ترغبين في المزامنة مع المنطقة الزمنية للجهاز ({deviceTimezoneName})؟",
   "currentTimeZone": "المنطقة الزمنية الحالية",
   "yes": "نعم",
   "no": "لا",

@@ -30,7 +30,7 @@
   "deleteDiary": "Poista päiväkirjamerkintä",
   "confirmDeletingMenstruation": "Haluatko poistaa tämän kuukautisjakson merkinnän?",
   "addNotificationTime": "Lisää ilmoitusaika",
-  "syncWithDeviceTimeZone": "Synkronoidaanko laitteen aikavyöhykkeen ({deviceTimezoneName}) kanssa?",
+  "syncWithDeviceTimeZone": "Haluatko synkronoida laitteen aikavyöhykkeen ({deviceTimezoneName}) kanssa?",
   "currentTimeZone": "Nykyinen aikavyöhyke",
   "yes": "Kyllä",
   "no": "Ei",

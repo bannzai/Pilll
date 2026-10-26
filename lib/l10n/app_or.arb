@@ -30,7 +30,7 @@
   "deleteDiary": "ଡାଏରୀର ଏହି ଲେଖାଟି ବିଲୋପ କରନ୍ତୁ",
   "confirmDeletingMenstruation": "ଆପଣ ଏହି ମାସିକ ଅବଧିର ରେକର୍ଡ ବିଲୋପ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "addNotificationTime": "ବିଜ୍ଞପ୍ତି ସମୟ ଯୋଡ଼ନ୍ତୁ",
-  "syncWithDeviceTimeZone": "ଡିଭାଇସ୍ ଟାଇମ୍ ଜୋନ୍ ({deviceTimezoneName}) ସହିତ ସିଙ୍କ କରିବେ କି？",
+  "syncWithDeviceTimeZone": "ଆପଣଙ୍କ ଡିଭାଇସ୍‌ର ସମୟ ମଣ୍ଡଳ ({deviceTimezoneName}) ସହିତ ସମନ୍ୱୟ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "currentTimeZone": "ବର୍ତ୍ତମାନ ସେଟ୍ ହୋଇଥିବା ଟାଇମ ଜୋନ୍",
   "yes": "ହଁ",
   "no": "ନା",

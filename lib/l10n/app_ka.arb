@@ -30,7 +30,7 @@
   "deleteDiary": "დღიურის ჩანაწერის წაშლა",
   "confirmDeletingMenstruation": "გსურთ მენსტრუაციის ამ პერიოდის ჩანაწერის წაშლა?",
   "addNotificationTime": "შეტყობინების დროის დამატება",
-  "syncWithDeviceTimeZone": "სინქრონიზაცია მოწყობილობის დროის ზონასთან ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "გსურთ მოწყობილობის დროის სარტყელთან ({deviceTimezoneName}) სინქრონიზაცია?",
   "currentTimeZone": "ამჟამად დაყენებული დროის ზონა",
   "yes": "დიახ",
   "no": "არა",

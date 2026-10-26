@@ -30,7 +30,7 @@
   "deleteDiary": "Tagebucheintrag löschen",
   "confirmDeletingMenstruation": "Möchtest du den Eintrag zu dieser Periode löschen?",
   "addNotificationTime": "Erinnerungszeit hinzufügen",
-  "syncWithDeviceTimeZone": "Mit der Zeitzone des Geräts ({deviceTimezoneName}) synchronisieren?",
+  "syncWithDeviceTimeZone": "Möchtest du mit der Zeitzone deines Geräts ({deviceTimezoneName}) synchronisieren?",
   "currentTimeZone": "Aktuell eingestellte Zeitzone",
   "yes": "Ja",
   "no": "Nein",

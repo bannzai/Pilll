@@ -30,7 +30,7 @@
   "deleteDiary": "ডায়েরির লেখাটি মুছে ফেলুন",
   "confirmDeletingMenstruation": "আপনি কি মাসিকের সময়কালের রেকর্ড মুছে ফেলতে চান?",
   "addNotificationTime": "নোটিফিকেশনের সময় যোগ করুন",
-  "syncWithDeviceTimeZone": "ডিভাইসের টাইম জোন ({deviceTimezoneName}) এর সাথে সিঙ্ক করবেন?",
+  "syncWithDeviceTimeZone": "আপনার ডিভাইসের সময় অঞ্চল ({deviceTimezoneName}) অনুযায়ী সিঙ্ক করতে চান?",
   "currentTimeZone": "বর্তমানে সেট করা টাইমজোন",
   "yes": "হ্যাঁ",
   "no": "না",
