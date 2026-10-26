@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "उसी दिन सुबह 9:00 बजे सूचना पाएं",
   "save": "सहेजें",
-  "physicalCondition": "तबीयत",
+  "physicalCondition": "शारीरिक स्थिति",
   "deletedDiaryCannotBeRecovered": "हटाई गई डायरी को पुनर्स्थापित नहीं किया जा सकता है",
   "sex": "यौन",
   "previousPillSheetGroup": "पिछला पिल शीट समूह",

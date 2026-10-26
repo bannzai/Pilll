@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Примање обавештења истог дана у 9:00",
   "save": "Сачувајте",
-  "physicalCondition": "самоосећање",
+  "physicalCondition": "Физичко стање",
   "deletedDiaryCannotBeRecovered": "Obrisani dnevnik se ne može vratiti",
   "sex": "seks",
   "previousPillSheetGroup": "Prethodna grupa pilula",

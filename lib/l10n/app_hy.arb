@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ստանալ ծանուցում նույն օրը՝ ժամը 9:00-ին",
   "save": "Պահպանել",
-  "physicalCondition": "ինքնազգացում",
+  "physicalCondition": "Ֆիզիկական վիճակ",
   "deletedDiaryCannotBeRecovered": "Ջնջված օրագիրը վերականգնել հնարավոր չէ",
   "sex": "սեռ",
   "previousPillSheetGroup": "Նախորդ հաբային փաթեթների խումբ",

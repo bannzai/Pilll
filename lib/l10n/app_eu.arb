@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Jaso jakinarazpena egun berean, 9:00etan",
   "save": "Gorde",
-  "physicalCondition": "osasunegoera",
+  "physicalCondition": "Egoera fisikoa",
   "deletedDiaryCannotBeRecovered": "Ezabatutako egunkaria ezin da berreskuratu",
   "sex": "sexu",
   "previousPillSheetGroup": "Aurreko pilula-orrien taldea",

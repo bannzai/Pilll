@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Rep una notificació el mateix dia a les 9:00",
   "save": "Desa",
-  "physicalCondition": "Estat de salut",
+  "physicalCondition": "Estat físic",
   "deletedDiaryCannotBeRecovered": "Els diaris esborrats no es poden recuperar",
   "sex": "sexe",
   "previousPillSheetGroup": "Grup de plaquetes anterior",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Få en notifikation samme dag kl. 9:00",
   "save": "Gem",
-  "physicalCondition": "befindende",
+  "physicalCondition": "Fysisk velbefindende",
   "deletedDiaryCannotBeRecovered": "Slettede dagbogsindlæg kan ikke gendannes",
   "sex": "sex",
   "previousPillSheetGroup": "Forrige p-pille gruppe",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนในวันเดียวกันเวลา 9:00 น.",
   "save": "บันทึก",
-  "physicalCondition": "สุขภาพ",
+  "physicalCondition": "สภาพร่างกาย",
   "deletedDiaryCannotBeRecovered": "บันทึกที่ถูกลบแล้วไม่สามารถกู้คืนได้",
   "sex": "เพศสัมพันธ์",
   "previousPillSheetGroup": "กลุ่มแผ่นยาครั้งก่อน",

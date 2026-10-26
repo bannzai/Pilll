@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Gauti pranešimą tą pačią dieną 9:00 val.",
   "save": "Išsaugokite",
-  "physicalCondition": "Savijauta",
+  "physicalCondition": "Fizinė savijauta",
   "deletedDiaryCannotBeRecovered": "Ištrinti dienoraščiai negali būti atkurti",
   "sex": "seksas",
   "previousPillSheetGroup": "Ankstesnė pilulių lakštų grupė",

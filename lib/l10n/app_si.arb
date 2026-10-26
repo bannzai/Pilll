@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "එදිනම උදෑසන 9:00ට දැනුම්දීමක් ලබාගන්න",
   "save": "සුරකින්න",
-  "physicalCondition": "ශරීර තත්වය",
+  "physicalCondition": "ශාරීරික තත්ත්වය",
   "deletedDiaryCannotBeRecovered": "මකා දමන ලද දිනපොත් ප්‍රතිසාධනය කළ නොහැකිය",
   "sex": "ලිංගික",
   "previousPillSheetGroup": "පසුගිය ගෝලි පත්‍ර කණ්ඩායම",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "당일 오전 9:00에 알림 받기",
   "save": "저장",
-  "physicalCondition": "체조",
+  "physicalCondition": "몸 상태",
   "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
   "sex": "성관계",
   "previousPillSheetGroup": "이전 피임약 시트 그룹",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Dostávat oznámení tentýž den v 9:00",
   "save": "Uložit",
-  "physicalCondition": "Zdravotní stav",
+  "physicalCondition": "Tělesný stav",
   "deletedDiaryCannotBeRecovered": "Smazané deníky nelze obnovit",
   "sex": "sex",
   "previousPillSheetGroup": "Předchozí skupina blistrů",

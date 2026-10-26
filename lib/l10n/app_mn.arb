@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Тухайн өдрийн 9:00 цагт мэдэгдэл авах",
   "save": "Хадгалах",
-  "physicalCondition": "биеийн байдал",
+  "physicalCondition": "Биеийн байдал",
   "deletedDiaryCannotBeRecovered": "Устгасан өдрийн тэмдэглэлийг сэргээх боломжгүй",
   "sex": "бэлгийн харьцаа",
   "previousPillSheetGroup": "Өмнөх эмийн хавтасны бүлэг",

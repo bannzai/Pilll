@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "તે જ દિવસે સવારે 9:00 વાગ્યે સૂચના મેળવો",
   "save": "સાચવો",
-  "physicalCondition": "તબીયત",
+  "physicalCondition": "શારીરિક સ્થિતિ",
   "deletedDiaryCannotBeRecovered": "કાઢી નાખેલી ડાયરી પાછી મેળવી શકાતી નથી",
   "sex": "સેક્સ",
   "previousPillSheetGroup": "પાછલું પિલ શીટ જૂથ",

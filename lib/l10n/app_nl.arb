@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ontvang dezelfde dag om 9:00 een melding",
   "save": "Opslaan",
-  "physicalCondition": "Welzijn",
+  "physicalCondition": "Lichamelijke conditie",
   "deletedDiaryCannotBeRecovered": "Verwijderde dagboeken kunnen niet worden hersteld",
   "sex": "seks",
   "previousPillSheetGroup": "Vorige pilstripgroep",

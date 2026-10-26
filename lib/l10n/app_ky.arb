@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ошол эле күнү саат 9:00дө билдирүү алыңыз",
   "save": "Сактаңыз",
-  "physicalCondition": "ден соолук",
+  "physicalCondition": "Дене абалы",
   "deletedDiaryCannotBeRecovered": "Өчүрүлгөн күндөлүктү калыбына келтирүү мүмкүн эмес",
   "sex": "секс",
   "previousPillSheetGroup": "Мурунку пил листтеринин тобу",

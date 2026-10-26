@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saat ilmoituksen samana päivänä klo 9.00",
   "save": "Tallenna",
-  "physicalCondition": "Olo",
+  "physicalCondition": "Fyysinen vointi",
   "deletedDiaryCannotBeRecovered": "Poistettuja päiväkirjamerkintöjä ei voi palauttaa",
   "sex": "seksi",
   "previousPillSheetGroup": "Edellinen pilleripakkausryhmä",

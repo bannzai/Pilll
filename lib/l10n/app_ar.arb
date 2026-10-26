@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "تلقي إشعارًا في اليوم نفسه الساعة 9:00 صباحًا",
   "save": "حفظ",
-  "physicalCondition": "حالة صحية",
+  "physicalCondition": "الحالة الجسدية",
   "deletedDiaryCannotBeRecovered": "لا يمكن استعادة اليوميات بعد حذفها",
   "sex": "الجنس",
   "previousPillSheetGroup": "مجموعة شرائط الحبوب السابقة",

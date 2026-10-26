@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Terima notifikasi pada hari yang sama pukul 09.00",
   "save": "Simpan",
-  "physicalCondition": "Kondisi Tubuh",
+  "physicalCondition": "Kondisi fisik",
   "deletedDiaryCannotBeRecovered": "Catatan harian yang telah dihapus tidak dapat dipulihkan",
   "sex": "seks",
   "previousPillSheetGroup": "Grup Lembar Pil Sebelumnya",

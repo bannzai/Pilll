@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Értesítés kérése aznap 9:00-kor",
   "save": "Mentés",
-  "physicalCondition": "Közérzet",
+  "physicalCondition": "Fizikai állapot",
   "deletedDiaryCannotBeRecovered": "A törölt napló nem állítható vissza",
   "sex": "szex",
   "previousPillSheetGroup": "Előző tablettacsoport",

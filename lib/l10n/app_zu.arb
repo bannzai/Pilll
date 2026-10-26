@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Thola isaziso ngalo lolo suku ngo-9:00 ekuseni",
   "save": "Londoloza",
-  "physicalCondition": "isimo somzimba",
+  "physicalCondition": "Isimo somzimba",
   "deletedDiaryCannotBeRecovered": "Idayari elahliweyo ayikwazi ukubuyiselwa",
   "sex": "ucansi",
   "previousPillSheetGroup": "Iqembu leshidi lepilisi elidlule",

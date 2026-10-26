@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ទទួលបានការជូនដំណឹងនៅថ្ងៃដដែល ម៉ោង 9:00 ព្រឹក",
   "save": "រក្សាទុក",
-  "physicalCondition": "សុខភាព",
+  "physicalCondition": "ស្ថានភាពរាងកាយ",
   "deletedDiaryCannotBeRecovered": "កំណត់ហេតុដែលបានលុបមិនអាចស្តារឡើងវិញបានទេ",
   "sex": "ការរួមរ័ក",
   "previousPillSheetGroup": "ក្រុមបន្ទះថ្នាំពីមុន",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງເຕືອນໃນມື້ດຽວກັນເວລາ 9:00 ໂມງເຊົ້າ",
   "save": "ບັນທຶກ",
-  "physicalCondition": "ສຸຂະພາບ",
+  "physicalCondition": "ສະພາບຮ່າງກາຍ",
   "deletedDiaryCannotBeRecovered": "ບັນທຶກປະຈຳວັນທີ່ຖືກລຶບແລ້ວບໍ່ສາມາດກູ້ຄືນໄດ້",
   "sex": "ເພດສຳພັນ",
   "previousPillSheetGroup": "ກຸ່ມແຜ່ນຢາກ່ອນໜ້າ",

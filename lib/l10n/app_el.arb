@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Λήψη ειδοποίησης την ίδια ημέρα στις 9:00 π.μ.",
   "save": "Αποθήκευση",
-  "physicalCondition": "υγεία",
+  "physicalCondition": "Σωματική κατάσταση",
   "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να επαναφερθεί",
   "sex": "σεξ",
   "previousPillSheetGroup": "Προηγούμενη ομάδα συσκευασιών",

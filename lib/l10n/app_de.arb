@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Am selben Tag um 9:00 Uhr eine Benachrichtigung erhalten",
   "save": "Speichern",
-  "physicalCondition": "Befinden",
+  "physicalCondition": "Körperliches Befinden",
   "deletedDiaryCannotBeRecovered": "Gelöschte Tagebucheinträge können nicht wiederhergestellt werden.",
   "sex": "Sex",
   "previousPillSheetGroup": "Vorherige Pillenblister-Gruppe",

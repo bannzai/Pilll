@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Fá tilkynningu sama dag kl. 9:00",
   "save": "Vista",
-  "physicalCondition": "líðan",
+  "physicalCondition": "Líkamleg líðan",
   "deletedDiaryCannotBeRecovered": "Ekki er hægt að endurheimta eydda dagbók",
   "sex": "kynlíf",
   "previousPillSheetGroup": "Síðasti pillupakkningahópur",

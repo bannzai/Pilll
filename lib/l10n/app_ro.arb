@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Primește o notificare în aceeași zi la 9:00",
   "save": "Salvează",
-  "physicalCondition": "Starea fizică",
+  "physicalCondition": "Stare fizică",
   "deletedDiaryCannotBeRecovered": "Jurnalele șterse nu pot fi recuperate",
   "sex": "sex",
   "previousPillSheetGroup": "Grupul anterior de plachete",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "اسی دن صبح 9:00 بجے اطلاع حاصل کریں",
   "save": "محفوظ کریں",
-  "physicalCondition": "طبیعت",
+  "physicalCondition": "جسمانی حالت",
   "deletedDiaryCannotBeRecovered": "حذف شدہ ڈائری کو بحال نہیں کیا جا سکتا",
   "sex": "جنسی تعلق",
   "previousPillSheetGroup": "پچھلا پل شیٹ گروپ",

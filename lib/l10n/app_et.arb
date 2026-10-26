@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saa samal päeval kell 9:00 teavitus",
   "save": "Salvesta",
-  "physicalCondition": "enesetunne",
+  "physicalCondition": "Enesetunne",
   "deletedDiaryCannotBeRecovered": "Kustutatud päevikut ei saa taastada",
   "sex": "seks",
   "previousPillSheetGroup": "Eelmine pillilehtede grupp",

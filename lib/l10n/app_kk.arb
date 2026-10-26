@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Сол күні сағат 9:00-де хабарлама алу",
   "save": "Сақтау",
-  "physicalCondition": "самсезім",
+  "physicalCondition": "Дене күйі",
   "deletedDiaryCannotBeRecovered": "Жойылған күнделік жазбалары қалпына келтірілмейді",
   "sex": "секс",
   "previousPillSheetGroup": "Алдыңғы дәрі парақтарының тобы",

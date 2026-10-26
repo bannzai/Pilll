@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Ontvang dieselfde dag om 9:00 ’n kennisgewing",
   "save": "Stoor",
-  "physicalCondition": "Gesondheid",
+  "physicalCondition": "Hoe jou liggaam voel",
   "deletedDiaryCannotBeRecovered": "Geskrapte dagboekinskrywings kan nie herstel word nie",
   "sex": "seks",
   "previousPillSheetGroup": "Vorige pilpakketgroep",

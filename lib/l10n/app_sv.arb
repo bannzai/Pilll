@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Få en avisering samma dag kl. 9.00",
   "save": "Spara",
-  "physicalCondition": "mående",
+  "physicalCondition": "Fysiskt mående",
   "deletedDiaryCannotBeRecovered": "Borttagna dagboksanteckningar kan inte återställas",
   "sex": "sex",
   "previousPillSheetGroup": "Föregående p-pillergrupp",

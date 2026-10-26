@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Prejemajte obvestilo isti dan ob 9:00",
   "save": "Shrani",
-  "physicalCondition": "počutje",
+  "physicalCondition": "Telesno počutje",
   "deletedDiaryCannotBeRecovered": "Izbrisani dnevniški zapisi se ne morejo obnoviti",
   "sex": "seks",
   "previousPillSheetGroup": "Prejšnja skupina tablet",

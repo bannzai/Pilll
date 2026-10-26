@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā plkst. 9.00",
   "save": "Saglabājiet",
-  "physicalCondition": "Pašsajūta",
+  "physicalCondition": "Fiziskā pašsajūta",
   "deletedDiaryCannotBeRecovered": "Dzēstos dienasgrāmatas ierakstus nevar atjaunot",
   "sex": "sekss",
   "previousPillSheetGroup": "Iepriekšējā tablešu grupa",

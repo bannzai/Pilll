@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "په هماغه ورځ د سهار په 9:00 بجو خبرتیا ترلاسه کړئ",
   "save": "خوندي کړئ",
-  "physicalCondition": "حالت",
+  "physicalCondition": "د بدن حالت",
   "deletedDiaryCannotBeRecovered": "پاک شوی ډايری بیا نشي راګرځېدای",
   "sex": "جنس",
   "previousPillSheetGroup": "پخوانۍ د ګولیو د پاڼو ډله",

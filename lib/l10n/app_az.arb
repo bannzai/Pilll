@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Həmin gün saat 9:00-da bildiriş alın",
   "save": "Yadda saxlayın",
-  "physicalCondition": "Hal-həval",
+  "physicalCondition": "Fiziki vəziyyət",
   "deletedDiaryCannotBeRecovered": "Silinmiş gündəlik bərpa edilə bilməz",
   "sex": "seks",
   "previousPillSheetGroup": "Əvvəlki həb qrupu",

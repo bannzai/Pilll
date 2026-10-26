@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "అదే రోజు ఉదయం 9:00 గంటలకు నోటిఫికేషన్ పొందండి",
   "save": "భద్రపరచండి",
-  "physicalCondition": "శరీర స్థితి",
+  "physicalCondition": "శారీరక స్థితి",
   "deletedDiaryCannotBeRecovered": "తొలగించిన డైరీని పునరుద్ధరించలేము",
   "sex": "లైంగిక",
   "previousPillSheetGroup": "మునుపటి పిల్ షీట్ గ్రూప్",

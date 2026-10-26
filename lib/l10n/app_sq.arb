@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Merrni një njoftim po atë ditë në orën 9:00",
   "save": "Ruani",
-  "physicalCondition": "Shëndeti",
+  "physicalCondition": "Gjendja fizike",
   "deletedDiaryCannotBeRecovered": "Ditari i fshirë nuk mund të rikthehet",
   "sex": "seks",
   "previousPillSheetGroup": "Grupi i mëparshëm i paketave të pilulash",

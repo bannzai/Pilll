@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "קבלת התראה באותו יום בשעה 9:00 בבוקר",
   "save": "לשמור",
-  "physicalCondition": "רווחה",
+  "physicalCondition": "מצב גופני",
   "deletedDiaryCannotBeRecovered": "לא ניתן לשחזר יומנים שנמחקו",
   "sex": "מין",
   "previousPillSheetGroup": "קבוצת אריזות הכדורים הקודמת",

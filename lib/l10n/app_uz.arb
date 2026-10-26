@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Oʻsha kuni soat 9:00 da bildirishnoma oling",
   "save": "Saqlang",
-  "physicalCondition": "Kayfiyat",
+  "physicalCondition": "Jismoniy holat",
   "deletedDiaryCannotBeRecovered": "O'chirilgan kundalikni tiklash mumkin emas",
   "sex": "jinsiy aloqa",
   "previousPillSheetGroup": "Oldingi pill varaqalari guruhi",

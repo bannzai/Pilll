@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Makatanggap ng abiso sa araw ding iyon nang 9:00 ng umaga",
   "save": "I-save",
-  "physicalCondition": "Pakiramdam",
+  "physicalCondition": "Kalagayan ng katawan",
   "deletedDiaryCannotBeRecovered": "Hindi na maibabalik ang naburang diary",
   "sex": "seks",
   "previousPillSheetGroup": "Nakaraang Grupo ng Pill Sheet",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Receba uma notificação no mesmo dia às 9h",
   "save": "Salvar",
-  "physicalCondition": "Bem-estar",
+  "physicalCondition": "Condição física",
   "deletedDiaryCannotBeRecovered": "Os diários excluídos não podem ser restaurados",
   "sex": "sexo",
   "previousPillSheetGroup": "Grupo anterior de cartelas",

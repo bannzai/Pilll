@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Cael hysbysiad am 9:00 y bore ar yr un diwrnod",
   "save": "Cadw",
-  "physicalCondition": "iechyd",
+  "physicalCondition": "Cyflwr corfforol",
   "deletedDiaryCannotBeRecovered": "Ni ellir adfer y dyddiadur ar ôl ei ddileu",
   "sex": "rhyw",
   "previousPillSheetGroup": "Grŵp taflenni pils blaenorol",

@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना मिळवा",
   "save": "जतन करा",
-  "physicalCondition": "तब्येत",
+  "physicalCondition": "शारीरिक स्थिती",
   "deletedDiaryCannotBeRecovered": "काढलेली डायरी पुनर्स्थापित करता येत नाही",
   "sex": "लैंगिक",
   "previousPillSheetGroup": "मागील गोळी शीट गट",

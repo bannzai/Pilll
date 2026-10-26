@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Получавайте известие в същия ден в 9:00 ч.",
   "save": "Запазете",
-  "physicalCondition": "самочувствие",
+  "physicalCondition": "Физическо състояние",
   "deletedDiaryCannotBeRecovered": "Изтритият дневник не може да бъде възстановен",
   "sex": "секс",
   "previousPillSheetGroup": "Предишна група блистери",

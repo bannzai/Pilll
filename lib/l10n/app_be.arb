@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Атрымліваць апавяшчэнне ў той жа дзень а 9:00",
   "save": "Захаваць",
-  "physicalCondition": "самачуванне",
+  "physicalCondition": "Самаадчуванне",
   "deletedDiaryCannotBeRecovered": "Выдалены дзённік немагчыма аднавіць",
   "sex": "секс",
   "previousPillSheetGroup": "Папярэдняя група блістараў",

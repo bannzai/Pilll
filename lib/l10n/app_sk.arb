@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Dostávať upozornenie v ten istý deň o 9:00",
   "save": "Uložiť",
-  "physicalCondition": "Samopocit",
+  "physicalCondition": "Telesný stav",
   "deletedDiaryCannotBeRecovered": "Vymazané denníky sa nedajú obnoviť",
   "sex": "sex",
   "previousPillSheetGroup": "Predchádzajúca skupina piluliek",

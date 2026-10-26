@@ -248,7 +248,7 @@
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Nhận thông báo lúc 9:00 sáng cùng ngày",
   "save": "Lưu",
-  "physicalCondition": "thể trạng",
+  "physicalCondition": "Tình trạng thể chất",
   "deletedDiaryCannotBeRecovered": "Nhật ký đã xóa không thể khôi phục lại được",
   "sex": "tình dục",
   "previousPillSheetGroup": "Nhóm vỉ thuốc trước đó",
