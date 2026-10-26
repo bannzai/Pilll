@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Enregistrer une pause dans la prise de la pilule",
   "restDurationFeatureAppealShortDescription": "Suivez avec précision les pauses et les interruptions de prise de la pilule",
   "restDurationFeatureAppealHeadline": "Faites une pause dans la prise de la pilule",
-  "restDurationFeatureAppealBody": "Enregistrez une pause dans votre traitement. Le numéro de pilule cesse d'avancer pendant que vous êtes en pause et reprend dès que vous redémarrez.",
+  "restDurationFeatureAppealBody": "Vous pouvez noter sur la plaquette une période d'arrêt prolongé de la prise de pilule. Pendant cette pause, le numéro de la pilule n'avance pas. Vous pouvez reprendre le suivi dès que vous recommencez à la prendre.",
   "featureAppealLocationLabel": "Localisation dans l'application",
   "criticalAlertFeatureAppealPoint1": "Recevez des notifications même en mode Focus",
   "criticalAlertFeatureAppealPoint2": "Des rappels fiables à l'heure prévue",

@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Zaznamenajte obdobie prestávky v užívaní tabletiek",
   "restDurationFeatureAppealShortDescription": "Presne sledujte prestávky a prerušenie užívania tabletiek",
   "restDurationFeatureAppealHeadline": "Dajte si prestávku v užívaní tabletky",
-  "restDurationFeatureAppealBody": "Možno zaznamenať obdobie, počas ktorého dočasne prestanete užívať liek, na pilulovom hárku. Počas prestávky sa poradové číslo užívania neposúva, a po obnovení užívania je možné okamžite pokračovať v zázname.",
+  "restDurationFeatureAppealBody": "Obdobie, keď na čas prestanete užívať tabletky, si môžete zaznamenať do blist. Počas prestávky sa číslo tabletky neposúva a po opätovnom začatí užívania môžete hneď pokračovať v záznamoch.",
   "featureAppealLocationLabel": "Miesto v aplikácii",
   "criticalAlertFeatureAppealPoint1": "Oznámenia dorazia aj v režime sústredenosti",
   "criticalAlertFeatureAppealPoint2": "Spoľahlivé pripomenutie v nastavenom čase",

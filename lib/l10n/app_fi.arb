@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Kirjaa pilleritauko",
   "restDurationFeatureAppealShortDescription": "Seuraa taukojaksoja ja pillereiden käytön keskeytyksiä tarkasti",
   "restDurationFeatureAppealHeadline": "Pidä tauko pillereiden ottamisesta",
-  "restDurationFeatureAppealBody": "Voit merkitä taukojakson pillereiden ottamisesta pilleriarkkiin. Tauon aikana pillerin numero ei etene, ja voit jatkaa kirjaamista heti tauon päätyttyä.",
+  "restDurationFeatureAppealBody": "Voit merkitä pidemmän pilleritauon pilleriliuskaasi. Tauon aikana pillerin numero ei etene, ja voit jatkaa merkintöjä heti, kun aloitat pillereiden käytön uudelleen.",
   "featureAppealLocationLabel": "Sijainti sovelluksessa",
   "criticalAlertFeatureAppealPoint1": "Ilmoituksia saapuu myös Keskittymistilassa",
   "criticalAlertFeatureAppealPoint2": "Muistutus varmasti asetettuun aikaan",

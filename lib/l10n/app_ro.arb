@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Înregistrează perioada de pauză de la pilulă",
   "restDurationFeatureAppealShortDescription": "Urmărește cu precizie pauza și întreruperile administrării pilulei",
   "restDurationFeatureAppealHeadline": "Fă o pauză de la administrarea pilulei",
-  "restDurationFeatureAppealBody": "Puteți înregistra în fișa de pilule o perioadă în care opriți temporar administrarea. În timpul pauzei, numărul dozei nu avansează, iar la reluare puteți relua imediat înregistrarea.",
+  "restDurationFeatureAppealBody": "Poți înregistra în blister perioada în care faci o pauză mai lungă de la pilulă. În timpul pauzei, numărul pilulei nu avansează, iar când reîncepi să o iei, poți continua imediat înregistrarea.",
   "featureAppealLocationLabel": "Locație în aplicație",
   "criticalAlertFeatureAppealPoint1": "Notificările ajung chiar și în modul Focus",
   "criticalAlertFeatureAppealPoint2": "Reamintire garantată la ora setată",

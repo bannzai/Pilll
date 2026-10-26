@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Rexistra o período de descanso da pílula",
   "restDurationFeatureAppealShortDescription": "Leva un rexistro preciso dos períodos de descanso e das interrupcións da pílula",
   "restDurationFeatureAppealHeadline": "Fai unha pausa na toma da pílula",
-  "restDurationFeatureAppealBody": "Podes rexistrar na folla de pílulas os períodos nos que deixas de tomalas temporalmente. Durante o descanso, o número de toma non avanza e, cando retomes, podes reiniciar o rexistro de inmediato.",
+  "restDurationFeatureAppealBody": "Podes rexistrar no blíster un período no que deixes de tomar a pílula durante un tempo. Durante a pausa, o número da pílula non avanza e, cando volvas tomala, poderás retomar o rexistro de inmediato.",
   "featureAppealLocationLabel": "Lugar na aplicación",
   "criticalAlertFeatureAppealPoint1": "As notificacións chegan incluso en modo de concentración",
   "criticalAlertFeatureAppealPoint2": "Recordatorio garantido á hora programada",

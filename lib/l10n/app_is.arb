@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Skrá hlé á pillutöku",
   "restDurationFeatureAppealShortDescription": "Fylgstu nákvæmlega með hléum og því þegar pillutöku er hætt",
   "restDurationFeatureAppealHeadline": "Gerðu hlé á að taka pilluna",
-  "restDurationFeatureAppealBody": "Þú getur skráð tímabil þar sem þú tekur hlé frá töku pillna í pílublaðinu. Á meðan á hléi stendur færast pillunúmerin ekki áfram, og þegar þú byrjar aftur geturðu haldið skráningu áfram strax.",
+  "restDurationFeatureAppealBody": "Þú getur skráð lengra hlé á pillutöku á pilluspjald. Á meðan hléið varir helst númer pillunnar óbreytt og þú getur haldið skráningunni áfram um leið og þú byrjar aftur að taka pilluna.",
   "featureAppealLocationLabel": "Staðsetning í forriti",
   "criticalAlertFeatureAppealPoint1": "Tilkynningar berast jafnvel í einbeitingarham",
   "criticalAlertFeatureAppealPoint2": "Áreiðanleg áminning á þeim tíma sem þú stillir",

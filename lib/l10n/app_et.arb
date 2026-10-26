@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Märgi pillipaus kirja",
   "restDurationFeatureAppealShortDescription": "Jälgi pillipause ja võtmise katkestusi täpselt",
   "restDurationFeatureAppealHeadline": "Tee pillide võtmises paus",
-  "restDurationFeatureAppealBody": "Saate pillilehele märkida perioodi, millal te tablettide võtmise ajutiselt katkestite. Pausi ajal annuse number ei edene ning jätkamisel saate kohe kirjete tegemist taasalustada.",
+  "restDurationFeatureAppealBody": "Saad märkida pillileh oma pikema pillivõtmise pausi. Pausi ajal pilli number ei muutu ning pillide võtmist uuesti alustades saad kohe jätkata märkimist.",
   "featureAppealLocationLabel": "Asukoht rakenduses",
   "criticalAlertFeatureAppealPoint1": "Teavitused saabuvad ka fookusrežiimi ajal",
   "criticalAlertFeatureAppealPoint2": "Tuletan kindlasti määratud ajal meelde",

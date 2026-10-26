@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Registrer din p-pillepause",
   "restDurationFeatureAppealShortDescription": "Hold præcist styr på pillepause og afbrydelser",
   "restDurationFeatureAppealHeadline": "Hold pause med p-pillerne",
-  "restDurationFeatureAppealBody": "Du kan registrere en pause fra pilleindtagelse på dit pillark. Under pausen skrider pillenummeret ikke frem, og du kan hurtigt genoptage registreringen, når du starter igen.",
+  "restDurationFeatureAppealBody": "Du kan registrere en længere pause fra p-pillerne på dit pillekort. Under pausen ændres pillenummeret ikke, og du kan straks fortsætte registreringen, når du begynder igen.",
   "featureAppealLocationLabel": "Sted i appen",
   "criticalAlertFeatureAppealPoint1": "Notifikationer leveres selv i Fokus-tilstand",
   "criticalAlertFeatureAppealPoint2": "Pålidelig påmindelse på det indstillede tidspunkt",

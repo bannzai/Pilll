@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Ghi lại thời gian tạm ngừng uống thuốc",
   "restDurationFeatureAppealShortDescription": "Theo dõi chính xác thời gian nghỉ thuốc và ngừng uống thuốc",
   "restDurationFeatureAppealHeadline": "Tạm ngưng uống thuốc tránh thai",
-  "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngưng uống trên tờ thuốc. Khi đang tạm nghỉ, số uống sẽ không tiến lên và bạn có thể tiếp tục ghi lại ngay khi bắt đầu lại.",
+  "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngừng uống thuốc trên vỉ thuốc. Trong lúc tạm ngừng, số thứ tự viên thuốc sẽ không tăng, và bạn có thể tiếp tục ghi lại ngay khi bắt đầu uống lại.",
   "featureAppealLocationLabel": "Vị trí trong ứng dụng",
   "criticalAlertFeatureAppealPoint1": "Nhận thông báo ngay cả khi đang ở Chế độ Tập trung",
   "criticalAlertFeatureAppealPoint2": "Nhắc nhở chắc chắn đúng giờ đã đặt",

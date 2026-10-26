@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Record a pill break",
   "restDurationFeatureAppealShortDescription": "Track pill breaks and interruptions accurately",
   "restDurationFeatureAppealHeadline": "Take a break from the pill",
-  "restDurationFeatureAppealBody": "Record a pause in your medication on your pill sheet. The pill number stops advancing while you're on break and resumes the moment you restart.",
+  "restDurationFeatureAppealBody": "You can record a longer break from taking pills in your pill pack. The pill number stays the same during the break, and you can resume tracking as soon as you start taking them again.",
   "featureAppealLocationLabel": "In-App Location",
   "criticalAlertFeatureAppealPoint1": "Receive notifications even in Focus mode",
   "criticalAlertFeatureAppealPoint2": "Reliable reminders at your scheduled time",

@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "বৰি খোৱাৰ বিৰতিৰ সময় লিখি ৰাখক",
   "restDurationFeatureAppealShortDescription": "বিৰতি আৰু ঔষধ খোৱা বন্ধ ৰখাৰ সময় সঠিকভাৱে অনুসৰণ কৰক",
   "restDurationFeatureAppealHeadline": "পিল খোৱাত সাময়িক বিৰতি লওক",
-  "restDurationFeatureAppealBody": "আপুনি পিল শ্বীটত কিছু সময়ৰ বাবে পিল খোৱা বন্ধ ৰখাৰ সময়সীমা ৰেকৰ্ড কৰিব পাৰিব। বিশ্ৰামৰ সময়ত পিলৰ নম্বৰ আগবাঢ়ি নাযায়, আৰু পুনৰ আৰম্ভ কৰাৰ সময়ত আপুনি তৎক্ষণাৎ ৰেকৰ্ড পুনৰ আৰম্ভ কৰিব পাৰিব।",
+  "restDurationFeatureAppealBody": "আপুনি কিছুদিন পিল খোৱা বন্ধ ৰখা সময়খিনি পিলৰ ষ্ট্ৰিপত নথিভুক্ত কৰিব পাৰে। এই বিৰতিৰ সময়ত পিলৰ নম্বৰ আগ নাবাঢ়ে, আৰু পুনৰ খোৱা আৰম্ভ কৰোঁতেই নথিভুক্ত কৰাও আৰম্ভ কৰিব পাৰে।",
   "featureAppealLocationLabel": "এপৰ ভিতৰৰ স্থান",
   "criticalAlertFeatureAppealPoint1": "ফোকাছ মোডত থাকোঁতেও জাননী আহে",
   "criticalAlertFeatureAppealPoint2": "নিৰ্ধাৰিত সময়ত নিশ্চিতভাৱে সোঁৱৰাই দিয়া",

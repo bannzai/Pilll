@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Hap kullanımına ara verilen dönemi kaydedin",
   "restDurationFeatureAppealShortDescription": "İlaç kullanımındaki ara dönemleri ve kesintileri doğru şekilde takip edin",
   "restDurationFeatureAppealHeadline": "Hap kullanımına ara verin",
-  "restDurationFeatureAppealBody": "Uzun süreli ara verme dönemleri pil şeridine kaydedilebilir. Ara verdiğiniz süre boyunca hap numarası ilerlemez ve yeniden başlarken kaydı hemen yeniden başlatabilirsiniz.",
+  "restDurationFeatureAppealBody": "Hap alımına bir süre ara verdiğiniz dönemi blister üzerinde kaydedebilirsiniz. Ara sırasında hap numarası ilerlemez; yeniden almaya başladığınızda kayda hemen devam edebilirsiniz.",
   "featureAppealLocationLabel": "Uygulama içi konum",
   "criticalAlertFeatureAppealPoint1": "Odak Modu etkin olsa bile bildirimler alınır",
   "criticalAlertFeatureAppealPoint2": "Belirlediğiniz saatte kesin olarak hatırlatır",

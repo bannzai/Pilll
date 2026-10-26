@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Užregistruokite tablečių vartojimo pertrauką",
   "restDurationFeatureAppealShortDescription": "Tiksliai sekite pertraukas ir tablečių vartojimo nutraukimą",
   "restDurationFeatureAppealHeadline": "Padarykite tablečių vartojimo pertrauką",
-  "restDurationFeatureAppealBody": "Shibarakufu yō no karu kikan o pirushīto ni kiroku dekimasu. Oyasumi-chū wa fukuyō bangō ga susumazu, saikai-ji ni sugu kiroku o saikai dekimasu.",
+  "restDurationFeatureAppealBody": "Laikotarpį, kai kurį laiką nevartojate tablečių, galite pažymėti tablečių plokštel įraše. Per pertrauką tabletės numeris nesikeičia, o vėl pradėję vartoti tabletes galite iškart tęsti žymėjimą.",
   "featureAppealLocationLabel": "Vieta programėlėje",
   "criticalAlertFeatureAppealPoint1": "Gaukite pranešimus net veikiant Focus režimui",
   "criticalAlertFeatureAppealPoint2": "Įsitikinkite, kad priminimas bus laiku pagal nustatytą laiką",

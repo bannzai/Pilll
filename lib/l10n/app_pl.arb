@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Zapisz okres przerwy w przyjmowaniu tabletek",
   "restDurationFeatureAppealShortDescription": "Dokładnie śledź przerwy i wstrzymanie przyjmowania tabletek",
   "restDurationFeatureAppealHeadline": "Zrób przerwę w przyjmowaniu pigułki",
-  "restDurationFeatureAppealBody": "Możesz zapisać w arkuszu pigułek okres tymczasowego zaprzestania przyjmowania tabletek. W czasie przerwy numer dawki nie jest zwiększany, a po wznowieniu możesz od razu kontynuować rejestrację.",
+  "restDurationFeatureAppealBody": "Możesz zapisać na blist dłuższą przerwę w przyjmowaniu tabletek. Podczas przerwy numer tabletki nie zmienia się, a po wznowieniu przyjmowania możesz od razu kontynuować zapisywanie.",
   "featureAppealLocationLabel": "Miejsce w aplikacji",
   "criticalAlertFeatureAppealPoint1": "Powiadomienia docierają nawet w trybie skupienia",
   "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o ustawionej godzinie",

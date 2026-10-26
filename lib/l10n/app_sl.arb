@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Zabeležite obdobje premora pri jemanju tablet",
   "restDurationFeatureAppealShortDescription": "Natančno spremljajte premore in prekinitve jemanja tablet",
   "restDurationFeatureAppealHeadline": "Naredite premor pri jemanju tabletke",
-  "restDurationFeatureAppealBody": "Med opombo lahko zabeležite obdobja, ko prenehate jemati kontracepcijske tablete. Med počitkom se številke odmerkov ne premikajo, ob ponovnem začetku pa lahko takoj nadaljujete z beleženjem.",
+  "restDurationFeatureAppealBody": "Daljši premor pri jemanju tablet lahko zabeležite na ploščic. Med premorom se številka tablete ne spreminja, ob ponovnem začetku jemanja pa lahko takoj nadaljujete beleženje.",
   "featureAppealLocationLabel": "Lokacija v aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Obvestila boste prejeli tudi med načinom osredotočenosti.",
   "criticalAlertFeatureAppealPoint2": "Naredba za klicanje prevajalske funkcije (zahtevano s strani razvijalca).",

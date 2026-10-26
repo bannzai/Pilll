@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Zabilježite razdoblje stanke u uzimanju pilule",
   "restDurationFeatureAppealShortDescription": "Precizno pratite pauz i prekide uzimanja pilule",
   "restDurationFeatureAppealHeadline": "Napravite stanku u uzimanju pilule",
-  "restDurationFeatureAppealBody": "Možete zabilježiti razdoblje privremenog prekida uzimanja u pilulskom listu. Tijekom pauze brojač doza neće napredovati, a pri ponovnom početku uzimanja bilježenje će se odmah nastaviti.",
+  "restDurationFeatureAppealBody": "Razdoblje u kojem neko vrijeme ne uzimate pilulu možete zabilježiti u blister. Tijekom stanke broj pilule ne napreduje, a kad ponovno počnete uzimati pilulu, možete odmah nastaviti bilježiti.",
   "featureAppealLocationLabel": "Mjesto u aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Obavijesti stižu čak i u načinu fokusiranja",
   "criticalAlertFeatureAppealPoint2": "Pouzdano podsjećanje u postavljeno vrijeme",

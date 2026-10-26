@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Pillenpause eintragen",
   "restDurationFeatureAppealShortDescription": "Einnahmepause und Unterbrechungen genau erfassen",
   "restDurationFeatureAppealHeadline": "Eine Pause mit der Pille machen",
-  "restDurationFeatureAppealBody": "Sie können einen Zeitraum, in dem Sie die Einnahme pausieren, im Pillenblatt festhalten. Während der Pause schreitet die Einnahmenummer nicht voran, und bei der Wiederaufnahme können Sie die Aufzeichnung sofort fortsetzen.",
+  "restDurationFeatureAppealBody": "Du kannst eine längere Einnahmepause im Pillenblister eintragen. Während der Pause bleibt die Pillennummer gleich. Sobald du wieder anfängst, kannst du die Aufzeichnung direkt fortsetzen.",
   "featureAppealLocationLabel": "Ort in der App",
   "criticalAlertFeatureAppealPoint1": "Benachrichtigungen werden auch im Fokusmodus empfangen",
   "criticalAlertFeatureAppealPoint2": "Zuverlässige Erinnerung zur eingestellten Zeit",

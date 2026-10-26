@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "记录停药期",
   "restDurationFeatureAppealShortDescription": "准确记录停药和中断服药的时间",
   "restDurationFeatureAppealHeadline": "暂时停用避孕药",
-  "restDurationFeatureAppealBody": "您可以在药片表中记录暂时停止服用的期间。休药期间服药编号不会前进，恢复服用时可立即继续记录。",
+  "restDurationFeatureAppealBody": "可以在药板上记录暂时停药的时间。休息期间药片编号不会前进，重新开始服药时也能立即继续记录。",
   "featureAppealLocationLabel": "应用内的位置",
   "criticalAlertFeatureAppealPoint1": "即使在专注模式下也能收到通知",
   "criticalAlertFeatureAppealPoint2": "确保在设定的时间准时提醒",

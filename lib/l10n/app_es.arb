@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Registra el período de descanso de la píldora",
   "restDurationFeatureAppealShortDescription": "Lleva un registro preciso del descanso y las interrupciones de la píldora",
   "restDurationFeatureAppealHeadline": "Haz una pausa en la toma de la píldora",
-  "restDurationFeatureAppealBody": "Puedes registrar en la ficha de píldoras un período de descanso en el que dejes de tomar las pastillas. Durante el descanso, el número de dosis no avanza y podrás reanudar el registro de inmediato cuando reinicies la toma.",
+  "restDurationFeatureAppealBody": "Puedes registrar en el blíster un período en el que dejes de tomar la píldora por un tiempo. Durante la pausa, el número de la píldora no avanza y, cuando vuelvas a tomarla, podrás seguir registrándola enseguida.",
   "featureAppealLocationLabel": "Ubicación en la app",
   "criticalAlertFeatureAppealPoint1": "Las notificaciones llegan incluso en modo de concentración",
   "criticalAlertFeatureAppealPoint2": "Recordatorio garantizado a la hora programada",

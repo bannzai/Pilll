@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "ગોળી લેવાનો વિરામ નોંધો",
   "restDurationFeatureAppealShortDescription": "વિરામ અને ગોળી લેવાનું બંધ રાખવાનો સમય ચોક્કસ રીતે નોંધો",
   "restDurationFeatureAppealHeadline": "ગોળી લેવાનું થોડા સમય માટે રોકો",
-  "restDurationFeatureAppealBody": "પિલ શીટ પર થોડા સમય માટે ગોળી લેવાનું બંધ કરવાનો સમયગાળો નોંધી શકાય છે. વિરામ દરમિયાન ગોળી નંબર આગળ વધતો નથી, અને ફરીથી શરૂ કરતી વખતે તરત જ નોંધ ફરી શરૂ કરી શકાય છે.",
+  "restDurationFeatureAppealBody": "તમે થોડા સમય માટે ગોળી લેવાનું બંધ રાખો તે સમય ગોળીની સ્ટ્રિપમાં નોંધાવી શકો છો. વિરામ દરમિયાન ગોળીનો નંબર આગળ વધતો નથી અને ફરી લેવાનું શરૂ કરો ત્યારે તરત જ નોંધવાનું ચાલુ રાખી શકો છો.",
   "featureAppealLocationLabel": "એપ્લિકેશનમાં સ્થાન",
   "criticalAlertFeatureAppealPoint1": "ફોકસ મોડ દરમિયાન પણ સૂચનાઓ મળે છે",
   "criticalAlertFeatureAppealPoint2": "નિર્ધારિત સમયે ચોક્કસ રિમાઇન્ડ",

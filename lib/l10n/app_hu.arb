@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Tablettaszedési szünet rögzítése",
   "restDurationFeatureAppealShortDescription": "A szünet és a tablettaszedés megszakításának pontos követése",
   "restDurationFeatureAppealHeadline": "Tarts szünetet a tabletta szedésében",
-  "restDurationFeatureAppealBody": "A tablettasorban rögzítheti a szedés szüneteltetésének időszakát. A szünet alatt a tabletta sorszáma nem halad előre, és újrakezdéskor a rögzítést azonnal folytathatja.",
+  "restDurationFeatureAppealBody": "A hosszabb szedési szünetet rögzítheted a tablettacsomagban. A szünet alatt a tabletta sorszáma nem változik, és amint újra szedni kezded, rögtön folytathatod a rögzítést.",
   "featureAppealLocationLabel": "Alkalmazáson belüli hely",
   "criticalAlertFeatureAppealPoint1": "Értesítések akkor is megérkeznek, ha a Fókusz mód be van kapcsolva",
   "criticalAlertFeatureAppealPoint2": "A beállított időpontban biztosan emlékeztet",

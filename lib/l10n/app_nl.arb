@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Pauze met de pil vastleggen",
   "restDurationFeatureAppealShortDescription": "Houd de stopweek en onderbrekingen nauwkeurig bij",
   "restDurationFeatureAppealHeadline": "Neem een pauze met de pil",
-  "restDurationFeatureAppealBody": "Je kunt een periode van het stoppen met de pil vastleggen in je pillenblad. Tijdens de pauze loopt het inname-nummer niet verder, en je kunt de registratie direct hervatten wanneer je weer begint.",
+  "restDurationFeatureAppealBody": "Je kunt een langere pauze met de pil op je pillenstrip vastleggen. Tijdens de pauze blijft het pilnummer gelijk. Zodra je weer begint, kun je meteen verdergaan met registreren.",
   "featureAppealLocationLabel": "Locatie in de app",
   "criticalAlertFeatureAppealPoint1": "Meldingen worden ook tijdens de focusmodus bezorgd",
   "criticalAlertFeatureAppealPoint2": "Betrouwbare herinnering op de ingestelde tijd",

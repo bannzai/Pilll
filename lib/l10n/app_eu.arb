@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Erregistratu pilula hartzeko atsedenaldia",
   "restDurationFeatureAppealShortDescription": "Jarraitu zehaztasunez atsedenaldiak eta pilula hartzeko etenak",
   "restDurationFeatureAppealHeadline": "Egin eten bat pilula hartzean",
-  "restDurationFeatureAppealBody": "Pilula-orrian erregistra dezakezu pilulak denbora batez hartzeari uzteko aldia. Atseden bitartean, pilula-zenbakia ez da aurreratuko, eta berriro hastean erregistroa berehala berrekin dezakezu.",
+  "restDurationFeatureAppealBody": "Pilula hartzeari aldi baterako uzten diozun tartea pilula-blister batean erregistra dezakezu. Etenaldian, pilularen zenbakia ez da aurreratzen, eta berriro hartzen hastean berehala jarrai dezakezu erregistratzen.",
   "featureAppealLocationLabel": "Aplikazioko kokapena",
   "criticalAlertFeatureAppealPoint1": "Fokus moduan ere jakinarazpenak jasotzen dira",
   "criticalAlertFeatureAppealPoint2": "Ezarritako orduan gogorarazpen ziurra",

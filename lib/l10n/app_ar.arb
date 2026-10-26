@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "تسجيل فترة التوقف عن تناول الحبوب",
   "restDurationFeatureAppealShortDescription": "تتبعي فترات راحة تناول الحبوب وانقطاعها بدقة",
   "restDurationFeatureAppealHeadline": "التوقف مؤقتًا عن تناول حبوب منع الحمل",
-  "restDurationFeatureAppealBody": "يمكنك تسجيل فترة توقف مؤقت عن تناول الحبوب في ورقة الحبوب. خلال فترة الراحة، لن يتقدم رقم الجرعة، ويمكنك استئناف التسجيل فورًا عند العودة.",
+  "restDurationFeatureAppealBody": "يمكنكِ تسجيل فترة التوقف عن تناول الحبوب في شريط. خلال فترة التوقف، لا يتقدم رقم الحبة، ويمكنكِ استئناف التسجيل فور العودة إلى تناولها.",
   "featureAppealLocationLabel": "موقع داخل التطبيق",
   "criticalAlertFeatureAppealPoint1": "تصلك الإشعارات حتى أثناء وضع التركيز",
   "criticalAlertFeatureAppealPoint2": "تذكير موثوق في الوقت المحدد",

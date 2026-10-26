@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "Запісаць перапынак у прыёме пігулак",
   "restDurationFeatureAppealShortDescription": "Дакладны ўлік перапыну і спынення прыёму пігулак",
   "restDurationFeatureAppealHeadline": "Зрабіць перапынак у прыёме пігулак",
-  "restDurationFeatureAppealBody": "Вы можаце запісаць у таблетачны ліст перыяд, калі часова спыняеце прыём таблетак. Падчас перапынку нумар прыёму не прасоўваецца, і пры аднаўленні вы адразу зможаце прыступіць да запісу.",
+  "restDurationFeatureAppealBody": "Вы можаце адзначыць у блістар перыяд, калі некаторы час не прымаеце пігулкі. Падчас перапынку нумар пігулкі не змяняецца, а калі вы зноў пачняце прыём, зможаце адразу працягнуць запісы.",
   "featureAppealLocationLabel": "Месца ў дадатку",
   "criticalAlertFeatureAppealPoint1": "Апавяшчэнні даходзяць нават у рэжыме засяроджанасці",
   "criticalAlertFeatureAppealPoint2": "Надзейнае нагадванне ў зададзены час",

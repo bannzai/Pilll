@@ -507,7 +507,7 @@
   "restDurationFeatureAppealTitle": "चक्की सेवनको विराम अवधि दर्ता गर्नुहोस्",
   "restDurationFeatureAppealShortDescription": "विश्राम र चक्की खान रोकिएको अवधि सही रूपमा टिपोट गर्नुहोस्",
   "restDurationFeatureAppealHeadline": "चक्की खानबाट केही समय विश्राम लिनुहोस्",
-  "restDurationFeatureAppealBody": "तपाईंले पिल शिटमा केही समयका लागि पिल खान बन्द गर्ने अवधि रेकर्ड गर्न सक्नुहुन्छ। बिदाको समयमा सेवन नम्बर अघि बढ्दैन, र पुनः सुरु गर्दा तुरुन्त रेकर्ड जारी राख्न सकिन्छ।",
+  "restDurationFeatureAppealBody": "केही समय चक्की खान रोकिएको अवधि चक्की पत्तामा टिप्न सक्नुहुन्छ। विश्रामका बेला चक्कीको नम्बर अघि बढ्दैन, र फेरि खान सुरु गर्दा तुरुन्तै टिप्न जारी राख्न सक्नुहुन्छ।",
   "featureAppealLocationLabel": "एप भित्रको स्थान",
   "criticalAlertFeatureAppealPoint1": "फोकस मोडमा पनि सूचनाहरू आउँछन्",
   "criticalAlertFeatureAppealPoint2": "तय गरिएको समयमा निश्चित रिमाइन्डर",
