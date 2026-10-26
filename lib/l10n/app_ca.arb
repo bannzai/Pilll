@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Gràcies per registrar-te.\nJa pots fer servir totes les funcions!",
   "limitedTimeDiscount": "Subscriu-t’hi ara a un preu especial i conserva’l",
   "standardMonthlyPlan": "Pla mensual estàndard",
-  "annualPlan": "Plan anual",
+  "annualPlan": "Pla anual",
   "annualPrice": "{annualPackageStoreProductPriceString}/any",
   "monthlyPrice": "{monthlyPriceString}/mes",
   "dailyPrice": "{dailyPriceString}/dia",

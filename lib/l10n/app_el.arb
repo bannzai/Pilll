@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Σας ευχαριστούμε για την εγγραφή σας.\nΤώρα μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες!",
   "limitedTimeDiscount": "Εγγραφείτε τώρα στην ειδική τιμή και διατηρήστε την",
   "standardMonthlyPlan": "Κανονικό μηνιαίο πρόγραμμα",
-  "annualPlan": "Ετήσιο Πλάνο",
+  "annualPlan": "Ετήσιο πρόγραμμα",
   "annualPrice": "{annualPackageStoreProductPriceString}/έτος",
   "monthlyPrice": "{monthlyPriceString}/μήνα",
   "dailyPrice": "{dailyPriceString}/ημέρα",

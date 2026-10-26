@@ -177,7 +177,7 @@
   "thankYouForRegistration": "ስለተመዘገቡ እናመሰግናለን።\nአሁን ሁሉንም ባህሪያት መጠቀም ይችላሉ!",
   "limitedTimeDiscount": "አሁን በልዩ ዋጋ ይመዝገቡ፤ በዚያው ዋጋ መጠቀምዎን ይቀጥሉ",
   "standardMonthlyPlan": "መደበኛ ወርሃዊ ዕቅድ",
-  "annualPlan": "ዓመታዊ እቅድ",
+  "annualPlan": "ዓመታዊ ዕቅድ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ዓመት",
   "monthlyPrice": "{monthlyPriceString}/ወር",
   "dailyPrice": "{dailyPriceString}/በቀን",

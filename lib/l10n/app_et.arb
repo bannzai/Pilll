@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Aitäh registreerumise eest.\nNüüd saad kasutada kõiki funktsioone!",
   "limitedTimeDiscount": "Telli nüüd erihinnaga ja säilita see hind",
   "standardMonthlyPlan": "Tavaline kuupakett",
-  "annualPlan": "Aastaline plaan",
+  "annualPlan": "Aastaplaan",
   "annualPrice": "{annualPackageStoreProductPriceString}/aasta",
   "monthlyPrice": "{monthlyPriceString}/kuus",
   "dailyPrice": "{dailyPriceString}/päev",

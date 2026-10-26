@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Շնորհակալություն գրանցվելու համար։\nԱյժմ Դուք կարող եք օգտվել բոլոր հնարավորություններից։",
   "limitedTimeDiscount": "Բաժանորդագրվեք հիմա հատուկ գնով և պահպանեք այդ գինը",
   "standardMonthlyPlan": "Սովորական ամսական բաժանորդագրություն",
-  "annualPlan": "տարեկան պլան",
+  "annualPlan": "Տարեկան պլան",
   "annualPrice": "{annualPackageStoreProductPriceString}/տարի",
   "monthlyPrice": "{monthlyPriceString}/ամիս",
   "dailyPrice": "{dailyPriceString}/օրը",

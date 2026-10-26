@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Diolch am gofrestru.\nGallwch chi ddefnyddio'r holl nodweddion nawr!",
   "limitedTimeDiscount": "Tanysgrifiwch nawr am bris arbennig a chadwch y pris hwnnw",
   "standardMonthlyPlan": "Cynllun misol safonol",
-  "annualPlan": "Cynllun Blynyddol",
+  "annualPlan": "Cynllun blynyddol",
   "annualPrice": "{annualPackageStoreProductPriceString}/blwyddyn",
   "monthlyPrice": "{monthlyPriceString}/mis",
   "dailyPrice": "{dailyPriceString} y dydd",

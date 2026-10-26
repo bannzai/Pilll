@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Dankie dat jy geregistreer het.\nJy kan nou al die funksies gebruik!",
   "limitedTimeDiscount": "Sluit nou teen ’n spesiale prys aan en behou dié prys",
   "standardMonthlyPlan": "Gewone maandelikse plan",
-  "annualPlan": "Jaarlikse Plan",
+  "annualPlan": "Jaarplan",
   "annualPrice": "{annualPackageStoreProductPriceString}/jaar",
   "monthlyPrice": "{monthlyPriceString}/maand",
   "dailyPrice": "{dailyPriceString}/dag",

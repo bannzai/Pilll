@@ -177,7 +177,7 @@
   "thankYouForRegistration": "ලියාපදිංචි වූවාට ස්තුතියි.\nදැන් ඔබට සියලුම විශේෂාංග භාවිත කළ හැකියි!",
   "limitedTimeDiscount": "දැන් විශේෂ මිලකට දායක වී, එම මිලටම දිගටම භාවිත කරන්න",
   "standardMonthlyPlan": "සාමාන්‍ය මාසික සැලැස්ම",
-  "annualPlan": "වාර්ෂික සැලසුම",
+  "annualPlan": "වාර්ෂික සැලැස්ම",
   "annualPrice": "{annualPackageStoreProductPriceString}/වර්ෂය",
   "monthlyPrice": "{monthlyPriceString}/මසකට",
   "dailyPrice": "{dailyPriceString}/දිනකට",

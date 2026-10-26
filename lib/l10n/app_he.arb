@@ -177,7 +177,7 @@
   "thankYouForRegistration": "תודה על ההרשמה.\nכל התכונות זמינות כעת לשימוש!",
   "limitedTimeDiscount": "הרשמה עכשיו במחיר מיוחד תאפשר להמשיך ליהנות מאותו מחיר",
   "standardMonthlyPlan": "מסלול חודשי במחיר רגיל",
-  "annualPlan": "מנוי שנתי",
+  "annualPlan": "מסלול שנתי",
   "annualPrice": "{annualPackageStoreProductPriceString}/שנה",
   "monthlyPrice": "{monthlyPriceString} לחודש",
   "dailyPrice": "{dailyPriceString} ליום",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Gracias por registrarte.\n¡Ya puedes usar todas las funciones!",
   "limitedTimeDiscount": "Suscríbete ahora a un precio especial y consérvalo",
   "standardMonthlyPlan": "Plan mensual estándar",
-  "annualPlan": "Plan Anual",
+  "annualPlan": "Plan anual",
   "annualPrice": "{annualPackageStoreProductPriceString}/año",
   "monthlyPrice": "{monthlyPriceString}/mes",
   "dailyPrice": "{dailyPriceString}/día",

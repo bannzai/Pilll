@@ -177,7 +177,7 @@
   "thankYouForRegistration": "გმადლობთ რეგისტრაციისთვის.\nახლა ყველა ფუნქციის გამოყენება შეგიძლიათ!",
   "limitedTimeDiscount": "გამოიწერეთ ახლავე სპეციალურ ფასად და შეინარჩუნეთ ეს ფასი",
   "standardMonthlyPlan": "სტანდარტული თვიური გეგმა",
-  "annualPlan": "წლიური პლანი",
+  "annualPlan": "წლიური გეგმა",
   "annualPrice": "{annualPackageStoreProductPriceString}/წელი",
   "monthlyPrice": "{monthlyPriceString}/თვეში",
   "dailyPrice": "{dailyPriceString} დღეში",

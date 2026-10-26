@@ -177,7 +177,7 @@
   "thankYouForRegistration": "ನೋಂದಾಯಿಸಿದ್ದಕ್ಕಾಗಿ ಧನ್ಯವಾದಗಳು.\nಈಗ ನೀವು ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಬಹುದು!",
   "limitedTimeDiscount": "ಈಗ ವಿಶೇಷ ದರದಲ್ಲಿ ಚಂದಾದಾರರಾಗಿ, ಅದೇ ದರದಲ್ಲಿ ಬಳಸುವುದನ್ನು ಮುಂದುವರಿಸಿ",
   "standardMonthlyPlan": "ಸಾಮಾನ್ಯ ಮಾಸಿಕ ಯೋಜನೆ",
-  "annualPlan": "ವಾರ್ಷಿಕ ಪ್ಲಾನ್",
+  "annualPlan": "ವಾರ್ಷಿಕ ಯೋಜನೆ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ವರ್ಷ",
   "monthlyPrice": "{monthlyPriceString}/ತಿಂಗಳು",
   "dailyPrice": "{dailyPriceString}/ದಿನ",

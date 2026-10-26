@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Cảm ơn bạn đã đăng ký.\nGiờ bạn có thể dùng tất cả tính năng!",
   "limitedTimeDiscount": "Đăng ký ngay với giá ưu đãi và tiếp tục dùng với mức giá đó",
   "standardMonthlyPlan": "Gói tháng giá thường",
-  "annualPlan": "Gói hàng năm",
+  "annualPlan": "Gói hằng năm",
   "annualPrice": "{annualPackageStoreProductPriceString}/năm",
   "monthlyPrice": "{monthlyPriceString}/tháng",
   "dailyPrice": "{dailyPriceString}/ngày",

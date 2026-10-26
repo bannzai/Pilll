@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Terima kasih sudah mendaftar.\nSekarang Anda dapat menggunakan semua fitur!",
   "limitedTimeDiscount": "Berlangganan sekarang dengan harga khusus dan pertahankan harga itu",
   "standardMonthlyPlan": "Paket bulanan reguler",
-  "annualPlan": "Paket Tahunan",
+  "annualPlan": "Paket tahunan",
   "annualPrice": "{annualPackageStoreProductPriceString}/tahun",
   "monthlyPrice": "{monthlyPriceString}/bulan",
   "dailyPrice": "{dailyPriceString}/hari",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "ຂອບໃຈທີ່ລົງທະບຽນ.\nຕອນນີ້ສາມາດໃຊ້ທຸກຟັງຊັນໄດ້ແລ້ວ!",
   "limitedTimeDiscount": "ສະໝັກຕອນນີ້ໃນລາຄາພິເສດ ແລະໃຊ້ຕໍ່ໄປໃນລາຄາເດີມ",
   "standardMonthlyPlan": "ແຜນລາຍເດືອນລາຄາປົກກະຕິ",
-  "annualPlan": "ແຜນປະຈຳປີ",
+  "annualPlan": "ແຜນລາຍປີ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ປີ",
   "monthlyPrice": "{monthlyPriceString}ຕໍ່ເດືອນ",
   "dailyPrice": "{dailyPriceString}/ມື້",

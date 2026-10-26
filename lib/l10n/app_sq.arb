@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Faleminderit që u regjistruat.\nTani mund t'i përdorni të gjitha funksionet!",
   "limitedTimeDiscount": "Abonohuni tani me çmim të veçantë dhe ruajeni atë çmim",
   "standardMonthlyPlan": "Plani mujor standard",
-  "annualPlan": "Plan vjetor",
+  "annualPlan": "Plani vjetor",
   "annualPrice": "{annualPackageStoreProductPriceString}/vit",
   "monthlyPrice": "{monthlyPriceString}/muaj",
   "dailyPrice": "{dailyPriceString}/në ditë",

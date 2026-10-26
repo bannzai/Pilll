@@ -177,7 +177,7 @@
   "thankYouForRegistration": "از ثبت‌نام شما سپاسگزاریم.\nاکنون می‌توانید از همهٔ امکانات استفاده کنید!",
   "limitedTimeDiscount": "اکنون با قیمت ویژه مشترک شوید و همین قیمت را حفظ کنید",
   "standardMonthlyPlan": "طرح ماهانه با قیمت عادی",
-  "annualPlan": "پلن سالانه",
+  "annualPlan": "طرح سالانه",
   "annualPrice": "{annualPackageStoreProductPriceString}/سال",
   "monthlyPrice": "{monthlyPriceString}/ماه",
   "dailyPrice": "{dailyPriceString}/روز",

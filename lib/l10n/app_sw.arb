@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Asante kwa kujisajili.\nSasa unaweza kutumia vipengele vyote!",
   "limitedTimeDiscount": "Tafadhali jiandikishe sasa kwa bei maalum na uendelee kutumia kwa bei hiyo",
   "standardMonthlyPlan": "Mpango wa kawaida wa kila mwezi",
-  "annualPlan": "Mpango wa Mwaka",
+  "annualPlan": "Mpango wa mwaka",
   "annualPrice": "{annualPackageStoreProductPriceString}/mwaka",
   "monthlyPrice": "{monthlyPriceString}/mwezi",
   "dailyPrice": "{dailyPriceString}/siku",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Тіркелгеніңіз үшін рақмет.\nЕнді барлық мүмкіндікті пайдалана аласыз!",
   "limitedTimeDiscount": "Қазір арнайы бағамен жазылып, осы бағаны сақтап қалыңыз",
   "standardMonthlyPlan": "Әдеттегі айлық жоспар",
-  "annualPlan": "жылдық тариф",
+  "annualPlan": "Жылдық жоспар",
   "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
   "monthlyPrice": "{monthlyPriceString}/айына",
   "dailyPrice": "{dailyPriceString}/күнде",

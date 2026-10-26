@@ -177,7 +177,7 @@
   "thankYouForRegistration": "ପଞ୍ଜୀକରଣ କରିଥିବାରୁ ଧନ୍ୟବାଦ।\nଏବେ ଆପଣ ସମସ୍ତ ସୁବିଧା ବ୍ୟବହାର କରିପାରିବେ!",
   "limitedTimeDiscount": "ଏବେ ସ୍ୱତନ୍ତ୍ର ମୂଲ୍ୟରେ ସଦସ୍ୟତା ନିଅନ୍ତୁ ଏବଂ ସେହି ମୂଲ୍ୟରେ ବ୍ୟବହାର ଜାରି ରଖନ୍ତୁ",
   "standardMonthlyPlan": "ନିୟମିତ ମାସିକ ଯୋଜନା",
-  "annualPlan": "ବାର୍ଷିକ ପ୍ଲାନ",
+  "annualPlan": "ବାର୍ଷିକ ପ୍ଲାନ୍",
   "annualPrice": "{annualPackageStoreProductPriceString}/ବର୍ଷ",
   "monthlyPrice": "{monthlyPriceString}/ମାସ",
   "dailyPrice": "{dailyPriceString}/ଦିନ",

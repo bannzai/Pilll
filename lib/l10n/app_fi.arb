@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Kiitos rekisteröitymisestä.\nVoit nyt käyttää kaikkia ominaisuuksia!",
   "limitedTimeDiscount": "Tilaa nyt erikoishintaan ja säilytä sama hinta",
   "standardMonthlyPlan": "Tavallinen kuukausitilaus",
-  "annualPlan": "Vuosipaketti",
+  "annualPlan": "Vuositilaus",
   "annualPrice": "{annualPackageStoreProductPriceString}/vuosi",
   "monthlyPrice": "{monthlyPriceString}/kk",
   "dailyPrice": "{dailyPriceString}/päivä",

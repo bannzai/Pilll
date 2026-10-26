@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Hvala za registracijo.\nZdaj lahko uporabljate vse funkcije!",
   "limitedTimeDiscount": "Naročite se zdaj po posebni ceni in jo obdržite",
   "standardMonthlyPlan": "Običajni mesečni paket",
-  "annualPlan": "Letni načrt",
+  "annualPlan": "Letni paket",
   "annualPrice": "{annualPackageStoreProductPriceString}/leto",
   "monthlyPrice": "{monthlyPriceString}/mesec",
   "dailyPrice": "{dailyPriceString}/dan",

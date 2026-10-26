@@ -177,7 +177,7 @@
   "thankYouForRegistration": "가입해 주셔서 감사합니다.\n이제 모든 기능을 이용할 수 있어요!",
   "limitedTimeDiscount": "지금 특별 가격으로 구독하면 계속 같은 가격으로 이용할 수 있어요",
   "standardMonthlyPlan": "일반 월간 요금제",
-  "annualPlan": "연간 플랜",
+  "annualPlan": "연간 요금제",
   "annualPrice": "{annualPackageStoreProductPriceString}/년",
   "monthlyPrice": "{monthlyPriceString}/월",
   "dailyPrice": "{dailyPriceString}/일",

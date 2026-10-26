@@ -177,7 +177,7 @@
   "thankYouForRegistration": "شكرًا لتسجيلكِ.\nيمكنكِ الآن استخدام جميع الميزات!",
   "limitedTimeDiscount": "اشتركي الآن بالسعر الخاص واستمري به",
   "standardMonthlyPlan": "الخطة الشهرية بالسعر العادي",
-  "annualPlan": "باقة سنوية",
+  "annualPlan": "الخطة السنوية",
   "annualPrice": "{annualPackageStoreProductPriceString}/سنة",
   "monthlyPrice": "{monthlyPriceString}/شهر",
   "dailyPrice": "{dailyPriceString}/يوم",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Salamat po sa pagpaparehistro.\nMagagamit na ninyo ang lahat ng tampok!",
   "limitedTimeDiscount": "Mag-subscribe po ngayon sa espesyal na presyo at panatilihin ang presyong iyon",
   "standardMonthlyPlan": "Karaniwang buwanang plano",
-  "annualPlan": "Taunang Plano",
+  "annualPlan": "Taunang plano",
   "annualPrice": "{annualPackageStoreProductPriceString}/taon",
   "monthlyPrice": "{monthlyPriceString}/buwan",
   "dailyPrice": "{dailyPriceString}/araw",

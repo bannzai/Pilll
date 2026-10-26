@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Siyabonga ngokubhalisa.\nManje usungasebenzisa zonke izici!",
   "limitedTimeDiscount": "Sicela ubhalise manje ngentengo ekhethekile, uqhubeke nokusebenzisa ngale ntengo",
   "standardMonthlyPlan": "Uhlelo olujwayelekile lwanyanga zonke",
-  "annualPlan": "Iplani lonyaka",
+  "annualPlan": "Uhlelo lonyaka",
   "annualPrice": "{annualPackageStoreProductPriceString}/ngonyaka",
   "monthlyPrice": "{monthlyPriceString}/ngenyanga",
   "dailyPrice": "{dailyPriceString}/usuku",

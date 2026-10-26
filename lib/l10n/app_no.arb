@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Takk for at du registrerte deg.\nNå kan du bruke alle funksjonene!",
   "limitedTimeDiscount": "Abonner nå til spesialpris, og behold prisen videre",
   "standardMonthlyPlan": "Vanlig månedsabonnement",
-  "annualPlan": "Årlig plan",
+  "annualPlan": "Årsabonnement",
   "annualPrice": "{annualPackageStoreProductPriceString}/år",
   "monthlyPrice": "{monthlyPriceString}/måned",
   "dailyPrice": "{dailyPriceString}/dag",

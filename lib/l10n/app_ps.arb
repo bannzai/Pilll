@@ -177,7 +177,7 @@
   "thankYouForRegistration": "د نوم‌لیکنې لپاره مننه.\nاوس تاسو له ټولو ځانګړنو ګټه اخیستلی شئ!",
   "limitedTimeDiscount": "اوس په ځانګړې بیه ګډون وکړئ او همدا بیه وساتئ",
   "standardMonthlyPlan": "عادي میاشتنی پلان",
-  "annualPlan": "کلني پلان",
+  "annualPlan": "کلنی پلان",
   "annualPrice": "{annualPackageStoreProductPriceString}/کال",
   "monthlyPrice": "{monthlyPriceString}/میاشت",
   "dailyPrice": "{dailyPriceString}/ورځ",

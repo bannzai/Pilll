@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Eskerrik asko erregistratzeagatik.\nOrain funtzio guztiak erabil ditzakezu!",
   "limitedTimeDiscount": "Harpidetu orain prezio berezian, eta mantendu prezio hori",
   "standardMonthlyPlan": "Hileko plan arrunta",
-  "annualPlan": "urteko plana",
+  "annualPlan": "Urteko plana",
   "annualPrice": "{annualPackageStoreProductPriceString}/urte",
   "monthlyPrice": "{monthlyPriceString}/hileko",
   "dailyPrice": "{dailyPriceString}/egun",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "पंजीकरण के लिए धन्यवाद।\nअब आप सभी सुविधाओं का उपयोग कर सकती हैं!",
   "limitedTimeDiscount": "अभी विशेष कीमत पर सदस्यता लें और यही कीमत आगे भी पाएं",
   "standardMonthlyPlan": "नियमित मासिक प्लान",
-  "annualPlan": "वार्षिक प्लान",
+  "annualPlan": "सालाना प्लान",
   "annualPrice": "{annualPackageStoreProductPriceString}/साल",
   "monthlyPrice": "{monthlyPriceString}/माह",
   "dailyPrice": "{dailyPriceString}/दिन",

@@ -177,7 +177,7 @@
   "thankYouForRegistration": "Хвала Вам што сте се регистровали.\nСада можете да користите све функције!",
   "limitedTimeDiscount": "Претплатите се сада по посебној цени и задржите је",
   "standardMonthlyPlan": "Стандардни месечни план",
-  "annualPlan": "Godišnji plan",
+  "annualPlan": "Годишњи план",
   "annualPrice": "{annualPackageStoreProductPriceString}/годину",
   "monthlyPrice": "{monthlyPriceString}/mesec",
   "dailyPrice": "{dailyPriceString}/dan",
