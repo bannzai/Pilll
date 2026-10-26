@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "pil nombor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "nombor 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→nombor {afterDisplayNumberSettingEndPillNumber}",
+  "oneToAfterDisplayNumberEndPillNumber": "Nombor 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nombor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Pilih Tarikh Mula Rehat Pengambilan",
   "selectPausePeriod": "Pilih Tempoh Rehat Pengambilan",

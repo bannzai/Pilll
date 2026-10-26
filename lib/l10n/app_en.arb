@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "Pills {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "Numbers 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1 to {afterDisplayNumberSettingEndPillNumber}",
+  "oneToAfterDisplayNumberEndPillNumber": "No. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select Break Start Date",
   "selectPausePeriod": "Select Pill-Free Period",

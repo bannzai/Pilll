@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "pilules nº {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "numéros 1 à {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1 à {afterDisplayNumberSettingEndPillNumber}",
+  "oneToAfterDisplayNumberEndPillNumber": "N° 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber} → {afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Sélectionnez la date de début de la pause",
   "selectPausePeriod": "Sélectionnez une période sans pilule",

@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "เม็ดที่ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "หมายเลข 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
+  "oneToAfterDisplayNumberEndPillNumber": "หมายเลข 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}เลข",
   "selectPauseStartDate": "เลือกวันเริ่มต้นช่วงหยุดยา",
   "selectPausePeriod": "เลือกช่วงพักยา",

@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ବଟିକା ନଂ {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "୧ ରୁ {afterDisplayNumberSettingBeginPillNumber} ନମ୍ବର",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "୧→{afterDisplayNumberSettingEndPillNumber} ନମ୍ବର",
+  "oneToAfterDisplayNumberEndPillNumber": "ନମ୍ବର 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ନମ୍ବର",
   "selectPauseStartDate": "ଔଷଧ ବିରତି ଆରମ୍ଭ ତାରିଖ ଚୟନ",
   "selectPausePeriod": "ସେବନ ବିରତି ଅବଧି ଚୟନ କରନ୍ତୁ",

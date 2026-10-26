@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}. tabletta",
   "oneToAfterDisplayNumberBeginPillNumber": "1–{afterDisplayNumberSettingBeginPillNumber}. szám",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1. → {afterDisplayNumberSettingEndPillNumber}.",
+  "oneToAfterDisplayNumberEndPillNumber": "1.→{afterDisplayNumberSettingEndPillNumber}. számú",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}. szám",
   "selectPauseStartDate": "Tablettaszünet kezdő dátumának kiválasztása",
   "selectPausePeriod": "Szedési szünet kiválasztása",

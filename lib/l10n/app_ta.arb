@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} எண் மாத்திரைகள்",
   "oneToAfterDisplayNumberBeginPillNumber": "1 முதல் {afterDisplayNumberSettingBeginPillNumber} வரையிலான எண்கள்",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} எண்",
+  "oneToAfterDisplayNumberEndPillNumber": "எண் 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}வது",
   "selectPauseStartDate": "மருந்து இடைவெளி தொடக்க தேதி தெரிவு",
   "selectPausePeriod": "மாத்திரை ஓய்வு காலத்தை தேர்ந்தெடுக்கவும்",

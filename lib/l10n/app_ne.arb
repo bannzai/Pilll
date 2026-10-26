@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} नम्बरका चक्कीहरू",
   "oneToAfterDisplayNumberBeginPillNumber": "१ देखि {afterDisplayNumberSettingBeginPillNumber} सम्मका नम्बर",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नम्बर",
+  "oneToAfterDisplayNumberEndPillNumber": "नम्बर 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}नं।",
   "selectPauseStartDate": "सेवन बिदा सुरुवात मिति छनोट",
   "selectPausePeriod": "सेवन विश्राम अवधि छान्नुहोस्",

@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} क्रमांकाच्या गोळ्या",
   "oneToAfterDisplayNumberBeginPillNumber": "१ ते {afterDisplayNumberSettingBeginPillNumber} क्रमांक",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "१ ते {afterDisplayNumberSettingEndPillNumber} क्रमांक",
+  "oneToAfterDisplayNumberEndPillNumber": "क्रमांक 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}वा",
   "selectPauseStartDate": "सेवन विराम प्रारंभ दिनांक निवड",
   "selectPausePeriod": "सेवन विराम कालावधी निवडा",

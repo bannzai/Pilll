@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "বৰি নং {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "1ৰ পৰা {afterDisplayNumberSettingBeginPillNumber} নম্বৰলৈ",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber}নং",
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "selectPauseStartDate": "সেৱন বিৰতি আৰম্ভৰ তাৰিখ নিৰ্বাচন",
   "selectPausePeriod": "ঔষধ সেৱন বিৰতিৰ সময়কাল নিৰ্বাচন কৰক",

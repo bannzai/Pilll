@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "گولیاں نمبر {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "نمبر 1 سے {afterDisplayNumberSettingBeginPillNumber} تک",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}نمبر",
+  "oneToAfterDisplayNumberEndPillNumber": "نمبر 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}نمبر",
   "selectPauseStartDate": "وقفے کی شروعات کا انتخاب",
   "selectPausePeriod": "استعمال میں وقفے کی مدت کا انتخاب کریں",

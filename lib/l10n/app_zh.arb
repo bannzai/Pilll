@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "第{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}粒",
   "oneToAfterDisplayNumberBeginPillNumber": "编号 1 至 {afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}号",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}号",
+  "oneToAfterDisplayNumberEndPillNumber": "第1→{afterDisplayNumberSettingEndPillNumber}号",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}号",
   "selectPauseStartDate": "选择停药开始日期",
   "selectPausePeriod": "选择休药期间",

@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համարի հաբեր",
   "oneToAfterDisplayNumberBeginPillNumber": "համարներ 1–{afterDisplayNumberSettingBeginPillNumber}",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} համար",
+  "oneToAfterDisplayNumberEndPillNumber": "Համար 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} համար",
   "selectPauseStartDate": "Դեղի ընծիջման սկզբի ամսաթվի ընտրություն",
   "selectPausePeriod": "Ընտրել հանգստի ժամանակահատվածը",

@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "ગોળી નં. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "૧ થી {afterDisplayNumberSettingBeginPillNumber} નંબર",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} નંબર",
+  "oneToAfterDisplayNumberEndPillNumber": "નંબર 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}નંબર",
   "selectPauseStartDate": "દવા વિરામ શરૂઆત તારીખ પસંદ કરો",
   "selectPausePeriod": "સેવન વિરામ અવધિ પસંદ કરો",

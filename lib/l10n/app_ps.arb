@@ -103,7 +103,7 @@
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "د ګولیو شمېرې {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "oneToAfterDisplayNumberBeginPillNumber": "له 1 تر {afterDisplayNumberSettingBeginPillNumber} شمېرې",
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
-  "oneToAfterDisplayNumberEndPillNumber": "۱→{afterDisplayNumberSettingEndPillNumber}ګ",
+  "oneToAfterDisplayNumberEndPillNumber": "شمېره 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شمېره",
   "selectPauseStartDate": "د درملو د ناستې د پیل نیټه ټاکنه",
   "selectPausePeriod": "د درملو د وقفې موده وټاکئ",
