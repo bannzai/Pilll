@@ -534,7 +534,7 @@
   "futureScheduleFeatureAppealLocationHint": "Tryck på ett datum för att lägga till en plan",
   "healthCareIntegrationFeatureAppealPoint1": "Synka mensanteckningar automatiskt",
   "healthCareIntegrationFeatureAppealPoint2": "Synkronisera med appen Hälsa",
-  "healthCareIntegrationFeatureAppealPoint3": "Fungerar med Apple Hälsa",
+  "healthCareIntegrationFeatureAppealPoint3": "Anslutning till Apple Health",
   "quickRecordFeatureAppealPoint1": "Registrera intag via aviseringens åtgärd",
   "quickRecordFeatureAppealPoint2": "Appen behöver inte öppnas för att slutföra",
   "quickRecordFeatureAppealPoint3": "Ingår i Premium-prenumerationen",

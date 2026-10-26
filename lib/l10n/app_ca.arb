@@ -534,7 +534,7 @@
   "futureScheduleFeatureAppealLocationHint": "Toca una data per afegir un pla",
   "healthCareIntegrationFeatureAppealPoint1": "Sincronitza automàticament els registres de la regla",
   "healthCareIntegrationFeatureAppealPoint2": "Sincronitza amb l’app Salut",
-  "healthCareIntegrationFeatureAppealPoint3": "Compatible amb Apple Health",
+  "healthCareIntegrationFeatureAppealPoint3": "Integració amb Apple Health",
   "quickRecordFeatureAppealPoint1": "Registrar presa des de la notificació",
   "quickRecordFeatureAppealPoint2": "Completar sense obrir l'aplicació",
   "quickRecordFeatureAppealPoint3": "Disponible directament amb la subscripció Premium",

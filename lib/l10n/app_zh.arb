@@ -534,7 +534,7 @@
   "futureScheduleFeatureAppealLocationHint": "轻点日期，添加日程",
   "healthCareIntegrationFeatureAppealPoint1": "自动同步经期记录",
   "healthCareIntegrationFeatureAppealPoint2": "同步到健康 App",
-  "healthCareIntegrationFeatureAppealPoint3": "支持 Apple 健康",
+  "healthCareIntegrationFeatureAppealPoint3": "连接 Apple 健康",
   "quickRecordFeatureAppealPoint1": "通过通知操作记录服药",
   "quickRecordFeatureAppealPoint2": "无需打开应用即可完成",
   "quickRecordFeatureAppealPoint3": "订阅 Premium 后即可使用",

@@ -534,7 +534,7 @@
   "futureScheduleFeatureAppealLocationHint": "Touchez une date pour ajouter un événement",
   "healthCareIntegrationFeatureAppealPoint1": "Synchroniser automatiquement les données de règles",
   "healthCareIntegrationFeatureAppealPoint2": "Synchroniser avec l’app Santé",
-  "healthCareIntegrationFeatureAppealPoint3": "Intégration Apple Santé",
+  "healthCareIntegrationFeatureAppealPoint3": "Intégration avec Apple Health",
   "quickRecordFeatureAppealPoint1": "Enregistrer la dose issue de l'action de notification",
   "quickRecordFeatureAppealPoint2": "Terminer sans ouvrir l'application",
   "quickRecordFeatureAppealPoint3": "Disponible avec l'abonnement Premium",

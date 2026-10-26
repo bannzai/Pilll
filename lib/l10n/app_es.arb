@@ -534,7 +534,7 @@
   "futureScheduleFeatureAppealLocationHint": "Toca una fecha para añadir un plan",
   "healthCareIntegrationFeatureAppealPoint1": "Sincroniza automáticamente los registros de la regla",
   "healthCareIntegrationFeatureAppealPoint2": "Sincronizar con la app Salud",
-  "healthCareIntegrationFeatureAppealPoint3": "Compatible con Salud de Apple",
+  "healthCareIntegrationFeatureAppealPoint3": "Integración con Apple Health",
   "quickRecordFeatureAppealPoint1": "Registrar toma desde notificación",
   "quickRecordFeatureAppealPoint2": "Completar sin abrir la aplicación",
   "quickRecordFeatureAppealPoint3": "Disponible con suscripción Premium",
