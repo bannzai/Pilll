@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Du kan skrive kommende planer som lægebesøg og rejser i kalenderen. Se dem sammen med din p-pillecyklus, så du også kan tage højde for din menstruation, når du planlægger.",
   "healthCareIntegrationFeatureAppealTitle": "Forbind til Sundhed",
   "healthCareIntegrationFeatureAppealShortDescription": "Del menstruationsregistreringer med Sundhed",
-  "healthCareIntegrationFeatureAppealHeadline": "Kan integreres med Sundhed",
+  "healthCareIntegrationFeatureAppealHeadline": "Kan forbindes med appen Sundhed",
   "healthCareIntegrationFeatureAppealBody": "Du kan automatisk synkronisere menstruationsdata registreret i Pilll med Sundhed-appen. Du kan se dem sammen med andre sundhedsdata i Sundhed og bruge menstruationsdataene i andre apps.",
   "quickRecordFeatureAppealTitle": "Registrer direkte fra notifikation",
   "quickRecordFeatureAppealShortDescription": "Registrer via notifikationer uden at åbne appen",

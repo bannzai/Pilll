@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Þú getur skráð framtíðaráform, eins og læknistíma og ferðalög, í dagatalið. Skoðaðu þau samhliða tökuferli pillunnar svo þú getir líka tekið mið af því hvenær búist er við blæðingum.",
   "healthCareIntegrationFeatureAppealTitle": "Tengja við Heilsu",
   "healthCareIntegrationFeatureAppealShortDescription": "Deildu blæðingaskráningum með Heilsu",
-  "healthCareIntegrationFeatureAppealHeadline": "Þú getur samstillt við Apple Health",
+  "healthCareIntegrationFeatureAppealHeadline": "Þú getur tengt við Heilsuappið",
   "healthCareIntegrationFeatureAppealBody": "Þú getur sjálfkrafa samstillt tíðaupplýsingar sem skráðar eru í Pilll við Heilsuforritið. Þannig getur þú skoðað þær með öðrum heilsugögnum í Heilsuforritinu og gert öðrum forritum kleift að nota tíðaupplýsingarnar.",
   "quickRecordFeatureAppealTitle": "Skrá inntöku beint úr tilkynningu",
   "quickRecordFeatureAppealShortDescription": "Skráðu beint úr tilkynningu án þess að opna appið",

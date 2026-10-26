@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "A naptárba felírhatod a közelgő terveidet, például az orvosi időpontokat és az utazásokat. A tablettaszedési ciklussal együtt láthatod őket, így a várható menstruáció időpontját is figyelembe veheted a tervezésnél.",
   "healthCareIntegrationFeatureAppealTitle": "Kapcsolódás az Egészség apphoz",
   "healthCareIntegrationFeatureAppealShortDescription": "Menstruációs feljegyzések megosztása az Egészség appal",
-  "healthCareIntegrationFeatureAppealHeadline": "Kapcsolódás az egészségügyi adatokhoz",
+  "healthCareIntegrationFeatureAppealHeadline": "Összekapcsolhatod az Egészség appal",
   "healthCareIntegrationFeatureAppealBody": "A Pilll-ben rögzített menstruációs adatokat automatikusan szinkronizálhatja az egészségügyi alkalmazással. Így a menstruációs adatokat más egészségügyi adatokkal együtt megtekintheti az Egészség alkalmazásban, illetve más alkalmazások is felhasználhatják ezeket az adatokat.",
   "quickRecordFeatureAppealTitle": "Értesítésből közvetlen rögzítés",
   "quickRecordFeatureAppealShortDescription": "Értesítésből rögzítés az alkalmazás megnyitása nélkül",

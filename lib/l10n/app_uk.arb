@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Ви можете записувати в календарі майбутні плани, як-от візити до лікаря та подорожі. Переглядайте їх разом із циклом прийому пігулок, щоб під час планування враховувати й очікуваний час місячних.",
   "healthCareIntegrationFeatureAppealTitle": "Підключити до програми «Здоров’я»",
   "healthCareIntegrationFeatureAppealShortDescription": "Поділіться записами про місячні із застосунком «Здоров’я»",
-  "healthCareIntegrationFeatureAppealHeadline": "Підтримує інтеграцію зі службами здоров'я",
+  "healthCareIntegrationFeatureAppealHeadline": "Можна підключити до застосунку «Здоров’я»",
   "healthCareIntegrationFeatureAppealBody": "Дані про менструацію, записані в Pilll, можна автоматично синхронізувати з додатком для здоров'я. Ви зможете переглядати їх разом з іншими показниками здоров'я в цьому додатку, а також використовувати ці дані в інших програмах.",
   "quickRecordFeatureAppealTitle": "Зафіксувати прийом прямо зі сповіщення",
   "quickRecordFeatureAppealShortDescription": "Запис через сповіщення без відкриття додатка",

@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Вы можете записывать в календарь будущие планы, например визиты к врачу и поездки. Просматривайте их вместе с циклом приёма таблеток, чтобы при планировании учитывать и ожидаемую дату месячных.",
   "healthCareIntegrationFeatureAppealTitle": "Подключить к приложению «Здоровье»",
   "healthCareIntegrationFeatureAppealShortDescription": "Поделитесь записями о месячных с приложением «Здоровье»",
-  "healthCareIntegrationFeatureAppealHeadline": "Можно синхронизировать с приложением «Здоровье»",
+  "healthCareIntegrationFeatureAppealHeadline": "Можно подключить к приложению «Здоровье»",
   "healthCareIntegrationFeatureAppealBody": "Данные о менструальном цикле, записанные в Pilll, можно автоматически синхронизировать с приложением Здоровье. Вы сможете просматривать их вместе с другими данными о здоровье, а также использовать данные о цикле в других приложениях.",
   "quickRecordFeatureAppealTitle": "Запись приёма прямо из уведомлений",
   "quickRecordFeatureAppealShortDescription": "Запись через уведомление без открытия приложения",

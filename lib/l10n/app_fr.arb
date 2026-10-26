@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Vous pouvez noter vos projets à venir dans le calendrier, comme les rendez-vous médicaux et les voyages. Consultez-les avec votre cycle de prise de pilule pour tenir aussi compte de la date prévue de vos règles.",
   "healthCareIntegrationFeatureAppealTitle": "Connecter à Santé",
   "healthCareIntegrationFeatureAppealShortDescription": "Partagez vos suivis des règles avec Santé",
-  "healthCareIntegrationFeatureAppealHeadline": "Synchroniser avec Apple Health",
+  "healthCareIntegrationFeatureAppealHeadline": "Connexion possible avec l’app Santé",
   "healthCareIntegrationFeatureAppealBody": "Synchronisez automatiquement les données menstruelles que vous enregistrez dans Pilll avec l'application Apple Health. Affichez-le avec vos autres données de santé et réutilisez-le dans d'autres applications qui lisent Santé.",
   "quickRecordFeatureAppealTitle": "Enregistrer à partir de la notification",
   "quickRecordFeatureAppealShortDescription": "Enregistrez votre dose directement depuis le push",

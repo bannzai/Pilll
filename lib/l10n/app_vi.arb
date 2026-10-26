@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Bạn có thể ghi vào lịch các kế hoạch sắp tới, như lịch khám bác sĩ và chuyến đi. Xem chúng cùng chu kỳ uống thuốc để lên kế hoạch có tính đến thời gian dự kiến có kinh nguyệt.",
   "healthCareIntegrationFeatureAppealTitle": "Kết nối với ứng dụng Sức khỏe",
   "healthCareIntegrationFeatureAppealShortDescription": "Chia sẻ ghi chép kinh nguyệt với ứng dụng Sức khỏe",
-  "healthCareIntegrationFeatureAppealHeadline": "Liên kết với ứng dụng Sức khỏe",
+  "healthCareIntegrationFeatureAppealHeadline": "Có thể kết nối với ứng dụng Sức khỏe",
   "healthCareIntegrationFeatureAppealBody": "Bạn có thể liên kết tự động dữ liệu kinh nguyệt đã ghi trong Pilll với ứng dụng chăm sóc sức khỏe. Bạn có thể xem dữ liệu này cùng các dữ liệu sức khỏe khác trên ứng dụng đó, và cũng có thể cho phép các ứng dụng khác sử dụng dữ liệu kinh nguyệt.",
   "quickRecordFeatureAppealTitle": "Ghi nhận uống thuốc ngay từ thông báo",
   "quickRecordFeatureAppealShortDescription": "Ghi ngay từ thông báo mà không cần mở ứng dụng",

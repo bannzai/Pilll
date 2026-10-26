@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "डाक्टरलाई भेट्ने वा यात्रा गर्ने जस्ता आगामी योजना क्यालेन्डरमा लेख्न सक्नुहुन्छ। तिनलाई चक्की खाने चक्रसँगै हेरेर अपेक्षित महिनावारीको समय पनि ध्यानमा राखी योजना बनाउन सक्नुहुन्छ।",
   "healthCareIntegrationFeatureAppealTitle": "स्वास्थ्य एपसँग जोड्नुहोस्",
   "healthCareIntegrationFeatureAppealShortDescription": "महिनावारीका रेकर्ड स्वास्थ्य एपसँग साझेदारी गर्नुहोस्",
-  "healthCareIntegrationFeatureAppealHeadline": "स्वास्थ्य सेवासँग जोड्न सकिन्छ",
+  "healthCareIntegrationFeatureAppealHeadline": "स्वास्थ्य एपसँग जोड्न सकिन्छ",
   "healthCareIntegrationFeatureAppealBody": "Pilllमा रेकर्ड गरिएको महिनावारी डेटा स्वास्थ्य एपसँग स्वचालित रूपमा जोड्न सकिन्छ। स्वास्थ्य एपमा रहेका अन्य स्वास्थ्य डेटासँगै हेर्न सकिनुहुन्छ र अन्य एपहरूमा पनि महिनावारी डेटा प्रयोग गर्न सकिन्छ।",
   "quickRecordFeatureAppealTitle": "सूचनाबाट सिधै सेवन रेकर्ड",
   "quickRecordFeatureAppealShortDescription": "एप नखोलिकन सूचनामै रेकर्ड गर्नुहोस्",

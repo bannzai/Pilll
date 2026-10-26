@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Add upcoming plans, like doctor’s appointments and trips, to your calendar. View them alongside your pill schedule so you can plan around your expected period, too.",
   "healthCareIntegrationFeatureAppealTitle": "Connect to Health",
   "healthCareIntegrationFeatureAppealShortDescription": "Share period records with Health",
-  "healthCareIntegrationFeatureAppealHeadline": "Sync with Apple Health",
+  "healthCareIntegrationFeatureAppealHeadline": "Connect with Health",
   "healthCareIntegrationFeatureAppealBody": "Automatically sync the period data you record in Pilll with the Apple Health app. View it together with your other health data, and reuse it across other apps that read from Health.",
   "quickRecordFeatureAppealTitle": "Record from the notification",
   "quickRecordFeatureAppealShortDescription": "Log your dose right from the push",

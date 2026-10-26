@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "डॉक्टर से मिलने या यात्रा जैसी आने वाली योजनाएँ कैलेंडर में दर्ज कर सकती हैं। गोली लेने के चक्र के साथ उन्हें देखकर आप अपेक्षित पीरियड को भी ध्यान में रखकर योजना बना सकती हैं।",
   "healthCareIntegrationFeatureAppealTitle": "स्वास्थ्य ऐप से जोड़ें",
   "healthCareIntegrationFeatureAppealShortDescription": "पीरियड के रिकॉर्ड स्वास्थ्य ऐप से साझा करें",
-  "healthCareIntegrationFeatureAppealHeadline": "हेल्थकेयर के साथ जुड़ सकता है",
+  "healthCareIntegrationFeatureAppealHeadline": "हेल्थ ऐप से कनेक्ट किया जा सकता है",
   "healthCareIntegrationFeatureAppealBody": "Pilll में दर्ज आपके मासिक धर्म डेटा को हेल्थ ऐप के साथ स्वचालित रूप से सिंक किया जा सकता है। आप इसे हेल्थ ऐप में अन्य स्वास्थ्य डेटा के साथ देख सकते हैं, और अन्य ऐप्स में भी मासिक धर्म डेटा का उपयोग कर पाएँगे।",
   "quickRecordFeatureAppealTitle": "नोटिफिकेशन से सीधे दवा लेने का रिकॉर्ड",
   "quickRecordFeatureAppealShortDescription": "ऐप खोले बिना नोटिफिकेशन पर रिकॉर्ड करें",

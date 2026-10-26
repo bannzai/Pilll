@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Du kan legge inn kommende planer, som legetimer og reiser, i kalenderen. Se dem sammen med p-pillesyklusen, så du også kan ta hensyn til forventet mens når du planlegger.",
   "healthCareIntegrationFeatureAppealTitle": "Koble til Helse",
   "healthCareIntegrationFeatureAppealShortDescription": "Del mensregistreringer med Helse",
-  "healthCareIntegrationFeatureAppealHeadline": "Kan kobles til helseomsorg",
+  "healthCareIntegrationFeatureAppealHeadline": "Kan kobles til Helse-appen",
   "healthCareIntegrationFeatureAppealBody": "Menstruasjonsdata du har registrert i Pilll kan automatisk synkroniseres med Helse-appen. Du kan se dem sammen med andre helsedata i Helse, og menstruasjonsdataene kan også brukes i andre apper.",
   "quickRecordFeatureAppealTitle": "Registrer dose direkte fra varsel",
   "quickRecordFeatureAppealShortDescription": "Registrer fra varsler uten å åpne appen",

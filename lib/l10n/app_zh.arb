@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "你可以在日历中记下就医、旅行等未来安排。结合服药周期查看这些安排，规划时也能考虑预计的经期。",
   "healthCareIntegrationFeatureAppealTitle": "连接健康 App",
   "healthCareIntegrationFeatureAppealShortDescription": "与健康 App 共享经期记录",
-  "healthCareIntegrationFeatureAppealHeadline": "可与健康应用同步",
+  "healthCareIntegrationFeatureAppealHeadline": "可与健康 App 连接",
   "healthCareIntegrationFeatureAppealBody": "您可以将 Pilll 中记录的生理数据自动与健康应用同步。这样，您可以在健康应用中与其他健康数据一并查看，也可以让其他应用使用这些生理数据。",
   "quickRecordFeatureAppealTitle": "从通知直接记录服药",
   "quickRecordFeatureAppealShortDescription": "无需打开应用即可在通知上记录",

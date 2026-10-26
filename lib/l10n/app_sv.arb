@@ -486,7 +486,7 @@
   "futureScheduleFeatureAppealBody": "Du kan lägga in kommande planer, som läkarbesök och resor, i kalendern. Se dem tillsammans med din p-pillecykel, så att du också kan ta hänsyn till väntad mens när du planerar.",
   "healthCareIntegrationFeatureAppealTitle": "Anslut till Hälsa",
   "healthCareIntegrationFeatureAppealShortDescription": "Dela mensregistreringar med Hälsa",
-  "healthCareIntegrationFeatureAppealHeadline": "Synkronisering med Hälsa-appen",
+  "healthCareIntegrationFeatureAppealHeadline": "Kan anslutas till appen Hälsa",
   "healthCareIntegrationFeatureAppealBody": "Du kan automatiskt synkronisera menstruationsdata som du har registrerat i Pilll med din hälsoapp. På så sätt kan du se dem tillsammans med andra hälsouppgifter i hälsoappen och göra dem tillgängliga för andra appar.",
   "quickRecordFeatureAppealTitle": "Logga intag direkt från aviseringen",
   "quickRecordFeatureAppealShortDescription": "Registrera från aviseringen utan att öppna appen",
