@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Сиз таблетка ичүүдөгү башка тыныгуу менен дал келген мезгилди тандай албайсыз",
   "pauseEndDateMustBeAfterStartDate": "Таблетка ичүүдөгү тыныгуунун аяктоо күнүн башталыш күнүнөн кийинки күнгө тандаңыз",
   "plannedResumeDateOptional": "Таблетканы кайра иче баштоонун пландалган күнү (милдеттүү эмес)",
-  "plannedResumeDateNotSet": "Орнотулган эмес",
+  "plannedResumeDateNotSet": "Азырынча белгилене элек",
   "selectPlannedResumeDate": "Кабыл алууну кайра баштоо пландалган күндү тандаңыз",
   "pauseEndDateLimitIsToday": "Аяктоо күнүн бүгүнкү күнгө чейин гана тандаса болот",
   "pauseEndDateLimitBeforeNextPause": "Кийинки тыныгуу ({date}〜) менен дал келбеген күнгө чейин",

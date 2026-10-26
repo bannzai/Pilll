@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Awukwazi ukukhetha isikhathi esiqondana nesinye isikhathi sokuphumula ekuphuzeni amaphilisi",
   "pauseEndDateMustBeAfterStartDate": "Sicela ukhethe usuku lokuphela kwekhefu lokuphuza amaphilisi olungemva kosuku lokuqala",
   "plannedResumeDateOptional": "Usuku oluhleliwe lokuphinda uqale ukuphuza iphilisi (uyazikhethela)",
-  "plannedResumeDateNotSet": "Akukasethwa",
+  "plannedResumeDateNotSet": "Akukakasethwa",
   "selectPlannedResumeDate": "Khetha usuku oluhleliwe lokuqala futhi ukulusebenzisa",
   "pauseEndDateLimitIsToday": "Usuku lokuphela lungasethwa kuze kube namuhla kuphela",
   "pauseEndDateLimitBeforeNextPause": "Kuze kube usuku olungangqubuzani nekhefu elilandelayo ({date}–)",

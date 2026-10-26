@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "ከሌላ የክኒን እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም",
   "pauseEndDateMustBeAfterStartDate": "ለክኒን እረፍት የማብቂያ ቀን፣ ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
-  "plannedResumeDateNotSet": "አልተቀናበረም",
+  "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "የመውሰድ ዳግም መጀመሪያ የታቀደበትን ቀን ይምረጡ",
   "pauseEndDateLimitIsToday": "የመጨረሻ ቀን እስከ ዛሬ ብቻ ነው",
   "pauseEndDateLimitBeforeNextPause": "ከሚቀጥለው እረፍት ({date}〜) ጋር እስካልተደራረበ ቀን ድረስ",

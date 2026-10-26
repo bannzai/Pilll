@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Nemôžete vybrať obdobie, ktoré sa prekrýva s inou prestávkou v užívaní tabletiek",
   "pauseEndDateMustBeAfterStartDate": "Vyberte dátum konca prestávky v užívaní tabletiek, ktorý je po dátume začiatku",
   "plannedResumeDateOptional": "Plánovaný dátum obnovenia užívania tabletky (voliteľné)",
-  "plannedResumeDateNotSet": "Nenastavené",
+  "plannedResumeDateNotSet": "Zatiaľ nenastavené",
   "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania",
   "pauseEndDateLimitIsToday": "Dátum ukončenia možno nastaviť najneskôr na dnes",
   "pauseEndDateLimitBeforeNextPause": "Do dňa, ktorý sa neprekrýva s nasledujúcou prestávkou ({date}–)",

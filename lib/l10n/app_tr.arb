@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Hap kullanımındaki başka bir arayla çakışan bir dönem seçemezsiniz",
   "pauseEndDateMustBeAfterStartDate": "Hap kullanımına verilen aranın bitişi için başlangıç tarihinden sonraki bir tarih seçin",
   "plannedResumeDateOptional": "Hapı yeniden almaya başlamayı planladığınız tarih (isteğe bağlı)",
-  "plannedResumeDateNotSet": "Ayarlanmadı",
+  "plannedResumeDateNotSet": "Henüz belirlenmedi",
   "selectPlannedResumeDate": "Yeniden kullanmaya başlama tarihini seçin",
   "pauseEndDateLimitIsToday": "Bitiş tarihi yalnızca bugüne kadar ayarlanabilir",
   "pauseEndDateLimitBeforeNextPause": "Sonraki ara ({date}–) ile çakışmayan güne kadar",

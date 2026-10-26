@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກຊ່ວງເວລາທີ່ຊ້ອນກັບຊ່ວງພັກການກິນຢາເມັດອື່ນໄດ້",
   "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນສິ້ນສຸດຊ່ວງພັກການກິນຢາເມັດ ໃຫ້ຢູ່ຫຼັງວັນເລີ່ມຕົ້ນ",
   "plannedResumeDateOptional": "ວັນທີວາງແຜນເລີ່ມກິນຢາຄຸມອີກຄັ້ງ (ເລືອກຫຼືບໍ່ກໍໄດ້)",
-  "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ຕັ້ງ",
+  "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ກຳນົດ",
   "selectPlannedResumeDate": "ເລືອກວັນທີທີ່ວາງແຜນຈະກັບມາຮັບປະທານ",
   "pauseEndDateLimitIsToday": "ວັນສິ້ນສຸດເລືອກໄດ້ເຖິງມື້ນີ້ເທົ່ານັ້ນ",
   "pauseEndDateLimitBeforeNextPause": "ຈົນເຖິງວັນທີ່ບໍ່ຊ້ອນກັບຊ່ວງພັກຄັ້ງຕໍ່ໄປ ({date}〜)",

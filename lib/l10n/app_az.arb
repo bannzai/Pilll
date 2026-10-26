@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Başqa bir həb qəbuluna fasilə dövrü ilə üst-üstə düşən dövrü seçə bilməzsiniz",
   "pauseEndDateMustBeAfterStartDate": "Həb qəbuluna fasilənin bitmə tarixi üçün başlanğıc tarixindən sonrakı bir tarixi seçin",
   "plannedResumeDateOptional": "Həbi yenidən qəbul etməyə başlama tarixi (istəyə bağlı)",
-  "plannedResumeDateNotSet": "Təyin edilməyib",
+  "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Qəbulun yenidən başlanacağı tarixi seçin",
   "pauseEndDateLimitIsToday": "Bitmə tarixi yalnız bu günə qədər seçilə bilər",
   "pauseEndDateLimitBeforeNextPause": "Növbəti fasilə ({date}〜) ilə üst-üstə düşməyən günədək",

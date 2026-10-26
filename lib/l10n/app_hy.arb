@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Դուք չեք կարող ընտրել ժամանակահատված, որը համընկնում է հաբերի ընդունման մեկ այլ ընդմիջման հետ",
   "pauseEndDateMustBeAfterStartDate": "Խնդրում ենք հաբերի ընդունման ընդմիջման ավարտի համար ընտրել մեկնարկի ամսաթվից ավելի ուշ ամսաթիվ",
   "plannedResumeDateOptional": "Հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվ (ըստ ցանկության)",
-  "plannedResumeDateNotSet": "Սահմանված չէ",
+  "plannedResumeDateNotSet": "Դեռ սահմանված չէ",
   "selectPlannedResumeDate": "Ընտրեք ընդունումը վերսկսելու նախատեսված ամսաթիվը",
   "pauseEndDateLimitIsToday": "Ավարտի ամսաթիվը կարելի է սահմանել միայն մինչև այսօր",
   "pauseEndDateLimitBeforeNextPause": "Մինչ այն օրը, որը չի համընկնում հաջորդ դադարի հետ ({date}〜)",

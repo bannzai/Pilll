@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Du kan ikke vælge en periode, der overlapper med en anden pillepause",
   "pauseEndDateMustBeAfterStartDate": "Vælg en slutdato for p-pillepausen, der ligger efter startdatoen",
   "plannedResumeDateOptional": "Planlagt dato for at tage p-pillen igen (valgfrit)",
-  "plannedResumeDateNotSet": "Ikke indstillet",
+  "plannedResumeDateNotSet": "Ikke angivet",
   "selectPlannedResumeDate": "Vælg planlagt dato for genoptagelse",
   "pauseEndDateLimitIsToday": "Slutdatoen kan kun vælges til og med i dag",
   "pauseEndDateLimitBeforeNextPause": "Indtil den, der ikke overlapper med næste pause ({date}–)",

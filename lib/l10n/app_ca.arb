@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "No pots seleccionar un període que coincideixi amb una altra pausa de la píndola",
   "pauseEndDateMustBeAfterStartDate": "Tria una data de finalització de la pausa de la píndola posterior a la data d’inici",
   "plannedResumeDateOptional": "Data prevista per tornar a prendre la píndola (opcional)",
-  "plannedResumeDateNotSet": "No configurat",
+  "plannedResumeDateNotSet": "Encara no s’ha definit",
   "selectPlannedResumeDate": "Selecciona la data prevista de represa de la presa",
   "pauseEndDateLimitIsToday": "La data de finalització només es pot seleccionar fins avui",
   "pauseEndDateLimitBeforeNextPause": "Fins al dia que no se superposi amb el següent descans ({date}〜)",

@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Du kannst keinen Zeitraum auswählen, der sich mit einer anderen Pillenpause überschneidet",
   "pauseEndDateMustBeAfterStartDate": "Wähle für das Ende der Pillenpause ein Datum nach dem Startdatum",
   "plannedResumeDateOptional": "Geplantes Datum für die erneute Pilleneinnahme (optional)",
-  "plannedResumeDateNotSet": "Nicht festgelegt",
+  "plannedResumeDateNotSet": "Noch nicht festgelegt",
   "selectPlannedResumeDate": "Geplantes Datum für die Wiederaufnahme auswählen",
   "pauseEndDateLimitIsToday": "Das Enddatum kann nur bis heute festgelegt werden",
   "pauseEndDateLimitBeforeNextPause": "Bis zu dem Tag, der sich nicht mit der nächsten Pause ({date}–) überschneidet",

@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "ବଟି ଖାଇବାର ଅନ୍ୟ ଏକ ବିରତି ସହିତ ମେଳ ଖାଉଥିବା ଅବଧି ଆପଣ ବାଛିପାରିବେ ନାହିଁ",
   "pauseEndDateMustBeAfterStartDate": "ବଟିକା ଖାଇବାର ବିରତି ଶେଷ ହେବା ପାଇଁ ଆରମ୍ଭ ତାରିଖ ପରର ଏକ ତାରିଖ ବାଛନ୍ତୁ",
   "plannedResumeDateOptional": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ (ଇଚ୍ଛାଧୀନ)",
-  "plannedResumeDateNotSet": "ସେଟ୍ ହୋଇନାହିଁ",
+  "plannedResumeDateNotSet": "ଏପର୍ଯ୍ୟନ୍ତ ନିର୍ଦ୍ଧାରଣ ହୋଇନାହିଁ",
   "selectPlannedResumeDate": "ପୁଣିଥରେ ସେବନ ଆରମ୍ଭ କରିବାର ନିର୍ଦ୍ଧାରିତ ତାରିଖ ବାଛନ୍ତୁ",
   "pauseEndDateLimitIsToday": "ଶେଷ ତାରିଖ କେବଳ ଆଜି ପର୍ଯ୍ୟନ୍ତ ସେଟ୍ କରାଯାଇପାରିବ",
   "pauseEndDateLimitBeforeNextPause": "ପରବର୍ତ୍ତୀ ବିରତି ({date}〜) ସହିତ ମିଳିନଥିବା ଦିନ ପର୍ଯ୍ୟନ୍ତ",

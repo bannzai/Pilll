@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "თქვენ ვერ აირჩევთ პერიოდს, რომელიც აბების მიღების სხვა შესვენებას ემთხვევა",
   "pauseEndDateMustBeAfterStartDate": "გთხოვთ, აბების მიღების შესვენების დასრულების თარიღად აირჩიოთ დაწყების თარიღზე გვიანი დღე",
   "plannedResumeDateOptional": "აბის მიღების განახლების დაგეგმილი თარიღი (არასავალდებულო)",
-  "plannedResumeDateNotSet": "არ არის დაყენებული",
+  "plannedResumeDateNotSet": "ჯერ არ არის მითითებული",
   "selectPlannedResumeDate": "აირჩიეთ მიღების განახლების დაგეგმილი თარიღი",
   "pauseEndDateLimitIsToday": "დასრულების თარიღად მხოლოდ დღევანდელი დღის არჩევაა შესაძლებელი",
   "pauseEndDateLimitBeforeNextPause": "იმ დღემდე, რომელიც არ ემთხვევა შემდეგ შესვენებას ({date}〜)",

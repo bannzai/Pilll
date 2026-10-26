@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Siz tabletkalarni qabul qilishdagi boshqa tanaffus bilan ustma-ust keladigan davrni tanlay olmaysiz",
   "pauseEndDateMustBeAfterStartDate": "Tabletka qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang",
   "plannedResumeDateOptional": "Tabletkani qayta qabul qilishni boshlash uchun rejalashtirilgan sana (ixtiyoriy)",
-  "plannedResumeDateNotSet": "Belgilanmagan",
+  "plannedResumeDateNotSet": "Hali belgilanmagan",
   "selectPlannedResumeDate": "Qabulni qayta boshlash rejalashtirilgan sanani tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasini faqat bugungacha belgilash mumkin",
   "pauseEndDateLimitBeforeNextPause": "Keyingi tanaffus ({date}–) bilan ustma-ust kelmaydigan kungacha",

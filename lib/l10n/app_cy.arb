@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Ni allwch ddewis cyfnod sy’n gorgyffwrdd â chyfnod arall o seibiant rhag cymryd y bilsen",
   "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad gorffen y seibiant o gymryd y bilsen sydd ar ôl y dyddiad dechrau",
   "plannedResumeDateOptional": "Dyddiad bwriedig ailafael yn y bilsen (dewisol)",
-  "plannedResumeDateNotSet": "Heb ei osod",
+  "plannedResumeDateNotSet": "Heb ei bennu eto",
   "selectPlannedResumeDate": "Dewiswch y dyddiad a drefnwyd i ailddechrau cymryd",
   "pauseEndDateLimitIsToday": "Dim ond hyd at heddiw y gellir dewis y dyddiad gorffen",
   "pauseEndDateLimitBeforeNextPause": "Hyd at y diwrnod nad yw’n gorgyffwrdd â’r seibiant nesaf ({date}〜)",

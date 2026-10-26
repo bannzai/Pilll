@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Hindi kayo maaaring pumili ng panahong magkakapatong sa isa pang pahinga sa pag-inom ng pildoras",
   "pauseEndDateMustBeAfterStartDate": "Pumili po kayo ng petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras na mas huli sa petsa ng simula",
   "plannedResumeDateOptional": "Planong petsa ng muling pag-inom ng pildoras (opsyonal)",
-  "plannedResumeDateNotSet": "Hindi pa nakatakda",
+  "plannedResumeDateNotSet": "Hindi pa itinakda",
   "selectPlannedResumeDate": "Piliin ang nakatakdang petsa ng muling pag-inom",
   "pauseEndDateLimitIsToday": "Maaari lang itakda ang petsa ng pagtatapos hanggang ngayong araw",
   "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sumasapaw sa susunod na pahinga ({date}–)",

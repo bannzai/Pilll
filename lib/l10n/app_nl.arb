@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Je kunt geen periode kiezen die overlapt met een andere pillenpauze",
   "pauseEndDateMustBeAfterStartDate": "Kies voor het einde van de pillenpauze een datum na de begindatum",
   "plannedResumeDateOptional": "Geplande datum om weer met de pil te beginnen (optioneel)",
-  "plannedResumeDateNotSet": "Niet ingesteld",
+  "plannedResumeDateNotSet": "Nog niet ingesteld",
   "selectPlannedResumeDate": "Selecteer de geplande datum om weer te beginnen",
   "pauseEndDateLimitIsToday": "De einddatum kan alleen tot en met vandaag worden ingesteld",
   "pauseEndDateLimitBeforeNextPause": "Tot de dag die niet overlapt met de volgende pauze ({date}–)",

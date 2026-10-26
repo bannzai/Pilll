@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një pushim tjetër nga marrja e pilulës",
   "pauseEndDateMustBeAfterStartDate": "Ju lutemi, zgjidhni një datë përfundimi të pushimit nga pilulat që është pas datës së fillimit",
   "plannedResumeDateOptional": "Data e planifikuar për të rifilluar marrjen e pilulës (opsionale)",
-  "plannedResumeDateNotSet": "Nuk është caktuar",
+  "plannedResumeDateNotSet": "Ende e papërcaktuar",
   "selectPlannedResumeDate": "Zgjidhni datën e planifikuar për rifillimin e marrjes",
   "pauseEndDateLimitIsToday": "Data e përfundimit mund të caktohet vetëm deri sot",
   "pauseEndDateLimitBeforeNextPause": "Deri në ditën që nuk përputhet me pushimin e radhës ({date}–)",

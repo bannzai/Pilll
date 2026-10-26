@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "تاسو داسې موده نه شئ ټاکلی چې د ګولیو د اخیستو له بلې وقفې سره یو پر بل راشي",
   "pauseEndDateMustBeAfterStartDate": "مهرباني وکړئ د ګولیو اخیستلو د دمې د پای لپاره د پیل له نېټې وروسته نېټه وټاکئ",
   "plannedResumeDateOptional": "د ګولۍ بیا اخیستلو پلان شوې نېټه (اختیاري)",
-  "plannedResumeDateNotSet": "ټاکل شوی نه دی",
+  "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د بیا اخیستلو ټاکل شوې نېټه وټاکئ",
   "pauseEndDateLimitIsToday": "د پای نېټه یوازې تر نن پورې ټاکل کېدای شي",
   "pauseEndDateLimitBeforeNextPause": "تر هغې ورځې پورې چې له راتلونکې وقفې ({date}〜) سره نه ټکرېږي",

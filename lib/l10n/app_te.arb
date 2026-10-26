@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "మాత్రలు తీసుకోవడంలో మరో విరామంతో కలిసిపోయే కాలాన్ని మీరు ఎంచుకోలేరు",
   "pauseEndDateMustBeAfterStartDate": "మాత్రలు తీసుకునే విరామం ముగింపు తేదీగా ప్రారంభ తేదీ తర్వాతి తేదీని ఎంచుకోండి",
   "plannedResumeDateOptional": "మాత్రను మళ్లీ తీసుకోవడం ప్రారంభించడానికి అనుకున్న తేదీ (ఐచ్ఛికం)",
-  "plannedResumeDateNotSet": "సెట్ చేయలేదు",
+  "plannedResumeDateNotSet": "ఇంకా నిర్ణయించలేదు",
   "selectPlannedResumeDate": "మళ్లీ సేవించడం ప్రారంభించే నిర్ణయించిన తేదీని ఎంచుకోండి",
   "pauseEndDateLimitIsToday": "ముగింపు తేదీని ఈ రోజు వరకు మాత్రమే సెట్ చేయవచ్చు",
   "pauseEndDateLimitBeforeNextPause": "తదుపరి విరామం ({date}〜)తో మిళితం కాకుండా ఉండే రోజు వరకు",

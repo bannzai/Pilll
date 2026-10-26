@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Nevarat izvēlēties periodu, kas pārklājas ar citu tablešu lietošanas pārtraukumu",
   "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties tablešu lietošanas pārtraukuma beigu datumu, kas ir vēlāk par sākuma datumu",
   "plannedResumeDateOptional": "Plānotais datums, kad atsāksiet lietot tabletes (nav obligāti)",
-  "plannedResumeDateNotSet": "Nav iestatīts",
+  "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto lietošanas atsākšanas datumu",
   "pauseEndDateLimitIsToday": "Beigu datumu var iestatīt tikai līdz šodienai",
   "pauseEndDateLimitBeforeNextPause": "Līdz dienai, kas nepārklājas ar nākamo pārtraukumu ({date}–)",

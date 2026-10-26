@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "Þú getur ekki valið tímabil sem skarast við annað hlé á inntöku pillunnar",
   "pauseEndDateMustBeAfterStartDate": "Veldu lokadagsetningu pilluhléssins sem er síðar en upphafsdagsetningin",
   "plannedResumeDateOptional": "Áætlaður dagur til að byrja aftur að taka pilluna (valfrjálst)",
-  "plannedResumeDateNotSet": "Ekki stillt",
+  "plannedResumeDateNotSet": "Ekki ákveðið enn",
   "selectPlannedResumeDate": "Veldu áætlaða dagsetningu fyrir að hefja töku aftur",
   "pauseEndDateLimitIsToday": "Aðeins er hægt að velja lokadag til dagsins í dag",
   "pauseEndDateLimitBeforeNextPause": "Fram að deginum sem skarast ekki við næsta hlé ({date}–)",

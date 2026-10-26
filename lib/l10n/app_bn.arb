@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "অন্য একটি পিল খাওয়ার বিরতির সঙ্গে মিলে যায় এমন সময়কাল আপনি বেছে নিতে পারবেন না",
   "pauseEndDateMustBeAfterStartDate": "পিল খাওয়ার বিরতির শেষ তারিখ হিসেবে শুরুর তারিখের পরের কোনো দিন বেছে নিন",
   "plannedResumeDateOptional": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ (ঐচ্ছিক)",
-  "plannedResumeDateNotSet": "সেট করা হয়নি",
+  "plannedResumeDateNotSet": "এখনও নির্ধারণ করা হয়নি",
   "selectPlannedResumeDate": "পুনরায় সেবন শুরুর নির্ধারিত তারিখ নির্বাচন করুন",
   "pauseEndDateLimitIsToday": "শেষের তারিখ আজ পর্যন্তই নির্বাচন করা যাবে",
   "pauseEndDateLimitBeforeNextPause": "পরবর্তী বিরতি ({date}〜)-র সঙ্গে মিলে না যাওয়া দিন পর্যন্ত",

@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "පෙති ගැනීමේ වෙනත් විරාම කාලයක් සමඟ අතිච්ඡාදනය වන කාලයක් තෝරාගත නොහැක",
   "pauseEndDateMustBeAfterStartDate": "පෙති ගැනීමේ විරාමය අවසන් වන දිනය ලෙස ආරම්භක දිනයට පසු දිනයක් තෝරන්න",
   "plannedResumeDateOptional": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය (විකල්ප)",
-  "plannedResumeDateNotSet": "සකසා නැත",
+  "plannedResumeDateNotSet": "තවම නියම කර නැත",
   "selectPlannedResumeDate": "නැවත ගැනීම ආරම්භ කිරීමට නියමිත දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය අද දක්වා පමණක් සැකසිය හැක",
   "pauseEndDateLimitBeforeNextPause": "ඊළඟ විරාමය ({date}〜) සමඟ නොගැලපෙන දිනය දක්වා",

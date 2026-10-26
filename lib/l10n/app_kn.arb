@@ -563,7 +563,7 @@
   "pausePeriodOverlapsOther": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಇನ್ನೊಂದು ವಿರಾಮದ ಅವಧಿಯೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುವ ಅವಧಿಯನ್ನು ನೀವು ಆಯ್ಕೆ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "pauseEndDateMustBeAfterStartDate": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಕೊನೆಯ ದಿನಾಂಕವಾಗಿ ಆರಂಭದ ದಿನಾಂಕದ ನಂತರದ ದಿನವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "plannedResumeDateOptional": "ಮಾತ್ರೆಗಳನ್ನು ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಯೋಜಿಸಿದ ದಿನಾಂಕ (ಐಚ್ಛಿಕ)",
-  "plannedResumeDateNotSet": "ಹೊಂದಿಸಲಾಗಿಲ್ಲ",
+  "plannedResumeDateNotSet": "ಇನ್ನೂ ನಿಗದಿಪಡಿಸಿಲ್ಲ",
   "selectPlannedResumeDate": "ಮತ್ತೆ ಸೇವನೆ ಆರಂಭಿಸುವ ನಿಗದಿತ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "pauseEndDateLimitIsToday": "ಅಂತ್ಯದ ದಿನಾಂಕವನ್ನು ಇಂದು ತನಕ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ ({date}〜) ಜೊತೆ ಹೊಮ್ಮಿಸದ ದಿನದವರೆಗೆ",
