@@ -238,7 +238,7 @@
   "message": "Паведамленне",
   "option": "Параметры",
   "completed": "Гатова",
-  "pilll": "Пілл",
+  "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можна змяніць тэкст апавяшчэння пры прапуску прыёму",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можна змяніць пачатковую частку апавяшчэнняў",

@@ -238,7 +238,7 @@
   "message": "Порака",
   "option": "Опции",
   "completed": "Готово",
-  "pilll": "Пилл",
+  "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете да ги персонализирате пораките за известување кога заборавате да ги земете пилулите",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да го менувате насловниот дел од нотификациите",

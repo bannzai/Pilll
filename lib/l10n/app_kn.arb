@@ -238,7 +238,7 @@
   "message": "ಸಂದೇಶ",
   "option": "ಆಯ್ಕೆಗಳು",
   "completed": "ಮುಗಿದಿದೆ",
-  "pilll": "ಪಿಲ್ಲ್",
+  "pilll": "Pilll",
   "changeMissedNotificationMessage": "ಗೋಳಿ ಮರೆಯಾದಾಗ ಅಧಿಸೂಚನೆ ಸಂದೇಶವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ಅಧಿಸೂಚನೆಯ ಮೊದಲ ಭಾಗವನ್ನು ಬದಲಾಯಿಸಬಹುದು",

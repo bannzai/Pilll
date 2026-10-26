@@ -238,7 +238,7 @@
   "message": "संदेश",
   "option": "पर्याय",
   "completed": "पूर्ण",
-  "pilll": "पिल्ल",
+  "pilll": "Pilll",
   "changeMissedNotificationMessage": "गोळी विसरल्यावरचे सूचना संदेश बदलता येतात",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "सूचनांच्या सुरुवातीचा भाग बदलू शकता",

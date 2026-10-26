@@ -238,7 +238,7 @@
   "message": "Message",
   "option": "Options",
   "completed": "Terminé",
-  "pilll": "Pilule",
+  "pilll": "Pilll",
   "changeMissedNotificationMessage": "Vous pouvez personnaliser le message de notification pour les pilules oubliées",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Vous pouvez personnaliser l'en-tête de notification",
