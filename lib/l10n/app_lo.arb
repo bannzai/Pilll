@@ -55,7 +55,7 @@
   "discardAllPillSheets": "ລຶບຂໍ້ມູນແຜງຢາຄຸມທັງໝົດ",
   "areYouSureDoing": "ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການ {doing}?",
   "currentlyDisplayed": "ກຳລັງສະແດງ",
-  "allPillSheets": "ທຸກຊີດຢາຄຸມກໍາເນີດ",
+  "allPillSheets": "ແຜງຢາຄຸມທັງໝົດ",
   "willBeDiscarded": "ຈະຖືກລຶບ",
   "discard": "ລຶບ",
   "pillSheetDiscarded": "ແຜ່ນຢາຄຸມກຳເນີດໄດ້ຖືກທຶ້ງແລ້ວ",

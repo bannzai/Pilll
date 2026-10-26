@@ -55,7 +55,7 @@
   "discardAllPillSheets": "ลบข้อมูลแผงยาทั้งหมด",
   "areYouSureDoing": "ต้องการ{doing}จริง ๆ หรือคะ?",
   "currentlyDisplayed": "กำลังแสดงอยู่",
-  "allPillSheets": "แผงยาเม็ดทั้งหมด",
+  "allPillSheets": "แผงยาทั้งหมด",
   "willBeDiscarded": "จะถูกลบ",
   "discard": "ทิ้ง",
   "pillSheetDiscarded": "ทิ้งแผงยาคุมกำเนิดแล้ว",
