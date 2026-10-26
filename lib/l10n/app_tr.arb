@@ -87,7 +87,7 @@
   "doReLogin": "Lütfen yeniden giriş yapın",
   "reLoginMessage": "Hesabınız silinmeden önce kimliğinizi doğrulamak için lütfen yeniden giriş yapın. Giriş yaptıktan sonra silme işlemi otomatik olarak başlayacak.",
   "updateAuthenticationAfterReLogin": "Kimlik doğrulama bilgilerinizi güncellemek için lütfen yeniden giriş yapın",
-  "menstruationPage": "Adet Sayfası",
+  "menstruationPage": "Adet",
   "calendarPage": "Takvim",
   "settingsPage": "Ayarlar",
   "menstruationDeleted": "Adet dönemi silindi",

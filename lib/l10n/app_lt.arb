@@ -87,7 +87,7 @@
   "doReLogin": "Prašome prisijungti dar kartą",
   "reLoginMessage": "Prieš ištrinant paskyrą, prisijunkite dar kartą, kad patvirtintumėte savo tapatybę. Prisijungus paskyros trynimas prasidės automatiškai.",
   "updateAuthenticationAfterReLogin": "Norėdami atnaujinti tapatybės patvirtinimo duomenis, prisijunkite dar kartą",
-  "menstruationPage": "Menstruacija",
+  "menstruationPage": "Mėnesinės",
   "calendarPage": "Kalendorius",
   "settingsPage": "Nustatymai",
   "menstruationDeleted": "Menstruacijos laikotarpis pašalintas",

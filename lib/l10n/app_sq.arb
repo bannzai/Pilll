@@ -87,7 +87,7 @@
   "doReLogin": "Ju lutemi, hyni përsëri",
   "reLoginMessage": "Ju lutemi, hyni përsëri për të konfirmuar identitetin tuaj para fshirjes së llogarisë. Pas hyrjes, fshirja do të fillojë automatikisht.",
   "updateAuthenticationAfterReLogin": "Ju lutemi, hyni përsëri për të përditësuar të dhënat e vërtetimit",
-  "menstruationPage": "Menstruacioni",
+  "menstruationPage": "Menstruacionet",
   "calendarPage": "Kalendar",
   "settingsPage": "Cilësimet",
   "menstruationDeleted": "Periudha menstruale u fshi",

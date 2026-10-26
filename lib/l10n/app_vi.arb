@@ -87,7 +87,7 @@
   "doReLogin": "Vui lòng đăng nhập lại",
   "reLoginMessage": "Vui lòng đăng nhập lại để xác minh danh tính trước khi xóa tài khoản. Sau khi đăng nhập, quá trình xóa tài khoản sẽ tự động bắt đầu.",
   "updateAuthenticationAfterReLogin": "Vui lòng đăng nhập lại để cập nhật thông tin xác thực",
-  "menstruationPage": "Kinh Nguyệt",
+  "menstruationPage": "Kinh nguyệt",
   "calendarPage": "Lịch",
   "settingsPage": "Cài đặt",
   "menstruationDeleted": "Đã xóa thông tin chu kỳ kinh nguyệt",

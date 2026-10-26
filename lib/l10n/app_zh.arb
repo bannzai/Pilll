@@ -87,7 +87,7 @@
   "doReLogin": "请重新登录",
   "reLoginMessage": "删除账号前，请重新登录以验证身份。登录后，账号删除流程将自动开始。",
   "updateAuthenticationAfterReLogin": "请重新登录，以更新身份验证信息",
-  "menstruationPage": "月经",
+  "menstruationPage": "经期",
   "calendarPage": "日历",
   "settingsPage": "设置",
   "menstruationDeleted": "已删除经期期间",

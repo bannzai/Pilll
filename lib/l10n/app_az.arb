@@ -87,7 +87,7 @@
   "doReLogin": "Zəhmət olmasa, yenidən daxil olun",
   "reLoginMessage": "Hesabınızı silməzdən əvvəl şəxsiyyətinizi təsdiqləmək üçün yenidən daxil olun. Daxil olduqdan sonra hesabın silinməsi avtomatik başlayacaq.",
   "updateAuthenticationAfterReLogin": "Doğrulama məlumatlarınızı yeniləmək üçün zəhmət olmasa yenidən daxil olun",
-  "menstruationPage": "Aybaşı Səhifəsi",
+  "menstruationPage": "Aybaşı",
   "calendarPage": "Təqvim",
   "settingsPage": "Parametrlər",
   "menstruationDeleted": "Aybaşı dövrü silindi",

@@ -87,7 +87,7 @@
   "doReLogin": "Zaloguj się ponownie",
   "reLoginMessage": "Zaloguj się ponownie, aby potwierdzić tożsamość przed usunięciem konta. Po zalogowaniu usuwanie rozpocznie się automatycznie.",
   "updateAuthenticationAfterReLogin": "Zaloguj się ponownie, aby zaktualizować dane uwierzytelniające",
-  "menstruationPage": "Menstruacja",
+  "menstruationPage": "Okres",
   "calendarPage": "Kalendarz",
   "settingsPage": "Ustawienia",
   "menstruationDeleted": "Usunięto okres menstruacyjny",

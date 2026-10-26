@@ -87,7 +87,7 @@
   "doReLogin": "Hasi saioa berriro, mesedez",
   "reLoginMessage": "Hasi berriro saioa zure nortasuna egiaztatzeko, kontua ezabatu aurretik. Saioa hasi ondoren, ezabatzea automatikoki hasiko da.",
   "updateAuthenticationAfterReLogin": "Hasi berriro saioa autentifikazio-datuak eguneratzeko",
-  "menstruationPage": "Hileroko",
+  "menstruationPage": "Hilekoa",
   "calendarPage": "Egutegia",
   "settingsPage": "Ezarpenak",
   "menstruationDeleted": "Hilekoa ezabatu da",

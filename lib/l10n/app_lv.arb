@@ -87,7 +87,7 @@
   "doReLogin": "Lūdzu, piesakieties vēlreiz",
   "reLoginMessage": "Pirms konta dzēšanas, lūdzu, piesakieties vēlreiz, lai apstiprinātu savu identitāti. Pēc pieteikšanās dzēšana sāksies automātiski.",
   "updateAuthenticationAfterReLogin": "Lai atjauninātu autentifikācijas datus, lūdzu, piesakieties vēlreiz",
-  "menstruationPage": "Menstruācija",
+  "menstruationPage": "Mēnešreizes",
   "calendarPage": "Kalendārs",
   "settingsPage": "Iestatījumi",
   "menstruationDeleted": "Menstruāciju periods ir izdzēsts",

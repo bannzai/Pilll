@@ -87,7 +87,7 @@
   "doReLogin": "Қайта кіріңізші",
   "reLoginMessage": "Есептік жазбаңызды жоймас бұрын жеке басыңызды растау үшін қайта кіріңіз. Кіргеннен кейін жою процесі автоматты түрде басталады.",
   "updateAuthenticationAfterReLogin": "Аутентификация деректерін жаңарту үшін қайта кіріңіз",
-  "menstruationPage": "Менструация",
+  "menstruationPage": "Етеккір",
   "calendarPage": "Күнтізбе",
   "settingsPage": "Баптаулар",
   "menstruationDeleted": "Етек жолының кезеңі жойылды",

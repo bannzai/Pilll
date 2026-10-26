@@ -87,7 +87,7 @@
   "doReLogin": "Log venligst ind igen",
   "reLoginMessage": "Log ind igen for at bekræfte din identitet, før din konto slettes. Når du er logget ind, starter sletningen automatisk.",
   "updateAuthenticationAfterReLogin": "Log ind igen for at opdatere dine loginoplysninger",
-  "menstruationPage": "Menstruationsside",
+  "menstruationPage": "Menstruation",
   "calendarPage": "Kalender",
   "settingsPage": "Indstillinger",
   "menstruationDeleted": "Menstruationsperioden er slettet",

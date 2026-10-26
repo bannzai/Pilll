@@ -87,7 +87,7 @@
   "doReLogin": "Torna a iniciar la sessió, si us plau",
   "reLoginMessage": "Torna a iniciar sessió per verificar la teva identitat abans de suprimir el compte. Després, el procés de supressió començarà automàticament.",
   "updateAuthenticationAfterReLogin": "Torna a iniciar sessió per actualitzar les dades d'autenticació",
-  "menstruationPage": "Menstruació",
+  "menstruationPage": "Regla",
   "calendarPage": "Calendari",
   "settingsPage": "Configuració",
   "menstruationDeleted": "S'ha eliminat el període menstrual",

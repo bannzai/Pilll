@@ -87,7 +87,7 @@
   "doReLogin": "Veuillez vous reconnecter",
   "reLoginMessage": "Veuillez vous reconnecter pour confirmer votre identité avant la suppression de votre compte. La suppression commencera automatiquement après votre connexion.",
   "updateAuthenticationAfterReLogin": "Reconnectez-vous pour mettre à jour vos informations d’authentification",
-  "menstruationPage": "Période",
+  "menstruationPage": "Règles",
   "calendarPage": "Calendrier",
   "settingsPage": "Paramètres",
   "menstruationDeleted": "Période menstruelle supprimée",

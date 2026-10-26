@@ -87,7 +87,7 @@
   "doReLogin": "Sila log masuk semula",
   "reLoginMessage": "Sila log masuk semula untuk mengesahkan identiti anda sebelum akaun dipadamkan. Selepas log masuk, proses pemadaman akan bermula secara automatik.",
   "updateAuthenticationAfterReLogin": "Sila log masuk semula untuk mengemas kini maklumat pengesahan anda",
-  "menstruationPage": "Menstruasi",
+  "menstruationPage": "Haid",
   "calendarPage": "Kalendar",
   "settingsPage": "Tetapan",
   "menstruationDeleted": "Tempoh haid telah dipadamkan",

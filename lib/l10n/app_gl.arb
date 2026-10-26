@@ -87,7 +87,7 @@
   "doReLogin": "Volve iniciar sesión, por favor",
   "reLoginMessage": "Volve iniciar sesión para confirmar a túa identidade antes de eliminar a conta. Despois, a eliminación comezará automaticamente.",
   "updateAuthenticationAfterReLogin": "Inicia sesión de novo para actualizar os teus datos de autenticación",
-  "menstruationPage": "Menstruación",
+  "menstruationPage": "Regra",
   "calendarPage": "Calendario",
   "settingsPage": "Axustes",
   "menstruationDeleted": "Eliminouse o período menstrual",

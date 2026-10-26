@@ -87,7 +87,7 @@
   "doReLogin": "Melde dich bitte erneut an",
   "reLoginMessage": "Melde dich bitte erneut an, um deine Identität zu bestätigen, bevor dein Konto gelöscht wird. Danach beginnt die Löschung automatisch.",
   "updateAuthenticationAfterReLogin": "Melde dich erneut an, um deine Anmeldedaten zu aktualisieren",
-  "menstruationPage": "Menstruation",
+  "menstruationPage": "Periode",
   "calendarPage": "Kalender",
   "settingsPage": "Einstellungen",
   "menstruationDeleted": "Menstruationszeitraum wurde gelöscht",
