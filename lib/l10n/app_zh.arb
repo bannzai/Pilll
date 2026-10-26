@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "查看如何撤销服药记录",
   "midnightTakenWarningDialogNeverShowAgain": "不再显示",
   "pauseStartDateMustBeOnOrBefore": "请将暂停服药的开始日期选为{date}或更早的日期",
-  "addPausePeriod": "添加服用休息期",
+  "addPausePeriod": "添加停药期",
   "addedPausePeriod": "已添加服用休息期间",
   "pausePeriodOverlapsOther": "不能选择与其他服用休息期间重叠的期间",
   "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的日期作为服用休息结束日。",

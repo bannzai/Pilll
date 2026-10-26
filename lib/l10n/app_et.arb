@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas pilli võtmise kirjet tühistada",
   "midnightTakenWarningDialogNeverShowAgain": "Ära enam näita",
   "pauseStartDateMustBeOnOrBefore": "Vali pillipausi alguseks {date} või varasem kuupäev",
-  "addPausePeriod": "Lisa kasutamispausi periood",
+  "addPausePeriod": "Lisa pillipaus",
   "addedPausePeriod": "Võtmispaus on lisatud",
   "pausePeriodOverlapsOther": "Ei saa valida perioodi, mis kattub mõne muu võtmise pausi perioodiga",
   "pauseEndDateMustBeAfterStartDate": "Palun valige võtmispausi lõppkuupäevaks alguskuupäevast hilisem kuupäev.",

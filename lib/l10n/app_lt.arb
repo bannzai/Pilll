@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Kaip atšaukti tabletės vartojimo įrašą",
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "pauseStartDateMustBeOnOrBefore": "Prašome pasirinkti {date} arba ankstesnę datą kaip tablečių vartojimo pertraukos pradžią",
-  "addPausePeriod": "Pridėti vartojimo pertraukos laikotarpį",
+  "addPausePeriod": "Pridėti tablečių vartojimo pertrauką",
   "addedPausePeriod": "Pridėtas vartojimo pertraukos laikotarpis",
   "pausePeriodOverlapsOther": "Negalima pasirinkti laikotarpio, kuris persidengia su kitu vartojimo pertraukos laikotarpiu",
   "pauseEndDateMustBeAfterStartDate": "Pasirinkite vartojimo pertraukos pabaigos datą, vėlesnę nei pradžios data.",

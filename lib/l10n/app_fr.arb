@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Voir comment annuler une prise enregistrée",
   "midnightTakenWarningDialogNeverShowAgain": "Ne plus afficher",
   "pauseStartDateMustBeOnOrBefore": "Veuillez choisir le {date} ou une date antérieure pour le début de la pause de prise de pilule",
-  "addPausePeriod": "Ajouter une période de pause de prise",
+  "addPausePeriod": "Ajouter une pause dans la prise de pilule",
   "addedPausePeriod": "La période de pause de prise a été ajoutée",
   "pausePeriodOverlapsOther": "Vous ne pouvez pas sélectionner une période qui chevauche une autre période de pause de prise",
   "pauseEndDateMustBeAfterStartDate": "Veuillez sélectionner une date postérieure à la date de début comme date de fin de la pause de prise.",

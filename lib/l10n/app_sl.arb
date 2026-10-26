@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Oglejte si, kako prekličete zapis o zaužitju tabletke",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj več",
   "pauseStartDateMustBeOnOrBefore": "Za začetek premora pri jemanju tablet izberite {date} ali zgodnejši datum",
-  "addPausePeriod": "Dodaj obdobje premora pri jemanju",
+  "addPausePeriod": "Dodajte premor pri jemanju tablet",
   "addedPausePeriod": "Dodano je obdobje odmora pri jemanju",
   "pausePeriodOverlapsOther": "Ni mogoče izbrati obdobja, ki se prekriva z drugim obdobjem premora pri jemanju",
   "pauseEndDateMustBeAfterStartDate": "Prosimo, izberite datum po začetnem datumu kot datum konca premora pri jemanju.",

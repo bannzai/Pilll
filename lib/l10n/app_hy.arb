@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսեք, թե ինչպես չեղարկել հաբի ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք դեղահաբերի ընդունման ընդմիջման սկզբի համար ընտրել {date} կամ ավելի վաղ ամսաթիվ",
-  "addPausePeriod": "Ավելացնել ընդունման դադարային շրջան",
+  "addPausePeriod": "Ավելացնել հաբերի ընդունման ընդմիջում",
   "addedPausePeriod": "Ընդունման ընդմիջման շրջանը ավելացվել է",
   "pausePeriodOverlapsOther": "Չի կարելի ընտրել այնպիսի ժամանակահատված, որը համընկնում է ընդունման այլ դադարի ժամանակահատվածի հետ",
   "pauseEndDateMustBeAfterStartDate": "Խնդրում ենք ընդունման ընդմիջման ավարտի օրվա համար ընտրել մեկնարկի օրվանից ուշ ամսաթիվ։",

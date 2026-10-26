@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Погледајте како да поништите запис о узимању пилуле",
   "midnightTakenWarningDialogNeverShowAgain": "Не приказуј поново",
   "pauseStartDateMustBeOnOrBefore": "Молимо Вас, изаберите {date} или ранији датум за почетак паузе у узимању пилула",
-  "addPausePeriod": "Dodaj period pauze u uzimanju",
+  "addPausePeriod": "Додајте паузу у узимању пилула",
   "addedPausePeriod": "Додат је период паузе у узимању",
   "pausePeriodOverlapsOther": "Не можете да изаберете период који се преклапа са другим периодом паузе у узимању",
   "pauseEndDateMustBeAfterStartDate": "Молимо вас да као датум завршетка паузе у узимању изаберете датум након почетног датума.",

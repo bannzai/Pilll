@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć zapis przyjęcia tabletki",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
   "pauseStartDateMustBeOnOrBefore": "Wybierz {date} lub wcześniejszą datę jako początek przerwy w przyjmowaniu tabletek",
-  "addPausePeriod": "Dodaj okres przerwy w przyjmowaniu",
+  "addPausePeriod": "Dodaj przerwę w przyjmowaniu tabletek",
   "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu",
   "pausePeriodOverlapsOther": "Nie można wybrać okresu, który nakłada się na inny okres przerwy w przyjmowaniu",
   "pauseEndDateMustBeAfterStartDate": "Proszę wybrać datę późniejszą niż data rozpoczęcia jako datę zakończenia przerwy w przyjmowaniu.",

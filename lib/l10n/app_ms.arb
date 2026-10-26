@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Lihat cara membatalkan rekod pengambilan pil",
   "midnightTakenWarningDialogNeverShowAgain": "Jangan tunjukkan lagi",
   "pauseStartDateMustBeOnOrBefore": "Sila pilih {date} atau tarikh yang lebih awal sebagai tarikh mula rehat pengambilan pil",
-  "addPausePeriod": "Tambah tempoh rehat pengambilan",
+  "addPausePeriod": "Tambah tempoh rehat pengambilan pil",
   "addedPausePeriod": "Tempoh rehat pengambilan telah ditambah",
   "pausePeriodOverlapsOther": "Tempoh yang bertindih dengan tempoh rehat pengambilan lain tidak boleh dipilih",
   "pauseEndDateMustBeAfterStartDate": "Sila pilih tarikh selepas tarikh mula sebagai tarikh tamat tempoh rehat pengambilan.",

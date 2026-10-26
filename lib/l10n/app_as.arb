@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "বড়ি খোৱাৰ ৰেকৰ্ড কেনেকৈ বাতিল কৰিব চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "pauseStartDateMustBeOnOrBefore": "অনুগ্ৰহ কৰি বড়ি খোৱাৰ বিৰতিৰ আৰম্ভণিৰ বাবে {date} বা তাৰ আগৰ তাৰিখ বাছনি কৰক",
-  "addPausePeriod": "খোৱাৰ বিৰতিৰ সময় যোগ কৰক",
+  "addPausePeriod": "পিল খোৱাৰ বিৰতি যোগ কৰক",
   "addedPausePeriod": "সেৱন-বিৰতি সময়সীমা যোগ কৰা হৈছে",
   "pausePeriodOverlapsOther": "অন্য এটা সেৱন-বিৰতি সময়ৰ সৈতে ওভাৰলেপ হোৱা সময় নিৰ্বাচন কৰিব নোৱাৰি",
   "pauseEndDateMustBeAfterStartDate": "অনুগ্ৰহ কৰি সেৱন বিৰতিৰ সমাপ্তিৰ তাৰিখ হিচাপে আৰম্ভণিৰ তাৰিখৰ পিছৰ এটা তাৰিখ বাছনি কৰক।",

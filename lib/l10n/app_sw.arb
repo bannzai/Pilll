@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Angalia jinsi ya kufuta rekodi ya kumeza kidonge",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua {date} au tarehe ya awali zaidi kuwa mwanzo wa mapumziko ya kumeza vidonge",
-  "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza",
+  "addPausePeriod": "Ongeza kipindi cha mapumziko ya kumeza vidonge",
   "addedPausePeriod": "Kipindi cha mapumziko ya kutumia kimeongezwa",
   "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachopishana na kipindi kingine cha mapumziko ya kumeza",
   "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe iliyo baada ya tarehe ya kuanza kama tarehe ya kumaliza mapumziko ya matumizi.",

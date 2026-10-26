@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten pillerin ottomerkintä perutaan",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä uudelleen",
   "pauseStartDateMustBeOnOrBefore": "Valitse pilleritauon alkamispäiväksi {date} tai sitä aiempi päivä",
-  "addPausePeriod": "Lisää taukojakso",
+  "addPausePeriod": "Lisää pilleritauko",
   "addedPausePeriod": "Taukojakso lisätty",
   "pausePeriodOverlapsOther": "Et voi valita jaksoa, რომელიც on päällekkäinen toisen taukojaksen kanssa",
   "pauseEndDateMustBeAfterStartDate": "Valitse tauon päättymispäiväksi aloituspäivän jälkeinen päivämäärä.",

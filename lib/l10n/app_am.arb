@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "የክኒን መውሰድ መዝገብን እንዴት መሰረዝ እንደሚቻል ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "እንደገና አታሳይ",
   "pauseStartDateMustBeOnOrBefore": "እባክዎ ለክኒን ዕረፍት መጀመሪያ {date} ወይም ከዚያ በፊት ያለ ቀን ይምረጡ",
-  "addPausePeriod": "የመውሰድ እረፍት ጊዜ ያክሉ",
+  "addPausePeriod": "የክኒን ዕረፍት ጊዜ ያክሉ",
   "addedPausePeriod": "የመውሰድ እረፍት ጊዜ ተጨምሯል",
   "pausePeriodOverlapsOther": "ከሌላ የመድሀኒት እረፍት ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይቻልም",
   "pauseEndDateMustBeAfterStartDate": "እባክዎ የመውሰድ እረፍቱ መጨረሻ ቀን ከመጀመሪያ ቀን በኋላ ያለ ቀን ይምረጡ።",

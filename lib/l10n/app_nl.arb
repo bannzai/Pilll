@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Bekijk hoe je een geregistreerde pilinname ongedaan maakt",
   "midnightTakenWarningDialogNeverShowAgain": "Niet meer tonen",
   "pauseStartDateMustBeOnOrBefore": "Kies {date} of een eerdere datum als begin van je pillenpauze",
-  "addPausePeriod": "Pauzeperiode toevoegen",
+  "addPausePeriod": "Pillenpauze toevoegen",
   "addedPausePeriod": "De pauzeperiode voor inname is toegevoegd",
   "pausePeriodOverlapsOther": "Je kunt geen periode selecteren die overlapt met een andere innamepauze",
   "pauseEndDateMustBeAfterStartDate": "Kies als einddatum van de innamestop een datum na de startdatum.",

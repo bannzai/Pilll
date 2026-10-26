@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ddadwneud cofnod cymryd pilsen",
   "midnightTakenWarningDialogNeverShowAgain": "Peidio â dangos eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch {date} neu ddyddiad cyn hynny i ddechrau eich seibiant o gymryd y bilsen",
-  "addPausePeriod": "Ychwanegu cyfnod seibiant o gymryd",
+  "addPausePeriod": "Ychwanegu cyfnod o saib o gymryd y bilsen",
   "addedPausePeriod": "Ychwanegwyd cyfnod saib rhag cymryd",
   "pausePeriodOverlapsOther": "Ni ellir dewis cyfnod sy'n gorgyffwrdd â chyfnod seibiant arall",
   "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad ar ôl y dyddiad cychwyn ar gyfer dyddiad gorffen yr egwyl cymryd, os gwelwch yn dda.",

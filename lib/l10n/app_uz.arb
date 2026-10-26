@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tabletka ichish qaydini qanday bekor qilishni koʻring",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa koʻrsatmang",
   "pauseStartDateMustBeOnOrBefore": "Tabletkalarni qabul qilishdagi tanaffus boshlanishi uchun {date} yoki undan oldingi sanani tanlang",
-  "addPausePeriod": "Qabul qilish tanaffus muddatini qoʻshish",
+  "addPausePeriod": "Tabletka qabul qilishdagi tanaffusni qoʻshing",
   "addedPausePeriod": "Qabul qilish tanaffusi muddati qoʻshildi",
   "pausePeriodOverlapsOther": "Boshqa qabul tanaffusi davri bilan ustma-ust tushadigan davrni tanlab bo‘lmaydi",
   "pauseEndDateMustBeAfterStartDate": "Iltimos, qabul qilish tanaffusining tugash sanasi uchun boshlanish sanasidan keyingi sanani tanlang.",

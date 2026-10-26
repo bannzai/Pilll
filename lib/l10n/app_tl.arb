@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang tala ng pag-inom ng pildoras",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita muli",
   "pauseStartDateMustBeOnOrBefore": "Pakipili po ang {date} o mas maagang petsa bilang simula ng pahinga sa pag-inom ng pildoras",
-  "addPausePeriod": "Magdagdag ng panahon ng pahinga sa pag-inom",
+  "addPausePeriod": "Magdagdag ng pahinga sa pag-inom ng pildoras",
   "addedPausePeriod": "Naidagdag na ang pahinga sa pag-inom",
   "pausePeriodOverlapsOther": "Hindi puwedeng pumili ng panahong may overlap sa isa pang panahon ng pahinga sa pag-inom",
   "pauseEndDateMustBeAfterStartDate": "Mangyaring pumili ng petsang mas huli kaysa petsa ng pagsisimula bilang petsa ng pagtatapos ng pahinga sa pag-inom.",

@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Ikusi nola ezeztatu pilula hartu izanaren erregistroa",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "pauseStartDateMustBeOnOrBefore": "Hautatu {date} edo lehenagoko data pilulak hartzeko etenaldiaren hasierarako",
-  "addPausePeriod": "Gehitu hartze-atsedenaldia",
+  "addPausePeriod": "Gehitu pilulen hartzeko atsedenaldia",
   "addedPausePeriod": "Hartzeko atsedenaldia gehitu da",
   "pausePeriodOverlapsOther": "Ezin da hautatu beste hartze-atseden aldi batekin gainjartzen den aldirik",
   "pauseEndDateMustBeAfterStartDate": "Mesedez, aukeratu hasiera-data baino geroagoko data bat hartzearen etenaldiaren amaiera-datatzat.",

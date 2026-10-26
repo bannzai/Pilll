@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Таблетканы қабылдау жазбасын қалай жоюға болатынын қараңыз",
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "pauseStartDateMustBeOnOrBefore": "Таблетка қабылдаудағы үзілістің басталу күні ретінде {date} немесе одан ертерек күнді таңдаңыз",
-  "addPausePeriod": "Қабылдау үзіліс кезеңін қосу",
+  "addPausePeriod": "Таблетка қабылдау үзілісін қосыңыз",
   "addedPausePeriod": "Қабылдау үзіліс кезеңі қосылды",
   "pausePeriodOverlapsOther": "Басқа қабылдау үзіліс кезеңімен қабаттасатын кезеңді таңдауға болмайды",
   "pauseEndDateMustBeAfterStartDate": "Қабылдауды үзу кезеңінің аяқталу күні ретінде басталу күнінен кейінгі күнді таңдаңыз.",

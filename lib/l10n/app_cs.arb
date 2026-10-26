@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Jak zrušit záznam o užití pilulky",
   "midnightTakenWarningDialogNeverShowAgain": "Již nezobrazovat",
   "pauseStartDateMustBeOnOrBefore": "Pro začátek pauzy v užívání pilulek prosím vyberte {date} nebo dřívější datum",
-  "addPausePeriod": "Přidat období pauzy v užívání",
+  "addPausePeriod": "Přidat pauzu v užívání pilulek",
   "addedPausePeriod": "Období přestávky v užívání bylo přidáno",
   "pausePeriodOverlapsOther": "Nelze vybrat období, které se překrývá s jiným obdobím pauzy v užívání",
   "pauseEndDateMustBeAfterStartDate": "Jako datum konce přestávky v užívání prosím vyberte datum po datu zahájení.",

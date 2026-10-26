@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar en registrerad tablett",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
   "pauseStartDateMustBeOnOrBefore": "Välj {date} eller ett tidigare datum som start på ditt pilleruppehåll",
-  "addPausePeriod": "Lägg till uppehållsperiod",
+  "addPausePeriod": "Lägg till pillerpaus",
   "addedPausePeriod": "Pausperioden för intag har lagts till",
   "pausePeriodOverlapsOther": "Du kan inte välja en period som överlappar med en annan pausperiod",
   "pauseEndDateMustBeAfterStartDate": "Välj ett datum efter startdatumet som slutdatum för uppehållet i intaget.",

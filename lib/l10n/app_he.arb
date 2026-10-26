@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "איך לבטל רישום נטילה של גלולה",
   "midnightTakenWarningDialogNeverShowAgain": "לא להציג שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור את {date} או תאריך מוקדם יותר לתחילת ההפסקה בנטילת הגלולה",
-  "addPausePeriod": "הוספת תקופת הפסקה בנטילה",
+  "addPausePeriod": "הוספת הפסקה בנטילת גלולות",
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילה",
   "pausePeriodOverlapsOther": "לא ניתן לבחור תקופה שחופפת לתקופת הפסקה אחרת של נטילה",
   "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך מאוחר מתאריך ההתחלה כתאריך סיום ההפסקה בנטילה.",

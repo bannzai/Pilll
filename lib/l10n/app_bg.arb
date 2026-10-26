@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Вижте как да отмените запис за прием на хапче",
   "midnightTakenWarningDialogNeverShowAgain": "Да не се показва отново",
   "pauseStartDateMustBeOnOrBefore": "Моля, изберете {date} или по-ранна дата за начало на паузата в приема на хапчета",
-  "addPausePeriod": "Добавяне на период без прием",
+  "addPausePeriod": "Добавяне на пауза в приема на хапчета",
   "addedPausePeriod": "Добавен е период за почивка от приема",
   "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друг период на почивка от приема",
   "pauseEndDateMustBeAfterStartDate": "Моля, изберете дата след началната дата за край на паузата в приема.",

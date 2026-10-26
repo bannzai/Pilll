@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Как отменить запись о приёме таблетки",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
   "pauseStartDateMustBeOnOrBefore": "Пожалуйста, выберите {date} или более раннюю дату начала перерыва в приёме таблеток",
-  "addPausePeriod": "Добавить период перерыва в приеме",
+  "addPausePeriod": "Добавить перерыв в приёме таблеток",
   "addedPausePeriod": "Добавлен период перерыва в приёме",
   "pausePeriodOverlapsOther": "Нельзя выбрать период, который пересекается с другим периодом перерыва в приеме",
   "pauseEndDateMustBeAfterStartDate": "Пожалуйста, выберите дату окончания перерыва в приёме позже даты начала.",

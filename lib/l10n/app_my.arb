@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးလုံးသောက်ထားသည့် မှတ်တမ်းကို ပယ်ဖျက်နည်း ကြည့်ပါ",
   "midnightTakenWarningDialogNeverShowAgain": "နောက်တစ်ကြိမ် မပြပါနှင့်",
   "pauseStartDateMustBeOnOrBefore": "ဆေးလုံးသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်အတွက် {date} သို့မဟုတ် ထိုနေ့မတိုင်မီရက်ကို ရွေးပါ",
-  "addPausePeriod": "သောက်သုံးမှုရပ်နားချိန်ကာလ ထည့်ပါ",
+  "addPausePeriod": "ဆေးပြားသောက်ခြင်း ခေတ္တနားသည့်ကာလ ထည့်ပါ",
   "addedPausePeriod": "သောက်သုံးမှု အနားယူကာလကို ထည့်ပြီးပါပြီ",
   "pausePeriodOverlapsOther": "အခြား သောက်သုံးမှု ရပ်နားချိန်နှင့် ထပ်နေသော ကာလကို ရွေးချယ်၍မရပါ",
   "pauseEndDateMustBeAfterStartDate": "ကျေးဇူးပြု၍ သောက်သုံးမှုနားရက်၏ ပြီးဆုံးရက်အတွက် စတင်ရက်နောက်ပိုင်းရက်ကို ရွေးချယ်ပါ။",

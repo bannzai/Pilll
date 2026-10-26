@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy bản ghi uống thuốc",
   "midnightTakenWarningDialogNeverShowAgain": "Không hiển thị lại",
   "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn {date} hoặc ngày sớm hơn làm ngày bắt đầu tạm ngừng uống thuốc",
-  "addPausePeriod": "Thêm thời gian nghỉ uống",
+  "addPausePeriod": "Thêm khoảng nghỉ uống thuốc",
   "addedPausePeriod": "Đã thêm khoảng nghỉ uống thuốc",
   "pausePeriodOverlapsOther": "Không thể chọn khoảng thời gian trùng với một khoảng nghỉ uống khác",
   "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày sau ngày bắt đầu làm ngày kết thúc thời gian tạm nghỉ uống thuốc.",

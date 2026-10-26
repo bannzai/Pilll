@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธียกเลิกบันทึกการทานยา",
   "midnightTakenWarningDialogNeverShowAgain": "ไม่ต้องแสดงอีก",
   "pauseStartDateMustBeOnOrBefore": "กรุณาเลือกวันที่ {date} หรือวันที่ก่อนหน้าเป็นวันเริ่มพักทานยาเม็ดค่ะ",
-  "addPausePeriod": "เพิ่มช่วงพักการทาน",
+  "addPausePeriod": "เพิ่มช่วงพักทานยาเม็ด",
   "addedPausePeriod": "เพิ่มช่วงพักการรับประทานแล้ว",
   "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดรับประทานอื่นได้",
   "pauseEndDateMustBeAfterStartDate": "โปรดเลือกวันที่หลังจากวันเริ่มต้นเป็นวันสิ้นสุดช่วงพักการรับประทาน",

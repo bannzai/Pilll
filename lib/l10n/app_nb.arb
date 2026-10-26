@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du angrer en registrert pille",
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis igjen",
   "pauseStartDateMustBeOnOrBefore": "Velg {date} eller en tidligere dato som start på pillepausen",
-  "addPausePeriod": "Legg til pauseperiode",
+  "addPausePeriod": "Legg til pillepause",
   "addedPausePeriod": "Pauseperiode for inntak er lagt til",
   "pausePeriodOverlapsOther": "Du kan ikke velge en periode som overlapper med en annen pauseperiode",
   "pauseEndDateMustBeAfterStartDate": "Velg en dato etter startdatoen som sluttdato for pause i inntaket.",

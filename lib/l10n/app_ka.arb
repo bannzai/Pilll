@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ნახეთ, როგორ გააუქმოთ აბის მიღების ჩანაწერი",
   "midnightTakenWarningDialogNeverShowAgain": "აღარ გამოჩნდეს",
   "pauseStartDateMustBeOnOrBefore": "გთხოვთ, აბების მიღების შესვენების დასაწყისად აირჩიოთ {date} ან უფრო ადრინდელი თარიღი",
-  "addPausePeriod": "მიღების შესვენების პერიოდის დამატება",
+  "addPausePeriod": "აბების მიღების შესვენების დამატება",
   "addedPausePeriod": "მიღების შესვენების პერიოდი დაემატა",
   "pausePeriodOverlapsOther": "სხვა მიღების შესვენების პერიოდთან გადაფარვის მქონე პერიოდის არჩევა შეუძლებელია",
   "pauseEndDateMustBeAfterStartDate": "გთხოვთ, მიღების შესვენების დასრულების თარიღად აირჩიოთ დაწყების თარიღზე გვიანდელი თარიღი.",

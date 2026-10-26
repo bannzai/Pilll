@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Kyk hoe om ’n pilinname te kanselleer",
   "midnightTakenWarningDialogNeverShowAgain": "Moenie weer wys nie",
   "pauseStartDateMustBeOnOrBefore": "Kies asseblief {date} of ’n vroeër datum as die begindatum van jou pilpouse",
-  "addPausePeriod": "Voeg pouseperiode by",
+  "addPausePeriod": "Voeg ’n pilpouse by",
   "addedPausePeriod": "Inname-pouseperiode is bygevoeg",
   "pausePeriodOverlapsOther": "Periodes wat oorvleuel met 'n ander pouse-periode kan nie gekies word nie",
   "pauseEndDateMustBeAfterStartDate": "Kies asseblief ’n datum ná die begindatum as die einddatum van die pouse in inname.",

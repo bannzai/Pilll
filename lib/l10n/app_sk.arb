@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrite si, ako zrušiť záznam o užití tabletky",
   "midnightTakenWarningDialogNeverShowAgain": "Už nezobrazovať",
   "pauseStartDateMustBeOnOrBefore": "Ako začiatok prestávky v užívaní tabletiek vyberte, prosím, {date} alebo skorší dátum",
-  "addPausePeriod": "Pridať obdobie prestávky v užívaní",
+  "addPausePeriod": "Pridať prestávku v užívaní tabletiek",
   "addedPausePeriod": "Obdobie prestávky v užívaní bolo pridané",
   "pausePeriodOverlapsOther": "Nemožno vybrať obdobie, ktoré sa prekrýva s iným obdobím prestávky v užívaní",
   "pauseEndDateMustBeAfterStartDate": "Prosím, vyberte dátum po dátume začiatku ako dátum ukončenia prestávky v užívaní.",

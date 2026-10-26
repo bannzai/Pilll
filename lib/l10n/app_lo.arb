@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ເບິ່ງວິທີຍົກເລີກບັນທຶກການກິນຢາເມັດ",
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ສະແດງອີກ",
   "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກ {date} ຫຼືວັນທີກ່ອນນັ້ນ ເປັນວັນເລີ່ມພັກການກິນຢາເມັດ",
-  "addPausePeriod": "ເພີ່ມໄລຍະພັກການກິນ",
+  "addPausePeriod": "ເພີ່ມໄລຍະພັກກິນຢາເມັດ",
   "addedPausePeriod": "ໄດ້ເພີ່ມໄລຍະພັກການກິນ",
   "pausePeriodOverlapsOther": "ບໍ່ສາມາດເລືອກໄລຍະທີ່ທັບຊ້ອນກັບໄລຍະພັກການກິນອື່ນໄດ້",
   "pauseEndDateMustBeAfterStartDate": "ກະລຸນາເລືອກວັນທີຫຼັງຈາກວັນເລີ່ມຕົ້ນເປັນວັນສິ້ນສຸດຂອງໄລຍະພັກການຮັບປະທານ.",

@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Skatiet, kā atcelt tabletes lietošanas ierakstu",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties {date} vai agrāku datumu kā tablešu lietošanas pārtraukuma sākumu",
-  "addPausePeriod": "Pievienot lietošanas pārtraukuma periodu",
+  "addPausePeriod": "Pievienot tablešu lietošanas pārtraukumu",
   "addedPausePeriod": "Ir pievienots lietošanas pārtraukuma periods",
   "pausePeriodOverlapsOther": "Nevar izvēlēties periodu, kas pārklājas ar citu lietošanas pārtraukuma periodu",
   "pauseEndDateMustBeAfterStartDate": "Lūdzu, izvēlieties lietošanas pārtraukuma beigu datumu, kas ir pēc sākuma datuma.",

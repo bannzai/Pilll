@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Bona ukuthi ungakhansela kanjani irekhodi lokuphuza iphilisi",
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ukubonise",
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe u-{date} noma usuku olungaphambi kwalokho njengosuku lokuqala kwekhefu lokuphuza amaphilisi",
-  "addPausePeriod": "Engeza isikhathi sekhefu sokuphuza",
+  "addPausePeriod": "Sicela wengeze isikhathi sokuphumula ekuphuzeni amaphilisi",
   "addedPausePeriod": "Isikhathi sekhefu lokuphuza sengeziwe",
   "pausePeriodOverlapsOther": "Isikhathi esidlana nesinye isikhathi sekhefu lokuthatha asikwazi ukukhethwa",
   "pauseEndDateMustBeAfterStartDate": "Sicela ukhethe usuku olungemva kosuku lokuqala njengosuku lokuphela kwekhefu lokuphuza umuthi.",

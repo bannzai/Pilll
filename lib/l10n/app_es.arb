@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Consulta cómo deshacer el registro de una píldora",
   "midnightTakenWarningDialogNeverShowAgain": "No volver a mostrar",
   "pauseStartDateMustBeOnOrBefore": "Elige {date} o una fecha anterior para comenzar la pausa de la píldora",
-  "addPausePeriod": "Añadir periodo de descanso de toma",
+  "addPausePeriod": "Añadir una pausa en la toma de la píldora",
   "addedPausePeriod": "Se ha añadido el período de descanso de la toma",
   "pausePeriodOverlapsOther": "No puedes seleccionar un período que se superponga con otro período de pausa de toma",
   "pauseEndDateMustBeAfterStartDate": "Selecciona una fecha posterior a la fecha de inicio como fecha de finalización del descanso de toma, por favor.",

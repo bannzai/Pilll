@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Таблетка ичүү жазуусун кантип жокко чыгарууну көрүңүз",
   "midnightTakenWarningDialogNeverShowAgain": "Кайра көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Таблетка ичүүдөгү тыныгуунун башталышы үчүн {date} же андан мурунку күндү тандаңыз",
-  "addPausePeriod": "Ичүү тыныгуу мезгилин кошуу",
+  "addPausePeriod": "Таблетка ичүүдөгү тыныгууну кошуңуз",
   "addedPausePeriod": "Ичүү тыныгуу мөөнөтү кошулду",
   "pausePeriodOverlapsOther": "Башка ичүүнү токтотуу мөөнөтү менен дал келген мөөнөттү тандап болбойт",
   "pauseEndDateMustBeAfterStartDate": "Сураныч, кабыл алууну тыныгуу мөөнөтүнүн аяктоо күнү катары башталган күндөн кийинки күндү тандаңыз.",

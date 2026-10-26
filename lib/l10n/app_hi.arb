@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "गोली लेने का रिकॉर्ड हटाने का तरीका देखें",
   "midnightTakenWarningDialogNeverShowAgain": "फिर से न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "गोली लेने के विराम की शुरुआत के लिए कृपया {date} या उससे पहले की तारीख चुनें",
-  "addPausePeriod": "सेवन विराम अवधि जोड़ें",
+  "addPausePeriod": "गोली लेने का विराम जोड़ें",
   "addedPausePeriod": "सेवन विराम अवधि जोड़ दी गई है",
   "pausePeriodOverlapsOther": "आप किसी ऐसी अवधि का चयन नहीं कर सकते जो किसी अन्य सेवन-विश्राम अवधि से ओवरलैप करती हो",
   "pauseEndDateMustBeAfterStartDate": "कृपया सेवन विराम की समाप्ति तिथि के लिए शुरूआत की तारीख के बाद की तारीख चुनें।",

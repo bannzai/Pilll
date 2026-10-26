@@ -558,7 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Nézd meg, hogyan vonhatod vissza a tabletta szedésének rögzítését",
   "midnightTakenWarningDialogNeverShowAgain": "Ne jelenjen meg újra",
   "pauseStartDateMustBeOnOrBefore": "A tablettaszedési szünet kezdetének {date} vagy korábbi dátumot válassz",
-  "addPausePeriod": "Szedési szünet időszakának hozzáadása",
+  "addPausePeriod": "Tablettaszedési szünet hozzáadása",
   "addedPausePeriod": "Hozzáadtuk a szedési szünet időszakát",
   "pausePeriodOverlapsOther": "Nem választható ki olyan időszak, amely átfedésben van egy másik szedési szünettel",
   "pauseEndDateMustBeAfterStartDate": "Kérjük, a szedési szünet befejezési dátumaként a kezdőnapnál későbbi dátumot válasszon.",
