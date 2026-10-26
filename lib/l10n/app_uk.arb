@@ -228,7 +228,7 @@
   "notYetKnown": "Поки не знаю",
   "pillForToday": "Пігулка для прийому {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "preview": "Перегляд",
+  "preview": "Попередній перегляд",
   "normal": "звичайний",
   "missed": "пропуск прийому",
   "showsDate": "Відображати дату",

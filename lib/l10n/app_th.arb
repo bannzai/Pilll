@@ -228,7 +228,7 @@
   "notYetKnown": "ยังไม่ทราบ",
   "pillForToday": "ยาเม็ดที่ต้องทานในวันที่ {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "preview": "พรีวิว",
+  "preview": "ตัวอย่าง",
   "normal": "ปกติ",
   "missed": "ลืมกิน",
   "showsDate": "แสดงวันที่",

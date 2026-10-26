@@ -228,7 +228,7 @@
   "notYetKnown": "Jeg vet ikke ennå",
   "pillForToday": "P-pillen du skal ta {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "preview": "forhåndsvisning",
+  "preview": "Forhåndsvisning",
   "normal": "normal",
   "missed": "Glemt dose",
   "showsDate": "Vis dato",

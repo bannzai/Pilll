@@ -228,7 +228,7 @@
   "notYetKnown": "ຍັງບໍ່ຮູ້",
   "pillForToday": "ຢາເມັດທີ່ຕ້ອງກິນໃນວັນທີ {today}",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "preview": "ດູກ່ອນ",
+  "preview": "ເບິ່ງຕົວຢ່າງ",
   "normal": "ປົກກະຕິ",
   "missed": "ລືມກິນຢາ",
   "showsDate": "ສະແດງວັນທີ",
