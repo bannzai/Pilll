@@ -95,7 +95,7 @@
   "menstruationEdited": "La période des règles a été modifiée",
   "physicalConditionDetail": "Détails de votre état de santé",
   "medicationHistoryPremiumFeatureRestriction": "Consultez les entrées plus anciennes avec Premium",
-  "viewMoreDetails": "Apprendre encore plus",
+  "viewMoreDetails": "Voir les détails",
   "viewMore": "Voir plus",
   "afterLastTakenPillNumber": "#{afterLastTakenPillNumber}",
   "leftDashAfterLastTakenPillNumber": "{left}-#{afterLastTakenPillNumber}",

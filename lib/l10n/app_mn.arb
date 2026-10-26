@@ -95,7 +95,7 @@
   "menstruationEdited": "Сарын тэмдгийн хугацааг засварлалаа",
   "physicalConditionDetail": "Биеийн байдлын дэлгэрэнгүй",
   "medicationHistoryPremiumFeatureRestriction": "Илүү хуучин бүртгэлийг үзэхэд премиум шаардлагатай",
-  "viewMoreDetails": "дэлгэрэнгүй үзэх",
+  "viewMoreDetails": "Дэлгэрэнгүй харах",
   "viewMore": "Илүү харах",
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} дугаар",
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} дугаар",
