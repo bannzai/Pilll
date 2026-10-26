@@ -253,7 +253,7 @@
   "sex": "Сексуален однос",
   "previousPillSheetGroup": "Претходна група блистер",
   "noPreviousPillSheetGroup": "Претходна група блистер сè уште не постои",
-  "failedToFetchPillHistory": "Неуспешно преземање на информациите за историјата на земање. {error}",
+  "failedToFetchPillHistory": "Не успеавме да ги вчитаме податоците за Историја на земање. {error}",
   "seeFAQ": "Видете ЧПП",
   "reloadScreen": "Обнови го екранот",
   "contactIfNotResolved": "Ако проблемот не се реши, кликнете тука",

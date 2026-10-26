@@ -253,7 +253,7 @@
   "sex": "လိင်ဆက်ဆံမှု",
   "previousPillSheetGroup": "ယခင် ဆေးပြားကတ်အုပ်စု",
   "noPreviousPillSheetGroup": "ယခင် ဆေးပြားကတ်အုပ်စု မရှိသေးပါ",
-  "failedToFetchPillHistory": "ဆေးသောက်သမိုင်း အချက်အလက်များ ရယူရာတွင် ပြဿနာ ရှိပါသည်။ {error}",
+  "failedToFetchPillHistory": "ဆေးသောက်ခဲ့သည့်စာရင်း အချက်အလက်ကို ရယူ၍ မရပါ။ {error}",
   "seeFAQ": "FAQ ကြည့်ရန်",
   "reloadScreen": "ပြန်လည်ဖွင့်ရန်",
   "contactIfNotResolved": "မဖြေရှင်းနိုင်ရင် ဒီမှာ",

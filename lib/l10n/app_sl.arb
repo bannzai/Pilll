@@ -253,7 +253,7 @@
   "sex": "Spolni odnos",
   "previousPillSheetGroup": "Prejšnja skupina ploščic",
   "noPreviousPillSheetGroup": "Prejšnja skupina ploščic še ne obstaja",
-  "failedToFetchPillHistory": "Pridobivanje podatkov o zgodovini jemanja ni uspelo. {error}",
+  "failedToFetchPillHistory": "Podatkov za zgodovino jemanja ni bilo mogoče naložiti. {error}",
   "seeFAQ": "Poglej FAQ",
   "reloadScreen": "Ponovno naloži zaslon",
   "contactIfNotResolved": "Če se ne reši, kliknite tukaj",

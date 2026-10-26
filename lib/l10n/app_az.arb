@@ -253,7 +253,7 @@
   "sex": "Cinsi əlaqə",
   "previousPillSheetGroup": "Əvvəlki həb blister qrupu",
   "noPreviousPillSheetGroup": "Əvvəlki həb blister qrupu hələ yoxdur",
-  "failedToFetchPillHistory": "Dərman qəbulu tarixçəsi məlumatları yüklənə bilmədi. {error}",
+  "failedToFetchPillHistory": "Qəbul tarixçəsi məlumatlarını əldə etmək mümkün olmadı. {error}",
   "seeFAQ": "FAQ-ya bax",
   "reloadScreen": "Ekranı yenidən yüklə",
   "contactIfNotResolved": "Həll olmadıqda buraya müraciət edin",

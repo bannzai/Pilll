@@ -253,7 +253,7 @@
   "sex": "رابطه جنسی",
   "previousPillSheetGroup": "گروه قبلی ورق قرص",
   "noPreviousPillSheetGroup": "هنوز گروه قبلی ورق قرص وجود ندارد",
-  "failedToFetchPillHistory": "دریافت اطلاعات سابقه مصرف ناموفق بود. {error}",
+  "failedToFetchPillHistory": "دریافت اطلاعات تاریخچه مصرف ممکن نشد. {error}",
   "seeFAQ": "مشاهده سؤالات متداول",
   "reloadScreen": "بارگیری مجدد صفحه",
   "contactIfNotResolved": "اگر مشکل حل نشد، اینجا کلیک کنید",

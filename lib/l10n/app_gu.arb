@@ -253,7 +253,7 @@
   "sex": "જાતીય સંબંધ",
   "previousPillSheetGroup": "ગોળીની સ્ટ્રિપનું અગાઉનું જૂથ",
   "noPreviousPillSheetGroup": "અગાઉની ગોળીની સ્ટ્રિપનું જૂથ હજી નથી",
-  "failedToFetchPillHistory": "સેવન ઇતિહાસની માહિતી મેળવવામાં નિષ્ફળ થયું. {error}",
+  "failedToFetchPillHistory": "સેવન ઇતિહાસની માહિતી મેળવી શકાઈ નથી. {error}",
   "seeFAQ": "FAQ જુઓ",
   "reloadScreen": "રીફ્રેશ કરો",
   "contactIfNotResolved": "હલ ન થાય તો અહીં",

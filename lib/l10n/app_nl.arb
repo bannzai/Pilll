@@ -253,7 +253,7 @@
   "sex": "Seks",
   "previousPillSheetGroup": "Vorige groep pillenstrips",
   "noPreviousPillSheetGroup": "Er is nog geen vorige pillenstripgroep",
-  "failedToFetchPillHistory": "Kan inname geschiedenis niet ophalen. {error}",
+  "failedToFetchPillHistory": "De gegevens voor je innamegeschiedenis konden niet worden geladen. {error}",
   "seeFAQ": "FAQ bekijken",
   "reloadScreen": "Scherm herladen",
   "contactIfNotResolved": "Nog steeds problemen? Klik hier",

@@ -253,7 +253,7 @@
   "sex": "లైంగిక సంబంధం",
   "previousPillSheetGroup": "మునుపటి మాత్రల స్ట్రిప్‌ల సమూహం",
   "noPreviousPillSheetGroup": "మునుపటి మాత్రల స్ట్రిప్ సమూహం ఇంకా లేదు",
-  "failedToFetchPillHistory": "మందుల సేవన చరిత్ర సమాచారం పొందడంలో విఫలమైంది। {error}",
+  "failedToFetchPillHistory": "మాత్రల సేవన చరిత్ర సమాచారాన్ని పొందలేకపోయాము. {error}",
   "seeFAQ": "FAQ చూడండి",
   "reloadScreen": "రీలోడ్ చేయండి",
   "contactIfNotResolved": "సమస్య పరిష్కరం కాకపోతే ఇక్కడ",

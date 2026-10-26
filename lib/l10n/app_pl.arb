@@ -253,7 +253,7 @@
   "sex": "Współżycie",
   "previousPillSheetGroup": "Poprzednia grupa blistów",
   "noPreviousPillSheetGroup": "Nie ma jeszcze poprzedniej grupy blistów",
-  "failedToFetchPillHistory": "Nie udało się pobrać historii przyjmowania. {error}",
+  "failedToFetchPillHistory": "Nie udało się pobrać danych historii przyjmowania tabletek. {error}",
   "seeFAQ": "Zobacz FAQ",
   "reloadScreen": "Przeładuj ekran",
   "contactIfNotResolved": "Jeśli problem się nie rozwiąże, kliknij tutaj",

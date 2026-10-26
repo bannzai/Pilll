@@ -253,7 +253,7 @@
   "sex": "性行为",
   "previousPillSheetGroup": "上一组药板",
   "noPreviousPillSheetGroup": "还没有上一组药板",
-  "failedToFetchPillHistory": "获取服药记录信息失败。{error}",
+  "failedToFetchPillHistory": "无法获取服药历史信息。{error}",
   "seeFAQ": "查看常见问题",
   "reloadScreen": "重新加载页面",
   "contactIfNotResolved": "如果无法解决，请点击这里",

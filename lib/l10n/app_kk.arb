@@ -253,7 +253,7 @@
   "sex": "Жыныстық қатынас",
   "previousPillSheetGroup": "Алдыңғы таблетка блистер тобы",
   "noPreviousPillSheetGroup": "Алдыңғы таблетка блистер тобы әлі жоқ",
-  "failedToFetchPillHistory": "Дәрі қабылдау тарихы ақпаратын алу сәтсіз аяқталды. {error}",
+  "failedToFetchPillHistory": "Қабылдау тарихы туралы мәліметтерді жүктеу мүмкін болмады. {error}",
   "seeFAQ": "FAQ көру",
   "reloadScreen": "Экранды қайта жүктеу",
   "contactIfNotResolved": "Шешілмесе, мұнда",

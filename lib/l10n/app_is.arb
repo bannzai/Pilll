@@ -253,7 +253,7 @@
   "sex": "Kynlíf",
   "previousPillSheetGroup": "Fyrri hópur pilluspjalda",
   "noPreviousPillSheetGroup": "Enginn fyrri hópur pilluspjalda er til enn",
-  "failedToFetchPillHistory": "Mistókst að sækja lyfjanotkunarsögu. {error}",
+  "failedToFetchPillHistory": "Ekki tókst að sækja upplýsingar í inntökuyfirlitinu. {error}",
   "seeFAQ": "Skoða algengar spurningar",
   "reloadScreen": "Endurhlada skjá",
   "contactIfNotResolved": "Ef þetta leysist ekki, smelltu hér",

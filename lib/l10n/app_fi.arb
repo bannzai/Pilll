@@ -253,7 +253,7 @@
   "sex": "Seksi",
   "previousPillSheetGroup": "Edellinen pilleriliuskaryhmä",
   "noPreviousPillSheetGroup": "Aiempaa pilleriliuskojen ryhmää ei vielä ole",
-  "failedToFetchPillHistory": "Ottamishistorian tietojen hakeminen epäonnistui. {error}",
+  "failedToFetchPillHistory": "Pillerihistorian tietoja ei voitu ladata. {error}",
   "seeFAQ": "Katso FAQ",
   "reloadScreen": "Päivitä näyttö",
   "contactIfNotResolved": "Jos ei auta, klikkaa tähän",

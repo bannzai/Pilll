@@ -253,7 +253,7 @@
   "sex": "Relacions sexuals",
   "previousPillSheetGroup": "Grup anterior de blísters",
   "noPreviousPillSheetGroup": "Encara no hi ha cap grup de blíster anterior",
-  "failedToFetchPillHistory": "No s'ha pogut obtenir l'historial de prises. {error}",
+  "failedToFetchPillHistory": "No s’ha pogut carregar la informació de l’historial de preses. {error}",
   "seeFAQ": "Veure FAQ",
   "reloadScreen": "Actualitzar la pantalla",
   "contactIfNotResolved": "Si el problema persisteix, feu clic aquí",

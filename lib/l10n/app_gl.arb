@@ -253,7 +253,7 @@
   "sex": "Relacións sexuais",
   "previousPillSheetGroup": "Grupo anterior de blísters",
   "noPreviousPillSheetGroup": "Aínda non hai ningún grupo anterior de blíster",
-  "failedToFetchPillHistory": "Fallou a obtención da información do historial de toma. {error}",
+  "failedToFetchPillHistory": "Non se puido cargar a información do historial de tomas. {error}",
   "seeFAQ": "Ver as preguntas frecuentes",
   "reloadScreen": "Recargar pantalla",
   "contactIfNotResolved": "Se non se resolve, contacta aquí",

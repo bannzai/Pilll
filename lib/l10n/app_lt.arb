@@ -253,7 +253,7 @@
   "sex": "Lytiniai santykiai",
   "previousPillSheetGroup": "Ankstesnė tablečių plokštel grupė",
   "noPreviousPillSheetGroup": "Ankstesnės tablečių plokštel grupės dar nėra",
-  "failedToFetchPillHistory": "Nepavyko gauti vaistų vartojimo istorijos informacijos. {error}",
+  "failedToFetchPillHistory": "Nepavyko įkelti vartojimo istorijos duomenų. {error}",
   "seeFAQ": "DUK peržiūra",
   "reloadScreen": "Atnaujinti",
   "contactIfNotResolved": "Jei nepavyko išspręsti, kreipkitės čia",

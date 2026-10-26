@@ -253,7 +253,7 @@
   "sex": "Sexu harremanak",
   "previousPillSheetGroup": "Aurreko pilula-blister taldea",
   "noPreviousPillSheetGroup": "Oraindik ez dago aurreko pilula-blister talderik",
-  "failedToFetchPillHistory": "Ezin izan da hartzeen historiaren informazioa eskuratu. {error}",
+  "failedToFetchPillHistory": "Ezin izan da hartze-historiaren informazioa kargatu. {error}",
   "seeFAQ": "FAQ-ak ikusi",
   "reloadScreen": "Pantaila berritu",
   "contactIfNotResolved": "Konpontzen ez bada, hemen",

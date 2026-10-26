@@ -253,7 +253,7 @@
   "sex": "Rapport sexuel",
   "previousPillSheetGroup": "Groupe précédent de plaquettes",
   "noPreviousPillSheetGroup": "Il n’y a pas encore de groupe de plaquettes précédent",
-  "failedToFetchPillHistory": "Échec de la récupération des informations sur l'historique des médicaments. {error}",
+  "failedToFetchPillHistory": "Impossible de charger les informations de l’historique des prises. {error}",
   "seeFAQ": "Voir la FAQ",
   "reloadScreen": "Recharger",
   "contactIfNotResolved": "Contactez-nous si non résolu",

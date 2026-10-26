@@ -253,7 +253,7 @@
   "sex": "Сэксуальныя адносіны",
   "previousPillSheetGroup": "Папярэдняя група блістараў",
   "noPreviousPillSheetGroup": "Папярэдняй групы блістар пакуль няма",
-  "failedToFetchPillHistory": "Не ўдалося атрымаць інформацыю пра гісторыю прыёму. {error}",
+  "failedToFetchPillHistory": "Не ўдалося загрузіць даныя для гісторыі прыёму пігулак. {error}",
   "seeFAQ": "Паглядзець ЧАП",
   "reloadScreen": "Перазагрузіць экран",
   "contactIfNotResolved": "Калі не вырашаецца - тут",

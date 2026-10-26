@@ -253,7 +253,7 @@
   "sex": "Marrëdhënie seksuale",
   "previousPillSheetGroup": "Grupi i mëparshëm i blisterëve",
   "noPreviousPillSheetGroup": "Ende nuk ka një grup të mëparshëm blisterësh",
-  "failedToFetchPillHistory": "Dështoi në marrjen e të dhënave të historisë së marrjes. {error}",
+  "failedToFetchPillHistory": "Nuk u arrit të ngarkoheshin të dhënat për historia e marrjes. {error}",
   "seeFAQ": "Shiko FAQ",
   "reloadScreen": "Rifresko ekranin",
   "contactIfNotResolved": "Nëse nuk zgjidhet, klikoni këtu",

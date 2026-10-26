@@ -253,7 +253,7 @@
   "sex": "Pohlavný styk",
   "previousPillSheetGroup": "Predchádzajúca skupina blistov",
   "noPreviousPillSheetGroup": "Predchádzajúca skupina blistov ešte neexistuje",
-  "failedToFetchPillHistory": "Nepodarilo sa načítať informácie o histórii užívania. {error}",
+  "failedToFetchPillHistory": "Nepodarilo sa načítať údaje pre históriu užívania. {error}",
   "seeFAQ": "Zobraziť FAQ",
   "reloadScreen": "Obnoviť obrazovku",
   "contactIfNotResolved": "Ak sa problém nevyrieši",

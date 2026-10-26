@@ -253,7 +253,7 @@
   "sex": "جنسي اړیکه",
   "previousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله",
   "noPreviousPillSheetGroup": "د ګولیو پاڼ پخوانۍ ډله لا نشته",
-  "failedToFetchPillHistory": "د خوراکي درملو تاریخچې معلوماتو ترلاسه کول ناکام شو. {error}",
+  "failedToFetchPillHistory": "د ګولۍ اخیستلو تاریخچې معلومات ترلاسه نه شول. {error}",
   "seeFAQ": "ډېر پوښتنې وګورئ",
   "reloadScreen": "سکرین بیا لوډول",
   "contactIfNotResolved": "که حل نه شي، دلته ټک ورکړئ",

@@ -253,7 +253,7 @@
   "sex": "การมีเพศสัมพันธ์",
   "previousPillSheetGroup": "กลุ่มแผงยาก่อนหน้า",
   "noPreviousPillSheetGroup": "ยังไม่มีกลุ่มแผงยาก่อนหน้าค่ะ",
-  "failedToFetchPillHistory": "ไม่สามารถดึงข้อมูลประวัติการรับประทานยาได้ {error}",
+  "failedToFetchPillHistory": "ไม่สามารถโหลดข้อมูลประวัติการทานยาได้ค่ะ {error}",
   "seeFAQ": "ดู FAQ",
   "reloadScreen": "โหลดใหม่",
   "contactIfNotResolved": "หากยังแก้ไขไม่ได้ให้ติดต่อที่นี่",

@@ -253,7 +253,7 @@
   "sex": "ලිංගික සම්බන්ධතාව",
   "previousPillSheetGroup": "පෙර පෙති කාඩ්පත සමූහය",
   "noPreviousPillSheetGroup": "පෙර පෙති කාඩ්පත සමූහයක් තවම නැහැ",
-  "failedToFetchPillHistory": "ගැනීමේ ඉතිහාස තොරතුරු ලබා ගැනීමට අසමත් විය. {error}",
+  "failedToFetchPillHistory": "පෙති ගැනීමේ ඉතිහාසය පිළිබඳ තොරතුරු ලබාගත නොහැකි වුණා. {error}",
   "seeFAQ": "FAQ බලන්න",
   "reloadScreen": "නැවත ලෝඩ් කරන්න",
   "contactIfNotResolved": "විසඳන්නේ නැත්නම් මෙතනින්",

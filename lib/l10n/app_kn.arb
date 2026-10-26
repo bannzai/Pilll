@@ -253,7 +253,7 @@
   "sex": "ಲೈಂಗಿಕ ಸಂಪರ್ಕ",
   "previousPillSheetGroup": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಗುಂಪು",
   "noPreviousPillSheetGroup": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಗುಂಪು ಇನ್ನೂ ಇಲ್ಲ",
-  "failedToFetchPillHistory": "ಸೇವನೆ ಇತಿಹಾಸ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯುವಲ್ಲಿ ವಿಫಲವಾಗಿದೆ। {error}",
+  "failedToFetchPillHistory": "ಸೇವನೆಯ ಇತಿಹಾಸದ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. {error}",
   "seeFAQ": "FAQ ನೋಡಿ",
   "reloadScreen": "ಪರದೆಯನ್ನು ಮರುಲೋಡ್ ಮಾಡಿ",
   "contactIfNotResolved": "ಪರಿಹಾರವಾಗದಿದ್ದರೆ ಇಲ್ಲಿ ಸಂಪರ್ಕಿಸಿ",

@@ -253,7 +253,7 @@
   "sex": "ଯୌନ ସମ୍ପର୍କ",
   "previousPillSheetGroup": "ପୂର୍ବ ବଟିକା ସିଟ ଗୋଷ୍ଠୀ",
   "noPreviousPillSheetGroup": "ପୂର୍ବ ବଟିକା ସିଟ ଗୋଷ୍ଠୀ ଏପର୍ଯ୍ୟନ୍ତ ନାହିଁ",
-  "failedToFetchPillHistory": "ସେବନ ଇତିହାସ ସୂଚନା ପ୍ରାପ୍ତ କରିବାରେ ବିଫଳ ହୋଇଛି। {error}",
+  "failedToFetchPillHistory": "ସେବନ ଇତିହାସର ତଥ୍ୟ ମିଳିପାରିଲା ନାହିଁ। {error}",
   "seeFAQ": "FAQ ଦେଖନ୍ତୁ",
   "reloadScreen": "ସ୍କ୍ରିନ୍ ପୁନଃଲୋଡ୍ କରନ୍ତୁ",
   "contactIfNotResolved": "ସମସ୍ୟା ସମାଧାନ ନହେଲେ ଏଠାରେ",

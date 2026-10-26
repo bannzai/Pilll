@@ -253,7 +253,7 @@
   "sex": "성관계",
   "previousPillSheetGroup": "이전 알약 시트 그룹",
   "noPreviousPillSheetGroup": "이전 알약 시트 그룹이 아직 없어요",
-  "failedToFetchPillHistory": "복용 기록 정보를 가져오는데 실패했습니다. {error}",
+  "failedToFetchPillHistory": "복용 내역 정보를 불러오지 못했어요. {error}",
   "seeFAQ": "FAQ 보기",
   "reloadScreen": "화면 새로고침",
   "contactIfNotResolved": "해결되지 않으면 여기로",

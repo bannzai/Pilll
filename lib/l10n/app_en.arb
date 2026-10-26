@@ -253,7 +253,7 @@
   "sex": "Sex",
   "previousPillSheetGroup": "Previous pill pack group",
   "noPreviousPillSheetGroup": "There’s no previous pill pack group yet",
-  "failedToFetchPillHistory": "Failed to retrieve medication history information. {error}",
+  "failedToFetchPillHistory": "Couldn’t load your pill history. {error}",
   "seeFAQ": "View FAQ",
   "reloadScreen": "Reload",
   "contactIfNotResolved": "Contact us if unresolved",

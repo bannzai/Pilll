@@ -253,7 +253,7 @@
   "sex": "Spolni odnos",
   "previousPillSheetGroup": "Prethodna skupina blistera",
   "noPreviousPillSheetGroup": "Prethodna grupa blistera još ne postoji",
-  "failedToFetchPillHistory": "Neuspješno dohvaćanje informacija o povijesti uzimanja. {error}",
+  "failedToFetchPillHistory": "Nije moguće učitati podatke za povijest uzimanja pilula. {error}",
   "seeFAQ": "Pogledaj FAQ",
   "reloadScreen": "Osvježi stranicu",
   "contactIfNotResolved": "Ako se ne riješi, kliknite ovdje",

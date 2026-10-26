@@ -253,7 +253,7 @@
   "sex": "Relații sexuale",
   "previousPillSheetGroup": "Grupul anterior de blistere",
   "noPreviousPillSheetGroup": "Nu există încă un grup anterior de blistere",
-  "failedToFetchPillHistory": "Nu s-au putut obține informațiile despre istoricul administrării. {error}",
+  "failedToFetchPillHistory": "Nu s-au putut încărca informațiile din istoricul administrării pilulelor. {error}",
   "seeFAQ": "Vezi FAQ",
   "reloadScreen": "Reîncărcați ecranul",
   "contactIfNotResolved": "Dacă nu se rezolvă, apăsați aici",

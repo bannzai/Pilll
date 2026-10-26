@@ -253,7 +253,7 @@
   "sex": "Pakikipagtalik",
   "previousPillSheetGroup": "Nakaraang pangkat ng pakete ng pildoras",
   "noPreviousPillSheetGroup": "Wala pang naunang grupo ng pakete ng pildoras",
-  "failedToFetchPillHistory": "Nabigo ang pagkuha ng impormasyon ng kasaysayan ng pag-inom. {error}",
+  "failedToFetchPillHistory": "Hindi nakuha ang impormasyon sa kasaysayan ng pag-inom ng pildoras. {error}",
   "seeFAQ": "Tingnan ang FAQ",
   "reloadScreen": "I-reload ang screen",
   "contactIfNotResolved": "Kung hindi pa nalulutas, i-click dito",

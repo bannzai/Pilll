@@ -253,7 +253,7 @@
   "sex": "Seks",
   "previousPillSheetGroup": "Vorige pilstrokiegroep",
   "noPreviousPillSheetGroup": "Daar is nog geen vorige pilstrokiegroep nie",
-  "failedToFetchPillHistory": "Kon nie die inligting oor die pilgebruikgeskiedenis laai nie. {error}",
+  "failedToFetchPillHistory": "Kon nie jou innamegeskiedenis laai nie. {error}",
   "seeFAQ": "Sien FAQ",
   "reloadScreen": "Herlaai skerm",
   "contactIfNotResolved": "Klik hier as dit nie help nie",

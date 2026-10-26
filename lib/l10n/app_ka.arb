@@ -253,7 +253,7 @@
   "sex": "სქესობრივი კავშირი",
   "previousPillSheetGroup": "აბების ბლისტერების წინა ჯგუფი",
   "noPreviousPillSheetGroup": "წინა აბების ბლისტერის ჯგუფი ჯერ არ არსებობს",
-  "failedToFetchPillHistory": "მიღების ისტორიის ინფორმაციის მიღება ვერ მოხერხდა. {error}",
+  "failedToFetchPillHistory": "მიღების ისტორიის მონაცემების ჩატვირთვა ვერ მოხერხდა. {error}",
   "seeFAQ": "ხშირად დასმული კითხვების ნახვა",
   "reloadScreen": "ეკრანის ხელახალი ჩატვირთვა",
   "contactIfNotResolved": "თუ პრობლემა არ გადაწყდა - იხილეთ აქ",

@@ -253,7 +253,7 @@
   "sex": "Dzimumattiecības",
   "previousPillSheetGroup": "Iepriekšējā tablešu blister grupa",
   "noPreviousPillSheetGroup": "Iepriekšējās tablešu blister grupas vēl nav",
-  "failedToFetchPillHistory": "Neizdevās iegūt tablešu lietošanas vēstures informāciju. {error}",
+  "failedToFetchPillHistory": "Neizdevās ielādēt lietošanas vēstures informāciju. {error}",
   "seeFAQ": "Skatīt FAQ",
   "reloadScreen": "Atjaunot ekrānu",
   "contactIfNotResolved": "Ja neatrisina - spiediet šeit",

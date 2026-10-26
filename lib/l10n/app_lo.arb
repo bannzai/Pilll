@@ -253,7 +253,7 @@
   "sex": "ການຮ່ວມເພດ",
   "previousPillSheetGroup": "ກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
   "noPreviousPillSheetGroup": "ຍັງບໍ່ມີກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
-  "failedToFetchPillHistory": "ການໂຫລດຂໍ້ມູນປະຫວັດການກິນຢາລົ້ມເຫລວ。{error}",
+  "failedToFetchPillHistory": "ບໍ່ສາມາດໂຫຼດຂໍ້ມູນປະຫວັດການກິນຢາໄດ້. {error}",
   "seeFAQ": "ເບິ່ງ FAQ",
   "reloadScreen": "ໂຫຼດໃໝ່",
   "contactIfNotResolved": "ຫາກແກ້ບໍ່ໄດ້, ຕິດຕໍ່ທີ່ນີ້",

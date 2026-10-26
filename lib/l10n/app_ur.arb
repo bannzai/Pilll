@@ -253,7 +253,7 @@
   "sex": "جنسی تعلق",
   "previousPillSheetGroup": "گولیوں کی پٹی کا پچھلا گروپ",
   "noPreviousPillSheetGroup": "گولیوں کی پٹی کا پچھلا گروپ ابھی موجود نہیں ہے",
-  "failedToFetchPillHistory": "دوائی لینے کی تاریخ کی معلومات حاصل کرنے میں ناکامی۔ {error}",
+  "failedToFetchPillHistory": "گولی لینے کی ہسٹری کی معلومات حاصل نہیں ہو سکیں۔ {error}",
   "seeFAQ": "اکثر پوچھے جانے والے سوالات دیکھیں",
   "reloadScreen": "دوبارہ لوڈ کریں",
   "contactIfNotResolved": "اگر مسئلہ حل نہیں ہو تو یہاں رابطہ کریں",

@@ -253,7 +253,7 @@
   "sex": "Jinsiy aloqa",
   "previousPillSheetGroup": "Oldingi tabletka blister guruhi",
   "noPreviousPillSheetGroup": "Oldingi tabletka blister guruhi hali mavjud emas",
-  "failedToFetchPillHistory": "Qabul qilish tarixi ma'lumotlarini olishda xatolik yuz berdi. {error}",
+  "failedToFetchPillHistory": "Qabul qilish tarixi maʼlumotlarini yuklab boʻlmadi. {error}",
   "seeFAQ": "FAQ ko'rish",
   "reloadScreen": "Ekranni yangilash",
   "contactIfNotResolved": "Hal bo'lmasa, bu yerga murojaat qiling",

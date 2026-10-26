@@ -253,7 +253,7 @@
   "sex": "Seksuaalvahekord",
   "previousPillSheetGroup": "Eelmine pillilehtede rühm",
   "noPreviousPillSheetGroup": "Eelmist pillilehe rühma veel ei ole",
-  "failedToFetchPillHistory": "Tablettide võtmisajaloo laadimine ebaõnnestus. {error}",
+  "failedToFetchPillHistory": "Võtmislogi andmeid ei õnnestunud laadida. {error}",
   "seeFAQ": "Vaata FAQ",
   "reloadScreen": "Värskenda ekraani",
   "contactIfNotResolved": "Kui ei lahene, siis siia",

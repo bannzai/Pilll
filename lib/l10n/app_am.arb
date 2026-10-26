@@ -253,7 +253,7 @@
   "sex": "ወሲባዊ ግንኙነት",
   "previousPillSheetGroup": "የቀድሞው ክኒን ሉህ ቡድን",
   "noPreviousPillSheetGroup": "የቀድሞው ክኒን ሉህ ቡድን ገና የለም",
-  "failedToFetchPillHistory": "የመድሐኒት መውሰድ ታሪክ መረጃ ማግኘት አልተሳካም። {error}",
+  "failedToFetchPillHistory": "የአወሳሰድ ታሪክ መረጃን ማግኘት አልተቻለም። {error}",
   "seeFAQ": "ተደጋጋሚ ጥያቄዎችን ይመልከቱ",
   "reloadScreen": "ማያን ማደስ",
   "contactIfNotResolved": "ካልተፈታ እዚህ ያግኙን",

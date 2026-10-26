@@ -253,7 +253,7 @@
   "sex": "Cinsel ilişki",
   "previousPillSheetGroup": "Önceki blister grubu",
   "noPreviousPillSheetGroup": "Önceki blister grubu henüz yok",
-  "failedToFetchPillHistory": "Kullanım geçmişi bilgileri alınamadı. {error}",
+  "failedToFetchPillHistory": "Kullanım geçmişi bilgileri yüklenemedi. {error}",
   "seeFAQ": "SSS'yi Görüntüle",
   "reloadScreen": "Ekranı yeniden yükle",
   "contactIfNotResolved": "Sorun devam ederse buraya başvurun",

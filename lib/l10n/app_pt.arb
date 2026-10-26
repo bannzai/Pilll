@@ -253,7 +253,7 @@
   "sex": "Relação sexual",
   "previousPillSheetGroup": "Grupo anterior de cartelas",
   "noPreviousPillSheetGroup": "Ainda não há um grupo anterior de cartelas",
-  "failedToFetchPillHistory": "Falha ao obter informações do histórico de medicação. {error}",
+  "failedToFetchPillHistory": "Não foi possível carregar as informações do histórico de uso. {error}",
   "seeFAQ": "Ver FAQ",
   "reloadScreen": "Recarregar tela",
   "contactIfNotResolved": "Se não conseguir resolver, clique aqui",

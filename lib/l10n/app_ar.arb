@@ -253,7 +253,7 @@
   "sex": "العلاقة الجنسية",
   "previousPillSheetGroup": "مجموعة الشريط السابقة",
   "noPreviousPillSheetGroup": "لا توجد مجموعة سابقة من شريط الحبوب بعد",
-  "failedToFetchPillHistory": "فشل في الحصول على معلومات سجل تناول الأقراص. {error}",
+  "failedToFetchPillHistory": "تعذر جلب معلومات سجل تناول الحبوب. {error}",
   "seeFAQ": "عرض الأسئلة الشائعة",
   "reloadScreen": "إعادة تحميل الصفحة",
   "contactIfNotResolved": "إذا لم تحل المشكلة، اضغط هنا",

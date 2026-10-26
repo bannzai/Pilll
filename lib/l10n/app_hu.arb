@@ -253,7 +253,7 @@
   "sex": "Szexuális együttlét",
   "previousPillSheetGroup": "Előző tablettacsomag-csoport",
   "noPreviousPillSheetGroup": "Még nincs korábbi tablettacsomag-csoport",
-  "failedToFetchPillHistory": "A szedési előzmények betöltése sikertelen volt. {error}",
+  "failedToFetchPillHistory": "Nem sikerült betölteni a szedési előzmények adatait. {error}",
   "seeFAQ": "GYIK megtekintése",
   "reloadScreen": "Képernyő frissítése",
   "contactIfNotResolved": "Ha nem oldódik meg, kattintson ide",

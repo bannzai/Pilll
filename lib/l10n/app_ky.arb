@@ -253,7 +253,7 @@
   "sex": "Жыныстык катнаш",
   "previousPillSheetGroup": "Мурунку таблетка блистери тобу",
   "noPreviousPillSheetGroup": "Мурунку таблетка блистери тобу азырынча жок",
-  "failedToFetchPillHistory": "Дары кабыл алуу тарыхын жүктөө ишке ашпады. {error}",
+  "failedToFetchPillHistory": "Ичүү тарыхы тууралуу маалыматты жүктөй алган жокпуз. {error}",
   "seeFAQ": "FAQди көрүү",
   "reloadScreen": "Экранды жаңыртуу",
   "contactIfNotResolved": "Чечилбесе, бул жерден байланышыңыз",

@@ -253,7 +253,7 @@
   "sex": "Hubungan seks",
   "previousPillSheetGroup": "Kumpulan pek pil sebelumnya",
   "noPreviousPillSheetGroup": "Kumpulan pek pil sebelumnya belum ada",
-  "failedToFetchPillHistory": "Gagal mendapatkan maklumat sejarah pengambilan. {error}",
+  "failedToFetchPillHistory": "Maklumat sejarah pengambilan tidak dapat dimuatkan. {error}",
   "seeFAQ": "Lihat FAQ",
   "reloadScreen": "Muat semula skrin",
   "contactIfNotResolved": "Jika tidak dapat diselesaikan, klik di sini",

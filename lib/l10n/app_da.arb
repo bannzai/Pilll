@@ -253,7 +253,7 @@
   "sex": "Sex",
   "previousPillSheetGroup": "Forrige gruppe pillekort",
   "noPreviousPillSheetGroup": "Der er endnu ingen tidligere pillekortgruppe",
-  "failedToFetchPillHistory": "Kunne ikke hente indtagelseshistorik. {error}",
+  "failedToFetchPillHistory": "Kunne ikke hente oplysninger om din pillehistorik. {error}",
   "seeFAQ": "Se FAQ",
   "reloadScreen": "Genindlæs skærm",
   "contactIfNotResolved": "Hvis ikke løst, kontakt os",

@@ -253,7 +253,7 @@
   "sex": "Ukuya ocansini",
   "previousPillSheetGroup": "Iqembu langaphambilini le-shidi lamaphilisi",
   "noPreviousPillSheetGroup": "Alikakabi khona iqembu langaphambilini leshidi lamaphilisi",
-  "failedToFetchPillHistory": "Kwehlulekile ukuthola ulwazi lomlando wokuphuzwa kwamaphilisi. {error}",
+  "failedToFetchPillHistory": "Ayikwazanga ukulandwa imininingwane yomlando wokuphuza amaphilisi. {error}",
   "seeFAQ": "Bheka i-FAQ",
   "reloadScreen": "Vuselela isiskrini",
   "contactIfNotResolved": "Uma kungaxazululanga, xhumana nathi",

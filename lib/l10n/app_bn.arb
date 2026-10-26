@@ -253,7 +253,7 @@
   "sex": "যৌন সম্পর্ক",
   "previousPillSheetGroup": "আগের পিল শিটের গ্রুপ",
   "noPreviousPillSheetGroup": "আগের পিল শিটের গ্রুপ এখনও নেই",
-  "failedToFetchPillHistory": "সেবনের ইতিহাসের তথ্য লোড করতে ব্যর্থ হয়েছে। {error}",
+  "failedToFetchPillHistory": "সেবনের ইতিহাসের তথ্য আনা যায়নি। {error}",
   "seeFAQ": "FAQ দেখুন",
   "reloadScreen": "স্ক্রিন রিফ্রেশ করুন",
   "contactIfNotResolved": "সমাধান না হলে এখানে",

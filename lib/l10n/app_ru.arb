@@ -253,7 +253,7 @@
   "sex": "Половой контакт",
   "previousPillSheetGroup": "Предыдущая группа блистеров",
   "noPreviousPillSheetGroup": "Предыдущей группы блистеров пока нет",
-  "failedToFetchPillHistory": "Не удалось получить информацию об истории приема. {error}",
+  "failedToFetchPillHistory": "Не удалось загрузить данные для истории приёма. {error}",
   "seeFAQ": "Посмотреть FAQ",
   "reloadScreen": "Обновить экран",
   "contactIfNotResolved": "Если не помогло, обратитесь сюда",

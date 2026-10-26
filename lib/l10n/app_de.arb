@@ -253,7 +253,7 @@
   "sex": "Sex",
   "previousPillSheetGroup": "Vorherige Pillenblistergruppe",
   "noPreviousPillSheetGroup": "Es gibt noch keine vorherige Pillenblistergruppe",
-  "failedToFetchPillHistory": "Das Abrufen der Einnahmehistorie-Informationen ist fehlgeschlagen. {error}",
+  "failedToFetchPillHistory": "Die Daten für deinen Einnahmeverlauf konnten nicht geladen werden. {error}",
   "seeFAQ": "FAQ ansehen",
   "reloadScreen": "Neu laden",
   "contactIfNotResolved": "Falls ungelöst, hier klicken",

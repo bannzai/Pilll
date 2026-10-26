@@ -253,7 +253,7 @@
   "sex": "Σεξουαλική επαφή",
   "previousPillSheetGroup": "Προηγούμενη ομάδα από καρτέλα χαπιών",
   "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμη προηγούμενη ομάδα για καρτέλα χαπιών",
-  "failedToFetchPillHistory": "Απέτυχε η ανάκτηση των στοιχείων ιστορικού λήψης. {error}",
+  "failedToFetchPillHistory": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών για το ιστορικό λήψης. {error}",
   "seeFAQ": "Δείτε τις Συχνές Ερωτήσεις",
   "reloadScreen": "Ανανέωση οθόνης",
   "contactIfNotResolved": "Αν δεν επιλυθεί, κάντε κλικ εδώ",

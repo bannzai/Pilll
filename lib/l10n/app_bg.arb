@@ -253,7 +253,7 @@
   "sex": "Сексуален контакт",
   "previousPillSheetGroup": "Предишна група блистери",
   "noPreviousPillSheetGroup": "Все още няма предишна група блистер",
-  "failedToFetchPillHistory": "Неуспешно получаване на информацията за историята на приема. {error}",
+  "failedToFetchPillHistory": "Не успяхме да заредим данните за История на приема. {error}",
   "seeFAQ": "Разгледай ЧЗВ",
   "reloadScreen": "Презареди екран",
   "contactIfNotResolved": "Ако не се реши, натиснете тук",

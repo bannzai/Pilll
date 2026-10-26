@@ -253,7 +253,7 @@
   "sex": "Sex",
   "previousPillSheetGroup": "Forrige gruppe pillebrett",
   "noPreviousPillSheetGroup": "Det finnes ingen tidligere pillebrettgruppe ennå",
-  "failedToFetchPillHistory": "Kunne ikke hente medikamenthistorikk. {error}",
+  "failedToFetchPillHistory": "Kunne ikke hente informasjon om inntakshistorikk. {error}",
   "seeFAQ": "Se FAQ",
   "reloadScreen": "Oppdater skjerm",
   "contactIfNotResolved": "Hvis dette ikke hjelper",
