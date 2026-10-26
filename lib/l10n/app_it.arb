@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Hai già acquistato questo piano. Per ripristinare l’acquisto su questo dispositivo, seleziona «Hai già acquistato?»",
   "purchaseErrorReceiptAlreadyInUseError": "L’acquisto è già stato effettuato oppure i dati di acquisto sono in uso su un altro account. Controlla l’account {accountName}",
   "purchaseErrorInvalidReceiptError": "Le informazioni sull'acquisto non sono valide. Controlla i dettagli dell'acquisto",
-  "purchaseErrorMissingReceiptFileError": "Non sono state trovate informazioni sull'acquirente. Accedi al dispositivo con {accountName} e riprova",
+  "purchaseErrorMissingReceiptFileError": "Le informazioni dell'acquirente non sono state trovate. Accedi al dispositivo con {accountName} e riprova",
   "purchaseErrorNetworkError": "La connessione di rete è instabile. Verificare la connessione e riprovare.",
   "purchaseErrorInvalidCredentialsError": "Acquisto non riuscito. Riprova più tardi. Se il problema persiste, contattaci tramite Impostazioni > Supporto. Dettagli: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Attualmente non è possibile effettuare l'acquisto. Riprova più tardi. Se il problema persiste, contattaci tramite Impostazioni > Contatti. Dettagli: {exceptionMessage}:{exceptionDetails}",

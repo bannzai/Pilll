@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Бул планды буга чейин сатып алгансыз. Бул түзмөктө сатып алуу маалыматын калыбына келтирүү үчүн «Мурда сатып алгансызбы?» дегенди тандаңыз",
   "purchaseErrorReceiptAlreadyInUseError": "Сатып алуу буга чейин жасалган же сатып алуу маалыматы башка колдонуучунун аккаунтунда колдонулуп жатат. {accountName} аккаунтун текшериңиз",
   "purchaseErrorInvalidReceiptError": "Сатып алуу маалыматы жараксыз. Сураныч, сатып алуу маалыматын текшериңиз",
-  "purchaseErrorMissingReceiptFileError": "Сатып алуучунун маалыматы жок. {accountName} менен түзмөккө кирип, кайра аракет кылыңыз",
+  "purchaseErrorMissingReceiptFileError": "Сатып алуучунун маалыматы табылган жок. Түзмөгүңүзгө {accountName} аккаунту менен кирип, кайра аракет кылып көрүңүз",
   "purchaseErrorNetworkError": "Интернет байланышы туруксуз. Байланышты текшерип, кайра аракет кылыңыз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алуу ийгиликсиз болду. Бир аз убакыт өткөндөн кийин кайрадан аракет кылыңыз. Эгер чечилбесе, Жөндөөлөр > Байланышуу аркылуу байланышыңыз. Майда-чүйдөлөр: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Азыр сатып алуу мүмкүн эмес. Убакыт өткөндөн кийин кайра аракет кылыңыз. Эгер чечилбей турган болсо Жөндөөлөр > Байланышуу аркылуу байланышыңыз. Кеңири маалымат: {exceptionMessage}:{exceptionDetails}",

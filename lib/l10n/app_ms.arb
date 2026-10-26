@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila pilih “Pernah membeli sebelum ini?”",
   "purchaseErrorReceiptAlreadyInUseError": "Pembelian sudah dibuat, atau maklumat pembelian sedang digunakan pada akaun lain. Sila semak akaun {accountName}",
   "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak butiran pembelian anda",
-  "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak dijumpai. Sila log masuk ke peranti menggunakan {accountName} dan cuba lagi.",
+  "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak ditemui. Sila log masuk pada peranti anda dengan akaun {accountName}, kemudian cuba lagi",
   "purchaseErrorNetworkError": "Sambungan rangkaian tidak stabil. Sila periksa sambungan anda dan cuba lagi.",
   "purchaseErrorInvalidCredentialsError": "Pembelian tidak berjaya. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Pembelian tidak dapat dilakukan pada masa ini. Sila cuba lagi selepas beberapa masa. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",

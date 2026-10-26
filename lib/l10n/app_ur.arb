@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "یہ پلان پہلے ہی خریدا جا چکا ہے۔ اس ڈیوائس پر خریداری کی معلومات بحال کرنے کے لیے براہِ کرم «پہلے خرید چکے ہیں؟» منتخب کریں",
   "purchaseErrorReceiptAlreadyInUseError": "خریداری پہلے ہی ہو چکی ہے یا خریداری کی معلومات کسی دوسرے صارف کے اکاؤنٹ میں استعمال ہو رہی ہیں۔ براہ کرم {accountName} اکاؤنٹ دیکھیں",
   "purchaseErrorInvalidReceiptError": "خریداری کی معلومات درست نہیں ہیں۔ براہِ کرم خریداری کی تفصیلات چیک کریں",
-  "purchaseErrorMissingReceiptFileError": "خریدار کی معلومات موجود نہیں ہے۔ براہ کرم {accountName} کے ساتھ ڈیوائس میں سائن ان کرکے دوبارہ کوشش کریں",
+  "purchaseErrorMissingReceiptFileError": "خریدار کی معلومات نہیں ملیں۔ براہِ کرم اپنے آلے پر {accountName} اکاؤنٹ سے سائن اِن کریں اور دوبارہ کوشش کریں",
   "purchaseErrorNetworkError": "نیٹ ورک کنکشن غیر مستحکم ہے۔ اپنا کنکشن چیک کر کے دوبارہ کوشش کریں۔",
   "purchaseErrorInvalidCredentialsError": "خریداری ناکام ہوگئی۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو سیٹنگز > رابطہ کریں سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "فی الوقت خریداری دستیاب نہیں ہے۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کے ذریعے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",

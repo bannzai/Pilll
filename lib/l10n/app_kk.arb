@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Бұл жоспарды сатып алып қойғансыз. Осы құрылғыда сатып алу деректерін қалпына келтіру үшін «Бұрын сатып алдыңыз ба?» тармағын таңдаңыз",
   "purchaseErrorReceiptAlreadyInUseError": "Сатып алу бұрыннан жасалған немесе сатып алу деректері басқа пайдаланушының аккаунтында қолданылып жатыр. {accountName} аккаунтын тексеріңіз",
   "purchaseErrorInvalidReceiptError": "Сатып алу мәліметтері жарамсыз. Сатып алу мәліметтерін тексеріңіз",
-  "purchaseErrorMissingReceiptFileError": "Сатып алушы туралы ақпарат жоқ. {accountName} арқылы құрылғыға кіріп, қайталап көріңіз",
+  "purchaseErrorMissingReceiptFileError": "Сатып алушы туралы ақпарат табылмады. Құрылғыңызға {accountName} тіркелгісімен кіріп, қайталап көріңіз",
   "purchaseErrorNetworkError": "Желі күйі тұрақсыз. Қосылу жағдайын тексеріп, қайталап көріңіз.",
   "purchaseErrorInvalidCredentialsError": "Сатып алу сәтсіз аяқталды. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Хабарласу арқылы бізбен хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Қазір сатып алу мүмкін емес. Біраз уақыттан кейін қайтадан сынап көріңіз. Мәселе шешілмесе, Параметрлер > Хабарласу арқылы бізге хабарласыңыз. Толық ақпарат: {exceptionMessage}:{exceptionDetails}",

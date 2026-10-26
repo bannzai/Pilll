@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "यह प्लान पहले ही खरीदा जा चुका है। इस डिवाइस पर खरीदारी की जानकारी पुनर्स्थापित करने के लिए कृपया “पहले खरीदा है?” चुनें",
   "purchaseErrorReceiptAlreadyInUseError": "खरीदारी पहले ही हो चुकी है या खरीदारी की जानकारी किसी दूसरे खाते में इस्तेमाल हो रही है। कृपया {accountName} खाता जाँचें",
   "purchaseErrorInvalidReceiptError": "खरीदारी की जानकारी मान्य नहीं है। कृपया अपनी खरीदारी का विवरण जाँचें",
-  "purchaseErrorMissingReceiptFileError": "खरीदार की जानकारी उपलब्ध नहीं है। कृपया {accountName} से डिवाइस में साइन इन करके पुनः प्रयास करें।",
+  "purchaseErrorMissingReceiptFileError": "खरीदार की जानकारी नहीं मिली। कृपया अपने डिवाइस पर {accountName} से साइन इन करके फिर कोशिश करें",
   "purchaseErrorNetworkError": "नेटवर्क कनेक्शन अस्थिर है। कृपया अपनी कनेक्शन की जांच करके फिर से कोशिश करें।",
   "purchaseErrorInvalidCredentialsError": "खरीदारी असफल हो गई। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "फिलहाल खरीदारी नहीं की जा सकती। कुछ समय बाद फिर कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",

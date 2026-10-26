@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Ten plan został już kupiony. Aby przywrócić zakup na tym urządzeniu, wybierz „Kupiono wcześniej?”",
   "purchaseErrorReceiptAlreadyInUseError": "Zakup został już dokonany albo dane zakupu są używane na innym koncie. Sprawdź konto {accountName}",
   "purchaseErrorInvalidReceiptError": "Dane zakupu są nieprawidłowe. Sprawdź szczegóły zakupu",
-  "purchaseErrorMissingReceiptFileError": "Informacje o kupującym nie zostały znalezione. Zaloguj się na urządzeniu przy użyciu konta {accountName} i spróbuj ponownie.",
+  "purchaseErrorMissingReceiptFileError": "Nie znaleziono danych kupującego. Zaloguj się na urządzeniu na konto {accountName} i spróbuj ponownie",
   "purchaseErrorNetworkError": "Stan sieci jest niestabilny. Sprawdź połączenie internetowe i spróbuj ponownie.",
   "purchaseErrorInvalidCredentialsError": "Zakup nie powiódł się. Spróbuj ponownie po chwili. Jeśli problem nadal występuje, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Obecnie nie można dokonać zakupu. Proszę spróbować ponownie po chwili. Jeśli problem nie zostanie rozwiązany, skontaktuj się z nami poprzez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",

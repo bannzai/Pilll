@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "මෙම සැලැස්ම දැනටමත් මිලදී ගෙන ඇත. මෙම උපාංගයේ මිලදී ගැනීමේ තොරතුරු ප්‍රතිසාධනය කිරීමට කරුණාකර “කලින් මිලදී ගත්තාද?” තෝරන්න",
   "purchaseErrorReceiptAlreadyInUseError": "මිලදී ගැනීම දැනටමත් සිදු කර ඇත, නැතහොත් මිලදී ගැනීමේ තොරතුරු වෙනත් පරිශීලක ගිණුමක භාවිත වේ. කරුණාකර {accountName} ගිණුම පරීක්ෂා කරන්න",
   "purchaseErrorInvalidReceiptError": "මිලදී ගැනීමේ තොරතුරු වලංගු නැත. කරුණාකර මිලදී ගැනීමේ විස්තර පරීක්ෂා කරන්න",
-  "purchaseErrorMissingReceiptFileError": "මිලදී ගන්නාගේ තොරතුරු නොපවතී. {accountName} සමඟ උපාංගයට පුරනය වී නැවත උත්සාහ කරන්න",
+  "purchaseErrorMissingReceiptFileError": "මිලදී ගත් අයගේ තොරතුරු හමු නොවීය. කරුණාකර ඔබේ උපාංගයේ {accountName} ගිණුමෙන් පුරනය වී නැවත උත්සාහ කරන්න",
   "purchaseErrorNetworkError": "ජාල සම්බන්ධතාවය අස්ථිර වේ. කරුණාකර ඔබේ සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "purchaseErrorInvalidCredentialsError": "ගැණුම් ක්‍රියාව අසාර්ථක විය. කරුණාකර ටික වේලාවකට පසුව නැවත උත්සාහ කරන්න. එය විසදා නොගත හැකි නම් සැකසීම් > විමසීම් හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "දැනට මිළදී ගැනීමට නොහැක. කරුණාකර ටික වේලාවකින් නැවත උත්සාහ කරන්න. ගැටලුව විසඳී නොමැති නම් සැකසීම් > අපගෙන් විමසන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",

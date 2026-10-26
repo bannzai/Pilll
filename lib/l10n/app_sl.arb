@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Ta paket je že kupljen. Če želite obnoviti nakup v tej napravi, izberite »Ste že kupili?«",
   "purchaseErrorReceiptAlreadyInUseError": "Nakup je že opravljen ali pa se podatki o nakupu uporabljajo v drugem uporabniškem računu. Preverite račun {accountName}",
   "purchaseErrorInvalidReceiptError": "Podatki o nakupu niso veljavni. Prosimo, preverite podatke o nakupu",
-  "purchaseErrorMissingReceiptFileError": "Podatki o kupcu ne obstajajo. Prosimo, prijavite se v napravo z {accountName} in poskusite znova.",
+  "purchaseErrorMissingReceiptFileError": "Podatkov o kupcu ni bilo mogoče najti. V napravi se prijavite z računom {accountName} in poskusite znova",
   "purchaseErrorNetworkError": "Omrežna povezava je nestabilna. Preverite stanje povezave in poskusite znova.",
   "purchaseErrorInvalidCredentialsError": "Nakup ni uspel. Poskusite znova pozneje. Če se težava ne reši, se obrnite na Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Trenutno nakup ni možen. Prosimo, poskusite ponovno čez nekaj časa. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

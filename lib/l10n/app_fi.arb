@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Olet jo ostanut tämän tilauksen. Voit palauttaa ostoksen tällä laitteella valitsemalla ”Oletko ostanut aiemmin?”",
   "purchaseErrorReceiptAlreadyInUseError": "Osto on jo tehty, tai ostotietoja käytetään toisella käyttäjätilillä. Tarkista tili {accountName}",
   "purchaseErrorInvalidReceiptError": "Ostotiedot eivät kelpaa. Tarkista ostotietosi",
-  "purchaseErrorMissingReceiptFileError": "Ostajatietoja ei löytynyt. Kirjaudu laitteeseen {accountName}-tilillä ja yritä uudelleen.",
+  "purchaseErrorMissingReceiptFileError": "Ostajan tietoja ei löytynyt. Kirjaudu laitteellasi sisään tilillä {accountName} ja yritä uudelleen",
   "purchaseErrorNetworkError": "Verkkoyhteys on epävakaa. Tarkista internetyhteytesi ja yritä uudelleen.",
   "purchaseErrorInvalidCredentialsError": "Osto epäonnistui. Odota hetki ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä Asetukset > Ota yhteyttä -kautta. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ostoa ei voi tällä hetkellä suorittaa. Yritä hetken kuluttua uudelleen. Jos ongelma ei ratkeaa, ota yhteyttä kohdasta Asetukset > Yhteydenotto. Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",

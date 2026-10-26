@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Siz bu rejani allaqachon xarid qilgansiz. Xarid maʼlumotlarini ushbu qurilmada tiklash uchun «Avval xarid qilganmisiz?» bandini tanlang",
   "purchaseErrorReceiptAlreadyInUseError": "Xarid allaqachon amalga oshirilgan yoki xarid maʼlumotlari boshqa foydalanuvchi hisobida ishlatilmoqda. Iltimos, {accountName} hisobini tekshiring",
   "purchaseErrorInvalidReceiptError": "Xarid maʼlumotlari yaroqsiz. Iltimos, xarid tafsilotlarini tekshiring",
-  "purchaseErrorMissingReceiptFileError": "Xaridorning ma'lumotlari mavjud emas. {accountName} bilan qurilmaga kirib, qaytadan urinib ko'ring",
+  "purchaseErrorMissingReceiptFileError": "Xaridor maʼlumotlari topilmadi. Iltimos, qurilmangizda {accountName} hisobi bilan tizimga kirib, qayta urinib koʻring",
   "purchaseErrorNetworkError": "Tarmoq holati beqaror. Ulanish holatini tekshirib, qayta urinib ko'ring.",
   "purchaseErrorInvalidCredentialsError": "Xarid amalga oshmadi. Biroz kutib, qaytadan urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali bog'laning. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hozirda xarid qilib bo'lmayapti. Biroz vaqtdan so'ng yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali murojaat qiling. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",

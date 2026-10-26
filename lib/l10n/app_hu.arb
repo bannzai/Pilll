@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Ezt a csomagot már megvásároltad. A vásárlás visszaállításához ezen az eszközön válaszd a „Már megvásároltad?” lehetőséget",
   "purchaseErrorReceiptAlreadyInUseError": "A vásárlás már megtörtént, vagy a vásárlási adatokat egy másik felhasználói fiók használja. Kérjük, ellenőrizd a(z) {accountName} fiókot",
   "purchaseErrorInvalidReceiptError": "A vásárlási adatok érvénytelenek. Kérjük, ellenőrizd a vásárlás adatait",
-  "purchaseErrorMissingReceiptFileError": "Nem találhatók vásárlói adatok. Kérjük, jelentkezzen be a(z) {accountName} fiókkal az eszközön, majd próbálja újra.",
+  "purchaseErrorMissingReceiptFileError": "A vásárló adatai nem találhatók. Jelentkezz be a készülékeden a(z) {accountName} fiókkal, majd próbáld újra",
   "purchaseErrorNetworkError": "A hálózati kapcsolat instabil. Kérjük, ellenőrizze a kapcsolatot és próbálja újra.",
   "purchaseErrorInvalidCredentialsError": "A vásárlás sikertelen volt. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, vegye fel velünk a kapcsolatot a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Jelenleg nem lehet vásárolni. Kérjük, várjon egy kicsit, majd próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolat menüponton keresztül. Részletek: {exceptionMessage}:{exceptionDetails}",

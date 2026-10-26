@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "तुम्ही हा प्लॅन आधीच खरेदी केला आहे. या डिव्हाइसवर खरेदीची माहिती पुनर्संचयित करण्यासाठी कृपया ‘आधी खरेदी केली आहे?’ निवडा",
   "purchaseErrorReceiptAlreadyInUseError": "खरेदी आधीच झाली आहे किंवा खरेदीची माहिती दुसऱ्या वापरकर्त्याच्या खात्यात वापरली जात आहे. कृपया {accountName} खाते तपासा",
   "purchaseErrorInvalidReceiptError": "खरेदीची माहिती वैध नाही. कृपया तुमच्या खरेदीचा तपशील तपासा",
-  "purchaseErrorMissingReceiptFileError": "खरेदीदाराची माहिती उपलब्ध नाही. कृपया {accountName} वर डिव्हाइसमध्ये साइन इन करून पुन्हा प्रयत्न करा",
+  "purchaseErrorMissingReceiptFileError": "खरेदीदाराची माहिती सापडली नाही. कृपया तुमच्या डिव्हाइसवर {accountName} खात्याने साइन इन करून पुन्हा प्रयत्न करा",
   "purchaseErrorNetworkError": "नेटवर्क कनेक्शन अस्थिर आहे. कृपया आपले कनेक्शन तपासून पुन्हा प्रयत्न करा.",
   "purchaseErrorInvalidCredentialsError": "खरेदी अयशस्वी झाली. काही वेळ प्रतीक्षा करून पुन्हा प्रयत्न करा. समस्या सुटल्याशिवाय सेटिंग्स > चौकशी मार्गे संपर्क करा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "सध्या खरेदी करता येत नाही. थोडा वेळ थांबून पुन्हा प्रयत्न करा. जर समस्या सोडवली नाही तर सेटिंग्स > चौकशी मधून संपर्क करा. तपशील: {exceptionMessage}:{exceptionDetails}",

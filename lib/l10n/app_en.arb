@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "You’ve already purchased this plan. To restore your purchase on this device, select “Already purchased?”",
   "purchaseErrorReceiptAlreadyInUseError": "Already purchased, or the purchase information is being used by another account. Please check the {accountName} account",
   "purchaseErrorInvalidReceiptError": "Your purchase information isn't valid. Please check your purchase details",
-  "purchaseErrorMissingReceiptFileError": "No purchaser information found. Please sign in to your device with {accountName} and try again.",
+  "purchaseErrorMissingReceiptFileError": "We couldn't find the purchaser's information. Sign in to your device with {accountName} and try again",
   "purchaseErrorNetworkError": "Network connection is unstable. Please check your connection and try again.",
   "purchaseErrorInvalidCredentialsError": "Purchase failed. Please wait a moment and try again. If the issue persists, please contact us through Settings > Contact Us. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Purchase is currently unavailable. Please wait a moment and try again. If the issue persists, please contact us via Settings > Contact. Details: {exceptionMessage}:{exceptionDetails}",

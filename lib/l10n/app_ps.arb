@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "تاسو دا پلان مخکې اخیستی دی. په دې وسیله کې د پېرود معلوماتو د بېرته راګرځولو لپاره، مهرباني وکړئ «مخکې مو پېرود کړی؟» وټاکئ",
   "purchaseErrorReceiptAlreadyInUseError": "پېرود مخکې ترسره شوی، یا د پېرود معلومات د بل کاروونکي په حساب کې کارول کېږي. مهرباني وکړئ د {accountName} حساب وګورئ",
   "purchaseErrorInvalidReceiptError": "د پېرود معلومات سم نه دي. مهرباني وکړئ د پېرود معلومات وګورئ",
-  "purchaseErrorMissingReceiptFileError": "د پیرودونکي معلومات موندل نشول. مهرباني وکړئ د {accountName} سره خپلې وسیلې ته ننوتل وکړئ او بیا هڅه وکړئ",
+  "purchaseErrorMissingReceiptFileError": "د پېرودونکي معلومات ونه موندل شول. مهرباني وکړئ په خپل وسیله کې د {accountName} حساب ته ننوځئ او بیا هڅه وکړئ",
   "purchaseErrorNetworkError": "د انټرنیټ پیوستون ناثابته دی. مهرباني وکړئ خپل د انټرنیټ وضعیت وګورئ او بیا هڅه وکړئ.",
   "purchaseErrorInvalidCredentialsError": "پیرودل ناکام شو. مهرباني وکړئ د لږ وخت وروسته بیا هڅه وکړئ. که ستونزه حل نه شي، د تنظیمات > پوښتنو څخه موږ سره اړیکه ونیسئ. تفصیل: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "دا وخت پیرودل ممکن ندي. مهرباني وکړئ د یو څه وخت وروسته بیا هڅه وکړئ. که ستونزه حل نشي د تنظیمات > اړیکه ونیسئ څخه زموږ سره اړیکه ونیسئ. تفصیلات: {exceptionMessage}:{exceptionDetails}",

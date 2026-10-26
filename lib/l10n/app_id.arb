@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli paket ini. Untuk memulihkan pembelian di perangkat ini, pilih “Sudah pernah membeli?”",
   "purchaseErrorReceiptAlreadyInUseError": "Pembelian sudah dilakukan, atau informasi pembelian digunakan di akun lain. Silakan periksa akun {accountName}",
   "purchaseErrorInvalidReceiptError": "Informasi pembelian tidak valid. Silakan periksa detail pembelian Anda",
-  "purchaseErrorMissingReceiptFileError": "Informasi pembeli tidak ditemukan. Silakan masuk dengan akun {accountName} dan coba lagi",
+  "purchaseErrorMissingReceiptFileError": "Informasi pembeli tidak ditemukan. Silakan masuk ke perangkat Anda dengan akun {accountName}, lalu coba lagi",
   "purchaseErrorNetworkError": "Koneksi jaringan tidak stabil. Silakan periksa koneksi internet Anda dan coba lagi.",
   "purchaseErrorInvalidCredentialsError": "Pembelian gagal. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Saat ini tidak dapat melakukan pembelian. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",

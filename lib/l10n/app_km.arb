@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "អ្នកបានទិញគម្រោងនេះរួចហើយ។ ដើម្បីស្ដារព័ត៌មានការទិញនៅលើឧបករណ៍នេះ សូមជ្រើសរើស «ធ្លាប់ទិញរួចហើយ?»",
   "purchaseErrorReceiptAlreadyInUseError": "ការទិញបានធ្វើរួចហើយ ឬព័ត៌មានការទិញកំពុងត្រូវបានប្រើដោយគណនីផ្សេង។ សូមពិនិត្យគណនី {accountName}",
   "purchaseErrorInvalidReceiptError": "ព័ត៌មានការទិញមិនត្រឹមត្រូវទេ។ សូមពិនិត្យមើលព័ត៌មានការទិញរបស់អ្នក",
-  "purchaseErrorMissingReceiptFileError": "ព័ត៌មានអ្នកទិញមិនអាចរកឃើញទេ។ សូមចូលគណនីដោយប្រើ {accountName} នៅលើឧបករណ៍របស់អ្នក ហើយព្យាយាមម្តងទៀត",
+  "purchaseErrorMissingReceiptFileError": "រកមិនឃើញព័ត៌មានរបស់អ្នកទិញទេ។ សូមចូលគណនី {accountName} នៅលើឧបករណ៍របស់អ្នក រួចព្យាយាមម្តងទៀត",
   "purchaseErrorNetworkError": "បណ្តាញមិនស្ថិរភាព។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្តងទៀត។",
   "purchaseErrorInvalidCredentialsError": "ការទិញបានបរាជ័យ។ សូមព្យាយាមម្តងទៀតក្រោយពេលបន្តិច។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការសំអាង។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "បច្ចុប្បន្ននេះមិនអាចធ្វើការទិញបានទេ។ សូមព្យាយាមម្តងទៀតបន្ទាប់ពីរយៈពេលមួយ។ ប្រសិនបើបញ្ហានៅតែមិនដោះស្រាយបាន សូមទាក់ទងមកយើងខ្ញុំតាមរយៈ ការកំណត់ > ការទាក់ទង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",

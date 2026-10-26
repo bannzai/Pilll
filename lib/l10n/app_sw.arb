@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Tayari umenunua mpango huu. Ili kurejesha taarifa za ununuzi kwenye kifaa hiki, tafadhali chagua “Ulishanunua?”",
   "purchaseErrorReceiptAlreadyInUseError": "Ununuzi tayari umefanyika, au taarifa za ununuzi zinatumika kwenye akaunti nyingine. Tafadhali angalia akaunti {accountName}",
   "purchaseErrorInvalidReceiptError": "Taarifa za ununuzi si halali. Tafadhali angalia maelezo ya ununuzi wako",
-  "purchaseErrorMissingReceiptFileError": "Taarifa za mnunuzi hazipatikani. Tafadhali ingia kwenye kifaa kwa kutumia {accountName} kisha ujaribu tena.",
+  "purchaseErrorMissingReceiptFileError": "Taarifa za mnunuzi hazijapatikana. Tafadhali ingia kwenye kifaa chako kwa akaunti ya {accountName}, kisha ujaribu tena",
   "purchaseErrorNetworkError": "Hali ya mtandao haijulikani. Tafadhali kagua muunganisho wako na ujaribu tena.",
   "purchaseErrorInvalidCredentialsError": "Ununuzi umeshindwa. Tafadhali subiri kitambo kisha jaribu tena. Ikiwa shida haitatuliwa, wasiliana nasi kupitia Mipangilio > Maswali. Maelezo: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Kwa sasa haiwezekani kununua. Jaribu tena baada ya muda. Ikiwa tatizo halitajisuluhisha, wasiliana nasi kupitia Mipangilio > Mawasiliano. Maelezo: {exceptionMessage}:{exceptionDetails}",

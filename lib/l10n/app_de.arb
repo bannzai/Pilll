@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Du hast den Plan bereits gekauft. Um deinen Kauf auf diesem Gerät wiederherzustellen, wähle „Bereits gekauft?“",
   "purchaseErrorReceiptAlreadyInUseError": "Der Kauf wurde bereits abgeschlossen oder die Kaufdaten werden von einem anderen Benutzerkonto verwendet. Bitte prüfe das Konto {accountName}",
   "purchaseErrorInvalidReceiptError": "Die Kaufinformationen sind ungültig. Bitte prüfe deine Kaufdaten",
-  "purchaseErrorMissingReceiptFileError": "Es wurden keine Käuferinformationen gefunden. Bitte melden Sie sich mit {accountName} auf Ihrem Gerät an und versuchen Sie es erneut.",
+  "purchaseErrorMissingReceiptFileError": "Die Käuferinformationen wurden nicht gefunden. Melde dich auf deinem Gerät mit {accountName} an und versuche es erneut",
   "purchaseErrorNetworkError": "Die Netzwerkverbindung ist instabil. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
   "purchaseErrorInvalidCredentialsError": "Der Kauf ist fehlgeschlagen. Bitte versuchen Sie es später erneut. Falls das Problem weiterhin besteht, kontaktieren Sie uns über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Derzeit ist ein Kauf nicht möglich. Bitte versuchen Sie es später erneut. Falls das Problem weiterhin besteht, kontaktieren Sie uns bitte über Einstellungen > Kontakt. Details: {exceptionMessage}:{exceptionDetails}",

@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Þú hefur þegar keypt áskriftina. Til að endurheimta kaupin í þessu tæki skaltu velja „Hefurðu keypt áður?“",
   "purchaseErrorReceiptAlreadyInUseError": "Kaupin hafa þegar farið fram eða kaupupplýsingarnar eru notaðar á öðrum notandareikningi. Athugaðu reikninginn {accountName}",
   "purchaseErrorInvalidReceiptError": "Upplýsingar um kaupin eru ógildar. Vinsamlegast athugaðu kaupupplýsingarnar",
-  "purchaseErrorMissingReceiptFileError": "Engar upplýsingar um kaupanda fundust. Vinsamlegast skráðu þig inn á tækið með {accountName} og reyndu aftur.",
+  "purchaseErrorMissingReceiptFileError": "Upplýsingar um kaupandann fundust ekki. Skráðu þig inn í tækið með {accountName} og reyndu aftur",
   "purchaseErrorNetworkError": "Nettenging er óstöðug. Vinsamlegast athugaðu tengingu þína og reyndu aftur.",
   "purchaseErrorInvalidCredentialsError": "Kaup mistókst. Vinsamlegast reyndu aftur síðar. Ef vandinn heldur áfram, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Ekki er hægt að kaupa núna. Vinsamlegast reyndu aftur síðar. Ef vandamálið leysist ekki, hafðu samband í gegnum Stillingar > Fyrirspurnir. Nánar: {exceptionMessage}:{exceptionDetails}",

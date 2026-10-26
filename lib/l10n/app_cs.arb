@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Plán už máte zakoupený. Pokud chcete nákup na tomto zařízení obnovit, zvolte „Už jste nakoupili?“",
   "purchaseErrorReceiptAlreadyInUseError": "Nákup již proběhl nebo se údaje o něm používají u jiného účtu. Zkontrolujte prosím účet {accountName}",
   "purchaseErrorInvalidReceiptError": "Údaje o nákupu nejsou platné. Zkontrolujte prosím údaje o nákupu",
-  "purchaseErrorMissingReceiptFileError": "Informace o kupujícím nebyly nalezeny. Prosím přihlaste se do zařízení pomocí {accountName} a zkuste to znovu.",
+  "purchaseErrorMissingReceiptFileError": "Informace o kupujícím nebyly nalezeny. Přihlaste se prosím v zařízení účtem {accountName} a zkuste to znovu",
   "purchaseErrorNetworkError": "Síťové připojení je nestabilní. Zkontrolujte prosím své připojení a zkuste to znovu.",
   "purchaseErrorInvalidCredentialsError": "Nákup se nezdařil. Zkuste to prosím znovu za chvíli. Pokud se problém nevyřeší, kontaktujte nás v Nastavení > Dotazy. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Nákup momentálně není možný. Zkuste to prosím znovu později. Pokud se problém nevyřeší, kontaktujte nás prosím přes Nastavení > Kontakt. Podrobnosti: {exceptionMessage}:{exceptionDetails}",

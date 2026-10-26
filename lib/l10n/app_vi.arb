@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Bạn đã mua gói này rồi. Để khôi phục thông tin mua hàng trên thiết bị này, vui lòng chọn “Đã mua trước đây?”",
   "purchaseErrorReceiptAlreadyInUseError": "Giao dịch mua đã hoàn tất hoặc thông tin mua hàng đang được dùng trên tài khoản khác. Vui lòng kiểm tra tài khoản {accountName}",
   "purchaseErrorInvalidReceiptError": "Thông tin mua hàng không hợp lệ. Vui lòng kiểm tra chi tiết giao dịch mua",
-  "purchaseErrorMissingReceiptFileError": "Không tìm thấy thông tin người mua. Vui lòng đăng nhập vào thiết bị bằng {accountName} rồi thử lại.",
+  "purchaseErrorMissingReceiptFileError": "Không tìm thấy thông tin người mua. Vui lòng đăng nhập vào thiết bị bằng tài khoản {accountName} rồi thử lại",
   "purchaseErrorNetworkError": "Kết nối mạng không ổn định. Vui lòng kiểm tra kết nối và thử lại.",
   "purchaseErrorInvalidCredentialsError": "Mua hàng thất bại. Vui lòng thử lại sau. Nếu vẫn không giải quyết được, hãy liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Hiện tại không thể mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề không được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",

@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "ທ່ານໄດ້ຊື້ແຜນນີ້ແລ້ວ. ເພື່ອກູ້ຄືນຂໍ້ມູນການຊື້ໃນອຸປະກອນນີ້ ກະລຸນາເລືອກ «ເຄີຍຊື້ແລ້ວ?»",
   "purchaseErrorReceiptAlreadyInUseError": "ໄດ້ຊື້ແລ້ວ ຫຼື ຂໍ້ມູນການຊື້ກຳລັງໃຊ້ຢູ່ໃນບັນຊີອື່ນ. ກະລຸນາກວດສອບບັນຊີ {accountName}",
   "purchaseErrorInvalidReceiptError": "ຂໍ້ມູນການຊື້ບໍ່ຖືກຕ້ອງ. ກະລຸນາກວດສອບລາຍລະອຽດການຊື້",
-  "purchaseErrorMissingReceiptFileError": "ບໍ່ພົບຂໍ້ມູນຜູ້ຊື້. ກະລຸນາເຂົ້າລະບົບດ້ວຍ {accountName} ໃນອຸປະກອນນີ້ກ່ອນ ແລ້ວລອງໃໝ່",
+  "purchaseErrorMissingReceiptFileError": "ບໍ່ພົບຂໍ້ມູນຜູ້ຊື້. ກະລຸນາເຂົ້າລະບົບໃນອຸປະກອນດ້ວຍບັນຊີ {accountName} ແລ້ວລອງໃໝ່",
   "purchaseErrorNetworkError": "ສະຖານະເຄືອຂ່າຍບໍ່ຄັງທີ່. ກະລຸນາກວດສອບສະຖານະການເຊື່ອມຕໍ່ແລ້ວລອງໃໝ່.",
   "purchaseErrorInvalidCredentialsError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຫາກບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ຜ່ານ ການຕັ້ງຄ່າ > ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "ປັດຈຸບັນບໍ່ສາມາດຊື້ໄດ້. ກະລຸນາລໍຖ້າສັກຄ່າ ແລະລອງໃໝ່ອີກຄັ້ງ. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ພາຍໃຕ້ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",

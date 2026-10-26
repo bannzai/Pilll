@@ -295,7 +295,7 @@
   "purchaseErrorProductAlreadyPurchasedError": "Du har redan köpt abonnemanget. För att återställa köpet på den här enheten kan du välja ”Köpt tidigare?”",
   "purchaseErrorReceiptAlreadyInUseError": "Köpet har redan genomförts eller så används köpuppgifterna på ett annat konto. Kontrollera kontot {accountName}",
   "purchaseErrorInvalidReceiptError": "Köpuppgifterna är ogiltiga. Kontrollera gärna dina köpuppgifter",
-  "purchaseErrorMissingReceiptFileError": "Köparinformation saknas. Vänligen logga in på enheten med {accountName} och försök igen.",
+  "purchaseErrorMissingReceiptFileError": "Uppgifter om köparen hittades inte. Logga in på din enhet med {accountName} och försök igen",
   "purchaseErrorNetworkError": "Nätverksanslutningen är instabil. Kontrollera din internetanslutning och försök igen.",
   "purchaseErrorInvalidCredentialsError": "Köpet misslyckades. Vänligen försök igen senare. Om problemet kvarstår, kontakta oss via Inställningar > Support. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorUnexpectedBackendResponseError": "Köpet kan inte genomföras just nu. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakta oss. Detaljer: {exceptionMessage}:{exceptionDetails}",
