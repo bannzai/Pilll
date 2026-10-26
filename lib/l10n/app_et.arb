@@ -36,7 +36,7 @@
   "no": "Ei",
   "unsubscribeInfo": "Tellimuse tühistamisest",
   "pillReminder": "Pilli võtmise meeldetuletus",
-  "takePillReminderChannelName": "Ravimi võtmise teated",
+  "takePillReminderChannelName": "Pilli võtmise meeldetuletused",
   "takePillReminder": "💊 aeg!",
   "copyDebugInfo": "KOPEERI SILUMISINFO",
   "cancel": "Tühista",

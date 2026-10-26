@@ -36,7 +36,7 @@
   "no": "Nej",
   "unsubscribeInfo": "Om opsigelse af abonnement",
   "pillReminder": "Påmindelse om p-pille",
-  "takePillReminderChannelName": "Indtagelsesnotifikationer",
+  "takePillReminderChannelName": "Påmindelser om p-piller",
   "takePillReminder": "💊 Det er tid!",
   "copyDebugInfo": "KOPIER DEBUG INFO",
   "cancel": "Annuller",

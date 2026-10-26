@@ -36,7 +36,7 @@
   "no": "ไม่",
   "unsubscribeInfo": "เกี่ยวกับการยกเลิกการสมัครสมาชิก",
   "pillReminder": "แจ้งเตือนเวลาทานยาเม็ดคุมกำเนิด",
-  "takePillReminderChannelName": "การแจ้งเตือนการรับประทานยา",
+  "takePillReminderChannelName": "การแจ้งเตือนให้ทานยาเม็ด",
   "takePillReminder": "ถึงเวลายา💊แล้ว",
   "copyDebugInfo": "คัดลอกข้อมูลดีบัก",
   "cancel": "ยกเลิก",

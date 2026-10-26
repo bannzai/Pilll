@@ -36,7 +36,7 @@
   "no": "Nem",
   "unsubscribeInfo": "Az előfizetés lemondásáról",
   "pillReminder": "Emlékeztető a tabletta szedésére",
-  "takePillReminderChannelName": "Gyógyszer-bevételi értesítés",
+  "takePillReminderChannelName": "Tablettaszedési emlékeztetők",
   "takePillReminder": "💊 Tabletta ideje!",
   "copyDebugInfo": "DEBUG ADATOK MÁSOLÁSA",
   "cancel": "Mégsem",
