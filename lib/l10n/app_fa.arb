@@ -349,7 +349,7 @@
   "googleAccount": "حساب Google",
   "diaryRecord": "افزودن یادداشت روزانه",
   "scheduleRecord": "افزودن رویداد",
-  "previousPillSheetGroupNotFound": "گروه برگه قرص قبلی هنوز وجود ندارد",
+  "previousPillSheetGroupNotFound": "هنوز گروه قبلی ورق قرص وجود ندارد",
   "withPillSheetCount": "{number} بلیستر",
   "connectionError": "اتصال اینترنت ناپایدار است. لطفاً کمی صبر کرده و دوباره تلاش کنید.",
   "unknownErrorAndRetryAfter": "خطایی رخ داده است. لطفاً پس از مدتی دوباره تلاش کنید.",

@@ -349,7 +349,7 @@
   "googleAccount": "Google 账号",
   "diaryRecord": "添加日记",
   "scheduleRecord": "添加日程",
-  "previousPillSheetGroupNotFound": "上一个避孕药包装组尚不存在",
+  "previousPillSheetGroupNotFound": "目前还没有上一组药板哦",
   "withPillSheetCount": "{number}板",
   "connectionError": "网络连接不稳定，请稍后重试",
   "unknownErrorAndRetryAfter": "发生错误，请稍后重试",

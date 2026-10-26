@@ -349,7 +349,7 @@
   "googleAccount": "Račun Google",
   "diaryRecord": "Dodajte zapis v dnevnik",
   "scheduleRecord": "Dodajte dogodek",
-  "previousPillSheetGroupNotFound": "Prejšnja skupina tablet še ne obstaja",
+  "previousPillSheetGroupNotFound": "Prejšnja skupina ploščic še ne obstaja",
   "withPillSheetCount": "{number} listov",
   "connectionError": "Zdi se, da je internetna povezava nestabilna. Prosimo, poskusite znova čez nekaj časa.",
   "unknownErrorAndRetryAfter": "Prišlo je do napake. Počakajte nekaj časa in poskusite znova.",

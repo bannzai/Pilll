@@ -349,7 +349,7 @@
   "googleAccount": "Google kontua",
   "diaryRecord": "Gehitu egunerokoan sarrera bat",
   "scheduleRecord": "Gehitu hitzordua",
-  "previousPillSheetGroupNotFound": "Aurreko pilula-orri taldea ez dago oraindik",
+  "previousPillSheetGroupNotFound": "Oraindik ez dago aurreko pilula-blister talderik",
   "withPillSheetCount": "{number} blister",
   "connectionError": "Konexioa ezegonkorra dirudi. Pixka bat itxaron eta berriz saiatu, mesedez.",
   "unknownErrorAndRetryAfter": "Errore bat gertatu da. Itxaron pixka bat eta saiatu berriro, mesedez.",

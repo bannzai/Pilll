@@ -349,7 +349,7 @@
   "googleAccount": "Google खाता",
   "diaryRecord": "डायरीमा टिपोट थप्नुहोस्",
   "scheduleRecord": "कार्यक्रम थप्नुहोस्",
-  "previousPillSheetGroupNotFound": "अघिल्लो पिल शिट समूह अझै छैन",
+  "previousPillSheetGroupNotFound": "अघिल्लो चक्की पत्ता समूह अझै छैन",
   "withPillSheetCount": "{number} ओटा",
   "connectionError": "नेटवर्क कनेक्शन अस्थिर देखिन्छ। केही समय पछि फेरि प्रयास गर्नुहोस्।",
   "unknownErrorAndRetryAfter": "त्रुटि भयो। केही समय पछि फेरि प्रयास गर्नुहोस्।",

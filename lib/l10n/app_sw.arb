@@ -349,7 +349,7 @@
   "googleAccount": "Akaunti ya Google",
   "diaryRecord": "Tafadhali ongeza kumbukumbu kwenye shajara",
   "scheduleRecord": "Tafadhali ongeza tukio",
-  "previousPillSheetGroupNotFound": "Kikundi cha dawa cha awali hakijapatikana bado",
+  "previousPillSheetGroupNotFound": "Bado hakuna kundi la awali la pakiti ya vidonge",
   "withPillSheetCount": "{number} karatasi",
   "connectionError": "Muunganisho wa mtandao hauwa thabiti. Tafadhali subiri kidogo na ujaribu tena.",
   "unknownErrorAndRetryAfter": "Hitilafu imetokea. Tafadhali jaribu tena baadaye.",

@@ -349,7 +349,7 @@
   "googleAccount": "Сметка на Google",
   "diaryRecord": "Запис во дневник",
   "scheduleRecord": "Додавање на настан",
-  "previousPillSheetGroupNotFound": "Претходната група на пилули сè уште не постои",
+  "previousPillSheetGroupNotFound": "Сè уште нема претходна група блистер",
   "withPillSheetCount": "{number} листови",
   "connectionError": "Мрежната врска изгледа нестабилна. Ве молиме почекајте малку и обидете се повторно.",
   "unknownErrorAndRetryAfter": "Се случи грешка. Ве молиме обидете се повторно подоцна.",

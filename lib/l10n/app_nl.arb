@@ -349,7 +349,7 @@
   "googleAccount": "Google-account",
   "diaryRecord": "Dagboeknotitie toevoegen",
   "scheduleRecord": "Afspraak toevoegen",
-  "previousPillSheetGroupNotFound": "De vorige pilbladgroep bestaat nog niet",
+  "previousPillSheetGroupNotFound": "Er is nog geen vorige pillenstripgroep",
   "withPillSheetCount": "{number} strips",
   "connectionError": "De verbinding lijkt instabiel. Probeer het later opnieuw.",
   "unknownErrorAndRetryAfter": "Er is een fout opgetreden. Wacht even en probeer het opnieuw.",

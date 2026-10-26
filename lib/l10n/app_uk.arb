@@ -349,7 +349,7 @@
   "googleAccount": "Обліковий запис Google",
   "diaryRecord": "Додати запис у щоденник",
   "scheduleRecord": "Додати подію",
-  "previousPillSheetGroupNotFound": "Попередня група аркушів таблеток ще не існує",
+  "previousPillSheetGroupNotFound": "Попередньої групи блістерів поки немає",
   "withPillSheetCount": "{number} упаковок",
   "connectionError": "Здається, з'єднання нестабільне. Будь ласка, повторіть спробу через деякий час.",
   "unknownErrorAndRetryAfter": "Виникла помилка. Зачекайте трохи і спробуйте ще раз",

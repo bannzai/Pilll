@@ -349,7 +349,7 @@
   "googleAccount": "Уліковы запіс Google",
   "diaryRecord": "Дадаць запіс у дзённік",
   "scheduleRecord": "Дадаць запланаваную падзею",
-  "previousPillSheetGroupNotFound": "Папярэдняя група лісткоў з пілюлямі адсутнічае",
+  "previousPillSheetGroupNotFound": "Папярэдняй групы блістар яшчэ няма",
   "withPillSheetCount": "{number} лістоў",
   "connectionError": "Сувязь нестабільная. Пачакайце і паспрабуйце зноў.",
   "unknownErrorAndRetryAfter": "Адбылася памылка. Пачакайце крыху і паспрабуйце яшчэ раз",

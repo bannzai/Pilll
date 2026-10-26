@@ -349,7 +349,7 @@
   "googleAccount": "Konto Google",
   "diaryRecord": "Dodaj wpis do dziennika",
   "scheduleRecord": "Dodaj wydarzenie",
-  "previousPillSheetGroupNotFound": "Poprzednia grupa blistrów tabletek jeszcze nie istnieje",
+  "previousPillSheetGroupNotFound": "Poprzednia grupa blistów jeszcze nie istnieje",
   "withPillSheetCount": "{number} opakowań",
   "connectionError": "Połączenie z internetem wydaje się niestabilne. Spróbuj ponownie za chwilę.",
   "unknownErrorAndRetryAfter": "Wystąpił błąd. Spróbuj ponownie po chwili.",

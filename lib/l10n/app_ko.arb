@@ -349,7 +349,7 @@
   "googleAccount": "Google 계정",
   "diaryRecord": "일기 기록하기",
   "scheduleRecord": "일정 추가",
-  "previousPillSheetGroupNotFound": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",
+  "previousPillSheetGroupNotFound": "이전 알약 시트 그룹이 아직 없어요",
   "withPillSheetCount": "{number}장",
   "connectionError": "네트워크 연결이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요.",
   "unknownErrorAndRetryAfter": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요.",

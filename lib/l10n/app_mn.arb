@@ -349,7 +349,7 @@
   "googleAccount": "Google бүртгэл",
   "diaryRecord": "Өдрийн тэмдэглэлд бичлэг нэмнэ үү",
   "scheduleRecord": "Товлосон зүйл нэмнэ үү",
-  "previousPillSheetGroupNotFound": "Өмнөх эмийн хуудасны бүлэг олдсонгүй",
+  "previousPillSheetGroupNotFound": "Өмнөх эмийн блистер бүлэг хараахан байхгүй байна",
   "withPillSheetCount": "{number} хуудас",
   "connectionError": "Интернет холболт тогтвооргүй байна. Түр хүлээгээд дахин оролдоно уу.",
   "unknownErrorAndRetryAfter": "Алдаа гарлаа. Түр хүлээгээд дахин оролдоно уу.",

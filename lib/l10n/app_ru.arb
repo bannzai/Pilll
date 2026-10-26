@@ -349,7 +349,7 @@
   "googleAccount": "Аккаунт Google",
   "diaryRecord": "Добавить запись в дневник",
   "scheduleRecord": "Добавить событие",
-  "previousPillSheetGroupNotFound": "Предыдущая группа блистеров еще не создана",
+  "previousPillSheetGroupNotFound": "Предыдущей группы блистеров пока нет",
   "withPillSheetCount": "{number} упаковок",
   "connectionError": "Похоже, что сетевое соединение нестабильно. Пожалуйста, подождите и попробуйте снова.",
   "unknownErrorAndRetryAfter": "Произошла ошибка. Попробуйте еще раз через некоторое время",

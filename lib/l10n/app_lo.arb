@@ -349,7 +349,7 @@
   "googleAccount": "ບັນຊີ Google",
   "diaryRecord": "ເພີ່ມບັນທຶກປະຈຳວັນ",
   "scheduleRecord": "ເພີ່ມນັດໝາຍ",
-  "previousPillSheetGroupNotFound": "ກຸ່ມແຜ່ນຢາຄຸມກໍາເນີດຄັ້ງກ່ອນຍັງບໍ່ມີ",
+  "previousPillSheetGroupNotFound": "ຍັງບໍ່ມີກຸ່ມແຜງຢາຄຸມກ່ອນໜ້າ",
   "withPillSheetCount": "{number}ແຜ່ນ",
   "connectionError": "ການເຊື່ອມຕໍ່ອິນເຕີເນັດບໍ່ໝັ້ນຄົງ. ກະລຸນາລໍຖ້າຄັກໜຶ່ງແລ້ວລອງໃໝ່ອີກຄັ້ງ",
   "unknownErrorAndRetryAfter": "ເກີດຂໍ້ຜິດພາດ. ກະລຸນາລໍຖ້າຊັ່ວຄາວແລ້ວລອງໃໝ່ອີກ",

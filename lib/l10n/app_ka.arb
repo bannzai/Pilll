@@ -349,7 +349,7 @@
   "googleAccount": "Google ანგარიში",
   "diaryRecord": "დღიურში ჩანაწერის დამატება",
   "scheduleRecord": "ღონისძიების დამატება",
-  "previousPillSheetGroupNotFound": "წინა ტაბლეტების ფურცლის ჯგუფი ჯერ კიდევ არ არსებობს",
+  "previousPillSheetGroupNotFound": "აბების ბლისტერის წინა ჯგუფი ჯერ არ არსებობს",
   "withPillSheetCount": "{number} ფურცელი",
   "connectionError": "ქსელური კავშირი არასტაბილურია. გთხოვთ, დაელოდოთ და სცადეთ ხელახლა.",
   "unknownErrorAndRetryAfter": "შეცდომა მოხდა. ცოტა ხნის შემდეგ ისევ სცადეთ",

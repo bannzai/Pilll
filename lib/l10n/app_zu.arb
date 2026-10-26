@@ -349,7 +349,7 @@
   "googleAccount": "I-akhawunti ye-Google",
   "diaryRecord": "Sicela wengeze okubhalwe kudayari",
   "scheduleRecord": "Sicela wengeze umcimbi",
-  "previousPillSheetGroupNotFound": "Iqembu lamaphilisi elidlule alukabikhona okwamanje",
+  "previousPillSheetGroupNotFound": "Alikabi khona iqembu langaphambilini leshidi lamaphilisi",
   "withPillSheetCount": "{number} amashidi",
   "connectionError": "Kubonakala sengathi uxhumano lunenkinga. Sicela uzame futhi kamuva.",
   "unknownErrorAndRetryAfter": "Iphutha lenzekile. Sicela ulinde isikhashana bese uzama futhi.",

@@ -349,7 +349,7 @@
   "googleAccount": "Google есептік жазбасы",
   "diaryRecord": "Күнделікке жазба қосыңыз",
   "scheduleRecord": "Жоспарланған оқиғаны қосыңыз",
-  "previousPillSheetGroupNotFound": "Алдыңғы дәрі парағы тобы табылмады",
+  "previousPillSheetGroupNotFound": "Алдыңғы таблетка блистер тобы әлі жоқ",
   "withPillSheetCount": "{number} парақ",
   "connectionError": "Интернет байланысы тұрақсыз. Кейінірек қайталап көріңіз",
   "unknownErrorAndRetryAfter": "Қате орын алды. Біраз уақыттан кейін қайта көріңіз.",

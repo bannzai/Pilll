@@ -349,7 +349,7 @@
   "googleAccount": "Google konts",
   "diaryRecord": "Pievienojiet dienasgrāmatas ierakstu",
   "scheduleRecord": "Pievienojiet notikumu",
-  "previousPillSheetGroupNotFound": "Iepriekšējā tablešu pakas grupa neeksistē",
+  "previousPillSheetGroupNotFound": "Iepriekšējās tablešu blister grupas vēl nav",
   "withPillSheetCount": "{number} lapas",
   "connectionError": "Tīkla savienojums šķiet nestabils. Lūdzu, uzgaidiet un mēģiniet vēlreiz.",
   "unknownErrorAndRetryAfter": "Notika kļūda. Lūdzu, mēģiniet vēlreiz pēc brīža.",

@@ -349,7 +349,7 @@
   "googleAccount": "Google account",
   "diaryRecord": "Magdagdag ng tala sa talaarawan",
   "scheduleRecord": "Magdagdag ng iskedyul",
-  "previousPillSheetGroupNotFound": "Wala pang nakaraang pill sheet group",
+  "previousPillSheetGroupNotFound": "Wala pang naunang grupo ng pakete ng pildoras",
   "withPillSheetCount": "{number} piraso",
   "connectionError": "Mukhang hindi matatag ang koneksyon sa internet. Subukan ulit mamaya.",
   "unknownErrorAndRetryAfter": "May naganap na error. Maghintay po ng kaunti at subukan muli.",

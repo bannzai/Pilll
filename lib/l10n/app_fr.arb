@@ -349,7 +349,7 @@
   "googleAccount": "Compte Google",
   "diaryRecord": "Ajouter une entrée au journal",
   "scheduleRecord": "Ajouter un événement",
-  "previousPillSheetGroupNotFound": "Groupe de feuille de pilules précédent introuvable",
+  "previousPillSheetGroupNotFound": "Il n’y a pas encore de groupe de plaquettes précédent",
   "withPillSheetCount": "Feuilles {number}",
   "connectionError": "Votre connexion semble instable. Veuillez réessayer plus tard.",
   "unknownErrorAndRetryAfter": "Une erreur s'est produite. Veuillez réessayer plus tard.",

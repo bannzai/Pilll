@@ -349,7 +349,7 @@
   "googleAccount": "Google-Konto",
   "diaryRecord": "Iitrag is Tagebuech tue",
   "scheduleRecord": "En Termin iiträge",
-  "previousPillSheetGroupNotFound": "D'letschti Pillecharte-Gruppe isch no ned vorhande",
+  "previousPillSheetGroupNotFound": "Es git no kei früeneri Pilleblistergruppe",
   "withPillSheetCount": "{number} Blättli",
   "connectionError": "D Netzwerkverbindig isch unstabil. Bitte warte churz und versuech's nomol.",
   "unknownErrorAndRetryAfter": "Es isch en Fähler passiert. Bitte versuech es nach ere Ziit nommal.",

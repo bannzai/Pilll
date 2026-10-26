@@ -349,7 +349,7 @@
   "googleAccount": "Google-konto",
   "diaryRecord": "Legg til dagboknotat",
   "scheduleRecord": "Legg til avtale",
-  "previousPillSheetGroupNotFound": "Forrige p-pille gruppe finnes ikke",
+  "previousPillSheetGroupNotFound": "Det finnes ingen tidligere pillebrettgruppe ennå",
   "withPillSheetCount": "{number} pakker",
   "connectionError": "Det ser ut til at nettverkstilkoblingen er ustabil. Vennligst vent litt og prøv igjen.",
   "unknownErrorAndRetryAfter": "Det oppstod en feil. Vennligst prøv igjen senere.",

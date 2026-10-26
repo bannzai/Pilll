@@ -349,7 +349,7 @@
   "googleAccount": "Cyfrif Google",
   "diaryRecord": "Ychwanegwch gofnod dyddiadur",
   "scheduleRecord": "Ychwanegwch ddigwyddiad",
-  "previousPillSheetGroupNotFound": "Dyw grŵp taflen bilsen y tro diwethaf ddim yn bodoli",
+  "previousPillSheetGroupNotFound": "Nid oes grŵp stribed pils blaenorol eto",
   "withPillSheetCount": "{number} dalen",
   "connectionError": "Mae'r cysylltiad rhwydwaith yn ymddangos yn ansefydlog. Rhowch gynnig arall arni ar ôl ychydig o amser.",
   "unknownErrorAndRetryAfter": "Mae gwall wedi digwydd. Rhowch gynnig arall arni yn nes ymlaen.",

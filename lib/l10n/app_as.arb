@@ -349,7 +349,7 @@
   "googleAccount": "Google একাউণ্ট",
   "diaryRecord": "ডায়েৰীত লিখক",
   "scheduleRecord": "পৰিকল্পনা যোগ কৰক",
-  "previousPillSheetGroupNotFound": "আগৰ পিল শ্বীট গ্ৰুপ এতিয়াও বিদ্যমান নাই",
+  "previousPillSheetGroupNotFound": "পূৰ্বৰ পিলৰ ষ্ট্ৰিপৰ গোট এতিয়াও নাই",
   "withPillSheetCount": "{number}খন",
   "connectionError": "ইন্টাৰনেট সংযোগ অস্থিৰ যেন লাগিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",
   "unknownErrorAndRetryAfter": "এটা ত্ৰুটি ঘটিছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক।",

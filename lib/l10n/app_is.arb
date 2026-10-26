@@ -349,7 +349,7 @@
   "googleAccount": "Google-reikningur",
   "diaryRecord": "Bæta við dagbókarfærslu",
   "scheduleRecord": "Bæta við viðburði",
-  "previousPillSheetGroupNotFound": "Fyrri píluvelti hópur finnst ekki",
+  "previousPillSheetGroupNotFound": "Fyrri pilluspjaldshópur er ekki til enn",
   "withPillSheetCount": "{number} blöð",
   "connectionError": "Nettengingin virðist vera óstöðug. Vinsamlegast reyndu aftur eftir smá stund.",
   "unknownErrorAndRetryAfter": "Villa átti sér stað. Reyndu aftur eftir smá stund.",

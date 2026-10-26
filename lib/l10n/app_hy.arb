@@ -349,7 +349,7 @@
   "googleAccount": "Google հաշիվ",
   "diaryRecord": "Ավելացնել օրագրի գրառում",
   "scheduleRecord": "Ավելացնել իրադարձություն",
-  "previousPillSheetGroupNotFound": "Նախորդ հաբահերթի խումբը դեռ գոյություն չունի",
+  "previousPillSheetGroupNotFound": "Նախորդ հաբերի բլիստեր խումբը դեռ գոյություն չունի",
   "withPillSheetCount": "{number} բլիթ",
   "connectionError": "Ցանցային կապը անկայուն է թվում: Խնդրում ենք սպասել մի փոքր և կրկին փորձել:",
   "unknownErrorAndRetryAfter": "Սխալ է տեղի ունեցել: Մի փոքր սպասեք և կրկին փորձեք:",

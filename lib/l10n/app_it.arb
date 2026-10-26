@@ -349,7 +349,7 @@
   "googleAccount": "Account Google",
   "diaryRecord": "Aggiungi una voce al diario",
   "scheduleRecord": "Aggiungi un evento",
-  "previousPillSheetGroupNotFound": "Il gruppo del blister precedente non esiste",
+  "previousPillSheetGroupNotFound": "Non c’è ancora un gruppo di blister precedente",
   "withPillSheetCount": "{number} blister",
   "connectionError": "La connessione sembra instabile. Riprova tra qualche momento.",
   "unknownErrorAndRetryAfter": "Si è verificato un errore. Riprova tra qualche istante.",

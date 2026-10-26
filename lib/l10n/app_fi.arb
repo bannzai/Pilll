@@ -349,7 +349,7 @@
   "googleAccount": "Google-tili",
   "diaryRecord": "Lisää päiväkirjamerkintä",
   "scheduleRecord": "Lisää tapahtuma",
-  "previousPillSheetGroupNotFound": "Edellisen pilleriarkin ryhmää ei ole vielä olemassa",
+  "previousPillSheetGroupNotFound": "Edellistä pilleriliuskaryhmää ei vielä ole",
   "withPillSheetCount": "{number} arkkia",
   "connectionError": "Verkkoyhteys vaikuttaa epävakaalta. Odota hetki ja yritä uudelleen.",
   "unknownErrorAndRetryAfter": "Tapahtui virhe. Yritä uudelleen hetken kuluttua.",

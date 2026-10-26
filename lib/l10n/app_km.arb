@@ -349,7 +349,7 @@
   "googleAccount": "គណនី Google",
   "diaryRecord": "បន្ថែមកំណត់ហេតុប្រចាំថ្ងៃ",
   "scheduleRecord": "បន្ថែមព្រឹត្តិការណ៍",
-  "previousPillSheetGroupNotFound": "ក្រុមសន្លឹកថ្នាំគ្រាប់ពងលើកមុនមិនទាន់មានទេ",
+  "previousPillSheetGroupNotFound": "មិនទាន់មានក្រុមបន្ទះថ្នាំគ្រាប់ពីមុនទេ",
   "withPillSheetCount": "{number}សន្លឹក",
   "connectionError": "ការតភ្ជាប់អ៊ីនធឺណិតហាក់ដូចជាមិនស្ថិរ។ សូមរង់ចាំមួយរយៈ រួចព្យាយាមម្តងទៀត",
   "unknownErrorAndRetryAfter": "មានកំហុសកើតឡើង។ សូមព្យាយាមម្តងទៀតក្នុងពេលបន្តិចទៀត។",

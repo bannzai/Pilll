@@ -349,7 +349,7 @@
   "googleAccount": "Google account",
   "diaryRecord": "Add diary entry",
   "scheduleRecord": "Add event",
-  "previousPillSheetGroupNotFound": "Previous pill sheet group not found",
+  "previousPillSheetGroupNotFound": "There’s no previous pill pack group yet",
   "withPillSheetCount": "{number} sheets",
   "connectionError": "Your connection seems unstable. Please try again later.",
   "unknownErrorAndRetryAfter": "An error occurred. Please try again later.",

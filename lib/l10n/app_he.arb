@@ -349,7 +349,7 @@
   "googleAccount": "חשבון Google",
   "diaryRecord": "הוספת רשומה ליומן",
   "scheduleRecord": "הוספת אירוע",
-  "previousPillSheetGroupNotFound": "קבוצת גיליון הגלולות הקודמת עדיין לא קיימת",
+  "previousPillSheetGroupNotFound": "עדיין אין קבוצה קודמת של חפיסת גלולות",
   "withPillSheetCount": "{number} דפים",
   "connectionError": "החיבור לאינטרנט נראה לא יציב. אנא המתינו ונסו שוב",
   "unknownErrorAndRetryAfter": "אירעה שגיאה. אנא נסה שוב לאחר זמן מה",

@@ -349,7 +349,7 @@
   "googleAccount": "د Google حساب",
   "diaryRecord": "د ورځني یادښت لیکنه زیاته کړئ",
   "scheduleRecord": "پلان شوی کار ورزیات کړئ",
-  "previousPillSheetGroupNotFound": "وروستي د ګولیو د پاڼې ګروپ لا تر اوسه شتون نلري",
+  "previousPillSheetGroupNotFound": "د ګولیو پاڼ پخوانۍ ډله تر اوسه نشته",
   "withPillSheetCount": "{number} ټوټې",
   "connectionError": "د شبکې اړیکې بې ثباته ښکاري. مهرباني وکړئ یو څه وخت وروسته بیا هڅه وکړئ",
   "unknownErrorAndRetryAfter": "یوه خرابي رامنځته شوې. مهرباني وکړئ د یو څه وخت وروسته بیا هڅه وکړئ.",

@@ -349,7 +349,7 @@
   "googleAccount": "Google اکاؤنٹ",
   "diaryRecord": "ڈائری میں اندراج شامل کریں",
   "scheduleRecord": "منصوبہ شامل کریں",
-  "previousPillSheetGroupNotFound": "سابقہ پل شیٹ گروپ موجود نہیں ہے",
+  "previousPillSheetGroupNotFound": "گولیوں کی پٹی کا پچھلا گروپ ابھی موجود نہیں ہے",
   "withPillSheetCount": "{number}پتی",
   "connectionError": "نیٹ ورک کنکشن غیر مستحکم لگ رہا ہے۔ کچھ وقت انتظار کر کے دوبارہ کوشش کریں",
   "unknownErrorAndRetryAfter": "خرابی پیدا ہوئی۔ کچھ وقت بعد دوبارہ کوشش کریں",

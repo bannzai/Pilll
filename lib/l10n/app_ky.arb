@@ -349,7 +349,7 @@
   "googleAccount": "Google аккаунту",
   "diaryRecord": "Күндөлүккө жазуу кошуңуз",
   "scheduleRecord": "Иш-чара кошуңуз",
-  "previousPillSheetGroupNotFound": "Мурунку таблетка барагынын тобу дагы деле жок",
+  "previousPillSheetGroupNotFound": "Мурунку таблетка блистери тобу азырынча жок",
   "withPillSheetCount": "{number} барак",
   "connectionError": "Интернет туташууда көйгөй бар көрүнөт. Бир аз күтүп, кайра аракет кылыңыз",
   "unknownErrorAndRetryAfter": "Ката кетти. Бир аз убакыт өткөндөн кийин кайра аракет кылыңыз",

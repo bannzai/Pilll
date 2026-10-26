@@ -349,7 +349,7 @@
   "googleAccount": "Google ఖాతా",
   "diaryRecord": "డైరీలో నమోదు చేయండి",
   "scheduleRecord": "కార్యక్రమాన్ని జోడించండి",
-  "previousPillSheetGroupNotFound": "మునుపటి పిల్ షీట్ గ్రూప్ ఇంకా ఉనికిలో లేదు",
+  "previousPillSheetGroupNotFound": "మునుపటి మాత్రల స్ట్రిప్ సమూహం ఇంకా లేదు",
   "withPillSheetCount": "{number}షీట్లు",
   "connectionError": "ఇంటర్నెట్ కనెక్షన్ అస్థిరంగా ఉంది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",
   "unknownErrorAndRetryAfter": "దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి",

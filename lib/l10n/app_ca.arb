@@ -349,7 +349,7 @@
   "googleAccount": "Compte de Google",
   "diaryRecord": "Afegeix una entrada al diari",
   "scheduleRecord": "Afegeix un esdeveniment",
-  "previousPillSheetGroupNotFound": "El grup de la placa de píndoles anterior encara no existeix",
+  "previousPillSheetGroupNotFound": "Encara no hi ha cap grup de blíster anterior",
   "withPillSheetCount": "{number} plaquetes",
   "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",
   "unknownErrorAndRetryAfter": "S'ha produït un error. Espereu una estona i torneu-ho a provar.",

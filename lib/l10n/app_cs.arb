@@ -349,7 +349,7 @@
   "googleAccount": "Účet Google",
   "diaryRecord": "Přidat záznam do deníku",
   "scheduleRecord": "Přidat událost",
-  "previousPillSheetGroupNotFound": "Předchozí skupina pilulkového balení zatím neexistuje",
+  "previousPillSheetGroupNotFound": "Předchozí skupina blistrů zatím neexistuje",
   "withPillSheetCount": "{number} balení",
   "connectionError": "Připojení k síti je nestabilní. Zkuste to prosím později.",
   "unknownErrorAndRetryAfter": "Došlo k chybě. Zkuste to prosím znovu za chvíli.",

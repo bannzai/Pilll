@@ -349,7 +349,7 @@
   "googleAccount": "Google račun",
   "diaryRecord": "Dodajte zapis u dnevnik",
   "scheduleRecord": "Dodajte događaj",
-  "previousPillSheetGroupNotFound": "Prethodna grupa pilula još ne postoji",
+  "previousPillSheetGroupNotFound": "Prethodna grupa blistera još ne postoji",
   "withPillSheetCount": "{number} blistera",
   "connectionError": "Izgleda da je mrežna veza nestabilna. Molimo pokušajte ponovo kasnije.",
   "unknownErrorAndRetryAfter": "Došlo je do greške. Molimo sačekajte i pokušajte ponovo.",

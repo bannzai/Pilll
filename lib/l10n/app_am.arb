@@ -349,7 +349,7 @@
   "googleAccount": "የGoogle መለያ",
   "diaryRecord": "የዕለት ማስታወሻ ይመዝግቡ",
   "scheduleRecord": "ቀጠሮ ያክሉ",
-  "previousPillSheetGroupNotFound": "የቀደመው ፒል ሺት ቡድን አልተገኘም",
+  "previousPillSheetGroupNotFound": "የቀድሞ ክኒን ሉህ ቡድን ገና የለም",
   "withPillSheetCount": "{number} ፓኬት",
   "connectionError": "የኢንተርኔት ግንኙነት ተረጋጋ አይደለም። እባክዎን ትንሽ ቆይተው እንደገና ይሞክሩ።",
   "unknownErrorAndRetryAfter": "ስህተት ተከስቷል። እባክዎን ትንሽ ይጠብቁ እና እንደገና ይሞክሩ።",

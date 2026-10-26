@@ -349,7 +349,7 @@
   "googleAccount": "Google hesabı",
   "diaryRecord": "Günlük kaydı ekleyin",
   "scheduleRecord": "Etkinlik ekleyin",
-  "previousPillSheetGroupNotFound": "Önceki hap paketi grubu bulunamadı",
+  "previousPillSheetGroupNotFound": "Önceki blister grubu henüz yok",
   "withPillSheetCount": "{number} adet",
   "connectionError": "Ağ bağlantısı kararsız görünüyor. Lütfen biraz bekledikten sonra tekrar deneyin.",
   "unknownErrorAndRetryAfter": "Bir hata oluştu. Lütfen bir süre bekleyip tekrar deneyin",

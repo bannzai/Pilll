@@ -349,7 +349,7 @@
   "googleAccount": "Google'i konto",
   "diaryRecord": "Lisa päevikukanne",
   "scheduleRecord": "Lisa sündmus",
-  "previousPillSheetGroupNotFound": "Eelmine pillitablettide rühm ei ole veel olemas",
+  "previousPillSheetGroupNotFound": "Eelmist pillilehe rühma veel ei ole",
   "withPillSheetCount": "{number} lehte",
   "connectionError": "Tundub, et võrguühendus on ebastabiilne. Palun proovige mõne aja pärast uuesti.",
   "unknownErrorAndRetryAfter": "Tekkis viga. Palun oodake veidi ja proovige uuesti.",

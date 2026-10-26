@@ -349,7 +349,7 @@
   "googleAccount": "Google-konto",
   "diaryRecord": "Lägg till dagboksanteckning",
   "scheduleRecord": "Lägg till händelse",
-  "previousPillSheetGroupNotFound": "Den föregående p-pillerark gruppen finns inte än",
+  "previousPillSheetGroupNotFound": "Det finns ingen tidigare p-pillerkarta-grupp ännu",
   "withPillSheetCount": "{number} blister",
   "connectionError": "Det verkar vara problem med nätverksanslutningen. Vänta en stund och försök igen.",
   "unknownErrorAndRetryAfter": "Ett fel uppstod. Försök igen om ett tag.",

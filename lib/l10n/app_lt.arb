@@ -349,7 +349,7 @@
   "googleAccount": "Google paskyra",
   "diaryRecord": "Pridėkite dienoraščio įrašą",
   "scheduleRecord": "Pridėkite įvykį",
-  "previousPillSheetGroupNotFound": "Ankstesnės tabletės pakuotės grupė dar neegzistuoja",
+  "previousPillSheetGroupNotFound": "Ankstesnės tablečių plokštel grupės dar nėra",
   "withPillSheetCount": "{number} pak.",
   "connectionError": "Tinklo ryšys nestabilus. Palaukite ir bandykite dar kartą.",
   "unknownErrorAndRetryAfter": "Įvyko klaida. Palaukite ir pabandykite dar kartą.",

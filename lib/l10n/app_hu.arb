@@ -349,7 +349,7 @@
   "googleAccount": "Google-fiók",
   "diaryRecord": "Naplóbejegyzés hozzáadása",
   "scheduleRecord": "Esemény hozzáadása",
-  "previousPillSheetGroupNotFound": "Az előző tablettacsomag csoport nem található",
+  "previousPillSheetGroupNotFound": "Még nincs korábbi tablettacsomag-csoport",
   "withPillSheetCount": "{number} darab",
   "connectionError": "A hálózati kapcsolat instabil. Kérjük, próbálja újra később.",
   "unknownErrorAndRetryAfter": "Hiba történt. Kérjük, próbálja újra később.",

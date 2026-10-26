@@ -349,7 +349,7 @@
   "googleAccount": "Google-Konto",
   "diaryRecord": "Tagebucheintrag hinzufügen",
   "scheduleRecord": "Termin hinzufügen",
-  "previousPillSheetGroupNotFound": "Die vorherige Pillenblatt-Gruppe existiert noch nicht",
+  "previousPillSheetGroupNotFound": "Es gibt noch keine vorherige Pillenblistergruppe",
   "withPillSheetCount": "{number} Packungen",
   "connectionError": "Ihre Internetverbindung scheint instabil zu sein. Bitte versuchen Sie es später erneut.",
   "unknownErrorAndRetryAfter": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
