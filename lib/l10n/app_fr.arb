@@ -192,7 +192,7 @@
   "restorePurchase": "Votre achat a été restauré",
   "previouslyPurchased": "Vous avez déjà acheté ? Restaurez votre achat ici",
   "noPreviousPurchaseInfo": "Aucune information sur un achat précédent n’a été trouvée. Vérifiez votre compte et réessayez.",
-  "monthlyPlan": "Forfait mensuel",
+  "monthlyPlan": "Abonnement mensuel",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mois",
   "lifetimePlan": "Achat unique",
   "lifetimePlanDescription": "Prime à vie avec un seul achat",

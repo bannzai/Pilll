@@ -192,7 +192,7 @@
   "restorePurchase": "თქვენი შესყიდვის ინფორმაცია აღდგენილია",
   "previouslyPurchased": "ადრე შეიძინეთ? შენაძენის აღდგენა აქ",
   "noPreviousPurchaseInfo": "წინა შეძენის შესახებ ინფორმაცია ვერ მოიძებნა. გთხოვთ, შეამოწმოთ თქვენი ანგარიში და ხელახლა სცადოთ.",
-  "monthlyPlan": "ყოველთვიური ტარიფი",
+  "monthlyPlan": "თვიური გეგმა",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/თვე",
   "lifetimePlan": "ერთჯერადი შესყიდვა",
   "lifetimePlanDescription": "ერთჯერადი შეძენა - სამუდამო პრემიუმი",

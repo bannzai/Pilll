@@ -192,7 +192,7 @@
   "restorePurchase": "Informacionet e blerjes suaj u rikthyen",
   "previouslyPurchased": "Keni blerë më parë? Riktheni blerjen këtu",
   "noPreviousPurchaseInfo": "Nuk u gjetën të dhëna për një blerje të mëparshme. Ju lutemi, kontrolloni llogarinë tuaj dhe provoni përsëri.",
-  "monthlyPlan": "Plani Mujor",
+  "monthlyPlan": "Plani mujor",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/muaj",
   "lifetimePlan": "Blerje e vetme",
   "lifetimePlanDescription": "Premium përgjithmonë me një blerje të vetme",

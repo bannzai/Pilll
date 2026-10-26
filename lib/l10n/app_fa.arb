@@ -192,7 +192,7 @@
   "restorePurchase": "اطلاعات خرید شما بازیابی شد",
   "previouslyPurchased": "قبلاً خرید کرده‌اید؟ خرید خود را اینجا بازیابی کنید",
   "noPreviousPurchaseInfo": "اطلاعاتی از خرید قبلی پیدا نشد. لطفاً حساب خود را بررسی کنید و دوباره تلاش کنید.",
-  "monthlyPlan": "اشتراک ماهانه",
+  "monthlyPlan": "طرح ماهانه",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماه",
   "lifetimePlan": "خرید یکباره",
   "lifetimePlanDescription": "یکبار خرید، پریمیوم مادام‌العمر",

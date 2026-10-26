@@ -192,7 +192,7 @@
   "restorePurchase": "กู้คืนข้อมูลการซื้อเรียบร้อยแล้วค่ะ",
   "previouslyPurchased": "เคยซื้อแล้วใช่ไหมคะ? กู้คืนรายการซื้อได้ที่นี่ค่ะ",
   "noPreviousPurchaseInfo": "ไม่พบข้อมูลการซื้อครั้งก่อนค่ะ กรุณาตรวจสอบบัญชีแล้วลองอีกครั้งค่ะ",
-  "monthlyPlan": "แผนรายเดือน",
+  "monthlyPlan": "แพ็กเกจรายเดือน",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/เดือน",
   "lifetimePlan": "ซื้อครั้งเดียว",
   "lifetimePlanDescription": "ซื้อครั้งเดียว ใช้พรีเมียมตลอดไป",

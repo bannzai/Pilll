@@ -192,7 +192,7 @@
   "restorePurchase": "تمت استعادة معلومات الشراء",
   "previouslyPurchased": "هل اشتريتِ سابقًا؟ استعيدي مشترياتك من هنا",
   "noPreviousPurchaseInfo": "لم يُعثر على معلومات شراء سابقة. يُرجى التحقق من الحساب ثم المحاولة مرة أخرى.",
-  "monthlyPlan": "خطة شهرية",
+  "monthlyPlan": "الخطة الشهرية",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/شهر",
   "lifetimePlan": "شراء مرة واحدة",
   "lifetimePlanDescription": "شراء مرة واحدة، بريميوم مدى الحياة",

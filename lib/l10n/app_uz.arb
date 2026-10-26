@@ -192,7 +192,7 @@
   "restorePurchase": "Xaridingiz haqidagi maʼlumotlar tiklandi",
   "previouslyPurchased": "Avval xarid qilganmisiz? Xaridingizni shu yerda tiklang",
   "noPreviousPurchaseInfo": "Avvalgi xarid haqida maʼlumot topilmadi. Iltimos, hisobingizni tekshirib, qayta urinib koʻring.",
-  "monthlyPlan": "Oylik plan",
+  "monthlyPlan": "Oylik reja",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/oy",
   "lifetimePlan": "Bir martalik sotib olish",
   "lifetimePlanDescription": "Bir marta to'lov - doimiy Premium",

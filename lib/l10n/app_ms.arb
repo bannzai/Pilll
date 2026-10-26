@@ -192,7 +192,7 @@
   "restorePurchase": "Maklumat pembelian anda telah dipulihkan",
   "previouslyPurchased": "Pernah membeli sebelum ini? Pulihkan pembelian anda di sini",
   "noPreviousPurchaseInfo": "Maklumat pembelian terdahulu tidak ditemui. Sila semak akaun anda dan cuba lagi.",
-  "monthlyPlan": "Pelan Bulanan",
+  "monthlyPlan": "Pelan bulanan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/bulan",
   "lifetimePlan": "Pembelian sekali",
   "lifetimePlanDescription": "Premium selamanya dengan sekali pembelian",

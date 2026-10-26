@@ -192,7 +192,7 @@
   "restorePurchase": "Kjøpsinformasjonen din er gjenopprettet",
   "previouslyPurchased": "Har du kjøpt før? Gjenopprett kjøpet her",
   "noPreviousPurchaseInfo": "Fant ingen informasjon om tidligere kjøp. Sjekk kontoen din og prøv igjen.",
-  "monthlyPlan": "Månedlig abonnement",
+  "monthlyPlan": "Månedsabonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/måned",
   "lifetimePlan": "engangs kjøp",
   "lifetimePlanDescription": "Premium for alltid med ett kjøp",

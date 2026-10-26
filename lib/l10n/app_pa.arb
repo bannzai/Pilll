@@ -192,7 +192,7 @@
   "restorePurchase": "ਤੁਹਾਡੀ ਖਰੀਦਦਾਰੀ ਦੀ ਜਾਣਕਾਰੀ ਮੁੜ ਬਹਾਲ ਹੋ ਗਈ ਹੈ",
   "previouslyPurchased": "ਪਹਿਲਾਂ ਖਰੀਦਿਆ ਹੈ? ਆਪਣੀ ਖਰੀਦ ਇੱਥੇ ਬਹਾਲ ਕਰੋ",
   "noPreviousPurchaseInfo": "ਪਿਛਲੀ ਖਰੀਦ ਦੀ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਖਾਤਾ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-  "monthlyPlan": "ਮਾਸਿਕ ਪਲਾਨ",
+  "monthlyPlan": "ਮਹੀਨਾਵਾਰ ਪਲਾਨ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ਮਹੀਨਾ",
   "lifetimePlan": "ਇੱਕ ਵਾਰੀ ਖਰੀਦਦਾਰੀ",
   "lifetimePlanDescription": "ਇੱਕ ਵਾਰ ਖਰੀਦੋ, ਹਮੇਸ਼ਾ ਪ੍ਰੀਮੀਅਮ",

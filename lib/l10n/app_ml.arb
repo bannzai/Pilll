@@ -192,7 +192,7 @@
   "restorePurchase": "നിങ്ങളുടെ വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിച്ചു",
   "previouslyPurchased": "മുമ്പ് വാങ്ങിയിട്ടുണ്ടോ? വാങ്ങിയത് ഇവിടെ പുനഃസ്ഥാപിക്കൂ",
   "noPreviousPurchaseInfo": "മുമ്പത്തെ വാങ്ങലിന്റെ വിവരങ്ങൾ കണ്ടെത്താനായില്ല. ദയവായി അക്കൗണ്ട് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കൂ.",
-  "monthlyPlan": "മാസിക പ്ലാൻ",
+  "monthlyPlan": "പ്രതിമാസ പ്ലാൻ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/മാസം",
   "lifetimePlan": "ഒറ്റത്തവണ വാങ്ങൽ",
   "lifetimePlanDescription": "ഒരു വാങ്ങലിൽ ശാശ്വത പ്രീമിയം",

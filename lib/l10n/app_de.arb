@@ -192,7 +192,7 @@
   "restorePurchase": "Deine Kaufinformationen wurden wiederhergestellt",
   "previouslyPurchased": "Schon gekauft? Stelle deinen Kauf hier wieder her",
   "noPreviousPurchaseInfo": "Es wurden keine Informationen zu einem früheren Kauf gefunden. Prüfe bitte dein Konto und versuche es erneut.",
-  "monthlyPlan": "Monats-Abo",
+  "monthlyPlan": "Monatsabo",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/Monat",
   "lifetimePlan": "Einmaliger Kauf",
   "lifetimePlanDescription": "Einmal kaufen, Premium für immer",

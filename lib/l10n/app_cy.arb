@@ -192,7 +192,7 @@
   "restorePurchase": "Mae manylion eich pryniant wedi'u hadfer",
   "previouslyPurchased": "Wedi prynu o'r blaen? Adferwch eich pryniant yma",
   "noPreviousPurchaseInfo": "Ni ddaethpwyd o hyd i wybodaeth am bryniant blaenorol. Gwiriwch eich cyfrif a rhowch gynnig arall arni.",
-  "monthlyPlan": "Cynllun Misol",
+  "monthlyPlan": "Cynllun misol",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mis",
   "lifetimePlan": "pryniant un-tro",
   "lifetimePlanDescription": "Un prynu - premiwm am byth",

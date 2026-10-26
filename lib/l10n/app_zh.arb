@@ -192,7 +192,7 @@
   "restorePurchase": "购买信息已恢复",
   "previouslyPurchased": "之前购买过？点此恢复购买",
   "noPreviousPurchaseInfo": "未找到之前的购买记录。请检查账号后重试。",
-  "monthlyPlan": "月费套餐",
+  "monthlyPlan": "月度套餐",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/月",
   "lifetimePlan": "买断",
   "lifetimePlanDescription": "一次购买，终身高级版",

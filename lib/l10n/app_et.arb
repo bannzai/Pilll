@@ -192,7 +192,7 @@
   "restorePurchase": "Sinu ostuteave on taastatud",
   "previouslyPurchased": "Oled juba ostnud? Taasta ost siin",
   "noPreviousPurchaseInfo": "Varasema ostu andmeid ei leitud. Kontrolli oma kontot ja proovi uuesti.",
-  "monthlyPlan": "Kuine plaan",
+  "monthlyPlan": "Kuuplaan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/kuus",
   "lifetimePlan": "ühekordne ost",
   "lifetimePlanDescription": "Premium igaveseks ühe ostuga",

@@ -192,7 +192,7 @@
   "restorePurchase": "Zure erosketaren datuak berrezarri dira",
   "previouslyPurchased": "Lehenago erosi duzu? Berreskuratu erosketa hemen",
   "noPreviousPurchaseInfo": "Ez da aurreko erosketaren informaziorik aurkitu. Egiaztatu kontua eta saiatu berriro.",
-  "monthlyPlan": "Hilabeteko plana",
+  "monthlyPlan": "Hileko plana",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/hileko",
   "lifetimePlan": "Erosketa bakarra",
   "lifetimePlanDescription": "Erosketa batez Premium betirako",

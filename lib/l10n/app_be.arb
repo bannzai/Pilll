@@ -192,7 +192,7 @@
   "restorePurchase": "Інфармацыя пра пакупку адноўлена",
   "previouslyPurchased": "Ужо куплялі? Аднавіце пакупку тут",
   "noPreviousPurchaseInfo": "Звесткі пра папярэднюю пакупку не знойдзены. Калі ласка, праверце свой уліковы запіс і паспрабуйце яшчэ раз.",
-  "monthlyPlan": "штомесячны план",
+  "monthlyPlan": "Штомесячны план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месяц",
   "lifetimePlan": "Адразовая пакупка",
   "lifetimePlanDescription": "Адна пакупка - прэміюм назаўжды",

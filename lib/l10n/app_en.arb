@@ -192,7 +192,7 @@
   "restorePurchase": "Your purchase has been restored",
   "previouslyPurchased": "Already purchased? Restore your purchase here",
   "noPreviousPurchaseInfo": "No previous purchase was found. Please check your account and try again.",
-  "monthlyPlan": "Monthly Plan",
+  "monthlyPlan": "Monthly plan",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/month",
   "lifetimePlan": "One-time purchase",
   "lifetimePlanDescription": "Lifetime premium with one purchase",

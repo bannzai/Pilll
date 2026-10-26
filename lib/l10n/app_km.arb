@@ -192,7 +192,7 @@
   "restorePurchase": "ព័ត៌មានអំពីការទិញរបស់អ្នកត្រូវបានស្ដារឡើងវិញហើយ",
   "previouslyPurchased": "ធ្លាប់ទិញរួចហើយមែនទេ? សូមស្ដារការទិញនៅទីនេះ",
   "noPreviousPurchaseInfo": "រកមិនឃើញព័ត៌មានអំពីការទិញពីមុនទេ។ សូមពិនិត្យគណនីរបស់អ្នក ហើយព្យាយាមម្តងទៀត។",
-  "monthlyPlan": "ផែនការប្រចាំខែ",
+  "monthlyPlan": "គម្រោងប្រចាំខែ",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ខែ",
   "lifetimePlan": "ការទិញម្តង",
   "lifetimePlanDescription": "ទិញម្តង ប្រេមៀមរហូត",

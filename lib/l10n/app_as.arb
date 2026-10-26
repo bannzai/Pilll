@@ -192,7 +192,7 @@
   "restorePurchase": "আপোনাৰ ক্ৰয়ৰ তথ্য পুনৰুদ্ধাৰ কৰা হৈছে",
   "previouslyPurchased": "আগতে ক্ৰয় কৰিছিল নেকি? ইয়াত ক্ৰয় পুনৰুদ্ধাৰ কৰক",
   "noPreviousPurchaseInfo": "পূৰ্বৰ ক্ৰয়ৰ তথ্য পোৱা নগ’ল। অনুগ্ৰহ কৰি আপোনাৰ একাউণ্টটো পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক।",
-  "monthlyPlan": "মাসিক পৰিকল্পনা",
+  "monthlyPlan": "মাহিলী পৰিকল্পনা",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/মাহ",
   "lifetimePlan": "একক ক্ৰয়",
   "lifetimePlanDescription": "এবাৰ কিনিলেই চিৰকাল প্ৰিমিয়াম",

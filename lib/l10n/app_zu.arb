@@ -192,7 +192,7 @@
   "restorePurchase": "Ulwazi lokuthenga kwakho selubuyiselwe",
   "previouslyPurchased": "Usuke wathenga ngaphambilini? Sicela ubuyisele ukuthenga kwakho lapha",
   "noPreviousPurchaseInfo": "Ayitholakalanga imininingwane yokuthenga kwangaphambilini. Sicela uhlole i-akhawunti yakho bese uzama futhi.",
-  "monthlyPlan": "Uhlelo lwenyanga",
+  "monthlyPlan": "Uhlelo lwanyanga zonke",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ngenyanga",
   "lifetimePlan": "Ukuthenga kanye",
   "lifetimePlanDescription": "Thenga kanye ube nePremium njalo",

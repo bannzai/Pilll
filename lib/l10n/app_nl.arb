@@ -192,7 +192,7 @@
   "restorePurchase": "Je aankoopgegevens zijn hersteld",
   "previouslyPurchased": "Al eerder gekocht? Herstel je aankoop hier",
   "noPreviousPurchaseInfo": "Er zijn geen gegevens over een eerdere aankoop gevonden. Controleer je account en probeer het opnieuw.",
-  "monthlyPlan": "Maandelijks abonnement",
+  "monthlyPlan": "Maandabonnement",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/maand",
   "lifetimePlan": "eenmalige aankoop",
   "lifetimePlanDescription": "Premium voor altijd met één aankoop",

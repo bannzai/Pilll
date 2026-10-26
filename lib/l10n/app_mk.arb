@@ -192,7 +192,7 @@
   "restorePurchase": "Информациите за Вашето купување се вратени",
   "previouslyPurchased": "Веќе сте купиле? Вратете го купувањето тука",
   "noPreviousPurchaseInfo": "Не се пронајдени податоци за претходно купување. Ве молиме, проверете ја Вашата сметка и обидете се повторно.",
-  "monthlyPlan": "месечен план",
+  "monthlyPlan": "Месечен план",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/месец",
   "lifetimePlan": "еднократна покупка",
   "lifetimePlanDescription": "Еднократна покупка за доживотен премиум",

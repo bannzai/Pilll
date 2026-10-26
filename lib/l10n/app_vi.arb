@@ -192,7 +192,7 @@
   "restorePurchase": "Đã khôi phục thông tin mua hàng của bạn",
   "previouslyPurchased": "Bạn đã mua trước đây? Vui lòng khôi phục giao dịch mua tại đây",
   "noPreviousPurchaseInfo": "Không tìm thấy thông tin mua hàng trước đây. Vui lòng kiểm tra tài khoản rồi thử lại.",
-  "monthlyPlan": "Gói hàng tháng",
+  "monthlyPlan": "Gói hằng tháng",
   "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/tháng",
   "lifetimePlan": "Mua một lần",
   "lifetimePlanDescription": "Mua một lần, Premium mãi mãi",
