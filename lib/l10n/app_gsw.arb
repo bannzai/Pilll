@@ -562,7 +562,7 @@
   "addedPausePeriod": "D Pillepause isch dezuechoo",
   "pausePeriodOverlapsOther": "Du chasch kei Ziitruum uswähle, wo sich mit ere andere Pillepause überschniidet",
   "pauseEndDateMustBeAfterStartDate": "Wähl für s Ändi vo de Pillepaus es Datum nach em Afangsdatum",
-  "plannedResumeDateOptional": "Vorgsehns Datum fürs Widrufneh vo de Iinnahm (optional)",
+  "plannedResumeDateOptional": "Plant Datum, wänn d Pille wider nimmsch (freiwillig)",
   "plannedResumeDateNotSet": "Nöd fesgleit",
   "selectPlannedResumeDate": "S Datum für s Wiederufneh vo dr Iinahm uuswähle",
   "pauseEndDateLimitIsToday": "S Enddatum cha nur bis hüt gsetzt werde",

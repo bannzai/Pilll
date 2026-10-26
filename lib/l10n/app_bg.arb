@@ -562,7 +562,7 @@
   "addedPausePeriod": "Периодът на почивка от хапчетата е добавен",
   "pausePeriodOverlapsOther": "Не можете да изберете период, който се припокрива с друга пауза в приема на хапчета",
   "pauseEndDateMustBeAfterStartDate": "Моля, изберете крайна дата на почивката от хапчетата след началната дата",
-  "plannedResumeDateOptional": "Планирана дата за подновяване на приема (по избор)",
+  "plannedResumeDateOptional": "Планирана дата за подновяване на приема на хапчето (по желание)",
   "plannedResumeDateNotSet": "Не е зададено",
   "selectPlannedResumeDate": "Изберете планираната дата за подновяване на приема",
   "pauseEndDateLimitIsToday": "Крайната дата може да бъде най-късно днес",

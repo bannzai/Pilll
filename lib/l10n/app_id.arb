@@ -562,7 +562,7 @@
   "addedPausePeriod": "Masa jeda minum pil telah ditambahkan",
   "pausePeriodOverlapsOther": "Anda tidak dapat memilih periode yang tumpang tindih dengan jeda minum pil lainnya",
   "pauseEndDateMustBeAfterStartDate": "Pilih tanggal akhir jeda minum pil setelah tanggal mulai",
-  "plannedResumeDateOptional": "Tanggal rencana mulai minum lagi (opsional)",
+  "plannedResumeDateOptional": "Rencana tanggal mulai minum pil lagi (opsional)",
   "plannedResumeDateNotSet": "Belum diatur",
   "selectPlannedResumeDate": "Pilih tanggal rencana melanjutkan konsumsi",
   "pauseEndDateLimitIsToday": "Tanggal berakhir hanya dapat diatur sampai hari ini",

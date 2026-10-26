@@ -562,7 +562,7 @@
   "addedPausePeriod": "Dodano okres przerwy w przyjmowaniu tabletek",
   "pausePeriodOverlapsOther": "Nie możesz wybrać okresu, który pokrywa się z inną przerwą w braniu tabletek",
   "pauseEndDateMustBeAfterStartDate": "Wybierz datę zakończenia przerwy w przyjmowaniu tabletek późniejszą niż data rozpoczęcia",
-  "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania (opcjonalnie)",
+  "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania pigułki (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania",
   "pauseEndDateLimitIsToday": "Datę zakończenia można ustawić tylko do dzisiaj",

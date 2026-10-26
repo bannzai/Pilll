@@ -562,7 +562,7 @@
   "addedPausePeriod": "تمت إضافة فترة التوقف عن تناول الحبوب",
   "pausePeriodOverlapsOther": "لا يمكنكِ اختيار فترة تتداخل مع فترة توقف أخرى عن تناول الحبوب",
   "pauseEndDateMustBeAfterStartDate": "يرجى اختيار تاريخ انتهاء فترة التوقف عن تناول الحبوب بعد تاريخ البدء",
-  "plannedResumeDateOptional": "تاريخ استئناف تناول الحبوب (اختياري)",
+  "plannedResumeDateOptional": "التاريخ المخطط لاستئناف تناول الحبوب (اختياري)",
   "plannedResumeDateNotSet": "غير محدد",
   "selectPlannedResumeDate": "اختاري تاريخ استئناف التناول",
   "pauseEndDateLimitIsToday": "يمكن تحديد تاريخ الانتهاء حتى اليوم فقط",

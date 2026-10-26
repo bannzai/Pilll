@@ -562,7 +562,7 @@
   "addedPausePeriod": "ગોળી લેવાનો વિરામ સમય ઉમેરાયો છે",
   "pausePeriodOverlapsOther": "ગોળી લેવાના બીજા વિરામ સાથે આવરી લેતો સમયગાળો તમે પસંદ કરી શકતા નથી",
   "pauseEndDateMustBeAfterStartDate": "ગોળી લેવાના વિરામની સમાપ્તિ માટે શરૂઆતની તારીખ પછીની તારીખ પસંદ કરો",
-  "plannedResumeDateOptional": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ (વૈકલ્પિક)",
+  "plannedResumeDateOptional": "ગોળી ફરી લેવાનું શરૂ કરવાની આયોજિત તારીખ (વૈકલ્પિક)",
   "plannedResumeDateNotSet": "સેટ કરેલ નથી",
   "selectPlannedResumeDate": "ફરીથી સેવન શરૂ કરવાની નિર્ધારિત તારીખ પસંદ કરો",
   "pauseEndDateLimitIsToday": "અંતિમ તારીખ આજે સુધી જ પસંદ કરી શકાય છે",

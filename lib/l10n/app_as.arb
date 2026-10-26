@@ -562,7 +562,7 @@
   "addedPausePeriod": "বড়ি খোৱাৰ বিৰতিৰ সময় যোগ কৰা হৈছে",
   "pausePeriodOverlapsOther": "আন এটা বড়ি খোৱাৰ বিৰতিৰ সময়ৰ সৈতে মিলি যোৱা সময়ছোৱা আপুনি বাছনি কৰিব নোৱাৰে",
   "pauseEndDateMustBeAfterStartDate": "বৰি খোৱাৰ বিৰতিৰ শেষৰ তাৰিখৰ বাবে আৰম্ভণিৰ তাৰিখৰ পাছৰ দিন এটা বাছনি কৰক",
-  "plannedResumeDateOptional": "সেৱন পুনৰ আৰম্ভ কৰাৰ নিৰ্ধাৰিত তাৰিখ (ঐচ্ছিক)",
+  "plannedResumeDateOptional": "পুনৰ বড়ি খোৱা আৰম্ভ কৰাৰ পৰিকল্পিত তাৰিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "ছেট কৰা হোৱা নাই",
   "selectPlannedResumeDate": "পুনৰায় সেৱন আৰম্ভ কৰাৰ নিৰ্ধাৰিত তাৰিখ বাছনি কৰক",
   "pauseEndDateLimitIsToday": "সমাপ্তিৰ তাৰিখ আজিলৈকেহে বাছনি কৰিব পাৰিব",

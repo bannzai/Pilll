@@ -562,7 +562,7 @@
   "addedPausePeriod": "נוספה תקופת הפסקה בנטילת הגלולה",
   "pausePeriodOverlapsOther": "אי אפשר לבחור תקופה שחופפת להפסקה אחרת בנטילת הגלולה",
   "pauseEndDateMustBeAfterStartDate": "יש לבחור לתום ההפסקה בנטילת הגלולה תאריך מאוחר מתאריך ההתחלה",
-  "plannedResumeDateOptional": "תאריך מתוכנן לחידוש הנטילה (אופציונלי)",
+  "plannedResumeDateOptional": "תאריך מתוכנן לחידוש נטילת הגלולה (לא חובה)",
   "plannedResumeDateNotSet": "לא הוגדר",
   "selectPlannedResumeDate": "בחרי את התאריך המתוכנן לחידוש הנטילה",
   "pauseEndDateLimitIsToday": "ניתן להגדיר את תאריך הסיום עד היום בלבד",

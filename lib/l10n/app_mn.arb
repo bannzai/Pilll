@@ -562,7 +562,7 @@
   "addedPausePeriod": "Эм уух завсарлагын хугацаа нэмэгдлээ",
   "pausePeriodOverlapsOther": "Эм уух өөр завсарлагатай давхцах хугацааг сонгох боломжгүй",
   "pauseEndDateMustBeAfterStartDate": "Эм уух завсарлагын дуусах өдрийг эхлэх өдрөөс хойших өдөр болгон сонгоно уу",
-  "plannedResumeDateOptional": "Ууж эхлэхээр төлөвлөсөн огноо (сонголттой)",
+  "plannedResumeDateOptional": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдөр (заавал биш)",
   "plannedResumeDateNotSet": "Тохируулаагүй",
   "selectPlannedResumeDate": "Ууж эхлэхээр төлөвлөсөн огноог сонгоно уу",
   "pauseEndDateLimitIsToday": "Дуусах огноог өнөөдрийг хүртэлхээр л сонгох боломжтой",

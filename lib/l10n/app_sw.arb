@@ -562,7 +562,7 @@
   "addedPausePeriod": "Kipindi cha mapumziko ya kumeza vidonge kimeongezwa",
   "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachoingiliana na kipindi kingine cha mapumziko ya kumeza vidonge",
   "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe ya mwisho wa mapumziko ya kumeza vidonge iliyo baada ya tarehe ya kuanza",
-  "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kutumia (hiari)",
+  "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kumeza kidonge (si lazima)",
   "plannedResumeDateNotSet": "Haijawekwa",
   "selectPlannedResumeDate": "Chagua tarehe iliyopangwa ya kuanza kutumia tena",
   "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwekwa hadi leo tu",

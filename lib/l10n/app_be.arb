@@ -562,7 +562,7 @@
   "addedPausePeriod": "Перыяд перапынку ў прыёме пігулак дададзены",
   "pausePeriodOverlapsOther": "Вы не можаце выбраць перыяд, які перакрываецца з іншым перапынкам у прыёме пігулак",
   "pauseEndDateMustBeAfterStartDate": "Выберыце дату заканчэння перапынку ў прыёме пігулак пазней за дату пачатку",
-  "plannedResumeDateOptional": "Запланаваная дата аднаўлення прыёму (неабавязкова)",
+  "plannedResumeDateOptional": "Запланаваная дата аднаўлення прыёму пігулак (неабавязкова)",
   "plannedResumeDateNotSet": "Не зададзена",
   "selectPlannedResumeDate": "Выберыце запланаваную дату аднаўлення прыёму",
   "pauseEndDateLimitIsToday": "Дату завяршэння можна выбраць толькі да сённяшняга дня",

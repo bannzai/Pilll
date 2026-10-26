@@ -562,7 +562,7 @@
   "addedPausePeriod": "A fost adăugată perioada de pauză de la pilulă",
   "pausePeriodOverlapsOther": "Nu poți selecta o perioadă care se suprapune cu o altă pauză de la pilulă",
   "pauseEndDateMustBeAfterStartDate": "Alege pentru sfârșitul pauzei de la pilulă o dată ulterioară datei de început",
-  "plannedResumeDateOptional": "Data planificată pentru reluarea administrării (opțional)",
+  "plannedResumeDateOptional": "Data planificată pentru reluarea pilulei (opțional)",
   "plannedResumeDateNotSet": "Nesetat",
   "selectPlannedResumeDate": "Selectați data programată pentru reluarea administrării",
   "pauseEndDateLimitIsToday": "Data de încheiere poate fi setată doar până astăzi",

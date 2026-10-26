@@ -562,7 +562,7 @@
   "addedPausePeriod": "Tempoh rehat daripada pengambilan pil telah ditambahkan",
   "pausePeriodOverlapsOther": "Anda tidak boleh memilih tempoh yang bertindih dengan tempoh rehat pengambilan pil yang lain",
   "pauseEndDateMustBeAfterStartDate": "Sila pilih tarikh tamat rehat pengambilan pil selepas tarikh mula",
-  "plannedResumeDateOptional": "Tarikh dijangka untuk sambung pengambilan (pilihan)",
+  "plannedResumeDateOptional": "Tarikh dirancang untuk mula mengambil pil semula (pilihan)",
   "plannedResumeDateNotSet": "Belum ditetapkan",
   "selectPlannedResumeDate": "Pilih tarikh dijadualkan untuk menyambung pengambilan",
   "pauseEndDateLimitIsToday": "Tarikh tamat hanya boleh ditetapkan sehingga hari ini",

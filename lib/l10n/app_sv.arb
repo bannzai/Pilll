@@ -562,7 +562,7 @@
   "addedPausePeriod": "Pillerpausen har lagts till",
   "pausePeriodOverlapsOther": "Du kan inte välja en period som överlappar ett annat uppehåll med p-piller",
   "pauseEndDateMustBeAfterStartDate": "Välj ett slutdatum för pillerpausen som är efter startdatumet",
-  "plannedResumeDateOptional": "Planerat datum för att återuppta intaget (valfritt)",
+  "plannedResumeDateOptional": "Planerat datum för att börja ta p-pillret igen (valfritt)",
   "plannedResumeDateNotSet": "Inte inställt",
   "selectPlannedResumeDate": "Välj planerat datum för att återuppta intaget",
   "pauseEndDateLimitIsToday": "Slutdatum kan bara ställas in till och med idag",

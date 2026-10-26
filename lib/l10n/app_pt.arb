@@ -562,7 +562,7 @@
   "addedPausePeriod": "O período de pausa da pílula foi adicionado",
   "pausePeriodOverlapsOther": "Você não pode selecionar um período que coincida com outra pausa no uso da pílula",
   "pauseEndDateMustBeAfterStartDate": "Escolha uma data para o fim da pausa da pílula posterior à data de início",
-  "plannedResumeDateOptional": "Data prevista para retomar a toma (opcional)",
+  "plannedResumeDateOptional": "Data prevista para voltar a tomar a pílula (opcional)",
   "plannedResumeDateNotSet": "Não definido",
   "selectPlannedResumeDate": "Selecione a data prevista para retomar a toma",
   "pauseEndDateLimitIsToday": "A data de término só pode ser definida até hoje",

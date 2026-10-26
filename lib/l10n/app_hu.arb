@@ -562,7 +562,7 @@
   "addedPausePeriod": "A tablettaszedési szünet hozzáadva",
   "pausePeriodOverlapsOther": "Nem választhatsz olyan időszakot, amely átfedésben van egy másik tablettaszedési szünettel",
   "pauseEndDateMustBeAfterStartDate": "A tablettaszedési szünet végéhez a kezdőnapnál későbbi dátumot válassz",
-  "plannedResumeDateOptional": "A szedés tervezett újrakezdésének dátuma (nem kötelező)",
+  "plannedResumeDateOptional": "A tabletta újbóli szedésének tervezett napja (nem kötelező)",
   "plannedResumeDateNotSet": "Nincs beállítva",
   "selectPlannedResumeDate": "Válassza ki a szedés tervezett újrakezdési dátumát",
   "pauseEndDateLimitIsToday": "A befejezés dátuma legfeljebb a mai nap lehet",

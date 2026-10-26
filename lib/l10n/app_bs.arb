@@ -562,7 +562,7 @@
   "addedPausePeriod": "Period pauze u uzimanju pilula je dodan",
   "pausePeriodOverlapsOther": "Ne možete odabrati period koji se preklapa s drugom pauzom u uzimanju pilula",
   "pauseEndDateMustBeAfterStartDate": "Molimo, odaberite datum završetka pauze u uzimanju pilula koji je nakon datuma početka",
-  "plannedResumeDateOptional": "Planirani datum ponovnog početka uzimanja (opcionalno)",
+  "plannedResumeDateOptional": "Planirani datum ponovnog uzimanja pilule (neobavezno)",
   "plannedResumeDateNotSet": "Nije postavljeno",
   "selectPlannedResumeDate": "Odaberite planirani datum nastavka uzimanja",
   "pauseEndDateLimitIsToday": "Datum završetka može se odabrati najkasnije do danas",

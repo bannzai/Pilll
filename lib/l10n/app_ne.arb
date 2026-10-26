@@ -562,7 +562,7 @@
   "addedPausePeriod": "चक्की खाने विश्राम अवधि थपिएको छ",
   "pausePeriodOverlapsOther": "चक्की सेवनको अर्को विश्राम अवधिसँग जुध्ने अवधि तपाईंले छान्न सक्नुहुन्न",
   "pauseEndDateMustBeAfterStartDate": "चक्की खाने विश्रामको अन्तिम मितिका लागि सुरु मितिभन्दा पछिको मिति छान्नुहोस्",
-  "plannedResumeDateOptional": "फेरि सेवन सुरु गर्ने निर्धारित मिति (वैकल्पिक)",
+  "plannedResumeDateOptional": "चक्की फेरि खान सुरु गर्ने योजनाबद्ध मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "सेट गरिएको छैन",
   "selectPlannedResumeDate": "फेरि सेवन सुरु गर्ने निर्धारित मिति चयन गर्नुहोस्",
   "pauseEndDateLimitIsToday": "समाप्ति मिति आजसम्म मात्र सेट गर्न सकिन्छ",

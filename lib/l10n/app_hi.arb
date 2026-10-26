@@ -562,7 +562,7 @@
   "addedPausePeriod": "गोली लेने का विराम जोड़ा गया है",
   "pausePeriodOverlapsOther": "आप ऐसी अवधि नहीं चुन सकतीं जो गोली लेने के किसी दूसरे विराम से टकराती हो",
   "pauseEndDateMustBeAfterStartDate": "गोली लेने के विराम की समाप्ति के लिए शुरुआत की तारीख के बाद की तारीख चुनें",
-  "plannedResumeDateOptional": "दोबारा सेवन शुरू करने की निर्धारित तिथि (वैकल्पिक)",
+  "plannedResumeDateOptional": "गोली फिर से लेना शुरू करने की तय तारीख (वैकल्पिक)",
   "plannedResumeDateNotSet": "सेट नहीं है",
   "selectPlannedResumeDate": "सेवन दोबारा शुरू करने की निर्धारित तिथि चुनें",
   "pauseEndDateLimitIsToday": "समाप्ति तिथि केवल आज तक ही सेट की जा सकती है",

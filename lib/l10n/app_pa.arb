@@ -562,7 +562,7 @@
   "addedPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਦਾ ਸਮਾਂ ਜੋੜ ਦਿੱਤਾ ਗਿਆ ਹੈ",
   "pausePeriodOverlapsOther": "ਤੁਸੀਂ ਗੋਲੀ ਲੈਣ ਦੇ ਕਿਸੇ ਹੋਰ ਵਿਰਾਮ ਨਾਲ ਟਕਰਾਉਂਦਾ ਸਮਾਂ ਨਹੀਂ ਚੁਣ ਸਕਦੇ",
   "pauseEndDateMustBeAfterStartDate": "ਗੋਲੀ ਲੈਣ ਦੀ ਛੁੱਟੀ ਦੀ ਸਮਾਪਤੀ ਲਈ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਤੋਂ ਬਾਅਦ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
-  "plannedResumeDateOptional": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਯਤ ਮਿਤੀ (ਵਿਕਲਪਿਕ)",
+  "plannedResumeDateOptional": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਮਿਤੀ (ਵਿਕਲਪਿਕ)",
   "plannedResumeDateNotSet": "ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ",
   "selectPlannedResumeDate": "ਦੁਬਾਰਾ ਸੇਵਨ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਨਿਰਧਾਰਤ ਤਾਰੀਖ ਚੁਣੋ",
   "pauseEndDateLimitIsToday": "ਸਮਾਪਤੀ ਦੀ ਤਾਰੀਖ ਸਿਰਫ਼ ਅੱਜ ਤੱਕ ਹੀ ਸੈੱਟ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ",
