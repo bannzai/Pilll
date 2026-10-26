@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Voraussichtliche Periode: Tag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Voraussichtliche Periode: Tag {diffPlusOne}, Pille {pillNumber}",
   "menstruationRemainingDay": "Noch {diff} Tage",
-  "menstruationProgressingDay": "{diffPlusOne}. Tag",
+  "menstruationProgressingDay": "{diffPlusOne}. Tag der Periode",
   "recordMenstruation": "Periode aufzeichnen",
   "menstruationHistory": "Menstruationsverlauf",
   "menstruationFromToday": "Periode ab heute",

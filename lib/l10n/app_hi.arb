@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "पीरियड की अनुमानित शुरुआत: दिन {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "अनुमानित पीरियड: दिन {diffPlusOne}, गोली {pillNumber}",
   "menstruationRemainingDay": "अभी {diff} दिन बाकी हैं",
-  "menstruationProgressingDay": "{diffPlusOne} दिन",
+  "menstruationProgressingDay": "पीरियड का {diffPlusOne}वाँ दिन",
   "recordMenstruation": "मासिक धर्म रिकॉर्ड करें",
   "menstruationHistory": "पीरियड हिस्ट्री",
   "menstruationFromToday": "आज से मासिक धर्म",

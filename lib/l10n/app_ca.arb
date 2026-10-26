@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Previsió de la regla: dia {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Regla prevista: dia {diffPlusOne}, píndola {pillNumber}",
   "menstruationRemainingDay": "Falten {diff} dies",
-  "menstruationProgressingDay": "dia {diffPlusOne}",
+  "menstruationProgressingDay": "Dia {diffPlusOne} de la regla",
   "recordMenstruation": "Registrar la menstruació",
   "menstruationHistory": "Historial menstrual",
   "menstruationFromToday": "Regla avui",

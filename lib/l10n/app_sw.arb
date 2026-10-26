@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Hedhi inayotarajiwa: siku ya {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Hedhi inayotarajiwa: siku ya {diffPlusOne}, kidonge {pillNumber}",
   "menstruationRemainingDay": "Zimebaki siku {diff}",
-  "menstruationProgressingDay": "siku ya {diffPlusOne}",
+  "menstruationProgressingDay": "Siku ya {diffPlusOne} ya hedhi",
   "recordMenstruation": "Rekodi hedhi",
   "menstruationHistory": "Historia ya hedhi",
   "menstruationFromToday": "Hedhi kutoka leo",

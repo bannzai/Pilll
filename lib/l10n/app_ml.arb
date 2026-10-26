@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "ആർത്തവം പ്രതീക്ഷിക്കുന്ന ദിവസം: {diffPlusOne}-ാം ദിവസം",
   "menstruationScheduleDateWithNumberAndPillNumber": "പ്രതീക്ഷിക്കുന്ന ആർത്തവം: {diffPlusOne}ാം ദിവസം, {pillNumber}ാം ഗുളിക",
   "menstruationRemainingDay": "ഇനി {diff} ദിവസം",
-  "menstruationProgressingDay": "{diffPlusOne}ാം ദിവസം",
+  "menstruationProgressingDay": "ആർത്തവത്തിന്റെ {diffPlusOne}-ാം ദിവസം",
   "recordMenstruation": "മാസികം രേഖപ്പെടുത്തുക",
   "menstruationHistory": "ആർത്തവ ചരിത്രം",
   "menstruationFromToday": "ഇന്നു മുതൽ ആർത്തവം",

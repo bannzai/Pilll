@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Erwarteti Periode: Tag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Erwarteti Periode: Tag {diffPlusOne}, Pille {pillNumber}",
   "menstruationRemainingDay": "No {diff} Täg",
-  "menstruationProgressingDay": "{diffPlusOne}. Tag",
+  "menstruationProgressingDay": "{diffPlusOne}. Tag vo de Mens",
   "recordMenstruation": "Regel ufzäichne",
   "menstruationHistory": "Periodeverlauf",
   "menstruationFromToday": "Menstruation ab hüt",

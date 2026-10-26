@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "រដូវរំពឹងទុក៖ ថ្ងៃទី {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "រដូវដែលរំពឹងទុក៖ ថ្ងៃទី {diffPlusOne} គ្រាប់ទី {pillNumber}",
   "menstruationRemainingDay": "នៅសល់ {diff} ថ្ងៃ",
-  "menstruationProgressingDay": "ថ្ងៃទី{diffPlusOne}",
+  "menstruationProgressingDay": "ថ្ងៃទី{diffPlusOne} នៃការមករដូវ",
   "recordMenstruation": "កត់ត្រារដូវ",
   "menstruationHistory": "ប្រវត្តិការមករដូវ",
   "menstruationFromToday": "រដូវចាប់ពីថ្ងៃនេះ",

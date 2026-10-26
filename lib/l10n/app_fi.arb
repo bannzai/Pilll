@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Kuukautisten arvioitu alku: päivä {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Arvioidut kuukautiset: päivä {diffPlusOne}, pilleri {pillNumber}",
   "menstruationRemainingDay": "{diff} päivää jäljellä",
-  "menstruationProgressingDay": "{diffPlusOne}. päivä",
+  "menstruationProgressingDay": "Kuukautisten {diffPlusOne}. päivä",
   "recordMenstruation": "Kirjaa kuukautiset",
   "menstruationHistory": "Kuukautishistoria",
   "menstruationFromToday": "Kuukautiset alkoivat tänään",

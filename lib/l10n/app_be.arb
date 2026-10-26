@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Чаканыя месячныя: дзень {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Чаканыя месячныя: дзень {diffPlusOne}, пігулка {pillNumber}",
   "menstruationRemainingDay": "Засталося {diff} дзён",
-  "menstruationProgressingDay": "{diffPlusOne}-ы дзень",
+  "menstruationProgressingDay": "{diffPlusOne}-ы дзень месячных",
   "recordMenstruation": "Запісваць менструацыю",
   "menstruationHistory": "Гісторыя месячных",
   "menstruationFromToday": "Месячныя сёння",

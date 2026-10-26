@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Αναμενόμενη έναρξη περιόδου: ημέρα {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Αναμενόμενη ημερομηνία περιόδου: ημέρα {diffPlusOne}, χάπι {pillNumber}",
   "menstruationRemainingDay": "Απομένουν {diff} ημέρες",
-  "menstruationProgressingDay": "{diffPlusOne}η ημέρα",
+  "menstruationProgressingDay": "{diffPlusOne}η ημέρα περιόδου",
   "recordMenstruation": "Καταγραφή περιόδου",
   "menstruationHistory": "Ιστορικό Περιόδων",
   "menstruationFromToday": "Περίοδος από σήμερα",

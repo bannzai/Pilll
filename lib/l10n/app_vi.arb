@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Dự kiến có kinh nguyệt: ngày thứ {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Dự kiến có kinh nguyệt: ngày {diffPlusOne}, viên thuốc {pillNumber}",
   "menstruationRemainingDay": "Còn {diff} ngày",
-  "menstruationProgressingDay": "ngày thứ {diffPlusOne}",
+  "menstruationProgressingDay": "Ngày thứ {diffPlusOne} của kỳ kinh",
   "recordMenstruation": "Ghi lại kinh nguyệt",
   "menstruationHistory": "Lịch sử kinh nguyệt",
   "menstruationFromToday": "Hành kinh từ hôm nay",

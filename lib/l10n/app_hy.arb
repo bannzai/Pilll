@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Սպասվող դաշտան՝ օր {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Սպասվող դաշտան․ օր {diffPlusOne}, հաբ {pillNumber}",
   "menstruationRemainingDay": "Մնացել է {diff} օր",
-  "menstruationProgressingDay": "{diffPlusOne}-րդ օր",
+  "menstruationProgressingDay": "Դաշտանի {diffPlusOne}-րդ օրը",
   "recordMenstruation": "Գրանցել մենստրուացիան",
   "menstruationHistory": "Դաշտանության պատմություն",
   "menstruationFromToday": "Այսօրից դաշտանություն",

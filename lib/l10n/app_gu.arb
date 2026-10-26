@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "માસિક આવવાની સંભાવના: દિવસ {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "અંદાજિત માસિક: {diffPlusOne}મો દિવસ, ગોળી {pillNumber}",
   "menstruationRemainingDay": "હજુ {diff} દિવસ બાકી",
-  "menstruationProgressingDay": "{diffPlusOne}માં દિવસ",
+  "menstruationProgressingDay": "માસિકનો {diffPlusOne}મો દિવસ",
   "recordMenstruation": "પીરિયડ નોંધો",
   "menstruationHistory": "મહિનાવારીનો ઇતિહાસ",
   "menstruationFromToday": "આજથી માસિક",

@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Aurreikusitako hilekoa: {diffPlusOne}. eguna",
   "menstruationScheduleDateWithNumberAndPillNumber": "Aurreikusitako hilekoa: {diffPlusOne}. eguna, {pillNumber}. pilula",
   "menstruationRemainingDay": "{diff} egun falta dira",
-  "menstruationProgressingDay": "{diffPlusOne}. eguna",
+  "menstruationProgressingDay": "Hilekoaren {diffPlusOne}. eguna",
   "recordMenstruation": "Menstruazioa erregistratu",
   "menstruationHistory": "Hileko historia",
   "menstruationFromToday": "Gaurtik hilekoa",

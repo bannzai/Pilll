@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Menstruacioni i pritshëm: dita {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruacioni i pritshëm: dita {diffPlusOne}, pilula {pillNumber}",
   "menstruationRemainingDay": "Kanë mbetur {diff} ditë",
-  "menstruationProgressingDay": "dita {diffPlusOne}",
+  "menstruationProgressingDay": "Dita {diffPlusOne} e menstruacioneve",
   "recordMenstruation": "Regjistro menstruacionin",
   "menstruationHistory": "Historia e menstruacionit",
   "menstruationFromToday": "Menstruacion nga sot",

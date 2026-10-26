@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Kutilayotgan hayz: {diffPlusOne}-kun",
   "menstruationScheduleDateWithNumberAndPillNumber": "Kutilayotgan hayz: {diffPlusOne}-kun, {pillNumber}-tabletka",
   "menstruationRemainingDay": "Yana {diff} kun qoldi",
-  "menstruationProgressingDay": "{diffPlusOne}-kun",
+  "menstruationProgressingDay": "Hayzning {diffPlusOne}-kuni",
   "recordMenstruation": "Hayz davrini qayd qilish",
   "menstruationHistory": "Hayz tarixi",
   "menstruationFromToday": "Bugundan hayz",

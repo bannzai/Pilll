@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "ماہواری کی متوقع تاریخ: دن {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "متوقع ماہواری: دن {diffPlusOne}، گولی {pillNumber}",
   "menstruationRemainingDay": "مزید {diff} دن باقی",
-  "menstruationProgressingDay": "{diffPlusOne}واں دن",
+  "menstruationProgressingDay": "ماہواری کا {diffPlusOne}واں دن",
   "recordMenstruation": "ماہواری ریکارڈ کریں",
   "menstruationHistory": "ماہواری کی تاریخ",
   "menstruationFromToday": "آج سے حیض",

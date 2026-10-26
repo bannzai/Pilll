@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Menstruație estimată: ziua {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Menstruație estimată: ziua {diffPlusOne}, pilula {pillNumber}",
   "menstruationRemainingDay": "Mai sunt {diff} zile",
-  "menstruationProgressingDay": "ziua {diffPlusOne}",
+  "menstruationProgressingDay": "Ziua {diffPlusOne} a menstruației",
   "recordMenstruation": "Înregistrează menstruația",
   "menstruationHistory": "Istoric menstrual",
   "menstruationFromToday": "Menstruație de astăzi",

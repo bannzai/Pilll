@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Forventet mens: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Forventet mens: dag {diffPlusOne}, p-pille {pillNumber}",
   "menstruationRemainingDay": "{diff} dager igjen",
-  "menstruationProgressingDay": "{diffPlusOne}. dag",
+  "menstruationProgressingDay": "Dag {diffPlusOne} av mensen",
   "recordMenstruation": "Registrer menstruasjon",
   "menstruationHistory": "Menstruasjonshistorikk",
   "menstruationFromToday": "Mensen fra i dag",

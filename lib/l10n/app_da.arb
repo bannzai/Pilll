@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Forventet menstruation: dag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Forventet menstruation: dag {diffPlusOne}, p-pille {pillNumber}",
   "menstruationRemainingDay": "{diff} dage tilbage",
-  "menstruationProgressingDay": "dag {diffPlusOne}",
+  "menstruationProgressingDay": "Dag {diffPlusOne} af menstruationen",
   "recordMenstruation": "Registrer menstruation",
   "menstruationHistory": "Menstruationshistorie",
   "menstruationFromToday": "Mens starter i dag",

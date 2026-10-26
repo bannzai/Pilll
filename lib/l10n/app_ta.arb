@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "மாதவிடாய் எதிர்பார்க்கப்படும் நாள்: {diffPlusOne}ஆம் நாள்",
   "menstruationScheduleDateWithNumberAndPillNumber": "எதிர்பார்க்கப்படும் மாதவிடாய்: {diffPlusOne}ஆம் நாள், {pillNumber}ஆம் மாத்திரை",
   "menstruationRemainingDay": "இன்னும் {diff} நாட்கள்",
-  "menstruationProgressingDay": "{diffPlusOne}ஆம் நாள்",
+  "menstruationProgressingDay": "மாதவிடாயின் {diffPlusOne}ஆம் நாள்",
   "recordMenstruation": "மாதவிடாய் பதிவு செய்க",
   "menstruationHistory": "மாதவிடாய் வரலாறு",
   "menstruationFromToday": "இன்று முதல் மாதவிடாய்",

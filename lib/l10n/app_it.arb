@@ -159,7 +159,7 @@
   "menstruationScheduleDateWithNumber": "Mestruazioni previste: giorno {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Mestruazioni previste: giorno {diffPlusOne}, pillola {pillNumber}",
   "menstruationRemainingDay": "Mancano {diff} giorni",
-  "menstruationProgressingDay": "{diffPlusOne}° giorno",
+  "menstruationProgressingDay": "Giorno {diffPlusOne} delle mestruazioni",
   "recordMenstruation": "Registra il ciclo",
   "menstruationHistory": "Cronologia mestruazioni",
   "menstruationFromToday": "Mestruazioni da oggi",
