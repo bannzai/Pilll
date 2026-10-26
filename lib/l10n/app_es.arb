@@ -136,7 +136,7 @@
   "displayMode": "Modo de visualización",
   "dateDisplay": "Visualización de la fecha",
   "pillNumber": "número de píldora",
-  "pillDaysCycle": "Días de toma",
+  "pillDaysCycle": "Días de toma de la píldora",
   "pillSheetEnded": "Has completado el blíster de píldoras",
   "checkLastTakenDate": "Verificar último día de toma",
   "pleaseRegisterAccount": "Por favor, regístrese",

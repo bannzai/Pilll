@@ -136,7 +136,7 @@
   "displayMode": "Tryb wyświetlania",
   "dateDisplay": "Wyświetlanie daty",
   "pillNumber": "numer",
-  "pillDaysCycle": "Dni przyjmowania",
+  "pillDaysCycle": "Liczba dni przyjmowania tabletek",
   "pillSheetEnded": "Opakowanie tabletek zostało ukończone",
   "checkLastTakenDate": "Sprawdź ostatni dzień przyjęcia",
   "pleaseRegisterAccount": "Zarejestruj konto",

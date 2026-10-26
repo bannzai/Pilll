@@ -136,7 +136,7 @@
   "displayMode": "Näyttötila",
   "dateDisplay": "Päivämäärän näyttö",
   "pillNumber": "pillerinumero",
-  "pillDaysCycle": "Annostuspäivät",
+  "pillDaysCycle": "Pillerin ottopäivät",
   "pillSheetEnded": "Pilleripakkaus on päättynyt",
   "checkLastTakenDate": "Tarkista viimeinen ottopäivä",
   "pleaseRegisterAccount": "Rekisteröidy tilille",

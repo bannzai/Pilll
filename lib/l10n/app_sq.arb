@@ -136,7 +136,7 @@
   "displayMode": "Mënyra e shfaqjes",
   "dateDisplay": "Shfaqja e datës",
   "pillNumber": "numri i pilulës",
-  "pillDaysCycle": "Ditët e marrjes",
+  "pillDaysCycle": "Numri i ditëve të marrjes së pilulës",
   "pillSheetEnded": "Fletë me pilula ka përfunduar",
   "checkLastTakenDate": "Kontrollo datën e marrjes së fundit",
   "pleaseRegisterAccount": "Ju lutemi regjistroni një llogari",

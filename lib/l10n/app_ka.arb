@@ -136,7 +136,7 @@
   "displayMode": "ჩვენების რეჟიმი",
   "dateDisplay": "თარიღის ჩვენება",
   "pillNumber": "აბის ნომერ",
-  "pillDaysCycle": "მიღების დღეები",
+  "pillDaysCycle": "აბის მიღების დღეების რაოდენობა",
   "pillSheetEnded": "აბების ფურცელი დასრულდა",
   "checkLastTakenDate": "ბოლო მიღების დღის შემოწმება",
   "pleaseRegisterAccount": "გთხოვთ დარეგისტრირდეთ ანგარიშზე",

@@ -136,7 +136,7 @@
   "displayMode": "Режим отображения",
   "dateDisplay": "Отображение даты",
   "pillNumber": "номер таблетки",
-  "pillDaysCycle": "Дни приема",
+  "pillDaysCycle": "Количество дней приёма таблеток",
   "pillSheetEnded": "Блистер закончился",
   "checkLastTakenDate": "Проверить дату последнего приема",
   "pleaseRegisterAccount": "Зарегистрируйте аккаунт",

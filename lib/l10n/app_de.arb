@@ -136,7 +136,7 @@
   "displayMode": "Anzeigemodus",
   "dateDisplay": "Datumsanzeige",
   "pillNumber": "Pillennummer",
-  "pillDaysCycle": "Einnahmetage",
+  "pillDaysCycle": "Anzahl der Einnahmetage",
   "pillSheetEnded": "Die Pillenpackung ist beendet",
   "checkLastTakenDate": "Letzten Einnahmetag überprüfen",
   "pleaseRegisterAccount": "Bitte registrieren Sie sich",

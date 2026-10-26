@@ -136,7 +136,7 @@
   "displayMode": "Ցուցադրման ռեժիմ",
   "dateDisplay": "Ամսաթվի ցուցադրում",
   "pillNumber": "հաբի համար",
-  "pillDaysCycle": "ընդունման օրեր",
+  "pillDaysCycle": "Հաբի ընդունման օրերի քանակը",
   "pillSheetEnded": "Դեղահատի թերթիկը ավարտվեց",
   "checkLastTakenDate": "Վերջին ընդունման օրը ստուգել",
   "pleaseRegisterAccount": "Խնդրում ենք գրանցեք հաշիվ",

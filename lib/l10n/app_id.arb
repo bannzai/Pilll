@@ -136,7 +136,7 @@
   "displayMode": "Mode tampilan",
   "dateDisplay": "Tampilan tanggal",
   "pillNumber": "nomor pil",
-  "pillDaysCycle": "Hari Konsumsi",
+  "pillDaysCycle": "Jumlah hari minum pil",
   "pillSheetEnded": "Strip pil telah selesai",
   "checkLastTakenDate": "Periksa tanggal terakhir minum",
   "pleaseRegisterAccount": "Silakan daftar akun",

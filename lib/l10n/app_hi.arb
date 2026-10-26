@@ -136,7 +136,7 @@
   "displayMode": "डिस्प्ले मोड",
   "dateDisplay": "तारीख दिखाने का तरीका",
   "pillNumber": "गोली नंबर",
-  "pillDaysCycle": "सेवन दिवस",
+  "pillDaysCycle": "गोली लेने के दिनों की संख्या",
   "pillSheetEnded": "पिल शीट पूरी हो गई",
   "checkLastTakenDate": "अंतिम सेवन तिथि देखें",
   "pleaseRegisterAccount": "कृपया खाता पंजीकृत करें",

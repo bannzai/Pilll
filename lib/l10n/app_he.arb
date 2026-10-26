@@ -136,7 +136,7 @@
   "displayMode": "מצב תצוגה",
   "dateDisplay": "תצוגת תאריך",
   "pillNumber": "מספר גלולה",
-  "pillDaysCycle": "ימי נטילה",
+  "pillDaysCycle": "מספר ימי נטילת הגלולה",
   "pillSheetEnded": "יומן הגלולות הסתיים",
   "checkLastTakenDate": "בדוק נטילה אחרונה",
   "pleaseRegisterAccount": "אנא הירשמו לחשבון",

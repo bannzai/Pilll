@@ -136,7 +136,7 @@
   "displayMode": "காட்சி முறை",
   "dateDisplay": "தேதி காட்சி",
   "pillNumber": "மாத்திரை எண்",
-  "pillDaysCycle": "உட்கொள்ளும் நாட்கள்",
+  "pillDaysCycle": "மாத்திரை எடுத்துக்கொள்ளும் நாட்களின் எண்ணிக்கை",
   "pillSheetEnded": "மாத்திரை தாள் முடிவடைந்தது",
   "checkLastTakenDate": "கடைசியாக உட்கொண்ட நாளைச் சரிபார்க்க",
   "pleaseRegisterAccount": "கணக்கு பதிவு செய்யுங்கள்",

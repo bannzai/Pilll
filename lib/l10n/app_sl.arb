@@ -136,7 +136,7 @@
   "displayMode": "Način prikaza",
   "dateDisplay": "Prikaz datuma",
   "pillNumber": "številka tablete",
-  "pillDaysCycle": "Dnevi jemanja",
+  "pillDaysCycle": "Število dni jemanja tablet",
   "pillSheetEnded": "Zavoj tablet je končan",
   "checkLastTakenDate": "Preveri datum zadnjega jemanja",
   "pleaseRegisterAccount": "Prosimo, registrirajte se za račun",

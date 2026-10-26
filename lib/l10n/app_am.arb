@@ -136,7 +136,7 @@
   "displayMode": "የማሳያ ሁነታ",
   "dateDisplay": "የቀን አሳያይ",
   "pillNumber": "ክኒን ቁጥር",
-  "pillDaysCycle": "መውሰጃ ቀናት",
+  "pillDaysCycle": "ክኒን የሚወሰድባቸው ቀናት",
   "pillSheetEnded": "የክኒን ሉሁ ተጠናቅቋል",
   "checkLastTakenDate": "የመጨረሻ የወሰድንበት ቀን ይመልከቱ",
   "pleaseRegisterAccount": "እባክዎ መለያ ይመዝገቡ",

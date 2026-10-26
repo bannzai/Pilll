@@ -136,7 +136,7 @@
   "displayMode": "Modo de exibição",
   "dateDisplay": "Exibição da data",
   "pillNumber": "número da pílula",
-  "pillDaysCycle": "Dias de administração",
+  "pillDaysCycle": "Número de dias de uso da pílula",
   "pillSheetEnded": "A cartela de pílulas foi finalizada",
   "checkLastTakenDate": "Verificar último dia de tomada",
   "pleaseRegisterAccount": "Crie sua conta",

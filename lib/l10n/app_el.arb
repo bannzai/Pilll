@@ -136,7 +136,7 @@
   "displayMode": "Λειτουργία προβολής",
   "dateDisplay": "Εμφάνιση ημερομηνίας",
   "pillNumber": "αριθμό χαπιού",
-  "pillDaysCycle": "Ημέρες λήψης",
+  "pillDaysCycle": "Αριθμός ημερών λήψης χαπιών",
   "pillSheetEnded": "Το δισκίο των χαπιών ολοκληρώθηκε",
   "checkLastTakenDate": "Ελέγξτε την τελευταία ημέρα λήψης",
   "pleaseRegisterAccount": "Παρακαλώ δημιουργήστε λογαριασμό",

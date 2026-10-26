@@ -136,7 +136,7 @@
   "displayMode": "Режим відображення",
   "dateDisplay": "Відображення дати",
   "pillNumber": "номер пігулки",
-  "pillDaysCycle": "Дні прийому",
+  "pillDaysCycle": "Кількість днів прийому пігулок",
   "pillSheetEnded": "Пластина таблеток закінчилася",
   "checkLastTakenDate": "Переглянути останню дату прийому",
   "pleaseRegisterAccount": "Будь ласка, зареєструйтеся",

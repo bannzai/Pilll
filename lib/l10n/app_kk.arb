@@ -136,7 +136,7 @@
   "displayMode": "Көрсету режимі",
   "dateDisplay": "Күнді көрсету",
   "pillNumber": "таблетка нөмір",
-  "pillDaysCycle": "Қабылдау күндері",
+  "pillDaysCycle": "Таблетка қабылдайтын күндер саны",
   "pillSheetEnded": "Дәрі парағы аяқталды",
   "checkLastTakenDate": "Соңғы қабылдау күнін тексеру",
   "pleaseRegisterAccount": "Тіркелгі жасаңыз",

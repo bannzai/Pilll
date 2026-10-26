@@ -136,7 +136,7 @@
   "displayMode": "حالت نمایش",
   "dateDisplay": "نمایش تاریخ",
   "pillNumber": "شماره قرص",
-  "pillDaysCycle": "روزهای مصرف",
+  "pillDaysCycle": "تعداد روزهای مصرف قرص",
   "pillSheetEnded": "برگه قرص تمام شد",
   "checkLastTakenDate": "بررسی آخرین روز مصرف",
   "pleaseRegisterAccount": "لطفاً حساب کاربری ایجاد کنید",

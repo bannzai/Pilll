@@ -136,7 +136,7 @@
   "displayMode": "Göstərmə rejimi",
   "dateDisplay": "Tarixin göstərilməsi",
   "pillNumber": "həb nömrə",
-  "pillDaysCycle": "İçmə günləri",
+  "pillDaysCycle": "Həb qəbul etdiyiniz günlərin sayı",
   "pillSheetEnded": "Dərman vərəqi tamamlandı",
   "checkLastTakenDate": "Son qəbul etdiyiniz günü yoxlayın",
   "pleaseRegisterAccount": "Hesab yaradın",

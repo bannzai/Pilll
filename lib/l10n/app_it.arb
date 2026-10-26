@@ -136,7 +136,7 @@
   "displayMode": "Modalità di visualizzazione",
   "dateDisplay": "Visualizzazione della data",
   "pillNumber": "numero della pillola",
-  "pillDaysCycle": "Giorni di assunzione",
+  "pillDaysCycle": "Numero di giorni di assunzione della pillola",
   "pillSheetEnded": "Il blister di pillole è terminato",
   "checkLastTakenDate": "Verifica ultima assunzione",
   "pleaseRegisterAccount": "Per favore, crea un account",

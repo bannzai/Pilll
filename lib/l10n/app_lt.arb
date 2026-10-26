@@ -136,7 +136,7 @@
   "displayMode": "Rodymo režimas",
   "dateDisplay": "Datos rodymas",
   "pillNumber": "tabletės numer",
-  "pillDaysCycle": "Vartojimo dienos",
+  "pillDaysCycle": "Tablečių vartojimo dienų skaičius",
   "pillSheetEnded": "Tabletės pakuotė baigėsi",
   "checkLastTakenDate": "Patikrinti paskutinę vartojimo datą",
   "pleaseRegisterAccount": "Prašome užsiregistruoti paskyrą",

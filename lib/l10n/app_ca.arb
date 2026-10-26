@@ -136,7 +136,7 @@
   "displayMode": "Mode de visualització",
   "dateDisplay": "Visualització de la data",
   "pillNumber": "número de píndola",
-  "pillDaysCycle": "Dies de presa",
+  "pillDaysCycle": "Dies de presa de la píndola",
   "pillSheetEnded": "Ha finalitzat el blíster de píndoles",
   "checkLastTakenDate": "Comprovar l'últim dia de presa",
   "pleaseRegisterAccount": "Si us plau, registreu un compte",

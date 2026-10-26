@@ -136,7 +136,7 @@
   "displayMode": "Modd dangos",
   "dateDisplay": "Dangos dyddiad",
   "pillNumber": "rhif y bilsen",
-  "pillDaysCycle": "dyddiau dos",
+  "pillDaysCycle": "Nifer y dyddiau cymryd y bilsen",
   "pillSheetEnded": "Mae'r daflen biliau wedi gorffen",
   "checkLastTakenDate": "Gwirio'r diwrnod diwethaf cymryd",
   "pleaseRegisterAccount": "Cofrestrwch gyfrif, os gwelwch yn dda",

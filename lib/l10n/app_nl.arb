@@ -136,7 +136,7 @@
   "displayMode": "Weergavemodus",
   "dateDisplay": "Datumweergave",
   "pillNumber": "pilnummer",
-  "pillDaysCycle": "Innamedagen",
+  "pillDaysCycle": "Aantal dagen dat je de pil neemt",
   "pillSheetEnded": "De pilstrip is voltooid",
   "checkLastTakenDate": "Laatste inname controleren",
   "pleaseRegisterAccount": "Registreer een account",

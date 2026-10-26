@@ -136,7 +136,7 @@
   "displayMode": "โหมดการแสดงผล",
   "dateDisplay": "การแสดงวันที่",
   "pillNumber": "หมายเลขเม็ดยา",
-  "pillDaysCycle": "จำนวนวันรับประทาน",
+  "pillDaysCycle": "จำนวนวันที่ทานยาเม็ด",
   "pillSheetEnded": "แผงยาหมดแล้ว",
   "checkLastTakenDate": "ตรวจสอบวันที่รับประทานล่าสุด",
   "pleaseRegisterAccount": "กรุณาลงทะเบียนบัญชี",

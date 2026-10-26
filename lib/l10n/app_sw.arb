@@ -136,7 +136,7 @@
   "displayMode": "Hali ya kuonyesha",
   "dateDisplay": "Mwonekano wa tarehe",
   "pillNumber": "nambari ya kidonge",
-  "pillDaysCycle": "Siku za dawa",
+  "pillDaysCycle": "Idadi ya siku za kumeza vidonge",
   "pillSheetEnded": "Kifurushi cha dawa kimeisha",
   "checkLastTakenDate": "Thibitisha siku ya mwisho ya kunywa vidonge",
   "pleaseRegisterAccount": "Tafadhali jiandikisha akaunti",

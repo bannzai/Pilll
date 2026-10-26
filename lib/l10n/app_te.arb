@@ -136,7 +136,7 @@
   "displayMode": "ప్రదర్శన విధానం",
   "dateDisplay": "తేదీ ప్రదర్శన",
   "pillNumber": "మాత్ర సంఖ్య",
-  "pillDaysCycle": "సేవనా దినాలు",
+  "pillDaysCycle": "మాత్రలు తీసుకునే రోజుల సంఖ్య",
   "pillSheetEnded": "పిల్ షీట్ పూర్తయింది",
   "checkLastTakenDate": "చివరి సేవన తేదీని తనిఖీ చేయండి",
   "pleaseRegisterAccount": "ఖాతా నమోదు చేసుకోండి",

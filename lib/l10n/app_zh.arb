@@ -136,7 +136,7 @@
   "displayMode": "显示模式",
   "dateDisplay": "日期显示",
   "pillNumber": "药片编号",
-  "pillDaysCycle": "服用天数",
+  "pillDaysCycle": "服药天数",
   "pillSheetEnded": "药板已用完",
   "checkLastTakenDate": "确认最后服用日期",
   "pleaseRegisterAccount": "请注册账户",

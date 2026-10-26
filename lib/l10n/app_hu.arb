@@ -136,7 +136,7 @@
   "displayMode": "Megjelenítési mód",
   "dateDisplay": "Dátum megjelenítése",
   "pillNumber": "tablettaszám",
-  "pillDaysCycle": "Szedési napok",
+  "pillDaysCycle": "A tablettaszedés napjainak száma",
   "pillSheetEnded": "A tablettacsomag befejeződött",
   "checkLastTakenDate": "Utoljára szedett nap ellenőrzése",
   "pleaseRegisterAccount": "Kérjük, regisztráljon fiókot",

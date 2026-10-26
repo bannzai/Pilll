@@ -136,7 +136,7 @@
   "displayMode": "របៀបបង្ហាញ",
   "dateDisplay": "ការបង្ហាញកាលបរិច្ឆេទ",
   "pillNumber": "លេខគ្រាប់ថ្នាំ",
-  "pillDaysCycle": "ចំនួនថ្ងៃទទួលទានថ្នាំ",
+  "pillDaysCycle": "ចំនួនថ្ងៃដែលលេបថ្នាំគ្រាប់",
   "pillSheetEnded": "សន្លឹកគ្រាប់ថ្នាំបានចប់ហើយ",
   "checkLastTakenDate": "ពិនិត្យថ្ងៃញ៉ាំថ្នាំចុងក្រោយ",
   "pleaseRegisterAccount": "សូមចុះបញ្ជីគណនី",

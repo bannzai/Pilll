@@ -136,7 +136,7 @@
   "displayMode": "Koʻrsatish rejimi",
   "dateDisplay": "Sanani ko‘rsatish",
   "pillNumber": "tabletka raqam",
-  "pillDaysCycle": "Qabul qilish kunlari",
+  "pillDaysCycle": "Tabletka ichiladigan kunlar soni",
   "pillSheetEnded": "Tabletka qadoqi yakunlandi",
   "checkLastTakenDate": "Oxirgi qabul qilgan kunni ko'rish",
   "pleaseRegisterAccount": "Iltimos, hisob ro'yxatdan o'ting",

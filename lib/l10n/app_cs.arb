@@ -136,7 +136,7 @@
   "displayMode": "Režim zobrazení",
   "dateDisplay": "Zobrazení data",
   "pillNumber": "číslo tablety",
-  "pillDaysCycle": "Dny užívání",
+  "pillDaysCycle": "Počet dní užívání pilulek",
   "pillSheetEnded": "Balení pilulek bylo dokončeno",
   "checkLastTakenDate": "Zkontrolovat datum posledního užití",
   "pleaseRegisterAccount": "Prosím zaregistrujte si účet",

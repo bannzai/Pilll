@@ -136,7 +136,7 @@
   "displayMode": "प्रदर्शन मोड",
   "dateDisplay": "मिति प्रदर्शन",
   "pillNumber": "चक्की नम्बर",
-  "pillDaysCycle": "सेवन दिन",
+  "pillDaysCycle": "चक्की खाने दिनहरूको सङ्ख्या",
   "pillSheetEnded": "गोली पत्र समाप्त भयो",
   "checkLastTakenDate": "अन्तिम पटक सेवन गरेको मिति जाँच गर्नुहोस्",
   "pleaseRegisterAccount": "खाता दर्ता गर्नुहोस्",

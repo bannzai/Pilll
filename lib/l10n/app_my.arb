@@ -136,7 +136,7 @@
   "displayMode": "ပြသမှုမုဒ်",
   "dateDisplay": "ရက်စွဲပြသမှု",
   "pillNumber": "ဆေးပြားနံပါတ်",
-  "pillDaysCycle": "သောက်ရက်ရေ",
+  "pillDaysCycle": "ဆေးလုံးသောက်သည့် ရက်အရေအတွက်",
   "pillSheetEnded": "ပီလူးအိတ်ပြီးစီးပါပြီ",
   "checkLastTakenDate": "နောက်ဆုံးသောက်ခဲ့သည့်ရက်ကိုကြည့်ရန်",
   "pleaseRegisterAccount": "အကောင့်စာရင်းသွင်းပါ",

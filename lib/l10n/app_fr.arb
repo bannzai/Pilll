@@ -136,7 +136,7 @@
   "displayMode": "Mode d’affichage",
   "dateDisplay": "Affichage de la date",
   "pillNumber": "numéro de pilule",
-  "pillDaysCycle": "Journées actives",
+  "pillDaysCycle": "Nombre de jours de prise de la pilule",
   "pillSheetEnded": "Pilulier terminé",
   "checkLastTakenDate": "Vérifier la date de la dernière pilule",
   "pleaseRegisterAccount": "Veuillez créer un compte",

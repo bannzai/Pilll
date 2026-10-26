@@ -136,7 +136,7 @@
   "displayMode": "প্রদর্শন মোড",
   "dateDisplay": "তারিখের প্রদর্শন",
   "pillNumber": "পিল নম্বর",
-  "pillDaysCycle": "সেবনের দিন",
+  "pillDaysCycle": "পিল খাওয়ার দিনের সংখ্যা",
   "pillSheetEnded": "পিল শিট শেষ হয়েছে",
   "checkLastTakenDate": "শেষ সেবনের দিন দেখুন",
   "pleaseRegisterAccount": "অ্যাকাউন্ট তৈরি করুন",

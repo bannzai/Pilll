@@ -136,7 +136,7 @@
   "displayMode": "Bistaratzeko modua",
   "dateDisplay": "Data bistaratzea",
   "pillNumber": "pilula-zenbaki",
-  "pillDaysCycle": "Hartzeko egunak",
+  "pillDaysCycle": "Pilula hartzeko egun kopurua",
   "pillSheetEnded": "Pilula-orria amaitu da",
   "checkLastTakenDate": "Azken hartu zen eguna ikusi",
   "pleaseRegisterAccount": "Kontua erregistratu, mesedez",

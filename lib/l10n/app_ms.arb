@@ -136,7 +136,7 @@
   "displayMode": "Mod paparan",
   "dateDisplay": "Paparan tarikh",
   "pillNumber": "nombor pil",
-  "pillDaysCycle": "Hari Pengambilan",
+  "pillDaysCycle": "Bilangan hari mengambil pil",
   "pillSheetEnded": "Pek pil telah selesai",
   "checkLastTakenDate": "Semak tarikh terakhir mengambil",
   "pleaseRegisterAccount": "Sila daftar akaun",

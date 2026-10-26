@@ -136,7 +136,7 @@
   "displayMode": "Görünüm modu",
   "dateDisplay": "Tarih gösterimi",
   "pillNumber": "hap numarası",
-  "pillDaysCycle": "Kullanım Gün Sayısı",
+  "pillDaysCycle": "Hap kullanılan gün sayısı",
   "pillSheetEnded": "Hap paketiniz tamamlandı",
   "checkLastTakenDate": "Son alım tarihini kontrol et",
   "pleaseRegisterAccount": "Lütfen hesap oluşturun",

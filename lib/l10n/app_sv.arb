@@ -136,7 +136,7 @@
   "displayMode": "Visningsläge",
   "dateDisplay": "Datumvisning",
   "pillNumber": "tablettnummer",
-  "pillDaysCycle": "Intag dagar",
+  "pillDaysCycle": "Antal dagar med p-piller",
   "pillSheetEnded": "P-pillerförpackningen är slut",
   "checkLastTakenDate": "Kontrollera senaste intag",
   "pleaseRegisterAccount": "Registrera ett konto",

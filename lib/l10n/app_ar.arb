@@ -136,7 +136,7 @@
   "displayMode": "وضع العرض",
   "dateDisplay": "عرض التاريخ",
   "pillNumber": "رقم الحبة",
-  "pillDaysCycle": "أيام التناول",
+  "pillDaysCycle": "عدد أيام تناول الحبوب",
   "pillSheetEnded": "انتهت علبة الحبوب",
   "checkLastTakenDate": "التحقق من آخر يوم تناول الحبوب",
   "pleaseRegisterAccount": "يرجى إنشاء حساب",

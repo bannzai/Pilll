@@ -136,7 +136,7 @@
   "displayMode": "Kuvamisrežiim",
   "dateDisplay": "Kuupäeva kuvamine",
   "pillNumber": "pillinumb",
-  "pillDaysCycle": "Võtmispäevad",
+  "pillDaysCycle": "Pilli võtmise päevade arv",
   "pillSheetEnded": "Pilliplaat on lõppenud",
   "checkLastTakenDate": "Kontrolli viimati võetud päeva",
   "pleaseRegisterAccount": "Palun registreeruge kontole",

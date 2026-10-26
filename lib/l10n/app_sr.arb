@@ -136,7 +136,7 @@
   "displayMode": "Режим приказа",
   "dateDisplay": "Приказ датума",
   "pillNumber": "број пилуле",
-  "pillDaysCycle": "дана узимања",
+  "pillDaysCycle": "Број дана узимања пилуле",
   "pillSheetEnded": "Паковање таблета је завршено",
   "checkLastTakenDate": "Proveri poslednji dan uzimanja",
   "pleaseRegisterAccount": "Registrujte se",

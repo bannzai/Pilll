@@ -136,7 +136,7 @@
   "displayMode": "പ്രദർശന രീതി",
   "dateDisplay": "തീയതി കാണിക്കുന്ന വിധം",
   "pillNumber": "ഗുളിക നമ്പ",
-  "pillDaysCycle": "സേവന ദിനങ്ങൾ",
+  "pillDaysCycle": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം",
   "pillSheetEnded": "പിൽ ഷീറ്റ് പൂർത്തിയായി",
   "checkLastTakenDate": "അവസാനമായി കഴിച്ച ദിവസം പരിശോധിക്കുക",
   "pleaseRegisterAccount": "അക്കൗണ്ട് രജിസ്റ്റർ ചെയ്യുക",

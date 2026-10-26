@@ -136,7 +136,7 @@
   "displayMode": "Режим на показване",
   "dateDisplay": "Показване на датата",
   "pillNumber": "номер на хапче",
-  "pillDaysCycle": "Дни на приемане",
+  "pillDaysCycle": "Брой дни за прием на хапчета",
   "pillSheetEnded": "Блистерът с хапчета е завършен",
   "checkLastTakenDate": "Проверете последния ден на прием",
   "pleaseRegisterAccount": "Моля, регистрирайте акаунт",

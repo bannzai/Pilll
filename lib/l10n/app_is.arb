@@ -136,7 +136,7 @@
   "displayMode": "Birtingarhamur",
   "dateDisplay": "Birting dagsetningar",
   "pillNumber": "pillunúmer",
-  "pillDaysCycle": "Inntiökudagar",
+  "pillDaysCycle": "Fjöldi daga sem pilla er tekin",
   "pillSheetEnded": "Pillublaðinu er lokið",
   "checkLastTakenDate": "Athuga síðustu inntöku",
   "pleaseRegisterAccount": "Vinsamlegast skráðu þig",

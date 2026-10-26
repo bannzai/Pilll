@@ -136,7 +136,7 @@
   "displayMode": "Display mode",
   "dateDisplay": "Date display",
   "pillNumber": "pill number",
-  "pillDaysCycle": "Active days",
+  "pillDaysCycle": "Number of pill-taking days",
   "pillSheetEnded": "Pill sheet completed",
   "checkLastTakenDate": "Check last pill date",
   "pleaseRegisterAccount": "Please create an account",

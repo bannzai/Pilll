@@ -136,7 +136,7 @@
   "displayMode": "Mod de afișare",
   "dateDisplay": "Afișarea datei",
   "pillNumber": "numărul pilulei",
-  "pillDaysCycle": "Zile de administrare",
+  "pillDaysCycle": "Numărul de zile de administrare a pilulei",
   "pillSheetEnded": "Blisterul cu pastile s-a terminat",
   "checkLastTakenDate": "Verifică ultima zi de administrare",
   "pleaseRegisterAccount": "Vă rugăm să vă înregistrați un cont",
