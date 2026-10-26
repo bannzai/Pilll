@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Profitez de toutes les fonctionnalités pendant {number} jours !",
   "inputAndAdd": "Saisissez et ajoutez",
   "averagePeriod": "Durée moyenne du cycle",
-  "averageDays": "Jours moyens",
+  "averageDays": "Nombre moyen de jours",
   "days": "jour",
   "memo": "Remarques",
   "failedToUpdate": "La mise à jour a échoué. Veuillez vérifier votre connexion réseau et réessayer.",

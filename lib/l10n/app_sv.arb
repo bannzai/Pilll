@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Du kan använda alla funktioner i {number} dagar!",
   "inputAndAdd": "Skriv och lägg till",
   "averagePeriod": "Genomsnittlig cykellängd",
-  "averageDays": "Genomsnittliga dagar",
+  "averageDays": "Genomsnittligt antal dagar",
   "days": "dag",
   "memo": "Notat",
   "failedToUpdate": "Uppdateringen misslyckades. Kontrollera din internetanslutning och försök igen.",

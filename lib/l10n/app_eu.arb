@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Funtzio guztiak erabil ditzakezu {number} egunez!",
   "inputAndAdd": "Idatzi eta gehitu",
   "averagePeriod": "Zikloaren batez besteko iraupena",
-  "averageDays": "Batazbesteko egunak",
+  "averageDays": "Batez besteko egun kopurua",
   "days": "egun",
   "memo": "oharra",
   "failedToUpdate": "Eguneratzeak huts egin du. Mesedez, egiaztatu zure interneteko konexioa eta saiatu berriro.",

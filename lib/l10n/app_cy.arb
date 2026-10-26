@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Gallwch ddefnyddio pob nodwedd am {number} diwrnod!",
   "inputAndAdd": "Rhowch y testun ac ychwanegwch",
   "averagePeriod": "Hyd cyfartalog y cylch mislif",
-  "averageDays": "Dyddiau Cyfartalog",
+  "averageDays": "Nifer cyfartalog y dyddiau",
   "days": "diwrnod",
   "memo": "nodyn",
   "failedToUpdate": "Methodd diweddaru'r data. Gwiriwch eich cysylltiad rhwydwaith a cheisiwch eto os gwelwch yn dda.",

@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Visas iespējas varat izmantot {number} dienas!",
   "inputAndAdd": "Ievadiet un pievienojiet",
   "averagePeriod": "Vidējais cikla ilgums",
-  "averageDays": "Vidējās dienas",
+  "averageDays": "Vidējais dienu skaits",
   "days": "diena",
   "memo": "Piezīme",
   "failedToUpdate": "Atjaunošana neizdevās. Lūdzu, pārbaudiet interneta savienojumu un mēģiniet vēlreiz.",

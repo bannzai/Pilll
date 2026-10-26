@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Podes usar todas as funcións durante {number} días!",
   "inputAndAdd": "Escribe e engade",
   "averagePeriod": "Duración media do ciclo",
-  "averageDays": "Días promedio",
+  "averageDays": "Media de días",
   "days": "días",
   "memo": "Nota",
   "failedToUpdate": "Fallou a actualización. Comprobe a súa conexión de rede e tente novamente.",

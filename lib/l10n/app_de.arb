@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Du kannst {number} Tage lang alle Funktionen nutzen!",
   "inputAndAdd": "Eingeben und hinzufügen",
   "averagePeriod": "Durchschnittliche Zykluslänge",
-  "averageDays": "Durchschnittliche Tage",
+  "averageDays": "Durchschnittliche Anzahl Tage",
   "days": "Tag",
   "memo": "Notiz",
   "failedToUpdate": "Die Aktualisierung ist fehlgeschlagen. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",

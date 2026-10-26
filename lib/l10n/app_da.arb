@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Du kan bruge alle funktioner i {number} dage!",
   "inputAndAdd": "Skriv og tilføj",
   "averagePeriod": "Gennemsnitlig cykluslængde",
-  "averageDays": "Gennemsnitlige dage",
+  "averageDays": "Gennemsnitligt antal dage",
   "days": "dage",
   "memo": "Note",
   "failedToUpdate": "Opdateringen kunne ikke gennemføres. Kontroller venligst din internetforbindelse og prøv igen.",

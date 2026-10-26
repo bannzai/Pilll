@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Mund t’i përdorni të gjitha veçoritë për {number} ditë!",
   "inputAndAdd": "Shkruani dhe shtoni",
   "averagePeriod": "Kohëzgjatja mesatare e ciklit",
-  "averageDays": "Ditë mesatare",
+  "averageDays": "Numri mesatar i ditëve",
   "days": "ditë",
   "memo": "Shënim",
   "failedToUpdate": "Ndryshimi dështoi. Ju lutemi kontrolloni lidhjen tuaj të internetit dhe provoni përsëri.",

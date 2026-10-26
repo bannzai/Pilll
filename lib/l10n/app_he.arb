@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "אפשר ליהנות מכל התכונות למשך {number} ימים!",
   "inputAndAdd": "להזין ולהוסיף",
   "averagePeriod": "אורך מחזור ממוצע",
-  "averageDays": "ממוצע ימים",
+  "averageDays": "מספר ימים ממוצע",
   "days": "יום",
   "memo": "הערה",
   "failedToUpdate": "העדכון נכשל. אנא בדוק את החיבור לאינטרנט ונסה שוב",

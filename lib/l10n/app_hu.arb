@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "{number} napig minden funkciót használhatsz!",
   "inputAndAdd": "Írd be és add hozzá",
   "averagePeriod": "Átlagos ciklushossz",
-  "averageDays": "Átlagos napok",
+  "averageDays": "Napok átlagos száma",
   "days": "nap",
   "memo": "Megjegyzés",
   "failedToUpdate": "Frissítés sikertelen. Kérjük, ellenőrizze internetkapcsolatát, majd próbálja meg újra.",

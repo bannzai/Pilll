@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Þú getur notað alla eiginleika í {number} daga!",
   "inputAndAdd": "Sláðu inn og bættu við",
   "averagePeriod": "Meðallengd tíðahrings",
-  "averageDays": "Meðaldagar",
+  "averageDays": "Meðalfjöldi daga",
   "days": "dagar",
   "memo": "Athugasemd",
   "failedToUpdate": "Tókst ekki að uppfæra. Vinsamlegast skoðaðu nettengingarnar þínar og reyndu aftur.",

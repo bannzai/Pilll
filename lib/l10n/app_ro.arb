@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Poți folosi toate funcțiile timp de {number} zile!",
   "inputAndAdd": "Introdu și adaugă",
   "averagePeriod": "Durata medie a ciclului",
-  "averageDays": "Zile medii",
+  "averageDays": "Număr mediu de zile",
   "days": "zile",
   "memo": "Notă",
   "failedToUpdate": "Actualizarea a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou.",

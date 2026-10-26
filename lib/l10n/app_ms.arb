@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Anda boleh menggunakan semua ciri selama {number} hari!",
   "inputAndAdd": "Isi dan tambah",
   "averagePeriod": "Purata tempoh kitaran haid",
-  "averageDays": "Purata Hari",
+  "averageDays": "Purata bilangan hari",
   "days": "hari",
   "memo": "Catatan",
   "failedToUpdate": "Gagal mengemaskini. Sila periksa sambungan internet anda dan cuba sekali lagi.",

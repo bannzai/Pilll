@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Unaweza kutumia vipengele vyote kwa siku {number}!",
   "inputAndAdd": "Tafadhali andika na uongeze",
   "averagePeriod": "Wastani wa urefu wa mzunguko wa hedhi",
-  "averageDays": "Siku za Wastani",
+  "averageDays": "Wastani wa siku",
   "days": "siku",
   "memo": "Maelezo",
   "failedToUpdate": "Kusasisha kumeshindikana. Tafadhali hakiki muunganisho wako wa mtandao na ujaribu tena.",

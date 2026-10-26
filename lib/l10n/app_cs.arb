@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Všechny funkce můžete využívat po dobu {number} dní!",
   "inputAndAdd": "Zadat a přidat",
   "averagePeriod": "Průměrná délka cyklu",
-  "averageDays": "Průměr dnů",
+  "averageDays": "Průměrný počet dní",
   "days": "dní",
   "memo": "poznámka",
   "failedToUpdate": "Aktualizace se nezdařila. Zkontrolujte prosím své připojení k internetu a zkuste to znovu.",

@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Voit käyttää kaikkia ominaisuuksia {number} päivän ajan!",
   "inputAndAdd": "Kirjoita ja lisää",
   "averagePeriod": "Kierron keskimääräinen pituus",
-  "averageDays": "keskimääräiset päivät",
+  "averageDays": "Päivien keskiarvo",
   "days": "päivää",
   "memo": "Muistio",
   "failedToUpdate": "Päivitys epäonnistui. Tarkista internetyhteytesi ja yritä uudelleen.",

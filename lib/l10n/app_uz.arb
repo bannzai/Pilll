@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Barcha imkoniyatlardan {number} kun davomida foydalanishingiz mumkin!",
   "inputAndAdd": "Kiriting va qoʻshing",
   "averagePeriod": "Hayz siklining oʻrtacha davomiyligi",
-  "averageDays": "O'rtacha kunlar",
+  "averageDays": "Oʻrtacha kunlar soni",
   "days": "kun",
   "memo": "Eslatma",
   "failedToUpdate": "Yangilashda xatolik yuz berdi. Internet aloqangizni tekshirib, qaytadan urinib ko'ring",

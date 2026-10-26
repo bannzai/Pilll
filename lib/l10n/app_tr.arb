@@ -361,7 +361,7 @@
   "trialDeadlineDateOffsetDay": "Tüm özellikleri {number} gün boyunca kullanabilirsiniz!",
   "inputAndAdd": "Yazın ve ekleyin",
   "averagePeriod": "Ortalama adet döngüsü süresi",
-  "averageDays": "Ortalama Gün",
+  "averageDays": "Ortalama gün sayısı",
   "days": "gün",
   "memo": "Not",
   "failedToUpdate": "Güncelleme yapılamadı. Lütfen internet bağlantınızı kontrol ederek tekrar deneyin.",
