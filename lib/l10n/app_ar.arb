@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "اكتمل الاشتراك في Pilll بريميوم",
   "thankYouForRegistration": "شكرًا لتسجيلكِ.\nيمكنكِ الآن استخدام جميع الميزات!",
   "limitedTimeDiscount": "اشتركي الآن بالسعر الخاص واستمري به",
-  "standardMonthlyPlan": "خطة شهرية عادية",
+  "standardMonthlyPlan": "الخطة الشهرية بالسعر العادي",
   "annualPlan": "باقة سنوية",
   "annualPrice": "{annualPackageStoreProductPriceString}/سنة",
   "monthlyPrice": "{monthlyPriceString}/شهر",

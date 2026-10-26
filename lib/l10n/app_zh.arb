@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Pilll 高级版订阅成功",
   "thankYouForRegistration": "感谢注册。\n现在可以使用全部功能啦！",
   "limitedTimeDiscount": "现在以优惠价订阅，今后也能一直享受这一价格",
-  "standardMonthlyPlan": "标准月度套餐",
+  "standardMonthlyPlan": "常规月付方案",
   "annualPlan": "年费套餐",
   "annualPrice": "{annualPackageStoreProductPriceString}/年",
   "monthlyPrice": "{monthlyPriceString}/月",

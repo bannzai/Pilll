@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Tilmelding til Pilll Premium er gennemført",
   "thankYouForRegistration": "Tak, fordi du har tilmeldt dig.\nDu kan nu bruge alle funktioner!",
   "limitedTimeDiscount": "Tegn abonnement nu til særpris, og behold prisen fremover",
-  "standardMonthlyPlan": "Standard månedlig plan",
+  "standardMonthlyPlan": "Almindeligt månedsabonnement",
   "annualPlan": "Årlig plan",
   "annualPrice": "{annualPackageStoreProductPriceString}/år",
   "monthlyPrice": "{monthlyPriceString}/måned",

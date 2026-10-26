@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Pilll премиум тіркелімі аяқталды",
   "thankYouForRegistration": "Тіркелгеніңіз үшін рақмет.\nЕнді барлық мүмкіндікті пайдалана аласыз!",
   "limitedTimeDiscount": "Қазір арнайы бағамен жазылып, осы бағаны сақтап қалыңыз",
-  "standardMonthlyPlan": "Кәдімгі айлық жоспар",
+  "standardMonthlyPlan": "Әдеттегі айлық жоспар",
   "annualPlan": "жылдық тариф",
   "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
   "monthlyPrice": "{monthlyPriceString}/айына",

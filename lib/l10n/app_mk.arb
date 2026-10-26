@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Регистрацијата за Pilll премиум е завршена",
   "thankYouForRegistration": "Ви благодариме што се регистриравте.\nСега можете да ги користите сите функции!",
   "limitedTimeDiscount": "Претплатете се сега по посебна цена и задржете ја таа цена",
-  "standardMonthlyPlan": "Редовен месечен план",
+  "standardMonthlyPlan": "Стандарден месечен план",
   "annualPlan": "Годишен план",
   "annualPrice": "{annualPackageStoreProductPriceString}/годишно",
   "monthlyPrice": "{monthlyPriceString}/месечно",

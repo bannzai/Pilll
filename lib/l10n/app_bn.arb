@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Pilll প্রিমিয়াম নিবন্ধন সম্পন্ন হয়েছে",
   "thankYouForRegistration": "নিবন্ধন করার জন্য ধন্যবাদ।\nএখন আপনি সব সুবিধা ব্যবহার করতে পারবেন!",
   "limitedTimeDiscount": "এখন বিশেষ মূল্যে সাবস্ক্রাইব করুন, একই মূল্যে ব্যবহার চালিয়ে যান",
-  "standardMonthlyPlan": "সাধারণ মাসিক প্ল্যান",
+  "standardMonthlyPlan": "নিয়মিত মাসিক প্ল্যান",
   "annualPlan": "বার্ষিক প্ল্যান",
   "annualPrice": "{annualPackageStoreProductPriceString}/বছর",
   "monthlyPrice": "{monthlyPriceString}/মাস",

@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Pilll Premium -tilaus on valmis",
   "thankYouForRegistration": "Kiitos rekisteröitymisestä.\nVoit nyt käyttää kaikkia ominaisuuksia!",
   "limitedTimeDiscount": "Tilaa nyt erikoishintaan ja säilytä sama hinta",
-  "standardMonthlyPlan": "Normaali kuukausitilaus",
+  "standardMonthlyPlan": "Tavallinen kuukausitilaus",
   "annualPlan": "Vuosipaketti",
   "annualPrice": "{annualPackageStoreProductPriceString}/vuosi",
   "monthlyPrice": "{monthlyPriceString}/kk",

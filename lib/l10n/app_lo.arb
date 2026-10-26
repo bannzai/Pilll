@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "ການລົງທະບຽນ Pilll Premium ສຳເລັດແລ້ວ",
   "thankYouForRegistration": "ຂອບໃຈທີ່ລົງທະບຽນ.\nຕອນນີ້ສາມາດໃຊ້ທຸກຟັງຊັນໄດ້ແລ້ວ!",
   "limitedTimeDiscount": "ສະໝັກຕອນນີ້ໃນລາຄາພິເສດ ແລະໃຊ້ຕໍ່ໄປໃນລາຄາເດີມ",
-  "standardMonthlyPlan": "ແຜນລາຍເດືອນປົກກະຕິ",
+  "standardMonthlyPlan": "ແຜນລາຍເດືອນລາຄາປົກກະຕິ",
   "annualPlan": "ແຜນປະຈຳປີ",
   "annualPrice": "{annualPackageStoreProductPriceString}/ປີ",
   "monthlyPrice": "{monthlyPriceString}ຕໍ່ເດືອນ",

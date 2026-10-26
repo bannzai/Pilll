@@ -176,7 +176,7 @@
   "premiumRegistrationComplete": "Регистрация в Pilll премиум завершена",
   "thankYouForRegistration": "Спасибо за регистрацию.\nТеперь вам доступны все функции!",
   "limitedTimeDiscount": "Оформите подписку сейчас по специальной цене и сохраните её",
-  "standardMonthlyPlan": "Стандартный месячный план",
+  "standardMonthlyPlan": "Обычный месячный план",
   "annualPlan": "Годовой план",
   "annualPrice": "{annualPackageStoreProductPriceString} в год",
   "monthlyPrice": "{monthlyPriceString}/мес",
