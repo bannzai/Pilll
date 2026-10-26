@@ -68,7 +68,7 @@
   "feedbackUsage": "Санал бодлоо хуваалцсанд баярлалаа. Бид үүнийг цаашид аппыг сайжруулахад ашиглана.",
   "close": "Хаах",
   "registerAccount": "Бүртгэл үүсгэх",
-  "reLogin": "дахин нэвтрэх",
+  "reLogin": "Дахин нэвтэрнэ үү",
   "authenticationInfoUpdated": "Баталгаажуулалтын мэдээллийг шинэчилсэн",
   "updateAuthenticationInformation": "Баталгаажуулалт шинэчлэх",
   "registeredWithProvider": "{accountTypeProviderName}-аар бүртгүүлсэн",

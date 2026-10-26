@@ -68,7 +68,7 @@
   "feedbackUsage": "Dėkojame už jūsų nuomonę. Atsižvelgsime į ją toliau tobulindami programėlę.",
   "close": "Uždarykite",
   "registerAccount": "Sukurti paskyrą",
-  "reLogin": "Prisijungti iš naujo",
+  "reLogin": "Prisijunkite dar kartą",
   "authenticationInfoUpdated": "Prisijungimo duomenys atnaujinti",
   "updateAuthenticationInformation": "Atnaujinti autentifikavimo duomenis",
   "registeredWithProvider": "Užsiregistravote per {accountTypeProviderName}",

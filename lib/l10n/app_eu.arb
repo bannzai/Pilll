@@ -68,7 +68,7 @@
   "feedbackUsage": "Eskerrik asko zure iritziagatik. Aplikazioa aurrerantzean hobetzeko erabiliko dugu.",
   "close": "Itxi",
   "registerAccount": "Kontua sortu",
-  "reLogin": "Berriro sartu",
+  "reLogin": "Hasi saioa berriro",
   "authenticationInfoUpdated": "Autentifikazio-informazioa eguneratu da",
   "updateAuthenticationInformation": "Autentifikazio informazioa eguneratu",
   "registeredWithProvider": "{accountTypeProviderName} bidez erregistratu da",

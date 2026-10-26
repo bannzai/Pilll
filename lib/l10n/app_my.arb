@@ -68,7 +68,7 @@
   "feedbackUsage": "အကြံပြုချက်ပေးပို့ပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။ အက်ပ်ကို နောင်မှာ ပိုမိုကောင်းမွန်အောင် ပြုလုပ်ဖို့ အသုံးချသွားပါမယ်။",
   "close": "ပိတ်ရန်",
   "registerAccount": "အကောင့်ဖွင့်ရန်",
-  "reLogin": "ပြန်လည်ဝင်ရန်",
+  "reLogin": "ပြန်လည်ဝင်ရောက်ပါ",
   "authenticationInfoUpdated": "အထောက်အထား အချက်အလက်များကို အသစ်ပြုလုပ်ပြီးပါပြီ",
   "updateAuthenticationInformation": "အကောင့်အချက်အလက်များ အပ်ဒိတ်လုပ်မည်",
   "registeredWithProvider": "{accountTypeProviderName} ဖြင့် မှတ်ပုံတင်ပြီးပါပြီ",

@@ -68,7 +68,7 @@
   "feedbackUsage": "از بازخورد شما سپاسگزاریم. از آن برای بهبود برنامه در آینده استفاده می‌کنیم.",
   "close": "بستن",
   "registerAccount": "ایجاد حساب کاربری",
-  "reLogin": "ورود مجدد",
+  "reLogin": "ورود دوباره",
   "authenticationInfoUpdated": "اطلاعات احراز هویت به‌روزرسانی شد",
   "updateAuthenticationInformation": "به‌روزرسانی اطلاعات احراز هویت",
   "registeredWithProvider": "با {accountTypeProviderName} ثبت نام شدید",

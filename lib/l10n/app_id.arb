@@ -68,7 +68,7 @@
   "feedbackUsage": "Terima kasih atas masukan Anda. Kami akan menggunakannya untuk terus meningkatkan aplikasi.",
   "close": "Tutup",
   "registerAccount": "Buat akun",
-  "reLogin": "Masuk kembali",
+  "reLogin": "Masuk lagi",
   "authenticationInfoUpdated": "Informasi autentikasi berhasil diperbarui",
   "updateAuthenticationInformation": "Perbarui kredensial",
   "registeredWithProvider": "Berhasil mendaftar dengan {accountTypeProviderName}",

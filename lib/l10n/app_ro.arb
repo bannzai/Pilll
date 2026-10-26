@@ -68,7 +68,7 @@
   "feedbackUsage": "Îți mulțumim pentru părere. O vom folosi pentru a îmbunătăți în continuare aplicația.",
   "close": "Închide",
   "registerAccount": "Creează un cont",
-  "reLogin": "Reautentificare",
+  "reLogin": "Conectează-te din nou",
   "authenticationInfoUpdated": "Informațiile de autentificare au fost actualizate",
   "updateAuthenticationInformation": "Actualizați informațiile de autentificare",
   "registeredWithProvider": "Te-ai înregistrat cu {accountTypeProviderName}",

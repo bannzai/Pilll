@@ -68,7 +68,7 @@
   "feedbackUsage": "Grazie per la tua opinione. Ne terremo conto per continuare a migliorare l’app.",
   "close": "Chiudi",
   "registerAccount": "Crea un account",
-  "reLogin": "Riaccedi",
+  "reLogin": "Accedi di nuovo",
   "authenticationInfoUpdated": "Le credenziali di autenticazione sono state aggiornate",
   "updateAuthenticationInformation": "Aggiorna credenziali",
   "registeredWithProvider": "Ti sei registrato con {accountTypeProviderName}",

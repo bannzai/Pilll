@@ -68,7 +68,7 @@
   "feedbackUsage": "Σας ευχαριστούμε για τη γνώμη σας. Θα την αξιοποιήσουμε για να βελτιώσουμε την εφαρμογή στο μέλλον.",
   "close": "Κλείστε",
   "registerAccount": "Δημιουργία λογαριασμού",
-  "reLogin": "Επανασύνδεση",
+  "reLogin": "Συνδεθείτε ξανά",
   "authenticationInfoUpdated": "Οι πληροφορίες ταυτοποίησης ενημερώθηκαν",
   "updateAuthenticationInformation": "Ενημέρωση στοιχείων ταυτοποίησης",
   "registeredWithProvider": "Εγγραφήκατε μέσω {accountTypeProviderName}",

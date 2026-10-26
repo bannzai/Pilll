@@ -68,7 +68,7 @@
   "feedbackUsage": "Görüşünüz için teşekkür ederiz. Uygulamayı gelecekte daha da iyileştirmek için görüşünüzden yararlanacağız.",
   "close": "Kapatın",
   "registerAccount": "Hesap oluşturun",
-  "reLogin": "Yeniden giriş",
+  "reLogin": "Yeniden giriş yapın",
   "authenticationInfoUpdated": "Kimlik doğrulama bilgileri güncellendi",
   "updateAuthenticationInformation": "Kimlik bilgilerini güncelle",
   "registeredWithProvider": "{accountTypeProviderName} ile kayıt oldunuz",

@@ -68,7 +68,7 @@
   "feedbackUsage": "Rəyiniz üçün təşəkkür edirik. Ondan tətbiqi gələcəkdə təkmilləşdirmək üçün istifadə edəcəyik.",
   "close": "Bağlayın",
   "registerAccount": "Hesab qeydiyyatı",
-  "reLogin": "Yenidən giriş",
+  "reLogin": "Yenidən daxil olun",
   "authenticationInfoUpdated": "Autentifikasiya məlumatları yeniləndi",
   "updateAuthenticationInformation": "Autentifikasiya məlumatlarını yeniləyin",
   "registeredWithProvider": "{accountTypeProviderName} ilə qeydiyyatdan keçdiniz",

@@ -68,7 +68,7 @@
   "feedbackUsage": "ඔබේ අදහසට ස්තුතියි. ඉදිරියේදී යෙදුම තවදුරටත් වැඩිදියුණු කිරීමට අපි එය භාවිත කරන්නෙමු.",
   "close": "වසන්න",
   "registerAccount": "ගිණුමක් සාදන්න",
-  "reLogin": "නැවත ලොගින්",
+  "reLogin": "නැවත පිවිසෙන්න",
   "authenticationInfoUpdated": "සත්‍යාපන තොරතුරු යාවත්කාලීන කරන ලදී",
   "updateAuthenticationInformation": "සත්‍යාපන තොරතුරු යාවත්කාලීන කරන්න",
   "registeredWithProvider": "{accountTypeProviderName} සමඟ ලියාපදිංචි කරන ලදී",

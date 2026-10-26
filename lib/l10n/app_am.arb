@@ -68,7 +68,7 @@
   "feedbackUsage": "ለሰጡን አስተያየት እናመሰግናለን። ወደፊት አገልግሎታችንን ለማሻሻል እንጠቀምበታለን።",
   "close": "ዝጉ",
   "registerAccount": "መለያ መመዝገብ",
-  "reLogin": "እንደገና መግባት",
+  "reLogin": "እንደገና ይግቡ",
   "authenticationInfoUpdated": "የማረጋገጫ መረጃ ተዘምኗል",
   "updateAuthenticationInformation": "የማረጋገጫ መረጃዎችን ያዘምናል",
   "registeredWithProvider": "በ{accountTypeProviderName} ተመዝግበዋል",

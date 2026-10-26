@@ -68,7 +68,7 @@
   "feedbackUsage": "ขอบคุณสำหรับความคิดเห็นค่ะ เราจะนำไปใช้ปรับปรุงแอปให้ดียิ่งขึ้นต่อไปค่ะ",
   "close": "ปิด",
   "registerAccount": "สร้างบัญชี",
-  "reLogin": "เข้าสู่ระบบใหม่",
+  "reLogin": "เข้าสู่ระบบอีกครั้ง",
   "authenticationInfoUpdated": "อัปเดตข้อมูลการยืนยันตัวตนแล้ว",
   "updateAuthenticationInformation": "อัปเดตข้อมูลการยืนยันตัวตน",
   "registeredWithProvider": "ลงทะเบียนด้วย{accountTypeProviderName}เรียบร้อยแล้ว",

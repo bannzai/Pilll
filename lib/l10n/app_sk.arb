@@ -68,7 +68,7 @@
   "feedbackUsage": "Ďakujeme za váš názor. Využijeme ho pri ďalšom zlepšovaní aplikácie.",
   "close": "Zavrite",
   "registerAccount": "Vytvoriť účet",
-  "reLogin": "Znovu sa prihlásiť",
+  "reLogin": "Prihláste sa znova",
   "authenticationInfoUpdated": "Prihlasovacie údaje boli aktualizované",
   "updateAuthenticationInformation": "Aktualizovať autentifikačné údaje",
   "registeredWithProvider": "Zaregistrovali ste sa cez {accountTypeProviderName}",

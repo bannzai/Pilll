@@ -68,7 +68,7 @@
   "feedbackUsage": "ຂອບໃຈສຳລັບຄຳຄິດເຫັນຂອງທ່ານ. ພວກເຮົາຈະນຳໄປໃຊ້ເພື່ອປັບປຸງແອັບໃຫ້ດີຂຶ້ນໃນອະນາຄົດ.",
   "close": "ປິດ",
   "registerAccount": "ສ້າງບັນຊີ",
-  "reLogin": "ເຂົ້າສູ່ລະບົບຄືນໃໝ່",
+  "reLogin": "ເຂົ້າລະບົບອີກຄັ້ງ",
   "authenticationInfoUpdated": "ອັບເດດຂໍ້ມູນການຢັ້ງຢືນສຳເລັດແລ້ວ",
   "updateAuthenticationInformation": "ອັບເດດຂໍ້ມູນການພິສູດຕົວຕົນ",
   "registeredWithProvider": "ລົງທະບຽນດ້ວຍ {accountTypeProviderName} ແລ້ວ",

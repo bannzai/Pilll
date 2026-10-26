@@ -68,7 +68,7 @@
   "feedbackUsage": "Hvala za vaše mnenje. Upoštevali ga bomo pri nadaljnjem izboljševanju aplikacije.",
   "close": "Zaprite",
   "registerAccount": "Ustvarite račun",
-  "reLogin": "Ponovna prijava",
+  "reLogin": "Znova se prijavite",
   "authenticationInfoUpdated": "Prijavni podatki so bili posodobljeni",
   "updateAuthenticationInformation": "Posodobi poverilnice",
   "registeredWithProvider": "Uspešno ste se registrirali z {accountTypeProviderName}",

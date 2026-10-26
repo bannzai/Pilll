@@ -68,7 +68,7 @@
   "feedbackUsage": "Спасибо за ваше мнение. Мы учтём его, чтобы и дальше улучшать приложение.",
   "close": "Закрыть",
   "registerAccount": "Создать аккаунт",
-  "reLogin": "Войти заново",
+  "reLogin": "Войдите снова",
   "authenticationInfoUpdated": "Данные для входа обновлены",
   "updateAuthenticationInformation": "Обновить учётные данные",
   "registeredWithProvider": "Зарегистрировано через {accountTypeProviderName}",

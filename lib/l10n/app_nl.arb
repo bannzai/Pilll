@@ -68,7 +68,7 @@
   "feedbackUsage": "Bedankt voor je feedback. We gebruiken die om de app verder te verbeteren.",
   "close": "Sluiten",
   "registerAccount": "Account aanmaken",
-  "reLogin": "Opnieuw inloggen",
+  "reLogin": "Log opnieuw in",
   "authenticationInfoUpdated": "Authenticatiegegevens zijn bijgewerkt",
   "updateAuthenticationInformation": "Authenticatiegegevens bijwerken",
   "registeredWithProvider": "Geregistreerd met {accountTypeProviderName}",

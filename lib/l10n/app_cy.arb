@@ -68,7 +68,7 @@
   "feedbackUsage": "Diolch am eich barn. Byddwn yn ei defnyddio i wella’r ap yn y dyfodol.",
   "close": "Caewch",
   "registerAccount": "Cofrestru cyfrif",
-  "reLogin": "Mewngofnodi eto",
+  "reLogin": "Mewngofnodwch eto",
   "authenticationInfoUpdated": "Mae'r manylion dilysu wedi'u diweddaru",
   "updateAuthenticationInformation": "Diweddaru gwybodaeth ddilysu",
   "registeredWithProvider": "Wedi cofrestru gyda {accountTypeProviderName}",

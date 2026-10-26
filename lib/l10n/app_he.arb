@@ -68,7 +68,7 @@
   "feedbackUsage": "תודה על המשוב. נשתמש בו כדי להמשיך לשפר את האפליקציה.",
   "close": "סגירה",
   "registerAccount": "יצירת חשבון",
-  "reLogin": "התחברות מחדש",
+  "reLogin": "להתחבר מחדש",
   "authenticationInfoUpdated": "פרטי האימות עודכנו",
   "updateAuthenticationInformation": "עדכון פרטי אימות",
   "registeredWithProvider": "נרשמת באמצעות {accountTypeProviderName}",

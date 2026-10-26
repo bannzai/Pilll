@@ -68,7 +68,7 @@
   "feedbackUsage": "आपकी राय के लिए धन्यवाद। आगे ऐप को बेहतर बनाने में हम इसका उपयोग करेंगे।",
   "close": "बंद करें",
   "registerAccount": "खाता बनाएँ",
-  "reLogin": "पुनः लॉगिन",
+  "reLogin": "फिर से लॉग इन करें",
   "authenticationInfoUpdated": "प्रमाणीकरण जानकारी अपडेट की गई",
   "updateAuthenticationInformation": "प्रमाणीकरण जानकारी अपडेट करें",
   "registeredWithProvider": "{accountTypeProviderName} के साथ पंजीकरण पूरा हुआ",

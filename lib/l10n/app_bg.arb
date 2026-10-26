@@ -68,7 +68,7 @@
   "feedbackUsage": "Благодарим ви за мнението. Ще го използваме, за да подобряваме приложението.",
   "close": "Затворете",
   "registerAccount": "Регистрация на акаунт",
-  "reLogin": "Повторно влизане",
+  "reLogin": "Влезте отново",
   "authenticationInfoUpdated": "Данните за вход бяха обновени",
   "updateAuthenticationInformation": "Актуализиране на данните за вход",
   "registeredWithProvider": "Успешно се регистрирахте с {accountTypeProviderName}",

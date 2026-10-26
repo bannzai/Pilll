@@ -68,7 +68,7 @@
   "feedbackUsage": "Хвала Вам на мишљењу. Искористићемо га да и даље побољшавамо апликацију.",
   "close": "Затворите",
   "registerAccount": "Направите налог",
-  "reLogin": "Поновна пријава",
+  "reLogin": "Поново се пријавите",
   "authenticationInfoUpdated": "Podaci za autentifikaciju su ažurirani",
   "updateAuthenticationInformation": "Ažurirati podatke za autentifikaciju",
   "registeredWithProvider": "Registrovani sa {accountTypeProviderName}",

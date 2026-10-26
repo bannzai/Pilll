@@ -68,7 +68,7 @@
   "feedbackUsage": "Asante kwa maoni yako. Tutayatumia kuendelea kuboresha programu.",
   "close": "Funga",
   "registerAccount": "Fungua akaunti",
-  "reLogin": "Ingia tena",
+  "reLogin": "Tafadhali ingia tena",
   "authenticationInfoUpdated": "Taarifa za uthibitisho zimesasishwa",
   "updateAuthenticationInformation": "Sasisha taarifa za uthibitishaji",
   "registeredWithProvider": "Umesajiliwa kwa kutumia {accountTypeProviderName}",

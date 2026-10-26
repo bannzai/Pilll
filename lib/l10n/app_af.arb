@@ -68,7 +68,7 @@
   "feedbackUsage": "Dankie vir jou terugvoer. Ons sal dit gebruik om die app verder te verbeter.",
   "close": "Sluit",
   "registerAccount": "Rekeningregistrasie",
-  "reLogin": "Heraanmeld",
+  "reLogin": "Meld weer aan",
   "authenticationInfoUpdated": "Geloofsbriewe is opgedateer",
   "updateAuthenticationInformation": "Werk outentiseringsinligting op",
   "registeredWithProvider": "Geregistreer met {accountTypeProviderName}",

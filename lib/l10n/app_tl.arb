@@ -68,7 +68,7 @@
   "feedbackUsage": "Salamat po sa inyong opinyon. Gagamitin namin ito para patuloy na mapabuti ang app.",
   "close": "Isara",
   "registerAccount": "Gumawa ng account",
-  "reLogin": "Mag-log in Muli",
+  "reLogin": "Mag-log in po muli",
   "authenticationInfoUpdated": "Na-update na ang inyong mga kredensyal sa pag-authenticate",
   "updateAuthenticationInformation": "I-update ang impormasyon ng authentication",
   "registeredWithProvider": "Nagparehistro ka na gamit ang {accountTypeProviderName}",

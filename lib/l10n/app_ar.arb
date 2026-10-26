@@ -68,7 +68,7 @@
   "feedbackUsage": "شكرًا على رأيكِ. سنستفيد منه لتحسين التطبيق مستقبلًا.",
   "close": "إغلاق",
   "registerAccount": "إنشاء حساب",
-  "reLogin": "إعادة تسجيل الدخول",
+  "reLogin": "تسجيل الدخول مجددًا",
   "authenticationInfoUpdated": "تم تحديث معلومات التوثيق بنجاح",
   "updateAuthenticationInformation": "تحديث معلومات المصادقة",
   "registeredWithProvider": "تم التسجيل باستخدام {accountTypeProviderName}",

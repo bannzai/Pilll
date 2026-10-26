@@ -68,7 +68,7 @@
   "feedbackUsage": "Kiitos palautteestasi. Hyödynnämme sitä sovelluksen kehittämisessä jatkossa.",
   "close": "Sulje",
   "registerAccount": "Luo tili",
-  "reLogin": "Uudelleenkirjautuminen",
+  "reLogin": "Kirjaudu uudelleen",
   "authenticationInfoUpdated": "Tunnistautumistiedot on päivitetty",
   "updateAuthenticationInformation": "Päivitetään tunnistautumistiedot",
   "registeredWithProvider": "Rekisteröidyttiin {accountTypeProviderName}lla",

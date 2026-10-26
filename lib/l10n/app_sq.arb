@@ -68,7 +68,7 @@
   "feedbackUsage": "Ju falënderojmë për mendimin tuaj. Do ta përdorim për ta përmirësuar më tej aplikacionin.",
   "close": "Mbyllni",
   "registerAccount": "Krijoni llogari",
-  "reLogin": "Ri-identifikim",
+  "reLogin": "Hyni përsëri",
   "authenticationInfoUpdated": "Të dhënat e vërtetimit u përditësuan",
   "updateAuthenticationInformation": "Përditëso informacionin e autentifikimit",
   "registeredWithProvider": "U regjistruat me {accountTypeProviderName}",

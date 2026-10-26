@@ -68,7 +68,7 @@
   "feedbackUsage": "Дзякуй за ваш водгук. Мы скарыстаемся ім, каб палепшыць праграму ў будучыні.",
   "close": "Зачыніць",
   "registerAccount": "Рэгістрацыя ўліковага запісу",
-  "reLogin": "Повторны ўваход",
+  "reLogin": "Увайсці зноў",
   "authenticationInfoUpdated": "Аўтэнтыфікацыйныя даныя абноўлены",
   "updateAuthenticationInformation": "Абнавіць даныя аўтэнтыфікацыі",
   "registeredWithProvider": "Зарэгістраваны з дапамогай {accountTypeProviderName}",

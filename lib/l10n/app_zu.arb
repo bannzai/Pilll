@@ -68,7 +68,7 @@
   "feedbackUsage": "Siyabonga ngemibono yakho. Sizoyisebenzisa ukuze siqhubeke sithuthukisa uhlelo lokusebenza.",
   "close": "Sicela uvale",
   "registerAccount": "Dala i-akhawunti",
-  "reLogin": "Ngena futhi",
+  "reLogin": "Sicela ungene ngemvume futhi",
   "authenticationInfoUpdated": "Imininingwane yokuqinisekisa zibuyekeziwe",
   "updateAuthenticationInformation": "Sizobuyekeza ulwazi lokuqinisekisa",
   "registeredWithProvider": "Ubhalisiwe nge-{accountTypeProviderName}",

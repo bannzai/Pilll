@@ -68,7 +68,7 @@
   "feedbackUsage": "Пикириңиз үчүн рахмат. Аны колдонмону мындан ары жакшыртуу үчүн пайдаланабыз.",
   "close": "Жабуу",
   "registerAccount": "Каттоо эсебин түзүү",
-  "reLogin": "кайра кирүү",
+  "reLogin": "Кайра кириңиз",
   "authenticationInfoUpdated": "Аутентификация маалыматы жаңыланды",
   "updateAuthenticationInformation": "Аутентификация маалыматын жаңыртуу",
   "registeredWithProvider": "{accountTypeProviderName} аркылуу катталдыңыз",

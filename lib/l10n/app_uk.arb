@@ -68,7 +68,7 @@
   "feedbackUsage": "Дякуємо за вашу думку. Врахуємо її, щоб і надалі покращувати застосунок.",
   "close": "Закрийте",
   "registerAccount": "Створити обліковий запис",
-  "reLogin": "Увійти знову",
+  "reLogin": "Увійдіть знову",
   "authenticationInfoUpdated": "Автентифікаційні дані оновлено",
   "updateAuthenticationInformation": "Оновити облікові дані",
   "registeredWithProvider": "Зареєстровано через {accountTypeProviderName}",

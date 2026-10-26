@@ -68,7 +68,7 @@
   "feedbackUsage": "Köszönjük a visszajelzésedet. Felhasználjuk az alkalmazás további fejlesztéséhez.",
   "close": "Bezárás",
   "registerAccount": "Fiók létrehozása",
-  "reLogin": "Újra bejelentkezés",
+  "reLogin": "Jelentkezz be újra",
   "authenticationInfoUpdated": "A hitelesítési adatok frissítve lettek",
   "updateAuthenticationInformation": "Hitelesítési adatok frissítése",
   "registeredWithProvider": "Regisztráltál {accountTypeProviderName}-val",

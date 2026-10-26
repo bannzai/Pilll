@@ -68,7 +68,7 @@
   "feedbackUsage": "សូមអរគុណសម្រាប់មតិយោបល់របស់អ្នក។ យើងនឹងយកមតិនេះទៅប្រើ ដើម្បីកែលម្អកម្មវិធីបន្ថែមទៀត។",
   "close": "បិទ",
   "registerAccount": "បង្កើតគណនី",
-  "reLogin": "ចូលឡើងវិញ",
+  "reLogin": "សូមចូលគណនីម្ដងទៀត",
   "authenticationInfoUpdated": "ព័ត៌មានបញ្ជាក់ខ្លួនបានធ្វើបច្ចុប្បន្នភាពរួចរាល់",
   "updateAuthenticationInformation": "កែប្រែព័ត៌មានផ្ទៀងផ្ទាត់",
   "registeredWithProvider": "បានចុះឈ្មោះដោយ{accountTypeProviderName}",

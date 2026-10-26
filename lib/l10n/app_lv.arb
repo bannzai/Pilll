@@ -68,7 +68,7 @@
   "feedbackUsage": "Paldies par jūsu viedokli. Ņemsim to vērā, turpinot uzlabot lietotni.",
   "close": "Aizveriet",
   "registerAccount": "Izveidot kontu",
-  "reLogin": "Atkārtoti pieslēgties",
+  "reLogin": "Piesakieties vēlreiz",
   "authenticationInfoUpdated": "Autentifikācijas dati ir atjaunoti",
   "updateAuthenticationInformation": "Atjaunināt autentifikācijas datus",
   "registeredWithProvider": "Reģistrējies ar {accountTypeProviderName}",

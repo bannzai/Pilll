@@ -68,7 +68,7 @@
   "feedbackUsage": "Terima kasih atas maklum balas anda. Kami akan menggunakannya untuk terus menambah baik aplikasi.",
   "close": "Tutup",
   "registerAccount": "Daftar akaun",
-  "reLogin": "Log Masuk Semula",
+  "reLogin": "Log masuk semula",
   "authenticationInfoUpdated": "Maklumat pengesahan telah berjaya dikemas kini",
   "updateAuthenticationInformation": "Kemaskini maklumat pengesahan",
   "registeredWithProvider": "Berjaya didaftar dengan {accountTypeProviderName}",

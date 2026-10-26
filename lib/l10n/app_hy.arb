@@ -68,7 +68,7 @@
   "feedbackUsage": "Շնորհակալություն Ձեր կարծիքի համար։ Այն կօգտագործենք հավելվածը հետագայում բարելավելու համար։",
   "close": "Փակել",
   "registerAccount": "Հաշվի գրանցում",
-  "reLogin": "վերամուտք",
+  "reLogin": "Կրկին մուտք գործեք",
   "authenticationInfoUpdated": "Վավերացման տվյալները թարմացվել են",
   "updateAuthenticationInformation": "Նույնականացման տվյալները թարմացնել",
   "registeredWithProvider": "Գրանցվել եք {accountTypeProviderName}-ով",

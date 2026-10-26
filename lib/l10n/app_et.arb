@@ -68,7 +68,7 @@
   "feedbackUsage": "Aitäh tagasiside eest. Kasutame seda, et rakendust edaspidi paremaks teha.",
   "close": "Sulge",
   "registerAccount": "Loo konto",
-  "reLogin": "Uuesti sisselogimine",
+  "reLogin": "Logi uuesti sisse",
   "authenticationInfoUpdated": "Autentimisandmed on uuendatud",
   "updateAuthenticationInformation": "Uuenda autentimisandmeid",
   "registeredWithProvider": "Registreeritud {accountTypeProviderName} kaudu",

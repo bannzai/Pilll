@@ -68,7 +68,7 @@
   "feedbackUsage": "Пікіріңізге рақмет. Оны қолданбаны алдағы уақытта жақсарту үшін пайдаланамыз.",
   "close": "Жабу",
   "registerAccount": "Тіркелгі ашу",
-  "reLogin": "қайта кіру",
+  "reLogin": "Қайта кіріңіз",
   "authenticationInfoUpdated": "Растау деректері жаңартылды",
   "updateAuthenticationInformation": "Растау ақпаратын жаңарту",
   "registeredWithProvider": "{accountTypeProviderName} арқылы тіркелдіңіз",
