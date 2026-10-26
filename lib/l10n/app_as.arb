@@ -60,7 +60,7 @@
   "discard": "বাতিল কৰক",
   "pillSheetDiscarded": "পিলৰ ষ্ট্ৰিপ পেলোৱা হৈছে",
   "aboutMenstruation": "মাহেকীয়াৰ বিষয়ে",
-  "checkPillNumberForMenstruationStart": "ঋতুস্ৰাৱৰ আৰম্ভণি দিনৰ বড়ি সংখ্যা পৰীক্ষা কৰক। বৰ্তমান নিৰ্বাচিত বড়িৰ পাতৰ প্ৰকাৰত অস্তিত্ব নথকা বড়ি সংখ্যা সংস্থাপন কৰা হৈছে",
+  "checkPillNumberForMenstruationStart": "অনুগ্ৰহ কৰি মাহেকীয়া আৰম্ভ হোৱাৰ দিনৰ পিল নম্বৰ পৰীক্ষা কৰক। নিৰ্ধাৰিত পিল নম্বৰটো বৰ্তমান বাছনি কৰা পিলৰ ষ্ট্ৰিপৰ ধৰণত নাই",
   "customizeMedicationNotifications": "পিল নেওয়ার নোটিফিকেশন কাস্টমাইজ করা",
   "medicationNotification": "বড়ি সেৱনৰ জাননী",
   "xCanBeCustomized": "{x}ৰ অনুকূলন কৰিব পাৰি",

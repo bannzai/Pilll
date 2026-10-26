@@ -60,7 +60,7 @@
   "discard": "Slett",
   "pillSheetDiscarded": "Pillebrettet er kastet",
   "aboutMenstruation": "Om mens",
-  "checkPillNumberForMenstruationStart": "Vennligst kontroller pillenummeret for menstruasjonsstart. Den valgte pillepakketypen inneholder ikke pillenummeret som er angitt.",
+  "checkPillNumberForMenstruationStart": "Sjekk gjerne pillenummeret for dagen mensen starter. Det angitte pillenummeret finnes ikke på den valgte typen pillebrett",
   "customizeMedicationNotifications": "Tilpass pillevarsler",
   "medicationNotification": "Inntak-varsling",
   "xCanBeCustomized": "Du kan tilpasse {x}",

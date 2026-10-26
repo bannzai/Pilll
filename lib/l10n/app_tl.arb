@@ -60,7 +60,7 @@
   "discard": "Itapon",
   "pillSheetDiscarded": "Naitapon na ang pakete ng pildoras",
   "aboutMenstruation": "Tungkol sa regla",
-  "checkPillNumberForMenstruationStart": "Mangyaring suriin ang numero ng pill para sa umpisa ng regla. Ang kasalukuyang nakatakdang numero ng pill ay hindi umiiral sa napiling uri ng pill sheet",
+  "checkPillNumberForMenstruationStart": "Pakitingnan po ang numero ng pildoras para sa unang araw ng regla. Wala sa napiling uri ng pakete ng pildoras ang nakatakdang numero ng pildoras",
   "customizeMedicationNotifications": "I-customize ang Paalala sa Pag-inom",
   "medicationNotification": "Paalala sa Pag-inom",
   "xCanBeCustomized": "Maaari mong i-customize ang {x}",

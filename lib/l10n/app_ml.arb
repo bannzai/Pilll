@@ -60,7 +60,7 @@
   "discard": "ഇല്ലാതാക്കൂ",
   "pillSheetDiscarded": "ഗുളിക സ്ട്രിപ്പ് കളഞ്ഞു",
   "aboutMenstruation": "ആർത്തവത്തെക്കുറിച്ച്",
-  "checkPillNumberForMenstruationStart": "മാസിക ആരംഭദിനത്തിലെ പിൽ നമ്പർ ദയവായി പരിശോധിക്കുക। നിലവിൽ തിരഞ്ഞെടുত്ത പിൽ ഷീറ്റ് തരത്തിൽ ഇല്ലാത്ത പിൽ നമ്പർ സജ്ജീകരിച്ചിരിക്കുന്നു",
+  "checkPillNumberForMenstruationStart": "ആർത്തവം തുടങ്ങുന്ന ദിവസത്തിന് നൽകിയ ഗുളിക നമ്പർ ദയവായി പരിശോധിക്കൂ. നൽകിയ ഗുളിക നമ്പർ തിരഞ്ഞെടുത്ത ഗുളിക സ്ട്രിപ്പിന്റെ തരത്തിൽ ഇല്ല",
   "customizeMedicationNotifications": "സേവന റിമൈൻഡർ ക്രമീകരണം",
   "medicationNotification": "കഴിക്കൽ അറിയിപ്പ്",
   "xCanBeCustomized": "{x} കസ്റ്റമൈസ് ചെയ്യാൻ കഴിയും",

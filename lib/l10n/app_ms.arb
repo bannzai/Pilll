@@ -60,7 +60,7 @@
   "discard": "Padam",
   "pillSheetDiscarded": "Pek pil telah dibuang",
   "aboutMenstruation": "Tentang haid",
-  "checkPillNumberForMenstruationStart": "Sila semak nombor pil tarikh mula haid. Nombor pil yang telah ditetapkan tidak wujud dalam jenis lembaran pil yang dipilih sekarang",
+  "checkPillNumberForMenstruationStart": "Sila semak nombor pil untuk hari pertama haid. Nombor pil yang ditetapkan tiada dalam jenis pek pil yang dipilih",
   "customizeMedicationNotifications": "Penyesuaian Pemberitahuan Pengambilan",
   "medicationNotification": "Pemberitahuan Pengambilan",
   "xCanBeCustomized": "{x} boleh disesuaikan",

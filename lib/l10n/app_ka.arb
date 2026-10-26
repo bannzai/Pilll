@@ -60,7 +60,7 @@
   "discard": "წაშლა",
   "pillSheetDiscarded": "აბების ბლისტერ გადაგდებულია",
   "aboutMenstruation": "მენსტრუაციის შესახებ",
-  "checkPillNumberForMenstruationStart": "გთხოვთ შეამოწმოთ მენსტრუაციის დაწყების დღის აბის ნომერი. ამჟამად არჩეული აბების ფურცლის ტიპში არ არსებობს დაყენებული აბის ნომერი",
+  "checkPillNumberForMenstruationStart": "გთხოვთ, შეამოწმოთ მენსტრუაციის დაწყების დღისთვის მითითებული აბის ნომერი. მითითებული აბის ნომერი არჩეული აბების ბლისტერის ტიპში არ არის",
   "customizeMedicationNotifications": "მიღების შეტყობინებების მორგება",
   "medicationNotification": "მიღების შეტყობინება",
   "xCanBeCustomized": "{x}-ის მორგება შესაძლებელია",

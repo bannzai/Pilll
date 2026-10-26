@@ -60,7 +60,7 @@
   "discard": "Oʻchiring",
   "pillSheetDiscarded": "tabletka blister tashlandi",
   "aboutMenstruation": "Hayz haqida",
-  "checkPillNumberForMenstruationStart": "Hayz boshlanish sanasidagi dori raqamini tekshiring. Hozir tanlangan dori varaqlari turida mavjud bo'lmagan dori raqami o'rnatilgan.",
+  "checkPillNumberForMenstruationStart": "Iltimos, hayz boshlanadigan kun uchun belgilangan tabletka raqamini tekshiring. Belgilangan tabletka raqami tanlangan tabletka blister turida yoʻq",
   "customizeMedicationNotifications": "Qabul qilish bildirishnomasini sozlash",
   "medicationNotification": "Dori ichish bildirishnomasi",
   "xCanBeCustomized": "{x}ni sozlashingiz mumkin",

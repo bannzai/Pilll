@@ -60,7 +60,7 @@
   "discard": "ລຶບ",
   "pillSheetDiscarded": "ໄດ້ຖິ້ມແຜງຢາຄຸມແລ້ວ",
   "aboutMenstruation": "ກ່ຽວກັບປະຈຳເດືອນ",
-  "checkPillNumberForMenstruationStart": "ກະລຸນາກວດສອບເລກຢາຄຸມກໍາເນີດຂອງວັນເລີ່ມມາເດືອນ. ເລກຢາຄຸມກໍາເນີດທີ່ໄດ້ຕັ້ງຄ່າໄວ້ບໍ່ມີຢູ່ໃນປະເພດແຜ່ນຢາຄຸມກໍາເນີດທີ່ເລືອກປັດຈຸບັນ",
+  "checkPillNumberForMenstruationStart": "ກະລຸນາກວດເບິ່ງເລກເມັດຢາສຳລັບມື້ເລີ່ມປະຈຳເດືອນ. ເລກເມັດຢາທີ່ຕັ້ງໄວ້ບໍ່ມີໃນປະເພດແຜງຢາຄຸມທີ່ເລືອກ",
   "customizeMedicationNotifications": "ການປັບແຕ່ງການແຈ້ງເຕືອນການກິນຢາ",
   "medicationNotification": "ການແຈ້ງເຕືອນການກິນຢາ",
   "xCanBeCustomized": "ສາມາດປັບແຕ່ງ {x} ໄດ້",

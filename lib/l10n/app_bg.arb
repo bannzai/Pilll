@@ -60,7 +60,7 @@
   "discard": "Изтриване",
   "pillSheetDiscarded": "блистерът е изхвърлен",
   "aboutMenstruation": "За мензиса",
-  "checkPillNumberForMenstruationStart": "Моля, проверете номера на хапчето за датата на започване на менструацията. Зададеният номер на хапчето не съществува в текущо избрания тип блистер",
+  "checkPillNumberForMenstruationStart": "Моля, проверете номера на хапчето за началния ден на мензиса. Зададеният номер на хапче не съществува в избрания тип блистер",
   "customizeMedicationNotifications": "Персонализиране на уведомления за прием",
   "medicationNotification": "Уведомления за приемане",
   "xCanBeCustomized": "Можете да персонализирате {x}",

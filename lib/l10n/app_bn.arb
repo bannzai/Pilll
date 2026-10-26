@@ -60,7 +60,7 @@
   "discard": "মুছে ফেলুন",
   "pillSheetDiscarded": "পিল শিট ফেলে দেওয়া হয়েছে",
   "aboutMenstruation": "মাসিক সম্পর্কে",
-  "checkPillNumberForMenstruationStart": "অনুগ্রহ করে মাসিক শুরুর দিনের পিল নম্বর যাচাই করুন। বর্তমানে নির্বাচিত পিল শিট টাইপে যে পিল নম্বরটি সেট করা হয়েছে তা বিদ্যমান নেই।",
+  "checkPillNumberForMenstruationStart": "অনুগ্রহ করে মাসিক শুরুর দিনের পিল নম্বর দেখুন। নির্ধারিত পিল নম্বরটি বর্তমানে বেছে নেওয়া পিল শিটের ধরনে নেই",
   "customizeMedicationNotifications": "সেবনের বিজ্ঞপ্তি কাস্টমাইজেশন",
   "medicationNotification": "সেবন বিজ্ঞপ্তি",
   "xCanBeCustomized": "{x} কাস্টমাইজ করতে পারবেন",

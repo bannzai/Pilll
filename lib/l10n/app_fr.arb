@@ -60,7 +60,7 @@
   "discard": "Supprimer",
   "pillSheetDiscarded": "La plaquette a été jetée",
   "aboutMenstruation": "À propos des règles",
-  "checkPillNumberForMenstruationStart": "Veuillez vérifier le numéro de pilule correspondant à la date de début de vos règles. Le numéro de pilule défini n'existe pas dans le type de feuille de pilules actuellement sélectionné.",
+  "checkPillNumberForMenstruationStart": "Veuillez vérifier le numéro de pilule associé au premier jour de vos règles. Le numéro de pilule défini n’existe pas dans le type de plaquette sélectionné",
   "customizeMedicationNotifications": "Personnalisez les rappels de pilule",
   "medicationNotification": "Notifications de médicaments",
   "xCanBeCustomized": "Vous pouvez personnaliser {x}",

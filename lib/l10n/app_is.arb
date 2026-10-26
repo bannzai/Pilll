@@ -60,7 +60,7 @@
   "discard": "Eyða",
   "pillSheetDiscarded": "Pilluspjaldinu hefur verið hent",
   "aboutMenstruation": "Um blæðingar",
-  "checkPillNumberForMenstruationStart": "Vinsamlegast staðfestu pillu númerið fyrir upphaf tíðablæðinga. Núverandi gerð pillublaðs inniheldur ekki þetta pillu númer sem hefur verið stillt.",
+  "checkPillNumberForMenstruationStart": "Athugaðu pillunúmerið fyrir fyrsta dag blæðinga. Skráð pillunúmer er ekki á þeirri gerð pilluspjalds sem var valin",
   "customizeMedicationNotifications": "Sérsníða inntökutilkynningar",
   "medicationNotification": "Inntökutilkynning",
   "xCanBeCustomized": "Þú getur sérsniðið {x}",

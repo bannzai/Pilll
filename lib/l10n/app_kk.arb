@@ -60,7 +60,7 @@
   "discard": "Жою",
   "pillSheetDiscarded": "таблетка блистер тасталды",
   "aboutMenstruation": "Етеккір туралы",
-  "checkPillNumberForMenstruationStart": "Етеккір басталу күніндегі дəрі нөмірін тексеріңіз. Қазір таңдалған дəрі парағы түрінде орнатылған дəрі нөмірі жоқ",
+  "checkPillNumberForMenstruationStart": "Етеккір басталатын күнге көрсетілген таблетка нөмірін тексеріңіз. Орнатылған таблетка нөмірі таңдалған таблетка блистер түрінде жоқ",
   "customizeMedicationNotifications": "Дәрі қабылдау хабарландыруларын теңшеу",
   "medicationNotification": "Дәрі ішу хабарландыруы",
   "xCanBeCustomized": "{x} теңшеуге болады",

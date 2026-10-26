@@ -60,7 +60,7 @@
   "discard": "Descartar",
   "pillSheetDiscarded": "Se ha desechado el blíster",
   "aboutMenstruation": "Sobre la regla",
-  "checkPillNumberForMenstruationStart": "Por favor, confirme el número de pastilla para el inicio de la menstruación. El número configurado no existe en el tipo de blíster seleccionado actualmente",
+  "checkPillNumberForMenstruationStart": "Revisa, por favor, el número de píldora del día en que empieza tu regla. El número de píldora configurado no existe en el tipo de blíster seleccionado",
   "customizeMedicationNotifications": "Personalización de notificaciones de toma",
   "medicationNotification": "Notificación de medicación",
   "xCanBeCustomized": "Puedes personalizar {x}",

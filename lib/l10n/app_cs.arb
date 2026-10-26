@@ -60,7 +60,7 @@
   "discard": "Odstranit",
   "pillSheetDiscarded": "Blistr byl vyhozen",
   "aboutMenstruation": "O menstruaci",
-  "checkPillNumberForMenstruationStart": "Zkontrolujte prosím číslo pilulky pro začátek menstruace. Nastavené číslo pilulky neexistuje v aktuálně vybraném typu blistru.",
+  "checkPillNumberForMenstruationStart": "Zkontrolujte prosím číslo tablety pro den začátku menstruace. Nastavené číslo tablety není ve vybraném typu blistru",
   "customizeMedicationNotifications": "Přizpůsobení upozornění na užívání",
   "medicationNotification": "Připomenutí na užívání",
   "xCanBeCustomized": "Můžete přizpůsobit {x}",

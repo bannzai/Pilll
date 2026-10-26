@@ -60,7 +60,7 @@
   "discard": "Slet",
   "pillSheetDiscarded": "Pillekortet er smidt ud",
   "aboutMenstruation": "Om menstruation",
-  "checkPillNumberForMenstruationStart": "Kontroller venligst pillenummeret for menstruationsstartdatoen. Der er indstillet et pillenummer, som ikke eksisterer i den aktuelt valgte pilletype.",
+  "checkPillNumberForMenstruationStart": "Tjek gerne pillenummeret for den dag, din menstruation starter. Det indstillede pillenummer findes ikke på den valgte type pillekort",
   "customizeMedicationNotifications": "Tilpasning af indtagelsespåmindelser",
   "medicationNotification": "Indtagelsesnotifikation",
   "xCanBeCustomized": "Du kan tilpasse {x}",

@@ -60,7 +60,7 @@
   "discard": "Fshini",
   "pillSheetDiscarded": "Blisteri u hodh",
   "aboutMenstruation": "Rreth menstruacionit",
-  "checkPillNumberForMenstruationStart": "Ju lutemi verifikoni numrin e pilulës për datën e fillimit të menstruacionit. Numri i pilulës i vendosur nuk ekziston në tipin e fletës së pilulës aktualisht të zgjedhur.",
+  "checkPillNumberForMenstruationStart": "Ju lutemi, kontrolloni numrin e pilulës për ditën e fillimit të menstruacioneve. Numri i caktuar i pilulës nuk gjendet në llojin e zgjedhur të blisterit",
   "customizeMedicationNotifications": "Personalizimi i njoftimeve të marrjes",
   "medicationNotification": "Njoftimet e marrjes",
   "xCanBeCustomized": "Mund të personalizoni {x}",

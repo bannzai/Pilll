@@ -60,7 +60,7 @@
   "discard": "Elimina",
   "pillSheetDiscarded": "Il blister è stato gettato",
   "aboutMenstruation": "Informazioni sulle mestruazioni",
-  "checkPillNumberForMenstruationStart": "Si prega di verificare il numero della pillola per l'inizio del ciclo mestruale. È impostato un numero di pillola che non esiste nel tipo di blister attualmente selezionato.",
+  "checkPillNumberForMenstruationStart": "Controlla, per favore, il numero della pillola per il primo giorno delle mestruazioni. Il numero della pillola impostato non è presente nel tipo di blister selezionato",
   "customizeMedicationNotifications": "Personalizzazione notifiche di assunzione",
   "medicationNotification": "Notifiche pillola",
   "xCanBeCustomized": "Puoi personalizzare {x}",

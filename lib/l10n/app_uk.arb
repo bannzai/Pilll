@@ -60,7 +60,7 @@
   "discard": "Видалити",
   "pillSheetDiscarded": "Блістер викинуто",
   "aboutMenstruation": "Про місячні",
-  "checkPillNumberForMenstruationStart": "Будь ласка, перевірте номер таблетки для початку менструації. Встановлено номер таблетки, який не існує в обраному типі упаковки таблеток",
+  "checkPillNumberForMenstruationStart": "Будь ласка, перевірте номер пігулки для дня початку місячних. Указаного номера пігулки немає у вибраному типі блістера",
   "customizeMedicationNotifications": "Налаштування сповіщень про прийом",
   "medicationNotification": "Сповіщення про прийом",
   "xCanBeCustomized": "{x} можна налаштувати",

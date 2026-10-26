@@ -60,7 +60,7 @@
   "discard": "Устгах",
   "pillSheetDiscarded": "эмийн блистер хаягдлаа",
   "aboutMenstruation": "Сарын тэмдгийн тухай",
-  "checkPillNumberForMenstruationStart": "Сарын тэмдэг эхлэх өдрийн эмийн дугаарыг шалгана уу. Одоо сонгосон эмийн хавтасны төрөлд байхгүй эмийн дугаар тохируулагдсан байна",
+  "checkPillNumberForMenstruationStart": "Сарын тэмдгийн эхлэх өдөрт тохируулсан эмийн дугаарыг шалгана уу. Тохируулсан эмийн дугаар сонгосон эмийн блистерийн төрөлд байхгүй байна",
   "customizeMedicationNotifications": "Мэдэгдлийн тохиргоо",
   "medicationNotification": "Эм уух мэдэгдэл",
   "xCanBeCustomized": "{x}-ийг тохируулж болно",

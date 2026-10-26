@@ -60,7 +60,7 @@
   "discard": "ਮਿਟਾਓ",
   "pillSheetDiscarded": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸੁੱਟ ਦਿੱਤੀ ਗਈ ਹੈ",
   "aboutMenstruation": "ਮਾਹਵਾਰੀ ਬਾਰੇ",
-  "checkPillNumberForMenstruationStart": "ਕਿਰਪਾ ਕਰਕੇ ਮਾਸਿਕ ਧਰਮ ਸ਼ੁਰੂਆਤ ਦੀ ਮਿਤੀ ਦਾ ਗੋਲੀ ਨੰਬਰ ਚੈੱਕ ਕਰੋ। ਵਰਤਮਾਨ ਵਿੱਚ ਚੁਣੀ ਗਈ ਗੋਲੀ ਸ਼ੀਟ ਕਿਸਮ ਵਿੱਚ ਸੈਟ ਕੀਤਾ ਗਿਆ ਗੋਲੀ ਨੰਬਰ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
+  "checkPillNumberForMenstruationStart": "ਕਿਰਪਾ ਕਰਕੇ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲੇ ਦਿਨ ਲਈ ਗੋਲੀ ਨੰਬਰ ਦੀ ਜਾਂਚ ਕਰੋ। ਸੈੱਟ ਕੀਤਾ ਗੋਲੀ ਨੰਬਰ ਚੁਣੀ ਗਈ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀ ਕਿਸਮ ਵਿੱਚ ਨਹੀਂ ਹੈ",
   "customizeMedicationNotifications": "ਦਵਾਈ ਸੂਚਨਾ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ",
   "medicationNotification": "ਦਵਾਈ ਸੂਚਨਾ",
   "xCanBeCustomized": "{x} ਨੂੰ ਕਸਟਮਾਈਜ਼ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ",

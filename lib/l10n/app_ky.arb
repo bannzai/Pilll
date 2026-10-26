@@ -60,7 +60,7 @@
   "discard": "Өчүрүңүз",
   "pillSheetDiscarded": "таблетка блистери ыргытылды",
   "aboutMenstruation": "Айыз тууралуу",
-  "checkPillNumberForMenstruationStart": "Айыз башталган күнүндөгү пилдин номерин текшериңиз. Учурда тандалган пил листинин түрүндө жок болгон номер коюлган.",
+  "checkPillNumberForMenstruationStart": "Айыз башталган күнгө коюлган таблетканын номерин текшериңиз. Коюлган таблетканын номери тандалган таблетка блистери түрүндө жок",
   "customizeMedicationNotifications": "Дары ичүү эскертүүлөрүн ыңгайлаштыруу",
   "medicationNotification": "Ичүү билдирүүсү",
   "xCanBeCustomized": "{x}ты ыңгайлаштыра аласыз",

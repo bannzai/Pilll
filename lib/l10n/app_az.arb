@@ -60,7 +60,7 @@
   "discard": "Silin",
   "pillSheetDiscarded": "həb blister atıldı",
   "aboutMenstruation": "Aybaşı haqqında",
-  "checkPillNumberForMenstruationStart": "Menstruasiya başlama tarixindəki həb nömrəsini yoxlayın. Hazırda seçilmiş həb vərəqi tipində mövcud olmayan həb nömrəsi təyin edilib",
+  "checkPillNumberForMenstruationStart": "Zəhmət olmasa, aybaşı başlayan gün üçün həb nömrəsini yoxlayın. Təyin edilmiş həb nömrəsi hazırda seçilmiş həb blister növündə yoxdur",
   "customizeMedicationNotifications": "Qəbul bildirişlərinin fərdiləşdirilməsi",
   "medicationNotification": "Dərman qəbulu bildirişi",
   "xCanBeCustomized": "{x} fərdiləşdirə bilərsiniz",

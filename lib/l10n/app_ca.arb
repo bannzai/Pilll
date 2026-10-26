@@ -60,7 +60,7 @@
   "discard": "Descarta",
   "pillSheetDiscarded": "S’ha llençat el blíster",
   "aboutMenstruation": "Sobre la regla",
-  "checkPillNumberForMenstruationStart": "Si us plau, comproveu el número de píndola de la data d'inici de la menstruació. El número de píndola configurat no existeix en el tipus de full de píndoles seleccionat actualment",
+  "checkPillNumberForMenstruationStart": "Comprova, si us plau, el número de píndola del dia d’inici de la regla. El número de píndola configurat no existeix al tipus de blíster seleccionat",
   "customizeMedicationNotifications": "Personalització de les notificacions de presa",
   "medicationNotification": "Notificació de presa",
   "xCanBeCustomized": "Pots personalitzar {x}",

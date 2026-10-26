@@ -60,7 +60,7 @@
   "discard": "Futa",
   "pillSheetDiscarded": "Pakiti ya vidonge imetupwa",
   "aboutMenstruation": "Kuhusu hedhi",
-  "checkPillNumberForMenstruationStart": "Tafadhali angalia namba ya kidongo cha siku ya kuanza hedhi. Namba ya kidongo iliyowekwa haipo katika aina ya karatasi ya vidonge uliyochagua kwa sasa",
+  "checkPillNumberForMenstruationStart": "Tafadhali angalia nambari ya kidonge ya siku ya kuanza kwa hedhi. Nambari ya kidonge iliyowekwa haipo kwenye aina ya pakiti ya vidonge iliyochaguliwa",
   "customizeMedicationNotifications": "Marekebisho ya Arifa za Kumeza Dawa",
   "medicationNotification": "Arifa ya dawa",
   "xCanBeCustomized": "Unaweza kubinafsisha {x}",

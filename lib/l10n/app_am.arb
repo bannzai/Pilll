@@ -60,7 +60,7 @@
   "discard": "ያስወግዱ",
   "pillSheetDiscarded": "የክኒን ሉህ ተጥሏል",
   "aboutMenstruation": "ስለ ወር አበባ",
-  "checkPillNumberForMenstruationStart": "የወርሃዊ ዑደት መጀመሪያ ቀን ክኒን ቁጥር እባክዎን ያረጋግጡ። በአሁኑ ተመረጥ የክኒን ወረቀት አይነት ውስጥ የማይገኝ ክኒን ቁጥር ተዘጋጅቷል",
+  "checkPillNumberForMenstruationStart": "እባክዎ ወር አበባ የሚጀምርበትን ቀን ክኒን ቁጥር ያረጋግጡ። የተቀመጠው ክኒን ቁጥር በአሁኑ የተመረጠው የክኒን ሉህ አይገኝም",
   "customizeMedicationNotifications": "የመድሃኒት መውሰድ ማስታወቂያ ማስተካከል",
   "medicationNotification": "የክኒን መውሰጃ ማሳሰቢያ",
   "xCanBeCustomized": "{x}ን ማበጀት ይችላሉ",

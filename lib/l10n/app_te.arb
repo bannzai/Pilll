@@ -60,7 +60,7 @@
   "discard": "తొలగించండి",
   "pillSheetDiscarded": "మాత్రల స్ట్రిప్‌ను పారవేశారు",
   "aboutMenstruation": "నెలసరి గురించి",
-  "checkPillNumberForMenstruationStart": "దయచేసి మీ రుతుస్రావం ప్రారంభ దినంలోని మాత్రల సంఖ్యను తనిఖీ చేయండి. ప్రస్తుతం ఎంచుకున్న మాత్రల షీట్ రకంలో ఉండని మాత్రల సంఖ్య సెట్ చేయబడింది",
+  "checkPillNumberForMenstruationStart": "నెలసరి ప్రారంభమయ్యే రోజుకు సెట్ చేసిన మాత్ర సంఖ్యను దయచేసి తనిఖీ చేయండి. ఆ మాత్ర సంఖ్య ప్రస్తుతం ఎంచుకున్న మాత్రల స్ట్రిప్ రకంలో లేదు",
   "customizeMedicationNotifications": "సేవన నోటిఫికేషన్ అనుకూలీకరణ",
   "medicationNotification": "సేవన నోటిఫికేషన్",
   "xCanBeCustomized": "{x}ని కస్టమైజ్ చేయవచ్చు",

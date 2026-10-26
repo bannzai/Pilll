@@ -60,7 +60,7 @@
   "discard": "حذف",
   "pillSheetDiscarded": "تم التخلص من شريط الحبوب",
   "aboutMenstruation": "عن الدورة",
-  "checkPillNumberForMenstruationStart": "يرجى التحقق من رقم الحبة لتاريخ بداية الدورة الشهرية. تم تعيين رقم حبة غير موجود في نوع شريط الحبوب المختار حالياً",
+  "checkPillNumberForMenstruationStart": "يرجى التحقق من رقم الحبة المحدد ليوم بدء الدورة. رقم الحبة المحدد غير موجود في نوع شريط الحبوب المختار حاليًا",
   "customizeMedicationNotifications": "تخصيص إشعارات التناول",
   "medicationNotification": "إشعار التناول",
   "xCanBeCustomized": "يمكنك تخصيص {x}",

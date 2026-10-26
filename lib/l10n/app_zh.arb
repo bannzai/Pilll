@@ -60,7 +60,7 @@
   "discard": "删除",
   "pillSheetDiscarded": "药板已丢弃",
   "aboutMenstruation": "关于经期",
-  "checkPillNumberForMenstruationStart": "请确认月经开始日的药丸编号。您设置的药丸编号在当前选择的药片板类型中不存在",
+  "checkPillNumberForMenstruationStart": "请检查经期开始当天的药片编号。已设置的药片编号不在当前选择的药板类型中",
   "customizeMedicationNotifications": "自定义服药通知",
   "medicationNotification": "服药通知",
   "xCanBeCustomized": "可以自定义{x}",

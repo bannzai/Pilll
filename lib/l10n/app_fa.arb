@@ -60,7 +60,7 @@
   "discard": "حذف",
   "pillSheetDiscarded": "ورق قرص دور انداخته شد",
   "aboutMenstruation": "درباره پریود",
-  "checkPillNumberForMenstruationStart": "لطفاً شماره قرص روز شروع قاعدگی را بررسی کنید. شماره قرصی که تنظیم شده در نوع برگه قرص انتخاب شده فعلی وجود ندارد",
+  "checkPillNumberForMenstruationStart": "لطفاً شماره قرص روز شروع پریود را بررسی کنید. شماره قرص تنظیم‌شده در نوع ورق قرص انتخاب‌شده وجود ندارد",
   "customizeMedicationNotifications": "سفارشی‌سازی اطلاع‌رسانی مصرف",
   "medicationNotification": "یادآوری مصرف",
   "xCanBeCustomized": "می‌توانید {x} را سفارشی‌سازی کنید",

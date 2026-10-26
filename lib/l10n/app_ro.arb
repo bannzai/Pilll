@@ -60,7 +60,7 @@
   "discard": "Șterge",
   "pillSheetDiscarded": "Blisterul a fost aruncat",
   "aboutMenstruation": "Despre menstruație",
-  "checkPillNumberForMenstruationStart": "Vă rugăm să verificați numărul pilulei pentru data începerii menstruației. Numărul pilulei configurat nu există în tipul de foaie de pilule selectat în prezent.",
+  "checkPillNumberForMenstruationStart": "Verifică, te rog, numărul pilulei pentru prima zi de menstruație. Numărul pilulei setat nu există în tipul de blister selectat",
   "customizeMedicationNotifications": "Personalizare notificări administrare",
   "medicationNotification": "Notificare de administrare",
   "xCanBeCustomized": "Poți personaliza {x}",

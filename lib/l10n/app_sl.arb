@@ -60,7 +60,7 @@
   "discard": "Izbriši",
   "pillSheetDiscarded": "Ploščica je bila zavržena",
   "aboutMenstruation": "O menstruaciji",
-  "checkPillNumberForMenstruationStart": "Prosimo preverite številko tablete za dan začetka menstruacije. Nastavljena je številka tablete, ki ne obstaja v trenutno izbranem tipu lista tablet.",
+  "checkPillNumberForMenstruationStart": "Prosimo, preverite številko tablete za dan začetka menstruacije. Nastavljene številke tablete ni na izbrani vrsti ploščice",
   "customizeMedicationNotifications": "Prilagoditev obvestil za jemanje",
   "medicationNotification": "Obvestilo o jemanju",
   "xCanBeCustomized": "Prilagodite lahko {x}",

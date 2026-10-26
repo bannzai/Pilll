@@ -60,7 +60,7 @@
   "discard": "Usuń",
   "pillSheetDiscarded": "Blist został wyrzucony",
   "aboutMenstruation": "O okresie",
-  "checkPillNumberForMenstruationStart": "Sprawdź numer tabletki dla daty rozpoczęcia miesiączki. Ustawiony numer tabletki nie istnieje w aktualnie wybranym typie opakowania tabletek.",
+  "checkPillNumberForMenstruationStart": "Sprawdź numer tabletki przypisany do pierwszego dnia okresu. Ustawiony numer tabletki nie występuje w wybranym rodzaju blistra",
   "customizeMedicationNotifications": "Dostosowanie powiadomień o przyjmowaniu",
   "medicationNotification": "Powiadomienia o przyjmowaniu",
   "xCanBeCustomized": "Można dostosować {x}",

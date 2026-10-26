@@ -60,7 +60,7 @@
   "discard": "Silin",
   "pillSheetDiscarded": "Blister atıldı",
   "aboutMenstruation": "Adet hakkında",
-  "checkPillNumberForMenstruationStart": "Lütfen adet başlangıç tarihindeki hap numarasını kontrol edin. Şu anda seçili olan hap şeridi türünde bulunmayan bir hap numarası ayarlanmış.",
+  "checkPillNumberForMenstruationStart": "Lütfen adetin başladığı gün için ayarlanan hap numarasını kontrol edin. Ayarlanan hap numarası seçili blister türünde bulunmuyor",
   "customizeMedicationNotifications": "Kullanım Bildirimlerini Özelleştir",
   "medicationNotification": "Alım bildirimi",
   "xCanBeCustomized": "{x} özelleştirebilirsiniz",

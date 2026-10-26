@@ -60,7 +60,7 @@
   "discard": "Dileu",
   "pillSheetDiscarded": "Mae'r stribed pils wedi'i daflu",
   "aboutMenstruation": "Am y mislif",
-  "checkPillNumberForMenstruationStart": "Gwiriwch rif y bil ar ddyddiad dechrau'r misglwyf. Mae rhif pil wedi'i osod nad yw'n bodoli yn y math dalen biliau sydd wedi'i ddewis ar hyn o bryd.",
+  "checkPillNumberForMenstruationStart": "Gwiriwch rif y bilsen ar gyfer diwrnod dechrau eich mislif. Nid yw'r rhif y bilsen a osodwyd ar y math o stribed pils sydd wedi'i ddewis",
   "customizeMedicationNotifications": "Adasu Hysbysiadau Cymryd",
   "medicationNotification": "Hysbysiad Cymryd",
   "xCanBeCustomized": "Gallwch gustomeiddo {x}",

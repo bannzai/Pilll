@@ -60,7 +60,7 @@
   "discard": "Odbacite",
   "pillSheetDiscarded": "blister je bačen",
   "aboutMenstruation": "O menstruaciji",
-  "checkPillNumberForMenstruationStart": "Molimo provjerite broj pilule za početak menstruacije. Postavljen je broj pilule koji ne postoji u trenutno odabranom tipu tablete pilula.",
+  "checkPillNumberForMenstruationStart": "Molimo, provjerite broj pilule za dan početka menstruacije. Postavljeni broj pilule ne postoji na odabranoj vrsti blistera",
   "customizeMedicationNotifications": "Prilagođavanje notifikacija za uzimanje",
   "medicationNotification": "Obavještenja o uzimanju",
   "xCanBeCustomized": "Možete prilagoditi {x}",

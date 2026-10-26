@@ -60,7 +60,7 @@
   "discard": "Discard",
   "pillSheetDiscarded": "Pill pack discarded",
   "aboutMenstruation": "About your period",
-  "checkPillNumberForMenstruationStart": "Please check the pill number for your menstruation start date. The set pill number does not exist in the currently selected pill sheet type.",
+  "checkPillNumberForMenstruationStart": "Please check the pill number for the first day of your period. The set pill number isn't in the selected pill pack type",
   "customizeMedicationNotifications": "Customize Pill Reminders",
   "medicationNotification": "Medication Notifications",
   "xCanBeCustomized": "You can customize {x}",

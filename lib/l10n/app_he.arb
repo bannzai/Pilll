@@ -60,7 +60,7 @@
   "discard": "למחוק",
   "pillSheetDiscarded": "חפיסת הגלולות הושלכה",
   "aboutMenstruation": "על המחזור",
-  "checkPillNumberForMenstruationStart": "אנא בדקו את מספר הגלולה של תחילת הווסת. מספר הגלולה הנוכחי שנקבע אינו קיים בסוג דף הגלולות שנבחר כעת",
+  "checkPillNumberForMenstruationStart": "כדאי לבדוק את מספר גלולה ליום תחילת המחזור. מספר גלולה שהוגדר אינו קיים בסוג חפיסת הגלולות שנבחר",
   "customizeMedicationNotifications": "התאמת התראות הגלולה",
   "medicationNotification": "התראת נטילה",
   "xCanBeCustomized": "ניתן להתאים אישית את {x}",

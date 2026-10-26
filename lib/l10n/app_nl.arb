@@ -60,7 +60,7 @@
   "discard": "Verwijderen",
   "pillSheetDiscarded": "De pillenstrip is weggegooid",
   "aboutMenstruation": "Over menstruatie",
-  "checkPillNumberForMenstruationStart": "Controleer het pilnummer voor de menstruatiestartdatum. Het ingestelde pilnummer bestaat niet in het huidige pilblistertype.",
+  "checkPillNumberForMenstruationStart": "Controleer het pilnummer voor de eerste dag van je menstruatie. Het ingestelde pilnummer staat niet op het gekozen type pillenstrip",
   "customizeMedicationNotifications": "Innamenotificaties aanpassen",
   "medicationNotification": "Innamemelding",
   "xCanBeCustomized": "Je kunt {x} aanpassen",

@@ -60,7 +60,7 @@
   "discard": "हटवा",
   "pillSheetDiscarded": "पिल शीट टाकून दिली आहे",
   "aboutMenstruation": "मासिक पाळीबद्दल",
-  "checkPillNumberForMenstruationStart": "कृपया मासिक पाळीच्या सुरुवातीच्या दिवसाचा गोळी क्रमांक तपासा. सध्या निवडलेल्या गोळी शीट प्रकारात अस्तित्वात नसलेला गोळी क्रमांक सेट केलेला आहे",
+  "checkPillNumberForMenstruationStart": "कृपया मासिक पाळी सुरू होण्याच्या दिवसासाठीचा गोळी क्रमांक तपासा. सेट केलेला गोळी क्रमांक निवडलेल्या पिल शीट प्रकारात नाही",
   "customizeMedicationNotifications": "सेवन सूचना कस्टमाइझेशन",
   "medicationNotification": "सेवन सूचना",
   "xCanBeCustomized": "{x} कस्टमाइझ करता येते",

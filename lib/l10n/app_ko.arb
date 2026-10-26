@@ -60,7 +60,7 @@
   "discard": "삭제해요",
   "pillSheetDiscarded": "알약 시트를 버렸어요",
   "aboutMenstruation": "생리에 대해",
-  "checkPillNumberForMenstruationStart": "생리 시작일의 알약 번호를 확인해 주세요. 현재 선택한 알약 시트 유형에는 존재하지 않는 알약 번호가 설정되어 있습니다",
+  "checkPillNumberForMenstruationStart": "생리 시작일의 알약 번호를 확인해 주세요. 설정된 알약 번호가 현재 선택한 알약 시트 종류에 없어요",
   "customizeMedicationNotifications": "복용 알림 맞춤 설정",
   "medicationNotification": "복용 알림",
   "xCanBeCustomized": "{x}를 맞춤 설정할 수 있습니다",

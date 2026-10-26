@@ -60,7 +60,7 @@
   "discard": "Descartar",
   "pillSheetDiscarded": "A cartela foi descartada",
   "aboutMenstruation": "Sobre a menstruação",
-  "checkPillNumberForMenstruationStart": "Por favor, verifique o número da pílula da data de início da menstruação. O número da pílula configurado não existe no tipo de cartela de pílulas atualmente selecionado.",
+  "checkPillNumberForMenstruationStart": "Confira o número da pílula para o primeiro dia da menstruação. O número da pílula definido não existe no tipo de cartela selecionado",
   "customizeMedicationNotifications": "Personalização de notificações de tomada",
   "medicationNotification": "Notificação de tomada",
   "xCanBeCustomized": "Você pode personalizar {x}",

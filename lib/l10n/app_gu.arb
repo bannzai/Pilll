@@ -60,7 +60,7 @@
   "discard": "કાઢી નાખો",
   "pillSheetDiscarded": "ગોળીની સ્ટ્રિપ ફેંકી દેવામાં આવી છે",
   "aboutMenstruation": "માસિક વિશે",
-  "checkPillNumberForMenstruationStart": "કૃપા કરીને માસિક શરૂઆતની તારીખના પિલ નંબરની પુષ્ટિ કરો. હાલમાં પસંદ કરેલ પિલ શીટ પ્રકારમાં જે પિલ નંબર સેટ કરવામાં આવ્યો છે તે અસ્તિત્વમાં નથી",
+  "checkPillNumberForMenstruationStart": "કૃપા કરીને માસિક શરૂ થવાના દિવસનો ગોળી નંબર તપાસો. સેટ કરેલો ગોળી નંબર હાલમાં પસંદ કરેલી ગોળીની સ્ટ્રિપના પ્રકારમાં નથી",
   "customizeMedicationNotifications": "ગોળી લેવાની સૂચનાની વ્યવસ્થા",
   "medicationNotification": "સેવન સૂચના",
   "xCanBeCustomized": "તમે {x}ને કસ્ટમાઇઝ કરી શકો છો",

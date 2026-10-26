@@ -60,7 +60,7 @@
   "discard": "Baztertu",
   "pillSheetDiscarded": "Pilula-blister bota da",
   "aboutMenstruation": "Hilekoari buruz",
-  "checkPillNumberForMenstruationStart": "Mesedez, berrikusi hileko hasierako eguneko pilularen zenbakia. Hautatutako pilula-orrialdearen motan existitzen ez den pilula zenbaki bat ezarrita dago",
+  "checkPillNumberForMenstruationStart": "Mesedez, egiaztatu hilekoa hasten den eguneko pilula-zenbakia. Ezarritako pilula-zenbakia ez dago hautatutako pilula-blister motan",
   "customizeMedicationNotifications": "Hartu jakinarazpenen pertsonalizazioa",
   "medicationNotification": "Hartzeko jakinarazpena",
   "xCanBeCustomized": "{x} pertsonalizatu dezakezu",
