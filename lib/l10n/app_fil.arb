@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Huling araw ng nakaraang pakete ng pill: ika-{beforePillSheetGroupSequentialEstimatedEndPillNumber} araw",
   "endOfPillDays": "Katapusan ng mga araw ng pag-inom ng pildoras",
   "changedToNumber": "Palitan sa numerong ito",
-  "displayMode": "Mode ng Display",
+  "displayMode": "Paraan ng pagpapakita",
   "dateDisplay": "Pagpapakita ng Petsa",
   "pillNumber": "Numero ng Pill",
   "pillDaysCycle": "Mga Araw ng Pag-inom",

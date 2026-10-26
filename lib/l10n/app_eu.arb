@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Aurreko pilula-sortaren azken eguna: {beforePillSheetGroupSequentialEstimatedEndPillNumber}. eguna",
   "endOfPillDays": "Pilulak hartzeko egunen amaiera",
   "changedToNumber": "Aldatu zenbaki honetara",
-  "displayMode": "Erakuspen modua",
+  "displayMode": "Bistaratzeko modua",
   "dateDisplay": "Data formatua",
   "pillNumber": "Pilula zenbakia",
   "pillDaysCycle": "Hartzeko egunak",

@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Siku ya mwisho ya pakiti iliyotangulia ya vidonge: siku ya {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Mwisho wa siku za kumeza vidonge",
   "changedToNumber": "Tafadhali badilisha iwe nambari hii",
-  "displayMode": "Modi ya Onyesho",
+  "displayMode": "Hali ya kuonyesha",
   "dateDisplay": "Onyesho la Tarehe",
   "pillNumber": "Nambari ya Kidongo",
   "pillDaysCycle": "Siku za dawa",

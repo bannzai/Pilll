@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Oldingi tabletkalar blisterining oxirgi kuni: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-kun",
   "endOfPillDays": "Tabletka qabul qilish kunlarining oxiri",
   "changedToNumber": "Shu raqamga oʻzgartiring",
-  "displayMode": "Ko'rsatish rejimi",
+  "displayMode": "Koʻrsatish rejimi",
   "dateDisplay": "Sana ko'rinishi",
   "pillNumber": "Tabletka raqami",
   "pillDaysCycle": "Qabul qilish kunlari",

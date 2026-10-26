@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Τελευταία ημέρα του προηγούμενου φύλλου χαπιών: ημέρα {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Τέλος των ημερών λήψης του χαπιού",
   "changedToNumber": "Αλλαγή σε αυτόν τον αριθμό",
-  "displayMode": "Τρόπος εμφάνισης",
+  "displayMode": "Λειτουργία προβολής",
   "dateDisplay": "Εμφάνιση ημερομηνίας",
   "pillNumber": "Αριθμός χαπιού",
   "pillDaysCycle": "Ημέρες λήψης",

@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "د ګولیو د مخکینۍ پاڼې وروستۍ ورځ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}مه ورځ",
   "endOfPillDays": "د ګولیو اخیستلو د ورځو پای",
   "changedToNumber": "دې شمېرې ته یې بدل کړئ",
-  "displayMode": "د ښودنې حالت",
+  "displayMode": "د ښودلو حالت",
   "dateDisplay": "نیټې ښودل",
   "pillNumber": "د ګولۍ شمېره",
   "pillDaysCycle": "د درملو ورځې",

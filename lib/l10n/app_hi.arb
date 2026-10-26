@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "पिछली गोली की स्ट्रिप का आख़िरी दिन: दिन {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "गोली लेने के दिनों का अंत",
   "changedToNumber": "इस नंबर पर बदलें",
-  "displayMode": "प्रदर्शन मोड",
+  "displayMode": "डिस्प्ले मोड",
   "dateDisplay": "दिनांक प्रदर्शन",
   "pillNumber": "पिल नंबर",
   "pillDaysCycle": "सेवन दिवस",

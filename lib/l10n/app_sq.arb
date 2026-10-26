@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Dita e fundit e paketës së mëparshme të pilulave: dita {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fundi i ditëve të marrjes së pilulës",
   "changedToNumber": "Ndryshojeni në këtë numër",
-  "displayMode": "Regjimi i shfaqjes",
+  "displayMode": "Mënyra e shfaqjes",
   "dateDisplay": "Shfaqja e datës",
   "pillNumber": "Numri i pilulës",
   "pillDaysCycle": "Ditët e marrjes",

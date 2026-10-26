@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Hari terakhir pada strip pil sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Akhir hari minum pil",
   "changedToNumber": "Ubah ke nomor ini",
-  "displayMode": "Mode Tampilan",
+  "displayMode": "Mode tampilan",
   "dateDisplay": "Tampilan Tanggal",
   "pillNumber": "Nomor Pil",
   "pillDaysCycle": "Hari Konsumsi",

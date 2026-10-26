@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Last day of the previous pill sheet: day {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "End of pill-taking days",
   "changedToNumber": "Change to this number",
-  "displayMode": "Display Mode",
+  "displayMode": "Display mode",
   "dateDisplay": "Date Display",
   "pillNumber": "Pill Number",
   "pillDaysCycle": "Active days",

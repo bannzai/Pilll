@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "ਪਿਛਲੀ ਗੋਲੀਆਂ ਦੀ ਪੱਟੀ ਦਾ ਆਖਰੀ ਦਿਨ: {beforePillSheetGroupSequentialEstimatedEndPillNumber}ਵਾਂ ਦਿਨ",
   "endOfPillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦਾ ਅੰਤ",
   "changedToNumber": "ਇਸ ਨੰਬਰ ’ਤੇ ਬਦਲੋ",
-  "displayMode": "ਦਿਖਾਉਣ ਮੋਡ",
+  "displayMode": "ਡਿਸਪਲੇ ਮੋਡ",
   "dateDisplay": "ਮਿਤੀ ਡਿਸਪਲੇ",
   "pillNumber": "گولی نمبر",
   "pillDaysCycle": "ਸੇਵਨ ਦਿਨ",

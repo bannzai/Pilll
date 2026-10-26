@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "ယခင်ဆေးကတ်၏ နောက်ဆုံးနေ့: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ရက်မြောက်နေ့",
   "endOfPillDays": "ဆေးလုံးသောက်ရမည့်ရက်များ၏ နောက်ဆုံးနေ့",
   "changedToNumber": "ဤနံပါတ်သို့ ပြောင်းပါ",
-  "displayMode": "ပြသမှုပုံစံ",
+  "displayMode": "ပြသမှုမုဒ်",
   "dateDisplay": "ရက်စွဲပြပုံ",
   "pillNumber": "ပီလ်နံပါတ်",
   "pillDaysCycle": "သောက်ရက်ရေ",

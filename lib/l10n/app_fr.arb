@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "Dernier jour de la plaquette de pilules précédente : jour {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "Fin des jours de prise de la pilule",
   "changedToNumber": "Passer à ce numéro",
-  "displayMode": "Mode d'affichage",
+  "displayMode": "Mode d’affichage",
   "dateDisplay": "Affichage des dates",
   "pillNumber": "Numéro de pilule",
   "pillDaysCycle": "Journées actives",

@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "የቀደመው የክኒን ሉህ የመጨረሻ ቀን፦ ቀን {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ክኒን የመውሰድ ቀናት መጨረሻ",
   "changedToNumber": "ወደዚህ ቁጥር ይቀይሩ",
-  "displayMode": "የማሳያ ዘዴ",
+  "displayMode": "የማሳያ ሁነታ",
   "dateDisplay": "ቀን ማሳያ",
   "pillNumber": "ክኒን ቁጥር",
   "pillDaysCycle": "መውሰጃ ቀናት",

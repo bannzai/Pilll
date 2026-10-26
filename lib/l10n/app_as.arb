@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "আগৰ পিলৰ পাতৰ শেষ দিন: {beforePillSheetGroupSequentialEstimatedEndPillNumber} নম্বৰ দিন",
   "endOfPillDays": "পিল খোৱাৰ দিনবোৰৰ শেষ",
   "changedToNumber": "এই নম্বৰলৈ সলনি কৰক",
-  "displayMode": "প্ৰদৰ্শন মোড",
+  "displayMode": "প্ৰদৰ্শন ধৰণ",
   "dateDisplay": "তাৰিখ প্ৰদৰ্শন",
   "pillNumber": "পিল নম্বৰ",
   "pillDaysCycle": "সেৱনৰ দিন",

@@ -133,7 +133,7 @@
   "beforePillSheetGroupSequentialEstimatedEndDay": "ມື້ສຸດທ້າຍຂອງແຜງຢາເມັດກ່ອນ: ມື້ທີ {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "endOfPillDays": "ມື້ສຸດທ້າຍຂອງການກິນຢາເມັດ",
   "changedToNumber": "ປ່ຽນເປັນເລກນີ້",
-  "displayMode": "ໂໝດການສະແດງ",
+  "displayMode": "ໂໝດການສະແດງຜົນ",
   "dateDisplay": "ການສະແດງວັນທີ",
   "pillNumber": "ເລກຢາເມັດ",
   "pillDaysCycle": "ຈຳນວນມື້ກິນຢາ",
