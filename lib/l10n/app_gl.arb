@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Día {day} da pausa da pílula",
   "withDay": "Día {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · día {restDurationDays}",
-  "daysUntilPausePeriod": "Quedan {diffPlusOne} días para o período de {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "O período de {activePillSheetPillSheetTypeNotTakenWord} comeza dentro de {diffPlusOne} días",
   "remainingDaysAllFeatures": "Quedan {diff} días para usar todas as funcións",
   "todayIsTaking": "💊 Tomar hoxe",
   "todayPillToTake": "💊 Píldora de hoxe",

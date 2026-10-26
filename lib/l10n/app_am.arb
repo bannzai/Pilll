@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ክኒን ከመውሰድ የእረፍት ቀን {day}",
   "withDay": "ቀን {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ቀን {restDurationDays}",
-  "daysUntilPausePeriod": "{diffPlusOne} ቀን ቀርቶ {activePillSheetPillSheetTypeNotTakenWord} ጊዜ ነው",
+  "daysUntilPausePeriod": "የ{activePillSheetPillSheetTypeNotTakenWord} ጊዜ በ{diffPlusOne} ቀናት ይጀምራል",
   "remainingDaysAllFeatures": "ለቀሪዎቹ {diff} ቀናት ሁሉንም ተግባራት መጠቀም ይችላሉ",
   "todayIsTaking": "💊 ዛሬ መውሰድ",
   "todayPillToTake": "💊 የዛሬ ክኒን",

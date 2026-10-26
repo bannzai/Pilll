@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 गोली लेने से विराम का {day}वाँ दिन",
   "withDay": "दिन {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · दिन {restDurationDays}",
-  "daysUntilPausePeriod": "{diffPlusOne} दिन बाद {activePillSheetPillSheetTypeNotTakenWord} की अवधि है",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} की अवधि शुरू होने में {diffPlusOne} दिन बाकी हैं",
   "remainingDaysAllFeatures": "आप बाकी {diff} दिन तक सभी सुविधाओं का उपयोग कर सकते हैं",
   "todayIsTaking": "💊 आज सेवन करें",
   "todayPillToTake": "💊 आज की गोली",

@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 {day}. dzień przerwy w przyjmowaniu tabletek",
   "withDay": "Dzień {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dzień {restDurationDays}",
-  "daysUntilPausePeriod": "Za {diffPlusOne} dni będzie okres {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Okres {activePillSheetPillSheetTypeNotTakenWord} zacznie się za {diffPlusOne} dni",
   "remainingDaysAllFeatures": "Pozostało {diff} dni dostępu do wszystkich funkcji",
   "todayIsTaking": "💊 Przyjmij dzisiaj",
   "todayPillToTake": "💊 Pigułka na dziś",

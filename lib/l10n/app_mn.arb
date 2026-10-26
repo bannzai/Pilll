@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Эм уух завсарлагын {day} дэх өдөр",
   "withDay": "{word} дэх өдөр",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} дахь өдөр",
-  "daysUntilPausePeriod": "Дахиад {diffPlusOne} хоногийн дараа {activePillSheetPillSheetTypeNotTakenWord} хугацаа болно",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} үе {diffPlusOne} хоногийн дараа эхэлнэ",
   "remainingDaysAllFeatures": "{diff} хоногийн турш бүх функцийг ашиглах боломжтой",
   "todayIsTaking": "💊 Өнөөдөр уух",
   "todayPillToTake": "💊 Өнөөдөр уух пилль",

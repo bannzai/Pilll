@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 மாத்திரை உட்கொள்வதில் இடைவேளையின் {day}ஆம் நாள்",
   "withDay": "{word}ஆம் நாள்",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ஆம் நாள்",
-  "daysUntilPausePeriod": "இன்னும் {diffPlusOne} நாட்களில் {activePillSheetPillSheetTypeNotTakenWord} காலம் ஆரம்பமாகும்",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} காலம் தொடங்க இன்னும் {diffPlusOne} நாட்கள் உள்ளன",
   "remainingDaysAllFeatures": "இன்னும் {diff} நாட்களுக்கு அனைத்து அம்சங்களும் பயன்படுத்தலாம்",
   "todayIsTaking": "💊 இன்று எடுக்க வேண்டும்",
   "todayPillToTake": "💊 இன்றைய மாத்திரை",

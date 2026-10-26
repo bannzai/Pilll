@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Diwrnod {day} o'r saib rhag cymryd y bilsen",
   "withDay": "Diwrnod {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · diwrnod {restDurationDays}",
-  "daysUntilPausePeriod": "Mewn {diffPlusOne} diwrnod bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord} yn dechrau ymhen {diffPlusOne} diwrnod",
   "remainingDaysAllFeatures": "Gallwch ddefnyddio pob swyddogaeth am {diff} diwrnod eto",
   "todayIsTaking": "💊 Cymryd heddiw",
   "todayPillToTake": "💊 Pilen heddiw",

@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Ημέρα {day} της διακοπής λήψης του χαπιού",
   "withDay": "Ημέρα {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ημέρα {restDurationDays}",
-  "daysUntilPausePeriod": "Υπολείπονται {diffPlusOne} ημέρες για την περίοδο {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Η περίοδος {activePillSheetPillSheetTypeNotTakenWord} ξεκινά σε {diffPlusOne} ημέρες",
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις λειτουργίες για άλλες {diff} ημέρες",
   "todayIsTaking": "💊 Λήψη σήμερα",
   "todayPillToTake": "💊 Σημερινό χάπι",

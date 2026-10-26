@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Dag {day} van de stopweek",
   "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
-  "daysUntilPausePeriod": "Nog {diffPlusOne} dagen tot {activePillSheetPillSheetTypeNotTakenWord}periode",
+  "daysUntilPausePeriod": "De periode met {activePillSheetPillSheetTypeNotTakenWord} begint over {diffPlusOne} dagen",
   "remainingDaysAllFeatures": "Je hebt nog {diff} dagen toegang tot alle functies",
   "todayIsTaking": "💊 Vandaag innemen",
   "todayPillToTake": "💊 Pil voor vandaag",

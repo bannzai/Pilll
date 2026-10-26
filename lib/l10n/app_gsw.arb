@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Tag {day} vo de Pillepause",
   "withDay": "Tag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · Tag {restDurationDays}",
-  "daysUntilPausePeriod": "No {diffPlusOne} Täg isch d {activePillSheetPillSheetTypeNotTakenWord}-Zyt",
+  "daysUntilPausePeriod": "D Ziit mit {activePillSheetPillSheetTypeNotTakenWord} fangt i {diffPlusOne} Täg aa",
   "remainingDaysAllFeatures": "Sie chönd no {diff} Täg alli Funktione nutze",
   "todayIsTaking": "💊 Hüt isch Iinahme",
   "todayPillToTake": "💊 Hütigi Pille",

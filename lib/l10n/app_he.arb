@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 יום {day} בהפסקה מנטילת הגלולה",
   "withDay": "יום {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · יום {restDurationDays}",
-  "daysUntilPausePeriod": "עוד {diffPlusOne} ימים עד תקופת {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "תקופת {activePillSheetPillSheetTypeNotTakenWord} תתחיל בעוד {diffPlusOne} ימים",
   "remainingDaysAllFeatures": "נותרו לך {diff} ימים לשימוש בכל התכונות",
   "todayIsTaking": "💊 נטילה היום",
   "todayPillToTake": "💊 הגלולה להיום",

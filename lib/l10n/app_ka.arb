@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 აბების მიღების შესვენების {day}-ე დღე",
   "withDay": "დღე {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-ე დღე",
-  "daysUntilPausePeriod": "კიდევ {diffPlusOne} დღეში იწყება {activePillSheetPillSheetTypeNotTakenWord} პერიოდი",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} პერიოდი {diffPlusOne} დღეში დაიწყება",
   "remainingDaysAllFeatures": "კიდევ {diff} დღე ყველა ფუნქცია ხელმისაწვდომია",
   "todayIsTaking": "💊 დღეს მიღება",
   "todayPillToTake": "💊 დღეს მისაღები ჰაპი",

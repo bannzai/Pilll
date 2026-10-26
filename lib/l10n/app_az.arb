@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Həb qəbuluna fasilənin {day}-ci günü",
   "withDay": "Gün {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-ci gün",
-  "daysUntilPausePeriod": "Daha {diffPlusOne} gün sonra {activePillSheetPillSheetTypeNotTakenWord} dövrü başlayır",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} dövrünün başlamasına {diffPlusOne} gün qalıb",
   "remainingDaysAllFeatures": "Qalan {diff} gün ərzində bütün funksiyalardan istifadə edə bilərsiniz",
   "todayIsTaking": "💊 Bu gün qəbul",
   "todayPillToTake": "💊 Bugün həb",

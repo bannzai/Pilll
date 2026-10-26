@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Dag {day} i pillerpausen",
   "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
-  "daysUntilPausePeriod": "Om {diffPlusOne} dagar börjar {activePillSheetPillSheetTypeNotTakenWord}perioden",
+  "daysUntilPausePeriod": "Perioden med {activePillSheetPillSheetTypeNotTakenWord} börjar om {diffPlusOne} dagar",
   "remainingDaysAllFeatures": "Du har tillgång till alla funktioner i {diff} dagar till",
   "todayIsTaking": "💊 Ta medicin idag",
   "todayPillToTake": "💊 Dagens piller",

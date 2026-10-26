@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 පෙති ගැනීමේ විරාමයේ {day} වන දිනය",
   "withDay": "{word} වන දිනය",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} වන දිනය",
-  "daysUntilPausePeriod": "තවත් {diffPlusOne} දිනකින් {activePillSheetPillSheetTypeNotTakenWord} කාලය පටන් ගනී",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} කාලය ආරම්භ වීමට තවත් දින {diffPlusOne}ක් තිබෙනවා",
   "remainingDaysAllFeatures": "ඉතිරි දින {diff} ක් සියලු විශේෂාංග භාවිතා කළ හැකිය",
   "todayIsTaking": "💊 අද ගැනීම",
   "todayPillToTake": "💊 අද ගන්න පිල්",

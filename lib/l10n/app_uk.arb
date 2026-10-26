@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 {day}-й день перерви у прийомі пігулок",
   "withDay": "День {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · день {restDurationDays}",
-  "daysUntilPausePeriod": "Через {diffPlusOne} днів розпочнеться період {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Період {activePillSheetPillSheetTypeNotTakenWord} почнеться через {diffPlusOne} днів",
   "remainingDaysAllFeatures": "Залишилось {diff} днів для використання всіх функцій",
   "todayIsTaking": "💊 Прийом сьогодні",
   "todayPillToTake": "💊 Пілюлі на сьогодні",

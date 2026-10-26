@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 گولی لینے کے وقفے کا {day}واں دن",
   "withDay": "دن {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · دن {restDurationDays}",
-  "daysUntilPausePeriod": "{diffPlusOne} دن بعد {activePillSheetPillSheetTypeNotTakenWord} کی مدت ہے",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} کی مدت {diffPlusOne} دن بعد شروع ہوگی",
   "remainingDaysAllFeatures": "باقی {diff} دن تک تمام فیچرز دستیاب ہیں",
   "todayIsTaking": "💊 آج استعمال",
   "todayPillToTake": "💊 آج کی گولی",

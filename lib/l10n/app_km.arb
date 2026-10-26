@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ថ្ងៃទី {day} នៃការផ្អាកលេបថ្នាំគ្រាប់",
   "withDay": "ថ្ងៃទី {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ថ្ងៃទី{restDurationDays}",
-  "daysUntilPausePeriod": "នៅសល់ {diffPlusOne} ថ្ងៃទៀត នឹងដល់រយៈពេល {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "រយៈពេល{activePillSheetPillSheetTypeNotTakenWord}នឹងចាប់ផ្តើមក្នុងរយៈពេល {diffPlusOne} ថ្ងៃទៀត",
   "remainingDaysAllFeatures": "នៅសល់ {diff} ថ្ងៃទៀត អ្នកអាចប្រើមុខងារទាំងអស់បាន",
   "todayIsTaking": "💊 ថ្ងៃនេះទទួលទាន",
   "todayPillToTake": "💊 ថ្នាំថ្ងៃនេះ",

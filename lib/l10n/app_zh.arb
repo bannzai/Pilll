@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 停药期第 {day} 天",
   "withDay": "第{word}天",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · 第{restDurationDays}天",
-  "daysUntilPausePeriod": "还有{diffPlusOne}天就是{activePillSheetPillSheetTypeNotTakenWord}期间了",
+  "daysUntilPausePeriod": "还有 {diffPlusOne} 天就进入{activePillSheetPillSheetTypeNotTakenWord}期了",
   "remainingDaysAllFeatures": "还剩{diff}天可以使用所有功能",
   "todayIsTaking": "💊 今天服药",
   "todayPillToTake": "💊 今天要服用的避孕药",

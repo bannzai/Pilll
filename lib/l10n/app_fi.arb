@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Pilleritauon päivä {day}",
   "withDay": "Päivä {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. päivä",
-  "daysUntilPausePeriod": "Vielä {diffPlusOne} päivää {activePillSheetPillSheetTypeNotTakenWord}jaksoon",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}jakso alkaa {diffPlusOne} päivän kuluttua",
   "remainingDaysAllFeatures": "Voit käyttää kaikkia ominaisuuksia vielä {diff} päivää",
   "todayIsTaking": "💊 Tänään otetaan",
   "todayPillToTake": "💊 Tänään otettava pilleri",

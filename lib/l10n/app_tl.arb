@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Ika-{day} araw ng pahinga sa pag-inom ng pildoras",
   "withDay": "Araw {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ika-{restDurationDays} araw",
-  "daysUntilPausePeriod": "Mga {diffPlusOne} araw na lang bago ang {activePillSheetPillSheetTypeNotTakenWord} na panahon",
+  "daysUntilPausePeriod": "Magsisimula ang panahon ng {activePillSheetPillSheetTypeNotTakenWord} sa loob ng {diffPlusOne} araw",
   "remainingDaysAllFeatures": "Pwedeng gamitin mo pa ang lahat ng features sa loob ng {diff} araw",
   "todayIsTaking": "💊 Inom ngayon",
   "todayPillToTake": "💊 Mga pildoras ngayong araw",

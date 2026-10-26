@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Dagur {day} í pilluhléi",
   "withDay": "Dagur {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dagur {restDurationDays}",
-  "daysUntilPausePeriod": "Eftir {diffPlusOne} daga byrjar {activePillSheetPillSheetTypeNotTakenWord} tímabilið",
+  "daysUntilPausePeriod": "Tímabilið með {activePillSheetPillSheetTypeNotTakenWord} hefst eftir {diffPlusOne} daga",
   "remainingDaysAllFeatures": "Þú getur notað alla eiginleika í {diff} daga eftir",
   "todayIsTaking": "💊 Taka í dag",
   "todayPillToTake": "💊 Pilla dagsins",

@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Pilula hartzeko etenaldiaren {day}. eguna",
   "withDay": "{word}. eguna",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. eguna",
-  "daysUntilPausePeriod": "{diffPlusOne} egun barru {activePillSheetPillSheetTypeNotTakenWord} aldia hasiko da",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} aldia {diffPlusOne} egun barru hasiko da",
   "remainingDaysAllFeatures": "Oraindik {diff} egun funtzio guztiak erabilgarri dituzu",
   "todayIsTaking": "💊 Gaur hartzeko",
   "todayPillToTake": "💊 Gaurko pilula",

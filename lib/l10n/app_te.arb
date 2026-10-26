@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 మాత్రలు తీసుకోవడంలో విరామం {day}వ రోజు",
   "withDay": "{word}వ రోజు",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}వ రోజు",
-  "daysUntilPausePeriod": "ఇంకా {diffPlusOne} రోజుల్లో {activePillSheetPillSheetTypeNotTakenWord} కాలం",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} కాలం ప్రారంభం కావడానికి ఇంకా {diffPlusOne} రోజులు ఉన్నాయి",
   "remainingDaysAllFeatures": "మిగిలిన {diff} రోజులు అన్ని ఫీచర్లను ఉపయోగించవచ్చు",
   "todayIsTaking": "💊 ఈ రోజు సేవన",
   "todayPillToTake": "💊 నేడు తీసుకోవాల్సిన పిల్",

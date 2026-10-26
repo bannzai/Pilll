@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Siku ya {day} ya mapumziko ya kumeza vidonge",
   "withDay": "Siku ya {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · siku ya {restDurationDays}",
-  "daysUntilPausePeriod": "Baada ya siku {diffPlusOne} itakuwa kipindi cha {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Kipindi cha {activePillSheetPillSheetTypeNotTakenWord} kitaanza baada ya siku {diffPlusOne}",
   "remainingDaysAllFeatures": "Utaweza kutumia huduma zote kwa siku {diff} zilizobaki",
   "todayIsTaking": "💊 Leo kunywa dawa",
   "todayPillToTake": "💊 Vidonge vya leo",

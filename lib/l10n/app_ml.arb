@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ {day}ാം ദിവസം",
   "withDay": "{word}-ാം ദിവസം",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ാം ദിവസം",
-  "daysUntilPausePeriod": "{diffPlusOne} ദിവസം കൂടി കഴിഞ്ഞാൽ {activePillSheetPillSheetTypeNotTakenWord} കാലയളവ് ആയിരിക്കും",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} കാലയളവ് തുടങ്ങാൻ ഇനി {diffPlusOne} ദിവസം",
   "remainingDaysAllFeatures": "ബാക്കി {diff} ദിവസത്തേക്ക് എല്ലാ സവിശേഷതകളും ഉപയോഗിക്കാം",
   "todayIsTaking": "💊 ഇന്ന് കഴിക്കുക",
   "todayPillToTake": "💊 ഇന്നത്തെ ഗുളിക",

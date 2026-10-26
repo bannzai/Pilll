@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 د ګولیو د اخیستو د وقفې {day}مه ورځ",
   "withDay": "ورځ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}مه ورځ",
-  "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} دورې ته نور {diffPlusOne} ورځې پاتې دي",
+  "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} موده به په {diffPlusOne} ورځو کې پیل شي",
   "remainingDaysAllFeatures": "د {diff} ورځو لپاره ټولې فعالیتونه کارولای شئ",
   "todayIsTaking": "💊 نن د ګولۍ ورځ",
   "todayPillToTake": "💊 د نن ورځې ګولۍ",

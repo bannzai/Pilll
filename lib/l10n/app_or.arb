@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ବଟିକା ଖାଇବାରୁ ବିରତିର {day}ତମ ଦିନ",
   "withDay": "ଦିନ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ତମ ଦିନ",
-  "daysUntilPausePeriod": "ଆଉ {diffPlusOne} ଦିନରେ {activePillSheetPillSheetTypeNotTakenWord} ସମୟ",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ଅବଧି ଆରମ୍ଭ ହେବାକୁ ଆଉ {diffPlusOne} ଦିନ ବାକି ଅଛି",
   "remainingDaysAllFeatures": "ବାକି {diff} ଦିନ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ବ୍ୟବହାର କରିପାରିବେ",
   "todayIsTaking": "💊 ଆଜି ସେବନ",
   "todayPillToTake": "💊 ଆଜିର ପିଲ୍‌",

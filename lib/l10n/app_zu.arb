@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Usuku {day} lwekhefu lokuphuza amaphilisi",
   "withDay": "Usuku {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · usuku {restDurationDays}",
-  "daysUntilPausePeriod": "Kusele izinsuku ezi-{diffPlusOne} kuze kufike isikhathi se-{activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Isikhathi se-{activePillSheetPillSheetTypeNotTakenWord} sizoqala ezinsukwini ezingu-{diffPlusOne}",
   "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinsukwini ezisele ezi-{diff}",
   "todayIsTaking": "💊 Thatha namuhla",
   "todayPillToTake": "💊 Amaphilisi zanamuhla",

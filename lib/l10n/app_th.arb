@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 วันที่ {day} ของช่วงพักทานยา",
   "withDay": "วันที่ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · วันที่ {restDurationDays}",
-  "daysUntilPausePeriod": "อีก {diffPlusOne} วัน จะถึงช่วง {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "อีก {diffPlusOne} วันจะเริ่มช่วง{activePillSheetPillSheetTypeNotTakenWord}ค่ะ",
   "remainingDaysAllFeatures": "สามารถใช้ฟีเจอร์ทั้งหมดได้อีก{diff}วัน",
   "todayIsTaking": "💊 วันนี้กินยา",
   "todayPillToTake": "💊 ยาคุมวันนี้",

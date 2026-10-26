@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Dia {day} de la pausa de la píndola",
   "withDay": "Dia {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dia {restDurationDays}",
-  "daysUntilPausePeriod": "Falten {diffPlusOne} dies per al període de {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "El període de {activePillSheetPillSheetTypeNotTakenWord} començarà d’aquí a {diffPlusOne} dies",
   "remainingDaysAllFeatures": "Pots utilitzar totes les funcions durant {diff} dies més",
   "todayIsTaking": "💊 Avui toca píndola",
   "todayPillToTake": "💊 Píndola d'avui",

@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ગોળી લેવાના વિરામનો {day}મો દિવસ",
   "withDay": "દિવસ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}મો દિવસ",
-  "daysUntilPausePeriod": "હવે {diffPlusOne} દિવસમાં {activePillSheetPillSheetTypeNotTakenWord} સમયગાળો છે",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}નો સમયગાળો શરૂ થવામાં {diffPlusOne} દિવસ બાકી છે",
   "remainingDaysAllFeatures": "બાકી {diff} દિવસ માટે બધી સુવિધાઓ ઉપલબ્ધ છે",
   "todayIsTaking": "💊 આજે સેવન",
   "todayPillToTake": "💊 આજની ગોળી",

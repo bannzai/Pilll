@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 Հաբերի ընդունման ընդմիջման {day}-րդ օրը",
   "withDay": "Օր {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · օր {restDurationDays}",
-  "daysUntilPausePeriod": "ԵՒս {diffPlusOne} օր մնացել է {activePillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} շրջանը կսկսվի {diffPlusOne} օրից",
   "remainingDaysAllFeatures": "Մնացած {diff} օր բոլոր գործառույթները օգտագործելի են",
   "todayIsTaking": "💊 Այսօր ընդունում",
   "todayPillToTake": "💊 Այսօրվա հաբ",

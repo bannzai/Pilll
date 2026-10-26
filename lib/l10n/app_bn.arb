@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 পিল খাওয়ার বিরতির {day}তম দিন",
   "withDay": "দিন {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}তম দিন",
-  "daysUntilPausePeriod": "আরও {diffPlusOne} দিনে {activePillSheetPillSheetTypeNotTakenWord} সময়কাল",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} পর্ব শুরু হতে আর {diffPlusOne} দিন বাকি",
   "remainingDaysAllFeatures": "অবশিষ্ট {diff} দিন সমস্ত বৈশিষ্ট্য ব্যবহার করতে পারবেন",
   "todayIsTaking": "💊 আজ সেবন",
   "todayPillToTake": "💊 আজের পিল",

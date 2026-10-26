@@ -146,7 +146,7 @@
   "pauseTakingDay": "🌙 ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ {day}ನೇ ದಿನ",
   "withDay": "{word}ನೇ ದಿನ",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ನೇ ದಿನ",
-  "daysUntilPausePeriod": "ಇನ್ನೂ {diffPlusOne} ದಿನಗಳಲ್ಲಿ {activePillSheetPillSheetTypeNotTakenWord} ಅವಧಿ ಆಗುತ್ತದೆ",
+  "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ಅವಧಿ ಆರಂಭವಾಗಲು ಇನ್ನೂ {diffPlusOne} ದಿನಗಳಿವೆ",
   "remainingDaysAllFeatures": "ಉಳಿದ {diff} ದಿನಗಳವರೆಗೆ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಬಹುದು",
   "todayIsTaking": "💊 ಇಂದು ಸೇವನೆ",
   "todayPillToTake": "💊 ಇವತ್ತಿನ ಮಾತ್ರೆ",
