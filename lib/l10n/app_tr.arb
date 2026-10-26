@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Lütfen uygulamayı açıp hap alma kaydınızı kontrol edin",
   "alreadyTaken": "Hap alındı",
   "startPauseTaking": "Hap kullanımına ara verin",
-  "startedPauseTaking": "Hap kullanımına ara verildi",
+  "startedPauseTaking": "Hap kullanımına ara verme dönemi başladı",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
   "startFromNumber": "numaradan başla",
   "add": "Ekle",

@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "앱을 열어 복용 기록을 확인해 주세요",
   "alreadyTaken": "복용했어요",
   "startPauseTaking": "피임약 휴약 시작하기",
-  "startedPauseTaking": "복용 휴식을 시작했습니다",
+  "startedPauseTaking": "피임약 복용 휴약 기간이 시작됐어요",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번째",
   "startFromNumber": "번부터 시작",
   "add": "추가",

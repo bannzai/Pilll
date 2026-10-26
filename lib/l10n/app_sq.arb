@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ju lutemi, hapni aplikacionin dhe kontrolloni shënimin e marrjes së pilulës",
   "alreadyTaken": "Pilula është marrë",
   "startPauseTaking": "Filloni pushimin nga marrja e pilulave",
-  "startedPauseTaking": "Filloi periudha e pushimit të pilulës",
+  "startedPauseTaking": "Ka filluar pushimi nga marrja e pilulave",
   "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Nis nga numri",
   "add": "Shto",

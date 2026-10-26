@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ತೆರೆದು ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",
   "alreadyTaken": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ",
   "startPauseTaking": "ಮಾತ್ರೆ ಸೇವನೆಯಲ್ಲಿ ವಿರಾಮ ಆರಂಭಿಸಿ",
-  "startedPauseTaking": "ಸೇವನೆ ವಿರಾಮವನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ",
+  "startedPauseTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮ ಆರಂಭವಾಗಿದೆ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ನೇ",
   "startFromNumber": "ನಂಬರ್‌ನಿಂದ ಆರಂಭ",
   "add": "ಸೇರಿಸು",

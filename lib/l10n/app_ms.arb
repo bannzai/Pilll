@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak rekod pengambilan pil",
   "alreadyTaken": "Pil sudah diambil",
   "startPauseTaking": "Mulakan rehat daripada mengambil pil",
-  "startedPauseTaking": "Rehat pengambilan pil telah dimulakan",
+  "startedPauseTaking": "Tempoh rehat daripada mengambil pil telah bermula",
   "sequentialLastTakenPlusOnePillNumber": "ke-{pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mulai dari nombor",
   "add": "Tambah",

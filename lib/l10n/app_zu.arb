@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Sicela uvule uhlelo lokusebenza uhlole irekhodi lokuphuza iphilisi",
   "alreadyTaken": "Iphilisi seliphuzwe",
   "startPauseTaking": "Sicela uqale ikhefu lokuphuza amaphilisi",
-  "startedPauseTaking": "Kuqale ukuthatha ikhefu lomuthi",
+  "startedPauseTaking": "Isikhathi sokuphumula ekuphuzeni amaphilisi sesiqalile",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}e",
   "startFromNumber": "Qala ngenombolo",
   "add": "Engeza",

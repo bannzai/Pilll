@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹੋ ਅਤੇ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਜਾਂਚੋ",
   "alreadyTaken": "ਗੋਲੀ ਲੈ ਲਈ ਗਈ ਹੈ",
   "startPauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰੋ",
-  "startedPauseTaking": "ਪਿੱਲ ਦਾ ਵਿਰਾਮ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ",
+  "startedPauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਸ਼ੁਰੂ ਹੋ ਗਿਆ ਹੈ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} ਨੰਬਰ",
   "startFromNumber": "ਨੰਬਰ ਤੋਂ ਸ਼ੁਰੂ",
   "add": "ਜੋੜੋ",

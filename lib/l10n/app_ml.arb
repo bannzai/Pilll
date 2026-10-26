@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "ദയവായി ആപ്പ് തുറന്ന് ഗുളിക കഴിച്ചതിന്റെ രേഖ പരിശോധിക്കൂ",
   "alreadyTaken": "ഗുളിക കഴിച്ചു",
   "startPauseTaking": "ഗുളിക കഴിക്കുന്നതിൽ ഇടവേള തുടങ്ങൂ",
-  "startedPauseTaking": "ഗുളിക സേവന വിശ്രമം ആരംഭിച്ചു",
+  "startedPauseTaking": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള ആരംഭിച്ചു",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ാം",
   "startFromNumber": "നമ്പർ മുതൽ ആരംഭിക്കുക",
   "add": "ചേർക്കുക",

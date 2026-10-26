@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Agorwch yr ap, os gwelwch yn dda, a gwiriwch y cofnod cymryd y bilsen",
   "alreadyTaken": "Wedi cymryd y bilsen",
   "startPauseTaking": "Dechrau seibiant o gymryd y bilsen",
-  "startedPauseTaking": "Wedi dechrau seibiant cymryd",
+  "startedPauseTaking": "Mae'r seibiant rhag cymryd y bilsen wedi dechrau",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ed",
   "startFromNumber": "Cychwyn o rif",
   "add": "Ychwanegu",

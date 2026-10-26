@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Nyisd meg az alkalmazást, és ellenőrizd a tabletta szedésének bejegyzését",
   "alreadyTaken": "Tabletta bevéve",
   "startPauseTaking": "Tablettaszedési szünet indítása",
-  "startedPauseTaking": "A szedési szünet elkezdődött",
+  "startedPauseTaking": "Elkezdődött a tablettaszedési szünet",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
   "startFromNumber": "Kezdőszám",
   "add": "Hozzáadás",

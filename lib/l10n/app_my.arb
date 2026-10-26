@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "ကျေးဇူးပြု၍ အက်ပ်ကိုဖွင့်ပြီး ဆေးလုံးသောက်ထားသည့်မှတ်တမ်းကို စစ်ဆေးပါ",
   "alreadyTaken": "ဆေးလုံး သောက်ပြီးပါပြီ",
   "startPauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမှု စတင်ပါ",
-  "startedPauseTaking": "ဆေးသောက်ခြင်း ယာယီရပ်နားရန် စတင်ပြီးပါပြီ",
+  "startedPauseTaking": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားချိန် စတင်ပါပြီ",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}နံပါတ်",
   "startFromNumber": "နံပါတ်မှစ",
   "add": "ထပ်ထည့်",

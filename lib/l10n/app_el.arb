@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε την καταγραφή λήψης του χαπιού",
   "alreadyTaken": "Το χάπι έχει ληφθεί",
   "startPauseTaking": "Ξεκινήστε διάλειμμα από το χάπι",
-  "startedPauseTaking": "Ξεκίνησε η διακοπή λήψης",
+  "startedPauseTaking": "Ξεκίνησε η παύση λήψης του χαπιού",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ο",
   "startFromNumber": "Ξεκίνημα από αριθμό",
   "add": "Προσθήκη",

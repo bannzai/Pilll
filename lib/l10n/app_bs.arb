@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Molimo Vas, otvorite aplikaciju i provjerite zapis o uzimanju pilule",
   "alreadyTaken": "Pilula je uzeta",
   "startPauseTaking": "Započnite pauzu u uzimanju pilula",
-  "startedPauseTaking": "Pauza u uzimanju je započeta",
+  "startedPauseTaking": "Pauza u uzimanju pilula je počela",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}.",
   "startFromNumber": "Počni od",
   "add": "Dodaj",

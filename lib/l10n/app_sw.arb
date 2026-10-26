@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Tafadhali fungua programu na uangalie rekodi ya kumeza kidonge",
   "alreadyTaken": "Kidonge kimemezwa",
   "startPauseTaking": "Tafadhali anza mapumziko ya kumeza vidonge",
-  "startedPauseTaking": "Mapumziko ya kutumia tembe umeanza",
+  "startedPauseTaking": "Mapumziko ya kumeza vidonge yameanza",
   "sequentialLastTakenPlusOnePillNumber": "Namba {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Anza kutoka nambari",
   "add": "Ongeza",

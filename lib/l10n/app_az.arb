@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Zəhmət olmasa, tətbiqi açıb həb qəbulunuza dair qeydi yoxlayın",
   "alreadyTaken": "Həb qəbul edilib",
   "startPauseTaking": "Həb qəbuluna fasilə verin",
-  "startedPauseTaking": "Qəbul fasiləsi başladıldı",
+  "startedPauseTaking": "Həb qəbuluna fasilə başladı",
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Nömrədən başla",
   "add": "Əlavə et",

@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Խնդրում ենք բացեք հավելվածը և ստուգեք հաբի ընդունման գրառումը",
   "alreadyTaken": "Հաբն ընդունված է",
   "startPauseTaking": "Սկսեք հաբերի ընդունման ընդմիջումը",
-  "startedPauseTaking": "Դեղահատի ընդունման ընդմիջումը սկսվեց",
+  "startedPauseTaking": "Հաբերի ընդունման ընդմիջումը սկսվել է",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} համար",
   "startFromNumber": "Սկսել համարից",
   "add": "Ավելացնել",

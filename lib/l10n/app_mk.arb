@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ве молиме, отворете ја апликацијата и проверете го записот за земање таблета",
   "alreadyTaken": "Таблета е земена",
   "startPauseTaking": "Започнете пауза во земањето таблети",
-  "startedPauseTaking": "Започнавте пауза од земање на пилули",
+  "startedPauseTaking": "Започна паузата во земањето таблета",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-та",
   "startFromNumber": "Започни од број",
   "add": "Додај",

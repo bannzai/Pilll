@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Iltimos, ilovani ochib, tabletkani qabul qilish qaydini tekshiring",
   "alreadyTaken": "Tabletka ichilgan",
   "startPauseTaking": "Tabletka qabul qilishdagi tanaffusni boshlang",
-  "startedPauseTaking": "Tabletkani qabul qilishni to'xtatish boshlandi",
+  "startedPauseTaking": "Tabletkalarni qabul qilishdagi tanaffus boshlandi",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-chi",
   "startFromNumber": "Raqamdan boshlash",
   "add": "Qo'shish",

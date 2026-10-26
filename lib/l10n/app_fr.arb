@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ouvrez l’application et vérifiez l’enregistrement de la prise de votre pilule",
   "alreadyTaken": "Pilule prise",
   "startPauseTaking": "Commencer la pause de la pilule",
-  "startedPauseTaking": "J'ai commencé à prendre une pause pilule",
+  "startedPauseTaking": "La pause dans la prise de la pilule a commencé",
   "sequentialLastTakenPlusOnePillNumber": "Pilule {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Commencer par la pilule",
   "add": "Ajouter",

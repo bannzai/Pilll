@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "Mach d App uf und lueg, ob d Iinahm vo de Pille i de Ufzeichnig staht",
   "alreadyTaken": "Pille gnoh",
   "startPauseTaking": "Pillepause aafange",
-  "startedPauseTaking": "D'Pillä-Pausä isch aagfange worde",
+  "startedPauseTaking": "D Pillenpause hät aagfange",
   "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Ab Nummere",
   "add": "Hinzufüege",

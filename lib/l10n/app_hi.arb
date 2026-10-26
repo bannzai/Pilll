@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर गोली लेने का रिकॉर्ड देखें",
   "alreadyTaken": "गोली ले ली गई है",
   "startPauseTaking": "गोली लेने से विराम शुरू करें",
-  "startedPauseTaking": "सेवन विराम शुरू किया गया",
+  "startedPauseTaking": "गोली लेने का विराम शुरू हो गया है",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} नंबर",
   "startFromNumber": "नंबर से शुरू",
   "add": "जोड़ें",

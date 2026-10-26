@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلېکېشن پرانیزئ او د ګولۍ اخیستلو ثبت وګورئ",
   "alreadyTaken": "ګولۍ اخیستل شوې ده",
   "startPauseTaking": "د ګولیو اخیستلو وقفه پیل کړئ",
-  "startedPauseTaking": "د ګولیو د اخیستلو وقفه پیل شوه",
+  "startedPauseTaking": "د ګولیو له اخیستلو وقفه پیل شوه",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}مه",
   "startFromNumber": "له شمیرې پیل",
   "add": "اضافه",

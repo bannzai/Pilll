@@ -393,7 +393,7 @@
   "quickRecordTakePillFailedMessage": "براہِ کرم ایپ کھول کر گولی لینے کا ریکارڈ دیکھیں",
   "alreadyTaken": "گولی لے لی گئی ہے",
   "startPauseTaking": "گولیاں لینے میں وقفہ شروع کریں",
-  "startedPauseTaking": "دوا کا وقفہ شروع ہو گیا",
+  "startedPauseTaking": "گولیاں لینے کا وقفہ شروع ہو گیا ہے",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} نمبر",
   "startFromNumber": "نمبر سے شروع کریں",
   "add": "اضافہ",
