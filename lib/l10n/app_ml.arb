@@ -482,7 +482,7 @@
   "calendarDiaryFeatureAppealBody": "കലണ്ടറിലെ ഒരു തീയതി തൊട്ട് നിങ്ങളുടെ ആരോഗ്യനില, മനോഭാവം, ലക്ഷണങ്ങൾ എന്നിവ രേഖപ്പെടുത്താം. ഗുളിക കഴിച്ചതിന്റെ രേഖയും ആർത്തവ രേഖകളും ചേർത്ത് നോക്കുമ്പോൾ ശരീരത്തിന്റെ താളം കൂടുതൽ നന്നായി മനസ്സിലാക്കാം.",
   "futureScheduleFeatureAppealTitle": "വരാനിരിക്കുന്ന പദ്ധതികൾ കുറിച്ചുവെക്കൂ",
   "futureScheduleFeatureAppealShortDescription": "ഡോക്ടറെ കാണാനുള്ള സമയം പോലുള്ള വരാനിരിക്കുന്ന പദ്ധതികൾ ക്രമീകരിക്കൂ",
-  "futureScheduleFeatureAppealHeadline": "കലണ്ടറിൽ ഭാവി പദ്ധതികൾ രേഖപ്പെടുത്തുക",
+  "futureScheduleFeatureAppealHeadline": "വരാനിരിക്കുന്ന പദ്ധതികൾ കലണ്ടറിൽ രേഖപ്പെടുത്തൂ",
   "futureScheduleFeatureAppealBody": "ഡോക്ടർ സന്ദർശനം, യാത്ര തുടങ്ങിയ ഭാവി പദ്ധതികൾ കലണ്ടറിൽ കുറിക്കാൻ കഴിയും. ഗുളിക കഴിക്കുന്ന ചക്രവുമായി ഒത്തുനോക്കി പരിശോധിക്കാൻ സാധിക്കുന്നതിനാൽ, ആർത്തവ ഷെഡ്യൂളും കണക്കിലെടുത്ത് ആസൂത്രണം ചെയ്യാൻ കഴിയും.",
   "healthCareIntegrationFeatureAppealTitle": "ഹെൽത്ത്കെയറുമായി സമന്വയിപ്പിക്കുക",
   "healthCareIntegrationFeatureAppealShortDescription": "ആർത്തവ രേഖകൾ ഹെൽത്ത്‌കെയറുമായി പങ്കിടുക",

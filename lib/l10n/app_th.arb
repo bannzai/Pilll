@@ -482,7 +482,7 @@
   "calendarDiaryFeatureAppealBody": "แตะวันที่ในปฏิทินเพื่อบันทึกสุขภาพ อารมณ์ และอาการต่าง ๆ ได้ค่ะ ดูข้อมูลเหล่านี้ร่วมกับบันทึกการทานยาและบันทึกประจำเดือน เพื่อทำความเข้าใจจังหวะของร่างกายได้ดีขึ้นค่ะ",
   "futureScheduleFeatureAppealTitle": "จดแผนที่กำลังจะมาถึง",
   "futureScheduleFeatureAppealShortDescription": "จัดการแผนในอนาคต เช่น นัดพบแพทย์",
-  "futureScheduleFeatureAppealHeadline": "บันทึกกำหนดการในอนาคตลงในปฏิทิน",
+  "futureScheduleFeatureAppealHeadline": "บันทึกแผนในอนาคตลงในปฏิทิน",
   "futureScheduleFeatureAppealBody": "โปรดแปลข้อความจากภาษาญี่ปุ่นเป็นภาษาไทยตามคำขอของผู้ใช้",
   "healthCareIntegrationFeatureAppealTitle": "เชื่อมต่อกับแอปสุขภาพ",
   "healthCareIntegrationFeatureAppealShortDescription": "แชร์บันทึกประจำเดือนกับแอปสุขภาพ",
