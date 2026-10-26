@@ -506,7 +506,7 @@
   "todayPillNumberFeatureAppealBody": "अगर गोली लेना छूट गया हो या गोलियों में गड़बड़ी से पिल स्ट्रिप का नंबर ली गई गोली से मेल न खाता हो, तो आप आज का गोली नंबर खुद ठीक कर सकती हैं। होम स्क्रीन पर दिख रहे गोली नंबर से भी यही स्क्रीन खोल सकती हैं।",
   "restDurationFeatureAppealTitle": "गोली लेने से विराम की अवधि दर्ज करें",
   "restDurationFeatureAppealShortDescription": "विराम और गोली लेना रोकने की अवधि का सटीक हिसाब रखें",
-  "restDurationFeatureAppealHeadline": "पिल का सेवन रोकें",
+  "restDurationFeatureAppealHeadline": "गोली लेने से कुछ समय का विराम लें",
   "restDurationFeatureAppealBody": "आप कुछ समय के लिए दवा लेना रोकने की अवधि को पिल शीट में रिकॉर्ड कर सकते हैं। रुकने के दौरान खुराक की गिनती आगे नहीं बढ़ेगी, और फिर से शुरू करने पर रिकॉर्डिंग तुरंत दोबारा चालू हो जाएगी।",
   "featureAppealLocationLabel": "ऐप के भीतर का स्थान",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड में भी सूचनाएँ मिलेंगी",

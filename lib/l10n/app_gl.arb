@@ -506,7 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Se esqueciches tomar unha pílula ou confundiches as pílulas e o número do blíster xa non coincide coa que tomaches, podes axustar manualmente o número de pílula de hoxe. Tamén podes abrir a mesma pantalla desde o número de pílula que aparece na pantalla de inicio.",
   "restDurationFeatureAppealTitle": "Rexistra o período de descanso da pílula",
   "restDurationFeatureAppealShortDescription": "Leva un rexistro preciso dos períodos de descanso e das interrupcións da pílula",
-  "restDurationFeatureAppealHeadline": "Facer un descanso na toma da pílula",
+  "restDurationFeatureAppealHeadline": "Fai unha pausa na toma da pílula",
   "restDurationFeatureAppealBody": "Podes rexistrar na folla de pílulas os períodos nos que deixas de tomalas temporalmente. Durante o descanso, o número de toma non avanza e, cando retomes, podes reiniciar o rexistro de inmediato.",
   "featureAppealLocationLabel": "Lugar na aplicación",
   "criticalAlertFeatureAppealPoint1": "As notificacións chegan incluso en modo de concentración",

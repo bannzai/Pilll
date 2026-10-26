@@ -506,7 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Bir hapı almayı unuttuysanız veya haplar karıştıysa ve blister üzerindeki numara aldığınız hapla eşleşmiyorsa, bugünkü hap numarasını elle düzeltebilirsiniz. Aynı ekranı ana sayfada görünen hap numarasından da açabilirsiniz.",
   "restDurationFeatureAppealTitle": "Hap kullanımına ara verilen dönemi kaydedin",
   "restDurationFeatureAppealShortDescription": "İlaç kullanımındaki ara dönemleri ve kesintileri doğru şekilde takip edin",
-  "restDurationFeatureAppealHeadline": "Hap alımını ara",
+  "restDurationFeatureAppealHeadline": "Hap kullanımına ara verin",
   "restDurationFeatureAppealBody": "Uzun süreli ara verme dönemleri pil şeridine kaydedilebilir. Ara verdiğiniz süre boyunca hap numarası ilerlemez ve yeniden başlarken kaydı hemen yeniden başlatabilirsiniz.",
   "featureAppealLocationLabel": "Uygulama içi konum",
   "criticalAlertFeatureAppealPoint1": "Odak Modu etkin olsa bile bildirimler alınır",

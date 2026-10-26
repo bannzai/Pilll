@@ -506,7 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Ако сте заборавили да узмете пилулу или сте помешали пилуле, па број на блистеру више не одговара узетој пилули, можете ручно да подесите данашњи број пилуле. Исти екран можете да отворите и преко броја пилуле на почетном екрану.",
   "restDurationFeatureAppealTitle": "Забележите период паузе у узимању пилуле",
   "restDurationFeatureAppealShortDescription": "Прецизно пратите паузе и прекиде узимања пилула",
-  "restDurationFeatureAppealHeadline": "Зауставити узимање пилуле",
+  "restDurationFeatureAppealHeadline": "Направите паузу у узимању пилуле",
   "restDurationFeatureAppealBody": "Možete da zabeležite period kada privremeno prekidate uzimanje pilula na listi pilula. Tokom pauze broj uzetih pilula se ne povećava i možete odmah da nastavite sa evidentiranjem kada se vratite.",
   "featureAppealLocationLabel": "Mesto u aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Obaveštenja stižu i kada je aktiviran režim fokusa.",
