@@ -145,7 +145,7 @@
   "whereToShare": "Ku dëshironi ta ndani",
   "pauseTakingDay": "🌙 Dita {day} e pushimit nga marrja e pilulës",
   "withDay": "Dita {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}Dita e {restDurationDays}-të",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dita {restDurationDays}",
   "daysUntilPausePeriod": "Pas {diffPlusOne} ditë fillon periudha {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Mbeten {diff} ditë për të përdorur të gjitha funksionet",
   "todayIsTaking": "💊 Marrje sot",

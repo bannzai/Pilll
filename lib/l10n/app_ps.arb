@@ -145,7 +145,7 @@
   "whereToShare": "تاسو یې چېرته شریکول غواړئ",
   "pauseTakingDay": "🌙 د ګولیو د اخیستو د وقفې {day}مه ورځ",
   "withDay": "ورځ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}د {restDurationDays} ورځه",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}مه ورځ",
   "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} دورې ته نور {diffPlusOne} ورځې پاتې دي",
   "remainingDaysAllFeatures": "د {diff} ورځو لپاره ټولې فعالیتونه کارولای شئ",
   "todayIsTaking": "💊 نن د ګولۍ ورځ",

@@ -145,7 +145,7 @@
   "whereToShare": "Hol szeretnéd megosztani",
   "pauseTakingDay": "🌙 A tablettaszedési szünet {day}. napja",
   "withDay": "{word}. nap",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. nap",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. nap",
   "daysUntilPausePeriod": "Még {diffPlusOne} nap a {activePillSheetPillSheetTypeNotTakenWord} időszakig",
   "remainingDaysAllFeatures": "Még {diff} napig használhatod az összes funkciót",
   "todayIsTaking": "💊 Ma bevétel",

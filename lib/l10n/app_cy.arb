@@ -145,7 +145,7 @@
   "whereToShare": "Ble hoffech chi rannu",
   "pauseTakingDay": "🌙 Diwrnod {day} o'r saib rhag cymryd y bilsen",
   "withDay": "Diwrnod {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}diwrnod {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · diwrnod {restDurationDays}",
   "daysUntilPausePeriod": "Mewn {diffPlusOne} diwrnod bydd cyfnod {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Gallwch ddefnyddio pob swyddogaeth am {diff} diwrnod eto",
   "todayIsTaking": "💊 Cymryd heddiw",

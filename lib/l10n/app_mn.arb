@@ -145,7 +145,7 @@
   "whereToShare": "Хаана хуваалцах вэ",
   "pauseTakingDay": "🌙 Эм уух завсарлагын {day} дэх өдөр",
   "withDay": "{word} дэх өдөр",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} дахь өдөр",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} дахь өдөр",
   "daysUntilPausePeriod": "Дахиад {diffPlusOne} хоногийн дараа {activePillSheetPillSheetTypeNotTakenWord} хугацаа болно",
   "remainingDaysAllFeatures": "{diff} хоногийн турш бүх функцийг ашиглах боломжтой",
   "todayIsTaking": "💊 Өнөөдөр уух",

@@ -145,7 +145,7 @@
   "whereToShare": "Kur norite bendrinti",
   "pauseTakingDay": "🌙 {day}-oji tablečių vartojimo pertraukos diena",
   "withDay": "{word} diena",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} diena",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} diena",
   "daysUntilPausePeriod": "Dar {diffPlusOne} dienų iki {activePillSheetPillSheetTypeNotTakenWord} periodo",
   "remainingDaysAllFeatures": "Dar {diff} dienų galėsite naudoti visas funkcijas",
   "todayIsTaking": "💊 Šiandien geriu",

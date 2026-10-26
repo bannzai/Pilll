@@ -145,7 +145,7 @@
   "whereToShare": "Где вы хотите поделиться",
   "pauseTakingDay": "🌙 {day}-й день перерыва в приёме таблеток",
   "withDay": "День {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-й день",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · день {restDurationDays}",
   "daysUntilPausePeriod": "До периода {activePillSheetPillSheetTypeNotTakenWord} осталось {diffPlusOne} дней",
   "remainingDaysAllFeatures": "Все функции доступны еще {diff} дней",
   "todayIsTaking": "💊 Прием сегодня",

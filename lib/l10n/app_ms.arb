@@ -145,7 +145,7 @@
   "whereToShare": "Di mana anda ingin berkongsi",
   "pauseTakingDay": "🌙 Hari ke-{day} rehat daripada pil",
   "withDay": "Hari ke-{word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}hari ke-{restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · hari ke-{restDurationDays}",
   "daysUntilPausePeriod": "Lagi {diffPlusOne} hari ke tempoh {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Tinggal {diff} hari lagi untuk menggunakan semua ciri",
   "todayIsTaking": "💊 Minum hari ini",

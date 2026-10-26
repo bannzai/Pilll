@@ -145,7 +145,7 @@
   "whereToShare": "Saan ninyo gustong ibahagi ito",
   "pauseTakingDay": "🌙 Araw {day} ng pahinga sa pag-inom ng pill",
   "withDay": "Araw {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ika-{restDurationDays} na araw",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ika-{restDurationDays} araw",
   "daysUntilPausePeriod": "Sa loob ng {diffPlusOne} araw, magsisimula ang {activePillSheetPillSheetTypeNotTakenWord} period",
   "remainingDaysAllFeatures": "Natitira pang {diff} araw para magamit ang lahat ng features",
   "todayIsTaking": "💊 Inom ngayon",

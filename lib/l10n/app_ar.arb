@@ -145,7 +145,7 @@
   "whereToShare": "أين ترغبين في المشاركة",
   "pauseTakingDay": "🌙 اليوم {day} من فترة التوقف عن تناول الحبوب",
   "withDay": "اليوم {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}اليوم الـ{restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · اليوم {restDurationDays}",
   "daysUntilPausePeriod": "بعد {diffPlusOne} أيام ستبدأ فترة {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "يمكنك استخدام جميع الميزات للأيام الـ {diff} المتبقية",
   "todayIsTaking": "💊 تناول اليوم",

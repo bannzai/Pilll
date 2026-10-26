@@ -145,7 +145,7 @@
   "whereToShare": "আপুনি ক’ত শ্বেয়াৰ কৰিব বিচাৰে",
   "pauseTakingDay": "🌙 বড়ি খোৱাৰ বিৰতিৰ {day} নম্বৰ দিন",
   "withDay": "দিন {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}তম দিন",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} নম্বৰ দিন",
   "daysUntilPausePeriod": "আৰু {diffPlusOne} দিনত {activePillSheetPillSheetTypeNotTakenWord} সময়",
   "remainingDaysAllFeatures": "বাকী {diff} দিনৰ বাবে সকলো সুবিধা ব্যৱহাৰ কৰিব পাৰিব",
   "todayIsTaking": "💊 আজি সেৱন",

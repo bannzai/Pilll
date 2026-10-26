@@ -145,7 +145,7 @@
   "whereToShare": "Қайда бөліскіңіз келеді",
   "pauseTakingDay": "🌙 Таблетка қабылдаудағы үзілістің {day}-күні",
   "withDay": "{word}-күн",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} күні",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-күн",
   "daysUntilPausePeriod": "Тағы {diffPlusOne} күн қалды {activePillSheetPillSheetTypeNotTakenWord} кезеңіне дейін",
   "remainingDaysAllFeatures": "Тағы {diff} күн бойы барлық функцияларды пайдалана аласыз",
   "todayIsTaking": "💊 Бүгін қабылдау",

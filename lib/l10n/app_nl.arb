@@ -145,7 +145,7 @@
   "whereToShare": "Waar wil je dit delen",
   "pauseTakingDay": "🌙 Dag {day} van de stopweek",
   "withDay": "Dag {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} dag {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Nog {diffPlusOne} dagen tot {activePillSheetPillSheetTypeNotTakenWord}periode",
   "remainingDaysAllFeatures": "Je hebt nog {diff} dagen toegang tot alle functies",
   "todayIsTaking": "💊 Vandaag innemen",

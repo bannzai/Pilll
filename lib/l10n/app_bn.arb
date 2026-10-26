@@ -145,7 +145,7 @@
   "whereToShare": "আপনি কোথায় শেয়ার করতে চান",
   "pauseTakingDay": "🌙 পিল খাওয়ার বিরতির {day}তম দিন",
   "withDay": "দিন {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}তম দিন",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}তম দিন",
   "daysUntilPausePeriod": "আরও {diffPlusOne} দিনে {activePillSheetPillSheetTypeNotTakenWord} সময়কাল",
   "remainingDaysAllFeatures": "অবশিষ্ট {diff} দিন সমস্ত বৈশিষ্ট্য ব্যবহার করতে পারবেন",
   "todayIsTaking": "💊 আজ সেবন",

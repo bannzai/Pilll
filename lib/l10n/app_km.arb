@@ -145,7 +145,7 @@
   "whereToShare": "តើអ្នកចង់ចែករំលែកនៅទីណា",
   "pauseTakingDay": "🌙 ថ្ងៃទី {day} នៃការផ្អាកលេបថ្នាំគ្រាប់",
   "withDay": "ថ្ងៃទី {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ថ្ងៃទី",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ថ្ងៃទី{restDurationDays}",
   "daysUntilPausePeriod": "នៅសល់ {diffPlusOne} ថ្ងៃទៀត នឹងដល់រយៈពេល {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "នៅសល់ {diff} ថ្ងៃទៀត អ្នកអាចប្រើមុខងារទាំងអស់បាន",
   "todayIsTaking": "💊 ថ្ងៃនេះទទួលទាន",

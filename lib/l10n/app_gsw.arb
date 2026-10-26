@@ -145,7 +145,7 @@
   "whereToShare": "Wo wottsch es teile",
   "pauseTakingDay": "🌙 Tag {day} vo de Pillepause",
   "withDay": "Tag {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. Tag",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · Tag {restDurationDays}",
   "daysUntilPausePeriod": "No {diffPlusOne} Täg isch d {activePillSheetPillSheetTypeNotTakenWord}-Zyt",
   "remainingDaysAllFeatures": "Sie chönd no {diff} Täg alli Funktione nutze",
   "todayIsTaking": "💊 Hüt isch Iinahme",

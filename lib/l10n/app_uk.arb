@@ -145,7 +145,7 @@
   "whereToShare": "Де ви хочете поділитися",
   "pauseTakingDay": "🌙 {day}-й день перерви у прийомі пігулок",
   "withDay": "День {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} {restDurationDays}-й день",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · день {restDurationDays}",
   "daysUntilPausePeriod": "Через {diffPlusOne} днів розпочнеться період {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Залишилось {diff} днів для використання всіх функцій",
   "todayIsTaking": "💊 Прийом сьогодні",

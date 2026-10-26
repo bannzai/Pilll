@@ -145,7 +145,7 @@
   "whereToShare": "तपाईं कहाँ साझा गर्न चाहनुहुन्छ",
   "pauseTakingDay": "🌙 चक्की सेवनको विश्रामको {day}औँ दिन",
   "withDay": "दिन {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}औं दिन",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}औँ दिन",
   "daysUntilPausePeriod": "अझै {diffPlusOne} दिनमा {activePillSheetPillSheetTypeNotTakenWord} अवधि हुनेछ",
   "remainingDaysAllFeatures": "बाँकी {diff} दिन सबै सुविधाहरू प्रयोग गर्न सकिन्छ",
   "todayIsTaking": "💊 आजको सेवन",

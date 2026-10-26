@@ -145,7 +145,7 @@
   "whereToShare": "Harada paylaşmaq istərdiniz",
   "pauseTakingDay": "🌙 Həb qəbuluna fasilənin {day}-ci günü",
   "withDay": "Gün {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-ci gün",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-ci gün",
   "daysUntilPausePeriod": "Daha {diffPlusOne} gün sonra {activePillSheetPillSheetTypeNotTakenWord} dövrü başlayır",
   "remainingDaysAllFeatures": "Qalan {diff} gün ərzində bütün funksiyalardan istifadə edə bilərsiniz",
   "todayIsTaking": "💊 Bu gün qəbul",

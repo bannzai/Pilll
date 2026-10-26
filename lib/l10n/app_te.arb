@@ -145,7 +145,7 @@
   "whereToShare": "మీరు ఎక్కడ షేర్ చేయాలనుకుంటున్నారు",
   "pauseTakingDay": "🌙 మాత్రలు తీసుకోవడంలో విరామం {day}వ రోజు",
   "withDay": "{word}వ రోజు",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}వ రోజు",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}వ రోజు",
   "daysUntilPausePeriod": "ఇంకా {diffPlusOne} రోజుల్లో {activePillSheetPillSheetTypeNotTakenWord} కాలం",
   "remainingDaysAllFeatures": "మిగిలిన {diff} రోజులు అన్ని ఫీచర్లను ఉపయోగించవచ్చు",
   "todayIsTaking": "💊 ఈ రోజు సేవన",

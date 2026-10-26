@@ -145,7 +145,7 @@
   "whereToShare": "Waar wil jy dit deel",
   "pauseTakingDay": "🌙 Dag {day} van jou pilpouse",
   "withDay": "Dag {word}",
-  "restDurationDays": "Dag {restDurationDays} van {activePillSheetPillSheetTypeNotTakenWord}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Nog {diffPlusOne} dae tot die {activePillSheetPillSheetTypeNotTakenWord}-periode.",
   "remainingDaysAllFeatures": "Jy kan alle funksies vir nog {diff} dae gebruik.",
   "todayIsTaking": "💊 Vandag neem",

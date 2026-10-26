@@ -145,7 +145,7 @@
   "whereToShare": "ඔබට මෙය බෙදාගැනීමට අවශ්‍ය කොතැනද",
   "pauseTakingDay": "🌙 පෙති ගැනීමේ විරාමයේ {day} වන දිනය",
   "withDay": "{word} වන දිනය",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}වන දින",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} වන දිනය",
   "daysUntilPausePeriod": "තවත් {diffPlusOne} දිනකින් {activePillSheetPillSheetTypeNotTakenWord} කාලය පටන් ගනී",
   "remainingDaysAllFeatures": "ඉතිරි දින {diff} ක් සියලු විශේෂාංග භාවිතා කළ හැකිය",
   "todayIsTaking": "💊 අද ගැනීම",

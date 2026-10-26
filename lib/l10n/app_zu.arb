@@ -145,7 +145,7 @@
   "whereToShare": "Ufuna ukwabelana kuphi",
   "pauseTakingDay": "🌙 Usuku {day} lwekhefu lokuphuza amaphilisi",
   "withDay": "Usuku {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}usuku lwe-{restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · usuku {restDurationDays}",
   "daysUntilPausePeriod": "Kusele izinsuku ezi-{diffPlusOne} kuze kufike isikhathi se-{activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Ungasebenzisa zonke izici ezinsukwini ezisele ezi-{diff}",
   "todayIsTaking": "💊 Thatha namuhla",

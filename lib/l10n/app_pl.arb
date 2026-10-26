@@ -145,7 +145,7 @@
   "whereToShare": "Gdzie chcesz udostępnić",
   "pauseTakingDay": "🌙 {day}. dzień przerwy w przyjmowaniu tabletek",
   "withDay": "Dzień {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. dzień",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dzień {restDurationDays}",
   "daysUntilPausePeriod": "Za {diffPlusOne} dni będzie okres {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Pozostało {diff} dni dostępu do wszystkich funkcji",
   "todayIsTaking": "💊 Przyjmij dzisiaj",

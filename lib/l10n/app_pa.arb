@@ -145,7 +145,7 @@
   "whereToShare": "ਤੁਸੀਂ ਕਿੱਥੇ ਸਾਂਝਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ",
   "pauseTakingDay": "🌙 ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਦਾ {day}ਵਾਂ ਦਿਨ",
   "withDay": "ਦਿਨ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ਵਾਂ ਦਿਨ",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ਵਾਂ ਦਿਨ",
   "daysUntilPausePeriod": "{diffPlusOne} ਦਿਨਾਂ ਬਾਅਦ {activePillSheetPillSheetTypeNotTakenWord} ਦਾ ਸਮਾਂ ਸ਼ੁਰੂ ਹੋਵੇਗਾ",
   "remainingDaysAllFeatures": "ਤੁਸੀਂ ਬਾਕੀ {diff} ਦਿਨਾਂ ਤੱਕ ਸਾਰੇ ਫੀਚਰ ਵਰਤ ਸਕਦੇ ਹੋ",
   "todayIsTaking": "💊 ਅੱਜ ਸੇਵਨ",

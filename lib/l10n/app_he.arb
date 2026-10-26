@@ -145,7 +145,7 @@
   "whereToShare": "איפה לשתף",
   "pauseTakingDay": "🌙 יום {day} בהפסקה מנטילת הגלולה",
   "withDay": "יום {word}",
-  "restDurationDays": "יום {restDurationDays} {activePillSheetPillSheetTypeNotTakenWord}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · יום {restDurationDays}",
   "daysUntilPausePeriod": "עוד {diffPlusOne} ימים עד תקופת {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "נותרו לך {diff} ימים לשימוש בכל התכונות",
   "todayIsTaking": "💊 נטילה היום",

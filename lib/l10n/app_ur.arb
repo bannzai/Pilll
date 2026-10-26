@@ -145,7 +145,7 @@
   "whereToShare": "آپ کہاں شیئر کرنا چاہیں گی",
   "pauseTakingDay": "🌙 گولی لینے کے وقفے کا {day}واں دن",
   "withDay": "دن {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}واں دن",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · دن {restDurationDays}",
   "daysUntilPausePeriod": "{diffPlusOne} دن بعد {activePillSheetPillSheetTypeNotTakenWord} کی مدت ہے",
   "remainingDaysAllFeatures": "باقی {diff} دن تک تمام فیچرز دستیاب ہیں",
   "todayIsTaking": "💊 آج استعمال",

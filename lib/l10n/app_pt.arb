@@ -145,7 +145,7 @@
   "whereToShare": "Onde você quer compartilhar",
   "pauseTakingDay": "🌙 Dia {day} da pausa da pílula",
   "withDay": "Dia {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}º dia",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dia {restDurationDays}",
   "daysUntilPausePeriod": "Faltam {diffPlusOne} dias para o período de {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Você pode usar todas as funcionalidades por mais {diff} dias",
   "todayIsTaking": "💊 Tomar hoje",

@@ -145,7 +145,7 @@
   "whereToShare": "Hvor vil du dele",
   "pauseTakingDay": "🌙 Dag {day} i pillepausen",
   "withDay": "Dag {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} dag {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Om {diffPlusOne} dage starter {activePillSheetPillSheetTypeNotTakenWord}perioden",
   "remainingDaysAllFeatures": "Alle funktioner tilgængelige i {diff} dage tilbage",
   "todayIsTaking": "💊 Tag i dag",

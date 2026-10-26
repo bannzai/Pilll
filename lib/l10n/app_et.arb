@@ -145,7 +145,7 @@
   "whereToShare": "Kus soovid seda jagada",
   "pauseTakingDay": "🌙 Pillipausi {day}. päev",
   "withDay": "Päev {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. päev",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. päev",
   "daysUntilPausePeriod": "Veel {diffPlusOne} päeva pärast algab {activePillSheetPillSheetTypeNotTakenWord} periood",
   "remainingDaysAllFeatures": "Veel {diff} päeva saab kasutada kõiki funktsioone",
   "todayIsTaking": "💊 Täna võtta",

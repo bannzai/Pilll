@@ -145,7 +145,7 @@
   "whereToShare": "Nerede paylaşmak istersiniz",
   "pauseTakingDay": "🌙 Hap kullanımına ara vermenin {day}. günü",
   "withDay": "{word}. gün",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. günü",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. gün",
   "daysUntilPausePeriod": "Daha {diffPlusOne} gün sonra {activePillSheetPillSheetTypeNotTakenWord} dönemi",
   "remainingDaysAllFeatures": "Tüm özellikleri {diff} gün daha kullanabilirsiniz",
   "todayIsTaking": "💊 Bugün alım",

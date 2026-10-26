@@ -145,7 +145,7 @@
   "whereToShare": "Unde vrei să distribui",
   "pauseTakingDay": "🌙 Ziua {day} a pauzei de la pilulă",
   "withDay": "Ziua {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ziua {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ziua {restDurationDays}",
   "daysUntilPausePeriod": "Încă {diffPlusOne} zile până la perioada {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Mai ai {diff} zile cu toate funcțiile",
   "todayIsTaking": "💊 De luat astăzi",

@@ -145,7 +145,7 @@
   "whereToShare": "എവിടെ പങ്കിടാൻ ആഗ്രഹിക്കുന്നു",
   "pauseTakingDay": "🌙 ഗുളിക കഴിക്കുന്നതിലെ ഇടവേളയുടെ {day}ാം ദിവസം",
   "withDay": "{word}-ാം ദിവസം",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ാമത്തെ ദിവസം",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ാം ദിവസം",
   "daysUntilPausePeriod": "{diffPlusOne} ദിവസം കൂടി കഴിഞ്ഞാൽ {activePillSheetPillSheetTypeNotTakenWord} കാലയളവ് ആയിരിക്കും",
   "remainingDaysAllFeatures": "ബാക്കി {diff} ദിവസത്തേക്ക് എല്ലാ സവിശേഷതകളും ഉപയോഗിക്കാം",
   "todayIsTaking": "💊 ഇന്ന് കഴിക്കുക",

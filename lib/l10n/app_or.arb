@@ -145,7 +145,7 @@
   "whereToShare": "ଆପଣ କେଉଁଠି ସେୟାର କରିବାକୁ ଚାହାନ୍ତି",
   "pauseTakingDay": "🌙 ବଟିକା ଖାଇବାରୁ ବିରତିର {day}ତମ ଦିନ",
   "withDay": "ଦିନ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ତମ ଦିନ",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ତମ ଦିନ",
   "daysUntilPausePeriod": "ଆଉ {diffPlusOne} ଦିନରେ {activePillSheetPillSheetTypeNotTakenWord} ସମୟ",
   "remainingDaysAllFeatures": "ବାକି {diff} ଦିନ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ବ୍ୟବହାର କରିପାରିବେ",
   "todayIsTaking": "💊 ଆଜି ସେବନ",

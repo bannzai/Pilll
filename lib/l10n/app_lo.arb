@@ -145,7 +145,7 @@
   "whereToShare": "ຢາກແບ່ງປັນຢູ່ໃສ",
   "pauseTakingDay": "🌙 ມື້ທີ {day} ຂອງໄລຍະພັກການກິນຢາເມັດ",
   "withDay": "ມື້ທີ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ມື້ທີ {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ມື້ທີ {restDurationDays}",
   "daysUntilPausePeriod": "ອີກ {diffPlusOne} ມື້ຈະເຖິງໄລຍະ {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "ເຫຼືອອີກ {diff} ມື້ທີ່ທ່ານສາມາດໃຊ້ຄຸນສົມບັດທັງໝົດໄດ້",
   "todayIsTaking": "💊 ມື້ນີ້ກິນຢາ",

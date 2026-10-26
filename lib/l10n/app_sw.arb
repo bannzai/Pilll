@@ -145,7 +145,7 @@
   "whereToShare": "Ungependa kushiriki wapi",
   "pauseTakingDay": "🌙 Siku ya {day} ya mapumziko ya kumeza vidonge",
   "withDay": "Siku ya {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}siku ya {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · siku ya {restDurationDays}",
   "daysUntilPausePeriod": "Baada ya siku {diffPlusOne} itakuwa kipindi cha {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Utaweza kutumia huduma zote kwa siku {diff} zilizobaki",
   "todayIsTaking": "💊 Leo kunywa dawa",

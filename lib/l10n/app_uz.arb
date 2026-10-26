@@ -145,7 +145,7 @@
   "whereToShare": "Qayerda ulashmoqchisiz",
   "pauseTakingDay": "🌙 Tabletkani qabul qilishdagi tanaffusning {day}-kuni",
   "withDay": "{word}-kun",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-inchi kun",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-kun",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} davrigacha yana {diffPlusOne} kun qoldi",
   "remainingDaysAllFeatures": "Yana {diff} kun davomida barcha funksiyalardan foydalanishingiz mumkin",
   "todayIsTaking": "💊 Bugun qabul qilish",

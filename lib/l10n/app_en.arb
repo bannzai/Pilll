@@ -145,7 +145,7 @@
   "whereToShare": "Where would you like to share",
   "pauseTakingDay": "🌙 Pill break: day {day}",
   "withDay": "Day {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} day {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · day {restDurationDays}",
   "daysUntilPausePeriod": "{diffPlusOne} more days until {activePillSheetPillSheetTypeNotTakenWord} period",
   "remainingDaysAllFeatures": "You have {diff} days left to use all features",
   "todayIsTaking": "💊 Take today",

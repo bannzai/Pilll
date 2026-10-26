@@ -145,7 +145,7 @@
   "whereToShare": "Πού θέλετε να το κοινοποιήσετε",
   "pauseTakingDay": "🌙 Ημέρα {day} της διακοπής λήψης του χαπιού",
   "withDay": "Ημέρα {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}η ημέρα",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ημέρα {restDurationDays}",
   "daysUntilPausePeriod": "Υπολείπονται {diffPlusOne} ημέρες για την περίοδο {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις λειτουργίες για άλλες {diff} ημέρες",
   "todayIsTaking": "💊 Λήψη σήμερα",

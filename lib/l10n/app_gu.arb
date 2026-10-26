@@ -145,7 +145,7 @@
   "whereToShare": "તમે ક્યાં શેર કરવા માંગો છો",
   "pauseTakingDay": "🌙 ગોળી લેવાના વિરામનો {day}મો દિવસ",
   "withDay": "દિવસ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}મો દિવસ",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}મો દિવસ",
   "daysUntilPausePeriod": "હવે {diffPlusOne} દિવસમાં {activePillSheetPillSheetTypeNotTakenWord} સમયગાળો છે",
   "remainingDaysAllFeatures": "બાકી {diff} દિવસ માટે બધી સુવિધાઓ ઉપલબ્ધ છે",
   "todayIsTaking": "💊 આજે સેવન",

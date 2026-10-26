@@ -145,7 +145,7 @@
   "whereToShare": "ต้องการแชร์ที่ไหน",
   "pauseTakingDay": "🌙 วันที่ {day} ของช่วงพักทานยา",
   "withDay": "วันที่ {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}วันที่ {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · วันที่ {restDurationDays}",
   "daysUntilPausePeriod": "อีก {diffPlusOne} วัน จะถึงช่วง {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "สามารถใช้ฟีเจอร์ทั้งหมดได้อีก{diff}วัน",
   "todayIsTaking": "💊 วันนี้กินยา",

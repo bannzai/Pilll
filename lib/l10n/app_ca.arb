@@ -145,7 +145,7 @@
   "whereToShare": "On vols compartir-ho",
   "pauseTakingDay": "🌙 Dia {day} de la pausa de la píndola",
   "withDay": "Dia {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}dia {restDurationDays}",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dia {restDurationDays}",
   "daysUntilPausePeriod": "Falten {diffPlusOne} dies per al període de {activePillSheetPillSheetTypeNotTakenWord}",
   "remainingDaysAllFeatures": "Pots utilitzar totes les funcions durant {diff} dies més",
   "todayIsTaking": "💊 Avui toca píndola",

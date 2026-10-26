@@ -145,7 +145,7 @@
   "whereToShare": "எங்கு பகிர விரும்புகிறீர்கள்",
   "pauseTakingDay": "🌙 மாத்திரை உட்கொள்வதில் இடைவேளையின் {day}ஆம் நாள்",
   "withDay": "{word}ஆம் நாள்",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ஆம் நாள்",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ஆம் நாள்",
   "daysUntilPausePeriod": "இன்னும் {diffPlusOne} நாட்களில் {activePillSheetPillSheetTypeNotTakenWord} காலம் ஆரம்பமாகும்",
   "remainingDaysAllFeatures": "இன்னும் {diff} நாட்களுக்கு அனைத்து அம்சங்களும் பயன்படுத்தலாம்",
   "todayIsTaking": "💊 இன்று எடுக்க வேண்டும்",

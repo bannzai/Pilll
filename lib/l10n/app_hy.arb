@@ -145,7 +145,7 @@
   "whereToShare": "Որտե՞ղ եք ցանկանում կիսվել",
   "pauseTakingDay": "🌙 Հաբերի ընդունման ընդմիջման {day}-րդ օրը",
   "withDay": "Օր {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-րդ օր",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · օր {restDurationDays}",
   "daysUntilPausePeriod": "ԵՒս {diffPlusOne} օր մնացել է {activePillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի համար",
   "remainingDaysAllFeatures": "Մնացած {diff} օր բոլոր գործառույթները օգտագործելի են",
   "todayIsTaking": "💊 Այսօր ընդունում",

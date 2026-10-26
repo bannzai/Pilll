@@ -145,7 +145,7 @@
   "whereToShare": "Каде сакате да споделите",
   "pauseTakingDay": "🌙 {day}. ден од паузата во земањето таблета",
   "withDay": "Ден {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ден",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ден {restDurationDays}",
   "daysUntilPausePeriod": "Уште {diffPlusOne} дена до {activePillSheetPillSheetTypeNotTakenWord} периодот",
   "remainingDaysAllFeatures": "Уште {diff} дена можете да ги користите сите функции",
   "todayIsTaking": "💊 Денес земање",

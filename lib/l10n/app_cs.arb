@@ -145,7 +145,7 @@
   "whereToShare": "Kde chcete sdílet",
   "pauseTakingDay": "🌙 {day}. den přestávky v užívání pilulek",
   "withDay": "Den {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}. den",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. den",
   "daysUntilPausePeriod": "Za {diffPlusOne} dní začne {activePillSheetPillSheetTypeNotTakenWord} období",
   "remainingDaysAllFeatures": "Všechny funkce můžete používat ještě {diff} dní",
   "todayIsTaking": "💊 Dnes brání",

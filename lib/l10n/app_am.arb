@@ -145,7 +145,7 @@
   "whereToShare": "የት ማጋራት ይፈልጋሉ",
   "pauseTakingDay": "🌙 ክኒን ከመውሰድ የእረፍት ቀን {day}",
   "withDay": "ቀን {word}",
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}ኛ ቀን",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ቀን {restDurationDays}",
   "daysUntilPausePeriod": "{diffPlusOne} ቀን ቀርቶ {activePillSheetPillSheetTypeNotTakenWord} ጊዜ ነው",
   "remainingDaysAllFeatures": "ለቀሪዎቹ {diff} ቀናት ሁሉንም ተግባራት መጠቀም ይችላሉ",
   "todayIsTaking": "💊 ዛሬ መውሰድ",
