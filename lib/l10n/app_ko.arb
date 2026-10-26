@@ -14,7 +14,7 @@
   "medicationHistory": "복용 내역",
   "settings": "설정",
   "account": "계정",
-  "dataTransferRequiresAccount": "기종 변경이나 휴대폰 분실 시 데이터 백업 및 복원을 위해서는 계정 등록이 필요합니다.",
+  "dataTransferRequiresAccount": "휴대폰을 바꾸거나 분실했을 때 데이터를 옮기거나 복원하려면 계정 등록이 필요해요.",
   "pillPremium": "Pilll 프리미엄",
   "unlimitedFeatureDuration": "기능 무제한 기간에 대해",
   "pillSheet": "필 시트",

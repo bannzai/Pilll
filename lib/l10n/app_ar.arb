@@ -14,7 +14,7 @@
   "medicationHistory": "سجل تناول",
   "settings": "الإعدادات",
   "account": "الحساب",
-  "dataTransferRequiresAccount": "في حالات مثل تغيير الجهاز أو فقدان الهاتف الذكي، يتطلب نقل واستعادة البيانات تسجيل حساب.",
+  "dataTransferRequiresAccount": "لنقل بياناتكِ أو استعادتها عند تغيير الهاتف أو فقدانه، يلزم تسجيل حساب.",
   "pillPremium": "Pilll بريميوم",
   "unlimitedFeatureDuration": "حول فترة الميزات غير المحدودة",
   "pillSheet": "شريط الحبوب",

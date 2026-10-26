@@ -14,7 +14,7 @@
   "medicationHistory": "innamegeschiedenis",
   "settings": "Instellingen",
   "account": "Account",
-  "dataTransferRequiresAccount": "Voor het overdragen en herstellen van uw gegevens bij telefoonwissel of smartphoneverlies is accountregistratie vereist.",
+  "dataTransferRequiresAccount": "Als je van telefoon wisselt of je telefoon kwijtraakt, heb je een geregistreerd account nodig om je gegevens over te zetten of te herstellen.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Over de onbeperkte functieperiode",
   "pillSheet": "pillenstrip",

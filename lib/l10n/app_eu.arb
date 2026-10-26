@@ -14,7 +14,7 @@
   "medicationHistory": "hartze-historia",
   "settings": "Ezarpenak",
   "account": "Kontua",
-  "dataTransferRequiresAccount": "Gailu aldaketa edo telefono mugikor galera bezalako kasuetan, datuak transferitu eta leheneratzeko kontu erregistroa beharrezkoa da.",
+  "dataTransferRequiresAccount": "Telefonoa aldatzen baduzu edo galtzen baduzu, kontu bat erregistratu behar duzu datuak transferitzeko edo berreskuratzeko.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Funtzio mugagabeko aldiari buruz",
   "pillSheet": "Pilula-orria",

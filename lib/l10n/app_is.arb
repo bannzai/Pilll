@@ -14,7 +14,7 @@
   "medicationHistory": "inntökuyfirlit",
   "settings": "Stillingar",
   "account": "Aðgangur",
-  "dataTransferRequiresAccount": "Reikningsskráning er nauðsynleg til að flytja og endurheimta gögn við tækjaskipti eða símatapmissi.",
+  "dataTransferRequiresAccount": "Ef þú skiptir um síma eða týnir honum þarftu að skrá reikning til að flytja eða endurheimta gögnin þín.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Um tímabil fullra eiginleika",
   "pillSheet": "pillublað",

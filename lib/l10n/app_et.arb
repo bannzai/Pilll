@@ -14,7 +14,7 @@
   "medicationHistory": "võtmislogi",
   "settings": "Seaded",
   "account": "Konto",
-  "dataTransferRequiresAccount": "Seadme vahetamisel või telefoni kaotamisel on andmete ülekandmiseks ja taastamiseks vajalik konto registreerimine.",
+  "dataTransferRequiresAccount": "Kui vahetad telefoni või see läheb kaotsi, vajad andmete ülekandmiseks või taastamiseks registreeritud kontot.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Täisfunktsionaalsuse perioodi kohta",
   "pillSheet": "Tablettplaat",

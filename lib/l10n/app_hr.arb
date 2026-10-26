@@ -14,7 +14,7 @@
   "medicationHistory": "povijest uzimanja",
   "settings": "Postavke",
   "account": "Račun",
-  "dataTransferRequiresAccount": "Registracija računa je potrebna za prijenos i vraćanje podataka kod promjene uređaja ili gubitka pametnog telefona.",
+  "dataTransferRequiresAccount": "Ako promijenite ili izgubite telefon, za prijenos ili vraćanje podataka trebate registrirati račun.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "O razdoblju neograničenih funkcija",
   "pillSheet": "Blister pilula",

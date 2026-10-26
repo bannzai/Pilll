@@ -14,7 +14,7 @@
   "medicationHistory": "historia e marrjes",
   "settings": "Cilësimet",
   "account": "Llogaria",
-  "dataTransferRequiresAccount": "Për transferimin dhe rikuperimin e të dhënave gjatë ndërrimit të pajisjes ose humbjes së telefonit, është i nevojshëm regjistrimi i llogarisë.",
+  "dataTransferRequiresAccount": "Nëse ndërroni ose humbni telefonin, duhet të regjistroni një llogari për të transferuar ose rikthyer të dhënat.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Rreth periudhës së funksioneve të pakufizuara",
   "pillSheet": "Fletë pilulash",

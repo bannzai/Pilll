@@ -14,7 +14,7 @@
   "medicationHistory": "היסטוריית נטילה",
   "settings": "הגדרות",
   "account": "חשבון",
-  "dataTransferRequiresAccount": "במקרים כמו החלפת מכשיר או אובדן הטלפון החכם, נדרש רישום חשבון כדי להעביר ולשחזר נתונים.",
+  "dataTransferRequiresAccount": "כדי להעביר או לשחזר נתונים במקרה של החלפת טלפון או אובדנו, יש להירשם לחשבון.",
   "pillPremium": "Pilll פרמיום",
   "unlimitedFeatureDuration": "על תקופת הגישה הבלתי מוגבלת",
   "pillSheet": "גיליון גלולות",

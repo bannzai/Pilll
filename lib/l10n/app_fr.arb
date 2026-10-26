@@ -14,7 +14,7 @@
   "medicationHistory": "historique des prises",
   "settings": "Paramètres",
   "account": "Compte",
-  "dataTransferRequiresAccount": "L'enregistrement d'un compte est requis pour le transfert et la restauration des données en cas de changement d'appareil ou de perte de votre smartphone.",
+  "dataTransferRequiresAccount": "Si vous changez ou perdez votre téléphone, vous devez créer un compte pour transférer ou restaurer vos données.",
   "pillPremium": "Pilule Premium",
   "unlimitedFeatureDuration": "À propos de la période de fonctionnalités illimitées",
   "pillSheet": "Feuille de pilule",

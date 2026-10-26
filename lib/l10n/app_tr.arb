@@ -14,7 +14,7 @@
   "medicationHistory": "kullanım geçmişi",
   "settings": "Ayarlar",
   "account": "Hesap",
-  "dataTransferRequiresAccount": "Cihaz değişikliği veya telefon kaybı gibi durumlarda verilerin aktarılması ve geri yüklenmesi için hesap kaydı gereklidir.",
+  "dataTransferRequiresAccount": "Telefonunuzu değiştirir veya kaybederseniz verilerinizi aktarmak ya da geri yüklemek için hesap oluşturmanız gerekir.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Sınırsız özellikler dönemi hakkında",
   "pillSheet": "Hap Paketi",

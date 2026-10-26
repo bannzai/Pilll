@@ -14,7 +14,7 @@
   "medicationHistory": "lietošanas vēsture",
   "settings": "Iestatījumi",
   "account": "Konts",
-  "dataTransferRequiresAccount": "Ierīces maiņas vai tālruņa pazušanas gadījumā datu pārnešanai un atjaunošanai ir nepieciešama konta reģistrācija.",
+  "dataTransferRequiresAccount": "Ja maināt vai pazaudējat tālruni, datu pārsūtīšanai vai atjaunošanai ir jāreģistrē konts.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Par bezlimita funkciju periodu",
   "pillSheet": "pilulu lapa",

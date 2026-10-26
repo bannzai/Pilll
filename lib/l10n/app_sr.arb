@@ -14,7 +14,7 @@
   "medicationHistory": "историја узимања",
   "settings": "Подешавања",
   "account": "Налог",
-  "dataTransferRequiresAccount": "Za prenos i vraćanje podataka u slučaju promene uređaja ili gubitka telefona, potrebna je registracija naloga.",
+  "dataTransferRequiresAccount": "Ако промените или изгубите телефон, за пренос или враћање података потребно је да региструјете налог.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "O periodu neograničenih mogućnosti",
   "pillSheet": "List pilula",

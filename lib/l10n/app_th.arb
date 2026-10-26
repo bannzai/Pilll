@@ -14,7 +14,7 @@
   "medicationHistory": "ประวัติการทานยา",
   "settings": "การตั้งค่า",
   "account": "บัญชี",
-  "dataTransferRequiresAccount": "เมื่อเปลี่ยนอุปกรณ์หรือสูญหายสมาร์ทโฟน จำเป็นต้องลงทะเบียนบัญชีเพื่อถ่ายโอนและกู้คืนข้อมูล",
+  "dataTransferRequiresAccount": "หากเปลี่ยนหรือทำโทรศัพท์หาย ต้องสมัครบัญชีเพื่อย้ายหรือกู้คืนข้อมูลค่ะ",
   "pillPremium": "Pilll พรีเมียม",
   "unlimitedFeatureDuration": "เกี่ยวกับระยะเวลาฟีเจอร์ไม่จำกัด",
   "pillSheet": "แผงยา",

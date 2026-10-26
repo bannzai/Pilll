@@ -14,7 +14,7 @@
   "medicationHistory": "inntakshistorikk",
   "settings": "Innstillinger",
   "account": "Konto",
-  "dataTransferRequiresAccount": "Kontoregistrering er nødvendig for å overføre og gjenopprette data ved enhetsbytte eller tap av mobiltelefon.",
+  "dataTransferRequiresAccount": "Hvis du bytter eller mister telefonen, må du opprette en konto for å overføre eller gjenopprette dataene dine.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Om perioden med ubegrensede funksjoner",
   "pillSheet": "Pillekort",

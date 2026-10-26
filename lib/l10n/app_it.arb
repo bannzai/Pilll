@@ -14,7 +14,7 @@
   "medicationHistory": "storico delle assunzioni",
   "settings": "Impostazioni",
   "account": "Account",
-  "dataTransferRequiresAccount": "È necessario registrare un account per il trasferimento e il ripristino dei dati in caso di cambio dispositivo o smarrimento dello smartphone.",
+  "dataTransferRequiresAccount": "Se cambi o perdi il telefono, devi registrare un account per trasferire o ripristinare i tuoi dati.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Sul periodo di funzionalità illimitate",
   "pillSheet": "Blister",

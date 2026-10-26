@@ -14,7 +14,7 @@
   "medicationHistory": "ປະຫວັດການກິນຢາ",
   "settings": "ການຕັ້ງຄ່າ",
   "account": "ບັນຊີ",
-  "dataTransferRequiresAccount": "ສຳລັບການປ່ຽນເຄື່ອງ ຫຼື ເມື່ອໂທລະສັບຫາຍ, ການລົງທະບຽນບັນຊີແມ່ນຈຳເປັນສຳລັບການໂອນຍ້າຍ ແລະ ກູ້ຄືນຂໍ້ມູນ.",
+  "dataTransferRequiresAccount": "ຫາກປ່ຽນ ຫຼື ເຮັດໂທລະສັບຫາຍ ຈຳເປັນຕ້ອງລົງທະບຽນບັນຊີ ເພື່ອໂອນ ຫຼື ກູ້ຄືນຂໍ້ມູນ.",
   "pillPremium": "Pilll ພິເສດ",
   "unlimitedFeatureDuration": "ກ່ຽວກັບໄລຍະເວລາຄຸນສົມບັດບໍ່ຈໍາກັດ",
   "pillSheet": "ແຜ່ນຢາຄຸມ",

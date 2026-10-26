@@ -14,7 +14,7 @@
   "medicationHistory": "सेवन इतिहास",
   "settings": "सेटिंग्स",
   "account": "खाता",
-  "dataTransferRequiresAccount": "डिवाइस बदलने या स्मार्टफोन खो जाने पर डेटा स्थानांतरण और पुनर्स्थापना के लिए खाता पंजीकरण आवश्यक है।",
+  "dataTransferRequiresAccount": "फ़ोन बदलने या खो जाने पर अपना डेटा ट्रांसफ़र या वापस पाने के लिए आपको खाता बनाना होगा।",
   "pillPremium": "Pilll प्रीमियम",
   "unlimitedFeatureDuration": "असीमित सुविधाओं की अवधि के बारे में",
   "pillSheet": "पिल शीट",

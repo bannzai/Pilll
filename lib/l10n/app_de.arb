@@ -14,7 +14,7 @@
   "medicationHistory": "Einnahmeverlauf",
   "settings": "Einstellungen",
   "account": "Konto",
-  "dataTransferRequiresAccount": "Für die Datenübertragung und -wiederherstellung bei Gerätewechsel oder Smartphone-Verlust ist eine Kontoregistrierung erforderlich.",
+  "dataTransferRequiresAccount": "Wenn du dein Handy wechselst oder verlierst, brauchst du ein registriertes Konto, um deine Daten zu übertragen oder wiederherzustellen.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Über den Zeitraum mit unbegrenzten Funktionen",
   "pillSheet": "Pillenblister",

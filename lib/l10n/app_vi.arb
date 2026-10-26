@@ -14,7 +14,7 @@
   "medicationHistory": "lịch sử uống thuốc",
   "settings": "Cài đặt",
   "account": "Tài khoản",
-  "dataTransferRequiresAccount": "Bạn cần đăng ký tài khoản để chuyển đổi và khôi phục dữ liệu khi thay đổi thiết bị hoặc mất điện thoại.",
+  "dataTransferRequiresAccount": "Nếu đổi hoặc làm mất điện thoại, bạn cần đăng ký tài khoản để chuyển hoặc khôi phục dữ liệu.",
   "pillPremium": "Pilll Cao cấp",
   "unlimitedFeatureDuration": "Về thời gian tính năng không giới hạn",
   "pillSheet": "Vỉ thuốc",

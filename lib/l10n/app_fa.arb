@@ -14,7 +14,7 @@
   "medicationHistory": "تاریخچه مصرف",
   "settings": "تنظیمات",
   "account": "حساب کاربری",
-  "dataTransferRequiresAccount": "برای انتقال و بازیابی داده‌ها در موارد تغییر دستگاه یا گم شدن گوشی، ثبت‌نام حساب کاربری ضروری است.",
+  "dataTransferRequiresAccount": "اگر گوشی‌تان را عوض کنید یا گم کنید، برای انتقال یا بازیابی داده‌ها باید حساب کاربری ثبت کنید.",
   "pillPremium": "Pilll پریمیوم",
   "unlimitedFeatureDuration": "درباره دوره قابلیت‌های نامحدود",
   "pillSheet": "ورق قرص",

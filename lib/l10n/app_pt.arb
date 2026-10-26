@@ -14,7 +14,7 @@
   "medicationHistory": "histórico de uso",
   "settings": "Configurações",
   "account": "Conta",
-  "dataTransferRequiresAccount": "É necessário o registro de uma conta para transferência e restauração de dados em casos como troca de dispositivo ou perda do celular.",
+  "dataTransferRequiresAccount": "Se você trocar ou perder o celular, precisará criar uma conta para transferir ou restaurar seus dados.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Sobre o período de funcionalidades ilimitadas",
   "pillSheet": "cartela",

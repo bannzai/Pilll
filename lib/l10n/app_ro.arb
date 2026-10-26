@@ -14,7 +14,7 @@
   "medicationHistory": "istoric",
   "settings": "Setări",
   "account": "Cont",
-  "dataTransferRequiresAccount": "Înregistrarea unui cont este necesară pentru transferul și restaurarea datelor în cazul schimbării dispozitivului sau pierderii smartphone-ului.",
+  "dataTransferRequiresAccount": "Dacă schimbi sau pierzi telefonul, ai nevoie de un cont înregistrat pentru a transfera sau recupera datele.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Despre perioada cu funcții nelimitate",
   "pillSheet": "Foaia de pilule",

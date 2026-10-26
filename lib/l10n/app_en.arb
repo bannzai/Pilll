@@ -14,7 +14,7 @@
   "medicationHistory": "pill history",
   "settings": "Settings",
   "account": "Account",
-  "dataTransferRequiresAccount": "Account registration is required for data transfer and restoration when changing devices or losing your smartphone.",
+  "dataTransferRequiresAccount": "You’ll need to create an account to transfer or restore your data if you change or lose your phone.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "About Unlimited Features Period",
   "pillSheet": "Pill Sheet",

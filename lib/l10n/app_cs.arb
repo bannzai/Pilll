@@ -14,7 +14,7 @@
   "medicationHistory": "historie užívání",
   "settings": "Nastavení",
   "account": "Účet",
-  "dataTransferRequiresAccount": "Registrace účtu je nutná pro přenos a obnovení dat při změně zařízení nebo ztrátě telefonu.",
+  "dataTransferRequiresAccount": "Při změně nebo ztrátě telefonu je k přenosu či obnovení dat potřeba registrace účtu.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "O období neomezených funkcí",
   "pillSheet": "blistr",

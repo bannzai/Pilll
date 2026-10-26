@@ -14,7 +14,7 @@
   "medicationHistory": "አወሳሰድ ታሪክ",
   "settings": "ቅንብሮች",
   "account": "መለያ",
-  "dataTransferRequiresAccount": "በስልክ መቀየር ወይም በስልክ መጥፋት ጊዜ ዳታን ለማዛወር እና ለመመለስ የመለያ ምዝገባ ያስፈልጋል።",
+  "dataTransferRequiresAccount": "ስልክ ሲቀይሩ ወይም ሲጠፋብዎት ውሂብን ለማስተላለፍ ወይም መልሶ ለማግኘት የመለያ ምዝገባ ያስፈልጋል።",
   "pillPremium": "Pilll ፕሪሚየም",
   "unlimitedFeatureDuration": "ስለ ያልተገደበ ተግባራት ጊዜ",
   "pillSheet": "ክኒን ፓኬት",

@@ -14,7 +14,7 @@
   "medicationHistory": "qabul qilish tarixi",
   "settings": "Sozlamalar",
   "account": "Hisob",
-  "dataTransferRequiresAccount": "Telefon almashtirish yoki yo'qolgan hollarda ma'lumotlarni yangi qurilmaga ko'chirish va tiklash uchun akkaunt ro'yxatdan o'tish kerak.",
+  "dataTransferRequiresAccount": "Telefoningizni almashtirsangiz yoki yoʻqotib qoʻysangiz, maʼlumotlarni koʻchirish yoki tiklash uchun hisob qaydnomasi ochishingiz kerak.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Cheksiz funksiyalar muddati haqida",
   "pillSheet": "Tabletka varag'i",

@@ -14,7 +14,7 @@
   "medicationHistory": "historia przyjmowania tabletek",
   "settings": "Ustawienia",
   "account": "Konto",
-  "dataTransferRequiresAccount": "Rejestracja konta jest wymagana do przenoszenia i przywracania danych w przypadku zmiany urządzenia lub utraty telefonu.",
+  "dataTransferRequiresAccount": "Jeśli zmienisz lub zgubisz telefon, do przeniesienia albo przywrócenia danych potrzebne będzie zarejestrowane konto.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "O okresie nieograniczonych funkcji",
   "pillSheet": "Blister",

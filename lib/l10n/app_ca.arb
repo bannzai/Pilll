@@ -14,7 +14,7 @@
   "medicationHistory": "historial de preses",
   "settings": "Configuració",
   "account": "Compte",
-  "dataTransferRequiresAccount": "El registre de compte és necessari per a la transferència i recuperació de dades en cas de canvi de dispositiu o pèrdua del telèfon mòbil.",
+  "dataTransferRequiresAccount": "Si canvies de telèfon o el perds, necessites un compte registrat per transferir o recuperar les dades.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Sobre el període de funcions il·limitades",
   "pillSheet": "Blíster",

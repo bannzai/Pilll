@@ -14,7 +14,7 @@
   "medicationHistory": "historial de tomas",
   "settings": "Configuración",
   "account": "Conta",
-  "dataTransferRequiresAccount": "Para a transferencia e restauración de datos en casos como o cambio de dispositivo ou a perda do móbil, é necesario o rexistro dunha conta.",
+  "dataTransferRequiresAccount": "Se cambias de teléfono ou o perdes, necesitas rexistrar unha conta para transferir ou recuperar os teus datos.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Sobre o período de funcións ilimitadas",
   "pillSheet": "Placa de píldoras",

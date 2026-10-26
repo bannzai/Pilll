@@ -14,7 +14,7 @@
   "medicationHistory": "pillerihistoria",
   "settings": "Asetukset",
   "account": "Tili",
-  "dataTransferRequiresAccount": "Laitteen vaihdossa tai puhelimen menetyksen yhteydessä tietojen siirtäminen ja palauttaminen vaatii tilin rekisteröinnin.",
+  "dataTransferRequiresAccount": "Jos vaihdat puhelinta tai puhelimesi katoaa, tarvitset rekisteröidyn tilin tietojesi siirtämiseen tai palauttamiseen.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "Rajoittamattomien ominaisuuksien ajasta",
   "pillSheet": "pillerilevi",

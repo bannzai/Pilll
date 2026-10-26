@@ -14,7 +14,7 @@
   "medicationHistory": "सेवन इतिहास",
   "settings": "सेटिङहरू",
   "account": "खाता",
-  "dataTransferRequiresAccount": "मोडेल परिवर्तन वा स्मार्टफोन हराउने जस्ता अवस्थाहरूमा डाटा स्थानान्तरण र पुनर्स्थापनाका लागि खाता दर्ता आवश्यक छ।",
+  "dataTransferRequiresAccount": "फोन फेर्दा वा हराउँदा डेटा सार्न वा पुनः प्राप्त गर्न तपाईंले खाता दर्ता गर्नुपर्छ।",
   "pillPremium": "Pilll प्रिमियम",
   "unlimitedFeatureDuration": "पूर्ण सुविधा अवधिको बारेमा",
   "pillSheet": "पिल पाना",

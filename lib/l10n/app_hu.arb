@@ -14,7 +14,7 @@
   "medicationHistory": "szedési előzmények",
   "settings": "Beállítások",
   "account": "Fiók",
-  "dataTransferRequiresAccount": "Készülékváltás vagy telefon elvesztése esetén az adatok átviteléhez és visszaállításához fiókregisztráció szükséges.",
+  "dataTransferRequiresAccount": "Ha telefont váltasz, vagy elveszíted a telefonodat, az adataid átviteléhez vagy visszaállításához regisztrált fiókra van szükség.",
   "pillPremium": "Pilll Prémium",
   "unlimitedFeatureDuration": "A korlátlan funkciók időszakáról",
   "pillSheet": "Tablettacsomag",

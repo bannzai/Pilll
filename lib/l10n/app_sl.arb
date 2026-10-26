@@ -14,7 +14,7 @@
   "medicationHistory": "zgodovina jemanja",
   "settings": "Nastavitve",
   "account": "Račun",
-  "dataTransferRequiresAccount": "Za prenos in obnovitev podatkov v primeru menjave naprave ali izgube pametnega telefona je potrebna registracija računa.",
+  "dataTransferRequiresAccount": "Če zamenjate ali izgubite telefon, za prenos ali obnovitev podatkov potrebujete registriran račun.",
   "pillPremium": "Pilll Premium",
   "unlimitedFeatureDuration": "O obdobju neomejenih funkcij",
   "pillSheet": "tablični paket",
