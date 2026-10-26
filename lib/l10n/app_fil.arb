@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "May naganap na hindi kilalang error. Pakisubukan po ulit mamaya. Kung magpatuloy ang problema, makipag-ugnayan sa amin sa Mga Setting > Makipag-ugnayan sa amin. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Nagkaroon ng error sa {storeName}. Pakisubukan po ulit pagkalipas ng ilang sandali.",
   "purchaseErrorPurchaseNotAllowedError": "Hindi pinapayagan ang pagbili sa device na ito",
-  "purchaseErrorPurchaseInvalidError": "Hindi natagumpay ang pagbabayad. Pakitingnan kung wasto ang paraan ng pagbabayad at subukang muli.",
+  "purchaseErrorPurchaseInvalidError": "Hindi natuloy ang pagbabayad. Pakitingnan po kung wasto ang paraan ninyo ng pagbabayad, at subukan muli.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ang target na plano ay kasalukuyang hindi available para sa pagbili. Mangyaring i-restart ang app at subukang muli.",
   "purchaseErrorProductAlreadyPurchasedError": "Nabili mo na ang plano. Kung nais mong ibalik ang impormasyon ng pagbili sa device na ito, pumunta sa \"Para sa mga dating bumili, dito\" upang maibalik ang impormasyon ng pagbili.",
   "purchaseErrorReceiptAlreadyInUseError": "Nabili na. O ginagamit ng ibang user ang impormasyon ng pagbili. Pakitingnan ang {accountName}.",

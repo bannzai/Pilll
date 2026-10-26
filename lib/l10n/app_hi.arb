@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "कोई अज्ञात त्रुटि हुई है। कृपया थोड़ी देर बाद फिर कोशिश करें। समस्या बनी रहे तो सेटिंग्स > संपर्क करें से हमसे संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} में कोई समस्या हुई है। कृपया थोड़ी देर बाद फिर से कोशिश करें।",
   "purchaseErrorPurchaseNotAllowedError": "इस डिवाइस पर खरीदारी की अनुमति नहीं है",
-  "purchaseErrorPurchaseInvalidError": "भुगतान असफल हो गया। कृपया अपनी भुगतान विधि की वैधता की जांच करें और पुनः प्रयास करें।",
+  "purchaseErrorPurchaseInvalidError": "भुगतान पूरा नहीं हो सका। कृपया जाँचें कि आपका भुगतान तरीका मान्य है, फिर दोबारा कोशिश करें।",
   "purchaseErrorProductNotAvailableForPurchaseError": "यह प्लान अभी उपलब्ध नहीं है। कृपया ऐप को रीस्टार्ट करके दोबारा कोशिश करें।",
   "purchaseErrorProductAlreadyPurchasedError": "आपने पहले से ही प्लान खरीद लिया है। इस डिवाइस पर खरीदारी की जानकारी को पुनर्स्थापित करने के लिए कृपया \"पहले से खरीदारी करने वाले यहाँ क्लिक करें\" से खरीदारी की जानकारी को पुनर्स्थापित करें",
   "purchaseErrorReceiptAlreadyInUseError": "पहले से खरीदा जा चुका है या खरीदारी की जानकारी किसी अन्य उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया {accountName} की जांच करें।",

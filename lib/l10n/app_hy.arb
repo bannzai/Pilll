@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Անհայտ սխալ է տեղի ունեցել։ Խնդրում ենք մի փոքր ուշ կրկին փորձել։ Եթե խնդիրը շարունակվի, կապվեք մեզ հետ՝ Կարգավորումներ > Կապ մեզ հետ բաժնից։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-ում սխալ է առաջացել։ Խնդրում ենք որոշ ժամանակ անց կրկին փորձել։",
   "purchaseErrorPurchaseNotAllowedError": "Այս սարքում գնումներ կատարել չի թույլատրվում",
-  "purchaseErrorPurchaseInvalidError": "Վճարումը ձախողվեց: Խնդրում ենք ստուգել ձեր վճարման եղանակի վավերությունը և կրկին փորձել:",
+  "purchaseErrorPurchaseInvalidError": "Վճարումը չհաջողվեց։ Ստուգեք՝ արդյոք Ձեր վճարման եղանակը վավեր է, ապա կրկին փորձեք։",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ընտրված ծրագիրն այժմ չի վաճառվում: Խնդրում ենք վերագործարկել ծրագիրը և նորից փորձել:",
   "purchaseErrorProductAlreadyPurchasedError": "Ծրագիրն արդեն գնված է: Այս սարքում գնման տեղեկությունները վերականգնելու համար խնդրում ենք օգտագործել «Նախկինում գնածների համար այստեղ» հղումը:",
   "purchaseErrorReceiptAlreadyInUseError": "Արդեն գնված է կամ գնման տեղեկությունները օգտագործվում են այլ օգտատիրոջ կողմից: Խնդրում ենք ստուգել {accountName}-ը:",

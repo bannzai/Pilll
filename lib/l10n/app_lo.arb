@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ. ຖ້າຍັງມີບັນຫາ, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ພວກເຮົາ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "ເກີດຂໍ້ຜິດພາດໃນ {storeName} ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນອີກບໍ່ດົນ.",
   "purchaseErrorPurchaseNotAllowedError": "ບໍ່ອະນຸຍາດໃຫ້ຊື້ຜ່ານອຸປະກອນນີ້",
-  "purchaseErrorPurchaseInvalidError": "ການຊຳລະເງິນບໍ່ສຳເລັດ. ກະລຸນາກວດສອບວິທີການຊຳລະຂອງທ່ານວ່າຖືກຕ້ອງແລະລອງໃໝ່ອີກຄັ້ງ",
+  "purchaseErrorPurchaseInvalidError": "ການຊຳລະເງິນບໍ່ສຳເລັດ. ກະລຸນາກວດສອບວ່າວິທີຊຳລະເງິນຂອງທ່ານຍັງໃຊ້ໄດ້ ແລ້ວລອງໃໝ່.",
   "purchaseErrorProductNotAvailableForPurchaseError": "ແຜນທີ່ເລືອກໄວ້ຍັງບໍ່ມີຂາຍໃນປັດຈຸບັນ. ກະລຸນາປິດເປີດແອັບຄືນໃໝ່ແລ້ວລອງໃໝ່ອີກຄັ້ງ",
   "purchaseErrorProductAlreadyPurchasedError": "ທ່ານໄດ້ຊື້ແຜນແລ້ວ. ຖ້າທ່ານຕ້ອງການກູ້ຄືນຂໍ້ມູນການຊື້ໃນອຸປະກອນນີ້, ກະລຸນາກູ້ຄືນຂໍ້ມູນການຊື້ຈາກ \"ສຳລັບຜູ້ຊື້ທີ່ຜ່ານມາ\"",
   "purchaseErrorReceiptAlreadyInUseError": "ໄດ້ຊື້ແລ້ວ ຫຼື ຂໍ້ມູນການຊື້ຖືກນຳໃຊ້ໂດຍຜູ້ໃຊ້ອື່ນແລ້ວ. ກະລຸນາກວດສອບ {accountName}",

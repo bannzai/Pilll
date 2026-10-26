@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Ilmnes tundmatu viga. Proovi mõne aja pärast uuesti. Kui probleem püsib, võta meiega ühendust jaotises Seaded > Võta ühendust. Üksikasjad: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Teenuses {storeName} tekkis viga. Proovi mõne aja pärast uuesti.",
   "purchaseErrorPurchaseNotAllowedError": "Selles seadmes pole ostud lubatud",
-  "purchaseErrorPurchaseInvalidError": "Makse ebaõnnestus. Palun kontrollige, kas teie makseviis on kehtiv, ja proovige uuesti.",
+  "purchaseErrorPurchaseInvalidError": "Makse ebaõnnestus. Kontrolli, kas sinu makseviis on kehtiv, ja proovi uuesti.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Valitud plaan ei ole praegu müügil. Palun taaskäivitage rakendus ja proovige uuesti.",
   "purchaseErrorProductAlreadyPurchasedError": "Plaan on juba ostetud. Ostuinfo taastamiseks selles seadmes valige „Varem ostnud kasutajatele\" ja taastage oma ostuinfo.",
   "purchaseErrorReceiptAlreadyInUseError": "Juba ostetud või ostuteave on kasutusel teise kasutaja poolt. Palun kontrollige kontot {accountName}.",

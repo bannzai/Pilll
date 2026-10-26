@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "अज्ञात त्रुटी आली आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्ज > आमच्याशी संपर्क साधा येथून संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} मध्ये त्रुटी आली आहे. कृपया थोड्या वेळाने पुन्हा प्रयत्न करा.",
   "purchaseErrorPurchaseNotAllowedError": "या डिव्हाइसवर खरेदी करण्याची परवानगी नाही",
-  "purchaseErrorPurchaseInvalidError": "पेमेंट अयशस्वी झाले. कृपया योग्य पेमेंट पध्दती आहे का ते तपासून पुन्हा प्रयत्न करा",
+  "purchaseErrorPurchaseInvalidError": "पेमेंट पूर्ण झाले नाही. कृपया तुमची पेमेंट पद्धत वैध आहे का ते तपासा आणि पुन्हा प्रयत्न करा.",
   "purchaseErrorProductNotAvailableForPurchaseError": "लक्षित योजना सध्या विक्रीसाठी उपलब्ध नाही. कृपया अॅप रीस्टार्ट करून पुन्हा प्रयत्न करा",
   "purchaseErrorProductAlreadyPurchasedError": "तुम्ही आधीच प्लॅन खरेदी केलेला आहे. या डिव्हाइसवर खरेदी माहिती पुनर्स्थापित करण्यासाठी \"पूर्वी खरेदी केलेल्यांसाठी इथे\" वरून खरेदी माहिती पुनर्स्थापित करा",
   "purchaseErrorReceiptAlreadyInUseError": "आधीच खरेदी केले आहे किंवा खरेदी माहिती दुसर्‍या वापरकर्त्याने वापरली आहे. {accountName} तपासा.",

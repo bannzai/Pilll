@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุค่ะ โปรดลองอีกครั้งในภายหลัง หากยังพบปัญหา โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา ค่ะ รายละเอียด: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "เกิดข้อผิดพลาดใน {storeName} กรุณาลองอีกครั้งในอีกสักครู่นะคะ",
   "purchaseErrorPurchaseNotAllowedError": "ไม่อนุญาตให้ซื้อสินค้าบนอุปกรณ์นี้ค่ะ",
-  "purchaseErrorPurchaseInvalidError": "การชำระเงินไม่สำเร็จ กรุณาตรวจสอบว่าวิธีการชำระเงินของคุณถูกต้องและมีผลใช้ แล้วลองใหม่อีกครั้ง",
+  "purchaseErrorPurchaseInvalidError": "ชำระเงินไม่สำเร็จค่ะ กรุณาตรวจสอบว่าวิธีชำระเงินยังใช้ได้ แล้วลองอีกครั้งค่ะ",
   "purchaseErrorProductNotAvailableForPurchaseError": "แพ็คเกจที่เลือกไม่สามารถใช้งานได้ในขณะนี้ กรุณาปิดแอปฯ และเปิดใหม่อีกครั้ง",
   "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อในอุปกรณ์นี้ กรุณากู้คืนข้อมูลการซื้อจาก \"สำหรับผู้ที่เคยซื้อแล้ว\"",
   "purchaseErrorReceiptAlreadyInUseError": "ซื้อเรียบร้อยแล้ว หรือข้อมูลการซื้อถูกใช้งานโดยผู้ใช้คนอื่นแล้ว กรุณาตรวจสอบ {accountName}",

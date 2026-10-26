@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Wystąpił nieznany błąd. Spróbuj ponownie za jakiś czas. Jeśli problem się utrzymuje, skontaktuj się z nami przez Ustawienia > Kontakt. Szczegóły: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "W sklepie {storeName} wystąpił błąd. Spróbuj ponownie za chwilę.",
   "purchaseErrorPurchaseNotAllowedError": "Zakupy nie są dozwolone na tym urządzeniu",
-  "purchaseErrorPurchaseInvalidError": "Płatność nie powiodła się. Sprawdź, czy metoda płatności jest ważna i spróbuj ponownie.",
+  "purchaseErrorPurchaseInvalidError": "Płatność nie powiodła się. Sprawdź, czy metoda płatności jest ważna, i spróbuj ponownie.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Wybrany plan nie jest obecnie dostępny. Prosimy o ponowne uruchomienie aplikacji i spróbowanie ponownie.",
   "purchaseErrorProductAlreadyPurchasedError": "Plan został już wykupiony. Aby przywrócić zakup na tym urządzeniu, wybierz „Już wcześniej kupiłem\".",
   "purchaseErrorReceiptAlreadyInUseError": "Już zakupione lub informacje o zakupie są używane przez inne konto. Sprawdź {accountName}.",

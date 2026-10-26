@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Белгісіз қате орын алды. Біраз уақыттан кейін қайталап көріңіз. Мәселе шешілмесе, Баптаулар > Бізге хабарласу арқылы бізге жазыңыз. Мәліметтер: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} дүкенінде қате орын алды. Сәлден кейін қайта көріңіз.",
   "purchaseErrorPurchaseNotAllowedError": "Бұл құрылғыда сатып алуға рұқсат етілмейді",
-  "purchaseErrorPurchaseInvalidError": "Төлем сәтсіз аяқталды. Төлем әдісінің жарамды екенін тексеріп, қайта көріңіз.",
+  "purchaseErrorPurchaseInvalidError": "Төлем орындалмады. Төлем әдісіңіздің жарамды екенін тексеріп, қайта көріңіз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Мақсатты жоспар қазіргі уақытта сатылмайды. Қолданбаны қайта іске қосып, қайталап көріңіз",
   "purchaseErrorProductAlreadyPurchasedError": "Жоспар әлдеқашан сатып алынды. Осы құрылғыда сатып алу ақпаратын қалпына келтіру үшін \"Бұрын сатып алғандар үшін\" бөлімінен сатып алу ақпаратын қалпына келтіріңіз",
   "purchaseErrorReceiptAlreadyInUseError": "Әлдеқашан сатып алынған немесе сатып алу ақپараты басқа пайдаланушымен пайдаланылуда. {accountName} тексеріңіз",

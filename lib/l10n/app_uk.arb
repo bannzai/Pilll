@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Сталася невідома помилка. Будь ласка, спробуйте ще раз трохи пізніше. Якщо проблема не зникне, зв’яжіться з нами через Налаштування > Зв’язатися з нами. Подробиці: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "У {storeName} сталася помилка. Будь ласка, спробуйте ще раз трохи пізніше.",
   "purchaseErrorPurchaseNotAllowedError": "Покупки на цьому пристрої не дозволені",
-  "purchaseErrorPurchaseInvalidError": "Не вдалося здійснити оплату. Будь ласка, перевірте дійсність способу оплати та спробуйте знову",
+  "purchaseErrorPurchaseInvalidError": "Оплата не пройшла. Перевірте, чи дійсний ваш спосіб оплати, і спробуйте ще раз.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Обраний план зараз недоступний для покупки. Будь ласка, перезапустіть додаток і спробуйте знову.",
   "purchaseErrorProductAlreadyPurchasedError": "Ви вже придбали план. Щоб відновити інформацію про покупку на цьому пристрої, скористайтеся посиланням «Для тих, хто вже купував».",
   "purchaseErrorReceiptAlreadyInUseError": "Уже придбано або інформація про покупку використовується іншим користувачем. Будь ласка, перевірте {accountName}",

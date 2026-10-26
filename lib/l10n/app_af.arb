@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "’n Onbekende fout het voorgekom. Probeer asseblief later weer. As dit aanhou, kontak ons via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Daar is tans ’n fout by {storeName}. Probeer asseblief oor ’n rukkie weer.",
   "purchaseErrorPurchaseNotAllowedError": "Aankope word nie op hierdie toestel toegelaat nie",
-  "purchaseErrorPurchaseInvalidError": "Betaling het misluk. Bevestig asseblief dat jou betaalmetode geldig is en probeer weer.",
+  "purchaseErrorPurchaseInvalidError": "Die betaling het misluk. Maak asseblief seker jou betaalmetode is geldig en probeer weer.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Die gekose plan is tans nie beskikbaar nie. Herstart asseblief die toepassing en probeer weer.",
   "purchaseErrorProductAlreadyPurchasedError": "Jy het reeds 'n plan gekoop. As jy koop-inligting op hierdie toestel wil herstel, herstel die koop-inligting asseblief via 'Vir diegene wat voorheen gekoop het'.",
   "purchaseErrorReceiptAlreadyInUseError": "Reeds aangekoop, of die aankoopinligting word deur 'n ander gebruiker gebruik. Kontroleer asseblief {accountName}.",

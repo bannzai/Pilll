@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Ismeretlen hiba történt. Kérjük, próbáld újra később. Ha a probléma továbbra is fennáll, írj nekünk a Beállítások > Kapcsolat menüpontban. Részletek: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Hiba történt a(z) {storeName} áruházban. Kérjük, próbáld újra egy kis idő múlva.",
   "purchaseErrorPurchaseNotAllowedError": "Ezen az eszközön nem engedélyezett a vásárlás",
-  "purchaseErrorPurchaseInvalidError": "A fizetés nem sikerült. Kérjük, ellenőrizze fizetési módját, majd próbálja újra.",
+  "purchaseErrorPurchaseInvalidError": "A fizetés nem sikerült. Ellenőrizd, hogy érvényes-e a fizetési módod, majd próbáld újra.",
   "purchaseErrorProductNotAvailableForPurchaseError": "A kiválasztott csomag jelenleg nem elérhető. Kérjük, indítsa újra az alkalmazást és próbálja újra.",
   "purchaseErrorProductAlreadyPurchasedError": "Már megvásárolta a tervet. A vásárlási információk ezen az eszközön történő visszaállításához használja a „Korábbi vásárlók ide\" opciót.",
   "purchaseErrorReceiptAlreadyInUseError": "Már megvásárolt, vagy a vásárlási információt másik felhasználó használja. Kérjük, ellenőrizze a(z) {accountName} fiókot.",

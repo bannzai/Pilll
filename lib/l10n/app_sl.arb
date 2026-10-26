@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Prišlo je do neznane napake. Poskusite znova čez nekaj časa. Če težava ostane, nam pišite prek Nastavitve > Stik z nami. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "V trgovini {storeName} je prišlo do napake. Poskusite znova čez nekaj časa.",
   "purchaseErrorPurchaseNotAllowedError": "Nakupi v tej napravi niso dovoljeni",
-  "purchaseErrorPurchaseInvalidError": "Plačilo ni uspelo. Prosimo, preverite, ali je način plačila veljaven, in poskusite znova.",
+  "purchaseErrorPurchaseInvalidError": "Plačilo ni uspelo. Preverite, ali je vaš način plačila veljaven, in poskusite znova.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Ta paket trenutno ni na voljo za nakup. Prosimo, ponovno zaženite aplikacijo in poskusite znova.",
   "purchaseErrorProductAlreadyPurchasedError": "Paket je že kupljen. Za obnovitev podatkov o nakupu na tej napravi uporabite povezavo \"Za tiste, ki ste že kupili prej\".",
   "purchaseErrorReceiptAlreadyInUseError": "Že kupljeno ali informacije o nakupu uporabljajo pri drugem uporabniku. Preverite {accountName}.",

@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "അജ്ഞാതമായ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കൂ. പ്രശ്നം തുടരുകയാണെങ്കിൽ, ക്രമീകരണങ്ങൾ > ഞങ്ങളെ ബന്ധപ്പെടുക വഴി ബന്ധപ്പെടൂ. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}ൽ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് സമയത്തിന് ശേഷം വീണ്ടും ശ്രമിക്കൂ.",
   "purchaseErrorPurchaseNotAllowedError": "ഈ ഉപകരണത്തിൽ വാങ്ങലുകൾ അനുവദനീയമല്ല",
-  "purchaseErrorPurchaseInvalidError": "പേയ്‌മെന്റ് പരാജയപ്പെട്ടു. സാധുവായ പേയ്‌മെന്റ് രീതിയാണോ എന്ന് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",
+  "purchaseErrorPurchaseInvalidError": "പണമടയ്ക്കൽ പൂർത്തിയായില്ല. നിങ്ങളുടെ പണമടയ്ക്കൽ രീതി സാധുവാണെന്ന് പരിശോധിച്ച ശേഷം വീണ്ടും ശ്രമിക്കൂ.",
   "purchaseErrorProductNotAvailableForPurchaseError": "തിരഞ്ഞെടുത്ത പ്ലാൻ നിലവിൽ ലഭ്യമല്ല. ദയവായി ആപ്പ് പുനരാരംഭിച്ച് വീണ്ടും ശ്രമിക്കുക",
   "purchaseErrorProductAlreadyPurchasedError": "നിങ്ങൾ ഇതിനകം പ്ലാൻ വാങ്ങിയിട്ടുണ്ട്. ഈ ഉപകരണത്തിൽ വാങ്angangൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ \"മുമ്പ് വാങ്ങിയവർക്കായി ഇവിടെ\" എന്നതിൽ നിന്ന് വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കുക",
   "purchaseErrorReceiptAlreadyInUseError": "ഇതിനകം വാങ്ങിയതാണു്. വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവു് ഉപയോഗിക്കുന്നു. {accountName} പരിശോധിക്കുക.",

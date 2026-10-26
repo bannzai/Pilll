@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "یوه ناپېژندل شوې تېروتنه رامنځته شوې ده. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ. که ستونزه دوام وکړي، د امستنې > له موږ سره اړیکه له لارې له موږ سره اړیکه ونیسئ. جزیات: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "په {storeName} کې تېروتنه رامنځته شوې ده. مهرباني وکړئ لږ وروسته بیا هڅه وکړئ.",
   "purchaseErrorPurchaseNotAllowedError": "په دې وسیله کې د پېرودلو اجازه نشته",
-  "purchaseErrorPurchaseInvalidError": "پیسې ورکول ناکام شو. مهرباني وکړئ وګورئ چې ستاسو د پیسو ورکولو طریقه سمه ده او بیا یې وآزمویئ",
+  "purchaseErrorPurchaseInvalidError": "تادیه بشپړه نه شوه. مهرباني وکړئ وګورئ چې ستاسو د تادیې طریقه معتبره ده، بیا هڅه وکړئ.",
   "purchaseErrorProductNotAvailableForPurchaseError": "دا پلان اوس مه پلورل کیږي. مهرباني وکړئ اپلیکیشن بیا پیل کړئ او بیا یې وآزمویئ",
   "purchaseErrorProductAlreadyPurchasedError": "تاسو دمخه پلان پېرودلې دی. که تاسو غواړئ چې پدې وسیله کې د پیرود معلومات بیرته راوړئ، مهرباني وکړئ د «دمخه یې پیرودلي دلته» څخه د پیرود معلومات بیرته راوړئ",
   "purchaseErrorReceiptAlreadyInUseError": "دمخه پیرودل شوی. یا د پیرودنې معلومات د بل کاروونکي لخوا کارول کیږي. {accountName} تصدیق یې وکړئ",

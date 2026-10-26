@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Ralat yang tidak diketahui telah berlaku. Sila cuba lagi sebentar nanti. Jika masalah berterusan, hubungi kami melalui Tetapan > Hubungi kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ralat berlaku di {storeName}. Sila cuba lagi sebentar nanti.",
   "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini",
-  "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Sila pastikan kaedah pembayaran anda sah dan cuba lagi.",
+  "purchaseErrorPurchaseInvalidError": "Pembayaran tidak berjaya. Sila semak sama ada kaedah pembayaran anda sah, kemudian cuba lagi.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Pelan ini tidak tersedia pada masa ini. Sila mulakan semula aplikasi dan cuba lagi.",
   "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila klik 'Bagi yang sudah membeli sebelum ini' untuk memulihkan maklumat pembelian anda.",
   "purchaseErrorReceiptAlreadyInUseError": "Telah dibeli atau maklumat pembelian sedang digunakan oleh pengguna lain. Sila sahkan {accountName}",

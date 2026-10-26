@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Ocorreu um erro desconhecido. Tente novamente mais tarde. Se o problema continuar, entre em contato conosco em Configurações > Fale conosco. Detalhes: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Ocorreu um erro na {storeName}. Tente novamente daqui a pouco.",
   "purchaseErrorPurchaseNotAllowedError": "Não é permitido fazer compras neste dispositivo",
-  "purchaseErrorPurchaseInvalidError": "O pagamento falhou. Verifique se seu método de pagamento é válido e tente novamente.",
+  "purchaseErrorPurchaseInvalidError": "Não foi possível concluir o pagamento. Confira se a forma de pagamento é válida e tente novamente.",
   "purchaseErrorProductNotAvailableForPurchaseError": "O plano selecionado não está disponível para compra no momento. Por favor, reinicie o aplicativo e tente novamente.",
   "purchaseErrorProductAlreadyPurchasedError": "Você já possui um plano ativo. Para restaurar as informações de compra neste dispositivo, utilize \"Para usuários que já compraram anteriormente\" para restaurar suas informações de compra.",
   "purchaseErrorReceiptAlreadyInUseError": "Já adquirido ou as informações de compra já estão sendo utilizadas por outro usuário. Verifique {accountName}.",

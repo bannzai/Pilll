@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Er is een onbekende fout opgetreden. Probeer het later opnieuw. Blijft het probleem bestaan? Neem dan contact met ons op via Instellingen > Contact opnemen. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Er is een fout opgetreden bij {storeName}. Probeer het over een tijdje opnieuw.",
   "purchaseErrorPurchaseNotAllowedError": "Aankopen zijn niet toegestaan op dit apparaat",
-  "purchaseErrorPurchaseInvalidError": "Betaling mislukt. Controleer uw betaalmethode en probeer het opnieuw.",
+  "purchaseErrorPurchaseInvalidError": "De betaling is niet gelukt. Controleer of je betaalmethode geldig is en probeer het opnieuw.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Het geselecteerde abonnement is momenteel niet beschikbaar. Herstart de app en probeer het opnieuw.",
   "purchaseErrorProductAlreadyPurchasedError": "U heeft al een plan aangeschaft. Om de aankoopinformatie op dit apparaat te herstellen, klik op 'Voor eerdere kopers' om uw aankoopinformatie te herstellen.",
   "purchaseErrorReceiptAlreadyInUseError": "Al gekocht. De aankoopinformatie wordt al gebruikt door een andere gebruiker. Controleer {accountName}.",

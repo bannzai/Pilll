@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Es isch en unbekannte Fähler passiert. Probier’s bitte spöter nomal. Wänn s Problem bliibt, chasch eus über Iistellige > Kontakt kontaktiere. Details: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Bi {storeName} isch en Fähler passiert. Probier’s bitte spöter nomal.",
   "purchaseErrorPurchaseNotAllowedError": "Uf däm Grät sind Chäuf nöd erlaubt",
-  "purchaseErrorPurchaseInvalidError": "Zahlung fehlgeschlagen. Bitte überprüfen Sie Ihre Zahlungsmethode und versuchen Sie es erneut.",
+  "purchaseErrorPurchaseInvalidError": "S Zahle hät nöd klappt. Lueg bitte, öb dini Zahligsmethode gültig isch, und probiers nomal.",
   "purchaseErrorProductNotAvailableForPurchaseError": "S gwählte Abo isch momentan nöd verfüegbar. Bitte start d App neu und probier's nomol.",
   "purchaseErrorProductAlreadyPurchasedError": "Sie händ bereits es Abo kauft. Um d'Chaufinformatione uf dem Gerät z'widerherstellä, chönd Sie uf 'Für vorherigi Chäufer da' klickä.",
   "purchaseErrorReceiptAlreadyInUseError": "Scho chauft oder d'Chaufinfo wird vo emne andere Benutzer bruucht. Prüef bitte {accountName}.",

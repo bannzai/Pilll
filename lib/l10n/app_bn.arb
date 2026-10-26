@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "একটি অজানা ত্রুটি হয়েছে। অনুগ্রহ করে কিছুক্ষণ পরে আবার চেষ্টা করুন। সমস্যা থেকে গেলে সেটিংস > যোগাযোগ করুন থেকে আমাদের জানান। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName}-এ একটি সমস্যা হয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন।",
   "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইসে কেনাকাটার অনুমতি নেই",
-  "purchaseErrorPurchaseInvalidError": "পেমেন্ট ব্যর্থ হয়েছে। দয়া করে আপনার পেমেন্ট পদ্ধতি বৈধ কিনা যাচাই করে আবার চেষ্টা করুন।",
+  "purchaseErrorPurchaseInvalidError": "পেমেন্ট সম্পন্ন হয়নি। আপনার পেমেন্ট পদ্ধতিটি বৈধ কি না দেখে আবার চেষ্টা করুন।",
   "purchaseErrorProductNotAvailableForPurchaseError": "নির্বাচিত প্ল্যানটি বর্তমানে উপলব্ধ নেই। দয়া করে অ্যাপটি পুনরায় চালু করে আবার চেষ্টা করুন।",
   "purchaseErrorProductAlreadyPurchasedError": "আপনি ইতিমধ্যে প্ল্যানটি কিনেছেন। এই ডিভাইসে ক্রয়ের তথ্য পুনরুদ্ধার করতে চাইলে 'পূর্বে কিনেছেন এমন ব্যবহারকারীরা এখানে' থেকে ক্রয়ের তথ্য পুনরুদ্ধার করুন",
   "purchaseErrorReceiptAlreadyInUseError": "ইতিমধ্যে ক্রয় সম্পন্ন হয়েছে অথবা ক্রয়ের তথ্য অন্য ব্যবহারকারী ব্যবহার করছেন। {accountName} যাচাই করুন।",

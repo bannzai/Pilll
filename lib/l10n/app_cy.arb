@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Mae gwall anhysbys wedi digwydd. Rhowch gynnig arall arni ymhen ychydig. Os bydd y broblem yn parhau, cysylltwch â ni drwy Gosodiadau > Cysylltu â ni. Manylion: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "Mae gwall wedi digwydd yn {storeName}. Rhowch gynnig arall arni ymhen ychydig, os gwelwch yn dda.",
   "purchaseErrorPurchaseNotAllowedError": "Ni chaniateir pryniannau ar y ddyfais hon",
-  "purchaseErrorPurchaseInvalidError": "Methodd y taliad. Gwiriwch fod eich dull talu yn ddilys a cheisiwch eto.",
+  "purchaseErrorPurchaseInvalidError": "Methodd y taliad. Gwiriwch fod eich dull talu yn ddilys a rhowch gynnig arall arni.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Nid yw'r cynllun hwn ar gael ar hyn o bryd. Ailgychwynnwch yr ap os gwelwch yn dda a rhoi cynnig arall arni.",
   "purchaseErrorProductAlreadyPurchasedError": "Rydych eisoes wedi prynu cynllun. Os ydych am adfer gwybodaeth brynu ar y ddyfais hon, adferch eich gwybodaeth brynu o \"Cliciwch yma os ydych wedi prynu o'r blaen\"",
   "purchaseErrorReceiptAlreadyInUseError": "Eisoes wedi'i brynu neu mae'r wybodaeth brynu yn cael ei defnyddio gan ddefnyddiwr arall. Gwiriwch {accountName}.",

@@ -290,7 +290,7 @@
   "purchaseErrorUnknownError": "Bilinmeyen bir hata oluştu. Lütfen biraz sonra tekrar deneyin. Sorun devam ederse Ayarlar > Bize ulaşın üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorStoreProblemError": "{storeName} mağazasında bir hata oluştu. Lütfen biraz sonra tekrar deneyin.",
   "purchaseErrorPurchaseNotAllowedError": "Bu cihazda satın alma işlemine izin verilmiyor",
-  "purchaseErrorPurchaseInvalidError": "Ödeme işlemi başarısız oldu. Lütfen ödeme yönteminizin geçerli olduğunu kontrol ederek tekrar deneyin.",
+  "purchaseErrorPurchaseInvalidError": "Ödeme tamamlanamadı. Ödeme yönteminizin geçerli olup olmadığını kontrol edip tekrar deneyin.",
   "purchaseErrorProductNotAvailableForPurchaseError": "Seçilen plan şu anda mevcut değildir. Lütfen uygulamayı yeniden başlatın ve tekrar deneyin.",
   "purchaseErrorProductAlreadyPurchasedError": "Zaten bir plan satın almışsınız. Bu cihazda satın alma bilgilerinizi geri yüklemek için \"Daha önce satın alanlar için buraya\" seçeneğinden satın alma bilgilerinizi geri yükleyin.",
   "purchaseErrorReceiptAlreadyInUseError": "Zaten satın alındı veya satın alma bilgileri başka bir kullanıcı tarafından kullanılıyor. {accountName} hesabını kontrol edin.",
