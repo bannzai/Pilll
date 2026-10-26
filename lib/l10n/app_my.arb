@@ -360,7 +360,7 @@
   "letsTryIt": "စမ်းသုံးကြည့်ပါ",
   "trialDeadlineDateOffsetDay": "လုပ်ဆောင်ချက်အားလုံးကို {number} ရက် အသုံးပြုနိုင်ပါတယ်!",
   "inputAndAdd": "ရေးထည့်ပြီး ထပ်ဖြည့်ပါ",
-  "averagePeriod": "ပျမ်းမျှ စက်ဝန်း",
+  "averagePeriod": "ရာသီစက်ဝန်း၏ ပျမ်းမျှကြာချိန်",
   "averageDays": "ပျမ်းမျှရက်သင့်း",
   "days": "ရက်",
   "memo": "မှတ်စု",

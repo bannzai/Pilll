@@ -360,7 +360,7 @@
   "letsTryIt": "لطفاً امتحانش کنید",
   "trialDeadlineDateOffsetDay": "می‌توانید به مدت {number} روز از همه امکانات استفاده کنید!",
   "inputAndAdd": "وارد کنید و اضافه کنید",
-  "averagePeriod": "میانگین دوره",
+  "averagePeriod": "میانگین طول چرخه قاعدگی",
   "averageDays": "میانگین روزها",
   "days": "روز",
   "memo": "یادداشت",

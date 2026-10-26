@@ -360,7 +360,7 @@
   "letsTryIt": "თქვენც სცადეთ",
   "trialDeadlineDateOffsetDay": "ყველა ფუნქციით სარგებლობა {number} დღის განმავლობაში შეგიძლიათ!",
   "inputAndAdd": "შეყვანა და დამატება",
-  "averagePeriod": "საშუალო ციკლი",
+  "averagePeriod": "ციკლის საშუალო ხანგრძლივობა",
   "averageDays": "საშუალო დღეები",
   "days": "დღე",
   "memo": "შენიშვნა",

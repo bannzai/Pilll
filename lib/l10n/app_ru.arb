@@ -360,7 +360,7 @@
   "letsTryIt": "Попробуйте",
   "trialDeadlineDateOffsetDay": "Вы можете пользоваться всеми функциями в течение {number} дней!",
   "inputAndAdd": "Введите и добавьте",
-  "averagePeriod": "Средний цикл",
+  "averagePeriod": "Средняя длина цикла",
   "averageDays": "Среднее количество дней",
   "days": "дней",
   "memo": "Заметка",

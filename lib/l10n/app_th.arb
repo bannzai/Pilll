@@ -360,7 +360,7 @@
   "letsTryIt": "ลองใช้ดูนะคะ",
   "trialDeadlineDateOffsetDay": "ใช้ทุกฟีเจอร์ได้เต็มที่ตลอด {number} วันค่ะ!",
   "inputAndAdd": "พิมพ์แล้วเพิ่ม",
-  "averagePeriod": "รอบเฉลี่ย",
+  "averagePeriod": "ระยะเวลาเฉลี่ยของรอบเดือน",
   "averageDays": "เฉลี่ยจำนวนวัน",
   "days": "วัน",
   "memo": "บันทึก",

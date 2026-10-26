@@ -360,7 +360,7 @@
   "letsTryIt": "Rhowch gynnig arni",
   "trialDeadlineDateOffsetDay": "Gallwch ddefnyddio pob nodwedd am {number} diwrnod!",
   "inputAndAdd": "Rhowch y testun ac ychwanegwch",
-  "averagePeriod": "Cyfartaledd Cylch",
+  "averagePeriod": "Hyd cyfartalog y cylch mislif",
   "averageDays": "Dyddiau Cyfartalog",
   "days": "diwrnod",
   "memo": "nodyn",
