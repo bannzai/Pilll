@@ -8,7 +8,7 @@
   "pillSheetType21": "Type med 21 p-piller (alle er hormonpiller)",
   "pillSheetType24WithRest4": "Type med 24 p-piller",
   "restPeriod": "pillepause",
-  "placebo": "placebopille",
+  "placebo": "placebo",
   "userNotFound": "Bruker ikke funnet",
   "userAlreadyExists": "Brukeren finnes allerede",
   "medicationHistory": "Medisinhistorikk",

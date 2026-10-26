@@ -8,7 +8,7 @@
   "pillSheetType21": "Type à 21 pilules (toutes des pilule actives)",
   "pillSheetType24WithRest4": "Type à 24 pilules",
   "restPeriod": "pause",
-  "placebo": "pilule placebo",
+  "placebo": "placebo",
   "userNotFound": "Utilisateur introuvable",
   "userAlreadyExists": "L'utilisateur existe déjà",
   "medicationHistory": "Historique d'admission",

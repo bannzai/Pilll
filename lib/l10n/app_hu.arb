@@ -8,7 +8,7 @@
   "pillSheetType21": "21 tablettás típus (mind hatóanyagos)",
   "pillSheetType24WithRest4": "24 tablettás típus",
   "restPeriod": "szünet",
-  "placebo": "placebo",
+  "placebo": "placebotabletta",
   "userNotFound": "A felhasználó nem található",
   "userAlreadyExists": "A felhasználó már létezik",
   "medicationHistory": "Bevételi előzmények",
