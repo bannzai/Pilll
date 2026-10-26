@@ -169,7 +169,7 @@
   "login": "Кіру",
   "beforePremiumRegistration": "премиумға тіркелмес бұрын…",
   "createNewAccountIfNotLoggedIn": "Егер сіз Pilll қолданбасына бұрын кірмеген болсаңыз, сізге жаңа есептік жазба жасалады",
-  "registerAccountForDataTransfer": "Тіркелгі жасаған кезде деректерді сақтау мен ауыстыру мүмкіндігі пайда болады",
+  "registerAccountForDataTransfer": "Тіркелгі ашқаннан кейін деректеріңізді басқа құрылғыға көшіре аласыз",
   "registerAccountToKeepData": "Аккаунт ақпаратын сақтау үшін, аккаунтқа тіркелуіңізді сұраймыз",
   "signInWith": "{loginName} арқылы кіру",
   "registerWith": "{loginName} арқылы тіркелу",

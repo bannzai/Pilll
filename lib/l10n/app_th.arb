@@ -169,7 +169,7 @@
   "login": "เข้าสู่ระบบ",
   "beforePremiumRegistration": "ก่อนสมัครพรีเมียม…",
   "createNewAccountIfNotLoggedIn": "หากยังไม่เคยเข้าสู่ระบบ Pilll ระบบจะสร้างบัญชีใหม่ให้ค่ะ",
-  "registerAccountForDataTransfer": "การลงทะเบียนบัญชีจะทำให้สามารถถ่ายโอนข้อมูลได้",
+  "registerAccountForDataTransfer": "เมื่อลงทะเบียนบัญชีแล้ว จะย้ายข้อมูลไปยังอุปกรณ์เครื่องอื่นได้ค่ะ",
   "registerAccountToKeepData": "กรุณาลงทะเบียนบัญชีผู้ใช้เพื่อเก็บรักษาข้อมูลบัญชีของคุณ",
   "signInWith": "เข้าสู่ระบบด้วย{loginName}",
   "registerWith": "ลงทะเบียนด้วย {loginName}",

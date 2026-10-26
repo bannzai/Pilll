@@ -169,7 +169,7 @@
   "login": "ଲଗ୍ ଇନ୍ କରନ୍ତୁ",
   "beforePremiumRegistration": "ପ୍ରିମିୟମ ପାଇଁ ପଞ୍ଜୀକରଣ କରିବା ପୂର୍ବରୁ…",
   "createNewAccountIfNotLoggedIn": "ଆପଣ ପୂର୍ବରୁ Pilll ରେ ଲଗ୍ ଇନ୍ କରିନଥିଲେ, ଆପଣଙ୍କ ପାଇଁ ଏକ ନୂଆ ଖାତା ତିଆରି କରାଯିବ",
-  "registerAccountForDataTransfer": "ଖାତା ପଞ୍ଜୀକରଣ କଲେ ଡାଟା ସ୍ଥାନାନ୍ତରଣ ସମ୍ଭବ ହେବ",
+  "registerAccountForDataTransfer": "ଆକାଉଣ୍ଟ ଖୋଲିଲେ ଆପଣ ନିଜ ତଥ୍ୟ ଅନ୍ୟ ଡିଭାଇସକୁ ସ୍ଥାନାନ୍ତର କରିପାରିବେ",
   "registerAccountToKeepData": "ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ସୂଚନା ସଂରକ୍ଷିତ ରଖିବା ପାଇଁ, ଦୟାକରି ଆକାଉଣ୍ଟ ପଞ୍ଜୀକରଣ କରନ୍ତୁ",
   "signInWith": "{loginName} ରେ ସାଇନ ଇନ",
   "registerWith": "{loginName} ସହିତ ରେଜିଷ୍ଟର କରନ୍ତୁ",

@@ -169,7 +169,7 @@
   "login": "लग इन गर्नुहोस्",
   "beforePremiumRegistration": "प्रिमियममा दर्ता गर्नुअघि…",
   "createNewAccountIfNotLoggedIn": "तपाईंले पहिले Pilll मा लग इन गर्नुभएको छैन भने, तपाईंका लागि नयाँ खाता बनाइनेछ",
-  "registerAccountForDataTransfer": "खाता दर्ता गरेपछि डाटा स्थानान्तरण गर्न सकिन्छ",
+  "registerAccountForDataTransfer": "खाता खोल्नुभयो भने तपाईं आफ्नो डेटा अर्को उपकरणमा सार्न सक्नुहुन्छ",
   "registerAccountToKeepData": "खाता जानकारी सुरक्षित राख्नका लागि, कृपया खाता दर्ता गर्नुहोस्",
   "signInWith": "{loginName} बाट साइन इन",
   "registerWith": "{loginName} मार्फत दर्ता गर्नुहोस्",

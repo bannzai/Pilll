@@ -169,7 +169,7 @@
   "login": "အကောင့်ဝင်ရန်",
   "beforePremiumRegistration": "ပရီမီယံအတွက် စာရင်းမသွင်းမီ…",
   "createNewAccountIfNotLoggedIn": "Pilll သို့ ယခင်က ဝင်ရောက်ဖူးခြင်းမရှိပါက အကောင့်အသစ်တစ်ခု ဖန်တီးပေးပါမယ်",
-  "registerAccountForDataTransfer": "အကောင့်မှတ်ပုံတင်ပါက ဒေတာများကို လွှဲပြောင်းနိုင်မည်ဖြစ်ပါသည်",
+  "registerAccountForDataTransfer": "အကောင့်ဖွင့်ထားပါက ဒေတာများကို အခြားစက်သို့ လွှဲပြောင်းနိုင်ပါတယ်",
   "registerAccountToKeepData": "အကောင့်အချက်အလက်များ သိမ်းဆည်းထားရန်အတွက် အကောင့်ဖွင့်ပေးပါရန် တောင်းဆိုပါတယ်",
   "signInWith": "{loginName} ဖြင့် လော့ဂ်အင်",
   "registerWith": "{loginName}ဖြင့် စာရင်းသွင်းရန်",

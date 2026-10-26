@@ -169,7 +169,7 @@
   "login": "ننوتل",
   "beforePremiumRegistration": "د پریمیم لپاره له نوم‌لیکنې مخکې…",
   "createNewAccountIfNotLoggedIn": "که تاسو مخکې Pilll ته ننوتي نه یاست، ستاسو لپاره به نوی حساب جوړ شي",
-  "registerAccountForDataTransfer": "د حساب ثبت کولو سره د ډیټا لیږد امکان لري",
+  "registerAccountForDataTransfer": "د حساب په جوړولو سره تاسو کولی شئ خپل معلومات بلې وسیلې ته ولېږدوئ",
   "registerAccountToKeepData": "د حساب معلوماتو ساتلو لپاره، مهرباني وکړئ حساب راجستر کړئ",
   "signInWith": "د {loginName} سره ننوتل",
   "registerWith": "په {loginName} ثبت نوم",

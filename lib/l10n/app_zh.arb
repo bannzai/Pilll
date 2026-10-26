@@ -169,7 +169,7 @@
   "login": "登录",
   "beforePremiumRegistration": "注册高级版之前…",
   "createNewAccountIfNotLoggedIn": "如果你以前从未登录过 Pilll，系统会为你创建新账号",
-  "registerAccountForDataTransfer": "注册账户后可以实现数据同步",
+  "registerAccountForDataTransfer": "注册账号后，就可以将数据转移到其他设备",
   "registerAccountToKeepData": "为了保存账户信息，请注册账户",
   "signInWith": "使用{loginName}登录",
   "registerWith": "使用{loginName}注册",

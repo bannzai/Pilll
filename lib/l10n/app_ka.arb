@@ -169,7 +169,7 @@
   "login": "შესვლა",
   "beforePremiumRegistration": "პრემიუმზე რეგისტრაციამდე…",
   "createNewAccountIfNotLoggedIn": "თუ Pilll-ში აქამდე არ შესულხართ, თქვენთვის ახალი ანგარიში შეიქმნება",
-  "registerAccountForDataTransfer": "ანგარიშის რეგისტრაცია მონაცემების გადატანის საშუალებას იძლევა",
+  "registerAccountForDataTransfer": "ანგარიშის შექმნის შემდეგ შეგიძლიათ თქვენი მონაცემები სხვა მოწყობილობაზე გადაიტანოთ",
   "registerAccountToKeepData": "ანგარიშის ინფორმაციის შენარჩუნებისთვის, გთხოვთ დარეგისტრირდეთ",
   "signInWith": "{loginName}-ით შესვლა",
   "registerWith": "{loginName}-ით რეგისტრაცია",

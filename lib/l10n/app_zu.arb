@@ -169,7 +169,7 @@
   "login": "Ngena ngemvume",
   "beforePremiumRegistration": "Ngaphambi kokubhalisela i-Premium…",
   "createNewAccountIfNotLoggedIn": "Uma ungakaze ungene ku-Pilll ngaphambilini, uzokwakhelwa i-akhawunti entsha",
-  "registerAccountForDataTransfer": "Uma ubhalisa i-akhawunti, uzokwazi ukuhambisa idatha yakho",
+  "registerAccountForDataTransfer": "Uma uvula i-akhawunti, ungadlulisela idatha yakho kwenye idivayisi",
   "registerAccountToKeepData": "Sicela wenze i-akhawunti ukuze sigcine imininingwane yakho ephephile",
   "signInWith": "Ngena nge-{loginName}",
   "registerWith": "Bhalisa ngo-{loginName}",

@@ -169,7 +169,7 @@
   "login": "Bejelentkezés",
   "beforePremiumRegistration": "A prémiumra való regisztráció előtt…",
   "createNewAccountIfNotLoggedIn": "Ha még nem jelentkeztél be a Pilll alkalmazásba, új fiók jön létre számodra",
-  "registerAccountForDataTransfer": "Fiók regisztrálásával lehetővé válik az adatok átvitele",
+  "registerAccountForDataTransfer": "Ha létrehozol egy fiókot, átviheted az adataidat egy másik készülékre",
   "registerAccountToKeepData": "Az adatok megőrzése érdekében kérjük, regisztráljon fiókot",
   "signInWith": "Bejelentkezés {loginName}-val",
   "registerWith": "Regisztráció {loginName} segítségével",

@@ -169,7 +169,7 @@
   "login": "Logg inn",
   "beforePremiumRegistration": "Før du registrerer deg for Premium…",
   "createNewAccountIfNotLoggedIn": "Hvis du ikke har logget inn på Pilll før, opprettes en ny konto for deg",
-  "registerAccountForDataTransfer": "Ved å registrere en konto blir det mulig å overføre data",
+  "registerAccountForDataTransfer": "Når du oppretter en konto, kan du overføre dataene dine til en annen enhet",
   "registerAccountToKeepData": "Vennligst registrer en konto for å opprettholde kontoinformasjonen din",
   "signInWith": "Logg inn med {loginName}",
   "registerWith": "Registrer med {loginName}",

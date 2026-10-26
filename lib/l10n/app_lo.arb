@@ -169,7 +169,7 @@
   "login": "ເຂົ້າລະບົບ",
   "beforePremiumRegistration": "ກ່ອນລົງທະບຽນໃຊ້ Premium…",
   "createNewAccountIfNotLoggedIn": "ຖ້າທ່ານຍັງບໍ່ເຄີຍເຂົ້າສູ່ Pilll, ຈະມີການສ້າງບັນຊີໃໝ່ໃຫ້ທ່ານ",
-  "registerAccountForDataTransfer": "ການລົງທະບຽນບັນຊີຈະເຮັດໃຫ້ສາມາດຖ່າຍທອດຂໍ້ມູນໄດ້",
+  "registerAccountForDataTransfer": "ເມື່ອສ້າງບັນຊີແລ້ວ ທ່ານສາມາດຍ້າຍຂໍ້ມູນໄປອຸປະກອນອື່ນໄດ້",
   "registerAccountToKeepData": "ເພື່ອເກັບຮັກສາຂໍ້ມູນບັນຊີ, ກະລຸນາລົງທະບຽນບັນຊີ",
   "signInWith": "ເຂົ້າສູ່ລະບົບດ້ວຍ {loginName}",
   "registerWith": "ລົງທະບຽນດ້ວຍ {loginName}",

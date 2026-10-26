@@ -169,7 +169,7 @@
   "login": "Kirjaudu sisään",
   "beforePremiumRegistration": "Ennen Premium-tilausta…",
   "createNewAccountIfNotLoggedIn": "Jos et ole aiemmin kirjautunut Pilll-sovellukseen, sinulle luodaan uusi tili",
-  "registerAccountForDataTransfer": "Tilin luominen mahdollistaa tietojen siirtämisen",
+  "registerAccountForDataTransfer": "Kun luot tilin, voit siirtää tietosi toiseen laitteeseen",
   "registerAccountToKeepData": "Rekisteröidy tilille tietojesi säilyttämiseksi",
   "signInWith": "Kirjaudu sisään {loginName}-tilillä",
   "registerWith": "Rekisteröidy {loginName}:lla",

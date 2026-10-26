@@ -169,7 +169,7 @@
   "login": "Meld aan",
   "beforePremiumRegistration": "Voordat jy vir Premium registreer…",
   "createNewAccountIfNotLoggedIn": "As jy nog nooit by Pilll aangemeld het nie, word ’n nuwe rekening vir jou geskep",
-  "registerAccountForDataTransfer": "Deur 'n rekening te registreer, word data oordrag moontlik",
+  "registerAccountForDataTransfer": "As jy ’n rekening skep, kan jy jou data na ’n ander toestel oordra",
   "registerAccountToKeepData": "Registreer asseblief 'n rekening om jou inligting te bewaar",
   "signInWith": "Teken in met {loginName}",
   "registerWith": "Registreer met {loginName}",

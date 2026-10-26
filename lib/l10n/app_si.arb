@@ -169,7 +169,7 @@
   "login": "පිවිසෙන්න",
   "beforePremiumRegistration": "ප්‍රීමියම් සඳහා ලියාපදිංචි වීමට පෙර…",
   "createNewAccountIfNotLoggedIn": "ඔබ මීට පෙර Pilll වෙත පිවිස නොමැති නම්, ඔබ වෙනුවෙන් නව ගිණුමක් සාදනු ලැබේ",
-  "registerAccountForDataTransfer": "ගිණුමක් ලියාපදිංචි කළහොත් දත්ත ස්ථානාන්තරණය කළ හැකිය",
+  "registerAccountForDataTransfer": "ගිණුමක් සාදාගත් පසු ඔබේ දත්ත වෙනත් උපාංගයකට මාරු කළ හැකියි",
   "registerAccountToKeepData": "ගිණුම් තොරතුරු සුරක්ෂිත කරගැනීම සඳහා කරුණාකර ගිණුමක් ලියාපදිංචි කරන්න",
   "signInWith": "{loginName} මගින් ප්‍රවේශ වන්න",
   "registerWith": "{loginName} සමඟ ලියාපදිංචි කරන්න",

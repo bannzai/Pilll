@@ -169,7 +169,7 @@
   "login": "تسجيل الدخول",
   "beforePremiumRegistration": "قبل الاشتراك في بريميوم…",
   "createNewAccountIfNotLoggedIn": "إذا لم يسبق لكِ تسجيل الدخول إلى Pilll، فسيُنشأ لكِ حساب جديد",
-  "registerAccountForDataTransfer": "تسجيل الحساب يتيح نقل البيانات",
+  "registerAccountForDataTransfer": "عند إنشاء حساب، يمكنكِ نقل بياناتكِ إلى جهاز آخر",
   "registerAccountToKeepData": "يرجى تسجيل حساب للحفاظ على معلومات حسابك",
   "signInWith": "تسجيل الدخول باستخدام {loginName}",
   "registerWith": "تسجيل بـ{loginName}",

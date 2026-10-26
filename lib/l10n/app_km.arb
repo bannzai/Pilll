@@ -169,7 +169,7 @@
   "login": "ចូលគណនី",
   "beforePremiumRegistration": "មុនពេលចុះឈ្មោះប្រើគម្រោងព្រីមៀម…",
   "createNewAccountIfNotLoggedIn": "ប្រសិនបើអ្នកមិនធ្លាប់ចូល Pilll ពីមុនទេ គណនីថ្មីនឹងត្រូវបានបង្កើតសម្រាប់អ្នក",
-  "registerAccountForDataTransfer": "ការចុះឈ្មោះគណនីនឹងអនុញ្ញាតឱ្យអ្នកផ្ទេរទិន្នន័យបាន",
+  "registerAccountForDataTransfer": "នៅពេលបង្កើតគណនី អ្នកអាចផ្ទេរទិន្នន័យទៅឧបករណ៍ផ្សេងបាន",
   "registerAccountToKeepData": "សូមចុះឈ្មោះគណនីដើម្បីរក្សាទុកព័ត៌មានរបស់អ្នក",
   "signInWith": "ចូលប្រើដោយ {loginName}",
   "registerWith": "ចុះឈ្មោះជាមួយ{loginName}",

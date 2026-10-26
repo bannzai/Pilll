@@ -169,7 +169,7 @@
   "login": "Hyni",
   "beforePremiumRegistration": "Para se të regjistroheni për premium…",
   "createNewAccountIfNotLoggedIn": "Nëse nuk jeni identifikuar më parë në Pilll, do të krijohet një llogari e re për ju",
-  "registerAccountForDataTransfer": "Regjistrimi i llogarisë mundëson transferimin e të dhënave",
+  "registerAccountForDataTransfer": "Pasi të krijoni një llogari, mund t’i transferoni të dhënat tuaja në një pajisje tjetër",
   "registerAccountToKeepData": "Ju lutem regjistrohuni për të ruajtur informacionin e llogarisë suaj",
   "signInWith": "Identifikohuni me {loginName}",
   "registerWith": "Regjistrohu me {loginName}",

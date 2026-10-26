@@ -169,7 +169,7 @@
   "login": "Кирүү",
   "beforePremiumRegistration": "премиумга катталуудан мурун…",
   "createNewAccountIfNotLoggedIn": "Эгер сиз Pilll'ге мурда кирбеген болсоңуз, сиз үчүн жаңы аккаунт түзүлөт",
-  "registerAccountForDataTransfer": "Эсеп каттасаңыз, маалыматтарды которуп алуу мүмкүн болот",
+  "registerAccountForDataTransfer": "Каттоо эсебин ачкандан кийин дайындарыңызды башка түзмөккө көчүрө аласыз",
   "registerAccountToKeepData": "Маалыматыңызды сактоо үчүн аккаунт түзүүнү суранабыз",
   "signInWith": "{loginName} менен кирүү",
   "registerWith": "{loginName} менен катталуу",

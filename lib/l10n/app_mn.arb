@@ -169,7 +169,7 @@
   "login": "Нэвтрэх",
   "beforePremiumRegistration": "премиумд бүртгүүлэхээс өмнө…",
   "createNewAccountIfNotLoggedIn": "Хэрэв та өмнө нь Pilll-д нэвтэрч байгаагүй бол танд шинэ бүртгэл үүсгэнэ",
-  "registerAccountForDataTransfer": "Бүртгэл үүсгэснээр өгөгдлийг шилжүүлэх боломжтой болно",
+  "registerAccountForDataTransfer": "Бүртгэл үүсгэснээр та мэдээллээ өөр төхөөрөмж рүү шилжүүлэх боломжтой болно",
   "registerAccountToKeepData": "Мэдээллээ хадгалж үлдээхийн тулд бүртгэл үүсгэнэ үү",
   "signInWith": "{loginName}-ээр нэвтрэх",
   "registerWith": "{loginName}ээр бүртгэх",

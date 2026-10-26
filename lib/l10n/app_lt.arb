@@ -169,7 +169,7 @@
   "login": "Prisijungti",
   "beforePremiumRegistration": "Prieš registruojantis į Premium…",
   "createNewAccountIfNotLoggedIn": "Jei anksčiau nesate prisijungę prie Pilll, jums bus sukurta nauja paskyra",
-  "registerAccountForDataTransfer": "Užsiregistravus paskyrą galėsite perkelti duomenis",
+  "registerAccountForDataTransfer": "Sukūrę paskyrą galėsite perkelti savo duomenis į kitą įrenginį",
   "registerAccountToKeepData": "Prašome užsiregistruoti paskyrą, kad galėtume išsaugoti jūsų duomenis",
   "signInWith": "Prisijungti su {loginName}",
   "registerWith": "Registruotis su {loginName}",

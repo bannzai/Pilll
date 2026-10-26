@@ -169,7 +169,7 @@
   "login": "Logi sisse",
   "beforePremiumRegistration": "Enne premiumiga liitumist…",
   "createNewAccountIfNotLoggedIn": "Kui sa pole varem Pilll sisse loginud, luuakse sulle uus konto",
-  "registerAccountForDataTransfer": "Konto registreerimisel saab võimalikuks andmete ülekandmine",
+  "registerAccountForDataTransfer": "Kui lood konto, saad oma andmed teise seadmesse üle kanda",
   "registerAccountToKeepData": "Andmete säilitamiseks palume teil kasutajakonto registreerida",
   "signInWith": "Logi sisse {loginName}ga",
   "registerWith": "Registreeru {loginName} abil",

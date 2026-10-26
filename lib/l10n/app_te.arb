@@ -169,7 +169,7 @@
   "login": "లాగిన్ అవ్వండి",
   "beforePremiumRegistration": "ప్రీమియం కోసం నమోదు చేసుకునే ముందు…",
   "createNewAccountIfNotLoggedIn": "మీరు ఇంతకు ముందు Pilllలో లాగిన్ చేయకపోతే, మీ కోసం కొత్త ఖాతా సృష్టించబడుతుంది",
-  "registerAccountForDataTransfer": "ఖాతా నమోదు చేయడంవల్ల డేటా బదిలీ సాధ్యమవుతుంది",
+  "registerAccountForDataTransfer": "ఖాతా సృష్టిస్తే మీ డేటాను మరో పరికరానికి బదిలీ చేయవచ్చు",
   "registerAccountToKeepData": "ఖాతా సమాచారాన్ని భద్రపరచడానికి, దయచేసి ఖాతా నమోదు చేసుకోండి",
   "signInWith": "{loginName}తో సైన్ ఇన్ చేయండి",
   "registerWith": "{loginName}తో నమోదు",

@@ -169,7 +169,7 @@
   "login": "Вход",
   "beforePremiumRegistration": "Преди регистрация за премиум…",
   "createNewAccountIfNotLoggedIn": "Ако досега не сте влизали в Pilll, ще бъде създаден нов акаунт за вас",
-  "registerAccountForDataTransfer": "Регистрацията на акаунт позволява прехвърляне на данни",
+  "registerAccountForDataTransfer": "След като създадете профил, можете да прехвърлите данните си на друго устройство",
   "registerAccountToKeepData": "Моля, регистрирайте акаунт, за да запазим вашите данни",
   "signInWith": "Влезте с {loginName}",
   "registerWith": "Регистриране с {loginName}",

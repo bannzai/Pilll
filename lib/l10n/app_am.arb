@@ -169,7 +169,7 @@
   "login": "ይግቡ",
   "beforePremiumRegistration": "ለፕሪሚየም ከመመዝገብዎ በፊት…",
   "createNewAccountIfNotLoggedIn": "ከዚህ በፊት ወደ Pilll ገብተው የማያውቁ ከሆነ፣ አዲስ መለያ ይፈጠርልዎታል",
-  "registerAccountForDataTransfer": "መለያ ካመዘገቡ በኋላ ውሂብ ማስተላለፍ ይቻላል",
+  "registerAccountForDataTransfer": "መለያ ሲመዘግቡ ውሂብዎን ወደ ሌላ መሣሪያ ማስተላለፍ ይችላሉ",
   "registerAccountToKeepData": "የመለያ መረጃዎን ለማቆየት እባክዎ መለያ ይመዝገቡ",
   "signInWith": "በ{loginName} መግባት",
   "registerWith": "በ{loginName} ይመዝገቡ",

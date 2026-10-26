@@ -169,7 +169,7 @@
   "login": "ورود",
   "beforePremiumRegistration": "پیش از ثبت‌نام در پریمیوم…",
   "createNewAccountIfNotLoggedIn": "اگر تاکنون وارد Pilll نشده‌اید، حساب جدیدی برای شما ساخته می‌شود",
-  "registerAccountForDataTransfer": "ثبت نام حساب کاربری امکان انتقال اطلاعات را فراهم می‌کند",
+  "registerAccountForDataTransfer": "با ساخت حساب، می‌توانید داده‌های خود را به دستگاه دیگری منتقل کنید",
   "registerAccountToKeepData": "برای حفظ اطلاعات حساب کاربری، لطفاً ثبت نام کنید",
   "signInWith": "ورود با {loginName}",
   "registerWith": "ثبت نام با {loginName}",

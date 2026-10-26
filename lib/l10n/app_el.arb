@@ -169,7 +169,7 @@
   "login": "Σύνδεση",
   "beforePremiumRegistration": "Πριν εγγραφείτε στο Premium…",
   "createNewAccountIfNotLoggedIn": "Αν δεν έχετε συνδεθεί ξανά στο Pilll, θα δημιουργηθεί ένας νέος λογαριασμός για εσάς",
-  "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού μπορείτε να μεταφέρετε τα δεδομένα σας",
+  "registerAccountForDataTransfer": "Αν δημιουργήσετε λογαριασμό, μπορείτε να μεταφέρετε τα δεδομένα σας σε άλλη συσκευή",
   "registerAccountToKeepData": "Παρακαλούμε δημιουργήστε λογαριασμό για να διατηρήσουμε τα στοιχεία σας",
   "signInWith": "Σύνδεση με {loginName}",
   "registerWith": "Εγγραφή με {loginName}",

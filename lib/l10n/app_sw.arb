@@ -169,7 +169,7 @@
   "login": "Ingia",
   "beforePremiumRegistration": "Kabla ya kujisajili kwa Premium…",
   "createNewAccountIfNotLoggedIn": "Ikiwa hujawahi kuingia kwenye Pilll, akaunti mpya itaundwa kwa ajili yako",
-  "registerAccountForDataTransfer": "Kusajili akaunti kutakuwezesha kuhamisha data yako",
+  "registerAccountForDataTransfer": "Ukifungua akaunti, unaweza kuhamishia data yako kwenye kifaa kingine",
   "registerAccountToKeepData": "Tafadhali jisajili akaunti ili kuhifadhi taarifa zako",
   "signInWith": "Ingia kwa {loginName}",
   "registerWith": "Jiandikishe na {loginName}",
