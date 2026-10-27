@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan endre teksten i starten av varselet",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Skriv inn minst 0 tegn",
+  "enterAtLeastOneCharacter": "Skriv inn minst 1 tegn",
   "changeDailyNotificationMessage": "Du kan endre teksten i varselet som vises når du har tatt p-pillen",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Få et varsel samme dag kl. 09:00",

@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 active pills + 4 placebo pills",
   "twentyOnePlusSevenPlacebo": "21 active pills + 7 placebo pills",
   "allActivePills": "All active pills",
-  "twentyFourPlusFourDaysBreak": "24 pills + 4-day pill break",
+  "twentyFourPlusFourDaysBreak": "24 pills + a 4-day pill break",
   "choosePillType": "Choose pill type",
   "notificationForNotTakenPeriod": "Notification for the {pillSheetPillSheetTypeNotTakenWord} period",
   "autoRecordForNotTakenPeriodIfNotificationOff": "When notifications are off, a pill log is also created automatically for the {pillSheetPillSheetTypeNotTakenWord} period",

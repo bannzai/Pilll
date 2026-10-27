@@ -279,7 +279,7 @@
   "twentyFourPlusFourPlacebo": "24 wirkstoffhaltige Pillen + 4 Placebo-Pillen",
   "twentyOnePlusSevenPlacebo": "21 wirkstoffhaltige Pillen + 7 Placebo-Pillen",
   "allActivePills": "Nur Wirkstofftabletten",
-  "twentyFourPlusFourDaysBreak": "24 Pillen + 4 Pillen für die Einnahmepause",
+  "twentyFourPlusFourDaysBreak": "24 Pillen + 4 Tage Einnahmepause",
   "choosePillType": "Wähle deinen Pillentyp",
   "notificationForNotTakenPeriod": "Benachrichtigung zur {pillSheetPillSheetTypeNotTakenWord}-Phase",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wenn Benachrichtigungen ausgeschaltet sind, wird auch für die {pillSheetPillSheetTypeNotTakenWord}-Phase automatisch ein Einnahmeprotokoll erstellt",

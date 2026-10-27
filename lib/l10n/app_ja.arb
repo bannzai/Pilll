@@ -1203,9 +1203,9 @@
       }
     }
   },
-  "enterAtLeastOneCharacter": "0文字以上入力してください",
+  "enterAtLeastOneCharacter": "1文字以上入力してください",
   "@enterAtLeastOneCharacter": {
-    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
+    "description": "通知文言のカスタマイズで入力が空の時に赤字で表示する案内。原文は長く「0文字以上」だったが、空欄で既に満たす条件を警告する誤記なので「1文字以上」に直した (PR #1955 の Codex レビュー)。翻訳では必ず 1 文字以上を求める表現にする"
   },
   "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
@@ -1362,9 +1362,9 @@
   "@allActivePills": {
     "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
-  "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
+  "twentyFourPlusFourDaysBreak": "24錠＋4日休薬",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターン。原文は長く「4錠休薬」と誤記されていたが、兄弟キー twentyOnePlusSevenDaysBreak (21錠＋7日休薬) と同じく休薬は日数で表す (PR #1955 の Codex レビュー)。翻訳では「4 日間の休薬」と日数で表し、「休薬用の 4 錠」のように錠数にしない (twentyFourPlusFourPlacebo = 24錠＋4錠偽薬 と区別する)"
   },
   "choosePillType": "ピルの種類を選ぶ",
   "@choosePillType": {
@@ -2736,7 +2736,6 @@
       }
     }
   },
-
   "addPausePeriod": "服用お休み期間を追加",
   "@addPausePeriod": {
     "description": "前回のピルシートグループの画面で、終了した服用お休み期間を後から追加するボタンの文言です。"
@@ -2749,7 +2748,6 @@
   "@pausePeriodOverlapsOther": {
     "description": "服用お休み期間の追加・変更で、既存の別の服用お休み期間と重なる期間が選択された場合に表示されるエラーメッセージです。"
   },
-
   "pauseEndDateMustBeAfterStartDate": "服用お休み終了日は開始日より後の日付を選択してください",
   "@pauseEndDateMustBeAfterStartDate": {
     "description": "服用お休み期間の追加・変更で、終了日 (服用再開日) に開始日と同じ日付が選択された場合に表示されるエラーメッセージです。終了日は服用を再開する日のため、開始日と同じだとお休み期間が0日になってしまうことを防ぎます。"

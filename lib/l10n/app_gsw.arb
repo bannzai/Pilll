@@ -243,7 +243,7 @@
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du chasch de Text am Aafang vo de Mitteilig ändere",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
-  "enterAtLeastOneCharacter": "Gib bitte mindestens 0 Zeiche ii",
+  "enterAtLeastOneCharacter": "Gib bitte mindeschtens 1 Zeiche ii",
   "changeDailyNotificationMessage": "Du chasch de Text vo de Erinnerig ändere, wo chunnt, wänn du d Pille scho gnoh hesch",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "Am gliiche Tag um 9:00 e Mitteilig übercho",
