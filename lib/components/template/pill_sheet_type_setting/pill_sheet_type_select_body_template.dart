@@ -51,28 +51,32 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
           children: [
             _pillSheet(PillSheetType.pillsheet_24_0),
             const SizedBox(width: 16),
-            Container(constraints: PillSheetTypeColumn.boxConstraints),
+            Flexible(child: Container(constraints: PillSheetTypeColumn.boxConstraints)),
           ],
         ),
       ],
     );
   }
 
+  // 説明文が長い言語でカードが画面幅を超えて Row が溢れないよう、各カードを Row の半分までに収める。
+  // カード内の Text は幅が決まることで折り返す
   Widget _pillSheet(PillSheetType type) {
-    return GestureDetector(
-      onTap: () {
-        analytics.logEvent(
-          name: 'pill_sheet_type_selected',
-          parameters: {
-            'pill_sheet_type': type.toString(),
-            'pill_sheet_name': type.fullName,
-          },
-        );
-        onSelect(type);
-      },
-      child: PillSheetTypeColumn(
-        pillSheetType: type,
-        selected: selectedFirstPillSheetType == type,
+    return Flexible(
+      child: GestureDetector(
+        onTap: () {
+          analytics.logEvent(
+            name: 'pill_sheet_type_selected',
+            parameters: {
+              'pill_sheet_type': type.toString(),
+              'pill_sheet_name': type.fullName,
+            },
+          );
+          onSelect(type);
+        },
+        child: PillSheetTypeColumn(
+          pillSheetType: type,
+          selected: selectedFirstPillSheetType == type,
+        ),
       ),
     );
   }

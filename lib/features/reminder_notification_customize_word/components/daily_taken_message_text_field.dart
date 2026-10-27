@@ -34,17 +34,21 @@ class DailyTakenMessageTextField extends StatelessWidget {
           ),
         ),
         counter: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              L.changeDailyNotificationMessage,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-                color: TextColor.darkGray,
+            // 説明文が長い言語で Row が溢れないよう、文字数の表示を除いた幅で折り返す
+            Expanded(
+              child: Text(
+                L.changeDailyNotificationMessage,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.darkGray,
+                ),
               ),
             ),
-            const Spacer(),
+            const SizedBox(width: 8),
             if (dailyTakenMessage.value.characters.isNotEmpty)
               Text(
                 '${dailyTakenMessage.value.characters.length}/100',

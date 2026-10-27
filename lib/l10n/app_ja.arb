@@ -1179,7 +1179,7 @@
   },
   "changeMissedNotificationMessage": "飲み忘れてる場合の通知文言を変更できます",
   "@changeMissedNotificationMessage": {
-    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the missed-pill notification)。"
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {
@@ -1209,7 +1209,7 @@
   },
   "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
-    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {
@@ -1348,23 +1348,23 @@
   },
   "twentyOnePlusSevenDaysBreak": "21錠＋7日休薬",
   "@twentyOnePlusSevenDaysBreak": {
-    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
+    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7日休薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7-day break)。"
   },
   "twentyFourPlusFourPlacebo": "24錠＋4錠偽薬",
   "@twentyFourPlusFourPlacebo": {
-    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
+    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「24錠＋4錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 24 pills + 4 placebo)。"
   },
   "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
   "@twentyOnePlusSevenPlacebo": {
-    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
+    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7 placebo)。"
   },
   "allActivePills": "すべて実薬",
   "@allActivePills": {
-    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
+    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「すべて実薬」に当たる 2〜3 語の短い表記にする (例: All active)。"
   },
   "twentyFourPlusFourDaysBreak": "24錠＋4日休薬",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターン。原文は長く「4錠休薬」と誤記されていたが、兄弟キー twentyOnePlusSevenDaysBreak (21錠＋7日休薬) と同じく休薬は日数で表す (PR #1955 の Codex レビュー)。翻訳では「4 日間の休薬」と日数で表し、「休薬用の 4 錠」のように錠数にしない (twentyFourPlusFourPlacebo = 24錠＋4錠偽薬 と区別する)"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターン。原文は長く「4錠休薬」と誤記されていたが、兄弟キー twentyOnePlusSevenDaysBreak (21錠＋7日休薬) と同じく休薬は日数で表す (PR #1955 の Codex レビュー)。翻訳では「4 日間の休薬」と日数で表し、「休薬用の 4 錠」のように錠数にしない (twentyFourPlusFourPlacebo = 24錠＋4錠偽薬 と区別する) ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「24錠＋4日休薬」のように数字と記号を使った短い表記にし、文にしない (例: 24 pills + 4-day break)。"
   },
   "choosePillType": "ピルの種類を選ぶ",
   "@choosePillType": {
