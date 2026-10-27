@@ -350,7 +350,7 @@
   "diaryRecord": "Dagboeknotitie toevoegen",
   "scheduleRecord": "Afspraak toevoegen",
   "previousPillSheetGroupNotFound": "Er is nog geen vorige pillenstripgroep",
-  "withPillSheetCount": "{number, plural, =1{1 pillenstrip} other{{number} pillenstrips}}",
+  "withPillSheetCount": "{number} pillenstrips",
   "connectionError": "Je internetverbinding lijkt instabiel. Probeer het later nog eens.",
   "unknownErrorAndRetryAfter": "Er is iets misgegaan. Probeer het later nog eens",
   "errorOccurred": "Er is een fout opgetreden",
