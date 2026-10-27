@@ -48,3 +48,6 @@ fastlane
 
 vendor
 .bundle
+
+# 1Password の参照 (op://...) だけを書くファイル。値を持たないためコミットする
+!.env.1password*
