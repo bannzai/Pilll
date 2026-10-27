@@ -23,10 +23,25 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # 「ヤーズフレックスの方ですか？」→ はい
-# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ
-- extendedWaitUntil:
-    visible: "ヤーズフレックスの方ですか？"
-    timeout: 60000
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ。
+# 通知許可ダイアログが上の 15 秒より後に出ると、下の画面の文字を Maestro が検出できず待ちが失敗する
+# (maestro-e2e run 40455785333 の失敗時の画面)。最大 60 秒の間、ダイアログが出ていれば許可して待ち直す
+- repeat:
+    times: 6
+    while:
+      notVisible: "ヤーズフレックスの方ですか？"
+    commands:
+      - runFlow:
+          when:
+            visible: "許可"
+          commands:
+            - tapOn: "許可"
+            - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "ヤーズフレックスの方ですか？"
+          timeout: 10000
+          optional: true
+- assertVisible: "ヤーズフレックスの方ですか？"
 - tapOn: "はい"
 - waitForAnimationToEnd
 
