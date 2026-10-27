@@ -71,22 +71,26 @@ class InitialSettingYazFlexPage extends ConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                SizedBox(
-                  width: 180,
-                  child: AppOutlinedButton(
-                    text: L.no,
-                    onPressed: () async {
-                      analytics.logEvent(name: 'initial_setting_yaz_flex_no');
-                      store.selectNotYazFlex();
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          settings: const RouteSettings(
-                            name: 'InitialSettingPillSheetGroupPage',
+                // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+                Semantics(
+                  identifier: 'initial_setting_yaz_flex_no_button',
+                  child: SizedBox(
+                    width: 180,
+                    child: AppOutlinedButton(
+                      text: L.no,
+                      onPressed: () async {
+                        analytics.logEvent(name: 'initial_setting_yaz_flex_no');
+                        store.selectNotYazFlex();
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            settings: const RouteSettings(
+                              name: 'InitialSettingPillSheetGroupPage',
+                            ),
+                            builder: (_) => InitialSettingPillSheetGroupPageRoute.screen(),
                           ),
-                          builder: (_) => InitialSettingPillSheetGroupPageRoute.screen(),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
