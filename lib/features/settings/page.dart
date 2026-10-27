@@ -10,6 +10,7 @@ import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/features/settings/components/rows/end_trial_for_debug.dart';
 import 'package:pilll/features/settings/components/rows/create_ended_before_pill_sheet_group_for_debug.dart';
 import 'package:pilll/features/settings/components/rows/admob_list_row.dart';
+import 'package:pilll/features/settings/components/rows/debug_app_language_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_announcement_bar_list_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
 import 'package:pilll/features/settings/components/rows/lifetime_offer_paywall_row.dart';
@@ -466,6 +467,8 @@ Android: https://onl.sc/c9xnQUk''';
                     return SettingSectionTitle(
                       text: '開発者オプション',
                       children: [
+                        const DebugAppLanguageRow(),
+                        _separator(),
                         const FeatureAppealHelpPageListRow(),
                         _separator(),
                         const FeatureAppealAnnouncementBarListRow(),
