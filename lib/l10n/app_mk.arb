@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете да го промените текстот на известувањето за неземена таблета",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Можете да го промените текстот на почетокот на известувањето",
+  "changeNotificationHeader": "Можете да го смените почетокот на известувањето",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Ве молиме, внесете најмалку 1 знак",
   "changeDailyNotificationMessage": "Можете да го промените текстот на известувањето кога таблета е земена навреме",

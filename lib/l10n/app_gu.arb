@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ગોળી લેવાનું રહી જાય ત્યારે આવતી સૂચનાનો સંદેશ તમે બદલી શકો છો",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "તમે સૂચનાની શરૂઆતનું લખાણ બદલી શકો છો",
+  "changeNotificationHeader": "તમે સૂચનાની શરૂઆતનો લખાણ બદલી શકો છો",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "કૃપા કરીને ઓછામાં ઓછો 1 અક્ષર દાખલ કરો",
   "changeDailyNotificationMessage": "ગોળી સમયસર લીધી હોય ત્યારે આવતી સૂચનાનો સંદેશ તમે બદલી શકો છો",

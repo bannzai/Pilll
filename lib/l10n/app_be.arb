@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Вы можаце змяніць тэкст апавяшчэння пра непрынятую пігулку",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Вы можаце змяніць тэкст у пачатку апавяшчэння",
+  "changeNotificationHeader": "Вы можаце змяніць пачатак апавяшчэння",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Калі ласка, увядзіце прынамсі 1 сімвал",
   "changeDailyNotificationMessage": "Вы можаце змяніць тэкст апавяшчэння, калі прынялі пігулку своечасова",

@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "אפשר לשנות את נוסח ההתראה על גלולה שלא ניטלה",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "אפשר לשנות את הטקסט בתחילת ההתראה",
+  "changeNotificationHeader": "אפשר לשנות את תחילת ההתראה",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "יש להזין לפחות תו אחד",
   "changeDailyNotificationMessage": "אפשר לשנות את נוסח ההתראה שמופיעה כשהגלולה ניטלת בזמן",

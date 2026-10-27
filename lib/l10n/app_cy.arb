@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Gallwch newid testun yr hysbysiad am bilsen heb ei chymryd",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Gallwch newid y testun ar ddechrau'r hysbysiad",
+  "changeNotificationHeader": "Gallwch newid dechrau'r hysbysiad",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Rhowch o leiaf 1 nod, os gwelwch yn dda",
   "changeDailyNotificationMessage": "Gallwch newid testun yr hysbysiad pan fyddwch chi wedi cymryd y bilsen mewn pryd",

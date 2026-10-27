@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Módosíthatod a be nem vett tablettáról szóló értesítés szövegét",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Módosíthatod az értesítés elején megjelenő szöveget",
+  "changeNotificationHeader": "Módosíthatod az értesítés elejét",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Írj be legalább 1 karaktert",
   "changeDailyNotificationMessage": "Módosíthatod az értesítés szövegét, ha időben szeded a tablettát",

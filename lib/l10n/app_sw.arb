@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa ya kidonge ambacho hakijamezwa",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Unaweza kubadilisha maandishi ya mwanzo wa arifa",
+  "changeNotificationHeader": "Unaweza kubadilisha mwanzo wa arifa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Tafadhali andika angalau herufi 1",
   "changeDailyNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa unapomeza kidonge kwa wakati",

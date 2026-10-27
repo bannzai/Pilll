@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Эмээ уухаа мартсан үед ирэх мэдэгдлийн текстийг өөрчилж болно",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Мэдэгдлийн эхэнд харагдах бичвэрийг өөрчилж болно",
+  "changeNotificationHeader": "Мэдэгдлийн эхний хэсгийг өөрчилж болно",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Дор хаяж 1 тэмдэгт оруулна уу",
   "changeDailyNotificationMessage": "Эмээ цагт нь уусан үед ирэх мэдэгдлийн текстийг өөрчилж болно",

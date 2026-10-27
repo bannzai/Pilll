@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Voit muuttaa ottamatta jääneen pillerin ilmoitustekstiä",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Voit muuttaa ilmoituksen alussa näkyvää tekstiä",
+  "changeNotificationHeader": "Voit muuttaa ilmoituksen alkuosaa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Kirjoita vähintään 1 merkki",
   "changeDailyNotificationMessage": "Voit muuttaa ilmoituksen tekstiä, kun olet ottanut pillerin ajallaan",

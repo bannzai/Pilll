@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "អ្នកអាចកែអត្ថបទជូនដំណឹងពេលភ្លេចលេបថ្នាំគ្រាប់",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "អ្នកអាចផ្លាស់ប្ដូរអត្ថបទនៅដើមការជូនដំណឹង",
+  "changeNotificationHeader": "អ្នកអាចប្តូរអត្ថបទដើមនៃការជូនដំណឹង",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "សូមបញ្ចូលយ៉ាងហោចណាស់ 1 តួអក្សរ",
   "changeDailyNotificationMessage": "អ្នកអាចប្ដូរអត្ថបទជូនដំណឹងពេលលេបថ្នាំគ្រាប់ទាន់ពេល",

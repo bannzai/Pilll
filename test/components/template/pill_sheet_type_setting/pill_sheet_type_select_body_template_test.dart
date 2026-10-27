@@ -49,5 +49,22 @@ void main() {
             lessThanOrEqualTo((screenWidth - 16) / 2));
       }
     });
+
+    testWidgets('最後の段のカードが上の段の左の列と同じ位置に揃う (空き枠が広がって左へずれない)', (tester) async {
+      tester.view.physicalSize = const Size(screenWidth, 900);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+
+      await tester.pumpWidget(subject());
+      await tester.pump();
+
+      final cards = tester
+          .widgetList<PillSheetTypeColumn>(find.byType(PillSheetTypeColumn))
+          .toList();
+      // 各段の左のカードは 0・2・4・6 番目 (最後の段は 6 番目と、不可視の空き枠 7 番目)
+      final firstRowLeft = tester.getTopLeft(find.byWidget(cards[0])).dx;
+      final lastRowLeft = tester.getTopLeft(find.byWidget(cards[6])).dx;
+      expect(lastRowLeft, moreOrLessEquals(firstRowLeft, epsilon: 1));
+    });
   });
 }

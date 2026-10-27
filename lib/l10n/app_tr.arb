@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Hap alınmadığında gelen bildirim metnini değiştirebilirsiniz",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Bildirimin başındaki metni değiştirebilirsiniz",
+  "changeNotificationHeader": "Bildirimin başlangıcını değiştirebilirsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Lütfen en az 1 karakter girin",
   "changeDailyNotificationMessage": "Hapı zamanında aldığınızda gösterilen bildirim metnini değiştirebilirsiniz",

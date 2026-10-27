@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Pilula hartu ez duzunerako jakinarazpenaren testua alda dezakezu",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Jakinarazpenaren hasierako testua alda dezakezu",
+  "changeNotificationHeader": "Jakinarazpenaren hasiera alda dezakezu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Idatzi gutxienez karaktere 1",
   "changeDailyNotificationMessage": "Pilula garaiz hartu duzunean agertzen den jakinarazpenaren testua alda dezakezu",

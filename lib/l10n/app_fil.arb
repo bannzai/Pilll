@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Maaari ninyong baguhin ang teksto ng abiso kapag hindi nainom ang pildoras",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Maaari ninyong baguhin ang teksto sa simula ng abiso",
+  "changeNotificationHeader": "Maaari ninyong baguhin ang simula ng abiso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Pakilagay po ng kahit 1 character",
   "changeDailyNotificationMessage": "Maaari ninyong baguhin ang teksto ng abiso kapag nainom ninyo ang pildoras sa oras",

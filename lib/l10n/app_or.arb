@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ବଟିକା ଖାଇବା ରହିଗଲେ ଆସୁଥିବା ବିଜ୍ଞପ୍ତିର ଲେଖା ଆପଣ ବଦଳାଇ ପାରିବେ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "ଆପଣ ବିଜ୍ଞପ୍ତିର ଆରମ୍ଭରେ ଥିବା ଲେଖା ବଦଳାଇ ପାରିବେ",
+  "changeNotificationHeader": "ଆପଣ ବିଜ୍ଞପ୍ତିର ଆରମ୍ଭ ଲେଖା ବଦଳାଇ ପାରିବେ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "ଦୟାକରି ଅତି କମରେ 1ଟି ଅକ୍ଷର ଲେଖନ୍ତୁ",
   "changeDailyNotificationMessage": "ବଟିକା ଠିକ୍ ସମୟରେ ନେଲେ ଆସୁଥିବା ବିଜ୍ଞପ୍ତିର ଲେଖା ଆପଣ ବଦଳାଇ ପାରିବେ",

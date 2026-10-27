@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ክኒን ሲረሳ የሚታየውን የማሳወቂያ ጽሑፍ መቀየር ይችላሉ",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "የማሳወቂያውን የመጀመሪያ ክፍል መቀየር ይችላሉ",
+  "changeNotificationHeader": "የማሳወቂያውን መጀመሪያ መቀየር ይችላሉ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "እባክዎ ቢያንስ 1 ቁምፊ ያስገቡ",
   "changeDailyNotificationMessage": "ክኒን ሳይረሱ ሲወስዱ የሚመጣውን የማሳወቂያ ጽሑፍ መቀየር ይችላሉ",

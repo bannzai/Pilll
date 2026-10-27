@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "يمكنكِ تغيير نص إشعار عدم تناول الحبة",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "يمكنكِ تغيير النص في بداية الإشعار",
+  "changeNotificationHeader": "يمكنكِ تغيير بداية الإشعار",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "يرجى إدخال حرف واحد على الأقل",
   "changeDailyNotificationMessage": "يمكنكِ تغيير نص الإشعار عند تناول الحبة دون نسيانها",

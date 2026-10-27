@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Besedilo obvestila o nešteti tableti lahko spremenite",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Spremenite lahko besedilo na začetku obvestila",
+  "changeNotificationHeader": "Spremenite lahko začetek obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Vnesite vsaj 1 znak",
   "changeDailyNotificationMessage": "Besedilo obvestila ob pravočasnem jemanju tabletke lahko spremenite",

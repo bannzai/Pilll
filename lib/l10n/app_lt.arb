@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Galite pakeisti pranešimo apie neišgertą tabletę tekstą",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Galite pakeisti pranešimo pradžioje rodomą tekstą",
+  "changeNotificationHeader": "Galite pakeisti pranešimo pradžią",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Įveskite bent 1 simbolį",
   "changeDailyNotificationMessage": "Galite pakeisti pranešimo tekstą, kai tabletė išgeriama laiku",

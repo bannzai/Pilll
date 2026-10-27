@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Poți schimba textul notificării pentru o pilulă neluată",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Poți schimba textul de la începutul notificării",
+  "changeNotificationHeader": "Poți schimba începutul notificării",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Introdu cel puțin 1 caracter",
   "changeDailyNotificationMessage": "Poți schimba textul notificării când iei pilula la timp",

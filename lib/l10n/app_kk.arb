@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Таблетка қабылданбағанда келетін хабарландыру мәтінін өзгерте аласыз",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Хабарландырудың басындағы мәтінді өзгерте аласыз",
+  "changeNotificationHeader": "Хабарландырудың басын өзгерте аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Кемінде 1 таңба енгізіңіз",
   "changeDailyNotificationMessage": "Таблетканы уақытында қабылдағандағы хабарлама мәтінін өзгерте аласыз",

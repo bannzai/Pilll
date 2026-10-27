@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Varat mainīt paziņojuma tekstu par neiedzertu tableti",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Varat mainīt paziņojuma sākumā redzamo tekstu",
+  "changeNotificationHeader": "Varat mainīt paziņojuma sākumu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Lūdzu, ievadiet vismaz 1 rakstzīmi",
   "changeDailyNotificationMessage": "Varat mainīt paziņojuma tekstu, kas parādās, kad tablete lietota laikā",

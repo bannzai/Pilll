@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "மாத்திரை எடுக்க மறந்தால் வரும் அறிவிப்பின் உரையை மாற்றலாம்",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "அறிவிப்பின் தொடக்கத்தில் வரும் உரையை நீங்கள் மாற்றலாம்",
+  "changeNotificationHeader": "அறிவிப்பின் தொடக்க உரையை மாற்றலாம்",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "குறைந்தது 1 எழுத்தையாவது உள்ளிடுங்கள்",
   "changeDailyNotificationMessage": "மாத்திரையைச் சரியான நேரத்தில் எடுத்தால் வரும் அறிவிப்பின் உரையை மாற்றலாம்",

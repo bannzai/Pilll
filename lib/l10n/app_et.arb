@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Saad muuta võtmata pilli teavituse teksti",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Saad muuta teavituse alguses olevat teksti",
+  "changeNotificationHeader": "Saad muuta teavituse algust",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sisesta vähemalt 1 märk",
   "changeDailyNotificationMessage": "Saad muuta teavituse teksti, kui oled pilli õigel ajal võtnud",

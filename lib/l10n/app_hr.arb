@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Možete promijeniti tekst obavijesti za neuzetu pilulu",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Možete promijeniti tekst na početku obavijesti",
+  "changeNotificationHeader": "Možete promijeniti početak obavijesti",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Unesite barem 1 znak",
   "changeDailyNotificationMessage": "Možete promijeniti tekst obavijesti kada ste pilulu uzeli na vrijeme",

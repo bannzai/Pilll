@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "गोली न लेने पर आने वाली सूचना का संदेश आप बदल सकती हैं",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "आप सूचना की शुरुआत में दिखने वाला संदेश बदल सकती हैं",
+  "changeNotificationHeader": "आप सूचना की शुरुआत का टेक्स्ट बदल सकती हैं",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "कृपया कम से कम 1 अक्षर दर्ज करें",
   "changeDailyNotificationMessage": "गोली समय पर लेने पर आने वाली सूचना का संदेश आप बदल सकते हैं",

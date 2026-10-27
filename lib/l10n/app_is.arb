@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Þú getur breytt texta tilkynningar um pillu sem ekki var tekin",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Þú getur breytt textanum í upphafi tilkynningarinnar",
+  "changeNotificationHeader": "Þú getur breytt upphafi tilkynningarinnar",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Sláðu inn að minnsta kosti 1 staf",
   "changeDailyNotificationMessage": "Þú getur breytt texta tilkynningarinnar þegar pillan er tekin á réttum tíma",

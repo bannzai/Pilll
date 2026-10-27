@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი, რომელიც აბის მიუღებლობისას ჩნდება",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "შეგიძლიათ შეცვალოთ შეტყობინების დასაწყისში ნაჩვენები ტექსტი",
+  "changeNotificationHeader": "შეგიძლიათ შეცვალოთ შეტყობინების დასაწყისი",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "გთხოვთ, შეიყვანოთ სულ მცირე 1 სიმბოლო",
   "changeDailyNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი აბის დროულად მიღების შემთხვევაში",

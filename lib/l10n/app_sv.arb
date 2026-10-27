@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan ändra texten i påminnelsen om ett piller som inte tagits",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Du kan ändra texten i början av aviseringen",
+  "changeNotificationHeader": "Du kan ändra början av aviseringen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Skriv minst 1 tecken",
   "changeDailyNotificationMessage": "Du kan ändra aviseringstexten när du har tagit ditt p-piller i tid",

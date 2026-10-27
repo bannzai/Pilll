@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ဆေးလုံးသောက်ရန် မေ့သွားသည့်အခါ ပြမည့် အသိပေးစာကို ပြောင်းနိုင်ပါတယ်",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "အသိပေးချက်အစတွင် ပေါ်မယ့်စာသားကို ပြောင်းလဲနိုင်ပါတယ်",
+  "changeNotificationHeader": "အသိပေးချက်၏ အစပိုင်းစာသားကို ပြောင်းနိုင်ပါတယ်",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "ကျေးဇူးပြု၍ အနည်းဆုံး စာလုံး ၁ လုံး ထည့်ပါ",
   "changeDailyNotificationMessage": "ဆေးလုံးကို အချိန်မီ သောက်သည့်အခါ ပြသမည့် အသိပေးစာကို ပြောင်းနိုင်ပါတယ်",

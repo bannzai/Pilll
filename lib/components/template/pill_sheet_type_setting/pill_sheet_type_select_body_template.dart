@@ -51,7 +51,17 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
           children: [
             _pillSheet(PillSheetType.pillsheet_24_0),
             const SizedBox(width: 16),
-            Flexible(child: Container(constraints: PillSheetTypeColumn.boxConstraints)),
+            // 最後の段の右側は空き枠。左のカードと同じ幅にして列を揃えるため、同じカードを不可視で置く
+            // (子の無い Container は Flexible が許す幅まで広がり、左のカードが中央寄せからずれる)
+            Flexible(
+              child: Visibility(
+                visible: false,
+                maintainSize: true,
+                maintainAnimation: true,
+                maintainState: true,
+                child: PillSheetTypeColumn(pillSheetType: PillSheetType.pillsheet_24_0, selected: false),
+              ),
+            ),
           ],
         ),
       ],

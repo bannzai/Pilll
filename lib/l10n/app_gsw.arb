@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du chasch de Text vo de Erinnerig ändere, wänn d Pille nöd gnoh worde isch",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "Du chasch de Text am Aafang vo de Mitteilig ändere",
+  "changeNotificationHeader": "Du chasch de Aafang vo de Mitteilige ändere",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "Gib bitte mindeschtens 1 Zeiche ii",
   "changeDailyNotificationMessage": "Du chasch de Text vo de Erinnerig ändere, wänn d Pille rächtziitig gnoh hesch",

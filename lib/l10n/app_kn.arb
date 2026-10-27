@@ -241,7 +241,7 @@
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆತಾಗ ಬರುವ ಸೂಚನೆಯ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-  "changeNotificationHeader": "ಅಧಿಸೂಚನೆಯ ಆರಂಭದಲ್ಲಿ ಕಾಣುವ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
+  "changeNotificationHeader": "ನೀವು ಅಧಿಸೂಚನೆಯ ಆರಂಭದ ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "ದಯವಿಟ್ಟು ಕನಿಷ್ಠ 1 ಅಕ್ಷರವನ್ನು ನಮೂದಿಸಿ",
   "changeDailyNotificationMessage": "ಮಾತ್ರೆಯನ್ನು ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ ತೆಗೆದುಕೊಂಡಾಗ ಬರುವ ಸೂಚನೆಯ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
