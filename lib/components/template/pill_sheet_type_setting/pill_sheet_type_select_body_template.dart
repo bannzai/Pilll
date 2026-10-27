@@ -16,62 +16,60 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _pillSheet(PillSheetType.pillsheet_21),
-            const SizedBox(width: 16),
-            _pillSheet(PillSheetType.pillsheet_28_4),
-          ],
-        ),
-        const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _pillSheet(PillSheetType.pillsheet_28_7),
-            const SizedBox(width: 16),
-            _pillSheet(PillSheetType.pillsheet_28_0),
-          ],
-        ),
-        const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _pillSheet(PillSheetType.pillsheet_24_rest_4),
-            const SizedBox(width: 16),
-            _pillSheet(PillSheetType.pillsheet_21_0),
-          ],
-        ),
-        const SizedBox(height: 16),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _pillSheet(PillSheetType.pillsheet_24_0),
-            const SizedBox(width: 16),
-            // 最後の段の右側は空き枠。左のカードと同じ幅にして列を揃えるため、同じカードを不可視で置く
-            // (子の無い Container は Flexible が許す幅まで広がり、左のカードが中央寄せからずれる)
-            Flexible(
-              child: Visibility(
-                visible: false,
-                maintainSize: true,
-                maintainAnimation: true,
-                maintainState: true,
-                child: PillSheetTypeColumn(pillSheetType: PillSheetType.pillsheet_24_0, selected: false),
-              ),
+    // 各段を同じ幅 (カード 2 枚 + 間隔) に固定し、段の中ではカードを Expanded で等分する。
+    // カードが訳文の長さで幅を変えると段ごとに左端がずれて列にならないため (PR #1955 の QA で ja・en で確認)。
+    // 画面がこの幅より狭い時は Expanded が縮めて Row が溢れない
+    return Center(
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: PillSheetTypeColumnConstant.width * 2 + 16),
+        child: Column(
+          children: <Widget>[
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _pillSheet(PillSheetType.pillsheet_21),
+                const SizedBox(width: 16),
+                _pillSheet(PillSheetType.pillsheet_28_4),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _pillSheet(PillSheetType.pillsheet_28_7),
+                const SizedBox(width: 16),
+                _pillSheet(PillSheetType.pillsheet_28_0),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _pillSheet(PillSheetType.pillsheet_24_rest_4),
+                const SizedBox(width: 16),
+                _pillSheet(PillSheetType.pillsheet_21_0),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                _pillSheet(PillSheetType.pillsheet_24_0),
+                const SizedBox(width: 16),
+                // 最後の段の右側は空き枠。Expanded で左のカードと同じ幅を占めて列を揃える
+                const Expanded(child: SizedBox.shrink()),
+              ],
             ),
           ],
         ),
-      ],
+      ),
     );
   }
 
-  // 説明文が長い言語でカードが画面幅を超えて Row が溢れないよう、各カードを Row の半分までに収める。
-  // カード内の Text は幅が決まることで折り返す
+  // 段の幅を 2 枚で等分する。カード内の Text は幅が決まることで折り返す
   Widget _pillSheet(PillSheetType type) {
-    return Flexible(
+    return Expanded(
       child: GestureDetector(
         onTap: () {
           analytics.logEvent(

@@ -44,6 +44,23 @@ void main() {
       expect(tester.takeException(), isNull);
     });
 
+    testWidgets('日本語で未入力の時、説明文が警告の右の空きを使って 1 行に収まる (半分で折り返さない)',
+        (tester) async {
+      await useLanguage(tester, 'ja');
+      await tester.pumpWidget(subject(WordTextField(
+        word: ValueNotifier(''),
+        textFieldController: TextEditingController(),
+        focusNode: FocusNode(),
+        submit: () {},
+      )));
+      await tester.pump();
+
+      expect(tester.takeException(), isNull);
+      // 12pt の 1 行分 (行間を含めて 20pt 未満)。2 行に折り返すと 24pt を超える
+      expect(tester.getSize(find.text(L.changeNotificationHeader)).height,
+          lessThan(20));
+    });
+
     testWidgets('説明文が長い言語 (ジョージア語) で入力中でも counter の Row が溢れない', (tester) async {
       await useLanguage(tester, 'ka');
       await tester.pumpWidget(subject(WordTextField(
