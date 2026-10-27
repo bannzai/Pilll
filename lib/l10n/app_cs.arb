@@ -267,7 +267,7 @@
   "notSatisfied": "Nespokojenost",
   "perNumber": "pro každé číslo tablety",
   "howManyDaysDoesMenstruationLast": "Kolik dní trvá vaše menstruace?",
-  "daysMenstruationLasts": "dní trvá menstruace → dní menstruace",
+  "daysMenstruationLasts": "dní menstruace",
   "selectPillNumberForMenstruationStart": "Klepněte na číslo tablety, při které začíná menstruace",
   "countOfSheet": "{number}. blistr",
   "newPillSheetStart": "Začít nový blistr ▶︎",
