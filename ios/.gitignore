@@ -43,11 +43,11 @@ Flutter/Secret.xcconfig
 _StoreKitTestCertificate.cer
 build
 
-fastlane
+# fastlane の中身は除外するが、ディレクトリごと除外すると否定パターンで中のファイルを戻せない (gitignore の仕様) ため
+# 中身単位にして、1Password の参照 (op://...) だけを書く .env.1password* (値を持たないためコミットする) を戻す
+fastlane/*
 !fastlane/.gitkeep
+!fastlane/.env.1password*
 
 vendor
 .bundle
-
-# 1Password の参照 (op://...) だけを書くファイル。値を持たないためコミットする
-!.env.1password*
