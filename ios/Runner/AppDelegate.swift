@@ -302,15 +302,19 @@ private var implicitEngineInitialized = false
           do {
             let userConfiguredFamilies = try result.get().map(\.family)
             if !userConfiguredFamilies.isEmpty {
-              if #available(iOS 16.0, *) {
-                analytics(name: "user_configured_ios_widget", parameters: [
-                  "systemSmall": userConfiguredFamilies.contains(.systemSmall),
-                  "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
-                ])
-              } else {
-                analytics(name: "user_configured_ios_widget", parameters: [
-                  "systemSmall": userConfiguredFamilies.contains(.systemSmall),
-                ])
+              // getCurrentConfigurations の完了ハンドラは main thread 以外で呼ばれる。Flutter はチャネルの呼び出しを platform thread (main thread) で行うことを求めている
+              // ref: https://docs.flutter.dev/platform-integration/platform-channels#channels-and-platform-threading
+              DispatchQueue.main.async {
+                if #available(iOS 16.0, *) {
+                  analytics(name: "user_configured_ios_widget", parameters: [
+                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                    "accessoryCircular": userConfiguredFamilies.contains(.accessoryCircular)
+                  ])
+                } else {
+                  analytics(name: "user_configured_ios_widget", parameters: [
+                    "systemSmall": userConfiguredFamilies.contains(.systemSmall),
+                  ])
+                }
               }
             }
           } catch {
