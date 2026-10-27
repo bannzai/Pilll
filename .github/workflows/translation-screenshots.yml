@@ -17,6 +17,7 @@ on:
         required: false
         default: ""
       group_count:
+        # 既定の 4: Free プランの macOS 同時実行上限 5 から、PR の maestro-e2e が同時に使う 1 枠を残した数
         description: "並列 Runner 数 (言語をこの数に分割。Free プランの macOS 同時実行上限は 5)"
         required: false
         default: "4"
@@ -42,7 +43,7 @@ jobs:
   # (ビルドは maestro-e2e.yml の build と同じ手順)
   build:
     runs-on: macos-26
-    timeout-minutes: 30
+    timeout-minutes: 30 # maestro-e2e.yml の build と同じ手順・同じ上限
     permissions:
       contents: read # checkout のみ
     outputs:
@@ -54,9 +55,9 @@ jobs:
       - name: Split languages into runner groups
         id: plan
         env:
-          # push トリガーでは inputs が空になるため、確認用の 3 言語にする
+          # push トリガーでは inputs が空になるため、確認用の 3 言語を 1 言語ずつの Runner で撮る
           INPUT_LANGS: ${{ github.event_name == 'push' && 'ja,en,de' || inputs.langs }}
-          GROUP_COUNT: ${{ inputs.group_count || '3' }}
+          GROUP_COUNT: ${{ github.event_name == 'push' && '3' || inputs.group_count }}
         run: |
           # 既定の言語: 比較の対象は使用量の上限を避けて主要 7 言語にする (issue #1957 の owner の決定)。ja は比較の基準
           LANGS="${INPUT_LANGS:-ja,en,ko,zh,es,pt,de,fr}"
@@ -108,6 +109,8 @@ jobs:
   capture:
     needs: build
     runs-on: macos-26
+    # 既定の 8 言語を 4 Runner で撮ると 1 Runner 2 言語。1 言語は最大 3 回やり直す (capture_langs.sh) ため、
+    # maestro-e2e.yml の撮影 job の 60 分を 2 言語分にした値
     timeout-minutes: 120
     permissions:
       contents: read # checkout のみ
@@ -174,7 +177,7 @@ jobs:
     needs: capture
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 10 # artifact を 1 つにまとめるだけで数分で終わるため
     permissions:
       contents: read
     steps:
