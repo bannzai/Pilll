@@ -261,7 +261,9 @@ jobs:
       - name: Upload dSYMs to Crashlytics
         continue-on-error: true
         run: |
-          ./ios/Pods/FirebaseCrashlytics/upload-symbols \
+          # Firebase は SwiftPM で取り込むため、upload-symbols は xcodebuild 既定の DerivedData に checkout された firebase-ios-sdk にある
+          upload_symbols=$(find ~/Library/Developer/Xcode/DerivedData -path '*/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols' -print -quit)
+          "$upload_symbols" \
             -gsp ios/Firebase/GoogleService-Info.plist \
             -p ios \
             build/ios/archive/Runner.xcarchive/dSYMs
