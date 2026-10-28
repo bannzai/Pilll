@@ -137,6 +137,16 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - longPressOn:
     id: "debug_row"
 - waitForAnimationToEnd
+# CI の Simulator では長押しが効かずダイアログが出ないことがある (translation-screenshots run 40621843859 の en の失敗時の画面で確認) ため、
+# 削除ボタンが無ければもう一度長押しする
+- runFlow:
+    when:
+      notVisible:
+        id: "debug_delete_user_button"
+    commands:
+      - longPressOn:
+          id: "debug_row"
+      - waitForAnimationToEnd
 - tapOn:
     id: "debug_delete_user_button"
 - waitForAnimationToEnd
@@ -158,5 +168,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 - tapOn:
     id: "add_pill_sheet_type_empty_button"
+# waitForAnimationToEnd だけではシートが出る前に撮れてしまう (translation-screenshots run 40621843859 の ja・de の画像で確認) ため、シートの見出しを待つ
+- extendedWaitUntil:
+    visible:
+      id: "pill_sheet_type_select_sheet_title"
+    timeout: 10000
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/pill_sheet_type_select_sheet/${LANG}"
