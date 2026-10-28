@@ -1,0 +1,203 @@
+{
+  "pins" : [
+    {
+      "identity" : "abseil-cpp-binary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/abseil-cpp-binary.git",
+      "state" : {
+        "revision" : "bbe8b69694d7873315fd3a4ad41efe043e1c07c5",
+        "version" : "1.2024072200.0"
+      }
+    },
+    {
+      "identity" : "app-check",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/app-check.git",
+      "state" : {
+        "revision" : "97f7d74dd0e8f3d0fe5fc75cc8957aa73bdc948a",
+        "version" : "11.3.2"
+      }
+    },
+    {
+      "identity" : "fbaudiencenetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/facebook/FBAudienceNetwork.git",
+      "state" : {
+        "revision" : "26100d29de1cdb6753d7c602391f6fc6d29f6507",
+        "version" : "6.22.0"
+      }
+    },
+    {
+      "identity" : "firebase-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/firebase-ios-sdk",
+      "state" : {
+        "revision" : "42cf1417c51c5e3bfbae5d3ab89b778f8fdc4bb8",
+        "version" : "12.19.3"
+      }
+    },
+    {
+      "identity" : "google-ads-on-device-conversion-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/google-ads-on-device-conversion-ios-sdk",
+      "state" : {
+        "revision" : "0208e2681ec81f8a9c81084696f60fcce26cb7ee",
+        "version" : "3.7.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-meta",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-meta.git",
+      "state" : {
+        "revision" : "0a3d0597402162334fb5e11816ca612478180095",
+        "version" : "6.22.0"
+      }
+    },
+    {
+      "identity" : "googleads-mobile-ios-mediation-mintegral",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/googleads-mobile-ios-mediation-mintegral.git",
+      "state" : {
+        "revision" : "753e1604b258057372932bd23a6bf6363c393034",
+        "version" : "8.1.700"
+      }
+    },
+    {
+      "identity" : "googleappmeasurement",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleAppMeasurement.git",
+      "state" : {
+        "revision" : "b8455dd2ff55cc269fda7a4f9eac6c1e3588c53f",
+        "version" : "12.19.2"
+      }
+    },
+    {
+      "identity" : "googledatatransport",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleDataTransport.git",
+      "state" : {
+        "revision" : "ba3358d3c3dbae8ef230b58a46b97ad65e84e974",
+        "version" : "10.1.1"
+      }
+    },
+    {
+      "identity" : "googleutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/GoogleUtilities.git",
+      "state" : {
+        "revision" : "5459ee5603def3db0fe14ca522185f42c48d978e",
+        "version" : "8.1.5"
+      }
+    },
+    {
+      "identity" : "grpc-binary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/grpc-binary.git",
+      "state" : {
+        "revision" : "75b31c842f664a0f46a2e590a570e370249fd8f6",
+        "version" : "1.69.1"
+      }
+    },
+    {
+      "identity" : "gtm-session-fetcher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/gtm-session-fetcher.git",
+      "state" : {
+        "revision" : "724a52eea6329b7e12d3ad8300d76ca9f3895fcc",
+        "version" : "5.3.1"
+      }
+    },
+    {
+      "identity" : "interop-ios-for-google-sdks",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/interop-ios-for-google-sdks.git",
+      "state" : {
+        "revision" : "040d087ac2267d2ddd4cca36c757d1c6a05fdbfe",
+        "version" : "101.0.0"
+      }
+    },
+    {
+      "identity" : "leveldb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/leveldb.git",
+      "state" : {
+        "revision" : "a0bc79961d7be727d258d33d5a6b2f1023270ba1",
+        "version" : "1.22.5"
+      }
+    },
+    {
+      "identity" : "mintegraladsdk-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Mintegral-official/MintegralAdSDK-Swift-Package.git",
+      "state" : {
+        "revision" : "71e78da3d6070792c2216fef333daa652411f3a7",
+        "version" : "8.1.7"
+      }
+    },
+    {
+      "identity" : "nanopb",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/firebase/nanopb.git",
+      "state" : {
+        "revision" : "3851d94a41890dea16dc3db34caf60e585cb4163",
+        "version" : "2.30910.1"
+      }
+    },
+    {
+      "identity" : "promises",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/promises.git",
+      "state" : {
+        "revision" : "f4a19a3c313dc2616c70bb49d29a799fb16be837",
+        "version" : "2.4.1"
+      }
+    },
+    {
+      "identity" : "purchases-hybrid-common",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevenueCat/purchases-hybrid-common.git",
+      "state" : {
+        "revision" : "852d2aa1751dfec60ef6625b1b93638275505345",
+        "version" : "18.32.1"
+      }
+    },
+    {
+      "identity" : "purchases-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RevenueCat/purchases-ios-spm",
+      "state" : {
+        "revision" : "1af9d1bf28df81af57a1958237c98bb562b8cc6b",
+        "version" : "5.85.0"
+      }
+    },
+    {
+      "identity" : "recaptcha-enterprise-mobile-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GoogleCloudPlatform/recaptcha-enterprise-mobile-sdk.git",
+      "state" : {
+        "revision" : "85588690041e63784be7bcb4b631c32565127ba2",
+        "version" : "18.9.1"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads",
+      "state" : {
+        "revision" : "d1fa1f5c1dfe3b43d56c73f4de388ad3316618bc",
+        "version" : "13.11.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "13b248eaa73b7826f0efb1bcf455e251d65ecb1b",
+        "version" : "3.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
