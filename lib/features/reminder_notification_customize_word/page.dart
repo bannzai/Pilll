@@ -453,7 +453,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         reminderNotificationCustomization: reminderNotificationCustomization,
       ),
     );
-    await registerReminderLocalNotification();
+    // 通知の再登録は待たない (日付・番号のスイッチと同じ)。待つと、通知の登録が返らない環境 (CI の Simulator) で
+    // スイッチの表示が保存後も切り替わらない (PR #1955 の QA で確認。保存自体は済んでいて開き直すと反映されていた)
+    registerReminderLocalNotification();
   }
 }
 
