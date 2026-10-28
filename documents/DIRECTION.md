@@ -1,6 +1,6 @@
 ---
 status: launched          # evaluating | building | launched | pivoting | retiring | retired
-decision_date: 2026-10-28 # 次の判定日 (YYYY-MM-DD)。判定のたびに cycle_days 後へ進める
+decision_date: 2026-11-11 # 次の判定日 (YYYY-MM-DD)。判定のたびに cycle_days 後へ進める
 cycle_days: 14            # 判定の周期 (7 または 14)
 veto_wait_hours: 12       # 公開後の無人ループの拒否権の待ち時間 (既定 12)
 daily_issue_cap: 3        # 1 日に生成してよい改善 issue の上限 (意味の門。既定 3)
@@ -46,6 +46,7 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 | 2026-09-29 | 既存アプリへの後付け | 下書きを agent が作成。bannzai が直すか黙認する。しきい値は 2026-09-29 時点の実測 (平均評価 4.66 / 5954 件、直近 14 日の ★1〜2 レビュー 0 件、直近 14 日の FATAL issue 4 件) を基準に「現状維持なら継続、明確に落ちたら打ち切り」で置いた | agent |
 | 2026-10-15 | 判定日 2026-10-13 の判定 | 継続。平均評価 4.66 / 6006 件 (>= 4.0)、直近 14 日の ★1〜2 レビュー 1 件 (<= 1。しきい値の端)。直近 14 日の FATAL クラッシュ issue 数は firebase CLI のログインが切れていて計測できず (UNMEASURED)、残り 2 指標で判定した。打ち切り条件 (> 50 x2) は前回の記録が無いため今回の値に関わらず当たらない。指標の値は `documents/loop/metrics-2026-10-13.json` | agent |
 | 2026-10-26 | issue の読み書き先の変更 (bannzai/Pilll#1914) | 公開後の無人ループの記録を bannzai/PilllBackend#491 から bannzai/Pilll#1945 へ移した。2026-10-18 までの記録は bannzai/PilllBackend#491 に残る | agent |
+| 2026-10-28 | 判定日 2026-10-28 の判定 | 継続。平均評価 4.66 / 6072 件 (>= 4.0)、直近 14 日の ★1〜2 レビュー 1 件 (<= 1。しきい値の端)、直近 14 日の FATAL クラッシュ issue 4 件 (<= 10)。3 指標とも継続のしきい値を満たし、打ち切り条件には当たらない。指標の値は `documents/loop/metrics-2026-10-28.json` | agent |
 
 ## agent に任せること
 
