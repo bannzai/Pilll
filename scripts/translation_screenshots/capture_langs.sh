@@ -34,7 +34,7 @@ cd "$(dirname "$0")/../.."
 
 # arb 言語コード → iOS の言語 ID。DateTimeFormatter と Material の組み込み文言は端末の言語に従うため、
 # 撮影言語ごとに端末の言語も切り替えて利用者と同じ表示にする。
-# 対応は scripts/generate_screenshots/capture_langs.sh と同じ (arb と iOS で表記が異なるのは pt・zh・no のみ)。
+# 対応は scripts/generate_screenshots/capture_langs.sh と同じ。
 ios_language_id() {
   case "$1" in
     pt) echo "pt-BR" ;;
