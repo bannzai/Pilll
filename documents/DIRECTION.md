@@ -49,4 +49,4 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 
 ## agent に任せること
 
-文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行を足す。RevenueCat の課金指標 (アクティブなサブスクリプション数・MRR) は、`metrics/overview` を読める v2 API key が `.envrc` に入った時に agent が判定基準へ足す。
+文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行の追加を提案する。RevenueCat の課金指標と Firebase Analytics の利用指標は bannzai/dashboard が日次で集めており、`read-dashboard-metric.sh` で読める。仮説の判定に要る指標 (MRR・D7 リテンション・paywall のファネル等) は、agent が同じ計測元で判定基準の行の追加を `documents/loop/pending-proposals.md` に提案し (Android の指標も同じ)、週次レポートで承認されたものだけを足す。
