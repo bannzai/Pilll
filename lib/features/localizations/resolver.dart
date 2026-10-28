@@ -24,6 +24,7 @@ class AppLocalizationResolver extends ConsumerWidget {
       // L は build 時に読まれるだけなので、開発者オプションで言語を変えた時に配下を描画し直させる。
       // KeyedSubtree で作り直すとタブの位置などの State が初期化されるため、State を保ったまま build だけをやり直す
       ref.listen(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode), (_, __) {
+        /// [element] とその配下のすべての Element を、State を保ったまま次のフレームで build し直す対象にする
         void markNeedsBuildRecursively(Element element) {
           element.markNeedsBuild();
           element.visitChildren(markNeedsBuildRecursively);

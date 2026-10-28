@@ -8,6 +8,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # 切り替えた後は文言が LANG になるため、タップは Semantics identifier (id) と座標だけで行う。
 # 画面を撮るたびにアプリを起動し直して記録タブから始める (戻るボタンの文言・位置に依存しないため)。
 #
+# 待ち時間の固定値:
+# - 60000 (起動・スクロール): CI の Simulator でユーザーの作り直しを含む起動に時間がかかるため、initial_setup.yaml と同じ値にした
+# - 30000 (タブを切り替えた後の画面): タブの切り替えと Firestore の読み込みだけで起動を含まないため、起動の半分にした
+# - 10000 (ボトムシート): 読み込みの無いシートの表示を待つだけのため
+# - waitToSettleTimeoutMs: 500: appstore_screenshot/capture.yaml と同じ値
+#
 # 撮らない画面:
 # - プレミアム紹介: RevenueCat の offering (StoreKit の商品) が取れるまでインジケーターのままで、
 #   App Store の商品を取得できない CI の Simulator では表示されない (.maestro/flows/config.yaml の lifetime_offer/ と同じ理由)

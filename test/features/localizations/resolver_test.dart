@@ -24,6 +24,8 @@ void main() {
 
   group('#AppLocalizationResolver', () {
     // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
+    /// [initialSharedPreferencesValues] を SharedPreferences の初期値にして AppLocalizationResolver を描画し、
+    /// 使った SharedPreferences を返す
     Future<SharedPreferences> pumpAppLocalizationResolver(
       WidgetTester tester, {
       required Map<String, Object> initialSharedPreferencesValues,

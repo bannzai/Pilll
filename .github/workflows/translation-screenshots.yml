@@ -103,7 +103,7 @@ jobs:
         with:
           name: translation-screenshots-app
           path: simulator-app.tar
-          retention-days: 1
+          retention-days: 1 # 同じ run の capture job が使うだけのため。maestro-e2e.yml の .app と同じ
 
   # 言語グループごとに Simulator を起動して Maestro で撮影し、<画面>/<言語>.png を artifact に上げる
   capture:
@@ -162,7 +162,7 @@ jobs:
           name: translation-screenshots-part-${{ strategy.job-index }}
           path: scripts/translation_screenshots/artifacts
           if-no-files-found: error
-          retention-days: 1
+          retention-days: 1 # 同じ run の merge job が 1 つにまとめて消すため
       # 失敗原因調査用に Maestro のデバッグ出力 (スクリーンショット・ログ) を上げる
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: ${{ failure() }}
@@ -170,7 +170,7 @@ jobs:
           name: translation-screenshots-maestro-debug-${{ strategy.job-index }}
           path: ~/.maestro/tests
           if-no-files-found: ignore
-          retention-days: 3
+          retention-days: 3 # 失敗の調査用。maestro-e2e.yml のデバッグ出力と同じ
 
   # 言語グループごとの artifact を 1 つにまとめ、<画面>/<言語>.png の形にする
   merge:
@@ -186,4 +186,4 @@ jobs:
           name: translation-screenshots
           pattern: translation-screenshots-part-*
           delete-merged: true
-          retention-days: 7
+          retention-days: 7 # 起動した人が gh run download で取りにいき、translate-app-screenshot-check skill に渡すまでの余裕
