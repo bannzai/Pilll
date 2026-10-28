@@ -41,7 +41,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 
 # Screen 1 (1/3): ピルシートタイプ選択
-# まず「ピルの種類を選択」ボタンをタップしてモーダルを開く
+# まず「ピルの種類を選択」ボタンをタップしてモーダルを開く。
+# CI の Simulator では「いいえ」からの画面遷移が tapOn の待ち時間を超えることがある
+# (maestro-e2e run 40598328685 で Element not found になった時の画面には 1/3 のボタンが写っていた) ため表示を待つ
+- extendedWaitUntil:
+    visible: "ピルの種類を選択"
+    timeout: 30000
 - tapOn: "ピルの種類を選択"
 - waitForAnimationToEnd
 # モーダル内の最初のセル (21錠＋7日休薬) を座標タップ
