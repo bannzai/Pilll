@@ -79,5 +79,58 @@ void main() {
       // 再起動後も同じ言語になるよう SharedPreferences に保存されている
       expect(sharedPreferences.getString(StringKey.debugAppLanguageCode), 'de');
     });
+
+    testWidgets('表示言語を変えると、配下の State を保ったまま新しい言語で描画し直される', (tester) async {
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: AppLocalizationResolver(
+              builder: (_) => const _LocaleNameProbe(),
+            ),
+          ),
+        ),
+      );
+      final stateBeforeChange =
+          tester.state<_LocaleNameProbeState>(find.byType(_LocaleNameProbe));
+      expect(stateBeforeChange.builtLocaleName, 'ja');
+
+      final container = ProviderScope.containerOf(
+          tester.element(find.byType(AppLocalizationResolver)));
+      await container
+          .read(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode)
+              .notifier)
+          .set('de');
+      await tester.pump();
+
+      // タブの位置のような State が初期化されないよう、同じ State のまま build し直される
+      final stateAfterChange =
+          tester.state<_LocaleNameProbeState>(find.byType(_LocaleNameProbe));
+      expect(identical(stateAfterChange, stateBeforeChange), isTrue);
+      expect(stateAfterChange.builtLocaleName, 'de');
+    });
   });
+}
+
+/// const で生成され、親の build だけでは描画し直されない子を表す。最後の build で読んだ [L] の言語を記録する
+class _LocaleNameProbe extends StatefulWidget {
+  const _LocaleNameProbe();
+
+  @override
+  State<_LocaleNameProbe> createState() => _LocaleNameProbeState();
+}
+
+class _LocaleNameProbeState extends State<_LocaleNameProbe> {
+  /// 最後の build で読んだ [L] の言語コード
+  String? builtLocaleName;
+
+  @override
+  Widget build(BuildContext context) {
+    builtLocaleName = L.localeName;
+    return const SizedBox.shrink();
+  }
 }

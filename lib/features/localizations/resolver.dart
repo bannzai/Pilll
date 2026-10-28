@@ -21,14 +21,22 @@ class AppLocalizationResolver extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // buildのタイミングでセットしているが、AppLocalizations 自体は変更されてもbuildに影響を与えないため許容する
     if (kDebugMode) {
+      // L は build 時に読まれるだけなので、開発者オプションで言語を変えた時に配下を描画し直させる。
+      // KeyedSubtree で作り直すとタブの位置などの State が初期化されるため、State を保ったまま build だけをやり直す
+      ref.listen(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode), (_, __) {
+        void markNeedsBuildRecursively(Element element) {
+          element.markNeedsBuild();
+          element.visitChildren(markNeedsBuildRecursively);
+        }
+
+        (context as Element).visitChildren(markNeedsBuildRecursively);
+      });
       final locale = debugAppLocale(
         savedLanguageCode: ref.watch(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode)).value,
       );
       L = lookupAppLocalizations(locale);
       // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
       Intl.defaultLocale = locale.languageCode;
-      // L は build 時に読まれるだけなので、開発者オプションで言語を変えた時に配下を作り直して新しい言語で描画させる
-      return KeyedSubtree(key: ValueKey(locale), child: builder(context));
     } else {
       L = AppLocalizations.of(context)!;
       // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する

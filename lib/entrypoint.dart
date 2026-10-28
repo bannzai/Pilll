@@ -37,6 +37,11 @@ Future<void> entrypoint() async {
       initializeDateFormatting('ja'),
       initializeDateFormatting(Platform.localeName),
     ).wait;
+    if (kDebugMode) {
+      // debug ビルドは開発者オプションの「表示言語」で端末と別の言語にでき、AppLocalizationResolver がその言語を
+      // Intl.defaultLocale にする。端末の言語だけの初期化では未初期化の言語の DateFormat で止まるため、全言語を初期化する
+      await initializeDateFormatting();
+    }
     Intl.defaultLocale = 'ja';
 
     WidgetsFlutterBinding.ensureInitialized();
