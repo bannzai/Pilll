@@ -21,6 +21,24 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - runFlow: ../feature_appeal/subflows/initial_setup.yaml
 - waitForAnimationToEnd
 
+# initial_setup.yaml は今日の服用番号を「まだ分からない」で飛ばすためピルシートが作られず、
+# 記録画面にピルシートとピルシートの設定ボタンが出ない (translation-screenshots run 40593290313 の失敗時の画面で確認)。
+# 文言が ja のうちに記録 →「ピルシートを追加」でピルシートを作る
+- tapOn: "ピルシートを追加"
+- waitForAnimationToEnd
+- tapOn: "ピルの種類を選択"
+- waitForAnimationToEnd
+# ボトムシート内の最初のセル (21錠＋7日休薬)。initial_setup.yaml と同じ座標
+- tapOn:
+    point: "25%,33%"
+- waitForAnimationToEnd
+- tapOn: "追加"
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- waitForAnimationToEnd
+
 # 設定タブ → 開発者オプションの「表示言語」→ LANG
 # タブは Image 型で text 検出不可のため座標タップ (feature_appeal/feature_appeal_bar_persists_across_tabs.yaml と同じ)
 - tapOn:
