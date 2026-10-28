@@ -124,69 +124,74 @@ class _CalendarPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: Container(
-        padding: const EdgeInsets.only(right: 10, bottom: 32),
-        child: FloatingActionButton(
-          onPressed: () {
-            analytics.logEvent(name: 'calendar_fab_pressed');
-            Navigator.of(
-              context,
-            ).push(DiaryPostPageRoute.route(today(), todayDiary));
-          },
-          backgroundColor: AppColors.primary,
-          child: const Icon(Icons.add, color: Colors.white),
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+    // 読み込み中のインジケーターではなくカレンダーの表示を待ってから撮るため
+    return Semantics(
+      identifier: 'calendar_page_body',
+      child: Scaffold(
+        floatingActionButton: Container(
+          padding: const EdgeInsets.only(right: 10, bottom: 32),
+          child: FloatingActionButton(
+            onPressed: () {
+              analytics.logEvent(name: 'calendar_fab_pressed');
+              Navigator.of(
+                context,
+              ).push(DiaryPostPageRoute.route(today(), todayDiary));
+            },
+            backgroundColor: AppColors.primary,
+            child: const Icon(Icons.add, color: Colors.white),
+          ),
         ),
-      ),
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        title: CalendarPageTitle(
-          displayedMonth: displayedMonth,
-          page: page,
-          pageController: pageController,
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: CalendarPageTitle(
+            displayedMonth: displayedMonth,
+            page: page,
+            pageController: pageController,
+          ),
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: AppColors.white,
         ),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: AppColors.white,
-      ),
-      extendBodyBehindAppBar: true,
-      body: SafeArea(
-        child: ListView(
-          children: <Widget>[
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: _monthlyCalendarHeight,
-              child: PageView(
-                controller: pageController,
-                scrollDirection: Axis.horizontal,
-                physics: const PageScrollPhysics(),
-                children: List.generate(_calendarDataSourceLength, (index) {
-                  // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
-                  final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
-                  return Stack(
-                    children: [
-                      MonthCalendarPager(
-                        displayedMonth: displayedMonth,
-                        calendarMenstruationBandModels: calendarMenstruationBandModels,
-                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                      ),
-                      if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
-                    ],
-                  );
-                }),
+        extendBodyBehindAppBar: true,
+        body: SafeArea(
+          child: ListView(
+            children: <Widget>[
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: _monthlyCalendarHeight,
+                child: PageView(
+                  controller: pageController,
+                  scrollDirection: Axis.horizontal,
+                  physics: const PageScrollPhysics(),
+                  children: List.generate(_calendarDataSourceLength, (index) {
+                    // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
+                    final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
+                    return Stack(
+                      children: [
+                        MonthCalendarPager(
+                          displayedMonth: displayedMonth,
+                          calendarMenstruationBandModels: calendarMenstruationBandModels,
+                          calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                          calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                        ),
+                        if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
+                      ],
+                    );
+                  }),
+                ),
               ),
-            ),
-            const SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
-              child: CalendarPillSheetModifiedHistoryCard(
-                histories: histories,
-                user: user,
+              const SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: CalendarPillSheetModifiedHistoryCard(
+                  histories: histories,
+                  user: user,
+                ),
               ),
-            ),
-            const SizedBox(height: 120),
-          ],
+              const SizedBox(height: 120),
+            ],
+          ),
         ),
       ),
     );
