@@ -19,13 +19,13 @@ void main() {
       when(httpsCallableResult.data)
           .thenReturn(<dynamic, dynamic>{'inquiryId': 'inquiry-id'});
 
-      final inquiryID = await firebaseFunctions.inquiry(
-        inquiryType: InquiryType.values.first,
-        email: 'test@example.com',
-        content: 'content',
-      );
-
-      expect(inquiryID, 'inquiry-id');
+      expect(
+          await firebaseFunctions.inquiry(
+            inquiryType: InquiryType.values.first,
+            email: 'test@example.com',
+            content: 'content',
+          ),
+          'inquiry-id');
       expect(
           verify(httpsCallable.call(captureAny)).captured.single['test'], true);
     });
