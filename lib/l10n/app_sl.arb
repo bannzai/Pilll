@@ -400,6 +400,7 @@
   "addPillSheet": "Dodajte ploščico",
   "pillTakenCountPrefix": "Na dan",
   "pillTakenCountSuffix": "krat vzeti tableto",
+  "duringPauseTaking": "Premor pri jemanju tablet traja",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Priporočite prijateljem",
   "termsOfService": "Pogoji uporabe",

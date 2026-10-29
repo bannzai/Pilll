@@ -400,6 +400,7 @@
   "addPillSheet": "Эмийн блистер нэмэх",
   "pillTakenCountPrefix": "Өдөрт",
   "pillTakenCountSuffix": "удаа ууна",
+  "duringPauseTaking": "түр завсарлаг үргэлжилж байна",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Найзууддаа санал болгох",
   "termsOfService": "Үйлчилгээний нөхцөл",
