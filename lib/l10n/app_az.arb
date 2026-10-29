@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nömrəli həb",
   "selectPauseStartDate": "Həb qəbuluna fasilə üçün başlanğıc tarixini seçin",
   "selectPausePeriod": "Həb qəbuluna fasilə müddətini seçin",
+  "pauseStartDate": "Həb qəbuluna fasilə başlama tarixi",
   "endPillSheet": "həb blister tamamlandı",
   "discardPillSheet": "həb blister silindi",
   "takingTime": "Həb qəbul etmə vaxtı",

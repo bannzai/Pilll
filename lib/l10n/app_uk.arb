@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Виберіть дату початку призупинення прийому",
   "selectPausePeriod": "Виберіть тривалість призупинення прийому",
+  "pauseStartDate": "Дата початку призупинення",
   "endPillSheet": "Блістер закінчився",
   "discardPillSheet": "Блістер видалено",
   "takingTime": "Час прийому пігулки",

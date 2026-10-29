@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Ընտրեք ընդունման դադար սկսելու ամսաթիվը",
   "selectPausePeriod": "Ընտրեք ընդունման դադար ժամանակահատվածը",
+  "pauseStartDate": "ընդունման դադար սկսելու ամսաթիվ",
   "endPillSheet": "Ավարտվել է հաբերի բլիստերը",
   "discardPillSheet": "Հեռացվել է հաբերի բլիստերը",
   "takingTime": "Հաբն ընդունելու ժամը",

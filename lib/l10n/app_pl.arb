@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Wybierz datę, od której chcesz wstrzymać przyjmowanie",
   "selectPausePeriod": "Wybierz okres wstrzymania przyjmowania tabletek",
+  "pauseStartDate": "Data rozpoczęcia wstrzymania",
   "endPillSheet": "blist zużyty",
   "discardPillSheet": "blist wyrzucony",
   "takingTime": "Godzina przyjęcia tabletki",

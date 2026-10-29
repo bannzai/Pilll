@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Zgjidhni datën e fillimit të pauzës",
   "selectPausePeriod": "Zgjidhni kohëzgjatjen e pauzës",
+  "pauseStartDate": "Data e fillimit të pauzës",
   "endPillSheet": "përfundoni blisterin",
   "discardPillSheet": "fshini blisterin",
   "takingTime": "Ora e marrjes së pilulës",

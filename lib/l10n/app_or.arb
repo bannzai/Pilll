@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "ବଟିକା ନମ୍ବର {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
   "selectPausePeriod": "ସେବନ ବିରତିର ଅବଧି ବାଛନ୍ତୁ",
+  "pauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ",
   "endPillSheet": "ବଟିକା ସିଟ ସରିଗଲା",
   "discardPillSheet": "ବଟିକା ସିଟ ବାତିଲ ହୋଇଛି",
   "takingTime": "ବଟିକା ଖାଇବା ସମୟ",

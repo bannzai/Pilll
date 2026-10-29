@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Kies die begindatum van die innameonderbreking",
   "selectPausePeriod": "Kies die tydperk vir innameonderbreking",
+  "pauseStartDate": "Begindatum van innameonderbreking",
   "endPillSheet": "Pilstrokie voltooi",
   "discardPillSheet": "Pilstrokie weggegooi",
   "takingTime": "Innametyd",

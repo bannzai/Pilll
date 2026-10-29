@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Alege data de la care vrei să întrerupi administrarea",
   "selectPausePeriod": "Alege perioada de întrerupere",
+  "pauseStartDate": "Data începerii întreruperii",
   "endPillSheet": "Blister terminat",
   "discardPillSheet": "Blister aruncat",
   "takingTime": "Ora la care iei pilula",

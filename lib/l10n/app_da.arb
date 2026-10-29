@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vælg startdato for indtagelsespause",
   "selectPausePeriod": "Vælg perioden for indtagelsespause",
+  "pauseStartDate": "Startdato for indtagelsespause",
   "endPillSheet": "Afsluttet pillekort",
   "discardPillSheet": "Kasseret pillekort",
   "takingTime": "Tidspunkt",

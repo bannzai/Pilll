@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Velg startdato for inntakspause",
   "selectPausePeriod": "Velg varighet for inntakspause",
+  "pauseStartDate": "Startdato for inntakspause",
   "endPillSheet": "Pillebrett brukt opp",
   "discardPillSheet": "Pillebrett slettet",
   "takingTime": "Tid for å ta p-pillen",

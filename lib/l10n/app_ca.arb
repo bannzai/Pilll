@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→núm. {afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Tria la data d'inici de la pausa",
   "selectPausePeriod": "Tria la durada de la pausa",
+  "pauseStartDate": "Data d’inici de la pausa",
   "endPillSheet": "Blíster acabat",
   "discardPillSheet": "Blíster descartat",
   "takingTime": "Hora de prendre la píndola",

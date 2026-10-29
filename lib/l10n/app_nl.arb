@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Kies de startdatum van de innamepauze",
   "selectPausePeriod": "Kies de duur van de innamepauze",
+  "pauseStartDate": "Startdatum van de innamepauze",
   "endPillSheet": "Pillenstrip is op",
   "discardPillSheet": "Pillenstrip weggooien",
   "takingTime": "Innametijd",

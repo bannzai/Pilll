@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "აირჩიეთ მიღების პაუზის დაწყების თარიღი",
   "selectPausePeriod": "აირჩიეთ მიღების პაუზის ხანგრძლივობა",
+  "pauseStartDate": "მიღების პაუზის დაწყების თარიღი",
   "endPillSheet": "აბების ბლისტერი დასრულებულია",
   "discardPillSheet": "აბების ბლისტერის გადაგდება",
   "takingTime": "აბის მიღების დრო",

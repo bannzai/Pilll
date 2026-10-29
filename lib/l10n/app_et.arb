@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vali võtmise pausi alguskuupäev",
   "selectPausePeriod": "Vali võtmise pausi kestus",
+  "pauseStartDate": "Võtmise pausi alguskuupäev",
   "endPillSheet": "Pillileht on lõpetatud",
   "discardPillSheet": "pillilehe kustutamine",
   "takingTime": "Pilli võtmise aeg",

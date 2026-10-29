@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nro {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Valitse taukotilan aloituspäivä",
   "selectPausePeriod": "Valitse taukotilan kesto",
+  "pauseStartDate": "Taukotilan alkamispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",
   "discardPillSheet": "Pilleriliuska poistettu",
   "takingTime": "Pillerin ottoaika",
