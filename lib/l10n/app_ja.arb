@@ -518,7 +518,7 @@
   },
   "takingTime": "服用時間",
   "@takingTime": {
-    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
+    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。\n[翻訳の決定 pt] 「Horário de tomar a pílula」ではなく「Horário de uso」: 服用履歴の列見出しとして長いため短くする。用語集の「服用履歴」の pt 訳「histórico de uso」と揃う (https://github.com/bannzai/Pilll/issues/1975)\n[翻訳の決定 es] 「Hora de tomar la píldora」ではなく「Hora de toma」: 服用履歴の列見出しとして長いため短くする。用語集の「服用履歴」の es 訳「historial de tomas」と揃う (https://github.com/bannzai/Pilll/issues/1973)"
   },
   "takingHistoryIsPremiumFeature": "服用履歴はプレミアム機能です",
   "@takingHistoryIsPremiumFeature": {
