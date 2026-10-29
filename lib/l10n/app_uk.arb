@@ -240,7 +240,7 @@
   "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Ви можете змінити текст сповіщення про неприйняту пігулку",
-  "defaultMissedTakenMessage": "Ви вже прийняли пігулку?\nЗа кілька днів немає запису прийому 🤔",
+  "defaultMissedTakenMessage": "Ви вже прийняли пігулку?\nЗапис прийому відсутній уже кілька днів 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Ви можете змінити початок сповіщення",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
