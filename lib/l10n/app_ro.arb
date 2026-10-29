@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "După ce marchezi pilula de astăzi ca neluată",
   "pauseTaking": "întreruperea administrării",
   "changePauseStartDate": "Schimbă data de început a întreruperii",
+  "pauseTakingPeriodEnded": "Perioada de întrerupere a luării pilulei s-a încheiat",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Schimbă numărul de zile de administrare a pilulei per blister",
   "changedStartAndEndNumbers": "Numerele de început și de sfârșit au fost schimbate",

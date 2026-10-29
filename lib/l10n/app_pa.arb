@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ਅੱਜ ਦੀ ਗੋਲੀ ਨਾ ਲਈ ਹੋਈ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰਨ ਤੋਂ ਬਾਅਦ",
   "pauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ",
   "changePauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ ਬਦਲੋ",
+  "pauseTakingPeriodEnded": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਖ਼ਤਮ ਹੋ ਗਈ ਹੈ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੇ ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
   "changedStartAndEndNumbers": "ਸ਼ੁਰੂਆਤੀ ਅਤੇ ਆਖਰੀ ਨੰਬਰ ਬਦਲ ਦਿੱਤੇ ਗਏ ਹਨ",
