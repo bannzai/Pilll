@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} তাৰিখৰ ঔষধ সেৱনৰ ৰেকৰ্ডো কৰা হৈছে। আজি {takenDate} তাৰিখে {reminderTimes} বজাত দিয়া জাননী আপুনি নাপাব।\nভুলতে ৰেকৰ্ড হৈ থাকিলে, অনুগ্ৰহ কৰি ঔষধ সেৱনৰ ৰেকৰ্ড বাতিল কৰক",
   "midnightTakenWarningDialogSeeHowToRevert": "পিল খোৱাৰ ৰেকৰ্ড কেনেকৈ বাতিল কৰিব চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
+  "pauseStartDateMustBeOnOrBefore": "বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰাৰ আৰম্ভণিৰ দিন হিচাপে {date} বা তাৰ আগৰ দিন এটা বাছনি কৰক",
   "plannedResumeDateOptional": "পুনৰ পিল খোৱা আৰম্ভ কৰাৰ পৰিকল্পিত তাৰিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "এতিয়াও নিৰ্ধাৰণ কৰা হোৱা নাই",
   "selectPlannedResumeDate": "পুনৰ পিল খাবলৈ পৰিকল্পনা কৰা তাৰিখ বাছনি কৰক",

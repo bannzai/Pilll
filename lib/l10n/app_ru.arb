@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "В журнал приёма таблеток добавлена запись и за {takenDate}. Сегодня, {takenDate}, уведомление в {reminderTimes} не придёт.\nЕсли это ошибка, пожалуйста, отмените запись о приёме таблетки",
   "midnightTakenWarningDialogSeeHowToRevert": "Как отменить запись о приёме таблетки",
   "midnightTakenWarningDialogNeverShowAgain": "Больше не показывать",
+  "pauseStartDateMustBeOnOrBefore": "Пожалуйста, выберите {date} или более раннюю дату для начала приостановки приёма таблеток",
   "plannedResumeDateOptional": "Планируемая дата возобновления приёма таблеток (необязательно)",
   "plannedResumeDateNotSet": "Пока не указана",
   "selectPlannedResumeDate": "Выберите планируемую дату возобновления приёма таблеток",

@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "També s’ha creat un registre de preses per al {takenDate}. Avui, {takenDate}, no rebràs l’avís de les {reminderTimes}.\nSi ha estat un error, pots anul·lar la presa registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Consulta com anul·lar el registre d’una píndola",
   "midnightTakenWarningDialogNeverShowAgain": "No ho tornis a mostrar",
+  "pauseStartDateMustBeOnOrBefore": "Tria el {date} o una data anterior per començar la pausa",
   "plannedResumeDateOptional": "Data prevista per tornar a prendre la píndola (opcional)",
   "plannedResumeDateNotSet": "Encara no s’ha definit",
   "selectPlannedResumeDate": "Tria la data prevista per tornar a prendre la píndola",

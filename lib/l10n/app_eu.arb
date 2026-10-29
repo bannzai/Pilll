@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} eguneko hartze-erregistroa ere egin da. Gaur, {takenDate}, ez duzu {reminderTimes}(e)ko jakinarazpena jasoko.\nOkerra bada, ezeztatu pilularen hartzea",
   "midnightTakenWarningDialogSeeHowToRevert": "Ikusi nola ezeztatu pilula hartu izanaren erregistroa",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
+  "pauseStartDateMustBeOnOrBefore": "Hautatu {date} edo lehenagoko data etenaldia hasteko",
   "plannedResumeDateOptional": "Pilula berriro hartzen hasteko aurreikusitako eguna (aukerakoa)",
   "plannedResumeDateNotSet": "Zehaztu gabe",
   "selectPlannedResumeDate": "Aukeratu pilula berriro hartzeko aurreikusitako eguna",

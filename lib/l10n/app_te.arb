@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} కోసం కూడా మాత్రల నమోదు జరిగింది. ఈ రోజు {takenDate}న {reminderTimes} సమయానికి మీకు రిమైండర్ రాదు.\nపొరపాటున నమోదు చేసి ఉంటే, దయచేసి మాత్రల నమోదును రద్దు చేయండి",
   "midnightTakenWarningDialogSeeHowToRevert": "మాత్రల నమోదును ఎలా రద్దు చేయాలో చూడండి",
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపవద్దు",
+  "pauseStartDateMustBeOnOrBefore": "మాత్రలు తీసుకోవడాన్ని తాత్కాలిక విరామంలో ఉంచే ప్రారంభ తేదీగా {date} లేదా అంతకుముందు తేదీని ఎంచుకోండి",
   "plannedResumeDateOptional": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించడానికి అనుకున్న తేదీ (ఐచ్ఛికం)",
   "plannedResumeDateNotSet": "ఇంకా నిర్ణయించలేదు",
   "selectPlannedResumeDate": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించడానికి అనుకున్న తేదీని ఎంచుకోండి",

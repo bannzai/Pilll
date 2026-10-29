@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Die innamerekord vir {takenDate} is ook gemaak. Jy sal vandag, {takenDate}, nie die kennisgewing vir {reminderTimes} ontvang nie.\nAs dit ’n fout was, kan jy asseblief die aangetekende inname kanselleer",
   "midnightTakenWarningDialogSeeHowToRevert": "Kyk hoe om ’n pilinname te kanselleer",
   "midnightTakenWarningDialogNeverShowAgain": "Nooit weer wys",
+  "pauseStartDateMustBeOnOrBefore": "Kies asseblief {date} of vroeër as die begindatum van die innameonderbreking",
   "plannedResumeDateOptional": "Beplande datum om weer die pil te neem (opsioneel)",
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die datum waarop jy weer jou pil gaan neem",

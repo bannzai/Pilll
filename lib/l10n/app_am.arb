@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "ለ{takenDate} አወሳሰድ መዝገብ ተፈጥሯል። ዛሬ {takenDate} ስለሆነ፣ የ{reminderTimes} ማሳወቂያ አይደርስዎትም።\nበስህተት ከተመዘገበ፣ ይህን አወሳሰድ መዝገብ ይሰርዙ",
   "midnightTakenWarningDialogSeeHowToRevert": "አወሳሰድ መዝገብ እንዴት እንደሚሰረዝ ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "ዳግም አለማሳየት",
+  "pauseStartDateMustBeOnOrBefore": "ለጊዜው ማቆም የሚጀምርበትን ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ እንደገና ለመጀመር ያቀዱበትን ቀን ይምረጡ",

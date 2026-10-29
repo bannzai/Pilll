@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Ka kuupäeva {takenDate} jaoks loodi võtmiskirje. Täna, {takenDate}, ei saa sa kell {reminderTimes} meeldetuletust.\nKui see juhtus kogemata, saad märgitud pillivõtmise tühistada",
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas pillivõtmist tühistada",
   "midnightTakenWarningDialogNeverShowAgain": "Ära enam näita",
+  "pauseStartDateMustBeOnOrBefore": "Vali võtmise pausi alguskuupäevaks {date} või varasem kuupäev",
   "plannedResumeDateOptional": "Pillide võtmise jätkamise plaanitud kuupäev (valikuline)",
   "plannedResumeDateNotSet": "Määramata",
   "selectPlannedResumeDate": "Vali pillide võtmise jätkamise plaanitud kuupäev",

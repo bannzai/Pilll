@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "برای {takenDate} هم ثبت مصرف انجام شد. امروز، {takenDate}، اعلان ساعت {reminderTimes} را دریافت نمی‌کنید.\nاگر اشتباهی ثبت شده است، لطفاً مصرف ثبت‌شده را لغو کنید",
   "midnightTakenWarningDialogSeeHowToRevert": "مشاهدهٔ روش لغو ثبت مصرف قرص",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نشان نده",
+  "pauseStartDateMustBeOnOrBefore": "لطفاً برای شروع توقف موقت مصرف، تاریخ {date} یا تاریخی پیش از آن را انتخاب کنید",
   "plannedResumeDateOptional": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص (اختیاری)",
   "plannedResumeDateNotSet": "هنوز تعیین نشده",
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص را انتخاب کنید",

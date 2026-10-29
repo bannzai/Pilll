@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "服药记录已经记到了 {takenDate}。今天（{takenDate}）{reminderTimes} 的提醒将不会再发送给你。\n如果记录有误，请撤销这次服药记录",
   "midnightTakenWarningDialogSeeHowToRevert": "查看如何撤销服药记录",
   "midnightTakenWarningDialogNeverShowAgain": "不再显示",
+  "pauseStartDateMustBeOnOrBefore": "请选择 {date} 或更早的日期作为暂停服药的开始日期",
   "plannedResumeDateOptional": "预计恢复服药日期（选填）",
   "plannedResumeDateNotSet": "尚未设置",
   "selectPlannedResumeDate": "选择预计恢复服药日期",

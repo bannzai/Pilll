@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Für de {takenDate} isch au e Iinahm-Ufzeichnig gmacht worde. Hüt, am {takenDate}, chunnt d Erinnerig vo {reminderTimes} nöd bi dir aa.\nWänn das es Versee gsi isch, chasch d iitrageni Iinahm rückgängig mache",
   "midnightTakenWarningDialogSeeHowToRevert": "Lueg, wie du e Iinahm-Ufzeichnig rückgängig machsch",
   "midnightTakenWarningDialogNeverShowAgain": "Nüme aazeige",
+  "pauseStartDateMustBeOnOrBefore": "Wähl bitte de {date} oder es früehners Datum für de Afang vo de Iinahmepause",
   "plannedResumeDateOptional": "Datum, wänn du d Pille wider nimmsch (freiwillig)",
   "plannedResumeDateNotSet": "No nöd feschtgleit",
   "selectPlannedResumeDate": "Wähl s Datum, wänn du d Pille wider wetsch näh",

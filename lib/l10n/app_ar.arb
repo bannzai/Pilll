@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "تم أيضًا إنشاء تسجيل تناول ليوم {takenDate}. لن يصلكِ إشعار الساعة {reminderTimes} اليوم، {takenDate}.\nإذا كان التسجيل بالخطأ، يُرجى إلغاء تسجيل تناول الحبة",
   "midnightTakenWarningDialogSeeHowToRevert": "اطلعي على طريقة التراجع عن تسجيل تناول الحبة",
   "midnightTakenWarningDialogNeverShowAgain": "عدم الإظهار مجددًا",
+  "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء إيقاف تناول الحبوب في {date} أو قبله",
   "plannedResumeDateOptional": "التاريخ المخطط لاستئناف تناول الحبوب (اختياري)",
   "plannedResumeDateNotSet": "لم يُحدَّد بعد",
   "selectPlannedResumeDate": "اختاري التاريخ المخطط لاستئناف تناول الحبوب",

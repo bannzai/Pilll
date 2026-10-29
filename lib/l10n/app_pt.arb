@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Também foi criado um registro de uso para {takenDate}. Hoje, {takenDate}, você não receberá o lembrete das {reminderTimes}.\nSe foi um engano, você pode desfazer a dose registrada",
   "midnightTakenWarningDialogSeeHowToRevert": "Veja como desfazer a dose registrada",
   "midnightTakenWarningDialogNeverShowAgain": "Não mostrar novamente",
+  "pauseStartDateMustBeOnOrBefore": "Escolha {date} ou uma data anterior para iniciar a interrupção",
   "plannedResumeDateOptional": "Data prevista para voltar a tomar a pílula (opcional)",
   "plannedResumeDateNotSet": "Ainda não definida",
   "selectPlannedResumeDate": "Escolha a data prevista para voltar a tomar a pílula",

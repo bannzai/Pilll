@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} के लिए भी सेवन रिकॉर्ड दर्ज हो गया है। आज, {takenDate} को {reminderTimes} वाला रिमाइंडर आपको नहीं मिलेगा।\nअगर यह गलती से दर्ज हुआ है, तो कृपया दर्ज किया गया गोली सेवन रद्द करें",
   "midnightTakenWarningDialogSeeHowToRevert": "गोली सेवन रद्द करने का तरीका देखें",
   "midnightTakenWarningDialogNeverShowAgain": "फिर न दिखाएं",
+  "pauseStartDateMustBeOnOrBefore": "गोली लेने में विराम शुरू करने के लिए कृपया {date} या उससे पहले की तारीख चुनें",
   "plannedResumeDateOptional": "गोली फिर से लेना शुरू करने की तय तारीख (वैकल्पिक)",
   "plannedResumeDateNotSet": "अभी तय नहीं किया गया",
   "selectPlannedResumeDate": "गोली फिर से लेना शुरू करने की तय तारीख चुनें",

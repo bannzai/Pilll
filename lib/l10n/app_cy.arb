@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Mae cofnod cymryd wedi’i wneud ar gyfer {takenDate} hefyd. Heddiw, {takenDate}, ni fyddwch yn cael yr hysbysiad am {reminderTimes}.\nOs oedd hyn yn gamgymeriad, gallwch ganslo’r cofnod cymryd",
   "midnightTakenWarningDialogSeeHowToRevert": "Gweld sut i ganslo’r cofnod cymryd",
   "midnightTakenWarningDialogNeverShowAgain": "Peidio â dangos eto",
+  "pauseStartDateMustBeOnOrBefore": "Dewiswch {date} neu ddyddiad cyn hynny i ddechrau eich oedi",
   "plannedResumeDateOptional": "Dyddiad bwriedig i ailddechrau cymryd y bilsen (dewisol)",
   "plannedResumeDateNotSet": "Heb ei bennu eto",
   "selectPlannedResumeDate": "Dewiswch y dyddiad rydych yn bwriadu ailddechrau cymryd y bilsen",

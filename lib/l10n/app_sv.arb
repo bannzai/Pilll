@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "En intagslogg skapades också för {takenDate}. Du får ingen påminnelse kl. {reminderTimes} i dag, {takenDate}.\nOm det blev fel kan du ångra det registrerade intaget",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hur du ångrar ett registrerat intag",
   "midnightTakenWarningDialogNeverShowAgain": "Visa inte igen",
+  "pauseStartDateMustBeOnOrBefore": "Välj {date} eller ett tidigare datum som start för din paus",
   "plannedResumeDateOptional": "Planerat datum för att börja ta p-pillret igen (valfritt)",
   "plannedResumeDateNotSet": "Inte angivet",
   "selectPlannedResumeDate": "Välj datumet då du planerar att börja ta p-piller igen",

@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Beleženje jemanja je bilo opravljeno tudi za {takenDate}. Danes ({takenDate}) obvestil ob {reminderTimes} ne boste prejeli.\nČe je šlo za pomoto, prekličite jemanje",
   "midnightTakenWarningDialogSeeHowToRevert": "Oglejte si, kako prekličete jemanje",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj več",
+  "pauseStartDateMustBeOnOrBefore": "Za začetek premora pri jemanju tablet izberite {date} ali zgodnejši datum",
   "plannedResumeDateOptional": "Načrtovani datum ponovnega jemanja tablet (neobvezno)",
   "plannedResumeDateNotSet": "Še ni določeno",
   "selectPlannedResumeDate": "Izberite načrtovani datum ponovnega jemanja tablet",

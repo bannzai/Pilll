@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Taip pat sukurtas vartojimo įrašas, skirtas {takenDate}. Šiandien, {takenDate}, {reminderTimes} val. priminimo negausite.\nJei tai klaida, galite atšaukti užregistruotą tabletės vartojimą",
   "midnightTakenWarningDialogSeeHowToRevert": "Kaip atšaukti tabletės vartojimo įrašą",
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
+  "pauseStartDateMustBeOnOrBefore": "Pasirinkite {date} arba ankstesnę datą kaip pristabdymo pradžią",
   "plannedResumeDateOptional": "Planuojama tablečių vartojimo atnaujinimo data (nebūtina)",
   "plannedResumeDateNotSet": "Dar nenustatyta",
   "selectPlannedResumeDate": "Pasirinkite planuojamą tablečių vartojimo atnaujinimo datą",

@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} အတွက် ဆေးသောက်မှတ်တမ်းကိုလည်း မှတ်တမ်းတင်ပြီးပါပြီ။ ဒီနေ့ {takenDate} မှာ {reminderTimes} အတွက် သတိပေးချက် မရတော့ပါဘူး။\nမှားယွင်းမှတ်တမ်းတင်မိပါက မှတ်တမ်းတင်ထားသော ဆေးသောက်ခြင်းကို ပယ်ဖျက်ပါ",
   "midnightTakenWarningDialogSeeHowToRevert": "ဆေးသောက်ခြင်းကို ပယ်ဖျက်နည်း ကြည့်ရန်",
   "midnightTakenWarningDialogNeverShowAgain": "ထပ်မပြပါနှင့်",
+  "pauseStartDateMustBeOnOrBefore": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်အဖြစ် {date} သို့မဟုတ် ထိုရက်မတိုင်မီရက်ကို ရွေးပါ",
   "plannedResumeDateOptional": "ဆေးပြားကို ပြန်လည်သောက်ရန် စီစဉ်ထားသော ရက်စွဲ (ရွေးချယ်နိုင်ပါတယ်)",
   "plannedResumeDateNotSet": "မသတ်မှတ်ရသေးပါ",
   "selectPlannedResumeDate": "ဆေးပြန်သောက်မယ့်ရက်ကို ရွေးပါ",

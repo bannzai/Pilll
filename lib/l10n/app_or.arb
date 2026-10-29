@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} ପାଇଁ ମଧ୍ୟ ସେବନ ରେକର୍ଡ ହୋଇଛି। ଆଜି {takenDate} ରେ {reminderTimes} ସମୟର ସୂଚନା ଆପଣଙ୍କୁ ମିଳିବ ନାହିଁ।\nଭୁଲରେ ରେକର୍ଡ ହୋଇଥିଲେ, ଦୟାକରି ରେକର୍ଡ ହୋଇଥିବା ବଟିକା ସେବନକୁ ବାତିଲ କରନ୍ତୁ",
   "midnightTakenWarningDialogSeeHowToRevert": "ସେବନ ରେକର୍ଡ କିପରି ବାତିଲ କରିବେ ଦେଖନ୍ତୁ",
   "midnightTakenWarningDialogNeverShowAgain": "ପୁଣି ଦେଖାନ୍ତୁ ନାହିଁ",
+  "pauseStartDateMustBeOnOrBefore": "ସେବନ ବିରତି ଆରମ୍ଭ କରିବା ପାଇଁ ଦୟାକରି {date} କିମ୍ବା ତା’ପୂର୍ବର ତାରିଖ ବାଛନ୍ତୁ",
   "plannedResumeDateOptional": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ (ଇଚ୍ଛାଧୀନ)",
   "plannedResumeDateNotSet": "ଏପର୍ଯ୍ୟନ୍ତ ନିର୍ଦ୍ଧାରଣ ହୋଇନାହିଁ",
   "selectPlannedResumeDate": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ ବାଛନ୍ତୁ",

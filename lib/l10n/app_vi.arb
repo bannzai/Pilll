@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Nhật ký uống thuốc cho ngày {takenDate} cũng đã được ghi. Hôm nay, {takenDate}, bạn sẽ không nhận được thông báo lúc {reminderTimes}.\nNếu ghi nhầm, vui lòng hủy lần uống thuốc đã ghi",
   "midnightTakenWarningDialogSeeHowToRevert": "Xem cách hủy bản ghi uống thuốc",
   "midnightTakenWarningDialogNeverShowAgain": "Không hiện lại",
+  "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày {date} hoặc sớm hơn để bắt đầu tạm ngừng uống thuốc",
   "plannedResumeDateOptional": "Ngày dự định uống thuốc trở lại (không bắt buộc)",
   "plannedResumeDateNotSet": "Chưa thiết lập",
   "selectPlannedResumeDate": "Chọn ngày dự định uống thuốc trở lại",

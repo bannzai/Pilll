@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Dodano też zapis przyjęcia tabletki na {takenDate}. Dziś, {takenDate}, nie otrzymasz przypomnienia o {reminderTimes}.\nJeśli to pomyłka, cofnij zapis przyjęcia tabletki",
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć zapis przyjęcia tabletki",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
+  "pauseStartDateMustBeOnOrBefore": "Wybierz {date} lub wcześniejszą datę jako początek wstrzymania przyjmowania tabletek",
   "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania tabletek (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania tabletek",

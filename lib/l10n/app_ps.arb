@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "د {takenDate} لپاره هم د ګولۍ اخیستلو ریکارډ جوړ شو. نن، {takenDate}، به تاسو ته د {reminderTimes} خبرتیا نه رسېږي.\nکه دا په تېروتنه ثبت شوی وي، مهرباني وکړئ ثبت شوې ګولۍ اخیستل لغوه کړئ",
   "midnightTakenWarningDialogSeeHowToRevert": "د ګولۍ اخیستلو ثبت د لغوه کولو څرنګوالی وګورئ",
   "midnightTakenWarningDialogNeverShowAgain": "بیا یې مه ښیئ",
+  "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د ګولیو د لنډمهاله درولو د پیل لپاره {date} یا تر هغې مخکې نېټه وټاکئ",
   "plannedResumeDateOptional": "د ګولۍ بیا اخیستلو پلان شوې نېټه (اختیاري)",
   "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د ګولۍ د بیا اخیستلو پلان شوې نېټه وټاکئ",

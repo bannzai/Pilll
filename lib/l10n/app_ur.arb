@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} کے لیے بھی گولی لینے کا ریکارڈ بن گیا ہے۔ آج، {takenDate} کو {reminderTimes} کی یاد دہانی آپ کو نہیں ملے گی۔\nاگر یہ غلطی سے درج ہوا ہے تو براہِ کرم درج کی گئی گولی کی خوراک منسوخ کریں",
   "midnightTakenWarningDialogSeeHowToRevert": "گولی لینے کا ریکارڈ منسوخ کرنے کا طریقہ دیکھیں",
   "midnightTakenWarningDialogNeverShowAgain": "دوبارہ نہ دکھائیں",
+  "pauseStartDateMustBeOnOrBefore": "گولی لینے میں توقف شروع کرنے کے لیے براہِ کرم {date} یا اس سے پہلے کی تاریخ منتخب کریں",
   "plannedResumeDateOptional": "گولی دوبارہ لینا شروع کرنے کی طے شدہ تاریخ (اختیاری)",
   "plannedResumeDateNotSet": "ابھی طے نہیں ہوئی",
   "selectPlannedResumeDate": "دوبارہ گولی لینا شروع کرنے کی طے شدہ تاریخ منتخب کریں",

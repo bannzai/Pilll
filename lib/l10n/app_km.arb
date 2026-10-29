@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "កំណត់ត្រាការលេបថ្នាំសម្រាប់ {takenDate} ក៏ត្រូវបានបង្កើតហើយ។ ថ្ងៃនេះ {takenDate} អ្នកនឹងមិនទទួលបានការរំលឹកនៅម៉ោង {reminderTimes} ទេ។\nប្រសិនបើកត់ត្រាខុស សូមលុបចោលការលេបថ្នាំដែលបានកត់ត្រា",
   "midnightTakenWarningDialogSeeHowToRevert": "មើលរបៀបលុបកំណត់ត្រាការលេបថ្នាំគ្រាប់",
   "midnightTakenWarningDialogNeverShowAgain": "កុំបង្ហាញម្តងទៀត",
+  "pauseStartDateMustBeOnOrBefore": "សូមជ្រើសរើសថ្ងៃទី {date} ឬថ្ងៃមុននោះ ជាថ្ងៃចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
   "plannedResumeDateOptional": "ថ្ងៃគ្រោងចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ (ស្រេចចិត្ត)",
   "plannedResumeDateNotSet": "មិនទាន់កំណត់",
   "selectPlannedResumeDate": "សូមជ្រើសរើសថ្ងៃដែលគ្រោងចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",

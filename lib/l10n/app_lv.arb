@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Izveidots arī tablešu lietošanas ieraksts datumam {takenDate}. Šodien, {takenDate}, jūs nesaņemsiet atgādinājumu plkst. {reminderTimes}.\nJa tas notika kļūdas dēļ, lūdzu, atceliet reģistrēto tabletes lietošanu",
   "midnightTakenWarningDialogSeeHowToRevert": "Skatiet, kā atcelt tabletes lietošanas ierakstu",
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
+  "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties {date} vai agrāku datumu kā lietošanas pauzes sākumu",
   "plannedResumeDateOptional": "Plānotais datums, kad atsāksiet lietot tabletes (nav obligāti)",
   "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto datumu, kad atsāksiet lietot tabletes",

@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate}의 복용 기록도 저장됐어요. 오늘 {takenDate}에는 {reminderTimes} 알림이 오지 않아요.\n잘못 기록했다면 복용 기록을 취소해 주세요",
   "midnightTakenWarningDialogSeeHowToRevert": "복용 기록을 취소하는 방법 보기",
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
+  "pauseStartDateMustBeOnOrBefore": "일시 중지 시작일은 {date} 또는 그 이전 날짜로 선택해 주세요",
   "plannedResumeDateOptional": "복용 재개 예정일 (선택)",
   "plannedResumeDateNotSet": "미설정",
   "selectPlannedResumeDate": "복용 재개 예정일 선택",

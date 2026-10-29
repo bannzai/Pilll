@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate}-ի համար նույնպես ստեղծվել է ընդունման գրառում։ Այսօր՝ {takenDate}-ին, {reminderTimes}-ի ծանուցումը Դուք չեք ստանա։\nԵթե գրառումը սխալմամբ է արվել, խնդրում ենք չեղարկել գրանցված ընդունումը",
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսեք, թե ինչպես չեղարկել հաբի ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս չցուցադրել",
+  "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընդունման դադար սկսելու համար ընտրել {date} կամ ավելի վաղ ամսաթիվ",
   "plannedResumeDateOptional": "Հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվ (ըստ ցանկության)",
   "plannedResumeDateNotSet": "Դեռ սահմանված չէ",
   "selectPlannedResumeDate": "Ընտրեք հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվը",

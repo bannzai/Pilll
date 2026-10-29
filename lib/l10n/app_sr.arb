@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "За {takenDate} је направљена и евиденција узимања. Данас, {takenDate}, нећете добити обавештење за {reminderTimes}.\nАко је ово грешка, можете да поништите забележено узимање",
   "midnightTakenWarningDialogSeeHowToRevert": "Погледајте како да поништите запис о узимању пилуле",
   "midnightTakenWarningDialogNeverShowAgain": "Не приказуј више",
+  "pauseStartDateMustBeOnOrBefore": "Молимо Вас, изаберите {date} или ранији датум за почетак прекида узимања пилула",
   "plannedResumeDateOptional": "Планирани датум поновног узимања пилуле (није обавезно)",
   "plannedResumeDateNotSet": "Још није одређено",
   "selectPlannedResumeDate": "Изаберите планирани датум поновног узимања пилуле",

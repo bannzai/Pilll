@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "{takenDate} നുള്ള ഗുളിക കഴിച്ചതിന്റെ രേഖയും സൃഷ്ടിച്ചു. ഇന്ന് {takenDate} ന് {reminderTimes} ലെ ഓർമ്മപ്പെടുത്തൽ ലഭിക്കില്ല.\nഅബദ്ധത്തിൽ രേഖപ്പെടുത്തിയതാണെങ്കിൽ, ഗുളിക കഴിച്ചതായി രേഖപ്പെടുത്തിയത് റദ്ദാക്കൂ",
   "midnightTakenWarningDialogSeeHowToRevert": "ഗുളിക കഴിച്ചതിന്റെ രേഖ എങ്ങനെ റദ്ദാക്കാമെന്ന് കാണൂ",
   "midnightTakenWarningDialogNeverShowAgain": "ഇനി കാണിക്കരുത്",
+  "pauseStartDateMustBeOnOrBefore": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്താൻ തുടങ്ങുന്ന തീയതിയായി {date} അല്ലെങ്കിൽ അതിന് മുമ്പുള്ള തീയതി തിരഞ്ഞെടുക്കൂ",
   "plannedResumeDateOptional": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി (നിർബന്ധമില്ല)",
   "plannedResumeDateNotSet": "ഇതുവരെ നിശ്ചയിച്ചിട്ടില്ല",
   "selectPlannedResumeDate": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",

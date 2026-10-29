@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Det er også opprettet en pillelogg for {takenDate}. Du får ikke påminnelsen kl. {reminderTimes} i dag, {takenDate}.\nHvis dette var en feil, kan du angre den registrerte pillen",
   "midnightTakenWarningDialogSeeHowToRevert": "Se hvordan du angrer en registrert p-pille",
   "midnightTakenWarningDialogNeverShowAgain": "Ikke vis igjen",
+  "pauseStartDateMustBeOnOrBefore": "Velg {date} eller en tidligere dato som start på inntakspausen",
   "plannedResumeDateOptional": "Planlagt dato for å ta p-pillen igjen (valgfritt)",
   "plannedResumeDateNotSet": "Ikke angitt",
   "selectPlannedResumeDate": "Velg planlagt dato for å ta p-pillen igjen",

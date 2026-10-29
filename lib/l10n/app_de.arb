@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Für {takenDate} wurde ebenfalls ein Einnahmeprotokoll angelegt. Die Erinnerung um {reminderTimes} erhältst du heute, am {takenDate}, nicht.\nFalls das ein Versehen war, kannst du die erfasste Einnahme rückgängig machen",
   "midnightTakenWarningDialogSeeHowToRevert": "So machst du einen Einnahmeeintrag rückgängig",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
+  "pauseStartDateMustBeOnOrBefore": "Wähle für den Beginn der Einnahmeunterbrechung bitte den {date} oder ein früheres Datum",
   "plannedResumeDateOptional": "Geplantes Datum für die erneute Pilleneinnahme (optional)",
   "plannedResumeDateNotSet": "Noch nicht festgelegt",
   "selectPlannedResumeDate": "Geplantes Datum für die erneute Pilleneinnahme wählen",

@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "A fost adăugată și o înregistrare pentru {takenDate}. Astăzi, {takenDate}, nu vei primi notificarea de la {reminderTimes}.\nDacă a fost o greșeală, poți anula înregistrarea",
   "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum anulezi înregistrarea unei pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa",
+  "pauseStartDateMustBeOnOrBefore": "Alege {date} sau o dată anterioară pentru începutul întreruperii administrării pilulei",
   "plannedResumeDateOptional": "Data planificată pentru reluarea pilulei (opțional)",
   "plannedResumeDateNotSet": "Încă nestabilită",
   "selectPlannedResumeDate": "Alege data la care plănuiești să reiei pilula",

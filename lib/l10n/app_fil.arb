@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Naitala na rin po ang tala ng pag-inom para sa {takenDate}. Dahil {takenDate} na ngayon, hindi ninyo matatanggap ang abiso ngayong araw sa {reminderTimes}.\nKung nagkamali, maaari po ninyong kanselahin ang naitalang pag-inom",
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano kanselahin ang naitalang pag-inom",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita",
+  "pauseStartDateMustBeOnOrBefore": "Pakipili po ang {date} o mas maagang petsa para sa simula ng pause",
   "plannedResumeDateOptional": "Nakaplanong petsa ng muling pag-inom (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",
   "selectPlannedResumeDate": "Piliin ang nakaplanong petsa ng muling pag-inom",

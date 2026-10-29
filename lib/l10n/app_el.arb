@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Δημιουργήθηκε επίσης καταγραφή λήψης για τις {takenDate}. Σήμερα, {takenDate}, δεν θα λάβετε την ειδοποίηση των {reminderTimes}.\nΑν έγινε κατά λάθος, μπορείτε να ακυρώσετε την καταγεγραμμένη λήψη",
   "midnightTakenWarningDialogSeeHowToRevert": "Δείτε πώς να ακυρώσετε την καταγραφή λήψης χαπιού",
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
+  "pauseStartDateMustBeOnOrBefore": "Επιλέξτε την {date} ή προγενέστερη ημερομηνία για την έναρξη της παύσης",
   "plannedResumeDateOptional": "Προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού (προαιρετικό)",
   "plannedResumeDateNotSet": "Δεν έχει οριστεί",
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού",

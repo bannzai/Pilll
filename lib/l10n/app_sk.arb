@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Pre {takenDate} bol vytvorený aj záznam o užití. Dnes, {takenDate}, vám upozornenie na {reminderTimes} nepríde.\nAk ide o omyl, môžete zaznamenané užitie zrušiť",
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrite si, ako zrušiť záznam o užití tabletky",
   "midnightTakenWarningDialogNeverShowAgain": "Znova nezobrazovať",
+  "pauseStartDateMustBeOnOrBefore": "Na začiatok pozastavenia užívania tabletiek vyberte, prosím, {date} alebo skorší dátum",
   "plannedResumeDateOptional": "Plánovaný dátum obnovenia užívania tabletiek (voliteľné)",
   "plannedResumeDateNotSet": "Zatiaľ nenastavené",
   "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania tabletiek",
