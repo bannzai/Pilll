@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतली असल्यास, ‘सेवन विराम’ वापरता येणार नाही",
   "pauseTakingStarted": "सेवन विराम सुरू झाला आहे",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "सेवन विराम सुरू होण्याची तारीख बदला",
   "shareWithFriends": "मित्रांना सांगा",
   "termsOfService": "वापराच्या अटी",
   "privacyPolicy": "गोपनीयता धोरण",

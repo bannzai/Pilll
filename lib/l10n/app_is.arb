@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ef þú hefur þegar tekið pilluna í dag geturðu ekki notað „pilluhlé“",
   "pauseTakingStarted": "Pilluhlé er hafið",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Breyta upphafsdegi pilluhlés",
   "shareWithFriends": "Deila með vinum",
   "termsOfService": "Notkunarskilmálar",
   "privacyPolicy": "Persónuverndarstefna",

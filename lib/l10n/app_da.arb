@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Hvis du allerede har taget dagens p-pille, kan du ikke bruge »indtagelsespause«",
   "pauseTakingStarted": "Din indtagelsespause er begyndt",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Rediger startdato for indtagelsespause",
   "shareWithFriends": "Del med venner",
   "termsOfService": "Brugsvilkår",
   "privacyPolicy": "Privatlivspolitik",

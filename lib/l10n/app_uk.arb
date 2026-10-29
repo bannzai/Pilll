@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Якщо сьогоднішню пігулку вже прийнято, «призупинення» недоступне",
   "pauseTakingStarted": "Почалося призупинення прийому пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Змінити дату початку призупинення",
   "shareWithFriends": "Порадьте друзям",
   "termsOfService": "Умови користування",
   "privacyPolicy": "Політика конфіденційності",

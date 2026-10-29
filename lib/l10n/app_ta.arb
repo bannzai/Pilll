@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "இன்றைய மாத்திரையை ஏற்கனவே எடுத்திருந்தால், உட்கொள்வதை இடைநிறுத்த முடியாது",
   "pauseTakingStarted": "மாத்திரை உட்கொள்வதை இடைநிறுத்துவது தொடங்கியுள்ளது",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "இடைநிறுத்தம் தொடங்கும் தேதியைத் திருத்துங்கள்",
   "shareWithFriends": "நண்பர்களிடம் பகிருங்கள்",
   "termsOfService": "பயன்பாட்டு விதிமுறைகள்",
   "privacyPolicy": "தனியுரிமைக் கொள்கை",

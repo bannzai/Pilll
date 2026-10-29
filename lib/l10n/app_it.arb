@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Se hai già preso la pillola di oggi, non puoi usare la «sospensione»",
   "pauseTakingStarted": "La sospensione dell'assunzione è iniziata",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Modifica la data di inizio della sospensione",
   "shareWithFriends": "Condividi con gli amici",
   "termsOfService": "Termini di utilizzo",
   "privacyPolicy": "Informativa sulla privacy",

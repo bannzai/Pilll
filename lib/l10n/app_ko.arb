@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "오늘 먹을 피임약을 이미 복용했다면 ‘일시 중지’를 사용할 수 없어요",
   "pauseTakingStarted": "일시 중지가 시작됐어요",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "일시 중지 시작일 수정",
   "shareWithFriends": "친구에게 추천하기",
   "termsOfService": "이용약관",
   "privacyPolicy": "개인정보 처리방침",

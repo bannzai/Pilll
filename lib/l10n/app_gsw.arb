@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Wänn du d Pille für hüt scho gno häsch, chasch d «Iinahmepause» nöd bruuche",
   "pauseTakingStarted": "D Iinahmepause hät aagfange",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Startdatum vo de Iinahmepause bearbeite",
   "shareWithFriends": "Mit Fründe teile",
   "termsOfService": "Nutzigsbedingige",
   "privacyPolicy": "Dateschutzbestimmige",

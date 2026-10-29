@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "આજની ગોળી તમે પહેલેથી લઈ લીધી હોય, તો ‘ગોળી લેવાનું થોડા સમય માટે બંધ’ સુવિધા વાપરી શકશો નહીં",
   "pauseTakingStarted": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાનું શરૂ થયું છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ કરવાની તારીખ સંપાદિત કરો",
   "shareWithFriends": "મિત્રોને જણાવો",
   "termsOfService": "ઉપયોગની શરતો",
   "privacyPolicy": "ગોપનીયતા નીતિ",

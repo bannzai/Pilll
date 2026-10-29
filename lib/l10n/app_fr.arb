@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Si la pilule du jour a déjà été prise, vous ne pouvez pas utiliser la « pause de prise »",
   "pauseTakingStarted": "La pause de prise a commencé",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Modifier la date de début de la pause de prise",
   "shareWithFriends": "Partager avec vos amis",
   "termsOfService": "Conditions d’utilisation",
   "privacyPolicy": "Politique de confidentialité",

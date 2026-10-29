@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ако вече сте взели днешното хапче, не можете да използвате „спиране на приема“",
   "pauseTakingStarted": "Започна спиране на приема",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Редактиране на началната дата за спиране на приема",
   "shareWithFriends": "Споделете с приятели",
   "termsOfService": "Условия за ползване",
   "privacyPolicy": "Политика за поверителност",

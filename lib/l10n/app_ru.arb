@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Если сегодняшняя таблетка уже принята, приостановить приём нельзя",
   "pauseTakingStarted": "Началась приостановка приёма таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Изменить дату начала приостановки",
   "shareWithFriends": "Поделиться с друзьями",
   "termsOfService": "Условия использования",
   "privacyPolicy": "Политика конфиденциальности",

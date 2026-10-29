@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Os ydych eisoes wedi cymryd pilsen heddiw, ni allwch ddefnyddio «oedi»",
   "pauseTakingStarted": "Mae'r oedi cyn cymryd y bilsen wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Golygu dyddiad dechrau'r oedi",
   "shareWithFriends": "Rhannu â ffrindiau",
   "termsOfService": "Telerau defnyddio",
   "privacyPolicy": "Polisi preifatrwydd",

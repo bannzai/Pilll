@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "ఈరోజు మాత్రను ఇప్పటికే తీసుకుని ఉంటే, ‘తాత్కాలిక విరామం’ ఉపయోగించలేరు",
   "pauseTakingStarted": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ప్రారంభమైంది",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "తాత్కాలిక విరామం ప్రారంభ తేదీని సవరించండి",
   "shareWithFriends": "స్నేహితులకు తెలియజేయండి",
   "termsOfService": "వినియోగ నిబంధనలు",
   "privacyPolicy": "గోప్యతా విధానం",

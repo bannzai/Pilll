@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ak ste už užili dnešnú tabletku, užívanie nie je možné pozastaviť",
   "pauseTakingStarted": "Začalo sa pozastavenie užívania tabletiek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Upraviť dátum začiatku pozastavenia",
   "shareWithFriends": "Odporučte priateľom",
   "termsOfService": "Podmienky používania",
   "privacyPolicy": "Zásady ochrany osobných údajov",

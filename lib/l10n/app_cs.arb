@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Pokud už byla dnešní pilulka užita, nelze použít „pozastavení užívání“",
   "pauseTakingStarted": "Začalo pozastavení užívání",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Upravit datum začátku pozastavení užívání",
   "shareWithFriends": "Doporučit přátelům",
   "termsOfService": "Podmínky používání",
   "privacyPolicy": "Zásady ochrany osobních údajů",

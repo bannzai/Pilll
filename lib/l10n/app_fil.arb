@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pildoras para sa araw na ito, hindi ninyo magagamit ang “pause”",
   "pauseTakingStarted": "Nagsimula na ang pause sa pag-inom ng pill",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "I-edit ang petsa ng simula ng pause",
   "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga tuntunin ng paggamit",
   "privacyPolicy": "Patakaran sa privacy",

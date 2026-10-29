@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ikiwa tayari umemeza kidonge cha leo, huwezi kutumia chaguo la kusitisha kwa muda",
   "pauseTakingStarted": "Kusitisha kumeza kidonge kumeanza",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Tafadhali badilisha tarehe ya kuanza kusitisha",
   "shareWithFriends": "Shiriki na marafiki",
   "termsOfService": "Masharti ya matumizi",
   "privacyPolicy": "Sera ya faragha",

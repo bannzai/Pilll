@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ако веќе сте ја зеле денешната таблета, не можете да го прекинете земањето апчиња",
   "pauseTakingStarted": "Започна пауза во земањето апчиња",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Изменете го датумот на почеток на паузата во земањето апчиња",
   "shareWithFriends": "Препорачајте им на пријателите",
   "termsOfService": "Услови за користење",
   "privacyPolicy": "Политика за приватност",

@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Jos olet jo ottanut tämän päivän pillerin, et voi käyttää taukotilaa",
   "pauseTakingStarted": "Taukotila on alkanut",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Muokkaa taukotilan alkamispäivää",
   "shareWithFriends": "Kerro ystäville",
   "termsOfService": "Käyttöehdot",
   "privacyPolicy": "Tietosuojakäytäntö",

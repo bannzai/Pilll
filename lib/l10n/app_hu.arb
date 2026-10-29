@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ha a mai tablettát már szedted, a szedést nem lehet szüneteltetni",
   "pauseTakingStarted": "Elkezdődött a szüneteltetés",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "A szüneteltetés kezdőnapjának szerkesztése",
   "shareWithFriends": "Ajánld barátaidnak",
   "termsOfService": "Felhasználási feltételek",
   "privacyPolicy": "Adatvédelmi szabályzat",

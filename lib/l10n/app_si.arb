@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "අදට නියමිත පෙත්ත දැනටමත් ගෙන ඇත්නම්, «පෙති ගැනීමේ විරාම» භාවිත කළ නොහැක",
   "pauseTakingStarted": "පෙති ගැනීමේ විරාමය ආරම්භ වී ඇත",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය සංස්කරණය කරන්න",
   "shareWithFriends": "මිතුරන්ට කියන්න",
   "termsOfService": "භාවිත නියමයන්",
   "privacyPolicy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",

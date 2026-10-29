@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Бүгүнкү таблетканы ичип койгон болсоңуз, «убактылуу токтотуу» мүмкүнчүлүгүн колдоно албайсыз",
   "pauseTakingStarted": "Таблетка ичүүнү убактылуу токтотуу башталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",
   "shareWithFriends": "Досторуңузга сунуштаңыз",
   "termsOfService": "Колдонуу шарттары",
   "privacyPolicy": "Купуялык саясаты",

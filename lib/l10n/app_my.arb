@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "ဒီနေ့သောက်ရမည့်ဆေးကို သောက်ပြီးပါက «ခေတ္တရပ်နား» ကို အသုံးပြု၍ မရပါ",
   "pauseTakingStarted": "ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားထားပါပြီ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "ခေတ္တရပ်နား စတင်သည့်ရက်ကို ပြင်ဆင်ပါ",
   "shareWithFriends": "သူငယ်ချင်းများကို မျှဝေပါ",
   "termsOfService": "အသုံးပြုမှု စည်းမျဉ်းများ",
   "privacyPolicy": "ကိုယ်ရေးအချက်အလက် မူဝါဒ",

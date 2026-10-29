@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "आजको चक्की खाइसक्नुभएको छ भने, तपाईं ‘सेवन विराम’ प्रयोग गर्न सक्नुहुन्न",
   "pauseTakingStarted": "सेवन विराम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "सेवन विराम सुरु हुने मिति सम्पादन गर्नुहोस्",
   "shareWithFriends": "साथीहरूलाई भन्नुहोस्",
   "termsOfService": "प्रयोगका सर्तहरू",
   "privacyPolicy": "गोपनीयता नीति",

@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "თუ დღევანდელი აბი უკვე მიიღეთ, „მიღების პაუზ“ ფუნქციას ვერ გამოიყენებთ",
   "pauseTakingStarted": "მიღების პაუზა დაიწყო",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "მიღების პაუზის დაწყების თარიღის რედაქტირება",
   "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",

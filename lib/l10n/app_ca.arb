@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d’avui, no pots fer servir la «pausa»",
   "pauseTakingStarted": "La pausa ha començat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Edita la data d’inici de la pausa",
   "shareWithFriends": "Comparteix-ho amb els amics",
   "termsOfService": "Condicions d’ús",
   "privacyPolicy": "Política de privacitat",

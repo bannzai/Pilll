@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "که د نن ورځې ګولۍ مو لا مخکې خوړلې وي، «لنډمهاله درول» نه شئ کارولی",
   "pauseTakingStarted": "د ګولیو اخیستلو لنډمهاله درول پیل شول",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
   "shareWithFriends": "له ملګرو سره یې شریک کړئ",
   "termsOfService": "د کارونې شرایط",
   "privacyPolicy": "د محرمیت تګلاره",

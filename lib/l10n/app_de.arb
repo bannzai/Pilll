@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Wenn du die Pille für heute schon genommen hast, kannst du die „Einnahmeunterbrechung“ nicht nutzen",
   "pauseTakingStarted": "Deine Einnahmeunterbrechung hat begonnen",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Startdatum der Einnahmeunterbrechung bearbeiten",
   "shareWithFriends": "Mit Freunden teilen",
   "termsOfService": "Nutzungsbedingungen",
   "privacyPolicy": "Datenschutzerklärung",

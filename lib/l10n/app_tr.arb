@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Bugünkü hapı zaten aldıysanız “ara ver” seçeneğini kullanamazsınız",
   "pauseTakingStarted": "Hap almaya ara verme başladı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Ara verme başlangıç tarihini düzenleyin",
   "shareWithFriends": "Arkadaşlarınızla paylaşın",
   "termsOfService": "Kullanım koşulları",
   "privacyPolicy": "Gizlilik politikası",

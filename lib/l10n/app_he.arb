@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "אם הגלולה של היום כבר ניטלה, לא ניתן להשתמש ב״השהיית נטילה״",
   "pauseTakingStarted": "השהיית נטילה החלה",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "עריכת תאריך התחלת השהיית נטילה",
   "shareWithFriends": "לשתף עם חברים",
   "termsOfService": "תנאי שימוש",
   "privacyPolicy": "מדיניות פרטיות",

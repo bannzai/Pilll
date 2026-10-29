@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Nếu bạn đã uống viên thuốc hôm nay, bạn không thể dùng tính năng “tạm ngừng uống thuốc”",
   "pauseTakingStarted": "Đã bắt đầu tạm ngừng uống thuốc",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Chỉnh sửa ngày bắt đầu tạm ngừng uống thuốc",
   "shareWithFriends": "Giới thiệu cho bạn bè",
   "termsOfService": "Điều khoản sử dụng",
   "privacyPolicy": "Chính sách quyền riêng tư",

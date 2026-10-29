@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletė jau išgerta, funkcijos „pristabd“ naudoti negalite",
   "pauseTakingStarted": "Prasidėjo vartojimo pristabdymas",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Redaguoti pristabdymo pradžios datą",
   "shareWithFriends": "Pasidalykite su draugais",
   "termsOfService": "Naudojimo sąlygos",
   "privacyPolicy": "Privatumo politika",

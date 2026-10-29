@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Gaurko pilula dagoeneko hartu baduzu, ezin duzu «etenaldi» aukera erabili",
   "pauseTakingStarted": "Pilulak hartzeko etenaldia hasi da",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Editatu etenaldiaren hasiera-data",
   "shareWithFriends": "Partekatu lagunekin",
   "termsOfService": "Erabilera-baldintzak",
   "privacyPolicy": "Pribatutasun-politika",

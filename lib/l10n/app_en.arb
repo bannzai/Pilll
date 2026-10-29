@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "If you’ve already taken today’s pill, you can’t use “pause”",
   "pauseTakingStarted": "Your pause has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Edit pause start date",
   "shareWithFriends": "Share with friends",
   "termsOfService": "Terms of service",
   "privacyPolicy": "Privacy policy",

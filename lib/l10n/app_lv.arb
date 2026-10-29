@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Ja šodienas tablete jau ir iedzerta, funkciju „lietošanas pauz“ nevar izmantot",
   "pauseTakingStarted": "Ir sākusies lietošanas pauze",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Rediģēt lietošanas pauzes sākuma datumu",
   "shareWithFriends": "Ieteikt draugiem",
   "termsOfService": "Lietošanas noteikumi",
   "privacyPolicy": "Privātuma politika",

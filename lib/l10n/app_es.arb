@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Si ya tomaste la píldora de hoy, no puedes usar la «pausa»",
   "pauseTakingStarted": "La pausa ha comenzado",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Editar fecha de inicio de la pausa",
   "shareWithFriends": "Recomendar Pilll a tus amistades",
   "termsOfService": "Condiciones de uso",
   "privacyPolicy": "Política de privacidad",

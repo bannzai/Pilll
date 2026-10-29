@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "আজকের পিলটি ইতিমধ্যে খেয়ে থাকলে, আপনি ‘সেবন স্থগিত’ ব্যবহার করতে পারবেন না",
   "pauseTakingStarted": "সেবন স্থগিত শুরু হয়েছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "সেবন স্থগিত শুরুর তারিখ সম্পাদনা করুন",
   "shareWithFriends": "বন্ধুদের জানান",
   "termsOfService": "ব্যবহারের শর্তাবলি",
   "privacyPolicy": "গোপনীয়তা নীতি",

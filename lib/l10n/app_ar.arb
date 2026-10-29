@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "إذا تناولتِ حبة اليوم بالفعل، فلا يمكنكِ استخدام «إيقاف تناول الحبوب»",
   "pauseTakingStarted": "بدأ إيقاف تناول الحبوب",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "تعديل تاريخ بدء إيقاف تناول الحبوب",
   "shareWithFriends": "شاركيه مع صديقاتكِ",
   "termsOfService": "شروط الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",

@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "ຖ້າກິນຢາເມັດຂອງມື້ນີ້ແລ້ວ ຈະບໍ່ສາມາດໃຊ້ «ຢຸດກິນຢາຊົ່ວຄາວ» ໄດ້",
   "pauseTakingStarted": "ເລີ່ມການຢຸດກິນຢາຊົ່ວຄາວແລ້ວ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "ແກ້ໄຂວັນທີເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "shareWithFriends": "ແບ່ງປັນກັບໝູ່",
   "termsOfService": "ເງື່ອນໄຂການນຳໃຊ້",
   "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",

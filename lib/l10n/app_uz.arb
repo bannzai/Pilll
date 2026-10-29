@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Agar bugungi tabletkani ichib boʻlgan boʻlsangiz, «pauza» funksiyasidan foydalana olmaysiz",
   "pauseTakingStarted": "Tabletkalarni ichishdagi pauza boshlandi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Pauza boshlanish sanasini tahrirlang",
   "shareWithFriends": "Doʻstlaringizga tavsiya qiling",
   "termsOfService": "Foydalanish shartlari",
   "privacyPolicy": "Maxfiylik siyosati",

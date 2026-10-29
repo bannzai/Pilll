@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ଆଗରୁ ନେଇସାରିଥିଲେ, ଆପଣ ‘ସେବନ ବିରତି’ ବ୍ୟବହାର କରିପାରିବେ ନାହିଁ",
   "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ ହୋଇଛି",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",
   "shareWithFriends": "ବନ୍ଧୁମାନଙ୍କୁ ଜଣାନ୍ତୁ",
   "termsOfService": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",
   "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",

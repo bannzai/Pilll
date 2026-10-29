@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "የዛሬውን ክኒን አስቀድመው ከወሰዱ፣ ለጊዜው ማቆም መጠቀም አይችሉም",
   "pauseTakingStarted": "ለጊዜው ማቆም ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "የለጊዜው ማቆም መጀመሪያ ቀንን ያርትዑ",
   "shareWithFriends": "ለጓደኞችዎ ያሳውቁ",
   "termsOfService": "የአገልግሎት ውል",
   "privacyPolicy": "የግላዊነት ፖሊሲ",

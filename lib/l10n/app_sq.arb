@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Nëse e keni marrë tashmë pilulën e sotme, nuk mund të përdorni «pauzën»",
   "pauseTakingStarted": "Ka filluar pauza e marrjes së pilulës",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Ndryshoni datën e fillimit të pauzës",
   "shareWithFriends": "Ndajeni me miqtë",
   "termsOfService": "Kushtet e përdorimit",
   "privacyPolicy": "Politika e privatësisë",

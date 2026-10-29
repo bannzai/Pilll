@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "अगर आज की गोली ली जा चुकी है, तो आप ‘गोली लेने में विराम’ का इस्तेमाल नहीं कर सकती हैं",
   "pauseTakingStarted": "गोली लेने में विराम शुरू हो गया है",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
   "shareWithFriends": "दोस्तों को बताएं",
   "termsOfService": "उपयोग की शर्तें",
   "privacyPolicy": "गोपनीयता नीति",

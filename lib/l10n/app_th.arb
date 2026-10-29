@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "หากทานยาเม็ดของวันนี้แล้ว จะใช้ฟีเจอร์ “หยุดกินยาชั่วคราว” ไม่ได้ค่ะ",
   "pauseTakingStarted": "เริ่มหยุดกินยาชั่วคราวแล้วค่ะ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "แก้ไขวันที่เริ่มหยุดกินยาชั่วคราว",
   "shareWithFriends": "แนะนำให้เพื่อน",
   "termsOfService": "ข้อกำหนดการใช้งาน",
   "privacyPolicy": "นโยบายความเป็นส่วนตัว",
