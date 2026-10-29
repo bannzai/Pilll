@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Izbira začetnega datuma premora pri jemanju tablet",
   "selectPausePeriod": "Izbira obdobja premora pri jemanju tablet",
   "pauseStartDate": "Datum začetka premора pri jemanju tablet",
+  "pauseEndDate": "Datum konca premora pri jemanju tablet",
   "endPillSheet": "Ploščica je porabljena",
   "discardPillSheet": "Ploščica zavržena",
   "takingTime": "Čas za jemanje tablete",
