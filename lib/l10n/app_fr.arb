@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "La plaquette a été supprimée",
   "aboutMenstruation": "À propos des règles",
   "checkPillNumberForMenstruationStart": "Veuillez vérifier le numéro de pilule associé au premier jour de vos règles. Le numéro de pilule défini n’existe pas dans le type de plaquette sélectionné",
-  "customizeMedicationNotifications": "Personnaliser les rappels de prise de pilule",
+  "customizeMedicationNotifications": "Personnaliser les rappels",
   "medicationNotification": "Rappel de prise de pilule",
   "xCanBeCustomized": "Personnalisation possible : {x}",
   "thankYouForCooperation": "Merci pour votre aide",

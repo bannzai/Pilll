@@ -61,7 +61,7 @@
   "pillSheetDiscarded": "A cartela foi descartada",
   "aboutMenstruation": "Sobre a menstruação",
   "checkPillNumberForMenstruationStart": "Confira o número da pílula para o primeiro dia da menstruação. O número da pílula definido não existe no tipo de cartela selecionado",
-  "customizeMedicationNotifications": "Personalizar lembretes para tomar a pílula",
+  "customizeMedicationNotifications": "Personalizar lembretes",
   "medicationNotification": "Lembrete para tomar a pílula",
   "xCanBeCustomized": "Você pode personalizar do seu jeito: {x}",
   "thankYouForCooperation": "Agradecemos sua ajuda",

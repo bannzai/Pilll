@@ -256,7 +256,7 @@
   },
   "customizeMedicationNotifications": "服用通知のカスタマイズ",
   "@customizeMedicationNotifications": {
-    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。\n[翻訳の決定 pt] 「Personalizar lembretes para tomar a pílula」ではなく「Personalizar lembretes」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 es] 「Personalizar recordatorios para tomar la píldora」ではなく「Personalizar recordatorios」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 de] 「Erinnerungen an die Pilleneinnahme anpassen」ではなく「Erinnerungen anpassen」: ナビゲーションのタイトルで「…」に切れ、カスタマイズの意味の「anpassen」が見えなくなるため短くする。アプリには複数のリマインダー時刻があるので複数形にする (https://github.com/bannzai/Pilll/issues/1994)\n[翻訳の決定 fr] 「Personnaliser les rappels de prise de pilule」ではなく「Personnaliser les rappels」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1997)"
   },
   "medicationNotification": "服用通知",
   "@medicationNotification": {
