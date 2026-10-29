@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto datumu, kad atsāksiet lietot tabletes",
   "pauseEndDateLimitIsToday": "Beigu datums var būt ne vēlāk kā šodien",
+  "pauseEndDateLimitBeforeNextPause": "Līdz dienai, kas nepārklājas ar nākamo tablešu lietošanas pārtraukumu (no {date})",
   "pauseStartDateLimit": "Sākuma datums var būt ne vēlāk kā {date}",
   "initialSettingAskYazFlex": "Vai jūs lietojat Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Izvēloties “Jā”, tiks iestatīts, lai rādītu, cik dienu pagājušas kopš pārtraukuma beigām",

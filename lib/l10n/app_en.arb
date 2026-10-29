@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Not set",
   "selectPlannedResumeDate": "Select your planned date to resume taking the pill",
   "pauseEndDateLimitIsToday": "The end date can be no later than today",
+  "pauseEndDateLimitBeforeNextPause": "Up to a day before your next pill-taking pause (from {date})",
   "pauseStartDateLimit": "The start date can be no later than {date}",
   "initialSettingAskYazFlex": "Do you take Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Choose “Yes” to show how many days it’s been since your pill break ended",

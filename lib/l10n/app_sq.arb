@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Ende e papërcaktuar",
   "selectPlannedResumeDate": "Zgjidhni datën kur planifikoni të filloni sërish marrjen e pilulës",
   "pauseEndDateLimitIsToday": "Data e përfundimit mund të jetë më së voni sot",
+  "pauseEndDateLimitBeforeNextPause": "Deri në një ditë që nuk përkon me pauzën e radhës nga marrja e pilulave (nga {date})",
   "pauseStartDateLimit": "Mund të zgjidhni datën e fillimit deri më {date}",
   "initialSettingAskYazFlex": "A merrni Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Nëse zgjidhni «Po», do të shfaqet numri i ditëve që kanë kaluar që nga përfundimi i pushimit",

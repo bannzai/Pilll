@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "ఇంకా నిర్ణయించలేదు",
   "selectPlannedResumeDate": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించడానికి అనుకున్న తేదీని ఎంచుకోండి",
   "pauseEndDateLimitIsToday": "ముగింపు తేదీగా ఈ రోజు వరకు మాత్రమే ఎంచుకోవచ్చు",
+  "pauseEndDateLimitBeforeNextPause": "తదుపరి మాత్రలు తీసుకోవడంలో విరామంతో ({date} నుంచి) కలవని రోజు వరకు",
   "pauseStartDateLimit": "ప్రారంభ తేదీగా {date} వరకు మాత్రమే ఎంచుకోవచ్చు",
   "initialSettingAskYazFlex": "మీరు Yaz Flex మాత్రలు తీసుకుంటున్నారా?",
   "initialSettingAskYazFlexDescription": "“అవును” ఎంచుకుంటే, విరామం ముగిసిన తర్వాత ఎన్ని రోజులు గడిచాయో చూపించేలా సెట్ అవుతుంది",

@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "ಇನ್ನೂ ನಿಗದಿಪಡಿಸಿಲ್ಲ",
   "selectPlannedResumeDate": "ಮಾತ್ರೆಗಳನ್ನು ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಯೋಜಿಸಿದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "pauseEndDateLimitIsToday": "ಮುಕ್ತಾಯ ದಿನಾಂಕವಾಗಿ ಇಂದಿನವರೆಗೆ ಮಾತ್ರ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
+  "pauseEndDateLimitBeforeNextPause": "ಮುಂದಿನ ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದೊಂದಿಗೆ ({date}ರಿಂದ) ಹೊಂದಿಕೆಯಾಗದ ದಿನದವರೆಗೆ",
   "pauseStartDateLimit": "ಆರಂಭ ದಿನಾಂಕವನ್ನು {date} ರವರೆಗೆ ಆಯ್ಕೆ ಮಾಡಬಹುದು",
   "initialSettingAskYazFlex": "ನೀವು Yaz Flex ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುತ್ತೀರಾ?",
   "initialSettingAskYazFlexDescription": "“ಹೌದು” ಆಯ್ಕೆ ಮಾಡಿದರೆ, ವಿರಾಮ ಮುಗಿದ ನಂತರ ಎಷ್ಟು ದಿನಗಳಾಗಿವೆ ಎಂಬುದನ್ನು ತೋರಿಸುವಂತೆ ಹೊಂದಿಸಲಾಗುತ್ತದೆ",
