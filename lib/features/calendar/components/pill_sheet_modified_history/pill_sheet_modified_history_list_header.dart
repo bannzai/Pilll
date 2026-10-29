@@ -21,16 +21,61 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
         ),
         textAlign: TextAlign.left,
       ),
-      takenPillActionOList: Text(
-        L.alreadyTaken,
+      takenPillActionOList: PillSheetModifiedHistoryListHeaderWrappedLabel(
+        text: L.alreadyTaken,
         style: const TextStyle(
           color: TextColor.main,
           fontFamily: FontFamily.japanese,
           fontSize: 12,
           fontWeight: FontWeight.w400,
         ),
-        textAlign: TextAlign.center,
       ),
+    );
+  }
+}
+
+/// 服用履歴の列見出しのうち、幅の狭い列 (服用済み) に置くラベル。
+/// 語の境界で折り返し、幅より長い語がある言語 (de「Pille eingenommen」の「eingenommen」等) では、その語が収まるまで全体を縮小する。
+/// Text をそのまま置くと、幅より長い語が語の途中で折り返される
+class PillSheetModifiedHistoryListHeaderWrappedLabel extends StatelessWidget {
+  final String text;
+  final TextStyle style;
+
+  const PillSheetModifiedHistoryListHeaderWrappedLabel({
+    super.key,
+    required this.text,
+    required this.style,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final longestWordWidth = text.split(RegExp(r'\s+')).map((word) {
+          final painter = TextPainter(
+            text: TextSpan(
+              text: word,
+              style: DefaultTextStyle.of(context).style.merge(style),
+            ),
+            textDirection: Directionality.of(context),
+            textScaler: MediaQuery.textScalerOf(context),
+            maxLines: 1,
+          )..layout();
+          final width = painter.width;
+          painter.dispose();
+          return width;
+        }).fold<double>(
+          0,
+          (longest, width) => width > longest ? width : longest,
+        );
+        return FittedBox(
+          fit: BoxFit.scaleDown,
+          child: SizedBox(
+            width: longestWordWidth > constraints.maxWidth ? longestWordWidth.ceilToDouble() : constraints.maxWidth,
+            child: Text(text, style: style, textAlign: TextAlign.center),
+          ),
+        );
+      },
     );
   }
 }
@@ -55,6 +100,8 @@ class _HeaderLayout extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
+        // 訳の長い言語で片方の見出しだけ 2 行になっても、見出しの下端を揃える
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           day,
           const SizedBox(width: 8),
