@@ -569,7 +569,7 @@
   "pauseEndDateLimitBeforeNextPause": "最晚选至不与下一次停药期（{date}起）重叠的日期",
   "pauseStartDateLimit": "开始日期最晚可选至 {date}",
   "initialSettingAskYazFlex": "你服用的是 Yaz Flex 吗？",
-  "initialSettingAskYazFlexDescription": "选择“是”后，将显示停药期结束以来经过的天数",
+  "initialSettingAskYazFlexDescription": "选择“是”后，会为你设置显示停药结束后的第几天",
   "yazFlexLastRestDurationTitle": "请点击停药前服用的药片",
   "yazFlexLastRestDurationNote": "请选择开始停药前最后服用的那片药",
   "yazFlexRestDurationDaysLabel": "停药天数",
