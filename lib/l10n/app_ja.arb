@@ -2557,7 +2557,7 @@
   },
   "healthCareIntegrationFeatureAppealShortDescription": "生理記録をヘルスケアと共有",
   "@healthCareIntegrationFeatureAppealShortDescription": {
-    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文\n[翻訳の決定 fr] 「Partagez vos suivis des règles avec Santé」ではなく「Partagez le suivi de vos règles avec Santé」: 「vos suivis des règles」は語順と複数形が不自然なため (https://github.com/bannzai/Pilll/issues/1991)"
   },
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {

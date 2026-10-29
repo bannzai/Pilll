@@ -485,7 +485,7 @@
   "futureScheduleFeatureAppealHeadline": "Notez vos projets à venir dans le calendrier",
   "futureScheduleFeatureAppealBody": "Vous pouvez noter vos projets à venir dans le calendrier, comme les rendez-vous médicaux et les voyages. Consultez-les avec votre cycle de prise de pilule pour tenir aussi compte de la date prévue de vos règles.",
   "healthCareIntegrationFeatureAppealTitle": "Se connecter à l’app Santé",
-  "healthCareIntegrationFeatureAppealShortDescription": "Partagez vos suivis des règles avec Santé",
+  "healthCareIntegrationFeatureAppealShortDescription": "Partagez le suivi de vos règles avec Santé",
   "healthCareIntegrationFeatureAppealHeadline": "Connexion possible avec l’app Santé",
   "healthCareIntegrationFeatureAppealBody": "Vous pouvez synchroniser automatiquement les données de vos règles enregistrées dans Pilll avec l’app Santé. Vous pourrez les consulter avec vos autres données de santé et les utiliser dans d’autres apps.",
   "quickRecordFeatureAppealTitle": "Ajoutez au journal des prises directement depuis la notification",
