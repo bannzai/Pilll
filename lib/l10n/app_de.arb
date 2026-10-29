@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Beginn der Einnahmeunterbrechung auswählen",
   "selectPausePeriod": "Zeitraum der Einnahmeunterbrechung auswählen",
+  "pauseStartDate": "Startdatum der Einnahmeunterbrechung",
   "endPillSheet": "Pillenblister aufgebraucht",
   "discardPillSheet": "Pillenblister gelöscht",
   "takingTime": "Einnahmezeit",
