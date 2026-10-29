@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Oglejte si, kako uporabljati funkcijo za prekinitev jemanja",
   "startPauseTakingLabel": "Začnite prekin jemanja tablet",
   "pauseTakingChanged": "Obdobje prekina jemanja tablet je spremenjeno",
+  "editPausePeriod": "Uredite obdobje prekina jemanja",
   "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",

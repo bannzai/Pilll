@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Pogledajte kako koristiti funkciju prekida uzimanja pilula",
   "startPauseTakingLabel": "Započnite prekid uzimanja pilula",
   "pauseTakingChanged": "Razdoblje prekida uzimanja pilule je promijenjeno",
+  "editPausePeriod": "Uredite razdoblje prekida uzimanja pilule",
   "changePillDays": "Promijenite broj dana uzimanja pilule",
   "beginToEndNumbers": "br. {begin} ~ {end}",
   "resumeTaking": "Nastavite uzimati pilulu",
