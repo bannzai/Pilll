@@ -114,6 +114,7 @@
   "takingTime": "Vrijeme uzimanja pilule",
   "takingHistoryIsPremiumFeature": "Povijest uzimanja pilula značajka je plana Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ako pauzirate uzimanje, broj pilule neće se mijenjati",
+  "pauseTakingFromNumber": "Želite li pauzirati uzimanje pilula počevši od pilule broj {number}?",
   "lastTakenPlusOnePillNumber": "br. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Uzimanje pilule",
   "estimatedEndPillNumber": "Posljednja pilula na prethodnom blisteru: br. {estimatedEndPillNumber}",

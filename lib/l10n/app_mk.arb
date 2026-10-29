@@ -114,6 +114,7 @@
   "takingTime": "Време за земање таблета",
   "takingHistoryIsPremiumFeature": "Историја на земање е премиум функција",
   "pauseTakingDoesNotAdvancePillNumber": "Ако го паузирате земањето, број на таблета нема да се менува",
+  "pauseTakingFromNumber": "Дали сакате да направите пауза во земањето таблети, почнувајќи од таблета бр. {number}?",
   "lastTakenPlusOnePillNumber": "таблета бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Земање таблета",
   "estimatedEndPillNumber": "Последна таблета од претходниот блистер: бр. {estimatedEndPillNumber}",
