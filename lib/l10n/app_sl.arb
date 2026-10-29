@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Aktivacija nakupa še ni končana. Počakajte malo in preverite znova",
   "launchError": "Pri odpiranju aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Na primer, če imate prekin jemanja tablet za 3 dni od 1/12",
+  "exampleRestDurationNumber": "Na primer, če pri tableti št. 18 naredite 3-dnevni prekin jemanja",
   "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
   "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tablete",
