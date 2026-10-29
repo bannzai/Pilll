@@ -240,6 +240,7 @@
   "completed": "完成",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "可以修改漏服药片时的通知内容",
+  "defaultMissedTakenMessage": "药吃了吗？\n有好几天没有服药记录 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "可以更改通知开头的文字",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

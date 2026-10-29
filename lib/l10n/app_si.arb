@@ -240,6 +240,7 @@
   "completed": "අවසන්",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "පෙත්ත ගැනීම මඟ හැරුණු විට එන දැනුම්දීමේ පෙළ ඔබට වෙනස් කළ හැක",
+  "defaultMissedTakenMessage": "පෙත්ත ගත්තද?\nදින කිහිපයක පෙති ගැනීමේ සටහනක් නැහැ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ඔබට දැනුම්දීමේ මුල් පෙළ වෙනස් කළ හැකිය",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

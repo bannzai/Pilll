@@ -240,6 +240,7 @@
   "completed": "Feito",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Podes cambiar o texto do aviso se non tomaches a pílula",
+  "defaultMissedTakenMessage": "Xa tomaches a pílula?\nHai varios días sen rexistro de tomas 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Podes cambiar o inicio da notificación",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

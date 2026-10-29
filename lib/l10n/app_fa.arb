@@ -240,6 +240,7 @@
   "completed": "انجام شد",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "می‌توانید متن اعلانِ مصرف‌نشدن قرص را تغییر دهید",
+  "defaultMissedTakenMessage": "شاید هنوز قرصتان را نخورده‌اید؟\nبرای چند روز ثبت مصرف وجود ندارد 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/۱۰۰",
   "changeNotificationHeader": "می‌توانید ابتدای اعلان را تغییر دهید",
   "notificationHeaderLength": "{wordValueCharactersLength}/۸",

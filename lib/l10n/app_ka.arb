@@ -240,6 +240,7 @@
   "completed": "დასრულება",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "შეგიძლიათ შეცვალოთ შეტყობინების ტექსტი, რომელიც აბის მიუღებლობისას ჩნდება",
+  "defaultMissedTakenMessage": "აბი ხომ არ დაგავიწყდათ?\nრამდენიმე დღის მიღების ჩანაწერი არ არის 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "შეგიძლიათ შეცვალოთ შეტყობინების დასაწყისი",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

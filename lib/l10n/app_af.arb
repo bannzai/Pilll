@@ -240,6 +240,7 @@
   "completed": "Klaar",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Jy kan die kennisgewing vir ’n vergete pil verander",
+  "defaultMissedTakenMessage": "Het jy dalk nog nie jou pil geneem nie?\nDaar is verskeie dae sonder 'n innamerekord 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jy kan die begin van die kennisgewing verander",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

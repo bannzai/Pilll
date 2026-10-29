@@ -240,6 +240,7 @@
   "completed": "Pabeigt",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Varat mainīt paziņojuma tekstu par neiedzertu tableti",
+  "defaultMissedTakenMessage": "Vai tablete jau ir lietota?\nVairākām dienām nav tablešu lietošanas ieraksta 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Varat mainīt paziņojuma sākumu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -240,6 +240,7 @@
   "completed": "Imekamilika",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Unaweza kubadilisha ujumbe wa arifa ya kidonge ambacho hakijamezwa",
+  "defaultMissedTakenMessage": "Je, umemeza kidonge chako?\nSiku kadhaa hazina rekodi ya kumeza vidonge 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Unaweza kubadilisha mwanzo wa arifa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

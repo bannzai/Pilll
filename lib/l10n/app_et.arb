@@ -240,6 +240,7 @@
   "completed": "Valmis",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Saad muuta võtmata pilli teavituse teksti",
+  "defaultMissedTakenMessage": "Kas pill on ehk veel võtmata?\nMitmel päeval puudub võtmiskirje 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Saad muuta teavituse algust",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

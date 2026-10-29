@@ -240,6 +240,7 @@
   "completed": "Fertig",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du chasch de Text vo de Erinnerig ändere, wänn d Pille nöd gnoh worde isch",
+  "defaultMissedTakenMessage": "Hesch dini Pille scho gnoh?\nFür es paar Täg fählt d Iinahm-Ufzeichnig 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du chasch de Aafang vo de Mitteilige ändere",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

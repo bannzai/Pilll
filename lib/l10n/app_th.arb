@@ -240,6 +240,7 @@
   "completed": "เสร็จ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "เปลี่ยนข้อความแจ้งเตือนเมื่อไม่ได้ทานยาได้ค่ะ",
+  "defaultMissedTakenMessage": "ทานยาแล้วหรือยังคะ\nมีหลายวันที่ไม่มีบันทึกการทานยา 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "เปลี่ยนข้อความต้นการแจ้งเตือนได้ค่ะ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

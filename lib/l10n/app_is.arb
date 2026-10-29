@@ -240,6 +240,7 @@
   "completed": "Lokið",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Þú getur breytt texta tilkynningar um pillu sem ekki var tekin",
+  "defaultMissedTakenMessage": "Ertu búin að taka pilluna?\nInntökuskrá vantar fyrir nokkra daga 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Þú getur breytt upphafi tilkynningarinnar",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

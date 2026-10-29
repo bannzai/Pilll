@@ -240,6 +240,7 @@
   "completed": "പൂർത്തിയായി",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ഗുളിക കഴിക്കാൻ മറന്നാൽ വരുന്ന അറിയിപ്പിലെ വാചകം മാറ്റാം",
+  "defaultMissedTakenMessage": "ഗുളിക കഴിക്കാൻ മറന്നോ?\nകുറച്ച് ദിവസങ്ങളിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ ഇല്ല 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "അറിയിപ്പിന്റെ തുടക്കത്തിലെ വാചകം മാറ്റാം",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

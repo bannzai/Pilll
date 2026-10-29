@@ -240,6 +240,7 @@
   "completed": "Tayyor",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Tabletka ichilmay qolganda keladigan bildirishnoma matnini oʻzgartirishingiz mumkin",
+  "defaultMissedTakenMessage": "Tabletkani qabul qildingizmi?\nBir necha kun uchun tabletka qabul qilish qaydi yoʻq 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirishnoma boshidagi matnni oʻzgartirishingiz mumkin",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

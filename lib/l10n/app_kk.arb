@@ -240,6 +240,7 @@
   "completed": "Дайын",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Таблетка қабылданбағанда келетін хабарландыру мәтінін өзгерте аласыз",
+  "defaultMissedTakenMessage": "Таблетканы қабылдауды ұмытпадыңыз ба?\nБірнеше күнге қабылдау жазбасы жоқ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Хабарландырудың басын өзгерте аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

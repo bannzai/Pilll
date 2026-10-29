@@ -240,6 +240,7 @@
   "completed": "ସମ୍ପୂର୍ଣ୍ଣ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ବଟିକା ଖାଇବା ରହିଗଲେ ଆସୁଥିବା ବିଜ୍ଞପ୍ତିର ଲେଖା ଆପଣ ବଦଳାଇ ପାରିବେ",
+  "defaultMissedTakenMessage": "ଆପଣ ବଟିକା ନେଇଛନ୍ତି କି?\nକିଛି ଦିନର ସେବନ ରେକର୍ଡ ନାହିଁ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ଆପଣ ବିଜ୍ଞପ୍ତିର ଆରମ୍ଭ ଲେଖା ବଦଳାଇ ପାରିବେ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

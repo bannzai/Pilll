@@ -240,6 +240,7 @@
   "completed": "हो गया",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "गोली न लेने पर आने वाली सूचना का संदेश आप बदल सकती हैं",
+  "defaultMissedTakenMessage": "क्या गोली लेना रह गया है?\nकुछ दिनों का सेवन रिकॉर्ड नहीं है 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "आप सूचना की शुरुआत का टेक्स्ट बदल सकती हैं",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

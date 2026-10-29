@@ -240,6 +240,7 @@
   "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете да го промените текстот на известувањето за неземена таблета",
+  "defaultMissedTakenMessage": "Дали ја земавте таблетата?\nЗа неколку дена нема Запис за земање 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да го смените почетокот на известувањето",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

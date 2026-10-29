@@ -240,6 +240,7 @@
   "completed": "Færdig",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan ændre teksten i beskeden om en glemt p-pille",
+  "defaultMissedTakenMessage": "Har du husket din p-pille?\nDer mangler pilleregistrering for flere dage 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan ændre starten af notifikationen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

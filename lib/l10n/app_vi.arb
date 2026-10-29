@@ -240,6 +240,7 @@
   "completed": "Xong",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Bạn có thể đổi nội dung thông báo khi chưa uống thuốc",
+  "defaultMissedTakenMessage": "Bạn đã uống thuốc chưa?\nCó vài ngày chưa có nhật ký uống thuốc 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bạn có thể đổi phần đầu thông báo",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

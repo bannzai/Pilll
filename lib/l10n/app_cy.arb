@@ -240,6 +240,7 @@
   "completed": "Wedi gorffen",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Gallwch newid testun yr hysbysiad am bilsen heb ei chymryd",
+  "defaultMissedTakenMessage": "Ydych chi wedi cofio cymryd eich pilsen?\nDoes dim cofnod cymryd am sawl diwrnod 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Gallwch newid dechrau'r hysbysiad",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -240,6 +240,7 @@
   "completed": "U krye",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Mund ta ndryshoni tekstin e njoftimit për pilulën e papirë",
+  "defaultMissedTakenMessage": "A e keni marrë pilulën?\nPër disa ditë mungon regjistrimi i marrjes 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Mund ta ndryshoni fillimin e njoftimit",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

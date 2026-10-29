@@ -240,6 +240,7 @@
   "completed": "Done",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Change the text for the missed-pill notification",
+  "defaultMissedTakenMessage": "Haven't taken your pill yet?\nThere are a few days with no pill log 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "You can change the start of the notification",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

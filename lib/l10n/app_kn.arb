@@ -240,6 +240,7 @@
   "completed": "ಮುಗಿದಿದೆ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲು ಮರೆತಾಗ ಬರುವ ಸೂಚನೆಯ ಪಠ್ಯವನ್ನು ನೀವು ಬದಲಾಯಿಸಬಹುದು",
+  "defaultMissedTakenMessage": "ನೀವು ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡಿದ್ದೀರಾ?\nಕೆಲವು ದಿನಗಳ ಸೇವನೆಯ ದಾಖಲೆ ಇಲ್ಲ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ನೀವು ಅಧಿಸೂಚನೆಯ ಆರಂಭದ ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

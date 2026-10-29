@@ -240,6 +240,7 @@
   "completed": "Ferdig",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan endre teksten i varselet om en p-pille som ikke er tatt",
+  "defaultMissedTakenMessage": "Har du tatt p-pillen?\nDet mangler pillelogg for flere dager 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan endre starten på varselet",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

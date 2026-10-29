@@ -240,6 +240,7 @@
   "completed": "Fet",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Pots canviar el text de l’avís si no has pres la píndola",
+  "defaultMissedTakenMessage": "Potser encara no has pres la píndola?\nHi ha diversos dies sense registre de preses 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Pots canviar l'inici de la notificació",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

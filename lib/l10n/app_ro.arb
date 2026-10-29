@@ -240,6 +240,7 @@
   "completed": "Gata",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Poți schimba textul notificării pentru o pilulă neluată",
+  "defaultMissedTakenMessage": "Ai luat pilula?\nPentru câteva zile nu există înregistrare 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Poți schimba începutul notificării",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -240,6 +240,7 @@
   "completed": "Даяр",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Таблетка ичилбей калганда келүүчү билдирүүнүн текстин өзгөртө аласыз",
+  "defaultMissedTakenMessage": "Таблетканы ичүүнү унуткан жоксузбу?\nБир нече күнгө таблетка ичүү жазуусу жок 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Билдирменин башын өзгөртө аласыз",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

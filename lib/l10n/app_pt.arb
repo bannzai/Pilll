@@ -240,6 +240,7 @@
   "completed": "Concluir",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Você pode mudar o texto da notificação quando a pílula não for tomada",
+  "defaultMissedTakenMessage": "Você já tomou a pílula?\nHá alguns dias sem registro de uso 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Você pode mudar o início da notificação",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

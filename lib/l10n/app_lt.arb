@@ -240,6 +240,7 @@
   "completed": "Atlikta",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Galite pakeisti pranešimo apie neišgertą tabletę tekstą",
+  "defaultMissedTakenMessage": "Ar jau išgėrėte tabletę?\nKelias dienas nėra vartojimo įrašo 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Galite pakeisti pranešimo pradžią",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

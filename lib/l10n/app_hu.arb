@@ -240,6 +240,7 @@
   "completed": "Kész",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Módosíthatod a be nem vett tablettáról szóló értesítés szövegét",
+  "defaultMissedTakenMessage": "Szedted már a tablettát?\nTöbb naphoz nincs tablettaszedési napló 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Módosíthatod az értesítés elejét",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
