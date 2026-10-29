@@ -378,6 +378,7 @@
   "lossOfAppetite": "Gubitak apetita",
   "chestTightness": "Napetost u dojkama",
   "insomnia": "Nesanica",
+  "pauseStartingOtherDaysInstructions": "Molimo, započnite prekid uzimanja pilula. Ako želite započeti prekid nekog drugog dana, pogledajte upute u nastavku.",
   "changePillDays": "Promijenite broj dana uzimanja pilule",
   "beginToEndNumbers": "br. {begin} ~ {end}",
   "resumeTaking": "Nastavite uzimati pilulu",

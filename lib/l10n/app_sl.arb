@@ -378,6 +378,7 @@
   "lossOfAppetite": "Izguba apetita",
   "chestTightness": "Napetost dojk",
   "insomnia": "Nespečnost",
+  "pauseStartingOtherDaysInstructions": "Prosimo, začnite prekin jemanja tablet. Če želite prekin začeti na dan, ki ni danes, si oglejte spodnja navodila.",
   "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",
