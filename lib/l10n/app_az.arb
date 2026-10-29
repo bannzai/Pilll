@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Həb qəbulunun necə ləğv edildiyinə baxın",
   "midnightTakenWarningDialogNeverShowAgain": "Bir daha göstərməyin",
   "pauseStartDateMustBeOnOrBefore": "Həb qəbuluna fasilə üçün başlanğıc tarixi olaraq {date} və ya daha əvvəlki tarixi seçin",
+  "addPausePeriod": "Həb qəbuluna fasilə müddəti əlavə edin",
   "plannedResumeDateOptional": "Həb qəbulunu bərpa etməyi planlaşdırdığınız tarix (istəyə bağlı)",
   "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Həb qəbulunu bərpa etməyi planlaşdırdığınız tarixi seçin",

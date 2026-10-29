@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Shihni si të anuloni regjistrimin e marrjes së pilulës",
   "midnightTakenWarningDialogNeverShowAgain": "Mos e shfaqni më",
   "pauseStartDateMustBeOnOrBefore": "Ju lutemi, zgjidhni {date} ose një datë më të hershme për fillimin e pauzës së marrjes së pilulave",
+  "addPausePeriod": "Shtoni një periudhë pauze",
   "plannedResumeDateOptional": "Data e planifikuar për të rifilluar marrjen e pilulës (opsionale)",
   "plannedResumeDateNotSet": "Ende e papërcaktuar",
   "selectPlannedResumeDate": "Zgjidhni datën kur planifikoni të filloni sërish marrjen e pilulës",

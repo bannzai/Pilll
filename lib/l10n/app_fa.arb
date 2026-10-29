@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "مشاهدهٔ روش لغو ثبت مصرف قرص",
   "midnightTakenWarningDialogNeverShowAgain": "دیگر نشان نده",
   "pauseStartDateMustBeOnOrBefore": "لطفاً برای شروع توقف موقت مصرف، تاریخ {date} یا تاریخی پیش از آن را انتخاب کنید",
+  "addPausePeriod": "افزودن دوره توقف موقت مصرف",
   "plannedResumeDateOptional": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص (اختیاری)",
   "plannedResumeDateNotSet": "هنوز تعیین نشده",
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص را انتخاب کنید",

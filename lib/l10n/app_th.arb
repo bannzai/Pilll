@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ดูวิธียกเลิกบันทึกการทานยา",
   "midnightTakenWarningDialogNeverShowAgain": "ไม่ต้องแสดงอีก",
   "pauseStartDateMustBeOnOrBefore": "กรุณาเลือกวันที่ {date} หรือก่อนหน้านั้นเป็นวันเริ่มหยุดกินยาชั่วคราวค่ะ",
+  "addPausePeriod": "เพิ่มช่วงหยุดกินยาชั่วคราว",
   "plannedResumeDateOptional": "วันที่คาดว่าจะกลับมาทานยา (ไม่บังคับ)",
   "plannedResumeDateNotSet": "ยังไม่ได้กำหนด",
   "selectPlannedResumeDate": "เลือกวันที่คาดว่าจะกลับมาทานยา",

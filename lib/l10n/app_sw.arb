@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Angalia jinsi ya kubatilisha rekodi ya kumeza vidonge",
   "midnightTakenWarningDialogNeverShowAgain": "Usionyeshe tena",
   "pauseStartDateMustBeOnOrBefore": "Tafadhali chagua {date} au tarehe ya kabla yake kuanza kusitisha kumeza kidonge",
+  "addPausePeriod": "Tafadhali ongeza kipindi cha kusitisha kumeza vidonge",
   "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kumeza vidonge (si lazima)",
   "plannedResumeDateNotSet": "Bado haijawekwa",
   "selectPlannedResumeDate": "Tafadhali chagua tarehe iliyopangwa ya kuanza tena kumeza kidonge",

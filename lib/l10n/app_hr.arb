@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovno",
   "pauseStartDateMustBeOnOrBefore": "Za početak pauze u uzimanju pilula odaberite {date} ili raniji datum",
+  "addPausePeriod": "Dodajte razdoblje prekida u uzimanju pilula",
   "plannedResumeDateOptional": "Planirani datum ponovnog uzimanja pilule (neobavezno)",
   "plannedResumeDateNotSet": "Nije postavljeno",
   "selectPlannedResumeDate": "Odaberite planirani datum ponovnog uzimanja pilule",

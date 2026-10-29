@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Таблетка ичүү жазуусун кантип жокко чыгарууну көрүңүз",
   "midnightTakenWarningDialogNeverShowAgain": "Кайра көрсөтпөө",
   "pauseStartDateMustBeOnOrBefore": "Убактылуу токтотуу баштала турган күнгө {date} же андан мурунку күндү тандаңыз",
+  "addPausePeriod": "Убактылуу токтотуу мөөнөтүн кошуңуз",
   "plannedResumeDateOptional": "Таблетканы кайра иче баштоонун пландалган күнү (милдеттүү эмес)",
   "plannedResumeDateNotSet": "Азырынча белгилене элек",
   "selectPlannedResumeDate": "Таблетканы кайра иче баштай турган күндү тандаңыз",

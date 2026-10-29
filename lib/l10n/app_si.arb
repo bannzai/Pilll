@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "පෙත්ත ගත් බවට වූ සටහන අවලංගු කරන ආකාරය බලන්න",
   "midnightTakenWarningDialogNeverShowAgain": "නැවත නොපෙන්වන්න",
   "pauseStartDateMustBeOnOrBefore": "පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට කරුණාකර {date} හෝ ඊට පෙර දිනයක් තෝරන්න",
+  "addPausePeriod": "පෙති ගැනීමේ විරාම කාලයක් එක් කරන්න",
   "plannedResumeDateOptional": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය (විකල්ප)",
   "plannedResumeDateNotSet": "තවම නියම කර නැත",
   "selectPlannedResumeDate": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය තෝරන්න",

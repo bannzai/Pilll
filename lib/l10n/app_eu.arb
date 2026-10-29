@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Ikusi nola ezeztatu pilula hartu izanaren erregistroa",
   "midnightTakenWarningDialogNeverShowAgain": "Ez erakutsi berriro",
   "pauseStartDateMustBeOnOrBefore": "Hautatu {date} edo lehenagoko data etenaldia hasteko",
+  "addPausePeriod": "Gehitu etenaldi bat",
   "plannedResumeDateOptional": "Pilula berriro hartzen hasteko aurreikusitako eguna (aukerakoa)",
   "plannedResumeDateNotSet": "Zehaztu gabe",
   "selectPlannedResumeDate": "Aukeratu pilula berriro hartzeko aurreikusitako eguna",

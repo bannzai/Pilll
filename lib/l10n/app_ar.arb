@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "اطلعي على طريقة التراجع عن تسجيل تناول الحبة",
   "midnightTakenWarningDialogNeverShowAgain": "عدم الإظهار مجددًا",
   "pauseStartDateMustBeOnOrBefore": "يرجى اختيار تاريخ بدء إيقاف تناول الحبوب في {date} أو قبله",
+  "addPausePeriod": "إضافة فترة إيقاف تناول الحبوب",
   "plannedResumeDateOptional": "التاريخ المخطط لاستئناف تناول الحبوب (اختياري)",
   "plannedResumeDateNotSet": "لم يُحدَّد بعد",
   "selectPlannedResumeDate": "اختاري التاريخ المخطط لاستئناف تناول الحبوب",

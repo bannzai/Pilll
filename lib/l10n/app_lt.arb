@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Kaip atšaukti tabletės vartojimo įrašą",
   "midnightTakenWarningDialogNeverShowAgain": "Daugiau nerodyti",
   "pauseStartDateMustBeOnOrBefore": "Pasirinkite {date} arba ankstesnę datą kaip pristabdymo pradžią",
+  "addPausePeriod": "Pridėti vartojimo pristabdymo laikotarpį",
   "plannedResumeDateOptional": "Planuojama tablečių vartojimo atnaujinimo data (nebūtina)",
   "plannedResumeDateNotSet": "Dar nenustatyta",
   "selectPlannedResumeDate": "Pasirinkite planuojamą tablečių vartojimo atnaujinimo datą",

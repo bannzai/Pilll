@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Zobacz, jak cofnąć zapis przyjęcia tabletki",
   "midnightTakenWarningDialogNeverShowAgain": "Nie pokazuj ponownie",
   "pauseStartDateMustBeOnOrBefore": "Wybierz {date} lub wcześniejszą datę jako początek wstrzymania przyjmowania tabletek",
+  "addPausePeriod": "Dodaj okres wstrzymania przyjmowania",
   "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania tabletek (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania tabletek",

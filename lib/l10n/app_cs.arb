@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Zobrazit, jak zrušit záznam užití",
   "midnightTakenWarningDialogNeverShowAgain": "Znovu nezobrazovat",
   "pauseStartDateMustBeOnOrBefore": "Pro začátek pozastavení užívání prosím vyberte {date} nebo dřívější datum",
+  "addPausePeriod": "Přidat období pozastavení užívání",
   "plannedResumeDateOptional": "Plánované datum obnovení užívání pilulek (volitelné)",
   "plannedResumeDateNotSet": "Nenastaveno",
   "selectPlannedResumeDate": "Vybrat plánované datum obnovení užívání pilulek",

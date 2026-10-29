@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano kanselahin ang naitalang pag-inom",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita",
   "pauseStartDateMustBeOnOrBefore": "Pakipili po ang {date} o mas maagang petsa para sa simula ng pause",
+  "addPausePeriod": "Magdagdag ng panahon ng pause",
   "plannedResumeDateOptional": "Nakaplanong petsa ng muling pag-inom (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",
   "selectPlannedResumeDate": "Piliin ang nakaplanong petsa ng muling pag-inom",

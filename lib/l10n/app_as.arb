@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "পিল খোৱাৰ ৰেকৰ্ড কেনেকৈ বাতিল কৰিব চাওক",
   "midnightTakenWarningDialogNeverShowAgain": "পুনৰ নেদেখুৱাব",
   "pauseStartDateMustBeOnOrBefore": "বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰাৰ আৰম্ভণিৰ দিন হিচাপে {date} বা তাৰ আগৰ দিন এটা বাছনি কৰক",
+  "addPausePeriod": "বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰাৰ সময়সীমা যোগ কৰক",
   "plannedResumeDateOptional": "পুনৰ পিল খোৱা আৰম্ভ কৰাৰ পৰিকল্পিত তাৰিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "এতিয়াও নিৰ্ধাৰণ কৰা হোৱা নাই",
   "selectPlannedResumeDate": "পুনৰ পিল খাবলৈ পৰিকল্পনা কৰা তাৰিখ বাছনি কৰক",

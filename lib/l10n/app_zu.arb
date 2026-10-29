@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Sicela ubone ukuthi ungalihoxisa kanjani irekhodi lokuphuza iphilisi",
   "midnightTakenWarningDialogNeverShowAgain": "Ungaphinde ubonise",
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe u-{date} noma usuku olungaphambi kwalokho ukuze uqale ukumisa okwesikhashana ukuphuza iphilisi",
+  "addPausePeriod": "Faka isikhathi sokumisa okwesikhashana ukuphuza amaphilisi",
   "plannedResumeDateOptional": "Usuku oluhleliwe lokuphinda uqale ukuphuza iphilisi (uyazikhethela)",
   "plannedResumeDateNotSet": "Akukakasethwa",
   "selectPlannedResumeDate": "Sicela ukhethe usuku oluhleliwe lokuphinda uqale ukuphuza amaphilisi",

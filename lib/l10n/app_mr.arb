@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "गोळी घेतल्याची नोंद कशी रद्द करायची ते पाहा",
   "midnightTakenWarningDialogNeverShowAgain": "पुन्हा दाखवू नका",
   "pauseStartDateMustBeOnOrBefore": "सेवन विराम सुरू करण्यासाठी कृपया {date} किंवा त्याआधीची तारीख निवडा",
+  "addPausePeriod": "सेवन विराम कालावधी जोडा",
   "plannedResumeDateOptional": "गोळी पुन्हा घेण्याची नियोजित तारीख (ऐच्छिक)",
   "plannedResumeDateNotSet": "अद्याप ठरवलेली नाही",
   "selectPlannedResumeDate": "गोळी पुन्हा घेण्यास सुरुवात करण्याची नियोजित तारीख निवडा",

@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Katso, miten pillerin ottomerkintä perutaan",
   "midnightTakenWarningDialogNeverShowAgain": "Älä näytä uudelleen",
   "pauseStartDateMustBeOnOrBefore": "Valitse taukotilan aloituspäiväksi {date} tai sitä aiempi päivä",
+  "addPausePeriod": "Lisää taukotilan ajanjakso",
   "plannedResumeDateOptional": "Suunniteltu jatkamispäivä (valinnainen)",
   "plannedResumeDateNotSet": "Ei asetettu",
   "selectPlannedResumeDate": "Valitse suunniteltu jatkamispäivä",

@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Sjáðu hvernig má afturkalla skráða inntöku",
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu {date} eða fyrri dagsetningu sem upphaf pilluhlés",
+  "addPausePeriod": "Bæta við tímabili pilluhlés",
   "plannedResumeDateOptional": "Áætlaður dagur til að byrja aftur að taka pilluna (valfrjálst)",
   "plannedResumeDateNotSet": "Ekki ákveðið enn",
   "selectPlannedResumeDate": "Veldu daginn sem þú ætlar að byrja að taka pilluna aftur",

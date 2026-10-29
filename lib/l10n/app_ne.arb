@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "चक्की सेवनको रेकर्ड कसरी रद्द गर्ने हेर्नुहोस्",
   "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्",
   "pauseStartDateMustBeOnOrBefore": "सेवन विराम सुरु गर्न कृपया {date} वा त्यसभन्दा अघिको मिति छान्नुहोस्",
+  "addPausePeriod": "सेवन विरामको अवधि थप्नुहोस्",
   "plannedResumeDateOptional": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "अझै तय गरिएको छैन",
   "selectPlannedResumeDate": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति छान्नुहोस्",

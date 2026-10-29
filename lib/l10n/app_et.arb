@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Vaata, kuidas pillivõtmist tühistada",
   "midnightTakenWarningDialogNeverShowAgain": "Ära enam näita",
   "pauseStartDateMustBeOnOrBefore": "Vali võtmise pausi alguskuupäevaks {date} või varasem kuupäev",
+  "addPausePeriod": "Lisa võtmise pausi periood",
   "plannedResumeDateOptional": "Pillide võtmise jätkamise plaanitud kuupäev (valikuline)",
   "plannedResumeDateNotSet": "Määramata",
   "selectPlannedResumeDate": "Vali pillide võtmise jätkamise plaanitud kuupäev",

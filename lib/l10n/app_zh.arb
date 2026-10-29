@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "查看如何撤销服药记录",
   "midnightTakenWarningDialogNeverShowAgain": "不再显示",
   "pauseStartDateMustBeOnOrBefore": "请选择 {date} 或更早的日期作为暂停服药的开始日期",
+  "addPausePeriod": "添加暂停服药时段",
   "plannedResumeDateOptional": "预计恢复服药日期（选填）",
   "plannedResumeDateNotSet": "尚未设置",
   "selectPlannedResumeDate": "选择预计恢复服药日期",

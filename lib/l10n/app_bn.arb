@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "পিল সেবনের রেকর্ড কীভাবে বাতিল করবেন দেখুন",
   "midnightTakenWarningDialogNeverShowAgain": "আর দেখাবেন না",
   "pauseStartDateMustBeOnOrBefore": "সেবন স্থগিত শুরুর তারিখ হিসেবে {date} বা তার আগের কোনো তারিখ বেছে নিন",
+  "addPausePeriod": "সেবন স্থগিতের সময়কাল যোগ করুন",
   "plannedResumeDateOptional": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "এখনও নির্ধারণ করা হয়নি",
   "selectPlannedResumeDate": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ বেছে নিন",

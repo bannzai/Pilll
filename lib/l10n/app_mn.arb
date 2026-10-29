@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Эм уусан бүртгэлийг хэрхэн цуцлахыг харах",
   "midnightTakenWarningDialogNeverShowAgain": "Дахин харуулахгүй",
   "pauseStartDateMustBeOnOrBefore": "Түр завсарлага эхлэх өдөрт {date} эсвэл түүнээс өмнөх өдрийг сонгоно уу",
+  "addPausePeriod": "Түр завсарлагааны хугацаа нэмэх",
   "plannedResumeDateOptional": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдөр (заавал биш)",
   "plannedResumeDateNotSet": "Одоогоор товлоогүй",
   "selectPlannedResumeDate": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдрөө сонгоно уу",

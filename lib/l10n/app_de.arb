@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "So machst du einen Einnahmeeintrag rückgängig",
   "midnightTakenWarningDialogNeverShowAgain": "Nicht mehr anzeigen",
   "pauseStartDateMustBeOnOrBefore": "Wähle für den Beginn der Einnahmeunterbrechung bitte den {date} oder ein früheres Datum",
+  "addPausePeriod": "Zeitraum der Einnahmeunterbrechung hinzufügen",
   "plannedResumeDateOptional": "Geplantes Datum für die erneute Pilleneinnahme (optional)",
   "plannedResumeDateNotSet": "Noch nicht festgelegt",
   "selectPlannedResumeDate": "Geplantes Datum für die erneute Pilleneinnahme wählen",

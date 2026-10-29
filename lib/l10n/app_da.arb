@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Se, hvordan du annullerer en registreret indtagelse",
   "midnightTakenWarningDialogNeverShowAgain": "Vis ikke igen",
   "pauseStartDateMustBeOnOrBefore": "Vælg {date} eller en tidligere dato som start på din indtagelsespause",
+  "addPausePeriod": "Tilføj en periode med indtagelsespause",
   "plannedResumeDateOptional": "Planlagt dato for at tage p-pillen igen (valgfrit)",
   "plannedResumeDateNotSet": "Ikke angivet",
   "selectPlannedResumeDate": "Vælg planlagt dato for at tage p-pillen igen",

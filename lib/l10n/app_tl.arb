@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tingnan kung paano bawiin ang tala ng pag-inom ng pildoras",
   "midnightTakenWarningDialogNeverShowAgain": "Huwag nang ipakita",
   "pauseStartDateMustBeOnOrBefore": "Pakipili po ang {date} o mas maagang petsa bilang simula ng paghinto sa pag-inom ng pildoras",
+  "addPausePeriod": "Magdagdag ng panahon ng paghinto sa pag-inom",
   "plannedResumeDateOptional": "Planong petsa ng muling pag-inom ng pildoras (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa itinakda",
   "selectPlannedResumeDate": "Piliin ang planong petsa ng muling pag-inom ng pildoras",

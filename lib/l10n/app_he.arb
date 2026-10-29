@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "איך לבטל רישום נטילה של גלולה",
   "midnightTakenWarningDialogNeverShowAgain": "לא להציג שוב",
   "pauseStartDateMustBeOnOrBefore": "יש לבחור ב־{date} או בתאריך מוקדם יותר לתחילת השהיית נטילה",
+  "addPausePeriod": "הוספת תקופה של השהיית נטילה",
   "plannedResumeDateOptional": "תאריך מתוכנן לחידוש נטילת הגלולה (לא חובה)",
   "plannedResumeDateNotSet": "טרם נקבע",
   "selectPlannedResumeDate": "לבחור את התאריך המתוכנן לחידוש נטילת הגלולה",

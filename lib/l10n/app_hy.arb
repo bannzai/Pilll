@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Տեսեք, թե ինչպես չեղարկել հաբի ընդունման գրառումը",
   "midnightTakenWarningDialogNeverShowAgain": "Այլևս չցուցադրել",
   "pauseStartDateMustBeOnOrBefore": "Խնդրում ենք ընդունման դադար սկսելու համար ընտրել {date} կամ ավելի վաղ ամսաթիվ",
+  "addPausePeriod": "Ավելացնել ընդունման դադար ժամանակահատված",
   "plannedResumeDateOptional": "Հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվ (ըստ ցանկության)",
   "plannedResumeDateNotSet": "Դեռ սահմանված չէ",
   "selectPlannedResumeDate": "Ընտրեք հաբի ընդունումը վերսկսելու նախատեսված ամսաթիվը",

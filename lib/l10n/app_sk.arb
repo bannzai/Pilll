@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Pozrite si, ako zrušiť záznam o užití tabletky",
   "midnightTakenWarningDialogNeverShowAgain": "Znova nezobrazovať",
   "pauseStartDateMustBeOnOrBefore": "Na začiatok pozastavenia užívania tabletiek vyberte, prosím, {date} alebo skorší dátum",
+  "addPausePeriod": "Pridať obdobie pozastavenia užívania",
   "plannedResumeDateOptional": "Plánovaný dátum obnovenia užívania tabletiek (voliteľné)",
   "plannedResumeDateNotSet": "Zatiaľ nenastavené",
   "selectPlannedResumeDate": "Vyberte plánovaný dátum obnovenia užívania tabletiek",

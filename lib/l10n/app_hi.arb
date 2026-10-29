@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "गोली सेवन रद्द करने का तरीका देखें",
   "midnightTakenWarningDialogNeverShowAgain": "फिर न दिखाएं",
   "pauseStartDateMustBeOnOrBefore": "गोली लेने में विराम शुरू करने के लिए कृपया {date} या उससे पहले की तारीख चुनें",
+  "addPausePeriod": "गोली लेने में विराम की अवधि जोड़ें",
   "plannedResumeDateOptional": "गोली फिर से लेना शुरू करने की तय तारीख (वैकल्पिक)",
   "plannedResumeDateNotSet": "अभी तय नहीं किया गया",
   "selectPlannedResumeDate": "गोली फिर से लेना शुरू करने की तय तारीख चुनें",

@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "ਸੇਵਨ ਰਿਕਾਰਡ ਰੱਦ ਕਰਨ ਦਾ ਤਰੀਕਾ ਦੇਖੋ",
   "midnightTakenWarningDialogNeverShowAgain": "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
   "pauseStartDateMustBeOnOrBefore": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ {date} ਜਾਂ ਉਸ ਤੋਂ ਪਹਿਲਾਂ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
+  "addPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਸ਼ਾਮਲ ਕਰੋ",
   "plannedResumeDateOptional": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਤਾਰੀਖ (ਵਿਕਲਪਿਕ)",
   "plannedResumeDateNotSet": "ਹਾਲੇ ਤੈਅ ਨਹੀਂ ਕੀਤਾ",
   "selectPlannedResumeDate": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਤਾਰੀਖ ਚੁਣੋ",

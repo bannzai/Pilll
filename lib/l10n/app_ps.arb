@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "د ګولۍ اخیستلو ثبت د لغوه کولو څرنګوالی وګورئ",
   "midnightTakenWarningDialogNeverShowAgain": "بیا یې مه ښیئ",
   "pauseStartDateMustBeOnOrBefore": "مهرباني وکړئ د ګولیو د لنډمهاله درولو د پیل لپاره {date} یا تر هغې مخکې نېټه وټاکئ",
+  "addPausePeriod": "د لنډمهاله درول موده ورزیاته کړئ",
   "plannedResumeDateOptional": "د ګولۍ بیا اخیستلو پلان شوې نېټه (اختیاري)",
   "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د ګولۍ د بیا اخیستلو پلان شوې نېټه وټاکئ",

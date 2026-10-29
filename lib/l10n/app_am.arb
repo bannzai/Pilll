@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "አወሳሰድ መዝገብ እንዴት እንደሚሰረዝ ይመልከቱ",
   "midnightTakenWarningDialogNeverShowAgain": "ዳግም አለማሳየት",
   "pauseStartDateMustBeOnOrBefore": "ለጊዜው ማቆም የሚጀምርበትን ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
+  "addPausePeriod": "የለጊዜው ማቆም ጊዜ ያክሉ",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ እንደገና ለመጀመር ያቀዱበትን ቀን ይምረጡ",

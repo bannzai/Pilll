@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Tabletka qabul qilish qaydini bekor qilish usulini koʻrish",
   "midnightTakenWarningDialogNeverShowAgain": "Boshqa ko‘rsatmang",
   "pauseStartDateMustBeOnOrBefore": "Pauza boshlanishi uchun {date} yoki undan oldingi sanani tanlang",
+  "addPausePeriod": "Pauza davrini qoʻshing",
   "plannedResumeDateOptional": "Tabletka qabul qilishni qayta boshlashning rejalashtirilgan sanasi (ixtiyoriy)",
   "plannedResumeDateNotSet": "Hali belgilanmagan",
   "selectPlannedResumeDate": "Tabletka qabul qilishni qayta boshlashning rejalashtirilgan sanasini tanlang",

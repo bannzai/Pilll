@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Consulta como anular unha toma",
   "midnightTakenWarningDialogNeverShowAgain": "Non volver mostrar",
   "pauseStartDateMustBeOnOrBefore": "Escolle o {date} ou unha data anterior para comezar a pausa na toma",
+  "addPausePeriod": "Engadir un período de pausa na toma",
   "plannedResumeDateOptional": "Data prevista para volver tomar a pílula (opcional)",
   "plannedResumeDateNotSet": "Aínda sen definir",
   "selectPlannedResumeDate": "Escolle a data prevista para volver tomar a pílula",

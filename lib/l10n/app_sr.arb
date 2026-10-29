@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Погледајте како да поништите запис о узимању пилуле",
   "midnightTakenWarningDialogNeverShowAgain": "Не приказуј више",
   "pauseStartDateMustBeOnOrBefore": "Молимо Вас, изаберите {date} или ранији датум за почетак прекида узимања пилула",
+  "addPausePeriod": "Додајте период прекида узимања",
   "plannedResumeDateOptional": "Планирани датум поновног узимања пилуле (није обавезно)",
   "plannedResumeDateNotSet": "Још није одређено",
   "selectPlannedResumeDate": "Изаберите планирани датум поновног узимања пилуле",

@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Як скасувати запис про прийом пігулки",
   "midnightTakenWarningDialogNeverShowAgain": "Більше не показувати",
   "pauseStartDateMustBeOnOrBefore": "Будь ласка, виберіть {date} або ранішу дату для початку призупинення прийому пігулок",
+  "addPausePeriod": "Додати період призупинення прийому",
   "plannedResumeDateOptional": "Запланована дата відновлення прийому пігулок (необов’язково)",
   "plannedResumeDateNotSet": "Ще не вказано",
   "selectPlannedResumeDate": "Виберіть заплановану дату відновлення прийому пігулок",

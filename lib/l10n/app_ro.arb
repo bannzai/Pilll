@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Vezi cum anulezi înregistrarea unei pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Nu mai afișa",
   "pauseStartDateMustBeOnOrBefore": "Alege {date} sau o dată anterioară pentru începutul întreruperii administrării pilulei",
+  "addPausePeriod": "Adaugă o perioadă de întrerupere",
   "plannedResumeDateOptional": "Data planificată pentru reluarea pilulei (opțional)",
   "plannedResumeDateNotSet": "Încă nestabilită",
   "selectPlannedResumeDate": "Alege data la care plănuiești să reiei pilula",
