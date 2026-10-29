@@ -124,6 +124,7 @@
   "pillSheetSettings": "ဆေးပြားကတ် ဆက်တင်များ",
   "unmarkTodayPillAsTakenToPause": "ယနေ့သောက်ရမည့်ဆေးပြားကို မသောက်ရသေးဟု မှတ်သားပြီးနောက်",
   "pauseTaking": "ခေတ္တရပ်နားခြင်း",
+  "changePauseStartDate": "ခေတ္တရပ်နား စတင်မည့်ရက်ကို ပြောင်းပါ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "တစ်ကတ်တွင် ဆေးပြားသောက်ရမည့် ရက်အရေအတွက်ကို ပြောင်းပါ",
   "changedStartAndEndNumbers": "အစနှင့်အဆုံး နံပါတ်များကို ပြောင်းလဲပြီးပါပြီ",

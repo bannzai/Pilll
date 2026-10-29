@@ -124,6 +124,7 @@
   "pillSheetSettings": "ବଟିକା ସିଟ ସେଟିଂ",
   "unmarkTodayPillAsTakenToPause": "ଆଜିର ବଟିକା ଖାଇନାହାନ୍ତି ବୋଲି ଚିହ୍ନିତ କରିବା ପରେ",
   "pauseTaking": "ସେବନ ବିରତି",
+  "changePauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ବଟିକା ସିଟର ବଟିକା ଖାଇବା ଦିନ ସଂଖ୍ୟା ବଦଳାନ୍ତୁ",
   "changedStartAndEndNumbers": "ଆରମ୍ଭ ଓ ଶେଷ ନମ୍ବର ବଦଳାଯାଇଛି",

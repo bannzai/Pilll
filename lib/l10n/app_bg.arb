@@ -124,6 +124,7 @@
   "pillSheetSettings": "Настройки на блистера",
   "unmarkTodayPillAsTakenToPause": "След като отбележите днешното хапче като неприето",
   "pauseTaking": "спиране на приема",
+  "changePauseStartDate": "Промяна на началната дата на спиране на приема",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Промяна на броя дни за прием на хапчета от блистера",
   "changedStartAndEndNumbers": "Началният и крайният номер са променени",

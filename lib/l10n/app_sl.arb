@@ -124,6 +124,7 @@
   "pillSheetSettings": "Nastavitve ploščice",
   "unmarkTodayPillAsTakenToPause": "Ko današnjo tableto označite kot nevzeto",
   "pauseTaking": "premor pri jemanju tablet",
+  "changePauseStartDate": "Spremenite datum začetka premora pri jemanju tablet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Spremenite število dni jemanja tablet na ploščici",
   "changedStartAndEndNumbers": "Začetna in končna številka sta spremenjeni",

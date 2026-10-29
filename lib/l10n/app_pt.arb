@@ -124,6 +124,7 @@
   "pillSheetSettings": "Configurações da cartela",
   "unmarkTodayPillAsTakenToPause": "Depois de marcar a pílula de hoje como não tomada",
   "pauseTaking": "interrupção",
+  "changePauseStartDate": "Alterar a data de início da interrupção",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Alterar o número de dias de uso da pílula por cartela",
   "changedStartAndEndNumbers": "Os números inicial e final foram alterados",

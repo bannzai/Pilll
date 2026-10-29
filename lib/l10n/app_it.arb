@@ -124,6 +124,7 @@
   "pillSheetSettings": "Impostazioni del blister",
   "unmarkTodayPillAsTakenToPause": "Dopo aver segnato la pillola di oggi come non assunta",
   "pauseTaking": "sospensione",
+  "changePauseStartDate": "Modifica la data di inizio della sospensione",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Modifica i giorni di assunzione della pillola per blister",
   "changedStartAndEndNumbers": "I numeri iniziale e finale sono stati modificati",

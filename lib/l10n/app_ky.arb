@@ -124,6 +124,7 @@
   "pillSheetSettings": "Таблетка блистеринин жөндөөлөрү",
   "unmarkTodayPillAsTakenToPause": "Бүгүнкү таблетканы ичиле элек деп белгилегенден кийин",
   "pauseTaking": "убактылуу токтотуу",
+  "changePauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Бир блистердеги таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "changedStartAndEndNumbers": "Баштапкы жана акыркы номерлер өзгөртүлдү",

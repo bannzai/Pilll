@@ -124,6 +124,7 @@
   "pillSheetSettings": "د ګولیو پاڼې تنظیمات",
   "unmarkTodayPillAsTakenToPause": "د نن ورځې ګولۍ د نه اخیستل شوې په توګه تر نښه کولو وروسته",
   "pauseTaking": "لنډمهاله درول",
+  "changePauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "د هرې پاڼې د ګولیو د اخیستو د ورځو شمېر بدل کړئ",
   "changedStartAndEndNumbers": "د پیل او پای شمېرې بدلې شوې",

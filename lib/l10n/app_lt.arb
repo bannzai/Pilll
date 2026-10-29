@@ -124,6 +124,7 @@
   "pillSheetSettings": "Tablečių plokštelės nustatymai",
   "unmarkTodayPillAsTakenToPause": "Pažymėjus šiandienos tabletę kaip neišgertą",
   "pauseTaking": "pristabdyti vartojimą",
+  "changePauseStartDate": "Keisti pristabdymo pradžios datą",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Pakeisti tablečių vartojimo dienų skaičių vienoje plokštelėje",
   "changedStartAndEndNumbers": "Pradžios ir pabaigos numeriai pakeisti",

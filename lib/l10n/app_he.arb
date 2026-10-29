@@ -124,6 +124,7 @@
   "pillSheetSettings": "הגדרות חפיסת הגלולות",
   "unmarkTodayPillAsTakenToPause": "לאחר סימון הגלולה של היום ככזו שלא ניטלה",
   "pauseTaking": "השהיית נטילה",
+  "changePauseStartDate": "שינוי תאריך ההתחלה של השהיית נטילה",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "שינוי מספר ימי נטילת הגלולה בכל חפיסת גלולות",
   "changedStartAndEndNumbers": "המספרים ההתחלתי והסופי שונו",

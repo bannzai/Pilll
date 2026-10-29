@@ -124,6 +124,7 @@
   "pillSheetSettings": "Ρυθμίσεις για την καρτέλα χαπιών",
   "unmarkTodayPillAsTakenToPause": "Αφού σημειώσετε το σημερινό χάπι ως μη ληφθέν",
   "pauseTaking": "παύση",
+  "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της παύσης",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Αλλαγή ημερών λήψης ανά καρτέλα χαπιών",
   "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",

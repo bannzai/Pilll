@@ -124,6 +124,7 @@
   "pillSheetSettings": "Nastavenia blistra",
   "unmarkTodayPillAsTakenToPause": "Po označení dnešnej tabletky ako neužitej",
   "pauseTaking": "pozastavenie užívania",
+  "changePauseStartDate": "Zmeniť dátum začiatku pozastavenia užívania",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmeniť počet dní užívania tabletiek z blistra",
   "changedStartAndEndNumbers": "Počiatočné a koncové číslo boli zmenené",

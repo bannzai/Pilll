@@ -124,6 +124,7 @@
   "pillSheetSettings": "Կարգավորումներ հաբերի բլիստերի համար",
   "unmarkTodayPillAsTakenToPause": "Այսօրվա հաբը որպես չընդունված նշելուց հետո",
   "pauseTaking": "ընդունման դադար",
+  "changePauseStartDate": "Փոխել ընդունման դադար սկսվելու ամսաթիվը",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Փոխել հաբերի բլիստերի ընդունման օրերի քանակը",
   "changedStartAndEndNumbers": "Սկզբնական և վերջնական համարները փոխվել են",

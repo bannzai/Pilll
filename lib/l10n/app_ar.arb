@@ -124,6 +124,7 @@
   "pillSheetSettings": "إعدادات شريط الحبوب",
   "unmarkTodayPillAsTakenToPause": "بعد تحديد حبة اليوم على أنها لم تؤخذ",
   "pauseTaking": "إيقاف تناول الحبوب",
+  "changePauseStartDate": "تغيير تاريخ بدء إيقاف تناول الحبوب",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "تغيير عدد أيام تناول الحبوب من الشريط",
   "changedStartAndEndNumbers": "تم تغيير رقمي البداية والنهاية",

@@ -124,6 +124,7 @@
   "pillSheetSettings": "Pillilehe seaded",
   "unmarkTodayPillAsTakenToPause": "Pärast seda, kui oled tänase pilli võtmata pilliks märkinud,",
   "pauseTaking": "võtmise paus",
+  "changePauseStartDate": "Muuda võtmise pausi alguskuupäeva",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuda pillide võtmise päevade arvu pillilehel",
   "changedStartAndEndNumbers": "Algus- ja lõppnumber on muudetud",

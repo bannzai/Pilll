@@ -124,6 +124,7 @@
   "pillSheetSettings": "पिल स्ट्रिप की सेटिंग",
   "unmarkTodayPillAsTakenToPause": "आज की गोली को नहीं ली गई के रूप में चिह्नित करने के बाद",
   "pauseTaking": "गोली लेने में विराम",
+  "changePauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "हर स्ट्रिप में गोली लेने के दिनों की संख्या बदलें",
   "changedStartAndEndNumbers": "शुरुआत और अंत के नंबर बदल दिए गए हैं",
