@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "آج وقفے کا کون سا دن ہے",
   "yazFlexSkipRestDuration": "وقفے کی معلومات درج کیے بغیر آگے بڑھیں",
   "yazFlexSkipRestDurationDialogTitle": "وقفے کی معلومات درج کرنا چھوڑ دیں",
+  "yazFlexSkipRestDurationDialogMessage": "توقف کی مدت آپ بعد میں ہوم اسکرین پر «توقف» سے درج کر سکتی ہیں",
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
   "yazFlexBeginPillNumberPageTitle": "گولیاں لینے کے چکر کے کس دن سے گولیوں کی پٹی شروع ہوتی ہے؟",
   "yazFlexBeginPillNumberPageNote": "براہِ کرم گولیوں کی پٹی شروع کرنے سے پہلے کا وقفہ ختم ہونے کے بعد گزرے دنوں کی تعداد کے مطابق جواب دیں",

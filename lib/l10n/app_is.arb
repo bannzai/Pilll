@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Hvaða dagur hlésins er í dag",
   "yazFlexSkipRestDuration": "Sleppa því að skrá hlé",
   "yazFlexSkipRestDurationDialogTitle": "Sleppa því að skrá hlé",
+  "yazFlexSkipRestDurationDialogMessage": "Þú getur skráð lengd pilluhlés síðar undir „pilluhlé“ á heimaskjánum",
   "yazFlexSkipRestDurationDialogSkip": "Sleppa",
   "yazFlexBeginPillNumberPageTitle": "Á hvaða degi pillutökuferilsins byrjar spjaldið?",
   "yazFlexBeginPillNumberPageNote": "Svaraðu miðað við fjölda daga frá því að hléinu fyrir upphaf pilluspjaldsins lauk",

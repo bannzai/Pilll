@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Atsedenaldiko zenbatgarren eguna da gaur",
   "yazFlexSkipRestDuration": "Saltatu atsedenaldiaren datuak sartzea",
   "yazFlexSkipRestDurationDialogTitle": "Atsedenaldiaren datuak sartzea saltatu",
+  "yazFlexSkipRestDurationDialogMessage": "Etenaldiaren iraupena geroago sar dezakezu hasierako pantailako «etenaldi» aukeran",
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
   "yazFlexBeginPillNumberPageTitle": "Pilula-orriaren lehen pilula zikloko zenbatgarren hartzea da?",
   "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, pilula-orria hasi aurreko atsedenaldia amaitu zenetik igarotako egunen arabera",

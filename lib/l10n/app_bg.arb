@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Кой ден от паузата е днес",
   "yazFlexSkipRestDuration": "Пропускане на въвеждането на паузата",
   "yazFlexSkipRestDurationDialogTitle": "Пропускане на въвеждането на паузата",
+  "yazFlexSkipRestDurationDialogMessage": "Можете да въведете периода на спиране на приема по-късно чрез „спиране на приема“ на началния екран",
   "yazFlexSkipRestDurationDialogSkip": "Пропуснете",
   "yazFlexBeginPillNumberPageTitle": "На кой ден от цикъла ви на прием на хапчета започва блистерът?",
   "yazFlexBeginPillNumberPageNote": "Моля, отговорете според броя дни, изминали от края на паузата преди началото на блистера",

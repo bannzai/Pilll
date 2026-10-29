@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "اليوم الحالي من أيام الراحة",
   "yazFlexSkipRestDuration": "تخطي إدخال فترة الراحة",
   "yazFlexSkipRestDurationDialogTitle": "تخطي إدخال فترة الراحة",
+  "yazFlexSkipRestDurationDialogMessage": "يمكنكِ إدخال مدة إيقاف تناول الحبوب لاحقًا من «إيقاف تناول الحبوب» في الصفحة الرئيسية",
   "yazFlexSkipRestDurationDialogSkip": "تخطي",
   "yazFlexBeginPillNumberPageTitle": "في أي يوم من دورة تناول الحبوب يبدأ الشريط؟",
   "yazFlexBeginPillNumberPageNote": "يرجى الإجابة حسب عدد الأيام التي مرت منذ انتهاء فترة راحة تناول الحبوب التي سبقت بدء الشريط",

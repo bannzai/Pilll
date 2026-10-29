@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Өнөөдөр завсарлага эхэлснээс хойш хэд дэх өдөр вэ",
   "yazFlexSkipRestDuration": "Өмнөх завсарлагааны огноог оруулахыг алгасна уу",
   "yazFlexSkipRestDurationDialogTitle": "Та завсарлага хийх хугацааг оруулахыг алгасна",
+  "yazFlexSkipRestDurationDialogMessage": "Түр завсарлага үргэлжлэх хугацааг дараа нь нүүр хуудасны «түр завсарлаг» хэсэгт оруулж болно",
   "yazFlexSkipRestDurationDialogSkip": "Алгасах",
   "yazFlexBeginPillNumberPageTitle": "Эм уух мөчлөгийн хэд дэх өдөр блистер эхэлж байна вэ?",
   "yazFlexBeginPillNumberPageNote": "Эмийн блистерийг эхлүүлэхийн өмнөх завсарлага дууссанаас хойш хэдэн өдөр өнгөрснийг үндэслэн хариулна уу",

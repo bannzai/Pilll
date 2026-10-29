@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Hányadik napja tart ma a szünet",
   "yazFlexSkipRestDuration": "A szünet megadásának kihagyása",
   "yazFlexSkipRestDurationDialogTitle": "Kihagyod a szünet megadását?",
+  "yazFlexSkipRestDurationDialogMessage": "A szüneteltetés időtartamát később a kezdőképernyő „szüneteltet” lehetőségénél is megadhatod",
   "yazFlexSkipRestDurationDialogSkip": "Kihagyás",
   "yazFlexBeginPillNumberPageTitle": "A tablettaszedési ciklusod hányadik napján kezdődik a levél?",
   "yazFlexBeginPillNumberPageNote": "A válaszhoz vedd alapul, hány nap telt el a levél megkezdése előtti szünet vége óta",

@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Які сёння дзень перапыну",
   "yazFlexSkipRestDuration": "Прапусціць увод звестак пра перапын",
   "yazFlexSkipRestDurationDialogTitle": "Прапусціць увод звестак пра перапын",
+  "yazFlexSkipRestDurationDialogMessage": "Перыяд прыпыну можна ўвесці пазней праз «прыпын» на галоўным экране",
   "yazFlexSkipRestDurationDialogSkip": "Прапусціць",
   "yazFlexBeginPillNumberPageTitle": "На які дзень вашага цыкла прыёму пігулак пачынаецца блістар?",
   "yazFlexBeginPillNumberPageNote": "Калі ласка, адкажыце з улікам колькасці дзён пасля таго, як скончыўся перапын перад пачаткам блістара",

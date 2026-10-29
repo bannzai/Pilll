@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Pa ddiwrnod o'r seibiant yw heddiw",
   "yazFlexSkipRestDuration": "Hepgor nodi'r seibiant",
   "yazFlexSkipRestDurationDialogTitle": "Hepgor nodi'r seibiant",
+  "yazFlexSkipRestDurationDialogMessage": "Gallwch nodi hyd yr oedi yn nes ymlaen drwy «oedi» ar y sgrin hafan",
   "yazFlexSkipRestDurationDialogSkip": "Hepgorwch",
   "yazFlexBeginPillNumberPageTitle": "Ar ba ddiwrnod o'ch cylch cymryd pils y mae'r stribed yn dechrau?",
   "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau ers i'r seibiant cyn dechrau'r stribed pils ddod i ben",

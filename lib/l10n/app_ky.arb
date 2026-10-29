@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Бүгүн тыныгуунун канчанчы күнү",
   "yazFlexSkipRestDuration": "Тыныгуу тууралуу маалыматты киргизүүнү өткөрүп жибериңиз",
   "yazFlexSkipRestDurationDialogTitle": "Тыныгуу тууралуу маалыматты киргизүү өткөрүлүп жиберилет",
+  "yazFlexSkipRestDurationDialogMessage": "Убактылуу токтотуу мөөнөтүн кийин башкы беттеги «убактылуу токтотуу» бөлүмүнөн киргизсеңиз болот",
   "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
   "yazFlexBeginPillNumberPageTitle": "Таблетка ичүү циклиңиздин канчанчы күнүндө блистер башталат?",
   "yazFlexBeginPillNumberPageNote": "Блистерди баштоонун алдындагы тыныгуу аяктагандан бери канча күн өткөнүнө жараша жооп бериңиз",

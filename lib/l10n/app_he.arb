@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "איזה יום של ההפסק הוא היום",
   "yazFlexSkipRestDuration": "דילוג על הזנת פרטי ההפסק",
   "yazFlexSkipRestDurationDialogTitle": "דילוג על הזנת פרטי ההפסק",
+  "yazFlexSkipRestDurationDialogMessage": "אפשר להזין את משך השהיית נטילה מאוחר יותר דרך ״השהיית נטילה״ במסך הבית",
   "yazFlexSkipRestDurationDialogSkip": "דילוג",
   "yazFlexBeginPillNumberPageTitle": "באיזה יום במחזור נטילת הגלולות מתחילה החפיסה?",
   "yazFlexBeginPillNumberPageNote": "יש לענות לפי מספר הימים שחלפו מאז שהסתיים ההפסק שלפני תחילת חפיסת הגלולות",

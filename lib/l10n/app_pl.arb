@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Który dzień przerwy przypada dziś",
   "yazFlexSkipRestDuration": "Pomiń wpisywanie przerwy",
   "yazFlexSkipRestDurationDialogTitle": "Pomiń wpisywanie przerwy",
+  "yazFlexSkipRestDurationDialogMessage": "Czas wstrzymania przyjmowania pigułek możesz podać później przez „wstrzyma” na ekranie głównym",
   "yazFlexSkipRestDurationDialogSkip": "Pomiń",
   "yazFlexBeginPillNumberPageTitle": "W którym dniu cyklu przyjmowania tabletek zaczyna się blister?",
   "yazFlexBeginPillNumberPageNote": "Odpowiedz na podstawie liczby dni od końca przerwy przed rozpoczęciem blistra",

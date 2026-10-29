@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Bugun tanaffusning nechanchi kuni",
   "yazFlexSkipRestDuration": "Tanaffus maʼlumotlarini kiritmasdan davom eting",
   "yazFlexSkipRestDurationDialogTitle": "Tanaffus maʼlumotlarini kiritish oʻtkazib yuboriladi",
+  "yazFlexSkipRestDurationDialogMessage": "Pauza muddatini keyinroq bosh ekrandagi “pauza” bo‘limida kiritishingiz mumkin",
   "yazFlexSkipRestDurationDialogSkip": "Oʻtkazib yuboring",
   "yazFlexBeginPillNumberPageTitle": "Tabletkalar varagʻining boshi davr boʻyicha nechanchi qabulga toʻgʻri keladi?",
   "yazFlexBeginPillNumberPageNote": "Iltimos, tabletka blisterni boshlashdan oldingi tanaffus tugaganidan beri necha kun oʻtganiga qarab javob bering",

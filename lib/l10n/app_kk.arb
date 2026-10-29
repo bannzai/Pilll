@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Бүгін үзілістің нешінші күні",
   "yazFlexSkipRestDuration": "Үзіліс туралы мәліметті енгізуді өткізу",
   "yazFlexSkipRestDurationDialogTitle": "Үзіліс туралы ақпаратты енгізуді өткізіп жіберу",
+  "yazFlexSkipRestDurationDialogMessage": "Кідіріс ұзақтығын кейінірек басты беттегі «кідіріс» бөлімінде енгізе аласыз",
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexBeginPillNumberPageTitle": "Таблетка қабылдау кезеңіңіздің нешінші күнінде блистер басталады?",
   "yazFlexBeginPillNumberPageNote": "Блистерді бастар алдындағы үзіліс аяқталғаннан бері қанша күн өткеніне қарай жауап беріңіз",

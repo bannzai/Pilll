@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "დღეს შესვენების მერამდენე დღეა",
   "yazFlexSkipRestDuration": "შესვენების მონაცემების შეყვანის გამოტოვება",
   "yazFlexSkipRestDurationDialogTitle": "შესვენების შეყვანის გამოტოვება",
+  "yazFlexSkipRestDurationDialogMessage": "მიღების პაუზის ხანგრძლივობის მითითება მოგვიანებით შეგიძლიათ მთავარ ეკრანზე, „მიღების პაუზ“ განყოფილებაში",
   "yazFlexSkipRestDurationDialogSkip": "გამოტოვება",
   "yazFlexBeginPillNumberPageTitle": "აბების მიღების ციკლის მერამდენე დღეს იწყება ფირფიტა?",
   "yazFlexBeginPillNumberPageNote": "გთხოვთ, უპასუხოთ იმის მიხედვით, რამდენი დღე გავიდა ფირფიტის დაწყებამდე არსებული შესვენების დასრულებიდან",

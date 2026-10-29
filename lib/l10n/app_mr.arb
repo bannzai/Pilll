@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "आज विरामाचा कितवा दिवस आहे",
   "yazFlexSkipRestDuration": "विरामाची माहिती न भरता पुढे जा",
   "yazFlexSkipRestDurationDialogTitle": "विरामाची माहिती भरणे वगळले जाईल",
+  "yazFlexSkipRestDurationDialogMessage": "सेवन विरामचा कालावधी तुम्ही नंतर होम स्क्रीनवरील “सेवन विराम” मधून नोंदवू शकता",
   "yazFlexSkipRestDurationDialogSkip": "वगळा",
   "yazFlexBeginPillNumberPageTitle": "गोळ्या घेण्याच्या तुमच्या चक्रातील कितव्या दिवशी पट्टी सुरू होते?",
   "yazFlexBeginPillNumberPageNote": "गोळ्यांची पट्टी सुरू करण्यापूर्वीचा विराम संपल्यापासून किती दिवस झाले आहेत, यानुसार कृपया उत्तर द्या",

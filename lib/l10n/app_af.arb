@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Die hoeveelste dag van jou pouse is dit vandag",
   "yazFlexSkipRestDuration": "Slaan die invoer van die pouse oor",
   "yazFlexSkipRestDurationDialogTitle": "Die invoer van die pouse word oorgeslaan",
+  "yazFlexSkipRestDurationDialogMessage": "Jy kan die tydperk later op die tuisskerm by “innameonderbreking” invul",
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
   "yazFlexBeginPillNumberPageTitle": "Op watter dag van jou pilsiklus begin die pilstrokie?",
   "yazFlexBeginPillNumberPageNote": "Antwoord asseblief volgens die aantal dae sedert die pouse wat geëindig het voordat jy met die pilstrokie begin het",

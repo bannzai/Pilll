@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "نن د وقف څویمه ورځ ده",
   "yazFlexSkipRestDuration": "د وقف د معلوماتو له ثبتولو پرته مخکې لاړ شئ",
   "yazFlexSkipRestDurationDialogTitle": "د وقف د معلوماتو ثبتول پرېږدئ",
+  "yazFlexSkipRestDurationDialogMessage": "د لنډمهاله درول موده وروسته د کور پر پاڼه د «لنډمهاله درول» له لارې ثبتولای شئ",
   "yazFlexSkipRestDurationDialogSkip": "پرېږدئ",
   "yazFlexBeginPillNumberPageTitle": "د ګولیو پاڼه د ګولیو د اخیستلو د دورې په څویمه ورځ پیلېږي؟",
   "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د ګولیو د پاڼې له پیل مخکې د وقف له پای ته رسېدو راهیسې د تېرو ورځو د شمېر پر بنسټ ځواب ورکړئ",

@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "امروز چندمین روز وقفه است",
   "yazFlexSkipRestDuration": "رد کردن ثبت وقفه",
   "yazFlexSkipRestDurationDialogTitle": "رد کردن ثبت وقفه",
+  "yazFlexSkipRestDurationDialogMessage": "می‌توانید مدت توقف موقت مصرف را بعداً از بخش «توقف موقت مصرف» در صفحهٔ اصلی وارد کنید",
   "yazFlexSkipRestDurationDialogSkip": "رد کردن",
   "yazFlexBeginPillNumberPageTitle": "ورق قرص از چندمین روز چرخهٔ مصرف شما شروع می‌شود؟",
   "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهایی که از پایان وقفه پیش از شروع ورق قرص گذشته است پاسخ دهید",

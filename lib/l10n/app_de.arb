@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Der wievielte Tag deiner Einnahmepause ist heute",
   "yazFlexSkipRestDuration": "Eingabe der Einnahmepause überspringen",
   "yazFlexSkipRestDurationDialogTitle": "Eingabe der Einnahmepause überspringen",
+  "yazFlexSkipRestDurationDialogMessage": "Die Dauer der Einnahmeunterbrechung kannst du später auf der Startseite unter „Einnahmeunterbrechung“ eingeben",
   "yazFlexSkipRestDurationDialogSkip": "Überspringen",
   "yazFlexBeginPillNumberPageTitle": "An welchem Tag deines Pillenzyklus beginnt der Blister?",
   "yazFlexBeginPillNumberPageNote": "Bitte antworte anhand der Tage seit dem Ende der Einnahmepause vor Beginn des Blisters",

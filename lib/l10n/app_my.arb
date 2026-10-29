@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "ဒီနေ့က ဆေးနားရက် ဘယ်နှရက်မြောက်ပါလဲ",
   "yazFlexSkipRestDuration": "ဆေးနားရက် အချက်အလက် မထည့်ဘဲ ကျော်သွားပါ",
   "yazFlexSkipRestDurationDialogTitle": "ဆေးနားရက် ထည့်သွင်းခြင်းကို ကျော်ပါမယ်",
+  "yazFlexSkipRestDurationDialogMessage": "ခေတ္တရပ်နားမည့်ကာလကို နောက်မှ ပင်မစာမျက်နှာရှိ “ခေတ္တရပ်နား” မှာ ထည့်နိုင်ပါတယ်",
   "yazFlexSkipRestDurationDialogSkip": "ကျော်ရန်",
   "yazFlexBeginPillNumberPageTitle": "ဆေးလုံးသောက်သည့် စက်ဝန်းရဲ့ ဘယ်နှရက်မြောက်နေ့မှာ ဆေးကတ် စတင်ပါသလဲ?",
   "yazFlexBeginPillNumberPageNote": "ဆေးကတ် မစတင်မီက ဆေးနားရက် ပြီးဆုံးပြီးနောက် ဘယ်နှရက် ကြာပြီလဲဆိုတာကို အခြေခံပြီး ဖြေပေးပါ",

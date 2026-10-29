@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "आज विश्रामको कति औँ दिन हो",
   "yazFlexSkipRestDuration": "विश्रामको विवरण नभरी अगाडि बढ्नुहोस्",
   "yazFlexSkipRestDurationDialogTitle": "विश्रामको विवरण भर्ने काम छोडिनेछ",
+  "yazFlexSkipRestDurationDialogMessage": "सेवन विरामको अवधि तपाईंले पछि गृह स्क्रिनको “सेवन विराम” बाट राख्न सक्नुहुन्छ",
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंको चक्की लिने चक्रको कति औँ दिनमा पत्ता सुरु हुन्छ?",
   "yazFlexBeginPillNumberPageNote": "चक्कीको पत्ता सुरु गर्नुअघिको विश्राम सकिएको कति दिन भयो, त्यसका आधारमा कृपया जवाफ दिनुहोस्",

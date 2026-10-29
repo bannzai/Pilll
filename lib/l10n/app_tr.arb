@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Bugün ara dönemin kaçıncı günü",
   "yazFlexSkipRestDuration": "Ara dönem bilgilerini girmeyi atlayın",
   "yazFlexSkipRestDurationDialogTitle": "Ara dönem bilgilerinin girişi atlanacak",
+  "yazFlexSkipRestDurationDialogMessage": "Ara verme süresini daha sonra ana ekrandaki “ara ver” bölümünden girebilirsiniz",
   "yazFlexSkipRestDurationDialogSkip": "Atlayın",
   "yazFlexBeginPillNumberPageTitle": "Hap kullanma döngünüzün kaçıncı gününde blister başlıyor?",
   "yazFlexBeginPillNumberPageNote": "Lütfen blistere başlamadan önceki ara dönem bittikten sonra kaç gün geçtiğine göre yanıtlayın",

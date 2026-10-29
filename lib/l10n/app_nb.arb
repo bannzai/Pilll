@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Hvilken dag i pillepausen er det i dag",
   "yazFlexSkipRestDuration": "Hopp over registrering av pillepause",
   "yazFlexSkipRestDurationDialogTitle": "Hopp over registrering av pillepause",
+  "yazFlexSkipRestDurationDialogMessage": "Du kan legge inn varigheten av inntakspausen senere under «inntakspause» på startskjermen",
   "yazFlexSkipRestDurationDialogSkip": "Hopp over",
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag i p-pillesyklusen din begynner brettet?",
   "yazFlexBeginPillNumberPageNote": "Svar ut fra hvor mange dager som har gått siden slutten av pillepausen før du startet på brettet",

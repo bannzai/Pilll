@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Kolikátý den pauzy je dnes",
   "yazFlexSkipRestDuration": "Přeskočit zadání pauzy",
   "yazFlexSkipRestDurationDialogTitle": "Přeskočit zadání pauzy",
+  "yazFlexSkipRestDurationDialogMessage": "Délku pozastavení užívání můžete zadat později přes „pozastavení užívání“ na domovské obrazovce",
   "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
   "yazFlexBeginPillNumberPageTitle": "Kolikátým dnem cyklu užívání pilulek začíná blistr?",
   "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní od konce pauzy před začátkem blistru",
