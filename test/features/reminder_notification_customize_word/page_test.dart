@@ -3,16 +3,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/missed_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/preview.dart';
 import 'package:pilll/features/reminder_notification_customize_word/page.dart';
-import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 import '../../helper/fake.dart';
+import '../../helper/localization.dart';
 import '../../helper/mock.mocks.dart';
 
 /// 画面の表示だけを確認するため、通知の登録を行わない RegisterReminderLocalNotification
@@ -23,12 +22,9 @@ void main() {
     analytics = FakeAnalytics();
   });
 
-  void useLanguage(String lang) {
-    final originalL = L;
-    addTearDown(() => L = originalL);
-    L = lookupAppLocalizations(Locale(lang));
-  }
-
+  /// [reminderNotificationCustomization] を持つ設定で服用通知のカスタマイズ画面を表示する Widget を返す
+  ///
+  /// 設定の保存と通知の登録は Mock / Fake に差し替えるため、表示の確認だけに使う。
   Widget subject({required ReminderNotificationCustomization reminderNotificationCustomization}) {
     return ProviderScope(
       overrides: [

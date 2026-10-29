@@ -1,17 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
-import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/l10n/app_localizations.dart';
+
+import '../helper/localization.dart';
 
 void main() {
-  void useLanguage(String lang) {
-    final originalL = L;
-    addTearDown(() => L = originalL);
-    L = lookupAppLocalizations(Locale(lang));
-  }
-
   group('#resolvedMissedTakenMessage', () {
     test('未設定 (既定値) で日本語の時、日本語の既定文言を返す', () {
       useLanguage('ja');
