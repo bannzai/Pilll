@@ -54,7 +54,7 @@ jobs:
           ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
       - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
         with:
-          flutter-version: '3.44.9'
+          flutter-version: '3.47.8'
       - run: flutter pub get
       - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
       # upload-artifact はファイル権限を保持しない (download 後は全て 0644 になり .app の実行バイナリが壊れる) ため、

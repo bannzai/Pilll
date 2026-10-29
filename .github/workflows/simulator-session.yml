@@ -46,9 +46,11 @@ jobs:
           DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
           XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
           ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+          # 無いと secret.dart のキーが空になり、プレミアム紹介シートが Invalid API Key のエラー画面になって購入の導線を確かめられない
+          REVENUECAT_PUBLIC_API_KEY_IOS: ${{ secrets.REVENUECAT_PUBLIC_API_KEY_IOS_DEV }}
       - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
         with:
-          flutter-version: '3.44.9'
+          flutter-version: '3.47.8'
       - run: flutter pub get
       - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

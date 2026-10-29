@@ -53,7 +53,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  FLUTTER_VERSION: '3.44.9'
+  FLUTTER_VERSION: '3.47.8'
   BUILD_NUMBER_OFFSET: 10000
   # 署名は project.pbxproj の Release / Release-Development 設定 (CODE_SIGN_STYLE = Manual + 下記の profile 名) に従う
   IOS_TEAM_ID: TQPN82UBBY
@@ -261,7 +261,9 @@ jobs:
       - name: Upload dSYMs to Crashlytics
         continue-on-error: true
         run: |
-          ./ios/Pods/FirebaseCrashlytics/upload-symbols \
+          # Firebase は SwiftPM で取り込む。flutter build ios は xcodebuild に -clonedSourcePackagesDirPath build/ios/SourcePackages を渡すため、
+          # upload-symbols はそこに checkout された firebase-ios-sdk にある (flutter_tools の xcodeproj.dart の swiftPackageCachePath)
+          ./build/ios/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols \
             -gsp ios/Firebase/GoogleService-Info.plist \
             -p ios \
             build/ios/archive/Runner.xcarchive/dSYMs

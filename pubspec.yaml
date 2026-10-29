@@ -33,14 +33,16 @@ dependencies:
   shared_preferences: ^2.5.4
   new_version_plus: ^1.0.1
   intl: ^0.20.2
-  firebase_core: ^4.14.0
-  firebase_analytics:
-  firebase_auth:
-  firebase_messaging:
-  firebase_remote_config:
-  firebase_crashlytics:
-  cloud_functions:
-  cloud_firestore:
+  firebase_core: ^4.15.2
+  firebase_analytics: ^12.6.1
+  firebase_auth: ^6.7.1
+  firebase_messaging: ^16.7.1
+  firebase_remote_config: ^6.7.1
+  firebase_crashlytics: ^5.4.1
+  cloud_functions: ^6.5.1
+  # eMudhra の中間 CA の失効に対応した FirebaseFirestore 12.19.3 を使う 6.10.2 以上。他の FlutterFire も
+  # 同じ BoM 4.20.2 に揃える (https://firebase.google.com/support/guides/compromised-emudhra-intermediate-ca)
+  cloud_firestore: ^6.10.2
   url_launcher: ^6.3.2
   package_info_plus: ^9.0.0
   json_annotation: ^4.9.0
@@ -66,12 +68,14 @@ dependencies:
   crypto: 3.0.7
   timezone: 0.10.1
   google_mobile_ads: ^9.1.0
-  gma_mediation_meta: ^1.7.0
+  # 1.7.0 は Package.swift が iOS 13.0 を宣言し、iOS 15.0 を要求する MetaAdapterTarget を SwiftPM で解決できなかった。
+  # 1.7.1 で Package.swift が iOS 15.0 になった
+  gma_mediation_meta: ^1.7.1
   gma_mediation_mintegral: ^2.1.3
   home_widget: ^0.10.0
   path_provider: ^2.1.4
   flutter_timezone: ^4.1.0
-  firebase_app_check: ^0.4.7
+  firebase_app_check: ^0.4.9
 
 dev_dependencies:
   firebase_core_platform_interface: ^8.1.1
@@ -97,13 +101,9 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   config:
-    # Flutter 3.44 以降は Swift Package Manager が既定で有効になり、CI の flutter build ios が Xcode project に SwiftPM 統合を
-    # 足して各プラグインの Package.swift を使う。gma_mediation_meta 1.7.0 は自身の Package.swift で iOS 13.0 を宣言しながら
-    # iOS 15.0 を要求する MetaAdapterTarget に依存するため、Runner の deployment target (15.0) に関係なく
-    # 「The package product 'MetaAdapterTarget' requires minimum platform version 15.0 ... but this target supports 13.0」で失敗する。
-    # Xcode project は SwiftPM に移行していない (FlutterGeneratedPluginSwiftPackage の参照が無い) ので、3.41.9 までと同じ
-    # CocoaPods の経路に固定する。依存の更新で解消できるようになったら外す
-    enable-swift-package-manager: false
+    # iOS の plugin は Swift Package Manager で取り込む (SwiftPM 未対応の plugin だけ CocoaPods に残る)。開発者のグローバル設定
+    # (`flutter config --no-enable-swift-package-manager`) で手元と CI の取り込み方が食い違わないようプロジェクトで固定する
+    enable-swift-package-manager: true
   generate: true
   assets:
     - images/
