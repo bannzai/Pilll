@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r oedi",
   "selectPausePeriod": "Dewiswch hyd yr oedi",
   "pauseStartDate": "Dyddiad dechrau'r oedi",
+  "pauseEndDate": "Dyddiad gorffen yr oedi",
   "endPillSheet": "Stribed pils wedi gorffen",
   "discardPillSheet": "Gwaredu stribed pils",
   "takingTime": "Amser cymryd y bilsen",

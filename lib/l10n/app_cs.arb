@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Vybrat datum začátku pozastavení užívání",
   "selectPausePeriod": "Vybrat období pozastavení užívání",
   "pauseStartDate": "Datum začátku pozastavení užívání",
+  "pauseEndDate": "Datum ukončení pozastavení užívání",
   "endPillSheet": "Blistr dokončen",
   "discardPillSheet": "Blistr odstraněn",
   "takingTime": "Čas užití pilulky",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Izvēlieties lietošanas pauzes sākuma datumu",
   "selectPausePeriod": "Izvēlieties lietošanas pauzes ilgumu",
   "pauseStartDate": "Lietošanas pauzes sākuma datums",
+  "pauseEndDate": "Lietošanas pauzes (lietošanas pauz) beigu datums",
   "endPillSheet": "Tablešu blisteris pabeigts",
   "discardPillSheet": "Tablešu blisteris izmests",
   "takingTime": "Tabletes lietošanas laiks",

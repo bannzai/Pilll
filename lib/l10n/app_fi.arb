@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Valitse taukotilan aloituspäivä",
   "selectPausePeriod": "Valitse taukotilan kesto",
   "pauseStartDate": "Taukotilan alkamispäivä",
+  "pauseEndDate": "Taukotilan päättymispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",
   "discardPillSheet": "Pilleriliuska poistettu",
   "takingTime": "Pillerin ottoaika",

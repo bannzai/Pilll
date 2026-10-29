@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Vælg startdato for indtagelsespause",
   "selectPausePeriod": "Vælg perioden for indtagelsespause",
   "pauseStartDate": "Startdato for indtagelsespause",
+  "pauseEndDate": "Slutdato for indtagelsespause",
   "endPillSheet": "Afsluttet pillekort",
   "discardPillSheet": "Kasseret pillekort",
   "takingTime": "Tidspunkt",

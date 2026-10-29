@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Vyberte dátum, od ktorého chcete pozastaviť užívanie",
   "selectPausePeriod": "Vyberte obdobie pozastavenia užívania",
   "pauseStartDate": "Dátum začiatku pozastavenia",
+  "pauseEndDate": "Dátum ukončenia pozastavenia",
   "endPillSheet": "Blist sa skončil",
   "discardPillSheet": "Vyhodiť blist",
   "takingTime": "Čas užitia tabletky",

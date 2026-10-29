@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Изберете начална дата за спиране на приема",
   "selectPausePeriod": "Изберете период за спиране на приема",
   "pauseStartDate": "Начална дата на спиране на приема",
+  "pauseEndDate": "Крайна дата на спиране на приема",
   "endPillSheet": "Край на блистера",
   "discardPillSheet": "Изхвърляне на блистер",
   "takingTime": "Час за прием на хапчето",

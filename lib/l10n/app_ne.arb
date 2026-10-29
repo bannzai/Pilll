@@ -108,6 +108,7 @@
   "selectPauseStartDate": "सेवन विराम सुरु हुने मिति छान्नुहोस्",
   "selectPausePeriod": "सेवन विरामको अवधि छान्नुहोस्",
   "pauseStartDate": "सेवन विराम सुरु हुने मिति",
+  "pauseEndDate": "सेवन विराम सकिने मिति",
   "endPillSheet": "चक्की पत्ता सकियो",
   "discardPillSheet": "चक्की पत्ता हटाइयो",
   "takingTime": "चक्की खाने समय",

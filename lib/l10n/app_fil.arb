@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Piliin ang petsa ng simula ng pause",
   "selectPausePeriod": "Piliin ang tagal ng pause",
   "pauseStartDate": "Petsa ng simula ng pause",
+  "pauseEndDate": "Petsa ng pagtatapos ng pause",
   "endPillSheet": "Naubos na ang pakete ng pildoras",
   "discardPillSheet": "Itinapon ang pakete ng pildoras",
   "takingTime": "Oras ng pag-inom ng pildoras",

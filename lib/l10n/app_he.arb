@@ -108,6 +108,7 @@
   "selectPauseStartDate": "בחירת תאריך התחלה של השהיית נטילה",
   "selectPausePeriod": "לבחור את משך השהיית נטילה",
   "pauseStartDate": "תאריך תחילת השהיית נטילה",
+  "pauseEndDate": "תאריך סיום השהיית נטילה",
   "endPillSheet": "חפיסת הגלולות הסתיימה",
   "discardPillSheet": "מחיקת חפיסת הגלולות",
   "takingTime": "שעת נטילת הגלולה",

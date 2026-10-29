@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Válaszd ki, mikortól szeretnéd szüneteltetni a szedést",
   "selectPausePeriod": "Válaszd ki, mennyi ideig szeretnéd szüneteltetni a tabletta szedését",
   "pauseStartDate": "A szüneteltetés kezdőnapja",
+  "pauseEndDate": "A szüneteltetés vége",
   "endPillSheet": "Tablettacsomag befejezve",
   "discardPillSheet": "Tablettacsomag törlése",
   "takingTime": "A tabletta szedésének ideje",

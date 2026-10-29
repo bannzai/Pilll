@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Scegli la data di inizio della sospensione",
   "selectPausePeriod": "Scegli la durata della sospensione",
   "pauseStartDate": "Data di inizio della sospensione",
+  "pauseEndDate": "Data di fine della sospensione",
   "endPillSheet": "Blister terminato",
   "discardPillSheet": "Blister eliminato",
   "takingTime": "Orario di assunzione della pillola",

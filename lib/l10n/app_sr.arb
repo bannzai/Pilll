@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Изаберите датум почетка прекида узимања",
   "selectPausePeriod": "Изаберите трајање прекида узимања",
   "pauseStartDate": "Датум почетка прекида",
+  "pauseEndDate": "Датум завршетка прекида",
   "endPillSheet": "Крај блистера",
   "discardPillSheet": "Брисање блистера",
   "takingTime": "Време узимања пилуле",

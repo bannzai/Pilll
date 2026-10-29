@@ -108,6 +108,7 @@
   "selectPauseStartDate": "เลือกวันที่เริ่มหยุดกินยาชั่วคราว",
   "selectPausePeriod": "เลือกช่วงเวลาหยุดกินยาชั่วคราว",
   "pauseStartDate": "วันที่เริ่มหยุดกินยาชั่วคราว",
+  "pauseEndDate": "วันที่สิ้นสุดการหยุดกินยาชั่วคราว",
   "endPillSheet": "แผงยาหมดแล้ว",
   "discardPillSheet": "ทิ้งแผงยา",
   "takingTime": "เวลาทานยา",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Beginn der Einnahmeunterbrechung auswählen",
   "selectPausePeriod": "Zeitraum der Einnahmeunterbrechung auswählen",
   "pauseStartDate": "Startdatum der Einnahmeunterbrechung",
+  "pauseEndDate": "Enddatum der Einnahmeunterbrechung",
   "endPillSheet": "Pillenblister aufgebraucht",
   "discardPillSheet": "Pillenblister gelöscht",
   "takingTime": "Einnahmezeit",

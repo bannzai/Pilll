@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Pasirinkite datą, nuo kurios norite pristabdyti vartojimą",
   "selectPausePeriod": "Pasirinkite pristabdymo laikotarpį",
   "pauseStartDate": "Pristabdymo pradžios data",
+  "pauseEndDate": "Pristabdymo (pristabd) pabaigos data",
   "endPillSheet": "Tablečių plokštelė baigta",
   "discardPillSheet": "Išmesta tablečių plokštelė",
   "takingTime": "Tabletės vartojimo laikas",

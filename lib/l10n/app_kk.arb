@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Кідіріс басталатын күнді таңдаңыз",
   "selectPausePeriod": "Қабылдаудағы кідіріс мерзімін таңдаңыз",
   "pauseStartDate": "Кідіріс басталатын күн",
+  "pauseEndDate": "Кідіріс аяқталатын күн",
   "endPillSheet": "таблетка блистер аяқталды",
   "discardPillSheet": "таблетка блистер тастау",
   "takingTime": "Таблетканы қабылдау уақыты",

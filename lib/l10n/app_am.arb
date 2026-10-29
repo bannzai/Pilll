@@ -108,6 +108,7 @@
   "selectPauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይምረጡ",
   "selectPausePeriod": "ለጊዜው ማቆም የሚቆይበትን ጊዜ ይምረጡ",
   "pauseStartDate": "ለጊዜው ማቆም የሚጀምርበት ቀን",
+  "pauseEndDate": "የለጊዜው ማቆም መጨረሻ ቀን",
   "endPillSheet": "ክኒን ሉህ ተጠናቋል",
   "discardPillSheet": "ክኒን ሉህ ማስወገድ",
   "takingTime": "የክኒን መውሰጃ ሰዓት",

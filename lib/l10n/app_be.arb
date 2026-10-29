@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Выберыце дату пачатку прыпыну",
   "selectPausePeriod": "Выберыце перыяд для прыпыну прыёму пігулак",
   "pauseStartDate": "Дата пачатку прыпыну",
+  "pauseEndDate": "Дата заканчэння прыпыну",
   "endPillSheet": "Блістар скончыўся",
   "discardPillSheet": "Выдаліць блістар",
   "takingTime": "Час прыёму пігулкі",

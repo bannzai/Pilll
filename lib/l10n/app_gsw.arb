@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Wähl s Startdatum vo de Iinahmepause",
   "selectPausePeriod": "Wähl d Duur vo de Iinahmepause",
   "pauseStartDate": "Startdatum vo de Iinahmepause",
+  "pauseEndDate": "Änddatum vo de Iinahmepause",
   "endPillSheet": "Pilleblister isch fertig",
   "discardPillSheet": "Pilleblister glöscht",
   "takingTime": "Iinahmziit",

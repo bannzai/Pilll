@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Chọn ngày bắt đầu tạm ngừng uống thuốc",
   "selectPausePeriod": "Chọn thời gian tạm ngừng uống thuốc",
   "pauseStartDate": "Ngày bắt đầu tạm ngừng uống thuốc",
+  "pauseEndDate": "Ngày kết thúc tạm ngừng uống thuốc",
   "endPillSheet": "Vỉ thuốc đã dùng hết",
   "discardPillSheet": "Bỏ vỉ thuốc",
   "takingTime": "Giờ uống thuốc",

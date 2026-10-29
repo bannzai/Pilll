@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Ara vermeye başlayacağınız tarihi seçin",
   "selectPausePeriod": "Ara verme süresini seçin",
   "pauseStartDate": "Ara vermenin başlangıç tarihi",
+  "pauseEndDate": "Ara verme bitiş tarihi",
   "endPillSheet": "Blister tamamlandı",
   "discardPillSheet": "Blister silindi",
   "takingTime": "Hap alma saati",

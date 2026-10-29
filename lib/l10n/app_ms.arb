@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Pilih tarikh mula jeda pengambilan pil",
   "selectPausePeriod": "Sila pilih tempoh jeda pengambilan pil",
   "pauseStartDate": "Tarikh mula jeda pengambilan pil",
+  "pauseEndDate": "Tarikh tamat jeda pengambilan pil",
   "endPillSheet": "Pek pil tamat",
   "discardPillSheet": "Pek pil dibuang",
   "takingTime": "Masa mengambil pil",

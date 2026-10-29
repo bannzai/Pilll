@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Sicela ukhethe usuku lokuqala ukumisa okwesikhashana ukuphuza amaphilisi",
   "selectPausePeriod": "Sicela ukhethe isikhathi sokumisa okwesikhashana ukuphuza amaphilisi",
   "pauseStartDate": "Usuku lokuqala ukumisa okwesikhashana",
+  "pauseEndDate": "Usuku lokuphela kokumisa okwesikhashana",
   "endPillSheet": "Ishidi lamaphilisi seliphelile",
   "discardPillSheet": "Ukulahlwa kweshidi lamaphilisi",
   "takingTime": "Isikhathi sokuphuza iphilisi",

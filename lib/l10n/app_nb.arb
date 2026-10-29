@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Velg startdato for inntakspause",
   "selectPausePeriod": "Velg varighet for inntakspause",
   "pauseStartDate": "Startdato for inntakspause",
+  "pauseEndDate": "Sluttdato for inntakspause",
   "endPillSheet": "Pillebrett avsluttet",
   "discardPillSheet": "Pillebrett kastet",
   "takingTime": "Tid for å ta p-pillen",

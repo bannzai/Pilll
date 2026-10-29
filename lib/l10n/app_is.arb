@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Veldu upphafsdag pilluhlés",
   "selectPausePeriod": "Veldu lengd pilluhlés",
   "pauseStartDate": "Upphafsdagur pilluhlés",
+  "pauseEndDate": "Lokadagur pilluhlés",
   "endPillSheet": "Notkun pilluspjalds lokið",
   "discardPillSheet": "Förgun pilluspjalds",
   "takingTime": "Tími til að taka pilluna",

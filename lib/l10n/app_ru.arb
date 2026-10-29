@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Выберите дату начала приостановки приёма",
   "selectPausePeriod": "Выберите период приостановки приёма",
   "pauseStartDate": "Дата начала приостановки",
+  "pauseEndDate": "Дата окончания приостановки",
   "endPillSheet": "Блистер закончился",
   "discardPillSheet": "Блистер удалён",
   "takingTime": "Время приёма таблетки",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "选择暂停服药的开始日期",
   "selectPausePeriod": "选择暂停服药的时长",
   "pauseStartDate": "暂停服药开始日期",
+  "pauseEndDate": "暂停服药结束日期",
   "endPillSheet": "药板已用完",
   "discardPillSheet": "删除药板",
   "takingTime": "服药时间",

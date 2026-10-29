@@ -108,6 +108,7 @@
   "selectPauseStartDate": "تاریخ شروع توقف موقت مصرف را انتخاب کنید",
   "selectPausePeriod": "مدت توقف موقت مصرف را انتخاب کنید",
   "pauseStartDate": "تاریخ شروع توقف موقت مصرف",
+  "pauseEndDate": "تاریخ پایان توقف موقت مصرف",
   "endPillSheet": "ورق قرص تمام شد",
   "discardPillSheet": "حذف ورق قرص",
   "takingTime": "زمان مصرف قرص",

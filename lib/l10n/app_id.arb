@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Pilih tanggal mulai jeda minum",
   "selectPausePeriod": "Pilih durasi jeda minum pil",
   "pauseStartDate": "Tanggal mulai jeda minum",
+  "pauseEndDate": "Tanggal berakhirnya jeda minum",
   "endPillSheet": "Strip pil sudah habis",
   "discardPillSheet": "Strip pil dibuang",
   "takingTime": "Waktu minum pil",

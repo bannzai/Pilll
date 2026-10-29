@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Түр завсарлага эхлэх өдрийг сонгоно уу",
   "selectPausePeriod": "Түр завсарлагын хугацааг сонгоно уу",
   "pauseStartDate": "Түр завсарлага эхлэх өдөр",
+  "pauseEndDate": "Түр завсарлага дуусах өдөр",
   "endPillSheet": "Эмийн блистер дууссан",
   "discardPillSheet": "Эмийн блистерийг хаях",
   "takingTime": "Эм уух цаг",

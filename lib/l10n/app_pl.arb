@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Wybierz datę, od której chcesz wstrzymać przyjmowanie",
   "selectPausePeriod": "Wybierz okres wstrzymania przyjmowania tabletek",
   "pauseStartDate": "Data rozpoczęcia wstrzymania",
+  "pauseEndDate": "Data zakończenia wstrzymania",
   "endPillSheet": "blist zużyty",
   "discardPillSheet": "blist wyrzucony",
   "takingTime": "Godzina przyjęcia tabletki",
