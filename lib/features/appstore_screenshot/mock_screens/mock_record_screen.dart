@@ -246,8 +246,8 @@ class MockRecordScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                // 本番 RecordPageInformationHeader._todayWidget と同じ組み立て。端末言語切替
-                // (capture_screenshots.sh) により全言語で実アプリと同じ書式になる。
+                // 本番 RecordPageInformationHeader._todayWidget と同じ組み立て。撮影する言語への
+                // Intl.defaultLocale の切り替えにより全言語で実アプリと同じ書式になる。
                 '${DateTimeFormatter.monthAndDay(_fixedToday)} (${DateTimeFormatter.shortWeekday(_fixedToday)})',
                 style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: TextColor.gray),
               ),

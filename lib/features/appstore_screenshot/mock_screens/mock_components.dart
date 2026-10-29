@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -26,12 +24,13 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 /// を参照するため、テストと同じ方式（`todayRepository = ...`）で固定する。また本番の
 /// DateTimeFormatter は `Intl.defaultLocale`（撮影する言語）で intl の DateFormat を
 /// 使うため、entrypoint() を通さないカタログでは未初期化のままだと LocaleDataException になる。
-/// そのため呼び出し時に毎回 initializeDateFormatting しておく（同じロケールへの再初期化は無害）。
+/// そのため呼び出し時に毎回 initializeDateFormatting しておく（再初期化は無害）。
+/// date_symbol_data_local の initializeDateFormatting は引数に関わらず全ロケールを初期化するため、引数は渡さない。
 ///
 /// 呼び出しは冪等（同じ [fixedDate] を渡す限り、todayRepository は同じ状態になる）。
 void applyFixedToday(DateTime fixedDate) {
   todayRepository = _FixedTodayService(fixedDate);
-  initializeDateFormatting(Platform.localeName);
+  initializeDateFormatting();
 }
 
 /// [applyFixedToday] が使う固定日時版の [TodayService]。
