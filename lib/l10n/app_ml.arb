@@ -386,6 +386,7 @@
   "changePillDays": "ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റുക",
   "beginToEndNumbers": "നമ്പർ {begin} ~ {end}",
   "resumeTaking": "ഗുളിക കഴിക്കുന്നത് വീണ്ടും തുടങ്ങൂ",
+  "changePausePeriod": "താൽക്കാലികമായി നിർത്തുന്ന കാലയളവ് മാറ്റുക",
   "changedToDate": "തീയതി {date} ആക്കി മാറ്റി",
   "quickRecordTakePillFailed": "ഗുളിക കഴിച്ചതിന്റെ രേഖ സേവ് ആയിട്ടുണ്ടാകില്ല",
   "quickRecordTakePillFailedMessage": "ദയവായി ആപ്പ് തുറന്ന് ഗുളിക കഴിച്ചതിന്റെ രേഖ പരിശോധിക്കൂ",

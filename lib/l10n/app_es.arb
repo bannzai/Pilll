@@ -386,6 +386,7 @@
   "changePillDays": "Cambiar los días de toma de la píldora",
   "beginToEndNumbers": "Del n.º {begin} al n.º {end}",
   "resumeTaking": "Reanudar la toma de la píldora",
+  "changePausePeriod": "Cambiar la duración de la pausa",
   "changedToDate": "La fecha se cambió a {date}",
   "quickRecordTakePillFailed": "Es posible que no se haya guardado el registro de toma",
   "quickRecordTakePillFailedMessage": "Abre la app y comprueba el registro de tu píldora",

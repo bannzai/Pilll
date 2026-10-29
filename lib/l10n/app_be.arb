@@ -386,6 +386,7 @@
   "changePillDays": "Змяніць колькасць дзён прыёму пігулак",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Аднавіць прыём пігулак",
+  "changePausePeriod": "Змяніць працягласць прыпыну",
   "changedToDate": "Дата зменена на {date}",
   "quickRecordTakePillFailed": "Запіс прыёму пігулак мог не захавацца",
   "quickRecordTakePillFailedMessage": "Калі ласка, адкрыйце праграму і праверце запіс прыёму пігулак",

@@ -386,6 +386,7 @@
   "changePillDays": "Canvia el nombre de dies que prens la píndola",
   "beginToEndNumbers": "Núm. {begin} - {end}",
   "resumeTaking": "Reprèn la píndola",
+  "changePausePeriod": "Canviar la durada de la pausa",
   "changedToDate": "La data s'ha canviat a {date}",
   "quickRecordTakePillFailed": "Pot ser que el registre de preses no s’hagi desat",
   "quickRecordTakePillFailedMessage": "Obre l'app i comprova el registre de preses",

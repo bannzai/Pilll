@@ -386,6 +386,7 @@
   "changePillDays": "మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "beginToEndNumbers": "నం. {begin} ~ {end}",
   "resumeTaking": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించండి",
+  "changePausePeriod": "తాత్కాలిక విరామం వ్యవధిని మార్చండి",
   "changedToDate": "తేదీని {date}కి మార్చాం",
   "quickRecordTakePillFailed": "మాత్రల నమోదు సేవ్ కాకపోయి ఉండవచ్చు",
   "quickRecordTakePillFailedMessage": "దయచేసి యాప్ తెరిచి మాత్రల నమోదును తనిఖీ చేయండి",

@@ -386,6 +386,7 @@
   "changePillDays": "Endre antall dager du tar p-piller",
   "beginToEndNumbers": "Nr. {begin}–{end}",
   "resumeTaking": "Begynn å ta p-pillen igjen",
+  "changePausePeriod": "Endre varigheten på inntakspausen",
   "changedToDate": "Datoen er endret til {date}",
   "quickRecordTakePillFailed": "Pilleloggen ble kanskje ikke lagret",
   "quickRecordTakePillFailedMessage": "Åpne appen og sjekk registreringen av p-pillen",

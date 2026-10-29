@@ -386,6 +386,7 @@
   "changePillDays": "Таблетка қабылдайтын күндер санын өзгерту",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка қабылдауды қайта бастау",
+  "changePausePeriod": "Кідіріс ұзақтығын өзгерту",
   "changedToDate": "Күн {date} болып өзгертілді",
   "quickRecordTakePillFailed": "Қабылдау жазбасы сақталмаған болуы мүмкін",
   "quickRecordTakePillFailedMessage": "Қолданбаны ашып, таблетканы қабылдау жазбасын тексеріңіз",

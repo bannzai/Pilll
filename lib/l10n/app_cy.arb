@@ -386,6 +386,7 @@
   "changePillDays": "Newid nifer y diwrnodau cymryd y bilsen",
   "beginToEndNumbers": "rhif {begin} ~ {end}",
   "resumeTaking": "Ailddechrau cymryd y bilsen",
+  "changePausePeriod": "Newid hyd yr oedi",
   "changedToDate": "Mae'r dyddiad wedi'i newid i {date}",
   "quickRecordTakePillFailed": "Mae’n bosibl na chafodd y cofnod cymryd ei gadw",
   "quickRecordTakePillFailedMessage": "Agorwch yr ap, os gwelwch yn dda, a gwiriwch y cofnod cymryd y bilsen",

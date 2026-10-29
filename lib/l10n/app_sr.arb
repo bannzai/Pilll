@@ -386,6 +386,7 @@
   "changePillDays": "Промена броја дана узимања пилуле",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Наставак узимања пилула",
+  "changePausePeriod": "Промена трајања прекида узимања",
   "changedToDate": "Датум је промењен на {date}",
   "quickRecordTakePillFailed": "Евиденција узимања можда није сачувана",
   "quickRecordTakePillFailedMessage": "Молимо Вас, отворите апликацију и проверите",

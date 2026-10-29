@@ -386,6 +386,7 @@
   "changePillDays": "ગોળી લેવાના દિવસોની સંખ્યા બદલો",
   "beginToEndNumbers": "ગોળી નંબર {begin} ~ {end}",
   "resumeTaking": "ગોળી લેવાનું ફરી શરૂ કરો",
+  "changePausePeriod": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાની અવધિ બદલો",
   "changedToDate": "તારીખ બદલીને {date} કરવામાં આવી છે",
   "quickRecordTakePillFailed": "ગોળી સેવનની નોંધ કદાચ સાચવાઈ નથી",
   "quickRecordTakePillFailedMessage": "કૃપા કરીને ઍપ ખોલીને ગોળી સેવનની નોંધ તપાસો",

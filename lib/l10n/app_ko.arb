@@ -386,6 +386,7 @@
   "changePillDays": "약 복용 일수 변경",
   "beginToEndNumbers": "{begin}번 ~ {end}번",
   "resumeTaking": "복용 다시 시작하기",
+  "changePausePeriod": "일시 중지 기간 변경",
   "changedToDate": "날짜를 {date}(으)로 변경했어요",
   "quickRecordTakePillFailed": "복용 기록이 저장되지 않았을 수 있어요",
   "quickRecordTakePillFailedMessage": "앱을 열어 복용 기록을 확인해 주세요",

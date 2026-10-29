@@ -386,6 +386,7 @@
   "changePillDays": "Modifier le nombre de jours de prise de la pilule",
   "beginToEndNumbers": "n° {begin} à {end}",
   "resumeTaking": "Reprendre la pilule",
+  "changePausePeriod": "Modifier la durée de la pause de prise",
   "changedToDate": "La date a été modifiée pour {date}",
   "quickRecordTakePillFailed": "La prise n’a peut-être pas été enregistrée dans le journal des prises",
   "quickRecordTakePillFailedMessage": "Ouvrez l’application et vérifiez l’enregistrement de la prise de votre pilule",

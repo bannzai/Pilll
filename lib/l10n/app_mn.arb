@@ -386,6 +386,7 @@
   "changePillDays": "Эм уух өдрийн тоог өөрчлөх",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Эм уухыг дахин эхлүүлэх",
+  "changePausePeriod": "Түр завсарлагын хугацааг өөрчлөх",
   "changedToDate": "Огноог {date} болгон өөрчилсөн",
   "quickRecordTakePillFailed": "Эм уусан бүртгэл хадгалагдаагүй байж магадгүй",
   "quickRecordTakePillFailedMessage": "Аппыг нээж, эм уусан бүртгэлээ шалгана уу",

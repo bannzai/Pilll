@@ -386,6 +386,7 @@
   "changePillDays": "Baguhin ang bilang ng mga araw ng pag-inom ng pildoras",
   "beginToEndNumbers": "Blg. {begin} ~ {end}",
   "resumeTaking": "Ipagpatuloy ang pag-inom ng pildoras",
+  "changePausePeriod": "Baguhin ang tagal ng paghinto sa pag-inom",
   "changedToDate": "Pinalitan na ang petsa sa {date}",
   "quickRecordTakePillFailed": "Maaaring hindi na-save ang tala ng pag-inom",
   "quickRecordTakePillFailedMessage": "Pakibuksan po ang app at tingnan ang tala ng pag-inom ng pildoras",

@@ -386,6 +386,7 @@
   "changePillDays": "Zmień liczbę dni przyjmowania tabletek",
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Wznów przyjmowanie tabletek",
+  "changePausePeriod": "Zmień czas wstrzymania przyjmowania",
   "changedToDate": "Data została zmieniona na {date}",
   "quickRecordTakePillFailed": "Zapis przyjęcia tabletki mógł się nie powieść",
   "quickRecordTakePillFailedMessage": "Otwórz aplikację i sprawdź zapis przyjęcia tabletki",

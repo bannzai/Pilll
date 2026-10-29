@@ -386,6 +386,7 @@
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
   "beginToEndNumbers": "Nambari {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza vidonge",
+  "changePausePeriod": "Badilisha muda wa kusitisha kumeza vidonge",
   "changedToDate": "Tarehe imebadilishwa kuwa {date}",
   "quickRecordTakePillFailed": "Rekodi ya kumeza vidonge huenda haijahifadhiwa",
   "quickRecordTakePillFailedMessage": "Tafadhali fungua programu na uangalie rekodi ya kumeza vidonge",

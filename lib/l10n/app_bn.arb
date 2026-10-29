@@ -386,6 +386,7 @@
   "changePillDays": "পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "beginToEndNumbers": "{begin} থেকে {end} নম্বর",
   "resumeTaking": "আবার পিল খাওয়া শুরু",
+  "changePausePeriod": "সেবন স্থগিত রাখার সময় পরিবর্তন করুন",
   "changedToDate": "তারিখ {date}-এ পরিবর্তন করা হয়েছে",
   "quickRecordTakePillFailed": "সেবনের রেকর্ড সংরক্ষিত নাও হতে পারে",
   "quickRecordTakePillFailedMessage": "অনুগ্রহ করে অ্যাপটি খুলে সেবনের রেকর্ড দেখে নিন",

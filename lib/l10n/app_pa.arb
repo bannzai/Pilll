@@ -386,6 +386,7 @@
   "changePillDays": "ਗੋਲੀ ਲੈਣ ਵਾਲੇ ਦਿਨਾਂ ਦੀ ਗਿਣਤੀ ਬਦਲੋ",
   "beginToEndNumbers": "ਨੰ. {begin} ~ {end}",
   "resumeTaking": "ਗੋਲੀ ਲੈਣੀ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ",
+  "changePausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਬਦਲੋ",
   "changedToDate": "ਤਾਰੀਖ ਬਦਲ ਕੇ {date} ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ",
   "quickRecordTakePillFailed": "ਸੇਵਨ ਰਿਕਾਰਡ ਸ਼ਾਇਦ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੋਇਆ",
   "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹੋ ਅਤੇ ਸੇਵਨ ਰਿਕਾਰਡ ਜਾਂਚੋ",

@@ -386,6 +386,7 @@
   "changePillDays": "Aazahl Iinahmtäg ändere",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "D Pille wider iinäh",
+  "changePausePeriod": "Duur vo de Iinahmepause ändere",
   "changedToDate": "S Datum isch uf {date} gänderet",
   "quickRecordTakePillFailed": "D Iinahm-Ufzeichnig isch villicht nöd gspeicheret worde",
   "quickRecordTakePillFailedMessage": "Mach bitte d App uf und lueg nache",

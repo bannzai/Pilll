@@ -386,6 +386,7 @@
   "changePillDays": "ክኒን የሚወሰድበትን የቀናት ብዛት ይቀይሩ",
   "beginToEndNumbers": "ቁጥር {begin} ~ {end}",
   "resumeTaking": "ክኒን መውሰድን እንደገና ይጀምሩ",
+  "changePausePeriod": "የለጊዜው ማቆም ጊዜ ለውጥ",
   "changedToDate": "ቀኑ ወደ {date} ተቀይሯል",
   "quickRecordTakePillFailed": "የአወሳሰድ መዝገብ ማስቀመጥ አልተሳካ ሊሆን ይችላል",
   "quickRecordTakePillFailedMessage": "እባክዎ መተግበሪያውን ከፍተው ያረጋግጡ",

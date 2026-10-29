@@ -386,6 +386,7 @@
   "changePillDays": "Таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка ичүүнү кайра баштоо",
+  "changePausePeriod": "Убактылуу токтотуу мөөнөтүн өзгөртүңүз",
   "changedToDate": "Күн {date} болуп өзгөртүлдү",
   "quickRecordTakePillFailed": "Таблетка ичүү жазуусу сакталбай калган болушу мүмкүн",
   "quickRecordTakePillFailedMessage": "Колдонмону ачып, таблетканы ичүү тууралуу жазууну текшериңиз",

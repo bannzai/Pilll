@@ -386,6 +386,7 @@
   "changePillDays": "পিল খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
   "beginToEndNumbers": "নং {begin} ~ {end}",
   "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",
+  "changePausePeriod": "বড়ি খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ সময় সলনি কৰক",
   "changedToDate": "তাৰিখ {date}লৈ সলনি কৰা হৈছে",
   "quickRecordTakePillFailed": "ঔষধ সেৱনৰ ৰেকৰ্ড সংৰক্ষণ কৰোঁতে সমস্যা হোৱা হ’ব পাৰে",
   "quickRecordTakePillFailedMessage": "অনুগ্ৰহ কৰি এপটো খুলি পৰীক্ষা কৰক",

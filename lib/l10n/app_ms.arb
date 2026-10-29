@@ -386,6 +386,7 @@
   "changePillDays": "Ubah bilangan hari pengambilan pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Sambung semula pengambilan pil",
+  "changePausePeriod": "Ubah tempoh jeda pengambilan pil",
   "changedToDate": "Tarikh telah diubah kepada {date}",
   "quickRecordTakePillFailed": "Rekod pengambilan mungkin tidak berjaya disimpan",
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak rekod pengambilan pil",

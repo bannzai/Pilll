@@ -386,6 +386,7 @@
   "changePillDays": "Ndryshoni numrin e ditëve të marrjes së pilulës",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Rifilloni marrjen e pilulës",
+  "changePausePeriod": "Ndryshoni kohëzgjatjen e pauzës",
   "changedToDate": "Data u ndryshua në {date}",
   "quickRecordTakePillFailed": "Regjistrimi i marrjes mund të mos jetë ruajtur",
   "quickRecordTakePillFailedMessage": "Ju lutemi, hapni aplikacionin dhe kontrolloni regjistrimin e marrjes së pilulës",

@@ -386,6 +386,7 @@
   "changePillDays": "ဆေးပြားသောက်ရမယ့် ရက်အရေအတွက် ပြောင်းရန်",
   "beginToEndNumbers": "နံပါတ် {begin} ~ {end}",
   "resumeTaking": "ဆေးသောက်ခြင်း ပြန်စတင်ရန်",
+  "changePausePeriod": "ခေတ္တရပ်နားသည့်ကာလကို ပြောင်းလဲရန်",
   "changedToDate": "ရက်စွဲကို {date} ကို ပြောင်းလိုက်ပါပြီ",
   "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်းကို မသိမ်းဆည်းနိုင်ခဲ့တာ ဖြစ်နိုင်ပါတယ်",
   "quickRecordTakePillFailedMessage": "အက်ပ်ကိုဖွင့်ပြီး စစ်ဆေးပေးပါ",

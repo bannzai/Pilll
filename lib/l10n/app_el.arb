@@ -386,6 +386,7 @@
   "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "αρ. {begin} ~ {end}",
   "resumeTaking": "Επανέναρξη λήψης",
+  "changePausePeriod": "Αλλαγή διάρκειας παύσης",
   "changedToDate": "Η ημερομηνία άλλαξε σε {date}",
   "quickRecordTakePillFailed": "Η καταγραφή λήψης ίσως δεν αποθηκεύτηκε",
   "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε την καταγραφή λήψης του χαπιού",

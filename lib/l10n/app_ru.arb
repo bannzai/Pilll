@@ -386,6 +386,7 @@
   "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№ {begin}–{end}",
   "resumeTaking": "Возобновить приём таблеток",
+  "changePausePeriod": "Изменить срок приостановки приёма",
   "changedToDate": "Дата изменена на {date}",
   "quickRecordTakePillFailed": "Запись в журнал приёма таблеток, возможно, не сохранилась",
   "quickRecordTakePillFailedMessage": "Откройте приложение и проверьте запись о приёме таблетки",

@@ -386,6 +386,7 @@
   "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
   "resumeTaking": "Hasi berriro pilula hartzen",
+  "changePausePeriod": "Etenaldiaren iraupena aldatu",
   "changedToDate": "Data {date} egunera aldatu da",
   "quickRecordTakePillFailed": "Baliteke hartze-erregistroa gorde ez izana",
   "quickRecordTakePillFailedMessage": "Ireki aplikazioa eta egiaztatu hartze-erregistroa",

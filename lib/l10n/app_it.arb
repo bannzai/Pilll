@@ -386,6 +386,7 @@
   "changePillDays": "Modifica il numero di giorni di assunzione della pillola",
   "beginToEndNumbers": "dal n. {begin} al n. {end}",
   "resumeTaking": "Riprendi la pillola",
+  "changePausePeriod": "Modifica la durata della sospensione",
   "changedToDate": "La data è stata cambiata in {date}",
   "quickRecordTakePillFailed": "Il registro delle assunzioni potrebbe non essere stato salvato",
   "quickRecordTakePillFailedMessage": "Apri l'app e controlla la registrazione della pillola",

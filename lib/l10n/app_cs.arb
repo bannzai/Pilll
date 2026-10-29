@@ -386,6 +386,7 @@
   "changePillDays": "Změnit počet dní užívání pilulek",
   "beginToEndNumbers": "č. {begin}–{end}",
   "resumeTaking": "Obnovit užívání pilulek",
+  "changePausePeriod": "Změnit délku pozastavení užívání",
   "changedToDate": "Datum bylo změněno na {date}",
   "quickRecordTakePillFailed": "Záznam užití se možná nepodařilo uložit",
   "quickRecordTakePillFailedMessage": "Otevřete prosím aplikaci a zkontrolujte záznam užití",

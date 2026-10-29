@@ -386,6 +386,7 @@
   "changePillDays": "Pakeiskite tablečių vartojimo dienų skaičių",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Vėl pradėkite vartoti tabletes",
+  "changePausePeriod": "Keisti pristabdymo trukmę",
   "changedToDate": "Data pakeista į {date}",
   "quickRecordTakePillFailed": "Vartojimo įrašas galėjo būti neišsaugotas",
   "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite tabletės vartojimo įrašą",
