@@ -1096,7 +1096,7 @@
   },
   "tellAboutPrescribedSheet": "処方されるシートについて\n教えてください",
   "@tellAboutPrescribedSheet": {
-    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
+    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。\n[翻訳の決定 zh] 「请告诉我们\\n医生为你开的药板信息」ではなく「关于医生为你开的药板\\n请告诉我们」: 原文と同じく 1 行目に「処方されるシートについて」の意味を置く (https://github.com/bannzai/Pilll/issues/1987)"
   },
   "existingAccountUsers": "すでにアカウントをお持ちの方はこちら",
   "@existingAccountUsers": {
@@ -1332,7 +1332,7 @@
   },
   "selectPillType": "ピルの種類を選択",
   "@selectPillType": {
-    "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
+    "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。\n[翻訳の決定 ko] 「복용하는 피임약 종류 선택」ではなく「알약 종류 선택」: 原文に無い「服用している」を足さず、月経困難症の治療で服用するユーザーもいるため「피임약 (避妊薬)」に狭めず固定訳の「알약」に揃える (https://github.com/bannzai/Pilll/issues/1985)"
   },
   "twentyOnePills": "21錠",
   "@twentyOnePills": {
@@ -1348,19 +1348,19 @@
   },
   "twentyOnePlusSevenDaysBreak": "21錠＋7日休薬",
   "@twentyOnePlusSevenDaysBreak": {
-    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7日休薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7-day break)。"
+    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7日休薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7-day break)。\n[翻訳の決定 zh] 「服药21片＋停药7天」ではなく「21片药＋停药7天」: 同じ画面のほかのカード (「24片药＋停药4天」等) と構文を揃える (https://github.com/bannzai/Pilll/issues/1987)"
   },
   "twentyFourPlusFourPlacebo": "24錠＋4錠偽薬",
   "@twentyFourPlusFourPlacebo": {
-    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「24錠＋4錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 24 pills + 4 placebo)。"
+    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「24錠＋4錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 24 pills + 4 placebo)。\n[翻訳の決定 de] 「24 Pillen + 4 Placebo」ではなく「24 Pillen + 4 Placebo-Pillen」: 同じ画面の「21 Pillen + 7 Placebo-Pillen」と表記を揃え、数える単位 (錠) を落とさない (https://github.com/bannzai/Pilll/issues/1981)\n[翻訳の決定 es] 「24 píldoras + 4 placebo」ではなく「24 píldoras + 4 píldoras placebo」: 同じ画面の「21 píldoras + 7 píldoras placebo」と表記を揃え、4 の後の錠を落とさない (https://github.com/bannzai/Pilll/issues/1983)\n[翻訳の決定 fr] 「24 comprimés + 4 placebos」ではなく「24 pilules + 4 pilules placebo」: 同じ画面のほかのカードと錠の訳 (pilules) と偽薬の表記 (pilules placebo) を揃える (https://github.com/bannzai/Pilll/issues/1984)\n[翻訳の決定 zh] 「24片药片＋4片安慰剂」ではなく「24片药＋4片安慰剂」: 同じ画面のほかのカードの「片药」と表記を揃える (https://github.com/bannzai/Pilll/issues/1987)"
   },
   "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
   "@twentyOnePlusSevenPlacebo": {
-    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7 placebo)。"
+    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7 placebo)。\n[翻訳の決定 pt] 「21 pílulas + 7 pílulas placebo」ではなく「21 pílulas + 7 placebos」: 同じ画面の「24 pílulas + 4 placebos」と偽薬の表記を揃える (https://github.com/bannzai/Pilll/issues/1986)"
   },
   "allActivePills": "すべて実薬",
   "@allActivePills": {
-    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「すべて実薬」に当たる 2〜3 語の短い表記にする (例: All active)。"
+    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「すべて実薬」に当たる 2〜3 語の短い表記にする (例: All active)。\n[翻訳の決定 es] 「Todas píldoras activas」ではなく「Todas las píldoras activas」: 冠詞 las が抜けると文法的に不自然 (https://github.com/bannzai/Pilll/issues/1983)\n[翻訳の決定 fr] 「Toutes des pilules actives」ではなく「Uniquement des pilules actives」: 「Toutes des」は文法的に誤りで、すべてが実薬である意味が伝わらない (https://github.com/bannzai/Pilll/issues/1984)\n[翻訳の決定 pt] 「Todos são comprimidos ativos」ではなく「Todas as pílulas são ativas」: 同じ画面のほかのカードと錠の訳 (pílulas) を揃える (https://github.com/bannzai/Pilll/issues/1986)"
   },
   "twentyFourPlusFourDaysBreak": "24錠＋4日休薬",
   "@twentyFourPlusFourDaysBreak": {
