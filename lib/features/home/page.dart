@@ -253,30 +253,30 @@ class HomePageBody extends HookConsumerWidget {
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                    child: HomePageTabLabel(text: L.pill),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg',
                     ),
+                    child: HomePageTabLabel(text: L.pill),
                   ),
                   Tab(
-                    child: HomePageTabLabel(text: L.menstruation),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg',
                     ),
+                    child: HomePageTabLabel(text: L.menstruation),
                   ),
                   Tab(
-                    child: HomePageTabLabel(text: L.calendar),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.calendar.index
                           ? 'images/tab_icon_calendar_enable.svg'
                           : 'images/tab_icon_calendar_disable.svg',
                     ),
+                    child: HomePageTabLabel(text: L.calendar),
                   ),
                   Tab(
-                    child: HomePageTabLabel(text: L.settings),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.setting.index ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg',
                     ),
+                    child: HomePageTabLabel(text: L.settings),
                   ),
                 ],
               ),
