@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "এতিয়াও নিৰ্ধাৰণ কৰা হোৱা নাই",
   "selectPlannedResumeDate": "পুনৰ পিল খাবলৈ পৰিকল্পনা কৰা তাৰিখ বাছনি কৰক",
   "pauseEndDateLimitIsToday": "শেষৰ তাৰিখ হিচাপে আজিলৈকে বাছিব পাৰিব",
+  "pauseEndDateLimitBeforeNextPause": "পৰৱৰ্তী বড়ি খোৱা সাময়িকভাৱে বন্ধ ({date}ৰ পৰা) আৰম্ভ হোৱাৰ আগৰ দিনলৈকে",
   "pauseStartDateLimit": "আৰম্ভণিৰ তাৰিখ হিচাপে {date}লৈকে বাছিব পাৰিব",
   "initialSettingAskYazFlex": "আপুনি Yaz Flex খায় নেকি?",
   "initialSettingAskYazFlexDescription": "“হয়” বাছনি কৰিলে, বিৰতি শেষ হোৱাৰ পৰা কিমান দিন হৈছে সেয়া দেখুৱাবলৈ ছেটিং কৰা হ’ব",

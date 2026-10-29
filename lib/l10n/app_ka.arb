@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "ჯერ არ არის მითითებული",
   "selectPlannedResumeDate": "აირჩიეთ აბის მიღების განახლების დაგეგმილი თარიღი",
   "pauseEndDateLimitIsToday": "დასრულების თარიღი შეიძლება იყოს არაუგვიანეს დღევანდელი დღისა",
+  "pauseEndDateLimitBeforeNextPause": "შემდეგი მიღების პაუზის ({date}-დან) დაწყებამდე ერთი დღით ადრე",
   "pauseStartDateLimit": "დაწყების თარიღად შეგიძლიათ აირჩიოთ არაუგვიანეს {date}",
   "initialSettingAskYazFlex": "თქვენ Yaz Flex-ს იღებთ?",
   "initialSettingAskYazFlexDescription": "თუ აირჩევთ „დიახ“-ს, ჩაირთვება შესვენების დასრულებიდან გასული დღეების ჩვენება",

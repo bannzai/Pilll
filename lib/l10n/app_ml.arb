@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "ഇതുവരെ നിശ്ചയിച്ചിട്ടില്ല",
   "selectPlannedResumeDate": "ഗുളിക വീണ്ടും കഴിക്കാൻ ഉദ്ദേശിക്കുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",
   "pauseEndDateLimitIsToday": "അവസാന തീയതിയായി ഇന്നുവരെ മാത്രമേ തിരഞ്ഞെടുക്കാനാകൂ",
+  "pauseEndDateLimitBeforeNextPause": "അടുത്ത താൽക്കാലികമായി നിർത്തൽ ({date} മുതൽ) ആരംഭിക്കുന്നതിന് മുൻപുള്ള ദിവസം വരെ",
   "pauseStartDateLimit": "ആരംഭ തീയതിയായി {date} വരെയുള്ള ദിവസം തിരഞ്ഞെടുക്കാം",
   "initialSettingAskYazFlex": "നിങ്ങൾ കഴിക്കുന്നത് Yaz Flex ഗുളികയാണോ?",
   "initialSettingAskYazFlexDescription": "“അതെ” തിരഞ്ഞെടുത്താൽ, ഇടവേള അവസാനിച്ചതിന് ശേഷം എത്രാമത്തെ ദിവസമാണെന്ന് കാണിക്കുന്ന രീതിയിൽ സജ്ജീകരിക്കും",

@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "अझै तय गरिएको छैन",
   "selectPlannedResumeDate": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति छान्नुहोस्",
   "pauseEndDateLimitIsToday": "अन्त्य मिति आजसम्म मात्र छान्न सकिन्छ",
+  "pauseEndDateLimitBeforeNextPause": "अर्को सेवन विराम ({date} देखि) सुरु हुनुभन्दा अघिल्लो दिनसम्म",
   "pauseStartDateLimit": "सुरु मिति {date} सम्म मात्र छान्न सकिन्छ",
   "initialSettingAskYazFlex": "तपाईंले खाने चक्की Yaz Flex हो?",
   "initialSettingAskYazFlexDescription": "“हो” छान्नुभयो भने, विश्राम सकिएपछिको कति औँ दिन हो भनेर देखाउने गरी सेट गरिनेछ",

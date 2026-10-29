@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Nenastaveno",
   "selectPlannedResumeDate": "Vybrat plánované datum obnovení užívání pilulek",
   "pauseEndDateLimitIsToday": "Datum konce může být nejpozději dnes",
+  "pauseEndDateLimitBeforeNextPause": "Nejpozději do dne před dalším pozastavení užívání (od {date})",
   "pauseStartDateLimit": "Datum začátku může být nejpozději {date}",
   "initialSettingAskYazFlex": "Užíváte Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Pokud vyberete „Ano“, nastaví se zobrazení počtu dní od konce pauzy",

@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Še ni določeno",
   "selectPlannedResumeDate": "Izberite načrtovani datum ponovnega jemanja tablet",
   "pauseEndDateLimitIsToday": "Končni datum je lahko najpozneje danes",
+  "pauseEndDateLimitBeforeNextPause": "Najpozneje do dneva pred naslednjim premorom pri jemanju tablet (od {date})",
   "pauseStartDateLimit": "Za začetni datum lahko izberete najpozneje {date}",
   "initialSettingAskYazFlex": "Ali jemljete Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Če izberete »Da«, bo prikazano, koliko dni je minilo od konca premora",
