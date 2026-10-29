@@ -124,6 +124,7 @@
   "pillSheetSettings": "Поставки за блистер",
   "unmarkTodayPillAsTakenToPause": "Откако ќе ја означите денешната таблета како неземена",
   "pauseTaking": "Пауза во земањето апчиња",
+  "changePauseStartDate": "Промена на почетниот датум на паузата во земањето апчиња",
   "pauseTakingPeriodEnded": "Периодот на Вашето привремено прекинување со земање таблета заврши",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Промена на бројот на денови за земање таблета по блистер",

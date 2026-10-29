@@ -124,6 +124,7 @@
   "pillSheetSettings": "Эмийн блистерийн тохиргоо",
   "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй гэж тэмдэглэсний дараа",
   "pauseTaking": "түр завсарлаг",
+  "changePauseStartDate": "түр завсарлаг эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эмээ түр хугацаанд уухгүй байхаар сонгосон хугацаа дууссан",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Нэг эмийн блистерт эм уух өдрийн тоог өөрчлөх",
