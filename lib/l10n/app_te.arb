@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ఫోన్ మార్చినా లేదా పోగొట్టుకున్నా, ప్రీమియం ఫీచర్‌లను కొత్త ఫోన్‌కు బదిలీ చేయలేరు",
   "reexperiencePremiumFeatures": "ప్రీమియం ఫీచర్‌లను 14 రోజుల పాటు మళ్లీ ఉపయోగించి చూడవచ్చు!\nసోషల్ మీడియాలో పంచుకోవడానికి నొక్కండి!",
   "whereToShare": "మీరు ఎక్కడ పంచుకోవాలనుకుంటున్నారు?",
+  "pauseTakingDay": "🌙 మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం — {day}వ రోజు",
   "withDay": "{word}వ రోజు",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}వ రోజు",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} కాలం ప్రారంభం కావడానికి ఇంకా {diffPlusOne} రోజులు ఉన్నాయి",

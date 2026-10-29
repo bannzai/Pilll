@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Nếu đổi hoặc mất điện thoại, bạn sẽ không thể chuyển các tính năng Premium sang điện thoại mới",
   "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng Premium trong 14 ngày!\nChạm để chia sẻ lên mạng xã hội!",
   "whereToShare": "Bạn muốn chia sẻ lên đâu?",
+  "pauseTakingDay": "🌙 Ngày {day} tạm ngừng uống thuốc",
   "withDay": "Ngày thứ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ngày thứ {restDurationDays}",
   "daysUntilPausePeriod": "Giai đoạn {activePillSheetPillSheetTypeNotTakenWord} sẽ bắt đầu sau {diffPlusOne} ngày nữa",

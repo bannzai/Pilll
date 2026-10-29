@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Wänn du dis Handy wächslisch oder verlürsch, chasch dini Premium-Funktione nöd übertrage",
   "reexperiencePremiumFeatures": "Du chasch d Premium-Funktione 14 Täg lang nomal usprobiere!\nTipp druf und teil's uf Social Media!",
   "whereToShare": "Wo wottsch es teile?",
+  "pauseTakingDay": "🌙 Tag {day} vo de Iinahmepause",
   "withDay": "Tag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · Tag {restDurationDays}",
   "daysUntilPausePeriod": "D Ziit mit {activePillSheetPillSheetTypeNotTakenWord} fangt i {diffPlusOne} Täg aa",

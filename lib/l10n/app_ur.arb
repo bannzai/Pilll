@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "فون بدلنے یا گم ہونے کی صورت میں پریمیم خصوصیات نئے فون پر منتقل نہیں کی جا سکیں گی",
   "reexperiencePremiumFeatures": "آپ پریمیم خصوصیات دوبارہ 14 دن تک استعمال کر سکتی ہیں!\nسوشل میڈیا پر شیئر کرنے کے لیے ٹیپ کریں!",
   "whereToShare": "آپ کہاں شیئر کرنا چاہیں گی؟",
+  "pauseTakingDay": "🌙 گولی لینے میں توقف کا {day}واں دن",
   "withDay": "{word}واں دن",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · دن {restDurationDays}",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} کی مدت {diffPlusOne} دن بعد شروع ہوگی",

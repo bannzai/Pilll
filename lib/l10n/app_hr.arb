@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Ako promijenite ili izgubite telefon, nećete moći prenijeti Premium značajke",
   "reexperiencePremiumFeatures": "Možete ponovno isprobati Premium značajke tijekom 14 dana!\nDodirnite za dijeljenje na društvenim mrežama!",
   "whereToShare": "Gdje želite podijeliti?",
+  "pauseTakingDay": "🌙 {day}. dan pauze u uzimanju pilula",
   "withDay": "{word}. dan",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. dan",
   "daysUntilPausePeriod": "Razdoblje: {activePillSheetPillSheetTypeNotTakenWord} počinje za {diffPlusOne} dana",

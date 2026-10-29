@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "که ټېلېفون بدل یا ورک شي، د پریمیم ځانګړنې نوي ټېلېفون ته نه شئ لېږدولی",
   "reexperiencePremiumFeatures": "تاسو کولی شئ د پریمیم ځانګړنې بیا د 14 ورځو لپاره وکاروئ!\nپه ټولنیزو رسنیو کې د شریکولو لپاره ټېپ وکړئ!",
   "whereToShare": "تاسو یې چېرته شریکول غواړئ؟",
+  "pauseTakingDay": "🌙 د لنډمهاله درول {day}مه ورځ",
   "withDay": "{word}مه ورځ",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}مه ورځ",
   "daysUntilPausePeriod": "د {activePillSheetPillSheetTypeNotTakenWord} موده به په {diffPlusOne} ورځو کې پیل شي",

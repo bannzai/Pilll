@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Telefonunuzu dəyişsəniz və ya itirsəniz, premium funksiyalarınızı köçürə bilməyəcəksiniz",
   "reexperiencePremiumFeatures": "14 gün ərzində premium funksiyalardan yenidən istifadə edə bilərsiniz!\nSosial mediada paylaşmaq üçün toxunun!",
   "whereToShare": "Harada paylaşmaq istərdiniz?",
+  "pauseTakingDay": "🌙 Həb qəbuluna fasilə — {day}-ci gün",
   "withDay": "{word}-ci gün",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. gün",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} dövrünün başlamasına {diffPlusOne} gün qalıb",

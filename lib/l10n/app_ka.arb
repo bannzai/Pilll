@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "თუ ტელეფონს შეცვლით ან დაკარგავთ, პრემიუმ ფუნქციებს ვერ გადაიტანთ",
   "reexperiencePremiumFeatures": "შეგიძლიათ პრემიუმ ფუნქციები კვლავ გამოიყენოთ 14 დღის განმავლობაში!\nშეეხეთ სოციალურ ქსელებში გასაზიარებლად!",
   "whereToShare": "სად გსურთ გაზიარება?",
+  "pauseTakingDay": "🌙 მიღების პაუზის {day}-ე დღე",
   "withDay": "{word}-ე დღე",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-ე დღე",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} პერიოდი {diffPlusOne} დღეში დაიწყება",

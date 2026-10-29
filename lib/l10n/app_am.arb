@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ስልክዎን ሲቀይሩ ወይም ሲጠፋብዎ የፕሪሚየም ባህሪያትን ማስተላለፍ አይችሉም",
   "reexperiencePremiumFeatures": "የፕሪሚየም ባህሪያትን ለ14 ቀናት እንደገና መጠቀም ይችላሉ!\nበማኅበራዊ ሚዲያ ለማጋራት ይንኩ!",
   "whereToShare": "የት ማጋራት ይፈልጋሉ?",
+  "pauseTakingDay": "🌙 ለጊዜው ማቆም፣ {day}ኛ ቀን",
   "withDay": "ቀን {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ቀን {restDurationDays}",
   "daysUntilPausePeriod": "የ{activePillSheetPillSheetTypeNotTakenWord} ጊዜ በ{diffPlusOne} ቀናት ይጀምራል",

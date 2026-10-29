@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "หากเปลี่ยนหรือทำโทรศัพท์หาย จะไม่สามารถโอนฟีเจอร์พรีเมียมไปยังเครื่องใหม่ได้ค่ะ",
   "reexperiencePremiumFeatures": "ทดลองใช้ฟีเจอร์พรีเมียมอีกครั้งได้ 14 วันค่ะ!\nแตะเพื่อแชร์บนโซเชียลมีเดียค่ะ!",
   "whereToShare": "ต้องการแชร์ที่ไหนคะ",
+  "pauseTakingDay": "🌙 วันที่ {day} ของการหยุดกินยาชั่วคราว",
   "withDay": "วันที่ {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · วันที่ {restDurationDays}",
   "daysUntilPausePeriod": "อีก {diffPlusOne} วันจะเริ่มช่วง{activePillSheetPillSheetTypeNotTakenWord}ค่ะ",

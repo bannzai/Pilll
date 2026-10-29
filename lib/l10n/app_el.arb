@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Αν αλλάξετε ή χάσετε το τηλέφωνό σας, δεν θα μπορείτε να μεταφέρετε τις λειτουργίες Premium",
   "reexperiencePremiumFeatures": "Μπορείτε να δοκιμάσετε ξανά τις λειτουργίες Premium για 14 ημέρες!\nΠατήστε για κοινοποίηση στα κοινωνικά δίκτυα!",
   "whereToShare": "Πού θέλετε να το κοινοποιήσετε;",
+  "pauseTakingDay": "🌙 Ημέρα {day} της παύσης λήψης",
   "withDay": "Ημέρα {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · ημέρα {restDurationDays}",
   "daysUntilPausePeriod": "Η περίοδος {activePillSheetPillSheetTypeNotTakenWord} ξεκινά σε {diffPlusOne} ημέρες",

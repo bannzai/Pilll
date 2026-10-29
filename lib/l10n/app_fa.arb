@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "اگر گوشی‌تان را عوض کنید یا آن را گم کنید، نمی‌توانید قابلیت‌های پریمیوم را منتقل کنید",
   "reexperiencePremiumFeatures": "می‌توانید قابلیت‌های پریمیوم را دوباره به‌مدت ۱۴ روز تجربه کنید!\nبرای اشتراک‌گذاری در شبکه‌های اجتماعی ضربه بزنید!",
   "whereToShare": "کجا می‌خواهید به اشتراک بگذارید؟",
+  "pauseTakingDay": "🌙 روز {day} توقف موقت مصرف",
   "withDay": "روز {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · روز {restDurationDays}",
   "daysUntilPausePeriod": "دورهٔ {activePillSheetPillSheetTypeNotTakenWord} تا {diffPlusOne} روز دیگر شروع می‌شود",

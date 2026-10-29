@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Եթե փոխեք կամ կորցնեք հեռախոսը, չեք կարողանա փոխանցել պրեմիում գործառույթները",
   "reexperiencePremiumFeatures": "Դուք կարող եք կրկին օգտվել պրեմիում գործառույթներից 14 օր!\nՀպվեք՝ սոցիալական ցանցերում կիսվելու համար!",
   "whereToShare": "Որտե՞ղ եք ցանկանում կիսվել",
+  "pauseTakingDay": "🌙 Ընդունման դադար՝ {day}-րդ օր",
   "withDay": "{word}-րդ օր",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-րդ օր",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} շրջանը կսկսվի {diffPlusOne} օրից",

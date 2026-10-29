@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Jei pakeisite ar pamesite telefoną, negalėsite perkelti Premium funkcijų",
   "reexperiencePremiumFeatures": "Galite vėl 14 dienų išbandyti Premium funkcijas!\nPalieskite, jei norite pasidalyti socialiniuose tinkluose!",
   "whereToShare": "Kur norite pasidalyti?",
+  "pauseTakingDay": "🌙 {day}-oji pristabdyto vartojimo diena",
   "withDay": "{word}-oji diena",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-oji diena",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} laikotarpis prasidės po {diffPlusOne} d.",

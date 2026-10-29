@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "ਫ਼ੋਨ ਬਦਲਣ ਜਾਂ ਗੁੰਮ ਹੋਣ ’ਤੇ ਪ੍ਰੀਮੀਅਮ ਸਹੂਲਤਾਂ ਨਵੇਂ ਫ਼ੋਨ ਵਿੱਚ ਟ੍ਰਾਂਸਫ਼ਰ ਨਹੀਂ ਹੋ ਸਕਣਗੀਆਂ",
   "reexperiencePremiumFeatures": "ਤੁਸੀਂ 14 ਦਿਨਾਂ ਲਈ ਪ੍ਰੀਮੀਅਮ ਸਹੂਲਤਾਂ ਮੁੜ ਵਰਤ ਕੇ ਦੇਖ ਸਕਦੇ ਹੋ!\nਸੋਸ਼ਲ ਮੀਡੀਆ ’ਤੇ ਸਾਂਝਾ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ!",
   "whereToShare": "ਤੁਸੀਂ ਕਿੱਥੇ ਸਾਂਝਾ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+  "pauseTakingDay": "🌙 ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦਾ {day}ਵਾਂ ਦਿਨ",
   "withDay": "{word}ਵਾਂ ਦਿਨ",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ਵਾਂ ਦਿਨ",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} ਦੀ ਮਿਆਦ ਸ਼ੁਰੂ ਹੋਣ ਵਿੱਚ {diffPlusOne} ਦਿਨ ਬਾਕੀ ਹਨ",

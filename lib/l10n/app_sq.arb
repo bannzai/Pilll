@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Nëse ndërroni ose humbni telefonin, nuk do të mund t’i transferoni veçoritë premium",
   "reexperiencePremiumFeatures": "Mund t’i provoni sërish veçoritë premium për 14 ditë!\nPrekni për ta ndarë në rrjetet sociale!",
   "whereToShare": "Ku dëshironi ta ndani?",
+  "pauseTakingDay": "🌙 Dita {day} e pauzës së marrjes",
   "withDay": "Dita {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dita {restDurationDays}",
   "daysUntilPausePeriod": "Periudha e {activePillSheetPillSheetTypeNotTakenWord} fillon pas {diffPlusOne} ditësh",

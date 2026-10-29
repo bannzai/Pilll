@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Uma ushintsha noma ulahlekelwa yifoni, ngeke ukwazi ukudlulisela izici ze-Premium kwenye ifoni",
   "reexperiencePremiumFeatures": "Ungaphinde uzame izici ze-Premium izinsuku ezingu-14!\nSicela uthephe ukuze wabelane ezinkundleni zokuxhumana!",
   "whereToShare": "Ungathanda ukwabelana kuphi?",
+  "pauseTakingDay": "🌙 Usuku {day} lokumisa okwesikhashana ukuphuza amaphilisi",
   "withDay": "Usuku {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · usuku {restDurationDays}",
   "daysUntilPausePeriod": "Isikhathi se-{activePillSheetPillSheetTypeNotTakenWord} sizoqala ezinsukwini ezingu-{diffPlusOne}",

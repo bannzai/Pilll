@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Утсаа солих эсвэл гээх тохиолдолд премиум боломжуудыг шинэ утсанд шилжүүлэх боломжгүй",
   "reexperiencePremiumFeatures": "Та премиум боломжуудыг 14 хоног дахин ашиглаж үзэх боломжтой!\nОлон нийтийн сүлжээнд хуваалцахын тулд товшино уу!",
   "whereToShare": "Хаана хуваалцах вэ?",
+  "pauseTakingDay": "🌙 Түр завсарлагын {day} дэх өдөр",
   "withDay": "{word} дэх өдөр",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays} дэх өдөр",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} үе {diffPlusOne} хоногийн дараа эхэлнэ",

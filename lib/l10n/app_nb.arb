@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Hvis du bytter eller mister telefonen, kan du ikke overføre premiumfunksjonene",
   "reexperiencePremiumFeatures": "Du kan prøve premiumfunksjonene igjen i 14 dager!\nTrykk for å dele på sosiale medier!",
   "whereToShare": "Hvor vil du dele?",
+  "pauseTakingDay": "🌙 Dag {day} av inntakspause",
   "withDay": "Dag {word}",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · dag {restDurationDays}",
   "daysUntilPausePeriod": "Perioden med {activePillSheetPillSheetTypeNotTakenWord} starter om {diffPlusOne} dager",

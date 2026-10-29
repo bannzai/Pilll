@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Якщо ви зміните або втратите телефон, перенести преміум-функції не вдасться",
   "reexperiencePremiumFeatures": "Ви можете знову користуватися преміум-функціями протягом 14 днів!\nТоркніться, щоб поділитися в соцмережах!",
   "whereToShare": "Де ви хочете поділитися?",
+  "pauseTakingDay": "🌙 {day}-й день призупинення прийому",
   "withDay": "{word}-й день",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · день {restDurationDays}",
   "daysUntilPausePeriod": "Період {activePillSheetPillSheetTypeNotTakenWord} почнеться через {diffPlusOne} дн.",

@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Telefonoa aldatzen edo galtzen baduzu, ezin izango dituzu Premium eginbideak transferitu",
   "reexperiencePremiumFeatures": "Premium eginbideak berriro proba ditzakezu 14 egunez!\nUkitu sare sozialetan partekatzeko!",
   "whereToShare": "Non partekatu nahi duzu?",
+  "pauseTakingDay": "🌙 Etenaldiaren {day}. eguna",
   "withDay": "{word}. eguna",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}. eguna",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} aldia {diffPlusOne} egun barru hasiko da",

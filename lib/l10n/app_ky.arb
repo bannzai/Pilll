@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Телефонуңузду алмаштырсаңыз же жоготуп алсаңыз, премиум мүмкүнчүлүктөрдү көчүрө албайсыз",
   "reexperiencePremiumFeatures": "Премиум мүмкүнчүлүктөрдү 14 күн кайра колдонуп көрө аласыз!\nСоциалдык тармактарда бөлүшүү үчүн басыңыз!",
   "whereToShare": "Кайда бөлүшкүңүз келет?",
+  "pauseTakingDay": "🌙 Убактылуу токтотуунун {day}-күнү",
   "withDay": "{word}-күн",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}-күн",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} мезгили {diffPlusOne} күндөн кийин башталат",

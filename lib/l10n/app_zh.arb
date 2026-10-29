@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "更换或丢失手机后，高级功能将无法转移到新手机",
   "reexperiencePremiumFeatures": "高级功能可再次体验14天！\n点击分享到社交平台吧！",
   "whereToShare": "想分享到哪里呢？",
+  "pauseTakingDay": "🌙 暂停服药第 {day} 天",
   "withDay": "第{word}天",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}第 {restDurationDays} 天",
   "daysUntilPausePeriod": "还有 {diffPlusOne} 天就进入{activePillSheetPillSheetTypeNotTakenWord}期了",

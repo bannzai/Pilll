@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "தொலைபேசியை மாற்றினாலோ தொலைத்தாலோ பிரீமியம் அம்சங்களைப் புதிய தொலைபேசிக்கு மாற்ற முடியாது",
   "reexperiencePremiumFeatures": "பிரீமியம் அம்சங்களை 14 நாட்களுக்கு மீண்டும் பயன்படுத்திப் பார்க்கலாம்!\nசமூக ஊடகங்களில் பகிர தட்டுங்கள்!",
   "whereToShare": "எங்கு பகிர விரும்புகிறீர்கள்?",
+  "pauseTakingDay": "🌙 மாத்திரை எடுத்துக்கொள்வதை இடைநிறுத்திய {day}ஆம் நாள்",
   "withDay": "{word}ஆம் நாள்",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}ஆம் நாள்",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} காலம் தொடங்க இன்னும் {diffPlusOne} நாட்கள் உள்ளன",

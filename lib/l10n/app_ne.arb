@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "फोन फेर्नुभयो वा हरायो भने प्रिमियम सुविधाहरू नयाँ फोनमा सार्न सकिँदैन",
   "reexperiencePremiumFeatures": "तपाईंले प्रिमियम सुविधाहरू फेरि 14 दिनसम्म प्रयोग गरेर हेर्न सक्नुहुन्छ!\nसामाजिक सञ्जालमा सेयर गर्न ट्याप गर्नुहोस्!",
   "whereToShare": "तपाईं कहाँ सेयर गर्न चाहनुहुन्छ?",
+  "pauseTakingDay": "🌙 सेवन विरामको {day}औँ दिन",
   "withDay": "{word}औँ दिन",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord} · {restDurationDays}औँ दिन",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord} अवधि सुरु हुन अझै {diffPlusOne} दिन बाँकी छ",

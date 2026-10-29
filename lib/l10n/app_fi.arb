@@ -143,6 +143,7 @@
   "cannotTransferPremiumWithoutAccount": "Jos vaihdat puhelinta tai kadotat sen, et voi siirtää Premium-ominaisuuksia",
   "reexperiencePremiumFeatures": "Voit kokeilla Premium-ominaisuuksia uudelleen 14 päivän ajan!\nJaa somessa napauttamalla!",
   "whereToShare": "Mihin haluat jakaa tämän?",
+  "pauseTakingDay": "🌙 Taukotila, päivä {day}",
   "withDay": "{word}. päivä",
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}: päivä {restDurationDays}",
   "daysUntilPausePeriod": "{activePillSheetPillSheetTypeNotTakenWord}-jakso alkaa {diffPlusOne} päivän kuluttua",
