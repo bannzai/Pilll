@@ -229,7 +229,7 @@
   "pillForToday": "{today}要服用的药片",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "preview": "预览",
-  "normal": "通常",
+  "normal": "正常",
   "missed": "漏服",
   "showsDate": "显示日期",
   "showsPillNumber": "显示编号",
