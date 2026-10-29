@@ -380,6 +380,7 @@
   "insomnia": "Unetus",
   "pauseStartingOtherDaysInstructions": "Palun vali võtmise paus. Kui soovid alustada võtmise pausi mõnel muul päeval kui täna, vaata allolevaid juhiseid.",
   "seeHowToUsePauseTakingFeature": "Vaata, kuidas kasutada võtmise pausi",
+  "startPauseTakingLabel": "Alusta võtmise pausi",
   "changePillDays": "Muuda pilli võtmise päevade arvu",
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Jätka pilli võtmist",

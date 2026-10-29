@@ -380,6 +380,7 @@
   "insomnia": "Insomnio",
   "pauseStartingOtherDaysInstructions": "Activa a pausa na toma. Se queres comezar a pausa na toma un día distinto de hoxe, consulta as indicacións seguintes.",
   "seeHowToUsePauseTakingFeature": "Consulta como usar a pausa na toma",
+  "startPauseTakingLabel": "Iniciar a pausa na toma",
   "changePillDays": "Cambiar o número de días de toma da pílula",
   "beginToEndNumbers": "núm. {begin} ~ {end}",
   "resumeTaking": "Retomar a pílula",

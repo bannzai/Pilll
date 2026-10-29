@@ -380,6 +380,7 @@
   "insomnia": "Schlaflosigkeit",
   "pauseStartingOtherDaysInstructions": "Bitte wähle die Einnahmeunterbrechung. Wenn du die Einnahmeunterbrechung an einem anderen Tag als heute beginnen möchtest, sieh dir die Anleitung unten an.",
   "seeHowToUsePauseTakingFeature": "Ansehen, wie die Einnahmeunterbrechung funktioniert",
+  "startPauseTakingLabel": "Einnahmeunterbrechung starten",
   "changePillDays": "Anzahl der Einnahmetage ändern",
   "beginToEndNumbers": "Nr. {begin}–{end}",
   "resumeTaking": "Pilleneinnahme fortsetzen",

@@ -380,6 +380,7 @@
   "insomnia": "Безсъние",
   "pauseStartingOtherDaysInstructions": "Моля, изберете спиране на приема. Ако искате спиране на приема да започне в ден, различен от днес, вижте указанията по-долу.",
   "seeHowToUsePauseTakingFeature": "Вижте как да използвате функцията за спиране на приема",
+  "startPauseTakingLabel": "Начало на спиране на приема",
   "changePillDays": "Промяна на броя дни за прием на хапчета",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Подновете приема на хапчета",

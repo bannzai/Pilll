@@ -380,6 +380,7 @@
   "insomnia": "Yuxusuzluq",
   "pauseStartingOtherDaysInstructions": "Zəhmət olmasa, Həb qəbuluna fasilə verin. Həb qəbuluna fasilə verməyə bu gündən başqa bir gün başlamaq istəyirsinizsə, aşağıdakı təlimata baxın.",
   "seeHowToUsePauseTakingFeature": "Həb qəbuluna fasilə funksiyasından necə istifadə etməyə baxın",
+  "startPauseTakingLabel": "Həb qəbuluna fasilə başlayın",
   "changePillDays": "Həb qəbul etdiyiniz günlərin sayını dəyişin",
   "beginToEndNumbers": "{begin}–{end} nömrələr",
   "resumeTaking": "Həb qəbuluna yenidən başlayın",

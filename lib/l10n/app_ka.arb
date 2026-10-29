@@ -380,6 +380,7 @@
   "insomnia": "უძილობა",
   "pauseStartingOtherDaysInstructions": "გთხოვთ, აირჩიოთ მიღების პაუზა. თუ მიღების პაუზის დაწყება დღევანდელის ნაცვლად სხვა დღიდან გსურთ, იხილეთ ქვემოთ მოცემული ინსტრუქცია.",
   "seeHowToUsePauseTakingFeature": "ნახეთ, როგორ გამოიყენოთ მიღების პაუზის ფუნქცია",
+  "startPauseTakingLabel": "მიღების პაუზის დაწყება",
   "changePillDays": "აბების მიღების დღეების რაოდენობის შეცვლა",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "აბების მიღების განახლება",

@@ -380,6 +380,7 @@
   "insomnia": "Hirap matulog",
   "pauseStartingOtherDaysInstructions": "Piliin po ang pause sa pag-inom ng pildoras. Kung gusto ninyong simulan ang pause sa ibang araw, tingnan ang mga hakbang sa ibaba.",
   "seeHowToUsePauseTakingFeature": "Tingnan kung paano gamitin ang pause sa pag-inom",
+  "startPauseTakingLabel": "Simulan ang pause sa pag-inom",
   "changePillDays": "Baguhin ang bilang ng mga araw ng pag-inom ng pildoras",
   "beginToEndNumbers": "Blg. {begin} ~ {end}",
   "resumeTaking": "Ipagpatuloy ang pag-inom ng pildoras",

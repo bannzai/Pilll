@@ -380,6 +380,7 @@
   "insomnia": "Nesanica",
   "pauseStartingOtherDaysInstructions": "Odaberite prekid u uzimanju pilula. Ako želite započeti prekid u uzimanju pilula nekog drugog dana, pogledajte upute u nastavku.",
   "seeHowToUsePauseTakingFeature": "Pogledajte kako koristiti pauzu u uzimanju pilula",
+  "startPauseTakingLabel": "Započnite pauzu u uzimanju pilula",
   "changePillDays": "Promijenite broj dana uzimanja pilule",
   "beginToEndNumbers": "br. {begin} ~ {end}",
   "resumeTaking": "Nastavite uzimati pilulu",

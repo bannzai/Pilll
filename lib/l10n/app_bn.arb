@@ -380,6 +380,7 @@
   "insomnia": "অনিদ্রা",
   "pauseStartingOtherDaysInstructions": "অনুগ্রহ করে সেবন স্থগিত করুন। আজ ছাড়া অন্য কোনো দিন থেকে সেবন স্থগিত করতে চাইলে নিচের নির্দেশনা দেখুন।",
   "seeHowToUsePauseTakingFeature": "সেবন স্থগিত রাখার সুবিধাটি কীভাবে ব্যবহার করবেন দেখুন",
+  "startPauseTakingLabel": "সেবন স্থগিত শুরু করুন",
   "changePillDays": "পিল খাওয়ার দিনের সংখ্যা পরিবর্তন করুন",
   "beginToEndNumbers": "{begin} থেকে {end} নম্বর",
   "resumeTaking": "আবার পিল খাওয়া শুরু",

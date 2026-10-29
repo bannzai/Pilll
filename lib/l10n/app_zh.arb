@@ -380,6 +380,7 @@
   "insomnia": "失眠",
   "pauseStartingOtherDaysInstructions": "请先选择暂停服药。如果想从今天以外的日期开始暂停服药，请参考以下步骤。",
   "seeHowToUsePauseTakingFeature": "查看暂停服药功能的使用方法",
+  "startPauseTakingLabel": "开始暂停服药",
   "changePillDays": "更改服药天数",
   "beginToEndNumbers": "{begin}号 ~ {end}号",
   "resumeTaking": "恢复服药",

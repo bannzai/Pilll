@@ -380,6 +380,7 @@
   "insomnia": "Insomnia",
   "pauseStartingOtherDaysInstructions": "Silakan pilih jeda minum pil. Jika Anda ingin memulai jeda minum pada hari selain hari ini, ikuti petunjuk di bawah.",
   "seeHowToUsePauseTakingFeature": "Lihat cara menggunakan fitur jeda minum pil",
+  "startPauseTakingLabel": "Mulai jeda minum pil",
   "changePillDays": "Ubah jumlah hari minum pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Mulai minum pil lagi",

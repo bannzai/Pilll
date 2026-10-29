@@ -380,6 +380,7 @@
   "insomnia": "Pagjumësi",
   "pauseStartingOtherDaysInstructions": "Zgjidhni pauzën e marrjes së pilulave. Nëse doni ta filloni pauzën një ditë tjetër, shihni udhëzimet më poshtë.",
   "seeHowToUsePauseTakingFeature": "Shihni si të përdorni funksionin e pauzës së marrjes",
+  "startPauseTakingLabel": "Filloni pauzën e marrjes së pilulës",
   "changePillDays": "Ndryshoni numrin e ditëve të marrjes së pilulës",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Rifilloni marrjen e pilulës",

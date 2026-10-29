@@ -380,6 +380,7 @@
   "insomnia": "Insomnia",
   "pauseStartingOtherDaysInstructions": "Please pause your pill intake. If you'd like to start the pause on a day other than today, follow the steps below.",
   "seeHowToUsePauseTakingFeature": "See how to use the pause feature",
+  "startPauseTakingLabel": "Start pause",
   "changePillDays": "Change pill-taking days",
   "beginToEndNumbers": "#{begin}–#{end}",
   "resumeTaking": "Resume taking the pill",

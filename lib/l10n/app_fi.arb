@@ -380,6 +380,7 @@
   "insomnia": "Unettomuus",
   "pauseStartingOtherDaysInstructions": "Ota taukotila käyttöön. Jos haluat aloittaa taukotilan muuna päivänä kuin tänään, katso alla olevat ohjeet.",
   "seeHowToUsePauseTakingFeature": "Katso, miten taukotila toimii",
+  "startPauseTakingLabel": "Aloita taukotila",
   "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "nro {begin}–{end}",
   "resumeTaking": "Aloita pillereiden ottaminen uudelleen",
