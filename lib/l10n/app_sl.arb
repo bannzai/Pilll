@@ -380,6 +380,7 @@
   "insomnia": "Nespečnost",
   "pauseStartingOtherDaysInstructions": "Prosimo, začnite prekin jemanja tablet. Če želite prekin začeti na dan, ki ni danes, si oglejte spodnja navodila.",
   "seeHowToUsePauseTakingFeature": "Oglejte si, kako uporabljati funkcijo za prekinitev jemanja",
+  "startPauseTakingLabel": "Začnite prekin jemanja tablet",
   "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",
