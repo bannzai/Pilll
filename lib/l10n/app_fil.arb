@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Sa isang araw",
   "pillTakenCountSuffix": "beses uminom ng pildoras",
   "duringPauseTaking": "Naka-pause ang pag-inom ng pill",
+  "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pildoras para sa araw na ito, hindi ninyo magagamit ang “pause”",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga tuntunin ng paggamit",

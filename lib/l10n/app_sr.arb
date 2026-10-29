@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Дневно",
   "pillTakenCountSuffix": "пута узимате пилулу",
   "duringPauseTaking": "прекид узимања пилула је у току",
+  "cannotPauseAlreadyTakenToday": "Ако сте већ узели данашњу пилулу, не можете користити „прекид“",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Препоручите пријатељима",
   "termsOfService": "Услови коришћења",

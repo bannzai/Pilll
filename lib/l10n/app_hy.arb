@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Օրական",
   "pillTakenCountSuffix": "անգամ ընդունել",
   "duringPauseTaking": "ընդունման դադարն ընթացքի մեջ է",
+  "cannotPauseAlreadyTakenToday": "Եթե այսօրվա հաբն արդեն ընդունել եք, չեք կարող օգտագործել «ընդունման դադար» գործառույթը",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Կիսվեք ընկերների հետ",
   "termsOfService": "Օգտագործման պայմաններ",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Naponta",
   "pillTakenCountSuffix": "alkalommal szedem",
   "duringPauseTaking": "A szedés szüneteltetve",
+  "cannotPauseAlreadyTakenToday": "Ha a mai tablettát már szedted, a szedést nem lehet szüneteltetni",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ajánld barátaidnak",
   "termsOfService": "Felhasználási feltételek",

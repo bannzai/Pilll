@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Egunean",
   "pillTakenCountSuffix": "aldiz hartu",
   "duringPauseTaking": "etenaldi batean",
+  "cannotPauseAlreadyTakenToday": "Gaurko pilula dagoeneko hartu baduzu, ezin duzu «etenaldi» aukera erabili",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Partekatu lagunekin",
   "termsOfService": "Erabilera-baldintzak",

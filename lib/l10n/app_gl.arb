@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Tomar a pílula",
   "pillTakenCountSuffix": "veces ao día",
   "duringPauseTaking": "pausa na toma en curso",
+  "cannotPauseAlreadyTakenToday": "Se xa tomaches a pílula de hoxe, non podes usar a «pausa na toma»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Compárteo coas túas amizades",
   "termsOfService": "Condicións de uso",

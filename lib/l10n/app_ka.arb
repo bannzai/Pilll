@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "დღეში",
   "pillTakenCountSuffix": "-ჯერ მიღება",
   "duringPauseTaking": "მიღების პაუზა მიმდინარეობს",
+  "cannotPauseAlreadyTakenToday": "თუ დღევანდელი აბი უკვე მიიღეთ, „მიღების პაუზ“ ფუნქციას ვერ გამოიყენებთ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "ದಿನಕ್ಕೆ",
   "pillTakenCountSuffix": "ಬಾರಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು",
   "duringPauseTaking": "ಮಾತ್ರೆ ವಿರಾಮ ನಡೆಯುತ್ತಿದೆ",
+  "cannotPauseAlreadyTakenToday": "ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ಈಗಾಗಲೇ ತೆಗೆದುಕೊಂಡಿದ್ದರೆ, ನೀವು ‘ಮಾತ್ರೆ ವಿರಾಮ’ ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ಸ್ನೇಹಿತರಿಗೆ ತಿಳಿಸಿ",
   "termsOfService": "ಬಳಕೆಯ ನಿಯಮಗಳು",

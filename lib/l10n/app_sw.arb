@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Kumeza vidonge mara",
   "pillTakenCountSuffix": "kwa siku",
   "duringPauseTaking": "kusitisha kumeza vidonge kwa muda kunaendelea",
+  "cannotPauseAlreadyTakenToday": "Ikiwa tayari umemeza kidonge cha leo, huwezi kutumia chaguo la kusitisha kwa muda",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Shiriki na marafiki",
   "termsOfService": "Masharti ya matumizi",

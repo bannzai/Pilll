@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Prendre",
   "pillTakenCountSuffix": "vegades al dia",
   "duringPauseTaking": "pausa en curs",
+  "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d’avui, no pots fer servir la «pausa»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Comparteix-ho amb els amics",
   "termsOfService": "Condicions d’ús",

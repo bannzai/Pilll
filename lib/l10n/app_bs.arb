@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Dnevno",
   "pillTakenCountSuffix": "puta",
   "duringPauseTaking": "prekid uzimanja pilula je u toku",
+  "cannotPauseAlreadyTakenToday": "Ako ste već uzeli današnju pilulu, ne možete koristiti „prekid“",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Preporučite prijateljima",
   "termsOfService": "Uslovi korištenja",

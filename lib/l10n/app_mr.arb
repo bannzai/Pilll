@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "दिवसातून",
   "pillTakenCountSuffix": "वेळा गोळी घेणे",
   "duringPauseTaking": "सेवन विराम सुरू आहे",
+  "cannotPauseAlreadyTakenToday": "आजची गोळी आधीच घेतली असल्यास, ‘सेवन विराम’ वापरता येणार नाही",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "मित्रांना सांगा",
   "termsOfService": "वापराच्या अटी",

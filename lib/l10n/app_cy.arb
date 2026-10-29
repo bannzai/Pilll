@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Cymryd y bilsen",
   "pillTakenCountSuffix": "gwaith y dydd",
   "duringPauseTaking": "oedi cymryd y bilsen ar hyn o bryd",
+  "cannotPauseAlreadyTakenToday": "Os ydych eisoes wedi cymryd pilsen heddiw, ni allwch ddefnyddio «oedi»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Rhannu â ffrindiau",
   "termsOfService": "Telerau defnyddio",

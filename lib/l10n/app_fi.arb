@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Ota pilleri",
   "pillTakenCountSuffix": "kertaa päivässä",
   "duringPauseTaking": "taukotila käytössä",
+  "cannotPauseAlreadyTakenToday": "Jos olet jo ottanut tämän päivän pillerin, et voi käyttää taukotilaa",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Kerro ystäville",
   "termsOfService": "Käyttöehdot",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Günde",
   "pillTakenCountSuffix": "kez alın",
   "duringPauseTaking": "Hap kullanımına ara verme sürüyor",
+  "cannotPauseAlreadyTakenToday": "Bugünkü hapı zaten aldıysanız “ara ver” seçeneğini kullanamazsınız",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Arkadaşlarınızla paylaşın",
   "termsOfService": "Kullanım koşulları",

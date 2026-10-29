@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Przyjmuj",
   "pillTakenCountSuffix": "razy dziennie",
   "duringPauseTaking": "wstrzymane przyjmowanie pigułek",
+  "cannotPauseAlreadyTakenToday": "Jeśli dzisiejsza tabletka została już przyjęta, nie można wstrzymać przyjmowania",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Poleć znajomym",
   "termsOfService": "Warunki korzystania",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "రోజుకు",
   "pillTakenCountSuffix": "సార్లు మాత్ర తీసుకుంటారు",
   "duringPauseTaking": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం కొనసాగుతోంది",
+  "cannotPauseAlreadyTakenToday": "ఈరోజు మాత్రను ఇప్పటికే తీసుకుని ఉంటే, ‘తాత్కాలిక విరామం’ ఉపయోగించలేరు",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "స్నేహితులకు తెలియజేయండి",
   "termsOfService": "వినియోగ నిబంధనలు",

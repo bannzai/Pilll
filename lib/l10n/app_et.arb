@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Päevas",
   "pillTakenCountSuffix": "korda",
   "duringPauseTaking": "võtmise paus kestab",
+  "cannotPauseAlreadyTakenToday": "Kui oled tänase pilli juba võtnud, ei saa sa kasutada valikut „võtmise paus“",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Jaga sõpradega",
   "termsOfService": "Kasutustingimused",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "በቀን",
   "pillTakenCountSuffix": "ጊዜ መውሰድ",
   "duringPauseTaking": "ለጊዜው ማቆም ላይ",
+  "cannotPauseAlreadyTakenToday": "የዛሬውን ክኒን አስቀድመው ከወሰዱ፣ ለጊዜው ማቆም መጠቀም አይችሉም",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ለጓደኞችዎ ያሳውቁ",
   "termsOfService": "የአገልግሎት ውል",

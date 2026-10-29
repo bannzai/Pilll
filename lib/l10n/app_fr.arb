@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Prendre",
   "pillTakenCountSuffix": "fois par jour",
   "duringPauseTaking": "pause de prise en cours",
+  "cannotPauseAlreadyTakenToday": "Si la pilule du jour a déjà été prise, vous ne pouvez pas utiliser la « pause de prise »",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Partager avec vos amis",
   "termsOfService": "Conditions d’utilisation",

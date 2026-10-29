@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "دن میں",
   "pillTakenCountSuffix": "بار گولی لیں",
   "duringPauseTaking": "گولی لینے میں توقف جاری ہے",
+  "cannotPauseAlreadyTakenToday": "اگر آج کی گولی لی جا چکی ہے، تو آپ «توقف» استعمال نہیں کر سکتیں",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "دوستوں کو بتائیں",
   "termsOfService": "استعمال کی شرائط",

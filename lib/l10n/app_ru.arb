@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Принимать в день",
   "pillTakenCountSuffix": "раз(а)",
   "duringPauseTaking": "приостановлен приём таблеток",
+  "cannotPauseAlreadyTakenToday": "Если сегодняшняя таблетка уже принята, приостановить приём нельзя",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Поделиться с друзьями",
   "termsOfService": "Условия использования",

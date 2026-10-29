@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "දිනකට",
   "pillTakenCountSuffix": "වරක් පෙත්ත ගන්න",
   "duringPauseTaking": "පෙති ගැනීමේ විරාමය ක්‍රියාත්මකයි",
+  "cannotPauseAlreadyTakenToday": "අදට නියමිත පෙත්ත දැනටමත් ගෙන ඇත්නම්, «පෙති ගැනීමේ විරාම» භාවිත කළ නොහැක",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "මිතුරන්ට කියන්න",
   "termsOfService": "භාවිත නියමයන්",

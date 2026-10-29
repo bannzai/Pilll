@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "প্রতিদিন",
   "pillTakenCountSuffix": "বার খাবেন",
   "duringPauseTaking": "সেবন স্থগিত আছে",
+  "cannotPauseAlreadyTakenToday": "আজকের পিলটি ইতিমধ্যে খেয়ে থাকলে, আপনি ‘সেবন স্থগিত’ ব্যবহার করতে পারবেন না",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "বন্ধুদের জানান",
   "termsOfService": "ব্যবহারের শর্তাবলি",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Өдөрт",
   "pillTakenCountSuffix": "удаа ууна",
   "duringPauseTaking": "түр завсарлага үргэлжилж байна",
+  "cannotPauseAlreadyTakenToday": "Өнөөдрийн эмээ уусан бол «түр завсарлаг» горимыг ашиглах боломжгүй",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Найзууддаа санал болгох",
   "termsOfService": "Үйлчилгээний нөхцөл",

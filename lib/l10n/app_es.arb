@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Tomar",
   "pillTakenCountSuffix": "veces al día",
   "duringPauseTaking": "pausa en curso",
+  "cannotPauseAlreadyTakenToday": "Si ya tomaste la píldora de hoy, no puedes usar la «pausa»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Recomendar Pilll a tus amistades",
   "termsOfService": "Condiciones de uso",

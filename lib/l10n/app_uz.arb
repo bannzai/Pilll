@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Kuniga",
   "pillTakenCountSuffix": "marta qabul qilish",
   "duringPauseTaking": "Dori ichishda pauza davom etmoqda",
+  "cannotPauseAlreadyTakenToday": "Agar bugungi tabletkani ichib boʻlgan boʻlsangiz, «pauza» funksiyasidan foydalana olmaysiz",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Doʻstlaringizga tavsiya qiling",
   "termsOfService": "Foydalanish shartlari",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Prendi la pillola",
   "pillTakenCountSuffix": "volte al giorno",
   "duringPauseTaking": "sospensione in corso",
+  "cannotPauseAlreadyTakenToday": "Se hai già preso la pillola di oggi, non puoi usare la «sospensione»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Condividi con gli amici",
   "termsOfService": "Termini di utilizzo",

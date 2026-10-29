@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "တစ်နေ့လျှင်",
   "pillTakenCountSuffix": "ကြိမ် သောက်ရန်",
   "duringPauseTaking": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားထားပါတယ်",
+  "cannotPauseAlreadyTakenToday": "ဒီနေ့သောက်ရမည့်ဆေးကို သောက်ပြီးပါက «ခေတ္တရပ်နား» ကို အသုံးပြု၍ မရပါ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "သူငယ်ချင်းများကို မျှဝေပါ",
   "termsOfService": "အသုံးပြုမှု စည်းမျဉ်းများ",

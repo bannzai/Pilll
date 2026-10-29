@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "تناول الحبة",
   "pillTakenCountSuffix": "مرات في اليوم",
   "duringPauseTaking": "إيقاف تناول الحبوب جارٍ",
+  "cannotPauseAlreadyTakenToday": "إذا تناولتِ حبة اليوم بالفعل، فلا يمكنكِ استخدام «إيقاف تناول الحبوب»",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "شاركيه مع صديقاتكِ",
   "termsOfService": "شروط الاستخدام",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Прымаць",
   "pillTakenCountSuffix": "разы на дзень",
   "duringPauseTaking": "прыпын прыёму пігулак",
+  "cannotPauseAlreadyTakenToday": "Калі сённяшняя пігулка ўжо прынята, функцыя «прыпын» недаступная",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Раскажыце сябрам",
   "termsOfService": "Умовы карыстання",
