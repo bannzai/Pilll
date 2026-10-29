@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ပင်မမျက်နှာပြင်ရှိ နံပါတ်ကို နှိပ်ပြီးလည်း ဖွင့်နိုင်ပါတယ်",
   "restDurationFeatureAppealPoint1": "ဆေးသောက်ခြင်းကို ခဏရပ်ထားသည့်ကာလကို အခမဲ့ မှတ်တမ်းတင်ပါ",
   "restDurationFeatureAppealPoint2": "ဆေးပြားကတ်ရဲ့ အပေါ်ညာဘက်ရှိ ဂီယာပုံကို နှိပ်ပြီး စတင်ပါ",
+  "restDurationFeatureAppealPoint3": "ကာလကို ပြင်ဆင်ပြီး ဆေးပြားပြန်သောက်ဖို့လည်း လွယ်ပါတယ်",
   "endedPillSheetDialogHistoryTitle": "ဆေးပြားကတ်မှတ်တမ်းကို ကြည့်ချင်ပါသလား?",
   "endedPillSheetDialogSummaryTitle": "ဒီဆေးပြားကတ်ကို ပြန်လည်ကြည့်ရှုကြရအောင်",
   "endedPillSheetDialogSummaryMessage": "ဆေးသောက်မှတ်တမ်းရှိသည့်ရက် {recordedDays} ရက် · မှတ်တမ်းမရှိသည့်ရက် {missedDays} ရက်ပါ",

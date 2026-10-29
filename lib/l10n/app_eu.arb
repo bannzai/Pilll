@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Hasierako pantailako zenbakia ukituta ere ireki dezakezu",
   "restDurationFeatureAppealPoint1": "Pilula hartzeari aldi baterako uzten diozunean, doan erregistratu",
   "restDurationFeatureAppealPoint2": "Hasi pilula-blisterraren goiko eskuineko ezarpen-ikonotik",
+  "restDurationFeatureAppealPoint3": "Erraza da aldia aldatzea eta pilula berriro hartzen hastea",
   "endedPillSheetDialogHistoryTitle": "Pilula-blisterren historia ikusi nahi duzu?",
   "endedPillSheetDialogSummaryTitle": "Ikus dezagun nolakoa izan den pilula-blister hau",
   "endedPillSheetDialogSummaryMessage": "Hartze-erregistroak: {recordedDays} egun · Erregistratu gabeak: {missedDays} egun",

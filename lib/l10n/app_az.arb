@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Ana səhifədəki rəqəmə toxunaraq da aça bilərsiniz",
   "restDurationFeatureAppealPoint1": "Həb qəbulunu müvəqqəti dayandırdığınız vaxtları pulsuz qeyd edin",
   "restDurationFeatureAppealPoint2": "Həb blisterinin yuxarı sağ küncündəki dişli çarx işarəsindən başlayın",
+  "restDurationFeatureAppealPoint3": "Müddəti dəyişmək və həb qəbuluna yenidən başlamaq da asandır",
   "endedPillSheetDialogHistoryTitle": "Həb blister tarixçəsinə baxmaq istərdiniz?",
   "endedPillSheetDialogSummaryTitle": "Gəlin bu həb blister üzrə qeydlərinizə nəzər salaq",
   "endedPillSheetDialogSummaryMessage": "Cəmi həb qəbulu qeydi: {recordedDays} gün · qeyd olunmayan: {missedDays} gün",

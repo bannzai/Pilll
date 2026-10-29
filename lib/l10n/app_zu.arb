@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Ungakuvula futhi ngokuthinta inombolo esikrinini sasekhaya",
   "restDurationFeatureAppealPoint1": "Qopha mahhala lapho uyeka khona ukuphuza iphilisi okwesikhashana",
   "restDurationFeatureAppealPoint2": "Sicela uqale ngesithonjana segiya phezulu kwesokudla seshidi lamaphilisi",
+  "restDurationFeatureAppealPoint3": "Kulula nokushintsha isikhathi nokuqala futhi ukuphuza iphilisi",
   "endedPillSheetDialogHistoryTitle": "Ungathanda ukubona umlando weshidi lamaphilisi?",
   "endedPillSheetDialogSummaryTitle": "Ake sibheke ukusetshenziswa kwaleli shidi lamaphilisi",
   "endedPillSheetDialogSummaryMessage": "Irekhodi lokuphuza amaphilisi: izinsuku ezingu-{recordedDays} · ezingabhalisiwe: ezingu-{missedDays}",

@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Anda juga bisa membukanya dengan mengetuk angka di layar beranda",
   "restDurationFeatureAppealPoint1": "Catat penghentian sementara minum pil secara gratis",
   "restDurationFeatureAppealPoint2": "Mulai dari ikon roda gigi di kanan atas strip pil",
+  "restDurationFeatureAppealPoint3": "Mudah mengubah periode dan mulai minum pil lagi",
   "endedPillSheetDialogHistoryTitle": "Ingin melihat riwayat strip pil Anda?",
   "endedPillSheetDialogSummaryTitle": "Mari lihat kembali strip pil ini",
   "endedPillSheetDialogSummaryMessage": "Catatan minum pil: {recordedDays} hari · Belum tercatat: {missedDays} hari",

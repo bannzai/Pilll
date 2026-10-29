@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "होम स्क्रीन पर नंबर टैप करके भी इसे खोल सकती हैं",
   "restDurationFeatureAppealPoint1": "गोली लेना कुछ समय के लिए रोकने का मुफ़्त रिकॉर्ड",
   "restDurationFeatureAppealPoint2": "पिल स्ट्रिप के ऊपर दाईं ओर मौजूद गियर आइकन से शुरू करें",
+  "restDurationFeatureAppealPoint3": "अवधि बदलना और फिर से गोली लेना शुरू करना भी आसान है",
   "endedPillSheetDialogHistoryTitle": "क्या आप पिल स्ट्रिप का इतिहास देखना चाहेंगी?",
   "endedPillSheetDialogSummaryTitle": "आइए, इस पिल स्ट्रिप के सेवन पर एक नज़र डालें",
   "endedPillSheetDialogSummaryMessage": "सेवन रिकॉर्ड: {recordedDays} दिन · बिना रिकॉर्ड: {missedDays} दिन",

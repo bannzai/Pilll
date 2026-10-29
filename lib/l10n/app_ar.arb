@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "يمكنكِ فتحه أيضًا بالضغط على الرقم في الصفحة الرئيسية",
   "restDurationFeatureAppealPoint1": "تسجيل فترات التوقف عن تناول الحبوب مجانًا",
   "restDurationFeatureAppealPoint2": "ابدئي من رمز الترس أعلى يمين شريط الحبوب",
+  "restDurationFeatureAppealPoint3": "يمكنكِ تعديل المدة واستئناف تناول الحبوب بسهولة",
   "endedPillSheetDialogHistoryTitle": "هل تودين الاطلاع على سجل شريط الحبوب؟",
   "endedPillSheetDialogSummaryTitle": "لنراجع شريط الحبوب هذا",
   "endedPillSheetDialogSummaryMessage": "تسجيل تناول: {recordedDays} · أيام بلا تسجيل: {missedDays}",

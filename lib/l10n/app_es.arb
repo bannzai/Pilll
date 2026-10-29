@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "También puedes abrirlo tocando el número en la pantalla de inicio",
   "restDurationFeatureAppealPoint1": "Registro gratuito de interrupciones voluntarias de la toma de la píldora",
   "restDurationFeatureAppealPoint2": "Empieza desde el icono de engranaje en la esquina superior derecha del blíster",
+  "restDurationFeatureAppealPoint3": "También puedes cambiar el período y volver a tomar la píldora fácilmente",
   "endedPillSheetDialogHistoryTitle": "¿Te gustaría ver el historial de tus blísteres?",
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "Registro de toma: {recordedDays} · Sin registrar: {missedDays}",

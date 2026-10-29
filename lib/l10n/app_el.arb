@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Μπορείτε επίσης να το ανοίξετε πατώντας τον αριθμό στην αρχική οθόνη",
   "restDurationFeatureAppealPoint1": "Δωρεάν καταγραφή προσωρινής διακοπής λήψης του χαπιού",
   "restDurationFeatureAppealPoint2": "Ξεκινήστε από το εικονίδιο με το γρανάζι επάνω δεξιά στην καρτέλα χαπιών",
+  "restDurationFeatureAppealPoint3": "Αλλάξτε εύκολα τη διάρκεια και ξεκινήστε ξανά τη λήψη",
   "endedPillSheetDialogHistoryTitle": "Θα θέλατε να δείτε το ιστορικό για την καρτέλα χαπιών;",
   "endedPillSheetDialogSummaryTitle": "Ας δούμε πώς πήγε αυτή η καρτέλα χαπιών",
   "endedPillSheetDialogSummaryMessage": "Καταγραφή λήψης: {recordedDays} · Χωρίς καταγραφή: {missedDays}",

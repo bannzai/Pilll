@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "होम स्क्रीनवरील गोळी क्रमांकावर टॅप करूनही हे उघडू शकता",
   "restDurationFeatureAppealPoint1": "गोळी घेणे तात्पुरते थांबवल्याची मोफत नोंद",
   "restDurationFeatureAppealPoint2": "पिल शीटच्या वरच्या उजव्या कोपऱ्यातील गिअर चिन्हापासून सुरुवात करा",
+  "restDurationFeatureAppealPoint3": "कालावधी बदलणे आणि पुन्हा गोळी घ्यायला सुरुवात करणेही सोपे आहे",
   "endedPillSheetDialogHistoryTitle": "तुम्हाला पिल शीटचा इतिहास पाहायचा आहे का?",
   "endedPillSheetDialogSummaryTitle": "या पिल शीटमधील तुमच्या नोंदी पुन्हा पाहू शकता",
   "endedPillSheetDialogSummaryMessage": "सेवन नोंद: {recordedDays} दिवस · नोंद नसलेले: {missedDays} दिवस",

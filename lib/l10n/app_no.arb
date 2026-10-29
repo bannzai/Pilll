@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Du kan også åpne den ved å trykke på tallet på hjemskjermen",
   "restDurationFeatureAppealPoint1": "Registrer midlertidige opphold i p-pillebruken gratis",
   "restDurationFeatureAppealPoint2": "Du kan starte med tannhjulikonet øverst til høyre på pillebrettet",
+  "restDurationFeatureAppealPoint3": "Du kan enkelt endre perioden og begynne med p-pillen igjen",
   "endedPillSheetDialogHistoryTitle": "Vil du se historikken for pillebrettene dine?",
   "endedPillSheetDialogSummaryTitle": "La oss se tilbake på dette pillebrettet",
   "endedPillSheetDialogSummaryMessage": "Pillelogg: {recordedDays} dager · Ikke registrert: {missedDays} dager",

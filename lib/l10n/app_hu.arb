@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "A kezdőképernyőn lévő számra koppintva is megnyithatod",
   "restDurationFeatureAppealPoint1": "A tabletta szedésének átmeneti megszakítása ingyenesen rögzíthető",
   "restDurationFeatureAppealPoint2": "A tablettacsomag jobb felső sarkában lévő fogaskerék ikonnal indíthatod",
+  "restDurationFeatureAppealPoint3": "Az időszak módosítása és a tabletta szedésének folytatása is egyszerű",
   "endedPillSheetDialogHistoryTitle": "Szeretnéd megnézni a tablettacsomagok előzményeit?",
   "endedPillSheetDialogSummaryTitle": "Nézzük át ezt a tablettacsomagot",
   "endedPillSheetDialogSummaryMessage": "A tablettaszedési naplóban {recordedDays} nap rögzítve, {missedDays} nap bejegyzés nélkül maradt",

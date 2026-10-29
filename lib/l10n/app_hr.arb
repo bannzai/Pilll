@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Možete otvoriti i dodirom broja na početnom zaslonu",
   "restDurationFeatureAppealPoint1": "Besplatno bilježenje privremenog prekida uzimanja pilule",
   "restDurationFeatureAppealPoint2": "Započnite od ikone zupčanika gore desno na blisteru",
+  "restDurationFeatureAppealPoint3": "Lako možete promijeniti razdoblje i ponovno početi uzimati pilulu",
   "endedPillSheetDialogHistoryTitle": "Želite li pogledati povijest blistera?",
   "endedPillSheetDialogSummaryTitle": "Pogledajmo zajedno ovaj blister",
   "endedPillSheetDialogSummaryMessage": "Evidencija uzimanja: {recordedDays} · propušteni zapisi: {missedDays}",

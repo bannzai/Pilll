@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Կարող եք բացել նաև՝ հպվելով գլխավոր էջի թվին",
   "restDurationFeatureAppealPoint1": "Հաբի ընդունումը ժամանակավորապես դադարեցնելու անվճար գրանցում",
   "restDurationFeatureAppealPoint2": "Սկսեք հաբերի բլիստերի վերևի աջ անկյունում գտնվող ատամնանիվի նշանից",
+  "restDurationFeatureAppealPoint3": "Ժամկետը փոխելն ու հաբի ընդունումը վերսկսելը նույնպես հեշտ է",
   "endedPillSheetDialogHistoryTitle": "Կցանկանա՞ք տեսնել հաբերի բլիստերների պատմությունը։",
   "endedPillSheetDialogSummaryTitle": "Եկեք վերանայենք այս հաբերի բլիստերի ընդունման գրառումները",
   "endedPillSheetDialogSummaryMessage": "Ընդունման գրառում՝ {recordedDays} օր · Առանց գրառման՝ {missedDays} օր",

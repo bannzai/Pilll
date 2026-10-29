@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Saad selle avada ka avakuval olevat numbrit puudutades",
   "restDurationFeatureAppealPoint1": "Pillide võtmise ajutise katkestamise tasuta jälgimine",
   "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas olevast hammasrattaikoonist",
+  "restDurationFeatureAppealPoint3": "Perioodi muutmine ja pillide võtmise jätkamine on samuti lihtne",
   "endedPillSheetDialogHistoryTitle": "Kas soovid vaadata oma pillilehe ajalugu?",
   "endedPillSheetDialogSummaryTitle": "Vaatame sellele pillilehele tagasi",
   "endedPillSheetDialogSummaryMessage": "Võtmiskirjeid: {recordedDays} päeva · märkimata jäänud: {missedDays} päeva",

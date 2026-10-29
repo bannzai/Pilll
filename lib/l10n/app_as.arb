@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "হোম স্ক্ৰীনৰ সংখ্যাটো টিপিও আপুনি ইয়াক খুলিব পাৰে",
   "restDurationFeatureAppealPoint1": "পিল খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ তথ্য বিনামূলীয়াকৈ লিখি ৰাখক",
   "restDurationFeatureAppealPoint2": "পিলৰ ষ্ট্ৰিপৰ ওপৰৰ সোঁফালে থকা গিয়াৰ চিহ্নৰ পৰা আৰম্ভ কৰক",
+  "restDurationFeatureAppealPoint3": "সময়সীমা সলনি কৰি পুনৰ বড়ি খোৱা আৰম্ভ কৰাটোও সহজ",
   "endedPillSheetDialogHistoryTitle": "আপুনি পিলৰ ষ্ট্ৰিপৰ ইতিহাস চাব বিচাৰে নেকি?",
   "endedPillSheetDialogSummaryTitle": "এই পিলৰ ষ্ট্ৰিপটো এবাৰ উভতি চাওঁ আহক",
   "endedPillSheetDialogSummaryMessage": "ঔষধ সেৱনৰ ৰেকৰ্ড: {recordedDays} দিন · ৰেকৰ্ড নোহোৱা: {missedDays} দিন",

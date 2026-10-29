@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Ana ekrandaki sayıya dokunarak da açabilirsiniz",
   "restDurationFeatureAppealPoint1": "Hap kullanımını geçici olarak durdurduğunuz dönemleri ücretsiz kaydedin",
   "restDurationFeatureAppealPoint2": "Blisterin sağ üst köşesindeki dişli simgesinden başlayın",
+  "restDurationFeatureAppealPoint3": "Süreyi değiştirmek ve hapı yeniden almaya başlamak da kolay",
   "endedPillSheetDialogHistoryTitle": "Blister geçmişinizi görmek ister misiniz?",
   "endedPillSheetDialogSummaryTitle": "Bu blister kullanımını birlikte gözden geçirelim",
   "endedPillSheetDialogSummaryMessage": "Bu blister döneminde {recordedDays} gün hap kullanım kaydı var, {missedDays} gün kayıt eksik",

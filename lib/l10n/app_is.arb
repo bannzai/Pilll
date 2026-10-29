@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Þú getur líka opnað þetta með því að ýta á pillunúmerið á heimaskjánum",
   "restDurationFeatureAppealPoint1": "Skráðu tímabundna stöðvun pillutöku ókeypis",
   "restDurationFeatureAppealPoint2": "Byrjaðu á tannhjólstákninu efst til hægri á pilluspjaldinu",
+  "restDurationFeatureAppealPoint3": "Auðvelt er að breyta tímabilinu og byrja aftur að taka pilluna",
   "endedPillSheetDialogHistoryTitle": "Viltu skoða sögu pilluspjaldanna?",
   "endedPillSheetDialogSummaryTitle": "Lítum yfir þetta pilluspjald",
   "endedPillSheetDialogSummaryMessage": "Inntökuskrá: {recordedDays} · ekki skráð: {missedDays}",

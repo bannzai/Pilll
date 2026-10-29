@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Du kan också öppna den genom att trycka på siffran på hemskärmen",
   "restDurationFeatureAppealPoint1": "Registrera tillfälliga avbrott i p-pilleranvändningen gratis",
   "restDurationFeatureAppealPoint2": "Börja med kugghjulsikonen längst upp till höger på p-pillerkartan",
+  "restDurationFeatureAppealPoint3": "Det är enkelt att ändra perioden och börja ta pillret igen",
   "endedPillSheetDialogHistoryTitle": "Vill du se historiken för din p-pillerkarta?",
   "endedPillSheetDialogSummaryTitle": "Låt oss se tillbaka på den här p-pillerkartan",
   "endedPillSheetDialogSummaryMessage": "Intagslogg: {recordedDays} dagar · Ej registrerade: {missedDays} dagar",

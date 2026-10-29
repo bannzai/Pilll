@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Anda juga boleh membukanya dengan mengetik nombor pada skrin utama",
   "restDurationFeatureAppealPoint1": "Rekod percuma apabila anda berhenti mengambil pil buat sementara waktu",
   "restDurationFeatureAppealPoint2": "Mulakan melalui ikon gear di bahagian atas kanan pek pil",
+  "restDurationFeatureAppealPoint3": "Mudah juga untuk mengubah tempoh dan mula mengambil pil semula",
   "endedPillSheetDialogHistoryTitle": "Ingin lihat sejarah pek pil anda?",
   "endedPillSheetDialogSummaryTitle": "Mari lihat semula pek pil ini",
   "endedPillSheetDialogSummaryMessage": "Rekod pengambilan: {recordedDays} hari · Tidak direkodkan: {missedDays} hari",

@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "แตะตัวเลขบนหน้าหลักเพื่อเปิดได้เช่นกัน",
   "restDurationFeatureAppealPoint1": "บันทึกช่วงที่พักการทานยาเองได้ฟรี",
   "restDurationFeatureAppealPoint2": "เริ่มจากไอคอนรูปเฟืองที่มุมขวาบนของแผงยา",
+  "restDurationFeatureAppealPoint3": "แก้ไขระยะเวลาและกลับมาทานยาอีกครั้งได้ง่ายค่ะ",
   "endedPillSheetDialogHistoryTitle": "อยากดูประวัติแผงยาไหมคะ",
   "endedPillSheetDialogSummaryTitle": "มาทบทวนการใช้แผงยานี้กันค่ะ",
   "endedPillSheetDialogSummaryMessage": "บันทึกการทานยา {recordedDays} วัน · ไม่ได้บันทึก {missedDays} วันค่ะ",

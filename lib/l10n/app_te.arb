@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "హోమ్ స్క్రీన్‌పై ఉన్న సంఖ్యను నొక్కడం ద్వారా కూడా దీన్ని తెరవవచ్చు",
   "restDurationFeatureAppealPoint1": "మాత్రలు తీసుకోవడం తాత్కాలికంగా ఆపిన సమయాన్ని ఉచితంగా నమోదు చేయండి",
   "restDurationFeatureAppealPoint2": "మాత్రల స్ట్రిప్‌లో పై కుడివైపున ఉన్న గేర్ గుర్తు నుంచి ప్రారంభించండి",
+  "restDurationFeatureAppealPoint3": "వ్యవధిని మార్చి మళ్లీ మాత్ర తీసుకోవడం ప్రారంభించడం కూడా సులభం",
   "endedPillSheetDialogHistoryTitle": "మాత్రల స్ట్రిప్ చరిత్రను చూడాలనుకుంటున్నారా?",
   "endedPillSheetDialogSummaryTitle": "ఈ మాత్రల స్ట్రిప్‌కి సంబంధించిన నమోదులను ఒకసారి చూద్దాం",
   "endedPillSheetDialogSummaryMessage": "మాత్రల నమోదు: {recordedDays} రోజులు · నమోదు కానివి: {missedDays} రోజులు",

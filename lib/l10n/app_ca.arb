@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "També ho pots obrir tocant el número de la pantalla d’inici",
   "restDurationFeatureAppealPoint1": "Registre gratuït de les interrupcions voluntàries de la presa de la píndola",
   "restDurationFeatureAppealPoint2": "Activa la pausa des de la icona d’engranatge a la part superior dreta del blíster",
+  "restDurationFeatureAppealPoint3": "També pots canviar el període i reprendre la píndola fàcilment",
   "endedPillSheetDialogHistoryTitle": "Vols veure l’historial del blíster?",
   "endedPillSheetDialogSummaryTitle": "Fem un repàs d’aquest blíster",
   "endedPillSheetDialogSummaryMessage": "Registre de preses: {recordedDays} dies · Sense registrar: {missedDays} dies",

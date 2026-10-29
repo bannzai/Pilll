@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "អ្នកក៏អាចបើកវាបានដោយចុចលើលេខនៅអេក្រង់ដើម",
   "restDurationFeatureAppealPoint1": "កត់ត្រាការឈប់លេបថ្នាំបណ្តោះអាសន្នដោយឥតគិតថ្លៃ",
   "restDurationFeatureAppealPoint2": "សូមចាប់ផ្តើមពីរូបសញ្ញាកង់ធ្មេញនៅជ្រុងខាងលើស្តាំនៃបន្ទះថ្នាំគ្រាប់",
+  "restDurationFeatureAppealPoint3": "ងាយស្រួលកែរយៈពេល និងចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",
   "endedPillSheetDialogHistoryTitle": "តើអ្នកចង់មើលប្រវត្តិបន្ទះថ្នាំគ្រាប់ទេ?",
   "endedPillSheetDialogSummaryTitle": "សូមពិនិត្យមើលបន្ទះថ្នាំគ្រាប់នេះឡើងវិញ",
   "endedPillSheetDialogSummaryMessage": "កំណត់ត្រាការលេបថ្នាំ៖ {recordedDays} ថ្ងៃ · មិនបានកត់ត្រា៖ {missedDays} ថ្ងៃ",

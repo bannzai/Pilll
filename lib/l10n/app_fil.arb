@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Maaari rin ninyo itong buksan sa pamamagitan ng pag-tap sa numero sa home screen",
   "restDurationFeatureAppealPoint1": "Libreng tala ng pansamantalang paghinto sa pag-inom ng pill",
   "restDurationFeatureAppealPoint2": "Magsimula sa icon na gear sa kanang itaas ng pakete ng pildoras",
+  "restDurationFeatureAppealPoint3": "Madali ring baguhin ang tagal at muling simulan ang pag-inom ng pill",
   "endedPillSheetDialogHistoryTitle": "Gusto po ba ninyong tingnan ang kasaysayan ng pakete ng pildoras?",
   "endedPillSheetDialogSummaryTitle": "Balikan natin ang pakete ng pildoras na ito",
   "endedPillSheetDialogSummaryMessage": "Tala ng pag-inom: {recordedDays} araw · Walang tala: {missedDays} araw",
