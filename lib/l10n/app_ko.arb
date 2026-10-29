@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}번",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
+  "selectPauseStartDate": "일시 중지 시작일 선택",
   "endPillSheet": "알약 시트 복용 완료",
   "discardPillSheet": "알약 시트 폐기",
   "takingTime": "약 복용 시간",
