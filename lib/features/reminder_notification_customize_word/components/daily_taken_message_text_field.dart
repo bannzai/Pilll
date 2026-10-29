@@ -48,6 +48,8 @@ class DailyTakenMessageTextField extends StatelessWidget {
                 ),
               ),
             ),
+            // 説明文の末尾と右の表示 (文字数・警告) の間隔。Spacer を Expanded に替えて隣接するようになったため、
+            // 同じ画面の行間 (SizedBox(height: 4)) より広い 8 にして読み分けられるようにする
             const SizedBox(width: 8),
             if (dailyTakenMessage.value.characters.isNotEmpty)
               Text(
