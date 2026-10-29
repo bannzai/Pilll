@@ -12,7 +12,7 @@
   "userNotFound": "No se encontró el usuario",
   "userAlreadyExists": "Esta cuenta ya existe",
   "medicationHistory": "historial de tomas",
-  "settings": "Configuración",
+  "settings": "Ajustes",
   "account": "Cuenta",
   "dataTransferRequiresAccount": "Si cambias o pierdes tu teléfono, necesitas registrar una cuenta para transferir o recuperar tus datos.",
   "pillPremium": "Pilll Premium",

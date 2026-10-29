@@ -50,7 +50,7 @@
   },
   "settings": "設定",
   "@settings": {
-    "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。"
+    "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。\n[翻訳の決定 es] 「Configuración」ではなく「Ajustes」: ホーム画面のタブバーのラベルが幅に収まらず切れたため。iOS の設定アプリの es 表記と同じ語で意味を保てる (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 「Configurações」ではなく「Ajustes」: ホーム画面のタブバーのラベルが幅に収まらず切れたため。iOS の設定アプリの pt-BR 表記と同じ語で意味を保てる (https://github.com/bannzai/Pilll/issues/2012)"
   },
   "account": "アカウント",
   "@account": {
@@ -755,7 +755,7 @@
   },
   "menstruationScheduleDate": "生理予定日",
   "@menstruationScheduleDate": {
-    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
+    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。\n[翻訳の決定 de] 「Voraussichtlicher Beginn der nächsten Periode」ではなく「Nächste Periode」: 生理画面の生理予定日カードで日付と 1 行に並ばず溢れたため。日付と並べて表示するので「予定日」の意味は日付から読み取れる (https://github.com/bannzai/Pilll/issues/1976)"
   },
   "menstruationScheduleDateWithNumber": "生理予定：{diffPlusOne}日目",
   "@menstruationScheduleDateWithNumber": {

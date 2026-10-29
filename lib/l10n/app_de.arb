@@ -155,7 +155,7 @@
   "recordedMenstruationStartDate": "Der Beginn deiner Periode wurde für den {DateTimeFormatterMonthAndDay} eingetragen",
   "menstruationStartDate": "Beginn der Periode",
   "menstruationEndDate": "Ende der Periode",
-  "menstruationScheduleDate": "Voraussichtlicher Beginn der nächsten Periode",
+  "menstruationScheduleDate": "Nächste Periode",
   "menstruationScheduleDateWithNumber": "Voraussichtliche Periode: Tag {diffPlusOne}",
   "menstruationScheduleDateWithNumberAndPillNumber": "Voraussichtliche Periode: Tag {diffPlusOne}, Pille {pillNumber}",
   "menstruationRemainingDay": "Noch {diff} Tage",
