@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Dori ichishdagi pauza davrini qayd eting",
   "restDurationFeatureAppealShortDescription": "Tabletkalarni ichishni vaqtincha toʻxtatgan davrlaringizni aniq qayd eting",
   "restDurationFeatureAppealHeadline": "Tabletkani ichishni vaqtincha toʻxtating",
+  "restDurationFeatureAppealBody": "Tabletkalarni bir muddat ichmaydigan davringizni tabletka blisterda qayd etishingiz mumkin. Pauza vaqtida tabletka raqami oldinga siljimaydi; yana ichishni boshlaganingizda qaydlarni darhol davom ettirishingiz mumkin.",
   "featureAppealLocationLabel": "Ilovadagi joylashuvi",
   "criticalAlertFeatureAppealPoint1": "Diqqatni jamlash rejimida ham bildirishnomalar olasiz",
   "criticalAlertFeatureAppealPoint2": "Siz belgilagan vaqtda ishonchli eslatma",

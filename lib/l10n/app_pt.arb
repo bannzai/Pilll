@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Registrar período de interrupção",
   "restDurationFeatureAppealShortDescription": "Acompanhe com precisão as interrupções no uso da pílula",
   "restDurationFeatureAppealHeadline": "interrupção do uso da pílula",
+  "restDurationFeatureAppealBody": "Você pode registrar na cartela o período em que deixa de tomar a pílula por um tempo. Durante a interrupção, o número da pílula não avança; ao voltar a tomar, você pode retomar os registros imediatamente.",
   "featureAppealLocationLabel": "Onde encontrar no app",
   "criticalAlertFeatureAppealPoint1": "Receba notificações mesmo com o modo Foco ativado",
   "criticalAlertFeatureAppealPoint2": "Um lembrete confiável no horário que você escolheu",

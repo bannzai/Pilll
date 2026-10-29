@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Înregistrează perioada de întrerupere",
   "restDurationFeatureAppealShortDescription": "Urmărește cu precizie întreruperile administrării pilulei",
   "restDurationFeatureAppealHeadline": "întreruperea luării pilulei",
+  "restDurationFeatureAppealBody": "Poți nota pe blister perioada în care nu iei pilula pentru un timp. În timpul întreruperii, numărul pilulei nu avansează; când reiei administrarea, poți continua imediat înregistrările.",
   "featureAppealLocationLabel": "Unde o găsești în aplicație",
   "criticalAlertFeatureAppealPoint1": "Primești notificări chiar și când modul Concentrare este activ",
   "criticalAlertFeatureAppealPoint2": "Un memento de încredere la ora aleasă de tine",

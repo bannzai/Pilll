@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Запис за период на пауза во земањето апчиња",
   "restDurationFeatureAppealShortDescription": "Прецизно следете кога привремено престанувате да земате таблета",
   "restDurationFeatureAppealHeadline": "Пауза во земањето апчиња",
+  "restDurationFeatureAppealBody": "Периодот кога ќе престанете да ги земате таблетите на некое време можете да го забележите на блистерот. За време на паузата во земањето апчиња, бројот на таблетата не се менува; кога повторно ќе почнете да ги земате, можете веднаш да продолжите со запишување.",
   "featureAppealLocationLabel": "Локација во апликацијата",
   "criticalAlertFeatureAppealPoint1": "Ќе добивате известувања и во режимот за фокусирање",
   "criticalAlertFeatureAppealPoint2": "Сигурен потсетник во времето што сте го поставиле",

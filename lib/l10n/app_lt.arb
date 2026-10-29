@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Pažymėti pristabdymo laikotarpį",
   "restDurationFeatureAppealShortDescription": "Tiksliai sekite laikotarpius, kai laikinai nevartojate tablečių",
   "restDurationFeatureAppealHeadline": "Laikinai sustabdykite piliulės vartojimą",
+  "restDurationFeatureAppealBody": "Laikotarpį, kai kuriam laikui nustojate vartoti tabletes, galite pažymėti tablečių plokštelėje. Pristabdymo metu tabletės numeris nesikeičia, o vėl pradėję vartoti galite iškart tęsti įrašus.",
   "featureAppealLocationLabel": "Kur rasti programėlėje",
   "criticalAlertFeatureAppealPoint1": "Pranešimus gausite net tada, kai įjungtas susikaupimo režimas",
   "criticalAlertFeatureAppealPoint2": "Patikimas priminimas jūsų nustatytu laiku",

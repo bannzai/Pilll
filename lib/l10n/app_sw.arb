@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Tafadhali rekodi kipindi cha kusitisha kumeza vidonge",
   "restDurationFeatureAppealShortDescription": "Tafadhali fuatilia kwa usahihi vipindi vya kusitisha kumeza vidonge kwa muda",
   "restDurationFeatureAppealHeadline": "Pumzika kwa muda kutoka kumeza kidonge",
+  "restDurationFeatureAppealBody": "Unaweza kurekodi kwenye pakiti ya vidonge kipindi ambacho unasitisha kumeza vidonge kwa muda. Wakati wa kusitisha kumeza vidonge, nambari ya kidonge haisongi mbele; unapoanza tena, unaweza kuendelea kurekodi mara moja.",
   "featureAppealLocationLabel": "Mahali kwenye programu",
   "criticalAlertFeatureAppealPoint1": "Utapokea arifa hata ukiwa katika hali ya Kuzingatia",
   "criticalAlertFeatureAppealPoint2": "Kikumbusho cha kuaminika kwa wakati ulioweka",

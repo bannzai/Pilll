@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Түр завсарлагын хугацааг тэмдэглэнэ үү",
   "restDurationFeatureAppealShortDescription": "Эм уухаа түр зогсоосон хугацааг зөв бүртгэнэ үү",
   "restDurationFeatureAppealHeadline": "Эм уухаа түр завсарлах",
+  "restDurationFeatureAppealBody": "Эм уухаа хэсэг хугацаанд зогсоох үеийг эмийн блистерт тэмдэглэж болно. Түр завсарлагын үед эмийн дугаар ахихгүй; дахин ууж эхлэхэд бүртгэлээ шууд үргэлжлүүлж болно.",
   "featureAppealLocationLabel": "Апп дотор хаанаас олох вэ",
   "criticalAlertFeatureAppealPoint1": "Төвлөрөх горим идэвхтэй үед ч мэдэгдэл ирнэ",
   "criticalAlertFeatureAppealPoint2": "Таны тохируулсан цагт найдвартай сануулга",

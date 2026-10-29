@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "רישום תקופת השהיית נטילה",
   "restDurationFeatureAppealShortDescription": "מעקב מדויק אחר עצירות בנטילת הגלולה",
   "restDurationFeatureAppealHeadline": "להשהות את נטילת הגלולה",
+  "restDurationFeatureAppealBody": "אפשר לתעד בחפיסת את התקופה שבה מפסיקים ליטול גלולות לזמן מה. במהלך השהיית נטילה מספר הגלולה אינו מתקדם, וכשחוזרים ליטול אפשר להמשיך מיד בתיעוד.",
   "featureAppealLocationLabel": "איפה למצוא באפליקציה",
   "criticalAlertFeatureAppealPoint1": "קבלת התראות גם כשמצב ריכוז פעיל",
   "criticalAlertFeatureAppealPoint2": "תזכורת אמינה בשעה שנקבעה",

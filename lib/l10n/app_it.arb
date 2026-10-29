@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Registra il periodo di sospensione",
   "restDurationFeatureAppealShortDescription": "Tieni traccia con precisione delle interruzioni nell'assunzione della pillola",
   "restDurationFeatureAppealHeadline": "sospensione della pillola",
+  "restDurationFeatureAppealBody": "Puoi segnare sul blister il periodo in cui smetti di prendere la pillola per un po’. Durante la sospensione il numero della pillola non avanza; quando riprendi, puoi tornare subito a registrare le assunzioni.",
   "featureAppealLocationLabel": "Dove trovarlo nell’app",
   "criticalAlertFeatureAppealPoint1": "Ricevi notifiche anche con la modalità Full immersion attiva",
   "criticalAlertFeatureAppealPoint2": "Un promemoria affidabile all’ora che hai scelto",

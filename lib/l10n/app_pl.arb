@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Zapisz okres wstrzymania przyjmowania tabletek",
   "restDurationFeatureAppealShortDescription": "Dokładnie śledź okresy wstrzymania przyjmowania tabletek",
   "restDurationFeatureAppealHeadline": "wstrzymać przyjmowanie pigułki",
+  "restDurationFeatureAppealBody": "Okres, w którym na jakiś czas przestajesz brać tabletki, możesz zaznaczyć na blistrze. Podczas wstrzymania przyjmowania numer tabletki nie zmienia się, a po wznowieniu możesz od razu wrócić do zapisywania.",
   "featureAppealLocationLabel": "Gdzie znaleźć w aplikacji",
   "criticalAlertFeatureAppealPoint1": "Otrzymuj powiadomienia także w trybie skupienia",
   "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o wybranej godzinie",

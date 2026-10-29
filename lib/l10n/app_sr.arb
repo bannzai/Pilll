@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Забележите период прекида узимања пилула",
   "restDurationFeatureAppealShortDescription": "Прецизно пратите привремене прекиде узимања пилуле",
   "restDurationFeatureAppealHeadline": "прекид узимања пилуле",
+  "restDurationFeatureAppealBody": "Период у ком неко време не узимате таблете можете да забележите на блистеру. Током прекида број таблете не напредује, а када поново почнете да их узимате, можете одмах да наставите са бележењем.",
   "featureAppealLocationLabel": "Где се налази у апликацији",
   "criticalAlertFeatureAppealPoint1": "Добијате обавештења чак и када је укључен режим фокуса",
   "criticalAlertFeatureAppealPoint2": "Поуздан подсетник у време које сте подесили",

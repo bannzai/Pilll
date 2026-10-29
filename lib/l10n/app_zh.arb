@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "记录暂停服药的时间段",
   "restDurationFeatureAppealShortDescription": "准确记录暂停服药的时间",
   "restDurationFeatureAppealHeadline": "暂时停用药片",
+  "restDurationFeatureAppealBody": "暂时停药的时间可以记录在药板上。暂停服药期间，药片编号不会前进；恢复服药后，就能立即继续记录。",
   "featureAppealLocationLabel": "在应用中的位置",
   "criticalAlertFeatureAppealPoint1": "专注模式开启时也能收到通知",
   "criticalAlertFeatureAppealPoint2": "在设定的时间准时提醒",

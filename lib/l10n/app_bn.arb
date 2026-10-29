@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "সেবন স্থগিত রাখার সময়কাল লিখে রাখুন",
   "restDurationFeatureAppealShortDescription": "পিল খাওয়া সাময়িক বন্ধ রাখার সময় সঠিকভাবে নথিভুক্ত করুন",
   "restDurationFeatureAppealHeadline": "পিল খাওয়া সাময়িকভাবে বন্ধ করুন",
+  "restDurationFeatureAppealBody": "কিছুদিনের জন্য পিল খাওয়া বন্ধ রাখার সময়টি পিল শিটে লিখে রাখতে পারেন। সেবন স্থগিত থাকলে পিলের নম্বর এগোয় না; আবার খাওয়া শুরু করলে সঙ্গে সঙ্গেই রেকর্ড রাখা শুরু করতে পারেন।",
   "featureAppealLocationLabel": "অ্যাপে কোথায় পাবেন",
   "criticalAlertFeatureAppealPoint1": "ফোকাস মোড চালু থাকলেও আপনি বিজ্ঞপ্তি পাবেন",
   "criticalAlertFeatureAppealPoint2": "আপনার নির্ধারিত সময়ে নির্ভরযোগ্য রিমাইন্ডার",
