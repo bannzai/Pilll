@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select pause start date",
+  "selectPausePeriod": "Select pause period",
   "endPillSheet": "Pill pack finished",
   "discardPillSheet": "Pill pack discarded",
   "takingTime": "Time taken",
