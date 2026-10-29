@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Худалдан авалтыг идэвхжүүлэх үйл явц хараахан дуусаагүй байна. Түр хүлээгээд дахин шалгана уу",
   "launchError": "Аппыг нээх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй:",
   "exampleRestDurationDate": "Жишээлбэл, та „1/12-ноос 3 хоног“ түр завсарлаг авсан бол",
+  "exampleRestDurationNumber": "Жишээ нь, 18-р дугаараас эхлэн 3 хоногийн түр завсарлаг авсан бол",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Завсарлагааны үеэр эм уусан бүртгэлийг цуцлах боломжгүй",

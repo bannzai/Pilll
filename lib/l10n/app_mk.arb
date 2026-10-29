@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активирањето на купувањето сѐ уште не е завршено. Ве молиме, почекајте малку и проверете повторно",
   "launchError": "Се појави грешка при отворањето на апликацијата.\n{ErrorMessagesConnection}\n\nДетали:",
   "exampleRestDurationDate": "На пример, ако направите пауза во земањето апчиња „3 дена од 1/12“",
+  "exampleRestDurationNumber": "На пример, ако направите 3-дневна пауза во земањето апчиња почнувајќи од таблета бр. 18",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Не е пронајден блистер што моментално го користите",
   "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",
