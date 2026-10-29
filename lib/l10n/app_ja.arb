@@ -66,7 +66,7 @@
   },
   "unlimitedFeatureDuration": "機能無制限の期間について",
   "@unlimitedFeatureDuration": {
-    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
+    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。\n[翻訳の決定 en] 「About the unlimited feature period」ではなく「About your full-access period」: 「unlimited feature period」は英語として不自然で、トライアル中の全機能を使える期間と伝わらないため (https://github.com/bannzai/Pilll/issues/2009)\n[翻訳の決定 de] 「Über den Zeitraum mit unbegrenztem Zugriff auf Funktionen」ではなく「Zeitraum mit uneingeschränkten Funktionen」: 設定の行の見出しとして長く回りくどいため短くする (https://github.com/bannzai/Pilll/issues/2008)"
   },
   "pillSheet": "ピルシート",
   "@pillSheet": {
