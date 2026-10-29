@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Za početak prekida uzimanja pilule odaberite datum {date} ili raniji",
   "addPausePeriod": "Dodajte razdoblje prekida uzimanja",
   "addedPausePeriod": "Dodano je razdoblje prekida uzimanja pilula",
+  "pausePeriodOverlapsOther": "Ne možete odabrati razdoblje koje se preklapa s drugim razdobljem prekida uzimanja pilula",
   "plannedResumeDateOptional": "Planirani datum ponovnog uzimanja pilule (neobavezno)",
   "plannedResumeDateNotSet": "Nije postavljeno",
   "selectPlannedResumeDate": "Odaberite planirani datum ponovnog uzimanja pilule",
