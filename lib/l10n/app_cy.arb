@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Ar ôl nodi pilsen heddiw fel un sydd heb ei chymryd",
   "pauseTaking": "oedi",
   "changePauseStartDate": "Newid dyddiad dechrau'r oedi",
+  "pauseTakingPeriodEnded": "Mae eich cyfnod o oedi cyn cymryd y bilsen wedi dod i ben",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Newid nifer y diwrnodau cymryd y bilsen yn y stribed pils",
   "changedStartAndEndNumbers": "Mae'r rhifau dechrau a diwedd wedi'u newid",

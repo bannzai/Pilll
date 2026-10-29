@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Kun olet merkinnyt tämän päivän pillerin ottamattomaksi",
   "pauseTaking": "taukotila",
   "changePauseStartDate": "Vaihda taukotilan aloituspäivää",
+  "pauseTakingPeriodEnded": "Oma taukosi pillereiden ottamisesta on päättynyt",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Muuta pilleriliuskan ottopäivien määrää",
   "changedStartAndEndNumbers": "Aloitus- ja lopetusnumero muutettiin",

@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "د نن ورځې ګولۍ د نه اخیستل شوې په توګه تر نښه کولو وروسته",
   "pauseTaking": "لنډمهاله درول",
   "changePauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
+  "pauseTakingPeriodEnded": "د ګولۍ اخیستل مو چې په لنډمهاله توګه درولي وو، هغه موده پای ته ورسېده",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "د هرې پاڼې د ګولیو د اخیستو د ورځو شمېر بدل کړئ",
   "changedStartAndEndNumbers": "د پیل او پای شمېرې بدلې شوې",

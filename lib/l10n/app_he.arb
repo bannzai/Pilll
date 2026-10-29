@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "לאחר סימון הגלולה של היום ככזו שלא ניטלה",
   "pauseTaking": "השהיית נטילה",
   "changePauseStartDate": "שינוי תאריך ההתחלה של השהיית נטילה",
+  "pauseTakingPeriodEnded": "ההפסקה הזמנית בנטילת הגלולה הסתיימה",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "שינוי מספר ימי נטילת הגלולה בכל חפיסת גלולות",
   "changedStartAndEndNumbers": "המספרים ההתחלתי והסופי שונו",

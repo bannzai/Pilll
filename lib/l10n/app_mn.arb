@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Өнөөдрийн эмийг уугаагүй гэж тэмдэглэсний дараа",
   "pauseTaking": "түр завсарлага",
   "changePauseStartDate": "Түр завсарлага эхлэх өдрийг өөрчилнө үү",
+  "pauseTakingPeriodEnded": "Эмээ түр хугацаанд уухгүй байхаар сонгосон хугацаа дууссан",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Нэг эмийн блистерт эм уух өдрийн тоог өөрчлөх",
   "changedStartAndEndNumbers": "Эхлэх болон дуусах дугаарыг өөрчилсөн",

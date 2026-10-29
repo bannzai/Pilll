@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Бүгүнкү таблетканы ичиле элек деп белгилегенден кийин",
   "pauseTaking": "убактылуу токтотуу",
   "changePauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",
+  "pauseTakingPeriodEnded": "Таблетка ичүүнү убактылуу токтоткон мөөнөтүңүз аяктады",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Бир блистердеги таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "changedStartAndEndNumbers": "Баштапкы жана акыркы номерлер өзгөртүлдү",

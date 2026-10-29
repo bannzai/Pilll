@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Bugungi tabletkani qabul qilinmagan deb belgilaganingizdan soʻng",
   "pauseTaking": "pauza",
   "changePauseStartDate": "Pauza boshlanish sanasini oʻzgartiring",
+  "pauseTakingPeriodEnded": "Tabletkalarni qabul qilishdagi vaqtinchalik tanaffusingiz tugadi",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Har bir tabletka blisterdagi tabletkalarni qabul qilish kunlari sonini oʻzgartiring",
   "changedStartAndEndNumbers": "Boshlanish va tugash raqamlari oʻzgartirildi",

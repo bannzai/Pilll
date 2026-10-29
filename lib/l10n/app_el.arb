@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Αφού σημειώσετε το σημερινό χάπι ως μη ληφθέν",
   "pauseTaking": "παύση",
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της παύσης",
+  "pauseTakingPeriodEnded": "Η περίοδος που είχατε διακόψει προσωρινά τη λήψη του χαπιού έληξε",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Αλλαγή ημερών λήψης ανά καρτέλα χαπιών",
   "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",

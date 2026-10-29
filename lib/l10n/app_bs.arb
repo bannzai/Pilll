@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Nakon što današnju pilulu označite kao neuzetu",
   "pauseTaking": "prekid",
   "changePauseStartDate": "Promijenite datum početka prekida",
+  "pauseTakingPeriodEnded": "Završio je period Vaše pauze u uzimanju pilule",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Promijenite broj dana uzimanja pilula za blister",
   "changedStartAndEndNumbers": "Početni i završni brojevi su promijenjeni",

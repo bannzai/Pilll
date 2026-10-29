@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Miután a mai tablettát be nem szedettként jelölted meg",
   "pauseTaking": "szüneteltet",
   "changePauseStartDate": "A szüneteltetés kezdőnapjának módosítása",
+  "pauseTakingPeriodEnded": "Véget ért a tabletta szedésében tartott szüneted",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "A tablettaszedés napjainak módosítása tablettacsomagonként",
   "changedStartAndEndNumbers": "A kezdő és a záró szám megváltozott",

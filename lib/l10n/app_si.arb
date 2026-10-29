@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "අදට නියමිත පෙත්ත නොගත් බව සලකුණු කළ පසු",
   "pauseTaking": "පෙති ගැනීමේ විරාමය",
   "changePauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය වෙනස් කරන්න",
+  "pauseTakingPeriodEnded": "පෙති ගැනීම තාවකාලිකව නතර කර තිබූ කාලය අවසන් වී ඇත",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "එක් පෙති කාඩ්පතකින් පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "changedStartAndEndNumbers": "ආරම්භක සහ අවසාන අංක වෙනස් කර ඇත",

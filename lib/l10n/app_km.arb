@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "បន្ទាប់ពីសម្គាល់ថ្នាំគ្រាប់សម្រាប់ថ្ងៃនេះថាមិនទាន់បានលេប",
   "pauseTaking": "ផ្អាកការលេបថ្នាំ",
   "changePauseStartDate": "ប្ដូរថ្ងៃចាប់ផ្ដើមផ្អាកការលេបថ្នាំ",
+  "pauseTakingPeriodEnded": "រយៈពេលដែលអ្នកផ្អាកលេបថ្នាំគ្រាប់ជាបណ្តោះអាសន្នបានបញ្ចប់ហើយ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំក្នុងមួយបន្ទះ",
   "changedStartAndEndNumbers": "លេខចាប់ផ្តើម និងលេខបញ្ចប់ត្រូវបានផ្លាស់ប្តូរ",

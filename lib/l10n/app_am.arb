@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "የዛሬውን ክኒን እንዳልተወሰደ ምልክት ካደረጉ በኋላ",
   "pauseTaking": "ለጊዜው ማቆም",
   "changePauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይቀይሩ",
+  "pauseTakingPeriodEnded": "ክኒን መውሰድን ለጊዜው ያቆሙበት ጊዜ አብቅቷል",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "በአንድ ክኒን ሉህ ክኒን የሚወስዱባቸውን ቀናት ይቀይሩ",
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",

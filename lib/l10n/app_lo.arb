@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ຫຼັງຈາກໝາຍຢາເມັດຂອງມື້ນີ້ວ່າຍັງບໍ່ໄດ້ກິນ",
   "pauseTaking": "ຢຸດກິນຢາຊົ່ວຄາວ",
   "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
+  "pauseTakingPeriodEnded": "ໄລຍະທີ່ທ່ານພັກການກິນຢາເມັດເປັນການຊົ່ວຄາວໄດ້ສິ້ນສຸດແລ້ວ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ປ່ຽນຈຳນວນມື້ກິນຢາຕໍ່ແຜງ",
   "changedStartAndEndNumbers": "ປ່ຽນເລກເລີ່ມຕົ້ນ ແລະ ເລກສິ້ນສຸດແລ້ວ",

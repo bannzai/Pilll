@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Når du har markeret dagens p-pille som ikke taget",
   "pauseTaking": "indtagelsespause",
   "changePauseStartDate": "Skift startdato for indtagelsespause",
+  "pauseTakingPeriodEnded": "Din selvvalgte pause fra p-pillerne er slut",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Skift antal dage med p-piller pr. pillekort",
   "changedStartAndEndNumbers": "Start- og slutnummeret er ændret",

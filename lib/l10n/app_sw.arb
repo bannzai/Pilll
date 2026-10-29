@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Baada ya kuweka alama kuwa kidonge cha leo hakijamezwa",
   "pauseTaking": "kusitisha kumeza vidonge kwa muda",
   "changePauseStartDate": "Badilisha tarehe ya kuanza kusitisha kumeza kidonge",
+  "pauseTakingPeriodEnded": "Kipindi chako cha kusitisha kumeza vidonge kwa muda kimeisha",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Badilisha idadi ya siku za kumeza vidonge kwa kila pakiti",
   "changedStartAndEndNumbers": "Nambari za mwanzo na mwisho zimebadilishwa",

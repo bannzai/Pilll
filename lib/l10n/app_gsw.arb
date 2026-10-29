@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Wänn du d Pille vo hüt als nöd gnoh markiert hesch",
   "pauseTaking": "Iinahmepause",
   "changePauseStartDate": "Startdatum vo de Iinahmepause ändere",
+  "pauseTakingPeriodEnded": "Dini sälber gwählti Pause bim Pille näh isch verbii",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aazahl Iinahmtäg pro Pilleblister ändere",
   "changedStartAndEndNumbers": "D Aafangs- und Ändnummere sind gänderet",

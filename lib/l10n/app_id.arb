@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Setelah menandai pil hari ini sebagai belum diminum",
   "pauseTaking": "jeda minum",
   "changePauseStartDate": "Ubah tanggal mulai jeda minum",
+  "pauseTakingPeriodEnded": "Masa jeda Anda dari minum pil telah berakhir",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Ubah jumlah hari minum pil per strip pil",
   "changedStartAndEndNumbers": "Nomor awal dan akhir telah diubah",

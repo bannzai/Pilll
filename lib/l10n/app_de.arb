@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Nachdem du die Pille für heute als nicht eingenommen markiert hast",
   "pauseTaking": "Einnahmeunterbrechung",
   "changePauseStartDate": "Startdatum der Einnahmeunterbrechung ändern",
+  "pauseTakingPeriodEnded": "Deine selbst gewählte Pause bei der Pilleneinnahme ist zu Ende",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Anzahl der Einnahmetage pro Pillenblister ändern",
   "changedStartAndEndNumbers": "Start- und Endnummer wurden geändert",

@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "След като отбележите днешното хапче като неприето",
   "pauseTaking": "спиране на приема",
   "changePauseStartDate": "Промяна на началната дата на спиране на приема",
+  "pauseTakingPeriodEnded": "Периодът, в който временно спряхте приема на хапчето, приключи",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Промяна на броя дни за прием на хапчета от блистера",
   "changedStartAndEndNumbers": "Началният и крайният номер са променени",

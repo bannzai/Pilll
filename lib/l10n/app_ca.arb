@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Després de marcar la píndola d’avui com a no presa",
   "pauseTaking": "pausa",
   "changePauseStartDate": "Canvia la data d'inici de la pausa",
+  "pauseTakingPeriodEnded": "S'ha acabat la pausa que vas fer en la presa de la píndola",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Canvia el nombre de dies de presa de la píndola per blíster",
   "changedStartAndEndNumbers": "S'han canviat els números inicial i final",

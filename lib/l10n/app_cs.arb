@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Po označení dnešní pilulky jako neužité",
   "pauseTaking": "pozastavení užívání",
   "changePauseStartDate": "Změnit datum začátku pozastavení užívání",
+  "pauseTakingPeriodEnded": "Období dočasného přerušení užívání pilulek skončilo",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Změnit počet dní užívání pilulek z blistru",
   "changedStartAndEndNumbers": "Počáteční a koncové číslo byly změněny",

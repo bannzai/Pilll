@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "ఈ రోజు తీసుకోవాల్సిన మాత్రను 'తీసుకోలేదు'గా మార్చిన తర్వాత",
   "pauseTaking": "తాత్కాలిక విరామం",
   "changePauseStartDate": "తాత్కాలిక విరామం ప్రారంభ తేదీని మార్చండి",
+  "pauseTakingPeriodEnded": "మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపిన వ్యవధి ముగిసింది",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ప్రతి స్ట్రిప్‌లో మాత్రలు తీసుకునే రోజుల సంఖ్యను మార్చండి",
   "changedStartAndEndNumbers": "ప్రారంభ మరియు చివరి సంఖ్యలు మార్చబడ్డాయి",

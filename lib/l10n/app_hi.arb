@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "आज की गोली को नहीं ली गई के रूप में चिह्नित करने के बाद",
   "pauseTaking": "गोली लेने में विराम",
   "changePauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
+  "pauseTakingPeriodEnded": "गोली लेना कुछ समय के लिए रोकने की अवधि समाप्त हो गई है",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "हर स्ट्रिप में गोली लेने के दिनों की संख्या बदलें",
   "changedStartAndEndNumbers": "शुरुआत और अंत के नंबर बदल दिए गए हैं",

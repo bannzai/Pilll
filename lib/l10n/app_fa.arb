@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "پس از علامت‌گذاری قرص امروز به‌عنوان مصرف‌نشده",
   "pauseTaking": "توقف موقت مصرف",
   "changePauseStartDate": "تغییر تاریخ شروع توقف موقت مصرف",
+  "pauseTakingPeriodEnded": "دوره توقف موقت شما در مصرف قرص به پایان رسید",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "تغییر تعداد روزهای مصرف قرص در هر ورق",
   "changedStartAndEndNumbers": "شماره‌های شروع و پایان تغییر کردند",

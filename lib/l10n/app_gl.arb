@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Despois de marcar a pílula de hoxe como non tomada",
   "pauseTaking": "pausa na toma",
   "changePauseStartDate": "Cambiar a data de inicio da pausa na toma",
+  "pauseTakingPeriodEnded": "Rematou a pausa que fixeches na toma da pílula",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Cambia os días de toma por blíster",
   "changedStartAndEndNumbers": "Cambiáronse os números de inicio e fin",

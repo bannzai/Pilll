@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Gaurko pilula hartu gabe dagoela markatu ondoren",
   "pauseTaking": "etenaldi",
   "changePauseStartDate": "Aldatu etenaldiaren hasiera-data",
+  "pauseTakingPeriodEnded": "Pilulak hartzeko egin duzun etenaldia amaitu da",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aldatu blister bakoitzeko pilulak hartzeko egun kopurua",
   "changedStartAndEndNumbers": "Hasierako eta amaierako zenbakiak aldatu dira",

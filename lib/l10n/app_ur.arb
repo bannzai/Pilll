@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "آج کی گولی کو 'نہیں لی گئی' پر واپس کرنے کے بعد",
   "pauseTaking": "توقف",
   "changePauseStartDate": "گولی لینے میں توقف شروع ہونے کی تاریخ بدلیں",
+  "pauseTakingPeriodEnded": "گولیاں لینے میں آپ کے عارضی وقفے کی مدت ختم ہو گئی ہے",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "پٹی میں گولی لینے کے دنوں کی تعداد بدلیں",
   "changedStartAndEndNumbers": "ابتدائی اور آخری نمبر تبدیل کر دیے گئے ہیں",

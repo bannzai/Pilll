@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Pēc šodienas tabletes atzīmēšanas kā nelietotas",
   "pauseTaking": "lietošanas pauze",
   "changePauseStartDate": "Mainīt lietošanas pauzes sākuma datumu",
+  "pauseTakingPeriodEnded": "Jūsu izvēlētais tablešu lietošanas pārtraukums ir beidzies",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Mainīt tablešu lietošanas dienu skaitu vienā tablešu blisterī",
   "changedStartAndEndNumbers": "Sākuma un beigu numuri ir mainīti",
