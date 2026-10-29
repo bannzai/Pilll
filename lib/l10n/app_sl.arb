@@ -387,6 +387,7 @@
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",
   "changePausePeriod": "Sprememba obdobja prekina",
+  "changedPausePeriod": "Obdobje prekina jemanja tablet je spremenjeno",
   "changedToDate": "Datum je spremenjen na {date}",
   "quickRecordTakePillFailed": "Beleženje jemanja morda ni uspelo",
   "quickRecordTakePillFailedMessage": "Odprite aplikacijo in preverite",
