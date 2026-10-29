@@ -114,6 +114,7 @@
   "takingTime": "ម៉ោងលេបថ្នាំគ្រាប់",
   "takingHistoryIsPremiumFeature": "ប្រវត្តិលេបថ្នាំគឺជាមុខងារព្រីមៀម",
   "pauseTakingDoesNotAdvancePillNumber": "ពេលអ្នកផ្អាកការលេបថ្នាំបណ្តោះអាសន្ន លេខគ្រាប់ថ្នាំនឹងមិនបន្តទៅមុខទេ",
+  "pauseTakingFromNumber": "តើអ្នកចង់ផ្អាកការលេបថ្នាំគ្រាប់ជាបណ្ដោះអាសន្ន ចាប់ពីគ្រាប់លេខ {number} ដែរឬទេ?",
   "lastTakenPlusOnePillNumber": "គ្រាប់ថ្នាំលេខ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ការលេបថ្នាំគ្រាប់",
   "estimatedEndPillNumber": "គ្រាប់ថ្នាំចុងក្រោយក្នុងបន្ទះថ្នាំគ្រាប់មុន៖ លេខ {estimatedEndPillNumber}",

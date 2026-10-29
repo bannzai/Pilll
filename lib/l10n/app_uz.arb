@@ -114,6 +114,7 @@
   "takingTime": "Tabletkani qabul qilish vaqti",
   "takingHistoryIsPremiumFeature": "Qabul qilish tarixi Premium funksiyasidir",
   "pauseTakingDoesNotAdvancePillNumber": "Agar siz tabletkalarni qabul qilishni vaqtincha toʻxtatsangiz, tabletka raqam oʻzgarmaydi",
+  "pauseTakingFromNumber": "{number}-raqamli tabletkadan boshlab tabletkalarni qabul qilishni vaqtincha toʻxtatmoqchimisiz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}-raqamli tabletka",
   "taking": "Tabletkani qabul qilish",
   "estimatedEndPillNumber": "Oldingi tabletka blisterdagi oxirgi tabletka: {estimatedEndPillNumber}-raqam",

@@ -114,6 +114,7 @@
   "takingTime": "Ora la care iei pilula",
   "takingHistoryIsPremiumFeature": "Istoricul administrării pilulei este o funcție premium",
   "pauseTakingDoesNotAdvancePillNumber": "Dacă faci o pauză de la administrarea pilulei, numărul pilulei nu va avansa",
+  "pauseTakingFromNumber": "Vrei să întrerupi temporar administrarea pilulelor începând cu pilula numărul {number}?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Administrarea pilulei",
   "estimatedEndPillNumber": "Ultima pilulă din blisterul anterior: nr. {estimatedEndPillNumber}",

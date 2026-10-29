@@ -114,6 +114,7 @@
   "takingTime": "Час за прием на хапчето",
   "takingHistoryIsPremiumFeature": "История на приема е премиум функция",
   "pauseTakingDoesNotAdvancePillNumber": "Когато временно спрете приема, номер на хапче няма да се променя",
+  "pauseTakingFromNumber": "Искате ли да спрете временно приема на хапчетата от хапче № {number}?",
   "lastTakenPlusOnePillNumber": "хапче № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прием на хапчето",
   "estimatedEndPillNumber": "Последното хапче от предишния блистер: № {estimatedEndPillNumber}",

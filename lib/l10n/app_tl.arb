@@ -114,6 +114,7 @@
   "takingTime": "Oras ng pag-inom ng pildoras",
   "takingHistoryIsPremiumFeature": "Ang kasaysayan ng pag-inom ng pildoras ay tampok ng Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Kapag pansamantala kayong huminto sa pag-inom ng pildoras, hindi uusad ang numero ng pildoras",
+  "pauseTakingFromNumber": "Gusto po ba ninyong pansamantalang ihinto ang pag-inom ng pildoras simula sa pildoras bilang {number}?",
   "lastTakenPlusOnePillNumber": "Blg. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pag-inom ng pildoras",
   "estimatedEndPillNumber": "Huling pildoras sa nakaraang pakete: blg. {estimatedEndPillNumber}",

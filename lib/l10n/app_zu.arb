@@ -114,6 +114,7 @@
   "takingTime": "Isikhathi sokuphuza iphilisi",
   "takingHistoryIsPremiumFeature": "Umlando wokuphuza amaphilisi uyisici se-Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Uma uthatha ikhefu ekuphuzeni amaphilisi, inombolo yephilisi ngeke iqhubekele phambili",
+  "pauseTakingFromNumber": "Ungathanda yini ukumisa ukuphuza amaphilisi okwesikhashana kusukela ephilisini elingunombolo {number}?",
   "lastTakenPlusOnePillNumber": "Iphilisi elingunombolo {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ukuphuza iphilisi",
   "estimatedEndPillNumber": "Iphilisi lokugcina eshidini langaphambilini: inombolo {estimatedEndPillNumber}",

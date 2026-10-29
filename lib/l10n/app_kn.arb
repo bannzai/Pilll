@@ -114,6 +114,7 @@
   "takingTime": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ",
   "takingHistoryIsPremiumFeature": "ಸೇವನೆಯ ಇತಿಹಾಸ ಪ್ರೀಮಿಯಂ ವೈಶಿಷ್ಟ್ಯವಾಗಿದೆ",
   "pauseTakingDoesNotAdvancePillNumber": "ನೀವು ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸಿದರೆ, ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಮುಂದುವರಿಯುವುದಿಲ್ಲ",
+  "pauseTakingFromNumber": "{number}ನೇ ಮಾತ್ರೆಯಿಂದ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸಲು ಬಯಸುವಿರಾ?",
   "lastTakenPlusOnePillNumber": "ಸಂ. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು",
   "estimatedEndPillNumber": "ಹಿಂದಿನ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಕೊನೆಯ ಮಾತ್ರೆ: ಸಂಖ್ಯೆ {estimatedEndPillNumber}",

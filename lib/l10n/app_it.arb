@@ -114,6 +114,7 @@
   "takingTime": "Orario di assunzione della pillola",
   "takingHistoryIsPremiumFeature": "Lo storico delle assunzioni è una funzione Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Se metti in pausa l’assunzione della pillola, il numero della pillola non avanzerà",
+  "pauseTakingFromNumber": "Vuoi fare una pausa nell'assunzione della pillola a partire dalla numero {number}?",
   "lastTakenPlusOnePillNumber": "Pillola n. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Assunzione della pillola",
   "estimatedEndPillNumber": "Ultima pillola del blister precedente: n. {estimatedEndPillNumber}",

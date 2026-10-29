@@ -114,6 +114,7 @@
   "takingTime": "Ora e marrjes së pilulës",
   "takingHistoryIsPremiumFeature": "Historia e marrjes është veçori premium",
   "pauseTakingDoesNotAdvancePillNumber": "Nëse e ndërprisni përkohësisht marrjen e pilulës, numri i pilulës nuk do të ecë përpara",
+  "pauseTakingFromNumber": "Dëshironi ta ndërprisni përkohësisht marrjen e pilulave duke filluar nga pilula numër {number}?",
   "lastTakenPlusOnePillNumber": "Pilula nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Marrja e pilulës",
   "estimatedEndPillNumber": "Pilula e fundit në blisterin e mëparshëm: nr. {estimatedEndPillNumber}",

@@ -114,6 +114,7 @@
   "takingTime": "وقت تناول الحبة",
   "takingHistoryIsPremiumFeature": "سجل تناول الحبوب من ميزات بريميوم",
   "pauseTakingDoesNotAdvancePillNumber": "عند إيقاف تناول الحبوب مؤقتا، لن يتقدم رقم الحبة",
+  "pauseTakingFromNumber": "هل ترغبين في إيقاف تناول الحبوب مؤقتا بدءا من الحبة رقم {number}؟",
   "lastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "تناول الحبة",
   "estimatedEndPillNumber": "آخر حبة في الشريط السابق: رقم {estimatedEndPillNumber}",

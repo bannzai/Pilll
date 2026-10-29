@@ -114,6 +114,7 @@
   "takingTime": "약 복용 시간",
   "takingHistoryIsPremiumFeature": "복용 내역은 프리미엄 기능이에요",
   "pauseTakingDoesNotAdvancePillNumber": "복용을 잠시 쉬는 동안 알약 번호는 다음으로 넘어가지 않아요",
+  "pauseTakingFromNumber": "{number}번 알약부터 복용을 잠시 쉬시겠어요?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번 알약",
   "taking": "복용",
   "estimatedEndPillNumber": "이전 시트의 마지막 알약: {estimatedEndPillNumber}번",

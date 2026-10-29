@@ -114,6 +114,7 @@
   "takingTime": "ဆေးပြားသောက်ချိန်",
   "takingHistoryIsPremiumFeature": "ဆေးသောက်ခဲ့သည့်စာရင်းက ပရီမီယံ လုပ်ဆောင်ချက် ဖြစ်ပါတယ်",
   "pauseTakingDoesNotAdvancePillNumber": "ဆေးပြားသောက်ခြင်းကို ခဏရပ်ထားလျှင် ဆေးပြားနံပါတ် ရှေ့ဆက်မတိုးပါ",
+  "pauseTakingFromNumber": "ဆေးလုံးအမှတ် {number} မှစပြီး ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားလိုပါသလား?",
   "lastTakenPlusOnePillNumber": "ဆေးပြားနံပါတ် {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ဆေးပြားသောက်ခြင်း",
   "estimatedEndPillNumber": "ယခင်ဆေးပြားကတ်ရဲ့ နောက်ဆုံး: နံပါတ် {estimatedEndPillNumber}",

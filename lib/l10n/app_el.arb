@@ -114,6 +114,7 @@
   "takingTime": "Ώρα λήψης του χαπιού",
   "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι λειτουργία Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Αν διακόψετε προσωρινά τη λήψη, ο αριθμό χαπιού δεν θα προχωρήσει",
+  "pauseTakingFromNumber": "Θέλετε να διακόψετε προσωρινά τη λήψη των χαπιών από το χάπι με αριθμό {number};",
   "lastTakenPlusOnePillNumber": "Χάπι αρ. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Λήψη χαπιού",
   "estimatedEndPillNumber": "Τελευταίο χάπι στην προηγούμενη καρτέλα: αρ. {estimatedEndPillNumber}",
