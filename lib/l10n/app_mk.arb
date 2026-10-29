@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "бр. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "бр. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Избор на датум за почеток на пауза во земањето апчиња",
+  "selectPausePeriod": "Избор на период за пауза во земањето апчиња",
   "endPillSheet": "Крај на блистер",
   "discardPillSheet": "Бришење блистер",
   "takingTime": "Време за земање таблета",
