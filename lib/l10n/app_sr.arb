@@ -114,6 +114,7 @@
   "takingTime": "Време узимања пилуле",
   "takingHistoryIsPremiumFeature": "Историја узимања је премијум функција",
   "pauseTakingDoesNotAdvancePillNumber": "Током прекида узимања пилуле, број пилуле се неће померати",
+  "pauseTakingFromNumber": "Желите ли да започнете прекид узимања пилула од пилуле број {number}?",
   "lastTakenPlusOnePillNumber": "Пилула бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Узимање пилуле",
   "estimatedEndPillNumber": "Последња пилула у претходном блистеру: бр. {estimatedEndPillNumber}",
