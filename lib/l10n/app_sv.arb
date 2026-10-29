@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "nr 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Välj startdatum för paus i intaget",
+  "selectPausePeriod": "Välj pausens längd",
   "endPillSheet": "Avslutad p-pillerkarta",
   "discardPillSheet": "Borttagen p-pillerkarta",
   "takingTime": "Intagstid",

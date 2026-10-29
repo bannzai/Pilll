@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "č. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Č. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vyberte dátum, od ktorého chcete pozastaviť užívanie",
+  "selectPausePeriod": "Vyberte obdobie pozastavenia užívania",
   "endPillSheet": "Blist sa skončil",
   "discardPillSheet": "Vyhodiť blist",
   "takingTime": "Čas užitia tabletky",

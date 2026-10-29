@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}号",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}号",
   "selectPauseStartDate": "选择暂停服药的开始日期",
+  "selectPausePeriod": "选择暂停服药的时长",
   "endPillSheet": "药板已用完",
   "discardPillSheet": "删除药板",
   "takingTime": "服药时间",

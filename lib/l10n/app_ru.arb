@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Выберите дату начала приостановки приёма",
+  "selectPausePeriod": "Выберите период приостановки приёма",
   "endPillSheet": "Блистер закончился",
   "discardPillSheet": "Блистер удалён",
   "takingTime": "Время приёма таблетки",

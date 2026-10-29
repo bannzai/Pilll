@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ቁጥር 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ቁጥር {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይምረጡ",
+  "selectPausePeriod": "ለጊዜው ማቆም የሚቆይበትን ጊዜ ይምረጡ",
   "endPillSheet": "ክኒን ሉህ ተጠናቋል",
   "discardPillSheet": "ክኒን ሉህ ማስወገድ",
   "takingTime": "የክኒን መውሰጃ ሰዓት",

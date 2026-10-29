@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "نمبر 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "نمبر {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "گولی لینے میں توقف شروع ہونے کی تاریخ منتخب کریں",
+  "selectPausePeriod": "توقف کی مدت منتخب کریں",
   "endPillSheet": "گولیوں کی پٹی ختم ہو گئی",
   "discardPillSheet": "گولیوں کی پٹی ہٹا دی گئی",
   "takingTime": "گولی لینے کا وقت",

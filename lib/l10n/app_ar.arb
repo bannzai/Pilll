@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "الأرقام من 1 إلى {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "اختيار تاريخ بدء إيقاف تناول الحبوب",
+  "selectPausePeriod": "اختاري مدة إيقاف تناول الحبوب",
   "endPillSheet": "انتهى شريط الحبوب",
   "discardPillSheet": "التخلص من شريط الحبوب",
   "takingTime": "وقت تناول الحبة",

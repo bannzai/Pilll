@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "क्रमांक 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "क्रमांक {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "सेवन विराम सुरू होण्याची तारीख निवडा",
+  "selectPausePeriod": "सेवन विरामाचा कालावधी निवडा",
   "endPillSheet": "पिल शीट संपली",
   "discardPillSheet": "पिल शीट काढून टाकली",
   "takingTime": "गोळी घेण्याची वेळ",

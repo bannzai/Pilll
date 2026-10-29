@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Izvēlieties lietošanas pauzes sākuma datumu",
+  "selectPausePeriod": "Izvēlieties lietošanas pauzes ilgumu",
   "endPillSheet": "Tablešu blisteris pabeigts",
   "discardPillSheet": "Tablešu blisteris izmests",
   "takingTime": "Tabletes lietošanas laiks",

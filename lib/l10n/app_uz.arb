@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "selectPauseStartDate": "Pauza boshlanadigan sanani tanlang",
+  "selectPausePeriod": "Pauza muddatini tanlang",
   "endPillSheet": "tabletka blister tugadi",
   "discardPillSheet": "tabletka blister oʻchirildi",
   "takingTime": "Tabletkani qabul qilish vaqti",

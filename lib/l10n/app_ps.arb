@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} شمېره",
   "beforeEndToAfterDisplayNumberEndPillNumber": "شمېره {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "د لنډمهاله درول د پیل نېټه وټاکئ",
+  "selectPausePeriod": "د لنډمهاله درول موده وټاکئ",
   "endPillSheet": "د ګولیو پاڼه پای ته ورسېده",
   "discardPillSheet": "د ګولیو پاڼې لرې کول",
   "takingTime": "د ګولۍ اخیستلو وخت",
