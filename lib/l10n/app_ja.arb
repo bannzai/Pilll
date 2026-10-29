@@ -730,7 +730,7 @@
   },
   "number": "番",
   "@number": {
-    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。\n[翻訳の決定 en] 「No. 1」ではなく「 (pill)」: このキーは数字の後ろに連結する接尾辞で、前置の「No. 1」は arb の訳だけでは作れない。空文字にするとリマインダー通知のタイトルで番号だけになるため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「n° 1」ではなく「 (pilule)」: このキーは数字の後ろに連結する接尾辞で、前置の「n° 1」は arb の訳だけでは作れないため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/2004)"
   },
   "dayNumber": "日目",
   "@dayNumber": {
