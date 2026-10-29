@@ -33,11 +33,15 @@ void main() {
 
         expect(tester.takeException(), isNull);
         final paragraph = tester.renderObject<RenderParagraph>(find.text(text));
-        final lines = paragraph.computeLineMetrics();
-        expect(lines.length, 2);
+        final lineTops = paragraph
+            .getBoxesForSelection(const TextSelection(baseOffset: 0, extentOffset: text.length))
+            .map((box) => box.top)
+            .toSet()
+            .toList()
+          ..sort();
+        expect(lineTops.length, 2);
         // 2 行目が「eingenommen」1 語だけで、語の途中で折り返していない
-        final secondLineStart =
-            paragraph.getPositionForOffset(Offset(0, lines[1].baseline)).offset;
+        final secondLineStart = paragraph.getPositionForOffset(Offset(0, lineTops[1] + 1)).offset;
         expect(text.substring(secondLineStart).trim(), 'eingenommen');
         expect(
           tester.getRect(find.text(text)).width,

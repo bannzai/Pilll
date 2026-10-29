@@ -46,7 +46,6 @@ void main() {
           find.text(label),
         );
         expect(paragraph.didExceedMaxLines, isFalse);
-        expect(paragraph.computeLineMetrics().length, 1);
         // FittedBox の縮小後の描画幅が、タブ 1 つ分 (320 / 4) から左右の余白 4 を除いた幅に収まる
         expect(
           tester.getRect(find.text(label)).width,

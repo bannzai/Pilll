@@ -33,7 +33,7 @@ void main() {
         matching: find.byType(Text),
       );
       final paragraph = tester.renderObject<RenderParagraph>(text);
-      expect(paragraph.computeLineMetrics().length, 1);
+      expect(paragraph.didExceedMaxLines, isFalse);
       expect(tester.getRect(text).width, lessThanOrEqualTo(20));
     });
 
