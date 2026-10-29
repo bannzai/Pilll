@@ -113,7 +113,7 @@
   "discardPillSheet": "删除药板",
   "takingTime": "服药时间",
   "takingHistoryIsPremiumFeature": "服药历史是高级功能",
-  "pauseTakingDoesNotAdvancePillNumber": "暂停服药期间，药片编号不会往后顺延",
+  "pauseTakingDoesNotAdvancePillNumber": "暂停服药期间，药片编号不会增加",
   "pauseTakingFromNumber": "要从 {number} 号开始暂停服药吗？",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}号",
   "taking": "服药",
