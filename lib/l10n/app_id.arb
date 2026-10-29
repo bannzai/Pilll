@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "kali minum pil",
   "duringPauseTaking": "jeda minum sedang berlangsung",
   "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diminum, Anda tidak dapat menggunakan fitur “jeda minum”",
+  "pauseTakingStarted": "Jeda minum pil telah dimulai",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Bagikan kepada teman",
   "termsOfService": "Ketentuan penggunaan",

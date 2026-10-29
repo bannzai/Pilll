@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "gange om dagen",
   "duringPauseTaking": "indtagelsespause i gang",
   "cannotPauseAlreadyTakenToday": "Hvis du allerede har taget dagens p-pille, kan du ikke bruge »indtagelsespause«",
+  "pauseTakingStarted": "Din indtagelsespause er begyndt",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Del med venner",
   "termsOfService": "Brugsvilkår",

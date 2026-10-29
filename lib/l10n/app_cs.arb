@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "krát denně",
   "duringPauseTaking": "probíhá pozastavení užívání",
   "cannotPauseAlreadyTakenToday": "Pokud už byla dnešní pilulka užita, nelze použít „pozastavení užívání“",
+  "pauseTakingStarted": "Začalo pozastavení užívání",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Doporučit přátelům",
   "termsOfService": "Podmínky používání",

@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "пъти",
   "duringPauseTaking": "спиране на приема в момента",
   "cannotPauseAlreadyTakenToday": "Ако вече сте взели днешното хапче, не можете да използвате „спиране на приема“",
+  "pauseTakingStarted": "Започна спиране на приема",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Споделете с приятели",
   "termsOfService": "Условия за ползване",

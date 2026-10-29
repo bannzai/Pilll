@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "kali mengambil pil",
   "duringPauseTaking": "jeda pengambilan pil sedang berlangsung",
   "cannotPauseAlreadyTakenToday": "Jika pil hari ini sudah diambil, anda tidak boleh menggunakan “jeda pengambilan pil”",
+  "pauseTakingStarted": "Jeda pengambilan pil telah bermula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Kongsi dengan rakan",
   "termsOfService": "Terma penggunaan",

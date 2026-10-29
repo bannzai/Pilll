@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "рет қабылдау",
   "duringPauseTaking": "қабылдаудағы кідіріс жалғасуда",
   "cannotPauseAlreadyTakenToday": "Бүгінгі таблетканы ішіп қойған болсаңыз, «кідіріс» мүмкіндігін пайдалана алмайсыз",
+  "pauseTakingStarted": "Таблетка қабылдаудағы кідіріс басталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Достарыңызға ұсыныңыз",
   "termsOfService": "Пайдалану шарттары",

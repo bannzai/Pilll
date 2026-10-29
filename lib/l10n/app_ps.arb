@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "ځله ګولۍ واخلئ",
   "duringPauseTaking": "د ګولیو اخیستل لنډمهاله درول شوي",
   "cannotPauseAlreadyTakenToday": "که د نن ورځې ګولۍ مو لا مخکې خوړلې وي، «لنډمهاله درول» نه شئ کارولی",
+  "pauseTakingStarted": "د ګولیو اخیستلو لنډمهاله درول پیل شول",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "له ملګرو سره یې شریک کړئ",
   "termsOfService": "د کارونې شرایط",

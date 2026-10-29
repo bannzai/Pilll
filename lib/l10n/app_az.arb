@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "dəfə qəbul etmək",
   "duringPauseTaking": "Həb qəbuluna fasilə davam edir",
   "cannotPauseAlreadyTakenToday": "Bugünkü həbi artıq qəbul etmisinizsə, «Həb qəbuluna fasilə» funksiyasından istifadə edə bilməzsiniz",
+  "pauseTakingStarted": "Həb qəbuluna fasilə başladı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Dostlarınıza tövsiyə edin",
   "termsOfService": "İstifadə şərtləri",

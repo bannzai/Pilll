@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "k.",
   "duringPauseTaking": "pristabdytas tablečių vartojimas",
   "cannotPauseAlreadyTakenToday": "Jei šiandienos tabletė jau išgerta, funkcijos „pristabd“ naudoti negalite",
+  "pauseTakingStarted": "Prasidėjo vartojimo pristabdymas",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Pasidalykite su draugais",
   "termsOfService": "Naudojimo sąlygos",

@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "회 복용해요",
   "duringPauseTaking": "복용 일시 중지 중",
   "cannotPauseAlreadyTakenToday": "오늘 먹을 피임약을 이미 복용했다면 ‘일시 중지’를 사용할 수 없어요",
+  "pauseTakingStarted": "일시 중지가 시작됐어요",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "친구에게 추천하기",
   "termsOfService": "이용약관",

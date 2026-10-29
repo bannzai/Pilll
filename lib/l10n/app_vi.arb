@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "lần",
   "duringPauseTaking": "Đang tạm ngừng uống thuốc",
   "cannotPauseAlreadyTakenToday": "Nếu bạn đã uống viên thuốc hôm nay, bạn không thể dùng tính năng “tạm ngừng uống thuốc”",
+  "pauseTakingStarted": "Đã bắt đầu tạm ngừng uống thuốc",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Giới thiệu cho bạn bè",
   "termsOfService": "Điều khoản sử dụng",

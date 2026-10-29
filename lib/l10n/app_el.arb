@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "φορές την ημέρα",
   "duringPauseTaking": "παύση λήψης σε εξέλιξη",
   "cannotPauseAlreadyTakenToday": "Αν έχετε πάρει ήδη το σημερινό χάπι, δεν μπορείτε να χρησιμοποιήσετε την «παύση»",
+  "pauseTakingStarted": "Η παύση λήψης ξεκίνησε",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Μοιραστείτε το με φίλους",
   "termsOfService": "Όροι χρήσης",

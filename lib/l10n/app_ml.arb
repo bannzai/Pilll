@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "തവണ ഗുളിക കഴിക്കുക",
   "duringPauseTaking": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തിയിരിക്കുന്നു",
   "cannotPauseAlreadyTakenToday": "ഇന്നത്തെ ഗുളിക ഇതിനകം കഴിച്ചിട്ടുണ്ടെങ്കിൽ, കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്താൻ കഴിയില്ല",
+  "pauseTakingStarted": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്താൻ തുടങ്ങി",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "സുഹൃത്തുക്കളോട് പറയൂ",
   "termsOfService": "ഉപയോഗ നിബന്ധനകൾ",

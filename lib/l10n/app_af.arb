@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "keer per dag",
   "duringPauseTaking": "Innameonderbreking aan die gang",
   "cannotPauseAlreadyTakenToday": "As jy vandag se pil reeds geneem het, kan jy nie innameonderbreking gebruik nie",
+  "pauseTakingStarted": "Jou innameonderbreking het begin",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Vertel jou vriende",
   "termsOfService": "Gebruiksvoorwaardes",

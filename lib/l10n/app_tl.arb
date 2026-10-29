@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "beses uminom ng pildoras",
   "duringPauseTaking": "Kasalukuyang paghinto sa pag-inom ng pildoras",
   "cannotPauseAlreadyTakenToday": "Kung nainom na ninyo ang pildoras para sa araw na ito, hindi ninyo magagamit ang “paghinto sa pag-inom”",
+  "pauseTakingStarted": "Nagsimula na ang paghinto sa pag-inom ng pildoras",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga tuntunin sa paggamit",

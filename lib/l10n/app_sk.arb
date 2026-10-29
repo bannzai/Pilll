@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "krát denne",
   "duringPauseTaking": "pozastavené užívanie tabletiek",
   "cannotPauseAlreadyTakenToday": "Ak ste už užili dnešnú tabletku, užívanie nie je možné pozastaviť",
+  "pauseTakingStarted": "Začalo sa pozastavenie užívania tabletiek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Odporučte priateľom",
   "termsOfService": "Podmienky používania",

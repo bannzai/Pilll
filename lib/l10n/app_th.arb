@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "ครั้ง",
   "duringPauseTaking": "กำลังหยุดกินยาชั่วคราว",
   "cannotPauseAlreadyTakenToday": "หากทานยาเม็ดของวันนี้แล้ว จะใช้ฟีเจอร์ “หยุดกินยาชั่วคราว” ไม่ได้ค่ะ",
+  "pauseTakingStarted": "เริ่มหยุดกินยาชั่วคราวแล้วค่ะ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "แนะนำให้เพื่อน",
   "termsOfService": "ข้อกำหนดการใช้งาน",

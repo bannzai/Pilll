@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "פעמים ביום",
   "duringPauseTaking": "השהיית נטילה פעילה",
   "cannotPauseAlreadyTakenToday": "אם הגלולה של היום כבר ניטלה, לא ניתן להשתמש ב״השהיית נטילה״",
+  "pauseTakingStarted": "השהיית נטילה החלה",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "לשתף עם חברים",
   "termsOfService": "תנאי שימוש",

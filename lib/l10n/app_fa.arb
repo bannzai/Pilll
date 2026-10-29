@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "بار مصرف",
   "duringPauseTaking": "توقف موقت مصرف در جریان است",
   "cannotPauseAlreadyTakenToday": "اگر قرص امروز را مصرف کرده‌اید، نمی‌توانید از «توقف موقت مصرف» استفاده کنید",
+  "pauseTakingStarted": "توقف موقت مصرف آغاز شد",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "به دوستانتان معرفی کنید",
   "termsOfService": "شرایط استفاده",

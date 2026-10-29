@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "ଥର ବଟିକା ଖାଇବା",
   "duringPauseTaking": "ସେବନ ବିରତି ଚାଲିଛି",
   "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ଆଗରୁ ନେଇସାରିଥିଲେ, ଆପଣ ‘ସେବନ ବିରତି’ ବ୍ୟବହାର କରିପାରିବେ ନାହିଁ",
+  "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ ହୋଇଛି",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ବନ୍ଧୁମାନଙ୍କୁ ଜଣାନ୍ତୁ",
   "termsOfService": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",

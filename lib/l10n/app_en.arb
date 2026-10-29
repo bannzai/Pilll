@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "times a day",
   "duringPauseTaking": "Taking a pause",
   "cannotPauseAlreadyTakenToday": "If you’ve already taken today’s pill, you can’t use “pause”",
+  "pauseTakingStarted": "Your pause has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Share with friends",
   "termsOfService": "Terms of service",

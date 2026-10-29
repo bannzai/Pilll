@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "reizes",
   "duringPauseTaking": "lietošanas pauze turpinās",
   "cannotPauseAlreadyTakenToday": "Ja šodienas tablete jau ir iedzerta, funkciju „lietošanas pauz“ nevar izmantot",
+  "pauseTakingStarted": "Ir sākusies lietošanas pauze",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ieteikt draugiem",
   "termsOfService": "Lietošanas noteikumi",

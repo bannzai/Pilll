@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "удаа ууна",
   "duringPauseTaking": "түр завсарлага үргэлжилж байна",
   "cannotPauseAlreadyTakenToday": "Өнөөдрийн эмээ уусан бол «түр завсарлаг» горимыг ашиглах боломжгүй",
+  "pauseTakingStarted": "Эм уух түр завсарлага эхэлсэн",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Найзууддаа санал болгох",
   "termsOfService": "Үйлчилгээний нөхцөл",
