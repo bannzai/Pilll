@@ -561,6 +561,7 @@
   "addPausePeriod": "सेवन विरामको अवधि थप्नुहोस्",
   "addedPausePeriod": "सेवन विराम अवधि थपिएको छ",
   "pausePeriodOverlapsOther": "अर्को सेवन विरामको अवधिसँग जुध्ने अवधि छान्न सकिँदैन",
+  "pauseEndDateMustBeAfterStartDate": "सेवन विराम समाप्त हुने मिति सुरु हुने मितिभन्दा पछिको छान्नुहोस्",
   "plannedResumeDateOptional": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "अझै तय गरिएको छैन",
   "selectPlannedResumeDate": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति छान्नुहोस्",

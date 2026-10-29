@@ -561,6 +561,7 @@
   "addPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਸ਼ਾਮਲ ਕਰੋ",
   "addedPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਜੋੜ ਦਿੱਤੀ ਗਈ ਹੈ",
   "pausePeriodOverlapsOther": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਕਿਸੇ ਹੋਰ ਮਿਆਦ ਨਾਲ ਮੇਲ ਖਾਂਦੀ ਮਿਆਦ ਤੁਸੀਂ ਨਹੀਂ ਚੁਣ ਸਕਦੇ",
+  "pauseEndDateMustBeAfterStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਸਮਾਪਤੀ ਲਈ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਤੋਂ ਬਾਅਦ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
   "plannedResumeDateOptional": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਤਾਰੀਖ (ਵਿਕਲਪਿਕ)",
   "plannedResumeDateNotSet": "ਹਾਲੇ ਤੈਅ ਨਹੀਂ ਕੀਤਾ",
   "selectPlannedResumeDate": "ਗੋਲੀ ਦੁਬਾਰਾ ਲੈਣ ਦੀ ਯੋਜਨਾਬੱਧ ਤਾਰੀਖ ਚੁਣੋ",

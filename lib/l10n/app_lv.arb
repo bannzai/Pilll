@@ -561,6 +561,7 @@
   "addPausePeriod": "Pievienot lietošanas pauzes periodu",
   "addedPausePeriod": "Lietošanas pauzes periods ir pievienots",
   "pausePeriodOverlapsOther": "Nevarat izvēlēties periodu, kas pārklājas ar citu lietošanas pauzes periodu",
+  "pauseEndDateMustBeAfterStartDate": "Izvēlieties lietošanas pauzes beigu datumu, kas ir pēc sākuma datuma",
   "plannedResumeDateOptional": "Plānotais datums, kad atsāksiet lietot tabletes (nav obligāti)",
   "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto datumu, kad atsāksiet lietot tabletes",

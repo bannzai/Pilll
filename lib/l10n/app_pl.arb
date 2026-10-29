@@ -561,6 +561,7 @@
   "addPausePeriod": "Dodaj okres wstrzymania przyjmowania",
   "addedPausePeriod": "Dodano okres, w którym przyjmowanie jest wstrzymane",
   "pausePeriodOverlapsOther": "Nie można wybrać okresu, który pokrywa się z innym okresem wstrzymania przyjmowania",
+  "pauseEndDateMustBeAfterStartDate": "Wybierz datę zakończenia wstrzymania przyjmowania tabletek późniejszą niż data rozpoczęcia",
   "plannedResumeDateOptional": "Planowana data wznowienia przyjmowania tabletek (opcjonalnie)",
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania tabletek",

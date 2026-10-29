@@ -561,6 +561,7 @@
   "addPausePeriod": "הוספת תקופה של השהיית נטילה",
   "addedPausePeriod": "נוספה תקופה של השהיית נטילה",
   "pausePeriodOverlapsOther": "לא ניתן לבחור תקופה שחופפת לתקופה אחרת של השהיית נטילה",
+  "pauseEndDateMustBeAfterStartDate": "יש לבחור תאריך סיום להשהיית נטילה שחל אחרי תאריך ההתחלה",
   "plannedResumeDateOptional": "תאריך מתוכנן לחידוש נטילת הגלולה (לא חובה)",
   "plannedResumeDateNotSet": "טרם נקבע",
   "selectPlannedResumeDate": "לבחור את התאריך המתוכנן לחידוש נטילת הגלולה",

@@ -561,6 +561,7 @@
   "addPausePeriod": "የለጊዜው ማቆም ጊዜ ያክሉ",
   "addedPausePeriod": "የለጊዜው ማቆም ጊዜ ተጨምሯል",
   "pausePeriodOverlapsOther": "ከሌላ ለጊዜው ማቆም ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይችሉም",
+  "pauseEndDateMustBeAfterStartDate": "ለጊዜው ማቆም የሚያበቃበት ቀን ከመጀመሪያው ቀን በኋላ እንዲሆን ይምረጡ",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ እንደገና ለመጀመር ያቀዱበትን ቀን ይምረጡ",

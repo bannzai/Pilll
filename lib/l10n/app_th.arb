@@ -561,6 +561,7 @@
   "addPausePeriod": "เพิ่มช่วงหยุดกินยาชั่วคราว",
   "addedPausePeriod": "เพิ่มช่วงหยุดกินยาชั่วคราวแล้วค่ะ",
   "pausePeriodOverlapsOther": "ไม่สามารถเลือกช่วงเวลาที่ทับซ้อนกับช่วงหยุดกินยาชั่วคราวอื่นได้ค่ะ",
+  "pauseEndDateMustBeAfterStartDate": "โปรดเลือกวันสิ้นสุดการหยุดกินยาชั่วคราวให้เป็นวันหลังจากวันเริ่มต้นค่ะ",
   "plannedResumeDateOptional": "วันที่คาดว่าจะกลับมาทานยา (ไม่บังคับ)",
   "plannedResumeDateNotSet": "ยังไม่ได้กำหนด",
   "selectPlannedResumeDate": "เลือกวันที่คาดว่าจะกลับมาทานยา",

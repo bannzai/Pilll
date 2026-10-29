@@ -561,6 +561,7 @@
   "addPausePeriod": "添加暂停服药时段",
   "addedPausePeriod": "已添加暂停服药时段",
   "pausePeriodOverlapsOther": "无法选择与其他暂停服药时段重叠的时段",
+  "pauseEndDateMustBeAfterStartDate": "请选择晚于开始日期的暂停服药结束日期",
   "plannedResumeDateOptional": "预计恢复服药日期（选填）",
   "plannedResumeDateNotSet": "尚未设置",
   "selectPlannedResumeDate": "选择预计恢复服药日期",

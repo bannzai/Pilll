@@ -561,6 +561,7 @@
   "addPausePeriod": "Legg til en inntakspause",
   "addedPausePeriod": "Perioden med inntakspause er lagt til",
   "pausePeriodOverlapsOther": "Du kan ikke velge en periode som overlapper med en annen inntakspause",
+  "pauseEndDateMustBeAfterStartDate": "Velg en sluttdato for inntakspausen som er etter startdatoen",
   "plannedResumeDateOptional": "Planlagt dato for å begynne igjen (valgfritt)",
   "plannedResumeDateNotSet": "Ikke angitt",
   "selectPlannedResumeDate": "Velg planlagt dato for å begynne igjen",

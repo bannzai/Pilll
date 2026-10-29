@@ -561,6 +561,7 @@
   "addPausePeriod": "د لنډمهاله درول موده ورزیاته کړئ",
   "addedPausePeriod": "د لنډمهاله درول موده زیاته شوه",
   "pausePeriodOverlapsOther": "تاسو هغه موده نشئ ټاکلی چې د بل لنډمهاله درول له مودې سره یوځای کېږي",
+  "pauseEndDateMustBeAfterStartDate": "مهرباني وکړئ د لنډمهاله درول د پای نېټه د پیل له نېټې وروسته وټاکئ",
   "plannedResumeDateOptional": "د ګولۍ بیا اخیستلو پلان شوې نېټه (اختیاري)",
   "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د ګولۍ د بیا اخیستلو پلان شوې نېټه وټاکئ",

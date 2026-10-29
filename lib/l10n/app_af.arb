@@ -561,6 +561,7 @@
   "addPausePeriod": "Voeg 'n tydperk van innameonderbreking by",
   "addedPausePeriod": "Tydperk vir innameonderbreking is bygevoeg",
   "pausePeriodOverlapsOther": "Jy kan nie ’n tydperk kies wat met ’n ander innameonderbreking oorvleuel nie",
+  "pauseEndDateMustBeAfterStartDate": "Kies asseblief ’n einddatum vir die innameonderbreking wat ná die begindatum is",
   "plannedResumeDateOptional": "Beplande datum om weer die pil te neem (opsioneel)",
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die datum waarop jy weer jou pil gaan neem",

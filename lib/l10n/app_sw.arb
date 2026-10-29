@@ -561,6 +561,7 @@
   "addPausePeriod": "Tafadhali ongeza kipindi cha kusitisha kumeza vidonge",
   "addedPausePeriod": "Kipindi cha kusitisha kumeza vidonge kimeongezwa",
   "pausePeriodOverlapsOther": "Huwezi kuchagua kipindi kinachoingiliana na kipindi kingine cha kusitisha kumeza vidonge",
+  "pauseEndDateMustBeAfterStartDate": "Tafadhali chagua tarehe ya mwisho ya kusitisha kumeza vidonge iliyo baada ya tarehe ya kuanza",
   "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kumeza vidonge (si lazima)",
   "plannedResumeDateNotSet": "Bado haijawekwa",
   "selectPlannedResumeDate": "Tafadhali chagua tarehe iliyopangwa ya kuanza tena kumeza kidonge",

@@ -561,6 +561,7 @@
   "addPausePeriod": "Adaugă o perioadă de întrerupere",
   "addedPausePeriod": "A fost adăugată perioada de întrerupere a administrării",
   "pausePeriodOverlapsOther": "Nu poți selecta o perioadă care se suprapune cu o altă întrerupere",
+  "pauseEndDateMustBeAfterStartDate": "Alege pentru sfârșitul întreruperii o dată ulterioară datei de început",
   "plannedResumeDateOptional": "Data planificată pentru reluarea pilulei (opțional)",
   "plannedResumeDateNotSet": "Încă nestabilită",
   "selectPlannedResumeDate": "Alege data la care plănuiești să reiei pilula",

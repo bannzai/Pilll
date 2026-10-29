@@ -561,6 +561,7 @@
   "addPausePeriod": "Дадаць перыяд прыпыну",
   "addedPausePeriod": "Перыяд прыпыну прыёму пігулак дададзены",
   "pausePeriodOverlapsOther": "Нельга выбраць перыяд, які перакрываецца з іншым перыядам прыпыну",
+  "pauseEndDateMustBeAfterStartDate": "Выберыце дату заканчэння прыпыну пазней за дату пачатку",
   "plannedResumeDateOptional": "Запланаваная дата аднаўлення прыёму пігулак (неабавязкова)",
   "plannedResumeDateNotSet": "Не зададзена",
   "selectPlannedResumeDate": "Выберыце дату аднаўлення прыёму пігулак",

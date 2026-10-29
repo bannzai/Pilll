@@ -561,6 +561,7 @@
   "addPausePeriod": "Magdagdag ng panahon ng pause",
   "addedPausePeriod": "Nagdagdag na ng panahon ng pause sa pag-inom",
   "pausePeriodOverlapsOther": "Hindi kayo maaaring pumili ng panahong nag-o-overlap sa isa pang pause",
+  "pauseEndDateMustBeAfterStartDate": "Pumili po ng petsa ng pagtatapos ng pause na mas huli sa petsa ng simula",
   "plannedResumeDateOptional": "Nakaplanong petsa ng muling pag-inom (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",
   "selectPlannedResumeDate": "Piliin ang nakaplanong petsa ng muling pag-inom",

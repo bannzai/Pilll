@@ -561,6 +561,7 @@
   "addPausePeriod": "افزودن دوره توقف موقت مصرف",
   "addedPausePeriod": "دورهٔ توقف موقت مصرف اضافه شد",
   "pausePeriodOverlapsOther": "نمی‌توانید دوره‌ای را انتخاب کنید که با دوره دیگری از توقف موقت مصرف هم‌پوشانی دارد",
+  "pauseEndDateMustBeAfterStartDate": "لطفاً برای پایان توقف موقت مصرف، تاریخی پس از تاریخ شروع انتخاب کنید",
   "plannedResumeDateOptional": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص (اختیاری)",
   "plannedResumeDateNotSet": "هنوز تعیین نشده",
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص را انتخاب کنید",

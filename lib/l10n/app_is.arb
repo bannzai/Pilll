@@ -561,6 +561,7 @@
   "addPausePeriod": "Bæta við tímabili pilluhlés",
   "addedPausePeriod": "Tímabili fyrir pilluhlé hefur verið bætt við",
   "pausePeriodOverlapsOther": "Þú getur ekki valið tímabil sem skarast við annað pilluhlé",
+  "pauseEndDateMustBeAfterStartDate": "Veldu lokadagsetningu pilluhlés sem er á eftir upphafsdeginum",
   "plannedResumeDateOptional": "Áætlaður dagur til að byrja aftur að taka pilluna (valfrjálst)",
   "plannedResumeDateNotSet": "Ekki ákveðið enn",
   "selectPlannedResumeDate": "Veldu daginn sem þú ætlar að byrja að taka pilluna aftur",

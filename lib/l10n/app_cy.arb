@@ -561,6 +561,7 @@
   "addPausePeriod": "Ychwanegu cyfnod oedi",
   "addedPausePeriod": "Mae cyfnod oedi wedi'i ychwanegu",
   "pausePeriodOverlapsOther": "Ni allwch ddewis cyfnod sy’n gorgyffwrdd â chyfnod oedi arall",
+  "pauseEndDateMustBeAfterStartDate": "Dewiswch ddyddiad gorffen yr oedi sydd ar ôl y dyddiad dechrau",
   "plannedResumeDateOptional": "Dyddiad bwriedig i ailddechrau cymryd y bilsen (dewisol)",
   "plannedResumeDateNotSet": "Heb ei bennu eto",
   "selectPlannedResumeDate": "Dewiswch y dyddiad rydych yn bwriadu ailddechrau cymryd y bilsen",

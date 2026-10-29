@@ -561,6 +561,7 @@
   "addPausePeriod": "Thêm khoảng thời gian tạm ngừng uống thuốc",
   "addedPausePeriod": "Đã thêm khoảng thời gian tạm ngừng uống thuốc",
   "pausePeriodOverlapsOther": "Bạn không thể chọn khoảng thời gian trùng với một khoảng tạm ngừng uống thuốc khác",
+  "pauseEndDateMustBeAfterStartDate": "Vui lòng chọn ngày kết thúc tạm ngừng uống thuốc sau ngày bắt đầu",
   "plannedResumeDateOptional": "Ngày dự định uống thuốc trở lại (không bắt buộc)",
   "plannedResumeDateNotSet": "Chưa thiết lập",
   "selectPlannedResumeDate": "Chọn ngày dự định uống thuốc trở lại",
