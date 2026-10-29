@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Zjistit, jak používat pozastavení užívání",
   "startPauseTakingLabel": "Zahájit pozastavení užívání",
   "pauseTakingChanged": "Doba pozastavení užívání byla změněna",
+  "editPausePeriod": "Upravit dobu pozastavení užívání",
   "changePillDays": "Změnit počet dní užívání pilulek",
   "beginToEndNumbers": "č. {begin}–{end}",
   "resumeTaking": "Obnovit užívání pilulek",

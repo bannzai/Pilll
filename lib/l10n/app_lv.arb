@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Skatīt, kā izmantot lietošanas pauzes funkciju",
   "startPauseTakingLabel": "Sākt lietošanas pauzi",
   "pauseTakingChanged": "Lietošanas pauzes ilgums ir mainīts",
+  "editPausePeriod": "Rediģēt lietošanas pauzes ilgumu",
   "changePillDays": "Mainīt tablešu lietošanas dienu skaitu",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsākt tablešu lietošanu",

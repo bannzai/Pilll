@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Погледајте како се користи функција за прекид узимања",
   "startPauseTakingLabel": "Започните прекид узимања пилуле",
   "pauseTakingChanged": "Трајање прекида узимања пилула је промењено",
+  "editPausePeriod": "Измените трајање прекида узимања",
   "changePillDays": "Промена броја дана узимања пилуле",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Наставак узимања пилула",

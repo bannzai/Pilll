@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "اطلعي على كيفية استخدام ميزة إيقاف تناول الحبوب",
   "startPauseTakingLabel": "بدء إيقاف تناول الحبوب",
   "pauseTakingChanged": "تم تغيير فترة إيقاف تناول الحبوب",
+  "editPausePeriod": "تعديل مدة إيقاف تناول الحبوب",
   "changePillDays": "تغيير عدد أيام تناول الحبوب",
   "beginToEndNumbers": "من الرقم {begin} إلى الرقم {end}",
   "resumeTaking": "استئناف تناول الحبوب",

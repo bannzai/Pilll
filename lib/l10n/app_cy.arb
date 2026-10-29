@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Gweld sut i ddefnyddio'r nodwedd oedi",
   "startPauseTakingLabel": "Dechrau oedi cymryd y bilsen",
   "pauseTakingChanged": "Mae cyfnod yr oedi wedi'i newid",
+  "editPausePeriod": "Golygu hyd yr oedi",
   "changePillDays": "Newid nifer y diwrnodau cymryd y bilsen",
   "beginToEndNumbers": "rhif {begin} ~ {end}",
   "resumeTaking": "Ailddechrau cymryd y bilsen",

@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "गोली लेने में विराम की सुविधा इस्तेमाल करने का तरीका देखें",
   "startPauseTakingLabel": "गोली लेने में विराम शुरू करें",
   "pauseTakingChanged": "गोली लेने में विराम की अवधि बदल दी गई है",
+  "editPausePeriod": "गोली लेने में विराम की अवधि बदलें",
   "changePillDays": "गोली लेने के दिनों की संख्या बदलें",
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "गोली लेना फिर शुरू करें",

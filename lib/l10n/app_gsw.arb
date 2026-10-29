@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Lueg, wie d Iinahmepause bruuchsch",
   "startPauseTakingLabel": "Iinahmepause afange",
   "pauseTakingChanged": "D Duur vo de Iinahmepause isch gänderet",
+  "editPausePeriod": "Duur vo de Iinahmepause bearbeite",
   "changePillDays": "Aazahl Iinahmtäg ändere",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "D Pille wider iinäh",

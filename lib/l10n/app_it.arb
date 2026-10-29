@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Scopri come usare la funzione di sospensione",
   "startPauseTakingLabel": "Avvia la sospensione dell'assunzione",
   "pauseTakingChanged": "La durata della sospensione è stata modificata",
+  "editPausePeriod": "Modifica la durata della sospensione",
   "changePillDays": "Modifica il numero di giorni di assunzione della pillola",
   "beginToEndNumbers": "dal n. {begin} al n. {end}",
   "resumeTaking": "Riprendi la pillola",

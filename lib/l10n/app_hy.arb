@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Տեսեք, թե ինչպես օգտագործել ընդունման դադար գործառույթը",
   "startPauseTakingLabel": "Սկսել ընդունման դադար",
   "pauseTakingChanged": "Ընդունման դադար-ի տևողությունը փոխվել է",
+  "editPausePeriod": "Խմբագրել ընդունման դադար տևողությունը",
   "changePillDays": "Փոխել հաբերի ընդունման օրերի քանակը",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Վերսկսել հաբերի ընդունումը",

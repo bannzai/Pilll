@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Lihat cara menggunakan ciri jeda pengambilan pil",
   "startPauseTakingLabel": "Mulakan jeda pengambilan pil",
   "pauseTakingChanged": "Tempoh jeda pengambilan pil telah diubah",
+  "editPausePeriod": "Ubah tempoh jeda pengambilan pil",
   "changePillDays": "Ubah bilangan hari pengambilan pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Sambung semula pengambilan pil",

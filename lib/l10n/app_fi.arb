@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Katso, miten taukotila toimii",
   "startPauseTakingLabel": "Aloita taukotila",
   "pauseTakingChanged": "Taukotilan kestoa muutettiin",
+  "editPausePeriod": "Muokkaa taukotilan kestoa",
   "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "nro {begin}–{end}",
   "resumeTaking": "Aloita pillereiden ottaminen uudelleen",

@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "বড়ি খোৱা সাময়িকভাৱে বন্ধ সুবিধাটো কেনেকৈ ব্যৱহাৰ কৰিব চাওক",
   "startPauseTakingLabel": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ কৰক",
   "pauseTakingChanged": "বড়ি খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ সময় সলনি কৰা হৈছে",
+  "editPausePeriod": "বড়ি খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ সময়সীমা সম্পাদনা কৰক",
   "changePillDays": "পিল খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
   "beginToEndNumbers": "নং {begin} ~ {end}",
   "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",

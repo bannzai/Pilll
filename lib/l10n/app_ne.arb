@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "सेवन विराम सुविधा कसरी प्रयोग गर्ने हेर्नुहोस्",
   "startPauseTakingLabel": "सेवन विराम सुरु गर्नुहोस्",
   "pauseTakingChanged": "सेवन विरामको अवधि परिवर्तन गरिएको छ",
+  "editPausePeriod": "सेवन विरामको अवधि सम्पादन गर्नुहोस्",
   "changePillDays": "चक्की खाने दिनहरूको सङ्ख्या परिवर्तन गर्नुहोस्",
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "चक्की फेरि खान सुरु गर्नुहोस्",

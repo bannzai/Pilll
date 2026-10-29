@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Consulta com utilitzar la funció de pausa",
   "startPauseTakingLabel": "Inicia la pausa de la presa",
   "pauseTakingChanged": "S'ha canviat el període de pausa",
+  "editPausePeriod": "Edita la durada de la pausa",
   "changePillDays": "Canvia el nombre de dies que prens la píndola",
   "beginToEndNumbers": "Núm. {begin} - {end}",
   "resumeTaking": "Reprèn la píndola",

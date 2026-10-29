@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ნახეთ, როგორ გამოიყენოთ მიღების პაუზის ფუნქცია",
   "startPauseTakingLabel": "მიღების პაუზის დაწყება",
   "pauseTakingChanged": "მიღების პაუზის ხანგრძლივობა შეიცვალა",
+  "editPausePeriod": "მიღების პაუზის ხანგრძლივობის შეცვლა",
   "changePillDays": "აბების მიღების დღეების რაოდენობის შეცვლა",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "აბების მიღების განახლება",

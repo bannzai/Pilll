@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Pauza funksiyasidan qanday foydalanishni koʻring",
   "startPauseTakingLabel": "Pauza boshlang",
   "pauseTakingChanged": "Pauza muddati oʻzgartirildi",
+  "editPausePeriod": "Pauza muddatini tahrirlang",
   "changePillDays": "Tabletka qabul qilish kunlari sonini oʻzgartiring",
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",
   "resumeTaking": "Tabletka qabul qilishni qayta boshlash",

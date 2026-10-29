@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Veja como usar a função de interrupção",
   "startPauseTakingLabel": "Iniciar interrupção do uso",
   "pauseTakingChanged": "O período de interrupção foi alterado",
+  "editPausePeriod": "Editar duração da interrupção",
   "changePillDays": "Alterar o número de dias de uso da pílula",
   "beginToEndNumbers": "nº {begin} ~ {end}",
   "resumeTaking": "Retomar o uso da pílula",

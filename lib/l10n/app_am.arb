@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ለጊዜው ማቆም ባህሪን እንዴት እንደሚጠቀሙ ይመልከቱ",
   "startPauseTakingLabel": "ለጊዜው ማቆም ጀምር",
   "pauseTakingChanged": "የለጊዜው ማቆም ጊዜ ተቀይሯል",
+  "editPausePeriod": "የለጊዜው ማቆም ጊዜን ያርትዑ",
   "changePillDays": "ክኒን የሚወሰድበትን የቀናት ብዛት ይቀይሩ",
   "beginToEndNumbers": "ቁጥር {begin} ~ {end}",
   "resumeTaking": "ክኒን መውሰድን እንደገና ይጀምሩ",

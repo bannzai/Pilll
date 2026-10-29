@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ເບິ່ງວິທີໃຊ້ຟີເຈີຢຸດກິນຢາຊົ່ວຄາວ",
   "startPauseTakingLabel": "ເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "pauseTakingChanged": "ປ່ຽນໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວແລ້ວ",
+  "editPausePeriod": "ແກ້ໄຂໄລຍະຢຸດກິນຢາຊົ່ວຄາວ",
   "changePillDays": "ປ່ຽນຈຳນວນມື້ທີ່ກິນຢາເມັດ",
   "beginToEndNumbers": "ເລກ {begin} ~ {end}",
   "resumeTaking": "ກັບມາກິນຢາເມັດອີກຄັ້ງ",

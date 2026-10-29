@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Погледнете како се користи функцијата за прекин на земањето апчиња",
   "startPauseTakingLabel": "Започнете пауза во земањето апчиња",
   "pauseTakingChanged": "Променет е периодот на пауза во земањето апчиња",
+  "editPausePeriod": "Уредување на периодот на пауза во земањето апчиња",
   "changePillDays": "Промена на бројот на денови за земање таблета",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Продолжете со земање таблета",

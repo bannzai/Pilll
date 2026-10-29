@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Se hur du använder pausfunktionen",
   "startPauseTakingLabel": "Starta paus i intaget",
   "pauseTakingChanged": "Pausens längd har ändrats",
+  "editPausePeriod": "Ändra pausens längd",
   "changePillDays": "Ändra antalet dagar du tar p-piller",
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Börja ta p-piller igen",

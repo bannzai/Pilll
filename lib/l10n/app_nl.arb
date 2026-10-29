@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Bekijk hoe je de innamepauze gebruikt",
   "startPauseTakingLabel": "Innamepauze starten",
   "pauseTakingChanged": "De duur van de innamepauze is gewijzigd",
+  "editPausePeriod": "Duur van de innamepauze aanpassen",
   "changePillDays": "Aantal dagen dat je de pil neemt wijzigen",
   "beginToEndNumbers": "Nr. {begin} t/m {end}",
   "resumeTaking": "Weer beginnen met de pil",

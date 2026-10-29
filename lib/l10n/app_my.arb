@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားသည့် လုပ်ဆောင်ချက်ကို အသုံးပြုပုံ ကြည့်ပါ",
   "startPauseTakingLabel": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားမှု စတင်ပါ",
   "pauseTakingChanged": "ဆေးသောက်ခြင်း ခေတ္တရပ်နားမည့် ကာလကို ပြောင်းလဲပြီးပါပြီ",
+  "editPausePeriod": "ခေတ္တရပ်နားသည့်ကာလကို ပြင်ဆင်ပါ",
   "changePillDays": "ဆေးပြားသောက်ရမယ့် ရက်အရေအတွက် ပြောင်းရန်",
   "beginToEndNumbers": "နံပါတ် {begin} ~ {end}",
   "resumeTaking": "ဆေးသောက်ခြင်း ပြန်စတင်ရန်",

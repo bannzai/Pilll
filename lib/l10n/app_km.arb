@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "មើលរបៀបប្រើមុខងារផ្អាកការលេបថ្នាំ",
   "startPauseTakingLabel": "ចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
   "pauseTakingChanged": "បានប្ដូររយៈពេលផ្អាកការលេបថ្នាំហើយ",
+  "editPausePeriod": "កែរយៈពេលផ្អាកការលេបថ្នាំ",
   "changePillDays": "ប្ដូរចំនួនថ្ងៃលេបថ្នាំគ្រាប់",
   "beginToEndNumbers": "លេខ {begin} ~ {end}",
   "resumeTaking": "ចាប់ផ្តើមលេបថ្នាំគ្រាប់វិញ",

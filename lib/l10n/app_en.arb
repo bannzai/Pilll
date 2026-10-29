@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "See how to use the pause feature",
   "startPauseTakingLabel": "Start pause",
   "pauseTakingChanged": "Pause period changed",
+  "editPausePeriod": "Edit pause period",
   "changePillDays": "Change pill-taking days",
   "beginToEndNumbers": "#{begin}–#{end}",
   "resumeTaking": "Resume taking the pill",

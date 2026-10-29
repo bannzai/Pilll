@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Ikusi nola erabili etenaldiaren funtzioa",
   "startPauseTakingLabel": "Hasi pilula hartzeko etenaldia",
   "pauseTakingChanged": "Etenaldiaren iraupena aldatu da",
+  "editPausePeriod": "Editatu etenaldiaren iraupena",
   "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
   "resumeTaking": "Hasi berriro pilula hartzen",

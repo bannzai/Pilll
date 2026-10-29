@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Zobacz, jak korzystać z funkcji wstrzymania przyjmowania",
   "startPauseTakingLabel": "Rozpocznij wstrzymanie przyjmowania",
   "pauseTakingChanged": "Czas wstrzymania przyjmowania pigułek został zmieniony",
+  "editPausePeriod": "Edytuj okres wstrzymania przyjmowania",
   "changePillDays": "Zmień liczbę dni przyjmowania tabletek",
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Wznów przyjmowanie tabletek",

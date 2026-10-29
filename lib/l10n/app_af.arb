@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Kyk hoe om innameonderbreking te gebruik",
   "startPauseTakingLabel": "Begin innameonderbreking",
   "pauseTakingChanged": "Die innameonderbreking is verander",
+  "editPausePeriod": "Wysig tydperk van innameonderbreking",
   "changePillDays": "Verander die aantal dae wat jy jou pil neem",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Hervat pilgebruik",

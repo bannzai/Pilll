@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Angalia jinsi ya kutumia kipengele cha kusitisha kumeza vidonge",
   "startPauseTakingLabel": "Anza kusitisha kumeza vidonge",
   "pauseTakingChanged": "Muda wa kusitisha kumeza vidonge umebadilishwa",
+  "editPausePeriod": "Hariri muda wa kusitisha kumeza vidonge",
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
   "beginToEndNumbers": "Nambari {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza vidonge",

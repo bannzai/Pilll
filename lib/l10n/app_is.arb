@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Sjáðu hvernig pilluhlé virkar",
   "startPauseTakingLabel": "Hefja pilluhlé",
   "pauseTakingChanged": "Lengd pilluhlés hefur verið breytt",
+  "editPausePeriod": "Breyta lengd pilluhlés",
   "changePillDays": "Breyta fjölda daga sem pillan er tekin",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Byrja aftur að taka pilluna",

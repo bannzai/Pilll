@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Убактылуу токтотуу функциясын кантип колдонуу керектигин көрүңүз",
   "startPauseTakingLabel": "Кабыл алууну убактылуу токтотууну баштаңыз",
   "pauseTakingChanged": "Убактылуу токтотуу мөөнөтү өзгөртүлдү",
+  "editPausePeriod": "Убактылуу токтотуу мөөнөтүн өзгөртүңүз",
   "changePillDays": "Таблетка ичүү күндөрүнүн санын өзгөртүңүз",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка ичүүнү кайра баштоо",

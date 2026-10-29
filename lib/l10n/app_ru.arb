@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Посмотрите, как пользоваться функцией приостановки приёма",
   "startPauseTakingLabel": "Начать приостановку приёма",
   "pauseTakingChanged": "Период приостановки приёма изменён",
+  "editPausePeriod": "Изменить срок приостановки приёма",
   "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№ {begin}–{end}",
   "resumeTaking": "Возобновить приём таблеток",

@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાની સુવિધા કેવી રીતે વાપરવી તે જુઓ",
   "startPauseTakingLabel": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાનું શરૂ કરો",
   "pauseTakingChanged": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમય બદલાયો છે",
+  "editPausePeriod": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાની અવધિમાં ફેરફાર કરો",
   "changePillDays": "ગોળી લેવાના દિવસોની સંખ્યા બદલો",
   "beginToEndNumbers": "ગોળી નંબર {begin} ~ {end}",
   "resumeTaking": "ગોળી લેવાનું ફરી શરૂ કરો",

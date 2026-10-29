@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Ansehen, wie die Einnahmeunterbrechung funktioniert",
   "startPauseTakingLabel": "Einnahmeunterbrechung starten",
   "pauseTakingChanged": "Die Dauer der Einnahmeunterbrechung wurde geändert",
+  "editPausePeriod": "Dauer der Einnahmeunterbrechung bearbeiten",
   "changePillDays": "Anzahl der Einnahmetage ändern",
   "beginToEndNumbers": "Nr. {begin}–{end}",
   "resumeTaking": "Pilleneinnahme fortsetzen",

@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Vezi cum folosești funcția de întrerupere",
   "startPauseTakingLabel": "Începe întreruperea administrării",
   "pauseTakingChanged": "Durata întreruperii a fost modificată",
+  "editPausePeriod": "Modifică durata întreruperii",
   "changePillDays": "Schimbă numărul de zile în care iei pilula",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Reia administrarea pilulei",

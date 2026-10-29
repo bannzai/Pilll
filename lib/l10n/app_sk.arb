@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Zistiť, ako používať pozastavenie užívania",
   "startPauseTakingLabel": "Začať pozastavenie užívania",
   "pauseTakingChanged": "Obdobie pozastavenia užívania bolo zmenené",
+  "editPausePeriod": "Upraviť trvanie pozastavenia užívania",
   "changePillDays": "Zmeniť počet dní užívania tabletiek",
   "beginToEndNumbers": "č. {begin} ~ {end}",
   "resumeTaking": "Obnoviť užívanie tabletiek",

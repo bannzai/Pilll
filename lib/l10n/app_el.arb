@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Δείτε πώς χρησιμοποιείται η λειτουργία παύση λήψης",
   "startPauseTakingLabel": "Έναρξη παύσης λήψης",
   "pauseTakingChanged": "Η διάρκεια της παύσης άλλαξε",
+  "editPausePeriod": "Επεξεργασία διάρκειας παύσης",
   "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "αρ. {begin} ~ {end}",
   "resumeTaking": "Επανέναρξη λήψης",

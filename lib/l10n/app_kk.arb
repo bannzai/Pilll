@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Қабылдаудағы кідіріс функциясын қалай пайдалану керегін қараңыз",
   "startPauseTakingLabel": "Қабылдауды кідіріс жасау",
   "pauseTakingChanged": "Кідіріс мерзімі өзгертілді",
+  "editPausePeriod": "Кідіріс мерзімін өзгерту",
   "changePillDays": "Таблетка қабылдайтын күндер санын өзгерту",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка қабылдауды қайта бастау",

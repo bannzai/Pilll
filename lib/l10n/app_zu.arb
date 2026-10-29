@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Bheka ukuthi usisebenzisa kanjani isici sokumisa okwesikhashana ukuphuza amaphilisi",
   "startPauseTakingLabel": "Qala ukumisa okwesikhashana ukuphuza amaphilisi",
   "pauseTakingChanged": "Isikhathi sokumisa okwesikhashana ukuphuza amaphilisi sishintshiwe",
+  "editPausePeriod": "Hlela isikhathi sokumisa okwesikhashana ukuphuza amaphilisi",
   "changePillDays": "Sicela ushintshe inani lezinsuku zokuphuza amaphilisi",
   "beginToEndNumbers": "inombolo {begin} ~ {end}",
   "resumeTaking": "Sicela uqale futhi ukuphuza amaphilisi",

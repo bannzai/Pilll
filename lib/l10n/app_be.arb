@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Паглядзіце, як карыстацца функцыяй прыпыну прыёму",
   "startPauseTakingLabel": "Пачаць прыпын прыёму пігулкі",
   "pauseTakingChanged": "Перыяд прыпыну зменены",
+  "editPausePeriod": "Рэдагаваць перыяд прыпыну",
   "changePillDays": "Змяніць колькасць дзён прыёму пігулак",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Аднавіць прыём пігулак",

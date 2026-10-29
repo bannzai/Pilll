@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Ara verme özelliğinin nasıl kullanılacağını görün",
   "startPauseTakingLabel": "İlaç alımına ara vermeye başlayın",
   "pauseTakingChanged": "Ara verme süresi değiştirildi",
+  "editPausePeriod": "Ara verme süresini düzenleyin",
   "changePillDays": "Hap kullanma gün sayısını değiştirin",
   "beginToEndNumbers": "{begin} ~ {end} numaralı haplar",
   "resumeTaking": "Hapı almaya yeniden başlayın",

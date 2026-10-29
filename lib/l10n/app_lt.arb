@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Sužinoti, kaip naudoti vartojimo pristabdymo funkciją",
   "startPauseTakingLabel": "Pradėti vartojimo pristabdymą",
   "pauseTakingChanged": "Pristabdymo laikotarpis pakeistas",
+  "editPausePeriod": "Keisti pristabdymo laikotarpį",
   "changePillDays": "Pakeiskite tablečių vartojimo dienų skaičių",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Vėl pradėkite vartoti tabletes",

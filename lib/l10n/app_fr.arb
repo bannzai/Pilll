@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Voir comment utiliser la pause de prise",
   "startPauseTakingLabel": "Commencer la pause de prise",
   "pauseTakingChanged": "La durée de la pause de prise a été modifiée",
+  "editPausePeriod": "Modifier la durée de la pause de prise",
   "changePillDays": "Modifier le nombre de jours de prise de la pilule",
   "beginToEndNumbers": "n° {begin} à {end}",
   "resumeTaking": "Reprendre la pilule",

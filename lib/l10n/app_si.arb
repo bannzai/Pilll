@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "පෙති ගැනීමේ විරාම පහසුකම භාවිත කරන ආකාරය බලන්න",
   "startPauseTakingLabel": "පෙති ගැනීමේ විරාමය අරඹන්න",
   "pauseTakingChanged": "පෙති ගැනීමේ විරාම කාලය වෙනස් කර ඇත",
+  "editPausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය සංස්කරණය කරන්න",
   "changePillDays": "පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "beginToEndNumbers": "අංක {begin} ~ {end}",
   "resumeTaking": "පෙති ගැනීම නැවත අරඹන්න",

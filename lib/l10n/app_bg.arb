@@ -382,6 +382,7 @@
   "seeHowToUsePauseTakingFeature": "Вижте как да използвате функцията за спиране на приема",
   "startPauseTakingLabel": "Начало на спиране на приема",
   "pauseTakingChanged": "Периодът на спиране на приема е променен",
+  "editPausePeriod": "Редактиране на периода на спиране на приема",
   "changePillDays": "Промяна на броя дни за прием на хапчета",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Подновете приема на хапчета",
