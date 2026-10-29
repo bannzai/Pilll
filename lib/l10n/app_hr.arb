@@ -557,6 +557,7 @@
   "midnightTakenWarningDialogBody": "Evidencija uzimanja unesena je i za {takenDate}. Danas ({takenDate}) nećete primiti obavijest u {reminderTimes}.\nAko je to pogreška, poništite zabilježeno uzimanje pilule",
   "midnightTakenWarningDialogSeeHowToRevert": "Pogledajte kako poništiti zapis o uzimanju pilule",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj ponovno",
+  "pauseStartDateMustBeOnOrBefore": "Za početak stanke u uzimanju pilula odaberite datum {date} ili raniji",
   "addPausePeriod": "Dodajte razdoblje prekida u uzimanju pilula",
   "pausePeriodOverlapsOther": "Ne možete odabrati razdoblje koje se preklapa s drugim razdobljem prekida u uzimanju pilula",
   "pauseEndDateMustBeAfterStartDate": "Za kraj prekida u uzimanju pilula odaberite datum nakon datuma početka",
