@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Калі вы забыліся прыняць пігулку або пераблыталі пігулкі і нумар на блістары больш не адпавядае фактычна прынятай пігулцы, вы можаце ўручную выправіць сённяшні нумар пігулкі. Гэты ж экран можна адкрыць праз нумар пігулкі на галоўным экране.",
   "restDurationFeatureAppealTitle": "Запісаць перыяд прыпыну прыёму пігулак",
   "restDurationFeatureAppealShortDescription": "Дакладна адсочвайце прыпыненне прыёму пігулак",
+  "restDurationFeatureAppealHeadline": "Зрабіць паўзу ў прыёме пігулак",
   "featureAppealLocationLabel": "Дзе знайсці ў праграме",
   "criticalAlertFeatureAppealPoint1": "Вы атрымліваеце апавяшчэнні нават у рэжыме засяроджвання",
   "criticalAlertFeatureAppealPoint2": "Надзейны напамін у зададзены вамі час",

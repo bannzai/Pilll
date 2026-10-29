@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "اگر قرصی را فراموش کرده‌اید یا قرص‌ها را اشتباه گرفته‌اید و شماره روی ورق قرص با قرصی که مصرف کرده‌اید یکی نیست، می‌توانید شماره قرص امروز را دستی تنظیم کنید. همین صفحه را از شماره قرص در صفحهٔ اصلی هم می‌توانید باز کنید.",
   "restDurationFeatureAppealTitle": "ثبت دوره توقف موقت مصرف",
   "restDurationFeatureAppealShortDescription": "توقف‌های مصرف قرص را دقیق ثبت کنید",
+  "restDurationFeatureAppealHeadline": "توقف موقت در مصرف قرص",
   "featureAppealLocationLabel": "محل آن در برنامه",
   "criticalAlertFeatureAppealPoint1": "دریافت اعلان حتی در حالت تمرکز",
   "criticalAlertFeatureAppealPoint2": "یادآوری مطمئن در ساعت تنظیم‌شده",

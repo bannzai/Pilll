@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Si has oblidat una píndola o les has confós i el número del blíster ja no coincideix amb la que has pres, pots ajustar manualment el número de píndola d’avui. També pots obrir la mateixa pantalla des del número de píndola que es mostra a la pantalla d’inici.",
   "restDurationFeatureAppealTitle": "Registra el període de pausa",
   "restDurationFeatureAppealShortDescription": "Fes un seguiment precís de les interrupcions de la presa de la píndola",
+  "restDurationFeatureAppealHeadline": "Fer una pausa en la presa de la píndola",
   "featureAppealLocationLabel": "On trobar-ho a l’aplicació",
   "criticalAlertFeatureAppealPoint1": "Reps notificacions fins i tot amb el mode de concentració activat",
   "criticalAlertFeatureAppealPoint2": "Un recordatori fiable a l’hora que has triat",

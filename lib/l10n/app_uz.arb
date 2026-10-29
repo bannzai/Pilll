@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Agar tabletka ichish esdan chiqsa yoki tabletkalar adashib ketsa va tabletka blister ustidagi raqam ichilgan tabletkaga mos kelmasa, bugungi tabletka raqamini qoʻlda toʻgʻrilashingiz mumkin. Xuddi shu ekranni bosh sahifada koʻrsatilgan tabletka raqamidan ham ochishingiz mumkin.",
   "restDurationFeatureAppealTitle": "Dori ichishdagi pauza davrini qayd eting",
   "restDurationFeatureAppealShortDescription": "Tabletkalarni ichishni vaqtincha toʻxtatgan davrlaringizni aniq qayd eting",
+  "restDurationFeatureAppealHeadline": "Tabletkani ichishni vaqtincha toʻxtating",
   "featureAppealLocationLabel": "Ilovadagi joylashuvi",
   "criticalAlertFeatureAppealPoint1": "Diqqatni jamlash rejimida ham bildirishnomalar olasiz",
   "criticalAlertFeatureAppealPoint2": "Siz belgilagan vaqtda ishonchli eslatma",

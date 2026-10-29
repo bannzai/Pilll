@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Wenn du eine Pille ausgelassen oder verwechselt hast und die Nummer auf dem Pillenblister nicht mehr zur tatsächlich eingenommenen Pille passt, kannst du die heutige Pillennummer selbst anpassen. Dieselbe Ansicht erreichst du auch über die Pillennummer auf der Startseite.",
   "restDurationFeatureAppealTitle": "Zeitraum der Einnahmeunterbrechung erfassen",
   "restDurationFeatureAppealShortDescription": "Behalte Unterbrechungen der Pilleneinnahme genau im Blick",
+  "restDurationFeatureAppealHeadline": "Die Pilleneinnahme pausieren",
   "featureAppealLocationLabel": "Wo du es in der App findest",
   "criticalAlertFeatureAppealPoint1": "Du erhältst Benachrichtigungen auch im Fokusmodus",
   "criticalAlertFeatureAppealPoint2": "Zuverlässige Erinnerung zur eingestellten Zeit",

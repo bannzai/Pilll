@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Os ydych chi wedi anghofio cymryd pilsen neu wedi cymysgu’r pils, ac nad yw’r rhif ar y stribed pils yn cyfateb i’r hyn a gymerwyd, gallwch addasu rhif y bilsen ar gyfer heddiw â llaw. Gallwch hefyd agor yr un sgrin drwy dapio rhif y bilsen ar y sgrin gartref.",
   "restDurationFeatureAppealTitle": "Cofnodi cyfnod oedi cymryd y bilsen",
   "restDurationFeatureAppealShortDescription": "Cadwch gofnod cywir o gyfnodau pan nad ydych yn cymryd y bilsen",
+  "restDurationFeatureAppealHeadline": "Cymryd saib o gymryd y bilsen",
   "featureAppealLocationLabel": "Lle yn yr ap",
   "criticalAlertFeatureAppealPoint1": "Byddwch chi'n cael hysbysiadau hyd yn oed pan fydd y modd ffocws ymlaen",
   "criticalAlertFeatureAppealPoint2": "Nodyn atgoffa dibynadwy ar yr amser rydych chi wedi’i osod",

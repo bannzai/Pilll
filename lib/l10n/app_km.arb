@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "បើអ្នកភ្លេចលេបថ្នាំ ឬច្រឡំគ្រាប់ថ្នាំ ហើយលេខលើបន្ទះថ្នាំគ្រាប់មិនត្រូវនឹងគ្រាប់ថ្នាំដែលបានលេបទេ អ្នកអាចកែលេខគ្រាប់ថ្នាំសម្រាប់ថ្ងៃនេះដោយដៃ។ អ្នកក៏អាចបើកអេក្រង់ដដែលពីលេខគ្រាប់ថ្នាំនៅលើអេក្រង់ដើមបានដែរ។",
   "restDurationFeatureAppealTitle": "កត់ត្រារយៈពេលផ្អាកការលេបថ្នាំ",
   "restDurationFeatureAppealShortDescription": "សូមកត់ត្រារយៈពេលដែលអ្នកឈប់លេបថ្នាំបណ្តោះអាសន្នឱ្យបានត្រឹមត្រូវ",
+  "restDurationFeatureAppealHeadline": "ផ្អាកការលេបថ្នាំគ្រាប់បណ្តោះអាសន្ន",
   "featureAppealLocationLabel": "ទីតាំងនៅក្នុងកម្មវិធី",
   "criticalAlertFeatureAppealPoint1": "អ្នកនៅតែទទួលបានការជូនដំណឹង ទោះបីកំពុងប្រើមុខងារផ្តោតអារម្មណ៍ក៏ដោយ",
   "criticalAlertFeatureAppealPoint2": "ការរំលឹកដែលអាចទុកចិត្តបាននៅម៉ោងដែលអ្នកបានកំណត់",

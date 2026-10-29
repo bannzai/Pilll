@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "אם שכחה או בלבול בין הגלולות גרמו לכך שמספר גלולה המוצג על חפיסת הגלולות אינו תואם לנטילה בפועל, אפשר לתקן ידנית את מספר הגלולה להיום. אפשר לפתוח את אותו מסך גם דרך מספר הגלולה המוצג במסך הבית.",
   "restDurationFeatureAppealTitle": "רישום תקופת השהיית נטילה",
   "restDurationFeatureAppealShortDescription": "מעקב מדויק אחר עצירות בנטילת הגלולה",
+  "restDurationFeatureAppealHeadline": "להשהות את נטילת הגלולה",
   "featureAppealLocationLabel": "איפה למצוא באפליקציה",
   "criticalAlertFeatureAppealPoint1": "קבלת התראות גם כשמצב ריכוז פעיל",
   "criticalAlertFeatureAppealPoint2": "תזכורת אמינה בשעה שנקבעה",

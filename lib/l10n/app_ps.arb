@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "که د ګولۍ خوړل هېر شوي وي یا ګولۍ سره ګډې شوې وي او پر ګولیو پاڼې لیکل شوی شمېر له خوړل شوې ګولۍ سره سمون نه لري، تاسو کولی شئ د نن ورځې ګولۍ شمېر په لاس سم کړئ. همدا پاڼه د کور پر سکرین له ښودل شوي ګولۍ شمېر څخه هم پرانیستلی شئ.",
   "restDurationFeatureAppealTitle": "د ګولیو د لنډمهاله درولو موده ثبت کړئ",
   "restDurationFeatureAppealShortDescription": "د ګولیو د خوړلو لنډمهاله درېدنې په کره ډول ثبت کړئ",
+  "restDurationFeatureAppealHeadline": "د ګولۍ اخیستل د لنډ وخت لپاره وځنډوئ",
   "featureAppealLocationLabel": "په اپ کې یې ځای",
   "criticalAlertFeatureAppealPoint1": "تاسو د تمرکز حالت پر مهال هم خبرتیاوې ترلاسه کوئ",
   "criticalAlertFeatureAppealPoint2": "ستاسو په ټاکلي وخت کې د باور وړ یادونه",

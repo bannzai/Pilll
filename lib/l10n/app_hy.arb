@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Եթե մոռացել եք ընդունել հաբը կամ շփոթել եք հաբերը, և հաբերի բլիստերի համարը չի համապատասխանում Ձեր ընդունած հաբին, կարող եք ձեռքով ուղղել այսօրվա հաբի համարը։ Նույն էջը կարող եք բացել նաև գլխավոր էջում ցուցադրվող հաբի համարից։",
   "restDurationFeatureAppealTitle": "Գրանցել ընդունման դադար ժամանակահատվածը",
   "restDurationFeatureAppealShortDescription": "Ճշգրիտ հետևեք հաբերի ընդունման ընդհատումներին",
+  "restDurationFeatureAppealHeadline": "Ժամանակավորապես դադարեցնել հաբի ընդունումը",
   "featureAppealLocationLabel": "Որտեղ գտնել հավելվածում",
   "criticalAlertFeatureAppealPoint1": "Դուք ծանուցումներ կստանաք նաև կենտրոնացման ռեժիմում",
   "criticalAlertFeatureAppealPoint2": "Հուսալի հիշեցում Ձեր սահմանած ժամին",

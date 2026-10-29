@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Jika anda terlupa mengambil pil atau tertukar pil sehingga nombor pada pek pil tidak sepadan dengan pil yang diambil, anda boleh laraskan nombor pil hari ini secara manual. Anda juga boleh membuka skrin yang sama melalui nombor pil pada skrin utama.",
   "restDurationFeatureAppealTitle": "Catat tempoh jeda pengambilan pil",
   "restDurationFeatureAppealShortDescription": "Catat dengan tepat apabila anda berhenti mengambil pil buat sementara waktu",
+  "restDurationFeatureAppealHeadline": "Jeda sementara daripada mengambil pil",
   "featureAppealLocationLabel": "Lokasi dalam aplikasi",
   "criticalAlertFeatureAppealPoint1": "Anda tetap menerima pemberitahuan walaupun mod Fokus dihidupkan",
   "criticalAlertFeatureAppealPoint2": "Peringatan yang boleh diharap pada waktu yang anda tetapkan",

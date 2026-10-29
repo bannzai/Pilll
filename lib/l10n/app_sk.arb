@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Ak ste zabudli užiť tabletku alebo ste si tabletky pomýlili a číslo na blistri nezodpovedá užitej tabletke, môžete dnešné číslo tabletky upraviť ručne. Tú istú obrazovku otvoríte aj cez číslo tabletky na úvodnej obrazovke.",
   "restDurationFeatureAppealTitle": "Zaznamenať obdobie pozastavenia užívania",
   "restDurationFeatureAppealShortDescription": "Presne sledujte dočasné prerušenia užívania tabletiek",
+  "restDurationFeatureAppealHeadline": "Dočasne pozastaviť užívanie tabletky",
   "featureAppealLocationLabel": "Kde to nájdete v aplikácii",
   "criticalAlertFeatureAppealPoint1": "Upozornenia dostanete aj v režime sústredenia",
   "criticalAlertFeatureAppealPoint2": "Spoľahlivé pripomenutie v čase, ktorý ste nastavili",

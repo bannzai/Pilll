@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Jika Anda lupa minum pil atau tertukar, sehingga nomor pada strip pil tidak sesuai dengan pil yang diminum, Anda dapat menyesuaikan nomor pil hari ini secara manual. Layar yang sama juga dapat dibuka dari nomor pil di beranda.",
   "restDurationFeatureAppealTitle": "Catat periode jeda minum pil",
   "restDurationFeatureAppealShortDescription": "Catat dengan tepat saat Anda berhenti minum pil sementara",
+  "restDurationFeatureAppealHeadline": "Jeda sementara dari minum pil",
   "featureAppealLocationLabel": "Lokasi di aplikasi",
   "criticalAlertFeatureAppealPoint1": "Anda tetap menerima notifikasi saat mode Fokus aktif",
   "criticalAlertFeatureAppealPoint2": "Pengingat yang andal pada waktu yang Anda pilih",

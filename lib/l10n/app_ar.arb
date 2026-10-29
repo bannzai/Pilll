@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "إذا حدث اختلاف بين الرقم على الشريط والحبة التي تناولتِها بسبب نسيان الجرعة أو الخلط بين الحبوب، يمكنكِ تعديل رقم الحبة الخاصة باليوم يدويًا. ويمكنكِ فتح الشاشة نفسها من رقم الحبة المعروض على الصفحة الرئيسية.",
   "restDurationFeatureAppealTitle": "تسجيل فترة إيقاف تناول الحبوب",
   "restDurationFeatureAppealShortDescription": "تتبعي فترات التوقف عن تناول الحبوب بدقة",
+  "restDurationFeatureAppealHeadline": "إيقاف تناول الحبوب مؤقتًا",
   "featureAppealLocationLabel": "مكانها في التطبيق",
   "criticalAlertFeatureAppealPoint1": "تصلكِ الإشعارات حتى أثناء وضع التركيز",
   "criticalAlertFeatureAppealPoint2": "تذكير موثوق في الوقت المحدد",

@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "পিল খাবলৈ পাহৰিলে বা পিলৰ মাজত ভুল হ’লে পিলৰ ষ্ট্ৰিপত থকা নম্বৰ আৰু আপুনি খোৱা পিলৰ মাজত অমিল হ’ব পাৰে। তেনে হ’লে আজিৰ পিল নম্বৰ নিজে মিলাই ল’ব পাৰে। হোম স্ক্ৰীনত দেখুওৱা পিল নম্বৰত টিপিও একেখন স্ক্ৰীন খুলিব পাৰে।",
   "restDurationFeatureAppealTitle": "বড়ি খোৱা সাময়িকভাৱে বন্ধ ৰখা সময়ছোৱা লিপিবদ্ধ কৰক",
   "restDurationFeatureAppealShortDescription": "পিল খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ সময় সঠিককৈ নথিভুক্ত কৰক",
+  "restDurationFeatureAppealHeadline": "পিল খোৱাত সাময়িক বিৰতি লওক",
   "featureAppealLocationLabel": "এপত থকা স্থান",
   "criticalAlertFeatureAppealPoint1": "ফ'কাছ মোড চলি থাকিলেও আপুনি জাননী পাব",
   "criticalAlertFeatureAppealPoint2": "আপুনি নিৰ্ধাৰণ কৰা সময়ত নিশ্চিতভাৱে সোঁৱৰাই দিয়ে",

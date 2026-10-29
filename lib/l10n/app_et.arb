@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Kui pill jäi võtmata või pillid läksid segamini ja pillilehel olev number ei vasta enam võetud pillile, saad tänase pillinumbri käsitsi õigeks seada. Sama vaate saad avada ka avakuval kuvatava pillinumbri kaudu.",
   "restDurationFeatureAppealTitle": "Märgi võtmise pausi ajavahemik",
   "restDurationFeatureAppealShortDescription": "Jälgi täpselt pillide võtmise katkestusi",
+  "restDurationFeatureAppealHeadline": "Peata pillide võtmine ajutiselt",
   "featureAppealLocationLabel": "Asukoht rakenduses",
   "criticalAlertFeatureAppealPoint1": "Saad teavitusi ka keskendumisrežiimis",
   "criticalAlertFeatureAppealPoint2": "Usaldusväärne meeldetuletus sinu valitud ajal",
