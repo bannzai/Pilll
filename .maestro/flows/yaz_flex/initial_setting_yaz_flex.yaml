@@ -23,11 +23,32 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # 「ヤーズフレックスの方ですか？」→ はい
-# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ
-- extendedWaitUntil:
-    visible: "ヤーズフレックスの方ですか？"
-    timeout: 60000
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかるため表示を待つ。
+# 通知許可ダイアログが上の 15 秒より後に出ると、下の画面の文字を Maestro が検出できず待ちが失敗する
+# (maestro-e2e run 40455785333 の失敗時の画面)。最大 60 秒の間、ダイアログが出ていれば許可して待ち直す
+- repeat:
+    times: 6
+    while:
+      notVisible: "ヤーズフレックスの方ですか？"
+    commands:
+      - runFlow:
+          when:
+            visible: "許可"
+          commands:
+            - tapOn: "許可"
+            - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "ヤーズフレックスの方ですか？"
+          timeout: 10000
+          optional: true
+- assertVisible: "ヤーズフレックスの方ですか？"
 - tapOn: "はい"
+- waitForAnimationToEnd
+# CI の Simulator では「はい」からの画面遷移が waitForAnimationToEnd より遅れ、遷移の途中で下のピルをタップして選択されないことがある
+# (maestro-e2e run 40751368564 の 2 回目の失敗時の画面は、ピルが未選択の今日の番号の画面だった) ため、遷移先の表示を待つ
+- extendedWaitUntil:
+    visible: ".*飲む・飲んだピルの番号をタップ.*"
+    timeout: 30000
 - waitForAnimationToEnd
 
 # 今日飲む番号: 1枚目の最初のピルを座標でタップ (ピルシート内の Flutter のピルは Maestro がテキストで検出できないため)

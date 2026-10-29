@@ -25,39 +25,44 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ListTile(
-      minVerticalPadding: 9,
-      title: Row(
-        children: [
-          Text(
-            L.customizeMedicationNotifications,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+    return Semantics(
+      identifier: 'settings_reminder_notification_customize_word_row',
+      button: true,
+      child: ListTile(
+        minVerticalPadding: 9,
+        title: Row(
+          children: [
+            Text(
+              L.customizeMedicationNotifications,
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              ),
             ),
-          ),
-          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
-        ],
-      ),
-      subtitle: Text(
-        L.xCanBeCustomized(L.medicationNotification),
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
+            if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
+          ],
         ),
+        subtitle: Text(
+          L.xCanBeCustomized(L.medicationNotification),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          ),
+        ),
+        onTap: () {
+          analytics.logEvent(name: 'did_notification_customize_word');
+          if (isTrial || isPremium) {
+            Navigator.of(
+              context,
+            ).push(ReminderNotificationCustomizeWordPageRoutes.route());
+          } else {
+            showPremiumIntroductionSheet(context, source: PaywallSource.settingsReminderCustomizeRow);
+          }
+        },
       ),
-      onTap: () {
-        analytics.logEvent(name: 'did_notification_customize_word');
-        if (isTrial || isPremium) {
-          Navigator.of(
-            context,
-          ).push(ReminderNotificationCustomizeWordPageRoutes.route());
-        } else {
-          showPremiumIntroductionSheet(context, source: PaywallSource.settingsReminderCustomizeRow);
-        }
-      },
     );
   }
 }

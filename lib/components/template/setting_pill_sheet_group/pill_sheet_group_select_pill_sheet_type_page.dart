@@ -36,20 +36,25 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
             controller: scrollController,
             children: [
               const SizedBox(height: 25),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  const SizedBox(width: 16),
-                  Text(
-                    L.selectPillType,
-                    style: const TextStyle(
-                      color: TextColor.main,
-                      fontSize: 20,
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w600,
+              // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+              // 言語に依存せずシートの表示を待つため
+              Semantics(
+                identifier: 'pill_sheet_type_select_sheet_title',
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(width: 16),
+                    Text(
+                      L.selectPillType,
+                      style: const TextStyle(
+                        color: TextColor.main,
+                        fontSize: 20,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(height: 24),
               PillSheetTypeSelectBodyTemplate(

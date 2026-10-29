@@ -1,0 +1,193 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+# 翻訳の画面比較 (castle の translate-app-screenshot-check skill) の入力として、主要画面を 1 言語分撮るフロー。
+# LANG は呼び出し側が必ず `--env LANG=<arbコード>` で渡す (flow に default を置くと CLI 指定を上書きするため置かない)。
+# 呼び出し側 scripts/translation_screenshots/capture_langs.sh が言語ごとに LANG を差し替えて実行する。
+# 出力は scripts/translation_screenshots/artifacts/<画面>/<LANG>.png。各画面の仕様は scripts/translation_screenshots/README.md。
+#
+# debug ビルドは文言を ja に固定しているため、初期設定を ja で突破してから開発者オプションの「表示言語」で LANG に切り替える。
+# 切り替えた後は文言が LANG になるため、タップは Semantics identifier (id) と座標だけで行う。
+# 画面を撮るたびにアプリを起動し直して記録タブから始める (戻るボタンの文言・位置に依存しないため)。
+#
+# 待ち時間の固定値:
+# - 60000 (起動・スクロール): CI の Simulator でユーザーの作り直しを含む起動に時間がかかるため、initial_setup.yaml と同じ値にした
+# - 30000 (タブを切り替えた後の画面): タブの切り替えと Firestore の読み込みだけで起動を含まないため、起動の半分にした
+# - 10000 (ボトムシート): 読み込みの無いシートの表示を待つだけのため
+# - waitToSettleTimeoutMs: 500: appstore_screenshot/capture.yaml と同じ値
+#
+# 撮らない画面:
+# - プレミアム紹介: RevenueCat の offering (StoreKit の商品) が取れるまでインジケーターのままで、
+#   App Store の商品を取得できない CI の Simulator では表示されない (.maestro/flows/config.yaml の lifetime_offer/ と同じ理由)
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- waitForAnimationToEnd
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
+- waitForAnimationToEnd
+
+# initial_setup.yaml は今日の服用番号を「まだ分からない」で飛ばすためピルシートが作られず、
+# 記録画面にピルシートとピルシートの設定ボタンが出ない (translation-screenshots run 40593290313 の失敗時の画面で確認)。
+# 文言が ja のうちに記録 →「ピルシートを追加」でピルシートを作る。
+# 追加画面は初期設定で保存したピルの種類 (21錠＋7日休薬 × 3 枚) を読み込んで開くため、種類は選ばずに「追加」する
+- tapOn: "ピルシートを追加"
+- waitForAnimationToEnd
+- tapOn: "追加"
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- waitForAnimationToEnd
+
+# 設定タブ → 開発者オプションの「表示言語」→ LANG
+# タブは Image 型で text 検出不可のため座標タップ (feature_appeal/feature_appeal_bar_persists_across_tabs.yaml と同じ)
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "debug_app_language_row"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "debug_app_language_row"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "${LANG}"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+# スクロールの残り慣性で隣の言語を誤タップしないよう、タップ前に慣性を待つ (appstore_screenshot/capture.yaml と同じ)
+- waitForAnimationToEnd
+- tapOn:
+    id: "${LANG}"
+- waitForAnimationToEnd
+
+# 再起動しても LANG のまま表示されることを、以降の撮影で確かめる
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- waitForAnimationToEnd
+
+# 記録画面 (ピルシート)
+- takeScreenshot: "scripts/translation_screenshots/artifacts/record/${LANG}"
+
+# 生理記録
+- tapOn:
+    point: "37%,95%"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/menstruation/${LANG}"
+
+# カレンダー
+# waitForAnimationToEnd だけでは読み込み中のインジケーターを撮ってしまう (translation-screenshots run 40628374101 の de の画像で確認) ため、カレンダーの表示を待つ
+- tapOn:
+    point: "62%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "calendar_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/calendar/${LANG}"
+
+# 設定
+# waitForAnimationToEnd だけではタブの切り替え前のカレンダーを撮ってしまう (translation-screenshots run 40628374101 の en の画像で確認) ため、設定画面の表示を待つ
+- tapOn:
+    point: "88%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "settings_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/settings/${LANG}"
+
+# 服用通知の文言カスタマイズ (設定 → 服用通知の文言カスタマイズ)
+- scrollUntilVisible:
+    element:
+      id: "settings_reminder_notification_customize_word_row"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "settings_reminder_notification_customize_word_row"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/reminder_notification_customize_word/${LANG}"
+
+# 服用お休みの開始ダイアログ (記録 → ピルシートの設定 → 服用お休み)
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- tapOn:
+    id: "record_page_pill_sheet_setting_button"
+- waitForAnimationToEnd
+- tapOn:
+    id: "begin_manual_rest_duration_row"
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/rest_duration_begin_dialog/${LANG}"
+
+# Yaz Flex の初期設定の質問とピルの種類選択シートは初期設定の中にあるため、
+# 開発者オプションのユーザー削除 (debug_row の長押し) で初期設定に戻して LANG で開く。表示言語の保存は端末に残る
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "debug_row"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- longPressOn:
+    id: "debug_row"
+- waitForAnimationToEnd
+# CI の Simulator では長押しが効かずダイアログが出ないことがある (translation-screenshots run 40621843859 の en の失敗時の画面で確認) ため、
+# 削除ボタンが無ければもう一度長押しする
+- runFlow:
+    when:
+      notVisible:
+        id: "debug_delete_user_button"
+    commands:
+      - longPressOn:
+          id: "debug_row"
+      - waitForAnimationToEnd
+- tapOn:
+    id: "debug_delete_user_button"
+- waitForAnimationToEnd
+- stopApp
+- launchApp
+
+# Yaz Flex の初期設定の質問
+# CI の Simulator ではユーザーの作り直しを含む起動に時間がかかるため表示を待つ (initial_setup.yaml と同じ)
+- extendedWaitUntil:
+    visible:
+      id: "initial_setting_yaz_flex_no_button"
+    timeout: 60000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/yaz_flex_question/${LANG}"
+
+# ピルの種類選択シート。記録 →「ピルシートを追加」と同じ AddPillSheetTypeEmpty が開くシート
+- tapOn:
+    id: "initial_setting_yaz_flex_no_button"
+- waitForAnimationToEnd
+- tapOn:
+    id: "add_pill_sheet_type_empty_button"
+# waitForAnimationToEnd だけではシートが出る前に撮れてしまう (translation-screenshots run 40621843859 の ja・de の画像で確認) ため、シートの見出しを待つ
+- extendedWaitUntil:
+    visible:
+      id: "pill_sheet_type_select_sheet_title"
+    timeout: 10000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/pill_sheet_type_select_sheet/${LANG}"
