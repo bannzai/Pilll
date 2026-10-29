@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Запис за земање можеби не е зачуван",
   "quickRecordTakePillFailedMessage": "Ве молиме, отворете ја апликацијата и проверете",
   "alreadyTaken": "Земена",
+  "startPauseTaking": "Пауза во земање таблети",
   "sequentialLastTakenPlusOnePillNumber": "таблета бр. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "како почетен број",
   "add": "Додавање",

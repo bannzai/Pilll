@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Beleženje jemanja morda ni uspelo",
   "quickRecordTakePillFailedMessage": "Odprite aplikacijo in preverite",
   "alreadyTaken": "Tableta vzeta",
+  "startPauseTaking": "Začasno ustavite jemanje tablet",
   "sequentialLastTakenPlusOnePillNumber": "Tableta št. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "je začetna številka",
   "add": "Dodajte",
