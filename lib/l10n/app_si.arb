@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට කරුණාකර {date} හෝ ඊට පෙර දිනයක් තෝරන්න",
   "addPausePeriod": "පෙති ගැනීමේ විරාම කාලයක් එක් කරන්න",
   "addedPausePeriod": "පෙති ගැනීමේ විරාම කාලය එක් කළා",
+  "pausePeriodOverlapsOther": "පෙති ගැනීමේ විරාමයේ වෙනත් කාල සීමාවක් සමඟ අතිච්ඡාදනය වන කාල සීමාවක් තෝරාගත නොහැක",
   "plannedResumeDateOptional": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය (විකල්ප)",
   "plannedResumeDateNotSet": "තවම නියම කර නැත",
   "selectPlannedResumeDate": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය තෝරන්න",

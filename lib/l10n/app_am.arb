@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "ለጊዜው ማቆም የሚጀምርበትን ቀን {date} ወይም ከዚያ በፊት ይምረጡ",
   "addPausePeriod": "የለጊዜው ማቆም ጊዜ ያክሉ",
   "addedPausePeriod": "የለጊዜው ማቆም ጊዜ ተጨምሯል",
+  "pausePeriodOverlapsOther": "ከሌላ ለጊዜው ማቆም ጊዜ ጋር የሚደራረብ ጊዜ መምረጥ አይችሉም",
   "plannedResumeDateOptional": "ክኒን መውሰድ እንደገና የሚጀምሩበት ቀን (አማራጭ)",
   "plannedResumeDateNotSet": "አልተወሰነም",
   "selectPlannedResumeDate": "ክኒን መውሰድ እንደገና ለመጀመር ያቀዱበትን ቀን ይምረጡ",

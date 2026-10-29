@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "일시 중지 시작일은 {date} 또는 그 이전 날짜로 선택해 주세요",
   "addPausePeriod": "일시 중지 기간 추가",
   "addedPausePeriod": "복용 일시 중지 기간을 추가했어요",
+  "pausePeriodOverlapsOther": "다른 일시 중지 기간과 겹치는 기간은 선택할 수 없어요",
   "plannedResumeDateOptional": "복용 재개 예정일 (선택)",
   "plannedResumeDateNotSet": "미설정",
   "selectPlannedResumeDate": "복용 재개 예정일 선택",

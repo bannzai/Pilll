@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Pauza boshlanishi uchun {date} yoki undan oldingi sanani tanlang",
   "addPausePeriod": "Pauza davrini qoʻshing",
   "addedPausePeriod": "Tabletkani qabul qilishdagi pauza davri qoʻshildi",
+  "pausePeriodOverlapsOther": "Boshqa pauza davri bilan ustma-ust tushadigan davrni tanlay olmaysiz",
   "plannedResumeDateOptional": "Tabletka qabul qilishni qayta boshlashning rejalashtirilgan sanasi (ixtiyoriy)",
   "plannedResumeDateNotSet": "Hali belgilanmagan",
   "selectPlannedResumeDate": "Tabletka qabul qilishni qayta boshlashning rejalashtirilgan sanasini tanlang",

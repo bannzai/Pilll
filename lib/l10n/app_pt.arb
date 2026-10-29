@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Escolha {date} ou uma data anterior para iniciar a interrupção",
   "addPausePeriod": "Adicionar período de interrupção",
   "addedPausePeriod": "Período de interrupção adicionado",
+  "pausePeriodOverlapsOther": "Você não pode selecionar um período que coincida com outra interrupção",
   "plannedResumeDateOptional": "Data prevista para voltar a tomar a pílula (opcional)",
   "plannedResumeDateNotSet": "Ainda não definida",
   "selectPlannedResumeDate": "Escolha a data prevista para voltar a tomar a pílula",

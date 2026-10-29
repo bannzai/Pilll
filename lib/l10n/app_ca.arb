@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Tria el {date} o una data anterior per començar la pausa",
   "addPausePeriod": "Afegeix un període de pausa",
   "addedPausePeriod": "S'ha afegit el període de pausa",
+  "pausePeriodOverlapsOther": "No pots seleccionar un període que coincideixi amb una altra pausa",
   "plannedResumeDateOptional": "Data prevista per tornar a prendre la píndola (opcional)",
   "plannedResumeDateNotSet": "Encara no s’ha definit",
   "selectPlannedResumeDate": "Tria la data prevista per tornar a prendre la píndola",

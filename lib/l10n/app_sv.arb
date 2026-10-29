@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Välj {date} eller ett tidigare datum som start för din paus",
   "addPausePeriod": "Lägg till en pausperiod",
   "addedPausePeriod": "Perioden med paus i tablettintaget har lagts till",
+  "pausePeriodOverlapsOther": "Du kan inte välja en period som överlappar en annan paus",
   "plannedResumeDateOptional": "Planerat datum för att börja ta p-pillret igen (valfritt)",
   "plannedResumeDateNotSet": "Inte angivet",
   "selectPlannedResumeDate": "Välj datumet då du planerar att börja ta p-piller igen",

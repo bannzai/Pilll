@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Please choose {date} or an earlier date for the start of your pause",
   "addPausePeriod": "Add a pause period",
   "addedPausePeriod": "Pause period added",
+  "pausePeriodOverlapsOther": "You can’t select a period that overlaps another pause",
   "plannedResumeDateOptional": "Planned resume date (optional)",
   "plannedResumeDateNotSet": "Not set",
   "selectPlannedResumeDate": "Select your planned date to resume taking the pill",

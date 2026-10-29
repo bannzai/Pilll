@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Pilih {date} atau tanggal sebelumnya sebagai awal jeda minum pil",
   "addPausePeriod": "Tambahkan periode jeda minum",
   "addedPausePeriod": "Periode jeda minum pil telah ditambahkan",
+  "pausePeriodOverlapsOther": "Anda tidak dapat memilih periode yang tumpang tindih dengan jeda minum lainnya",
   "plannedResumeDateOptional": "Rencana tanggal mulai minum pil lagi (opsional)",
   "plannedResumeDateNotSet": "Belum ditentukan",
   "selectPlannedResumeDate": "Pilih rencana tanggal mulai minum pil lagi",

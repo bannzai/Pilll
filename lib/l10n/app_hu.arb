@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "A szedés szüneteltetése kezdetének válaszd a(z) {date} napot vagy egy korábbi dátumot",
   "addPausePeriod": "Szüneteltetett szedési időszak hozzáadása",
   "addedPausePeriod": "Hozzáadva az időszak, amikor a szedést szünetelteted",
+  "pausePeriodOverlapsOther": "Nem választhatsz olyan időszakot, amely átfedésben van egy másik szüneteltetési időszakkal",
   "plannedResumeDateOptional": "A tabletta újbóli szedésének tervezett napja (nem kötelező)",
   "plannedResumeDateNotSet": "Nincs beállítva",
   "selectPlannedResumeDate": "Válaszd ki, mikor kezded újra szedni a tablettát",

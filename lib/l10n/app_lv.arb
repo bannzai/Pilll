@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties {date} vai agrāku datumu kā lietošanas pauzes sākumu",
   "addPausePeriod": "Pievienot lietošanas pauzes periodu",
   "addedPausePeriod": "Lietošanas pauzes periods ir pievienots",
+  "pausePeriodOverlapsOther": "Nevarat izvēlēties periodu, kas pārklājas ar citu lietošanas pauzes periodu",
   "plannedResumeDateOptional": "Plānotais datums, kad atsāksiet lietot tabletes (nav obligāti)",
   "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto datumu, kad atsāksiet lietot tabletes",

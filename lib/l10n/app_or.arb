@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "ସେବନ ବିରତି ଆରମ୍ଭ କରିବା ପାଇଁ ଦୟାକରି {date} କିମ୍ବା ତା’ପୂର୍ବର ତାରିଖ ବାଛନ୍ତୁ",
   "addPausePeriod": "ସେବନ ବିରତିର ଅବଧି ଯୋଡ଼ନ୍ତୁ",
   "addedPausePeriod": "ସେବନ ବିରତି ଅବଧି ଯୋଡ଼ାଯାଇଛି",
+  "pausePeriodOverlapsOther": "ଅନ୍ୟ ଏକ ସେବନ ବିରତି ଅବଧି ସହ ମିଶୁଥିବା ଅବଧି ଆପଣ ବାଛିପାରିବେ ନାହିଁ",
   "plannedResumeDateOptional": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ (ଇଚ୍ଛାଧୀନ)",
   "plannedResumeDateNotSet": "ଏପର୍ଯ୍ୟନ୍ତ ନିର୍ଦ୍ଧାରଣ ହୋଇନାହିଁ",
   "selectPlannedResumeDate": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ଯୋଜିତ ତାରିଖ ବାଛନ୍ତୁ",

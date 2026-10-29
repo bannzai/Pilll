@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Scegli il {date} o una data precedente per iniziare la sospensione",
   "addPausePeriod": "Aggiungi un periodo di sospensione",
   "addedPausePeriod": "Aggiunto il periodo di sospensione",
+  "pausePeriodOverlapsOther": "Non puoi selezionare un periodo che si sovrappone a un’altra sospensione",
   "plannedResumeDateOptional": "Data prevista per riprendere la pillola (facoltativa)",
   "plannedResumeDateNotSet": "Non ancora impostata",
   "selectPlannedResumeDate": "Seleziona la data prevista per riprendere la pillola",

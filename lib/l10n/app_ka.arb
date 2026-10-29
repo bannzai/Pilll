@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "მიღების პაუზის დასაწყებად აირჩიეთ {date} ან უფრო ადრინდელი თარიღი",
   "addPausePeriod": "მიღების პაუზის პერიოდის დამატება",
   "addedPausePeriod": "მიღების პაუზის პერიოდი დაემატა",
+  "pausePeriodOverlapsOther": "ვერ აირჩევთ პერიოდს, რომელიც მიღების პაუზის სხვა პერიოდს ემთხვევა",
   "plannedResumeDateOptional": "აბის მიღების განახლების დაგეგმილი თარიღი (არასავალდებულო)",
   "plannedResumeDateNotSet": "ჯერ არ არის მითითებული",
   "selectPlannedResumeDate": "აირჩიეთ აბის მიღების განახლების დაგეგმილი თარიღი",

@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Hautatu {date} edo lehenagoko data etenaldia hasteko",
   "addPausePeriod": "Gehitu etenaldi bat",
   "addedPausePeriod": "Etenaldi aldia gehitu da",
+  "pausePeriodOverlapsOther": "Ezin duzu beste etenaldi batekin gainjartzen den aldirik aukeratu",
   "plannedResumeDateOptional": "Pilula berriro hartzen hasteko aurreikusitako eguna (aukerakoa)",
   "plannedResumeDateNotSet": "Zehaztu gabe",
   "selectPlannedResumeDate": "Aukeratu pilula berriro hartzeko aurreikusitako eguna",

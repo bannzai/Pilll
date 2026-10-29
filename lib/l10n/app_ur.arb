@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "گولی لینے میں توقف شروع کرنے کے لیے براہِ کرم {date} یا اس سے پہلے کی تاریخ منتخب کریں",
   "addPausePeriod": "گولی لینے میں توقف کی مدت شامل کریں",
   "addedPausePeriod": "گولیاں لینے میں توقف کی مدت شامل کر دی گئی ہے",
+  "pausePeriodOverlapsOther": "آپ کسی اور عارضی توقف کی مدت سے ملنے والی مدت منتخب نہیں کر سکتیں",
   "plannedResumeDateOptional": "گولی دوبارہ لینا شروع کرنے کی طے شدہ تاریخ (اختیاری)",
   "plannedResumeDateNotSet": "ابھی طے نہیں ہوئی",
   "selectPlannedResumeDate": "دوبارہ گولی لینا شروع کرنے کی طے شدہ تاریخ منتخب کریں",

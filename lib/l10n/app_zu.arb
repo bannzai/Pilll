@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Sicela ukhethe u-{date} noma usuku olungaphambi kwalokho ukuze uqale ukumisa okwesikhashana ukuphuza iphilisi",
   "addPausePeriod": "Faka isikhathi sokumisa okwesikhashana ukuphuza amaphilisi",
   "addedPausePeriod": "Isikhathi sokumisa okwesikhashana ukuphuza amaphilisi sengeziwe",
+  "pausePeriodOverlapsOther": "Awukwazi ukukhetha isikhathi esihlangana nesinye isikhathi sokumisa okwesikhashana ukuphuza amaphilisi",
   "plannedResumeDateOptional": "Usuku oluhleliwe lokuphinda uqale ukuphuza iphilisi (uyazikhethela)",
   "plannedResumeDateNotSet": "Akukakasethwa",
   "selectPlannedResumeDate": "Sicela ukhethe usuku oluhleliwe lokuphinda uqale ukuphuza amaphilisi",

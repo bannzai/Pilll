@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "সেবন স্থগিত শুরুর তারিখ হিসেবে {date} বা তার আগের কোনো তারিখ বেছে নিন",
   "addPausePeriod": "সেবন স্থগিতের সময়কাল যোগ করুন",
   "addedPausePeriod": "সেবন স্থগিত রাখার সময়কাল যোগ করা হয়েছে",
+  "pausePeriodOverlapsOther": "অন্য সেবন স্থগিতের সময়ের সঙ্গে মিলে যায় এমন সময় বেছে নিতে পারবেন না",
   "plannedResumeDateOptional": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ (ঐচ্ছিক)",
   "plannedResumeDateNotSet": "এখনও নির্ধারণ করা হয়নি",
   "selectPlannedResumeDate": "আবার পিল খাওয়া শুরুর পরিকল্পিত তারিখ বেছে নিন",

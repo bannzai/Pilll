@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Ju lutemi, zgjidhni {date} ose një datë më të hershme për fillimin e pauzës së marrjes së pilulave",
   "addPausePeriod": "Shtoni një periudhë pauze",
   "addedPausePeriod": "U shtua periudha e pauzës së marrjes së pilulave",
+  "pausePeriodOverlapsOther": "Nuk mund të zgjidhni një periudhë që mbivendoset me një pauzë tjetër",
   "plannedResumeDateOptional": "Data e planifikuar për të rifilluar marrjen e pilulës (opsionale)",
   "plannedResumeDateNotSet": "Ende e papërcaktuar",
   "selectPlannedResumeDate": "Zgjidhni datën kur planifikoni të filloni sërish marrjen e pilulës",

@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Valitse taukotilan aloituspäiväksi {date} tai sitä aiempi päivä",
   "addPausePeriod": "Lisää taukotilan ajanjakso",
   "addedPausePeriod": "Taukotila on lisätty tälle ajanjaksolle",
+  "pausePeriodOverlapsOther": "Et voi valita ajanjaksoa, joka on päällekkäin toisen taukotilan kanssa",
   "plannedResumeDateOptional": "Suunniteltu jatkamispäivä (valinnainen)",
   "plannedResumeDateNotSet": "Ei asetettu",
   "selectPlannedResumeDate": "Valitse suunniteltu jatkamispäivä",

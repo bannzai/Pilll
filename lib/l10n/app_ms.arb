@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Sila pilih {date} atau tarikh lebih awal untuk memulakan jeda pengambilan pil",
   "addPausePeriod": "Tambah tempoh jeda pengambilan pil",
   "addedPausePeriod": "Tempoh jeda pengambilan pil telah ditambahkan",
+  "pausePeriodOverlapsOther": "Anda tidak boleh memilih tempoh yang bertindih dengan jeda pengambilan pil yang lain",
   "plannedResumeDateOptional": "Tarikh dirancang untuk mula mengambil pil semula (pilihan)",
   "plannedResumeDateNotSet": "Belum ditetapkan",
   "selectPlannedResumeDate": "Pilih tarikh dirancang untuk mula mengambil pil semula",

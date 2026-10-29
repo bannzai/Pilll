@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Ara vermeye başlamak için lütfen {date} veya daha önceki bir tarihi seçin",
   "addPausePeriod": "Ara verme dönemi ekleyin",
   "addedPausePeriod": "Hap kullanımına ara verme dönemi eklendi",
+  "pausePeriodOverlapsOther": "Başka bir ara verme dönemiyle çakışan bir dönem seçemezsiniz",
   "plannedResumeDateOptional": "Hapı yeniden almaya başlamayı planladığınız tarih (isteğe bağlı)",
   "plannedResumeDateNotSet": "Henüz belirlenmedi",
   "selectPlannedResumeDate": "Hapı yeniden almaya başlamayı planladığınız tarihi seçin",

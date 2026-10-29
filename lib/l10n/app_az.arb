@@ -560,6 +560,7 @@
   "pauseStartDateMustBeOnOrBefore": "Həb qəbuluna fasilə üçün başlanğıc tarixi olaraq {date} və ya daha əvvəlki tarixi seçin",
   "addPausePeriod": "Həb qəbuluna fasilə müddəti əlavə edin",
   "addedPausePeriod": "Həb qəbuluna fasilə müddəti əlavə edildi",
+  "pausePeriodOverlapsOther": "Başqa bir Həb qəbuluna fasilə dövrü ilə üst-üstə düşən dövrü seçə bilməzsiniz",
   "plannedResumeDateOptional": "Həb qəbulunu bərpa etməyi planlaşdırdığınız tarix (istəyə bağlı)",
   "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Həb qəbulunu bərpa etməyi planlaşdırdığınız tarixi seçin",
