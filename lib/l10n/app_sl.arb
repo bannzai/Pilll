@@ -386,6 +386,7 @@
   "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",
+  "changePausePeriod": "Sprememba obdobja premora pri jemanju tablet",
   "changedToDate": "Datum je spremenjen na {date}",
   "quickRecordTakePillFailed": "Beleženje jemanja morda ni uspelo",
   "quickRecordTakePillFailedMessage": "Odprite aplikacijo in preverite",
