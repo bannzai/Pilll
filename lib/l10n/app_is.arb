@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Ekki sýna aftur",
   "pauseStartDateMustBeOnOrBefore": "Veldu {date} eða fyrri dagsetningu sem upphaf pilluhlés",
   "addPausePeriod": "Bæta við tímabili pilluhlés",
+  "addedPausePeriod": "Tímabili fyrir pilluhlé hefur verið bætt við",
   "plannedResumeDateOptional": "Áætlaður dagur til að byrja aftur að taka pilluna (valfrjálst)",
   "plannedResumeDateNotSet": "Ekki ákveðið enn",
   "selectPlannedResumeDate": "Veldu daginn sem þú ætlar að byrja að taka pilluna aftur",

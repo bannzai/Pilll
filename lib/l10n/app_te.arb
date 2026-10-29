@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "మళ్లీ చూపవద్దు",
   "pauseStartDateMustBeOnOrBefore": "మాత్రలు తీసుకోవడాన్ని తాత్కాలిక విరామంలో ఉంచే ప్రారంభ తేదీగా {date} లేదా అంతకుముందు తేదీని ఎంచుకోండి",
   "addPausePeriod": "తాత్కాలిక విరామ కాలాన్ని జోడించండి",
+  "addedPausePeriod": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామ కాలం జోడించబడింది",
   "plannedResumeDateOptional": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించడానికి అనుకున్న తేదీ (ఐచ్ఛికం)",
   "plannedResumeDateNotSet": "ఇంకా నిర్ణయించలేదు",
   "selectPlannedResumeDate": "మాత్రలు తీసుకోవడం మళ్లీ ప్రారంభించడానికి అనుకున్న తేదీని ఎంచుకోండి",

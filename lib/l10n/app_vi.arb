@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Không hiện lại",
   "pauseStartDateMustBeOnOrBefore": "Vui lòng chọn ngày {date} hoặc sớm hơn để bắt đầu tạm ngừng uống thuốc",
   "addPausePeriod": "Thêm khoảng thời gian tạm ngừng uống thuốc",
+  "addedPausePeriod": "Đã thêm khoảng thời gian tạm ngừng uống thuốc",
   "plannedResumeDateOptional": "Ngày dự định uống thuốc trở lại (không bắt buộc)",
   "plannedResumeDateNotSet": "Chưa thiết lập",
   "selectPlannedResumeDate": "Chọn ngày dự định uống thuốc trở lại",

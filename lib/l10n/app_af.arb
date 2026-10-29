@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nooit weer wys",
   "pauseStartDateMustBeOnOrBefore": "Kies asseblief {date} of vroeër as die begindatum van die innameonderbreking",
   "addPausePeriod": "Voeg 'n tydperk van innameonderbreking by",
+  "addedPausePeriod": "Tydperk vir innameonderbreking is bygevoeg",
   "plannedResumeDateOptional": "Beplande datum om weer die pil te neem (opsioneel)",
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die datum waarop jy weer jou pil gaan neem",

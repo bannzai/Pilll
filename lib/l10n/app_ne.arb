@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "फेरि नदेखाउनुहोस्",
   "pauseStartDateMustBeOnOrBefore": "सेवन विराम सुरु गर्न कृपया {date} वा त्यसभन्दा अघिको मिति छान्नुहोस्",
   "addPausePeriod": "सेवन विरामको अवधि थप्नुहोस्",
+  "addedPausePeriod": "सेवन विराम अवधि थपिएको छ",
   "plannedResumeDateOptional": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति (वैकल्पिक)",
   "plannedResumeDateNotSet": "अझै तय गरिएको छैन",
   "selectPlannedResumeDate": "चक्की फेरि खान सुरु गर्ने योजना भएको मिति छान्नुहोस्",

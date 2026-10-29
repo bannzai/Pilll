@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Vairs nerādīt",
   "pauseStartDateMustBeOnOrBefore": "Lūdzu, izvēlieties {date} vai agrāku datumu kā lietošanas pauzes sākumu",
   "addPausePeriod": "Pievienot lietošanas pauzes periodu",
+  "addedPausePeriod": "Lietošanas pauzes periods ir pievienots",
   "plannedResumeDateOptional": "Plānotais datums, kad atsāksiet lietot tabletes (nav obligāti)",
   "plannedResumeDateNotSet": "Vēl nav iestatīts",
   "selectPlannedResumeDate": "Izvēlieties plānoto datumu, kad atsāksiet lietot tabletes",

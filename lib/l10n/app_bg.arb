@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Не показвай отново",
   "pauseStartDateMustBeOnOrBefore": "Моля, изберете {date} или по-ранна дата за начало на спиране на приема",
   "addPausePeriod": "Добавяне на период на спиране на приема",
+  "addedPausePeriod": "Добавен е период на спиране на приема",
   "plannedResumeDateOptional": "Планирана дата за подновяване на приема на хапчето (по желание)",
   "plannedResumeDateNotSet": "Не е зададено",
   "selectPlannedResumeDate": "Изберете планирана дата за подновяване на приема на хапчето",

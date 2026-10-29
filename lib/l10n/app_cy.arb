@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Peidio â dangos eto",
   "pauseStartDateMustBeOnOrBefore": "Dewiswch {date} neu ddyddiad cyn hynny i ddechrau eich oedi",
   "addPausePeriod": "Ychwanegu cyfnod oedi",
+  "addedPausePeriod": "Mae cyfnod oedi wedi'i ychwanegu",
   "plannedResumeDateOptional": "Dyddiad bwriedig i ailddechrau cymryd y bilsen (dewisol)",
   "plannedResumeDateNotSet": "Heb ei bennu eto",
   "selectPlannedResumeDate": "Dewiswch y dyddiad rydych yn bwriadu ailddechrau cymryd y bilsen",

@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Nüme aazeige",
   "pauseStartDateMustBeOnOrBefore": "Wähl bitte de {date} oder es früehners Datum für de Afang vo de Iinahmepause",
   "addPausePeriod": "E Ziitspanne für d Iinahmepause dezue tue",
+  "addedPausePeriod": "D Ziit für d Iinahmepause isch dezuecho",
   "plannedResumeDateOptional": "Datum, wänn du d Pille wider nimmsch (freiwillig)",
   "plannedResumeDateNotSet": "No nöd feschtgleit",
   "selectPlannedResumeDate": "Wähl s Datum, wänn du d Pille wider wetsch näh",

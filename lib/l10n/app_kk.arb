@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Қайта көрсетпеу",
   "pauseStartDateMustBeOnOrBefore": "Кідіріс басталатын күн ретінде {date} не одан ертерек күнді таңдаңыз",
   "addPausePeriod": "Кідіріс кезеңін қосу",
+  "addedPausePeriod": "Қабылдаудағы кідіріс кезеңі қосылды",
   "plannedResumeDateOptional": "Таблетканы қайта қабылдаудың жоспарланған күні (міндетті емес)",
   "plannedResumeDateNotSet": "Әлі белгіленбеген",
   "selectPlannedResumeDate": "Таблетканы қайта қабылдаудың жоспарланған күнін таңдаңыз",

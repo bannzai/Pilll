@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Don't show again",
   "pauseStartDateMustBeOnOrBefore": "Please choose {date} or an earlier date for the start of your pause",
   "addPausePeriod": "Add a pause period",
+  "addedPausePeriod": "Pause period added",
   "plannedResumeDateOptional": "Planned resume date (optional)",
   "plannedResumeDateNotSet": "Not set",
   "selectPlannedResumeDate": "Select your planned date to resume taking the pill",

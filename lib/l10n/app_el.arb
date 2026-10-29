@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "Να μην εμφανιστεί ξανά",
   "pauseStartDateMustBeOnOrBefore": "Επιλέξτε την {date} ή προγενέστερη ημερομηνία για την έναρξη της παύσης",
   "addPausePeriod": "Προσθήκη περιόδου παύσης",
+  "addedPausePeriod": "Προστέθηκε περίοδος παύσης λήψης",
   "plannedResumeDateOptional": "Προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού (προαιρετικό)",
   "plannedResumeDateNotSet": "Δεν έχει οριστεί",
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού",

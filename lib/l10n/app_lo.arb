@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "ບໍ່ສະແດງອີກ",
   "pauseStartDateMustBeOnOrBefore": "ກະລຸນາເລືອກ {date} ຫຼືວັນທີກ່ອນໜ້ານັ້ນ ເປັນວັນເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "addPausePeriod": "ເພີ່ມໄລຍະຢຸດກິນຢາຊົ່ວຄາວ",
+  "addedPausePeriod": "ເພີ່ມໄລຍະຢຸດກິນຢາຊົ່ວຄາວແລ້ວ",
   "plannedResumeDateOptional": "ວັນທີວາງແຜນກັບມາກິນຢາເມັດອີກຄັ້ງ (ເລືອກຫຼືບໍ່ກໍໄດ້)",
   "plannedResumeDateNotSet": "ຍັງບໍ່ໄດ້ກຳນົດ",
   "selectPlannedResumeDate": "ເລືອກວັນທີວາງແຜນເລີ່ມກິນຢາເມັດອີກຄັ້ງ",

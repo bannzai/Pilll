@@ -559,6 +559,7 @@
   "midnightTakenWarningDialogNeverShowAgain": "다시 표시하지 않기",
   "pauseStartDateMustBeOnOrBefore": "일시 중지 시작일은 {date} 또는 그 이전 날짜로 선택해 주세요",
   "addPausePeriod": "일시 중지 기간 추가",
+  "addedPausePeriod": "복용 일시 중지 기간을 추가했어요",
   "plannedResumeDateOptional": "복용 재개 예정일 (선택)",
   "plannedResumeDateNotSet": "미설정",
   "selectPlannedResumeDate": "복용 재개 예정일 선택",
