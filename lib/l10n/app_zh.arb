@@ -239,7 +239,7 @@
   "option": "选项",
   "completed": "完成",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "可以修改漏服药片时的通知内容",
+  "changeMissedNotificationMessage": "可以更改漏服时的通知文案",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "可以更改通知开头的文字",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

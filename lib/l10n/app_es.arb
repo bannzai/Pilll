@@ -239,7 +239,7 @@
   "option": "Opciones",
   "completed": "Listo",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "Puedes cambiar el texto del aviso si no has tomado la píldora",
+  "changeMissedNotificationMessage": "Puedes cambiar el texto de la notificación si no has tomado la píldora",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Puedes cambiar el inicio de la notificación",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

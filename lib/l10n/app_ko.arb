@@ -239,7 +239,7 @@
   "option": "옵션",
   "completed": "완료",
   "pilll": "Pilll",
-  "changeMissedNotificationMessage": "약을 먹지 않았을 때 표시되는 알림 문구를 변경할 수 있어요",
+  "changeMissedNotificationMessage": "복용을 잊었을 때의 알림 문구를 변경할 수 있어요",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "알림의 첫 문구를 바꿀 수 있어요",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
