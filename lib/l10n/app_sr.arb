@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Ако сте заборавили да узмете пилулу или сте помешали пилуле, па број на блистеру више не одговара узетој пилули, можете ручно да подесите данашњи број пилуле. Исти екран можете да отворите и преко броја пилуле на почетном екрану.",
   "restDurationFeatureAppealTitle": "Забележите период прекида узимања пилула",
   "restDurationFeatureAppealShortDescription": "Прецизно пратите привремене прекиде узимања пилуле",
+  "restDurationFeatureAppealHeadline": "прекид узимања пилуле",
   "featureAppealLocationLabel": "Где се налази у апликацији",
   "criticalAlertFeatureAppealPoint1": "Добијате обавештења чак и када је укључен режим фокуса",
   "criticalAlertFeatureAppealPoint2": "Поуздан подсетник у време које сте подесили",

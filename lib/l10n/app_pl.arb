@@ -506,6 +506,7 @@
   "todayPillNumberFeatureAppealBody": "Jeśli po pominięciu lub pomyleniu tabletki numer na blistrze nie zgadza się z faktycznie przyjętą tabletką, możesz ręcznie ustawić numer tabletki na dziś. Ten sam ekran otworzysz też, dotykając numeru tabletki na ekranie głównym.",
   "restDurationFeatureAppealTitle": "Zapisz okres wstrzymania przyjmowania tabletek",
   "restDurationFeatureAppealShortDescription": "Dokładnie śledź okresy wstrzymania przyjmowania tabletek",
+  "restDurationFeatureAppealHeadline": "wstrzymać przyjmowanie pigułki",
   "featureAppealLocationLabel": "Gdzie znaleźć w aplikacji",
   "criticalAlertFeatureAppealPoint1": "Otrzymuj powiadomienia także w trybie skupienia",
   "criticalAlertFeatureAppealPoint2": "Niezawodne przypomnienie o wybranej godzinie",
