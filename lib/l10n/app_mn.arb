@@ -561,6 +561,7 @@
   "addPausePeriod": "Эм уух түр завсарлагийн хугацааг нэмнэ үү",
   "addedPausePeriod": "түр завсарлагийн хугацааг нэмсэн",
   "pausePeriodOverlapsOther": "Өөр түр завсарлагийн хугацаатай давхцах хугацааг сонгох боломжгүй байна",
+  "pauseEndDateMustBeAfterStartDate": "түр завсарлагийн дуусах өдрөөр эхлэх өдрөөс хойших өдрийг сонгоно уу",
   "plannedResumeDateOptional": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдөр (заавал биш)",
   "plannedResumeDateNotSet": "Одоогоор товлоогүй",
   "selectPlannedResumeDate": "Эмээ дахин ууж эхлэхээр төлөвлөсөн өдрөө сонгоно уу",
