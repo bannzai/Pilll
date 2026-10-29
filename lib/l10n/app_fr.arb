@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Vous pouvez aussi l’ouvrir en touchant le numéro sur l’écran d’accueil",
   "restDurationFeatureAppealPoint1": "Suivi gratuit des interruptions volontaires de la prise de pilule",
   "restDurationFeatureAppealPoint2": "Commencez par l’icône en forme d’engrenage en haut à droite de la plaquette",
+  "restDurationFeatureAppealPoint3": "Vous pouvez aussi modifier facilement la durée de votre pause de prise et reprendre la pilule",
   "endedPillSheetDialogHistoryTitle": "Souhaitez-vous consulter l’historique de vos plaquettes ?",
   "endedPillSheetDialogSummaryTitle": "Revenons sur cette plaquette",
   "endedPillSheetDialogSummaryMessage": "Journal des prises : {recordedDays} jours · Jours non enregistrés : {missedDays}",

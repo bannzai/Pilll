@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Du kannst es auch öffnen, indem du auf der Startseite auf die Pillennummer tippst",
   "restDurationFeatureAppealPoint1": "Kostenlos festhalten, wenn du die Pilleneinnahme vorübergehend unterbrichst",
   "restDurationFeatureAppealPoint2": "Starte über das Zahnrad oben rechts auf dem Pillenblister",
+  "restDurationFeatureAppealPoint3": "Auch die Dauer deiner Einnahmepause lässt sich leicht ändern und die Einnahme wieder aufnehmen",
   "endedPillSheetDialogHistoryTitle": "Möchtest du den Verlauf deiner Pillenblister ansehen?",
   "endedPillSheetDialogSummaryTitle": "Schauen wir uns diesen Pillenblister noch einmal an",
   "endedPillSheetDialogSummaryMessage": "Einnahmeprotokoll: {recordedDays} Tag(e) · Ohne Eintrag: {missedDays} Tag(e)",

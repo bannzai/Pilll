@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "முகப்புத் திரையில் உள்ள எண்ணைத் தட்டியும் இதைத் திறக்கலாம்",
   "restDurationFeatureAppealPoint1": "மாத்திரை உட்கொள்வதைத் தற்காலிகமாக நிறுத்தியதை இலவசமாகப் பதிவு செய்யுங்கள்",
   "restDurationFeatureAppealPoint2": "மாத்திரை அட்டையின் மேல் வலது மூலையில் உள்ள அமைப்புகள் சின்னத்திலிருந்து தொடங்குங்கள்",
+  "restDurationFeatureAppealPoint3": "மாத்திரை எடுத்துக்கொள்வதைத் தற்காலிகமாக நிறுத்தும் காலத்தை மாற்றி, மீண்டும் தொடங்குவதும் எளிது",
   "endedPillSheetDialogHistoryTitle": "மாத்திரை அட்டை வரலாற்றைப் பார்க்க விரும்புகிறீர்களா?",
   "endedPillSheetDialogSummaryTitle": "இந்த மாத்திரை அட்டையின் பதிவுகளை மீண்டும் பார்ப்போம்",
   "endedPillSheetDialogSummaryMessage": "மாத்திரை உட்கொண்ட பதிவு: {recordedDays} நாட்கள் · பதிவு இல்லாதவை: {missedDays} நாட்கள்",

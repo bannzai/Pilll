@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Tamén podes abrilo tocando o número da pantalla de inicio",
   "restDurationFeatureAppealPoint1": "Rexistro gratuíto das interrupcións voluntarias da toma da pílula",
   "restDurationFeatureAppealPoint2": "Comeza desde a icona da engrenaxe na parte superior dereita do blíster",
+  "restDurationFeatureAppealPoint3": "Tamén podes cambiar facilmente a duración da pausa na toma da pílula e retomala",
   "endedPillSheetDialogHistoryTitle": "Gustaríache ver o historial dos blísteres?",
   "endedPillSheetDialogSummaryTitle": "Repasemos este blíster",
   "endedPillSheetDialogSummaryMessage": "Rexistro de tomas: {recordedDays} días · Sen rexistrar: {missedDays} días",

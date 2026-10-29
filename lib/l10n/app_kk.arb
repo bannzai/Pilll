@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Басты экрандағы таблетка нөмірін түртіп те аша аласыз",
   "restDurationFeatureAppealPoint1": "Таблетка қабылдауды уақытша тоқтатуды тегін тіркеу",
   "restDurationFeatureAppealPoint2": "Таблетка блистерінің жоғарғы оң жақ бұрышындағы тісті дөңгелек белгішесінен бастаңыз",
+  "restDurationFeatureAppealPoint3": "Таблетка қабылдауды уақытша тоқтату мерзімін өзгерту және қабылдауды қайта бастау да оңай",
   "endedPillSheetDialogHistoryTitle": "Таблетка блистер тарихын көргіңіз келе ме?",
   "endedPillSheetDialogSummaryTitle": "Осы таблетка блистер бойынша жазбаларды бірге қарайық",
   "endedPillSheetDialogSummaryMessage": "Осы кезеңде қабылдау жазбасы бар: {recordedDays} күн · жазбасыз: {missedDays} күн",

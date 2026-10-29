@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ହୋମ୍ ସ୍କ୍ରିନ୍‌ରେ ଥିବା ସଂଖ୍ୟାକୁ ଟ୍ୟାପ୍ କରି ମଧ୍ୟ ଏହାକୁ ଖୋଲିପାରିବେ",
   "restDurationFeatureAppealPoint1": "ବଟିକା ଖାଇବା ସାମୟିକ ଭାବେ ବନ୍ଦ ରଖିଥିବା ସମୟ ମାଗଣାରେ ଲେଖି ରଖନ୍ତୁ",
   "restDurationFeatureAppealPoint2": "ବଟିକା ସିଟର ଉପର ଡାହାଣ କୋଣରେ ଥିବା ଗିଅର୍ ଚିହ୍ନରୁ ଆରମ୍ଭ କରନ୍ତୁ",
+  "restDurationFeatureAppealPoint3": "ବଟିକା ଖାଇବାରୁ ନେଇଥିବା ବିରତିର ଅବଧି ବଦଳାଇବା ଓ ପୁଣି ଖାଇବା ଆରମ୍ଭ କରିବା ମଧ୍ୟ ସହଜ",
   "endedPillSheetDialogHistoryTitle": "ଆପଣ ବଟିକା ସିଟର ଇତିହାସ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?",
   "endedPillSheetDialogSummaryTitle": "ଆସନ୍ତୁ, ଏହି ବଟିକା ସିଟର ରେକର୍ଡକୁ ଥରେ ଦେଖିବା",
   "endedPillSheetDialogSummaryMessage": "ସେବନ ରେକର୍ଡ: {recordedDays} ଦିନ · ରେକର୍ଡ ନଥିବା: {missedDays} ଦିନ",

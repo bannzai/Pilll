@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Bosh sahifadagi raqamni bosib ham ochishingiz mumkin",
   "restDurationFeatureAppealPoint1": "Tabletka qabul qilishni vaqtincha toʻxtatgan davrlaringizni bepul qayd eting",
   "restDurationFeatureAppealPoint2": "Tabletka blisterining yuqori oʻng burchagidagi tishli gʻildirak belgisidan boshlang",
+  "restDurationFeatureAppealPoint3": "Tabletkalarni ichishni vaqtincha toʻxtatish muddatini oʻzgartirish va yana ichishni boshlash ham oson",
   "endedPillSheetDialogHistoryTitle": "Tabletka blister tarixini koʻrishni xohlaysizmi?",
   "endedPillSheetDialogSummaryTitle": "Keling, bu tabletka blister boʻyicha qaydlarni koʻrib chiqamiz",
   "endedPillSheetDialogSummaryMessage": "Tabletka qabul qilish qaydi: {recordedDays} kun · qayd qilinmagan: {missedDays} kun",

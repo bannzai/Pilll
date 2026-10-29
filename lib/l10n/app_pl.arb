@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Możesz to też otworzyć, dotykając numeru na ekranie głównym",
   "restDurationFeatureAppealPoint1": "Bezpłatny zapis czasowego wstrzymania przyjmowania tabletek",
   "restDurationFeatureAppealPoint2": "Zacznij od ikony koła zębatego w prawym górnym rogu blistra",
+  "restDurationFeatureAppealPoint3": "Łatwo też zmienić długość przerwy w braniu pigułek i wznowić ich branie",
   "endedPillSheetDialogHistoryTitle": "Chcesz zobaczyć historię blistrów?",
   "endedPillSheetDialogSummaryTitle": "Przyjrzyjmy się temu blistrowi",
   "endedPillSheetDialogSummaryMessage": "Dni z zapisem przyjęcia: {recordedDays} · bez zapisu: {missedDays}",

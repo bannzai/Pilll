@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ਹੋਮ ਸਕ੍ਰੀਨ ਉੱਤੇ ਨੰਬਰ ਨੂੰ ਟੈਪ ਕਰਕੇ ਵੀ ਇਸਨੂੰ ਖੋਲ੍ਹ ਸਕਦੇ ਹੋ",
   "restDurationFeatureAppealPoint1": "ਗੋਲੀ ਲੈਣੀ ਕੁਝ ਸਮੇਂ ਲਈ ਰੋਕਣ ਦਾ ਮੁਫ਼ਤ ਰਿਕਾਰਡ",
   "restDurationFeatureAppealPoint2": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੇ ਉੱਪਰ ਸੱਜੇ ਪਾਸੇ ਗੀਅਰ ਚਿੰਨ੍ਹ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
+  "restDurationFeatureAppealPoint3": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਲਏ ਵਿਰਾਮ ਦੀ ਮਿਆਦ ਬਦਲਣਾ ਅਤੇ ਮੁੜ ਗੋਲੀ ਲੈਣੀ ਸ਼ੁਰੂ ਕਰਨਾ ਵੀ ਆਸਾਨ ਹੈ",
   "endedPillSheetDialogHistoryTitle": "ਕੀ ਤੁਸੀਂ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦਾ ਇਤਿਹਾਸ ਦੇਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
   "endedPillSheetDialogSummaryTitle": "ਆਓ, ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀਆਂ ਇਸ ਵਾਰ ਦੀਆਂ ਐਂਟਰੀਆਂ ਵੇਖੀਏ",
   "endedPillSheetDialogSummaryMessage": "ਸੇਵਨ ਰਿਕਾਰਡ: {recordedDays} ਦਿਨ · ਬਿਨਾਂ ਰਿਕਾਰਡ: {missedDays} ਦਿਨ",

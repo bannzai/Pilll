@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Varat to atvērt arī, pieskaroties skaitlim sākuma ekrānā",
   "restDurationFeatureAppealPoint1": "Bezmaksas ieraksti par īslaicīgu tablešu lietošanas apturēšanu",
   "restDurationFeatureAppealPoint2": "Sāciet ar zobrata ikonu tablešu blistera augšējā labajā stūrī",
+  "restDurationFeatureAppealPoint3": "Arī tablešu lietošanas pauzes ilgumu var viegli mainīt un atsākt lietošanu",
   "endedPillSheetDialogHistoryTitle": "Vai vēlaties apskatīt tablešu blisteru vēsturi?",
   "endedPillSheetDialogSummaryTitle": "Atskatīsimies uz šo tablešu blisteri",
   "endedPillSheetDialogSummaryMessage": "Tablešu lietošanas ieraksti: {recordedDays} · Trūkstošie ieraksti: {missedDays}",

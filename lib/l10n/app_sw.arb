@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Unaweza pia kuifungua kwa kugusa nambari kwenye skrini ya mwanzo",
   "restDurationFeatureAppealPoint1": "Rekodi bila malipo unaposimamisha kumeza vidonge kwa muda",
   "restDurationFeatureAppealPoint2": "Tafadhali anza kwenye ikoni ya gia iliyo juu kulia kwenye pakiti ya vidonge",
+  "restDurationFeatureAppealPoint3": "Ni rahisi pia kubadilisha muda wa kusitisha kumeza vidonge kwa muda na kuanza tena",
   "endedPillSheetDialogHistoryTitle": "Je, ungependa kuona historia ya pakiti ya vidonge?",
   "endedPillSheetDialogSummaryTitle": "Turejee matumizi ya pakiti ya vidonge hii",
   "endedPillSheetDialogSummaryMessage": "Rekodi ya kumeza vidonge: siku {recordedDays} · bila rekodi: siku {missedDays}",

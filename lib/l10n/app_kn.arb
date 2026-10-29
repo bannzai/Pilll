@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ಮುಖಪುಟದಲ್ಲಿರುವ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡುವ ಮೂಲಕವೂ ಇದನ್ನು ತೆರೆಯಬಹುದು",
   "restDurationFeatureAppealPoint1": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸಿದ್ದನ್ನು ಉಚಿತವಾಗಿ ದಾಖಲಿಸಿ",
   "restDurationFeatureAppealPoint2": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಮೇಲಿನ ಬಲ ಮೂಲೆಯಲ್ಲಿರುವ ಗೇರ್ ಗುರುತಿನಿಂದ ಪ್ರಾರಂಭಿಸಿ",
+  "restDurationFeatureAppealPoint3": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಿ, ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಲು ಆರಂಭಿಸುವುದೂ ಸುಲಭ",
   "endedPillSheetDialogHistoryTitle": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ಗಳ ಇತಿಹಾಸವನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?",
   "endedPillSheetDialogSummaryTitle": "ಈ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ದಾಖಲೆಯನ್ನು ಒಮ್ಮೆ ನೋಡೋಣ",
   "endedPillSheetDialogSummaryMessage": "ಸೇವನೆಯ ದಾಖಲೆ: {recordedDays} ದಿನ · ದಾಖಲಾಗದವು: {missedDays} ದಿನ",

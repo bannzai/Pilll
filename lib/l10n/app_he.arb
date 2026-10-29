@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "אפשר לפתוח גם בהקשה על המספר במסך הבית",
   "restDurationFeatureAppealPoint1": "תיעוד בחינם של הפסקה זמנית בנטילת הגלולה",
   "restDurationFeatureAppealPoint2": "מתחילים מסמל גלגל השיניים בפינה השמאלית העליונה של חפיסת הגלולות",
+  "restDurationFeatureAppealPoint3": "קל גם לשנות את משך ההפסקה בנטילת הגלולה ולחזור לנטילה",
   "endedPillSheetDialogHistoryTitle": "רוצה לראות את היסטוריית חפיסת הגלולות?",
   "endedPillSheetDialogSummaryTitle": "סיכום חפיסת הגלולות הזו",
   "endedPillSheetDialogSummaryMessage": "רישום נטילה: {recordedDays} · ללא רישום: {missedDays}",

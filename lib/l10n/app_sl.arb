@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Odprete ga lahko tudi z dotikom številke na domačem zaslonu",
   "restDurationFeatureAppealPoint1": "Brezplačno beleženje začasne prekinitve jemanja tablet",
   "restDurationFeatureAppealPoint2": "Začnite pri ikoni zobnika zgoraj desno na ploščici",
+  "restDurationFeatureAppealPoint3": "Preprosto lahko spremenite trajanje premora pri jemanju tablet in jih začnete znova jemati",
   "endedPillSheetDialogHistoryTitle": "Bi si želeli ogledati zgodovino ploščic?",
   "endedPillSheetDialogSummaryTitle": "Poglejmo si to ploščico za nazaj",
   "endedPillSheetDialogSummaryMessage": "Vnosi v beleženje jemanja: {recordedDays} · Manjkajoči vnosi: {missedDays}",

@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "હોમ સ્ક્રીન પરના નંબરને ટૅપ કરીને પણ તમે તેને ખોલી શકો છો",
   "restDurationFeatureAppealPoint1": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખ્યાની મફતમાં નોંધ કરો",
   "restDurationFeatureAppealPoint2": "ગોળીની સ્ટ્રિપના ઉપરના જમણા ખૂણામાં આવેલા ગિયર ચિહ્નથી શરૂ કરો",
+  "restDurationFeatureAppealPoint3": "ગોળી લેવાનો વિરામ કેટલો લાંબો રહેશે તે બદલવું અને ફરી ગોળી લેવાનું શરૂ કરવું પણ સરળ છે",
   "endedPillSheetDialogHistoryTitle": "શું તમે ગોળીની સ્ટ્રિપનો ઇતિહાસ જોવા માંગો છો?",
   "endedPillSheetDialogSummaryTitle": "ચાલો, ગોળીની સ્ટ્રિપની આ વખતની નોંધો જોઈએ",
   "endedPillSheetDialogSummaryMessage": "ગોળી સેવનની નોંધ: {recordedDays} દિવસ · નોંધ વગર: {missedDays} દિવસ",

@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "ສາມາດເປີດໄດ້ໂດຍແຕະຕົວເລກຢູ່ໜ້າຫຼັກເຊັ່ນກັນ",
   "restDurationFeatureAppealPoint1": "ບັນທຶກການຢຸດກິນຢາຊົ່ວຄາວໄດ້ຟຣີ",
   "restDurationFeatureAppealPoint2": "ເລີ່ມໄດ້ຈາກໄອຄອນຮູບເຟືອງຢູ່ມຸມຂວາເທິງຂອງແຜງຢາຄຸມ",
+  "restDurationFeatureAppealPoint3": "ການປັບໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວ ແລະເລີ່ມກິນຄືນກໍເຮັດໄດ້ງ່າຍ",
   "endedPillSheetDialogHistoryTitle": "ຢາກເບິ່ງປະຫວັດແຜງຢາຄຸມບໍ?",
   "endedPillSheetDialogSummaryTitle": "ມາທົບທວນແຜງຢາຄຸມນີ້ນຳກັນ",
   "endedPillSheetDialogSummaryMessage": "ບັນທຶກການກິນຢາ: {recordedDays} ມື້ · ບໍ່ໄດ້ບັນທຶກ: {missedDays} ມື້",

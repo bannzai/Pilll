@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Можете да го отворите и со допирање на бројот на почетниот екран",
   "restDurationFeatureAppealPoint1": "Бесплатен запис за привремено прекинување на земањето таблета",
   "restDurationFeatureAppealPoint2": "Започнете од иконата со запчаник горе десно на блистерот",
+  "restDurationFeatureAppealPoint3": "Лесно можете да го промените траењето на паузата во земањето таблета и повторно да почнете со земање",
   "endedPillSheetDialogHistoryTitle": "Дали сакате да ја видите историјата на блистер?",
   "endedPillSheetDialogSummaryTitle": "Да го разгледаме користењето на овој блистер",
   "endedPillSheetDialogSummaryMessage": "Запис за земање: {recordedDays} дена · без запис: {missedDays} дена",

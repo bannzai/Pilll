@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Вы таксама можаце адкрыць гэта, націснуўшы на лічбу на галоўным экране",
   "restDurationFeatureAppealPoint1": "Бясплатны запіс часовага спынення прыёму пігулак",
   "restDurationFeatureAppealPoint2": "Пачніце са значка шасцярэнькі ў правым верхнім куце блістара",
+  "restDurationFeatureAppealPoint3": "Змяніць працягласць паўзы ў прыёме пігулак і аднавіць прыём таксама лёгка",
   "endedPillSheetDialogHistoryTitle": "Хочаце паглядзець гісторыю блістараў?",
   "endedPillSheetDialogSummaryTitle": "Давайце ўспомнім, як вы прымалі пігулкі з гэтага блістара",
   "endedPillSheetDialogSummaryMessage": "Запісы прыёму пігулак: {recordedDays} · без запісу: {missedDays}",

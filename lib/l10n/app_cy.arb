@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Gallwch ei agor hefyd drwy dapio’r rhif ar y sgrin gartref",
   "restDurationFeatureAppealPoint1": "Cofnodi am ddim pan fyddwch chi'n rhoi'r gorau i gymryd y bilsen dros dro",
   "restDurationFeatureAppealPoint2": "Dechreuwch o'r eicon gêr ar ochr dde uchaf y stribed pils",
+  "restDurationFeatureAppealPoint3": "Mae newid hyd eich seibiant o gymryd y bilsen ac ailddechrau hefyd yn hawdd",
   "endedPillSheetDialogHistoryTitle": "Hoffech chi weld hanes eich stribed pils?",
   "endedPillSheetDialogSummaryTitle": "Beth am edrych yn ôl ar y stribed pils hwn",
   "endedPillSheetDialogSummaryMessage": "Cofnod cymryd: {recordedDays} diwrnod · heb gofnod: {missedDays} diwrnod",

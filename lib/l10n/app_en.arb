@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "You can also open it by tapping the number on the home screen",
   "restDurationFeatureAppealPoint1": "Track pauses in taking your pill for free",
   "restDurationFeatureAppealPoint2": "Start with the gear icon at the top right of the pill pack",
+  "restDurationFeatureAppealPoint3": "Easily edit your pill pause and resume taking it",
   "endedPillSheetDialogHistoryTitle": "Would you like to see your pill pack history?",
   "endedPillSheetDialogSummaryTitle": "Let’s look back at this pill pack",
   "endedPillSheetDialogSummaryMessage": "Pill log: {recordedDays} days recorded · {missedDays} days unrecorded",

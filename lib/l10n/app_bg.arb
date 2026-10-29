@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Можете да го отворите и с докосване на номера на началния екран",
   "restDurationFeatureAppealPoint1": "Безплатен запис на временно спиране на приема на хапчета",
   "restDurationFeatureAppealPoint2": "Започнете от иконата със зъбно колело горе вдясно на блистера",
+  "restDurationFeatureAppealPoint3": "Лесно можете да промените периода на пауза в приема и да подновите приема",
   "endedPillSheetDialogHistoryTitle": "Искате ли да видите историята на блистерите?",
   "endedPillSheetDialogSummaryTitle": "Нека прегледаме приема от този блистер",
   "endedPillSheetDialogSummaryMessage": "Дни със запис на приема: {recordedDays} · дни без запис: {missedDays}",

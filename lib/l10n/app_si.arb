@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "මුල් තිරයේ ඇති අංකය තට්ටු කිරීමෙන්ද මෙය විවෘත කළ හැක",
   "restDurationFeatureAppealPoint1": "පෙති ගැනීම තාවකාලිකව නතර කළ කාලය නොමිලේ සටහන් කරන්න",
   "restDurationFeatureAppealPoint2": "පෙති කාඩ්පතේ ඉහළ දකුණු කෙළවරේ ඇති දැති රෝද සලකුණෙන් ආරම්භ කරන්න",
+  "restDurationFeatureAppealPoint3": "පෙති ගැනීම තාවකාලිකව නතර කරන කාලය වෙනස් කර නැවත ගැනීම ආරම්භ කිරීමත් පහසුයි",
   "endedPillSheetDialogHistoryTitle": "පෙති කාඩ්පතේ ඉතිහාසය බලන්න කැමතිද?",
   "endedPillSheetDialogSummaryTitle": "මේ පෙති කාඩ්පතේ භාවිතය නැවත බලමු",
   "endedPillSheetDialogSummaryMessage": "පෙති ගැනීමේ සටහන: දින {recordedDays}ක් · සටහන් නොවූ දින {missedDays}ක්",

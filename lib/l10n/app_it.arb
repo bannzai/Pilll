@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Puoi aprirlo anche toccando il numero nella schermata iniziale",
   "restDurationFeatureAppealPoint1": "Registra gratis le interruzioni volontarie della pillola",
   "restDurationFeatureAppealPoint2": "Inizia dall'icona a forma di ingranaggio in alto a destra del blister",
+  "restDurationFeatureAppealPoint3": "Puoi anche modificare facilmente la durata della pausa nell’assunzione della pillola e ricominciare",
   "endedPillSheetDialogHistoryTitle": "Ti va di vedere lo storico dei blister?",
   "endedPillSheetDialogSummaryTitle": "Rivediamo insieme questo blister",
   "endedPillSheetDialogSummaryMessage": "Registro delle assunzioni: {recordedDays} giorni · Registrazioni mancanti: {missedDays} giorni",

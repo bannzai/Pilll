@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Du kan også åbne den ved at trykke på tallet på startskærmen",
   "restDurationFeatureAppealPoint1": "Gratis registrering, når du holder op med at tage p-piller i en periode",
   "restDurationFeatureAppealPoint2": "Du kan starte ved tandhjulet øverst til højre på pillekortet",
+  "restDurationFeatureAppealPoint3": "Det er også nemt at ændre længden på din p-pillepause og begynde igen",
   "endedPillSheetDialogHistoryTitle": "Har du lyst til at se historikken for dit pillekort?",
   "endedPillSheetDialogSummaryTitle": "Lad os se tilbage på dette pillekort",
   "endedPillSheetDialogSummaryMessage": "Du har {recordedDays} pilleregistreringer og {missedDays} manglende registreringer",

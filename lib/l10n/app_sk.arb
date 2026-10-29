@@ -549,6 +549,7 @@
   "todayPillNumberFeatureAppealPoint3": "Otvoriť ju môžete aj ťuknutím na číslo na úvodnej obrazovke",
   "restDurationFeatureAppealPoint1": "Bezplatný záznam dočasného prerušenia užívania tabletiek",
   "restDurationFeatureAppealPoint2": "Začnite ikonou ozubeného kolieska vpravo hore na blistri",
+  "restDurationFeatureAppealPoint3": "Jednoducho môžete zmeniť dĺžku pauzy v užívaní tabletiek a opäť ich začať užívať",
   "endedPillSheetDialogHistoryTitle": "Chcete si pozrieť históriu blistov?",
   "endedPillSheetDialogSummaryTitle": "Pozrime sa späť na tento blist",
   "endedPillSheetDialogSummaryMessage": "Počet dní – záznam o užití: {recordedDays}, bez záznamu: {missedDays}",
