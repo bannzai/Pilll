@@ -45,7 +45,7 @@
   "autoAddNewSheetAfterCurrentEnds": "Quando o grupo atual de cartelas terminar, uma nova cartela será adicionada automaticamente",
   "accountSettings": "Configurações da conta",
   "linked": "Vinculado",
-  "unregistered": "Não cadastrado",
+  "unregistered": "Sem cadastro",
   "quickRecord": "Registro rápido",
   "quickRecordDescription": "Na tela de notificações, você pode ver qual pílula tomar hoje e adicioná-la diretamente ao registro de uso.",
   "healthCareIntegration": "Conexão com o app Saúde",
