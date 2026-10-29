@@ -2754,7 +2754,7 @@
   },
   "plannedResumeDateOptional": "服用再開予定日 (任意)",
   "@plannedResumeDateOptional": {
-    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。"
+    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。\n[翻訳の決定 de] 「Geplantes Datum für die erneute Pilleneinnahme (optional)」ではなく「Geplanter Wiederbeginn der Einnahme (optional)」: ダイアログの行のラベルとして長く回りくどいため短くする (https://github.com/bannzai/Pilll/issues/2001)"
   },
   "plannedResumeDateNotSet": "未設定",
   "@plannedResumeDateNotSet": {
