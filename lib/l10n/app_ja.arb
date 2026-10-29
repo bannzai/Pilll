@@ -1192,7 +1192,7 @@
   },
   "changeNotificationHeader": "通知の先頭部分の変更ができます",
   "@changeNotificationHeader": {
-    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text at the start of the notification)。"
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text at the start of the notification)。\n[翻訳の決定 pt] 「Você pode mudar o início da notificação」ではなく「Você pode alterar o início da notificação」: 同じ画面の補足文で alterar と mudar が揺れていたため、アプリ内で多い alterar に揃える (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 en] 「You can change the start of the notification」ではなく「You can change the start of the notification title」: 入力欄は通知のタイトルの先頭部分で、本文の先頭と誤解されないようにする (https://github.com/bannzai/Pilll/issues/1995)"
   },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "@notificationHeaderLength": {
