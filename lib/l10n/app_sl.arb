@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Če je današnja tableta že vzeta,\nne morete vklopiti »prekin«",
   "pauseTakingStarted": "Začel se je prekin jemanja tablet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Uredite začetni datum za prekin jemanja tablet",
   "shareWithFriends": "Priporočite prijateljem",
   "termsOfService": "Pogoji uporabe",
   "privacyPolicy": "Pravilnik o zasebnosti",
