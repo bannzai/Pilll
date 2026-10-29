@@ -125,6 +125,7 @@
   "unmarkTodayPillAsTakenToPause": "Откако ќе ја означите денешната таблета како неземена",
   "pauseTaking": "Привремен прекин на земање",
   "changePauseStartDate": "Промена на датумот на почеток на прекин",
+  "pauseTakingPeriodEnded": "Периодот на пауза во земање таблети заврши",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Промена на бројот на денови за земање таблета по блистер",
   "changedStartAndEndNumbers": "Почетниот и крајниот број се променети",
