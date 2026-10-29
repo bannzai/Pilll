@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "কেনাকাটাটি এখনও সক্রিয় হয়নি। অনুগ্রহ করে কিছুক্ষণ পর আবার দেখুন",
   "launchError": "অ্যাপটি চালু করার সময় একটি সমস্যা হয়েছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত:",
   "exampleRestDurationDate": "যেমন, ১/১২ থেকে ৩ দিনের জন্য সেবন স্থগিত করলে",
+  "exampleRestDurationNumber": "যেমন, ১৮ নম্বর পিল থেকে ৩ দিনের জন্য সেবন স্থগিত করলে",
   "withNumber": "{number} নম্বর",
   "currentPillSheetNotFound": "বর্তমানে ব্যবহার করা পিল শিট পাওয়া যায়নি",
   "doNotRevertTakePillInPausePeriod": "বিরতির সময় পিল খাওয়ার রেকর্ড বাতিল করা যাবে না",

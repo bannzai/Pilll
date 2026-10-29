@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Xaridingizni faollashtirish hali yakunlanmadi. Iltimos, biroz kutib, qayta tekshiring",
   "launchError": "Ilova ochilayotganda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar:",
   "exampleRestDurationDate": "Masalan, 1/12 dan boshlab 3 kunga pauza olsangiz",
+  "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kunlik pauza qilsangiz",
   "withNumber": "{number}-raqam",
   "currentPillSheetNotFound": "Hozir foydalanayotgan tabletka blister topilmadi",
   "doNotRevertTakePillInPausePeriod": "Tanaffus davrida tabletkani qabul qilish qaydini bekor qilib boʻlmaydi",

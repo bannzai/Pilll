@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "ক্ৰয় সক্ৰিয়কৰণ এতিয়াও সম্পূৰ্ণ হোৱা নাই। অনুগ্ৰহ কৰি অলপ পাছত পুনৰ পৰীক্ষা কৰক",
   "launchError": "এপটো খোলোঁতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nবিৱৰণ: ",
   "exampleRestDurationDate": "উদাহৰণস্বৰূপে, 1/12ৰ পৰা 3 দিনৰ বাবে বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰিলে",
+  "exampleRestDurationNumber": "উদাহৰণস্বৰূপে, 18 নম্বৰ বড়িৰ পৰা 3 দিনৰ বাবে বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰিলে",
   "withNumber": "{number} নম্বৰ",
   "currentPillSheetNotFound": "বৰ্তমান ব্যৱহাৰ কৰি থকা পিলৰ ষ্ট্ৰিপ পোৱা নগ’ল",
   "doNotRevertTakePillInPausePeriod": "বিৰতিৰ সময়ত পিল খোৱাৰ তথ্য বাতিল কৰিব নোৱাৰি",

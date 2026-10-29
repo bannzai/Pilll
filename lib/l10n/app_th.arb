@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "การเปิดใช้งานการซื้อยังไม่เสร็จสิ้นค่ะ กรุณารอสักครู่แล้วตรวจสอบอีกครั้งค่ะ",
   "launchError": "เกิดข้อผิดพลาดขณะเปิดแอปค่ะ\n{ErrorMessagesConnection}\n\nรายละเอียด:",
   "exampleRestDurationDate": "ตัวอย่างเช่น หากหยุดกินยาชั่วคราว 3 วันตั้งแต่ 1/12 ค่ะ",
+  "exampleRestDurationNumber": "ตัวอย่างเช่น หากหยุดกินยาชั่วคราว 3 วัน โดยเริ่มจากเม็ดที่ 18 ค่ะ",
   "withNumber": "เม็ดที่ {number}",
   "currentPillSheetNotFound": "ไม่พบแผงยาที่ใช้อยู่ในขณะนี้ค่ะ",
   "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกบันทึกการทานยาระหว่างช่วงหยุดยาได้ค่ะ",

@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "ការបើកដំណើរការការទិញមិនទាន់បញ្ចប់ទេ។ សូមរង់ចាំបន្តិច រួចពិនិត្យម្តងទៀត",
   "launchError": "មានបញ្ហាកើតឡើងពេលបើកកម្មវិធី។\n{ErrorMessagesConnection}\n\nព័ត៌មានលម្អិត៖",
   "exampleRestDurationDate": "ឧទាហរណ៍ បើអ្នកផ្អាកការលេបថ្នាំរយៈពេល 3 ថ្ងៃ ចាប់ពី 1/12",
+  "exampleRestDurationNumber": "ឧទាហរណ៍ ប្រសិនបើអ្នកផ្អាកការលេបថ្នាំរយៈពេល 3 ថ្ងៃ ចាប់ពីគ្រាប់លេខ 18",
   "withNumber": "លេខ {number}",
   "currentPillSheetNotFound": "រកមិនឃើញបន្ទះថ្នាំគ្រាប់ដែលកំពុងប្រើទេ",
   "doNotRevertTakePillInPausePeriod": "មិនអាចលុបចោលកំណត់ត្រាលេបថ្នាំគ្រាប់ក្នុងអំឡុងពេលផ្អាកលេបថ្នាំបានទេ",

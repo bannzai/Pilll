@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Je aankoop wordt nog geactiveerd. Wacht even en controleer het daarna opnieuw",
   "launchError": "Er is een fout opgetreden bij het openen van de app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 1/12 een innamepauze van 3 dagen neemt",
+  "exampleRestDurationNumber": "Bijvoorbeeld als je vanaf pil 18 een innamepauze van 3 dagen neemt",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
   "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",

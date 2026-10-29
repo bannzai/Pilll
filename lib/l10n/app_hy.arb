@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Գնման ակտիվացումը դեռ չի ավարտվել։ Խնդրում ենք մի փոքր սպասել և կրկին ստուգել",
   "launchError": "Հավելվածը բացելիս սխալ է առաջացել։\n{ErrorMessagesConnection}\n\nՄանրամասներ՝",
   "exampleRestDurationDate": "Օրինակ՝ եթե 1/12-ից 3 օրով ընտրեք ընդունման դադար",
+  "exampleRestDurationNumber": "Օրինակ՝ եթե 18-րդ հաբից սկսած ընտրեք ընդունման դադար 3 օրով",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Այժմ օգտագործվող հաբերի բլիստեր չի գտնվել",
   "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",

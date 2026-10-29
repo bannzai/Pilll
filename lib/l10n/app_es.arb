@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Tu compra aún se está activando. Espera un momento y vuelve a comprobarlo",
   "launchError": "Se produjo un error al abrir la aplicación.\n{ErrorMessagesConnection}\n\nDetalles:",
   "exampleRestDurationDate": "Por ejemplo, si haces una pausa de 3 días a partir del 1/12",
+  "exampleRestDurationNumber": "Por ejemplo, si haces una pausa de 3 días a partir de la píldora 18",
   "withNumber": "N.º {number}",
   "currentPillSheetNotFound": "No se encontró el blíster que usas actualmente",
   "doNotRevertTakePillInPausePeriod": "No puedes deshacer el registro de la toma de la píldora durante el descanso",

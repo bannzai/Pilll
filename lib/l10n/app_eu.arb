@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Erosketaren aktibazioa ez da oraindik amaitu. Itxaron pixka bat eta egiaztatu berriro",
   "launchError": "Errore bat gertatu da aplikazioa irekitzean.\n{ErrorMessagesConnection}\n\nXehetasunak:",
   "exampleRestDurationDate": "Adibidez, 1/12tik aurrera 3 eguneko etenaldi egiten baduzu",
+  "exampleRestDurationNumber": "Adibidez, 18. pilulatik aurrera 3 eguneko etenaldi bat egiten baduzu",
   "withNumber": "{number}. pilula",
   "currentPillSheetNotFound": "Ez da aurkitu orain erabiltzen duzun pilula-blister",
   "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",

@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активирането на покупката още не е завършило. Моля, изчакайте малко и проверете отново",
   "launchError": "Възникна грешка при стартирането на приложението.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, ако сте избрали спиране на приема за 3 дни от 1/12",
+  "exampleRestDurationNumber": "Например, при спиране на приема за 3 дни, считано от хапче 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущият блистер не е намерен",
   "doNotRevertTakePillInPausePeriod": "По време на паузата не можете да отмените записа за прието хапче",

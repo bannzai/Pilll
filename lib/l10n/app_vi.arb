@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Giao dịch mua của bạn vẫn đang được kích hoạt. Vui lòng đợi một lát rồi kiểm tra lại",
   "launchError": "Đã xảy ra lỗi khi mở ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết:",
   "exampleRestDurationDate": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày kể từ 1/12",
+  "exampleRestDurationNumber": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày kể từ viên thứ 18",
   "withNumber": "Số {number}",
   "currentPillSheetNotFound": "Không tìm thấy vỉ thuốc bạn đang dùng",
   "doNotRevertTakePillInPausePeriod": "Không thể hủy bản ghi uống thuốc trong thời gian nghỉ thuốc",

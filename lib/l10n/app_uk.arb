@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активація покупки ще не завершена. Будь ласка, трохи зачекайте й перевірте ще раз",
   "launchError": "Під час запуску застосунку сталася помилка.\n{ErrorMessagesConnection}\n\nПодробиці: ",
   "exampleRestDurationDate": "Наприклад, якщо ви обрали призупинення прийому на 3 дні з 1/12",
+  "exampleRestDurationNumber": "Наприклад, якщо ви оберете призупинення прийому на 3 дні, починаючи з пігулки № 18",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не вдалося знайти блістер, який ви зараз використовуєте",
   "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",

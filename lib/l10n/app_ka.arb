@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "შენაძენის გააქტიურება ჯერ არ დასრულებულა. გთხოვთ, ცოტა ხანს დაელოდოთ და ხელახლა შეამოწმოთ",
   "launchError": "აპის გახსნისას შეცდომა მოხდა.\n{ErrorMessagesConnection}\n\nდეტალები:",
   "exampleRestDurationDate": "მაგალითად, თუ 1/12-დან 3 დღით აირჩევთ მიღების პაუზას",
+  "exampleRestDurationNumber": "მაგალითად, თუ მე-18 აბიდან 3 დღით მიღების პაუზას აირჩევთ",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "ამჟამად გამოყენებული აბების ბლისტერი ვერ მოიძებნა",
   "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",

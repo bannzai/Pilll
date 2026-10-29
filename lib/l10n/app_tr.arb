@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Satın alma işleminizin etkinleştirilmesi henüz tamamlanmadı. Lütfen biraz bekleyip tekrar kontrol edin",
   "launchError": "Uygulama açılırken bir hata oluştu.\n{ErrorMessagesConnection}\n\nAyrıntılar:",
   "exampleRestDurationDate": "Örneğin, 1/12 tarihinden itibaren 3 gün ara verirseniz",
+  "exampleRestDurationNumber": "Örneğin, 18. haptan başlayarak 3 gün ara verirseniz",
   "withNumber": "{number} numaralı hap",
   "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
   "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",

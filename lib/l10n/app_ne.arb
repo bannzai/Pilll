@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "तपाईंको खरिद सक्रिय गर्ने प्रक्रिया अझै पूरा भएको छैन। कृपया केही बेरपछि फेरि जाँच गर्नुहोस्",
   "launchError": "एप खोल्दा त्रुटि भयो।\n{ErrorMessagesConnection}\n\nविवरण:",
   "exampleRestDurationDate": "उदाहरणका लागि, 1/12 देखि 3 दिनको सेवन विराम लिनुभयो भने",
+  "exampleRestDurationNumber": "उदाहरणका लागि, तपाईंले 18औँ चक्कीबाट 3 दिनको सेवन विराम लिनुभयो भने",
   "withNumber": "नं. {number}",
   "currentPillSheetNotFound": "अहिले प्रयोग भइरहेको चक्की पत्ता फेला परेन",
   "doNotRevertTakePillInPausePeriod": "विश्रामको समयमा चक्की खाएको अभिलेख रद्द गर्न मिल्दैन",

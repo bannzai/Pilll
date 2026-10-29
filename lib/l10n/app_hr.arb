@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Aktivacija kupnje još nije dovršena. Pričekajte malo pa ponovno provjerite",
   "launchError": "Došlo je do pogreške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nPojedinosti:",
   "exampleRestDurationDate": "Na primjer, ako od 1/12 napravite stanku u uzimanju pilula od 3 dana",
+  "exampleRestDurationNumber": "Na primjer, ako od pilule broj 18 napravite stanku u uzimanju pilula od 3 dana",
   "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Blister koji trenutačno koristite nije pronađen",
   "doNotRevertTakePillInPausePeriod": "Tijekom pauze ne možete poništiti zapis o uzimanju pilule",

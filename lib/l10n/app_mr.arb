@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "तुमची खरेदी सक्रिय होण्याची प्रक्रिया अजून पूर्ण झालेली नाही. कृपया थोड्या वेळाने पुन्हा तपासा",
   "launchError": "ॲप सुरू करताना त्रुटी आली.\n{ErrorMessagesConnection}\n\nतपशील:",
   "exampleRestDurationDate": "उदाहरणार्थ, 1/12 पासून 3 दिवसांसाठी सेवन विराम घेतल्यास",
+  "exampleRestDurationNumber": "उदाहरणार्थ, 18व्या गोळीपासून 3 दिवसांचा सेवन विराम घेतल्यास",
   "withNumber": "गोळी क्रमांक {number}",
   "currentPillSheetNotFound": "सध्या वापरत असलेली पिल शीट सापडली नाही",
   "doNotRevertTakePillInPausePeriod": "विरामादरम्यान गोळी घेतल्याची नोंद रद्द करता येत नाही",

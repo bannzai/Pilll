@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Dein Kauf wird noch aktiviert. Warte bitte einen Moment und prüfe es dann erneut",
   "launchError": "Beim Starten der App ist ein Fehler aufgetreten.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Zum Beispiel bei einer Einnahmeunterbrechung für 3 Tage ab dem 1/12",
+  "exampleRestDurationNumber": "Zum Beispiel bei einer Einnahmeunterbrechung von 3 Tagen ab Pille 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Der Pillenblister, den du gerade verwendest, wurde nicht gefunden",
   "doNotRevertTakePillInPausePeriod": "Während der Einnahmepause kannst du die erfasste Pilleneinnahme nicht rückgängig machen",

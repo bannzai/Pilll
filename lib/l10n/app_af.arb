@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Jou aankoop word nog geaktiveer. Kyk asseblief oor ’n rukkie weer",
   "launchError": "’n Fout het voorgekom toe die app oopgemaak is.\n{ErrorMessagesConnection}\n\nBesonderhede:",
   "exampleRestDurationDate": "Byvoorbeeld, as jy vanaf 1/12 vir 3 dae ’n innameonderbreking het",
+  "exampleRestDurationNumber": "Byvoorbeeld, as jy vanaf pil 18 ’n innameonderbreking van 3 dae het",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Die pilstrokie wat jy tans gebruik, kon nie gevind word nie",
   "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",

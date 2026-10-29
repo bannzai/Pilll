@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Ostoksesi aktivointi on vielä kesken. Odota hetki ja tarkista uudelleen",
   "launchError": "Sovellusta avattaessa tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot:",
   "exampleRestDurationDate": "Esimerkiksi jos otat taukotila käyttöön 3 päiväksi alkaen 1/12",
+  "exampleRestDurationNumber": "Esimerkiksi jos otat käyttöön 3 päivän taukotilan pilleristä 18 alkaen",
   "withNumber": "Nro {number}",
   "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
   "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",

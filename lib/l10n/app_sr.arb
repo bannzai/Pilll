@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Активирање куповине још није завршено. Молимо Вас, сачекајте мало и проверите поново",
   "launchError": "Дошло је до грешке при покретању апликације.\n{ErrorMessagesConnection}\n\nДетаљи:",
   "exampleRestDurationDate": "На пример, ако од 1/12 направите прекид узимања пилула на 3 дана",
+  "exampleRestDurationNumber": "На пример, ако направите прекид узимања од 3 дана почев од пилуле број 18",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Није пронађен блистер који тренутно користите",
   "doNotRevertTakePillInPausePeriod": "Током паузе није могуће поништити запис о узимању пилуле",

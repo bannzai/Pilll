@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Hindi pa tapos ang pag-activate ng binili ninyo. Pakihintay po sandali bago tingnan muli",
   "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
   "exampleRestDurationDate": "Halimbawa, kung pipiliin ninyo ang paghinto sa pag-inom ng pildoras sa loob ng 3 araw simula 1/12",
+  "exampleRestDurationNumber": "Halimbawa, kung pipiliin ninyo ang paghinto sa pag-inom ng pildoras nang 3 araw simula sa ika-18 pildoras",
   "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
   "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",

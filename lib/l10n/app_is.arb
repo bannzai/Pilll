@@ -342,6 +342,7 @@
   "purchaseErrorPurchasePendingError": "Enn er verið að virkja kaupin. Bíddu aðeins og athugaðu aftur",
   "launchError": "Villa kom upp þegar appið var opnað.\n{ErrorMessagesConnection}\n\nNánar: ",
   "exampleRestDurationDate": "Til dæmis ef þú tekur pilluhlé í 3 daga frá 1/12",
+  "exampleRestDurationNumber": "Til dæmis ef þú tekur 3 daga pilluhlé frá pillu númer 18",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",
