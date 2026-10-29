@@ -547,6 +547,7 @@
   "todayPillNumberFeatureAppealPoint1": "Maksuton toiminto pillerinumeroiden täsmäyttämiseen",
   "todayPillNumberFeatureAppealPoint2": "Voit muuttaa sitä Asetukset-välilehdellä",
   "todayPillNumberFeatureAppealPoint3": "Voit avata sen myös napauttamalla aloitusnäytön numeroa",
+  "restDurationFeatureAppealPoint1": "Kirjaa pillereiden käytön tilapäinen keskeytys maksutta",
   "restDurationFeatureAppealPoint2": "Aloita pilleriliuskan oikean yläkulman rataskuvakkeesta",
   "endedPillSheetDialogHistoryTitle": "Haluaisitko katsoa pilleriliuskan historiaa?",
   "endedPillSheetDialogSummaryTitle": "Katsotaan, miten tämä pilleriliuska sujui",

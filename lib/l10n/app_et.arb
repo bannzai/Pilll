@@ -547,6 +547,7 @@
   "todayPillNumberFeatureAppealPoint1": "Tasuta pillinumbrite sobitamise funktsioon",
   "todayPillNumberFeatureAppealPoint2": "Saad seda muuta vahekaardil Seaded",
   "todayPillNumberFeatureAppealPoint3": "Saad selle avada ka avakuval olevat numbrit puudutades",
+  "restDurationFeatureAppealPoint1": "Pillide võtmise ajutise katkestamise tasuta jälgimine",
   "restDurationFeatureAppealPoint2": "Alusta pillilehe paremas ülanurgas olevast hammasrattaikoonist",
   "endedPillSheetDialogHistoryTitle": "Kas soovid vaadata oma pillilehe ajalugu?",
   "endedPillSheetDialogSummaryTitle": "Vaatame sellele pillilehele tagasi",
