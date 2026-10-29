@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Sicela uvule uhlelo lokusebenza bese uhlola irekhodi lokuphuza amaphilisi",
   "alreadyTaken": "Iphilisi seliphuzwe",
   "startPauseTaking": "Sicela ume ukuthatha iphilisi okwesikhashana",
+  "startedPauseTaking": "Ukumisa okwesikhashana ukuphuza amaphilisi sekuqalile",
   "sequentialLastTakenPlusOnePillNumber": "Iphilisi elingunombolo {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Sicela uqale kule nombolo",
   "add": "Sicela wengeze",

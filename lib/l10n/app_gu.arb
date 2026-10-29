@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "કૃપા કરીને ઍપ ખોલીને ગોળી સેવનની નોંધ તપાસો",
   "alreadyTaken": "ગોળી લઈ લીધી છે",
   "startPauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ કરો",
+  "startedPauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ થયું છે",
   "sequentialLastTakenPlusOnePillNumber": "ગોળી નંબર {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "નંબરથી શરૂ કરો",
   "add": "ઉમેરો",

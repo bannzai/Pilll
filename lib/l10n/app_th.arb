@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปเพื่อตรวจสอบบันทึกการทานยาค่ะ",
   "alreadyTaken": "ทานยาแล้ว",
   "startPauseTaking": "พักการทานยาเม็ดชั่วคราว",
+  "startedPauseTaking": "เริ่มหยุดกินยาชั่วคราวแล้วค่ะ",
   "sequentialLastTakenPlusOnePillNumber": "หมายเลข {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "เริ่มจากหมายเลขนี้",
   "add": "เพิ่ม",

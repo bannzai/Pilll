@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ava rakendus ja kontrolli võtmiskirjet",
   "alreadyTaken": "Pill võetud",
   "startPauseTaking": "Peata pillide võtmine ajutiselt",
+  "startedPauseTaking": "Pilli võtmise paus on alanud",
   "sequentialLastTakenPlusOnePillNumber": "pill nr {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Alusta sellest numbrist",
   "add": "Lisa",

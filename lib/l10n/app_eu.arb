@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Ireki aplikazioa eta egiaztatu hartze-erregistroa",
   "alreadyTaken": "Pilula hartuta",
   "startPauseTaking": "Pilula hartzeari aldi baterako utzi",
+  "startedPauseTaking": "Pilula hartzeko etenaldia hasi da",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. pilula",
   "startFromNumber": "zenbakitik hasi",
   "add": "Gehitu",

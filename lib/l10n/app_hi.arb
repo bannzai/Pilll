@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जाँच लें",
   "alreadyTaken": "ली जा चुकी",
   "startPauseTaking": "गोली लेना कुछ समय के लिए रोकें",
+  "startedPauseTaking": "गोली लेने में विराम शुरू हो गया है",
   "sequentialLastTakenPlusOnePillNumber": "गोली नंबर {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "इस नंबर से शुरू करें",
   "add": "जोड़ें",

@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Buka aplikasi dan periksa catatan minum pil Anda",
   "alreadyTaken": "Pil sudah diminum",
   "startPauseTaking": "Jeda sementara minum pil",
+  "startedPauseTaking": "Jeda minum pil telah dimulai",
   "sequentialLastTakenPlusOnePillNumber": "Pil nomor {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mulai dari nomor ini",
   "add": "Tambah",

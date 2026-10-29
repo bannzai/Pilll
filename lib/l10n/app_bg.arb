@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Моля, отворете приложението и проверете записа за приема на хапчето",
   "alreadyTaken": "Хапчето е взето",
   "startPauseTaking": "Спрете временно приема на хапчето",
+  "startedPauseTaking": "Започна спиране на приема на хапчета",
   "sequentialLastTakenPlusOnePillNumber": "хапче № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Начало от този номер",
   "add": "Добавяне",

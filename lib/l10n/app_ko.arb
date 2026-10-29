@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "앱을 열어 복용 기록을 확인해 주세요",
   "alreadyTaken": "복용 완료",
   "startPauseTaking": "복용을 잠시 쉬어요",
+  "startedPauseTaking": "복용 일시 중지가 시작됐어요",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번 알약",
   "startFromNumber": "번부터 시작",
   "add": "추가",

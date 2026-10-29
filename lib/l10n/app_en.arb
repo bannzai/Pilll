@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Please open the app to check",
   "alreadyTaken": "Pill taken",
   "startPauseTaking": "Pause taking your pill",
+  "startedPauseTaking": "Pill pause started",
   "sequentialLastTakenPlusOnePillNumber": "Pill {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "as the starting number",
   "add": "Add",

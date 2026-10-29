@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Otwórz aplikację i sprawdź zapis przyjęcia tabletki",
   "alreadyTaken": "Tabletka przyjęta",
   "startPauseTaking": "Wstrzymaj przyjmowanie pigułki na jakiś czas",
+  "startedPauseTaking": "Rozpoczęto wstrzymanie przyjmowania tabletek",
   "sequentialLastTakenPlusOnePillNumber": "Nr {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Zacznij od tego numeru",
   "add": "Dodaj",

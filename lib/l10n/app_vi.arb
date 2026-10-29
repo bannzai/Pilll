@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Vui lòng mở ứng dụng để kiểm tra",
   "alreadyTaken": "Đã uống thuốc",
   "startPauseTaking": "Tạm dừng uống thuốc",
+  "startedPauseTaking": "Đã bắt đầu tạm ngừng uống thuốc",
   "sequentialLastTakenPlusOnePillNumber": "Viên thuốc số {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Bắt đầu từ số này",
   "add": "Thêm",

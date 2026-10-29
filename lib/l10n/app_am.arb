@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "እባክዎ መተግበሪያውን ከፍተው ያረጋግጡ",
   "alreadyTaken": "ክኒን ተወስዷል",
   "startPauseTaking": "ክኒን መውሰድን ለጊዜው አቁሙ",
+  "startedPauseTaking": "ክኒን ለጊዜው ማቆም ተጀምሯል",
   "sequentialLastTakenPlusOnePillNumber": "ክኒን ቁጥር {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ከዚህ ቁጥር ጀምሮ",
   "add": "ያክሉ",

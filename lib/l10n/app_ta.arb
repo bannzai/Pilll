@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "செயலியைத் திறந்து சரிபாருங்கள்",
   "alreadyTaken": "மாத்திரை உட்கொள்ளப்பட்டது",
   "startPauseTaking": "மாத்திரை எடுத்துக்கொள்வதைத் தற்காலிகமாக நிறுத்துங்கள்",
+  "startedPauseTaking": "மாத்திரை உட்கொள்வதை இடைநிறுத்துவது தொடங்கியுள்ளது",
   "sequentialLastTakenPlusOnePillNumber": "மாத்திரை எண் {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "இந்த எண்ணிலிருந்து தொடங்குங்கள்",
   "add": "சேருங்கள்",

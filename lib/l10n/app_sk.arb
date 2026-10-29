@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Otvorte aplikáciu a skontrolujte záznam o užití tabletky",
   "alreadyTaken": "Tabletka užitá",
   "startPauseTaking": "Dočasne prerušte užívanie tabletky",
+  "startedPauseTaking": "Začalo sa pozastavenie užívania tabletiek",
   "sequentialLastTakenPlusOnePillNumber": "Tabletka č. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Začať od tohto čísla",
   "add": "Pridať",

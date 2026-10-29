@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Maak asseblief die app oop en kyk na jou rekord",
   "alreadyTaken": "Reeds geneem",
   "startPauseTaking": "Onderbreek die neem van jou pil",
+  "startedPauseTaking": "Die innameonderbreking het begin",
   "sequentialLastTakenPlusOnePillNumber": "Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Begin by hierdie nommer",
   "add": "Voeg by",

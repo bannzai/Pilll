@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "దయచేసి యాప్ తెరిచి మాత్రల నమోదును తనిఖీ చేయండి",
   "alreadyTaken": "మాత్ర తీసుకున్నారు",
   "startPauseTaking": "మాత్ర తీసుకోవడాన్ని తాత్కాలికంగా ఆపండి",
+  "startedPauseTaking": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ప్రారంభమైంది",
   "sequentialLastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ఈ సంఖ్య నుంచి ప్రారంభించండి",
   "add": "జోడించండి",

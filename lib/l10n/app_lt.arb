@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Atidarykite programėlę ir patikrinkite tabletės vartojimo įrašą",
   "alreadyTaken": "Tabletė išgerta",
   "startPauseTaking": "Laikinai sustabdykite tablečių vartojimą",
+  "startedPauseTaking": "Prasidėjo tablečių vartojimo pristabdymas",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}-oji tabletė",
   "startFromNumber": "Pradėti nuo šio numerio",
   "add": "Pridėti",

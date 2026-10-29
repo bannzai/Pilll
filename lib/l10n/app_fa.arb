@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "لطفاً برنامه را باز کنید و ثبت مصرف قرص را بررسی کنید",
   "alreadyTaken": "قرص مصرف شده",
   "startPauseTaking": "مصرف قرص را موقتاً متوقف کنید",
+  "startedPauseTaking": "توقف موقت مصرف قرص آغاز شد",
   "sequentialLastTakenPlusOnePillNumber": "قرص شمارهٔ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "شروع از این شماره",
   "add": "افزودن",

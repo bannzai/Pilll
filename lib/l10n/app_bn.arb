@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "অনুগ্রহ করে অ্যাপটি খুলে সেবনের রেকর্ড দেখে নিন",
   "alreadyTaken": "পিল খাওয়া হয়েছে",
   "startPauseTaking": "পিল খাওয়া সাময়িকভাবে বন্ধ করুন",
+  "startedPauseTaking": "পিল সেবন স্থগিত শুরু হয়েছে",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} নম্বর পিল",
   "startFromNumber": "নম্বর থেকে শুরু",
   "add": "যোগ করুন",

@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "कृपया एप खोलेर जाँच गर्नुहोस्",
   "alreadyTaken": "चक्की खाइसकिएको छ",
   "startPauseTaking": "चक्की खान केही समय रोक्नुहोस्",
+  "startedPauseTaking": "चक्की सेवन विराम सुरु भएको छ",
   "sequentialLastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "नम्बरबाट सुरु",
   "add": "थप्नुहोस्",

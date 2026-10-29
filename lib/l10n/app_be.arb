@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Калі ласка, адкрыйце праграму і праверце запіс прыёму пігулак",
   "alreadyTaken": "Пігулка прынята",
   "startPauseTaking": "Часова прыпыніць прыём пігулак",
+  "startedPauseTaking": "Пачаўся прыпын прыёму пігулак",
   "sequentialLastTakenPlusOnePillNumber": "Пігулка № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Пачаць з гэтага нумара",
   "add": "Дадаць",

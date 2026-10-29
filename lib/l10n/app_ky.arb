@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Колдонмону ачып, таблетканы ичүү тууралуу жазууну текшериңиз",
   "alreadyTaken": "Таблетка ичилди",
   "startPauseTaking": "Таблетка ичүүнү убактылуу токтотуңуз",
+  "startedPauseTaking": "Таблетка ичүүнү убактылуу токтотуу башталды",
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber} таблетка",
   "startFromNumber": "Ушул номерден баштаңыз",
   "add": "Кошуу",

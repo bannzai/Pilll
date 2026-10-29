@@ -393,6 +393,7 @@
   "quickRecordTakePillFailedMessage": "Avaa sovellus ja tarkista pillerin ottomerkintä",
   "alreadyTaken": "Pilleri otettu",
   "startPauseTaking": "Keskeytä pillereiden käyttö väliaikaisesti",
+  "startedPauseTaking": "Pillerin käytön taukotila on alkanut",
   "sequentialLastTakenPlusOnePillNumber": "Pilleri nro {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Aloita tästä numerosta",
   "add": "Lisää",
