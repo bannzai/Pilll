@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Če se številka tablete ne ujema, jo lahko popravite v nastavitvah",
   "todayPillNumberFeatureAppealHeadline": "Danes lahko spremenite polje »številka tablete«",
   "todayPillNumberFeatureAppealBody": "Če zaradi pozabljene ali pomotoma vzete tablete številka tablete na ploščici ne ustreza dejansko vzeti tableti, lahko ročno nastavite številko tablete za danes. Isti zaslon lahko odprete tudi tako, da se na začetnem zaslonu dotaknete prikazane številke tablete.",
+  "restDurationFeatureAppealTitle": "Zabeležite obdobje prekina jemanja tablet",
   "featureAppealLocationLabel": "Lokacija v aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Obvestila prejemate tudi v načinu osredotočanja",
   "criticalAlertFeatureAppealPoint2": "Zanesljiv opomnik ob času, ki ste ga nastavili",
