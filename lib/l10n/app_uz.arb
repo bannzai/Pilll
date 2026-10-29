@@ -387,6 +387,7 @@
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",
   "resumeTaking": "Tabletka qabul qilishni qayta boshlash",
   "changePausePeriod": "Pauza muddatini oʻzgartiring",
+  "changedPausePeriod": "Pauza muddati oʻzgartirildi",
   "changedToDate": "Sana {date}ga oʻzgartirildi",
   "quickRecordTakePillFailed": "Tabletka qabul qilish qaydi saqlanmagan boʻlishi mumkin",
   "quickRecordTakePillFailedMessage": "Iltimos, ilovani ochib, tabletkani qabul qilish qaydini tekshiring",

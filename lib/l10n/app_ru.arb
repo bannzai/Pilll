@@ -387,6 +387,7 @@
   "beginToEndNumbers": "№ {begin}–{end}",
   "resumeTaking": "Возобновить приём таблеток",
   "changePausePeriod": "Изменить срок приостановки приёма",
+  "changedPausePeriod": "Период приостановки приёма изменён",
   "changedToDate": "Дата изменена на {date}",
   "quickRecordTakePillFailed": "Запись в журнал приёма таблеток, возможно, не сохранилась",
   "quickRecordTakePillFailedMessage": "Откройте приложение и проверьте запись о приёме таблетки",

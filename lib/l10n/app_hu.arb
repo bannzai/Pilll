@@ -387,6 +387,7 @@
   "beginToEndNumbers": "{begin}.–{end}.",
   "resumeTaking": "A tabletta szedésének folytatása",
   "changePausePeriod": "A szüneteltetés időtartamának módosítása",
+  "changedPausePeriod": "Módosult az az időszak, amelyre a szedést szünetelteted",
   "changedToDate": "Dátum módosítva: {date}",
   "quickRecordTakePillFailed": "Lehet, hogy a tablettaszedési napló nem lett mentve",
   "quickRecordTakePillFailedMessage": "Nyisd meg az alkalmazást, és ellenőrizd a tabletta szedésének bejegyzését",

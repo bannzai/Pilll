@@ -387,6 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка ичүүнү кайра баштоо",
   "changePausePeriod": "Убактылуу токтотуу мөөнөтүн өзгөртүңүз",
+  "changedPausePeriod": "Убактылуу токтотуу мөөнөтү өзгөртүлдү",
   "changedToDate": "Күн {date} болуп өзгөртүлдү",
   "quickRecordTakePillFailed": "Таблетка ичүү жазуусу сакталбай калган болушу мүмкүн",
   "quickRecordTakePillFailedMessage": "Колдонмону ачып, таблетканы ичүү тууралуу жазууну текшериңиз",

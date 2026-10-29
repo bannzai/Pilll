@@ -387,6 +387,7 @@
   "beginToEndNumbers": "ಸಂ. {begin} ~ {end}",
   "resumeTaking": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ಮತ್ತೆ ಆರಂಭಿಸಿ",
   "changePausePeriod": "ಮಾತ್ರೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಿ",
+  "changedPausePeriod": "ಮಾತ್ರೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "changedToDate": "ದಿನಾಂಕವನ್ನು {date} ಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
   "quickRecordTakePillFailed": "ಸೇವನೆಯ ದಾಖಲೆ ಉಳಿಯದೇ ಇರಬಹುದು",
   "quickRecordTakePillFailedMessage": "ದಯವಿಟ್ಟು ಆ್ಯಪ್ ತೆರೆದು ಸೇವನೆಯ ದಾಖಲೆಯನ್ನು ಪರಿಶೀಲಿಸಿ",

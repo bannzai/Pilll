@@ -387,6 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Վերսկսել հաբերի ընդունումը",
   "changePausePeriod": "Փոխել ընդունման դադարի տևողությունը",
+  "changedPausePeriod": "Ընդունման դադար տևողությունը փոխվել է",
   "changedToDate": "Ամսաթիվը փոխվել է՝ {date}",
   "quickRecordTakePillFailed": "Հնարավոր է, որ ընդունման գրառումը չի պահպանվել",
   "quickRecordTakePillFailedMessage": "Խնդրում ենք բացել հավելվածը և ստուգել հաբի ընդունման գրառումը",

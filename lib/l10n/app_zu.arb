@@ -387,6 +387,7 @@
   "beginToEndNumbers": "inombolo {begin} ~ {end}",
   "resumeTaking": "Sicela uqale futhi ukuphuza amaphilisi",
   "changePausePeriod": "Shintsha isikhathi sokumisa okwesikhashana",
+  "changedPausePeriod": "Isikhathi sokumisa okwesikhashana ukuphuza amaphilisi sishintshiwe",
   "changedToDate": "Usuku lushintshelwe ku-{date}",
   "quickRecordTakePillFailed": "Irekhodi lokuphuza amaphilisi kungenzeka aligcinwanga",
   "quickRecordTakePillFailedMessage": "Sicela uvule uhlelo lokusebenza bese uhlola irekhodi lokuphuza amaphilisi",

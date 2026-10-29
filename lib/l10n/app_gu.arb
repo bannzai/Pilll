@@ -387,6 +387,7 @@
   "beginToEndNumbers": "ગોળી નંબર {begin} ~ {end}",
   "resumeTaking": "ગોળી લેવાનું ફરી શરૂ કરો",
   "changePausePeriod": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાની અવધિ બદલો",
+  "changedPausePeriod": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમયગાળો બદલાઈ ગયો છે",
   "changedToDate": "તારીખ બદલીને {date} કરવામાં આવી છે",
   "quickRecordTakePillFailed": "ગોળી સેવનની નોંધ કદાચ સાચવાઈ નથી",
   "quickRecordTakePillFailedMessage": "કૃપા કરીને ઍપ ખોલીને ગોળી સેવનની નોંધ તપાસો",

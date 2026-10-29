@@ -387,6 +387,7 @@
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsākt tablešu lietošanu",
   "changePausePeriod": "Mainīt lietošanas pauzes ilgumu",
+  "changedPausePeriod": "Lietošanas pauzes ilgums ir mainīts",
   "changedToDate": "Datums mainīts uz {date}",
   "quickRecordTakePillFailed": "Tablešu lietošanas ieraksts, iespējams, netika saglabāts",
   "quickRecordTakePillFailedMessage": "Lūdzu, atveriet lietotni un pārbaudiet",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "شمارهٔ {begin} تا {end}",
   "resumeTaking": "شروع دوباره مصرف قرص",
   "changePausePeriod": "تغییر مدت توقف موقت مصرف",
+  "changedPausePeriod": "مدت توقف موقت مصرف تغییر کرد",
   "changedToDate": "تاریخ به {date} تغییر کرد",
   "quickRecordTakePillFailed": "ممکن است ثبت مصرف ذخیره نشده باشد",
   "quickRecordTakePillFailedMessage": "لطفاً برنامه را باز کنید و ثبت مصرف قرص را بررسی کنید",

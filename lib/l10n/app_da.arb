@@ -387,6 +387,7 @@
   "beginToEndNumbers": "nr. {begin}–{end}",
   "resumeTaking": "Genoptag p-pillerne",
   "changePausePeriod": "Ændr varigheden af indtagelsespausen",
+  "changedPausePeriod": "Perioden for indtagelsespause er ændret",
   "changedToDate": "Datoen er ændret til {date}",
   "quickRecordTakePillFailed": "Din pilleregistrering blev muligvis ikke gemt",
   "quickRecordTakePillFailedMessage": "Åbn appen, og tjek din pilleregistrering",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "หมายเลข {begin} ~ {end}",
   "resumeTaking": "กลับมาทานยาอีกครั้ง",
   "changePausePeriod": "เปลี่ยนระยะเวลาหยุดกินยาชั่วคราว",
+  "changedPausePeriod": "เปลี่ยนระยะเวลาหยุดกินยาชั่วคราวแล้วค่ะ",
   "changedToDate": "เปลี่ยนวันที่เป็น {date} แล้วค่ะ",
   "quickRecordTakePillFailed": "บันทึกการทานยาอาจไม่สำเร็จค่ะ",
   "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปเพื่อตรวจสอบบันทึกการทานยาค่ะ",

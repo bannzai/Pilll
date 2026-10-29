@@ -387,6 +387,7 @@
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "गोली लेना फिर शुरू करें",
   "changePausePeriod": "गोली लेने में विराम की अवधि बदलें",
+  "changedPausePeriod": "गोली लेने में विराम की अवधि बदल दी गई है",
   "changedToDate": "तारीख बदलकर {date} कर दी गई है",
   "quickRecordTakePillFailed": "सेवन रिकॉर्ड शायद सहेजा नहीं जा सका",
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जाँच लें",

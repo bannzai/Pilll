@@ -387,6 +387,7 @@
   "beginToEndNumbers": "අංක {begin} ~ {end}",
   "resumeTaking": "පෙති ගැනීම නැවත අරඹන්න",
   "changePausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය වෙනස් කරන්න",
+  "changedPausePeriod": "පෙති ගැනීමේ විරාමයේ කාලය වෙනස් කර ඇත",
   "changedToDate": "දිනය {date} ලෙස වෙනස් කර ඇත",
   "quickRecordTakePillFailed": "පෙති ගැනීමේ සටහන සුරැකී නොතිබිය හැකිය",
   "quickRecordTakePillFailedMessage": "කරුණාකර යෙදුම විවෘත කර පරීක්ෂා කරන්න",

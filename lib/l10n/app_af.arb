@@ -387,6 +387,7 @@
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Hervat pilgebruik",
   "changePausePeriod": "Verander die tydperk van innameonderbreking",
+  "changedPausePeriod": "Die tydperk vir innameonderbreking is verander",
   "changedToDate": "Die datum is na {date} verander",
   "quickRecordTakePillFailed": "Die innamerekord is dalk nie gestoor nie",
   "quickRecordTakePillFailedMessage": "Maak asseblief die app oop en kyk na jou rekord",

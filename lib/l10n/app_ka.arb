@@ -387,6 +387,7 @@
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "აბების მიღების განახლება",
   "changePausePeriod": "მიღების პაუზის ხანგრძლივობის შეცვლა",
+  "changedPausePeriod": "მიღების პაუზის ხანგრძლივობა შეიცვალა",
   "changedToDate": "თარიღი შეიცვალა: {date}",
   "quickRecordTakePillFailed": "მიღების ჩანაწერი შესაძლოა ვერ შეინახა",
   "quickRecordTakePillFailedMessage": "გთხოვთ, გახსნათ აპი და შეამოწმოთ აბის მიღების ჩანაწერი",

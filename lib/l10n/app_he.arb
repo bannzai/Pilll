@@ -387,6 +387,7 @@
   "beginToEndNumbers": "מס׳ {begin} ~ {end}",
   "resumeTaking": "לחזור לנטילת הגלולה",
   "changePausePeriod": "שינוי משך השהיית נטילה",
+  "changedPausePeriod": "משך השהיית נטילה שונה",
   "changedToDate": "התאריך שונה ל־{date}",
   "quickRecordTakePillFailed": "ייתכן שרישום נטילה לא נשמר",
   "quickRecordTakePillFailedMessage": "נא לפתוח את האפליקציה ולבדוק",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "{begin} ~ {end} numaralı haplar",
   "resumeTaking": "Hapı almaya yeniden başlayın",
   "changePausePeriod": "Ara verme süresini değiştirin",
+  "changedPausePeriod": "Ara verme süresi değiştirildi",
   "changedToDate": "Tarih {date} olarak değiştirildi",
   "quickRecordTakePillFailed": "Hap kullanım kaydı kaydedilmemiş olabilir",
   "quickRecordTakePillFailedMessage": "Lütfen uygulamayı açıp kontrol edin",

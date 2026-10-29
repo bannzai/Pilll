@@ -387,6 +387,7 @@
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Sambung semula pengambilan pil",
   "changePausePeriod": "Ubah tempoh jeda pengambilan pil",
+  "changedPausePeriod": "Tempoh jeda pengambilan pil telah diubah",
   "changedToDate": "Tarikh telah diubah kepada {date}",
   "quickRecordTakePillFailed": "Rekod pengambilan mungkin tidak berjaya disimpan",
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak rekod pengambilan pil",

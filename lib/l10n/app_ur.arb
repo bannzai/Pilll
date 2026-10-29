@@ -387,6 +387,7 @@
   "beginToEndNumbers": "نمبر {begin} ~ {end}",
   "resumeTaking": "گولی لینا دوبارہ شروع کریں",
   "changePausePeriod": "توقف کی مدت تبدیل کریں",
+  "changedPausePeriod": "گولیوں کے استعمال میں توقف کی مدت تبدیل کر دی گئی ہے",
   "changedToDate": "تاریخ بدل کر {date} کر دی گئی ہے",
   "quickRecordTakePillFailed": "گولی لینے کا ریکارڈ شاید محفوظ نہیں ہوا",
   "quickRecordTakePillFailedMessage": "براہِ کرم ایپ کھول کر گولی لینے کا ریکارڈ دیکھیں",

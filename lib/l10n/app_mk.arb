@@ -387,6 +387,7 @@
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Продолжете со земање таблета",
   "changePausePeriod": "Промена на времетраењето на прекинот на земањето апчиња",
+  "changedPausePeriod": "Периодот за привремено запирање на земањето апчиња е променет",
   "changedToDate": "Датумот е променет на {date}",
   "quickRecordTakePillFailed": "Запис за земање можеби не е зачуван",
   "quickRecordTakePillFailedMessage": "Ве молиме, отворете ја апликацијата и проверете",

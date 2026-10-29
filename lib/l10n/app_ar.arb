@@ -387,6 +387,7 @@
   "beginToEndNumbers": "من الرقم {begin} إلى الرقم {end}",
   "resumeTaking": "استئناف تناول الحبوب",
   "changePausePeriod": "تغيير مدة إيقاف تناول الحبوب",
+  "changedPausePeriod": "تم تغيير مدة إيقاف تناول الحبوب",
   "changedToDate": "تم تغيير التاريخ إلى {date}",
   "quickRecordTakePillFailed": "ربما لم ينجح تسجيل تناول الحبة",
   "quickRecordTakePillFailedMessage": "يرجى فتح التطبيق والتحقق من سجل تناول الحبة",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "क्र. {begin} ~ {end}",
   "resumeTaking": "गोळी पुन्हा घेण्यास सुरुवात करा",
   "changePausePeriod": "सेवन विरामाचा कालावधी बदला",
+  "changedPausePeriod": "सेवन विरामाचा कालावधी बदलला आहे",
   "changedToDate": "तारीख {date} अशी बदलली आहे",
   "quickRecordTakePillFailed": "सेवन नोंद जतन झाली नसण्याची शक्यता आहे",
   "quickRecordTakePillFailedMessage": "कृपया अ‍ॅप उघडून सेवन नोंद तपासा",

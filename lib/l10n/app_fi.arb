@@ -387,6 +387,7 @@
   "beginToEndNumbers": "nro {begin}–{end}",
   "resumeTaking": "Aloita pillereiden ottaminen uudelleen",
   "changePausePeriod": "Muuta taukotilan kestoa",
+  "changedPausePeriod": "Taukotilan kestoa muutettiin",
   "changedToDate": "Päivämäärä vaihdettu: {date}",
   "quickRecordTakePillFailed": "Pilleriloki ei ehkä tallentunut",
   "quickRecordTakePillFailedMessage": "Avaa sovellus ja tarkista pillerin ottomerkintä",

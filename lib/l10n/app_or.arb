@@ -387,6 +387,7 @@
   "beginToEndNumbers": "ନଂ {begin} ~ {end}",
   "resumeTaking": "ବଟିକା ଖାଇବା ପୁଣି ଆରମ୍ଭ କରନ୍ତୁ",
   "changePausePeriod": "ସେବନ ବିରତିର ଅବଧି ବଦଳାନ୍ତୁ",
+  "changedPausePeriod": "ସେବନ ବିରତିର ଅବଧି ବଦଳାଯାଇଛି",
   "changedToDate": "ତାରିଖ {date}କୁ ବଦଳାଯାଇଛି",
   "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ସଂରକ୍ଷିତ ହୋଇନଥାଇପାରେ",
   "quickRecordTakePillFailedMessage": "ଦୟାକରି ଆପ୍ ଖୋଲି ସେବନ ରେକର୍ଡ ଯାଞ୍ଚ କରନ୍ତୁ",

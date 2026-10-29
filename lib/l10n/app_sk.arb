@@ -387,6 +387,7 @@
   "beginToEndNumbers": "č. {begin} ~ {end}",
   "resumeTaking": "Obnoviť užívanie tabletiek",
   "changePausePeriod": "Zmeniť dĺžku pozastavenia užívania",
+  "changedPausePeriod": "Obdobie pozastavenia užívania bolo zmenené",
   "changedToDate": "Dátum bol zmenený na {date}",
   "quickRecordTakePillFailed": "Záznam o užití sa možno nepodarilo uložiť",
   "quickRecordTakePillFailedMessage": "Otvorte aplikáciu a skontrolujte záznam o užití tabletky",

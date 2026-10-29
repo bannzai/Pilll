@@ -387,6 +387,7 @@
   "beginToEndNumbers": "شمېره {begin} ~ {end}",
   "resumeTaking": "د ګولیو اخیستلو بیا پیلول",
   "changePausePeriod": "د لنډمهاله درول مودې بدلول",
+  "changedPausePeriod": "د ګولیو د لنډمهاله درولو موده بدله شوه",
   "changedToDate": "نېټه {date} ته بدله شوه",
   "quickRecordTakePillFailed": "د ګولۍ اخیستلو ریکارډ ښايي نه وي خوندي شوی",
   "quickRecordTakePillFailedMessage": "مهرباني وکړئ اپلېکېشن پرانیزئ او وګورئ",

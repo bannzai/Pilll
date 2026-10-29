@@ -387,6 +387,7 @@
   "beginToEndNumbers": "எண் {begin} ~ {end}",
   "resumeTaking": "மாத்திரை எடுத்துக்கொள்வதை மீண்டும் தொடங்குங்கள்",
   "changePausePeriod": "இடைநிறுத்தக் காலத்தை மாற்றுங்கள்",
+  "changedPausePeriod": "மாத்திரை உட்கொள்வதை இடைநிறுத்தும் காலம் மாற்றப்பட்டது",
   "changedToDate": "தேதி {date} ஆக மாற்றப்பட்டது",
   "quickRecordTakePillFailed": "மாத்திரை உட்கொண்ட பதிவு சேமிக்கப்படாமல் போயிருக்கலாம்",
   "quickRecordTakePillFailedMessage": "செயலியைத் திறந்து சரிபாருங்கள்",

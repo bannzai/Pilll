@@ -387,6 +387,7 @@
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Börja ta p-piller igen",
   "changePausePeriod": "Ändra pausens längd",
+  "changedPausePeriod": "Pausens längd har ändrats",
   "changedToDate": "Datumet har ändrats till {date}",
   "quickRecordTakePillFailed": "Intagsloggen kanske inte sparades",
   "quickRecordTakePillFailedMessage": "Öppna appen och kontrollera intagsloggen",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Mulai minum pil lagi",
   "changePausePeriod": "Ubah durasi jeda minum",
+  "changedPausePeriod": "Durasi jeda minum telah diubah",
   "changedToDate": "Tanggal diubah menjadi {date}",
   "quickRecordTakePillFailed": "Catatan minum pil mungkin belum tersimpan",
   "quickRecordTakePillFailedMessage": "Buka aplikasi dan periksa catatan minum pil Anda",

@@ -387,6 +387,7 @@
   "beginToEndNumbers": "#{begin}–#{end}",
   "resumeTaking": "Resume taking the pill",
   "changePausePeriod": "Change pause period",
+  "changedPausePeriod": "The pause period has been changed",
   "changedToDate": "Date changed to {date}",
   "quickRecordTakePillFailed": "Your pill log may not have been saved",
   "quickRecordTakePillFailedMessage": "Please open the app to check",

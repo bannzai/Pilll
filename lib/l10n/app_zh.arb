@@ -387,6 +387,7 @@
   "beginToEndNumbers": "{begin}号 ~ {end}号",
   "resumeTaking": "恢复服药",
   "changePausePeriod": "更改暂停服药时长",
+  "changedPausePeriod": "已更改暂停服药的时长",
   "changedToDate": "日期已改为{date}",
   "quickRecordTakePillFailed": "服药记录可能未保存成功",
   "quickRecordTakePillFailedMessage": "请打开应用，查看服药记录",

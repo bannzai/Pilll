@@ -387,6 +387,7 @@
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "चक्की फेरि खान सुरु गर्नुहोस्",
   "changePausePeriod": "सेवन विरामको अवधि परिवर्तन गर्नुहोस्",
+  "changedPausePeriod": "सेवन विरामको अवधि परिवर्तन गरिएको छ",
   "changedToDate": "मिति {date} मा परिवर्तन गरिएको छ",
   "quickRecordTakePillFailed": "सेवन रेकर्ड सुरक्षित नभएको हुन सक्छ",
   "quickRecordTakePillFailedMessage": "कृपया एप खोलेर जाँच गर्नुहोस्",
