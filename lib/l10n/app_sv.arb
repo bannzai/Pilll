@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Om tablettnumret inte stämmer kan du ändra det i inställningarna",
   "todayPillNumberFeatureAppealHeadline": "Du kan ändra dagens tablettnummer",
   "todayPillNumberFeatureAppealBody": "Om du inte har tagit ett p-piller eller har förväxlat piller, så att numret på din p-pillerkarta inte längre stämmer med pillret du tog, kan du justera dagens tablettnummer manuellt. Du kan också öppna samma vy via tablettnumret på hemskärmen.",
+  "restDurationFeatureAppealTitle": "Registrera pausperioden",
   "featureAppealLocationLabel": "Var du hittar det i appen",
   "criticalAlertFeatureAppealPoint1": "Du får aviseringar även när fokusläget är på",
   "criticalAlertFeatureAppealPoint2": "En pålitlig påminnelse vid tiden du har valt",

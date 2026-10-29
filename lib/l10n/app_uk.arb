@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Якщо номер пігулки не збігається, ви можете виправити його в налаштуваннях",
   "todayPillNumberFeatureAppealHeadline": "Ви можете змінити номер пігулки на сьогодні",
   "todayPillNumberFeatureAppealBody": "Якщо ви забули прийняти пігулку або переплутали пігулки й номер на блістері більше не відповідає прийнятій пігулці, ви можете вручну змінити сьогоднішній номер пігулки. Цей самий екран можна відкрити через номер пігулки на головному екрані.",
+  "restDurationFeatureAppealTitle": "Записати період призупинення прийому пігулок",
   "featureAppealLocationLabel": "Де знайти в застосунку",
   "criticalAlertFeatureAppealPoint1": "Ви отримуватимете сповіщення навіть у режимі зосередження",
   "criticalAlertFeatureAppealPoint2": "Надійне нагадування у встановлений вами час",

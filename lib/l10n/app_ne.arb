@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "चक्कीको नम्बर नमिलेमा सेटिङमा सच्याउन सक्नुहुन्छ",
   "todayPillNumberFeatureAppealHeadline": "तपाईं आजको चक्की नम्बर परिवर्तन गर्न सक्नुहुन्छ",
   "todayPillNumberFeatureAppealBody": "चक्की खान बिर्सनुभएको वा अर्को चक्की खानुभएको कारण चक्की पत्तामा भएको नम्बर र वास्तवमा खाएको चक्की नमिलेमा, तपाईं आजको चक्की नम्बर आफैँ मिलाउन सक्नुहुन्छ। गृह स्क्रिनमा देखिने चक्की नम्बरबाट पनि यही स्क्रिन खोल्न सक्नुहुन्छ।",
+  "restDurationFeatureAppealTitle": "सेवन विरामको अवधि टिप्नुहोस्",
   "featureAppealLocationLabel": "एपमा कहाँ फेला पार्ने",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड चालु हुँदा पनि तपाईंले सूचना पाउनुहुन्छ",
   "criticalAlertFeatureAppealPoint2": "तपाईंले तोकेको समयमा भरपर्दो सम्झाउने सूचना",

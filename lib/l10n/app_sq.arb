@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Nëse numri i pilulës nuk përputhet, mund ta korrigjoni te cilësimet",
   "todayPillNumberFeatureAppealHeadline": "Numri i pilulës që merrni sot mund të ndryshohet",
   "todayPillNumberFeatureAppealBody": "Nëse keni harruar të merrni një pilulë ose i keni ngatërruar pilulat dhe numri në blister nuk përputhet më me pilulën e marrë, mund ta rregulloni me dorë, që numri i pilulës për sot të jetë i saktë. Të njëjtin ekran mund ta hapni edhe nga numri i pilulës në ekranin kryesor.",
+  "restDurationFeatureAppealTitle": "Regjistroni periudhën e pauzës së marrjes së pilulave",
   "featureAppealLocationLabel": "Ku ta gjeni në aplikacion",
   "criticalAlertFeatureAppealPoint1": "Merrni njoftime edhe kur është aktiv modaliteti i përqendrimit",
   "criticalAlertFeatureAppealPoint2": "Kujtesë e besueshme në orën që keni caktuar",

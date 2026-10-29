@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "หากหมายเลขเม็ดยาไม่ตรง สามารถแก้ไขได้ในการตั้งค่า",
   "todayPillNumberFeatureAppealHeadline": "เปลี่ยนหมายเลขเม็ดยาของวันนี้ได้",
   "todayPillNumberFeatureAppealBody": "หากลืมทานยาหรือหยิบเม็ดยาสลับกัน จนหมายเลขบนแผงยาไม่ตรงกับเม็ดยาที่ทานจริง สามารถปรับหมายเลขเม็ดยาของวันนี้ด้วยตนเองได้ค่ะ และเปิดหน้าจอเดียวกันได้จากหมายเลขเม็ดยาที่แสดงบนหน้าหลักค่ะ",
+  "restDurationFeatureAppealTitle": "บันทึกช่วงเวลาที่หยุดกินยาชั่วคราว",
   "featureAppealLocationLabel": "ตำแหน่งในแอป",
   "criticalAlertFeatureAppealPoint1": "ได้รับการแจ้งเตือนแม้เปิดโหมดโฟกัสอยู่",
   "criticalAlertFeatureAppealPoint2": "แจ้งเตือนตรงเวลาที่ตั้งไว้อย่างแน่นอน",

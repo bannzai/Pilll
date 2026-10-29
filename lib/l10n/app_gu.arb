@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "ગોળીનો નંબર મેળ ન ખાતો હોય તો તમે સેટિંગ્સમાં તેને સુધારી શકો છો",
   "todayPillNumberFeatureAppealHeadline": "તમે આજનો ગોળી નંબર બદલી શકો છો",
   "todayPillNumberFeatureAppealBody": "ગોળી લેવાનું રહી ગયું હોય અથવા ગોળીઓમાં ગૂંચવણ થઈ હોય અને ગોળીની સ્ટ્રિપ પરનો નંબર લીધેલી ગોળી સાથે મેળ ન ખાતો હોય, તો તમે આજનો ગોળી નંબર જાતે સુધારી શકો છો. હોમ સ્ક્રીન પર દેખાતા ગોળી નંબરમાંથી પણ એ જ સ્ક્રીન ખોલી શકો છો.",
+  "restDurationFeatureAppealTitle": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમયગાળો નોંધો",
   "featureAppealLocationLabel": "ઍપમાં ક્યાં મળશે",
   "criticalAlertFeatureAppealPoint1": "ફોકસ મોડ ચાલુ હોય ત્યારે પણ તમને સૂચનાઓ મળશે",
   "criticalAlertFeatureAppealPoint2": "તમે નક્કી કરેલા સમયે ચોક્કસ રિમાઇન્ડર",

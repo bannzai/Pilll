@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Si el número de la píldora no coincide, puedes corregirlo en Configuración",
   "todayPillNumberFeatureAppealHeadline": "Puedes cambiar el número de píldora de hoy",
   "todayPillNumberFeatureAppealBody": "Si olvidaste tomar una píldora o confundiste las píldoras y el número del blíster ya no coincide con la que tomaste, puedes ajustar manualmente el número de píldora de hoy. También puedes abrir la misma pantalla desde el número de píldora que aparece en la pantalla de inicio.",
+  "restDurationFeatureAppealTitle": "Registra el período de pausa",
   "featureAppealLocationLabel": "Dónde encontrarlo en la app",
   "criticalAlertFeatureAppealPoint1": "Recibes notificaciones incluso con el modo de concentración activado",
   "criticalAlertFeatureAppealPoint2": "Un recordatorio fiable a la hora que elegiste",

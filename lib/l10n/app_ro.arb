@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Dacă numărul pilulei nu corespunde, îl poți corecta în setări",
   "todayPillNumberFeatureAppealHeadline": "Poți schimba numărul pilulei de astăzi",
   "todayPillNumberFeatureAppealBody": "Dacă nu ai luat o pilulă sau ai încurcat pilulele, iar numărul de pe blister nu mai corespunde pilulei luate, poți ajusta manual numărul pilulei de azi. Poți deschide același ecran și din numărul pilulei afișat pe ecranul principal.",
+  "restDurationFeatureAppealTitle": "Înregistrează perioada de întrerupere",
   "featureAppealLocationLabel": "Unde o găsești în aplicație",
   "criticalAlertFeatureAppealPoint1": "Primești notificări chiar și când modul Concentrare este activ",
   "criticalAlertFeatureAppealPoint2": "Un memento de încredere la ora aleasă de tine",

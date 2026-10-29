@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Jos pillerinumero ei täsmää, voit korjata sen asetuksissa",
   "todayPillNumberFeatureAppealHeadline": "Voit vaihtaa tämän päivän pillerinumeron",
   "todayPillNumberFeatureAppealBody": "Jos pilleri jäi ottamatta tai pillerit menivät sekaisin eikä pilleriliuskan numero enää vastaa ottamaasi pilleriä, voit korjata tämän päivän pillerinumeron käsin. Voit avata saman näkymän myös aloitusnäytön pillerinumerosta.",
+  "restDurationFeatureAppealTitle": "Merkitse taukotilan ajanjakso",
   "featureAppealLocationLabel": "Sijainti sovelluksessa",
   "criticalAlertFeatureAppealPoint1": "Saat ilmoitukset myös keskittymistilassa",
   "criticalAlertFeatureAppealPoint2": "Luotettava muistutus valitsemaasi aikaan",

@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "اگر گولی نمبر درست نہیں ہے تو اسے ترتیبات میں درست کیا جا سکتا ہے",
   "todayPillNumberFeatureAppealHeadline": "آپ آج کا گولی نمبر تبدیل کر سکتی ہیں",
   "todayPillNumberFeatureAppealBody": "اگر گولی لینا رہ گیا ہو یا گولیاں آپس میں بدل گئی ہوں اور گولیوں کی پٹی پر درج نمبر لی گئی گولی سے نہ ملتا ہو، تو آج کا گولی نمبر خود درست کیا جا سکتا ہے۔ ہوم اسکرین پر دکھائے گئے گولی نمبر سے بھی یہی اسکرین کھولی جا سکتی ہے۔",
+  "restDurationFeatureAppealTitle": "گولیاں لینے میں توقف کی مدت درج کریں",
   "featureAppealLocationLabel": "ایپ میں کہاں ملے گا",
   "criticalAlertFeatureAppealPoint1": "فوکس موڈ کے دوران بھی آپ کو اطلاعات ملیں گی",
   "criticalAlertFeatureAppealPoint2": "آپ کے مقرر کردہ وقت پر قابلِ اعتماد یاد دہانی",

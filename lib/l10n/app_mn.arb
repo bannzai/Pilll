@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Эмийн дугаар таарахгүй байвал тохиргооноос засах боломжтой",
   "todayPillNumberFeatureAppealHeadline": "Өнөөдрийн эмийн дугаарыг өөрчлөх боломжтой",
   "todayPillNumberFeatureAppealBody": "Эмээ уухаа мартсан эсвэл эмээ андуурсан үед эмийн блистер дээрх дугаар уусан эмтэй тохирохгүй байж болно. Ийм үед өнөөдрийн эмийн дугаарыг гараар тохируулж болно. Нүүр дэлгэц дээрх эмийн дугаараас мөн адил дэлгэцийг нээж болно.",
+  "restDurationFeatureAppealTitle": "Түр завсарлагын хугацааг тэмдэглэнэ үү",
   "featureAppealLocationLabel": "Апп дотор хаанаас олох вэ",
   "criticalAlertFeatureAppealPoint1": "Төвлөрөх горим идэвхтэй үед ч мэдэгдэл ирнэ",
   "criticalAlertFeatureAppealPoint2": "Таны тохируулсан цагт найдвартай сануулга",

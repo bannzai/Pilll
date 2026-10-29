@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಹೊಂದಿಕೆಯಾಗದಿದ್ದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅದನ್ನು ಸರಿಪಡಿಸಬಹುದು",
   "todayPillNumberFeatureAppealHeadline": "ನೀವು ಇಂದಿನ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಬಹುದು",
   "todayPillNumberFeatureAppealBody": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು ಮರೆತುಹೋದರೆ ಅಥವಾ ಮಾತ್ರೆಗಳು ಗೊಂದಲವಾದರೆ, ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್‌ನ ಸಂಖ್ಯೆಯು ತೆಗೆದುಕೊಂಡ ಮಾತ್ರೆಗೆ ಹೊಂದಿಕೆಯಾಗದೇ ಇರಬಹುದು. ಆಗ ಇಂದಿನ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯನ್ನು ನೀವೇ ಸರಿಪಡಿಸಬಹುದು. ಮುಖಪುಟದಲ್ಲಿ ಕಾಣುವ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯಿಂದಲೂ ಇದೇ ಪರದೆಯನ್ನು ತೆರೆಯಬಹುದು.",
+  "restDurationFeatureAppealTitle": "ಮಾತ್ರೆ ವಿರಾಮದ ಅವಧಿಯನ್ನು ದಾಖಲಿಸಿ",
   "featureAppealLocationLabel": "ಆ್ಯಪ್‌ನಲ್ಲಿ ಎಲ್ಲಿ ಸಿಗುತ್ತದೆ",
   "criticalAlertFeatureAppealPoint1": "ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲಿದ್ದಾಗಲೂ ನಿಮಗೆ ಅಧಿಸೂಚನೆಗಳು ಬರುತ್ತವೆ",
   "criticalAlertFeatureAppealPoint2": "ನೀವು ನಿಗದಿಪಡಿಸಿದ ಸಮಯಕ್ಕೆ ವಿಶ್ವಾಸಾರ್ಹ ಜ್ಞಾಪನೆ",

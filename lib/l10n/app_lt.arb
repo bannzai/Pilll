@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Jei tabletės numeris nesutampa, galite jį pataisyti nustatymuose",
   "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandienos tabletės numerį",
   "todayPillNumberFeatureAppealBody": "Jei pamiršote išgerti tabletę arba supainiojote tabletes ir numeris ant tablečių plokštelės nebeatitinka išgertos tabletės, galite rankiniu būdu pataisyti šiandienos tabletės numerį. Tą patį ekraną galite atverti ir palietus tabletės numerį pradžios ekrane.",
+  "restDurationFeatureAppealTitle": "Pažymėti pristabdymo laikotarpį",
   "featureAppealLocationLabel": "Kur rasti programėlėje",
   "criticalAlertFeatureAppealPoint1": "Pranešimus gausite net tada, kai įjungtas susikaupimo režimas",
   "criticalAlertFeatureAppealPoint2": "Patikimas priminimas jūsų nustatytu laiku",

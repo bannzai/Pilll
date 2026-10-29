@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Αν ο αριθμός του χαπιού δεν ταιριάζει, μπορείτε να τον διορθώσετε στις ρυθμίσεις",
   "todayPillNumberFeatureAppealHeadline": "Μπορείτε να αλλάξετε τον αριθμό χαπιού για σήμερα",
   "todayPillNumberFeatureAppealBody": "Αν ξεχάσατε ένα χάπι ή μπερδέψατε τα χάπια και ο αριθμός στην καρτέλα χαπιών δεν αντιστοιχεί σε αυτό που πήρατε, μπορείτε να διορθώσετε χειροκίνητα τον αριθμό χαπιού για σήμερα. Μπορείτε να ανοίξετε την ίδια οθόνη και από τον αριθμό χαπιού στην αρχική οθόνη.",
+  "restDurationFeatureAppealTitle": "Καταγραφή περιόδου παύσης λήψης",
   "featureAppealLocationLabel": "Πού θα το βρείτε στην εφαρμογή",
   "criticalAlertFeatureAppealPoint1": "Λαμβάνετε ειδοποιήσεις ακόμη και στη λειτουργία συγκέντρωσης",
   "criticalAlertFeatureAppealPoint2": "Αξιόπιστη υπενθύμιση την ώρα που έχετε ορίσει",

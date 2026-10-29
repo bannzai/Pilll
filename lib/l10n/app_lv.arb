@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Ja tabletes numurs nesakrīt, varat to labot iestatījumos",
   "todayPillNumberFeatureAppealHeadline": "Varat mainīt šodienas tabletes numuru",
   "todayPillNumberFeatureAppealBody": "Ja tablete nav lietota vai tabletes ir sajauktas un numurs uz tablešu blistera vairs neatbilst lietotajai tabletei, varat manuāli pielāgot šodienas tabletes numuru. To pašu ekrānu varat atvērt arī no tabletes numura sākuma ekrānā.",
+  "restDurationFeatureAppealTitle": "Reģistrēt lietošanas pauzes periodu",
   "featureAppealLocationLabel": "Kur to atrast lietotnē",
   "criticalAlertFeatureAppealPoint1": "Saņemsiet paziņojumus arī tad, kad ir ieslēgts fokusēšanās režīms",
   "criticalAlertFeatureAppealPoint2": "Uzticams atgādinājums jūsu iestatītajā laikā",

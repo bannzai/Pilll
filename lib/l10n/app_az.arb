@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Həb nömrəsi uyğun gəlmirsə, onu ayarlarda düzəldə bilərsiniz",
   "todayPillNumberFeatureAppealHeadline": "Bugünkü həb nömrəsini dəyişə bilərsiniz",
   "todayPillNumberFeatureAppealBody": "Həbi qəbul etməyi unutduğunuz və ya həbləri qarışdırdığınız üçün həb blister üzərindəki nömrə qəbul etdiyiniz həblə uyğun gəlmirsə, bugünkü həb nömrəsini əl ilə düzəldə bilərsiniz. Eyni ekranı ana səhifədəki həb nömrə göstəricisindən də aça bilərsiniz.",
+  "restDurationFeatureAppealTitle": "Həb qəbuluna fasilə müddətini qeyd edin",
   "featureAppealLocationLabel": "Tətbiqdəki yeri",
   "criticalAlertFeatureAppealPoint1": "Fokus rejimində də bildirişlər alırsınız",
   "criticalAlertFeatureAppealPoint2": "Təyin etdiyiniz vaxtda etibarlı xatırlatma",

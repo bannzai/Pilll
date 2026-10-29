@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Ako se broj pilule ne podudara, možete ga ispraviti u postavkama",
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",
   "todayPillNumberFeatureAppealBody": "Ako ste zaboravili uzeti pilulu ili ste zamijenili pilule pa broj na blisteru ne odgovara onoj koju ste uzeli, možete ručno podesiti današnji broj pilule. Isti ekran možete otvoriti i dodirom na broj pilule na početnom ekranu.",
+  "restDurationFeatureAppealTitle": "Zabilježite period prekida uzimanja pilula",
   "featureAppealLocationLabel": "Gdje pronaći u aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Dobijate obavijesti i dok je uključen način fokusiranja",
   "criticalAlertFeatureAppealPoint2": "Pouzdano podsjećanje u vrijeme koje ste Vi postavili",

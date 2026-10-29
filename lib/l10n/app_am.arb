@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "የክኒን ቁጥር ከተዛባ፣ በቅንብሮች ውስጥ ማስተካከል ይችላሉ",
   "todayPillNumberFeatureAppealHeadline": "የዛሬውን ክኒን ቁጥር መቀየር ይችላሉ",
   "todayPillNumberFeatureAppealBody": "ክኒን መውሰድ ከተረሳ ወይም ከተምታታ፣ በክኒን ሉህ ላይ ያለው ቁጥር ከተወሰደው ክኒን ጋር ላይዛመድ ይችላል። በዚህ ጊዜ የዛሬውን ክኒን ቁጥር በእጅ ማስተካከል ይችላሉ። ይህንኑ ገጽ ከመነሻ ገጹ ላይ ከሚታየው የክኒን ቁጥር መክፈትም ይችላሉ።",
+  "restDurationFeatureAppealTitle": "የለጊዜው ማቆም ጊዜን ይመዝግቡ",
   "featureAppealLocationLabel": "በመተግበሪያው ውስጥ ያለበት ቦታ",
   "criticalAlertFeatureAppealPoint1": "በትኩረት ሁነታ ላይ ሳሉም ማሳወቂያዎች ይደርሱዎታል",
   "criticalAlertFeatureAppealPoint2": "ባስቀመጡት ሰዓት አስተማማኝ ማሳሰቢያ",

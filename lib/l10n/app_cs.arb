@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Pokud číslo tablety nesouhlasí, můžete ho upravit v nastavení",
   "todayPillNumberFeatureAppealHeadline": "Můžete změnit číslo tablety pro dnešek",
   "todayPillNumberFeatureAppealBody": "Pokud kvůli zapomenutí nebo záměně tablet číslo na blistru neodpovídá skutečně užité tabletě, můžete dnešní číslo tablety ručně upravit. Stejnou obrazovku otevřete také klepnutím na číslo tablety na úvodní obrazovce.",
+  "restDurationFeatureAppealTitle": "Zaznamenat období pozastavení užívání",
   "featureAppealLocationLabel": "Kde to najdete v aplikaci",
   "criticalAlertFeatureAppealPoint1": "Oznámení dostáváte i v režimu soustředění",
   "criticalAlertFeatureAppealPoint2": "Spolehlivé připomenutí v nastavený čas",

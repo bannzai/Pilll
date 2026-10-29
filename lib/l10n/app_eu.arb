@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "Pilularen zenbakia bat ez badator, ezarpenetan zuzendu dezakezu",
   "todayPillNumberFeatureAppealHeadline": "Gaurko pilula-zenbakia alda dezakezu",
   "todayPillNumberFeatureAppealBody": "Pilula bat hartzea ahaztu bazaizu edo pilulak nahastu badituzu, eta pilula-blisterreko zenbakia ez badator bat hartu duzunarekin, gaurko pilula-zenbakia eskuz zuzendu dezakezu. Pantaila bera hasierako pantailan agertzen den pilula-zenbakitik ere ireki dezakezu.",
+  "restDurationFeatureAppealTitle": "Erregistratu etenaldiaren aldia",
   "featureAppealLocationLabel": "Non aurkitu aplikazioan",
   "criticalAlertFeatureAppealPoint1": "Jakinarazpenak jasoko dituzu baita kontzentrazio moduan ere",
   "criticalAlertFeatureAppealPoint2": "Abisu fidagarria ezarri duzun orduan",

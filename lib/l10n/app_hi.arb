@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "गोली का नंबर मेल न खाए तो आप उसे सेटिंग में ठीक कर सकती हैं",
   "todayPillNumberFeatureAppealHeadline": "आप आज का गोली नंबर बदल सकती हैं",
   "todayPillNumberFeatureAppealBody": "अगर गोली लेना छूट गया हो या गोलियों में गड़बड़ी से पिल स्ट्रिप का नंबर ली गई गोली से मेल न खाता हो, तो आप आज का गोली नंबर खुद ठीक कर सकती हैं। होम स्क्रीन पर दिख रहे गोली नंबर से भी यही स्क्रीन खोल सकती हैं।",
+  "restDurationFeatureAppealTitle": "गोली लेने में विराम की अवधि दर्ज करें",
   "featureAppealLocationLabel": "ऐप में कहाँ मिलेगा",
   "criticalAlertFeatureAppealPoint1": "फ़ोकस मोड चालू होने पर भी आपको सूचनाएँ मिलेंगी",
   "criticalAlertFeatureAppealPoint2": "आपके तय किए हुए समय पर भरोसेमंद रिमाइंडर",

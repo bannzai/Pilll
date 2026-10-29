@@ -504,6 +504,7 @@
   "todayPillNumberFeatureAppealShortDescription": "गोळीचा क्रमांक जुळत नसेल, तर तुम्ही तो सेटिंग्जमध्ये दुरुस्त करू शकता",
   "todayPillNumberFeatureAppealHeadline": "तुम्ही आजचा गोळी क्रमांक बदलू शकता",
   "todayPillNumberFeatureAppealBody": "गोळी घ्यायची राहिली किंवा गोळ्यांची अदलाबदल झाली आणि पिल शीटवरील क्रमांक घेतलेल्या गोळीशी जुळत नसेल, तर तुम्ही आजचा गोळी क्रमांक स्वतः दुरुस्त करू शकता. होम स्क्रीनवर दिसणाऱ्या गोळी क्रमांकावरूनही तीच स्क्रीन उघडू शकता.",
+  "restDurationFeatureAppealTitle": "सेवन विरामाचा कालावधी नोंदवा",
   "featureAppealLocationLabel": "अ‍ॅपमध्ये कुठे मिळेल",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड सुरू असतानाही तुम्हाला सूचना मिळतील",
   "criticalAlertFeatureAppealPoint2": "तुम्ही ठरवलेल्या वेळी खात्रीशीर रिमाइंडर",
