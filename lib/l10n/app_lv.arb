@@ -400,6 +400,7 @@
   "addPillSheet": "Pievienot tablešu blisteri",
   "pillTakenCountPrefix": "Dienā lietot",
   "pillTakenCountSuffix": "reizes",
+  "duringPauseTaking": "lietošanas pauze turpinās",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ieteikt draugiem",
   "termsOfService": "Lietošanas noteikumi",

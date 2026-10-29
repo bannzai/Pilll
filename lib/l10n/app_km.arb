@@ -400,6 +400,7 @@
   "addPillSheet": "បន្ថែមបន្ទះថ្នាំគ្រាប់",
   "pillTakenCountPrefix": "លេបថ្នាំគ្រាប់ថ្ងៃមួយ",
   "pillTakenCountSuffix": "ដង",
+  "duringPauseTaking": "កំពុងផ្អាកការលេបថ្នាំ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ចែករំលែកជាមួយមិត្តភក្តិ",
   "termsOfService": "លក្ខខណ្ឌប្រើប្រាស់",

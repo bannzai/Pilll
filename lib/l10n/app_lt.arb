@@ -400,6 +400,7 @@
   "addPillSheet": "Pridėti tablečių plokštelę",
   "pillTakenCountPrefix": "Vartoti per dieną",
   "pillTakenCountSuffix": "k.",
+  "duringPauseTaking": "pristabdytas tablečių vartojimas",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Pasidalykite su draugais",
   "termsOfService": "Naudojimo sąlygos",

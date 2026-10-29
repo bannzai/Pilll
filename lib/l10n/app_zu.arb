@@ -400,6 +400,7 @@
   "addPillSheet": "Sicela wengeze ishidi lamaphilisi",
   "pillTakenCountPrefix": "Ngosuku",
   "pillTakenCountSuffix": "izikhathi zokuphuza iphilisi",
+  "duringPauseTaking": "Ukugwinya amaphilisi kumisiwe okwesikhashana",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Sicela wabelane nabangane",
   "termsOfService": "Imigomo yokusebenzisa",

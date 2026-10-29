@@ -400,6 +400,7 @@
   "addPillSheet": "Új tablettacsomag hozzáadása",
   "pillTakenCountPrefix": "Naponta",
   "pillTakenCountSuffix": "alkalommal szedem",
+  "duringPauseTaking": "A szedés szüneteltetve",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ajánld barátaidnak",
   "termsOfService": "Felhasználási feltételek",

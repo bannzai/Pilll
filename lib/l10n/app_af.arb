@@ -400,6 +400,7 @@
   "addPillSheet": "Voeg pilstrokie by",
   "pillTakenCountPrefix": "Neem",
   "pillTakenCountSuffix": "keer per dag",
+  "duringPauseTaking": "Innameonderbreking aan die gang",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Vertel jou vriende",
   "termsOfService": "Gebruiksvoorwaardes",

@@ -400,6 +400,7 @@
   "addPillSheet": "Προσθέστε μια καρτέλα χαπιών",
   "pillTakenCountPrefix": "Λήψη",
   "pillTakenCountSuffix": "φορές την ημέρα",
+  "duringPauseTaking": "παύση λήψης σε εξέλιξη",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Μοιραστείτε το με φίλους",
   "termsOfService": "Όροι χρήσης",

@@ -400,6 +400,7 @@
   "addPillSheet": "เพิ่มแผงยา",
   "pillTakenCountPrefix": "วันละ",
   "pillTakenCountSuffix": "ครั้ง",
+  "duringPauseTaking": "กำลังหยุดกินยาชั่วคราว",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "แนะนำให้เพื่อน",
   "termsOfService": "ข้อกำหนดการใช้งาน",

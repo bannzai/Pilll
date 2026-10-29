@@ -400,6 +400,7 @@
   "addPillSheet": "Lisa pillileht",
   "pillTakenCountPrefix": "Päevas",
   "pillTakenCountSuffix": "korda",
+  "duringPauseTaking": "võtmise paus kestab",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Jaga sõpradega",
   "termsOfService": "Kasutustingimused",

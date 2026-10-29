@@ -400,6 +400,7 @@
   "addPillSheet": "පෙති කාඩ්පත එක් කරන්න",
   "pillTakenCountPrefix": "දිනකට",
   "pillTakenCountSuffix": "වරක් පෙත්ත ගන්න",
+  "duringPauseTaking": "පෙති ගැනීමේ විරාමය ක්‍රියාත්මකයි",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "මිතුරන්ට කියන්න",
   "termsOfService": "භාවිත නියමයන්",

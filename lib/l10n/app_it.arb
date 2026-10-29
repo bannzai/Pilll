@@ -400,6 +400,7 @@
   "addPillSheet": "Aggiungi un blister",
   "pillTakenCountPrefix": "Prendi la pillola",
   "pillTakenCountSuffix": "volte al giorno",
+  "duringPauseTaking": "sospensione in corso",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Condividi con gli amici",
   "termsOfService": "Termini di utilizzo",

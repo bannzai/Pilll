@@ -400,6 +400,7 @@
   "addPillSheet": "הוספת חפיסת גלולות",
   "pillTakenCountPrefix": "ליטול",
   "pillTakenCountSuffix": "פעמים ביום",
+  "duringPauseTaking": "השהיית נטילה פעילה",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "לשתף עם חברים",
   "termsOfService": "תנאי שימוש",

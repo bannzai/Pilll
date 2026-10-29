@@ -400,6 +400,7 @@
   "addPillSheet": "Lisää pilleriliuska",
   "pillTakenCountPrefix": "Ota pilleri",
   "pillTakenCountSuffix": "kertaa päivässä",
+  "duringPauseTaking": "taukotila käytössä",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Kerro ystäville",
   "termsOfService": "Käyttöehdot",

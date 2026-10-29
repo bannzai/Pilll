@@ -400,6 +400,7 @@
   "addPillSheet": "மாத்திரை அட்டையைச் சேருங்கள்",
   "pillTakenCountPrefix": "ஒரு நாளில்",
   "pillTakenCountSuffix": "முறை மாத்திரை உட்கொள்ளுதல்",
+  "duringPauseTaking": "மாத்திரை உட்கொள்வது இடைநிறுத்தப்பட்டுள்ளது",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "நண்பர்களிடம் பகிருங்கள்",
   "termsOfService": "பயன்பாட்டு விதிமுறைகள்",

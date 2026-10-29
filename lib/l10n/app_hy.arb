@@ -400,6 +400,7 @@
   "addPillSheet": "Ավելացնել հաբերի բլիստեր",
   "pillTakenCountPrefix": "Օրական",
   "pillTakenCountSuffix": "անգամ ընդունել",
+  "duringPauseTaking": "ընդունման դադարն ընթացքի մեջ է",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Կիսվեք ընկերների հետ",
   "termsOfService": "Օգտագործման պայմաններ",

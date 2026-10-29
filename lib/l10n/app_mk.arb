@@ -400,6 +400,7 @@
   "addPillSheet": "Додавање блистер",
   "pillTakenCountPrefix": "Земање",
   "pillTakenCountSuffix": "пати дневно",
+  "duringPauseTaking": "Паузирано е земањето апчиња",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Препорачајте им на пријателите",
   "termsOfService": "Услови за користење",

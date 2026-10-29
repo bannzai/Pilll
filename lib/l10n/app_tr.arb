@@ -400,6 +400,7 @@
   "addPillSheet": "Blister ekleyin",
   "pillTakenCountPrefix": "Günde",
   "pillTakenCountSuffix": "kez alın",
+  "duringPauseTaking": "Hap kullanımına ara verme sürüyor",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Arkadaşlarınızla paylaşın",
   "termsOfService": "Kullanım koşulları",

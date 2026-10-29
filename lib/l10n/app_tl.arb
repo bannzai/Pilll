@@ -400,6 +400,7 @@
   "addPillSheet": "Magdagdag ng pakete ng pildoras",
   "pillTakenCountPrefix": "Sa isang araw",
   "pillTakenCountSuffix": "beses uminom ng pildoras",
+  "duringPauseTaking": "Kasalukuyang paghinto sa pag-inom ng pildoras",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ibahagi sa mga kaibigan ninyo",
   "termsOfService": "Mga tuntunin sa paggamit",

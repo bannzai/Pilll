@@ -400,6 +400,7 @@
   "addPillSheet": "Shtoni blister",
   "pillTakenCountPrefix": "Merrni pilulën",
   "pillTakenCountSuffix": "herë në ditë",
+  "duringPauseTaking": "pauzë në marrjen e pilulave",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Ndajeni me miqtë",
   "termsOfService": "Kushtet e përdorimit",

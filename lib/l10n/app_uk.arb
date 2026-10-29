@@ -400,6 +400,7 @@
   "addPillSheet": "Додати блістер",
   "pillTakenCountPrefix": "Приймати пігулку",
   "pillTakenCountSuffix": "раз(и) на день",
+  "duringPauseTaking": "призупинення прийому пігулок триває",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Порадьте друзям",
   "termsOfService": "Умови користування",

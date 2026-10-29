@@ -400,6 +400,7 @@
   "addPillSheet": "Pilleblister dezue tue",
   "pillTakenCountPrefix": "Am Tag",
   "pillTakenCountSuffix": "Mal iinäh",
+  "duringPauseTaking": "Iinahmepause lauft",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Mit Fründe teile",
   "termsOfService": "Nutzigsbedingige",

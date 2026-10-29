@@ -400,6 +400,7 @@
   "addPillSheet": "알약 시트 추가",
   "pillTakenCountPrefix": "하루에",
   "pillTakenCountSuffix": "회 복용해요",
+  "duringPauseTaking": "복용 일시 중지 중",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "친구에게 추천하기",
   "termsOfService": "이용약관",

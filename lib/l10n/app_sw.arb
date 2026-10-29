@@ -400,6 +400,7 @@
   "addPillSheet": "Ongeza pakiti ya vidonge",
   "pillTakenCountPrefix": "Kumeza vidonge mara",
   "pillTakenCountSuffix": "kwa siku",
+  "duringPauseTaking": "kusitisha kumeza vidonge kwa muda kunaendelea",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Shiriki na marafiki",
   "termsOfService": "Masharti ya matumizi",

@@ -400,6 +400,7 @@
   "addPillSheet": "Add pill pack",
   "pillTakenCountPrefix": "Take",
   "pillTakenCountSuffix": "times a day",
+  "duringPauseTaking": "Taking a pause",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Share with friends",
   "termsOfService": "Terms of service",

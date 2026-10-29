@@ -400,6 +400,7 @@
   "addPillSheet": "აბების ბლისტერის დამატება",
   "pillTakenCountPrefix": "დღეში",
   "pillTakenCountSuffix": "-ჯერ მიღება",
+  "duringPauseTaking": "მიღების პაუზა მიმდინარეობს",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",

@@ -400,6 +400,7 @@
   "addPillSheet": "添加药板",
   "pillTakenCountPrefix": "每天服用",
   "pillTakenCountSuffix": "次",
+  "duringPauseTaking": "暂停服药中",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "推荐给朋友",
   "termsOfService": "使用条款",

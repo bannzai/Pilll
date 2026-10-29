@@ -400,6 +400,7 @@
   "addPillSheet": "ગોળીની સ્ટ્રિપ ઉમેરો",
   "pillTakenCountPrefix": "દરરોજ",
   "pillTakenCountSuffix": "વખત ગોળી લેવી",
+  "duringPauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "મિત્રોને જણાવો",
   "termsOfService": "ઉપયોગની શરતો",

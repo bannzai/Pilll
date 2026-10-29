@@ -400,6 +400,7 @@
   "addPillSheet": "إضافة شريط",
   "pillTakenCountPrefix": "تناول الحبة",
   "pillTakenCountSuffix": "مرات في اليوم",
+  "duringPauseTaking": "إيقاف تناول الحبوب جارٍ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "شاركيه مع صديقاتكِ",
   "termsOfService": "شروط الاستخدام",

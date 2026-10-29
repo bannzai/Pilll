@@ -400,6 +400,7 @@
   "addPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೇರಿಸಿ",
   "pillTakenCountPrefix": "ದಿನಕ್ಕೆ",
   "pillTakenCountSuffix": "ಬಾರಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದು",
+  "duringPauseTaking": "ಮಾತ್ರೆ ವಿರಾಮ ನಡೆಯುತ್ತಿದೆ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ಸ್ನೇಹಿತರಿಗೆ ತಿಳಿಸಿ",
   "termsOfService": "ಬಳಕೆಯ ನಿಯಮಗಳು",

@@ -400,6 +400,7 @@
   "addPillSheet": "Añadir blíster",
   "pillTakenCountPrefix": "Tomar",
   "pillTakenCountSuffix": "veces al día",
+  "duringPauseTaking": "pausa en curso",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Recomendar Pilll a tus amistades",
   "termsOfService": "Condiciones de uso",

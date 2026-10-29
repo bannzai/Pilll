@@ -400,6 +400,7 @@
   "addPillSheet": "Ajouter une plaquette",
   "pillTakenCountPrefix": "Prendre",
   "pillTakenCountSuffix": "fois par jour",
+  "duringPauseTaking": "pause de prise en cours",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Partager avec vos amis",
   "termsOfService": "Conditions d’utilisation",

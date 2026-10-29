@@ -400,6 +400,7 @@
   "addPillSheet": "Додајте блистер",
   "pillTakenCountPrefix": "Дневно",
   "pillTakenCountSuffix": "пута узимате пилулу",
+  "duringPauseTaking": "прекид узимања пилула је у току",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Препоручите пријатељима",
   "termsOfService": "Услови коришћења",

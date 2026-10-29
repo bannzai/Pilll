@@ -400,6 +400,7 @@
   "addPillSheet": "د ګولیو پاڼې اضافه کول",
   "pillTakenCountPrefix": "په ورځ کې",
   "pillTakenCountSuffix": "ځله ګولۍ واخلئ",
+  "duringPauseTaking": "د ګولیو اخیستل لنډمهاله درول شوي",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "له ملګرو سره یې شریک کړئ",
   "termsOfService": "د کارونې شرایط",

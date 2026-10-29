@@ -400,6 +400,7 @@
   "addPillSheet": "Afegeix un blíster",
   "pillTakenCountPrefix": "Prendre",
   "pillTakenCountSuffix": "vegades al dia",
+  "duringPauseTaking": "pausa en curs",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Comparteix-ho amb els amics",
   "termsOfService": "Condicions d’ús",

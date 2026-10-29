@@ -400,6 +400,7 @@
   "addPillSheet": "Дадаць блістар",
   "pillTakenCountPrefix": "Прымаць",
   "pillTakenCountSuffix": "разы на дзень",
+  "duringPauseTaking": "прыпын прыёму пігулак",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Раскажыце сябрам",
   "termsOfService": "Умовы карыстання",

@@ -400,6 +400,7 @@
   "addPillSheet": "Adicionar cartela",
   "pillTakenCountPrefix": "Tomar a pílula",
   "pillTakenCountSuffix": "vezes por dia",
+  "duringPauseTaking": "interrupção da tomada em andamento",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Compartilhe com amigos",
   "termsOfService": "Termos de uso",

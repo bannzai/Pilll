@@ -400,6 +400,7 @@
   "addPillSheet": "Engadir un blíster",
   "pillTakenCountPrefix": "Tomar a pílula",
   "pillTakenCountSuffix": "veces ao día",
+  "duringPauseTaking": "pausa na toma en curso",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Compárteo coas túas amizades",
   "termsOfService": "Condicións de uso",

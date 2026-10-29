@@ -400,6 +400,7 @@
   "addPillSheet": "Tabletka blister qoʻshing",
   "pillTakenCountPrefix": "Kuniga",
   "pillTakenCountSuffix": "marta qabul qilish",
+  "duringPauseTaking": "Dori ichishda pauza davom etmoqda",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Doʻstlaringizga tavsiya qiling",
   "termsOfService": "Foydalanish shartlari",

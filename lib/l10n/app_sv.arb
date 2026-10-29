@@ -400,6 +400,7 @@
   "addPillSheet": "Lägg till p-pillerkarta",
   "pillTakenCountPrefix": "Ta pillret",
   "pillTakenCountSuffix": "gånger per dag",
+  "duringPauseTaking": "paus i tablettintaget pågår",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Dela med vänner",
   "termsOfService": "Användarvillkor",

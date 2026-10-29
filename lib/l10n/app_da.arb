@@ -400,6 +400,7 @@
   "addPillSheet": "Tilføj pillekort",
   "pillTakenCountPrefix": "P-pillen tages",
   "pillTakenCountSuffix": "gange om dagen",
+  "duringPauseTaking": "indtagelsespause i gang",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Del med venner",
   "termsOfService": "Brugsvilkår",

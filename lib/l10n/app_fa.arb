@@ -400,6 +400,7 @@
   "addPillSheet": "افزودن ورق قرص",
   "pillTakenCountPrefix": "در روز",
   "pillTakenCountSuffix": "بار مصرف",
+  "duringPauseTaking": "توقف موقت مصرف در جریان است",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "به دوستانتان معرفی کنید",
   "termsOfService": "شرایط استفاده",

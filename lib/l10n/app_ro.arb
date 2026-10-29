@@ -400,6 +400,7 @@
   "addPillSheet": "Adaugă un blister",
   "pillTakenCountPrefix": "Iei pilula de",
   "pillTakenCountSuffix": "ori pe zi",
+  "duringPauseTaking": "întreruperea administrării este în curs",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Recomandă prietenilor",
   "termsOfService": "Termeni de utilizare",

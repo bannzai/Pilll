@@ -400,6 +400,7 @@
   "addPillSheet": "Gehitu pilula-blister",
   "pillTakenCountPrefix": "Egunean",
   "pillTakenCountSuffix": "aldiz hartu",
+  "duringPauseTaking": "etenaldi batean",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Partekatu lagunekin",
   "termsOfService": "Erabilera-baldintzak",

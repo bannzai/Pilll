@@ -400,6 +400,7 @@
   "addPillSheet": "Таблетка блистери кошуу",
   "pillTakenCountPrefix": "Күнүнө",
   "pillTakenCountSuffix": "жолу ичүү",
+  "duringPauseTaking": "убактылуу токтотуу жүрүп жатат",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Досторуңузга сунуштаңыз",
   "termsOfService": "Колдонуу шарттары",

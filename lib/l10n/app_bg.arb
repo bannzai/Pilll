@@ -400,6 +400,7 @@
   "addPillSheet": "Добавяне на блистер",
   "pillTakenCountPrefix": "На ден",
   "pillTakenCountSuffix": "пъти",
+  "duringPauseTaking": "спиране на приема в момента",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Споделете с приятели",
   "termsOfService": "Условия за ползване",

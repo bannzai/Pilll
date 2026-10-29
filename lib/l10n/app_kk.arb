@@ -400,6 +400,7 @@
   "addPillSheet": "Таблетка блистер қосу",
   "pillTakenCountPrefix": "Күніне",
   "pillTakenCountSuffix": "рет қабылдау",
+  "duringPauseTaking": "қабылдаудағы кідіріс жалғасуда",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Достарыңызға ұсыныңыз",
   "termsOfService": "Пайдалану шарттары",

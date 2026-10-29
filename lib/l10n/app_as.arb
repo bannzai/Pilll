@@ -400,6 +400,7 @@
   "addPillSheet": "পিলৰ ষ্ট্ৰিপ যোগ কৰক",
   "pillTakenCountPrefix": "1 দিনত",
   "pillTakenCountSuffix": "বাৰ খাব",
+  "duringPauseTaking": "বড়ি খোৱা সাময়িকভাৱে বন্ধ হৈ আছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "বন্ধুসকলক জনাওক",
   "termsOfService": "সেৱাৰ চৰ্তাৱলী",

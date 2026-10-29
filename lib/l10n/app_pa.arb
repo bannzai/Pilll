@@ -400,6 +400,7 @@
   "addPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਸ਼ਾਮਲ ਕਰੋ",
   "pillTakenCountPrefix": "ਦਿਨ ਵਿੱਚ",
   "pillTakenCountSuffix": "ਵਾਰ ਗੋਲੀ ਲੈਣੀ",
+  "duringPauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਚੱਲ ਰਹੀ ਹੈ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "ਦੋਸਤਾਂ ਨੂੰ ਦੱਸੋ",
   "termsOfService": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",

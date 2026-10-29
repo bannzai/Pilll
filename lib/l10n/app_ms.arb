@@ -400,6 +400,7 @@
   "addPillSheet": "Tambah pek pil",
   "pillTakenCountPrefix": "Sehari",
   "pillTakenCountSuffix": "kali mengambil pil",
+  "duringPauseTaking": "jeda pengambilan pil sedang berlangsung",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Kongsi dengan rakan",
   "termsOfService": "Terma penggunaan",

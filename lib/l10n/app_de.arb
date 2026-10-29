@@ -400,6 +400,7 @@
   "addPillSheet": "Pillenblister hinzufügen",
   "pillTakenCountPrefix": "Pro Tag",
   "pillTakenCountSuffix": "Mal einnehmen",
+  "duringPauseTaking": "Einnahmeunterbrechung läuft",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Mit Freunden teilen",
   "termsOfService": "Nutzungsbedingungen",

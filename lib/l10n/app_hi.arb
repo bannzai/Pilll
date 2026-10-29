@@ -400,6 +400,7 @@
   "addPillSheet": "पिल स्ट्रिप जोड़ें",
   "pillTakenCountPrefix": "दिन में",
   "pillTakenCountSuffix": "बार गोली लेना",
+  "duringPauseTaking": "गोली लेने में विराम जारी है",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "दोस्तों को बताएं",
   "termsOfService": "उपयोग की शर्तें",

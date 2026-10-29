@@ -400,6 +400,7 @@
   "addPillSheet": "Добавить блистер",
   "pillTakenCountPrefix": "Принимать в день",
   "pillTakenCountSuffix": "раз(а)",
+  "duringPauseTaking": "приостановлен приём таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "shareWithFriends": "Поделиться с друзьями",
   "termsOfService": "Условия использования",

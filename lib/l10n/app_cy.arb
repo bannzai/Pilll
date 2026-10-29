@@ -400,6 +400,7 @@
   "addPillSheet": "Ychwanegu stribed pils",
   "pillTakenCountPrefix": "Cymryd y bilsen",
   "pillTakenCountSuffix": "gwaith y dydd",
+  "duringPauseTaking": "oedi cymryd y bilsen ar hyn o bryd",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Rhannu â ffrindiau",
   "termsOfService": "Telerau defnyddio",

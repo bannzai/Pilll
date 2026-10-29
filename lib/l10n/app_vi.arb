@@ -400,6 +400,7 @@
   "addPillSheet": "Thêm vỉ thuốc",
   "pillTakenCountPrefix": "Mỗi ngày uống",
   "pillTakenCountSuffix": "lần",
+  "duringPauseTaking": "Đang tạm ngừng uống thuốc",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Giới thiệu cho bạn bè",
   "termsOfService": "Điều khoản sử dụng",

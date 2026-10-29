@@ -400,6 +400,7 @@
   "addPillSheet": "Pridať blist",
   "pillTakenCountPrefix": "Užívať",
   "pillTakenCountSuffix": "krát denne",
+  "duringPauseTaking": "pozastavené užívanie tabletiek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Odporučte priateľom",
   "termsOfService": "Podmienky používania",

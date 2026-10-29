@@ -400,6 +400,7 @@
   "addPillSheet": "Bæta við pilluspjaldi",
   "pillTakenCountPrefix": "Taka pilluna",
   "pillTakenCountSuffix": "sinnum á dag",
+  "duringPauseTaking": "pilluhlé stendur yfir",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Deila með vinum",
   "termsOfService": "Notkunarskilmálar",

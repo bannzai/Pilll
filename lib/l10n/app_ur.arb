@@ -400,6 +400,7 @@
   "addPillSheet": "گولیوں کی پٹی شامل کریں",
   "pillTakenCountPrefix": "دن میں",
   "pillTakenCountSuffix": "بار گولی لیں",
+  "duringPauseTaking": "گولی لینے میں توقف جاری ہے",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "دوستوں کو بتائیں",
   "termsOfService": "استعمال کی شرائط",
