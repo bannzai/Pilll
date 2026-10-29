@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Күнүнө",
   "pillTakenCountSuffix": "жолу ичүү",
   "duringPauseTaking": "убактылуу токтотуу жүрүп жатат",
+  "cannotPauseAlreadyTakenToday": "Эгер бүгүнкү таблетканы ичип койгон болсоңуз,\n«убактылуу токтотуу» баштай албайсыз",
   "pauseTakingStarted": "Таблетка ичүүнү убактылуу токтотуу башталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",

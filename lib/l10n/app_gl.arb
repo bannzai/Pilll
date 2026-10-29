@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Tomar a pílula",
   "pillTakenCountSuffix": "veces ao día",
   "duringPauseTaking": "pausa na toma en curso",
+  "cannotPauseAlreadyTakenToday": "Se xa tomaches a pílula de hoxe,\nnon podes iniciar a pausa na toma",
   "pauseTakingStarted": "Comezou a pausa na toma",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar a data de inicio da pausa na toma",

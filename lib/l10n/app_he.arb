@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "ליטול",
   "pillTakenCountSuffix": "פעמים ביום",
   "duringPauseTaking": "השהיית נטילה פעילה",
+  "cannotPauseAlreadyTakenToday": "אם הגלולה של היום כבר ניטלה,\nאי אפשר להתחיל ״השהיית נטילה״",
   "pauseTakingStarted": "השהיית נטילה החלה",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "עריכת תאריך התחלת השהיית נטילה",

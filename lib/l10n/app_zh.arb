@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "每天服用",
   "pillTakenCountSuffix": "次",
   "duringPauseTaking": "暂停服药中",
+  "cannotPauseAlreadyTakenToday": "如果今天的药已经服用，\n就无法开始“暂停服药”",
   "pauseTakingStarted": "已开始暂停服药",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "编辑暂停服药开始日期",

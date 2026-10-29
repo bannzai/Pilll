@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Prendi la pillola",
   "pillTakenCountSuffix": "volte al giorno",
   "duringPauseTaking": "sospensione in corso",
+  "cannotPauseAlreadyTakenToday": "Se hai già preso la pillola di oggi,\nnon puoi avviare la sospensione",
   "pauseTakingStarted": "La sospensione dell'assunzione è iniziata",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Modifica la data di inizio della sospensione",

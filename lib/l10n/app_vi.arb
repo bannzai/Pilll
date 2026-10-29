@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Mỗi ngày uống",
   "pillTakenCountSuffix": "lần",
   "duringPauseTaking": "Đang tạm ngừng uống thuốc",
+  "cannotPauseAlreadyTakenToday": "Nếu bạn đã uống viên thuốc hôm nay,\nbạn không thể bắt đầu tạm ngừng uống thuốc",
   "pauseTakingStarted": "Đã bắt đầu tạm ngừng uống thuốc",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Chỉnh sửa ngày bắt đầu tạm ngừng uống thuốc",

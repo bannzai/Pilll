@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Օրական",
   "pillTakenCountSuffix": "անգամ ընդունել",
   "duringPauseTaking": "ընդունման դադարն ընթացքի մեջ է",
+  "cannotPauseAlreadyTakenToday": "Եթե արդեն ընդունել եք այսօրվա հաբը,\nչեք կարող սկսել «ընդունման դադար»",
   "pauseTakingStarted": "ընդունման դադարն սկսվել է",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Խմբագրել ընդունման դադար սկսելու ամսաթիվը",

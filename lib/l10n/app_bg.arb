@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "На ден",
   "pillTakenCountSuffix": "пъти",
   "duringPauseTaking": "спиране на приема в момента",
+  "cannotPauseAlreadyTakenToday": "Ако вече сте взели днешното хапче,\nне можете да започнете „спиране на приема“",
   "pauseTakingStarted": "Започна спиране на приема",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редактиране на началната дата за спиране на приема",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Pro Tag",
   "pillTakenCountSuffix": "Mal einnehmen",
   "duringPauseTaking": "Einnahmeunterbrechung läuft",
+  "cannotPauseAlreadyTakenToday": "Wenn du die Pille für heute bereits genommen hast,\nkannst du keine Einnahmeunterbrechung beginnen",
   "pauseTakingStarted": "Deine Einnahmeunterbrechung hat begonnen",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Startdatum der Einnahmeunterbrechung bearbeiten",

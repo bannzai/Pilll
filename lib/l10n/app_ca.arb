@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Prendre",
   "pillTakenCountSuffix": "vegades al dia",
   "duringPauseTaking": "pausa en curs",
+  "cannotPauseAlreadyTakenToday": "Si ja has pres la píndola d'avui,\nno pots iniciar la pausa",
   "pauseTakingStarted": "La pausa ha començat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edita la data d’inici de la pausa",

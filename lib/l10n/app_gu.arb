@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "દરરોજ",
   "pillTakenCountSuffix": "વખત ગોળી લેવી",
   "duringPauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ છે",
+  "cannotPauseAlreadyTakenToday": "જો તમે આજની ગોળી લઈ લીધી હોય,\nતો «ગોળી લેવાનું થોડા સમય માટે બંધ» શરૂ કરી શકાતું નથી",
   "pauseTakingStarted": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાનું શરૂ થયું છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ કરવાની તારીખ સંપાદિત કરો",

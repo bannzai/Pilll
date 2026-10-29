@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Merrni pilulën",
   "pillTakenCountSuffix": "herë në ditë",
   "duringPauseTaking": "pauzë në marrjen e pilulave",
+  "cannotPauseAlreadyTakenToday": "Nëse e keni marrë tashmë pilulën e sotme,\nnuk mund të nisni pauzën",
   "pauseTakingStarted": "Ka filluar pauza e marrjes së pilulës",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ndryshoni datën e fillimit të pauzës",

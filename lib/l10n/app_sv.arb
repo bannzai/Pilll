@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Ta pillret",
   "pillTakenCountSuffix": "gånger per dag",
   "duringPauseTaking": "paus i tablettintaget pågår",
+  "cannotPauseAlreadyTakenToday": "Om du redan har tagit dagens piller\nkan du inte starta en paus",
   "pauseTakingStarted": "Din paus i tablettintaget har börjat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ändra startdatum för pausen",

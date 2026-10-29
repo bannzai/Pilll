@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "วันละ",
   "pillTakenCountSuffix": "ครั้ง",
   "duringPauseTaking": "กำลังหยุดกินยาชั่วคราว",
+  "cannotPauseAlreadyTakenToday": "หากทานยาของวันนี้แล้ว\nจะเริ่ม «หยุดกินยาชั่วคราว» ไม่ได้ค่ะ",
   "pauseTakingStarted": "เริ่มหยุดกินยาชั่วคราวแล้วค่ะ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "แก้ไขวันที่เริ่มหยุดกินยาชั่วคราว",

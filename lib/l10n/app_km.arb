@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "លេបថ្នាំគ្រាប់ថ្ងៃមួយ",
   "pillTakenCountSuffix": "ដង",
   "duringPauseTaking": "កំពុងផ្អាកការលេបថ្នាំ",
+  "cannotPauseAlreadyTakenToday": "បើអ្នកបានលេបថ្នាំគ្រាប់សម្រាប់ថ្ងៃនេះរួចហើយ\nមិនអាចចាប់ផ្តើម«ផ្អាកការលេបថ្នាំ»បានទេ",
   "pauseTakingStarted": "ការផ្អាកការលេបថ្នាំបានចាប់ផ្តើមហើយ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "កែប្រែកាលបរិច្ឆេទចាប់ផ្តើមផ្អាកការលេបថ្នាំ",

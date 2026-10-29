@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "දිනකට",
   "pillTakenCountSuffix": "වරක් පෙත්ත ගන්න",
   "duringPauseTaking": "පෙති ගැනීමේ විරාමය ක්‍රියාත්මකයි",
+  "cannotPauseAlreadyTakenToday": "අදට නියමිත පෙත්ත දැනටමත් ගෙන ඇත්නම්,\n«පෙති ගැනීමේ විරාම» ආරම්භ කළ නොහැක",
   "pauseTakingStarted": "පෙති ගැනීමේ විරාමය ආරම්භ වී ඇත",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය සංස්කරණය කරන්න",

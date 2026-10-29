@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Kumeza vidonge mara",
   "pillTakenCountSuffix": "kwa siku",
   "duringPauseTaking": "kusitisha kumeza vidonge kwa muda kunaendelea",
+  "cannotPauseAlreadyTakenToday": "Ikiwa tayari umemeza kidonge cha leo,\nhuwezi kuanza kusitisha matumizi kwa muda",
   "pauseTakingStarted": "Kusitisha kumeza kidonge kumeanza",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Tafadhali badilisha tarehe ya kuanza kusitisha",

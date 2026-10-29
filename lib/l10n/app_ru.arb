@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Принимать в день",
   "pillTakenCountSuffix": "раз(а)",
   "duringPauseTaking": "приостановлен приём таблеток",
+  "cannotPauseAlreadyTakenToday": "Если вы уже приняли сегодняшнюю таблетку,\nначать «приостановку» нельзя",
   "pauseTakingStarted": "Началась приостановка приёма таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Изменить дату начала приостановки",

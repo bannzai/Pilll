@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "ଦିନକୁ",
   "pillTakenCountSuffix": "ଥର ବଟିକା ଖାଇବା",
   "duringPauseTaking": "ସେବନ ବିରତି ଚାଲିଛି",
+  "cannotPauseAlreadyTakenToday": "ଆଜିର ବଟିକା ଆଗରୁ ନେଇଥିଲେ,\n«ସେବନ ବିରତି» ଆରମ୍ଭ କରିପାରିବେ ନାହିଁ",
   "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ ହୋଇଛି",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",

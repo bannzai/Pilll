@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "दिनमा",
   "pillTakenCountSuffix": "पटक सेवन गर्ने",
   "duringPauseTaking": "सेवन विराम जारी छ",
+  "cannotPauseAlreadyTakenToday": "आजको चक्की खाइसक्नुभएको छ भने,\n«सेवन विराम» सुरु गर्न मिल्दैन",
   "pauseTakingStarted": "सेवन विराम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "सेवन विराम सुरु हुने मिति सम्पादन गर्नुहोस्",

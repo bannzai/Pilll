@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "ਦਿਨ ਵਿੱਚ",
   "pillTakenCountSuffix": "ਵਾਰ ਗੋਲੀ ਲੈਣੀ",
   "duringPauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਚੱਲ ਰਹੀ ਹੈ",
+  "cannotPauseAlreadyTakenToday": "ਜੇ ਅੱਜ ਦੀ ਗੋਲੀ ਪਹਿਲਾਂ ਹੀ ਲੈ ਲਈ ਹੈ,\nਤਾਂ «ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ» ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ",
   "pauseTakingStarted": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ਼ ਬਦਲੋ",

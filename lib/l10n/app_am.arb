@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "በቀን",
   "pillTakenCountSuffix": "ጊዜ መውሰድ",
   "duringPauseTaking": "ለጊዜው ማቆም ላይ",
+  "cannotPauseAlreadyTakenToday": "የዛሬውን ክኒን ከወሰዱ፣\n«ለጊዜው ማቆም»ን መጀመር አይችሉም",
   "pauseTakingStarted": "ለጊዜው ማቆም ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "የለጊዜው ማቆም መጀመሪያ ቀንን ያርትዑ",

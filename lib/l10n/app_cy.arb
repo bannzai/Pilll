@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Cymryd y bilsen",
   "pillTakenCountSuffix": "gwaith y dydd",
   "duringPauseTaking": "oedi cymryd y bilsen ar hyn o bryd",
+  "cannotPauseAlreadyTakenToday": "Os ydych chi eisoes wedi cymryd y bilsen heddiw,\nni allwch ddechrau'r oedi",
   "pauseTakingStarted": "Mae'r oedi cyn cymryd y bilsen wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau'r oedi",

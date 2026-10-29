@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Dnevno",
   "pillTakenCountSuffix": "puta",
   "duringPauseTaking": "prekid uzimanja pilula je u toku",
+  "cannotPauseAlreadyTakenToday": "Ako ste već uzeli današnju pilulu,\nne možete započeti prekid",
   "pauseTakingStarted": "Započeo je prekid uzimanja pilula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uredite datum početka prekida",

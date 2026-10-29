@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Приймати пігулку",
   "pillTakenCountSuffix": "раз(и) на день",
   "duringPauseTaking": "призупинення прийому пігулок триває",
+  "cannotPauseAlreadyTakenToday": "Якщо ви вже прийняли сьогоднішню пігулку,\nне можна почати «призупинення»",
   "pauseTakingStarted": "Почалося призупинення прийому пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Змінити дату початку призупинення",

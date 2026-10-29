@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Земање",
   "pillTakenCountSuffix": "пати дневно",
   "duringPauseTaking": "Паузирано е земањето апчиња",
+  "cannotPauseAlreadyTakenToday": "Ако веќе сте ја зеле денешната таблета,\nне можете да го прекинете земањето апчиња",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Препорачајте им на пријателите",
   "termsOfService": "Услови за користење",

@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Iei pilula de",
   "pillTakenCountSuffix": "ori pe zi",
   "duringPauseTaking": "întreruperea administrării este în curs",
+  "cannotPauseAlreadyTakenToday": "Dacă ai luat deja pilula de astăzi,\nnu poți începe întreruperea",
   "pauseTakingStarted": "A început întreruperea administrării pilulei",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editează data de început a întreruperii",

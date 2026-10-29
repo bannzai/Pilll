@@ -401,6 +401,7 @@
   "pillTakenCountPrefix": "Am Tag",
   "pillTakenCountSuffix": "Mal iinäh",
   "duringPauseTaking": "Iinahmepause lauft",
+  "cannotPauseAlreadyTakenToday": "Wänn du d Pille für hüt scho gnoh häsch,\nchasch kei Iinahmepause afange",
   "pauseTakingStarted": "D Iinahmepause hät aagfange",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Startdatum vo de Iinahmepause bearbeite",
