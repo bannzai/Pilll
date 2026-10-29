@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Сè уште не е одредено",
   "selectPlannedResumeDate": "Изберете го планираниот датум за повторно земање на таблета",
   "pauseEndDateLimitIsToday": "Датумот на завршување може да биде најдоцна денес",
+  "pauseEndDateLimitBeforeNextPause": "До датум што не се преклопува со следната пауза во земањето таблета (од {date})",
   "pauseStartDateLimit": "Можете да изберете датум на почеток најдоцна до {date}",
   "initialSettingAskYazFlex": "Дали земате Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ако изберете „Да“, ќе се прикажува колку дена поминале од крајот на паузата",
