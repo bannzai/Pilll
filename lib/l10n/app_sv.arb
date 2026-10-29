@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Välj paus i tablettintaget. Om du vill börja din paus en annan dag än i dag kan du följa anvisningarna nedan.",
   "seeHowToUsePauseTakingFeature": "Se hur du använder pausfunktionen",
   "startPauseTakingLabel": "Starta paus i intaget",
+  "pauseTakingChanged": "Pausens längd har ändrats",
   "changePillDays": "Ändra antalet dagar du tar p-piller",
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Börja ta p-piller igen",

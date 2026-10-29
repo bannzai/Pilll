@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Kérjük, válaszd a szüneteltet lehetőséget. Ha nem ma szeretnéd elkezdeni, a szüneteltet beállításához kövesd az alábbi útmutatót.",
   "seeHowToUsePauseTakingFeature": "Nézd meg, hogyan használhatod a szüneteltetés funkciót",
   "startPauseTakingLabel": "A szedés szüneteltetése",
+  "pauseTakingChanged": "A szedés szüneteltetésének időtartama megváltozott",
   "changePillDays": "A tablettaszedési napok számának módosítása",
   "beginToEndNumbers": "{begin}.–{end}.",
   "resumeTaking": "A tabletta szedésének folytatása",

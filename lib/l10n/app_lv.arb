@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Lūdzu, izvēlieties lietošanas pauzi. Ja vēlaties sākt lietošanas pauzi citā dienā, nevis šodien, skatiet tālāk sniegtos norādījumus.",
   "seeHowToUsePauseTakingFeature": "Skatīt, kā izmantot lietošanas pauzes funkciju",
   "startPauseTakingLabel": "Sākt lietošanas pauzi",
+  "pauseTakingChanged": "Lietošanas pauzes ilgums ir mainīts",
   "changePillDays": "Mainīt tablešu lietošanas dienu skaitu",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsākt tablešu lietošanu",

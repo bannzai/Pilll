@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Kies de innamepauze. Wil je de innamepauze op een andere dag dan vandaag laten beginnen? Bekijk dan de stappen hieronder.",
   "seeHowToUsePauseTakingFeature": "Bekijk hoe je de innamepauze gebruikt",
   "startPauseTakingLabel": "Innamepauze starten",
+  "pauseTakingChanged": "De duur van de innamepauze is gewijzigd",
   "changePillDays": "Aantal dagen dat je de pil neemt wijzigen",
   "beginToEndNumbers": "Nr. {begin} t/m {end}",
   "resumeTaking": "Weer beginnen met de pil",

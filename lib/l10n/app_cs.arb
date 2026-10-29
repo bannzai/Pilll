@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Zvolte prosím pozastavení užívání. Pokud chcete pozastavení užívání zahájit jiný den než dnes, podívejte se na postup níže.",
   "seeHowToUsePauseTakingFeature": "Zjistit, jak používat pozastavení užívání",
   "startPauseTakingLabel": "Zahájit pozastavení užívání",
+  "pauseTakingChanged": "Doba pozastavení užívání byla změněna",
   "changePillDays": "Změnit počet dní užívání pilulek",
   "beginToEndNumbers": "č. {begin}–{end}",
   "resumeTaking": "Obnovit užívání pilulek",

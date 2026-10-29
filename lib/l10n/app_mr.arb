@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "कृपया सेवन विराम निवडा. आजऐवजी दुसऱ्या दिवसापासून सेवन विराम सुरू करायचा असल्यास, खालील सूचना पाहा.",
   "seeHowToUsePauseTakingFeature": "सेवन विराम सुविधा कशी वापरायची ते पाहा",
   "startPauseTakingLabel": "सेवन विराम सुरू करा",
+  "pauseTakingChanged": "सेवन विरामाचा कालावधी बदलला आहे",
   "changePillDays": "गोळी घेण्याच्या दिवसांची संख्या बदला",
   "beginToEndNumbers": "क्र. {begin} ~ {end}",
   "resumeTaking": "गोळी पुन्हा घेण्यास सुरुवात करा",

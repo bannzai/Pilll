@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "יש לבחור השהיית נטילה. כדי להתחיל השהיית נטילה ביום שאינו היום, אפשר להיעזר בהנחיות שלמטה.",
   "seeHowToUsePauseTakingFeature": "לצפייה בהסבר על השימוש בהשהיית נטילה",
   "startPauseTakingLabel": "התחלת השהיית נטילה",
+  "pauseTakingChanged": "משך השהיית נטילה עודכן",
   "changePillDays": "שינוי מספר ימי נטילת הגלולה",
   "beginToEndNumbers": "מס׳ {begin} ~ {end}",
   "resumeTaking": "לחזור לנטילת הגלולה",

@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Vælg indtagelsespause. Hvis du vil starte din indtagelsespause på en anden dag end i dag, kan du følge vejledningen nedenfor.",
   "seeHowToUsePauseTakingFeature": "Se, hvordan du bruger indtagelsespause",
   "startPauseTakingLabel": "Start indtagelsespause",
+  "pauseTakingChanged": "Perioden for indtagelsespause er ændret",
   "changePillDays": "Ændr antal dage med p-piller",
   "beginToEndNumbers": "nr. {begin}–{end}",
   "resumeTaking": "Genoptag p-pillerne",

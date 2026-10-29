@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Пожалуйста, выберите приостановку приёма таблеток. Если хотите начать приостановку не сегодня, а в другой день, воспользуйтесь инструкцией ниже.",
   "seeHowToUsePauseTakingFeature": "Посмотрите, как пользоваться функцией приостановки приёма",
   "startPauseTakingLabel": "Начать приостановку приёма",
+  "pauseTakingChanged": "Период приостановки приёма изменён",
   "changePillDays": "Изменить число дней приёма таблеток",
   "beginToEndNumbers": "№ {begin}–{end}",
   "resumeTaking": "Возобновить приём таблеток",

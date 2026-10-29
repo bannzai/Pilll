@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Sila pilih jeda pengambilan pil. Jika anda mahu memulakan jeda pengambilan pil pada hari selain hari ini, rujuk langkah di bawah.",
   "seeHowToUsePauseTakingFeature": "Lihat cara menggunakan ciri jeda pengambilan pil",
   "startPauseTakingLabel": "Mulakan jeda pengambilan pil",
+  "pauseTakingChanged": "Tempoh jeda pengambilan pil telah diubah",
   "changePillDays": "Ubah bilangan hari pengambilan pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Sambung semula pengambilan pil",

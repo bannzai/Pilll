@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Калі ласка, уключыце прыпын прыёму пігулак. Калі хочаце пачаць прыпын у іншы дзень, а не сёння, звярніцеся да інструкцыі ніжэй.",
   "seeHowToUsePauseTakingFeature": "Паглядзіце, як карыстацца функцыяй прыпыну прыёму",
   "startPauseTakingLabel": "Пачаць прыпын прыёму пігулкі",
+  "pauseTakingChanged": "Перыяд прыпыну зменены",
   "changePillDays": "Змяніць колькасць дзён прыёму пігулак",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Аднавіць прыём пігулак",

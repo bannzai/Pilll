@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Tafadhali chagua kusitisha kumeza vidonge. Ikiwa ungependa kuanza kusitisha siku nyingine badala ya leo, angalia maelekezo hapa chini.",
   "seeHowToUsePauseTakingFeature": "Angalia jinsi ya kutumia kipengele cha kusitisha kumeza vidonge",
   "startPauseTakingLabel": "Anza kusitisha kumeza vidonge",
+  "pauseTakingChanged": "Muda wa kusitisha kumeza vidonge umebadilishwa",
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
   "beginToEndNumbers": "Nambari {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza vidonge",

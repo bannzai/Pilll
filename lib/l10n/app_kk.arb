@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Қабылдауды уақытша тоқтату үшін кідіріс таңдаңыз. Кідіріс бүгіннен басқа күні басталсын десеңіз, төмендегі нұсқаулықты қараңыз.",
   "seeHowToUsePauseTakingFeature": "Қабылдаудағы кідіріс функциясын қалай пайдалану керегін қараңыз",
   "startPauseTakingLabel": "Қабылдауды кідіріс жасау",
+  "pauseTakingChanged": "Кідіріс мерзімі өзгертілді",
   "changePillDays": "Таблетка қабылдайтын күндер санын өзгерту",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Таблетка қабылдауды қайта бастау",

@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Dewiswch oedi, os gwelwch yn dda. Os hoffech ddechrau'r oedi ar ddiwrnod heblaw heddiw, gweler y camau isod.",
   "seeHowToUsePauseTakingFeature": "Gweld sut i ddefnyddio'r nodwedd oedi",
   "startPauseTakingLabel": "Dechrau oedi cymryd y bilsen",
+  "pauseTakingChanged": "Mae cyfnod yr oedi wedi'i newid",
   "changePillDays": "Newid nifer y diwrnodau cymryd y bilsen",
   "beginToEndNumbers": "rhif {begin} ~ {end}",
   "resumeTaking": "Ailddechrau cymryd y bilsen",

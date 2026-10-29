@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Onderbreek asseblief jou inname. As jy die innameonderbreking op ’n ander dag as vandag wil begin, kan jy die stappe hieronder volg.",
   "seeHowToUsePauseTakingFeature": "Kyk hoe om innameonderbreking te gebruik",
   "startPauseTakingLabel": "Begin innameonderbreking",
+  "pauseTakingChanged": "Die innameonderbreking is verander",
   "changePillDays": "Verander die aantal dae wat jy jou pil neem",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Hervat pilgebruik",

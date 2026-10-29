@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Pasirinkite pristabdyti vartojimą. Jei norite pradėti pristabdymą ne šiandien, o kitą dieną, žr. toliau pateiktus nurodymus.",
   "seeHowToUsePauseTakingFeature": "Sužinoti, kaip naudoti vartojimo pristabdymo funkciją",
   "startPauseTakingLabel": "Pradėti vartojimo pristabdymą",
+  "pauseTakingChanged": "Pristabdymo laikotarpis pakeistas",
   "changePillDays": "Pakeiskite tablečių vartojimo dienų skaičių",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Vėl pradėkite vartoti tabletes",

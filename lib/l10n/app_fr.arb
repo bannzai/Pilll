@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Veuillez activer la pause de prise. Si vous souhaitez commencer la pause de prise un autre jour qu’aujourd’hui, consultez les étapes ci-dessous.",
   "seeHowToUsePauseTakingFeature": "Voir comment utiliser la pause de prise",
   "startPauseTakingLabel": "Commencer la pause de prise",
+  "pauseTakingChanged": "La durée de la pause de prise a été modifiée",
   "changePillDays": "Modifier le nombre de jours de prise de la pilule",
   "beginToEndNumbers": "n° {begin} à {end}",
   "resumeTaking": "Reprendre la pilule",
