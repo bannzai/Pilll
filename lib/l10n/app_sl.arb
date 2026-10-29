@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Oglejte si, kako prekličete jemanje",
   "midnightTakenWarningDialogNeverShowAgain": "Ne prikazuj več",
   "pauseStartDateMustBeOnOrBefore": "Za začetek prekina jemanja tablet izberite datum {date} ali zgodnejši",
+  "addPausePeriod": "Dodajte obdobje prekina jemanja",
   "plannedResumeDateOptional": "Načrtovani datum ponovnega jemanja tablet (neobvezno)",
   "plannedResumeDateNotSet": "Še ni določeno",
   "selectPlannedResumeDate": "Izberite načrtovani datum ponovnega jemanja tablet",

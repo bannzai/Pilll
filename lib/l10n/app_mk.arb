@@ -558,6 +558,7 @@
   "midnightTakenWarningDialogSeeHowToRevert": "Погледнете како да го откажете земањето",
   "midnightTakenWarningDialogNeverShowAgain": "Не прикажувај повторно",
   "pauseStartDateMustBeOnOrBefore": "За почеток на прекин на земањето таблети, ве молиме изберете датум {date} или порано",
+  "addPausePeriod": "Можете да додадете период на прекин на земање",
   "plannedResumeDateOptional": "Планиран датум за повторно земање таблета (незадолжително)",
   "plannedResumeDateNotSet": "Сè уште не е одредено",
   "selectPlannedResumeDate": "Изберете го планираниот датум за повторно земање на таблета",
