@@ -1209,7 +1209,7 @@
   },
   "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
-    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。\n[翻訳の決定 ko] 「약을 제때 복용했을 때의 알림 문구를 변경할 수 있어요」ではなく「복용을 잊지 않았을 때의 알림 문구를 변경할 수 있어요」: 原文は「飲み忘れていない場合」で、changeMissedNotificationMessage の「복용을 잊었을 때」と対になる形にする (https://github.com/bannzai/Pilll/issues/1998)"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {

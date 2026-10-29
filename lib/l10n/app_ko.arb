@@ -244,7 +244,7 @@
   "changeNotificationHeader": "알림의 첫 문구를 바꿀 수 있어요",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "enterAtLeastOneCharacter": "최소 1글자를 입력해 주세요",
-  "changeDailyNotificationMessage": "약을 제때 복용했을 때의 알림 문구를 변경할 수 있어요",
+  "changeDailyNotificationMessage": "복용을 잊지 않았을 때의 알림 문구를 변경할 수 있어요",
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "receiveDailyNotificationAt9AM": "당일 오전 9:00에 알림 받기",
   "save": "저장",
