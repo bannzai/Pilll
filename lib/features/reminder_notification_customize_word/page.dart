@@ -321,9 +321,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                     isInVisibleDescription: !value,
                                     setting: setting,
                                     setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
                                   );
+                                  // 保存が済んだらスイッチの表示を先に切り替える。通知の再登録を待ってから切り替えると、
+                                  // 登録が返らない環境 (CI の Simulator) で表示が変わらない (PR #1955 の QA で確認)。
+                                  // 再登録の失敗は従来どおり下の catch でエラーを表示する
                                   isInVisibleDescription.value = !value;
+                                  await registerReminderLocalNotification();
                                 } catch (error) {
                                   if (context.mounted) showErrorAlert(context, error);
                                 }
@@ -439,11 +442,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     registerReminderLocalNotification();
   }
 
+  /// 「説明文を表示」の設定を保存する。通知の再登録は呼び出し元がスイッチの表示を切り替えた後に行う
   Future<void> _setIsInVisibleDescription({
     required bool isInVisibleDescription,
     required Setting setting,
     required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
     reminderNotificationCustomization = reminderNotificationCustomization.copyWith(isInVisibleDescription: isInVisibleDescription);
@@ -453,9 +456,6 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         reminderNotificationCustomization: reminderNotificationCustomization,
       ),
     );
-    // 通知の再登録は待たない (日付・番号のスイッチと同じ)。待つと、通知の登録が返らない環境 (CI の Simulator) で
-    // スイッチの表示が保存後も切り替わらない (PR #1955 の QA で確認。保存自体は済んでいて開き直すと反映されていた)
-    registerReminderLocalNotification();
   }
 }
 
