@@ -38,7 +38,10 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
 /// 語の境界で折り返し、幅より長い語がある言語 (de「Pille eingenommen」の「eingenommen」等) では、その語が収まるまで全体を縮小する。
 /// Text をそのまま置くと、幅より長い語が語の途中で折り返される
 class PillSheetModifiedHistoryListHeaderWrappedLabel extends StatelessWidget {
+  /// 列見出しの訳語
   final String text;
+
+  /// 縮小する前の文字のスタイル
   final TextStyle style;
 
   const PillSheetModifiedHistoryListHeaderWrappedLabel({

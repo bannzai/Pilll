@@ -307,6 +307,7 @@ class HomePageBody extends HookConsumerWidget {
 /// ホーム画面のタブバーのラベル。
 /// 訳の長さは 78 言語でばらつき、タブの幅に収まらない言語では語の途中で切れるため、1 行のまま幅に収まるまで縮小する
 class HomePageTabLabel extends StatelessWidget {
+  /// タブに表示する訳語
   final String text;
 
   const HomePageTabLabel({super.key, required this.text});
