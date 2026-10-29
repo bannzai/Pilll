@@ -23,8 +23,9 @@ appId: com.mizuki.Ohashi.Pilll.dev
     clearKeychain: false
 - waitForAnimationToEnd
 # 再起動後も Bar が表示される (初期設定済み + トライアル中 + 未表示の FeatureAppeal がある = FeatureAppeal)
-# Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
+# Bar はユーザー情報の読み込み後に出る。再起動後の表示は CI の Simulator で 14〜27 秒かかり、30 秒を超えて読み込み中のまま
+# 失敗したことがある (maestro-e2e run 40751368564 の 2 回目) ため、クリーンインストール直後の起動の待ちと同じ 60 秒まで待つ
 - extendedWaitUntil:
     visible:
       id: "feature_appeal_bar"
-    timeout: 30000
+    timeout: 60000
