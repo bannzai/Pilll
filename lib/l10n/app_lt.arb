@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Nr. {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Pasirinkite datą, nuo kurios norite pristabdyti vartojimą",
   "endPillSheet": "Tablečių plokštelė baigta",
   "discardPillSheet": "Išmesta tablečių plokštelė",
   "takingTime": "Tabletės vartojimo laikas",

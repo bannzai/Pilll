@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Nro {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nro 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nro {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Valitse taukotilan aloituspäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",
   "discardPillSheet": "Pilleriliuska poistettu",
   "takingTime": "Pillerin ottoaika",

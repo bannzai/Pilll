@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} numara",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} numara",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} numara",
+  "selectPauseStartDate": "Ara vermeye başlayacağınız tarihi seçin",
   "endPillSheet": "Blister tamamlandı",
   "discardPillSheet": "Blister silindi",
   "takingTime": "Hap alma saati",

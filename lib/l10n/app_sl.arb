@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Št. {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Št. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Št. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Izberite datum začetka premora pri jemanju tablet",
   "endPillSheet": "Ploščica je porabljena",
   "discardPillSheet": "Ploščica zavržena",
   "takingTime": "Čas za jemanje tablete",

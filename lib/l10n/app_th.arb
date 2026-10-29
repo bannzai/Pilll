@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "หมายเลข {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "หมายเลข 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "หมายเลข {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "เลือกวันที่เริ่มหยุดกินยาชั่วคราว",
   "endPillSheet": "แผงยาหมดแล้ว",
   "discardPillSheet": "ทิ้งแผงยา",
   "takingTime": "เวลาทานยา",

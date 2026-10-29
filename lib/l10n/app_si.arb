@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "අංක {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "අංක 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "අංක {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය තෝරන්න",
   "endPillSheet": "පෙති කාඩ්පත අවසන් වීම",
   "discardPillSheet": "පෙති කාඩ්පත ඉවත දැමීම",
   "takingTime": "පෙත්ත ගන්නා වේලාව",

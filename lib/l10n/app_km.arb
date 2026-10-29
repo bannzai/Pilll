@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "លេខ {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "លេខ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "លេខ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "សូមជ្រើសរើសថ្ងៃចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
   "endPillSheet": "បញ្ចប់បន្ទះថ្នាំគ្រាប់",
   "discardPillSheet": "បោះចោលបន្ទះថ្នាំគ្រាប់",
   "takingTime": "ម៉ោងលេបថ្នាំគ្រាប់",

@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→núm. {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→núm. {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→núm. {afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Tria la data d'inici de la pausa",
   "endPillSheet": "Blíster acabat",
   "discardPillSheet": "Blíster descartat",
   "takingTime": "Hora de prendre la píndola",

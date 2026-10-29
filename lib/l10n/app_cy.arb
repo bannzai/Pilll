@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "rhif {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "rhif 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "rhif {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r oedi",
   "endPillSheet": "Stribed pils wedi gorffen",
   "discardPillSheet": "Gwaredu stribed pils",
   "takingTime": "Amser cymryd y bilsen",

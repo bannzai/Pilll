@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} नम्बर",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नम्बर",
   "beforeEndToAfterDisplayNumberEndPillNumber": "नम्बर {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "सेवन विराम सुरु हुने मिति छान्नुहोस्",
   "endPillSheet": "चक्की पत्ता सकियो",
   "discardPillSheet": "चक्की पत्ता हटाइयो",
   "takingTime": "चक्की खाने समय",

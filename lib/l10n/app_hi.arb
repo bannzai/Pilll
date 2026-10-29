@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "गोली नंबर {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "गोली नंबर 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "गोली नंबर {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "गोली लेने में विराम शुरू होने की तारीख चुनें",
   "endPillSheet": "पिल स्ट्रिप खत्म हो गई",
   "discardPillSheet": "पिल स्ट्रिप हटाई गई",
   "takingTime": "गोली लेने का समय",

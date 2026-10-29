@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "ਗੋਲੀ ਨੰਬਰ {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ਗੋਲੀ ਨੰਬਰ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ਗੋਲੀ ਨੰਬਰ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
   "endPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਖ਼ਤਮ ਹੋ ਗਈ",
   "discardPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਰੱਦ ਕੀਤੀ ਗਈ",
   "takingTime": "ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ",

@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Nambari {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Nambari 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nambari {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza kusitisha kumeza vidonge",
   "endPillSheet": "Pakiti ya vidonge imeisha",
   "discardPillSheet": "Pakiti ya vidonge imetupwa",
   "takingTime": "Wakati wa kumeza kidonge",

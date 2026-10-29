@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "ಸಂ. {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "ಸಂ. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ಸಂ. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭಿಸುವ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "endPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಮುಗಿದಿದೆ",
   "discardPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ತೆಗೆದುಹಾಕಲಾಗಿದೆ",
   "takingTime": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯ",

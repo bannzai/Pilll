@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "Blg. {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "Blg. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Blg. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Piliin ninyo ang petsa ng simula ng paghinto sa pag-inom",
   "endPillSheet": "Naubos na ang pakete ng pildoras",
   "discardPillSheet": "itapon ang pakete ng pildoras",
   "takingTime": "Oras ng pag-inom ng pildoras",

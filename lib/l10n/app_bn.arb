@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} নম্বর",
   "oneToAfterDisplayNumberEndPillNumber": "১→{afterDisplayNumberSettingEndPillNumber} নম্বর",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বর",
+  "selectPauseStartDate": "সেবন স্থগিত শুরুর তারিখ বেছে নিন",
   "endPillSheet": "পিল শিট শেষ হয়েছে",
   "discardPillSheet": "পিল শিট বাতিল করা হয়েছে",
   "takingTime": "পিল খাওয়ার সময়",

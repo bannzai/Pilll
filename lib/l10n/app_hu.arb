@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}. szám",
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}. szám",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}. szám",
+  "selectPauseStartDate": "Válaszd ki, mikortól szeretnéd szüneteltetni a szedést",
   "endPillSheet": "Tablettacsomag befejezve",
   "discardPillSheet": "Tablettacsomag törlése",
   "takingTime": "A tabletta szedésének ideje",

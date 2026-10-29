@@ -105,6 +105,7 @@
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→č. {afterDisplayNumberSettingBeginPillNumber}",
   "oneToAfterDisplayNumberEndPillNumber": "1→č. {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→č. {afterDisplayNumberSettingEndPillNumber}",
+  "selectPauseStartDate": "Vybrat datum začátku pozastavení užívání",
   "endPillSheet": "Blistr dokončen",
   "discardPillSheet": "Blistr odstraněn",
   "takingTime": "Čas užití pilulky",
