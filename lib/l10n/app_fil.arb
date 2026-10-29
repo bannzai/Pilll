@@ -123,6 +123,7 @@
   "notTaken": "Hindi pa nainom ang pildoras",
   "pillSheetSettings": "Mga setting ng pakete ng pildoras",
   "unmarkTodayPillAsTakenToPause": "Pagkatapos markahan ang pildoras para ngayong araw bilang hindi pa nainom",
+  "pauseTaking": "pause",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Baguhin ang bilang ng araw ng pag-inom ng pildoras sa bawat pakete",
   "changedStartAndEndNumbers": "Nabago na ang panimula at panghuling numero",

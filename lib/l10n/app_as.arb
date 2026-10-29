@@ -123,6 +123,7 @@
   "notTaken": "এতিয়াও খোৱা নাই",
   "pillSheetSettings": "পিলৰ ষ্ট্ৰিপৰ ছেটিংছ",
   "unmarkTodayPillAsTakenToPause": "আজিৰ খাবলগীয়া পিলটো নোখোৱা বুলি চিহ্নিত কৰাৰ পিছত",
+  "pauseTaking": "বড়ি খোৱা সাময়িকভাৱে বন্ধ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "প্ৰতি ষ্ট্ৰিপত পিল খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
   "changedStartAndEndNumbers": "আৰম্ভণি আৰু শেষৰ নম্বৰ সলনি কৰা হৈছে",

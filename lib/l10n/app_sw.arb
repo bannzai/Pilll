@@ -123,6 +123,7 @@
   "notTaken": "Kidonge bado hakijamezwa",
   "pillSheetSettings": "Mipangilio ya pakiti ya vidonge",
   "unmarkTodayPillAsTakenToPause": "Baada ya kuweka alama kuwa kidonge cha leo hakijamezwa",
+  "pauseTaking": "kusitisha kumeza vidonge kwa muda",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Badilisha idadi ya siku za kumeza vidonge kwa kila pakiti",
   "changedStartAndEndNumbers": "Nambari za mwanzo na mwisho zimebadilishwa",

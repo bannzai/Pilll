@@ -123,6 +123,7 @@
   "notTaken": "පෙත්ත තවම ගෙන නැත",
   "pillSheetSettings": "පෙති කාඩ්පතේ සැකසුම්",
   "unmarkTodayPillAsTakenToPause": "අදට නියමිත පෙත්ත නොගත් බව සලකුණු කළ පසු",
+  "pauseTaking": "පෙති ගැනීමේ විරාමය",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "එක් පෙති කාඩ්පතකින් පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "changedStartAndEndNumbers": "ආරම්භක සහ අවසාන අංක වෙනස් කර ඇත",

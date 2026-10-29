@@ -123,6 +123,7 @@
   "notTaken": "ഗുളിക കഴിച്ചിട്ടില്ല",
   "pillSheetSettings": "ഗുളിക സ്ട്രിപ്പ് ക്രമീകരണങ്ങൾ",
   "unmarkTodayPillAsTakenToPause": "ഇന്നത്തെ ഗുളിക കഴിച്ചിട്ടില്ലെന്ന് അടയാളപ്പെടുത്തിയ ശേഷം",
+  "pauseTaking": "താൽക്കാലികമായി നിർത്തൽ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ഓരോ സ്ട്രിപ്പിലെയും ഗുളിക കഴിക്കുന്ന ദിവസങ്ങളുടെ എണ്ണം മാറ്റൂ",
   "changedStartAndEndNumbers": "തുടക്കത്തിലെയും അവസാനത്തിലെയും നമ്പറുകൾ മാറ്റി",

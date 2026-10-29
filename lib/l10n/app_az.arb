@@ -123,6 +123,7 @@
   "notTaken": "Həb qəbul edilməyib",
   "pillSheetSettings": "Həb blisteri ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü həbi qəbul edilməmiş kimi qeyd etdikdən sonra",
+  "pauseTaking": "Həb qəbuluna fasilə",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Hər blister üçün həb qəbul edilən günlərin sayını dəyişin",
   "changedStartAndEndNumbers": "Başlanğıc və son nömrələr dəyişdirildi",

@@ -123,6 +123,7 @@
   "notTaken": "尚未服药",
   "pillSheetSettings": "药板设置",
   "unmarkTodayPillAsTakenToPause": "将今天的药片标记为未服用后",
+  "pauseTaking": "暂停服药",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "更改每板药的服用天数",
   "changedStartAndEndNumbers": "已更改起始和结束编号",

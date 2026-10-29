@@ -123,6 +123,7 @@
   "notTaken": "Pilule non prise",
   "pillSheetSettings": "Paramètres de la plaquette",
   "unmarkTodayPillAsTakenToPause": "Après avoir indiqué que la pilule d’aujourd’hui n’a pas été prise",
+  "pauseTaking": "pause de prise",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Modifier le nombre de jours de prise par plaquette",
   "changedStartAndEndNumbers": "Les numéros de début et de fin ont été modifiés",

@@ -123,6 +123,7 @@
   "notTaken": "Pille noch nicht eingenommen",
   "pillSheetSettings": "Einstellungen für den Pillenblister",
   "unmarkTodayPillAsTakenToPause": "Nachdem du die Pille für heute als nicht eingenommen markiert hast",
+  "pauseTaking": "Einnahmeunterbrechung",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Anzahl der Einnahmetage pro Pillenblister ändern",
   "changedStartAndEndNumbers": "Start- und Endnummer wurden geändert",

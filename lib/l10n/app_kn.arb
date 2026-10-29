@@ -123,6 +123,7 @@
   "notTaken": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
   "pillSheetSettings": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
   "unmarkTodayPillAsTakenToPause": "ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿದ ನಂತರ",
+  "pauseTaking": "ಮಾತ್ರೆ ವಿರಾಮ",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "ಪ್ರತಿ ಸ್ಟ್ರಿಪ್‌ನಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಿ",
   "changedStartAndEndNumbers": "ಆರಂಭ ಮತ್ತು ಕೊನೆಯ ಸಂಖ್ಯೆಗಳು ಬದಲಾಗಿವೆ",

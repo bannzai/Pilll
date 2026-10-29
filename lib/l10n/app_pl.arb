@@ -123,6 +123,7 @@
   "notTaken": "Tabletka nieprzyjęta",
   "pillSheetSettings": "Ustawienia blistra",
   "unmarkTodayPillAsTakenToPause": "Po oznaczeniu dzisiejszej tabletki jako nieprzyjętej",
+  "pauseTaking": "wstrzymanie przyjmowania",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Zmień liczbę dni przyjmowania tabletek z blistra",
   "changedStartAndEndNumbers": "Zmieniono numer początkowy i końcowy",

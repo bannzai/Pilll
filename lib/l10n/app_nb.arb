@@ -123,6 +123,7 @@
   "notTaken": "P-pille ikke tatt",
   "pillSheetSettings": "Innstillinger for pillebrett",
   "unmarkTodayPillAsTakenToPause": "Når du har merket dagens p-pille som ikke tatt",
+  "pauseTaking": "inntakspause",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Endre antall dager med p-piller per brett",
   "changedStartAndEndNumbers": "Start- og sluttnummeret er endret",

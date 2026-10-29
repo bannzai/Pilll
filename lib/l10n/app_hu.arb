@@ -123,6 +123,7 @@
   "notTaken": "Tabletta nincs beszedve",
   "pillSheetSettings": "A tablettacsomag beállításai",
   "unmarkTodayPillAsTakenToPause": "Miután a mai tablettát be nem szedettként jelölted meg",
+  "pauseTaking": "szüneteltet",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "A tablettaszedés napjainak módosítása tablettacsomagonként",
   "changedStartAndEndNumbers": "A kezdő és a záró szám megváltozott",

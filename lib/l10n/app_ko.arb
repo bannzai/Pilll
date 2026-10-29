@@ -123,6 +123,7 @@
   "notTaken": "아직 복용하지 않았어요",
   "pillSheetSettings": "알약 시트 설정",
   "unmarkTodayPillAsTakenToPause": "오늘 먹을 알약을 미복용으로 표시한 후",
+  "pauseTaking": "일시 중지",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "시트별 복용 일수 변경",
   "changedStartAndEndNumbers": "시작 번호와 끝 번호를 변경했어요",

@@ -123,6 +123,7 @@
   "notTaken": "ክኒን አልተወሰደም",
   "pillSheetSettings": "የክኒን ሉህ ቅንብሮች",
   "unmarkTodayPillAsTakenToPause": "የዛሬውን ክኒን እንዳልተወሰደ ምልክት ካደረጉ በኋላ",
+  "pauseTaking": "ለጊዜው ማቆም",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "በአንድ ክኒን ሉህ ክኒን የሚወስዱባቸውን ቀናት ይቀይሩ",
   "changedStartAndEndNumbers": "የመጀመሪያና የመጨረሻ ቁጥሮች ተቀይረዋል",

@@ -123,6 +123,7 @@
   "notTaken": "Chưa uống thuốc",
   "pillSheetSettings": "Cài đặt vỉ thuốc",
   "unmarkTodayPillAsTakenToPause": "Sau khi đánh dấu viên thuốc hôm nay là chưa uống",
+  "pauseTaking": "tạm ngừng uống thuốc",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Thay đổi số ngày uống thuốc cho mỗi vỉ",
   "changedStartAndEndNumbers": "Đã thay đổi số bắt đầu và số kết thúc",

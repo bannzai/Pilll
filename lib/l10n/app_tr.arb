@@ -123,6 +123,7 @@
   "notTaken": "Hap henüz alınmadı",
   "pillSheetSettings": "Blister ayarları",
   "unmarkTodayPillAsTakenToPause": "Bugünkü hapı alınmadı olarak işaretledikten sonra",
+  "pauseTaking": "ara verme",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Blister başına hap alınan gün sayısını değiştirin",
   "changedStartAndEndNumbers": "Başlangıç ve bitiş numaraları değiştirildi",

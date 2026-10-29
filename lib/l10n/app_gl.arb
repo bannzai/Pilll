@@ -123,6 +123,7 @@
   "notTaken": "Pílula sen tomar",
   "pillSheetSettings": "Configuración do blíster",
   "unmarkTodayPillAsTakenToPause": "Despois de marcar a pílula de hoxe como non tomada",
+  "pauseTaking": "pausa na toma",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Cambia os días de toma por blíster",
   "changedStartAndEndNumbers": "Cambiáronse os números de inicio e fin",

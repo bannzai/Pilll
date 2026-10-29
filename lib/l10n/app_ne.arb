@@ -123,6 +123,7 @@
   "notTaken": "चक्की खाएको छैन",
   "pillSheetSettings": "चक्की पत्ता सेटिङ",
   "unmarkTodayPillAsTakenToPause": "आजको चक्की नलिएको भनेर चिन्ह लगाइसकेपछि",
+  "pauseTaking": "सेवन विराम",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "प्रत्येक पत्तामा चक्की खाने दिनको सङ्ख्या परिवर्तन गर्नुहोस्",
   "changedStartAndEndNumbers": "सुरु र अन्त्यका नम्बर परिवर्तन गरिएका छन्",

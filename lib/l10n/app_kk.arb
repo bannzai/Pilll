@@ -123,6 +123,7 @@
   "notTaken": "Таблетка қабылданбаған",
   "pillSheetSettings": "Таблетка блистерінің баптаулары",
   "unmarkTodayPillAsTakenToPause": "Бүгінгі таблетканы қабылданбаған деп белгілегеннен кейін",
+  "pauseTaking": "кідіріс",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Бір блистердегі таблетканы қабылдау күндерінің санын өзгертіңіз",
   "changedStartAndEndNumbers": "Бастапқы және соңғы нөмірлер өзгертілді",

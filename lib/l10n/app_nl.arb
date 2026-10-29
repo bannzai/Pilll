@@ -123,6 +123,7 @@
   "notTaken": "Pil nog niet ingenomen",
   "pillSheetSettings": "Instellingen voor de pillenstrip",
   "unmarkTodayPillAsTakenToPause": "Nadat je de pil van vandaag als niet ingenomen hebt gemarkeerd",
+  "pauseTaking": "innamepauze",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Aantal innamedagen per pillenstrip wijzigen",
   "changedStartAndEndNumbers": "Het begin- en eindnummer zijn gewijzigd",

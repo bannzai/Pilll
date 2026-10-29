@@ -123,6 +123,7 @@
   "notTaken": "ยังไม่ได้ทานยา",
   "pillSheetSettings": "การตั้งค่าแผงยา",
   "unmarkTodayPillAsTakenToPause": "หลังจากทำเครื่องหมายว่ายาเม็ดของวันนี้ยังไม่ได้ทาน",
+  "pauseTaking": "หยุดกินยาชั่วคราว",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "เปลี่ยนจำนวนวันที่ทานยาในแต่ละแผงยา",
   "changedStartAndEndNumbers": "เปลี่ยนหมายเลขเริ่มต้นและหมายเลขสิ้นสุดแล้วค่ะ",

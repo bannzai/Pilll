@@ -123,6 +123,7 @@
   "notTaken": "Пігулка не прынята",
   "pillSheetSettings": "Налады блістара",
   "unmarkTodayPillAsTakenToPause": "Пасля таго як пазначыце сённяшнюю пігулку як непрынятую",
+  "pauseTaking": "прыпын",
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "changePillDaysForSheet": "Змяніць колькасць дзён прыёму пігулак з блістара",
   "changedStartAndEndNumbers": "Пачатковы і канчатковы нумары зменены",
