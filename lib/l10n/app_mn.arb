@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "selectPauseStartDate": "Эм уух түр завсарлаг эхлэх өдрийг сонгох",
   "selectPausePeriod": "Түр завсарлагын хугацааг сонгоно уу",
+  "pauseStartDate": "түр завсарлаг эхлэх өдөр",
   "endPillSheet": "Эмийн блистер дууссан",
   "discardPillSheet": "Эмийн блистерийг хаях",
   "takingTime": "Эм уух цаг",
