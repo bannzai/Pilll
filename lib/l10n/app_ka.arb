@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "შეგიძლიათ შეცვალოთ დღევანდელი აბის ნომერი",
   "todayPillNumberFeatureAppealBody": "თუ აბის მიღება გამოგრჩათ ან აბები აგერიათ და აბების ბლისტერზე მითითებული ნომერი მიღებულ აბს აღარ ემთხვევა, შეგიძლიათ დღევანდელი აბის ნომერი ხელით შეასწოროთ. იმავე ეკრანის გახსნა მთავარ ეკრანზე ნაჩვენებ აბის ნომერზე შეხებითაც შეგიძლიათ.",
   "restDurationFeatureAppealTitle": "მიღების პაუზის პერიოდის ჩაწერა",
+  "restDurationFeatureAppealShortDescription": "ზუსტად აღრიცხეთ აბების მიღების დროებითი შეწყვეტა",
   "featureAppealLocationLabel": "სად იპოვით აპში",
   "criticalAlertFeatureAppealPoint1": "შეტყობინებებს ფოკუსირების რეჟიმშიც მიიღებთ",
   "criticalAlertFeatureAppealPoint2": "საიმედო შეხსენება თქვენ მიერ მითითებულ დროს",

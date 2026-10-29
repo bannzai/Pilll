@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Unaweza kubadilisha nambari ya kidonge cha leo",
   "todayPillNumberFeatureAppealBody": "Ikiwa umesahau kumeza kidonge au umechanganya vidonge, na nambari kwenye pakiti ya vidonge hailingani na vidonge ulivyomeza, unaweza kurekebisha mwenyewe nambari ya kidonge cha leo. Unaweza pia kufungua ukurasa huo kwa kugusa nambari ya kidonge kwenye skrini ya mwanzo.",
   "restDurationFeatureAppealTitle": "Tafadhali rekodi kipindi cha kusitisha kumeza vidonge",
+  "restDurationFeatureAppealShortDescription": "Tafadhali fuatilia kwa usahihi vipindi vya kusitisha kumeza vidonge kwa muda",
   "featureAppealLocationLabel": "Mahali kwenye programu",
   "criticalAlertFeatureAppealPoint1": "Utapokea arifa hata ukiwa katika hali ya Kuzingatia",
   "criticalAlertFeatureAppealPoint2": "Kikumbusho cha kuaminika kwa wakati ulioweka",

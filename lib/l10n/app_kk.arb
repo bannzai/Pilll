@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Бүгінгі таблетка нөмірін өзгерте аласыз",
   "todayPillNumberFeatureAppealBody": "Егер таблетканы қабылдау ұмыт қалса немесе таблеткалар шатасып, таблетка блистеріндегі нөмір қабылданған таблеткаға сәйкес келмесе, бүгінгі таблетка нөмірін қолмен түзете аласыз. Сол бетті басты экранда көрсетілген таблетка нөмірі арқылы да аша аласыз.",
   "restDurationFeatureAppealTitle": "Қабылдаудағы кідіріс кезеңін белгілеңіз",
+  "restDurationFeatureAppealShortDescription": "Таблетка қабылдауды уақытша тоқтатуды дәл қадағалаңыз",
   "featureAppealLocationLabel": "Қолданбадағы орны",
   "criticalAlertFeatureAppealPoint1": "Зейін қою режимінде де хабарландырулар аласыз",
   "criticalAlertFeatureAppealPoint2": "Сіз белгілеген уақытта сенімді еске салу",

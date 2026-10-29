@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "오늘 복용할 알약 번호를 변경할 수 있어요",
   "todayPillNumberFeatureAppealBody": "알약을 먹는 것을 잊었거나 헷갈려서 알약 시트의 번호와 실제로 먹은 알약이 다르다면, 오늘 먹을 알약 번호를 직접 맞출 수 있어요. 홈 화면에 표시된 알약 번호를 눌러도 같은 화면을 열 수 있어요.",
   "restDurationFeatureAppealTitle": "일시 중지 기간을 기록해요",
+  "restDurationFeatureAppealShortDescription": "복용을 잠시 멈춘 기간을 정확하게 기록해요",
   "featureAppealLocationLabel": "앱 내 위치",
   "criticalAlertFeatureAppealPoint1": "집중 모드 중에도 알림을 받을 수 있어요",
   "criticalAlertFeatureAppealPoint2": "설정한 시간에 놓치지 않고 알려드려요",

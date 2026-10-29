@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Je kunt het pilnummer van vandaag wijzigen",
   "todayPillNumberFeatureAppealBody": "Als je een pil niet hebt ingenomen of pillen hebt verwisseld en het nummer op de pillenstrip niet meer klopt met de pil die je hebt ingenomen, kun je het pilnummer voor vandaag zelf aanpassen. Je kunt hetzelfde scherm ook openen via het pilnummer op het startscherm.",
   "restDurationFeatureAppealTitle": "Periode van de innamepauze vastleggen",
+  "restDurationFeatureAppealShortDescription": "Houd onderbrekingen in het slikken van de pil nauwkeurig bij",
   "featureAppealLocationLabel": "Waar je het in de app vindt",
   "criticalAlertFeatureAppealPoint1": "Je ontvangt meldingen, ook als de focusmodus aanstaat",
   "criticalAlertFeatureAppealPoint2": "Een betrouwbare herinnering op het door jou ingestelde tijdstip",

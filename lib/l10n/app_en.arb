@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "You can change today's pill number",
   "todayPillNumberFeatureAppealBody": "If a pill was skipped or mixed up and the number on your pill pack no longer matches the pill you took, you can adjust today’s pill number manually. You can also open the same screen from the pill number on the home screen.",
   "restDurationFeatureAppealTitle": "Record the pause period",
+  "restDurationFeatureAppealShortDescription": "Track pauses in taking your pill accurately",
   "featureAppealLocationLabel": "Where to find it in the app",
   "criticalAlertFeatureAppealPoint1": "Get notifications even in Focus mode",
   "criticalAlertFeatureAppealPoint2": "A reliable reminder at your chosen time",

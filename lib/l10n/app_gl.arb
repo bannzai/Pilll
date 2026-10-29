@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Podes cambiar o número de pílula de hoxe",
   "todayPillNumberFeatureAppealBody": "Se esqueciches tomar unha pílula ou confundiches as pílulas e o número do blíster xa non coincide coa pílula que tomaches, podes axustar manualmente o número de pílula de hoxe. Tamén podes abrir a mesma pantalla desde o número de pílula que aparece na pantalla de inicio.",
   "restDurationFeatureAppealTitle": "Rexistra o período de pausa na toma",
+  "restDurationFeatureAppealShortDescription": "Leva un rexistro preciso das interrupcións na toma da pílula",
   "featureAppealLocationLabel": "Onde atopalo na aplicación",
   "criticalAlertFeatureAppealPoint1": "Recibes notificacións mesmo co modo de concentración activado",
   "criticalAlertFeatureAppealPoint2": "Un recordatorio fiable á hora que escolliches",

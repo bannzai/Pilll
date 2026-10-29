@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Du kan endre dagens pillenummer",
   "todayPillNumberFeatureAppealBody": "Hvis du har glemt en p-pille eller tatt feil pille, slik at nummeret på pillebrettet ikke stemmer med pillen du tok, kan du justere dagens pillenummer manuelt. Du kan også åpne den samme skjermen via pillenummeret på hjemskjermen.",
   "restDurationFeatureAppealTitle": "Registrer perioden med inntakspause",
+  "restDurationFeatureAppealShortDescription": "Hold nøyaktig oversikt over avbrudd i bruken av p-piller",
   "featureAppealLocationLabel": "Hvor du finner det i appen",
   "criticalAlertFeatureAppealPoint1": "Du får varsler selv når Fokus er på",
   "criticalAlertFeatureAppealPoint2": "En pålitelig påminnelse til tiden du har valgt",

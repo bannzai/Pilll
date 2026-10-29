@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Maaari ninyong baguhin ang numero ng pildoras para sa araw na ito",
   "todayPillNumberFeatureAppealBody": "Kung may pildoras kayong hindi nainom o napagpalit ninyo ang mga pildoras, maaaring hindi na tumugma ang numero sa pakete ng pildoras sa nainom ninyo. Maaari ninyong ayusin nang mano-mano ang numero ng pildoras para sa araw na ito. Mabubuksan din ang parehong screen mula sa numero ng pildoras sa home screen.",
   "restDurationFeatureAppealTitle": "Itala ang panahon ng paghinto sa pag-inom ng pildoras",
+  "restDurationFeatureAppealShortDescription": "Tumpak na subaybayan ang mga paghinto sa pag-inom ng pildoras",
   "featureAppealLocationLabel": "Saan makikita sa app",
   "criticalAlertFeatureAppealPoint1": "Makakatanggap pa rin kayo ng mga abiso kahit naka-on ang Focus mode",
   "criticalAlertFeatureAppealPoint2": "Maaasahang paalala sa oras na itinakda ninyo",

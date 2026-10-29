@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Vous pouvez modifier le numéro de pilule du jour",
   "todayPillNumberFeatureAppealBody": "Si une pilule n’a pas été prise ou si les pilules ont été confondues et que le numéro sur la plaquette ne correspond plus à celle que vous avez prise, vous pouvez ajuster manuellement le numéro de pilule du jour. Vous pouvez aussi ouvrir le même écran depuis le numéro de pilule affiché sur l’accueil.",
   "restDurationFeatureAppealTitle": "Enregistrer la période de pause de prise",
+  "restDurationFeatureAppealShortDescription": "Suivez précisément les interruptions de prise de la pilule",
   "featureAppealLocationLabel": "Où le trouver dans l’application",
   "criticalAlertFeatureAppealPoint1": "Recevez des notifications même lorsque le mode Concentration est activé",
   "criticalAlertFeatureAppealPoint2": "Un rappel fiable à l’heure que vous avez choisie",

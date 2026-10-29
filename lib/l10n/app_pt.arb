@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Você pode alterar o número da pílula de hoje",
   "todayPillNumberFeatureAppealBody": "Se uma pílula não foi tomada ou houve uma troca e o número na cartela não corresponde à pílula tomada, você pode ajustar manualmente o número da pílula de hoje. Também é possível abrir a mesma tela pelo número da pílula exibido na tela inicial.",
   "restDurationFeatureAppealTitle": "Registrar período de interrupção",
+  "restDurationFeatureAppealShortDescription": "Acompanhe com precisão as interrupções no uso da pílula",
   "featureAppealLocationLabel": "Onde encontrar no app",
   "criticalAlertFeatureAppealPoint1": "Receba notificações mesmo com o modo Foco ativado",
   "criticalAlertFeatureAppealPoint2": "Um lembrete confiável no horário que você escolheu",

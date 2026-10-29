@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Можете да смените днешния номер на хапче",
   "todayPillNumberFeatureAppealBody": "Ако сте пропуснали хапче или сте объркали хапчетата и номерът върху блистера вече не съвпада с действително взетото хапче, можете ръчно да коригирате днешния номер на хапче. Същият екран се отваря и от номера на хапчето на началния екран.",
   "restDurationFeatureAppealTitle": "Запис на периода на спиране на приема",
+  "restDurationFeatureAppealShortDescription": "Проследявайте точно прекъсванията на приема на хапчета",
   "featureAppealLocationLabel": "Място в приложението",
   "criticalAlertFeatureAppealPoint1": "Получавате известия дори в режим „Фокус“",
   "criticalAlertFeatureAppealPoint2": "Надеждно напомняне в зададения от вас час",

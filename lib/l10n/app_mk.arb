@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Можете да го промените денешниот број на таблета",
   "todayPillNumberFeatureAppealBody": "Ако сте заборавиле да земете таблета или сте ги помешале таблетите, па бројот на блистерот не се совпаѓа со земената таблета, можете рачно да го прилагодите денешниот број на таблета. Истиот екран можете да го отворите и од бројот на таблета на почетниот екран.",
   "restDurationFeatureAppealTitle": "Запис за периодот на пауза во земањето апчиња",
+  "restDurationFeatureAppealShortDescription": "Прецизно следете кога привремено престанувате да земате таблета",
   "featureAppealLocationLabel": "Локација во апликацијата",
   "criticalAlertFeatureAppealPoint1": "Ќе добивате известувања и во режимот за фокусирање",
   "criticalAlertFeatureAppealPoint2": "Сигурен потсетник во времето што сте го поставиле",

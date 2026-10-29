@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Вы можете изменить номер таблетки на сегодня",
   "todayPillNumberFeatureAppealBody": "Если таблетка не была принята или таблетки перепутались и номер на блистере больше не соответствует принятой таблетке, вы можете вручную изменить сегодняшний номер таблетки. Этот же экран можно открыть через номер таблетки на главном экране.",
   "restDurationFeatureAppealTitle": "Записать период приостановки приёма",
+  "restDurationFeatureAppealShortDescription": "Точно отслеживайте временные остановки приёма таблеток",
   "featureAppealLocationLabel": "Где найти в приложении",
   "criticalAlertFeatureAppealPoint1": "Вы получаете уведомления даже в режиме фокусирования",
   "criticalAlertFeatureAppealPoint2": "Надёжное напоминание в установленное вами время",

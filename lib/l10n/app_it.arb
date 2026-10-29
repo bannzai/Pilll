@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Puoi cambiare il numero della pillola di oggi",
   "todayPillNumberFeatureAppealBody": "Se una pillola non è stata presa o le pillole sono state confuse e il numero sul blister non corrisponde più a quella assunta, puoi correggere manualmente il numero della pillola di oggi. Puoi aprire la stessa schermata anche dal numero della pillola nella schermata iniziale.",
   "restDurationFeatureAppealTitle": "Registra il periodo di sospensione",
+  "restDurationFeatureAppealShortDescription": "Tieni traccia con precisione delle interruzioni nell'assunzione della pillola",
   "featureAppealLocationLabel": "Dove trovarlo nell’app",
   "criticalAlertFeatureAppealPoint1": "Ricevi notifiche anche con la modalità Full immersion attiva",
   "criticalAlertFeatureAppealPoint2": "Un promemoria affidabile all’ora che hai scelto",

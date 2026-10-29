@@ -505,6 +505,7 @@
   "todayPillNumberFeatureAppealHeadline": "Megváltoztathatod a mai tablettaszámot",
   "todayPillNumberFeatureAppealBody": "Ha kimaradt egy tabletta, vagy összekeveredtek a tabletták, és a tablettacsomag száma már nem egyezik a ténylegesen beszedett tablettával, kézzel módosíthatod a mai tablettaszámot. Ugyanezt a képernyőt a kezdőképernyőn látható tablettaszámról is megnyithatod.",
   "restDurationFeatureAppealTitle": "Rögzítsd, mettől meddig szeretnéd szüneteltetni a tabletta szedését",
+  "restDurationFeatureAppealShortDescription": "Kövesd pontosan a tabletta szedésének megszakításait",
   "featureAppealLocationLabel": "Hol találod az alkalmazásban",
   "criticalAlertFeatureAppealPoint1": "Fókusz módban is megkapod az értesítéseket",
   "criticalAlertFeatureAppealPoint2": "Megbízható emlékeztető az általad beállított időpontban",
