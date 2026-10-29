@@ -22,10 +22,12 @@ class DateTimeFormatter {
     ).format(dateTime);
   }
 
-  static String jaMonth(DateTime dateTime) {
+  /// 月の見出し用に、ロケールに応じた省略形の月名を返す (ja: 10月, en: Oct, de: Okt)。
+  /// [localeName] を省略すると端末のロケール ([Platform.localeName]) を使う。他のフォーマッタと同じく端末の言語で表示するためで、テストではロケールを指定して呼ぶ
+  static String abbreviatedMonth(DateTime dateTime, {String? localeName}) {
     return DateFormat(
-      DateFormat.NUM_MONTH,
-      Platform.localeName,
+      DateFormat.ABBR_MONTH,
+      localeName ?? Platform.localeName,
     ).format(dateTime);
   }
 

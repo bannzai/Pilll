@@ -86,7 +86,7 @@ class MockMenstruationScreen extends StatelessWidget {
                     height: kToolbarHeight,
                     child: Center(
                       child: Text(
-                        DateTimeFormatter.jaMonth(_fixedToday),
+                        DateTimeFormatter.abbreviatedMonth(_fixedToday),
                         // 本番（lib/features/menstruation/page.dart）の AppBar title と同じ
                         // TextColor.black。サイズは M2 AppBar 既定の titleTextStyle 相当。
                         style: const TextStyle(color: TextColor.black, fontSize: 20, fontWeight: FontWeight.w500),
