@@ -402,6 +402,7 @@
   "pillTakenCountSuffix": "krat vzeti tableto",
   "duringPauseTaking": "Med prekinom",
   "cannotPauseAlreadyTakenToday": "Če je današnja tableta že vzeta,\nne morete vklopiti »prekin«",
+  "pauseTakingStarted": "Začel se je prekin jemanja tablet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "shareWithFriends": "Priporočite prijateljem",
   "termsOfService": "Pogoji uporabe",
