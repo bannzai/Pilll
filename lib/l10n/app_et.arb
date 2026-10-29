@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Teavet premiumi kohta ei leitud",
   "purchaseErrorPurchasePendingError": "Ostu aktiveerimine pole veel lõppenud. Oota veidi ja kontrolli uuesti",
   "launchError": "Rakenduse käivitamisel tekkis viga.\n{ErrorMessagesConnection}\n\nÜksikasjad:",
+  "exampleRestDurationDate": "Näiteks kui teed alates 1/12 kolmepäevase võtmise paus",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
   "doNotRevertTakePillInPausePeriod": "Pillipausi ajal ei saa pilli võtmise kirjet tagasi võtta",

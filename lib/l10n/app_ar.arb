@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "تعذر العثور على معلومات بريميوم",
   "purchaseErrorPurchasePendingError": "لم يكتمل تفعيل الشراء بعد. يُرجى الانتظار قليلًا ثم التحقق مرة أخرى",
   "launchError": "حدث خطأ عند فتح التطبيق.\n{ErrorMessagesConnection}\n\nالتفاصيل:",
+  "exampleRestDurationDate": "مثلاً، إذا اخترتِ إيقاف تناول الحبوب لمدة 3 أيام بدءاً من 1/12",
   "withNumber": "رقم {number}",
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستخدم حاليًا",
   "doNotRevertTakePillInPausePeriod": "لا يمكن التراجع عن تسجيل تناول الحبة خلال فترة الراحة",

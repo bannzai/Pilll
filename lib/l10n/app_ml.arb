@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "പ്രീമിയം വിവരങ്ങൾ കണ്ടെത്താനായില്ല",
   "purchaseErrorPurchasePendingError": "വാങ്ങൽ സജീവമാക്കൽ ഇനിയും പൂർത്തിയായിട്ടില്ല. ദയവായി കുറച്ച് കഴിഞ്ഞ് വീണ്ടും പരിശോധിക്കൂ",
   "launchError": "ആപ്പ് തുറക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു.\n{ErrorMessagesConnection}\n\nവിശദാംശങ്ങൾ:",
+  "exampleRestDurationDate": "ഉദാഹരണത്തിന്, 1/12 മുതൽ 3 ദിവസത്തേക്ക് ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തിയാൽ",
   "withNumber": "നമ്പർ {number}",
   "currentPillSheetNotFound": "ഇപ്പോൾ ഉപയോഗിക്കുന്ന ഗുളിക സ്ട്രിപ്പ് കണ്ടെത്താനായില്ല",
   "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",

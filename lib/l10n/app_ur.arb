@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "پریمیم کی معلومات نہیں مل سکیں",
   "purchaseErrorPurchasePendingError": "خریداری کو فعال کرنے کا عمل ابھی مکمل نہیں ہوا۔ براہِ کرم کچھ دیر بعد دوبارہ چیک کریں",
   "launchError": "ایپ کھولتے وقت ایک خرابی پیش آئی۔\n{ErrorMessagesConnection}\n\nتفصیلات:",
+  "exampleRestDurationDate": "مثال کے طور پر، اگر آپ 1/12 سے 3 دن کے لیے گولی لینے میں توقف کریں",
   "withNumber": "نمبر {number}",
   "currentPillSheetNotFound": "اس وقت استعمال ہونے والی گولیوں کی پٹی نہیں ملی",
   "doNotRevertTakePillInPausePeriod": "وقفے کے دوران گولی لینے کا ریکارڈ منسوخ نہیں کیا جا سکتا",

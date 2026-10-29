@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ಪ್ರೀಮಿಯಂ ಮಾಹಿತಿ ಕಂಡುಬಂದಿಲ್ಲ",
   "purchaseErrorPurchasePendingError": "ನಿಮ್ಮ ಖರೀದಿ ಇನ್ನೂ ಸಕ್ರಿಯವಾಗುತ್ತಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪರಿಶೀಲಿಸಿ",
   "launchError": "ಆ್ಯಪ್ ತೆರೆಯುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು:",
+  "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ, 1/12ರಿಂದ 3 ದಿನಗಳವರೆಗೆ ಮಾತ್ರೆ ವಿರಾಮ ತೆಗೆದುಕೊಂಡರೆ",
   "withNumber": "ಸಂ. {number}",
   "currentPillSheetNotFound": "ಈಗ ನೀವು ಬಳಸುತ್ತಿರುವ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಕಂಡುಬಂದಿಲ್ಲ",
   "doNotRevertTakePillInPausePeriod": "ವಿರಾಮದ ಅವಧಿಯಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ರದ್ದುಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",

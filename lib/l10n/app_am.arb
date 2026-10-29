@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "የፕሪሚየም መረጃ አልተገኘም",
   "purchaseErrorPurchasePendingError": "የግዢው ማግበር ገና አልተጠናቀቀም። እባክዎ ትንሽ ቆይተው እንደገና ይፈትሹ",
   "launchError": "መተግበሪያው ሲከፈት ስህተት ተፈጥሯል።\n{ErrorMessagesConnection}\n\nዝርዝሮች፦",
+  "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ለጊዜው ማቆም ከመረጡ",
   "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በክኒን እረፍት ጊዜ የክኒን መውሰድን መቀልበስ አይቻልም",

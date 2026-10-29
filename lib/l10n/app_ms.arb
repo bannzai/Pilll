@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Maklumat premium tidak ditemui",
   "purchaseErrorPurchasePendingError": "Pengaktifan pembelian anda masih belum selesai. Sila tunggu sebentar dan semak semula",
   "launchError": "Ralat berlaku semasa membuka aplikasi.\n{ErrorMessagesConnection}\n\nButiran:",
+  "exampleRestDurationDate": "Contohnya, jika anda mengambil jeda pengambilan pil selama 3 hari mulai 1/12",
   "withNumber": "Pil nombor {number}",
   "currentPillSheetNotFound": "Pek pil yang sedang anda gunakan tidak ditemui",
   "doNotRevertTakePillInPausePeriod": "Rekod pengambilan pil tidak boleh dibatalkan semasa tempoh rehat",

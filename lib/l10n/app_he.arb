@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "לא נמצאו פרטים על פרימיום",
   "purchaseErrorPurchasePendingError": "הפעלת הרכישה עדיין לא הושלמה. כדאי להמתין מעט ולבדוק שוב",
   "launchError": "אירעה שגיאה בעת פתיחת האפליקציה.\n{ErrorMessagesConnection}\n\nפרטים:",
+  "exampleRestDurationDate": "לדוגמה, במקרה של השהיית נטילה למשך 3 ימים החל מ־1/12",
   "withNumber": "מס׳ {number}",
   "currentPillSheetNotFound": "לא נמצאה חפיסת הגלולות שבשימוש כעת",
   "doNotRevertTakePillInPausePeriod": "אי אפשר לבטל רישום נטילה של גלולה במהלך ההפסק",

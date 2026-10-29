@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Подаци о премијум плану нису пронађени",
   "purchaseErrorPurchasePendingError": "Активирање куповине још није завршено. Молимо Вас, сачекајте мало и проверите поново",
   "launchError": "Дошло је до грешке при покретању апликације.\n{ErrorMessagesConnection}\n\nДетаљи:",
+  "exampleRestDurationDate": "На пример, ако од 1/12 направите прекид узимања пилула на 3 дана",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Није пронађен блистер који тренутно користите",
   "doNotRevertTakePillInPausePeriod": "Током паузе није могуће поништити запис о узимању пилуле",

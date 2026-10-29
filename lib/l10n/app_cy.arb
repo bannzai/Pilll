@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Heb ddod o hyd i wybodaeth y cynllun premiwm",
   "purchaseErrorPurchasePendingError": "Nid yw’r pryniant wedi’i actifadu eto. Arhoswch ychydig ac edrychwch eto",
   "launchError": "Digwyddodd gwall wrth agor yr ap.\n{ErrorMessagesConnection}\n\nManylion:",
+  "exampleRestDurationDate": "Er enghraifft, os byddwch yn cymryd oedi o 3 diwrnod o 1/12 ymlaen",
   "withNumber": "Rhif {number}",
   "currentPillSheetNotFound": "Heb ddod o hyd i'r stribed pils rydych chi'n ei ddefnyddio ar hyn o bryd",
   "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",

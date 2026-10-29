@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Impossibile trovare le informazioni su Premium",
   "purchaseErrorPurchasePendingError": "L’attivazione dell’acquisto è ancora in corso. Attendi un po’ e verifica di nuovo",
   "launchError": "Si è verificato un errore all'avvio dell'app.\n{ErrorMessagesConnection}\n\nDettagli:",
+  "exampleRestDurationDate": "Per esempio, se fai una sospensione di 3 giorni a partire dal 1/12",
   "withNumber": "N. {number}",
   "currentPillSheetNotFound": "Non è stato trovato il blister che stai usando",
   "doNotRevertTakePillInPausePeriod": "Durante la pausa non puoi annullare la registrazione dell’assunzione della pillola",

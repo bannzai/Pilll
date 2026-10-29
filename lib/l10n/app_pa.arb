@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ਪ੍ਰੀਮੀਅਮ ਬਾਰੇ ਜਾਣਕਾਰੀ ਨਹੀਂ ਮਿਲੀ",
   "purchaseErrorPurchasePendingError": "ਤੁਹਾਡੀ ਖਰੀਦ ਹਾਲੇ ਸਰਗਰਮ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਥੋੜ੍ਹੀ ਦੇਰ ਬਾਅਦ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰੋ",
   "launchError": "ਐਪ ਖੋਲ੍ਹਣ ਵੇਲੇ ਇੱਕ ਗੜਬੜ ਹੋਈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ:",
+  "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਲੈਂਦੇ ਹੋ",
   "withNumber": "ਗੋਲੀ ਨੰਬਰ {number}",
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਵਰਤੀ ਜਾ ਰਹੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨਹੀਂ ਮਿਲੀ",
   "doNotRevertTakePillInPausePeriod": "ਵਿਰਾਮ ਦੌਰਾਨ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",

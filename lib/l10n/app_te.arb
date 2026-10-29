@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ప్రీమియం సమాచారం కనుగొనబడలేదు",
   "purchaseErrorPurchasePendingError": "మీ కొనుగోలు యాక్టివేషన్ ఇంకా పూర్తికాలేదు. దయచేసి కాసేపటి తర్వాత మళ్లీ తనిఖీ చేయండి",
   "launchError": "యాప్‌ను తెరిచేటప్పుడు లోపం ఏర్పడింది.\n{ErrorMessagesConnection}\n\nవివరాలు:",
+  "exampleRestDurationDate": "ఉదాహరణకు, 1/12 నుంచి 3 రోజుల పాటు మాత్రలు తీసుకోవడానికి తాత్కాలిక విరామం ఇచ్చినట్లయితే",
   "withNumber": "మాత్ర సంఖ్య {number}",
   "currentPillSheetNotFound": "ప్రస్తుతం ఉపయోగిస్తున్న మాత్రల స్ట్రిప్ కనుగొనబడలేదు",
   "doNotRevertTakePillInPausePeriod": "విరామ సమయంలో మాత్ర తీసుకున్న నమోదును రద్దు చేయడం సాధ్యం కాదు",

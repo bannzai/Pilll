@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Premium məlumatı tapılmadı",
   "purchaseErrorPurchasePendingError": "Alışın aktivləşdirilməsi hələ tamamlanmayıb. Zəhmət olmasa, bir az gözləyib yenidən yoxlayın",
   "launchError": "Tətbiq açılarkən xəta baş verdi.\n{ErrorMessagesConnection}\n\nTəfərrüatlar:",
+  "exampleRestDurationDate": "Məsələn, 1/12 tarixindən 3 gün müddətinə Həb qəbuluna fasilə versəniz",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Hazırda istifadə etdiyiniz həb blister tapılmadı",
   "doNotRevertTakePillInPausePeriod": "Fasilə müddətində həb qəbulu qeydini ləğv edə bilməzsiniz",

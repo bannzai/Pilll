@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Не удалось найти информацию о премиум-подписке",
   "purchaseErrorPurchasePendingError": "Активация покупки ещё не завершена. Пожалуйста, подождите немного и проверьте снова",
   "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности:",
+  "exampleRestDurationDate": "Например, если вы выбрали приостановку приёма на 3 дня с 1/12",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не удалось найти блистер, который вы сейчас используете",
   "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",

@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम की जानकारी नहीं मिली",
   "purchaseErrorPurchasePendingError": "आपकी खरीदारी अभी सक्रिय की जा रही है। कृपया थोड़ी देर बाद फिर जाँच करें",
   "launchError": "ऐप खोलते समय कोई गड़बड़ी हुई।\n{ErrorMessagesConnection}\n\nविवरण:",
+  "exampleRestDurationDate": "उदाहरण के लिए, अगर आप 1/12 से 3 दिनों के लिए गोली लेने में विराम लेते हैं",
   "withNumber": "गोली नंबर {number}",
   "currentPillSheetNotFound": "अभी इस्तेमाल की जा रही पिल स्ट्रिप नहीं मिली",
   "doNotRevertTakePillInPausePeriod": "विराम के दौरान गोली लेने का रिकॉर्ड रद्द नहीं किया जा सकता",

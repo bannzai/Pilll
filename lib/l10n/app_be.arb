@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Не ўдалося знайсці інфармацыю пра прэміум",
   "purchaseErrorPurchasePendingError": "Актывацыя пакупкі яшчэ не завершана. Калі ласка, пачакайце крыху і праверце яшчэ раз",
   "launchError": "Падчас запуску праграмы ўзнікла памылка.\n{ErrorMessagesConnection}\n\nПадрабязнасці:",
+  "exampleRestDurationDate": "Напрыклад, калі вы абралі прыпын прыёму пігулак на 3 дні з 1/12",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Бягучы блістар не знойдзены",
   "doNotRevertTakePillInPausePeriod": "Падчас перапынку нельга адмяніць запіс аб прыёме пігулкі",

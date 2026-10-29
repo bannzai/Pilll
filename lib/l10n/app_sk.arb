@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informácie o Premium sa nepodarilo nájsť",
   "purchaseErrorPurchasePendingError": "Aktivácia nákupu ešte nie je dokončená. Chvíľu počkajte a skúste to znova skontrolovať",
   "launchError": "Pri spúšťaní aplikácie sa vyskytla chyba.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
+  "exampleRestDurationDate": "Napríklad, ak od 1/12 zvolíte pozastavenie užívania na 3 dni",
   "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Nepodarilo sa nájsť blist, ktorý práve používate",
   "doNotRevertTakePillInPausePeriod": "Počas prestávky nemožno zrušiť záznam o užití tabletky",

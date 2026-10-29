@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Les informations sur Premium sont introuvables",
   "purchaseErrorPurchasePendingError": "L’activation de votre achat est encore en cours. Veuillez patienter un peu, puis vérifier à nouveau",
   "launchError": "Une erreur s’est produite à l’ouverture de l’application.\n{ErrorMessagesConnection}\n\nDétails :",
+  "exampleRestDurationDate": "Par exemple, pour une pause de prise de 3 jours à partir du 1/12",
   "withNumber": "N° {number}",
   "currentPillSheetNotFound": "La plaquette que vous utilisez actuellement est introuvable",
   "doNotRevertTakePillInPausePeriod": "Vous ne pouvez pas annuler l’enregistrement de la prise de pilule pendant la pause",

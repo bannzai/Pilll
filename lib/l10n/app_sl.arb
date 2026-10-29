@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Podatkov o naročnini Premium ni bilo mogoče najti",
   "purchaseErrorPurchasePendingError": "Aktivacija nakupa še ni končana. Počakajte malo in preverite znova",
   "launchError": "Pri odpiranju aplikacije je prišlo do napake.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
+  "exampleRestDurationDate": "Na primer, če od 1/12 za 3 dni naredite premor pri jemanju tablet",
   "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
   "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tablete",

@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ບໍ່ພົບຂໍ້ມູນກ່ຽວກັບ Premium",
   "purchaseErrorPurchasePendingError": "ການເປີດໃຊ້ງານການຊື້ຍັງບໍ່ສຳເລັດ. ກະລຸນາລໍຖ້າຈັກໜ້ອຍ ແລ້ວກວດເບິ່ງອີກຄັ້ງ",
   "launchError": "ເກີດຂໍ້ຜິດພາດຂະນະເປີດແອັບ.\n{ErrorMessagesConnection}\n\nລາຍລະອຽດ:",
+  "exampleRestDurationDate": "ຕົວຢ່າງ: ຖ້າຢຸດກິນຢາຊົ່ວຄາວ 3 ມື້ ເລີ່ມຈາກ 1/12",
   "withNumber": "ເມັດທີ {number}",
   "currentPillSheetNotFound": "ບໍ່ພົບແຜງຢາຄຸມທີ່ກຳລັງໃຊ້ຢູ່",
   "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",

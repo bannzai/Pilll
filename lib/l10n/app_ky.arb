@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Сиздин премиум планыңыз тууралуу маалымат табылган жок",
   "purchaseErrorPurchasePendingError": "Сатып алууну иштетүү али бүтө элек. Бир аз күтүп, кайра текшериңиз",
   "launchError": "Колдонмо ачылып жатканда ката кетти.\n{ErrorMessagesConnection}\n\nТолук маалымат:",
+  "exampleRestDurationDate": "Мисалы, 1/12ден баштап 3 күнгө убактылуу токтотуу тандасаңыз",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Учурда колдонулуп жаткан таблетка блистери табылган жок",
   "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",

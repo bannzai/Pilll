@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informacioni për premium nuk u gjet",
   "purchaseErrorPurchasePendingError": "Aktivizimi i blerjes ende nuk ka përfunduar. Ju lutemi, prisni pak dhe kontrolloni sërish",
   "launchError": "Ndodhi një gabim gjatë hapjes së aplikacionit.\n{ErrorMessagesConnection}\n\nHollësi: ",
+  "exampleRestDurationDate": "Për shembull, nëse bëni një pauzë 3-ditore duke filluar nga 1/12",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nuk u gjet blisteri që po përdorni tani",
   "doNotRevertTakePillInPausePeriod": "Gjatë pushimit nuk mund të anuloni regjistrimin e marrjes së pilulës",

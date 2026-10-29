@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Taarifa kuhusu Premium hazikupatikana",
   "purchaseErrorPurchasePendingError": "Uwezeshaji wa ununuzi wako bado haujakamilika. Tafadhali subiri kidogo kisha uangalie tena",
   "launchError": "Hitilafu imetokea wakati wa kufungua programu.\n{ErrorMessagesConnection}\n\nMaelezo:",
+  "exampleRestDurationDate": "Kwa mfano, ukichagua kusitisha kumeza vidonge kwa siku 3 kuanzia 1/12",
   "withNumber": "Nambari {number}",
   "currentPillSheetNotFound": "Pakiti ya vidonge inayotumika sasa haijapatikana",
   "doNotRevertTakePillInPausePeriod": "Haiwezekani kutengua rekodi ya kumeza kidonge wakati wa mapumziko",

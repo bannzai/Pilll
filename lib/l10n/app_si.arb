@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රීමියම් පිළිබඳ තොරතුරු සොයාගත නොහැකි විය",
   "purchaseErrorPurchasePendingError": "මිලදී ගැනීම සක්‍රිය කිරීම තවම අවසන් වී නොමැත. කරුණාකර ටික වේලාවක් රැඳී සිට නැවත පරීක්ෂා කරන්න",
   "launchError": "යෙදුම විවෘත කරන විට දෝෂයක් ඇති විය.\n{ErrorMessagesConnection}\n\nවිස්තර: ",
+  "exampleRestDurationDate": "උදාහරණයක් ලෙස, 1/12 සිට දින 3කට පෙති ගැනීමේ විරාමයක් තෝරාගත් විට",
   "withNumber": "අංක {number}",
   "currentPillSheetNotFound": "දැනට භාවිත කරන පෙති කාඩ්පත සොයාගත නොහැකි විය",
   "doNotRevertTakePillInPausePeriod": "විරාමය අතරතුර පෙත්ත ගත් බවට ඇති සටහන අවලංගු කළ නොහැක",

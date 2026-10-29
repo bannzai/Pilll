@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Imininingwane ye-Premium ayitholakalanga",
   "purchaseErrorPurchasePendingError": "Ukuvulwa kwalokho okuthengile akukaqedi. Sicela ulinde isikhashana bese uhlola futhi",
   "launchError": "Kuvele iphutha ngesikhathi kuvulwa uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane:",
+  "exampleRestDurationDate": "Isibonelo, uma ukhetha ukumisa okwesikhashana ukuphuza amaphilisi izinsuku ezingu-3 kusukela ngo-1/12",
   "withNumber": "Inombolo {number}",
   "currentPillSheetNotFound": "Ishidi lamaphilisi elisetshenziswa manje alitholakalanga",
   "doNotRevertTakePillInPausePeriod": "Ngesikhathi sekhefu, akunakwenzeka ukuhoxisa irekhodi lokuphuza iphilisi",

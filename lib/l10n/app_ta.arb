@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "பிரீமியம் தகவலைக் கண்டறிய முடியவில்லை",
   "purchaseErrorPurchasePendingError": "உங்கள் வாங்குதலைச் செயல்படுத்தும் பணி இன்னும் முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் சரிபாருங்கள்",
   "launchError": "செயலியைத் திறக்கும்போது பிழை ஏற்பட்டது.\n{ErrorMessagesConnection}\n\nவிவரங்கள்:",
+  "exampleRestDurationDate": "உதாரணமாக, 1/12 முதல் 3 நாட்களுக்கு மாத்திரை எடுத்துக்கொள்வதை இடைநிறுத்தினால்",
   "withNumber": "மாத்திரை எண் {number}",
   "currentPillSheetNotFound": "தற்போது பயன்படுத்தும் மாத்திரை அட்டை கிடைக்கவில்லை",
   "doNotRevertTakePillInPausePeriod": "இடைவேளையின் போது மாத்திரை எடுத்த பதிவை ரத்து செய்ய முடியாது",

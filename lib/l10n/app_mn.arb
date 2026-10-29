@@ -341,6 +341,7 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Pilll премиум мэдээлэл олдсонгүй",
   "purchaseErrorPurchasePendingError": "Худалдан авалтыг идэвхжүүлэх үйл явц хараахан дуусаагүй байна. Түр хүлээгээд дахин шалгана уу",
   "launchError": "Аппыг нээх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй:",
+  "exampleRestDurationDate": "Жишээлбэл, 1/12-ноос эхлэн 3 өдрийн түр завсарлага авбал",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Завсарлагааны үеэр эм уусан бүртгэлийг цуцлах боломжгүй",
