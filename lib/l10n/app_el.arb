@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Ποια ημέρα είναι σήμερα από τότε που άρχισε το διάλειμμα",
   "yazFlexSkipRestDuration": "Παράλειψη καταχώρισης για το διάλειμμα",
   "yazFlexSkipRestDurationDialogTitle": "Παράλειψη καταχώρισης για το διάλειμμα",
+  "yazFlexSkipRestDurationDialogMessage": "Μπορείτε να καταχωρίσετε τη διάρκεια της παύσης αργότερα από την επιλογή «παύση» στην αρχική οθόνη",
   "yazFlexSkipRestDurationDialogSkip": "Παράλειψη",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια ημέρα του κύκλου λήψης αντιστοιχεί η αρχή της καρτέλας χαπιών;",
   "yazFlexBeginPillNumberPageNote": "Απαντήστε με βάση πόσες ημέρες έχουν περάσει από τότε που τελείωσε το διάλειμμα πριν ξεκινήσετε την καρτέλα",

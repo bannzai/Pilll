@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "අද විරාමයේ කීවැනි දිනයද",
   "yazFlexSkipRestDuration": "විරාමයේ තොරතුරු ඇතුළත් නොකර ඉදිරියට යන්න",
   "yazFlexSkipRestDurationDialogTitle": "විරාමයේ තොරතුරු ඇතුළත් කිරීම මඟ හරින්න",
+  "yazFlexSkipRestDurationDialogMessage": "පෙති ගැනීමේ විරාම කාලය පසුව මුල් තිරයේ “පෙති ගැනීමේ විරාම” හරහා ඇතුළත් කළ හැකියි",
   "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",
   "yazFlexBeginPillNumberPageTitle": "පෙති පත්‍රයේ ආරම්භය ඔබේ පෙති ගැනීමේ චක්‍රයේ කීවැනි පෙත්තද?",
   "yazFlexBeginPillNumberPageNote": "පෙති පත්‍රය ආරම්භ කිරීමට පෙර තිබූ විරාමය අවසන් වූ දින සිට ගතවූ දින ගණන අනුව කරුණාකර පිළිතුරු දෙන්න",

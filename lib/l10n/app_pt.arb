@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Dia da pausa hoje",
   "yazFlexSkipRestDuration": "Pular o registro da pausa",
   "yazFlexSkipRestDurationDialogTitle": "Pular o registro da pausa",
+  "yazFlexSkipRestDurationDialogMessage": "Você pode informar a duração da interrupção depois, em “interrupção” na tela inicial",
   "yazFlexSkipRestDurationDialogSkip": "Pular",
   "yazFlexBeginPillNumberPageTitle": "Em que dia do seu ciclo de uso da pílula começa a cartela?",
   "yazFlexBeginPillNumberPageNote": "Responda com base nos dias que se passaram desde o fim da pausa antes de iniciar a cartela",

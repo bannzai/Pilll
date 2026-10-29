@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Que día do descanso é hoxe",
   "yazFlexSkipRestDuration": "Omitir a introdución do descanso",
   "yazFlexSkipRestDurationDialogTitle": "Omitir a introdución do descanso",
+  "yazFlexSkipRestDurationDialogMessage": "Podes indicar a duración da pausa na toma máis adiante desde «pausa na toma» na pantalla de inicio",
   "yazFlexSkipRestDurationDialogSkip": "Saltar",
   "yazFlexBeginPillNumberPageTitle": "En que día do teu ciclo de toma da pílula comeza o blíster?",
   "yazFlexBeginPillNumberPageNote": "Responde segundo os días transcorridos desde que rematou o descanso anterior ao inicio do blíster",

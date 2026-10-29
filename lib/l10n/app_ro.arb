@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "A câta zi de pauză este astăzi",
   "yazFlexSkipRestDuration": "Omite introducerea datelor despre pauză",
   "yazFlexSkipRestDurationDialogTitle": "Vei omite introducerea datelor despre pauză",
+  "yazFlexSkipRestDurationDialogMessage": "Poți introduce durata întreruperii mai târziu, din „întrerup” pe ecranul principal",
   "yazFlexSkipRestDurationDialogSkip": "Omite",
   "yazFlexBeginPillNumberPageTitle": "În ce zi a ciclului de administrare a pilulei începe blisterul?",
   "yazFlexBeginPillNumberPageNote": "Răspunde în funcție de câte zile au trecut de la sfârșitul pauzei dinaintea începerii blisterului",

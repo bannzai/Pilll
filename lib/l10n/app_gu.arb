@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "આજે વિરામનો કેટલામો દિવસ છે",
   "yazFlexSkipRestDuration": "વિરામની માહિતી દાખલ કરવાનું છોડી દો",
   "yazFlexSkipRestDurationDialogTitle": "વિરામની વિગતો દાખલ કરવાનું છોડવામાં આવશે",
+  "yazFlexSkipRestDurationDialogMessage": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમયગાળો તમે પછી હોમ સ્ક્રીન પર “ગોળી લેવાનું થોડા સમય માટે બંધ”માંથી દાખલ કરી શકો છો",
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
   "yazFlexBeginPillNumberPageTitle": "તમારા ગોળી લેવાના ચક્રના કયા દિવસે ગોળીની સ્ટ્રિપ શરૂ થાય છે?",
   "yazFlexBeginPillNumberPageNote": "ગોળીની સ્ટ્રિપ શરૂ કરતાં પહેલાંનો વિરામ પૂરો થયો ત્યારથી કેટલા દિવસ થયા છે, તેના આધારે કૃપા કરીને જવાબ આપો",

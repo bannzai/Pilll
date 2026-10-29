@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Quin dia del descans és avui",
   "yazFlexSkipRestDuration": "Omet la introducció del descans",
   "yazFlexSkipRestDurationDialogTitle": "S'ometrà la introducció del descans",
+  "yazFlexSkipRestDurationDialogMessage": "Pots indicar la durada de la pausa més endavant des de «pausa» a la pantalla d’inici",
   "yazFlexSkipRestDurationDialogSkip": "Omet",
   "yazFlexBeginPillNumberPageTitle": "En quin dia del teu cicle de preses comença el blíster?",
   "yazFlexBeginPillNumberPageNote": "Respon segons els dies que han passat des que va acabar el descans anterior a l’inici del blíster",

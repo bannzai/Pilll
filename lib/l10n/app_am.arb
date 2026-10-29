@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "ዛሬ የክኒን እረፍት ስንተኛ ቀን ነው",
   "yazFlexSkipRestDuration": "የክኒን እረፍት መረጃ ሳያስገቡ ይቀጥሉ",
   "yazFlexSkipRestDurationDialogTitle": "የክኒን እረፍት ማስገባትን ይዝለሉ",
+  "yazFlexSkipRestDurationDialogMessage": "የለጊዜው ማቆም ጊዜን በኋላ በመነሻ ገጹ ላይ «ለጊዜው ማቆም» ውስጥ ማስገባት ይችላሉ",
   "yazFlexSkipRestDurationDialogSkip": "ዝለሉ",
   "yazFlexBeginPillNumberPageTitle": "የክኒን ሉሁ መጀመሪያ በዑደቱ ውስጥ ስንተኛው የአወሳሰድ ቀን ነው?",
   "yazFlexBeginPillNumberPageNote": "የክኒን ሉህን ከመጀመርዎ በፊት የነበረው ክኒን እረፍት ካበቃ ጀምሮ ባለፉት ቀናት ብዛት መሠረት እባክዎ ይመልሱ",

@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Monesko taukojakson päivä on tänään",
   "yazFlexSkipRestDuration": "Ohita taukojakson tietojen syöttö",
   "yazFlexSkipRestDurationDialogTitle": "Ohita taukojakson tietojen syöttö",
+  "yazFlexSkipRestDurationDialogMessage": "Voit lisätä taukotilan keston myöhemmin aloitusnäytön ”taukotila”-kohdassa",
   "yazFlexSkipRestDurationDialogSkip": "Ohita",
   "yazFlexBeginPillNumberPageTitle": "Monesko ottokerta jaksossa liuskan ensimmäinen pilleri on?",
   "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, montako päivää on kulunut ennen liuskan aloittamista pidetyn taukojakson päättymisestä",

@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "ມື້ນີ້ເປັນມື້ທີເທົ່າໃດຂອງການພັກຢາ",
   "yazFlexSkipRestDuration": "ຂ້າມການປ້ອນຂໍ້ມູນພັກຢາ",
   "yazFlexSkipRestDurationDialogTitle": "ຂ້າມການປ້ອນຂໍ້ມູນພັກຢາ",
+  "yazFlexSkipRestDurationDialogMessage": "ສາມາດປ້ອນໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວພາຍຫຼັງໄດ້ ຜ່ານ «ຢຸດກິນຢາຊົ່ວຄາວ» ໃນໜ້າຫຼັກ",
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
   "yazFlexBeginPillNumberPageTitle": "ແຜງຢາເລີ່ມຢູ່ມື້ທີເທົ່າໃດຂອງຮອບການກິນຢາຂອງທ່ານ?",
   "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບຕາມຈຳນວນມື້ທີ່ຜ່ານມານັບແຕ່ຊ່ວງພັກຢາກ່ອນເລີ່ມແຜງຢາສິ້ນສຸດລົງ",

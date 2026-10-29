@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Pang-ilang araw na ng pahinga ngayon",
   "yazFlexSkipRestDuration": "Laktawan ang paglalagay ng detalye ng pahinga",
   "yazFlexSkipRestDurationDialogTitle": "Laktawan ang paglalagay ng detalye ng pahinga",
+  "yazFlexSkipRestDurationDialogMessage": "Maaari ninyong ilagay ang tagal ng pause sa ibang pagkakataon gamit ang “pause” sa Home screen",
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
   "yazFlexBeginPillNumberPageTitle": "Sa anong araw po ng siklo ng pag-inom ninyo ng pildoras nagsisimula ang pakete?",
   "yazFlexBeginPillNumberPageNote": "Pakisagot ayon sa bilang ng mga araw mula nang matapos ang pahinga bago ninyo sinimulan ang pakete ng pildoras",

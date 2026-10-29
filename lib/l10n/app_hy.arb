@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Այսօր դադարի քանի՞երորդ օրն է",
   "yazFlexSkipRestDuration": "Բաց թողնել դադարի տվյալների մուտքագրումը",
   "yazFlexSkipRestDurationDialogTitle": "Բաց թողնել դադարի մուտքագրումը",
+  "yazFlexSkipRestDurationDialogMessage": "ընդունման դադար-ի տևողությունը կարող եք ավելի ուշ մուտքագրել գլխավոր էկրանի «ընդունման դադար» բաժնում",
   "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
   "yazFlexBeginPillNumberPageTitle": "Հաբերի ընդունման Ձեր շրջանի ո՞ր օրն է սկսվում թերթիկը",
   "yazFlexBeginPillNumberPageNote": "Խնդրում ենք պատասխանել՝ հաշվի առնելով, թե քանի օր է անցել հաբերի թերթիկը սկսելուց առաջ եղած դադարն ավարտվելուց հետո",

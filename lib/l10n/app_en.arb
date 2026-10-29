@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Which day of your pill break is today",
   "yazFlexSkipRestDuration": "Skip entering the pill break",
   "yazFlexSkipRestDurationDialogTitle": "Skip entering the pill break",
+  "yazFlexSkipRestDurationDialogMessage": "You can enter the length of your pause later using “pause” on the Home screen",
   "yazFlexSkipRestDurationDialogSkip": "Skip",
   "yazFlexBeginPillNumberPageTitle": "Which day of your pill cycle does the pack start on?",
   "yazFlexBeginPillNumberPageNote": "Please count the days since the pill break you had before starting this pack ended",

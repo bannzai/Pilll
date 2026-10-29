@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Kelinta pertraukos diena šiandien",
   "yazFlexSkipRestDuration": "Praleisti pertraukos duomenų įvedimą",
   "yazFlexSkipRestDurationDialogTitle": "Praleisti pertraukos įvedimą",
+  "yazFlexSkipRestDurationDialogMessage": "Pristabdymo trukmę vėliau galėsite įvesti pradžios ekrano skiltyje „pristabd“",
   "yazFlexSkipRestDurationDialogSkip": "Praleisti",
   "yazFlexBeginPillNumberPageTitle": "Kurią jūsų tablečių vartojimo ciklo dieną prasideda lizdinė plokštelė?",
   "yazFlexBeginPillNumberPageNote": "Atsakykite pagal tai, kiek dienų praėjo nuo pertraukos, buvusios prieš pradedant lizdinę plokštelę, pabaigos",

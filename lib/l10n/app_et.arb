@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Mitmes pillipausi päev on täna",
   "yazFlexSkipRestDuration": "Jäta pillipausi sisestamine vahele",
   "yazFlexSkipRestDurationDialogTitle": "Jäta pillipausi sisestamine vahele",
+  "yazFlexSkipRestDurationDialogMessage": "Võtmise pausi kestuse saad hiljem sisestada avakuva valiku „võtmise paus“ kaudu",
   "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
   "yazFlexBeginPillNumberPageTitle": "Millisel sinu pillivõtmise tsükli päeval algab pillileht?",
   "yazFlexBeginPillNumberPageNote": "Vasta selle järgi, mitu päeva on möödunud enne pillilehe alustamist olnud pillipausi lõpust",

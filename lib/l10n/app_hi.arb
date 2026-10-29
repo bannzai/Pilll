@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "आज विराम का कौन सा दिन है",
   "yazFlexSkipRestDuration": "विराम की जानकारी दर्ज किए बिना आगे बढ़ें",
   "yazFlexSkipRestDurationDialogTitle": "विराम की जानकारी दर्ज करना छोड़ें",
+  "yazFlexSkipRestDurationDialogMessage": "गोली लेने में विराम की अवधि आप बाद में होम स्क्रीन पर “गोली लेने में विराम” से दर्ज कर सकती हैं",
   "yazFlexSkipRestDurationDialogSkip": "छोड़ें",
   "yazFlexBeginPillNumberPageTitle": "आपके गोली लेने के चक्र के किस दिन से यह पिल स्ट्रिप शुरू होती है?",
   "yazFlexBeginPillNumberPageNote": "पत्ता शुरू करने से पहले वाले विराम के खत्म होने के बाद बीते दिनों के आधार पर कृपया जवाब दें",

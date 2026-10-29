@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Koľký deň prestávky je dnes",
   "yazFlexSkipRestDuration": "Preskočiť zadanie prestávky",
   "yazFlexSkipRestDurationDialogTitle": "Preskočiť zadanie prestávky",
+  "yazFlexSkipRestDurationDialogMessage": "Dĺžku pozastavenia užívania môžete zadať neskôr cez „pozastav“ na domovskej obrazovke",
   "yazFlexSkipRestDurationDialogSkip": "Preskočiť",
   "yazFlexBeginPillNumberPageTitle": "V ktorý deň cyklu užívania tabletiek sa začína blist?",
   "yazFlexBeginPillNumberPageNote": "Odpovedzte podľa počtu dní od konca prestávky pred začiatkom blistra",

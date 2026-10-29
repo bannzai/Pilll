@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "আজ বিরতির কততম দিন",
   "yazFlexSkipRestDuration": "বিরতির তথ্য না দিয়ে এগিয়ে যান",
   "yazFlexSkipRestDurationDialogTitle": "বিরতির তথ্য দেওয়া এড়িয়ে যাওয়া হবে",
+  "yazFlexSkipRestDurationDialogMessage": "সেবন স্থগিত রাখার সময়সীমা আপনি পরে হোম স্ক্রিনের “সেবন স্থগিত” থেকে লিখতে পারবেন",
   "yazFlexSkipRestDurationDialogSkip": "এড়িয়ে যান",
   "yazFlexBeginPillNumberPageTitle": "পিল খাওয়ার চক্রের কততম দিনে এই পিলের পাতা শুরু হয়?",
   "yazFlexBeginPillNumberPageNote": "পিলের পাতা শুরু করার আগের বিরতি শেষ হওয়ার পর কত দিন কেটেছে, তার ভিত্তিতে উত্তর দিন",

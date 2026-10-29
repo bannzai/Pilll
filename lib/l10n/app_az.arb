@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Bu gün fasilənin neçənci günüdür",
   "yazFlexSkipRestDuration": "Fasilə məlumatını daxil etməyi ötürün",
   "yazFlexSkipRestDurationDialogTitle": "Fasilə məlumatının daxil edilməsi ötürüləcək",
+  "yazFlexSkipRestDurationDialogMessage": "Həb qəbuluna fasilə müddətini daha sonra ana səhifədəki “Həb qəbuluna fasilə” bölməsində daxil edə bilərsiniz",
   "yazFlexSkipRestDurationDialogSkip": "Keçin",
   "yazFlexBeginPillNumberPageTitle": "Həb vərəqinin başlanğıcı dövr üzrə neçənci qəbuldur?",
   "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, həb blisterinə başlamazdan əvvəlki fasilə bitəndən neçə gün keçdiyinə əsasən cavab verin",

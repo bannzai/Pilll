@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "ഇന്ന് ഇടവേളയുടെ എത്രാമത്തെ ദിവസമാണ്",
   "yazFlexSkipRestDuration": "ഇടവേളയുടെ വിവരങ്ങൾ നൽകാതെ തുടരാം",
   "yazFlexSkipRestDurationDialogTitle": "ഇടവേളയുടെ വിവരങ്ങൾ നൽകുന്നത് ഒഴിവാക്കുന്നു",
+  "yazFlexSkipRestDurationDialogMessage": "താൽക്കാലികമായി നിർത്തുന്ന കാലയളവ് പിന്നീട് ഹോം സ്ക്രീനിലെ “താൽക്കാലികമായി നിർത്ത” എന്നതിൽ നൽകാം",
   "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
   "yazFlexBeginPillNumberPageTitle": "ഗുളിക കഴിക്കുന്ന ചക്രത്തിലെ എത്രാമത്തെ ദിവസമാണ് സ്ട്രിപ്പ് തുടങ്ങുന്നത്?",
   "yazFlexBeginPillNumberPageNote": "ഗുളിക സ്ട്രിപ്പ് തുടങ്ങുന്നതിന് മുമ്പുള്ള ഇടവേള അവസാനിച്ചിട്ട് എത്ര ദിവസം കഴിഞ്ഞു എന്നതിന്റെ അടിസ്ഥാനത്തിൽ ഉത്തരം നൽകൂ",
