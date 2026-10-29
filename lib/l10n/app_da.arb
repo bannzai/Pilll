@@ -379,6 +379,7 @@
   "chestTightness": "Spænding i brysterne",
   "insomnia": "Søvnløshed",
   "pauseStartingOtherDaysInstructions": "Vælg indtagelsespause. Hvis du vil starte din indtagelsespause på en anden dag end i dag, kan du følge vejledningen nedenfor.",
+  "seeHowToUsePauseTakingFeature": "Se, hvordan du bruger indtagelsespause",
   "changePillDays": "Ændr antal dage med p-piller",
   "beginToEndNumbers": "nr. {begin}–{end}",
   "resumeTaking": "Genoptag p-pillerne",

@@ -379,6 +379,7 @@
   "chestTightness": "Koʻkraklarda taranglik",
   "insomnia": "Uyqusizlik",
   "pauseStartingOtherDaysInstructions": "Iltimos, tabletkalarni qabul qilish uchun pauzani tanlang. Agar pauzani bugundan boshqa kuni boshlamoqchi boʻlsangiz, quyidagi koʻrsatmalarga qarang.",
+  "seeHowToUsePauseTakingFeature": "Pauza funksiyasidan qanday foydalanishni koʻring",
   "changePillDays": "Tabletka qabul qilish kunlari sonini oʻzgartiring",
   "beginToEndNumbers": "{begin}-raqam ~ {end}-raqam",
   "resumeTaking": "Tabletka qabul qilishni qayta boshlash",

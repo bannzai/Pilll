@@ -379,6 +379,7 @@
   "chestTightness": "ອາການຄັດເຕົ້ານົມ",
   "insomnia": "ນອນບໍ່ຫຼັບ",
   "pauseStartingOtherDaysInstructions": "ກະລຸນາເລືອກຢຸດກິນຢາຊົ່ວຄາວ. ຖ້າຕ້ອງການເລີ່ມຢຸດກິນຢາຊົ່ວຄາວໃນມື້ອື່ນທີ່ບໍ່ແມ່ນມື້ນີ້ ກະລຸນາເບິ່ງວິທີການດ້ານລຸ່ມເດີ.",
+  "seeHowToUsePauseTakingFeature": "ເບິ່ງວິທີໃຊ້ຟີເຈີຢຸດກິນຢາຊົ່ວຄາວ",
   "changePillDays": "ປ່ຽນຈຳນວນມື້ທີ່ກິນຢາເມັດ",
   "beginToEndNumbers": "ເລກ {begin} ~ {end}",
   "resumeTaking": "ກັບມາກິນຢາເມັດອີກຄັ້ງ",

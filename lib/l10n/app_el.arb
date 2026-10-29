@@ -379,6 +379,7 @@
   "chestTightness": "Τάση στους μαστούς",
   "insomnia": "Αϋπνία",
   "pauseStartingOtherDaysInstructions": "Επιλέξτε παύση λήψης. Αν θέλετε να ξεκινήσει η παύση κάποια άλλη μέρα και όχι σήμερα, δείτε τις οδηγίες παρακάτω.",
+  "seeHowToUsePauseTakingFeature": "Δείτε πώς χρησιμοποιείται η λειτουργία παύση λήψης",
   "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "αρ. {begin} ~ {end}",
   "resumeTaking": "Επανέναρξη λήψης",

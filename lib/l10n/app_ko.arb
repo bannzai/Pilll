@@ -379,6 +379,7 @@
   "chestTightness": "가슴 팽만감",
   "insomnia": "불면증",
   "pauseStartingOtherDaysInstructions": "복용을 일시 중지해 주세요. 오늘이 아닌 다른 날부터 일시 중지하려면 아래 안내를 참고해 주세요.",
+  "seeHowToUsePauseTakingFeature": "일시 중지 기능 사용법 보기",
   "changePillDays": "약 복용 일수 변경",
   "beginToEndNumbers": "{begin}번 ~ {end}번",
   "resumeTaking": "복용 다시 시작하기",

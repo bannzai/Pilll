@@ -379,6 +379,7 @@
   "chestTightness": "Căng tức ngực",
   "insomnia": "Mất ngủ",
   "pauseStartingOtherDaysInstructions": "Vui lòng chọn tạm ngừng uống thuốc. Nếu bạn muốn bắt đầu tạm ngừng uống thuốc vào ngày khác, hãy xem hướng dẫn bên dưới.",
+  "seeHowToUsePauseTakingFeature": "Xem cách dùng tính năng tạm ngừng uống thuốc",
   "changePillDays": "Thay đổi số ngày uống thuốc",
   "beginToEndNumbers": "Số {begin} ~ số {end}",
   "resumeTaking": "Uống thuốc trở lại",

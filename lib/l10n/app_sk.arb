@@ -379,6 +379,7 @@
   "chestTightness": "Napätie v prsníkoch",
   "insomnia": "Nespavosť",
   "pauseStartingOtherDaysInstructions": "Zvoľte pozastavenie užívania tabletiek. Ak chcete začať pozastavenie užívania v iný deň ako dnes, pozrite si pokyny nižšie.",
+  "seeHowToUsePauseTakingFeature": "Zistiť, ako používať pozastavenie užívania",
   "changePillDays": "Zmeniť počet dní užívania tabletiek",
   "beginToEndNumbers": "č. {begin} ~ {end}",
   "resumeTaking": "Obnoviť užívanie tabletiek",

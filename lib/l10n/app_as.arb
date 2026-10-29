@@ -379,6 +379,7 @@
   "chestTightness": "স্তনত টান অনুভৱ",
   "insomnia": "অনিদ্ৰা",
   "pauseStartingOtherDaysInstructions": "অনুগ্ৰহ কৰি বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰক। আজিৰ বাহিৰে আন কোনো দিনৰ পৰা বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰিবলৈ বিচাৰিলে তলৰ নিৰ্দেশনা চাওক।",
+  "seeHowToUsePauseTakingFeature": "বড়ি খোৱা সাময়িকভাৱে বন্ধ সুবিধাটো কেনেকৈ ব্যৱহাৰ কৰিব চাওক",
   "changePillDays": "পিল খোৱাৰ দিনৰ সংখ্যা সলনি কৰক",
   "beginToEndNumbers": "নং {begin} ~ {end}",
   "resumeTaking": "পিল খোৱা পুনৰ আৰম্ভ কৰক",
