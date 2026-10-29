@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "सेवन नोंद जतन झाली नसण्याची शक्यता आहे",
   "quickRecordTakePillFailedMessage": "कृपया अ‍ॅप उघडून सेवन नोंद तपासा",
   "alreadyTaken": "गोळी घेतली आहे",
+  "startPauseTaking": "गोळी घेणे काही काळ थांबवा",
   "sequentialLastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "या क्रमांकापासून सुरू करा",
   "add": "जोडा",

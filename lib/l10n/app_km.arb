@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "កំណត់ត្រាការលេបថ្នាំប្រហែលជាមិនបានរក្សាទុកទេ",
   "quickRecordTakePillFailedMessage": "សូមបើកកម្មវិធី ហើយពិនិត្យកំណត់ត្រាការលេបថ្នាំ",
   "alreadyTaken": "បានលេបថ្នាំគ្រាប់ហើយ",
+  "startPauseTaking": "សូមផ្អាកការលេបថ្នាំគ្រាប់ជាបណ្តោះអាសន្ន",
   "sequentialLastTakenPlusOnePillNumber": "គ្រាប់លេខ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ចាប់ផ្តើមពីលេខនេះ",
   "add": "បន្ថែម",

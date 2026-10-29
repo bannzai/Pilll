@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "O registro de uso pode não ter sido salvo",
   "quickRecordTakePillFailedMessage": "Abra o aplicativo e confira o registro da sua pílula",
   "alreadyTaken": "Pílula tomada",
+  "startPauseTaking": "Pausar o uso da pílula",
   "sequentialLastTakenPlusOnePillNumber": "Pílula nº {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Começar por este número",
   "add": "Adicionar",

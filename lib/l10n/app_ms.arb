@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Rekod pengambilan mungkin tidak berjaya disimpan",
   "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak rekod pengambilan pil",
   "alreadyTaken": "Pil sudah diambil",
+  "startPauseTaking": "Berhenti mengambil pil buat sementara waktu",
   "sequentialLastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Mula dari nombor ini",
   "add": "Tambah",

@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Your pill log may not have been saved",
   "quickRecordTakePillFailedMessage": "Please open the app to check",
   "alreadyTaken": "Pill taken",
+  "startPauseTaking": "Pause taking your pill",
   "sequentialLastTakenPlusOnePillNumber": "Pill {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "as the starting number",
   "add": "Add",

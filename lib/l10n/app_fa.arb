@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "ممکن است ثبت مصرف ذخیره نشده باشد",
   "quickRecordTakePillFailedMessage": "لطفاً برنامه را باز کنید و ثبت مصرف قرص را بررسی کنید",
   "alreadyTaken": "قرص مصرف شده",
+  "startPauseTaking": "مصرف قرص را موقتاً متوقف کنید",
   "sequentialLastTakenPlusOnePillNumber": "قرص شمارهٔ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "شروع از این شماره",
   "add": "افزودن",

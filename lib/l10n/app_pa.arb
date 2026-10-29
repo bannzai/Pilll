@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "ਸੇਵਨ ਰਿਕਾਰਡ ਸ਼ਾਇਦ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੋਇਆ",
   "quickRecordTakePillFailedMessage": "ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਖੋਲ੍ਹੋ ਅਤੇ ਸੇਵਨ ਰਿਕਾਰਡ ਜਾਂਚੋ",
   "alreadyTaken": "ਗੋਲੀ ਲੈ ਲਈ ਗਈ ਹੈ",
+  "startPauseTaking": "ਗੋਲੀ ਲੈਣੀ ਕੁਝ ਸਮੇਂ ਲਈ ਰੋਕੋ",
   "sequentialLastTakenPlusOnePillNumber": "ਗੋਲੀ ਨੰਬਰ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ਇਸ ਨੰਬਰ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
   "add": "ਸ਼ਾਮਲ ਕਰੋ",

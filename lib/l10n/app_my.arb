@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "ဆေးသောက်မှတ်တမ်းကို မသိမ်းဆည်းနိုင်ခဲ့တာ ဖြစ်နိုင်ပါတယ်",
   "quickRecordTakePillFailedMessage": "အက်ပ်ကိုဖွင့်ပြီး စစ်ဆေးပေးပါ",
   "alreadyTaken": "သောက်ပြီး",
+  "startPauseTaking": "ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားပါ",
   "sequentialLastTakenPlusOnePillNumber": "ဆေးပြားအမှတ် {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ဒီနံပါတ်ကနေ စတင်ပါ",
   "add": "ထည့်ရန်",

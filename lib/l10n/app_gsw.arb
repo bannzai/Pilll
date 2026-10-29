@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "D Iinahm-Ufzeichnig isch villicht nöd gspeicheret worde",
   "quickRecordTakePillFailedMessage": "Mach bitte d App uf und lueg nache",
   "alreadyTaken": "Pille gnoh",
+  "startPauseTaking": "D Pille vorübergehend nüme näh",
   "sequentialLastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Bi dere Nummere aafange",
   "add": "Dezue tue",

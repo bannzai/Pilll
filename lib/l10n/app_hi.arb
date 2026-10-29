@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "सेवन रिकॉर्ड शायद सहेजा नहीं जा सका",
   "quickRecordTakePillFailedMessage": "कृपया ऐप खोलकर जाँच लें",
   "alreadyTaken": "ली जा चुकी",
+  "startPauseTaking": "गोली लेना कुछ समय के लिए रोकें",
   "sequentialLastTakenPlusOnePillNumber": "गोली नंबर {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "इस नंबर से शुरू करें",
   "add": "जोड़ें",

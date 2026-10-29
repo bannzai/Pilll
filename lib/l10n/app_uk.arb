@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Запис прийому, можливо, не зберігся",
   "quickRecordTakePillFailedMessage": "Відкрийте застосунок і перевірте запис про прийом пігулки",
   "alreadyTaken": "Пігулку прийнято",
+  "startPauseTaking": "Тимчасово призупинити прийом пігулок",
   "sequentialLastTakenPlusOnePillNumber": "№ {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Почати з цього номера",
   "add": "Додати",

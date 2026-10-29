@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Mae’n bosibl na chafodd y cofnod cymryd ei gadw",
   "quickRecordTakePillFailedMessage": "Agorwch yr ap, os gwelwch yn dda, a gwiriwch y cofnod cymryd y bilsen",
   "alreadyTaken": "Wedi cymryd y bilsen",
+  "startPauseTaking": "Oedi cymryd eich pilsen dros dro",
   "sequentialLastTakenPlusOnePillNumber": "Pilsen rhif {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Dechrau o'r rhif hwn",
   "add": "Ychwanegu",

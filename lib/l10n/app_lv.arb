@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Tablešu lietošanas ieraksts, iespējams, netika saglabāts",
   "quickRecordTakePillFailedMessage": "Lūdzu, atveriet lietotni un pārbaudiet",
   "alreadyTaken": "Tablete lietota",
+  "startPauseTaking": "Uz laiku pārtrauciet tablešu lietošanu",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. tablete",
   "startFromNumber": "Sākt ar šo numuru",
   "add": "Pievienot",

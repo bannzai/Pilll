@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "ঔষধ সেৱনৰ ৰেকৰ্ড সংৰক্ষণ কৰোঁতে সমস্যা হোৱা হ’ব পাৰে",
   "quickRecordTakePillFailedMessage": "অনুগ্ৰহ কৰি এপটো খুলি পৰীক্ষা কৰক",
   "alreadyTaken": "পিল খোৱা হৈছে",
+  "startPauseTaking": "পিল খোৱা সাময়িকভাৱে বন্ধ কৰক",
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} নম্বৰ পিল",
   "startFromNumber": "এই নম্বৰৰ পৰা আৰম্ভ কৰক",
   "add": "যোগ কৰক",

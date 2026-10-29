@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "ସେବନ ରେକର୍ଡ ସଂରକ୍ଷିତ ହୋଇନଥାଇପାରେ",
   "quickRecordTakePillFailedMessage": "ଦୟାକରି ଆପ୍ ଖୋଲି ସେବନ ରେକର୍ଡ ଯାଞ୍ଚ କରନ୍ତୁ",
   "alreadyTaken": "ବଟିକା ଖିଆଯାଇଛି",
+  "startPauseTaking": "ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ କରନ୍ତୁ",
   "sequentialLastTakenPlusOnePillNumber": "ବଟିକା ନମ୍ବର {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ଏହି ନମ୍ବରରୁ ଆରମ୍ଭ କରନ୍ତୁ",
   "add": "ଯୋଡ଼ନ୍ତୁ",

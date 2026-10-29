@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Rekodi ya kumeza vidonge huenda haijahifadhiwa",
   "quickRecordTakePillFailedMessage": "Tafadhali fungua programu na uangalie rekodi ya kumeza vidonge",
   "alreadyTaken": "Kidonge kimemezwa",
+  "startPauseTaking": "Tafadhali sitisha kumeza kidonge kwa muda",
   "sequentialLastTakenPlusOnePillNumber": "Kidonge nambari {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Anza kutoka namba hii",
   "add": "Ongeza",

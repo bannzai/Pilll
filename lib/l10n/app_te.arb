@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "మాత్రల నమోదు సేవ్ కాకపోయి ఉండవచ్చు",
   "quickRecordTakePillFailedMessage": "దయచేసి యాప్ తెరిచి మాత్రల నమోదును తనిఖీ చేయండి",
   "alreadyTaken": "మాత్ర తీసుకున్నారు",
+  "startPauseTaking": "మాత్ర తీసుకోవడాన్ని తాత్కాలికంగా ఆపండి",
   "sequentialLastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "ఈ సంఖ్య నుంచి ప్రారంభించండి",
   "add": "జోడించండి",

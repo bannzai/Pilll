@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Запись в журнал приёма таблеток, возможно, не сохранилась",
   "quickRecordTakePillFailedMessage": "Откройте приложение и проверьте запись о приёме таблетки",
   "alreadyTaken": "Таблетка принята",
+  "startPauseTaking": "Временно приостановить приём таблетки",
   "sequentialLastTakenPlusOnePillNumber": "таблетка № {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Начать с этого номера",
   "add": "Добавить",

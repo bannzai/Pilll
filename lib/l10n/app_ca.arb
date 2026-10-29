@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Pot ser que el registre de preses no s’hagi desat",
   "quickRecordTakePillFailedMessage": "Obre l'app i comprova el registre de preses",
   "alreadyTaken": "Píndola presa",
+  "startPauseTaking": "Deixa de prendre la píndola temporalment",
   "sequentialLastTakenPlusOnePillNumber": "núm. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Comença per aquest número",
   "add": "Afegeix",

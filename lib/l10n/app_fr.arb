@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "La prise n’a peut-être pas été enregistrée dans le journal des prises",
   "quickRecordTakePillFailedMessage": "Ouvrez l’application et vérifiez l’enregistrement de la prise de votre pilule",
   "alreadyTaken": "Pilule prise",
+  "startPauseTaking": "Suspendre temporairement la prise de la pilule",
   "sequentialLastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Commencer à ce numéro",
   "add": "Ajouter",

@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "گولی لینے کا ریکارڈ شاید محفوظ نہیں ہوا",
   "quickRecordTakePillFailedMessage": "براہِ کرم ایپ کھول کر گولی لینے کا ریکارڈ دیکھیں",
   "alreadyTaken": "گولی لے لی گئی ہے",
+  "startPauseTaking": "گولی لینا عارضی طور پر روکیں",
   "sequentialLastTakenPlusOnePillNumber": "گولی نمبر {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "اس نمبر سے شروع کریں",
   "add": "شامل کریں",

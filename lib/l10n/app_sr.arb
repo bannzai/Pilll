@@ -392,6 +392,7 @@
   "quickRecordTakePillFailed": "Евиденција узимања можда није сачувана",
   "quickRecordTakePillFailedMessage": "Молимо Вас, отворите апликацију и проверите",
   "alreadyTaken": "Пилула је узета",
+  "startPauseTaking": "Привремено прекините узимање пилуле",
   "sequentialLastTakenPlusOnePillNumber": "Пилула бр. {pillSheetGroupSequentialLastTakenPillNumber}",
   "startFromNumber": "Почните од овог броја",
   "add": "Додајте",
