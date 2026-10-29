@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Koji je danas dan pauze",
   "yazFlexSkipRestDuration": "Preskočite unos pauze",
   "yazFlexSkipRestDurationDialogTitle": "Unos pauze bit će preskočen",
+  "yazFlexSkipRestDurationDialogMessage": "Razdoblje prekida možete naknadno unijeti putem opcije „prekid” na početnom zaslonu.",
   "yazFlexSkipRestDurationDialogSkip": "Preskočite",
   "yazFlexBeginPillNumberPageTitle": "Kojeg dana vašeg ciklusa uzimanja pilula počinje blister?",
   "yazFlexBeginPillNumberPageNote": "Odgovorite prema broju dana od završetka pauze prije početka blistera",

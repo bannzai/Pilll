@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Kateri dan premora je danes",
   "yazFlexSkipRestDuration": "Preskočite vnos premora",
   "yazFlexSkipRestDurationDialogTitle": "Vnos premora bo preskočen",
+  "yazFlexSkipRestDurationDialogMessage": "Obdobje prekina lahko pozneje vnesete prek možnosti »prekin« na začetnem zaslonu.",
   "yazFlexSkipRestDurationDialogSkip": "Preskočite",
   "yazFlexBeginPillNumberPageTitle": "Na kateri dan cikla jemanja tablet se začne omot?",
   "yazFlexBeginPillNumberPageNote": "Odgovorite glede na število dni od konca premora pred začetkom jemanja tablet iz omota",

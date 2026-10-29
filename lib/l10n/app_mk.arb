@@ -578,6 +578,7 @@
   "yazFlexRestingDaysLabel": "Кој ден од пауза е денес",
   "yazFlexSkipRestDuration": "Прескокнете внесување податоци за пауза",
   "yazFlexSkipRestDurationDialogTitle": "Прескокнување на внесот за пауза",
+  "yazFlexSkipRestDurationDialogMessage": "Периодот на прекин можете да го внесете подоцна преку „прекин“ на почетниот екран.",
   "yazFlexSkipRestDurationDialogSkip": "Прескокнете",
   "yazFlexBeginPillNumberPageTitle": "На кој ден од Вашиот циклус на земање таблета започнува блистерот?",
   "yazFlexBeginPillNumberPageNote": "Ве молиме, одговорете според бројот на денови од крајот на пауза пред почетокот на блистерот",
