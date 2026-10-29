@@ -381,6 +381,7 @@
   "pauseStartingOtherDaysInstructions": "Izberite prekinitev pri jemanju tablet. Če želite prekinitev pri jemanju tablet začeti na drug dan in ne danes, si oglejte spodnja navodila.",
   "seeHowToUsePauseTakingFeature": "Oglejte si, kako uporabljati funkcijo premora pri jemanju tablet",
   "startPauseTakingLabel": "Začnite premor pri jemanju tablet",
+  "pauseTakingChanged": "Obdobje premora pri jemanju tablet je spremenjeno",
   "changePillDays": "Spremenite število dni jemanja tablet",
   "beginToEndNumbers": "št. {begin} ~ {end}",
   "resumeTaking": "Nadaljujte jemanje tablet",
