@@ -379,6 +379,7 @@
   "chestTightness": "Напнатост во градите",
   "insomnia": "Несоница",
   "pauseStartingOtherDaysInstructions": "Ве молиме, започнете прекин на земањето таблети. Ако сакате да започнете прекин на друг ден, погледнете ги упатствата подолу.",
+  "seeHowToUsePauseTakingFeature": "Погледнете како се користи функцијата за прекин на земањето",
   "changePillDays": "Промена на бројот на денови за земање таблета",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Продолжете со земање таблета",
