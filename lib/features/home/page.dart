@@ -246,23 +246,26 @@ class HomePageBody extends HookConsumerWidget {
                 controller: tabController,
                 labelColor: AppColors.primary,
                 labelStyle: const TextStyle(fontSize: 12),
+                // 既定の左右 16 では de「Einstellungen」・pt「Menstruação」などが 4 等分の幅に収まらないため、
+                // ラベル同士が詰まって見えない最小限の 4 にした。収まらない言語は HomePageTabLabel が縮小する
+                labelPadding: const EdgeInsets.symmetric(horizontal: 4),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                    text: L.pill,
+                    child: HomePageTabLabel(text: L.pill),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg',
                     ),
                   ),
                   Tab(
-                    text: L.menstruation,
+                    child: HomePageTabLabel(text: L.menstruation),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg',
                     ),
                   ),
                   Tab(
-                    text: L.calendar,
+                    child: HomePageTabLabel(text: L.calendar),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.calendar.index
                           ? 'images/tab_icon_calendar_enable.svg'
@@ -270,7 +273,7 @@ class HomePageBody extends HookConsumerWidget {
                     ),
                   ),
                   Tab(
-                    text: L.settings,
+                    child: HomePageTabLabel(text: L.settings),
                     icon: SvgPicture.asset(
                       tabIndex.value == HomePageTabType.setting.index ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg',
                     ),
@@ -298,6 +301,19 @@ class HomePageBody extends HookConsumerWidget {
     analytics.logScreenView(
       screenName: HomePageTabType.values[index].screenName,
     );
+  }
+}
+
+/// ホーム画面のタブバーのラベル。
+/// 訳の長さは 78 言語でばらつき、タブの幅に収まらない言語では語の途中で切れるため、1 行のまま幅に収まるまで縮小する
+class HomePageTabLabel extends StatelessWidget {
+  final String text;
+
+  const HomePageTabLabel({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return FittedBox(fit: BoxFit.scaleDown, child: Text(text, maxLines: 1));
   }
 }
 
