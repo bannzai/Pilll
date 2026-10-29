@@ -113,6 +113,7 @@
   "discardPillSheet": "blist wyrzucony",
   "takingTime": "Godzina przyjęcia tabletki",
   "takingHistoryIsPremiumFeature": "Dostęp do historii przyjmowania tabletek to funkcja premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Gdy zrobisz przerwę w przyjmowaniu tabletek, numer nie będzie się zwiększać",
   "lastTakenPlusOnePillNumber": "Nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Przyjmowanie tabletki",
   "estimatedEndPillNumber": "Ostatnia tabletka z poprzedniego blistra: nr {estimatedEndPillNumber}",

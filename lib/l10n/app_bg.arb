@@ -113,6 +113,7 @@
   "discardPillSheet": "Изхвърляне на блистер",
   "takingTime": "Час за прием на хапчето",
   "takingHistoryIsPremiumFeature": "История на приема е премиум функция",
+  "pauseTakingDoesNotAdvancePillNumber": "Когато временно спрете приема, номер на хапче няма да се променя",
   "lastTakenPlusOnePillNumber": "хапче № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прием на хапчето",
   "estimatedEndPillNumber": "Последното хапче от предишния блистер: № {estimatedEndPillNumber}",

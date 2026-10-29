@@ -113,6 +113,7 @@
   "discardPillSheet": "පෙති කාඩ්පත ඉවත දැමීම",
   "takingTime": "පෙත්ත ගන්නා වේලාව",
   "takingHistoryIsPremiumFeature": "පෙති ගැනීමේ ඉතිහාසය ප්‍රීමියම් විශේෂාංගයක්",
+  "pauseTakingDoesNotAdvancePillNumber": "ඔබ පෙති ගැනීම තාවකාලිකව නවත්වන විට, පෙති අංක ඉදිරියට නොයයි",
   "lastTakenPlusOnePillNumber": "පෙති අංක {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "පෙත්ත ගැනීම",
   "estimatedEndPillNumber": "පෙර පෙති කාඩ්පතේ අවසන් පෙත්ත: අංක {estimatedEndPillNumber}",

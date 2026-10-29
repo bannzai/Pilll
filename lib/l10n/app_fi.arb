@@ -113,6 +113,7 @@
   "discardPillSheet": "Pilleriliuska poistettu",
   "takingTime": "Pillerin ottoaika",
   "takingHistoryIsPremiumFeature": "Pillerihistoria on Premium-ominaisuus",
+  "pauseTakingDoesNotAdvancePillNumber": "Kun pidät tauon pillereiden ottamisesta, pillerinumero ei etene",
   "lastTakenPlusOnePillNumber": "Pilleri nro {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pillerin ottaminen",
   "estimatedEndPillNumber": "Edellisen pilleriliuskan viimeinen pilleri: nro {estimatedEndPillNumber}",

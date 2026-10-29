@@ -113,6 +113,7 @@
   "discardPillSheet": "Förgun pilluspjalds",
   "takingTime": "Tími til að taka pilluna",
   "takingHistoryIsPremiumFeature": "Þú getur skoðað inntökuyfirlit með Premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Þegar þú gerir hlé á pillutöku hækkar pillunúmer ekki",
   "lastTakenPlusOnePillNumber": "Pilla nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Inntaka pillunnar",
   "estimatedEndPillNumber": "Síðast á fyrra pilluspjaldi: nr. {estimatedEndPillNumber}",

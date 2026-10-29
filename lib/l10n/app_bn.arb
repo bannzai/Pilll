@@ -113,6 +113,7 @@
   "discardPillSheet": "পিল শিট বাতিল করা হয়েছে",
   "takingTime": "পিল খাওয়ার সময়",
   "takingHistoryIsPremiumFeature": "সেবনের ইতিহাস প্রিমিয়াম সুবিধা",
+  "pauseTakingDoesNotAdvancePillNumber": "আপনি সাময়িকভাবে পিল খাওয়া বন্ধ রাখলে পিল নম্বর এগোবে না",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} নম্বর পিল",
   "taking": "পিল খাওয়া",
   "estimatedEndPillNumber": "আগের পিল শিটের শেষ পিল: {estimatedEndPillNumber} নম্বর",

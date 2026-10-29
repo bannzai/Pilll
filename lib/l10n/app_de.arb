@@ -113,6 +113,7 @@
   "discardPillSheet": "Pillenblister gelöscht",
   "takingTime": "Einnahmezeit",
   "takingHistoryIsPremiumFeature": "Der Einnahmeverlauf ist eine Premium-Funktion",
+  "pauseTakingDoesNotAdvancePillNumber": "Wenn du die Einnahme pausierst, zählt die Pillennummer nicht weiter",
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilleneinnahme",
   "estimatedEndPillNumber": "Letzte Pille auf dem vorherigen Pillenblister: Nr. {estimatedEndPillNumber}",

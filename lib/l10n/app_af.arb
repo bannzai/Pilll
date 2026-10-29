@@ -113,6 +113,7 @@
   "discardPillSheet": "Pilstrokie weggegooi",
   "takingTime": "Innametyd",
   "takingHistoryIsPremiumFeature": "Die innamegeskiedenis is ’n Premium-funksie",
+  "pauseTakingDoesNotAdvancePillNumber": "Wanneer jy die pil tydelik nie neem nie, gaan die pilnommer nie aan nie",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilgebruik",
   "estimatedEndPillNumber": "Laaste pil op die vorige pilstrokie: nr. {estimatedEndPillNumber}",

@@ -113,6 +113,7 @@
   "discardPillSheet": "Plaquette supprimée",
   "takingTime": "Heure de prise de la pilule",
   "takingHistoryIsPremiumFeature": "L’historique des prises est une fonctionnalité Premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Si vous suspendez la prise de la pilule, le numéro de pilule n’avancera pas",
   "lastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Prise de la pilule",
   "estimatedEndPillNumber": "Dernière pilule de la plaquette précédente : n° {estimatedEndPillNumber}",

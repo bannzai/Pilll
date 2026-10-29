@@ -113,6 +113,7 @@
   "discardPillSheet": "həb blister silindi",
   "takingTime": "Həb qəbul etmə vaxtı",
   "takingHistoryIsPremiumFeature": "Qəbul tarixçəsi premium funksiyadır",
+  "pauseTakingDoesNotAdvancePillNumber": "Həb qəbuluna müvəqqəti fasilə verdiyinizdə həb nömrə irəliləmir",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} nömrəli həb",
   "taking": "Həb qəbulu",
   "estimatedEndPillNumber": "Əvvəlki blisterdəki son həb: № {estimatedEndPillNumber}",

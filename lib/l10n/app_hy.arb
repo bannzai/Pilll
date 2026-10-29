@@ -113,6 +113,7 @@
   "discardPillSheet": "Հեռացվել է հաբերի բլիստերը",
   "takingTime": "Հաբն ընդունելու ժամը",
   "takingHistoryIsPremiumFeature": "Ընդունման պատմությունը պրեմիում գործառույթ է",
+  "pauseTakingDoesNotAdvancePillNumber": "Եթե ժամանակավորապես դադարեցնեք հաբերի ընդունումը, հաբի համար չի փոխվի",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Հաբի ընդունում",
   "estimatedEndPillNumber": "Նախորդ հաբերի բլիստերի վերջին հաբը՝ № {estimatedEndPillNumber}",

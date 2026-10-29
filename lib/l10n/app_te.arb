@@ -113,6 +113,7 @@
   "discardPillSheet": "మాత్రల స్ట్రిప్ తొలగించబడింది",
   "takingTime": "మాత్ర తీసుకునే సమయం",
   "takingHistoryIsPremiumFeature": "మాత్రల సేవన చరిత్ర ప్రీమియం ఫీచర్",
+  "pauseTakingDoesNotAdvancePillNumber": "మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపితే, మాత్ర సంఖ్య ముందుకు సాగదు",
   "lastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "మాత్ర తీసుకోవడం",
   "estimatedEndPillNumber": "మునుపటి మాత్రల స్ట్రిప్‌లో చివరి మాత్ర: నం. {estimatedEndPillNumber}",

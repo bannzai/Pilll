@@ -113,6 +113,7 @@
   "discardPillSheet": "Блістер видалено",
   "takingTime": "Час прийому пігулки",
   "takingHistoryIsPremiumFeature": "Історія прийому — функція преміум-плану",
+  "pauseTakingDoesNotAdvancePillNumber": "Якщо ви тимчасово призупините прийом пігулок, номер пігулки не змінюватиметься",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прийом пігулки",
   "estimatedEndPillNumber": "Остання пігулка в попередньому блістері: № {estimatedEndPillNumber}",

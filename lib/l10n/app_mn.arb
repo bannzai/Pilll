@@ -113,6 +113,7 @@
   "discardPillSheet": "Эмийн блистерийг хаях",
   "takingTime": "Эм уух цаг",
   "takingHistoryIsPremiumFeature": "Премиум боломж: эм уусан түүх",
+  "pauseTakingDoesNotAdvancePillNumber": "Эм уухаа түр завсарлавал эмийн дугаар ахихгүй",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дугаартай эм",
   "taking": "Эм уух",
   "estimatedEndPillNumber": "Өмнөх эмийн блистерийн сүүлийн эм: {estimatedEndPillNumber} дугаар",

@@ -113,6 +113,7 @@
   "discardPillSheet": "Blister odbačen",
   "takingTime": "Vrijeme uzimanja pilule",
   "takingHistoryIsPremiumFeature": "Povijest uzimanja pilula značajka je plana Premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Ako privremeno prestanete uzimati pilule, broj pilule neće se povećavati",
   "lastTakenPlusOnePillNumber": "br. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Uzimanje pilule",
   "estimatedEndPillNumber": "Posljednja pilula na prethodnom blisteru: br. {estimatedEndPillNumber}",

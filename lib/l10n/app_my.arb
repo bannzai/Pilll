@@ -113,6 +113,7 @@
   "discardPillSheet": "ဆေးပြားကတ် စွန့်ပစ်ခြင်း",
   "takingTime": "ဆေးပြားသောက်ချိန်",
   "takingHistoryIsPremiumFeature": "ဆေးသောက်ခဲ့သည့်စာရင်းက ပရီမီယံ လုပ်ဆောင်ချက် ဖြစ်ပါတယ်",
+  "pauseTakingDoesNotAdvancePillNumber": "ဆေးပြားသောက်ခြင်းကို ခဏရပ်ထားလျှင် ဆေးပြားနံပါတ် ရှေ့ဆက်မတိုးပါ",
   "lastTakenPlusOnePillNumber": "ဆေးပြားနံပါတ် {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ဆေးပြားသောက်ခြင်း",
   "estimatedEndPillNumber": "ယခင်ဆေးပြားကတ်ရဲ့ နောက်ဆုံး: နံပါတ် {estimatedEndPillNumber}",

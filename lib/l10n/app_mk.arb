@@ -113,6 +113,7 @@
   "discardPillSheet": "Бришење блистер",
   "takingTime": "Време за земање таблета",
   "takingHistoryIsPremiumFeature": "Историја на земање е премиум функција",
+  "pauseTakingDoesNotAdvancePillNumber": "Ако привремено го паузирате земањето, број на таблета нема да се менува",
   "lastTakenPlusOnePillNumber": "таблета бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Земање таблета",
   "estimatedEndPillNumber": "Последна таблета од претходниот блистер: бр. {estimatedEndPillNumber}",

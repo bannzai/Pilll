@@ -113,6 +113,7 @@
   "discardPillSheet": "Kasseret pillekort",
   "takingTime": "Tidspunkt",
   "takingHistoryIsPremiumFeature": "Pillehistorik er en Premium-funktion",
+  "pauseTakingDoesNotAdvancePillNumber": "Når du holder pause med at tage p-pillen, går pillenummeret ikke videre",
   "lastTakenPlusOnePillNumber": "p-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Indtagelse af p-pille",
   "estimatedEndPillNumber": "Sidste p-pille på det forrige pillekort: nr. {estimatedEndPillNumber}",

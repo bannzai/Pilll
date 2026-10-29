@@ -113,6 +113,7 @@
   "discardPillSheet": "Blistr odstraněn",
   "takingTime": "Čas užití pilulky",
   "takingHistoryIsPremiumFeature": "Historie užívání je funkcí Premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Když užívání dočasně pozastavíte, číslo tablety se nebude posouvat",
   "lastTakenPlusOnePillNumber": "Tableta č. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Užívání pilulky",
   "estimatedEndPillNumber": "Poslední pilulka na předchozím blistru: č. {estimatedEndPillNumber}",

@@ -113,6 +113,7 @@
   "discardPillSheet": "pillilehe kustutamine",
   "takingTime": "Pilli võtmise aeg",
   "takingHistoryIsPremiumFeature": "Võtmislogi on premium-funktsioon",
+  "pauseTakingDoesNotAdvancePillNumber": "Kui teed pillide võtmises pausi, siis pillinumb ei liigu edasi",
   "lastTakenPlusOnePillNumber": "pill nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilli võtmine",
   "estimatedEndPillNumber": "Eelmise pillilehe viimane pill: nr {estimatedEndPillNumber}",

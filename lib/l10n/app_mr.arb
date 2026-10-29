@@ -113,6 +113,7 @@
   "discardPillSheet": "पिल शीट काढून टाकली",
   "takingTime": "गोळी घेण्याची वेळ",
   "takingHistoryIsPremiumFeature": "सेवन इतिहास हे प्रीमियम वैशिष्ट्य आहे",
+  "pauseTakingDoesNotAdvancePillNumber": "तुम्ही गोळी घेणे काही काळ थांबवल्यास, गोळी क्रमांक पुढे जाणार नाही",
   "lastTakenPlusOnePillNumber": "गोळी क्रमांक {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "गोळी घेणे",
   "estimatedEndPillNumber": "मागील पिल शीटमधील शेवटची गोळी: क्रमांक {estimatedEndPillNumber}",

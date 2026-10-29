@@ -113,6 +113,7 @@
   "discardPillSheet": "گولیوں کی پٹی ہٹا دی گئی",
   "takingTime": "گولی لینے کا وقت",
   "takingHistoryIsPremiumFeature": "گولی لینے کی ہسٹری پریمیم خصوصیت ہے",
+  "pauseTakingDoesNotAdvancePillNumber": "گولی لینا عارضی طور پر روکنے سے گولی نمبر آگے نہیں بڑھے گا",
   "lastTakenPlusOnePillNumber": "گولی نمبر {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "گولی لینا",
   "estimatedEndPillNumber": "پچھلی پٹی کی آخری گولی: نمبر {estimatedEndPillNumber}",

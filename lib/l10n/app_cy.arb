@@ -113,6 +113,7 @@
   "discardPillSheet": "Gwaredu stribed pils",
   "takingTime": "Amser cymryd y bilsen",
   "takingHistoryIsPremiumFeature": "Mae hanes cymryd y bilsen yn nodwedd premiwm",
+  "pauseTakingDoesNotAdvancePillNumber": "Os byddwch chi'n rhoi'r gorau i gymryd y bilsen am gyfnod, ni fydd rhif y bilsen yn symud ymlaen",
   "lastTakenPlusOnePillNumber": "Pilsen rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Cymryd y bilsen",
   "estimatedEndPillNumber": "Pilsen olaf y stribed pils blaenorol: rhif {estimatedEndPillNumber}",

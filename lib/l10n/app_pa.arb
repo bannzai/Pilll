@@ -113,6 +113,7 @@
   "discardPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਰੱਦ ਕੀਤੀ ਗਈ",
   "takingTime": "ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ",
   "takingHistoryIsPremiumFeature": "ਸੇਵਨ ਇਤਿਹਾਸ ਪ੍ਰੀਮੀਅਮ ਸਹੂਲਤ ਹੈ",
+  "pauseTakingDoesNotAdvancePillNumber": "ਤੁਸੀਂ ਗੋਲੀ ਲੈਣੀ ਕੁਝ ਸਮੇਂ ਲਈ ਰੋਕ ਦਿਓ ਤਾਂ ਗੋਲੀ ਨੰਬਰ ਅੱਗੇ ਨਹੀਂ ਵਧੇਗਾ",
   "lastTakenPlusOnePillNumber": "ਗੋਲੀ ਨੰਬਰ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ਗੋਲੀ ਲੈਣਾ",
   "estimatedEndPillNumber": "ਪਿਛਲੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀ ਆਖਰੀ ਗੋਲੀ: ਨੰਬਰ {estimatedEndPillNumber}",

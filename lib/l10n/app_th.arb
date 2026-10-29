@@ -113,6 +113,7 @@
   "discardPillSheet": "ทิ้งแผงยา",
   "takingTime": "เวลาทานยา",
   "takingHistoryIsPremiumFeature": "ประวัติการทานยาเป็นฟีเจอร์พรีเมียมค่ะ",
+  "pauseTakingDoesNotAdvancePillNumber": "เมื่อพักการทานยาชั่วคราว หมายเลขเม็ดยาจะไม่เลื่อนไปค่ะ",
   "lastTakenPlusOnePillNumber": "หมายเลข {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "การทานยา",
   "estimatedEndPillNumber": "เม็ดสุดท้ายของแผงยาก่อนหน้า: หมายเลข {estimatedEndPillNumber}",

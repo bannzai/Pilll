@@ -113,6 +113,7 @@
   "discardPillSheet": "د ګولیو پاڼې لرې کول",
   "takingTime": "د ګولۍ اخیستلو وخت",
   "takingHistoryIsPremiumFeature": "د ګولۍ اخیستلو تاریخچه د پریمیم ځانګړنه ده",
+  "pauseTakingDoesNotAdvancePillNumber": "که د ګولیو اخیستل د لنډ وخت لپاره ودروئ، ګولۍ شمېر به مخته نه ځي",
   "lastTakenPlusOnePillNumber": "د ګولۍ شمېره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "د ګولۍ اخیستل",
   "estimatedEndPillNumber": "د مخکینۍ پاڼې وروستۍ ګولۍ: شمېره {estimatedEndPillNumber}",

@@ -113,6 +113,7 @@
   "discardPillSheet": "التخلص من شريط الحبوب",
   "takingTime": "وقت تناول الحبة",
   "takingHistoryIsPremiumFeature": "سجل تناول الحبوب من ميزات بريميوم",
+  "pauseTakingDoesNotAdvancePillNumber": "عند إيقاف تناول الحبوب مؤقتا، لن يتقدم رقم الحبة",
   "lastTakenPlusOnePillNumber": "الحبة رقم {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "تناول الحبة",
   "estimatedEndPillNumber": "آخر حبة في الشريط السابق: رقم {estimatedEndPillNumber}",
