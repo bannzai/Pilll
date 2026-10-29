@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/emoji/emoji.dart';
 
 part 'reminder_notification_customization.codegen.g.dart';
@@ -52,16 +53,21 @@ class ReminderNotificationCustomization with _$ReminderNotificationCustomization
     /// カスタマイズ可能なメッセージです。
     @Default('') String dailyTakenMessage,
 
-    // TODO: [Localizations]
     /// 飲み忘れ時に表示するメッセージ
     ///
     /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
-    /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
-    /// 日本語メッセージが設定されています。
-    @Default('飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji') String missedTakenMessage,
+    /// 表示されるメッセージです。表示には [resolvedMissedTakenMessage] を使います。
+    /// 既定の文言はロケールごとに変わるため entity には埋めず、空文字で「未設定」を表します。
+    @Default('') String missedTakenMessage,
     // END: From v2
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
+
+  /// 通知と設定画面に表示する飲み忘れ時のメッセージ
+  ///
+  /// [missedTakenMessage] が未設定 (空文字) の時は、端末のロケールの既定文言を返します。
+  /// 保存済みの値がある時はその値を返します。
+  String get resolvedMissedTakenMessage => missedTakenMessage.isEmpty ? L.defaultMissedTakenMessage : missedTakenMessage;
 
   factory ReminderNotificationCustomization.fromJson(
     Map<String, dynamic> json,

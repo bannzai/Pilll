@@ -30,7 +30,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       setting.reminderNotificationCustomization.dailyTakenMessage,
     );
     final missedTakenMessage = useState(
-      setting.reminderNotificationCustomization.missedTakenMessage,
+      setting.reminderNotificationCustomization.resolvedMissedTakenMessage,
     );
     final wordTextFieldController = useTextEditingController(
       text: setting.reminderNotificationCustomization.word,
@@ -39,7 +39,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       text: setting.reminderNotificationCustomization.dailyTakenMessage,
     );
     final missedTakenMessageTextFieldController = useTextEditingController(
-      text: setting.reminderNotificationCustomization.missedTakenMessage,
+      text: setting.reminderNotificationCustomization.resolvedMissedTakenMessage,
     );
     final wordFocusNode = useFocusNode();
     final dailyTakenMessageFocusNode = useFocusNode();

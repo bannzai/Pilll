@@ -1181,6 +1181,10 @@
   "@changeMissedNotificationMessage": {
     "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the missed-pill notification)。"
   },
+  "defaultMissedTakenMessage": "飲み忘れていませんか？\n服用記録がない日が複数あります🤔",
+  "@defaultMissedTakenMessage": {
+    "description": "複数日分の服用記録がない時に届くピルのリマインダー通知の本文の既定値です。ユーザーが文言をカスタマイズしていない時に通知と「服用通知のカスタマイズ」画面のプレビュー・入力欄に表示されます。1 行目は飲み忘れていないかをやさしく尋ねる問いかけ、2 行目は服用記録がない日が複数あることを伝える文で、改行 (\\n) と末尾の 🤔 絵文字はそのまま残してください。飲み忘れを責めない、やわらかい表現にしてください (例: Haven't taken your pill yet?\\nThere are a few days with no pill log 🤔)。入力欄の上限が 100 文字のため、100 文字以内にしてください。"
+  },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {
     "description": "ピルの服用を忘れた際のカスタム通知メッセージの文字数制限を表示するテキストです。現在の入力文字数と最大文字数（100文字）を「現在文字数/100」の形式で表示します。",

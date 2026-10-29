@@ -14,7 +14,7 @@ _$ReminderNotificationCustomizationImpl _$$ReminderNotificationCustomizationImpl
       isInVisiblePillNumber: json['isInVisiblePillNumber'] as bool? ?? false,
       isInVisibleDescription: json['isInVisibleDescription'] as bool? ?? false,
       dailyTakenMessage: json['dailyTakenMessage'] as String? ?? '',
-      missedTakenMessage: json['missedTakenMessage'] as String? ?? '飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji',
+      missedTakenMessage: json['missedTakenMessage'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$ReminderNotificationCustomizationImplToJson(_$ReminderNotificationCustomizationImpl instance) => <String, dynamic>{
