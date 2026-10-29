@@ -378,6 +378,7 @@
   "lossOfAppetite": "მადის დაკარგვა",
   "chestTightness": "მკერდის დაჭიმულობა",
   "insomnia": "უძილობა",
+  "pauseStartingOtherDaysInstructions": "გთხოვთ, აირჩიოთ მიღების პაუზა. თუ მიღების პაუზის დაწყება დღევანდელის ნაცვლად სხვა დღიდან გსურთ, იხილეთ ქვემოთ მოცემული ინსტრუქცია.",
   "changePillDays": "აბების მიღების დღეების რაოდენობის შეცვლა",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "აბების მიღების განახლება",

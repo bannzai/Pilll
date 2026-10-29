@@ -378,6 +378,7 @@
   "lossOfAppetite": "Pèrdua de gana",
   "chestTightness": "Tensió als pits",
   "insomnia": "Insomni",
+  "pauseStartingOtherDaysInstructions": "Pots activar la pausa. Si vols començar la pausa un dia que no sigui avui, consulta les indicacions següents.",
   "changePillDays": "Canvia el nombre de dies que prens la píndola",
   "beginToEndNumbers": "Núm. {begin} - {end}",
   "resumeTaking": "Reprèn la píndola",

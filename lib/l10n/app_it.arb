@@ -378,6 +378,7 @@
   "lossOfAppetite": "Perdita di appetito",
   "chestTightness": "Tensione al seno",
   "insomnia": "Insonnia",
+  "pauseStartingOtherDaysInstructions": "Attiva la sospensione dell’assunzione. Se vuoi iniziare la sospensione in un giorno diverso da oggi, consulta le indicazioni qui sotto.",
   "changePillDays": "Modifica il numero di giorni di assunzione della pillola",
   "beginToEndNumbers": "dal n. {begin} al n. {end}",
   "resumeTaking": "Riprendi la pillola",

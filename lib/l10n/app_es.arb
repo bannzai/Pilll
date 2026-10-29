@@ -378,6 +378,7 @@
   "lossOfAppetite": "Pérdida de apetito",
   "chestTightness": "Tensión en los senos",
   "insomnia": "Insomnio",
+  "pauseStartingOtherDaysInstructions": "Activa la pausa. Si quieres comenzar la pausa un día distinto de hoy, consulta las indicaciones siguientes.",
   "changePillDays": "Cambiar los días de toma de la píldora",
   "beginToEndNumbers": "Del n.º {begin} al n.º {end}",
   "resumeTaking": "Reanudar la toma de la píldora",

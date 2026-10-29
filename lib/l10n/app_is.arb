@@ -378,6 +378,7 @@
   "lossOfAppetite": "Lystarleysi",
   "chestTightness": "Spenna í brjóstum",
   "insomnia": "Svefnleysi",
+  "pauseStartingOtherDaysInstructions": "Veldu pilluhlé. Ef þú vilt hefja pilluhlé á öðrum degi en í dag skaltu skoða leiðbeiningarnar hér að neðan.",
   "changePillDays": "Breyta fjölda daga sem pillan er tekin",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Byrja aftur að taka pilluna",

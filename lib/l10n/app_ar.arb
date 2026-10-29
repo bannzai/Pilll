@@ -378,6 +378,7 @@
   "lossOfAppetite": "فقدان الشهية",
   "chestTightness": "احتقان الثدي",
   "insomnia": "أرق",
+  "pauseStartingOtherDaysInstructions": "يرجى اختيار إيقاف تناول الحبوب. إذا أردتِ بدء إيقاف تناول الحبوب في يوم غير اليوم، فراجعي الخطوات أدناه.",
   "changePillDays": "تغيير عدد أيام تناول الحبوب",
   "beginToEndNumbers": "من الرقم {begin} إلى الرقم {end}",
   "resumeTaking": "استئناف تناول الحبوب",

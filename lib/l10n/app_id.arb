@@ -378,6 +378,7 @@
   "lossOfAppetite": "Hilang nafsu makan",
   "chestTightness": "Payudara terasa tegang",
   "insomnia": "Insomnia",
+  "pauseStartingOtherDaysInstructions": "Silakan pilih jeda minum pil. Jika Anda ingin memulai jeda minum pada hari selain hari ini, ikuti petunjuk di bawah.",
   "changePillDays": "Ubah jumlah hari minum pil",
   "beginToEndNumbers": "No. {begin} ~ {end}",
   "resumeTaking": "Mulai minum pil lagi",

@@ -378,6 +378,7 @@
   "lossOfAppetite": "Brak apetytu",
   "chestTightness": "Napięcie piersi",
   "insomnia": "Bezsenność",
+  "pauseStartingOtherDaysInstructions": "Wybierz opcję wstrzymania przyjmowania tabletek. Jeśli chcesz wstrzymać przyjmowanie od dnia innego niż dziś, skorzystaj z instrukcji poniżej.",
   "changePillDays": "Zmień liczbę dni przyjmowania tabletek",
   "beginToEndNumbers": "nr {begin}–{end}",
   "resumeTaking": "Wznów przyjmowanie tabletek",

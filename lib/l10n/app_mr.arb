@@ -378,6 +378,7 @@
   "lossOfAppetite": "भूक मंदावणे",
   "chestTightness": "स्तनांमध्ये ताण जाणवणे",
   "insomnia": "निद्रानाश",
+  "pauseStartingOtherDaysInstructions": "कृपया सेवन विराम निवडा. आजऐवजी दुसऱ्या दिवसापासून सेवन विराम सुरू करायचा असल्यास, खालील सूचना पाहा.",
   "changePillDays": "गोळी घेण्याच्या दिवसांची संख्या बदला",
   "beginToEndNumbers": "क्र. {begin} ~ {end}",
   "resumeTaking": "गोळी पुन्हा घेण्यास सुरुवात करा",

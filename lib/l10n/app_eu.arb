@@ -378,6 +378,7 @@
   "lossOfAppetite": "Jateko gogorik eza",
   "chestTightness": "Bularretako tentsioa",
   "insomnia": "Loezina",
+  "pauseStartingOtherDaysInstructions": "Aukeratu etenaldi. Etenaldia gaur ez den beste egun batean hasi nahi baduzu, begiratu beheko argibideak.",
   "changePillDays": "Aldatu pilula hartzeko egun kopurua",
   "beginToEndNumbers": "{begin}. ~ {end}. zenbakia",
   "resumeTaking": "Hasi berriro pilula hartzen",

@@ -378,6 +378,7 @@
   "lossOfAppetite": "Kawalan ng gana sa pagkain",
   "chestTightness": "Paninikip ng mga suso",
   "insomnia": "Hirap matulog",
+  "pauseStartingOtherDaysInstructions": "Piliin po ang pause sa pag-inom ng pildoras. Kung gusto ninyong simulan ang pause sa ibang araw, tingnan ang mga hakbang sa ibaba.",
   "changePillDays": "Baguhin ang bilang ng mga araw ng pag-inom ng pildoras",
   "beginToEndNumbers": "Blg. {begin} ~ {end}",
   "resumeTaking": "Ipagpatuloy ang pag-inom ng pildoras",

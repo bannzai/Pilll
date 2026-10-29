@@ -378,6 +378,7 @@
   "lossOfAppetite": "ආහාර රුචිය අඩුවීම",
   "chestTightness": "පියයුරු තද ගතිය",
   "insomnia": "නින්ද නොයාම",
+  "pauseStartingOtherDaysInstructions": "කරුණාකර පෙති ගැනීමේ විරාමය තෝරන්න. අද හැර වෙනත් දිනක සිට පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට අවශ්‍ය නම්, පහත උපදෙස් බලන්න.",
   "changePillDays": "පෙති ගන්නා දින ගණන වෙනස් කරන්න",
   "beginToEndNumbers": "අංක {begin} ~ {end}",
   "resumeTaking": "පෙති ගැනීම නැවත අරඹන්න",

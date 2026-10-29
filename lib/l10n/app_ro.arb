@@ -378,6 +378,7 @@
   "lossOfAppetite": "Lipsa poftei de mâncare",
   "chestTightness": "Tensiune la nivelul sânilor",
   "insomnia": "Insomnie",
+  "pauseStartingOtherDaysInstructions": "Alege întreruperea administrării pilulei. Dacă vrei să începi întreruperea în altă zi decât astăzi, consultă instrucțiunile de mai jos.",
   "changePillDays": "Schimbă numărul de zile în care iei pilula",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Reia administrarea pilulei",

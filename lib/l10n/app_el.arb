@@ -378,6 +378,7 @@
   "lossOfAppetite": "Απώλεια όρεξης",
   "chestTightness": "Τάση στους μαστούς",
   "insomnia": "Αϋπνία",
+  "pauseStartingOtherDaysInstructions": "Επιλέξτε παύση λήψης. Αν θέλετε να ξεκινήσει η παύση κάποια άλλη μέρα και όχι σήμερα, δείτε τις οδηγίες παρακάτω.",
   "changePillDays": "Αλλαγή αριθμού ημερών λήψης του χαπιού",
   "beginToEndNumbers": "αρ. {begin} ~ {end}",
   "resumeTaking": "Επανέναρξη λήψης",

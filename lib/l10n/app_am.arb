@@ -378,6 +378,7 @@
   "lossOfAppetite": "የምግብ ፍላጎት መቀነስ",
   "chestTightness": "የጡት መጠንከር",
   "insomnia": "እንቅልፍ ማጣት",
+  "pauseStartingOtherDaysInstructions": "እባክዎ ለጊዜው ማቆም ይምረጡ። ከዛሬ ውጪ በሌላ ቀን የክኒን ለጊዜው ማቆም መጀመር ከፈለጉ፣ እባክዎ ከታች ያለውን መመሪያ ይመልከቱ።",
   "changePillDays": "ክኒን የሚወሰድበትን የቀናት ብዛት ይቀይሩ",
   "beginToEndNumbers": "ቁጥር {begin} ~ {end}",
   "resumeTaking": "ክኒን መውሰድን እንደገና ይጀምሩ",

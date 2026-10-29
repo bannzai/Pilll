@@ -378,6 +378,7 @@
   "lossOfAppetite": "Étvágytalanság",
   "chestTightness": "Mellfeszülés",
   "insomnia": "Álmatlanság",
+  "pauseStartingOtherDaysInstructions": "Kérjük, válaszd a szüneteltet lehetőséget. Ha nem ma szeretnéd elkezdeni, a szüneteltet beállításához kövesd az alábbi útmutatót.",
   "changePillDays": "A tablettaszedési napok számának módosítása",
   "beginToEndNumbers": "{begin}.–{end}.",
   "resumeTaking": "A tabletta szedésének folytatása",

@@ -378,6 +378,7 @@
   "lossOfAppetite": "Ruokahaluttomuus",
   "chestTightness": "Rintojen pingotus",
   "insomnia": "Unettomuus",
+  "pauseStartingOtherDaysInstructions": "Ota taukotila käyttöön. Jos haluat aloittaa taukotilan muuna päivänä kuin tänään, katso alla olevat ohjeet.",
   "changePillDays": "Muuta pillereiden käyttöpäivien määrää",
   "beginToEndNumbers": "nro {begin}–{end}",
   "resumeTaking": "Aloita pillereiden ottaminen uudelleen",

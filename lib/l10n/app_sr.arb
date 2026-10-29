@@ -378,6 +378,7 @@
   "lossOfAppetite": "Губитак апетита",
   "chestTightness": "Напетост дојки",
   "insomnia": "Несаница",
+  "pauseStartingOtherDaysInstructions": "Молимо Вас, изаберите прекид узимања пилула. Ако желите да прекид почне неког другог дана, а не данас, погледајте упутство испод.",
   "changePillDays": "Промена броја дана узимања пилуле",
   "beginToEndNumbers": "бр. {begin} ~ {end}",
   "resumeTaking": "Наставак узимања пилула",

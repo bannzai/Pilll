@@ -378,6 +378,7 @@
   "lossOfAppetite": "İştahasızlıq",
   "chestTightness": "Döşlərdə gərginlik",
   "insomnia": "Yuxusuzluq",
+  "pauseStartingOtherDaysInstructions": "Zəhmət olmasa, Həb qəbuluna fasilə verin. Həb qəbuluna fasilə verməyə bu gündən başqa bir gün başlamaq istəyirsinizsə, aşağıdakı təlimata baxın.",
   "changePillDays": "Həb qəbul etdiyiniz günlərin sayını dəyişin",
   "beginToEndNumbers": "{begin}–{end} nömrələr",
   "resumeTaking": "Həb qəbuluna yenidən başlayın",

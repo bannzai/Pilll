@@ -378,6 +378,7 @@
   "lossOfAppetite": "Страта апетыту",
   "chestTightness": "Набраканне грудзей",
   "insomnia": "Бессань",
+  "pauseStartingOtherDaysInstructions": "Калі ласка, уключыце прыпын прыёму пігулак. Калі хочаце пачаць прыпын у іншы дзень, а не сёння, звярніцеся да інструкцыі ніжэй.",
   "changePillDays": "Змяніць колькасць дзён прыёму пігулак",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Аднавіць прыём пігулак",

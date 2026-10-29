@@ -378,6 +378,7 @@
   "lossOfAppetite": "Ukungakuthandi ukudla",
   "chestTightness": "Ukuqina kwamabele",
   "insomnia": "Ukuqwasha",
+  "pauseStartingOtherDaysInstructions": "Sicela ukhethe ukumisa okwesikhashana ukuphuza amaphilisi. Uma ufuna ukuqala ukumisa okwesikhashana ngolunye usuku ngaphandle kwanamuhla, bheka izinyathelo ezingezansi.",
   "changePillDays": "Sicela ushintshe inani lezinsuku zokuphuza amaphilisi",
   "beginToEndNumbers": "inombolo {begin} ~ {end}",
   "resumeTaking": "Sicela uqale futhi ukuphuza amaphilisi",

@@ -378,6 +378,7 @@
   "lossOfAppetite": "חוסר תיאבון",
   "chestTightness": "תחושת מלאות בשדיים",
   "insomnia": "נדודי שינה",
+  "pauseStartingOtherDaysInstructions": "יש לבחור השהיית נטילה. כדי להתחיל השהיית נטילה ביום שאינו היום, אפשר להיעזר בהנחיות שלמטה.",
   "changePillDays": "שינוי מספר ימי נטילת הגלולה",
   "beginToEndNumbers": "מס׳ {begin} ~ {end}",
   "resumeTaking": "לחזור לנטילת הגלולה",

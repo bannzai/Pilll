@@ -378,6 +378,7 @@
   "lossOfAppetite": "Isutus",
   "chestTightness": "Rindade pinge",
   "insomnia": "Unetus",
+  "pauseStartingOtherDaysInstructions": "Palun vali võtmise paus. Kui soovid alustada võtmise pausi mõnel muul päeval kui täna, vaata allolevaid juhiseid.",
   "changePillDays": "Muuda pilli võtmise päevade arvu",
   "beginToEndNumbers": "nr {begin} ~ {end}",
   "resumeTaking": "Jätka pilli võtmist",

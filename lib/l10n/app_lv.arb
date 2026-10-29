@@ -378,6 +378,7 @@
   "lossOfAppetite": "Apetītes zudums",
   "chestTightness": "Krūšu pietūkums",
   "insomnia": "Bezmiegs",
+  "pauseStartingOtherDaysInstructions": "Lūdzu, izvēlieties lietošanas pauzi. Ja vēlaties sākt lietošanas pauzi citā dienā, nevis šodien, skatiet tālāk sniegtos norādījumus.",
   "changePillDays": "Mainīt tablešu lietošanas dienu skaitu",
   "beginToEndNumbers": "Nr. {begin} ~ {end}",
   "resumeTaking": "Atsākt tablešu lietošanu",

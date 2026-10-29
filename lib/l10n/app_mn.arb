@@ -378,6 +378,7 @@
   "lossOfAppetite": "Хоолны дуршил буурах",
   "chestTightness": "Хөх хөндүүрлэж чинэрэх",
   "insomnia": "Нойргүйдэл",
+  "pauseStartingOtherDaysInstructions": "Эм уухаа түр завсарлага авахыг сонгоно уу. Түр завсарлага өнөөдрөөс өөр өдөр эхлүүлэхийг хүсвэл доорх зааврыг үзнэ үү.",
   "changePillDays": "Эм уух өдрийн тоог өөрчлөх",
   "beginToEndNumbers": "№ {begin} ~ {end}",
   "resumeTaking": "Эм уухыг дахин эхлүүлэх",

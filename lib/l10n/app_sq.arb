@@ -378,6 +378,7 @@
   "lossOfAppetite": "Humbje e oreksit",
   "chestTightness": "Tendosje e gjinjve",
   "insomnia": "Pagjumësi",
+  "pauseStartingOtherDaysInstructions": "Zgjidhni pauzën e marrjes së pilulave. Nëse doni ta filloni pauzën një ditë tjetër, shihni udhëzimet më poshtë.",
   "changePillDays": "Ndryshoni numrin e ditëve të marrjes së pilulës",
   "beginToEndNumbers": "nr. {begin} ~ {end}",
   "resumeTaking": "Rifilloni marrjen e pilulës",

@@ -378,6 +378,7 @@
   "lossOfAppetite": "भूख में कमी",
   "chestTightness": "स्तनों में भारीपन",
   "insomnia": "अनिद्रा",
+  "pauseStartingOtherDaysInstructions": "कृपया गोली लेने में विराम चुनें। अगर आप आज के अलावा किसी और दिन से गोली लेने में विराम शुरू करना चाहती हैं, तो नीचे दिए गए निर्देश देखें।",
   "changePillDays": "गोली लेने के दिनों की संख्या बदलें",
   "beginToEndNumbers": "नं. {begin} ~ {end}",
   "resumeTaking": "गोली लेना फिर शुरू करें",

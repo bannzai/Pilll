@@ -378,6 +378,7 @@
   "lossOfAppetite": "Kupoteza hamu ya kula",
   "chestTightness": "Kujaa kwa matiti",
   "insomnia": "Kukosa usingizi",
+  "pauseStartingOtherDaysInstructions": "Tafadhali chagua kusitisha kumeza vidonge. Ikiwa ungependa kuanza kusitisha siku nyingine badala ya leo, angalia maelekezo hapa chini.",
   "changePillDays": "Badilisha idadi ya siku za kumeza vidonge",
   "beginToEndNumbers": "Nambari {begin} ~ {end}",
   "resumeTaking": "Anza tena kumeza vidonge",

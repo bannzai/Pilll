@@ -378,6 +378,7 @@
   "lossOfAppetite": "Nedsatt matlyst",
   "chestTightness": "Ømme bryster",
   "insomnia": "Søvnløshet",
+  "pauseStartingOtherDaysInstructions": "Velg inntakspause. Hvis du vil starte inntakspausen en annen dag enn i dag, kan du følge veiledningen nedenfor.",
   "changePillDays": "Endre antall dager du tar p-piller",
   "beginToEndNumbers": "nr. {begin}–{end}",
   "resumeTaking": "Begynn å ta p-pillen igjen",

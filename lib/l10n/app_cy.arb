@@ -378,6 +378,7 @@
   "lossOfAppetite": "Colli archwaeth",
   "chestTightness": "Tyndra yn y bronnau",
   "insomnia": "Anhunedd",
+  "pauseStartingOtherDaysInstructions": "Dewiswch oedi, os gwelwch yn dda. Os hoffech ddechrau'r oedi ar ddiwrnod heblaw heddiw, gweler y camau isod.",
   "changePillDays": "Newid nifer y diwrnodau cymryd y bilsen",
   "beginToEndNumbers": "rhif {begin} ~ {end}",
   "resumeTaking": "Ailddechrau cymryd y bilsen",

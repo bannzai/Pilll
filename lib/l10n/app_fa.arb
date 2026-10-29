@@ -378,6 +378,7 @@
   "lossOfAppetite": "کاهش اشتها",
   "chestTightness": "احساس کشیدگی در سینه‌ها",
   "insomnia": "بی‌خوابی",
+  "pauseStartingOtherDaysInstructions": "لطفاً توقف موقت مصرف را انتخاب کنید. اگر می‌خواهید توقف موقت مصرف را از روزی غیر از امروز شروع کنید، راهنمای زیر را ببینید.",
   "changePillDays": "تغییر تعداد روزهای مصرف قرص",
   "beginToEndNumbers": "شمارهٔ {begin} تا {end}",
   "resumeTaking": "شروع دوباره مصرف قرص",
