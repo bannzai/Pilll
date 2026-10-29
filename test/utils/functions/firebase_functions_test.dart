@@ -1,7 +1,36 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/inquiry.codegen.dart';
 import 'package:pilll/utils/functions/firebase_functions.dart';
 
+import '../../helper/mock.mocks.dart';
+
 void main() {
+  group('#inquiry', () {
+    test('DEBUG ビルド (flutter test は kDebugMode が true) では test: true を付けて送る',
+        () async {
+      final firebaseFunctions = MockFirebaseFunctions();
+      final httpsCallable = MockHttpsCallable();
+      final httpsCallableResult = MockHttpsCallableResult();
+      when(firebaseFunctions.httpsCallable('inquiry'))
+          .thenReturn(httpsCallable);
+      when(httpsCallable.call(any))
+          .thenAnswer((_) async => httpsCallableResult);
+      when(httpsCallableResult.data)
+          .thenReturn(<dynamic, dynamic>{'inquiryId': 'inquiry-id'});
+
+      final inquiryID = await firebaseFunctions.inquiry(
+        inquiryType: InquiryType.values.first,
+        email: 'test@example.com',
+        content: 'content',
+      );
+
+      expect(inquiryID, 'inquiry-id');
+      expect(
+          verify(httpsCallable.call(captureAny)).captured.single['test'], true);
+    });
+  });
+
   group('#mapToJSON', () {
     test('フラットなMapを変換できる', () {
       final input = <dynamic, dynamic>{
