@@ -380,6 +380,7 @@
   "insomnia": "Нойргүйдэл",
   "pauseStartingOtherDaysInstructions": "Та түр завсарлаг эхлүүлнэ үү. Хэрэв та өнөөдрөөс өөр өдөр түр завсарлаг эхлүүлэхийг хүсвэл доорх зааврыг харна уу.",
   "seeHowToUsePauseTakingFeature": "Эм уух түр завсарлаг функцийг хэрхэн ашиглахыг үзнэ үү",
+  "startPauseTakingLabel": "Эм уух түр завсарлаг эхлүүлнэ үү",
   "pauseTakingChanged": "Түр завсарлагын хугацааг өөрчилсөн",
   "editPausePeriod": "Түр завсарлагын хугацааг засах",
   "changePillDays": "Эм уух өдрийн тоог өөрчлөх",
