@@ -34,9 +34,9 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 /// PageView + DotsIndicator の組み合わせをそのまま利用する。
 ///
 /// ヘッダーの日付・番号単位は本番 RecordPageInformationHeader と同じ [DateTimeFormatter]・
-/// [L.number] を使う。日付書式は Platform.localeName(=端末言語)由来のため、撮影時は
-/// capture_screenshots.sh が言語ごとに Simulator の言語を切り替える(ロケールの日付データは
-/// main.dev.dart のカタログ分岐で initializeDateFormatting 済み)。
+/// [L.number] を使う。日付書式は Intl.defaultLocale 由来で、撮影する言語 [lang] への切り替えは
+/// applyCatalogLanguage（カタログ）と generate_screenshots_test.dart（widget test）が [L] と一緒に行う
+/// (ロケールの日付データは main.dev.dart のカタログ分岐で initializeDateFormatting 済み)。
 class MockRecordScreen extends StatelessWidget {
   const MockRecordScreen({super.key, required this.lang});
 

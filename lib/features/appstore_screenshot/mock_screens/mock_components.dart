@@ -24,7 +24,7 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 ///
 /// RecordPagePillSheet 等の本番コンポーネントは内部で `today()`/`now()`（lib/utils/datetime/day.dart）
 /// を参照するため、テストと同じ方式（`todayRepository = ...`）で固定する。また本番の
-/// DateTimeFormatter は `Platform.localeName`（Simulator のシステムロケール）で intl の DateFormat を
+/// DateTimeFormatter は `Intl.defaultLocale`（撮影する言語）で intl の DateFormat を
 /// 使うため、entrypoint() を通さないカタログでは未初期化のままだと LocaleDataException になる。
 /// そのため呼び出し時に毎回 initializeDateFormatting しておく（同じロケールへの再初期化は無害）。
 ///
@@ -99,7 +99,7 @@ class PillCapsule extends StatelessWidget {
 /// `RegisterReminderLocalNotification.run` 内、`premiumOrTrial` 分岐のタイトル組み立て：
 /// `${word} ${month}/${day} (${weekday}) ${pillNumber}${L.number}`、
 /// デフォルト word は [pillEmoji]）に合わせた文言。DateTimeFormatter/L.number は
-/// `Platform.localeName`（Simulator のシステムロケール）と [L] を使うため、全撮影言語で
+/// `Intl.defaultLocale`（撮影する言語）と [L] を使うため、全撮影言語で
 /// 本番と同じ日付・曜日・番号単位になる。
 String reminderNotificationSampleBody() {
   final date = DateTime(2026, 7, 18);
