@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Odabir datuma početka prekida",
   "selectPausePeriod": "Odaberite razdoblje prekida",
   "pauseStartDate": "Datum početka prekida",
+  "pauseEndDate": "Datum završetka prekida",
   "endPillSheet": "Blister završen",
   "discardPillSheet": "Blister odbačen",
   "takingTime": "Vrijeme uzimanja pilule",

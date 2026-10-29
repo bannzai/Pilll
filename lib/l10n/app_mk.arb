@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Избор на датум за почеток на прекин",
   "selectPausePeriod": "Избор на период на прекин",
   "pauseStartDate": "Датум на почеток на прекин",
+  "pauseEndDate": "Датум на завршување на прекин",
   "endPillSheet": "Крај на блистер",
   "discardPillSheet": "Бришење блистер",
   "takingTime": "Време за земање таблета",
