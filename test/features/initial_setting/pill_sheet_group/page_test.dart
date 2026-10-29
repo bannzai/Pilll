@@ -1,9 +1,17 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
+import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/page.dart';
 import 'package:pilll/features/initial_setting/yaz_flex/page.dart';
@@ -38,6 +46,87 @@ void main() {
       await tester.pump(const Duration(milliseconds: 500));
     }
   }
+
+  group("#InitialSettingPillSheetGroupPage ピルの種類の選択シートを開いた時の見出し", () {
+    // iOS で欧文の見出しを描画する San Francisco の実体。テスト既定のフォント (全グリフが正方形) では欧文の行数が実機より大きく増え、実機の見え方を検証できないため
+    final sanFranciscoFontFile = File('/System/Library/Fonts/SFNS.ttf');
+    setUpAll(() async {
+      if (!sanFranciscoFontFile.existsSync()) {
+        return;
+      }
+      // 見出しが指定する FontFamily.japanese は端末に無く、iOS の欧文は San Francisco で描画される。その状態をテストで再現する
+      await (FontLoader(FontFamily.japanese)
+            ..addFont(Future.value(
+                ByteData.sublistView(sanFranciscoFontFile.readAsBytesSync()))))
+          .load();
+    });
+    // iPhone 17 (402 × 874pt、上の安全領域 62pt) と iPhone SE (375 × 667pt、上の安全領域 20pt)
+    final devices = {
+      'iPhone 17': (size: const Size(402, 874), topPadding: 62.0),
+      'iPhone SE': (size: const Size(375, 667), topPadding: 20.0),
+    };
+    for (final MapEntry(key: deviceName, value: device) in devices.entries) {
+      for (final lang in ['ja', 'en', 'de', 'es', 'fr', 'pt', 'ko', 'zh']) {
+        testWidgets("$deviceName・$lang で背景の見出しの全行がシートの上端より上に見える",
+            (WidgetTester tester) async {
+          final originalL = L;
+          addTearDown(() => L = originalL);
+          L = lookupAppLocalizations(Locale(lang));
+          tester.view.physicalSize = device.size;
+          tester.view.devicePixelRatio = 1;
+          tester.view.padding = FakeViewPadding(top: device.topPadding);
+          tester.view.viewPadding = FakeViewPadding(top: device.topPadding);
+          addTearDown(tester.view.reset);
+
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                initialSettingStateNotifierProvider.overrideWith(
+                  (ref) => InitialSettingStateNotifier(
+                    MockEndInitialSetting(),
+                    MockBatchFactory(),
+                    MockBatchSetSetting(),
+                    MockBatchSetPillSheetModifiedHistory(),
+                    MockBatchSetPillSheetGroup(),
+                    MockRegisterReminderLocalNotificationRunner(),
+                    DateTime.parse("2022-03-02"),
+                  ),
+                ),
+                firebaseUserStateProvider
+                    .overrideWith((ref) => Stream.value(null)),
+                isAppleLinkedProvider.overrideWithValue(false),
+                isGoogleLinkedProvider.overrideWithValue(false),
+              ],
+              child:
+                  const MaterialApp(home: InitialSettingPillSheetGroupPage()),
+            ),
+          );
+          await tester.pumpAndSettle();
+
+          await tester.tap(find.descendant(
+              of: find.byType(AddPillSheetTypeEmpty),
+              matching: find.byType(PrimaryButton)));
+          await tester.pumpAndSettle();
+          // シートのボタン・カードの文字はテスト用フォントだと横にはみ出すことがある。このテストの対象ではないので RenderFlex overflow の例外を捨てる
+          tester.takeException();
+
+          final headingBottom = tester
+              .getBottomLeft(find
+                  .descendant(
+                      of: find.byType(SingleChildScrollView),
+                      matching: find.byType(Text))
+                  .first)
+              .dy;
+          final sheetTop = tester
+              .getTopLeft(find.descendant(
+                  of: find.byType(PillSheetGroupSelectPillSheetTypePage),
+                  matching: find.byType(ListView)))
+              .dy;
+          expect(headingBottom, lessThanOrEqualTo(sheetTop));
+        }, skip: !sanFranciscoFontFile.existsSync());
+      }
+    }
+  });
 
   group("#InitialSettingPillSheetGroupPage 既存アカウントでのログイン", () {
     // 初期設定 (InitialSettingYazFlexPage が最初のルート) とホームを切り替える InitialSettingOrAppPage の代わり
