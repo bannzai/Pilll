@@ -113,6 +113,7 @@
   "discardPillSheet": "מחיקת חפיסת הגלולות",
   "takingTime": "שעת נטילת הגלולה",
   "takingHistoryIsPremiumFeature": "היסטוריית נטילה היא תכונת פרימיום",
+  "pauseTakingDoesNotAdvancePillNumber": "בזמן השהיית נטילה, מספר גלולה אינו מתקדם",
   "pauseTakingFromNumber": "להשהות את נטילת הגלולות החל מגלולה מספר {number}?",
   "lastTakenPlusOnePillNumber": "גלולה מספר {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "נטילת גלולה",

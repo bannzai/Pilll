@@ -113,6 +113,7 @@
   "discardPillSheet": "Брисање блистера",
   "takingTime": "Време узимања пилуле",
   "takingHistoryIsPremiumFeature": "Историја узимања је премијум функција",
+  "pauseTakingDoesNotAdvancePillNumber": "Током прекида узимања пилуле, број пилуле се неће померати",
   "lastTakenPlusOnePillNumber": "Пилула бр. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Узимање пилуле",
   "estimatedEndPillNumber": "Последња пилула у претходном блистеру: бр. {estimatedEndPillNumber}",

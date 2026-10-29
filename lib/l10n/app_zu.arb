@@ -113,6 +113,7 @@
   "discardPillSheet": "Ukulahlwa kweshidi lamaphilisi",
   "takingTime": "Isikhathi sokuphuza iphilisi",
   "takingHistoryIsPremiumFeature": "Umlando wokuphuza amaphilisi uyisici se-Premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Uma umisa okwesikhashana ukuphuza iphilisi, nombolo yephilisi ngeke iqhubekele phambili",
   "pauseTakingFromNumber": "Ungathanda yini ukumisa ukuphuza amaphilisi okwesikhashana kusukela ephilisini elingunombolo {number}?",
   "lastTakenPlusOnePillNumber": "Iphilisi elingunombolo {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ukuphuza iphilisi",

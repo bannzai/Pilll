@@ -113,6 +113,7 @@
   "discardPillSheet": "Blister aruncat",
   "takingTime": "Ora la care iei pilula",
   "takingHistoryIsPremiumFeature": "Istoricul administrării pilulei este o funcție premium",
+  "pauseTakingDoesNotAdvancePillNumber": "Când întrerupi administrarea pilulei, numărul pilulei nu avansează",
   "pauseTakingFromNumber": "Vrei să întrerupi temporar administrarea pilulelor începând cu pilula numărul {number}?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Administrarea pilulei",
