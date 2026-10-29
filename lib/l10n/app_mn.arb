@@ -404,6 +404,7 @@
   "cannotPauseAlreadyTakenToday": "Хэрэв өнөөдрийн эмээ аль хэдийн уусан бол\n«түр завсарлаг» эхлүүлэх боломжгүй",
   "pauseTakingStarted": "Эм уух түр завсарлаг эхэлсэн",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "Эм уух түр завсарлагийн эхлэх өдрийг засах",
   "shareWithFriends": "Найзууддаа санал болгох",
   "termsOfService": "Үйлчилгээний нөхцөл",
   "privacyPolicy": "Нууцлалын бодлого",
