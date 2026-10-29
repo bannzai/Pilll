@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Zabeležite obdobje prekinitve pri jemanju tablet",
   "restDurationFeatureAppealShortDescription": "Natančno spremljajte obdobja, ko začasno ne jemljete tablet",
   "restDurationFeatureAppealHeadline": "Začasno prekinite jemanje tabletke",
+  "restDurationFeatureAppealBody": "Na ploščic lahko zabeležite obdobje, ko za nekaj časa prekinete jemanje tablet. Med tem premorom številka tablete ne napreduje, ko pa jih začnete znova jemati, lahko takoj nadaljujete beleženje.",
   "featureAppealLocationLabel": "Lokacija v aplikaciji",
   "criticalAlertFeatureAppealPoint1": "Obvestila prejemate tudi v načinu osredotočanja",
   "criticalAlertFeatureAppealPoint2": "Zanesljiv opomnik ob času, ki ste ga nastavili",

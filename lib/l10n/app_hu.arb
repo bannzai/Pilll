@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Rögzítsd, mettől meddig szeretnéd szüneteltetni a tabletta szedését",
   "restDurationFeatureAppealShortDescription": "Kövesd pontosan a tabletta szedésének megszakításait",
   "restDurationFeatureAppealHeadline": "A tabletta szedésének szüneteltetése",
+  "restDurationFeatureAppealBody": "A tablettacsomagban rögzítheted, ha egy időre szünetelteted a tabletta szedését. A szünet alatt a tabletta sorszáma nem lép tovább, és a szedés folytatásakor rögtön újra rögzítheted a bevételeket.",
   "featureAppealLocationLabel": "Hol találod az alkalmazásban",
   "criticalAlertFeatureAppealPoint1": "Fókusz módban is megkapod az értesítéseket",
   "criticalAlertFeatureAppealPoint2": "Megbízható emlékeztető az általad beállított időpontban",

@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "ثبت دوره توقف موقت مصرف",
   "restDurationFeatureAppealShortDescription": "توقف‌های مصرف قرص را دقیق ثبت کنید",
   "restDurationFeatureAppealHeadline": "توقف موقت در مصرف قرص",
+  "restDurationFeatureAppealBody": "می‌توانید مدتی را که مصرف قرص را موقتاً متوقف می‌کنید، در ورق قرص ثبت کنید. در این وقفه، شماره قرص جلو نمی‌رود و به‌محض شروع دوباره مصرف، می‌توانید ثبت را ادامه دهید.",
   "featureAppealLocationLabel": "محل آن در برنامه",
   "criticalAlertFeatureAppealPoint1": "دریافت اعلان حتی در حالت تمرکز",
   "criticalAlertFeatureAppealPoint2": "یادآوری مطمئن در ساعت تنظیم‌شده",

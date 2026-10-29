@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Regjistroni periudhën e pauzës së marrjes së pilulave",
   "restDurationFeatureAppealShortDescription": "Ndiqni me saktësi ndërprerjet e përkohshme të marrjes së pilulës",
   "restDurationFeatureAppealHeadline": "Ndërpriteni përkohësisht marrjen e pilulës",
+  "restDurationFeatureAppealBody": "Mund të shënoni në blister periudhën kur ndaloni përkohësisht marrjen e pilulave. Gjatë kësaj pauze, numri i pilulës nuk ecën përpara dhe mund të vazhdoni menjëherë regjistrimin kur të rifilloni marrjen e tyre.",
   "featureAppealLocationLabel": "Ku ta gjeni në aplikacion",
   "criticalAlertFeatureAppealPoint1": "Merrni njoftime edhe kur është aktiv modaliteti i përqendrimit",
   "criticalAlertFeatureAppealPoint2": "Kujtesë e besueshme në orën që keni caktuar",

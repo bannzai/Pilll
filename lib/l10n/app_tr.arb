@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Hap almaya ara verme dönemini kaydedin",
   "restDurationFeatureAppealShortDescription": "Hap alımına geçici olarak ara verdiğiniz dönemleri doğru takip edin",
   "restDurationFeatureAppealHeadline": "Hap alımına geçici olarak ara verin",
+  "restDurationFeatureAppealBody": "Hap almayı bir süreliğine bıraktığınız dönemi blister üzerinde kaydedebilirsiniz. Bu ara boyunca hap numarası ilerlemez; yeniden almaya başladığınızda kayıt tutmaya hemen devam edebilirsiniz.",
   "featureAppealLocationLabel": "Uygulamadaki yeri",
   "criticalAlertFeatureAppealPoint1": "Odak modu açıkken de bildirim alırsınız",
   "criticalAlertFeatureAppealPoint2": "Ayarladığınız saatte güvenilir hatırlatma",

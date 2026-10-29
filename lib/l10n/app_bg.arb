@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Запис на периода на спиране на приема",
   "restDurationFeatureAppealShortDescription": "Проследявайте точно прекъсванията на приема на хапчета",
   "restDurationFeatureAppealHeadline": "Временно спрете приема на хапчето",
+  "restDurationFeatureAppealBody": "Можете да отбележите в блистер периода, през който временно спирате приема на хапчетата. Докато сте спрели приема, номерът на хапчето не се променя, а когато го подновите, можете веднага да продължите със записите.",
   "featureAppealLocationLabel": "Място в приложението",
   "criticalAlertFeatureAppealPoint1": "Получавате известия дори в режим „Фокус“",
   "criticalAlertFeatureAppealPoint2": "Надеждно напомняне в зададения от вас час",

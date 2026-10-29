@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "تسجيل فترة إيقاف تناول الحبوب",
   "restDurationFeatureAppealShortDescription": "تتبعي فترات التوقف عن تناول الحبوب بدقة",
   "restDurationFeatureAppealHeadline": "إيقاف تناول الحبوب مؤقتًا",
+  "restDurationFeatureAppealBody": "يمكنكِ تسجيل فترة تتوقفين فيها مؤقتًا عن تناول الحبوب على شريط الحبوب. خلال هذا التوقف، لا يتقدم رقم الحبة، ويمكنكِ استئناف التسجيل فور استئناف التناول.",
   "featureAppealLocationLabel": "مكانها في التطبيق",
   "criticalAlertFeatureAppealPoint1": "تصلكِ الإشعارات حتى أثناء وضع التركيز",
   "criticalAlertFeatureAppealPoint2": "تذكير موثوق في الوقت المحدد",

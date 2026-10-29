@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Қабылдаудағы кідіріс кезеңін белгілеңіз",
   "restDurationFeatureAppealShortDescription": "Таблетка қабылдауды уақытша тоқтатуды дәл қадағалаңыз",
   "restDurationFeatureAppealHeadline": "Таблетка қабылдауды уақытша тоқтатыңыз",
+  "restDurationFeatureAppealBody": "Таблеткаларды қабылдауды уақытша тоқтататын кезеңді таблетка блистер ішінде белгілей аласыз. Осы үзіліс кезінде таблетка нөмірі өзгермейді, ал қабылдауды қайта бастағанда жазбаларды бірден жалғастыра аласыз.",
   "featureAppealLocationLabel": "Қолданбадағы орны",
   "criticalAlertFeatureAppealPoint1": "Зейін қою режимінде де хабарландырулар аласыз",
   "criticalAlertFeatureAppealPoint2": "Сіз белгілеген уақытта сенімді еске салу",

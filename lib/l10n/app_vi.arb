@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Ghi lại thời gian tạm ngừng uống thuốc",
   "restDurationFeatureAppealShortDescription": "Theo dõi chính xác những lần tạm ngừng uống thuốc",
   "restDurationFeatureAppealHeadline": "Tạm dừng uống thuốc",
+  "restDurationFeatureAppealBody": "Bạn có thể ghi lại khoảng thời gian tạm ngừng uống thuốc trên vỉ thuốc. Trong thời gian tạm ngừng này, số thứ tự viên thuốc không tăng và bạn có thể ghi tiếp ngay khi bắt đầu uống lại.",
   "featureAppealLocationLabel": "Vị trí trong ứng dụng",
   "criticalAlertFeatureAppealPoint1": "Bạn vẫn nhận được thông báo khi bật chế độ Tập trung",
   "criticalAlertFeatureAppealPoint2": "Chắc chắn nhắc bạn đúng giờ đã đặt",

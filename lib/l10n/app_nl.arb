@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Periode van de innamepauze vastleggen",
   "restDurationFeatureAppealShortDescription": "Houd onderbrekingen in het slikken van de pil nauwkeurig bij",
   "restDurationFeatureAppealHeadline": "Pauzeer het innemen van de pil",
+  "restDurationFeatureAppealBody": "Je kunt op je pillenstrip vastleggen wanneer je een tijdje stopt met de pil. Tijdens deze pauze blijft het pilnummer gelijk en kun je meteen weer registreren zodra je de pil opnieuw neemt.",
   "featureAppealLocationLabel": "Waar je het in de app vindt",
   "criticalAlertFeatureAppealPoint1": "Je ontvangt meldingen, ook als de focusmodus aanstaat",
   "criticalAlertFeatureAppealPoint2": "Een betrouwbare herinnering op het door jou ingestelde tijdstip",

@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "บันทึกช่วงเวลาที่หยุดกินยาชั่วคราว",
   "restDurationFeatureAppealShortDescription": "บันทึกช่วงที่พักการทานยาไว้ได้อย่างแม่นยำ",
   "restDurationFeatureAppealHeadline": "พักการทานยาเม็ดชั่วคราว",
+  "restDurationFeatureAppealBody": "บันทึกช่วงที่หยุดทานยาชั่วคราวไว้บนแผงยาได้ค่ะ ระหว่างที่พักการทานยา หมายเลขเม็ดยาจะไม่เลื่อนไป และเมื่อกลับมาทานยาอีกครั้งก็เริ่มบันทึกต่อได้ทันทีค่ะ",
   "featureAppealLocationLabel": "ตำแหน่งในแอป",
   "criticalAlertFeatureAppealPoint1": "ได้รับการแจ้งเตือนแม้เปิดโหมดโฟกัสอยู่",
   "criticalAlertFeatureAppealPoint2": "แจ้งเตือนตรงเวลาที่ตั้งไว้อย่างแน่นอน",

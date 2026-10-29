@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Registrer perioden med inntakspause",
   "restDurationFeatureAppealShortDescription": "Hold nøyaktig oversikt over avbrudd i bruken av p-piller",
   "restDurationFeatureAppealHeadline": "Ta en pause fra p-pillene",
+  "restDurationFeatureAppealBody": "Du kan registrere en periode der du tar en pause fra pillene, på pillebrettet. I denne pausen går ikke pillenummeret videre, og du kan fortsette å registrere med en gang du begynner å ta dem igjen.",
   "featureAppealLocationLabel": "Hvor du finner det i appen",
   "criticalAlertFeatureAppealPoint1": "Du får varsler selv når Fokus er på",
   "criticalAlertFeatureAppealPoint2": "En pålitelig påminnelse til tiden du har valgt",

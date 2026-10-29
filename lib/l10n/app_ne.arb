@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "सेवन विरामको अवधि टिप्नुहोस्",
   "restDurationFeatureAppealShortDescription": "चक्की खान अस्थायी रूपमा रोकिएको समयको सही अभिलेख राख्नुहोस्",
   "restDurationFeatureAppealHeadline": "चक्की खान केही समय रोक्नुहोस्",
+  "restDurationFeatureAppealBody": "केही समय चक्की खान रोक्ने अवधि चक्की पत्तामा टिप्न सक्नुहुन्छ। यो विराममा चक्कीको नम्बर अगाडि बढ्दैन, र फेरि खान थालेपछि तुरुन्तै रेकर्ड राख्न जारी राख्न सक्नुहुन्छ।",
   "featureAppealLocationLabel": "एपमा कहाँ फेला पार्ने",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड चालु हुँदा पनि तपाईंले सूचना पाउनुहुन्छ",
   "criticalAlertFeatureAppealPoint2": "तपाईंले तोकेको समयमा भरपर्दो सम्झाउने सूचना",

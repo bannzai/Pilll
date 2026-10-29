@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Zaznamenat období pozastavení užívání",
   "restDurationFeatureAppealShortDescription": "Přesně sledovat přerušení užívání pilulek",
   "restDurationFeatureAppealHeadline": "Dočasně pozastavit užívání pilulky",
+  "restDurationFeatureAppealBody": "Do blistru si můžete zaznamenat období, kdy na čas přestanete užívat pilulky. Během této pauzy se číslo pilulky neposouvá a po obnovení užívání můžete hned pokračovat v záznamech.",
   "featureAppealLocationLabel": "Kde to najdete v aplikaci",
   "criticalAlertFeatureAppealPoint1": "Oznámení dostáváte i v režimu soustředění",
   "criticalAlertFeatureAppealPoint2": "Spolehlivé připomenutí v nastavený čas",

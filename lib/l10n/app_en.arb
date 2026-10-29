@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Record the pause period",
   "restDurationFeatureAppealShortDescription": "Track pauses in taking your pill accurately",
   "restDurationFeatureAppealHeadline": "Pause taking your pill",
+  "restDurationFeatureAppealBody": "You can record a temporary pause in taking your pills on your pill pack. During the pause, the pill number stays the same. You can start recording again as soon as you resume taking them.",
   "featureAppealLocationLabel": "Where to find it in the app",
   "criticalAlertFeatureAppealPoint1": "Get notifications even in Focus mode",
   "criticalAlertFeatureAppealPoint2": "A reliable reminder at your chosen time",

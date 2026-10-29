@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "ບັນທຶກໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວ",
   "restDurationFeatureAppealShortDescription": "ກະລຸນາບັນທຶກໄລຍະທີ່ຢຸດກິນຢາຊົ່ວຄາວໃຫ້ຖືກຕ້ອງ",
   "restDurationFeatureAppealHeadline": "ພັກການກິນຢາເມັດໄວ້ຊົ່ວຄາວ",
+  "restDurationFeatureAppealBody": "ສາມາດບັນທຶກໄລຍະທີ່ຢຸດກິນຢາຄຸມຊົ່ວຄາວໄວ້ໃນແຜງຢາຄຸມໄດ້. ໃນຊ່ວງທີ່ຢຸດນີ້ ເລກຢາຈະບໍ່ເລື່ອນໄປ ແລະສາມາດບັນທຶກຕໍ່ໄດ້ທັນທີເມື່ອກັບມາກິນອີກ.",
   "featureAppealLocationLabel": "ບ່ອນທີ່ພົບໄດ້ໃນແອັບ",
   "criticalAlertFeatureAppealPoint1": "ຍັງໄດ້ຮັບການແຈ້ງເຕືອນ ແມ່ນແຕ່ໃນໂໝດຕັ້ງໃຈ",
   "criticalAlertFeatureAppealPoint2": "ແຈ້ງເຕືອນຢ່າງເຊື່ອຖືໄດ້ໃນເວລາທີ່ຕັ້ງໄວ້",

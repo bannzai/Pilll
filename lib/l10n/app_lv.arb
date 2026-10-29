@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Reģistrēt lietošanas pauzes periodu",
   "restDurationFeatureAppealShortDescription": "Precīzi sekojiet līdzi periodiem, kad uz laiku pārtraucat lietot tabletes",
   "restDurationFeatureAppealHeadline": "Uz laiku pārtrauciet tablešu lietošanu",
+  "restDurationFeatureAppealBody": "Varat tablešu blister atzīmēt laiku, kad uz brīdi pārtraucat tablešu lietošanu. Šīs pauzes laikā tabletes numurs nemainās, un, atsākot lietošanu, varat uzreiz turpināt ierakstus.",
   "featureAppealLocationLabel": "Kur to atrast lietotnē",
   "criticalAlertFeatureAppealPoint1": "Saņemsiet paziņojumus arī tad, kad ir ieslēgts fokusēšanās režīms",
   "criticalAlertFeatureAppealPoint2": "Uzticams atgādinājums jūsu iestatītajā laikā",

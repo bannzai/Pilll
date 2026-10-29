@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Cofnodi cyfnod oedi cymryd y bilsen",
   "restDurationFeatureAppealShortDescription": "Cadwch gofnod cywir o gyfnodau pan nad ydych yn cymryd y bilsen",
   "restDurationFeatureAppealHeadline": "Cymryd saib o gymryd y bilsen",
+  "restDurationFeatureAppealBody": "Gallwch gofnodi cyfnod pan fyddwch yn rhoi’r gorau i gymryd y pils am ychydig ar eich stribed pils. Yn ystod yr egwyl hon, nid yw rhif y bilsen yn symud ymlaen, a gallwch ailddechrau cofnodi cyn gynted ag y byddwch yn dechrau eu cymryd eto.",
   "featureAppealLocationLabel": "Lle yn yr ap",
   "criticalAlertFeatureAppealPoint1": "Byddwch chi'n cael hysbysiadau hyd yn oed pan fydd y modd ffocws ymlaen",
   "criticalAlertFeatureAppealPoint2": "Nodyn atgoffa dibynadwy ar yr amser rydych chi wedi’i osod",

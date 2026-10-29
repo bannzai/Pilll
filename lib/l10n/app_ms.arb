@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Catat tempoh jeda pengambilan pil",
   "restDurationFeatureAppealShortDescription": "Catat dengan tepat apabila anda berhenti mengambil pil buat sementara waktu",
   "restDurationFeatureAppealHeadline": "Jeda sementara daripada mengambil pil",
+  "restDurationFeatureAppealBody": "Anda boleh mencatat tempoh berhenti mengambil pil buat sementara waktu pada pek pil. Sepanjang jeda ini, nombor pil tidak berubah dan anda boleh terus menyambung catatan apabila mula mengambilnya semula.",
   "featureAppealLocationLabel": "Lokasi dalam aplikasi",
   "criticalAlertFeatureAppealPoint1": "Anda tetap menerima pemberitahuan walaupun mod Fokus dihidupkan",
   "criticalAlertFeatureAppealPoint2": "Peringatan yang boleh diharap pada waktu yang anda tetapkan",

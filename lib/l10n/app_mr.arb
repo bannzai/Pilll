@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "सेवन विरामाचा कालावधी नोंदवा",
   "restDurationFeatureAppealShortDescription": "गोळ्या घेणे तात्पुरते थांबवलेल्या काळाची अचूक नोंद ठेवा",
   "restDurationFeatureAppealHeadline": "गोळी घेणे काही काळ थांबवा",
+  "restDurationFeatureAppealBody": "काही काळ गोळी घेणे थांबवण्याचा कालावधी पिल शीटवर नोंदवू शकता. या विरामात गोळीचा क्रमांक पुढे जात नाही आणि पुन्हा गोळी घ्यायला सुरुवात केल्यावर लगेच नोंदी सुरू ठेवू शकता.",
   "featureAppealLocationLabel": "अ‍ॅपमध्ये कुठे मिळेल",
   "criticalAlertFeatureAppealPoint1": "फोकस मोड सुरू असतानाही तुम्हाला सूचना मिळतील",
   "criticalAlertFeatureAppealPoint2": "तुम्ही ठरवलेल्या वेळी खात्रीशीर रिमाइंडर",

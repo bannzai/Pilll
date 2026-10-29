@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "მიღების პაუზის პერიოდის ჩაწერა",
   "restDurationFeatureAppealShortDescription": "ზუსტად აღრიცხეთ აბების მიღების დროებითი შეწყვეტა",
   "restDurationFeatureAppealHeadline": "აბის მიღების დროებით შეჩერება",
+  "restDurationFeatureAppealBody": "შეგიძლიათ აბების ბლისტერში აღნიშნოთ პერიოდი, როცა აბების მიღებას დროებით წყვეტთ. ამ შესვენების დროს აბის ნომერი წინ არ იწევს, ხოლო მიღების განახლებისთანავე ჩანაწერების გაგრძელება შეგიძლიათ.",
   "featureAppealLocationLabel": "სად იპოვით აპში",
   "criticalAlertFeatureAppealPoint1": "შეტყობინებებს ფოკუსირების რეჟიმშიც მიიღებთ",
   "criticalAlertFeatureAppealPoint2": "საიმედო შეხსენება თქვენ მიერ მითითებულ დროს",

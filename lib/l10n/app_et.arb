@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Märgi võtmise pausi ajavahemik",
   "restDurationFeatureAppealShortDescription": "Jälgi täpselt pillide võtmise katkestusi",
   "restDurationFeatureAppealHeadline": "Peata pillide võtmine ajutiselt",
+  "restDurationFeatureAppealBody": "Saad pillilehele märkida aja, mil teed pillide võtmises ajutise pausi. Selle pausi ajal pilli number ei muutu ning võtmist jätkates saad kohe ka kirjete tegemist jätkata.",
   "featureAppealLocationLabel": "Asukoht rakenduses",
   "criticalAlertFeatureAppealPoint1": "Saad teavitusi ka keskendumisrežiimis",
   "criticalAlertFeatureAppealPoint2": "Usaldusväärne meeldetuletus sinu valitud ajal",

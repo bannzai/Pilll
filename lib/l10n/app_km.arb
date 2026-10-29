@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "កត់ត្រារយៈពេលផ្អាកការលេបថ្នាំ",
   "restDurationFeatureAppealShortDescription": "សូមកត់ត្រារយៈពេលដែលអ្នកឈប់លេបថ្នាំបណ្តោះអាសន្នឱ្យបានត្រឹមត្រូវ",
   "restDurationFeatureAppealHeadline": "ផ្អាកការលេបថ្នាំគ្រាប់បណ្តោះអាសន្ន",
+  "restDurationFeatureAppealBody": "អ្នកអាចកត់ត្រារយៈពេលដែលផ្អាកលេបថ្នាំគ្រាប់បណ្ដោះអាសន្ននៅលើបន្ទះថ្នាំគ្រាប់។ អំឡុងពេលផ្អាកនេះ លេខគ្រាប់ថ្នាំមិនបន្តទៅមុខទេ ហើយអ្នកអាចបន្តកត់ត្រាភ្លាមៗពេលចាប់ផ្ដើមលេបវិញ។",
   "featureAppealLocationLabel": "ទីតាំងនៅក្នុងកម្មវិធី",
   "criticalAlertFeatureAppealPoint1": "អ្នកនៅតែទទួលបានការជូនដំណឹង ទោះបីកំពុងប្រើមុខងារផ្តោតអារម្មណ៍ក៏ដោយ",
   "criticalAlertFeatureAppealPoint2": "ការរំលឹកដែលអាចទុកចិត្តបាននៅម៉ោងដែលអ្នកបានកំណត់",

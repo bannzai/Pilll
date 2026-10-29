@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "বড়ি খোৱা সাময়িকভাৱে বন্ধ ৰখা সময়ছোৱা লিপিবদ্ধ কৰক",
   "restDurationFeatureAppealShortDescription": "পিল খোৱা সাময়িকভাৱে বন্ধ ৰখাৰ সময় সঠিককৈ নথিভুক্ত কৰক",
   "restDurationFeatureAppealHeadline": "পিল খোৱাত সাময়িক বিৰতি লওক",
+  "restDurationFeatureAppealBody": "আপুনি কিছুদিনৰ বাবে পিল খোৱা বন্ধ ৰখাৰ সময়খিনি পিলৰ ষ্ট্ৰিপত লিখি ৰাখিব পাৰে। এই বিৰতিৰ সময়ত পিলৰ নম্বৰ আগ নাবাঢ়ে, আৰু পুনৰ খোৱা আৰম্ভ কৰিলেই লগে লগে ৰেকৰ্ডো পুনৰ আৰম্ভ কৰিব পাৰে।",
   "featureAppealLocationLabel": "এপত থকা স্থান",
   "criticalAlertFeatureAppealPoint1": "ফ'কাছ মোড চলি থাকিলেও আপুনি জাননী পাব",
   "criticalAlertFeatureAppealPoint2": "আপুনি নিৰ্ধাৰণ কৰা সময়ত নিশ্চিতভাৱে সোঁৱৰাই দিয়ে",

@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Catat periode jeda minum pil",
   "restDurationFeatureAppealShortDescription": "Catat dengan tepat saat Anda berhenti minum pil sementara",
   "restDurationFeatureAppealHeadline": "Jeda sementara dari minum pil",
+  "restDurationFeatureAppealBody": "Anda dapat mencatat masa ketika berhenti minum pil untuk sementara di strip pil. Selama jeda ini, nomor pil tidak bertambah, dan Anda dapat langsung melanjutkan pencatatan saat mulai minum pil lagi.",
   "featureAppealLocationLabel": "Lokasi di aplikasi",
   "criticalAlertFeatureAppealPoint1": "Anda tetap menerima notifikasi saat mode Fokus aktif",
   "criticalAlertFeatureAppealPoint2": "Pengingat yang andal pada waktu yang Anda pilih",

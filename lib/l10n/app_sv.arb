@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Registrera pausperioden",
   "restDurationFeatureAppealShortDescription": "Håll noggrann koll på avbrott i användningen av p-piller",
   "restDurationFeatureAppealHeadline": "Ta en paus från att ta p-piller",
+  "restDurationFeatureAppealBody": "Du kan registrera en period när du tillfälligt slutar ta dina p-piller på din p-pillerkarta. Under pausen går pillernumret inte vidare, och du kan fortsätta registrera direkt när du börjar ta dem igen.",
   "featureAppealLocationLabel": "Var du hittar det i appen",
   "criticalAlertFeatureAppealPoint1": "Du får aviseringar även när fokusläget är på",
   "criticalAlertFeatureAppealPoint2": "En pålitlig påminnelse vid tiden du har valt",

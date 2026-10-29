@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "د ګولیو د لنډمهاله درولو موده ثبت کړئ",
   "restDurationFeatureAppealShortDescription": "د ګولیو د خوړلو لنډمهاله درېدنې په کره ډول ثبت کړئ",
   "restDurationFeatureAppealHeadline": "د ګولۍ اخیستل د لنډ وخت لپاره وځنډوئ",
+  "restDurationFeatureAppealBody": "تاسو کولای شئ هغه موده چې د یو څه وخت لپاره ګولۍ نه اخلئ، د ګولیو پاڼ کې ثبت کړئ. د دې دمې پر مهال د ګولۍ شمېره نه بدلېږي، او کله چې بیا ګولۍ اخیستل پیل کړئ، سمدستي ثبت ته دوام ورکولای شئ.",
   "featureAppealLocationLabel": "په اپ کې یې ځای",
   "criticalAlertFeatureAppealPoint1": "تاسو د تمرکز حالت پر مهال هم خبرتیاوې ترلاسه کوئ",
   "criticalAlertFeatureAppealPoint2": "ستاسو په ټاکلي وخت کې د باور وړ یادونه",

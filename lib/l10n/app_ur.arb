@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "گولیاں لینے میں توقف کی مدت درج کریں",
   "restDurationFeatureAppealShortDescription": "گولیاں لینا عارضی طور پر روکنے کے اوقات درست طور پر درج کریں",
   "restDurationFeatureAppealHeadline": "گولی لینا عارضی طور پر روکیں",
+  "restDurationFeatureAppealBody": "کچھ وقت کے لیے گولیاں لینا روکنے کی مدت پٹی پر درج کی جا سکتی ہے۔ اس وقفے کے دوران گولی کا نمبر آگے نہیں بڑھتا، اور دوبارہ لینا شروع کرتے ہی آپ فوراً ریکارڈ رکھنا جاری کر سکتی ہیں۔",
   "featureAppealLocationLabel": "ایپ میں کہاں ملے گا",
   "criticalAlertFeatureAppealPoint1": "فوکس موڈ کے دوران بھی آپ کو اطلاعات ملیں گی",
   "criticalAlertFeatureAppealPoint2": "آپ کے مقرر کردہ وقت پر قابلِ اعتماد یاد دہانی",

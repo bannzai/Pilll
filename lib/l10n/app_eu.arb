@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Erregistratu etenaldiaren aldia",
   "restDurationFeatureAppealShortDescription": "Jarraitu zehaztasunez pilula hartzeari uzten diozun aldien berri",
   "restDurationFeatureAppealHeadline": "Pilula hartzeari aldi baterako utzi",
+  "restDurationFeatureAppealBody": "Pilulak hartzeari aldi batez uzten diozun tartea pilula-blisterrean erregistra dezakezu. Etenaldi horretan, pilularen zenbakiak ez du aurrera egiten, eta pilulak berriro hartzen hastean berehala jarrai dezakezu erregistratzen.",
   "featureAppealLocationLabel": "Non aurkitu aplikazioan",
   "criticalAlertFeatureAppealPoint1": "Jakinarazpenak jasoko dituzu baita kontzentrazio moduan ere",
   "criticalAlertFeatureAppealPoint2": "Abisu fidagarria ezarri duzun orduan",

@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Καταγραφή περιόδου παύσης λήψης",
   "restDurationFeatureAppealShortDescription": "Παρακολουθήστε με ακρίβεια τις διακοπές στη λήψη χαπιών",
   "restDurationFeatureAppealHeadline": "Προσωρινή παύση λήψης του χαπιού",
+  "restDurationFeatureAppealBody": "Μπορείτε να καταγράψετε στην καρτέλα χαπιών ένα διάστημα κατά το οποίο διακόπτετε προσωρινά τη λήψη. Όσο διαρκεί αυτή η παύση, ο αριθμός του χαπιού δεν προχωρά και μπορείτε να συνεχίσετε αμέσως τις καταγραφές όταν αρχίσετε ξανά τη λήψη.",
   "featureAppealLocationLabel": "Πού θα το βρείτε στην εφαρμογή",
   "criticalAlertFeatureAppealPoint1": "Λαμβάνετε ειδοποιήσεις ακόμη και στη λειτουργία συγκέντρωσης",
   "criticalAlertFeatureAppealPoint2": "Αξιόπιστη υπενθύμιση την ώρα που έχετε ορίσει",

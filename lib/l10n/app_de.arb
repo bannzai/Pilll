@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Zeitraum der Einnahmeunterbrechung erfassen",
   "restDurationFeatureAppealShortDescription": "Behalte Unterbrechungen der Pilleneinnahme genau im Blick",
   "restDurationFeatureAppealHeadline": "Die Pilleneinnahme pausieren",
+  "restDurationFeatureAppealBody": "Du kannst im Pillenblister festhalten, wenn du die Einnahme eine Zeit lang unterbrichst. Während dieser Pause bleibt die Pillennummer stehen. Sobald du die Einnahme fortsetzt, kannst du direkt wieder Einträge machen.",
   "featureAppealLocationLabel": "Wo du es in der App findest",
   "criticalAlertFeatureAppealPoint1": "Du erhältst Benachrichtigungen auch im Fokusmodus",
   "criticalAlertFeatureAppealPoint2": "Zuverlässige Erinnerung zur eingestellten Zeit",

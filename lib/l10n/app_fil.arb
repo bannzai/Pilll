@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Itala ang panahon ng pause sa pag-inom ng pildoras",
   "restDurationFeatureAppealShortDescription": "Tumpak na subaybayan ang mga paghinto sa pag-inom ng pildoras",
   "restDurationFeatureAppealHeadline": "Pansamantalang ihinto ang pag-inom ng pildoras",
+  "restDurationFeatureAppealBody": "Maaari ninyong itala sa pakete ng pildoras ang panahong pansamantala kayong titigil sa pag-inom ng pildoras. Habang nakahinto, hindi uusad ang numero ng pildoras, at maaari kayong agad magpatuloy sa pagtatala kapag nagsimula kayong uminom muli.",
   "featureAppealLocationLabel": "Saan makikita sa app",
   "criticalAlertFeatureAppealPoint1": "Makakatanggap pa rin kayo ng mga abiso kahit naka-on ang Focus mode",
   "criticalAlertFeatureAppealPoint2": "Maaasahang paalala sa oras na itinakda ninyo",

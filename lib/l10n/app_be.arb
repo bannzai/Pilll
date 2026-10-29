@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Запісаць перыяд прыпыну прыёму пігулак",
   "restDurationFeatureAppealShortDescription": "Дакладна адсочвайце прыпыненне прыёму пігулак",
   "restDurationFeatureAppealHeadline": "Зрабіць паўзу ў прыёме пігулак",
+  "restDurationFeatureAppealBody": "Вы можаце адзначыць у блістар перыяд, калі на некаторы час спыняеце прыём пігулак. Падчас гэтай паўзы нумар пігулкі не змяняецца, а пасля аднаўлення прыёму вы адразу можаце працягнуць запісы.",
   "featureAppealLocationLabel": "Дзе знайсці ў праграме",
   "criticalAlertFeatureAppealPoint1": "Вы атрымліваеце апавяшчэнні нават у рэжыме засяроджвання",
   "criticalAlertFeatureAppealPoint2": "Надзейны напамін у зададзены вамі час",

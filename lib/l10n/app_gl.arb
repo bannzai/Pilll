@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Rexistra o período de pausa na toma",
   "restDurationFeatureAppealShortDescription": "Leva un rexistro preciso das interrupcións na toma da pílula",
   "restDurationFeatureAppealHeadline": "Facer unha pausa na toma da pílula",
+  "restDurationFeatureAppealBody": "Podes rexistrar no blíster o período no que deixas de tomar a pílula durante un tempo. Nesta pausa, o número da pílula non avanza e podes retomar os rexistros en canto volvas tomala.",
   "featureAppealLocationLabel": "Onde atopalo na aplicación",
   "criticalAlertFeatureAppealPoint1": "Recibes notificacións mesmo co modo de concentración activado",
   "criticalAlertFeatureAppealPoint2": "Un recordatorio fiable á hora que escolliches",

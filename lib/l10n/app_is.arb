@@ -507,6 +507,7 @@
   "restDurationFeatureAppealTitle": "Skrá tímabil pilluhlés",
   "restDurationFeatureAppealShortDescription": "Fylgstu nákvæmlega með hléum á inntöku pillunnar",
   "restDurationFeatureAppealHeadline": "Gera hlé á töku pillunnar",
+  "restDurationFeatureAppealBody": "Þú getur skráð tímabil þar sem þú hættir tímabundið að taka pillurnar á pilluspjaldið. Á meðan hléið stendur breytist pillunúmerið ekki og þú getur strax haldið áfram að skrá þegar þú byrjar aftur að taka þær.",
   "featureAppealLocationLabel": "Staðsetning í appinu",
   "criticalAlertFeatureAppealPoint1": "Þú færð tilkynningar jafnvel þegar einbeitingarstilling er virk",
   "criticalAlertFeatureAppealPoint2": "Áreiðanleg áminning á þeim tíma sem þú velur",
