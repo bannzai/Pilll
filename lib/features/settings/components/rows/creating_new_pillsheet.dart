@@ -28,21 +28,23 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     return SwitchListTile(
-      title: Row(
-        children: [
-          // iPhone Duo の外側ディスプレイ (幅 382pt) では文言とバッジが 1 行に収まらず右にはみ出すため、文言側を折り返す
-          Flexible(
-            child: Text(
-              L.autoAddPillSheetGroup,
-              style: const TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              ),
-            ),
-          ),
-          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
-        ],
+      // iPhone Duo の外側ディスプレイ (幅 382pt) や訳の長い言語 (de 等) では文言とバッジが 1 行に収まらないため、文言を折り返す。
+      // Row で並べると文言が 2 行になった時にバッジが 2 行の間の高さに浮くため、バッジを文言の末尾に続けて置く
+      title: Text.rich(
+        TextSpan(
+          text: L.autoAddPillSheetGroup,
+          children: [
+            if (!isPremium) ...[
+              const WidgetSpan(child: SizedBox(width: 8)),
+              const WidgetSpan(alignment: PlaceholderAlignment.middle, child: PremiumBadge()),
+            ],
+          ],
+        ),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
       ),
       subtitle: Text(
         L.autoAddNewSheetAfterCurrentEnds,
