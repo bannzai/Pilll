@@ -114,7 +114,7 @@
   "takingTime": "Pilula hartzeko ordua",
   "takingHistoryIsPremiumFeature": "Hartze-historia Premium funtzioa da",
   "pauseTakingDoesNotAdvancePillNumber": "Pilula hartzeari aldi baterako uzten badiozu, pilula-zenbakia ez da aurreratuko",
-  "pauseTakingFromNumber": "{number}. pilulatik aurrera hartzeari utzi nahi diozu aldi baterako?",
+  "pauseTakingFromNumber": "{number}tik aurrera hartzeari utzi nahi diozu aldi baterako?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. pilula",
   "taking": "Pilula hartzea",
   "estimatedEndPillNumber": "Aurreko pilula-blisterreko azken pilula: {estimatedEndPillNumber}. zk.",
