@@ -74,8 +74,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
-            lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText,
+            lastDate: pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration),
+            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText(restDuration: restDuration),
             fieldLabelText: L.pauseStartDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
