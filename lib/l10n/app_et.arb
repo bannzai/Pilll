@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "nr 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vali pillipausi alguskuupäev",
+  "selectPauseEndDateAsResumeDate": "Lõppkuupäev: päev, mil hakkad taas pilli võtma",
   "pauseStartDate": "Pillipausi alguskuupäev",
   "pauseEndDate": "Pillipausi lõppkuupäev",
   "endPillSheet": "Pillileht on lõpetatud",

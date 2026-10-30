@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→núm. {afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→núm. {afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Tria la data d'inici de la pausa de la píndola",
+  "selectPauseEndDateAsResumeDate": "Data de finalització: dia que tornes a prendre la píndola",
   "pauseStartDate": "Data d'inici de la pausa de la píndola",
   "pauseEndDate": "Data de finalització de la pausa de la píndola",
   "endPillSheet": "Blíster acabat",

@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "نمبر 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "نمبر {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "گولی لینے میں وقفہ شروع ہونے کی تاریخ منتخب کریں",
+  "selectPauseEndDateAsResumeDate": "اختتامی تاریخ: جس دن آپ دوبارہ گولی لینا شروع کریں",
   "pauseStartDate": "گولی لینے میں وقفہ شروع ہونے کی تاریخ",
   "pauseEndDate": "گولی لینے میں وقفہ ختم ہونے کی تاریخ",
   "endPillSheet": "گولیوں کی پٹی ختم ہو گئی",

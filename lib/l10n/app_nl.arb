@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "nr. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Kies de begindatum van je pillenpauze",
+  "selectPauseEndDateAsResumeDate": "Einddatum: de dag waarop je weer de pil neemt",
   "pauseStartDate": "Startdatum van de pillenpauze",
   "pauseEndDate": "Einddatum van de pillenpauze",
   "endPillSheet": "Pillenstrip is op",
