@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "აირჩიეთ აბების მიღების შესვენების დაწყების თარიღი",
+  "selectPauseEndDateAsResumeDate": "დასასრული = მიღების განახლება",
   "pauseResumeDateLimitIsToday": "მიღების განახლება: დღემდე",
   "pauseStartDate": "აბების მიღების შესვენების დაწყების თარიღი",
   "pauseEndDate": "აბების მიღების შესვენების დასრულების თარიღი",
