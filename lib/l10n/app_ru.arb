@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Выберите дату начала перерыва в приёме таблеток",
+  "selectPauseEndDateAsResumeDate": "Конец = возобновление приёма",
   "pauseResumeDateLimitIsToday": "Возобновление приёма: до сегодня",
   "pauseStartDate": "Дата начала перерыва в приёме таблеток",
   "pauseEndDate": "Дата окончания перерыва в приёме таблеток",
