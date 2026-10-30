@@ -584,6 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Lütfen blistere başlamadan önceki ara dönem bittikten sonra kaç gün geçtiğine göre yanıtlayın",
   "yazFlexNextInputIsRestDuration": "Sonraki adımda önceki ara dönemi gireceksiniz",
   "deletePausePeriod": "Hap kullanımına ara verilen dönemi silin",
-  "deletePausePeriodConfirmMessage": "İlaç kullanımındaki bu ara kayıtlarınızdan kaldırılacak. blister üzerindeki tarihler, ara verilmemiş gibi yeniden hesaplanacak.",
+  "deletePausePeriodConfirmMessage": "Hap kullanımına verilen bu ara kayıtlarınızdan kaldırılacak. Blister üzerindeki tarihler, ara verilmemiş gibi yeniden hesaplanacak.",
   "deletedPausePeriod": "Hap kullanımına ara verilen dönem silindi"
 }

@@ -584,6 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Odpovedzte podľa počtu dní od konca prestávky pred začiatkom blistra",
   "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku v užívaní tabletiek",
   "deletePausePeriod": "Odstráňte obdobie prestávky v užívaní tabletiek",
-  "deletePausePeriodConfirmMessage": "Táto prestávka v užívaní tabletiek sa odstráni z vašich záznamov. Dátumy na blist sa prepočítajú, akoby prestávka nebola.",
+  "deletePausePeriodConfirmMessage": "Táto prestávka v užívaní tabletiek sa odstráni z vašich záznamov. Dátumy na blistri sa prepočítajú, akoby prestávka nebola.",
   "deletedPausePeriod": "Obdobie prestávky v užívaní tabletiek bolo odstránené"
 }

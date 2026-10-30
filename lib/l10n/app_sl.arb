@@ -584,6 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Odgovorite glede na število dni od konca premora pred začetkom jemanja tablet iz omota",
   "yazFlexNextInputIsRestDuration": "Nato boste vnesli prejšnji premor pri jemanju tablet",
   "deletePausePeriod": "Izbrišite obdobje premora pri jemanju tablet",
-  "deletePausePeriodConfirmMessage": "Ta premor pri jemanju tablet se bo odstranil iz vaših zapisov. Datumi na ploščic se bodo znova izračunali, kot da premora ni bilo.",
+  "deletePausePeriodConfirmMessage": "Ta premor pri jemanju tablet se bo odstranil iz vaših zapisov. Datumi na ploščici se bodo znova izračunali, kot da premora ni bilo.",
   "deletedPausePeriod": "Obdobje premora pri jemanju tablet je izbrisano"
 }
