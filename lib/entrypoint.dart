@@ -7,10 +7,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:intl/intl.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
@@ -42,7 +42,8 @@ Future<void> entrypoint() async {
       // Intl.defaultLocale にする。端末の言語だけの初期化では未初期化の言語の DateFormat で止まるため、全言語を初期化する
       await initializeDateFormatting();
     }
-    Intl.defaultLocale = 'ja';
+    // MethodChannel (recordPill) は UI を組み立てる前に呼ばれ得て、その時も通知を登録し直すため、AppLocalizationResolver が動く前から端末の言語にしておく
+    applyDeviceAppLocale(deviceLocaleName: Platform.localeName);
 
     WidgetsFlutterBinding.ensureInitialized();
 
@@ -101,7 +102,8 @@ Future<void> handleNotificationAction(
       initializeDateFormatting('ja'),
       initializeDateFormatting(Platform.localeName),
     ).wait;
-    Intl.defaultLocale = 'ja';
+    // UI を組み立てない isolate のため AppLocalizationResolver が動かない。通知の文言を端末の言語にするためここで設定する
+    applyDeviceAppLocale(deviceLocaleName: Platform.localeName);
 
     await LocalNotificationService.setupTimeZone();
 

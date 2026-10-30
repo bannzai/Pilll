@@ -48,6 +48,26 @@ class AppLocalizationResolver extends ConsumerWidget {
   }
 }
 
+/// 端末の言語を、文言を持つ言語 ([AppLocalizations.supportedLocales]) に解決して返す。
+/// [deviceLocaleName] は `Platform.localeName` の値 (例: en_US, zh_Hans_CN, fr_FR.UTF-8)。
+/// UI を組み立てる前・UI の無い isolate (通知アクションのクイック記録) で [L] を決めるために使う。
+/// arb は言語コードだけで構成されているため、言語コードだけを見る。
+/// 解決規則は前面の UI と同じ basicLocaleListResolution にする (app.dart の MaterialApp は localeResolutionCallback を持たない)。
+/// そのためサポート外の言語では、前面の UI と同じく [AppLocalizations.supportedLocales] の先頭になる。
+Locale deviceAppLocale({required String deviceLocaleName}) => basicLocaleListResolution(
+      [Locale(deviceLocaleName.split(RegExp('[-_.@]')).first)],
+      AppLocalizations.supportedLocales,
+    );
+
+/// [L] と [Intl.defaultLocale] を、[deviceLocaleName] (`Platform.localeName` の値) を [deviceAppLocale] で解決した言語にする。
+/// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で通知の文言を端末の言語にするために使う。
+/// UI が組み立てられた後は [AppLocalizationResolver] が上書きする。
+void applyDeviceAppLocale({required String deviceLocaleName}) {
+  final locale = deviceAppLocale(deviceLocaleName: deviceLocaleName);
+  L = lookupAppLocalizations(locale);
+  Intl.defaultLocale = locale.languageCode;
+}
+
 /// debug ビルドの表示言語を返す。
 /// [savedLanguageCode] は開発者オプションの「表示言語」で保存した arb の言語コード。
 /// 保存が無い・対象言語に無い時は ja を返す (開発中は日本語の文言で確認する従来の挙動を保つため)。
