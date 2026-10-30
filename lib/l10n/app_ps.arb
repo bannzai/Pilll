@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "تاسو کولی شئ ټولې ځانګړنې د نورو {diff} ورځو لپاره وکاروئ",
   "todayIsTaking": "💊 نن د ګولۍ اخیستو ورځ ده",
   "todayPillToTake": "💊 د نن ورځې ګولۍ",
-  "number": "مه ګولۍ",
+  "formattedPillNumber": "{number}مه ګولۍ",
   "dayNumber": "مه ورځ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} د حیض د پیل نېټې په توګه ثبت شوه",
   "menstruationStartDate": "د حیض د پیل نېټه",

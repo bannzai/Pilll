@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Visomis funkcijomis galite naudotis dar {diff} d.",
   "todayIsTaking": "💊 Šiandien tabletės vartojimo diena",
   "todayPillToTake": "💊 Šiandienos tabletė",
-  "number": "-oji tabletė",
+  "formattedPillNumber": "{number}-oji tabletė",
   "dayNumber": "-oji diena",
   "recordedMenstruationStartDate": "Užregistruota, kad mėnesinės prasidėjo {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Mėnesinių pradžios data",

@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Դուք կարող եք օգտվել բոլոր հնարավորություններից ևս {diff} օր",
   "todayIsTaking": "💊 Այսօր հաբ ընդունելու օրն է",
   "todayPillToTake": "💊 Այսօրվա հաբը",
-  "number": "-րդ հաբ",
+  "formattedPillNumber": "{number}-րդ հաբ",
   "dayNumber": "-րդ օր",
   "recordedMenstruationStartDate": "Գրանցվեց․ դաշտանը սկսվել է {DateTimeFormatterMonthAndDay}-ից",
   "menstruationStartDate": "Դաշտանի սկզբի ամսաթիվ",

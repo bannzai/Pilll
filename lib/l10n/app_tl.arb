@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Magagamit ninyo ang lahat ng tampok sa loob pa ng {diff} araw",
   "todayIsTaking": "💊 Ngayon ang araw ng pag-inom ng pildoras",
   "todayPillToTake": "💊 Pildoras para sa araw na ito",
-  "number": " (pildoras)",
+  "formattedPillNumber": "{number} (pildoras)",
   "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Petsa ng simula ng regla",

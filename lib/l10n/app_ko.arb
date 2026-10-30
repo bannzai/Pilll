@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "앞으로 {diff}일 동안 모든 기능을 사용할 수 있어요",
   "todayIsTaking": "💊 오늘 복용",
   "todayPillToTake": "💊 오늘 복용할 알약",
-  "number": "번",
+  "formattedPillNumber": "{number}번",
   "dayNumber": "일째",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}부터 생리가 시작된 것으로 기록했어요",
   "menstruationStartDate": "생리 시작일",

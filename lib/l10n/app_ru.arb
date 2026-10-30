@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Все функции доступны ещё — осталось дней: {diff}",
   "todayIsTaking": "💊 Сегодня день приёма таблетки",
   "todayPillToTake": "💊 Таблетка на сегодня",
-  "number": "-я таблетка",
+  "formattedPillNumber": "{number}-я таблетка",
   "dayNumber": "-й день",
   "recordedMenstruationStartDate": "Начало месячных записано на {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Дата начала месячных",

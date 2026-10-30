@@ -12,6 +12,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
 import 'package:pilll/features/feature_appeal/menstruation/menstruation_announcement_bar.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/formatted_pill_number_text_span.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/features/record/components/setting/button.dart';
@@ -34,7 +35,7 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 /// PageView + DotsIndicator の組み合わせをそのまま利用する。
 ///
 /// ヘッダーの日付・番号単位は本番 RecordPageInformationHeader と同じ [DateTimeFormatter]・
-/// [L.number] を使う。日付書式は Platform.localeName(=端末言語)由来のため、撮影時は
+/// [L.formattedPillNumber] を使う。日付書式は Platform.localeName(=端末言語)由来のため、撮影時は
 /// capture_screenshots.sh が言語ごとに Simulator の言語を切り替える(ロケールの日付データは
 /// main.dev.dart のカタログ分岐で initializeDateFormatting 済み)。
 class MockRecordScreen extends StatelessWidget {
@@ -258,18 +259,13 @@ class MockRecordScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(L.todayPillToTake, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w300, color: TextColor.noshime)),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.ideographic,
-                    children: [
-                      const Text('$todayPillNumber', style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500, color: TextColor.main)),
-                      Text(
-                        // 本番 TodayTakenPillNumber と同じ単位文言(L.number)。
-                        L.number,
-                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: TextColor.main),
-                      ),
-                    ],
+                  Text.rich(
+                    // 本番 TodayTakenPillNumber と同じ番号の書式(L.formattedPillNumber)。
+                    formattedPillNumberTextSpan(
+                      pillNumber: '$todayPillNumber',
+                      numberStyle: const TextStyle(fontSize: 40, fontWeight: FontWeight.w500, color: TextColor.main),
+                      labelStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: TextColor.main),
+                    ),
                   ),
                 ],
               ),
