@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Pada hari ke berapa dalam kitaran pengambilan pil anda pek ini bermula?",
   "yazFlexBeginPillNumberPageNote": "Sila jawab berdasarkan bilangan hari sejak tamatnya rehat sebelum pek pil dimulakan",
   "yazFlexNextInputIsRestDuration": "Seterusnya, sila masukkan tempoh rehat pengambilan pil yang lalu",
-  "deletePausePeriod": "Padam tempoh rehat pengambilan pil"
+  "deletePausePeriod": "Padam tempoh rehat pengambilan pil",
+  "deletePausePeriodConfirmMessage": "Tempoh rehat daripada mengambil pil ini akan dikeluarkan daripada rekod anda. Tarikh pada pek pil akan dikira semula seolah-olah tiada rehat."
 }

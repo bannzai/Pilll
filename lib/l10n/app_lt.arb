@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Kurią jūsų tablečių vartojimo ciklo dieną prasideda lizdinė plokštelė?",
   "yazFlexBeginPillNumberPageNote": "Atsakykite pagal tai, kiek dienų praėjo nuo pertraukos, buvusios prieš pradedant lizdinę plokštelę, pabaigos",
   "yazFlexNextInputIsRestDuration": "Toliau įvesite ankstesnę tablečių vartojimo pertrauką",
-  "deletePausePeriod": "Ištrinkite tablečių vartojimo pertraukos laikotarpį"
+  "deletePausePeriod": "Ištrinkite tablečių vartojimo pertraukos laikotarpį",
+  "deletePausePeriodConfirmMessage": "Ši tablečių vartojimo pertrauka bus pašalinta iš jūsų įrašų. tablečių plokštel datos bus perskaičiuotos taip, tarsi pertraukos nebūtų buvę."
 }

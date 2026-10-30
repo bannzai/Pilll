@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Which day of your pill cycle does the pack start on?",
   "yazFlexBeginPillNumberPageNote": "Please count the days since the pill break you had before starting this pack ended",
   "yazFlexNextInputIsRestDuration": "Next, enter your previous pill break",
-  "deletePausePeriod": "Delete pill break period"
+  "deletePausePeriod": "Delete pill break period",
+  "deletePausePeriodConfirmMessage": "This pill break will be removed from your records. The dates on your pill pack will be recalculated as if the break never happened."
 }

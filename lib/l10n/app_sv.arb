@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Vilken dag i din p-pillercykel börjar kartan?",
   "yazFlexBeginPillNumberPageNote": "Svara utifrån hur många dagar som gått sedan uppehållet före kartans start tog slut",
   "yazFlexNextInputIsRestDuration": "Därefter kan du ange ditt senaste uppehåll med p-piller",
-  "deletePausePeriod": "Ta bort pillerpaus"
+  "deletePausePeriod": "Ta bort pillerpaus",
+  "deletePausePeriodConfirmMessage": "Det här uppehållet i p-pilleranvändningen tas bort från dina anteckningar. Datumen på din p-pillerkarta räknas om som om uppehållet aldrig hade gjorts."
 }

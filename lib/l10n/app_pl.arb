@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "W którym dniu cyklu przyjmowania tabletek zaczyna się blister?",
   "yazFlexBeginPillNumberPageNote": "Odpowiedz na podstawie liczby dni od końca przerwy przed rozpoczęciem blistra",
   "yazFlexNextInputIsRestDuration": "Następnie wpisz poprzednią przerwę w przyjmowaniu tabletek",
-  "deletePausePeriod": "Usuń okres przerwy w przyjmowaniu tabletek"
+  "deletePausePeriod": "Usuń okres przerwy w przyjmowaniu tabletek",
+  "deletePausePeriodConfirmMessage": "Ta przerwa w przyjmowaniu tabletek zostanie usunięta z zapisów. Daty na blist zostaną obliczone ponownie, tak jakby przerwy nie było."
 }

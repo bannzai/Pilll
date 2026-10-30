@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Monesko ottokerta jaksossa liuskan ensimmäinen pilleri on?",
   "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, montako päivää on kulunut ennen liuskan aloittamista pidetyn taukojakson päättymisestä",
   "yazFlexNextInputIsRestDuration": "Seuraavaksi voit lisätä edellisen taukojakson",
-  "deletePausePeriod": "Poista pilleritauko"
+  "deletePausePeriod": "Poista pilleritauko",
+  "deletePausePeriodConfirmMessage": "Tämä tauko pillereiden käytössä poistetaan merkinnöistäsi. pilleriliuska päivämäärät lasketaan uudelleen ikään kuin taukoa ei olisi ollut."
 }

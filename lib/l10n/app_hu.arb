@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "A tablettaszedési ciklusod hányadik napján kezdődik a levél?",
   "yazFlexBeginPillNumberPageNote": "A válaszhoz vedd alapul, hány nap telt el a levél megkezdése előtti szünet vége óta",
   "yazFlexNextInputIsRestDuration": "Ezután add meg a legutóbbi szünet időtartamát",
-  "deletePausePeriod": "Tablettaszedési szünet törlése"
+  "deletePausePeriod": "Tablettaszedési szünet törlése",
+  "deletePausePeriodConfirmMessage": "Ez a tablettaszedési szünet törlődik a feljegyzéseidből. A tablettacsomag dátumai újraszámolódnak, mintha nem lett volna szünet."
 }

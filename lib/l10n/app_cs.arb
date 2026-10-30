@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Kolikátým dnem cyklu užívání pilulek začíná blistr?",
   "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní od konce pauzy před začátkem blistru",
   "yazFlexNextInputIsRestDuration": "Na další obrazovce zadáte předchozí pauzu v užívání pilulek",
-  "deletePausePeriod": "Smazat období přestávky v užívání pilulek"
+  "deletePausePeriod": "Smazat období přestávky v užívání pilulek",
+  "deletePausePeriodConfirmMessage": "Tato přestávka v užívání bude odstraněna ze záznamů. Data na blistru se přepočítají, jako by k přestávce nedošlo."
 }

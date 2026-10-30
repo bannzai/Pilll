@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "באיזה יום במחזור נטילת הגלולות מתחילה החפיסה?",
   "yazFlexBeginPillNumberPageNote": "יש לענות לפי מספר הימים שחלפו מאז שהסתיים ההפסק שלפני תחילת חפיסת הגלולות",
   "yazFlexNextInputIsRestDuration": "בהמשך יש להזין את תקופת ההפסק הקודמת בנטילת הגלולות",
-  "deletePausePeriod": "מחיקת תקופת הפסקה בנטילת הגלולות"
+  "deletePausePeriod": "מחיקת תקופת הפסקה בנטילת הגלולות",
+  "deletePausePeriodConfirmMessage": "תקופת ההפסקה הזו בנטילה תוסר מהרישומים. התאריכים על חפיסת הגלולות יחושבו מחדש כאילו לא הייתה הפסקה."
 }

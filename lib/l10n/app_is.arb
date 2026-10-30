@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Á hvaða degi pillutökuferilsins byrjar spjaldið?",
   "yazFlexBeginPillNumberPageNote": "Svaraðu miðað við fjölda daga frá því að hléinu fyrir upphaf pilluspjaldsins lauk",
   "yazFlexNextInputIsRestDuration": "Næst geturðu skráð síðasta hlé á pillutöku",
-  "deletePausePeriod": "Eyða hléi á inntöku pillunnar"
+  "deletePausePeriod": "Eyða hléi á inntöku pillunnar",
+  "deletePausePeriodConfirmMessage": "Þetta hlé á pillutöku verður fjarlægt úr skráningunum þínum. Dagsetningarnar á pilluspjaldinu verða reiknaðar aftur eins og ekkert hlé hafi verið gert."
 }

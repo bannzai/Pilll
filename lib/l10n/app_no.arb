@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag i p-pillesyklusen din begynner brettet?",
   "yazFlexBeginPillNumberPageNote": "Svar ut fra hvor mange dager det er siden pillepausen før du startet på brettet, tok slutt",
   "yazFlexNextInputIsRestDuration": "Deretter kan du legge inn forrige pillepause",
-  "deletePausePeriod": "Slett p-pillepause"
+  "deletePausePeriod": "Slett p-pillepause",
+  "deletePausePeriodConfirmMessage": "Denne pausen i p-pillebruken fjernes fra registreringene dine. Datoene på pillebrettet beregnes på nytt som om pausen ikke hadde funnet sted."
 }

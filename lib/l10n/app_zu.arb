@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Iphakethe lamaphilisi liqala ngosuku lwesingaki emjikelezweni wokuwaphuza?",
   "yazFlexBeginPillNumberPageNote": "Sicela uphendule ngokwenani lezinsuku ezidlule kusukela kuphele ikhefu langaphambi kokuqala iphakethe lamaphilisi",
   "yazFlexNextInputIsRestDuration": "Okulandelayo, sicela ufake isikhathi sekhefu sangaphambilini sokungawaphuzi amaphilisi",
-  "deletePausePeriod": "Sicela ususe isikhathi sekhefu lokuphuza amaphilisi"
+  "deletePausePeriod": "Sicela ususe isikhathi sekhefu lokuphuza amaphilisi",
+  "deletePausePeriodConfirmMessage": "Lesi sikhathi sokuphumula ekuphuzeni amaphilisi sizosuswa kumarekhodi akho. Izinsuku eziku-shidi lamaphilisi zizobalwa kabusha sengathi akuzange kube nekhefu."
 }

@@ -583,5 +583,6 @@
   "yazFlexBeginPillNumberPageTitle": "Ar ba ddiwrnod o'ch cylch cymryd pils y mae'r stribed yn dechrau?",
   "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau ers i'r seibiant cyn dechrau'r stribed pils ddod i ben",
   "yazFlexNextInputIsRestDuration": "Nesaf, byddwch yn nodi eich seibiant blaenorol",
-  "deletePausePeriod": "Dileu'r cyfnod saib o gymryd y bilsen"
+  "deletePausePeriod": "Dileu'r cyfnod saib o gymryd y bilsen",
+  "deletePausePeriodConfirmMessage": "Bydd y cyfnod hwn o seibiant rhag cymryd y bilsen yn cael ei dynnu o’ch cofnodion. Bydd dyddiadau’r stribed pils yn cael eu hailgyfrifo fel pe na bai seibiant wedi bod."
 }
