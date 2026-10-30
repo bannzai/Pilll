@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}.→{afterDisplayNumberSettingEndPillNumber}. pilula",
   "selectPauseStartDate": "Aukeratu pilula hartzeko etenaldiaren hasiera-data",
   "selectPauseEndDateAsResumeDate": "Amaiera-data: pilula berriz hartuko duzun eguna",
+  "pauseResumeDateLimitIsToday": "Pilula berriro hartzeko azken eguna gaur da",
   "pauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data",
   "pauseEndDate": "Pilula hartzeko etenaldiaren amaiera-data",
   "endPillSheet": "Pilula-blisterra amaituta",

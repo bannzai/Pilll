@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Ընտրեք հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "selectPauseEndDateAsResumeDate": "Ավարտի օր՝ երբ կրկին սկսում եք հաբն ընդունել",
+  "pauseResumeDateLimitIsToday": "Հաբի ընդունումը վերսկսելու վերջին օրը այսօր է",
   "pauseStartDate": "Հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվ",
   "pauseEndDate": "Հաբերի ընդունման ընդմիջման ավարտի ամսաթիվ",
   "endPillSheet": "Ավարտվել է հաբերի բլիստերը",

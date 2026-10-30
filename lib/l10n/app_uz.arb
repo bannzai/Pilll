@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}-raqam",
   "selectPauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanadigan sanani tanlang",
   "selectPauseEndDateAsResumeDate": "Tugash sanasi: tabletkani qayta ichishni boshlaydigan kun",
+  "pauseResumeDateLimitIsToday": "Tabletkani qayta ichishni boshlashning oxirgi kuni bugun",
   "pauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanish sanasi",
   "pauseEndDate": "Tabletkalarni qabul qilishdagi tanaffus tugash sanasi",
   "endPillSheet": "tabletka blister tugadi",

@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nombor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Pilih tarikh mula rehat pengambilan pil",
   "selectPauseEndDateAsResumeDate": "Tarikh tamat: hari anda mula makan pil semula",
+  "pauseResumeDateLimitIsToday": "Hari terakhir untuk mula mengambil pil semula: hari ini",
   "pauseStartDate": "Tarikh mula rehat pengambilan pil",
   "pauseEndDate": "Tarikh tamat rehat pengambilan pil",
   "endPillSheet": "Pek pil tamat",

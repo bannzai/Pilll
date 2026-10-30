@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vali pillipausi alguskuupäev",
   "selectPauseEndDateAsResumeDate": "Lõppkuupäev: päev, mil jätkad pilli võtmist",
+  "pauseResumeDateLimitIsToday": "Viimane päev pillide võtmist jätkata on täna",
   "pauseStartDate": "Pillipausi alguskuupäev",
   "pauseEndDate": "Pillipausi lõppkuupäev",
   "endPillSheet": "Pillileht on lõpetatud",

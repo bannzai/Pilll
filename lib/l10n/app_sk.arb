@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Č. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Vyberte dátum začiatku prestávky v užívaní tabletiek",
   "selectPauseEndDateAsResumeDate": "Dátum konca: deň obnovenia užívania tabletky",
+  "pauseResumeDateLimitIsToday": "Posledný deň na obnovenie užívania tabletky: dnes",
   "pauseStartDate": "Dátum začiatku prestávky v užívaní tabletiek",
   "pauseEndDate": "Dátum konca prestávky v užívaní tabletiek",
   "endPillSheet": "Blist sa skončil",

@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Выберите дату начала перерыва в приёме таблеток",
   "selectPauseEndDateAsResumeDate": "Дата окончания: день возобновления приёма таблетки",
+  "pauseResumeDateLimitIsToday": "Последний день для возобновления приёма: сегодня",
   "pauseStartDate": "Дата начала перерыва в приёме таблеток",
   "pauseEndDate": "Дата окончания перерыва в приёме таблеток",
   "endPillSheet": "Блистер закончился",

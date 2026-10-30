@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Beginn der Pillenpause auswählen",
   "selectPauseEndDateAsResumeDate": "Enddatum: Tag, an dem du die Pille wieder nimmst",
+  "pauseResumeDateLimitIsToday": "Letzter Tag für die erneute Einnahme: heute",
   "pauseStartDate": "Beginn der Pillenpause",
   "pauseEndDate": "Ende der Pillenpause",
   "endPillSheet": "Pillenblister aufgebraucht",

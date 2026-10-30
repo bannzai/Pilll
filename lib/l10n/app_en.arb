@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select pill break start date",
   "selectPauseEndDateAsResumeDate": "End date: day you resume your pill",
+  "pauseResumeDateLimitIsToday": "Latest pill restart date: today",
   "pauseStartDate": "Pill break start date",
   "pauseEndDate": "Pill break end date",
   "endPillSheet": "Pill pack finished",

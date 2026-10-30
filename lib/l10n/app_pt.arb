@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nº {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Selecione a data de início da pausa da pílula",
   "selectPauseEndDateAsResumeDate": "Data final: dia de voltar a tomar a pílula",
+  "pauseResumeDateLimitIsToday": "Último dia para voltar a tomar a pílula: hoje",
   "pauseStartDate": "Data de início da pausa da pílula",
   "pauseEndDate": "Data de término da pausa da pílula",
   "endPillSheet": "Cartela finalizada",

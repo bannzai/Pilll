@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "ເລກ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ກະລຸນາເລືອກວັນເລີ່ມພັກການກິນຢາເມັດ",
   "selectPauseEndDateAsResumeDate": "ມື້ສິ້ນສຸດ: ມື້ທີ່ເລີ່ມກິນຢາເມັດອີກຄັ້ງ",
+  "pauseResumeDateLimitIsToday": "ມື້ສຸດທ້າຍທີ່ເລີ່ມກິນຢາຄືນໄດ້ແມ່ນມື້ນີ້",
   "pauseStartDate": "ວັນເລີ່ມພັກການກິນຢາເມັດ",
   "pauseEndDate": "ວັນສິ້ນສຸດໄລຍະພັກການກິນຢາເມັດ",
   "endPillSheet": "ແຜງຢາຄຸມໝົດແລ້ວ",

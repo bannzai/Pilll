@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "අංක {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය තෝරන්න",
   "selectPauseEndDateAsResumeDate": "අවසන් දිනය: නැවත පෙති ගැනීම අරඹන දිනය",
+  "pauseResumeDateLimitIsToday": "පෙත්ත නැවත ගැනීම ඇරඹිය හැකි අවසන් දිනය අදයි",
   "pauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය",
   "pauseEndDate": "පෙති ගැනීමේ විරාමය අවසන් වන දිනය",
   "endPillSheet": "පෙති කාඩ්පත අවසන් වීම",

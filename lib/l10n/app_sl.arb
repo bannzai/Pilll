@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Št. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Izberite datum začetka premora pri jemanju tablet",
   "selectPauseEndDateAsResumeDate": "Končni datum: dan, ko znova začnete jemati tabletko",
+  "pauseResumeDateLimitIsToday": "Zadnji dan za ponovno jemanje tabletke je danes",
   "pauseStartDate": "Datum začetka premora pri jemanju tablet",
   "pauseEndDate": "Datum konca premora pri jemanju tablet",
   "endPillSheet": "Ploščica je porabljena",
