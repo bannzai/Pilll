@@ -530,7 +530,7 @@
   },
   "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
   "@pauseTakingFromNumber": {
-    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) を開始する確認ダイアログのタイトルです。{number}には服用お休みを始めるピルを表す完成した表記が入ります。番号表示では withNumber の訳 (例: ja「18番」、en「Pill 18」、de「Nr. 18」)、日付表示では「1/12」のような日付です。{number}の前後に「ピル」「錠」「番号」などの名詞や助数詞を足すと「Pill Pill 18」のように重複するため、「{number}から」に当たる形だけで訳す。原文の「服用をお休みしますか」は用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Start a pill break from pill {number}?」ではなく「Pause your pills starting with {number}?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Möchtest du ab Pille {number} eine Einnahmepause machen?」ではなく「Möchtest du die Pilleneinnahme ab {number} vorübergehend pausieren?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「{number}번 알약부터 잠시 복용을 쉬시겠어요?」ではなく「{number}부터 복용을 일시 중지하시겠어요?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)",
+    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) を開始する確認ダイアログのタイトルです。{number}には服用お休みを始めるピルを表す完成した表記が入ります。番号表示では withNumber の訳 (例: ja「18番」、en「Pill 18」、de「Nr. 18」)、日付表示では「1/12」のような日付です。{number}の前後に「ピル」「錠」「番号」などの名詞や助数詞を足すと「Pill Pill 18」のように重複するため、「{number}から」に当たる形だけで訳す。原文の「服用をお休みしますか」は用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Start a pill break from pill {number}?」ではなく「Pause your pills starting with {number}?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Möchtest du ab Pille {number} eine Einnahmepause machen?」ではなく「Möchtest du die Pilleneinnahme ab {number} vorübergehend pausieren?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「{number}번 알약부터 잠시 복용을 쉬시겠어요?」ではなく「{number}부터 복용을 일시 중지하시겠어요?」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)\n[翻訳の決定 pt] 「Deseja pausar a pílula a partir da pílula {number}?」ではなく「Você quer pausar o uso da pílula temporariamente a partir de {number}?」: 今の訳も開始してよいかを問う確認の質問になっており、指摘の「Que tal…?」(提案の言い方) は直っているため、今の訳を残す (https://github.com/bannzai/Pilll/issues/2006)",
     "placeholders": {
       "number": {
         "type": "String"
@@ -1910,7 +1910,7 @@
   },
   "exampleRestDurationNumberBalloon": "服用お休み期間\n3日間",
   "@exampleRestDurationNumberBalloon": {
-    "description": "服用お休みダイアログの説明図 (ピル番号の表示の時) の吹き出しの文言。exampleRestDurationNumber の例 (18番から3日間) の服用お休みの期間を示す。吹き出しは幅約 96px・2 行で、収まらない時は縮小して表示するため、1 行目に「服用お休み期間」、2 行目に日数を短く書く。「服用お休み」はユーザーが任意で服用を中断する機能で、「休薬」とは別の概念のため、休薬の固定訳語を使わない。"
+    "description": "服用お休みダイアログの説明図 (ピル番号の表示の時) の吹き出しの文言。exampleRestDurationNumber の例 (18番から3日間) の服用お休みの期間を示す。吹き出しは幅約 96px・2 行で、収まらない時は縮小して表示するため、1 行目に「服用お休み期間」、2 行目に日数を短く書く。「服用お休み」はユーザーが任意で服用を中断する機能で、「休薬」とは別の概念のため、休薬の固定訳語を使わない。\n[翻訳の決定 es] 「Pausa en la toma: 3 días」ではなく「Pausa\n3 días」: 候補は用語集の「服用お休み」の固定訳語 (pausa) と食い違うため、固定訳語に合わせた。吹き出しは 2 行のため、コロンではなく改行で日数を分けた (https://github.com/bannzai/Pilll/issues/2003)\n[翻訳の決定 fr] 「Pause de 3 jours」ではなく「Pause de prise\n3 jours」: 候補は用語集の「服用お休み」の固定訳語 (pause de prise) と食い違うため、固定訳語に合わせた。吹き出しは 2 行のため、改行で日数を分けた (https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 ko] 「복용 휴식 기간 3일」ではなく「일시 중지 기간\n3일」: 候補は用語集の「服用お休み」の固定訳語 (일시 중지) と食い違うため、固定訳語に合わせた。吹き出しは 2 行のため、改行で日数を分けた (https://github.com/bannzai/Pilll/issues/2005)"
   },
   "exampleRestDurationDateBalloon": "服用お休み期間\n1/12〜14",
   "@exampleRestDurationDateBalloon": {
