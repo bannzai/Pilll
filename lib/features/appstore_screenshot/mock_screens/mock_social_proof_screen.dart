@@ -56,7 +56,7 @@ class MockSocialProofScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               // 言語によって短縮表記の長さが違い (ja の「14万」から pl の「140 tys.」まで)、長い言語では
-              // バッジの外へはみ出す・折り返すため、内側の円 (直径 size * 0.8) に収まる幅で縮める。
+              // バッジの外へはみ出す・折り返すため、内側の円 (直径 size * 0.72) の幅で縮める。
               SizedBox(
                 width: size * 0.72,
                 child: FittedBox(
