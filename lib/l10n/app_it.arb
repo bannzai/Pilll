@@ -240,6 +240,7 @@
   "completed": "Fine",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Puoi modificare il testo della notifica se non hai preso la pillola",
+  "defaultMissedTakenMessage": "Forse hai dimenticato di prendere la pillola?\nPer diversi giorni manca il registro delle assunzioni 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Puoi cambiare l'inizio della notifica",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

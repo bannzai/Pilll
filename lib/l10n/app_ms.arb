@@ -240,6 +240,7 @@
   "completed": "Selesai",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Anda boleh ubah teks pemberitahuan apabila pil belum diambil",
+  "defaultMissedTakenMessage": "Mungkin anda terlupa mengambil pil?\nAda beberapa hari tanpa rekod pengambilan 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Anda boleh mengubah bahagian awal pemberitahuan",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

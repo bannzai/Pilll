@@ -240,6 +240,7 @@
   "completed": "Tapos",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Maaari ninyong baguhin ang teksto ng abiso kapag hindi nainom ang pildoras",
+  "defaultMissedTakenMessage": "Baka nakalimutan ninyong inumin ang pildoras?\nMay ilang araw na walang tala ng pag-inom 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Maaari ninyong baguhin ang simula ng abiso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

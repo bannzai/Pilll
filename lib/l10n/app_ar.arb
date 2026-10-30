@@ -240,6 +240,7 @@
   "completed": "تم",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "يمكنكِ تغيير نص إشعار عدم تناول الحبة",
+  "defaultMissedTakenMessage": "هل نسيتِ تناول الحبة؟\nهناك عدة أيام دون تسجيل تناول 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "يمكنكِ تغيير بداية الإشعار",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

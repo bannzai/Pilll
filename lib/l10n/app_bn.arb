@@ -240,6 +240,7 @@
   "completed": "সম্পন্ন",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "পিল খেতে ভুলে গেলে যে বিজ্ঞপ্তি আসে, তার লেখা বদলাতে পারেন",
+  "defaultMissedTakenMessage": "আপনি কি পিল খেতে ভুলে গেছেন?\nবেশ কয়েক দিনের সেবনের রেকর্ড নেই 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/১০০",
   "changeNotificationHeader": "আপনি বিজ্ঞপ্তির শুরুর লেখাটি বদলাতে পারেন",
   "notificationHeaderLength": "{wordValueCharactersLength}/৮",

@@ -240,6 +240,7 @@
   "completed": "முடிந்தது",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "மாத்திரை எடுக்க மறந்தால் வரும் அறிவிப்பின் உரையை மாற்றலாம்",
+  "defaultMissedTakenMessage": "மாத்திரை எடுத்துக்கொள்ள மறந்துவிட்டீர்களா?\nபல நாட்களுக்கு மாத்திரை உட்கொண்ட பதிவு இல்லை 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "அறிவிப்பின் தொடக்க உரையை மாற்றலாம்",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

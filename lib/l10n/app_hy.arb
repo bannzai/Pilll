@@ -240,6 +240,7 @@
   "completed": "Ավարտել",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Դուք կարող եք փոխել հաբը չընդունելու մասին ծանուցման տեքստը",
+  "defaultMissedTakenMessage": "Գուցե մոռացե՞լ եք ընդունել հաբը։\nՄի քանի օրվա համար ընդունման գրառում չկա 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Դուք կարող եք փոխել ծանուցման սկզբի տեքստը",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

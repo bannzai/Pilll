@@ -240,6 +240,7 @@
   "completed": "Končano",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Besedilo obvestila o nešteti tableti lahko spremenite",
+  "defaultMissedTakenMessage": "Ste morda pozabili vzeti tableto?\nZa več dni manjka beleženje jemanja 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Spremenite lahko začetek obvestila",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

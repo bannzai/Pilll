@@ -240,6 +240,7 @@
   "completed": "סיום",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "אפשר לשנות את נוסח ההתראה על גלולה שלא ניטלה",
+  "defaultMissedTakenMessage": "אולי נשכחה נטילת הגלולה?\nבכמה ימים חסר רישום נטילה 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "אפשר לשנות את תחילת ההתראה",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

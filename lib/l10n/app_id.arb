@@ -240,6 +240,7 @@
   "completed": "Selesai",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Anda dapat mengubah teks notifikasi saat pil belum diminum",
+  "defaultMissedTakenMessage": "Mungkin Anda lupa minum pil?\nAda beberapa hari tanpa catatan minum pil 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Anda dapat mengubah bagian awal notifikasi",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

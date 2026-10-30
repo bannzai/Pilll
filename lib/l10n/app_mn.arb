@@ -240,6 +240,7 @@
   "completed": "Боллоо",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Эмээ уухаа мартсан үед ирэх мэдэгдлийн текстийг өөрчилж болно",
+  "defaultMissedTakenMessage": "Та эмээ уухаа мартсан байж магадгүй юу?\nХэд хэдэн өдрийн эм уусан бүртгэл алга 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Мэдэгдлийн эхний хэсгийг өөрчилж болно",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

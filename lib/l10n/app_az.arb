@@ -240,6 +240,7 @@
   "completed": "Hazır",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Həbi qəbul etmədikdə gələn bildirişin mətnini dəyişə bilərsiniz",
+  "defaultMissedTakenMessage": "Həbinizi qəbul etməyi unutmusunuz?\nBir neçə gün üçün həb qəbulu qeydiniz yoxdur 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirişin başlanğıcını dəyişə bilərsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
