@@ -72,7 +72,8 @@ Future<DateTimeRange?> _showRestDurationRangePicker(
     initialDateRange: initialDateRange,
     firstDate: firstDate,
     lastDate: lastDate,
-    helpText: L.selectPausePeriod,
+    // カレンダーは開始日から終了日までをハイライトするため、終了日が服用再開日でお休み期間に含まれないことを見出しで伝える
+    helpText: L.selectPauseEndDateAsResumeDate,
     fieldStartHintText: L.pauseStartDate,
     fieldEndLabelText: L.pauseEndDate,
     builder: (context, child) => DateRangePickerTheme(child: child!),
