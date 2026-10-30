@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Valitse pilleritauon alkamispäivä",
   "selectPauseEndDateAsResumeDate": "Päättymispäivä = jatka pillereitä",
   "pauseResumeDateLimitIsToday": "Jatkamispäivä: viimeistään tänään",
-  "pauseResumeDateLimitBeforeNextPause": "Aloita uudelleen viimeistään seuraavan tauon alussa {date}",
   "pauseStartDate": "Pilleritauon alkamispäivä",
   "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",

@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Veldu upphafsdag hlés á pillutöku",
   "selectPauseEndDateAsResumeDate": "Lokadagur = byrja aftur á pillunni",
   "pauseResumeDateLimitIsToday": "Hefja töku aftur: í síðasta lagi í dag",
-  "pauseResumeDateLimitBeforeNextPause": "Byrja aftur í síðasta lagi við næsta hlé {date}",
   "pauseStartDate": "Upphafsdagur hlés á pillutöku",
   "pauseEndDate": "Lokadagur hlés á pillutöku",
   "endPillSheet": "Notkun pilluspjalds lokið",

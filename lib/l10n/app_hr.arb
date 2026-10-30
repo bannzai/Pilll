@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Odaberite datum početka stanke u uzimanju pilule",
   "selectPauseEndDateAsResumeDate": "Završni datum = nastavak uzimanja",
   "pauseResumeDateLimitIsToday": "Nastavak uzimanja: do danas",
-  "pauseResumeDateLimitBeforeNextPause": "Nastavite uzimanje do sljedeće stanke {date}",
   "pauseStartDate": "Datum početka stanke u uzimanju pilule",
   "pauseEndDate": "Datum završetka pauze u uzimanju pilula",
   "endPillSheet": "Blister završen",
