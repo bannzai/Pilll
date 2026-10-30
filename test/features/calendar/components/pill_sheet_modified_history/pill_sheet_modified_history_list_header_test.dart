@@ -9,6 +9,7 @@ void main() {
     const columnWidth = 57.0;
     const style = TextStyle(fontSize: 12);
 
+    /// 列の幅に置いた見出しを返す。text は見出しの訳語
     Widget subject({required String text}) {
       return MaterialApp(
         home: Scaffold(
@@ -41,7 +42,6 @@ void main() {
             .toList()
           ..sort();
         expect(lineTops.length, 2);
-        // 2 行目が「eingenommen」1 語だけで、語の途中で折り返していない
         expect(
             text
                 .substring(paragraph
@@ -73,7 +73,6 @@ void main() {
             .length,
         greaterThan(1),
       );
-      // 縮小していない
       expect(tester.getRect(find.text(text)).width, paragraph.size.width);
     });
 

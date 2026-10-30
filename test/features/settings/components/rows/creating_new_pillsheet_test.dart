@@ -19,6 +19,7 @@ void main() {
       timezoneDatabaseName: 'Asia/Tokyo',
     );
 
+    /// ピルシートグループの自動追加の行を返す。isPremium はユーザーがプレミアムか
     Widget subject({required bool isPremium}) {
       return ProviderScope(
         overrides: [setSettingProvider.overrideWith((ref) => MockSetSetting())],
@@ -52,7 +53,6 @@ void main() {
           .first;
       final titleRect = tester.getRect(title);
       final badgeRect = tester.getRect(find.byType(PremiumBadge));
-      // 2 行に折り返している
       expect(titleRect.height, greaterThan(badgeRect.height * 1.5));
       // バッジが文言の最後の文字と同じ行にある (2 行の間や、文言の次の行に浮いていない)
       final lastCharacterBox = tester
@@ -74,6 +74,7 @@ void main() {
       addTearDown(tester.view.reset);
       addTearDown(tester.platformDispatcher.clearTextScaleFactorTestValue);
 
+      /// 端末の文字の拡大率を textScale にした時の Premium バッジの高さを返す
       Future<double> badgeHeight({required double textScale}) async {
         tester.platformDispatcher.textScaleFactorTestValue = textScale;
         await tester.pumpWidget(subject(isPremium: false));
@@ -93,6 +94,7 @@ void main() {
       tester.view.devicePixelRatio = 1.0;
       addTearDown(tester.view.reset);
 
+      /// 文字の拡大を textScaler にした時の Premium バッジの高さを返す
       Future<double> badgeHeight({required TextScaler textScaler}) async {
         await tester.pumpWidget(
           ProviderScope(

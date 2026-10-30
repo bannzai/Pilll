@@ -12,6 +12,7 @@ void main() {
   });
 
   group('#MenstruationCard', () {
+    /// 生理予定日カードを本番と同じ余白のリストに置いて返す。title はカードのラベル
     Widget subject({required String title}) {
       return MaterialApp(
         home: Scaffold(
@@ -32,7 +33,7 @@ void main() {
       );
     }
 
-    // 幅の狭い端末 (320pt) で確かめる
+    /// 画面を幅の狭い端末 (320pt) の大きさにし、テストの終わりに戻す
     void setNarrowScreen(WidgetTester tester) {
       tester.view.physicalSize = const Size(320, 640);
       tester.view.devicePixelRatio = 1.0;

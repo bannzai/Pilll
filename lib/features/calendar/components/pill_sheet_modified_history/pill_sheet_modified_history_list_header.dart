@@ -54,7 +54,6 @@ class PillSheetModifiedHistoryListHeaderWrappedLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        // 空白で区切った語のうち、語の途中で改行できない語の最長の幅を測る。
         // 空白を入れない文字 (漢字・かな・タイ文字・ラオ文字・クメール文字・ビルマ文字) を含む語は語の途中で改行できるため測らない。
         // TextPainter.minIntrinsicWidth は、制約なしで layout すると漢字の文字列を 1 語として測るなど、layout の幅で値が変わり使えない (widget test で実測)
         final longestWordWidth = text.split(RegExp(r'\s+')).where((word) => !word.contains(RegExp(r'[฀-໿က-႟ក-៿぀-ヿ㐀-鿿豈-﫿]'))).map((word) {
