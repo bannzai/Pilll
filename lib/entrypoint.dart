@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:ui' show PlatformDispatcher;
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,6 +12,7 @@ import 'package:intl/intl.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
@@ -102,6 +104,9 @@ Future<void> handleNotificationAction(
       initializeDateFormatting(Platform.localeName),
     ).wait;
     Intl.defaultLocale = 'ja';
+    // この isolate では AppLocalizationResolver が動かず L が日本語の初期値のままになる。
+    // 通知の再登録 (飲み忘れ時の既定文言など) を画面と同じ言語にするため、MaterialApp の既定の解決 (basicLocaleListResolution) で端末の言語から決める
+    L = lookupAppLocalizations(basicLocaleListResolution(PlatformDispatcher.instance.locales, AppLocalizations.supportedLocales));
 
     await LocalNotificationService.setupTimeZone();
 
