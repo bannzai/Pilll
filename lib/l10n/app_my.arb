@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ဥပမာ၊ 1/12 မှစ၍ 3 ရက်ကြာ ဆေးသောက်ခြင်း ခေတ္တရပ်နားထားပါက",
   "exampleRestDurationNumber": "ဥပမာ၊ ဆေးပြားနံပါတ် 18 မှစ၍ 3 ရက်ကြာ ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားထားပါက",
   "exampleRestDurationNumberBalloon": "ဆေးသောက်ခြင်း ခေတ္တရပ်နား\n3 ရက်",
+  "exampleRestDurationDateBalloon": "ခေတ္တရပ်နားသည့်ကာလ\nဇန် 12–14",
   "withNumber": "နံပါတ် {number}",
   "currentPillSheetNotFound": "လက်ရှိအသုံးပြုနေသော ဆေးပြားကတ်ကို မတွေ့ပါ",
   "doNotRevertTakePillInPausePeriod": "ဆေးနားရက်အတွင်း ဆေးပြားသောက်ထားသည့်မှတ်တမ်းကို ပယ်ဖျက်၍မရပါ",

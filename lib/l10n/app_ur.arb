@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "مثال کے طور پر، اگر آپ 1/12 سے 3 دن کے لیے گولی لینے میں توقف کریں",
   "exampleRestDurationNumber": "مثال کے طور پر، اگر آپ 18ویں گولی سے 3 دن کے لیے گولی لینے میں توقف کریں",
   "exampleRestDurationNumberBalloon": "گولی لینے میں توقف\n3 دن",
+  "exampleRestDurationDateBalloon": "توقف کی مدت\n12–14 جنوری",
   "withNumber": "نمبر {number}",
   "currentPillSheetNotFound": "اس وقت استعمال ہونے والی گولیوں کی پٹی نہیں ملی",
   "doNotRevertTakePillInPausePeriod": "وقفے کے دوران گولی لینے کا ریکارڈ منسوخ نہیں کیا جا سکتا",

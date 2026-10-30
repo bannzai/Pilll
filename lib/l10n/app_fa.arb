@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "برای مثال، اگر از ۱/۱۲ به مدت ۳ روز توقف موقت مصرف داشته باشید",
   "exampleRestDurationNumber": "برای مثال، اگر از شماره قرص ۱۸ به مدت ۳ روز توقف موقت مصرف داشته باشید",
   "exampleRestDurationNumberBalloon": "توقف موقت مصرف\n۳ روز",
+  "exampleRestDurationDateBalloon": "دوره توقف موقت مصرف\n۱۲ تا ۱۴ ژانویه",
   "withNumber": "شمارهٔ {number}",
   "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
   "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",

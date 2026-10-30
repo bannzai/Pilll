@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Till exempel om du tar en paus i 3 dagar från 1/12",
   "exampleRestDurationNumber": "Till exempel om du tar en paus i 3 dagar från piller 18",
   "exampleRestDurationNumberBalloon": "paus i intaget\n3 dagar",
+  "exampleRestDurationDateBalloon": "Pausperiod\n12–14 jan.",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Den p-pillerkarta du använder nu kunde inte hittas",
   "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",

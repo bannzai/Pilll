@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ఉదాహరణకు, 1/12 నుంచి 3 రోజుల పాటు మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ఇస్తే",
   "exampleRestDurationNumber": "ఉదాహరణకు, 18వ మాత్ర నుంచి 3 రోజుల పాటు మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ఇస్తే",
   "exampleRestDurationNumberBalloon": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం\n3 రోజులు",
+  "exampleRestDurationDateBalloon": "తాత్కాలిక విరామ కాలం\nజన. 12–14",
   "withNumber": "మాత్ర సంఖ్య {number}",
   "currentPillSheetNotFound": "ప్రస్తుతం ఉపయోగిస్తున్న మాత్రల స్ట్రిప్ కనుగొనబడలేదు",
   "doNotRevertTakePillInPausePeriod": "విరామ సమయంలో మాత్ర తీసుకున్న నమోదును రద్దు చేయడం సాధ్యం కాదు",

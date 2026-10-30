@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Naprimjer, ako od 1/12 napravite prekid uzimanja pilula na 3 dana",
   "exampleRestDurationNumber": "Naprimjer, ako od broja pilule 18 napravite prekid uzimanja pilula na 3 dana",
   "exampleRestDurationNumberBalloon": "prekid uzimanja\n3 dana",
+  "exampleRestDurationDateBalloon": "Period prekida\n12–14. januar",
   "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Trenutni blister nije pronađen",
   "doNotRevertTakePillInPausePeriod": "Tokom pauze ne možete poništiti zapis o uzimanju pilule",

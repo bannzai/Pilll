@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Byvoorbeeld, as jy vanaf 1/12 vir 3 dae ’n innameonderbreking het",
   "exampleRestDurationNumber": "Byvoorbeeld, as jy vanaf pil 18 vir 3 dae ’n innameonderbreking het",
   "exampleRestDurationNumberBalloon": "innameonderbreking\n3 dae",
+  "exampleRestDurationDateBalloon": "innameonderbreking\n12–14 Jan",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Die pilstrokie wat jy tans gebruik, kon nie gevind word nie",
   "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",

@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày kể từ 1/12",
   "exampleRestDurationNumber": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày kể từ viên thứ 18",
   "exampleRestDurationNumberBalloon": "tạm ngừng uống thuốc\n3 ngày",
+  "exampleRestDurationDateBalloon": "Thời gian tạm ngừng uống thuốc\n12–14 thg 1",
   "withNumber": "Số {number}",
   "currentPillSheetNotFound": "Không tìm thấy vỉ thuốc bạn đang dùng",
   "doNotRevertTakePillInPausePeriod": "Không thể hủy bản ghi uống thuốc trong thời gian nghỉ thuốc",

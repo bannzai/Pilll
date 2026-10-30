@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Per esempio, se fai una sospensione di 3 giorni a partire dal 12/1",
   "exampleRestDurationNumber": "Per esempio, se fai una sospensione di 3 giorni a partire dal numero della pillola 18",
   "exampleRestDurationNumberBalloon": "sospensione della pillola\n3 giorni",
+  "exampleRestDurationDateBalloon": "Periodo di sospensione\n12–14 gen",
   "withNumber": "N. {number}",
   "currentPillSheetNotFound": "Non è stato trovato il blister che stai usando",
   "doNotRevertTakePillInPausePeriod": "Durante la pausa non puoi annullare la registrazione dell’assunzione della pillola",

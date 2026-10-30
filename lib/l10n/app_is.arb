@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Til dæmis ef þú tekur pilluhlé í 3 daga frá 1/12",
   "exampleRestDurationNumber": "Til dæmis ef þú tekur pilluhlé í 3 daga frá pillu númer 18",
   "exampleRestDurationNumberBalloon": "pilluhlé\n3 dagar",
+  "exampleRestDurationDateBalloon": "Tímabil pilluhlés\n12.–14. jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",

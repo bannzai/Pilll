@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Halimbawa, kung pipiliin ninyo ang paghinto sa pag-inom ng pildoras nang 3 araw simula sa Enero 12",
   "exampleRestDurationNumber": "Halimbawa, kung pipiliin ninyo ang paghinto sa pag-inom ng pildoras nang 3 araw simula sa numero ng pildoras 18",
   "exampleRestDurationNumberBalloon": "paghinto sa pag-inom\n3 araw",
+  "exampleRestDurationDateBalloon": "Tagal ng paghinto sa pag-inom\nOktubre 12–14",
   "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
   "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",

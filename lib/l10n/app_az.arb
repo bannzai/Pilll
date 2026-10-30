@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Məsələn, 1/12 tarixindən 3 gün müddətinə həb qəbuluna fasilə versəniz",
   "exampleRestDurationNumber": "Məsələn, 18-ci həbdən başlayaraq 3 gün müddətinə həb qəbuluna fasilə versəniz",
   "exampleRestDurationNumberBalloon": "Həb qəbuluna fasilə\n3 gün",
+  "exampleRestDurationDateBalloon": "Həb qəbuluna fasilə müddəti\n12–14 yanvar",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Hazırda istifadə etdiyiniz həb blister tapılmadı",
   "doNotRevertTakePillInPausePeriod": "Fasilə müddətində həb qəbulu qeydini ləğv edə bilməzsiniz",

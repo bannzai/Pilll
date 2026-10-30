@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Například při pozastavení užívání na 3 dny od 12. 1.",
   "exampleRestDurationNumber": "Například: číslo tablety 18 je začátkem třídenního pozastavení užívání",
   "exampleRestDurationNumberBalloon": "pozastavení užívání\n3 dny",
+  "exampleRestDurationDateBalloon": "Doba pozastavení užívání\n12.–14. 1.",
   "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Aktuální blistr se nepodařilo najít",
   "doNotRevertTakePillInPausePeriod": "Během pauzy nelze zrušit záznam o užití pilulky",

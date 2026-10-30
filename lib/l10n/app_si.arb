@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "උදාහරණයක් ලෙස, 1/12 සිට දින 3කට පෙති ගැනීමේ විරාමයක් තෝරාගත් විට",
   "exampleRestDurationNumber": "උදාහරණයක් ලෙස, 18 වැනි පෙත්තේ සිට දින 3කට පෙති ගැනීමේ විරාමයක් තෝරාගත් විට",
   "exampleRestDurationNumberBalloon": "පෙති ගැනීමේ විරාමය\nදින 3ක්",
+  "exampleRestDurationDateBalloon": "පෙති ගැනීමේ විරාම කාලය\nජන. 12–14",
   "withNumber": "අංක {number}",
   "currentPillSheetNotFound": "දැනට භාවිත කරන පෙති කාඩ්පත සොයාගත නොහැකි විය",
   "doNotRevertTakePillInPausePeriod": "විරාමය අතරතුර පෙත්ත ගත් බවට ඇති සටහන අවලංගු කළ නොහැක",

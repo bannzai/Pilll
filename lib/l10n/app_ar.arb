@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "مثلا، إذا اخترتِ إيقاف تناول الحبوب لمدة 3 أيام بدءا من 1/12",
   "exampleRestDurationNumber": "مثلا، إذا اخترتِ إيقاف تناول الحبوب لمدة 3 أيام بدءا من الحبة 18",
   "exampleRestDurationNumberBalloon": "مدة إيقاف تناول الحبوب\n3 أيام",
+  "exampleRestDurationDateBalloon": "فترة إيقاف تناول الحبوب\n12–14 يناير",
   "withNumber": "رقم {number}",
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستخدم حاليًا",
   "doNotRevertTakePillInPausePeriod": "لا يمكن التراجع عن تسجيل تناول الحبة خلال فترة الراحة",

@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "د بېلګې په توګه، که له 1/12 څخه د 3 ورځو لپاره لنډمهاله درول وټاکئ",
   "exampleRestDurationNumber": "د بېلګې په توګه، که له 18مې ګولۍ څخه د 3 ورځو لپاره لنډمهاله درول وټاکئ",
   "exampleRestDurationNumberBalloon": "د ګولۍ اخیستل لنډمهاله درول\n3 ورځې",
+  "exampleRestDurationDateBalloon": "د لنډمهاله درول موده\n12–14 جنوري",
   "withNumber": "شمېره {number}",
   "currentPillSheetNotFound": "اوس مهال کارېدونکې د ګولیو پاڼه ونه موندل شوه",
   "doNotRevertTakePillInPausePeriod": "د وقف پر مهال د ګولۍ اخیستلو ثبت بېرته نه شي لغوه کېدای",
