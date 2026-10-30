@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} নম্বৰ",
   "selectPauseStartDate": "পিল খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ বাছনি কৰক",
+  "selectPauseEndDateAsResumeDate": "শেষৰ দিন = পুনৰ বড়ি খোৱাৰ দিন",
   "pauseStartDate": "পিল খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ",
   "pauseEndDate": "পিল খোৱাৰ বিৰতি শেষ হোৱাৰ তাৰিখ",
   "endPillSheet": "পিলৰ ষ্ট্ৰিপ শেষ হৈছে",

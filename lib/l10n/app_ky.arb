@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} номер",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} номер",
   "selectPauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталыш күнүн тандаңыз",
+  "selectPauseEndDateAsResumeDate": "Аяктоо күнү = кайра ичүү күнү",
   "pauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталыш күнү",
   "pauseEndDate": "Таблетка ичүүдөгү тыныгуунун аяктоо күнү",
   "endPillSheet": "таблетка блистери бүттү",

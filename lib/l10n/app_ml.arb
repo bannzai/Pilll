@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} നമ്പർ",
   "beforeEndToAfterDisplayNumberEndPillNumber": "നമ്പർ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി തിരഞ്ഞെടുക്കൂ",
+  "selectPauseEndDateAsResumeDate": "അവസാന തീയതി = ഗുളിക വീണ്ടും തുടങ്ങുന്ന ദിവസം",
   "pauseStartDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള തുടങ്ങുന്ന തീയതി",
   "pauseEndDate": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള അവസാനിക്കുന്ന തീയതി",
   "endPillSheet": "ഗുളിക സ്ട്രിപ്പ് തീർന്നു",

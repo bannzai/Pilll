@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Inombolo 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Inombolo {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Sicela ukhethe usuku lokuqala kwekhefu lokuphuza amaphilisi",
+  "selectPauseEndDateAsResumeDate": "Usuku lokuphela = ukuqala futhi ukuphuza iphilisi",
   "pauseStartDate": "Usuku lokuqala kwekhefu lokuphuza amaphilisi",
   "pauseEndDate": "Usuku lokuphela kwekhefu lokuphuza amaphilisi",
   "endPillSheet": "Ishidi lamaphilisi seliphelile",

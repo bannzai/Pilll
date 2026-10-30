@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "N. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "N. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Seleziona la data di inizio della pausa dalla pillola",
+  "selectPauseEndDateAsResumeDate": "Data di fine = ripresa della pillola",
   "pauseStartDate": "Data di inizio della pausa dalla pillola",
   "pauseEndDate": "Data di fine della pausa dalla pillola",
   "endPillSheet": "Blister terminato",

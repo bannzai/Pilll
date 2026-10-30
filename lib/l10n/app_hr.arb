@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "br. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "br. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Odaberite datum početka stanke u uzimanju pilule",
+  "selectPauseEndDateAsResumeDate": "Završni datum = nastavak uzimanja",
   "pauseStartDate": "Datum početka stanke u uzimanju pilule",
   "pauseEndDate": "Datum završetka pauze u uzimanju pilula",
   "endPillSheet": "Blister završen",

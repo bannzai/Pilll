@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}号",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}号",
   "selectPauseStartDate": "选择暂停服药开始日期",
+  "selectPauseEndDateAsResumeDate": "结束日期＝恢复服药日",
   "pauseStartDate": "暂停服药开始日期",
   "pauseEndDate": "暂停服药结束日期",
   "endPillSheet": "药板已用完",

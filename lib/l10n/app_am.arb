@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ቁጥር 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ቁጥር {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "የክኒን አወሳሰድ እረፍት መጀመሪያ ቀን ይምረጡ",
+  "selectPauseEndDateAsResumeDate": "መጨረሻ ቀን = ክኒን የሚቀጥሉበት ቀን",
   "pauseStartDate": "የክኒን አወሳሰድ እረፍት መጀመሪያ ቀን",
   "pauseEndDate": "የክኒን አወሳሰድ እረፍት ማብቂያ ቀን",
   "endPillSheet": "ክኒን ሉህ ተጠናቋል",

@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "หมายเลข 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "หมายเลข {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "เลือกวันที่เริ่มพักทานยา",
+  "selectPauseEndDateAsResumeDate": "วันสิ้นสุด = วันกลับมาทานยา",
   "pauseStartDate": "วันที่เริ่มพักทานยา",
   "pauseEndDate": "วันที่สิ้นสุดช่วงพักทานยา",
   "endPillSheet": "แผงยาหมดแล้ว",

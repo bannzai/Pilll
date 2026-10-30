@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} नम्बर",
   "beforeEndToAfterDisplayNumberEndPillNumber": "नम्बर {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "चक्की सेवन विश्राम सुरु हुने मिति छान्नुहोस्",
+  "selectPauseEndDateAsResumeDate": "अन्तिम मिति = चक्की फेरि सुरु गर्ने दिन",
   "pauseStartDate": "चक्की सेवनको विश्राम सुरु हुने मिति",
   "pauseEndDate": "चक्की सेवन विश्राम समाप्त हुने मिति",
   "endPillSheet": "चक्की पत्ता सकियो",

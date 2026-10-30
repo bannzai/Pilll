@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ಸಂ. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ಸಂ. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ಮಾತ್ರೆ ಸೇವನೆಯ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "selectPauseEndDateAsResumeDate": "ಕೊನೆಯ ದಿನ = ಮಾತ್ರೆ ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ",
   "pauseStartDate": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಆರಂಭದ ದಿನಾಂಕ",
   "pauseEndDate": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಕೊನೆಯ ದಿನಾಂಕ",
   "endPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಮುಗಿದಿದೆ",

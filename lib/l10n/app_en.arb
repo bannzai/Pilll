@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Select pill break start date",
+  "selectPauseEndDateAsResumeDate": "End date = restart day",
   "pauseStartDate": "Pill break start date",
   "pauseEndDate": "Pill break end date",
   "endPillSheet": "Pill pack finished",

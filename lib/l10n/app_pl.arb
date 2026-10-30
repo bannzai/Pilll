@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "nr 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Wybierz datę rozpoczęcia przerwy w przyjmowaniu tabletek",
+  "selectPauseEndDateAsResumeDate": "Data końca = powrót do tabletek",
   "pauseStartDate": "Data rozpoczęcia przerwy w przyjmowaniu tabletek",
   "pauseEndDate": "Data zakończenia przerwy w przyjmowaniu tabletek",
   "endPillSheet": "blist zużyty",
