@@ -114,7 +114,7 @@
   "takingTime": "Amser cymryd y bilsen",
   "takingHistoryIsPremiumFeature": "Mae hanes cymryd y bilsen yn nodwedd premiwm",
   "pauseTakingDoesNotAdvancePillNumber": "Os byddwch chi'n cymryd seibiant rhag cymryd y bilsen, ni fydd rhif y bilsen yn symud ymlaen",
-  "pauseTakingFromNumber": "Hoffech chi gymryd seibiant o gymryd y bilsen o rif {number} ymlaen?",
+  "pauseTakingFromNumber": "Hoffech chi gymryd seibiant o gymryd y bilsen o {number} ymlaen?",
   "lastTakenPlusOnePillNumber": "Pilsen rhif {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Cymryd y bilsen",
   "estimatedEndPillNumber": "Pilsen olaf y stribed pils blaenorol: rhif {estimatedEndPillNumber}",

@@ -55,6 +55,36 @@ void main() {
       }
     }
   });
+
+  group('#pauseTakingFromNumber', () {
+    test('withNumber の結果を埋め込んだ時に番号の接頭辞・接尾辞が二重にならない', () {
+      // 服用お休みダイアログのタイトルは L.pauseTakingFromNumber(L.withNumber(...)) で組み立てるため、
+      // withNumber の {number} の前後の文字列が pauseTakingFromNumber の {number} の前後にも続くと
+      // 「pill Pill 1」「1번번」のように重なる。
+      // 「nomor」と「No.」のように綴りの違う同義語の重なりは文字列では判定できないため対象外
+      final files = arbDirectory
+          .listSync()
+          .whereType<File>()
+          .where((file) => RegExp(r'app_[A-Za-z_-]+\.arb$').hasMatch(file.path))
+          .toList()
+        ..sort((a, b) => a.path.compareTo(b.path));
+
+      expect(files, isNotEmpty);
+      for (final file in files) {
+        final arb = _readArb(file);
+        final withNumber = (arb['withNumber'] as String).toLowerCase().split('{number}');
+        final pauseTakingFromNumber = (arb['pauseTakingFromNumber'] as String).toLowerCase().split('{number}');
+        final withNumberPrefix = withNumber.first.trim();
+        final withNumberSuffix = withNumber.last.trim();
+        if (withNumberPrefix.isNotEmpty) {
+          expect(pauseTakingFromNumber.first.trim(), isNot(endsWith(withNumberPrefix)), reason: file.path);
+        }
+        if (withNumberSuffix.isNotEmpty) {
+          expect(pauseTakingFromNumber.last.trim(), isNot(startsWith(withNumberSuffix)), reason: file.path);
+        }
+      }
+    });
+  });
 }
 
 Map<String, dynamic> _readArb(File file) =>
