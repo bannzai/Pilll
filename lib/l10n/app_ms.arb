@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "Belum ditetapkan",
   "selectPlannedResumeDate": "Pilih tarikh dirancang untuk mula mengambil pil semula",
   "pauseEndDateLimitIsToday": "Tarikh tamat boleh dipilih sehingga hari ini",
-  "pauseEndDateLimitBeforeNextPause": "Sehingga sehari sebelum jeda pengambilan pil yang seterusnya (bermula {date})",
   "pauseStartDateLimit": "Tarikh mula boleh dipilih sehingga {date}",
   "initialSettingAskYazFlex": "Adakah pil yang anda ambil Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Jika anda memilih “Ya”, paparan akan ditetapkan untuk menunjukkan bilangan hari sejak rehat pengambilan pil tamat",

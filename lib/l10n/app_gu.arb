@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "હજુ નક્કી કરેલ નથી",
   "selectPlannedResumeDate": "ગોળી ફરી લેવાનું શરૂ કરવાની આયોજિત તારીખ પસંદ કરો",
   "pauseEndDateLimitIsToday": "તમે સમાપ્તિની તારીખ આજ સુધીની પસંદ કરી શકો છો",
-  "pauseEndDateLimitBeforeNextPause": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો આગળનો સમયગાળો ({date}થી) શરૂ થાય તેના આગલા દિવસ સુધી",
   "pauseStartDateLimit": "તમે શરૂઆતની તારીખ {date} સુધીની પસંદ કરી શકો છો",
   "initialSettingAskYazFlex": "શું તમે Yaz Flex લો છો?",
   "initialSettingAskYazFlexDescription": "તમે “હા” પસંદ કરશો તો વિરામ પૂરો થયા પછી કેટલા દિવસ થયા છે તે બતાવવા માટે સેટ થશે",

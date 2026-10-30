@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "Määramata",
   "selectPlannedResumeDate": "Vali pillide võtmise jätkamise plaanitud kuupäev",
   "pauseEndDateLimitIsToday": "Lõppkuupäev võib olla hiljemalt täna",
-  "pauseEndDateLimitBeforeNextPause": "Kuni päevani enne järgmist võtmise pausi (alates {date})",
   "pauseStartDateLimit": "Alguskuupäevaks saad valida hiljemalt {date}",
   "initialSettingAskYazFlex": "Kas võtad Yaz Flexi pille?",
   "initialSettingAskYazFlexDescription": "Kui valid „Jah“, seadistatakse kuva näitama, mitu päeva on pillipausi lõpust möödunud",

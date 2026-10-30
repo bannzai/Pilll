@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "Ei asetettu",
   "selectPlannedResumeDate": "Valitse suunniteltu jatkamispäivä",
   "pauseEndDateLimitIsToday": "Päättymispäivä voi olla viimeistään tänään",
-  "pauseEndDateLimitBeforeNextPause": "Seuraavaa taukotilaa edeltävään päivään (alkaa {date})",
   "pauseStartDateLimit": "Alkamispäivä voi olla viimeistään {date}",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flex -pillereitä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”, sovellus näyttää, monesko päivä taukojakson päättymisestä on menossa",

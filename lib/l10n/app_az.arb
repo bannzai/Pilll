@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "Hələ təyin edilməyib",
   "selectPlannedResumeDate": "Həb qəbulunu bərpa etməyi planlaşdırdığınız tarixi seçin",
   "pauseEndDateLimitIsToday": "Bitmə tarixi ən gec bu gün ola bilər",
-  "pauseEndDateLimitBeforeNextPause": "Növbəti «Həb qəbuluna fasilə» ({date} tarixindən) başlamazdan əvvəlki günədək",
   "pauseStartDateLimit": "Başlanğıc tarixini {date} tarixinədək seçə bilərsiniz",
   "initialSettingAskYazFlex": "Qəbul etdiyiniz həb Yaz Flex-dir?",
   "initialSettingAskYazFlexDescription": "«Bəli» seçdikdə, fasilə bitəndən sonra neçə gün keçdiyini göstərmək üçün ayarlanacaq",

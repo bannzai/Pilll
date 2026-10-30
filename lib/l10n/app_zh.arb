@@ -566,7 +566,6 @@
   "plannedResumeDateNotSet": "尚未设置",
   "selectPlannedResumeDate": "选择预计恢复服药日期",
   "pauseEndDateLimitIsToday": "结束日期最晚可选至今天",
-  "pauseEndDateLimitBeforeNextPause": "截至不与下次暂停服药时段（从 {date} 开始）重叠的日期",
   "pauseStartDateLimit": "开始日期最晚可选至 {date}",
   "initialSettingAskYazFlex": "你服用的是 Yaz Flex 吗？",
   "initialSettingAskYazFlexDescription": "选择“是”后，将显示停药期结束以来经过的天数",
