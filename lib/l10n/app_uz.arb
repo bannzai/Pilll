@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanadigan sanani tanlang",
   "selectPauseEndDateAsResumeDate": "Tugash sanasi = qayta ichish kuni",
   "pauseResumeDateLimitIsToday": "Qayta ichish kuni: bugungacha",
+  "pauseResumeDateLimitBeforeNextPause": "Keyingi tanaffus {date}gacha qayta boshlang",
   "pauseStartDate": "Tabletkalarni qabul qilishdagi tanaffus boshlanish sanasi",
   "pauseEndDate": "Tabletkalarni qabul qilishdagi tanaffus tugash sanasi",
   "endPillSheet": "tabletka blister tugadi",

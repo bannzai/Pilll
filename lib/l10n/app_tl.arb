@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Piliin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "selectPauseEndDateAsResumeDate": "Petsa ng pagtatapos = balik sa pag-inom",
   "pauseResumeDateLimitIsToday": "Araw ng muling pag-inom: hanggang ngayon",
+  "pauseResumeDateLimitBeforeNextPause": "Muling uminom bago ang susunod na pahinga {date}",
   "pauseStartDate": "Petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras",
   "endPillSheet": "Naubos na ang pakete ng pildoras",
