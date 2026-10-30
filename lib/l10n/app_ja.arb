@@ -496,9 +496,22 @@
   "@selectPauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "selectPausePeriod": "服用お休み期間を選択",
-  "@selectPausePeriod": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+  "selectPauseEndDateAsResumeDate": "終了日は服用を再開する日を選択",
+  "@selectPauseEndDateAsResumeDate": {
+    "description": "服用お休み期間を追加・変更するカレンダーの見出しです。カレンダーで選ぶ終了日は服用を再開する日で、お休みの日数には含まれないことを伝えます。例: 10/26〜10/29の4日間お休みする場合、終了日には10/30を選びます。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、英字なら16文字以内で訳してください。収まらない言語では一部の語を省いてかまいません。文にせず、「終了日＝服用再開日」が伝わる最短の語句にします。英語の例: End date = restart day"
+  },
+  "pauseResumeDateLimitIsToday": "服用再開日は今日まで",
+  "@pauseResumeDateLimitIsToday": {
+    "description": "終了済みの服用お休み期間を変更するカレンダーの見出しです。終了日は服用を再開する日であり、その服用再開日に選べる最終日が今日であることを伝えます。未来の日付を選べない理由を示します。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、英字なら16文字以内で訳してください。収まらない言語では一部の語を省いてかまいません。文にせず、最短の語句にします。英語の例: Restart day: up to today"
+  },
+  "pauseResumeDateLimitBeforeNextPause": "服用再開日は次のお休み（{date}〜）まで",
+  "@pauseResumeDateLimitBeforeNextPause": {
+    "description": "服用お休み期間を変更するカレンダーの見出しです。終了日は服用を再開する日であり、後続の服用お休み期間があるため、服用再開日に選べる日が次の服用お休みの開始日までに限られることを伝えます。{date}には次の服用お休みの開始日（例: 7/13）が入り、その日も選べます。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、{date}を含めて英字なら25文字以内で、文にせず最短の語句にしてください。ただし「次のお休み（休薬・服用お休み）」が上限の理由であることは省かずに必ず含めます。文にすると長くなるため、「{date}までに再開」の短い語句のあとに、お休みを表す名詞1語を括弧で添える形にしてください。例: en「Restart by {date} (break)」、de「Neustart bis {date} (Pause)」、fr「Reprise d’ici {date} (pause)」、ru「Возобновить до {date} (перерыв)」",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   },
   "pauseStartDate": "服用お休み開始日",
   "@pauseStartDate": {
@@ -2768,19 +2781,6 @@
   "selectPlannedResumeDate": "服用再開予定日を選択",
   "@selectPlannedResumeDate": {
     "description": "服用お休みを開始するダイアログで、服用再開予定日をカレンダーから選択する際に表示される画面タイトルです。"
-  },
-  "pauseEndDateLimitIsToday": "終了日は今日まで",
-  "@pauseEndDateLimitIsToday": {
-    "description": "終了済みの服用お休み期間を変更するカレンダーで、終了日に選べる最終日が今日であることを伝える1行の説明です。未来の日付を終了日にできない理由を示します。"
-  },
-  "pauseEndDateLimitBeforeNextPause": "次のお休み（{date}〜）と重ならない日まで",
-  "@pauseEndDateLimitBeforeNextPause": {
-    "description": "服用お休み期間を変更するカレンダーで、後続の服用お休み期間があるために終了日に選べる日が限られていることを伝える1行の説明です。{date}には次の服用お休みの開始日（例: 7/13）が入ります。",
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
   },
   "pauseStartDateLimit": "開始日は{date}まで",
   "@pauseStartDateLimit": {
