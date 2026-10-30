@@ -108,6 +108,7 @@
   "selectPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය තෝරන්න",
   "selectPauseEndDateAsResumeDate": "අවසන් දිනය = පෙත්ත නැවත ගන්නා දිනය",
   "pauseResumeDateLimitIsToday": "නැවත පෙති ගැනීම අරඹන දිනය: අද දක්වා",
+  "pauseResumeDateLimitBeforeNextPause": "{date} වන විට නැවත ගන්න (විරාමය)",
   "pauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය",
   "pauseEndDate": "පෙති ගැනීමේ විරාමය අවසන් වන දිනය",
   "endPillSheet": "පෙති කාඩ්පත අවසන් වීම",

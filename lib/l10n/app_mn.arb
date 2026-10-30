@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Эм уух завсарлагын эхлэх өдрийг сонгоно уу",
   "selectPauseEndDateAsResumeDate": "Дуусах өдөр = эмээ дахин уух өдөр",
   "pauseResumeDateLimitIsToday": "Дахин уух: өнөөдрийг хүртэл",
+  "pauseResumeDateLimitBeforeNextPause": "{date} гэхэд үргэлжлүүлэх (завсарлага)",
   "pauseStartDate": "Эм уух завсарлагын эхлэх өдөр",
   "pauseEndDate": "Эм уух завсарлагын дуусах өдөр",
   "endPillSheet": "Эмийн блистер дууссан",
