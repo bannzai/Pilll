@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Jawab berdasarkan jumlah hari sejak berakhirnya jeda sebelum lembar pil dimulai",
   "yazFlexNextInputIsRestDuration": "Selanjutnya, masukkan jeda minum pil sebelumnya",
   "deletePausePeriod": "Hapus periode jeda minum pil",
-  "deletePausePeriodConfirmMessage": "Jeda minum pil ini akan dihapus dari catatan Anda. Tanggal pada strip pil akan dihitung ulang seolah tidak ada jeda."
+  "deletePausePeriodConfirmMessage": "Jeda minum pil ini akan dihapus dari catatan Anda. Tanggal pada strip pil akan dihitung ulang seolah tidak ada jeda.",
+  "deletedPausePeriod": "Periode jeda minum pil telah dihapus"
 }

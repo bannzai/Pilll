@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Zəhmət olmasa, həb blisterinə başlamazdan əvvəlki fasilə bitəndən neçə gün keçdiyinə əsasən cavab verin",
   "yazFlexNextInputIsRestDuration": "Növbəti addımda əvvəlki fasilə müddətini daxil edin",
   "deletePausePeriod": "Həb qəbuluna fasilə dövrünü silin",
-  "deletePausePeriodConfirmMessage": "Bu həb qəbuluna fasilə müddəti qeydlərinizdən silinəcək. həb blister üzərindəki tarixlər fasilə olmayıbmış kimi yenidən hesablanacaq."
+  "deletePausePeriodConfirmMessage": "Bu həb qəbuluna fasilə müddəti qeydlərinizdən silinəcək. həb blister üzərindəki tarixlər fasilə olmayıbmış kimi yenidən hesablanacaq.",
+  "deletedPausePeriod": "Həb qəbuluna fasilə müddəti silindi"
 }

@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, pilula-orria hasi aurreko atsedenaldia amaitu zenetik igarotako egunen arabera",
   "yazFlexNextInputIsRestDuration": "Hurrengo urratsean aurreko atsedenaldia sartuko duzu",
   "deletePausePeriod": "Pilula hartzeko atsedenaldia ezabatu",
-  "deletePausePeriodConfirmMessage": "Pilulak hartzeko etenaldi hau zure erregistroetatik kenduko da. pilula-blister-eko datak berriro kalkulatuko dira, etenaldirik izan ez balitz bezala."
+  "deletePausePeriodConfirmMessage": "Pilulak hartzeko etenaldi hau zure erregistroetatik kenduko da. pilula-blister-eko datak berriro kalkulatuko dira, etenaldirik izan ez balitz bezala.",
+  "deletedPausePeriod": "Pilula hartzeko atsedenaldia ezabatu da"
 }

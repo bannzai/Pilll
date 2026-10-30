@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Vasta selle järgi, mitu päeva on möödunud enne pillilehe alustamist olnud pillipausi lõpust",
   "yazFlexNextInputIsRestDuration": "Järgmisena sisesta oma eelmine pillipaus",
   "deletePausePeriod": "Kustuta pillipaus",
-  "deletePausePeriodConfirmMessage": "See pillide võtmise paus eemaldatakse sinu kirjetest. pillileh kuupäevad arvutatakse uuesti, nagu pausi poleks olnud."
+  "deletePausePeriodConfirmMessage": "See pillide võtmise paus eemaldatakse sinu kirjetest. pillileh kuupäevad arvutatakse uuesti, nagu pausi poleks olnud.",
+  "deletedPausePeriod": "Pillipaus on kustutatud"
 }

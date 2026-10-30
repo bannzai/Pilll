@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "请根据开始服用这板药之前的停药期结束后经过的天数回答",
   "yazFlexNextInputIsRestDuration": "接下来，请填写上一次停药的时间",
   "deletePausePeriod": "删除停药期",
-  "deletePausePeriodConfirmMessage": "这段停药期将从记录中移除。药板上的日期会按没有停药期的情况重新计算。"
+  "deletePausePeriodConfirmMessage": "这段停药期将从记录中移除。药板上的日期会按没有停药期的情况重新计算。",
+  "deletedPausePeriod": "已删除停药期"
 }

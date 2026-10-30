@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Tafadhali jibu kulingana na idadi ya siku zilizopita tangu mapumziko ya kabla ya kuanza pakiti ya vidonge yalipoisha",
   "yazFlexNextInputIsRestDuration": "Kisha, tafadhali weka kipindi cha awali cha mapumziko ya kumeza vidonge",
   "deletePausePeriod": "Tafadhali futa kipindi cha mapumziko ya kumeza vidonge",
-  "deletePausePeriodConfirmMessage": "Kipindi hiki cha kupumzika kumeza vidonge kitaondolewa kwenye kumbukumbu zako. Tarehe za pakiti ya vidonge zitahesabiwa upya kana kwamba hakukuwa na mapumziko."
+  "deletePausePeriodConfirmMessage": "Kipindi hiki cha kupumzika kumeza vidonge kitaondolewa kwenye kumbukumbu zako. Tarehe za pakiti ya vidonge zitahesabiwa upya kana kwamba hakukuwa na mapumziko.",
+  "deletedPausePeriod": "Kipindi cha mapumziko ya kumeza vidonge kimefutwa"
 }

@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Antwort bitte nach de Aazahl Täg, wo sit em Ändi vo de Pillepause vor em Aafang vom Blister verbiigange sind",
   "yazFlexNextInputIsRestDuration": "Als Nöchschts chasch dini letschti Pillepause iiträge",
   "deletePausePeriod": "Pillepaus lösche",
-  "deletePausePeriodConfirmMessage": "Die Pillepause wird us dine Ufzeichnige glöscht. D Date uf em Pilleblister wärded neu berechnet, wie wenn’s kei Pause geh hätt."
+  "deletePausePeriodConfirmMessage": "Die Pillepause wird us dine Ufzeichnige glöscht. D Date uf em Pilleblister wärded neu berechnet, wie wenn’s kei Pause geh hätt.",
+  "deletedPausePeriod": "D Pillepause isch glöscht worde"
 }

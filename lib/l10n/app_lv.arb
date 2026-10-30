@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Lūdzu, atbildiet, ņemot vērā, cik dienu pagājušas kopš tā pārtraukuma beigām, kas bija pirms plāksnītes sākšanas",
   "yazFlexNextInputIsRestDuration": "Tālāk ievadīsiet iepriekšējo pārtraukumu",
   "deletePausePeriod": "Dzēst tablešu lietošanas pārtraukuma periodu",
-  "deletePausePeriodConfirmMessage": "Šis tablešu lietošanas pārtraukums tiks noņemts no jūsu ierakstiem. tablešu blister datumi tiks pārrēķināti tā, it kā pārtraukuma nebūtu bijis."
+  "deletePausePeriodConfirmMessage": "Šis tablešu lietošanas pārtraukums tiks noņemts no jūsu ierakstiem. tablešu blister datumi tiks pārrēķināti tā, it kā pārtraukuma nebūtu bijis.",
+  "deletedPausePeriod": "Tablešu lietošanas pārtraukuma periods ir dzēsts"
 }

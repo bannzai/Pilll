@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Responde según los días que han pasado desde que terminó el descanso previo al inicio del blíster",
   "yazFlexNextInputIsRestDuration": "A continuación, indica tu descanso anterior de la píldora",
   "deletePausePeriod": "Eliminar período de descanso de la píldora",
-  "deletePausePeriodConfirmMessage": "Este período de descanso se eliminará de tus registros. Las fechas del blíster se volverán a calcular como si no hubiera habido descanso."
+  "deletePausePeriodConfirmMessage": "Este período de descanso se eliminará de tus registros. Las fechas del blíster se volverán a calcular como si no hubiera habido descanso.",
+  "deletedPausePeriod": "Se eliminó el período de descanso de la píldora"
 }

@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Rispondi in base ai giorni trascorsi dalla fine della pausa prima di iniziare il blister",
   "yazFlexNextInputIsRestDuration": "Nel prossimo passaggio inserirai la pausa precedente",
   "deletePausePeriod": "Elimina il periodo di pausa dalla pillola",
-  "deletePausePeriodConfirmMessage": "Questa pausa nell’assunzione verrà rimossa dalle tue registrazioni. Le date sul blister verranno ricalcolate come se non ci fosse stata alcuna pausa."
+  "deletePausePeriodConfirmMessage": "Questa pausa nell’assunzione verrà rimossa dalle tue registrazioni. Le date sul blister verranno ricalcolate come se non ci fosse stata alcuna pausa.",
+  "deletedPausePeriod": "Il periodo di pausa dalla pillola è stato eliminato"
 }

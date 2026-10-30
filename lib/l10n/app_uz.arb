@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Iltimos, tabletka blisterni boshlashdan oldingi tanaffus tugaganidan beri necha kun oʻtganiga qarab javob bering",
   "yazFlexNextInputIsRestDuration": "Keyingi qadamda oldingi tanaffusni kiritasiz",
   "deletePausePeriod": "Tabletkalarni qabul qilishdagi tanaffus davrini oʻchiring",
-  "deletePausePeriodConfirmMessage": "Tabletka qabul qilishdagi bu tanaffus qaydlaringizdan olib tashlanadi. tabletka blister sanalari tanaffus bo‘lmagandek qayta hisoblanadi."
+  "deletePausePeriodConfirmMessage": "Tabletka qabul qilishdagi bu tanaffus qaydlaringizdan olib tashlanadi. tabletka blister sanalari tanaffus bo‘lmagandek qayta hisoblanadi.",
+  "deletedPausePeriod": "Tabletkalarni qabul qilishdagi tanaffus davri oʻchirildi"
 }

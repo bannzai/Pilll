@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Răspunde în funcție de câte zile au trecut de la sfârșitul pauzei dinaintea începerii blisterului",
   "yazFlexNextInputIsRestDuration": "Apoi, introdu pauza anterioară de la administrarea pilulei",
   "deletePausePeriod": "Șterge perioada de pauză de la pilulă",
-  "deletePausePeriodConfirmMessage": "Această pauză în administrarea pilulei va fi eliminată din înregistrările tale. Datele de pe blister vor fi recalculate ca și cum pauza nu ar fi avut loc."
+  "deletePausePeriodConfirmMessage": "Această pauză în administrarea pilulei va fi eliminată din înregistrările tale. Datele de pe blister vor fi recalculate ca și cum pauza nu ar fi avut loc.",
+  "deletedPausePeriod": "Perioada de pauză de la pilulă a fost ștearsă"
 }

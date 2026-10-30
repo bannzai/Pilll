@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "يرجى الإجابة حسب عدد الأيام التي مرت منذ انتهاء فترة راحة تناول الحبوب التي سبقت بدء الشريط",
   "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة راحة تناول الحبوب السابقة",
   "deletePausePeriod": "حذف فترة التوقف عن تناول الحبوب",
-  "deletePausePeriodConfirmMessage": "ستتم إزالة فترة التوقف هذه من السجل، وستُعاد حساب تواريخ شريط كما لو لم تحدث فترة توقف."
+  "deletePausePeriodConfirmMessage": "ستتم إزالة فترة التوقف هذه من السجل، وستُعاد حساب تواريخ شريط كما لو لم تحدث فترة توقف.",
+  "deletedPausePeriod": "تم حذف فترة التوقف عن تناول الحبوب"
 }

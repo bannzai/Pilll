@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Veuillez répondre selon le nombre de jours écoulés depuis la fin de la pause précédant le début de la plaquette",
   "yazFlexNextInputIsRestDuration": "À l’étape suivante, vous indiquerez votre pause précédente",
   "deletePausePeriod": "Supprimer la période d'arrêt de la pilule",
-  "deletePausePeriodConfirmMessage": "Cette pause dans la prise sera supprimée de vos enregistrements. Les dates de la plaquette seront recalculées comme si cette pause n’avait pas eu lieu."
+  "deletePausePeriodConfirmMessage": "Cette pause dans la prise sera supprimée de vos enregistrements. Les dates de la plaquette seront recalculées comme si cette pause n’avait pas eu lieu.",
+  "deletedPausePeriod": "La période de pause de la pilule a été supprimée"
 }

@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Bitte antworte anhand der Tage seit dem Ende der Einnahmepause vor Beginn des Blisters",
   "yazFlexNextInputIsRestDuration": "Als Nächstes gibst du deine letzte Einnahmepause ein",
   "deletePausePeriod": "Pillenpause löschen",
-  "deletePausePeriodConfirmMessage": "Diese Einnahmepause wird aus deinen Einträgen entfernt. Die Daten auf dem Pillenblister werden neu berechnet, als hätte es keine Pause gegeben."
+  "deletePausePeriodConfirmMessage": "Diese Einnahmepause wird aus deinen Einträgen entfernt. Die Daten auf dem Pillenblister werden neu berechnet, als hätte es keine Pause gegeben.",
+  "deletedPausePeriod": "Die Pillenpause wurde gelöscht"
 }

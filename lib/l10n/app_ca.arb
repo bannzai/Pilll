@@ -584,5 +584,6 @@
   "yazFlexBeginPillNumberPageNote": "Respon segons els dies que han passat des que va acabar el descans anterior a l’inici del blíster",
   "yazFlexNextInputIsRestDuration": "A continuació, introduiràs el descans anterior",
   "deletePausePeriod": "Suprimeix el període de descans de la píndola",
-  "deletePausePeriodConfirmMessage": "Aquest període de descans s’eliminarà dels teus registres. Les dates del blíster es tornaran a calcular com si no hi hagués hagut cap descans."
+  "deletePausePeriodConfirmMessage": "Aquest període de descans s’eliminarà dels teus registres. Les dates del blíster es tornaran a calcular com si no hi hagués hagut cap descans.",
+  "deletedPausePeriod": "S’ha eliminat el període de descans de la píndola"
 }
