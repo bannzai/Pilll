@@ -140,6 +140,11 @@ else
 fi
 [ "${#FLOW_FILES[@]}" -gt 0 ] || fail "実行する flow が無い: ${TARGET}"
 
+# flow の実行中にできたクラッシュレポートだけを artifact に含めるため、開始時刻を残す
+CRASH_MARKER="${RUNNER_TEMP:-/tmp}/maestro-e2e-start"
+touch "$CRASH_MARKER"
+LOG_START="$(date '+%Y-%m-%d %H:%M:%S')"
+
 STATUS=0
 run_flow() {
   maestro --udid "$UDID" test \
@@ -170,6 +175,18 @@ done
 if [ -d "${HOME}/.maestro/tests" ]; then
   cp -R "${HOME}/.maestro/tests" "${ARTIFACT_DIR}/maestro-tests"
 fi
+# maestro は flow 中にアプリが落ちると "App crashed or stopped" とだけ出し、原因を残さない (maestro-e2e run 40216371709)。
+# Simulator のアプリのクラッシュレポートは host の DiagnosticReports に書かれるため、実行中にできたものを含める。
+# クラッシュレポートを残さない終了 (watchdog・メモリ不足による強制終了) の理由は Simulator の unified log に出るため、
+# アプリのプロセスと、アプリを終了させる側のプロセスがアプリの bundle ID に触れたログも含める
+mkdir -p "${ARTIFACT_DIR}/crash"
+find "${HOME}/Library/Logs/DiagnosticReports" -type f \( -name '*.ips' -o -name '*.crash' \) -newer "$CRASH_MARKER" \
+  -exec cp {} "${ARTIFACT_DIR}/crash/" \; 2>/dev/null || true
+APP_EXECUTABLE="$(/usr/libexec/PlistBuddy -c 'Print CFBundleExecutable' "${APP_PATH}/Info.plist" || true)"
+APP_BUNDLE_ID="$(/usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' "${APP_PATH}/Info.plist" || true)"
+xcrun simctl spawn "$UDID" log show --style compact --start "$LOG_START" \
+  --predicate "process == \"${APP_EXECUTABLE}\" OR ((process == \"runningboardd\" OR process == \"SpringBoard\" OR process == \"ReportCrash\") AND eventMessage CONTAINS \"${APP_BUNDLE_ID}\")" \
+  > "${ARTIFACT_DIR}/crash/simulator-log.txt" 2>&1 || true
 
 # recordVideo は SIGINT で終了させないと mp4 が壊れる
 if [ -n "$REC_PID" ]; then
@@ -186,7 +203,7 @@ fi
   if [ "$STATUS" -eq 0 ]; then
     echo "- 結果: 成功"
   else
-    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report-*.xml / debug / maestro-tests / session.mp4 を参照"
+    echo "- 結果: 失敗 (exit ${STATUS})。artifact \`maestro-e2e-artifacts\` の report-*.xml / debug / maestro-tests / crash / session.mp4 を参照"
   fi
 } >> "$SUMMARY"
 
