@@ -108,6 +108,7 @@
   "selectPauseStartDate": "აირჩიეთ აბების მიღების შესვენების დაწყების თარიღი",
   "selectPauseEndDateAsResumeDate": "დასასრული = მიღების განახლება",
   "pauseResumeDateLimitIsToday": "მიღების განახლება: დღემდე",
+  "pauseResumeDateLimitBeforeNextPause": "განაახლეთ შემდეგ შესვენებამდე {date}",
   "pauseStartDate": "აბების მიღების შესვენების დაწყების თარიღი",
   "pauseEndDate": "აბების მიღების შესვენების დასრულების თარიღი",
   "endPillSheet": "აბების ბლისტერი დასრულებულია",

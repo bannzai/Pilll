@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Tria la data d'inici de la pausa de la píndola",
   "selectPauseEndDateAsResumeDate": "Data final = reprendre la píndola",
   "pauseResumeDateLimitIsToday": "Reprendre la píndola: fins avui",
+  "pauseResumeDateLimitBeforeNextPause": "Reprèn la píndola fins a la pausa següent {date}",
   "pauseStartDate": "Data d'inici de la pausa de la píndola",
   "pauseEndDate": "Data de finalització de la pausa de la píndola",
   "endPillSheet": "Blíster acabat",

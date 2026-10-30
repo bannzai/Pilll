@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Izberite datum začetka premora pri jemanju tablet",
   "selectPauseEndDateAsResumeDate": "Konec = spet jemanje",
   "pauseResumeDateLimitIsToday": "Ponovni začetek jemanja: do danes",
+  "pauseResumeDateLimitBeforeNextPause": "Znova začnite do naslednjega premora {date}",
   "pauseStartDate": "Datum začetka premora pri jemanju tablet",
   "pauseEndDate": "Datum konca premora pri jemanju tablet",
   "endPillSheet": "Ploščica je porabljena",

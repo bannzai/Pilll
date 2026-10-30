@@ -108,6 +108,7 @@
   "selectPauseStartDate": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်ကို ရွေးချယ်ပါ",
   "selectPauseEndDateAsResumeDate": "ပြီးဆုံးရက် = ဆေးပြန်သောက်မည့်ရက်",
   "pauseResumeDateLimitIsToday": "ဆေးပြန်သောက်မည့်နေ့: ယနေ့အထိ",
+  "pauseResumeDateLimitBeforeNextPause": "နောက်တစ်ကြိမ် နားချိန် {date} မတိုင်မီ ပြန်သောက်ပါ",
   "pauseStartDate": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမည့် စတင်ရက်",
   "pauseEndDate": "ဆေးပြားသောက်ခြင်း ခေတ္တရပ်နားမှု ပြီးဆုံးမည့်ရက်",
   "endPillSheet": "ဆေးပြားကတ် ပြီးဆုံးခြင်း",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталыш күнүн тандаңыз",
   "selectPauseEndDateAsResumeDate": "Аяктоо күнү = кайра ичүү күнү",
   "pauseResumeDateLimitIsToday": "Кайра ичүү күнү: бүгүнгө чейин",
+  "pauseResumeDateLimitBeforeNextPause": "Кийинки тыныгууга чейин кайра баштаңыз: {date}",
   "pauseStartDate": "Таблетка ичүүдөгү тыныгуунун башталыш күнү",
   "pauseEndDate": "Таблетка ичүүдөгү тыныгуунун аяктоо күнү",
   "endPillSheet": "таблетка блистери бүттү",

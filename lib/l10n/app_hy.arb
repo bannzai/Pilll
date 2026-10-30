@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Ընտրեք հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվը",
   "selectPauseEndDateAsResumeDate": "Ավարտ = ընդունման վերսկսում",
   "pauseResumeDateLimitIsToday": "Ընդունման վերսկսումը՝ մինչև այսօր",
+  "pauseResumeDateLimitBeforeNextPause": "Վերսկսեք մինչև հաջորդ դադարը՝ {date}",
   "pauseStartDate": "Հաբերի ընդունման ընդմիջման մեկնարկի ամսաթիվ",
   "pauseEndDate": "Հաբերի ընդունման ընդմիջման ավարտի ամսաթիվ",
   "endPillSheet": "Ավարտվել է հաբերի բլիստերը",

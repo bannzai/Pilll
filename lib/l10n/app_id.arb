@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Pilih tanggal mulai jeda minum pil",
   "selectPauseEndDateAsResumeDate": "Tanggal akhir = mulai minum pil lagi",
   "pauseResumeDateLimitIsToday": "Mulai lagi sampai hari ini",
+  "pauseResumeDateLimitBeforeNextPause": "Mulai lagi paling lambat saat jeda berikutnya {date}",
   "pauseStartDate": "Tanggal mulai jeda minum pil",
   "pauseEndDate": "Tanggal akhir jeda minum pil",
   "endPillSheet": "Strip pil sudah habis",
