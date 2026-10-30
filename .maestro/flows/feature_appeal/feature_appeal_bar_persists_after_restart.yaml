@@ -21,7 +21,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - launchApp:
     clearState: false
     clearKeychain: false
-- waitForAnimationToEnd
+# 再起動の直後も起動中はスクリーンショットが止まり得るため、waitForAnimationToEnd を置かず view hierarchy だけを見る待ちにする
 # 再起動後も Bar が表示される (初期設定済み + トライアル中 + 未表示の FeatureAppeal がある = FeatureAppeal)
 # Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
 - extendedWaitUntil:
