@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Sicela weqe",
   "yazFlexBeginPillNumberPageTitle": "Iphakethe lamaphilisi liqala ngosuku lwesingaki emjikelezweni wokuwaphuza?",
   "yazFlexBeginPillNumberPageNote": "Sicela uphendule ngokwenani lezinsuku ezidlule kusukela kuphele ikhefu langaphambi kokuqala iphakethe lamaphilisi",
-  "yazFlexNextInputIsRestDuration": "Okulandelayo, sicela ufake isikhathi sekhefu sangaphambilini sokungawaphuzi amaphilisi"
+  "yazFlexNextInputIsRestDuration": "Okulandelayo, sicela ufake isikhathi sekhefu sangaphambilini sokungawaphuzi amaphilisi",
+  "deletePausePeriod": "Sicela ususe isikhathi sekhefu lokuphuza amaphilisi"
 }

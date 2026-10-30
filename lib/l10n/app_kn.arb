@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "ಬಿಟ್ಟುಬಿಡಿ",
   "yazFlexBeginPillNumberPageTitle": "ನಿಮ್ಮ ಮಾತ್ರೆ ಸೇವನೆಯ ಚಕ್ರದ ಎಷ್ಟನೇ ದಿನ ಸ್ಟ್ರಿಪ್ ಆರಂಭವಾಗುತ್ತದೆ?",
   "yazFlexBeginPillNumberPageNote": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಆರಂಭಿಸುವ ಮೊದಲು ಇದ್ದ ವಿರಾಮ ಮುಗಿದು ಎಷ್ಟು ದಿನಗಳಾಗಿವೆ ಎಂಬುದರ ಆಧಾರದಲ್ಲಿ ದಯವಿಟ್ಟು ಉತ್ತರಿಸಿ",
-  "yazFlexNextInputIsRestDuration": "ಮುಂದೆ ನೀವು ಹಿಂದಿನ ವಿರಾಮವನ್ನು ನಮೂದಿಸುತ್ತೀರಿ"
+  "yazFlexNextInputIsRestDuration": "ಮುಂದೆ ನೀವು ಹಿಂದಿನ ವಿರಾಮವನ್ನು ನಮೂದಿಸುತ್ತೀರಿ",
+  "deletePausePeriod": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ವಿರಾಮದ ಅವಧಿಯನ್ನು ಅಳಿಸಿ"
 }

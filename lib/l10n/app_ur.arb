@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "چھوڑ دیں",
   "yazFlexBeginPillNumberPageTitle": "گولیاں لینے کے چکر کے کس دن سے گولیوں کی پٹی شروع ہوتی ہے؟",
   "yazFlexBeginPillNumberPageNote": "براہِ کرم گولیوں کی پٹی شروع کرنے سے پہلے کا وقفہ ختم ہونے کے بعد گزرے دنوں کی تعداد کے مطابق جواب دیں",
-  "yazFlexNextInputIsRestDuration": "اس کے بعد گولیاں لینے کے پچھلے وقفے کی مدت درج کریں"
+  "yazFlexNextInputIsRestDuration": "اس کے بعد گولیاں لینے کے پچھلے وقفے کی مدت درج کریں",
+  "deletePausePeriod": "گولیاں لینے میں وقفے کی مدت حذف کریں"
 }

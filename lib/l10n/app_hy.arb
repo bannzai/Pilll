@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Բաց թողնել",
   "yazFlexBeginPillNumberPageTitle": "Հաբերի ընդունման Ձեր շրջանի ո՞ր օրն է սկսվում թերթիկը",
   "yazFlexBeginPillNumberPageNote": "Խնդրում ենք պատասխանել՝ հաշվի առնելով, թե քանի օր է անցել հաբերի թերթիկը սկսելուց առաջ եղած դադարն ավարտվելուց հետո",
-  "yazFlexNextInputIsRestDuration": "Հաջորդ քայլում կմուտքագրեք հաբերի ընդունման նախորդ դադարը"
+  "yazFlexNextInputIsRestDuration": "Հաջորդ քայլում կմուտքագրեք հաբերի ընդունման նախորդ դադարը",
+  "deletePausePeriod": "Հեռացնել հաբերի ընդունման ընդմիջման ժամանակահատվածը"
 }

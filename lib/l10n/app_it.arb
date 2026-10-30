@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Salta",
   "yazFlexBeginPillNumberPageTitle": "In quale giorno del tuo ciclo di assunzione della pillola inizia il blister?",
   "yazFlexBeginPillNumberPageNote": "Rispondi in base ai giorni trascorsi dalla fine della pausa prima di iniziare il blister",
-  "yazFlexNextInputIsRestDuration": "Nel prossimo passaggio inserirai la pausa precedente"
+  "yazFlexNextInputIsRestDuration": "Nel prossimo passaggio inserirai la pausa precedente",
+  "deletePausePeriod": "Elimina il periodo di pausa dalla pillola"
 }

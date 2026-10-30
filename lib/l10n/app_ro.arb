@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Omite",
   "yazFlexBeginPillNumberPageTitle": "În ce zi a ciclului de administrare a pilulei începe blisterul?",
   "yazFlexBeginPillNumberPageNote": "Răspunde în funcție de câte zile au trecut de la sfârșitul pauzei dinaintea începerii blisterului",
-  "yazFlexNextInputIsRestDuration": "Apoi, introdu pauza anterioară de la administrarea pilulei"
+  "yazFlexNextInputIsRestDuration": "Apoi, introdu pauza anterioară de la administrarea pilulei",
+  "deletePausePeriod": "Șterge perioada de pauză de la pilulă"
 }

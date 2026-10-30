@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "এড়িয়ে যান",
   "yazFlexBeginPillNumberPageTitle": "পিল খাওয়ার চক্রের কততম দিনে এই পিলের পাতা শুরু হয়?",
   "yazFlexBeginPillNumberPageNote": "পিলের পাতা শুরু করার আগের বিরতি শেষ হওয়ার পর কত দিন কেটেছে, তার ভিত্তিতে উত্তর দিন",
-  "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখবেন"
+  "yazFlexNextInputIsRestDuration": "এরপর আগের বিরতির তথ্য লিখবেন",
+  "deletePausePeriod": "পিল খাওয়ার বিরতির সময়কাল মুছুন"
 }

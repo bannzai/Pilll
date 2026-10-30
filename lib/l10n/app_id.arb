@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Lewati",
   "yazFlexBeginPillNumberPageTitle": "Lembar pil dimulai pada hari ke berapa dalam siklus minum pil Anda?",
   "yazFlexBeginPillNumberPageNote": "Jawab berdasarkan jumlah hari sejak berakhirnya jeda sebelum lembar pil dimulai",
-  "yazFlexNextInputIsRestDuration": "Selanjutnya, masukkan jeda minum pil sebelumnya"
+  "yazFlexNextInputIsRestDuration": "Selanjutnya, masukkan jeda minum pil sebelumnya",
+  "deletePausePeriod": "Hapus periode jeda minum pil"
 }

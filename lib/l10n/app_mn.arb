@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Алгасах",
   "yazFlexBeginPillNumberPageTitle": "Эм уух мөчлөгийн хэд дэх өдөр блистер эхэлж байна вэ?",
   "yazFlexBeginPillNumberPageNote": "Эмийн блистерийг эхлүүлэхийн өмнөх завсарлага дууссанаас хойш хэдэн өдөр өнгөрснийг үндэслэн хариулна уу",
-  "yazFlexNextInputIsRestDuration": "Дараагийн алхамд өмнөх завсарлагаа оруулна"
+  "yazFlexNextInputIsRestDuration": "Дараагийн алхамд өмнөх завсарлагаа оруулна",
+  "deletePausePeriod": "Эм уух завсарлагааны хугацааг устгана уу"
 }

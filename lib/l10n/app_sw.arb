@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Ruka",
   "yazFlexBeginPillNumberPageTitle": "Pakiti ya vidonge huanza siku ya ngapi ya mzunguko wa kumeza vidonge?",
   "yazFlexBeginPillNumberPageNote": "Tafadhali jibu kulingana na idadi ya siku zilizopita tangu mapumziko ya kabla ya kuanza pakiti ya vidonge yalipoisha",
-  "yazFlexNextInputIsRestDuration": "Kisha, tafadhali weka kipindi cha awali cha mapumziko ya kumeza vidonge"
+  "yazFlexNextInputIsRestDuration": "Kisha, tafadhali weka kipindi cha awali cha mapumziko ya kumeza vidonge",
+  "deletePausePeriod": "Tafadhali futa kipindi cha mapumziko ya kumeza vidonge"
 }

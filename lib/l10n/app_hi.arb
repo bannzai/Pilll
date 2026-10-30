@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "छोड़ें",
   "yazFlexBeginPillNumberPageTitle": "आपके गोली लेने के चक्र के किस दिन से यह पिल स्ट्रिप शुरू होती है?",
   "yazFlexBeginPillNumberPageNote": "पत्ता शुरू करने से पहले वाले विराम के खत्म होने के बाद बीते दिनों के आधार पर कृपया जवाब दें",
-  "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला विराम दर्ज किया जाएगा"
+  "yazFlexNextInputIsRestDuration": "अगले चरण में पिछला विराम दर्ज किया जाएगा",
+  "deletePausePeriod": "गोली लेने का विराम हटाएं"
 }

@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "تخطي",
   "yazFlexBeginPillNumberPageTitle": "في أي يوم من دورة تناول الحبوب يبدأ الشريط؟",
   "yazFlexBeginPillNumberPageNote": "يرجى الإجابة حسب عدد الأيام التي مرت منذ انتهاء فترة راحة تناول الحبوب التي سبقت بدء الشريط",
-  "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة راحة تناول الحبوب السابقة"
+  "yazFlexNextInputIsRestDuration": "بعد ذلك، أدخلي فترة راحة تناول الحبوب السابقة",
+  "deletePausePeriod": "حذف فترة التوقف عن تناول الحبوب"
 }

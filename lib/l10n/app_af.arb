@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Slaan oor",
   "yazFlexBeginPillNumberPageTitle": "Op watter dag van jou pilsiklus begin die pilstrokie?",
   "yazFlexBeginPillNumberPageNote": "Antwoord asseblief volgens die aantal dae sedert die pouse wat geëindig het voordat jy met die pilstrokie begin het",
-  "yazFlexNextInputIsRestDuration": "Volgende kan jy jou vorige pouse invul"
+  "yazFlexNextInputIsRestDuration": "Volgende kan jy jou vorige pouse invul",
+  "deletePausePeriod": "Verwyder pilpouse"
 }

@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Preskočite",
   "yazFlexBeginPillNumberPageTitle": "Kojeg dana Vašeg ciklusa uzimanja pilula počinje blister?",
   "yazFlexBeginPillNumberPageNote": "Molimo, odgovorite prema broju dana od završetka pauze prije početka blistera",
-  "yazFlexNextInputIsRestDuration": "Zatim možete unijeti prethodnu pauzu u uzimanju pilula"
+  "yazFlexNextInputIsRestDuration": "Zatim možete unijeti prethodnu pauzu u uzimanju pilula",
+  "deletePausePeriod": "Brisanje perioda pauze u uzimanju pilula"
 }

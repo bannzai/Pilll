@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Пропуснете",
   "yazFlexBeginPillNumberPageTitle": "На кой ден от цикъла ви на прием на хапчета започва блистерът?",
   "yazFlexBeginPillNumberPageNote": "Моля, отговорете според броя дни, изминали от края на паузата преди началото на блистера",
-  "yazFlexNextInputIsRestDuration": "Следващата стъпка е въвеждане на предишната пауза в приема на хапчета"
+  "yazFlexNextInputIsRestDuration": "Следващата стъпка е въвеждане на предишната пауза в приема на хапчета",
+  "deletePausePeriod": "Изтриване на периода без прием на хапчета"
 }

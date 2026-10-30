@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Overslaan",
   "yazFlexBeginPillNumberPageTitle": "Op welke dag van je pilcyclus begint de strip?",
   "yazFlexBeginPillNumberPageNote": "Beantwoord de vraag op basis van het aantal dagen sinds de stopweek vóór de start van de strip eindigde",
-  "yazFlexNextInputIsRestDuration": "Hierna kun je je vorige stopweek invullen"
+  "yazFlexNextInputIsRestDuration": "Hierna kun je je vorige stopweek invullen",
+  "deletePausePeriod": "Pillenpauze verwijderen"
 }

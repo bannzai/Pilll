@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Bỏ qua",
   "yazFlexBeginPillNumberPageTitle": "Vỉ thuốc bắt đầu vào ngày thứ mấy trong chu kỳ uống thuốc của bạn?",
   "yazFlexBeginPillNumberPageNote": "Vui lòng trả lời dựa trên số ngày đã qua kể từ khi kết thúc đợt nghỉ thuốc trước khi bắt đầu vỉ thuốc",
-  "yazFlexNextInputIsRestDuration": "Tiếp theo, vui lòng nhập đợt nghỉ thuốc trước đó"
+  "yazFlexNextInputIsRestDuration": "Tiếp theo, vui lòng nhập đợt nghỉ thuốc trước đó",
+  "deletePausePeriod": "Xóa khoảng thời gian tạm ngừng uống thuốc"
 }

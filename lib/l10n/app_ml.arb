@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "ഒഴിവാക്കുക",
   "yazFlexBeginPillNumberPageTitle": "ഗുളിക കഴിക്കുന്ന ചക്രത്തിലെ എത്രാമത്തെ ദിവസമാണ് സ്ട്രിപ്പ് തുടങ്ങുന്നത്?",
   "yazFlexBeginPillNumberPageNote": "ഗുളിക സ്ട്രിപ്പ് തുടങ്ങുന്നതിന് മുമ്പുള്ള ഇടവേള അവസാനിച്ചിട്ട് എത്ര ദിവസം കഴിഞ്ഞു എന്നതിന്റെ അടിസ്ഥാനത്തിൽ ഉത്തരം നൽകൂ",
-  "yazFlexNextInputIsRestDuration": "അടുത്തതായി, ഗുളിക കഴിക്കുന്നതിലെ കഴിഞ്ഞ ഇടവേള രേഖപ്പെടുത്തൂ"
+  "yazFlexNextInputIsRestDuration": "അടുത്തതായി, ഗുളിക കഴിക്കുന്നതിലെ കഴിഞ്ഞ ഇടവേള രേഖപ്പെടുത്തൂ",
+  "deletePausePeriod": "ഗുളിക കഴിക്കുന്നതിലെ ഇടവേള നീക്കം ചെയ്യൂ"
 }

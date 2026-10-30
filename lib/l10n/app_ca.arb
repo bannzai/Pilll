@@ -582,5 +582,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Omet",
   "yazFlexBeginPillNumberPageTitle": "En quin dia del teu cicle de preses comença el blíster?",
   "yazFlexBeginPillNumberPageNote": "Respon segons els dies que han passat des que va acabar el descans anterior a l’inici del blíster",
-  "yazFlexNextInputIsRestDuration": "A continuació, introduiràs el descans anterior"
+  "yazFlexNextInputIsRestDuration": "A continuació, introduiràs el descans anterior",
+  "deletePausePeriod": "Suprimeix el període de descans de la píndola"
 }
