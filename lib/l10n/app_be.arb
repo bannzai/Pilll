@@ -114,7 +114,7 @@
   "takingTime": "Час прыёму пігулкі",
   "takingHistoryIsPremiumFeature": "Гісторыя прыёму пігулак — прэміум-функцыя",
   "pauseTakingDoesNotAdvancePillNumber": "Калі вы зробіце перапынак у прыёме пігулак, нумар пігулкі не зменіцца",
-  "pauseTakingFromNumber": "Хочаце зрабіць перапынак у прыёме пігулак, пачынаючы з № {number}?",
+  "pauseTakingFromNumber": "Хочаце зрабіць перапынак у прыёме пігулак, пачынаючы з {number}?",
   "lastTakenPlusOnePillNumber": "Пігулка № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Прыём пігулкі",
   "estimatedEndPillNumber": "Апошняя пігулка ў папярэднім блістары: № {estimatedEndPillNumber}",

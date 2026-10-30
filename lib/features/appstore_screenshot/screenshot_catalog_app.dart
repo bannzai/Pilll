@@ -55,10 +55,10 @@ final ValueNotifier<Locale> catalogLocale = ValueNotifier<Locale>(Locale(allScre
 /// 無人操作（[runScreenshotAutoplayIfRequested]）が全画面プレビューを push するための Navigator。
 final GlobalKey<NavigatorState> catalogNavigatorKey = GlobalKey<NavigatorState>();
 
-/// グローバル [L] とカタログのロケールを [lang] へ切り替える。言語一覧のタップと無人操作が共用する。
+/// グローバル [L]・[Intl.defaultLocale] (DateTimeFormatter の日付書式の言語) とカタログのロケールを [lang] へ切り替える。
+/// 言語一覧のタップと無人操作が共用する。
 void applyCatalogLanguage(String lang) {
   L = lookupAppLocalizations(Locale(lang));
-  // 本番の AppLocalizationResolver と同じく、DateTimeFormatter.monthAndDay などの日付の書式を表示言語に合わせる
   Intl.defaultLocale = lang;
   catalogLocale.value = Locale(lang);
 }
