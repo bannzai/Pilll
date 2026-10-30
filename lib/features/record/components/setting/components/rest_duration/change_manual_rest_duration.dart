@@ -101,6 +101,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             );
           } catch (e) {
             onError(e);
+            return;
           }
 
           onChanged();
@@ -164,6 +165,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             await registerReminderLocalNotification();
           } catch (e) {
             onError(e);
+            return;
           }
 
           onChanged();
