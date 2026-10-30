@@ -103,7 +103,7 @@ Future<void> handleNotificationAction(
       initializeDateFormatting(Platform.localeName),
     ).wait;
     // ウィジェットツリーを通らないため、リマインド通知の文言と日付を端末の言語にする
-    setupLocalizationWithoutWidgetTree();
+    await setupLocalizationWithoutWidgetTree();
 
     await LocalNotificationService.setupTimeZone();
 

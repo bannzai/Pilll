@@ -16,7 +16,7 @@ void definedChannel() {
     switch (call.method) {
       case 'recordPill':
         // 通知のアクションでアプリの画面を開かずに呼ばれるとウィジェットツリーを通らないため、リマインド通知の文言と日付を端末の言語にする
-        setupLocalizationWithoutWidgetTree();
+        await setupLocalizationWithoutWidgetTree();
         await LocalNotificationService.setupTimeZone();
 
         // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る

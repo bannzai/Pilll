@@ -5,6 +5,7 @@ import 'package:pilll/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './l.dart';
 
 /// [AppLocalizationResolver] は [L] に [AppLocalizations] をセットするためのWidget
@@ -54,10 +55,14 @@ Locale resolveDeviceAppLocale({required List<Locale> preferredLocales}) =>
     basicLocaleListResolution(preferredLocales, AppLocalizations.supportedLocales);
 
 /// ウィジェットツリー ([AppLocalizationResolver]) を通らない経路 (通知のアクションからの服用記録など) で、
-/// [L] と [Intl.defaultLocale] を端末の言語から解決した言語にする。
+/// [L] と [Intl.defaultLocale] を [AppLocalizationResolver] と同じ言語にする。
+/// release ビルドは端末の言語から解決した言語、debug ビルドは [debugAppLocale] の言語を使う。
+/// iOS の通知のアクションは画面を描画済みの isolate でも呼ばれるため、debug ビルドで選んだ表示言語を端末の言語で上書きしないようにしている。
 /// 端末の言語は Android の通知のアクションで起動される別 isolate でも、FlutterEngine の生成時に送られて [PlatformDispatcher.locales] に入る
-void setupLocalizationWithoutWidgetTree() {
-  final locale = resolveDeviceAppLocale(preferredLocales: PlatformDispatcher.instance.locales);
+Future<void> setupLocalizationWithoutWidgetTree() async {
+  final locale = kDebugMode
+      ? debugAppLocale(savedLanguageCode: (await SharedPreferences.getInstance()).getString(StringKey.debugAppLanguageCode))
+      : resolveDeviceAppLocale(preferredLocales: PlatformDispatcher.instance.locales);
   L = lookupAppLocalizations(locale);
   Intl.defaultLocale = locale.languageCode;
 }

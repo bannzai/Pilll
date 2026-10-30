@@ -54,12 +54,18 @@ void main() {
 
   group('#setupLocalizationWithoutWidgetTree', () {
     // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
-    test('debug ビルドで表示言語に de が保存されている場合は、画面と同じ de の文言と日付書式になる', () {
+    test('debug ビルドで表示言語に de が保存されている場合は、画面と同じ de の文言と日付書式になる', () async {
       SharedPreferences.setMockInitialValues(
           {StringKey.debugAppLanguageCode: 'de'});
-      setupLocalizationWithoutWidgetTree();
+      await setupLocalizationWithoutWidgetTree();
       expect(L.localeName, 'de');
       expect(Intl.defaultLocale, 'de');
+    });
+    test('debug ビルドで表示言語の保存が無い場合は、画面と同じ ja の文言と日付書式になる', () async {
+      SharedPreferences.setMockInitialValues({});
+      await setupLocalizationWithoutWidgetTree();
+      expect(L.localeName, 'ja');
+      expect(Intl.defaultLocale, 'ja');
     });
   });
 
