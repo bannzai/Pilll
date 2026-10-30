@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "бр. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Изберете датум на почеток на паузата во земањето таблети",
   "selectPauseEndDateAsResumeDate": "Краен датум = повторно земање",
+  "pauseResumeDateLimitIsToday": "Повторно до денес",
   "pauseResumeDateLimitBeforeNextPause": "Продолжете до {date}",
   "pauseStartDate": "Датум на почеток на паузата во земањето таблета",
   "pauseEndDate": "Датум на завршување на паузата во земањето таблета",
