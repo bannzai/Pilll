@@ -401,7 +401,7 @@
   "pillTakenCountPrefix": "Take",
   "pillTakenCountSuffix": "times a day",
   "duringPauseTaking": "Pill pause in progress",
-  "cannotPauseAlreadyTakenToday": "If you've already taken today's pill,\nyou can't start a pause",
+  "cannotPauseAlreadyTakenToday": "If you've already taken today's pill,\nyou can't start a pill pause",
   "pauseTakingStarted": "Your pill pause has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit pause start date",
