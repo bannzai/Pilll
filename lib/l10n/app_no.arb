@@ -114,7 +114,7 @@
   "takingTime": "Tid for å ta p-pillen",
   "takingHistoryIsPremiumFeature": "Inntakshistorikk er en Premium-funksjon",
   "pauseTakingDoesNotAdvancePillNumber": "Hvis du tar en pause fra p-pillene, går pillenummeret ikke videre",
-  "pauseTakingFromNumber": "Vil du ta en pause fra p-pillene fra pille nummer {number}?",
+  "pauseTakingFromNumber": "Vil du ta en pause fra p-pillene fra pille {number}?",
   "lastTakenPlusOnePillNumber": "P-pille nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Ta p-pille",
   "estimatedEndPillNumber": "Siste p-pille på forrige brett: nr. {estimatedEndPillNumber}",

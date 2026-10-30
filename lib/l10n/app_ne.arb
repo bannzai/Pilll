@@ -114,7 +114,7 @@
   "takingTime": "चक्की खाने समय",
   "takingHistoryIsPremiumFeature": "सेवन इतिहास प्रिमियम सुविधा हो",
   "pauseTakingDoesNotAdvancePillNumber": "चक्की खान केही समय रोक्नुभयो भने चक्की नम्बर अगाडि बढ्दैन",
-  "pauseTakingFromNumber": "के तपाईं {number} नम्बरबाट चक्की सेवन विश्राम सुरु गर्न चाहनुहुन्छ?",
+  "pauseTakingFromNumber": "के तपाईं {number}बाट चक्की सेवन विश्राम सुरु गर्न चाहनुहुन्छ?",
   "lastTakenPlusOnePillNumber": "चक्की नम्बर {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "चक्की सेवन",
   "estimatedEndPillNumber": "अघिल्लो चक्की पत्ताको अन्तिम: नम्बर {estimatedEndPillNumber}",

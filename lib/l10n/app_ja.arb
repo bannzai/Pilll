@@ -46,7 +46,7 @@
   },
   "medicationHistory": "服用履歴",
   "@medicationHistory": {
-    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
+    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。\n[翻訳の決定 fr] 「historique des prises」ではなく「Historique des prises」: 画面とカードの見出しで使うため大文字始まりにする (https://github.com/bannzai/Pilll/issues/1974)\n[翻訳の決定 es] 「historial de tomas」ではなく「Historial de tomas」: 画面とカードの見出しで使うため大文字始まりにする (https://github.com/bannzai/Pilll/issues/1973)"
   },
   "settings": "設定",
   "@settings": {
@@ -66,11 +66,11 @@
   },
   "unlimitedFeatureDuration": "機能無制限の期間について",
   "@unlimitedFeatureDuration": {
-    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
+    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。\n[翻訳の決定 en] 「About the unlimited feature period」ではなく「About your full-access period」: 「unlimited feature period」は英語として不自然で、トライアル中の全機能を使える期間と伝わらないため (https://github.com/bannzai/Pilll/issues/2009)\n[翻訳の決定 de] 「Über den Zeitraum mit unbegrenztem Zugriff auf Funktionen」ではなく「Zeitraum mit uneingeschränkten Funktionen」: 設定の行の見出しとして長く回りくどいため短くする (https://github.com/bannzai/Pilll/issues/2008)"
   },
   "pillSheet": "ピルシート",
   "@pillSheet": {
-    "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
+    "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。\n[翻訳の決定 fr] 「plaquette」ではなく「Plaquettes」: 設定画面のセクション見出しにだけ使われ、他の見出しは大文字始まりのため。セクションは複数のシートの設定を含むので複数形にする (https://github.com/bannzai/Pilll/issues/2011)"
   },
   "notification": "通知",
   "@notification": {
@@ -187,7 +187,7 @@
   },
   "unregistered": "未登録",
   "@unregistered": {
-    "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
+    "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。\n[翻訳の決定 pt] 「Não cadastrado」ではなく「Sem cadastro」: 「cadastrado」は男性形で利用者の性別を前提にしてしまうため、性別の出ない形にする (https://github.com/bannzai/Pilll/issues/2012)"
   },
   "quickRecord": "クイックレコード",
   "@quickRecord": {
@@ -215,7 +215,7 @@
   },
   "discardAllPillSheets": "ピルシートをすべて破棄",
   "@discardAllPillSheets": {
-    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
+    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。\n[翻訳の決定 zh] 「删除所有药板信息」ではなく「废弃所有药板」: 原文は「破棄」で、「删除…信息」は記録の情報だけを消す操作に読めるため (https://github.com/bannzai/Pilll/issues/2013)"
   },
   "areYouSureDoing": "{doing}しますか？",
   "@areYouSureDoing": {
@@ -236,15 +236,15 @@
   },
   "willBeDiscarded": "が破棄されます",
   "@willBeDiscarded": {
-    "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
+    "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。\n[翻訳の決定 zh] 「将被删除」ではなく「将被废弃」: discardAllPillSheets「废弃所有药板」と同じ確認・実行・完了の流れで使うため、動詞を「废弃」に揃える (https://github.com/bannzai/Pilll/issues/2013)"
   },
   "discard": "破棄する",
   "@discard": {
-    "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。 ボタンのラベル。ボタンの幅は固定で狭いため、原文と同程度の長さの短い語句 (1〜3 語) にし、文にしない (例: 英語なら Taken / Get started のような形)。"
+    "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。 ボタンのラベル。ボタンの幅は固定で狭いため、原文と同程度の長さの短い語句 (1〜3 語) にし、文にしない (例: 英語なら Taken / Get started のような形)。\n[翻訳の決定 zh] 「删除」ではなく「废弃」: discardAllPillSheets「废弃所有药板」と同じ確認・実行・完了の流れで使うため、動詞を「废弃」に揃える (https://github.com/bannzai/Pilll/issues/2013)"
   },
   "pillSheetDiscarded": "ピルシートを破棄しました",
   "@pillSheetDiscarded": {
-    "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
+    "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。\n[翻訳の決定 zh] 「药板已删除」ではなく「药板已废弃」: discardAllPillSheets「废弃所有药板」と同じ確認・実行・完了の流れで使うため、動詞を「废弃」に揃える (https://github.com/bannzai/Pilll/issues/2013)"
   },
   "aboutMenstruation": "生理について",
   "@aboutMenstruation": {
@@ -256,7 +256,7 @@
   },
   "customizeMedicationNotifications": "服用通知のカスタマイズ",
   "@customizeMedicationNotifications": {
-    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。\n[翻訳の決定 pt] 「Personalizar lembretes para tomar a pílula」ではなく「Personalizar lembretes」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 es] 「Personalizar recordatorios para tomar la píldora」ではなく「Personalizar recordatorios」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 de] 「Erinnerungen an die Pilleneinnahme anpassen」ではなく「Erinnerungen anpassen」: ナビゲーションのタイトルで「…」に切れ、カスタマイズの意味の「anpassen」が見えなくなるため短くする。アプリには複数のリマインダー時刻があるので複数形にする (https://github.com/bannzai/Pilll/issues/1994)\n[翻訳の決定 fr] 「Personnaliser les rappels de prise de pilule」ではなく「Personnaliser les rappels」: ナビゲーションのタイトルで「…」に切れるため短くする (https://github.com/bannzai/Pilll/issues/1997)"
   },
   "medicationNotification": "服用通知",
   "@medicationNotification": {
@@ -338,7 +338,7 @@
   },
   "pill": "ピル",
   "@pill": {
-    "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。"
+    "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。\n[翻訳の決定 zh] 「避孕药」ではなく「药片」: タブのラベルで、避妊目的に限らず治療目的の利用者も使うため、避妊に限定しない語にする (https://github.com/bannzai/Pilll/issues/1993)"
   },
   "calendar": "カレンダー",
   "@calendar": {
@@ -518,7 +518,7 @@
   },
   "takingTime": "服用時間",
   "@takingTime": {
-    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
+    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。\n[翻訳の決定 pt] 「Horário de tomar a pílula」ではなく「Horário de uso」: 服用履歴の列見出しとして長いため短くする。用語集の「服用履歴」の pt 訳「histórico de uso」と揃う (https://github.com/bannzai/Pilll/issues/1975)\n[翻訳の決定 es] 「Hora de tomar la píldora」ではなく「Hora de toma」: 服用履歴の列見出しとして長いため短くする。用語集の「服用履歴」の es 訳「historial de tomas」と揃う (https://github.com/bannzai/Pilll/issues/1973)"
   },
   "takingHistoryIsPremiumFeature": "服用履歴はプレミアム機能です",
   "@takingHistoryIsPremiumFeature": {
@@ -526,11 +526,11 @@
   },
   "pauseTakingDoesNotAdvancePillNumber": "服用をお休みするとピル番号は進みません",
   "@pauseTakingDoesNotAdvancePillNumber": {
-    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
+    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。\n[翻訳の決定 zh] 「暂停服药期间，药片编号不会往后顺延」ではなく「暂停服药期间，药片编号不会增加」: 「顺延」は「後ろにずらす・延期する」の意味で、原文の「ピル番号は進まない」と逆に読まれうるため (https://github.com/bannzai/Pilll/issues/2007)"
   },
   "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
   "@pauseTakingFromNumber": {
-    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
+    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。\n{number} には withNumber の結果 (接頭辞付きの『1番』『Pill 1』『N.º 1』等) か、日付表示モードでは月日の文字列 (例: 10/30) が入るため、訳文に番号の接頭辞・接尾辞 (number・No.・№・번・号 等) や序数の接尾辞を書かず、{number} をそのまま埋め込む。\n[翻訳の決定 en] 「Start a pill break from pill {number}?」ではなく「Start a pill break from {number}?」: {number} に withNumber の「Pill 1」が入り「pill Pill 1」と重なるため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 es] 「¿Quieres hacer una pausa en la toma a partir de la píldora n.º {number}?」ではなく「¿Quieres hacer una pausa en la toma a partir de la píldora {number}?」: {number} に withNumber の「N.º 1」が入り「n.º N.º 1」と重なるため (https://github.com/bannzai/Pilll/issues/2003)\n[翻訳の決定 fr] 「Souhaitez-vous faire une pause dans la prise de la pilule à partir de la pilule n° {number} ?」ではなく「Souhaitez-vous faire une pause dans la prise à partir de la pilule {number} ?」: {number} に withNumber の「N° 1」が入り「n° N° 1」と重なるため。「pilule」の繰り返しも外した (https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 ko] 「{number}번 알약부터 잠시 복용을 쉬시겠어요?」ではなく「{number} 알약부터 잠시 복용을 쉬시겠어요?」: {number} に withNumber の「1번」が入り「1번번」と重なるため (https://github.com/bannzai/Pilll/issues/2005)\n[翻訳の決定 pt] 「Que tal fazer uma pausa da pílula a partir do nº {number}?」ではなく「Deseja pausar a pílula a partir da pílula {number}?」: {number} に withNumber の「Nº 1」が入り「nº Nº 1」と重なるため。「Que tal…?」は提案の言い方で確認ダイアログに合わない (https://github.com/bannzai/Pilll/issues/2006)\n[翻訳の決定 zh] 「要从 {number} 号开始暂停服药吗？」ではなく「要从{number}开始暂停服药吗？」: {number} に withNumber の「1号」が入り「1号 号」と重なるため (https://github.com/bannzai/Pilll/issues/2007)",
     "placeholders": {
       "number": {
         "type": "String"
@@ -565,7 +565,7 @@
   },
   "taken": "飲んだ",
   "@taken": {
-    "description": "記録画面の「飲んだ」ボタン (幅 180pt 固定) のラベルで、今日のピルを服用済みにする操作。「服用した」「服用済み」の意味で、飲み忘れ・逃したの意味にしない (例: Taken / Eingenommen)。ボタンのラベルなので原文と同程度の短い語句 (1〜2 語) にし、文にしない。"
+    "description": "記録画面の「飲んだ」ボタン (幅 180pt 固定) のラベルで、今日のピルを服用済みにする操作。「服用した」「服用済み」の意味で、飲み忘れ・逃したの意味にしない (例: Taken / Eingenommen)。ボタンのラベルなので原文と同程度の短い語句 (1〜2 語) にし、文にしない。\n[翻訳の決定 fr] 「Prise」ではなく「Pilule prise」: 「Prise」単独では名詞の「服用」と読め、服用済みにする操作と分からないため。ボタン幅に収まる 2 語にする (https://github.com/bannzai/Pilll/issues/1991)"
   },
   "notTaken": "飲んでない",
   "@notTaken": {
@@ -730,7 +730,7 @@
   },
   "number": "番",
   "@number": {
-    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。\n[翻訳の決定 en] 「No. 1」ではなく「 (pill)」: このキーは数字の後ろに連結する接尾辞で、前置の「No. 1」は arb の訳だけでは作れない。空文字にするとリマインダー通知のタイトルで番号だけになるため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「n° 1」ではなく「 (pilule)」: このキーは数字の後ろに連結する接尾辞で、前置の「n° 1」は arb の訳だけでは作れないため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/2004)"
   },
   "dayNumber": "日目",
   "@dayNumber": {
@@ -1139,7 +1139,7 @@
   },
   "normal": "通常",
   "@normal": {
-    "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
+    "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。\n[翻訳の決定 zh] 「通常」ではなく「正常」: 通知文言のカスタマイズ画面で飲み忘れていない場合の通知を指すラベルで、「通常」は日本語の表記のまま残ったように見え、中国語では「普段は」の意味に読まれるため (https://github.com/bannzai/Pilll/issues/2000)"
   },
   "missed": "飲み忘れ",
   "@missed": {
@@ -1179,7 +1179,7 @@
   },
   "changeMissedNotificationMessage": "飲み忘れてる場合の通知文言を変更できます",
   "@changeMissedNotificationMessage": {
-    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the missed-pill notification)。"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the missed-pill notification)。\n[翻訳の決定 zh] 「可以修改漏服药片时的通知内容」ではなく「可以更改漏服时的通知文案」: 同じ画面の changeDailyNotificationMessage「可以更改按时服药时的通知文案」と動詞・名詞を揃えるため (https://github.com/bannzai/Pilll/issues/2000)\n[翻訳の決定 pt] 「Você pode mudar o texto da notificação quando a pílula não for tomada」ではなく「Você pode alterar o texto da notificação quando a pílula não for tomada」: 同じ画面の補足文で alterar と mudar が揺れていたため、アプリ内で多い alterar に揃える (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 ko] 「약을 먹지 않았을 때 표시되는 알림 문구를 변경할 수 있어요」ではなく「복용을 잊었을 때의 알림 문구를 변경할 수 있어요」: 原文は「飲み忘れてる場合」で、意図して飲まなかった場合とも読める「약을 먹지 않았을 때」を避ける。changeDailyNotificationMessage と対になる形にする (https://github.com/bannzai/Pilll/issues/1998)\n[翻訳の決定 es] 「Puedes cambiar el texto del aviso si no has tomado la píldora」ではなく「Puedes cambiar el texto de la notificación si no has tomado la píldora」: 同じ画面の他の補足文は「notificación」で、「aviso」だけ揺れていたため (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 en] 「Change the text for the missed-pill notification」ではなく「Change the text for when your pill hasn't been taken yet」: 入力欄のラベル missed の en「Not taken yet」と揃える。元 issue の候補「You can change the notification text shown when your pill hasn't been taken yet」は文字数の表示と同じ行に並ぶ 12pt の説明として長いため短くした (https://github.com/bannzai/Pilll/issues/1995)"
   },
   "defaultMissedTakenMessage": "飲み忘れていませんか？\n服用記録がない日が複数あります🤔",
   "@defaultMissedTakenMessage": {
@@ -1196,7 +1196,7 @@
   },
   "changeNotificationHeader": "通知の先頭部分の変更ができます",
   "@changeNotificationHeader": {
-    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text at the start of the notification)。"
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text at the start of the notification)。\n[翻訳の決定 pt] 「Você pode mudar o início da notificação」ではなく「Você pode alterar o início da notificação」: 同じ画面の補足文で alterar と mudar が揺れていたため、アプリ内で多い alterar に揃える (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 en] 「You can change the start of the notification」ではなく「You can change the start of the notification title」: 入力欄は通知のタイトルの先頭部分で、本文の先頭と誤解されないようにする (https://github.com/bannzai/Pilll/issues/1995)"
   },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "@notificationHeaderLength": {
@@ -1213,7 +1213,7 @@
   },
   "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
-    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。\n[翻訳の決定 ko] 「약을 제때 복용했을 때의 알림 문구를 변경할 수 있어요」ではなく「복용을 잊지 않았을 때의 알림 문구를 변경할 수 있어요」: 原文は「飲み忘れていない場合」で、changeMissedNotificationMessage の「복용을 잊었을 때」と対になる形にする (https://github.com/bannzai/Pilll/issues/1998)"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {
@@ -2561,7 +2561,7 @@
   },
   "healthCareIntegrationFeatureAppealShortDescription": "生理記録をヘルスケアと共有",
   "@healthCareIntegrationFeatureAppealShortDescription": {
-    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文"
+    "description": "ヘルスケア連携機能のFeatureAppeal Barの短い説明文\n[翻訳の決定 fr] 「Partagez vos suivis des règles avec Santé」ではなく「Partagez le suivi de vos règles avec Santé」: 「vos suivis des règles」は語順と複数形が不自然なため (https://github.com/bannzai/Pilll/issues/1991)"
   },
   "healthCareIntegrationFeatureAppealHeadline": "ヘルスケアと連携できる",
   "@healthCareIntegrationFeatureAppealHeadline": {
@@ -2758,7 +2758,7 @@
   },
   "plannedResumeDateOptional": "服用再開予定日 (任意)",
   "@plannedResumeDateOptional": {
-    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。"
+    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。\n[翻訳の決定 de] 「Geplantes Datum für die erneute Pilleneinnahme (optional)」ではなく「Geplanter Wiederbeginn der Einnahme (optional)」: ダイアログの行のラベルとして長く回りくどいため短くする (https://github.com/bannzai/Pilll/issues/2001)"
   },
   "plannedResumeDateNotSet": "未設定",
   "@plannedResumeDateNotSet": {
@@ -2796,7 +2796,7 @@
   },
   "initialSettingAskYazFlexDescription": "「はい」を選ぶと\n休薬明けから何日目かを\n表示できるように設定します",
   "@initialSettingAskYazFlexDescription": {
-    "description": "初期設定の最初のページで「ヤーズフレックスの方ですか？」の見出しの下に出す説明です。「はい」を選ぶと、ピルシートの番号ではなく休薬明けから何日目かを表示する設定で始められることを伝えます。"
+    "description": "初期設定の最初のページで「ヤーズフレックスの方ですか？」の見出しの下に出す説明です。「はい」を選ぶと、ピルシートの番号ではなく休薬明けから何日目かを表示する設定で始められることを伝えます。\n[翻訳の決定 zh] 「选择“是”后，将显示停药期结束以来经过的天数」ではなく「选择“是”后，会为你设置显示停药结束后的第几天」: 原文は「何日目か」で、「经过的天数」(経過日数) だと 1 日ずれるため (https://github.com/bannzai/Pilll/issues/2015)\n[翻訳の決定 ko] 「‘네’를 선택하면 휴약이 끝난 뒤 며칠이 지났는지 표시하도록 설정해요」ではなく「‘네’를 선택하면\\n휴약이 끝난 뒤 며칠째인지\\n표시하도록 설정해요」: 改行が無く「표시하도/록」と単語の途中で折り返していたため、原文と同じく \\n で 3 行に分ける。原文は「何日目か」なので経過日数の「며칠이 지났는지」ではなく「며칠째인지」にする (https://github.com/bannzai/Pilll/issues/2014)"
   },
   "yazFlexLastRestDurationTitle": "休薬した時のピルを\nタップしてください",
   "@yazFlexLastRestDurationTitle": {

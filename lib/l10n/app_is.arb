@@ -114,7 +114,7 @@
   "takingTime": "Tími til að taka pilluna",
   "takingHistoryIsPremiumFeature": "Þú getur skoðað inntökuyfirlit með Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Ef þú gerir hlé á að taka pilluna færist pillunúmer ekki áfram",
-  "pauseTakingFromNumber": "Viltu gera hlé á pillutökunni frá pillu númer {number}?",
+  "pauseTakingFromNumber": "Viltu gera hlé á pillutökunni frá pillu {number}?",
   "lastTakenPlusOnePillNumber": "Pilla nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Inntaka pillunnar",
   "estimatedEndPillNumber": "Síðast á fyrra pilluspjaldi: nr. {estimatedEndPillNumber}",

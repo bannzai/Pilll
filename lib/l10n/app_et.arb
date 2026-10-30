@@ -114,7 +114,7 @@
   "takingTime": "Pilli võtmise aeg",
   "takingHistoryIsPremiumFeature": "Võtmislogi on premium-funktsioon",
   "pauseTakingDoesNotAdvancePillNumber": "Kui teed pillide võtmisel pausi, siis pillinumber edasi ei liigu",
-  "pauseTakingFromNumber": "Kas soovid alates pillist nr {number} pillide võtmises pausi teha?",
+  "pauseTakingFromNumber": "Kas soovid alates pillist {number} pillide võtmises pausi teha?",
   "lastTakenPlusOnePillNumber": "pill nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilli võtmine",
   "estimatedEndPillNumber": "Eelmise pillilehe viimane pill: nr {estimatedEndPillNumber}",

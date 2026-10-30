@@ -114,7 +114,7 @@
   "takingTime": "აბის მიღების დრო",
   "takingHistoryIsPremiumFeature": "მიღების ისტორია პრემიუმ ფუნქციაა",
   "pauseTakingDoesNotAdvancePillNumber": "თუ აბების მიღებას დროებით შეაჩერებთ, აბის ნომერი წინ არ წავა",
-  "pauseTakingFromNumber": "გსურთ, დროებით შეწყვიტოთ აბების მიღება {number} ნომრიდან?",
+  "pauseTakingFromNumber": "გსურთ, დროებით შეწყვიტოთ აბების მიღება {number}-დან?",
   "lastTakenPlusOnePillNumber": "აბი № {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "აბის მიღება",
   "estimatedEndPillNumber": "წინა ბლისტერის ბოლო აბი: № {estimatedEndPillNumber}",
