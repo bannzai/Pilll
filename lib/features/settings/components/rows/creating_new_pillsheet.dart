@@ -36,7 +36,8 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           children: [
             if (!isPremium) ...[
               const WidgetSpan(child: SizedBox(width: 8)),
-              const WidgetSpan(alignment: PlaceholderAlignment.middle, child: PremiumBadge()),
+              // WidgetSpan は子を文字の拡大率で拡大するため、バッジの中の Text には拡大率を掛けない (掛けると二重に拡大される)
+              WidgetSpan(alignment: PlaceholderAlignment.middle, child: MediaQuery.withNoTextScaling(child: const PremiumBadge())),
             ],
           ],
         ),
