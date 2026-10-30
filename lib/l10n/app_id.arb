@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nomor 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nomor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Pilih tanggal mulai jeda minum pil",
+  "selectPauseEndDateAsResumeDate": "Tanggal akhir: hari mulai minum pil lagi",
   "pauseStartDate": "Tanggal mulai jeda minum pil",
   "pauseEndDate": "Tanggal akhir jeda minum pil",
   "endPillSheet": "Strip pil sudah habis",

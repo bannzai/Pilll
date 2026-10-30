@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} numara",
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} numara",
   "selectPauseStartDate": "Hap kullanımına ara verilecek başlangıç tarihini seçin",
+  "selectPauseEndDateAsResumeDate": "Bitiş tarihi: hapa yeniden başladığınız gün",
   "pauseStartDate": "Hap kullanımına ara verme başlangıç tarihi",
   "pauseEndDate": "Hap kullanımına ara verme bitiş tarihi",
   "endPillSheet": "Blister tamamlandı",

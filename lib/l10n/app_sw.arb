@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nambari 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nambari {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza mapumziko ya kumeza vidonge",
+  "selectPauseEndDateAsResumeDate": "Tarehe ya mwisho: siku ya kuanza kumeza kidonge tena",
   "pauseStartDate": "Tarehe ya kuanza mapumziko ya kumeza vidonge",
   "pauseEndDate": "Tarehe ya mwisho ya mapumziko ya kumeza vidonge",
   "endPillSheet": "Pakiti ya vidonge imeisha",

@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "మాత్ర సంఖ్య 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "మాత్ర సంఖ్య {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభమయ్యే తేదీని ఎంచుకోండి",
+  "selectPauseEndDateAsResumeDate": "ముగింపు తేదీ: మళ్లీ మాత్ర వేసుకోవడం మొదలుపెట్టే రోజు",
   "pauseStartDate": "మాత్రలు తీసుకోవడంలో విరామం ప్రారంభ తేదీ",
   "pauseEndDate": "మాత్రలు తీసుకోవడంలో విరామం ముగిసే తేదీ",
   "endPillSheet": "మాత్రల స్ట్రిప్ పూర్తయింది",

@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ਗੋਲੀ ਨੰਬਰ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ਗੋਲੀ ਨੰਬਰ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ ਚੁਣੋ",
+  "selectPauseEndDateAsResumeDate": "ਆਖਰੀ ਤਾਰੀਖ: ਗੋਲੀ ਮੁੜ ਲੈਣੀ ਸ਼ੁਰੂ ਕਰਨ ਦਾ ਦਿਨ",
   "pauseStartDate": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਸ਼ੁਰੂਆਤੀ ਤਾਰੀਖ",
   "pauseEndDate": "ਗੋਲੀ ਲੈਣ ਦੇ ਵਿਰਾਮ ਦੀ ਸਮਾਪਤੀ ਤਾਰੀਖ",
   "endPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਖ਼ਤਮ ਹੋ ਗਈ",

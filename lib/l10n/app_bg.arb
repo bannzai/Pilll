@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Избор на начална дата на паузата в приема на хапчета",
+  "selectPauseEndDateAsResumeDate": "Крайна дата: денят, в който отново вземате хапчето",
   "pauseStartDate": "Начална дата на паузата в приема на хапчета",
   "pauseEndDate": "Крайна дата на паузата в приема на хапчета",
   "endPillSheet": "Край на блистера",

@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "Αρ. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Αρ. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Επιλογή ημερομηνίας έναρξης της παύσης λήψης χαπιών",
+  "selectPauseEndDateAsResumeDate": "Λήξη: η ημέρα που ξαναρχίζετε το χάπι",
   "pauseStartDate": "Ημερομηνία έναρξης της παύσης λήψης χαπιών",
   "pauseEndDate": "Ημερομηνία λήξης της παύσης λήψης χαπιών",
   "endPillSheet": "Η καρτέλα χαπιών ολοκληρώθηκε",

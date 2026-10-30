@@ -106,6 +106,7 @@
   "oneToAfterDisplayNumberEndPillNumber": "ગોળી નંબર 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "ગોળી નંબર {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "ગોળી લેવાના વિરામની શરૂઆતની તારીખ પસંદ કરો",
+  "selectPauseEndDateAsResumeDate": "અંતિમ તારીખ: ફરી ગોળી લેવાનું શરૂ કરવાનો દિવસ",
   "pauseStartDate": "ગોળી લેવાના વિરામની શરૂઆતની તારીખ",
   "pauseEndDate": "ગોળી લેવાના વિરામની સમાપ્તિ તારીખ",
   "endPillSheet": "ગોળીની સ્ટ્રિપ પૂરી થઈ",
