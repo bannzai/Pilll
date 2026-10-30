@@ -139,12 +139,16 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
           // DateRangePickerでは開始日と終了日で別々の上限を設定できず、終了日のために広げたlastDateが開始日にも適用される
           // 開始日は従来通り「最終服用日の翌日」までしか選べないように、選択後に検証する
-          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDate.date())) {
+          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration).date())) {
             analytics.logEvent(
               name: 'change_rest_duration_invalid_begin',
               parameters: {'rest_duration_id': restDuration.id},
             );
-            onError(AlertError(L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDate))));
+            onError(
+              AlertError(
+                L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration))),
+              ),
+            );
             return;
           }
 

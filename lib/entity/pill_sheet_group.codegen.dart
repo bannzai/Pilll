@@ -685,7 +685,12 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   /// 最後の服用日の翌日、または服用履歴がない場合は今日を返す
   /// ただし終了済みの服用お休みの後に服用記録を付けていない場合は、最後の服用日の翌日が終了済みの服用お休みと重なるため、その終了日 (服用再開日) を返す
   /// UI入力フィールドの初期値として使用される
-  DateTime get availableRestDurationBeginDate {
+  DateTime get availableRestDurationBeginDate => availableRestDurationBeginDateExcluding(excludingRestDuration: null);
+
+  /// [excludingRestDuration] の終了日を考慮せずに、[availableRestDurationBeginDate] と同じ基準で服用お休みを開始できる日付を返す
+  /// 終了済みの服用お休み期間を変更する時は、その期間自身の終了日まで開始日の上限が広がると最後の服用日との間に服用記録の無い日を作れてしまうため、変更対象を [excludingRestDuration] に渡す
+  /// 服用お休みを開始する時は null を渡す
+  DateTime availableRestDurationBeginDateExcluding({required RestDuration? excludingRestDuration}) {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
     final DateTime afterLastTakenDate;
     if (lastTakenDate == null) {
@@ -702,6 +707,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     }
     // 服用再開予定日が今日より後の服用お休みは服用お休み中で、開始日の上限を服用再開予定日まで広げると服用お休み中の開始日を変更する時の上限も変わるため対象にしない
     final lastFinishedRestDurationEndDate = restDurations
+        .where((restDuration) => restDuration != excludingRestDuration)
         .map((restDuration) => restDuration.endDate)
         .nonNulls
         .where((restDurationEndDate) => !restDurationEndDate.date().isAfter(today()))
