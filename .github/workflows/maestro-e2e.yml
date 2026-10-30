@@ -1,6 +1,7 @@
 # GitHub Actions の macOS Runner 上で Maestro E2E flow をバッチ実行する workflow。
-# maestro-e2e-actions skill (~/.claude/skills/maestro-e2e-actions/SKILL.md) が生成した雛形に、Pilll の build 前準備と PR トリガーを足している。
-# PR では .maestro/flows/config.yaml が対象にする flow をすべて実行する。
+# maestro-e2e-actions skill (~/.claude/skills/maestro-e2e-actions/SKILL.md) が生成した雛形に、Pilll の build 前準備を足している。
+# macOS runner はアカウント全体で同時実行の枠が少なく、PR の push ごとに起動すると他の CI を待たせるため、
+# PR では起動せず、E2E が必要と判断した時に workflow_dispatch で起動する。flows=all は .maestro/flows/config.yaml が対象にする flow をすべて実行する。
 # 起動例:
 #   gh workflow run maestro-e2e.yml -f flows=all -f device="iPhone 17"
 name: maestro-e2e
@@ -9,15 +10,7 @@ run-name: "maestro-e2e flows=${{ inputs.flows || 'all' }} device=${{ inputs.devi
 permissions:
   contents: read
 
-# 同じ PR で多重起動したら古い方を止める（macOS Runner 枠の浪費防止）
-concurrency:
-  # 手動起動 (workflow_dispatch) は flows を変えて並行に回すことがあるため、run ごとに別の group にする
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
-  cancel-in-progress: true
-
 on:
-  # pull_request_target にはしない。pull_request は fork からの PR に Secrets を渡さない（ci.yml と同じ）
-  pull_request:
   workflow_dispatch:
     inputs:
       flows:
@@ -38,7 +31,6 @@ jobs:
   build:
     runs-on: macos-26
     timeout-minutes: 30
-    if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     permissions:
       contents: read # checkout のみ
     steps:
@@ -84,8 +76,8 @@ jobs:
         env:
           FLOWS: ${{ inputs.flows || 'all' }}
           DEVICE: ${{ inputs.device || 'iPhone 17' }}
-          # 録画は runner の CPU を使い driver が落ちる一因になるため、PR では録画しない
-          RECORD_VIDEO: ${{ inputs.record_video || 'false' }}
+          # 録画は runner の CPU を使い driver が落ちる一因になるため、driver が落ちる時は record_video=false で起動する
+          RECORD_VIDEO: ${{ inputs.record_video }}
           # flow はアプリの日本語の文言をタップするため、Simulator の言語・地域を日本語にして起動する
           SIMULATOR_LANGUAGE: ja
           SIMULATOR_LOCALE: ja_JP

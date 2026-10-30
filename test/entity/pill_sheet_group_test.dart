@@ -19669,7 +19669,7 @@ void main() {
       endDate: DateTime.parse("2020-09-07"),
     );
 
-    test("後続の服用お休み期間で打ち切られる場合は次のお休みと重ならない日までの文言を返す", () {
+    test("後続の服用お休み期間で打ち切られる場合は服用再開日が次のお休みの開始日までの文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19688,11 +19688,11 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: finishedRestDuration),
-        "次のお休み（9/15〜）と重ならない日まで",
+        "服用再開日は次のお休み（9/15〜）まで",
       );
     });
 
-    test("服用再開予定日がある服用お休み中でも後続の服用お休み期間で打ち切られる場合は次のお休みと重ならない日までの文言を返す", () {
+    test("服用再開予定日がある服用お休み中でも後続の服用お休み期間で打ち切られる場合は服用再開日が次のお休みの開始日までの文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19718,11 +19718,11 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: plannedRestDuration),
-        "次のお休み（12/1〜）と重ならない日まで",
+        "服用再開日は次のお休み（12/1〜）まで",
       );
     });
 
-    test("終了済みの期間で今日が上限の場合は終了日は今日までの文言を返す", () {
+    test("終了済みの期間で今日が上限の場合は服用再開日は今日までの文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19734,11 +19734,11 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: finishedRestDuration),
-        "終了日は今日まで",
+        "服用再開日は今日まで",
       );
     });
 
-    test("後続の服用お休み期間の開始日が今日より後の場合は打ち切られないので終了日は今日までの文言を返す", () {
+    test("後続の服用お休み期間の開始日が今日より後の場合は打ち切られないので服用再開日は今日までの文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19757,11 +19757,11 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: finishedRestDuration),
-        "終了日は今日まで",
+        "服用再開日は今日まで",
       );
     });
 
-    test("終了済みの期間で最終服用日の翌日が今日より後の場合は今日が上限ではないので従来のタイトルを返す", () {
+    test("終了済みの期間で最終服用日の翌日が今日より後の場合は今日が上限ではないので終了日が服用再開日であることを伝える文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19773,11 +19773,11 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: finishedRestDuration),
-        "服用お休み期間を選択",
+        "終了日は服用を再開する日を選択",
       );
     });
 
-    test("服用再開予定日がある服用お休み中で開始日の365日後が上限の場合は従来のタイトルを返す", () {
+    test("服用再開予定日がある服用お休み中で開始日の365日後が上限の場合は終了日が服用再開日であることを伝える文言を返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
@@ -19795,7 +19795,7 @@ void main() {
 
       expect(
         pillSheetGroup.availableRestDurationEndDateHelpText(restDuration: plannedRestDuration),
-        "服用お休み期間を選択",
+        "終了日は服用を再開する日を選択",
       );
     });
   });
