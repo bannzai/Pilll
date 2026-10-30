@@ -59,8 +59,9 @@ mixin _$ReminderNotificationCustomization {
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
   /// 表示されるメッセージです。表示には [resolvedMissedTakenMessage] を使います。
-  /// 既定の文言はロケールごとに変わるため entity には埋めず、空文字で「未設定」を表します。
-  String get missedTakenMessage => throw _privateConstructorUsedError;
+  /// 既定の文言はロケールごとに変わるため entity には埋めず、null で「未設定」を表します。
+  /// 空文字はユーザーが本文を意図して空にした値として扱い、既定の文言に置き換えません。
+  String? get missedTakenMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -79,7 +80,7 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
       bool isInVisiblePillNumber,
       bool isInVisibleDescription,
       String dailyTakenMessage,
-      String missedTakenMessage});
+      String? missedTakenMessage});
 }
 
 /// @nodoc
@@ -101,7 +102,7 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends Reminde
     Object? isInVisiblePillNumber = null,
     Object? isInVisibleDescription = null,
     Object? dailyTakenMessage = null,
-    Object? missedTakenMessage = null,
+    Object? missedTakenMessage = freezed,
   }) {
     return _then(_value.copyWith(
       version: null == version
@@ -128,10 +129,10 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends Reminde
           ? _value.dailyTakenMessage
           : dailyTakenMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      missedTakenMessage: null == missedTakenMessage
+      missedTakenMessage: freezed == missedTakenMessage
           ? _value.missedTakenMessage
           : missedTakenMessage // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -150,7 +151,7 @@ abstract class _$$ReminderNotificationCustomizationImplCopyWith<$Res> implements
       bool isInVisiblePillNumber,
       bool isInVisibleDescription,
       String dailyTakenMessage,
-      String missedTakenMessage});
+      String? missedTakenMessage});
 }
 
 /// @nodoc
@@ -170,7 +171,7 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
     Object? isInVisiblePillNumber = null,
     Object? isInVisibleDescription = null,
     Object? dailyTakenMessage = null,
-    Object? missedTakenMessage = null,
+    Object? missedTakenMessage = freezed,
   }) {
     return _then(_$ReminderNotificationCustomizationImpl(
       version: null == version
@@ -197,10 +198,10 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
           ? _value.dailyTakenMessage
           : dailyTakenMessage // ignore: cast_nullable_to_non_nullable
               as String,
-      missedTakenMessage: null == missedTakenMessage
+      missedTakenMessage: freezed == missedTakenMessage
           ? _value.missedTakenMessage
           : missedTakenMessage // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -216,7 +217,7 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
       this.isInVisiblePillNumber = false,
       this.isInVisibleDescription = false,
       this.dailyTakenMessage = '',
-      this.missedTakenMessage = ''})
+      this.missedTakenMessage})
       : super._();
 
   factory _$ReminderNotificationCustomizationImpl.fromJson(Map<String, dynamic> json) => _$$ReminderNotificationCustomizationImplFromJson(json);
@@ -273,10 +274,10 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
   /// 表示されるメッセージです。表示には [resolvedMissedTakenMessage] を使います。
-  /// 既定の文言はロケールごとに変わるため entity には埋めず、空文字で「未設定」を表します。
+  /// 既定の文言はロケールごとに変わるため entity には埋めず、null で「未設定」を表します。
+  /// 空文字はユーザーが本文を意図して空にした値として扱い、既定の文言に置き換えません。
   @override
-  @JsonKey()
-  final String missedTakenMessage;
+  final String? missedTakenMessage;
 
   @override
   String toString() {
@@ -324,7 +325,7 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
       final bool isInVisiblePillNumber,
       final bool isInVisibleDescription,
       final String dailyTakenMessage,
-      final String missedTakenMessage}) = _$ReminderNotificationCustomizationImpl;
+      final String? missedTakenMessage}) = _$ReminderNotificationCustomizationImpl;
   const _ReminderNotificationCustomization._() : super._();
 
   factory _ReminderNotificationCustomization.fromJson(Map<String, dynamic> json) = _$ReminderNotificationCustomizationImpl.fromJson;
@@ -376,8 +377,9 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
   /// 表示されるメッセージです。表示には [resolvedMissedTakenMessage] を使います。
-  /// 既定の文言はロケールごとに変わるため entity には埋めず、空文字で「未設定」を表します。
-  String get missedTakenMessage;
+  /// 既定の文言はロケールごとに変わるため entity には埋めず、null で「未設定」を表します。
+  /// 空文字はユーザーが本文を意図して空にした値として扱い、既定の文言に置き換えません。
+  String? get missedTakenMessage;
   @override
   @JsonKey(ignore: true)
   _$$ReminderNotificationCustomizationImplCopyWith<_$ReminderNotificationCustomizationImpl> get copyWith => throw _privateConstructorUsedError;

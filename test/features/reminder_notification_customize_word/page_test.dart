@@ -89,5 +89,14 @@ void main() {
       expect(missedPreviewMessage(tester), 'カスタム');
       expect(missedTextFieldText(tester), 'カスタム');
     });
+
+    testWidgets('飲み忘れの文言を空にして保存済みの時、プレビューと入力欄は既定文言で埋めず空のまま', (tester) async {
+      useLanguage('en');
+      await tester.pumpWidget(subject(reminderNotificationCustomization: const ReminderNotificationCustomization(missedTakenMessage: '')));
+      await tester.pumpAndSettle();
+
+      expect(missedPreviewMessage(tester), '');
+      expect(missedTextFieldText(tester), '');
+    });
   });
 }

@@ -57,17 +57,18 @@ class ReminderNotificationCustomization with _$ReminderNotificationCustomization
     ///
     /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
     /// 表示されるメッセージです。表示には [resolvedMissedTakenMessage] を使います。
-    /// 既定の文言はロケールごとに変わるため entity には埋めず、空文字で「未設定」を表します。
-    @Default('') String missedTakenMessage,
+    /// 既定の文言はロケールごとに変わるため entity には埋めず、null で「未設定」を表します。
+    /// 空文字はユーザーが本文を意図して空にした値として扱い、既定の文言に置き換えません。
+    String? missedTakenMessage,
     // END: From v2
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
 
   /// 通知と設定画面に表示する飲み忘れ時のメッセージ
   ///
-  /// [missedTakenMessage] が未設定 (空文字) の時は、端末のロケールの既定文言を返します。
-  /// 保存済みの値がある時はその値を返します。
-  String get resolvedMissedTakenMessage => missedTakenMessage.isEmpty ? L.defaultMissedTakenMessage : missedTakenMessage;
+  /// [missedTakenMessage] が未設定 (null) の時は、端末のロケールの既定文言を返します。
+  /// 保存済みの値がある時は、空文字を含めてその値を返します。
+  String get resolvedMissedTakenMessage => missedTakenMessage ?? L.defaultMissedTakenMessage;
 
   factory ReminderNotificationCustomization.fromJson(
     Map<String, dynamic> json,

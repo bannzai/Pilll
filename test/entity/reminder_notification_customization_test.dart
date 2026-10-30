@@ -40,5 +40,21 @@ void main() {
         'カスタム',
       );
     });
+
+    test('ユーザーが本文を空にして保存した時、既定文言に置き換えず空文字を返す', () {
+      useLanguage('en');
+      expect(
+        const ReminderNotificationCustomization(missedTakenMessage: '').resolvedMissedTakenMessage,
+        '',
+      );
+    });
+
+    test('Firestore に missedTakenMessage が空文字で保存されたドキュメントを読んだ時、空文字を返す', () {
+      useLanguage('en');
+      expect(
+        ReminderNotificationCustomization.fromJson(const {'version': 'v2', 'missedTakenMessage': ''}).resolvedMissedTakenMessage,
+        '',
+      );
+    });
   });
 }

@@ -104,9 +104,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         analytics.logEvent(name: 'submit_rnc_missed_message');
 
         var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-        // 既定文言のまま保存するとその言語の文言で固定され、端末の言語に追従しなくなるため未設定 (空文字) として保存する
+        // 既定文言のまま保存するとその言語の文言で固定され、端末の言語に追従しなくなるため未設定 (null) として保存する
+        // 空文字はユーザーが本文を意図して空にした値なので、そのまま保存する
         reminderNotificationCustomization = reminderNotificationCustomization.copyWith(
-          missedTakenMessage: missedTakenMessage.value == L.defaultMissedTakenMessage ? '' : missedTakenMessage.value,
+          missedTakenMessage: missedTakenMessage.value == L.defaultMissedTakenMessage ? null : missedTakenMessage.value,
         );
 
         setSetting(
@@ -200,10 +201,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 const SizedBox(height: 4),
                                 ReminderPushNotificationPreview(
                                   word: word.value,
-                                  // 入力欄を空にした時も、実際の通知と同じく既定文言をプレビューに出す
-                                  message: setting.reminderNotificationCustomization
-                                      .copyWith(missedTakenMessage: missedTakenMessage.value)
-                                      .resolvedMissedTakenMessage,
+                                  message: missedTakenMessage.value,
                                   isInVisibleReminderDate: isInVisibleReminderDate.value,
                                   isInvisiblePillNumber: isInVisiblePillNumber.value,
                                   isInvisibleDescription: isInVisibleDescription.value,
