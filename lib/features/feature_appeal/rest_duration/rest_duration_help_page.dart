@@ -38,9 +38,7 @@ class RestDurationHelpPage extends ConsumerWidget {
               child: const SizedBox(
                 width: 80,
                 height: 80,
-                child: FittedBox(
-                  child: RestDurationExplainImage(appearanceMode: PillSheetAppearanceMode.date),
-                ),
+                child: RestDurationExplainImage(appearanceMode: PillSheetAppearanceMode.date),
               ),
             ),
             const SizedBox(height: 32),

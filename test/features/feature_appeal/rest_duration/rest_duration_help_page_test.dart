@@ -39,11 +39,11 @@ void main() {
       await tester.pump();
 
       expect(tester.widget<RestDurationExplainImage>(find.byType(RestDurationExplainImage)).appearanceMode, PillSheetAppearanceMode.date);
-      // RestDurationExplainImage は 221x133 で描き、FittedBox が縮める。getSize は縮める前の大きさを返すため、画面上の大きさは getRect で確かめる
-      expect(tester.getSize(find.byType(RestDurationExplainImage)), const Size(221, 133));
-      final imageRect = tester.getRect(find.byType(RestDurationExplainImage));
-      expect(imageRect.width, moreOrLessEquals(80));
-      expect(imageRect.height, moreOrLessEquals(80 * 133 / 221));
+      // RestDurationExplainImage は 80x80 の枠に入り、図は 221x133 で描いたものを縮めて表示する。画面上の図の大きさは描画範囲 (Stack) の getRect で確かめる
+      expect(tester.getSize(find.byType(RestDurationExplainImage)), const Size(80, 80));
+      final drawnRect = tester.getRect(find.descendant(of: find.byType(RestDurationExplainImage), matching: find.byType(Stack)).first);
+      expect(drawnRect.width, moreOrLessEquals(80));
+      expect(drawnRect.height, moreOrLessEquals(80 * 133 / 221));
     });
 
     testWidgets('AppBar と戻るボタンが表示される', (tester) async {
