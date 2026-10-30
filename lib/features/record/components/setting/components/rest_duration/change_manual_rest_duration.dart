@@ -165,11 +165,17 @@ class ChangeManualRestDuration extends HookConsumerWidget {
               toRestDuration: toRestDuration,
               pillSheetGroup: pillSheetGroup,
             );
-            // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
-            await registerReminderLocalNotification();
           } catch (e) {
             onError(e);
             return;
+          }
+
+          // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
+          // 服用お休みの変更は保存済みのため、登録に失敗しても保存の失敗としては扱わず画面を閉じる (end_manual_rest_duration と同じ扱い)
+          try {
+            await registerReminderLocalNotification();
+          } catch (e) {
+            debugPrint('registerReminderLocalNotification error: $e');
           }
 
           onChanged();
