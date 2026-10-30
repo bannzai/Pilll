@@ -22,6 +22,36 @@ void main() {
     });
   });
 
+  group('#resolveDeviceAppLocale', () {
+    test('端末の言語が ja_JP の場合は ja', () {
+      expect(
+          resolveDeviceAppLocale(preferredLocales: const [Locale('ja', 'JP')]),
+          const Locale('ja'));
+    });
+    test('端末の言語が en_US の場合は en', () {
+      expect(
+          resolveDeviceAppLocale(preferredLocales: const [Locale('en', 'US')]),
+          const Locale('en'));
+    });
+    test('端末の言語が de_DE の場合は de', () {
+      expect(
+          resolveDeviceAppLocale(preferredLocales: const [Locale('de', 'DE')]),
+          const Locale('de'));
+    });
+    test('端末の第一言語が対象言語に無く、第二言語が en の場合は en', () {
+      expect(
+          resolveDeviceAppLocale(
+              preferredLocales: const [Locale('ga', 'IE'), Locale('en', 'US')]),
+          const Locale('en'));
+    });
+    // MaterialApp が同じ規則で解決するため、アプリを開いた時と同じく対象言語の先頭の af になる
+    test('端末の言語がどれも対象言語に無い場合は、アプリを開いた時と同じく対象言語の先頭の af', () {
+      expect(
+          resolveDeviceAppLocale(preferredLocales: const [Locale('ga', 'IE')]),
+          const Locale('af'));
+    });
+  });
+
   group('#AppLocalizationResolver', () {
     // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
     /// [initialSharedPreferencesValues] を SharedPreferences の初期値にして AppLocalizationResolver を描画し、
