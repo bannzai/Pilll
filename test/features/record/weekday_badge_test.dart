@@ -40,11 +40,14 @@ void main() {
 
     testWidgets('曜日の略記が幅に収まる場合は縮小されない', (WidgetTester tester) async {
       await tester.pumpWidget(
-        const MaterialApp(
+        MaterialApp(
           home: MediaQuery(
-            // 幅 20 に十分収まる文字サイズにする
-            data: MediaQueryData(textScaler: TextScaler.linear(0.5)),
-            child: Scaffold(
+            // 略記は端末のロケールで変わる (pt_PT は「domingo」) ため、略記の文字数から幅 20 に十分収まる拡大率を決める。
+            // テストのフォントは 1 文字が文字サイズ (9) の正方形なので、略記の幅を 15 にする
+            data: MediaQueryData(
+                textScaler: TextScaler.linear(
+                    15 / (Weekday.Sunday.weekdayString().length * 9))),
+            child: const Scaffold(
               body: Center(child: WeekdayBadge(weekday: Weekday.Sunday)),
             ),
           ),
