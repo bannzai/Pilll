@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "هنوز تعیین نشده",
   "selectPlannedResumeDate": "تاریخ برنامه‌ریزی‌شده برای شروع دوباره مصرف قرص را انتخاب کنید",
   "pauseEndDateLimitIsToday": "تاریخ پایان حداکثر می‌تواند امروز باشد",
+  "pauseEndDateLimitBeforeNextPause": "تا روزی که با توقف بعدی مصرف قرص (از {date}) هم‌پوشانی نداشته باشد",
   "pauseStartDateLimit": "می‌توانید تاریخ شروع را تا {date} انتخاب کنید",
   "initialSettingAskYazFlex": "آیا قرصی که مصرف می‌کنید Yaz Flex است؟",
   "initialSettingAskYazFlexDescription": "با انتخاب «بله»، نمایش تعداد روزهای گذشته از پایان وقفه تنظیم می‌شود",

@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Dar nenustatyta",
   "selectPlannedResumeDate": "Pasirinkite planuojamą tablečių vartojimo atnaujinimo datą",
   "pauseEndDateLimitIsToday": "Pabaigos data gali būti ne vėlesnė kaip šiandien",
+  "pauseEndDateLimitBeforeNextPause": "Iki dienos, kuri nesutampa su kita tablečių vartojimo pauze (nuo {date})",
   "pauseStartDateLimit": "Pradžios datą galite pasirinkti ne vėlesnę kaip {date}",
   "initialSettingAskYazFlex": "Ar vartojate Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Pasirinkus „Taip“, bus rodoma, kiek dienų praėjo nuo tada, kai baigėsi pertrauka",

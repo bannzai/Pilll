@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Nie ingestel nie",
   "selectPlannedResumeDate": "Kies die datum waarop jy weer jou pil gaan neem",
   "pauseEndDateLimitIsToday": "Die einddatum kan nie later as vandag wees nie",
+  "pauseEndDateLimitBeforeNextPause": "Tot op ’n dag wat nie met jou volgende pilpouse (vanaf {date}) oorvleuel nie",
   "pauseStartDateLimit": "Die begindatum kan nie later as {date} wees nie",
   "initialSettingAskYazFlex": "Gebruik jy Yaz Flex?",
   "initialSettingAskYazFlexDescription": "As jy “Ja” kies, wys ons die hoeveelste dag dit is sedert jou pouse verby is",

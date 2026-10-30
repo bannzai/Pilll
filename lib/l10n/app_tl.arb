@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Hindi pa itinakda",
   "selectPlannedResumeDate": "Piliin ang planong petsa ng muling pag-inom ng pildoras",
   "pauseEndDateLimitIsToday": "Hanggang ngayon lamang maaaring itakda ang petsa ng pagtatapos",
+  "pauseEndDateLimitBeforeNextPause": "Hanggang sa araw na hindi sakop ng susunod ninyong paghinto muna sa pag-inom ng pildoras (mula {date})",
   "pauseStartDateLimit": "Hanggang {date} lamang maaaring itakda ang petsa ng simula",
   "initialSettingAskYazFlex": "Yaz Flex po ba ang iniinom ninyong pildoras?",
   "initialSettingAskYazFlexDescription": "Kapag pinili ninyo ang “Oo”, itatakda ang app para ipakita kung pang-ilang araw na mula nang matapos ang pahinga",

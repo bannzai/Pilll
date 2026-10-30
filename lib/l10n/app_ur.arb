@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "ابھی طے نہیں ہوئی",
   "selectPlannedResumeDate": "دوبارہ گولی لینا شروع کرنے کی طے شدہ تاریخ منتخب کریں",
   "pauseEndDateLimitIsToday": "اختتامی تاریخ آج تک ہی منتخب کی جا سکتی ہے",
+  "pauseEndDateLimitBeforeNextPause": "اگلی بار گولیاں لینے میں وقفے ({date} سے) سے نہ ٹکرانے والے دن تک",
   "pauseStartDateLimit": "آغاز کی تاریخ {date} تک ہی منتخب کی جا سکتی ہے",
   "initialSettingAskYazFlex": "کیا آپ کی گولی Yaz Flex ہے؟",
   "initialSettingAskYazFlexDescription": "«جی ہاں» منتخب کرنے پر وقفہ ختم ہونے کے بعد گزرے ہوئے دنوں کی تعداد دکھانے کی ترتیب ہو جائے گی",

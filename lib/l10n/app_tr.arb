@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Henüz belirlenmedi",
   "selectPlannedResumeDate": "Hapı yeniden almaya başlamayı planladığınız tarihi seçin",
   "pauseEndDateLimitIsToday": "Bitiş tarihi en geç bugün olabilir",
+  "pauseEndDateLimitBeforeNextPause": "Bir sonraki hap alma aranızla ({date} tarihinden itibaren) çakışmayan bir güne kadar",
   "pauseStartDateLimit": "Başlangıç tarihi en geç {date} olabilir",
   "initialSettingAskYazFlex": "Yaz Flex kullanıyor musunuz?",
   "initialSettingAskYazFlexDescription": "“Evet”i seçerseniz, ara dönem bittikten sonra kaç gün geçtiği gösterilecek şekilde ayarlanır",

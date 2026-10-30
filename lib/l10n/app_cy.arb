@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Heb ei bennu eto",
   "selectPlannedResumeDate": "Dewiswch y dyddiad rydych yn bwriadu ailddechrau cymryd y bilsen",
   "pauseEndDateLimitIsToday": "Gall y dyddiad gorffen fod hyd at heddiw",
+  "pauseEndDateLimitBeforeNextPause": "Hyd at ddiwrnod nad yw’n gorgyffwrdd â’ch saib nesaf rhag cymryd y bilsen (o {date})",
   "pauseStartDateLimit": "Gall y dyddiad dechrau fod hyd at {date}",
   "initialSettingAskYazFlex": "Ydych chi'n cymryd Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Os dewiswch “Ie”, bydd y dangosydd yn cael ei osod i ddangos sawl diwrnod sydd wedi mynd heibio ers diwedd y seibiant",

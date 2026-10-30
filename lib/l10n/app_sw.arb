@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Bado haijawekwa",
   "selectPlannedResumeDate": "Tafadhali chagua tarehe iliyopangwa ya kuanza tena kumeza kidonge",
   "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwa leo au kabla ya leo",
+  "pauseEndDateLimitBeforeNextPause": "Hadi siku isiyoingiliana na kipindi kijacho cha kusitisha kumeza vidonge kwa muda (kuanzia {date})",
   "pauseStartDateLimit": "Unaweza kuchagua tarehe ya kuanza hadi {date}",
   "initialSettingAskYazFlex": "Je, unameza kidonge cha Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”, programu itaonyesha siku ngapi zimepita tangu mapumziko ya kumeza vidonge yalipoisha",

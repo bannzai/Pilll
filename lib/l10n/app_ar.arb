@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "لم يُحدَّد بعد",
   "selectPlannedResumeDate": "اختاري التاريخ المخطط لاستئناف تناول الحبوب",
   "pauseEndDateLimitIsToday": "يمكنكِ اختيار تاريخ انتهاء حتى اليوم",
+  "pauseEndDateLimitBeforeNextPause": "حتى يوم لا يتداخل مع فترة التوقف التالية عن تناول الحبوب (بدءا من {date})",
   "pauseStartDateLimit": "يمكنكِ اختيار تاريخ بدء حتى {date}",
   "initialSettingAskYazFlex": "هل الحبوب التي تتناولينها هي Yaz Flex؟",
   "initialSettingAskYazFlexDescription": "عند اختيار «نعم»، سيُضبط العرض لإظهار عدد الأيام منذ انتهاء راحة تناول الحبوب",

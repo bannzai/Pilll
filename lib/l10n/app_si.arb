@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "තවම නියම කර නැත",
   "selectPlannedResumeDate": "පෙත්ත නැවත ගැනීමට සැලසුම් කළ දිනය තෝරන්න",
   "pauseEndDateLimitIsToday": "අවසන් දිනය ලෙස අද දක්වා පමණක් තෝරාගත හැක",
+  "pauseEndDateLimitBeforeNextPause": "ඊළඟ පෙති ගැනීමේ විරාමය ({date} සිට) සමඟ නොගැටෙන දිනයක් දක්වා",
   "pauseStartDateLimit": "ආරම්භක දිනය ලෙස {date} දක්වා පමණක් තෝරාගත හැක",
   "initialSettingAskYazFlex": "ඔබ ගන්නා පෙත්ත Yaz Flex ද?",
   "initialSettingAskYazFlexDescription": "“ඔව්” තෝරාගත් විට, විරාමය අවසන් වූ දින සිට කීවැනි දිනයද යන්න පෙන්වන ලෙස සැකසේ",

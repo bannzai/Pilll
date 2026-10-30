@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "Encara no s’ha definit",
   "selectPlannedResumeDate": "Tria la data prevista per tornar a prendre la píndola",
   "pauseEndDateLimitIsToday": "La data de finalització pot ser, com a màxim, avui",
+  "pauseEndDateLimitBeforeNextPause": "Fins a un dia que no coincideixi amb la propera pausa de la píndola (a partir del {date})",
   "pauseStartDateLimit": "Pots triar una data d’inici fins al {date}",
   "initialSettingAskYazFlex": "Prens Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Si tries «Sí», configurarem la pantalla perquè mostri quants dies han passat des del final del descans",

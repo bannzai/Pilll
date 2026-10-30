@@ -566,6 +566,7 @@
   "plannedResumeDateNotSet": "No nöd feschtgleit",
   "selectPlannedResumeDate": "Wähl s Datum, wänn du d Pille wider wetsch näh",
   "pauseEndDateLimitIsToday": "S Änddatum cha spötischtens hüt sii",
+  "pauseEndDateLimitBeforeNextPause": "Bis zu mene Tag, wo sich nöd mit dinere nöchschte Pillenpause (ab {date}) überschniidet",
   "pauseStartDateLimit": "Du chasch s Aafangsdatum bis am {date} uswähle",
   "initialSettingAskYazFlex": "Nimmsch du Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Wänn du «Ja» uswählsch, zeigts der aa, wie vill Täg sit em Ändi vo de Pillepause verbi sind",
