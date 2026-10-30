@@ -9,6 +9,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_changed_pill_number_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_created_pill_sheet_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_deleted_pill_sheet_action.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_deleted_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_end_display_number_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_ended_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_ended_pill_sheet_action.dart';
@@ -141,6 +142,10 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
           PillSheetModifiedActionType.changedRestDuration => PillSheetModifiedHistoryChangedRestDuration(
               estimatedEventCausingDate: history.estimatedEventCausingDate,
               value: history.value.changedRestDurationValue,
+            ),
+          PillSheetModifiedActionType.deletedRestDuration => PillSheetModifiedHistoryDeletedRestDuration(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              value: history.value.deletedRestDurationValue,
             ),
           // whereでフィルタリングしているのでありえないパターン
           null => Container(),

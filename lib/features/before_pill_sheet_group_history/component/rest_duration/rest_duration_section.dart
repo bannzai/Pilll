@@ -11,6 +11,7 @@ import 'package:pilll/features/before_pill_sheet_group_history/component/rest_du
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/delete_rest_duration_button.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -93,6 +94,11 @@ class _ChangeRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.date_range_outlined),
       title: Text(L.changePausePeriod),
       subtitle: Text('${_format(restDuration.beginDate)} - ${endDate != null ? _format(endDate) : L.duringPauseTaking}'),
+      trailing: DeleteRestDurationButton(
+        restDuration: restDuration,
+        pillSheetGroup: pillSheetGroup,
+        onDeleted: () => ref.invalidate(beforePillSheetGroupProvider),
+      ),
       onTap: () async {
         analytics.logEvent(
           name: 'change_rest_duration_in_before_group',

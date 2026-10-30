@@ -61,6 +61,10 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     /// 休薬期間の設定内容を変更した際の情報
     @Default(null) ChangedRestDurationValue? changedRestDurationValue,
 
+    /// 休薬期間削除時の記録
+    /// 記録済みの休薬期間を削除した際の情報
+    @Default(null) DeletedRestDurationValue? deletedRestDurationValue,
+
     /// 表示開始番号変更時の記録
     /// ピルシートの表示番号の開始値を変更した際の情報
     @Default(null) ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
@@ -309,6 +313,20 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
   }) = _ChangedRestDurationValue;
 
   factory ChangedRestDurationValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationValueFromJson(json);
+}
+
+/// 休薬期間の削除時の履歴情報を記録するクラス
+@freezed
+class DeletedRestDurationValue with _$DeletedRestDurationValue {
+  const DeletedRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  const factory DeletedRestDurationValue({
+    /// 削除された休薬期間の情報
+    /// 削除後のピルシートグループには残らないため、どの服用お休み期間を削除したかを表示するために記録する
+    required RestDuration restDuration,
+  }) = _DeletedRestDurationValue;
+
+  factory DeletedRestDurationValue.fromJson(Map<String, dynamic> json) => _$DeletedRestDurationValueFromJson(json);
 }
 
 /// 表示開始番号変更時の履歴情報を記録するクラス

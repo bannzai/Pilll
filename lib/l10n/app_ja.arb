@@ -2850,5 +2850,17 @@
   "yazFlexNextInputIsRestDuration": "次は前回の休薬を入力します",
   "@yazFlexNextInputIsRestDuration": {
     "description": "ヤーズフレックス向けの初期設定で、開始番号を入力するページの「次へ」ボタンの上に出す小さな注釈です。次のページで前回の休薬（ピルを飲まない期間）を入力することを予告します。"
+  },
+  "deletePausePeriod": "服用お休み期間を削除",
+  "@deletePausePeriod": {
+    "description": "記録済みの服用お休み期間（ピルの服用を一時的に止めた期間）を削除する操作の名前です。削除ボタンの読み上げラベル、服用履歴の行の説明、確認ダイアログの見出し（「{doing}しますか？」の {doing}）に使われます。「服用お休み期間」は既存の「服用お休み期間変更」「服用お休み期間を追加」と同じ訳語にしてください。"
+  },
+  "deletePausePeriodConfirmMessage": "この服用お休み期間を記録から取り除き、服用お休みがなかったものとしてピルシートの日付を計算し直します",
+  "@deletePausePeriodConfirmMessage": {
+    "description": "服用お休み期間を削除する確認ダイアログの本文です。削除すると、その服用お休みが無かったものとしてピルシートの各日付（服用予定日）が計算し直されることを伝えます。"
+  },
+  "deletedPausePeriod": "服用お休み期間を削除しました",
+  "@deletedPausePeriod": {
+    "description": "服用お休み期間を削除した後に表示されるスナックバーの文言です。"
   }
 }

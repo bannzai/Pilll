@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/delete_rest_duration_button.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -56,11 +57,19 @@ class ChangeManualRestDuration extends HookConsumerWidget {
       showErrorAlert(context, e);
     }
 
+    final deleteButton = DeleteRestDurationButton(
+      restDuration: restDuration,
+      pillSheetGroup: pillSheetGroup,
+      // 受け取った pillSheetGroup は削除前の状態のままなので、変更時と同じくボトムシートを閉じる
+      onDeleted: () => Navigator.of(context).pop(),
+    );
+
     if (end == null) {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
         title: Text(L.editPausePeriod),
         subtitle: Text(begin),
+        trailing: deleteButton,
         onTap: () async {
           analytics.logEvent(
             name: 'change_manual_rest_duration_day',
@@ -111,6 +120,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         leading: const Icon(Icons.date_range_outlined),
         title: Text(L.changePausePeriod),
         subtitle: Text('$begin - $end'),
+        trailing: deleteButton,
         onTap: () async {
           analytics.logEvent(
             name: 'change_manual_rest_duration_range',
