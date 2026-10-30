@@ -107,7 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} дугаар",
   "selectPauseStartDate": "Эм уух завсарлагын эхлэх өдрийг сонгоно уу",
   "selectPauseEndDateAsResumeDate": "Дуусах өдөр = эмээ дахин уух өдөр",
-  "pauseResumeDateLimitIsToday": "Дахин уух ≤өнөөдөр",
+  "pauseResumeDateLimitIsToday": "Дахин уух: өнөөдрийг хүртэл",
   "pauseResumeDateLimitBeforeNextPause": "{date} гэхэд дахин уух",
   "pauseStartDate": "Эм уух завсарлагын эхлэх өдөр",
   "pauseEndDate": "Эм уух завсарлагын дуусах өдөр",
