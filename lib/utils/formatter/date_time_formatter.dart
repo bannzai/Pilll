@@ -34,9 +34,7 @@ class DateTimeFormatter {
   /// ja 以外で数字の書式にすると es の「sáb, 16/1」のように月日の区別が付きにくいため月名にし、ja の表示は変えない
   static String monthAndWeekday(DateTime dateTime) {
     return DateFormat(
-      Intl.shortLocale(Intl.getCurrentLocale()) == 'ja'
-          ? DateFormat.NUM_MONTH_WEEKDAY_DAY
-          : DateFormat.ABBR_MONTH_WEEKDAY_DAY,
+      Intl.shortLocale(Intl.getCurrentLocale()) == 'ja' ? DateFormat.NUM_MONTH_WEEKDAY_DAY : DateFormat.ABBR_MONTH_WEEKDAY_DAY,
     ).format(dateTime);
   }
 
