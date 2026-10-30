@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Choisir la date de début de la pause dans la prise de la pilule",
   "selectPauseEndDateAsResumeDate": "Date de fin = reprise de la pilule",
   "pauseResumeDateLimitIsToday": "Reprise de la prise : jusqu’à aujourd’hui",
-  "pauseResumeDateLimitBeforeNextPause": "Reprise avant la prochaine pause du {date}",
   "pauseStartDate": "Date de début de la pause dans la prise de la pilule",
   "pauseEndDate": "Date de fin de la pause dans la prise de la pilule",
   "endPillSheet": "Plaquette terminée",

@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Seleziona la data di inizio della pausa dalla pillola",
   "selectPauseEndDateAsResumeDate": "Data di fine = ripresa della pillola",
   "pauseResumeDateLimitIsToday": "Ripresa della pillola: entro oggi",
-  "pauseResumeDateLimitBeforeNextPause": "Riprendi entro la prossima pausa del {date}",
   "pauseStartDate": "Data di inizio della pausa dalla pillola",
   "pauseEndDate": "Data di fine della pausa dalla pillola",
   "endPillSheet": "Blister terminato",
