@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Kies die begindatum van jou pilpouse",
   "selectPauseEndDateAsResumeDate": "Einddatum: die dag waarop jy weer jou pil neem",
   "pauseResumeDateLimitIsToday": "Jy kan tot vandag weer jou pil begin drink",
+  "pauseResumeDateLimitBeforeNextPause": "Hervat jou pil teen {date} (volgende pouse)",
   "pauseStartDate": "Begindatum van pilpouse",
   "pauseEndDate": "Einddatum van pilpouse",
   "endPillSheet": "Pilstrokie voltooi",

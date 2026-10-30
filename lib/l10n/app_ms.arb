@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Pilih tarikh mula rehat pengambilan pil",
   "selectPauseEndDateAsResumeDate": "Tarikh tamat: hari anda mula mengambil pil semula",
   "pauseResumeDateLimitIsToday": "Tarikh mula mengambil pil semula selewat-lewatnya hari ini",
+  "pauseResumeDateLimitBeforeNextPause": "Sila mula ambil pil semula selewat-lewatnya {date} (rehat seterusnya)",
   "pauseStartDate": "Tarikh mula rehat pengambilan pil",
   "pauseEndDate": "Tarikh tamat rehat pengambilan pil",
   "endPillSheet": "Pek pil tamat",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r seibiant o gymryd y bilsen",
   "selectPauseEndDateAsResumeDate": "Dyddiad gorffen: y diwrnod y byddwch yn ailgychwyn cymryd y bilsen",
   "pauseResumeDateLimitIsToday": "Gall y dyddiad ailddechrau cymryd y bilsen fod hyd at heddiw",
+  "pauseResumeDateLimitBeforeNextPause": "Ailddechreuwch gymryd y bilsen erbyn {date} (yr egwyl nesaf)",
   "pauseStartDate": "Dyddiad dechrau'r seibiant o gymryd y bilsen",
   "pauseEndDate": "Dyddiad gorffen y seibiant rhag cymryd y bilsen",
   "endPillSheet": "Stribed pils wedi gorffen",

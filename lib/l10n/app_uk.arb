@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Виберіть дату початку перерви в прийомі пігулок",
   "selectPauseEndDateAsResumeDate": "Дата завершення: день, коли ви відновите прийом пігулки",
   "pauseResumeDateLimitIsToday": "Дата відновлення прийому пігулки може бути не пізніше сьогодні",
+  "pauseResumeDateLimitBeforeNextPause": "Відновіть прийом пігулки до {date} (наступна перерва)",
   "pauseStartDate": "Дата початку перерви в прийомі пігулок",
   "pauseEndDate": "Дата завершення перерви в прийомі пігулок",
   "endPillSheet": "Блістер закінчився",

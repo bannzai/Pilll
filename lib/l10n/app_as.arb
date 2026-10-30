@@ -108,6 +108,7 @@
   "selectPauseStartDate": "পিল খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ বাছনি কৰক",
   "selectPauseEndDateAsResumeDate": "শেষৰ তাৰিখ হিচাপে পুনৰ পিল খোৱা দিনটো বাছক",
   "pauseResumeDateLimitIsToday": "পুনৰ খোৱা আৰম্ভ কৰাৰ তাৰিখ আজিলৈকে",
+  "pauseResumeDateLimitBeforeNextPause": "{date}ৰ ভিতৰত পিল খোৱা পুনৰ আৰম্ভ কৰক (পৰৱৰ্তী বিৰতি)",
   "pauseStartDate": "পিল খোৱাৰ বিৰতি আৰম্ভ হোৱাৰ তাৰিখ",
   "pauseEndDate": "পিল খোৱাৰ বিৰতি শেষ হোৱাৰ তাৰিখ",
   "endPillSheet": "পিলৰ ষ্ট্ৰিপ শেষ হৈছে",

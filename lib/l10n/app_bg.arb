@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Избор на начална дата на паузата в приема на хапчета",
   "selectPauseEndDateAsResumeDate": "Крайна дата: денят, в който подновявате приема на хапчето",
   "pauseResumeDateLimitIsToday": "Датата за подновяване на приема е най-късно днес",
+  "pauseResumeDateLimitBeforeNextPause": "Подновете приема на хапчето до {date} (следващата почивка)",
   "pauseStartDate": "Начална дата на паузата в приема на хапчета",
   "pauseEndDate": "Крайна дата на паузата в приема на хапчета",
   "endPillSheet": "Край на блистера",

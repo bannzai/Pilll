@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Выбраць дату пачатку перапынку ў прыёме пігулак",
   "selectPauseEndDateAsResumeDate": "Дата заканчэння — дзень, калі вы зноў прымаеце пігулку",
   "pauseResumeDateLimitIsToday": "Аднавіць прыём пігулкі можна не пазней за сёння",
+  "pauseResumeDateLimitBeforeNextPause": "Аднавіце прыём пігулкі да {date} (наступны перапынак)",
   "pauseStartDate": "Дата пачатку перапынку ў прыёме пігулак",
   "pauseEndDate": "Дата заканчэння перапынку ў прыёме пігулак",
   "endPillSheet": "Блістар скончыўся",

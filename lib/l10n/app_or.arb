@@ -108,6 +108,7 @@
   "selectPauseStartDate": "ବଟିକା ଖାଇବାର ବିରତି ଆରମ୍ଭ ତାରିଖ ବାଛନ୍ତୁ",
   "selectPauseEndDateAsResumeDate": "ଶେଷ ତାରିଖ: ଆପଣ ପୁଣି ବଟିକା ଖାଇବା ଆରମ୍ଭ କରିବା ଦିନ",
   "pauseResumeDateLimitIsToday": "ବଟିକା ପୁଣି ନେବା ଆରମ୍ଭ କରିବାର ତାରିଖ ଆଜି ପର୍ଯ୍ୟନ୍ତ",
+  "pauseResumeDateLimitBeforeNextPause": "{date} ସୁଦ୍ଧା ପୁଣି ବଟିକା ଖାଇବା ଆରମ୍ଭ କରନ୍ତୁ (ପରବର୍ତ୍ତୀ ବିରତି)",
   "pauseStartDate": "ବଟିକା ଖାଇବାର ବିରତି ଆରମ୍ଭ ତାରିଖ",
   "pauseEndDate": "ବଟିକା ଖାଇବାର ବିରତି ଶେଷ ତାରିଖ",
   "endPillSheet": "ବଟିକା ସିଟ ସରିଗଲା",

@@ -108,6 +108,7 @@
   "selectPauseStartDate": "اختاري تاريخ بدء فترة التوقف عن تناول الحبوب",
   "selectPauseEndDateAsResumeDate": "تاريخ الانتهاء: يوم استئناف تناول الحبوب",
   "pauseResumeDateLimitIsToday": "آخر يوم لاستئناف تناول الحبوب هو اليوم",
+  "pauseResumeDateLimitBeforeNextPause": "استأنفي تناول الحبوب بحلول {date} (بداية الاستراحة التالية)",
   "pauseStartDate": "تاريخ بدء فترة التوقف عن تناول الحبوب",
   "pauseEndDate": "تاريخ انتهاء فترة التوقف عن تناول الحبوب",
   "endPillSheet": "انتهى شريط الحبوب",
