@@ -103,7 +103,8 @@ class PillCapsule extends StatelessWidget {
 /// 本番と同じ日付・曜日・番号単位になる。
 String reminderNotificationSampleBody() {
   final date = DateTime(2026, 7, 18);
-  return '💊 ${DateTimeFormatter.monthAndDay(date)} (${DateTimeFormatter.shortWeekday(date)}) 16${L.number}';
+  // 本番の通知は月日を DateTimeFormatter.monthAndDay ではなく `${month}/${day}` で組み立てるため、同じ組み立てにする
+  return '💊 ${date.month}/${date.day} (${DateTimeFormatter.shortWeekday(date)}) 16${L.number}';
 }
 
 /// iOS の通知バナーを模したカード。
