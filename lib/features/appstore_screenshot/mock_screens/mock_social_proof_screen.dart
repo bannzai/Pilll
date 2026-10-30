@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -56,9 +55,17 @@ class MockSocialProofScreen extends StatelessWidget {
           Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                NumberFormat.compact(locale: Platform.localeName).format(140000),
-                style: TextStyle(fontSize: size * 0.25, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue),
+              // 言語によって短縮表記の長さが違い (ja の「14万」から pl の「140 tys.」まで)、長い言語では
+              // バッジの外へはみ出す・折り返すため、内側の円 (直径 size * 0.8) に収まる幅で縮める。
+              SizedBox(
+                width: size * 0.72,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    socialProofUserCountText(lang: lang),
+                    style: TextStyle(fontSize: size * 0.25, fontWeight: FontWeight.w900, color: TextColor.primaryDarkBlue),
+                  ),
+                ),
               ),
               const SizedBox(height: 1),
               Text('★4.7', style: TextStyle(fontSize: size * 0.16, fontWeight: FontWeight.w800, color: TextColor.primaryDarkBlue)),
@@ -69,6 +76,12 @@ class MockSocialProofScreen extends StatelessWidget {
     );
   }
 }
+
+/// 社会的証明バッジに出す利用者数 (14万人) を、撮影する言語 [lang] の短縮表記で返す。
+///
+/// 端末の言語 (`Platform.localeName`) ではなく [lang] を使うのは、撮影ハーネス・カタログアプリが
+/// 端末の言語を撮影言語に切り替えないため。
+String socialProofUserCountText({required String lang}) => NumberFormat.compact(locale: lang).format(140000);
 
 /// スカラップ（外周が丸い花びら状）のバッジを描く。
 class _ScallopPainter extends CustomPainter {
