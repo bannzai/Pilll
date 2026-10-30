@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Pasirinkite tablečių vartojimo pertraukos pradžios datą",
   "selectPauseEndDateAsResumeDate": "Pabaigos data: diena, kai vėl pradėsite vartoti piliulę",
+  "pauseResumeDateLimitIsToday": "Tablečių vartojimo atnaujinimo data gali būti ne vėlesnė nei šiandien",
   "pauseStartDate": "Tablečių vartojimo pertraukos pradžios data",
   "pauseEndDate": "Tablečių vartojimo pertraukos pabaigos data",
   "endPillSheet": "Tablečių plokštelė baigta",

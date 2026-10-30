@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "លេខ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "សូមជ្រើសរើសថ្ងៃចាប់ផ្តើមផ្អាកលេបថ្នាំគ្រាប់",
   "selectPauseEndDateAsResumeDate": "ថ្ងៃបញ្ចប់៖ ថ្ងៃដែលអ្នកចាប់ផ្តើមលេបថ្នាំគ្រាប់ឡើងវិញ",
+  "pauseResumeDateLimitIsToday": "កាលបរិច្ឆេទចាប់ផ្តើមលេបថ្នាំវិញ អាចយឺតបំផុតត្រឹមថ្ងៃនេះ",
   "pauseStartDate": "ថ្ងៃចាប់ផ្តើមផ្អាកលេបថ្នាំគ្រាប់",
   "pauseEndDate": "ថ្ងៃបញ្ចប់ការផ្អាកលេបថ្នាំគ្រាប់",
   "endPillSheet": "បញ្ចប់បន្ទះថ្នាំគ្រាប់",

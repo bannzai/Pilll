@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "מס׳ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "בחירת תאריך תחילת ההפסקה בנטילת הגלולה",
   "selectPauseEndDateAsResumeDate": "תאריך סיום: היום שבו חוזרים ליטול את הגלולה",
+  "pauseResumeDateLimitIsToday": "תאריך חידוש נטילת הגלולה יכול להיות עד היום",
   "pauseStartDate": "תאריך תחילת ההפסקה בנטילת הגלולה",
   "pauseEndDate": "תאריך סיום ההפסקה בנטילת הגלולה",
   "endPillSheet": "חפיסת הגלולות הסתיימה",

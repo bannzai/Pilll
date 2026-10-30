@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nro {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Valitse pilleritauon alkamispäivä",
   "selectPauseEndDateAsResumeDate": "Päättymispäivä: päivä, jolloin aloitat pillerin käytön uudelleen",
+  "pauseResumeDateLimitIsToday": "Pillerin käytön jatkamispäivä voi olla viimeistään tänään",
   "pauseStartDate": "Pilleritauon alkamispäivä",
   "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",

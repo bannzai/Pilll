@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} нөмір",
   "selectPauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін таңдаңыз",
   "selectPauseEndDateAsResumeDate": "Аяқталу күні: таблетканы қайта қабылдайтын күніңіз",
+  "pauseResumeDateLimitIsToday": "Таблетканы қайта қабылдау күні бүгіннен кеш болмауы керек",
   "pauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күні",
   "pauseEndDate": "Таблетка қабылдаудағы үзілістің аяқталу күні",
   "endPillSheet": "таблетка блистер аяқталды",

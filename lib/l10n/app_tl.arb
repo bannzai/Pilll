@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Blg. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Piliin ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "selectPauseEndDateAsResumeDate": "Petsa ng pagtatapos: araw na muli kayong iinom ng pildoras",
+  "pauseResumeDateLimitIsToday": "Ang petsa ng muling pag-inom ng pildoras ay hanggang ngayong araw",
   "pauseStartDate": "Petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras",
   "endPillSheet": "Naubos na ang pakete ng pildoras",

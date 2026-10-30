@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "N. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Seleziona la data di inizio della pausa dalla pillola",
   "selectPauseEndDateAsResumeDate": "Data di fine: il giorno in cui riprendi la pillola",
+  "pauseResumeDateLimitIsToday": "La data di ripresa della pillola può essere al massimo oggi",
   "pauseStartDate": "Data di inizio della pausa dalla pillola",
   "pauseEndDate": "Data di fine della pausa dalla pillola",
   "endPillSheet": "Blister terminato",

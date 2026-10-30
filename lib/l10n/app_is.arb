@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Veldu upphafsdag hlés á pillutöku",
   "selectPauseEndDateAsResumeDate": "Lokadagur: dagurinn sem þú byrjar aftur að taka pilluna",
+  "pauseResumeDateLimitIsToday": "Dagsetning fyrir að byrja aftur á pillunni getur í síðasta lagi verið í dag",
   "pauseStartDate": "Upphafsdagur hlés á pillutöku",
   "pauseEndDate": "Lokadagur hlés á pillutöku",
   "endPillSheet": "Notkun pilluspjalds lokið",

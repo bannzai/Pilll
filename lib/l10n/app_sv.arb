@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Välj startdatum för pillerpausen",
   "selectPauseEndDateAsResumeDate": "Slutdatum: dagen du börjar ta p-pillret igen",
+  "pauseResumeDateLimitIsToday": "Datumet för att börja ta p-piller igen kan senast vara i dag",
   "pauseStartDate": "Startdatum för pillerpausen",
   "pauseEndDate": "Slutdatum för pilleruppehållet",
   "endPillSheet": "Avslutad p-pillerkarta",

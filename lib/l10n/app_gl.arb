@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Núm. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Escolle a data de inicio da pausa na toma",
   "selectPauseEndDateAsResumeDate": "Data de fin: o día que volves tomar a pílula",
+  "pauseResumeDateLimitIsToday": "A data para retomar a pílula pode ser ata hoxe",
   "pauseStartDate": "Data de inicio da pausa na toma",
   "pauseEndDate": "Data de fin da pausa na toma",
   "endPillSheet": "Blíster rematado",
