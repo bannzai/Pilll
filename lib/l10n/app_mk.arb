@@ -343,6 +343,7 @@
   "launchError": "Се појави грешка при отворањето на апликацијата.\n{ErrorMessagesConnection}\n\nДетали:",
   "exampleRestDurationDate": "На пример, ако имате прекин на земањето таблети од 1/12 во траење од 3 дена",
   "exampleRestDurationNumber": "На пример, ако од таблета бр. 18 направите прекин на земањето во траење од 3 дена",
+  "exampleRestDurationNumberBalloon": "прекин на земање\n3 дена",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Не е пронајден блистер што моментално го користите",
   "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",

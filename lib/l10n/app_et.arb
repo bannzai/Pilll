@@ -343,6 +343,7 @@
   "launchError": "Rakenduse käivitamisel tekkis viga.\n{ErrorMessagesConnection}\n\nÜksikasjad:",
   "exampleRestDurationDate": "Näiteks kui teed alates 1/12 kolmepäevase võtmise pausi",
   "exampleRestDurationNumber": "Näiteks kui teed alates pillist 18 kolmepäevase võtmise pausi",
+  "exampleRestDurationNumberBalloon": "võtmise paus\n3 päeva",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
   "doNotRevertTakePillInPausePeriod": "Pillipausi ajal ei saa pilli võtmise kirjet tagasi võtta",

@@ -343,6 +343,7 @@
   "launchError": "Аппыг нээх үед алдаа гарлаа.\n{ErrorMessagesConnection}\n\nДэлгэрэнгүй:",
   "exampleRestDurationDate": "Жишээлбэл, та „1/12-ноос 3 хоног“ түр завсарлага авсан бол",
   "exampleRestDurationNumber": "Жишээлбэл, та „18-р дугаараас 3 хоног“ түр завсарлага авсан бол",
+  "exampleRestDurationNumberBalloon": "түр завсарлага\n3 өдөр",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Завсарлагааны үеэр эм уусан бүртгэлийг цуцлах боломжгүй",

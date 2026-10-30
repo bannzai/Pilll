@@ -343,6 +343,7 @@
   "launchError": "هنگام باز کردن برنامه خطایی رخ داد.\n{ErrorMessagesConnection}\n\nجزئیات:",
   "exampleRestDurationDate": "برای مثال، اگر از ۱/۱۲ به مدت ۳ روز توقف موقت مصرف داشته باشید",
   "exampleRestDurationNumber": "برای مثال، اگر از شماره قرص ۱۸ به مدت ۳ روز توقف موقت مصرف داشته باشید",
+  "exampleRestDurationNumberBalloon": "توقف موقت مصرف\n۳ روز",
   "withNumber": "شمارهٔ {number}",
   "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
   "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",

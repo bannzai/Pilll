@@ -343,6 +343,7 @@
   "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση της εφαρμογής.\n{ErrorMessagesConnection}\n\nΛεπτομέρειες:",
   "exampleRestDurationDate": "Για παράδειγμα, αν κάνετε παύση για 3 ημέρες από τις 1/12",
   "exampleRestDurationNumber": "Για παράδειγμα, αν κάνετε παύση για 3 ημέρες από το χάπι 18",
+  "exampleRestDurationNumberBalloon": "παύση λήψης\n3 ημέρες",
   "withNumber": "Αρ. {number}",
   "currentPillSheetNotFound": "Δεν βρέθηκε η καρτέλα χαπιών που χρησιμοποιείτε αυτή τη στιγμή",
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταχώριση λήψης χαπιού όσο διαρκεί το διάλειμμα",

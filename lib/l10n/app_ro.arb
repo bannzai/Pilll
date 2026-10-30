@@ -343,6 +343,7 @@
   "launchError": "A apărut o eroare la deschiderea aplicației.\n{ErrorMessagesConnection}\n\nDetalii:",
   "exampleRestDurationDate": "De exemplu, dacă alegi să întrerupi administrarea pilulei timp de 3 zile, începând cu 1/12",
   "exampleRestDurationNumber": "De exemplu, dacă alegi să întrerupi administrarea pilulei timp de 3 zile, începând cu pilula 18",
+  "exampleRestDurationNumberBalloon": "întreruperea administrării\n3 zile",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nu a fost găsit blisterul pe care îl folosești acum",
   "doNotRevertTakePillInPausePeriod": "În timpul pauzei nu poți anula înregistrarea pilulei luate",

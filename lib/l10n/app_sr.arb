@@ -343,6 +343,7 @@
   "launchError": "Дошло је до грешке при покретању апликације.\n{ErrorMessagesConnection}\n\nДетаљи:",
   "exampleRestDurationDate": "На пример, ако направите прекид узимања пилула од 3 дана почев од 1/12",
   "exampleRestDurationNumber": "На пример, ако направите прекид узимања пилула од 3 дана почев од пилуле број 18",
+  "exampleRestDurationNumberBalloon": "прекид узимања\n3 дана",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Није пронађен блистер који тренутно користите",
   "doNotRevertTakePillInPausePeriod": "Током паузе није могуће поништити запис о узимању пилуле",

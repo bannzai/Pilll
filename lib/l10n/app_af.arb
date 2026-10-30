@@ -343,6 +343,7 @@
   "launchError": "’n Fout het voorgekom toe die app oopgemaak is.\n{ErrorMessagesConnection}\n\nBesonderhede:",
   "exampleRestDurationDate": "Byvoorbeeld, as jy vanaf 1/12 vir 3 dae ’n innameonderbreking het",
   "exampleRestDurationNumber": "Byvoorbeeld, as jy vanaf pil 18 vir 3 dae ’n innameonderbreking het",
+  "exampleRestDurationNumberBalloon": "innameonderbreking\n3 dae",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Die pilstrokie wat jy tans gebruik, kon nie gevind word nie",
   "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",

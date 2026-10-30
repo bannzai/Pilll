@@ -343,6 +343,7 @@
   "launchError": "Hiba történt az alkalmazás indításakor.\n{ErrorMessagesConnection}\n\nRészletek:",
   "exampleRestDurationDate": "Például, ha 1/12-től 3 napig szünetelteted a tabletta szedését",
   "exampleRestDurationNumber": "Például, ha a 18. tablettától kezdve 3 napig szünetelteted a szedést",
+  "exampleRestDurationNumberBalloon": "szüneteltetett szedés\n3 nap",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "A jelenleg használt tablettacsomag nem található",
   "doNotRevertTakePillInPausePeriod": "A szünet alatt a tabletta szedésének rögzítése nem vonható vissza",
