@@ -114,7 +114,7 @@
   "takingTime": "Intagstid",
   "takingHistoryIsPremiumFeature": "Intagshistorik är en premiumfunktion",
   "pauseTakingDoesNotAdvancePillNumber": "Om du gör ett uppehåll med tabletterna ändras inte ditt tablettnummer",
-  "pauseTakingFromNumber": "Vill du göra ett uppehåll med pillren från piller nummer {number}?",
+  "pauseTakingFromNumber": "Vill du göra ett uppehåll med pillren från piller {number}?",
   "lastTakenPlusOnePillNumber": "Nr {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Intag",
   "estimatedEndPillNumber": "Sista pillret på föregående p-pillerkarta: nr {estimatedEndPillNumber}",
