@@ -17,7 +17,7 @@ on:
         required: false
         default: ""
       group_count:
-        # 既定の 4: Free プランの macOS 同時実行上限 5 から、PR の maestro-e2e が同時に使う 1 枠を残した数
+        # 既定の 4: Free プランの macOS 同時実行上限 5 から、PR の ci の build-ios-debug が同時に使う 1 枠を残した数
         description: "並列 Runner 数 (言語をこの数に分割。Free プランの macOS 同時実行上限は 5)"
         required: false
         default: "4"

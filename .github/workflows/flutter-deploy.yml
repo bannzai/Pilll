@@ -20,7 +20,7 @@ name: flutter-deploy
 # アップロード step まで進んで失敗した run を Re-run すると同じビルド番号の再送になり拒否されるため、その場合は
 # 原因を直して workflow_dispatch で新しく起動する (アップロードより前で失敗した run は Re-run してよい)。
 #
-# Makefile の `base64 -D` は macOS の書式のため、Android の job も macOS runner で実行する (ci.yml と同じ)。
+# macOS runner はアカウント全体で同時実行の枠が少ないため、iOS の job だけを macOS で実行し、Android の job は ubuntu で実行する (ci.yml と同じ)。
 #
 # flavor 別の secret は job の env で `matrix.flavor == 'dev' && secrets.X_DEV || secrets.X_PROD` の形で選ぶ。
 # GITHUB_ENV 経由で secret の値を後続 step に渡す方式は、base64 の長い値が後続 step で空になり
@@ -144,7 +144,7 @@ jobs:
         with:
           persist-credentials: false
 
-      # `echo $(VAR) | base64 -D > file` は VAR が空でも exit 0 で空ファイルを書くため、make secret の前に全変数の非空を検査する
+      # `echo $(VAR) | base64 --decode > file` は VAR が空でも exit 0 で空ファイルを書くため、make secret の前に全変数の非空を検査する
       - name: Check secrets
         run: |
           for name in FILE_FIREBASE_IOS XCCONFIG_SECRET REVENUECAT_PUBLIC_API_KEY_IOS REVENUECAT_PUBLIC_API_KEY_ANDROID IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER IOS_ADMOB_BANNER_IDENTIFIER IOS_PROVISIONING_PROFILE_BASE64 IOS_WIDGET_PROVISIONING_PROFILE_BASE64 STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT DART_DEFINE_FROM_FILE_DEV DART_DEFINE_FROM_FILE_PROD ANDROID_RES_VALUES ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER ANDROID_ADMOB_BANNER_IDENTIFIER ANDROID_ADMOB_APP_IDENTIFIER ANDROID_KEYSTORE_PASSWORD ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD ANDROID_KEYSTORE_ALIAS IOS_P12_CERTIFICATE_BASE64 IOS_P12_PASSWORD ASC_API_KEY_ID ASC_API_KEY_ISSUER_ID ASC_API_KEY_P8_BASE64; do
@@ -316,7 +316,7 @@ jobs:
   android:
     needs: plan
     if: ${{ needs.plan.outputs.android != '[]' }}
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     timeout-minutes: 90
     strategy:
       fail-fast: false
