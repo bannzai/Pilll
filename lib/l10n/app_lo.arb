@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ກະລຸນາເລືອກວັນເລີ່ມພັກການກິນຢາເມັດ",
   "selectPauseEndDateAsResumeDate": "ມື້ສິ້ນສຸດ = ມື້ກັບມາກິນຢາ",
   "pauseResumeDateLimitIsToday": "ວັນເລີ່ມກິນຢາຄືນ: ບໍ່ເກີນມື້ນີ້",
-  "pauseResumeDateLimitBeforeNextPause": "ກັບມາກິນຢາກ່ອນຊ່ວງພັກຄັ້ງຕໍ່ໄປ {date}",
+  "pauseResumeDateLimitBeforeNextPause": "ກັບມາກິນຢາພາຍໃນ {date} (ພັກ)",
   "pauseStartDate": "ວັນເລີ່ມພັກການກິນຢາເມັດ",
   "pauseEndDate": "ວັນສິ້ນສຸດໄລຍະພັກການກິນຢາເມັດ",
   "endPillSheet": "ແຜງຢາຄຸມໝົດແລ້ວ",
