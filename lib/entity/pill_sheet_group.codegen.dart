@@ -701,7 +701,11 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       afterLastTakenDate = lastTakenDate.addDays(1);
     }
     // 服用再開予定日が今日より後の服用お休みは服用お休み中で、開始日の上限を服用再開予定日まで広げると服用お休み中の開始日を変更する時の上限も変わるため対象にしない
-    final lastFinishedRestDurationEndDate = restDurations.map((e) => e.endDate).nonNulls.where((e) => !e.date().isAfter(today())).maxOrNull;
+    final lastFinishedRestDurationEndDate = restDurations
+        .map((restDuration) => restDuration.endDate)
+        .nonNulls
+        .where((restDurationEndDate) => !restDurationEndDate.date().isAfter(today()))
+        .maxOrNull;
     if (lastFinishedRestDurationEndDate != null && lastFinishedRestDurationEndDate.date().isAfter(afterLastTakenDate.date())) {
       return lastFinishedRestDurationEndDate.date();
     }

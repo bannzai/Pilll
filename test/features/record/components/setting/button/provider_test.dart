@@ -425,6 +425,7 @@ void main() {
     });
 
     group("終了済みの服用お休みの後に服用記録を付けずに服用お休みを開始する場合", () {
+      /// 2026-10-13 開始で 10/25 まで服用済みの pillsheet_28_0 のピルシートを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
       PillSheet pillSheet({required bool isV2}) {
         final beginDate = DateTime.parse("2026-10-13");
         final lastTakenDate = DateTime.parse("2026-10-25");
@@ -462,6 +463,7 @@ void main() {
         );
       }
 
+      /// [pillSheet] を持つグループで今日 (2026-10-29) から服用お休みを開始し、保存されたピルシートグループを返す
       Future<PillSheetGroup> beginRestDurationAndCaptureGroup(
           {required PillSheet pillSheet}) async {
         final mockTodayRepository = MockTodayService();
@@ -1152,6 +1154,7 @@ void main() {
         createdDate: DateTime.parse("2026-10-29"),
       );
 
+      /// 2026-10-13 開始で 10/25 まで服用済みの、終了済みと服用お休み中の服用お休みを持つ pillsheet_28_0 のピルシートを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
       PillSheet pillSheet({required bool isV2}) {
         final beginDate = DateTime.parse("2026-10-13");
         final lastTakenDate = DateTime.parse("2026-10-25");
@@ -1181,6 +1184,7 @@ void main() {
         );
       }
 
+      /// 服用お休み中の開始日を終了済みの服用お休みと重なる日へ変更し、保存されずに AlertError になることを検証する
       Future<void> expectNotSavedWithError(
           {required PillSheet pillSheet}) async {
         final mockTodayRepository = MockTodayService();
@@ -1995,6 +1999,7 @@ void main() {
         createdDate: DateTime.parse("2026-10-29"),
       );
 
+      /// 2026-10-13 開始で 10/25 まで服用済みの、2 つの服用お休みを持つ pillsheet_28_0 のピルシートを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
       PillSheet pillSheet({required bool isV2}) {
         final beginDate = DateTime.parse("2026-10-13");
         final lastTakenDate = DateTime.parse("2026-10-25");

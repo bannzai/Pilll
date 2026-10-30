@@ -20613,6 +20613,7 @@ void main() {
   });
 
   group("#overlapsOtherRestDuration", () {
+    /// [restDurations] を持つ v1 のピルシート 1 枚だけのピルシートグループを返す
     PillSheetGroup pillSheetGroup({required List<RestDuration> restDurations}) {
       return PillSheetGroup(
         pillSheetIDs: ["sheet_id1"],
