@@ -50,9 +50,10 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn: "ピルの種類を選択"
 - waitForAnimationToEnd
 # モーダル内の最初のセル (21錠＋7日休薬) を座標タップ
-# ボトムシート内の Flutter テキストは Maestro が検出できないため座標指定
+# ボトムシート内の Flutter テキストは Maestro が検出できないため座標指定。
+# シートは画面の 70% の高さで開き (上端が画面の 30%)、iPhone 17 で最初のセルは縦 41%〜56% にある (issue #2020)
 - tapOn:
-    point: "25%,33%"
+    point: "25%,45%"
 - waitForAnimationToEnd
 # 「次へ」で Screen 2 へ
 - tapOn: "次へ"
