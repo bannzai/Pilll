@@ -22,6 +22,10 @@ import 'package:pilll/utils/local_notification.dart';
 /// 一方、服用お休み期間が 1 つも無い状態に戻したいケースは稀で、ピルシートの変更 (開始日の変更・削除) でも代替できる。
 /// ユーザーから問い合わせがあり、どうしても取り除きたい時は、この行の変更で開始日と終了日を同じ日にして
 /// 期間を 0 日にする操作を案内する (DateRangePicker は同じ日を開始日と終了日に選べる)。
+/// 案内できるのは、現在のピルシートグループにある終了日が決まった期間だけ。
+/// 服用お休み中 (終了日が無い) の期間は単一日付の DatePicker で開始日しか変えられず、
+/// 前回のピルシートグループの期間は同じ日の範囲を保存時のエラーにしている
+/// (restDurationRangeErrorMessageForBeforePillSheetGroup) ため、0 日にできない。
 /// 0 日にした時も後続のピルシートの開始日は同じ理由でずれるので、その点も合わせて伝える。
 class ChangeManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
