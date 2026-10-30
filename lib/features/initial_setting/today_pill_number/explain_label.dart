@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/formatted_pill_number_text_span.dart';
 
 class ExplainPillNumber extends HookConsumerWidget {
   final String today;
@@ -42,22 +43,21 @@ class ExplainPillNumber extends HookConsumerWidget {
                 color: TextColor.main,
               ),
             ),
-            Text(
-              '${todayPillNumber.pillNumberInPillSheet}',
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w500,
-                fontSize: 34,
-                color: TextColor.main,
-              ),
-            ),
-            Text(
-              L.number,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w400,
-                fontSize: 12,
-                color: TextColor.main,
+            Text.rich(
+              formattedPillNumberTextSpan(
+                pillNumber: '${todayPillNumber.pillNumberInPillSheet}',
+                numberStyle: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 34,
+                  color: TextColor.main,
+                ),
+                labelStyle: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: TextColor.main,
+                ),
               ),
             ),
           ];

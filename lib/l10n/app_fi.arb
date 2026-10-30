@@ -106,7 +106,9 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nro 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nro {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Valitse pilleritauon alkamispäivä",
-  "selectPausePeriod": "Valitse pilleritauon pituus",
+  "selectPauseEndDateAsResumeDate": "Päättymispäivä = jatka pillereitä",
+  "pauseResumeDateLimitIsToday": "Jatkamispäivä: viimeistään tänään",
+  "pauseResumeDateLimitBeforeNextPause": "Jatka viimeistään {date} (tauko)",
   "pauseStartDate": "Pilleritauon alkamispäivä",
   "pauseEndDate": "Pilleritauon päättymispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",
@@ -150,7 +152,7 @@
   "remainingDaysAllFeatures": "Voit käyttää kaikkia ominaisuuksia vielä {diff} päivää",
   "todayIsTaking": "💊 Tänään on pillerinottopäivä",
   "todayPillToTake": "💊 Tämän päivän pilleri",
-  "number": ". pilleri",
+  "formattedPillNumber": "{number}. pilleri",
   "dayNumber": ". päivä",
   "recordedMenstruationStartDate": "Kuukautisten alkamispäiväksi kirjattiin {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Kuukautisten alkamispäivä",
@@ -565,8 +567,6 @@
   "plannedResumeDateOptional": "Suunniteltu jatkamispäivä (valinnainen)",
   "plannedResumeDateNotSet": "Ei asetettu",
   "selectPlannedResumeDate": "Valitse suunniteltu jatkamispäivä",
-  "pauseEndDateLimitIsToday": "Päättymispäivä voi olla viimeistään tänään",
-  "pauseEndDateLimitBeforeNextPause": "Päättymispäivä voi olla päivä, joka ei osu seuraavan pilleritauon ({date} alkaen) ajalle",
   "pauseStartDateLimit": "Alkamispäivä voi olla viimeistään {date}",
   "initialSettingAskYazFlex": "Käytätkö Yaz Flex -pillereitä?",
   "initialSettingAskYazFlexDescription": "Jos valitset ”Kyllä”, sovellus näyttää, monesko päivä taukojakson päättymisestä on menossa",
@@ -582,5 +582,8 @@
   "yazFlexSkipRestDurationDialogSkip": "Ohita",
   "yazFlexBeginPillNumberPageTitle": "Monesko ottokerta jaksossa liuskan ensimmäinen pilleri on?",
   "yazFlexBeginPillNumberPageNote": "Vastaa sen mukaan, montako päivää on kulunut ennen liuskan aloittamista pidetyn taukojakson päättymisestä",
-  "yazFlexNextInputIsRestDuration": "Seuraavaksi voit lisätä edellisen taukojakson"
+  "yazFlexNextInputIsRestDuration": "Seuraavaksi voit lisätä edellisen taukojakson",
+  "deletePausePeriod": "Poista pilleritauko",
+  "deletePausePeriodConfirmMessage": "Tämä tauko pillereiden käytössä poistetaan merkinnöistäsi. Pilleriliuskan päivämäärät lasketaan uudelleen ikään kuin taukoa ei olisi ollut.",
+  "deletedPausePeriod": "Pilleritauko poistettiin"
 }

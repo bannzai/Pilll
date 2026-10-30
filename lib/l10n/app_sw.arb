@@ -106,7 +106,9 @@
   "oneToAfterDisplayNumberEndPillNumber": "Nambari 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nambari {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza mapumziko ya kumeza vidonge",
-  "selectPausePeriod": "Tafadhali chagua muda wa mapumziko ya kumeza vidonge",
+  "selectPauseEndDateAsResumeDate": "Tarehe ya mwisho = kumeza tena",
+  "pauseResumeDateLimitIsToday": "Siku ya kuanza kumeza tena: hadi leo",
+  "pauseResumeDateLimitBeforeNextPause": "Endelea kufikia {date} (mapumziko)",
   "pauseStartDate": "Tarehe ya kuanza mapumziko ya kumeza vidonge",
   "pauseEndDate": "Tarehe ya mwisho ya mapumziko ya kumeza vidonge",
   "endPillSheet": "Pakiti ya vidonge imeisha",
@@ -150,7 +152,7 @@
   "remainingDaysAllFeatures": "Unaweza kutumia vipengele vyote kwa siku {diff} zaidi",
   "todayIsTaking": "💊 Leo ni siku ya kumeza kidonge",
   "todayPillToTake": "💊 Kidonge cha leo",
-  "number": " (kidonge)",
+  "formattedPillNumber": "{number} (kidonge)",
   "dayNumber": " siku",
   "recordedMenstruationStartDate": "Mwanzo wa hedhi umerekodiwa kuanzia {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tarehe ya kuanza hedhi",
@@ -565,8 +567,6 @@
   "plannedResumeDateOptional": "Tarehe iliyopangwa ya kuanza tena kumeza vidonge (si lazima)",
   "plannedResumeDateNotSet": "Bado haijawekwa",
   "selectPlannedResumeDate": "Tafadhali chagua tarehe iliyopangwa ya kuanza tena kumeza kidonge",
-  "pauseEndDateLimitIsToday": "Tarehe ya mwisho inaweza kuwa leo au kabla ya leo",
-  "pauseEndDateLimitBeforeNextPause": "Hadi tarehe isiyoingiliana na mapumziko yanayofuata (kuanzia {date})",
   "pauseStartDateLimit": "Unaweza kuchagua tarehe ya kuanza hadi {date}",
   "initialSettingAskYazFlex": "Je, unameza kidonge cha Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Ukichagua “Ndiyo”, programu itaonyesha siku ngapi zimepita tangu mapumziko ya kumeza vidonge yalipoisha",
@@ -582,5 +582,8 @@
   "yazFlexSkipRestDurationDialogSkip": "Ruka",
   "yazFlexBeginPillNumberPageTitle": "Pakiti ya vidonge huanza siku ya ngapi ya mzunguko wa kumeza vidonge?",
   "yazFlexBeginPillNumberPageNote": "Tafadhali jibu kulingana na idadi ya siku zilizopita tangu mapumziko ya kabla ya kuanza pakiti ya vidonge yalipoisha",
-  "yazFlexNextInputIsRestDuration": "Kisha, tafadhali weka kipindi cha awali cha mapumziko ya kumeza vidonge"
+  "yazFlexNextInputIsRestDuration": "Kisha, tafadhali weka kipindi cha awali cha mapumziko ya kumeza vidonge",
+  "deletePausePeriod": "Tafadhali futa kipindi cha mapumziko ya kumeza vidonge",
+  "deletePausePeriodConfirmMessage": "Kipindi hiki cha kupumzika kumeza vidonge kitaondolewa kwenye kumbukumbu zako. Tarehe za pakiti ya vidonge zitahesabiwa upya kana kwamba hakukuwa na mapumziko.",
+  "deletedPausePeriod": "Kipindi cha mapumziko ya kumeza vidonge kimefutwa"
 }

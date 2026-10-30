@@ -41,6 +41,8 @@ enum PillSheetModifiedActionType {
   changedRestDurationBeginDate,
   @JsonValue('changedRestDuration')
   changedRestDuration,
+  @JsonValue('deletedRestDuration')
+  deletedRestDuration,
   @JsonValue('changedBeginDisplayNumber')
   changedBeginDisplayNumber,
   @JsonValue('changedEndDisplayNumber')
@@ -267,6 +269,25 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
         changedRestDurationValue: ChangedRestDurationValue(
           beforeRestDuration: beforeRestDuration,
           afterRestDuration: afterRestDuration,
+        ),
+      ),
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
+    );
+  }
+
+  /// 服用お休み期間を削除した履歴を作る
+  /// [restDuration] は削除した服用お休み期間で、[beforePillSheetGroup] / [afterPillSheetGroup] は削除前後のピルシートグループ
+  static PillSheetModifiedHistory createDeletedRestDurationAction({
+    required RestDuration restDuration,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
+  }) {
+    return _create(
+      actionType: PillSheetModifiedActionType.deletedRestDuration,
+      value: PillSheetModifiedHistoryValue(
+        deletedRestDurationValue: DeletedRestDurationValue(
+          restDuration: restDuration,
         ),
       ),
       beforePillSheetGroup: beforePillSheetGroup,

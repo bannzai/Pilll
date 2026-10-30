@@ -106,7 +106,9 @@
   "oneToAfterDisplayNumberEndPillNumber": "Αρ. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Αρ. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Επιλογή ημερομηνίας έναρξης της παύσης λήψης χαπιών",
-  "selectPausePeriod": "Επιλογή περιόδου παύσης λήψης χαπιών",
+  "selectPauseEndDateAsResumeDate": "Λήξη = επανέναρξη λήψης",
+  "pauseResumeDateLimitIsToday": "Επανέναρξη λήψης: έως σήμερα",
+  "pauseResumeDateLimitBeforeNextPause": "Επανέναρξη έως {date} (παύση)",
   "pauseStartDate": "Ημερομηνία έναρξης της παύσης λήψης χαπιών",
   "pauseEndDate": "Ημερομηνία λήξης της παύσης λήψης χαπιών",
   "endPillSheet": "Η καρτέλα χαπιών ολοκληρώθηκε",
@@ -150,7 +152,7 @@
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες για {diff} ακόμη ημέρες",
   "todayIsTaking": "💊 Σήμερα είναι ημέρα λήψης του χαπιού",
   "todayPillToTake": "💊 Το χάπι για σήμερα",
-  "number": " (χάπι)",
+  "formattedPillNumber": "{number} (χάπι)",
   "dayNumber": "η ημέρα",
   "recordedMenstruationStartDate": "Η έναρξη της περιόδου καταγράφηκε για τις {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",
@@ -565,8 +567,6 @@
   "plannedResumeDateOptional": "Προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού (προαιρετικό)",
   "plannedResumeDateNotSet": "Δεν έχει οριστεί",
   "selectPlannedResumeDate": "Επιλέξτε την προγραμματισμένη ημερομηνία επανέναρξης λήψης του χαπιού",
-  "pauseEndDateLimitIsToday": "Η ημερομηνία λήξης μπορεί να είναι το αργότερο σήμερα",
-  "pauseEndDateLimitBeforeNextPause": "Έως ημερομηνία που δεν συμπίπτει με την επόμενη παύση (από {date})",
   "pauseStartDateLimit": "Μπορείτε να επιλέξετε ημερομηνία έναρξης έως και {date}",
   "initialSettingAskYazFlex": "Παίρνετε Yaz Flex;",
   "initialSettingAskYazFlexDescription": "Αν επιλέξετε «Ναι», θα εμφανίζεται ποια ημέρα διανύετε μετά το διάλειμμα",
@@ -582,5 +582,8 @@
   "yazFlexSkipRestDurationDialogSkip": "Παράλειψη",
   "yazFlexBeginPillNumberPageTitle": "Σε ποια ημέρα του κύκλου λήψης αντιστοιχεί η αρχή της καρτέλας χαπιών;",
   "yazFlexBeginPillNumberPageNote": "Απαντήστε με βάση πόσες ημέρες έχουν περάσει από τότε που τελείωσε το διάλειμμα πριν ξεκινήσετε την καρτέλα",
-  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, θα καταχωρίσετε το προηγούμενο διάλειμμα από τα χάπια"
+  "yazFlexNextInputIsRestDuration": "Στη συνέχεια, θα καταχωρίσετε το προηγούμενο διάλειμμα από τα χάπια",
+  "deletePausePeriod": "Διαγραφή περιόδου διακοπής λήψης χαπιών",
+  "deletePausePeriodConfirmMessage": "Αυτό το διάστημα διακοπής της λήψης θα αφαιρεθεί από τις καταγραφές σας. Οι ημερομηνίες στην καρτέλα χαπιών θα υπολογιστούν ξανά σαν να μην υπήρξε διακοπή.",
+  "deletedPausePeriod": "Η περίοδος διακοπής λήψης των χαπιών διαγράφηκε"
 }

@@ -106,7 +106,9 @@
   "oneToAfterDisplayNumberEndPillNumber": "Blg. 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "Blg. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Piliin ninyo ang petsa ng simula ng pahinga sa pag-inom ng pildoras",
-  "selectPausePeriod": "Piliin ninyo ang tagal ng pahinga sa pag-inom ng pildoras",
+  "selectPauseEndDateAsResumeDate": "Wakas = balik sa pag-inom",
+  "pauseResumeDateLimitIsToday": "Balik-inom hanggang ngayon",
+  "pauseResumeDateLimitBeforeNextPause": "Ituloy sa {date} (pahinga)",
   "pauseStartDate": "Petsa ng simula ng pahinga sa pag-inom ng pildoras",
   "pauseEndDate": "Petsa ng pagtatapos ng pahinga sa pag-inom ng pildoras",
   "endPillSheet": "Naubos na ang pakete ng pildoras",
@@ -150,7 +152,7 @@
   "remainingDaysAllFeatures": "Magagamit ninyo ang lahat ng feature sa loob pa ng {diff} araw",
   "todayIsTaking": "💊 Ngayon ang araw ng pag-inom ng pildoras",
   "todayPillToTake": "💊 Pildoras para sa araw na ito",
-  "number": " (tableta)",
+  "formattedPillNumber": "{number} (tableta)",
   "dayNumber": " araw",
   "recordedMenstruationStartDate": "Naitala ang simula ng regla noong {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Petsa ng simula ng regla",
@@ -565,8 +567,6 @@
   "plannedResumeDateOptional": "Nakaplanong petsa ng muling pag-inom (opsyonal)",
   "plannedResumeDateNotSet": "Hindi pa nakatakda",
   "selectPlannedResumeDate": "Piliin ang nakaplanong petsa ng muling pag-inom",
-  "pauseEndDateLimitIsToday": "Ang petsa ng pagtatapos ay hanggang ngayong araw lamang",
-  "pauseEndDateLimitBeforeNextPause": "Hanggang sa petsang hindi sakop ng susunod na pahinga (mula {date})",
   "pauseStartDateLimit": "Ang petsa ng simula ay hanggang {date} lamang",
   "initialSettingAskYazFlex": "Yaz Flex po ba ang iniinom ninyong pildoras?",
   "initialSettingAskYazFlexDescription": "Kapag pinili ninyo ang “Oo”, ise-set ang display para ipakita kung ilang araw na ang lumipas mula nang matapos ang pahinga sa pag-inom ng pildoras",
@@ -582,5 +582,8 @@
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
   "yazFlexBeginPillNumberPageTitle": "Sa anong araw po ng siklo ng pag-inom ninyo ng pildoras nagsisimula ang pakete?",
   "yazFlexBeginPillNumberPageNote": "Pakisagot ayon sa bilang ng mga araw mula nang matapos ang pahinga bago ninyo sinimulan ang pakete ng pildoras",
-  "yazFlexNextInputIsRestDuration": "Susunod, ilalagay po ninyo ang nakaraang pahinga"
+  "yazFlexNextInputIsRestDuration": "Susunod, ilalagay po ninyo ang nakaraang pahinga",
+  "deletePausePeriod": "Burahin ang panahon ng paghinto sa pag-inom ng pildoras",
+  "deletePausePeriodConfirmMessage": "Aalisin sa inyong tala ang panahong ito ng paghinto sa pag-inom ng pildoras. Muling kakalkulahin ang mga petsa sa pakete ng pildoras na para bang walang naging paghinto.",
+  "deletedPausePeriod": "Na-delete na ang pahinga sa pag-inom ng pildoras"
 }

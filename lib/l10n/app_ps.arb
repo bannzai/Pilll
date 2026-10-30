@@ -106,7 +106,9 @@
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} شمېره",
   "beforeEndToAfterDisplayNumberEndPillNumber": "شمېره {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "د ګولیو د اخیستلو د وقفې د پیل نېټه وټاکئ",
-  "selectPausePeriod": "د ګولیو له اخیستو د وقفې موده وټاکئ",
+  "selectPauseEndDateAsResumeDate": "د پای نېټه = د ګولۍ بیا پیل",
+  "pauseResumeDateLimitIsToday": "د بیا اخیستلو ورځ: تر نن پورې",
+  "pauseResumeDateLimitBeforeNextPause": "د بلې وقفې تر {date} پورې بیا پیل کړئ",
   "pauseStartDate": "د ګولیو له اخیستو د وقفې د پیل نېټه",
   "pauseEndDate": "د ګولیو له اخیستو د وقفې د پای نېټه",
   "endPillSheet": "د ګولیو پاڼه پای ته ورسېده",
@@ -150,7 +152,7 @@
   "remainingDaysAllFeatures": "تاسو کولی شئ ټولې ځانګړنې د نورو {diff} ورځو لپاره وکاروئ",
   "todayIsTaking": "💊 نن د ګولۍ اخیستو ورځ ده",
   "todayPillToTake": "💊 د نن ورځې ګولۍ",
-  "number": "مه ګولۍ",
+  "formattedPillNumber": "{number}مه ګولۍ",
   "dayNumber": "مه ورځ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} د حیض د پیل نېټې په توګه ثبت شوه",
   "menstruationStartDate": "د حیض د پیل نېټه",
@@ -565,8 +567,6 @@
   "plannedResumeDateOptional": "د ګولۍ بیا اخیستلو پلان شوې نېټه (اختیاري)",
   "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د ګولۍ د بیا اخیستلو پلان شوې نېټه وټاکئ",
-  "pauseEndDateLimitIsToday": "د پای نېټه تر نن ورځې پورې ټاکلی شئ",
-  "pauseEndDateLimitBeforeNextPause": "تر هغې نېټې پورې چې له راتلونکې وقفې (له {date} څخه) سره نه ګډېږي",
   "pauseStartDateLimit": "تاسو د پیل نېټه تر {date} پورې ټاکلی شئ",
   "initialSettingAskYazFlex": "ایا تاسو Yaz Flex ګولۍ اخلئ؟",
   "initialSettingAskYazFlexDescription": "که «هو» وټاکئ، له وقف پای ته رسېدو وروسته د تېر شوو ورځو شمېر به ښودل کېږي",
@@ -582,5 +582,8 @@
   "yazFlexSkipRestDurationDialogSkip": "پرېږدئ",
   "yazFlexBeginPillNumberPageTitle": "د ګولیو پاڼه د ګولیو د اخیستلو د دورې په څویمه ورځ پیلېږي؟",
   "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د ګولیو د پاڼې له پیل مخکې د وقف له پای ته رسېدو راهیسې د تېرو ورځو د شمېر پر بنسټ ځواب ورکړئ",
-  "yazFlexNextInputIsRestDuration": "په راتلونکې پاڼه کې به پخوانی وقف ولیکئ"
+  "yazFlexNextInputIsRestDuration": "په راتلونکې پاڼه کې به پخوانی وقف ولیکئ",
+  "deletePausePeriod": "د ګولیو د اخیستلو د وقفې موده ړنګه کړئ",
+  "deletePausePeriodConfirmMessage": "د ګولیو د اخیستلو دا دمه به له ثبتونو لرې شي. د ګولیو پاڼ نېټې به داسې بیا محاسبه شي لکه دمه چې نه وي شوې.",
+  "deletedPausePeriod": "د ګولیو د اخیستلو دمه حذف شوه"
 }

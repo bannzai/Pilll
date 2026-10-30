@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_autoplay.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_device.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_locale.dart';
@@ -54,9 +55,11 @@ final ValueNotifier<Locale> catalogLocale = ValueNotifier<Locale>(Locale(allScre
 /// 無人操作（[runScreenshotAutoplayIfRequested]）が全画面プレビューを push するための Navigator。
 final GlobalKey<NavigatorState> catalogNavigatorKey = GlobalKey<NavigatorState>();
 
-/// グローバル [L] とカタログのロケールを [lang] へ切り替える。言語一覧のタップと無人操作が共用する。
+/// グローバル [L]・[Intl.defaultLocale] (DateTimeFormatter の日付書式の言語) とカタログのロケールを [lang] へ切り替える。
+/// 言語一覧のタップと無人操作が共用する。
 void applyCatalogLanguage(String lang) {
   L = lookupAppLocalizations(Locale(lang));
+  Intl.defaultLocale = lang;
   catalogLocale.value = Locale(lang);
 }
 

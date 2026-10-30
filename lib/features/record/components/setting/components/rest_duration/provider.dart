@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -215,21 +216,6 @@ class ChangeRestDuration {
     return [...restDurations]..sort((a, b) => a.beginDate.compareTo(b.beginDate));
   }
 
-  /// 服用お休み期間の変更で終了予定日が前倒しになった時に、lastTakenDateが終了予定日より後に残らないよう補正したピルシートを返す。
-  /// 補正しないと PillSheet.pillNumberFor が錠数を超えるピル番号を返す。
-  /// 補正の条件に当てはまらないピルシートはそのまま返す。補正済みのピルシートに再度適用しても結果は変わらない(冪等)。
-  PillSheet _clampLastTakenDate({required PillSheet pillSheet}) {
-    return switch (pillSheet) {
-      PillSheetV1(:final lastTakenDate?) when lastTakenDate.date().isAfter(pillSheet.estimatedEndTakenDate.date()) => pillSheet.copyWith(
-          lastTakenDate: pillSheet.estimatedEndTakenDate.date(),
-        ),
-      PillSheetV1() => pillSheet,
-      // v2のピル番号は日付から逆算せずpillsのindexから決まるため、lastTakenDateが終了予定日より後でも錠数を超えない。
-      // pillTakensは実際の服用記録なので変更しない
-      PillSheetV2() => pillSheet,
-    };
-  }
-
   Future<void> call({
     required RestDuration fromRestDuration,
     required RestDuration toRestDuration,
@@ -371,5 +357,101 @@ class ChangeRestDuration {
     }
 
     await batch.commit();
+  }
+}
+
+/// 服用お休み期間の変更・削除で終了予定日が前倒しになった時に、lastTakenDateが終了予定日より後に残らないよう補正したピルシートを返す。
+/// 補正しないと PillSheet.pillNumberFor が錠数を超えるピル番号を返す。
+/// 補正の条件に当てはまらないピルシートはそのまま返す。補正済みのピルシートに再度適用しても結果は変わらない(冪等)。
+PillSheet _clampLastTakenDate({required PillSheet pillSheet}) {
+  return switch (pillSheet) {
+    PillSheetV1(:final lastTakenDate?) when lastTakenDate.date().isAfter(pillSheet.estimatedEndTakenDate.date()) => pillSheet.copyWith(
+        lastTakenDate: pillSheet.estimatedEndTakenDate.date(),
+      ),
+    PillSheetV1() => pillSheet,
+    // v2のピル番号は日付から逆算せずpillsのindexから決まるため、lastTakenDateが終了予定日より後でも錠数を超えない。
+    // pillTakensは実際の服用記録なので変更しない
+    PillSheetV2() => pillSheet,
+  };
+}
+
+/// 服用お休み期間を削除する [DeleteRestDuration] を提供する
+final deleteRestDurationProvider = Provider.autoDispose(
+  (ref) => DeleteRestDuration(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(
+      batchSetPillSheetModifiedHistoryProvider,
+    ),
+  ),
+);
+
+/// 記録済みの服用お休み期間 (継続中・終了済みのどちらも) を削除する
+/// 誤って開始した服用お休みなど、服用お休みがなかったものとしてピルシートの日付を計算し直したい時に使う
+class DeleteRestDuration {
+  /// ピルシートグループと履歴を 1 つの batch で書き込むための batch を作る
+  final BatchFactory batchFactory;
+
+  /// 削除後のピルシートグループを batch に積む
+  final BatchSetPillSheetGroup batchSetPillSheetGroup;
+
+  /// 削除の履歴を batch に積む
+  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
+
+  DeleteRestDuration({
+    required this.batchFactory,
+    required this.batchSetPillSheetGroup,
+    required this.batchSetPillSheetModifiedHistory,
+  });
+
+  /// [pillSheetGroup] から [restDuration] を取り除いて保存し、削除後のピルシートグループを返す
+  /// 後続のピルシートの開始日は ChangeRestDuration と同じルールで再計算する。削除で開始日は前にずれるだけなので、ChangeRestDuration のように後続のピルシートの服用記録はクリアしない
+  /// [restDuration] がどのピルシートにも含まれない時は AssertionError を投げる
+  Future<PillSheetGroup> call({
+    required RestDuration restDuration,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final targetPillSheet = pillSheetGroup.pillSheets.firstWhereOrNull((e) => e.restDurations.contains(restDuration));
+    if (targetPillSheet == null) {
+      throw AssertionError('restDuration is not found in pillSheetGroup');
+    }
+
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      // PillSheet.id は nullable のため、null 同士の比較で全シートが対象扱いにならないように groupIndex で対象シートを判定する
+      if (pillSheet.groupIndex < targetPillSheet.groupIndex) {
+        updatedPillSheets.add(pillSheet);
+      } else if (pillSheet.groupIndex == targetPillSheet.groupIndex) {
+        updatedPillSheets.add(
+          _clampLastTakenDate(
+            pillSheet: pillSheet.copyWith(restDurations: [...pillSheet.restDurations]..remove(restDuration)),
+          ),
+        );
+      } else {
+        // このループ内で更新した前のピルシートの終了予定日から算出するので updatedPillSheets から取得する
+        updatedPillSheets.add(
+          _clampLastTakenDate(
+            pillSheet: pillSheet.copyWith(
+              beginDate: updatedPillSheets[pillSheet.groupIndex - 1].estimatedEndTakenDateWithPlannedResume.date().addDays(1),
+            ),
+          ),
+        );
+      }
+    }
+
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final batch = batchFactory.batch();
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    batchSetPillSheetModifiedHistory(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory.createDeletedRestDurationAction(
+        restDuration: restDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      ),
+    );
+    await batch.commit();
+
+    return updatedPillSheetGroup;
   }
 }

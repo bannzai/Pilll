@@ -247,4 +247,12 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
 
     return '${f(before.beginDate)}\n↓\n${f(after.beginDate)}';
   }
+
+  /// 削除した服用お休み期間を「開始日~終了日」の形式で返す。継続中だった期間は終了日が無いので「開始日~」になる
+  static String deletedRestDuration(DeletedRestDurationValue value) {
+    final restDuration = value.restDuration;
+    final endDate = restDuration.endDate;
+
+    return '${DateTimeFormatter.slashMonthAndDay(restDuration.beginDate)}~${endDate != null ? DateTimeFormatter.slashMonthAndDay(endDate) : ''}';
+  }
 }
