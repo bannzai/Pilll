@@ -18581,7 +18581,7 @@ void main() {
     });
 
     group("服用お休み期間がある場合", () {
-      test("服用お休み期間中でも、まだ全錠服用完了していなければlastTakenDateの翌日を返す", () {
+      test("終了済みの服用お休み期間の後に服用記録が無ければ、lastTakenDateの翌日ではなく服用お休み期間の終了日を返す", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(
@@ -18627,6 +18627,120 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id1", "sheet_id2"],
           pillSheets: [pillSheet1, pillSheet2],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // lastTakenDateの翌日(9/15)から始めると、9/15〜9/17の服用お休み期間と重なる
+        expect(
+          pillSheetGroup.availableRestDurationBeginDate,
+          DateTime.parse("2020-09-17"),
+        );
+      });
+
+      test("服用お休み期間の後に服用記録があれば、lastTakenDateの翌日を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-20"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final lastTakenDate = DateTime.parse("2020-09-18");
+        final pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          groupIndex: 0,
+          beginDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: lastTakenDate,
+          createdAt: now(),
+          typeInfo: sheetType.typeInfo,
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-15"),
+              createdDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        expect(
+          pillSheetGroup.availableRestDurationBeginDate,
+          lastTakenDate.addDays(1),
+        );
+      });
+
+      test("服用お休み期間の終了日とlastTakenDateの翌日が同じ日なら、その日を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-20"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          groupIndex: 0,
+          beginDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-16"),
+          createdAt: now(),
+          typeInfo: sheetType.typeInfo,
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-15"),
+              createdDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        expect(
+          pillSheetGroup.availableRestDurationBeginDate,
+          DateTime.parse("2020-09-17"),
+        );
+      });
+
+      test("服用再開予定日が今日より後の服用お休み期間 (服用お休み中) は終了日を返さず、lastTakenDateの翌日を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-16"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final lastTakenDate = DateTime.parse("2020-09-14");
+        final pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          groupIndex: 0,
+          beginDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: lastTakenDate,
+          createdAt: now(),
+          typeInfo: sheetType.typeInfo,
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-15"),
+              createdDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-20"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id1"],
+          pillSheets: [pillSheet],
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
@@ -20495,6 +20609,100 @@ void main() {
           isFalse,
         );
       });
+    });
+  });
+
+  group("#overlapsOtherRestDuration", () {
+    PillSheetGroup pillSheetGroup({required List<RestDuration> restDurations}) {
+      return PillSheetGroup(
+        pillSheetIDs: ["sheet_id1"],
+        pillSheets: [
+          PillSheet.v1(
+            id: "sheet_id1",
+            groupIndex: 0,
+            beginDate: DateTime.parse("2026-10-13"),
+            lastTakenDate: DateTime.parse("2026-10-25"),
+            createdAt: DateTime.parse("2026-10-13"),
+            typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+            restDurations: restDurations,
+          ),
+        ],
+        createdAt: DateTime.parse("2026-10-13"),
+      );
+    }
+
+    final finishedRestDuration = RestDuration(
+      id: "finished_rest_duration_id",
+      beginDate: DateTime.parse("2026-10-26"),
+      endDate: DateTime.parse("2026-10-29"),
+      createdDate: DateTime.parse("2026-10-26"),
+    );
+
+    test("終了日の無い期間が、終了済みの服用お休み期間の終了日より前に始まると重なる", () {
+      expect(
+        pillSheetGroup(restDurations: [finishedRestDuration]).overlapsOtherRestDuration(
+          beginDate: DateTime.parse("2026-10-28"),
+          endDate: null,
+          excludingRestDuration: null,
+        ),
+        isTrue,
+      );
+    });
+
+    test("終了日の無い期間が、終了済みの服用お休み期間の終了日と同じ日に始まると重ならない", () {
+      expect(
+        pillSheetGroup(restDurations: [finishedRestDuration]).overlapsOtherRestDuration(
+          beginDate: DateTime.parse("2026-10-29"),
+          endDate: null,
+          excludingRestDuration: null,
+        ),
+        isFalse,
+      );
+    });
+
+    test("終了日の無い服用お休み期間より前に始まり、その開始日と同じ日に終わる期間は重ならない", () {
+      final activeRestDuration = RestDuration(
+        id: "active_rest_duration_id",
+        beginDate: DateTime.parse("2026-10-29"),
+        endDate: null,
+        createdDate: DateTime.parse("2026-10-29"),
+      );
+      expect(
+        pillSheetGroup(restDurations: [activeRestDuration]).overlapsOtherRestDuration(
+          beginDate: DateTime.parse("2026-10-26"),
+          endDate: DateTime.parse("2026-10-29"),
+          excludingRestDuration: null,
+        ),
+        isFalse,
+      );
+    });
+
+    test("変更対象として除外した服用お休み期間とは重ならない", () {
+      expect(
+        pillSheetGroup(restDurations: [finishedRestDuration]).overlapsOtherRestDuration(
+          beginDate: DateTime.parse("2026-10-26"),
+          endDate: DateTime.parse("2026-10-30"),
+          excludingRestDuration: finishedRestDuration,
+        ),
+        isFalse,
+      );
+    });
+
+    test("開始日と終了日が同じ日 (0日) の服用お休み期間とは重ならない", () {
+      final zeroDayRestDuration = RestDuration(
+        id: "zero_day_rest_duration_id",
+        beginDate: DateTime.parse("2026-10-27"),
+        endDate: DateTime.parse("2026-10-27"),
+        createdDate: DateTime.parse("2026-10-27"),
+      );
+      expect(
+        pillSheetGroup(restDurations: [zeroDayRestDuration]).overlapsOtherRestDuration(
+          beginDate: DateTime.parse("2026-10-26"),
+          endDate: null,
+          excludingRestDuration: null,
+        ),
+        isFalse,
+      );
     });
   });
 }
