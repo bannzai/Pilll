@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Nincs beállítva",
   "selectPlannedResumeDate": "Válaszd ki, mikor kezded újra szedni a tablettát",
   "pauseEndDateLimitIsToday": "Befejező napnak legkésőbb a mai nap választható",
-  "pauseEndDateLimitBeforeNextPause": "A következő tablettaszedési szünettel ({date}-tól) nem átfedő napig",
+  "pauseEndDateLimitBeforeNextPause": "A következő tablettaszedés-szüneteltetéssel ({date}-tól) nem átfedő napig",
   "pauseStartDateLimit": "Kezdőnapnak legkésőbb {date} választható",
   "initialSettingAskYazFlex": "Yaz Flex-et szedsz?",
   "initialSettingAskYazFlexDescription": "Az „Igen” választásával beállítjuk, hogy az alkalmazás azt mutassa, hány nap telt el a szünet vége óta",
