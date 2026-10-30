@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -36,60 +37,68 @@ void main() {
     for (final screenWidth in [375.0, 402.0]) {
       // 語を空白で区切る言語。ja・zh・ko は San Francisco に字形が無く実機の幅を再現できないため対象にしない
       for (final lang in ['en', 'de', 'es', 'fr', 'pt']) {
-        testWidgets('$lang・幅 ${screenWidth}pt で全カードの文字が語の途中で折り返さない',
-            (tester) async {
-          final originalL = L;
-          addTearDown(() => L = originalL);
-          L = lookupAppLocalizations(Locale(lang));
-          tester.view.physicalSize = Size(screenWidth, 1200);
-          tester.view.devicePixelRatio = 1;
-          addTearDown(tester.view.reset);
+        // 選択中のカードは枠線が 2 になり文字を置ける幅が狭まる。de の最長の語「Wirkstofftabletten」を持つ pillsheet_28_0 と「Einnahmepause」を持つ pillsheet_21 を選択中にした状態も確かめる
+        for (final selectedFirstPillSheetType in [
+          null,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_21,
+        ]) {
+          testWidgets(
+              '$lang・幅 ${screenWidth}pt・選択中 $selectedFirstPillSheetType で全カードの文字が語の途中で折り返さない',
+              (tester) async {
+            final originalL = L;
+            addTearDown(() => L = originalL);
+            L = lookupAppLocalizations(Locale(lang));
+            tester.view.physicalSize = Size(screenWidth, 1200);
+            tester.view.devicePixelRatio = 1;
+            addTearDown(tester.view.reset);
 
-          await tester.pumpWidget(
-            MaterialApp(
-              home: Scaffold(
-                body: ListView(
-                  children: [
-                    PillSheetTypeSelectBodyTemplate(
-                      selectedFirstPillSheetType: null,
-                      onSelect: (_) {},
-                    ),
-                  ],
+            await tester.pumpWidget(
+              MaterialApp(
+                home: Scaffold(
+                  body: ListView(
+                    children: [
+                      PillSheetTypeSelectBodyTemplate(
+                        selectedFirstPillSheetType: selectedFirstPillSheetType,
+                        onSelect: (_) {},
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          );
-          await tester.pump();
+            );
+            await tester.pump();
 
-          final paragraphs = tester
-              .renderObjectList<RenderParagraph>(find.descendant(
-                of: find.byType(PillSheetTypeColumn),
-                matching: find.byType(RichText),
-              ))
-              .toList();
-          expect(paragraphs, isNotEmpty);
-          for (final paragraph in paragraphs) {
-            final text = paragraph.text.toPlainText();
-            var offset = 0;
-            while (offset < text.length) {
-              final word =
-                  paragraph.getWordBoundary(TextPosition(offset: offset));
-              // 1 語が 2 行以上にまたがると、選択範囲の矩形が行ごとに分かれて 2 つ以上になる
-              expect(
-                paragraph
-                    .getBoxesForSelection(TextSelection(
-                        baseOffset: word.start, extentOffset: word.end))
-                    .map((box) => box.top)
-                    .toSet(),
-                hasLength(lessThanOrEqualTo(1)),
-                reason:
-                    '$lang: 「$text」の「${text.substring(word.start, word.end)}」',
-              );
-              offset = word.end > offset ? word.end : offset + 1;
+            final paragraphs = tester
+                .renderObjectList<RenderParagraph>(find.descendant(
+                  of: find.byType(PillSheetTypeColumn),
+                  matching: find.byType(RichText),
+                ))
+                .toList();
+            expect(paragraphs, isNotEmpty);
+            for (final paragraph in paragraphs) {
+              final text = paragraph.text.toPlainText();
+              var offset = 0;
+              while (offset < text.length) {
+                final word =
+                    paragraph.getWordBoundary(TextPosition(offset: offset));
+                // 1 語が 2 行以上にまたがると、選択範囲の矩形が行ごとに分かれて 2 つ以上になる
+                expect(
+                  paragraph
+                      .getBoxesForSelection(TextSelection(
+                          baseOffset: word.start, extentOffset: word.end))
+                      .map((box) => box.top)
+                      .toSet(),
+                  hasLength(lessThanOrEqualTo(1)),
+                  reason:
+                      '$lang: 「$text」の「${text.substring(word.start, word.end)}」',
+                );
+                offset = word.end > offset ? word.end : offset + 1;
+              }
             }
-          }
-          expect(tester.takeException(), isNull);
-        }, skip: !_sanFranciscoFontFile.existsSync());
+            expect(tester.takeException(), isNull);
+          }, skip: !_sanFranciscoFontFile.existsSync());
+        }
       }
     }
   });
