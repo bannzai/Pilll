@@ -5,8 +5,10 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/record/components/pill_sheet/components/rest_duration_explain_image.dart';
 import 'package:pilll/utils/analytics.dart';
 
 /// 服用おやすみ (無料機能) の説明と「実際に試す」導線を持つヘルプページ。
@@ -32,10 +34,13 @@ class RestDurationHelpPage extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Center(
-              child: SvgPicture.asset(
-                'images/explain_rest_duration_date.svg',
+              // SvgPicture.asset に width・height の 80 を渡していた時と同じく、図の縦横比のまま 80x80 に収める
+              child: const SizedBox(
                 width: 80,
                 height: 80,
+                child: FittedBox(
+                  child: RestDurationExplainImage(appearanceMode: PillSheetAppearanceMode.date),
+                ),
               ),
             ),
             const SizedBox(height: 32),

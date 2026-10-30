@@ -494,19 +494,19 @@
   },
   "selectPauseStartDate": "服用お休み開始日選択",
   "@selectPauseStartDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。\n[翻訳の決定 en] 「Select pill break start date」ではなく「Select pause start date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "selectPausePeriod": "服用お休み期間を選択",
   "@selectPausePeriod": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。\n[翻訳の決定 en] 「Select pill break period」ではなく「Select pause period」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseStartDate": "服用お休み開始日",
   "@pauseStartDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。\n[翻訳の決定 en] 「Pill break start date」ではなく「Pause start date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseEndDate": "服用お休み終了日",
   "@pauseEndDate": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。\n[翻訳の決定 en] 「Pill break end date」ではなく「Pause end date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "endPillSheet": "ピルシート終了",
   "@endPillSheet": {
@@ -526,11 +526,11 @@
   },
   "pauseTakingDoesNotAdvancePillNumber": "服用をお休みするとピル番号は進みません",
   "@pauseTakingDoesNotAdvancePillNumber": {
-    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
+    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。\n[翻訳の決定 en] 「Pill numbers don't advance during a pill break」ではなく「Pill numbers don't advance while your pills are paused」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 zh] 「暂停服药期间，药片编号不会往后顺延」ではなく「暂停服药期间，药片编号不会增加」: 「顺延」は「後ろにずらす・延期する」の意味で、原文の「ピル番号は進まない」と逆の意味に読まれうるため (https://github.com/bannzai/Pilll/issues/2007)"
   },
   "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
   "@pauseTakingFromNumber": {
-    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。\n{number} には withNumber の結果 (接頭辞付きの『1番』『Pill 1』『N.º 1』等) か、日付表示モードでは月日の文字列 (例: 10/30) が入るため、訳文に番号の接頭辞・接尾辞 (number・No.・№・번・号 等) や序数の接尾辞を書かず、{number} をそのまま埋め込む。\n[翻訳の決定 en] 「Start a pill break from pill {number}?」ではなく「Start a pill break from {number}?」: {number} に withNumber の「Pill 1」が入り「pill Pill 1」と重なるため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 es] 「¿Quieres hacer una pausa en la toma a partir de la píldora n.º {number}?」ではなく「¿Quieres hacer una pausa en la toma a partir de la píldora {number}?」: {number} に withNumber の「N.º 1」が入り「n.º N.º 1」と重なるため (https://github.com/bannzai/Pilll/issues/2003)\n[翻訳の決定 fr] 「Souhaitez-vous faire une pause dans la prise de la pilule à partir de la pilule n° {number} ?」ではなく「Souhaitez-vous faire une pause dans la prise à partir de la pilule {number} ?」: {number} に withNumber の「N° 1」が入り「n° N° 1」と重なるため。「pilule」の繰り返しも外した (https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 ko] 「{number}번 알약부터 잠시 복용을 쉬시겠어요?」ではなく「{number} 알약부터 잠시 복용을 쉬시겠어요?」: {number} に withNumber の「1번」が入り「1번번」と重なるため (https://github.com/bannzai/Pilll/issues/2005)\n[翻訳の決定 pt] 「Que tal fazer uma pausa da pílula a partir do nº {number}?」ではなく「Deseja pausar a pílula a partir da pílula {number}?」: {number} に withNumber の「Nº 1」が入り「nº Nº 1」と重なるため。「Que tal…?」は提案の言い方で確認ダイアログに合わない (https://github.com/bannzai/Pilll/issues/2006)\n[翻訳の決定 zh] 「要从 {number} 号开始暂停服药吗？」ではなく「要从{number}开始暂停服药吗？」: {number} に withNumber の「1号」が入り「1号 号」と重なるため (https://github.com/bannzai/Pilll/issues/2007)",
+    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。\n{number} には withNumber の結果 (接頭辞付きの『1番』『Pill 1』『N.º 1』等) か、日付表示モードでは月日の文字列 (例: 10/30) が入るため、訳文に番号の接頭辞・接尾辞 (number・No.・№・번・号 等) や序数の接尾辞を書かず、{number} をそのまま埋め込む。\n[翻訳の決定 en] 「Start a pill break from pill {number}?」ではなく「Start a pill break from {number}?」: {number} に withNumber の「Pill 1」が入り「pill Pill 1」と重なるため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 es] 「¿Quieres hacer una pausa en la toma a partir de la píldora n.º {number}?」ではなく「¿Quieres hacer una pausa en la toma a partir de la píldora {number}?」: {number} に withNumber の「N.º 1」が入り「n.º N.º 1」と重なるため (https://github.com/bannzai/Pilll/issues/2003)\n[翻訳の決定 fr] 「Souhaitez-vous faire une pause dans la prise de la pilule à partir de la pilule n° {number} ?」ではなく「Souhaitez-vous faire une pause dans la prise à partir de la pilule {number} ?」: {number} に withNumber の「N° 1」が入り「n° N° 1」と重なるため。「pilule」の繰り返しも外した (https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 ko] 「{number}번 알약부터 잠시 복용을 쉬시겠어요?」ではなく「{number} 알약부터 잠시 복용을 쉬시겠어요?」: {number} に withNumber の「1번」が入り「1번번」と重なるため (https://github.com/bannzai/Pilll/issues/2005)\n[翻訳の決定 pt] 「Que tal fazer uma pausa da pílula a partir do nº {number}?」ではなく「Deseja pausar a pílula a partir da pílula {number}?」: {number} に withNumber の「Nº 1」が入り「nº Nº 1」と重なるため。「Que tal…?」は提案の言い方で確認ダイアログに合わない (https://github.com/bannzai/Pilll/issues/2006)\n[翻訳の決定 zh] 「要从 {number} 号开始暂停服药吗？」ではなく「要从{number}开始暂停服药吗？」: {number} に withNumber の「1号」が入り「1号 号」と重なるため (https://github.com/bannzai/Pilll/issues/2007)\n[翻訳の決定 de] 「Möchtest du ab Pille {number} eine Einnahmepause machen?」ではなく「Möchtest du ab Pille {number} eine Pillenpause machen?」: Einnahmepause は固定訳語で「休薬」に割り当てた語で、同じダイアログの本文・ボタン・メニューの「Pillenpause」と揃える (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 en] 「Start a pill break from {number}?」ではなく「Pause your pills starting with {number}?」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた。{number} には withNumber の「Pill 1」が入る (https://github.com/bannzai/Pilll/issues/2002)",
     "placeholders": {
       "number": {
         "type": "String"
@@ -581,15 +581,15 @@
   },
   "pauseTaking": "服用お休み",
   "@pauseTaking": {
-    "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
+    "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。\n[翻訳の決定 en] 「Pill break」ではなく「Pill pause」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "changePauseStartDate": "服用お休み開始日変更",
   "@changePauseStartDate": {
-    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
+    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。\n[翻訳の決定 en] 「Change pill break start date」ではなく「Change pause start date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseTakingPeriodEnded": "服用のお休み期間が終了しました",
   "@pauseTakingPeriodEnded": {
-    "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
+    "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。\n[翻訳の決定 en] 「Your pill break has ended」ではなく「Your pill pause has ended」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "@endValue": {
@@ -671,7 +671,7 @@
   },
   "pauseTakingDay": "🌙 服用お休み {day}日目",
   "@pauseTakingDay": {
-    "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
+    "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。\n[翻訳の決定 en] 「🌙 Pill break: day {day}」ではなく「🌙 Pill pause: day {day}」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)",
     "placeholders": {
       "day": {
         "type": "int"
@@ -1902,11 +1902,19 @@
   },
   "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
   "@exampleRestDurationDate": {
-    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。\n[翻訳の決定 de] 「Zum Beispiel, wenn du ab dem 12.1. für 3 Tage eine Einnahmepause machst」ではなく「Zum Beispiel, wenn du ab dem 12.1. für 3 Tage eine Pillenpause machst」: 同じダイアログ (日付表示モード) の例示文で、Einnahmepause は「休薬」の固定訳語のため、「服用お休み」の訳語 Pillenpause に揃える (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 en] 「For example, if you take a 3-day pill break starting 1/12」ではなく「For example, if you pause for 3 days starting 1/12」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 zh] 「例如，从 1/12 起停药 3 天」ではなく「例如，从 1/12 起暂停服药 3 天」: 同じダイアログ (日付表示モード) の例示文で、「停药」は「休薬」の固定訳語のため、「服用お休み」の訳語「暂停服药」に揃える (https://github.com/bannzai/Pilll/issues/2007)"
   },
   "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
   "@exampleRestDurationNumber": {
-    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
+    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。\n[翻訳の決定 en] 「For example, if you take a 3-day pill break starting with pill 18」ではなく「For example, if you pause for 3 days starting with pill 18」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
+  },
+  "exampleRestDurationNumberBalloon": "服用お休み期間\n3日間",
+  "@exampleRestDurationNumberBalloon": {
+    "description": "服用お休みダイアログの説明図 (ピル番号の表示の時) の吹き出しの文言。exampleRestDurationNumber の例 (18番から3日間) の服用お休みの期間を示す。吹き出しは幅約 96px・2 行で、収まらない時は縮小して表示するため、1 行目に「服用お休み期間」、2 行目に日数を短く書く。「服用お休み」はユーザーが任意で服用を中断する機能で、「休薬」とは別の概念のため、休薬の固定訳語を使わない。"
+  },
+  "exampleRestDurationDateBalloon": "服用お休み期間\n1/12〜14",
+  "@exampleRestDurationDateBalloon": {
+    "description": "服用お休みダイアログの説明図 (日付の表示の時) の吹き出しの文言。exampleRestDurationDate の例 (1/12から3日間) の服用お休みの期間を示し、2 行目は 1 月 12 日から 1 月 14 日までの日付の範囲。吹き出しは幅約 96px・2 行で、収まらない時は縮小して表示するため、1 行目に「服用お休み期間」、2 行目にその言語の短い日付の書き方で範囲を書く。「服用お休み」はユーザーが任意で服用を中断する機能で、「休薬」とは別の概念のため、休薬の固定訳語を使わない。"
   },
   "withNumber": "{number}番",
   "@withNumber": {
@@ -2069,19 +2077,19 @@
   },
   "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
   "@seeHowToUsePauseTakingFeature": {
-    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。\n[翻訳の決定 en] 「See how to use the pill break feature」ではなく「See how to use the pill pause feature」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "startPauseTakingLabel": "服用お休み開始",
   "@startPauseTakingLabel": {
-    "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。\n[翻訳の決定 en] 「Start pill break」ではなく「Start pause」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseTakingChanged": "服用お休みを変更しました",
   "@pauseTakingChanged": {
-    "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
+    "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。\n[翻訳の決定 en] 「Your pill break has been changed」ではなく「Your pill pause has been changed」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "editPausePeriod": "服用お休み期間を編集",
   "@editPausePeriod": {
-    "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
+    "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。\n[翻訳の決定 en] 「Edit pill break dates」ではなく「Edit pause dates」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "changePillDays": "服用日数を変更",
   "@changePillDays": {
@@ -2105,11 +2113,11 @@
   },
   "changePausePeriod": "服用お休み期間変更",
   "@changePausePeriod": {
-    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。\n[翻訳の決定 en] 「Change pill break dates」ではなく「Change pause dates」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "changedPausePeriod": "服用お休み期間を変更しました",
   "@changedPausePeriod": {
-    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。\n[翻訳の決定 en] 「Pill break dates changed」ではなく「Pause dates changed」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "changedToDate": "{date}に変更しました",
   "@changedToDate": {
@@ -2134,11 +2142,11 @@
   },
   "startPauseTaking": "服用をお休みする",
   "@startPauseTaking": {
-    "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
+    "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。\n[翻訳の決定 en] 「Start pill break」ではなく「Pause pills」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 fr] 「Commencer la pause dans la prise de la pilule」ではなく「Faire une pause」: ボタンの短い文言として冗長で、原文「服用をお休みする」に対して長すぎる。メニュー項目と同じキーのため両方で通用する短い表現にした (https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 ko] 「복용 휴식 시작하기」ではなく「복용 잠시 쉬기」: 同じダイアログの「복용을 잠시 쉬다」と訳語を揃える。原文に無い「시작하기」を外した (https://github.com/bannzai/Pilll/issues/2005)"
   },
   "startedPauseTaking": "服用お休みを開始しました",
   "@startedPauseTaking": {
-    "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
+    "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。\n[翻訳の決定 en] 「Your pill break has started」ではなく「Your pill pause has started」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
   "@sequentialLastTakenPlusOnePillNumber": {
@@ -2171,15 +2179,15 @@
   },
   "duringPauseTaking": "服用お休み中",
   "@duringPauseTaking": {
-    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。\n[翻訳の決定 en] 「On a pill break」ではなく「Pills paused」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\n「服用お休み」できません",
   "@cannotPauseAlreadyTakenToday": {
-    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
+    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。\n[翻訳の決定 en] 「If you've already taken today's pill,\nyou can't use “Pause taking pills”」ではなく「If you've already taken today's pill,\nyou can't use “Pause pills”」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた。括弧内はメニュー項目 startPauseTaking の訳に合わせる (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseTakingStarted": "服用お休みを開始しました",
   "@pauseTakingStarted": {
-    "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
+    "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。\n[翻訳の決定 en] 「Your pill break has started」ではなく「Your pill pause has started」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "@formattedDateAndWeekday": {
@@ -2195,7 +2203,7 @@
   },
   "editPauseStartDate": "服用お休み開始日を編集",
   "@editPauseStartDate": {
-    "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
+    "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。\n[翻訳の決定 en] 「Edit pill break start date」ではなく「Edit pause start date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "shareWithFriends": "友達に教える",
   "@shareWithFriends": {
@@ -2633,7 +2641,7 @@
   },
   "restDurationFeatureAppealTitle": "服用お休み期間を記録",
   "@restDurationFeatureAppealTitle": {
-    "description": "服用おやすみ機能のFeatureAppeal Barタイトル"
+    "description": "服用おやすみ機能のFeatureAppeal Barタイトル\n[翻訳の決定 en] 「Record a pill break」ではなく「Record a pill pause」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "restDurationFeatureAppealShortDescription": "休薬・中断を正確に管理",
   "@restDurationFeatureAppealShortDescription": {
@@ -2729,7 +2737,7 @@
   },
   "pauseStartDateMustBeOnOrBefore": "服用お休み開始日は{date}以前の日付を選択してください",
   "@pauseStartDateMustBeOnOrBefore": {
-    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。",
+    "description": "服用お休み期間の変更で、開始日に選択可能な最終日（最後に服用した日の翌日）より後の日付が選択された場合に表示されるエラーメッセージです。{date}には開始日として選択できる最終日（例: 7/13(月)）が入ります。\n[翻訳の決定 en] 「Choose a pill break start date on or before {date}」ではなく「Choose a pause start date on or before {date}」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)",
     "placeholders": {
       "date": {
         "type": "String"
@@ -2738,23 +2746,23 @@
   },
   "addPausePeriod": "服用お休み期間を追加",
   "@addPausePeriod": {
-    "description": "前回のピルシートグループの画面で、終了した服用お休み期間を後から追加するボタンの文言です。"
+    "description": "前回のピルシートグループの画面で、終了した服用お休み期間を後から追加するボタンの文言です。\n[翻訳の決定 en] 「Add a pill break」ではなく「Add a pill pause」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "addedPausePeriod": "服用お休み期間を追加しました",
   "@addedPausePeriod": {
-    "description": "前回のピルシートグループに服用お休み期間を追加した後に表示されるスナックバーの文言です。"
+    "description": "前回のピルシートグループに服用お休み期間を追加した後に表示されるスナックバーの文言です。\n[翻訳の決定 en] 「Pill break added」ではなく「Pill pause added」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pausePeriodOverlapsOther": "他の服用お休み期間と重なる期間は選択できません",
   "@pausePeriodOverlapsOther": {
-    "description": "服用お休み期間の追加・変更で、既存の別の服用お休み期間と重なる期間が選択された場合に表示されるエラーメッセージです。"
+    "description": "服用お休み期間の追加・変更で、既存の別の服用お休み期間と重なる期間が選択された場合に表示されるエラーメッセージです。\n[翻訳の決定 en] 「You can’t select a period that overlaps another pill break」ではなく「You can’t select a period that overlaps another pill pause」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "pauseEndDateMustBeAfterStartDate": "服用お休み終了日は開始日より後の日付を選択してください",
   "@pauseEndDateMustBeAfterStartDate": {
-    "description": "服用お休み期間の追加・変更で、終了日 (服用再開日) に開始日と同じ日付が選択された場合に表示されるエラーメッセージです。終了日は服用を再開する日のため、開始日と同じだとお休み期間が0日になってしまうことを防ぎます。"
+    "description": "服用お休み期間の追加・変更で、終了日 (服用再開日) に開始日と同じ日付が選択された場合に表示されるエラーメッセージです。終了日は服用を再開する日のため、開始日と同じだとお休み期間が0日になってしまうことを防ぎます。\n[翻訳の決定 en] 「Please choose a pill break end date after the start date」ではなく「Please choose a pause end date after the start date」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "plannedResumeDateOptional": "服用再開予定日 (任意)",
   "@plannedResumeDateOptional": {
-    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。"
+    "description": "服用お休みを開始するダイアログで、服用を再開する予定の日を任意で選ぶ行のラベルです。未選択のままでも服用お休みを開始できます。\n[翻訳の決定 de] 「Geplantes Datum für die erneute Pilleneinnahme (optional)」ではなく「Geplanter Wiederbeginn der Einnahme (optional)」: UI のラベルとして長く回りくどいため (https://github.com/bannzai/Pilll/issues/2001)"
   },
   "plannedResumeDateNotSet": "未設定",
   "@plannedResumeDateNotSet": {
@@ -2770,7 +2778,7 @@
   },
   "pauseEndDateLimitBeforeNextPause": "次のお休み（{date}〜）と重ならない日まで",
   "@pauseEndDateLimitBeforeNextPause": {
-    "description": "服用お休み期間を変更するカレンダーで、後続の服用お休み期間があるために終了日に選べる日が限られていることを伝える1行の説明です。{date}には次の服用お休みの開始日（例: 7/13）が入ります。",
+    "description": "服用お休み期間を変更するカレンダーで、後続の服用お休み期間があるために終了日に選べる日が限られていることを伝える1行の説明です。{date}には次の服用お休みの開始日（例: 7/13）が入ります。\n[翻訳の決定 en] 「The end date can’t overlap the next pill break (from {date})」ではなく「The end date can’t overlap the next pill pause (from {date})」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた (https://github.com/bannzai/Pilll/issues/2002)",
     "placeholders": {
       "date": {
         "type": "String"
@@ -2833,7 +2841,7 @@
   },
   "yazFlexSkipRestDurationDialogMessage": "服用お休みの期間は、あとからホームの「服用お休み」で入力できます",
   "@yazFlexSkipRestDurationDialogMessage": {
-    "description": "休薬の入力をスキップする確認ダイアログの本文です。「服用お休み」はアプリ内で休薬期間を指す既存の機能名で、ホーム画面のボタンの名前と同じ訳にしてください。"
+    "description": "休薬の入力をスキップする確認ダイアログの本文です。「服用お休み」はアプリ内で休薬期間を指す既存の機能名で、ホーム画面のボタンの名前と同じ訳にしてください。\n[翻訳の決定 en] 「You can enter your pill break later under “Pause taking pills” on the Home screen」ではなく「You can enter your pill pause later under “Pause pills” on the Home screen」: 原文の「服用お休み」はユーザーが任意で服用を中断する機能で、固定訳語の「休薬 = pill break」とは別の概念のため、この機能の訳語を pause に揃えた。括弧内はメニュー項目 startPauseTaking の訳に合わせる (https://github.com/bannzai/Pilll/issues/2002)"
   },
   "yazFlexSkipRestDurationDialogSkip": "スキップする",
   "@yazFlexSkipRestDurationDialogSkip": {
