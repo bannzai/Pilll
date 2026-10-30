@@ -75,6 +75,7 @@ class DeleteRestDurationButton extends ConsumerWidget {
                     return;
                   }
                   ScaffoldMessenger.of(context).showSnackBar(
+                    // 服用お休みの開始・変更・終了のスナックバーと同じ表示時間に揃えるため 2 秒
                     SnackBar(duration: const Duration(seconds: 2), content: Text(L.deletedPausePeriod)),
                   );
                   onDeleted();

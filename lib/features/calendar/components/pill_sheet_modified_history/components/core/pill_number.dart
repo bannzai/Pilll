@@ -253,8 +253,6 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     final restDuration = value.restDuration;
     final endDate = restDuration.endDate;
 
-    String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
-
-    return '${f(restDuration.beginDate)}~${endDate != null ? f(endDate) : ''}';
+    return '${DateTimeFormatter.slashMonthAndDay(restDuration.beginDate)}~${endDate != null ? DateTimeFormatter.slashMonthAndDay(endDate) : ''}';
   }
 }
