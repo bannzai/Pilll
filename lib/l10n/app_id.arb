@@ -107,7 +107,6 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nomor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Pilih tanggal mulai jeda minum pil",
   "selectPauseEndDateAsResumeDate": "Tanggal akhir = mulai minum pil lagi",
-  "pauseResumeDateLimitIsToday": "Mulai minum lagi: paling lambat hari ini",
   "pauseResumeDateLimitBeforeNextPause": "Mulai lagi ≤{date}",
   "pauseStartDate": "Tanggal mulai jeda minum pil",
   "pauseEndDate": "Tanggal akhir jeda minum pil",

@@ -106,7 +106,6 @@
   "oneToAfterDisplayNumberEndPillNumber": "№ 1→{afterDisplayNumberSettingEndPillNumber}",
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Избор на начална дата на паузата в приема на хапчета",
-  "selectPauseEndDateAsResumeDate": "Крайна дата = подновяване на приема",
   "pauseResumeDateLimitIsToday": "Подновяване на приема: до днес",
   "pauseResumeDateLimitBeforeNextPause": "Подновяване до {date}",
   "pauseStartDate": "Начална дата на паузата в приема на хапчета",
