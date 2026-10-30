@@ -48,17 +48,20 @@ void main() {
     test('言語コードだけの ko は ko', () {
       expect(deviceAppLocale(deviceLocaleName: 'ko'), const Locale('ko'));
     });
+    test('サポート外の言語 xx_XX は en', () {
+      expect(deviceAppLocale(deviceLocaleName: 'xx_XX'), const Locale('en'));
+    });
 
-    /// 端末の言語を [deviceLocale] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
+    /// 端末の優先言語を [deviceLocales] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
     Future<Locale> foregroundAppLocale(WidgetTester tester,
-        {required Locale deviceLocale}) async {
-      tester.platformDispatcher.localesTestValue = [deviceLocale];
+        {required List<Locale> deviceLocales}) async {
+      tester.platformDispatcher.localesTestValue = deviceLocales;
       addTearDown(tester.platformDispatcher.clearLocalesTestValue);
       late Locale resolvedLocale;
       await tester.pumpWidget(
         MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
+          supportedLocales: appSupportedLocales,
           home: Builder(builder: (context) {
             resolvedLocale = Localizations.localeOf(context);
             return const SizedBox.shrink();
@@ -72,7 +75,7 @@ void main() {
       expect(
         deviceAppLocale(deviceLocaleName: 'en_US'),
         await foregroundAppLocale(tester,
-            deviceLocale: const Locale('en', 'US')),
+            deviceLocales: [const Locale('en', 'US')]),
       );
     });
     testWidgets('zh_Hans_CN の端末では前面の UI と同じ言語になる', (tester) async {
@@ -80,16 +83,28 @@ void main() {
         deviceAppLocale(deviceLocaleName: 'zh_Hans_CN'),
         await foregroundAppLocale(
           tester,
-          deviceLocale: const Locale.fromSubtags(
-              languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
+          deviceLocales: [
+            const Locale.fromSubtags(
+                languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
+          ],
         ),
       );
     });
-    testWidgets('サポート外の言語 xx_XX の端末では前面の UI と同じ言語になる', (tester) async {
+    testWidgets('サポート外の言語 xx_XX の端末では前面の UI も en になる', (tester) async {
       expect(
-        deviceAppLocale(deviceLocaleName: 'xx_XX'),
         await foregroundAppLocale(tester,
-            deviceLocale: const Locale('xx', 'XX')),
+            deviceLocales: [const Locale('xx', 'XX')]),
+        const Locale('en'),
+      );
+    });
+    testWidgets('優先言語がサポート外の言語 xx_XX、次が ja の端末では前面の UI は ja になる',
+        (tester) async {
+      expect(
+        await foregroundAppLocale(tester, deviceLocales: [
+          const Locale('xx', 'XX'),
+          const Locale('ja', 'JP')
+        ]),
+        const Locale('ja'),
       );
     });
   });

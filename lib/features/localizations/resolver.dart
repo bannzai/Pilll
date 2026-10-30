@@ -52,12 +52,21 @@ class AppLocalizationResolver extends ConsumerWidget {
 /// [deviceLocaleName] は `Platform.localeName` の値 (例: en_US, zh_Hans_CN, fr_FR.UTF-8)。
 /// UI を組み立てる前・UI の無い isolate (通知アクションのクイック記録) で [L] を決めるために使う。
 /// arb は言語コードだけで構成されているため、言語コードだけを見る。
-/// 解決規則は前面の UI と同じ basicLocaleListResolution にする (app.dart の MaterialApp は localeResolutionCallback を持たない)。
-/// そのためサポート外の言語では、前面の UI と同じく [AppLocalizations.supportedLocales] の先頭になる。
+/// 解決規則は前面の UI と同じ basicLocaleListResolution と [appSupportedLocales] にする。
 Locale deviceAppLocale({required String deviceLocaleName}) => basicLocaleListResolution(
       [Locale(deviceLocaleName.split(RegExp('[-_.@]')).first)],
-      AppLocalizations.supportedLocales,
+      appSupportedLocales,
     );
+
+/// MaterialApp と [deviceAppLocale] に渡す、文言を持つ言語の一覧。
+/// basicLocaleListResolution は端末の言語がどれにも一致しない時に一覧の先頭を返し、
+/// gen-l10n が生成する [AppLocalizations.supportedLocales] はアルファベット順で先頭が af になるため、en を先頭に置く。
+/// en にした根拠: サポート外の言語の利用者は日本語の端末ではなく、ja より en の方が読める可能性が高い。
+/// また app_en.arb は template の app_ja.arb のキーをすべて持つ (bannzai/Pilll#2039)。
+final appSupportedLocales = [
+  const Locale('en'),
+  ...AppLocalizations.supportedLocales.where((locale) => locale != const Locale('en')),
+];
 
 /// [L] と [Intl.defaultLocale] を、[deviceLocaleName] (`Platform.localeName` の値) を [deviceAppLocale] で解決した言語にする。
 /// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で通知の文言を端末の言語にするために使う。
