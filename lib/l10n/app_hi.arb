@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "आप सभी सुविधाएँ अगले {diff} दिनों तक इस्तेमाल कर सकती हैं",
   "todayIsTaking": "💊 आज गोली लेने का दिन है",
   "todayPillToTake": "💊 आज की गोली",
-  "formattedPillNumber": "{number}वीं गोली",
+  "formattedPillNumber": "गोली नंबर {number}",
   "dayNumber": "वाँ दिन",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} से पीरियड शुरू होने का रिकॉर्ड दर्ज हो गया है",
   "menstruationStartDate": "पीरियड शुरू होने की तारीख",
