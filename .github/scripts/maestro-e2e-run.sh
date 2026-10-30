@@ -140,7 +140,7 @@ else
 fi
 [ "${#FLOW_FILES[@]}" -gt 0 ] || fail "実行する flow が無い: ${TARGET}"
 
-# flow の実行中にできたクラッシュレポートだけを artifact に含めるため、開始時刻を残す
+# flow の実行中にできたクラッシュレポートとログだけを artifact に含めるため、flow を実行する前に開始時刻を残す (使うのは実行後)
 CRASH_MARKER="${RUNNER_TEMP:-/tmp}/maestro-e2e-start"
 touch "$CRASH_MARKER"
 LOG_START="$(date '+%Y-%m-%d %H:%M:%S')"
