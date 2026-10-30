@@ -42,17 +42,12 @@ void main() {
 
       expect(tester.takeException(), isNull);
       for (final label in labels) {
-        // 描かれた行の数を、各文字の矩形の上端の種類の数で数える
+        // 1 行の上限を超えて切れていない (FittedBox が無いと、タブの幅で切れて true になる)
         expect(
-          tester
-              .renderObject<RenderParagraph>(find.text(label))
-              .getBoxesForSelection(
-                  TextSelection(baseOffset: 0, extentOffset: label.length))
-              .map((box) => box.top)
-              .toSet()
-              .length,
-          1,
-        );
+            tester
+                .renderObject<RenderParagraph>(find.text(label))
+                .didExceedMaxLines,
+            isFalse);
         // FittedBox の縮小後の描画幅が、タブ 1 つ分 (320 / 4) から左右の余白 4 を除いた幅に収まる
         expect(
           tester.getRect(find.text(label)).width,

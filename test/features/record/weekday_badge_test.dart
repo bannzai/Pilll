@@ -32,18 +32,9 @@ void main() {
         of: find.byType(WeekdayBadge),
         matching: find.byType(Text),
       );
-      // 描かれた行の数を、各文字の矩形の上端の種類の数で数える
-      expect(
-        tester
-            .renderObject<RenderParagraph>(text)
-            .getBoxesForSelection(TextSelection(
-                baseOffset: 0,
-                extentOffset: Weekday.Sunday.weekdayString().length))
-            .map((box) => box.top)
-            .toSet()
-            .length,
-        1,
-      );
+      // 1 行の上限を超えて切れていない (FittedBox が無いと、幅 20 で切れて true になる)
+      expect(tester.renderObject<RenderParagraph>(text).didExceedMaxLines,
+          isFalse);
       expect(tester.getRect(text).width, lessThanOrEqualTo(20));
     });
 
