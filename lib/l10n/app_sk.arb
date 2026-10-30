@@ -343,6 +343,7 @@
   "launchError": "Pri spúšťaní aplikácie sa vyskytla chyba.\n{ErrorMessagesConnection}\n\nPodrobnosti:",
   "exampleRestDurationDate": "Napríklad pri 3-dňovej prestávke v užívaní od 12. 1.",
   "exampleRestDurationNumber": "Napríklad pri 3-dňovej prestávke v užívaní od tabletky č. 18",
+  "exampleRestDurationNumberBalloon": "Pauza v užívaní tabletiek\n3 dni",
   "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Nepodarilo sa nájsť blist, ktorý práve používate",
   "doNotRevertTakePillInPausePeriod": "Počas prestávky nemožno zrušiť záznam o užití tabletky",

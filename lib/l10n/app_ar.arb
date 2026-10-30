@@ -343,6 +343,7 @@
   "launchError": "حدث خطأ عند فتح التطبيق.\n{ErrorMessagesConnection}\n\nالتفاصيل:",
   "exampleRestDurationDate": "مثلاً، إذا توقفتِ عن تناول الحبوب لمدة 3 أيام بدءًا من 1/12",
   "exampleRestDurationNumber": "مثلًا، إذا توقفتِ عن تناول الحبوب لمدة 3 أيام بدءًا من الحبة رقم 18",
+  "exampleRestDurationNumberBalloon": "فترة التوقف عن تناول الحبوب\n3 أيام",
   "withNumber": "رقم {number}",
   "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستخدم حاليًا",
   "doNotRevertTakePillInPausePeriod": "لا يمكن التراجع عن تسجيل تناول الحبة خلال فترة الراحة",

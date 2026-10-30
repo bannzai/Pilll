@@ -343,6 +343,7 @@
   "launchError": "ઍપ શરૂ કરતી વખતે ભૂલ આવી છે.\n{ErrorMessagesConnection}\n\nવિગતો:",
   "exampleRestDurationDate": "ઉદાહરણ તરીકે, જો તમે 1/12થી 3 દિવસ માટે ગોળી લેવાનું બંધ રાખો તો",
   "exampleRestDurationNumber": "ઉદાહરણ તરીકે, તમે 18 નંબરની ગોળીથી 3 દિવસ માટે ગોળી લેવાનું બંધ રાખો તો",
+  "exampleRestDurationNumberBalloon": "ગોળી લેવામાં વિરામ\n3 દિવસ",
   "withNumber": "ગોળી નંબર {number}",
   "currentPillSheetNotFound": "હાલમાં તમે વાપરો છો તે ગોળીની સ્ટ્રિપ મળી નથી",
   "doNotRevertTakePillInPausePeriod": "વિરામ દરમિયાન ગોળી લીધી હોવાની નોંધ રદ કરી શકાતી નથી",

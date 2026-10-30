@@ -343,6 +343,7 @@
   "launchError": "Възникна грешка при стартирането на приложението.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, ако сте направили пауза в приема на хапчета за 3 дни от 12.01",
   "exampleRestDurationNumber": "Например, ако сте направили 3-дневна пауза в приема, започвайки от хапче № 18",
+  "exampleRestDurationNumberBalloon": "Пауза в приема на хапчета\n3 дни",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Текущият блистер не е намерен",
   "doNotRevertTakePillInPausePeriod": "По време на паузата не можете да отмените записа за прието хапче",

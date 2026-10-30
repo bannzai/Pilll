@@ -343,6 +343,7 @@
   "launchError": "এপটো খোলোঁতে এটা ত্ৰুটি ঘটিছে।\n{ErrorMessagesConnection}\n\nবিৱৰণ: ",
   "exampleRestDurationDate": "উদাহৰণস্বৰূপে, আপুনি 1/12ৰ পৰা 3 দিনলৈ পিল খোৱা বন্ধ ৰাখিলে",
   "exampleRestDurationNumber": "উদাহৰণস্বৰূপে, 18 নম্বৰ পিলৰ পৰা 3 দিনৰ বাবে আপুনি পিল খোৱা বন্ধ ৰাখিলে",
+  "exampleRestDurationNumberBalloon": "বৰি খোৱাৰ বিৰতি\n3 দিন",
   "withNumber": "{number} নম্বৰ",
   "currentPillSheetNotFound": "বৰ্তমান ব্যৱহাৰ কৰি থকা পিলৰ ষ্ট্ৰিপ পোৱা নগ’ল",
   "doNotRevertTakePillInPausePeriod": "বিৰতিৰ সময়ত পিল খোৱাৰ তথ্য বাতিল কৰিব নোৱাৰি",

@@ -343,6 +343,7 @@
   "launchError": "Podczas uruchamiania aplikacji wystąpił błąd.\n{ErrorMessagesConnection}\n\nSzczegóły:",
   "exampleRestDurationDate": "Na przykład przy 3-dniowej przerwie w przyjmowaniu tabletek, zaczynając od 1/12",
   "exampleRestDurationNumber": "Na przykład przy 3-dniowej przerwie w przyjmowaniu tabletek, zaczynając od tabletki nr 18",
+  "exampleRestDurationNumberBalloon": "Przerwa w braniu tabletek\n3 dni",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Nie znaleziono blistra, który jest teraz używany",
   "doNotRevertTakePillInPausePeriod": "Podczas przerwy nie można cofnąć zapisu o przyjęciu tabletki",

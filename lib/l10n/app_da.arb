@@ -343,6 +343,7 @@
   "launchError": "Der opstod en fejl, da appen blev åbnet.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "For eksempel hvis du holder pillepause i 3 dage fra 12/1",
   "exampleRestDurationNumber": "For eksempel hvis du holder 3 dages pause med p-pillerne fra og med p-pille nr. 18",
+  "exampleRestDurationNumberBalloon": "Pause fra p-piller\n3 dage",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Det pillekort, du bruger nu, blev ikke fundet",
   "doNotRevertTakePillInPausePeriod": "Du kan ikke fortryde registreringen af en p-pille under en pillepause",

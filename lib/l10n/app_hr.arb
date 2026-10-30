@@ -343,6 +343,7 @@
   "launchError": "Došlo je do pogreške pri pokretanju aplikacije.\n{ErrorMessagesConnection}\n\nPojedinosti:",
   "exampleRestDurationDate": "Na primjer, ako ste napravili pauzu od 3 dana počevši od 12. 1.",
   "exampleRestDurationNumber": "Na primjer, ako ste napravili pauzu od 3 dana počevši od pilule br. 18",
+  "exampleRestDurationNumberBalloon": "Pauza u uzimanju pilule\n3 dana",
   "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Blister koji trenutačno koristite nije pronađen",
   "doNotRevertTakePillInPausePeriod": "Tijekom pauze ne možete poništiti zapis o uzimanju pilule",

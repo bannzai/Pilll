@@ -343,6 +343,7 @@
   "launchError": "Ralat berlaku semasa membuka aplikasi.\n{ErrorMessagesConnection}\n\nButiran:",
   "exampleRestDurationDate": "Contohnya, jika anda berhenti mengambil pil selama 3 hari mulai 1/12",
   "exampleRestDurationNumber": "Contohnya, jika anda berhenti mengambil pil selama 3 hari bermula dari pil nombor 18",
+  "exampleRestDurationNumberBalloon": "Jeda mengambil pil\n3 hari",
   "withNumber": "Pil nombor {number}",
   "currentPillSheetNotFound": "Pek pil yang sedang anda gunakan tidak ditemui",
   "doNotRevertTakePillInPausePeriod": "Rekod pengambilan pil tidak boleh dibatalkan semasa tempoh rehat",

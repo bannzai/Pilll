@@ -343,6 +343,7 @@
   "launchError": "অ্যাপটি চালু করার সময় একটি সমস্যা হয়েছে।\n{ErrorMessagesConnection}\n\nবিস্তারিত:",
   "exampleRestDurationDate": "যেমন, আপনি ১২ জানুয়ারি থেকে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
   "exampleRestDurationNumber": "যেমন, ১৮ নম্বর পিল থেকে শুরু করে ৩ দিন পিল খাওয়া বন্ধ রাখলে",
+  "exampleRestDurationNumberBalloon": "পিল খাওয়ায় বিরতি\n৩ দিন",
   "withNumber": "{number} নম্বর",
   "currentPillSheetNotFound": "বর্তমানে ব্যবহার করা পিল শিট পাওয়া যায়নি",
   "doNotRevertTakePillInPausePeriod": "বিরতির সময় পিল খাওয়ার রেকর্ড বাতিল করা যাবে না",

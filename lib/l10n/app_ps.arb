@@ -343,6 +343,7 @@
   "launchError": "د اپ د پرانیستلو پر مهال یوه تېروتنه رامنځته شوه.\n{ErrorMessagesConnection}\n\nجزییات:",
   "exampleRestDurationDate": "د بېلګې په توګه، که تاسو له 1/12 څخه د 3 ورځو لپاره د ګولۍ اخیستل وځنډوئ",
   "exampleRestDurationNumber": "د بېلګې په توګه، که تاسو له 18مې ګولۍ څخه د 3 ورځو لپاره د ګولۍ اخیستل وځنډوئ",
+  "exampleRestDurationNumberBalloon": "د ګولیو له خوړلو وقفه\n3 ورځې",
   "withNumber": "شمېره {number}",
   "currentPillSheetNotFound": "اوس مهال کارېدونکې د ګولیو پاڼه ونه موندل شوه",
   "doNotRevertTakePillInPausePeriod": "د وقف پر مهال د ګولۍ اخیستلو ثبت بېرته نه شي لغوه کېدای",

@@ -343,6 +343,7 @@
   "launchError": "ಆ್ಯಪ್ ತೆರೆಯುವಾಗ ದೋಷ ಉಂಟಾಗಿದೆ.\n{ErrorMessagesConnection}\n\nವಿವರಗಳು:",
   "exampleRestDurationDate": "ಉದಾಹರಣೆಗೆ, ನೀವು 1/12ರಿಂದ 3 ದಿನಗಳವರೆಗೆ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ನೀಡಿದರೆ",
   "exampleRestDurationNumber": "ಉದಾಹರಣೆಗೆ, ನೀವು 18ನೇ ಮಾತ್ರೆಯಿಂದ 3 ದಿನಗಳವರೆಗೆ ಮಾತ್ರೆ ಸೇವನೆಗೆ ವಿರಾಮ ನೀಡಿದರೆ",
+  "exampleRestDurationNumberBalloon": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದಕ್ಕೆ ವಿರಾಮ\n3 ದಿನಗಳು",
   "withNumber": "ಸಂ. {number}",
   "currentPillSheetNotFound": "ಈಗ ನೀವು ಬಳಸುತ್ತಿರುವ ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಕಂಡುಬಂದಿಲ್ಲ",
   "doNotRevertTakePillInPausePeriod": "ವಿರಾಮದ ಅವಧಿಯಲ್ಲಿ ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡ ದಾಖಲೆಯನ್ನು ರದ್ದುಪಡಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ",

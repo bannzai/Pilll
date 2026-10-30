@@ -343,6 +343,7 @@
   "launchError": "Produciuse un erro ao abrir a aplicación.\n{ErrorMessagesConnection}\n\nDetalles:",
   "exampleRestDurationDate": "Por exemplo, se fas un descanso de 3 días na toma da pílula a partir do 12 de xaneiro",
   "exampleRestDurationNumber": "Por exemplo, se fas un descanso de 3 días a partir da pílula n.º 18",
+  "exampleRestDurationNumberBalloon": "Pausa na toma da pílula\n3 días",
   "withNumber": "Núm. {number}",
   "currentPillSheetNotFound": "Non se atopou o blíster que estás a usar agora",
   "doNotRevertTakePillInPausePeriod": "Durante o descanso non podes desfacer o rexistro da toma da pílula",

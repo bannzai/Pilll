@@ -343,6 +343,7 @@
   "launchError": "Падчас запуску праграмы ўзнікла памылка.\n{ErrorMessagesConnection}\n\nПадрабязнасці:",
   "exampleRestDurationDate": "Напрыклад, калі вы зрабілі перапынак у прыёме пігулак на 3 дні з 12 студзеня",
   "exampleRestDurationNumber": "Напрыклад, калі вы зрабілі перапынак у прыёме пігулак на 3 дні, пачынаючы з пігулкі № 18",
+  "exampleRestDurationNumberBalloon": "Перапынак у прыёме пігулак\n3 дні",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Бягучы блістар не знойдзены",
   "doNotRevertTakePillInPausePeriod": "Падчас перапынку нельга адмяніць запіс аб прыёме пігулкі",

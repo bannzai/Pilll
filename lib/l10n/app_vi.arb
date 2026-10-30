@@ -343,6 +343,7 @@
   "launchError": "Đã xảy ra lỗi khi mở ứng dụng.\n{ErrorMessagesConnection}\n\nChi tiết:",
   "exampleRestDurationDate": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày, bắt đầu từ ngày 12/1",
   "exampleRestDurationNumber": "Ví dụ, nếu bạn tạm ngừng uống thuốc trong 3 ngày, bắt đầu từ viên số 18",
+  "exampleRestDurationNumberBalloon": "Tạm ngừng uống thuốc\n3 ngày",
   "withNumber": "Số {number}",
   "currentPillSheetNotFound": "Không tìm thấy vỉ thuốc bạn đang dùng",
   "doNotRevertTakePillInPausePeriod": "Không thể hủy bản ghi uống thuốc trong thời gian nghỉ thuốc",

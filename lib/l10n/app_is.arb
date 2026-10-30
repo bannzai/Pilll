@@ -343,6 +343,7 @@
   "launchError": "Villa kom upp þegar appið var opnað.\n{ErrorMessagesConnection}\n\nNánar: ",
   "exampleRestDurationDate": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá 1/12",
   "exampleRestDurationNumber": "Til dæmis ef þú gerir 3 daga hlé á pillutöku frá pillu númer 18",
+  "exampleRestDurationNumberBalloon": "Hlé á pillutöku\n3 dagar",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
   "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",

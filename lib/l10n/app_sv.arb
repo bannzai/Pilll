@@ -343,6 +343,7 @@
   "launchError": "Ett fel uppstod när appen öppnades.\n{ErrorMessagesConnection}\n\nDetaljer:",
   "exampleRestDurationDate": "Till exempel om du gör ett uppehåll med p-pillren i 3 dagar från 12/1",
   "exampleRestDurationNumber": "Till exempel om du gör ett uppehåll på 3 dagar från och med piller 18",
+  "exampleRestDurationNumberBalloon": "Paus från piller\n3 dagar",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Den p-pillerkarta du använder nu kunde inte hittas",
   "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",

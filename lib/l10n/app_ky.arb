@@ -343,6 +343,7 @@
   "launchError": "Колдонмо ачылып жатканда ката кетти.\n{ErrorMessagesConnection}\n\nТолук маалымат:",
   "exampleRestDurationDate": "Мисалы, 1/12ден баштап 3 күнгө таблетка ичүүнү токтото турсаңыз",
   "exampleRestDurationNumber": "Мисалы, 18-таблеткадан баштап 3 күнгө таблетка ичүүнү токтото турсаңыз",
+  "exampleRestDurationNumberBalloon": "Таблетка ичүүдөгү тыныгуу\n3 күн",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Учурда колдонулуп жаткан таблетка блистери табылган жок",
   "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",

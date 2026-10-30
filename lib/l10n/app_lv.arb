@@ -343,6 +343,7 @@
   "launchError": "Atverot lietotni, radās kļūda.\n{ErrorMessagesConnection}\n\nInformācija: ",
   "exampleRestDurationDate": "Piemēram, ja, sākot ar 12. janvāri, lietošanā ir 3 dienu pārtraukums",
   "exampleRestDurationNumber": "Piemēram, ja, sākot ar 18. tableti, lietošanā ir 3 dienu pārtraukums",
+  "exampleRestDurationNumberBalloon": "Tablešu lietošanas pauze\n3 dienas",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pašlaik lietotais tablešu blisteris nav atrasts",
   "doNotRevertTakePillInPausePeriod": "Pārtraukuma laikā nevar atcelt ierakstu par tabletes lietošanu",

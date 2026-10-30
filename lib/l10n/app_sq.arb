@@ -343,6 +343,7 @@
   "launchError": "Ndodhi një gabim gjatë hapjes së aplikacionit.\n{ErrorMessagesConnection}\n\nHollësi: ",
   "exampleRestDurationDate": "Për shembull, nëse bëni një pushim 3-ditor nga marrja e pilulës duke filluar më 12 janar",
   "exampleRestDurationNumber": "Për shembull, nëse bëni një pushim 3-ditor nga marrja e pilulës duke filluar nga pilula nr. 18",
+  "exampleRestDurationNumberBalloon": "Pauzë nga marrja e pilulës\n3 ditë",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nuk u gjet blisteri që po përdorni tani",
   "doNotRevertTakePillInPausePeriod": "Gjatë pushimit nuk mund të anuloni regjistrimin e marrjes së pilulës",
