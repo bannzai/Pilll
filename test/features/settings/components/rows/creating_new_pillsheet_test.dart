@@ -44,13 +44,10 @@ void main() {
       await tester.pumpWidget(subject(isPremium: false));
 
       expect(tester.takeException(), isNull);
-      final title = find
+      final titleRect = tester.getRect(find
           .descendant(
-            of: find.byType(ListTile),
-            matching: find.byType(RichText),
-          )
-          .first;
-      final titleRect = tester.getRect(title);
+              of: find.byType(ListTile), matching: find.byType(RichText))
+          .first);
       final badgeRect = tester.getRect(find.byType(PremiumBadge));
       // 2 行に折り返している
       expect(titleRect.height, greaterThan(badgeRect.height * 1.5));

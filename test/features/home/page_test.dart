@@ -42,10 +42,11 @@ void main() {
 
       expect(tester.takeException(), isNull);
       for (final label in labels) {
-        final paragraph = tester.renderObject<RenderParagraph>(
-          find.text(label),
-        );
-        expect(paragraph.didExceedMaxLines, isFalse);
+        expect(
+            tester
+                .renderObject<RenderParagraph>(find.text(label))
+                .didExceedMaxLines,
+            isFalse);
         // FittedBox の縮小後の描画幅が、タブ 1 つ分 (320 / 4) から左右の余白 4 を除いた幅に収まる
         expect(
           tester.getRect(find.text(label)).width,
@@ -69,8 +70,8 @@ void main() {
         ),
       );
 
-      final paragraph = tester.renderObject<RenderParagraph>(find.text('Pill'));
-      expect(tester.getRect(find.text('Pill')).width, paragraph.size.width);
+      expect(tester.getRect(find.text('Pill')).width,
+          tester.renderObject<RenderParagraph>(find.text('Pill')).size.width);
     });
   });
 }

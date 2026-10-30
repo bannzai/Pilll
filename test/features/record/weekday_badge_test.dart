@@ -32,8 +32,8 @@ void main() {
         of: find.byType(WeekdayBadge),
         matching: find.byType(Text),
       );
-      final paragraph = tester.renderObject<RenderParagraph>(text);
-      expect(paragraph.didExceedMaxLines, isFalse);
+      expect(tester.renderObject<RenderParagraph>(text).didExceedMaxLines,
+          isFalse);
       expect(tester.getRect(text).width, lessThanOrEqualTo(20));
     });
 
@@ -54,8 +54,8 @@ void main() {
         of: find.byType(WeekdayBadge),
         matching: find.byType(Text),
       );
-      final paragraph = tester.renderObject<RenderParagraph>(text);
-      expect(tester.getRect(text).width, paragraph.size.width);
+      expect(tester.getRect(text).width,
+          tester.renderObject<RenderParagraph>(text).size.width);
     });
   });
 }
