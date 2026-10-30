@@ -48,6 +48,20 @@ class AppLocalizationResolver extends ConsumerWidget {
   }
 }
 
+/// 端末の言語の一覧 [preferredLocales] (優先順) から、アプリの対象言語 ([AppLocalizations.supportedLocales]) のうち使う言語を返す。
+/// MaterialApp に localeResolutionCallback を渡していないため、アプリを開いた時と同じ規則の [basicLocaleListResolution] で解決する
+Locale resolveDeviceAppLocale({required List<Locale> preferredLocales}) =>
+    basicLocaleListResolution(preferredLocales, AppLocalizations.supportedLocales);
+
+/// ウィジェットツリー ([AppLocalizationResolver]) を通らない経路 (通知のアクションからの服用記録など) で、
+/// [L] と [Intl.defaultLocale] を端末の言語から解決した言語にする。
+/// 端末の言語は Android の通知のアクションで起動される別 isolate でも、FlutterEngine の生成時に送られて [PlatformDispatcher.locales] に入る
+void setupLocalizationWithoutWidgetTree() {
+  final locale = resolveDeviceAppLocale(preferredLocales: PlatformDispatcher.instance.locales);
+  L = lookupAppLocalizations(locale);
+  Intl.defaultLocale = locale.languageCode;
+}
+
 /// debug ビルドの表示言語を返す。
 /// [savedLanguageCode] は開発者オプションの「表示言語」で保存した arb の言語コード。
 /// 保存が無い・対象言語に無い時は ja を返す (開発中は日本語の文言で確認する従来の挙動を保つため)。

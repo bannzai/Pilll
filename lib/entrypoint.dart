@@ -11,6 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
@@ -101,7 +102,8 @@ Future<void> handleNotificationAction(
       initializeDateFormatting('ja'),
       initializeDateFormatting(Platform.localeName),
     ).wait;
-    Intl.defaultLocale = 'ja';
+    // ウィジェットツリーを通らないため、リマインド通知の文言と日付を端末の言語にする
+    setupLocalizationWithoutWidgetTree();
 
     await LocalNotificationService.setupTimeZone();
 
