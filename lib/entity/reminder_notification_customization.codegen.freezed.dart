@@ -53,12 +53,12 @@ mixin _$ReminderNotificationCustomization {
   ///
   /// v2で追加された機能です。通常の服用リマインダー時に表示される
   /// カスタマイズ可能なメッセージです。
-  String get dailyTakenMessage => throw _privateConstructorUsedError; // TODO: [Localizations]
+  String get dailyTakenMessage => throw _privateConstructorUsedError;
+
   /// 飲み忘れ時に表示するメッセージ
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
-  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
-  /// 日本語メッセージが設定されています。
+  /// 表示されるメッセージです。表示には missedTakenMessageForDisplay を使います。
   String get missedTakenMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -215,7 +215,7 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
       this.isInVisiblePillNumber = false,
       this.isInVisibleDescription = false,
       this.dailyTakenMessage = '',
-      this.missedTakenMessage = '飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji'})
+      this.missedTakenMessage = reminderNotificationCustomizationJapaneseDefaultMissedTakenMessage})
       : super._();
 
   factory _$ReminderNotificationCustomizationImpl.fromJson(Map<String, dynamic> json) => _$$ReminderNotificationCustomizationImplFromJson(json);
@@ -267,12 +267,11 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
   @override
   @JsonKey()
   final String dailyTakenMessage;
-// TODO: [Localizations]
+
   /// 飲み忘れ時に表示するメッセージ
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
-  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
-  /// 日本語メッセージが設定されています。
+  /// 表示されるメッセージです。表示には missedTakenMessageForDisplay を使います。
   @override
   @JsonKey()
   final String missedTakenMessage;
@@ -369,12 +368,12 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
   /// v2で追加された機能です。通常の服用リマインダー時に表示される
   /// カスタマイズ可能なメッセージです。
   String get dailyTakenMessage;
-  @override // TODO: [Localizations]
+  @override
+
   /// 飲み忘れ時に表示するメッセージ
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
-  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
-  /// 日本語メッセージが設定されています。
+  /// 表示されるメッセージです。表示には missedTakenMessageForDisplay を使います。
   String get missedTakenMessage;
   @override
   @JsonKey(ignore: true)

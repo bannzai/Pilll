@@ -256,7 +256,7 @@
   },
   "customizeMedicationNotifications": "服用通知のカスタマイズ",
   "@customizeMedicationNotifications": {
-    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。\n[翻訳の決定 de] 「Erinnerungen an die Pilleneinnahme anpassen」ではなく「Erinnerung anpassen」: 原文の「カスタマイズ」を残し、画面のタイトルが省略記号で切れない長さにするため (https://github.com/bannzai/Pilll/issues/1994)\n[翻訳の決定 es] 「Personalizar recordatorios para tomar la píldora」ではなく「Personalizar recordatorio」: 画面のタイトルが省略記号で切れるため、de (#1994) の候補と同じ形に短くした (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 fr] 「Personnaliser les rappels de prise de pilule」ではなく「Personnaliser le rappel」: 画面のタイトルが省略記号で切れるため、de (#1994) の候補と同じ形に短くした (https://github.com/bannzai/Pilll/issues/1997)\n[翻訳の決定 pt] 「Personalizar lembretes para tomar a pílula」ではなく「Personalizar lembrete」: 画面のタイトルが省略記号で切れるため、de (#1994) の候補と同じ形に短くした (https://github.com/bannzai/Pilll/issues/1999)"
   },
   "medicationNotification": "服用通知",
   "@medicationNotification": {
@@ -1139,7 +1139,7 @@
   },
   "normal": "通常",
   "@normal": {
-    "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
+    "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。\n[翻訳の決定 zh] 「通常」ではなく「正常」: 中国語の「通常」は「普段・たいてい」の副詞的な意味で、通知の種類のラベルとして不自然なため (https://github.com/bannzai/Pilll/issues/2000)"
   },
   "missed": "飲み忘れ",
   "@missed": {
@@ -1179,7 +1179,11 @@
   },
   "changeMissedNotificationMessage": "飲み忘れてる場合の通知文言を変更できます",
   "@changeMissedNotificationMessage": {
-    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the missed-pill notification)。"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: You can change the notification text shown when your pill hasn't been taken yet)。\n[翻訳の決定 en] 「Change the text for the missed-pill notification」ではなく「You can change the notification text shown when your pill hasn't been taken yet」: 「通常」側の説明文と文型を揃え、ラベル Not taken yet と同じく状態として書き、服用忘れを責める missed を避けるため (https://github.com/bannzai/Pilll/issues/1995)\n[翻訳の決定 es] 「Puedes cambiar el texto del aviso si no has tomado la píldora」ではなく「Puedes cambiar el texto de la notificación cuando no has tomado la píldora」: 同じ画面の他の説明文と同じ notificación に揃えるため (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 ko] 「약을 먹지 않았을 때 표시되는 알림 문구를 변경할 수 있어요」ではなく「복용을 잊었을 때의 알림 문구를 변경할 수 있어요」: 原文は「飲み忘れている場合」で、먹지 않았을 때 は意図的に飲まない場合も含み、ラベル 복용 누락 とも揃わないため (https://github.com/bannzai/Pilll/issues/1998)\n[翻訳の決定 zh] 「可以修改漏服药片时的通知内容」ではなく「可以更改漏服时的通知文案」: 直上の通常欄の説明文と動詞 (更改) と名詞 (文案) を揃えるため (https://github.com/bannzai/Pilll/issues/2000)"
+  },
+  "defaultMissedTakenMessage": "飲み忘れていませんか？\n服用記録がない日が複数あります🤔",
+  "@defaultMissedTakenMessage": {
+    "description": "服用通知で、複数日の服用記録がない時に出る通知本文の既定文言。ユーザーが通知文言カスタマイズ画面で編集していない時に、通知と画面の入力欄・プレビューに出る。1 行目と 2 行目は改行 (\\n) で区切り、末尾の 🤔 は残す。飲み忘れを責めない、やわらかい問いかけにする。ja の訳は lib/entity/reminder_notification_customization.codegen.dart の既定値と同じ文字列に保つ (保存値と照合して未編集を判定するため)\n[翻訳の決定 de] 「日本語の既定文言のまま」ではなく「Hast du deine Pille schon genommen?\\nAn mehreren Tagen fehlt ein Einnahmeprotokoll 🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/1994)\n[翻訳の決定 en] 「日本語の既定文言のまま」ではなく「Haven't taken your pill yet?\\nThere are a few days with no pill log 🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/1995)\n[翻訳の決定 es] 「日本語の既定文言のまま」ではなく「¿Se te olvidó tomar la píldora?\\nHay varios días sin registro de toma🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/1996)\n[翻訳の決定 fr] 「日本語の既定文言のまま」ではなく「Avez-vous oublié votre pilule ?\\nPlusieurs jours n’ont pas encore d’entrée dans le journal des prises🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため。既存訳に合わせて ? の前は改行しない空白、アポストロフィは ’ にした (https://github.com/bannzai/Pilll/issues/1997)\n[翻訳の決定 ko] 「日本語の既定文言のまま」ではなく「복용을 잊지 않으셨나요?\\n복용 기록이 없는 날이 여러 날 있어요🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/1998)\n[翻訳の決定 pt] 「日本語の既定文言のまま」ではなく「Esqueceu de tomar a pílula?\\nHá vários dias sem registro de uso🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/1999)\n[翻訳の決定 zh] 「日本語の既定文言のまま」ではなく「是不是忘记服药了呢？\\n有好几天没有服药记录哦🤔」: 飲み忘れ時の既定文言をロケールごとに訳すため (https://github.com/bannzai/Pilll/issues/2000)"
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {
@@ -1192,7 +1196,7 @@
   },
   "changeNotificationHeader": "通知の先頭部分の変更ができます",
   "@changeNotificationHeader": {
-    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text at the start of the notification)。"
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。 通知タイトルの入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: You can change the beginning of the notification title)。\n[翻訳の決定 en] 「You can change the start of the notification」ではなく「You can change the beginning of the notification title」: 「start」では何の始まりか分かりにくいため (https://github.com/bannzai/Pilll/issues/1995)"
   },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "@notificationHeaderLength": {
@@ -1209,7 +1213,7 @@
   },
   "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
-    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。 通知文言の入力欄の下に小さく (12pt) 出る説明。文字数の表示と同じ行に並ぶため、原文と同程度の短い 1 文にし、長い従属節を足さない (例: Change the text for the regular notification)。\n[翻訳の決定 ko] 「약을 제때 복용했을 때의 알림 문구를 변경할 수 있어요」ではなく「복용을 잊지 않았을 때의 알림 문구를 변경할 수 있어요」: 原文は「飲み忘れていない場合」で、제때 복용했을 때 は服用済みの意味が加わる (通知は服用前に届く) ため (https://github.com/bannzai/Pilll/issues/1998)\n[翻訳の決定 pt] 「Você pode alterar o texto da notificação quando toma a pílula no horário」ではなく「Você pode mudar o texto da notificação quando a pílula for tomada no horário」: 対になる「飲み忘れ」側とタイトルの説明文の mudar に動詞を揃えるため (https://github.com/bannzai/Pilll/issues/1999)"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {
