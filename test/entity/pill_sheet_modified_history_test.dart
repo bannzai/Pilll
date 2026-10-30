@@ -224,7 +224,9 @@ void main() {
       expect(result, 4);
     });
 
-    test("revertTakenPill の before/after グループが null の場合、取り消しは集計に反映されない（従来どおり無視される）", () {
+    test(
+        "revertTakenPill の before/after グループが null の場合、取り消しは集計に反映されない（従来どおり無視される）",
+        () {
       final today = DateTime.parse("2020-09-05");
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
@@ -278,9 +280,12 @@ void main() {
           actionType: PillSheetModifiedActionType.takenPill.name,
           estimatedEventCausingDate: DateTime(2020, 9, 4, 20),
           createdAt: DateTime(2020, 9, 4, 20),
-          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
-          beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 1)),
-          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 4)),
+          value:
+              const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          beforePillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 1)),
+          afterPillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 4)),
         ),
       ];
 
@@ -310,9 +315,11 @@ void main() {
           actionType: PillSheetModifiedActionType.takenPill.name,
           estimatedEventCausingDate: DateTime(2020, 9, 3, 21),
           createdAt: DateTime(2020, 9, 3, 21),
-          value: const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
+          value:
+              const PillSheetModifiedHistoryValue(takenPill: TakenPillValue()),
           beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(null),
-          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
+          afterPillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
         ),
       ];
 
@@ -351,8 +358,10 @@ void main() {
               ),
             ),
           ),
-          beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 1)),
-          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
+          beforePillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 1)),
+          afterPillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
         ),
       ];
 
@@ -393,8 +402,10 @@ void main() {
               ),
             ),
           ),
-          beforePillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 2)),
-          afterPillSheetGroup: createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
+          beforePillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 2)),
+          afterPillSheetGroup:
+              createPillSheetGroupWithLastTakenDate(DateTime(2020, 9, 3)),
         ),
         // 9/3 のピルの記録を取り消し（lastTakenDate: 9/3 → 9/2）
         createRevertHistory(
@@ -1171,7 +1182,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_1',
             actionType: PillSheetModifiedActionType.beganRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 10)),
             createdAt: baseDate.subtract(const Duration(days: 10)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1180,7 +1192,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_2',
             actionType: PillSheetModifiedActionType.deletedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 5)),
             createdAt: baseDate.subtract(const Duration(days: 5)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1202,7 +1215,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_1',
             actionType: PillSheetModifiedActionType.beganRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 5)),
             createdAt: baseDate.subtract(const Duration(days: 5)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1211,7 +1225,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_2',
             actionType: PillSheetModifiedActionType.deletedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 5)),
             createdAt: baseDate.subtract(const Duration(days: 5)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1233,7 +1248,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_1',
             actionType: PillSheetModifiedActionType.beganRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 5)),
             createdAt: baseDate.subtract(const Duration(days: 5)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1264,7 +1280,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_1',
             actionType: PillSheetModifiedActionType.beganRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 10)),
             createdAt: baseDate.subtract(const Duration(days: 10)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1273,7 +1290,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_2',
             actionType: PillSheetModifiedActionType.endedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 7)),
             createdAt: baseDate.subtract(const Duration(days: 7)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1282,7 +1300,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_3',
             actionType: PillSheetModifiedActionType.deletedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 3)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 3)),
             createdAt: baseDate.subtract(const Duration(days: 3)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1304,7 +1323,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_1',
             actionType: PillSheetModifiedActionType.beganRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 10)),
             createdAt: baseDate.subtract(const Duration(days: 10)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1313,7 +1333,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_2',
             actionType: PillSheetModifiedActionType.endedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 7)),
             createdAt: baseDate.subtract(const Duration(days: 7)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1322,7 +1343,8 @@ void main() {
           PillSheetModifiedHistory(
             id: 'history_3',
             actionType: PillSheetModifiedActionType.deletedRestDuration.name,
-            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            estimatedEventCausingDate:
+                baseDate.subtract(const Duration(days: 7)),
             createdAt: baseDate.subtract(const Duration(days: 7)),
             value: const PillSheetModifiedHistoryValue(),
             beforePillSheetGroup: null,
@@ -1361,7 +1383,10 @@ void main() {
         // allDates: 9/29〜10/4の6日間
         // 服用お休み: 9/29〜10/1の3日間
         // 飲み忘れ: 10/2〜10/4の3日間
-        expect(missedPillDays(histories: histories, maxDate: DateTime.parse("2020-10-05")), 3);
+        expect(
+            missedPillDays(
+                histories: histories, maxDate: DateTime.parse("2020-10-05")),
+            3);
       });
     });
   });
@@ -1396,8 +1421,10 @@ void main() {
         estimatedEventCausingDate: estimatedEventCausingDate,
         createdAt: estimatedEventCausingDate,
         value: value,
-        beforePillSheetGroup: pillSheetGroupWithLastTakenDate(beforeLastTakenDate),
-        afterPillSheetGroup: pillSheetGroupWithLastTakenDate(afterLastTakenDate),
+        beforePillSheetGroup:
+            pillSheetGroupWithLastTakenDate(beforeLastTakenDate),
+        afterPillSheetGroup:
+            pillSheetGroupWithLastTakenDate(afterLastTakenDate),
       );
     }
 
@@ -1410,7 +1437,8 @@ void main() {
       ));
       expect(
         result,
-        unorderedEquals([DateTime(2020, 9, 2), DateTime(2020, 9, 3), DateTime(2020, 9, 4)]),
+        unorderedEquals(
+            [DateTime(2020, 9, 2), DateTime(2020, 9, 3), DateTime(2020, 9, 4)]),
       );
     });
 
