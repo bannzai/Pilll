@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Zum Biispil, wänn du ab em 12.1. für 3 Täg e Paus machsch",
   "exampleRestDurationNumber": "Zum Biispil, wänn du ab Pille 18 für 3 Täg e Pause machsch",
   "exampleRestDurationNumberBalloon": "Pause bim Pille näh\n3 Täg",
+  "exampleRestDurationDateBalloon": "Pillenaahm-Pause\n12.–14. Jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De Pilleblister, wo du grad bruchsch, isch nöd gfunde worde",
   "doNotRevertTakePillInPausePeriod": "Während de Pillepause chasch d Ufzeichnig vo de Iinahm vo de Pille nöd rückgängig mache",

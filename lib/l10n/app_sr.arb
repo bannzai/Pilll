@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "На пример, ако од 12. јануара направите паузу од 3 дана у узимању пилуле",
   "exampleRestDurationNumber": "На пример, ако направите паузу од 3 дана почев од пилуле број 18",
   "exampleRestDurationNumberBalloon": "Пауза у узимању пилула\n3 дана",
+  "exampleRestDurationDateBalloon": "Пауза у узимању пилуле\n12–14. јан.",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Није пронађен блистер који тренутно користите",
   "doNotRevertTakePillInPausePeriod": "Током паузе није могуће поништити запис о узимању пилуле",

@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Наприклад, якщо ви зробите перерву в прийомі пігулок на 3 дні з 1/12",
   "exampleRestDurationNumber": "Наприклад, якщо ви зробите перерву в прийомі пігулок на 3 дні, починаючи з пігулки № 18",
   "exampleRestDurationNumberBalloon": "Пауза в прийомі пігулок\n3 дні",
+  "exampleRestDurationDateBalloon": "Пауза в прийомі пігулок\n12–14 січ.",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не вдалося знайти блістер, який ви зараз використовуєте",
   "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",

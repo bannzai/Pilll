@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από τη λήψη του χαπιού από τις 12/1",
   "exampleRestDurationNumber": "Για παράδειγμα, αν κάνετε παύση 3 ημερών από το χάπι 18",
   "exampleRestDurationNumberBalloon": "Παύση λήψης χαπιών\n3 ημέρες",
+  "exampleRestDurationDateBalloon": "Παύση λήψης χαπιού\n12–14 Ιαν",
   "withNumber": "Αρ. {number}",
   "currentPillSheetNotFound": "Δεν βρέθηκε η καρτέλα χαπιών που χρησιμοποιείτε αυτή τη στιγμή",
   "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταχώριση λήψης χαπιού όσο διαρκεί το διάλειμμα",

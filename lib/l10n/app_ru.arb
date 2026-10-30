@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Например, если вы сделаете перерыв в приёме таблеток на 3 дня с 1/12",
   "exampleRestDurationNumber": "Например, если вы сделаете перерыв в приёме таблеток на 3 дня, начиная с таблетки № 18",
   "exampleRestDurationNumberBalloon": "Пауза в приёме таблеток\n3 дня",
+  "exampleRestDurationDateBalloon": "Пауза в приёме таблеток\n12–14 янв.",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не удалось найти блистер, который вы сейчас используете",
   "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",

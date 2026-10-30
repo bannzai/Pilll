@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "उदाहरणार्थ, 1/12 पासून 3 दिवस गोळी घेणे थांबवल्यास",
   "exampleRestDurationNumber": "उदाहरणार्थ, 18व्या गोळीपासून 3 दिवस गोळी घेणे थांबवल्यास",
   "exampleRestDurationNumberBalloon": "गोळी घेण्यामध्ये विराम\n3 दिवस",
+  "exampleRestDurationDateBalloon": "गोळी घेण्यातील विराम\n१२–१४ जाने.",
   "withNumber": "गोळी क्रमांक {number}",
   "currentPillSheetNotFound": "सध्या वापरत असलेली पिल शीट सापडली नाही",
   "doNotRevertTakePillInPausePeriod": "विरामादरम्यान गोळी घेतल्याची नोंद रद्द करता येत नाही",

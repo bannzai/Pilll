@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਵਿਰਾਮ ਲੈਂਦੇ ਹੋ",
   "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ ਨੰ. 18 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ ਰੱਖੋ",
   "exampleRestDurationNumberBalloon": "ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ\n3 ਦਿਨ",
+  "exampleRestDurationDateBalloon": "ਗੋਲੀ ਲੈਣ ਵਿੱਚ ਵਿਰਾਮ\n12–14 ਜਨਵਰੀ",
   "withNumber": "ਗੋਲੀ ਨੰਬਰ {number}",
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਵਰਤੀ ਜਾ ਰਹੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨਹੀਂ ਮਿਲੀ",
   "doNotRevertTakePillInPausePeriod": "ਵਿਰਾਮ ਦੌਰਾਨ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",

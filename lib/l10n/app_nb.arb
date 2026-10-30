@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "For eksempel hvis du har pillepause i 3 dager fra 12.1",
   "exampleRestDurationNumber": "For eksempel hvis du har pillepause i 3 dager fra og med pille nr. 18",
   "exampleRestDurationNumberBalloon": "Pause fra p-piller\n3 dager",
+  "exampleRestDurationDateBalloon": "Pause fra p-piller\n12.–14. jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pillebrettet du bruker nå, ble ikke funnet",
   "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en p-pille under en pillepause",

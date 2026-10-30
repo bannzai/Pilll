@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ክኒን መውሰድን ካቆሙ",
   "exampleRestDurationNumber": "ለምሳሌ፣ ከክኒን ቁጥር 18 ጀምሮ ለ3 ቀናት መውሰድ ካቆሙ",
   "exampleRestDurationNumberBalloon": "ክኒን ከመውሰድ እረፍት\n3 ቀናት",
+  "exampleRestDurationDateBalloon": "ክኒን የማይወሰድበት ጊዜ\nጃን 12–14",
   "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በክኒን እረፍት ጊዜ የክኒን መውሰድን መቀልበስ አይቻልም",

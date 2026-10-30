@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Օրինակ՝ եթե 1/12-ից սկսած 3 օր դադարեցնեք հաբի ընդունումը",
   "exampleRestDurationNumber": "Օրինակ՝ եթե 18-րդ հաբից սկսած 3 օր դադարեցնեք հաբի ընդունումը",
   "exampleRestDurationNumberBalloon": "Դեղահաբի ընդունման դադար\n3 օր",
+  "exampleRestDurationDateBalloon": "Հաբի ընդունման դադար\nհունվ. 12–14",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Այժմ օգտագործվող հաբերի բլիստեր չի գտնվել",
   "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",

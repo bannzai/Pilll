@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Adibidez, urtarrilaren 12tik aurrera 3 egunez pilulak hartzeari uzten badiozu",
   "exampleRestDurationNumber": "Adibidez, 18. pilulatik aurrera 3 egunez pilula hartzeari uzten badiozu",
   "exampleRestDurationNumberBalloon": "Pilulak hartzeko etena\n3 egun",
+  "exampleRestDurationDateBalloon": "Pilula hartzeko etenaldia\nurt. 12–14",
   "withNumber": "{number}. pilula",
   "currentPillSheetNotFound": "Ez da aurkitu orain erabiltzen duzun pilula-blister",
   "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",

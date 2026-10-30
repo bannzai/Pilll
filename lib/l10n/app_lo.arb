@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ຕົວຢ່າງ: ຖ້າພັກການກິນຢາເມັດເປັນເວລາ 3 ມື້ ເລີ່ມແຕ່ 1/12",
   "exampleRestDurationNumber": "ຕົວຢ່າງ: ຖ້າພັກການກິນຢາເມັດເປັນເວລາ 3 ມື້ ເລີ່ມແຕ່ເລກ 18",
   "exampleRestDurationNumberBalloon": "ພັກການກິນຢາເມັດ\n3 ມື້",
+  "exampleRestDurationDateBalloon": "ໄລຍະພັກກິນຢາ\n12–14 ມ.ກ.",
   "withNumber": "ເມັດທີ {number}",
   "currentPillSheetNotFound": "ບໍ່ພົບແຜງຢາຄຸມທີ່ກຳລັງໃຊ້ຢູ່",
   "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",

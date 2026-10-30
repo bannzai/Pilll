@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Örneğin, 1/12’den itibaren 3 gün hap kullanımına ara verirseniz",
   "exampleRestDurationNumber": "Örneğin, 18. haptan itibaren 3 gün hap kullanımına ara verirseniz",
   "exampleRestDurationNumberBalloon": "Hap almaya ara\n3 gün",
+  "exampleRestDurationDateBalloon": "Hap kullanımına ara\n12–14 Oca",
   "withNumber": "{number} numaralı hap",
   "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
   "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",

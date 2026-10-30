@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Masalan, 1/12 dan boshlab 3 kun davomida tabletkani qabul qilishda tanaffus qilsangiz",
   "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kun davomida tabletkani qabul qilishda tanaffus qilsangiz",
   "exampleRestDurationNumberBalloon": "Tabletka ichishdagi tanaffus\n3 kun",
+  "exampleRestDurationDateBalloon": "Tabletka ichishda tanaffus\n12–14-yanvar",
   "withNumber": "{number}-raqam",
   "currentPillSheetNotFound": "Hozir foydalanayotgan tabletka blister topilmadi",
   "doNotRevertTakePillInPausePeriod": "Tanaffus davrida tabletkani qabul qilish qaydini bekor qilib boʻlmaydi",

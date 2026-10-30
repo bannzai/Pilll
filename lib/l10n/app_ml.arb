@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "ഉദാഹരണത്തിന്, 1/12 മുതൽ 3 ദിവസത്തേക്ക് ഗുളിക കഴിക്കുന്നത് നിർത്തിയാൽ",
   "exampleRestDurationNumber": "ഉദാഹരണത്തിന്, 18-ാം ഗുളിക മുതൽ 3 ദിവസം ഗുളിക കഴിക്കുന്നത് നിർത്തിയാൽ",
   "exampleRestDurationNumberBalloon": "ഗുളിക കഴിക്കുന്നതിൽ ഇടവേള\n3 ദിവസം",
+  "exampleRestDurationDateBalloon": "ഗുളിക കഴിക്കുന്നതിൽ ഇടവേള\nജനു. 12–14",
   "withNumber": "നമ്പർ {number}",
   "currentPillSheetNotFound": "ഇപ്പോൾ ഉപയോഗിക്കുന്ന ഗുളിക സ്ട്രിപ്പ് കണ്ടെത്താനായില്ല",
   "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",

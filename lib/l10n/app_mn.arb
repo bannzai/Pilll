@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Жишээлбэл, 1/12-ноос эхлэн 3 өдөр эмээ уухгүй завсарлавал",
   "exampleRestDurationNumber": "Жишээлбэл, 18 дахь шахмалаас эхлэн 3 өдөр эмээ уухгүй завсарлавал",
   "exampleRestDurationNumberBalloon": "Эм уух түр завсарлага\n3 өдөр",
+  "exampleRestDurationDateBalloon": "Эм уух завсарлага\n1-р сарын 12–14",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Одоо хэрэглэж буй эмийн блистер олдсонгүй",
   "doNotRevertTakePillInPausePeriod": "Завсарлагааны үеэр эм уусан бүртгэлийг цуцлах боломжгүй",

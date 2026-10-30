@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Byvoorbeeld, as jy vanaf 1/12 vir 3 dae ’n pilpouse geneem het",
   "exampleRestDurationNumber": "Byvoorbeeld, as jy vanaf pil 18 vir 3 dae ’n pilpouse geneem het",
   "exampleRestDurationNumberBalloon": "Pillegebruik onderbreek\n3 dae",
+  "exampleRestDurationDateBalloon": "Pouse met die pil\n12–14 Jan",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Die pilstrokie wat jy tans gebruik, kon nie gevind word nie",
   "doNotRevertTakePillInPausePeriod": "Jy kan nie die pilinname tydens die pouse ongedaan maak nie",

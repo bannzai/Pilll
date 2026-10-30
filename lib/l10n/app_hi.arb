@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "उदाहरण के लिए, अगर आपने 12 जनवरी से 3 दिनों का विराम लिया हो",
   "exampleRestDurationNumber": "उदाहरण के लिए, अगर आपने 18वीं गोली से 3 दिनों का विराम लिया हो",
   "exampleRestDurationNumberBalloon": "गोली लेने से विराम\n3 दिन",
+  "exampleRestDurationDateBalloon": "गोली लेने से विराम\n12–14 जनवरी",
   "withNumber": "गोली नंबर {number}",
   "currentPillSheetNotFound": "अभी इस्तेमाल की जा रही पिल स्ट्रिप नहीं मिली",
   "doNotRevertTakePillInPausePeriod": "विराम के दौरान गोली लेने का रिकॉर्ड रद्द नहीं किया जा सकता",

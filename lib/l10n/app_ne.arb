@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "उदाहरणका लागि, तपाईंले 1/12 देखि 3 दिनसम्म चक्की खान रोक्नुभयो भने",
   "exampleRestDurationNumber": "उदाहरणका लागि, तपाईंले 18 नम्बरको चक्कीबाट सुरु गरी 3 दिन चक्की खान रोक्नुभयो भने",
   "exampleRestDurationNumberBalloon": "चक्की खानबाट विश्राम\n3 दिन",
+  "exampleRestDurationDateBalloon": "चक्की सेवनमा विराम\n१२–१४ जनवरी",
   "withNumber": "नं. {number}",
   "currentPillSheetNotFound": "अहिले प्रयोग भइरहेको चक्की पत्ता फेला परेन",
   "doNotRevertTakePillInPausePeriod": "विश्रामको समयमा चक्की खाएको अभिलेख रद्द गर्न मिल्दैन",

@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Isibonelo, uma uthatha ikhefu lokuphuza iphilisi izinsuku ezi-3 kusukela ngo-1/12",
   "exampleRestDurationNumber": "Isibonelo, uma uthatha ikhefu lokuphuza iphilisi izinsuku ezi-3 kusukela kunombolo 18",
   "exampleRestDurationNumberBalloon": "Ikhefu ekuphuzeni amaphilisi\nIzinsuku ezi-3",
+  "exampleRestDurationDateBalloon": "Ikhefu ekuphuzeni amaphilisi\n12–14 Jan",
   "withNumber": "Inombolo {number}",
   "currentPillSheetNotFound": "Ishidi lamaphilisi elisetshenziswa manje alitholakalanga",
   "doNotRevertTakePillInPausePeriod": "Ngesikhathi sekhefu, akunakwenzeka ukuhoxisa irekhodi lokuphuza iphilisi",

@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Contohnya, jika anda berhenti mengambil pil selama 3 hari mulai 1/12",
   "exampleRestDurationNumber": "Contohnya, jika anda berhenti mengambil pil selama 3 hari bermula dari pil nombor 18",
   "exampleRestDurationNumberBalloon": "Jeda mengambil pil\n3 hari",
+  "exampleRestDurationDateBalloon": "Jeda mengambil pil\n12–14 Jan",
   "withNumber": "Pil nombor {number}",
   "currentPillSheetNotFound": "Pek pil yang sedang anda gunakan tidak ditemui",
   "doNotRevertTakePillInPausePeriod": "Rekod pengambilan pil tidak boleh dibatalkan semasa tempoh rehat",

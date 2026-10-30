@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 12 januari 3 dagen pauzeert met de pil",
   "exampleRestDurationNumber": "Bijvoorbeeld als je vanaf pil nr. 18 3 dagen pauzeert met de pil",
   "exampleRestDurationNumberBalloon": "Pauze met de pil\n3 dagen",
+  "exampleRestDurationDateBalloon": "Pauze met de pil\n12–14 jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
   "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",

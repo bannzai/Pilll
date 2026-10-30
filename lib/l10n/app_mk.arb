@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "На пример, ако од 12.1 направите пауза од 3 дена во земањето таблети",
   "exampleRestDurationNumber": "На пример, ако направите пауза од 3 дена во земањето, почнувајќи од таблета број 18",
   "exampleRestDurationNumberBalloon": "Пауза во земање таблета\n3 дена",
+  "exampleRestDurationDateBalloon": "Пауза во земање таблета\n12–14 јан.",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Не е пронајден блистер што моментално го користите",
   "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",

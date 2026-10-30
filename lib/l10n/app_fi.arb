@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Esimerkiksi jos pidät pillereistä 3 päivän tauon 12.1. alkaen",
   "exampleRestDurationNumber": "Esimerkiksi jos pidät 3 päivän tauon pillereistä alkaen pilleristä 18",
   "exampleRestDurationNumberBalloon": "Tauko pillereiden otossa\n3 päivää",
+  "exampleRestDurationDateBalloon": "Tauko pillerin otosta\n12.–14.1.",
   "withNumber": "Nro {number}",
   "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
   "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",

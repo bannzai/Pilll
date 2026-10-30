@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "Például ha 1/12-től 3 nap szünetet tartasz a tabletta szedésében",
   "exampleRestDurationNumber": "Például ha a 18. tablettától kezdve 3 napig szünetet tartasz a szedésben",
   "exampleRestDurationNumberBalloon": "Tablettaszedési szünet\n3 nap",
+  "exampleRestDurationDateBalloon": "Tablettaszedési szünet\njan. 12–14.",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "A jelenleg használt tablettacsomag nem található",
   "doNotRevertTakePillInPausePeriod": "A szünet alatt a tabletta szedésének rögzítése nem vonható vissza",

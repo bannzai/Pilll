@@ -344,6 +344,7 @@
   "exampleRestDurationDate": "לדוגמה, במקרה של הפסקה בנטילת הגלולה למשך 3 ימים החל מ־1/12",
   "exampleRestDurationNumber": "לדוגמה, במקרה של הפסקה בנטילת הגלולה למשך 3 ימים החל מגלולה מס׳ 18",
   "exampleRestDurationNumberBalloon": "הפסקה בנטילת גלולות\n3 ימים",
+  "exampleRestDurationDateBalloon": "הפסקה בנטילת הגלולה\n12–14 בינואר",
   "withNumber": "מס׳ {number}",
   "currentPillSheetNotFound": "לא נמצאה חפיסת הגלולות שבשימוש כעת",
   "doNotRevertTakePillInPausePeriod": "אי אפשר לבטל רישום נטילה של גלולה במהלך ההפסק",
