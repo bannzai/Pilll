@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_device.dart';
 import 'package:pilll/features/appstore_screenshot/screenshot_locale.dart';
@@ -71,12 +72,17 @@ void main() {
       tester.view.resetDevicePixelRatio();
     });
 
-    // グローバル L を差し替えるので、テスト終了時に必ず元へ戻す。
+    // グローバル L と Intl.defaultLocale (モック画面の日付書式の言語) を差し替えるので、テスト終了時に必ず元へ戻す。
     final originalL = L;
-    addTearDown(() => L = originalL);
+    final originalDefaultLocale = Intl.defaultLocale;
+    addTearDown(() {
+      L = originalL;
+      Intl.defaultLocale = originalDefaultLocale;
+    });
 
     for (final lang in langs) {
       L = lookupAppLocalizations(Locale(lang));
+      Intl.defaultLocale = lang;
       for (var position = 0; position < order.length; position++) {
         final page = order[position];
         if (pageFilter != null && !pageFilter.contains(page)) {
