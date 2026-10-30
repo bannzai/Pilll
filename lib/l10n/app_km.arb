@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "រំលង",
   "yazFlexBeginPillNumberPageTitle": "បន្ទះថ្នាំចាប់ផ្តើមនៅការលេបលើកទីប៉ុន្មាននៃវដ្តលេបថ្នាំរបស់អ្នក?",
   "yazFlexBeginPillNumberPageNote": "សូមឆ្លើយដោយផ្អែកលើចំនួនថ្ងៃដែលបានកន្លងផុតចាប់ពីពេលបញ្ចប់ការផ្អាកលេបថ្នាំ មុនពេលចាប់ផ្តើមបន្ទះថ្នាំ",
-  "yazFlexNextInputIsRestDuration": "បន្ទាប់ សូមបញ្ចូលរយៈពេលផ្អាកលេបថ្នាំលើកមុន",
-  "deletePausePeriod": "លុបរយៈពេលសម្រាកពីការលេបថ្នាំគ្រាប់",
-  "deletePausePeriodConfirmMessage": "រយៈពេលផ្អាកលេបថ្នាំនេះនឹងត្រូវដកចេញពីកំណត់ត្រា។ កាលបរិច្ឆេទនៅលើបន្ទះថ្នាំគ្រាប់នឹងត្រូវគណនាឡើងវិញ ដូចជាមិនមានការផ្អាកនោះទេ។",
-  "deletedPausePeriod": "បានលុបរយៈពេលផ្អាកលេបថ្នាំគ្រាប់ហើយ"
+  "yazFlexNextInputIsRestDuration": "បន្ទាប់ សូមបញ្ចូលរយៈពេលផ្អាកលេបថ្នាំលើកមុន"
 }

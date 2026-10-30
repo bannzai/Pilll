@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
   "yazFlexBeginPillNumberPageTitle": "ແຜງຢາເລີ່ມຢູ່ມື້ທີເທົ່າໃດຂອງຮອບການກິນຢາຂອງທ່ານ?",
   "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບຕາມຈຳນວນມື້ທີ່ຜ່ານມານັບແຕ່ຊ່ວງພັກຢາກ່ອນເລີ່ມແຜງຢາສິ້ນສຸດລົງ",
-  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນໄລຍະພັກຢາຄັ້ງກ່ອນ",
-  "deletePausePeriod": "ລຶບໄລຍະພັກການກິນຢາເມັດ",
-  "deletePausePeriodConfirmMessage": "ໄລຍະພັກການກິນຢານີ້ຈະຖືກນຳອອກຈາກບັນທຶກ. ວັນທີໃນແຜງຢາຄຸມຈະຖືກຄິດໄລ່ໃໝ່ ຄືກັບວ່າບໍ່ໄດ້ພັກການກິນຢາ.",
-  "deletedPausePeriod": "ລຶບໄລຍະພັກການກິນຢາເມັດແລ້ວ"
+  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນໄລຍະພັກຢາຄັ້ງກ່ອນ"
 }

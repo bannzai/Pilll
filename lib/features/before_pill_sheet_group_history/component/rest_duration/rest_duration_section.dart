@@ -11,7 +11,6 @@ import 'package:pilll/features/before_pill_sheet_group_history/component/rest_du
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/delete_rest_duration_button.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -80,6 +79,9 @@ Future<DateTimeRange?> _showRestDurationRangePicker(
   );
 }
 
+/// 前回のピルシートグループの服用お休み期間の開始日・終了日を変更する行。
+/// 服用お休み期間の削除を提供しない理由と、問い合わせ時の案内 (期間を 0 日にする) は
+/// `ChangeManualRestDuration` (lib/features/record/components/setting/components/rest_duration/change_manual_rest_duration.dart) の document コメントに書いてある。
 class _ChangeRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheetGroup pillSheetGroup;
@@ -95,11 +97,6 @@ class _ChangeRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.date_range_outlined),
       title: Text(L.changePausePeriod),
       subtitle: Text('${_format(restDuration.beginDate)} - ${endDate != null ? _format(endDate) : L.duringPauseTaking}'),
-      trailing: DeleteRestDurationButton(
-        restDuration: restDuration,
-        pillSheetGroup: pillSheetGroup,
-        onDeleted: () => ref.invalidate(beforePillSheetGroupProvider),
-      ),
       onTap: () async {
         analytics.logEvent(
           name: 'change_rest_duration_in_before_group',

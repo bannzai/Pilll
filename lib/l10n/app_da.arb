@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Spring over",
   "yazFlexBeginPillNumberPageTitle": "Hvilken dag i din p-pillecyklus begynder pillekortet?",
   "yazFlexBeginPillNumberPageNote": "Svar ud fra, hvor mange dage der er gået siden pillepausen, der lå før du begyndte på pakken",
-  "yazFlexNextInputIsRestDuration": "Dernæst kan du indtaste din seneste pillepause",
-  "deletePausePeriod": "Slet pillepause",
-  "deletePausePeriodConfirmMessage": "Denne pillepause fjernes fra dine registreringer. Datoerne på dit pillekort beregnes igen, som om der ikke havde været nogen pause.",
-  "deletedPausePeriod": "Pillepausen er slettet"
+  "yazFlexNextInputIsRestDuration": "Dernæst kan du indtaste din seneste pillepause"
 }

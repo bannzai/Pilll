@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "છોડી દો",
   "yazFlexBeginPillNumberPageTitle": "તમારા ગોળી લેવાના ચક્રના કયા દિવસે ગોળીની સ્ટ્રિપ શરૂ થાય છે?",
   "yazFlexBeginPillNumberPageNote": "ગોળીની સ્ટ્રિપ શરૂ કરતાં પહેલાંનો વિરામ પૂરો થયો ત્યારથી કેટલા દિવસ થયા છે, તેના આધારે કૃપા કરીને જવાબ આપો",
-  "yazFlexNextInputIsRestDuration": "હવે પછી તમે ગોળી લેવાનો અગાઉનો વિરામ દાખલ કરશો",
-  "deletePausePeriod": "ગોળી લેવાના વિરામનો સમયગાળો કાઢી નાખો",
-  "deletePausePeriodConfirmMessage": "ગોળી લેવાનો આ વિરામ તમારા રેકોર્ડમાંથી દૂર કરવામાં આવશે. વિરામ ન લીધો હોય તેમ માનીને ગોળીની સ્ટ્રિપ પરની તારીખોની ફરી ગણતરી કરવામાં આવશે.",
-  "deletedPausePeriod": "ગોળી લેવાનો વિરામ સમયગાળો કાઢી નાખવામાં આવ્યો છે"
+  "yazFlexNextInputIsRestDuration": "હવે પછી તમે ગોળી લેવાનો અગાઉનો વિરામ દાખલ કરશો"
 }

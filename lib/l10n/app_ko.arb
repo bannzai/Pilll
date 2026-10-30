@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "건너뛰기",
   "yazFlexBeginPillNumberPageTitle": "복용 주기의 몇 번째 날에 피임약 시트가 시작되나요?",
   "yazFlexBeginPillNumberPageNote": "시트를 시작하기 전 휴약이 끝난 후 며칠이 지났는지에 따라 답해 주세요",
-  "yazFlexNextInputIsRestDuration": "다음으로 지난 휴약 기간을 입력해요",
-  "deletePausePeriod": "복용 휴식 기간 삭제",
-  "deletePausePeriodConfirmMessage": "이 복용 휴식 기간이 기록에서 삭제돼요. 휴식 기간이 없었던 것으로 보고 알약 시트의 날짜를 다시 계산해요.",
-  "deletedPausePeriod": "복용 휴식 기간을 삭제했어요"
+  "yazFlexNextInputIsRestDuration": "다음으로 지난 휴약 기간을 입력해요"
 }

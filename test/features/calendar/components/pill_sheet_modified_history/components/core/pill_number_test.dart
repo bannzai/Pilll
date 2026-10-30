@@ -1,7 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 
 void main() {
@@ -533,50 +531,6 @@ void main() {
         'id3',
       ]);
       expect(result, '3枚');
-    });
-  });
-
-  group('#deletedRestDuration', () {
-    test('終了済みの服用お休み期間の場合、「開始日~終了日」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.deletedRestDuration(
-        DeletedRestDurationValue(
-          restDuration: RestDuration(
-            id: 'rest_duration_id',
-            beginDate: DateTime.parse('2020-09-10'),
-            endDate: DateTime.parse('2020-09-13'),
-            createdDate: DateTime.parse('2020-09-10'),
-          ),
-        ),
-      );
-      expect(result, '09/10~09/13');
-    });
-
-    test('継続中（endDateがnull）の服用お休み期間の場合、「開始日~」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.deletedRestDuration(
-        DeletedRestDurationValue(
-          restDuration: RestDuration(
-            id: 'rest_duration_id',
-            beginDate: DateTime.parse('2020-09-10'),
-            endDate: null,
-            createdDate: DateTime.parse('2020-09-10'),
-          ),
-        ),
-      );
-      expect(result, '09/10~');
-    });
-
-    test('年をまたぐ服用お休み期間の場合、「開始日~終了日」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.deletedRestDuration(
-        DeletedRestDurationValue(
-          restDuration: RestDuration(
-            id: 'rest_duration_id',
-            beginDate: DateTime.parse('2020-12-30'),
-            endDate: DateTime.parse('2021-01-02'),
-            createdDate: DateTime.parse('2020-12-30'),
-          ),
-        ),
-      );
-      expect(result, '12/30~01/02');
     });
   });
 }

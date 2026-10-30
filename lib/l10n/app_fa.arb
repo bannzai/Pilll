@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "رد کردن",
   "yazFlexBeginPillNumberPageTitle": "ورق قرص از چندمین روز چرخهٔ مصرف شما شروع می‌شود؟",
   "yazFlexBeginPillNumberPageNote": "لطفاً بر اساس تعداد روزهایی که از پایان وقفه پیش از شروع ورق قرص گذشته است پاسخ دهید",
-  "yazFlexNextInputIsRestDuration": "در مرحلهٔ بعد، وقفهٔ قبلی مصرف قرص را وارد می‌کنید",
-  "deletePausePeriod": "حذف دورهٔ وقفه در مصرف قرص",
-  "deletePausePeriodConfirmMessage": "این دورهٔ توقف مصرف از سوابق شما حذف می‌شود. تاریخ‌های ورق قرص دوباره محاسبه می‌شوند، انگار توقفی وجود نداشته است.",
-  "deletedPausePeriod": "دورهٔ وقفه در مصرف قرص حذف شد"
+  "yazFlexNextInputIsRestDuration": "در مرحلهٔ بعد، وقفهٔ قبلی مصرف قرص را وارد می‌کنید"
 }

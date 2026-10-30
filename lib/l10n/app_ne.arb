@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंको चक्की लिने चक्रको कति औँ दिनमा पत्ता सुरु हुन्छ?",
   "yazFlexBeginPillNumberPageNote": "चक्कीको पत्ता सुरु गर्नुअघिको विश्राम सकिएको कति दिन भयो, त्यसका आधारमा कृपया जवाफ दिनुहोस्",
-  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि भर्नुहुनेछ",
-  "deletePausePeriod": "चक्की खाने विश्राम अवधि मेटाउनुहोस्",
-  "deletePausePeriodConfirmMessage": "चक्की खान रोकिएको यो अवधि तपाईंको रेकर्डबाट हटाइनेछ। रोकिएको अवधि नभएझैँ मानेर चक्की पत्ताका मितिहरू फेरि गणना गरिनेछ।",
-  "deletedPausePeriod": "चक्की खाने विश्राम अवधि हटाइएको छ"
+  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि भर्नुहुनेछ"
 }

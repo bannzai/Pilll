@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Laktawan",
   "yazFlexBeginPillNumberPageTitle": "Sa anong araw po ng siklo ng pag-inom ninyo ng pildoras nagsisimula ang pakete?",
   "yazFlexBeginPillNumberPageNote": "Pakisagot ayon sa bilang ng mga araw mula nang matapos ang pahinga bago ninyo sinimulan ang pakete ng pildoras",
-  "yazFlexNextInputIsRestDuration": "Susunod, ilalagay po ninyo ang nakaraang pahinga",
-  "deletePausePeriod": "Burahin ang panahon ng paghinto sa pag-inom ng pildoras",
-  "deletePausePeriodConfirmMessage": "Aalisin sa inyong tala ang panahong ito ng paghinto sa pag-inom ng pildoras. Muling kakalkulahin ang mga petsa sa pakete ng pildoras na para bang walang naging paghinto.",
-  "deletedPausePeriod": "Na-delete na ang pahinga sa pag-inom ng pildoras"
+  "yazFlexNextInputIsRestDuration": "Susunod, ilalagay po ninyo ang nakaraang pahinga"
 }

@@ -64,10 +64,6 @@ mixin _$PillSheetModifiedHistoryValue {
   /// 休薬期間の設定内容を変更した際の情報
   ChangedRestDurationValue? get changedRestDurationValue => throw _privateConstructorUsedError;
 
-  /// 休薬期間削除時の記録
-  /// 記録済みの休薬期間を削除した際の情報
-  DeletedRestDurationValue? get deletedRestDurationValue => throw _privateConstructorUsedError;
-
   /// 表示開始番号変更時の記録
   /// ピルシートの表示番号の開始値を変更した際の情報
   ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber => throw _privateConstructorUsedError;
@@ -98,7 +94,6 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
       EndedRestDurationValue? endedRestDurationValue,
       ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
       ChangedRestDurationValue? changedRestDurationValue,
-      DeletedRestDurationValue? deletedRestDurationValue,
       ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
       ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
@@ -113,7 +108,6 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
   $EndedRestDurationValueCopyWith<$Res>? get endedRestDurationValue;
   $ChangedRestDurationBeginDateValueCopyWith<$Res>? get changedRestDurationBeginDateValue;
   $ChangedRestDurationValueCopyWith<$Res>? get changedRestDurationValue;
-  $DeletedRestDurationValueCopyWith<$Res>? get deletedRestDurationValue;
   $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber;
   $ChangedEndDisplayNumberValueCopyWith<$Res>? get changedEndDisplayNumber;
 }
@@ -142,7 +136,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     Object? endedRestDurationValue = freezed,
     Object? changedRestDurationBeginDateValue = freezed,
     Object? changedRestDurationValue = freezed,
-    Object? deletedRestDurationValue = freezed,
     Object? changedBeginDisplayNumber = freezed,
     Object? changedEndDisplayNumber = freezed,
   }) {
@@ -191,10 +184,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
           ? _value.changedRestDurationValue
           : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
               as ChangedRestDurationValue?,
-      deletedRestDurationValue: freezed == deletedRestDurationValue
-          ? _value.deletedRestDurationValue
-          : deletedRestDurationValue // ignore: cast_nullable_to_non_nullable
-              as DeletedRestDurationValue?,
       changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
           ? _value.changedBeginDisplayNumber
           : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
@@ -340,18 +329,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
 
   @override
   @pragma('vm:prefer-inline')
-  $DeletedRestDurationValueCopyWith<$Res>? get deletedRestDurationValue {
-    if (_value.deletedRestDurationValue == null) {
-      return null;
-    }
-
-    return $DeletedRestDurationValueCopyWith<$Res>(_value.deletedRestDurationValue!, (value) {
-      return _then(_value.copyWith(deletedRestDurationValue: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber {
     if (_value.changedBeginDisplayNumber == null) {
       return null;
@@ -394,7 +371,6 @@ abstract class _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> implements $Pi
       EndedRestDurationValue? endedRestDurationValue,
       ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
       ChangedRestDurationValue? changedRestDurationValue,
-      DeletedRestDurationValue? deletedRestDurationValue,
       ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
       ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
@@ -420,8 +396,6 @@ abstract class _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> implements $Pi
   $ChangedRestDurationBeginDateValueCopyWith<$Res>? get changedRestDurationBeginDateValue;
   @override
   $ChangedRestDurationValueCopyWith<$Res>? get changedRestDurationValue;
-  @override
-  $DeletedRestDurationValueCopyWith<$Res>? get deletedRestDurationValue;
   @override
   $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber;
   @override
@@ -450,7 +424,6 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
     Object? endedRestDurationValue = freezed,
     Object? changedRestDurationBeginDateValue = freezed,
     Object? changedRestDurationValue = freezed,
-    Object? deletedRestDurationValue = freezed,
     Object? changedBeginDisplayNumber = freezed,
     Object? changedEndDisplayNumber = freezed,
   }) {
@@ -499,10 +472,6 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
           ? _value.changedRestDurationValue
           : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
               as ChangedRestDurationValue?,
-      deletedRestDurationValue: freezed == deletedRestDurationValue
-          ? _value.deletedRestDurationValue
-          : deletedRestDurationValue // ignore: cast_nullable_to_non_nullable
-              as DeletedRestDurationValue?,
       changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
           ? _value.changedBeginDisplayNumber
           : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
@@ -531,7 +500,6 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
       this.endedRestDurationValue = null,
       this.changedRestDurationBeginDateValue = null,
       this.changedRestDurationValue = null,
-      this.deletedRestDurationValue = null,
       this.changedBeginDisplayNumber = null,
       this.changedEndDisplayNumber = null})
       : super._();
@@ -604,12 +572,6 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
   @JsonKey()
   final ChangedRestDurationValue? changedRestDurationValue;
 
-  /// 休薬期間削除時の記録
-  /// 記録済みの休薬期間を削除した際の情報
-  @override
-  @JsonKey()
-  final DeletedRestDurationValue? deletedRestDurationValue;
-
   /// 表示開始番号変更時の記録
   /// ピルシートの表示番号の開始値を変更した際の情報
   @override
@@ -624,7 +586,7 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedRestDurationBeginDateValue: $changedRestDurationBeginDateValue, changedRestDurationValue: $changedRestDurationValue, deletedRestDurationValue: $deletedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
+    return 'PillSheetModifiedHistoryValue(createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet, beganRestDurationValue: $beganRestDurationValue, endedRestDurationValue: $endedRestDurationValue, changedRestDurationBeginDateValue: $changedRestDurationBeginDateValue, changedRestDurationValue: $changedRestDurationValue, changedBeginDisplayNumber: $changedBeginDisplayNumber, changedEndDisplayNumber: $changedEndDisplayNumber)';
   }
 
   @override
@@ -645,7 +607,6 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
             (identical(other.changedRestDurationBeginDateValue, changedRestDurationBeginDateValue) ||
                 other.changedRestDurationBeginDateValue == changedRestDurationBeginDateValue) &&
             (identical(other.changedRestDurationValue, changedRestDurationValue) || other.changedRestDurationValue == changedRestDurationValue) &&
-            (identical(other.deletedRestDurationValue, deletedRestDurationValue) || other.deletedRestDurationValue == deletedRestDurationValue) &&
             (identical(other.changedBeginDisplayNumber, changedBeginDisplayNumber) || other.changedBeginDisplayNumber == changedBeginDisplayNumber) &&
             (identical(other.changedEndDisplayNumber, changedEndDisplayNumber) || other.changedEndDisplayNumber == changedEndDisplayNumber));
   }
@@ -665,7 +626,6 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
       endedRestDurationValue,
       changedRestDurationBeginDateValue,
       changedRestDurationValue,
-      deletedRestDurationValue,
       changedBeginDisplayNumber,
       changedEndDisplayNumber);
 
@@ -696,7 +656,6 @@ abstract class _PillSheetModifiedHistoryValue extends PillSheetModifiedHistoryVa
       final EndedRestDurationValue? endedRestDurationValue,
       final ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
       final ChangedRestDurationValue? changedRestDurationValue,
-      final DeletedRestDurationValue? deletedRestDurationValue,
       final ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
       final ChangedEndDisplayNumberValue? changedEndDisplayNumber}) = _$PillSheetModifiedHistoryValueImpl;
   const _PillSheetModifiedHistoryValue._() : super._();
@@ -758,11 +717,6 @@ abstract class _PillSheetModifiedHistoryValue extends PillSheetModifiedHistoryVa
   /// 休薬期間内容変更時の記録（v2から追加）
   /// 休薬期間の設定内容を変更した際の情報
   ChangedRestDurationValue? get changedRestDurationValue;
-  @override
-
-  /// 休薬期間削除時の記録
-  /// 記録済みの休薬期間を削除した際の情報
-  DeletedRestDurationValue? get deletedRestDurationValue;
   @override
 
   /// 表示開始番号変更時の記録
@@ -2419,154 +2373,6 @@ abstract class _ChangedRestDurationValue extends ChangedRestDurationValue {
   @override
   @JsonKey(ignore: true)
   _$$ChangedRestDurationValueImplCopyWith<_$ChangedRestDurationValueImpl> get copyWith => throw _privateConstructorUsedError;
-}
-
-DeletedRestDurationValue _$DeletedRestDurationValueFromJson(Map<String, dynamic> json) {
-  return _DeletedRestDurationValue.fromJson(json);
-}
-
-/// @nodoc
-mixin _$DeletedRestDurationValue {
-  /// 削除された休薬期間の情報
-  /// 削除後のピルシートグループには残らないため、どの服用お休み期間を削除したかを表示するために記録する
-  RestDuration get restDuration => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DeletedRestDurationValueCopyWith<DeletedRestDurationValue> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $DeletedRestDurationValueCopyWith<$Res> {
-  factory $DeletedRestDurationValueCopyWith(DeletedRestDurationValue value, $Res Function(DeletedRestDurationValue) then) =
-      _$DeletedRestDurationValueCopyWithImpl<$Res, DeletedRestDurationValue>;
-  @useResult
-  $Res call({RestDuration restDuration});
-
-  $RestDurationCopyWith<$Res> get restDuration;
-}
-
-/// @nodoc
-class _$DeletedRestDurationValueCopyWithImpl<$Res, $Val extends DeletedRestDurationValue> implements $DeletedRestDurationValueCopyWith<$Res> {
-  _$DeletedRestDurationValueCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? restDuration = null,
-  }) {
-    return _then(_value.copyWith(
-      restDuration: null == restDuration
-          ? _value.restDuration
-          : restDuration // ignore: cast_nullable_to_non_nullable
-              as RestDuration,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RestDurationCopyWith<$Res> get restDuration {
-    return $RestDurationCopyWith<$Res>(_value.restDuration, (value) {
-      return _then(_value.copyWith(restDuration: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$DeletedRestDurationValueImplCopyWith<$Res> implements $DeletedRestDurationValueCopyWith<$Res> {
-  factory _$$DeletedRestDurationValueImplCopyWith(_$DeletedRestDurationValueImpl value, $Res Function(_$DeletedRestDurationValueImpl) then) =
-      __$$DeletedRestDurationValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({RestDuration restDuration});
-
-  @override
-  $RestDurationCopyWith<$Res> get restDuration;
-}
-
-/// @nodoc
-class __$$DeletedRestDurationValueImplCopyWithImpl<$Res> extends _$DeletedRestDurationValueCopyWithImpl<$Res, _$DeletedRestDurationValueImpl>
-    implements _$$DeletedRestDurationValueImplCopyWith<$Res> {
-  __$$DeletedRestDurationValueImplCopyWithImpl(_$DeletedRestDurationValueImpl _value, $Res Function(_$DeletedRestDurationValueImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? restDuration = null,
-  }) {
-    return _then(_$DeletedRestDurationValueImpl(
-      restDuration: null == restDuration
-          ? _value.restDuration
-          : restDuration // ignore: cast_nullable_to_non_nullable
-              as RestDuration,
-    ));
-  }
-}
-
-/// @nodoc
-
-@JsonSerializable(explicitToJson: true)
-class _$DeletedRestDurationValueImpl extends _DeletedRestDurationValue {
-  const _$DeletedRestDurationValueImpl({required this.restDuration}) : super._();
-
-  factory _$DeletedRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$DeletedRestDurationValueImplFromJson(json);
-
-  /// 削除された休薬期間の情報
-  /// 削除後のピルシートグループには残らないため、どの服用お休み期間を削除したかを表示するために記録する
-  @override
-  final RestDuration restDuration;
-
-  @override
-  String toString() {
-    return 'DeletedRestDurationValue(restDuration: $restDuration)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeletedRestDurationValueImpl &&
-            (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, restDuration);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeletedRestDurationValueImplCopyWith<_$DeletedRestDurationValueImpl> get copyWith =>
-      __$$DeletedRestDurationValueImplCopyWithImpl<_$DeletedRestDurationValueImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$DeletedRestDurationValueImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _DeletedRestDurationValue extends DeletedRestDurationValue {
-  const factory _DeletedRestDurationValue({required final RestDuration restDuration}) = _$DeletedRestDurationValueImpl;
-  const _DeletedRestDurationValue._() : super._();
-
-  factory _DeletedRestDurationValue.fromJson(Map<String, dynamic> json) = _$DeletedRestDurationValueImpl.fromJson;
-
-  @override
-
-  /// 削除された休薬期間の情報
-  /// 削除後のピルシートグループには残らないため、どの服用お休み期間を削除したかを表示するために記録する
-  RestDuration get restDuration;
-  @override
-  @JsonKey(ignore: true)
-  _$$DeletedRestDurationValueImplCopyWith<_$DeletedRestDurationValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(Map<String, dynamic> json) {

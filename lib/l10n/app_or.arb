@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "ଛାଡ଼ନ୍ତୁ",
   "yazFlexBeginPillNumberPageTitle": "ଆପଣଙ୍କ ବଟିକା ଖାଇବା ଚକ୍ରର କେଉଁ ଦିନରେ ପତାଟି ଆରମ୍ଭ ହୁଏ?",
   "yazFlexBeginPillNumberPageNote": "ବଟିକା ପତା ଆରମ୍ଭ କରିବା ପୂର୍ବର ବିରତି ଶେଷ ହେବା ପରଠାରୁ କେତେ ଦିନ ବିତିଛି, ତାହା ଆଧାରରେ ଦୟାକରି ଉତ୍ତର ଦିଅନ୍ତୁ",
-  "yazFlexNextInputIsRestDuration": "ପରବର୍ତ୍ତୀ ସୋପାନରେ ବଟିକା ଖାଇବାର ପୂର୍ବ ବିରତି ଅବଧି ଲେଖନ୍ତୁ",
-  "deletePausePeriod": "ବଟିକା ଖାଇବା ବିରତିର ଅବଧି ବିଲୋପ କରନ୍ତୁ",
-  "deletePausePeriodConfirmMessage": "ବଟିକା ଖାଇବାର ଏହି ବିରତି ଆପଣଙ୍କ ରେକର୍ଡରୁ ହଟାଯିବ। ବିରତି ନଥିଲା ବୋଲି ଧରି ବଟିକା ସିଟର ତାରିଖଗୁଡ଼ିକ ପୁଣି ଗଣନା କରାଯିବ।",
-  "deletedPausePeriod": "ବଟିକା ଖାଇବାର ବିରତି ଅବଧି ବିଲୋପ କରାଯାଇଛି"
+  "yazFlexNextInputIsRestDuration": "ପରବର୍ତ୍ତୀ ସୋପାନରେ ବଟିକା ଖାଇବାର ପୂର୍ବ ବିରତି ଅବଧି ଲେଖନ୍ତୁ"
 }

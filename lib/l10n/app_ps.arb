@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "پرېږدئ",
   "yazFlexBeginPillNumberPageTitle": "د ګولیو پاڼه د ګولیو د اخیستلو د دورې په څویمه ورځ پیلېږي؟",
   "yazFlexBeginPillNumberPageNote": "مهرباني وکړئ د ګولیو د پاڼې له پیل مخکې د وقف له پای ته رسېدو راهیسې د تېرو ورځو د شمېر پر بنسټ ځواب ورکړئ",
-  "yazFlexNextInputIsRestDuration": "په راتلونکې پاڼه کې به پخوانی وقف ولیکئ",
-  "deletePausePeriod": "د ګولیو د اخیستلو د وقفې موده ړنګه کړئ",
-  "deletePausePeriodConfirmMessage": "د ګولیو د اخیستلو دا دمه به له ثبتونو لرې شي. د ګولیو پاڼ نېټې به داسې بیا محاسبه شي لکه دمه چې نه وي شوې.",
-  "deletedPausePeriod": "د ګولیو د اخیستلو دمه حذف شوه"
+  "yazFlexNextInputIsRestDuration": "په راتلونکې پاڼه کې به پخوانی وقف ولیکئ"
 }

@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Saltatu",
   "yazFlexBeginPillNumberPageTitle": "Pilula-orriaren lehen pilula zikloko zenbatgarren hartzea da?",
   "yazFlexBeginPillNumberPageNote": "Erantzun, mesedez, pilula-orria hasi aurreko atsedenaldia amaitu zenetik igarotako egunen arabera",
-  "yazFlexNextInputIsRestDuration": "Hurrengo urratsean aurreko atsedenaldia sartuko duzu",
-  "deletePausePeriod": "Pilula hartzeko atsedenaldia ezabatu",
-  "deletePausePeriodConfirmMessage": "Pilulak hartzeko etenaldi hau zure erregistroetatik kenduko da. Pilula-blisterreko datak berriro kalkulatuko dira, etenaldirik izan ez balitz bezala.",
-  "deletedPausePeriod": "Pilula hartzeko atsedenaldia ezabatu da"
+  "yazFlexNextInputIsRestDuration": "Hurrengo urratsean aurreko atsedenaldia sartuko duzu"
 }

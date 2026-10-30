@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Pular",
   "yazFlexBeginPillNumberPageTitle": "Em que dia do seu ciclo de uso da pílula começa a cartela?",
   "yazFlexBeginPillNumberPageNote": "Responda com base nos dias que se passaram desde o fim da pausa antes de iniciar a cartela",
-  "yazFlexNextInputIsRestDuration": "Em seguida, informe a pausa anterior no uso da pílula",
-  "deletePausePeriod": "Excluir período de pausa da pílula",
-  "deletePausePeriodConfirmMessage": "Esta pausa no uso da pílula será removida dos seus registros. As datas da cartela serão recalculadas como se a pausa não tivesse acontecido.",
-  "deletedPausePeriod": "O período de pausa da pílula foi excluído"
+  "yazFlexNextInputIsRestDuration": "Em seguida, informe a pausa anterior no uso da pílula"
 }

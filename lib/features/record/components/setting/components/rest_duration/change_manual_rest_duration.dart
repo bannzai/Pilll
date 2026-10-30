@@ -7,13 +7,22 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/delete_rest_duration_button.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+/// 服用お休み期間の開始日・終了日を変更する行。
+///
+/// 服用お休み期間の「削除」はあえて提供しない (https://github.com/bannzai/Pilll/issues/2035 )。
+/// 前のピルシートの服用お休みを取り除くと、後続のピルシートの開始日が服用お休みの日数分だけ前にずれ、
+/// 今飲んでいるシートの今日の番号が変わる。その時に服用記録を残すと飲んでいないピルが服用済みの表示になり、
+/// 消すと服用記録そのものが失われるため、どちらに倒しても当人の記録と食い違う。
+/// 一方、服用お休み期間が 1 つも無い状態に戻したいケースは稀で、ピルシートの変更 (開始日の変更・削除) でも代替できる。
+/// ユーザーから問い合わせがあり、どうしても取り除きたい時は、この行の変更で開始日と終了日を同じ日にして
+/// 期間を 0 日にする操作を案内する (DateRangePicker は同じ日を開始日と終了日に選べる)。
+/// 0 日にした時も後続のピルシートの開始日は同じ理由でずれるので、その点も合わせて伝える。
 class ChangeManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheetGroup pillSheetGroup;
@@ -57,19 +66,11 @@ class ChangeManualRestDuration extends HookConsumerWidget {
       showErrorAlert(context, e);
     }
 
-    final deleteButton = DeleteRestDurationButton(
-      restDuration: restDuration,
-      pillSheetGroup: pillSheetGroup,
-      // 受け取った pillSheetGroup は削除前の状態のままなので、変更時と同じくボトムシートを閉じる
-      onDeleted: () => Navigator.of(context).pop(),
-    );
-
     if (end == null) {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
         title: Text(L.editPausePeriod),
         subtitle: Text(begin),
-        trailing: deleteButton,
         onTap: () async {
           analytics.logEvent(
             name: 'change_manual_rest_duration_day',
@@ -120,7 +121,6 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         leading: const Icon(Icons.date_range_outlined),
         title: Text(L.changePausePeriod),
         subtitle: Text('$begin - $end'),
-        trailing: deleteButton,
         onTap: () async {
           analytics.logEvent(
             name: 'change_manual_rest_duration_range',

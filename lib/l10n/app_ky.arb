@@ -582,8 +582,5 @@
   "yazFlexSkipRestDurationDialogSkip": "Өткөрүп жиберүү",
   "yazFlexBeginPillNumberPageTitle": "Таблетка ичүү циклиңиздин канчанчы күнүндө блистер башталат?",
   "yazFlexBeginPillNumberPageNote": "Блистерди баштоонун алдындагы тыныгуу аяктагандан бери канча күн өткөнүнө жараша жооп бериңиз",
-  "yazFlexNextInputIsRestDuration": "Андан кийин таблетка ичүүдөгү мурунку тыныгуу мөөнөтүн киргизиңиз",
-  "deletePausePeriod": "Таблетка ичүүдөгү тыныгуу мезгилин өчүрүңүз",
-  "deletePausePeriodConfirmMessage": "Дары ичүүдөгү бул тыныгуу жазууларыңыздан өчүрүлөт. Таблетка блистер күндөрү тыныгуу болбогондой кайра эсептелет.",
-  "deletedPausePeriod": "Таблетка ичүүдөгү тыныгуу мезгили өчүрүлдү"
+  "yazFlexNextInputIsRestDuration": "Андан кийин таблетка ичүүдөгү мурунку тыныгуу мөөнөтүн киргизиңиз"
 }
