@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Beginn der Pillenpause auswählen",
   "selectPauseEndDateAsResumeDate": "Enddatum = wieder Pille nehmen",
   "pauseResumeDateLimitIsToday": "Wiederbeginn: bis heute",
-  "pauseResumeDateLimitBeforeNextPause": "Neustart bis {date}",
   "pauseStartDate": "Beginn der Pillenpause",
   "pauseEndDate": "Ende der Pillenpause",
   "endPillSheet": "Pillenblister aufgebraucht",

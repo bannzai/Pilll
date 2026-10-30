@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Vybrat datum začátku pauzy v užívání pilulek",
   "selectPauseEndDateAsResumeDate": "Konec = den obnovení užívání",
   "pauseResumeDateLimitIsToday": "Obnovení užívání: do dneška",
-  "pauseResumeDateLimitBeforeNextPause": "Obnovit užívání do další pauzy {date}",
   "pauseStartDate": "Datum začátku pauzy v užívání pilulek",
   "pauseEndDate": "Datum konce pauzy v užívání pilulek",
   "endPillSheet": "Blistr dokončen",

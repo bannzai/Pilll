@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Selecione a data de início da pausa da pílula",
   "selectPauseEndDateAsResumeDate": "Data final = retomar a pílula",
   "pauseResumeDateLimitIsToday": "Retomar a pílula: até hoje",
-  "pauseResumeDateLimitBeforeNextPause": "Retome até a próxima pausa em {date}",
   "pauseStartDate": "Data de início da pausa da pílula",
   "pauseEndDate": "Data de término da pausa da pílula",
   "endPillSheet": "Cartela finalizada",

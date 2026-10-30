@@ -108,7 +108,6 @@
   "selectPauseStartDate": "د ګولیو د اخیستلو د وقفې د پیل نېټه وټاکئ",
   "selectPauseEndDateAsResumeDate": "د پای نېټه = د ګولۍ بیا پیل",
   "pauseResumeDateLimitIsToday": "د بیا اخیستلو ورځ: تر نن پورې",
-  "pauseResumeDateLimitBeforeNextPause": "تر بلې وقفې {date} پورې بیا پیل کړئ",
   "pauseStartDate": "د ګولیو له اخیستو د وقفې د پیل نېټه",
   "pauseEndDate": "د ګولیو له اخیستو د وقفې د پای نېټه",
   "endPillSheet": "د ګولیو پاڼه پای ته ورسېده",

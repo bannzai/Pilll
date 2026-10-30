@@ -108,7 +108,6 @@
   "selectPauseStartDate": "انتخاب تاریخ شروع وقفه در مصرف قرص",
   "selectPauseEndDateAsResumeDate": "تاریخ پایان = شروع دوباره قرص",
   "pauseResumeDateLimitIsToday": "روز شروع دوباره: تا امروز",
-  "pauseResumeDateLimitBeforeNextPause": "شروع دوباره تا وقفه بعدی در {date}",
   "pauseStartDate": "تاریخ شروع وقفه در مصرف قرص",
   "pauseEndDate": "تاریخ پایان وقفه در مصرف قرص",
   "endPillSheet": "ورق قرص تمام شد",

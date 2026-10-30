@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Wybierz datę rozpoczęcia przerwy w przyjmowaniu tabletek",
   "selectPauseEndDateAsResumeDate": "Data końca = powrót do tabletek",
   "pauseResumeDateLimitIsToday": "Wznowienie brania: do dziś",
-  "pauseResumeDateLimitBeforeNextPause": "Wznów przed kolejną przerwą {date}",
   "pauseStartDate": "Data rozpoczęcia przerwy w przyjmowaniu tabletek",
   "pauseEndDate": "Data zakończenia przerwy w przyjmowaniu tabletek",
   "endPillSheet": "blist zużyty",

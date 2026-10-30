@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Vyberte dátum začiatku prestávky v užívaní tabletiek",
   "selectPauseEndDateAsResumeDate": "Koniec = obnovenie užívania",
   "pauseResumeDateLimitIsToday": "Obnovenie užívania: do dnes",
-  "pauseResumeDateLimitBeforeNextPause": "Obnoviť do {date}",
   "pauseStartDate": "Dátum začiatku prestávky v užívaní tabletiek",
   "pauseEndDate": "Dátum konca prestávky v užívaní tabletiek",
   "endPillSheet": "Blist sa skončil",

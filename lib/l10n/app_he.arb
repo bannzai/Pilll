@@ -108,7 +108,6 @@
   "selectPauseStartDate": "בחירת תאריך תחילת ההפסקה בנטילת הגלולה",
   "selectPauseEndDateAsResumeDate": "תאריך סיום = חזרה לנטילה",
   "pauseResumeDateLimitIsToday": "יום חידוש הנטילה: עד היום",
-  "pauseResumeDateLimitBeforeNextPause": "חידוש הנטילה עד להפסקה הבאה ב־{date}",
   "pauseStartDate": "תאריך תחילת ההפסקה בנטילת הגלולה",
   "pauseEndDate": "תאריך סיום ההפסקה בנטילת הגלולה",
   "endPillSheet": "חפיסת הגלולות הסתיימה",

@@ -108,7 +108,6 @@
   "selectPauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ বেছে নিন",
   "selectPauseEndDateAsResumeDate": "শেষের দিন = আবার পিল শুরুর দিন",
   "pauseResumeDateLimitIsToday": "আবার পিল খাওয়ার দিন: আজ পর্যন্ত",
-  "pauseResumeDateLimitBeforeNextPause": "{date} এর মধ্যে আবার শুরু করুন",
   "pauseStartDate": "পিল খাওয়ার বিরতি শুরুর তারিখ",
   "pauseEndDate": "পিল খাওয়ার বিরতি শেষের তারিখ",
   "endPillSheet": "পিল শিট শেষ হয়েছে",

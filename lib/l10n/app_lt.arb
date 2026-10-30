@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Pasirinkite tablečių vartojimo pertraukos pradžios datą",
   "selectPauseEndDateAsResumeDate": "Pabaiga = vėl gerti",
   "pauseResumeDateLimitIsToday": "Vartojimo atnaujinimas: iki šiandien",
-  "pauseResumeDateLimitBeforeNextPause": "Atnaujinti iki kitos pertraukos {date}",
   "pauseStartDate": "Tablečių vartojimo pertraukos pradžios data",
   "pauseEndDate": "Tablečių vartojimo pertraukos pabaigos data",
   "endPillSheet": "Tablečių plokštelė baigta",

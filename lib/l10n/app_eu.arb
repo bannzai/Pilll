@@ -108,7 +108,6 @@
   "selectPauseStartDate": "Aukeratu pilula hartzeko etenaldiaren hasiera-data",
   "selectPauseEndDateAsResumeDate": "Amaiera = pilula berriz hartzea",
   "pauseResumeDateLimitIsToday": "Berriz hartzeko eguna: gaur arte",
-  "pauseResumeDateLimitBeforeNextPause": "Hasi berriro {date}rako",
   "pauseStartDate": "Pilula hartzeko etenaldiaren hasiera-data",
   "pauseEndDate": "Pilula hartzeko etenaldiaren amaiera-data",
   "endPillSheet": "Pilula-blisterra amaituta",
