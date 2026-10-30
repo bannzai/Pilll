@@ -12,6 +12,8 @@ import 'package:intl/intl.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
@@ -105,8 +107,13 @@ Future<void> handleNotificationAction(
     ).wait;
     Intl.defaultLocale = 'ja';
     // この isolate では AppLocalizationResolver が動かず L が日本語の初期値のままになる。
-    // 通知の再登録 (飲み忘れ時の既定文言など) を画面と同じ言語にするため、MaterialApp の既定の解決 (basicLocaleListResolution) で端末の言語から決める
-    L = lookupAppLocalizations(basicLocaleListResolution(PlatformDispatcher.instance.locales, AppLocalizations.supportedLocales));
+    // 通知の再登録 (飲み忘れ時の既定文言など) を画面と同じ言語にするため、AppLocalizationResolver と同じく
+    // debug ビルドは開発者オプションの表示言語、release ビルドは MaterialApp の既定の解決 (basicLocaleListResolution) で端末の言語から決める
+    L = lookupAppLocalizations(
+      kDebugMode
+          ? debugAppLocale(savedLanguageCode: (await SharedPreferences.getInstance()).getString(StringKey.debugAppLanguageCode))
+          : basicLocaleListResolution(PlatformDispatcher.instance.locales, AppLocalizations.supportedLocales),
+    );
 
     await LocalNotificationService.setupTimeZone();
 
