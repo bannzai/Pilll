@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Выбраць дату пачатку перапынку ў прыёме пігулак",
   "selectPauseEndDateAsResumeDate": "Дата канца = аднаўленне прыёму",
+  "pauseResumeDateLimitIsToday": "Аднаўленне прыёму: да сёння",
   "pauseStartDate": "Дата пачатку перапынку ў прыёме пігулак",
   "pauseEndDate": "Дата заканчэння перапынку ў прыёме пігулак",
   "endPillSheet": "Блістар скончыўся",

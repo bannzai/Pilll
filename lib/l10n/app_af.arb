@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Kies die begindatum van jou pilpouse",
   "selectPauseEndDateAsResumeDate": "Einddatum = herbegin pil",
+  "pauseResumeDateLimitIsToday": "Hervatdag: tot vandag",
   "pauseStartDate": "Begindatum van pilpouse",
   "pauseEndDate": "Einddatum van pilpouse",
   "endPillSheet": "Pilstrokie voltooi",

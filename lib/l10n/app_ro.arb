@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "Nr. {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Alege data de început a pauzei de la pilulă",
   "selectPauseEndDateAsResumeDate": "Data de sfârșit = reiei pilula",
+  "pauseResumeDateLimitIsToday": "Reluarea pilulei: până azi",
   "pauseStartDate": "Data începerii pauzei de la pilulă",
   "pauseEndDate": "Data încheierii pauzei de la pilulă",
   "endPillSheet": "Blister terminat",

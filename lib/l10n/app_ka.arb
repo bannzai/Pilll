@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "№ {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "აირჩიეთ აბების მიღების შესვენების დაწყების თარიღი",
   "selectPauseEndDateAsResumeDate": "დასრულების დღე = მიღების განახლება",
+  "pauseResumeDateLimitIsToday": "მიღების განახლება: დღემდე",
   "pauseStartDate": "აბების მიღების შესვენების დაწყების თარიღი",
   "pauseEndDate": "აბების მიღების შესვენების დასრულების თარიღი",
   "endPillSheet": "აბების ბლისტერი დასრულებულია",

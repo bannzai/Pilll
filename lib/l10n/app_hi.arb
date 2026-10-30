@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "गोली नंबर {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "गोली लेने में विराम शुरू होने की तारीख चुनें",
   "selectPauseEndDateAsResumeDate": "अंतिम तारीख = फिर गोली लेने का दिन",
+  "pauseResumeDateLimitIsToday": "फिर से गोली लेने का दिन: आज तक",
   "pauseStartDate": "गोली लेने में विराम शुरू होने की तारीख",
   "pauseEndDate": "गोली लेने में विराम खत्म होने की तारीख",
   "endPillSheet": "पिल स्ट्रिप खत्म हो गई",

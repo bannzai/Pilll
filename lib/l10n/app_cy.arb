@@ -107,6 +107,7 @@
   "beforeEndToAfterDisplayNumberEndPillNumber": "rhif {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r seibiant o gymryd y bilsen",
   "selectPauseEndDateAsResumeDate": "Dyddiad gorffen = ailgychwyn y bilsen",
+  "pauseResumeDateLimitIsToday": "Ailddechrau cymryd: hyd heddiw",
   "pauseStartDate": "Dyddiad dechrau'r seibiant o gymryd y bilsen",
   "pauseEndDate": "Dyddiad gorffen y seibiant rhag cymryd y bilsen",
   "endPillSheet": "Stribed pils wedi gorffen",
