@@ -1356,7 +1356,7 @@
   },
   "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
   "@twentyOnePlusSevenPlacebo": {
-    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7 placebo)。\n[翻訳の決定 pt] 「21 pílulas + 7 pílulas placebo」ではなく「21 pílulas + 7 placebos」: 同じ画面の「24 pílulas + 4 placebos」と偽薬の表記を揃える (https://github.com/bannzai/Pilll/issues/1986)"
+    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。 ピルの種類を選ぶカード (幅 190pt 弱、文字 14pt) の 2 行目の説明。「21錠＋7錠偽薬」のように数字と記号を使った短い表記にし、文にしない (例: 21 pills + 7 placebo)。\n[翻訳の決定 zh] 「21片药片＋7片安慰剂」ではなく「21片药＋7片安慰剂」: 同じ画面のほかのカードの「片药」と表記を揃え、カード内で「安慰剂」が 2 行に割れないようにする (https://github.com/bannzai/Pilll/issues/1987)\n[翻訳の決定 pt] 「21 pílulas + 7 pílulas placebo」ではなく「21 pílulas + 7 placebos」: 同じ画面の「24 pílulas + 4 placebos」と偽薬の表記を揃える (https://github.com/bannzai/Pilll/issues/1986)"
   },
   "allActivePills": "すべて実薬",
   "@allActivePills": {
