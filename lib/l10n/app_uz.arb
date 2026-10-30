@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Hali belgilanmagan",
   "selectPlannedResumeDate": "Tabletka qabul qilishni qayta boshlashning rejalashtirilgan sanasini tanlang",
   "pauseEndDateLimitIsToday": "Tugash sanasi eng kechi bugun boʻlishi mumkin",
-  "pauseEndDateLimitBeforeNextPause": "Keyingi tabletka qabul qilish tanaffusi ({date} dan) bilan ustma-ust kelmaydigan kungacha",
+  "pauseEndDateLimitBeforeNextPause": "Keyingi qabul qilish pauzasi ({date} dan) bilan ustma-ust kelmaydigan kungacha",
   "pauseStartDateLimit": "Boshlanish sanasini {date}gacha tanlashingiz mumkin",
   "initialSettingAskYazFlex": "Siz Yaz Flex tabletkasini qabul qilasizmi?",
   "initialSettingAskYazFlexDescription": "“Ha”ni tanlasangiz, tanaffus tugaganidan beri necha kun oʻtgani koʻrsatiladi",

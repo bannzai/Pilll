@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "لا نه ده ټاکل شوې",
   "selectPlannedResumeDate": "د ګولۍ د بیا اخیستلو پلان شوې نېټه وټاکئ",
   "pauseEndDateLimitIsToday": "د پای نېټه تر نن ورځې پورې ټاکلی شئ",
-  "pauseEndDateLimitBeforeNextPause": "تر هغې ورځې پورې چې د ګولۍ خوړلو له بلې وقفې (له {date} څخه) سره نه یوځای کېږي",
+  "pauseEndDateLimitBeforeNextPause": "تر هغې ورځې پورې چې د ګولۍ اخیستلو له راتلونکي لنډمهاله درول سره (له {date} څخه) سمون ونه لري",
   "pauseStartDateLimit": "تاسو د پیل نېټه تر {date} پورې ټاکلی شئ",
   "initialSettingAskYazFlex": "ایا تاسو Yaz Flex ګولۍ اخلئ؟",
   "initialSettingAskYazFlexDescription": "که «هو» وټاکئ، له وقف پای ته رسېدو وروسته د تېر شوو ورځو شمېر به ښودل کېږي",

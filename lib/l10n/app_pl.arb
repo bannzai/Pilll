@@ -566,7 +566,7 @@
   "plannedResumeDateNotSet": "Nie ustawiono",
   "selectPlannedResumeDate": "Wybierz planowaną datę wznowienia przyjmowania tabletek",
   "pauseEndDateLimitIsToday": "Data zakończenia może przypadać najpóźniej na dziś",
-  "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie pokrywa się z kolejną przerwą w przyjmowaniu pigułek (od {date})",
+  "pauseEndDateLimitBeforeNextPause": "Do dnia, który nie pokrywa się z kolejnym wstrzymaniem przyjmowania (od {date})",
   "pauseStartDateLimit": "Data rozpoczęcia może przypadać najpóźniej na {date}",
   "initialSettingAskYazFlex": "Czy bierzesz Yaz Flex?",
   "initialSettingAskYazFlexDescription": "Po wybraniu „Tak” ustawimy wyświetlanie liczby dni od końca przerwy",
