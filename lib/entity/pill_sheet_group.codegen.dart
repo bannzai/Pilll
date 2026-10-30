@@ -723,9 +723,8 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       if (otherEndDate != null && !other.beginDate.date().isBefore(otherEndDate.date())) {
         return false;
       }
-      final beginsBeforeOtherEnds = otherEndDate == null || beginDate.date().isBefore(otherEndDate.date());
-      final otherBeginsBeforeEnds = endDate == null || other.beginDate.date().isBefore(endDate.date());
-      return beginsBeforeOtherEnds && otherBeginsBeforeEnds;
+      return (otherEndDate == null || beginDate.date().isBefore(otherEndDate.date())) &&
+          (endDate == null || other.beginDate.date().isBefore(endDate.date()));
     });
   }
 

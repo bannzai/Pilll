@@ -462,10 +462,12 @@ void main() {
         );
       }
 
-      Future<PillSheetGroup> beginRestDurationAndCaptureGroup({required PillSheet pillSheet}) async {
+      Future<PillSheetGroup> beginRestDurationAndCaptureGroup(
+          {required PillSheet pillSheet}) async {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-29"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2026-10-29"));
         final mockIDGenerator = MockFirestoreIDGenerator();
         when(mockIDGenerator.call()).thenReturn("rest_duration_id");
         firestoreIDGenerator = mockIDGenerator;
@@ -474,8 +476,10 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(any, any)).thenAnswer((invocation) => invocation.positionalArguments[1] as PillSheetGroup);
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetGroup(any, any)).thenAnswer((invocation) =>
+            invocation.positionalArguments[1] as PillSheetGroup);
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(any, any)).thenReturn(null);
 
         await BeginRestDuration(
@@ -491,20 +495,28 @@ void main() {
           ),
           endDate: null,
         );
-        return verify(batchSetPillSheetGroup(batch, captureAny)).captured.single as PillSheetGroup;
+        return verify(batchSetPillSheetGroup(batch, captureAny)).captured.single
+            as PillSheetGroup;
       }
 
       test("v1: 追加される服用お休みは終了済みの服用お休みの終了日から始まる", () async {
-        final updatedPillSheetGroup = await beginRestDurationAndCaptureGroup(pillSheet: pillSheet(isV2: false));
+        final updatedPillSheetGroup = await beginRestDurationAndCaptureGroup(
+            pillSheet: pillSheet(isV2: false));
 
-        expect(updatedPillSheetGroup.pillSheets.first.restDurations.last.beginDate, DateTime.parse("2026-10-29"));
+        expect(
+            updatedPillSheetGroup.pillSheets.first.restDurations.last.beginDate,
+            DateTime.parse("2026-10-29"));
       });
 
       group("v2", () {
         test("追加される服用お休みは終了済みの服用お休みの終了日から始まる", () async {
-          final updatedPillSheetGroup = await beginRestDurationAndCaptureGroup(pillSheet: pillSheet(isV2: true));
+          final updatedPillSheetGroup = await beginRestDurationAndCaptureGroup(
+              pillSheet: pillSheet(isV2: true));
 
-          expect(updatedPillSheetGroup.pillSheets.first.restDurations.last.beginDate, DateTime.parse("2026-10-29"));
+          expect(
+              updatedPillSheetGroup
+                  .pillSheets.first.restDurations.last.beginDate,
+              DateTime.parse("2026-10-29"));
         });
       });
     });
@@ -1169,20 +1181,24 @@ void main() {
         );
       }
 
-      Future<void> expectNotSavedWithError({required PillSheet pillSheet}) async {
+      Future<void> expectNotSavedWithError(
+          {required PillSheet pillSheet}) async {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-30"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2026-10-30"));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
 
         await expectLater(
           ChangeRestDuration(
-            actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+            actionType:
+                PillSheetModifiedActionType.changedRestDurationBeginDate,
             batchFactory: batchFactory,
             batchSetPillSheetGroup: batchSetPillSheetGroup,
             batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
@@ -2009,23 +2025,29 @@ void main() {
       }
 
       /// [secondRestDuration] を [toRestDuration] へ変更し、保存の検証に使うモックを返す
-      Future<({MockBatchSetPillSheetGroup batchSetPillSheetGroup, MockWriteBatch batch})> changeSecondRestDuration({
+      Future<
+          ({
+            MockBatchSetPillSheetGroup batchSetPillSheetGroup,
+            MockWriteBatch batch
+          })> changeSecondRestDuration({
         required PillSheet pillSheet,
         required RestDuration toRestDuration,
       }) async {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-31"));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2026-10-31"));
 
         final batchFactory = MockBatchFactory();
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        when(batchSetPillSheetGroup(any, any)).thenAnswer((invocation) => invocation.positionalArguments[1] as PillSheetGroup);
-        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetGroup(any, any)).thenAnswer((invocation) =>
+            invocation.positionalArguments[1] as PillSheetGroup);
+        final batchSetPillSheetModifiedHistory =
+            MockBatchSetPillSheetModifiedHistory();
         when(batchSetPillSheetModifiedHistory(any, any)).thenReturn(null);
 
-        final mocks = (batchSetPillSheetGroup: batchSetPillSheetGroup, batch: batch);
         await ChangeRestDuration(
           actionType: PillSheetModifiedActionType.changedRestDuration,
           batchFactory: batchFactory,
@@ -2041,7 +2063,7 @@ void main() {
             createdAt: DateTime.parse("2026-10-13"),
           ),
         );
-        return mocks;
+        return (batchSetPillSheetGroup: batchSetPillSheetGroup, batch: batch);
       }
 
       for (final isV2 in [false, true]) {
@@ -2049,20 +2071,23 @@ void main() {
           test("別の服用お休みと重なる期間へ変更すると、保存せずにエラーになる", () async {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
-            when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-31"));
+            when(mockTodayRepository.now())
+                .thenReturn(DateTime.parse("2026-10-31"));
 
             final batchFactory = MockBatchFactory();
             final batch = MockWriteBatch();
             when(batchFactory.batch()).thenReturn(batch);
             final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-            final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+            final batchSetPillSheetModifiedHistory =
+                MockBatchSetPillSheetModifiedHistory();
 
             await expectLater(
               ChangeRestDuration(
                 actionType: PillSheetModifiedActionType.changedRestDuration,
                 batchFactory: batchFactory,
                 batchSetPillSheetGroup: batchSetPillSheetGroup,
-                batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+                batchSetPillSheetModifiedHistory:
+                    batchSetPillSheetModifiedHistory,
               ).call(
                 fromRestDuration: secondRestDuration,
                 toRestDuration: RestDuration(
