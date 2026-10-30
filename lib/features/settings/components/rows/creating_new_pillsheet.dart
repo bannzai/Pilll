@@ -36,8 +36,14 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           children: [
             if (!isPremium) ...[
               const WidgetSpan(child: SizedBox(width: 8)),
-              // WidgetSpan は子を文字の拡大率で拡大するため、バッジの中の Text には拡大率を掛けない (掛けると二重に拡大される)
-              WidgetSpan(alignment: PlaceholderAlignment.middle, child: MediaQuery.withNoTextScaling(child: const PremiumBadge())),
+              // WidgetSpan は子を文字の拡大率で拡大するため、バッジの中の Text には拡大率を掛けない (掛けると二重に拡大される)。
+              // WidgetSpan の拡大率は span の style の fontSize で決まるため、バッジの文字と同じ 12 にする。
+              // 指定しないと親の 16 で決まり、Android の非線形の文字拡大ではバッジの文字が本来の大きさより小さくなる
+              WidgetSpan(
+                alignment: PlaceholderAlignment.middle,
+                style: const TextStyle(fontSize: 12),
+                child: MediaQuery.withNoTextScaling(child: const PremiumBadge()),
+              ),
             ],
           ],
         ),

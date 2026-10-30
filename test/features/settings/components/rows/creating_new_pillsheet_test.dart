@@ -85,10 +85,69 @@ void main() {
           moreOrLessEquals(unscaledHeight * 2, epsilon: 1));
     });
 
+    testWidgets(
+        '文字サイズごとに拡大率が違う非線形の文字拡大 (Android) でも、Premium バッジはバッジの文字 (12) の拡大率で大きくなる',
+        (WidgetTester tester) async {
+      // 文言を 1 行に収め、バッジの高さだけを比べられる広い画面にする
+      tester.view.physicalSize = const Size(2000, 640);
+      tester.view.devicePixelRatio = 1.0;
+      addTearDown(tester.view.reset);
+
+      Future<double> badgeHeight({required TextScaler textScaler}) async {
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              setSettingProvider.overrideWith((ref) => MockSetSetting())
+            ],
+            child: MaterialApp(
+              home: Builder(
+                builder: (context) => MediaQuery(
+                  data: MediaQuery.of(context).copyWith(textScaler: textScaler),
+                  child: const Scaffold(
+                    body: CreatingNewPillSheetRow(
+                        setting: setting,
+                        isTrial: false,
+                        isPremium: false,
+                        trialDeadlineDate: null),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        );
+        return tester.getRect(find.byType(PremiumBadge)).height;
+      }
+
+      final unscaledHeight =
+          await badgeHeight(textScaler: TextScaler.noScaling);
+      // 12 は 2 倍、文言の 16 は 1.75 倍に拡大する
+      expect(await badgeHeight(textScaler: const _NonLinearTextScaler()),
+          moreOrLessEquals(unscaledHeight * 2, epsilon: 1));
+    });
+
     testWidgets('プレミアムユーザーには Premium バッジを表示しない', (WidgetTester tester) async {
       await tester.pumpWidget(subject(isPremium: true));
 
       expect(find.byType(PremiumBadge), findsNothing);
     });
   });
+}
+
+/// Android の非線形の文字拡大を模した TextScaler。12 以下は 2 倍、それより大きい文字は 12 を超えた分を 1 倍で足す (16 は 28 で 1.75 倍)
+class _NonLinearTextScaler extends TextScaler {
+  const _NonLinearTextScaler();
+
+  @override
+  double scale(double fontSize) =>
+      fontSize <= 12 ? fontSize * 2 : 24 + (fontSize - 12);
+
+  @override
+  // ignore: deprecated_member_use
+  double get textScaleFactor => 2;
+
+  @override
+  TextScaler clamp(
+          {double minScaleFactor = 0,
+          double maxScaleFactor = double.infinity}) =>
+      this;
 }
