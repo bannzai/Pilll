@@ -683,7 +683,8 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 
   /// 服用お休みを開始できる日付を返す。beginRestDurationやDatePickerの初期値に利用する
   /// 最後の服用日の翌日、または服用履歴がない場合は今日を返す
-  /// ただし終了済みの服用お休みの後に服用記録を付けていない場合は、最後の服用日の翌日が終了済みの服用お休みと重なるため、その終了日 (服用再開日) を返す
+  /// ただし終了済みの服用お休みの後に服用記録を付けていない場合は、最後の服用日の翌日が終了済みの服用お休みに含まれるため、その終了日 (服用再開日) を返す
+  /// 終了日が次の終了済みの服用お休みに含まれる時は、その終了日まで続けて進める。間に服用記録の無い日がある後続の服用お休みまでは進めない
   /// UI入力フィールドの初期値として使用される
   DateTime get availableRestDurationBeginDate => availableRestDurationBeginDateExcluding(excludingRestDuration: null);
 
@@ -692,7 +693,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   /// 服用お休みを開始する時は null を渡す
   DateTime availableRestDurationBeginDateExcluding({required RestDuration? excludingRestDuration}) {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
-    final DateTime afterLastTakenDate;
+    DateTime afterLastTakenDate;
     if (lastTakenDate == null) {
       // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
       // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
@@ -706,16 +707,23 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       afterLastTakenDate = lastTakenDate.addDays(1);
     }
     // 服用再開予定日が今日より後の服用お休みは服用お休み中で、開始日の上限を服用再開予定日まで広げると服用お休み中の開始日を変更する時の上限も変わるため対象にしない
-    final lastFinishedRestDurationEndDate = restDurations
-        .where((restDuration) => restDuration != excludingRestDuration)
-        .map((restDuration) => restDuration.endDate)
-        .nonNulls
-        .where((restDurationEndDate) => !restDurationEndDate.date().isAfter(today()))
-        .maxOrNull;
-    if (lastFinishedRestDurationEndDate != null && lastFinishedRestDurationEndDate.date().isAfter(afterLastTakenDate.date())) {
-      return lastFinishedRestDurationEndDate.date();
+    final finishedRestDurations = restDurations.where((restDuration) {
+      final restDurationEndDate = restDuration.endDate;
+      return restDuration != excludingRestDuration && restDurationEndDate != null && !restDurationEndDate.date().isAfter(today());
+    });
+    while (true) {
+      final containingRestDurationEndDate = finishedRestDurations
+          .where(
+            (restDuration) =>
+                !restDuration.beginDate.date().isAfter(afterLastTakenDate.date()) && restDuration.endDate!.date().isAfter(afterLastTakenDate.date()),
+          )
+          .map((restDuration) => restDuration.endDate!.date())
+          .maxOrNull;
+      if (containingRestDurationEndDate == null) {
+        return afterLastTakenDate;
+      }
+      afterLastTakenDate = containingRestDurationEndDate;
     }
-    return afterLastTakenDate;
   }
 
   /// [beginDate] から [endDate] までの期間が、[excludingRestDuration] 以外の服用お休み期間と重なるかどうか

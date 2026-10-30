@@ -20714,9 +20714,21 @@ void main() {
       endDate: DateTime.parse("2026-10-29"),
       createdDate: DateTime.parse("2026-10-26"),
     );
+    final laterFinishedRestDuration = RestDuration(
+      id: "later_finished_rest_duration_id",
+      beginDate: DateTime.parse("2026-11-10"),
+      endDate: DateTime.parse("2026-11-12"),
+      createdDate: DateTime.parse("2026-11-10"),
+    );
+    final adjacentFinishedRestDuration = RestDuration(
+      id: "adjacent_finished_rest_duration_id",
+      beginDate: DateTime.parse("2026-10-29"),
+      endDate: DateTime.parse("2026-11-01"),
+      createdDate: DateTime.parse("2026-10-29"),
+    );
 
-    /// 2026-10-13 開始で 10/25 まで服用済みの、[finishedRestDuration] を持つ pillsheet_28_0 のピルシート 1 枚のグループを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
-    PillSheetGroup pillSheetGroup({required bool isV2}) {
+    /// 2026-10-13 開始で 10/25 まで服用済みの、[restDurations] を持つ pillsheet_28_0 のピルシート 1 枚のグループを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
+    PillSheetGroup pillSheetGroup({required bool isV2, required List<RestDuration> restDurations}) {
       final beginDate = DateTime.parse("2026-10-13");
       final lastTakenDate = DateTime.parse("2026-10-25");
       return PillSheetGroup(
@@ -20729,7 +20741,7 @@ void main() {
               beginDate: beginDate,
               createdAt: beginDate,
               typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-              restDurations: [finishedRestDuration],
+              restDurations: restDurations,
               pills: Pill.testGenerateAndIterateTo(
                 pillSheetType: PillSheetType.pillsheet_28_0,
                 fromDate: beginDate,
@@ -20745,7 +20757,7 @@ void main() {
               lastTakenDate: lastTakenDate,
               createdAt: beginDate,
               typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-              restDurations: [finishedRestDuration],
+              restDurations: restDurations,
             ),
         ],
         createdAt: beginDate,
@@ -20760,7 +20772,8 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-30"));
 
           expect(
-            pillSheetGroup(isV2: isV2).availableRestDurationBeginDateExcluding(excludingRestDuration: finishedRestDuration),
+            pillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration])
+                .availableRestDurationBeginDateExcluding(excludingRestDuration: finishedRestDuration),
             DateTime.parse("2026-10-26"),
           );
         });
@@ -20771,8 +20784,30 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-10-30"));
 
           expect(
-            pillSheetGroup(isV2: isV2).availableRestDurationBeginDateExcluding(excludingRestDuration: null),
+            pillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration]).availableRestDurationBeginDateExcluding(excludingRestDuration: null),
             DateTime.parse("2026-10-29"),
+          );
+        });
+
+        test("間に服用記録の無い日がある後続の終了済みの服用お休みの終了日までは進めない", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-13"));
+
+          final group = pillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration, laterFinishedRestDuration]);
+          expect(group.availableRestDurationBeginDateExcluding(excludingRestDuration: null), DateTime.parse("2026-10-29"));
+          expect(group.availableRestDurationBeginDateExcluding(excludingRestDuration: finishedRestDuration), DateTime.parse("2026-10-26"));
+        });
+
+        test("終了日と次の服用お休みの開始日が同じ日なら、次の服用お休みの終了日まで進める", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-02"));
+
+          expect(
+            pillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration, adjacentFinishedRestDuration])
+                .availableRestDurationBeginDateExcluding(excludingRestDuration: null),
+            DateTime.parse("2026-11-01"),
           );
         });
       });
