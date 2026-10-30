@@ -9,7 +9,10 @@ import 'package:pilll/features/localizations/l.dart';
 
 /// 服用お休み期間を削除した履歴の行
 class PillSheetModifiedHistoryDeletedRestDuration extends StatelessWidget {
+  /// 服用お休み期間を削除した日時
   final DateTime estimatedEventCausingDate;
+
+  /// 削除した服用お休み期間の情報。履歴に値が無い時は null で、行を表示しない
   final DeletedRestDurationValue? value;
 
   const PillSheetModifiedHistoryDeletedRestDuration({

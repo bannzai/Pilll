@@ -375,6 +375,7 @@ PillSheet _clampLastTakenDate({required PillSheet pillSheet}) {
   };
 }
 
+/// 服用お休み期間を削除する [DeleteRestDuration] を提供する
 final deleteRestDurationProvider = Provider.autoDispose(
   (ref) => DeleteRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
@@ -388,8 +389,13 @@ final deleteRestDurationProvider = Provider.autoDispose(
 /// 記録済みの服用お休み期間 (継続中・終了済みのどちらも) を削除する
 /// 誤って開始した服用お休みなど、服用お休みがなかったものとしてピルシートの日付を計算し直したい時に使う
 class DeleteRestDuration {
+  /// ピルシートグループと履歴を 1 つの batch で書き込むための batch を作る
   final BatchFactory batchFactory;
+
+  /// 削除後のピルシートグループを batch に積む
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
+
+  /// 削除の履歴を batch に積む
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 
   DeleteRestDuration({

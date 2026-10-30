@@ -276,6 +276,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     );
   }
 
+  /// 服用お休み期間を削除した履歴を作る
+  /// [restDuration] は削除した服用お休み期間で、[beforePillSheetGroup] / [afterPillSheetGroup] は削除前後のピルシートグループ
   static PillSheetModifiedHistory createDeletedRestDurationAction({
     required RestDuration restDuration,
     required PillSheetGroup beforePillSheetGroup,
