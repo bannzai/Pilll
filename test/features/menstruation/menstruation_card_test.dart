@@ -7,7 +7,7 @@ import 'package:pilll/features/menstruation/menstruation_card_state.codegen.dart
 
 void main() {
   setUp(() async {
-    // DateTimeFormatter.monthAndWeekday は端末のロケール (Platform.localeName) で書式を引くため、全ロケールを読み込む
+    // DateTimeFormatter.monthAndWeekday は表示言語 (Intl.defaultLocale) で書式を引くため、全ロケールを読み込む
     await initializeDateFormatting();
   });
 

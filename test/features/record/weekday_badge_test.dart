@@ -7,7 +7,7 @@ import 'package:pilll/features/record/weekday_badge.dart';
 
 void main() {
   setUp(() async {
-    // Weekday.weekdayString は端末のロケール (Platform.localeName) の曜日の略記を引くため、全ロケールを読み込む
+    // Weekday.weekdayString は表示言語 (Intl.defaultLocale) の曜日の略記を引くため、全ロケールを読み込む
     await initializeDateFormatting();
   });
 
@@ -45,7 +45,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: MediaQuery(
-            // 略記は端末のロケールで変わる (pt_PT は「domingo」) ため、略記の文字数から幅 20 に十分収まる拡大率を決める。
+            // 略記は表示言語で変わる (pt_PT は「domingo」) ため、略記の文字数から幅 20 に十分収まる拡大率を決める。
             // テストのフォントは 1 文字が文字サイズ (9) の正方形なので、略記の幅を 15 にする
             data: MediaQueryData(
                 textScaler: TextScaler.linear(
