@@ -114,7 +114,7 @@
   "takingTime": "Iinahmziit",
   "takingHistoryIsPremiumFeature": "De Iinahm-Verlauf isch e Premium-Funktion",
   "pauseTakingDoesNotAdvancePillNumber": "Wänn du e Iinahmepause machsch, gaht d’Pillenummer nöd wiiter",
-  "pauseTakingFromNumber": "Wotsch ab Pille {number} e Iinahmepause mache?",
+  "pauseTakingFromNumber": "Wotsch d Pille ab {number} vorübergehend nüme näh?",
   "lastTakenPlusOnePillNumber": "Pille Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Iinahm",
   "estimatedEndPillNumber": "Letschti Pille uf em vorige Pilleblister: Nr. {estimatedEndPillNumber}",

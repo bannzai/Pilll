@@ -114,7 +114,7 @@
   "takingTime": "Horário de tomar a pílula",
   "takingHistoryIsPremiumFeature": "O histórico de uso é um recurso Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Durante a interrupção do uso, o número da pílula não avança",
-  "pauseTakingFromNumber": "Você quer iniciar a interrupção a partir do número da pílula {number}?",
+  "pauseTakingFromNumber": "Você quer pausar o uso da pílula temporariamente a partir de {number}?",
   "lastTakenPlusOnePillNumber": "Pílula nº {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Tomar a pílula",
   "estimatedEndPillNumber": "Última pílula da cartela anterior: nº {estimatedEndPillNumber}",

@@ -114,7 +114,7 @@
   "takingTime": "පෙත්ත ගන්නා වේලාව",
   "takingHistoryIsPremiumFeature": "පෙති ගැනීමේ ඉතිහාසය ප්‍රීමියම් විශේෂාංගයක්",
   "pauseTakingDoesNotAdvancePillNumber": "පෙති ගැනීමේ විරාමය අතරතුර පෙති අංක ඉදිරියට නොයයි",
-  "pauseTakingFromNumber": "පෙති අංක {number} සිට පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට ඔබට අවශ්‍යද?",
+  "pauseTakingFromNumber": "{number} සිට පෙති ගැනීම තාවකාලිකව නවත්වන්න අවශ්‍යද?",
   "lastTakenPlusOnePillNumber": "පෙති අංක {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "පෙත්ත ගැනීම",
   "estimatedEndPillNumber": "පෙර පෙති කාඩ්පතේ අවසන් පෙත්ත: අංක {estimatedEndPillNumber}",

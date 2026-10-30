@@ -114,7 +114,7 @@
   "takingTime": "Innametijd",
   "takingHistoryIsPremiumFeature": "Innamegeschiedenis is een premiumfunctie",
   "pauseTakingDoesNotAdvancePillNumber": "Tijdens een innamepauze loopt het pilnummer niet verder",
-  "pauseTakingFromNumber": "Wil je vanaf pilnummer {number} een innamepauze starten?",
+  "pauseTakingFromNumber": "Wil je vanaf {number} tijdelijk stoppen met de pil?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pil innemen",
   "estimatedEndPillNumber": "Laatste pil van de vorige pillenstrip: nr. {estimatedEndPillNumber}",

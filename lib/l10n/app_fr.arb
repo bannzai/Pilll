@@ -114,7 +114,7 @@
   "takingTime": "Heure de prise de la pilule",
   "takingHistoryIsPremiumFeature": "L’historique des prises est une fonctionnalité Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Pendant la pause de prise, le numéro de pilule n’avancera pas",
-  "pauseTakingFromNumber": "Voulez-vous commencer une pause de prise à partir du numéro de pilule {number} ?",
+  "pauseTakingFromNumber": "Voulez-vous interrompre temporairement la prise de la pilule à partir de {number} ?",
   "lastTakenPlusOnePillNumber": "Pilule n° {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Prise de la pilule",
   "estimatedEndPillNumber": "Dernière pilule de la plaquette précédente : n° {estimatedEndPillNumber}",

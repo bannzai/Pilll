@@ -114,7 +114,7 @@
   "takingTime": "Innametyd",
   "takingHistoryIsPremiumFeature": "Die innamegeskiedenis is ’n Premium-funksie",
   "pauseTakingDoesNotAdvancePillNumber": "Tydens ’n innameonderbreking skuif die pilnommer nie aan nie",
-  "pauseTakingFromNumber": "Wil jy vanaf pilnommer {number} ’n innameonderbreking begin?",
+  "pauseTakingFromNumber": "Wil jy jou pille vanaf {number} tydelik nie neem nie?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pilgebruik",
   "estimatedEndPillNumber": "Laaste pil op die vorige pilstrokie: nr. {estimatedEndPillNumber}",

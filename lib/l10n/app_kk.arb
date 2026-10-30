@@ -114,7 +114,7 @@
   "takingTime": "Таблетканы қабылдау уақыты",
   "takingHistoryIsPremiumFeature": "Қабылдау тарихы — премиум мүмкіндік",
   "pauseTakingDoesNotAdvancePillNumber": "Қабылдаудағы кідіріс кезінде таблетка нөмірі алға жылжымайды",
-  "pauseTakingFromNumber": "{number}-таблеткадан бастап қабылдаудағы кідірісті бастағыңыз келе ме?",
+  "pauseTakingFromNumber": "{number} бастап таблетка қабылдауды уақытша тоқтатқыңыз келе ме?",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} таблетка",
   "taking": "Таблетка қабылдау",
   "estimatedEndPillNumber": "Алдыңғы таблетка блистердегі соңғы таблетка: № {estimatedEndPillNumber}",

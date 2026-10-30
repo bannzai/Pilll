@@ -114,7 +114,7 @@
   "takingTime": "Masa mengambil pil",
   "takingHistoryIsPremiumFeature": "Sejarah pengambilan pil ialah ciri premium",
   "pauseTakingDoesNotAdvancePillNumber": "Semasa jeda pengambilan pil, nombor pil tidak akan bertambah",
-  "pauseTakingFromNumber": "Adakah anda ingin memulakan jeda pengambilan pil bermula daripada nombor pil {number}?",
+  "pauseTakingFromNumber": "Adakah anda mahu berhenti mengambil pil buat sementara waktu mulai {number}?",
   "lastTakenPlusOnePillNumber": "Pil nombor {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Pengambilan pil",
   "estimatedEndPillNumber": "Pil terakhir pada pek pil sebelumnya: nombor {estimatedEndPillNumber}",

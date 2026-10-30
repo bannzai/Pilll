@@ -114,7 +114,7 @@
   "takingTime": "Время приёма таблетки",
   "takingHistoryIsPremiumFeature": "Просмотр истории приёма доступен в премиум-плане",
   "pauseTakingDoesNotAdvancePillNumber": "Если вы временно приостановите приём таблеток, номер таблетки не изменится",
-  "pauseTakingFromNumber": "Хотите начать приостановку приёма с номера таблетки {number}?",
+  "pauseTakingFromNumber": "Хотите временно приостановить приём таблеток начиная с {number}?",
   "lastTakenPlusOnePillNumber": "№ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Приём таблетки",
   "estimatedEndPillNumber": "Последняя таблетка в предыдущем блистере: № {estimatedEndPillNumber}",

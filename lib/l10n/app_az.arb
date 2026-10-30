@@ -114,7 +114,7 @@
   "takingTime": "Həb qəbul etmə vaxtı",
   "takingHistoryIsPremiumFeature": "Qəbul tarixçəsi premium funksiyadır",
   "pauseTakingDoesNotAdvancePillNumber": "Həb qəbuluna fasilə verdiyinizdə həb nömrə irəliləmir",
-  "pauseTakingFromNumber": "{number} nömrəli həbdən başlayaraq Həb qəbuluna fasilə vermək istəyirsiniz?",
+  "pauseTakingFromNumber": "{number} ilə başlayaraq həb qəbuluna müvəqqəti fasilə vermək istəyirsiniz?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} nömrəli həb",
   "taking": "Həb qəbulu",
   "estimatedEndPillNumber": "Əvvəlki blisterdəki son həb: № {estimatedEndPillNumber}",

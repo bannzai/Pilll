@@ -114,7 +114,7 @@
   "takingTime": "د ګولۍ اخیستلو وخت",
   "takingHistoryIsPremiumFeature": "د ګولۍ اخیستلو تاریخچه د پریمیم ځانګړنه ده",
   "pauseTakingDoesNotAdvancePillNumber": "که د ګولیو اخیستل لنډمهاله درول پیل کړئ، ګولۍ شمېر به نه مخکې ځي",
-  "pauseTakingFromNumber": "ایا غواړئ له {number} شمېرې ګولۍ څخه لنډمهاله درول پیل کړئ؟",
+  "pauseTakingFromNumber": "ایا غواړئ له {number} څخه د ګولیو خوړل په لنډمهاله توګه وځنډوئ؟",
   "lastTakenPlusOnePillNumber": "د ګولۍ شمېره {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "د ګولۍ اخیستل",
   "estimatedEndPillNumber": "د مخکینۍ پاڼې وروستۍ ګولۍ: شمېره {estimatedEndPillNumber}",

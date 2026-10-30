@@ -114,7 +114,7 @@
   "takingTime": "மாத்திரை எடுத்துக்கொள்ளும் நேரம்",
   "takingHistoryIsPremiumFeature": "மாத்திரை உட்கொண்ட வரலாறு பிரீமியம் அம்சமாகும்",
   "pauseTakingDoesNotAdvancePillNumber": "மாத்திரை எடுத்துக்கொள்வதை இடைநிறுத்தினால், மாத்திரை எண் அடுத்த எண்ணுக்கு மாறாது",
-  "pauseTakingFromNumber": "மாத்திரை எண் {number} முதல் மாத்திரை உட்கொள்வதை இடைநிறுத்த விரும்புகிறீர்களா?",
+  "pauseTakingFromNumber": "{number} முதல் மாத்திரை எடுத்துக்கொள்வதைத் தற்காலிகமாக நிறுத்த விரும்புகிறீர்களா?",
   "lastTakenPlusOnePillNumber": "மாத்திரை எண் {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "மாத்திரை எடுத்துக்கொள்ளுதல்",
   "estimatedEndPillNumber": "முந்தைய மாத்திரை அட்டையின் கடைசி மாத்திரை: எண் {estimatedEndPillNumber}",

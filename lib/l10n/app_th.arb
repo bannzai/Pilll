@@ -114,7 +114,7 @@
   "takingTime": "เวลาทานยา",
   "takingHistoryIsPremiumFeature": "ประวัติการทานยาเป็นฟีเจอร์พรีเมียมค่ะ",
   "pauseTakingDoesNotAdvancePillNumber": "เมื่อพักการทานยาชั่วคราว หมายเลขเม็ดยาจะไม่เลื่อนไปค่ะ",
-  "pauseTakingFromNumber": "ต้องการพักการทานยาชั่วคราวตั้งแต่เม็ดที่ {number} ไหมคะ",
+  "pauseTakingFromNumber": "ต้องการหยุดทานยาเม็ดชั่วคราวตั้งแต่ {number} ไหมคะ",
   "lastTakenPlusOnePillNumber": "หมายเลข {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "การทานยา",
   "estimatedEndPillNumber": "เม็ดสุดท้ายของแผงยาก่อนหน้า: หมายเลข {estimatedEndPillNumber}",

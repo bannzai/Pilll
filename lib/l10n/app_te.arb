@@ -114,7 +114,7 @@
   "takingTime": "మాత్ర తీసుకునే సమయం",
   "takingHistoryIsPremiumFeature": "మాత్రల సేవన చరిత్ర ప్రీమియం ఫీచర్",
   "pauseTakingDoesNotAdvancePillNumber": "తాత్కాలిక విరామంలో మాత్ర సంఖ్య ముందుకు సాగదు",
-  "pauseTakingFromNumber": "{number}వ మాత్ర నుంచి తాత్కాలిక విరామం ప్రారంభించాలనుకుంటున్నారా?",
+  "pauseTakingFromNumber": "{number} నుంచి మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపాలనుకుంటున్నారా?",
   "lastTakenPlusOnePillNumber": "మాత్ర సంఖ్య {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "మాత్ర తీసుకోవడం",
   "estimatedEndPillNumber": "మునుపటి మాత్రల స్ట్రిప్‌లో చివరి మాత్ర: నం. {estimatedEndPillNumber}",

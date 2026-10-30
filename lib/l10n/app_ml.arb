@@ -114,7 +114,7 @@
   "takingTime": "ഗുളിക കഴിച്ച സമയം",
   "takingHistoryIsPremiumFeature": "ഗുളിക കഴിച്ചതിന്റെ ചരിത്രം പ്രീമിയം ഫീച്ചറാണ്",
   "pauseTakingDoesNotAdvancePillNumber": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തിയാൽ, ഗുളിക നമ്പർ മുന്നോട്ട് പോകില്ല",
-  "pauseTakingFromNumber": "{number}-ാം ഗുളിക മുതൽ ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്താമോ?",
+  "pauseTakingFromNumber": "{number} മുതൽ ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തണോ?",
   "lastTakenPlusOnePillNumber": "ഗുളിക നമ്പർ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ഗുളിക കഴിക്കൽ",
   "estimatedEndPillNumber": "മുമ്പത്തെ ഗുളിക സ്ട്രിപ്പിലെ അവസാനം: നമ്പർ {estimatedEndPillNumber}",

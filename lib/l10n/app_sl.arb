@@ -114,7 +114,7 @@
   "takingTime": "Čas za jemanje tablete",
   "takingHistoryIsPremiumFeature": "Zgodovina jemanja je funkcija Premium",
   "pauseTakingDoesNotAdvancePillNumber": "Med prekinitvijo jemanja se številka tablete ne bo spreminjala",
-  "pauseTakingFromNumber": "Ali želite od številke tablete {number} dalje začasno prekiniti jemanje tablet?",
+  "pauseTakingFromNumber": "Ali želite od {number} začasno prekiniti jemanje tablet?",
   "lastTakenPlusOnePillNumber": "Tableta št. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Jemanje tablete",
   "estimatedEndPillNumber": "Zadnja tableta na prejšnji ploščici: št. {estimatedEndPillNumber}",

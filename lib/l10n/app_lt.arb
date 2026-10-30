@@ -114,7 +114,7 @@
   "takingTime": "Tabletės vartojimo laikas",
   "takingHistoryIsPremiumFeature": "Tablečių vartojimo istorija yra Premium funkcija",
   "pauseTakingDoesNotAdvancePillNumber": "Jei laikinai pristabdysite tablečių vartojimą, tabletės numeris nesikeis",
-  "pauseTakingFromNumber": "Ar norite laikinai pristabdyti tablečių vartojimą nuo {number}-osios tabletės?",
+  "pauseTakingFromNumber": "Ar norite nuo {number} laikinai nustoti vartoti tabletes?",
   "lastTakenPlusOnePillNumber": "Nr. {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "Tabletės vartojimas",
   "estimatedEndPillNumber": "Paskutinė ankstesnės tablečių plokštelės tabletė: Nr. {estimatedEndPillNumber}",

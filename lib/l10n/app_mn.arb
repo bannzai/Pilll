@@ -114,7 +114,7 @@
   "takingTime": "Эм уух цаг",
   "takingHistoryIsPremiumFeature": "Премиум боломж: эм уусан түүх",
   "pauseTakingDoesNotAdvancePillNumber": "Эмийн хэрэглээний түр завсарлагын үед эмийн дугаар урагшлахгүй",
-  "pauseTakingFromNumber": "{number} дугаартай эмээс эхлэн түр завсарлага эхлүүлэх үү?",
+  "pauseTakingFromNumber": "{number}-ээс эхлэн эм уухаа түр зогсоох уу?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} дугаартай эм",
   "taking": "Эм уух",
   "estimatedEndPillNumber": "Өмнөх эмийн блистерийн сүүлийн эм: {estimatedEndPillNumber} дугаар",

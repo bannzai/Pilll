@@ -114,7 +114,7 @@
   "takingTime": "ເວລາກິນຢາເມັດ",
   "takingHistoryIsPremiumFeature": "ປະຫວັດການກິນຢາເປັນຄຸນສົມບັດ Premium ເດີ",
   "pauseTakingDoesNotAdvancePillNumber": "ເມື່ອຢຸດກິນຢາຊົ່ວຄາວ ເລກເມັດຢາຈະບໍ່ເລື່ອນໄປ",
-  "pauseTakingFromNumber": "ຕ້ອງການຢຸດກິນຢາຊົ່ວຄາວເລີ່ມຈາກເລກເມັດຢາ {number} ບໍ?",
+  "pauseTakingFromNumber": "ທ່ານຕ້ອງການຢຸດກິນຢາເມັດຊົ່ວຄາວເລີ່ມຈາກ {number} ບໍ?",
   "lastTakenPlusOnePillNumber": "ເລກ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ການກິນຢາເມັດ",
   "estimatedEndPillNumber": "ຢາເມັດສຸດທ້າຍໃນແຜງກ່ອນ: ເລກ {estimatedEndPillNumber}",

@@ -114,7 +114,7 @@
   "takingTime": "ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ",
   "takingHistoryIsPremiumFeature": "ਸੇਵਨ ਇਤਿਹਾਸ ਪ੍ਰੀਮੀਅਮ ਸਹੂਲਤ ਹੈ",
   "pauseTakingDoesNotAdvancePillNumber": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੌਰਾਨ ਗੋਲੀ ਨੰਬਰ ਅੱਗੇ ਨਹੀਂ ਵਧੇਗਾ",
-  "pauseTakingFromNumber": "ਕੀ ਗੋਲੀ ਨੰਬਰ {number} ਤੋਂ ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਕਰਨੀ ਹੈ?",
+  "pauseTakingFromNumber": "ਕੀ ਤੁਸੀਂ {number} ਤੋਂ ਗੋਲੀਆਂ ਲੈਣੀਆਂ ਕੁਝ ਸਮੇਂ ਲਈ ਰੋਕਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
   "lastTakenPlusOnePillNumber": "ਗੋਲੀ ਨੰਬਰ {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "taking": "ਗੋਲੀ ਲੈਣਾ",
   "estimatedEndPillNumber": "ਪਿਛਲੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀ ਆਖਰੀ ਗੋਲੀ: ਨੰਬਰ {estimatedEndPillNumber}",

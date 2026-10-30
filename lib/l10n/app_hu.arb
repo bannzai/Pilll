@@ -114,7 +114,7 @@
   "takingTime": "A tabletta szedésének ideje",
   "takingHistoryIsPremiumFeature": "A szedési előzmények prémium funkció",
   "pauseTakingDoesNotAdvancePillNumber": "Ha szünetelteted a tabletta szedését, a tablettaszám nem lép tovább",
-  "pauseTakingFromNumber": "Szüneteltetnéd a tabletta szedését a(z) {number}. tablettától?",
+  "pauseTakingFromNumber": "Szeretnéd átmenetileg szüneteltetni a tabletta szedését {number} kezdettel?",
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}. tabletta",
   "taking": "Tabletta szedése",
   "estimatedEndPillNumber": "Az előző tablettacsomag utolsó tablettája: {estimatedEndPillNumber}.",
