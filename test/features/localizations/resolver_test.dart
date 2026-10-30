@@ -52,6 +52,17 @@ void main() {
     });
   });
 
+  group('#setupLocalizationWithoutWidgetTree', () {
+    // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
+    test('debug ビルドで表示言語に de が保存されている場合は、画面と同じ de の文言と日付書式になる', () {
+      SharedPreferences.setMockInitialValues(
+          {StringKey.debugAppLanguageCode: 'de'});
+      setupLocalizationWithoutWidgetTree();
+      expect(L.localeName, 'de');
+      expect(Intl.defaultLocale, 'de');
+    });
+  });
+
   group('#AppLocalizationResolver', () {
     // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
     /// [initialSharedPreferencesValues] を SharedPreferences の初期値にして AppLocalizationResolver を描画し、
