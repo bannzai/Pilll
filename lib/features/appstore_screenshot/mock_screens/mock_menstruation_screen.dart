@@ -49,7 +49,7 @@ class MockMenstruationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // MenstruationCalendarHeader/MenstruationCard は today()（lib/utils/datetime/day.dart）と
-    // intl の DateFormat（Platform.localeName）に依存するため固定・初期化する。
+    // intl の DateFormat（Intl.defaultLocale）に依存するため固定・初期化する。
     applyFixedToday(_fixedToday);
 
     const setting = Setting(
