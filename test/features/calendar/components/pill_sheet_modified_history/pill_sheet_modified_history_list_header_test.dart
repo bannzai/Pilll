@@ -56,6 +56,27 @@ void main() {
       },
     );
 
+    testWidgets('語の間に空白を入れない言語で列の幅より長い場合、1 行に縮小せず列の幅で折り返す',
+        (WidgetTester tester) async {
+      // 中国語は文字ごとに改行できる。テストのフォントは 1 文字 12 なので、10 文字 (120) は列の幅 57 を超える
+      const text = '已服药已服药已服药已';
+      await tester.pumpWidget(subject(text: text));
+
+      expect(tester.takeException(), isNull);
+      final paragraph = tester.renderObject<RenderParagraph>(find.text(text));
+      expect(
+        paragraph
+            .getBoxesForSelection(
+                const TextSelection(baseOffset: 0, extentOffset: text.length))
+            .map((box) => box.top)
+            .toSet()
+            .length,
+        greaterThan(1),
+      );
+      // 縮小していない
+      expect(tester.getRect(find.text(text)).width, paragraph.size.width);
+    });
+
     testWidgets('列の幅に収まる語だけの場合は縮小せず、列の幅で折り返す', (WidgetTester tester) async {
       // テストのフォントは 1 文字が文字サイズの正方形 (12) で、各語が 57 に収まる 4 文字の語にする
       const text = 'Pill done';

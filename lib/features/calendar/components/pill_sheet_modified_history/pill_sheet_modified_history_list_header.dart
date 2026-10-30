@@ -54,11 +54,18 @@ class PillSheetModifiedHistoryListHeaderWrappedLabel extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final longestWordWidth = text.split(RegExp(r'\s+')).map((word) {
+        // 空白で区切った語のうち、語の途中で改行できない語の最長の幅を測る。
+        // 空白を入れない文字 (漢字・かな・タイ文字・ラオ文字・クメール文字・ビルマ文字) を含む語は語の途中で改行できるため測らない。
+        // TextPainter.minIntrinsicWidth は、制約なしで layout すると漢字の文字列を 1 語として測るなど、layout の幅で値が変わり使えない (widget test で実測)
+        final longestWordWidth = text.split(RegExp(r'\s+')).where((word) => !word.contains(RegExp(r'[฀-໿က-႟ក-៿぀-ヿ㐀-鿿豈-﫿]'))).map((word) {
           final painter = TextPainter(
             text: TextSpan(
               text: word,
-              style: DefaultTextStyle.of(context).style.merge(style),
+              // Text.build と同じく、「文字を太くする」設定の時は bold を重ねてから測る (重ねないと描く時の字幅が測った幅より広くなる)
+              style: DefaultTextStyle.of(context)
+                  .style
+                  .merge(style)
+                  .merge(MediaQuery.boldTextOf(context) ? const TextStyle(fontWeight: FontWeight.bold) : null),
             ),
             textDirection: Directionality.of(context),
             textScaler: MediaQuery.textScalerOf(context),
@@ -67,10 +74,7 @@ class PillSheetModifiedHistoryListHeaderWrappedLabel extends StatelessWidget {
           final width = painter.width;
           painter.dispose();
           return width;
-        }).fold<double>(
-          0,
-          (longest, width) => width > longest ? width : longest,
-        );
+        }).fold<double>(0, (longest, width) => width > longest ? width : longest);
         return FittedBox(
           fit: BoxFit.scaleDown,
           child: SizedBox(
