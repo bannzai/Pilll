@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Vous pouvez utiliser toutes les fonctionnalités pendant encore {diff} jours",
   "todayIsTaking": "💊 Prise de la pilule prévue aujourd’hui",
   "todayPillToTake": "💊 La pilule du jour",
-  "number": " (pilule)",
+  "formattedPillNumber": "n° {number}",
   "dayNumber": " jour",
   "recordedMenstruationStartDate": "Début des règles enregistré à partir du {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Date de début des règles",

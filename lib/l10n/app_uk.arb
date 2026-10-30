@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Ви можете користуватися всіма функціями ще {diff} дн.",
   "todayIsTaking": "💊 Сьогодні день прийому пігулки",
   "todayPillToTake": "💊 Пігулка на сьогодні",
-  "number": "-а пігулка",
+  "formattedPillNumber": "{number}-а пігулка",
   "dayNumber": "-й день",
   "recordedMenstruationStartDate": "Початок місячних записано на {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Дата початку місячних",

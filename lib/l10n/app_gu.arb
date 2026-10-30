@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "તમે હજી {diff} દિવસ સુધી બધી સુવિધાઓ વાપરી શકો છો",
   "todayIsTaking": "💊 આજે ગોળી લેવાનો દિવસ છે",
   "todayPillToTake": "💊 આજની ગોળી",
-  "number": " નંબર",
+  "formattedPillNumber": "{number} નંબર",
   "dayNumber": "મો દિવસ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}થી માસિક શરૂ થયું હોવાનું નોંધાયું છે",
   "menstruationStartDate": "માસિક શરૂ થવાની તારીખ",

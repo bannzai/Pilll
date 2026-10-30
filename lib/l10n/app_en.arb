@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "You can use all features for {diff} more days",
   "todayIsTaking": "💊 Pill scheduled for today",
   "todayPillToTake": "💊 Today’s pill",
-  "number": " (pill)",
+  "formattedPillNumber": "No. {number}",
   "dayNumber": " day",
   "recordedMenstruationStartDate": "Period start recorded for {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Period start date",

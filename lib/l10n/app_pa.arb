@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "ਤੁਸੀਂ ਹੋਰ {diff} ਦਿਨਾਂ ਲਈ ਸਾਰੀਆਂ ਸਹੂਲਤਾਂ ਵਰਤ ਸਕਦੇ ਹੋ",
   "todayIsTaking": "💊 ਅੱਜ ਗੋਲੀ ਲੈਣ ਦਾ ਦਿਨ ਹੈ",
   "todayPillToTake": "💊 ਅੱਜ ਦੀ ਗੋਲੀ",
-  "number": "ਵੀਂ ਗੋਲੀ",
+  "formattedPillNumber": "{number}ਵੀਂ ਗੋਲੀ",
   "dayNumber": "ਵਾਂ ਦਿਨ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} ਤੋਂ ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦਾ ਰਿਕਾਰਡ ਦਰਜ ਹੋ ਗਿਆ ਹੈ",
   "menstruationStartDate": "ਮਾਹਵਾਰੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ",

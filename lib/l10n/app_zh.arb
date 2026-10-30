@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "所有功能还可使用 {diff} 天",
   "todayIsTaking": "💊 今天是服药日",
   "todayPillToTake": "💊 今天要服用的药片",
-  "number": "号",
+  "formattedPillNumber": "{number}号",
   "dayNumber": "天",
   "recordedMenstruationStartDate": "已将 {DateTimeFormatterMonthAndDay} 记录为经期开始日期",
   "menstruationStartDate": "经期开始日期",

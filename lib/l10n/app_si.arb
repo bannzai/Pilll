@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "ඔබට තවත් දින {diff}ක් සියලු විශේෂාංග භාවිත කළ හැක",
   "todayIsTaking": "💊 අද පෙත්ත ගත යුතු දිනයයි",
   "todayPillToTake": "💊 අද ගත යුතු පෙත්ත",
-  "number": " වන පෙත්ත",
+  "formattedPillNumber": "{number} වන පෙත්ත",
   "dayNumber": "වන දිනය",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} සිට ඔසප් වීම ආරම්භ වූ බව සටහන් කර ඇත",
   "menstruationStartDate": "ඔසප් වීම ආරම්භ වන දිනය",

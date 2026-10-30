@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Sve značajke možete koristiti još {diff} dana",
   "todayIsTaking": "💊 Danas je dan za uzimanje pilule",
   "todayPillToTake": "💊 Današnja pilula",
-  "number": ". pilula",
+  "formattedPillNumber": "{number}. pilula",
   "dayNumber": ". dan",
   "recordedMenstruationStartDate": "Početak menstruacije zabilježen je od {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Datum početka menstruacije",
