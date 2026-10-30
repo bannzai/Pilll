@@ -110,19 +110,21 @@ void main() {
           // シートのボタン・カードの文字はテスト用フォントだと横にはみ出すことがある。このテストの対象ではないので RenderFlex overflow の例外を捨てる
           tester.takeException();
 
-          final headingBottom = tester
-              .getBottomLeft(find
-                  .descendant(
-                      of: find.byType(SingleChildScrollView),
-                      matching: find.byType(Text))
-                  .first)
-              .dy;
-          final sheetTop = tester
-              .getTopLeft(find.descendant(
-                  of: find.byType(PillSheetGroupSelectPillSheetTypePage),
-                  matching: find.byType(ListView)))
-              .dy;
-          expect(headingBottom, lessThanOrEqualTo(sheetTop));
+          // 背景の見出しの下端がシートの上端より上にある
+          expect(
+            tester
+                .getBottomLeft(find
+                    .descendant(
+                        of: find.byType(SingleChildScrollView),
+                        matching: find.byType(Text))
+                    .first)
+                .dy,
+            lessThanOrEqualTo(tester
+                .getTopLeft(find.descendant(
+                    of: find.byType(PillSheetGroupSelectPillSheetTypePage),
+                    matching: find.byType(ListView)))
+                .dy),
+          );
         }, skip: !sanFranciscoFontFile.existsSync());
       }
     }
