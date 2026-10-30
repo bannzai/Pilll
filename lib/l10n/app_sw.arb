@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Unaweza kutumia vipengele vyote kwa siku {diff} zaidi",
   "todayIsTaking": "💊 Leo ni siku ya kumeza kidonge",
   "todayPillToTake": "💊 Kidonge cha leo",
-  "number": " (kidonge)",
+  "formattedPillNumber": "{number} (kidonge)",
   "dayNumber": " siku",
   "recordedMenstruationStartDate": "Mwanzo wa hedhi umerekodiwa kuanzia {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tarehe ya kuanza hedhi",

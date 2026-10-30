@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "אפשר להשתמש בכל התכונות למשך {diff} ימים נוספים",
   "todayIsTaking": "💊 היום יום נטילת הגלולה",
   "todayPillToTake": "💊 הגלולה של היום",
-  "number": " (גלולה)",
+  "formattedPillNumber": "{number} (גלולה)",
   "dayNumber": " (יום)",
   "recordedMenstruationStartDate": "תחילת המחזור נרשמה בתאריך {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "תאריך תחילת המחזור",

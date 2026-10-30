@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "மேலும் {diff} நாட்களுக்கு அனைத்து அம்சங்களையும் பயன்படுத்தலாம்",
   "todayIsTaking": "💊 இன்று மாத்திரை எடுத்துக்கொள்ள வேண்டிய நாள்",
   "todayPillToTake": "💊 இன்றைய மாத்திரை",
-  "number": "ஆம் மாத்திரை",
+  "formattedPillNumber": "{number}ஆம் மாத்திரை",
   "dayNumber": "ஆம் நாள்",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} முதல் மாதவிடாய் தொடங்கியதாகப் பதிவு செய்யப்பட்டுள்ளது",
   "menstruationStartDate": "மாதவிடாய் தொடங்கும் தேதி",

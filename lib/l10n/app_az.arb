@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Bütün funksiyalardan daha {diff} gün istifadə edə bilərsiniz",
   "todayIsTaking": "💊 Bu gün həb qəbul etmə günüdür",
   "todayPillToTake": "💊 Bu gün qəbul ediləcək həb",
-  "number": " nömrə",
+  "formattedPillNumber": "{number} nömrə",
   "dayNumber": ". gün",
   "recordedMenstruationStartDate": "Aybaşınızın {DateTimeFormatterMonthAndDay} tarixində başladığı qeyd edildi",
   "menstruationStartDate": "Aybaşının başlama tarixi",

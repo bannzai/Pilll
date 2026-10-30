@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Anda dapat menggunakan semua fitur selama {diff} hari lagi",
   "todayIsTaking": "💊 Hari ini jadwal minum pil",
   "todayPillToTake": "💊 Pil untuk hari ini",
-  "number": " (pil)",
+  "formattedPillNumber": "{number} (pil)",
   "dayNumber": " hari",
   "recordedMenstruationStartDate": "Haid dicatat mulai {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Tanggal mulai haid",

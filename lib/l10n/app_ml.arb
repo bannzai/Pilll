@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "എല്ലാ സൗകര്യങ്ങളും ഇനി {diff} ദിവസം കൂടി ഉപയോഗിക്കാം",
   "todayIsTaking": "💊 ഇന്ന് ഗുളിക കഴിക്കേണ്ട ദിവസമാണ്",
   "todayPillToTake": "💊 ഇന്നത്തെ ഗുളിക",
-  "number": "ാം ഗുളിക",
+  "formattedPillNumber": "{number}ാം ഗുളിക",
   "dayNumber": "ാം ദിവസം",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} മുതൽ ആർത്തവം ആരംഭിച്ചതായി രേഖപ്പെടുത്തി",
   "menstruationStartDate": "ആർത്തവം തുടങ്ങുന്ന തീയതി",

@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -223,6 +224,35 @@ String reminderPillDisplayNumberFor({
     pillNumberInPillSheet: pillNumberInPillSheet,
     estimatedEventCausingDate: reminderDate.date(),
   );
+}
+
+/// [reminderDateTime] に出すリマインドの、プレミアム・トライアル中のユーザー向けの通知タイトルを返す
+/// [pillSheetDisplayNumber] は [reminderPillDisplayNumberFor] が返すピル番号の文字列を渡す
+/// 文言の言語は [L] に従う
+String reminderNotificationTitle({
+  required ReminderNotificationCustomization reminderNotificationCustomization,
+  required DateTime reminderDateTime,
+  required String pillSheetDisplayNumber,
+}) {
+  var result = reminderNotificationCustomization.word;
+  if (!reminderNotificationCustomization.isInVisibleReminderDate) {
+    result += ' ';
+    result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
+  }
+
+  if (!reminderNotificationCustomization.isInVisiblePillNumber) {
+    result += ' ';
+    result += L.formattedPillNumber(pillSheetDisplayNumber);
+  }
+
+  if (Environment.isDevelopment) {
+    result += ' Local';
+  }
+  // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
+  if (result.isEmpty) {
+    return L.notification;
+  }
+  return result;
 }
 
 // Reminder
@@ -482,28 +512,11 @@ class RegisterReminderLocalNotification {
         );
 
         if (premiumOrTrial) {
-          final title = () {
-            var result = setting.reminderNotificationCustomization.word;
-            if (!setting.reminderNotificationCustomization.isInVisibleReminderDate) {
-              result += ' ';
-              result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
-            }
-
-            if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
-              result += ' ';
-              result += pillSheetDisplayNumber;
-              result += L.number;
-            }
-
-            if (Environment.isDevelopment) {
-              result += ' Local';
-            }
-            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
-            if (result.isEmpty) {
-              return L.notification;
-            }
-            return result;
-          }();
+          final title = reminderNotificationTitle(
+            reminderNotificationCustomization: setting.reminderNotificationCustomization,
+            reminderDateTime: reminderDateTime,
+            pillSheetDisplayNumber: pillSheetDisplayNumber,
+          );
 
           final message = () {
             if (setting.reminderNotificationCustomization.isInVisibleDescription) {

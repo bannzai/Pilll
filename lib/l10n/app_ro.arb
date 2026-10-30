@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Poți folosi toate funcțiile încă {diff} zile",
   "todayIsTaking": "💊 Azi iei pilula",
   "todayPillToTake": "💊 Pilula de azi",
-  "number": " (pilulă)",
+  "formattedPillNumber": "{number} (pilulă)",
   "dayNumber": " (ziua)",
   "recordedMenstruationStartDate": "Începutul menstruației a fost înregistrat pentru {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Data de început a menstruației",

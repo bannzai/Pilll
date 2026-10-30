@@ -728,9 +728,14 @@
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "番",
-  "@number": {
-    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。\n[翻訳の決定 en] 「No. 1」ではなく「 (pill)」: このキーは数字の後ろに連結する接尾辞で、前置の「No. 1」は arb の訳だけでは作れない。空文字にするとリマインダー通知のタイトルで番号だけになるため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「n° 1」ではなく「 (pilule)」: このキーは数字の後ろに連結する接尾辞で、前置の「n° 1」は arb の訳だけでは作れないため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/2004)"
+  "formattedPillNumber": "{number}番",
+  "@formattedPillNumber": {
+    "description": "今日飲むピルの番号の表示です。記録画面の最上部・初期設定の今日飲むピル番号の説明・リマインダー通知のタイトルに出ます。{number}にはピル番号（例：5）が入ります。記録画面では{number}だけを大きな文字で表示するため、{number}の前後の文字列は短くしてください。\n[翻訳の決定 en] 「5 (pill)」ではなく「No. 5」: 数字の後ろに連結する接尾辞の number キーでは前置の書式を作れず、スクリーンショット比較で番号だと分かりにくいと指摘されたため、プレースホルダー付きのこのキーに替えて前置にした (https://github.com/bannzai/Pilll/issues/2025 https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「5 (pilule)」ではなく「n° 5」: en と同じ理由で前置にした。リマインダー通知のタイトルでは文の途中に入るため、文中の表記の小文字の n° にした (https://github.com/bannzai/Pilll/issues/2025 https://github.com/bannzai/Pilll/issues/1991 https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 hi] 「5वीं गोली」ではなく「गोली नंबर 5」: ヒンディー語の序数は 1〜4 で वीं を付ける形にならず「1वीं」が誤りになるため、アプリ内の他のキー (withNumber など) と同じ「गोली नंबर {number}」にした (https://github.com/bannzai/Pilll/pull/2047)",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   },
   "dayNumber": "日目",
   "@dayNumber": {

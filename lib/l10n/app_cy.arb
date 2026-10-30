@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Gallwch ddefnyddio pob nodwedd am {diff} diwrnod arall",
   "todayIsTaking": "💊 Mae'n ddiwrnod cymryd y bilsen heddiw",
   "todayPillToTake": "💊 Pilsen heddiw",
-  "number": " (pilsen)",
+  "formattedPillNumber": "{number} (pilsen)",
   "dayNumber": " diwrnod",
   "recordedMenstruationStartDate": "Mae dechrau'r mislif wedi'i gofnodi o {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Dyddiad dechrau'r mislif",

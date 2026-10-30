@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "ನೀವು ಇನ್ನೂ {diff} ದಿನಗಳವರೆಗೆ ಎಲ್ಲಾ ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಬಳಸಬಹುದು",
   "todayIsTaking": "💊 ಇಂದು ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ",
   "todayPillToTake": "💊 ಇಂದಿನ ಮಾತ್ರೆ",
-  "number": "ನೇ ಮಾತ್ರೆ",
+  "formattedPillNumber": "{number}ನೇ ಮಾತ್ರೆ",
   "dayNumber": "ನೇ ದಿನ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ರಿಂದ ಮುಟ್ಟಿನ ಅವಧಿ ಆರಂಭವಾಗಿದೆ ಎಂದು ದಾಖಲಿಸಲಾಗಿದೆ",
   "menstruationStartDate": "ಮುಟ್ಟಿನ ಆರಂಭದ ದಿನಾಂಕ",

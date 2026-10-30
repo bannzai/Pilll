@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "آپ تمام خصوصیات مزید {diff} دن تک استعمال کر سکتی ہیں",
   "todayIsTaking": "💊 آج گولی لینے کا دن ہے",
   "todayPillToTake": "💊 آج کی گولی",
-  "number": "ویں گولی",
+  "formattedPillNumber": "{number}ویں گولی",
   "dayNumber": "واں دن",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} سے ماہواری شروع ہونے کا اندراج ہو گیا ہے",
   "menstruationStartDate": "ماہواری شروع ہونے کی تاریخ",

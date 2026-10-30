@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιείτε όλες τις λειτουργίες για {diff} ακόμη ημέρες",
   "todayIsTaking": "💊 Σήμερα είναι ημέρα λήψης του χαπιού",
   "todayPillToTake": "💊 Το χάπι για σήμερα",
-  "number": " (χάπι)",
+  "formattedPillNumber": "{number} (χάπι)",
   "dayNumber": "η ημέρα",
   "recordedMenstruationStartDate": "Η έναρξη της περιόδου καταγράφηκε για τις {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",

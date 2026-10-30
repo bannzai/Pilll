@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "ใช้ฟีเจอร์ทั้งหมดได้อีก {diff} วันค่ะ",
   "todayIsTaking": "💊 วันนี้เป็นวันทานยา",
   "todayPillToTake": "💊 ยาเม็ดสำหรับวันนี้",
-  "number": " (เม็ด)",
+  "formattedPillNumber": "{number} (เม็ด)",
   "dayNumber": " วันที่",
   "recordedMenstruationStartDate": "บันทึกว่าประจำเดือนเริ่มวันที่ {DateTimeFormatterMonthAndDay} แล้วค่ะ",
   "menstruationStartDate": "วันที่เริ่มประจำเดือน",

@@ -48,7 +48,7 @@ issue はこのリポジトリ (bannzai/Pilll) で管理する。issue 機能を
 - Pilllでは日付を扱うテストが多く、境界値テストが多い。端末での動作確認が大変なので、日付部分で境界値がある場合は積極的に・網羅的にテストを書く
 - 実装後は手動テスト前に必ず、ユニットテストを実行する。該当するものがなければテストを新規作成する。作成・実行が難しい場合はユーザーに報告する
 - 動作確認は、極力あなたが行うこと。手動の動作確認 (画面の目視・スクリーンショット) は simtunnel (GitHub Actions の macOS Runner 上の iOS Simulator。起動方法は ios-simulator skill) を先に使う。ローカルの /sim-manager skill (sim-boot) を既定の手段にしない
-- 自動化できる確認 (繰り返し確認する導線) は Maestro のフロー (`.maestro/flows/`) に落とし込み、CI (`.github/workflows/maestro-e2e.yml`。PR で実行される) で実行する。ローカルで Maestro を回すことは必須にしない。CI で実行するフローは `.maestro/flows/config.yaml` で指定する
+- 自動化できる確認 (繰り返し確認する導線) は Maestro のフロー (`.maestro/flows/`) に落とし込み、CI (`.github/workflows/maestro-e2e.yml`。PR では起動せず、必要と判断した時に `workflow_dispatch` で起動する。手順は `documents/maestro-e2e.md`) で実行する。ローカルで Maestro を回すことは必須にしない。`flows=all` で実行するフローは `.maestro/flows/config.yaml` で指定する
 
 
 ## コーディング規約・ルール

@@ -150,7 +150,7 @@
   "remainingDaysAllFeatures": "Þú getur notað alla eiginleika í {diff} daga í viðbót",
   "todayIsTaking": "💊 Í dag er dagur til að taka pilluna",
   "todayPillToTake": "💊 Pilla dagsins",
-  "number": ". pilla",
+  "formattedPillNumber": "{number}. pilla",
   "dayNumber": ". dagur",
   "recordedMenstruationStartDate": "Upphaf blæðinga var skráð {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "Upphafsdagur blæðinga",
