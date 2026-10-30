@@ -240,7 +240,7 @@
   "completed": "Qedile",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Ungawushintsha umbhalo wesaziso sephilisi elingaphuziwe",
-  "defaultMissedTakenMessage": "Mhlawumbe ukhohlwe ukuphuza iphilisi?\nKunezinsuku eziningana ezingenayo irekhodi lokuphuza amaphilisi 🤔",
+  "defaultMissedTakenMessage": "Ukhohlwe ukuphuza iphilisi?\nKunezinsuku eziningana ezingenayo irekhodi lokuphuza amaphilisi 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Ungashintsha umbhalo osekuqaleni kwesaziso",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

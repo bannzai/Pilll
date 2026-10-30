@@ -1,5 +1,4 @@
-import 'dart:ui';
-
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -56,6 +55,20 @@ void main() {
 
         expect(
             reminderNotificationCustomization.missedTakenMessageForDisplay, '');
+      });
+    });
+
+    group('全ロケールの既定文言', () {
+      test('入力欄の上限 (100 文字) 以内に収まる', () {
+        for (final locale in AppLocalizations.supportedLocales) {
+          expect(
+              lookupAppLocalizations(locale)
+                  .defaultMissedTakenMessage
+                  .characters
+                  .length,
+              lessThanOrEqualTo(100),
+              reason: locale.toString());
+        }
       });
     });
 
