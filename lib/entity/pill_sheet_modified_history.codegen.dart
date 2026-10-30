@@ -343,6 +343,8 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
 /// 服用記録のあった日の集合を構築する。集計対象が無い場合は null を返す。
 /// 日付はすべて日付のみ（午前0時）に正規化して集合化する。時刻付きのまま差分すると服用日が一致せず記録が漏れるため。
 /// [beginDate] を渡すと集計開始日として使い（シート開始日など）、省略時は最古の履歴日を開始日とする。
+/// 後から削除（deletedRestDuration）された服用お休み期間の日も、服用お休み日として服用予定日から除く。
+/// 服用お休みとして記録していた間に服用していないのは本人の意図どおりで、飲み忘れに数えないため。
 ({Set<DateTime> scheduledDates, Set<DateTime> takenDates})? pillTakenDateSets({
   required List<PillSheetModifiedHistory> histories,
   required DateTime maxDate,

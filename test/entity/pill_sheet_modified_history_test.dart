@@ -1161,6 +1161,209 @@ void main() {
       // - 飲み忘れ: 0日
       expect(result, 0);
     });
+
+    group("服用お休み期間を削除した場合、削除した期間の日は飲み忘れに数えない", () {
+      test("継続中の服用お休みを削除した場合、開始日から削除日の前日までを服用予定日から除く", () {
+        final today = DateTime.parse("2020-09-28");
+        final baseDate = DateTime(today.year, today.month, today.day);
+
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            createdAt: baseDate.subtract(const Duration(days: 10)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            createdAt: baseDate.subtract(const Duration(days: 5)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 10日前〜1日前の10日間
+        // 服用お休み: 10日前〜6日前の5日間（削除日の5日前は含まない）
+        // 飲み忘れ: 5日前〜1日前の5日間
+        expect(missedPillDays(histories: histories, maxDate: today), 5);
+      });
+
+      test("継続中の服用お休みを開始と同日に削除した場合、服用お休み日は無い", () {
+        final today = DateTime.parse("2020-09-28");
+        final baseDate = DateTime(today.year, today.month, today.day);
+
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            createdAt: baseDate.subtract(const Duration(days: 5)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            createdAt: baseDate.subtract(const Duration(days: 5)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 5日前〜1日前の5日間
+        // 服用お休み: なし
+        // 飲み忘れ: 5日間
+        expect(missedPillDays(histories: histories, maxDate: today), 5);
+      });
+
+      test("継続中の服用お休みを今日削除した場合、開始日から昨日までを服用予定日から除く", () {
+        final today = DateTime.parse("2020-09-28");
+        final baseDate = DateTime(today.year, today.month, today.day);
+
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
+            createdAt: baseDate.subtract(const Duration(days: 5)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: baseDate,
+            createdAt: baseDate,
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 5日前〜1日前の5日間
+        // 服用お休み: 5日前〜1日前の5日間
+        // 飲み忘れ: 0日
+        expect(missedPillDays(histories: histories, maxDate: today), 0);
+      });
+
+      test("終了済みの服用お休みを削除した場合、開始日から終了日の前日までを服用予定日から除いたままにする", () {
+        final today = DateTime.parse("2020-09-28");
+        final baseDate = DateTime(today.year, today.month, today.day);
+
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            createdAt: baseDate.subtract(const Duration(days: 10)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.endedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            createdAt: baseDate.subtract(const Duration(days: 7)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_3',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 3)),
+            createdAt: baseDate.subtract(const Duration(days: 3)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 10日前〜1日前の10日間
+        // 服用お休み: 10日前〜8日前の3日間（終了日の7日前は含まない）
+        // 飲み忘れ: 7日前〜1日前の7日間
+        expect(missedPillDays(histories: histories, maxDate: today), 7);
+      });
+
+      test("終了済みの服用お休みを終了と同日に削除した場合、開始日から終了日の前日までを服用予定日から除いたままにする", () {
+        final today = DateTime.parse("2020-09-28");
+        final baseDate = DateTime(today.year, today.month, today.day);
+
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
+            createdAt: baseDate.subtract(const Duration(days: 10)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.endedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            createdAt: baseDate.subtract(const Duration(days: 7)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_3',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: baseDate.subtract(const Duration(days: 7)),
+            createdAt: baseDate.subtract(const Duration(days: 7)),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 10日前〜1日前の10日間
+        // 服用お休み: 10日前〜8日前の3日間
+        // 飲み忘れ: 7日前〜1日前の7日間
+        expect(missedPillDays(histories: histories, maxDate: today), 7);
+      });
+
+      test("月をまたぐ継続中の服用お休みを削除した場合、月をまたいだ日も服用予定日から除く", () {
+        final histories = [
+          PillSheetModifiedHistory(
+            id: 'history_1',
+            actionType: PillSheetModifiedActionType.beganRestDuration.name,
+            estimatedEventCausingDate: DateTime.parse("2020-09-29"),
+            createdAt: DateTime.parse("2020-09-29"),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+          PillSheetModifiedHistory(
+            id: 'history_2',
+            actionType: PillSheetModifiedActionType.deletedRestDuration.name,
+            estimatedEventCausingDate: DateTime.parse("2020-10-02"),
+            createdAt: DateTime.parse("2020-10-02"),
+            value: const PillSheetModifiedHistoryValue(),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // allDates: 9/29〜10/4の6日間
+        // 服用お休み: 9/29〜10/1の3日間
+        // 飲み忘れ: 10/2〜10/4の3日間
+        expect(missedPillDays(histories: histories, maxDate: DateTime.parse("2020-10-05")), 3);
+      });
+    });
   });
 
   group('#takenPillHistoryTargetDates', () {
