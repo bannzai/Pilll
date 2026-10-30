@@ -128,6 +128,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn:
     id: "record_page_pill_sheet_setting_button"
 - waitForAnimationToEnd
+# ピルシートの設定シート。服用お休みのメニューの訳語を開始ダイアログと比べるため撮る
+- takeScreenshot: "scripts/translation_screenshots/artifacts/pill_sheet_setting_sheet/${LANG}"
 - tapOn:
     id: "begin_manual_rest_duration_row"
 - waitForAnimationToEnd
