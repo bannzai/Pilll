@@ -49,21 +49,22 @@ class AppLocalizationResolver extends ConsumerWidget {
 }
 
 /// 端末の言語を、文言を持つ言語 ([AppLocalizations.supportedLocales]) に解決して返す。
-/// [deviceLocaleName] は `Platform.localeName` の値 (例: en_US, zh_Hans_CN, fr_FR.UTF-8)。
 /// UI を組み立てる前・UI の無い isolate (通知アクションのクイック記録) で [L] を決めるために使う。
-/// arb は言語コードだけで構成されているため、言語コードだけを見る。
+/// [deviceLocales] は端末の優先言語の一覧 (`PlatformDispatcher.instance.locales`)。前面の UI の MaterialApp もこの一覧から決める。
+/// [deviceLocaleName] は `Platform.localeName` の値 (例: en_US, zh_Hans_CN, fr_FR.UTF-8)。
+/// UI の無い isolate で [deviceLocales] が届いているかを確かめていないため、[deviceLocales] が空の時だけその言語コードで補う。
 /// 解決規則は前面の UI と同じ basicLocaleListResolution にする (app.dart の MaterialApp は localeResolutionCallback を持たない)。
-/// そのためサポート外の言語では、前面の UI と同じく [AppLocalizations.supportedLocales] の先頭になる。
-Locale deviceAppLocale({required String deviceLocaleName}) => basicLocaleListResolution(
-      [Locale(deviceLocaleName.split(RegExp('[-_.@]')).first)],
+/// そのため優先言語のどれもサポート外の時は、前面の UI と同じく [AppLocalizations.supportedLocales] の先頭になる。
+Locale deviceAppLocale({required List<Locale> deviceLocales, required String deviceLocaleName}) => basicLocaleListResolution(
+      deviceLocales.isNotEmpty ? deviceLocales : [Locale(deviceLocaleName.split(RegExp('[-_.@]')).first)],
       AppLocalizations.supportedLocales,
     );
 
-/// [L] と [Intl.defaultLocale] を、[deviceLocaleName] (`Platform.localeName` の値) を [deviceAppLocale] で解決した言語にする。
+/// [L] と [Intl.defaultLocale] を、[deviceAppLocale] で解決した端末の言語にする。引数は [deviceAppLocale] と同じ。
 /// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で通知の文言を端末の言語にするために使う。
 /// UI が組み立てられた後は [AppLocalizationResolver] が上書きする。
-void applyDeviceAppLocale({required String deviceLocaleName}) {
-  final locale = deviceAppLocale(deviceLocaleName: deviceLocaleName);
+void applyDeviceAppLocale({required List<Locale> deviceLocales, required String deviceLocaleName}) {
+  final locale = deviceAppLocale(deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName);
   L = lookupAppLocalizations(locale);
   Intl.defaultLocale = locale.languageCode;
 }

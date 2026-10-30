@@ -24,35 +24,77 @@ void main() {
   });
 
   group('#deviceAppLocale', () {
-    test('en_US は en', () {
-      expect(deviceAppLocale(deviceLocaleName: 'en_US'), const Locale('en'));
-    });
-    test('ja_JP は ja', () {
-      expect(deviceAppLocale(deviceLocaleName: 'ja_JP'), const Locale('ja'));
-    });
-    test('文字体系を含む zh_Hans_CN は zh', () {
-      expect(
-          deviceAppLocale(deviceLocaleName: 'zh_Hans_CN'), const Locale('zh'));
-    });
-    test('区切りがハイフンの de-DE は de', () {
-      expect(deviceAppLocale(deviceLocaleName: 'de-DE'), const Locale('de'));
-    });
-    test('文字コードの付いた fr_FR.UTF-8 は fr', () {
-      expect(
-          deviceAppLocale(deviceLocaleName: 'fr_FR.UTF-8'), const Locale('fr'));
-    });
-    test('修飾子の付いた es_ES@euro は es', () {
-      expect(
-          deviceAppLocale(deviceLocaleName: 'es_ES@euro'), const Locale('es'));
-    });
-    test('言語コードだけの ko は ko', () {
-      expect(deviceAppLocale(deviceLocaleName: 'ko'), const Locale('ko'));
+    group('優先言語の一覧がある場合', () {
+      test('en_US は en', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('en', 'US')],
+              deviceLocaleName: 'en_US'),
+          const Locale('en'),
+        );
+      });
+      test('第一優先がサポート外の xx で第二優先が ja の場合は ja', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+              deviceLocaleName: 'xx_XX'),
+          const Locale('ja'),
+        );
+      });
+      test('Platform.localeName と食い違う場合は優先言語の一覧を使う', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('de', 'DE')],
+              deviceLocaleName: 'ja_JP'),
+          const Locale('de'),
+        );
+      });
     });
 
-    /// 端末の言語を [deviceLocale] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
+    group('優先言語の一覧が空の場合は Platform.localeName で補う', () {
+      test('en_US は en', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'en_US'),
+            const Locale('en'));
+      });
+      test('ja_JP は ja', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ja_JP'),
+            const Locale('ja'));
+      });
+      test('文字体系を含む zh_Hans_CN は zh', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'zh_Hans_CN'),
+            const Locale('zh'));
+      });
+      test('区切りがハイフンの de-DE は de', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'de-DE'),
+            const Locale('de'));
+      });
+      test('文字コードの付いた fr_FR.UTF-8 は fr', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'fr_FR.UTF-8'),
+            const Locale('fr'));
+      });
+      test('修飾子の付いた es_ES@euro は es', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'es_ES@euro'),
+            const Locale('es'));
+      });
+      test('言語コードだけの ko は ko', () {
+        expect(deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ko'),
+            const Locale('ko'));
+      });
+    });
+
+    /// 端末の優先言語を [deviceLocales] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
     Future<Locale> foregroundAppLocale(WidgetTester tester,
-        {required Locale deviceLocale}) async {
-      tester.platformDispatcher.localesTestValue = [deviceLocale];
+        {required List<Locale> deviceLocales}) async {
+      tester.platformDispatcher.localesTestValue = deviceLocales;
       addTearDown(tester.platformDispatcher.clearLocalesTestValue);
       late Locale resolvedLocale;
       await tester.pumpWidget(
@@ -68,29 +110,40 @@ void main() {
       return resolvedLocale;
     }
 
-    testWidgets('en_US の端末では前面の UI と同じ言語になる', (tester) async {
+    /// [deviceLocales] の端末で、[deviceAppLocale] と前面の UI が同じ言語になることを確かめる
+    Future<void> expectSameAsForeground(WidgetTester tester,
+        {required List<Locale> deviceLocales,
+        required String deviceLocaleName}) async {
       expect(
-        deviceAppLocale(deviceLocaleName: 'en_US'),
-        await foregroundAppLocale(tester,
-            deviceLocale: const Locale('en', 'US')),
+        deviceAppLocale(
+            deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName),
+        await foregroundAppLocale(tester, deviceLocales: deviceLocales),
       );
+    }
+
+    testWidgets('en_US の端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
     });
     testWidgets('zh_Hans_CN の端末では前面の UI と同じ言語になる', (tester) async {
-      expect(
-        deviceAppLocale(deviceLocaleName: 'zh_Hans_CN'),
-        await foregroundAppLocale(
-          tester,
-          deviceLocale: const Locale.fromSubtags(
-              languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
-        ),
+      await expectSameAsForeground(
+        tester,
+        deviceLocales: const [
+          Locale.fromSubtags(
+              languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN')
+        ],
+        deviceLocaleName: 'zh_Hans_CN',
       );
     });
-    testWidgets('サポート外の言語 xx_XX の端末では前面の UI と同じ言語になる', (tester) async {
-      expect(
-        deviceAppLocale(deviceLocaleName: 'xx_XX'),
-        await foregroundAppLocale(tester,
-            deviceLocale: const Locale('xx', 'XX')),
-      );
+    testWidgets('第一優先がサポート外の xx で第二優先が ja の端末では前面の UI と同じ言語になる',
+        (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+          deviceLocaleName: 'xx_XX');
+    });
+    testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX')], deviceLocaleName: 'xx_XX');
     });
   });
 
@@ -104,7 +157,8 @@ void main() {
         Intl.defaultLocale = previousDefaultLocale;
       });
 
-      applyDeviceAppLocale(deviceLocaleName: 'en_US');
+      applyDeviceAppLocale(
+          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
 
       expect(L.localeName, 'en');
       expect(Intl.defaultLocale, 'en');

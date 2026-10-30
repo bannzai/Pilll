@@ -43,7 +43,7 @@ Future<void> entrypoint() async {
       await initializeDateFormatting();
     }
     // MethodChannel (recordPill) は UI を組み立てる前に呼ばれ得て、その時も通知を登録し直すため、AppLocalizationResolver が動く前から端末の言語にしておく
-    applyDeviceAppLocale(deviceLocaleName: Platform.localeName);
+    applyDeviceAppLocale(deviceLocales: PlatformDispatcher.instance.locales, deviceLocaleName: Platform.localeName);
 
     WidgetsFlutterBinding.ensureInitialized();
 
@@ -103,7 +103,7 @@ Future<void> handleNotificationAction(
       initializeDateFormatting(Platform.localeName),
     ).wait;
     // UI を組み立てない isolate のため AppLocalizationResolver が動かない。通知の文言を端末の言語にするためここで設定する
-    applyDeviceAppLocale(deviceLocaleName: Platform.localeName);
+    applyDeviceAppLocale(deviceLocales: PlatformDispatcher.instance.locales, deviceLocaleName: Platform.localeName);
 
     await LocalNotificationService.setupTimeZone();
 
