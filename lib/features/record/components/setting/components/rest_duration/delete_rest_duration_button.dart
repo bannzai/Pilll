@@ -12,8 +12,11 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 /// 服用お休み期間の行に置く削除ボタン。確認ダイアログで承諾されたら [restDuration] を [pillSheetGroup] から削除する
-class DeleteRestDurationButton extends HookConsumerWidget {
+class DeleteRestDurationButton extends ConsumerWidget {
+  /// 削除する服用お休み期間
   final RestDuration restDuration;
+
+  /// [restDuration] を含むピルシートグループ
   final PillSheetGroup pillSheetGroup;
 
   /// 削除が完了した後に呼ばれる
@@ -62,6 +65,8 @@ class DeleteRestDurationButton extends HookConsumerWidget {
                   name: 'delete_rest_duration',
                   parameters: {'rest_duration_id': restDuration.id},
                 );
+                // 削除の完了を待つ間にダイアログが閉じられると、完了後の pop が背後の画面を閉じてしまうため、先にダイアログを閉じる
+                Navigator.of(context).pop();
                 try {
                   await deleteRestDuration(restDuration: restDuration, pillSheetGroup: pillSheetGroup);
                   // 服用お休みの有無・期間でリマインドを登録する日が変わるため、削除後の状態で登録しなおす
@@ -69,7 +74,6 @@ class DeleteRestDurationButton extends HookConsumerWidget {
                   if (!context.mounted) {
                     return;
                   }
-                  Navigator.of(context).pop();
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(duration: const Duration(seconds: 2), content: Text(L.deletedPausePeriod)),
                   );
