@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Επιλογή ημερομηνίας έναρξης της παύσης λήψης χαπιών",
   "selectPauseEndDateAsResumeDate": "Λήξη: η ημέρα που ξαναρχίζετε το χάπι",
   "pauseResumeDateLimitIsToday": "Τελευταία ημέρα επανέναρξης λήψης: σήμερα",
+  "pauseResumeDateLimitBeforeNextPause": "Επανέναρξη έως την επόμενη παύση ({date})",
   "pauseStartDate": "Ημερομηνία έναρξης της παύσης λήψης χαπιών",
   "pauseEndDate": "Ημερομηνία λήξης της παύσης λήψης χαπιών",
   "endPillSheet": "Η καρτέλα χαπιών ολοκληρώθηκε",

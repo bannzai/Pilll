@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Chọn ngày bắt đầu tạm ngừng uống thuốc",
   "selectPauseEndDateAsResumeDate": "Ngày kết thúc: ngày bắt đầu uống thuốc lại",
   "pauseResumeDateLimitIsToday": "Ngày cuối để uống thuốc lại là hôm nay",
+  "pauseResumeDateLimitBeforeNextPause": "Uống lại trước kỳ nghỉ thuốc tiếp theo ({date})",
   "pauseStartDate": "Ngày bắt đầu tạm ngừng uống thuốc",
   "pauseEndDate": "Ngày kết thúc tạm ngừng uống thuốc",
   "endPillSheet": "Vỉ thuốc đã dùng hết",

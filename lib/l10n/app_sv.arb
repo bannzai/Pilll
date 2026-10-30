@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Välj startdatum för pillerpausen",
   "selectPauseEndDateAsResumeDate": "Slutdatum: dagen du börjar ta p-pillret igen",
   "pauseResumeDateLimitIsToday": "Sista dagen att börja ta p-piller igen är i dag",
+  "pauseResumeDateLimitBeforeNextPause": "Återuppta senast vid nästa paus ({date})",
   "pauseStartDate": "Startdatum för pillerpausen",
   "pauseEndDate": "Slutdatum för pilleruppehållet",
   "endPillSheet": "Avslutad p-pillerkarta",

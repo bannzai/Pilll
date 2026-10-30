@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Izvēlieties tablešu lietošanas pārtraukuma sākuma datumu",
   "selectPauseEndDateAsResumeDate": "Beigu datums: diena, kad atsākat lietot tableti",
   "pauseResumeDateLimitIsToday": "Pēdējā diena, kad atsākt lietot tableti, ir šodien",
+  "pauseResumeDateLimitBeforeNextPause": "Atsākt lietošanu līdz nākamajam pārtraukumam ({date})",
   "pauseStartDate": "Tablešu lietošanas pārtraukuma sākuma datums",
   "pauseEndDate": "Tablešu lietošanas pārtraukuma beigu datums",
   "endPillSheet": "Tablešu blisteris pabeigts",

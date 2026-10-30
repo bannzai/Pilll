@@ -108,6 +108,7 @@
   "selectPauseStartDate": "गोळी घेण्याच्या विरामाची सुरुवातीची तारीख निवडा",
   "selectPauseEndDateAsResumeDate": "शेवटची तारीख: पुन्हा गोळी घ्यायला सुरुवात करण्याचा दिवस",
   "pauseResumeDateLimitIsToday": "गोळी पुन्हा घेणे सुरू करण्याचा शेवटचा दिवस आज",
+  "pauseResumeDateLimitBeforeNextPause": "पुढील विश्रांतीपर्यंत ({date}) पुन्हा गोळ्या घेणे सुरू करा",
   "pauseStartDate": "गोळ्या घेण्याचा विराम सुरू होण्याची तारीख",
   "pauseEndDate": "गोळ्या घेण्यातील विश्रांती संपण्याची तारीख",
   "endPillSheet": "पिल शीट संपली",

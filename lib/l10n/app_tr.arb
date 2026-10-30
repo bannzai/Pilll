@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Hap kullanımına ara verilecek başlangıç tarihini seçin",
   "selectPauseEndDateAsResumeDate": "Bitiş tarihi: hapa yeniden başladığınız gün",
   "pauseResumeDateLimitIsToday": "Hapa yeniden başlamak için son gün bugün",
+  "pauseResumeDateLimitBeforeNextPause": "Sonraki araya kadar yeniden başlayın ({date})",
   "pauseStartDate": "Hap kullanımına ara verme başlangıç tarihi",
   "pauseEndDate": "Hap kullanımına ara verme bitiş tarihi",
   "endPillSheet": "Blister tamamlandı",

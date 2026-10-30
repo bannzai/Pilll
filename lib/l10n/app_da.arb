@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Vælg startdato for pillepausen",
   "selectPauseEndDateAsResumeDate": "Slutdato: dagen du tager p-pillen igen",
   "pauseResumeDateLimitIsToday": "Sidste dag for at genoptage p-pillen er i dag",
+  "pauseResumeDateLimitBeforeNextPause": "Genoptag senest ved næste pillepause ({date})",
   "pauseStartDate": "Startdato for pillepausen",
   "pauseEndDate": "Slutdato for pillepausen",
   "endPillSheet": "Afsluttet pillekort",

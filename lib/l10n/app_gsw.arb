@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Aafangsdatum vo de Pillepause uswähle",
   "selectPauseEndDateAsResumeDate": "Änddatum: de Tag, wo du d Pille wider nimmsch",
   "pauseResumeDateLimitIsToday": "S Pille-Iinäh wider aafange: bis hüt",
+  "pauseResumeDateLimitBeforeNextPause": "Wieder iinäh bis zur nöchschte Pause ({date})",
   "pauseStartDate": "Aafangsdatum vo de Pillepause",
   "pauseEndDate": "Änddatum vo de Pillepause",
   "endPillSheet": "Pilleblister isch fertig",

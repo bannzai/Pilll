@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күнін таңдаңыз",
   "selectPauseEndDateAsResumeDate": "Аяқталу күні: таблетканы қайта қабылдайтын күн",
   "pauseResumeDateLimitIsToday": "Таблетканы қайта қабылдауды бастайтын соңғы күн — бүгін",
+  "pauseResumeDateLimitBeforeNextPause": "Қабылдауды келесі үзіліске дейін қайта бастау ({date})",
   "pauseStartDate": "Таблетка қабылдаудағы үзілістің басталу күні",
   "pauseEndDate": "Таблетка қабылдаудағы үзілістің аяқталу күні",
   "endPillSheet": "таблетка блистер аяқталды",

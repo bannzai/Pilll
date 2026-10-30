@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Изаберите датум почетка паузе у узимању пилула",
   "selectPauseEndDateAsResumeDate": "Датум завршетка: дан када поново узимате пилулу",
   "pauseResumeDateLimitIsToday": "Последњи дан за наставак узимања пилуле је данас",
+  "pauseResumeDateLimitBeforeNextPause": "Наставак узимања до следеће паузе ({date})",
   "pauseStartDate": "Датум почетка паузе у узимању пилула",
   "pauseEndDate": "Датум завршетка паузе у узимању пилула",
   "endPillSheet": "Крај блистера",

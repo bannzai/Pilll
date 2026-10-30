@@ -108,6 +108,7 @@
   "selectPauseStartDate": "Kies de begindatum van je pillenpauze",
   "selectPauseEndDateAsResumeDate": "Einddatum: dag waarop je de pil weer neemt",
   "pauseResumeDateLimitIsToday": "Laatste dag om weer met de pil te beginnen: vandaag",
+  "pauseResumeDateLimitBeforeNextPause": "Hervat uiterlijk bij de volgende stopweek ({date})",
   "pauseStartDate": "Startdatum van de pillenpauze",
   "pauseEndDate": "Einddatum van de pillenpauze",
   "endPillSheet": "Pillenstrip is op",
