@@ -36,6 +36,9 @@ void main() {
       expect(tester.renderObject<RenderParagraph>(text).didExceedMaxLines,
           isFalse);
       expect(tester.getRect(text).width, lessThanOrEqualTo(20));
+      // 縮小されている。略記が 1 文字のロケール (ja「日」) では、FittedBox が無くても 1 文字は改行されず didExceedMaxLines が false のままのため、縮小そのものも確かめる
+      expect(tester.getRect(text).width,
+          lessThan(tester.renderObject<RenderParagraph>(text).size.width));
     });
 
     testWidgets('曜日の略記が幅に収まる場合は縮小されない', (WidgetTester tester) async {
