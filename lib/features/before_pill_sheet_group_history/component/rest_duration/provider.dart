@@ -27,19 +27,16 @@ extension BeforePillSheetGroupRestDurationDomain on PillSheetGroup {
     return afterLastTakenDate.isBefore(lastPillSheetEstimatedEndTakenDate) ? afterLastTakenDate : lastPillSheetEstimatedEndTakenDate;
   }
 
-  /// [dateTimeRange] が [excludingRestDuration] 以外の服用お休み期間と重なるかどうか
-  /// 服用お休み期間は開始日を含み終了日 (服用再開日) を含まない半開区間として比較する。そのため終了日と次の開始日が同じ日でも重ならない
-  /// 終了日が無い (継続中の) 服用お休み期間は開始日以降ずっと続いているものとして扱う
+  /// [dateTimeRange] が [excludingRestDuration] 以外の服用お休み期間と重なるかどうか。判定の基準は [PillSheetGroup.overlapsOtherRestDuration]
   bool overlapsOtherRestDurationForBeforePillSheetGroup({
     required DateTimeRange dateTimeRange,
     required RestDuration? excludingRestDuration,
   }) {
-    return restDurations.where((e) => e != excludingRestDuration).any((other) {
-      final otherEndDate = other.endDate;
-      final beginsBeforeOtherEnds = otherEndDate == null || dateTimeRange.start.date().isBefore(otherEndDate.date());
-      final otherBeginsBeforeEnds = other.beginDate.date().isBefore(dateTimeRange.end.date());
-      return beginsBeforeOtherEnds && otherBeginsBeforeEnds;
-    });
+    return overlapsOtherRestDuration(
+      beginDate: dateTimeRange.start,
+      endDate: dateTimeRange.end,
+      excludingRestDuration: excludingRestDuration,
+    );
   }
 
   /// 前回のピルシートグループの服用お休み期間として [dateTimeRange] を追加・変更できない場合にその理由の文言を返す。できる場合は null

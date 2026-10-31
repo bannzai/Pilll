@@ -19,7 +19,10 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.8,
+      // 初期設定の画面で、シートの上に見える背景の見出しを全行読めるようにするため。
+      // 0.8 では全言語で 2 行目以降が隠れ、0.75 でも iPhone SE の fr・pt (3 行) の 3 行目が隠れた
+      // (issue #2020。test/features/initial_setting/pill_sheet_group/page_test.dart で確かめている)
+      initialChildSize: 0.7,
       maxChildSize: 0.9,
       builder: (context, scrollController) {
         return Container(

@@ -1,0 +1,66 @@
+# managed-by: setup-snapshot-testing (bannzai/castle)
+# 画面の画像を基準画像と比べ、見た目 (文言・色・余白・翻訳・アイコン) の変更を検出する。
+# - pull_request: 基準画像と比べる。一致しない・基準画像が無い時は、撮り直した画像を artifact snapshot-baselines に上げて失敗する
+# - workflow_dispatch (update=true): 比べずに撮り直し、artifact snapshot-baselines に上げる
+# 基準画像は OS でフォントの描画が変わるため、この runner で撮ったものだけを使う。更新は setup-snapshot-testing skill の
+# update-baselines.sh (artifact を取得して commit・push する) で行う
+name: snapshot-testing
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      update:
+        description: 基準画像と比べずに撮り直して artifact に上げる
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  SNAPSHOT_BASELINE_DIR: test/snapshot/goldens
+  SNAPSHOT_FAILURE_DIR: test/snapshot/failures
+
+jobs:
+  snapshot-testing:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.47.8'
+      - name: Prepare
+        run: |
+          make secret
+      - run: flutter pub get
+      - name: Fetch fonts
+        id: fonts
+        run: bash scripts/snapshot_testing/fetch_fonts.sh
+      - name: Compare with baselines
+        id: compare
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.update) }}
+        run: flutter test --tags snapshot --run-skipped
+      - name: Record baselines
+        id: record
+        if: ${{ !cancelled() && steps.fonts.outcome == 'success' && steps.compare.outcome != 'success' }}
+        run: flutter test --tags snapshot --run-skipped --update-goldens
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: ${{ !cancelled() && steps.record.outcome == 'success' }}
+        with:
+          name: snapshot-baselines
+          path: ${{ env.SNAPSHOT_BASELINE_DIR }}
+          if-no-files-found: error
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: ${{ failure() }}
+        with:
+          name: snapshot-failures
+          path: ${{ env.SNAPSHOT_FAILURE_DIR }}
+          if-no-files-found: ignore

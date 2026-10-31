@@ -17,15 +17,20 @@ class WeekdayBadge extends StatelessWidget {
       width: 20,
       height: WeekdayBadgeConst.height,
       color: AppColors.white,
+      // pt「dom.」・fr「sam.」のように曜日の略記が幅 20 に収まらない言語では「.」だけが 2 行目に落ちて枠からはみ出すため、1 行のまま縮小する
       child: Center(
-        child: Text(
-          weekday.weekdayString(),
-          textAlign: TextAlign.end,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w600,
-            fontSize: 9,
-          ).merge(TextStyle(color: weekday.weekdayColor())),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            weekday.weekdayString(),
+            maxLines: 1,
+            textAlign: TextAlign.end,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 9,
+            ).merge(TextStyle(color: weekday.weekdayColor())),
+          ),
         ),
       ),
     );

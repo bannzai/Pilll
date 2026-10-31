@@ -21,50 +21,54 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     // 各段を同じ幅 (カード 2 枚 + 間隔) に固定し、段の中ではカードを Expanded で等分する。
     // カードが訳文の長さで幅を変えると段ごとに左端がずれて列にならないため (PR #1955 の QA で ja・en で確認)。
-    // 画面がこの幅より狭い時は Expanded が縮めて Row が溢れない
-    return Center(
-      child: ConstrainedBox(
-        constraints: const BoxConstraints(maxWidth: PillSheetTypeColumnConstant.width * 2 + _cardGap),
-        child: Column(
-          children: <Widget>[
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _pillSheet(PillSheetType.pillsheet_21),
-                const SizedBox(width: _cardGap),
-                _pillSheet(PillSheetType.pillsheet_28_4),
-              ],
-            ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _pillSheet(PillSheetType.pillsheet_28_7),
-                const SizedBox(width: _cardGap),
-                _pillSheet(PillSheetType.pillsheet_28_0),
-              ],
-            ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _pillSheet(PillSheetType.pillsheet_24_rest_4),
-                const SizedBox(width: _cardGap),
-                _pillSheet(PillSheetType.pillsheet_21_0),
-              ],
-            ),
-            const SizedBox(height: 16),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _pillSheet(PillSheetType.pillsheet_24_0),
-                const SizedBox(width: _cardGap),
-                // 最後の段の右側は空き枠。Expanded で左のカードと同じ幅を占めて列を揃える
-                const Expanded(child: SizedBox.shrink()),
-              ],
-            ),
-          ],
+    // 画面がこの幅より狭い時は Expanded が縮めて Row が溢れない。
+    // 左右の 16 は、狭い画面でカードが画面の端に付かないよう、シートの見出しの左余白と揃える
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: PillSheetTypeColumnConstant.width * 2 + _cardGap),
+          child: Column(
+            children: <Widget>[
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _pillSheet(PillSheetType.pillsheet_21),
+                  const SizedBox(width: _cardGap),
+                  _pillSheet(PillSheetType.pillsheet_28_4),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _pillSheet(PillSheetType.pillsheet_28_7),
+                  const SizedBox(width: _cardGap),
+                  _pillSheet(PillSheetType.pillsheet_28_0),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _pillSheet(PillSheetType.pillsheet_24_rest_4),
+                  const SizedBox(width: _cardGap),
+                  _pillSheet(PillSheetType.pillsheet_21_0),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _pillSheet(PillSheetType.pillsheet_24_0),
+                  const SizedBox(width: _cardGap),
+                  // 最後の段の右側は空き枠。Expanded で左のカードと同じ幅を占めて列を揃える
+                  const Expanded(child: SizedBox.shrink()),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
