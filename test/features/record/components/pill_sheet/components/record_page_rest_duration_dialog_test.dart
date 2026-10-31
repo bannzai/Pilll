@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
+import 'package:pilll/features/record/components/pill_sheet/components/rest_duration_explain_image.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 import '../../../../../helper/mock.mocks.dart';
@@ -142,6 +143,19 @@ void main() {
         await tester.pump();
 
         expect(onDoneEndDates, [null]);
+      });
+    });
+
+    group('説明図', () {
+      testWidgets('ダイアログの表示モードの説明図を表示する', (WidgetTester tester) async {
+        tester.view.physicalSize = const Size(1200, 2400);
+        tester.view.devicePixelRatio = 1.0;
+        addTearDown(tester.view.reset);
+
+        await tester.pumpWidget(buildDialog(initialEndDate: null, onDone: (_) {}));
+        await tester.pump();
+
+        expect(tester.widget<RestDurationExplainImage>(find.byType(RestDurationExplainImage)).appearanceMode, PillSheetAppearanceMode.number);
       });
     });
 

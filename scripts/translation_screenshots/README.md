@@ -12,7 +12,7 @@ castle の translate-app-screenshot-check skill に渡す入力として、実�
 
 ## 撮る画面と仕様
 
-下の表の `record/`・`menstruation/`・`calendar/`・`settings/`・`reminder_notification_customize_word/`・`rest_duration_begin_dialog/` は、初期設定の直後に、記録 →「ピルシートを追加」で初期設定のピルの種類のままピルシートを足した状態で撮る。そのため、どの言語でも次の状態になる。
+下の表の `record/`・`menstruation/`・`calendar/`・`settings/`・`reminder_notification_customize_word/`・`pill_sheet_setting_sheet/`・`rest_duration_begin_dialog/` は、初期設定の直後に、記録 →「ピルシートを追加」で初期設定のピルの種類のままピルシートを足した状態で撮る。そのため、どの言語でも次の状態になる。
 
 - ピルの種類は 21錠＋7日休薬 × 3 枚 (初期設定で 1 種類を選ぶと 3 枚分が保存される)
 - ピルシートは撮影した日に追加したもので、服用の記録は無い
@@ -30,6 +30,7 @@ castle の translate-app-screenshot-check skill に渡す入力として、実�
 | `calendar/` | カレンダー | ホームのカレンダータブ。今月のカレンダーと服用・生理の予定 |
 | `settings/` | 設定 | ホームの設定タブの先頭 (画面に収まる範囲) |
 | `reminder_notification_customize_word/` | 服用通知の文言カスタマイズ | 設定 → 服用通知の文言カスタマイズ。通知の文言の入力欄とプレビュー |
+| `pill_sheet_setting_sheet/` | ピルシートの設定シート | 記録 → ピルシートの設定。服用お休みを含むメニューのボトムシート |
 | `rest_duration_begin_dialog/` | 服用お休みの開始ダイアログ | 記録 → ピルシートの設定 → 服用お休みを開始。服用お休みを始める確認のダイアログ |
 | `yaz_flex_question/` | Yaz Flex の初期設定の質問 | 初期設定の最初の画面「ヤーズフレックスの方ですか？」 |
 | `pill_sheet_type_select_sheet/` | ピルの種類選択シート | ピルの種類を選ぶボトムシート。記録 →「ピルシートを追加」でも同じ部品 (`AddPillSheetTypeEmpty`) から開くシートで、flow では初期設定の中で開く |

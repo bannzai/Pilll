@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -223,6 +224,35 @@ String reminderPillDisplayNumberFor({
     pillNumberInPillSheet: pillNumberInPillSheet,
     estimatedEventCausingDate: reminderDate.date(),
   );
+}
+
+/// [reminderDateTime] に出すリマインドの、プレミアム・トライアル中のユーザー向けの通知タイトルを返す
+/// [pillSheetDisplayNumber] は [reminderPillDisplayNumberFor] が返すピル番号の文字列を渡す
+/// 文言の言語は [L] に従う
+String reminderNotificationTitle({
+  required ReminderNotificationCustomization reminderNotificationCustomization,
+  required DateTime reminderDateTime,
+  required String pillSheetDisplayNumber,
+}) {
+  var result = reminderNotificationCustomization.word;
+  if (!reminderNotificationCustomization.isInVisibleReminderDate) {
+    result += ' ';
+    result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
+  }
+
+  if (!reminderNotificationCustomization.isInVisiblePillNumber) {
+    result += ' ';
+    result += L.formattedPillNumber(pillSheetDisplayNumber);
+  }
+
+  if (Environment.isDevelopment) {
+    result += ' Local';
+  }
+  // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
+  if (result.isEmpty) {
+    return L.notification;
+  }
+  return result;
 }
 
 // Reminder
@@ -482,28 +512,11 @@ class RegisterReminderLocalNotification {
         );
 
         if (premiumOrTrial) {
-          final title = () {
-            var result = setting.reminderNotificationCustomization.word;
-            if (!setting.reminderNotificationCustomization.isInVisibleReminderDate) {
-              result += ' ';
-              result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
-            }
-
-            if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
-              result += ' ';
-              result += pillSheetDisplayNumber;
-              result += L.number;
-            }
-
-            if (Environment.isDevelopment) {
-              result += ' Local';
-            }
-            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
-            if (result.isEmpty) {
-              return L.notification;
-            }
-            return result;
-          }();
+          final title = reminderNotificationTitle(
+            reminderNotificationCustomization: setting.reminderNotificationCustomization,
+            reminderDateTime: reminderDateTime,
+            pillSheetDisplayNumber: pillSheetDisplayNumber,
+          );
 
           final message = () {
             if (setting.reminderNotificationCustomization.isInVisibleDescription) {
@@ -512,7 +525,7 @@ class RegisterReminderLocalNotification {
             // 最後に服用完了した日付が数日前の場合は常にmissedTakenMessage
             // v2では部分服用(2回中1回)を服用済み扱いにしないよう、服用完了ピル番号で判定する
             if (activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber > 1) {
-              return setting.reminderNotificationCustomization.missedTakenMessage;
+              return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
             }
             // 本日分の服用記録がない場合で今日のループ(pillDayOffset==0)の時
             if (pillDayOffset == 0 && !todayPillAllTaken) {
@@ -527,7 +540,7 @@ class RegisterReminderLocalNotification {
             if (activePillSheet.pillSheetHasRestOrFakeDuration && isOverActivePillSheet && pillNumberInPillSheet == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
-            return setting.reminderNotificationCustomization.missedTakenMessage;
+            return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
           }();
 
           futures.add(

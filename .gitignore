@@ -79,3 +79,6 @@ ios/Runner/ExportOptions*.plist
 
 # LLVM の計測プロファイル (coverage 付きでビルドされたツールをリポジトリ直下で実行すると生成される)
 *.profraw
+# snapshot テストのフォント (scripts/snapshot_testing/fetch_fonts.sh が取得する) と、比較に失敗した時の差分画像
+test/snapshot/fonts/
+test/snapshot/failures/

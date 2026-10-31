@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/theme/date_range_picker.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/record/components/pill_sheet/components/rest_duration_explain_image.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -71,9 +71,7 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
             ),
           ),
           const SizedBox(height: 8),
-          SvgPicture.asset(
-            appearanceMode == PillSheetAppearanceMode.date ? 'images/explain_rest_duration_date.svg' : 'images/explain_rest_duration_number.svg',
-          ),
+          RestDurationExplainImage(appearanceMode: appearanceMode),
           const SizedBox(height: 24),
           ListTile(
             contentPadding: EdgeInsets.zero,

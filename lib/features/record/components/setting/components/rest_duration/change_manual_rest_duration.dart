@@ -13,6 +13,20 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+/// 服用お休み期間の開始日・終了日を変更する行。
+///
+/// 服用お休み期間の「削除」はあえて提供しない (https://github.com/bannzai/Pilll/issues/2035 )。
+/// 前のピルシートの服用お休みを取り除くと、後続のピルシートの開始日が服用お休みの日数分だけ前にずれ、
+/// 今飲んでいるシートの今日の番号が変わる。その時に服用記録を残すと飲んでいないピルが服用済みの表示になり、
+/// 消すと服用記録そのものが失われるため、どちらに倒しても当人の記録と食い違う。
+/// この判断は owner が https://github.com/bannzai/Pilll/pull/2038 で行った。
+/// ユーザーから問い合わせがあり、どうしても取り除きたい時は、この行の変更で開始日と終了日を同じ日にして
+/// 期間を 0 日にする操作を案内する (DateRangePicker は同じ日を開始日と終了日に選べる)。
+/// 案内できるのは、現在のピルシートグループにある終了日が決まった期間だけ。
+/// 服用お休み中 (終了日が無い) の期間は単一日付の DatePicker で開始日しか変えられず、
+/// 前回のピルシートグループの期間は同じ日の範囲を保存時のエラーにしている
+/// (restDurationRangeErrorMessageForBeforePillSheetGroup) ため、0 日にできない。
+/// 0 日にした時も後続のピルシートの開始日は同じ理由でずれるので、その点も合わせて伝える。
 class ChangeManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheetGroup pillSheetGroup;
@@ -74,8 +88,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
-            lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText,
+            lastDate: pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration),
+            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText(restDuration: restDuration),
             fieldLabelText: L.pauseStartDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
@@ -101,6 +115,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             );
           } catch (e) {
             onError(e);
+            return;
           }
 
           onChanged();
@@ -138,12 +153,16 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
           // DateRangePickerでは開始日と終了日で別々の上限を設定できず、終了日のために広げたlastDateが開始日にも適用される
           // 開始日は従来通り「最終服用日の翌日」までしか選べないように、選択後に検証する
-          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDate.date())) {
+          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration).date())) {
             analytics.logEvent(
               name: 'change_rest_duration_invalid_begin',
               parameters: {'rest_duration_id': restDuration.id},
             );
-            onError(AlertError(L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDate))));
+            onError(
+              AlertError(
+                L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration))),
+              ),
+            );
             return;
           }
 
@@ -160,10 +179,17 @@ class ChangeManualRestDuration extends HookConsumerWidget {
               toRestDuration: toRestDuration,
               pillSheetGroup: pillSheetGroup,
             );
-            // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
-            await registerReminderLocalNotification();
           } catch (e) {
             onError(e);
+            return;
+          }
+
+          // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
+          // 服用お休みの変更は保存済みのため、登録に失敗しても保存の失敗としては扱わず画面を閉じる (end_manual_rest_duration と同じ扱い)
+          try {
+            await registerReminderLocalNotification();
+          } catch (e) {
+            debugPrint('registerReminderLocalNotification error: $e');
           }
 
           onChanged();
