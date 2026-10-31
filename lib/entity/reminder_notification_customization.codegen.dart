@@ -1,8 +1,15 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/emoji/emoji.dart';
 
 part 'reminder_notification_customization.codegen.g.dart';
 part 'reminder_notification_customization.codegen.freezed.dart';
+
+/// 飲み忘れ時のメッセージの既定値 (日本語)
+///
+/// v2 の追加時からこの文字列を既定値として Firestore に保存してきたため、ロケールに関わらず値を変えない。
+/// 保存値がこの文字列と一致するものは未編集とみなし、表示時にロケールの既定文言 (L.defaultMissedTakenMessage) に置き換える
+const reminderNotificationCustomizationJapaneseDefaultMissedTakenMessage = '飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji';
 
 /// ピル服用リマインダー通知のカスタマイゼーション設定を管理するEntity
 ///
@@ -52,16 +59,21 @@ class ReminderNotificationCustomization with _$ReminderNotificationCustomization
     /// カスタマイズ可能なメッセージです。
     @Default('') String dailyTakenMessage,
 
-    // TODO: [Localizations]
     /// 飲み忘れ時に表示するメッセージ
     ///
     /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
-    /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
-    /// 日本語メッセージが設定されています。
-    @Default('飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji') String missedTakenMessage,
+    /// 表示されるメッセージです。表示には missedTakenMessageForDisplay を使います。
+    @Default(reminderNotificationCustomizationJapaneseDefaultMissedTakenMessage) String missedTakenMessage,
     // END: From v2
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
+
+  /// 通知と通知文言カスタマイズ画面に表示する飲み忘れ時のメッセージ
+  ///
+  /// 保存値が日本語の既定値のまま (未編集) ならロケールの既定文言を返し、それ以外は保存値を返す。
+  /// 保存値そのものは書き換えない
+  String get missedTakenMessageForDisplay =>
+      missedTakenMessage == reminderNotificationCustomizationJapaneseDefaultMissedTakenMessage ? L.defaultMissedTakenMessage : missedTakenMessage;
 
   factory ReminderNotificationCustomization.fromJson(
     Map<String, dynamic> json,
