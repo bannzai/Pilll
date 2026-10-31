@@ -9,7 +9,7 @@ import 'package:pilll/l10n/app_localizations.dart';
 
 void main() {
   group('#MenstruationHisotryCardAvarageInformation', () {
-    // 幅 375pt は App Store スクリーンショットの生成ハーネスで overflow が出た iPhone と同じ論理幅
+    // 幅 375pt は iPhone SE (第 2・第 3 世代) の論理幅。App Store スクリーンショットの生成ハーネスの 430pt より狭い端末でもはみ出さないことを確かめる
     const screenWidth = 375.0;
 
     /// 表示言語を lang にし、画面を幅 375pt にして平均の行を pump する。言語と画面の大きさはテストの終わりに戻す
