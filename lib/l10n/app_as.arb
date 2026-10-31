@@ -108,7 +108,7 @@
   "selectPauseStartDate": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ কৰাৰ তাৰিখ বাছক",
   "selectPauseEndDateAsResumeDate": "শেষৰ দিন = পুনৰ বড়ি খোৱাৰ দিন",
   "pauseResumeDateLimitIsToday": "পুনৰ খোৱাৰ দিন: আজিলৈকে",
-  "pauseResumeDateLimitBeforeNextPause": "পৰৱৰ্তী বিৰতিৰ {date}লৈকে পুনৰ আৰম্ভ কৰক",
+  "pauseResumeDateLimitBeforeNextPause": "{date}ৰ ভিতৰত পুনৰ খাওক (বড়ি খোৱা সাময়িকভাৱে বন্ধ)",
   "pauseStartDate": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ হোৱাৰ তাৰিখ",
   "pauseEndDate": "বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰাৰ শেষ তাৰিখ",
   "endPillSheet": "পিলৰ ষ্ট্ৰিপ শেষ হৈছে",

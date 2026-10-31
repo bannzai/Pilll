@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Қабылдаудағы кідіріс басталатын күнді таңдаңыз",
   "selectPauseEndDateAsResumeDate": "Аяқталу күні = қайта қабылдау күні",
   "pauseResumeDateLimitIsToday": "Қайта қабылдау күні: бүгінге дейін",
-  "pauseResumeDateLimitBeforeNextPause": "{date} дейін жалғастыру (үзіліс)",
+  "pauseResumeDateLimitBeforeNextPause": "{date} дейін жалғастыру (кідіріс)",
   "pauseStartDate": "Қабылдаудағы кідіріс басталатын күн",
   "pauseEndDate": "Қабылдаудағы кідіріс аяқталатын күн",
   "endPillSheet": "таблетка блистер аяқталды",

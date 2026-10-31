@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Sicela ukhethe usuku lokuqala ukumisa okwesikhashana ukuphuza amaphilisi",
   "selectPauseEndDateAsResumeDate": "Ukuphela = ukuqala futhi",
   "pauseResumeDateLimitIsToday": "Qala futhi kuze kube namuhla",
-  "pauseResumeDateLimitBeforeNextPause": "Qala kuze kube ngu-{date} (ikhefu)",
+  "pauseResumeDateLimitBeforeNextPause": "Qala kuze kube ngu-{date} (misa okwesikhashana)",
   "pauseStartDate": "Usuku lokuqala ukumisa okwesikhashana",
   "pauseEndDate": "Usuku lokuphela kokumisa okwesikhashana",
   "endPillSheet": "Ishidi lamaphilisi seliphelile",

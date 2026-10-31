@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Həb qəbuluna fasilə üçün başlanğıc tarixini seçin",
   "selectPauseEndDateAsResumeDate": "Bitiş tarixi = həbə başlama günü",
   "pauseResumeDateLimitIsToday": "Yenidən qəbul günü: bu günədək",
-  "pauseResumeDateLimitBeforeNextPause": "{date}-dək davam edin (fasilə)",
+  "pauseResumeDateLimitBeforeNextPause": "{date}-dək davam edin (Həb qəbuluna fasilə)",
   "pauseStartDate": "Həb qəbuluna fasilə başlanğıc tarixi",
   "pauseEndDate": "Həb qəbuluna fasilənin bitmə tarixi",
   "endPillSheet": "həb blister tamamlandı",

@@ -108,7 +108,7 @@
   "selectPauseStartDate": "בחירת תאריך התחלה של השהיית נטילה",
   "selectPauseEndDateAsResumeDate": "תאריך סיום = חזרה לנטילה",
   "pauseResumeDateLimitIsToday": "יום חידוש הנטילה: עד היום",
-  "pauseResumeDateLimitBeforeNextPause": "חידוש הנטילה עד ההפסקה הבאה {date}",
+  "pauseResumeDateLimitBeforeNextPause": "חידוש נטילה עד {date} (השהיית נטילה)",
   "pauseStartDate": "תאריך תחילת השהיית נטילה",
   "pauseEndDate": "תאריך סיום השהיית נטילה",
   "endPillSheet": "חפיסת הגלולות הסתיימה",

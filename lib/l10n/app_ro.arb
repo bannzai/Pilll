@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Alege data de la care vrei să întrerupi administrarea",
   "selectPauseEndDateAsResumeDate": "Data de sfârșit = reiei pilula",
   "pauseResumeDateLimitIsToday": "Reluarea pilulei: până azi",
-  "pauseResumeDateLimitBeforeNextPause": "Reia până la următoarea pauză {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Reia până la {date} (întrerupere)",
   "pauseStartDate": "Data de început a întreruperii",
   "pauseEndDate": "Data de încheiere a întreruperii",
   "endPillSheet": "Blister terminat",

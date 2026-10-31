@@ -108,7 +108,7 @@
   "selectPauseStartDate": "د لنډمهاله درول د پیل نېټه وټاکئ",
   "selectPauseEndDateAsResumeDate": "د پای نېټه = د ګولۍ بیا پیل",
   "pauseResumeDateLimitIsToday": "د بیا اخیستلو ورځ: تر نن پورې",
-  "pauseResumeDateLimitBeforeNextPause": "د بلې وقفې تر {date} پورې بیا پیل کړئ",
+  "pauseResumeDateLimitBeforeNextPause": "تر {date} پورې بیا پیل (لنډمهاله درول)",
   "pauseStartDate": "د لنډمهاله درول د پیل نېټه",
   "pauseEndDate": "د لنډمهاله درول پای نېټه",
   "endPillSheet": "د ګولیو پاڼه پای ته ورسېده",

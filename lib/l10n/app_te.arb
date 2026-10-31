@@ -108,7 +108,7 @@
   "selectPauseStartDate": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ప్రారంభమయ్యే తేదీని ఎంచుకోండి",
   "selectPauseEndDateAsResumeDate": "ముగింపు తేదీ = మళ్లీ మాత్ర వేసుకునే రోజు",
   "pauseResumeDateLimitIsToday": "మళ్లీ మాత్ర తీసుకునే రోజు: ఈ రోజు వరకు",
-  "pauseResumeDateLimitBeforeNextPause": "తదుపరి విరామం {date}లోపు మళ్లీ ప్రారంభించండి",
+  "pauseResumeDateLimitBeforeNextPause": "{date} లోపు మళ్లీ ప్రారంభించండి (తాత్కాలిక విరామం)",
   "pauseStartDate": "తాత్కాలిక విరామం ప్రారంభ తేదీ",
   "pauseEndDate": "తాత్కాలిక విరామం ముగింపు తేదీ",
   "endPillSheet": "మాత్రల స్ట్రిప్ పూర్తయింది",

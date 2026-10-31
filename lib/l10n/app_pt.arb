@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Escolha a data de início da interrupção",
   "selectPauseEndDateAsResumeDate": "Data final = retomar a pílula",
   "pauseResumeDateLimitIsToday": "Retomar a pílula: até hoje",
-  "pauseResumeDateLimitBeforeNextPause": "Retome até a próxima pausa {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Retome até {date} (interrupção)",
   "pauseStartDate": "Data de início da interrupção",
   "pauseEndDate": "Data de término da interrupção",
   "endPillSheet": "Cartela finalizada",

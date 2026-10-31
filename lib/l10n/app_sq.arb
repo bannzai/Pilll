@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Zgjidhni datën e fillimit të pauzës",
   "selectPauseEndDateAsResumeDate": "Data e fundit = rifillimi i pilulës",
   "pauseResumeDateLimitIsToday": "Rifillimi i marrjes: deri sot",
-  "pauseResumeDateLimitBeforeNextPause": "Rifilloni deri në pushimin tjetër {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Rifilloni deri më {date} (pauzë)",
   "pauseStartDate": "Data e fillimit të pauzës",
   "pauseEndDate": "Data e përfundimit të pauzës",
   "endPillSheet": "përfundoni blisterin",

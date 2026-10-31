@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਕਰਨ ਦੀ ਤਾਰੀਖ ਚੁਣੋ",
   "selectPauseEndDateAsResumeDate": "ਆਖਰੀ ਤਾਰੀਖ = ਮੁੜ ਗੋਲੀ ਲੈਣ ਦਾ ਦਿਨ",
   "pauseResumeDateLimitIsToday": "ਮੁੜ ਗੋਲੀ ਲੈਣ ਦਾ ਦਿਨ: ਅੱਜ ਤੱਕ",
-  "pauseResumeDateLimitBeforeNextPause": "ਅਗਲੇ ਵਿਰਾਮ {date} ਤੱਕ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ",
+  "pauseResumeDateLimitBeforeNextPause": "{date} ਤੱਕ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ (ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ)",
   "pauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ",
   "pauseEndDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਖ਼ਤਮ ਹੋਣ ਦੀ ਤਾਰੀਖ",
   "endPillSheet": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਖ਼ਤਮ ਹੋ ਗਈ",

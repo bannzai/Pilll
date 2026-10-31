@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Dewiswch ddyddiad dechrau'r oedi",
   "selectPauseEndDateAsResumeDate": "Dyddiad gorffen = ailgychwyn y bilsen",
   "pauseResumeDateLimitIsToday": "Ailddechrau cymryd: hyd heddiw",
-  "pauseResumeDateLimitBeforeNextPause": "Ailddechrau erbyn {date} (seibiant)",
+  "pauseResumeDateLimitBeforeNextPause": "Ailddechrau erbyn {date} (oedi)",
   "pauseStartDate": "Dyddiad dechrau'r oedi",
   "pauseEndDate": "Dyddiad gorffen yr oedi",
   "endPillSheet": "Stribed pils wedi gorffen",

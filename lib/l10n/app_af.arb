@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Kies die begindatum van die innameonderbreking",
   "selectPauseEndDateAsResumeDate": "Einddatum = herbegin pil",
   "pauseResumeDateLimitIsToday": "Hervatdag: tot vandag",
-  "pauseResumeDateLimitBeforeNextPause": "Hervat teen volgende pouse {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Hervat teen {date} (innameonderbreking)",
   "pauseStartDate": "Begindatum van innameonderbreking",
   "pauseEndDate": "Einddatum van innameonderbreking",
   "endPillSheet": "Pilstrokie voltooi",

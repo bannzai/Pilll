@@ -108,7 +108,7 @@
   "selectPauseStartDate": "សូមជ្រើសរើសថ្ងៃចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
   "selectPauseEndDateAsResumeDate": "ថ្ងៃបញ្ចប់ = ថ្ងៃចាប់ផ្តើមលេបថ្នាំវិញ",
   "pauseResumeDateLimitIsToday": "ថ្ងៃចាប់ផ្តើមលេបវិញ៖ ត្រឹមថ្ងៃនេះ",
-  "pauseResumeDateLimitBeforeNextPause": "សូមចាប់ផ្តើមវិញត្រឹមថ្ងៃផ្អាកបន្ទាប់ {date}",
+  "pauseResumeDateLimitBeforeNextPause": "បន្តលេបត្រឹម {date} (ផ្អាកការលេបថ្នាំ)",
   "pauseStartDate": "ថ្ងៃចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
   "pauseEndDate": "កាលបរិច្ឆេទបញ្ចប់ការផ្អាកការលេបថ្នាំ",
   "endPillSheet": "បញ្ចប់បន្ទះថ្នាំគ្រាប់",

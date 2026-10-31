@@ -108,7 +108,7 @@
   "selectPauseStartDate": "选择暂停服药的开始日期",
   "selectPauseEndDateAsResumeDate": "结束日期＝恢复服药日",
   "pauseResumeDateLimitIsToday": "恢复服药日期：最晚今天",
-  "pauseResumeDateLimitBeforeNextPause": "最晚于下次停药期开始日 {date} 恢复服药",
+  "pauseResumeDateLimitBeforeNextPause": "最晚于{date}恢复服药（暂停服药）",
   "pauseStartDate": "暂停服药开始日期",
   "pauseEndDate": "暂停服药结束日期",
   "endPillSheet": "药板已用完",

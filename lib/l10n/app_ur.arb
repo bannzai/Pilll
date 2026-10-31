@@ -108,7 +108,7 @@
   "selectPauseStartDate": "گولی لینے میں توقف شروع ہونے کی تاریخ منتخب کریں",
   "selectPauseEndDateAsResumeDate": "اختتامی تاریخ = دوبارہ گولی لینے کا دن",
   "pauseResumeDateLimitIsToday": "دوبارہ گولی لینے کا دن: آج تک",
-  "pauseResumeDateLimitBeforeNextPause": "اگلے وقفے {date} تک دوبارہ شروع کریں",
+  "pauseResumeDateLimitBeforeNextPause": "{date} تک دوبارہ شروع کریں (توقف)",
   "pauseStartDate": "توقف شروع ہونے کی تاریخ",
   "pauseEndDate": "توقف ختم ہونے کی تاریخ",
   "endPillSheet": "گولیوں کی پٹی ختم ہو گئی",

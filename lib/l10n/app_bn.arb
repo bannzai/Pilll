@@ -108,7 +108,7 @@
   "selectPauseStartDate": "সেবন স্থগিত শুরুর তারিখ বেছে নিন",
   "selectPauseEndDateAsResumeDate": "শেষের দিন = আবার পিল শুরুর দিন",
   "pauseResumeDateLimitIsToday": "আবার পিল খাওয়ার দিন: আজ পর্যন্ত",
-  "pauseResumeDateLimitBeforeNextPause": "পরের বিরতি {date} পর্যন্ত পিল আবার শুরু করুন",
+  "pauseResumeDateLimitBeforeNextPause": "{date} এর মধ্যে আবার সেবন (সেবন স্থগিত)",
   "pauseStartDate": "সেবন স্থগিত শুরুর তারিখ",
   "pauseEndDate": "সেবন স্থগিত শেষের তারিখ",
   "endPillSheet": "পিল শিট শেষ হয়েছে",

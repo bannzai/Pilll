@@ -108,7 +108,7 @@
   "selectPauseStartDate": "เลือกวันที่เริ่มหยุดกินยาชั่วคราว",
   "selectPauseEndDateAsResumeDate": "วันสิ้นสุด = วันกลับมาทานยา",
   "pauseResumeDateLimitIsToday": "วันเริ่มทานยาอีกครั้ง: ไม่เกินวันนี้",
-  "pauseResumeDateLimitBeforeNextPause": "กลับมาทานยาภายในวันเริ่มพักยาครั้งถัดไป {date}",
+  "pauseResumeDateLimitBeforeNextPause": "กลับมาทานภายใน {date} (หยุดกินยาชั่วคราว)",
   "pauseStartDate": "วันที่เริ่มหยุดกินยาชั่วคราว",
   "pauseEndDate": "วันที่สิ้นสุดการหยุดกินยาชั่วคราว",
   "endPillSheet": "แผงยาหมดแล้ว",

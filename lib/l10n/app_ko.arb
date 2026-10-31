@@ -108,7 +108,7 @@
   "selectPauseStartDate": "일시 중지 시작일 선택",
   "selectPauseEndDateAsResumeDate": "종료일 = 복용 재개일",
   "pauseResumeDateLimitIsToday": "복용 재개일: 오늘까지",
-  "pauseResumeDateLimitBeforeNextPause": "다음 휴약 시작일 {date}까지 복용 재개",
+  "pauseResumeDateLimitBeforeNextPause": "{date}까지 복용 재개 (일시 중지)",
   "pauseStartDate": "일시 중지 시작일",
   "pauseEndDate": "일시 중지 종료일",
   "endPillSheet": "알약 시트 복용 완료",

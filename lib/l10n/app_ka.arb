@@ -108,7 +108,7 @@
   "selectPauseStartDate": "აირჩიეთ მიღების პაუზის დაწყების თარიღი",
   "selectPauseEndDateAsResumeDate": "დასასრული = მიღების განახლება",
   "pauseResumeDateLimitIsToday": "მიღების განახლება: დღემდე",
-  "pauseResumeDateLimitBeforeNextPause": "განახლება {date}-მდე (შესვენება)",
+  "pauseResumeDateLimitBeforeNextPause": "განახლება {date}-მდე (მიღების პაუზა)",
   "pauseStartDate": "მიღების პაუზის დაწყების თარიღი",
   "pauseEndDate": "მიღების პაუზის დასრულების თარიღი",
   "endPillSheet": "აბების ბლისტერი დასრულებულია",

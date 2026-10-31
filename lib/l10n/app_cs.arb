@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Vybrat datum začátku pozastavení užívání",
   "selectPauseEndDateAsResumeDate": "Konec = den obnovení užívání",
   "pauseResumeDateLimitIsToday": "Obnovení užívání: do dneška",
-  "pauseResumeDateLimitBeforeNextPause": "Obnovit užívání do další pauzy {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Obnovit do {date} (pozastavení užívání)",
   "pauseStartDate": "Datum začátku pozastavení užívání",
   "pauseEndDate": "Datum ukončení pozastavení užívání",
   "endPillSheet": "Blistr dokončen",

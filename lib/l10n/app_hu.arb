@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Válaszd ki, mikortól szeretnéd szüneteltetni a szedést",
   "selectPauseEndDateAsResumeDate": "Zárónap = a szedés folytatása",
   "pauseResumeDateLimitIsToday": "Szedés folytatása: legkésőbb ma",
-  "pauseResumeDateLimitBeforeNextPause": "Folytatás {date}-ig (szünet)",
+  "pauseResumeDateLimitBeforeNextPause": "Folytatás {date}-ig (szüneteltet)",
   "pauseStartDate": "A szüneteltetés kezdőnapja",
   "pauseEndDate": "A szüneteltetés befejezőnapja",
   "endPillSheet": "Tablettacsomag befejezve",

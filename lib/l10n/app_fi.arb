@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Valitse taukotilan alkamispäivä",
   "selectPauseEndDateAsResumeDate": "Päättymispäivä = jatka pillereitä",
   "pauseResumeDateLimitIsToday": "Jatkamispäivä: viimeistään tänään",
-  "pauseResumeDateLimitBeforeNextPause": "Jatka viimeistään {date} (tauko)",
+  "pauseResumeDateLimitBeforeNextPause": "Jatka viimeistään {date} (taukotila)",
   "pauseStartDate": "Taukotilan alkamispäivä",
   "pauseEndDate": "Taukotilan päättymispäivä",
   "endPillSheet": "Pilleriliuska käytetty loppuun",

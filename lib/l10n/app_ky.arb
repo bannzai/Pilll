@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Убактылуу токтотуу баштала турган күндү тандаңыз",
   "selectPauseEndDateAsResumeDate": "Аяктоо күнү = кайра ичүү күнү",
   "pauseResumeDateLimitIsToday": "Кайра ичүү күнү: бүгүнгө чейин",
-  "pauseResumeDateLimitBeforeNextPause": "{date} чейин улантуу (тыныгуу)",
+  "pauseResumeDateLimitBeforeNextPause": "{date} чейин улантуу (убактылуу токтотуу)",
   "pauseStartDate": "Убактылуу токтотуу башталган күн",
   "pauseEndDate": "Убактылуу токтотуу аяктаган күн",
   "endPillSheet": "таблетка блистери бүттү",

@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાની શરૂઆતની તારીખ પસંદ કરો",
   "selectPauseEndDateAsResumeDate": "અંતિમ તારીખ = ફરી ગોળી લેવાનો દિવસ",
   "pauseResumeDateLimitIsToday": "ફરી ગોળી લેવાનો દિવસ: આજ સુધી",
-  "pauseResumeDateLimitBeforeNextPause": "આગલા વિરામ {date} સુધીમાં ફરી શરૂ કરો",
+  "pauseResumeDateLimitBeforeNextPause": "{date} સુધીમાં ફરી લો (ગોળી લેવાનું થોડા સમય માટે બંધ)",
   "pauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાની શરૂઆતની તારીખ",
   "pauseEndDate": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાની અંતિમ તારીખ",
   "endPillSheet": "ગોળીની સ્ટ્રિપ પૂરી થઈ",

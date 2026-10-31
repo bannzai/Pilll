@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Aukeratu etenaldiaren hasiera-data",
   "selectPauseEndDateAsResumeDate": "Amaiera = pilula berriz hartzea",
   "pauseResumeDateLimitIsToday": "Berriz hartzeko eguna: gaur arte",
-  "pauseResumeDateLimitBeforeNextPause": "Berriz hasi {date}rako (etenaldia)",
+  "pauseResumeDateLimitBeforeNextPause": "Berriz hasi {date}rako (etenaldi)",
   "pauseStartDate": "Etenaldiaren hasiera-data",
   "pauseEndDate": "Etenaldiaren amaiera-data",
   "endPillSheet": "Pilula-blisterra amaituta",

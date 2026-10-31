@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይምረጡ",
   "selectPauseEndDateAsResumeDate": "መጨረሻ ቀን = ክኒን የሚቀጥሉበት ቀን",
   "pauseResumeDateLimitIsToday": "ክኒን የሚቀጥሉበት ቀን፦ እስከ ዛሬ",
-  "pauseResumeDateLimitBeforeNextPause": "እስከ {date} ክኒን ይቀጥሉ (እረፍት)",
+  "pauseResumeDateLimitBeforeNextPause": "እስከ {date} ክኒን ይቀጥሉ (ለጊዜው ማቆም)",
   "pauseStartDate": "ለጊዜው ማቆም የሚጀምርበት ቀን",
   "pauseEndDate": "ለጊዜው ማቆም የሚያበቃበት ቀን",
   "endPillSheet": "ክኒን ሉህ ተጠናቋል",

@@ -108,7 +108,7 @@
   "selectPauseStartDate": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭಿಸುವ ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "selectPauseEndDateAsResumeDate": "ಕೊನೆಯ ದಿನ = ಮಾತ್ರೆ ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ",
   "pauseResumeDateLimitIsToday": "ಮತ್ತೆ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ದಿನ: ಇಂದಿನವರೆಗೆ",
-  "pauseResumeDateLimitBeforeNextPause": "ಮುಂದಿನ ವಿರಾಮ {date}ರೊಳಗೆ ಮತ್ತೆ ಆರಂಭಿಸಿ",
+  "pauseResumeDateLimitBeforeNextPause": "{date}ರೊಳಗೆ ಮತ್ತೆ ತೆಗೆದುಕೊಳ್ಳಿ (ಮಾತ್ರೆ ವಿರಾಮ)",
   "pauseStartDate": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭದ ದಿನಾಂಕ",
   "pauseEndDate": "ಮಾತ್ರೆ ವಿರಾಮ ಅಂತ್ಯದ ದಿನಾಂಕ",
   "endPillSheet": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಮುಗಿದಿದೆ",

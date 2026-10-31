@@ -108,7 +108,7 @@
   "selectPauseStartDate": "താൽക്കാലികമായി നിർത്തുന്ന കാലയളവിന്റെ ആരംഭ തീയതി തിരഞ്ഞെടുക്കൂ",
   "selectPauseEndDateAsResumeDate": "അവസാന ദിവസം = വീണ്ടും കഴിക്കുന്ന ദിവസം",
   "pauseResumeDateLimitIsToday": "വീണ്ടും ഗുളിക കഴിക്കുന്ന ദിവസം: ഇന്നുവരെ",
-  "pauseResumeDateLimitBeforeNextPause": "അടുത്ത ഇടവേള {date}നകം വീണ്ടും തുടങ്ങാം",
+  "pauseResumeDateLimitBeforeNextPause": "{date}നകം വീണ്ടും തുടങ്ങൂ (താൽക്കാലികമായി നിർത്തൽ)",
   "pauseStartDate": "താൽക്കാലികമായി നിർത്തുന്ന കാലയളവിന്റെ ആരംഭ തീയതി",
   "pauseEndDate": "താൽക്കാലികമായി നിർത്തുന്ന അവസാന തീയതി",
   "endPillSheet": "ഗുളിക സ്ട്രിപ്പ് തീർന്നു",

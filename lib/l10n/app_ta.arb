@@ -108,7 +108,7 @@
   "selectPauseStartDate": "மாத்திரை எடுத்துக்கொள்வதை இடைநிறுத்தத் தொடங்கும் தேதியைத் தேர்ந்தெடுக்குங்கள்",
   "selectPauseEndDateAsResumeDate": "முடிவு நாள் = மாத்திரை மீண்டும் தொடங்கும் நாள்",
   "pauseResumeDateLimitIsToday": "மீண்டும் மாத்திரை எடுக்கும் நாள்: இன்று வரை",
-  "pauseResumeDateLimitBeforeNextPause": "{date}க்குள் தொடங்குங்கள் (இடைவேளை)",
+  "pauseResumeDateLimitBeforeNextPause": "{date}க்குள் தொடங்குங்கள் (இடைநிறுத்தம்)",
   "pauseStartDate": "இடைநிறுத்தம் தொடங்கும் தேதி",
   "pauseEndDate": "இடைநிறுத்தம் முடியும் தேதி",
   "endPillSheet": "மாத்திரை அட்டை முடிந்தது",

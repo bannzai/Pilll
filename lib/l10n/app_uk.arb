@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Виберіть дату початку призупинення прийому",
   "selectPauseEndDateAsResumeDate": "Кінець = відновлення прийому",
   "pauseResumeDateLimitIsToday": "Відновлення прийому: до сьогодні",
-  "pauseResumeDateLimitBeforeNextPause": "Відновити до {date} (перерва)",
+  "pauseResumeDateLimitBeforeNextPause": "Відновити до {date} (призупинення)",
   "pauseStartDate": "Дата початку призупинення",
   "pauseEndDate": "Дата завершення призупинення",
   "endPillSheet": "Блістер закінчився",

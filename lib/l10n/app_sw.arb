@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Tafadhali chagua tarehe ya kuanza kusitisha kumeza vidonge",
   "selectPauseEndDateAsResumeDate": "Tarehe ya mwisho = kumeza tena",
   "pauseResumeDateLimitIsToday": "Siku ya kuanza kumeza tena: hadi leo",
-  "pauseResumeDateLimitBeforeNextPause": "Endelea kufikia {date} (mapumziko)",
+  "pauseResumeDateLimitBeforeNextPause": "Endelea kufikia {date} (kusitisha)",
   "pauseStartDate": "Tarehe ya kuanza kusitisha kumeza vidonge",
   "pauseEndDate": "Tarehe ya mwisho ya kusitisha kumeza vidonge",
   "endPillSheet": "Pakiti ya vidonge imeisha",

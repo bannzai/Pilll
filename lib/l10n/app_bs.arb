@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Molimo, odaberite datum početka prekida",
   "selectPauseEndDateAsResumeDate": "Završni datum = nastavak uzimanja",
   "pauseResumeDateLimitIsToday": "Nastavak uzimanja: do danas",
-  "pauseResumeDateLimitBeforeNextPause": "Nastavak do {date} (pauza)",
+  "pauseResumeDateLimitBeforeNextPause": "Nastavak do {date} (prekid)",
   "pauseStartDate": "Datum početka prekida",
   "pauseEndDate": "Datum završetka prekida",
   "endPillSheet": "Kraj blistera",

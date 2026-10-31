@@ -108,7 +108,7 @@
   "selectPauseStartDate": "सेवन विराम सुरु हुने मिति छान्नुहोस्",
   "selectPauseEndDateAsResumeDate": "अन्तिम मिति = चक्की फेरि सुरु गर्ने दिन",
   "pauseResumeDateLimitIsToday": "फेरि चक्की लिन सुरु गर्ने दिन: आजसम्म",
-  "pauseResumeDateLimitBeforeNextPause": "अर्को विश्राम {date} सम्ममा फेरि सुरु गर्नुहोस्",
+  "pauseResumeDateLimitBeforeNextPause": "{date} भित्र फेरि सुरु गर्नुहोस् (सेवन विराम)",
   "pauseStartDate": "सेवन विराम सुरु हुने मिति",
   "pauseEndDate": "सेवन विराम सकिने मिति",
   "endPillSheet": "चक्की पत्ता सकियो",

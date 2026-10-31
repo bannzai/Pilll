@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Vali võtmise pausi alguskuupäev",
   "selectPauseEndDateAsResumeDate": "Lõppkuupäev = pilli jätkamine",
   "pauseResumeDateLimitIsToday": "Uuesti alustamine: kuni täna",
-  "pauseResumeDateLimitBeforeNextPause": "Jätka hiljemalt {date} (paus)",
+  "pauseResumeDateLimitBeforeNextPause": "Jätka hiljemalt {date} (võtmise paus)",
   "pauseStartDate": "Võtmise pausi alguskuupäev",
   "pauseEndDate": "Võtmise pausi lõppkuupäev",
   "endPillSheet": "Pillileht on lõpetatud",

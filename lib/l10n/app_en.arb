@@ -108,7 +108,7 @@
   "selectPauseStartDate": "Select pause start date",
   "selectPauseEndDateAsResumeDate": "End date = restart day",
   "pauseResumeDateLimitIsToday": "Restart day: up to today",
-  "pauseResumeDateLimitBeforeNextPause": "Resume by next break {date}",
+  "pauseResumeDateLimitBeforeNextPause": "Restart by {date} (pause)",
   "pauseStartDate": "Pause start date",
   "pauseEndDate": "Pause end date",
   "endPillSheet": "Pill pack finished",
