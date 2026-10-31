@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'dart:ui' show PlatformDispatcher;
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,6 +13,8 @@ import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
@@ -43,7 +46,8 @@ Future<void> entrypoint() async {
       // Intl.defaultLocale にする。端末の言語だけの初期化では未初期化の言語の DateFormat で止まるため、全言語を初期化する
       await initializeDateFormatting();
     }
-    Intl.defaultLocale = 'ja';
+    // MethodChannel (recordPill) は UI を組み立てる前に呼ばれ得て、その時も通知を登録し直すため、AppLocalizationResolver が動く前から端末の言語にしておく
+    applyDeviceAppLocale(deviceLocales: PlatformDispatcher.instance.locales, deviceLocaleName: Platform.localeName);
 
     WidgetsFlutterBinding.ensureInitialized();
 
@@ -102,8 +106,16 @@ Future<void> handleNotificationAction(
       initializeDateFormatting('ja'),
       initializeDateFormatting(Platform.localeName),
     ).wait;
-    // ウィジェットツリーを通らないため、リマインド通知の文言と日付を端末の言語にする
-    await setupLocalizationWithoutWidgetTree();
+    // この isolate では AppLocalizationResolver が動かず L と Intl.defaultLocale が日本語の初期値のままになる。
+    // 通知の再登録 (飲み忘れ時の既定文言・日付の書式など) を画面と同じ言語にするため、AppLocalizationResolver と同じく
+    // debug ビルドは開発者オプションの表示言語、release ビルドは MaterialApp の既定の解決 (basicLocaleListResolution) で端末の言語から決める
+    if (kDebugMode) {
+      final locale = debugAppLocale(savedLanguageCode: (await SharedPreferences.getInstance()).getString(StringKey.debugAppLanguageCode));
+      L = lookupAppLocalizations(locale);
+      Intl.defaultLocale = locale.languageCode;
+    } else {
+      applyDeviceAppLocale(deviceLocales: PlatformDispatcher.instance.locales, deviceLocaleName: Platform.localeName);
+    }
 
     await LocalNotificationService.setupTimeZone();
 

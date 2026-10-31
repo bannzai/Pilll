@@ -5,7 +5,6 @@ import 'package:pilll/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import './l.dart';
 
 /// [AppLocalizationResolver] は [L] に [AppLocalizations] をセットするためのWidget
@@ -49,20 +48,23 @@ class AppLocalizationResolver extends ConsumerWidget {
   }
 }
 
-/// 端末の言語の一覧 [preferredLocales] (優先順) から、アプリの対象言語 ([AppLocalizations.supportedLocales]) のうち使う言語を返す。
-/// MaterialApp に localeResolutionCallback を渡していないため、アプリを開いた時と同じ規則の [basicLocaleListResolution] で解決する
-Locale resolveDeviceAppLocale({required List<Locale> preferredLocales}) =>
-    basicLocaleListResolution(preferredLocales, AppLocalizations.supportedLocales);
+/// 端末の言語を、文言を持つ言語 ([AppLocalizations.supportedLocales]) に解決して返す。
+/// UI を組み立てる前・UI の無い isolate (通知アクションのクイック記録) で [L] を決めるために使う。
+/// [deviceLocales] は端末の優先言語の一覧 (`PlatformDispatcher.instance.locales`)。前面の UI の MaterialApp もこの一覧から決める。
+/// [deviceLocaleName] は `Platform.localeName` の値 (例: en_US, zh_Hans_CN, fr_FR.UTF-8)。
+/// UI の無い isolate で [deviceLocales] が届いているかを確かめていないため、[deviceLocales] が空の時だけその言語コードで補う。
+/// 解決規則は前面の UI と同じ basicLocaleListResolution にする (app.dart の MaterialApp は localeResolutionCallback を持たない)。
+/// そのため優先言語のどれもサポート外の時は、前面の UI と同じく [AppLocalizations.supportedLocales] の先頭になる。
+Locale deviceAppLocale({required List<Locale> deviceLocales, required String deviceLocaleName}) => basicLocaleListResolution(
+      deviceLocales.isNotEmpty ? deviceLocales : [Locale(deviceLocaleName.split(RegExp('[-_.@]')).first)],
+      AppLocalizations.supportedLocales,
+    );
 
-/// ウィジェットツリー ([AppLocalizationResolver]) を通らない経路 (通知のアクションからの服用記録など) で、
-/// [L] と [Intl.defaultLocale] を [AppLocalizationResolver] と同じ言語にする。
-/// release ビルドは端末の言語から解決した言語、debug ビルドは [debugAppLocale] の言語を使う。
-/// iOS の通知のアクションは画面を描画済みの isolate でも呼ばれるため、debug ビルドで選んだ表示言語を端末の言語で上書きしないようにしている。
-/// 端末の言語は Android の通知のアクションで起動される別 isolate でも、FlutterEngine の生成時に送られて [PlatformDispatcher.locales] に入る
-Future<void> setupLocalizationWithoutWidgetTree() async {
-  final locale = kDebugMode
-      ? debugAppLocale(savedLanguageCode: (await SharedPreferences.getInstance()).getString(StringKey.debugAppLanguageCode))
-      : resolveDeviceAppLocale(preferredLocales: PlatformDispatcher.instance.locales);
+/// [L] と [Intl.defaultLocale] を、[deviceAppLocale] で解決した端末の言語にする。引数は [deviceAppLocale] と同じ。
+/// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で通知の文言を端末の言語にするために使う。
+/// UI が組み立てられた後は [AppLocalizationResolver] が上書きする。
+void applyDeviceAppLocale({required List<Locale> deviceLocales, required String deviceLocaleName}) {
+  final locale = deviceAppLocale(deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName);
   L = lookupAppLocalizations(locale);
   Intl.defaultLocale = locale.languageCode;
 }
