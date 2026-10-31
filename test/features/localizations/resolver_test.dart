@@ -49,6 +49,14 @@ void main() {
           const Locale('de'),
         );
       });
+      test('サポート外の言語 xx_XX だけの場合は en', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('xx', 'XX')],
+              deviceLocaleName: 'xx_XX'),
+          const Locale('en'),
+        );
+      });
     });
 
     group('優先言語の一覧が空の場合は Platform.localeName で補う', () {
@@ -89,6 +97,11 @@ void main() {
         expect(deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ko'),
             const Locale('ko'));
       });
+      test('サポート外の言語 xx_XX は en', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'xx_XX'),
+            const Locale('en'));
+      });
     });
 
     /// 端末の優先言語を [deviceLocales] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
@@ -100,7 +113,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
+          supportedLocales: appSupportedLocales,
           home: Builder(builder: (context) {
             resolvedLocale = Localizations.localeOf(context);
             return const SizedBox.shrink();
@@ -144,6 +157,13 @@ void main() {
     testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI と同じ言語になる', (tester) async {
       await expectSameAsForeground(tester,
           deviceLocales: const [Locale('xx', 'XX')], deviceLocaleName: 'xx_XX');
+    });
+    testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI は en になる', (tester) async {
+      expect(
+        await foregroundAppLocale(tester,
+            deviceLocales: const [Locale('xx', 'XX')]),
+        const Locale('en'),
+      );
     });
   });
 

@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/features/root/page.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -115,7 +116,7 @@ class App extends StatelessWidget {
       theme: appThemeData,
       home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
+      supportedLocales: appSupportedLocales,
     );
   }
 }
