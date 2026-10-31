@@ -1,4 +1,5 @@
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/inquiry.codegen.dart';
 
 final functions = FirebaseFunctions.instanceFor(region: 'asia-northeast1');
@@ -15,6 +16,8 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
       if (otherTypeText != null) 'otherTypeText': otherTypeText,
       'email': email,
       'content': content,
+      // DEBUG ビルドから試したお問い合わせを本番のお問い合わせチャンネルに混ぜず、サーバーにテスト用チャンネル (#test-notification) へ投稿させるため
+      if (kDebugMode) 'test': true,
     });
     final response = mapToJSON(result.data);
     return response['inquiryId'] as String;
