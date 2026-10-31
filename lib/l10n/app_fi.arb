@@ -346,6 +346,8 @@
   "launchError": "Sovellusta avattaessa tapahtui virhe.\n{ErrorMessagesConnection}\n\nLisätiedot:",
   "exampleRestDurationDate": "Esimerkiksi jos otat käyttöön 3 päivän taukotilan 1/12 alkaen",
   "exampleRestDurationNumber": "Esimerkiksi jos otat käyttöön 3 päivän taukotilan pilleristä 18 alkaen",
+  "exampleRestDurationNumberBalloon": "taukotila\n3 päivää",
+  "exampleRestDurationDateBalloon": "Taukotilan kesto\n12.–14.1.",
   "withNumber": "Nro {number}",
   "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
   "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",

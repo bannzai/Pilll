@@ -346,6 +346,8 @@
   "launchError": "Digwyddodd gwall wrth agor yr ap.\n{ErrorMessagesConnection}\n\nManylion:",
   "exampleRestDurationDate": "Er enghraifft, os byddwch chi'n oedi cymryd y bilsen am 3 diwrnod gan ddechrau ar 1/12",
   "exampleRestDurationNumber": "Er enghraifft, os byddwch chi'n oedi cymryd y bilsen am 3 diwrnod gan ddechrau gyda philsen 18",
+  "exampleRestDurationNumberBalloon": "oedi cymryd y bilsen\n3 diwrnod",
+  "exampleRestDurationDateBalloon": "Cyfnod oedi\n12–14 Ion",
   "withNumber": "Rhif {number}",
   "currentPillSheetNotFound": "Heb ddod o hyd i'r stribed pils rydych chi'n ei ddefnyddio ar hyn o bryd",
   "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",

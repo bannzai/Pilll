@@ -346,6 +346,8 @@
   "launchError": "Nagkaroon ng error habang binubuksan ang app.\n{ErrorMessagesConnection}\n\nMga detalye:",
   "exampleRestDurationDate": "Halimbawa, kung mag-pause kayo nang 3 araw simula sa ika-12 ng Enero",
   "exampleRestDurationNumber": "Halimbawa, kung mag-pause kayo nang 3 araw simula sa numero ng tableta 18",
+  "exampleRestDurationNumberBalloon": "pause sa pag-inom\n3 araw",
+  "exampleRestDurationDateBalloon": "Tagal ng pause\nEne 12–14",
   "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
   "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",

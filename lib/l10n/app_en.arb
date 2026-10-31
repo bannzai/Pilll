@@ -346,6 +346,8 @@
   "launchError": "An error occurred while opening the app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "For example, if you take a 3-day pause starting on 1/12",
   "exampleRestDurationNumber": "For example, if you pause for 3 days starting at pill 18",
+  "exampleRestDurationNumberBalloon": "Pill pause\n3 days",
+  "exampleRestDurationDateBalloon": "Pill pause\n1/12–1/14",
   "withNumber": "Pill {number}",
   "currentPillSheetNotFound": "The pill pack you're currently using couldn't be found",
   "doNotRevertTakePillInPausePeriod": "You can't undo a recorded pill intake during a pill break",

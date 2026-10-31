@@ -346,6 +346,8 @@
   "launchError": "Bim Ufmache vo de App isch en Fähler ufträte.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Zum Biispil, wänn du ab em 1/12 für 3 Täg e Iinahmepause machsch",
   "exampleRestDurationNumber": "Zum Biispil, wänn du ab Pille 18 für 3 Täg e Iinahmepause machsch",
+  "exampleRestDurationNumberBalloon": "Iinahmepause\n3 Täg",
+  "exampleRestDurationDateBalloon": "Iinahmepause\n12.–14. Jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De Pilleblister, wo du grad bruchsch, isch nöd gfunde worde",
   "doNotRevertTakePillInPausePeriod": "Während de Pillepause chasch d Ufzeichnig vo de Iinahm vo de Pille nöd rückgängig mache",

@@ -683,8 +683,48 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 
   /// 服用お休みを開始できる日付を返す。beginRestDurationやDatePickerの初期値に利用する
   /// 最後の服用日の翌日、または服用履歴がない場合は今日を返す
+  /// ただし終了済みの服用お休みの後に服用記録を付けていない場合は、最後の服用日の翌日から始めると終了済みの服用お休みと重なるため、終了済みの服用お休みのうち最も遅い終了日 (服用再開日) を返す
+  /// 終了日の無い服用お休み期間を追加するため、後続の終了済みの服用お休みとも重ならないように、最後の服用日の翌日に続いていない服用お休みの終了日も含めて最も遅い日にする
   /// UI入力フィールドの初期値として使用される
   DateTime get availableRestDurationBeginDate {
+    final lastFinishedRestDurationEndDate =
+        _finishedRestDurations(excludingRestDuration: null).map((restDuration) => restDuration.endDate!.date()).maxOrNull;
+    if (lastFinishedRestDurationEndDate != null && lastFinishedRestDurationEndDate.isAfter(_afterLastTakenDate.date())) {
+      return lastFinishedRestDurationEndDate;
+    }
+    return _afterLastTakenDate;
+  }
+
+  /// 既存の服用お休み期間 [excludingRestDuration] を変更する時に、開始日として選択できる最終日を返す
+  /// 最後の服用日の翌日が [excludingRestDuration] 以外の終了済みの服用お休みに含まれる時はその終了日へ進め、進めた日を含む次の服用お休みがあれば続けて進める
+  /// 間に服用記録の無い日がある後続の服用お休みや変更対象自身の終了日まで広げると、最後の服用日との間に服用記録も服用お休みも無い日を作れてしまうため進めない
+  DateTime availableRestDurationBeginDateExcluding({required RestDuration excludingRestDuration}) {
+    var beginDate = _afterLastTakenDate;
+    while (true) {
+      final containingRestDurationEndDate = _finishedRestDurations(excludingRestDuration: excludingRestDuration)
+          .where(
+            (restDuration) => !restDuration.beginDate.date().isAfter(beginDate.date()) && restDuration.endDate!.date().isAfter(beginDate.date()),
+          )
+          .map((restDuration) => restDuration.endDate!.date())
+          .maxOrNull;
+      if (containingRestDurationEndDate == null) {
+        return beginDate;
+      }
+      beginDate = containingRestDurationEndDate;
+    }
+  }
+
+  /// [excludingRestDuration] 以外の、今日までに終了した服用お休み期間。返す要素の endDate は null ではない
+  /// 服用再開予定日が今日より後の服用お休みは服用お休み中で、開始日の上限を服用再開予定日まで広げると服用お休み中の開始日を変更する時の上限も変わるため対象にしない
+  Iterable<RestDuration> _finishedRestDurations({required RestDuration? excludingRestDuration}) {
+    return restDurations.where((restDuration) {
+      final restDurationEndDate = restDuration.endDate;
+      return restDuration != excludingRestDuration && restDurationEndDate != null && !restDurationEndDate.date().isAfter(today());
+    });
+  }
+
+  /// 最後の服用日の翌日。服用履歴がない場合は今日
+  DateTime get _afterLastTakenDate {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
       // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
@@ -698,6 +738,26 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       // 服用お休みは原則最後に服用した日付の次の日付からスタートする
       return lastTakenDate.addDays(1);
     }
+  }
+
+  /// [beginDate] から [endDate] までの期間が、[excludingRestDuration] 以外の服用お休み期間と重なるかどうか
+  /// 服用お休み期間は開始日を含み終了日 (服用再開日) を含まない半開区間として比較する。そのため終了日と次の開始日が同じ日でも重ならない
+  /// [endDate] や比較対象の終了日が無い (継続中の) 服用お休み期間は開始日以降ずっと続いているものとして扱う
+  /// 開始日と終了日が同じ日の服用お休み期間は半開区間として0日で、どの日も含まないため重ならない
+  /// [excludingRestDuration] は変更対象の服用お休み期間で、重なりの判定から除外する。追加の場合は null
+  bool overlapsOtherRestDuration({
+    required DateTime beginDate,
+    required DateTime? endDate,
+    required RestDuration? excludingRestDuration,
+  }) {
+    return restDurations.where((e) => e != excludingRestDuration).any((other) {
+      final otherEndDate = other.endDate;
+      if (otherEndDate != null && !other.beginDate.date().isBefore(otherEndDate.date())) {
+        return false;
+      }
+      return (otherEndDate == null || beginDate.date().isBefore(otherEndDate.date())) &&
+          (endDate == null || other.beginDate.date().isBefore(endDate.date()));
+    });
   }
 
   /// 服用再開予定日や服用お休み中の終了日として、開始日から選択できる最大の日数
@@ -761,10 +821,10 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   }
 
   /// 開始日だけを変更するDatePickerのhelpTextに出す、選べる開始日の上限の理由を返す
-  String get availableRestDurationBeginDateHelpText {
-    return L.pauseStartDateLimit(
-      '${DateTimeFormatter.monthAndDay(availableRestDurationBeginDate)}(${DateTimeFormatter.shortWeekday(availableRestDurationBeginDate)})',
-    );
+  /// 上限は [restDuration] を変更する時の [availableRestDurationBeginDateExcluding]
+  String availableRestDurationBeginDateHelpText({required RestDuration restDuration}) {
+    final beginDate = availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration);
+    return L.pauseStartDateLimit('${DateTimeFormatter.monthAndDay(beginDate)}(${DateTimeFormatter.shortWeekday(beginDate)})');
   }
 }
 

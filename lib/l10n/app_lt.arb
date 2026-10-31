@@ -346,6 +346,8 @@
   "launchError": "Paleidžiant programėlę įvyko klaida.\n{ErrorMessagesConnection}\n\nIšsami informacija:",
   "exampleRestDurationDate": "Pavyzdžiui, jei nuo sausio 12 d. 3 dienoms pristabdysite tablečių vartojimą",
   "exampleRestDurationNumber": "Pavyzdžiui, jei nuo 18-osios tabletės 3 dienoms pristabdysite tablečių vartojimą",
+  "exampleRestDurationNumberBalloon": "pristabdytas vartojimas\n3 dienos",
+  "exampleRestDurationDateBalloon": "Pristabdymo laikotarpis\nsausio 12–14 d.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nepavyko rasti šiuo metu naudojamos tablečių plokštelės",
   "doNotRevertTakePillInPausePeriod": "Per pertrauką negalima atšaukti įrašo apie tabletės vartojimą",

@@ -20,6 +20,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class RecordPage extends HookConsumerWidget {
   const RecordPage({super.key});
@@ -86,7 +87,7 @@ class RecordPageBody extends ConsumerWidget {
         backgroundColor: AppColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
         title: RecordPageInformationHeader(
-          today: DateTime.now(),
+          today: now(),
           pillSheetGroup: pillSheetGroup,
           user: user,
         ),

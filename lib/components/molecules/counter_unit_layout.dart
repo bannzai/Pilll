@@ -19,6 +19,7 @@ class CounterUnitLayout extends StatelessWidget {
       children: [
         Text(
           title,
+          textAlign: TextAlign.center,
           style: const TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,
@@ -27,7 +28,9 @@ class CounterUnitLayout extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
+        // 親が幅を制約した時 (Flexible 等) に数字と単位を左に寄せず、ラベルの下の中央に置くため幅を中身に合わせる
         Row(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.ideographic,
           children: [

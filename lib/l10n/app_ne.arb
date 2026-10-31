@@ -346,6 +346,8 @@
   "launchError": "एप खोल्दा त्रुटि भयो।\n{ErrorMessagesConnection}\n\nविवरण:",
   "exampleRestDurationDate": "उदाहरणका लागि, 1/12 देखि 3 दिनको सेवन विराम लिनुभयो भने",
   "exampleRestDurationNumber": "उदाहरणका लागि, तपाईंले चक्की नम्बर 18 देखि 3 दिनको सेवन विराम लिनुभयो भने",
+  "exampleRestDurationNumberBalloon": "सेवन विराम\n3 दिन",
+  "exampleRestDurationDateBalloon": "सेवन विरामको अवधि\nजनवरी १२–१४",
   "withNumber": "नं. {number}",
   "currentPillSheetNotFound": "अहिले प्रयोग भइरहेको चक्की पत्ता फेला परेन",
   "doNotRevertTakePillInPausePeriod": "विश्रामको समयमा चक्की खाएको अभिलेख रद्द गर्न मिल्दैन",

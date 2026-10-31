@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:pilll/features/localizations/l.dart';
 
 abstract class PillSheetTypeColumnConstant {
-  static const double width = 146;
+  /// カードの幅の上限。説明文の最長の語 (de の「Wirkstofftabletten」) が左右の padding と枠線を除いた幅に収まり、
+  /// 語の途中で折り返さない値。iPhone SE (375pt) でも収まることを pill_sheet_type_column_test.dart で確かめている (issue #2020)
+  static const double width = 170;
   static const double height = 140;
   static double get aspectRatio => width / height;
 }
@@ -38,7 +40,7 @@ class PillSheetTypeColumn extends StatelessWidget {
         padding: EdgeInsets.only(
           left: 16,
           top: 10,
-          right: 25,
+          right: 16,
           bottom: PillSheetType.pillsheet_21_0 == pillSheetType ? 30 : 10,
         ),
         child: Column(

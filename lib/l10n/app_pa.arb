@@ -346,6 +346,8 @@
   "launchError": "ਐਪ ਖੋਲ੍ਹਣ ਵੇਲੇ ਇੱਕ ਗੜਬੜ ਹੋਈ।\n{ErrorMessagesConnection}\n\nਵੇਰਵੇ:",
   "exampleRestDurationDate": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 1/12 ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਲੈਂਦੇ ਹੋ",
   "exampleRestDurationNumber": "ਉਦਾਹਰਨ ਲਈ, ਜੇ ਤੁਸੀਂ 18ਵੀਂ ਗੋਲੀ ਤੋਂ 3 ਦਿਨਾਂ ਲਈ ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਲੈਂਦੇ ਹੋ",
+  "exampleRestDurationNumberBalloon": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ\n3 ਦਿਨ",
+  "exampleRestDurationDateBalloon": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ\n12–14 ਜਨ.",
   "withNumber": "ਗੋਲੀ ਨੰਬਰ {number}",
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਵਰਤੀ ਜਾ ਰਹੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨਹੀਂ ਮਿਲੀ",
   "doNotRevertTakePillInPausePeriod": "ਵਿਰਾਮ ਦੌਰਾਨ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",

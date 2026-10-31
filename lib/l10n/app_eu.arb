@@ -346,6 +346,8 @@
   "launchError": "Errore bat gertatu da aplikazioa irekitzean.\n{ErrorMessagesConnection}\n\nXehetasunak:",
   "exampleRestDurationDate": "Adibidez, 1/12tik aurrera 3 eguneko etenaldi bat egiten baduzu",
   "exampleRestDurationNumber": "Adibidez, 18. pilulatik aurrera 3 eguneko etenaldi bat egiten baduzu",
+  "exampleRestDurationNumberBalloon": "hartzeko etenaldi\n3 egun",
+  "exampleRestDurationDateBalloon": "Etenaldiaren iraupena\nurt. 12–14",
   "withNumber": "{number}. pilula",
   "currentPillSheetNotFound": "Ez da aurkitu orain erabiltzen duzun pilula-blister",
   "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",

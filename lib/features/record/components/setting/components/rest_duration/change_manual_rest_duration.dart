@@ -88,8 +88,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginDate,
-            lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText,
+            lastDate: pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration),
+            helpText: pillSheetGroup.availableRestDurationBeginDateHelpText(restDuration: restDuration),
             fieldLabelText: L.pauseStartDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
@@ -115,6 +115,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             );
           } catch (e) {
             onError(e);
+            return;
           }
 
           onChanged();
@@ -152,12 +153,16 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
           // DateRangePickerでは開始日と終了日で別々の上限を設定できず、終了日のために広げたlastDateが開始日にも適用される
           // 開始日は従来通り「最終服用日の翌日」までしか選べないように、選択後に検証する
-          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDate.date())) {
+          if (dateTimeRange.start.isAfter(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration).date())) {
             analytics.logEvent(
               name: 'change_rest_duration_invalid_begin',
               parameters: {'rest_duration_id': restDuration.id},
             );
-            onError(AlertError(L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDate))));
+            onError(
+              AlertError(
+                L.pauseStartDateMustBeOnOrBefore(format(pillSheetGroup.availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration))),
+              ),
+            );
             return;
           }
 
@@ -174,10 +179,17 @@ class ChangeManualRestDuration extends HookConsumerWidget {
               toRestDuration: toRestDuration,
               pillSheetGroup: pillSheetGroup,
             );
-            // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
-            await registerReminderLocalNotification();
           } catch (e) {
             onError(e);
+            return;
+          }
+
+          // 服用再開予定日が変わると、服用再開予定日以降のリマインドを登録する日が変わるため、更新後の状態で登録しなおす
+          // 服用お休みの変更は保存済みのため、登録に失敗しても保存の失敗としては扱わず画面を閉じる (end_manual_rest_duration と同じ扱い)
+          try {
+            await registerReminderLocalNotification();
+          } catch (e) {
+            debugPrint('registerReminderLocalNotification error: $e');
           }
 
           onChanged();

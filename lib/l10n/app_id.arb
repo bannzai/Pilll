@@ -346,6 +346,8 @@
   "launchError": "Terjadi kesalahan saat aplikasi dibuka.\n{ErrorMessagesConnection}\n\nDetail:",
   "exampleRestDurationDate": "Misalnya, jika Anda mengambil jeda minum selama 3 hari mulai 12 Januari",
   "exampleRestDurationNumber": "Misalnya, jika Anda memulai jeda minum selama 3 hari dari nomor pil 18",
+  "exampleRestDurationNumberBalloon": "jeda minum pil\n3 hari",
+  "exampleRestDurationDateBalloon": "Periode jeda minum\n12–14 Jan",
   "withNumber": "No. {number}",
   "currentPillSheetNotFound": "Strip pil yang sedang Anda gunakan tidak ditemukan",
   "doNotRevertTakePillInPausePeriod": "Catatan minum pil tidak dapat dibatalkan selama jeda",

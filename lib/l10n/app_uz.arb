@@ -346,6 +346,8 @@
   "launchError": "Ilova ochilayotganda xatolik yuz berdi.\n{ErrorMessagesConnection}\n\nTafsilotlar:",
   "exampleRestDurationDate": "Masalan, 1/12 dan boshlab 3 kunlik pauza qilsangiz",
   "exampleRestDurationNumber": "Masalan, 18-tabletkadan boshlab 3 kunlik pauza qilsangiz",
+  "exampleRestDurationNumberBalloon": "tabletka ichishda pauza\n3 kun",
+  "exampleRestDurationDateBalloon": "Pauza muddati\n12–14 yanvar",
   "withNumber": "{number}-raqam",
   "currentPillSheetNotFound": "Hozir foydalanayotgan tabletka blister topilmadi",
   "doNotRevertTakePillInPausePeriod": "Tanaffus davrida tabletkani qabul qilish qaydini bekor qilib boʻlmaydi",

@@ -346,6 +346,8 @@
   "launchError": "Қолданбаны ашу кезінде қате орын алды.\n{ErrorMessagesConnection}\n\nТолығырақ:",
   "exampleRestDurationDate": "Мысалы, 1/12-ден бастап 3 күнге кідіріс жасасаңыз",
   "exampleRestDurationNumber": "Мысалы, 18-таблеткадан бастап 3 күнге кідіріс жасасаңыз",
+  "exampleRestDurationNumberBalloon": "қабылдаудағы кідіріс\n3 күн",
+  "exampleRestDurationDateBalloon": "Кідіріс мерзімі\n12–14 қаңтар",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Қазір қолданылып жатқан таблетка блистер табылмады",
   "doNotRevertTakePillInPausePeriod": "Үзіліс кезінде таблетканы қабылдау жазбасын болдырмау мүмкін емес",
