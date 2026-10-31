@@ -13,6 +13,20 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+/// 服用お休み期間の開始日・終了日を変更する行。
+///
+/// 服用お休み期間の「削除」はあえて提供しない (https://github.com/bannzai/Pilll/issues/2035 )。
+/// 前のピルシートの服用お休みを取り除くと、後続のピルシートの開始日が服用お休みの日数分だけ前にずれ、
+/// 今飲んでいるシートの今日の番号が変わる。その時に服用記録を残すと飲んでいないピルが服用済みの表示になり、
+/// 消すと服用記録そのものが失われるため、どちらに倒しても当人の記録と食い違う。
+/// この判断は owner が https://github.com/bannzai/Pilll/pull/2038 で行った。
+/// ユーザーから問い合わせがあり、どうしても取り除きたい時は、この行の変更で開始日と終了日を同じ日にして
+/// 期間を 0 日にする操作を案内する (DateRangePicker は同じ日を開始日と終了日に選べる)。
+/// 案内できるのは、現在のピルシートグループにある終了日が決まった期間だけ。
+/// 服用お休み中 (終了日が無い) の期間は単一日付の DatePicker で開始日しか変えられず、
+/// 前回のピルシートグループの期間は同じ日の範囲を保存時のエラーにしている
+/// (restDurationRangeErrorMessageForBeforePillSheetGroup) ため、0 日にできない。
+/// 0 日にした時も後続のピルシートの開始日は同じ理由でずれるので、その点も合わせて伝える。
 class ChangeManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheetGroup pillSheetGroup;
