@@ -50,7 +50,7 @@
   },
   "settings": "設定",
   "@settings": {
-    "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。"
+    "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。\n[翻訳の決定 es] 「Configuración」ではなく「Ajustes」: ホーム画面のタブバーのラベルが幅に収まらず切れたため。iOS の設定アプリの es 表記と同じ語で意味を保てる (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 「Configurações」ではなく「Ajustes」: ホーム画面のタブバーのラベルが幅に収まらず切れたため。iOS の設定アプリの pt-BR 表記と同じ語で意味を保てる (https://github.com/bannzai/Pilll/issues/2012)"
   },
   "account": "アカウント",
   "@account": {
@@ -496,9 +496,22 @@
   "@selectPauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "selectPausePeriod": "服用お休み期間を選択",
-  "@selectPausePeriod": {
-    "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+  "selectPauseEndDateAsResumeDate": "終了日は服用を再開する日を選択",
+  "@selectPauseEndDateAsResumeDate": {
+    "description": "服用お休み期間を追加・変更するカレンダーの見出しです。カレンダーで選ぶ終了日は服用を再開する日で、お休みの日数には含まれないことを伝えます。例: 10/26〜10/29の4日間お休みする場合、終了日には10/30を選びます。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、英字なら16文字以内で訳してください。収まらない言語では一部の語を省いてかまいません。文にせず、「終了日＝服用再開日」が伝わる最短の語句にします。英語の例: End date = restart day"
+  },
+  "pauseResumeDateLimitIsToday": "服用再開日は今日まで",
+  "@pauseResumeDateLimitIsToday": {
+    "description": "終了済みの服用お休み期間を変更するカレンダーの見出しです。終了日は服用を再開する日であり、その服用再開日に選べる最終日が今日であることを伝えます。未来の日付を選べない理由を示します。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、英字なら16文字以内で訳してください。収まらない言語では一部の語を省いてかまいません。文にせず、最短の語句にします。英語の例: Restart day: up to today"
+  },
+  "pauseResumeDateLimitBeforeNextPause": "服用再開日は次のお休み（{date}〜）まで",
+  "@pauseResumeDateLimitBeforeNextPause": {
+    "description": "服用お休み期間を変更するカレンダーの見出しです。終了日は服用を再開する日であり、後続の服用お休み期間があるため、服用再開日に選べる日が次の服用お休みの開始日までに限られることを伝えます。{date}には次の服用お休みの開始日（例: 7/13）が入り、その日も選べます。見出しは1行で、入りきらない分は省略記号で切れます。iPhone SEの幅に収めるため、{date}を含めて英字なら25文字以内で、文にせず最短の語句にしてください。ただし「次のお休み（休薬・服用お休み）」が上限の理由であることは省かずに必ず含めます。文にすると長くなるため、「{date}までに再開」の短い語句のあとに、お休みを表す名詞1語を括弧で添える形にしてください。例: en「Restart by {date} (break)」、de「Neustart bis {date} (Pause)」、fr「Reprise d’ici {date} (pause)」、ru「Возобновить до {date} (перерыв)」",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   },
   "pauseStartDate": "服用お休み開始日",
   "@pauseStartDate": {
@@ -728,9 +741,14 @@
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "番",
-  "@number": {
-    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。\n[翻訳の決定 en] 「No. 1」ではなく「 (pill)」: このキーは数字の後ろに連結する接尾辞で、前置の「No. 1」は arb の訳だけでは作れない。空文字にするとリマインダー通知のタイトルで番号だけになるため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「n° 1」ではなく「 (pilule)」: このキーは数字の後ろに連結する接尾辞で、前置の「n° 1」は arb の訳だけでは作れないため現行を維持し、書式の変更は https://github.com/bannzai/Pilll/issues/2025 で扱う (https://github.com/bannzai/Pilll/issues/2004)"
+  "formattedPillNumber": "{number}番",
+  "@formattedPillNumber": {
+    "description": "今日飲むピルの番号の表示です。記録画面の最上部・初期設定の今日飲むピル番号の説明・リマインダー通知のタイトルに出ます。{number}にはピル番号（例：5）が入ります。記録画面では{number}だけを大きな文字で表示するため、{number}の前後の文字列は短くしてください。\n[翻訳の決定 en] 「5 (pill)」ではなく「No. 5」: 数字の後ろに連結する接尾辞の number キーでは前置の書式を作れず、スクリーンショット比較で番号だと分かりにくいと指摘されたため、プレースホルダー付きのこのキーに替えて前置にした (https://github.com/bannzai/Pilll/issues/2025 https://github.com/bannzai/Pilll/issues/1989)\n[翻訳の決定 fr] 「5 (pilule)」ではなく「n° 5」: en と同じ理由で前置にした。リマインダー通知のタイトルでは文の途中に入るため、文中の表記の小文字の n° にした (https://github.com/bannzai/Pilll/issues/2025 https://github.com/bannzai/Pilll/issues/1991 https://github.com/bannzai/Pilll/issues/2004)\n[翻訳の決定 hi] 「5वीं गोली」ではなく「गोली नंबर 5」: ヒンディー語の序数は 1〜4 で वीं を付ける形にならず「1वीं」が誤りになるため、アプリ内の他のキー (withNumber など) と同じ「गोली नंबर {number}」にした (https://github.com/bannzai/Pilll/pull/2047)",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   },
   "dayNumber": "日目",
   "@dayNumber": {
@@ -755,7 +773,7 @@
   },
   "menstruationScheduleDate": "生理予定日",
   "@menstruationScheduleDate": {
-    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
+    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。\n[翻訳の決定 de] 「Voraussichtlicher Beginn der nächsten Periode」ではなく「Nächste Periode」: 生理画面の生理予定日カードで日付と 1 行に並ばず溢れたため。日付と並べて表示するので「予定日」の意味は日付から読み取れる (https://github.com/bannzai/Pilll/issues/1976)"
   },
   "menstruationScheduleDateWithNumber": "生理予定：{diffPlusOne}日目",
   "@menstruationScheduleDateWithNumber": {
@@ -1416,7 +1434,7 @@
   },
   "purchaseErrorUnknownError": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1479,7 +1497,7 @@
   },
   "purchaseErrorInvalidCredentialsError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
-    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1491,7 +1509,7 @@
   },
   "purchaseErrorUnexpectedBackendResponseError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
-    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1528,7 +1546,7 @@
   },
   "purchaseErrorUnknownBackendError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
-    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1540,7 +1558,7 @@
   },
   "purchaseErrorInvalidAppleSubscriptionKeyError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1552,7 +1570,7 @@
   },
   "purchaseErrorIneligibleError": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
-    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1585,7 +1603,7 @@
   },
   "purchaseErrorInvalidSubscriberAttributesError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
-    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1597,7 +1615,7 @@
   },
   "purchaseErrorLogOutWithAnonymousUserError": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
-    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1609,7 +1627,7 @@
   },
   "purchaseErrorConfigurationError": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
-    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1621,7 +1639,7 @@
   },
   "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1648,7 +1666,7 @@
   },
   "purchaseErrorProductDiscountMissingIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
-    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1663,7 +1681,7 @@
   },
   "purchaseErrorUnknownNonNativeError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
-    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1678,7 +1696,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1693,7 +1711,7 @@
   },
   "purchaseErrorCustomerInfoError": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1708,7 +1726,7 @@
   },
   "purchaseErrorSystemInfoError": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
-    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1723,7 +1741,7 @@
   },
   "purchaseErrorBeginRefundRequestError": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
-    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1738,7 +1756,7 @@
   },
   "purchaseErrorProductRequestTimeout": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
-    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -1750,7 +1768,7 @@
   },
   "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
-    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1765,7 +1783,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "errorCode": {
         "type": "String"
@@ -1780,7 +1798,7 @@
   },
   "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
-    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
@@ -2621,7 +2639,7 @@
   },
   "todayPillNumberFeatureAppealShortDescription": "番号がずれたら設定で修正",
   "@todayPillNumberFeatureAppealShortDescription": {
-    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文"
+    "description": "今日の服用番号変更機能のFeatureAppeal Barの短い説明文\n[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)"
   },
   "todayPillNumberFeatureAppealHeadline": "今日飲むピル番号を変更できる",
   "@todayPillNumberFeatureAppealHeadline": {
@@ -2680,11 +2698,20 @@
   "creatingNewPillSheetFeatureAppealPoint1": "ピルシート終了で自動切り替え",
   "creatingNewPillSheetFeatureAppealPoint2": "手動の作成操作が不要",
   "creatingNewPillSheetFeatureAppealPoint3": "設定タブのスイッチで切り替え",
+  "@creatingNewPillSheetFeatureAppealPoint3": {
+    "description": "[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)"
+  },
   "alarmKitFeatureAppealPoint1": "サイレント/集中モードでも鳴る",
   "alarmKitFeatureAppealPoint2": "目覚まし同様のアラーム音",
   "alarmKitFeatureAppealPoint3": "iOS 26以降・設定タブから有効化",
+  "@alarmKitFeatureAppealPoint3": {
+    "description": "[翻訳の決定 es] 設定タブを「Configuración」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2010)\n[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)"
+  },
   "todayPillNumberFeatureAppealPoint1": "無料で使える番号合わせ機能",
   "todayPillNumberFeatureAppealPoint2": "設定タブから変更できる",
+  "@todayPillNumberFeatureAppealPoint2": {
+    "description": "[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)"
+  },
   "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
   "restDurationFeatureAppealPoint1": "無料で使える休薬記録",
   "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
@@ -2763,19 +2790,6 @@
   "selectPlannedResumeDate": "服用再開予定日を選択",
   "@selectPlannedResumeDate": {
     "description": "服用お休みを開始するダイアログで、服用再開予定日をカレンダーから選択する際に表示される画面タイトルです。"
-  },
-  "pauseEndDateLimitIsToday": "終了日は今日まで",
-  "@pauseEndDateLimitIsToday": {
-    "description": "終了済みの服用お休み期間を変更するカレンダーで、終了日に選べる最終日が今日であることを伝える1行の説明です。未来の日付を終了日にできない理由を示します。"
-  },
-  "pauseEndDateLimitBeforeNextPause": "次のお休み（{date}〜）と重ならない日まで",
-  "@pauseEndDateLimitBeforeNextPause": {
-    "description": "服用お休み期間を変更するカレンダーで、後続の服用お休み期間があるために終了日に選べる日が限られていることを伝える1行の説明です。{date}には次の服用お休みの開始日（例: 7/13）が入ります。",
-    "placeholders": {
-      "date": {
-        "type": "String"
-      }
-    }
   },
   "pauseStartDateLimit": "開始日は{date}まで",
   "@pauseStartDateLimit": {

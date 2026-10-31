@@ -1,9 +1,14 @@
+import 'dart:ui';
+
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -468,6 +473,63 @@ void main() {
           [0, 1, 4, 5, 6, 7, 8, 9, 10, 11],
         );
       });
+    });
+  });
+
+  group("#reminderNotificationTitle", () {
+    // 日付の曜日は端末のロケールで変わるため、番号の書式を確かめるケースでは日付を表示しない設定にする
+    const reminderNotificationCustomization = ReminderNotificationCustomization(isInVisibleReminderDate: true);
+
+    void useLocale(String languageCode) {
+      L = lookupAppLocalizations(Locale(languageCode));
+      addTearDown(() => L = lookupAppLocalizations(const Locale('ja')));
+    }
+
+    test("ja では番号の後ろに「番」が付く", () {
+      useLocale('ja');
+      expect(
+        reminderNotificationTitle(
+          reminderNotificationCustomization: reminderNotificationCustomization,
+          reminderDateTime: DateTime.parse("2022-05-10T09:00:00"),
+          pillSheetDisplayNumber: "5",
+        ),
+        "💊 5番",
+      );
+    });
+
+    test("en では番号の前に「No.」が付く", () {
+      useLocale('en');
+      expect(
+        reminderNotificationTitle(
+          reminderNotificationCustomization: reminderNotificationCustomization,
+          reminderDateTime: DateTime.parse("2022-05-10T09:00:00"),
+          pillSheetDisplayNumber: "5",
+        ),
+        "💊 No. 5",
+      );
+    });
+
+    test("fr では番号の前に「n°」が付く", () {
+      useLocale('fr');
+      expect(
+        reminderNotificationTitle(
+          reminderNotificationCustomization: reminderNotificationCustomization,
+          reminderDateTime: DateTime.parse("2022-05-10T09:00:00"),
+          pillSheetDisplayNumber: "5",
+        ),
+        "💊 n° 5",
+      );
+    });
+
+    test("ピル番号を表示しない設定では番号が付かない", () {
+      expect(
+        reminderNotificationTitle(
+          reminderNotificationCustomization: reminderNotificationCustomization.copyWith(isInVisiblePillNumber: true),
+          reminderDateTime: DateTime.parse("2022-05-10T09:00:00"),
+          pillSheetDisplayNumber: "5",
+        ),
+        "💊",
+      );
     });
   });
 }

@@ -96,14 +96,14 @@ class PillCapsule extends StatelessWidget {
 ///
 /// 実装の本文生成（lib/utils/local_notification.dart の
 /// `RegisterReminderLocalNotification.run` 内、`premiumOrTrial` 分岐のタイトル組み立て：
-/// `${word} ${month}/${day} (${weekday}) ${pillNumber}${L.number}`、
-/// デフォルト word は [pillEmoji]）に合わせた文言。DateTimeFormatter/L.number は
+/// `${word} ${month}/${day} (${weekday}) ${L.formattedPillNumber(pillNumber)}`、
+/// デフォルト word は [pillEmoji]）に合わせた文言。DateTimeFormatter/L.formattedPillNumber は
 /// `Intl.defaultLocale`（撮影する言語）と [L] を使うため、全撮影言語で
 /// 本番と同じ日付・曜日・番号単位になる。
 String reminderNotificationSampleBody() {
   final date = DateTime(2026, 7, 18);
   // 本番の通知は月日を DateTimeFormatter.monthAndDay ではなく `${month}/${day}` で組み立てるため、同じ組み立てにする
-  return '💊 ${date.month}/${date.day} (${DateTimeFormatter.shortWeekday(date)}) 16${L.number}';
+  return '💊 ${date.month}/${date.day} (${DateTimeFormatter.shortWeekday(date)}) ${L.formattedPillNumber('16')}';
 }
 
 /// iOS の通知バナーを模したカード。

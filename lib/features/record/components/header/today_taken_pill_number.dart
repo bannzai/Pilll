@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/formatted_pill_number_text_span.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -94,46 +95,42 @@ class TodayTakenPillNumber extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.ideographic,
       children: <Widget>[
-        if (_appearanceMode == PillSheetAppearanceMode.number) ...[
-          Text(
-            '${activePillSheet.todayPillNumber}',
-            style: const TextStyle(
-              fontFamily: FontFamily.number,
-              fontWeight: FontWeight.w500,
-              fontSize: 40,
-              color: TextColor.main,
+        if (_appearanceMode == PillSheetAppearanceMode.number)
+          Text.rich(
+            formattedPillNumberTextSpan(
+              pillNumber: '${activePillSheet.todayPillNumber}',
+              numberStyle: const TextStyle(
+                fontFamily: FontFamily.number,
+                fontWeight: FontWeight.w500,
+                fontSize: 40,
+                color: TextColor.main,
+              ),
+              labelStyle: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: TextColor.noshime,
+              ),
             ),
           ),
-          Text(
-            L.number,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: TextColor.noshime,
+        if (_appearanceMode == PillSheetAppearanceMode.date)
+          Text.rich(
+            formattedPillNumberTextSpan(
+              pillNumber: '${activePillSheet.todayPillNumber}',
+              numberStyle: const TextStyle(
+                fontFamily: FontFamily.number,
+                fontWeight: FontWeight.w500,
+                fontSize: 40,
+                color: TextColor.main,
+              ),
+              labelStyle: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: TextColor.noshime,
+              ),
             ),
           ),
-        ],
-        if (_appearanceMode == PillSheetAppearanceMode.date) ...[
-          Text(
-            '${activePillSheet.todayPillNumber}',
-            style: const TextStyle(
-              fontFamily: FontFamily.number,
-              fontWeight: FontWeight.w500,
-              fontSize: 40,
-              color: TextColor.main,
-            ),
-          ),
-          Text(
-            L.number,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: TextColor.noshime,
-            ),
-          ),
-        ],
         if (_appearanceMode.isSequential) ...[
           Text(
             '${pillSheetGroup.sequentialTodayPillNumber}',
