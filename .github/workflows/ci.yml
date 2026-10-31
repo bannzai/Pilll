@@ -15,9 +15,12 @@ on:
   # NOTE: Dependabotでbuild-ios-debug,build-android-debugでの失敗を避けるために https://docs.github.com/ja/code-security/dependabot/working-with-dependabot/automating-dependabot-with-github-actions#accessing-secrets を参考に必要なdependabot用のsecretが設定されている。なお、prodファイルでもテストに不要のためすべてdevの値が代わりに使用されている
   pull_request:
 
+env:
+  FLUTTER_VERSION: '3.47.8'
+
 jobs:
   lint:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v7
@@ -25,7 +28,7 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         channel: stable
-        flutter-version: '3.44.9'
+        flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: flutter pub get
     - run: flutter analyze --no-pub --no-fatal-infos --fatal-warnings
   build-ios-debug:
@@ -42,12 +45,12 @@ jobs:
         ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.44.9'
+        flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   build-android-debug:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v7
@@ -63,28 +66,28 @@ jobs:
         ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.44.9'
+        flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.44.9'
+        flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
   codegen:
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v7
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.44.9'
+        flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs && dart format lib

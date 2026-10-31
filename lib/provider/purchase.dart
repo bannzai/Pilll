@@ -202,7 +202,7 @@ class Purchase {
         },
       );
       await callUpdatePurchaseInfo(purchaserInfo);
-      return Future.value(true);
+      return true;
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
         name: 'catched_purchase_exception',

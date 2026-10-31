@@ -1,0 +1,189 @@
+# 翻訳の画面比較 (castle の translate-app-screenshot-check skill) の入力として、主要画面を言語別に撮る workflow。
+# dev の Simulator 用 .app を 1 回ビルドし、言語グループごとの matrix で .maestro/flows/translation_screenshot/capture.yaml を回して、
+# 全 job の png を artifact translation-screenshots (<画面>/<言語>.png) にまとめる。
+# 画面同士の比較 (LLM) は agent がローカルで行うため、この workflow には置かない。
+# 起動と artifact の取得は scripts/translation_screenshots/README.md を参照。
+name: translation-screenshots
+run-name: "translation-screenshots langs=${{ inputs.langs || 'default' }}"
+
+permissions:
+  contents: read
+
+on:
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: "撮影する arb 言語コード (カンマ区切り)。空なら比較の主要 7 言語 en,ko,zh,es,pt,de,fr と基準の ja"
+        required: false
+        default: ""
+      group_count:
+        # 既定の 4: Free プランの macOS 同時実行上限 5 から、PR の ci の build-ios-debug が同時に使う 1 枠を残した数
+        description: "並列 Runner 数 (言語をこの数に分割。Free プランの macOS 同時実行上限は 5)"
+        required: false
+        default: "4"
+  # workflow_dispatch は workflow ファイルが default ブランチに載るまで登録されないため、
+  # main へ merge されるまでの起動経路として、この workflow と撮影の経路の push でも起動する (appstore-screenshots.yml と同じ)。
+  # langs は ja,en,de で実行される
+  push:
+    branches:
+      - issue-1957
+    paths:
+      - .github/workflows/translation-screenshots.yml
+      - scripts/translation_screenshots/capture_langs.sh
+      - .maestro/flows/translation_screenshot/**
+      - lib/**
+
+# 同一ブランチで多重起動したら古い方を止める (macOS Runner 枠の浪費防止)
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # dev 環境の Simulator 用 .app をビルドして artifact に上げ、撮影対象言語をグループへ分割する
+  # (ビルドは maestro-e2e.yml の build と同じ手順)
+  build:
+    runs-on: macos-26
+    timeout-minutes: 30 # maestro-e2e.yml の build と同じ手順・同じ上限
+    permissions:
+      contents: read # checkout のみ
+    outputs:
+      lang_groups: ${{ steps.plan.outputs.lang_groups }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Split languages into runner groups
+        id: plan
+        env:
+          # push トリガーでは inputs が空になるため、確認用の 3 言語を 1 言語ずつの Runner で撮る
+          INPUT_LANGS: ${{ github.event_name == 'push' && 'ja,en,de' || inputs.langs }}
+          GROUP_COUNT: ${{ github.event_name == 'push' && '3' || inputs.group_count }}
+        run: |
+          # 既定の言語: 比較の対象は使用量の上限を避けて主要 7 言語にする (issue #1957 の owner の決定)。ja は比較の基準
+          LANGS="${INPUT_LANGS:-ja,en,ko,zh,es,pt,de,fr}"
+          lang_groups="$(printf '%s' "$LANGS" | tr ',' '\n' | awk -v groups="$GROUP_COUNT" '
+            NF { langs[n++] = $0 }
+            END {
+              if (groups + 0 < 1) groups = 1
+              if (groups + 0 > n) groups = n
+              base = int(n / groups); extra = n % groups
+              printf "["
+              idx = 0
+              for (g = 0; g < groups; g++) {
+                size = base + (g < extra ? 1 : 0)
+                if (g > 0) printf ","
+                printf "\""
+                for (i = 0; i < size; i++) {
+                  if (i > 0) printf ","
+                  printf "%s", langs[idx++]
+                }
+                printf "\""
+              }
+              printf "]"
+            }')"
+          echo "lang_groups=$lang_groups"
+          echo "lang_groups=$lang_groups" >> "$GITHUB_OUTPUT"
+      - name: Prepare firebase config
+        run: make secret
+        env:
+          FILE_FIREBASE_IOS: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+          DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+          XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+          ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          flutter-version: '3.44.9'
+      - run: flutter pub get
+      - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
+      # upload-artifact はファイル権限を保持しない (download 後は全て 0644 になり .app の実行バイナリが壊れる) ため、
+      # tar で権限ごと固めてから artifact にする (maestro-e2e.yml と同じ)
+      - name: ビルド成果物を tar でまとめる
+        run: tar -C build/ios/iphonesimulator -cf simulator-app.tar .
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: translation-screenshots-app
+          path: simulator-app.tar
+          retention-days: 1 # 同じ run の capture job が使うだけのため。maestro-e2e.yml の .app と同じ
+
+  # 言語グループごとに Simulator を起動して Maestro で撮影し、<画面>/<言語>.png を artifact に上げる
+  capture:
+    needs: build
+    runs-on: macos-26
+    # 既定の 8 言語を 4 Runner で撮ると 1 Runner 2 言語。1 言語は最大 3 回やり直す (capture_langs.sh) ため、
+    # maestro-e2e.yml の撮影 job の 60 分を 2 言語分にした値
+    timeout-minutes: 120
+    permissions:
+      contents: read # checkout のみ
+    strategy:
+      fail-fast: false # 1 グループの失敗で他グループの撮影を止めない
+      matrix:
+        langs: ${{ fromJSON(needs.build.outputs.lang_groups) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: translation-screenshots-app
+          path: build-app
+      - name: Install Maestro
+        # get.maestro.mobile.dev のインストーラーは常に最新版を入れるため、リリース成果物をバージョン固定で取得し sha256 を確かめる。
+        # バージョンと sha256 は .github/scripts/maestro-e2e-run.sh と同じ
+        env:
+          MAESTRO_VERSION: 2.6.0
+          MAESTRO_SHA256: 80185105a5d7e227e3b3fbcf225f45b312508ea676a9fc8e1b1aa1cac8b9ff6e
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/maestro.zip" "https://github.com/mobile-dev-inc/maestro/releases/download/cli-${MAESTRO_VERSION}/maestro.zip"
+          echo "${MAESTRO_SHA256}  $RUNNER_TEMP/maestro.zip" | shasum -a 256 -c -
+          unzip -q -o "$RUNNER_TEMP/maestro.zip" -d "$RUNNER_TEMP/maestro-cli"
+          echo "$RUNNER_TEMP/maestro-cli/maestro/bin" >> "$GITHUB_PATH"
+      - name: Boot simulator and install app
+        id: sim
+        # flow の座標タップ (タブ) は maestro-e2e.yml と同じ iPhone 17 で確かめている
+        run: |
+          udid="$(xcrun simctl list devices available -j | jq -r '.devices | to_entries[] | .value[] | select(.name == "iPhone 17") | .udid' | head -1)"
+          [ -n "$udid" ] || { echo "::error::iPhone 17 の Simulator が無い"; exit 1; }
+          xcrun simctl boot "$udid" || true
+          xcrun simctl bootstatus "$udid" -b
+          tar -xf build-app/simulator-app.tar -C build-app
+          xcrun simctl install "$udid" build-app/Runner.app
+          echo "udid=$udid" >> "$GITHUB_OUTPUT"
+      - name: Capture screenshots
+        env:
+          CAPTURE_LANGS: ${{ matrix.langs }}
+          MAESTRO_CLI_NO_ANALYTICS: 1
+          MAESTRO_DRIVER_STARTUP_TIMEOUT: 120000
+        run: sh scripts/translation_screenshots/capture_langs.sh --udid "${{ steps.sim.outputs.udid }}" -l "$CAPTURE_LANGS"
+      # 一部言語が失敗しても撮影済み言語の成果物は回収できるよう、失敗時もアップロードする。
+      # public repo の artifact は誰でもダウンロードできる。初期設定から作るダミーのデータだけが映る (flow は clearState で始める)
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() }}
+        with:
+          name: translation-screenshots-part-${{ strategy.job-index }}
+          path: scripts/translation_screenshots/artifacts
+          if-no-files-found: error
+          retention-days: 1 # 同じ run の merge job が 1 つにまとめて消すため
+      # 失敗原因調査用に Maestro のデバッグ出力 (スクリーンショット・ログ) を上げる
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ failure() }}
+        with:
+          name: translation-screenshots-maestro-debug-${{ strategy.job-index }}
+          path: ~/.maestro/tests
+          if-no-files-found: ignore
+          retention-days: 3 # 失敗の調査用。maestro-e2e.yml のデバッグ出力と同じ
+
+  # 言語グループごとの artifact を 1 つにまとめ、<画面>/<言語>.png の形にする
+  merge:
+    needs: capture
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10 # artifact を 1 つにまとめるだけで数分で終わるため
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/upload-artifact/merge@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: translation-screenshots
+          pattern: translation-screenshots-part-*
+          delete-merged: true
+          retention-days: 7 # 起動した人が gh run download で取りにいき、translate-app-screenshot-check skill に渡すまでの余裕

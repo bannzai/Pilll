@@ -20,7 +20,7 @@ name: flutter-deploy
 # アップロード step まで進んで失敗した run を Re-run すると同じビルド番号の再送になり拒否されるため、その場合は
 # 原因を直して workflow_dispatch で新しく起動する (アップロードより前で失敗した run は Re-run してよい)。
 #
-# Makefile の `base64 -D` は macOS の書式のため、Android の job も macOS runner で実行する (ci.yml と同じ)。
+# macOS runner はアカウント全体で同時実行の枠が少ないため、iOS の job だけを macOS で実行し、Android の job は ubuntu で実行する (ci.yml と同じ)。
 #
 # flavor 別の secret は job の env で `matrix.flavor == 'dev' && secrets.X_DEV || secrets.X_PROD` の形で選ぶ。
 # GITHUB_ENV 経由で secret の値を後続 step に渡す方式は、base64 の長い値が後続 step で空になり
@@ -53,7 +53,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  FLUTTER_VERSION: '3.44.9'
+  FLUTTER_VERSION: '3.47.8'
   BUILD_NUMBER_OFFSET: 10000
   # 署名は project.pbxproj の Release / Release-Development 設定 (CODE_SIGN_STYLE = Manual + 下記の profile 名) に従う
   IOS_TEAM_ID: TQPN82UBBY
@@ -144,7 +144,7 @@ jobs:
         with:
           persist-credentials: false
 
-      # `echo $(VAR) | base64 -D > file` は VAR が空でも exit 0 で空ファイルを書くため、make secret の前に全変数の非空を検査する
+      # `echo $(VAR) | base64 --decode > file` は VAR が空でも exit 0 で空ファイルを書くため、make secret の前に全変数の非空を検査する
       - name: Check secrets
         run: |
           for name in FILE_FIREBASE_IOS XCCONFIG_SECRET REVENUECAT_PUBLIC_API_KEY_IOS REVENUECAT_PUBLIC_API_KEY_ANDROID IOS_ADMOB_NATIVE_ADVANCE_IDENTIFIER IOS_ADMOB_BANNER_IDENTIFIER IOS_PROVISIONING_PROFILE_BASE64 IOS_WIDGET_PROVISIONING_PROFILE_BASE64 STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT DART_DEFINE_FROM_FILE_DEV DART_DEFINE_FROM_FILE_PROD ANDROID_RES_VALUES ANDROID_ADMOB_NATIVE_ADVANCE_IDENTIFIER ANDROID_ADMOB_BANNER_IDENTIFIER ANDROID_ADMOB_APP_IDENTIFIER ANDROID_KEYSTORE_PASSWORD ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD ANDROID_KEYSTORE_ALIAS IOS_P12_CERTIFICATE_BASE64 IOS_P12_PASSWORD ASC_API_KEY_ID ASC_API_KEY_ISSUER_ID ASC_API_KEY_P8_BASE64; do
@@ -162,7 +162,7 @@ jobs:
       - run: flutter pub get
 
       # 一時キーチェーンの作成・登録は action が行う
-      - uses: apple-actions/import-codesign-certs@5142e029c445c10ffc7149d172e540235a065466 # v7.0.0
+      - uses: apple-actions/import-codesign-certs@77ba2a2a8f5cfc8c405ebf3159f767c323e238f9 # v7.1.0
         with:
           p12-file-base64: ${{ secrets.IOS_P12_CERTIFICATE_BASE64 }}
           p12-password: ${{ secrets.IOS_P12_PASSWORD }}
@@ -261,13 +261,15 @@ jobs:
       - name: Upload dSYMs to Crashlytics
         continue-on-error: true
         run: |
-          ./ios/Pods/FirebaseCrashlytics/upload-symbols \
+          # Firebase は SwiftPM で取り込む。flutter build ios は xcodebuild に -clonedSourcePackagesDirPath build/ios/SourcePackages を渡すため、
+          # upload-symbols はそこに checkout された firebase-ios-sdk にある (flutter_tools の xcodeproj.dart の swiftPackageCachePath)
+          ./build/ios/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/upload-symbols \
             -gsp ios/Firebase/GoogleService-Info.plist \
             -p ios \
             build/ios/archive/Runner.xcarchive/dSYMs
 
       # IPA は障害調査用に、export 済みならアップロードの成否にかかわらず artifact に保存する
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_ipa.outcome == 'success' }}
         with:
           name: ios-${{ matrix.flavor }}-ipa-${{ env.BUILD_NUMBER }}
@@ -314,7 +316,7 @@ jobs:
   android:
     needs: plan
     if: ${{ needs.plan.outputs.android != '[]' }}
-    runs-on: macos-26
+    runs-on: ubuntu-latest
     timeout-minutes: 90
     strategy:
       fail-fast: false
@@ -410,7 +412,7 @@ jobs:
           track: internal
           status: completed
 
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() && steps.build_aab.outcome == 'success' }}
         with:
           name: android-${{ matrix.flavor }}-aab-${{ env.BUILD_NUMBER }}

@@ -42,45 +42,50 @@ class BeginManualRestDuration extends HookConsumerWidget {
       Navigator.of(context).popUntil((route) => route.isFirst);
     }
 
-    return ListTile(
-      leading: const Icon(Icons.dark_mode_outlined),
-      title: Text(L.startPauseTaking),
-      onTap: () {
-        analytics.logEvent(
-          name: 'begin_manual_rest_duration_pressed',
-          parameters: {'pill_sheet_id': activePillSheet.id},
-        );
-
-        final todayPillAllTaken = switch (activePillSheet) {
-          PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
-          PillSheetV2 v2 => v2.todayPillAllTaken,
-        };
-        if (todayPillAllTaken) {
-          showInvalidAlreadyTakenPillDialog(context);
-        } else {
-          showRecordPageRestDurationDialog(
-            context,
-            appearanceMode: appearanceMode,
-            pillSheetGroup: pillSheetGroup,
-            onDone: (endDate) async {
-              analytics.logEvent(
-                name: 'done_rest_duration',
-                parameters: {'has_end_date': endDate != null},
-              );
-              // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
-              FlutterAppBadger.removeBadge();
-              await beginRestDuration(pillSheetGroup: pillSheetGroup, endDate: endDate);
-              if (endDate == null) {
-                await cancelReminderLocalNotification();
-              } else {
-                // 服用再開予定日以降のリマインドを登録する。予定日が来ても登録しなおす契機(手動の服用再開)が無いため。登録の前に既存の通知は全てキャンセルされる
-                await registerReminderLocalNotification();
-              }
-              didBeginRestDuration();
-            },
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+    return Semantics(
+      identifier: 'begin_manual_rest_duration_row',
+      button: true,
+      child: ListTile(
+        leading: const Icon(Icons.dark_mode_outlined),
+        title: Text(L.startPauseTaking),
+        onTap: () {
+          analytics.logEvent(
+            name: 'begin_manual_rest_duration_pressed',
+            parameters: {'pill_sheet_id': activePillSheet.id},
           );
-        }
-      },
+
+          final todayPillAllTaken = switch (activePillSheet) {
+            PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
+            PillSheetV2 v2 => v2.todayPillAllTaken,
+          };
+          if (todayPillAllTaken) {
+            showInvalidAlreadyTakenPillDialog(context);
+          } else {
+            showRecordPageRestDurationDialog(
+              context,
+              appearanceMode: appearanceMode,
+              pillSheetGroup: pillSheetGroup,
+              onDone: (endDate) async {
+                analytics.logEvent(
+                  name: 'done_rest_duration',
+                  parameters: {'has_end_date': endDate != null},
+                );
+                // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
+                FlutterAppBadger.removeBadge();
+                await beginRestDuration(pillSheetGroup: pillSheetGroup, endDate: endDate);
+                if (endDate == null) {
+                  await cancelReminderLocalNotification();
+                } else {
+                  // 服用再開予定日以降のリマインドを登録する。予定日が来ても登録しなおす契機(手動の服用再開)が無いため。登録の前に既存の通知は全てキャンセルされる
+                  await registerReminderLocalNotification();
+                }
+                didBeginRestDuration();
+              },
+            );
+          }
+        },
+      ),
     );
   }
 }

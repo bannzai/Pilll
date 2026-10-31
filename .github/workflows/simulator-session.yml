@@ -46,12 +46,14 @@ jobs:
           DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
           XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
           ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
+          # 無いと secret.dart のキーが空になり、プレミアム紹介シートが Invalid API Key のエラー画面になって購入の導線を確かめられない
+          REVENUECAT_PUBLIC_API_KEY_IOS: ${{ secrets.REVENUECAT_PUBLIC_API_KEY_IOS_DEV }}
       - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
         with:
-          flutter-version: '3.44.9'
+          flutter-version: '3.47.8'
       - run: flutter pub get
       - run: flutter build ios --simulator --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: simulator-app
           path: build/ios/iphonesimulator # .app の親ディレクトリ（.app 直指定は中身が flatten される）
@@ -63,7 +65,7 @@ jobs:
       id-token: write # Tailscale の OIDC (workload identity federation) 認証に必要
       contents: read
     # タグ運用はしないため commit SHA で固定する（更新時は SHA を書き換える）
-    uses: bannzai/simtunnel/.github/workflows/session.yml@7c449372c5d5da31fd15357e414fdb2281d06b11 # main 2026-07-07
+    uses: bannzai/simtunnel/.github/workflows/session.yml@bcd45174e03f11dcb156c315ae1d8adad788a298 # main 2026-10-29
     with:
       session: ${{ inputs.session }}
       device: ${{ inputs.device }}

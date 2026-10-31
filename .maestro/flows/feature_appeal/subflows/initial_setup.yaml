@@ -32,17 +32,33 @@ appId: com.mizuki.Ohashi.Pilll.dev
       - waitForAnimationToEnd
 
 # Screen 0: 「ヤーズフレックスの方ですか？」→ いいえ (従来の導線)
-# CI の Simulator ではクリーンインストール直後の起動に時間がかかり、tapOn の待ち時間を超えるため表示を待つ
-- extendedWaitUntil:
-    visible: "ヤーズフレックスの方ですか？"
-    timeout: 60000
+# CI の Simulator ではクリーンインストール直後の起動に時間がかかり、tapOn の待ち時間を超えるため表示を待つ。
+# 通知許可ダイアログが上の 15 秒より後に出ると、下の画面の文字を Maestro が検出できず待ちが失敗する
+# (maestro-e2e run 40568779876 の失敗時の画面)。最大 60 秒の間、ダイアログが出ていれば許可して待ち直す
+- repeat:
+    times: 6
+    while:
+      notVisible: "ヤーズフレックスの方ですか？"
+    commands:
+      - runFlow:
+          when:
+            visible: "許可"
+          commands:
+            - tapOn: "許可"
+            - waitForAnimationToEnd
+      - extendedWaitUntil:
+          visible: "ヤーズフレックスの方ですか？"
+          timeout: 10000
+          optional: true
+- assertVisible: "ヤーズフレックスの方ですか？"
 - tapOn: "いいえ"
 - waitForAnimationToEnd
 
 # Screen 1 (1/3): ピルシートタイプ選択
-# まず「ピルの種類を選択」ボタンをタップしてモーダルを開く
-# CI の Simulator では view hierarchy の取得が 36 秒止まることがあり、表示済みのボタンを tapOn の待ち時間内に
-# 見つけられなかった (maestro-e2e run 40204632533) ため、表示を待ってからタップする
+# まず「ピルの種類を選択」ボタンをタップしてモーダルを開く。
+# CI の Simulator では「いいえ」からの画面遷移や view hierarchy の取得が tapOn の待ち時間を超えることがある
+# (maestro-e2e run 40598328685 で Element not found になった時の画面には 1/3 のボタンが写っていた) ため表示を待つ。
+# 60 秒は、maestro-e2e run 40204632533 で view hierarchy の取得が 36 秒止まったことに余裕を持たせた値
 - extendedWaitUntil:
     visible: "ピルの種類を選択"
     timeout: 60000

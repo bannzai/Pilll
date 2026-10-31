@@ -20,20 +20,24 @@ class AddPillSheetTypeEmpty extends HookConsumerWidget {
           const SizedBox(height: 80),
           SvgPicture.asset('images/empty_pill_sheet_type.svg'),
           const SizedBox(height: 24),
-          SizedBox(
-            width: 180,
-            child: PrimaryButton(
-              onPressed: () async {
-                analytics.logEvent(name: 'empty_pill_sheet_type');
-                showSettingPillSheetGroupSelectPillSheetTypePage(
-                  context: context,
-                  pillSheetType: null,
-                  onSelect: (pillSheetType) {
-                    onSelect(pillSheetType);
-                  },
-                );
-              },
-              text: L.selectPillType,
+          // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+          Semantics(
+            identifier: 'add_pill_sheet_type_empty_button',
+            child: SizedBox(
+              width: 180,
+              child: PrimaryButton(
+                onPressed: () async {
+                  analytics.logEvent(name: 'empty_pill_sheet_type');
+                  showSettingPillSheetGroupSelectPillSheetTypePage(
+                    context: context,
+                    pillSheetType: null,
+                    onSelect: (pillSheetType) {
+                      onSelect(pillSheetType);
+                    },
+                  );
+                },
+                text: L.selectPillType,
+              ),
             ),
           ),
         ],
