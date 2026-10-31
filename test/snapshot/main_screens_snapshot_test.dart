@@ -110,19 +110,6 @@ Future<List<Override>> _overrides() async {
     pillSheets: [pillSheet],
     createdAt: snapshotToday.subtract(const Duration(days: 10)),
   );
-  const setting = Setting(
-    pillNumberForFromMenstruation: 24,
-    durationMenstruation: 4,
-    isOnReminder: true,
-    reminderTimes: [ReminderTime(hour: 21, minute: 0)],
-    timezoneDatabaseName: 'Asia/Tokyo',
-  );
-  final menstruation = Menstruation(
-    beginDate: DateTime(2026, 10, 3),
-    endDate: DateTime(2026, 10, 7),
-    createdAt: DateTime(2026, 10, 3),
-  );
-  final user = User(isPremium: true, beginTrialDate: DateTime(2025, 1, 1), trialDeadlineDate: DateTime(2025, 1, 31));
   return [
     // 記録・服用のボタン等が操作用の provider を通して読む。描画では Firestore に書き込まないため Mock にする
     databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
@@ -130,10 +117,24 @@ Future<List<Override>> _overrides() async {
     sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
     remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
     isLinkedProvider.overrideWithValue(true),
-    userProvider.overrideWith((ref) => Stream.value(user)),
-    settingProvider.overrideWith((ref) => Stream.value(setting)),
+    userProvider.overrideWith(
+      (ref) => Stream.value(User(isPremium: true, beginTrialDate: DateTime(2025, 1, 1), trialDeadlineDate: DateTime(2025, 1, 31))),
+    ),
+    settingProvider.overrideWith(
+      (ref) => Stream.value(
+        const Setting(
+          pillNumberForFromMenstruation: 24,
+          durationMenstruation: 4,
+          isOnReminder: true,
+          reminderTimes: [ReminderTime(hour: 21, minute: 0)],
+          timezoneDatabaseName: 'Asia/Tokyo',
+        ),
+      ),
+    ),
     latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-    allMenstruationProvider.overrideWith((ref) => Stream.value([menstruation])),
+    allMenstruationProvider.overrideWith(
+      (ref) => Stream.value([Menstruation(beginDate: DateTime(2026, 10, 3), endDate: DateTime(2026, 10, 7), createdAt: DateTime(2026, 10, 3))]),
+    ),
     isHealthDataAvailableProvider.overrideWith((ref) => Future.value(false)),
     diaryForTodayProvider.overrideWith((ref) => Stream.value(null)),
     diariesForMonthProvider.overrideWith((ref, month) => Stream.value(<Diary>[])),

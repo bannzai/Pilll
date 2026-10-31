@@ -31,10 +31,10 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
         with:
           flutter-version: '3.47.8'
       - name: Prepare
@@ -47,18 +47,18 @@ jobs:
       - name: Compare with baselines
         id: compare
         if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.update) }}
-        run: flutter test --tags snapshot
+        run: flutter test --tags snapshot --run-skipped
       - name: Record baselines
         id: record
         if: ${{ always() && steps.fonts.outcome == 'success' && steps.compare.outcome != 'success' }}
-        run: flutter test --tags snapshot --update-goldens
-      - uses: actions/upload-artifact@v7
+        run: flutter test --tags snapshot --run-skipped --update-goldens
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ always() && steps.record.outcome == 'success' }}
         with:
           name: snapshot-baselines
           path: ${{ env.SNAPSHOT_BASELINE_DIR }}
           if-no-files-found: error
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ failure() }}
         with:
           name: snapshot-failures

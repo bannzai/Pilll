@@ -50,8 +50,7 @@ Future<void> setUpSnapshotEnvironment() async {
 
 /// pubspec と SDK が同梱するフォント (Material Icons 等) を FontManifest.json から読み込む。
 Future<void> _loadBundledFonts() async {
-  final manifest = json.decode(await rootBundle.loadString('FontManifest.json')) as List<dynamic>;
-  for (final entry in manifest.cast<Map<String, dynamic>>()) {
+  for (final entry in (json.decode(await rootBundle.loadString('FontManifest.json')) as List<dynamic>).cast<Map<String, dynamic>>()) {
     final loader = FontLoader(entry['family'] as String);
     for (final font in (entry['fonts'] as List<dynamic>).cast<Map<String, dynamic>>()) {
       loader.addFont(rootBundle.load(font['asset'] as String));
@@ -81,8 +80,7 @@ Future<void> _loadDownloadedFonts() async {
     FontFamily.roboto: files['NotoSans']!,
   };
   for (final entry in families.entries) {
-    final bytes = await entry.value.readAsBytes();
-    await (FontLoader(entry.key)..addFont(Future.value(ByteData.view(Uint8List.fromList(bytes).buffer)))).load();
+    await (FontLoader(entry.key)..addFont(Future.value(ByteData.view(Uint8List.fromList(await entry.value.readAsBytes()).buffer)))).load();
   }
 }
 
@@ -124,7 +122,8 @@ Future<void> expectSnapshot(WidgetTester tester, {required String goldenName, re
   debugDisableShadows = false;
   try {
     await tester.pumpWidget(widget);
-    // Stream の provider の最初の値と、画像・SVG の読み込みを描画に反映させる
+    // Stream の provider の最初の値と、画像・SVG の読み込みを描画に反映させる。100ms の実時間は SVG の asset の読み込みが終わる長さ、
+    // 1 秒の仮想時間は画面の出現のアニメーション (300ms 前後) が終わる長さとして選んだ (手元と CI の 10 画面で描画が揃うことを確かめた)
     await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 100)));
     await tester.pump();
     await tester.pump(const Duration(seconds: 1));
