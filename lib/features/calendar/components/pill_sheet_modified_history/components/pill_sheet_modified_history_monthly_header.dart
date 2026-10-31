@@ -14,7 +14,7 @@ class PillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      DateTimeFormatter.jaMonth(dateTimeOfMonth),
+      DateTimeFormatter.abbreviatedMonth(dateTimeOfMonth),
       style: const TextStyle(
         color: TextColor.main,
         fontFamily: FontFamily.japanese,

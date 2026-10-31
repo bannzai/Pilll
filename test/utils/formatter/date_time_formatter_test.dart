@@ -49,18 +49,32 @@ void main() {
     });
   });
 
-  group('#jaMonth', () {
-    test('Intl.defaultLocale が ja の時は日本語の書式になる', () {
+  group('#abbreviatedMonth', () {
+    test('Intl.defaultLocale が ja の時は「10月」のように月を表す単位が付く', () {
       useDefaultLocale('ja');
-      expect(DateTimeFormatter.jaMonth(date), '10月');
+      expect(DateTimeFormatter.abbreviatedMonth(date), '10月');
     });
-    test('Intl.defaultLocale が en の時は英語の書式になる', () {
+    test('Intl.defaultLocale が en の時は数字だけではなく月名の省略形になる', () {
       useDefaultLocale('en');
-      expect(DateTimeFormatter.jaMonth(date), '10');
+      expect(DateTimeFormatter.abbreviatedMonth(date), 'Oct');
     });
-    test('Intl.defaultLocale が de の時はドイツ語の書式になる', () {
+    test('Intl.defaultLocale が de の時は数字だけではなく月名の省略形になる', () {
       useDefaultLocale('de');
-      expect(DateTimeFormatter.jaMonth(date), '10');
+      expect(DateTimeFormatter.abbreviatedMonth(date), 'Okt');
+    });
+    test('月名の長い 9 月でも省略形になる', () {
+      useDefaultLocale('de');
+      expect(DateTimeFormatter.abbreviatedMonth(DateTime(2025, 9, 30)), 'Sep');
+      useDefaultLocale('fr');
+      expect(
+          DateTimeFormatter.abbreviatedMonth(DateTime(2025, 9, 30)), 'sept.');
+    });
+    test('年をまたぐ 12 月と 1 月も月名になる', () {
+      useDefaultLocale('en');
+      expect(DateTimeFormatter.abbreviatedMonth(DateTime(2025, 12, 31)), 'Dec');
+      expect(DateTimeFormatter.abbreviatedMonth(DateTime(2026, 1, 1)), 'Jan');
+      useDefaultLocale('ja');
+      expect(DateTimeFormatter.abbreviatedMonth(DateTime(2026, 1, 1)), '1月');
     });
   });
 
@@ -202,7 +216,7 @@ void main() {
             reason: languageCode);
         expect(DateTimeFormatter.yearAndMonthAndDay(date), isNotEmpty,
             reason: languageCode);
-        expect(DateTimeFormatter.jaMonth(date), isNotEmpty,
+        expect(DateTimeFormatter.abbreviatedMonth(date), isNotEmpty,
             reason: languageCode);
         expect(DateTimeFormatter.monthAndWeekday(date), isNotEmpty,
             reason: languageCode);

@@ -19,8 +19,9 @@ class DateTimeFormatter {
     return DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY).format(dateTime);
   }
 
-  static String jaMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH).format(dateTime);
+  /// 月の見出し用に、表示言語に応じた省略形の月名を返す (ja: 10月, en: Oct, de: Okt)。
+  static String abbreviatedMonth(DateTime dateTime) {
+    return DateFormat(DateFormat.ABBR_MONTH).format(dateTime);
   }
 
   /// 曜日付きの月日を [Intl.defaultLocale] (画面の文言と同じ言語) の書式で返す。
