@@ -152,7 +152,7 @@
   "remainingDaysAllFeatures": "Du chasch no {diff} Täg alli Funktione bruuche",
   "todayIsTaking": "💊 Hüt isch d Pille draa",
   "todayPillToTake": "💊 D Pille für hüt",
-  "formattedPillNumber": "{number} (Pille)",
+  "formattedPillNumber": "Nr. {number}",
   "dayNumber": ". Tag",
   "recordedMenstruationStartDate": "Dini Periode isch ab em {DateTimeFormatterMonthAndDay} iitreit worde",
   "menstruationStartDate": "Aafangsdatum vo de Periode",

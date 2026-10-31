@@ -65,6 +65,13 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - tapOn:
     id: "${LANG}"
 - waitForAnimationToEnd
+# 一覧の隣の言語を誤タップしても撮影が成功扱いになった (zh を選んで vi の画面が撮れた。translation-screenshots run 41014089450。bannzai/Pilll#2059) ため、
+# 設定に戻った「表示言語」の行で文言の言語が LANG になっていることを確かめる。違えばここで落ち、capture_langs.sh がこの言語を撮り直す。
+# timeout 10000: 言語の保存と画面の描画し直しを待つだけで、読み込みが無いため (ボトムシートと同じ値)
+- extendedWaitUntil:
+    visible:
+      id: "debug_app_language_current_${LANG}"
+    timeout: 10000
 
 # 再起動しても LANG のまま表示されることを、以降の撮影で確かめる
 - stopApp

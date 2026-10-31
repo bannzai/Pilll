@@ -152,7 +152,7 @@
   "remainingDaysAllFeatures": "Jy kan al die funksies nog {diff} dae lank gebruik",
   "todayIsTaking": "💊 Vandag is jou pildag",
   "todayPillToTake": "💊 Vandag se pil",
-  "formattedPillNumber": "{number} (pil)",
+  "formattedPillNumber": "Nr. {number}",
   "dayNumber": " dag",
   "recordedMenstruationStartDate": "Die begin van jou maandstonde is vanaf {DateTimeFormatterMonthAndDay} aangeteken",
   "menstruationStartDate": "Begindatum van jou maandstonde",
