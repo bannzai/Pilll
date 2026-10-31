@@ -346,6 +346,8 @@
   "launchError": "აპის გახსნისას შეცდომა მოხდა.\n{ErrorMessagesConnection}\n\nდეტალები:",
   "exampleRestDurationDate": "მაგალითად, თუ 1/12-დან 3 დღით აირჩევთ მიღების პაუზას",
   "exampleRestDurationNumber": "მაგალითად, თუ მე-18 აბიდან 3 დღით აირჩევთ მიღების პაუზას",
+  "exampleRestDurationNumberBalloon": "მიღების პაუზა\n3 დღე",
+  "exampleRestDurationDateBalloon": "მიღების პაუზის პერიოდი\n12–14 იან",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "ამჟამად გამოყენებული აბების ბლისტერი ვერ მოიძებნა",
   "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",

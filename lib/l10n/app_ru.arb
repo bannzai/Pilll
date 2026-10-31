@@ -346,6 +346,8 @@
   "launchError": "При запуске приложения произошла ошибка.\n{ErrorMessagesConnection}\n\nПодробности:",
   "exampleRestDurationDate": "Например, если вы выбрали приостановку приёма на 3 дня с 1/12",
   "exampleRestDurationNumber": "Например, если вы выбрали приостановку приёма на 3 дня, начиная с таблетки № 18",
+  "exampleRestDurationNumberBalloon": "приостановка приёма\n3 дня",
+  "exampleRestDurationDateBalloon": "Период приостановки\n12–14 янв.",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не удалось найти блистер, который вы сейчас используете",
   "doNotRevertTakePillInPausePeriod": "Во время перерыва нельзя отменить запись о приёме таблетки",

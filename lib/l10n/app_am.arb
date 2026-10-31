@@ -346,6 +346,8 @@
   "launchError": "መተግበሪያው ሲከፈት ስህተት ተፈጥሯል።\n{ErrorMessagesConnection}\n\nዝርዝሮች፦",
   "exampleRestDurationDate": "ለምሳሌ፣ ከ1/12 ጀምሮ ለ3 ቀናት ለጊዜው ማቆም ከመረጡ",
   "exampleRestDurationNumber": "ለምሳሌ፣ ከ18ኛው ክኒን ጀምሮ ለ3 ቀናት ለጊዜው ማቆም ከመረጡ",
+  "exampleRestDurationNumberBalloon": "ለጊዜው ማቆም\nለ3 ቀናት",
+  "exampleRestDurationDateBalloon": "ለጊዜው ማቆም የሚቆይበት ጊዜ\nጃን 12–14",
   "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
   "doNotRevertTakePillInPausePeriod": "በክኒን እረፍት ጊዜ የክኒን መውሰድን መቀልበስ አይቻልም",

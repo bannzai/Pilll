@@ -346,6 +346,8 @@
   "launchError": "Kuvele iphutha ngesikhathi kuvulwa uhlelo lokusebenza.\n{ErrorMessagesConnection}\n\nImininingwane:",
   "exampleRestDurationDate": "Isibonelo, uma ukhetha ukumisa okwesikhashana ukuphuza amaphilisi izinsuku ezingu-3 kusukela ngo-1/12",
   "exampleRestDurationNumber": "Isibonelo, uma ukhetha ukumisa okwesikhashana ukuphuza amaphilisi izinsuku ezingu-3 kusukela ephilisini lesi-18",
+  "exampleRestDurationNumberBalloon": "ukumisa okwesikhashana\nizinsuku ezi-3",
+  "exampleRestDurationDateBalloon": "Isikhathi sokumisa okwesikhashana\n12–14 Jan",
   "withNumber": "Inombolo {number}",
   "currentPillSheetNotFound": "Ishidi lamaphilisi elisetshenziswa manje alitholakalanga",
   "doNotRevertTakePillInPausePeriod": "Ngesikhathi sekhefu, akunakwenzeka ukuhoxisa irekhodi lokuphuza iphilisi",

@@ -346,6 +346,8 @@
   "launchError": "ଆପ୍‌ ଖୋଲିବା ସମୟରେ ଏକ ତ୍ରୁଟି ଘଟିଛି।\n{ErrorMessagesConnection}\n\nବିବରଣୀ:",
   "exampleRestDurationDate": "ଉଦାହରଣ ସ୍ୱରୂପ, 1/12ରୁ 3 ଦିନ ପାଇଁ ସେବନ ବିରତି ନେଲେ",
   "exampleRestDurationNumber": "ଉଦାହରଣ ସ୍ୱରୂପ, 18 ନମ୍ବର ବଟିକାରୁ 3 ଦିନ ପାଇଁ ସେବନ ବିରତି ନେଲେ",
+  "exampleRestDurationNumberBalloon": "ସେବନ ବିରତି\n3 ଦିନ",
+  "exampleRestDurationDateBalloon": "ସେବନ ବିରତିର ଅବଧି\n୧୨–୧୪ ଜାନୁଆରୀ",
   "withNumber": "ନଂ {number}",
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନ ବ୍ୟବହାର ହେଉଥିବା ବଟିକା ସିଟ ମିଳିଲା ନାହିଁ",
   "doNotRevertTakePillInPausePeriod": "ବିରତି ସମୟରେ ବଟିକା ନେବାର ରେକର୍ଡ ବାତିଲ କରାଯାଇପାରିବ ନାହିଁ",

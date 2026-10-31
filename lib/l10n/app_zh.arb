@@ -346,6 +346,8 @@
   "launchError": "打开应用时出现了错误。\n{ErrorMessagesConnection}\n\n详情：",
   "exampleRestDurationDate": "例如，从 1/12 起暂停服药 3 天",
   "exampleRestDurationNumber": "例如，从第 18 片开始暂停服药 3 天",
+  "exampleRestDurationNumberBalloon": "暂停服药期间\n3天",
+  "exampleRestDurationDateBalloon": "暂停服药期间\n1/12~1/14",
   "withNumber": "{number}号",
   "currentPillSheetNotFound": "未找到当前使用的药板",
   "doNotRevertTakePillInPausePeriod": "停药期间无法撤销服药记录",

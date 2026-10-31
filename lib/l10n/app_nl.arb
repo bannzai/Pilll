@@ -346,6 +346,8 @@
   "launchError": "Er is een fout opgetreden bij het openen van de app.\n{ErrorMessagesConnection}\n\nDetails:",
   "exampleRestDurationDate": "Bijvoorbeeld als je vanaf 1/12 een innamepauze van 3 dagen neemt",
   "exampleRestDurationNumber": "Bijvoorbeeld als je vanaf pil 18 een innamepauze van 3 dagen neemt",
+  "exampleRestDurationNumberBalloon": "innamepauze\n3 dagen",
+  "exampleRestDurationDateBalloon": "Periode van innamepauze\n12–14 jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
   "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",

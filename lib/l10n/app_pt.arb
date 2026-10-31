@@ -346,6 +346,8 @@
   "launchError": "Ocorreu um erro ao abrir o aplicativo.\n{ErrorMessagesConnection}\n\nDetalhes:",
   "exampleRestDurationDate": "Por exemplo, se você fizer uma interrupção de 3 dias a partir de 1/12",
   "exampleRestDurationNumber": "Por exemplo, se você fizer uma interrupção de 3 dias a partir do número da pílula 18",
+  "exampleRestDurationNumberBalloon": "Interrupção\n3 dias",
+  "exampleRestDurationDateBalloon": "Interrupção\n12/1–14/1",
   "withNumber": "Nº {number}",
   "currentPillSheetNotFound": "Não foi encontrada a cartela que você está usando agora",
   "doNotRevertTakePillInPausePeriod": "Durante a pausa, não é possível desfazer o registro de que a pílula foi tomada",
