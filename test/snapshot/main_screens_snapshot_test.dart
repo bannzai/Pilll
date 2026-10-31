@@ -98,17 +98,13 @@ void main() {
 /// プレミアムのユーザーにして、無料プランの案内・広告・ペイウォールの重ね表示を出さない (画面そのものの見た目を比べるため)。
 Future<List<Override>> _overrides() async {
   SharedPreferences.setMockInitialValues({});
+  // overrideWith の引数は同期の関数で await できないため、先に取得しておく
   final sharedPreferences = await SharedPreferences.getInstance();
   final pillSheet = PillSheet.create(
     PillSheetType.pillsheet_28_7,
     beginDate: snapshotToday.subtract(const Duration(days: 10)),
     lastTakenDate: snapshotToday.subtract(const Duration(days: 1)),
     pillTakenCount: 1,
-  );
-  final pillSheetGroup = PillSheetGroup(
-    pillSheetIDs: [pillSheet.id!],
-    pillSheets: [pillSheet],
-    createdAt: snapshotToday.subtract(const Duration(days: 10)),
   );
   return [
     // 記録・服用のボタン等が操作用の provider を通して読む。描画では Firestore に書き込まないため Mock にする
@@ -131,7 +127,15 @@ Future<List<Override>> _overrides() async {
         ),
       ),
     ),
-    latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+    latestPillSheetGroupProvider.overrideWith(
+      (ref) => Stream.value(
+        PillSheetGroup(
+          pillSheetIDs: [pillSheet.id!],
+          pillSheets: [pillSheet],
+          createdAt: snapshotToday.subtract(const Duration(days: 10)),
+        ),
+      ),
+    ),
     allMenstruationProvider.overrideWith(
       (ref) => Stream.value([Menstruation(beginDate: DateTime(2026, 10, 3), endDate: DateTime(2026, 10, 7), createdAt: DateTime(2026, 10, 3))]),
     ),
