@@ -50,10 +50,10 @@ jobs:
         run: flutter test --tags snapshot --run-skipped
       - name: Record baselines
         id: record
-        if: ${{ always() && steps.fonts.outcome == 'success' && steps.compare.outcome != 'success' }}
+        if: ${{ !cancelled() && steps.fonts.outcome == 'success' && steps.compare.outcome != 'success' }}
         run: flutter test --tags snapshot --run-skipped --update-goldens
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
-        if: ${{ always() && steps.record.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.record.outcome == 'success' }}
         with:
           name: snapshot-baselines
           path: ${{ env.SNAPSHOT_BASELINE_DIR }}
