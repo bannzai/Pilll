@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -19,6 +20,148 @@ void main() {
     });
     test('対象言語に無い言語コードが保存されている場合は ja', () {
       expect(debugAppLocale(savedLanguageCode: 'xx'), const Locale('ja'));
+    });
+  });
+
+  group('#deviceAppLocale', () {
+    group('優先言語の一覧がある場合', () {
+      test('en_US は en', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('en', 'US')],
+              deviceLocaleName: 'en_US'),
+          const Locale('en'),
+        );
+      });
+      test('第一優先がサポート外の xx で第二優先が ja の場合は ja', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+              deviceLocaleName: 'xx_XX'),
+          const Locale('ja'),
+        );
+      });
+      test('Platform.localeName と食い違う場合は優先言語の一覧を使う', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('de', 'DE')],
+              deviceLocaleName: 'ja_JP'),
+          const Locale('de'),
+        );
+      });
+    });
+
+    group('優先言語の一覧が空の場合は Platform.localeName で補う', () {
+      test('en_US は en', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'en_US'),
+            const Locale('en'));
+      });
+      test('ja_JP は ja', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ja_JP'),
+            const Locale('ja'));
+      });
+      test('文字体系を含む zh_Hans_CN は zh', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'zh_Hans_CN'),
+            const Locale('zh'));
+      });
+      test('区切りがハイフンの de-DE は de', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'de-DE'),
+            const Locale('de'));
+      });
+      test('文字コードの付いた fr_FR.UTF-8 は fr', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'fr_FR.UTF-8'),
+            const Locale('fr'));
+      });
+      test('修飾子の付いた es_ES@euro は es', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'es_ES@euro'),
+            const Locale('es'));
+      });
+      test('言語コードだけの ko は ko', () {
+        expect(deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ko'),
+            const Locale('ko'));
+      });
+    });
+
+    /// 端末の優先言語を [deviceLocales] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
+    Future<Locale> foregroundAppLocale(WidgetTester tester,
+        {required List<Locale> deviceLocales}) async {
+      tester.platformDispatcher.localesTestValue = deviceLocales;
+      addTearDown(tester.platformDispatcher.clearLocalesTestValue);
+      late Locale resolvedLocale;
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Builder(builder: (context) {
+            resolvedLocale = Localizations.localeOf(context);
+            return const SizedBox.shrink();
+          }),
+        ),
+      );
+      return resolvedLocale;
+    }
+
+    /// [deviceLocales] の端末で、[deviceAppLocale] と前面の UI が同じ言語になることを確かめる
+    Future<void> expectSameAsForeground(WidgetTester tester,
+        {required List<Locale> deviceLocales,
+        required String deviceLocaleName}) async {
+      expect(
+        deviceAppLocale(
+            deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName),
+        await foregroundAppLocale(tester, deviceLocales: deviceLocales),
+      );
+    }
+
+    testWidgets('en_US の端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
+    });
+    testWidgets('zh_Hans_CN の端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(
+        tester,
+        deviceLocales: const [
+          Locale.fromSubtags(
+              languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN')
+        ],
+        deviceLocaleName: 'zh_Hans_CN',
+      );
+    });
+    testWidgets('第一優先がサポート外の xx で第二優先が ja の端末では前面の UI と同じ言語になる',
+        (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+          deviceLocaleName: 'xx_XX');
+    });
+    testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX')], deviceLocaleName: 'xx_XX');
+    });
+  });
+
+  group('#applyDeviceAppLocale', () {
+    test('en_US の端末では L と Intl.defaultLocale が en になる', () {
+      // L と Intl.defaultLocale はグローバルなため、ほかのテストに影響しないよう元に戻す
+      final previousL = L;
+      final previousDefaultLocale = Intl.defaultLocale;
+      addTearDown(() {
+        L = previousL;
+        Intl.defaultLocale = previousDefaultLocale;
+      });
+
+      applyDeviceAppLocale(
+          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
+
+      expect(L.localeName, 'en');
+      expect(Intl.defaultLocale, 'en');
     });
   });
 
