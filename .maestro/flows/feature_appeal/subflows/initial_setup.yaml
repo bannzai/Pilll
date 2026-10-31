@@ -3,6 +3,15 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # 初期設定を自動で完了し、ホーム画面に到達するサブフロー。
 # clearState: true で呼ばれる前提。
 
+# CI の Simulator ではスクリーンショットが 30 秒以上止まることがあり (クリーンインストール直後の起動中に多い)、
+# XCTest driver が "Failed to get screenshot: Timed out while requesting screenshot" で落ちて以降のコマンドが接続エラーになる
+# (maestro-e2e run 40165674238)。waitForAnimationToEnd や tapOn はスクリーンショットを撮るため、
+# 呼び出し元は launchApp の直後に waitForAnimationToEnd を置かず、ここで view hierarchy だけを見る待ちで
+# 通知許可ダイアログか最初の画面が出るまで待つ。120 秒は、同 run で起動から最初の画面が出るまでにかかった約 50 秒に余裕を持たせた値
+- extendedWaitUntil:
+    visible: "許可|ヤーズフレックスの方ですか？"
+    timeout: 120000
+
 # 通知許可ダイアログは起動の数秒後に出ることがあり、出ている間は下の画面を Maestro が検出できない
 # (maestro-e2e run 40066823667 では「ヤーズフレックスの方ですか？」の上に残って待ちが失敗した)。
 # yaz_flex/initial_setting_yaz_flex.yaml と同じく、最大 15 秒待ってから出ていれば許可をタップする
@@ -10,9 +19,14 @@ appId: com.mizuki.Ohashi.Pilll.dev
     visible: "許可"
     timeout: 15000
     optional: true
-- runFlow:
-    when:
+# CI では tapOn が完了扱いになってもダイアログが閉じないことがある
+# (maestro-e2e run 40212472518 で失敗時の画面にダイアログが残っていた) ため、残っている間はタップし直す。
+# 3 回は実測から決めた値ではなく、タップが効かない状態が続いた時に回し続けないための上限 (同 run ではタップを 1 回しか試していない)。
+# launchApp の permissions (notifications: allow) は Maestro 2.6.0 が通知の付与を行わず (同 run の maestro.log)、ダイアログは防げない
+- repeat:
+    while:
       visible: "許可"
+    times: 3
     commands:
       - tapOn: "許可"
       - waitForAnimationToEnd
@@ -42,11 +56,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
 
 # Screen 1 (1/3): ピルシートタイプ選択
 # まず「ピルの種類を選択」ボタンをタップしてモーダルを開く。
-# CI の Simulator では「いいえ」からの画面遷移が tapOn の待ち時間を超えることがある
-# (maestro-e2e run 40598328685 で Element not found になった時の画面には 1/3 のボタンが写っていた) ため表示を待つ
+# CI の Simulator では「いいえ」からの画面遷移や view hierarchy の取得が tapOn の待ち時間を超えることがある
+# (maestro-e2e run 40598328685 で Element not found になった時の画面には 1/3 のボタンが写っていた) ため表示を待つ。
+# 60 秒は、maestro-e2e run 40204632533 で view hierarchy の取得が 36 秒止まったことに余裕を持たせた値
 - extendedWaitUntil:
     visible: "ピルの種類を選択"
-    timeout: 30000
+    timeout: 60000
 - tapOn: "ピルの種類を選択"
 - waitForAnimationToEnd
 # モーダル内の最初のセル (21錠＋7日休薬) を座標タップ

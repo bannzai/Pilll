@@ -8,8 +8,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
     clearKeychain: true
     permissions:
       notifications: allow
-- waitForAnimationToEnd
-# 初期設定サブフローを実行
+# 初期設定サブフローを実行 (起動直後に waitForAnimationToEnd を置かない理由はサブフローの先頭に書いている)
 - runFlow: subflows/initial_setup.yaml
 # ホーム画面到達後、データ読み込みを待つ
 - waitForAnimationToEnd
