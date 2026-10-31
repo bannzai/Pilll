@@ -242,6 +242,7 @@
   "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Можете да промените текст обавештења о неузетој пилули",
+  "defaultMissedTakenMessage": "Можда сте заборавили да узмете пилулу?\nЗа неколико дана недостаје евиденција узимања 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Можете да промените почетак обавештења",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

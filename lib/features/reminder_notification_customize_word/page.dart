@@ -30,7 +30,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       setting.reminderNotificationCustomization.dailyTakenMessage,
     );
     final missedTakenMessage = useState(
-      setting.reminderNotificationCustomization.missedTakenMessage,
+      setting.reminderNotificationCustomization.missedTakenMessageForDisplay,
     );
     final wordTextFieldController = useTextEditingController(
       text: setting.reminderNotificationCustomization.word,
@@ -39,7 +39,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       text: setting.reminderNotificationCustomization.dailyTakenMessage,
     );
     final missedTakenMessageTextFieldController = useTextEditingController(
-      text: setting.reminderNotificationCustomization.missedTakenMessage,
+      text: setting.reminderNotificationCustomization.missedTakenMessageForDisplay,
     );
     final wordFocusNode = useFocusNode();
     final dailyTakenMessageFocusNode = useFocusNode();
@@ -104,7 +104,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         analytics.logEvent(name: 'submit_rnc_missed_message');
 
         var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage.value);
+        // 表示したロケールの既定文言のまま完了した時は未編集なので、保存値 (日本語の既定値) を書き換えない
+        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(
+          missedTakenMessage: missedTakenMessage.value == reminderNotificationCustomization.missedTakenMessageForDisplay
+              ? reminderNotificationCustomization.missedTakenMessage
+              : missedTakenMessage.value,
+        );
 
         setSetting(
           setting.copyWith(

@@ -242,6 +242,7 @@
   "completed": "Hotovo",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Můžete změnit text upozornění na neužitou pilulku",
+  "defaultMissedTakenMessage": "Nezapomněli jste si vzít pilulku?\nZa několik dní chybí záznam užití 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Můžete změnit začátek oznámení",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

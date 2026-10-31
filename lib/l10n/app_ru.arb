@@ -242,6 +242,7 @@
   "completed": "Готово",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Вы можете изменить текст уведомления о непринятой таблетке",
+  "defaultMissedTakenMessage": "Возможно, вы забыли принять таблетку?\nЗа несколько дней журнал приёма таблеток пуст 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Вы можете изменить начало уведомления",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

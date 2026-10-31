@@ -242,6 +242,7 @@
   "completed": "Gereed",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Je kunt de meldingstekst voor een niet ingenomen pil aanpassen",
+  "defaultMissedTakenMessage": "Ben je misschien vergeten je pil in te nemen?\nVoor meerdere dagen ontbreekt een innameregistratie 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Je kunt het begin van de melding aanpassen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

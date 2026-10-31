@@ -242,6 +242,7 @@
   "completed": "সম্পন্ন",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "বৰি খাবলৈ পাহৰিলে অহা জাননীৰ লিখনি সলাব পাৰে",
+  "defaultMissedTakenMessage": "আপুনি ঔষধ খাবলৈ পাহৰিছে নেকি?\nকেইবাদিনো ঔষধ সেৱনৰ ৰেকৰ্ড নাই 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "আপুনি জাননীৰ আৰম্ভণিৰ লিখনি সলনি কৰিব পাৰে",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

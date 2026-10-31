@@ -242,6 +242,7 @@
   "completed": "مکمل",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "گولی نہ لینے پر آنے والی اطلاع کا متن آپ بدل سکتی ہیں",
+  "defaultMissedTakenMessage": "کیا آپ گولی لینا بھول گئی ہیں؟\nکئی دنوں کا گولی لینے کا ریکارڈ موجود نہیں 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "آپ اطلاع کے آغاز کا متن بدل سکتی ہیں",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

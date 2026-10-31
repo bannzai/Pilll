@@ -242,6 +242,7 @@
   "completed": "រួចរាល់",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "អ្នកអាចកែអត្ថបទជូនដំណឹងពេលភ្លេចលេបថ្នាំគ្រាប់",
+  "defaultMissedTakenMessage": "តើអ្នកប្រហែលជាភ្លេចលេបថ្នាំមែនទេ?\nមានច្រើនថ្ងៃដែលមិនមានកំណត់ត្រាការលេបថ្នាំ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "អ្នកអាចប្តូរអត្ថបទដើមនៃការជូនដំណឹង",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

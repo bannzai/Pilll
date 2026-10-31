@@ -242,6 +242,7 @@
   "completed": "ပြီးပါပြီ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ဆေးလုံးသောက်ရန် မေ့သွားသည့်အခါ ပြမည့် အသိပေးစာကို ပြောင်းနိုင်ပါတယ်",
+  "defaultMissedTakenMessage": "ဆေးသောက်ဖို့ မေ့နေပါသလား?\nရက်အတော်များများအတွက် ဆေးသောက်မှတ်တမ်း မရှိသေးပါ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "အသိပေးချက်၏ အစပိုင်းစာသားကို ပြောင်းနိုင်ပါတယ်",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -242,6 +242,7 @@
   "completed": "पूर्ण",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "गोळी घ्यायची राहिल्यास येणाऱ्या सूचनेचा मजकूर तुम्ही बदलू शकता",
+  "defaultMissedTakenMessage": "तुम्ही गोळी घ्यायला विसरलात का?\nअनेक दिवसांची सेवन नोंद नाही 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "तुम्ही सूचनेच्या सुरुवातीचा मजकूर बदलू शकता",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

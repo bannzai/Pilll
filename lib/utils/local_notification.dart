@@ -525,7 +525,7 @@ class RegisterReminderLocalNotification {
             // 最後に服用完了した日付が数日前の場合は常にmissedTakenMessage
             // v2では部分服用(2回中1回)を服用済み扱いにしないよう、服用完了ピル番号で判定する
             if (activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber > 1) {
-              return setting.reminderNotificationCustomization.missedTakenMessage;
+              return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
             }
             // 本日分の服用記録がない場合で今日のループ(pillDayOffset==0)の時
             if (pillDayOffset == 0 && !todayPillAllTaken) {
@@ -540,7 +540,7 @@ class RegisterReminderLocalNotification {
             if (activePillSheet.pillSheetHasRestOrFakeDuration && isOverActivePillSheet && pillNumberInPillSheet == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
-            return setting.reminderNotificationCustomization.missedTakenMessage;
+            return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
           }();
 
           futures.add(

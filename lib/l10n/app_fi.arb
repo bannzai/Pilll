@@ -242,6 +242,7 @@
   "completed": "Valmis",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Voit muuttaa ottamatta jääneen pillerin ilmoitustekstiä",
+  "defaultMissedTakenMessage": "Unohtuiko pilleri ottaa?\nUsealta päivältä puuttuu pilleriloki 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Voit muuttaa ilmoituksen alkuosaa",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

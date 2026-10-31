@@ -242,6 +242,7 @@
   "completed": "Listo",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Puedes cambiar el texto de la notificación si no has tomado la píldora",
+  "defaultMissedTakenMessage": "¿Se te olvidó tomar la píldora?\nHay varios días sin registro de toma🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Puedes cambiar el inicio de la notificación",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -242,6 +242,7 @@
   "completed": "सम्पन्न",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "चक्की खान छुट्दा आउने सूचनाको सन्देश तपाईं बदल्न सक्नुहुन्छ",
+  "defaultMissedTakenMessage": "तपाईंले चक्की लिन बिर्सनुभएको हो कि?\nधेरै दिनको सेवन रेकर्ड छैन 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "तपाईं सूचनाको सुरुको पाठ बदल्न सक्नुहुन्छ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

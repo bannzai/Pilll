@@ -242,6 +242,7 @@
   "completed": "ਹੋ ਗਿਆ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ਗੋਲੀ ਲੈਣੀ ਰਹਿ ਜਾਣ ’ਤੇ ਆਉਣ ਵਾਲੀ ਸੂਚਨਾ ਦਾ ਸੁਨੇਹਾ ਤੁਸੀਂ ਬਦਲ ਸਕਦੇ ਹੋ",
+  "defaultMissedTakenMessage": "ਕੀ ਤੁਸੀਂ ਗੋਲੀ ਲੈਣੀ ਭੁੱਲ ਗਏ ਹੋ?\nਕਈ ਦਿਨਾਂ ਦਾ ਸੇਵਨ ਰਿਕਾਰਡ ਨਹੀਂ ਹੈ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ਤੁਸੀਂ ਸੂਚਨਾ ਦੀ ਸ਼ੁਰੂਆਤ ਦਾ ਲਿਖਤ ਬਦਲ ਸਕਦੇ ਹੋ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

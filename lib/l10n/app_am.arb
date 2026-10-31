@@ -242,6 +242,7 @@
   "completed": "ተጠናቋል",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ክኒን ሲረሳ የሚታየውን የማሳወቂያ ጽሑፍ መቀየር ይችላሉ",
+  "defaultMissedTakenMessage": "ክኒን መውሰድ ረስተው ይሆን?\nለበርካታ ቀናት አወሳሰድ መዝገብ የለም 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "የማሳወቂያውን መጀመሪያ መቀየር ይችላሉ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

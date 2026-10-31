@@ -242,6 +242,7 @@
   "completed": "Fertig",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kannst den Benachrichtigungstext für eine nicht eingenommene Pille ändern",
+  "defaultMissedTakenMessage": "Hast du deine Pille schon genommen?\nAn mehreren Tagen fehlt ein Einnahmeprotokoll 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kannst den Anfang der Benachrichtigung ändern",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

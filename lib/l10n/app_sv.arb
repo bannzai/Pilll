@@ -242,6 +242,7 @@
   "completed": "Klart",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Du kan ändra texten i påminnelsen om ett piller som inte tagits",
+  "defaultMissedTakenMessage": "Har du kanske glömt att ta ditt p-piller?\nFör flera dagar saknas en intagslogg 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Du kan ändra början av aviseringen",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

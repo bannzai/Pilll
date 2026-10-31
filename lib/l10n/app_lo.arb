@@ -242,6 +242,7 @@
   "completed": "ສຳເລັດ",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "ສາມາດປ່ຽນຂໍ້ຄວາມແຈ້ງເຕືອນເມື່ອລືມກິນຢາໄດ້",
+  "defaultMissedTakenMessage": "ທ່ານອາດລືມກິນຢາບໍ?\nຫຼາຍມື້ບໍ່ມີບັນທຶກການກິນຢາ 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "ສາມາດປ່ຽນຂໍ້ຄວາມຕອນຕົ້ນຂອງການແຈ້ງເຕືອນໄດ້",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

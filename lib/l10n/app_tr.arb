@@ -242,6 +242,7 @@
   "completed": "Tamam",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Hap alınmadığında gelen bildirim metnini değiştirebilirsiniz",
+  "defaultMissedTakenMessage": "Hapınızı almayı unutmuş olabilir misiniz?\nBirkaç gün için hap kullanım kaydı yok 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Bildirimin başlangıcını değiştirebilirsiniz",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

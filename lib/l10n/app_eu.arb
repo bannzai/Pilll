@@ -242,6 +242,7 @@
   "completed": "Eginda",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Pilula hartu ez duzunerako jakinarazpenaren testua alda dezakezu",
+  "defaultMissedTakenMessage": "Pilula hartzea ahaztu zaizu agian?\nHainbat egunetan ez dago hartze-erregistrorik 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Jakinarazpenaren hasiera alda dezakezu",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

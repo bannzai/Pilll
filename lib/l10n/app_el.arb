@@ -242,6 +242,7 @@
   "completed": "Τέλος",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το κείμενο της ειδοποίησης για χάπι που δεν πήρατε",
+  "defaultMissedTakenMessage": "Μήπως ξεχάσατε να πάρετε το χάπι σας;\nΔεν υπάρχει καταγραφή λήψης για αρκετές ημέρες 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Μπορείτε να αλλάξετε την αρχή της ειδοποίησης",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

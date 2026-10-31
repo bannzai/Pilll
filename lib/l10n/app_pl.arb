@@ -242,6 +242,7 @@
   "completed": "Gotowe",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "Możesz zmienić treść powiadomienia o nieprzyjętej tabletce",
+  "defaultMissedTakenMessage": "Może tabletka umknęła twojej uwadze?\nPrzez kilka dni nie odnotowano przyjęcia tabletki 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "Możesz zmienić początek powiadomienia",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -242,6 +242,7 @@
   "completed": "완료",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "복용을 잊었을 때의 알림 문구를 변경할 수 있어요",
+  "defaultMissedTakenMessage": "복용을 잊지 않으셨나요?\n복용 기록이 없는 날이 여러 날 있어요🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "알림의 첫 문구를 바꿀 수 있어요",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

@@ -242,6 +242,7 @@
   "completed": "بشپړ شو",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "د ګولۍ د نه اخیستو د خبرتیا متن بدلولی شئ",
+  "defaultMissedTakenMessage": "ښايي د ګولۍ اخیستل مو هېر شوي وي؟\nد څو ورځو لپاره د ګولۍ اخیستلو ریکارډ نشته 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "تاسو د خبرتیا د پیل متن بدلولی شئ",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",

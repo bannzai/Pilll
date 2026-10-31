@@ -242,6 +242,7 @@
   "completed": "పూర్తయింది",
   "pilll": "Pilll",
   "changeMissedNotificationMessage": "మాత్ర తీసుకోవడం మర్చిపోతే వచ్చే నోటిఫికేషన్ వచనాన్ని మార్చుకోవచ్చు",
+  "defaultMissedTakenMessage": "మాత్ర తీసుకోవడం మర్చిపోయారా?\nచాలా రోజులుగా మాత్రల నమోదు లేదు 🤔",
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "changeNotificationHeader": "నోటిఫికేషన్ ప్రారంభంలోని వచనాన్ని మార్చుకోవచ్చు",
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
