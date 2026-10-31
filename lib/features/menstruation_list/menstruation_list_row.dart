@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -57,15 +58,21 @@ class MenstruationListRow extends HookConsumerWidget {
                   ...List.generate(menstruation.dateRange.days + 1, (index) {
                     return [_circle(), const SizedBox(width: 4)];
                   }).expand((element) => element),
-                  const Spacer(),
-                  Text(
-                    _duration,
-                    textAlign: TextAlign.end,
-                    style: const TextStyle(
-                      color: TextColor.main,
-                      fontFamily: FontFamily.number,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w400,
+                  // 棒の長さは周期の日数を表すため伸ばさず、訳の長い言語や周期の短い棒では文字を縮めて棒の中に収める
+                  Expanded(
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        _duration,
+                        textAlign: TextAlign.end,
+                        style: const TextStyle(
+                          color: TextColor.main,
+                          fontFamily: FontFamily.number,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -98,7 +105,7 @@ class MenstruationListRow extends HookConsumerWidget {
     if (menstruationDuration == null) {
       return '-';
     }
-    return '$menstruationDuration日周期';
+    return L.menstruationCycle(menstruationDuration);
   }
 
   double get _dotLineWidth {
