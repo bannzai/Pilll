@@ -79,7 +79,8 @@ jobs:
         flutter-version: ${{ env.FLUTTER_VERSION }}
     - run: make secret
     - run: flutter pub get
-    - run: flutter test 
+    # snapshot テストは基準画像を撮った snapshot-testing.yml の runner でしか一致しないため、そちらで実行する
+    - run: flutter test --exclude-tags snapshot
   codegen:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}

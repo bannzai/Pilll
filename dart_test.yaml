@@ -1,0 +1,4 @@
+# snapshot: 画面の画像を基準画像と比べるテスト (test/snapshot/)。基準画像は .github/workflows/snapshot-testing.yml の
+# runner で撮ったものだけが一致するため、ci.yml の test job (macOS) では --exclude-tags snapshot で外す
+tags:
+  snapshot:
