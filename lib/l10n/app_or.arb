@@ -152,7 +152,7 @@
   "remainingDaysAllFeatures": "ଆପଣ ଆହୁରି {diff} ଦିନ ପର୍ଯ୍ୟନ୍ତ ସମସ୍ତ ସୁବିଧା ବ୍ୟବହାର କରିପାରିବେ",
   "todayIsTaking": "💊 ଆଜି ବଟିକା ଖାଇବାର ଦିନ",
   "todayPillToTake": "💊 ଆଜିର ବଟିକା",
-  "formattedPillNumber": "{number} (ବଟିକା)",
+  "formattedPillNumber": "ନମ୍ବର {number}",
   "dayNumber": "ତମ ଦିନ",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ରୁ ମାସିକ ଆରମ୍ଭ ହୋଇଥିବା ରେକର୍ଡ କରାଯାଇଛି",
   "menstruationStartDate": "ମାସିକ ଆରମ୍ଭ ତାରିଖ",

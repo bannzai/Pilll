@@ -152,7 +152,7 @@
   "remainingDaysAllFeatures": "អ្នកអាចប្រើមុខងារទាំងអស់បានរយៈពេល {diff} ថ្ងៃទៀត",
   "todayIsTaking": "💊 ថ្ងៃនេះជាថ្ងៃលេបថ្នាំគ្រាប់",
   "todayPillToTake": "💊 គ្រាប់ថ្នាំសម្រាប់ថ្ងៃនេះ",
-  "formattedPillNumber": "{number} (គ្រាប់ថ្នាំ)",
+  "formattedPillNumber": "លេខ {number}",
   "dayNumber": " ថ្ងៃ",
   "recordedMenstruationStartDate": "បានកត់ត្រាថារដូវចាប់ផ្តើមពី {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "ថ្ងៃចាប់ផ្តើមរដូវ",

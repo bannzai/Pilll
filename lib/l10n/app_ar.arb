@@ -152,7 +152,7 @@
   "remainingDaysAllFeatures": "يمكنكِ استخدام جميع الميزات خلال الأيام المتبقية: {diff}",
   "todayIsTaking": "💊 اليوم موعد تناول الحبة",
   "todayPillToTake": "💊 حبة اليوم",
-  "formattedPillNumber": "{number} (حبة)",
+  "formattedPillNumber": "رقم {number}",
   "dayNumber": " يوم",
   "recordedMenstruationStartDate": "تم تسجيل بداية الدورة اعتبارًا من {DateTimeFormatterMonthAndDay}",
   "menstruationStartDate": "تاريخ بدء الدورة",
