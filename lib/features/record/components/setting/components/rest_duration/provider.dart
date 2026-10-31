@@ -3,6 +3,8 @@ import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/features/error/alert_error.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/batch.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -235,6 +237,14 @@ class ChangeRestDuration {
     required RestDuration toRestDuration,
     required PillSheetGroup pillSheetGroup,
   }) async {
+    // 重なった服用お休み期間は summarizedRestDuration で二重に数えられ、ピル番号や後続のピルシートの開始日がずれるため保存しない
+    if (pillSheetGroup.overlapsOtherRestDuration(
+      beginDate: toRestDuration.beginDate,
+      endDate: toRestDuration.endDate,
+      excludingRestDuration: fromRestDuration,
+    )) {
+      throw AlertError(L.pausePeriodOverlapsOther);
+    }
     final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere(
       (e) => _hasRestDuration(e, fromRestDuration),
     );
