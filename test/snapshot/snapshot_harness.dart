@@ -97,7 +97,10 @@ Widget snapshotApp({required String lang, required List<Override> overrides, req
       locale: Locale(lang),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
+      // appThemeData は最初に読まれた時のプラットフォーム (テストの既定は Android) で作られ、expectSnapshot の
+      // debugDefaultTargetPlatformOverride より先に評価されるため、iOS をテーマにも明示する
       theme: appThemeData.copyWith(
+        platform: TargetPlatform.iOS,
         textTheme: appThemeData.textTheme.apply(
           fontFamily: lang == 'ja' ? 'NotoSansJP' : 'NotoSans',
           fontFamilyFallback: const ['NotoSansJP', 'NotoSans', 'NotoEmoji'],
