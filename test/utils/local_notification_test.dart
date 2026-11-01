@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -530,6 +532,56 @@ void main() {
         ),
         "💊",
       );
+    });
+
+    group("月日と曜日を表示する設定", () {
+      /// 月日と曜日の書式を決める Intl.defaultLocale を [languageCode] にし、テストの終わりに元の値へ戻す
+      /// バックグラウンドの入口 (handleNotificationAction) と同じく、全言語の日付データを初期化してから設定する
+      void useDateLocale(String languageCode) {
+        initializeDateFormatting();
+        final originalDefaultLocale = Intl.defaultLocale;
+        addTearDown(() => Intl.defaultLocale = originalDefaultLocale);
+        Intl.defaultLocale = languageCode;
+      }
+
+      /// 2026-10-29 (木) のリマインドで、月日と曜日を表示しピル番号を表示しない設定の通知タイトルを返す
+      String title() => reminderNotificationTitle(
+            reminderNotificationCustomization: const ReminderNotificationCustomization(isInVisiblePillNumber: true),
+            reminderDateTime: DateTime.parse("2026-10-29T09:00:00"),
+            pillSheetDisplayNumber: "5",
+          );
+
+      test("ja では月/日の順になる", () {
+        useDateLocale('ja');
+        expect(title(), "💊 10/29 (木)");
+      });
+
+      test("en では月/日の順になる", () {
+        useDateLocale('en');
+        expect(title(), "💊 10/29 (Thu)");
+      });
+
+      test("es では日/月の順になり、日本式の月日と es の曜日が混ざらない", () {
+        useDateLocale('es');
+        expect(title(), "💊 29/10 (jue)");
+      });
+
+      test("de では日.月.の書式になる", () {
+        useDateLocale('de');
+        expect(title(), "💊 29.10. (Do.)");
+      });
+
+      test("es で日が 1 桁の日付は 0 埋めせず日/月の順になる", () {
+        useDateLocale('es');
+        expect(
+          reminderNotificationTitle(
+            reminderNotificationCustomization: const ReminderNotificationCustomization(isInVisiblePillNumber: true),
+            reminderDateTime: DateTime.parse("2026-11-01T09:00:00"),
+            pillSheetDisplayNumber: "5",
+          ),
+          "💊 1/11 (dom)",
+        );
+      });
     });
   });
 }
