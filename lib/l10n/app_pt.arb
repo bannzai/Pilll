@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Interrupção\n12/1–14/1",
   "withNumber": "Nº {number}",
   "currentPillSheetNotFound": "Não foi encontrada a cartela que você está usando agora",
-  "doNotRevertTakePillInPausePeriod": "Durante a pausa, não é possível desfazer o registro de que a pílula foi tomada",
+  "doNotRevertTakePillInPausePeriod": "Durante a interrupção, você não pode cancelar o registro de uma pílula tomada",
   "googleAccount": "Conta do Google",
   "diaryRecord": "Adicionar anotação ao diário",
   "scheduleRecord": "Adicionar evento",

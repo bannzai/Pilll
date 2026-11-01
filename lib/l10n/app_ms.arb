@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Tempoh jeda pengambilan pil\n12–14 Jan",
   "withNumber": "Pil nombor {number}",
   "currentPillSheetNotFound": "Pek pil yang sedang anda gunakan tidak ditemui",
-  "doNotRevertTakePillInPausePeriod": "Rekod pengambilan pil tidak boleh dibatalkan semasa tempoh rehat",
+  "doNotRevertTakePillInPausePeriod": "Semasa jeda pengambilan pil, anda tidak boleh membatalkan rekod pengambilan pil",
   "googleAccount": "Akaun Google",
   "diaryRecord": "Tambah catatan diari",
   "scheduleRecord": "Tambah jadual",

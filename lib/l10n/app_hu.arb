@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Szüneteltetési időszak\njan. 12–14.",
   "withNumber": "{number}.",
   "currentPillSheetNotFound": "A jelenleg használt tablettacsomag nem található",
-  "doNotRevertTakePillInPausePeriod": "A szünet alatt a tabletta szedésének rögzítése nem vonható vissza",
+  "doNotRevertTakePillInPausePeriod": "A szüneteltetés alatt nem vonhatod vissza a tabletta bevételének rögzítését",
   "googleAccount": "Google-fiók",
   "diaryRecord": "Naplóbejegyzés hozzáadása",
   "scheduleRecord": "Esemény hozzáadása",

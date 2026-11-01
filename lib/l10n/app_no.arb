@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Inntakspause\n12.–14. jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pillebrettet du bruker nå, ble ikke funnet",
-  "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en p-pille under en pillepause",
+  "doNotRevertTakePillInPausePeriod": "Du kan ikke angre registreringen av en tatt p-pille under en inntakspause",
   "googleAccount": "Google-konto",
   "diaryRecord": "Legg til dagboknotat",
   "scheduleRecord": "Legg til avtale",

@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "د لنډمهاله درول موده\n12–14 جنوري",
   "withNumber": "شمېره {number}",
   "currentPillSheetNotFound": "اوس مهال کارېدونکې د ګولیو پاڼه ونه موندل شوه",
-  "doNotRevertTakePillInPausePeriod": "د وقف پر مهال د ګولۍ اخیستلو ثبت بېرته نه شي لغوه کېدای",
+  "doNotRevertTakePillInPausePeriod": "د لنډمهاله درول پر مهال تاسو د ګولۍ د اخیستلو ثبت نه شئ لغوه کولای",
   "googleAccount": "د Google حساب",
   "diaryRecord": "د ورځني یادښت لیکنه زیاته کړئ",
   "scheduleRecord": "مهالوېش ولیکئ",

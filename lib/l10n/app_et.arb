@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Võtmise paus\n12.–14. jaan",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Praegu kasutatavat pillilehte ei leitud",
-  "doNotRevertTakePillInPausePeriod": "Pillipausi ajal ei saa pilli võtmise kirjet tagasi võtta",
+  "doNotRevertTakePillInPausePeriod": "Võtmise pausi ajal ei saa pilli võtmise kirjet tühistada",
   "googleAccount": "Google'i konto",
   "diaryRecord": "Lisa päevikukanne",
   "scheduleRecord": "Lisa plaan",

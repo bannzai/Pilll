@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ସେବନ ବିରତିର ଅବଧି\n୧୨–୧୪ ଜାନୁଆରୀ",
   "withNumber": "ନଂ {number}",
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନ ବ୍ୟବହାର ହେଉଥିବା ବଟିକା ସିଟ ମିଳିଲା ନାହିଁ",
-  "doNotRevertTakePillInPausePeriod": "ବିରତି ସମୟରେ ବଟିକା ନେବାର ରେକର୍ଡ ବାତିଲ କରାଯାଇପାରିବ ନାହିଁ",
+  "doNotRevertTakePillInPausePeriod": "ସେବନ ବିରତି ସମୟରେ ଆପଣ ବଟିକା ନେଇଥିବା ରେକର୍ଡ ବାତିଲ କରିପାରିବେ ନାହିଁ",
   "googleAccount": "Google ଆକାଉଣ୍ଟ",
   "diaryRecord": "ଡାଏରୀରେ ଟିପ୍ପଣୀ ଯୋଡ଼ନ୍ତୁ",
   "scheduleRecord": "କାର୍ଯ୍ୟସୂଚୀ ଯୋଡ଼ନ୍ତୁ",

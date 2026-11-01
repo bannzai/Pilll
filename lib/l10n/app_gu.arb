@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમય\n12–14 જાન્યુ.",
   "withNumber": "ગોળી નંબર {number}",
   "currentPillSheetNotFound": "હાલમાં તમે વાપરો છો તે ગોળીની સ્ટ્રિપ મળી નથી",
-  "doNotRevertTakePillInPausePeriod": "વિરામ દરમિયાન ગોળી લીધી હોવાની નોંધ રદ કરી શકાતી નથી",
+  "doNotRevertTakePillInPausePeriod": "ગોળી લેવાનું થોડા સમય માટે બંધ હોય ત્યારે તમે ગોળી લીધી હોવાની નોંધ રદ કરી શકતા નથી",
   "googleAccount": "Google એકાઉન્ટ",
   "diaryRecord": "ડાયરીમાં નોંધ ઉમેરો",
   "scheduleRecord": "યોજના ઉમેરો",

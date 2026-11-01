@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Període de pausa\n12–14 de gen.",
   "withNumber": "Núm. {number}",
   "currentPillSheetNotFound": "No s'ha trobat el blíster que fas servir ara",
-  "doNotRevertTakePillInPausePeriod": "Durant el descans no pots desfer el registre de la presa de la píndola",
+  "doNotRevertTakePillInPausePeriod": "Durant la pausa no pots anul·lar el registre de la presa de la píndola",
   "googleAccount": "Compte de Google",
   "diaryRecord": "Afegeix una entrada al diari",
   "scheduleRecord": "Afegeix un esdeveniment",

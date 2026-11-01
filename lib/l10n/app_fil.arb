@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Tagal ng pause\nEne 12–14",
   "withNumber": "Blg. {number}",
   "currentPillSheetNotFound": "Hindi mahanap ang pakete ng pildoras na ginagamit ninyo ngayon",
-  "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang nasa pahinga",
+  "doNotRevertTakePillInPausePeriod": "Hindi ninyo maaaring bawiin ang tala ng pag-inom ng pildoras habang naka-pause",
   "googleAccount": "Google account",
   "diaryRecord": "Magdagdag ng tala sa talaarawan",
   "scheduleRecord": "Magdagdag ng iskedyul",

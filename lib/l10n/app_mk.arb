@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Период на прекин\n12–14 јан.",
   "withNumber": "Бр. {number}",
   "currentPillSheetNotFound": "Не е пронајден блистер што моментално го користите",
-  "doNotRevertTakePillInPausePeriod": "За време на пауза не може да се поништи записот за земање таблета",
+  "doNotRevertTakePillInPausePeriod": "За време на прекин не можете да го откажете записот за земање таблета",
   "googleAccount": "Сметка на Google",
   "diaryRecord": "Запис во дневник",
   "scheduleRecord": "Додавање на настан",

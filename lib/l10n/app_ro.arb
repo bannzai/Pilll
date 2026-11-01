@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Perioada de întrerupere\n12–14 ian.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nu a fost găsit blisterul pe care îl folosești acum",
-  "doNotRevertTakePillInPausePeriod": "În timpul pauzei nu poți anula înregistrarea pilulei luate",
+  "doNotRevertTakePillInPausePeriod": "În timpul întreruperii nu poți anula înregistrarea unei pilule luate",
   "googleAccount": "Cont Google",
   "diaryRecord": "Adaugă o însemnare în jurnal",
   "scheduleRecord": "Adaugă un eveniment",

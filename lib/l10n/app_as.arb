@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "বড়ি খোৱা সাময়িকভাৱে বন্ধৰ সময়\n12–14 জানুৱাৰী",
   "withNumber": "{number} নম্বৰ",
   "currentPillSheetNotFound": "বৰ্তমান ব্যৱহাৰ কৰি থকা পিলৰ ষ্ট্ৰিপ পোৱা নগ’ল",
-  "doNotRevertTakePillInPausePeriod": "বিৰতিৰ সময়ত পিল খোৱাৰ তথ্য বাতিল কৰিব নোৱাৰি",
+  "doNotRevertTakePillInPausePeriod": "বড়ি খোৱা সাময়িকভাৱে বন্ধ হৈ থকা সময়ত আপুনি বড়ি খোৱাৰ ৰেকৰ্ড বাতিল কৰিব নোৱাৰে",
   "googleAccount": "Google একাউণ্ট",
   "diaryRecord": "ডায়েৰীত লিখক",
   "scheduleRecord": "কাৰ্যসূচী যোগ কৰক",

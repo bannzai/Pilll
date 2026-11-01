@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Periodo di sospensione\n12–14 gen",
   "withNumber": "N. {number}",
   "currentPillSheetNotFound": "Non è stato trovato il blister che stai usando",
-  "doNotRevertTakePillInPausePeriod": "Durante la pausa non puoi annullare la registrazione dell’assunzione della pillola",
+  "doNotRevertTakePillInPausePeriod": "Durante la sospensione non puoi annullare la registrazione dell’assunzione della pillola",
   "googleAccount": "Account Google",
   "diaryRecord": "Aggiungi una voce al diario",
   "scheduleRecord": "Aggiungi un evento",

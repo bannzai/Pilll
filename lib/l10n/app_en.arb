@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Pill pause\n1/12–1/14",
   "withNumber": "Pill {number}",
   "currentPillSheetNotFound": "The pill pack you're currently using couldn't be found",
-  "doNotRevertTakePillInPausePeriod": "You can't undo a recorded pill intake during a pill break",
+  "doNotRevertTakePillInPausePeriod": "You can’t undo a pill intake record during a pause",
   "googleAccount": "Google account",
   "diaryRecord": "Add diary entry",
   "scheduleRecord": "Add event",

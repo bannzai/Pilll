@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "താൽക്കാലികമായി നിർത്തുന്ന കാലയളവ്\nജനു. 12–14",
   "withNumber": "നമ്പർ {number}",
   "currentPillSheetNotFound": "ഇപ്പോൾ ഉപയോഗിക്കുന്ന ഗുളിക സ്ട്രിപ്പ് കണ്ടെത്താനായില്ല",
-  "doNotRevertTakePillInPausePeriod": "ഇടവേളയിൽ ഗുളിക കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാൻ കഴിയില്ല",
+  "doNotRevertTakePillInPausePeriod": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തിയിരിക്കുമ്പോൾ, കഴിച്ചതിന്റെ രേഖ റദ്ദാക്കാനാവില്ല",
   "googleAccount": "Google അക്കൗണ്ട്",
   "diaryRecord": "ഡയറിയിൽ കുറിപ്പ് ചേർക്കുക",
   "scheduleRecord": "പരിപാടി ചേർക്കുക",

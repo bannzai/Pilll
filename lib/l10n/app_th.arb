@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ช่วงหยุดกินยาชั่วคราว\n12–14 ม.ค.",
   "withNumber": "เม็ดที่ {number}",
   "currentPillSheetNotFound": "ไม่พบแผงยาที่ใช้อยู่ในขณะนี้ค่ะ",
-  "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกบันทึกการทานยาระหว่างช่วงหยุดยาได้ค่ะ",
+  "doNotRevertTakePillInPausePeriod": "ระหว่างหยุดกินยาชั่วคราว จะยกเลิกบันทึกการทานยาเม็ดไม่ได้ค่ะ",
   "googleAccount": "บัญชี Google",
   "diaryRecord": "เพิ่มบันทึกประจำวัน",
   "scheduleRecord": "เพิ่มกำหนดการ",

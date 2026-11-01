@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "सेवन विरामाचा कालावधी\n१२–१४ जाने.",
   "withNumber": "गोळी क्रमांक {number}",
   "currentPillSheetNotFound": "सध्या वापरत असलेली पिल शीट सापडली नाही",
-  "doNotRevertTakePillInPausePeriod": "विरामादरम्यान गोळी घेतल्याची नोंद रद्द करता येत नाही",
+  "doNotRevertTakePillInPausePeriod": "सेवन विराम सुरू असताना गोळी घेतल्याची नोंद रद्द करता येत नाही",
   "googleAccount": "Google खाते",
   "diaryRecord": "दैनंदिनीत नोंद जोडा",
   "scheduleRecord": "कार्यक्रम जोडा",
