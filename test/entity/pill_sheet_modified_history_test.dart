@@ -1350,6 +1350,8 @@ void main() {
     });
 
     group("服用再開予定日 (restDuration.endDate) を決めた服用お休みの場合", () {
+      /// [beginDate] に服用お休みを開始した beganRestDuration の履歴を返す。
+      /// [endDate] は服用再開予定日 (null は予定日を決めていない)。履歴の日時と服用お休みの作成日は [beginDate] にそろえる
       PillSheetModifiedHistory beganRestDurationHistory({
         required DateTime beginDate,
         required DateTime? endDate,
