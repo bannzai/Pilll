@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ለጊዜው ማቆም የሚቆይበት ጊዜ\nጃን 12–14",
   "withNumber": "ቁጥር {number}",
   "currentPillSheetNotFound": "አሁን እየተጠቀሙበት ያለው ክኒን ሉህ አልተገኘም",
-  "doNotRevertTakePillInPausePeriod": "በክኒን እረፍት ጊዜ የክኒን መውሰድን መቀልበስ አይቻልም",
+  "doNotRevertTakePillInPausePeriod": "ለጊዜው ማቆም በሚሠራበት ጊዜ የክኒን መውሰድ መዝገብን መሰረዝ አይችሉም",
   "googleAccount": "የGoogle መለያ",
   "diaryRecord": "የዕለት ማስታወሻ ይመዝግቡ",
   "scheduleRecord": "ቀጠሮ ያክሉ",

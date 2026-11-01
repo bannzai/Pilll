@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "తాత్కాలిక విరామ కాలం\nజన. 12–14",
   "withNumber": "మాత్ర సంఖ్య {number}",
   "currentPillSheetNotFound": "ప్రస్తుతం ఉపయోగిస్తున్న మాత్రల స్ట్రిప్ కనుగొనబడలేదు",
-  "doNotRevertTakePillInPausePeriod": "విరామ సమయంలో మాత్ర తీసుకున్న నమోదును రద్దు చేయడం సాధ్యం కాదు",
+  "doNotRevertTakePillInPausePeriod": "మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ఉన్నప్పుడు, మాత్ర తీసుకున్న రికార్డును రద్దు చేయలేరు",
   "googleAccount": "Google ఖాతా",
   "diaryRecord": "డైరీలో నమోదు చేయండి",
   "scheduleRecord": "షెడ్యూల్‌ను జోడించండి",

@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Period prekida\n12–14. januar",
   "withNumber": "Br. {number}",
   "currentPillSheetNotFound": "Trenutni blister nije pronađen",
-  "doNotRevertTakePillInPausePeriod": "Tokom pauze ne možete poništiti zapis o uzimanju pilule",
+  "doNotRevertTakePillInPausePeriod": "Tokom prekida ne možete poništiti zapis o uzimanju pilule",
   "googleAccount": "Google račun",
   "diaryRecord": "Dodajte zapis u dnevnik",
   "scheduleRecord": "Dodajte događaj",

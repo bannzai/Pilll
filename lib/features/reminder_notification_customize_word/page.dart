@@ -124,265 +124,270 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
       }
     }
 
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text(
-          L.customizeMedicationNotifications,
-          style: const TextStyle(color: TextColor.black),
-        ),
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+    // タップが効かなかった時に設定画面のまま撮らず、この画面の表示を待ってから撮るため
+    return Semantics(
+      identifier: 'reminder_notification_customize_word_page_body',
+      child: Scaffold(
         backgroundColor: AppColors.background,
-      ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: ListView(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 20,
-                      horizontal: 16,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              L.preview,
-                              style: const TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: TextColor.primary,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: Text(
+            L.customizeMedicationNotifications,
+            style: const TextStyle(color: TextColor.black),
+          ),
+          backgroundColor: AppColors.background,
+        ),
+        body: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 16,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                L.preview,
+                                style: const TextStyle(
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: TextColor.primary,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  L.normal,
-                                  style: const TextStyle(
-                                    fontFamily: FontFamily.japanese,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 10,
-                                    color: TextColor.darkGray,
+                              const SizedBox(height: 10),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    L.normal,
+                                    style: const TextStyle(
+                                      fontFamily: FontFamily.japanese,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10,
+                                      color: TextColor.darkGray,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(height: 4),
-                                ReminderPushNotificationPreview(
-                                  word: word.value,
-                                  message: dailyTakenMessage.value,
-                                  isInVisibleReminderDate: isInVisibleReminderDate.value,
-                                  isInvisiblePillNumber: isInVisiblePillNumber.value,
-                                  isInvisibleDescription: isInVisibleDescription.value,
-                                ),
-                              ],
-                            ),
-                            const SizedBox(height: 10),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  L.missed,
-                                  style: const TextStyle(
-                                    fontFamily: FontFamily.japanese,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 10,
-                                    color: TextColor.darkGray,
+                                  const SizedBox(height: 4),
+                                  ReminderPushNotificationPreview(
+                                    word: word.value,
+                                    message: dailyTakenMessage.value,
+                                    isInVisibleReminderDate: isInVisibleReminderDate.value,
+                                    isInvisiblePillNumber: isInVisiblePillNumber.value,
+                                    isInvisibleDescription: isInVisibleDescription.value,
                                   ),
+                                ],
+                              ),
+                              const SizedBox(height: 10),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    L.missed,
+                                    style: const TextStyle(
+                                      fontFamily: FontFamily.japanese,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 10,
+                                      color: TextColor.darkGray,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  ReminderPushNotificationPreview(
+                                    word: word.value,
+                                    message: missedTakenMessage.value,
+                                    isInVisibleReminderDate: isInVisibleReminderDate.value,
+                                    isInvisiblePillNumber: isInVisiblePillNumber.value,
+                                    isInvisibleDescription: isInVisibleDescription.value,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                L.title,
+                                style: const TextStyle(
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: TextColor.primary,
                                 ),
-                                const SizedBox(height: 4),
-                                ReminderPushNotificationPreview(
-                                  word: word.value,
-                                  message: missedTakenMessage.value,
-                                  isInVisibleReminderDate: isInVisibleReminderDate.value,
-                                  isInvisiblePillNumber: isInVisiblePillNumber.value,
-                                  isInvisibleDescription: isInVisibleDescription.value,
+                              ),
+                              WordTextField(
+                                word: word,
+                                textFieldController: wordTextFieldController,
+                                focusNode: wordFocusNode,
+                                submit: wordSubmit,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                L.message,
+                                style: const TextStyle(
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: TextColor.primary,
                                 ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              L.title,
-                              style: const TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: TextColor.primary,
                               ),
-                            ),
-                            WordTextField(
-                              word: word,
-                              textFieldController: wordTextFieldController,
-                              focusNode: wordFocusNode,
-                              submit: wordSubmit,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              L.message,
-                              style: const TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: TextColor.primary,
+                              DailyTakenMessageTextField(
+                                dailyTakenMessage: dailyTakenMessage,
+                                textFieldController: dailyTakenMessageTextFieldController,
+                                focusNode: dailyTakenMessageFocusNode,
                               ),
-                            ),
-                            DailyTakenMessageTextField(
-                              dailyTakenMessage: dailyTakenMessage,
-                              textFieldController: dailyTakenMessageTextFieldController,
-                              focusNode: dailyTakenMessageFocusNode,
-                            ),
-                            const SizedBox(height: 10),
-                            MissedTakenMessageTextField(
-                              missedTakenMessage: missedTakenMessage,
-                              textFieldController: missedTakenMessageTextFieldController,
-                              focusNode: missedTakenMessageFocusNode,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              L.option,
-                              style: const TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w300,
-                                fontSize: 14,
-                                color: TextColor.primary,
+                              const SizedBox(height: 10),
+                              MissedTakenMessageTextField(
+                                missedTakenMessage: missedTakenMessage,
+                                textFieldController: missedTakenMessageTextFieldController,
+                                focusNode: missedTakenMessageFocusNode,
                               ),
-                            ),
-                            const SizedBox(height: 4),
-                            _switchRow(
-                              L.showsDate,
-                              !isInVisibleReminderDate.value,
-                              (value) async {
-                                analytics.logEvent(
-                                  name: 'change_reminder_notification_date',
-                                );
-                                try {
-                                  await _setIsInVisibleReminderDate(
-                                    isInVisibleReminderDate: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
+                            ],
+                          ),
+                          const SizedBox(height: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                L.option,
+                                style: const TextStyle(
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 14,
+                                  color: TextColor.primary,
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              _switchRow(
+                                L.showsDate,
+                                !isInVisibleReminderDate.value,
+                                (value) async {
+                                  analytics.logEvent(
+                                    name: 'change_reminder_notification_date',
                                   );
-                                  isInVisibleReminderDate.value = !value;
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
-                            const Divider(),
-                            _switchRow(
-                              L.showsPillNumber,
-                              !isInVisiblePillNumber.value,
-                              (value) async {
-                                analytics.logEvent(
-                                  name: 'change_reminder_notification_number',
-                                );
-                                try {
-                                  await _setIsInVisiblePillNumber(
-                                    isInVisiblePillNumber: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
+                                  try {
+                                    await _setIsInVisibleReminderDate(
+                                      isInVisibleReminderDate: !value,
+                                      setting: setting,
+                                      setSetting: setSetting,
+                                      registerReminderLocalNotification: registerReminderLocalNotification,
+                                    );
+                                    isInVisibleReminderDate.value = !value;
+                                  } catch (error) {
+                                    if (context.mounted) showErrorAlert(context, error);
+                                  }
+                                },
+                              ),
+                              const Divider(),
+                              _switchRow(
+                                L.showsPillNumber,
+                                !isInVisiblePillNumber.value,
+                                (value) async {
+                                  analytics.logEvent(
+                                    name: 'change_reminder_notification_number',
                                   );
-                                  isInVisiblePillNumber.value = !value;
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
-                            const Divider(),
-                            _switchRow(
-                              L.showsDescription,
-                              !isInVisibleDescription.value,
-                              (value) async {
-                                analytics.logEvent(
-                                  name: 'change_reminder_notification_desc',
-                                );
-                                try {
-                                  await _setIsInVisibleDescription(
-                                    isInVisibleDescription: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
+                                  try {
+                                    await _setIsInVisiblePillNumber(
+                                      isInVisiblePillNumber: !value,
+                                      setting: setting,
+                                      setSetting: setSetting,
+                                      registerReminderLocalNotification: registerReminderLocalNotification,
+                                    );
+                                    isInVisiblePillNumber.value = !value;
+                                  } catch (error) {
+                                    if (context.mounted) showErrorAlert(context, error);
+                                  }
+                                },
+                              ),
+                              const Divider(),
+                              _switchRow(
+                                L.showsDescription,
+                                !isInVisibleDescription.value,
+                                (value) async {
+                                  analytics.logEvent(
+                                    name: 'change_reminder_notification_desc',
                                   );
-                                  // 保存が済んだらスイッチの表示を先に切り替える。通知の再登録を待ってから切り替えると、
-                                  // 登録が返らない環境 (CI の Simulator) で表示が変わらない (PR #1955 の QA で確認)。
-                                  // 再登録の失敗は従来どおり下の catch でエラーを表示する
-                                  isInVisibleDescription.value = !value;
-                                  await registerReminderLocalNotification();
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
-                            const Divider(),
-                          ],
-                        ),
-                      ],
+                                  try {
+                                    await _setIsInVisibleDescription(
+                                      isInVisibleDescription: !value,
+                                      setting: setting,
+                                      setSetting: setSetting,
+                                    );
+                                    // 保存が済んだらスイッチの表示を先に切り替える。通知の再登録を待ってから切り替えると、
+                                    // 登録が返らない環境 (CI の Simulator) で表示が変わらない (PR #1955 の QA で確認)。
+                                    // 再登録の失敗は従来どおり下の catch でエラーを表示する
+                                    isInVisibleDescription.value = !value;
+                                    await registerReminderLocalNotification();
+                                  } catch (error) {
+                                    if (context.mounted) showErrorAlert(context, error);
+                                  }
+                                },
+                              ),
+                              const Divider(),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
+                  ],
+                ),
+              ),
+              if (wordFocusNode.hasPrimaryFocus) ...[
+                KeyboardToolbar(
+                  doneButton: AlertButton(
+                    text: L.completed,
+                    onPressed: () async {
+                      analytics.logEvent(name: 'rnc_word_done');
+                      wordSubmit();
+                      wordFocusNode.unfocus();
+                    },
                   ),
-                ],
-              ),
-            ),
-            if (wordFocusNode.hasPrimaryFocus) ...[
-              KeyboardToolbar(
-                doneButton: AlertButton(
-                  text: L.completed,
-                  onPressed: () async {
-                    analytics.logEvent(name: 'rnc_word_done');
-                    wordSubmit();
-                    wordFocusNode.unfocus();
-                  },
                 ),
-              ),
-            ],
-            if (dailyTakenMessageFocusNode.hasPrimaryFocus) ...[
-              KeyboardToolbar(
-                doneButton: AlertButton(
-                  text: L.completed,
-                  onPressed: () async {
-                    analytics.logEvent(name: 'rnc_daily_taken_message_done');
-                    dailyTakenMessageSubmit();
-                    dailyTakenMessageFocusNode.unfocus();
-                  },
+              ],
+              if (dailyTakenMessageFocusNode.hasPrimaryFocus) ...[
+                KeyboardToolbar(
+                  doneButton: AlertButton(
+                    text: L.completed,
+                    onPressed: () async {
+                      analytics.logEvent(name: 'rnc_daily_taken_message_done');
+                      dailyTakenMessageSubmit();
+                      dailyTakenMessageFocusNode.unfocus();
+                    },
+                  ),
                 ),
-              ),
-            ],
-            if (missedTakenMessageFocusNode.hasPrimaryFocus) ...[
-              KeyboardToolbar(
-                doneButton: AlertButton(
-                  text: L.completed,
-                  onPressed: () async {
-                    analytics.logEvent(name: 'rnc_missed_taken_message_done');
-                    misssedTakenMessageSubmit();
-                    missedTakenMessageFocusNode.unfocus();
-                  },
+              ],
+              if (missedTakenMessageFocusNode.hasPrimaryFocus) ...[
+                KeyboardToolbar(
+                  doneButton: AlertButton(
+                    text: L.completed,
+                    onPressed: () async {
+                      analytics.logEvent(name: 'rnc_missed_taken_message_done');
+                      misssedTakenMessageSubmit();
+                      missedTakenMessageFocusNode.unfocus();
+                    },
+                  ),
                 ),
-              ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );

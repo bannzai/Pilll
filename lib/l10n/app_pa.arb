@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ\n12–14 ਜਨ.",
   "withNumber": "ਗੋਲੀ ਨੰਬਰ {number}",
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਵਰਤੀ ਜਾ ਰਹੀ ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਨਹੀਂ ਮਿਲੀ",
-  "doNotRevertTakePillInPausePeriod": "ਵਿਰਾਮ ਦੌਰਾਨ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+  "doNotRevertTakePillInPausePeriod": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੌਰਾਨ ਤੁਸੀਂ ਗੋਲੀ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਰੱਦ ਨਹੀਂ ਕਰ ਸਕਦੇ",
   "googleAccount": "Google ਖਾਤਾ",
   "diaryRecord": "ਡਾਇਰੀ ਵਿੱਚ ਨੋਟ ਸ਼ਾਮਲ ਕਰੋ",
   "scheduleRecord": "ਯੋਜਨਾ ਸ਼ਾਮਲ ਕਰੋ",

@@ -159,6 +159,19 @@ void main() {
       });
     });
 
+    group('Semantics identifier', () {
+      testWidgets('翻訳の画面比較の撮影フローが表示を待つ identifier を持つ', (WidgetTester tester) async {
+        tester.view.physicalSize = const Size(1200, 2400);
+        tester.view.devicePixelRatio = 1.0;
+        addTearDown(tester.view.reset);
+
+        await tester.pumpWidget(buildDialog(initialEndDate: null, onDone: (_) {}));
+        await tester.pump();
+
+        expect(find.bySemanticsIdentifier('record_page_rest_duration_dialog'), findsOneWidget);
+      });
+    });
+
     group('画面が小さい場合', () {
       testWidgets('内容がはみ出さず、服用再開予定日の行までスクロールして開始ボタンを押せる', (WidgetTester tester) async {
         // 高さの小さい端末や文字サイズを拡大した環境を想定した画面サイズ

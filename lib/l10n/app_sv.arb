@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Pausperiod\n12–14 jan.",
   "withNumber": "Nr {number}",
   "currentPillSheetNotFound": "Den p-pillerkarta du använder nu kunde inte hittas",
-  "doNotRevertTakePillInPausePeriod": "Under uppehållet går det inte att ångra registreringen av att du tagit ett p-piller",
+  "doNotRevertTakePillInPausePeriod": "Under en paus kan du inte ångra registreringen av ett taget p-piller",
   "googleAccount": "Google-konto",
   "diaryRecord": "Lägg till dagboksanteckning",
   "scheduleRecord": "Lägg till händelse",

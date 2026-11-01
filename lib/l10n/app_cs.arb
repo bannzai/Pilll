@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Doba pozastavení užívání\n12.–14. 1.",
   "withNumber": "Č. {number}",
   "currentPillSheetNotFound": "Aktuální blistr se nepodařilo najít",
-  "doNotRevertTakePillInPausePeriod": "Během pauzy nelze zrušit záznam o užití pilulky",
+  "doNotRevertTakePillInPausePeriod": "Během pozastavení užívání nelze zrušit záznam o užití pilulky",
   "googleAccount": "Účet Google",
   "diaryRecord": "Přidat záznam do deníku",
   "scheduleRecord": "Přidat událost",

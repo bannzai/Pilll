@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Tímabil pilluhlés\n12.–14. jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Pilluspjald sem er í notkun fannst ekki",
-  "doNotRevertTakePillInPausePeriod": "Ekki er hægt að afturkalla skráningu á töku pillunnar meðan hlé stendur yfir",
+  "doNotRevertTakePillInPausePeriod": "Á meðan pilluhlé stendur yfir geturðu ekki afturkallað skráningu á pillutöku",
   "googleAccount": "Google-reikningur",
   "diaryRecord": "Bæta við dagbókarfærslu",
   "scheduleRecord": "Bæta við viðburði",

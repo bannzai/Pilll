@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Період призупинення\n12–14 січ.",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Не вдалося знайти блістер, який ви зараз використовуєте",
-  "doNotRevertTakePillInPausePeriod": "Під час перерви не можна скасувати запис про прийом пігулки",
+  "doNotRevertTakePillInPausePeriod": "Під час призупинення прийому не можна скасувати запис про прийом пігулки",
   "googleAccount": "Обліковий запис Google",
   "diaryRecord": "Додати запис у щоденник",
   "scheduleRecord": "Додати подію",

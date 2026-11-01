@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "පෙති ගැනීමේ විරාම කාලය\nජන. 12–14",
   "withNumber": "අංක {number}",
   "currentPillSheetNotFound": "දැනට භාවිත කරන පෙති කාඩ්පත සොයාගත නොහැකි විය",
-  "doNotRevertTakePillInPausePeriod": "විරාමය අතරතුර පෙත්ත ගත් බවට ඇති සටහන අවලංගු කළ නොහැක",
+  "doNotRevertTakePillInPausePeriod": "පෙති ගැනීමේ විරාමය අතරතුර පෙත්ත ගත් බවට ඇති සටහන අවලංගු කළ නොහැක",
   "googleAccount": "Google ගිණුම",
   "diaryRecord": "දිනපොතට සටහනක් එක් කරන්න",
   "scheduleRecord": "කාලසටහනක් එක් කරන්න",

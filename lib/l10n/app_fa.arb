@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "دوره توقف موقت مصرف\n۱۲ تا ۱۴ ژانویه",
   "withNumber": "شمارهٔ {number}",
   "currentPillSheetNotFound": "ورق قرص مورد استفادهٔ فعلی پیدا نشد",
-  "doNotRevertTakePillInPausePeriod": "در دورهٔ وقفه، امکان لغو ثبت مصرف قرص وجود ندارد",
+  "doNotRevertTakePillInPausePeriod": "در زمان توقف موقت مصرف، نمی‌توانید ثبت مصرف قرص را لغو کنید",
   "googleAccount": "حساب Google",
   "diaryRecord": "افزودن یادداشت روزانه",
   "scheduleRecord": "افزودن برنامه",
