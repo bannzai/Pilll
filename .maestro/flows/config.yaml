@@ -9,3 +9,4 @@
 flows:
   - "yaz_flex/*"
   - "feature_appeal/*"
+  - "add_pill_sheet_group/*"
