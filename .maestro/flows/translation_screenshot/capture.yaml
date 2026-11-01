@@ -147,6 +147,7 @@ appId: com.mizuki.Ohashi.Pilll.dev
     id: "record_page_pill_sheet_setting_button"
 # ピルシートの設定シート。服用お休みのメニューの訳語を開始ダイアログと比べるため撮る
 # waitForAnimationToEnd だけではタップが効かなかった時に記録画面のまま撮ってしまう (bannzai/Pilll#2094) ため、シートにだけある服用お休みの行の表示を待つ
+# timeout 10000: 読み込みの無いボトムシートの表示を待つだけのため (先頭の「待ち時間の固定値」のボトムシート)
 - extendedWaitUntil:
     visible:
       id: "begin_manual_rest_duration_row"
