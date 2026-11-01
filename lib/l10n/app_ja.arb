@@ -2665,9 +2665,9 @@
   "@restDurationFeatureAppealTitle": {
     "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) を紹介する FeatureAppeal Bar のタイトルです。用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Record a pill break」ではなく「Record the pause period」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Einnahmepause eintragen」ではなく「Zeitraum der Pillenpause erfassen」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「복용 휴식 기간 기록하기」ではなく「일시 중지 기간을 기록해요」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
   },
-  "restDurationFeatureAppealShortDescription": "休薬・中断を正確に管理",
+  "restDurationFeatureAppealShortDescription": "服用お休み・中断を正確に管理",
   "@restDurationFeatureAppealShortDescription": {
-    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) を紹介する FeatureAppeal Bar の短い説明文です。原文の「休薬・中断」はこの機能で記録する服用の中断を指すため、用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Track pill breaks and interruptions accurately」ではなく「Track your pill pauses accurately」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Einnahmepause und Unterbrechungen genau erfassen」ではなく「Behalte deine Pillenpausen genau im Blick」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「휴약과 복용 중단을 정확하게 관리해요」ではなく「복용 일시 중지 기간을 정확하게 기록해요」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
+    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) を紹介する FeatureAppeal Bar の短い説明文です。原文の「服用お休み・中断」はこの機能で記録する服用の中断を指すため、用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Track pill breaks and interruptions accurately」ではなく「Track your pill pauses accurately」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Einnahmepause und Unterbrechungen genau erfassen」ではなく「Behalte deine Pillenpausen genau im Blick」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「휴약과 복용 중단을 정확하게 관리해요」ではなく「복용 일시 중지 기간을 정확하게 기록해요」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
   },
   "restDurationFeatureAppealHeadline": "ピルの服用をお休みする",
   "@restDurationFeatureAppealHeadline": {
@@ -2725,9 +2725,9 @@
     "description": "[翻訳の決定 pt] 設定タブを「Configurações」ではなく「Ajustes」と呼ぶ: タブのラベル (settings) を「Ajustes」にしたため、タブを名前で案内する文言も揃える (https://github.com/bannzai/Pilll/issues/2012)"
   },
   "todayPillNumberFeatureAppealPoint3": "ホームの数字タップでも開ける",
-  "restDurationFeatureAppealPoint1": "無料で使える休薬記録",
+  "restDurationFeatureAppealPoint1": "無料で使える服用お休みの記録",
   "@restDurationFeatureAppealPoint1": {
-    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) のヘルプページの特長の 1 つ目です。原文の「休薬記録」はこの機能で記録する服用の中断を指すため、用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Free pill break tracking」ではなく「Track pill pauses for free」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Einnahmepause kostenlos erfassen」ではなく「Pillenpausen kostenlos festhalten」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「휴약 기록을 무료로 사용할 수 있어요」ではなく「복용 일시 중지 기간을 무료로 기록해요」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
+    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) のヘルプページの特長の 1 つ目です。原文の「服用お休みの記録」はこの機能で記録する服用の中断を指すため、用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Free pill break tracking」ではなく「Track pill pauses for free」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Einnahmepause kostenlos erfassen」ではなく「Pillenpausen kostenlos festhalten」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「휴약 기록을 무료로 사용할 수 있어요」ではなく「복용 일시 중지 기간을 무료로 기록해요」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
   },
   "restDurationFeatureAppealPoint2": "ピルシート右上の歯車から開始",
   "restDurationFeatureAppealPoint3": "期間の編集・再開もかんたん",
