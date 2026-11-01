@@ -6,7 +6,8 @@ appId: com.mizuki.Ohashi.Pilll.dev
 # 待ち時間の固定値は translation_screenshot/capture.yaml と同じ値と理由:
 # - 60000 (起動・スクロール): CI の Simulator でユーザーの作り直しを含む起動に時間がかかるため
 # - 10000 (画面の表示・言語の保存): 読み込みの無い表示を待つだけのため
-# - waitToSettleTimeoutMs: 500: translation_screenshot/capture.yaml と同じ値
+# - waitToSettleTimeoutMs: 500: 同じ設定画面と表示言語の一覧をこの値でスクロールする translation_screenshot/capture.yaml が
+#   CI の Simulator で通っており、同じ画面で実績のある値をそのまま使うため (値そのものを決めた記録は出典の flow にも無い)
 ---
 - launchApp:
     clearState: true

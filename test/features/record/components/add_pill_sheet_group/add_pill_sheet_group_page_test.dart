@@ -27,6 +27,7 @@ void main() {
       pillSheetTypes: [PillSheetType.pillsheet_28_7],
     );
 
+    /// 書き込みを Mock にした Provider で、ピルシートの無い状態から開いた追加画面を返す
     Widget subject() {
       return ProviderScope(
         overrides: [
@@ -52,6 +53,7 @@ void main() {
         final originalL = L;
         addTearDown(() => L = originalL);
         L = lookupAppLocalizations(Locale(lang));
+        // Issue #2078 の再現に使った iPhone 17 の論理サイズ (402 × 874pt)。テストの既定 (800 × 600) では実機と違う幅で描画されるため
         tester.view.physicalSize = const Size(402, 874);
         tester.view.devicePixelRatio = 1;
         addTearDown(tester.view.reset);
