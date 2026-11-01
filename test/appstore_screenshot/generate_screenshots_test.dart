@@ -241,6 +241,17 @@ Future<void> _renderAndCapture(
   );
   await tester.pumpAndSettle();
 
+  // Image のデコードは実 async で、fake async の pump では完了しない。待たずに撮ると、
+  // 画像キャッシュに乗っていない最初の言語の 1 枚だけ画像が空白になるため、撮影前に待つ。
+  // context に Image 自身の Element を渡すのは、モック画面が差し込む MediaQuery の
+  // devicePixelRatio で解決したキャッシュキーを描画時と一致させるため。
+  await tester.runAsync(() async {
+    for (final element in find.byType(Image).evaluate()) {
+      await precacheImage((element.widget as Image).image, element);
+    }
+  });
+  await tester.pump();
+
   // PNG エンコードは実 async が必要なため runAsync 内で行う。
   await tester.runAsync(() async {
     final boundary = captureKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
