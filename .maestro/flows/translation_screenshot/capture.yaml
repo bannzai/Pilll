@@ -127,6 +127,12 @@ appId: com.mizuki.Ohashi.Pilll.dev
     waitToSettleTimeoutMs: 500
 - tapOn:
     id: "settings_reminder_notification_customize_word_row"
+# waitForAnimationToEnd だけではタップが効かなかった時に設定画面のまま撮ってしまう (生理記録で起きた誤撮影と同じ書き方だったため。bannzai/Pilll#2094) ため、文言カスタマイズの表示を待つ
+# timeout 30000: 画面の push と設定の読み込みを待つだけで起動を含まないため (タブを切り替えた後の画面と同じ値)
+- extendedWaitUntil:
+    visible:
+      id: "reminder_notification_customize_word_page_body"
+    timeout: 30000
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/reminder_notification_customize_word/${LANG}"
 
@@ -139,11 +145,23 @@ appId: com.mizuki.Ohashi.Pilll.dev
     timeout: 60000
 - tapOn:
     id: "record_page_pill_sheet_setting_button"
-- waitForAnimationToEnd
 # ピルシートの設定シート。服用お休みのメニューの訳語を開始ダイアログと比べるため撮る
+# waitForAnimationToEnd だけではタップが効かなかった時に記録画面のまま撮ってしまう (bannzai/Pilll#2094) ため、シートにだけある服用お休みの行の表示を待つ
+# timeout 10000: 読み込みの無いボトムシートの表示を待つだけのため (先頭の「待ち時間の固定値」のボトムシート)
+- extendedWaitUntil:
+    visible:
+      id: "begin_manual_rest_duration_row"
+    timeout: 10000
+- waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/pill_sheet_setting_sheet/${LANG}"
 - tapOn:
     id: "begin_manual_rest_duration_row"
+# waitForAnimationToEnd だけではタップが効かなかった時にシートのまま撮ってしまう (bannzai/Pilll#2094) ため、開始ダイアログの表示を待つ
+# timeout 10000: 読み込みの無いダイアログの表示を待つだけのため (ボトムシートと同じ値)
+- extendedWaitUntil:
+    visible:
+      id: "record_page_rest_duration_dialog"
+    timeout: 10000
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/rest_duration_begin_dialog/${LANG}"
 
