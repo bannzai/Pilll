@@ -29,12 +29,15 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - takeScreenshot: "maestro-artifacts/add_pill_sheet_group/ja"
 
 # 設定タブ → 開発者オプションの「表示言語」→ de (translation_screenshot/capture.yaml と同じ手順)
-# 追加画面の閉じるボタンは文言が無いため、起動し直して記録タブから設定タブへ移る
-- stopApp
-- launchApp
+# このフローではアプリを起動し直さない。PR #2090 の CI で、起動し直した直後に Maestro が
+# 「App crashed or stopped」で止まる失敗が 3 回中 2 回あった (main の feature_appeal_bar_persists_after_restart も同じ症状で落ちている)。
+# 追加画面の閉じるボタンは文言の無い IconButton のため、AppBar の左上 (iPhone 17 の画面で 7%,10%) を座標でタップする
+- tapOn:
+    point: "7%,10%"
+- waitForAnimationToEnd
 - extendedWaitUntil:
-    visible: "ピルシートを追加"
-    timeout: 60000
+    notVisible: "追加"
+    timeout: 10000
 # タブは Image 型で text 検出不可のため座標タップ (translation_screenshot/capture.yaml と同じ)
 - tapOn:
     point: "88%,95%"
@@ -64,13 +67,16 @@ appId: com.mizuki.Ohashi.Pilll.dev
       id: "debug_app_language_current_de"
     timeout: 10000
 
+# 言語を選ぶと設定画面に戻る。記録タブ (12%,95%。feature_appeal_bar_persists_across_tabs.yaml と同じ) へ移り、追加画面を開き直す。
+# 追加画面は開くたびに作られるため de の文言で描かれる。記録画面のボタンは描き直されているとは限らないため ja と de の両方の文言で探す。
 # 期待する文言は lib/l10n/app_de.arb の addPillSheet と add の訳文
-- stopApp
-- launchApp
+- tapOn:
+    point: "12%,95%"
+- waitForAnimationToEnd
 - extendedWaitUntil:
-    visible: "Pillenblister hinzufügen"
-    timeout: 60000
-- tapOn: "Pillenblister hinzufügen"
+    visible: "ピルシートを追加|Pillenblister hinzufügen"
+    timeout: 10000
+- tapOn: "ピルシートを追加|Pillenblister hinzufügen"
 - extendedWaitUntil:
     visible: "Hinzufügen"
     timeout: 10000
