@@ -1334,8 +1334,9 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         // targetRevertPillNumberIntoPillSheet = 3 (3番目のピルをrevert)
-        // revertDate = 2022-07-25 (3番目のピルの1日前)。服用お休みの開始日(2022-07-26)より後ろにならないため服用お休みのデータは消える
-        final revertDate = DateTime.parse("2022-07-25");
+        // 服用お休み(2022-07-26〜2022-07-27)の1日分だけ3番目のピルの服用予定日が2022-07-27にずれるため、revertDate = 2022-07-26 (その1日前)
+        // 服用お休みの開始日(2022-07-26)がrevertDateより後ろにならないため服用お休みのデータは消える
+        final revertDate = DateTime.parse("2022-07-26");
         final updatedPillSheetGroupV1 = pillSheetGroupV1.copyWith(
           pillSheets: [
             (activePillSheetV1 as PillSheetV1).copyWith(lastTakenDate: revertDate, restDurations: []),
