@@ -24,6 +24,7 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -228,7 +229,9 @@ String reminderPillDisplayNumberFor({
 
 /// [reminderDateTime] に出すリマインドの、プレミアム・トライアル中のユーザー向けの通知タイトルを返す
 /// [pillSheetDisplayNumber] は [reminderPillDisplayNumberFor] が返すピル番号の文字列を渡す
-/// 文言の言語は [L] に従う
+/// 文言の言語は [L]、月日と曜日の書式は `Intl.defaultLocale` に従う
+/// バックグラウンドの入口 (lib/entrypoint.dart の handleNotificationAction) でも、呼び出しの前に全言語の日付データの初期化
+/// (date_symbol_data_local の initializeDateFormatting は引数に関わらず全言語を初期化する) と `Intl.defaultLocale` の設定を済ませている
 String reminderNotificationTitle({
   required ReminderNotificationCustomization reminderNotificationCustomization,
   required DateTime reminderDateTime,
@@ -237,7 +240,7 @@ String reminderNotificationTitle({
   var result = reminderNotificationCustomization.word;
   if (!reminderNotificationCustomization.isInVisibleReminderDate) {
     result += ' ';
-    result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
+    result += '${DateTimeFormatter.monthAndDay(reminderDateTime)} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
   }
 
   if (!reminderNotificationCustomization.isInVisiblePillNumber) {
