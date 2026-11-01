@@ -440,9 +440,11 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
         PillSheetModifiedActionType.changedRestDurationBeginDate => history.value.changedRestDurationBeginDateValue?.afterRestDuration,
         _ => null,
       };
-      // 変更の履歴の時点までの服用お休みの日も、変更後の服用再開予定日で打ち切る。予定日を変更日より前に変えた時に、予定日から変更日の前日までを服用お休みの日にしないため
+      // 変更の履歴の時点までの服用お休みの日も、変更後の服用再開予定日で打ち切る。予定日を変更日より前に変えた時に、予定日から変更日の前日までを服用お休みの日にしないため。
+      // 前の変更の履歴で足した日も変更後の予定日で数え直すため、続いている服用お休みの日 (開始日以降。前の服用お休みの日は開始日より前) を外してから足し直す
       if (afterRestDuration != null) {
         historyRestDurationScheduledEndDate = afterRestDuration.endDate;
+        restDurationDates.removeWhere((restDurationDate) => !restDurationDate.isBefore(historyBeginRestDurationDate!));
       }
       addRestDurationDates(
         beginDate: historyBeginRestDurationDate,
