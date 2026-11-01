@@ -118,53 +118,58 @@ class MenstruationPageBody extends HookConsumerWidget {
       }
     });
 
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        title: SizedBox(
-          child: Text(
-            _displayMonth(page.value),
-            style: const TextStyle(color: TextColor.black),
-          ),
-        ),
-        backgroundColor: AppColors.white,
-        elevation: 0,
-      ),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                MenstruationCalendarHeader(
-                  pageController: pageController,
-                  calendarMenstruationBandModels: calendarMenstruationBandModels,
-                  calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  diaries: diaries,
-                  schedules: schedules,
-                ),
-                MenstruationCardList(
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  user: user,
-                  setting: setting,
-                  latestPillSheetGroup: latestPillSheetGroup,
-                  latestMenstruation: latestMenstruation,
-                  allMenstruation: allMenstruation,
-                ),
-                const SizedBox(height: 40),
-              ],
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+    // タブの切り替え前の画面や読み込み中のインジケーターではなく生理記録の表示を待ってから撮るため
+    return Semantics(
+      identifier: 'menstruation_page_body',
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: SizedBox(
+            child: Text(
+              _displayMonth(page.value),
+              style: const TextStyle(color: TextColor.black),
             ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(
-                  latestMenstruation: latestMenstruation,
-                  setting: setting,
+          ),
+          backgroundColor: AppColors.white,
+          elevation: 0,
+        ),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  MenstruationCalendarHeader(
+                    pageController: pageController,
+                    calendarMenstruationBandModels: calendarMenstruationBandModels,
+                    calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                    diaries: diaries,
+                    schedules: schedules,
+                  ),
+                  MenstruationCardList(
+                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                    user: user,
+                    setting: setting,
+                    latestPillSheetGroup: latestPillSheetGroup,
+                    latestMenstruation: latestMenstruation,
+                    allMenstruation: allMenstruation,
+                  ),
+                  const SizedBox(height: 40),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: MenstruationRecordButton(
+                    latestMenstruation: latestMenstruation,
+                    setting: setting,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

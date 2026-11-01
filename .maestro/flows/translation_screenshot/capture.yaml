@@ -86,8 +86,13 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - takeScreenshot: "scripts/translation_screenshots/artifacts/record/${LANG}"
 
 # 生理記録
+# waitForAnimationToEnd だけではタップが効かなかった時に記録画面のまま撮ってしまう (translation-screenshots run 41220810907 の ja の画像で確認。bannzai/Pilll#2083) ため、生理記録の表示を待つ
 - tapOn:
     point: "37%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "menstruation_page_body"
+    timeout: 30000
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/menstruation/${LANG}"
 
