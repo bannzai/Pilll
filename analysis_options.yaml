@@ -49,5 +49,7 @@ analyzer:
     # flutter pub get が他のプラグインに依存するプラグイン (cloud_firestore 等) を Dart のソースごと
     # build/ios/SourcePackages/ に複製する。除外しないと flutter analyze がその複製を解析し、lint が依存パッケージの指摘で失敗する
     - "build/**"
+    # android/ と ios/ はプラットフォームのプロジェクトで、このアプリが解析すべき Dart のソースは無い。
+    # Flutter 3.47 以降の flutter pub get (flutter_tools の AnalysisOptionsMigration) が、無ければこの 2 行を足すため、消しても戻る
     - android/**
     - ios/**
