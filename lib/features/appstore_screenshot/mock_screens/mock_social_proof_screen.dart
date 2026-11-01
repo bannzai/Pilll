@@ -31,6 +31,8 @@ class MockSocialProofScreen extends StatelessWidget {
           child: NotificationBanner(
             message: reminderNotificationSampleBody(),
             time: '9:41',
+            // 真下の生理案内バー (紺地に白文字) の白文字が透けて本文に重なるため、背景を不透明にする (Issue #2076)
+            opacity: 1,
           ),
         ),
         // 右下に浮かせる「利用者数14万人突破」バッジ（ステッカー風に傾ける）。
