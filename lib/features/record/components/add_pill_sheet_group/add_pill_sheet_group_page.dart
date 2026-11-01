@@ -135,7 +135,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                         SizedBox(
                           width: 180,
                           child: PrimaryButton(
-                            text: '追加',
+                            text: L.add,
                             onPressed: pillSheetTypes.value.isEmpty
                                 ? null
                                 : () async {
