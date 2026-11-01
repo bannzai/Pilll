@@ -423,7 +423,17 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
           historyBeginRestDurationDate.add(Duration(days: i)),
         );
       }
-      historyBeginRestDurationDate = null;
+      // 服用お休み期間を変更しても、変更後の服用お休みの終了日が無いか変更日より後(服用再開予定日)なら服用お休みは続いている。
+      // endDate は服用再開日で服用お休みの日に含まれないため、変更日以前なら服用お休みは終わっている。
+      // 変更後の服用お休みを持たない履歴は続いているか判断できないため、従来どおり解除する
+      final afterRestDuration = switch (history.enumActionType) {
+        PillSheetModifiedActionType.changedRestDuration => history.value.changedRestDurationValue?.afterRestDuration,
+        PillSheetModifiedActionType.changedRestDurationBeginDate => history.value.changedRestDurationBeginDateValue?.afterRestDuration,
+        _ => null,
+      };
+      if (afterRestDuration == null || (afterRestDuration.endDate != null && !afterRestDuration.endDate!.date().isAfter(date))) {
+        historyBeginRestDurationDate = null;
+      }
     }
 
     if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
