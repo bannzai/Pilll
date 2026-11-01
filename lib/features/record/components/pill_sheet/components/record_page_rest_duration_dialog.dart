@@ -38,114 +38,119 @@ class RecordPageRestDurationDialog extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final endDate = useState<DateTime?>(initialEndDate);
 
-    return AlertDialog(
-      // 服用再開予定日の行が加わり、高さの小さい画面や文字サイズを拡大した環境で内容が収まらないため、スクロールできるようにする
-      scrollable: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-      ),
-      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
-      actionsPadding: const EdgeInsets.only(left: 24, right: 24),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          title,
-          const SizedBox(height: 24),
-          Text(
-            L.pauseTakingDoesNotAdvancePillNumber,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w500,
-              fontSize: 14,
-              color: TextColor.main,
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+    // タップが効かなかった時にピルシートの設定シートのまま撮らず、このダイアログの表示を待ってから撮るため
+    return Semantics(
+      identifier: 'record_page_rest_duration_dialog',
+      child: AlertDialog(
+        // 服用再開予定日の行が加わり、高さの小さい画面や文字サイズを拡大した環境で内容が収まらないため、スクロールできるようにする
+        scrollable: true,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+        ),
+        contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
+        actionsPadding: const EdgeInsets.only(left: 24, right: 24),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            title,
+            const SizedBox(height: 24),
+            Text(
+              L.pauseTakingDoesNotAdvancePillNumber,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w500,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
             ),
-          ),
-          const SizedBox(height: 24),
-          Text(
-            appearanceMode == PillSheetAppearanceMode.date ? L.exampleRestDurationDate : L.exampleRestDurationNumber,
-            style: const TextStyle(
-              color: TextColor.main,
-              fontWeight: FontWeight.w700,
-              fontFamily: FontFamily.japanese,
-              fontSize: 12,
-            ),
-          ),
-          const SizedBox(height: 8),
-          RestDurationExplainImage(appearanceMode: appearanceMode),
-          const SizedBox(height: 24),
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            title: Text(
-              L.plannedResumeDateOptional,
+            const SizedBox(height: 24),
+            Text(
+              appearanceMode == PillSheetAppearanceMode.date ? L.exampleRestDurationDate : L.exampleRestDurationNumber,
               style: const TextStyle(
                 color: TextColor.main,
                 fontWeight: FontWeight.w700,
                 fontFamily: FontFamily.japanese,
-                fontSize: 14,
+                fontSize: 12,
               ),
             ),
-            subtitle: Text(
-              endDate.value == null
-                  ? L.plannedResumeDateNotSet
-                  : '${DateTimeFormatter.monthAndDay(endDate.value!)}(${DateTimeFormatter.shortWeekday(endDate.value!)})',
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 14,
+            const SizedBox(height: 8),
+            RestDurationExplainImage(appearanceMode: appearanceMode),
+            const SizedBox(height: 24),
+            ListTile(
+              contentPadding: EdgeInsets.zero,
+              title: Text(
+                L.plannedResumeDateOptional,
+                style: const TextStyle(
+                  color: TextColor.main,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 14,
+                ),
               ),
+              subtitle: Text(
+                endDate.value == null
+                    ? L.plannedResumeDateNotSet
+                    : '${DateTimeFormatter.monthAndDay(endDate.value!)}(${DateTimeFormatter.shortWeekday(endDate.value!)})',
+                style: const TextStyle(
+                  color: TextColor.main,
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 14,
+                ),
+              ),
+              trailing: endDate.value == null
+                  ? null
+                  : IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () {
+                        analytics.logEvent(name: 'clear_planned_resume_date');
+                        endDate.value = null;
+                      },
+                    ),
+              onTap: () async {
+                analytics.logEvent(name: 'show_planned_resume_date_picker');
+                // 終了日は服用再開日でお休みに含まれないため、最短でも開始日の翌日
+                final firstDate = pillSheetGroup.availableRestDurationBeginDate.date().addDays(1);
+                final selectedDate = await showDatePicker(
+                  context: context,
+                  initialEntryMode: DatePickerEntryMode.calendarOnly,
+                  initialDate: endDate.value ?? firstDate,
+                  firstDate: firstDate,
+                  lastDate: pillSheetGroup.availableRestDurationBeginDate.date().addDays(PillSheetGroupRestDurationDomain.maxRestDurationDays),
+                  helpText: L.selectPlannedResumeDate,
+                  builder: (context, child) {
+                    return DateRangePickerTheme(child: child!);
+                  },
+                );
+                if (selectedDate == null) {
+                  analytics.logEvent(name: 'cancel_planned_resume_date_picker');
+                  return;
+                }
+                analytics.logEvent(
+                  name: 'select_planned_resume_date',
+                  parameters: {'selected_date': selectedDate.toIso8601String()},
+                );
+                endDate.value = selectedDate;
+              },
             ),
-            trailing: endDate.value == null
-                ? null
-                : IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () {
-                      analytics.logEvent(name: 'clear_planned_resume_date');
-                      endDate.value = null;
-                    },
-                  ),
-            onTap: () async {
-              analytics.logEvent(name: 'show_planned_resume_date_picker');
-              // 終了日は服用再開日でお休みに含まれないため、最短でも開始日の翌日
-              final firstDate = pillSheetGroup.availableRestDurationBeginDate.date().addDays(1);
-              final selectedDate = await showDatePicker(
-                context: context,
-                initialEntryMode: DatePickerEntryMode.calendarOnly,
-                initialDate: endDate.value ?? firstDate,
-                firstDate: firstDate,
-                lastDate: pillSheetGroup.availableRestDurationBeginDate.date().addDays(PillSheetGroupRestDurationDomain.maxRestDurationDays),
-                helpText: L.selectPlannedResumeDate,
-                builder: (context, child) {
-                  return DateRangePickerTheme(child: child!);
-                },
-              );
-              if (selectedDate == null) {
-                analytics.logEvent(name: 'cancel_planned_resume_date_picker');
-                return;
-              }
-              analytics.logEvent(
-                name: 'select_planned_resume_date',
-                parameters: {'selected_date': selectedDate.toIso8601String()},
-              );
-              endDate.value = selectedDate;
-            },
+            const SizedBox(height: 8),
+          ],
+        ),
+        actions: <Widget>[
+          AppOutlinedButton(
+            onPressed: () async => onDone(endDate.value),
+            text: L.startPauseTaking,
           ),
-          const SizedBox(height: 8),
+          Center(
+            child: AlertButton(
+              text: L.close,
+              onPressed: () async {
+                Navigator.of(context).pop();
+              },
+            ),
+          ),
         ],
       ),
-      actions: <Widget>[
-        AppOutlinedButton(
-          onPressed: () async => onDone(endDate.value),
-          text: L.startPauseTaking,
-        ),
-        Center(
-          child: AlertButton(
-            text: L.close,
-            onPressed: () async {
-              Navigator.of(context).pop();
-            },
-          ),
-        ),
-      ],
     );
   }
 }
