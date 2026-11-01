@@ -535,7 +535,8 @@ void main() {
     });
 
     group("月日と曜日を表示する設定", () {
-      // 月日と曜日の書式は Intl.defaultLocale に従う。バックグラウンドの入口 (handleNotificationAction) と同じく、全言語の日付データを初期化してから組み立てる
+      /// 月日と曜日の書式を決める Intl.defaultLocale を [languageCode] にし、テストの終わりに元の値へ戻す
+      /// バックグラウンドの入口 (handleNotificationAction) と同じく、全言語の日付データを初期化してから設定する
       void useDateLocale(String languageCode) {
         initializeDateFormatting();
         final originalDefaultLocale = Intl.defaultLocale;
@@ -543,6 +544,7 @@ void main() {
         Intl.defaultLocale = languageCode;
       }
 
+      /// 2026-10-29 (木) のリマインドで、月日と曜日を表示しピル番号を表示しない設定の通知タイトルを返す
       String title() => reminderNotificationTitle(
             reminderNotificationCustomization: const ReminderNotificationCustomization(isInVisiblePillNumber: true),
             reminderDateTime: DateTime.parse("2026-10-29T09:00:00"),
