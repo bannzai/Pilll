@@ -380,6 +380,23 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
   final restDurationDates = <DateTime>{};
 
   DateTime? historyBeginRestDurationDate;
+  // 服用お休みの開始・変更の履歴が持つ服用再開予定日。予定日に服用お休みの終了の履歴は書かれないため、予定日を過ぎた日を服用お休みの日にしないために保持する
+  DateTime? historyRestDurationScheduledEndDate;
+
+  /// [beginDate] から [upperDate] の前日までを服用お休みの日として restDurationDates に加える。
+  /// [scheduledEndDate] (服用再開予定日) が [upperDate] より前なら、その前日までで打ち切る。endDate は服用再開日で服用お休みの日に含まれないため
+  void addRestDurationDates({
+    required DateTime beginDate,
+    required DateTime? scheduledEndDate,
+    required DateTime upperDate,
+  }) {
+    for (var i = 0;
+        i < daysBetween(beginDate, scheduledEndDate != null && scheduledEndDate.date().isBefore(upperDate) ? scheduledEndDate.date() : upperDate);
+        i++) {
+      restDurationDates.add(beginDate.add(Duration(days: i)));
+    }
+  }
+
   for (final history in orderedHistories) {
     // estimatedEventCausingDateの日付部分のみを使用
     final date = history.estimatedEventCausingDate.date();
@@ -418,36 +435,42 @@ List<DateTime> takenPillHistoryTargetDates(PillSheetModifiedHistory history) {
       // PillSheetModifiedActionType.endedRestDuration.name であるか内科に関わらず計算に含めてしまう
       // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
       // 服用お休みが開始されて、次の履歴が服用お休み以外の時は考慮パターンが多い。のでallDatesから除外するように計算に含めてしまう
-      for (var i = 0; i < daysBetween(historyBeginRestDurationDate, date); i++) {
-        restDurationDates.add(
-          historyBeginRestDurationDate.add(Duration(days: i)),
-        );
-      }
-      // 服用お休み期間を変更しても、変更後の服用お休みの終了日が無いか変更日より後(服用再開予定日)なら服用お休みは続いている。
-      // endDate は服用再開日で服用お休みの日に含まれないため、変更日以前なら服用お休みは終わっている。
-      // 変更後の服用お休みを持たない履歴は続いているか判断できないため、従来どおり解除する
       final afterRestDuration = switch (history.enumActionType) {
         PillSheetModifiedActionType.changedRestDuration => history.value.changedRestDurationValue?.afterRestDuration,
         PillSheetModifiedActionType.changedRestDurationBeginDate => history.value.changedRestDurationBeginDateValue?.afterRestDuration,
         _ => null,
       };
+      // 変更の履歴の時点までの服用お休みの日も、変更後の服用再開予定日で打ち切る。予定日を変更日より前に変えた時に、予定日から変更日の前日までを服用お休みの日にしないため
+      if (afterRestDuration != null) {
+        historyRestDurationScheduledEndDate = afterRestDuration.endDate;
+      }
+      addRestDurationDates(
+        beginDate: historyBeginRestDurationDate,
+        scheduledEndDate: historyRestDurationScheduledEndDate,
+        upperDate: date,
+      );
+      // 服用お休み期間を変更しても、変更後の服用お休みの終了日が無いか変更日より後(服用再開予定日)なら服用お休みは続いている。
+      // endDate は服用再開日で服用お休みの日に含まれないため、変更日以前なら服用お休みは終わっている。
+      // 変更後の服用お休みを持たない履歴は続いているか判断できないため、従来どおり解除する
       if (afterRestDuration == null || (afterRestDuration.endDate != null && !afterRestDuration.endDate!.date().isAfter(date))) {
         historyBeginRestDurationDate = null;
+        historyRestDurationScheduledEndDate = null;
       }
     }
 
     if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
       historyBeginRestDurationDate = date;
+      historyRestDurationScheduledEndDate = history.value.beganRestDurationValue?.restDuration.endDate;
     }
   }
 
   // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
   if (historyBeginRestDurationDate != null) {
-    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, normalizedMaxDate); i++) {
-      restDurationDates.add(
-        historyBeginRestDurationDate.add(Duration(days: i)),
-      );
-    }
+    addRestDurationDates(
+      beginDate: historyBeginRestDurationDate,
+      scheduledEndDate: historyRestDurationScheduledEndDate,
+      upperDate: normalizedMaxDate,
+    );
   }
 
   return (scheduledDates: allDates.difference(restDurationDates), takenDates: takenDates);
