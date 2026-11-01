@@ -31,13 +31,16 @@ void main() {
         return const SizedBox();
       }));
 
-      final notificationBanner = (socialProofScreenTree as Stack)
-          .children
-          .whereType<Positioned>()
-          .map((positioned) => positioned.child)
-          .whereType<NotificationBanner>()
-          .single;
-      expect(notificationBanner.opacity, 1.0);
+      expect(
+        (socialProofScreenTree as Stack)
+            .children
+            .whereType<Positioned>()
+            .map((positioned) => positioned.child)
+            .whereType<NotificationBanner>()
+            .single
+            .opacity,
+        1.0,
+      );
     });
   });
 }
