@@ -1551,6 +1551,71 @@ void main() {
         // 9/18〜9/19 が服用お休みの日で、9/20〜9/24 の 5 日が飲み忘れ
         expect(missedPillDays(histories: histories, maxDate: DateTime.parse("2020-09-25")), 5);
       });
+
+      test("服用お休みの開始日を変更した履歴が服用再開予定日を持つ場合、変更後の予定日以降の日は飲み忘れに数える", () {
+        final histories = [
+          beganRestDurationHistory(beginDate: DateTime.parse("2020-09-18"), endDate: DateTime.parse("2020-09-20")),
+          PillSheetModifiedHistory(
+            id: 'changed_rest_duration_begin_date',
+            actionType: PillSheetModifiedActionType.changedRestDurationBeginDate.name,
+            estimatedEventCausingDate: DateTime.parse("2020-09-19"),
+            createdAt: DateTime.parse("2020-09-19"),
+            value: PillSheetModifiedHistoryValue(
+              changedRestDurationBeginDateValue: ChangedRestDurationBeginDateValue(
+                beforeRestDuration: RestDuration(
+                  id: 'rest_duration_1',
+                  beginDate: DateTime.parse("2020-09-18"),
+                  endDate: DateTime.parse("2020-09-20"),
+                  createdDate: DateTime.parse("2020-09-18"),
+                ),
+                afterRestDuration: RestDuration(
+                  id: 'rest_duration_1',
+                  beginDate: DateTime.parse("2020-09-17"),
+                  endDate: DateTime.parse("2020-09-22"),
+                  createdDate: DateTime.parse("2020-09-18"),
+                ),
+              ),
+            ),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // 9/18〜9/21 が服用お休みの日で、9/22〜9/24 の 3 日が飲み忘れ
+        expect(missedPillDays(histories: histories, maxDate: DateTime.parse("2020-09-25")), 3);
+      });
+
+      test("服用お休みの期間を変更して服用再開予定日を消した場合、集計日の前日までが服用お休みの日", () {
+        final histories = [
+          beganRestDurationHistory(beginDate: DateTime.parse("2020-09-18"), endDate: DateTime.parse("2020-09-20")),
+          PillSheetModifiedHistory(
+            id: 'changed_rest_duration',
+            actionType: PillSheetModifiedActionType.changedRestDuration.name,
+            estimatedEventCausingDate: DateTime.parse("2020-09-19"),
+            createdAt: DateTime.parse("2020-09-19"),
+            value: PillSheetModifiedHistoryValue(
+              changedRestDurationValue: ChangedRestDurationValue(
+                beforeRestDuration: RestDuration(
+                  id: 'rest_duration_1',
+                  beginDate: DateTime.parse("2020-09-18"),
+                  endDate: DateTime.parse("2020-09-20"),
+                  createdDate: DateTime.parse("2020-09-18"),
+                ),
+                afterRestDuration: RestDuration(
+                  id: 'rest_duration_1',
+                  beginDate: DateTime.parse("2020-09-18"),
+                  createdDate: DateTime.parse("2020-09-18"),
+                ),
+              ),
+            ),
+            beforePillSheetGroup: null,
+            afterPillSheetGroup: null,
+          ),
+        ];
+
+        // 9/18〜9/24 がすべて服用お休みの日
+        expect(missedPillDays(histories: histories, maxDate: DateTime.parse("2020-09-25")), 0);
+      });
     });
   });
 
