@@ -1,0 +1,78 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+# 記録 →「ピルシートを追加」で開く追加画面の確定ボタンが、表示言語に追従することを確かめるフロー (issue #2078)。
+# debug ビルドは文言を ja に固定しているため、ja で確かめた後に開発者オプションの「表示言語」で de に切り替えて確かめる。
+# 各言語の画面は maestro-artifacts/add_pill_sheet_group/<言語>.png に撮る (maestro-e2e workflow の artifact に含まれる)。
+#
+# 待ち時間の固定値は translation_screenshot/capture.yaml と同じ値と理由:
+# - 60000 (起動・スクロール): CI の Simulator でユーザーの作り直しを含む起動に時間がかかるため
+# - 10000 (画面の表示・言語の保存): 読み込みの無い表示を待つだけのため
+# - waitToSettleTimeoutMs: 500: translation_screenshot/capture.yaml と同じ値
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
+- waitForAnimationToEnd
+
+# initial_setup.yaml は今日の服用番号を飛ばすためピルシートが作られず、記録画面に「ピルシートを追加」が出る
+- extendedWaitUntil:
+    visible: "ピルシートを追加"
+    timeout: 60000
+- tapOn: "ピルシートを追加"
+- extendedWaitUntil:
+    visible: "追加"
+    timeout: 10000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/add_pill_sheet_group/ja"
+
+# 設定タブ → 開発者オプションの「表示言語」→ de (translation_screenshot/capture.yaml と同じ手順)
+# 追加画面の閉じるボタンは文言が無いため、起動し直して記録タブから設定タブへ移る
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible: "ピルシートを追加"
+    timeout: 60000
+# タブは Image 型で text 検出不可のため座標タップ (translation_screenshot/capture.yaml と同じ)
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "debug_app_language_row"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "debug_app_language_row"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "de"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+# スクロールの残り慣性で隣の言語を誤タップしないよう、タップ前に慣性を待つ (translation_screenshot/capture.yaml と同じ)
+- waitForAnimationToEnd
+- tapOn:
+    id: "de"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible:
+      id: "debug_app_language_current_de"
+    timeout: 10000
+
+# 期待する文言は lib/l10n/app_de.arb の addPillSheet と add の訳文
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible: "Pillenblister hinzufügen"
+    timeout: 60000
+- tapOn: "Pillenblister hinzufügen"
+- extendedWaitUntil:
+    visible: "Hinzufügen"
+    timeout: 10000
+- assertNotVisible: "追加"
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/add_pill_sheet_group/de"
