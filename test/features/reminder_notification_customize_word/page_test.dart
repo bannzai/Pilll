@@ -17,18 +17,20 @@ void main() {
 
   group('#ReminderNotificationCustomizeWordPage', () {
     testWidgets('翻訳の画面比較の撮影フローが表示を待つ identifier を持つ', (WidgetTester tester) async {
-      const setting = Setting(
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 2,
-        isOnReminder: true,
-        timezoneDatabaseName: null,
-        pillSheetTypes: [PillSheetType.pillsheet_21],
-        reminderTimes: [ReminderTime(hour: 10, minute: 0)],
-      );
-
       final container = ProviderContainer(
         overrides: [
-          settingProvider.overrideWith((ref) => Stream.value(setting)),
+          settingProvider.overrideWith(
+            (ref) => Stream.value(
+              const Setting(
+                pillNumberForFromMenstruation: 22,
+                durationMenstruation: 2,
+                isOnReminder: true,
+                timezoneDatabaseName: null,
+                pillSheetTypes: [PillSheetType.pillsheet_21],
+                reminderTimes: [ReminderTime(hour: 10, minute: 0)],
+              ),
+            ),
+          ),
           setSettingProvider.overrideWith((ref) => MockSetSetting()),
         ],
       );
