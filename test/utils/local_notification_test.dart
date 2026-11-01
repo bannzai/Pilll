@@ -571,7 +571,7 @@ void main() {
         expect(title(), "💊 29.10. (Do.)");
       });
 
-      test("es で日・月が 1 桁の日付は 0 埋めせず日/月の順になる", () {
+      test("es で日が 1 桁の日付は 0 埋めせず日/月の順になる", () {
         useDateLocale('es');
         expect(
           reminderNotificationTitle(
