@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Etenaldiaren iraupena\nurt. 12–14",
   "withNumber": "{number}. pilula",
   "currentPillSheetNotFound": "Ez da aurkitu orain erabiltzen duzun pilula-blister",
-  "doNotRevertTakePillInPausePeriod": "Atsedenaldian ezin duzu pilula hartzearen erregistroa desegin",
+  "doNotRevertTakePillInPausePeriod": "Etenaldi batean ezin duzu pilularen hartzea desegin",
   "googleAccount": "Google kontua",
   "diaryRecord": "Gehitu egunerokoan sarrera bat",
   "scheduleRecord": "Gehitu plana",

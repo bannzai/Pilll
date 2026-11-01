@@ -1951,9 +1951,9 @@
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
-  "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
+  "doNotRevertTakePillInPausePeriod": "服用お休み中はピルの服用の取り消し操作を実行できません",
   "@doNotRevertTakePillInPausePeriod": {
-    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
+    "description": "ユーザーがピルの服用記録を取り消そうとした際、「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) の利用中のため操作できないことを知らせるエラーメッセージです。用語集の「休薬」ではなく「服用お休み」の訳語を使う (https://github.com/bannzai/Pilll/issues/2077)"
   },
   "googleAccount": "Google アカウント",
   "@googleAccount": {

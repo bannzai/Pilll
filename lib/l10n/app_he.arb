@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "תקופת השהיית נטילה\n12–14 בינו׳",
   "withNumber": "מס׳ {number}",
   "currentPillSheetNotFound": "לא נמצאה חפיסת הגלולות שבשימוש כעת",
-  "doNotRevertTakePillInPausePeriod": "אי אפשר לבטל רישום נטילה של גלולה במהלך ההפסק",
+  "doNotRevertTakePillInPausePeriod": "בזמן השהיית נטילה אי אפשר לבטל רישום של נטילת גלולה",
   "googleAccount": "חשבון Google",
   "diaryRecord": "הוספת רשומה ליומן",
   "scheduleRecord": "הוספת אירוע",

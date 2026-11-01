@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Ընդունման դադար\nհնվ. 12–14",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Այժմ օգտագործվող հաբերի բլիստեր չի գտնվել",
-  "doNotRevertTakePillInPausePeriod": "Դադարի ընթացքում հնարավոր չէ չեղարկել հաբի ընդունման գրառումը",
+  "doNotRevertTakePillInPausePeriod": "Ընդունման դադար գործողության ընթացքում Դուք չեք կարող չեղարկել հաբի ընդունման գրառումը",
   "googleAccount": "Google հաշիվ",
   "diaryRecord": "Ավելացնել օրագրի գրառում",
   "scheduleRecord": "Ավելացնել իրադարձություն",

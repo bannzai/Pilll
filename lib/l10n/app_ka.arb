@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "მიღების პაუზის პერიოდი\n12–14 იან",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "ამჟამად გამოყენებული აბების ბლისტერი ვერ მოიძებნა",
-  "doNotRevertTakePillInPausePeriod": "შესვენების პერიოდში აბის მიღების ჩანაწერის გაუქმება შეუძლებელია",
+  "doNotRevertTakePillInPausePeriod": "მიღების პაუზის დროს აბის მიღების ჩანაწერს ვერ გააუქმებთ",
   "googleAccount": "Google ანგარიში",
   "diaryRecord": "დღიურში ჩანაწერის დამატება",
   "scheduleRecord": "გეგმის დამატება",

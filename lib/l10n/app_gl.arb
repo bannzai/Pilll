@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Período de pausa na toma\n12–14 xan.",
   "withNumber": "Núm. {number}",
   "currentPillSheetNotFound": "Non se atopou o blíster que estás a usar agora",
-  "doNotRevertTakePillInPausePeriod": "Durante o descanso non podes desfacer o rexistro da toma da pílula",
+  "doNotRevertTakePillInPausePeriod": "Durante a pausa na toma non podes desfacer o rexistro da toma da pílula",
   "googleAccount": "Conta de Google",
   "diaryRecord": "Engadir unha entrada ao diario",
   "scheduleRecord": "Engadir un plan",

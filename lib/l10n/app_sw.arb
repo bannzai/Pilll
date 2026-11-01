@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Kipindi cha kusitisha\n12–14 Jan",
   "withNumber": "Nambari {number}",
   "currentPillSheetNotFound": "Pakiti ya vidonge inayotumika sasa haijapatikana",
-  "doNotRevertTakePillInPausePeriod": "Haiwezekani kutengua rekodi ya kumeza kidonge wakati wa mapumziko",
+  "doNotRevertTakePillInPausePeriod": "Wakati wa kusitisha kumeza vidonge, huwezi kutengua rekodi ya kumeza kidonge",
   "googleAccount": "Akaunti ya Google",
   "diaryRecord": "Andika shajara",
   "scheduleRecord": "Andika ratiba",

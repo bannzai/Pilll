@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Διάρκεια παύση\n12–14 Ιαν",
   "withNumber": "Αρ. {number}",
   "currentPillSheetNotFound": "Δεν βρέθηκε η καρτέλα χαπιών που χρησιμοποιείτε αυτή τη στιγμή",
-  "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να αναιρέσετε την καταχώριση λήψης χαπιού όσο διαρκεί το διάλειμμα",
+  "doNotRevertTakePillInPausePeriod": "Κατά την παύση δεν μπορείτε να αναιρέσετε την καταγραφή λήψης του χαπιού",
   "googleAccount": "Λογαριασμός Google",
   "diaryRecord": "Προσθήκη καταχώρισης στο ημερολόγιο",
   "scheduleRecord": "Προσθήκη προγράμματος",

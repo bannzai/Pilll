@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Ara verme süresi\n12–14 Oca",
   "withNumber": "{number} numaralı hap",
   "currentPillSheetNotFound": "Şu anda kullandığınız blister bulunamadı",
-  "doNotRevertTakePillInPausePeriod": "Ara dönem sırasında hap alma kaydını geri alamazsınız",
+  "doNotRevertTakePillInPausePeriod": "Ara verme sırasında hap alma kaydını geri alamazsınız",
   "googleAccount": "Google hesabı",
   "diaryRecord": "Günlük kaydı ekleyin",
   "scheduleRecord": "Etkinlik ekleyin",

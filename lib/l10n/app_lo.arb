@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "ໄລຍະຢຸດກິນຢາຊົ່ວຄາວ\n12–14 ມ.ກ.",
   "withNumber": "ເມັດທີ {number}",
   "currentPillSheetNotFound": "ບໍ່ພົບແຜງຢາຄຸມທີ່ກຳລັງໃຊ້ຢູ່",
-  "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໃນໄລຍະພັກຢາໄດ້",
+  "doNotRevertTakePillInPausePeriod": "ໃນຊ່ວງຢຸດກິນຢາຊົ່ວຄາວ ບໍ່ສາມາດຍົກເລີກບັນທຶກການກິນຢາເມັດໄດ້",
   "googleAccount": "ບັນຊີ Google",
   "diaryRecord": "ເພີ່ມບັນທຶກປະຈຳວັນ",
   "scheduleRecord": "ເພີ່ມກຳນົດການ",

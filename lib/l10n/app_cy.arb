@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Cyfnod oedi\n12–14 Ion",
   "withNumber": "Rhif {number}",
   "currentPillSheetNotFound": "Heb ddod o hyd i'r stribed pils rydych chi'n ei ddefnyddio ar hyn o bryd",
-  "doNotRevertTakePillInPausePeriod": "Ni ellir dadwneud y cofnod o gymryd y bilsen yn ystod y seibiant",
+  "doNotRevertTakePillInPausePeriod": "Yn ystod oedi, ni allwch ddadwneud cofnod cymryd y bilsen",
   "googleAccount": "Cyfrif Google",
   "diaryRecord": "Ychwanegu cofnod dyddiadur",
   "scheduleRecord": "Ychwanegu digwyddiad",

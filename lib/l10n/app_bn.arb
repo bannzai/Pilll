@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "সেবন স্থগিতের সময়\n১২–১৪ জানুয়ারি",
   "withNumber": "{number} নম্বর",
   "currentPillSheetNotFound": "বর্তমানে ব্যবহার করা পিল শিট পাওয়া যায়নি",
-  "doNotRevertTakePillInPausePeriod": "বিরতির সময় পিল খাওয়ার রেকর্ড বাতিল করা যাবে না",
+  "doNotRevertTakePillInPausePeriod": "সেবন স্থগিত থাকাকালে আপনি পিল খাওয়ার রেকর্ড বাতিল করতে পারবেন না",
   "googleAccount": "Google অ্যাকাউন্ট",
   "diaryRecord": "ডায়েরিতে লিখুন",
   "scheduleRecord": "সময়সূচি যোগ করুন",

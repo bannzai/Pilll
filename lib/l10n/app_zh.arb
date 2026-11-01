@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "暂停服药期间\n1/12~1/14",
   "withNumber": "{number}号",
   "currentPillSheetNotFound": "未找到当前使用的药板",
-  "doNotRevertTakePillInPausePeriod": "停药期间无法撤销服药记录",
+  "doNotRevertTakePillInPausePeriod": "暂停服药期间，无法撤销药片的服用记录",
   "googleAccount": "Google 账号",
   "diaryRecord": "添加日记",
   "scheduleRecord": "添加日程",

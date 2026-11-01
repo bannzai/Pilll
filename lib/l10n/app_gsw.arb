@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Iinahmepause\n12.–14. Jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De Pilleblister, wo du grad bruchsch, isch nöd gfunde worde",
-  "doNotRevertTakePillInPausePeriod": "Während de Pillepause chasch d Ufzeichnig vo de Iinahm vo de Pille nöd rückgängig mache",
+  "doNotRevertTakePillInPausePeriod": "Wänn d Iinahmepause lauft, chasch d Ufzeichnig vo de Pilleneinnahm nöd rückgängig mache",
   "googleAccount": "Google-Konto",
   "diaryRecord": "Tagebuech-Iitrag mache",
   "scheduleRecord": "En Termin iiträge",

@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Periode van innamepauze\n12–14 jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "De pillenstrip die je nu gebruikt, is niet gevonden",
-  "doNotRevertTakePillInPausePeriod": "Tijdens de stopweek kun je de registratie van je pilinname niet ongedaan maken",
+  "doNotRevertTakePillInPausePeriod": "Tijdens een innamepauze kun je de registratie van een ingenomen pil niet ongedaan maken",
   "googleAccount": "Google-account",
   "diaryRecord": "Dagboeknotitie toevoegen",
   "scheduleRecord": "Afspraak toevoegen",

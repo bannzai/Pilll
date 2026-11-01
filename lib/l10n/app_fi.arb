@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Taukotilan kesto\n12.–14.1.",
   "withNumber": "Nro {number}",
   "currentPillSheetNotFound": "Käytössä olevaa pilleriliuskaa ei löytynyt",
-  "doNotRevertTakePillInPausePeriod": "Pillerin ottomerkintää ei voi perua taukojakson aikana",
+  "doNotRevertTakePillInPausePeriod": "Taukotilan aikana et voi kumota pillerin ottamisen kirjausta",
   "googleAccount": "Google-tili",
   "diaryRecord": "Lisää päiväkirjamerkintä",
   "scheduleRecord": "Lisää tapahtuma",

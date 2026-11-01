@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Pristabdymo laikotarpis\nsausio 12–14 d.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nepavyko rasti šiuo metu naudojamos tablečių plokštelės",
-  "doNotRevertTakePillInPausePeriod": "Per pertrauką negalima atšaukti įrašo apie tabletės vartojimą",
+  "doNotRevertTakePillInPausePeriod": "Kol veikia pristabdytas vartojimas, negalite atšaukti įrašo apie išgertą piliulę",
   "googleAccount": "Google paskyra",
   "diaryRecord": "Pridėti dienoraščio įrašą",
   "scheduleRecord": "Pridėti planą",

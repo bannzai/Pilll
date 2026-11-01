@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Убактылуу токтотуу мөөнөтү\n12–14-январь",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Учурда колдонулуп жаткан таблетка блистери табылган жок",
-  "doNotRevertTakePillInPausePeriod": "Тыныгуу учурунда таблетка ичүү жазуусун жокко чыгарууга болбойт",
+  "doNotRevertTakePillInPausePeriod": "Убактылуу токтотуу учурунда таблетка ичүү жазуусун жокко чыгара албайсыз",
   "googleAccount": "Google аккаунту",
   "diaryRecord": "Күндөлүккө жазуу кошуңуз",
   "scheduleRecord": "План кошуңуз",

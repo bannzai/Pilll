@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Pause de prise\ndu 12/1 au 14/1",
   "withNumber": "N° {number}",
   "currentPillSheetNotFound": "La plaquette que vous utilisez actuellement est introuvable",
-  "doNotRevertTakePillInPausePeriod": "Vous ne pouvez pas annuler l’enregistrement de la prise de pilule pendant la pause",
+  "doNotRevertTakePillInPausePeriod": "Pendant une pause de prise, vous ne pouvez pas annuler l’enregistrement d’une prise de pilule",
   "googleAccount": "Compte Google",
   "diaryRecord": "Ajouter une entrée au journal",
   "scheduleRecord": "Ajouter un événement",

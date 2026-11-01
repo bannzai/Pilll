@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Pillenpause\n12.–14.1.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Der Pillenblister, den du gerade verwendest, wurde nicht gefunden",
-  "doNotRevertTakePillInPausePeriod": "Während der Einnahmepause kannst du die erfasste Pilleneinnahme nicht rückgängig machen",
+  "doNotRevertTakePillInPausePeriod": "Während einer Pillenpause kannst du die Einnahme einer Pille nicht rückgängig machen",
   "googleAccount": "Google-Konto",
   "diaryRecord": "Tagebucheintrag hinzufügen",
   "scheduleRecord": "Termin hinzufügen",

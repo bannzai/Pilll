@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Periudha e pauzës\n12–14 jan.",
   "withNumber": "Nr. {number}",
   "currentPillSheetNotFound": "Nuk u gjet blisteri që po përdorni tani",
-  "doNotRevertTakePillInPausePeriod": "Gjatë pushimit nuk mund të anuloni regjistrimin e marrjes së pilulës",
+  "doNotRevertTakePillInPausePeriod": "Gjatë pauzës nuk mund ta anuloni regjistrimin e marrjes së pilulës",
   "googleAccount": "Llogaria e Google",
   "diaryRecord": "Shtoni një shënim në ditar",
   "scheduleRecord": "Shtoni një ngjarje",

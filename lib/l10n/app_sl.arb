@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Obdobje prekinitve\n12.–14. jan.",
   "withNumber": "Št. {number}",
   "currentPillSheetNotFound": "Ploščice, ki jo trenutno uporabljate, ni bilo mogoče najti",
-  "doNotRevertTakePillInPausePeriod": "Med premorom ni mogoče razveljaviti zapisa o zaužitju tablete",
+  "doNotRevertTakePillInPausePeriod": "Med prekinitvijo jemanja ne morete razveljaviti zapisa o zaužitju tabletke",
   "googleAccount": "Račun Google",
   "diaryRecord": "Dodajte zapis v dnevnik",
   "scheduleRecord": "Dodajte dogodek",

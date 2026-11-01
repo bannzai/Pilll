@@ -350,7 +350,7 @@
   "exampleRestDurationDateBalloon": "Həb qəbuluna fasilə müddəti\n12–14 yanvar",
   "withNumber": "№ {number}",
   "currentPillSheetNotFound": "Hazırda istifadə etdiyiniz həb blister tapılmadı",
-  "doNotRevertTakePillInPausePeriod": "Fasilə müddətində həb qəbulu qeydini ləğv edə bilməzsiniz",
+  "doNotRevertTakePillInPausePeriod": "Həb qəbuluna fasilə zamanı həbin qəbul qeydini ləğv edə bilməzsiniz",
   "googleAccount": "Google hesabı",
   "diaryRecord": "Gündəlik qeydi əlavə edin",
   "scheduleRecord": "Plan əlavə edin",
