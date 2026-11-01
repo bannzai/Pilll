@@ -20,7 +20,7 @@ void main() {
     });
   });
 
-  group("NotificationBanner", () {
+  group("#NotificationBanner", () {
     // 通知バナーは記録画面の生理案内バー (紺地に白文字) に重なるため、背景が透けると白文字が通知本文に重なって見える (Issue #2076)
     // 記録画面ごと描画するとテスト用フォント (Ahem) の字幅でピルシートが溢れるため、MockSocialProofScreen の build が組む子の設定だけを確かめる
     testWidgets("記録画面に重ねる通知バナーの背景は不透明で、下の生理案内バーの文字を透かさない", (tester) async {
