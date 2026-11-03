@@ -25,16 +25,15 @@ class DateTimeFormatter {
   }
 
   /// 曜日付きの月日を [Intl.defaultLocale] (画面の文言と同じ言語) の書式で返す。
-  /// ja は数字の書式 (10/5(月))、ja 以外は月名の省略形の書式 (en: Mon, Oct 5 / es: lun, 5 oct) にする。
-  /// ja 以外で数字の書式にすると es の「sáb, 16/1」のように月日の区別が付きにくいため月名にし、ja の表示は変えない
+  /// ja 以外は数字の書式だと月と日の区別が付きにくいため月名の省略形にする。ja は既存の表示を変えないため数字の書式にする
   static String monthAndWeekday(DateTime dateTime) {
     return DateFormat(
       Intl.shortLocale(Intl.getCurrentLocale()) == 'ja' ? DateFormat.NUM_MONTH_WEEKDAY_DAY : DateFormat.ABBR_MONTH_WEEKDAY_DAY,
     ).format(dateTime);
   }
 
-  /// 月日を [Intl.defaultLocale] (画面の文言と同じ言語) の数字の書式で返す (ja・en: 10/29 / es: 29/10 / de: 29.10.)。
-  /// ピルシートの日付表示モードの狭いセルでも使うため、月名にせず数字の書式のまま各言語の並び順にする
+  /// 月日を [Intl.defaultLocale] (画面の文言と同じ言語) の数字の書式で返す。
+  /// ピルシートの日付表示モードの狭いセルでも使うため、月名にしない
   static String monthAndDay(DateTime dateTime) {
     return DateFormat(DateFormat.NUM_MONTH_DAY).format(dateTime);
   }
