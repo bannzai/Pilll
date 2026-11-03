@@ -25,7 +25,7 @@ class DateTimeFormatter {
   }
 
   /// 曜日付きの月日を [Intl.defaultLocale] (画面の文言と同じ言語) の書式で返す。
-  /// ja 以外は数字の書式だと月と日の区別が付きにくいため月名の省略形にする。ja は既存の表示を変えないため数字の書式にする
+  /// ja は月日の並びが一定で取り違えないため数字の書式にし、ja 以外は並びが言語で異なり月と日の区別が付きにくいため月名の省略形にする
   static String monthAndWeekday(DateTime dateTime) {
     return DateFormat(
       Intl.shortLocale(Intl.getCurrentLocale()) == 'ja' ? DateFormat.NUM_MONTH_WEEKDAY_DAY : DateFormat.ABBR_MONTH_WEEKDAY_DAY,
