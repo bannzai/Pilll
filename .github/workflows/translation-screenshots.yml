@@ -99,7 +99,7 @@ jobs:
       # tar で権限ごと固めてから artifact にする (maestro-e2e.yml と同じ)
       - name: ビルド成果物を tar でまとめる
         run: tar -C build/ios/iphonesimulator -cf simulator-app.tar .
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: translation-screenshots-app
           path: simulator-app.tar
@@ -122,7 +122,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           name: translation-screenshots-app
           path: build-app
@@ -156,7 +156,7 @@ jobs:
         run: sh scripts/translation_screenshots/capture_langs.sh --udid "${{ steps.sim.outputs.udid }}" -l "$CAPTURE_LANGS"
       # 一部言語が失敗しても撮影済み言語の成果物は回収できるよう、失敗時もアップロードする。
       # public repo の artifact は誰でもダウンロードできる。初期設定から作るダミーのデータだけが映る (flow は clearState で始める)
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ !cancelled() }}
         with:
           name: translation-screenshots-part-${{ strategy.job-index }}
@@ -164,7 +164,7 @@ jobs:
           if-no-files-found: error
           retention-days: 1 # 同じ run の merge job が 1 つにまとめて消すため
       # 失敗原因調査用に Maestro のデバッグ出力 (スクリーンショット・ログ) を上げる
-      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: ${{ failure() }}
         with:
           name: translation-screenshots-maestro-debug-${{ strategy.job-index }}
@@ -181,7 +181,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/upload-artifact/merge@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact/merge@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: translation-screenshots
           pattern: translation-screenshots-part-*
