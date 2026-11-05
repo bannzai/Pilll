@@ -1,0 +1,6 @@
+• Uživatelky přípravku YAZ Flex nyní mohou při počátečním nastavení nastavit počet dnů užívání podle poslední pauzy a počátečního čísla
+• Období pozastavení užívání se již nemohou překrývat a opravili jsme počítání dnů pozastavení a zapomenutých tablet
+• Revidovali jsme překlady a data, čísla tablet i oznámení se nyní zobrazují ve formátu daného jazyka
+• Opravena chyba, kvůli které se aplikace mohla zavřít hned po spuštění
+
+Máte‑li další požadavky nebo připomínky, kontaktujte nás prosím prostřednictvím „Kontaktního formuláře“ v nastavení.

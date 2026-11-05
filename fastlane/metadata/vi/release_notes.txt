@@ -1,0 +1,6 @@
+• Người dùng YAZ Flex giờ đây có thể đặt số ngày uống thuốc trong phần thiết lập ban đầu dựa trên lần nghỉ thuốc gần nhất và số bắt đầu
+• Các khoảng tạm ngừng uống thuốc không còn chồng lên nhau, và cách đếm ngày tạm ngừng cũng như số viên quên uống đã được sửa
+• Bản dịch đã được rà soát lại; ngày tháng, số viên thuốc và thông báo nay hiển thị theo định dạng của từng ngôn ngữ
+• Đã sửa lỗi ứng dụng có thể tự đóng ngay sau khi mở
+
+Nếu bạn có bất kỳ yêu cầu hoặc góp ý nào, xin vui lòng liên hệ qua mục “Mẫu liên hệ” trong phần Cài đặt.

@@ -1,0 +1,6 @@
+• YAZ Flex kullananlar artık ilk kurulumda son ara dönemden ve başlangıç numarasından kullanım günlerini ayarlayabilir
+• Ara verme dönemleri artık çakışamaz; ara verilen günlerin ve unutulan hapların sayılma şekli düzeltildi
+• Çeviriler gözden geçirildi; tarihler, hap numaraları ve bildirimler artık her dilin biçiminde gösteriliyor
+• Uygulamanın açıldıktan hemen sonra kapanabilmesine neden olan sorun giderildi
+
+Başka istek veya görüşleriniz varsa, lütfen Ayarlar ekranındaki "İletişim Formu" üzerinden bizimle iletişime geçin.

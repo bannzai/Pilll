@@ -1,0 +1,6 @@
+• Používateľky YAZ Flex si teraz môžu pri počiatočnom nastavení nastaviť počet dní užívania podľa poslednej prestávky a počiatočného čísla
+• Obdobia pozastavenia užívania sa už nemôžu prekrývať a opravili sme počítanie dní pozastavenia a zabudnutých tabliet
+• Prekontrolovali sme preklady a dátumy, čísla tabliet aj upozornenia sa teraz zobrazujú vo formáte daného jazyka
+• Opravená chyba, pri ktorej sa aplikácia mohla zavrieť hneď po spustení
+
+Ak máte ďalšie požiadavky alebo pripomienky, kontaktujte nás prosím cez „Formulár kontaktu“ v nastaveniach.

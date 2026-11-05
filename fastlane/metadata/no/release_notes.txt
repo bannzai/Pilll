@@ -1,0 +1,6 @@
+• Bruker du YAZ Flex, kan du nå stille inn antall inntaksdager i førstegangsoppsettet ut fra siste pillepause og startnummeret
+• Inntakspauser kan ikke lenger overlappe, og vi har rettet tellingen av pausedager og glemte piller
+• Vi har gått gjennom oversettelsene, og datoer, pillenumre og varsler vises nå i formatet til hvert språk
+• Rettet et problem der appen kunne lukkes rett etter oppstart
+
+Hvis du har andre ønsker eller tilbakemeldinger, kan du kontakte oss via "Kontaktskjema" på innstillingsskjermen.

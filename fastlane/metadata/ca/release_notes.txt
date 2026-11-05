@@ -1,0 +1,6 @@
+• Si preneu YAZ Flex, ara podeu configurar els dies de presa a la configuració inicial a partir del darrer descans i del número d'inici
+• Les pauses ja no es poden superposar i hem corregit el recompte dels dies de pausa i de les píndoles oblidades
+• Hem revisat les traduccions i ara les dates, els números de píndola i les notificacions es mostren en el format de cada idioma
+• S'ha corregit un problema pel qual l'aplicació es podia tancar just després d'obrir-la
+
+Si teniu altres peticions o comentaris, poseu-vos en contacte amb nosaltres mitjançant el formulari de contacte a la pantalla de Configuració.

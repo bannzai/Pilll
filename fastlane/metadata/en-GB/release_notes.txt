@@ -1,0 +1,6 @@
+• YAZ Flex users can now set their day count during initial setup from their last pill break and starting pill number
+• Pauses can no longer overlap, and we fixed how pause days and missed pills are counted
+• We reviewed our translations, and dates, pill numbers, and notifications now follow each language's format
+• Fixed an issue where the app could close right after launch
+
+If you have any other requests or feedback, please contact us via the “Contact us” form in Settings.
