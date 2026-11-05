@@ -20,6 +20,8 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 | App Store JP 平均評価 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-app-metadata.sh 1405931017 --country jp` の `averageUserRating` | >= 4.0 | < 3.5 x2 | 評価は保てているが直近 14 日の新規レビューが 2 回連続 0 件なら、獲得 (ASO・オンボーディング) 側の転換を検討する |
 | 直近14日の★1〜2レビュー数 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-reviews.sh 1405931017 --country jp --pages 1` の出力で `date` が直近 14 日かつ `rating` が 2 以下の行数 | <= 1 | >= 3 x2 | 低評価の内容が同じ機能に集中していたら、その機能の作り直しを改善 issue の最優先にする |
 | 直近14日のFATALクラッシュissue数 | firebase-crashlytics-triage skill: `bash ~/.agents/skills/firebase-crashlytics-triage/scripts/crashlytics.sh top-issues --config ios/Firebase/GoogleService-Info-prod.plist --days 14 --error-types FATAL` の topIssues の行数 | <= 10 | > 50 x2 | 上位 issue のイベント数が 1 件で 100 を超えていたら、機能追加より先にその修正 issue を出す |
+| MRR (USD) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric mrr --field mrr` の `VALUE` | >= 4000 | < 3500 x2 | MRR がしきい値を下回った判定日に、直近 14 日の新規顧客の合計 (`--metric new_customers --field new_customers --days 14 --agg sum`) を前回の判定日の同じ値と比べ、減っていたら獲得側、減っていなければ課金導線側の転換を検討する。前回の判定日の値が無い時は転換を判定せず今回の値を記録する |
+| D7リテンション (直近14日のコホート平均) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric retention --field d7_rate --days 14 --agg avg` の `VALUE` | >= 0.38 | < 0.30 x2 | D7 リテンションがしきい値を下回った判定日に、同じ 14 日のコホートの初期設定の完了率 (`--metric onboarding_funnel` の `steps.02_end_initial_setting` / `cohort_users`) を前回の判定日の同じ値と比べ、下がっていたら初期設定の作り直しを改善 issue の最優先にする。前回の判定日の値が無い時は転換を判定せず今回の値を記録する |
 
 ## 必要な機能
 
