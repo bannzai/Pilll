@@ -2,5 +2,6 @@
 • Pillenpausen können sich nicht mehr überschneiden, und die Zählung von Pausentagen und vergessenen Pillen wurde korrigiert
 • Die Übersetzungen wurden überarbeitet; Datumsangaben, Pillennummern und Benachrichtigungen werden jetzt im Format der jeweiligen Sprache angezeigt
 • Ein Fehler wurde behoben, durch den sich die App direkt nach dem Start schließen konnte
+• Sicherheitsupdate
 
 Wenn Sie weitere Wünsche oder Rückmeldungen haben, kontaktieren Sie uns bitte über das ‚Kontaktformular‘ in den Einstellungen.

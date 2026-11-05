@@ -2,5 +2,6 @@
 • Le sospensioni non possono più sovrapporsi e abbiamo corretto il conteggio dei giorni di sospensione e delle pillole dimenticate
 • Abbiamo rivisto le traduzioni: date, numeri delle pillole e notifiche ora seguono il formato di ciascuna lingua
 • Risolto un problema per cui l'app poteva chiudersi subito dopo l'avvio
+• Aggiornamento di sicurezza
 
 Per altre richieste o suggerimenti, contattaci tramite il modulo di contatto nella schermata Impostazioni.

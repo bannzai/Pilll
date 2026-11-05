@@ -2,5 +2,6 @@
 • Indtagelsespauser kan ikke længere overlappe, og vi har rettet optællingen af pausedage og glemte piller
 • Vi har gennemgået oversættelserne, og datoer, pillenumre og notifikationer vises nu i hvert sprogs format
 • Rettet et problem, hvor appen kunne lukke lige efter start
+• Sikkerhedsopdatering
 
 Hvis du har andre ønsker eller kommentarer, kan du kontakte os via kontaktformularen i Indstillinger.

@@ -2,5 +2,6 @@
 • Taukotilan jaksot eivät voi enää mennä päällekkäin, ja korjasimme taukopäivien ja unohtuneiden pillereiden laskemisen
 • Kävimme käännökset läpi, ja päivämäärät, pillerinumerot ja ilmoitukset näytetään nyt kunkin kielen muodossa
 • Korjattu ongelma, jonka vuoksi sovellus saattoi sulkeutua heti käynnistyksen jälkeen
+• Tietoturvapäivitys
 
 Jos sinulla on muita toiveita tai palautetta, ota yhteyttä Asetukset-valikon "Ota yhteyttä" -lomakkeen kautta.

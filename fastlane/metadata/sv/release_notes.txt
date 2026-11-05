@@ -2,5 +2,6 @@
 • Pauser kan inte längre överlappa, och vi har rättat hur pausdagar och glömda piller räknas
 • Vi har sett över översättningarna, och datum, pillernummer och aviseringar visas nu i varje språks format
 • Åtgärdat ett problem där appen kunde stängas direkt efter start
+• Säkerhetsuppdatering
 
 Har du andra önskemål eller synpunkter? Kontakta oss via formuläret "Kontakta oss" i inställningarna.

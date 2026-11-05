@@ -2,5 +2,6 @@
 • Ara verme dönemleri artık çakışamaz; ara verilen günlerin ve unutulan hapların sayılma şekli düzeltildi
 • Çeviriler gözden geçirildi; tarihler, hap numaraları ve bildirimler artık her dilin biçiminde gösteriliyor
 • Uygulamanın açıldıktan hemen sonra kapanabilmesine neden olan sorun giderildi
+• Güvenlik güncellemesi
 
 Başka istek veya görüşleriniz varsa, lütfen Ayarlar ekranındaki "İletişim Formu" üzerinden bizimle iletişime geçin.

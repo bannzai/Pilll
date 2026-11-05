@@ -2,5 +2,6 @@
 • Perioadele de întrerupere a administrării nu se mai pot suprapune și am corectat numărarea zilelor de întrerupere și a pastilelor uitate
 • Am revizuit traducerile, iar datele, numerele pastilelor și notificările sunt acum afișate în formatul fiecărei limbi
 • Am remediat o problemă din cauza căreia aplicația se putea închide imediat după pornire
+• Actualizare de securitate
 
 Dacă aveți alte solicitări sau sugestii, vă rugăm să ne contactați prin „Formularul de contact” din ecranul de setări.

@@ -2,5 +2,6 @@
 • Okresy wstrzymania przyjmowania nie mogą się już nakładać, a liczenie dni wstrzymania i pominiętych tabletek zostało poprawione
 • Przejrzeliśmy tłumaczenia — daty, numery tabletek i powiadomienia są teraz wyświetlane w formacie danego języka
 • Naprawiono problem, przez który aplikacja mogła się zamykać zaraz po uruchomieniu
+• Aktualizacja zabezpieczeń
 
 Jeśli masz inne prośby lub uwagi, skontaktuj się z nami przez formularz kontaktowy w Ustawieniach.

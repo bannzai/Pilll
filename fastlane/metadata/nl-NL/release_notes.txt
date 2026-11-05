@@ -2,5 +2,6 @@
 • Innamepauzes kunnen niet meer overlappen, en we hebben het tellen van pauzedagen en vergeten pillen verbeterd
 • De vertalingen zijn herzien; datums, pilnummers en meldingen worden nu in de notatie van elke taal weergegeven
 • Probleem opgelost waarbij de app direct na het opstarten kon sluiten
+• Beveiligingsupdate
 
 Als u verder nog wensen of opmerkingen heeft, neem dan contact met ons op via het 'Contactformulier' in het instellingenmenu.

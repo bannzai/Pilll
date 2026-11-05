@@ -2,5 +2,6 @@
 • As interrupções não podem mais se sobrepor, e corrigimos a contagem dos dias de interrupção e das pílulas esquecidas
 • Revisamos as traduções, e datas, números das pílulas e notificações agora seguem o formato de cada idioma
 • Corrigimos um problema em que o app podia fechar logo após ser aberto
+• Atualização de segurança
 
 Se tiver outras solicitações ou comentários, entre em contato pelo “Formulário de Contato” na tela de Configurações.

@@ -2,5 +2,6 @@
 • A szedés szüneteltetésének időszakai már nem fedhetik egymást, és javítottuk a szüneteltetett napok és az elfelejtett tabletták számolását
 • Átnéztük a fordításokat; a dátumok, a tablettaszámok és az értesítések mostantól az adott nyelv formátumában jelennek meg
 • Kijavítottuk azt a hibát, amely miatt az alkalmazás közvetlenül indítás után bezáródhatott
+• Biztonsági frissítés
 
 Ha további kérése vagy észrevétele van, kérjük, vegye fel velünk a kapcsolatot a Beállításokban található „Kapcsolatfelvételi űrlap” menüponton keresztül.

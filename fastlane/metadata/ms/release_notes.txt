@@ -2,5 +2,6 @@
 • Tempoh jeda pengambilan pil tidak lagi boleh bertindih, dan cara mengira hari jeda serta pil yang terlupa telah dibetulkan
 • Terjemahan telah disemak semula, dan tarikh, nombor pil serta pemberitahuan kini dipaparkan mengikut format setiap bahasa
 • Membetulkan masalah apl boleh tertutup sejurus selepas dibuka
+• Kemas kini keselamatan
 
 Jika anda mempunyai permintaan atau maklum balas lain, sila hubungi kami menerusi "Borang Hubungi Kami" pada skrin Tetapan.
