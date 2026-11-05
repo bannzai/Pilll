@@ -1,7 +1,7 @@
 • Pengguna YAZ Flex kini dapat mengatur jumlah hari minum pil saat pengaturan awal berdasarkan jeda terakhir dan nomor awal
 • Periode jeda minum tidak bisa lagi tumpang tindih, dan cara menghitung hari jeda serta pil yang terlupa telah diperbaiki
 • Terjemahan telah ditinjau ulang, dan tanggal, nomor pil, serta notifikasi kini ditampilkan sesuai format setiap bahasa
-• Memperbaiki masalah aplikasi dapat tertutup tepat setelah dibuka
+• Memperbaiki masalah yang dapat menyebabkan aplikasi tertutup tepat setelah dibuka
 • Pembaruan keamanan
 
 Jika Anda memiliki permintaan atau saran lainnya, silakan hubungi kami melalui “Formulir Kontak” di menu Pengaturan.
