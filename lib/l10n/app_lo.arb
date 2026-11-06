@@ -126,6 +126,7 @@
   "pillSheetSettings": "ການຕັ້ງຄ່າແຜງຢາຄຸມ",
   "invalidAlreadyTakenPillUnmarkThenPause": "ກ່ອນຢຸດກິນຢາເມັດຊົ່ວຄາວ ກະລຸນາໝາຍຢາເມັດຂອງມື້ນີ້ວ່າຍັງບໍ່ໄດ້ກິນ.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ຖ້າຕ້ອງການເລີ່ມຢຸດກິນຢາຊົ່ວຄາວໃນມື້ອື່ນທີ່ບໍ່ແມ່ນມື້ນີ້ ກະລຸນາເບິ່ງຄຳແນະນຳຂ້າງລຸ່ມ.",
+  "invalidRestDurationIllustrationYesterday": "ມື້ວານນີ້",
   "pauseTaking": "ຢຸດກິນຢາຊົ່ວຄາວ",
   "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "pauseTakingPeriodEnded": "ໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວສິ້ນສຸດແລ້ວ",

@@ -126,6 +126,7 @@
   "pillSheetSettings": "Inställningar för p-pillerkarta",
   "invalidAlreadyTakenPillUnmarkThenPause": "Markera dagens p-piller som inte taget innan du tar en paus från att ta p-piller.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Om du vill börja en paus en annan dag än i dag kan du läsa guiden nedan.",
+  "invalidRestDurationIllustrationYesterday": "I går",
   "pauseTaking": "Paus",
   "changePauseStartDate": "Ändra startdatum för pausen",
   "pauseTakingPeriodEnded": "Din valda paus från att ta p-piller är slut",

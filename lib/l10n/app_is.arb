@@ -126,6 +126,7 @@
   "pillSheetSettings": "Stillingar fyrir pilluspjald",
   "invalidAlreadyTakenPillUnmarkThenPause": "Merktu pilluna fyrir daginn í dag sem ótekna áður en þú gerir hlé á pillutökunni.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ef þú vilt hefja pilluhlé á öðrum degi en í dag geturðu skoðað leiðbeiningarnar hér að neðan.",
+  "invalidRestDurationIllustrationYesterday": "Í gær",
   "pauseTaking": "Pilluhlé",
   "changePauseStartDate": "Breyta upphafsdegi pilluhlés",
   "pauseTakingPeriodEnded": "Pilluhléinu er lokið",

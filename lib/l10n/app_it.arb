@@ -126,6 +126,7 @@
   "pillSheetSettings": "Impostazioni del blister",
   "invalidAlreadyTakenPillUnmarkThenPause": "Prima di sospendere temporaneamente l’assunzione della pillola, segna quella di oggi come non assunta.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se vuoi iniziare la sospensione in un giorno diverso da oggi, consulta la guida qui sotto.",
+  "invalidRestDurationIllustrationYesterday": "Ieri",
   "pauseTaking": "Sospensione",
   "changePauseStartDate": "Modifica la data di inizio della sospensione",
   "pauseTakingPeriodEnded": "Il periodo di sospensione dell’assunzione è terminato",

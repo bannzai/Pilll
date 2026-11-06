@@ -126,6 +126,7 @@
   "pillSheetSettings": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
   "invalidAlreadyTakenPillUnmarkThenPause": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸುವ ಮೊದಲು ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ಇಂದಿನ ಬದಲು ಬೇರೆ ದಿನದಿಂದ ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭಿಸಲು ಬಯಸಿದರೆ, ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ನೋಡಿ.",
+  "invalidRestDurationIllustrationYesterday": "ನಿನ್ನೆ",
   "pauseTaking": "ಮಾತ್ರೆ ವಿರಾಮ",
   "changePauseStartDate": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಬದಲಾಯಿಸಿ",
   "pauseTakingPeriodEnded": "ಮಾತ್ರೆ ವಿರಾಮದ ಅವಧಿ ಮುಗಿದಿದೆ",

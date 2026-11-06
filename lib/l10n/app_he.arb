@@ -126,6 +126,7 @@
   "pillSheetSettings": "הגדרות חפיסת הגלולות",
   "invalidAlreadyTakenPillUnmarkThenPause": "לפני השהיה זמנית של נטילת הגלולות, יש לסמן את הגלולה של היום ככזו שלא ניטלה.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "כדי להתחיל השהיית נטילה ביום אחר מהיום, אפשר להיעזר במדריך שלמטה.",
+  "invalidRestDurationIllustrationYesterday": "אתמול",
   "pauseTaking": "השהיית נטילה",
   "changePauseStartDate": "שינוי תאריך ההתחלה של השהיית נטילה",
   "pauseTakingPeriodEnded": "תקופת השהיית נטילה הסתיימה",

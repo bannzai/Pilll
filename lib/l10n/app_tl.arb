@@ -126,6 +126,7 @@
   "pillSheetSettings": "Mga setting ng pakete ng pildoras",
   "invalidAlreadyTakenPillUnmarkThenPause": "Bago po ninyo pansamantalang ihinto ang pag-inom ng pildoras, markahan muna ang pildoras para sa araw na ito bilang hindi nainom.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Kung nais ninyong simulan ang paghinto sa pag-inom ng pildoras sa ibang araw, pakitingnan po ang gabay sa ibaba.",
+  "invalidRestDurationIllustrationYesterday": "Kahapon",
   "pauseTaking": "Paghinto sa pag-inom",
   "changePauseStartDate": "Baguhin ninyo ang petsa ng simula ng paghinto sa pag-inom",
   "pauseTakingPeriodEnded": "Natapos na ang pansamantala ninyong paghinto sa pag-inom ng pildoras",

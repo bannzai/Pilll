@@ -126,6 +126,7 @@
   "pillSheetSettings": "Nastavení blistru",
   "invalidAlreadyTakenPillUnmarkThenPause": "Než dočasně přestanete užívat pilulky, označte dnešní pilulku jako neužitou.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Pokud chcete zahájit pozastavení užívání v jiný den než dnes, podívejte se prosím na průvodce níže.",
+  "invalidRestDurationIllustrationYesterday": "Včera",
   "pauseTaking": "Pozastavení užívání",
   "changePauseStartDate": "Změnit datum začátku pozastavení užívání",
   "pauseTakingPeriodEnded": "Období pozastavení užívání skončilo",

@@ -126,6 +126,7 @@
   "pillSheetSettings": "Pilstrokie-instellings",
   "invalidAlreadyTakenPillUnmarkThenPause": "Merk asseblief vandag se pil as nie geneem nie voordat jy jou pilinname onderbreek.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "As jy die innameonderbreking op ’n ander dag as vandag wil begin, kan jy die gids hieronder raadpleeg.",
+  "invalidRestDurationIllustrationYesterday": "Gister",
   "pauseTaking": "Innameonderbreking",
   "changePauseStartDate": "Verander begindatum van innameonderbreking",
   "pauseTakingPeriodEnded": "Die innameonderbreking is verby",

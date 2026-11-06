@@ -126,6 +126,7 @@
   "pillSheetSettings": "Postavke za blister",
   "invalidAlreadyTakenPillUnmarkThenPause": "Prije nego što napravite pauzu u uzimanju pilula, označite današnju pilulu kao neuzetu.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ako želite da prekid počne nekog drugog dana, a ne danas, pogledajte upute u nastavku.",
+  "invalidRestDurationIllustrationYesterday": "Jučer",
   "pauseTaking": "Prekid",
   "changePauseStartDate": "Promjena datuma početka prekida",
   "pauseTakingPeriodEnded": "Period prekida uzimanja pilula je završen",

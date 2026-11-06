@@ -126,6 +126,7 @@
   "pillSheetSettings": "Instellingen voor de pillenstrip",
   "invalidAlreadyTakenPillUnmarkThenPause": "Markeer de pil van vandaag als niet ingenomen voordat je tijdelijk stopt met het innemen van de pil.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wil je de innamepauze op een andere dag dan vandaag laten beginnen? Bekijk dan de uitleg hieronder.",
+  "invalidRestDurationIllustrationYesterday": "Gisteren",
   "pauseTaking": "Innamepauze",
   "changePauseStartDate": "Startdatum van de innamepauze wijzigen",
   "pauseTakingPeriodEnded": "Je innamepauze is voorbij",

@@ -126,6 +126,7 @@
   "pillSheetSettings": "Tabletka blister sozlamalari",
   "invalidAlreadyTakenPillUnmarkThenPause": "Tabletkalarni qabul qilishni vaqtincha toʻxtatishdan oldin bugungi tabletkani qabul qilinmagan deb belgilang.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Agar pauzani bugundan boshqa kuni boshlamoqchi boʻlsangiz, quyidagi qoʻllanmani koʻring.",
+  "invalidRestDurationIllustrationYesterday": "Kecha",
   "pauseTaking": "Pauza",
   "changePauseStartDate": "Qabul qilishdagi pauza boshlanish sanasini oʻzgartiring",
   "pauseTakingPeriodEnded": "Tabletkalarni qabul qilishdagi pauza davri tugadi",

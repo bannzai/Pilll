@@ -126,6 +126,7 @@
   "pillSheetSettings": "पिल शीट सेटिंग्ज",
   "invalidAlreadyTakenPillUnmarkThenPause": "गोळ्या घेणे तात्पुरते थांबवण्यापूर्वी आजची गोळी घेतली नाही असे चिन्हांकित करा.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "आजऐवजी दुसऱ्या दिवसापासून सेवन विराम सुरू करायचा असल्यास, कृपया खालील मार्गदर्शक पाहा.",
+  "invalidRestDurationIllustrationYesterday": "काल",
   "pauseTaking": "सेवन विराम",
   "changePauseStartDate": "कृपया सेवन विराम सुरू होण्याची तारीख बदला",
   "pauseTakingPeriodEnded": "सेवन विरामाचा कालावधी संपला आहे",

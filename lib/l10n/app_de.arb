@@ -126,6 +126,7 @@
   "pillSheetSettings": "Einstellungen für den Pillenblister",
   "invalidAlreadyTakenPillUnmarkThenPause": "Markiere die Pille für heute als nicht eingenommen, bevor du die Einnahme pausierst.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wenn du die Pillenpause an einem anderen Tag als heute beginnen möchtest, sieh dir die Anleitung unten an.",
+  "invalidRestDurationIllustrationYesterday": "Gestern",
   "pauseTaking": "Pillenpause",
   "changePauseStartDate": "Startdatum der Pillenpause ändern",
   "pauseTakingPeriodEnded": "Deine Pillenpause ist zu Ende",

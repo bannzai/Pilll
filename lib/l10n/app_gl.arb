@@ -126,6 +126,7 @@
   "pillSheetSettings": "Configuración do blíster",
   "invalidAlreadyTakenPillUnmarkThenPause": "Antes de facer unha pausa na toma da pílula, marca a de hoxe como non tomada.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se queres comezar a pausa na toma un día distinto de hoxe, consulta a guía de abaixo.",
+  "invalidRestDurationIllustrationYesterday": "Onte",
   "pauseTaking": "Pausa na toma",
   "changePauseStartDate": "Cambiar a data de inicio da pausa na toma",
   "pauseTakingPeriodEnded": "Rematou a pausa na toma",

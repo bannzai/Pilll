@@ -126,6 +126,7 @@
   "pillSheetSettings": "ការកំណត់បន្ទះថ្នាំគ្រាប់",
   "invalidAlreadyTakenPillUnmarkThenPause": "មុនពេលផ្អាកការលេបថ្នាំគ្រាប់ជាបណ្ដោះអាសន្ន សូមកំណត់ថាថ្នាំគ្រាប់ថ្ងៃនេះមិនទាន់បានលេប។",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ប្រសិនបើអ្នកចង់ចាប់ផ្តើមផ្អាកការលេបថ្នាំនៅថ្ងៃផ្សេងពីថ្ងៃនេះ សូមមើលការណែនាំខាងក្រោម។",
+  "invalidRestDurationIllustrationYesterday": "ម្សិលមិញ",
   "pauseTaking": "ផ្អាកការលេបថ្នាំ",
   "changePauseStartDate": "ប្ដូរថ្ងៃចាប់ផ្ដើមផ្អាកការលេបថ្នាំ",
   "pauseTakingPeriodEnded": "រយៈពេលផ្អាកការលេបថ្នាំបានបញ្ចប់ហើយ",

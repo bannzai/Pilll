@@ -126,6 +126,7 @@
   "pillSheetSettings": "Indstillinger for pillekort",
   "invalidAlreadyTakenPillUnmarkThenPause": "Markér dagens p-pille som ikke taget, før du sætter indtagelsen på pause.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Hvis du vil starte en indtagelsespause på en anden dag end i dag, kan du se vejledningen nedenfor.",
+  "invalidRestDurationIllustrationYesterday": "I går",
   "pauseTaking": "Indtagelsespause",
   "changePauseStartDate": "Skift startdato for indtagelsespause",
   "pauseTakingPeriodEnded": "Din indtagelsespause er slut",

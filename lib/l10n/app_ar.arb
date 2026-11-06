@@ -126,6 +126,7 @@
   "pillSheetSettings": "إعدادات شريط الحبوب",
   "invalidAlreadyTakenPillUnmarkThenPause": "سجلي حبة اليوم على أنها لم تُؤخذ قبل بدء التوقف المؤقت عن تناول الحبوب.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "إذا أردتِ بدء إيقاف تناول الحبوب في يوم غير اليوم، فاطّلعي على الدليل أدناه.",
+  "invalidRestDurationIllustrationYesterday": "أمس",
   "pauseTaking": "إيقاف تناول الحبوب",
   "changePauseStartDate": "تغيير تاريخ بدء إيقاف تناول الحبوب",
   "pauseTakingPeriodEnded": "انتهت فترة إيقاف تناول الحبوب",
