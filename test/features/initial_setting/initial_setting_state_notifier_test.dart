@@ -5,6 +5,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/provider/batch.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -19,7 +20,6 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -27,6 +27,7 @@ import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
@@ -62,7 +63,7 @@ void main() {
   group("#selectedFirstPillSheetType", () {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchSetSetting = MockBatchSetSetting();
 
       final batchSetPillSheetModifiedHistory =
@@ -71,7 +72,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -103,7 +104,7 @@ void main() {
       );
     });
     test("re select first pill sheet type", () {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -113,7 +114,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -160,7 +161,7 @@ void main() {
   });
   group("#addPillSheetType", () {
     test("add new one", () {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -170,7 +171,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -206,7 +207,7 @@ void main() {
   });
   group("#changePillSheetType", () {
     test("replace with index", () {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -216,7 +217,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -253,7 +254,7 @@ void main() {
   });
   group("#removePillSheetType", () {
     test("remove with index", () {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -263,7 +264,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -306,7 +307,7 @@ void main() {
         mockTodayRepository.now(),
       ).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -316,7 +317,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -353,7 +354,7 @@ void main() {
         mockTodayRepository.now(),
       ).thenReturn(DateTime(2020, 9, 29, 20, 0, 0));
 
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
       final batchFactory = MockBatchFactory();
       final batchSetSetting = MockBatchSetSetting();
 
@@ -363,7 +364,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -397,7 +398,8 @@ void main() {
   });
   group("#register", () {
     test("state.pillSheetTypes has one pillSheetType", () async {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
+      when(startPromotion()).thenAnswer((_) => Future.value());
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -456,7 +458,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -486,10 +488,11 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
+      await store.register(user: const User(), customerInfo: freeCustomerInfo);
     });
     test("state.pillSheetTypes has two pillSheetType", () async {
-      final endInitialSetting = MockEndInitialSetting();
+      final startPromotion = MockStartPromotion();
+      when(startPromotion()).thenAnswer((_) => Future.value());
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -566,7 +569,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -597,7 +600,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
+      await store.register(user: const User(), customerInfo: freeCustomerInfo);
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
@@ -615,11 +618,8 @@ void main() {
         timezoneDatabaseName: null,
       );
 
-      final remoteConfigParameter = RemoteConfigParameter();
-      final endInitialSetting = MockEndInitialSetting();
-      when(
-        endInitialSetting(remoteConfigParameter),
-      ).thenAnswer((_) => Future.value());
+      final startPromotion = MockStartPromotion();
+      when(startPromotion()).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -668,7 +668,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -698,18 +698,19 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
+      await store.register(user: const User(), customerInfo: freeCustomerInfo);
     });
 
     group("トライアルの開始", () {
       ProviderContainer buildContainer({
-        required EndInitialSetting endInitialSetting,
+        required StartPromotion startPromotion,
+        required MockWriteBatch batch,
       }) {
         final batchFactory = MockBatchFactory();
-        when(batchFactory.batch()).thenReturn(MockWriteBatch());
+        when(batchFactory.batch()).thenReturn(batch);
         return ProviderContainer(
           overrides: [
-            endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+            startPromotionProvider.overrideWith((ref) => startPromotion),
             batchFactoryProvider.overrideWithValue(batchFactory),
             batchSetSettingProvider
                 .overrideWith((ref) => MockBatchSetSetting()),
@@ -719,9 +720,6 @@ void main() {
             batchSetPillSheetGroupProvider.overrideWith(
               (ref) => MockBatchSetPillSheetGroup(),
             ),
-            remoteConfigParameterProvider.overrideWithValue(
-              RemoteConfigParameter(),
-            ),
             registerReminderLocalNotificationRunnerProvider.overrideWithValue(
               registerReminderLocalNotificationRunner,
             ),
@@ -729,29 +727,71 @@ void main() {
         );
       }
 
-      test("トライアルを開始していないユーザーは endInitialSetting を呼ぶ", () async {
-        final endInitialSetting = MockEndInitialSetting();
-        when(endInitialSetting(any)).thenAnswer((_) => Future.value());
-        final container = buildContainer(endInitialSetting: endInitialSetting);
+      test(
+          "トライアルを開始していないユーザー (Promotional Entitlement も User.beginTrialDate も無い) は startPromotion を 1 回呼ぶ",
+          () async {
+        final startPromotion = MockStartPromotion();
+        when(startPromotion()).thenAnswer((_) => Future.value());
+        final container = buildContainer(
+            startPromotion: startPromotion, batch: MockWriteBatch());
 
         await container
             .read(initialSettingStateNotifierProvider.notifier)
-            .register(user: const User());
+            .register(user: const User(), customerInfo: freeCustomerInfo);
 
-        verify(endInitialSetting(any)).called(1);
+        verify(startPromotion()).called(1);
       });
 
       test(
-          "トライアルを開始済みのユーザー (trialIsAlreadyBegin が true) は endInitialSetting を呼ばない",
+          "Promotional Entitlement でトライアルを付与済みのユーザーは startPromotion を呼ばない",
           () async {
-        final endInitialSetting = MockEndInitialSetting();
-        final container = buildContainer(endInitialSetting: endInitialSetting);
+        final startPromotion = MockStartPromotion();
+        final container = buildContainer(
+            startPromotion: startPromotion, batch: MockWriteBatch());
 
         await container
             .read(initialSettingStateNotifierProvider.notifier)
-            .register(user: User(beginTrialDate: DateTime.parse("2020-09-01")));
+            .register(
+              user: const User(),
+              customerInfo: trialCustomerInfo(
+                  trialDeadlineDate: DateTime.parse("2020-09-20")),
+            );
 
-        verifyNever(endInitialSetting(any));
+        verifyNever(startPromotion());
+      });
+
+      test(
+          "Promotional Entitlement 以前に User.beginTrialDate でトライアルを始めた既存ユーザーは startPromotion を呼ばない",
+          () async {
+        final startPromotion = MockStartPromotion();
+        final container = buildContainer(
+            startPromotion: startPromotion, batch: MockWriteBatch());
+
+        await container
+            .read(initialSettingStateNotifierProvider.notifier)
+            .register(
+              user: User(beginTrialDate: DateTime.parse("2020-09-01")),
+              customerInfo: freeCustomerInfo,
+            );
+
+        verifyNever(startPromotion());
+      });
+
+      test("startPromotion が例外を投げた時は初期設定のバッチを commit せずに例外を投げる", () async {
+        final startPromotion = MockStartPromotion();
+        when(startPromotion()).thenThrow(Exception("offline"));
+        final batch = MockWriteBatch();
+        final container =
+            buildContainer(startPromotion: startPromotion, batch: batch);
+
+        await expectLater(
+          container
+              .read(initialSettingStateNotifierProvider.notifier)
+              .register(user: const User(), customerInfo: freeCustomerInfo),
+          throwsException,
+        );
+
+        verifyNever(batch.commit());
       });
     });
   });
@@ -783,12 +823,12 @@ void main() {
       when(batchSetPillSheetModifiedHistory(any, any)).thenReturn(null);
       final batchSetSetting = MockBatchSetSetting();
       when(batchSetSetting(any, any)).thenReturn(null);
+      final startPromotion = MockStartPromotion();
+      when(startPromotion()).thenAnswer((_) => Future.value());
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
-          ),
+          startPromotionProvider.overrideWith((ref) => startPromotion),
           batchFactoryProvider.overrideWithValue(batchFactory),
           batchSetSettingProvider.overrideWith((ref) => batchSetSetting),
           batchSetPillSheetModifiedHistoryProvider.overrideWith(
@@ -813,7 +853,7 @@ void main() {
       );
       store.selectYazFlex();
       input(store);
-      await store.register(user: const User());
+      await store.register(user: const User(), customerInfo: freeCustomerInfo);
 
       return verify(batchSetPillSheetGroup(batch, captureAny)).captured.single
           as PillSheetGroup;
@@ -1237,8 +1277,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1310,8 +1350,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1351,8 +1391,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1407,8 +1447,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1449,8 +1489,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1494,8 +1534,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
@@ -1534,8 +1574,8 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          endInitialSettingProvider.overrideWith(
-            (ref) => MockEndInitialSetting(),
+          startPromotionProvider.overrideWith(
+            (ref) => MockStartPromotion(),
           ),
           batchFactoryProvider.overrideWithValue(MockBatchFactory()),
           batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),

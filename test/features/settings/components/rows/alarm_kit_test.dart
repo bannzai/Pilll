@@ -57,8 +57,9 @@ void main() {
           // プレミアム紹介シートは読み込み中の表示のままにして、RevenueCat に触れないようにする
           purchaseOfferingsProvider
               .overrideWith((ref) => Completer<Offerings>().future),
-          userProvider
-              .overrideWith((ref) => Stream.value(User(isPremium: isPremium))),
+          userProvider.overrideWith((ref) => Stream.value(const User())),
+          customerInfoProviderOverride(
+              isPremium ? premiumCustomerInfo : freeCustomerInfo),
         ],
         child: MaterialApp(
           home: Scaffold(
