@@ -1,0 +1,7 @@
+• Se toma YAZ Flex, pode agora definir os dias de toma na configuração inicial a partir da última pausa e do número inicial
+• As interrupções já não se podem sobrepor e corrigimos a contagem dos dias de interrupção e das pílulas esquecidas
+• Revimos as traduções e as datas, os números das pílulas e as notificações seguem agora o formato de cada idioma
+• Corrigimos um problema em que a app podia fechar logo após ser aberta
+• Atualização de segurança
+
+Se tiver outros pedidos ou comentários, por favor contacte-nos através do "Formulário de contacto" nas Definições.
