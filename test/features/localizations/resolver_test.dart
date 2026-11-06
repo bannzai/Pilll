@@ -167,21 +167,84 @@ void main() {
     });
   });
 
-  group('#applyDeviceAppLocale', () {
-    test('en_US の端末では L と Intl.defaultLocale が en になる', () {
-      // L と Intl.defaultLocale はグローバルなため、ほかのテストに影響しないよう元に戻す
+  group('#applyAppLocaleWithoutUI', () {
+    /// [initialSharedPreferencesValues] を SharedPreferences の初期値、端末の言語を [deviceLocales] にして
+    /// [applyAppLocaleWithoutUI] を呼ぶ。
+    /// L と Intl.defaultLocale はグローバルなため、ほかのテストに影響しないようテストの後で元に戻す
+    Future<void> apply({
+      required bool isDebugMode,
+      required Map<String, Object> initialSharedPreferencesValues,
+      required List<Locale> deviceLocales,
+      required String deviceLocaleName,
+    }) async {
       final previousL = L;
       final previousDefaultLocale = Intl.defaultLocale;
       addTearDown(() {
         L = previousL;
         Intl.defaultLocale = previousDefaultLocale;
       });
+      SharedPreferences.setMockInitialValues(initialSharedPreferencesValues);
 
-      applyDeviceAppLocale(
-          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
+      await applyAppLocaleWithoutUI(
+        isDebugMode: isDebugMode,
+        deviceLocales: deviceLocales,
+        deviceLocaleName: deviceLocaleName,
+      );
+    }
 
-      expect(L.localeName, 'en');
-      expect(Intl.defaultLocale, 'en');
+    group('debug ビルド', () {
+      test('表示言語に de を保存した en_US の端末では L と Intl.defaultLocale が de になる', () async {
+        await apply(
+          isDebugMode: true,
+          initialSharedPreferencesValues: {
+            StringKey.debugAppLanguageCode: 'de'
+          },
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'de');
+        expect(Intl.defaultLocale, 'de');
+      });
+      test('表示言語の保存が無い en_US の端末では L と Intl.defaultLocale が ja になる', () async {
+        await apply(
+          isDebugMode: true,
+          initialSharedPreferencesValues: {},
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'ja');
+        expect(Intl.defaultLocale, 'ja');
+      });
+    });
+
+    group('release ビルド', () {
+      test('表示言語に de が保存されていても en_US の端末では L と Intl.defaultLocale が en になる',
+          () async {
+        await apply(
+          isDebugMode: false,
+          initialSharedPreferencesValues: {
+            StringKey.debugAppLanguageCode: 'de'
+          },
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'en');
+        expect(Intl.defaultLocale, 'en');
+      });
+      test('サポート外の言語 xx_XX だけの端末では L と Intl.defaultLocale が en になる', () async {
+        await apply(
+          isDebugMode: false,
+          initialSharedPreferencesValues: {},
+          deviceLocales: const [Locale('xx', 'XX')],
+          deviceLocaleName: 'xx_XX',
+        );
+
+        expect(L.localeName, 'en');
+        expect(Intl.defaultLocale, 'en');
+      });
     });
   });
 
