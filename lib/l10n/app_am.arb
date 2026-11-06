@@ -124,6 +124,7 @@
   "taken": "ተወስዷል",
   "notTaken": "ክኒን አልተወሰደም",
   "pillSheetSettings": "የክኒን ሉህ ቅንብሮች",
+  "invalidAlreadyTakenPillUnmarkThenPause": "የዛሬውን ክኒን ያልተወሰደ ብለው ከመዘገቡ በኋላ ክኒን መውሰድን ለጊዜው ያቁሙ።",
   "pauseTaking": "ለጊዜው ማቆም",
   "changePauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይቀይሩ",
   "pauseTakingPeriodEnded": "ለጊዜው ማቆም የቆየበት ጊዜ አብቅቷል",

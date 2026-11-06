@@ -124,6 +124,7 @@
   "taken": "Đã uống",
   "notTaken": "Chưa uống thuốc",
   "pillSheetSettings": "Cài đặt vỉ thuốc",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Trước khi tạm ngưng uống thuốc, vui lòng đánh dấu viên thuốc hôm nay là chưa uống.",
   "pauseTaking": "Tạm ngừng uống thuốc",
   "changePauseStartDate": "Đổi ngày bắt đầu tạm ngừng uống thuốc",
   "pauseTakingPeriodEnded": "Thời gian bạn tạm ngừng uống thuốc đã kết thúc",

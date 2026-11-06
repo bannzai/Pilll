@@ -124,6 +124,7 @@
   "taken": "लिइसकियो",
   "notTaken": "चक्की खाएको छैन",
   "pillSheetSettings": "चक्की पत्ता सेटिङ",
+  "invalidAlreadyTakenPillUnmarkThenPause": "चक्की खान केही समयका लागि रोक्नुअघि आजको चक्की नखाएको भनी चिन्ह लगाउनुहोस्।",
   "pauseTaking": "सेवन विराम",
   "changePauseStartDate": "सेवन विराम सुरु हुने मिति परिवर्तन गर्नुहोस्",
   "pauseTakingPeriodEnded": "सेवन विरामको अवधि सकिएको छ",

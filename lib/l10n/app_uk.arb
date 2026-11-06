@@ -124,6 +124,7 @@
   "taken": "Прийнято",
   "notTaken": "Пігулку не прийнято",
   "pillSheetSettings": "Налаштування блістера",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Перш ніж тимчасово припинити прийом пігулок, позначте сьогоднішню пігулку як неприйняту.",
   "pauseTaking": "Призупинення прийому",
   "changePauseStartDate": "Змінити дату початку призупинення прийому",
   "pauseTakingPeriodEnded": "Період призупинення прийому пігулок завершився",

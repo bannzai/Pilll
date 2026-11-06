@@ -124,6 +124,7 @@
   "taken": "Presa",
   "notTaken": "Píndola no presa",
   "pillSheetSettings": "Configuració del blíster",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Abans de fer una pausa en la presa de la píndola, marca la d'avui com a no presa.",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Canvia la data d'inici de la pausa",
   "pauseTakingPeriodEnded": "S'ha acabat el període de pausa",

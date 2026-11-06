@@ -124,6 +124,7 @@
   "taken": "لے لی گئی",
   "notTaken": "گولی ابھی نہیں لی گئی",
   "pillSheetSettings": "گولیوں کی پٹی کی ترتیبات",
+  "invalidAlreadyTakenPillUnmarkThenPause": "گولیاں لینا عارضی طور پر روکنے سے پہلے آج کی گولی کو ’نہیں لی‘ کے طور پر نشان زد کریں۔",
   "pauseTaking": "توقف",
   "changePauseStartDate": "گولی لینے میں توقف شروع ہونے کی تاریخ بدلیں",
   "pauseTakingPeriodEnded": "گولی لینے میں توقف کی مدت ختم ہو گئی ہے",

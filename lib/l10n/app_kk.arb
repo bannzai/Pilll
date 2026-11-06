@@ -124,6 +124,7 @@
   "taken": "Қабылданды",
   "notTaken": "Таблетка қабылданбаған",
   "pillSheetSettings": "Таблетка блистерінің баптаулары",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Дәрі қабылдауды уақытша тоқтатпас бұрын бүгінгі таблетканы қабылданбаған деп белгілеңіз.",
   "pauseTaking": "Кідіріс",
   "changePauseStartDate": "Қабылдаудағы кідіріс басталатын күнді өзгерту",
   "pauseTakingPeriodEnded": "Қабылдаудағы кідіріс мерзімі аяқталды",

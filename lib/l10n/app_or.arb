@@ -124,6 +124,7 @@
   "taken": "ନିଆଯାଇଛି",
   "notTaken": "ବଟିକା ଖିଆଯାଇନାହିଁ",
   "pillSheetSettings": "ବଟିକା ସିଟ ସେଟିଂ",
+  "invalidAlreadyTakenPillUnmarkThenPause": "ବଟିକା ଖାଇବା କିଛି ସମୟ ପାଇଁ ବନ୍ଦ କରିବା ପୂର୍ବରୁ ଆଜିର ବଟିକାକୁ ଖାଇନାହାନ୍ତି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ।",
   "pauseTaking": "ସେବନ ବିରତି",
   "changePauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",
   "pauseTakingPeriodEnded": "ସେବନ ବିରତିର ଅବଧି ଶେଷ ହୋଇଛି",

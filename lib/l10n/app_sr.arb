@@ -124,6 +124,7 @@
   "taken": "Узета",
   "notTaken": "Пилула није узета",
   "pillSheetSettings": "Подешавања за блистер",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Пре него што привремено престанете да узимате пилуле, означите данашњу пилулу као неузету.",
   "pauseTaking": "Прекид узимања",
   "changePauseStartDate": "Промените датум почетка прекида узимања",
   "pauseTakingPeriodEnded": "Период прекида узимања пилула је завршен",

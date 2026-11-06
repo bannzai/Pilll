@@ -124,6 +124,7 @@
   "taken": "Iignoh",
   "notTaken": "Pille no nöd gnoh",
   "pillSheetSettings": "Iistellige für de Pilleblister",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Markier d Pille vo hüt als nöd gnoh, bevor du mit em Iinäh e Paus machsch.",
   "pauseTaking": "Iinahmepause",
   "changePauseStartDate": "Startdatum vo de Iinahmepause ändere",
   "pauseTakingPeriodEnded": "Dini sälber gwählti Iinahmepause isch verbii",

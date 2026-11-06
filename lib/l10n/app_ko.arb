@@ -124,6 +124,7 @@
   "taken": "복용했어요",
   "notTaken": "아직 복용하지 않았어요",
   "pillSheetSettings": "알약 시트 설정",
+  "invalidAlreadyTakenPillUnmarkThenPause": "복용을 잠시 쉬기 전에 오늘 먹을 피임약을 미복용으로 변경해 주세요.",
   "pauseTaking": "일시 중지",
   "changePauseStartDate": "일시 중지 시작일 변경",
   "pauseTakingPeriodEnded": "복용 일시 중지 기간이 끝났어요",

@@ -124,6 +124,7 @@
   "taken": "Taget",
   "notTaken": "P-piller inte taget",
   "pillSheetSettings": "Inställningar för p-pillerkarta",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Markera dagens p-piller som inte taget innan du tar en paus från att ta p-piller.",
   "pauseTaking": "Paus",
   "changePauseStartDate": "Ändra startdatum för pausen",
   "pauseTakingPeriodEnded": "Din valda paus från att ta p-piller är slut",

@@ -124,6 +124,7 @@
   "taken": "Tomada",
   "notTaken": "Píldora sin tomar",
   "pillSheetSettings": "Configuración del blíster",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Marca la píldora de hoy como no tomada antes de pausar la toma.",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Cambiar la fecha de inicio de la pausa",
   "pauseTakingPeriodEnded": "La pausa ha terminado",

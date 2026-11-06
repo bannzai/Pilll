@@ -124,6 +124,7 @@
   "taken": "مصرف شد",
   "notTaken": "قرص مصرف‌نشده",
   "pillSheetSettings": "تنظیمات ورق قرص",
+  "invalidAlreadyTakenPillUnmarkThenPause": "پیش از توقف موقت مصرف قرص، لطفاً قرص امروز را به‌عنوان مصرف‌نشده علامت بزنید.",
   "pauseTaking": "توقف موقت مصرف",
   "changePauseStartDate": "تغییر تاریخ شروع توقف موقت مصرف",
   "pauseTakingPeriodEnded": "دورهٔ توقف موقت مصرف شما به پایان رسید",

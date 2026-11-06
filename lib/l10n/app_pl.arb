@@ -124,6 +124,7 @@
   "taken": "Zażyta",
   "notTaken": "Tabletka nieprzyjęta",
   "pillSheetSettings": "Ustawienia blistra",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Przed tymczasowym wstrzymaniem przyjmowania pigułek oznacz dzisiejszą pigułkę jako nieprzyjętą.",
   "pauseTaking": "Wstrzymanie przyjmowania",
   "changePauseStartDate": "Zmień datę rozpoczęcia wstrzymania przyjmowania",
   "pauseTakingPeriodEnded": "Okres wstrzymania przyjmowania pigułek dobiegł końca",

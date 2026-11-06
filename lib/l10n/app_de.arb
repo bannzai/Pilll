@@ -124,6 +124,7 @@
   "taken": "Eingenommen",
   "notTaken": "Pille noch nicht eingenommen",
   "pillSheetSettings": "Einstellungen für den Pillenblister",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Markiere die Pille für heute als nicht eingenommen, bevor du die Einnahme pausierst.",
   "pauseTaking": "Pillenpause",
   "changePauseStartDate": "Startdatum der Pillenpause ändern",
   "pauseTakingPeriodEnded": "Deine Pillenpause ist zu Ende",

@@ -124,6 +124,7 @@
   "taken": "ਲੈ ਲਈ",
   "notTaken": "ਗੋਲੀ ਨਹੀਂ ਲਈ ਗਈ",
   "pillSheetSettings": "ਗੋਲੀਆਂ ਦੀ ਪੱਤੀ ਦੀਆਂ ਸੈਟਿੰਗਾਂ",
+  "invalidAlreadyTakenPillUnmarkThenPause": "ਗੋਲੀ ਲੈਣੀ ਕੁਝ ਸਮੇਂ ਲਈ ਰੋਕਣ ਤੋਂ ਪਹਿਲਾਂ ਅੱਜ ਦੀ ਗੋਲੀ ਨੂੰ ‘ਨਹੀਂ ਲਈ’ ਵਜੋਂ ਨਿਸ਼ਾਨਬੱਧ ਕਰੋ।",
   "pauseTaking": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ",
   "changePauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ ਬਦਲੋ",
   "pauseTakingPeriodEnded": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਦੀ ਮਿਆਦ ਖ਼ਤਮ ਹੋ ਗਈ ਹੈ",

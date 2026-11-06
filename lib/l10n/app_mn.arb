@@ -124,6 +124,7 @@
   "taken": "Уусан",
   "notTaken": "Эмээ уугаагүй",
   "pillSheetSettings": "Эмийн блистерийн тохиргоо",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Эм уухаа түр завсарлахаасаа өмнө өнөөдрийн эмийг уугаагүй гэж тэмдэглэнэ үү.",
   "pauseTaking": "Түр завсарлага",
   "changePauseStartDate": "Эм уух түр завсарлагын эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эм уух түр завсарлага дууссан",

@@ -124,6 +124,7 @@
   "taken": "Tatt",
   "notTaken": "P-pille ikke tatt",
   "pillSheetSettings": "Innstillinger for pillebrett",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Marker dagens p-pille som ikke tatt før du tar en pause fra å ta p-piller.",
   "pauseTaking": "Inntakspause",
   "changePauseStartDate": "Endre startdato for inntakspause",
   "pauseTakingPeriodEnded": "Inntakspausen er over",

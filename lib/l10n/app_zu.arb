@@ -124,6 +124,7 @@
   "taken": "Ngiliphuzile",
   "notTaken": "Iphilisi alikaphuzwa",
   "pillSheetSettings": "Izilungiselelo zeshidi lamaphilisi",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Sicela umake iphilisi lanamuhla njengelingakaphuzwa ngaphambi kokumisa ukuphuza amaphilisi okwesikhashana.",
   "pauseTaking": "Ukumisa okwesikhashana",
   "changePauseStartDate": "Sicela ushintshe usuku lokuqala lokumisa okwesikhashana ukuphuza iphilisi",
   "pauseTakingPeriodEnded": "Isikhathi sakho sokumisa okwesikhashana ukuphuza amaphilisi sesiphelile",

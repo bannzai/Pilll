@@ -124,6 +124,7 @@
   "taken": "Geneem",
   "notTaken": "Nog nie geneem nie",
   "pillSheetSettings": "Pilstrokie-instellings",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Merk asseblief vandag se pil as nie geneem nie voordat jy jou pilinname onderbreek.",
   "pauseTaking": "Innameonderbreking",
   "changePauseStartDate": "Verander begindatum van innameonderbreking",
   "pauseTakingPeriodEnded": "Die innameonderbreking is verby",

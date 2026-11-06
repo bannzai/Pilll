@@ -124,6 +124,7 @@
   "taken": "Nainom na",
   "notTaken": "Hindi pa nainom ang pildoras",
   "pillSheetSettings": "Mga setting ng pakete ng pildoras",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Bago po kayo pansamantalang huminto sa pag-inom ng pildoras, markahan muna bilang hindi nainom ang pildoras para sa araw na ito.",
   "pauseTaking": "Pause",
   "changePauseStartDate": "Baguhin ang petsa ng simula ng pause",
   "pauseTakingPeriodEnded": "Natapos na ang pause sa pag-inom ninyo ng pildoras",

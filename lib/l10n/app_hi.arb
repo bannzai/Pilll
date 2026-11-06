@@ -124,6 +124,7 @@
   "taken": "ली गई",
   "notTaken": "गोली नहीं ली गई",
   "pillSheetSettings": "पिल स्ट्रिप की सेटिंग",
+  "invalidAlreadyTakenPillUnmarkThenPause": "गोली लेना कुछ समय के लिए रोकने से पहले आज की गोली को ‘नहीं ली’ के रूप में चिह्नित करें।",
   "pauseTaking": "गोली लेने में विराम",
   "changePauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
   "pauseTakingPeriodEnded": "गोली लेने में विराम की अवधि समाप्त हो गई है",

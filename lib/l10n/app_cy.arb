@@ -124,6 +124,7 @@
   "taken": "Wedi’i chymryd",
   "notTaken": "Heb gymryd y bilsen",
   "pillSheetSettings": "Gosodiadau'r stribed pils",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Cyn cymryd seibiant o gymryd y bilsen, nodwch nad ydych wedi cymryd bilsen heddiw.",
   "pauseTaking": "Oedi",
   "changePauseStartDate": "Newid dyddiad dechrau'r oedi",
   "pauseTakingPeriodEnded": "Mae eich cyfnod o oedi cyn cymryd y bilsen wedi dod i ben",

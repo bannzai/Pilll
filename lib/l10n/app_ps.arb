@@ -124,6 +124,7 @@
   "taken": "وخوړل شوه",
   "notTaken": "ګولۍ نه ده اخیستل شوې",
   "pillSheetSettings": "د ګولیو پاڼې تنظیمات",
+  "invalidAlreadyTakenPillUnmarkThenPause": "د ګولیو اخیستل په لنډمهاله توګه له درولو مخکې، د نن ورځې ګولۍ د نه اخیستل شوې په توګه په نښه کړئ.",
   "pauseTaking": "لنډمهاله درول",
   "changePauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
   "pauseTakingPeriodEnded": "د لنډمهاله درول موده پای ته ورسېده",

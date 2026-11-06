@@ -124,6 +124,7 @@
   "taken": "Alındı",
   "notTaken": "Hap henüz alınmadı",
   "pillSheetSettings": "Blister ayarları",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Hap almayı geçici olarak durdurmadan önce bugünkü hapı alınmadı olarak işaretleyin.",
   "pauseTaking": "Ara verme",
   "changePauseStartDate": "Hap alımına ara verme başlangıç tarihini değiştirin",
   "pauseTakingPeriodEnded": "Hap alımına ara verdiğiniz dönem sona erdi",

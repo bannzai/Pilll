@@ -124,6 +124,7 @@
   "taken": "Kimemezwa",
   "notTaken": "Kidonge bado hakijamezwa",
   "pillSheetSettings": "Mipangilio ya pakiti ya vidonge",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Tafadhali weka kidonge cha leo kuwa hakijamezwa kabla ya kusitisha kumeza vidonge kwa muda.",
   "pauseTaking": "Kusitisha kumeza vidonge kwa muda",
   "changePauseStartDate": "Tafadhali badilisha tarehe ya kuanza kusitisha kumeza vidonge",
   "pauseTakingPeriodEnded": "Kipindi chako cha kusitisha kumeza vidonge kwa muda kimeisha",

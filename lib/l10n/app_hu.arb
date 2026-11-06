@@ -124,6 +124,7 @@
   "taken": "Beszedve",
   "notTaken": "Tabletta nincs beszedve",
   "pillSheetSettings": "A tablettacsomag beállításai",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Mielőtt szünetelteted a tabletták szedését, jelöld a mai tablettát be nem vettként.",
   "pauseTaking": "Szüneteltetés",
   "changePauseStartDate": "A szüneteltetés kezdőnapjának módosítása",
   "pauseTakingPeriodEnded": "Véget ért a tabletta szedésének szüneteltetése",

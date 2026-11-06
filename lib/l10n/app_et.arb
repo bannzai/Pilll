@@ -124,6 +124,7 @@
   "taken": "Võetud",
   "notTaken": "Pill võtmata",
   "pillSheetSettings": "Pillilehe seaded",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Enne pillide võtmise ajutist peatamist märgi tänane pill võtmata jäetuks.",
   "pauseTaking": "Võtmise paus",
   "changePauseStartDate": "Muuda võtmise pausi alguskuupäeva",
   "pauseTakingPeriodEnded": "Sinu pillide võtmise paus on lõppenud",
