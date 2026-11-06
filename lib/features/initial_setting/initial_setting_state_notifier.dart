@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -202,7 +203,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillTakenCount: pillTakenCount);
   }
 
-  Future<void> register() async {
+  /// 初期設定の内容を保存し、トライアルを開始する。
+  /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
+  Future<void> register({required User user}) async {
     final batch = batchFactory.batch();
 
     final builtPillSheetGroup = state.buildPillSheetGroup();
@@ -232,7 +235,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
     }
 
-    await endInitialSetting(remoteConfigParameter);
+    if (!user.trialIsAlreadyBegin) {
+      await endInitialSetting(remoteConfigParameter);
+    }
   }
 
   void showHUD() {
@@ -256,6 +261,8 @@ class RegisterReminderLocalNotificationRunner {
     required bool premiumOrTrial,
     required Setting setting,
   }) async {
+    // 通知 ID は時刻と番号から決まり上書きされないため、初期設定をやり直した時に前回登録した通知が残らないよう全て解除してから登録する
+    await CancelReminderLocalNotification()();
     await RegisterReminderLocalNotification.run(
       pillSheetGroup: createdPillSheetGroup,
       activePillSheet: activePillSheet,
