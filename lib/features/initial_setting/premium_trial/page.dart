@@ -162,7 +162,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     if (customerInfo.trialIsAlreadyBegin(user: user)) {
                       await registerReminderLocalNotification();
                     } else {
-                      // RevenueCat の SDK はサーバーで付与した Promotional Entitlement を CustomerInfo の更新として通知しないことがあるため、取得し直す
+                      // StartPromotion がキャッシュを捨てて取得し直した CustomerInfo を customerInfoProvider に反映する。
+                      // 取得し直しで CustomerInfo の更新の listener が呼ばれるかを SDK の文書で確かめられないため、listener に頼らず読み直す
                       ref.invalidate(customerInfoProvider);
                     }
                     await AppRouter.endInitialSetting(

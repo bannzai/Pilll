@@ -100,6 +100,8 @@ class SettingPageBody extends StatelessWidget {
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final bool isHealthDataAvailable;
+
+  /// ログイン中のユーザーの RevenueCat の CustomerInfo。プレミアム・トライアルの表示の判定に使う
   final CustomerInfo customerInfo;
 
   const SettingPageBody({

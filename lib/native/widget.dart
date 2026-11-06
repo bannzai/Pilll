@@ -39,11 +39,14 @@ Future<void> syncActivePillSheetValue({
   }
 }
 
+/// Widget と共有する「プレミアム会員またはトライアル中か」のキー
+const _userIsPremiumOrTrialWidgetDataKey = 'userIsPremiumOrTrial';
+
 /// プレミアム会員またはトライアル中か ([premiumOrTrial]) を Widget に同期する。null はキーの削除になる
 Future<void> syncUserStatus({required bool? premiumOrTrial}) async {
   try {
     await HomeWidget.saveWidgetData(
-      'userIsPremiumOrTrial',
+      _userIsPremiumOrTrialWidgetDataKey,
       premiumOrTrial,
     );
     await updateWidget();
@@ -51,6 +54,9 @@ Future<void> syncUserStatus({required bool? premiumOrTrial}) async {
     debugPrint(error.toString());
   }
 }
+
+/// アプリの画面が最後に Widget へ同期した「プレミアム会員またはトライアル中か」を返す。同期したことが無ければ null
+Future<bool?> lastSyncedUserIsPremiumOrTrial() => HomeWidget.getWidgetData<bool>(_userIsPremiumOrTrialWidgetDataKey);
 
 Future<void> updateWidget() async {
   await HomeWidget.updateWidget(

@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/functions/firebase_functions.dart';
@@ -10,8 +12,9 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
 /// RevenueCat の Promotional Entitlement (トライアル) の productIdentifier の接頭辞。
-/// RevenueCat は Promotional Entitlement の productIdentifier を "rc_promo" で始め、entitlement 名と期間を続ける (例: rc_promo_Premium_three_day)。
-/// 出典: https://docs-origin.revenuecat.com/docs/dashboard-and-metrics/customer-history/promotionals 、bannzai/Focus の DigitalDetox/Features/CustomerInfo/CustomerInfo+.swift
+/// RevenueCat は Promotional Entitlement の productIdentifier を "rc_promo" で始め、entitlement 名と期間を続ける。
+/// 出典: RevenueCat REST API v1 の Grant an Entitlement の応答例 (entitlement pro_cat・期間 monthly の付与が subscriptions の "rc_promo_pro_cat_monthly"、store "promotional" で返る) https://www.revenuecat.com/docs/api-v1/entitlements.md 、
+/// 同じ前提で動いている bannzai/Focus の DigitalDetox/Features/CustomerInfo/CustomerInfo+.swift
 const promotionalPremiumProductIdentifierPrefix = 'rc_promo_$premiumEntitlements';
 
 /// ログイン中のユーザーの RevenueCat の CustomerInfo。プレミアム・トライアルの判定の正。
@@ -50,10 +53,29 @@ Future<CustomerInfo> fetchCustomerInfoOutsideUI({required String uid}) async {
   return Purchases.getCustomerInfo();
 }
 
+/// 画面の外 (通知のアクション・ネイティブからの呼び出し) で、プレミアム会員またはトライアル中かを返す。
+/// CustomerInfo を取得できない時 (オフラインで SDK のキャッシュが無い、Android の background isolate で SDK を使えない等) は、
+/// アプリの画面が最後に Widget へ同期した値を使う。この経路は服用記録の後にリマインダーを登録し直すため、取得の失敗でリマインダーを失わないようにする。
+/// 同期した値も無ければ例外を投げる (実際と異なる課金状態を作らないため)
+Future<bool> premiumOrTrialOutsideUI({required String uid, required User user}) async {
+  try {
+    return (await fetchCustomerInfoOutsideUI(uid: uid)).premiumOrTrial(user: user);
+  } catch (error, stackTrace) {
+    errorLogger.recordError(error, stackTrace);
+    final lastSynced = await lastSyncedUserIsPremiumOrTrial();
+    if (lastSynced == null) {
+      rethrow;
+    }
+    return lastSynced;
+  }
+}
+
+/// トライアルの付与 (サーバーの callable startPromotion) を提供する
 final startPromotionProvider = Provider((ref) => StartPromotion());
 
 /// サーバーの callable `startPromotion` でトライアル (RevenueCat の Promotional Entitlement) を付与し、端末の CustomerInfo のキャッシュを捨てて取得し直す。
-/// 付与の可否 (1 アカウント 1 回) と期限はサーバーが決める。付与は RevenueCat のサーバー側で起きるため、取得し直さないと端末の CustomerInfo に反映されない
+/// 付与の可否 (1 アカウント 1 回) と期限はサーバーが決める。
+/// キャッシュを捨てるのは、SDK の invalidateCustomerInfoCache の document コメントが、アプリの外で更新された時 (ダッシュボードで promotional を付与した時) の用途として挙げているため
 class StartPromotion {
   Future<void> call() async {
     await functions.startPromotion();

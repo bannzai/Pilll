@@ -104,6 +104,8 @@ const _monthlyCalendarHeight =
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
+
+  /// プレミアム会員またはトライアル中か。false の時は無料で見られる範囲を超えた月に Paywall への導線を出す
   final bool premiumOrTrial;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;

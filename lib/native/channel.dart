@@ -49,7 +49,7 @@ void definedChannel() {
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
-              premiumOrTrial: (await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid)).premiumOrTrial(user: user),
+              premiumOrTrial: await premiumOrTrialOutsideUI(uid: firebaseUser.uid, user: user),
               setting: setting,
             );
           }
