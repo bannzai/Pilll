@@ -5,6 +5,7 @@ import 'package:pilll/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import './l.dart';
 
 /// [AppLocalizationResolver] は [L] に [AppLocalizations] をセットするためのWidget
@@ -69,11 +70,20 @@ final appSupportedLocales = [
   ...AppLocalizations.supportedLocales.where((locale) => locale != const Locale('en')),
 ];
 
-/// [L] と [Intl.defaultLocale] を、[deviceAppLocale] で解決した端末の言語にする。引数は [deviceAppLocale] と同じ。
-/// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で通知の文言を端末の言語にするために使う。
+/// [L] と [Intl.defaultLocale] を、[AppLocalizationResolver] と同じ規則で決めた言語にする。
+/// [isDebugMode] が true の時は [debugAppLocale] (開発者オプションの表示言語)、false の時は [deviceAppLocale] (端末の言語) を使う。
+/// [deviceLocales] と [deviceLocaleName] は [deviceAppLocale] と同じ。
+/// [AppLocalizationResolver] が動かない状況 (UI を組み立てる前・UI の無い isolate) で、登録する通知の文言を画面と同じ言語にするために使う。
 /// UI が組み立てられた後は [AppLocalizationResolver] が上書きする。
-void applyDeviceAppLocale({required List<Locale> deviceLocales, required String deviceLocaleName}) {
-  final locale = deviceAppLocale(deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName);
+/// debug ビルドは SharedPreferences を読むため、`WidgetsFlutterBinding.ensureInitialized` の後に呼ぶ。
+Future<void> applyAppLocaleWithoutUI({
+  required bool isDebugMode,
+  required List<Locale> deviceLocales,
+  required String deviceLocaleName,
+}) async {
+  final locale = isDebugMode
+      ? debugAppLocale(savedLanguageCode: (await SharedPreferences.getInstance()).getString(StringKey.debugAppLanguageCode))
+      : deviceAppLocale(deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName);
   L = lookupAppLocalizations(locale);
   Intl.defaultLocale = locale.languageCode;
 }
