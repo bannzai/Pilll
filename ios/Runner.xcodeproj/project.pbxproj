@@ -10,7 +10,6 @@
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		2002EF782CB3E1860076D2FB /* ShareToSNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002EF772CB3E1860076D2FB /* ShareToSNS.swift */; };
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
-		202E35922AB7AD9A00473C5D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E35902AB7AD9A00473C5D /* Secret.xcconfig */; };
 		20547DFB2E7A766700E9E046 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
 		205637412AF907B60082C189 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205637402AF907B60082C189 /* Backport.swift */; };
 		2057C1C42E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
@@ -452,7 +451,6 @@
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				BA869E47258AFC9A000EBE33 /* becho.caf in Resources */,
-				202E35922AB7AD9A00473C5D /* Secret.xcconfig in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
