@@ -329,7 +329,8 @@ class RegisterReminderLocalNotification {
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
-    final customerInfo = ref.read(customerInfoProvider).asData?.valueOrNull;
+    // 取得し直しに失敗した時 (前の値を持つ AsyncError) も、UserSetup が表示に使っている同じユーザーの前の値で登録し直し、取り消したリマインダーを失わないようにする
+    final customerInfo = ref.read(customerInfoProvider).valueOrNull;
     if (pillSheetGroup == null || activePillSheet == null || setting == null || user == null || customerInfo == null) {
       return;
     }

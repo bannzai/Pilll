@@ -29,6 +29,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/remote_config.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
@@ -126,9 +127,15 @@ Future<void> handleNotificationAction(
       final pillSheetGroup = await quickRecordTakePill(database);
       syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
-      // リマインダーを登録し直す時の課金状態。取得できない時 (オフラインで SDK のキャッシュが無い等) は、登録済みのリマインダーを取り消す前に例外にして残す。
-      // 取り消した後に取得が失敗するとリマインダーが全て消えるため、取り消しより先に取得する
-      final customerInfo = await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid);
+      // リマインダーを登録し直す時の課金状態。取り消した後に取得が失敗するとリマインダーが全て消えるため、取り消しより先に取得する。
+      // 取得できない時 (オフラインで SDK のキャッシュが無い等) は、服用の記録は済んでいるので失敗の通知を出さず、登録済みのリマインダーを残して終える
+      final CustomerInfo customerInfo;
+      try {
+        customerInfo = await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid);
+      } catch (e, st) {
+        errorLogger.recordError(e, st);
+        return;
+      }
 
       // AlarmKit解除はRiverpodコンテナ内でのみ実行可能なため、ここではlocal notificationのみ解除
       final pendingNotifications = await localNotificationService.pendingReminderNotifications();

@@ -18,15 +18,16 @@ class SyncDataResolver extends HookConsumerWidget {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     final userValue = user.asData?.value;
-    final customerInfoValue = customerInfo.asData?.value;
+    // 取得し直しに失敗した時 (前の値を持つ AsyncError) は前の値を使う。前の値も無い時は同期せず、Widget に同期済みの値を残す
+    final customerInfoValue = customerInfo.valueOrNull;
     useEffect(() {
       final f = (() async {
-        if (user.isLoading || customerInfo.isLoading) {
+        if (user.isLoading || customerInfo.isLoading || customerInfoValue == null) {
           return;
         }
         try {
           syncUserStatus(
-            premiumOrTrial: userValue == null || customerInfoValue == null ? null : customerInfoValue.premiumOrTrial(user: userValue),
+            premiumOrTrial: userValue == null ? null : customerInfoValue.premiumOrTrial(user: userValue),
           );
         } catch (error) {
           debugPrint(error.toString());

@@ -280,8 +280,8 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
 }
 
 /// RevenueCat SDK を [uid] のユーザーで設定する
-void configurePurchases({required String uid}) {
-  Purchases.configure(
+Future<void> configurePurchases({required String uid}) {
+  return Purchases.configure(
     PurchasesConfiguration(
       Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
     )..appUserID = uid,
@@ -295,7 +295,7 @@ Future<void> initializePurchase(String uid) async {
   // 通知のアクションが画面より先に同じユーザーで設定している時 (fetchCustomerInfoOutsideUI) は設定し直さない。
   // listener は SDK が Set で持つため、同じ関数を何度登録しても 1 つになる
   if (!await Purchases.isConfigured) {
-    configurePurchases(uid: uid);
+    await configurePurchases(uid: uid);
   }
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
 }

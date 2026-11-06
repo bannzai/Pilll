@@ -46,7 +46,7 @@ class FixedCustomerInfoNotifier extends CustomerInfoNotifier {
 /// この経路は UserSetup を通らず RevenueCat SDK が未設定のことがあるため、未設定なら [uid] で設定してから取得する
 Future<CustomerInfo> fetchCustomerInfoOutsideUI({required String uid}) async {
   if (!await Purchases.isConfigured) {
-    configurePurchases(uid: uid);
+    await configurePurchases(uid: uid);
   }
   return Purchases.getCustomerInfo();
 }
