@@ -16,17 +16,30 @@ const promotionalPremiumProductIdentifierPrefix = 'rc_promo_$premiumEntitlements
 
 /// ログイン中のユーザーの RevenueCat の CustomerInfo。プレミアム・トライアルの判定の正。
 /// Purchases.configure の後に読む。UserSetup が configure を待ってからこの Provider を読み込み、読み込みが終わるまで画面を出さない
-final customerInfoProvider = StreamProvider<CustomerInfo>((ref) {
-  final controller = StreamController<CustomerInfo>();
-  void customerInfoUpdateListener(CustomerInfo customerInfo) => controller.add(customerInfo);
-  Purchases.addCustomerInfoUpdateListener(customerInfoUpdateListener);
-  Purchases.getCustomerInfo().then(controller.add, onError: controller.addError);
-  ref.onDispose(() {
-    Purchases.removeCustomerInfoUpdateListener(customerInfoUpdateListener);
-    controller.close();
-  });
-  return controller.stream;
-});
+final customerInfoProvider = AsyncNotifierProvider<CustomerInfoNotifier, CustomerInfo>(CustomerInfoNotifier.new);
+
+/// RevenueCat SDK から CustomerInfo を取得し、SDK が通知する更新を反映する。
+/// StreamProvider ではなく AsyncNotifier にしているのは、開発者オプション・スクリーンショット・テストで [FixedCustomerInfoNotifier] に差し替えた時に、最初のフレームから値を持たせる (requireValue で読める) ため
+class CustomerInfoNotifier extends AsyncNotifier<CustomerInfo> {
+  @override
+  FutureOr<CustomerInfo> build() {
+    void customerInfoUpdateListener(CustomerInfo customerInfo) => state = AsyncData(customerInfo);
+    Purchases.addCustomerInfoUpdateListener(customerInfoUpdateListener);
+    ref.onDispose(() => Purchases.removeCustomerInfoUpdateListener(customerInfoUpdateListener));
+    return Purchases.getCustomerInfo();
+  }
+}
+
+/// [customerInfo] を返し続ける CustomerInfoNotifier。開発者オプション・スクリーンショット・テストで課金状態を固定するために customerInfoProvider を差し替える
+class FixedCustomerInfoNotifier extends CustomerInfoNotifier {
+  FixedCustomerInfoNotifier({required this.customerInfo});
+
+  /// 返し続ける CustomerInfo
+  final CustomerInfo customerInfo;
+
+  @override
+  FutureOr<CustomerInfo> build() => customerInfo;
+}
 
 /// 画面の外 (通知のアクション・ネイティブからの呼び出し) で CustomerInfo を取得する。
 /// この経路は UserSetup を通らず RevenueCat SDK が未設定のことがあるため、未設定なら [uid] で設定してから取得する

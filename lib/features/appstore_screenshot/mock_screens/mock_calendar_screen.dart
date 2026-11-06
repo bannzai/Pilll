@@ -63,7 +63,7 @@ class MockCalendarScreen extends StatelessWidget {
     return ProviderScope(
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
-        customerInfoProvider.overrideWith((ref) => Stream.multi((controller) => controller.addSync(mockPremiumCustomerInfo))),
+        customerInfoProvider.overrideWith(() => FixedCustomerInfoNotifier(customerInfo: mockPremiumCustomerInfo)),
       ],
       child: Container(
         color: AppColors.background,

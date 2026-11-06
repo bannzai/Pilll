@@ -64,8 +64,8 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
                   ),
                 ),
                 customerInfoProvider.overrideWith(
-                  (ref) => Stream.value(
-                    CustomerInfo(
+                  () => FixedCustomerInfoNotifier(
+                    customerInfo: CustomerInfo(
                       const EntitlementInfos({}, {}),
                       const {},
                       // 課金中のパターンは、Promotional Entitlement ではない商品の購読があれば CustomerInfoPremium.isPremium が true になる。商品 ID は表示に使わないため実在しない値でよい
