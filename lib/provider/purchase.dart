@@ -19,7 +19,6 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/app_is_released.dart';
-import 'package:pilll/utils/functions/firebase_functions.dart';
 
 enum OfferingType { discount, specialOffering, premium }
 
@@ -261,13 +260,14 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
+      // Premium entitlement が無い CustomerInfo (解約・返金で消えた後の更新) では isPremium を false に戻す
+      isActivated: premiumEntitlement?.isActive ?? false,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
     );
-    await SyncPurchaseInfo(functions)();
     analytics.logEvent(name: 'end_update_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
@@ -287,7 +287,9 @@ Future<void> syncPurchaseInfo() async {
 
   try {
     analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await SyncPurchaseInfo(functions)();
+    await SyncPurchaseInfo(DatabaseConnection(uid))(
+      isActivated: (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements]?.isActive ?? false,
+    );
     analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);

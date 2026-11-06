@@ -1,16 +1,16 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
-import 'package:pilll/utils/functions/firebase_functions.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -26,6 +26,7 @@ class UpdatePurchaseInfo {
   UpdatePurchaseInfo(this.databaseConnection);
 
   Future<void> call({
+    required bool? isActivated,
     required String? entitlementIdentifier,
     required String? premiumPlanIdentifier,
     required String purchaseAppID,
@@ -33,6 +34,7 @@ class UpdatePurchaseInfo {
     required String? originalPurchaseDate,
   }) async {
     await databaseConnection.userRawReference().set({
+      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
     }, SetOptions(merge: true));
     final privates = {
@@ -49,14 +51,16 @@ class UpdatePurchaseInfo {
   }
 }
 
-/// isPremium をサーバー (syncRevenueCat) に設定させる。
-/// isPremium は権限の判定に使われるため、端末上の CustomerInfo から書かずサーバーが RevenueCat に照会して決める
+/// 端末の CustomerInfo の Premium entitlement から isPremium を users ドキュメントに書く。
+/// 権限の正は RevenueCat に移す予定で、それまでの間はこのクライアントの書き込みで isPremium を決める
 class SyncPurchaseInfo {
-  final FirebaseFunctions firebaseFunctions;
-  SyncPurchaseInfo(this.firebaseFunctions);
+  final DatabaseConnection databaseConnection;
+  SyncPurchaseInfo(this.databaseConnection);
 
-  Future<void> call() async {
-    await firebaseFunctions.syncRevenueCat();
+  Future<void> call({required bool isActivated}) async {
+    await databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isPremium: isActivated,
+    }, SetOptions(merge: true));
   }
 }
 
@@ -250,22 +254,34 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
       UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+
+      UserFirestoreFieldKeys.isTrial: user.isTrial,
     }, SetOptions(merge: true));
   }
 }
 
 final endInitialSettingProvider = Provider(
-  (ref) => EndInitialSetting(functions),
+  (ref) => EndInitialSetting(ref.watch(databaseProvider)),
 );
 
 /// 初期設定の完了時にトライアルを開始する。
-/// トライアルの権限フィールド (isTrial・beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate) はサーバー (startTrial) が書く
+/// isTrial・beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate を端末の時刻と Remote Config の日数から計算して書く
 class EndInitialSetting {
-  final FirebaseFunctions firebaseFunctions;
-  EndInitialSetting(this.firebaseFunctions);
+  final DatabaseConnection databaseConnection;
+  EndInitialSetting(this.databaseConnection);
 
-  Future<void> call() async {
-    await firebaseFunctions.startTrial();
+  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
+    final beginTrialDate = now();
+    return databaseConnection.userRawReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
+      UserFirestoreFieldKeys.beginTrialDate: beginTrialDate,
+      UserFirestoreFieldKeys.trialDeadlineDate: beginTrialDate.addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: beginTrialDate
+          .addDays(
+            remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
+          )
+          .endOfDay(),
+    }, SetOptions(merge: true));
   }
 }
 

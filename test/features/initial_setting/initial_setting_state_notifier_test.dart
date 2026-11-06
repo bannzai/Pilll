@@ -615,9 +615,10 @@ void main() {
         timezoneDatabaseName: null,
       );
 
+      final remoteConfigParameter = RemoteConfigParameter();
       final endInitialSetting = MockEndInitialSetting();
       when(
-        endInitialSetting(),
+        endInitialSetting(remoteConfigParameter),
       ).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
@@ -718,6 +719,9 @@ void main() {
             batchSetPillSheetGroupProvider.overrideWith(
               (ref) => MockBatchSetPillSheetGroup(),
             ),
+            remoteConfigParameterProvider.overrideWithValue(
+              RemoteConfigParameter(),
+            ),
             registerReminderLocalNotificationRunnerProvider.overrideWithValue(
               registerReminderLocalNotificationRunner,
             ),
@@ -727,14 +731,14 @@ void main() {
 
       test("トライアルを開始していないユーザーは endInitialSetting を呼ぶ", () async {
         final endInitialSetting = MockEndInitialSetting();
-        when(endInitialSetting()).thenAnswer((_) => Future.value());
+        when(endInitialSetting(any)).thenAnswer((_) => Future.value());
         final container = buildContainer(endInitialSetting: endInitialSetting);
 
         await container
             .read(initialSettingStateNotifierProvider.notifier)
             .register(user: const User());
 
-        verify(endInitialSetting()).called(1);
+        verify(endInitialSetting(any)).called(1);
       });
 
       test(
@@ -747,7 +751,7 @@ void main() {
             .read(initialSettingStateNotifierProvider.notifier)
             .register(user: User(beginTrialDate: DateTime.parse("2020-09-01")));
 
-        verifyNever(endInitialSetting());
+        verifyNever(endInitialSetting(any));
       });
     });
   });

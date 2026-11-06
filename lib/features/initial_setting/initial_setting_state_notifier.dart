@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
@@ -11,6 +12,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -24,6 +26,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetSettingProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
+    ref.watch(remoteConfigParameterProvider),
     ref.watch(registerReminderLocalNotificationRunnerProvider),
     now(),
   ),
@@ -35,6 +38,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetSetting batchSetSetting;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
+  final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
@@ -43,6 +47,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.batchSetSetting,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
+    this.remoteConfigParameter,
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
@@ -231,7 +236,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     }
 
     if (!user.trialIsAlreadyBegin) {
-      await endInitialSetting();
+      await endInitialSetting(remoteConfigParameter);
     }
   }
 
