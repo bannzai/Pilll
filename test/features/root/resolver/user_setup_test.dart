@@ -76,5 +76,44 @@ void main() {
       expect(customerInfoBuildCount,
           greaterThan(customerInfoBuildCountBeforeSignIn));
     });
+
+    testWidgets(
+        '初期設定のログインで userID が変わった後、新しいユーザーで RevenueCat を設定し終えるまでは前のユーザーの状態で次の Widget を出さない',
+        (tester) async {
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser(any))
+          .thenAnswer((_) async => const User(id: 'user'));
+      final signedInSetUserIDCompleter = Completer<void>();
+      final setUserID = MockSetUserID();
+      when(setUserID(userID: 'anonymous')).thenAnswer((_) async {});
+      when(setUserID(userID: 'signed_in'))
+          .thenAnswer((_) => signedInSetUserIDCompleter.future);
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(any)).thenReturn(null);
+
+      Widget app({required String userID}) => ProviderScope(
+            overrides: [
+              fetchOrCreateUserProvider.overrideWithValue(fetchOrCreateUser),
+              setUserIDProvider.overrideWithValue(setUserID),
+              saveUserLaunchInfoProvider.overrideWithValue(saveUserLaunchInfo),
+              customerInfoProviderOverride(freeCustomerInfo),
+            ],
+            child: MaterialApp(
+                home: UserSetup(
+                    userID: userID, builder: (_) => const Text('home'))),
+          );
+
+      await tester.pumpWidget(app(userID: 'anonymous'));
+      await tester.pumpAndSettle();
+      expect(find.text('home'), findsOneWidget);
+
+      await tester.pumpWidget(app(userID: 'signed_in'));
+      await tester.pump();
+      expect(find.text('home'), findsNothing);
+
+      signedInSetUserIDCompleter.complete();
+      await tester.pumpAndSettle();
+      expect(find.text('home'), findsOneWidget);
+    });
   });
 }
