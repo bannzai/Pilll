@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Ddoe",
   "invalidRestDurationIllustrationToday": "Heddiw",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pils wedi’u cymryd hyd at y diwrnod hwn",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Nodi fel heb ei chymryd",
   "pauseTaking": "Oedi",
   "changePauseStartDate": "Newid dyddiad dechrau'r oedi",
   "pauseTakingPeriodEnded": "Mae eich cyfnod o oedi cyn cymryd y bilsen wedi dod i ben",

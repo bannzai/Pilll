@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Í gær",
   "invalidRestDurationIllustrationToday": "Í dag",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillur teknar til og með þessum degi",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Merkja sem ótekna",
   "pauseTaking": "Pilluhlé",
   "changePauseStartDate": "Breyta upphafsdegi pilluhlés",
   "pauseTakingPeriodEnded": "Pilluhléinu er lokið",

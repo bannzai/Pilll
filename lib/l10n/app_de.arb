@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Gestern",
   "invalidRestDurationIllustrationToday": "Heute",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillen bis zu diesem Tag eingenommen",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Als nicht eingenommen markieren",
   "pauseTaking": "Pillenpause",
   "changePauseStartDate": "Startdatum der Pillenpause ändern",
   "pauseTakingPeriodEnded": "Deine Pillenpause ist zu Ende",

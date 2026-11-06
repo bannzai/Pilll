@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Vakar",
   "invalidRestDurationIllustrationToday": "Šiandien",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletės išgertos iki šios dienos imtinai",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Pažymėti kaip neišgertą",
   "pauseTaking": "Pristabdyti vartojimą",
   "changePauseStartDate": "Keisti pristabdymo pradžios datą",
   "pauseTakingPeriodEnded": "Tablečių vartojimo pristabdymo laikotarpis baigėsi",

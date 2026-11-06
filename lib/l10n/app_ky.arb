@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Кечээ",
   "invalidRestDurationIllustrationToday": "Бүгүн",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Таблеткалар ушул күнгө чейин кошо ичилген",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Ичилген эмес деп белгилеңиз",
   "pauseTaking": "Убактылуу токтотуу",
   "changePauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",
   "pauseTakingPeriodEnded": "Таблетка ичүүнү убактылуу токтотуу мөөнөтү аяктады",

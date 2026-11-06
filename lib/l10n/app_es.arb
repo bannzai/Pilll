@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Ayer",
   "invalidRestDurationIllustrationToday": "Hoy",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Píldoras tomadas hasta este día inclusive",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Marcar como no tomada",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Cambiar la fecha de inicio de la pausa",
   "pauseTakingPeriodEnded": "La pausa ha terminado",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "昨天",
   "invalidRestDurationIllustrationToday": "今天",
   "invalidRestDurationIllustrationTakenUntilThisDay": "截至这一天均已服药",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "标记为未服用",
   "pauseTaking": "暂停服药",
   "changePauseStartDate": "更改暂停服药的开始日期",
   "pauseTakingPeriodEnded": "暂停服药的时间已结束",

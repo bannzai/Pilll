@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Jučer",
   "invalidRestDurationIllustrationToday": "Danas",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pilule uzete do ovog dana",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Označiti kao neuzetu",
   "pauseTaking": "Prekid",
   "changePauseStartDate": "Promjena datuma početka prekida",
   "pauseTakingPeriodEnded": "Period prekida uzimanja pilula je završen",

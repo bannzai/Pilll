@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "أمس",
   "invalidRestDurationIllustrationToday": "اليوم",
   "invalidRestDurationIllustrationTakenUntilThisDay": "تم تناول الحبوب حتى هذا اليوم",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "تحديدها كغير متناولة",
   "pauseTaking": "إيقاف تناول الحبوب",
   "changePauseStartDate": "تغيير تاريخ بدء إيقاف تناول الحبوب",
   "pauseTakingPeriodEnded": "انتهت فترة إيقاف تناول الحبوب",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Кеше",
   "invalidRestDurationIllustrationToday": "Бүгін",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Таблеткалар осы күнге дейін қоса қабылданған",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Қабылданбаған деп белгілеу",
   "pauseTaking": "Кідіріс",
   "changePauseStartDate": "Қабылдаудағы кідіріс басталатын күнді өзгерту",
   "pauseTakingPeriodEnded": "Қабылдаудағы кідіріс мерзімі аяқталды",

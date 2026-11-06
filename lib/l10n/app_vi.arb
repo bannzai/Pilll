@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Hôm qua",
   "invalidRestDurationIllustrationToday": "Hôm nay",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Đã uống thuốc đến hết ngày này",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Đánh dấu chưa uống",
   "pauseTaking": "Tạm ngừng uống thuốc",
   "changePauseStartDate": "Đổi ngày bắt đầu tạm ngừng uống thuốc",
   "pauseTakingPeriodEnded": "Thời gian bạn tạm ngừng uống thuốc đã kết thúc",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Երեկ",
   "invalidRestDurationIllustrationToday": "Այսօր",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Հաբերն ընդունված են մինչև այս օրը ներառյալ",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Նշել որպես չընդունված",
   "pauseTaking": "Ընդունման դադար",
   "changePauseStartDate": "Փոխել ընդունման դադարի մեկնարկի ամսաթիվը",
   "pauseTakingPeriodEnded": "Ընդունման դադարի ժամանակահատվածն ավարտվել է",

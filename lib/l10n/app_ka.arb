@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "გუშინ",
   "invalidRestDurationIllustrationToday": "დღეს",
   "invalidRestDurationIllustrationTakenUntilThisDay": "აბები მიღებულია ამ დღის ჩათვლით",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "მონიშნეთ, როგორც არმიღებული",
   "pauseTaking": "მიღების პაუზა",
   "changePauseStartDate": "მიღების პაუზის დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "მიღების პაუზის პერიოდი დასრულდა",

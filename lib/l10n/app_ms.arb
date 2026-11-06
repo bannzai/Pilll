@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Semalam",
   "invalidRestDurationIllustrationToday": "Hari ini",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pil telah diambil hingga hari ini",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Tandakan belum diambil",
   "pauseTaking": "Jeda pengambilan pil",
   "changePauseStartDate": "Ubah tarikh mula jeda pengambilan pil",
   "pauseTakingPeriodEnded": "Tempoh jeda pengambilan pil telah tamat",

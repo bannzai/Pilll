@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "ትናንት",
   "invalidRestDurationIllustrationToday": "ዛሬ",
   "invalidRestDurationIllustrationTakenUntilThisDay": "እስከዚህ ቀን ድረስ ክኒኑ ተወስዷል",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "ያልተወሰደ ብለው ምልክት ያድርጉ",
   "pauseTaking": "ለጊዜው ማቆም",
   "changePauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይቀይሩ",
   "pauseTakingPeriodEnded": "ለጊዜው ማቆም የቆየበት ጊዜ አብቅቷል",

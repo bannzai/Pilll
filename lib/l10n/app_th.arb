@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "เมื่อวาน",
   "invalidRestDurationIllustrationToday": "วันนี้",
   "invalidRestDurationIllustrationTakenUntilThisDay": "ทานยาแล้วจนถึงวันนี้",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "ทำเครื่องหมายว่ายังไม่ได้ทาน",
   "pauseTaking": "หยุดกินยาชั่วคราว",
   "changePauseStartDate": "เปลี่ยนวันที่เริ่มหยุดกินยาชั่วคราว",
   "pauseTakingPeriodEnded": "ช่วงที่พักการทานยาชั่วคราวสิ้นสุดแล้วค่ะ",

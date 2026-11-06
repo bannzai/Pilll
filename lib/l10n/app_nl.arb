@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Gisteren",
   "invalidRestDurationIllustrationToday": "Vandaag",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillen ingenomen tot en met deze dag",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Markeer als niet ingenomen",
   "pauseTaking": "Innamepauze",
   "changePauseStartDate": "Startdatum van de innamepauze wijzigen",
   "pauseTakingPeriodEnded": "Je innamepauze is voorbij",

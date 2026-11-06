@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Вчера",
   "invalidRestDurationIllustrationToday": "Сегодня",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Таблетки приняты до этого дня включительно",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Отметить как не принятую",
   "pauseTaking": "Приостановка приёма",
   "changePauseStartDate": "Изменить дату начала приостановки приёма",
   "pauseTakingPeriodEnded": "Период приостановки приёма таблеток завершился",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Учора",
   "invalidRestDurationIllustrationToday": "Сьогодні",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Пігулки прийнято до цього дня включно",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Позначити як неприйняту",
   "pauseTaking": "Призупинення прийому",
   "changePauseStartDate": "Змінити дату початку призупинення прийому",
   "pauseTakingPeriodEnded": "Період призупинення прийому пігулок завершився",

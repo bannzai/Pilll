@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "कल",
   "invalidRestDurationIllustrationToday": "आज",
   "invalidRestDurationIllustrationTakenUntilThisDay": "इस दिन तक गोलियाँ ली जा चुकी हैं",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "नहीं ली गई के रूप में दर्ज करें",
   "pauseTaking": "गोली लेने में विराम",
   "changePauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
   "pauseTakingPeriodEnded": "गोली लेने में विराम की अवधि समाप्त हो गई है",

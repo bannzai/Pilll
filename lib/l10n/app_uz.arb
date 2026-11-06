@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Kecha",
   "invalidRestDurationIllustrationToday": "Bugun",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Shu kungacha tabletkalar ichilgan",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Qabul qilinmagan deb belgilang",
   "pauseTaking": "Pauza",
   "changePauseStartDate": "Qabul qilishdagi pauza boshlanish sanasini oʻzgartiring",
   "pauseTakingPeriodEnded": "Tabletkalarni qabul qilishdagi pauza davri tugadi",

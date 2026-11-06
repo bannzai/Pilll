@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Gister",
   "invalidRestDurationIllustrationToday": "Vandag",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Geneem tot en met hierdie dag",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Merk as nie geneem nie",
   "pauseTaking": "Innameonderbreking",
   "changePauseStartDate": "Verander begindatum van innameonderbreking",
   "pauseTakingPeriodEnded": "Die innameonderbreking is verby",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Wczoraj",
   "invalidRestDurationIllustrationToday": "Dziś",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletki przyjęte do tego dnia włącznie",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Oznacz jako nieprzyjętą",
   "pauseTaking": "Wstrzymanie przyjmowania",
   "changePauseStartDate": "Zmień datę rozpoczęcia wstrzymania przyjmowania",
   "pauseTakingPeriodEnded": "Okres wstrzymania przyjmowania pigułek dobiegł końca",

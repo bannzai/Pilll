@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Jana",
   "invalidRestDurationIllustrationToday": "Leo",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Vidonge vimemezwa hadi siku hii",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Weka alama kuwa hakijamezwa",
   "pauseTaking": "Kusitisha kumeza vidonge kwa muda",
   "changePauseStartDate": "Tafadhali badilisha tarehe ya kuanza kusitisha kumeza vidonge",
   "pauseTakingPeriodEnded": "Kipindi chako cha kusitisha kumeza vidonge kwa muda kimeisha",

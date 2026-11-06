@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Eilen",
   "invalidRestDurationIllustrationToday": "Tänään",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillerit otettu tähän päivään asti",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Merkitse ottamattomaksi",
   "pauseTaking": "Taukotila",
   "changePauseStartDate": "Vaihda taukotilan alkamispäivää",
   "pauseTakingPeriodEnded": "Taukotilan jakso on päättynyt",

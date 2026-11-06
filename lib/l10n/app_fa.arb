@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "دیروز",
   "invalidRestDurationIllustrationToday": "امروز",
   "invalidRestDurationIllustrationTakenUntilThisDay": "قرص‌ها تا این روز مصرف شده‌اند",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "علامت‌گذاری به‌عنوان مصرف‌نشده",
   "pauseTaking": "توقف موقت مصرف",
   "changePauseStartDate": "تغییر تاریخ شروع توقف موقت مصرف",
   "pauseTakingPeriodEnded": "دورهٔ توقف موقت مصرف شما به پایان رسید",

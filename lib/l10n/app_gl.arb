@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Onte",
   "invalidRestDurationIllustrationToday": "Hoxe",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pílulas tomadas ata este día incluído",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Marcar como non tomada",
   "pauseTaking": "Pausa na toma",
   "changePauseStartDate": "Cambiar a data de inicio da pausa na toma",
   "pauseTakingPeriodEnded": "Rematou a pausa na toma",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Dünən",
   "invalidRestDurationIllustrationToday": "Bu gün",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Bu günədək həblər qəbul edilib",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Qəbul edilməyib kimi qeyd edin",
   "pauseTaking": "Həb qəbuluna fasilə",
   "changePauseStartDate": "Həb qəbuluna fasilə başlanğıc tarixini dəyişin",
   "pauseTakingPeriodEnded": "Həb qəbuluna fasilə müddəti başa çatdı",

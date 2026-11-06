@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "אתמול",
   "invalidRestDurationIllustrationToday": "היום",
   "invalidRestDurationIllustrationTakenUntilThisDay": "הגלולות ניטלו עד ליום הזה כולל",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "סימון כלא נלקחה",
   "pauseTaking": "השהיית נטילה",
   "changePauseStartDate": "שינוי תאריך ההתחלה של השהיית נטילה",
   "pauseTakingPeriodEnded": "תקופת השהיית נטילה הסתיימה",

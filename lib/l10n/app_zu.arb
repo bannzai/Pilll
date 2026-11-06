@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Izolo",
   "invalidRestDurationIllustrationToday": "Namuhla",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Amaphilisi aphuziwe kuze kufike nalolu suku",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Maka njengelingakaphuzwa",
   "pauseTaking": "Ukumisa okwesikhashana",
   "changePauseStartDate": "Sicela ushintshe usuku lokuqala lokumisa okwesikhashana ukuphuza iphilisi",
   "pauseTakingPeriodEnded": "Isikhathi sakho sokumisa okwesikhashana ukuphuza amaphilisi sesiphelile",

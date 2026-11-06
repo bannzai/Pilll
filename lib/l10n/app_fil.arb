@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Kahapon",
   "invalidRestDurationIllustrationToday": "Ngayon",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Nainom na ang mga pill hanggang sa araw na ito",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Markahan na hindi nainom",
   "pauseTaking": "Pause",
   "changePauseStartDate": "Baguhin ang petsa ng simula ng pause",
   "pauseTakingPeriodEnded": "Natapos na ang pause sa pag-inom ninyo ng pildoras",

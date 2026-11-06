@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Ahir",
   "invalidRestDurationIllustrationToday": "Avui",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Píndoles preses fins a aquest dia",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Marca-la com a no presa",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Canvia la data d'inici de la pausa",
   "pauseTakingPeriodEnded": "S'ha acabat el període de pausa",

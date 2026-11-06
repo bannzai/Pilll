@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "پرون",
   "invalidRestDurationIllustrationToday": "نن",
   "invalidRestDurationIllustrationTakenUntilThisDay": "تر دې ورځې پورې ګولۍ خوړل شوې دي",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "د نه اخیستل شوې په توګه نښه کړئ",
   "pauseTaking": "لنډمهاله درول",
   "changePauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
   "pauseTakingPeriodEnded": "د لنډمهاله درول موده پای ته ورسېده",

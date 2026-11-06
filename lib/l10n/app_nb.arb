@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "I går",
   "invalidRestDurationIllustrationToday": "I dag",
   "invalidRestDurationIllustrationTakenUntilThisDay": "P-piller tatt til og med denne dagen",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Merk som ikke tatt",
   "pauseTaking": "Inntakspause",
   "changePauseStartDate": "Endre startdato for inntakspause",
   "pauseTakingPeriodEnded": "Inntakspausen er over",

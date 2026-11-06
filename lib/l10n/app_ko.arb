@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "어제",
   "invalidRestDurationIllustrationToday": "오늘",
   "invalidRestDurationIllustrationTakenUntilThisDay": "이날까지 복용 완료",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "미복용으로 표시",
   "pauseTaking": "일시 중지",
   "changePauseStartDate": "일시 중지 시작일 변경",
   "pauseTakingPeriodEnded": "복용 일시 중지 기간이 끝났어요",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Eile",
   "invalidRestDurationIllustrationToday": "Täna",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillid võetud kuni selle päevani",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Märgi võtmata",
   "pauseTaking": "Võtmise paus",
   "changePauseStartDate": "Muuda võtmise pausi alguskuupäeva",
   "pauseTakingPeriodEnded": "Sinu pillide võtmise paus on lõppenud",

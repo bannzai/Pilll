@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Dje",
   "invalidRestDurationIllustrationToday": "Sot",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulat janë marrë deri në këtë ditë, përfshirë këtë ditë",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Shënoni si të pamarrë",
   "pauseTaking": "Pauzë",
   "changePauseStartDate": "Ndryshoni datën e fillimit të pauzës",
   "pauseTakingPeriodEnded": "Periudha e pauzës së marrjes së pilulës përfundoi",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Ieri",
   "invalidRestDurationIllustrationToday": "Azi",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pilule luate până în această zi inclusiv",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Marchează ca neluată",
   "pauseTaking": "Întreruperea administrării",
   "changePauseStartDate": "Schimbă data de început a întreruperii",
   "pauseTakingPeriodEnded": "Perioada de întrerupere a luării pilulei s-a încheiat",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Včera",
   "invalidRestDurationIllustrationToday": "Dnes",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletky užité do tohto dňa vrátane",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Označiť ako neužitú",
   "pauseTaking": "Pozastavenie užívania",
   "changePauseStartDate": "Zmeniť dátum začiatku pozastavenia užívania",
   "pauseTakingPeriodEnded": "Obdobie vášho dočasného pozastavenia užívania tabletky sa skončilo",

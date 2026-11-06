@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Kemarin",
   "invalidRestDurationIllustrationToday": "Hari ini",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pil sudah diminum hingga hari ini",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Tandai belum diminum",
   "pauseTaking": "Jeda minum",
   "changePauseStartDate": "Ubah tanggal mulai jeda minum",
   "pauseTakingPeriodEnded": "Masa jeda minum Anda telah berakhir",

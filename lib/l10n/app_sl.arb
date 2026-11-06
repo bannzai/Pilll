@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Včeraj",
   "invalidRestDurationIllustrationToday": "Danes",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tablete vzete do vključno tega dne",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Označite kot nevzeto",
   "pauseTaking": "Prekinitev jemanja tablet",
   "changePauseStartDate": "Sprememba datuma začetka prekinitve jemanja tablet",
   "pauseTakingPeriodEnded": "Obdobje začasne prekinitve jemanja tablet se je končalo",

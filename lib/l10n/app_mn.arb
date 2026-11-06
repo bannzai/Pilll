@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Өчигдөр",
   "invalidRestDurationIllustrationToday": "Өнөөдөр",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Энэ өдрийг дуустал эмээ уусан",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Уугаагүй гэж тэмдэглэх",
   "pauseTaking": "Түр завсарлага",
   "changePauseStartDate": "Эм уух түр завсарлагын эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эм уух түр завсарлага дууссан",

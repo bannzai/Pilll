@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Dün",
   "invalidRestDurationIllustrationToday": "Bugün",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Bu gün dâhil haplar alındı",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Alınmadı olarak işaretleyin",
   "pauseTaking": "Ara verme",
   "changePauseStartDate": "Hap alımına ara verme başlangıç tarihini değiştirin",
   "pauseTakingPeriodEnded": "Hap alımına ara verdiğiniz dönem sona erdi",

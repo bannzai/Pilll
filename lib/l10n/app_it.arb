@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Ieri",
   "invalidRestDurationIllustrationToday": "Oggi",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pillole assunte fino a questo giorno incluso",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Segna come non assunta",
   "pauseTaking": "Sospensione",
   "changePauseStartDate": "Modifica la data di inizio della sospensione",
   "pauseTakingPeriodEnded": "Il periodo di sospensione dell’assunzione è terminato",

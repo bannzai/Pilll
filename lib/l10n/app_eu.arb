@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Atzo",
   "invalidRestDurationIllustrationToday": "Gaur",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulak egun honetara arte hartuta",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Hartu gabe markatu",
   "pauseTaking": "Etenaldi",
   "changePauseStartDate": "Aldatu etenaldiaren hasiera-data",
   "pauseTakingPeriodEnded": "Zure etenaldia amaitu da",

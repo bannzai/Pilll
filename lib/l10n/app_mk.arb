@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Вчера",
   "invalidRestDurationIllustrationToday": "Денес",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Таблетите се земени до овој ден вклучително",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Означете како неземена",
   "pauseTaking": "Привремен прекин на земање",
   "changePauseStartDate": "Промена на датумот на почеток на прекин",
   "pauseTakingPeriodEnded": "Периодот на прекин во земањето таблети заврши",

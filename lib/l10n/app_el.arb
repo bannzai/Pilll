@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Χθες",
   "invalidRestDurationIllustrationToday": "Σήμερα",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Τα χάπια έχουν ληφθεί έως και αυτή την ημέρα",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Σημειώστε ως μη ληφθέν",
   "pauseTaking": "Παύση",
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της παύσης",
   "pauseTakingPeriodEnded": "Η παύση λήψης έληξε",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "ມື້ວານນີ້",
   "invalidRestDurationIllustrationToday": "ມື້ນີ້",
   "invalidRestDurationIllustrationTakenUntilThisDay": "ກິນຢາເມັດແລ້ວຈົນຮອດມື້ນີ້",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "ໝາຍວ່າຍັງບໍ່ໄດ້ກິນ",
   "pauseTaking": "ຢຸດກິນຢາຊົ່ວຄາວ",
   "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "pauseTakingPeriodEnded": "ໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວສິ້ນສຸດແລ້ວ",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Hier",
   "invalidRestDurationIllustrationToday": "Aujourd’hui",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Pilules prises jusqu’à ce jour inclus",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Marquer comme non prise",
   "pauseTaking": "Pause de prise",
   "changePauseStartDate": "Modifier la date de début de la pause de prise",
   "pauseTakingPeriodEnded": "Votre pause de prise est terminée",

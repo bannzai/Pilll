@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "ម្សិលមិញ",
   "invalidRestDurationIllustrationToday": "ថ្ងៃនេះ",
   "invalidRestDurationIllustrationTakenUntilThisDay": "បានលេបថ្នាំគ្រាប់រហូតដល់ថ្ងៃនេះ",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "សម្គាល់ថាមិនទាន់បានលេប",
   "pauseTaking": "ផ្អាកការលេបថ្នាំ",
   "changePauseStartDate": "ប្ដូរថ្ងៃចាប់ផ្ដើមផ្អាកការលេបថ្នាំ",
   "pauseTakingPeriodEnded": "រយៈពេលផ្អាកការលេបថ្នាំបានបញ្ចប់ហើយ",

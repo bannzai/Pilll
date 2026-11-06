@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Včera",
   "invalidRestDurationIllustrationToday": "Dnes",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tablety užity do tohoto dne včetně",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Označit jako neužitou",
   "pauseTaking": "Pozastavení užívání",
   "changePauseStartDate": "Změnit datum začátku pozastavení užívání",
   "pauseTakingPeriodEnded": "Období pozastavení užívání skončilo",

@@ -129,6 +129,7 @@
   "invalidRestDurationIllustrationYesterday": "Вчера",
   "invalidRestDurationIllustrationToday": "Днес",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Хапчетата са взети до този ден включително",
+  "invalidRestDurationIllustrationUnmarkAsTaken": "Отбележете като невзето",
   "pauseTaking": "Спиране на приема",
   "changePauseStartDate": "Промяна на началната дата на спиране на приема",
   "pauseTakingPeriodEnded": "Периодът на спиране на приема приключи",
