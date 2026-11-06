@@ -1,0 +1,7 @@
+• Si tomas YAZ Flex, ahora puedes configurar los días de toma en la configuración inicial a partir de tu último descanso y del número de inicio
+• Las pausas ya no pueden superponerse y corregimos el recuento de los días de pausa y de las píldoras olvidadas
+• Revisamos las traducciones y ahora las fechas, los números de píldora y las notificaciones se muestran en el formato de cada idioma
+• Corregimos un problema por el que la app podía cerrarse justo después de abrirla
+• Actualización de seguridad
+
+Si tienes otras solicitudes o comentarios, ponte en contacto con nosotros desde el “Formulario de contacto” en la pantalla de Ajustes.
