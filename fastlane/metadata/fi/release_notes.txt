@@ -1,5 +1,5 @@
 • YAZ Flexin käyttäjät voivat nyt asettaa ottopäivien määrän alkuasetuksissa viimeisimmän taukojakson ja aloitusnumeron perusteella
-• Taukotilan jaksot eivät voi enää mennä päällekkäin, ja korjasimme taukopäivien ja unohtuneiden pillereiden laskemisen
+• Taukojaksot eivät voi enää mennä päällekkäin, ja korjasimme taukopäivien ja unohtuneiden pillereiden laskemisen
 • Kävimme käännökset läpi, ja päivämäärät, pillerinumerot ja ilmoitukset näytetään nyt kunkin kielen muodossa
 • Korjattu ongelma, jonka vuoksi sovellus saattoi sulkeutua heti käynnistyksen jälkeen
 • Tietoturvapäivitys

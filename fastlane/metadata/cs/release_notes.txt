@@ -4,4 +4,4 @@
 • Opravena chyba, kvůli které se aplikace mohla zavřít hned po spuštění
 • Bezpečnostní aktualizace
 
-Máte‑li další požadavky nebo připomínky, kontaktujte nás prosím prostřednictvím „Kontaktního formuláře“ v nastavení.
+Máte-li další požadavky nebo připomínky, kontaktujte nás prosím prostřednictvím „Kontaktního formuláře“ v nastavení.
