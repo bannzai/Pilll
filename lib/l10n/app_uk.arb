@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Перш ніж тимчасово припинити прийом пігулок, позначте сьогоднішню пігулку як неприйняту.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Якщо ви хочете почати призупинення прийому в інший день, а не сьогодні, перегляньте інструкцію нижче.",
   "invalidRestDurationIllustrationYesterday": "Учора",
+  "invalidRestDurationIllustrationToday": "Сьогодні",
   "pauseTaking": "Призупинення прийому",
   "changePauseStartDate": "Змінити дату початку призупинення прийому",
   "pauseTakingPeriodEnded": "Період призупинення прийому пігулок завершився",

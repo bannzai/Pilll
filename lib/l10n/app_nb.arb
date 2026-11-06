@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Marker dagens p-pille som ikke tatt før du tar en pause fra å ta p-piller.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Hvis du vil starte en inntakspause en annen dag enn i dag, kan du se veiledningen nedenfor.",
   "invalidRestDurationIllustrationYesterday": "I går",
+  "invalidRestDurationIllustrationToday": "I dag",
   "pauseTaking": "Inntakspause",
   "changePauseStartDate": "Endre startdato for inntakspause",
   "pauseTakingPeriodEnded": "Inntakspausen er over",

@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Hap almayı geçici olarak durdurmadan önce bugünkü hapı alınmadı olarak işaretleyin.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ara vermeye bugünden farklı bir gün başlamak istiyorsanız aşağıdaki kılavuza göz atın.",
   "invalidRestDurationIllustrationYesterday": "Dün",
+  "invalidRestDurationIllustrationToday": "Bugün",
   "pauseTaking": "Ara verme",
   "changePauseStartDate": "Hap alımına ara verme başlangıç tarihini değiştirin",
   "pauseTakingPeriodEnded": "Hap alımına ara verdiğiniz dönem sona erdi",

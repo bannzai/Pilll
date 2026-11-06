@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Tafadhali weka kidonge cha leo kuwa hakijamezwa kabla ya kusitisha kumeza vidonge kwa muda.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ikiwa ungependa kuanza kusitisha kumeza vidonge siku nyingine badala ya leo, tafadhali angalia mwongozo ulio hapa chini.",
   "invalidRestDurationIllustrationYesterday": "Jana",
+  "invalidRestDurationIllustrationToday": "Leo",
   "pauseTaking": "Kusitisha kumeza vidonge kwa muda",
   "changePauseStartDate": "Tafadhali badilisha tarehe ya kuanza kusitisha kumeza vidonge",
   "pauseTakingPeriodEnded": "Kipindi chako cha kusitisha kumeza vidonge kwa muda kimeisha",

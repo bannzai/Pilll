@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Mark today's pill as not taken before pausing your pill intake.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "If you’d like to start a pause on a day other than today, see the guide below.",
   "invalidRestDurationIllustrationYesterday": "Yesterday",
+  "invalidRestDurationIllustrationToday": "Today",
   "pauseTaking": "Pill pause",
   "changePauseStartDate": "Change pause start date",
   "pauseTakingPeriodEnded": "Your pill pause has ended",

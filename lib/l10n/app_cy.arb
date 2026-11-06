@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Cyn cymryd seibiant o gymryd y bilsen, nodwch nad ydych wedi cymryd bilsen heddiw.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Os hoffech ddechrau'r oedi ar ddiwrnod heblaw heddiw, edrychwch ar y canllaw isod.",
   "invalidRestDurationIllustrationYesterday": "Ddoe",
+  "invalidRestDurationIllustrationToday": "Heddiw",
   "pauseTaking": "Oedi",
   "changePauseStartDate": "Newid dyddiad dechrau'r oedi",
   "pauseTakingPeriodEnded": "Mae eich cyfnod o oedi cyn cymryd y bilsen wedi dod i ben",

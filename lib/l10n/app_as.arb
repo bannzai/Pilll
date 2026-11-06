@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "অনুগ্ৰহ কৰি আজিৰ পিলটো নোখোৱা বুলি চিহ্নিত কৰাৰ পিছতহে পিল খোৱা সাময়িকভাৱে বন্ধ কৰক।",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "আজিৰ বাহিৰে আন কোনো দিনৰ পৰা বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰিবলৈ বিচাৰিলে, অনুগ্ৰহ কৰি তলৰ নিৰ্দেশনা চাওক।",
   "invalidRestDurationIllustrationYesterday": "কালি",
+  "invalidRestDurationIllustrationToday": "আজি",
   "pauseTaking": "বড়ি খোৱা সাময়িকভাৱে বন্ধ",
   "changePauseStartDate": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ হোৱাৰ তাৰিখ সলনি কৰক",
   "pauseTakingPeriodEnded": "আপুনি বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰি ৰখা সময় শেষ হৈছে",

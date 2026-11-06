@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "აბების მიღების დროებით შეწყვეტამდე დღევანდელი აბი მონიშნეთ როგორც მიუღებელი.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "თუ მიღების პაუზის დაწყება დღევანდელის გარდა სხვა დღიდან გსურთ, გაეცანით ქვემოთ მოცემულ გზამკვლევს.",
   "invalidRestDurationIllustrationYesterday": "გუშინ",
+  "invalidRestDurationIllustrationToday": "დღეს",
   "pauseTaking": "მიღების პაუზა",
   "changePauseStartDate": "მიღების პაუზის დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "მიღების პაუზის პერიოდი დასრულდა",

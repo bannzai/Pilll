@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Пре него што привремено престанете да узимате пилуле, означите данашњу пилулу као неузету.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ако желите да прекид узимања таблета почне неког другог дана, погледајте упутство испод.",
   "invalidRestDurationIllustrationYesterday": "Јуче",
+  "invalidRestDurationIllustrationToday": "Данас",
   "pauseTaking": "Прекид узимања",
   "changePauseStartDate": "Промените датум почетка прекида узимања",
   "pauseTakingPeriodEnded": "Период прекида узимања пилула је завршен",

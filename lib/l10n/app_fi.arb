@@ -127,6 +127,7 @@
   "invalidAlreadyTakenPillUnmarkThenPause": "Merkitse tämän päivän pilleri ottamattomaksi ennen kuin pidät tauon pillereiden ottamisesta.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jos haluat aloittaa taukotilan muuna päivänä kuin tänään, katso alla oleva ohje.",
   "invalidRestDurationIllustrationYesterday": "Eilen",
+  "invalidRestDurationIllustrationToday": "Tänään",
   "pauseTaking": "Taukotila",
   "changePauseStartDate": "Vaihda taukotilan alkamispäivää",
   "pauseTakingPeriodEnded": "Taukotilan jakso on päättynyt",
