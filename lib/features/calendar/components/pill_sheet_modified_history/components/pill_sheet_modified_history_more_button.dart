@@ -1,4 +1,3 @@
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -8,8 +7,9 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 import 'package:flutter/material.dart';
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
-  final User user;
-  const PillSheetModifiedHistoryMoreButton({super.key, required this.user});
+  /// プレミアム会員またはトライアル中か。false の時はタップで Paywall を出す
+  final bool premiumOrTrial;
+  const PillSheetModifiedHistoryMoreButton({super.key, required this.premiumOrTrial});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
           text: L.viewMore,
           onPressed: () async {
             analytics.logEvent(name: 'pill_sheet_modified_history_more');
-            if (user.isPremium || user.isTrial) {
+            if (premiumOrTrial) {
               Navigator.of(
                 context,
               ).push(PillSheetModifiedHistoriesPageRoute.route());

@@ -14,6 +14,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/native/channel.dart';
@@ -142,7 +143,7 @@ Future<void> handleNotificationAction(
         await RegisterReminderLocalNotification.run(
           pillSheetGroup: pillSheetGroup,
           activePillSheet: activePillSheet,
-          premiumOrTrial: user.isPremium || user.isTrial,
+          premiumOrTrial: (await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid)).premiumOrTrial(user: user),
           setting: setting,
         );
       }

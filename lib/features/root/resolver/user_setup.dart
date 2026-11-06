@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/root/launch_exception.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
@@ -37,10 +38,11 @@ class UserSetup extends HookConsumerWidget {
           if (appUserValue == null) {
             // Retrieve user from app DB.
             final user = await fetchOrCreateUser(userID);
-            appUser.value = user;
 
             // Register userID for each analytics libraries.
-            setUserID(userID: userID);
+            // customerInfoProvider は RevenueCat SDK の設定の後にしか読めないため、設定を待ってから次の Widget を出す
+            await setUserID(userID: userID);
+            appUser.value = user;
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
@@ -64,12 +66,21 @@ class UserSetup extends HookConsumerWidget {
       return null;
     }, [appUser.value]);
 
+    // プレミアム・トライアルの判定 (CustomerInfoPremium) を画面が requireValue で読めるよう、CustomerInfo の取得後にだけ次の Widget を出す。
+    // 取得し直し (ref.invalidate) の間は前の値で表示を続ける
+    final customerInfo = appUser.value == null ? null : ref.watch(customerInfoProvider);
+    final customerInfoError = customerInfo?.error;
     return UniversalErrorPage(
-      error: error.value,
-      reload: () => ref.refresh(refreshAppProvider),
+      error: error.value ??
+          (customerInfo != null && !customerInfo.hasValue && customerInfoError != null
+              ? LaunchException(L.launchError(ErrorMessages.connection), customerInfoError)
+              : null),
+      reload: () {
+        ref.invalidate(customerInfoProvider);
+        ref.invalidate(refreshAppProvider);
+      },
       child: () {
-        final appUserValue = appUser.value;
-        if (appUserValue == null) {
+        if (customerInfo == null || !customerInfo.hasValue) {
           return const ScaffoldIndicator();
         } else {
           return builder(context);

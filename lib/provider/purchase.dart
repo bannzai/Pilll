@@ -10,6 +10,8 @@ import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/user.dart';
@@ -43,12 +45,17 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((
   ref,
   User user,
 ) {
+  final customerInfo = ref.watch(customerInfoProvider).requireValue;
+  final discountEntitlementOffsetDay = ref.watch(remoteConfigParameterProvider).discountEntitlementOffsetDay;
   final isOverDiscountDeadline = ref.watch(
     isOverDiscountDeadlineProvider(
-      discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+      discountEntitlementDeadlineDate: customerInfo.discountEntitlementDeadlineDate(
+        user: user,
+        discountEntitlementOffsetDay: discountEntitlementOffsetDay,
+      ),
     ),
   );
-  if (!user.hasDiscountEntitlement) {
+  if (!customerInfo.hasDiscountEntitlement(user: user, discountEntitlementOffsetDay: discountEntitlementOffsetDay)) {
     return OfferingType.premium;
   }
   if (isOverDiscountDeadline) {
@@ -260,8 +267,6 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
-      // Premium entitlement が無い CustomerInfo (解約・返金で消えた後の更新) では isPremium を false に戻す
-      isActivated: premiumEntitlement?.isActive ?? false,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
@@ -274,39 +279,21 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   }
 }
 
-Future<void> syncPurchaseInfo() async {
-  analytics.logEvent(name: 'start_sync_purchase_info');
-  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
-  if (uid == null) {
-    errorLogger.recordError(
-      'unexpected uid is not found when purchase info to sync',
-      StackTrace.current,
-    );
-    return;
-  }
-
-  try {
-    analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await SyncPurchaseInfo(DatabaseConnection(uid))(
-      isActivated: (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements]?.isActive ?? false,
-    );
-    analytics.logEvent(name: 'end_sync_purchase_info');
-  } catch (exception, stack) {
-    errorLogger.recordError(exception, stack);
-  }
+/// RevenueCat SDK を [uid] のユーザーで設定する
+void configurePurchases({required String uid}) {
+  Purchases.configure(
+    PurchasesConfiguration(
+      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
+    )..appUserID = uid,
+  );
 }
 
 Future<void> initializePurchase(String uid) async {
   await Purchases.setLogLevel(
     Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
   );
-  Purchases.configure(
-    PurchasesConfiguration(
-      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
-    )..appUserID = uid,
-  );
+  configurePurchases(uid: uid);
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
-  await syncPurchaseInfo();
 }
 
 /// RevenueCatのEntitlementInfo.productIdentifierに"lifetime"が含まれるかで判定するProvider

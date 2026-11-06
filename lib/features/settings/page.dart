@@ -7,14 +7,15 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
 import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
-import 'package:pilll/features/settings/components/rows/end_trial_for_debug.dart';
 import 'package:pilll/features/settings/components/rows/create_ended_before_pill_sheet_group_for_debug.dart';
 import 'package:pilll/features/settings/components/rows/admob_list_row.dart';
 import 'package:pilll/features/settings/components/rows/debug_app_language_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_announcement_bar_list_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
 import 'package:pilll/features/settings/components/rows/lifetime_offer_paywall_row.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -68,11 +69,12 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return AsyncValueGroup.group4(
+    return AsyncValueGroup.group5(
       ref.watch(userProvider),
       ref.watch(settingProvider),
       ref.watch(latestPillSheetGroupProvider),
       ref.watch(isHealthDataAvailableProvider),
+      ref.watch(customerInfoProvider),
     ).when(
       data: (data) {
         return SettingPageBody(
@@ -80,6 +82,7 @@ class SettingPage extends HookConsumerWidget {
           setting: data.$2,
           latestPillSheetGroup: data.$3,
           isHealthDataAvailable: data.$4,
+          customerInfo: data.$5,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -97,6 +100,7 @@ class SettingPageBody extends StatelessWidget {
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final bool isHealthDataAvailable;
+  final CustomerInfo customerInfo;
 
   const SettingPageBody({
     super.key,
@@ -104,6 +108,7 @@ class SettingPageBody extends StatelessWidget {
     required this.setting,
     required this.latestPillSheetGroup,
     required this.isHealthDataAvailable,
+    required this.customerInfo,
   });
 
   @override
@@ -141,7 +146,7 @@ class SettingPageBody extends StatelessWidget {
                       return SettingSectionTitle(
                         text: L.pillPremium,
                         children: [
-                          if (user.isTrial) ...[
+                          if (customerInfo.isTrial(user: user)) ...[
                             ListTile(
                               title: Text(
                                 L.unlimitedFeatureDuration,
@@ -167,11 +172,11 @@ class SettingPageBody extends StatelessWidget {
                             _separator(),
                           ],
                           PremiumIntroductionRow(
-                            isPremium: user.isPremium,
-                            trialDeadlineDate: user.trialDeadlineDate,
+                            isPremium: customerInfo.isPremium,
+                            trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
                           ),
                           _separator(),
-                          if (user.isPremium) ...[
+                          if (customerInfo.isPremium) ...[
                             const AboutChurn(),
                             _separator(),
                           ],
@@ -196,9 +201,9 @@ class SettingPageBody extends StatelessWidget {
                           ],
                           CreatingNewPillSheetRow(
                             setting: setting,
-                            isPremium: user.isPremium,
-                            isTrial: user.isTrial,
-                            trialDeadlineDate: user.trialDeadlineDate,
+                            isPremium: customerInfo.isPremium,
+                            isTrial: customerInfo.isTrial(user: user),
+                            trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
                           ),
                           _separator(),
                         ],
@@ -218,32 +223,32 @@ class SettingPageBody extends StatelessWidget {
                             ),
                             _separator(),
                           ],
-                          if (!user.isPremium) ...[
+                          if (!customerInfo.isPremium) ...[
                             QuickRecordRow(
-                              isTrial: user.isTrial,
-                              trialDeadlineDate: user.trialDeadlineDate,
+                              isTrial: customerInfo.isTrial(user: user),
+                              trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
                             ),
                             _separator(),
                           ],
                           if (Platform.isIOS) ...[
                             CriticalAlert(
                               setting: setting,
-                              isPremium: user.isPremium,
-                              isTrial: user.isTrial,
+                              isPremium: customerInfo.isPremium,
+                              isTrial: customerInfo.isTrial(user: user),
                             ),
                             _separator(),
                             AlarmKitSetting(
                               setting: setting,
-                              isPremium: user.isPremium,
-                              isTrial: user.isTrial,
+                              isPremium: customerInfo.isPremium,
+                              isTrial: customerInfo.isTrial(user: user),
                             ),
                             _separator(),
                           ],
                           ReminderNotificationCustomizeWord(
                             setting: setting,
-                            isTrial: user.isTrial,
-                            isPremium: user.isPremium,
-                            trialDeadlineDate: user.trialDeadlineDate,
+                            isTrial: customerInfo.isTrial(user: user),
+                            isPremium: customerInfo.isPremium,
+                            trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
                           ),
                           _separator(),
                         ],
@@ -256,7 +261,7 @@ class SettingPageBody extends StatelessWidget {
                           _separator(),
                           if (Platform.isIOS && isHealthDataAvailable) ...[
                             HealthCareRow(
-                              trialDeadlineDate: user.trialDeadlineDate,
+                              trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
                             ),
                             _separator(),
                           ],
@@ -480,8 +485,6 @@ Android: https://onl.sc/c9xnQUk''';
                           const AdMobListRow(),
                           _separator(),
                           const LifetimeOfferPaywallRow(),
-                          _separator(),
-                          const EndTrialForDebugRow(),
                           _separator(),
                           const CreateEndedBeforePillSheetGroupForDebugRow(),
                           _separator(),

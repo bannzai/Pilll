@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
@@ -62,6 +63,7 @@ class MockCalendarScreen extends StatelessWidget {
     return ProviderScope(
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+        customerInfoProvider.overrideWith((ref) => Stream.multi((controller) => controller.addSync(mockPremiumCustomerInfo))),
       ],
       child: Container(
         color: AppColors.background,
@@ -98,7 +100,7 @@ class MockCalendarScreen extends StatelessWidget {
                   CalendarPillSheetModifiedHistoryCard(
                     histories: mockTakenPillHistories(fixedToday: _fixedToday, count: 3),
                     // マーケティング訴求のため、履歴が伏せられないプレミアム状態で表示する。
-                    user: const User(isPremium: true),
+                    user: const User(),
                   ),
                 ],
               ),

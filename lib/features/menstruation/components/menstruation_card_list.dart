@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
@@ -12,7 +15,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-class MenstruationCardList extends StatelessWidget {
+class MenstruationCardList extends ConsumerWidget {
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final User user;
   final Setting setting;
@@ -31,7 +34,7 @@ class MenstruationCardList extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final card = cardState(
       latestPillSheetGroup,
       latestMenstruation,
@@ -42,6 +45,7 @@ class MenstruationCardList extends StatelessWidget {
       latestMenstruation,
       allMenstruation,
       user,
+      ref.watch(customerInfoProvider).requireValue,
     );
     return Expanded(
       child: Container(
@@ -106,6 +110,7 @@ MenstruationHistoryCardState? historyCardState(
   Menstruation? menstruation,
   List<Menstruation> allMenstruation,
   User user,
+  CustomerInfo customerInfo,
 ) {
   if (menstruation == null) {
     return null;
@@ -116,8 +121,8 @@ MenstruationHistoryCardState? historyCardState(
   return MenstruationHistoryCardState(
     allMenstruations: allMenstruation,
     latestMenstruation: menstruation,
-    isPremium: user.isPremium,
-    isTrial: user.isTrial,
-    trialDeadlineDate: user.trialDeadlineDate,
+    isPremium: customerInfo.isPremium,
+    isTrial: customerInfo.isTrial(user: user),
+    trialDeadlineDate: customerInfo.trialDeadlineDate(user: user),
   );
 }

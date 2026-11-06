@@ -23,10 +23,11 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
     return response['inquiryId'] as String;
   }
 
-  Future<bool> startPromotion({required int promotionDayCount}) async {
-    final result = await httpsCallable(
-      'startPromotion',
-    ).call({'promotionDayCount': promotionDayCount});
+  /// ログイン中のユーザーにトライアル (RevenueCat の Premium の Promotional Entitlement) を付与する。
+  /// 期限の日数は Remote Config の trialDeadlineDateOffsetDay をサーバーが読み、付与は 1 アカウント 1 回でサーバーが判定する (bannzai/PilllBackend#581)。
+  /// 既に付与済みなら true を返す
+  Future<bool> startPromotion() async {
+    final result = await httpsCallable('startPromotion').call();
     final response = mapToJSON(result.data);
     if (response['result'] != 'OK') {
       throw Exception(response['error']['message']);

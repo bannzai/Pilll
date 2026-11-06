@@ -7,6 +7,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/database.dart';
 
 const methodChannel = MethodChannel('method.channel.MizukiOhashi.Pilll');
@@ -48,7 +49,7 @@ void definedChannel() {
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
-              premiumOrTrial: user.isPremium || user.isTrial,
+              premiumOrTrial: (await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid)).premiumOrTrial(user: user),
               setting: setting,
             );
           }

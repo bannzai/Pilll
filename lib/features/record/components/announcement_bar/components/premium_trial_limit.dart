@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -64,22 +66,23 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
   }
 
   /// トライアル期限までの残り日数。トライアル中でなければ null。
-  static int? remainingTrialDays(User user) {
-    if (user.isPremium) return null;
-    if (!user.isTrial) return null;
-    final trialDeadlineDate = user.trialDeadlineDate;
+  static int? remainingTrialDays({required CustomerInfo customerInfo, required User user}) {
+    if (customerInfo.isPremium) return null;
+    if (!customerInfo.isTrial(user: user)) return null;
+    final trialDeadlineDate = customerInfo.trialDeadlineDate(user: user);
     if (trialDeadlineDate == null) return null;
     return daysBetween(now(), trialDeadlineDate);
   }
 
-  static String? premiumTrialLimitMessage(User user) {
-    if (user.isPremium) {
+  /// トライアルの残り日数を伝える文言。トライアル中でなければ null
+  static String? premiumTrialLimitMessage({required CustomerInfo customerInfo, required User user}) {
+    if (customerInfo.isPremium) {
       return null;
     }
-    if (!user.isTrial) {
+    if (!customerInfo.isTrial(user: user)) {
       return null;
     }
-    final trialDeadlineDate = user.trialDeadlineDate;
+    final trialDeadlineDate = customerInfo.trialDeadlineDate(user: user);
     if (trialDeadlineDate == null) {
       return null;
     }

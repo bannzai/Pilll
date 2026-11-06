@@ -15,6 +15,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
@@ -326,17 +327,17 @@ class RegisterReminderLocalNotification {
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
-    final premiumOrTrial = ref.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || user == null) {
+    final customerInfo = ref.read(customerInfoProvider).asData?.valueOrNull;
+    if (pillSheetGroup == null || activePillSheet == null || setting == null || user == null || customerInfo == null) {
       return;
     }
 
     await run(
       pillSheetGroup: pillSheetGroup,
       activePillSheet: activePillSheet,
-      premiumOrTrial: premiumOrTrial,
+      premiumOrTrial: customerInfo.premiumOrTrial(user: user),
       setting: setting,
     );
   }
