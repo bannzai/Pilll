@@ -292,7 +292,11 @@ Future<void> initializePurchase(String uid) async {
   await Purchases.setLogLevel(
     Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
   );
-  configurePurchases(uid: uid);
+  // 通知のアクションが画面より先に同じユーザーで設定している時 (fetchCustomerInfoOutsideUI) は設定し直さない。
+  // listener は SDK が Set で持つため、同じ関数を何度登録しても 1 つになる
+  if (!await Purchases.isConfigured) {
+    configurePurchases(uid: uid);
+  }
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
 }
 
@@ -321,10 +325,13 @@ final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
 ///
 /// 失効・解約済みを含む購入履歴で判定する。取得に失敗した場合は未購入扱いにせず、
 /// 参照側でオファーを表示しない安全側へ倒せるようAsyncErrorを維持する。
+/// トライアルなどの Promotional Entitlement は課金ではないため、購入履歴に数えない
 final hasPurchasedAnyProductProvider = FutureProvider.autoDispose<bool>((ref) async {
   try {
     final customerInfo = await Purchases.getCustomerInfo();
-    return customerInfo.allPurchasedProductIdentifiers.isNotEmpty;
+    return customerInfo.allPurchasedProductIdentifiers.any(
+      (productIdentifier) => !productIdentifier.startsWith(promotionalPremiumProductIdentifierPrefix),
+    );
   } catch (e, stack) {
     errorLogger.recordError(e, stack);
     rethrow;

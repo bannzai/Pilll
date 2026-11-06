@@ -29,21 +29,21 @@ class UserSetup extends HookConsumerWidget {
     final error = useState<LaunchException?>(null);
 
     // Setup user
+    // 初期設定のログインで別のアカウントに切り替わると userID が変わる。RevenueCat のユーザーと CustomerInfo もそのアカウントのものに切り替えるため、userID ごとにやり直す
     useEffect(() {
       void f() async {
         // **** BEGIN: Do not break the sequence. ****
         try {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
-          final appUserValue = appUser.value;
-          if (appUserValue == null) {
-            // Retrieve user from app DB.
-            final user = await fetchOrCreateUser(userID);
+          // Retrieve user from app DB.
+          final user = await fetchOrCreateUser(userID);
 
-            // Register userID for each analytics libraries.
-            // customerInfoProvider は RevenueCat SDK の設定の後にしか読めないため、設定を待ってから次の Widget を出す
-            await setUserID(userID: userID);
-            appUser.value = user;
-          }
+          // Register userID for each analytics libraries.
+          // customerInfoProvider は RevenueCat SDK の設定 (切り替えでは logIn) の後にしか読めないため、待ってから次の Widget を出す
+          await setUserID(userID: userID);
+          // 前のアカウントの CustomerInfo を持ち越さない
+          ref.invalidate(customerInfoProvider);
+          appUser.value = user;
         } catch (e, st) {
           errorLogger.recordError(e, st);
           error.value = LaunchException(
@@ -56,7 +56,7 @@ class UserSetup extends HookConsumerWidget {
 
       f();
       return null;
-    }, []);
+    }, [userID]);
 
     useEffect(() {
       final appUserValue = appUser.value;
