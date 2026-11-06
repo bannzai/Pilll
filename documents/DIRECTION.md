@@ -20,6 +20,8 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 | App Store JP 平均評価 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-app-metadata.sh 1405931017 --country jp` の `averageUserRating` | >= 4.0 | < 3.5 x2 | 評価は保てているが直近 14 日の新規レビューが 2 回連続 0 件なら、獲得 (ASO・オンボーディング) 側の転換を検討する |
 | 直近14日の★1〜2レビュー数 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-reviews.sh 1405931017 --country jp --pages 1` の出力で `date` が直近 14 日かつ `rating` が 2 以下の行数 | <= 1 | >= 3 x2 | 低評価の内容が同じ機能に集中していたら、その機能の作り直しを改善 issue の最優先にする |
 | 直近14日のFATALクラッシュissue数 | firebase-crashlytics-triage skill: `bash ~/.agents/skills/firebase-crashlytics-triage/scripts/crashlytics.sh top-issues --config ios/Firebase/GoogleService-Info-prod.plist --days 14 --error-types FATAL` の topIssues の行数 | <= 10 | > 50 x2 | 上位 issue のイベント数が 1 件で 100 を超えていたら、機能追加より先にその修正 issue を出す |
+| MRR (USD) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric mrr --field mrr` の `VALUE` | >= 4000 | < 3500 x2 | 直近 14 日の新規顧客の合計 (`--metric new_customers --field new_customers --days 14 --agg sum`) を、MRR の値にかかわらず毎回の判定日に agent が `documents/loop/metrics-<判定日>.json` へ記録する。MRR が継続のしきい値 (>= 4000) を下回った判定日に、その値を前回の判定日の同じ値と比べ、減っていたら獲得側、減っていなければ課金導線側の転換を検討する。前回の判定日の値が無い時は転換を判定しない |
+| D7リテンション (直近14日のコホート平均) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric retention --field d7_rate --days 14 --agg avg` の `VALUE` | >= 0.38 | < 0.30 x2 | 直近 14 日のコホートの初期設定の完了率 (`--metric onboarding_funnel --field steps.02_end_initial_setting --days 14 --agg sum` の値を `--metric onboarding_funnel --field cohort_users --days 14 --agg sum` の値で割る) を、D7 リテンションの値にかかわらず毎回の判定日に agent が `documents/loop/metrics-<判定日>.json` へ記録する。D7 リテンションが継続のしきい値 (>= 0.38) を下回った判定日に、その値を前回の判定日の同じ値と比べ、下がっていたら初期設定の作り直しを改善 issue の最優先にする。前回の判定日の値が無い時は転換を判定しない |
 
 ## 必要な機能
 
@@ -54,4 +56,4 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 
 ## agent に任せること
 
-文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行の追加を提案する。RevenueCat の課金指標と Firebase Analytics の利用指標は bannzai/dashboard が日次で集めており、`read-dashboard-metric.sh` で読める。仮説の判定に要る指標 (MRR・D7 リテンション・paywall のファネル等) は、agent が同じ計測元で判定基準の行の追加を `documents/loop/pending-proposals.md` に提案し (Android の指標も同じ)、週次レポートで承認されたものだけを足す。
+文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行の追加を提案する。RevenueCat の課金指標と Firebase Analytics の利用指標は bannzai/dashboard が日次で集めており、`read-dashboard-metric.sh` で読める。MRR と D7 リテンションは判定基準に足した (週次レポート https://github.com/bannzai/inbox/issues/84 で承認)。ほかに仮説の判定に要る指標 (paywall のファネル等) は、agent が同じ計測元で判定基準の行の追加を `documents/loop/pending-proposals.md` に提案し (Android の指標も同じ)、週次レポートで承認されたものだけを足す。
