@@ -1,11 +1,9 @@
-import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/error_log.dart';
 
 import '../helper/fake.dart';
 import '../helper/mock.mocks.dart';
@@ -41,9 +39,24 @@ void main() {
         () {
       final customerInfo = fakeCustomerInfo(
         activeSubscriptions: ['rc_promo_Premium_custom', 'premium_monthly'],
+        allExpirationDates: {
+          'rc_promo_Premium_custom': '2026-12-01T00:00:00Z',
+          'premium_monthly': '2026-11-20T00:00:00Z'
+        },
         activePremiumProductIdentifier: 'rc_promo_Premium_custom',
       );
       expect(customerInfo.isPremium, isTrue);
+    });
+
+    test('期限の無い Promotional Entitlement (ダッシュボードでの恒久的な付与) で Premium が有効ならtrue',
+        () {
+      final customerInfo = fakeCustomerInfo(
+        allExpirationDates: {'rc_promo_Premium_lifetime': null},
+        activePremiumProductIdentifier: 'rc_promo_Premium_lifetime',
+      );
+      expect(customerInfo.isPremium, isTrue);
+      expect(customerInfo.premiumOrTrial(user: const User()), isTrue);
+      expect(customerInfo.isTrial(user: const User()), isFalse);
     });
 
     test('買い切り (サブスクリプションではない) で Premium entitlement が有効ならtrue', () {
@@ -328,54 +341,6 @@ void main() {
           freeCustomerInfo.hasDiscountEntitlement(
               user: user, discountEntitlementOffsetDay: 2),
           isFalse);
-    });
-  });
-
-  group('#premiumOrTrialOutsideUI', () {
-    // purchases_flutter と home_widget の plugin の Dart 側が使う MethodChannel
-    const purchasesChannel = MethodChannel('purchases_flutter');
-    const homeWidgetChannel = MethodChannel('home_widget');
-
-    void mockChannels({required Object? lastSyncedUserIsPremiumOrTrial}) {
-      TestWidgetsFlutterBinding.ensureInitialized();
-      errorLogger = FakeErrorLogger();
-      // オフラインで SDK のキャッシュが無い時と同じく、RevenueCat の SDK の呼び出しが失敗する状態
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        purchasesChannel,
-        (call) async => throw PlatformException(code: 'NETWORK_ERROR'),
-      );
-      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-          .setMockMethodCallHandler(
-        homeWidgetChannel,
-        (call) async => call.method == 'getWidgetData'
-            ? lastSyncedUserIsPremiumOrTrial
-            : null,
-      );
-      addTearDown(() {
-        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-            .setMockMethodCallHandler(purchasesChannel, null);
-        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
-            .setMockMethodCallHandler(homeWidgetChannel, null);
-      });
-    }
-
-    test('CustomerInfo を取得できない時は、画面が最後に Widget へ同期した値 (true) を返す', () async {
-      mockChannels(lastSyncedUserIsPremiumOrTrial: true);
-      expect(await premiumOrTrialOutsideUI(uid: 'uid', user: const User()),
-          isTrue);
-    });
-
-    test('CustomerInfo を取得できない時は、画面が最後に Widget へ同期した値 (false) を返す', () async {
-      mockChannels(lastSyncedUserIsPremiumOrTrial: false);
-      expect(await premiumOrTrialOutsideUI(uid: 'uid', user: const User()),
-          isFalse);
-    });
-
-    test('CustomerInfo を取得できず Widget へ同期した値も無い時は例外を投げる', () async {
-      mockChannels(lastSyncedUserIsPremiumOrTrial: null);
-      await expectLater(premiumOrTrialOutsideUI(uid: 'uid', user: const User()),
-          throwsA(isA<PlatformException>()));
     });
   });
 }

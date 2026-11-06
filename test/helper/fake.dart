@@ -11,7 +11,8 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
 /// テスト用の RevenueCat の CustomerInfo を作る。
-/// [activePremiumProductIdentifier] を渡すと、その商品で有効な Premium entitlement を持つ
+/// [activePremiumProductIdentifier] を渡すと、その商品で有効な Premium entitlement を持つ。
+/// entitlement の期限は、SDK と同じく [allExpirationDates] のその商品の期限にする (無ければ期限なし)
 CustomerInfo fakeCustomerInfo({
   List<String> activeSubscriptions = const [],
   Map<String, String?> allExpirationDates = const {},
@@ -19,7 +20,16 @@ CustomerInfo fakeCustomerInfo({
 }) {
   final premiumEntitlements = {
     if (activePremiumProductIdentifier != null)
-      'Premium': EntitlementInfo('Premium', true, true, '', '', activePremiumProductIdentifier, false),
+      'Premium': EntitlementInfo(
+        'Premium',
+        true,
+        true,
+        '',
+        '',
+        activePremiumProductIdentifier,
+        false,
+        expirationDate: allExpirationDates[activePremiumProductIdentifier],
+      ),
   };
   return CustomerInfo(
     EntitlementInfos(premiumEntitlements, premiumEntitlements),
@@ -44,16 +54,22 @@ final premiumCustomerInfo = fakeCustomerInfo(
 final freeCustomerInfo = fakeCustomerInfo();
 
 /// トライアル (Promotional Entitlement) を [trialDeadlineDate] まで付与されたユーザーの CustomerInfo
-CustomerInfo trialCustomerInfo({required DateTime trialDeadlineDate}) => fakeCustomerInfo(
-      activeSubscriptions: trialDeadlineDate.isAfter(now()) ? ['rc_promo_Premium_custom'] : [],
-      allExpirationDates: {'rc_promo_Premium_custom': trialDeadlineDate.toUtc().toIso8601String()},
-      activePremiumProductIdentifier: trialDeadlineDate.isAfter(now()) ? 'rc_promo_Premium_custom' : null,
+CustomerInfo trialCustomerInfo({required DateTime trialDeadlineDate}) =>
+    fakeCustomerInfo(
+      activeSubscriptions:
+          trialDeadlineDate.isAfter(now()) ? ['rc_promo_Premium_custom'] : [],
+      allExpirationDates: {
+        'rc_promo_Premium_custom': trialDeadlineDate.toUtc().toIso8601String()
+      },
+      activePremiumProductIdentifier:
+          trialDeadlineDate.isAfter(now()) ? 'rc_promo_Premium_custom' : null,
     );
 
 /// customerInfoProvider を最初のフレームから [customerInfo] を持つ状態にする override。
 /// 画面は UserSetup が CustomerInfo の取得後にだけ表示され requireValue で読むため、読み込み中の状態を経由させない
 Override customerInfoProviderOverride(CustomerInfo customerInfo) =>
-    customerInfoProvider.overrideWith(() => FixedCustomerInfoNotifier(customerInfo: customerInfo));
+    customerInfoProvider.overrideWith(
+        () => FixedCustomerInfoNotifier(customerInfo: customerInfo));
 
 class FakeAnalytics extends Fake implements Analytics {
   @override

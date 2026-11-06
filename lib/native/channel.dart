@@ -34,6 +34,10 @@ void definedChannel() {
           final pillSheetGroup = await quickRecordTakePill(database);
           syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
+          // リマインダーを登録し直す時の課金状態。取得できない時 (オフラインで SDK のキャッシュが無い等) は、登録済みのリマインダーを取り消す前に例外にして残す。
+          // 取り消した後に取得が失敗するとリマインダーが全て消えるため、取り消しより先に取得する
+          final customerInfo = await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid);
+
           final cancelReminderLocalNotification = CancelReminderLocalNotification();
           // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
           // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
@@ -49,7 +53,7 @@ void definedChannel() {
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
-              premiumOrTrial: await premiumOrTrialOutsideUI(uid: firebaseUser.uid, user: user),
+              premiumOrTrial: customerInfo.premiumOrTrial(user: user),
               setting: setting,
             );
           }

@@ -2,9 +2,7 @@ import 'dart:async';
 
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/purchase.dart';
-import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/functions/firebase_functions.dart';
@@ -53,23 +51,6 @@ Future<CustomerInfo> fetchCustomerInfoOutsideUI({required String uid}) async {
   return Purchases.getCustomerInfo();
 }
 
-/// 画面の外 (通知のアクション・ネイティブからの呼び出し) で、プレミアム会員またはトライアル中かを返す。
-/// CustomerInfo を取得できない時 (オフラインで SDK のキャッシュが無い、Android の background isolate で SDK を使えない等) は、
-/// アプリの画面が最後に Widget へ同期した値を使う。この経路は服用記録の後にリマインダーを登録し直すため、取得の失敗でリマインダーを失わないようにする。
-/// 同期した値も無ければ例外を投げる (実際と異なる課金状態を作らないため)
-Future<bool> premiumOrTrialOutsideUI({required String uid, required User user}) async {
-  try {
-    return (await fetchCustomerInfoOutsideUI(uid: uid)).premiumOrTrial(user: user);
-  } catch (error, stackTrace) {
-    errorLogger.recordError(error, stackTrace);
-    final lastSynced = await lastSyncedUserIsPremiumOrTrial();
-    if (lastSynced == null) {
-      rethrow;
-    }
-    return lastSynced;
-  }
-}
-
 /// トライアルの付与 (サーバーの callable startPromotion) を提供する
 final startPromotionProvider = Provider((ref) => StartPromotion());
 
@@ -88,11 +69,16 @@ class StartPromotion {
 /// 権限の正は RevenueCat の CustomerInfo。Promotional Entitlement でトライアルを付与する前の版でトライアルを始めた既存ユーザーだけ、
 /// users ドキュメントの trialDeadlineDate・discountEntitlementDeadlineDate・beginTrialDate を読み取り専用で使う
 extension CustomerInfoPremium on CustomerInfo {
-  /// 課金 (サブスクリプション・買い切り) で Premium を持っているか。トライアル (Promotional Entitlement) は含めない。
+  /// 課金 (サブスクリプション・買い切り) か、期限の無い Promotional Entitlement で Premium を持っているか。期限のある Promotional Entitlement (トライアル) は含めない。
+  /// トライアルは必ず期限付きで付与する (bannzai/PilllBackend#581 の end_time_ms) ため、期限の無い Promotional Entitlement はダッシュボード等で恒久的に付与した Premium として扱う。
   /// Promotional Entitlement の期限が課金より後の時は entitlements.active の productIdentifier が Promotional Entitlement の方になるため、activeSubscriptions も見る。
   /// Pilll の商品は全て Premium entitlement に紐づくため、activeSubscriptions は Premium の商品だけを含む
   bool get isPremium =>
-      entitlements.active[premiumEntitlements]?.productIdentifier.startsWith(promotionalPremiumProductIdentifierPrefix) == false ||
+      switch (entitlements.active[premiumEntitlements]) {
+        null => false,
+        final premiumEntitlement =>
+          !premiumEntitlement.productIdentifier.startsWith(promotionalPremiumProductIdentifierPrefix) || premiumEntitlement.expirationDate == null,
+      } ||
       activeSubscriptions.any((productIdentifier) => !productIdentifier.startsWith(promotionalPremiumProductIdentifierPrefix));
 
   /// トライアルの Promotional Entitlement の期限。期限切れも含み、付与されていなければ null

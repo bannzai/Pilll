@@ -126,6 +126,10 @@ Future<void> handleNotificationAction(
       final pillSheetGroup = await quickRecordTakePill(database);
       syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
+      // リマインダーを登録し直す時の課金状態。取得できない時 (オフラインで SDK のキャッシュが無い等) は、登録済みのリマインダーを取り消す前に例外にして残す。
+      // 取り消した後に取得が失敗するとリマインダーが全て消えるため、取り消しより先に取得する
+      final customerInfo = await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid);
+
       // AlarmKit解除はRiverpodコンテナ内でのみ実行可能なため、ここではlocal notificationのみ解除
       final pendingNotifications = await localNotificationService.pendingReminderNotifications();
       await Future.wait(
@@ -143,7 +147,7 @@ Future<void> handleNotificationAction(
         await RegisterReminderLocalNotification.run(
           pillSheetGroup: pillSheetGroup,
           activePillSheet: activePillSheet,
-          premiumOrTrial: await premiumOrTrialOutsideUI(uid: firebaseUser.uid, user: user),
+          premiumOrTrial: customerInfo.premiumOrTrial(user: user),
           setting: setting,
         );
       }
