@@ -125,6 +125,7 @@
   "notTaken": "ગોળી લીધી નથી",
   "pillSheetSettings": "ગોળીની સ્ટ્રિપની સેટિંગ્સ",
   "invalidAlreadyTakenPillUnmarkThenPause": "ગોળી લેવાનું થોડા સમય માટે બંધ કરતાં પહેલાં આજની ગોળી લીધી નથી એમ ચિહ્નિત કરો.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "આજ સિવાયના કોઈ દિવસે ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ કરવું હોય, તો કૃપા કરીને નીચેની માર્ગદર્શિકા જુઓ.",
   "pauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ",
   "changePauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ થવાની તારીખ બદલો",
   "pauseTakingPeriodEnded": "તમે ગોળી લેવાનું થોડા સમય માટે બંધ રાખ્યું હતું, તે સમય પૂરો થયો છે",

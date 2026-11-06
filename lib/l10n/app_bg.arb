@@ -125,6 +125,7 @@
   "notTaken": "Хапчето не е взето",
   "pillSheetSettings": "Настройки на блистера",
   "invalidAlreadyTakenPillUnmarkThenPause": "Преди да спрете временно приема на хапчета, отбележете днешното хапче като неприето.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ако искате спиране на приема да започне в ден, различен от днес, вижте указанията по-долу.",
   "pauseTaking": "Спиране на приема",
   "changePauseStartDate": "Промяна на началната дата на спиране на приема",
   "pauseTakingPeriodEnded": "Периодът на спиране на приема приключи",

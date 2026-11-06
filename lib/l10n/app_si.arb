@@ -125,6 +125,7 @@
   "notTaken": "පෙත්ත තවම ගෙන නැත",
   "pillSheetSettings": "පෙති කාඩ්පතේ සැකසුම්",
   "invalidAlreadyTakenPillUnmarkThenPause": "පෙති ගැනීම තාවකාලිකව නතර කිරීමට පෙර, අද පෙත්ත නොගත් බවට සලකුණු කරන්න.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "අද හැර වෙනත් දිනකින් පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට අවශ්‍ය නම්, කරුණාකර පහත මාර්ගෝපදේශය බලන්න.",
   "pauseTaking": "පෙති ගැනීමේ විරාමය",
   "changePauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය වෙනස් කරන්න",
   "pauseTakingPeriodEnded": "පෙති ගැනීමේ විරාම කාලය අවසන් වී ඇත",

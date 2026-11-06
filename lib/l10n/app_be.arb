@@ -125,6 +125,7 @@
   "notTaken": "Пігулка не прынята",
   "pillSheetSettings": "Налады блістара",
   "invalidAlreadyTakenPillUnmarkThenPause": "Перш чым часова спыніць прыём пігулак, адзначце сённяшнюю пігулку як не прынятую.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Калі вы хочаце пачаць прыпын у іншы дзень, а не сёння, звярніцеся да інструкцыі ніжэй.",
   "pauseTaking": "Прыпын",
   "changePauseStartDate": "Змяніць дату пачатку прыпыну",
   "pauseTakingPeriodEnded": "Перыяд прыпыну прыёму пігулак скончыўся",

@@ -125,6 +125,7 @@
   "notTaken": "Pil belum diminum",
   "pillSheetSettings": "Pengaturan strip pil",
   "invalidAlreadyTakenPillUnmarkThenPause": "Sebelum berhenti minum pil untuk sementara, tandai pil hari ini sebagai belum diminum.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jika Anda ingin memulai jeda minum pada hari selain hari ini, silakan lihat panduan di bawah.",
   "pauseTaking": "Jeda minum",
   "changePauseStartDate": "Ubah tanggal mulai jeda minum",
   "pauseTakingPeriodEnded": "Masa jeda minum Anda telah berakhir",

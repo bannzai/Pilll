@@ -125,6 +125,7 @@
   "notTaken": "Pilleri ottamatta",
   "pillSheetSettings": "Pilleriliuskan asetukset",
   "invalidAlreadyTakenPillUnmarkThenPause": "Merkitse tämän päivän pilleri ottamattomaksi ennen kuin pidät tauon pillereiden ottamisesta.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jos haluat aloittaa taukotilan muuna päivänä kuin tänään, katso alla oleva ohje.",
   "pauseTaking": "Taukotila",
   "changePauseStartDate": "Vaihda taukotilan alkamispäivää",
   "pauseTakingPeriodEnded": "Taukotilan jakso on päättynyt",

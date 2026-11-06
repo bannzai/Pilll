@@ -125,6 +125,7 @@
   "notTaken": "აბი არ არის მიღებული",
   "pillSheetSettings": "აბების ბლისტერის პარამეტრები",
   "invalidAlreadyTakenPillUnmarkThenPause": "აბების მიღების დროებით შეწყვეტამდე დღევანდელი აბი მონიშნეთ როგორც მიუღებელი.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "თუ მიღების პაუზის დაწყება დღევანდელის გარდა სხვა დღიდან გსურთ, გაეცანით ქვემოთ მოცემულ გზამკვლევს.",
   "pauseTaking": "მიღების პაუზა",
   "changePauseStartDate": "მიღების პაუზის დაწყების თარიღის შეცვლა",
   "pauseTakingPeriodEnded": "მიღების პაუზის პერიოდი დასრულდა",

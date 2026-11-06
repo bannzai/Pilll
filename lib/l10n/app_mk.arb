@@ -125,6 +125,7 @@
   "notTaken": "Таблета не е земена",
   "pillSheetSettings": "Поставки за блистер",
   "invalidAlreadyTakenPillUnmarkThenPause": "Пред привремено да го прекинете земањето таблети, означете ја денешната таблета како неземена.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ако сакате прекин да започне во друг ден, а не денес, погледнете го упатството подолу.",
   "pauseTaking": "Привремен прекин на земање",
   "changePauseStartDate": "Промена на датумот на почеток на прекин",
   "pauseTakingPeriodEnded": "Периодот на прекин во земањето таблети заврши",

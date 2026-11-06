@@ -125,6 +125,7 @@
   "notTaken": "ยังไม่ได้ทานยา",
   "pillSheetSettings": "การตั้งค่าแผงยา",
   "invalidAlreadyTakenPillUnmarkThenPause": "ก่อนพักการทานยาชั่วคราว กรุณาเปลี่ยนยาของวันนี้เป็นสถานะยังไม่ได้ทานค่ะ",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "หากต้องการเริ่มหยุดกินยาชั่วคราวจากวันอื่นที่ไม่ใช่วันนี้ โปรดดูคำแนะนำด้านล่างค่ะ",
   "pauseTaking": "หยุดกินยาชั่วคราว",
   "changePauseStartDate": "เปลี่ยนวันที่เริ่มหยุดกินยาชั่วคราว",
   "pauseTakingPeriodEnded": "ช่วงที่พักการทานยาชั่วคราวสิ้นสุดแล้วค่ะ",

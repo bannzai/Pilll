@@ -125,6 +125,7 @@
   "notTaken": "Эмээ уугаагүй",
   "pillSheetSettings": "Эмийн блистерийн тохиргоо",
   "invalidAlreadyTakenPillUnmarkThenPause": "Эм уухаа түр завсарлахаасаа өмнө өнөөдрийн эмийг уугаагүй гэж тэмдэглэнэ үү.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Хэрэв түр завсарлагыг өнөөдрөөс өөр өдөр эхлүүлэхийг хүсвэл доорх зааврыг үзнэ үү.",
   "pauseTaking": "Түр завсарлага",
   "changePauseStartDate": "Эм уух түр завсарлагын эхлэх өдрийг өөрчлөх",
   "pauseTakingPeriodEnded": "Эм уух түр завсарлага дууссан",

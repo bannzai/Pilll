@@ -125,6 +125,7 @@
   "notTaken": "Tablete nav lietota",
   "pillSheetSettings": "Tablešu blistera iestatījumi",
   "invalidAlreadyTakenPillUnmarkThenPause": "Pirms īslaicīgi pārtraucat tablešu lietošanu, atzīmējiet šodienas tableti kā neiedzerušu.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ja vēlaties sākt lietošanas pauzi citā dienā, nevis šodien, skatiet tālāk sniegto ceļvedi.",
   "pauseTaking": "Lietošanas pauze",
   "changePauseStartDate": "Mainīt lietošanas pauzes sākuma datumu",
   "pauseTakingPeriodEnded": "Lietošanas pauze ir beigusies",

@@ -125,6 +125,7 @@
   "notTaken": "Δεν το πήρα",
   "pillSheetSettings": "Ρυθμίσεις για την καρτέλα χαπιών",
   "invalidAlreadyTakenPillUnmarkThenPause": "Πριν κάνετε παύση στη λήψη των χαπιών, σημειώστε ότι δεν έχετε πάρει το σημερινό χάπι.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Αν θέλετε να ξεκινήσετε την παύση σε άλλη ημέρα αντί για σήμερα, δείτε τον οδηγό παρακάτω.",
   "pauseTaking": "Παύση",
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της παύσης",
   "pauseTakingPeriodEnded": "Η παύση λήψης έληξε",
