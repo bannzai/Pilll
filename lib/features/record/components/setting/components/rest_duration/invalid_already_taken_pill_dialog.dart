@@ -14,6 +14,8 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      // 訳文が日本語より長い表示言語や小さい画面で、本文がダイアログの高さに収まらず切れるため
+      scrollable: true,
       contentPadding: const EdgeInsets.only(
         left: 24,
         right: 24,

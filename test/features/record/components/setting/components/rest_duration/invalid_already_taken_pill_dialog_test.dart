@@ -30,7 +30,8 @@ void main() {
       addTearDown(tester.view.reset);
 
       await tester.pumpWidget(
-        const MaterialApp(home: Scaffold(body: InvalidAlreadyTakenPillDialog())),
+        const MaterialApp(
+            home: Scaffold(body: InvalidAlreadyTakenPillDialog())),
       );
       await tester.pump();
 
@@ -78,7 +79,8 @@ void main() {
 
       expect(tester.takeException(), isNull);
       expect(
-        texts.where((text) => hiraganaOrKatakana.hasMatch(text) || cjkIdeograph.hasMatch(text)),
+        texts.where((text) =>
+            hiraganaOrKatakana.hasMatch(text) || cjkIdeograph.hasMatch(text)),
         isNotEmpty,
       );
     });
