@@ -32,6 +32,7 @@ castle の translate-app-screenshot-check skill に渡す入力として、実�
 | `reminder_notification_customize_word/` | 服用通知の文言カスタマイズ | 設定 → 服用通知の文言カスタマイズ。通知の文言の入力欄とプレビュー |
 | `pill_sheet_setting_sheet/` | ピルシートの設定シート | 記録 → ピルシートの設定。服用お休みを含むメニューのボトムシート |
 | `rest_duration_begin_dialog/` | 服用お休みの開始ダイアログ | 記録 → ピルシートの設定 → 服用お休みを開始。服用お休みを始める確認のダイアログ |
+| `invalid_already_taken_pill_dialog/` | 服用お休みの拒否ダイアログ | `rest_duration_begin_dialog/` の後に記録の「飲んだ」で今日のピルを服用済みにし、記録 → ピルシートの設定 → 服用お休みを開始。今日のピルを未服用に戻すよう伝える説明図付きのダイアログ |
 | `yaz_flex_question/` | Yaz Flex の初期設定の質問 | 初期設定の最初の画面「ヤーズフレックスの方ですか？」 |
 | `pill_sheet_type_select_sheet/` | ピルの種類選択シート | ピルの種類を選ぶボトムシート。記録 →「ピルシートを追加」でも同じ部品 (`AddPillSheetTypeEmpty`) から開くシートで、flow では初期設定の中で開く |
 
