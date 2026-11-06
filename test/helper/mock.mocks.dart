@@ -181,17 +181,6 @@ class _FakeFuture_10<T1> extends _i1.SmartFake implements _i9.Future<T1> {
         );
 }
 
-class _FakeFirebaseFunctions_11 extends _i1.SmartFake
-    implements _i10.FirebaseFunctions {
-  _FakeFirebaseFunctions_11(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
 class _FakeOfferings_12 extends _i1.SmartFake implements _i11.Offerings {
   _FakeOfferings_12(
     Object parent,

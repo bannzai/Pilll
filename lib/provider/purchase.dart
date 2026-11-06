@@ -284,14 +284,11 @@ Future<void> syncPurchaseInfo() async {
     return;
   }
 
-  final purchaserInfo = await Purchases.getCustomerInfo();
-  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  final premiumEntitlement = (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements];
 
   try {
-    final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
     analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await syncPurchaseInfo(isActivated: isActivated);
+    await SyncPurchaseInfo(DatabaseConnection(uid))(isActivated: premiumEntitlement?.isActive ?? false);
     analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
