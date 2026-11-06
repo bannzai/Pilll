@@ -260,7 +260,8 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
-      isActivated: premiumEntitlement?.isActive,
+      // Premium entitlement が無い CustomerInfo (解約・返金で消えた後の更新) では isPremium を false に戻す
+      isActivated: premiumEntitlement?.isActive ?? false,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
@@ -284,12 +285,10 @@ Future<void> syncPurchaseInfo() async {
     return;
   }
 
-  final customerInfo = await Purchases.getCustomerInfo();
-
   try {
     analytics.logEvent(name: 'call_service_sync_purchase_info');
     await SyncPurchaseInfo(DatabaseConnection(uid))(
-      isActivated: customerInfo.entitlements.all[premiumEntitlements]?.isActive ?? false,
+      isActivated: (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements]?.isActive ?? false,
     );
     analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
