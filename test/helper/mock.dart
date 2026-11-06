@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
@@ -51,8 +50,5 @@ import 'package:pilll/utils/local_notification.dart';
   FirestoreIDGenerator,
   LocalNotificationService,
   RegisterReminderLocalNotificationRunner,
-  FirebaseFunctions,
-  HttpsCallable,
-  HttpsCallableResult,
 ])
 abstract class KeepGeneratedMocks {}

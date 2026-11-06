@@ -13,7 +13,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/entity/user.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
@@ -486,7 +485,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
+      await store.register();
     });
     test("state.pillSheetTypes has two pillSheetType", () async {
       final endInitialSetting = MockEndInitialSetting();
@@ -597,7 +596,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
+      await store.register();
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
@@ -615,9 +614,10 @@ void main() {
         timezoneDatabaseName: null,
       );
 
+      final remoteConfigParameter = RemoteConfigParameter();
       final endInitialSetting = MockEndInitialSetting();
       when(
-        endInitialSetting(),
+        endInitialSetting(remoteConfigParameter),
       ).thenAnswer((_) => Future.value());
 
       var mockTodayRepository = MockTodayService();
@@ -697,58 +697,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      await store.register(user: const User());
-    });
-
-    group("トライアルの開始", () {
-      ProviderContainer buildContainer({
-        required EndInitialSetting endInitialSetting,
-      }) {
-        final batchFactory = MockBatchFactory();
-        when(batchFactory.batch()).thenReturn(MockWriteBatch());
-        return ProviderContainer(
-          overrides: [
-            endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            batchSetSettingProvider
-                .overrideWith((ref) => MockBatchSetSetting()),
-            batchSetPillSheetModifiedHistoryProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetModifiedHistory(),
-            ),
-            batchSetPillSheetGroupProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetGroup(),
-            ),
-            registerReminderLocalNotificationRunnerProvider.overrideWithValue(
-              registerReminderLocalNotificationRunner,
-            ),
-          ],
-        );
-      }
-
-      test("トライアルを開始していないユーザーは endInitialSetting を呼ぶ", () async {
-        final endInitialSetting = MockEndInitialSetting();
-        when(endInitialSetting()).thenAnswer((_) => Future.value());
-        final container = buildContainer(endInitialSetting: endInitialSetting);
-
-        await container
-            .read(initialSettingStateNotifierProvider.notifier)
-            .register(user: const User());
-
-        verify(endInitialSetting()).called(1);
-      });
-
-      test(
-          "トライアルを開始済みのユーザー (trialIsAlreadyBegin が true) は endInitialSetting を呼ばない",
-          () async {
-        final endInitialSetting = MockEndInitialSetting();
-        final container = buildContainer(endInitialSetting: endInitialSetting);
-
-        await container
-            .read(initialSettingStateNotifierProvider.notifier)
-            .register(user: User(beginTrialDate: DateTime.parse("2020-09-01")));
-
-        verifyNever(endInitialSetting());
-      });
+      await store.register();
     });
   });
 
