@@ -758,7 +758,7 @@ void main() {
       );
       store.selectYazFlex();
       input(store);
-      await store.register(user: const User());
+      await store.register();
 
       return verify(batchSetPillSheetGroup(batch, captureAny)).captured.single
           as PillSheetGroup;
