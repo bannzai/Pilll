@@ -19,7 +19,7 @@ class DateTimeFormatter {
     return DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY).format(dateTime);
   }
 
-  /// 月の見出し用に、表示言語に応じた省略形の月名を返す (ja: 10月, en: Oct, de: Okt)。
+  /// 月の見出し用に、表示言語に応じた省略形の月名を返す。
   static String abbreviatedMonth(DateTime dateTime) {
     return DateFormat(DateFormat.ABBR_MONTH).format(dateTime);
   }
