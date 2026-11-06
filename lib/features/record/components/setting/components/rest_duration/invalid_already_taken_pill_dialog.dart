@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -40,33 +41,134 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          SvgPicture.asset('images/invalid_rest_duration.svg'),
-          const SizedBox(height: 15),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              style: const TextStyle(height: 1.7),
+          // 説明図の文言を表示言語で出すため、images/invalid_rest_duration.svg には線と丸だけを置き、文言と吹き出しはここで重ねる。
+          // 幅 218 と左余白 9・列幅 100 は SVG の幅と、昨日・今日の丸の中心 (x=59, x=159) に列の中心を合わせるための値
+          SizedBox(
+            width: 218,
+            child: Column(
               children: [
-                // TODO: [Localizations]
-                TextSpan(
-                  text: L.unmarkTodayPillAsTakenToPause,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
+                Row(
+                  children: [
+                    const SizedBox(width: 9),
+                    SizedBox(
+                      width: 100,
+                      child: Text(
+                        L.invalidRestDurationIllustrationYesterday,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                          color: TextColor.main,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 100,
+                      child: Text(
+                        L.invalidRestDurationIllustrationToday,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                          color: TextColor.main,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                TextSpan(
-                  text: L.pauseStartingOtherDaysInstructions,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
+                const SizedBox(height: 6),
+                SvgPicture.asset('images/invalid_rest_duration.svg'),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(width: 9),
+                    SizedBox(
+                      width: 100,
+                      child: Column(
+                        children: [
+                          SvgPicture.asset(
+                            'images/invalid_rest_duration_bubble_tip.svg',
+                          ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 6,
+                            ),
+                            decoration: const BoxDecoration(
+                              color: AppColors.secondary,
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4),
+                              ),
+                            ),
+                            child: Text(
+                              L.invalidRestDurationIllustrationTakenUntilThisDay,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 12,
+                                color: TextColor.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 100,
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 8),
+                          const Text(
+                            '↑',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
+                            ),
+                          ),
+                          Text(
+                            L.invalidRestDurationIllustrationUnmarkAsTaken,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 15),
+          // 2 つの文を連結すると、ja 以外の表示言語で文の境目が消えるため、それぞれ完結した文として行を分ける
+          Text(
+            L.invalidAlreadyTakenPillUnmarkThenPause,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 14,
+              height: 1.7,
+              color: TextColor.main,
+            ),
+          ),
+          Text(
+            L.invalidAlreadyTakenPillPauseOtherDaysGuide,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              height: 1.7,
+              color: TextColor.main,
             ),
           ),
         ],

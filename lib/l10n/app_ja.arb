@@ -588,9 +588,29 @@
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
-  "unmarkTodayPillAsTakenToPause": "今日飲むピルを未服用にしてから",
-  "@unmarkTodayPillAsTakenToPause": {
-    "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
+  "invalidAlreadyTakenPillUnmarkThenPause": "今日飲むピルを未服用にしてからお休みしてください。",
+  "@invalidAlreadyTakenPillUnmarkThenPause": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の本文の 1 文目 (太字)。服用お休みを始めるには、先に今日のピルを未服用に戻す必要があることを伝える。「お休み」は「服用お休み」機能を指す。直後に別の文 (invalidAlreadyTakenPillPauseOtherDaysGuide) が改行して続くため、この文だけで完結した文にする。"
+  },
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
+  "@invalidAlreadyTakenPillPauseOtherDaysGuide": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の本文の 2 文目。「下記」はダイアログ下部のボタン (服用お休み機能の使い方のページを開く) を指す。前の文 (invalidAlreadyTakenPillUnmarkThenPause) と改行で区切られて表示されるため、この文だけで完結した文にする。"
+  },
+  "invalidRestDurationIllustrationYesterday": "昨日",
+  "@invalidRestDurationIllustrationYesterday": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図のラベル。タイムライン上の 1 つ前の日 (昨日) の丸の上に表示する。幅約 100pt に収まる短い語にし、句点・ピリオドを付けない。"
+  },
+  "invalidRestDurationIllustrationToday": "今日",
+  "@invalidRestDurationIllustrationToday": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図のラベル。タイムライン上の今日の丸の上に表示する。名詞の「今日」で、幅約 100pt に収まる短い語にし、句点・ピリオドを付けない。"
+  },
+  "invalidRestDurationIllustrationTakenUntilThisDay": "この日まで\n服用済みに",
+  "@invalidRestDurationIllustrationTakenUntilThisDay": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図で、昨日の丸から出る吹き出しの文言。昨日までのピルを服用済みの状態にしておくことを表す。吹き出しの幅は約 100pt で自動で折り返すため、改行 (\\n) は訳文の自然な区切りに置くか、無くてよい。句点・ピリオドを付けない。"
+  },
+  "invalidRestDurationIllustrationUnmarkAsTaken": "未服用にする",
+  "@invalidRestDurationIllustrationUnmarkAsTaken": {
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図で、今日の丸の下に矢印付きで表示する文言。今日のピルを未服用の状態に戻す操作を表す。幅約 100pt に収まる短い語句にし、句点・ピリオドを付けない。"
   },
   "pauseTaking": "服用お休み",
   "@pauseTaking": {
@@ -2092,10 +2112,6 @@
   "insomnia": "不眠",
   "@insomnia": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
-  },
-  "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
-  "@pauseStartingOtherDaysInstructions": {
-    "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) のヘルプで、今日以外の日から服用お休みを始めたい場合の手順へ導く説明文です。原文の「お休みしてください」も用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Take a break from taking your pill. If you’d like the break to start on a day other than today, follow the steps below.」ではなく「Please pause your pill intake. If you'd like to start the pause on a day other than today, follow the steps below.」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Lege bitte eine Pillenpause ein. Wenn du die Pause an einem anderen Tag als heute beginnen möchtest, findest du unten eine Anleitung.」ではなく「Bitte starte die Pillenpause. Wenn du die Pillenpause an einem anderen Tag als heute beginnen möchtest, sieh dir die Anleitung unten an.」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「복용을 쉬어 주세요. 오늘이 아닌 다른 날부터 복용 휴식을 시작하고 싶다면 아래 안내를 참고해 주세요.」ではなく「복용을 일시 중지해 주세요. 오늘이 아닌 다른 날부터 일시 중지하려면 아래 안내를 참고해 주세요.」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
   },
   "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
   "@seeHowToUsePauseTakingFeature": {
