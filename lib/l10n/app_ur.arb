@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "اگر آپ آج کے بجائے کسی اور دن سے گولیاں لینے میں توقف شروع کرنا چاہتی ہیں تو براہِ کرم نیچے دی گئی رہنمائی دیکھیں۔",
   "invalidRestDurationIllustrationYesterday": "گزشتہ روز",
   "invalidRestDurationIllustrationToday": "آج",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "اس دن تک گولیاں لی جا چکی ہیں",
   "pauseTaking": "توقف",
   "changePauseStartDate": "گولی لینے میں توقف شروع ہونے کی تاریخ بدلیں",
   "pauseTakingPeriodEnded": "گولی لینے میں توقف کی مدت ختم ہو گئی ہے",

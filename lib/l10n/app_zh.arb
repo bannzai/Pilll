@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "如果想从今天以外的日期开始暂停服药，请参考下方指南。",
   "invalidRestDurationIllustrationYesterday": "昨天",
   "invalidRestDurationIllustrationToday": "今天",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "截至这一天均已服药",
   "pauseTaking": "暂停服药",
   "changePauseStartDate": "更改暂停服药的开始日期",
   "pauseTakingPeriodEnded": "暂停服药的时间已结束",

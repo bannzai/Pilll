@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Егер кідіріс бүгіннен басқа күні басталсын десеңіз, төмендегі нұсқаулықты қараңыз.",
   "invalidRestDurationIllustrationYesterday": "Кеше",
   "invalidRestDurationIllustrationToday": "Бүгін",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Таблеткалар осы күнге дейін қоса қабылданған",
   "pauseTaking": "Кідіріс",
   "changePauseStartDate": "Қабылдаудағы кідіріс басталатын күнді өзгерту",
   "pauseTakingPeriodEnded": "Қабылдаудағы кідіріс мерзімі аяқталды",

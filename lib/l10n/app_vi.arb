@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Nếu bạn muốn bắt đầu tạm ngừng uống thuốc từ ngày khác thay vì hôm nay, vui lòng xem hướng dẫn bên dưới.",
   "invalidRestDurationIllustrationYesterday": "Hôm qua",
   "invalidRestDurationIllustrationToday": "Hôm nay",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Đã uống thuốc đến hết ngày này",
   "pauseTaking": "Tạm ngừng uống thuốc",
   "changePauseStartDate": "Đổi ngày bắt đầu tạm ngừng uống thuốc",
   "pauseTakingPeriodEnded": "Thời gian bạn tạm ngừng uống thuốc đã kết thúc",

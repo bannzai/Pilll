@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ako želite da prekid počne nekog drugog dana, a ne danas, pogledajte upute u nastavku.",
   "invalidRestDurationIllustrationYesterday": "Jučer",
   "invalidRestDurationIllustrationToday": "Danas",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilule uzete do ovog dana uključivo",
   "pauseTaking": "Prekid uzimanja",
   "changePauseStartDate": "Promjena datuma početka prekida",
   "pauseTakingPeriodEnded": "Razdoblje prekida uzimanja pilula je završilo",

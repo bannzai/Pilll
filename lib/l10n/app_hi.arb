@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "अगर आप आज के अलावा किसी और दिन से गोली लेने में विराम शुरू करना चाहती हैं, तो कृपया नीचे दी गई मार्गदर्शिका देखें।",
   "invalidRestDurationIllustrationYesterday": "कल",
   "invalidRestDurationIllustrationToday": "आज",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "इस दिन तक गोलियाँ ली जा चुकी हैं",
   "pauseTaking": "गोली लेने में विराम",
   "changePauseStartDate": "गोली लेने में विराम शुरू होने की तारीख बदलें",
   "pauseTakingPeriodEnded": "गोली लेने में विराम की अवधि समाप्त हो गई है",

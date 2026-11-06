@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jeśli chcesz wstrzymać przyjmowanie tabletek od dnia innego niż dzisiaj, zajrzyj do poradnika poniżej.",
   "invalidRestDurationIllustrationYesterday": "Wczoraj",
   "invalidRestDurationIllustrationToday": "Dziś",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletki przyjęte do tego dnia włącznie",
   "pauseTaking": "Wstrzymanie przyjmowania",
   "changePauseStartDate": "Zmień datę rozpoczęcia wstrzymania przyjmowania",
   "pauseTakingPeriodEnded": "Okres wstrzymania przyjmowania pigułek dobiegł końca",

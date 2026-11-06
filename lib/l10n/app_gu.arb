@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "આજ સિવાયના કોઈ દિવસે ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ કરવું હોય, તો કૃપા કરીને નીચેની માર્ગદર્શિકા જુઓ.",
   "invalidRestDurationIllustrationYesterday": "ગઈકાલે",
   "invalidRestDurationIllustrationToday": "આજે",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "આ દિવસ સુધી ગોળીઓ લેવાઈ છે",
   "pauseTaking": "ગોળી લેવાનું થોડા સમય માટે બંધ",
   "changePauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ શરૂ થવાની તારીખ બદલો",
   "pauseTakingPeriodEnded": "તમે ગોળી લેવાનું થોડા સમય માટે બંધ રાખ્યું હતું, તે સમય પૂરો થયો છે",

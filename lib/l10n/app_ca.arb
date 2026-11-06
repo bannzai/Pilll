@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Si vols començar la pausa un dia que no sigui avui, consulta la guia de sota.",
   "invalidRestDurationIllustrationYesterday": "Ahir",
   "invalidRestDurationIllustrationToday": "Avui",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Píndoles preses fins a aquest dia",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Canvia la data d'inici de la pausa",
   "pauseTakingPeriodEnded": "S'ha acabat el període de pausa",

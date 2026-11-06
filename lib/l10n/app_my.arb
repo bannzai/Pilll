@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ယနေ့မှမဟုတ်ဘဲ အခြားနေ့မှစ၍ ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားလိုပါက အောက်ပါလမ်းညွှန်ကို ကြည့်ပါ။",
   "invalidRestDurationIllustrationYesterday": "မနေ့က",
   "invalidRestDurationIllustrationToday": "ဒီနေ့",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "ဒီနေ့အထိ ဆေးလုံးများ သောက်ပြီးပါပြီ",
   "pauseTaking": "ခေတ္တရပ်နားခြင်း",
   "changePauseStartDate": "ခေတ္တရပ်နားမှု စတင်ရက် ပြောင်းလဲမှု",
   "pauseTakingPeriodEnded": "ဆေးပြားသောက်ခြင်းကို ခေတ္တရပ်နားထားသည့်ကာလ ပြီးဆုံးပါပြီ",

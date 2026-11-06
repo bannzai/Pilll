@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ለጊዜው ማቆም ከዛሬ በተለየ ቀን መጀመር ከፈለጉ፣ እባክዎ ከታች ያለውን መመሪያ ይመልከቱ።",
   "invalidRestDurationIllustrationYesterday": "ትናንት",
   "invalidRestDurationIllustrationToday": "ዛሬ",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "እስከዚህ ቀን ድረስ ክኒኑ ተወስዷል",
   "pauseTaking": "ለጊዜው ማቆም",
   "changePauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ይቀይሩ",
   "pauseTakingPeriodEnded": "ለጊዜው ማቆም የቆየበት ጊዜ አብቅቷል",

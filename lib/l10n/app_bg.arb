@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ако искате спиране на приема да започне в ден, различен от днес, вижте указанията по-долу.",
   "invalidRestDurationIllustrationYesterday": "Вчера",
   "invalidRestDurationIllustrationToday": "Днес",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Хапчетата са взети до този ден включително",
   "pauseTaking": "Спиране на приема",
   "changePauseStartDate": "Промяна на началната дата на спиране на приема",
   "pauseTakingPeriodEnded": "Периодът на спиране на приема приключи",

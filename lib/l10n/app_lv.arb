@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ja vēlaties sākt lietošanas pauzi citā dienā, nevis šodien, skatiet tālāk sniegto ceļvedi.",
   "invalidRestDurationIllustrationYesterday": "Vakar",
   "invalidRestDurationIllustrationToday": "Šodien",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletes lietotas līdz šai dienai ieskaitot",
   "pauseTaking": "Lietošanas pauze",
   "changePauseStartDate": "Mainīt lietošanas pauzes sākuma datumu",
   "pauseTakingPeriodEnded": "Lietošanas pauze ir beigusies",

@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "As jy die innameonderbreking op ’n ander dag as vandag wil begin, kan jy die gids hieronder raadpleeg.",
   "invalidRestDurationIllustrationYesterday": "Gister",
   "invalidRestDurationIllustrationToday": "Vandag",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Geneem tot en met hierdie dag",
   "pauseTaking": "Innameonderbreking",
   "changePauseStartDate": "Verander begindatum van innameonderbreking",
   "pauseTakingPeriodEnded": "Die innameonderbreking is verby",

@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ef þú vilt hefja pilluhlé á öðrum degi en í dag geturðu skoðað leiðbeiningarnar hér að neðan.",
   "invalidRestDurationIllustrationYesterday": "Í gær",
   "invalidRestDurationIllustrationToday": "Í dag",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillur teknar til og með þessum degi",
   "pauseTaking": "Pilluhlé",
   "changePauseStartDate": "Breyta upphafsdegi pilluhlés",
   "pauseTakingPeriodEnded": "Pilluhléinu er lokið",

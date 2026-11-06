@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Si quieres iniciar la pausa otro día, consulta la guía de abajo.",
   "invalidRestDurationIllustrationYesterday": "Ayer",
   "invalidRestDurationIllustrationToday": "Hoy",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Píldoras tomadas hasta este día inclusive",
   "pauseTaking": "Pausa",
   "changePauseStartDate": "Cambiar la fecha de inicio de la pausa",
   "pauseTakingPeriodEnded": "La pausa ha terminado",

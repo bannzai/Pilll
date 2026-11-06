@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ຖ້າຕ້ອງການເລີ່ມຢຸດກິນຢາຊົ່ວຄາວໃນມື້ອື່ນທີ່ບໍ່ແມ່ນມື້ນີ້ ກະລຸນາເບິ່ງຄຳແນະນຳຂ້າງລຸ່ມ.",
   "invalidRestDurationIllustrationYesterday": "ມື້ວານນີ້",
   "invalidRestDurationIllustrationToday": "ມື້ນີ້",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "ກິນຢາເມັດແລ້ວຈົນຮອດມື້ນີ້",
   "pauseTaking": "ຢຸດກິນຢາຊົ່ວຄາວ",
   "changePauseStartDate": "ປ່ຽນວັນເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
   "pauseTakingPeriodEnded": "ໄລຍະເວລາຢຸດກິນຢາຊົ່ວຄາວສິ້ນສຸດແລ້ວ",

@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ఈ రోజు కాకుండా వేరే రోజు నుంచి మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ప్రారంభించాలనుకుంటే, దయచేసి దిగువ మార్గదర్శిని చూడండి.",
   "invalidRestDurationIllustrationYesterday": "నిన్న",
   "invalidRestDurationIllustrationToday": "ఈరోజు",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "ఈ రోజు వరకు మాత్రలు తీసుకున్నారు",
   "pauseTaking": "తాత్కాలిక విరామం",
   "changePauseStartDate": "తాత్కాలిక విరామం ప్రారంభ తేదీని మార్చండి",
   "pauseTakingPeriodEnded": "తాత్కాలిక విరామం వ్యవధి ముగిసింది",

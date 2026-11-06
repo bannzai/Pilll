@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Αν θέλετε να ξεκινήσετε την παύση σε άλλη ημέρα αντί για σήμερα, δείτε τον οδηγό παρακάτω.",
   "invalidRestDurationIllustrationYesterday": "Χθες",
   "invalidRestDurationIllustrationToday": "Σήμερα",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Τα χάπια έχουν ληφθεί έως και αυτή την ημέρα",
   "pauseTaking": "Παύση",
   "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης της παύσης",
   "pauseTakingPeriodEnded": "Η παύση λήψης έληξε",

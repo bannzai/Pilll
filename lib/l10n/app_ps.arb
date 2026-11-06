@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "که غواړئ لنډمهاله درول له نن پرته په بله ورځ پیل کړئ، مهرباني وکړئ لاندې لارښود وګورئ.",
   "invalidRestDurationIllustrationYesterday": "پرون",
   "invalidRestDurationIllustrationToday": "نن",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "تر دې ورځې پورې ګولۍ خوړل شوې دي",
   "pauseTaking": "لنډمهاله درول",
   "changePauseStartDate": "د لنډمهاله درول د پیل نېټه بدله کړئ",
   "pauseTakingPeriodEnded": "د لنډمهاله درول موده پای ته ورسېده",

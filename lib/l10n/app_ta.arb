@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "இன்றல்லாமல் வேறொரு நாளிலிருந்து மாத்திரை உட்கொள்வதை இடைநிறுத்த விரும்பினால், கீழே உள்ள வழிகாட்டியைப் பாருங்கள்.",
   "invalidRestDurationIllustrationYesterday": "நேற்று",
   "invalidRestDurationIllustrationToday": "இன்று",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "இந்த நாள் வரை மாத்திரைகள் எடுத்துக்கொள்ளப்பட்டன",
   "pauseTaking": "இடைநிறுத்தம்",
   "changePauseStartDate": "மாத்திரை உட்கொள்வதை இடைநிறுத்தும் தொடக்கத் தேதியை மாற்றுங்கள்",
   "pauseTakingPeriodEnded": "மாத்திரை உட்கொள்வதை இடைநிறுத்திய காலம் முடிந்துவிட்டது",

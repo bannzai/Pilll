@@ -128,6 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se você quiser iniciar a interrupção em outro dia, consulte o guia abaixo.",
   "invalidRestDurationIllustrationYesterday": "Ontem",
   "invalidRestDurationIllustrationToday": "Hoje",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pílulas tomadas até este dia, inclusive",
   "pauseTaking": "Interrupção",
   "changePauseStartDate": "Alterar a data de início da interrupção",
   "pauseTakingPeriodEnded": "O período de interrupção do uso da pílula terminou",
