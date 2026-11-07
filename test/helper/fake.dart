@@ -17,6 +17,8 @@ CustomerInfo fakeCustomerInfo({
   List<String> activeSubscriptions = const [],
   Map<String, String?> allExpirationDates = const {},
   String? activePremiumProductIdentifier,
+  // RevenueCat のサーバーが CustomerInfo を返した時刻。空文字は時刻を持たない (判定に端末の時刻だけを使う) 状態
+  String requestDate = '',
 }) {
   final premiumEntitlements = {
     if (activePremiumProductIdentifier != null)
@@ -40,7 +42,7 @@ CustomerInfo fakeCustomerInfo({
     '',
     '',
     allExpirationDates,
-    '',
+    requestDate,
   );
 }
 

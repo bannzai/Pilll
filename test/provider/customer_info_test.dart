@@ -143,6 +143,66 @@ void main() {
   });
 
   group('#isTrial', () {
+    group(
+        'RevenueCat のサーバーが CustomerInfo を返した時刻 (requestDate) が端末の時刻より遅い (端末の時計を戻した)',
+        () {
+      test('requestDate がトライアルの期限より後ならfalse (時計を戻しても期限を延ばせない)', () {
+        final customerInfo = fakeCustomerInfo(
+          allExpirationDates: {
+            'rc_promo_Premium_custom': '2026-12-01T00:00:00Z'
+          },
+          requestDate: '2026-12-02T00:00:00Z',
+        );
+        expect(customerInfo.isTrial(user: const User()), isFalse);
+      });
+
+      test('requestDate がトライアルの期限と同じならfalse', () {
+        final customerInfo = fakeCustomerInfo(
+          allExpirationDates: {
+            'rc_promo_Premium_custom': '2026-12-01T00:00:00Z'
+          },
+          requestDate: '2026-12-01T00:00:00Z',
+        );
+        expect(customerInfo.isTrial(user: const User()), isFalse);
+      });
+
+      test('requestDate がトライアルの期限の1秒前ならtrue', () {
+        final customerInfo = fakeCustomerInfo(
+          allExpirationDates: {
+            'rc_promo_Premium_custom': '2026-12-01T00:00:00Z'
+          },
+          requestDate: '2026-11-30T23:59:59Z',
+        );
+        expect(customerInfo.isTrial(user: const User()), isTrue);
+      });
+
+      test(
+          'Promotional Entitlement が無い既存ユーザーも、requestDate が users の期限より後ならfalse',
+          () {
+        final customerInfo =
+            fakeCustomerInfo(requestDate: '2026-12-02T00:00:00Z');
+        final user =
+            User(trialDeadlineDate: DateTime.parse('2026-12-01T00:00:00Z'));
+        expect(customerInfo.isTrial(user: user), isFalse);
+      });
+    });
+
+    test('requestDate が端末の時刻より前なら端末の時刻で判定する (期限が端末の時刻より後ならtrue)', () {
+      final customerInfo = fakeCustomerInfo(
+        allExpirationDates: {'rc_promo_Premium_custom': '2026-12-01T00:00:00Z'},
+        requestDate: '2026-11-01T00:00:00Z',
+      );
+      expect(customerInfo.isTrial(user: const User()), isTrue);
+    });
+
+    test('requestDate が端末の時刻より前で、期限が端末の時刻より前ならfalse', () {
+      final customerInfo = fakeCustomerInfo(
+        allExpirationDates: {'rc_promo_Premium_custom': '2026-11-05T00:00:00Z'},
+        requestDate: '2026-11-01T00:00:00Z',
+      );
+      expect(customerInfo.isTrial(user: const User()), isFalse);
+    });
+
     group('Promotional Entitlement のトライアル', () {
       test('期限が現在時刻の1秒後ならtrue', () {
         final customerInfo = fakeCustomerInfo(allExpirationDates: {
