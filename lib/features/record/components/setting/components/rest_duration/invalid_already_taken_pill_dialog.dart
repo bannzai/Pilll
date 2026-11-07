@@ -97,8 +97,9 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                               'images/invalid_rest_duration_bubble_tip.svg',
                             ),
                             Container(
+                              // horizontal 4: de の「eingenommen」のような長い 1 語が列幅 100 の中で単語の途中で折り返さないため
                               padding: const EdgeInsets.symmetric(
-                                horizontal: 8,
+                                horizontal: 4,
                                 vertical: 6,
                               ),
                               decoration: const BoxDecoration(
