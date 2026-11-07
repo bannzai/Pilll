@@ -124,7 +124,7 @@
   "taken": "Pilule prise",
   "notTaken": "Pilule non prise",
   "pillSheetSettings": "Paramètres de la plaquette",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Avant de suspendre la prise de pilule, indiquez que la pilule d’aujourd’hui n’a pas été prise.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Avant de commencer la pause de prise, indiquez que la pilule d’aujourd’hui n’a pas été prise.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Si vous souhaitez commencer la pause de prise un autre jour qu’aujourd’hui, consultez le guide ci-dessous.",
   "invalidRestDurationIllustrationYesterday": "Hier",
   "invalidRestDurationIllustrationToday": "Aujourd’hui",

@@ -124,7 +124,7 @@
   "taken": "Qabul qilindi",
   "notTaken": "Tabletka hali ichilmagan",
   "pillSheetSettings": "Tabletka blister sozlamalari",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Tabletkalarni qabul qilishni vaqtincha toʻxtatishdan oldin bugungi tabletkani qabul qilinmagan deb belgilang.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Pauzani boshlashdan oldin bugungi tabletkani ichilmagan deb belgilang.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Agar pauzani bugundan boshqa kuni boshlamoqchi boʻlsangiz, quyidagi qoʻllanmani koʻring.",
   "invalidRestDurationIllustrationYesterday": "Kecha",
   "invalidRestDurationIllustrationToday": "Bugun",

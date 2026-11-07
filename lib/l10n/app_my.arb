@@ -124,7 +124,7 @@
   "taken": "သောက်ပြီးပါပြီ",
   "notTaken": "ဆေးပြား မသောက်ရသေးပါ",
   "pillSheetSettings": "ဆေးပြားကတ် ဆက်တင်များ",
-  "invalidAlreadyTakenPillUnmarkThenPause": "ဆေးလုံးသောက်ခြင်းကို ခဏရပ်မီ ယနေ့သောက်ရမည့်ဆေးလုံးကို မသောက်ရသေးဟု အမှတ်အသားပြုပါ။",
+  "invalidAlreadyTakenPillUnmarkThenPause": "ခေတ္တရပ်နားမှု မစတင်မီ ယနေ့သောက်ရမည့်ဆေးပြားကို မသောက်ရသေးကြောင်း အရင်မှတ်သားပေးပါ။",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ယနေ့မှမဟုတ်ဘဲ အခြားနေ့မှစ၍ ဆေးသောက်ခြင်းကို ခေတ္တရပ်နားလိုပါက အောက်ပါလမ်းညွှန်ကို ကြည့်ပါ။",
   "invalidRestDurationIllustrationYesterday": "မနေ့က",
   "invalidRestDurationIllustrationToday": "ဒီနေ့",

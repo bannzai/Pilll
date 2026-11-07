@@ -124,7 +124,7 @@
   "taken": "Қабылданды",
   "notTaken": "Таблетка қабылданбаған",
   "pillSheetSettings": "Таблетка блистерінің баптаулары",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Дәрі қабылдауды уақытша тоқтатпас бұрын бүгінгі таблетканы қабылданбаған деп белгілеңіз.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Кідіріс бастамас бұрын бүгінгі таблетканы қабылданбаған деп белгілеңіз.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Егер кідіріс бүгіннен басқа күні басталсын десеңіз, төмендегі нұсқаулықты қараңыз.",
   "invalidRestDurationIllustrationYesterday": "Кеше",
   "invalidRestDurationIllustrationToday": "Бүгін",

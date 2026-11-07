@@ -124,7 +124,7 @@
   "taken": "ניטלה",
   "notTaken": "הגלולה לא ניטלה",
   "pillSheetSettings": "הגדרות חפיסת הגלולות",
-  "invalidAlreadyTakenPillUnmarkThenPause": "לפני השהיה זמנית של נטילת הגלולות, יש לסמן את הגלולה של היום ככזו שלא ניטלה.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "לפני תחילת השהיית נטילה, יש לסמן את הגלולה של היום ככזו שטרם ניטלה.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "כדי להתחיל השהיית נטילה ביום אחר מהיום, אפשר להיעזר במדריך שלמטה.",
   "invalidRestDurationIllustrationYesterday": "אתמול",
   "invalidRestDurationIllustrationToday": "היום",

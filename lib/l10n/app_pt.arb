@@ -124,7 +124,7 @@
   "taken": "Tomada",
   "notTaken": "Pílula ainda não tomada",
   "pillSheetSettings": "Configurações da cartela",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Antes de fazer uma pausa no uso da pílula, marque a pílula de hoje como não tomada.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Antes de iniciar a interrupção, marque a pílula de hoje como não tomada.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se você quiser iniciar a interrupção em outro dia, consulte o guia abaixo.",
   "invalidRestDurationIllustrationYesterday": "Ontem",
   "invalidRestDurationIllustrationToday": "Hoje",

@@ -124,7 +124,7 @@
   "taken": "لے لی گئی",
   "notTaken": "گولی ابھی نہیں لی گئی",
   "pillSheetSettings": "گولیوں کی پٹی کی ترتیبات",
-  "invalidAlreadyTakenPillUnmarkThenPause": "گولیاں لینا عارضی طور پر روکنے سے پہلے آج کی گولی کو ’نہیں لی‘ کے طور پر نشان زد کریں۔",
+  "invalidAlreadyTakenPillUnmarkThenPause": "توقف شروع کرنے سے پہلے آج کی گولی کو نہ لی گئی کے طور پر نشان زد کریں۔",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "اگر آپ آج کے بجائے کسی اور دن سے گولیاں لینے میں توقف شروع کرنا چاہتی ہیں تو براہِ کرم نیچے دی گئی رہنمائی دیکھیں۔",
   "invalidRestDurationIllustrationYesterday": "گزشتہ روز",
   "invalidRestDurationIllustrationToday": "آج",

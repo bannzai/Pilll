@@ -124,7 +124,7 @@
   "taken": "लिइसकियो",
   "notTaken": "चक्की खाएको छैन",
   "pillSheetSettings": "चक्की पत्ता सेटिङ",
-  "invalidAlreadyTakenPillUnmarkThenPause": "चक्की खान केही समयका लागि रोक्नुअघि आजको चक्की नखाएको भनी चिन्ह लगाउनुहोस्।",
+  "invalidAlreadyTakenPillUnmarkThenPause": "सेवन विराम सुरु गर्नुअघि आजको चक्की नलिएको भनेर चिन्ह लगाउनुहोस्।",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "आजबाहेक अर्को दिनदेखि सेवन विराम सुरु गर्न चाहनुहुन्छ भने, कृपया तलको मार्गदर्शन हेर्नुहोस्।",
   "invalidRestDurationIllustrationYesterday": "हिजो",
   "invalidRestDurationIllustrationToday": "आज",

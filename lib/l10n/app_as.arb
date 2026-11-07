@@ -124,7 +124,7 @@
   "taken": "খোৱা হৈছে",
   "notTaken": "এতিয়াও খোৱা নাই",
   "pillSheetSettings": "পিলৰ ষ্ট্ৰিপৰ ছেটিংছ",
-  "invalidAlreadyTakenPillUnmarkThenPause": "অনুগ্ৰহ কৰি আজিৰ পিলটো নোখোৱা বুলি চিহ্নিত কৰাৰ পিছতহে পিল খোৱা সাময়িকভাৱে বন্ধ কৰক।",
+  "invalidAlreadyTakenPillUnmarkThenPause": "বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰাৰ আগতে আজিৰ বড়িটো খোৱা নাই বুলি চিহ্নিত কৰক।",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "আজিৰ বাহিৰে আন কোনো দিনৰ পৰা বড়ি খোৱা সাময়িকভাৱে বন্ধ কৰিবলৈ বিচাৰিলে, অনুগ্ৰহ কৰি তলৰ নিৰ্দেশনা চাওক।",
   "invalidRestDurationIllustrationYesterday": "কালি",
   "invalidRestDurationIllustrationToday": "আজি",

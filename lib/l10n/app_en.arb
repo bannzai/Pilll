@@ -124,7 +124,7 @@
   "taken": "Taken",
   "notTaken": "Not taken",
   "pillSheetSettings": "Pill pack settings",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Mark today's pill as not taken before pausing your pill intake.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Mark today's pill as not taken before starting a pause.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "If you’d like to start a pause on a day other than today, see the guide below.",
   "invalidRestDurationIllustrationYesterday": "Yesterday",
   "invalidRestDurationIllustrationToday": "Today",

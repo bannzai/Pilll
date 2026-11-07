@@ -124,7 +124,7 @@
   "taken": "খাওয়া হয়েছে",
   "notTaken": "পিল খাওয়া হয়নি",
   "pillSheetSettings": "পিল শিটের সেটিংস",
-  "invalidAlreadyTakenPillUnmarkThenPause": "পিল খাওয়া সাময়িকভাবে বন্ধ করার আগে আজকের পিলটি খাওয়া হয়নি বলে চিহ্নিত করুন।",
+  "invalidAlreadyTakenPillUnmarkThenPause": "সেবন স্থগিত করার আগে আজকের পিলটি সেবন করা হয়নি বলে চিহ্নিত করুন।",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "আজ ছাড়া অন্য কোনো দিন থেকে সেবন স্থগিত করতে চাইলে, অনুগ্রহ করে নিচের নির্দেশিকা দেখুন।",
   "invalidRestDurationIllustrationYesterday": "গতকাল",
   "invalidRestDurationIllustrationToday": "আজ",

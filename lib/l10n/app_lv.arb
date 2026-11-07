@@ -124,7 +124,7 @@
   "taken": "Iedzerta",
   "notTaken": "Tablete nav lietota",
   "pillSheetSettings": "Tablešu blistera iestatījumi",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Pirms īslaicīgi pārtraucat tablešu lietošanu, atzīmējiet šodienas tableti kā neiedzerušu.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Pirms sākat lietošanas pauzi, atzīmējiet šodienas tableti kā neiedzertu.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ja vēlaties sākt lietošanas pauzi citā dienā, nevis šodien, skatiet tālāk sniegto ceļvedi.",
   "invalidRestDurationIllustrationYesterday": "Vakar",
   "invalidRestDurationIllustrationToday": "Šodien",

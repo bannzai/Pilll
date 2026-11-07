@@ -124,7 +124,7 @@
   "taken": "Užito",
   "notTaken": "Tableta neužita",
   "pillSheetSettings": "Nastavení blistru",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Než dočasně přestanete užívat pilulky, označte dnešní pilulku jako neužitou.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Než zahájíte pozastavení užívání, označte dnešní pilulku jako neužitou.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Pokud chcete zahájit pozastavení užívání v jiný den než dnes, podívejte se prosím na průvodce níže.",
   "invalidRestDurationIllustrationYesterday": "Včera",
   "invalidRestDurationIllustrationToday": "Dnes",

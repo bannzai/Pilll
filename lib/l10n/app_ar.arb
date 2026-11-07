@@ -124,7 +124,7 @@
   "taken": "تم تناول الحبة",
   "notTaken": "لم يتم تناول الحبة",
   "pillSheetSettings": "إعدادات شريط الحبوب",
-  "invalidAlreadyTakenPillUnmarkThenPause": "سجلي حبة اليوم على أنها لم تُؤخذ قبل بدء التوقف المؤقت عن تناول الحبوب.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "قبل إيقاف تناول الحبوب، أعيدي حبة اليوم إلى حالة «لم تُؤخذ».",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "إذا أردتِ بدء إيقاف تناول الحبوب في يوم غير اليوم، فاطّلعي على الدليل أدناه.",
   "invalidRestDurationIllustrationYesterday": "أمس",
   "invalidRestDurationIllustrationToday": "اليوم",

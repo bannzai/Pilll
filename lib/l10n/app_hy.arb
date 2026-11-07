@@ -124,7 +124,7 @@
   "taken": "Ընդունված է",
   "notTaken": "Հաբը չի ընդունվել",
   "pillSheetSettings": "Կարգավորումներ հաբերի բլիստերի համար",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Հաբերի ընդունումը ժամանակավորապես դադարեցնելուց առաջ այսօրվա հաբը նշեք որպես չընդունված։",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Ընդունման դադար սկսելուց առաջ այսօրվա հաբը նշեք որպես չընդունված։",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Եթե ցանկանում եք ընդունման դադար սկսել ոչ թե այսօր, այլ մեկ այլ օր, ծանոթացեք ստորև ներկայացված ուղեցույցին։",
   "invalidRestDurationIllustrationYesterday": "Երեկ",
   "invalidRestDurationIllustrationToday": "Այսօր",

@@ -124,7 +124,7 @@
   "taken": "U mor",
   "notTaken": "Pilula nuk është marrë",
   "pillSheetSettings": "Cilësimet e blisterit",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Para se ta ndërprisni përkohësisht marrjen e pilulave, shënojeni pilulën e sotme si të pamarrë.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Para se të filloni pauzën, shënojeni pilulën e sotme si të papërdorur.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Nëse dëshironi ta nisni pauzën e marrjes së pilulës në një ditë tjetër, shihni udhëzuesin më poshtë.",
   "invalidRestDurationIllustrationYesterday": "Dje",
   "invalidRestDurationIllustrationToday": "Sot",

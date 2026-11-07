@@ -124,7 +124,7 @@
   "taken": "Ичилди",
   "notTaken": "Таблетка ичиле элек",
   "pillSheetSettings": "Таблетка блистеринин жөндөөлөрү",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Таблетка ичүүнү убактылуу токтотордон мурун бүгүнкү таблетканы ичилген эмес деп белгилеңиз.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Убактылуу токтотуу алдында бүгүнкү таблетканы ичилген эмес деп белгилеңиз.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Эгер убактылуу токтотуу бүгүн эмес, башка күнү башталсын десеңиз, төмөндөгү нускаманы караңыз.",
   "invalidRestDurationIllustrationYesterday": "Кечээ",
   "invalidRestDurationIllustrationToday": "Бүгүн",

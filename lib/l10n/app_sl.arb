@@ -124,7 +124,7 @@
   "taken": "Vzeta",
   "notTaken": "Tableta ni vzeta",
   "pillSheetSettings": "Nastavitve ploščice",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Preden začasno prenehate jemati tabletke, današnjo tabletko označite kot nevzeto.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Preden začnete prekinitev, označite današnjo tabletko kot nevzeto.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Če želite začeti prekinitev jemanja na drug dan, ne danes, si oglejte spodnja navodila.",
   "invalidRestDurationIllustrationYesterday": "Včeraj",
   "invalidRestDurationIllustrationToday": "Danes",

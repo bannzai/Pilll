@@ -124,7 +124,7 @@
   "taken": "Wedi’i chymryd",
   "notTaken": "Heb gymryd y bilsen",
   "pillSheetSettings": "Gosodiadau'r stribed pils",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Cyn cymryd seibiant o gymryd y bilsen, nodwch nad ydych wedi cymryd bilsen heddiw.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Cyn dechrau'r oedi, marciwch bilsen heddiw fel un heb ei chymryd.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Os hoffech ddechrau'r oedi ar ddiwrnod heblaw heddiw, edrychwch ar y canllaw isod.",
   "invalidRestDurationIllustrationYesterday": "Ddoe",
   "invalidRestDurationIllustrationToday": "Heddiw",

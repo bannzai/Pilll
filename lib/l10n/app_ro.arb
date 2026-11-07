@@ -124,7 +124,7 @@
   "taken": "Luată",
   "notTaken": "Pilula nu a fost luată",
   "pillSheetSettings": "Setările pentru blister",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Înainte de a face o pauză de la administrarea pilulei, marchează pilula de azi ca neadministrată.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Înainte de a începe întreruperea, marchează pilula de astăzi ca neluată.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Dacă vrei să începi întreruperea în altă zi, consultă ghidul de mai jos.",
   "invalidRestDurationIllustrationYesterday": "Ieri",
   "invalidRestDurationIllustrationToday": "Azi",

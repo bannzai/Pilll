@@ -124,7 +124,7 @@
   "taken": "ತೆಗೆದುಕೊಳ್ಳಲಾಗಿದೆ",
   "notTaken": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಂಡಿಲ್ಲ",
   "pillSheetSettings": "ಮಾತ್ರೆಗಳ ಸ್ಟ್ರಿಪ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
-  "invalidAlreadyTakenPillUnmarkThenPause": "ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವುದನ್ನು ತಾತ್ಕಾಲಿಕವಾಗಿ ನಿಲ್ಲಿಸುವ ಮೊದಲು ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭಿಸುವ ಮೊದಲು ಇಂದಿನ ಮಾತ್ರೆಯನ್ನು ತೆಗೆದುಕೊಂಡಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ಇಂದಿನ ಬದಲು ಬೇರೆ ದಿನದಿಂದ ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭಿಸಲು ಬಯಸಿದರೆ, ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಮಾರ್ಗದರ್ಶಿಯನ್ನು ನೋಡಿ.",
   "invalidRestDurationIllustrationYesterday": "ನಿನ್ನೆ",
   "invalidRestDurationIllustrationToday": "ಇಂದು",

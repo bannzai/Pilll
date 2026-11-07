@@ -124,7 +124,7 @@
   "taken": "Ingenomen",
   "notTaken": "Pil nog niet ingenomen",
   "pillSheetSettings": "Instellingen voor de pillenstrip",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Markeer de pil van vandaag als niet ingenomen voordat je tijdelijk stopt met het innemen van de pil.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Markeer de pil van vandaag eerst als niet ingenomen voordat je de innamepauze begint.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wil je de innamepauze op een andere dag dan vandaag laten beginnen? Bekijk dan de uitleg hieronder.",
   "invalidRestDurationIllustrationYesterday": "Gisteren",
   "invalidRestDurationIllustrationToday": "Vandaag",

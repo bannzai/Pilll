@@ -124,7 +124,7 @@
   "taken": "घेतली",
   "notTaken": "गोळी घेतलेली नाही",
   "pillSheetSettings": "पिल शीट सेटिंग्ज",
-  "invalidAlreadyTakenPillUnmarkThenPause": "गोळ्या घेणे तात्पुरते थांबवण्यापूर्वी आजची गोळी घेतली नाही असे चिन्हांकित करा.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "सेवन विराम सुरू करण्यापूर्वी आजची गोळी घेतलेली नाही असे कृपया नोंदवा.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "आजऐवजी दुसऱ्या दिवसापासून सेवन विराम सुरू करायचा असल्यास, कृपया खालील मार्गदर्शक पाहा.",
   "invalidRestDurationIllustrationYesterday": "काल",
   "invalidRestDurationIllustrationToday": "आज",

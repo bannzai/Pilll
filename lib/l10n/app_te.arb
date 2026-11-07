@@ -124,7 +124,7 @@
   "taken": "తీసుకున్నారు",
   "notTaken": "మాత్ర ఇంకా తీసుకోలేదు",
   "pillSheetSettings": "మాత్రల స్ట్రిప్ సెట్టింగ్‌లు",
-  "invalidAlreadyTakenPillUnmarkThenPause": "మాత్రలు తీసుకోవడాన్ని తాత్కాలికంగా ఆపే ముందు, ఈ రోజు మాత్రను తీసుకోలేదని గుర్తించండి.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "తాత్కాలిక విరామం ప్రారంభించే ముందు, ఈ రోజు మాత్రను తీసుకోలేదని గుర్తించండి.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ఈ రోజు కాకుండా వేరే రోజు నుంచి మాత్రలు తీసుకోవడంలో తాత్కాలిక విరామం ప్రారంభించాలనుకుంటే, దయచేసి దిగువ మార్గదర్శిని చూడండి.",
   "invalidRestDurationIllustrationYesterday": "నిన్న",
   "invalidRestDurationIllustrationToday": "ఈరోజు",

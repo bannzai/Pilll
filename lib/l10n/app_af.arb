@@ -124,7 +124,7 @@
   "taken": "Geneem",
   "notTaken": "Nog nie geneem nie",
   "pillSheetSettings": "Pilstrokie-instellings",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Merk asseblief vandag se pil as nie geneem nie voordat jy jou pilinname onderbreek.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Merk eers vandag se pil as nie geneem nie voordat jy die innameonderbreking begin.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "As jy die innameonderbreking op ’n ander dag as vandag wil begin, kan jy die gids hieronder raadpleeg.",
   "invalidRestDurationIllustrationYesterday": "Gister",
   "invalidRestDurationIllustrationToday": "Vandag",

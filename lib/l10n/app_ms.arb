@@ -124,7 +124,7 @@
   "taken": "Sudah diambil",
   "notTaken": "Pil belum diambil",
   "pillSheetSettings": "Tetapan pek pil",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Sebelum berhenti mengambil pil buat sementara waktu, sila tandakan pil hari ini sebagai belum diambil.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Sebelum memulakan jeda pengambilan pil, sila tandakan pil hari ini sebagai belum diambil.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jika anda ingin memulakan jeda pengambilan pil pada hari selain hari ini, sila rujuk panduan di bawah.",
   "invalidRestDurationIllustrationYesterday": "Semalam",
   "invalidRestDurationIllustrationToday": "Hari ini",

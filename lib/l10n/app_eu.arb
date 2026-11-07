@@ -124,7 +124,7 @@
   "taken": "Hartuta",
   "notTaken": "Pilula hartu gabe",
   "pillSheetSettings": "Pilula-blisterraren ezarpenak",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Pilulak hartzeari aldi baterako utzi aurretik, markatu gaurko pilula hartu gabe dagoela.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Etenaldia hasi aurretik, markatu gaurko pilula hartu gabe dagoela.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Etenaldia gaur ez den beste egun batean hasi nahi baduzu, begiratu beheko gida.",
   "invalidRestDurationIllustrationYesterday": "Atzo",
   "invalidRestDurationIllustrationToday": "Gaur",
