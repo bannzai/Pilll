@@ -316,6 +316,12 @@ class RegisterReminderLocalNotification {
   //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.debug(name: 'call_register_reminder_notification');
+    // 登録し直す時の課金状態は、取り消す前に確かめる。CustomerInfo が前の値も持たない時は登録し直せないため、取り消さずに登録済みのリマインダーを残す。
+    // 取得し直しに失敗した時 (前の値を持つ AsyncError) は、UserSetup が表示に使っている同じユーザーの前の値で登録し直す
+    final customerInfo = ref.read(customerInfoProvider).valueOrNull;
+    if (customerInfo == null) {
+      return;
+    }
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
@@ -329,9 +335,7 @@ class RegisterReminderLocalNotification {
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
-    // 取得し直しに失敗した時 (前の値を持つ AsyncError) も、UserSetup が表示に使っている同じユーザーの前の値で登録し直し、取り消したリマインダーを失わないようにする
-    final customerInfo = ref.read(customerInfoProvider).valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || setting == null || user == null || customerInfo == null) {
+    if (pillSheetGroup == null || activePillSheet == null || setting == null || user == null) {
       return;
     }
 

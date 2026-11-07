@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -5,6 +6,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/user.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -15,6 +23,7 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+import '../helper/fake.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
@@ -23,7 +32,8 @@ void main() {
       final category = iOSQuickRecordPillCategory();
 
       expect(category.identifier, iOSQuickRecordPillCategoryIdentifier);
-      expect(category.actions.map((action) => action.identifier), [actionIdentifier]);
+      expect(category.actions.map((action) => action.identifier),
+          [actionIdentifier]);
     });
 
     test("RECORD_PILL アクションはロック中の端末でロック解除を求める", () {
@@ -39,7 +49,8 @@ void main() {
     void mockToday(String date) {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("${date.substring(0, 10)}T12:00:00"));
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime.parse("${date.substring(0, 10)}T12:00:00"));
     }
 
     // 連続番号は PillSheetGroup のインスタンスごとに今日を基準に遅延初期化されるため、今日を変えて比較する時は毎回新しく作る
@@ -70,25 +81,33 @@ void main() {
     }
 
     /// 今日(mockToday の日付)に登録するリマインドの、(通知を出す日, 表示する番号) を run と同じ手順で求める
-    List<(DateTime, String)> registeredReminderNumbers({required PillSheetGroup pillSheetGroup}) {
+    List<(DateTime, String)> registeredReminderNumbers(
+        {required PillSheetGroup pillSheetGroup}) {
       final activePillSheet = pillSheetGroup.activePillSheet!;
       return [
-        for (final (pillDayOffset, dayOffset) in reminderDayOffsetsFor(restDurations: pillSheetGroup.restDurations).indexed)
+        for (final (pillDayOffset, dayOffset) in reminderDayOffsetsFor(
+                restDurations: pillSheetGroup.restDurations)
+            .indexed)
           (
             today().addDays(dayOffset),
             reminderPillDisplayNumberFor(
               pillSheetGroup: pillSheetGroup,
               pageIndex: activePillSheet.groupIndex,
-              pillNumberInPillSheet: activePillSheet.todayPillNumber + pillDayOffset,
+              pillNumberInPillSheet:
+                  activePillSheet.todayPillNumber + pillDayOffset,
               reminderDate: today().addDays(dayOffset),
             ),
           ),
       ];
     }
 
-    for (final appearanceMode in [PillSheetAppearanceMode.cyclicSequential, PillSheetAppearanceMode.sequential]) {
+    for (final appearanceMode in [
+      PillSheetAppearanceMode.cyclicSequential,
+      PillSheetAppearanceMode.sequential
+    ]) {
       group("$appearanceMode", () {
-        test("5/1開始・5/8から服用お休み・服用再開予定日5/15を5/10に登録した通知の番号が、その日に画面が表示する番号と一致する", () {
+        test("5/1開始・5/8から服用お休み・服用再開予定日5/15を5/10に登録した通知の番号が、その日に画面が表示する番号と一致する",
+            () {
           final restDuration = RestDuration(
             id: "rest_duration_id",
             beginDate: DateTime.parse("2022-05-08"),
@@ -111,9 +130,11 @@ void main() {
           for (final (date, number) in reminders) {
             mockToday(date.toIso8601String());
             final screenPillSheetGroup = build();
-            final screenNumber = screenPillSheetGroup.displayPillNumberWithoutDate(
+            final screenNumber =
+                screenPillSheetGroup.displayPillNumberWithoutDate(
               pageIndex: 0,
-              pillNumberInPillSheet: screenPillSheetGroup.activePillSheet!.todayPillNumber,
+              pillNumberInPillSheet:
+                  screenPillSheetGroup.activePillSheet!.todayPillNumber,
             );
             expect(number, screenNumber, reason: "$date の通知の番号が画面の番号と一致しない");
           }
@@ -137,7 +158,8 @@ void main() {
             ),
           );
 
-          expect(reminders.map((e) => e.$2).toList(), ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]);
+          expect(reminders.map((e) => e.$2).toList(),
+              ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]);
         });
 
         test("2枚目にまたがる通知の番号も、その日に画面が表示する番号と一致する", () {
@@ -159,20 +181,26 @@ void main() {
           mockToday("2022-05-24");
           final activePillSheet = build().activePillSheet!;
           final reminders = [
-            for (final (pillDayOffset, dayOffset) in reminderDayOffsetsFor(restDurations: build().restDurations).indexed)
+            for (final (pillDayOffset, dayOffset)
+                in reminderDayOffsetsFor(restDurations: build().restDurations)
+                    .indexed)
               (
                 today().addDays(dayOffset),
                 activePillSheet.todayPillNumber + pillDayOffset,
               ),
           ];
           // 2枚目の開始日(6/3)が登録の範囲に入っていること
-          expect(reminders.any((e) => e.$1 == DateTime.parse("2022-06-03")), true);
+          expect(
+              reminders.any((e) => e.$1 == DateTime.parse("2022-06-03")), true);
 
           var crossedToSecondPillSheet = false;
           for (final (date, pillNumberInPillSheetWithOverflow) in reminders) {
             mockToday("2022-05-24");
-            final isOverActivePillSheet = pillNumberInPillSheetWithOverflow > 28;
-            final pillNumberInPillSheet = isOverActivePillSheet ? pillNumberInPillSheetWithOverflow - 28 : pillNumberInPillSheetWithOverflow;
+            final isOverActivePillSheet =
+                pillNumberInPillSheetWithOverflow > 28;
+            final pillNumberInPillSheet = isOverActivePillSheet
+                ? pillNumberInPillSheetWithOverflow - 28
+                : pillNumberInPillSheetWithOverflow;
             final pageIndex = isOverActivePillSheet ? 1 : 0;
             final notificationNumber = reminderPillDisplayNumberFor(
               pillSheetGroup: build(),
@@ -184,14 +212,19 @@ void main() {
             mockToday(date.toIso8601String());
             final screenPillSheetGroup = build();
             final screenActivePillSheet = screenPillSheetGroup.activePillSheet!;
-            expect(screenActivePillSheet.groupIndex, pageIndex, reason: "$date のアクティブなピルシート");
-            expect(screenActivePillSheet.todayPillNumber, pillNumberInPillSheet, reason: "$date のシート内のピル番号");
+            expect(screenActivePillSheet.groupIndex, pageIndex,
+                reason: "$date のアクティブなピルシート");
+            expect(screenActivePillSheet.todayPillNumber, pillNumberInPillSheet,
+                reason: "$date のシート内のピル番号");
             expect(
               notificationNumber,
-              screenPillSheetGroup.displayPillNumberWithoutDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+              screenPillSheetGroup.displayPillNumberWithoutDate(
+                  pageIndex: pageIndex,
+                  pillNumberInPillSheet: pillNumberInPillSheet),
               reason: "$date の通知の番号が画面の番号と一致しない",
             );
-            crossedToSecondPillSheet = crossedToSecondPillSheet || isOverActivePillSheet;
+            crossedToSecondPillSheet =
+                crossedToSecondPillSheet || isOverActivePillSheet;
           }
           expect(crossedToSecondPillSheet, true);
         });
@@ -216,17 +249,29 @@ void main() {
 
         // 登録の処理が日付をまたぐと today() は 5/11 になる。通知日(5/15 05:00)を渡すので、今日の値に依らず再開日の 1 番になる
         expect(
-          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 15, 5, 0)),
+          reminderPillDisplayNumberFor(
+              pillSheetGroup: build(),
+              pageIndex: 0,
+              pillNumberInPillSheet: 8,
+              reminderDate: DateTime(2022, 5, 15, 5, 0)),
           "1",
         );
         mockToday("2022-05-11");
         expect(
-          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 15, 5, 0)),
+          reminderPillDisplayNumberFor(
+              pillSheetGroup: build(),
+              pageIndex: 0,
+              pillNumberInPillSheet: 8,
+              reminderDate: DateTime(2022, 5, 15, 5, 0)),
           "1",
         );
         // 予定日の前日の通知日を渡すと、まだ服用お休み中の暫定の番号になる(8番)
         expect(
-          reminderPillDisplayNumberFor(pillSheetGroup: build(), pageIndex: 0, pillNumberInPillSheet: 8, reminderDate: DateTime(2022, 5, 14, 5, 0)),
+          reminderPillDisplayNumberFor(
+              pillSheetGroup: build(),
+              pageIndex: 0,
+              pillNumberInPillSheet: 8,
+              reminderDate: DateTime(2022, 5, 14, 5, 0)),
           "8",
         );
       });
@@ -252,7 +297,8 @@ void main() {
         );
 
         // 5/10の番号は8番。服用お休み中は進まないので、予定日(5/15)の通知が8番、以降は9番、10番…
-        expect(reminders.map((e) => e.$2).toList(), ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]);
+        expect(reminders.map((e) => e.$2).toList(),
+            ["8", "9", "10", "11", "12", "13", "14", "15", "16", "17"]);
       });
     });
   });
@@ -279,7 +325,10 @@ void main() {
     test("服用お休みが無い場合は服用完了日(5/28)の翌日", () {
       mockToday("2022-05-10");
 
-      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheetWith(restDurations: [])), DateTime(2022, 5, 29, 23, 59, 59));
+      expect(
+          newPillSheetNotificationBaseDateFor(
+              lastPillSheet: lastPillSheetWith(restDurations: [])),
+          DateTime(2022, 5, 29, 23, 59, 59));
     });
 
     test("服用再開予定日ありの服用お休み中は、今日(5/10)までではなく予定日(5/15)まで含めた日の翌日", () {
@@ -296,8 +345,10 @@ void main() {
         ],
       );
       // 5/1 + 27日 + 服用お休み7日(5/8〜5/15) = 6/4 なので、通知の基準日は6/5。今日で打ち切った estimatedEndTakenDate の翌日(5/31)ではない
-      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 6, 5, 23, 59, 59));
-      expect(lastPillSheet.estimatedEndTakenDate.addDays(1), DateTime(2022, 5, 31, 23, 59, 59));
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet),
+          DateTime(2022, 6, 5, 23, 59, 59));
+      expect(lastPillSheet.estimatedEndTakenDate.addDays(1),
+          DateTime(2022, 5, 31, 23, 59, 59));
     });
 
     test("endDateがnullの服用お休み中は今日までで数えた日の翌日", () {
@@ -313,7 +364,8 @@ void main() {
         ],
       );
       // 5/1 + 27日 + 服用お休み2日(5/8〜5/10) = 5/30 なので、通知の基準日は5/31
-      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 5, 31, 23, 59, 59));
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet),
+          DateTime(2022, 5, 31, 23, 59, 59));
     });
 
     test("境界値テスト：服用再開予定日が今日と同日の場合は全日数を数えた日の翌日", () {
@@ -329,7 +381,8 @@ void main() {
           ),
         ],
       );
-      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet), DateTime(2022, 6, 5, 23, 59, 59));
+      expect(newPillSheetNotificationBaseDateFor(lastPillSheet: lastPillSheet),
+          DateTime(2022, 6, 5, 23, 59, 59));
     });
   });
 
@@ -353,25 +406,37 @@ void main() {
       test("服用お休みが無い場合は今日から10日分", () {
         mockToday("2022-05-10");
 
-        expect(reminderDayOffsetsFor(restDurations: []), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        expect(reminderDayOffsetsFor(restDurations: []),
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
       });
 
       test("endDateがnullの服用お休みの場合は今日から10日分", () {
         mockToday("2022-05-10");
 
-        expect(reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-08")]), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        expect(
+            reminderDayOffsetsFor(
+                restDurations: [restDuration(beginDate: "2022-05-08")]),
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
       });
 
       test("endDateが昨日の終了済みの服用お休みの場合は今日から10日分", () {
         mockToday("2022-05-10");
 
-        expect(reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-05", endDate: "2022-05-09")]), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        expect(
+            reminderDayOffsetsFor(restDurations: [
+              restDuration(beginDate: "2022-05-05", endDate: "2022-05-09")
+            ]),
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
       });
 
       test("境界値テスト：endDateが今日の服用お休みは服用再開済みなので今日から10日分", () {
         mockToday("2022-05-10");
 
-        expect(reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-05", endDate: "2022-05-10")]), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+        expect(
+            reminderDayOffsetsFor(restDurations: [
+              restDuration(beginDate: "2022-05-05", endDate: "2022-05-10")
+            ]),
+            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
       });
     });
 
@@ -380,7 +445,9 @@ void main() {
         mockToday("2022-05-10");
 
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-08", endDate: "2022-05-11")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-08", endDate: "2022-05-11")
+          ]),
           [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
         );
       });
@@ -389,7 +456,9 @@ void main() {
         mockToday("2022-05-10");
 
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-08", endDate: "2022-05-13")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-08", endDate: "2022-05-13")
+          ]),
           [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         );
       });
@@ -398,7 +467,9 @@ void main() {
         mockToday("2022-05-10");
 
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-08", endDate: "2022-05-20")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-08", endDate: "2022-05-20")
+          ]),
           [10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
         );
       });
@@ -406,7 +477,9 @@ void main() {
       test("服用再開予定日が365日後でも予定日から10日分を登録する", () {
         mockToday("2022-05-10");
 
-        final actual = reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-08", endDate: "2023-05-10")]);
+        final actual = reminderDayOffsetsFor(restDurations: [
+          restDuration(beginDate: "2022-05-08", endDate: "2023-05-10")
+        ]);
         expect(actual.length, 10);
         expect(actual.first, 365);
         expect(actual.last, 374);
@@ -416,7 +489,9 @@ void main() {
         mockToday("2022-05-30");
 
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-28", endDate: "2022-06-02")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-28", endDate: "2022-06-02")
+          ]),
           [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
         );
       });
@@ -424,7 +499,8 @@ void main() {
       test("今日と服用再開予定日に時刻があっても日付で数える", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime(2022, 5, 10, 23, 59, 59));
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime(2022, 5, 10, 23, 59, 59));
 
         expect(
           reminderDayOffsetsFor(
@@ -462,7 +538,9 @@ void main() {
 
         // 今日(0)は服用お休み前。明日(1)・明後日(2)がお休みで、3日後(3)に再開する
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-11", endDate: "2022-05-13")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-11", endDate: "2022-05-13")
+          ]),
           [0, 3, 4, 5, 6, 7, 8, 9, 10, 11],
         );
       });
@@ -471,7 +549,9 @@ void main() {
         mockToday("2022-05-10");
 
         expect(
-          reminderDayOffsetsFor(restDurations: [restDuration(beginDate: "2022-05-12", endDate: "2022-05-14")]),
+          reminderDayOffsetsFor(restDurations: [
+            restDuration(beginDate: "2022-05-12", endDate: "2022-05-14")
+          ]),
           [0, 1, 4, 5, 6, 7, 8, 9, 10, 11],
         );
       });
@@ -480,7 +560,8 @@ void main() {
 
   group("#reminderNotificationTitle", () {
     // 日付の曜日は端末のロケールで変わるため、番号の書式を確かめるケースでは日付を表示しない設定にする
-    const reminderNotificationCustomization = ReminderNotificationCustomization(isInVisibleReminderDate: true);
+    const reminderNotificationCustomization =
+        ReminderNotificationCustomization(isInVisibleReminderDate: true);
 
     void useLocale(String languageCode) {
       L = lookupAppLocalizations(Locale(languageCode));
@@ -526,7 +607,8 @@ void main() {
     test("ピル番号を表示しない設定では番号が付かない", () {
       expect(
         reminderNotificationTitle(
-          reminderNotificationCustomization: reminderNotificationCustomization.copyWith(isInVisiblePillNumber: true),
+          reminderNotificationCustomization: reminderNotificationCustomization
+              .copyWith(isInVisiblePillNumber: true),
           reminderDateTime: DateTime.parse("2022-05-10T09:00:00"),
           pillSheetDisplayNumber: "5",
         ),
@@ -546,7 +628,9 @@ void main() {
 
       /// 2026-10-29 (木) のリマインドで、月日と曜日を表示しピル番号を表示しない設定の通知タイトルを返す
       String title() => reminderNotificationTitle(
-            reminderNotificationCustomization: const ReminderNotificationCustomization(isInVisiblePillNumber: true),
+            reminderNotificationCustomization:
+                const ReminderNotificationCustomization(
+                    isInVisiblePillNumber: true),
             reminderDateTime: DateTime.parse("2026-10-29T09:00:00"),
             pillSheetDisplayNumber: "5",
           );
@@ -575,7 +659,9 @@ void main() {
         useDateLocale('es');
         expect(
           reminderNotificationTitle(
-            reminderNotificationCustomization: const ReminderNotificationCustomization(isInVisiblePillNumber: true),
+            reminderNotificationCustomization:
+                const ReminderNotificationCustomization(
+                    isInVisiblePillNumber: true),
             reminderDateTime: DateTime.parse("2026-11-01T09:00:00"),
             pillSheetDisplayNumber: "5",
           ),
@@ -584,4 +670,49 @@ void main() {
       });
     });
   });
+
+  group("#RegisterReminderLocalNotification.call", () {
+    test("CustomerInfo が前の値も持たない時は、登録済みのリマインダーを取り消さない", () async {
+      final mockLocalNotificationService = MockLocalNotificationService();
+      localNotificationService = mockLocalNotificationService;
+      final container = ProviderContainer(
+        overrides: [
+          customerInfoProvider.overrideWith(_FailingCustomerInfoNotifier.new),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container.read(registerReminderLocalNotificationProvider)();
+
+      verifyNever(mockLocalNotificationService.pendingReminderNotifications());
+    });
+
+    test("CustomerInfo を持つ時は、登録済みのリマインダーを取り消してから登録し直す", () async {
+      final mockLocalNotificationService = MockLocalNotificationService();
+      when(mockLocalNotificationService.pendingReminderNotifications())
+          .thenAnswer((_) async => []);
+      localNotificationService = mockLocalNotificationService;
+      final container = ProviderContainer(
+        overrides: [
+          customerInfoProviderOverride(freeCustomerInfo),
+          latestPillSheetGroupProvider
+              .overrideWith((ref) => Stream.value(null)),
+          settingProvider.overrideWith((ref) => const Stream.empty()),
+          userProvider.overrideWith((ref) => Stream.value(const User())),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container.read(registerReminderLocalNotificationProvider)();
+
+      verify(mockLocalNotificationService.pendingReminderNotifications())
+          .called(1);
+    });
+  });
+}
+
+/// CustomerInfo の取得に失敗し、前の値も持たない CustomerInfoNotifier
+class _FailingCustomerInfoNotifier extends CustomerInfoNotifier {
+  @override
+  FutureOr<CustomerInfo> build() => throw Exception("RevenueCat に届かない");
 }
