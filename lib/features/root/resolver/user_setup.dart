@@ -44,10 +44,17 @@ class UserSetup extends HookConsumerWidget {
           // Decide screen type. Keep in mind that this method is called when user is logged in.
           // Retrieve user from app DB.
           final user = await fetchOrCreateUser(userID);
+          // 待っている間に userID が変わった時は、RevenueCat のユーザーを古い userID に戻さないよう、SDK を触る前に止める
+          if (isCancelled) {
+            return;
+          }
 
           // Register userID for each analytics libraries.
           // customerInfoProvider は RevenueCat SDK の設定 (切り替えでは logIn) の後にしか読めないため、待ってから次の Widget を出す
           await setUserID(userID: userID);
+          if (isCancelled) {
+            return;
+          }
           // 前のアカウントの CustomerInfo を持ち越さないよう取得し直し、取得を終えてから次の Widget を出す
           ref.invalidate(customerInfoProvider);
           await ref.read(customerInfoProvider.future);

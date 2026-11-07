@@ -115,5 +115,45 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('home'), findsOneWidget);
     });
+
+    testWidgets(
+        '前の userID の user の取得を待っている間に userID が変わったら、前の userID で RevenueCat を設定しない',
+        (tester) async {
+      final anonymousUserCompleter = Completer<User>();
+      final fetchOrCreateUser = MockFetchOrCreateUser();
+      when(fetchOrCreateUser('anonymous'))
+          .thenAnswer((_) => anonymousUserCompleter.future);
+      when(fetchOrCreateUser('signed_in'))
+          .thenAnswer((_) async => const User(id: 'signed_in'));
+      final setUserID = MockSetUserID();
+      when(setUserID(userID: anyNamed('userID'))).thenAnswer((_) async {});
+      final saveUserLaunchInfo = MockSaveUserLaunchInfo();
+      when(saveUserLaunchInfo(any)).thenReturn(null);
+
+      Widget app({required String userID}) => ProviderScope(
+            overrides: [
+              fetchOrCreateUserProvider.overrideWithValue(fetchOrCreateUser),
+              setUserIDProvider.overrideWithValue(setUserID),
+              saveUserLaunchInfoProvider.overrideWithValue(saveUserLaunchInfo),
+              customerInfoProviderOverride(freeCustomerInfo),
+            ],
+            child: MaterialApp(
+                home: UserSetup(
+                    userID: userID, builder: (_) => const Text('home'))),
+          );
+
+      await tester.pumpWidget(app(userID: 'anonymous'));
+      await tester.pump();
+      await tester.pumpWidget(app(userID: 'signed_in'));
+      await tester.pumpAndSettle();
+      expect(find.text('home'), findsOneWidget);
+
+      anonymousUserCompleter.complete(const User(id: 'anonymous'));
+      await tester.pumpAndSettle();
+
+      verify(setUserID(userID: 'signed_in')).called(1);
+      verifyNever(setUserID(userID: 'anonymous'));
+      expect(find.text('home'), findsOneWidget);
+    });
   });
 }

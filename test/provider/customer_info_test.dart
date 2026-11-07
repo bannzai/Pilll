@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -7,6 +8,19 @@ import 'package:pilll/utils/datetime/day.dart';
 
 import '../helper/fake.dart';
 import '../helper/mock.mocks.dart';
+
+// purchases_flutter の plugin が getCustomerInfo・logIn で返す CustomerInfo の JSON。区別のため originalAppUserId に [appUserID] を入れる
+Map<String, Object> _customerInfoJson({required String appUserID}) => {
+      'entitlements': {'all': {}, 'active': {}},
+      'allPurchaseDates': {},
+      'activeSubscriptions': [],
+      'allPurchasedProductIdentifiers': [],
+      'nonSubscriptionTransactions': [],
+      'firstSeen': '',
+      'originalAppUserId': appUserID,
+      'allExpirationDates': {},
+      'requestDate': '',
+    };
 
 void main() {
   setUp(() {
@@ -422,6 +436,64 @@ void main() {
           freeCustomerInfo.hasDiscountEntitlement(
               user: user, discountEntitlementOffsetDay: 2),
           isFalse);
+    });
+  });
+
+  group('#fetchCustomerInfoOutsideUI', () {
+    const purchasesChannel = MethodChannel('purchases_flutter');
+
+    test('SDK が別のユーザーで設定済みなら、uid のユーザーに logIn してその CustomerInfo を返す', () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      final calls = <MethodCall>[];
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, (call) async {
+        calls.add(call);
+        return switch (call.method) {
+          'isConfigured' => true,
+          'getAppUserID' => 'previous_user',
+          'logIn' => {
+              'customerInfo': _customerInfoJson(
+                  appUserID: (call.arguments as Map)['appUserID'] as String),
+              'created': false,
+            },
+          'getCustomerInfo' => _customerInfoJson(appUserID: 'previous_user'),
+          _ => null,
+        };
+      });
+      addTearDown(() => TestDefaultBinaryMessengerBinding
+          .instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, null));
+
+      final customerInfo =
+          await fetchCustomerInfoOutsideUI(uid: 'current_user');
+
+      expect(customerInfo.originalAppUserId, 'current_user');
+      expect(
+          calls.map((call) => call.method), isNot(contains('getCustomerInfo')));
+    });
+
+    test('SDK が同じユーザーで設定済みなら、logIn せずに CustomerInfo を返す', () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      final calls = <MethodCall>[];
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, (call) async {
+        calls.add(call);
+        return switch (call.method) {
+          'isConfigured' => true,
+          'getAppUserID' => 'current_user',
+          'getCustomerInfo' => _customerInfoJson(appUserID: 'current_user'),
+          _ => null,
+        };
+      });
+      addTearDown(() => TestDefaultBinaryMessengerBinding
+          .instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, null));
+
+      final customerInfo =
+          await fetchCustomerInfoOutsideUI(uid: 'current_user');
+
+      expect(customerInfo.originalAppUserId, 'current_user');
+      expect(calls.map((call) => call.method), isNot(contains('logIn')));
     });
   });
 }
