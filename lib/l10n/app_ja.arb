@@ -588,9 +588,9 @@
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
-  "invalidAlreadyTakenPillUnmarkThenPause": "今日飲むピルを未服用にしてからお休みしてください。",
+  "invalidAlreadyTakenPillUnmarkThenPause": "今日飲むピルを未服用にしてから服用お休みしてください。",
   "@invalidAlreadyTakenPillUnmarkThenPause": {
-    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の本文の 1 文目 (太字)。服用お休みを始めるには、先に今日のピルを未服用に戻す必要があることを伝える。「お休み」は「服用お休み」機能を指す。直後に別の文 (invalidAlreadyTakenPillPauseOtherDaysGuide) が改行して続くため、この文だけで完結した文にする。"
+    "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の本文の 1 文目 (太字)。服用お休みを始めるには、先に今日のピルを未服用に戻す必要があることを伝える。用語集の「休薬」ではなく「服用お休み」の訳語を使う。直後に別の文 (invalidAlreadyTakenPillPauseOtherDaysGuide) が改行して続くため、この文だけで完結した文にする。"
   },
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
   "@invalidAlreadyTakenPillPauseOtherDaysGuide": {
