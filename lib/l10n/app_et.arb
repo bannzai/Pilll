@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Kui soovid alustada võtmise pausi mõnel muul päeval kui täna, vaata allolevat juhendit.",
   "invalidRestDurationIllustrationYesterday": "Eile",
   "invalidRestDurationIllustrationToday": "Täna",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillid võetud kuni eilseni",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pillid võetud kuni eilseni",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Märgi võtmata",
   "pauseTaking": "Võtmise paus",
   "changePauseStartDate": "Muuda võtmise pausi alguskuupäeva",

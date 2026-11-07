@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Uma ufuna ukuqala ukumisa okwesikhashana ukuphuza amaphilisi ngolunye usuku kunanamuhla, sicela ubheke umhlahlandlela ongezansi.",
   "invalidRestDurationIllustrationYesterday": "Izolo",
   "invalidRestDurationIllustrationToday": "Namuhla",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Amaphilisi aphuziwe kuze kube izolo",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Amaphilisi aphuziwe kuze kube izolo",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Maka njengelingakaphuzwa",
   "pauseTaking": "Ukumisa okwesikhashana",
   "changePauseStartDate": "Sicela ushintshe usuku lokuqala lokumisa okwesikhashana ukuphuza iphilisi",

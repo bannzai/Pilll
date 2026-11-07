@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Pokud chcete zahájit pozastavení užívání v jiný den než dnes, podívejte se prosím na průvodce níže.",
   "invalidRestDurationIllustrationYesterday": "Včera",
   "invalidRestDurationIllustrationToday": "Dnes",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulky užité do včerejška včetně",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pilulky užité do včerejška včetně",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Označit jako neužitou",
   "pauseTaking": "Pozastavení užívání",
   "changePauseStartDate": "Změnit datum začátku pozastavení užívání",

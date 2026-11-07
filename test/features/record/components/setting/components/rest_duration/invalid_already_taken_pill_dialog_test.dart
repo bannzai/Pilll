@@ -114,8 +114,8 @@ void main() {
         );
         expect(
           tester
-              .getCenter(
-                  find.text(L.invalidRestDurationIllustrationTakenUntilThisDay))
+              .getCenter(find
+                  .text(L.invalidRestDurationIllustrationTakenUntilYesterday))
               .dx,
           lessThan(tester
               .getCenter(

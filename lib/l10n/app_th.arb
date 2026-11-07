@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "หากต้องการเริ่มหยุดกินยาชั่วคราวจากวันอื่นที่ไม่ใช่วันนี้ โปรดดูคำแนะนำด้านล่างค่ะ",
   "invalidRestDurationIllustrationYesterday": "เมื่อวาน",
   "invalidRestDurationIllustrationToday": "วันนี้",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "ทานยาจนถึงเมื่อวานแล้ว",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "ทานยาจนถึงเมื่อวานแล้ว",
   "invalidRestDurationIllustrationUnmarkAsTaken": "ทำเครื่องหมายว่ายังไม่ได้ทาน",
   "pauseTaking": "หยุดกินยาชั่วคราว",
   "changePauseStartDate": "เปลี่ยนวันที่เริ่มหยุดกินยาชั่วคราว",

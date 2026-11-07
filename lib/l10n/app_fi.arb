@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jos haluat aloittaa taukotilan muuna päivänä kuin tänään, katso alla oleva ohje.",
   "invalidRestDurationIllustrationYesterday": "Eilen",
   "invalidRestDurationIllustrationToday": "Tänään",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillerit otettu eiliseen asti",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pillerit otettu eiliseen asti",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Merkitse ottamattomaksi",
   "pauseTaking": "Taukotila",
   "changePauseStartDate": "Vaihda taukotilan alkamispäivää",

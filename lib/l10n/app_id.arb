@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jika Anda ingin memulai jeda minum pada hari selain hari ini, silakan lihat panduan di bawah.",
   "invalidRestDurationIllustrationYesterday": "Kemarin",
   "invalidRestDurationIllustrationToday": "Hari ini",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pil sudah diminum hingga kemarin",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pil sudah diminum hingga kemarin",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Tandai belum diminum",
   "pauseTaking": "Jeda minum",
   "changePauseStartDate": "Ubah tanggal mulai jeda minum",

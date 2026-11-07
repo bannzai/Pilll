@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jika anda ingin memulakan jeda pengambilan pil pada hari selain hari ini, sila rujuk panduan di bawah.",
   "invalidRestDurationIllustrationYesterday": "Semalam",
   "invalidRestDurationIllustrationToday": "Hari ini",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pil telah diambil hingga semalam",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pil telah diambil hingga semalam",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Tandakan belum diambil",
   "pauseTaking": "Jeda pengambilan pil",
   "changePauseStartDate": "Ubah tarikh mula jeda pengambilan pil",

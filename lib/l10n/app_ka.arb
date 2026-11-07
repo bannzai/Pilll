@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "თუ მიღების პაუზის დაწყება დღევანდელის გარდა სხვა დღიდან გსურთ, გაეცანით ქვემოთ მოცემულ გზამკვლევს.",
   "invalidRestDurationIllustrationYesterday": "გუშინ",
   "invalidRestDurationIllustrationToday": "დღეს",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "გუშინდლამდე აბები მიღებულია",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "გუშინდლამდე აბები მიღებულია",
   "invalidRestDurationIllustrationUnmarkAsTaken": "მონიშნეთ, როგორც არმიღებული",
   "pauseTaking": "მიღების პაუზა",
   "changePauseStartDate": "მიღების პაუზის დაწყების თარიღის შეცვლა",

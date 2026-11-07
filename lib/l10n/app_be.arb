@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Калі вы хочаце пачаць прыпын у іншы дзень, а не сёння, звярніцеся да інструкцыі ніжэй.",
   "invalidRestDurationIllustrationYesterday": "Учора",
   "invalidRestDurationIllustrationToday": "Сёння",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Пігулкі прыняты да ўчорашняга дня ўключна",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Пігулкі прыняты да ўчорашняга дня ўключна",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Пазначыць як не прынятую",
   "pauseTaking": "Прыпын",
   "changePauseStartDate": "Змяніць дату пачатку прыпыну",

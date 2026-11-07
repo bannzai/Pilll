@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wil je de innamepauze op een andere dag dan vandaag laten beginnen? Bekijk dan de uitleg hieronder.",
   "invalidRestDurationIllustrationYesterday": "Gisteren",
   "invalidRestDurationIllustrationToday": "Vandaag",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillen ingenomen tot en met gisteren",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pillen ingenomen tot en met gisteren",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Markeer als niet ingenomen",
   "pauseTaking": "Innamepauze",
   "changePauseStartDate": "Startdatum van de innamepauze wijzigen",

@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Хэрэв түр завсарлагыг өнөөдрөөс өөр өдөр эхлүүлэхийг хүсвэл доорх зааврыг үзнэ үү.",
   "invalidRestDurationIllustrationYesterday": "Өчигдөр",
   "invalidRestDurationIllustrationToday": "Өнөөдөр",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Өчигдрийг хүртэлх эмийг уусан",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Өчигдрийг хүртэлх эмийг уусан",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Уугаагүй гэж тэмдэглэх",
   "pauseTaking": "Түр завсарлага",
   "changePauseStartDate": "Эм уух түр завсарлагын эхлэх өдрийг өөрчлөх",

@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Hvis du vil starte en indtagelsespause på en anden dag end i dag, kan du se vejledningen nedenfor.",
   "invalidRestDurationIllustrationYesterday": "I går",
   "invalidRestDurationIllustrationToday": "I dag",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "P-piller taget til og med i går",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "P-piller taget til og med i går",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Markér som ikke taget",
   "pauseTaking": "Indtagelsespause",
   "changePauseStartDate": "Skift startdato for indtagelsespause",

@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "If you’d like to start a pause on a day other than today, see the guide below.",
   "invalidRestDurationIllustrationYesterday": "Yesterday",
   "invalidRestDurationIllustrationToday": "Today",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pills taken through this day",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pills taken through this day",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Mark as not taken",
   "pauseTaking": "Pill pause",
   "changePauseStartDate": "Change pause start date",

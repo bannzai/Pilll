@@ -116,7 +116,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                                   ),
                                 ),
                                 child: Text(
-                                  L.invalidRestDurationIllustrationTakenUntilThisDay,
+                                  L.invalidRestDurationIllustrationTakenUntilYesterday,
                                   textAlign: TextAlign.center,
                                   style: const TextStyle(
                                     fontFamily: FontFamily.japanese,

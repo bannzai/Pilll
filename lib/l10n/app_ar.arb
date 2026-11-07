@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "إذا أردتِ بدء إيقاف تناول الحبوب في يوم غير اليوم، فاطّلعي على الدليل أدناه.",
   "invalidRestDurationIllustrationYesterday": "أمس",
   "invalidRestDurationIllustrationToday": "اليوم",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "تم تناول الحبوب حتى أمس",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "تم تناول الحبوب حتى أمس",
   "invalidRestDurationIllustrationUnmarkAsTaken": "تحديدها كغير متناولة",
   "pauseTaking": "إيقاف تناول الحبوب",
   "changePauseStartDate": "تغيير تاريخ بدء إيقاف تناول الحبوب",

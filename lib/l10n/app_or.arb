@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ଆଜି ବ୍ୟତୀତ ଅନ୍ୟ ଦିନରୁ ସେବନ ବିରତି ଆରମ୍ଭ କରିବାକୁ ଚାହୁଁଥିଲେ, ଦୟାକରି ତଳେ ଥିବା ମାର୍ଗଦର୍ଶିକା ଦେଖନ୍ତୁ।",
   "invalidRestDurationIllustrationYesterday": "ଗତକାଲି",
   "invalidRestDurationIllustrationToday": "ଆଜି",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "ଗତକାଲି ପର୍ଯ୍ୟନ୍ତ ବଟିକା ଖିଆଯାଇଛି",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "ଗତକାଲି ପର୍ଯ୍ୟନ୍ତ ବଟିକା ଖିଆଯାଇଛି",
   "invalidRestDurationIllustrationUnmarkAsTaken": "ଖାଇନାହାନ୍ତି ବୋଲି ଚିହ୍ନିତ କରନ୍ତୁ",
   "pauseTaking": "ସେବନ ବିରତି",
   "changePauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",

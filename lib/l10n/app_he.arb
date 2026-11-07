@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "כדי להתחיל השהיית נטילה ביום אחר מהיום, אפשר להיעזר במדריך שלמטה.",
   "invalidRestDurationIllustrationYesterday": "אתמול",
   "invalidRestDurationIllustrationToday": "היום",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "הגלולות ניטלו עד אתמול כולל",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "הגלולות ניטלו עד אתמול כולל",
   "invalidRestDurationIllustrationUnmarkAsTaken": "סימון כלא נלקחה",
   "pauseTaking": "השהיית נטילה",
   "changePauseStartDate": "שינוי תאריך ההתחלה של השהיית נטילה",

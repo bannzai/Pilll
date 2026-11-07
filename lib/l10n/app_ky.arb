@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Эгер убактылуу токтотуу бүгүн эмес, башка күнү башталсын десеңиз, төмөндөгү нускаманы караңыз.",
   "invalidRestDurationIllustrationYesterday": "Кечээ",
   "invalidRestDurationIllustrationToday": "Бүгүн",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Кечээге чейинки таблеткалар ичилген",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Кечээге чейинки таблеткалар ичилген",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Ичилген эмес деп белгилеңиз",
   "pauseTaking": "Убактылуу токтотуу",
   "changePauseStartDate": "Убактылуу токтотуу башталган күндү өзгөртүңүз",

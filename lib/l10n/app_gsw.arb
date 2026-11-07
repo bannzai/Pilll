@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wänn du d’Iinahmepause a mene andere Tag als hüt wotsch afange, lueg i d’Aaleitig unde.",
   "invalidRestDurationIllustrationYesterday": "Geschter",
   "invalidRestDurationIllustrationToday": "Hüt",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pille bis geschter gnoo",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pille bis geschter gnoo",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Als nöd gno markiere",
   "pauseTaking": "Iinahmepause",
   "changePauseStartDate": "Startdatum vo de Iinahmepause ändere",

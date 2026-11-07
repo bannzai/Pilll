@@ -604,8 +604,8 @@
   "@invalidRestDurationIllustrationToday": {
     "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図のラベル。タイムライン上の今日の丸の上に表示する。名詞の「今日」で、幅約 100pt に収まる短い語にし、句点・ピリオドを付けない。"
   },
-  "invalidRestDurationIllustrationTakenUntilThisDay": "昨日まで\n服用済みに",
-  "@invalidRestDurationIllustrationTakenUntilThisDay": {
+  "invalidRestDurationIllustrationTakenUntilYesterday": "昨日まで\n服用済みに",
+  "@invalidRestDurationIllustrationTakenUntilYesterday": {
     "description": "今日のピルを服用済みにした日に「服用お休み」を始めようとした時に出るダイアログ (InvalidAlreadyTakenPillDialog) の説明図で、昨日の丸から出る吹き出しの文言。昨日までのピルを服用済みの状態にしておくことを表す。「この日まで」と書くと多くの言語で「今日まで」と訳され、今日を未服用に戻す指示と矛盾したため、原文を「昨日まで」にしている。「今日」(today) を表す語を使わない。命令文にせず、短い名詞句・状態の表現にする。吹き出しの幅は約 100pt で自動で折り返すため、改行 (\\n) は訳文の自然な区切りに置くか、無くてよい。句点・ピリオドを付けない。"
   },
   "invalidRestDurationIllustrationUnmarkAsTaken": "未服用にする",

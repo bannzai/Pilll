@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "ប្រសិនបើអ្នកចង់ចាប់ផ្តើមផ្អាកការលេបថ្នាំនៅថ្ងៃផ្សេងពីថ្ងៃនេះ សូមមើលការណែនាំខាងក្រោម។",
   "invalidRestDurationIllustrationYesterday": "ម្សិលមិញ",
   "invalidRestDurationIllustrationToday": "ថ្ងៃនេះ",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "បានលេបគ្រាប់ថ្នាំរហូតដល់ម្សិលមិញ",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "បានលេបគ្រាប់ថ្នាំរហូតដល់ម្សិលមិញ",
   "invalidRestDurationIllustrationUnmarkAsTaken": "សម្គាល់ថាមិនទាន់បានលេប",
   "pauseTaking": "ផ្អាកការលេបថ្នាំ",
   "changePauseStartDate": "ប្ដូរថ្ងៃចាប់ផ្ដើមផ្អាកការលេបថ្នាំ",

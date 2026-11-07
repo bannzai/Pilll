@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Wenn du die Pillenpause an einem anderen Tag als heute beginnen möchtest, sieh dir die Anleitung unten an.",
   "invalidRestDurationIllustrationYesterday": "Gestern",
   "invalidRestDurationIllustrationToday": "Heute",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillen bis zu diesem Tag eingenommen",
+  "invalidRestDurationIllustrationTakenUntilYesterday": "Pillen bis zu diesem Tag eingenommen",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Als nicht eingenommen markieren",
   "pauseTaking": "Pillenpause",
   "changePauseStartDate": "Startdatum der Pillenpause ändern",
