@@ -124,7 +124,7 @@
   "taken": "Võetud",
   "notTaken": "Pill võtmata",
   "pillSheetSettings": "Pillilehe seaded",
-  "invalidAlreadyTakenPillUnmarkThenPause": "Enne võtmise paus alustamist märgi tänane pill võtmata jäetuks.",
+  "invalidAlreadyTakenPillUnmarkThenPause": "Enne võtmise pausi alustamist märgi tänane pill võtmata jäetuks.",
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Kui soovid alustada võtmise pausi mõnel muul päeval kui täna, vaata allolevat juhendit.",
   "invalidRestDurationIllustrationYesterday": "Eile",
   "invalidRestDurationIllustrationToday": "Täna",

@@ -125,7 +125,7 @@
   "notTaken": "Tabletė neišgerta",
   "pillSheetSettings": "Tablečių plokštelės nustatymai",
   "invalidAlreadyTakenPillUnmarkThenPause": "Prieš pasirinkdami pristabdyti vartojimą, pažymėkite, kad šiandienos tabletė dar neišgerta.",
-  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jei norite pradėti pristabdytą vartojimą kitą dieną, o ne šiandien, peržiūrėkite toliau pateiktą vadovą.",
+  "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jei norite pradėti vartojimo pristabdymą kitą dieną, o ne šiandien, peržiūrėkite toliau pateiktą vadovą.",
   "invalidRestDurationIllustrationYesterday": "Vakar",
   "invalidRestDurationIllustrationToday": "Šiandien",
   "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletės išgertos iki šios dienos imtinai",
