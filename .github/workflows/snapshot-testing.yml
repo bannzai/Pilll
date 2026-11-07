@@ -1,6 +1,6 @@
 # managed-by: setup-snapshot-testing (bannzai/castle)
 # 画面の画像を基準画像と比べ、見た目 (文言・色・余白・翻訳・アイコン) の変更を検出する。
-# - pull_request: 基準画像と比べる。一致しない・基準画像が無い時は、撮り直した画像を artifact snapshot-baselines に上げて失敗する
+# - pull_request・main への push: 基準画像と比べる。一致しない・基準画像が無い時は、撮り直した画像を artifact snapshot-baselines に上げて失敗する
 # - workflow_dispatch (update=true): 比べずに撮り直し、artifact snapshot-baselines に上げる
 # 基準画像は OS でフォントの描画が変わるため、この runner で撮ったものだけを使う。更新は setup-snapshot-testing skill の
 # update-baselines.sh (artifact を取得して commit・push する) で行う
@@ -8,6 +8,8 @@ name: snapshot-testing
 
 on:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       update:
