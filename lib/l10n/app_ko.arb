@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "오늘이 아닌 다른 날부터 일시 중지를 시작하고 싶다면 아래 안내를 참고해 주세요.",
   "invalidRestDurationIllustrationYesterday": "어제",
   "invalidRestDurationIllustrationToday": "오늘",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "이날까지 복용 완료",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "어제까지 복용 완료",
   "invalidRestDurationIllustrationUnmarkAsTaken": "미복용으로 표시",
   "pauseTaking": "일시 중지",
   "changePauseStartDate": "일시 중지 시작일 변경",

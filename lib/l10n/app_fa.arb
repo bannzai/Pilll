@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "اگر می‌خواهید توقف موقت مصرف را از روزی غیر از امروز شروع کنید، لطفاً راهنمای زیر را ببینید.",
   "invalidRestDurationIllustrationYesterday": "دیروز",
   "invalidRestDurationIllustrationToday": "امروز",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "قرص‌ها تا این روز مصرف شده‌اند",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "قرص‌ها تا دیروز مصرف شده‌اند",
   "invalidRestDurationIllustrationUnmarkAsTaken": "علامت‌گذاری به‌عنوان مصرف‌نشده",
   "pauseTaking": "توقف موقت مصرف",
   "changePauseStartDate": "تغییر تاریخ شروع توقف موقت مصرف",

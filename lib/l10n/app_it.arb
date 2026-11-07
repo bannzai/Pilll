@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se vuoi iniziare la sospensione in un giorno diverso da oggi, consulta la guida qui sotto.",
   "invalidRestDurationIllustrationYesterday": "Ieri",
   "invalidRestDurationIllustrationToday": "Oggi",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillole assunte fino a questo giorno incluso",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pillole assunte fino a ieri",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Segna come non assunta",
   "pauseTaking": "Sospensione",
   "changePauseStartDate": "Modifica la data di inizio della sospensione",

@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Nëse dëshironi ta nisni pauzën e marrjes së pilulës në një ditë tjetër, shihni udhëzuesin më poshtë.",
   "invalidRestDurationIllustrationYesterday": "Dje",
   "invalidRestDurationIllustrationToday": "Sot",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulat janë marrë deri në këtë ditë, përfshirë këtë ditë",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulat e marra deri dje",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Shënoni si të pamarrë",
   "pauseTaking": "Pauzë",
   "changePauseStartDate": "Ndryshoni datën e fillimit të pauzës",

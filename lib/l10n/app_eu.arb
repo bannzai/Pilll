@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Etenaldia gaur ez den beste egun batean hasi nahi baduzu, begiratu beheko gida.",
   "invalidRestDurationIllustrationYesterday": "Atzo",
   "invalidRestDurationIllustrationToday": "Gaur",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulak egun honetara arte hartuta",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilulak atzora arte hartuta",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Hartu gabe markatu",
   "pauseTaking": "Etenaldi",
   "changePauseStartDate": "Aldatu etenaldiaren hasiera-data",

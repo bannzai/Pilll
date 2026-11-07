@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Həb qəbuluna fasilə verməyə bu gündən başqa bir gündə başlamaq istəyirsinizsə, zəhmət olmasa aşağıdakı təlimata baxın.",
   "invalidRestDurationIllustrationYesterday": "Dünən",
   "invalidRestDurationIllustrationToday": "Bu gün",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Bu günədək həblər qəbul edilib",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Dünənədək həblər qəbul edilib",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Qəbul edilməyib kimi qeyd edin",
   "pauseTaking": "Həb qəbuluna fasilə",
   "changePauseStartDate": "Həb qəbuluna fasilə başlanğıc tarixini dəyişin",

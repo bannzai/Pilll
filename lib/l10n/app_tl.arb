@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Kung nais ninyong simulan ang paghinto sa pag-inom ng pildoras sa ibang araw, pakitingnan po ang gabay sa ibaba.",
   "invalidRestDurationIllustrationYesterday": "Kahapon",
   "invalidRestDurationIllustrationToday": "Ngayon",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Nainom na ang mga pildoras hanggang sa araw na ito",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Nainom ang mga pildoras hanggang kahapon",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Markahan na hindi nainom",
   "pauseTaking": "Paghinto sa pag-inom",
   "changePauseStartDate": "Baguhin ninyo ang petsa ng simula ng paghinto sa pag-inom",

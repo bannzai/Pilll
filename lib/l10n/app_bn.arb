@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "আজ ছাড়া অন্য কোনো দিন থেকে সেবন স্থগিত করতে চাইলে, অনুগ্রহ করে নিচের নির্দেশিকা দেখুন।",
   "invalidRestDurationIllustrationYesterday": "গতকাল",
   "invalidRestDurationIllustrationToday": "আজ",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "এই দিন পর্যন্ত পিল খাওয়া হয়েছে",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "গতকাল পর্যন্ত পিল খাওয়া হয়েছে",
   "invalidRestDurationIllustrationUnmarkAsTaken": "খাওয়া হয়নি বলে চিহ্নিত করুন",
   "pauseTaking": "সেবন স্থগিত",
   "changePauseStartDate": "সেবন স্থগিত শুরুর তারিখ পরিবর্তন করুন",

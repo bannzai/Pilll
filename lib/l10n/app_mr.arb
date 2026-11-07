@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "आजऐवजी दुसऱ्या दिवसापासून सेवन विराम सुरू करायचा असल्यास, कृपया खालील मार्गदर्शक पाहा.",
   "invalidRestDurationIllustrationYesterday": "काल",
   "invalidRestDurationIllustrationToday": "आज",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "या दिवसापर्यंत गोळ्या घेतल्या आहेत",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "कालपर्यंतच्या गोळ्या घेतल्या आहेत",
   "invalidRestDurationIllustrationUnmarkAsTaken": "घेतली नाही असे नोंदवा",
   "pauseTaking": "सेवन विराम",
   "changePauseStartDate": "कृपया सेवन विराम सुरू होण्याची तारीख बदला",

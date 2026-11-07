@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Kung gusto ninyong simulan ang pause sa ibang araw, pakitingnan ang gabay sa ibaba.",
   "invalidRestDurationIllustrationYesterday": "Kahapon",
   "invalidRestDurationIllustrationToday": "Ngayon",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Nainom na ang mga pill hanggang sa araw na ito",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Nainom ang mga pill hanggang kahapon",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Markahan na hindi nainom",
   "pauseTaking": "Pause",
   "changePauseStartDate": "Baguhin ang petsa ng simula ng pause",

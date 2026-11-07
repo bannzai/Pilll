@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "අද හැර වෙනත් දිනකින් පෙති ගැනීමේ විරාමය ආරම්භ කිරීමට අවශ්‍ය නම්, කරුණාකර පහත මාර්ගෝපදේශය බලන්න.",
   "invalidRestDurationIllustrationYesterday": "ඊයේ",
   "invalidRestDurationIllustrationToday": "අද",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "මේ දිනය දක්වා පෙති ගෙන ඇත",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "ඊයේ දක්වා පෙති ලබාගෙන ඇත",
   "invalidRestDurationIllustrationUnmarkAsTaken": "නොගත් ලෙස සලකුණු කරන්න",
   "pauseTaking": "පෙති ගැනීමේ විරාමය",
   "changePauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය වෙනස් කරන්න",

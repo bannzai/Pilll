@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Os hoffech ddechrau'r oedi ar ddiwrnod heblaw heddiw, edrychwch ar y canllaw isod.",
   "invalidRestDurationIllustrationYesterday": "Ddoe",
   "invalidRestDurationIllustrationToday": "Heddiw",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pils wedi’u cymryd hyd at y diwrnod hwn",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pils wedi’u cymryd hyd at ddoe",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Nodi fel heb ei chymryd",
   "pauseTaking": "Oedi",
   "changePauseStartDate": "Newid dyddiad dechrau'r oedi",

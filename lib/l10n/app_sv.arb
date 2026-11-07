@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Om du vill börja en paus en annan dag än i dag kan du läsa guiden nedan.",
   "invalidRestDurationIllustrationYesterday": "I går",
   "invalidRestDurationIllustrationToday": "Idag",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Piller tagna till och med den här dagen",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Piller tagna till och med i går",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Markera som inte tagen",
   "pauseTaking": "Paus",
   "changePauseStartDate": "Ändra startdatum för pausen",

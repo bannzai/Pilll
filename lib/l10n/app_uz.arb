@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Agar pauzani bugundan boshqa kuni boshlamoqchi boʻlsangiz, quyidagi qoʻllanmani koʻring.",
   "invalidRestDurationIllustrationYesterday": "Kecha",
   "invalidRestDurationIllustrationToday": "Bugun",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Shu kungacha tabletkalar ichilgan",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Kechagacha tabletkalar qabul qilingan",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Qabul qilinmagan deb belgilang",
   "pauseTaking": "Pauza",
   "changePauseStartDate": "Qabul qilishdagi pauza boshlanish sanasini oʻzgartiring",

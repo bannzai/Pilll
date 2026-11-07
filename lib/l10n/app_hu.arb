@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Ha a szüneteltetést nem ma, hanem egy másik napon szeretnéd elkezdeni, nézd meg az alábbi útmutatót.",
   "invalidRestDurationIllustrationYesterday": "Tegnap",
   "invalidRestDurationIllustrationToday": "Ma",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "A tabletták eddig a napig beszedve",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "A tabletták tegnapig beszedve",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Jelöld nem szedettként",
   "pauseTaking": "Szüneteltetés",
   "changePauseStartDate": "A szüneteltetés kezdőnapjának módosítása",

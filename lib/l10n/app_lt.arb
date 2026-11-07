@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Jei norite pradėti vartojimo pristabdymą kitą dieną, o ne šiandien, peržiūrėkite toliau pateiktą vadovą.",
   "invalidRestDurationIllustrationYesterday": "Vakar",
   "invalidRestDurationIllustrationToday": "Šiandien",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletės išgertos iki šios dienos imtinai",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Tabletės išgertos iki vakar dienos imtinai",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Pažymėti kaip neišgertą",
   "pauseTaking": "Pristabdyti vartojimą",
   "changePauseStartDate": "Keisti pristabdymo pradžios datą",

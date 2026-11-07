@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Si vous souhaitez commencer la pause de prise un autre jour qu’aujourd’hui, consultez le guide ci-dessous.",
   "invalidRestDurationIllustrationYesterday": "Hier",
   "invalidRestDurationIllustrationToday": "Aujourd’hui",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilules prises jusqu’à ce jour inclus",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilules prises jusqu’à hier inclus",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Marquer comme non prise",
   "pauseTaking": "Pause de prise",
   "changePauseStartDate": "Modifier la date de début de la pause de prise",

@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Če želite začeti prekinitev jemanja na drug dan, ne danes, si oglejte spodnja navodila.",
   "invalidRestDurationIllustrationYesterday": "Včeraj",
   "invalidRestDurationIllustrationToday": "Danes",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Tablete vzete do vključno tega dne",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Tablete vzete do včeraj vključno",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Označite kot nevzeto",
   "pauseTaking": "Prekinitev jemanja tablet",
   "changePauseStartDate": "Sprememba datuma začetka prekinitve jemanja tablet",

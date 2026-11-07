@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Dacă vrei să începi întreruperea în altă zi, consultă ghidul de mai jos.",
   "invalidRestDurationIllustrationYesterday": "Ieri",
   "invalidRestDurationIllustrationToday": "Azi",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilule luate până în această zi inclusiv",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pilule luate până ieri inclusiv",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Marchează ca neluată",
   "pauseTaking": "Întreruperea administrării",
   "changePauseStartDate": "Schimbă data de început a întreruperii",

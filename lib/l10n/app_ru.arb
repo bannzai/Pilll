@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Если вы хотите начать приостановку приёма в другой день, а не сегодня, посмотрите инструкцию ниже.",
   "invalidRestDurationIllustrationYesterday": "Вчера",
   "invalidRestDurationIllustrationToday": "Сегодня",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Таблетки приняты до этого дня включительно",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Таблетки приняты по вчерашний день включительно",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Отметить как не принятую",
   "pauseTaking": "Приостановка приёма",
   "changePauseStartDate": "Изменить дату начала приостановки приёма",

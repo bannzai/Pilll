@@ -128,7 +128,7 @@
   "invalidAlreadyTakenPillPauseOtherDaysGuide": "Se queres comezar a pausa na toma un día distinto de hoxe, consulta a guía de abaixo.",
   "invalidRestDurationIllustrationYesterday": "Onte",
   "invalidRestDurationIllustrationToday": "Hoxe",
-  "invalidRestDurationIllustrationTakenUntilThisDay": "Pílulas tomadas ata este día incluído",
+  "invalidRestDurationIllustrationTakenUntilThisDay": "Pílulas tomadas ata onte",
   "invalidRestDurationIllustrationUnmarkAsTaken": "Marcar como non tomada",
   "pauseTaking": "Pausa na toma",
   "changePauseStartDate": "Cambiar a data de inicio da pausa na toma",
