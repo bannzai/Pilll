@@ -106,13 +106,13 @@ void main() {
             userProvider.overrideWith(
               (ref) => Stream.value(
                 const User(
-                  isPremium: false,
                   trialDeadlineDate: null,
                   beginTrialDate: null,
                   discountEntitlementDeadlineDate: null,
                 ),
               ),
             ),
+            customerInfoProviderOverride(freeCustomerInfo),
             shownPaywallOnThisAppLaunchProvider.overrideWith(
               (ref) => shownPaywallOnThisAppLaunch,
             ),

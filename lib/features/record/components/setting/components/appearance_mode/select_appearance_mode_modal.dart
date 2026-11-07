@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -28,6 +29,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(
       registerReminderLocalNotificationProvider,
     );
+    final premiumOrTrial = ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: user);
 
     if (pillSheetGroup == null) {
       return const SizedBox();
@@ -58,7 +60,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  user: user,
+                  premiumOrTrial: premiumOrTrial,
                   mode: PillSheetAppearanceMode.date,
                   text: L.dateDisplay,
                   isPremiumFunction: true,
@@ -69,7 +71,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  user: user,
+                  premiumOrTrial: premiumOrTrial,
                   mode: PillSheetAppearanceMode.number,
                   text: L.pillNumber,
                   isPremiumFunction: false,
@@ -80,7 +82,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
-                  user: user,
+                  premiumOrTrial: premiumOrTrial,
                   mode: PillSheetAppearanceMode.cyclicSequential,
                   text: L.pillDaysCycle,
                   isPremiumFunction: false,
@@ -99,7 +101,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
     required PillSheetGroup pillSheetGroup,
-    required User user,
+    required bool premiumOrTrial,
     required PillSheetAppearanceMode mode,
     required String text,
     required bool isPremiumFunction,
@@ -114,7 +116,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           },
         );
 
-        if (user.isPremium || user.isTrial) {
+        if (premiumOrTrial) {
           await setPillSheetGroup(
             pillSheetGroup.copyWith(pillSheetAppearanceMode: mode),
           );

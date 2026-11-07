@@ -1,10 +1,10 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -32,16 +32,16 @@ const monthly300OfferUsageDaysSince = _lifetimeOfferCycleDays * 3;
 /// 無料・3年以上・購入履歴なしの利用者が対象。
 /// 判定に必要な情報の取得中はnullを返す。
 final isMonthly300OfferProvider = Provider.autoDispose<bool?>((ref) {
-  final user = ref.watch(userProvider).valueOrNull;
+  final customerInfo = ref.watch(customerInfoProvider).valueOrNull;
   final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
   if (usageDays == null) {
     return null;
   }
   // 3年以上はユーザーの課金状態が確定するまで待ち、月額オファーより先に買い切りを表示しない。
-  if (usageDays >= monthly300OfferUsageDaysSince && user == null) {
+  if (usageDays >= monthly300OfferUsageDaysSince && customerInfo == null) {
     return null;
   }
-  if (user != null && !user.isPremium && usageDays >= monthly300OfferUsageDaysSince) {
+  if (customerInfo != null && !customerInfo.isPremium && usageDays >= monthly300OfferUsageDaysSince) {
     final hasPurchasedAnyProduct = ref.watch(hasPurchasedAnyProductProvider).valueOrNull;
     if (hasPurchasedAnyProduct == null) {
       return null;

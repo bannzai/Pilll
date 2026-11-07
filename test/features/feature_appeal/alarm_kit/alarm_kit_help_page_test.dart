@@ -11,6 +11,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
 
 void main() {
@@ -18,6 +19,7 @@ void main() {
     List<Override> helpPageProviderOverrides({User user = const User()}) {
       return [
         userProvider.overrideWith((ref) => Stream.value(user)),
+        customerInfoProviderOverride(freeCustomerInfo),
         settingProvider.overrideWith(
           (ref) => Stream.value(
             const Setting(
@@ -76,7 +78,7 @@ void main() {
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: helpPageProviderOverrides(user: User(isPremium: false, trialDeadlineDate: mockToday.add(const Duration(days: 10)))),
+          overrides: helpPageProviderOverrides(user: User(trialDeadlineDate: mockToday.add(const Duration(days: 10)))),
           child: const MaterialApp(home: AlarmKitHelpPage()),
         ),
       );
