@@ -82,6 +82,49 @@ void main() {
       });
     }
 
+    for (final textDirection in TextDirection.values) {
+      testWidgets(
+          '${textDirection.name} の画面でも説明図のラベルは左から昨日・今日の順に並び、SVG の丸と対応する',
+          (tester) async {
+        final originalL = L;
+        addTearDown(() => L = originalL);
+        L = lookupAppLocalizations(const Locale('ar'));
+        tester.view.physicalSize = const Size(iPhone17ScreenWidth, 900);
+        tester.view.devicePixelRatio = 1;
+        addTearDown(tester.view.reset);
+
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Directionality(
+              textDirection: textDirection,
+              child: const Scaffold(body: InvalidAlreadyTakenPillDialog()),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        // 位置の比較のためにラベルを特定する。文言の一致を確かめるテストではない
+        expect(
+          tester
+              .getCenter(find.text(L.invalidRestDurationIllustrationYesterday))
+              .dx,
+          lessThan(tester
+              .getCenter(find.text(L.invalidRestDurationIllustrationToday))
+              .dx),
+        );
+        expect(
+          tester
+              .getCenter(
+                  find.text(L.invalidRestDurationIllustrationTakenUntilThisDay))
+              .dx,
+          lessThan(tester
+              .getCenter(
+                  find.text(L.invalidRestDurationIllustrationUnmarkAsTaken))
+              .dx),
+        );
+      });
+    }
+
     testWidgets('本文の 2 文は 1 つの段落に連結されず、それぞれ別の段落として描画される', (tester) async {
       // 見出し・説明図のラベル 4 つと矢印・本文 2 文・ボタン 2 つ。
       // 旧実装は本文 2 文を 1 つの RichText に連結しており 9 つだった (de で「…markiert hastBitte starte…」と読めなかった)

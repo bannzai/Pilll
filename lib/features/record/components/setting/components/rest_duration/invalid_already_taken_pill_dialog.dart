@@ -55,7 +55,9 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                 width: 218,
                 child: Column(
                   children: [
+                    // textDirection: SVG は RTL の表示言語でも左右反転しないため、ラベルの列も左から昨日・今日の順に固定して丸と対応させる
                     Row(
+                      textDirection: TextDirection.ltr,
                       children: [
                         const SizedBox(width: 9),
                         SizedBox(
@@ -88,7 +90,9 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     SvgPicture.asset('images/invalid_rest_duration.svg'),
+                    // textDirection: 上のラベルの行と同じく、吹き出しと矢印を昨日・今日の丸の下に固定する
                     Row(
+                      textDirection: TextDirection.ltr,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const SizedBox(width: 9),
