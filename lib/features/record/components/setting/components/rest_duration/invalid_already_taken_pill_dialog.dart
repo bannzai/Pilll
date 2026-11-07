@@ -47,110 +47,114 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             // 説明図の文言を表示言語で出すため、images/invalid_rest_duration.svg には線と丸だけを置き、文言と吹き出しはここで重ねる。
-            // 幅 218 と左余白 9・列幅 100 は SVG の幅と、昨日・今日の丸の中心 (x=59, x=159) に列の中心を合わせるための値
-            SizedBox(
-              width: 218,
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      const SizedBox(width: 9),
-                      SizedBox(
-                        width: 100,
-                        child: Text(
-                          L.invalidRestDurationIllustrationYesterday,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                            color: TextColor.main,
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        width: 100,
-                        child: Text(
-                          L.invalidRestDurationIllustrationToday,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 12,
-                            color: TextColor.main,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 6),
-                  SvgPicture.asset('images/invalid_rest_duration.svg'),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(width: 9),
-                      SizedBox(
-                        width: 100,
-                        child: Column(
-                          children: [
-                            SvgPicture.asset(
-                              'images/invalid_rest_duration_bubble_tip.svg',
+            // 幅 218 と左余白 9・列幅 100 は SVG の幅と、昨日・今日の丸の中心 (x=59, x=159) に列の中心を合わせるための値。
+            // 本文の幅が 218 より狭い画面 (論理幅 320pt では 192) で固定幅の行が溢れないよう、図全体を縮める
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SizedBox(
+                width: 218,
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        const SizedBox(width: 9),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            L.invalidRestDurationIllustrationYesterday,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
                             ),
-                            Container(
-                              // horizontal 4: de の「eingenommen」のような長い 1 語が列幅 100 の中で単語の途中で折り返さないため
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 4,
-                                vertical: 6,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            L.invalidRestDurationIllustrationToday,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    SvgPicture.asset('images/invalid_rest_duration.svg'),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(width: 9),
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                            children: [
+                              SvgPicture.asset(
+                                'images/invalid_rest_duration_bubble_tip.svg',
                               ),
-                              decoration: const BoxDecoration(
-                                color: AppColors.secondary,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(4),
+                              Container(
+                                // horizontal 4: de の「eingenommen」のような長い 1 語が列幅 100 の中で単語の途中で折り返さないため
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical: 6,
+                                ),
+                                decoration: const BoxDecoration(
+                                  color: AppColors.secondary,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  L.invalidRestDurationIllustrationTakenUntilThisDay,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontFamily: FontFamily.japanese,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: TextColor.white,
+                                  ),
                                 ),
                               ),
-                              child: Text(
-                                L.invalidRestDurationIllustrationTakenUntilThisDay,
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                            children: [
+                              const SizedBox(height: 8),
+                              const Text(
+                                '↑',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12,
+                                  color: TextColor.main,
+                                ),
+                              ),
+                              Text(
+                                L.invalidRestDurationIllustrationUnmarkAsTaken,
                                 textAlign: TextAlign.center,
                                 style: const TextStyle(
                                   fontFamily: FontFamily.japanese,
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12,
-                                  color: TextColor.white,
+                                  color: TextColor.main,
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 100,
-                        child: Column(
-                          children: [
-                            const SizedBox(height: 8),
-                            const Text(
-                              '↑',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12,
-                                color: TextColor.main,
-                              ),
-                            ),
-                            Text(
-                              L.invalidRestDurationIllustrationUnmarkAsTaken,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12,
-                                color: TextColor.main,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 15),
