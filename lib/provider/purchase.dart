@@ -251,7 +251,26 @@ class PurchaseService {
 
 const premiumEntitlements = 'Premium';
 
+/// addCustomerInfoUpdateListenerIgnoringLastReceived が listener を登録している間だけ true。
+/// SDK は listener の登録時に直前に受け取った CustomerInfo で即座に (同期的に) 呼ぶため、その呼び出しを callUpdatePurchaseInfo が無視するのに使う
+var _isRegisteringCustomerInfoUpdateListener = false;
+
+/// 課金情報の更新 listener (callUpdatePurchaseInfo) を登録する。
+/// SDK が登録時に直前に受け取った CustomerInfo で即座に呼ぶのは無視する。アカウントの切り替えの後では、それが切り替える前のユーザーの CustomerInfo で、
+/// 今の Firebase Auth のユーザーの users に別のユーザーの課金情報を書いてしまうため。切り替えた後のユーザーの CustomerInfo は呼び出し側が callUpdatePurchaseInfo で書く
+void addCustomerInfoUpdateListenerIgnoringLastReceived() {
+  _isRegisteringCustomerInfoUpdateListener = true;
+  try {
+    Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
+  } finally {
+    _isRegisteringCustomerInfoUpdateListener = false;
+  }
+}
+
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
+  if (_isRegisteringCustomerInfoUpdateListener) {
+    return;
+  }
   analytics.logEvent(name: 'start_update_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
@@ -279,7 +298,9 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   }
 }
 
-/// RevenueCat の SDK のユーザーの切り替え (logInPurchasesUser) を 1 つずつ行うための、直前の切り替えの完了
+/// RevenueCat の SDK のユーザーの切り替え (logInPurchasesUser) を 1 つずつ行うための、直前の切り替えの完了。
+/// Dart のトップレベル変数は isolate ごとに別のため、1 つずつになるのは同じ isolate の中の切り替えだけ
+/// (Android の通知のアクションは別の isolate で動く。そちらとの順番は、切り替える直前の Firebase Auth のユーザーの確認だけで守る)
 Future<void> _purchasesLogInQueue = Future.value();
 
 /// RevenueCat の SDK のユーザーを [uid] に切り替え、そのユーザーの CustomerInfo を返す。
