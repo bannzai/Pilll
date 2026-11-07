@@ -92,7 +92,6 @@ extension CustomerInfoPremium on CustomerInfo {
   /// トライアルの期限。Promotional Entitlement が無い既存ユーザーは users ドキュメントの期限を使う
   DateTime? trialDeadlineDate({required User user}) => promotionalPremiumExpirationDate ?? user.trialDeadlineDate;
 
-  /// トライアル中か。
   /// トライアルの期限と比べる時刻。端末の時刻と、この CustomerInfo を RevenueCat のサーバーが返した時刻 (requestDate) の遅い方。
   /// 端末の時計を戻してもトライアルの期限を延ばせないようにするため (サーバーから期限後に取得していれば、戻しても期限切れのまま)
   DateTime get trialComparisonDate {

@@ -56,4 +56,35 @@ void main() {
           isNull);
     });
   });
+
+  // 文言に出る日数は remainingTrialDays と同じ時刻から数えるため、日数の数え方は #remainingTrialDays で確かめる。
+  // ここでは文言を出すかどうかだけを確かめる (文言はローカライズ定数で比べない)
+  group('#premiumTrialLimitMessage', () {
+    test('トライアル中なら文言を返す', () {
+      final customerInfo = fakeCustomerInfo(
+        allExpirationDates: {
+          'rc_promo_Premium_custom':
+              DateTime(2026, 12, 1).toUtc().toIso8601String()
+        },
+      );
+      expect(
+          PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(
+              customerInfo: customerInfo, user: const User()),
+          isNotNull);
+    });
+
+    test('課金中なら null', () {
+      expect(
+          PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(
+              customerInfo: premiumCustomerInfo, user: const User()),
+          isNull);
+    });
+
+    test('トライアル中でなければ null', () {
+      expect(
+          PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(
+              customerInfo: freeCustomerInfo, user: const User()),
+          isNull);
+    });
+  });
 }
