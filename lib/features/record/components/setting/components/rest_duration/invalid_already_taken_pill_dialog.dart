@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,87 +13,203 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      contentPadding: const EdgeInsets.only(
-        left: 24,
-        right: 24,
-        top: 4,
-        bottom: 24,
-      ),
-      actionsPadding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
-      titlePadding: const EdgeInsets.only(top: 32),
-      title: SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-      ),
-      content: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Text(
-            L.cannotPauseAlreadyTakenToday,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.main,
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) がダイアログの表示を待つため
+    return Semantics(
+      identifier: 'invalid_already_taken_pill_dialog',
+      child: AlertDialog(
+        // 訳文が日本語より長い表示言語や小さい画面で、本文がダイアログの高さに収まらず切れるため
+        scrollable: true,
+        contentPadding: const EdgeInsets.only(
+          left: 24,
+          right: 24,
+          top: 4,
+          bottom: 24,
+        ),
+        actionsPadding: const EdgeInsets.only(left: 24, right: 24, bottom: 32),
+        titlePadding: const EdgeInsets.only(top: 32),
+        title: SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+        ),
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text(
+              L.cannotPauseAlreadyTakenToday,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                color: TextColor.main,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
+            const SizedBox(height: 24),
+            // 説明図の文言を表示言語で出すため、images/invalid_rest_duration.svg には線と丸だけを置き、文言と吹き出しはここで重ねる。
+            // 幅 218 と左余白 9・列幅 100 は SVG の幅と、昨日・今日の丸の中心 (x=59, x=159) に列の中心を合わせるための値。
+            // 本文の幅が 218 より狭い画面 (論理幅 320pt では 192) で固定幅の行が溢れないよう、図全体を縮める
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SizedBox(
+                width: 218,
+                child: Column(
+                  children: [
+                    // textDirection: SVG は RTL の表示言語でも左右反転しないため、ラベルの列も左から昨日・今日の順に固定して丸と対応させる
+                    Row(
+                      textDirection: TextDirection.ltr,
+                      children: [
+                        const SizedBox(width: 9),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            L.invalidRestDurationIllustrationYesterday,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 100,
+                          child: Text(
+                            L.invalidRestDurationIllustrationToday,
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              color: TextColor.main,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    SvgPicture.asset('images/invalid_rest_duration.svg'),
+                    // textDirection: 上のラベルの行と同じく、吹き出しと矢印を昨日・今日の丸の下に固定する
+                    Row(
+                      textDirection: TextDirection.ltr,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(width: 9),
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                            children: [
+                              SvgPicture.asset(
+                                'images/invalid_rest_duration_bubble_tip.svg',
+                              ),
+                              Container(
+                                // horizontal 4: de の「eingenommen」のような長い 1 語が列幅 100 の中で単語の途中で折り返さないため
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 4,
+                                  vertical: 6,
+                                ),
+                                decoration: const BoxDecoration(
+                                  color: AppColors.secondary,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(4),
+                                  ),
+                                ),
+                                child: Text(
+                                  L.invalidRestDurationIllustrationTakenUntilYesterday,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontFamily: FontFamily.japanese,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    color: TextColor.white,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 100,
+                          child: Column(
+                            children: [
+                              const SizedBox(height: 8),
+                              const Text(
+                                '↑',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12,
+                                  color: TextColor.main,
+                                ),
+                              ),
+                              Text(
+                                L.invalidRestDurationIllustrationUnmarkAsTaken,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12,
+                                  color: TextColor.main,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
+            // 2 つの文を連結すると、ja 以外の表示言語で文の境目が消えるため、それぞれ完結した文として行を分ける
+            Text(
+              L.invalidAlreadyTakenPillUnmarkThenPause,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                height: 1.7,
+                color: TextColor.main,
+              ),
+            ),
+            Text(
+              L.invalidAlreadyTakenPillPauseOtherDaysGuide,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                height: 1.7,
+                color: TextColor.main,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          AppOutlinedButton(
+            onPressed: () async {
+              analytics.logEvent(name: 'invalid_already_taken_pill_faq');
+              launchUrl(
+                Uri.parse(
+                  'https://pilll.notion.site/467128e667ae4d6cbff4d61ee370cce5',
+                ),
+              );
+            },
+            text: L.seeHowToUsePauseTakingFeature,
           ),
-          const SizedBox(height: 24),
-          SvgPicture.asset('images/invalid_rest_duration.svg'),
-          const SizedBox(height: 15),
-          RichText(
-            textAlign: TextAlign.center,
-            text: TextSpan(
-              style: const TextStyle(height: 1.7),
-              children: [
-                // TODO: [Localizations]
-                TextSpan(
-                  text: L.unmarkTodayPillAsTakenToPause,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
-                ),
-                TextSpan(
-                  text: L.pauseStartingOtherDaysInstructions,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
-                ),
-              ],
+          Center(
+            child: AlertButton(
+              text: L.close,
+              onPressed: () async {
+                analytics.logEvent(name: 'invalid_already_taken_pill_close');
+                Navigator.of(context).pop();
+              },
             ),
           ),
         ],
       ),
-      actions: [
-        AppOutlinedButton(
-          onPressed: () async {
-            analytics.logEvent(name: 'invalid_already_taken_pill_faq');
-            launchUrl(
-              Uri.parse(
-                'https://pilll.notion.site/467128e667ae4d6cbff4d61ee370cce5',
-              ),
-            );
-          },
-          text: L.seeHowToUsePauseTakingFeature,
-        ),
-        Center(
-          child: AlertButton(
-            text: L.close,
-            onPressed: () async {
-              analytics.logEvent(name: 'invalid_already_taken_pill_close');
-              Navigator.of(context).pop();
-            },
-          ),
-        ),
-      ],
     );
   }
 }

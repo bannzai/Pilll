@@ -165,6 +165,41 @@ appId: com.mizuki.Ohashi.Pilll.dev
 - waitForAnimationToEnd
 - takeScreenshot: "scripts/translation_screenshots/artifacts/rest_duration_begin_dialog/${LANG}"
 
+# 今日のピルを服用済みにした日の服用お休みの拒否ダイアログ (記録の「飲んだ」→ ピルシートの設定 → 服用お休み)
+# 服用済みにすると開始ダイアログが撮れなくなるため、開始ダイアログの後に撮る。
+# 「飲んだ」の後に出るリリースノート等の表示に依存しないよう、起動し直してから設定シートを開く
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: "record_page_taken_button"
+    timeout: 60000
+- tapOn:
+    id: "record_page_taken_button"
+- waitForAnimationToEnd
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible:
+      id: "record_page_pill_sheet_setting_button"
+    timeout: 60000
+- tapOn:
+    id: "record_page_pill_sheet_setting_button"
+# timeout 10000: 読み込みの無いボトムシートの表示を待つだけのため (先頭の「待ち時間の固定値」のボトムシート)
+- extendedWaitUntil:
+    visible:
+      id: "begin_manual_rest_duration_row"
+    timeout: 10000
+- tapOn:
+    id: "begin_manual_rest_duration_row"
+# timeout 10000: 読み込みの無いダイアログの表示を待つだけのため (ボトムシートと同じ値)
+- extendedWaitUntil:
+    visible:
+      id: "invalid_already_taken_pill_dialog"
+    timeout: 10000
+- waitForAnimationToEnd
+- takeScreenshot: "scripts/translation_screenshots/artifacts/invalid_already_taken_pill_dialog/${LANG}"
+
 # Yaz Flex の初期設定の質問とピルの種類選択シートは初期設定の中にあるため、
 # 開発者オプションのユーザー削除 (debug_row の長押し) で初期設定に戻して LANG で開く。表示言語の保存は端末に残る
 - stopApp
