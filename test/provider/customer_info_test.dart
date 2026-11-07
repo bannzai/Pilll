@@ -464,8 +464,8 @@ void main() {
           .instance.defaultBinaryMessenger
           .setMockMethodCallHandler(purchasesChannel, null));
 
-      final customerInfo =
-          await fetchCustomerInfoOutsideUI(uid: 'current_user');
+      final customerInfo = await fetchCustomerInfoOutsideUI(
+          uid: 'current_user', currentFirebaseUserID: () => 'current_user');
 
       expect(customerInfo.originalAppUserId, 'current_user');
       expect(
@@ -489,10 +489,37 @@ void main() {
           .instance.defaultBinaryMessenger
           .setMockMethodCallHandler(purchasesChannel, null));
 
-      final customerInfo =
-          await fetchCustomerInfoOutsideUI(uid: 'current_user');
+      final customerInfo = await fetchCustomerInfoOutsideUI(
+          uid: 'current_user', currentFirebaseUserID: () => 'current_user');
 
       expect(customerInfo.originalAppUserId, 'current_user');
+      expect(calls.map((call) => call.method), isNot(contains('logIn')));
+    });
+
+    test(
+        'SDK が別のユーザーで設定済みで、切り替える前に Firebase Auth のユーザーが uid でなくなっていたら、logIn せずに例外を投げる',
+        () async {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      final calls = <MethodCall>[];
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, (call) async {
+        calls.add(call);
+        return switch (call.method) {
+          'isConfigured' => true,
+          'getAppUserID' => 'signed_in_user',
+          _ => null,
+        };
+      });
+      addTearDown(() => TestDefaultBinaryMessengerBinding
+          .instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(purchasesChannel, null));
+
+      await expectLater(
+        fetchCustomerInfoOutsideUI(
+            uid: 'previous_user',
+            currentFirebaseUserID: () => 'signed_in_user'),
+        throwsStateError,
+      );
       expect(calls.map((call) => call.method), isNot(contains('logIn')));
     });
   });

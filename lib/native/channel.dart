@@ -39,7 +39,8 @@ void definedChannel() {
           // 取得できない時 (オフラインで SDK のキャッシュが無い等) は、服用の記録は済んでいるので失敗の通知を出さず、登録済みのリマインダーを残して終える
           final CustomerInfo customerInfo;
           try {
-            customerInfo = await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid);
+            customerInfo =
+                await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid, currentFirebaseUserID: () => FirebaseAuth.instance.currentUser?.uid);
           } catch (e, st) {
             errorLogger.recordError(e, st);
             return;

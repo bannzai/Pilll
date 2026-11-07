@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -16,7 +17,7 @@ class SetUserID {
     // 初期設定のログインで別のアカウントに切り替わった時は SDK を設定済みのため、logIn で RevenueCat のユーザーを切り替え、
     // 呼び出し側がそのユーザーの CustomerInfo を読めるよう完了を待つ
     if (await Purchases.isConfigured && await Purchases.appUserID != userID) {
-      await Purchases.logIn(userID);
+      await logInPurchasesUser(uid: userID, currentFirebaseUserID: () => FirebaseAuth.instance.currentUser?.uid);
       return;
     }
     // Keep call initialPurchase before logIn.

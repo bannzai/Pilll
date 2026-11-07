@@ -279,6 +279,24 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   }
 }
 
+/// RevenueCat の SDK のユーザーの切り替え (logInPurchasesUser) を 1 つずつ行うための、直前の切り替えの完了
+Future<void> _purchasesLogInQueue = Future.value();
+
+/// RevenueCat の SDK のユーザーを [uid] に切り替え、そのユーザーの CustomerInfo を返す。
+/// 切り替えは前の切り替えの完了を待って 1 つずつ行う。切り替える直前に、今の Firebase Auth のユーザー ([currentFirebaseUserID] が返す値) が
+/// [uid] と違えば (待っている間にアカウントが切り替わった)、RevenueCat を古いユーザーに戻さないよう切り替えずに StateError を投げる
+Future<CustomerInfo> logInPurchasesUser({required String uid, required String? Function() currentFirebaseUserID}) {
+  final result = _purchasesLogInQueue.then((_) async {
+    if (currentFirebaseUserID() != uid) {
+      throw StateError('RevenueCat のユーザーを切り替える前に Firebase Auth のユーザーが変わったため、切り替えない');
+    }
+    return (await Purchases.logIn(uid)).customerInfo;
+  });
+  // 失敗した切り替えで後の切り替えを止めない
+  _purchasesLogInQueue = result.then((_) {}, onError: (_) {});
+  return result;
+}
+
 /// RevenueCat SDK を [uid] のユーザーで設定する
 Future<void> configurePurchases({required String uid}) {
   return Purchases.configure(

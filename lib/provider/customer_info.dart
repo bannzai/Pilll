@@ -44,12 +44,13 @@ class FixedCustomerInfoNotifier extends CustomerInfoNotifier {
 
 /// 画面の外 (通知のアクション・ネイティブからの呼び出し) で CustomerInfo を取得する。
 /// この経路は UserSetup を通らず RevenueCat SDK が未設定のことがあるため、未設定なら [uid] で設定してから取得する。
-/// 設定済みでも別のユーザー (アカウントの切り替えの直後) のことがあるため、[uid] のユーザーに logIn してから取得し、別のユーザーの CustomerInfo を返さない
-Future<CustomerInfo> fetchCustomerInfoOutsideUI({required String uid}) async {
+/// 設定済みでも別のユーザー (アカウントの切り替えの直後) のことがあるため、[uid] のユーザーに切り替えてから取得し、別のユーザーの CustomerInfo を返さない。
+/// 切り替えは logInPurchasesUser で行い、待っている間に今の Firebase Auth のユーザー ([currentFirebaseUserID]) が [uid] でなくなっていれば例外を投げる
+Future<CustomerInfo> fetchCustomerInfoOutsideUI({required String uid, required String? Function() currentFirebaseUserID}) async {
   if (!await Purchases.isConfigured) {
     await configurePurchases(uid: uid);
   } else if (await Purchases.appUserID != uid) {
-    return (await Purchases.logIn(uid)).customerInfo;
+    return logInPurchasesUser(uid: uid, currentFirebaseUserID: currentFirebaseUserID);
   }
   return Purchases.getCustomerInfo();
 }
