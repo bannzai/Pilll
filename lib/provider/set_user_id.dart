@@ -17,6 +17,9 @@ class SetUserID {
     // 初期設定のログインで別のアカウントに切り替わった時は SDK を設定済みのため、logIn で RevenueCat のユーザーを切り替え、
     // 呼び出し側がそのユーザーの CustomerInfo を読めるよう完了を待つ
     if (await Purchases.isConfigured && await Purchases.appUserID != userID) {
+      // 通知のアクション (fetchCustomerInfoOutsideUI) が先に別のユーザーで SDK を設定した時は initializePurchase を通らないため、ここでも登録する。
+      // listener は SDK が Set で持つため、同じ関数を何度登録しても 1 つになる
+      Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
       await logInPurchasesUser(uid: userID, currentFirebaseUserID: () => FirebaseAuth.instance.currentUser?.uid);
       return;
     }
