@@ -142,6 +142,27 @@ void main() {
     });
   });
 
+  group('#trialComparisonDate', () {
+    test('requestDate が端末の時刻より後 (端末の時計を戻した) なら requestDate', () {
+      final customerInfo =
+          fakeCustomerInfo(requestDate: '2026-11-28T00:00:00Z');
+      expect(customerInfo.trialComparisonDate,
+          DateTime.parse('2026-11-28T00:00:00Z').toLocal());
+    });
+
+    test('requestDate が端末の時刻より前なら端末の時刻', () {
+      final customerInfo =
+          fakeCustomerInfo(requestDate: '2026-11-01T00:00:00Z');
+      expect(customerInfo.trialComparisonDate,
+          DateTime.parse('2026-11-07T12:00:00Z').toLocal());
+    });
+
+    test('requestDate を解釈できない (空文字) なら端末の時刻', () {
+      expect(freeCustomerInfo.trialComparisonDate,
+          DateTime.parse('2026-11-07T12:00:00Z').toLocal());
+    });
+  });
+
   group('#isTrial', () {
     group(
         'RevenueCat のサーバーが CustomerInfo を返した時刻 (requestDate) が端末の時刻より遅い (端末の時計を戻した)',

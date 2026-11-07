@@ -71,7 +71,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     if (!customerInfo.isTrial(user: user)) return null;
     final trialDeadlineDate = customerInfo.trialDeadlineDate(user: user);
     if (trialDeadlineDate == null) return null;
-    return daysBetween(now(), trialDeadlineDate);
+    return daysBetween(customerInfo.trialComparisonDate, trialDeadlineDate);
   }
 
   /// トライアルの残り日数を伝える文言。トライアル中でなければ null
@@ -87,7 +87,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
       return null;
     }
 
-    final diff = daysBetween(now(), trialDeadlineDate);
+    final diff = daysBetween(customerInfo.trialComparisonDate, trialDeadlineDate);
     final base = L.remainingDaysAllFeatures(diff);
     return '$base\n${L.specialDiscountPriceNow}';
   }

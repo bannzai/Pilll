@@ -93,13 +93,17 @@ extension CustomerInfoPremium on CustomerInfo {
   DateTime? trialDeadlineDate({required User user}) => promotionalPremiumExpirationDate ?? user.trialDeadlineDate;
 
   /// トライアル中か。
-  /// 期限と比べる時刻は、端末の時刻と、この CustomerInfo を RevenueCat のサーバーが返した時刻 (requestDate) の遅い方にする。
+  /// トライアルの期限と比べる時刻。端末の時刻と、この CustomerInfo を RevenueCat のサーバーが返した時刻 (requestDate) の遅い方。
   /// 端末の時計を戻してもトライアルの期限を延ばせないようにするため (サーバーから期限後に取得していれば、戻しても期限切れのまま)
+  DateTime get trialComparisonDate {
+    final customerInfoRequestDate = DateTime.tryParse(requestDate)?.toLocal();
+    return customerInfoRequestDate != null && customerInfoRequestDate.isAfter(now()) ? customerInfoRequestDate : now();
+  }
+
+  /// トライアル中か。期限は [trialComparisonDate] と比べる
   bool isTrial({required User user}) {
     final trialDeadlineDate = this.trialDeadlineDate(user: user);
-    final customerInfoRequestDate = DateTime.tryParse(requestDate)?.toLocal();
-    final comparisonDate = customerInfoRequestDate != null && customerInfoRequestDate.isAfter(now()) ? customerInfoRequestDate : now();
-    return trialDeadlineDate != null && comparisonDate.isBefore(trialDeadlineDate);
+    return trialDeadlineDate != null && trialComparisonDate.isBefore(trialDeadlineDate);
   }
 
   /// プレミアム会員またはトライアル中か
