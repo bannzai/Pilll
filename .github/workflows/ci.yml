@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
-    - uses: actions/checkout@v7
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - run: make secret
-    - uses: subosito/flutter-action@v2
+    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
       with:
         channel: stable
         flutter-version-file: .github/flutter-version.yaml
@@ -32,7 +32,7 @@ jobs:
     runs-on: macos-26
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
-    - uses: actions/checkout@v7
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
     - name: Prepare firebase config
       run: make secret
       env:
@@ -40,7 +40,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
         XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
         ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
-    - uses: subosito/flutter-action@v2
+    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
       with:
         flutter-version-file: .github/flutter-version.yaml
     - run: flutter pub get
@@ -50,8 +50,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
-    - uses: actions/checkout@v7
-    - uses: actions/setup-java@v6
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
       with:
         distribution: "zulu"
         java-version: '17.0.10+7'
@@ -61,7 +61,7 @@ jobs:
         FILE_FIREBASE_ANDROID: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
         ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
-    - uses: subosito/flutter-action@v2
+    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
       with:
         flutter-version-file: .github/flutter-version.yaml
     - run: flutter pub get
@@ -70,8 +70,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
-    - uses: actions/checkout@v7
-    - uses: subosito/flutter-action@v2
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
       with:
         flutter-version-file: .github/flutter-version.yaml
     - run: make secret
@@ -82,8 +82,8 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
-    - uses: actions/checkout@v7
-    - uses: subosito/flutter-action@v2
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
       with:
         flutter-version-file: .github/flutter-version.yaml
     - run: make secret
