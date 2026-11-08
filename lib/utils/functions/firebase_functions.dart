@@ -25,14 +25,19 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
 
   /// ログイン中のユーザーにトライアル (RevenueCat の Premium の Promotional Entitlement) を付与する。
   /// 期限の日数は Remote Config の trialDeadlineDateOffsetDay をサーバーが読み、付与は 1 アカウント 1 回でサーバーが判定する (bannzai/PilllBackend#581)。
-  /// 既に付与済みなら true を返す
-  Future<bool> startPromotion() async {
-    final result = await httpsCallable('startPromotion').call();
-    final response = mapToJSON(result.data);
-    if (response['result'] != 'OK') {
-      throw Exception(response['error']['message']);
+  /// サーバーは付与した時に `{ promotionDeadlineDateMs }` を返し、既に付与済み (旧方式のトライアル済みを含む) の時は already-exists のエラーを返す
+  /// (bannzai/PilllBackend#582 の functions/src/functions/startPromotion)。期限は CustomerInfo から読むため戻り値は使わず、
+  /// already-exists はトライアルを開始済みとして成功と同じに扱う (初期設定のやり直しで 2 回目に呼ばれた時に、初期設定を完了できなくしないため)。
+  /// それ以外のエラーは FirebaseFunctionsException のまま投げる
+  Future<void> startPromotion() async {
+    try {
+      await httpsCallable('startPromotion').call();
+    } on FirebaseFunctionsException catch (error) {
+      if (error.code == 'already-exists') {
+        return;
+      }
+      rethrow;
     }
-    return response['data']['isAlreadyExist'] as bool;
   }
 }
 
