@@ -9,6 +9,8 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -69,9 +71,11 @@ void main() {
             pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
-            user: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
+            user: const User(),
           );
-          await tester.pumpWidget(MaterialApp(home: widget));
+          await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(premiumCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(
@@ -138,14 +142,16 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-            user: FakeUser(fakeIsPremium: false, fakeIsTrial: false),
+            user: const User(),
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
           );
-          await tester.pumpWidget(MaterialApp(home: widget));
+          await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(freeCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(
@@ -209,14 +215,16 @@ void main() {
           for (int i = 0; i < 28; i++) {
             final pillNumberInPillSheet = i + 1;
             final widget = PillNumber(
-              user: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
+              user: const User(),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting,
             );
-            await tester.pumpWidget(MaterialApp(home: widget));
+            await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(premiumCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
             if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
               expect(
@@ -282,14 +290,16 @@ void main() {
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
           final widget = PillNumber(
-            user: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
+            user: const User(),
             pillSheetGroup: pillSheetGroup,
             pillSheet: pillSheet,
             pillNumberInPillSheet: pillNumberInPillSheet,
             pageIndex: 0,
             setting: setting,
           );
-          await tester.pumpWidget(MaterialApp(home: widget));
+          await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(premiumCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
           if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
             expect(
@@ -355,14 +365,16 @@ void main() {
           for (int i = 0; i < 28; i++) {
             final pillNumberInPillSheet = i + 1;
             final widget = PillNumber(
-              user: FakeUser(fakeIsPremium: false, fakeIsTrial: false),
+              user: const User(),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting,
             );
-            await tester.pumpWidget(MaterialApp(home: widget));
+            await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(freeCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
             if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
               expect(
@@ -427,14 +439,16 @@ void main() {
           for (int i = 0; i < 28; i++) {
             final pillNumberInPillSheet = i + 1;
             final widget = PillNumber(
-              user: FakeUser(fakeIsPremium: true, fakeIsTrial: true),
+              user: const User(),
               pillSheetGroup: pillSheetGroup,
               pillSheet: pillSheet,
               pillNumberInPillSheet: pillNumberInPillSheet,
               pageIndex: 0,
               setting: setting,
             );
-            await tester.pumpWidget(MaterialApp(home: widget));
+            await tester.pumpWidget(ProviderScope(
+              overrides: [customerInfoProviderOverride(premiumCustomerInfo)],
+              child: MaterialApp(home: widget)));
 
             if (pillNumberInPillSheet < pillNumberForFromMenstruation) {
               expect(

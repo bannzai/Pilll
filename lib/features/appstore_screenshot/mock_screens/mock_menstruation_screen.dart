@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -70,6 +71,7 @@ class MockMenstruationScreen extends StatelessWidget {
       // Firestore アクセスはタップ時のみでスクショではタップしないため呼ばれない。
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+        customerInfoProvider.overrideWith(() => FixedCustomerInfoNotifier(customerInfo: mockPremiumCustomerInfo)),
       ],
       child: Container(
         color: AppColors.background,

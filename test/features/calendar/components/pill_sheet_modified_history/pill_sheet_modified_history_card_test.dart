@@ -10,6 +10,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 import '../../../../helper/fake.dart';
 import '../../../../helper/mock.mocks.dart';
@@ -37,13 +38,15 @@ void main() {
   }
 
   Widget subject(
-      {required User user, required List<PillSheetModifiedHistory> histories}) {
+      {required CustomerInfo customerInfo,
+      required List<PillSheetModifiedHistory> histories}) {
     return ProviderScope(
+      overrides: [customerInfoProviderOverride(customerInfo)],
       child: MaterialApp(
         home: Material(
           child: SingleChildScrollView(
             child: CalendarPillSheetModifiedHistoryCard(
-                histories: histories, user: user),
+                histories: histories, user: const User()),
           ),
         ),
       ),
@@ -65,7 +68,7 @@ void main() {
     testWidgets('無料ユーザーで服薬変更履歴が1件だけでも、ロックオーバーレイがオーバーフローせず「くわしくみる」が表示される',
         (tester) async {
       await tester.pumpWidget(subject(
-          user: const User(isPremium: false),
+          customerInfo: freeCustomerInfo,
           histories: [createdPillSheetHistory(0)]));
       await tester.pumpAndSettle();
 
@@ -76,7 +79,7 @@ void main() {
     testWidgets('無料ユーザーでロックオーバーレイが履歴リストより高い場合、「くわしくみる」がカードの内側に収まる',
         (tester) async {
       await tester.pumpWidget(subject(
-          user: const User(isPremium: false),
+          customerInfo: freeCustomerInfo,
           histories: [createdPillSheetHistory(0)]));
       await tester.pumpAndSettle();
 
@@ -92,7 +95,7 @@ void main() {
         (tester) async {
       await tester.pumpWidget(
         subject(
-            user: const User(isPremium: false),
+            customerInfo: freeCustomerInfo,
             histories: List.generate(10, createdPillSheetHistory)),
       );
       await tester.pumpAndSettle();
@@ -103,7 +106,7 @@ void main() {
 
     testWidgets('プレミアム会員の場合、ロックオーバーレイを表示しない', (tester) async {
       await tester.pumpWidget(subject(
-          user: const User(isPremium: true),
+          customerInfo: premiumCustomerInfo,
           histories: [createdPillSheetHistory(0)]));
       await tester.pumpAndSettle();
 

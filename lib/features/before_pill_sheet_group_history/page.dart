@@ -2,6 +2,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
@@ -43,7 +44,7 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
         return _Page(
           pillSheetGroup: isLatestInUse ? null : beforePillSheetGroup,
           setting: data.$3,
-          premiumOrTrial: data.$4.premiumOrTrial,
+          premiumOrTrial: ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: data.$4),
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(

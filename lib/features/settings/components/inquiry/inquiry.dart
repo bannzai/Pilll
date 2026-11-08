@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -40,6 +42,11 @@ Future<String> debugInfo(String separator) async {
         );
   } catch (_) {}
 
+  CustomerInfo? customerInfo;
+  try {
+    customerInfo = await Purchases.getCustomerInfo();
+  } catch (_) {}
+
   PackageInfo? package;
   try {
     package = await PackageInfo.fromPlatform();
@@ -64,8 +71,8 @@ Future<String> debugInfo(String separator) async {
     'DEBUG INFO',
     "$platform:$appName:$version:$packageName:$buildNumber:${Environment.isProduction ? "prod" : "dev"}",
     'userID: $userID',
-    'isPremium: ${user?.isPremium}',
-    'isTrial: ${user?.isTrial}',
+    'isPremium: ${customerInfo?.isPremium}',
+    'isTrial: ${user == null ? null : customerInfo?.isTrial(user: user)}',
     'pillSheetGroupID: ${pillSheetGroup?.id}',
     'activePillSheet: ${activedPillSheetDebugInfo.toString()}',
     'reminderTimes: ${setting?.reminderTimes}',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
@@ -34,6 +35,7 @@ class MockMedicationHistoryScreen extends StatelessWidget {
     return ProviderScope(
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+        customerInfoProvider.overrideWith(() => FixedCustomerInfoNotifier(customerInfo: mockPremiumCustomerInfo)),
       ],
       child: Container(
         color: AppColors.background,
@@ -70,7 +72,7 @@ class MockMedicationHistoryScreen extends StatelessWidget {
                     // （カードは先頭 5 行 + もっと見るを表示する）。
                     histories: mockTakenPillHistories(fixedToday: _fixedToday, count: 7),
                     // マーケティング訴求のため、履歴が伏せられないプレミアム状態で表示する。
-                    user: const User(isPremium: true),
+                    user: const User(),
                   ),
                 ],
               ),

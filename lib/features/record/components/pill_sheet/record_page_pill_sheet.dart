@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
@@ -370,7 +371,7 @@ int? remainingPillTakenCountFor({
   };
 }
 
-class PillNumber extends StatelessWidget {
+class PillNumber extends ConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
@@ -389,7 +390,8 @@ class PillNumber extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final premiumOrTrial = ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: user);
     final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(
       setting: setting,
     );
@@ -401,12 +403,12 @@ class PillNumber extends StatelessWidget {
         .isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumberOrDate(
-      premiumOrTrial: user.premiumOrTrial,
+      premiumOrTrial: premiumOrTrial,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
     );
 
-    if (user.premiumOrTrial && containedMenstruationDuration) {
+    if (premiumOrTrial && containedMenstruationDuration) {
       return MenstruationPillNumber(text: text);
     } else {
       return PlainPillNumber(text: text);

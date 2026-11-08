@@ -35,6 +35,7 @@ import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../helper/fake.dart';
 import '../helper/mock.mocks.dart';
 import 'snapshot_harness.dart';
 
@@ -114,8 +115,9 @@ Future<List<Override>> _overrides() async {
     remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
     isLinkedProvider.overrideWithValue(true),
     userProvider.overrideWith(
-      (ref) => Stream.value(User(isPremium: true, beginTrialDate: DateTime(2025, 1, 1), trialDeadlineDate: DateTime(2025, 1, 31))),
+      (ref) => Stream.value(User(beginTrialDate: DateTime(2025, 1, 1), trialDeadlineDate: DateTime(2025, 1, 31))),
     ),
+    customerInfoProviderOverride(premiumCustomerInfo),
     settingProvider.overrideWith(
       (ref) => Stream.value(
         const Setting(
