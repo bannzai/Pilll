@@ -15,6 +15,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
@@ -315,6 +316,12 @@ class RegisterReminderLocalNotification {
   //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.debug(name: 'call_register_reminder_notification');
+    // 登録し直す時の課金状態は、取り消す前に確かめる。CustomerInfo が前の値も持たない時は登録し直せないため、取り消さずに登録済みのリマインダーを残す。
+    // 取得し直しに失敗した時 (前の値を持つ AsyncError) は、UserSetup が表示に使っている同じユーザーの前の値で登録し直す
+    final customerInfo = ref.read(customerInfoProvider).valueOrNull;
+    if (customerInfo == null) {
+      return;
+    }
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
@@ -326,17 +333,16 @@ class RegisterReminderLocalNotification {
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
-    final premiumOrTrial = ref.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
     final setting = ref.read(settingProvider).asData?.valueOrNull;
     final user = ref.read(userProvider).asData?.valueOrNull;
-    if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || user == null) {
+    if (pillSheetGroup == null || activePillSheet == null || setting == null || user == null) {
       return;
     }
 
     await run(
       pillSheetGroup: pillSheetGroup,
       activePillSheet: activePillSheet,
-      premiumOrTrial: premiumOrTrial,
+      premiumOrTrial: customerInfo.premiumOrTrial(user: user),
       setting: setting,
     );
   }

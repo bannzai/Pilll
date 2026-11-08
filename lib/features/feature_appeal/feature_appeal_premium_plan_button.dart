@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
@@ -24,7 +25,8 @@ class FeatureAppealPremiumPlanButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // HelpPage はホーム画面から開かれ userProvider は読み込み済みのため、未読込 (AsyncLoading) の間は何も出さない
     final user = ref.watch(userProvider).valueOrNull;
-    if (user == null || user.isPremium || !user.isTrial) {
+    final customerInfo = ref.watch(customerInfoProvider).valueOrNull;
+    if (user == null || customerInfo == null || customerInfo.isPremium || !customerInfo.isTrial(user: user)) {
       return const SizedBox.shrink();
     }
     return AppOutlinedButton(

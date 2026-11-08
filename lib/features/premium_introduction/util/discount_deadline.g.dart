@@ -149,7 +149,7 @@ class _IsOverDiscountDeadlineProviderElement extends AutoDisposeProviderElement<
   DateTime? get discountEntitlementDeadlineDate => (origin as IsOverDiscountDeadlineProvider).discountEntitlementDeadlineDate;
 }
 
-String _$hiddenCountdownDiscountDeadlineHash() => r'd4bf0339b7bdcfdc41069db72d215f6b4ca09287';
+String _$hiddenCountdownDiscountDeadlineHash() => r'2dfcb0836d9e4e28df5e4aef920b68a2cc6dab67';
 
 /// See also [hiddenCountdownDiscountDeadline].
 @ProviderFor(hiddenCountdownDiscountDeadline)

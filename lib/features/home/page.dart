@@ -2,6 +2,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -118,6 +119,7 @@ class HomePageBody extends HookConsumerWidget {
     // this.pillSheetGroup は field のため null promotion が効かない。useEffect 内で参照するためローカル変数化する
     final pillSheetGroup = this.pillSheetGroup;
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
+    final premiumOrTrial = ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: user);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -144,7 +146,7 @@ class HomePageBody extends HookConsumerWidget {
             BoolKey.isAlreadyAnsweredPreStoreReviewModal,
             true,
           );
-        } else if (pillSheetGroup != null && pillSheetGroup.deletedAt == null && pillSheetGroup.activePillSheet == null && !user.premiumOrTrial) {
+        } else if (pillSheetGroup != null && pillSheetGroup.deletedAt == null && pillSheetGroup.activePillSheet == null && !premiumOrTrial) {
           // ピルシートが終了した free ユーザーに、課金転換ダイアログ(A/B)を終了グループにつき1回だけ表示する。
           // 削除済みグループ(deletedAt != null)は activePillSheet == null でも「終了」ではないため対象外
           final variant = endedPillSheetDialogVariantFromRemoteConfig(remoteConfigParameter.endedPillSheetDialogVariant);
