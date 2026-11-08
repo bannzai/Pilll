@@ -1,11 +1,34 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/inquiry.codegen.dart';
+import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/functions/firebase_functions.dart';
 
 import '../../helper/mock.mocks.dart';
 
 void main() {
+  group('#inquiryIsTest', () {
+    test('DEBUG ビルドなら flavor が本番でも true', () {
+      expect(inquiryIsTest(debugMode: true, flavor: Flavor.PRODUCTION), true);
+    });
+
+    test('release ビルドでも dev flavor (pilll-dev) なら true', () {
+      expect(inquiryIsTest(debugMode: false, flavor: Flavor.DEVELOP), true);
+    });
+
+    test('release ビルドでも local flavor (エミュレータ) なら true', () {
+      expect(inquiryIsTest(debugMode: false, flavor: Flavor.LOCAL), true);
+    });
+
+    test('release ビルドの本番 flavor なら false', () {
+      expect(inquiryIsTest(debugMode: false, flavor: Flavor.PRODUCTION), false);
+    });
+
+    test('release ビルドで flavor が未設定なら false', () {
+      expect(inquiryIsTest(debugMode: false, flavor: null), false);
+    });
+  });
+
   group('#inquiry', () {
     test('DEBUG ビルド (flutter test は kDebugMode が true) では test: true を付けて送る',
         () async {
