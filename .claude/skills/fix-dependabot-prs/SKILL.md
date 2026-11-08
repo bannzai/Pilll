@@ -65,37 +65,20 @@ git add -A
 git commit -m "chore: run build_runner after dependency updates"
 ```
 
-### 7. iOS Podfile.lockの更新
-
-iOSの依存関係も更新が必要な場合が多い:
-
-```bash
-cd ios
-pod install --repo-update
-cd ..
-```
-
-変更があればコミット:
-
-```bash
-git add ios/Podfile.lock
-git commit -m "chore: update Podfile.lock"
-```
-
-### 8. ビルド・テストの確認
+### 7. ビルド・テストの確認
 
 ```bash
 flutter analyze
 flutter test
 ```
 
-### 9. まとめPRを作成
+### 8. まとめPRを作成
 
 `~/.agents/skills/commit-create-pr/SKILL.md` に従い、push・PR 作成を行う。
 本文には取り込んだ PR とバージョン変更、コード生成・Podfile.lock の更新内容、検証結果を記載する。
 除外した PR があれば、理由・背景・今後の対応も同じ本文にまとめる。
 
-### 10. 元のdependabot PRをクローズ
+### 9. 元のdependabot PRをクローズ
 
 まとめPRがマージされた後、元のdependabot PRをクローズする:
 
