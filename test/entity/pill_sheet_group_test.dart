@@ -18859,11 +18859,11 @@ void main() {
               todayRepository = mockTodayRepository;
               when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-09"));
 
-              final group = notTakenPillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration]);
+              final pillSheetGroup = notTakenPillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration]);
               // 今日 (11/9) から始めると、終了日 (11/8) との間に服用記録も服用お休みも無い日ができる
-              expect(group.availableRestDurationBeginDate, DateTime.parse("2026-11-08"));
+              expect(pillSheetGroup.availableRestDurationBeginDate, DateTime.parse("2026-11-08"));
               expect(
-                group.overlapsOtherRestDuration(beginDate: group.availableRestDurationBeginDate, endDate: null, excludingRestDuration: null),
+                pillSheetGroup.overlapsOtherRestDuration(beginDate: pillSheetGroup.availableRestDurationBeginDate, endDate: null, excludingRestDuration: null),
                 isFalse,
               );
             });
