@@ -18807,6 +18807,148 @@ void main() {
           lastTakenDate2.addDays(1),
         );
       });
+
+      group("服用記録の無いピルシートの場合", () {
+        final finishedRestDuration = RestDuration(
+          id: "finished_rest_duration_id",
+          beginDate: DateTime.parse("2026-11-07"),
+          endDate: DateTime.parse("2026-11-08"),
+          createdDate: DateTime.parse("2026-11-07"),
+        );
+
+        /// 2026-11-07 開始で服用記録の無い、[restDurations] を持つ pillsheet_28_0 のピルシート 1 枚のグループを返す。[isV2] が true なら PillSheet.v2 (2錠飲み) で作る
+        PillSheetGroup notTakenPillSheetGroup({required bool isV2, required List<RestDuration> restDurations}) {
+          final beginDate = DateTime.parse("2026-11-07");
+          return PillSheetGroup(
+            pillSheetIDs: ["sheet_id1"],
+            pillSheets: [
+              if (isV2)
+                PillSheet.v2(
+                  id: "sheet_id1",
+                  groupIndex: 0,
+                  beginDate: beginDate,
+                  createdAt: beginDate,
+                  typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+                  restDurations: restDurations,
+                  pills: Pill.testGenerateAndIterateTo(
+                    pillSheetType: PillSheetType.pillsheet_28_0,
+                    fromDate: beginDate,
+                    lastTakenDate: null,
+                    pillTakenCount: 2,
+                  ),
+                )
+              else
+                PillSheet.v1(
+                  id: "sheet_id1",
+                  groupIndex: 0,
+                  beginDate: beginDate,
+                  lastTakenDate: null,
+                  createdAt: beginDate,
+                  typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+                  restDurations: restDurations,
+                ),
+            ],
+            createdAt: beginDate,
+          );
+        }
+
+        for (final isV2 in [false, true]) {
+          group(isV2 ? "v2" : "v1", () {
+            test("終了済みの服用お休みの終了日が今日より前なら、今日ではなく服用お休みの終了日を返す", () {
+              final mockTodayRepository = MockTodayService();
+              todayRepository = mockTodayRepository;
+              when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-09"));
+
+              final group = notTakenPillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration]);
+              // 今日 (11/9) から始めると、終了日 (11/8) との間に服用記録も服用お休みも無い日ができる
+              expect(group.availableRestDurationBeginDate, DateTime.parse("2026-11-08"));
+              expect(
+                group.overlapsOtherRestDuration(beginDate: group.availableRestDurationBeginDate, endDate: null, excludingRestDuration: null),
+                isFalse,
+              );
+            });
+
+            test("終了済みの服用お休みの終了日が今日なら、今日を返す", () {
+              final mockTodayRepository = MockTodayService();
+              todayRepository = mockTodayRepository;
+              when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-08"));
+
+              expect(
+                notTakenPillSheetGroup(isV2: isV2, restDurations: [finishedRestDuration]).availableRestDurationBeginDate,
+                DateTime.parse("2026-11-08"),
+              );
+            });
+
+            test("終了済みの服用お休みが無ければ、今日を返す", () {
+              final mockTodayRepository = MockTodayService();
+              todayRepository = mockTodayRepository;
+              when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-09"));
+
+              expect(
+                notTakenPillSheetGroup(isV2: isV2, restDurations: []).availableRestDurationBeginDate,
+                DateTime.parse("2026-11-09"),
+              );
+            });
+          });
+        }
+      });
+
+      group("全錠服用完了したピルシートの次の、服用記録の無いピルシートの場合", () {
+        /// 2026-10-01 開始で 10/28 まで全錠服用した 1 枚目と、10/29 開始で服用記録の無い、[restDurations] を持つ 2 枚目の pillsheet_28_0 のグループを返す
+        PillSheetGroup pillSheetGroup({required List<RestDuration> restDurations}) {
+          return PillSheetGroup(
+            pillSheetIDs: ["sheet_id1", "sheet_id2"],
+            pillSheets: [
+              PillSheet.v1(
+                id: "sheet_id1",
+                groupIndex: 0,
+                beginDate: DateTime.parse("2026-10-01"),
+                lastTakenDate: DateTime.parse("2026-10-28"),
+                createdAt: DateTime.parse("2026-10-01"),
+                typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+              ),
+              PillSheet.v1(
+                id: "sheet_id2",
+                groupIndex: 1,
+                beginDate: DateTime.parse("2026-10-29"),
+                lastTakenDate: null,
+                createdAt: DateTime.parse("2026-10-01"),
+                typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+                restDurations: restDurations,
+              ),
+            ],
+            createdAt: DateTime.parse("2026-10-01"),
+          );
+        }
+
+        test("1枚目の最終服用日より後に終了した服用お休みがあれば、今日ではなく服用お休みの終了日を返す", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-09"));
+
+          expect(
+            pillSheetGroup(
+              restDurations: [
+                RestDuration(
+                  id: "rest_duration_id",
+                  beginDate: DateTime.parse("2026-10-29"),
+                  endDate: DateTime.parse("2026-11-02"),
+                  createdDate: DateTime.parse("2026-10-29"),
+                ),
+              ],
+            ).availableRestDurationBeginDate,
+            DateTime.parse("2026-11-02"),
+          );
+        });
+
+        test("終了済みの服用お休みが無ければ、今日を返す", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2026-11-09"));
+
+          expect(pillSheetGroup(restDurations: []).availableRestDurationBeginDate, DateTime.parse("2026-11-09"));
+        });
+      });
     });
 
     group("3枚以上のピルシートがある場合", () {
