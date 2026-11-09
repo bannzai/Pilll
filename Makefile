@@ -1,9 +1,4 @@
 
-# Workarround for specify pub https://github.com/bannzai/Pilll/pull/23#discussion_r481963119
-.PHONY: prepare
-prepare:
-	cd ios; rm -rf ./Pods; pod install;
-
 # レシピ行は `@` で表示を抑える。make は実行前に $(VAR) を展開した行を標準出力に出すため、
 # `@` が無いと base64 の全文が端末と agent の会話ログに残る。
 .PHONY: secret
