@@ -208,7 +208,9 @@ class ChangeRestDuration {
     if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
-    return !restDuration.beginDate.isBefore(pillSheet.beginDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+    // ピルシートの追加はbeginDateに追加した時刻を含めて保存し、DateRangePickerが返す開始日は0時のため、開始日は日付同士で比べる
+    // 時刻込みで比べると、beginDateと同じ日に始まる服用お休みがどのピルシートにも当たらない https://github.com/bannzai/Pilll/issues/2142
+    return !restDuration.beginDate.date().isBefore(pillSheet.beginDate.date()) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
   /// 開始日の昇順に並べた服用お休み期間を返す。末尾が最新の期間であることを前提にする処理
