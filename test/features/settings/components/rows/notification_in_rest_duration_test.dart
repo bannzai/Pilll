@@ -18,8 +18,10 @@ import '../../../../helper/mock.mocks.dart';
 /// 通知の再登録が呼ばれた回数を記録する RegisterReminderLocalNotification
 class _FakeRegisterReminderLocalNotification extends Fake
     implements RegisterReminderLocalNotification {
+  /// 通知の再登録が呼ばれた回数。スイッチの切り替えで再登録が 1 回だけ行われることの検証に使う
   int callCount = 0;
 
+  /// 通知を登録せず、呼ばれた回数だけを数える
   @override
   Future<void> call() async {
     callCount += 1;
@@ -43,6 +45,8 @@ void main() {
   });
 
   group('#NotificationInRestDuration', () {
+    /// pillSheetType のピルシートと setting を渡した NotificationInRestDuration を返す。
+    /// 設定の保存と通知の再登録は、受け取った setSetting と registerReminderLocalNotification に差し替える
     Widget subject({
       required PillSheetType pillSheetType,
       required Setting setting,
@@ -73,6 +77,7 @@ void main() {
       );
     }
 
+    /// 各テストで isOnNotifyInNotTakenDuration だけを copyWith で変えて使う設定。他の値はこの行の表示に影響しない
     const setting = Setting(
       pillNumberForFromMenstruation: 0,
       durationMenstruation: 0,
