@@ -37,12 +37,15 @@ class AlarmKitSetting extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          Text(
-            L.alarmKitSettingTitle,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
+          // 言語によっては名前が長く、PremiumBadge と並ぶと行幅を超えるため折り返せるようにする
+          Flexible(
+            child: Text(
+              L.alarmKitSettingTitle,
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              ),
             ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
