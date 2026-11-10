@@ -59,6 +59,7 @@ void main() {
     Future<void> pumpLifetimeOfferPageBody(
       WidgetTester tester, {
       required User user,
+      required CustomerInfo customerInfo,
       bool isLifetimePurchased = false,
       bool hasLifetimeDiscountPackage = true,
       Map<String, Object> initialSharedPreferencesValues = const {},
@@ -77,6 +78,7 @@ void main() {
         ProviderScope(
           overrides: [
             sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+            customerInfoProviderOverride(customerInfo),
             // 本物のTickはTimer.periodicを作りpending timerでテストが失敗するためFakeに差し替える
             tickProvider.overrideWith(
                 () => FakeTick(fakeDateTime: DateTime(2026, 7, 3))),
@@ -128,11 +130,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
           copyVariant: LifetimeOfferCopyVariant.defaultVariant,
         );
 
@@ -145,11 +147,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
           copyVariant: LifetimeOfferCopyVariant.ownership,
         );
 
@@ -161,7 +163,8 @@ void main() {
     testWidgets('月額300円プランでは月額向け訴求と価格カードが表示される', (WidgetTester tester) async {
       await pumpLifetimeOfferPageBody(
         tester,
-        user: const User(isPremium: false),
+        user: const User(),
+        customerInfo: freeCustomerInfo,
         isMonthly300Offer: true,
       );
 
@@ -176,11 +179,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: premiumCustomerInfo,
         );
 
         expect(
@@ -194,11 +197,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
         );
 
         expect(
@@ -213,11 +216,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: premiumCustomerInfo,
           isLifetimePurchased: true,
         );
 
@@ -235,11 +238,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
         );
 
         expect(
@@ -253,11 +256,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
           hasLifetimeDiscountPackage: false,
         );
 
@@ -277,11 +280,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
         );
 
         expect(
@@ -295,11 +298,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
         );
 
         expect(
@@ -318,11 +321,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
           initialSharedPreferencesValues: {
             lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
                 DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),
@@ -340,11 +343,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: true,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: premiumCustomerInfo,
           isLifetimePurchased: true,
         );
 
@@ -358,11 +361,11 @@ void main() {
         await pumpLifetimeOfferPageBody(
           tester,
           user: const User(
-            isPremium: false,
             trialDeadlineDate: null,
             beginTrialDate: null,
             discountEntitlementDeadlineDate: null,
           ),
+          customerInfo: freeCustomerInfo,
         );
 
         expect(

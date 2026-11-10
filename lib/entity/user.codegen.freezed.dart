@@ -42,15 +42,13 @@ mixin _$User {
   /// 統合されたFirebaseCurrentUserIDのリスト
   List<String> get firebaseCurrentUserIDSets => throw _privateConstructorUsedError;
 
-  /// プレミアム会員フラグ（サブスクリプション有効状態）
-  bool get isPremium => throw _privateConstructorUsedError;
-
   /// 解約理由を聞くかどうかのフラグ
   bool get shouldAskCancelReason => throw _privateConstructorUsedError;
 
   /// アナリティクスのデバッグ機能有効フラグ
-  bool get analyticsDebugIsEnabled => throw _privateConstructorUsedError;
-
+  bool get analyticsDebugIsEnabled =>
+      throw _privateConstructorUsedError; // トライアルの権限の正は RevenueCat の Promotional Entitlement (lib/provider/customer_info.dart の CustomerInfoPremium)。
+// beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate は Promotional Entitlement で付与する前の版でトライアルを始めた既存ユーザーの値で、アプリは読むだけで書かない
   /// トライアル開始日（初回トライアル開始時にセット）
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
@@ -81,7 +79,6 @@ abstract class $UserCopyWith<$Res> {
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
       List<String> firebaseCurrentUserIDSets,
-      bool isPremium,
       bool shouldAskCancelReason,
       bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
@@ -111,7 +108,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
     Object? userDocumentIDSets = null,
     Object? anonymousUserIDSets = null,
     Object? firebaseCurrentUserIDSets = null,
-    Object? isPremium = null,
     Object? shouldAskCancelReason = null,
     Object? analyticsDebugIsEnabled = null,
     Object? beginTrialDate = freezed,
@@ -147,10 +143,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isPremium: null == isPremium
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
       shouldAskCancelReason: null == shouldAskCancelReason
           ? _value.shouldAskCancelReason
           : shouldAskCancelReason // ignore: cast_nullable_to_non_nullable
@@ -200,7 +192,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
       List<String> firebaseCurrentUserIDSets,
-      bool isPremium,
       bool shouldAskCancelReason,
       bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
@@ -226,7 +217,6 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
     Object? userDocumentIDSets = null,
     Object? anonymousUserIDSets = null,
     Object? firebaseCurrentUserIDSets = null,
-    Object? isPremium = null,
     Object? shouldAskCancelReason = null,
     Object? analyticsDebugIsEnabled = null,
     Object? beginTrialDate = freezed,
@@ -262,10 +252,6 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
           ? _value._firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      isPremium: null == isPremium
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
       shouldAskCancelReason: null == shouldAskCancelReason
           ? _value.shouldAskCancelReason
           : shouldAskCancelReason // ignore: cast_nullable_to_non_nullable
@@ -302,7 +288,6 @@ class _$UserImpl extends _User {
       final List<String> userDocumentIDSets = const [],
       final List<String> anonymousUserIDSets = const [],
       final List<String> firebaseCurrentUserIDSets = const [],
-      this.isPremium = false,
       this.shouldAskCancelReason = false,
       this.analyticsDebugIsEnabled = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beginTrialDate,
@@ -369,11 +354,6 @@ class _$UserImpl extends _User {
     return EqualUnmodifiableListView(_firebaseCurrentUserIDSets);
   }
 
-  /// プレミアム会員フラグ（サブスクリプション有効状態）
-  @override
-  @JsonKey()
-  final bool isPremium;
-
   /// 解約理由を聞くかどうかのフラグ
   @override
   @JsonKey()
@@ -383,7 +363,8 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   final bool analyticsDebugIsEnabled;
-
+// トライアルの権限の正は RevenueCat の Promotional Entitlement (lib/provider/customer_info.dart の CustomerInfoPremium)。
+// beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate は Promotional Entitlement で付与する前の版でトライアルを始めた既存ユーザーの値で、アプリは読むだけで書かない
   /// トライアル開始日（初回トライアル開始時にセット）
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -402,7 +383,7 @@ class _$UserImpl extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -417,7 +398,6 @@ class _$UserImpl extends _User {
             const DeepCollectionEquality().equals(other._userDocumentIDSets, _userDocumentIDSets) &&
             const DeepCollectionEquality().equals(other._anonymousUserIDSets, _anonymousUserIDSets) &&
             const DeepCollectionEquality().equals(other._firebaseCurrentUserIDSets, _firebaseCurrentUserIDSets) &&
-            (identical(other.isPremium, isPremium) || other.isPremium == isPremium) &&
             (identical(other.shouldAskCancelReason, shouldAskCancelReason) || other.shouldAskCancelReason == shouldAskCancelReason) &&
             (identical(other.analyticsDebugIsEnabled, analyticsDebugIsEnabled) || other.analyticsDebugIsEnabled == analyticsDebugIsEnabled) &&
             (identical(other.beginTrialDate, beginTrialDate) || other.beginTrialDate == beginTrialDate) &&
@@ -437,7 +417,6 @@ class _$UserImpl extends _User {
       const DeepCollectionEquality().hash(_userDocumentIDSets),
       const DeepCollectionEquality().hash(_anonymousUserIDSets),
       const DeepCollectionEquality().hash(_firebaseCurrentUserIDSets),
-      isPremium,
       shouldAskCancelReason,
       analyticsDebugIsEnabled,
       beginTrialDate,
@@ -466,7 +445,6 @@ abstract class _User extends User {
       final List<String> userDocumentIDSets,
       final List<String> anonymousUserIDSets,
       final List<String> firebaseCurrentUserIDSets,
-      final bool isPremium,
       final bool shouldAskCancelReason,
       final bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beginTrialDate,
@@ -508,18 +486,14 @@ abstract class _User extends User {
   List<String> get firebaseCurrentUserIDSets;
   @override
 
-  /// プレミアム会員フラグ（サブスクリプション有効状態）
-  bool get isPremium;
-  @override
-
   /// 解約理由を聞くかどうかのフラグ
   bool get shouldAskCancelReason;
   @override
 
   /// アナリティクスのデバッグ機能有効フラグ
   bool get analyticsDebugIsEnabled;
-  @override
-
+  @override // トライアルの権限の正は RevenueCat の Promotional Entitlement (lib/provider/customer_info.dart の CustomerInfoPremium)。
+// beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate は Promotional Entitlement で付与する前の版でトライアルを始めた既存ユーザーの値で、アプリは読むだけで書かない
   /// トライアル開始日（初回トライアル開始時にセット）
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate;

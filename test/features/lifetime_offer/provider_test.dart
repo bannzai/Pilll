@@ -4,14 +4,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/provider.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/provider/tick.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,8 +30,8 @@ void main() {
         FutureOr<bool> hasPurchasedAnyProduct = false}) async {
       final container = ProviderContainer(
         overrides: [
-          userProvider
-              .overrideWith((ref) => Stream.value(User(isPremium: isPremium))),
+          customerInfoProviderOverride(
+              isPremium ? premiumCustomerInfo : freeCustomerInfo),
           lifetimeOfferUsageDaysProvider.overrideWith((ref) => usageDays),
           monthlyDiscountPackageProvider.overrideWith(
               (ref) => hasMonthlyPackage ? FakeRevenueCatPackage() : null),
@@ -41,7 +40,7 @@ void main() {
         ],
       );
       addTearDown(container.dispose);
-      await container.read(userProvider.future);
+      await container.read(customerInfoProvider.future);
       await container.read(hasPurchasedAnyProductProvider.future);
       return container.read(isMonthly300OfferProvider)!;
     }
@@ -68,8 +67,7 @@ void main() {
     test('購入履歴の取得中はオファープランを確定しない', () async {
       final container = ProviderContainer(
         overrides: [
-          userProvider.overrideWith(
-              (ref) => Stream.value(const User(isPremium: false))),
+          customerInfoProviderOverride(freeCustomerInfo),
           lifetimeOfferUsageDaysProvider.overrideWith((ref) => 1095),
           monthlyDiscountPackageProvider
               .overrideWith((ref) => FakeRevenueCatPackage()),
@@ -78,7 +76,7 @@ void main() {
         ],
       );
       addTearDown(container.dispose);
-      await container.read(userProvider.future);
+      await container.read(customerInfoProvider.future);
 
       expect(container.read(isMonthly300OfferProvider), isNull);
     });

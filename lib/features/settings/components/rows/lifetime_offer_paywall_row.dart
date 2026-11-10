@@ -4,8 +4,10 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/lifetime_offer/lifetime_offer_copy_variant.dart';
 import 'package:pilll/features/lifetime_offer/page.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 /// 開発者オプション内の行。タップすると買い切りオファーPaywallを解約誘導文言あり/なしの2パターンで確認できる。
 class LifetimeOfferPaywallRow extends StatelessWidget {
@@ -50,15 +52,30 @@ class LifetimeOfferPaywallRow extends StatelessWidget {
             fullscreenDialog: true,
             builder: (_) => ProviderScope(
               overrides: [
-                // 解約誘導文言は user.isPremium && 買い切り未購入 のときのみ表示されるため、この2つを固定して両パターンを再現する。
+                // 解約誘導文言は customerInfo.isPremium && 買い切り未購入 のときのみ表示されるため、この2つを固定して両パターンを再現する。
                 // 価格等の他のProviderはoverrideせずroot側の実データを使う
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    User(
-                      isPremium: isActiveSubscriber,
+                    const User(
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                customerInfoProvider.overrideWith(
+                  () => FixedCustomerInfoNotifier(
+                    customerInfo: CustomerInfo(
+                      const EntitlementInfos({}, {}),
+                      const {},
+                      // 課金中のパターンは、Promotional Entitlement ではない商品の購読があれば CustomerInfoPremium.isPremium が true になる。商品 ID は表示に使わないため実在しない値でよい
+                      isActiveSubscriber ? const ['debug_premium_subscription'] : const [],
+                      const [],
+                      const [],
+                      '',
+                      '',
+                      const {},
+                      '',
                     ),
                   ),
                 ),

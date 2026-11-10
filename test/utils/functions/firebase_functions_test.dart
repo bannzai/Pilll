@@ -1,3 +1,4 @@
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/inquiry.codegen.dart';
@@ -51,6 +52,42 @@ void main() {
           'inquiry-id');
       expect(
           verify(httpsCallable.call(captureAny)).captured.single['test'], true);
+    });
+  });
+
+  group('#startPromotion', () {
+    test('サーバーがトライアルの期限 (promotionDeadlineDateMs) を返したら成功する', () async {
+      final firebaseFunctions = MockFirebaseFunctions();
+      final httpsCallable = MockHttpsCallable();
+      final httpsCallableResult = MockHttpsCallableResult();
+      when(firebaseFunctions.httpsCallable('startPromotion')).thenReturn(httpsCallable);
+      when(httpsCallable.call()).thenAnswer((_) async => httpsCallableResult);
+      when(httpsCallableResult.data).thenReturn(<dynamic, dynamic>{'promotionDeadlineDateMs': 1795103999999});
+
+      await firebaseFunctions.startPromotion();
+
+      verify(httpsCallable.call()).called(1);
+    });
+
+    test('サーバーが already-exists (既に付与済み) を返したら、トライアルを開始済みとして成功する', () async {
+      final firebaseFunctions = MockFirebaseFunctions();
+      final httpsCallable = MockHttpsCallable();
+      when(firebaseFunctions.httpsCallable('startPromotion')).thenReturn(httpsCallable);
+      when(httpsCallable.call()).thenThrow(FirebaseFunctionsException(code: 'already-exists', message: 'トライアルは既に開始されています'));
+
+      await firebaseFunctions.startPromotion();
+    });
+
+    test('サーバーが already-exists 以外のエラー (internal) を返したら、そのエラーを投げる', () async {
+      final firebaseFunctions = MockFirebaseFunctions();
+      final httpsCallable = MockHttpsCallable();
+      when(firebaseFunctions.httpsCallable('startPromotion')).thenReturn(httpsCallable);
+      when(httpsCallable.call()).thenThrow(FirebaseFunctionsException(code: 'internal', message: 'INTERNAL'));
+
+      await expectLater(
+        firebaseFunctions.startPromotion(),
+        throwsA(isA<FirebaseFunctionsException>().having((error) => error.code, 'code', 'internal')),
+      );
     });
   });
 

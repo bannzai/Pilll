@@ -12,7 +12,6 @@ import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_gr
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/l10n/app_localizations.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/page.dart';
 import 'package:pilll/features/initial_setting/yaz_flex/page.dart';
@@ -84,12 +83,11 @@ void main() {
               overrides: [
                 initialSettingStateNotifierProvider.overrideWith(
                   (ref) => InitialSettingStateNotifier(
-                    MockEndInitialSetting(),
+                    MockStartPromotion(),
                     MockBatchFactory(),
                     MockBatchSetSetting(),
                     MockBatchSetPillSheetModifiedHistory(),
                     MockBatchSetPillSheetGroup(),
-                    RemoteConfigParameter(),
                     MockRegisterReminderLocalNotificationRunner(),
                     DateTime.parse("2022-03-02"),
                   ),
@@ -148,12 +146,11 @@ void main() {
           overrides: [
             initialSettingStateNotifierProvider.overrideWith(
               (ref) => InitialSettingStateNotifier(
-                MockEndInitialSetting(),
+                MockStartPromotion(),
                 MockBatchFactory(),
                 MockBatchSetSetting(),
                 MockBatchSetPillSheetModifiedHistory(),
                 MockBatchSetPillSheetGroup(),
-                RemoteConfigParameter(),
                 MockRegisterReminderLocalNotificationRunner(),
                 DateTime.parse("2022-03-02"),
               ),

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
@@ -5,6 +6,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
+import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/user.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -15,6 +23,7 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 
+import '../helper/fake.dart';
 import '../helper/mock.mocks.dart';
 
 void main() {
@@ -584,4 +593,79 @@ void main() {
       });
     });
   });
+
+  group("#RegisterReminderLocalNotification.call", () {
+    test("CustomerInfo が前の値も持たない時は、登録済みのリマインダーを取り消さない", () async {
+      final mockLocalNotificationService = MockLocalNotificationService();
+      localNotificationService = mockLocalNotificationService;
+      final container = ProviderContainer(overrides: [customerInfoProvider.overrideWith(_FailingCustomerInfoNotifier.new)]);
+      addTearDown(container.dispose);
+
+      await container.read(registerReminderLocalNotificationProvider)();
+
+      verifyNever(mockLocalNotificationService.pendingReminderNotifications());
+    });
+
+    test("CustomerInfo の取得し直しに失敗しても前の値を持つ時は、登録済みのリマインダーを取り消してから登録し直す", () async {
+      final mockLocalNotificationService = MockLocalNotificationService();
+      when(mockLocalNotificationService.pendingReminderNotifications()).thenAnswer((_) async => []);
+      localNotificationService = mockLocalNotificationService;
+      final container = ProviderContainer(
+        overrides: [
+          customerInfoProvider.overrideWith(() => _FailedRefetchCustomerInfoNotifier(previousCustomerInfo: freeCustomerInfo)),
+          latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(null)),
+          settingProvider.overrideWith((ref) => const Stream.empty()),
+          userProvider.overrideWith((ref) => Stream.value(const User())),
+        ],
+      );
+      addTearDown(container.dispose);
+      (container.read(customerInfoProvider.notifier) as _FailedRefetchCustomerInfoNotifier).failRefetch();
+      expect(container.read(customerInfoProvider).hasError, isTrue);
+
+      await container.read(registerReminderLocalNotificationProvider)();
+
+      verify(mockLocalNotificationService.pendingReminderNotifications()).called(1);
+    });
+
+    test("CustomerInfo を持つ時は、登録済みのリマインダーを取り消してから登録し直す", () async {
+      final mockLocalNotificationService = MockLocalNotificationService();
+      when(mockLocalNotificationService.pendingReminderNotifications()).thenAnswer((_) async => []);
+      localNotificationService = mockLocalNotificationService;
+      final container = ProviderContainer(
+        overrides: [
+          customerInfoProviderOverride(freeCustomerInfo),
+          latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(null)),
+          settingProvider.overrideWith((ref) => const Stream.empty()),
+          userProvider.overrideWith((ref) => Stream.value(const User())),
+        ],
+      );
+      addTearDown(container.dispose);
+
+      await container.read(registerReminderLocalNotificationProvider)();
+
+      verify(mockLocalNotificationService.pendingReminderNotifications()).called(1);
+    });
+  });
+}
+
+/// CustomerInfo の取得に失敗し、前の値も持たない CustomerInfoNotifier
+class _FailingCustomerInfoNotifier extends CustomerInfoNotifier {
+  @override
+  FutureOr<CustomerInfo> build() => throw Exception("RevenueCat に届かない");
+}
+
+/// [previousCustomerInfo] を持った後に取得し直しに失敗する (前の値を持つ AsyncError になる) CustomerInfoNotifier
+class _FailedRefetchCustomerInfoNotifier extends CustomerInfoNotifier {
+  _FailedRefetchCustomerInfoNotifier({required this.previousCustomerInfo});
+
+  /// 取得し直しに失敗する前に持っていた CustomerInfo
+  final CustomerInfo previousCustomerInfo;
+
+  @override
+  FutureOr<CustomerInfo> build() => previousCustomerInfo;
+
+  /// 取得し直しに失敗した状態にする
+  void failRefetch() {
+    state = AsyncError<CustomerInfo>(Exception("RevenueCat に届かない"), StackTrace.current).copyWithPrevious(state);
+  }
 }
