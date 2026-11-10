@@ -42,7 +42,6 @@ apply_variant.sh NAME
 - `ios/Flutter/Secret.xcconfig`（`ios/Flutter/Debug.xcconfig` が `#include`。bundle id 等を定義）
 - `ios/Runner/GoogleService-Info.plist`（Firebase）
 - `environment/dev.json`（`--dart-define-from-file`）
-- `ios/Pods`（worktree では `flutter-pod-warmup`。※このリポジトリでは `flutter build ... --config-only` で pod install 完走を確認済み）
 
 ```sh
 bash scripts/generate_screenshots/capture_screenshots.sh -l ja            # ja だけ

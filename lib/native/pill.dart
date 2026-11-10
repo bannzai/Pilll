@@ -1,4 +1,4 @@
-import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/database.dart';
@@ -51,7 +51,7 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   );
 
   // NOTE: iOSではAppDelegate.swiftの方で先にバッジのカウントはクリアしている
-  FlutterAppBadger.removeBadge();
+  AppBadgePlus.updateBadge(0);
 
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: 'quick_recorded');
