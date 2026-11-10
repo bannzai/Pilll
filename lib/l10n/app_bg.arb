@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Периодът на спиране на приема започна",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Редактиране на началната дата на спиране на приема",
+  "startWeekOnMonday": "Седмицата да започва в понеделник",
   "shareWithFriends": "Споделете с приятели",
   "termsOfService": "Условия за ползване",
   "privacyPolicy": "Политика за поверителност",

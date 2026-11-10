@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Pilluhlé er hafið",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Breyta upphafsdegi pilluhlés",
+  "startWeekOnMonday": "Láta vikuna byrja á mánudegi",
   "shareWithFriends": "Deila með vinum",
   "termsOfService": "Notkunarskilmálar",
   "privacyPolicy": "Persónuverndarstefna",

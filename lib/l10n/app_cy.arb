@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Mae'r cyfnod oedi wedi dechrau",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Golygu dyddiad dechrau'r oedi",
+  "startWeekOnMonday": "Dechrau'r wythnos ar ddydd Llun",
   "shareWithFriends": "Rhannu â ffrindiau",
   "termsOfService": "Telerau defnyddio",
   "privacyPolicy": "Polisi preifatrwydd",

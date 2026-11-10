@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Začel se je prekin jemanja tablet",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uredite začetni datum za prekin jemanja tablet",
+  "startWeekOnMonday": "Začnite teden v ponedeljek",
   "shareWithFriends": "Priporočite prijateljem",
   "termsOfService": "Pogoji uporabe",
   "privacyPolicy": "Pravilnik o zasebnosti",

@@ -414,6 +414,7 @@
   "pauseTakingStarted": "បានចាប់ផ្តើមផ្អាកការលេបថ្នាំហើយ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "កែប្រែកាលបរិច្ឆេទចាប់ផ្តើមផ្អាកការលេបថ្នាំ",
+  "startWeekOnMonday": "ចាប់ផ្តើមសប្តាហ៍នៅថ្ងៃចន្ទ",
   "shareWithFriends": "ចែករំលែកជាមួយមិត្តភក្តិ",
   "termsOfService": "លក្ខខណ្ឌប្រើប្រាស់",
   "privacyPolicy": "គោលការណ៍ឯកជនភាព",

@@ -414,6 +414,7 @@
   "pauseTakingStarted": "A început întreruperea administrării pilulei",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editează data de început a întreruperii",
+  "startWeekOnMonday": "Începe săptămâna luni",
   "shareWithFriends": "Recomandă prietenilor",
   "termsOfService": "Termeni de utilizare",
   "privacyPolicy": "Politica de confidențialitate",

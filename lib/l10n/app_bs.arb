@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Započeo je prekid uzimanja pilula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Uređivanje datuma početka prekida",
+  "startWeekOnMonday": "Neka sedmica počinje ponedjeljkom",
   "shareWithFriends": "Preporučite prijateljima",
   "termsOfService": "Uslovi korištenja",
   "privacyPolicy": "Politika privatnosti",

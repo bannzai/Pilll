@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Эм уух түр завсарлага эхэлсэн",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Эм уух түр завсарлагын эхлэх өдрийг засах",
+  "startWeekOnMonday": "Долоо хоногийг даваа гарагт эхлүүлэх",
   "shareWithFriends": "Найзууддаа санал болгох",
   "termsOfService": "Үйлчилгээний нөхцөл",
   "privacyPolicy": "Нууцлалын бодлого",

@@ -414,6 +414,7 @@
   "pauseTakingStarted": "ഗുളിക കഴിക്കുന്നത് താൽക്കാലികമായി നിർത്തൽ ആരംഭിച്ചു",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "താൽക്കാലികമായി നിർത്തുന്ന ആരംഭ തീയതി തിരുത്തുക",
+  "startWeekOnMonday": "ആഴ്ച തിങ്കളാഴ്ച മുതൽ തുടങ്ങുക",
   "shareWithFriends": "സുഹൃത്തുക്കളോട് പറയൂ",
   "termsOfService": "ഉപയോഗ നിബന്ധനകൾ",
   "privacyPolicy": "സ്വകാര്യതാ നയം",

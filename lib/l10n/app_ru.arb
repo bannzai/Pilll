@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Началась приостановка приёма таблеток",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Изменить дату начала приостановки",
+  "startWeekOnMonday": "Начинать неделю с понедельника",
   "shareWithFriends": "Поделиться с друзьями",
   "termsOfService": "Условия использования",
   "privacyPolicy": "Политика конфиденциальности",

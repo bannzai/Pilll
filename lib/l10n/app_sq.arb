@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Ka filluar pauza e marrjes së pilulës",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ndryshoni datën e fillimit të pauzës",
+  "startWeekOnMonday": "Fillojeni javën të hënën",
   "shareWithFriends": "Ndajeni me miqtë",
   "termsOfService": "Kushtet e përdorimit",
   "privacyPolicy": "Politika e privatësisë",

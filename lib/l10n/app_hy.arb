@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Ընդունման դադարն սկսվել է",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Խմբագրել «ընդունման դադար» գործառույթի մեկնարկի ամսաթիվը",
+  "startWeekOnMonday": "Շաբաթը սկսել երկուշաբթիից",
   "shareWithFriends": "Կիսվեք ընկերների հետ",
   "termsOfService": "Օգտագործման պայմաններ",
   "privacyPolicy": "Գաղտնիության քաղաքականություն",

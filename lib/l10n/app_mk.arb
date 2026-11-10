@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Започнат е прекин на земање таблети",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Уредување на датумот на почеток на прекин на земање таблети",
+  "startWeekOnMonday": "Неделата да започнува во понеделник",
   "shareWithFriends": "Препорачајте им на пријателите",
   "termsOfService": "Услови за користење",
   "privacyPolicy": "Политика за приватност",

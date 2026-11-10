@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Začalo pozastavení užívání",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upravit datum začátku pozastavení užívání",
+  "startWeekOnMonday": "Začínat týden pondělím",
   "shareWithFriends": "Doporučit přátelům",
   "termsOfService": "Podmínky používání",
   "privacyPolicy": "Zásady ochrany osobních údajů",

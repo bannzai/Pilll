@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Tabletka ichishda pauza boshlandi",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Tabletka ichishdagi pauza boshlanish sanasini tahrirlang",
+  "startWeekOnMonday": "Haftani dushanbadan boshlang",
   "shareWithFriends": "Doʻstlaringizga tavsiya qiling",
   "termsOfService": "Foydalanish shartlari",
   "privacyPolicy": "Maxfiylik siyosati",

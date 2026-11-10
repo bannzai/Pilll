@@ -414,6 +414,7 @@
   "pauseTakingStarted": "ସେବନ ବିରତି ଆରମ୍ଭ ହୋଇଛି",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ସେବନ ବିରତି ଆରମ୍ଭ ତାରିଖ ବଦଳାନ୍ତୁ",
+  "startWeekOnMonday": "ସୋମବାରରୁ ସପ୍ତାହ ଆରମ୍ଭ କରନ୍ତୁ",
   "shareWithFriends": "ବନ୍ଧୁମାନଙ୍କୁ ଜଣାନ୍ତୁ",
   "termsOfService": "ବ୍ୟବହାରର ସର୍ତ୍ତାବଳୀ",
   "privacyPolicy": "ଗୋପନୀୟତା ନୀତି",

@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Jou innameonderbreking het begin",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Wysig die begindatum van innameonderbreking",
+  "startWeekOnMonday": "Laat die week op Maandag begin",
   "shareWithFriends": "Vertel jou vriende",
   "termsOfService": "Gebruiksvoorwaardes",
   "privacyPolicy": "Privaatheidsbeleid",

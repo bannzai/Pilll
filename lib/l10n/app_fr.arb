@@ -414,6 +414,7 @@
   "pauseTakingStarted": "La pause de prise a commencé",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Modifier la date de début de la pause de prise",
+  "startWeekOnMonday": "Commencer la semaine le lundi",
   "shareWithFriends": "Partager avec vos amis",
   "termsOfService": "Conditions d’utilisation",
   "privacyPolicy": "Politique de confidentialité",

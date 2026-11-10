@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Elkezdődött a szüneteltetés",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "A szüneteltetés kezdőnapjának szerkesztése",
+  "startWeekOnMonday": "A hét hétfőn kezdődjön",
   "shareWithFriends": "Ajánld barátaidnak",
   "termsOfService": "Felhasználási feltételek",
   "privacyPolicy": "Adatvédelmi szabályzat",

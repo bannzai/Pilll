@@ -414,6 +414,7 @@
   "pauseTakingStarted": "ለጊዜው ማቆም ተጀምሯል",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ለጊዜው ማቆም የሚጀምርበትን ቀን ያርትዑ",
+  "startWeekOnMonday": "ሳምንቱ ከሰኞ ይጀምር",
   "shareWithFriends": "ለጓደኞችዎ ያሳውቁ",
   "termsOfService": "የአገልግሎት ውል",
   "privacyPolicy": "የግላዊነት ፖሊሲ",

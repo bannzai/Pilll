@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Hap alımına ara verme başladı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ara verme başlangıç tarihini düzenleyin",
+  "startWeekOnMonday": "Haftayı pazartesi başlatın",
   "shareWithFriends": "Arkadaşlarınızla paylaşın",
   "termsOfService": "Kullanım koşulları",
   "privacyPolicy": "Gizlilik politikası",

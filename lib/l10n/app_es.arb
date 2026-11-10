@@ -414,6 +414,7 @@
   "pauseTakingStarted": "La pausa ha comenzado",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar fecha de inicio de la pausa",
+  "startWeekOnMonday": "Empezar la semana el lunes",
   "shareWithFriends": "Recomendar Pilll a tus amistades",
   "termsOfService": "Condiciones de uso",
   "privacyPolicy": "Política de privacidad",

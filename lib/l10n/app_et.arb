@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Pilli võtmise paus on alanud",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Muuda võtmise pausi alguskuupäeva",
+  "startWeekOnMonday": "Alusta nädalat esmaspäevast",
   "shareWithFriends": "Jaga sõpradega",
   "termsOfService": "Kasutustingimused",
   "privacyPolicy": "Privaatsuspoliitika",

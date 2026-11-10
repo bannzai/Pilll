@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Həb qəbuluna fasilə başladı",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Həb qəbuluna fasilə başlanğıc tarixini redaktə edin",
+  "startWeekOnMonday": "Həftəni bazar ertəsindən başlayın",
   "shareWithFriends": "Dostlarınıza tövsiyə edin",
   "termsOfService": "İstifadə şərtləri",
   "privacyPolicy": "Məxfilik siyasəti",

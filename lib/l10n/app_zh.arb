@@ -414,6 +414,7 @@
   "pauseTakingStarted": "已开始暂停服药",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "编辑暂停服药开始日期",
+  "startWeekOnMonday": "周一为一周的开始",
   "shareWithFriends": "推荐给朋友",
   "termsOfService": "使用条款",
   "privacyPolicy": "隐私政策",

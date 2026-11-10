@@ -414,6 +414,7 @@
   "pauseTakingStarted": "La pausa ha començat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edita la data d’inici de la pausa",
+  "startWeekOnMonday": "Comença la setmana en dilluns",
   "shareWithFriends": "Comparteix-ho amb els amics",
   "termsOfService": "Condicions d’ús",
   "privacyPolicy": "Política de privacitat",

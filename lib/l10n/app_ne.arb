@@ -414,6 +414,7 @@
   "pauseTakingStarted": "सेवन विराम सुरु भएको छ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "सेवन विराम सुरु हुने मिति सम्पादन गर्नुहोस्",
+  "startWeekOnMonday": "हप्ताको सुरुवात सोमबारबाट गर्नुहोस्",
   "shareWithFriends": "साथीहरूलाई भन्नुहोस्",
   "termsOfService": "प्रयोगका सर्तहरू",
   "privacyPolicy": "गोपनीयता नीति",

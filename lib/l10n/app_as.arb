@@ -414,6 +414,7 @@
   "pauseTakingStarted": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ হৈছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "বড়ি খোৱা সাময়িকভাৱে বন্ধ আৰম্ভ কৰাৰ তাৰিখ সম্পাদনা কৰক",
+  "startWeekOnMonday": "সোমবাৰৰ পৰা সপ্তাহ আৰম্ভ কৰক",
   "shareWithFriends": "বন্ধুসকলক জনাওক",
   "termsOfService": "সেৱাৰ চৰ্তাৱলী",
   "privacyPolicy": "গোপনীয়তা নীতি",

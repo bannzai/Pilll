@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Rozpoczęło się wstrzymanie przyjmowania tabletek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edytuj datę rozpoczęcia wstrzymania",
+  "startWeekOnMonday": "Rozpoczynaj tydzień w poniedziałek",
   "shareWithFriends": "Poleć znajomym",
   "termsOfService": "Warunki korzystania",
   "privacyPolicy": "Polityka prywatności",

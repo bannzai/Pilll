@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Đã bắt đầu tạm ngừng uống thuốc",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Chỉnh sửa ngày bắt đầu tạm ngừng uống thuốc",
+  "startWeekOnMonday": "Bắt đầu tuần vào thứ Hai",
   "shareWithFriends": "Giới thiệu cho bạn bè",
   "termsOfService": "Điều khoản sử dụng",
   "privacyPolicy": "Chính sách quyền riêng tư",

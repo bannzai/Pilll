@@ -414,6 +414,7 @@
   "pauseTakingStarted": "Du har startet en inntakspause",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediger startdato for inntakspause",
+  "startWeekOnMonday": "Start uken på mandag",
   "shareWithFriends": "Del med venner",
   "termsOfService": "Bruksvilkår",
   "privacyPolicy": "Personvernerklæring",
