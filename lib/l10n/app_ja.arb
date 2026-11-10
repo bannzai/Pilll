@@ -1430,6 +1430,18 @@
       }
     }
   },
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord}期間の通知を{value}にしました",
+  "@notificationForNotTakenPeriodChanged": {
+    "description": "設定画面で、休薬期間やプラセボ期間など薬を服用しない期間の通知のスイッチを切り替えた直後に、画面下部のスナックバーで表示される確認メッセージです。{pillSheetPillSheetTypeNotTakenWord}には「休薬」「プラセボ」などの期間名が入ります。{value}には英字の「ON」または「OFF」がそのまま入り、翻訳されません。",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
   "requestForCancelSurvey": "解約後のアンケートご協力のお願い",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"

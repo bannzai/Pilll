@@ -29,7 +29,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
 
     return SwitchListTile(
       title: Text(
-        '${pillSheet.pillSheetType.notTakenWord}期間の通知',
+        L.notificationForNotTakenPeriod(pillSheet.pillSheetType.notTakenWord),
         style: const TextStyle(
           fontFamily: FontFamily.roboto,
           fontWeight: FontWeight.w300,
@@ -57,7 +57,10 @@ class NotificationInRestDuration extends HookConsumerWidget {
           SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(
-              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
+              L.notificationForNotTakenPeriodChanged(
+                pillSheet.pillSheetType.notTakenWord,
+                value ? 'ON' : 'OFF',
+              ),
             ),
           ),
         );
