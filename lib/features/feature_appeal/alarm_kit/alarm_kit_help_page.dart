@@ -16,7 +16,6 @@ import 'package:pilll/utils/analytics.dart';
 
 /// AlarmKit (Premium機能: iOS 26+ で目覚ましアラームとして通知) の説明と「実際に試す」導線を持つヘルプページ。
 /// 「実際に試す」では設定タブへ案内する。iOS 26 未満 / Android では設定行が消えているが、訴求自体は行う。
-/// プレビューは設定行の文言がハードコード日本語のため、ここでも同一文言をハードコードで再現する。
 class AlarmKitHelpPage extends ConsumerWidget {
   const AlarmKitHelpPage({super.key});
 
@@ -85,34 +84,34 @@ class AlarmKitHelpPage extends ConsumerWidget {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: AppColors.primary, width: 1.5),
               ),
-              child: const IgnorePointer(
-                // 設定行 (lib/features/settings/components/rows/alarm_kit.dart) 側が L10n 未整備のハードコード日本語のため、ここでも一貫性を保つために同一文言をハードコードで再現する。L10n 化は後続タスク。
+              child: IgnorePointer(
+                // 設定行 (lib/features/settings/components/rows/alarm_kit.dart) と同じキーで同じ文言を表示する
                 child: ListTile(
                   title: Row(
                     children: [
                       Flexible(
                         child: Text(
-                          'アラーム機能',
-                          style: TextStyle(
+                          L.alarmKitSettingTitle,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 16,
                           ),
                         ),
                       ),
-                      SizedBox(width: 8),
-                      PremiumBadge(),
+                      const SizedBox(width: 8),
+                      const PremiumBadge(),
                     ],
                   ),
                   subtitle: Text(
-                    '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
-                    style: TextStyle(
+                    L.alarmKitSettingDescription,
+                    style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
                     ),
                   ),
-                  trailing: Switch(value: false, onChanged: null),
+                  trailing: const Switch(value: false, onChanged: null),
                 ),
               ),
             ),
