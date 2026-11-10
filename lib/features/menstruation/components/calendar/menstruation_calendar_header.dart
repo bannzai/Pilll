@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -19,7 +20,7 @@ import 'package:pilll/entity/weekday.dart';
 
 const double _horizontalPadding = 10;
 
-class MenstruationCalendarHeader extends ConsumerWidget {
+class MenstruationCalendarHeader extends HookConsumerWidget {
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
@@ -40,8 +41,9 @@ class MenstruationCalendarHeader extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final firstWeekday = ref.watch(firstWeekdayProvider);
-    // itemBuilder がページごとに呼ばれるため、週ごとの日付の生成は build ごとに 1 回にする
-    final weekCalendarDataSource = menstruationWeekCalendarDataSource(firstWeekday: firstWeekday);
+    // pageController のページ位置は作った時点の今日で決まるため、週ごとの日付も同じ時点で固定する。
+    // build のたびに作り直すと、アプリを開いたまま日付が週の境目をまたいだ時にページ位置と週がずれる
+    final weekCalendarDataSource = useMemoized(() => menstruationWeekCalendarDataSource(firstWeekday: firstWeekday), [firstWeekday]);
     return ShadowContainer(
       child: Container(
         padding: const EdgeInsets.only(
@@ -54,7 +56,8 @@ class MenstruationCalendarHeader extends ConsumerWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
+              children:
+                  WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
             ),
             LimitedBox(
               maxHeight: MenstruationPageConst.tileHeight,

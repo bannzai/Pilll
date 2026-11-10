@@ -113,7 +113,9 @@ class MenstruationPageBody extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final firstWeekday = ref.watch(firstWeekdayProvider);
-    final page = useState(todayCalendarPageIndex(firstWeekday: firstWeekday));
+    // 今日を含む週のページ位置は、MenstruationCalendarHeader の週ごとの日付と同じく作った時点の今日で固定する
+    final todayPageIndex = useMemoized(() => todayCalendarPageIndex(firstWeekday: firstWeekday), [firstWeekday]);
+    final page = useState(todayPageIndex);
     final pageController = usePageController(initialPage: page.value);
     pageController.addListener(() {
       final pageControllerPage = pageController.page;
@@ -133,7 +135,7 @@ class MenstruationPageBody extends HookConsumerWidget {
             child: Text(
               DateTimeFormatter.abbreviatedMonth(
                 endDayOfWeekday(
-                  today().addDays((page.value - todayCalendarPageIndex(firstWeekday: firstWeekday)) * Weekday.values.length),
+                  today().addDays((page.value - todayPageIndex) * Weekday.values.length),
                   firstWeekday: firstWeekday,
                 ),
               ),

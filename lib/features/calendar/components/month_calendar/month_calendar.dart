@@ -67,7 +67,8 @@ class MonthCalendar extends HookConsumerWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
+              children:
+                  WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
             ),
             const Divider(height: 1),
             ...List.generate(CalendarConstants.maxLineCount, (offset) {
