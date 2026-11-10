@@ -48,15 +48,15 @@ class CalendarWeekLine extends HookConsumerWidget {
         return Stack(
           children: [
             Row(
-              children: Weekday.values.map((weekday) {
-                final date = _buildDate(weekday);
+              children: List.generate(Weekday.values.length, (column) {
+                final date = dateRange.begin.addDays(column);
                 final isOutOfBoundsInLine = !dateRange.inRange(date);
                 if (isOutOfBoundsInLine) {
                   return Expanded(child: Container());
                 }
 
-                return day(context, weekday, date);
-              }).toList(),
+                return day(context, WeekdayFunctions.weekdayFromDate(date), date);
+              }),
             ),
             ...calendarMenstruationBandModels.where(_contains).map(
                   (e) => _buildBand(
@@ -141,10 +141,6 @@ class CalendarWeekLine extends HookConsumerWidget {
       bottom: bottomOffset,
       child: bandBuilder(isLineBreak, tileWidth * length),
     );
-  }
-
-  DateTime _buildDate(Weekday weekday) {
-    return dateRange.begin.addDays(weekday.index);
   }
 }
 

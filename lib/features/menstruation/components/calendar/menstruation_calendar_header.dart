@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -17,7 +19,7 @@ import 'package:pilll/entity/weekday.dart';
 
 const double _horizontalPadding = 10;
 
-class MenstruationCalendarHeader extends StatelessWidget {
+class MenstruationCalendarHeader extends ConsumerWidget {
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
@@ -36,7 +38,10 @@ class MenstruationCalendarHeader extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final firstWeekday = ref.watch(firstWeekdayProvider);
+    // itemBuilder がページごとに呼ばれるため、週ごとの日付の生成は build ごとに 1 回にする
+    final weekCalendarDataSource = menstruationWeekCalendarDataSource(firstWeekday: firstWeekday);
     return ShadowContainer(
       child: Container(
         padding: const EdgeInsets.only(
@@ -47,7 +52,10 @@ class MenstruationCalendarHeader extends StatelessWidget {
         height: MenstruationPageConst.calendarHeaderHeight,
         child: Column(
           children: [
-            _WeekdayLine(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
+            ),
             LimitedBox(
               maxHeight: MenstruationPageConst.tileHeight,
               child: PageView.builder(
@@ -55,7 +63,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                 physics: const PageScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  final days = menstruationWeekCalendarDataSource[index];
+                  final days = weekCalendarDataSource[index];
                   return SizedBox(
                     width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
                     height: MenstruationPageConst.tileHeight,
@@ -94,19 +102,6 @@ class MenstruationCalendarHeader extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class _WeekdayLine extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: List.generate(
-        Weekday.values.length,
-        (index) => Expanded(child: WeekdayBadge(weekday: Weekday.values[index])),
       ),
     );
   }

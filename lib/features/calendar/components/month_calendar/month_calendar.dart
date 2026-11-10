@@ -11,6 +11,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/provider/schedule.dart';
 
 class MonthCalendar extends HookConsumerWidget {
@@ -56,18 +57,17 @@ class MonthCalendar extends HookConsumerWidget {
       data: (data) {
         final diaries = data.$1;
         final schedules = data.$2;
-        final weeks = _weeks;
+        final firstWeekday = ref.watch(firstWeekdayProvider);
+        final weeks = List.generate(
+          WeekCalendarDateRangeCalculator(dateForMonth, firstWeekday: firstWeekday).weeklineCount(),
+          (index) => WeekCalendarDateRangeCalculator(dateForMonth, firstWeekday: firstWeekday).dateRangeOfLine(index + 1),
+        );
 
         return Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: List.generate(
-                Weekday.values.length,
-                (index) => Expanded(
-                  child: WeekdayBadge(weekday: Weekday.values[index]),
-                ),
-              ),
+              children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday).map((weekday) => Expanded(child: WeekdayBadge(weekday: weekday))).toList(),
             ),
             const Divider(height: 1),
             ...List.generate(CalendarConstants.maxLineCount, (offset) {
@@ -95,10 +95,4 @@ class MonthCalendar extends HookConsumerWidget {
       loading: () => const Indicator(),
     );
   }
-
-  WeekCalendarDateRangeCalculator get _calculator => WeekCalendarDateRangeCalculator(dateForMonth);
-  List<DateRange> get _weeks => List.generate(
-        _calculator.weeklineCount(),
-        (index) => index + 1,
-      ).map((line) => _calculator.dateRangeOfLine(line)).toList();
 }

@@ -9,7 +9,10 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/provider/schedule.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -53,6 +56,7 @@ void main() {
             schedulesForMonthProvider.overrideWith(
               (ref, arg) => Stream.value([]),
             ),
+            firstWeekdayProvider.overrideWithValue(Weekday.Sunday),
           ],
           child: MaterialApp(
             home: MonthCalendar(
@@ -114,6 +118,7 @@ void main() {
             schedulesForMonthProvider.overrideWith(
               (ref, arg) => Stream.value([]),
             ),
+            firstWeekdayProvider.overrideWithValue(Weekday.Sunday),
           ],
           child: MaterialApp(
             home: MonthCalendar(
@@ -162,6 +167,7 @@ void main() {
             schedulesForMonthProvider.overrideWith(
               (ref, arg) => Stream.value([]),
             ),
+            firstWeekdayProvider.overrideWithValue(Weekday.Sunday),
           ],
           child: MaterialApp(
             home: MonthCalendar(
@@ -200,6 +206,7 @@ void main() {
             schedulesForMonthProvider.overrideWith(
               (ref, arg) => Stream.value([]),
             ),
+            firstWeekdayProvider.overrideWithValue(Weekday.Sunday),
           ],
           child: MaterialApp(
             home: MonthCalendar(
@@ -221,5 +228,51 @@ void main() {
       expect(find.text(L.newPillSheetStart), isNot(findsWidgets));
       expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
+  });
+
+  group("WeekdayBadge", () {
+    for (final firstWeekday in [Weekday.Sunday, Weekday.Monday]) {
+      testWidgets('週の始まりが $firstWeekday の時、曜日の行が $firstWeekday から並び、各列の日付の曜日が見出しの曜日と一致する', (WidgetTester tester) async {
+        final dayTileWeekdays = <DateTime, Weekday>{};
+
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+              schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+              firstWeekdayProvider.overrideWithValue(firstWeekday),
+            ],
+            child: MaterialApp(
+              home: MonthCalendar(
+                dateForMonth: DateTime(2020, 09, 14),
+                weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+                  return CalendarWeekLine(
+                    dateRange: weekDateRange,
+                    calendarMenstruationBandModels: const [],
+                    calendarScheduledMenstruationBandModels: const [],
+                    calendarNextPillSheetBandModels: const [],
+                    day: (context, weekday, date) {
+                      dayTileWeekdays[date] = weekday;
+                      return Expanded(child: Container());
+                    },
+                  );
+                },
+              ),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          tester.widgetList<WeekdayBadge>(find.byType(WeekdayBadge)).map((weekdayBadge) => weekdayBadge.weekday).toList(),
+          WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday),
+        );
+        // 2020-09 の全ての日 (30 日) と 1 行目の前月の日が、実際の曜日で描画される
+        expect(dayTileWeekdays.keys.where((date) => date.month == 9).length, 30);
+        expect(dayTileWeekdays.entries.every((entry) => entry.value == WeekdayFunctions.weekdayFromDate(entry.key)), isTrue);
+        expect(dayTileWeekdays[DateTime(2020, 9, 13)], Weekday.Sunday);
+        expect(dayTileWeekdays[DateTime(2020, 9, 14)], Weekday.Monday);
+      });
+    }
   });
 }
