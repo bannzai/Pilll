@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "С помощью AlarmKit, доступного в iOS 26 и новее, Pilll напомнит о приёме таблетки будильником, который звучит даже в беззвучном режиме или в режиме фокусирования.",
   "alarmKitSettingTitle": "Функция будильника",
   "alarmKitSettingDescription": "Уведомление прозвучит как будильник. Вы получите его даже в беззвучном режиме или режиме фокусирования.",
+  "alarmKitPermissionRequired": "Для функции будильника требуется разрешение. Вы можете предоставить его в настройках устройства.",
   "todayPillNumberFeatureAppealTitle": "Настройте номер таблетки на сегодня",
   "todayPillNumberFeatureAppealShortDescription": "Если номер таблетки не совпадает, вы можете исправить его в настройках",
   "todayPillNumberFeatureAppealHeadline": "Вы можете изменить номер таблетки на сегодня",

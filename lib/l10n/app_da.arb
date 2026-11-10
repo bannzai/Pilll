@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Med AlarmKit, som er tilgængeligt fra iOS 26, minder en alarm, der også lyder i lydløs tilstand eller Fokus, dig om at tage din p-pille.",
   "alarmKitSettingTitle": "Alarmfunktion",
   "alarmKitSettingDescription": "Notifikationen lyder som et vækkeur. Du får den også, når din telefon er på lydløs eller i fokustilstand.",
+  "alarmKitPermissionRequired": "Alarmfunktionen kræver tilladelse. Du kan give den i enhedens indstillinger.",
   "todayPillNumberFeatureAppealTitle": "Tilpas nummeret på dagens p-pille",
   "todayPillNumberFeatureAppealShortDescription": "Hvis pillenummeret ikke passer, kan du rette det i indstillingerne",
   "todayPillNumberFeatureAppealHeadline": "Du kan ændre dagens pillenummer",

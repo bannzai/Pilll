@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "З AlarmKit, доступним починаючи з iOS 26, будильник, що лунає навіть у беззвучному режимі або режимі зосередження, нагадує вам про прийом пігулки.",
   "alarmKitSettingTitle": "Функція будильника",
   "alarmKitSettingDescription": "Сповіщення пролунає як будильник. Ви отримаєте його навіть у беззвучному режимі або режимі зосередження.",
+  "alarmKitPermissionRequired": "Для функції будильника потрібен дозвіл. Надайте його в налаштуваннях пристрою.",
   "todayPillNumberFeatureAppealTitle": "Налаштуйте номер сьогоднішньої пігулки",
   "todayPillNumberFeatureAppealShortDescription": "Якщо номер пігулки не збігається, ви можете виправити його в налаштуваннях",
   "todayPillNumberFeatureAppealHeadline": "Ви можете змінити номер пігулки на сьогодні",

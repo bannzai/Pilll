@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Gamit ang AlarmKit na available sa iOS 26 o mas bago, ipinaaalala sa inyo ng alarm na tumutunog kahit naka-silent mode o Focus mode na oras nang inumin ang pildoras.",
   "alarmKitSettingTitle": "Feature ng alarma",
   "alarmKitSettingDescription": "Tutunog ang abiso na parang alarm. Matatanggap ninyo ito kahit naka-silent o Focus mode ang telepono.",
+  "alarmKitPermissionRequired": "Kailangan ng pahintulot para sa alarm. Pakibigay po ito sa mga setting ng device ninyo.",
   "todayPillNumberFeatureAppealTitle": "Itugma ang numero ng tableta para ngayong araw",
   "todayPillNumberFeatureAppealShortDescription": "Kung hindi tugma ang numero ng tableta, maaari ninyo itong itama sa mga setting",
   "todayPillNumberFeatureAppealHeadline": "Maaari ninyong baguhin ang numero ng tableta para sa araw na ito",

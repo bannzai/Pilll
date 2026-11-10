@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 আৰু তাৰ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, নীৰৱ অৱস্থা বা ফ’কাচ ম’ডতো বাজি উঠা এলাৰ্মে আপোনাক পিল খোৱাৰ সময় জনায়।",
   "alarmKitSettingTitle": "এলাৰ্ম সুবিধা",
   "alarmKitSettingDescription": "জাননীটো এলাৰ্ম ঘড়ীৰ দৰে বাজিব। আপোনাৰ ফোন নীৰৱ বা ফ’কাছ মোডত থাকিলেও জাননী পাব।",
+  "alarmKitPermissionRequired": "এলাৰ্ম সুবিধাটোৰ বাবে অনুমতিৰ প্ৰয়োজন। অনুগ্ৰহ কৰি ডিভাইচৰ ছেটিংছৰ পৰা অনুমতি দিয়ক।",
   "todayPillNumberFeatureAppealTitle": "আজিৰ পিল নম্বৰ মিলাই লওক",
   "todayPillNumberFeatureAppealShortDescription": "পিল নম্বৰ মিল নাখালে ছেটিংছত শুধৰাই লওক",
   "todayPillNumberFeatureAppealHeadline": "আপুনি আজিৰ পিল নম্বৰ সলনি কৰিব পাৰে",

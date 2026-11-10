@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Với AlarmKit có trên iOS 26 trở lên, chuông báo vẫn reo khi bật chế độ Im lặng hoặc Tập trung để nhắc bạn uống thuốc.",
   "alarmKitSettingTitle": "Tính năng báo thức",
   "alarmKitSettingDescription": "Thông báo sẽ đổ chuông như báo thức. Bạn vẫn nhận được thông báo khi bật chế độ im lặng hoặc chế độ Tập trung.",
+  "alarmKitPermissionRequired": "Tính năng báo thức cần được cấp quyền. Vui lòng cho phép trong phần cài đặt của thiết bị.",
   "todayPillNumberFeatureAppealTitle": "Điều chỉnh số thứ tự viên thuốc hôm nay",
   "todayPillNumberFeatureAppealShortDescription": "Nếu số thứ tự viên thuốc không khớp, bạn có thể chỉnh lại trong phần cài đặt",
   "todayPillNumberFeatureAppealHeadline": "Bạn có thể đổi số thứ tự viên thuốc hôm nay",

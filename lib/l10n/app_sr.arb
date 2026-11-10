@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Уз AlarmKit, доступан од iOS 26, аларм који се оглашава чак и у нечујном режиму или режиму фокусирања подсећа Вас да узмете пилулу.",
   "alarmKitSettingTitle": "Функција аларма",
   "alarmKitSettingDescription": "Обавештење се оглашава као будилник. Добићете га и када је телефон у нечујном режиму или режиму фокусирања.",
+  "alarmKitPermissionRequired": "За функцију аларма потребна је дозвола. Можете је дати у подешавањима уређаја.",
   "todayPillNumberFeatureAppealTitle": "Подесите број данашње пилуле",
   "todayPillNumberFeatureAppealShortDescription": "Ако се број пилуле не поклапа, можете га исправити у подешавањима",
   "todayPillNumberFeatureAppealHeadline": "Можете да промените број пилуле за данас",

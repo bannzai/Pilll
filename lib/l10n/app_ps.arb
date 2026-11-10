@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "د AlarmKit په کارولو سره، چې په iOS 26 او ورپسې بڼو کې شته، هغه زنګ چې په چوپ حالت یا د تمرکز په حالت کې هم غږېږي، تاسو ته د ګولۍ اخیستلو وخت در یادوي.",
   "alarmKitSettingTitle": "د الارم ځانګړنه",
   "alarmKitSettingDescription": "خبرتیا به د زنګ ساعت په څېر وغږېږي. تاسو به یې د چوپتیا یا تمرکز په حالت کې هم ترلاسه کړئ.",
+  "alarmKitPermissionRequired": "د الارم د ځانګړنې لپاره اجازه پکار ده. مهرباني وکړئ د خپل وسیلې په امستنو کې اجازه ورکړئ.",
   "todayPillNumberFeatureAppealTitle": "د نننۍ ګولۍ شمېره برابره کړئ",
   "todayPillNumberFeatureAppealShortDescription": "که د ګولۍ شمېره سمه نه وي، په امستنو کې یې سمولای شئ",
   "todayPillNumberFeatureAppealHeadline": "تاسو د نن ورځې ګولۍ شمېر بدلولی شئ",

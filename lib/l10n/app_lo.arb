@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "AlarmKit ທີ່ໃຊ້ໄດ້ຕັ້ງແຕ່ iOS 26 ຂຶ້ນໄປ ຈະເຕືອນໃຫ້ທ່ານກິນຢາເມັດດ້ວຍສັນຍານເຕືອນທີ່ດັງແນ່ນອນ ແມ່ນແຕ່ໃນໂໝດປິດສຽງ ຫຼື ໂໝດຕັ້ງໃຈ.",
   "alarmKitSettingTitle": "ຄຸນສົມບັດໂມງປຸກ",
   "alarmKitSettingDescription": "ການແຈ້ງເຕືອນຈະດັງຄືກັບໂມງປຸກ. ທ່ານຈະໄດ້ຮັບການແຈ້ງເຕືອນ ແມ່ນແຕ່ເມື່ອເປີດໂໝດງຽບ ຫຼື ໂໝດຕັ້ງໃຈ.",
+  "alarmKitPermissionRequired": "ຟັງຊັນໂມງປຸກຕ້ອງການສິດອະນຸຍາດ. ກະລຸນາອະນຸຍາດໃນການຕັ້ງຄ່າຂອງອຸປະກອນ.",
   "todayPillNumberFeatureAppealTitle": "ປັບເລກເມັດຢາຂອງມື້ນີ້",
   "todayPillNumberFeatureAppealShortDescription": "ຖ້າເລກເມັດຢາບໍ່ກົງ ສາມາດແກ້ໄຂໄດ້ໃນການຕັ້ງຄ່າ",
   "todayPillNumberFeatureAppealHeadline": "ສາມາດປ່ຽນເລກເມັດຢາຂອງມື້ນີ້ໄດ້",

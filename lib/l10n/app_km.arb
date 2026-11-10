@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "ដោយប្រើ AlarmKit ដែលមានចាប់ពី iOS 26 ឡើងទៅ សំឡេងរោទិ៍ដែលលាន់ឮសូម្បីតែក្នុងរបៀបស្ងាត់ ឬមុខងារផ្តោតអារម្មណ៍ នឹងរំលឹកអ្នកឱ្យលេបថ្នាំគ្រាប់។",
   "alarmKitSettingTitle": "មុខងារម៉ោងរោទ៍",
   "alarmKitSettingDescription": "ការជូនដំណឹងនឹងបន្លឺសំឡេងដូចម៉ោងរោទ៍។ អ្នកនឹងទទួលបានការជូនដំណឹង ទោះបីទូរសព្ទស្ថិតក្នុងរបៀបស្ងាត់ ឬរបៀបផ្តោតអារម្មណ៍ក៏ដោយ។",
+  "alarmKitPermissionRequired": "មុខងារម៉ោងរោទ៍ត្រូវការការអនុញ្ញាត។ សូមអនុញ្ញាតនៅក្នុងការកំណត់ឧបករណ៍។",
   "todayPillNumberFeatureAppealTitle": "សូមកែតម្រូវលេខគ្រាប់ថ្នាំថ្ងៃនេះ",
   "todayPillNumberFeatureAppealShortDescription": "បើលេខគ្រាប់ថ្នាំមិនត្រូវគ្នា អ្នកអាចកែវាក្នុងការកំណត់",
   "todayPillNumberFeatureAppealHeadline": "អ្នកអាចប្ដូរលេខគ្រាប់ថ្នាំសម្រាប់ថ្ងៃនេះ",

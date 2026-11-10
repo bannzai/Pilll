@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Az iOS 26-tól elérhető AlarmKit segítségével a néma vagy Fókusz módban is megszólaló riasztás emlékeztet, hogy szedd be a tablettát.",
   "alarmKitSettingTitle": "Ébresztőfunkció",
   "alarmKitSettingDescription": "Az értesítés ébresztőóraként szólal meg. Néma vagy fókusz módban is megkapod.",
+  "alarmKitPermissionRequired": "Az ébresztőfunkcióhoz engedély szükséges. Ezt az eszköz beállításaiban adhatod meg.",
   "todayPillNumberFeatureAppealTitle": "A mai tablettaszám beállítása",
   "todayPillNumberFeatureAppealShortDescription": "Ha nem stimmel a tablettaszám, a beállításokban módosíthatod",
   "todayPillNumberFeatureAppealHeadline": "Megváltoztathatod a mai tablettaszámot",

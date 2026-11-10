@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Vďaka AlarmKitu, ktorý je dostupný od iOS 26, vám užitie tabletky pripomenie budík, ktorý zazvoní aj v tichom režime alebo v režime sústredenia.",
   "alarmKitSettingTitle": "Funkcia budíka",
   "alarmKitSettingDescription": "Upozornenie zaznie ako budík. Dostanete ho aj v tichom režime alebo režime sústredenia.",
+  "alarmKitPermissionRequired": "Funkcia budíka potrebuje povolenie. Povoľte ju, prosím, v nastaveniach zariadenia.",
   "todayPillNumberFeatureAppealTitle": "Upravte číslo dnešnej tabletky",
   "todayPillNumberFeatureAppealShortDescription": "Ak číslo tabletky nesedí, môžete ho opraviť v nastaveniach",
   "todayPillNumberFeatureAppealHeadline": "Môžete zmeniť číslo tabletky na dnes",

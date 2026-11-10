@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Dengan AlarmKit yang tersedia mulai iOS 26, alarm yang berbunyi meski mode senyap atau mode Fokus aktif mengingatkan Anda untuk minum pil.",
   "alarmKitSettingTitle": "Fitur alarm",
   "alarmKitSettingDescription": "Notifikasi akan berbunyi seperti alarm. Anda tetap akan menerimanya saat mode senyap atau mode Fokus aktif.",
+  "alarmKitPermissionRequired": "Fitur alarm memerlukan izin. Anda dapat mengizinkannya melalui pengaturan perangkat.",
   "todayPillNumberFeatureAppealTitle": "Sesuaikan nomor pil hari ini",
   "todayPillNumberFeatureAppealShortDescription": "Jika nomor pil tidak sesuai, Anda dapat memperbaikinya di pengaturan",
   "todayPillNumberFeatureAppealHeadline": "Anda dapat mengubah nomor pil untuk hari ini",

@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 이상에서 사용할 수 있는 AlarmKit으로 무음 모드나 집중 모드에서도 울리는 알람이 피임약 복용 시간을 알려줘요.",
   "alarmKitSettingTitle": "알람 기능",
   "alarmKitSettingDescription": "알림이 알람처럼 울려요. 무음 모드나 집중 모드일 때도 알림을 받을 수 있어요.",
+  "alarmKitPermissionRequired": "알람 기능을 사용하려면 권한이 필요해요. 기기 설정에서 허용해 주세요.",
   "todayPillNumberFeatureAppealTitle": "오늘의 알약 번호를 맞춰요",
   "todayPillNumberFeatureAppealShortDescription": "알약 번호가 맞지 않으면 설정에서 수정할 수 있어요",
   "todayPillNumberFeatureAppealHeadline": "오늘 복용할 알약 번호를 변경할 수 있어요",

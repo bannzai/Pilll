@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 va undan keyingi versiyalarda mavjud AlarmKit yordamida ovozsiz yoki diqqatni jamlash rejimida ham chalinadigan signal sizga tabletkani qabul qilish vaqtini eslatadi.",
   "alarmKitSettingTitle": "Budilnik funksiyasi",
   "alarmKitSettingDescription": "Bildirishnoma budilnik kabi jaranglaydi. Telefon ovozsiz yoki diqqatni jamlash rejimida boʻlsa ham, uni olasiz.",
+  "alarmKitPermissionRequired": "Budilnik funksiyasi uchun ruxsat kerak. Iltimos, qurilma sozlamalarida ruxsat bering.",
   "todayPillNumberFeatureAppealTitle": "Bugungi tabletka raqamini moslang",
   "todayPillNumberFeatureAppealShortDescription": "Agar tabletka raqami mos kelmasa, uni sozlamalarda tuzatishingiz mumkin",
   "todayPillNumberFeatureAppealHeadline": "Bugungi tabletka raqamini oʻzgartirishingiz mumkin",

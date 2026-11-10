@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "iOS 26 жана андан кийинки версияларда жеткиликтүү AlarmKit аркылуу үнсүз же көңүл топтоо режиминде да жаңырган коңгуроо сизге таблетка ичүү убактысын эскертет.",
   "alarmKitSettingTitle": "Ойготкуч функциясы",
   "alarmKitSettingDescription": "Билдирме ойготкучтай үн чыгарат. Телефонуңуз үнсүз же көңүл топтоо режиминде турганда да билдирме аласыз.",
+  "alarmKitPermissionRequired": "Ойготкуч функциясына уруксат керек. Аны түзмөктүн жөндөөлөрүнөн бериңиз.",
   "todayPillNumberFeatureAppealTitle": "Бүгүнкү таблетканын номерин тууралаңыз",
   "todayPillNumberFeatureAppealShortDescription": "Таблетканын номери дал келбесе, аны жөндөөлөрдөн оңдой аласыз",
   "todayPillNumberFeatureAppealHeadline": "Бүгүнкү таблетканын номерин өзгөртө аласыз",

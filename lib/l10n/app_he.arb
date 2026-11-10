@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "בעזרת AlarmKit, הזמין מ־iOS 26 ואילך, שעון מעורר שנשמע גם במצב שקט או במצב מיקוד מזכיר את מועד נטילת הגלולה.",
   "alarmKitSettingTitle": "תכונת השעון המעורר",
   "alarmKitSettingDescription": "ההתראה תישמע כמו שעון מעורר. היא תתקבל גם כשהמכשיר במצב שקט או במצב ריכוז.",
+  "alarmKitPermissionRequired": "נדרשת הרשאה להפעלת השעון המעורר. אפשר לאשר אותה בהגדרות המכשיר.",
   "todayPillNumberFeatureAppealTitle": "התאמת מספר גלולה לנטילה של היום",
   "todayPillNumberFeatureAppealShortDescription": "אם מספר גלולה אינו תואם, אפשר לתקן בהגדרות",
   "todayPillNumberFeatureAppealHeadline": "אפשר לשנות את מספר גלולה לנטילה היום",

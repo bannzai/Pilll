@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Avec AlarmKit, disponible à partir d’iOS 26, une alarme qui sonne même en mode silencieux ou Concentration vous rappelle de prendre votre pilule.",
   "alarmKitSettingTitle": "Fonction d'alarme",
   "alarmKitSettingDescription": "La notification sonne comme un réveil. Vous la recevrez même en mode silencieux ou en mode Concentration.",
+  "alarmKitPermissionRequired": "La fonction d’alarme nécessite une autorisation. Vous pouvez l’accorder dans les réglages de votre appareil.",
   "todayPillNumberFeatureAppealTitle": "Ajuster le numéro de pilule du jour",
   "todayPillNumberFeatureAppealShortDescription": "Si le numéro de la pilule ne correspond pas, vous pouvez le corriger dans les paramètres",
   "todayPillNumberFeatureAppealHeadline": "Vous pouvez modifier le numéro de pilule du jour",

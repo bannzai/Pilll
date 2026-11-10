@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "Nge-AlarmKit etholakala kusukela ku-iOS 26, i-alamu ekhalayo ngisho nakumodi yokuthula noma yokugxila ikukhumbuza ukuthi uphuze iphilisi.",
   "alarmKitSettingTitle": "Isici se-alamu",
   "alarmKitSettingDescription": "Isaziso sizokhala njengewashi le-alamu. Uzosithola noma ifoni isesimweni sokuthula noma sokugxila.",
+  "alarmKitPermissionRequired": "Isici se-alamu sidinga imvume. Sicela uyinikeze kuzilungiselelo zedivayisi.",
   "todayPillNumberFeatureAppealTitle": "Sicela ulungise inombolo yephilisi lanamuhla",
   "todayPillNumberFeatureAppealShortDescription": "Uma inombolo yephilisi ingahambisani, ungayilungisa kuzilungiselelo",
   "todayPillNumberFeatureAppealHeadline": "Ungashintsha inombolo yephilisi lanamuhla",

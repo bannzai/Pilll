@@ -512,6 +512,7 @@
   "alarmKitFeatureAppealBody": "通过 iOS 26 及更高版本提供的 AlarmKit，即使开启静音模式或专注模式，闹钟也会响起，提醒你服用药片。",
   "alarmKitSettingTitle": "闹钟功能",
   "alarmKitSettingDescription": "通知会像闹钟一样响起。即使开启静音或专注模式，你也能收到通知。",
+  "alarmKitPermissionRequired": "闹钟功能需要权限，请在设备设置中允许。",
   "todayPillNumberFeatureAppealTitle": "调整今天的药片编号",
   "todayPillNumberFeatureAppealShortDescription": "如果药片编号不对，可以在设置中修改",
   "todayPillNumberFeatureAppealHeadline": "可以更改今天的药片编号",
