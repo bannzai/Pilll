@@ -291,6 +291,7 @@
   "choosePillType": "የክኒን ዓይነት ይምረጡ",
   "notificationForNotTakenPeriod": "የ{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ማሳወቂያዎች ሲጠፉ፣ ለ{pillSheetPillSheetTypeNotTakenWord} ጊዜ አወሳሰድ መዝገብ በራስ-ሰር ይፈጠራል",
+  "notificationForNotTakenPeriodChanged": "የ{pillSheetPillSheetTypeNotTakenWord} ጊዜ ማሳወቂያዎች ወደ {value} ተቀይረዋል",
   "requestForCancelSurvey": "ከስረዛው በኋላ በሚደረገው የዳሰሳ ጥናት እንዲሳተፉ እንጠይቃለን",
   "pilllDescription": "Pilll፣ ክኒን ለመውሰድ ማሳሰቢያ መተግበሪያ",
   "reachedMaximumCountOfReminderTimes": "መመዝገብ የሚችሉት ከፍተኛ የማሳወቂያ ሰዓቶች ብዛት ላይ ደርሰዋል። እባክዎ ብዛታቸው ከ{ReminderTimeMaximumCount} እንዳይበልጥ ያድርጉ",

@@ -291,6 +291,7 @@
   "choosePillType": "Valitse pillerityyppi",
   "notificationForNotTakenPeriod": "Ilmoitus {pillSheetPillSheetTypeNotTakenWord}-jaksosta",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kun ilmoitukset ovat pois päältä, myös {pillSheetPillSheetTypeNotTakenWord}-jakson pilleriloki luodaan automaattisesti",
+  "notificationForNotTakenPeriodChanged": "Ilmoitukset ({pillSheetPillSheetTypeNotTakenWord}): {value}",
   "requestForCancelSurvey": "Voisitko vastata kyselyyn tilauksen perumisen jälkeen",
   "pilllDescription": "Pilll – muistutussovellus ehkäisypillerin ottamiseen",
   "reachedMaximumCountOfReminderTimes": "Muistutusaikoja on jo enimmäismäärä. Voit lisätä enintään {ReminderTimeMaximumCount} muistutusaikaa",

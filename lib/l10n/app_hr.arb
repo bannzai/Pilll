@@ -291,6 +291,7 @@
   "choosePillType": "Odaberite vrstu pilule",
   "notificationForNotTakenPeriod": "Obavijest za razdoblje {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kad su obavijesti isključene, evidencija uzimanja za razdoblje {pillSheetPillSheetTypeNotTakenWord} također se automatski stvara",
+  "notificationForNotTakenPeriodChanged": "Obavijesti za razdoblje {pillSheetPillSheetTypeNotTakenWord} postavljene su na {value}",
   "requestForCancelSurvey": "Molimo vas da ispunite anketu nakon otkazivanja pretplate",
   "pilllDescription": "Pilll — aplikacija s podsjetnikom za uzimanje kontracepcijske pilule",
   "reachedMaximumCountOfReminderTimes": "Dosegnuli ste najveći broj vremena za obavijesti. Molimo, zadržite ih najviše {ReminderTimeMaximumCount}",

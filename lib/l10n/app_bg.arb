@@ -291,6 +291,7 @@
   "choosePillType": "Изберете вида хапче",
   "notificationForNotTakenPeriod": "Известие за периода {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Когато известията са изключени, запис на приема за периода {pillSheetPillSheetTypeNotTakenWord} също се създава автоматично",
+  "notificationForNotTakenPeriodChanged": "Известията за периода {pillSheetPillSheetTypeNotTakenWord} са зададени на {value}",
   "requestForCancelSurvey": "Молим ви да участвате в анкета след прекратяване на абонамента",
   "pilllDescription": "Pilll — приложение с напомняне за прием на противозачатъчното хапче",
   "reachedMaximumCountOfReminderTimes": "Достигнахте максималния брой часове за напомняне. Моля, оставете най-много {ReminderTimeMaximumCount}",

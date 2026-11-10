@@ -291,6 +291,7 @@
   "choosePillType": "ເລືອກປະເພດຢາຄຸມກຳເນີດ",
   "notificationForNotTakenPeriod": "ແຈ້ງເຕືອນໄລຍະ {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ເມື່ອປິດການແຈ້ງເຕືອນ ບັນທຶກການກິນຢາສຳລັບໄລຍະ {pillSheetPillSheetTypeNotTakenWord} ກໍຈະຖືກສ້າງອັດຕະໂນມັດເຊັ່ນກັນ",
+  "notificationForNotTakenPeriodChanged": "ການແຈ້ງເຕືອນສຳລັບໄລຍະ {pillSheetPillSheetTypeNotTakenWord} ຖືກຕັ້ງເປັນ {value} ແລ້ວ",
   "requestForCancelSurvey": "ກະລຸນາຊ່ວຍຕອບແບບສຳຫຼວດຫຼັງຈາກຍົກເລີກການສະໝັກໃຊ້",
   "pilllDescription": "Pilll ແອັບແຈ້ງເຕືອນການກິນຢາຄຸມກຳເນີດ",
   "reachedMaximumCountOfReminderTimes": "ຈຳນວນເວລາແຈ້ງເຕືອນຮອດຂີດຈຳກັດແລ້ວ. ກະລຸນາເຫຼືອບໍ່ເກີນ {ReminderTimeMaximumCount} ເວລາ",

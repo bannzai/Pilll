@@ -291,6 +291,7 @@
   "choosePillType": "Dewiswch y math o bilsen",
   "notificationForNotTakenPeriod": "Hysbysiad am gyfnod {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Pan fydd hysbysiadau wedi'u diffodd, caiff cofnod cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} ei greu'n awtomatig hefyd",
+  "notificationForNotTakenPeriodChanged": "Mae hysbysiadau ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} wedi’u gosod i {value}",
   "requestForCancelSurvey": "Arolwg ar ôl canslo eich tanysgrifiad",
   "pilllDescription": "Pilll, ap atgoffa ar gyfer cymryd y bilsen atal cenhedlu",
   "reachedMaximumCountOfReminderTimes": "Rydych wedi cyrraedd y nifer uchaf o amseroedd atgoffa. Cadwch at {ReminderTimeMaximumCount} neu lai, os gwelwch yn dda",

@@ -291,6 +291,7 @@
   "choosePillType": "మాత్ర రకాన్ని ఎంచుకోండి",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} కాలానికి నోటిఫికేషన్",
   "autoRecordForNotTakenPeriodIfNotificationOff": "నోటిఫికేషన్‌లు ఆఫ్‌లో ఉన్నప్పుడు, {pillSheetPillSheetTypeNotTakenWord} కాలానికి మాత్రల నమోదు కూడా ఆటోమేటిక్‌గా జరుగుతుంది",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} కాలానికి సంబంధించిన నోటిఫికేషన్‌లు {value}గా సెట్ చేయబడ్డాయి",
   "requestForCancelSurvey": "సబ్‌స్క్రిప్షన్ రద్దు తర్వాత సర్వేలో పాల్గొనమని మా విన్నపం",
   "pilllDescription": "Pilll, గర్భనిరోధక మాత్ర వేసుకోవడానికి రిమైండర్ యాప్",
   "reachedMaximumCountOfReminderTimes": "రిమైండర్ సమయాలను జోడించే గరిష్ఠ పరిమితికి చేరుకున్నారు. దయచేసి {ReminderTimeMaximumCount} లేదా అంతకంటే తక్కువ సమయాలను ఉంచండి",

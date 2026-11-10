@@ -291,6 +291,7 @@
   "choosePillType": "चक्कीको प्रकार छान्नुहोस्",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधिको सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाहरू बन्द हुँदा {pillSheetPillSheetTypeNotTakenWord} अवधिको सेवन रेकर्ड पनि स्वतः बनाइन्छ",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} अवधिका सूचनाहरू {value} मा सेट गरिएका छन्",
   "requestForCancelSurvey": "सदस्यता रद्द गरेपछिको सर्वेक्षणमा कृपया सहभागी हुनुहोस्",
   "pilllDescription": "Pilll, गर्भनिरोधक चक्की खान सम्झाउने सूचना दिने एप",
   "reachedMaximumCountOfReminderTimes": "सम्झाउने सूचनाको समय थप्ने अधिकतम सीमा पुगेको छ। कृपया {ReminderTimeMaximumCount} वा सोभन्दा कम समय राख्नुहोस्",

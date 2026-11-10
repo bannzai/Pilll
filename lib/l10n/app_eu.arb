@@ -291,6 +291,7 @@
   "choosePillType": "Aukeratu pilula mota",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} aldiari buruzko jakinarazpena",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Jakinarazpenak desaktibatuta daudenean, {pillSheetPillSheetTypeNotTakenWord} aldirako hartze-erregistro bat ere automatikoki sortzen da",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} aldirako jakinarazpenak {value} egoeran ezarri dira",
   "requestForCancelSurvey": "Harpidetza bertan behera utzi ondoren, inkestan parte hartzera gonbidatzen zaitugu",
   "pilllDescription": "Pilll, pilula antisorgailua hartzeko gogorarazpen aplikazioa",
   "reachedMaximumCountOfReminderTimes": "Gehienezko gogorarazpen-ordu kopurura iritsi zara. Utzi gehienez {ReminderTimeMaximumCount}, mesedez",

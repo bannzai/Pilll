@@ -291,6 +291,7 @@
   "choosePillType": "Таблетка түрін таңдаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} кезеңі туралы хабарландыру",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Хабарландырулар өшірілгенде, {pillSheetPillSheetTypeNotTakenWord} кезеңіне қабылдау жазбасы да автоматты түрде жасалады",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} кезеңіне арналған хабарландырулар {value} күйіне орнатылды",
   "requestForCancelSurvey": "Жазылымнан бас тартқаннан кейінгі сауалнамаға қатысуыңызды сұраймыз",
   "pilllDescription": "Pilll — контрацепциялық таблетканы қабылдауға арналған еске салу қолданбасы",
   "reachedMaximumCountOfReminderTimes": "Хабарландыру уақыттарының ең көп санына жеттіңіз. Олардың санын {ReminderTimeMaximumCount} немесе одан аз етіп қалдырыңыз",

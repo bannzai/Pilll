@@ -291,6 +291,7 @@
   "choosePillType": "اختاري نوع الحبوب",
   "notificationForNotTakenPeriod": "إشعار فترة {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "عند إيقاف الإشعارات، يُنشأ تسجيل تناول لفترة {pillSheetPillSheetTypeNotTakenWord} تلقائيًا أيضًا",
+  "notificationForNotTakenPeriodChanged": "تم ضبط إشعارات فترة {pillSheetPillSheetTypeNotTakenWord} على {value}",
   "requestForCancelSurvey": "نرجو مشاركتكِ في استبيان بعد إلغاء الاشتراك",
   "pilllDescription": "Pilll، تطبيق تذكير بتناول حبوب منع الحمل",
   "reachedMaximumCountOfReminderTimes": "وصلتِ إلى الحد الأقصى لأوقات التذكير. يرجى الاكتفاء بـ {ReminderTimeMaximumCount} أوقات أو أقل",

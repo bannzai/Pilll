@@ -291,6 +291,7 @@
   "choosePillType": "Choose pill type",
   "notificationForNotTakenPeriod": "Notification for the {pillSheetPillSheetTypeNotTakenWord} period",
   "autoRecordForNotTakenPeriodIfNotificationOff": "When notifications are off, a pill log is also created automatically for the {pillSheetPillSheetTypeNotTakenWord} period",
+  "notificationForNotTakenPeriodChanged": "Notifications for the {pillSheetPillSheetTypeNotTakenWord} period are now {value}",
   "requestForCancelSurvey": "Please take our cancellation survey",
   "pilllDescription": "Pilll, a reminder app for taking your birth control pill",
   "reachedMaximumCountOfReminderTimes": "You've reached the maximum number of reminder times. Please set no more than {ReminderTimeMaximumCount}.",

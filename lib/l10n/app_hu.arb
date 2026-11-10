@@ -291,6 +291,7 @@
   "choosePillType": "Válaszd ki a tabletta típusát",
   "notificationForNotTakenPeriod": "Értesítések a(z) {pillSheetPillSheetTypeNotTakenWord} időszak alatt",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Ha az értesítések ki vannak kapcsolva, a {pillSheetPillSheetTypeNotTakenWord} időszakra is automatikusan készül tablettaszedési napló",
+  "notificationForNotTakenPeriodChanged": "A(z) {pillSheetPillSheetTypeNotTakenWord} időszak értesítései mostantól {value} állapotban vannak",
   "requestForCancelSurvey": "Kérjük, töltsd ki a lemondás utáni kérdőívünket",
   "pilllDescription": "Pilll – emlékeztető alkalmazás a fogamzásgátló tabletta szedéséhez",
   "reachedMaximumCountOfReminderTimes": "Elérted az emlékeztető időpontok maximális számát. Legfeljebb {ReminderTimeMaximumCount} időpontot tarts meg",

@@ -291,6 +291,7 @@
   "choosePillType": "Таблетканын түрүн тандаңыз",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгили тууралуу билдирүү",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Билдирүүлөр өчүрүлгөн болсо, {pillSheetPillSheetTypeNotTakenWord} мезгилиндеги таблетка ичүү жазуусу да автоматтык түрдө түзүлөт",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} мезгилиндеги билдирмелер {value} абалына коюлду",
   "requestForCancelSurvey": "Жазылууну токтоткондон кийинки сурамжылоого катышып коюуңузду суранабыз",
   "pilllDescription": "Pilll — бойго бүтүрбөөчү таблетканы ичүү үчүн эскертме колдонмосу",
   "reachedMaximumCountOfReminderTimes": "Билдирүү убакыттарынын эң көп санына жеттиңиз. Сураныч, алардын санын {ReminderTimeMaximumCount} же андан аз кылыңыз",

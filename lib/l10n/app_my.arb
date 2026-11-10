@@ -291,6 +291,7 @@
   "choosePillType": "ဆေးပြားအမျိုးအစား ရွေးချယ်ပါ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် အသိပေးချက်",
   "autoRecordForNotTakenPeriodIfNotificationOff": "အသိပေးချက် ပိတ်ထားပါက {pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် ဆေးသောက်မှတ်တမ်းကိုလည်း အလိုအလျောက် မှတ်ပေးပါတယ်",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} ကာလအတွက် အသိပေးချက်များကို {value} သို့ သတ်မှတ်ထားပါပြီ",
   "requestForCancelSurvey": "စာရင်းသွင်းမှု ပယ်ဖျက်ပြီးနောက် စစ်တမ်းတွင် ပါဝင်ဖြေဆိုပေးပါ",
   "pilllDescription": "Pilll၊ သန္ဓေတားဆေးသောက်ရန် သတိပေးချက်ပေးသည့် အက်ပ်",
   "reachedMaximumCountOfReminderTimes": "သတိပေးချိန် သတ်မှတ်နိုင်သည့် အများဆုံးအရေအတွက် ပြည့်သွားပါပြီ။ ကျေးဇူးပြု၍ {ReminderTimeMaximumCount} ခုထက် မပိုအောင် လျှော့ပါ",

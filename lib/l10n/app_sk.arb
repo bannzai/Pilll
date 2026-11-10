@@ -291,6 +291,7 @@
   "choosePillType": "Vyberte typ tabletky",
   "notificationForNotTakenPeriod": "Upozornenie na obdobie {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Keď sú upozornenia vypnuté, záznam o užití za obdobie {pillSheetPillSheetTypeNotTakenWord} sa tiež vytvorí automaticky",
+  "notificationForNotTakenPeriodChanged": "Upozornenia na obdobie {pillSheetPillSheetTypeNotTakenWord} sú nastavené na {value}",
   "requestForCancelSurvey": "Prosíme vás o vyplnenie dotazníka po zrušení predplatného",
   "pilllDescription": "Pilll — aplikácia s pripomienkami na užitie antikoncepčnej tabletky",
   "reachedMaximumCountOfReminderTimes": "Dosiahli ste maximálny počet časov upozornení. Nechajte ich, prosím, najviac {ReminderTimeMaximumCount}",

@@ -291,6 +291,7 @@
   "choosePillType": "ഗുളികയുടെ തരം തിരഞ്ഞെടുക്കൂ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ അറിയിപ്പ്",
   "autoRecordForNotTakenPeriodIfNotificationOff": "അറിയിപ്പുകൾ ഓഫായിരിക്കുമ്പോൾ {pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ ഗുളിക കഴിച്ചതിന്റെ രേഖയും സ്വയമേവ സൃഷ്ടിക്കപ്പെടും",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} കാലയളവിലെ അറിയിപ്പുകൾ {value} ആയി സജ്ജമാക്കി",
   "requestForCancelSurvey": "സബ്‌സ്‌ക്രിപ്‌ഷൻ റദ്ദാക്കിയ ശേഷമുള്ള സർവേയിൽ പങ്കെടുക്കൂ",
   "pilllDescription": "Pilll, ഗർഭനിരോധന ഗുളിക കഴിക്കാൻ ഓർമ്മപ്പെടുത്തുന്ന ആപ്പ്",
   "reachedMaximumCountOfReminderTimes": "ഓർമ്മപ്പെടുത്തൽ സമയങ്ങളുടെ പരമാവധി എണ്ണത്തിൽ എത്തി. ദയവായി {ReminderTimeMaximumCount} എണ്ണമോ അതിൽ കുറവോ മാത്രം നിലനിർത്തൂ",

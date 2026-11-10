@@ -291,6 +291,7 @@
   "choosePillType": "Wähl d Pillesorte uus",
   "notificationForNotTakenPeriod": "Mitteilige für d {pillSheetPillSheetTypeNotTakenWord}-Ziit",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wänn d Mitteilige usgschalte sind, wird für d {pillSheetPillSheetTypeNotTakenWord}-Ziit au automatisch e Iinahm-Ufzeichnig gmacht",
+  "notificationForNotTakenPeriodChanged": "D Erinnerige für d Ziit vo {pillSheetPillSheetTypeNotTakenWord} sind jetzt uf {value} gstellt",
   "requestForCancelSurvey": "Hilf eus doch mit ere Umfrag nach de Chündig",
   "pilllDescription": "Pilll – e App mit ere Erinnerig fürs Iinäh vo de Verhüetigspille",
   "reachedMaximumCountOfReminderTimes": "Du häsch s Maximum a Erinnerigsziite erreicht. Du chasch höchstens {ReminderTimeMaximumCount} iirichte",

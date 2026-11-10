@@ -291,6 +291,7 @@
   "choosePillType": "گولی کی قسم منتخب کریں",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاع",
   "autoRecordForNotTakenPeriodIfNotificationOff": "اطلاعات بند ہونے پر {pillSheetPillSheetTypeNotTakenWord} کی مدت کا گولی لینے کا ریکارڈ بھی خودکار طور پر بن جاتا ہے",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاعات {value} پر سیٹ کر دی گئی ہیں",
   "requestForCancelSurvey": "رکنیت منسوخ کرنے کے بعد براہ کرم سروے میں حصہ لیں",
   "pilllDescription": "Pilll، مانع حمل گولی لینے کی یاد دہانی کی ایپ",
   "reachedMaximumCountOfReminderTimes": "یاد دہانی کے اوقات شامل کرنے کی زیادہ سے زیادہ حد پوری ہو گئی ہے۔ براہِ کرم {ReminderTimeMaximumCount} یا اس سے کم اوقات رکھیں",

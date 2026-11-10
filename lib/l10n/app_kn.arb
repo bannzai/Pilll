@@ -291,6 +291,7 @@
   "choosePillType": "ಮಾತ್ರೆಯ ಪ್ರಕಾರವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಅಧಿಸೂಚನೆ",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ಅಧಿಸೂಚನೆಗಳು ಆಫ್ ಆಗಿದ್ದರೆ, {pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಸೇವನೆಯ ದಾಖಲೆಯೂ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಸೇರುತ್ತದೆ",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} ಅವಧಿಯ ಅಧಿಸೂಚನೆಗಳನ್ನು {value} ಗೆ ಹೊಂದಿಸಲಾಗಿದೆ",
   "requestForCancelSurvey": "ಚಂದಾದಾರಿಕೆ ರದ್ದತಿಯ ನಂತರದ ಸಮೀಕ್ಷೆಗೆ ಸಹಕಾರದ ವಿನಂತಿ",
   "pilllDescription": "Pilll, ಗರ್ಭನಿರೋಧಕ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳಲು ಜ್ಞಾಪನೆ ನೀಡುವ ಆ್ಯಪ್",
   "reachedMaximumCountOfReminderTimes": "ಅಧಿಸೂಚನೆ ಸಮಯಗಳನ್ನು ಸೇರಿಸುವ ಗರಿಷ್ಠ ಮಿತಿ ತಲುಪಿದೆ. ದಯವಿಟ್ಟು {ReminderTimeMaximumCount} ಅಥವಾ ಅದಕ್ಕಿಂತ ಕಡಿಮೆ ಸಮಯಗಳನ್ನು ಇರಿಸಿ",

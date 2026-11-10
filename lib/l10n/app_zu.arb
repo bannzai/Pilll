@@ -291,6 +291,7 @@
   "choosePillType": "Sicela ukhethe uhlobo lwephilisi",
   "notificationForNotTakenPeriod": "Isaziso sesikhathi se-{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Uma izaziso zivaliwe, irekhodi lokuphuza amaphilisi lesikhathi se-{pillSheetPillSheetTypeNotTakenWord} nalo lenziwa ngokuzenzakalelayo",
+  "notificationForNotTakenPeriodChanged": "Izaziso zesikhathi se-{pillSheetPillSheetTypeNotTakenWord} sezisethwe ku-{value}",
   "requestForCancelSurvey": "Sicela usisize ngokuphendula inhlolovo ngemva kokukhansela ukubhalisa",
   "pilllDescription": "Pilll, uhlelo lokusebenza olunesikhumbuzo sokuphuza iphilisi lokuvimbela inzalo",
   "reachedMaximumCountOfReminderTimes": "Usufinyelele inani eliphezulu lezikhathi zesikhumbuzo. Sicela ushiye ezingadluli ku-{ReminderTimeMaximumCount}",
