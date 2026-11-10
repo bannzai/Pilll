@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Аларма за хапчето като будилник",
   "alarmKitFeatureAppealBody": "С AlarmKit, наличен в iOS 26 и по-нови версии, аларма, която звучи дори в безшумен режим или режим „Фокус“, ви напомня да вземете хапчето.",
   "alarmKitSettingTitle": "Функция за аларма",
+  "alarmKitSettingDescription": "Известието звучи като будилник. Ще го получите и когато телефонът ви е в безшумен режим или режим на фокусиране.",
   "todayPillNumberFeatureAppealTitle": "Настройте номера на днешното хапче",
   "todayPillNumberFeatureAppealShortDescription": "Ако номерът на хапчето не съвпада, можете да го поправите в настройките",
   "todayPillNumberFeatureAppealHeadline": "Можете да смените днешния номер на хапче",

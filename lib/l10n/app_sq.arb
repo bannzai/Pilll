@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Alarm për marrjen e pilulës si orë me zile",
   "alarmKitFeatureAppealBody": "Me AlarmKit, i disponueshëm nga iOS 26 e më pas, një alarm që bie edhe në modalitetin pa zë ose në modalitetin e përqendrimit ju kujton të merrni pilulën.",
   "alarmKitSettingTitle": "Funksioni i alarmit",
+  "alarmKitSettingDescription": "Njoftimi bie si alarm. Do ta merrni edhe kur telefoni është në modalitetin pa zë ose në modalitetin e përqendrimit.",
   "todayPillNumberFeatureAppealTitle": "Përshtatni numrin e pilulës së sotme",
   "todayPillNumberFeatureAppealShortDescription": "Nëse numri i pilulës nuk përputhet, mund ta korrigjoni te cilësimet",
   "todayPillNumberFeatureAppealHeadline": "Numri i pilulës që merrni sot mund të ndryshohet",

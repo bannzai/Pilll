@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "ਅਲਾਰਮ ਘੜੀ ਵਾਂਗ ਗੋਲੀ ਲੈਣ ਦਾ ਅਲਾਰਮ",
   "alarmKitFeatureAppealBody": "iOS 26 ਅਤੇ ਇਸ ਤੋਂ ਬਾਅਦ ਉਪਲਬਧ AlarmKit ਨਾਲ, ਸਾਈਲੈਂਟ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਵੀ ਵੱਜਣ ਵਾਲਾ ਅਲਾਰਮ ਤੁਹਾਨੂੰ ਗੋਲੀ ਲੈਣ ਦਾ ਸਮਾਂ ਯਾਦ ਕਰਾਉਂਦਾ ਹੈ।",
   "alarmKitSettingTitle": "ਅਲਾਰਮ ਸਹੂਲਤ",
+  "alarmKitSettingDescription": "ਸੂਚਨਾ ਅਲਾਰਮ ਵਾਂਗ ਵੱਜੇਗੀ। ਫ਼ੋਨ ਸਾਈਲੈਂਟ ਜਾਂ ਫੋਕਸ ਮੋਡ ਵਿੱਚ ਹੋਣ ’ਤੇ ਵੀ ਤੁਹਾਨੂੰ ਸੂਚਨਾ ਮਿਲੇਗੀ।",
   "todayPillNumberFeatureAppealTitle": "ਅੱਜ ਦਾ ਗੋਲੀ ਨੰਬਰ ਮਿਲਾਓ",
   "todayPillNumberFeatureAppealShortDescription": "ਜੇ ਗੋਲੀ ਨੰਬਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ, ਤਾਂ ਤੁਸੀਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਸ ਨੂੰ ਠੀਕ ਕਰ ਸਕਦੇ ਹੋ",
   "todayPillNumberFeatureAppealHeadline": "ਤੁਸੀਂ ਅੱਜ ਦਾ ਗੋਲੀ ਨੰਬਰ ਬਦਲ ਸਕਦੇ ਹੋ",

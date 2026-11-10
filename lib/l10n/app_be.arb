@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Напамін пра пігулку, як будзільнік",
   "alarmKitFeatureAppealBody": "AlarmKit, даступны ў iOS 26 і навейшых версіях, нагадае вам прыняць пігулку сігналам, які прагучыць нават у бязгучным рэжыме або рэжыме засяроджвання.",
   "alarmKitSettingTitle": "Функцыя будзільніка",
+  "alarmKitSettingDescription": "Апавяшчэнне гучыць як будзільнік. Вы атрымаеце яго, нават калі ўключаны бязгучны рэжым або рэжым засяроджвання.",
   "todayPillNumberFeatureAppealTitle": "Адкарэктуйце нумар сённяшняй пігулкі",
   "todayPillNumberFeatureAppealShortDescription": "Калі нумар пігулкі не супадае, вы можаце выправіць яго ў наладах",
   "todayPillNumberFeatureAppealHeadline": "Вы можаце змяніць нумар пігулкі на сёння",

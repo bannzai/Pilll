@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Tabletes lietošanas atgādinājums kā modinātājs",
   "alarmKitFeatureAppealBody": "Ar AlarmKit, kas pieejams no iOS 26, modinātājs, kas skan arī klusuma vai koncentrēšanās režīmā, atgādina jums iedzert tableti.",
   "alarmKitSettingTitle": "Modinātāja funkcija",
+  "alarmKitSettingDescription": "Paziņojums skanēs kā modinātājs. Jūs to saņemsiet arī tad, ja ieslēgts klusuma vai koncentrēšanās režīms.",
   "todayPillNumberFeatureAppealTitle": "Pielāgojiet šodienas tabletes numuru",
   "todayPillNumberFeatureAppealShortDescription": "Ja tabletes numurs nesakrīt, varat to labot iestatījumos",
   "todayPillNumberFeatureAppealHeadline": "Varat mainīt šodienas tabletes numuru",

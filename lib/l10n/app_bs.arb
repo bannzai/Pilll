@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Alarm za uzimanje pilule poput budilnika",
   "alarmKitFeatureAppealBody": "Uz AlarmKit, dostupan od iOS-a 26, alarm koji se oglašava i u tihom načinu rada ili načinu rada za fokus podsjeća Vas da uzmete pilulu.",
   "alarmKitSettingTitle": "Funkcija alarma",
+  "alarmKitSettingDescription": "Obavijest se oglašava poput alarma. Dobit ćete je čak i kada je telefon u tihom režimu ili režimu fokusiranja.",
   "todayPillNumberFeatureAppealTitle": "Možete uskladiti broj današnje pilule",
   "todayPillNumberFeatureAppealShortDescription": "Ako se broj pilule ne podudara, možete ga ispraviti u postavkama",
   "todayPillNumberFeatureAppealHeadline": "Možete promijeniti broj pilule za danas",

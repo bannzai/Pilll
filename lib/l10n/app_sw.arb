@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Kengele ya kumeza kidonge kama saa ya kuamsha",
   "alarmKitFeatureAppealBody": "Kwa kutumia AlarmKit inayopatikana kuanzia iOS 26, kengele inayolia hata simu ikiwa katika hali ya kimya au hali ya Kuzingatia inakukumbusha kumeza kidonge.",
   "alarmKitSettingTitle": "Kipengele cha kengele",
+  "alarmKitSettingDescription": "Arifa italia kama kengele ya kuamsha. Utaipokea hata simu ikiwa katika hali ya kimya au hali ya kuzingatia.",
   "todayPillNumberFeatureAppealTitle": "Tafadhali rekebisha nambari ya kidonge cha leo",
   "todayPillNumberFeatureAppealShortDescription": "Ikiwa nambari ya kidonge hailingani, unaweza kuisahihisha kwenye mipangilio",
   "todayPillNumberFeatureAppealHeadline": "Unaweza kubadilisha nambari ya kidonge cha leo",

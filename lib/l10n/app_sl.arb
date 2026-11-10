@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Alarm za jemanje tablete kot budilka",
   "alarmKitFeatureAppealBody": "Z AlarmKitom, ki je na voljo od iOS 26, vas na jemanje tablete opomni alarm, ki zazvoni tudi v tihem načinu ali načinu Osredotočenost.",
   "alarmKitSettingTitle": "Funkcija alarma",
+  "alarmKitSettingDescription": "Obvestilo zazveni kot budilka. Prejmete ga tudi, ko je telefon v tihem načinu ali načinu osredotočenosti.",
   "todayPillNumberFeatureAppealTitle": "Prilagodite številko današnje tablete",
   "todayPillNumberFeatureAppealShortDescription": "Če se številka tablete ne ujema, jo lahko popravite v nastavitvah",
   "todayPillNumberFeatureAppealHeadline": "Danes lahko spremenite polje »številka tablete«",

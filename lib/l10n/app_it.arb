@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Una sveglia per prendere la pillola",
   "alarmKitFeatureAppealBody": "Con AlarmKit, disponibile da iOS 26, un allarme che suona anche in modalità silenziosa o Full immersion ti ricorda di prendere la pillola.",
   "alarmKitSettingTitle": "Funzione sveglia",
+  "alarmKitSettingDescription": "La notifica suona come una sveglia. La riceverai anche con la modalità Silenzioso o Full immersion attiva.",
   "todayPillNumberFeatureAppealTitle": "Cambia il numero della pillola di oggi",
   "todayPillNumberFeatureAppealShortDescription": "Se il numero della pillola non corrisponde, puoi correggerlo nelle impostazioni",
   "todayPillNumberFeatureAppealHeadline": "Puoi cambiare il numero della pillola di oggi",

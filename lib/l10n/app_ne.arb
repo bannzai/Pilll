@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "अलार्म घडी जस्तै चक्की खाने अलार्म",
   "alarmKitFeatureAppealBody": "iOS 26 र त्यसपछिका संस्करणमा उपलब्ध AlarmKit प्रयोग गरेर, साइलेन्ट वा फोकस मोडमा पनि बज्ने अलार्मले तपाईंलाई चक्की खाने समय सम्झाउँछ।",
   "alarmKitSettingTitle": "अलार्म सुविधा",
+  "alarmKitSettingDescription": "सूचना अलार्मजस्तै बज्नेछ। फोन साइलेन्ट वा फोकस मोडमा हुँदा पनि तपाईंले सूचना पाउनुहुनेछ।",
   "todayPillNumberFeatureAppealTitle": "आजको चक्कीको नम्बर मिलाउनुहोस्",
   "todayPillNumberFeatureAppealShortDescription": "चक्कीको नम्बर नमिलेमा सेटिङमा सच्याउन सक्नुहुन्छ",
   "todayPillNumberFeatureAppealHeadline": "तपाईं आजको चक्की नम्बर परिवर्तन गर्न सक्नुहुन्छ",

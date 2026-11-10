@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "Pillerlarm som en väckarklocka",
   "alarmKitFeatureAppealBody": "Med AlarmKit, som finns från iOS 26, påminner ett alarm som hörs även i tyst läge eller fokusläge dig om att ta ditt p-piller.",
   "alarmKitSettingTitle": "Alarmfunktion",
+  "alarmKitSettingDescription": "Notisen låter som en väckarklocka. Du får den även när telefonen är i tyst läge eller fokusläge.",
   "todayPillNumberFeatureAppealTitle": "Justera dagens tablettnummer",
   "todayPillNumberFeatureAppealShortDescription": "Om tablettnumret inte stämmer kan du ändra det i inställningarna",
   "todayPillNumberFeatureAppealHeadline": "Du kan ändra dagens tablettnummer",

@@ -511,6 +511,7 @@
   "alarmKitFeatureAppealHeadline": "එලාම් ඔරලෝසුවක් වැනි පෙති ගැනීමේ එලාමයක්",
   "alarmKitFeatureAppealBody": "iOS 26 සහ ඊට පසු අනුවාදවල ලබාගත හැකි AlarmKit භාවිතයෙන්, නිහඬ ප්‍රකාරයේ හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේ පවා නාද වන එලාමයක් ඔබට පෙත්ත ගැනීමේ වේලාව මතක් කර දෙයි.",
   "alarmKitSettingTitle": "එලාම් විශේෂාංගය",
+  "alarmKitSettingDescription": "දැනුම්දීම එලාම් එකක් මෙන් නාද වේ. දුරකථනය නිහඬ ප්‍රකාරයේ හෝ අවධානය යොමු කිරීමේ ප්‍රකාරයේ තිබුණත් ඔබට දැනුම්දීම ලැබේ.",
   "todayPillNumberFeatureAppealTitle": "අද පෙති අංකය සකසන්න",
   "todayPillNumberFeatureAppealShortDescription": "පෙති අංකය නොගැළපේ නම්, සැකසීම් තුළ එය නිවැරදි කළ හැකියි",
   "todayPillNumberFeatureAppealHeadline": "ඔබට අද දින පෙති අංකය වෙනස් කළ හැකියි",
