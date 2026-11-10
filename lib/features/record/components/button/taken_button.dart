@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -80,7 +80,7 @@ class TakenButton extends ConsumerWidget {
               errorLogger.recordError(exception, stack);
               if (context.mounted) showErrorAlert(context, exception);
             } finally {
-              FlutterAppBadger.removeBadge();
+              AppBadgePlus.updateBadge(0);
             }
           },
         ),

@@ -60,7 +60,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  flutter_app_badger: ^1.2.0
+  app_badge_plus: ^1.4.0
   purchases_flutter: ^10.10.0
   flutter_local_notifications: ^19.5.0
   webview_flutter: ^4.13.0
@@ -95,13 +95,18 @@ dev_dependencies:
   riverpod_lint: 2.3.10
   riverpod_generator: 2.4.0
 
+dependency_overrides:
+  # new_version_plus 1.0.1 (最新) が `device_info_plus: ^10.0.0` に固定しており、10 系は Package.swift を持たず CocoaPods を要求する。
+  # 11.3.0 以降は SwiftPM 対応で、new_version_plus が使う API (iosInfo.identifierForVendor / androidInfo.id) は 12 系でも変わらない
+  device_info_plus: ^12.2.0
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
   config:
-    # iOS の plugin は Swift Package Manager で取り込む (SwiftPM 未対応の plugin だけ CocoaPods に残る)。開発者のグローバル設定
+    # iOS の plugin はすべて Swift Package Manager で取り込み、CocoaPods は使わない。開発者のグローバル設定
     # (`flutter config --no-enable-swift-package-manager`) で手元と CI の取り込み方が食い違わないようプロジェクトで固定する
     enable-swift-package-manager: true
   generate: true

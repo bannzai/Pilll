@@ -1,7 +1,7 @@
 ---
 name: fix-dependabot-prs
 description: dependabotから上がってきた複数のPRを一括で解決し、まとめPRを作成する。dependabotのPR対応を依頼された時に使用。
-allowed-tools: Read, Bash(gh run:*), Bash(gh pr:*), Bash(git status:*), Bash(git push:*), Bash(git add:*), Bash(git commit:*), Bash(git cherry-pick:*), Bash(git merge:*), Bash(git fetch:*), Bash(git pull:*), Bash(git diff:*), Bash(git checkout:*), Bash(flutter:*), Bash(dart:*), Bash(pod:*), Glob, Grep, Write
+allowed-tools: Read, Bash(gh run:*), Bash(gh pr:*), Bash(git status:*), Bash(git push:*), Bash(git add:*), Bash(git commit:*), Bash(git cherry-pick:*), Bash(git merge:*), Bash(git fetch:*), Bash(git pull:*), Bash(git diff:*), Bash(git checkout:*), Bash(flutter:*), Bash(dart:*), Glob, Grep, Write
 ---
 
 # Dependabot PRまとめ解決スキル
@@ -65,37 +65,20 @@ git add -A
 git commit -m "chore: run build_runner after dependency updates"
 ```
 
-### 7. iOS Podfile.lockの更新
-
-iOSの依存関係も更新が必要な場合が多い:
-
-```bash
-cd ios
-pod install --repo-update
-cd ..
-```
-
-変更があればコミット:
-
-```bash
-git add ios/Podfile.lock
-git commit -m "chore: update Podfile.lock"
-```
-
-### 8. ビルド・テストの確認
+### 7. ビルド・テストの確認
 
 ```bash
 flutter analyze
 flutter test
 ```
 
-### 9. まとめPRを作成
+### 8. まとめPRを作成
 
 `~/.agents/skills/commit-create-pr/SKILL.md` に従い、push・PR 作成を行う。
-本文には取り込んだ PR とバージョン変更、コード生成・Podfile.lock の更新内容、検証結果を記載する。
+本文には取り込んだ PR とバージョン変更、コード生成の更新内容、検証結果を記載する。
 除外した PR があれば、理由・背景・今後の対応も同じ本文にまとめる。
 
-### 10. 元のdependabot PRをクローズ
+### 9. 元のdependabot PRをクローズ
 
 まとめPRがマージされた後、元のdependabot PRをクローズする:
 
@@ -107,6 +90,5 @@ gh pr close <PR番号> --comment "まとめPR #<まとめPR番号> で対応し�
 
 - dependabotのPRは作成時点でCIが落ちていることが多いので、必ずCI結果を確認する
 - Flutter/Dartプロジェクトでは`build_runner`の実行が必要なことが多い
-- iOSビルドには`Podfile.lock`の更新が必要なことが多い
 - 複数のパッケージ更新で依存関係が矛盾する場合は、無理に両方を取り込まず、片方を諦める判断も重要
 - 諦めた場合は必ず理由を記録する
