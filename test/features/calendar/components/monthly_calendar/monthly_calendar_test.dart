@@ -272,6 +272,9 @@ void main() {
         expect(dayTileWeekdays.entries.every((entry) => entry.value == WeekdayFunctions.weekdayFromDate(entry.key)), isTrue);
         expect(dayTileWeekdays[DateTime(2020, 9, 13)], Weekday.Sunday);
         expect(dayTileWeekdays[DateTime(2020, 9, 14)], Weekday.Monday);
+        // 1 行目の列の並びが見出しと同じ曜日の順になる (2020-09-01 は火曜日なので、1 行目は月曜日始まりで 08-31、日曜日始まりで 08-30 から)
+        expect(dayTileWeekdays.values.take(Weekday.values.length).toList(), WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday));
+        expect(dayTileWeekdays.keys.first, firstWeekday == Weekday.Monday ? DateTime(2020, 8, 31) : DateTime(2020, 8, 30));
       });
     }
   });
