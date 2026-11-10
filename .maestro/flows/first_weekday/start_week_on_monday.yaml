@@ -1,0 +1,100 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+---
+# 設定の「週の始まりを月曜日にする」を ON にすると、カレンダーと生理タブの週の行が月曜日から始まり、
+# アプリを起動し直しても月曜日始まりのまま表示されることを確かめる。
+# 曜日の並びは Maestro の assert では比べられないため、各画面を maestro-artifacts/ に撮って目視で確かめる
+# (maestro-artifacts は .github/scripts/maestro-e2e-run.sh が作って artifact に上げるディレクトリ)。
+# 待ち時間の 60000・30000 は translation_screenshot/capture.yaml と同じ値 (起動を含む待ちと、タブを切り替えた後の画面の待ち)
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+# 起動直後に waitForAnimationToEnd を置かない理由はサブフローの先頭に書いている
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
+- waitForAnimationToEnd
+
+# 設定タブ (タブは Image 型で text 検出不可のため座標タップ)
+- tapOn:
+    point: "88%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "settings_page_body"
+    timeout: 30000
+- scrollUntilVisible:
+    element: "週の始まりを月曜日にする"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_settings_off"
+- tapOn: "週の始まりを月曜日にする"
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_settings_on"
+
+# カレンダー
+- tapOn:
+    point: "62%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "calendar_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_calendar_monday"
+
+# 生理記録
+- tapOn:
+    point: "37%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "menstruation_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_menstruation_monday"
+
+# 起動し直しても設定が残る
+- stopApp
+- launchApp
+- extendedWaitUntil:
+    visible: "ピルシートを追加"
+    timeout: 60000
+- tapOn:
+    point: "62%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "calendar_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_calendar_monday_after_relaunch"
+
+# 設定を OFF に戻すと日曜日始まりに戻る
+- tapOn:
+    point: "88%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "settings_page_body"
+    timeout: 30000
+- scrollUntilVisible:
+    element: "週の始まりを月曜日にする"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- waitForAnimationToEnd
+- tapOn: "週の始まりを月曜日にする"
+- waitForAnimationToEnd
+- tapOn:
+    point: "62%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "calendar_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_calendar_sunday"
+- tapOn:
+    point: "37%,95%"
+- extendedWaitUntil:
+    visible:
+      id: "menstruation_page_body"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/first_weekday_menstruation_sunday"
