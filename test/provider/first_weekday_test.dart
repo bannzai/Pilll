@@ -11,38 +11,54 @@ void main() {
   group("#firstWeekdayProvider", () {
     test("設定を一度も切り替えていない端末は日曜日", () async {
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final container = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)]);
+      final container = ProviderContainer(overrides: [
+        sharedPreferencesProvider
+            .overrideWithValue(await SharedPreferences.getInstance())
+      ]);
       addTearDown(container.dispose);
 
       expect(container.read(firstWeekdayProvider), Weekday.Sunday);
     });
     test("週の始まりを月曜日にする設定が ON で保存されている端末は月曜日", () async {
-      SharedPreferences.setMockInitialValues({BoolKey.isFirstWeekdayMonday: true});
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final container = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)]);
+      SharedPreferences.setMockInitialValues(
+          {BoolKey.isFirstWeekdayMonday: true});
+      final container = ProviderContainer(overrides: [
+        sharedPreferencesProvider
+            .overrideWithValue(await SharedPreferences.getInstance())
+      ]);
       addTearDown(container.dispose);
 
       expect(container.read(firstWeekdayProvider), Weekday.Monday);
     });
     test("週の始まりを月曜日にする設定が OFF で保存されている端末は日曜日", () async {
-      SharedPreferences.setMockInitialValues({BoolKey.isFirstWeekdayMonday: false});
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final container = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)]);
+      SharedPreferences.setMockInitialValues(
+          {BoolKey.isFirstWeekdayMonday: false});
+      final container = ProviderContainer(overrides: [
+        sharedPreferencesProvider
+            .overrideWithValue(await SharedPreferences.getInstance())
+      ]);
       addTearDown(container.dispose);
 
       expect(container.read(firstWeekdayProvider), Weekday.Sunday);
     });
     test("設定を ON に切り替えると月曜日になり、OFF に戻すと日曜日になる", () async {
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final container = ProviderContainer(overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)]);
+      final container = ProviderContainer(overrides: [
+        sharedPreferencesProvider
+            .overrideWithValue(await SharedPreferences.getInstance())
+      ]);
       addTearDown(container.dispose);
 
-      await container.read(boolSharedPreferencesProvider(BoolKey.isFirstWeekdayMonday).notifier).set(true);
+      await container
+          .read(boolSharedPreferencesProvider(BoolKey.isFirstWeekdayMonday)
+              .notifier)
+          .set(true);
       expect(container.read(firstWeekdayProvider), Weekday.Monday);
 
-      await container.read(boolSharedPreferencesProvider(BoolKey.isFirstWeekdayMonday).notifier).set(false);
+      await container
+          .read(boolSharedPreferencesProvider(BoolKey.isFirstWeekdayMonday)
+              .notifier)
+          .set(false);
       expect(container.read(firstWeekdayProvider), Weekday.Sunday);
     });
   });

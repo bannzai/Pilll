@@ -10,42 +10,55 @@ void main() {
   group("SwitchListTile", () {
     testWidgets("設定を一度も切り替えていない端末はスイッチが OFF", (WidgetTester tester) async {
       SharedPreferences.setMockInitialValues({});
-      final sharedPreferences = await SharedPreferences.getInstance();
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)],
+          overrides: [
+            sharedPreferencesProvider
+                .overrideWithValue(await SharedPreferences.getInstance())
+          ],
           child: const MaterialApp(home: Material(child: FirstWeekdayRow())),
         ),
       );
 
-      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value, isFalse);
+      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value,
+          isFalse);
     });
-    testWidgets("週の始まりを月曜日にする設定が ON で保存されている端末はスイッチが ON", (WidgetTester tester) async {
-      SharedPreferences.setMockInitialValues({BoolKey.isFirstWeekdayMonday: true});
-      final sharedPreferences = await SharedPreferences.getInstance();
+    testWidgets("週の始まりを月曜日にする設定が ON で保存されている端末はスイッチが ON",
+        (WidgetTester tester) async {
+      SharedPreferences.setMockInitialValues(
+          {BoolKey.isFirstWeekdayMonday: true});
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)],
+          overrides: [
+            sharedPreferencesProvider
+                .overrideWithValue(await SharedPreferences.getInstance())
+          ],
           child: const MaterialApp(home: Material(child: FirstWeekdayRow())),
         ),
       );
 
-      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value, isTrue);
+      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value,
+          isTrue);
     });
-    testWidgets("週の始まりを月曜日にする設定が OFF で保存されている端末はスイッチが OFF", (WidgetTester tester) async {
-      SharedPreferences.setMockInitialValues({BoolKey.isFirstWeekdayMonday: false});
-      final sharedPreferences = await SharedPreferences.getInstance();
+    testWidgets("週の始まりを月曜日にする設定が OFF で保存されている端末はスイッチが OFF",
+        (WidgetTester tester) async {
+      SharedPreferences.setMockInitialValues(
+          {BoolKey.isFirstWeekdayMonday: false});
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)],
+          overrides: [
+            sharedPreferencesProvider
+                .overrideWithValue(await SharedPreferences.getInstance())
+          ],
           child: const MaterialApp(home: Material(child: FirstWeekdayRow())),
         ),
       );
 
-      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value, isFalse);
+      expect(tester.widget<SwitchListTile>(find.byType(SwitchListTile)).value,
+          isFalse);
     });
   });
 }

@@ -15,9 +15,7 @@ List<List<DateTime>> menstruationWeekCalendarDataSource({required Weekday firstW
   var begin = base.subtract(const Duration(days: 90));
   begin = begin.subtract(Duration(days: weekdayOffset(date: begin, firstWeekday: firstWeekday)));
 
-  final end = endDayOfWeekday(base.add(const Duration(days: 90)), firstWeekday: firstWeekday);
-
-  var diffDay = daysBetween(begin, end);
+  var diffDay = daysBetween(begin, endDayOfWeekday(base.add(const Duration(days: 90)), firstWeekday: firstWeekday));
   diffDay += Weekday.values.length - diffDay % Weekday.values.length;
   List<DateTime> days = [];
   for (int i = 0; i < diffDay; i++) {
