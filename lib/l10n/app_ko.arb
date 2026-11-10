@@ -291,7 +291,7 @@
   "choosePillType": "피임약 종류 선택",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간 알림",
   "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있으면 {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 생성돼요",
-  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} 기간 알림을 {value}으로 설정했어요",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} 기간 알림을 {value} 상태로 설정했어요",
   "requestForCancelSurvey": "구독 취소 후 설문조사에 참여해 주세요",
   "pilllDescription": "Pilll, 피임약 복용 알림 앱",
   "reachedMaximumCountOfReminderTimes": "등록할 수 있는 알림 시간이 최대 개수에 도달했어요. {ReminderTimeMaximumCount}개 이하로 줄여 주세요",
