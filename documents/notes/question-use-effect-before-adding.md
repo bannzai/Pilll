@@ -12,6 +12,6 @@ FeatureAppeal の実装プランに対して、owner から「useEffectは本当
 
 **どう使う:**
 
-- Route で遷移する画面 (FeatureAppeal の HelpPage 等) を開いた時のログは、`useEffect` ではなく Route の `RouteSettings(name: ...)` を設定して `FirebaseAnalyticsObserver` に送らせる (`lib/features/feature_appeal/CLAUDE.md`「Route 定義」)。Route を伴わない切り替え (ホームのタブは `lib/features/home/page.dart` の `_screenTracking` が記録する) には当てはまらない
+- `PageRoute` で遷移する画面 (FeatureAppeal の HelpPage 等) を開いた時のログは、`useEffect` ではなく Route の `RouteSettings(name: ...)` を設定して `FirebaseAnalyticsObserver` に送らせる (`lib/features/feature_appeal/CLAUDE.md`「Route 定義」)。`lib/app.dart` の `FirebaseAnalyticsObserver(analytics: firebaseAnalytics)` は絞り込みを指定しておらず、firebase_analytics の `lib/observer.dart` の既定は `defaultRouteFilter(Route<dynamic>? route) => route is PageRoute` のため、それ以外には当てはまらない: `showModalBottomSheet` で出す画面は開く関数の中で `analytics.logScreenView` を呼び (例: `lib/features/premium_introduction/premium_introduction_sheet.dart`)、ホームのタブの切り替えは `lib/features/home/page.dart` の `_screenTracking` が記録する
 - 押した時に自分の表示を消すだけなら `useState` の値を `onPressed` で書き換える
 - それでも `useEffect` が要る時は、なぜ要るかをプランかコードのコメントに 1 行書く
