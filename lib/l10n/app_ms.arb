@@ -291,6 +291,7 @@
   "choosePillType": "Sila pilih jenis pil",
   "notificationForNotTakenPeriod": "Pemberitahuan bagi tempoh {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Apabila pemberitahuan dimatikan, rekod pengambilan untuk tempoh {pillSheetPillSheetTypeNotTakenWord} juga dibuat secara automatik",
+  "notificationForNotTakenPeriodChanged": "Pemberitahuan untuk tempoh {pillSheetPillSheetTypeNotTakenWord} telah ditetapkan kepada {value}",
   "requestForCancelSurvey": "Sila bantu jawab tinjauan selepas pembatalan langganan",
   "pilllDescription": "Pilll, aplikasi peringatan untuk mengambil pil perancang",
   "reachedMaximumCountOfReminderTimes": "Had maksimum telah dicapai. Sila tetapkan tidak lebih daripada {ReminderTimeMaximumCount} waktu peringatan",

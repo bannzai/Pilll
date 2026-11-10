@@ -291,6 +291,7 @@
   "choosePillType": "ជ្រើសរើសប្រភេទថ្នាំគ្រាប់",
   "notificationForNotTakenPeriod": "ការជូនដំណឹងសម្រាប់រយៈពេល {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "ពេលបិទការជូនដំណឹង កំណត់ត្រាការលេបថ្នាំសម្រាប់អំឡុងពេល {pillSheetPillSheetTypeNotTakenWord} ក៏ត្រូវបានបង្កើតដោយស្វ័យប្រវត្តិដែរ",
+  "notificationForNotTakenPeriodChanged": "ការជូនដំណឹងសម្រាប់អំឡុងពេល{pillSheetPillSheetTypeNotTakenWord}ត្រូវបានកំណត់ជា {value} ហើយ",
   "requestForCancelSurvey": "សូមចូលរួមការស្ទង់មតិបន្ទាប់ពីបោះបង់ការជាវ",
   "pilllDescription": "Pilll កម្មវិធីរំលឹកការលេបថ្នាំពន្យារកំណើត",
   "reachedMaximumCountOfReminderTimes": "បានដល់ចំនួនអតិបរមានៃម៉ោងរំលឹកដែលអាចកំណត់បានហើយ។ សូមទុកត្រឹម {ReminderTimeMaximumCount} ម៉ោង ឬតិចជាងនេះ",

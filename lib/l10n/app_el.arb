@@ -291,6 +291,7 @@
   "choosePillType": "Επιλέξτε τύπο χαπιού",
   "notificationForNotTakenPeriod": "Ειδοποίηση για το διάστημα {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, δημιουργείται αυτόματα καταγραφή λήψης και για το διάστημα {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriodChanged": "Οι ειδοποιήσεις για την περίοδο {pillSheetPillSheetTypeNotTakenWord} ορίστηκαν σε {value}",
   "requestForCancelSurvey": "Θα θέλαμε τη βοήθειά σας σε μια έρευνα μετά την ακύρωση της συνδρομής",
   "pilllDescription": "Pilll — εφαρμογή υπενθύμισης για το αντισυλληπτικό χάπι",
   "reachedMaximumCountOfReminderTimes": "Φτάσατε στο μέγιστο πλήθος ωρών ειδοποίησης. Ορίστε έως {ReminderTimeMaximumCount}",

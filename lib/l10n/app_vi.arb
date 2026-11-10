@@ -291,6 +291,7 @@
   "choosePillType": "Chọn loại thuốc tránh thai",
   "notificationForNotTakenPeriod": "Thông báo cho giai đoạn {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Khi tắt thông báo, nhật ký uống thuốc cho giai đoạn {pillSheetPillSheetTypeNotTakenWord} cũng được tạo tự động",
+  "notificationForNotTakenPeriodChanged": "Đã đặt thông báo cho giai đoạn {pillSheetPillSheetTypeNotTakenWord} thành {value}",
   "requestForCancelSurvey": "Vui lòng tham gia khảo sát sau khi hủy gói đăng ký",
   "pilllDescription": "Pilll, ứng dụng lời nhắc uống thuốc tránh thai",
   "reachedMaximumCountOfReminderTimes": "Bạn đã đạt số lượng tối đa có thể đăng ký. Vui lòng đặt tối đa {ReminderTimeMaximumCount} thời điểm nhận thông báo",

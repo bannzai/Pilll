@@ -291,6 +291,7 @@
   "choosePillType": "Escolle o tipo de pílula",
   "notificationForNotTakenPeriod": "Notificación do período de {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Se as notificacións están desactivadas, tamén se crea automaticamente un rexistro de tomas para o período de {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriodChanged": "As notificacións do período de {pillSheetPillSheetTypeNotTakenWord} configuráronse en {value}",
   "requestForCancelSurvey": "Axúdanos cunha enquisa tras cancelar a túa subscrición",
   "pilllDescription": "Pilll, unha aplicación de recordatorios para tomar a pílula anticonceptiva",
   "reachedMaximumCountOfReminderTimes": "Chegaches ao límite de horas de recordatorio. Deixa {ReminderTimeMaximumCount} ou menos, por favor",

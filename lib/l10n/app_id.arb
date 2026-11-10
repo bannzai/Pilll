@@ -291,6 +291,7 @@
   "choosePillType": "Pilih jenis pil",
   "notificationForNotTakenPeriod": "Notifikasi untuk periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Saat notifikasi dimatikan, catatan minum pil untuk periode {pillSheetPillSheetTypeNotTakenWord} juga dibuat otomatis",
+  "notificationForNotTakenPeriodChanged": "Notifikasi untuk periode {pillSheetPillSheetTypeNotTakenWord} kini diatur ke {value}",
   "requestForCancelSurvey": "Mohon bantu isi survei setelah membatalkan langganan",
   "pilllDescription": "Pilll, aplikasi pengingat untuk minum pil kontrasepsi",
   "reachedMaximumCountOfReminderTimes": "Jumlah waktu pengingat sudah mencapai batas. Atur paling banyak {ReminderTimeMaximumCount} waktu pengingat",

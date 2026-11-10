@@ -291,6 +291,7 @@
   "choosePillType": "Pasirinkite tabletės tipą",
   "notificationForNotTakenPeriod": "Pranešimai laikotarpiu: {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kai pranešimai išjungti, vartojimo įrašas laikotarpiui {pillSheetPillSheetTypeNotTakenWord} taip pat sukuriamas automatiškai",
+  "notificationForNotTakenPeriodChanged": "Laikotarpio {pillSheetPillSheetTypeNotTakenWord} pranešimai nustatyti į {value}",
   "requestForCancelSurvey": "Prašome dalyvauti apklausoje po prenumeratos atšaukimo",
   "pilllDescription": "Pilll – priminimų programėlė kontraceptinėms tabletėms vartoti",
   "reachedMaximumCountOfReminderTimes": "Pasiektas didžiausias pranešimo laikų skaičius. Palikite ne daugiau kaip {ReminderTimeMaximumCount}",

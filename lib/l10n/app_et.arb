@@ -291,6 +291,7 @@
   "choosePillType": "Vali pilli tüüp",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}-perioodi teavitus",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Kui teavitused on välja lülitatud, luuakse {pillSheetPillSheetTypeNotTakenWord}-perioodi võtmiskirje samuti automaatselt",
+  "notificationForNotTakenPeriodChanged": "Perioodi {pillSheetPillSheetTypeNotTakenWord} teavitused on nüüd seadistatud olekusse {value}",
   "requestForCancelSurvey": "Palume sul pärast tellimuse tühistamist küsitlusele vastata",
   "pilllDescription": "Pilll — meeldetuletuste rakendus rasestumisvastase pilli võtmiseks",
   "reachedMaximumCountOfReminderTimes": "Oled jõudnud meeldetuletuse kellaaegade ülempiirini. Palun jäta alles kuni {ReminderTimeMaximumCount} kellaaega",

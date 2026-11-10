@@ -291,6 +291,7 @@
   "choosePillType": "පෙති වර්ගය තෝරන්න",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා දැනුම්දීම",
   "autoRecordForNotTakenPeriodIfNotificationOff": "දැනුම්දීම් අක්‍රිය කර ඇති විට, {pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා පෙති ගැනීමේ සටහනද ස්වයංක්‍රීයව සෑදේ",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා දැනුම්දීම් {value} ලෙස සකසා ඇත",
   "requestForCancelSurvey": "දායකත්වය අවලංගු කිරීමෙන් පසු සමීක්ෂණයට කරුණාකර සහභාගී වන්න",
   "pilllDescription": "Pilll, උපත් පාලන පෙති ගැනීම සඳහා සිහිකැඳවීමේ යෙදුම",
   "reachedMaximumCountOfReminderTimes": "සිහිකැඳවීම් වේලාවන් එක් කළ හැකි උපරිම සීමාවට පැමිණ ඇත. කරුණාකර වේලාවන් {ReminderTimeMaximumCount}ක් හෝ ඊට අඩුවෙන් තබන්න",

@@ -291,6 +291,7 @@
   "choosePillType": "Hap türünü seçin",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dönemi bildirimi",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirimler kapalıyken {pillSheetPillSheetTypeNotTakenWord} dönemi için hap kullanım kaydı da otomatik olarak oluşturulur",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} dönemi bildirimleri {value} olarak ayarlandı",
   "requestForCancelSurvey": "Abonelik iptali sonrası anket ricası",
   "pilllDescription": "Pilll, doğum kontrol hapı için hatırlatma uygulaması",
   "reachedMaximumCountOfReminderTimes": "Kaydedilebilecek hatırlatma saati sınırına ulaştınız. Lütfen en fazla {ReminderTimeMaximumCount} hatırlatma saati kaydedin",

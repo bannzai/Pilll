@@ -291,6 +291,7 @@
   "choosePillType": "Tabletka turini tanlang",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} davri uchun bildirishnoma",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirishnomalar oʻchirilganda, {pillSheetPillSheetTypeNotTakenWord} davri uchun tabletka qabul qilish qaydi ham avtomatik yaratiladi",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} davri uchun bildirishnomalar {value} holatiga oʻrnatildi",
   "requestForCancelSurvey": "Obunani bekor qilganingizdan keyin soʻrovnomada qatnashishingizni soʻraymiz",
   "pilllDescription": "Pilll — kontratseptiv tabletkani ichish uchun eslatma ilovasi",
   "reachedMaximumCountOfReminderTimes": "Eslatma vaqtlarini qoʻshishning eng yuqori chegarasiga yetdingiz. Iltimos, koʻpi bilan {ReminderTimeMaximumCount} ta vaqt qoldiring",

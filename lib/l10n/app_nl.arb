@@ -291,6 +291,7 @@
   "choosePillType": "Kies het type pil",
   "notificationForNotTakenPeriod": "Melding voor de periode {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Als meldingen uitstaan, wordt ook voor de periode {pillSheetPillSheetTypeNotTakenWord} automatisch een innameregistratie aangemaakt",
+  "notificationForNotTakenPeriodChanged": "Meldingen voor de periode {pillSheetPillSheetTypeNotTakenWord} staan nu op {value}",
   "requestForCancelSurvey": "Help ons met een enquête na het opzeggen van je abonnement",
   "pilllDescription": "Pilll, een app met herinneringen voor je anticonceptiepil",
   "reachedMaximumCountOfReminderTimes": "Je hebt het maximumaantal herinneringstijden bereikt. Stel maximaal {ReminderTimeMaximumCount} herinneringstijden in",

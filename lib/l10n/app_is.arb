@@ -291,6 +291,7 @@
   "choosePillType": "Veldu tegund pillu",
   "notificationForNotTakenPeriod": "Tilkynning um {pillSheetPillSheetTypeNotTakenWord}-tímabil",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Þegar slökkt er á tilkynningum verður inntökuskrá fyrir {pillSheetPillSheetTypeNotTakenWord}-tímabilið einnig til sjálfkrafa",
+  "notificationForNotTakenPeriodChanged": "Tilkynningar fyrir tímabilið {pillSheetPillSheetTypeNotTakenWord} eru nú stilltar á {value}",
   "requestForCancelSurvey": "Beiðni um þátttöku í könnun eftir uppsögn",
   "pilllDescription": "Pilll – áminningarapp fyrir töku getnaðarvarnarpillunnar",
   "reachedMaximumCountOfReminderTimes": "Hámarksfjölda áminningartíma er náð. Hafðu þá í mesta lagi {ReminderTimeMaximumCount}",

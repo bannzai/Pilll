@@ -291,6 +291,7 @@
   "choosePillType": "गोली का प्रकार चुनें",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचना",
   "autoRecordForNotTakenPeriodIfNotificationOff": "सूचनाएँ बंद होने पर {pillSheetPillSheetTypeNotTakenWord} अवधि के सेवन रिकॉर्ड भी अपने आप बन जाते हैं",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} अवधि की सूचनाएँ {value} पर सेट कर दी गई हैं",
   "requestForCancelSurvey": "सदस्यता रद्द करने के बाद सर्वेक्षण में भाग लेने का अनुरोध",
   "pilllDescription": "Pilll – गोली लेने के लिए खास तौर पर बना रिमाइंडर ऐप",
   "reachedMaximumCountOfReminderTimes": "रिमाइंडर के समय जोड़ने की अधिकतम सीमा पूरी हो गई है। कृपया {ReminderTimeMaximumCount} या उससे कम समय रखें",

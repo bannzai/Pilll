@@ -291,6 +291,7 @@
   "choosePillType": "পিলের ধরন বেছে নিন",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ের বিজ্ঞপ্তি",
   "autoRecordForNotTakenPeriodIfNotificationOff": "বিজ্ঞপ্তি বন্ধ থাকলে {pillSheetPillSheetTypeNotTakenWord} সময়ের সেবনের রেকর্ডও স্বয়ংক্রিয়ভাবে তৈরি হয়",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} সময়ের বিজ্ঞপ্তি {value} করা হয়েছে",
   "requestForCancelSurvey": "সদস্যতা বাতিলের পর জরিপে অংশ নিতে আপনাকে অনুরোধ করছি",
   "pilllDescription": "Pilll, জন্মনিয়ন্ত্রণ পিল খাওয়ার রিমাইন্ডার অ্যাপ",
   "reachedMaximumCountOfReminderTimes": "রিমাইন্ডারের সময় যোগ করার সর্বোচ্চ সীমায় পৌঁছেছেন। অনুগ্রহ করে {ReminderTimeMaximumCount}টি বা তার কম সময় রাখুন",

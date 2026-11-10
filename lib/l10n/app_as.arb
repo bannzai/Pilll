@@ -291,6 +291,7 @@
   "choosePillType": "পিলৰ প্ৰকাৰ বাছনি কৰক",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} সময়ছোৱাৰ জাননী",
   "autoRecordForNotTakenPeriodIfNotificationOff": "জাননী বন্ধ থাকিলে {pillSheetPillSheetTypeNotTakenWord} সময়ছোৱাৰ ঔষধ সেৱনৰ ৰেকৰ্ডো স্বয়ংক্ৰিয়ভাৱে তৈয়াৰ হয়",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} সময়ৰ জাননী {value} কৰা হৈছে",
   "requestForCancelSurvey": "বাতিল কৰাৰ পিছৰ সমীক্ষাত অনুগ্ৰহ কৰি অংশ লওক",
   "pilllDescription": "Pilll, গৰ্ভনিৰোধক পিল খোৱাৰ সোঁৱৰণী এপ",
   "reachedMaximumCountOfReminderTimes": "পঞ্জীয়ন কৰিব পৰা সোঁৱৰাই দিয়াৰ সময়ৰ সৰ্বাধিক সীমাত উপনীত হৈছে। অনুগ্ৰহ কৰি সময়ৰ সংখ্যা {ReminderTimeMaximumCount}টাৰ ভিতৰত ৰাখক",

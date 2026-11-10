@@ -291,6 +291,7 @@
   "choosePillType": "د ګولۍ ډول وټاکئ",
   "notificationForNotTakenPeriod": "د {pillSheetPillSheetTypeNotTakenWord} مودې خبرتیا",
   "autoRecordForNotTakenPeriodIfNotificationOff": "کله چې خبرتیاوې بندې وي، د {pillSheetPillSheetTypeNotTakenWord} مودې لپاره د ګولۍ اخیستلو ریکارډ هم په اوتومات ډول جوړېږي",
+  "notificationForNotTakenPeriodChanged": "د {pillSheetPillSheetTypeNotTakenWord} مودې خبرتیاوې په {value} تنظیم شوې",
   "requestForCancelSurvey": "د ګډون له لغوه کولو وروسته، مهرباني وکړئ په سروې کې برخه واخلئ",
   "pilllDescription": "Pilll، د امیندوارۍ مخنیوي ګولۍ د خوړلو لپاره د یادونې اپلېکېشن",
   "reachedMaximumCountOfReminderTimes": "د یادونې د وختونو تر ټولو ډېر شمېر ته رسېدلي یاست. مهرباني وکړئ شمېر یې تر {ReminderTimeMaximumCount} یا لږ پورې راکم کړئ",

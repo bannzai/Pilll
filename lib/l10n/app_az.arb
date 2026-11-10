@@ -291,6 +291,7 @@
   "choosePillType": "Həb növünü seçin",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildiriş",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Bildirişlər söndürüldükdə, {pillSheetPillSheetTypeNotTakenWord} dövrü üçün həb qəbulu qeydi də avtomatik olaraq yaradılır",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} dövrü üçün bildirişlər {value} olaraq təyin edildi",
   "requestForCancelSurvey": "Ləğvdən sonrakı sorğuda iştirak etməyinizi xahiş edirik",
   "pilllDescription": "Pilll — həb qəbulunuz üçün xatırlatma tətbiqi",
   "reachedMaximumCountOfReminderTimes": "Qeyd edə biləcəyiniz xatırlatma vaxtlarının maksimum sayına çatmısınız. Zəhmət olmasa, onların sayını {ReminderTimeMaximumCount} və ya daha az saxlayın",

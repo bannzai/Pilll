@@ -291,6 +291,7 @@
   "choosePillType": "Wybierz rodzaj tabletki",
   "notificationForNotTakenPeriod": "Powiadomienia w dniach: {pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Gdy powiadomienia są wyłączone, zapis przyjęcia tabletki w czasie: {pillSheetPillSheetTypeNotTakenWord} również tworzy się automatycznie",
+  "notificationForNotTakenPeriodChanged": "Powiadomienia na okres {pillSheetPillSheetTypeNotTakenWord} ustawiono na {value}",
   "requestForCancelSurvey": "Pomóż nam, odpowiadając na ankietę po anulowaniu subskrypcji",
   "pilllDescription": "Pilll – aplikacja z przypomnieniami o przyjęciu tabletki antykoncepcyjnej",
   "reachedMaximumCountOfReminderTimes": "Osiągnięto maksymalną liczbę godzin powiadomień. Pozostaw najwyżej {ReminderTimeMaximumCount}",

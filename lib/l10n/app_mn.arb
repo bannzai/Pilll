@@ -291,6 +291,7 @@
   "choosePillType": "Эмийн төрлөө сонгоно уу",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} хугацааны мэдэгдэл",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Мэдэгдлийг унтраасан үед ч {pillSheetPillSheetTypeNotTakenWord} хугацааны эм уусан бүртгэл автоматаар үүснэ",
+  "notificationForNotTakenPeriodChanged": "{pillSheetPillSheetTypeNotTakenWord} үеийн мэдэгдлийг {value} болгож тохирууллаа",
   "requestForCancelSurvey": "Захиалгаа цуцалсны дараах санал асуулгад оролцоно уу",
   "pilllDescription": "Pilll — жирэмслэлтээс хамгаалах эм уух сануулгатай апп",
   "reachedMaximumCountOfReminderTimes": "Сануулах цагийн дээд тоонд хүрсэн байна. Тоог нь {ReminderTimeMaximumCount}-аас хэтрүүлэхгүй болгож өгнө үү",

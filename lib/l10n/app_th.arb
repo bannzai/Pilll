@@ -291,6 +291,7 @@
   "choosePillType": "เลือกประเภทของยาคุม",
   "notificationForNotTakenPeriod": "การแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}",
   "autoRecordForNotTakenPeriodIfNotificationOff": "หากปิดการแจ้งเตือน ระบบจะสร้างบันทึกการทานยาสำหรับช่วง{pillSheetPillSheetTypeNotTakenWord}ให้โดยอัตโนมัติค่ะ",
+  "notificationForNotTakenPeriodChanged": "ตั้งค่าการแจ้งเตือนช่วง{pillSheetPillSheetTypeNotTakenWord}เป็น {value} แล้วค่ะ",
   "requestForCancelSurvey": "ขอความร่วมมือตอบแบบสอบถามหลังยกเลิกการสมัครสมาชิก",
   "pilllDescription": "Pilll แอปแจ้งเตือนเวลาทานยาเม็ดคุมกำเนิด",
   "reachedMaximumCountOfReminderTimes": "เพิ่มเวลาแจ้งเตือนครบจำนวนสูงสุดแล้วค่ะ กรุณาลดให้เหลือไม่เกิน {ReminderTimeMaximumCount} เวลาค่ะ",

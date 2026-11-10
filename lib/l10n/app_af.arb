@@ -291,6 +291,7 @@
   "choosePillType": "Kies jou piltipe",
   "notificationForNotTakenPeriod": "Kennisgewing vir die {pillSheetPillSheetTypeNotTakenWord}tydperk",
   "autoRecordForNotTakenPeriodIfNotificationOff": "As kennisgewings af is, word die innamerekord vir die {pillSheetPillSheetTypeNotTakenWord}tydperk ook outomaties ingevul",
+  "notificationForNotTakenPeriodChanged": "Kennisgewings vir die {pillSheetPillSheetTypeNotTakenWord}-tydperk is nou {value}",
   "requestForCancelSurvey": "Help asseblief met ’n opname ná jou kansellasie",
   "pilllDescription": "Pilll – ’n herinneringsapp spesiaal vir jou pilinname",
   "reachedMaximumCountOfReminderTimes": "Jy het die maksimum aantal kennisgewingtye bereik. Hou dit asseblief by hoogstens {ReminderTimeMaximumCount}",

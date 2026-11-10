@@ -291,6 +291,7 @@
   "choosePillType": "选择药片类型",
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}期提醒",
   "autoRecordForNotTakenPeriodIfNotificationOff": "关闭通知后，{pillSheetPillSheetTypeNotTakenWord}期间的服药记录也会自动创建",
+  "notificationForNotTakenPeriodChanged": "已将{pillSheetPillSheetTypeNotTakenWord}期间的通知设为{value}",
   "requestForCancelSurvey": "取消订阅后的问卷调查",
   "pilllDescription": "Pilll，专为服用避孕药设计的提醒应用",
   "reachedMaximumCountOfReminderTimes": "提醒时间已达到可添加的上限，请保留不超过 {ReminderTimeMaximumCount} 个",

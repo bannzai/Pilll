@@ -291,6 +291,7 @@
   "choosePillType": "Wähle deinen Pillentyp",
   "notificationForNotTakenPeriod": "Benachrichtigung zur {pillSheetPillSheetTypeNotTakenWord}-Phase",
   "autoRecordForNotTakenPeriodIfNotificationOff": "Wenn Benachrichtigungen ausgeschaltet sind, wird auch für die {pillSheetPillSheetTypeNotTakenWord}-Phase automatisch ein Einnahmeprotokoll erstellt",
+  "notificationForNotTakenPeriodChanged": "Benachrichtigungen für den Zeitraum {pillSheetPillSheetTypeNotTakenWord} sind jetzt auf {value} gestellt",
   "requestForCancelSurvey": "Bitte nimm nach der Kündigung an unserer Umfrage teil",
   "pilllDescription": "Pilll – deine App mit Erinnerungen an die Pille",
   "reachedMaximumCountOfReminderTimes": "Du hast die Höchstzahl an Erinnerungszeiten erreicht. Bitte lege höchstens {ReminderTimeMaximumCount} Erinnerungszeiten fest",
