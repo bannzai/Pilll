@@ -1,6 +1,6 @@
 ---
 status: launched          # evaluating | building | launched | pivoting | retiring | retired
-decision_date: 2026-11-11 # 次の判定日 (YYYY-MM-DD)。判定のたびに cycle_days 後へ進める
+decision_date: 2026-11-25 # 次の判定日 (YYYY-MM-DD)。判定のたびに cycle_days 後へ進める
 cycle_days: 14            # 判定の周期 (7 または 14)
 veto_wait_hours: 12       # 公開後の無人ループの拒否権の待ち時間 (既定 12)
 daily_issue_cap: 3        # 1 日に生成してよい改善 issue の上限 (意味の門。既定 3)
@@ -53,6 +53,7 @@ launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開�
 | 2026-10-30 | 無人実装 (bannzai/Pilll#2039) | 文言を持たない言語の端末では en で表示する。それまでは gen-l10n の一覧の先頭の af になっていた。サポート外の言語の利用者は日本語の端末ではないため ja より en の方が読める可能性が高く、`app_en.arb` は template の `app_ja.arb` のキーをすべて持つ。debug ビルドの既定 (ja) は開発者向けのため変えない | agent |
 | 2026-11-04 | 月の見出しの de の値が bannzai/Pilll#2017 の完了条件 (「Okt.」か「Oktober」) と違うという夜間レビューの指摘 (bannzai/Pilll#2087) | 月の見出し (`DateTimeFormatter.abbreviatedMonth`。カレンダーの服用履歴カードの月の区切りと生理画面の上部) の de は「Okt」(ピリオドなし) のままにする。#2017 の狙いの「数字だけでなく月を表す見出しだと伝わる」は満たしている。「Okt」は intl 0.20.3 (`pubspec.lock`) の `lib/date_time_patterns.dart` で de の `ABBR_MONTH` (skeleton `MMM`) が `LLL` (単独で出す月名の省略形) に写った値で、日付の中の月名 (`yearAndMonth` の「Okt. 2026」) とは別の形 (値は `test/utils/formatter/date_time_formatter_test.dart` の `#abbreviatedMonth`・`#yearAndMonth` で固定)。同じ intl の `lib/date_symbol_data_local.dart` の de は `SHORTMONTHS` (日付の中で使う形) が「Okt.」、`STANDALONESHORTMONTHS` (単独で出す形) が「Okt」で、月名を単独で出す見出しには単独の形が合う。全言語で `ABBR_MONTH` に従う作りを保ち、de だけ書式を個別に指定しない。同じ指摘が利用者から出た時に改めて検討する | agent |
 | 2026-11-04 | 月日の書式の決定 (PR bannzai/Pilll#2050、bannzai/Pilll#2024) に根拠の記録が無いという夜間レビューの指摘 (bannzai/Pilll#2104) | ja の月日・曜日付き月日の表示は変えない。`DateTimeFormatter.monthAndDay` は ja 以外も月名にせず、各言語の数字の並び (es「29/10」・de「29.10.」) にする。ピルシートの日付表示モードの狭いセル (`PillSheetGroup.displayPillSheetDate`) と同じ関数を使うためで、record 画面の上部・服用お休みを始めるダイアログ (`record_page_rest_duration_dialog.dart`)・服用お休みの期間を手で変える画面 (`change_manual_rest_duration.dart`)・生理の記録ボタン・生理の一覧・リマインド通知のタイトルも同じ書式になる。record 画面の上部は「29/10 (jue)」とし、bannzai/Pilll#1990 の候補「29 de oct. (jue)」は採らない。#1990 は、数字だけの月日は地域によって月と日の順が曖昧になると指摘し、本文の「決定」で候補を採ると決めていたが、#2050 は狭いセルと同じ関数を使う作りを保って採らなかった。日本式の月日と各言語の曜日が混ざる表示は #2050 で解消したが、数字だけの月日の曖昧さの指摘は残る。record 画面の上部だけに専用の書式を足すのは同じ指摘が続く時に検討する。`monthAndWeekday` (生理予定日カード) は ja 以外を intl の `DateFormat.ABBR_MONTH_WEEKDAY_DAY` にする。es などは月名の省略形 (「sáb, 16 ene」) になり、ko (「1월 16일 (토)」)・zh (「1月16日周六」) はこの書式でも数字の月になる (値は `test/utils/formatter/date_time_formatter_test.dart` の `#monthAndWeekday` で固定)。bannzai/Pilll#1978 の候補「sáb, 16 de enero」の全形は採らない。同じ行のレイアウトを直した bannzai/Pilll#2019 の後でも行を長くしないため | agent |
+| 2026-11-11 | 判定日 2026-11-11 の判定 | 継続。判定基準の 5 指標 (App Store JP 平均評価・直近 14 日の ★1〜2 レビュー数・直近 14 日の FATAL クラッシュ issue 数・MRR・D7 リテンション) がすべて継続のしきい値を満たし、打ち切り条件には当たらない。MRR と D7 リテンションは継続のしきい値を下回っていないため転換の条件を判定しない。転換の条件で記録すると決めた直近 14 日の新規顧客の合計と初期設定の完了率は今回が初回の記録で、次の判定日からの比較に使う。指標の値は `documents/loop/metrics-2026-11-11.json` | agent |
 
 ## agent に任せること
 
