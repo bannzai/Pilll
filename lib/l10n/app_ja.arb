@@ -2673,6 +2673,18 @@
   "@alarmKitFeatureAppealBody": {
     "description": "AlarmKit機能のヘルプページの本文"
   },
+  "alarmKitSettingTitle": "アラーム機能",
+  "@alarmKitSettingTitle": {
+    "description": "設定画面の通知欄にある、AlarmKit (iOS 26以降で服用通知を目覚ましのように鳴らすプレミアム機能) をON/OFFする行の名前。ヘルプページの設定行のプレビューでも使う"
+  },
+  "alarmKitSettingDescription": "目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます",
+  "@alarmKitSettingDescription": {
+    "description": "設定画面のアラーム機能の行の説明文。ヘルプページの設定行のプレビューでも使う"
+  },
+  "alarmKitPermissionRequired": "アラーム機能の権限が必要です。設定から許可してください。",
+  "@alarmKitPermissionRequired": {
+    "description": "アラーム機能をONにしようとしてOSのアラーム権限が拒否された時に出すSnackBarの文言。「設定」はOSの設定アプリを指す"
+  },
   "todayPillNumberFeatureAppealTitle": "今日の服用番号を合わせる",
   "@todayPillNumberFeatureAppealTitle": {
     "description": "今日の服用番号変更機能のFeatureAppeal Barタイトル"

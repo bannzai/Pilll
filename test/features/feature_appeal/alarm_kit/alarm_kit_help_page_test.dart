@@ -7,6 +7,8 @@ import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/feature_appeal/alarm_kit/alarm_kit_help_page.dart';
 import 'package:pilll/features/feature_appeal/feature_appeal_premium_plan_button.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -98,6 +100,29 @@ void main() {
 
       expect(find.byType(PrimaryButton), findsOneWidget);
       expect(find.byType(AppOutlinedButton), findsNothing);
+    });
+
+    testWidgets('表示言語がスペイン語 → 設定行のプレビューの名前・説明がスペイン語で表示され、日本語が混ざらない', (tester) async {
+      L = lookupAppLocalizations(const Locale('es'));
+      addTearDown(() => L = lookupAppLocalizations(const Locale('ja')));
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: helpPageProviderOverrides(),
+          child: const MaterialApp(home: AlarmKitHelpPage()),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(find.text('Función de alarma'), findsOneWidget);
+      expect(
+        find.text('La notificación suena como una alarma. La recibirás incluso con el modo Silencio o el modo Concentración activados.'),
+        findsOneWidget,
+      );
+      // 平仮名・片仮名・漢字のいずれかを含む Text が無いことで、日本語が混ざっていないことを確かめる
+      expect(
+        tester.widgetList<Text>(find.byType(Text)).where((text) => RegExp(r'[぀-ヿ一-鿿]').hasMatch(text.data ?? '')),
+        isEmpty,
+      );
     });
   });
 }

@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/provider/setting.dart';
@@ -36,20 +37,23 @@ class AlarmKitSetting extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text(
-            'アラーム機能',
-            style: TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
+          // 言語によっては名前が長く、PremiumBadge と並ぶと行幅を超えるため折り返せるようにする
+          Flexible(
+            child: Text(
+              L.alarmKitSettingTitle,
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              ),
             ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
-      subtitle: const Text(
-        '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
-        style: TextStyle(
+      subtitle: Text(
+        L.alarmKitSettingDescription,
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,
           fontSize: 14,
@@ -94,8 +98,8 @@ class AlarmKitSetting extends HookConsumerWidget {
                     // 権限が拒否された場合はエラーメッセージ表示
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('アラーム機能の権限が必要です。設定から許可してください。'),
+                        SnackBar(
+                          content: Text(L.alarmKitPermissionRequired),
                         ),
                       );
                     }
