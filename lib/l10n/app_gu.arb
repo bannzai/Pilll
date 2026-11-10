@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "સાઇલન્ટ મોડમાં પણ અવાજ સાથે આવતી સૂચનાઓ",
   "alarmKitFeatureAppealHeadline": "અલાર્મ ઘડિયાળ જેવું ગોળી લેવાનું અલાર્મ",
   "alarmKitFeatureAppealBody": "iOS 26 અને તે પછીના સંસ્કરણમાં ઉપલબ્ધ AlarmKit વડે, સાઇલન્ટ મોડ કે ફોકસ મોડમાં પણ વાગતું અલાર્મ તમને ગોળી લેવાનો સમય યાદ અપાવે છે.",
+  "alarmKitSettingTitle": "અલાર્મ સુવિધા",
   "todayPillNumberFeatureAppealTitle": "આજનો ગોળી નંબર ગોઠવો",
   "todayPillNumberFeatureAppealShortDescription": "ગોળીનો નંબર મેળ ન ખાતો હોય તો તમે સેટિંગ્સમાં તેને સુધારી શકો છો",
   "todayPillNumberFeatureAppealHeadline": "તમે આજનો ગોળી નંબર બદલી શકો છો",

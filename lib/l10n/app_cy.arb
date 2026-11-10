@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Hysbysiadau sy’n canu hyd yn oed yn y modd tawel",
   "alarmKitFeatureAppealHeadline": "Larwm cymryd y bilsen fel cloc larwm",
   "alarmKitFeatureAppealBody": "Gan ddefnyddio AlarmKit, sydd ar gael o iOS 26 ymlaen, mae larwm sy’n canu hyd yn oed yn y modd tawel neu’r modd Ffocws yn eich atgoffa i gymryd eich pilsen.",
+  "alarmKitSettingTitle": "Nodwedd larwm",
   "todayPillNumberFeatureAppealTitle": "Addasu rhif y bilsen ar gyfer heddiw",
   "todayPillNumberFeatureAppealShortDescription": "Os nad yw rhif y bilsen yn gywir, gallwch ei newid yn y gosodiadau",
   "todayPillNumberFeatureAppealHeadline": "Gallwch newid rhif y bilsen ar gyfer heddiw",

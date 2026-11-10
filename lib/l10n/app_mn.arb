@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Чимээгүй горимд ч дуугарах мэдэгдэл",
   "alarmKitFeatureAppealHeadline": "Сэрүүлэг шиг ажиллах эм уух сануулга",
   "alarmKitFeatureAppealBody": "iOS 26 болон түүнээс хойших хувилбарт ашиглах боломжтой AlarmKit-ийн тусламжтайгаар чимээгүй эсвэл төвлөрөх горимд ч дуугарах сэрүүлэг эмээ уух цагийг танд сануулна.",
+  "alarmKitSettingTitle": "Сэрүүлгийн функц",
   "todayPillNumberFeatureAppealTitle": "Өнөөдрийн эмийн дугаарыг тохируулна уу",
   "todayPillNumberFeatureAppealShortDescription": "Эмийн дугаар таарахгүй байвал тохиргооноос засах боломжтой",
   "todayPillNumberFeatureAppealHeadline": "Өнөөдрийн эмийн дугаарыг өөрчлөх боломжтой",

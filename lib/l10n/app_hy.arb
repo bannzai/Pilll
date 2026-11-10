@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Ծանուցումներ, որոնք հնչում են նաև անձայն ռեժիմում",
   "alarmKitFeatureAppealHeadline": "Հաբն ընդունելու զարթուցիչի նման ազդանշան",
   "alarmKitFeatureAppealBody": "iOS 26-ից սկսած հասանելի AlarmKit-ի միջոցով ազդանշանը կհիշեցնի Ձեզ ընդունել հաբը, նույնիսկ եթե միացված է անձայն կամ կենտրոնացման ռեժիմը։",
+  "alarmKitSettingTitle": "Զարթուցիչի գործառույթ",
   "todayPillNumberFeatureAppealTitle": "Համապատասխանեցրեք այսօրվա հաբի համարը",
   "todayPillNumberFeatureAppealShortDescription": "Եթե հաբի համարը չի համընկնում, Դուք կարող եք այն ուղղել կարգավորումներում",
   "todayPillNumberFeatureAppealHeadline": "Դուք կարող եք փոխել այսօրվա հաբի համարը",

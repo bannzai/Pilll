@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Benachrichtigungen mit Ton, auch im Lautlosmodus",
   "alarmKitFeatureAppealHeadline": "Ein Pillenalarm wie ein Wecker",
   "alarmKitFeatureAppealBody": "Mit AlarmKit, verfügbar ab iOS 26, erinnert dich ein Alarm an deine Pille, der auch im Lautlosmodus oder bei aktiviertem Fokus ertönt.",
+  "alarmKitSettingTitle": "Alarmfunktion",
   "todayPillNumberFeatureAppealTitle": "Heutige Pillennummer anpassen",
   "todayPillNumberFeatureAppealShortDescription": "Wenn die Pillennummer nicht stimmt, kannst du sie in den Einstellungen korrigieren",
   "todayPillNumberFeatureAppealHeadline": "Du kannst die Pillennummer für heute ändern",

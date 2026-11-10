@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "ನಿಶ್ಶಬ್ದ ಮೋಡ್‌ನಲ್ಲೂ ಖಚಿತವಾಗಿ ಧ್ವನಿಸುವ ಅಧಿಸೂಚನೆಗಳು",
   "alarmKitFeatureAppealHeadline": "ಅಲಾರಾಂ ಗಡಿಯಾರದಂತೆ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಅಲಾರಾಂ",
   "alarmKitFeatureAppealBody": "iOS 26 ಮತ್ತು ನಂತರದ ಆವೃತ್ತಿಗಳಲ್ಲಿ ಲಭ್ಯವಿರುವ AlarmKit ಬಳಸಿ, ನಿಶ್ಶಬ್ದ ಅಥವಾ ಫೋಕಸ್ ಮೋಡ್‌ನಲ್ಲೂ ಮೊಳಗುವ ಅಲಾರಂ ಮಾತ್ರೆ ತೆಗೆದುಕೊಳ್ಳುವ ಸಮಯವನ್ನು ನಿಮಗೆ ನೆನಪಿಸುತ್ತದೆ.",
+  "alarmKitSettingTitle": "ಅಲಾರಂ ಸೌಲಭ್ಯ",
   "todayPillNumberFeatureAppealTitle": "ಇಂದಿನ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯನ್ನು ಹೊಂದಿಸಿ",
   "todayPillNumberFeatureAppealShortDescription": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ ಹೊಂದಿಕೆಯಾಗದಿದ್ದರೆ, ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅದನ್ನು ಸರಿಪಡಿಸಬಹುದು",
   "todayPillNumberFeatureAppealHeadline": "ನೀವು ಇಂದಿನ ಮಾತ್ರೆ ಸಂಖ್ಯೆಯನ್ನು ಬದಲಾಯಿಸಬಹುದು",

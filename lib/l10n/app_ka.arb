@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "შეტყობინებები, რომლებიც უხმო რეჟიმშიც ჟღერს",
   "alarmKitFeatureAppealHeadline": "მაღვიძარას მსგავსი შეხსენება აბის მიღებისთვის",
   "alarmKitFeatureAppealBody": "iOS 26-დან ხელმისაწვდომი AlarmKit-ის საშუალებით, მაღვიძარა, რომელიც უხმო ან ფოკუსირების რეჟიმშიც რეკავს, აბის მიღების დროს შეგახსენებთ.",
+  "alarmKitSettingTitle": "მაღვიძარას ფუნქცია",
   "todayPillNumberFeatureAppealTitle": "შეასწორეთ დღევანდელი აბის ნომერი",
   "todayPillNumberFeatureAppealShortDescription": "თუ აბის ნომერი არ ემთხვევა, მისი შესწორება პარამეტრებში შეგიძლიათ",
   "todayPillNumberFeatureAppealHeadline": "შეგიძლიათ შეცვალოთ დღევანდელი აბის ნომერი",

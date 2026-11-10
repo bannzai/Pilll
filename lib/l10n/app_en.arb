@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Alerts that sound even in silent mode",
   "alarmKitFeatureAppealHeadline": "A pill alarm that works like an alarm clock",
   "alarmKitFeatureAppealBody": "With AlarmKit on iOS 26 or later, an alarm that sounds even in Silent mode or Focus reminds you to take your pill.",
+  "alarmKitSettingTitle": "Alarm feature",
   "todayPillNumberFeatureAppealTitle": "Adjust today's pill number",
   "todayPillNumberFeatureAppealShortDescription": "If the pill number is off, you can fix it in Settings",
   "todayPillNumberFeatureAppealHeadline": "You can change today's pill number",

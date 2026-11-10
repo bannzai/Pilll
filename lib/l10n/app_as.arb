@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "নীৰৱ অৱস্থাতো শব্দ হোৱা জাননী",
   "alarmKitFeatureAppealHeadline": "এলাৰ্ম ঘড়ীৰ দৰে পিল খোৱাৰ এলাৰ্ম",
   "alarmKitFeatureAppealBody": "iOS 26 আৰু তাৰ পাছৰ সংস্কৰণত উপলব্ধ AlarmKit ব্যৱহাৰ কৰি, নীৰৱ অৱস্থা বা ফ’কাচ ম’ডতো বাজি উঠা এলাৰ্মে আপোনাক পিল খোৱাৰ সময় জনায়।",
+  "alarmKitSettingTitle": "এলাৰ্ম সুবিধা",
   "todayPillNumberFeatureAppealTitle": "আজিৰ পিল নম্বৰ মিলাই লওক",
   "todayPillNumberFeatureAppealShortDescription": "পিল নম্বৰ মিল নাখালে ছেটিংছত শুধৰাই লওক",
   "todayPillNumberFeatureAppealHeadline": "আপুনি আজিৰ পিল নম্বৰ সলনি কৰিব পাৰে",

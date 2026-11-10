@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Известувања што се слушаат и во тивок режим",
   "alarmKitFeatureAppealHeadline": "Аларм за земање таблета како будилник",
   "alarmKitFeatureAppealBody": "Со AlarmKit, достапен од iOS 26, аларм што ѕвони и во тивок режим или режим на фокусирање Ве потсетува да ја земете таблетата.",
+  "alarmKitSettingTitle": "Функција за аларм",
   "todayPillNumberFeatureAppealTitle": "Усогласете го денешниот број на таблета",
   "todayPillNumberFeatureAppealShortDescription": "Ако бројот на таблета не се совпаѓа, можете да го поправите во поставките",
   "todayPillNumberFeatureAppealHeadline": "Можете да го промените денешниот број на таблета",

@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Powiadomienia z dźwiękiem nawet w trybie cichym",
   "alarmKitFeatureAppealHeadline": "Alarm przypominający o tabletce, jak budzik",
   "alarmKitFeatureAppealBody": "Dzięki AlarmKit, dostępnemu od iOS 26, alarm dzwoni także w trybie cichym lub w trybie skupienia i przypomina o przyjęciu tabletki.",
+  "alarmKitSettingTitle": "Funkcja alarmu",
   "todayPillNumberFeatureAppealTitle": "Dostosuj numer dzisiejszej tabletki",
   "todayPillNumberFeatureAppealShortDescription": "Jeśli numer tabletki się nie zgadza, możesz go poprawić w ustawieniach",
   "todayPillNumberFeatureAppealHeadline": "Możesz zmienić numer dzisiejszej tabletki",

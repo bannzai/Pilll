@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "Pranešimai, kurie skamba ir tyliuoju režimu",
   "alarmKitFeatureAppealHeadline": "Žadintuvą primenantis priminimas išgerti tabletę",
   "alarmKitFeatureAppealBody": "Naudojant „AlarmKit“ (pasiekiama nuo iOS 26), signalas skamba net įjungus tylųjį ar susikaupimo režimą ir primena jums išgerti tabletę.",
+  "alarmKitSettingTitle": "Žadintuvo funkcija",
   "todayPillNumberFeatureAppealTitle": "Pakoreguokite šiandienos tabletės numerį",
   "todayPillNumberFeatureAppealShortDescription": "Jei tabletės numeris nesutampa, galite jį pataisyti nustatymuose",
   "todayPillNumberFeatureAppealHeadline": "Galite pakeisti šiandienos tabletės numerį",

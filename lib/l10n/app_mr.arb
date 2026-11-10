@@ -510,6 +510,7 @@
   "alarmKitFeatureAppealShortDescription": "सायलेंट मोडमध्येही आवाज करणाऱ्या सूचना",
   "alarmKitFeatureAppealHeadline": "गजराच्या घड्याळासारखा गोळी घेण्याचा अलार्म",
   "alarmKitFeatureAppealBody": "iOS 26 आणि त्यानंतरच्या आवृत्त्यांमध्ये उपलब्ध असलेल्या AlarmKit मुळे, सायलेंट किंवा फोकस मोडमध्येही वाजणारा अलार्म तुम्हाला गोळी घेण्याच्या वेळेची आठवण करून देतो.",
+  "alarmKitSettingTitle": "अलार्म सुविधा",
   "todayPillNumberFeatureAppealTitle": "आजच्या गोळीचा क्रमांक जुळवा",
   "todayPillNumberFeatureAppealShortDescription": "गोळीचा क्रमांक जुळत नसेल, तर तुम्ही तो सेटिंग्जमध्ये दुरुस्त करू शकता",
   "todayPillNumberFeatureAppealHeadline": "तुम्ही आजचा गोळी क्रमांक बदलू शकता",
