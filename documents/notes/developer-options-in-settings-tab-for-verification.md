@@ -7,7 +7,7 @@ recorded: 2026-11-10
 開発用ビルド (`Environment.isDevelopment` が true。`lib/main.dev.dart` で起動したもの) の設定タブには、本番ビルドに出ない項目がある (2026-11-10 にコードで確認)。
 
 - 設定タブ末尾の「開発者オプション」の節 (`lib/features/settings/page.dart` の `SettingSection.developer`。並ぶ項目はこの case が正): FeatureAppeal の全 HelpPage への一覧 (`FeatureAppealHelpPageListRow`) などがある
-- `DebugRow` (`lib/features/settings/components/rows/debug_row.dart`。`SettingSection.other` の節の末尾で、「開発者オプション」の節の直前にある。表示は `L.copyDebugInfo` で言語ごとに変わり、日本語は「COPY DEBUG INFO」、英語は「Copy debug info」。Semantics の identifier は `debug_row`): タップでデバッグ情報をコピー、ダブルタップでサインアウトの確認ダイアログ、長押しでユーザー削除の確認ダイアログを出す
+- `DebugRow` (`lib/features/settings/components/rows/debug_row.dart`。`SettingSection.other` の節の末尾で、「開発者オプション」の節の直前にある。表示は `L.copyDebugInfo` で言語ごとに変わる。Semantics の identifier は `debug_row`): タップでデバッグ情報をコピー、ダブルタップでサインアウトの確認ダイアログ、長押しでユーザー削除の確認ダイアログを出す
 
 サインアウトの中身は `lib/main.dev.dart` の `Environment.signOutUser` で、`BoolKey.didEndInitialSetting` を false に戻し、予約済みのリマインダーのローカル通知を取り消してから `FirebaseAuth.instance.signOut()` を呼ぶ。AlarmKit のリマインダーは取り消さない (同関数のコメント「local notificationのみ解除」)。ダイアログの文言は「サインアウトあとはアプリを再起動してお試しください。初期設定から始まります」。
 

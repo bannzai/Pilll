@@ -10,7 +10,7 @@ FeatureAppeal の実装プランに対して、owner から次の訂正を受け
 
 現物は lib と test が 1 対 1 になっている (2026-11-10 に確認)。`lib/features/feature_appeal/critical_alert/` の `critical_alert_announcement_bar.dart`・`critical_alert_help_page.dart` に対して、`test/features/feature_appeal/critical_alert/` に `critical_alert_announcement_bar_test.dart`・`critical_alert_help_page_test.dart` があり、他の機能のディレクトリも同じ並びになっている。
 
-**なぜ:** Pilll は日付の計算と状態の分岐が多く、機能ごとのテストが無いと改修の時に壊れたことに気づけない。同じ形のテストが並ぶことは、テストを省く理由として認められなかった。
+**なぜ:** owner の発言は上の引用だけで、理由は述べられていない。訂正を受けた agent が当時 memory に書いた解釈は「Pilll は日付の計算と状態の分岐が多く、機能ごとのテストが無いと改修の時に壊れたことに気づけない」。
 
 **どう使う:**
 
