@@ -6,9 +6,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
+import 'package:pilll/l10n/app_localizations.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
@@ -194,5 +196,49 @@ void main() {
 
       expect(find.byType(Switch), findsNothing);
     });
+
+    group('表示言語がスペイン語', () {
+      testWidgets('行の名前・説明と、アラーム権限が拒否された時のスナックバーがスペイン語で表示され、日本語が混ざらない',
+          (tester) async {
+        L = lookupAppLocalizations(const Locale('es'));
+        addTearDown(() => L = lookupAppLocalizations(const Locale('ja')));
+        await tester.pumpWidget(subject(
+          setting: setting,
+          isPremium: true,
+          isTrial: false,
+          isAlarmKitAvailable: true,
+          setSetting: MockSetSetting(),
+          registerReminderLocalNotification:
+              _FakeRegisterReminderLocalNotification(),
+        ));
+
+        expect(find.text('Función de alarma'), findsOneWidget);
+        expect(find.text(_esAlarmKitSettingDescription), findsOneWidget);
+
+        // 権限の案内のスナックバーはスイッチを切り替えた後にしか表示されないため、タップして検証する
+        // テスト環境は iOS ではないため AlarmKitService.requestPermission は false (拒否) を返す
+        await tester.tap(find.byType(Switch));
+        await tester.pumpAndSettle();
+
+        expect(find.text(_esAlarmKitPermissionRequired), findsOneWidget);
+        expect(
+          tester
+              .widgetList<Text>(find.byType(Text))
+              .where((text) => _japaneseCharacterPattern.hasMatch(text.data!)),
+          isEmpty,
+        );
+      });
+    });
   });
 }
+
+/// 平仮名・片仮名・漢字のいずれかに一致する。スペイン語表示に日本語が混ざっていないかの検査に使う
+final _japaneseCharacterPattern = RegExp(r'[぀-ヿ一-鿿]');
+
+/// app_es.arb の alarmKitSettingDescription の文
+const _esAlarmKitSettingDescription =
+    'La notificación suena como una alarma. La recibirás incluso con el modo Silencio o el modo Concentración activados.';
+
+/// app_es.arb の alarmKitPermissionRequired の文
+const _esAlarmKitPermissionRequired =
+    'La función de alarma necesita permiso. Puedes concederlo desde los ajustes del dispositivo.';
