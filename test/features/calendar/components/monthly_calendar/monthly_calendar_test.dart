@@ -230,6 +230,81 @@ void main() {
     });
   });
 
+  group("CalendarNextPillSheetBand", () {
+    /*
+    週の始まりが月曜日の 2020-09
+  31    1   2   3   4   5   6
+
+   7    8   9  10  11  12  13
+
+  14   15  16  17  18  19  20
+
+  21   22  23  24  25  26  27
+
+  28   29  30
+    */
+    Future<void> pumpMondayStartMonthCalendar(WidgetTester tester, {required CalendarNextPillSheetBandModel model}) async {
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            firstWeekdayProvider.overrideWithValue(Weekday.Monday),
+          ],
+          child: MaterialApp(
+            home: MonthCalendar(
+              dateForMonth: DateTime(2020, 09, 14),
+              weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+                return CalendarWeekLine(
+                  dateRange: weekDateRange,
+                  calendarMenstruationBandModels: const [],
+                  calendarScheduledMenstruationBandModels: const [],
+                  calendarNextPillSheetBandModels: [model],
+                  day: (context, weekday, date) => Expanded(child: Container()),
+                );
+              },
+            ),
+          ),
+        ),
+      );
+      await tester.pump();
+    }
+
+    testWidgets('週の始まりが月曜日の時、土曜日から火曜日の帯は日曜日の後で折り返し、土日の 2 日分と月火の 2 日分に分かれる', (WidgetTester tester) async {
+      await pumpMondayStartMonthCalendar(
+        tester,
+        model: CalendarNextPillSheetBandModel(DateTime(2020, 09, 19), DateTime(2020, 09, 22)),
+      );
+
+      final bands = tester.widgetList<CalendarNextPillSheetBand>(find.byType(CalendarNextPillSheetBand)).toList();
+      expect(bands.map((band) => band.isLineBreak).toList(), [false, true]);
+      // 日曜日始まりなら土曜日の 1 日分と日月火の 3 日分に分かれるため、幅が同じにならない
+      expect(bands.first.width, closeTo(bands.last.width, 0.01));
+      // 1 つ目の帯は左端から 5 列目 (土曜日) から、折り返した帯は左端 (月曜日) から始まる。1 列の幅は 2 日分の帯の幅の半分
+      expect(
+        tester.getTopLeft(find.byType(CalendarNextPillSheetBand).first).dx - tester.getTopLeft(find.byType(CalendarNextPillSheetBand).last).dx,
+        closeTo(5 * bands.first.width / 2, 0.01),
+      );
+    });
+
+    testWidgets('週の始まりが月曜日の時、日曜日から月曜日の帯は日曜日が行の右端に入り、月曜日が次の行の左端に折り返す', (WidgetTester tester) async {
+      await pumpMondayStartMonthCalendar(
+        tester,
+        model: CalendarNextPillSheetBandModel(DateTime(2020, 09, 20), DateTime(2020, 09, 21)),
+      );
+
+      // 日曜日始まりなら同じ行の左端 2 列に収まり、帯は 1 つになる
+      final bands = tester.widgetList<CalendarNextPillSheetBand>(find.byType(CalendarNextPillSheetBand)).toList();
+      expect(bands.map((band) => band.isLineBreak).toList(), [false, true]);
+      expect(bands.first.width, closeTo(bands.last.width, 0.01));
+      // 1 つ目の帯は左端から 6 列目 (日曜日) の 1 日分、折り返した帯は左端 (月曜日) の 1 日分
+      expect(
+        tester.getTopLeft(find.byType(CalendarNextPillSheetBand).first).dx - tester.getTopLeft(find.byType(CalendarNextPillSheetBand).last).dx,
+        closeTo(6 * bands.first.width, 0.01),
+      );
+    });
+  });
+
   group("WeekdayBadge", () {
     for (final firstWeekday in [Weekday.Sunday, Weekday.Monday]) {
       testWidgets('週の始まりが $firstWeekday の時、曜日の行が $firstWeekday から並び、各列の日付の曜日が見出しの曜日と一致する', (WidgetTester tester) async {
