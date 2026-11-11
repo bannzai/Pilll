@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Jeda pengambilan pil telah bermula",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ubah tarikh mula jeda pengambilan pil",
+  "startWeekOnMonday": "Mulakan minggu pada hari Isnin",
   "shareWithFriends": "Kongsi dengan rakan",
   "termsOfService": "Terma penggunaan",
   "privacyPolicy": "Dasar privasi",

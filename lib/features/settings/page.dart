@@ -13,6 +13,7 @@ import 'package:pilll/features/settings/components/rows/admob_list_row.dart';
 import 'package:pilll/features/settings/components/rows/debug_app_language_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_announcement_bar_list_row.dart';
 import 'package:pilll/features/settings/components/rows/feature_appeal_help_page_list_row.dart';
+import 'package:pilll/features/settings/components/rows/first_weekday.dart';
 import 'package:pilll/features/settings/components/rows/lifetime_offer_paywall_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -267,6 +268,8 @@ class SettingPageBody extends StatelessWidget {
                       return SettingSectionTitle(
                         text: L.others,
                         children: [
+                          const FirstWeekdayRow(),
+                          _separator(),
                           ListTile(
                             title: Text(
                               L.shareWithFriends,

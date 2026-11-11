@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Je innamepauze is begonnen",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Startdatum van de innamepauze wijzigen",
+  "startWeekOnMonday": "Laat de week op maandag beginnen",
   "shareWithFriends": "Deel met vrienden",
   "termsOfService": "Gebruiksvoorwaarden",
   "privacyPolicy": "Privacybeleid",

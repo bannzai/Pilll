@@ -415,6 +415,7 @@
   "pauseTakingStarted": "მიღების პაუზა დაიწყო",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "მიღების პაუზის დაწყების თარიღის რედაქტირება",
+  "startWeekOnMonday": "კვირის დაწყება ორშაბათიდან",
   "shareWithFriends": "გაუზიარეთ მეგობრებს",
   "termsOfService": "გამოყენების პირობები",
   "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",

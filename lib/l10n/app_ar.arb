@@ -415,6 +415,7 @@
   "pauseTakingStarted": "بدأ إيقاف تناول الحبوب",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "تعديل تاريخ بدء إيقاف تناول الحبوب",
+  "startWeekOnMonday": "بدء الأسبوع يوم الاثنين",
   "shareWithFriends": "شاركيه مع صديقاتكِ",
   "termsOfService": "شروط الاستخدام",
   "privacyPolicy": "سياسة الخصوصية",

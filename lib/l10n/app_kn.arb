@@ -415,6 +415,7 @@
   "pauseTakingStarted": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭವಾಗಿದೆ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ಮಾತ್ರೆ ವಿರಾಮ ಆರಂಭದ ದಿನಾಂಕವನ್ನು ಬದಲಾಯಿಸಿ",
+  "startWeekOnMonday": "ವಾರವನ್ನು ಸೋಮವಾರದಿಂದ ಪ್ರಾರಂಭಿಸಿ",
   "shareWithFriends": "ಸ್ನೇಹಿತರಿಗೆ ತಿಳಿಸಿ",
   "termsOfService": "ಬಳಕೆಯ ನಿಯಮಗಳು",
   "privacyPolicy": "ಗೌಪ್ಯತಾ ನೀತಿ",

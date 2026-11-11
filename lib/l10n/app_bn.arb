@@ -415,6 +415,7 @@
   "pauseTakingStarted": "সেবন স্থগিত শুরু হয়েছে",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "সেবন স্থগিত শুরুর তারিখ সম্পাদনা করুন",
+  "startWeekOnMonday": "সোমবার থেকে সপ্তাহ শুরু করুন",
   "shareWithFriends": "বন্ধুদের জানান",
   "termsOfService": "ব্যবহারের শর্তাবলি",
   "privacyPolicy": "গোপনীয়তা নীতি",

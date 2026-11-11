@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Таблетка қабылдаудағы кідіріс басталды",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Кідіріс басталатын күнді өзгерту",
+  "startWeekOnMonday": "Аптаны дүйсенбіден бастау",
   "shareWithFriends": "Достарыңызға ұсыныңыз",
   "termsOfService": "Пайдалану шарттары",
   "privacyPolicy": "Құпиялық саясаты",

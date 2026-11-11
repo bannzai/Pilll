@@ -415,6 +415,7 @@
   "pauseTakingStarted": "일시 중지가 시작됐어요",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "일시 중지 시작일 수정",
+  "startWeekOnMonday": "월요일부터 한 주 시작하기",
   "shareWithFriends": "친구에게 추천하기",
   "termsOfService": "이용약관",
   "privacyPolicy": "개인정보 처리방침",

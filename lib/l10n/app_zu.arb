@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Ukumisa okwesikhashana ukuphuza iphilisi sekuqalile",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Sicela uhlele usuku lokuqala ukumisa okwesikhashana",
+  "startWeekOnMonday": "Isonto aliqale ngoMsombuluko",
   "shareWithFriends": "Sicela wabelane nabangane",
   "termsOfService": "Imigomo yokusebenzisa",
   "privacyPolicy": "Inqubomgomo yobumfihlo",

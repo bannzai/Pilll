@@ -1,11 +1,15 @@
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/utils/datetime/day.dart';
 
 class WeekCalendarDateRangeCalculator {
   final DateTime dateForMonth;
 
-  WeekCalendarDateRangeCalculator(this.dateForMonth);
+  /// 週の行の左端に置く曜日
+  final Weekday firstWeekday;
+
+  WeekCalendarDateRangeCalculator(this.dateForMonth, {required this.firstWeekday});
 
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
@@ -41,8 +45,7 @@ class WeekCalendarDateRangeCalculator {
   }
 
   int _lastDay() => DateTime(dateForMonth.year, dateForMonth.month + 1, 0).day;
-  int _weekdayOffset() => WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(dateForMonth)).index;
-  int _previousMonthDayCount() => _weekdayOffset();
+  int _previousMonthDayCount() => weekdayOffset(date: _firstDayOfMonth(dateForMonth), firstWeekday: firstWeekday);
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
 

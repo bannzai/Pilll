@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Pillerin käytön taukotila on alkanut",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Muokkaa taukotilan alkamispäivää",
+  "startWeekOnMonday": "Aloita viikko maanantaista",
   "shareWithFriends": "Kerro ystäville",
   "termsOfService": "Käyttöehdot",
   "privacyPolicy": "Tietosuojakäytäntö",

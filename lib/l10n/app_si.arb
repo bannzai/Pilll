@@ -415,6 +415,7 @@
   "pauseTakingStarted": "පෙති ගැනීමේ විරාමය ආරම්භ වී ඇත",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "පෙති ගැනීමේ විරාමය ආරම්භ වන දිනය සංස්කරණය කරන්න",
+  "startWeekOnMonday": "සතිය සඳුදා සිට ආරම්භ කරන්න",
   "shareWithFriends": "මිතුරන්ට කියන්න",
   "termsOfService": "භාවිත නියමයන්",
   "privacyPolicy": "පෞද්ගලිකත්ව ප්‍රතිපත්තිය",

@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Začalo sa pozastavenie užívania tabletiek",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Upraviť dátum začiatku pozastavenia",
+  "startWeekOnMonday": "Začínať týždeň pondelkom",
   "shareWithFriends": "Odporučte priateľom",
   "termsOfService": "Podmienky používania",
   "privacyPolicy": "Zásady ochrany osobných údajov",
