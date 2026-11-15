@@ -212,6 +212,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   /// 初期設定の内容を保存し、トライアルを開始する。
   /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
   Future<void> register({required User user}) async {
+    // 保存の待機中に前のページへ戻って答えを選び直せるため、保存する内容を作る前の値を属性に使う (待機の後に state を読むと、保存した内容と属性が食い違う)
+    final registeringIsYazFlex = state.isYazFlex;
     final batch = batchFactory.batch();
 
     final builtPillSheetGroup = state.buildPillSheetGroup();
@@ -232,7 +234,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     await batch.commit();
 
     // 初期設定の完了のイベント (end_initial_setting) とトライアルの開始より前に載せ、以降のイベントと購入に属性が付くようにする
-    await setYazFlexInitialSettingAttribute(isYazFlex: state.isYazFlex);
+    await setYazFlexInitialSettingAttribute(isYazFlex: registeringIsYazFlex);
 
     final activePillSheet = createdPillSheetGroup?.activePillSheet;
     if (createdPillSheetGroup != null && activePillSheet != null) {

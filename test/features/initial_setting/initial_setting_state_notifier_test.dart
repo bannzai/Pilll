@@ -818,6 +818,22 @@ void main() {
         ]);
       });
 
+      test("登録の保存を待っている間に「いいえ」を選び直しても、登録を始めた時の true を載せる", () async {
+        final store = buildContainer(endInitialSetting: MockEndInitialSetting())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+        // register が保存する設定を作る途中でタイムゾーンを待つ間に、前のページへ戻って選び直した状況を作る
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(timezoneChannel, (methodCall) async {
+          store.selectNotYazFlex();
+          return 'Asia/Tokyo';
+        });
+
+        await store.register(user: const User());
+
+        expect(calledIsYazFlexValues, [true]);
+      });
+
       test("登録する前は載せない", () {
         buildContainer(endInitialSetting: MockEndInitialSetting())
             .read(initialSettingStateNotifierProvider.notifier)
