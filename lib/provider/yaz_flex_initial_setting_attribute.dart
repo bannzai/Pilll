@@ -9,6 +9,7 @@ import 'package:riverpod/riverpod.dart';
 /// Firebase Analytics のユーザープロパティ名は 24 文字までのため、24 文字に収めている
 const yazFlexInitialSettingAttributeName = 'yaz_flex_initial_setting';
 
+/// [SetYazFlexInitialSettingAttribute] を提供する。テストでは Firebase Analytics と RevenueCat を呼ばない実装に差し替える
 final setYazFlexInitialSettingAttributeProvider = Provider(
   (ref) => SetYazFlexInitialSettingAttribute(),
 );

@@ -42,6 +42,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
+
+  /// 登録時に、ヤーズフレックス向けの導線を通ったかを Firebase Analytics と RevenueCat に載せる
   final SetYazFlexInitialSettingAttribute setYazFlexInitialSettingAttribute;
 
   InitialSettingStateNotifier(
