@@ -44,7 +44,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   /// 登録時に、ヤーズフレックス向けの導線を通ったかを Firebase Analytics と RevenueCat に載せる
-  final SetYazFlexInitialSettingAttribute setYazFlexInitialSettingAttribute;
+  final Future<void> Function({required bool isYazFlex}) setYazFlexInitialSettingAttribute;
 
   InitialSettingStateNotifier(
     this.endInitialSetting,

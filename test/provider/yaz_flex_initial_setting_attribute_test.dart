@@ -44,7 +44,7 @@ void main() {
         .setMockMethodCallHandler(purchasesChannel, null);
   });
 
-  group("#SetYazFlexInitialSettingAttribute", () {
+  group("#setYazFlexInitialSettingAttribute", () {
     test("属性の名前は Firebase Analytics のユーザープロパティ名の上限の 24 文字以内", () {
       expect(yazFlexInitialSettingAttributeName, 'yaz_flex_initial_setting');
       expect(yazFlexInitialSettingAttributeName.length, lessThanOrEqualTo(24));
@@ -64,7 +64,7 @@ void main() {
         return null;
       });
 
-      await SetYazFlexInitialSettingAttribute()(isYazFlex: true);
+      await setYazFlexInitialSettingAttribute(isYazFlex: true);
 
       expect(recordingAnalytics.userProperties, [
         ('yaz_flex_initial_setting', 'true'),
@@ -89,7 +89,7 @@ void main() {
         return null;
       });
 
-      await SetYazFlexInitialSettingAttribute()(isYazFlex: false);
+      await setYazFlexInitialSettingAttribute(isYazFlex: false);
 
       expect(recordingAnalytics.userProperties, [
         ('yaz_flex_initial_setting', 'false'),
@@ -109,7 +109,7 @@ void main() {
         throw PlatformException(code: '10', message: 'network error');
       });
 
-      await SetYazFlexInitialSettingAttribute()(isYazFlex: true);
+      await setYazFlexInitialSettingAttribute(isYazFlex: true);
 
       expect(recordingAnalytics.userProperties, [
         ('yaz_flex_initial_setting', 'true'),
@@ -134,7 +134,7 @@ void main() {
         return null;
       });
 
-      await SetYazFlexInitialSettingAttribute()(isYazFlex: true);
+      await setYazFlexInitialSettingAttribute(isYazFlex: true);
 
       expect(purchasesMethodCalls.single.arguments, {
         'attributes': {'yaz_flex_initial_setting': 'true'},

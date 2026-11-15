@@ -30,23 +30,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
 
-/// Firebase Analytics と RevenueCat を呼ばず、register が渡した isYazFlex を呼ばれた順に記録する
-class _FakeSetYazFlexInitialSettingAttribute
-    implements SetYazFlexInitialSettingAttribute {
-  /// call に渡された isYazFlex。呼ばれた順に並ぶ
-  final calledIsYazFlexValues = <bool>[];
-
-  @override
-  Future<void> call({required bool isYazFlex}) async {
-    calledIsYazFlexValues.add(isYazFlex);
-  }
-}
-
 void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_timezone');
   late RegisterReminderLocalNotificationRunner
       registerReminderLocalNotificationRunner;
-  late _FakeSetYazFlexInitialSettingAttribute setYazFlexInitialSettingAttribute;
+
+  /// register が属性を載せる関数に渡した isYazFlex。呼ばれた順に並ぶ
+  late List<bool> calledIsYazFlexValues;
+
+  /// Firebase Analytics と RevenueCat を呼ばず、渡された isYazFlex を [calledIsYazFlexValues] に記録する
+  Future<void> setYazFlexInitialSettingAttribute({
+    required bool isYazFlex,
+  }) async {
+    calledIsYazFlexValues.add(isYazFlex);
+  }
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -67,7 +64,7 @@ void main() {
 
     registerReminderLocalNotificationRunner =
         MockRegisterReminderLocalNotificationRunner();
-    setYazFlexInitialSettingAttribute = _FakeSetYazFlexInitialSettingAttribute();
+    calledIsYazFlexValues = [];
   });
 
   tearDown(() {
@@ -725,37 +722,37 @@ void main() {
       await store.register(user: const User());
     });
 
-    group("トライアルの開始", () {
-      ProviderContainer buildContainer({
-        required EndInitialSetting endInitialSetting,
-      }) {
-        final batchFactory = MockBatchFactory();
-        when(batchFactory.batch()).thenReturn(MockWriteBatch());
-        return ProviderContainer(
-          overrides: [
-            endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            batchSetSettingProvider
-                .overrideWith((ref) => MockBatchSetSetting()),
-            batchSetPillSheetModifiedHistoryProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetModifiedHistory(),
-            ),
-            batchSetPillSheetGroupProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetGroup(),
-            ),
-            remoteConfigParameterProvider.overrideWithValue(
-              RemoteConfigParameter(),
-            ),
-            registerReminderLocalNotificationRunnerProvider.overrideWithValue(
-              registerReminderLocalNotificationRunner,
-            ),
-            setYazFlexInitialSettingAttributeProvider.overrideWithValue(
-              setYazFlexInitialSettingAttribute,
-            ),
-          ],
-        );
-      }
+    /// 保存を Mock にし、トライアルの開始を [endInitialSetting] に差し替えた container を返す
+    ProviderContainer buildContainer({
+      required EndInitialSetting endInitialSetting,
+    }) {
+      final batchFactory = MockBatchFactory();
+      when(batchFactory.batch()).thenReturn(MockWriteBatch());
+      return ProviderContainer(
+        overrides: [
+          endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetModifiedHistory(),
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetGroup(),
+          ),
+          remoteConfigParameterProvider.overrideWithValue(
+            RemoteConfigParameter(),
+          ),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+            registerReminderLocalNotificationRunner,
+          ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
+          ),
+        ],
+      );
+    }
 
+    group("トライアルの開始", () {
       test("トライアルを開始していないユーザーは endInitialSetting を呼ぶ", () async {
         final endInitialSetting = MockEndInitialSetting();
         when(endInitialSetting(any)).thenAnswer((_) => Future.value());
@@ -783,37 +780,6 @@ void main() {
     });
 
     group("ヤーズフレックス向けの導線を通ったかの属性", () {
-      // 保存とトライアルの開始を Mock にした container を返す。属性を載せる処理は setUp の Fake が記録する
-      ProviderContainer buildContainer({
-        required EndInitialSetting endInitialSetting,
-      }) {
-        final batchFactory = MockBatchFactory();
-        when(batchFactory.batch()).thenReturn(MockWriteBatch());
-        return ProviderContainer(
-          overrides: [
-            endInitialSettingProvider.overrideWith((ref) => endInitialSetting),
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            batchSetSettingProvider
-                .overrideWith((ref) => MockBatchSetSetting()),
-            batchSetPillSheetModifiedHistoryProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetModifiedHistory(),
-            ),
-            batchSetPillSheetGroupProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetGroup(),
-            ),
-            remoteConfigParameterProvider.overrideWithValue(
-              RemoteConfigParameter(),
-            ),
-            registerReminderLocalNotificationRunnerProvider.overrideWithValue(
-              registerReminderLocalNotificationRunner,
-            ),
-            setYazFlexInitialSettingAttributeProvider.overrideWithValue(
-              setYazFlexInitialSettingAttribute,
-            ),
-          ],
-        );
-      }
-
       test("「いいえ」を選んで登録した場合は false を 1 回載せる", () async {
         final store = buildContainer(endInitialSetting: MockEndInitialSetting())
             .read(initialSettingStateNotifierProvider.notifier);
@@ -822,7 +788,7 @@ void main() {
 
         await store.register(user: const User());
 
-        expect(setYazFlexInitialSettingAttribute.calledIsYazFlexValues, [
+        expect(calledIsYazFlexValues, [
           false,
         ]);
       });
@@ -834,7 +800,7 @@ void main() {
 
         await store.register(user: const User());
 
-        expect(setYazFlexInitialSettingAttribute.calledIsYazFlexValues, [
+        expect(calledIsYazFlexValues, [
           true,
         ]);
       });
@@ -847,7 +813,7 @@ void main() {
 
         await store.register(user: const User());
 
-        expect(setYazFlexInitialSettingAttribute.calledIsYazFlexValues, [
+        expect(calledIsYazFlexValues, [
           false,
         ]);
       });
@@ -857,7 +823,7 @@ void main() {
             .read(initialSettingStateNotifierProvider.notifier)
             .selectYazFlex();
 
-        expect(setYazFlexInitialSettingAttribute.calledIsYazFlexValues, isEmpty);
+        expect(calledIsYazFlexValues, isEmpty);
       });
 
       test("トライアルの開始 (endInitialSetting) より前に載せる", () async {
@@ -865,7 +831,7 @@ void main() {
         final calledIsYazFlexValuesWhenEndInitialSetting = <List<bool>>[];
         when(endInitialSetting(any)).thenAnswer((_) {
           calledIsYazFlexValuesWhenEndInitialSetting.add([
-            ...setYazFlexInitialSettingAttribute.calledIsYazFlexValues,
+            ...calledIsYazFlexValues,
           ]);
           return Future.value();
         });
@@ -889,7 +855,7 @@ void main() {
           user: User(beginTrialDate: DateTime.parse("2020-09-01")),
         );
 
-        expect(setYazFlexInitialSettingAttribute.calledIsYazFlexValues, [
+        expect(calledIsYazFlexValues, [
           true,
         ]);
       });
