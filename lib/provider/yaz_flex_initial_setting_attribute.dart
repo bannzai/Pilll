@@ -19,7 +19,7 @@ final setYazFlexInitialSettingAttributeProvider = Provider((ref) => setYazFlexIn
 Future<void> setYazFlexInitialSettingAttribute({required bool isYazFlex}) async {
   // 片方の失敗でもう片方に載らなくなるのを避けるため、載せる先ごとに失敗を受ける
   try {
-    analytics.setUserProperties(yazFlexInitialSettingAttributeName, isYazFlex.toString());
+    await analytics.setUserProperties(yazFlexInitialSettingAttributeName, isYazFlex.toString());
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }

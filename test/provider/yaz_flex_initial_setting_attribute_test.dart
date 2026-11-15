@@ -10,16 +10,16 @@ class _RecordingAnalytics extends Fake implements Analytics {
   final userProperties = <(String, dynamic)>[];
 
   @override
-  void setUserProperties(String name, value) {
+  Future<void> setUserProperties(String name, value) async {
     userProperties.add((name, value));
   }
 }
 
-/// setUserProperties が例外を投げる Analytics
-class _ThrowingAnalytics extends Fake implements Analytics {
+/// setUserProperties が返す Future が失敗する Analytics (Firebase Analytics への書き込みの失敗と同じ形)
+class _FailingAnalytics extends Fake implements Analytics {
   @override
-  void setUserProperties(String name, value) {
-    throw StateError('analytics is not available');
+  Future<void> setUserProperties(String name, value) {
+    return Future.error(StateError('analytics is not available'));
   }
 }
 
@@ -122,9 +122,9 @@ void main() {
     });
 
     test(
-        "Firebase Analytics への書き込みが例外を投げた場合は例外を投げず、エラーを記録して RevenueCat には載せる",
+        "Firebase Analytics への書き込みが失敗した場合は例外を投げず、エラーを記録して RevenueCat には載せる",
         () async {
-      analytics = _ThrowingAnalytics();
+      analytics = _FailingAnalytics();
       final recordingErrorLogger = _RecordingErrorLogger();
       errorLogger = recordingErrorLogger;
       final purchasesMethodCalls = <MethodCall>[];

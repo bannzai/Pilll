@@ -381,11 +381,11 @@ class MockAnalytics extends _i1.Mock implements _i19.Analytics {
       );
 
   @override
-  void setUserProperties(
+  _i9.Future<void> setUserProperties(
     String? name,
     dynamic value,
   ) =>
-      super.noSuchMethod(
+      (super.noSuchMethod(
         Invocation.method(
           #setUserProperties,
           [
@@ -393,8 +393,9 @@ class MockAnalytics extends _i1.Mock implements _i19.Analytics {
             value,
           ],
         ),
-        returnValueForMissingStub: null,
-      );
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
 }
 
 /// A class which mocks [BatchFactory].
