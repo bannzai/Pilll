@@ -15,6 +15,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:pilll/provider/yaz_flex_initial_setting_attribute.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
@@ -28,6 +29,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetPillSheetGroupProvider),
     ref.watch(remoteConfigParameterProvider),
     ref.watch(registerReminderLocalNotificationRunnerProvider),
+    ref.watch(setYazFlexInitialSettingAttributeProvider),
     now(),
   ),
 );
@@ -41,6 +43,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
+  /// 登録時に、ヤーズフレックス向けの導線を通ったかを Firebase Analytics と RevenueCat に載せる
+  final Future<void> Function({required bool isYazFlex}) setYazFlexInitialSettingAttribute;
+
   InitialSettingStateNotifier(
     this.endInitialSetting,
     this.batchFactory,
@@ -49,6 +54,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.batchSetPillSheetGroup,
     this.remoteConfigParameter,
     this.registerReminderLocalNotificationRunner,
+    this.setYazFlexInitialSettingAttribute,
     DateTime _now,
   ) : super(
           InitialSettingState(
@@ -206,6 +212,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   /// 初期設定の内容を保存し、トライアルを開始する。
   /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
   Future<void> register({required User user}) async {
+    // 保存の待機中に前のページへ戻って答えを選び直せるため、保存する内容を作る前の値を属性に使う (待機の後に state を読むと、保存した内容と属性が食い違う)
+    final registeringIsYazFlex = state.isYazFlex;
     final batch = batchFactory.batch();
 
     final builtPillSheetGroup = state.buildPillSheetGroup();
@@ -224,6 +232,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     batchSetSetting(batch, setting);
 
     await batch.commit();
+
+    // 初期設定の完了のイベント (end_initial_setting) とトライアルの開始より前に載せ、以降のイベントと購入に属性が付くようにする
+    await setYazFlexInitialSettingAttribute(isYazFlex: registeringIsYazFlex);
 
     final activePillSheet = createdPillSheetGroup?.activePillSheet;
     if (createdPillSheetGroup != null && activePillSheet != null) {
