@@ -311,6 +311,27 @@ void main() {
           }
         });
 
+        testWidgets('1枚目の20番まで服用済みのまま日が空いて今日が2枚目の4番の場合は、1枚目の21番を表示する', (WidgetTester tester) async {
+          when(todayRepository.now()).thenReturn(DateTime.parse('2020-10-02'));
+
+          final titleText = await pumpTitleText(
+            tester,
+            appearanceMode: appearanceMode,
+            pillSheets: buildPillSheets(firstPillSheetLastTakenDate: DateTime.parse('2020-09-20')),
+          );
+
+          expect(tester.takeException(), isNull);
+          switch (appearanceMode) {
+            case PillSheetAppearanceMode.number:
+              expect(titleText, startsWith('21番'));
+            case PillSheetAppearanceMode.date:
+              expect(titleText, startsWith('9/21'));
+            case PillSheetAppearanceMode.sequential:
+            case PillSheetAppearanceMode.cyclicSequential:
+              expect(titleText, startsWith('21番'));
+          }
+        });
+
         testWidgets('服用記録が1つも無く1枚目の1番が未服用の場合は、1枚目の1番を表示する', (WidgetTester tester) async {
           when(todayRepository.now()).thenReturn(DateTime.parse('2020-09-01'));
 
