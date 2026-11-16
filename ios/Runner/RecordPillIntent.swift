@@ -58,11 +58,11 @@ private func recordPillIntentDialog(result: RecordPillIntentResult) -> IntentDia
   case .notPremiumOrTrial:
     return "Siri とショートカットからの記録はプレミアムプランの機能です"
   case .noActivePillSheet:
-    return "記録できるピルシートがありません。Pilll でピルシートを追加してください"
+    return "Pilll でピルシートを追加すると記録できます"
   case .notSignedIn:
     return "Pilll を開いて初期設定を済ませてください"
   case .failed:
-    return "記録できませんでした。Pilll を開いて記録してください"
+    return "記録できなかったため Pilll を開いて記録してください"
   }
 }
 

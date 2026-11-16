@@ -391,6 +391,7 @@ private func invokeRecordPillFromAppIntent(
 ) {
   recordChannel.invokeMethod("recordPillFromAppIntent", arguments: nil, result: { result in
     if let resultObject = result as? NSObject, resultObject === FlutterMethodNotImplemented, remainingRetryCount > 0 {
+      // 間隔の 1 秒は、通知の「飲んだ」(RECORD_PILL) のコメントが Dart のハンドラ登録までを「通常は1秒前後」としているのに合わせた。実測で決めた値ではない
       DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         invokeRecordPillFromAppIntent(
           recordChannel: recordChannel,

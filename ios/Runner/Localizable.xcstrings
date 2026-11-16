@@ -61,22 +61,22 @@
         }
       }
     },
-    "記録できませんでした。Pilll を開いて記録してください" : {
+    "記録できなかったため Pilll を開いて記録してください" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Couldn't record. Open Pilll to record your pill"
+            "value" : "Recording failed so please record in Pilll"
           }
         }
       }
     },
-    "記録できるピルシートがありません。Pilll でピルシートを追加してください" : {
+    "Pilll でピルシートを追加すると記録できます" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "There's no active pill sheet. Add one in Pilll"
+            "value" : "Add a pill sheet in Pilll to record your pill"
           }
         }
       }
