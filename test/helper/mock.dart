@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
@@ -39,7 +40,7 @@ import 'package:pilll/utils/local_notification.dart';
   SetMenstruation,
   BeginMenstruation,
   DatabaseConnection,
-  EndInitialSetting,
+  StartPromotion,
   PurchaseService,
   RevertTakePill,
   TakePill,

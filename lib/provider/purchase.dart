@@ -10,6 +10,8 @@ import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/features/error/alert_error.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/user.dart';
@@ -43,12 +45,17 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((
   ref,
   User user,
 ) {
+  final customerInfo = ref.watch(customerInfoProvider).requireValue;
+  final discountEntitlementOffsetDay = ref.watch(remoteConfigParameterProvider).discountEntitlementOffsetDay;
   final isOverDiscountDeadline = ref.watch(
     isOverDiscountDeadlineProvider(
-      discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+      discountEntitlementDeadlineDate: customerInfo.discountEntitlementDeadlineDate(
+        user: user,
+        discountEntitlementOffsetDay: discountEntitlementOffsetDay,
+      ),
     ),
   );
-  if (!user.hasDiscountEntitlement) {
+  if (!customerInfo.hasDiscountEntitlement(user: user, discountEntitlementOffsetDay: discountEntitlementOffsetDay)) {
     return OfferingType.premium;
   }
   if (isOverDiscountDeadline) {
@@ -244,7 +251,26 @@ class PurchaseService {
 
 const premiumEntitlements = 'Premium';
 
+/// addCustomerInfoUpdateListenerIgnoringLastReceived が listener を登録している間だけ true。
+/// SDK は listener の登録時に直前に受け取った CustomerInfo で即座に (同期的に) 呼ぶため、その呼び出しを callUpdatePurchaseInfo が無視するのに使う
+var _isRegisteringCustomerInfoUpdateListener = false;
+
+/// 課金情報の更新 listener (callUpdatePurchaseInfo) を登録する。
+/// SDK が登録時に直前に受け取った CustomerInfo で即座に呼ぶのは無視する。アカウントの切り替えの後では、それが切り替える前のユーザーの CustomerInfo で、
+/// 今の Firebase Auth のユーザーの users に別のユーザーの課金情報を書いてしまうため。切り替えた後のユーザーの CustomerInfo は呼び出し側が callUpdatePurchaseInfo で書く
+void addCustomerInfoUpdateListenerIgnoringLastReceived() {
+  _isRegisteringCustomerInfoUpdateListener = true;
+  try {
+    Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
+  } finally {
+    _isRegisteringCustomerInfoUpdateListener = false;
+  }
+}
+
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
+  if (_isRegisteringCustomerInfoUpdateListener) {
+    return;
+  }
   analytics.logEvent(name: 'start_update_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
@@ -260,8 +286,6 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
-      // Premium entitlement が無い CustomerInfo (解約・返金で消えた後の更新) では isPremium を false に戻す
-      isActivated: premiumEntitlement?.isActive ?? false,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
@@ -274,39 +298,45 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   }
 }
 
-Future<void> syncPurchaseInfo() async {
-  analytics.logEvent(name: 'start_sync_purchase_info');
-  final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
-  if (uid == null) {
-    errorLogger.recordError(
-      'unexpected uid is not found when purchase info to sync',
-      StackTrace.current,
-    );
-    return;
-  }
+/// RevenueCat の SDK のユーザーの切り替え (logInPurchasesUser) を 1 つずつ行うための、直前の切り替えの完了。
+/// Dart のトップレベル変数は isolate ごとに別のため、1 つずつになるのは同じ isolate の中の切り替えだけ
+/// (Android の通知のアクションは別の isolate で動く。そちらとの順番は、切り替える直前の Firebase Auth のユーザーの確認だけで守る)
+Future<void> _purchasesLogInQueue = Future.value();
 
-  try {
-    analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await SyncPurchaseInfo(DatabaseConnection(uid))(
-      isActivated: (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements]?.isActive ?? false,
-    );
-    analytics.logEvent(name: 'end_sync_purchase_info');
-  } catch (exception, stack) {
-    errorLogger.recordError(exception, stack);
-  }
+/// RevenueCat の SDK のユーザーを [uid] に切り替え、そのユーザーの CustomerInfo を返す。
+/// 切り替えは前の切り替えの完了を待って 1 つずつ行う。切り替える直前に、今の Firebase Auth のユーザー ([currentFirebaseUserID] が返す値) が
+/// [uid] と違えば (待っている間にアカウントが切り替わった)、RevenueCat を古いユーザーに戻さないよう切り替えずに StateError を投げる
+Future<CustomerInfo> logInPurchasesUser({required String uid, required String? Function() currentFirebaseUserID}) {
+  final result = _purchasesLogInQueue.then((_) async {
+    if (currentFirebaseUserID() != uid) {
+      throw StateError('RevenueCat のユーザーを切り替える前に Firebase Auth のユーザーが変わったため、切り替えない');
+    }
+    return (await Purchases.logIn(uid)).customerInfo;
+  });
+  // 失敗した切り替えで後の切り替えを止めない
+  _purchasesLogInQueue = result.then((_) {}, onError: (_) {});
+  return result;
+}
+
+/// RevenueCat SDK を [uid] のユーザーで設定する
+Future<void> configurePurchases({required String uid}) {
+  return Purchases.configure(
+    PurchasesConfiguration(
+      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
+    )..appUserID = uid,
+  );
 }
 
 Future<void> initializePurchase(String uid) async {
   await Purchases.setLogLevel(
     Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
   );
-  Purchases.configure(
-    PurchasesConfiguration(
-      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
-    )..appUserID = uid,
-  );
+  // 通知のアクションが画面より先に同じユーザーで設定している時 (fetchCustomerInfoOutsideUI) は設定し直さない。
+  // listener は SDK が Set で持つため、同じ関数を何度登録しても 1 つになる
+  if (!await Purchases.isConfigured) {
+    await configurePurchases(uid: uid);
+  }
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
-  await syncPurchaseInfo();
 }
 
 /// RevenueCatのEntitlementInfo.productIdentifierに"lifetime"が含まれるかで判定するProvider
@@ -334,10 +364,13 @@ final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((
 ///
 /// 失効・解約済みを含む購入履歴で判定する。取得に失敗した場合は未購入扱いにせず、
 /// 参照側でオファーを表示しない安全側へ倒せるようAsyncErrorを維持する。
+/// トライアルなどの Promotional Entitlement は課金ではないため、購入履歴に数えない
 final hasPurchasedAnyProductProvider = FutureProvider.autoDispose<bool>((ref) async {
   try {
     final customerInfo = await Purchases.getCustomerInfo();
-    return customerInfo.allPurchasedProductIdentifiers.isNotEmpty;
+    return customerInfo.allPurchasedProductIdentifiers.any(
+      (productIdentifier) => !productIdentifier.startsWith(promotionalPremiumProductIdentifierPrefix),
+    );
   } catch (e, stack) {
     errorLogger.recordError(e, stack);
     rethrow;

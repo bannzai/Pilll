@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -132,15 +133,16 @@ class CreatingNewPillSheetHelpPage extends ConsumerWidget {
                 text: L.featureAppealTryFeature,
                 onPressed: () async {
                   final user = ref.read(userProvider).requireValue;
+                  final premiumOrTrial = ref.read(customerInfoProvider).requireValue.premiumOrTrial(user: user);
                   analytics.logEvent(
                     name: 'feature_appeal_try_tapped',
                     parameters: {
                       'feature_key': 'creating_new_pillsheet',
                       'feature_type': 'premium',
-                      'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                      'is_paywall_shown': !premiumOrTrial ? 1 : 0,
                     },
                   );
-                  if (!user.premiumOrTrial) {
+                  if (!premiumOrTrial) {
                     analytics.logEvent(
                       name: 'feature_appeal_paywall_shown',
                       parameters: {'feature_key': 'creating_new_pillsheet', 'trigger': 'try'},

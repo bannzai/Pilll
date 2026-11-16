@@ -7,7 +7,9 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/database.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 const methodChannel = MethodChannel('method.channel.MizukiOhashi.Pilll');
 void definedChannel() {
@@ -33,6 +35,17 @@ void definedChannel() {
           final pillSheetGroup = await quickRecordTakePill(database);
           syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
+          // リマインダーを登録し直す時の課金状態。取り消した後に取得が失敗するとリマインダーが全て消えるため、取り消しより先に取得する。
+          // 取得できない時 (オフラインで SDK のキャッシュが無い等) は、服用の記録は済んでいるので失敗の通知を出さず、登録済みのリマインダーを残して終える
+          final CustomerInfo customerInfo;
+          try {
+            customerInfo =
+                await fetchCustomerInfoOutsideUI(uid: firebaseUser.uid, currentFirebaseUserID: () => FirebaseAuth.instance.currentUser?.uid);
+          } catch (e, st) {
+            errorLogger.recordError(e, st);
+            return;
+          }
+
           final cancelReminderLocalNotification = CancelReminderLocalNotification();
           // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
           // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
@@ -48,7 +61,7 @@ void definedChannel() {
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
-              premiumOrTrial: user.isPremium || user.isTrial,
+              premiumOrTrial: customerInfo.premiumOrTrial(user: user),
               setting: setting,
             );
           }

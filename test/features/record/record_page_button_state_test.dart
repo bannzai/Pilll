@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
@@ -55,7 +55,7 @@ void main() {
               ),
               currentPillSheet: pillSheet,
               userIsPremiumOtTrial: false,
-              user: FakeUser(),
+              user: const User(),
               setting: const Setting(
                 pillNumberForFromMenstruation: 1,
                 durationMenstruation: 4,
@@ -98,7 +98,7 @@ void main() {
             ),
             currentPillSheet: pillSheet,
             userIsPremiumOtTrial: false,
-            user: FakeUser(),
+            user: const User(),
             setting: const Setting(
               pillNumberForFromMenstruation: 1,
               durationMenstruation: 4,

@@ -1,3 +1,5 @@
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -24,8 +26,15 @@ bool hiddenCountdownDiscountDeadline(
   HiddenCountdownDiscountDeadlineRef ref, {
   required DateTime? discountEntitlementDeadlineDate,
 }) {
-  final user = ref.watch(userProvider);
-  return user.valueOrNull?.hasDiscountEntitlement != true;
+  final user = ref.watch(userProvider).valueOrNull;
+  final customerInfo = ref.watch(customerInfoProvider).valueOrNull;
+  if (user == null || customerInfo == null) {
+    return true;
+  }
+  return !customerInfo.hasDiscountEntitlement(
+    user: user,
+    discountEntitlementOffsetDay: ref.watch(remoteConfigParameterProvider).discountEntitlementOffsetDay,
+  );
 }
 
 @Riverpod()

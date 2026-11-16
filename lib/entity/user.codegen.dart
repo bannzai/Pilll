@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/utils/datetime/day.dart';
 
 part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';
@@ -91,28 +90,11 @@ extension UserFirestoreFieldKeys on String {
   /// 匿名ユーザーかどうかのフラグ
   static const isAnonymous = 'isAnonymous';
 
-  /// プレミアム会員フラグ
-  static const isPremium = 'isPremium';
-
   /// 課金アプリID（iOS/Androidの識別用）
   static const purchaseAppID = 'purchaseAppID';
 
-  /// トライアル開始日
-  static const beginTrialDate = 'beginTrialDate';
-
-  /// トライアル期限日
-  static const trialDeadlineDate = 'trialDeadlineDate';
-
-  /// 割引プラン利用期限日
-  static const discountEntitlementDeadlineDate = 'discountEntitlementDeadlineDate';
-
   /// 解約理由を聞くかどうかのフラグ
   static const shouldAskCancelReason = 'shouldAskCancelReason';
-
-  // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
-  // アプリを開かないとトライアルが終了しなくなることについては許容する
-  /// トライアル中フラグ（バックエンドとの同期用）
-  static const isTrial = 'isTrial';
 }
 
 /// Pilllアプリのユーザー情報を管理するエンティティクラス
@@ -146,15 +128,14 @@ class User with _$User {
     /// 統合されたFirebaseCurrentUserIDのリスト
     @Default([]) List<String> firebaseCurrentUserIDSets,
 
-    /// プレミアム会員フラグ（サブスクリプション有効状態）
-    @Default(false) bool isPremium,
-
     /// 解約理由を聞くかどうかのフラグ
     @Default(false) bool shouldAskCancelReason,
 
     /// アナリティクスのデバッグ機能有効フラグ
     @Default(false) bool analyticsDebugIsEnabled,
 
+    // トライアルの権限の正は RevenueCat の Promotional Entitlement (lib/provider/customer_info.dart の CustomerInfoPremium)。
+    // beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate は Promotional Entitlement で付与する前の版でトライアルを始めた既存ユーザーの値で、アプリは読むだけで書かない
     /// トライアル開始日（初回トライアル開始時にセット）
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -180,39 +161,4 @@ class User with _$User {
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
-
-  /// 割引プランの利用権限があるかどうかを判定するgetter
-  /// nullの場合はトライアル中として権限ありと判定
-  /// 有効期限が現在時刻より後の場合に権限ありと判定
-  bool get hasDiscountEntitlement {
-    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
-    if (discountEntitlementDeadlineDate == null) {
-      return true;
-    } else {
-      return now().isBefore(discountEntitlementDeadlineDate);
-    }
-  }
-
-  /// トライアル期間中かどうかを判定するgetter
-  /// trialDeadlineDateがnullの場合はトライアル未開始として判定
-  /// 有効期限が現在時刻より後の場合にトライアル中として判定
-  bool get isTrial {
-    final trialDeadlineDate = this.trialDeadlineDate;
-    if (trialDeadlineDate == null) {
-      return false;
-    } else {
-      return now().isBefore(trialDeadlineDate);
-    }
-  }
-
-  /// トライアルが既に開始されているかどうかを判定するgetter
-  bool get trialIsAlreadyBegin => beginTrialDate != null;
-
-  /// プレミアム会員またはトライアル中かどうかを判定するgetter
-  /// WidgetとHomeWidgetの両方で参照される重要なプロパティ
-  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  bool get premiumOrTrial => isPremium || isTrial;
-
-  /// トライアル未開始かどうかを判定するgetter
-  bool get isNotYetStartTrial => trialDeadlineDate == null;
 }

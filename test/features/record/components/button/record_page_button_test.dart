@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
@@ -16,7 +17,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-import '../../../../helper/fake.dart';
 import '../../../../helper/mock.mocks.dart';
 
 void main() {
@@ -93,7 +93,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
-                  user: FakeUser(),
+                  user: const User(),
                   setting: const Setting(
                     pillNumberForFromMenstruation: 1,
                     durationMenstruation: 4,
@@ -179,7 +179,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
-                  user: FakeUser(),
+                  user: const User(),
                   setting: const Setting(
                     pillNumberForFromMenstruation: 1,
                     durationMenstruation: 4,
@@ -261,7 +261,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
-                  user: FakeUser(),
+                  user: const User(),
                   setting: const Setting(
                     pillNumberForFromMenstruation: 1,
                     durationMenstruation: 4,
