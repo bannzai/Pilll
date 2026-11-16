@@ -146,13 +146,21 @@ Future<AppIntentRecordPillResult> recordPillFromAppIntent({
 
     final PillSheetGroup? takenPillSheetGroup;
     // 保留として返すのは、記録の書き込みを待った時だけにする (user や PillSheetGroup の取得が投げた TimeoutException は、何も書き込んでいないため failed にする)
+    final takingPillSheetGroup = _takePillNowAsQuickRecord(
+      takePill: takePill,
+      pillSheetGroup: pillSheetGroup,
+      activePillSheet: activePillSheet,
+    );
     try {
-      takenPillSheetGroup = await _takePillNowAsQuickRecord(
-        takePill: takePill,
-        pillSheetGroup: pillSheetGroup,
-        activePillSheet: activePillSheet,
-      ).timeout(takePillTimeout);
+      takenPillSheetGroup = await takingPillSheetGroup.timeout(takePillTimeout);
     } on TimeoutException {
+      // 保留として返した後に書き込みが失敗した時は、返答では伝えられないため errorLogger に残す
+      unawaited(
+        takingPillSheetGroup.then<void>(
+          (_) {},
+          onError: (Object e, StackTrace st) => errorLogger.recordError(e, st),
+        ),
+      );
       return AppIntentRecordPillResult.pendingSync;
     }
     if (takenPillSheetGroup == null) {

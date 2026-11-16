@@ -1,7 +1,7 @@
 import AppIntents
 import UIKit
 
-// 文言は開発言語の日本語で書き、英語は Localizable.xcstrings (title・description・返答) と AppShortcuts.strings (発話) に置く。
+// 文言は開発言語の日本語で書き、英語は Localizable.xcstrings (title・description・返答・タイルの名前の shortTitle) と AppShortcuts.strings (発話) に置く。
 // 発話を AppShortcuts.xcstrings にしないのは、iOS 17 以上でしか使えず、Runner の最低 OS (iOS 15) ではビルドが失敗するため。
 //
 // Siri AI (iOS 27.3 のベータで開発者向けの先行プレビューが始まった新しい Siri) から呼ばれるための @AppIntent(.tool) は付けていない。
