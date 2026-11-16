@@ -342,7 +342,7 @@ PillSheetGroupDisplayNumberSetting? displayNumberSettingSheetUpdatedDisplayNumbe
         : PillSheetGroupDisplayNumberSetting(
             // 始まりの番号の入力欄は未設定の時に 1 を表示し、PillSheetGroupDisplayNumberSetting.beginPillNumber も null を 1 番からの開始として扱うため
             beginPillNumber: beginPillNumber ?? 1,
-            endPillNumber: endPillNumber ?? 1,
+            endPillNumber: endPillNumber,
           );
 
 void showDisplayNumberSettingSheet(
