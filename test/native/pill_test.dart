@@ -810,6 +810,26 @@ void main() {
         verifyNever(batch.commit());
       });
 
+      test(
+          'user の取得が TimeoutException を投げた場合は、何も書き込んでいないので pendingSync ではなく failed を返す',
+          () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => throw TimeoutException('user'),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePill,
+            takePillTimeout: const Duration(seconds: 5),
+            syncAfterRecord: (_) async {},
+          ),
+          AppIntentRecordPillResult.failed,
+        );
+        verifyNever(batch.commit());
+      });
+
       test('ピルシートグループの取得が例外を投げた場合は記録せず failed を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 

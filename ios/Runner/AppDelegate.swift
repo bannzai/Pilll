@@ -383,7 +383,7 @@ extension AppDelegate {
 /// 捨てられ、空の応答 (iOS 側では未実装) が返る (`_Channel._dropOverflowMessages` の `message.invoke(null); // send empty reply to the plugin side`。
 /// 出典: Flutter SDK の `bin/cache/pkg/sky_engine/lib/ui/channel_buffers.dart`。2026-11-16 に読んで確認)。
 /// 未実装が返った時は 1 秒おきに remainingRetryCount 回まで送り直し、それでも届かなければ nil を渡す。
-/// 捨てられた呼び出しは Dart 側のハンドラに渡っていないため、送り直しで二重に記録することは無い (Dart 側のハンドラはこの呼び出しに必ず文字列を返す)
+/// 捨てられた呼び出しは Dart 側のハンドラに渡っていないため、送り直しで二重に記録することは無い (Dart 側のハンドラが呼ばれた時に返るのは文字列かエラーで、未実装は返らない)
 private func invokeRecordPillFromAppIntent(
   recordChannel: FlutterMethodChannel,
   remainingRetryCount: Int,

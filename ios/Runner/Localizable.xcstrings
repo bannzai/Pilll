@@ -31,6 +31,16 @@
         }
       }
     },
+    "ピルを記録" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Pill"
+          }
+        }
+      }
+    },
     "今日のピルはすでに記録済みです" : {
       "localizations" : {
         "en" : {
