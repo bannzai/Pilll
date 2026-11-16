@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Fitur ini tidak tersedia di perangkat yang tidak mendukung Kesehatan",
   "enableHealthKitFromSettings": "Silakan aktifkan akses ke Kesehatan melalui aplikasi Pengaturan",
   "accountAlreadyLinked": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll Anda. Coba muat ulang layar dan lihat juga pertanyaan umum. Detail: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Akun {accountTypeProviderName} ini sudah terhubung ke akun Pilll lain yang dibuat melalui tindakan atau login di perangkat lain. Karena itu, Anda tidak dapat mendaftar dengannya.\n\nJika catatan yang ingin disimpan ada di perangkat ini\n1. Di perangkat tanpa catatan, pilih “Pengaturan” → “Pengaturan akun” → “Hapus akun”\n2. Di perangkat ini, pilih lagi “Buat akun”\n3. Mulai ulang Pilll di perangkat tanpa catatan, lalu masuk melalui “Sudah punya akun?”\n\nCatatan di perangkat tempat akun dihapus akan hilang permanen. Jangan hapus akun di perangkat yang memiliki catatan.\n\nJika catatan yang ingin disimpan ada di perangkat lain, jangan hapus akun dan lihat pertanyaan umum.\n\nDetail: {exceptionMessage}",
   "emailAlreadyInUse": "Pendaftaran tidak dapat dilakukan karena alamat email yang Anda gunakan untuk akun {accountTypeProviderName} sudah terhubung ke akun Pilll lain. Silakan lihat juga FAQ. Detail: {exceptionMessage}",
   "todaySchedule": "Jadwal Anda hari ini",
   "calendarSchedule": "Jadwal di kalender",

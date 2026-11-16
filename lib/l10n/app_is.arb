@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Þessi eiginleiki er ekki í boði í tækjum sem styðja ekki heilsufarsgögn",
   "enableHealthKitFromSettings": "Þú getur virkjað aðgang að Heilsu í Stillingum",
   "accountAlreadyLinked": "Þessi {accountTypeProviderName}-reikningur er þegar tengdur Pilll-reikningnum þínum. Prófaðu að endurnýja skjáinn og skoðaðu líka algengar spurningar. Nánar: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName}-aðgangur er þegar tengdur öðrum Pilll-aðgangi sem var stofnaður við aðgerð eða innskráningu í öðru tæki. Þess vegna geturðu ekki stofnað aðgang með honum.\n\nEf færslurnar sem þú vilt halda eru í þessu tæki\n1. Í tækinu án færslna skaltu velja „Stillingar“ → „Aðgangsstillingar“ → „Eyða aðgangi“\n2. Í þessu tæki skaltu velja „Stofna aðgang“ aftur\n3. Endurræstu Pilll í tækinu án færslna og skráðu þig inn með „Áttu þegar aðgang?“\n\nFærslum í tækinu þar sem þú eyðir aðganginum verður eytt fyrir fullt og allt. Ekki eyða aðganginum í tækinu með færslunum.\n\nEf færslurnar sem þú vilt halda eru í öðru tæki skaltu ekki eyða aðganginum. Skoðaðu algengar spurningar.\n\nNánar: {exceptionMessage}",
   "emailAlreadyInUse": "Þú getur ekki skráð þig því netfangið sem þú notar með {accountTypeProviderName}-reikningnum þínum er þegar tengt öðrum Pilll-reikningi. Skoðaðu líka algengar spurningar. Nánar: {exceptionMessage}",
   "todaySchedule": "Viðburðir dagsins",
   "calendarSchedule": "Viðburðir í dagatali",

@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "This feature isn't available on devices that don't support health data",
   "enableHealthKitFromSettings": "Please enable access to Health in the Settings app",
   "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Try refreshing the screen, and check the FAQ too. Details: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is linked to another Pilll account created through an action or sign-in on another device, so you can’t sign up with it.\n\nIf the records you want to keep are on this device\n1. On the device without records, go to “Settings” → “Account settings” → “Delete account”\n2. On this device, select “Create an account” again\n3. Restart Pilll on the device without records and sign in through “Already have an account?”\n\nRecords on the device where you delete the account will be permanently deleted. Don’t delete the account on the device with the records.\n\nIf the records you want to keep are on another device, don’t delete the account. Please see the FAQ.\n\nDetails: {exceptionMessage}",
   "emailAlreadyInUse": "You can’t sign up because the email address you use with your {accountTypeProviderName} account is already linked to another Pilll account. Please check the FAQ too. Details: {exceptionMessage}",
   "todaySchedule": "Today's events",
   "calendarSchedule": "Calendar events",

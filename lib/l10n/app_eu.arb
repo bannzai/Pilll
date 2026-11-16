@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Funtzio hau ez dago erabilgarri osasun-datuak onartzen ez dituzten gailuetan",
   "enableHealthKitFromSettings": "Gaitu Osasunerako sarbidea Ezarpenak aplikazioan, mesedez",
   "accountAlreadyLinked": "{accountTypeProviderName} kontu hau zure Pilll kontuarekin lotuta dago jada. Saiatu pantaila freskatzen, eta begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName} kontu hau beste gailu batean egindako ekintza edo saio-hasiera baten bidez sortutako Pilll kontu bati lotuta dago. Horregatik, ezin duzu konturik sortu honekin.\n\nGorde nahi dituzun erregistroak gailu honetan badaude\n1. Erregistrorik gabeko gailuan, aukeratu «Ezarpenak» → «Kontuaren ezarpenak» → «Ezabatu kontua»\n2. Gailu honetan, aukeratu berriro «Sortu kontua»\n3. Berrabiarazi Pilll erregistrorik gabeko gailuan eta hasi saioa «Baduzu konturik?» aukeratik\n\nKontua ezabatzen duzun gailuko erregistroak betiko ezabatuko dira. Ez ezabatu kontua erregistroak dituen gailuan.\n\nGorde nahi dituzun erregistroak beste gailu batean badaude, ez ezabatu kontua eta ikusi ohiko galderak.\n\nXehetasunak: {exceptionMessage}",
   "emailAlreadyInUse": "Ezin duzu izena eman, {accountTypeProviderName} kontuarekin erabiltzen duzun helbide elektronikoa beste Pilll kontu bati lotuta dagoelako. Begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
   "todaySchedule": "Gaurko zure plana",
   "calendarSchedule": "Egutegiko planak",

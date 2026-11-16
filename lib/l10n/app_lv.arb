@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Šī funkcija nav pieejama ierīcēs, kas neatbalsta lietotni Veselība",
   "enableHealthKitFromSettings": "Lūdzu, lietotnē Iestatījumi iespējojiet piekļuvi lietotnei Veselība",
   "accountAlreadyLinked": "Šis {accountTypeProviderName} konts jau ir saistīts ar jūsu Pilll kontu. Lūdzu, pamēģiniet atsvaidzināt ekrānu un skatiet arī bieži uzdotos jautājumus. Informācija: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Šis {accountTypeProviderName} konts ir saistīts ar citu Pilll kontu, kas izveidots pēc darbības vai pierakstīšanās citā ierīcē. Tāpēc ar to nevar reģistrēties.\n\nJa ieraksti, kurus vēlaties saglabāt, ir šajā ierīcē\n1. Ierīcē bez ierakstiem izvēlieties “Iestatījumi” → “Konta iestatījumi” → “Dzēsiet kontu”\n2. Šajā ierīcē vēlreiz izvēlieties “Izveidot kontu”\n3. Ierīcē bez ierakstiem restartējiet Pilll un pierakstieties sadaļā “Jums jau ir konts?”\n\nIeraksti ierīcē, kurā dzēsīsiet kontu, tiks neatgriezeniski izdzēsti. Nedzēsiet kontu ierīcē, kurā ir ieraksti.\n\nJa ieraksti, kurus vēlaties saglabāt, ir citā ierīcē, nedzēsiet kontu un skatiet biežākos jautājumus.\n\nInformācija: {exceptionMessage}",
   "emailAlreadyInUse": "Reģistrēties neizdodas, jo e-pasta adrese, ko izmantojat savā {accountTypeProviderName} kontā, jau ir saistīta ar citu Pilll kontu. Apskatiet arī biežāk uzdotos jautājumus. Sīkāka informācija: {exceptionMessage}",
   "todaySchedule": "Jūsu šodienas plāni",
   "calendarSchedule": "Kalendāra plāni",

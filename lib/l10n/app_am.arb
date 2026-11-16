@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "የጤና መረጃን በማይደግፉ መሣሪያዎች ላይ ይህን ባህሪ መጠቀም አይቻልም",
   "enableHealthKitFromSettings": "እባክዎ በቅንብሮች መተግበሪያ ውስጥ የጤና መዳረሻን ያንቁ",
   "accountAlreadyLinked": "ይህ የ{accountTypeProviderName} መለያ ከእርስዎ የPilll መለያ ጋር አስቀድሞ ተገናኝቷል። እባክዎ ማያ ገጹን እንደገና ያድሱ። ተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ የ{accountTypeProviderName} መለያ በሌላ መሣሪያ ላይ በተደረገ እርምጃ ወይም በመግባት ከተፈጠረ ሌላ የPilll መለያ ጋር ተገናኝቷል። ስለዚህ መመዝገብ አይቻልም።\n\nሊያቆዩት የሚፈልጉት መዝገብ በዚህ መሣሪያ ላይ ከሆነ\n1. መዝገብ በሌለበት መሣሪያ «ቅንብሮች» → «የመለያ ቅንብሮች» → «መለያ ይሰርዙ» ይምረጡ\n2. በዚህ መሣሪያ «መለያ መመዝገብ» እንደገና ያድርጉ\n3. መዝገብ በሌለበት መሣሪያ Pilllን እንደገና ያስጀምሩና «መለያ አለዎት?» በሚለው በኩል ይግቡ\n\nመለያው በተሰረዘበት መሣሪያ ያሉ መዝገቦች ይሰረዛሉ፤ መመለስም አይቻልም። መዝገብ ባለበት መሣሪያ ላይ መለያ አይሰርዙ።\n\nሊያቆዩት የሚፈልጉት መዝገብ በሌላ መሣሪያ ላይ ከሆነ መለያ ሳይሰርዙ ተደጋጋሚ ጥያቄዎችን ይመልከቱ።\n\nዝርዝሮች፦ {exceptionMessage}",
   "emailAlreadyInUse": "በ{accountTypeProviderName} መለያዎ የሚጠቀሙበት የኢሜይል አድራሻ ከሌላ የPilll መለያ ጋር አስቀድሞ ተያይዟል። ስለዚህ መመዝገብ አይችሉም። እባክዎ FAQንም ይመልከቱ። ዝርዝር፦ {exceptionMessage}",
   "todaySchedule": "የዛሬ ቀጠሮ",
   "calendarSchedule": "የቀን መቁጠሪያ ቀጠሮዎች",

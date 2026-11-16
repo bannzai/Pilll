@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Tato funkce není dostupná na zařízeních, která nepodporují aplikaci Zdraví",
   "enableHealthKitFromSettings": "Povolte prosím přístup ke Zdraví v aplikaci Nastavení",
   "accountAlreadyLinked": "Tento účet {accountTypeProviderName} je už propojený s vaším účtem Pilll. Zkuste prosím obnovit obrazovku a podívejte se také do FAQ. Podrobnosti: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Tento účet {accountTypeProviderName} je už propojený s jiným účtem Pilll, který vznikl při použití nebo přihlášení na jiném zařízení. Proto s ním nelze vytvořit účet.\n\nPokud jsou záznamy, které chcete zachovat, na tomto zařízení\n1. Na zařízení bez záznamů zvolte „Nastavení“ → „Nastavení účtu“ → „Smazat účet“\n2. Na tomto zařízení znovu zvolte „Zaregistrovat účet“\n3. Na zařízení bez záznamů restartujte Pilll a přihlaste se přes „Máte účet?“\n\nZáznamy na zařízení, kde účet smažete, budou nenávratně odstraněny. Nemažte účet na zařízení se záznamy.\n\nPokud jsou záznamy, které chcete zachovat, na jiném zařízení, účet nemažte a podívejte se na časté dotazy.\n\nPodrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "Registrace není možná, protože e-mailová adresa používaná s účtem {accountTypeProviderName} je už propojená s jiným účtem Pilll. Podívejte se prosím také do FAQ. Podrobnosti: {exceptionMessage}",
   "todaySchedule": "Dnešní událost",
   "calendarSchedule": "Události v kalendáři",

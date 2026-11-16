@@ -341,6 +341,7 @@
   "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują aplikacji Zdrowie",
   "enableHealthKitFromSettings": "Włącz dostęp do aplikacji Zdrowie w Ustawieniach",
   "accountAlreadyLinked": "To konto {accountTypeProviderName} jest już połączone z twoim kontem Pilll. Spróbuj odświeżyć ekran i zajrzyj też do często zadawanych pytań. Szczegóły: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "To konto {accountTypeProviderName} jest połączone z innym kontem Pilll utworzonym podczas działania lub logowania na innym urządzeniu. Dlatego nie można się za jego pomocą zarejestrować.\n\nJeśli wpisy, które chcesz zachować, są na tym urządzeniu\n1. Na urządzeniu bez wpisów wybierz „Ustawienia” → „Ustawienia konta” → „Usuń konto”\n2. Na tym urządzeniu ponownie wybierz „Utwórz konto”\n3. Uruchom ponownie Pilll na urządzeniu bez wpisów i zaloguj się przez „Masz już konto?”\n\nWpisy na urządzeniu, na którym usuniesz konto, zostaną trwale skasowane. Nie usuwaj konta na urządzeniu z wpisami.\n\nJeśli wpisy, które chcesz zachować, są na innym urządzeniu, nie usuwaj konta i sprawdź częste pytania.\n\nSzczegóły: {exceptionMessage}",
   "emailAlreadyInUse": "Rejestracja nie jest możliwa, ponieważ adres e-mail używany z kontem {accountTypeProviderName} jest już powiązany z innym kontem Pilll. Sprawdź też często zadawane pytania. Szczegóły: {exceptionMessage}",
   "todaySchedule": "Dzisiejsze wydarzenie",
   "calendarSchedule": "Plany w kalendarzu",
