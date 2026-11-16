@@ -1,0 +1,4 @@
+"${applicationName}で今日のピルを記録" = "Record today's pill in ${applicationName}";
+"${applicationName}でピルを記録" = "Record my pill in ${applicationName}";
+"${applicationName}でピルを飲んだ" = "I took my pill in ${applicationName}";
+"ピルを記録" = "Record Pill";
