@@ -344,6 +344,61 @@ private func analytics(name: String, parameters: [String: Any]? = nil, function:
   channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
 }
 
+// MARK: - App Intent
+extension AppDelegate {
+  /// App Intent (Siri・ショートカット) からの服用記録を Dart 側 (lib/native/channel.dart の recordPillFromAppIntent) に実行させ、
+  /// Dart が返した AppIntentRecordPillResult の name を completion に渡す。Dart 側の処理に届かなかった時は nil を渡す。
+  /// main thread で呼ぶ。冪等ではない (呼ぶたびに Dart 側が未服用の 1 回分を記録するため)
+  func recordPillFromAppIntent(completion: @escaping (String?) -> Void) {
+    // 終了状態から画面を開かずに起動された時は scene が接続されず画面のエンジンが無いため、通知の「飲んだ」と同じく headless で起動する
+    startHeadlessEngineIfNeeded()
+    guard let recordChannel = channel else {
+      completion(nil)
+      return
+    }
+    // headless エンジンへ送る時は、Dart 側の処理が終わるまで破棄されないよう実行中として数える
+    let usesHeadlessEngine = headlessEngine != nil
+    if usesHeadlessEngine {
+      headlessEngineInFlightCount += 1
+    }
+    invokeRecordPillFromAppIntent(
+      recordChannel: recordChannel,
+      // Dart の main がチャネルのハンドラを登録するまでは通常 1 秒前後で、通知の「飲んだ」は余裕を見て 5 秒待っている。その 2 倍の 10 秒まで待つ
+      remainingRetryCount: 10
+    ) { [self] resultName in
+      if usesHeadlessEngine {
+        headlessEngineInFlightCount -= 1
+        destroyHeadlessEngineIfIdle()
+      }
+      completion(resultName)
+    }
+  }
+}
+
+/// recordChannel で Dart 側の recordPillFromAppIntent を呼び、返った AppIntentRecordPillResult の name を completion に渡す。
+/// Dart 側がハンドラを登録する前に送った呼び出しは、Flutter がチャネルごとに 1 件だけ溜め、溢れた分には空の応答 (未実装) を返す
+/// (同じチャネルに analytics も送っているため溢れうる)。未実装が返った時は 1 秒おきに remainingRetryCount 回まで送り直し、
+/// それでも届かなければ nil を渡す。溢れた呼び出しは Dart 側で実行されていないため、送り直しで二重に記録することは無い
+private func invokeRecordPillFromAppIntent(
+  recordChannel: FlutterMethodChannel,
+  remainingRetryCount: Int,
+  completion: @escaping (String?) -> Void
+) {
+  recordChannel.invokeMethod("recordPillFromAppIntent", arguments: nil, result: { result in
+    if let resultObject = result as? NSObject, resultObject === FlutterMethodNotImplemented, remainingRetryCount > 0 {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        invokeRecordPillFromAppIntent(
+          recordChannel: recordChannel,
+          remainingRetryCount: remainingRetryCount - 1,
+          completion: completion
+        )
+      }
+      return
+    }
+    completion(result as? String)
+  })
+}
+
 // MARK: - Avoid bug for flutter app badger
 // ref: https://github.com/g123k/flutter_app_badger/pull/52
 extension UNUserNotificationCenter {

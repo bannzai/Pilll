@@ -1,0 +1,86 @@
+{
+  "sourceLanguage" : "ja",
+  "strings" : {
+    "Pilll を開いて初期設定を済ませてください" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Pilll and finish setup first"
+          }
+        }
+      }
+    },
+    "Siri とショートカットからの記録はプレミアムプランの機能です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recording from Siri and Shortcuts is a Premium feature"
+          }
+        }
+      }
+    },
+    "今日のピルはすでに記録済みです" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's pill is already recorded"
+          }
+        }
+      }
+    },
+    "今日のピルを記録" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Today's Pill"
+          }
+        }
+      }
+    },
+    "今日のピルを記録しました" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recorded today's pill"
+          }
+        }
+      }
+    },
+    "今日のピルを飲んだことを Pilll に記録します" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records that you took today's pill in Pilll"
+          }
+        }
+      }
+    },
+    "記録できませんでした。Pilll を開いて記録してください" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't record. Open Pilll to record your pill"
+          }
+        }
+      }
+    },
+    "記録できるピルシートがありません。Pilll でピルシートを追加してください" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's no active pill sheet. Add one in Pilll"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
