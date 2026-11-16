@@ -415,6 +415,7 @@
   "pauseTakingStarted": "ગોળી લેવાનું થોડા સમય માટે બંધ રાખવાનો સમયગાળો શરૂ થયો છે",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ગોળી લેવાનું થોડા સમય માટે બંધ કરવાની શરૂઆતની તારીખ સંપાદિત કરો",
+  "startWeekOnMonday": "અઠવાડિયું સોમવારથી શરૂ કરો",
   "shareWithFriends": "મિત્રોને જણાવો",
   "termsOfService": "ઉપયોગની શરતો",
   "privacyPolicy": "ગોપનીયતા નીતિ",

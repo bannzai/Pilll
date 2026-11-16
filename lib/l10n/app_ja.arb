@@ -2255,6 +2255,10 @@
   "@editPauseStartDate": {
     "description": "「服用お休み」機能 (ユーザーが任意のタイミングで服用を中断し、その間ピル番号が進まない機能。ピルシートの種類で決まる休薬期間とは別の機能) の開始日を編集する画面やボタンのテキストです。用語集の「休薬」ではなく「服用お休み」の訳語を使う。\n[翻訳の決定 en] 「Edit pill break start date」ではなく「Edit pause start date」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2002)\n[翻訳の決定 de] 「Beginn der Pillenpause bearbeiten」ではなく「Startdatum der Pillenpause bearbeiten」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2001)\n[翻訳の決定 ko] 「복용 휴식 시작일 수정」ではなく「일시 중지 시작일 수정」: 服用お休みを休薬と別の訳語に統一するため (https://github.com/bannzai/Pilll/issues/2005)"
   },
+  "startWeekOnMonday": "週の始まりを月曜日にする",
+  "@startWeekOnMonday": {
+    "description": "設定画面の「その他」にあるスイッチのラベルです。ON にすると、カレンダーと生理タブの週の行が日曜日ではなく月曜日から始まります。"
+  },
   "shareWithFriends": "友達に教える",
   "@shareWithFriends": {
     "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"

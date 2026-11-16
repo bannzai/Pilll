@@ -415,6 +415,7 @@
   "pauseTakingStarted": "सेवन विराम सुरू झाला आहे",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "कृपया सेवन विराम सुरू होण्याची तारीख बदला",
+  "startWeekOnMonday": "आठवड्याची सुरुवात सोमवारपासून करा",
   "shareWithFriends": "मित्रांना सांगा",
   "termsOfService": "वापराच्या अटी",
   "privacyPolicy": "गोपनीयता धोरण",

@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Prasidėjo vartojimo pristabdymas",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Keisti pristabdymo pradžios datą",
+  "startWeekOnMonday": "Pradėti savaitę pirmadienį",
   "shareWithFriends": "Pasidalykite su draugais",
   "termsOfService": "Naudojimo sąlygos",
   "privacyPolicy": "Privatumo politika",

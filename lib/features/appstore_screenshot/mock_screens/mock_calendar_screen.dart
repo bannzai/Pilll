@@ -112,9 +112,10 @@ class MockCalendarScreen extends StatelessWidget {
 
   /// 本番 MonthCalendar と同じ月間グリッド。Provider(Firestore) を通さず固定データで組む。
   Widget _monthCalendar() {
+    // 週の始まりは設定を一度も切り替えていない端末と同じ日曜日に固定する (曜日バッジの行の Weekday.values も日曜日始まり)。
     final weekDateRanges = List.generate(
-      WeekCalendarDateRangeCalculator(_displayedMonth).weeklineCount(),
-      (index) => WeekCalendarDateRangeCalculator(_displayedMonth).dateRangeOfLine(index + 1),
+      WeekCalendarDateRangeCalculator(_displayedMonth, firstWeekday: Weekday.Sunday).weeklineCount(),
+      (index) => WeekCalendarDateRangeCalculator(_displayedMonth, firstWeekday: Weekday.Sunday).dateRangeOfLine(index + 1),
     );
     return Container(
       // 本番 MonthCalendarPager と同じ白背景 + 下方向の影。

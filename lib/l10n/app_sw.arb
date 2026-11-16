@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Kusitisha kumeza vidonge kumeanza",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Tafadhali hariri tarehe ya kuanza kusitisha kumeza vidonge",
+  "startWeekOnMonday": "Anza wiki Jumatatu",
   "shareWithFriends": "Shiriki na marafiki",
   "termsOfService": "Masharti ya matumizi",
   "privacyPolicy": "Sera ya faragha",

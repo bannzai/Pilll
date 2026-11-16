@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Почалося призупинення прийому пігулок",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Змінити дату початку призупинення",
+  "startWeekOnMonday": "Починати тиждень із понеділка",
   "shareWithFriends": "Порадьте друзям",
   "termsOfService": "Умови користування",
   "privacyPolicy": "Політика конфіденційності",

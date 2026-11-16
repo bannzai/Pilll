@@ -415,6 +415,7 @@
   "pauseTakingStarted": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋ ਗਈ ਹੈ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ਗੋਲੀ ਲੈਣ ਤੋਂ ਛੁੱਟੀ ਸ਼ੁਰੂ ਹੋਣ ਦੀ ਤਾਰੀਖ ਬਦਲੋ",
+  "startWeekOnMonday": "ਹਫ਼ਤਾ ਸੋਮਵਾਰ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ",
   "shareWithFriends": "ਦੋਸਤਾਂ ਨੂੰ ਦੱਸੋ",
   "termsOfService": "ਵਰਤੋਂ ਦੀਆਂ ਸ਼ਰਤਾਂ",
   "privacyPolicy": "ਪਰਦੇਦਾਰੀ ਨੀਤੀ",

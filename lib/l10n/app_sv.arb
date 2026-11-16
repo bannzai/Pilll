@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Din paus i tablettintaget har börjat",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ändra startdatum för pausen",
+  "startWeekOnMonday": "Börja veckan på måndag",
   "shareWithFriends": "Dela med vänner",
   "termsOfService": "Användarvillkor",
   "privacyPolicy": "Integritetspolicy",

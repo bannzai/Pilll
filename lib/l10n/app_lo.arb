@@ -415,6 +415,7 @@
   "pauseTakingStarted": "ເລີ່ມການຢຸດກິນຢາຊົ່ວຄາວແລ້ວ",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ແກ້ໄຂວັນທີເລີ່ມຢຸດກິນຢາຊົ່ວຄາວ",
+  "startWeekOnMonday": "ເລີ່ມອາທິດໃນວັນຈັນ",
   "shareWithFriends": "ແບ່ງປັນກັບໝູ່",
   "termsOfService": "ເງື່ອນໄຂການນຳໃຊ້",
   "privacyPolicy": "ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ",

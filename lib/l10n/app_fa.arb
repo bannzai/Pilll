@@ -415,6 +415,7 @@
   "pauseTakingStarted": "توقف موقت مصرف آغاز شد",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "ویرایش تاریخ شروع توقف موقت مصرف",
+  "startWeekOnMonday": "شروع هفته از دوشنبه",
   "shareWithFriends": "به دوستانتان معرفی کنید",
   "termsOfService": "شرایط استفاده",
   "privacyPolicy": "سیاست حفظ حریم خصوصی",
