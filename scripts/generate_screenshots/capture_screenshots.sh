@@ -11,7 +11,6 @@
 # - ios/Flutter/Secret.xcconfig（Debug.xcconfig が #include）
 # - ios/Runner/GoogleService-Info.plist（Firebase）
 # - environment/dev.json（--dart-define-from-file）
-# - ios/Pods（worktree では flutter-pod-warmup で用意）
 #
 # 使い方:
 #   bash scripts/generate_screenshots/capture_screenshots.sh [-l LANGS] [--device "iPhone 15 Pro Max"]

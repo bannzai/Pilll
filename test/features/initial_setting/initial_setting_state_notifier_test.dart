@@ -20,6 +20,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/provider/yaz_flex_initial_setting_attribute.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -34,6 +35,16 @@ void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_timezone');
   late RegisterReminderLocalNotificationRunner
       registerReminderLocalNotificationRunner;
+
+  /// register が属性を載せる関数に渡した isYazFlex。呼ばれた順に並ぶ
+  late List<bool> calledIsYazFlexValues;
+
+  /// Firebase Analytics と RevenueCat を呼ばず、渡された isYazFlex を [calledIsYazFlexValues] に記録する
+  Future<void> setYazFlexInitialSettingAttribute({
+    required bool isYazFlex,
+  }) async {
+    calledIsYazFlexValues.add(isYazFlex);
+  }
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -54,6 +65,7 @@ void main() {
 
     registerReminderLocalNotificationRunner =
         MockRegisterReminderLocalNotificationRunner();
+    calledIsYazFlexValues = [];
   });
 
   tearDown(() {
@@ -476,6 +488,9 @@ void main() {
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(
             registerReminderLocalNotificationRunner,
           ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
+          ),
         ],
       );
       final store = container.read(
@@ -587,6 +602,9 @@ void main() {
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(
             registerReminderLocalNotificationRunner,
           ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
+          ),
         ],
       );
       final store = container.read(
@@ -686,6 +704,9 @@ void main() {
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(
             registerReminderLocalNotificationRunner,
           ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
+          ),
         ],
       );
       final store = container.read(
@@ -701,37 +722,46 @@ void main() {
       await store.register(user: const User(), customerInfo: freeCustomerInfo);
     });
 
-    group("トライアルの開始", () {
-      ProviderContainer buildContainer({
-        required StartPromotion startPromotion,
-        required MockWriteBatch batch,
-      }) {
-        final batchFactory = MockBatchFactory();
-        when(batchFactory.batch()).thenReturn(batch);
-        return ProviderContainer(
-          overrides: [
-            startPromotionProvider.overrideWith((ref) => startPromotion),
-            batchFactoryProvider.overrideWithValue(batchFactory),
-            batchSetSettingProvider
-                .overrideWith((ref) => MockBatchSetSetting()),
-            batchSetPillSheetModifiedHistoryProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetModifiedHistory(),
-            ),
-            batchSetPillSheetGroupProvider.overrideWith(
-              (ref) => MockBatchSetPillSheetGroup(),
-            ),
-            registerReminderLocalNotificationRunnerProvider.overrideWithValue(
-              registerReminderLocalNotificationRunner,
-            ),
-          ],
-        );
-      }
+    /// 保存を Mock にし、トライアルの開始を [startPromotion]、バッチを [batch] に差し替えた container を返す
+    ProviderContainer buildContainer({
+      required StartPromotion startPromotion,
+      required MockWriteBatch batch,
+    }) {
+      final batchFactory = MockBatchFactory();
+      when(batchFactory.batch()).thenReturn(batch);
+      return ProviderContainer(
+        overrides: [
+          startPromotionProvider.overrideWith((ref) => startPromotion),
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          batchSetSettingProvider.overrideWith((ref) => MockBatchSetSetting()),
+          batchSetPillSheetModifiedHistoryProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetModifiedHistory(),
+          ),
+          batchSetPillSheetGroupProvider.overrideWith(
+            (ref) => MockBatchSetPillSheetGroup(),
+          ),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+            registerReminderLocalNotificationRunner,
+          ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
+          ),
+        ],
+      );
+    }
 
+    /// トライアルの開始が成功する StartPromotion
+    MockStartPromotion succeedingStartPromotion() {
+      final startPromotion = MockStartPromotion();
+      when(startPromotion()).thenAnswer((_) => Future.value());
+      return startPromotion;
+    }
+
+    group("トライアルの開始", () {
       test(
           "トライアルを開始していないユーザー (Promotional Entitlement も User.beginTrialDate も無い) は startPromotion を 1 回呼ぶ",
           () async {
-        final startPromotion = MockStartPromotion();
-        when(startPromotion()).thenAnswer((_) => Future.value());
+        final startPromotion = succeedingStartPromotion();
         final container = buildContainer(
             startPromotion: startPromotion, batch: MockWriteBatch());
 
@@ -742,8 +772,7 @@ void main() {
         verify(startPromotion()).called(1);
       });
 
-      test(
-          "Promotional Entitlement でトライアルを付与済みのユーザーは startPromotion を呼ばない",
+      test("Promotional Entitlement でトライアルを付与済みのユーザーは startPromotion を呼ばない",
           () async {
         final startPromotion = MockStartPromotion();
         final container = buildContainer(
@@ -792,6 +821,123 @@ void main() {
         );
 
         verifyNever(batch.commit());
+      });
+    });
+
+    group("ヤーズフレックス向けの導線を通ったかの属性", () {
+      test("「いいえ」を選んで登録した場合は false を 1 回載せる", () async {
+        final store = buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectNotYazFlex();
+        store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        expect(calledIsYazFlexValues, [
+          false,
+        ]);
+      });
+
+      test("「はい」を選んで登録した場合は true を 1 回載せる", () async {
+        final store = buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        expect(calledIsYazFlexValues, [
+          true,
+        ]);
+      });
+
+      test("「はい」を選んでから戻って「いいえ」を選び直して登録した場合は false を載せる", () async {
+        final store = buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+        store.selectNotYazFlex();
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        expect(calledIsYazFlexValues, [
+          false,
+        ]);
+      });
+
+      test("登録の保存を待っている間に「いいえ」を選び直しても、登録を始めた時の true を載せる", () async {
+        final store = buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+        // register が保存する設定を作る途中でタイムゾーンを待つ間に、前のページへ戻って選び直した状況を作る
+        TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+            .setMockMethodCallHandler(timezoneChannel, (methodCall) async {
+          store.selectNotYazFlex();
+          return 'Asia/Tokyo';
+        });
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        expect(calledIsYazFlexValues, [true]);
+      });
+
+      test("登録する前は載せない", () {
+        buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier)
+            .selectYazFlex();
+
+        expect(calledIsYazFlexValues, isEmpty);
+      });
+
+      test("トライアルの開始 (startPromotion) より前に載せる", () async {
+        final startPromotion = MockStartPromotion();
+        final calledIsYazFlexValuesWhenStartPromotion = <List<bool>>[];
+        when(startPromotion()).thenAnswer((_) {
+          calledIsYazFlexValuesWhenStartPromotion.add([
+            ...calledIsYazFlexValues,
+          ]);
+          return Future.value();
+        });
+        final store = buildContainer(
+                startPromotion: startPromotion, batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        expect(calledIsYazFlexValuesWhenStartPromotion, [
+          [true],
+        ]);
+      });
+
+      test("トライアルを開始済みのユーザーが初期設定をやり直した場合も載せる", () async {
+        final store = buildContainer(
+                startPromotion: succeedingStartPromotion(),
+                batch: MockWriteBatch())
+            .read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+
+        await store.register(
+          user: User(beginTrialDate: DateTime.parse("2020-09-01")),
+          customerInfo: freeCustomerInfo,
+        );
+
+        expect(calledIsYazFlexValues, [
+          true,
+        ]);
       });
     });
   });
@@ -845,6 +991,9 @@ void main() {
           ),
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(
             registerReminderLocalNotificationRunner,
+          ),
+          setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+            setYazFlexInitialSettingAttribute,
           ),
         ],
       );

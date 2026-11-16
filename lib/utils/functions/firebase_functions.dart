@@ -1,8 +1,17 @@
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/inquiry.codegen.dart';
+import 'package:pilll/utils/environment.dart';
 
 final functions = FirebaseFunctions.instanceFor(region: 'asia-northeast1');
+
+/// お問い合わせの callable に test: true を付けるか。
+/// DEBUG ビルドか、dev flavor (pilll-dev に接続する main.dev.dart 起動。TestFlight 等に配る release ビルドを含む) なら true。
+/// 本番のお問い合わせチャンネルに開発中のお問い合わせを混ぜず、サーバーにテスト用チャンネル (#test-notification) へ投稿させるため。
+/// dev flavor の release ビルドは kDebugMode が false になり、DEBUG ビルドの判定だけでは本番チャンネルに届いていた。
+bool inquiryIsTest({required bool debugMode, required Flavor? flavor}) {
+  return debugMode || flavor == Flavor.DEVELOP || flavor == Flavor.LOCAL;
+}
 
 extension FirebaseFunctionsExt on FirebaseFunctions {
   Future<String> inquiry({
@@ -16,8 +25,7 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
       if (otherTypeText != null) 'otherTypeText': otherTypeText,
       'email': email,
       'content': content,
-      // DEBUG ビルドから試したお問い合わせを本番のお問い合わせチャンネルに混ぜず、サーバーにテスト用チャンネル (#test-notification) へ投稿させるため
-      if (kDebugMode) 'test': true,
+      if (inquiryIsTest(debugMode: kDebugMode, flavor: Environment.flavor)) 'test': true,
     });
     final response = mapToJSON(result.data);
     return response['inquiryId'] as String;

@@ -15,7 +15,7 @@
 # 撮影後に organize_duo_screenshots.dart が App Store Connect のロケールごとに展開する。
 #
 # 前提: capture_screenshots.sh と同じ（secret.dart / Secret.xcconfig / GoogleService-Info.plist /
-# environment/dev.json / ios/Pods）。加えて ImageMagick（magick。simctl の PNG は alpha 付きで
+# environment/dev.json）。加えて ImageMagick（magick。simctl の PNG は alpha 付きで
 # App Store Connect が拒否するため除去する）と duo-pose.sh。
 #
 # 使い方:

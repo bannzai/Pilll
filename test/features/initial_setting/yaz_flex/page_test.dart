@@ -39,6 +39,7 @@ void main() {
                 MockBatchSetPillSheetModifiedHistory(),
                 MockBatchSetPillSheetGroup(),
                 MockRegisterReminderLocalNotificationRunner(),
+                ({required bool isYazFlex}) async {},
                 DateTime.parse("2022-03-02"),
               ),
             ),

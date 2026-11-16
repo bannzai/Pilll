@@ -88,7 +88,8 @@ class Analytics {
   /// Up to 25 user property names are supported.
   // The "firebase_" prefix is reserved and should not be used for
   /// user property names.
-  void setUserProperties(String name, value) {
+  /// 返す Future は Firebase Analytics への書き込みの完了で終わり、書き込みの失敗はこの Future のエラーになる
+  Future<void> setUserProperties(String name, value) {
     assert(name.toLowerCase() != 'age');
     assert(name.toLowerCase() != 'gender');
     assert(name.toLowerCase() != 'interest');
@@ -101,7 +102,7 @@ class Analytics {
     if (kDebugMode) {
       print('[INFO] setUserProperties name: $name, value: $value');
     }
-    firebaseAnalytics.setUserProperty(name: name, value: value);
+    return firebaseAnalytics.setUserProperty(name: name, value: value);
   }
 }
 

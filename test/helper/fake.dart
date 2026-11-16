@@ -84,7 +84,7 @@ class FakeAnalytics extends Fake implements Analytics {
   }) {}
 
   @override
-  void setUserProperties(String name, value) {}
+  Future<void> setUserProperties(String name, value) async {}
 }
 
 class FakeErrorLogger extends Fake implements ErrorLogger {

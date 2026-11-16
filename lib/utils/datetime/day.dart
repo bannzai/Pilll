@@ -29,8 +29,14 @@ DateTime firstDayOfWeekday(DateTime day) {
   return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday));
 }
 
-DateTime endDayOfWeekday(DateTime day) {
-  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday)).addDays(Weekday.values.length - 1);
+/// [firstWeekday] を左端に置く週の行で、[day] を含む行の右端の日付を返す。
+DateTime endDayOfWeekday(DateTime day, {required Weekday firstWeekday}) {
+  return day.addDays(Weekday.values.length - 1 - weekdayOffset(date: day, firstWeekday: firstWeekday));
+}
+
+/// [firstWeekday] を左端に置く週の行で、[date] が左端から何列目か (左端が 0) を返す。
+int weekdayOffset({required DateTime date, required Weekday firstWeekday}) {
+  return (WeekdayFunctions.weekdayFromDate(date).index - firstWeekday.index) % Weekday.values.length;
 }
 
 extension Date on DateTime {

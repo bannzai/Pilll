@@ -38,6 +38,11 @@
 ## issue の読み書き先
 issue はこのリポジトリ (bannzai/Pilll) で管理する。issue 機能を有効にする前の既存の issue は private の bannzai/PilllBackend にあり、参照する時は `#<番号>` に省略せず `bannzai/PilllBackend#<番号>` と書く。
 
+## リポジトリのメモ
+作業の前に索引 `documents/notes/README.md` を読み、読むべき場面に当たるメモの本文を読む。
+
+@documents/notes/README.md
+
 ------------------------------------
 
 # プログラムテストについて
