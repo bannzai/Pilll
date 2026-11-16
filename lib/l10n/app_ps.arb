@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "دا ځانګړنه په هغو وسیلو کې نشته چې د روغتیا اپ ملاتړ نه کوي",
   "enableHealthKitFromSettings": "مهرباني وکړئ د امستنو په اپ کې روغتیا فعاله کړئ",
   "accountAlreadyLinked": "دا {accountTypeProviderName} حساب لا دمخه ستاسو له Pilll حساب سره تړلی دی. مهرباني وکړئ پاڼه تازه کړئ او ډېرې پوښتل کېدونکې پوښتنې هم وګورئ. جزییات: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "دا د {accountTypeProviderName} حساب له مخکې څخه د Pilll له بل حساب سره تړلی دی، نو نوم‌لیکنه نه شي کېدای. مهرباني وکړئ ډېرې پوښتل کېدونکې پوښتنې هم وګورئ. جزییات: {exceptionMessage}",
   "emailAlreadyInUse": "ستاسو د {accountTypeProviderName} حساب برېښنالیک پته له مخکې څخه له بل Pilll حساب سره تړلې ده، نو نوم‌لیکنه نه شي کېدای. مهرباني وکړئ ډېرې پوښتل کېدونکې پوښتنې هم وګورئ. جزییات: {exceptionMessage}",
   "todaySchedule": "د نن ورځې مهالوېش",
   "calendarSchedule": "د کلیزې مهالوېش",

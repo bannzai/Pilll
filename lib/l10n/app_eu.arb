@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Funtzio hau ez dago erabilgarri osasun-datuak onartzen ez dituzten gailuetan",
   "enableHealthKitFromSettings": "Gaitu Osasunerako sarbidea Ezarpenak aplikazioan, mesedez",
   "accountAlreadyLinked": "{accountTypeProviderName} kontu hau zure Pilll kontuarekin lotuta dago jada. Saiatu pantaila freskatzen, eta begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "{accountTypeProviderName} kontu hau beste Pilll kontu bati lotuta dago jada; beraz, ezin duzu harekin erregistratu. Begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
   "emailAlreadyInUse": "Ezin duzu izena eman, {accountTypeProviderName} kontuarekin erabiltzen duzun helbide elektronikoa beste Pilll kontu bati lotuta dagoelako. Begiratu ohiko galderak ere. Xehetasunak: {exceptionMessage}",
   "todaySchedule": "Gaurko zure plana",
   "calendarSchedule": "Egutegiko planak",

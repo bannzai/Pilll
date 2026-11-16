@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "ကျန်းမာရေးဒေတာကို မပံ့ပိုးသော စက်များတွင် ဤလုပ်ဆောင်ချက်ကို အသုံးပြု၍ မရပါ",
   "enableHealthKitFromSettings": "ဆက်တင်အက်ပ်တွင် ကျန်းမာရေးအက်ပ်ကို အသုံးပြုခွင့် ပြုပါ",
   "accountAlreadyLinked": "ဒီ {accountTypeProviderName} အကောင့်ကို Pilll အကောင့်နဲ့ ချိတ်ဆက်ထားပြီးသားပါ။ မျက်နှာပြင်ကို ပြန်လည်ဖွင့်ကြည့်ပါ။ မေးလေ့ရှိသော မေးခွန်းများကိုလည်း ကြည့်ရှုနိုင်ပါတယ်။ အသေးစိတ်: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "ဒီ {accountTypeProviderName} အကောင့်က အခြား Pilll အကောင့်တစ်ခုနှင့် ချိတ်ဆက်ထားပြီးဖြစ်လို့ စာရင်းသွင်း၍ မရပါ။ မေးလေ့ရှိသော မေးခွန်းများကိုလည်း ကြည့်ရှုပေးပါ။ အသေးစိတ်: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} အကောင့်မှာ အသုံးပြုနေသော အီးမေးလ်လိပ်စာက အခြား Pilll အကောင့်တစ်ခုနှင့် ချိတ်ဆက်ပြီးသားဖြစ်လို့ အကောင့်အသစ် ဖွင့်၍မရပါ။ မေးလေ့ရှိသော မေးခွန်းများကိုလည်း ကြည့်ရှုပေးပါ။ အသေးစိတ်: {exceptionMessage}",
   "todaySchedule": "ဒီနေ့အတွက် အစီအစဉ်",
   "calendarSchedule": "ပြက္ခဒိန်ရှိ အစီအစဉ်များ",

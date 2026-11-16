@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "건강 앱을 지원하지 않는 기기에서는 사용할 수 없어요",
   "enableHealthKitFromSettings": "설정 앱에서 건강 앱 접근을 허용해 주세요",
   "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 Pilll 계정에 연결되어 있어요. 화면을 새로고침해 보고 자주 묻는 질문도 확인해 주세요. 자세한 내용: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 이 계정으로 가입할 수 없어요. 자주 묻는 질문도 확인해 주세요. 자세한 내용: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} 계정에서 사용하는 이메일 주소가 이미 다른 Pilll 계정에 연결되어 있어 가입할 수 없어요. FAQ도 확인해 주세요. 자세한 내용: {exceptionMessage}",
   "todaySchedule": "오늘의 일정이에요",
   "calendarSchedule": "캘린더 일정",

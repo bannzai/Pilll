@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Тази функция не е достъпна на устройства, които не поддържат „Здраве“",
   "enableHealthKitFromSettings": "Можете да разрешите достъпа до приложението „Здраве“ от „Настройки“",
   "accountAlreadyLinked": "Този акаунт в {accountTypeProviderName} вече е свързан с акаунта ви в Pilll. Опитайте да обновите екрана и разгледайте FAQ. Подробности: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Този акаунт в {accountTypeProviderName} вече е свързан с друг акаунт в Pilll, затова не може да се използва за регистрация. Моля, вижте и FAQ. Подробности: {exceptionMessage}",
   "emailAlreadyInUse": "Не можете да се регистрирате, защото имейл адресът, който използвате с акаунта си в {accountTypeProviderName}, вече е свързан с друг акаунт в Pilll. Моля, вижте и FAQ. Подробности: {exceptionMessage}",
   "todaySchedule": "Събитията ви за днес",
   "calendarSchedule": "Събития в календара",

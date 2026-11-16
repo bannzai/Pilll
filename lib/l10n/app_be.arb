@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Гэта функцыя недаступная на прыладах, якія не падтрымліваюць даныя пра здароўе",
   "enableHealthKitFromSettings": "Калі ласка, уключыце доступ да праграмы «Здароўе» ў наладах",
   "accountAlreadyLinked": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з вашым уліковым запісам Pilll. Паспрабуйце абнавіць экран і зазірніце таксама ў частыя пытанні. Падрабязнасці: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Гэты ўліковы запіс {accountTypeProviderName} ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца з яго дапамогай нельга. Калі ласка, зазірніце таксама ў частыя пытанні. Падрабязнасці: {exceptionMessage}",
   "emailAlreadyInUse": "Адрас электроннай пошты, які вы выкарыстоўваеце для ўліковага запісу {accountTypeProviderName}, ужо звязаны з іншым уліковым запісам Pilll, таму зарэгістравацца не атрымаецца. Калі ласка, зазірніце таксама ў FAQ. Падрабязнасці: {exceptionMessage}",
   "todaySchedule": "Падзеі на сёння",
   "calendarSchedule": "Падзеі календара",

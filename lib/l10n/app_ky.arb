@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Бул функция ден соолук маалыматын колдобогон түзмөктөрдө жеткиликсиз",
   "enableHealthKitFromSettings": "Жөндөөлөр колдонмосунан Ден соолук колдонмосуна кирүүгө уруксат бериңиз",
   "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунту сиздин Pilll аккаунтуңузга мурунтан эле байланыштырылган. Экранды жаңыртып көрүңүз жана көп берилүүчү суроолорду да караңыз. Толук маалымат: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунту башка Pilll аккаунтуна мурунтан эле байланыштырылган, андыктан аны менен каттала албайсыз. Көп берилүүчү суроолорду да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} аккаунтуңузда колдонгон электрондук почта дареги башка Pilll аккаунтуна мурунтан эле байланып тургандыктан, каттала албайсыз. Көп берилүүчү суроолорду да карап көрүңүз. Толук маалымат: {exceptionMessage}",
   "todaySchedule": "Бүгүнкү планыңыз",
   "calendarSchedule": "Жылнаамадагы пландар",

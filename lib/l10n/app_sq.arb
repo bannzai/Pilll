@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Kjo veçori nuk mund të përdoret në pajisjet që nuk mbështesin aplikacionin Shëndeti",
   "enableHealthKitFromSettings": "Ju lutemi, aktivizoni qasjen te Shëndeti në aplikacionin Cilësimet",
   "accountAlreadyLinked": "Kjo llogari {accountTypeProviderName} është tashmë e lidhur me llogarinë tuaj Pilll. Provoni të rifreskoni ekranin dhe shihni edhe pyetjet e shpeshta. Hollësi: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Kjo llogari {accountTypeProviderName} është lidhur tashmë me një llogari tjetër Pilll, prandaj nuk mund të regjistroheni me të. Ju lutemi, shihni edhe pyetjet e shpeshta. Hollësitë: {exceptionMessage}",
   "emailAlreadyInUse": "Nuk mund të regjistroheni sepse adresa e emailit që përdorni me llogarinë {accountTypeProviderName} është lidhur tashmë me një llogari tjetër Pilll. Shihni edhe pyetjet e shpeshta. Hollësi: {exceptionMessage}",
   "todaySchedule": "Ngjarjet tuaja për sot",
   "calendarSchedule": "Ngjarjet e kalendarit",

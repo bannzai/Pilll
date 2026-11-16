@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Este recurso não está disponível em dispositivos sem suporte ao app Saúde",
   "enableHealthKitFromSettings": "Você pode ativar o acesso ao app Saúde em Ajustes",
   "accountAlreadyLinked": "Esta conta ({accountTypeProviderName}) já está vinculada à sua conta do Pilll. Que tal atualizar a tela? Confira também as perguntas frequentes. Detalhes: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Esta conta ({accountTypeProviderName}) já está vinculada a outra conta do Pilll, então não é possível se cadastrar com ela. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "emailAlreadyInUse": "Não é possível concluir o cadastro porque o endereço de e-mail que você usa em {accountTypeProviderName} já está vinculado a outra conta do Pilll. Consulte também as perguntas frequentes. Detalhes: {exceptionMessage}",
   "todaySchedule": "Sua agenda de hoje",
   "calendarSchedule": "Eventos do calendário",

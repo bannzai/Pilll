@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Deze functie is niet beschikbaar op apparaten die Gezondheid niet ondersteunen",
   "enableHealthKitFromSettings": "Je kunt toegang tot Gezondheid inschakelen in de app Instellingen",
   "accountAlreadyLinked": "Dit account ({accountTypeProviderName}) is al gekoppeld aan je Pilll-account. Probeer het scherm te vernieuwen en bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Dit account ({accountTypeProviderName}) is al gekoppeld aan een ander Pilll-account. Je kunt je er daarom niet mee registreren. Bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Je kunt je niet registreren, omdat het e-mailadres van je account ({accountTypeProviderName}) al aan een ander Pilll-account is gekoppeld. Bekijk ook de veelgestelde vragen. Details: {exceptionMessage}",
   "todaySchedule": "Je afspraak voor vandaag",
   "calendarSchedule": "Agenda-afspraken",

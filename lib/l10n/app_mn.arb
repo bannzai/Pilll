@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Эрүүл мэнд аппыг дэмждэггүй төхөөрөмж дээр ашиглах боломжгүй",
   "enableHealthKitFromSettings": "Тохиргоо апп дээрээс Эрүүл мэнд аппын хандах эрхийг идэвхжүүлнэ үү",
   "accountAlreadyLinked": "Энэ {accountTypeProviderName} бүртгэл таны Pilll бүртгэлтэй аль хэдийн холбогдсон байна. Дэлгэцээ шинэчилж үзнэ үү. Түгээмэл асуултуудыг мөн харна уу. Дэлгэрэнгүй: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Энэ {accountTypeProviderName} бүртгэл өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул үүгээр шинээр бүртгүүлэх боломжгүй. Түгээмэл асуултуудыг мөн харна уу. Дэлгэрэнгүй: {exceptionMessage}",
   "emailAlreadyInUse": "Таны {accountTypeProviderName} бүртгэлд ашигладаг имэйл хаяг өөр Pilll бүртгэлтэй аль хэдийн холбогдсон тул шинээр бүртгүүлэх боломжгүй. Түгээмэл асуултуудыг мөн үзнэ үү. Дэлгэрэнгүй: {exceptionMessage}",
   "todaySchedule": "Өнөөдрийн тов",
   "calendarSchedule": "Хуанлийн төлөвлөгөө",

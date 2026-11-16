@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Die Funktion gaht uf Grät, wo Gsundheit nöd understützed, leider nöd",
   "enableHealthKitFromSettings": "Du chasch de Zuegriff uf Gsundheit i de Iistellige aktiviere",
   "accountAlreadyLinked": "Dis {accountTypeProviderName}-Konto isch scho mit dim Pilll-Konto verchnüpft. Probier, d Aazeig z aktualisiere, und lueg au i d FAQ. Details: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Das {accountTypeProviderName}-Konto isch scho mit eme andere Pilll-Konto verchnüpft. Du chasch di drum demit nöd registriere. Lueg bitte au i d FAQ. Details: {exceptionMessage}",
   "emailAlreadyInUse": "Du chasch di nöd registriere, will d E-Mail-Adrässe vo dim {accountTypeProviderName}-Konto scho mit eme andere Pilll-Konto verchnüpft isch. Lueg bitte au i d FAQ. Details: {exceptionMessage}",
   "todaySchedule": "Dini Termin für hüt",
   "calendarSchedule": "Kaländertermin",

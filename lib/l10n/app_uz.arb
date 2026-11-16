@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Bu funksiya Salomatlik ilovasini qoʻllab-quvvatlamaydigan qurilmalarda mavjud emas",
   "enableHealthKitFromSettings": "Iltimos, Sozlamalar ilovasida Salomatlik ilovasiga kirishga ruxsat bering",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hisobi allaqachon Pilll hisobingizga ulangan. Ekranni yangilab koʻring va koʻp soʻraladigan savollarni ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hisobi allaqachon boshqa Pilll hisobiga ulangan, shuning uchun u orqali roʻyxatdan oʻta olmaysiz. Koʻp soʻraladigan savollarni ham koʻrib chiqing. Tafsilotlar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hisobingizda ishlatadigan elektron pochta manzili allaqachon boshqa Pilll hisobiga ulangan, shu sababli roʻyxatdan oʻta olmaysiz. Koʻp soʻraladigan savollarni ham koʻring. Tafsilotlar: {exceptionMessage}",
   "todaySchedule": "Bugungi rejalaringiz",
   "calendarSchedule": "Taqvimdagi rejalar",

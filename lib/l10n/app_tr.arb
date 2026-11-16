@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Bu özellik, sağlık verilerini desteklemeyen cihazlarda kullanılamıyor",
   "enableHealthKitFromSettings": "Sağlık uygulamasına erişimi Ayarlar uygulamasından etkinleştirin",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı Pilll hesabınıza zaten bağlı. Lütfen ekranı yenilemeyi deneyin ve sık sorulan sorulara da göz atın. Ayrıntılar: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı başka bir Pilll hesabına zaten bağlı olduğu için kayıt olamıyorsunuz. Lütfen sık sorulan sorulara da göz atın. Ayrıntılar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda kullandığınız e-posta adresi başka bir Pilll hesabına zaten bağlı olduğu için kayıt olamıyorsunuz. Sık sorulan sorulara da göz atabilirsiniz. Ayrıntılar: {exceptionMessage}",
   "todaySchedule": "Bugünkü etkinliğiniz",
   "calendarSchedule": "Takvimdeki etkinlikler",

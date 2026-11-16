@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Tính năng này không khả dụng trên thiết bị không hỗ trợ ứng dụng Sức khỏe",
   "enableHealthKitFromSettings": "Vui lòng bật quyền truy cập ứng dụng Sức khỏe trong Cài đặt",
   "accountAlreadyLinked": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll của bạn. Vui lòng thử làm mới màn hình và xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với một tài khoản Pilll khác, nên bạn không thể dùng tài khoản này để đăng ký. Vui lòng xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
   "emailAlreadyInUse": "Bạn không thể đăng ký vì địa chỉ email dùng cho tài khoản {accountTypeProviderName} đã được liên kết với một tài khoản Pilll khác. Vui lòng xem thêm phần câu hỏi thường gặp. Chi tiết: {exceptionMessage}",
   "todaySchedule": "Lịch trình hôm nay của bạn",
   "calendarSchedule": "Lịch trình trong lịch",

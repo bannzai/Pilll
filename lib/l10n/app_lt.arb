@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Ši funkcija nepasiekiama įrenginiuose, kurie nepalaiko programos „Sveikata“",
   "enableHealthKitFromSettings": "Leiskite prieigą prie programėlės „Sveikata“ programėlėje „Nustatymai“",
   "accountAlreadyLinked": "Ši {accountTypeProviderName} paskyra jau susieta su jūsų Pilll paskyra. Pabandykite atnaujinti ekraną ir peržiūrėkite dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Ši {accountTypeProviderName} paskyra jau susieta su kita Pilll paskyra, todėl su ja užsiregistruoti negalite. Taip pat peržiūrėkite dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
   "emailAlreadyInUse": "Užsiregistruoti nepavyksta, nes el. pašto adresas, kurį naudojate su {accountTypeProviderName} paskyra, jau susietas su kita Pilll paskyra. Peržiūrėkite ir dažniausiai užduodamus klausimus. Išsami informacija: {exceptionMessage}",
   "todaySchedule": "Šiandienos įvykis",
   "calendarSchedule": "Kalendoriaus planai",

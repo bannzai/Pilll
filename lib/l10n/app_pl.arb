@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Ta funkcja nie jest dostępna na urządzeniach, które nie obsługują aplikacji Zdrowie",
   "enableHealthKitFromSettings": "Włącz dostęp do aplikacji Zdrowie w Ustawieniach",
   "accountAlreadyLinked": "To konto {accountTypeProviderName} jest już połączone z twoim kontem Pilll. Spróbuj odświeżyć ekran i zajrzyj też do często zadawanych pytań. Szczegóły: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "To konto {accountTypeProviderName} jest już połączone z innym kontem Pilll, więc nie można się za jego pomocą zarejestrować. Zajrzyj też do często zadawanych pytań. Szczegóły: {exceptionMessage}",
   "emailAlreadyInUse": "Rejestracja nie jest możliwa, ponieważ adres e-mail używany z kontem {accountTypeProviderName} jest już powiązany z innym kontem Pilll. Sprawdź też często zadawane pytania. Szczegóły: {exceptionMessage}",
   "todaySchedule": "Dzisiejsze wydarzenie",
   "calendarSchedule": "Plany w kalendarzu",

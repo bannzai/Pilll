@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Aquesta funció no està disponible en dispositius que no són compatibles amb Salut",
   "enableHealthKitFromSettings": "Pots activar l’accés a Salut des de l’app Configuració",
   "accountAlreadyLinked": "Aquest compte ({accountTypeProviderName}) ja està vinculat al teu compte de Pilll. Prova d’actualitzar la pantalla i consulta també les preguntes freqüents. Detalls: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Aquest compte ({accountTypeProviderName}) ja està vinculat a un altre compte de Pilll i no el pots fer servir per registrar-te. Consulta també les preguntes freqüents. Detalls: {exceptionMessage}",
   "emailAlreadyInUse": "No et pots registrar perquè l’adreça electrònica que fas servir amb el compte ({accountTypeProviderName}) ja està vinculada a un altre compte de Pilll. Pots consultar també les preguntes freqüents. Detalls: {exceptionMessage}",
   "todaySchedule": "Els teus esdeveniments d’avui",
   "calendarSchedule": "Esdeveniments del calendari",
