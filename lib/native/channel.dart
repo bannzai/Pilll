@@ -66,6 +66,8 @@ void definedChannel() {
           fetchUser: () async => (await database.userReference().get()).data(),
           fetchPillSheetGroup: () => fetchLatestPillSheetGroup(database),
           takePill: quickRecordTakePillOf(database),
+          // オンラインなら書き込みは数秒で終わると見込み、その数倍を待つ上限にした。見込みも上限も実測で決めた値ではない
+          takePillTimeout: const Duration(seconds: 10),
           syncAfterRecord: (pillSheetGroup) => _syncAfterQuickRecord(database: database, pillSheetGroup: pillSheetGroup),
         ))
             .name;

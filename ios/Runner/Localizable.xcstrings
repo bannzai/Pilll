@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "ja",
   "strings" : {
+    "Pilll でピルシートを追加すると記録できます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a pill sheet in Pilll to record your pill"
+          }
+        }
+      }
+    },
     "Pilll を開いて初期設定を済ませてください" : {
       "localizations" : {
         "en" : {
@@ -61,6 +71,16 @@
         }
       }
     },
+    "服用お休み中のため記録していません" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not recorded because you're on a pill break"
+          }
+        }
+      }
+    },
     "記録できなかったため Pilll を開いて記録してください" : {
       "localizations" : {
         "en" : {
@@ -71,12 +91,12 @@
         }
       }
     },
-    "Pilll でピルシートを追加すると記録できます" : {
+    "記録を端末に保存したので通信できるようになると反映されます" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add a pill sheet in Pilll to record your pill"
+            "value" : "Saved on this device and it will sync when you're back online"
           }
         }
       }

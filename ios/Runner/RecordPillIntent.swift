@@ -13,6 +13,8 @@ private enum RecordPillIntentResult: String {
   case alreadyTaken
   case notPremiumOrTrial
   case noActivePillSheet
+  case restDuration
+  case pendingSync
   case notSignedIn
   case failed
 }
@@ -59,6 +61,10 @@ private func recordPillIntentDialog(result: RecordPillIntentResult) -> IntentDia
     return "Siri とショートカットからの記録はプレミアムプランの機能です"
   case .noActivePillSheet:
     return "Pilll でピルシートを追加すると記録できます"
+  case .restDuration:
+    return "服用お休み中のため記録していません"
+  case .pendingSync:
+    return "記録を端末に保存したので通信できるようになると反映されます"
   case .notSignedIn:
     return "Pilll を開いて初期設定を済ませてください"
   case .failed:

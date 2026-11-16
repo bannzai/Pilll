@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';
@@ -92,6 +94,12 @@ enum AppIntentRecordPillResult {
   /// 記録する先のピルシートが無く、記録しなかった
   noActivePillSheet,
 
+  /// 服用お休み中のため、記録しなかった
+  restDuration,
+
+  /// 記録を端末に書き込んだが、サーバーへの保存の完了を待ち時間の内に確かめられなかった
+  pendingSync,
+
   /// ログインしていない・ユーザーの情報が無いため、記録しなかった
   notSignedIn,
 
@@ -104,11 +112,15 @@ enum AppIntentRecordPillResult {
 /// 記録した時だけ、記録後の PillSheetGroup で syncAfterRecord (ウィジェットと通知の更新) を呼ぶ。
 /// syncAfterRecord が失敗しても、記録は済んでいるため recorded を返す。
 /// user と PillSheetGroup の取得と記録後の更新を関数で受け取るのは、Firestore と通知の plugin を使わずにテストするため。
+/// 服用お休み中は、アプリの記録画面が「飲んだ」ボタンを出さない (RecordPageButton) のに合わせて記録しない。
+/// TakePill が takePillTimeout の内に終わらない時は pendingSync を返し、syncAfterRecord は呼ばない。
+/// Firestore の書き込みは、オフラインの間は端末に書き込まれた後もサーバーが受け付けるまで完了しないため、待ち続けると返答を返せない。
 /// 冪等ではない (1 日に複数回服用する設定では、呼ぶたびに未服用の 1 回分を記録するため)
 Future<AppIntentRecordPillResult> recordPillFromAppIntent({
   required Future<User?> Function() fetchUser,
   required Future<PillSheetGroup?> Function() fetchPillSheetGroup,
   required TakePill takePill,
+  required Duration takePillTimeout,
   required Future<void> Function(PillSheetGroup pillSheetGroup) syncAfterRecord,
 }) async {
   final PillSheetGroup updatedPillSheetGroup;
@@ -125,6 +137,9 @@ Future<AppIntentRecordPillResult> recordPillFromAppIntent({
     if (pillSheetGroup == null || activePillSheet == null) {
       return AppIntentRecordPillResult.noActivePillSheet;
     }
+    if (pillSheetGroup.lastActiveRestDuration != null) {
+      return AppIntentRecordPillResult.restDuration;
+    }
     if (shouldSkipQuickRecord(activePillSheet)) {
       return AppIntentRecordPillResult.alreadyTaken;
     }
@@ -133,11 +148,13 @@ Future<AppIntentRecordPillResult> recordPillFromAppIntent({
       takePill: takePill,
       pillSheetGroup: pillSheetGroup,
       activePillSheet: activePillSheet,
-    );
+    ).timeout(takePillTimeout);
     if (takenPillSheetGroup == null) {
       return AppIntentRecordPillResult.failed;
     }
     updatedPillSheetGroup = takenPillSheetGroup;
+  } on TimeoutException {
+    return AppIntentRecordPillResult.pendingSync;
   } catch (e, st) {
     errorLogger.recordError(e, st);
     return AppIntentRecordPillResult.failed;

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:pilll/entity/firestore_id_generator.dart';
@@ -378,6 +379,7 @@ void main() {
           fetchUser: () async => user,
           fetchPillSheetGroup: () async => pillSheetGroup,
           takePill: takePill,
+          takePillTimeout: const Duration(seconds: 5),
           syncAfterRecord: (pillSheetGroup) async =>
               syncedPillSheetGroups.add(pillSheetGroup),
         ),
@@ -634,6 +636,97 @@ void main() {
       });
     });
 
+    group('服用お休み', () {
+      // 今日の分が未服用の v1 のシートに、服用お休みを 1 つ持たせる
+      PillSheetGroup v1PillSheetGroupWithRestDuration({
+        required DateTime restDurationBeginDate,
+        required DateTime? restDurationEndDate,
+      }) {
+        final pillSheetGroup = v1PillSheetGroup(
+          lastTakenDate: DateTime.parse('2024-01-14'),
+        );
+        return pillSheetGroup.copyWith(
+          pillSheets: [
+            pillSheetGroup.pillSheets.single.copyWith(
+              restDurations: [
+                RestDuration(
+                  id: 'rest_duration_id',
+                  beginDate: restDurationBeginDate,
+                  endDate: restDurationEndDate,
+                  createdDate: restDurationBeginDate,
+                ),
+              ],
+            ),
+          ],
+        );
+      }
+
+      test('今日から終了日の無い服用お休み中の場合は記録も更新もせず restDuration を返す', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, syncedPillSheetGroups) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroupWithRestDuration(
+            restDurationBeginDate: DateTime.parse('2024-01-15'),
+            restDurationEndDate: null,
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.restDuration);
+        expect(syncedPillSheetGroups, isEmpty);
+        verifyNever(batch.commit());
+      });
+
+      test('服用お休みの終了日が明日の場合は、今日はお休み中なので記録しない', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, _) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroupWithRestDuration(
+            restDurationBeginDate: DateTime.parse('2024-01-13'),
+            restDurationEndDate: DateTime.parse('2024-01-16'),
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.restDuration);
+        verifyNever(batch.commit());
+      });
+
+      test('服用お休みの終了日が今日の場合は、お休みが終わっているので記録する', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, _) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroupWithRestDuration(
+            restDurationBeginDate: DateTime.parse('2024-01-13'),
+            restDurationEndDate: DateTime.parse('2024-01-15'),
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.recorded);
+        verify(batch.commit()).called(1);
+      });
+
+      test('服用お休みの開始日が明日の場合は、まだお休み中ではないので記録する', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, _) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroupWithRestDuration(
+            restDurationBeginDate: DateTime.parse('2024-01-16'),
+            restDurationEndDate: null,
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.recorded);
+        verify(batch.commit()).called(1);
+      });
+    });
+
     group('失敗', () {
       // 引数を問わず同じ応答を返す TakePill
       MockTakePill takePillAnswering(
@@ -677,6 +770,28 @@ void main() {
         expect(syncedPillSheetGroups, isEmpty);
       });
 
+      test('TakePill が待ち時間の上限の内に終わらない場合は、更新せず pendingSync を返す', () async {
+        final syncedPillSheetGroups = <PillSheetGroup>[];
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            // オフラインの Firestore の書き込みと同じく、終わらない TakePill
+            takePill: takePillAnswering(
+              () => Completer<PillSheetGroup?>().future,
+            ),
+            takePillTimeout: const Duration(milliseconds: 10),
+            syncAfterRecord: (pillSheetGroup) async =>
+                syncedPillSheetGroups.add(pillSheetGroup),
+          ),
+          AppIntentRecordPillResult.pendingSync,
+        );
+        expect(syncedPillSheetGroups, isEmpty);
+      });
+
       test('user の取得が例外を投げた場合は記録せず failed を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
@@ -687,6 +802,7 @@ void main() {
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
             takePill: takePill,
+            takePillTimeout: const Duration(seconds: 5),
             syncAfterRecord: (_) async {},
           ),
           AppIntentRecordPillResult.failed,
@@ -702,6 +818,7 @@ void main() {
             fetchUser: () async => const User(isPremium: true),
             fetchPillSheetGroup: () async => throw Exception('pillSheetGroup'),
             takePill: takePill,
+            takePillTimeout: const Duration(seconds: 5),
             syncAfterRecord: (_) async {},
           ),
           AppIntentRecordPillResult.failed,
@@ -719,6 +836,7 @@ void main() {
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
             takePill: takePill,
+            takePillTimeout: const Duration(seconds: 5),
             syncAfterRecord: (_) async => throw Exception('sync'),
           ),
           AppIntentRecordPillResult.recorded,
