@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/widget.dart';
@@ -172,7 +172,7 @@ class RecordPagePillSheet extends ConsumerWidget {
                 await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
-                FlutterAppBadger.removeBadge();
+                AppBadgePlus.updateBadge(0);
                 requestInAppReview();
                 showReleaseNotePreDialog(context);
 

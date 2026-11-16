@@ -1,0 +1,364 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/l10n/app_localizations.dart';
+import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/provider/typed_shared_preferences.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+void main() {
+  group('#debugAppLocale', () {
+    test('保存が無い場合は ja', () {
+      expect(debugAppLocale(savedLanguageCode: null), const Locale('ja'));
+    });
+    test('対象言語の de が保存されている場合は de', () {
+      expect(debugAppLocale(savedLanguageCode: 'de'), const Locale('de'));
+    });
+    test('対象言語に無い言語コードが保存されている場合は ja', () {
+      expect(debugAppLocale(savedLanguageCode: 'xx'), const Locale('ja'));
+    });
+  });
+
+  group('#deviceAppLocale', () {
+    group('優先言語の一覧がある場合', () {
+      test('en_US は en', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('en', 'US')],
+              deviceLocaleName: 'en_US'),
+          const Locale('en'),
+        );
+      });
+      test('第一優先がサポート外の xx で第二優先が ja の場合は ja', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+              deviceLocaleName: 'xx_XX'),
+          const Locale('ja'),
+        );
+      });
+      test('Platform.localeName と食い違う場合は優先言語の一覧を使う', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('de', 'DE')],
+              deviceLocaleName: 'ja_JP'),
+          const Locale('de'),
+        );
+      });
+      test('サポート外の言語 xx_XX だけの場合は en', () {
+        expect(
+          deviceAppLocale(
+              deviceLocales: const [Locale('xx', 'XX')],
+              deviceLocaleName: 'xx_XX'),
+          const Locale('en'),
+        );
+      });
+    });
+
+    group('優先言語の一覧が空の場合は Platform.localeName で補う', () {
+      test('en_US は en', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'en_US'),
+            const Locale('en'));
+      });
+      test('ja_JP は ja', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ja_JP'),
+            const Locale('ja'));
+      });
+      test('文字体系を含む zh_Hans_CN は zh', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'zh_Hans_CN'),
+            const Locale('zh'));
+      });
+      test('区切りがハイフンの de-DE は de', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'de-DE'),
+            const Locale('de'));
+      });
+      test('文字コードの付いた fr_FR.UTF-8 は fr', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'fr_FR.UTF-8'),
+            const Locale('fr'));
+      });
+      test('修飾子の付いた es_ES@euro は es', () {
+        expect(
+            deviceAppLocale(
+                deviceLocales: const [], deviceLocaleName: 'es_ES@euro'),
+            const Locale('es'));
+      });
+      test('言語コードだけの ko は ko', () {
+        expect(deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'ko'),
+            const Locale('ko'));
+      });
+      test('サポート外の言語 xx_XX は en', () {
+        expect(
+            deviceAppLocale(deviceLocales: const [], deviceLocaleName: 'xx_XX'),
+            const Locale('en'));
+      });
+    });
+
+    /// 端末の優先言語を [deviceLocales] にして、前面の UI と同じ設定の MaterialApp が決める言語を返す
+    Future<Locale> foregroundAppLocale(WidgetTester tester,
+        {required List<Locale> deviceLocales}) async {
+      tester.platformDispatcher.localesTestValue = deviceLocales;
+      addTearDown(tester.platformDispatcher.clearLocalesTestValue);
+      late Locale resolvedLocale;
+      await tester.pumpWidget(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: appSupportedLocales,
+          home: Builder(builder: (context) {
+            resolvedLocale = Localizations.localeOf(context);
+            return const SizedBox.shrink();
+          }),
+        ),
+      );
+      return resolvedLocale;
+    }
+
+    /// [deviceLocales] の端末で、[deviceAppLocale] と前面の UI が同じ言語になることを確かめる
+    Future<void> expectSameAsForeground(WidgetTester tester,
+        {required List<Locale> deviceLocales,
+        required String deviceLocaleName}) async {
+      expect(
+        deviceAppLocale(
+            deviceLocales: deviceLocales, deviceLocaleName: deviceLocaleName),
+        await foregroundAppLocale(tester, deviceLocales: deviceLocales),
+      );
+    }
+
+    testWidgets('en_US の端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('en', 'US')], deviceLocaleName: 'en_US');
+    });
+    testWidgets('zh_Hans_CN の端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(
+        tester,
+        deviceLocales: const [
+          Locale.fromSubtags(
+              languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN')
+        ],
+        deviceLocaleName: 'zh_Hans_CN',
+      );
+    });
+    testWidgets('第一優先がサポート外の xx で第二優先が ja の端末では前面の UI と同じ言語になる',
+        (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX'), Locale('ja', 'JP')],
+          deviceLocaleName: 'xx_XX');
+    });
+    testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI と同じ言語になる', (tester) async {
+      await expectSameAsForeground(tester,
+          deviceLocales: const [Locale('xx', 'XX')], deviceLocaleName: 'xx_XX');
+    });
+    testWidgets('サポート外の言語 xx_XX だけの端末では前面の UI は en になる', (tester) async {
+      expect(
+        await foregroundAppLocale(tester,
+            deviceLocales: const [Locale('xx', 'XX')]),
+        const Locale('en'),
+      );
+    });
+  });
+
+  group('#applyAppLocaleWithoutUI', () {
+    /// [initialSharedPreferencesValues] を SharedPreferences の初期値、端末の言語を [deviceLocales] にして
+    /// [applyAppLocaleWithoutUI] を呼ぶ。
+    /// L と Intl.defaultLocale はグローバルなため、ほかのテストに影響しないようテストの後で元に戻す
+    Future<void> apply({
+      required bool isDebugMode,
+      required Map<String, Object> initialSharedPreferencesValues,
+      required List<Locale> deviceLocales,
+      required String deviceLocaleName,
+    }) async {
+      final previousL = L;
+      final previousDefaultLocale = Intl.defaultLocale;
+      addTearDown(() {
+        L = previousL;
+        Intl.defaultLocale = previousDefaultLocale;
+      });
+      SharedPreferences.setMockInitialValues(initialSharedPreferencesValues);
+
+      await applyAppLocaleWithoutUI(
+        isDebugMode: isDebugMode,
+        deviceLocales: deviceLocales,
+        deviceLocaleName: deviceLocaleName,
+      );
+    }
+
+    group('debug ビルド', () {
+      test('表示言語に de を保存した en_US の端末では L と Intl.defaultLocale が de になる', () async {
+        await apply(
+          isDebugMode: true,
+          initialSharedPreferencesValues: {
+            StringKey.debugAppLanguageCode: 'de'
+          },
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'de');
+        expect(Intl.defaultLocale, 'de');
+      });
+      test('表示言語の保存が無い en_US の端末では L と Intl.defaultLocale が ja になる', () async {
+        await apply(
+          isDebugMode: true,
+          initialSharedPreferencesValues: {},
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'ja');
+        expect(Intl.defaultLocale, 'ja');
+      });
+    });
+
+    group('release ビルド', () {
+      test('表示言語に de が保存されていても en_US の端末では L と Intl.defaultLocale が en になる',
+          () async {
+        await apply(
+          isDebugMode: false,
+          initialSharedPreferencesValues: {
+            StringKey.debugAppLanguageCode: 'de'
+          },
+          deviceLocales: const [Locale('en', 'US')],
+          deviceLocaleName: 'en_US',
+        );
+
+        expect(L.localeName, 'en');
+        expect(Intl.defaultLocale, 'en');
+      });
+      test('サポート外の言語 xx_XX だけの端末では L と Intl.defaultLocale が en になる', () async {
+        await apply(
+          isDebugMode: false,
+          initialSharedPreferencesValues: {},
+          deviceLocales: const [Locale('xx', 'XX')],
+          deviceLocaleName: 'xx_XX',
+        );
+
+        expect(L.localeName, 'en');
+        expect(Intl.defaultLocale, 'en');
+      });
+    });
+  });
+
+  group('#AppLocalizationResolver', () {
+    // flutter test は kDebugMode が true のため、debug ビルドの分岐を通る
+    /// [initialSharedPreferencesValues] を SharedPreferences の初期値にして AppLocalizationResolver を描画し、
+    /// 使った SharedPreferences を返す
+    Future<SharedPreferences> pumpAppLocalizationResolver(
+      WidgetTester tester, {
+      required Map<String, Object> initialSharedPreferencesValues,
+    }) async {
+      SharedPreferences.setMockInitialValues(initialSharedPreferencesValues);
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: AppLocalizationResolver(
+              builder: (_) => const SizedBox.shrink(),
+            ),
+          ),
+        ),
+      );
+      return sharedPreferences;
+    }
+
+    testWidgets('表示言語の保存が無い場合は ja の文言と日付書式になる', (tester) async {
+      await pumpAppLocalizationResolver(tester,
+          initialSharedPreferencesValues: {});
+      expect(L.localeName, 'ja');
+      expect(Intl.defaultLocale, 'ja');
+    });
+
+    testWidgets('表示言語に de が保存されている場合は de の文言と日付書式になる', (tester) async {
+      await pumpAppLocalizationResolver(
+        tester,
+        initialSharedPreferencesValues: {StringKey.debugAppLanguageCode: 'de'},
+      );
+      expect(L.localeName, 'de');
+      expect(Intl.defaultLocale, 'de');
+    });
+
+    testWidgets('表示言語を de に保存すると、再起動を待たずに de に切り替わる', (tester) async {
+      final sharedPreferences = await pumpAppLocalizationResolver(tester,
+          initialSharedPreferencesValues: {});
+      expect(L.localeName, 'ja');
+
+      final container = ProviderScope.containerOf(
+          tester.element(find.byType(AppLocalizationResolver)));
+      await container
+          .read(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode)
+              .notifier)
+          .set('de');
+      await tester.pump();
+
+      expect(L.localeName, 'de');
+      expect(Intl.defaultLocale, 'de');
+      // 再起動後も同じ言語になるよう SharedPreferences に保存されている
+      expect(sharedPreferences.getString(StringKey.debugAppLanguageCode), 'de');
+    });
+
+    testWidgets('表示言語を変えると、配下の State を保ったまま新しい言語で描画し直される', (tester) async {
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: AppLocalizationResolver(
+              builder: (_) => const _LocaleNameProbe(),
+            ),
+          ),
+        ),
+      );
+      final stateBeforeChange =
+          tester.state<_LocaleNameProbeState>(find.byType(_LocaleNameProbe));
+      expect(stateBeforeChange.builtLocaleName, 'ja');
+
+      final container = ProviderScope.containerOf(
+          tester.element(find.byType(AppLocalizationResolver)));
+      await container
+          .read(stringSharedPreferencesProvider(StringKey.debugAppLanguageCode)
+              .notifier)
+          .set('de');
+      await tester.pump();
+
+      // タブの位置のような State が初期化されないよう、同じ State のまま build し直される
+      final stateAfterChange =
+          tester.state<_LocaleNameProbeState>(find.byType(_LocaleNameProbe));
+      expect(identical(stateAfterChange, stateBeforeChange), isTrue);
+      expect(stateAfterChange.builtLocaleName, 'de');
+    });
+  });
+}
+
+/// const で生成され、親の build だけでは描画し直されない子を表す。最後の build で読んだ [L] の言語を記録する
+class _LocaleNameProbe extends StatefulWidget {
+  const _LocaleNameProbe();
+
+  @override
+  State<_LocaleNameProbe> createState() => _LocaleNameProbeState();
+}
+
+class _LocaleNameProbeState extends State<_LocaleNameProbe> {
+  /// 最後の build で読んだ [L] の言語コード
+  String? builtLocaleName;
+
+  @override
+  Widget build(BuildContext context) {
+    builtLocaleName = L.localeName;
+    return const SizedBox.shrink();
+  }
+}

@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -30,6 +31,7 @@ Future<void> syncActivePillSheetValue({
       'pillSheetGroupPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
     };
     for (final element in map.entries) {
+      // null はキーの削除になる (iOS は home_widget 0.10.0 以降が NSNull を削除として扱う https://github.com/ABausG/home_widget/pull/450 。Android は plugin が null を削除として扱う)
       await HomeWidget.saveWidgetData(element.key, element.value);
     }
     await updateWidget();

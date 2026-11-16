@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -303,11 +305,33 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
 
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
+
+    /// 番号を表示する日を今日とみなして連続番号(sequential/cyclicSequential)を計算する場合の、その日付
+    /// 服用再開予定日ありの服用お休み中に、予定日以降に出すローカル通知の番号を、その日に画面が表示する番号と一致させるために使う
+    /// nullの場合は今日を基準にする。number/dateモードの番号はindexから決まるため影響しない
+    DateTime? estimatedEventCausingDate,
   }) {
-    // pillNumberInPillSheet: lastTakenOrZeroPillNumberが0の場合に0を返す
-    // PillSheetModifiedHistoryPillNumberOrDate.taken で beforeLastTakenPillNumber にプラス1しており、整合性を保つため
+    // pillNumberInPillSheet が 0 (lastTakenOrZeroPillNumber の未服用) の時は、そのピルシートの最初の表示番号の 1 つ前を返す。
+    // PillSheetModifiedHistoryPillNumberOrDate.taken / revert が before + 1 / after + 1 を服用記録の先頭の番号にするため、
+    // 開始番号 (displayNumberSetting.beginPillNumber) が 1 より大きい sequential / cyclicSequential でも最初の服用記録が「1-N」ではなく「N」になる
     if (pillNumberInPillSheet == 0) {
-      return 0;
+      switch (pillSheetAppearanceMode) {
+        case PillSheetAppearanceMode.number:
+        case PillSheetAppearanceMode.date:
+          return 0;
+        case PillSheetAppearanceMode.sequential:
+        case PillSheetAppearanceMode.cyclicSequential:
+          // ピルシートが無いグループには最初の表示番号が存在しないため、_cycleSequentialPillSheetNumber の空リストの参照 (RangeError) を避けて 0 を返す
+          if (pillSheets.isEmpty) {
+            return 0;
+          }
+          return _cycleSequentialPillSheetNumber(
+                pageIndex: pageIndex,
+                pillNumberInPillSheet: 1,
+                estimatedEventCausingDate: estimatedEventCausingDate,
+              ) -
+              1;
+      }
     }
 
     switch (pillSheetAppearanceMode) {
@@ -324,6 +348,7 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
         return _cycleSequentialPillSheetNumber(
           pageIndex: pageIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
+          estimatedEventCausingDate: estimatedEventCausingDate,
         );
     }
   }
@@ -342,11 +367,15 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
 
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
+
+    /// 番号を表示する日を今日とみなして計算する場合の、その日付。[pillNumberWithoutDateOrZero] の同名の引数を参照
+    DateTime? estimatedEventCausingDate,
   }) {
     return pillNumberWithoutDateOrZero(
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
+      estimatedEventCausingDate: estimatedEventCausingDate,
     ).toString();
   }
 
@@ -434,8 +463,16 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   int _cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
+    DateTime? estimatedEventCausingDate,
   }) {
-    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
+    // 日付が指定された時は、その日を今日とみなした連続番号を都度計算する。遅延初期化の pillNumbersForCyclicSequential は今日を基準にしている
+    final pillNumbers = estimatedEventCausingDate == null
+        ? pillNumbersForCyclicSequential
+        : _pillNumbersForCyclicSequential(estimatedEventCausingDate: estimatedEventCausingDate);
+    final pillMarksInPillSheet = pillNumbers.where((e) => e.pillSheet.groupIndex == pageIndex).toList();
+    // pillNumberInPillSheet の元になる PillSheet.pillNumberFor は下限(1)だけを保証し、上限(ピルシートの錠数)を保証しない。
+    // lastTakenDate が服用終了予定日より後ろにある服用履歴のスナップショットでは錠数を超える番号が渡るため、そのピルシートの最後のピルに収めて RangeError を防ぐ
+    return pillMarksInPillSheet[min(pillNumberInPillSheet, pillMarksInPillSheet.length) - 1].number;
   }
 }
 
@@ -646,8 +683,51 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 
   /// 服用お休みを開始できる日付を返す。beginRestDurationやDatePickerの初期値に利用する
   /// 最後の服用日の翌日、または服用履歴がない場合は今日を返す
+  /// ただし終了済みの服用お休みの後に服用記録を付けていない場合は、終了済みの服用お休みのうち最も遅い終了日 (服用再開日) を返す
+  /// 最後の服用日の翌日から始めると終了済みの服用お休みと重なり、服用記録が無い時の今日から始めると終了日との間に服用記録も服用お休みも無い日ができるため
+  /// 終了日の無い服用お休み期間を追加するため、後続の終了済みの服用お休みとも重ならないように、最後の服用日の翌日に続いていない服用お休みの終了日も含めて最も遅い日にする
   /// UI入力フィールドの初期値として使用される
   DateTime get availableRestDurationBeginDate {
+    final lastFinishedRestDurationEndDate =
+        _finishedRestDurations(excludingRestDuration: null).map((restDuration) => restDuration.endDate!.date()).maxOrNull;
+    // targetBeginRestDurationPillSheet は全錠服用済みのシートの次の服用記録の無いシートになり得るため、グループの最後の服用日と比べる
+    final lastTakenDate = lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
+    if (lastFinishedRestDurationEndDate != null && (lastTakenDate == null || lastFinishedRestDurationEndDate.isAfter(lastTakenDate.date()))) {
+      return lastFinishedRestDurationEndDate;
+    }
+    return _afterLastTakenDate;
+  }
+
+  /// 既存の服用お休み期間 [excludingRestDuration] を変更する時に、開始日として選択できる最終日を返す
+  /// 最後の服用日の翌日が [excludingRestDuration] 以外の終了済みの服用お休みに含まれる時はその終了日へ進め、進めた日を含む次の服用お休みがあれば続けて進める
+  /// 間に服用記録の無い日がある後続の服用お休みや変更対象自身の終了日まで広げると、最後の服用日との間に服用記録も服用お休みも無い日を作れてしまうため進めない
+  DateTime availableRestDurationBeginDateExcluding({required RestDuration excludingRestDuration}) {
+    var beginDate = _afterLastTakenDate;
+    while (true) {
+      final containingRestDurationEndDate = _finishedRestDurations(excludingRestDuration: excludingRestDuration)
+          .where(
+            (restDuration) => !restDuration.beginDate.date().isAfter(beginDate.date()) && restDuration.endDate!.date().isAfter(beginDate.date()),
+          )
+          .map((restDuration) => restDuration.endDate!.date())
+          .maxOrNull;
+      if (containingRestDurationEndDate == null) {
+        return beginDate;
+      }
+      beginDate = containingRestDurationEndDate;
+    }
+  }
+
+  /// [excludingRestDuration] 以外の、今日までに終了した服用お休み期間。返す要素の endDate は null ではない
+  /// 服用再開予定日が今日より後の服用お休みは服用お休み中で、開始日の上限を服用再開予定日まで広げると服用お休み中の開始日を変更する時の上限も変わるため対象にしない
+  Iterable<RestDuration> _finishedRestDurations({required RestDuration? excludingRestDuration}) {
+    return restDurations.where((restDuration) {
+      final restDurationEndDate = restDuration.endDate;
+      return restDuration != excludingRestDuration && restDurationEndDate != null && !restDurationEndDate.date().isAfter(today());
+    });
+  }
+
+  /// 最後の服用日の翌日。服用履歴がない場合は今日
+  DateTime get _afterLastTakenDate {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
       // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
@@ -663,20 +743,42 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     }
   }
 
+  /// [beginDate] から [endDate] までの期間が、[excludingRestDuration] 以外の服用お休み期間と重なるかどうか
+  /// 服用お休み期間は開始日を含み終了日 (服用再開日) を含まない半開区間として比較する。そのため終了日と次の開始日が同じ日でも重ならない
+  /// [endDate] や比較対象の終了日が無い (継続中の) 服用お休み期間は開始日以降ずっと続いているものとして扱う
+  /// 開始日と終了日が同じ日の服用お休み期間は半開区間として0日で、どの日も含まないため重ならない
+  /// [excludingRestDuration] は変更対象の服用お休み期間で、重なりの判定から除外する。追加の場合は null
+  bool overlapsOtherRestDuration({
+    required DateTime beginDate,
+    required DateTime? endDate,
+    required RestDuration? excludingRestDuration,
+  }) {
+    return restDurations.where((e) => e != excludingRestDuration).any((other) {
+      final otherEndDate = other.endDate;
+      if (otherEndDate != null && !other.beginDate.date().isBefore(otherEndDate.date())) {
+        return false;
+      }
+      return (otherEndDate == null || beginDate.date().isBefore(otherEndDate.date())) &&
+          (endDate == null || other.beginDate.date().isBefore(endDate.date()));
+    });
+  }
+
+  /// 服用再開予定日や服用お休み中の終了日として、開始日から選択できる最大の日数
+  /// 服用お休みの長さに仕様上の上限は無い。DatePickerのlastDateが必須のため、十分に長い値として1年を置く
+  static const int maxRestDurationDays = 365;
+
   /// 既存の服用お休み期間を変更する際に終了日として選択できる最終日を返す。ChangeManualRestDurationのDateRangePickerのlastDateに利用する
   /// 休薬中や服用再開直後はlastTakenDateが休薬開始の前日のまま止まるため、availableRestDurationBeginDate（最終服用日の翌日）を
   /// そのまま上限にすると休薬開始日と一致し、休薬開始日より後の日付=終了日が選択できなくなる
   /// そのため「今日」も選択できるようにavailableRestDurationBeginDateと今日の遅い方を上限とする
   /// availableRestDurationBeginDateより後かつ今日以前の日付には服用記録が存在しないため、上限を広げてもlastTakenDateが変動することはない
-  /// ただし、変更対象より後に開始する服用お休み期間がある場合はその開始日で上限を打ち切り、後続の休薬期間との重複を防ぐ
+  /// ただし、服用お休み中（endDateがnullまたは今日より後）の期間は服用再開予定日を延ばせるべきなので今日の上限を適用せず、開始日から[maxRestDurationDays]日後を上限にする
+  /// また、変更対象より後に開始する服用お休み期間がある場合はその開始日で上限を打ち切り、後続の休薬期間との重複を防ぐ
   /// （endDateは服用再開日でお休み期間には含まれないため、後続の開始日と同日までは重複しない）
   /// また、変更対象の既存の終了日は常に選択できるようにする（DateRangePickerのinitialDateRangeがlastDateを超えると表示できないため）
   DateTime availableRestDurationEndDate({required RestDuration restDuration}) {
-    final nextRestDurationBeginDate = restDurations.map((e) => e.beginDate).where((e) => e.isAfter(restDuration.beginDate)).minOrNull;
-    final selectableLastDate = [
-      availableRestDurationBeginDate,
-      today(),
-    ].reduce((a, b) => a.isAfter(b) ? a : b);
+    final nextRestDurationBeginDate = _nextRestDurationBeginDate(restDuration: restDuration);
+    final selectableLastDate = _selectableLastRestDurationEndDate(restDuration: restDuration);
     return [
       if (nextRestDurationBeginDate != null && nextRestDurationBeginDate.isBefore(selectableLastDate))
         nextRestDurationBeginDate
@@ -684,6 +786,48 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
         selectableLastDate,
       if (restDuration.endDate != null) restDuration.endDate!,
     ].reduce((a, b) => a.isAfter(b) ? a : b);
+  }
+
+  /// [restDuration] の次に開始する服用お休み期間の開始日。無ければnull
+  DateTime? _nextRestDurationBeginDate({required RestDuration restDuration}) {
+    return restDurations.map((e) => e.beginDate).where((e) => e.isAfter(restDuration.beginDate)).minOrNull;
+  }
+
+  /// [restDuration] の終了日として、後続の服用お休み期間で打ち切る前に選択できる最終日
+  DateTime _selectableLastRestDurationEndDate({required RestDuration restDuration}) {
+    final endDate = restDuration.endDate;
+    if (endDate == null || endDate.date().isAfter(today())) {
+      return restDuration.beginDate.date().addDays(maxRestDurationDays);
+    }
+    return [
+      availableRestDurationBeginDate,
+      today(),
+    ].reduce((a, b) => a.isAfter(b) ? a : b);
+  }
+
+  /// 既存の服用お休み期間を変更するDateRangePickerのhelpTextに出す文言を返す
+  /// DateRangePickerは開始日から終了日までをハイライトするため、利用者は終了日を最後のお休みの日と読みやすい。
+  /// 終了日は服用再開日でお休み期間に含まれないことを、どの文言でも伝える。
+  /// 後続の服用お休み期間で打ち切られる時と、終了済みの期間で今日が上限の時は、服用再開日の上限の理由もあわせて返す。
+  /// 理由に当たらない時（服用お休み中で開始日から[maxRestDurationDays]日後が上限の時など）は、終了日に服用再開日を選ぶことだけを返す
+  String availableRestDurationEndDateHelpText({required RestDuration restDuration}) {
+    final nextRestDurationBeginDate = _nextRestDurationBeginDate(restDuration: restDuration);
+    if (nextRestDurationBeginDate != null && nextRestDurationBeginDate.isBefore(_selectableLastRestDurationEndDate(restDuration: restDuration))) {
+      return L.pauseResumeDateLimitBeforeNextPause(DateTimeFormatter.monthAndDay(nextRestDurationBeginDate));
+    }
+    final endDate = restDuration.endDate;
+    final isFinished = endDate != null && !endDate.date().isAfter(today());
+    if (isFinished && !availableRestDurationBeginDate.date().isAfter(today())) {
+      return L.pauseResumeDateLimitIsToday;
+    }
+    return L.selectPauseEndDateAsResumeDate;
+  }
+
+  /// 開始日だけを変更するDatePickerのhelpTextに出す、選べる開始日の上限の理由を返す
+  /// 上限は [restDuration] を変更する時の [availableRestDurationBeginDateExcluding]
+  String availableRestDurationBeginDateHelpText({required RestDuration restDuration}) {
+    final beginDate = availableRestDurationBeginDateExcluding(excludingRestDuration: restDuration);
+    return L.pauseStartDateLimit('${DateTimeFormatter.monthAndDay(beginDate)}(${DateTimeFormatter.shortWeekday(beginDate)})');
   }
 }
 

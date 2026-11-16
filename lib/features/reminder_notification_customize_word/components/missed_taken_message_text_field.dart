@@ -34,17 +34,23 @@ class MissedTakenMessageTextField extends StatelessWidget {
           ),
         ),
         counter: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              L.changeMissedNotificationMessage,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-                color: TextColor.darkGray,
+            // 説明文が長い言語で Row が溢れないよう、文字数の表示を除いた幅で折り返す
+            Expanded(
+              child: Text(
+                L.changeMissedNotificationMessage,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.darkGray,
+                ),
               ),
             ),
-            const Spacer(),
+            // 説明文の末尾と右の表示 (文字数・警告) の間隔。Spacer を Expanded に替えて隣接するようになったため、
+            // 同じ画面の行間 (SizedBox(height: 4)) より広い 8 にして読み分けられるようにする
+            const SizedBox(width: 8),
             if (missedTakenMessage.value.characters.isNotEmpty)
               Text(
                 '${missedTakenMessage.value.characters.length}/100',

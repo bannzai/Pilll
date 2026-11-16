@@ -1,0 +1,85 @@
+appId: com.mizuki.Ohashi.Pilll.dev
+# 記録 →「ピルシートを追加」で開く追加画面の確定ボタンが、表示言語に追従することを確かめるフロー (issue #2078)。
+# debug ビルドは文言を ja に固定しているため、ja で確かめた後に開発者オプションの「表示言語」で de に切り替えて確かめる。
+# 各言語の画面は maestro-artifacts/add_pill_sheet_group/<言語>.png に撮る (maestro-e2e workflow の artifact に含まれる)。
+#
+# 待ち時間の固定値は translation_screenshot/capture.yaml と同じ値と理由:
+# - 60000 (起動・スクロール): CI の Simulator でユーザーの作り直しを含む起動に時間がかかるため
+# - 10000 (画面の表示・言語の保存): 読み込みの無い表示を待つだけのため
+# - waitToSettleTimeoutMs: 500: 同じ設定画面と表示言語の一覧をこの値でスクロールする translation_screenshot/capture.yaml が
+#   CI の Simulator で通っており、同じ画面で実績のある値をそのまま使うため (値そのものを決めた記録は出典の flow にも無い)
+---
+- launchApp:
+    clearState: true
+    clearKeychain: true
+    permissions:
+      notifications: allow
+- runFlow: ../feature_appeal/subflows/initial_setup.yaml
+- waitForAnimationToEnd
+
+# initial_setup.yaml は今日の服用番号を飛ばすためピルシートが作られず、記録画面に「ピルシートを追加」が出る
+- extendedWaitUntil:
+    visible: "ピルシートを追加"
+    timeout: 60000
+- tapOn: "ピルシートを追加"
+- extendedWaitUntil:
+    visible: "追加"
+    timeout: 10000
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/add_pill_sheet_group/ja"
+
+# 設定タブ → 開発者オプションの「表示言語」→ de (translation_screenshot/capture.yaml と同じ手順)
+# このフローではアプリを起動し直さない。PR #2090 の CI で、起動し直した直後に Maestro が
+# 「App crashed or stopped」で止まる失敗が 3 回中 2 回あった (main の feature_appeal_bar_persists_after_restart も同じ症状で落ちている)。
+# 追加画面の閉じるボタンは文言の無い IconButton のため、AppBar の左上 (iPhone 17 の画面で 7%,10%) を座標でタップする
+- tapOn:
+    point: "7%,10%"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    notVisible: "追加"
+    timeout: 10000
+# タブは Image 型で text 検出不可のため座標タップ (translation_screenshot/capture.yaml と同じ)
+- tapOn:
+    point: "88%,95%"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "debug_app_language_row"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+- tapOn:
+    id: "debug_app_language_row"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element:
+      id: "de"
+    direction: DOWN
+    timeout: 60000
+    waitToSettleTimeoutMs: 500
+# スクロールの残り慣性で隣の言語を誤タップしないよう、タップ前に慣性を待つ (translation_screenshot/capture.yaml と同じ)
+- waitForAnimationToEnd
+- tapOn:
+    id: "de"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible:
+      id: "debug_app_language_current_de"
+    timeout: 10000
+
+# 言語を選ぶと設定画面に戻る。記録タブ (12%,95%。feature_appeal_bar_persists_across_tabs.yaml と同じ) へ移り、追加画面を開き直す。
+# 追加画面は開くたびに作られるため de の文言で描かれる。記録画面のボタンは描き直されているとは限らないため ja と de の両方の文言で探す。
+# 期待する文言は lib/l10n/app_de.arb の addPillSheet と add の訳文
+- tapOn:
+    point: "12%,95%"
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible: "ピルシートを追加|Pillenblister hinzufügen"
+    timeout: 10000
+- tapOn: "ピルシートを追加|Pillenblister hinzufügen"
+- extendedWaitUntil:
+    visible: "Hinzufügen"
+    timeout: 10000
+- assertNotVisible: "追加"
+- waitForAnimationToEnd
+- takeScreenshot: "maestro-artifacts/add_pill_sheet_group/de"

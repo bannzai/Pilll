@@ -1,11 +1,13 @@
 ---
 feature: initial_setting
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: bcd2fac96e0c1d1565bff72e4ae41c96a6a65689
+last_verified_at: 2026-10-16
 ---
 
 # initial_setting QA
+
+確認環境 (2026-10-15 の記録): iPhone 16 Pro シミュレータ (iOS 27.0、ローカル sim-boot) に、HEAD を Flutter 3.44.9・Xcode 27.1 でビルドした dev ビルドを新規インストールして初期設定を通した。画像は横に並べた順に操作した順。
 
 ## 1. ピルシート選択（1/3）
 
@@ -23,9 +25,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/14f9b81f-ad0b-4a8d-99e4-410d42bb5790.png" width="320">
+新規インストール後の 1/3 で、空のピルシートの枠と「ピルの種類を選択」ボタンが表示され (1 枚目)、タップすると種類の選択シート (21錠・28錠 等 7 種類) が開く (2 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d4fdb9f5-1054-45f7-bcd2-159158567185-ev-is-1.png" width="640">
 
 </details>
 
@@ -33,9 +37,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/35f1354b-965b-4b07-aafb-3b10373bdb36.png" width="320">
+「28錠 24錠＋4錠偽薬」を選ぶと、同じ種類のピルシートが 3 枚分 (1〜3枚目) 生成される (3 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d4fdb9f5-1054-45f7-bcd2-159158567185-ev-is-1.png" width="640">
 
 </details>
 
@@ -43,11 +49,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-4枚目を追加→種類変更（28錠タイプ(4錠偽薬)）→削除して3枚に戻ることを確認
+3枚目を削除、2枚目を「21錠タイプ」に変更、「ピルシートを追加」で 3 枚目 (21錠タイプ) を追加した結果がプレビューに反映される (4 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/d106635d-2d1e-476c-84c7-0fbcee94b308.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d4fdb9f5-1054-45f7-bcd2-159158567185-ev-is-1.png" width="640">
 
 </details>
 
@@ -55,9 +61,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/efa08a5f-ccf7-4eb4-8ede-7eac9660eab4.png" width="320">
+ピルシートが無い状態では「次へ」が表示されず (1 枚目)、1 件以上で「次へ」が表示される (3・4 枚目)。タップすると 2/3 に遷移する (下の項目の 1 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d4fdb9f5-1054-45f7-bcd2-159158567185-ev-is-1.png" width="640">
 
 </details>
 
@@ -65,9 +73,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/b161679d-a963-46d7-ab4c-4cbc369bd7c4.png" width="320">
+「すでにアカウントをお持ちの方はこちら」でログインのシート (Appleでサインイン・Google アカウントでサインイン) が表示される (5 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/d4fdb9f5-1054-45f7-bcd2-159158567185-ev-is-1.png" width="640">
 
 </details>
 
@@ -90,9 +100,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/36bd4c12-84cd-4d6f-84d9-f8c72304d321.png" width="320">
+「今日(10/15(木)) 飲む・飲んだピルの番号をタップ」の案内文が表示される (1 枚目)。ピルシートを横に並べる PageView の変更の後も、2 枚目のシートにスワイプで移れる (2 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/94ad6bc8-7ae7-4609-a77c-a574fb4de47f-ev-is-2.png" width="640">
 
 </details>
 
@@ -100,9 +112,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5f41c7df-e67e-421b-8b64-8e88a8088ced.png" width="320">
+10 番をタップすると選択状態になり、「10/15(木)に飲むピルは 10 番」が表示される (3 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/94ad6bc8-7ae7-4609-a77c-a574fb4de47f-ev-is-2.png" width="640">
 
 </details>
 
@@ -110,15 +124,26 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/53d6a4af-50ac-40cd-bdcf-7f2e4900175d.png" width="320">
+番号を選ぶ前は「次へ」がグレーで無効 (1・2 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/94ad6bc8-7ae7-4609-a77c-a574fb4de47f-ev-is-2.png" width="640">
 
 </details>
 
 ### **「まだ分からない」で番号未設定のままスキップ**: 「まだ分からない」ボタンをタップすると番号を選択しなくてもリマインダー設定画面（3/3）に遷移する
 
 <details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+10 番を選んだ状態 (3 枚目) で「まだ分からない」をタップすると、3/3「ピルの飲み忘れ通知」に遷移する (4 枚目)。2/3 に戻ると番号は未選択に戻っており、「まだ分からない」で番号が未設定になることを確かめた。番号を一度も選ばずにタップする手順は今回は行っておらず、下の前回の記録のまま。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/94ad6bc8-7ae7-4609-a77c-a574fb4de47f-ev-is-2.png" width="640">
+
+
+前回の記録 (今回操作していない部分の証跡として残す):
 
 **確認日: 2026-07-05**
 
@@ -135,6 +160,9 @@ last_verified_at: 2026-07-05
 - [x] **飲み忘れ通知の時刻設定**: 「ピルの飲み忘れ通知」の案内のもと3つの時刻設定枠が表示され、各枠をタップするとタイムピッカーがボトムシートで表示され、選択した時刻が枠に反映される
 - [x] **利用規約・プライバシーポリシーのリンク**: 画面下部の「プライバシーポリシー」「利用規約」リンクをタップすると、それぞれWebViewで該当ページが開く
 - [x] **「次へ」でプレミアム体験開始画面に遷移**: 「次へ」ボタンをタップするとプレミアム体験開始画面に遷移する
+- [x] **オンボーディング Paywall A/B (実験未参加)**: Remote Config `onboardingPaywallVariant` が未設定 (空文字) の場合、「次へ」で Paywall は表示されず現行どおりプレミアム体験開始画面に遷移する (割当イベント `onboarding_paywall_assigned` も送られない)
+- [ ] **オンボーディング Paywall A/B (paywall 群)**: `onboardingPaywallVariant` = `paywall` の場合、「次へ」で `onboarding_paywall_assigned {variant: paywall}` が送られ、`PremiumIntroductionSheet` (paywall_source = onboarding) が表示され、閉じるとプレミアム体験開始画面に遷移する
+  - ⏭️ スキップ: Remote Config の値は Firebase コンソールでしか設定できず、dev / prod のどちらにもパラメータ `onboardingPaywallVariant` が未作成のため、実験群の状態を端末で作れない。variant の解決は `flutter test test/features/initial_setting/onboarding_paywall_variant_test.dart` (6 件成功) で確認した。パラメータ作成後に `paywall` を配信して再確認する (bannzai/PilllBackend#422 のユーザー作業)
 
 #### 動作確認
 <details>
@@ -144,9 +172,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/7614b166-5988-4e29-a047-a083c8a2df76.png" width="320">
+通知3の枠をタップするとタイムピッカーのボトムシートが表示され (1 枚目)、06:00 を選んで「完了」すると枠に反映される (2 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/066e6131-7774-4b11-9864-ae0460793f02-ev-is-3.png" width="640">
 
 </details>
 
@@ -154,13 +184,12 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-プライバシーポリシー:
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/616d5635-18cc-4800-a3e2-20e0ec713c6c.png" width="320">
+「プライバシーポリシー」で「Pilll」のプライバシーポリシー (bannzai.github.io) が、「利用規約」で「Pilll利用規約」がアプリ内の WebView で開く。本文に提供者の氏名が載っているため、ページ上部だけを切り出して記録した。
 
-利用規約:
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/d2b22f3b-9f38-478c-aca1-df21369b20ee.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/bf1ac0a8-f5b8-471e-b714-164fae1ca97b-is-3-privacy-top.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/b48b0cb0-ce3b-4e9a-bc2c-02f33cff43d4-is-3-terms-top.png" width="320">
 
 </details>
 
@@ -168,9 +197,31 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5a8366b0-bfd4-4118-a6f5-715dfc393896.png" width="320">
+3/3 の「次へ」でプレミアム体験開始画面に遷移する (1 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/85046030-7537-4aa2-8bb0-11f314ea3f26-ev-is-4.png" width="640">
+
+</details>
+
+### **オンボーディング Paywall A/B (実験未参加)**: Remote Config `onboardingPaywallVariant` が未設定 (空文字) の場合、「次へ」で Paywall は表示されず現行どおりプレミアム体験開始画面に遷移する (割当イベント `onboarding_paywall_assigned` も送られない)
+
+<details><summary>動作確認スクショ</summary>
+
+**確認日: 2026-10-15**
+
+新規インストールの初期設定で 3/3 の「次へ」をタップすると、Paywall を経由せずプレミアム体験開始画面に遷移した (1 枚目。dev の Remote Config にパラメータ未作成 = 空文字 = 実験未参加)。割当イベント `onboarding_paywall_assigned` が送られないことは、今回はログを取っておらず画面では確認できない。`lib/features/initial_setting/reminder_times/page.dart` では、variant が null (空文字を含む実験未参加) の時はイベントを送らない分岐になっている (`if (onboardingPaywallVariant != null) { analytics.logEvent(name: 'onboarding_paywall_assigned', ...) }`)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/85046030-7537-4aa2-8bb0-11f314ea3f26-ev-is-4.png" width="640">
+
+</details>
+
+### **オンボーディング Paywall A/B (paywall 群)**: `onboardingPaywallVariant` = `paywall` の場合、「次へ」で `onboarding_paywall_assigned {variant: paywall}` が送られ、`PremiumIntroductionSheet` (paywall_source = onboarding) が表示され、閉じるとプレミアム体験開始画面に遷移する
+
+<details><summary>動作確認スクショ</summary>
+
+（未実行）
 
 </details>
 
@@ -193,9 +244,11 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/5a8366b0-bfd4-4118-a6f5-715dfc393896.png" width="320">
+「\ 通知から服用記録ができます /」と通知のアニメーション画像、「45日間すべての機能が使えます！」が表示される (1 枚目)。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/85046030-7537-4aa2-8bb0-11f314ea3f26-ev-is-4.png" width="640">
 
 </details>
 
@@ -203,11 +256,12 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
+**確認日: 2026-10-15**
 
-今日のピル番号を選択（スキップしない）した通常フローで検証。ホーム画面にピルシートグループ（今日飲むピル: 1番）が登録・表示されることを確認
+今日のピル番号に 10 番を選んだフローで「アプリをはじめる」をタップすると、ホーム画面に「今日飲むピル 10番」のピルシートグループが表示される (1 枚目の 2 枚目)。設定タブの「通知時間」に初期設定で選んだ 04:00, 05:00, 06:00 が登録されている (2 枚目)。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/037af7bf-393e-4abe-b185-99cec9f81fdc.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/85046030-7537-4aa2-8bb0-11f314ea3f26-ev-is-4.png" width="640">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/10/15/ccea6f31-1f85-4f4c-aa25-45a5640cf8f8-st-notification-section.png" width="320">
 
 </details>
 

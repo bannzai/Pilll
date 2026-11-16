@@ -1,18 +1,15 @@
 
-# Workarround for specify pub https://github.com/bannzai/Pilll/pull/23#discussion_r481963119
-.PHONY: prepare
-prepare:
-	cd ios; rm -rf ./Pods; pod install;
-
+# レシピ行は `@` で表示を抑える。make は実行前に $(VAR) を展開した行を標準出力に出すため、
+# `@` が無いと base64 の全文が端末と agent の会話ログに残る。
 .PHONY: secret
 secret:
-	echo $(FILE_FIREBASE_ANDROID) | base64 -D > android/app/src/google-services.json
-	echo $(FILE_FIREBASE_IOS) | base64 -D > ios/Firebase/GoogleService-Info.plist
-	echo $(XCCONFIG_SECRET) | base64 -D > ios/Flutter/Secret.xcconfig
-	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
-	echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > environment/dev.json
-	echo $(DART_DEFINE_FROM_FILE_PROD) | base64 -D > environment/prod.json
-	echo $(ANDROID_RES_VALUES) | base64 -D > android/app/src/main/res/values/values.xml
+	@echo $(FILE_FIREBASE_ANDROID) | base64 --decode > android/app/src/google-services.json
+	@echo $(FILE_FIREBASE_IOS) | base64 --decode > ios/Firebase/GoogleService-Info.plist
+	@echo $(XCCONFIG_SECRET) | base64 --decode > ios/Flutter/Secret.xcconfig
+	@echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 --decode > ios/Runner/StoreKitTestCertificate.cer
+	@echo $(DART_DEFINE_FROM_FILE_DEV) | base64 --decode > environment/dev.json
+	@echo $(DART_DEFINE_FROM_FILE_PROD) | base64 --decode > environment/prod.json
+	@echo $(ANDROID_RES_VALUES) | base64 --decode > android/app/src/main/res/values/values.xml
 	./scripts/secret.sh
 	./android/scripts/secret_properties.sh
 
@@ -28,3 +25,19 @@ secret-backup:
 	mv lib/app/secret.dart lib/app/_secret.dart
 	mv android/secret.properties android/_secret.properties
 
+
+# 引数なしの make で ios を実行する (人が手で動作確認するための入口。検査・テストは CI が行う)
+.DEFAULT_GOAL := ios
+
+.PHONY: verify
+verify:
+	flutter pub get
+	flutter analyze --no-pub --no-fatal-infos --fatal-warnings
+	flutter test
+
+.PHONY: ios
+ios:
+	@set -e; \
+	simulator_udid="$$(SCRIPT_QUIET=1 sim-boot | sed -n 's/^DEVICE_UDID=//p' | tail -n 1)"; \
+	[ -n "$$simulator_udid" ] || { echo "Error: sim-boot で Simulator を解決できません (sim-boot が PATH にあるか確認してください)" >&2; exit 1; }; \
+	flutter run --debug -t lib/main.dev.dart --dart-define-from-file=environment/dev.json -d "$$simulator_udid"

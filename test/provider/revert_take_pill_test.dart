@@ -1157,5 +1157,217 @@ void main() {
         expect(updatedPillSheet.pills[1].pillTakens.length, 0);
       });
     });
+
+    group("服用お休み中", () {
+      // 3日目までのピルを飲んだ後、2022-07-26 に服用お休みを開始した状態で 3日目をrevertする
+      final mockNowDay4 = DateTime.parse("2022-07-27T19:02:00");
+      const sheetType = PillSheetType.pillsheet_28_7;
+
+      test("服用お休みが継続中(endDateがnull)の場合はv1で例外を投げて書き込まない", () async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNowDay4);
+
+        final activePillSheetV1 = PillSheet.v1(
+          id: "active_pill_sheet_id",
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          beginDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-26"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2022-07-26"),
+              createdDate: DateTime.parse("2022-07-26"),
+            ),
+          ],
+        );
+        final pillSheetGroupV1 = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [activePillSheetV1.id!],
+          pillSheets: [activePillSheetV1],
+          createdAt: mockNow,
+        );
+        final batchFactory = MockBatchFactory();
+        final revertTakePill = RevertTakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: MockBatchSetPillSheetModifiedHistory(),
+          batchSetPillSheetGroup: MockBatchSetPillSheetGroup(),
+        );
+
+        await expectLater(
+          revertTakePill(
+            pillSheetGroup: pillSheetGroupV1,
+            pageIndex: 0,
+            targetRevertPillNumberIntoPillSheet: 3,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+        verifyNever(batchFactory.batch());
+      });
+
+      test("服用お休みが継続中(endDateがnull)の場合はv2で例外を投げて書き込まない", () async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNowDay4);
+
+        final activePillSheetV2 = PillSheet.v2(
+          id: "active_pill_sheet_id",
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          beginDate: DateTime.parse("2022-07-24"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2022-07-26"),
+              createdDate: DateTime.parse("2022-07-26"),
+            ),
+          ],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-07-24"),
+            lastTakenDate: DateTime.parse("2022-07-26"),
+            pillTakenCount: 1,
+          ),
+        );
+        final pillSheetGroupV2 = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [activePillSheetV2.id!],
+          pillSheets: [activePillSheetV2],
+          createdAt: mockNow,
+        );
+        final batchFactory = MockBatchFactory();
+        final revertTakePill = RevertTakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: MockBatchSetPillSheetModifiedHistory(),
+          batchSetPillSheetGroup: MockBatchSetPillSheetGroup(),
+        );
+
+        await expectLater(
+          revertTakePill(
+            pillSheetGroup: pillSheetGroupV2,
+            pageIndex: 0,
+            targetRevertPillNumberIntoPillSheet: 3,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+        verifyNever(batchFactory.batch());
+      });
+
+      test("服用再開予定日(endDate)が明日の場合は服用お休み中として例外を投げる", () async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNowDay4);
+
+        final activePillSheetV1 = PillSheet.v1(
+          id: "active_pill_sheet_id",
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          beginDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-26"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2022-07-26"),
+              createdDate: DateTime.parse("2022-07-26"),
+              endDate: DateTime.parse("2022-07-28"),
+            ),
+          ],
+        );
+        final pillSheetGroupV1 = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [activePillSheetV1.id!],
+          pillSheets: [activePillSheetV1],
+          createdAt: mockNow,
+        );
+        final batchFactory = MockBatchFactory();
+        final revertTakePill = RevertTakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: MockBatchSetPillSheetModifiedHistory(),
+          batchSetPillSheetGroup: MockBatchSetPillSheetGroup(),
+        );
+
+        await expectLater(
+          revertTakePill(
+            pillSheetGroup: pillSheetGroupV1,
+            pageIndex: 0,
+            targetRevertPillNumberIntoPillSheet: 3,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+        verifyNever(batchFactory.batch());
+      });
+
+      test("服用再開予定日(endDate)が今日の場合は服用お休みが終わっているため例外を投げずにrevertする", () async {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNowDay4);
+
+        final activePillSheetV1 = PillSheet.v1(
+          id: "active_pill_sheet_id",
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          beginDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-26"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2022-07-26"),
+              createdDate: DateTime.parse("2022-07-26"),
+              endDate: DateTime.parse("2022-07-27"),
+            ),
+          ],
+        );
+        final pillSheetGroupV1 = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: [activePillSheetV1.id!],
+          pillSheets: [activePillSheetV1],
+          createdAt: mockNow,
+        );
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        // targetRevertPillNumberIntoPillSheet = 3 (3番目のピルをrevert)
+        // 服用お休み(2022-07-26〜2022-07-27)の1日分だけ3番目のピルの服用予定日が2022-07-27にずれるため、revertDate = 2022-07-26 (その1日前)
+        // 服用お休みの開始日(2022-07-26)がrevertDateより後ろにならないため服用お休みのデータは消える
+        final revertDate = DateTime.parse("2022-07-26");
+        final updatedPillSheetGroupV1 = pillSheetGroupV1.copyWith(
+          pillSheets: [
+            (activePillSheetV1 as PillSheetV1).copyWith(lastTakenDate: revertDate, restDurations: []),
+          ],
+        );
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(
+          batchSetPillSheetGroup(batch, updatedPillSheetGroupV1),
+        ).thenReturn(updatedPillSheetGroupV1);
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV1,
+          afterPillSheetGroup: updatedPillSheetGroupV1,
+        );
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final revertTakePill = RevertTakePill(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+        final result = await revertTakePill(
+          pillSheetGroup: pillSheetGroupV1,
+          pageIndex: 0,
+          targetRevertPillNumberIntoPillSheet: 3,
+        );
+
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV1)).called(1);
+        verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+        expect(result, updatedPillSheetGroupV1);
+      });
+    });
   });
 }

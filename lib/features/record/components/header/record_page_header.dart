@@ -41,33 +41,43 @@ class RecordPageInformationHeader extends StatelessWidget {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 34),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  _todayWidget(),
-                  const SizedBox(width: 28),
-                  const SizedBox(
-                    height: 64,
-                    child: VerticalDivider(width: 10, color: AppColors.divider),
+              // 訳の長い言語 (fr の曜日・服用日数の見出し等) では日付と服用数の合計の幅が画面幅を超えるため、1 行の並びのまま縮めて画面幅に収める。
+              // 左右 16 は、縮めた時に日付と見出しの文字が画面の端に接しないための余白 (Material の画面の左右の余白の標準の値)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Center(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        _todayWidget(),
+                        const SizedBox(width: 28),
+                        const SizedBox(
+                          height: 64,
+                          child: VerticalDivider(width: 10, color: AppColors.divider),
+                        ),
+                        const SizedBox(width: 28),
+                        TodayTakenPillNumber(
+                          pillSheetGroup: pillSheetGroup,
+                          onPressed: () {
+                            analytics.logEvent(
+                              name: 'tapped_record_information_header',
+                            );
+                            if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
+                              Navigator.of(context).push(
+                                SettingTodayPillNumberPageRoute.route(
+                                  pillSheetGroup: pillSheetGroup,
+                                  activePillSheet: activePillSheet,
+                                ),
+                              );
+                            }
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(width: 28),
-                  TodayTakenPillNumber(
-                    pillSheetGroup: pillSheetGroup,
-                    onPressed: () {
-                      analytics.logEvent(
-                        name: 'tapped_record_information_header',
-                      );
-                      if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
-                        Navigator.of(context).push(
-                          SettingTodayPillNumberPageRoute.route(
-                            pillSheetGroup: pillSheetGroup,
-                            activePillSheet: activePillSheet,
-                          ),
-                        );
-                      }
-                    },
-                  ),
-                ],
+                ),
               ),
             ],
           ),

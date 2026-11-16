@@ -78,7 +78,7 @@ class MockCalendarScreen extends StatelessWidget {
                     height: kToolbarHeight,
                     child: Center(
                       child: Text(
-                        DateTimeFormatter.jaMonth(_displayedMonth),
+                        DateTimeFormatter.abbreviatedMonth(_displayedMonth),
                         // 本番（lib/features/calendar/page.dart）の AppBar title と同系の見た目。
                         style: const TextStyle(color: TextColor.black, fontSize: 20, fontWeight: FontWeight.w500),
                       ),
@@ -112,9 +112,10 @@ class MockCalendarScreen extends StatelessWidget {
 
   /// 本番 MonthCalendar と同じ月間グリッド。Provider(Firestore) を通さず固定データで組む。
   Widget _monthCalendar() {
+    // 週の始まりは設定を一度も切り替えていない端末と同じ日曜日に固定する (曜日バッジの行の Weekday.values も日曜日始まり)。
     final weekDateRanges = List.generate(
-      WeekCalendarDateRangeCalculator(_displayedMonth).weeklineCount(),
-      (index) => WeekCalendarDateRangeCalculator(_displayedMonth).dateRangeOfLine(index + 1),
+      WeekCalendarDateRangeCalculator(_displayedMonth, firstWeekday: Weekday.Sunday).weeklineCount(),
+      (index) => WeekCalendarDateRangeCalculator(_displayedMonth, firstWeekday: Weekday.Sunday).dateRangeOfLine(index + 1),
     );
     return Container(
       // 本番 MonthCalendarPager と同じ白背景 + 下方向の影。
@@ -145,7 +146,6 @@ class MockCalendarScreen extends StatelessWidget {
                       calendarMenstruationBandModels: [CalendarMenstruationBandModel(_latestMenstruation)],
                       calendarScheduledMenstruationBandModels: [_scheduledBand],
                       calendarNextPillSheetBandModels: [_nextPillSheetBand],
-                      horizontalPadding: 0,
                       day: (context, weekday, date) {
                         if (date.isPreviousMonth(_displayedMonth)) {
                           return CalendarDayTile.grayout(weekday: weekday, date: date);

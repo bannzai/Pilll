@@ -74,6 +74,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.endedPillSheetDialogVariant,
       RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
     ),
+    onboardingPaywallVariant: remoteConfig.getStringOrDefault(
+      RemoteConfigKeys.onboardingPaywallVariant,
+      RemoteConfigParameterDefaultValues.onboardingPaywallVariant,
+    ),
   );
 }
 

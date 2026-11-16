@@ -133,13 +133,16 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 訳の長い言語 (de・fi 等) ではラベルが幅に収まらないため、各平均を Flexible にしてラベルを折り返す
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Spacer(),
-        CounterUnitLayout(
-          title: L.averagePeriod,
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
-          unit: L.days,
+        Flexible(
+          child: CounterUnitLayout(
+            title: L.averagePeriod,
+            number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
+            unit: L.days,
+          ),
         ),
         const SizedBox(width: 30),
         const SizedBox(
@@ -147,12 +150,13 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
           child: VerticalDivider(color: AppColors.divider, width: 3),
         ),
         const SizedBox(width: 30),
-        CounterUnitLayout(
-          title: L.averageDays,
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒',
-          unit: L.days,
+        Flexible(
+          child: CounterUnitLayout(
+            title: L.averageDays,
+            number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒',
+            unit: L.days,
+          ),
         ),
-        const Spacer(),
       ],
     );
   }

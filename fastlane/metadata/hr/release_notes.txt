@@ -1,0 +1,7 @@
+• Korisnice YAZ Flex sada mogu pri početnom postavljanju postaviti broj dana uzimanja prema posljednjoj pauzi i početnom broju
+• Razdoblja prekida uzimanja više se ne mogu preklapati, a ispravljeno je brojanje dana prekida i zaboravljenih tableta
+• Pregledali smo prijevode, a datumi, brojevi tableta i obavijesti sada se prikazuju u formatu svakog jezika
+• Ispravljen je problem zbog kojeg se aplikacija mogla zatvoriti odmah nakon pokretanja
+• Sigurnosno ažuriranje
+
+Ako imate dodatne zahtjeve ili povratne informacije, molimo kontaktirajte nas putem "Obrasca za kontakt" u postavkama.

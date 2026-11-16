@@ -1,0 +1,7 @@
+• Si vous prenez YAZ Flex, vous pouvez désormais définir le nombre de jours de prise lors de la configuration initiale à partir de votre dernière pause et du numéro de départ
+• Les pauses de prise ne peuvent plus se chevaucher, et le décompte des jours de pause et des oublis a été corrigé
+• Les traductions ont été revues : les dates, les numéros de pilule et les notifications s'affichent désormais au format de chaque langue
+• Correction d'un problème qui pouvait fermer l'application juste après son lancement
+• Mise à jour de sécurité
+
+Si vous avez d'autres demandes ou commentaires, contactez-nous via le formulaire « Nous contacter » dans les Réglages.

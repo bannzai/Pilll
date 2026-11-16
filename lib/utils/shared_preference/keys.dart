@@ -58,6 +58,9 @@ extension BoolKey on String {
   /// trueの場合、以降このダイアログは表示しない。
   static const midnightTakenWarningDialogNeverShowAgain = 'midnightTakenWarningDialogNeverShowAgain';
 
+  /// 設定の「週の始まりを月曜日にする」が ON かどうか。カレンダーと生理タブの週の行の左端に置く曜日を決める。
+  static const isFirstWeekdayMonday = 'isFirstWeekdayMonday';
+
   /// ピルシート終了ダイアログを当該グループで表示済みかどうか。
   /// pillSheetGroupID をサフィックスに付与し、終了グループごとに1回だけ表示する。
   static String endedPillSheetDialogShown(String pillSheetGroupID) => 'endedPillSheetDialogShown_$pillSheetGroupID';
@@ -80,6 +83,9 @@ extension StringKey on String {
   /// 周期番号（利用開始からの経過年数）を`_0`のように後置したキーで使い、周期が変わると新しい表示期限が始まる。
   /// 実際のキーは lifetimeOfferFirstDisplayedDateTimeKey で組み立てる。
   static const String lifetimeOfferFirstDisplayedDateTime = 'lifetimeOfferFirstDisplayedDateTime';
+
+  /// 開発者オプションの「表示言語」で選んだ arb の言語コード (例: `de`)。debug ビルドの表示言語にだけ使う。
+  static const String debugAppLanguageCode = 'debugAppLanguageCode';
 }
 
 extension ReleaseNoteKey on String {

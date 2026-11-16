@@ -1,8 +1,8 @@
 ---
 feature: pill_sheet_modified_history
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-05
+last_verified_commit: 5fb5638909f9b3a38de62b5a37433365e969892f
+last_verified_at: 2026-09-23
 ---
 
 # pill_sheet_modified_history QA
@@ -107,9 +107,9 @@ last_verified_at: 2026-07-05
 
 - [x] **服用記録行の表示**: 「服用」の履歴行に服用番号の変化（前番号→後番号）と服用時刻が表示される
   - 実機では服用番号が常に1番のケースのみ再現でき、番号変化（before→after）表示は未確認。番号表示・時刻表示自体は欠損なく表示されることを確認した
-- [ ] **服用記録の時刻編集**: 服用記録行をタップすると日時ピッカーが開き、時刻を変更して確定すると履歴が更新され「◯◯に変更しました」のスナックバーが表示されピッカーが閉じる
-  - ❌ 失敗: 日時ピッカーが開き時刻変更・確定・ピッカーが閉じる動作は正常。Firestore上のデータも正しく更新される（カレンダー画面の別プロバイダ経由の一覧では更新後の日付・グルーピングに反映されることを確認済み）。しかし**編集した本画面（`PillSheetModifiedHistoriesPage`）を閉じずにそのまま見ると、一覧表示が編集前の内容のまま更新されない**。画面を一度閉じて再度開き直すと正しい内容が表示される。原因は `lib/features/pill_sheet_modified_history/page.dart` の `useEffect` が `fetchedHistories.length != histories.value.length`（件数変化時のみ）でしか `histories.value` を更新しないため。スナックバー自体は目視では2秒間のタイミングが早く捕捉できなかったが、コードの実行フロー（`try` 内で例外なく `navigator.pop()` まで到達している）から表示されていると判断
-  - 起票: https://github.com/bannzai/PilllBackend/issues/388
+- [x] **服用記録の時刻編集**: 服用記録行をタップすると日時ピッカーが開き、時刻を変更して確定すると履歴が更新され「◯◯に変更しました」のスナックバーが表示されピッカーが閉じる
+  - 2026-07-05 の確認では、編集した本画面を閉じずに見ると一覧が編集前の内容のまま更新されなかった (https://github.com/bannzai/PilllBackend/issues/388)。`page.dart` の `useEffect` が件数の変化時にしか一覧を更新していなかったのが原因で、https://github.com/bannzai/Pilll/pull/1882 で修正した
+  - 修正後、服用記録行 (9/23 14:53) の日付を 9/22 に変更して確定すると、画面を開き直さずに行が「22 (Tue) 14:53」として一覧の末尾へ移動することを確認した (件数は 8 件のまま内容だけが変わる更新)。スナックバーは表示時間が短く撮影で捕捉できていない
 - [x] **服用取り消し行の表示**: 服用を取り消した履歴行に「服用取り消し」の文言と番号変化が表示される（タップしても編集は開かない）
   - 「服用取り消し」行をタップしても日時ピッカーが開かないことを確認した
 - [x] **その他アクション行の表示**: ピルシート作成・削除・休薬開始/終了・番号変更など、服用・取り消し以外の履歴行もそれぞれ内容欠損なく表示される
@@ -132,10 +132,16 @@ last_verified_at: 2026-07-05
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-05**
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260705/1a072dce-d718-4eba-b264-f85349942910.png" width="320">
+**確認日: 2026-09-23** (simtunnel のリモート iOS Simulator、iPhone 17 / iOS 26.5、commit 5fb5638909)
 
-❌ 失敗（詳細はチェック項目欄参照、issue: https://github.com/bannzai/PilllBackend/issues/388）
+編集前 (一番下の服用記録が 23 (Wed) 14:53):
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/23/c838b142-8d78-4850-8d06-7f25aa2edcd5-13-histories-before.jpg" width="320">
+
+日時ピッカーで日付を Tue, Sep 22 に変更:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/23/f9f015bd-b88e-4406-84c5-fb4d040f73d7-15-picker-changed.jpg" width="320">
+
+完了をタップした直後、同じ画面のまま行が 22 (Tue) 14:53 として末尾へ移動:
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/23/4748268c-8116-4f8d-bb4c-8f1128a8940e-16-histories-after.jpg" width="320">
 
 </details>
 

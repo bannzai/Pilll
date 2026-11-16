@@ -1,0 +1,60 @@
+---
+status: launched          # evaluating | building | launched | pivoting | retiring | retired
+decision_date: 2026-11-25 # 次の判定日 (YYYY-MM-DD)。判定のたびに cycle_days 後へ進める
+cycle_days: 14            # 判定の周期 (7 または 14)
+veto_wait_hours: 12       # 公開後の無人ループの拒否権の待ち時間 (既定 12)
+daily_issue_cap: 3        # 1 日に生成してよい改善 issue の上限 (意味の門。既定 3)
+launched_at: 2018-07-29   # 公開日 (YYYY-MM-DD)。App Store の初回公開日
+---
+
+# 方向性: Pilll
+
+## 仮説
+
+ピルを服用している日本の人が抱える「飲み忘れたかも」「今日はシートのどれを飲むか」「生理はいつ来るか」という毎日の不安を、服用リマインダー・ピルシートの在庫管理・生理予測・体調記録を 1 つにしたアプリで解消する。海外アプリのローカライズ版が合わず、本格的な生理管理アプリまでは要らない層を狙う (出典: `ios/fastlane/metadata/ja/description.txt`)。
+
+## 判定基準
+
+| 指標 | 計測元 (skill / コマンド) | 継続のしきい値 | 打ち切り条件 | 転換の条件 |
+| --- | --- | --- | --- | --- |
+| App Store JP 平均評価 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-app-metadata.sh 1405931017 --country jp` の `averageUserRating` | >= 4.0 | < 3.5 x2 | 評価は保てているが直近 14 日の新規レビューが 2 回連続 0 件なら、獲得 (ASO・オンボーディング) 側の転換を検討する |
+| 直近14日の★1〜2レビュー数 | appstore-research skill: `bash ~/.agents/skills/appstore-research/scripts/fetch-reviews.sh 1405931017 --country jp --pages 1` の出力で `date` が直近 14 日かつ `rating` が 2 以下の行数 | <= 1 | >= 3 x2 | 低評価の内容が同じ機能に集中していたら、その機能の作り直しを改善 issue の最優先にする |
+| 直近14日のFATALクラッシュissue数 | firebase-crashlytics-triage skill: `bash ~/.agents/skills/firebase-crashlytics-triage/scripts/crashlytics.sh top-issues --config ios/Firebase/GoogleService-Info-prod.plist --days 14 --error-types FATAL` の topIssues の行数 | <= 10 | > 50 x2 | 上位 issue のイベント数が 1 件で 100 を超えていたら、機能追加より先にその修正 issue を出す |
+| MRR (USD) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric mrr --field mrr` の `VALUE` | >= 4000 | < 3500 x2 | 直近 14 日の新規顧客の合計 (`--metric new_customers --field new_customers --days 14 --agg sum`) を、MRR の値にかかわらず毎回の判定日に agent が `documents/loop/metrics-<判定日>.json` へ記録する。MRR が継続のしきい値 (>= 4000) を下回った判定日に、その値を前回の判定日の同じ値と比べ、減っていたら獲得側、減っていなければ課金導線側の転換を検討する。前回の判定日の値が無い時は転換を判定しない |
+| D7リテンション (直近14日のコホート平均) | `bash ~/.agents/skills/product-loop/scripts/read-dashboard-metric.sh --repo bannzai/Pilll --metric retention --field d7_rate --days 14 --agg avg` の `VALUE` | >= 0.38 | < 0.30 x2 | 直近 14 日のコホートの初期設定の完了率 (`--metric onboarding_funnel --field steps.02_end_initial_setting --days 14 --agg sum` の値を `--metric onboarding_funnel --field cohort_users --days 14 --agg sum` の値で割る) を、D7 リテンションの値にかかわらず毎回の判定日に agent が `documents/loop/metrics-<判定日>.json` へ記録する。D7 リテンションが継続のしきい値 (>= 0.38) を下回った判定日に、その値を前回の判定日の同じ値と比べ、下がっていたら初期設定の作り直しを改善 issue の最優先にする。前回の判定日の値が無い時は転換を判定しない |
+
+## 必要な機能
+
+- [x] 服用記録とピルシート管理 (v1 / v2、連続服用の休薬)
+- [x] 服用リマインダー (複数時刻・通知文言のカスタマイズ・Critical Alert・AlarmKit)
+- [x] 生理の記録と予測
+- [x] カレンダー・体調記録・予定
+- [x] プレミアム (RevenueCat。ピルシート自動追加・クイックレコード等) と課金導線 (FeatureAppeal / lifetime offer / special offering)
+- [x] 問い合わせ・ストアレビュー依頼・リリースノート
+- [x] 1 日 2 回服用する薬の記録 (ジエノゲスト等。ピルシート追加時に服用回数を設定し、1 回ごとに記録する。202608.04.x で配布。`lib/features/release_note/release_note.dart`)
+- [ ] 連続服用モード (ヤーズフレックス等。シート番号とサイクル日数を分け、上限日数・休薬を扱う。方針 bannzai/PilllBackend#498、MVP1 仕様 bannzai/PilllBackend#499)
+- [ ] オンボーディングの改善 (課金導線の A/B テスト結果の反映。bannzai/PilllBackend#418)
+- [ ] AdMob メディエーション設定の見直し (bannzai/PilllBackend#419)
+- [ ] FeatureAppeal の効果測定 (bannzai/PilllBackend#374)
+
+## デザインの方向
+
+既存アプリのため Claude Design のモックは無い。現行の画面を正とし、変更は既存のトーン (`lib/features/` の実装) に合わせる。
+
+## 決めたこと
+
+| 日付 | 場面 | 決めたこと | 決めた人 |
+| --- | --- | --- | --- |
+| 2026-09-29 | 既存アプリへの後付け | 下書きを agent が作成。bannzai が直すか黙認する。しきい値は 2026-09-29 時点の実測 (平均評価 4.66 / 5954 件、直近 14 日の ★1〜2 レビュー 0 件、直近 14 日の FATAL issue 4 件) を基準に「現状維持なら継続、明確に落ちたら打ち切り」で置いた | agent |
+| 2026-10-15 | 判定日 2026-10-13 の判定 | 継続。平均評価 4.66 / 6006 件 (>= 4.0)、直近 14 日の ★1〜2 レビュー 1 件 (<= 1。しきい値の端)。直近 14 日の FATAL クラッシュ issue 数は firebase CLI のログインが切れていて計測できず (UNMEASURED)、残り 2 指標で判定した。打ち切り条件 (> 50 x2) は前回の記録が無いため今回の値に関わらず当たらない。指標の値は `documents/loop/metrics-2026-10-13.json` | agent |
+| 2026-10-26 | issue の読み書き先の変更 (bannzai/Pilll#1914) | 公開後の無人ループの記録を bannzai/PilllBackend#491 から bannzai/Pilll#1945 へ移した。2026-10-18 までの記録は bannzai/PilllBackend#491 に残る | agent |
+| 2026-10-28 | 判定日 2026-10-28 の判定 | 継続。平均評価 4.66 / 6072 件 (>= 4.0)、直近 14 日の ★1〜2 レビュー 1 件 (<= 1。しきい値の端)、直近 14 日の FATAL クラッシュ issue 4 件 (<= 10)。3 指標とも継続のしきい値を満たし、打ち切り条件には当たらない。指標の値は `documents/loop/metrics-2026-10-28.json` | agent |
+| 2026-10-30 | 服用お休み期間を追加・変更する DateRangePicker で、終了日に最後のお休みの日を選んだ結果、お休みが 1 日短く保存されたというお問い合わせ (bannzai/Pilll#2036) | 保存の意味 (終了日 = 服用再開日で、お休みの日数に含まない) は変えず、DateRangePicker の見出しで終了日に服用を再開する日を選ぶことを伝える。選んだ終了日を最後のお休みの日として保存時に +1 日する案は、0 日のお休みで initialDateRange が作れない等の考慮が増えるため選ばない。同じお問い合わせが続く時に改めて検討する | agent |
+| 2026-10-30 | 無人実装 (bannzai/Pilll#2039) | 文言を持たない言語の端末では en で表示する。それまでは gen-l10n の一覧の先頭の af になっていた。サポート外の言語の利用者は日本語の端末ではないため ja より en の方が読める可能性が高く、`app_en.arb` は template の `app_ja.arb` のキーをすべて持つ。debug ビルドの既定 (ja) は開発者向けのため変えない | agent |
+| 2026-11-04 | 月の見出しの de の値が bannzai/Pilll#2017 の完了条件 (「Okt.」か「Oktober」) と違うという夜間レビューの指摘 (bannzai/Pilll#2087) | 月の見出し (`DateTimeFormatter.abbreviatedMonth`。カレンダーの服用履歴カードの月の区切りと生理画面の上部) の de は「Okt」(ピリオドなし) のままにする。#2017 の狙いの「数字だけでなく月を表す見出しだと伝わる」は満たしている。「Okt」は intl 0.20.3 (`pubspec.lock`) の `lib/date_time_patterns.dart` で de の `ABBR_MONTH` (skeleton `MMM`) が `LLL` (単独で出す月名の省略形) に写った値で、日付の中の月名 (`yearAndMonth` の「Okt. 2026」) とは別の形 (値は `test/utils/formatter/date_time_formatter_test.dart` の `#abbreviatedMonth`・`#yearAndMonth` で固定)。同じ intl の `lib/date_symbol_data_local.dart` の de は `SHORTMONTHS` (日付の中で使う形) が「Okt.」、`STANDALONESHORTMONTHS` (単独で出す形) が「Okt」で、月名を単独で出す見出しには単独の形が合う。全言語で `ABBR_MONTH` に従う作りを保ち、de だけ書式を個別に指定しない。同じ指摘が利用者から出た時に改めて検討する | agent |
+| 2026-11-04 | 月日の書式の決定 (PR bannzai/Pilll#2050、bannzai/Pilll#2024) に根拠の記録が無いという夜間レビューの指摘 (bannzai/Pilll#2104) | ja の月日・曜日付き月日の表示は変えない。`DateTimeFormatter.monthAndDay` は ja 以外も月名にせず、各言語の数字の並び (es「29/10」・de「29.10.」) にする。ピルシートの日付表示モードの狭いセル (`PillSheetGroup.displayPillSheetDate`) と同じ関数を使うためで、record 画面の上部・服用お休みを始めるダイアログ (`record_page_rest_duration_dialog.dart`)・服用お休みの期間を手で変える画面 (`change_manual_rest_duration.dart`)・生理の記録ボタン・生理の一覧・リマインド通知のタイトルも同じ書式になる。record 画面の上部は「29/10 (jue)」とし、bannzai/Pilll#1990 の候補「29 de oct. (jue)」は採らない。#1990 は、数字だけの月日は地域によって月と日の順が曖昧になると指摘し、本文の「決定」で候補を採ると決めていたが、#2050 は狭いセルと同じ関数を使う作りを保って採らなかった。日本式の月日と各言語の曜日が混ざる表示は #2050 で解消したが、数字だけの月日の曖昧さの指摘は残る。record 画面の上部だけに専用の書式を足すのは同じ指摘が続く時に検討する。`monthAndWeekday` (生理予定日カード) は ja 以外を intl の `DateFormat.ABBR_MONTH_WEEKDAY_DAY` にする。es などは月名の省略形 (「sáb, 16 ene」) になり、ko (「1월 16일 (토)」)・zh (「1月16日周六」) はこの書式でも数字の月になる (値は `test/utils/formatter/date_time_formatter_test.dart` の `#monthAndWeekday` で固定)。bannzai/Pilll#1978 の候補「sáb, 16 de enero」の全形は採らない。同じ行のレイアウトを直した bannzai/Pilll#2019 の後でも行を長くしないため | agent |
+| 2026-11-11 | 判定日 2026-11-11 の判定 | 継続。判定基準の 5 指標 (App Store JP 平均評価・直近 14 日の ★1〜2 レビュー数・直近 14 日の FATAL クラッシュ issue 数・MRR・D7 リテンション) がすべて継続のしきい値を満たし、打ち切り条件には当たらない。MRR と D7 リテンションは継続のしきい値を下回っていないため転換の条件を判定しない。転換の条件で記録すると決めた直近 14 日の新規顧客の合計と初期設定の完了率は今回が初回の記録で、次の判定日からの比較に使う。指標の値は `documents/loop/metrics-2026-11-11.json` | agent |
+
+## agent に任せること
+
+文書に無い問いはすべて。issue の読み書き先は bannzai/Pilll (`AGENTS.md`「issue の読み書き先」)。Android (Google Play) の指標は計測元が castle の skill に無いため判定基準に含めず、揃った時に agent が行の追加を提案する。RevenueCat の課金指標と Firebase Analytics の利用指標は bannzai/dashboard が日次で集めており、`read-dashboard-metric.sh` で読める。MRR と D7 リテンションは判定基準に足した (週次レポート https://github.com/bannzai/inbox/issues/84 で承認)。ほかに仮説の判定に要る指標 (paywall のファネル等) は、agent が同じ計測元で判定基準の行の追加を `documents/loop/pending-proposals.md` に提案し (Android の指標も同じ)、週次レポートで承認されたものだけを足す。

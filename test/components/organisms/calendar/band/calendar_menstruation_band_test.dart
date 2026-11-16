@@ -179,7 +179,6 @@ Widget _buildWeekWidget(
       calendarMenstruationBandModels: models,
       calendarScheduledMenstruationBandModels: const [],
       calendarNextPillSheetBandModels: const [],
-      horizontalPadding: 0,
       day: (context, weekday, date) => Container(
         width: 50,
         height: 50,

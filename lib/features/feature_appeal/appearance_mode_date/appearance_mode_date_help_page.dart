@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/feature_appeal/feature_appeal_premium_plan_button.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
@@ -99,30 +100,38 @@ class AppearanceModeDateHelpPage extends ConsumerWidget {
       bottomNavigationBar: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: PrimaryButton(
-            text: L.featureAppealTryFeature,
-            onPressed: () async {
-              final user = ref.read(userProvider).requireValue;
-              analytics.logEvent(
-                name: 'feature_appeal_try_tapped',
-                parameters: {
-                  'feature_key': 'appearance_mode_date',
-                  'feature_type': 'premium',
-                  'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              PrimaryButton(
+                text: L.featureAppealTryFeature,
+                onPressed: () async {
+                  final user = ref.read(userProvider).requireValue;
+                  analytics.logEvent(
+                    name: 'feature_appeal_try_tapped',
+                    parameters: {
+                      'feature_key': 'appearance_mode_date',
+                      'feature_type': 'premium',
+                      'is_paywall_shown': !user.premiumOrTrial ? 1 : 0,
+                    },
+                  );
+                  if (!user.premiumOrTrial) {
+                    analytics.logEvent(
+                      name: 'feature_appeal_paywall_shown',
+                      parameters: {'feature_key': 'appearance_mode_date', 'trigger': 'try'},
+                    );
+                    await showPremiumIntroductionSheet(context, source: PaywallSource.featureAppealAppearanceMode);
+                    return;
+                  }
+                  final tabController = ref.read(homeTabControllerProvider);
+                  Navigator.of(context).popUntil((r) => r.isFirst);
+                  tabController?.animateTo(HomePageTabType.record.index);
                 },
-              );
-              if (!user.premiumOrTrial) {
-                analytics.logEvent(
-                  name: 'feature_appeal_paywall_shown',
-                  parameters: {'feature_key': 'appearance_mode_date'},
-                );
-                await showPremiumIntroductionSheet(context, source: PaywallSource.featureAppealAppearanceMode);
-                return;
-              }
-              final tabController = ref.read(homeTabControllerProvider);
-              Navigator.of(context).popUntil((r) => r.isFirst);
-              tabController?.animateTo(HomePageTabType.record.index);
-            },
+              ),
+              const SizedBox(height: 8),
+              const FeatureAppealPremiumPlanButton(featureKey: 'appearance_mode_date', paywallSource: PaywallSource.featureAppealAppearanceMode),
+            ],
           ),
         ),
       ),

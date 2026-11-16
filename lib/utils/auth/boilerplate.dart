@@ -15,11 +15,11 @@ Future<SignInWithAppleState> callLinkWithApple(LinkApple linkApple) async {
   try {
     final credential = await linkWithApple(user);
     if (credential == null) {
-      return Future.value(SignInWithAppleState.cancel);
+      return SignInWithAppleState.cancel;
     }
     await linkApple();
 
-    return Future.value(SignInWithAppleState.determined);
+    return SignInWithAppleState.determined;
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
     debugPrint(
@@ -48,12 +48,12 @@ Future<SignInWithGoogleState> callLinkWithGoogle(LinkGoogle linkGoogle) async {
   try {
     final credential = await linkWithGoogle(user);
     if (credential == null) {
-      return Future.value(SignInWithGoogleState.cancel);
+      return SignInWithGoogleState.cancel;
     }
 
     await linkGoogle();
 
-    return Future.value(SignInWithGoogleState.determined);
+    return SignInWithGoogleState.determined;
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
     debugPrint(

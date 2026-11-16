@@ -71,13 +71,16 @@ Future<DateTimeRange?> _showRestDurationRangePicker(
     initialDateRange: initialDateRange,
     firstDate: firstDate,
     lastDate: lastDate,
-    helpText: L.selectPausePeriod,
+    // カレンダーは開始日から終了日までをハイライトするため、終了日が服用再開日でお休み期間に含まれないことを見出しで伝える
+    helpText: L.selectPauseEndDateAsResumeDate,
     fieldStartHintText: L.pauseStartDate,
     fieldEndLabelText: L.pauseEndDate,
     builder: (context, child) => DateRangePickerTheme(child: child!),
   );
 }
 
+/// 前回のピルシートグループの服用お休み期間の開始日・終了日を変更する行。
+/// 服用お休み期間の削除を提供しない理由と問い合わせ時の案内は `ChangeManualRestDuration` の document コメントに書いてある。
 class _ChangeRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheetGroup pillSheetGroup;

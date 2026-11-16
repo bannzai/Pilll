@@ -88,6 +88,11 @@ mixin _$RemoteConfigParameter {
   /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
   String get endedPillSheetDialogVariant => throw _privateConstructorUsedError;
 
+  /// オンボーディング内 Paywall 表示の A/B バリアント識別子
+  /// 'control' (現行フロー) / 'paywall' (initial_setting 完了後・premium_trial 紹介前に Paywall を表示) / '' (実験未参加)。
+  /// Firebase A/B Testing で配信する。解釈は lib/features/initial_setting/onboarding_paywall_variant.dart
+  String get onboardingPaywallVariant => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
@@ -115,7 +120,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int lifetimeOfferUserCreationDaysUntil,
       int lifetimeOfferDurationHours,
       String lifetimeOfferCopyVariant,
-      String endedPillSheetDialogVariant});
+      String endedPillSheetDialogVariant,
+      String onboardingPaywallVariant});
 }
 
 /// @nodoc
@@ -147,6 +153,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? lifetimeOfferDurationHours = null,
     Object? lifetimeOfferCopyVariant = null,
     Object? endedPillSheetDialogVariant = null,
+    Object? onboardingPaywallVariant = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -217,6 +224,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.endedPillSheetDialogVariant
           : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
               as String,
+      onboardingPaywallVariant: null == onboardingPaywallVariant
+          ? _value.onboardingPaywallVariant
+          : onboardingPaywallVariant // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -244,7 +255,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int lifetimeOfferUserCreationDaysUntil,
       int lifetimeOfferDurationHours,
       String lifetimeOfferCopyVariant,
-      String endedPillSheetDialogVariant});
+      String endedPillSheetDialogVariant,
+      String onboardingPaywallVariant});
 }
 
 /// @nodoc
@@ -273,6 +285,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? lifetimeOfferDurationHours = null,
     Object? lifetimeOfferCopyVariant = null,
     Object? endedPillSheetDialogVariant = null,
+    Object? onboardingPaywallVariant = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -343,6 +356,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.endedPillSheetDialogVariant
           : endedPillSheetDialogVariant // ignore: cast_nullable_to_non_nullable
               as String,
+      onboardingPaywallVariant: null == onboardingPaywallVariant
+          ? _value.onboardingPaywallVariant
+          : onboardingPaywallVariant // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -367,7 +384,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.lifetimeOfferUserCreationDaysUntil = RemoteConfigParameterDefaultValues.lifetimeOfferUserCreationDaysUntil,
       this.lifetimeOfferDurationHours = RemoteConfigParameterDefaultValues.lifetimeOfferDurationHours,
       this.lifetimeOfferCopyVariant = RemoteConfigParameterDefaultValues.lifetimeOfferCopyVariant,
-      this.endedPillSheetDialogVariant = RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant})
+      this.endedPillSheetDialogVariant = RemoteConfigParameterDefaultValues.endedPillSheetDialogVariant,
+      this.onboardingPaywallVariant = RemoteConfigParameterDefaultValues.onboardingPaywallVariant})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -474,9 +492,16 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey()
   final String endedPillSheetDialogVariant;
 
+  /// オンボーディング内 Paywall 表示の A/B バリアント識別子
+  /// 'control' (現行フロー) / 'paywall' (initial_setting 完了後・premium_trial 紹介前に Paywall を表示) / '' (実験未参加)。
+  /// Firebase A/B Testing で配信する。解釈は lib/features/initial_setting/onboarding_paywall_variant.dart
+  @override
+  @JsonKey()
+  final String onboardingPaywallVariant;
+
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours, lifetimeOfferCopyVariant: $lifetimeOfferCopyVariant, endedPillSheetDialogVariant: $endedPillSheetDialogVariant)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, lifetimeOfferEnabled: $lifetimeOfferEnabled, lifetimeOfferUserCreationDaysSince: $lifetimeOfferUserCreationDaysSince, lifetimeOfferUserCreationDaysUntil: $lifetimeOfferUserCreationDaysUntil, lifetimeOfferDurationHours: $lifetimeOfferDurationHours, lifetimeOfferCopyVariant: $lifetimeOfferCopyVariant, endedPillSheetDialogVariant: $endedPillSheetDialogVariant, onboardingPaywallVariant: $onboardingPaywallVariant)';
   }
 
   @override
@@ -513,7 +538,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
                 other.lifetimeOfferDurationHours == lifetimeOfferDurationHours) &&
             (identical(other.lifetimeOfferCopyVariant, lifetimeOfferCopyVariant) || other.lifetimeOfferCopyVariant == lifetimeOfferCopyVariant) &&
             (identical(other.endedPillSheetDialogVariant, endedPillSheetDialogVariant) ||
-                other.endedPillSheetDialogVariant == endedPillSheetDialogVariant));
+                other.endedPillSheetDialogVariant == endedPillSheetDialogVariant) &&
+            (identical(other.onboardingPaywallVariant, onboardingPaywallVariant) || other.onboardingPaywallVariant == onboardingPaywallVariant));
   }
 
   @JsonKey(ignore: true)
@@ -536,7 +562,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       lifetimeOfferUserCreationDaysUntil,
       lifetimeOfferDurationHours,
       lifetimeOfferCopyVariant,
-      endedPillSheetDialogVariant);
+      endedPillSheetDialogVariant,
+      onboardingPaywallVariant);
 
   @JsonKey(ignore: true)
   @override
@@ -570,7 +597,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int lifetimeOfferUserCreationDaysUntil,
       final int lifetimeOfferDurationHours,
       final String lifetimeOfferCopyVariant,
-      final String endedPillSheetDialogVariant}) = _$RemoteConfigParameterImpl;
+      final String endedPillSheetDialogVariant,
+      final String onboardingPaywallVariant}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -660,6 +688,12 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// ピルシート終了ダイアログの A/B バリアント識別子
   /// 'history_blur' / 'summary_stats' / '' (非表示)。Firebase A/B Testing で配信する
   String get endedPillSheetDialogVariant;
+  @override
+
+  /// オンボーディング内 Paywall 表示の A/B バリアント識別子
+  /// 'control' (現行フロー) / 'paywall' (initial_setting 完了後・premium_trial 紹介前に Paywall を表示) / '' (実験未参加)。
+  /// Firebase A/B Testing で配信する。解釈は lib/features/initial_setting/onboarding_paywall_variant.dart
+  String get onboardingPaywallVariant;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;

@@ -36,10 +36,12 @@
 - Firebase の設定は `main.dev.dart` / `main.prod.dart` で環境が分かれている。
 
 ## issue の読み書き先
-このリポジトリ (bannzai/Pilll) は public で issue 機能が無効。issue は private の bannzai/PilllBackend で管理している。
+issue はこのリポジトリ (bannzai/Pilll) で管理する。issue 機能を有効にする前の既存の issue は private の bannzai/PilllBackend にあり、参照する時は `#<番号>` に省略せず `bannzai/PilllBackend#<番号>` と書く。
 
-- 指示・skill に登場する issue のやりとり（作成・閲覧・コメント・ラベル操作など）は、すべて bannzai/PilllBackend の issue を読み書きする
-- `gh issue` 系コマンドは必ず `--repo bannzai/PilllBackend` を指定する
+## リポジトリのメモ
+作業の前に索引 `documents/notes/README.md` を読み、読むべき場面に当たるメモの本文を読む。
+
+@documents/notes/README.md
 
 ------------------------------------
 
@@ -49,8 +51,9 @@
 - いわゆるロジックを検証するUnit Test と Widget Test を中心に書いていく
 - Widget Test では Button をタップすると言った操作を行うものは書かない。状態を用意して、どういうWidgetの状態になるかを検証する
 - Pilllでは日付を扱うテストが多く、境界値テストが多い。端末での動作確認が大変なので、日付部分で境界値がある場合は積極的に・網羅的にテストを書く
-- 実装後は手動テスト前に必ず、ユニットテスト・MaestroによるE2Eテストを実行する。該当するものがなければテストを新規作成する。作成・実行が難しい場合はユーザーに報告する
-- 動作確認は、極力あなたが行うこと。 /sim-manager skill を使用して動作確認をすること
+- 実装後は手動テスト前に必ず、ユニットテストを実行する。該当するものがなければテストを新規作成する。作成・実行が難しい場合はユーザーに報告する
+- 動作確認は、極力あなたが行うこと。手動の動作確認 (画面の目視・スクリーンショット) は simtunnel (GitHub Actions の macOS Runner 上の iOS Simulator。起動方法は ios-simulator skill) を先に使う。ローカルの /sim-manager skill (sim-boot) を既定の手段にしない
+- 自動化できる確認 (繰り返し確認する導線) は Maestro のフロー (`.maestro/flows/`) に落とし込み、CI (`.github/workflows/maestro-e2e.yml`。PR では起動せず、必要と判断した時に `workflow_dispatch` で起動する。手順は `documents/maestro-e2e.md`) で実行する。ローカルで Maestro を回すことは必須にしない。`flows=all` で実行するフローは `.maestro/flows/config.yaml` で指定する
 
 
 ## コーディング規約・ルール

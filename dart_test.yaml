@@ -1,0 +1,6 @@
+# snapshot: 画面の画像を基準画像と比べるテスト (test/snapshot/)。基準画像は .github/workflows/snapshot-testing.yml の
+# runner で撮ったものだけが一致し、フォントの取得 (scripts/snapshot_testing/fetch_fonts.sh) も要るため、既定では skip する。
+# snapshot-testing.yml は --tags snapshot --run-skipped で実行する
+tags:
+  snapshot:
+    skip: "snapshot テストは snapshot-testing.yml の runner でだけ比べる (手元で試す時は fetch_fonts.sh の後に --tags snapshot --run-skipped)"

@@ -5,6 +5,9 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/premium_introduction/paywall_source.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/alarm_kit_service.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -23,12 +26,10 @@ class AlarmKitSetting extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isAlarmKitAvailableFuture = useFuture(AlarmKitService.isAvailable());
-    final isAlarmKitAvailable = isAlarmKitAvailableFuture.data;
     final isLoading = useState(false);
 
     // AlarmKitが利用できない場合は何も表示しない
-    if (isAlarmKitAvailable != true) {
+    if (ref.watch(isAlarmKitAvailableProvider).asData?.value != true) {
       return const SizedBox.shrink();
     }
 
@@ -36,20 +37,23 @@ class AlarmKitSetting extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text(
-            'アラーム機能',
-            style: TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
+          // 言語によっては名前が長く、PremiumBadge と並ぶと行幅を超えるため折り返せるようにする
+          Flexible(
+            child: Text(
+              L.alarmKitSettingTitle,
+              style: const TextStyle(
+                fontFamily: FontFamily.roboto,
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+              ),
             ),
           ),
           if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
-      subtitle: const Text(
-        '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
-        style: TextStyle(
+      subtitle: Text(
+        L.alarmKitSettingDescription,
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,
           fontSize: 14,
@@ -65,7 +69,10 @@ class AlarmKitSetting extends HookConsumerWidget {
               if (isLoading.value) {
                 return;
               }
+              // 無料ユーザーのタップは did_toggle_alarm_kit_setting を送らない。PilllBackend の feature_appeal_feature_usage.sql が enabled=true を機能の利用として数えるため。
+              // シートを開いたことは showPremiumIntroductionSheet の paywall_viewed で記録される
               if (!isPremium && !isTrial) {
+                showPremiumIntroductionSheet(context, source: PaywallSource.settingsAlarmKitRow);
                 return;
               }
 
@@ -91,8 +98,8 @@ class AlarmKitSetting extends HookConsumerWidget {
                     // 権限が拒否された場合はエラーメッセージ表示
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('アラーム機能の権限が必要です。設定から許可してください。'),
+                        SnackBar(
+                          content: Text(L.alarmKitPermissionRequired),
                         ),
                       );
                     }

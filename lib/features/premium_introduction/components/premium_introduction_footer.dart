@@ -197,7 +197,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
           parameters: {'entitlements': entitlements.identifier},
         );
         await callUpdatePurchaseInfo(purchaserInfo);
-        return Future.value(true);
+        return true;
       }
       analytics.logEvent(
         name: 'undone_restore_purchase_info',

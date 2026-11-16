@@ -1,8 +1,8 @@
 ---
 feature: store_review
 verification: mobile-mcp
-last_verified_commit: 34b7e05eb0ed73e5ee0caa2a91a96147e2edaded
-last_verified_at: 2026-07-06
+last_verified_commit: a8ac819a239ba8fd206d1e30e233c4300a984a05
+last_verified_at: 2026-09-20
 ---
 
 # store_review QA
@@ -74,9 +74,13 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-09-20**
 
-「満足している」カードをタップすると選択枠がハイライトされ、「決定」ボタンが表示された。なお「決定」ボタン部分に `BOTTOM OVERFLOWED BY 4.0 PIXELS` のレイアウトオーバーフロー（デバッグ表示）を確認。項目自体の期待動作は満たしているため通過とし、オーバーフローは issue として起票した: https://github.com/bannzai/PilllBackend/issues/391
+「満足している」カードをタップすると選択枠がハイライトされ、「決定」ボタンが表示された。ホームインジケータのある iPhone 16 Pro (iOS 26.5) の simulator で、以前あった `BOTTOM OVERFLOWED BY 4.0 PIXELS` のオーバーフローが出ず、「決定」ボタンがボトムシート内に収まることを確認した（ https://github.com/bannzai/PilllBackend/issues/391 の修正）。ボトムシートの高さは内容に追従し、カード選択時に「決定」ボタンのぶんだけ高くなる。
+
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/19/a95f11a7-09f4-4cfd-b0f2-8aee19b6d065-16-modal-selected-fixed.png" width="320">
+
+**確認日: 2026-07-06**（修正前。「決定」ボタン部分に `BOTTOM OVERFLOWED BY 4.0 PIXELS` が出ていた）
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/a6266b5b-4d49-4f4f-95ca-2714d34986c1.png" width="320">
 
@@ -86,11 +90,11 @@ last_verified_at: 2026-07-06
 
 <details><summary>動作確認スクショ</summary>
 
-**確認日: 2026-07-06**
+**確認日: 2026-09-20**
 
 「決定」タップで「ご協力ありがとうございます」ダイアログが表示された。ボタンは「協力する」（`L.participate`）と「しない」（`L.notHelp`）。
 
-<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/58df90cc-a472-41a3-b49c-a9645255119a.png" width="320">
+<img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/2026/09/19/2c8a6654-1a2c-413f-aca3-f2a24e599568-17-thanks-dialog.png" width="320">
 
 </details>
 
@@ -143,7 +147,7 @@ last_verified_at: 2026-07-06
 
 **確認日: 2026-07-06**
 
-「満足では無い」カードをタップすると選択枠がハイライトされ、「決定」ボタンが表示された（満足側と同じく 4px オーバーフローあり: https://github.com/bannzai/PilllBackend/issues/391 ）。
+「満足では無い」カードをタップすると選択枠がハイライトされ、「決定」ボタンが表示された（当時は満足側と同じく 4px オーバーフローがあったが、 https://github.com/bannzai/PilllBackend/issues/391 で修正済み。修正後の確認は「満足カードの選択」のエビデンスを参照）。
 
 <img src="https://pub-7f3469dd3e2e445b9b8ec2d1381b5ea8.r2.dev/bannzai/Pilll/20260706/0ae74891-b1f3-4037-aa73-fc9c19c151b8.png" width="320">
 

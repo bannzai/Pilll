@@ -24,6 +24,8 @@ analyzer:
     missing_required_param: error
     missing_return: error
     invalid_annotation_target: ignore
+    # 理由は ../analysis_options.yaml の同じ設定のコメントを参照
+    analysis_options_deprecated_plugins: ignore
   exclude:
     - "lib/**/*.g.dart"
     - "lib/**/*.freezed.dart"

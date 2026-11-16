@@ -1,24 +1,31 @@
 appId: com.mizuki.Ohashi.Pilll.dev
 ---
-# アプリ再起動後も RecommendSignupGeneral Bar が表示され続けることを確認する。
+# アプリ再起動後も FeatureAppeal の Bar が表示され続けることを確認する。
 # 初期設定の永続化と AnnouncementBar の表示ロジックが正しく動作していることを検証。
 - launchApp:
     clearState: true
     clearKeychain: true
     permissions:
       notifications: allow
-- waitForAnimationToEnd
+# 起動直後に waitForAnimationToEnd を置かない理由はサブフローの先頭に書いている
 - runFlow: subflows/initial_setup.yaml
 - waitForAnimationToEnd
 # 初回起動時に Bar が表示される
-- assertVisible:
-    id: "recommend_signup_general_bar"
+# Bar はユーザー情報の読み込み後に出るため、CI の遅い Simulator でも間に合うよう 30 秒まで表示を待つ
+- extendedWaitUntil:
+    visible:
+      id: "feature_appeal_bar"
+    timeout: 30000
 # アプリを停止して再起動 (clearState なし = 状態維持)
 - stopApp
 - launchApp:
     clearState: false
     clearKeychain: false
-- waitForAnimationToEnd
-# 再起動後も Bar が表示される (初期設定済み + 匿名ユーザー = RecommendSignupGeneral)
-- assertVisible:
-    id: "recommend_signup_general_bar"
+# 再起動の直後も起動中はスクリーンショットが止まり得るため、waitForAnimationToEnd を置かず view hierarchy だけを見る待ちにする
+# 再起動後も Bar が表示される (初期設定済み + トライアル中 + 未表示の FeatureAppeal がある = FeatureAppeal)
+# Bar はユーザー情報の読み込み後に出る。再起動後の表示は CI の Simulator で 14〜27 秒かかり、30 秒を超えて読み込み中のまま
+# 失敗したことがある (maestro-e2e run 40751368564 の 2 回目) ため、クリーンインストール直後の起動の待ちと同じ 60 秒まで待つ
+- extendedWaitUntil:
+    visible:
+      id: "feature_appeal_bar"
+    timeout: 60000

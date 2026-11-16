@@ -14,6 +14,7 @@ void main() {
       expect(PaywallSource.appLaunch.value, 'app_launch');
       expect(PaywallSource.settingsPremiumIntroductionRow.value,
           'settings_premium_introduction_row');
+      expect(PaywallSource.settingsAlarmKitRow.value, 'settings_alarm_kit_row');
       expect(PaywallSource.featureAppealAlarmKit.value,
           'feature_appeal_alarm_kit');
       expect(PaywallSource.specialOfferingBar2.value, 'special_offering_bar2');
@@ -21,6 +22,7 @@ void main() {
           'ended_pill_sheet_dialog_history');
       expect(PaywallSource.endedPillSheetDialogSummary.value,
           'ended_pill_sheet_dialog_summary');
+      expect(PaywallSource.onboarding.value, 'onboarding');
     });
   });
 }

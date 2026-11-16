@@ -51,7 +51,9 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
     );
     // そのピルシートの服用番号が最後の場合は、1つ前のピルシートと認識する。その場合は表記を省略するためにnullにする
-    if (beforeLastTakenPillNumber == beforePillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
+    // 未服用 (lastTakenOrZeroPillNumber が 0) の before は、開始番号が前のグループの続き (28 錠の次の 29 等) だと表示番号 (28) が錠数と一致するが、1 つ前のピルシートの最後ではないため対象にしない
+    if (beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber != 0 &&
+        beforeLastTakenPillNumber == beforePillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
       beforeLastTakenPillNumber = null;
     }
 

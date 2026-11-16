@@ -3,6 +3,8 @@ import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/features/error/alert_error.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/batch.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -32,12 +34,20 @@ class BeginRestDuration {
     required this.batchSetPillSheetModifiedHistory,
   });
 
-  Future<void> call({required PillSheetGroup pillSheetGroup}) async {
+  /// 服用お休みを開始する。[endDate] は任意の服用再開予定日
+  /// [endDate] がある時は、後続のピルシートの beginDate を予定の終了日まで全日数含めた予定終了日の翌日に確定して保存する
+  /// バックエンドは endDate がある服用お休みを日送りしないため、アプリが開始時点で確定する必要がある
+  /// [endDate] が無い時は後続のピルシートを変えない（バックエンドが毎日日送りする）
+  Future<void> call({
+    required PillSheetGroup pillSheetGroup,
+    required DateTime? endDate,
+  }) async {
     final batch = batchFactory.batch();
 
     final restDuration = RestDuration(
       id: firestoreIDGenerator(),
       beginDate: pillSheetGroup.availableRestDurationBeginDate,
+      endDate: endDate,
       createdDate: now(),
     );
 
@@ -47,7 +57,27 @@ class BeginRestDuration {
         restDuration,
       ],
     );
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    final PillSheetGroup updatedPillSheetGroup;
+    if (endDate == null) {
+      updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    } else {
+      final updatedPillSheets = <PillSheet>[];
+      for (final pillSheet in pillSheetGroup.pillSheets) {
+        if (pillSheet.groupIndex == updatedPillSheet.groupIndex) {
+          updatedPillSheets.add(updatedPillSheet);
+        } else if (pillSheet.groupIndex > updatedPillSheet.groupIndex) {
+          // 前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
+          updatedPillSheets.add(
+            pillSheet.copyWith(
+              beginDate: updatedPillSheets[pillSheet.groupIndex - 1].estimatedEndTakenDateWithPlannedResume.date().addDays(1),
+            ),
+          );
+        } else {
+          updatedPillSheets.add(pillSheet);
+        }
+      }
+      updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    }
 
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
@@ -178,7 +208,30 @@ class ChangeRestDuration {
     if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
-    return !restDuration.beginDate.isBefore(pillSheet.beginDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+    // ピルシートの追加はbeginDateに追加した時刻を含めて保存し、DateRangePickerが返す開始日は0時のため、開始日は日付同士で比べる
+    // 時刻込みで比べると、beginDateと同じ日に始まる服用お休みがどのピルシートにも当たらない https://github.com/bannzai/Pilll/issues/2142
+    return !restDuration.beginDate.date().isBefore(pillSheet.beginDate.date()) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+  }
+
+  /// 開始日の昇順に並べた服用お休み期間を返す。末尾が最新の期間であることを前提にする処理
+  /// ([PillSheet.activeRestDuration]・[PillSheet.estimatedEndTakenDateWithPlannedResume] など)のため、過去の期間を変更して末尾に追加しても順序を保つ
+  List<RestDuration> _sortedByBeginDate(List<RestDuration> restDurations) {
+    return [...restDurations]..sort((a, b) => a.beginDate.compareTo(b.beginDate));
+  }
+
+  /// 服用お休み期間の変更で終了予定日が前倒しになった時に、lastTakenDateが終了予定日より後に残らないよう補正したピルシートを返す。
+  /// 補正しないと PillSheet.pillNumberFor が錠数を超えるピル番号を返す。
+  /// 補正の条件に当てはまらないピルシートはそのまま返す。補正済みのピルシートに再度適用しても結果は変わらない(冪等)。
+  PillSheet _clampLastTakenDate({required PillSheet pillSheet}) {
+    return switch (pillSheet) {
+      PillSheetV1(:final lastTakenDate?) when lastTakenDate.date().isAfter(pillSheet.estimatedEndTakenDate.date()) => pillSheet.copyWith(
+          lastTakenDate: pillSheet.estimatedEndTakenDate.date(),
+        ),
+      PillSheetV1() => pillSheet,
+      // v2のピル番号は日付から逆算せずpillsのindexから決まるため、lastTakenDateが終了予定日より後でも錠数を超えない。
+      // pillTakensは実際の服用記録なので変更しない
+      PillSheetV2() => pillSheet,
+    };
   }
 
   Future<void> call({
@@ -186,6 +239,14 @@ class ChangeRestDuration {
     required RestDuration toRestDuration,
     required PillSheetGroup pillSheetGroup,
   }) async {
+    // 重なった服用お休み期間は summarizedRestDuration で二重に数えられ、ピル番号や後続のピルシートの開始日がずれるため保存しない
+    if (pillSheetGroup.overlapsOtherRestDuration(
+      beginDate: toRestDuration.beginDate,
+      endDate: toRestDuration.endDate,
+      excludingRestDuration: fromRestDuration,
+    )) {
+      throw AlertError(L.pausePeriodOverlapsOther);
+    }
     final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere(
       (e) => _hasRestDuration(e, fromRestDuration),
     );
@@ -215,17 +276,17 @@ class ChangeRestDuration {
     if (updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id) {
       // 変更前後のお休み期間対象のピルシートが一緒の場合はupdatedFromRestDurationPillSheetからコピーする
       updatedToRestDurationPillSheet = updatedFromRestDurationPillSheet.copyWith(
-        restDurations: [
+        restDurations: _sortedByBeginDate([
           ...updatedFromRestDurationPillSheet.restDurations,
           toRestDuration,
-        ],
+        ]),
       );
     } else {
       updatedToRestDurationPillSheet = toRestDurationPillSheet.copyWith(
-        restDurations: [
+        restDurations: _sortedByBeginDate([
           ...toRestDurationPillSheet.restDurations,
           toRestDuration,
-        ],
+        ]),
       );
     }
 
@@ -257,7 +318,7 @@ class ChangeRestDuration {
       final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginingDatePillSheets.add(
         pillSheet.copyWith(
-          beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+          beginDate: beforePillSheet.estimatedEndTakenDateWithPlannedResume.date().addDays(1),
         ),
       );
     }
@@ -293,7 +354,7 @@ class ChangeRestDuration {
 
     final batch = batchFactory.batch();
     final updatedPillSheetGroup = pillSheetGroup.copyWith(
-      pillSheets: updatedPillSheets,
+      pillSheets: updatedPillSheets.map((pillSheet) => _clampLastTakenDate(pillSheet: pillSheet)).toList(),
     );
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     switch (actionType) {

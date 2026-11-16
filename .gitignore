@@ -71,3 +71,14 @@ tmp/qa/
 # App Store スクリーンショット生成基盤の作業ファイル(取得フォント・生成画像)
 scripts/generate_screenshots/fonts/
 scripts/generate_screenshots/artifacts/
+scripts/translation_screenshots/artifacts/
+
+# Bitrise の署名手順 (file-downloader / scripts/export-options-plist.sh) がローカル実行時に生成・取得する署名関連ファイル
+android/app/*.jks
+ios/Runner/ExportOptions*.plist
+
+# LLVM の計測プロファイル (coverage 付きでビルドされたツールをリポジトリ直下で実行すると生成される)
+*.profraw
+# snapshot テストのフォント (scripts/snapshot_testing/fetch_fonts.sh が取得する) と、比較に失敗した時の差分画像
+test/snapshot/fonts/
+test/snapshot/failures/

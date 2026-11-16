@@ -1,0 +1,8 @@
+# GitHub Actions の各 workflow が subosito/flutter-action の flutter-version-file で読む Flutter のバージョン。
+# 形式は flutter-action が yq で読む `.environment.flutter` (pubspec.yaml と同じキー)。pubspec.yaml に書くと
+# ローカルの flutter pub get にも下限の制約が掛かるため、CI 専用のこのファイルに分けている。
+environment:
+  # eMudhra の中間 CA の鍵の漏えいと失効 (2026-10-19) を受けた Firebase の案内が、Android のアプリを
+  # Dart 3.13.7 以上 / Flutter 3.47.8 以上で作り直すことを求めている (dart:io の TLS 検証)。その下限の版。
+  # https://firebase.google.com/support/guides/compromised-emudhra-intermediate-ca
+  flutter: '3.47.8'

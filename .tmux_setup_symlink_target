@@ -5,3 +5,4 @@ android/app/src/prod/google-services.json
 android/secret.properties
 ios/Firebase/GoogleService-Info.plist
 ios/Runner/StoreKitTestCertificate.cer
+ios/.envrc

@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/reminder_notification_customization.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -23,6 +24,7 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
@@ -46,6 +48,18 @@ const newPillSheetNotificationIdentifier = 2;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 
+/// iOS の服用リマインダー通知のカテゴリ。通知から服用を記録する RECORD_PILL アクションを持つ。
+/// RECORD_PILL は服用記録を書き込むため、ロック中の端末では持ち主のロック解除を求める。
+/// ネイティブ側の ios/Runner/AppDelegate.swift の configureNotificationActionableButtons も同じカテゴリを登録しているため、変更する時は合わせる
+DarwinNotificationCategory iOSQuickRecordPillCategory() {
+  return DarwinNotificationCategory(
+    iOSQuickRecordPillCategoryIdentifier,
+    actions: [
+      DarwinNotificationAction.plain(actionIdentifier, L.taken, options: {DarwinNotificationActionOption.authenticationRequired}),
+    ],
+  );
+}
+
 // NOTE: It can not be use Future.wait(processes) when register notification.
 class LocalNotificationService {
   final plugin = FlutterLocalNotificationsPlugin();
@@ -62,14 +76,7 @@ class LocalNotificationService {
       InitializationSettings(
         android: const AndroidInitializationSettings('@mipmap/ic_notification'),
         iOS: DarwinInitializationSettings(
-          notificationCategories: [
-            DarwinNotificationCategory(
-              iOSQuickRecordPillCategoryIdentifier,
-              actions: [
-                DarwinNotificationAction.plain(actionIdentifier, L.taken),
-              ],
-            ),
-          ],
+          notificationCategories: [iOSQuickRecordPillCategory()],
           // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
           // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
           defaultPresentAlert: false,
@@ -186,6 +193,71 @@ final registerReminderLocalNotificationProvider = Provider(
   (ref) => RegisterReminderLocalNotification(ref),
 );
 
+/// リマインドを登録する日を、今日から数えた日数(dayOffset)で [RegisterReminderLocalNotification.registerDays] 件返す。要素のindexは、その日に服用するピルが今日の番号から何番進んでいるか(服用お休み中は進まない)を表す
+/// [restDurations] の最後が服用再開予定日(endDateが今日より後)ありの服用お休みなら、その期間(開始前なら開始日から)の日を飛ばす
+/// 開始前の期間は、服用済みの日の翌日に開始する場合(v2で1日分の一部だけ服用した場合など)に起きる
+/// 服用再開予定日の服用お休みが無い時は、今日から [RegisterReminderLocalNotification.registerDays] 日分
+/// 飛ばした日の分だけ後ろへずらすので、登録する件数は常に registerDays × 通知時刻の数のまま。iOSの保留中の通知の上限(64件)に近づかない
+List<int> reminderDayOffsetsFor({required List<RestDuration> restDurations}) {
+  final plannedRestDuration = restDurations.lastOrNull;
+  final plannedEndDate = plannedRestDuration?.endDate;
+  if (plannedRestDuration == null || plannedEndDate == null || !plannedEndDate.date().isAfter(today())) {
+    return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index);
+  }
+  final restBeginOffset = max(daysBetween(today(), plannedRestDuration.beginDate), 0);
+  final restDays = daysBetween(today(), plannedEndDate) - restBeginOffset;
+  return List.generate(RegisterReminderLocalNotification.registerDays, (index) => index < restBeginOffset ? index : index + restDays);
+}
+
+/// [reminderDate] に出すリマインドに表示する、ピル番号の文字列を返す
+/// 連続番号(sequential/cyclicSequential)は、通知を出す日を今日とみなして計算する。服用再開予定日ありの服用お休み中に登録した通知でも、
+/// 予定日以降は、その日に画面が表示する番号(服用お休みが終わった日から1番に戻る)と一致させるため
+/// [reminderDate] は通知を登録する日時(reminderDateTime)の日付を渡す。today() から作り直すと、登録の処理が日付をまたいだ時に通知日と番号の基準日がずれるため
+/// number/dateモードの番号はindexから決まるため、この日付に影響されない
+String reminderPillDisplayNumberFor({
+  required PillSheetGroup pillSheetGroup,
+  required int pageIndex,
+  required int pillNumberInPillSheet,
+  required DateTime reminderDate,
+}) {
+  return pillSheetGroup.displayPillNumberWithoutDate(
+    pageIndex: pageIndex,
+    pillNumberInPillSheet: pillNumberInPillSheet,
+    estimatedEventCausingDate: reminderDate.date(),
+  );
+}
+
+/// [reminderDateTime] に出すリマインドの、プレミアム・トライアル中のユーザー向けの通知タイトルを返す
+/// [pillSheetDisplayNumber] は [reminderPillDisplayNumberFor] が返すピル番号の文字列を渡す
+/// 文言の言語は [L]、月日と曜日の書式は `Intl.defaultLocale` に従う
+/// バックグラウンドの入口 (lib/entrypoint.dart の handleNotificationAction) でも、呼び出しの前に全言語の日付データの初期化
+/// (date_symbol_data_local の initializeDateFormatting は引数に関わらず全言語を初期化する) と `Intl.defaultLocale` の設定を済ませている
+String reminderNotificationTitle({
+  required ReminderNotificationCustomization reminderNotificationCustomization,
+  required DateTime reminderDateTime,
+  required String pillSheetDisplayNumber,
+}) {
+  var result = reminderNotificationCustomization.word;
+  if (!reminderNotificationCustomization.isInVisibleReminderDate) {
+    result += ' ';
+    result += '${DateTimeFormatter.monthAndDay(reminderDateTime)} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
+  }
+
+  if (!reminderNotificationCustomization.isInVisiblePillNumber) {
+    result += ' ';
+    result += L.formattedPillNumber(pillSheetDisplayNumber);
+  }
+
+  if (Environment.isDevelopment) {
+    result += ' Local';
+  }
+  // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
+  if (result.isEmpty) {
+    return L.notification;
+  }
+  return result;
+}
+
 // Reminder
 // 最新の状態を元に更新すれば良いので、更新処理に必要な状態はプロパティで持つ。このプロパティは通常ref.watchにより常に最新に保たれる
 // また、状態をcallの引数として受け取らないことで通常はSingle Stateであるものに対して間違った値を受け取れないようにする
@@ -223,6 +295,7 @@ class RegisterReminderLocalNotification {
   // - ピルをタップして服用キャンセル
   // - クイックレコード
   // - 通知の文言を変えた時
+  // - 服用お休み開始(服用再開予定日あり)
   // - 服用お休み終了
   // - 休薬期間の通知のON/OFF
   // - 休薬終了後
@@ -277,7 +350,10 @@ class RegisterReminderLocalNotification {
     if (!setting.isOnReminder) {
       return;
     }
-    if (pillSheetGroup.lastActiveRestDuration != null) {
+    // 服用再開予定日(endDate)がある服用お休み中は、予定日以降のリマインドを登録するために早期returnしない
+    // 予定日が来ても登録しなおす契機(手動の服用再開)が無いため
+    final activeRestDuration = pillSheetGroup.lastActiveRestDuration;
+    if (activeRestDuration != null && activeRestDuration.endDate == null) {
       return;
     }
 
@@ -307,7 +383,8 @@ class RegisterReminderLocalNotification {
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
-      for (final dayOffset in List.generate(registerDays, (index) => index)) {
+      // 服用再開予定日がある服用お休みの期間は飛ばす。服用お休み中はピル番号が止まっているので、飛ばした日の分はピル番号を進めない
+      for (final (pillDayOffset, dayOffset) in reminderDayOffsetsFor(restDurations: pillSheetGroup.restDurations).indexed) {
         // 本日服用済みの場合はスキップする
         if (dayOffset == 0 && todayPillAllTaken) {
           analytics.debug(
@@ -338,16 +415,18 @@ class RegisterReminderLocalNotification {
         }
 
         // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
-        final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
+        final isOverActivePillSheet = activePillSheet.todayPillNumber + pillDayOffset > activePillSheet.typeInfo.totalCount;
         final pillNumberInPillSheet = isOverActivePillSheet
-            ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
-            : activePillSheet.todayPillNumber + dayOffset;
+            ? activePillSheet.todayPillNumber + pillDayOffset - activePillSheet.typeInfo.totalCount
+            : activePillSheet.todayPillNumber + pillDayOffset;
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
-        var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+        var pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+          pillSheetGroup: pillSheetGroup,
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
+          reminderDate: reminderDateTime,
         );
 
         // activePillSheetよりも未来のPillSheet
@@ -385,9 +464,11 @@ class RegisterReminderLocalNotification {
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               pillSheeType = nextPillSheet.pillSheetType;
-              pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
+              pillSheetDisplayNumber = reminderPillDisplayNumberFor(
+                pillSheetGroup: pillSheetGroup,
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
+                reminderDate: reminderDateTime,
               );
 
             case (_, _, _):
@@ -434,28 +515,11 @@ class RegisterReminderLocalNotification {
         );
 
         if (premiumOrTrial) {
-          final title = () {
-            var result = setting.reminderNotificationCustomization.word;
-            if (!setting.reminderNotificationCustomization.isInVisibleReminderDate) {
-              result += ' ';
-              result += '${reminderDateTime.month}/${reminderDateTime.day} (${WeekdayFunctions.weekdayFromDate(reminderDateTime).weekdayString()})';
-            }
-
-            if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
-              result += ' ';
-              result += pillSheetDisplayNumber;
-              result += L.number;
-            }
-
-            if (Environment.isDevelopment) {
-              result += ' Local';
-            }
-            // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
-            if (result.isEmpty) {
-              return L.notification;
-            }
-            return result;
-          }();
+          final title = reminderNotificationTitle(
+            reminderNotificationCustomization: setting.reminderNotificationCustomization,
+            reminderDateTime: reminderDateTime,
+            pillSheetDisplayNumber: pillSheetDisplayNumber,
+          );
 
           final message = () {
             if (setting.reminderNotificationCustomization.isInVisibleDescription) {
@@ -464,14 +528,14 @@ class RegisterReminderLocalNotification {
             // 最後に服用完了した日付が数日前の場合は常にmissedTakenMessage
             // v2では部分服用(2回中1回)を服用済み扱いにしないよう、服用完了ピル番号で判定する
             if (activePillSheet.todayPillNumber - activePillSheet.lastCompletedOrZeroPillNumber > 1) {
-              return setting.reminderNotificationCustomization.missedTakenMessage;
+              return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
             }
-            // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
-            if (dayOffset == 0 && !todayPillAllTaken) {
+            // 本日分の服用記録がない場合で今日のループ(pillDayOffset==0)の時
+            if (pillDayOffset == 0 && !todayPillAllTaken) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
-            // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時
-            if (dayOffset == 1) {
+            // 本日分の服用記録がある場合で、次の日のループ(pillDayOffset==1)の時
+            if (pillDayOffset == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
             // 休薬期間の通知をONにしているユーザーで、跨いだときはdailyTakenMessageを設定。
@@ -479,7 +543,7 @@ class RegisterReminderLocalNotification {
             if (activePillSheet.pillSheetHasRestOrFakeDuration && isOverActivePillSheet && pillNumberInPillSheet == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
-            return setting.reminderNotificationCustomization.missedTakenMessage;
+            return setting.reminderNotificationCustomization.missedTakenMessageForDisplay;
           }();
 
           futures.add(
@@ -517,7 +581,7 @@ class RegisterReminderLocalNotification {
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
-                      badgeNumber: badgeNumber + dayOffset,
+                      badgeNumber: badgeNumber + pillDayOffset,
                       interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),
@@ -601,7 +665,7 @@ class RegisterReminderLocalNotification {
                       presentAlert: false,
                       presentBanner: true,
                       presentList: true,
-                      badgeNumber: badgeNumber + dayOffset,
+                      badgeNumber: badgeNumber + pillDayOffset,
                       interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),
@@ -784,6 +848,13 @@ final newPillSheetNotificationProvider = Provider(
   (ref) => NewPillSheetNotification(),
 );
 
+/// ピルシートグループの最後のシートの後に「新しいピルシート」通知を出す日(時刻は含まない基準日)を返す
+/// 服用再開予定日ありの服用お休み中は、今日で打ち切った [PillSheet.estimatedEndTakenDate] ではなく予定日まで含めた
+/// [PillSheet.estimatedEndTakenDateWithPlannedResume] を使う。後続シートの beginDate の確定と同じ基準にするため
+DateTime newPillSheetNotificationBaseDateFor({required PillSheet lastPillSheet}) {
+  return lastPillSheet.estimatedEndTakenDateWithPlannedResume.addDays(1);
+}
+
 // 新しいピルシートの通知をスケジュールする
 // PillSheetGroup.pillSheets毎にスケジュールする方法が直感的だが、ローカル通知のスケジュールができる数に上限もあるので枠を節約する意味でも一つ先のピルシートの通知をスケジュールする
 // 2[0-9]日毎に1会通知をスケジュールするのでも十分
@@ -872,7 +943,7 @@ class NewPillSheetNotification {
       // ピルシートグループが終了する場合
       if (pillSheet.groupIndex == pillSheetGroup.pillSheets.last.groupIndex) {
         final nextBeginDate = tz.TZDateTime.from(
-          pillSheet.estimatedEndTakenDate.addDays(1),
+          newPillSheetNotificationBaseDateFor(lastPillSheet: pillSheet),
           tz.local,
         );
         final reminderDateTime = nextBeginDate.date().add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));

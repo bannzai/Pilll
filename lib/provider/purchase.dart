@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/services.dart';
@@ -179,7 +181,10 @@ class Purchase {
   /// Return value is used to display the completion page
   Future<bool> call(Package package, {required PaywallSource source}) async {
     try {
-      final purchaserInfo = await Purchases.purchasePackage(package);
+      // purchases_flutter v9から購入APIの戻り値がCustomerInfoではなくPurchaseResultになった。
+      // v10でpurchasePackageがdeprecatedになったためpurchase(PurchaseParams)を使う
+      final purchaseResult = await Purchases.purchase(PurchaseParams.package(package));
+      final purchaserInfo = purchaseResult.customerInfo;
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
@@ -196,7 +201,7 @@ class Purchase {
         },
       );
       await callUpdatePurchaseInfo(purchaserInfo);
-      return Future.value(true);
+      return true;
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
         name: 'catched_purchase_exception',
@@ -255,7 +260,8 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   try {
     analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
-      isActivated: premiumEntitlement?.isActive,
+      // Premium entitlement が無い CustomerInfo (解約・返金で消えた後の更新) では isPremium を false に戻す
+      isActivated: premiumEntitlement?.isActive ?? false,
       entitlementIdentifier: premiumEntitlement?.identifier,
       premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
@@ -279,14 +285,11 @@ Future<void> syncPurchaseInfo() async {
     return;
   }
 
-  final purchaserInfo = await Purchases.getCustomerInfo();
-  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
-
   try {
-    final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
     analytics.logEvent(name: 'call_service_sync_purchase_info');
-    await syncPurchaseInfo(isActivated: isActivated);
+    await SyncPurchaseInfo(DatabaseConnection(uid))(
+      isActivated: (await Purchases.getCustomerInfo()).entitlements.all[premiumEntitlements]?.isActive ?? false,
+    );
     analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
@@ -298,7 +301,9 @@ Future<void> initializePurchase(String uid) async {
     Environment.isDevelopment ? LogLevel.debug : LogLevel.info,
   );
   Purchases.configure(
-    PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid,
+    PurchasesConfiguration(
+      Platform.isIOS ? Secret.revenueCatPublicAPIKeyIOS : Secret.revenueCatPublicAPIKeyAndroid,
+    )..appUserID = uid,
   );
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();

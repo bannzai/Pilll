@@ -1,3 +1,8 @@
+# 審査提出の lane submit_for_review は release-app skill の雛形を読み込む (雛形の無い CI 等では読み込まない)。
+# 引数と前提は雛形のヘッダーコメントを参照
+release_app_submit_for_review_fastfile = ENV.fetch('RELEASE_APP_SUBMIT_FOR_REVIEW_FASTFILE', File.expand_path('~/.agents/skills/release-app/templates/submit_for_review/Fastfile'))
+import(release_app_submit_for_review_fastfile) if File.exist?(release_app_submit_for_review_fastfile)
+
 default_platform(:ios)
 
 platform :ios do

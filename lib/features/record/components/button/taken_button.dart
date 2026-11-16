@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -40,46 +40,50 @@ class TakenButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final takePill = ref.watch(takePillProvider);
 
-    return SizedBox(
-      width: 180,
-      child: PrimaryButton(
-        text: L.taken,
-        onPressed: () async {
-          try {
-            analytics.logEvent(
-              name: 'taken_button_pressed',
-              parameters: {
-                'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
-                'today_pill_number': activePillSheet.todayPillNumber,
-              },
-            );
-            requestInAppReview();
-            showReleaseNotePreDialog(context);
-            final takenDate = now();
-            // 深夜服用の注意ダイアログは服用記録の完了(await)を待たずに表示するため、awaitの前に服用記録を開始する
-            final updatedPillSheetGroupFuture = takePill(
-              takenDate: takenDate,
-              pillSheetGroup: pillSheetGroup,
-              activePillSheet: activePillSheet,
-              isQuickRecord: false,
-            );
-            showMidnightTakenWarningDialogIfNeeded(
-              context: context,
-              takenDate: takenDate,
-              recordedAt: takenDate,
-              setting: setting,
-              activePillSheet: activePillSheet,
-            );
-            final updatedPillSheetGroup = await updatedPillSheetGroupFuture;
-            syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
-            await registerReminderLocalNotification();
-          } catch (exception, stack) {
-            errorLogger.recordError(exception, stack);
-            if (context.mounted) showErrorAlert(context, exception);
-          } finally {
-            FlutterAppBadger.removeBadge();
-          }
-        },
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+    return Semantics(
+      identifier: 'record_page_taken_button',
+      child: SizedBox(
+        width: 180,
+        child: PrimaryButton(
+          text: L.taken,
+          onPressed: () async {
+            try {
+              analytics.logEvent(
+                name: 'taken_button_pressed',
+                parameters: {
+                  'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
+                  'today_pill_number': activePillSheet.todayPillNumber,
+                },
+              );
+              requestInAppReview();
+              showReleaseNotePreDialog(context);
+              final takenDate = now();
+              // 深夜服用の注意ダイアログは服用記録の完了(await)を待たずに表示するため、awaitの前に服用記録を開始する
+              final updatedPillSheetGroupFuture = takePill(
+                takenDate: takenDate,
+                pillSheetGroup: pillSheetGroup,
+                activePillSheet: activePillSheet,
+                isQuickRecord: false,
+              );
+              showMidnightTakenWarningDialogIfNeeded(
+                context: context,
+                takenDate: takenDate,
+                recordedAt: takenDate,
+                setting: setting,
+                activePillSheet: activePillSheet,
+              );
+              final updatedPillSheetGroup = await updatedPillSheetGroupFuture;
+              syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
+              await registerReminderLocalNotification();
+            } catch (exception, stack) {
+              errorLogger.recordError(exception, stack);
+              if (context.mounted) showErrorAlert(context, exception);
+            } finally {
+              AppBadgePlus.updateBadge(0);
+            }
+          },
+        ),
       ),
     );
   }

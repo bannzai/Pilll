@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/home/page.dart';
-import 'package:pilll/features/initial_setting/pill_sheet_group/page.dart';
+import 'package:pilll/features/initial_setting/yaz_flex/page.dart';
 import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/features/root/resolver/firebase_auth_resolver.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
@@ -41,7 +41,7 @@ class RootPage extends HookConsumerWidget {
                         InitialSettingOrAppPage(
                           initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                             builder: (_) => SkipInitialSetting(
-                              initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                              initialSettingPageBuilder: (context) => InitialSettingYazFlexPageRoute.screen(),
                               homePageBuilder: (_) => ShowLifetimeOfferOnAppLaunch(
                                 builder: (_) => const HomePage(),
                               ),

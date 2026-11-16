@@ -26,35 +26,39 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        analytics.logEvent(name: 'did_tapped_record_page_setting');
-        showPillSheetSettingSheet(
-          context,
-          PillSheetSettingSheet(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            user: user,
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が言語に依存せずタップするため
+    return Semantics(
+      identifier: 'record_page_pill_sheet_setting_button',
+      child: ElevatedButton(
+        onPressed: () {
+          analytics.logEvent(name: 'did_tapped_record_page_setting');
+          showPillSheetSettingSheet(
+            context,
+            PillSheetSettingSheet(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: activePillSheet,
+              setting: setting,
+              user: user,
+            ),
+          );
+        },
+        style: ButtonStyle(
+          backgroundColor: WidgetStateProperty.all(TextColor.white),
+          shape: WidgetStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+              side: const BorderSide(color: AppColors.primary, width: 1),
+            ),
           ),
-        );
-      },
-      style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(TextColor.white),
-        shape: WidgetStateProperty.all(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-            side: const BorderSide(color: AppColors.primary, width: 1),
+        ).merge(ElevatedButton.styleFrom(elevation: 0)),
+        child: Text(
+          L.pillSheetSettings,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontSize: 12,
+            fontWeight: FontWeight.w700,
+            color: TextColor.main,
           ),
-        ),
-      ).merge(ElevatedButton.styleFrom(elevation: 0)),
-      child: Text(
-        L.pillSheetSettings,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontSize: 12,
-          fontWeight: FontWeight.w700,
-          color: TextColor.main,
         ),
       ),
     );

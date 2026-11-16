@@ -51,6 +51,8 @@ class UpdatePurchaseInfo {
   }
 }
 
+/// 端末の CustomerInfo の Premium entitlement から isPremium を users ドキュメントに書く。
+/// 権限の正は RevenueCat に移す予定で、それまでの間はこのクライアントの書き込みで isPremium を決める
 class SyncPurchaseInfo {
   final DatabaseConnection databaseConnection;
   SyncPurchaseInfo(this.databaseConnection);
@@ -262,16 +264,19 @@ final endInitialSettingProvider = Provider(
   (ref) => EndInitialSetting(ref.watch(databaseProvider)),
 );
 
+/// 初期設定の完了時にトライアルを開始する。
+/// isTrial・beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate を端末の時刻と Remote Config の日数から計算して書く
 class EndInitialSetting {
   final DatabaseConnection databaseConnection;
   EndInitialSetting(this.databaseConnection);
 
   Future<void> call(RemoteConfigParameter remoteConfigParameter) {
+    final beginTrialDate = now();
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
-      UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
+      UserFirestoreFieldKeys.beginTrialDate: beginTrialDate,
+      UserFirestoreFieldKeys.trialDeadlineDate: beginTrialDate.addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: beginTrialDate
           .addDays(
             remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
           )

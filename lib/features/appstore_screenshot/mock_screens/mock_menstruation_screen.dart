@@ -4,6 +4,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/features/appstore_screenshot/mock_screens/mock_components.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/features/menstruation/components/calendar/menstruation_calendar_header.dart';
@@ -49,7 +51,7 @@ class MockMenstruationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // MenstruationCalendarHeader/MenstruationCard は today()（lib/utils/datetime/day.dart）と
-    // intl の DateFormat（Platform.localeName）に依存するため固定・初期化する。
+    // intl の DateFormat（Intl.defaultLocale）に依存するため固定・初期化する。
     applyFixedToday(_fixedToday);
 
     const setting = Setting(
@@ -70,6 +72,8 @@ class MockMenstruationScreen extends StatelessWidget {
       // Firestore アクセスはタップ時のみでスクショではタップしないため呼ばれない。
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+        // 週の始まりは設定を一度も切り替えていない端末と同じ日曜日に固定する。
+        firstWeekdayProvider.overrideWithValue(Weekday.Sunday),
       ],
       child: Container(
         color: AppColors.background,
@@ -86,7 +90,7 @@ class MockMenstruationScreen extends StatelessWidget {
                     height: kToolbarHeight,
                     child: Center(
                       child: Text(
-                        DateTimeFormatter.jaMonth(_fixedToday),
+                        DateTimeFormatter.abbreviatedMonth(_fixedToday),
                         // 本番（lib/features/menstruation/page.dart）の AppBar title と同じ
                         // TextColor.black。サイズは M2 AppBar 既定の titleTextStyle 相当。
                         style: const TextStyle(color: TextColor.black, fontSize: 20, fontWeight: FontWeight.w500),
@@ -97,7 +101,7 @@ class MockMenstruationScreen extends StatelessWidget {
               ),
             ),
             MenstruationCalendarHeader(
-              pageController: PageController(initialPage: todayCalendarPageIndex),
+              pageController: PageController(initialPage: todayCalendarPageIndex(firstWeekday: Weekday.Sunday)),
               calendarMenstruationBandModels: const [],
               calendarNextPillSheetBandModels: const [],
               calendarScheduledMenstruationBandModels: scheduledBands,

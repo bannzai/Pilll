@@ -7,10 +7,12 @@ import 'package:pilll/features/appstore_screenshot/screenshot_device.dart';
 ///
 /// レイヤ構造は次の通り:
 /// 1. 背景 LinearGradient（2色）
-/// 2. 上部にタイトル（太字・白・一部単語のみアクセント色）とサブタイトル
+/// 2. キャッチコピー帯にタイトル（太字・白・一部単語のみアクセント色）とサブタイトル
 /// 3. コード描画の iPhone フレーム
 /// 4. フレーム内に論理サイズの [child] を実寸へ拡大して配置
 ///
+/// 帯とフレームの位置は [device] の座標で決まるため、縦（帯が上・フレームが下）と
+/// 横（帯が左・フレームが右。iPhone Duo の内側ディスプレイ）の両方をこの 1 つで組む。
 /// [child] は [device] の logicalWidth × logicalHeight ちょうどのサイズで渡す。
 class AppStoreScreenshotFrameLayout extends StatelessWidget {
   const AppStoreScreenshotFrameLayout({
@@ -67,8 +69,8 @@ class AppStoreScreenshotFrameLayout extends StatelessWidget {
           // これにより、RTL ロケールで英語へフォールバックした場合も句読点が乱れない。
           Positioned(
             top: device.textBandTop,
-            left: device.textSidePadding,
-            right: device.textSidePadding,
+            left: device.textBandLeft,
+            width: device.textBandWidth,
             height: device.textBandHeight,
             child: Directionality(
               textDirection: _copyTextDirection('$title$subtitle'),
@@ -111,7 +113,12 @@ class AppStoreScreenshotFrameLayout extends StatelessWidget {
                   child: SizedBox(
                     width: device.logicalWidth,
                     height: device.logicalHeight,
-                    child: child,
+                    // 本番部品（ピルシートの PageView 等）は MediaQuery の幅で寸法を決めるため、
+                    // 載っている画面（iPhone Duo の 466×678 / 951×669）ではなく Mock の論理サイズを見せる。
+                    child: MediaQuery(
+                      data: MediaQueryData(size: Size(device.logicalWidth, device.logicalHeight), devicePixelRatio: 3),
+                      child: child,
+                    ),
                   ),
                 ),
               ),

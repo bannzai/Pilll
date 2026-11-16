@@ -22,6 +22,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/provider/diary.dart';
+import 'package:pilll/provider/first_weekday.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
@@ -59,6 +60,8 @@ class MenstruationPage extends HookConsumerWidget {
     ).when(
       data: (data) {
         return MenstruationPageBody(
+          // 週の始まりの曜日が変わると今日を含む週のページ位置が変わるため、表示中のページ位置を作り直す
+          key: ValueKey(ref.watch(firstWeekdayProvider)),
           latestPillSheetGroup: data.$1,
           user: data.$2,
           allMenstruation: data.$3,
@@ -109,7 +112,10 @@ class MenstruationPageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final page = useState(todayCalendarPageIndex);
+    final firstWeekday = ref.watch(firstWeekdayProvider);
+    // 今日を含む週のページ位置は、MenstruationCalendarHeader の週ごとの日付と同じく作った時点の今日で固定する
+    final todayPageIndex = useMemoized(() => todayCalendarPageIndex(firstWeekday: firstWeekday), [firstWeekday]);
+    final page = useState(todayPageIndex);
     final pageController = usePageController(initialPage: page.value);
     pageController.addListener(() {
       final pageControllerPage = pageController.page;
@@ -118,62 +124,65 @@ class MenstruationPageBody extends HookConsumerWidget {
       }
     });
 
-    return Scaffold(
-      backgroundColor: AppColors.background,
-      appBar: AppBar(
-        title: SizedBox(
-          child: Text(
-            _displayMonth(page.value),
-            style: const TextStyle(color: TextColor.black),
-          ),
-        ),
-        backgroundColor: AppColors.white,
-        elevation: 0,
-      ),
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                MenstruationCalendarHeader(
-                  pageController: pageController,
-                  calendarMenstruationBandModels: calendarMenstruationBandModels,
-                  calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  diaries: diaries,
-                  schedules: schedules,
-                ),
-                MenstruationCardList(
-                  calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                  user: user,
-                  setting: setting,
-                  latestPillSheetGroup: latestPillSheetGroup,
-                  latestMenstruation: latestMenstruation,
-                  allMenstruation: allMenstruation,
-                ),
-                const SizedBox(height: 40),
-              ],
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(
-                  latestMenstruation: latestMenstruation,
-                  setting: setting,
+    // identifier: 翻訳の画面比較の撮影フロー (.maestro/flows/translation_screenshot/capture.yaml) が
+    // タブの切り替え前の画面や読み込み中のインジケーターではなく生理記録の表示を待ってから撮るため
+    return Semantics(
+      identifier: 'menstruation_page_body',
+      child: Scaffold(
+        backgroundColor: AppColors.background,
+        appBar: AppBar(
+          title: SizedBox(
+            child: Text(
+              DateTimeFormatter.abbreviatedMonth(
+                endDayOfWeekday(
+                  today().addDays((page.value - todayPageIndex) * Weekday.values.length),
+                  firstWeekday: firstWeekday,
                 ),
               ),
+              style: const TextStyle(color: TextColor.black),
             ),
-          ],
+          ),
+          backgroundColor: AppColors.white,
+          elevation: 0,
+        ),
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Column(
+                children: [
+                  MenstruationCalendarHeader(
+                    pageController: pageController,
+                    calendarMenstruationBandModels: calendarMenstruationBandModels,
+                    calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                    diaries: diaries,
+                    schedules: schedules,
+                  ),
+                  MenstruationCardList(
+                    calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                    user: user,
+                    setting: setting,
+                    latestPillSheetGroup: latestPillSheetGroup,
+                    latestMenstruation: latestMenstruation,
+                    allMenstruation: allMenstruation,
+                  ),
+                  const SizedBox(height: 40),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: MenstruationRecordButton(
+                    latestMenstruation: latestMenstruation,
+                    setting: setting,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
-  }
-
-  String _displayMonth(int page) => DateTimeFormatter.jaMonth(_targetEndDayOfWeekday(page));
-  DateTime _targetEndDayOfWeekday(int page) {
-    final diff = page - todayCalendarPageIndex;
-    final base = today().addDays(diff * Weekday.values.length);
-    return endDayOfWeekday(base);
   }
 }

@@ -223,6 +223,23 @@ Exception? mapToDisplayedException(PlatformException exception) {
           exception.details,
         ),
       );
+    case PurchasesErrorCode.featureNotAvailableInCustomEntitlementsComputationMode:
+    case PurchasesErrorCode.signatureVerificationFailed:
+    case PurchasesErrorCode.featureNotSupportedWithStoreKit1:
+    case PurchasesErrorCode.invalidWebPurchaseToken:
+    case PurchasesErrorCode.purchaseBelongsToOtherUser:
+    case PurchasesErrorCode.expiredWebPurchaseToken:
+    case PurchasesErrorCode.testStoreSimulatedPurchaseError:
+      // PilllはCustom Entitlements Computationモード・Trusted Entitlements・StoreKit 1限定機能・
+      // Web Billing・Test Storeのいずれも使用していないため、これらのエラーは発生しない想定。
+      // 万一発生した場合に備えて、サポート外エラーの文言を流用する
+      return FormatException(
+        L.purchaseErrorUnsupportedError(
+          exception.code,
+          exception.message ?? '',
+          exception.details,
+        ),
+      );
     case PurchasesErrorCode.offlineConnectionError:
       return FormatException(
         L.purchaseErrorOfflineConnectionError(

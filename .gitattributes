@@ -11,3 +11,7 @@
 **/Generated/** linguist-generated
 **/*.generated.kt linguist-generated
 # linguist-generated end
+
+# translate-app-arb skill が app_ja.arb から機械翻訳で生成する対象言語の arb (原文の app_ja.arb は手書きなので対象外)
+lib/l10n/app_*.arb linguist-generated
+lib/l10n/app_ja.arb -linguist-generated

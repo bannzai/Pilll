@@ -19,16 +19,51 @@ import 'package:pilll/features/feature_appeal/reminder_notification_customize_wo
 import 'package:pilll/features/feature_appeal/rest_duration/rest_duration_announcement_bar.dart';
 import 'package:pilll/features/feature_appeal/today_pill_number/today_pill_number_announcement_bar.dart';
 import 'package:pilll/provider/shared_preferences.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 /// FeatureAppealBarsContainer 内部と同じ epoch。テストで index を予測するために使う。
 final DateTime _featureAppealEpoch = DateTime(2024, 1, 1);
 
 void main() {
+  setUp(() {
+    // 表示時に feature_appeal_bar_shown を送るため、Firebase 未初期化のテストで例外にならないよう Fake に差し替える
+    analytics = FakeAnalytics();
+  });
+
+  group('#weightedRotationOrder', () {
+    test('重み [A:3, B:1, C:2] → 周回ごとに候補を散らした [A, B, C, A, C, A] になる', () {
+      expect(
+        weightedRotationOrder(weightedCandidates: [(candidate: 'A', weight: 3), (candidate: 'B', weight: 1), (candidate: 'C', weight: 2)]),
+        ['A', 'B', 'C', 'A', 'C', 'A'],
+      );
+    });
+
+    test('全候補が重み 1 → 候補の並びそのまま (従来の均等ローテーションと同じ)', () {
+      expect(
+        weightedRotationOrder(weightedCandidates: [(candidate: 'A', weight: 1), (candidate: 'B', weight: 1), (candidate: 'C', weight: 1)]),
+        ['A', 'B', 'C'],
+      );
+    });
+
+    test('候補が空 → 空リスト', () {
+      expect(weightedRotationOrder<String>(weightedCandidates: []), isEmpty);
+    });
+
+    test('表示順の長さは重みの合計に一致し、各候補は重みの回数だけ現れる', () {
+      final order = weightedRotationOrder(weightedCandidates: [(candidate: 'A', weight: 3), (candidate: 'B', weight: 1), (candidate: 'C', weight: 2)]);
+      expect(order.length, 6);
+      expect(order.where((candidate) => candidate == 'A').length, 3);
+      expect(order.where((candidate) => candidate == 'B').length, 1);
+      expect(order.where((candidate) => candidate == 'C').length, 2);
+    });
+  });
+
   group('#hasAnyCandidate', () {
     test('prefs 空 → 候補があるので true を返す', () async {
       SharedPreferences.setMockInitialValues({});
@@ -184,26 +219,96 @@ void main() {
   });
 
   group('#FeatureAppealBarsContainer', () {
-    /// 候補リスト (本実装と同じ並び順) のうち、appIsReleased=true で全件存在する状態を想定。
+    /// 本実装と同じ候補の並び順・重みで組んだ表示順 (weightedRotationOrder) のうち、appIsReleased=true で全件存在する状態を想定。
     /// CriticalAlert / AlarmKit は Platform.isIOS=true の時だけ候補に含まれる。
-    /// テストでは today を任意に固定して daysBetween(epoch, today) % candidates.length が想定の Bar に一致するかを確認する。
+    /// テストでは today を任意に固定して daysBetween(epoch, today) % 表示順の長さ が想定の Bar に一致するかを確認する。
     Type expectedBarTypeForIndex(int index) {
-      return [
-        QuickRecordAnnouncementBar,
-        ReminderNotificationCustomizeWordAnnouncementBar,
-        RestDurationAnnouncementBar,
-        if (Platform.isIOS) CriticalAlertAnnouncementBar,
-        AppearanceModeDateAnnouncementBar,
-        RecordPillAnnouncementBar,
-        MenstruationAnnouncementBar,
-        CalendarDiaryAnnouncementBar,
-        FutureScheduleAnnouncementBar,
-        HealthCareIntegrationAnnouncementBar,
-        CreatingNewPillSheetAnnouncementBar,
-        if (Platform.isIOS) AlarmKitAnnouncementBar,
-        TodayPillNumberAnnouncementBar,
-      ][index];
+      return weightedRotationOrder(
+        weightedCandidates: [
+          (candidate: QuickRecordAnnouncementBar, weight: FeatureAppealBarWeight.highConversion),
+          (candidate: ReminderNotificationCustomizeWordAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          (candidate: RestDurationAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          if (Platform.isIOS) (candidate: CriticalAlertAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          (candidate: AppearanceModeDateAnnouncementBar, weight: FeatureAppealBarWeight.someConversion),
+          (candidate: RecordPillAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          (candidate: MenstruationAnnouncementBar, weight: FeatureAppealBarWeight.someConversion),
+          (candidate: CalendarDiaryAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          (candidate: FutureScheduleAnnouncementBar, weight: FeatureAppealBarWeight.someConversion),
+          (candidate: HealthCareIntegrationAnnouncementBar, weight: FeatureAppealBarWeight.highConversion),
+          (candidate: CreatingNewPillSheetAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+          if (Platform.isIOS) (candidate: AlarmKitAnnouncementBar, weight: FeatureAppealBarWeight.highConversion),
+          (candidate: TodayPillNumberAnnouncementBar, weight: FeatureAppealBarWeight.noConversion),
+        ],
+      )[index];
     }
+
+    testWidgets('2 周目 (全候補を一巡した翌日) は重み 2 以上の候補だけが表示される', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      // 非 iOS で 1 周目は 11 候補。epoch+11 日 → 2 周目の先頭 = 重み 3 の QuickRecord
+      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch.add(const Duration(days: 11)));
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: FeatureAppealBarsContainer(appIsReleased: true, dismissedToday: ValueNotifier(false)),
+            ),
+          ),
+        ),
+      );
+
+      expect(find.byType(expectedBarTypeForIndex(11)), findsOneWidget);
+      expect(find.byType(QuickRecordAnnouncementBar), findsOneWidget);
+      expect(find.byType(ReminderNotificationCustomizeWordAnnouncementBar), findsNothing);
+    });
+
+    testWidgets('3 周目の末尾 (表示順の最終日) は重み 3 の HealthCareIntegration が表示され、翌日は先頭に戻る', (tester) async {
+      final mockTodayRepository = MockTodayService();
+      // 非 iOS: 1 周目 11 + 2 周目 5 (QuickRecord / AppearanceModeDate / Menstruation / FutureSchedule / HealthCare) + 3 周目 2 (QuickRecord / HealthCare) = 18
+      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch.add(const Duration(days: 17)));
+      todayRepository = mockTodayRepository;
+
+      SharedPreferences.setMockInitialValues({});
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: FeatureAppealBarsContainer(appIsReleased: true, dismissedToday: ValueNotifier(false)),
+            ),
+          ),
+        ),
+      );
+      expect(find.byType(expectedBarTypeForIndex(17)), findsOneWidget);
+      expect(find.byType(HealthCareIntegrationAnnouncementBar), findsOneWidget);
+
+      when(mockTodayRepository.now()).thenReturn(_featureAppealEpoch.add(const Duration(days: 18)));
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+          ],
+          child: MaterialApp(
+            home: Material(
+              child: FeatureAppealBarsContainer(appIsReleased: true, dismissedToday: ValueNotifier(false)),
+            ),
+          ),
+        ),
+      );
+      expect(find.byType(expectedBarTypeForIndex(0)), findsOneWidget);
+      expect(find.byType(QuickRecordAnnouncementBar), findsOneWidget);
+    });
 
     testWidgets('prefs 空 + appIsReleased=true → 当日 index に対応する Bar が表示される',
         (tester) async {
@@ -322,7 +427,7 @@ void main() {
       );
 
       // Platform.isIOS=false (macOS/Linux) かつ appIsReleased=false で候補は 10 件。
-      // 並び順: QuickRecord / Reminder / RestDuration / RecordPill / Menstruation / ...
+      // 1 周目の並び順: QuickRecord / Reminder / RestDuration / RecordPill / Menstruation / ...
       // epoch+2 日 → daysBetween=2 → index 2 = RestDuration。
       expect(find.byType(AppearanceModeDateAnnouncementBar), findsNothing);
       expect(find.byType(RestDurationAnnouncementBar), findsOneWidget);
