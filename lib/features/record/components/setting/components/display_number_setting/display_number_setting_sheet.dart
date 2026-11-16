@@ -291,15 +291,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     required ValueNotifier<int?> begin,
     required ValueNotifier<int?> end,
   }) async {
-    final PillSheetGroupDisplayNumberSetting? updatedDisplayNumberSetting;
-    if (begin.value == null && end.value == null) {
-      updatedDisplayNumberSetting = null;
-    } else {
-      updatedDisplayNumberSetting = PillSheetGroupDisplayNumberSetting(
-        beginPillNumber: begin.value ?? 1,
-        endPillNumber: end.value ?? 1,
-      );
-    }
+    final updatedDisplayNumberSetting = displayNumberSettingSheetUpdatedDisplayNumberSetting(
+      beginPillNumber: begin.value,
+      endPillNumber: end.value,
+    );
     if (updatedDisplayNumberSetting == null) {
       return;
     }
@@ -333,6 +328,22 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     await batch.commit();
   }
 }
+
+/// 「服用日数を変更」のシートで「変更」を押した時に保存する表示番号の設定を返す。
+/// [beginPillNumber] と [endPillNumber] は、保存済みの値か利用者が入力欄に入力した値。未設定で入力もしていない時は null。
+/// どちらも null の時は保存するものが無いため null を返す。
+/// [endPillNumber] が null の時は null のまま返す。終わりの番号の入力欄は未設定でも推定値を表示するが、利用者が入力していない値は保存しない。
+PillSheetGroupDisplayNumberSetting? displayNumberSettingSheetUpdatedDisplayNumberSetting({
+  required int? beginPillNumber,
+  required int? endPillNumber,
+}) =>
+    beginPillNumber == null && endPillNumber == null
+        ? null
+        : PillSheetGroupDisplayNumberSetting(
+            // 始まりの番号の入力欄は未設定の時に 1 を表示し、PillSheetGroupDisplayNumberSetting.beginPillNumber も null を 1 番からの開始として扱うため
+            beginPillNumber: beginPillNumber ?? 1,
+            endPillNumber: endPillNumber ?? 1,
+          );
 
 void showDisplayNumberSettingSheet(
   BuildContext context, {
