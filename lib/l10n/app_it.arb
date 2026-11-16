@@ -415,6 +415,7 @@
   "pauseTakingStarted": "La sospensione dell'assunzione è iniziata",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Modifica la data di inizio della sospensione",
+  "startWeekOnMonday": "Inizia la settimana di lunedì",
   "shareWithFriends": "Condividi con gli amici",
   "termsOfService": "Termini di utilizzo",
   "privacyPolicy": "Informativa sulla privacy",

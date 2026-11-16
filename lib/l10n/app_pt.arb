@@ -415,6 +415,7 @@
   "pauseTakingStarted": "A interrupção do uso da pílula começou",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Editar data de início da interrupção",
+  "startWeekOnMonday": "Começar a semana na segunda-feira",
   "shareWithFriends": "Compartilhe com amigos",
   "termsOfService": "Termos de uso",
   "privacyPolicy": "Política de privacidade",

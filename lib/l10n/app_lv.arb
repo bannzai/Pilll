@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Ir sākusies lietošanas pauze",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Rediģēt lietošanas pauzes sākuma datumu",
+  "startWeekOnMonday": "Sākt nedēļu pirmdienā",
   "shareWithFriends": "Ieteikt draugiem",
   "termsOfService": "Lietošanas noteikumi",
   "privacyPolicy": "Privātuma politika",

@@ -415,6 +415,7 @@
   "pauseTakingStarted": "D Iinahmepause hät aagfange",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Startdatum vo de Iinahmepause bearbeite",
+  "startWeekOnMonday": "D Wuche am Mäntig afange",
   "shareWithFriends": "Mit Fründe teile",
   "termsOfService": "Nutzigsbedingige",
   "privacyPolicy": "Dateschutzbestimmige",

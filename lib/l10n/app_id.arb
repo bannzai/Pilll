@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Jeda minum pil telah dimulai",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Ubah tanggal mulai jeda minum",
+  "startWeekOnMonday": "Mulai minggu pada hari Senin",
   "shareWithFriends": "Bagikan kepada teman",
   "termsOfService": "Ketentuan penggunaan",
   "privacyPolicy": "Kebijakan privasi",

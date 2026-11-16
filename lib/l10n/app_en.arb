@@ -415,6 +415,7 @@
   "pauseTakingStarted": "Your pill pause has started",
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "editPauseStartDate": "Edit pause start date",
+  "startWeekOnMonday": "Start week on Monday",
   "shareWithFriends": "Share with friends",
   "termsOfService": "Terms of service",
   "privacyPolicy": "Privacy policy",

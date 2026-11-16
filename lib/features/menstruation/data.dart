@@ -3,22 +3,19 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final todayCalendarPageIndex = menstruationWeekCalendarDataSource.lastIndexWhere(
-  (element) => element.where((element) => isSameDay(element, today())).isNotEmpty,
-);
+/// [menstruationWeekCalendarDataSource] のうち今日を含む週の位置。生理タブの週カレンダーが最初に表示するページ。
+int todayCalendarPageIndex({required Weekday firstWeekday}) => menstruationWeekCalendarDataSource(firstWeekday: firstWeekday).lastIndexWhere(
+      (element) => element.where((element) => isSameDay(element, today())).isNotEmpty,
+    );
 
-final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
+/// 生理タブの週カレンダーの 1 ページ (1 週間) ごとの日付。今日の前後 90 日を含み、各週は [firstWeekday] から始まる。
+List<List<DateTime>> menstruationWeekCalendarDataSource({required Weekday firstWeekday}) {
   final base = today();
 
   var begin = base.subtract(const Duration(days: 90));
-  final beginWeekdayOffset = WeekdayFunctions.weekdayFromDate(begin).index;
-  begin = begin.subtract(Duration(days: beginWeekdayOffset));
+  begin = begin.subtract(Duration(days: weekdayOffset(date: begin, firstWeekday: firstWeekday)));
 
-  var end = base.add(const Duration(days: 90));
-  final endWeekdayOffset = Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
-  end = end.addDays(endWeekdayOffset);
-
-  var diffDay = daysBetween(begin, end);
+  var diffDay = daysBetween(begin, endDayOfWeekday(base.add(const Duration(days: 90)), firstWeekday: firstWeekday));
   diffDay += Weekday.values.length - diffDay % Weekday.values.length;
   List<DateTime> days = [];
   for (int i = 0; i < diffDay; i++) {
@@ -31,4 +28,4 @@ final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
       i * Weekday.values.length + Weekday.values.length,
     ),
   );
-}();
+}
