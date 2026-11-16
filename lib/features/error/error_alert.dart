@@ -30,13 +30,16 @@ class ErrorAlert extends StatelessWidget {
           color: TextColor.black,
         ),
       ),
-      content: Text(
-        errorMessage,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
-          color: TextColor.black,
+      // 手順を案内する長い本文が画面の高さを超えても、末尾まで読めるようにスクロールさせる
+      content: SingleChildScrollView(
+        child: Text(
+          errorMessage,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+            color: TextColor.black,
+          ),
         ),
       ),
       actions: <Widget>[
