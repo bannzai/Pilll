@@ -891,6 +891,56 @@ void main() {
         expect(calledIsYazFlexValues, [true]);
       });
 
+      test(
+          "トライアルの開始を待っている間に「いいえ」を選び直しても、登録を始めた時の答え (ヤーズフレックス) で保存し、属性も true を載せる",
+          () async {
+        final batchFactory = MockBatchFactory();
+        when(batchFactory.batch()).thenReturn(MockWriteBatch());
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(batchSetPillSheetGroup(any, any)).thenAnswer((invocation) =>
+            invocation.positionalArguments[1] as PillSheetGroup);
+        final startPromotion = MockStartPromotion();
+        final store = ProviderContainer(
+          overrides: [
+            startPromotionProvider.overrideWith((ref) => startPromotion),
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            batchSetSettingProvider
+                .overrideWith((ref) => MockBatchSetSetting()),
+            batchSetPillSheetModifiedHistoryProvider.overrideWith(
+              (ref) => MockBatchSetPillSheetModifiedHistory(),
+            ),
+            batchSetPillSheetGroupProvider
+                .overrideWith((ref) => batchSetPillSheetGroup),
+            registerReminderLocalNotificationRunnerProvider.overrideWithValue(
+              registerReminderLocalNotificationRunner,
+            ),
+            setYazFlexInitialSettingAttributeProvider.overrideWithValue(
+              setYazFlexInitialSettingAttribute,
+            ),
+          ],
+        ).read(initialSettingStateNotifierProvider.notifier);
+        store.selectYazFlex();
+        store.setTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1);
+        // トライアルの開始 (サーバーの callable) を待つ間に、前のページへ戻って選び直した状況を作る
+        when(startPromotion()).thenAnswer((_) {
+          store.selectNotYazFlex();
+          return Future.value();
+        });
+
+        await store.register(
+            user: const User(), customerInfo: freeCustomerInfo);
+
+        // ヤーズフレックスの答えのピルシート (28 錠 × 5 枚) のまま保存している
+        expect(
+          (verify(batchSetPillSheetGroup(any, captureAny)).captured.single
+                  as PillSheetGroup)
+              .pillSheets
+              .length,
+          5,
+        );
+        expect(calledIsYazFlexValues, [true]);
+      });
+
       test("登録する前は載せない", () {
         buildContainer(
                 startPromotion: succeedingStartPromotion(),
