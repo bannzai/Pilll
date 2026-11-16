@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -8,6 +10,7 @@ import 'package:pilll/native/pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -276,6 +279,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockNow);
       analytics = FakeAnalytics();
+      errorLogger = FakeErrorLogger();
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
           .setMockMethodCallHandler(appBadgePlusChannel, (call) async => null);
     });
@@ -362,28 +366,46 @@ void main() {
       );
     }
 
+    // recordPillFromAppIntent を呼び、結果と、記録後の更新 (syncAfterRecord) に渡った PillSheetGroup を返す
+    Future<(AppIntentRecordPillResult, List<PillSheetGroup>)> record({
+      required User? user,
+      required PillSheetGroup? pillSheetGroup,
+      required TakePill takePill,
+    }) async {
+      final syncedPillSheetGroups = <PillSheetGroup>[];
+      return (
+        await recordPillFromAppIntent(
+          fetchUser: () async => user,
+          fetchPillSheetGroup: () async => pillSheetGroup,
+          takePill: takePill,
+          syncAfterRecord: (pillSheetGroup) async =>
+              syncedPillSheetGroups.add(pillSheetGroup),
+        ),
+        syncedPillSheetGroups,
+      );
+    }
+
     group('プレミアムとトライアルの判定', () {
       test('プレミアムでもトライアル中でもない場合は記録せず notPremiumOrTrial を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
-        final pillSheetGroup = v1PillSheetGroup(
-          lastTakenDate: DateTime.parse('2024-01-14'),
-        );
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: false, trialDeadlineDate: null),
-          pillSheetGroup: pillSheetGroup,
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-14'),
+          ),
           takePill: takePill,
         );
 
         expect(result, AppIntentRecordPillResult.notPremiumOrTrial);
-        expect(resultPillSheetGroup, pillSheetGroup);
+        expect(syncedPillSheetGroups, isEmpty);
         verifyNever(batch.commit());
       });
 
       test('トライアルの期限ちょうどの時刻は、トライアル中ではないので記録しない', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, _) = await recordPillFromAppIntent(
+        final (result, _) = await record(
           user: User(isPremium: false, trialDeadlineDate: mockNow),
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
@@ -398,7 +420,7 @@ void main() {
       test('トライアルの期限の 1 秒前は、トライアル中なので記録する', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: User(
             isPremium: false,
             trialDeadlineDate: mockNow.add(const Duration(seconds: 1)),
@@ -410,14 +432,17 @@ void main() {
         );
 
         expect(result, AppIntentRecordPillResult.recorded);
-        expect(resultPillSheetGroup?.activePillSheet?.lastTakenDate, mockNow);
+        expect(
+          syncedPillSheetGroups.single.activePillSheet?.lastTakenDate,
+          mockNow,
+        );
         verify(batch.commit()).called(1);
       });
 
       test('トライアルの期限を過ぎていてもプレミアムなら記録する', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, _) = await recordPillFromAppIntent(
+        final (result, _) = await record(
           user: User(
             isPremium: true,
             trialDeadlineDate: mockNow.subtract(const Duration(days: 1)),
@@ -434,10 +459,12 @@ void main() {
     });
 
     group('v1', () {
-      test('今日の分が未服用の場合は、今の時刻を最後の服用日時にして recorded を返す', () async {
+      test(
+          '今日の分が未服用の場合は、今の時刻を最後の服用日時にして recorded を返し、記録後の PillSheetGroup で更新する',
+          () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
@@ -446,38 +473,43 @@ void main() {
         );
 
         expect(result, AppIntentRecordPillResult.recorded);
-        expect(resultPillSheetGroup?.activePillSheet?.lastTakenDate, mockNow);
+        expect(
+          syncedPillSheetGroups.single.activePillSheet?.lastTakenDate,
+          mockNow,
+        );
         verify(batch.commit()).called(1);
       });
 
       test('まだ 1 度も服用していないシートでも記録する', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v1PillSheetGroup(lastTakenDate: null),
           takePill: takePill,
         );
 
         expect(result, AppIntentRecordPillResult.recorded);
-        expect(resultPillSheetGroup?.activePillSheet?.lastTakenDate, mockNow);
+        expect(
+          syncedPillSheetGroups.single.activePillSheet?.lastTakenDate,
+          mockNow,
+        );
         verify(batch.commit()).called(1);
       });
 
-      test('今日の分が服用済みの場合は記録せず alreadyTaken を返す', () async {
+      test('今日の分が服用済みの場合は記録も更新もせず alreadyTaken を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
-        final pillSheetGroup = v1PillSheetGroup(
-          lastTakenDate: DateTime.parse('2024-01-15'),
-        );
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
-          pillSheetGroup: pillSheetGroup,
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-15'),
+          ),
           takePill: takePill,
         );
 
         expect(result, AppIntentRecordPillResult.alreadyTaken);
-        expect(resultPillSheetGroup, pillSheetGroup);
+        expect(syncedPillSheetGroups, isEmpty);
         verifyNever(batch.commit());
       });
     });
@@ -486,7 +518,7 @@ void main() {
       test('今日の分を 1 回も記録していない場合は 1 回分だけ記録し、今日の分は服用済みにならない', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 0),
           takePill: takePill,
@@ -494,7 +526,7 @@ void main() {
 
         expect(result, AppIntentRecordPillResult.recorded);
         final resultPillSheet =
-            resultPillSheetGroup?.activePillSheet as PillSheetV2;
+            syncedPillSheetGroups.single.activePillSheet as PillSheetV2;
         expect(resultPillSheet.pills[5].pillTakens.length, 1);
         expect(resultPillSheet.todayPillAllTaken, false);
         verify(batch.commit()).called(1);
@@ -503,7 +535,7 @@ void main() {
       test('今日の分を 1 回だけ記録している場合は残りの 1 回を記録し、今日の分が服用済みになる', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 1),
           takePill: takePill,
@@ -511,7 +543,7 @@ void main() {
 
         expect(result, AppIntentRecordPillResult.recorded);
         final resultPillSheet =
-            resultPillSheetGroup?.activePillSheet as PillSheetV2;
+            syncedPillSheetGroups.single.activePillSheet as PillSheetV2;
         expect(resultPillSheet.pills[5].pillTakens.length, 2);
         expect(resultPillSheet.todayPillAllTaken, true);
         verify(batch.commit()).called(1);
@@ -520,29 +552,46 @@ void main() {
       test('今日の分を 2 回とも記録している場合は記録せず alreadyTaken を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, _) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 2),
           takePill: takePill,
         );
 
         expect(result, AppIntentRecordPillResult.alreadyTaken);
+        expect(syncedPillSheetGroups, isEmpty);
         verifyNever(batch.commit());
       });
     });
 
-    group('記録する先のピルシートが無い', () {
+    group('記録する先が無い', () {
+      test('user が無い場合は記録せず notSignedIn を返す', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, syncedPillSheetGroups) = await record(
+          user: null,
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-14'),
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.notSignedIn);
+        expect(syncedPillSheetGroups, isEmpty);
+        verifyNever(batch.commit());
+      });
+
       test('ピルシートグループが無い場合は noActivePillSheet を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
+        final (result, syncedPillSheetGroups) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: null,
           takePill: takePill,
         );
 
         expect(result, AppIntentRecordPillResult.noActivePillSheet);
-        expect(resultPillSheetGroup, null);
+        expect(syncedPillSheetGroups, isEmpty);
         verifyNever(batch.commit());
       });
 
@@ -553,7 +602,7 @@ void main() {
             .thenReturn(DateTime.parse('2024-02-07T09:00:00'));
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, _) = await recordPillFromAppIntent(
+        final (result, _) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-02-06'),
@@ -572,7 +621,7 @@ void main() {
             .thenReturn(DateTime.parse('2024-02-06T09:00:00'));
         final (takePill, batch) = takePillWithMockBatch();
 
-        final (result, _) = await recordPillFromAppIntent(
+        final (result, _) = await record(
           user: const User(isPremium: true),
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-02-05'),
@@ -585,29 +634,119 @@ void main() {
       });
     });
 
-    test('TakePill が記録せずに null を返した場合は failed と受け取った PillSheetGroup を返す',
-        () async {
-      final takePill = MockTakePill();
-      final pillSheetGroup = v1PillSheetGroup(
-        lastTakenDate: DateTime.parse('2024-01-14'),
-      );
-      when(
-        takePill(
-          takenDate: mockNow,
-          pillSheetGroup: pillSheetGroup,
-          activePillSheet: pillSheetGroup.pillSheets.single,
-          isQuickRecord: true,
-        ),
-      ).thenAnswer((_) async => null);
+    group('失敗', () {
+      // 引数を問わず同じ応答を返す TakePill
+      MockTakePill takePillAnswering(
+        Future<PillSheetGroup?> Function() answer,
+      ) {
+        final takePill = MockTakePill();
+        when(
+          takePill(
+            takenDate: anyNamed('takenDate'),
+            pillSheetGroup: anyNamed('pillSheetGroup'),
+            activePillSheet: anyNamed('activePillSheet'),
+            isQuickRecord: anyNamed('isQuickRecord'),
+          ),
+        ).thenAnswer((_) => answer());
+        return takePill;
+      }
 
-      final (result, resultPillSheetGroup) = await recordPillFromAppIntent(
-        user: const User(isPremium: true),
-        pillSheetGroup: pillSheetGroup,
-        takePill: takePill,
-      );
+      test('TakePill が記録せずに null を返した場合は更新せず failed を返す', () async {
+        final (result, syncedPillSheetGroups) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-14'),
+          ),
+          takePill: takePillAnswering(() async => null),
+        );
 
-      expect(result, AppIntentRecordPillResult.failed);
-      expect(resultPillSheetGroup, pillSheetGroup);
+        expect(result, AppIntentRecordPillResult.failed);
+        expect(syncedPillSheetGroups, isEmpty);
+      });
+
+      test('TakePill が例外を投げた場合は例外を外に出さず、更新せず failed を返す', () async {
+        final (result, syncedPillSheetGroups) = await record(
+          user: const User(isPremium: true),
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-14'),
+          ),
+          takePill: takePillAnswering(() async => throw Exception('commit')),
+        );
+
+        expect(result, AppIntentRecordPillResult.failed);
+        expect(syncedPillSheetGroups, isEmpty);
+      });
+
+      test('user の取得が例外を投げた場合は記録せず failed を返す', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => throw Exception('user'),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePill,
+            syncAfterRecord: (_) async {},
+          ),
+          AppIntentRecordPillResult.failed,
+        );
+        verifyNever(batch.commit());
+      });
+
+      test('ピルシートグループの取得が例外を投げた場合は記録せず failed を返す', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => throw Exception('pillSheetGroup'),
+            takePill: takePill,
+            syncAfterRecord: (_) async {},
+          ),
+          AppIntentRecordPillResult.failed,
+        );
+        verifyNever(batch.commit());
+      });
+
+      test('記録後の更新が例外を投げても、記録は済んでいるので recorded を返す', () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePill,
+            syncAfterRecord: (_) async => throw Exception('sync'),
+          ),
+          AppIntentRecordPillResult.recorded,
+        );
+        verify(batch.commit()).called(1);
+      });
+    });
+  });
+
+  group('#AppIntentRecordPillResult', () {
+    test(
+        'name の一覧が iOS 側 (ios/Runner/RecordPillIntent.swift) の RecordPillIntentResult の case と一致する',
+        () {
+      // Dart が返した name を iOS 側が rawValue として読むため、片方だけ増やす・改名すると返答が「失敗」になる
+      expect(
+        RegExp(r'case (\w+)')
+            .allMatches(
+              RegExp(r'enum RecordPillIntentResult: String \{([^}]*)\}')
+                  .firstMatch(
+                    File('ios/Runner/RecordPillIntent.swift')
+                        .readAsStringSync(),
+                  )!
+                  .group(1)!,
+            )
+            .map((match) => match.group(1))
+            .toSet(),
+        AppIntentRecordPillResult.values.map((value) => value.name).toSet(),
+      );
     });
   });
 }

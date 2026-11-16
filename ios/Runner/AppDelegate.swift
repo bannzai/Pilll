@@ -363,7 +363,9 @@ extension AppDelegate {
     }
     invokeRecordPillFromAppIntent(
       recordChannel: recordChannel,
-      // Dart の main がチャネルのハンドラを登録するまでは通常 1 秒前後で、通知の「飲んだ」は余裕を見て 5 秒待っている。その 2 倍の 10 秒まで待つ
+      // 送り直しが要るのは、Dart のハンドラ登録前に溜めた呼び出しが捨てられた時だけ (下の関数の document コメント)。
+      // 通知の「飲んだ」(RECORD_PILL) は、ハンドラ登録までを「通常は1秒前後」として 5 秒待っている (同 action のコメント)。
+      // その 2 倍の 10 秒分を上限にした。この回数は実測で決めた値ではない
       remainingRetryCount: 10
     ) { [self] resultName in
       if usesHeadlessEngine {
@@ -376,9 +378,12 @@ extension AppDelegate {
 }
 
 /// recordChannel で Dart 側の recordPillFromAppIntent を呼び、返った AppIntentRecordPillResult の name を completion に渡す。
-/// Dart 側がハンドラを登録する前に送った呼び出しは、Flutter がチャネルごとに 1 件だけ溜め、溢れた分には空の応答 (未実装) を返す
-/// (同じチャネルに analytics も送っているため溢れうる)。未実装が返った時は 1 秒おきに remainingRetryCount 回まで送り直し、
-/// それでも届かなければ nil を渡す。溢れた呼び出しは Dart 側で実行されていないため、送り直しで二重に記録することは無い
+/// Dart 側がハンドラを登録する前に送った呼び出しは、Flutter がチャネルごとに 1 件だけ溜める (`ChannelBuffers.kDefaultBufferSize = 1`)。
+/// 溜まっている間に同じチャネルへ次の呼び出し (analytics も同じチャネルに送っている) が来ると、先に溜まっていた 1 件がハンドラに渡されないまま
+/// 捨てられ、空の応答 (iOS 側では未実装) が返る (`_Channel._dropOverflowMessages` の `message.invoke(null); // send empty reply to the plugin side`。
+/// 出典: Flutter SDK の `bin/cache/pkg/sky_engine/lib/ui/channel_buffers.dart`。2026-11-16 に読んで確認)。
+/// 未実装が返った時は 1 秒おきに remainingRetryCount 回まで送り直し、それでも届かなければ nil を渡す。
+/// 捨てられた呼び出しは Dart 側のハンドラに渡っていないため、送り直しで二重に記録することは無い (Dart 側のハンドラはこの呼び出しに必ず文字列を返す)
 private func invokeRecordPillFromAppIntent(
   recordChannel: FlutterMethodChannel,
   remainingRetryCount: Int,

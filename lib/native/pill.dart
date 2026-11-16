@@ -10,6 +10,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/error_log.dart';
 
 /// クイックレコードで服用済みかどうかを判定する
 /// v1: 1錠飲みなので todayPillIsAlreadyTaken で判定
@@ -98,32 +99,54 @@ enum AppIntentRecordPillResult {
   failed,
 }
 
-/// App Intent (Siri・ショートカット) から今日の服用を記録し、結果と記録後の PillSheetGroup を返す。
+/// App Intent (Siri・ショートカット) から今日の服用を記録し、結果を返す。例外は投げず、失敗は failed として返して errorLogger に記録する。
 /// 通知からのクイックレコードと同じくプレミアムの機能のため、プレミアムでもトライアル中でもない user では記録しない。
-/// 記録しなかった時の PillSheetGroup は受け取った値のまま返す
-Future<(AppIntentRecordPillResult, PillSheetGroup?)> recordPillFromAppIntent({
-  required User user,
-  required PillSheetGroup? pillSheetGroup,
+/// 記録した時だけ、記録後の PillSheetGroup で syncAfterRecord (ウィジェットと通知の更新) を呼ぶ。
+/// syncAfterRecord が失敗しても、記録は済んでいるため recorded を返す。
+/// user と PillSheetGroup の取得と記録後の更新を関数で受け取るのは、Firestore と通知の plugin を使わずにテストするため。
+/// 冪等ではない (1 日に複数回服用する設定では、呼ぶたびに未服用の 1 回分を記録するため)
+Future<AppIntentRecordPillResult> recordPillFromAppIntent({
+  required Future<User?> Function() fetchUser,
+  required Future<PillSheetGroup?> Function() fetchPillSheetGroup,
   required TakePill takePill,
+  required Future<void> Function(PillSheetGroup pillSheetGroup) syncAfterRecord,
 }) async {
-  if (!user.premiumOrTrial) {
-    return (AppIntentRecordPillResult.notPremiumOrTrial, pillSheetGroup);
-  }
-  final activePillSheet = pillSheetGroup?.activePillSheet;
-  if (pillSheetGroup == null || activePillSheet == null) {
-    return (AppIntentRecordPillResult.noActivePillSheet, pillSheetGroup);
-  }
-  if (shouldSkipQuickRecord(activePillSheet)) {
-    return (AppIntentRecordPillResult.alreadyTaken, pillSheetGroup);
+  final PillSheetGroup updatedPillSheetGroup;
+  try {
+    final user = await fetchUser();
+    if (user == null) {
+      return AppIntentRecordPillResult.notSignedIn;
+    }
+    if (!user.premiumOrTrial) {
+      return AppIntentRecordPillResult.notPremiumOrTrial;
+    }
+    final pillSheetGroup = await fetchPillSheetGroup();
+    final activePillSheet = pillSheetGroup?.activePillSheet;
+    if (pillSheetGroup == null || activePillSheet == null) {
+      return AppIntentRecordPillResult.noActivePillSheet;
+    }
+    if (shouldSkipQuickRecord(activePillSheet)) {
+      return AppIntentRecordPillResult.alreadyTaken;
+    }
+
+    final takenPillSheetGroup = await _takePillNowAsQuickRecord(
+      takePill: takePill,
+      pillSheetGroup: pillSheetGroup,
+      activePillSheet: activePillSheet,
+    );
+    if (takenPillSheetGroup == null) {
+      return AppIntentRecordPillResult.failed;
+    }
+    updatedPillSheetGroup = takenPillSheetGroup;
+  } catch (e, st) {
+    errorLogger.recordError(e, st);
+    return AppIntentRecordPillResult.failed;
   }
 
-  final updatedPillSheetGroup = await _takePillNowAsQuickRecord(
-    takePill: takePill,
-    pillSheetGroup: pillSheetGroup,
-    activePillSheet: activePillSheet,
-  );
-  if (updatedPillSheetGroup == null) {
-    return (AppIntentRecordPillResult.failed, pillSheetGroup);
+  try {
+    await syncAfterRecord(updatedPillSheetGroup);
+  } catch (e, st) {
+    errorLogger.recordError(e, st);
   }
-  return (AppIntentRecordPillResult.recorded, updatedPillSheetGroup);
+  return AppIntentRecordPillResult.recorded;
 }

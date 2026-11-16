@@ -58,34 +58,17 @@ void definedChannel() {
           return AppIntentRecordPillResult.notSignedIn.name;
         }
 
-        try {
-          analytics.logEvent(name: 'handle_recordPillFromAppIntent_channel');
+        analytics.logEvent(name: 'handle_recordPillFromAppIntent_channel');
 
-          final database = DatabaseConnection(firebaseUser.uid);
-          final user = (await database.userReference().get()).data();
-          if (user == null) {
-            return AppIntentRecordPillResult.notSignedIn.name;
-          }
-
-          final (result, pillSheetGroup) = await recordPillFromAppIntent(
-            user: user,
-            pillSheetGroup: await fetchLatestPillSheetGroup(database),
-            takePill: quickRecordTakePillOf(database),
-          );
-          if (result == AppIntentRecordPillResult.recorded) {
-            // 記録は済んでいるため、ウィジェットと通知の更新の失敗で「記録できなかった」と返さない
-            try {
-              await _syncAfterQuickRecord(database: database, pillSheetGroup: pillSheetGroup);
-            } catch (e, st) {
-              errorLogger.recordError(e, st);
-            }
-          }
-          return result.name;
-        } catch (e, st) {
-          errorLogger.recordError(e, st);
-          // 失敗は iOS 側の返答で伝えるため、recordPill のような失敗の通知は出さない
-          return AppIntentRecordPillResult.failed.name;
-        }
+        final database = DatabaseConnection(firebaseUser.uid);
+        // 失敗は iOS 側の返答で伝えるため、recordPill のような失敗の通知は出さない
+        return (await recordPillFromAppIntent(
+          fetchUser: () async => (await database.userReference().get()).data(),
+          fetchPillSheetGroup: () => fetchLatestPillSheetGroup(database),
+          takePill: quickRecordTakePillOf(database),
+          syncAfterRecord: (pillSheetGroup) => _syncAfterQuickRecord(database: database, pillSheetGroup: pillSheetGroup),
+        ))
+            .name;
       case 'analytics':
         final name = call.arguments['name'] as String;
         final parameters = Map<String, dynamic>.from(
@@ -106,12 +89,11 @@ Future<void> _syncAfterQuickRecord({
 }) async {
   syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
-  final cancelReminderLocalNotification = CancelReminderLocalNotification();
   // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
   // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
   await (
     Future.microtask(() => null),
-    cancelReminderLocalNotification(),
+    CancelReminderLocalNotification()(),
   ).wait;
 
   final activePillSheet = pillSheetGroup?.activePillSheet;

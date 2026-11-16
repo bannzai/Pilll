@@ -21,10 +21,13 @@ private enum RecordPillIntentResult: String {
 /// 記録は通知の「飲んだ」と同じ Dart 側の処理で行い、記録できたかどうかを言葉で返す
 @available(iOS 16.0, *)
 struct RecordPillIntent: AppIntent {
+  /// ショートカットアプリのアクション名。Siri がこの intent が何をするかを理解する材料にもなる
   static var title: LocalizedStringResource = "今日のピルを記録"
+  /// ショートカットアプリのアクションの説明。Siri がこの intent を他の intent と区別する材料にもなる
   static var description = IntentDescription("今日のピルを飲んだことを Pilll に記録します")
+  /// 実行時にアプリを前面に出すか。アプリを開かずに記録するため出さない
   static var openAppWhenRun = false
-  // 服用記録を書き込むため、通知の「飲んだ」(AppDelegate の RECORD_PILL) と同じく、ロック中の端末では持ち主のロック解除を求める
+  /// ロック中の端末での実行の扱い。服用記録を書き込むため、通知の「飲んだ」(AppDelegate の RECORD_PILL) と同じく持ち主のロック解除を求める
   static var authenticationPolicy: IntentAuthenticationPolicy = .requiresAuthentication
 
   /// 今日の分を 1 回分記録し、結果の返答を返す。冪等ではない (1 日に複数回服用する設定では、呼ぶたびに未服用の 1 回分を記録するため)
@@ -66,6 +69,7 @@ private func recordPillIntentDialog(result: RecordPillIntentResult) -> IntentDia
 /// Siri とショートカットアプリに、設定なしで使える Pilll の操作と発話を登録する
 @available(iOS 16.0, *)
 struct PilllAppShortcutsProvider: AppShortcutsProvider {
+  /// 設定なしで使える操作の一覧。発話の英語は AppShortcuts.strings に置く
   static var appShortcuts: [AppShortcut] {
     AppShortcut(
       intent: RecordPillIntent(),
