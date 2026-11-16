@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Bu özellik, sağlık verilerini desteklemeyen cihazlarda kullanılamıyor",
   "enableHealthKitFromSettings": "Sağlık uygulamasına erişimi Ayarlar uygulamasından etkinleştirin",
   "accountAlreadyLinked": "Bu {accountTypeProviderName} hesabı Pilll hesabınıza zaten bağlı. Lütfen ekranı yenilemeyi deneyin ve sık sorulan sorulara da göz atın. Ayrıntılar: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Bu {accountTypeProviderName} hesabı, başka bir cihazdaki işlem veya oturum açma sonucunda oluşturulan başka bir Pilll hesabına bağlı. Bu nedenle bu hesapla kayıt olamazsınız.\n\nSaklamak istediğiniz kayıtlar bu cihazdaysa\n1. Kayıt olmayan cihazda “Ayarlar” → “Hesap ayarları” → “Hesabı silin” seçeneğini belirleyin\n2. Bu cihazda yeniden “Hesap oluşturun” seçeneğini belirleyin\n3. Kayıt olmayan cihazda Pilll'i yeniden başlatın ve “Hesabınız var mı?” üzerinden oturum açın\n\nHesabı sildiğiniz cihazdaki kayıtlar kalıcı olarak silinir. Kayıtların bulunduğu cihazdaki hesabı silmeyin.\n\nSaklamak istediğiniz kayıtlar başka bir cihazdaysa hesabı silmeyin ve sık sorulan sorulara göz atın.\n\nAyrıntılar: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} hesabınızda kullandığınız e-posta adresi başka bir Pilll hesabına zaten bağlı olduğu için kayıt olamıyorsunuz. Sık sorulan sorulara da göz atabilirsiniz. Ayrıntılar: {exceptionMessage}",
   "todaySchedule": "Bugünkü etkinliğiniz",
   "calendarSchedule": "Takvimdeki etkinlikler",

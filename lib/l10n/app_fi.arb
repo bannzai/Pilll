@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Tämä toiminto ei ole käytettävissä laitteilla, jotka eivät tue Terveys-sovellusta",
   "enableHealthKitFromSettings": "Ota Terveys-sovelluksen käyttöoikeus käyttöön Asetuksissa",
   "accountAlreadyLinked": "Tämä tili ({accountTypeProviderName}) on jo yhdistetty Pilll-tiliisi. Kokeile päivittää näkymä. Katso myös usein kysytyt kysymykset. Lisätiedot: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Tämä {accountTypeProviderName}-tili on jo yhdistetty toiseen Pilll-tiliin, joka luotiin toisella laitteella tehdyn toiminnon tai kirjautumisen yhteydessä. Siksi et voi luoda tiliä sillä.\n\nJos säilytettävät merkinnät ovat tällä laitteella\n1. Valitse laitteella, jolla ei ole merkintöjä, ”Asetukset” → ”Tilin asetukset” → ”Poista tili”\n2. Valitse tällä laitteella uudelleen ”Luo tili”\n3. Käynnistä Pilll uudelleen laitteella, jolla ei ole merkintöjä, ja kirjaudu sisään kohdasta ”Onko sinulla jo tili?”\n\nMerkinnät laitteella, jolla poistat tilin, poistuvat pysyvästi. Älä poista tiliä laitteella, jolla merkinnät ovat.\n\nJos säilytettävät merkinnät ovat toisella laitteella, älä poista tiliä. Katso usein kysytyt kysymykset.\n\nLisätiedot: {exceptionMessage}",
   "emailAlreadyInUse": "Rekisteröityminen ei onnistu, koska tililläsi ({accountTypeProviderName}) käyttämäsi sähköpostiosoite on jo liitetty toiseen Pilll-tiliin. Katso myös usein kysytyt kysymykset. Lisätiedot: {exceptionMessage}",
   "todaySchedule": "Tämän päivän tapahtumat",
   "calendarSchedule": "Kalenterin suunnitelmat",

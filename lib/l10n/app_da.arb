@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Denne funktion er ikke tilgængelig på enheder, der ikke understøtter Sundhed",
   "enableHealthKitFromSettings": "Du kan slå adgang til Sundhed til i appen Indstillinger",
   "accountAlreadyLinked": "Denne {accountTypeProviderName}-konto er allerede knyttet til din Pilll-konto. Prøv at opdatere skærmen, og se også FAQ. Detaljer: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Denne {accountTypeProviderName}-konto er allerede knyttet til en anden Pilll-konto, som blev oprettet ved en handling eller et login på en anden enhed. Derfor kan du ikke oprette en konto med den.\n\nHvis de registreringer, du vil beholde, er på denne enhed\n1. Vælg »Indstillinger« → »Kontoindstillinger« → »Slet konto« på enheden uden registreringer\n2. Vælg »Opret konto« igen på denne enhed\n3. Genstart Pilll på enheden uden registreringer, og log ind via »Har du en konto?«\n\nRegistreringerne på den enhed, hvor du sletter kontoen, bliver slettet og kan ikke gendannes. Slet ikke kontoen på enheden med registreringerne.\n\nHvis de registreringer, du vil beholde, er på en anden enhed, skal du ikke slette kontoen. Se ofte stillede spørgsmål.\n\nDetaljer: {exceptionMessage}",
   "emailAlreadyInUse": "Du kan ikke oprette en konto, fordi den e-mailadresse, du bruger til din {accountTypeProviderName}-konto, allerede er knyttet til en anden Pilll-konto. Se også FAQ. Detaljer: {exceptionMessage}",
   "todaySchedule": "Dagens aftaler",
   "calendarSchedule": "Kalenderaftaler",

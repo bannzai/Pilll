@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Ta funkcija ni na voljo v napravah, ki ne podpirajo zdravstvenih podatkov",
   "enableHealthKitFromSettings": "V aplikaciji Nastavitve omogočite dostop do aplikacije Zdravje",
   "accountAlreadyLinked": "Ta račun {accountTypeProviderName} je že povezan z vašim računom Pilll. Poskusite osvežiti zaslon in si oglejte tudi pogosta vprašanja. Podrobnosti: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Ta račun {accountTypeProviderName} je povezan z drugim računom Pilll, ustvarjenim ob dejanju ali prijavi v drugi napravi. Zato se z njim ni mogoče registrirati.\n\nČe so zapisi, ki jih želite obdržati, v tej napravi\n1. V napravi brez zapisov izberite »Nastavitve« → »Nastavitve računa« → »Izbrišite račun«\n2. V tej napravi znova izberite »Ustvarite račun«\n3. V napravi brez zapisov znova zaženite Pilll in se prijavite prek »Že imate račun?«\n\nZapisi v napravi, v kateri izbrišete račun, bodo trajno izbrisani. Ne izbrišite računa v napravi z zapisi.\n\nČe so zapisi, ki jih želite obdržati, v drugi napravi, ne izbrišite računa in si oglejte pogosta vprašanja.\n\nPodrobnosti: {exceptionMessage}",
   "emailAlreadyInUse": "Registracija ni mogoča, ker je e-poštni naslov, ki ga uporabljate za račun {accountTypeProviderName}, že povezan z drugim računom Pilll. Oglejte si tudi pogosta vprašanja. Podrobnosti: {exceptionMessage}",
   "todaySchedule": "Današnji dogodki",
   "calendarSchedule": "Dogodki v koledarju",

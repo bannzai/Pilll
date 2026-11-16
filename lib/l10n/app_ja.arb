@@ -1897,9 +1897,9 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "この{accountTypeProviderName}アカウントは、別の端末での操作やログインで作られた別のPilllのアカウントに紐付いているため登録ができません。\n\n残したい記録がこの端末にある場合\n1. 記録の無い方の端末で「設定」→「アカウント設定」→「退会する」を行う\n2. この端末でもう一度アカウント登録をする\n3. 記録の無い方の端末でアプリを再起動し「すでにアカウントをお持ちの方はこちら」からログインする\n\n退会した端末の記録は削除され、元に戻せません。記録のある端末では退会しないでください。\n\n残したい記録が別の端末にある場合は、退会せずにFAQをご覧ください。\n\n詳細: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "この{accountTypeProviderName}アカウントは、別の端末での操作やログインで作られた別のPilllのアカウントに紐付いているため登録ができません。\n\n残したい記録がこの端末だけにある場合\n1. この{accountTypeProviderName}アカウントを登録済みで、記録の無い方の端末で「設定」→「アカウント設定」→「退会する」を行う (退会の後も、この{accountTypeProviderName}アカウントはもう一度登録できます)\n2. この端末でもう一度アカウント登録をする\n3. 記録の無い方の端末でアプリを再起動し「すでにアカウントをお持ちの方はこちら」から同じ{accountTypeProviderName}アカウントでログインする\n\n退会したアカウントの記録は削除され、元に戻せません。残したい記録のある端末では退会しないでください。\n\nそれ以外の場合 (残したい記録が別の端末にもある、どの端末で登録したか分からない) は、退会せずにFAQをご覧ください。\n\n詳細: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
-    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に別のPilllアカウントに連携済みで登録できない場合のエラーダイアログの本文です。原因と、記録を引き継ぐ手順を案内します。退会は取り消せないため、退会するのは「記録の無い方の端末」だけであることを取り違えないように訳してください。改行と番号 (1. 2. 3.) は原文のまま残してください。かぎ括弧内の画面名は、アプリの既存の訳と同じ語にしてください: 「設定」は settings、「アカウント設定」は accountSettings、「退会する」は withdraw、「すでにアカウントをお持ちの方はこちら」は existingAccountUsers、「アカウント登録」は registerAccount の訳です。「FAQ」はこのダイアログのボタン seeFAQ が開くページを指します。",
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に別のPilllアカウントに連携済みで登録できない場合のエラーダイアログの本文です。原因と、記録を引き継ぐ手順を案内します。退会は取り消せないため、退会するのは「記録の無い方の端末」だけであることを取り違えないように訳してください。改行と番号 (1. 2. 3.) は原文のまま残し、{accountTypeProviderName} は原文と同じ 4 か所に入れてください。かぎ括弧内の画面名は、アプリの既存の訳と同じ語にしてください: 「設定」は settings、「アカウント設定」は accountSettings、「退会する」は withdraw、「すでにアカウントをお持ちの方はこちら」は existingAccountUsers、「アカウント登録」は registerAccount の訳です。「FAQ」はこのダイアログのボタン seeFAQ が開くページを指します。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"

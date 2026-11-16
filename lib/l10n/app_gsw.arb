@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Die Funktion gaht uf Grät, wo Gsundheit nöd understützed, leider nöd",
   "enableHealthKitFromSettings": "Du chasch de Zuegriff uf Gsundheit i de Iistellige aktiviere",
   "accountAlreadyLinked": "Dis {accountTypeProviderName}-Konto isch scho mit dim Pilll-Konto verchnüpft. Probier, d Aazeig z aktualisiere, und lueg au i d FAQ. Details: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Das {accountTypeProviderName}-Konto isch scho mit eme andere Pilll-Konto verbunde, wo dur e Aktion oder es Iilogge uf eme andere Grät entstande isch. Drum chasch di demit nöd registriere.\n\nWänn d Ufzeichnige, wo d bhalte wotsch, uf däm Grät sind\n1. Gang uf em Grät ohni Ufzeichnige zu «Iistellige» → «Konto-Iistellige» → «Konto lösche»\n2. Wähl uf däm Grät nomal «Konto aalege»\n3. Start Pilll uf em Grät ohni Ufzeichnige neu und logg di über «Hesch scho es Konto?» ii\n\nD Ufzeichnige uf em Grät, wo s Konto glöscht wird, sind nachher für immer weg. Lösch s Konto nöd uf em Grät mit de Ufzeichnige.\n\nWänn d Ufzeichnige, wo d bhalte wotsch, uf eme andere Grät sind, lösch s Konto nöd und lueg d FAQ aa.\n\nDetails: {exceptionMessage}",
   "emailAlreadyInUse": "Du chasch di nöd registriere, will d E-Mail-Adrässe vo dim {accountTypeProviderName}-Konto scho mit eme andere Pilll-Konto verchnüpft isch. Lueg bitte au i d FAQ. Details: {exceptionMessage}",
   "todaySchedule": "Dini Termin für hüt",
   "calendarSchedule": "Kaländertermin",

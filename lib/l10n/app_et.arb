@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "See funktsioon pole saadaval seadmetes, mis ei toeta rakendust Tervis",
   "enableHealthKitFromSettings": "Luba rakenduses Seaded juurdepääs rakendusele Tervis",
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba sinu Pilll kontoga seotud. Proovi ekraani värskendada ja vaata ka korduma kippuvaid küsimusi. Üksikasjad: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "See {accountTypeProviderName} konto on seotud teise Pilll kontoga, mis loodi teises seadmes tehtud toimingu või sisselogimise käigus. Seetõttu ei saa sellega kontot luua.\n\nKui kirjed, mida soovid alles hoida, on selles seadmes\n1. Vali kirjeteta seadmes „Seaded” → „Konto seaded” → „Kustuta konto”\n2. Vali selles seadmes uuesti „Loo konto”\n3. Taaskäivita Pilll kirjeteta seadmes ja logi sisse valiku „Konto juba olemas?” kaudu\n\nSeadmes, kus konto kustutad, kustutatakse kirjed jäädavalt. Ära kustuta kontot seadmes, kus on kirjed.\n\nKui kirjed, mida soovid alles hoida, on teises seadmes, ära kustuta kontot ja vaata korduma kippuvaid küsimusi.\n\nÜksikasjad: {exceptionMessage}",
   "emailAlreadyInUse": "Sa ei saa registreeruda, sest sinu {accountTypeProviderName} kontoga kasutatav e-posti aadress on juba seotud teise Pilll kontoga. Vaata ka korduma kippuvaid küsimusi. Üksikasjad: {exceptionMessage}",
   "todaySchedule": "Tänased sündmused",
   "calendarSchedule": "Kalendri plaanid",

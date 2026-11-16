@@ -341,7 +341,6 @@
   "healthKitDoesNotSupport": "Den här funktionen är inte tillgänglig på enheter som inte stöder Hälsa",
   "enableHealthKitFromSettings": "Du kan ge åtkomst till Hälsa i appen Inställningar",
   "accountAlreadyLinked": "Det här {accountTypeProviderName}-kontot är redan kopplat till ditt Pilll-konto. Prova att uppdatera skärmen. Se även vanliga frågor. Detaljer: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "Det här {accountTypeProviderName}-kontot är kopplat till ett annat Pilll-konto som skapades genom en åtgärd eller inloggning på en annan enhet. Därför kan du inte registrera dig med det.\n\nOm anteckningarna du vill behålla finns på den här enheten\n1. På enheten utan anteckningar väljer du ”Inställningar” → ”Kontoinställningar” → ”Radera konto”\n2. På den här enheten väljer du ”Skapa konto” igen\n3. Starta om Pilll på enheten utan anteckningar och logga in via ”Har du redan ett konto?”\n\nAnteckningarna på enheten där du raderar kontot försvinner permanent. Radera inte kontot på enheten med anteckningarna.\n\nOm anteckningarna du vill behålla finns på en annan enhet ska du inte radera kontot. Läs vanliga frågor.\n\nDetaljer: {exceptionMessage}",
   "emailAlreadyInUse": "Du kan inte registrera dig eftersom e-postadressen du använder med ditt {accountTypeProviderName}-konto redan är kopplad till ett annat Pilll-konto. Läs gärna också vanliga frågor. Detaljer: {exceptionMessage}",
   "todaySchedule": "Dagens händelser",
   "calendarSchedule": "Kalenderhändelser",
