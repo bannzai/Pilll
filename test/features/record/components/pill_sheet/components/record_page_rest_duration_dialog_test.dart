@@ -325,7 +325,8 @@ void main() {
             case PillSheetAppearanceMode.number:
               expect(titleText, startsWith('1番'));
             case PillSheetAppearanceMode.date:
-              expect(titleText, startsWith('9/1'));
+              // 「9/1」の先頭の一致だけでは「9/10」「9/11」でも通るため、日の直後に数字が続かないことまで確かめる
+              expect(titleText, matches(RegExp(r'^9/1(?!\d)')));
             case PillSheetAppearanceMode.sequential:
             case PillSheetAppearanceMode.cyclicSequential:
               expect(titleText, startsWith('1番'));
