@@ -14,3 +14,8 @@ Siri AI (iOS 27.3 のベータで開発者向けの先行プレビューが始�
 ## 付けられるようになる条件
 
 iOS 27.3 の SDK を含む Xcode で出荷用のビルド (App Store に提出するビルド) を作れるようになること。その時に `RecordPillIntent` へマクロを付ける。今のうちに済ませているのは、今のツールチェーンで出荷できる範囲 (intent・`AppShortcutsProvider` への発話の登録・`title`・`description`) まで。
+
+## Simulator での確かめ方
+
+- ショートカットアプリの一覧に出る App Shortcut のタイル (「ピルを記録」) は、Simulator では実行できず「Unable to run App Shortcut」になる。アプリが起動中でも終了状態でも同じだった (2026-11-16 に GitHub Actions の runner の Simulator で確認)。bannzai/Focus の PR https://github.com/bannzai/Focus/pull/1327 は、Simulator 向けの署名に Team ID が無いことを OS が拒否するためと報告している (このリポジトリではログを取れず、原因は確かめていない)
+- intent の動作は、ショートカットアプリで新しいショートカットを作り、アクション検索から Pilll のアクションを足して実行すると確かめられる。アプリを終了した状態から実行して、記録と返答まで動くことを同じ日に確認した
