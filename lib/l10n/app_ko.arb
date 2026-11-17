@@ -341,7 +341,7 @@
   "healthKitDoesNotSupport": "건강 앱을 지원하지 않는 기기에서는 사용할 수 없어요",
   "enableHealthKitFromSettings": "설정 앱에서 건강 앱 접근을 허용해 주세요",
   "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 Pilll 계정에 연결되어 있어요. 화면을 새로고침해 보고 자주 묻는 질문도 확인해 주세요. 자세한 내용: {exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 이 계정으로 가입할 수 없어요. 자주 묻는 질문도 확인해 주세요. 자세한 내용: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 다른 기기에서의 작업이나 로그인으로 생성된 다른 Pilll 계정에 이미 연결되어 있어 등록할 수 없어요.\n\n남기고 싶은 기록이 이 기기에만 있다면\n1. 이 {accountTypeProviderName} 계정이 등록되어 있고 기록은 없는 다른 기기에서 ‘설정’ → ‘계정 설정’ → ‘계정 삭제’를 선택해 주세요 (삭제한 뒤에도 이 {accountTypeProviderName} 계정을 다시 등록할 수 있어요)\n2. 이 기기에서 계정을 다시 등록해 주세요\n3. 기록이 없는 기기에서 앱을 다시 시작하고 ‘이미 계정이 있나요?’에서 동일한 {accountTypeProviderName} 계정으로 로그인해 주세요\n\n삭제한 계정의 기록은 복구할 수 없어요. 남기고 싶은 기록이 있는 기기에서는 계정을 삭제하지 마세요.\n\n남기고 싶은 기록이 다른 기기에도 있거나 어느 기기에서 등록했는지 모르겠다면, 계정을 삭제하지 말고 FAQ를 확인해 주세요.\n\n상세 정보: {exceptionMessage}",
   "emailAlreadyInUse": "{accountTypeProviderName} 계정에서 사용하는 이메일 주소가 이미 다른 Pilll 계정에 연결되어 있어 가입할 수 없어요. FAQ도 확인해 주세요. 자세한 내용: {exceptionMessage}",
   "todaySchedule": "오늘의 일정이에요",
   "calendarSchedule": "캘린더 일정",

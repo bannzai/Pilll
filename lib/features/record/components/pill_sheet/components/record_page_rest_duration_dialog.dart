@@ -199,22 +199,29 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
     );
   }
 
+  /// 服用お休みを始めるピル (次に飲むピル) の、表示モードに合わせた番号か日付の表記。
+  /// 服用お休みの保存処理と同じ [PillSheetGroupRestDurationDomain.targetBeginRestDurationPillSheet] から求める。
+  /// 最後に服用したピルシートから求めると、全錠服用済みで次のピルシートが未服用の時に、番号がそのピルシートの錠数を超えるため
   String get _number {
+    final targetBeginRestDurationPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet;
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return L.withNumber(
-          (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1).toString(),
-        );
-      case PillSheetAppearanceMode.date:
-        final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.displayPillTakeDate(
-          pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1,
-        );
-        final dateString = DateTimeFormatter.monthAndDay(date);
-        return dateString;
       case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
         return L.withNumber(
-          (pillSheetGroup.sequentialLastTakenPillNumber + 1).toString(),
+          pillSheetGroup
+              .pillNumberWithoutDateOrZero(
+                pillSheetAppearanceMode: appearanceMode,
+                pageIndex: targetBeginRestDurationPillSheet.groupIndex,
+                pillNumberInPillSheet: targetBeginRestDurationPillSheet.lastTakenOrZeroPillNumber + 1,
+              )
+              .toString(),
+        );
+      case PillSheetAppearanceMode.date:
+        return DateTimeFormatter.monthAndDay(
+          targetBeginRestDurationPillSheet.displayPillTakeDate(
+            targetBeginRestDurationPillSheet.lastTakenOrZeroPillNumber + 1,
+          ),
         );
     }
   }

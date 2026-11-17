@@ -341,7 +341,7 @@
   "healthKitDoesNotSupport": "不支持“健康”App 的设备无法使用此功能",
   "enableHealthKitFromSettings": "请在“设置”App 中开启对“健康”App 的访问权限",
   "accountAlreadyLinked": "这个 {accountTypeProviderName} 账号已经关联到你的 Pilll 账号。请试着刷新页面，也可以查看常见问题。详情：{exceptionMessage}",
-  "accountAlreadyLinkedWithOtherPilllAccount": "此 {accountTypeProviderName} 账号已关联其他 Pilll 账号，因此无法用它注册。也请查看常见问题。详情：{exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "此 {accountTypeProviderName} 账号已关联到另一个通过其他设备上的操作或登录创建的 Pilll 账号，因此无法注册。\n\n如果想保留的记录只在这台设备上\n1. 在已注册此 {accountTypeProviderName} 账号且没有记录的另一台设备上，依次打开“设置”→“账号设置”→“删除账号”（删除后仍可重新注册此 {accountTypeProviderName} 账号）\n2. 在这台设备上重新注册账号\n3. 在没有记录的设备上重启应用，然后通过“已有账号？”使用同一 {accountTypeProviderName} 账号登录\n\n已删除账号中的记录会永久清除，无法恢复。请勿在存有想保留记录的设备上删除账号。\n\n如果另一台设备上也有想保留的记录，或不清楚是在哪台设备上注册的，请先不要删除账号，并查看常见问题。\n\n详情：{exceptionMessage}",
   "emailAlreadyInUse": "你用于 {accountTypeProviderName} 账号的邮箱已关联另一个 Pilll 账号，因此无法注册。也请查看常见问题。详情：{exceptionMessage}",
   "todaySchedule": "今天的日程",
   "calendarSchedule": "日历日程",
