@@ -51,13 +51,13 @@ void main() {
 
       expect(tester.takeException(), isNull);
       expect(
-        tester.widget<Scrollbar>(find.byType(Scrollbar)).thumbVisibility,
+        tester.widget<RawScrollbar>(find.byType(RawScrollbar)).thumbVisibility,
         isTrue,
       );
-      // Scrollbar は route の PrimaryScrollController を使うため、本文も同じ controller で動いていることを確かめる
+      // RawScrollbar は route の PrimaryScrollController を使うため、本文も同じ controller で動いていることを確かめる
       expect(
         PrimaryScrollController.of(
-          tester.element(find.byType(Scrollbar)),
+          tester.element(find.byType(RawScrollbar)),
         ).position.maxScrollExtent,
         greaterThan(0),
       );
@@ -65,7 +65,7 @@ void main() {
 
     for (final textDirection in TextDirection.values) {
       testWidgets(
-          '文字方向が $textDirection の時、スクロールバーが出る側 (文字方向の終わり側) にだけ本文の余白 12 を取る',
+          '文字方向が $textDirection の時、本文の幅はスクロールバーの分だけ狭くならず、スクロールバーは本文の外側 12 の位置に描く設定になる',
           (WidgetTester tester) async {
         tester.view.physicalSize = const Size(320, 480);
         tester.view.devicePixelRatio = 1;
@@ -87,58 +87,35 @@ void main() {
         await tester.pumpAndSettle();
 
         expect(tester.takeException(), isNull);
-        switch (textDirection) {
-          case TextDirection.ltr:
-            expect(
-              tester
-                      .getRect(
-                        find.descendant(
-                          of: find.byType(SingleChildScrollView),
-                          matching: find.byType(Text),
-                        ),
-                      )
-                      .left -
-                  tester.getRect(find.byType(SingleChildScrollView)).left,
-              0,
-            );
-            expect(
-              tester.getRect(find.byType(SingleChildScrollView)).right -
-                  tester
-                      .getRect(
-                        find.descendant(
-                          of: find.byType(SingleChildScrollView),
-                          matching: find.byType(Text),
-                        ),
-                      )
-                      .right,
-              12,
-            );
-          case TextDirection.rtl:
-            expect(
-              tester
-                      .getRect(
-                        find.descendant(
-                          of: find.byType(SingleChildScrollView),
-                          matching: find.byType(Text),
-                        ),
-                      )
-                      .left -
-                  tester.getRect(find.byType(SingleChildScrollView)).left,
-              12,
-            );
-            expect(
-              tester.getRect(find.byType(SingleChildScrollView)).right -
-                  tester
-                      .getRect(
-                        find.descendant(
-                          of: find.byType(SingleChildScrollView),
-                          matching: find.byType(Text),
-                        ),
-                      )
-                      .right,
-              0,
-            );
-        }
+        // 画面の幅 320 から、ダイアログの外側の余白 40 と AlertDialog の content の余白 24 を左右に引いた範囲いっぱいに本文がある
+        expect(
+          tester
+              .getRect(
+                find.descendant(
+                  of: find.byType(SingleChildScrollView),
+                  matching: find.byType(Text),
+                ),
+              )
+              .left,
+          40 + 24,
+        );
+        expect(
+          tester
+              .getRect(
+                find.descendant(
+                  of: find.byType(SingleChildScrollView),
+                  matching: find.byType(Text),
+                ),
+              )
+              .right,
+          320 - 40 - 24,
+        );
+        expect(
+          tester
+              .widget<RawScrollbar>(find.byType(RawScrollbar))
+              .crossAxisMargin,
+          -12,
+        );
       });
     }
 

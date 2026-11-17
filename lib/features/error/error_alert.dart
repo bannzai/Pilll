@@ -33,13 +33,17 @@ class ErrorAlert extends StatelessWidget {
       // 手順を案内する長い本文が画面の高さを超えても、末尾まで読めるようにスクロールさせる。
       // 本文が行の切れ目で終わって見えると続きがあることに気づけないため、スクロールバーを常に出す。
       // primary: true は、Scrollbar と本文が同じ ScrollController (ダイアログの route の PrimaryScrollController) を使うため
-      content: Scrollbar(
+      // RawScrollbar を使うのは、Material の Scrollbar が iOS で使う CupertinoScrollbar には crossAxisMargin が無いため
+      content: RawScrollbar(
         thumbVisibility: true,
+        thumbColor: TextColor.black.withValues(alpha: 0.3),
+        thickness: 4,
+        radius: const Radius.circular(2),
+        // 本文の幅を変えずに文字とも重ならないよう、スクロールバーを本文の外側 (AlertDialog の content の左右の余白 24 の中) に描く。
+        // 負の値は本文の端から外へ出す距離で、スクロールバーが出る側 (文字方向の終わり側) に効く
+        crossAxisMargin: -12,
         child: SingleChildScrollView(
           primary: true,
-          // スクロールバー (幅 4 と余白) が本文の文字に重ならない幅。
-          // 右から左へ書く言語ではスクロールバーが左に出るため、文字方向の終わり側に取る
-          padding: const EdgeInsetsDirectional.only(end: 12),
           child: Text(
             errorMessage,
             style: const TextStyle(
