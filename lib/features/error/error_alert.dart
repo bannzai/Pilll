@@ -37,8 +37,9 @@ class ErrorAlert extends StatelessWidget {
         thumbVisibility: true,
         child: SingleChildScrollView(
           primary: true,
-          // スクロールバー (幅 4 と余白) が本文の右端の文字に重ならない幅
-          padding: const EdgeInsets.only(right: 12),
+          // スクロールバー (幅 4 と余白) が本文の文字に重ならない幅。
+          // 右から左へ書く言語ではスクロールバーが左に出るため、文字方向の終わり側に取る
+          padding: const EdgeInsetsDirectional.only(end: 12),
           child: Text(
             errorMessage,
             style: const TextStyle(

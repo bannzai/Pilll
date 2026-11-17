@@ -63,6 +63,85 @@ void main() {
       );
     });
 
+    for (final textDirection in TextDirection.values) {
+      testWidgets(
+          '文字方向が $textDirection の時、スクロールバーが出る側 (文字方向の終わり側) にだけ本文の余白 12 を取る',
+          (WidgetTester tester) async {
+        tester.view.physicalSize = const Size(320, 480);
+        tester.view.devicePixelRatio = 1;
+        addTearDown(tester.view.reset);
+
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Directionality(
+              textDirection: textDirection,
+              child: ErrorAlert(
+                errorMessage: List.generate(
+                  80,
+                  (index) => '${index + 1}行目の案内',
+                ).join('\n'),
+              ),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+
+        expect(tester.takeException(), isNull);
+        switch (textDirection) {
+          case TextDirection.ltr:
+            expect(
+              tester
+                      .getRect(
+                        find.descendant(
+                          of: find.byType(SingleChildScrollView),
+                          matching: find.byType(Text),
+                        ),
+                      )
+                      .left -
+                  tester.getRect(find.byType(SingleChildScrollView)).left,
+              0,
+            );
+            expect(
+              tester.getRect(find.byType(SingleChildScrollView)).right -
+                  tester
+                      .getRect(
+                        find.descendant(
+                          of: find.byType(SingleChildScrollView),
+                          matching: find.byType(Text),
+                        ),
+                      )
+                      .right,
+              12,
+            );
+          case TextDirection.rtl:
+            expect(
+              tester
+                      .getRect(
+                        find.descendant(
+                          of: find.byType(SingleChildScrollView),
+                          matching: find.byType(Text),
+                        ),
+                      )
+                      .left -
+                  tester.getRect(find.byType(SingleChildScrollView)).left,
+              12,
+            );
+            expect(
+              tester.getRect(find.byType(SingleChildScrollView)).right -
+                  tester
+                      .getRect(
+                        find.descendant(
+                          of: find.byType(SingleChildScrollView),
+                          matching: find.byType(Text),
+                        ),
+                      )
+                      .right,
+              0,
+            );
+        }
+      });
+    }
+
     testWidgets('本文が短い時、本文が表示される', (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(home: ErrorAlert(errorMessage: '短いエラー')),
