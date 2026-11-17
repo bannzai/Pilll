@@ -30,6 +30,39 @@ void main() {
       expect(tester.getSize(find.text(errorMessage)).height, greaterThan(480));
     });
 
+    testWidgets('本文が画面の高さより長い時、続きがあることが分かるようにスクロールバーが常に出る設定で、本文と同じスクロール位置を使う', (
+      WidgetTester tester,
+    ) async {
+      tester.view.physicalSize = const Size(320, 480);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+
+      await tester.pumpWidget(
+        MaterialApp(
+          home: ErrorAlert(
+            errorMessage: List.generate(
+              80,
+              (index) => '${index + 1}行目の案内',
+            ).join('\n'),
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      expect(tester.takeException(), isNull);
+      expect(
+        tester.widget<Scrollbar>(find.byType(Scrollbar)).thumbVisibility,
+        isTrue,
+      );
+      // Scrollbar は route の PrimaryScrollController を使うため、本文も同じ controller で動いていることを確かめる
+      expect(
+        PrimaryScrollController.of(
+          tester.element(find.byType(Scrollbar)),
+        ).position.maxScrollExtent,
+        greaterThan(0),
+      );
+    });
+
     testWidgets('本文が短い時、本文が表示される', (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(home: ErrorAlert(errorMessage: '短いエラー')),

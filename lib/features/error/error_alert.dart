@@ -30,15 +30,23 @@ class ErrorAlert extends StatelessWidget {
           color: TextColor.black,
         ),
       ),
-      // 手順を案内する長い本文が画面の高さを超えても、末尾まで読めるようにスクロールさせる
-      content: SingleChildScrollView(
-        child: Text(
-          errorMessage,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.black,
+      // 手順を案内する長い本文が画面の高さを超えても、末尾まで読めるようにスクロールさせる。
+      // 本文が行の切れ目で終わって見えると続きがあることに気づけないため、スクロールバーを常に出す。
+      // primary: true は、Scrollbar と本文が同じ ScrollController (ダイアログの route の PrimaryScrollController) を使うため
+      content: Scrollbar(
+        thumbVisibility: true,
+        child: SingleChildScrollView(
+          primary: true,
+          // スクロールバー (幅 4 と余白) が本文の右端の文字に重ならない幅
+          padding: const EdgeInsets.only(right: 12),
+          child: Text(
+            errorMessage,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.black,
+            ),
           ),
         ),
       ),
