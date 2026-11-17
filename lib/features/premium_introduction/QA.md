@@ -89,7 +89,7 @@ last_verified_at: 2026-10-17
 - [x] **年額の割引バッジ表示**: 年額プランボタンの右上に月額比の割引率バッジ(例: 「◯％OFF」)が表示される
 - [x] **買い切りプラン表示 (iOSのみ)**: iOS では月額・年額に加えて買い切り(lifetime)プランのボタンが表示される (Android で表示されないことの確認は Android 環境が無く本 QA の対象外)
 - [ ] **プレミアム会員時の表示切り替え**: 既にプレミアムのユーザーでシートを開くと購入ボタン一式が表示されず、代わりにジュエル画像と「プレミアム会員です」の感謝メッセージが表示される
-  - ⏭️ スキップ: dev 環境でプレミアム状態を再現する手段がない。実購入には Sandbox テスターアカウントが必要 (本 QA では未提供)。コードレビューでは `premium_introduction_sheet.dart` の `if (user.isPremium)` 分岐で `PremiumUserThanksRow` に切り替わることを確認済み
+  - ⏭️ スキップ: dev 環境でプレミアム状態を再現する手段がない。実購入には Sandbox テスターアカウントが必要 (本 QA では未提供)。コードレビューでは `premium_introduction_sheet.dart` の `if (customerInfo.isPremium)` 分岐で `PremiumUserThanksRow` に切り替わることを確認済み
 
 #### 動作確認
 <details>
