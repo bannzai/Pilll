@@ -1,0 +1,116 @@
+{
+  "sourceLanguage" : "ja",
+  "strings" : {
+    "Pilll でピルシートを追加すると記録できます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a pill sheet in Pilll to record your pill"
+          }
+        }
+      }
+    },
+    "Pilll を開いて初期設定を済ませてください" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Pilll and finish setup first"
+          }
+        }
+      }
+    },
+    "Siri とショートカットからの記録はプレミアムプランの機能です" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recording from Siri and Shortcuts is a Premium feature"
+          }
+        }
+      }
+    },
+    "ピルを記録" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Pill"
+          }
+        }
+      }
+    },
+    "今日のピルはすでに記録済みです" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's pill is already recorded"
+          }
+        }
+      }
+    },
+    "今日のピルを記録" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Record Today's Pill"
+          }
+        }
+      }
+    },
+    "今日のピルを記録しました" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recorded today's pill"
+          }
+        }
+      }
+    },
+    "今日のピルを飲んだことを Pilll に記録します" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Records that you took today's pill in Pilll"
+          }
+        }
+      }
+    },
+    "服用お休み中のため記録していません" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not recorded because you're on a pill break"
+          }
+        }
+      }
+    },
+    "記録できなかったため Pilll を開いて記録してください" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recording failed so please record in Pilll"
+          }
+        }
+      }
+    },
+    "記録を端末に保存したので通信できるようになると反映されます" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saved on this device and it will sync when you're back online"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -344,6 +344,67 @@ private func analytics(name: String, parameters: [String: Any]? = nil, function:
   channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
 }
 
+// MARK: - App Intent
+extension AppDelegate {
+  /// App Intent (Siri・ショートカット) からの服用記録を Dart 側 (lib/native/channel.dart の recordPillFromAppIntent) に実行させ、
+  /// Dart が返した AppIntentRecordPillResult の name を completion に渡す。Dart 側の処理に届かなかった時は nil を渡す。
+  /// main thread で呼ぶ。冪等ではない (呼ぶたびに Dart 側が未服用の 1 回分を記録するため)
+  func recordPillFromAppIntent(completion: @escaping (String?) -> Void) {
+    // 終了状態から画面を開かずに起動された時は scene が接続されず画面のエンジンが無いため、通知の「飲んだ」と同じく headless で起動する
+    startHeadlessEngineIfNeeded()
+    guard let recordChannel = channel else {
+      completion(nil)
+      return
+    }
+    // headless エンジンへ送る時は、Dart 側の処理が終わるまで破棄されないよう実行中として数える
+    let usesHeadlessEngine = headlessEngine != nil
+    if usesHeadlessEngine {
+      headlessEngineInFlightCount += 1
+    }
+    invokeRecordPillFromAppIntent(
+      recordChannel: recordChannel,
+      // 送り直しが要るのは、Dart のハンドラ登録前に溜めた呼び出しが捨てられた時だけ (下の関数の document コメント)。
+      // 通知の「飲んだ」(RECORD_PILL) は、ハンドラ登録までを「通常は1秒前後」として 5 秒待っている (同 action のコメント)。
+      // その 2 倍の 10 秒分を上限にした。この回数は実測で決めた値ではない
+      remainingRetryCount: 10
+    ) { [self] resultName in
+      if usesHeadlessEngine {
+        headlessEngineInFlightCount -= 1
+        destroyHeadlessEngineIfIdle()
+      }
+      completion(resultName)
+    }
+  }
+}
+
+/// recordChannel で Dart 側の recordPillFromAppIntent を呼び、返った AppIntentRecordPillResult の name を completion に渡す。
+/// Dart 側がハンドラを登録する前に送った呼び出しは、Flutter がチャネルごとに 1 件だけ溜める (`ChannelBuffers.kDefaultBufferSize = 1`)。
+/// 溜まっている間に同じチャネルへ次の呼び出し (analytics も同じチャネルに送っている) が来ると、先に溜まっていた 1 件がハンドラに渡されないまま
+/// 捨てられ、空の応答 (iOS 側では未実装) が返る (`_Channel._dropOverflowMessages` の `message.invoke(null); // send empty reply to the plugin side`。
+/// 出典: Flutter SDK の `bin/cache/pkg/sky_engine/lib/ui/channel_buffers.dart`。2026-11-16 に読んで確認)。
+/// 未実装が返った時は 1 秒おきに remainingRetryCount 回まで送り直し、それでも届かなければ nil を渡す。
+/// 捨てられた呼び出しは Dart 側のハンドラに渡っていないため、送り直しで二重に記録することは無い (Dart 側のハンドラが呼ばれた時に返るのは文字列かエラーで、未実装は返らない)
+private func invokeRecordPillFromAppIntent(
+  recordChannel: FlutterMethodChannel,
+  remainingRetryCount: Int,
+  completion: @escaping (String?) -> Void
+) {
+  recordChannel.invokeMethod("recordPillFromAppIntent", arguments: nil, result: { result in
+    if let resultObject = result as? NSObject, resultObject === FlutterMethodNotImplemented, remainingRetryCount > 0 {
+      // 間隔の 1 秒は、通知の「飲んだ」(RECORD_PILL) のコメントが Dart のハンドラ登録までを「通常は1秒前後」としているのに合わせた。実測で決めた値ではない
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        invokeRecordPillFromAppIntent(
+          recordChannel: recordChannel,
+          remainingRetryCount: remainingRetryCount - 1,
+          completion: completion
+        )
+      }
+      return
+    }
+    completion(result as? String)
+  })
+}
+
 // MARK: - Avoid bug for flutter app badger
 // ref: https://github.com/g123k/flutter_app_badger/pull/52
 extension UNUserNotificationCenter {
