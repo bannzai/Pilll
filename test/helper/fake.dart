@@ -2,46 +2,76 @@ import 'dart:math';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:mockito/mockito.dart';
-import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:riverpod/riverpod.dart';
 
-class FakeUser extends Mock implements User {
-  FakeUser({
-    // ignore: unused_element
-    this.fakeIsPremium = false,
-    // ignore: unused_element
-    this.fakeIsTrial = false,
-    // ignore: unused_element
-    this.fakeTrialDeadlineDate,
-    // ignore: unused_element
-    this.fakeDiscountEntitlementDeadlineDate,
-    // ignore: unused_element
-    this.fakeIsExpiredDiscountEntitlements = false,
-  });
-  final DateTime? fakeTrialDeadlineDate;
-  final DateTime? fakeDiscountEntitlementDeadlineDate;
-  final bool fakeIsPremium;
-  final bool fakeIsTrial;
-  final bool fakeIsExpiredDiscountEntitlements;
-
-  @override
-  bool get isPremium => fakeIsPremium;
-  @override
-  bool get isTrial => fakeIsTrial;
-  @override
-  bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
-  @override
-  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
-  @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      fakeDiscountEntitlementDeadlineDate;
-
-  @override
-  bool get premiumOrTrial => isPremium || isTrial;
+/// テスト用の RevenueCat の CustomerInfo を作る。
+/// [activePremiumProductIdentifier] を渡すと、その商品で有効な Premium entitlement を持つ。
+/// entitlement の期限は、SDK と同じく [allExpirationDates] のその商品の期限にする (無ければ期限なし)
+CustomerInfo fakeCustomerInfo({
+  List<String> activeSubscriptions = const [],
+  Map<String, String?> allExpirationDates = const {},
+  String? activePremiumProductIdentifier,
+  // RevenueCat のサーバーが CustomerInfo を返した時刻。空文字は時刻を持たない (判定に端末の時刻だけを使う) 状態
+  String requestDate = '',
+}) {
+  final premiumEntitlements = {
+    if (activePremiumProductIdentifier != null)
+      'Premium': EntitlementInfo(
+        'Premium',
+        true,
+        true,
+        '',
+        '',
+        activePremiumProductIdentifier,
+        false,
+        expirationDate: allExpirationDates[activePremiumProductIdentifier],
+      ),
+  };
+  return CustomerInfo(
+    EntitlementInfos(premiumEntitlements, premiumEntitlements),
+    const {},
+    activeSubscriptions,
+    const [],
+    const [],
+    '',
+    '',
+    allExpirationDates,
+    requestDate,
+  );
 }
+
+/// 月額のサブスクリプションを購読中 (課金中) のユーザーの CustomerInfo。商品 ID は判定に使わないため実在しない値でよい
+final premiumCustomerInfo = fakeCustomerInfo(
+  activeSubscriptions: ['fake_premium_monthly'],
+  activePremiumProductIdentifier: 'fake_premium_monthly',
+);
+
+/// 課金もトライアル (Promotional Entitlement) も無いユーザーの CustomerInfo
+final freeCustomerInfo = fakeCustomerInfo();
+
+/// トライアル (Promotional Entitlement) を [trialDeadlineDate] まで付与されたユーザーの CustomerInfo
+CustomerInfo trialCustomerInfo({required DateTime trialDeadlineDate}) =>
+    fakeCustomerInfo(
+      activeSubscriptions:
+          trialDeadlineDate.isAfter(now()) ? ['rc_promo_Premium_custom'] : [],
+      allExpirationDates: {
+        'rc_promo_Premium_custom': trialDeadlineDate.toUtc().toIso8601String()
+      },
+      activePremiumProductIdentifier:
+          trialDeadlineDate.isAfter(now()) ? 'rc_promo_Premium_custom' : null,
+    );
+
+/// customerInfoProvider を最初のフレームから [customerInfo] を持つ状態にする override。
+/// 画面は UserSetup が CustomerInfo の取得後にだけ表示され requireValue で読むため、読み込み中の状態を経由させない
+Override customerInfoProviderOverride(CustomerInfo customerInfo) =>
+    customerInfoProvider.overrideWith(
+        () => FixedCustomerInfoNotifier(customerInfo: customerInfo));
 
 class FakeAnalytics extends Fake implements Analytics {
   @override

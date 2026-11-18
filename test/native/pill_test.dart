@@ -15,6 +15,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../helper/fake.dart';
@@ -370,6 +371,7 @@ void main() {
     // recordPillFromAppIntent を呼び、結果と、記録後の更新 (syncAfterRecord) に渡った PillSheetGroup を返す
     Future<(AppIntentRecordPillResult, List<PillSheetGroup>)> record({
       required User? user,
+      required CustomerInfo customerInfo,
       required PillSheetGroup? pillSheetGroup,
       required TakePill takePill,
     }) async {
@@ -377,6 +379,7 @@ void main() {
       return (
         await recordPillFromAppIntent(
           fetchUser: () async => user,
+          fetchCustomerInfo: () async => customerInfo,
           fetchPillSheetGroup: () async => pillSheetGroup,
           takePill: takePill,
           takePillTimeout: const Duration(seconds: 5),
@@ -388,11 +391,30 @@ void main() {
     }
 
     group('プレミアムとトライアルの判定', () {
+      test(
+          'Promotional Entitlement が無い既存ユーザーが users のトライアルの期限内なら、トライアル中なので記録する',
+          () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        final (result, _) = await record(
+          user: User(trialDeadlineDate: mockNow.add(const Duration(days: 1))),
+          customerInfo: freeCustomerInfo,
+          pillSheetGroup: v1PillSheetGroup(
+            lastTakenDate: DateTime.parse('2024-01-14'),
+          ),
+          takePill: takePill,
+        );
+
+        expect(result, AppIntentRecordPillResult.recorded);
+        verify(batch.commit()).called(1);
+      });
+
       test('プレミアムでもトライアル中でもない場合は記録せず notPremiumOrTrial を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: false, trialDeadlineDate: null),
+          user: const User(),
+          customerInfo: freeCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -408,7 +430,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: User(isPremium: false, trialDeadlineDate: mockNow),
+          user: const User(),
+          customerInfo: trialCustomerInfo(trialDeadlineDate: mockNow),
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -423,8 +446,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: User(
-            isPremium: false,
+          user: const User(),
+          customerInfo: trialCustomerInfo(
             trialDeadlineDate: mockNow.add(const Duration(seconds: 1)),
           ),
           pillSheetGroup: v1PillSheetGroup(
@@ -446,9 +469,9 @@ void main() {
 
         final (result, _) = await record(
           user: User(
-            isPremium: true,
             trialDeadlineDate: mockNow.subtract(const Duration(days: 1)),
           ),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -467,7 +490,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -486,7 +510,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(lastTakenDate: null),
           takePill: takePill,
         );
@@ -503,7 +528,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-15'),
           ),
@@ -521,7 +547,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 0),
           takePill: takePill,
         );
@@ -538,7 +565,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 1),
           takePill: takePill,
         );
@@ -555,7 +583,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v2PillSheetGroup(todayTakenCount: 2),
           takePill: takePill,
         );
@@ -572,6 +601,7 @@ void main() {
 
         final (result, syncedPillSheetGroups) = await record(
           user: null,
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -587,7 +617,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: null,
           takePill: takePill,
         );
@@ -605,7 +636,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-02-06'),
           ),
@@ -624,7 +656,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-02-05'),
           ),
@@ -665,7 +698,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroupWithRestDuration(
             restDurationBeginDate: DateTime.parse('2024-01-15'),
             restDurationEndDate: null,
@@ -682,7 +716,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroupWithRestDuration(
             restDurationBeginDate: DateTime.parse('2024-01-13'),
             restDurationEndDate: DateTime.parse('2024-01-16'),
@@ -698,7 +733,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroupWithRestDuration(
             restDurationBeginDate: DateTime.parse('2024-01-13'),
             restDurationEndDate: DateTime.parse('2024-01-15'),
@@ -714,7 +750,8 @@ void main() {
         final (takePill, batch) = takePillWithMockBatch();
 
         final (result, _) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroupWithRestDuration(
             restDurationBeginDate: DateTime.parse('2024-01-16'),
             restDurationEndDate: null,
@@ -746,7 +783,8 @@ void main() {
 
       test('TakePill が記録せずに null を返した場合は更新せず failed を返す', () async {
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -759,7 +797,8 @@ void main() {
 
       test('TakePill が例外を投げた場合は例外を外に出さず、更新せず failed を返す', () async {
         final (result, syncedPillSheetGroups) = await record(
-          user: const User(isPremium: true),
+          user: const User(),
+          customerInfo: premiumCustomerInfo,
           pillSheetGroup: v1PillSheetGroup(
             lastTakenDate: DateTime.parse('2024-01-14'),
           ),
@@ -775,7 +814,8 @@ void main() {
 
         expect(
           await recordPillFromAppIntent(
-            fetchUser: () async => const User(isPremium: true),
+            fetchUser: () async => const User(),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
             fetchPillSheetGroup: () async => v1PillSheetGroup(
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
@@ -801,7 +841,8 @@ void main() {
 
         expect(
           await recordPillFromAppIntent(
-            fetchUser: () async => const User(isPremium: true),
+            fetchUser: () async => const User(),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
             fetchPillSheetGroup: () async => v1PillSheetGroup(
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
@@ -826,6 +867,7 @@ void main() {
         expect(
           await recordPillFromAppIntent(
             fetchUser: () async => throw Exception('user'),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
             fetchPillSheetGroup: () async => v1PillSheetGroup(
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
@@ -846,6 +888,27 @@ void main() {
         expect(
           await recordPillFromAppIntent(
             fetchUser: () async => throw TimeoutException('user'),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePill,
+            takePillTimeout: const Duration(seconds: 5),
+            syncAfterRecord: (_) async {},
+          ),
+          AppIntentRecordPillResult.failed,
+        );
+        verifyNever(batch.commit());
+      });
+
+      test('CustomerInfo の取得が例外を投げた場合は、課金していない状態を作らずに記録せず failed を返す',
+          () async {
+        final (takePill, batch) = takePillWithMockBatch();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(),
+            fetchCustomerInfo: () async => throw Exception('customer info'),
             fetchPillSheetGroup: () async => v1PillSheetGroup(
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),
@@ -863,7 +926,8 @@ void main() {
 
         expect(
           await recordPillFromAppIntent(
-            fetchUser: () async => const User(isPremium: true),
+            fetchUser: () async => const User(),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
             fetchPillSheetGroup: () async => throw Exception('pillSheetGroup'),
             takePill: takePill,
             takePillTimeout: const Duration(seconds: 5),
@@ -879,7 +943,8 @@ void main() {
 
         expect(
           await recordPillFromAppIntent(
-            fetchUser: () async => const User(isPremium: true),
+            fetchUser: () async => const User(),
+            fetchCustomerInfo: () async => premiumCustomerInfo,
             fetchPillSheetGroup: () async => v1PillSheetGroup(
               lastTakenDate: DateTime.parse('2024-01-14'),
             ),

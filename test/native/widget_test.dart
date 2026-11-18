@@ -55,7 +55,7 @@ void main() {
   });
 
   group('#syncUserStatus', () {
-    test('ユーザーが無い時は data: null のまま plugin の saveWidgetData に渡す', () async {
+    test('プレミアム・トライアルの判定が無い (ユーザーか CustomerInfo が無い) 時は data: null のまま plugin の saveWidgetData に渡す', () async {
       TestWidgetsFlutterBinding.ensureInitialized();
       final homeWidgetCalls = <MethodCall>[];
       TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
@@ -68,7 +68,7 @@ void main() {
             .setMockMethodCallHandler(homeWidgetChannel, null),
       );
 
-      await syncUserStatus(user: null);
+      await syncUserStatus(premiumOrTrial: null);
 
       expect(
         homeWidgetCalls

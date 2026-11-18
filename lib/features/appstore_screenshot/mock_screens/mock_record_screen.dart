@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
@@ -100,7 +101,7 @@ class MockRecordScreen extends StatelessWidget {
       isOnReminder: true,
     );
     // マーケティング訴求のため、生理予定日ハイライト等が出るプレミアム状態で表示する。
-    const user = User(isPremium: true);
+    const user = User();
 
     // RecordPagePillSheetSettingButton / RecordPagePillSheet / RecordPageButton は
     // takePillProvider・registerReminderLocalNotificationProvider 等（databaseProvider 経由で
@@ -110,6 +111,7 @@ class MockRecordScreen extends StatelessWidget {
     return ProviderScope(
       overrides: [
         databaseProvider.overrideWith((ref) => DatabaseConnection('catalog-user')),
+        customerInfoProvider.overrideWith(() => FixedCustomerInfoNotifier(customerInfo: mockPremiumCustomerInfo)),
       ],
       child: Container(
         color: AppColors.background,
@@ -163,7 +165,7 @@ class MockRecordScreen extends StatelessWidget {
             RecordPageButton(
               pillSheetGroup: pillSheetGroup,
               currentPillSheet: pillSheet,
-              userIsPremiumOtTrial: user.premiumOrTrial,
+              userIsPremiumOtTrial: true,
               user: user,
               setting: setting,
             ),

@@ -17,6 +17,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 PillSheetGroup _pillSheetGroup({required DateTime lastTakenDate}) => PillSheetGroup(
@@ -49,7 +50,8 @@ Widget _buildPage(Stream<List<PillSheetModifiedHistory>> histories) {
   return ProviderScope(
     overrides: [
       databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
-      userProvider.overrideWith((ref) => Stream.value(const User(isPremium: true))),
+      userProvider.overrideWith((ref) => Stream.value(const User())),
+      customerInfoProviderOverride(premiumCustomerInfo),
       pillSheetModifiedHistoriesWithLimitProvider(limit: 20).overrideWith((ref) => histories),
     ],
     child: const MaterialApp(home: PillSheetModifiedHistoriesPage()),

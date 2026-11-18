@@ -89,7 +89,7 @@ last_verified_at: 2026-10-17
 - [x] **年額の割引バッジ表示**: 年額プランボタンの右上に月額比の割引率バッジ(例: 「◯％OFF」)が表示される
 - [x] **買い切りプラン表示 (iOSのみ)**: iOS では月額・年額に加えて買い切り(lifetime)プランのボタンが表示される (Android で表示されないことの確認は Android 環境が無く本 QA の対象外)
 - [ ] **プレミアム会員時の表示切り替え**: 既にプレミアムのユーザーでシートを開くと購入ボタン一式が表示されず、代わりにジュエル画像と「プレミアム会員です」の感謝メッセージが表示される
-  - ⏭️ スキップ: dev 環境でプレミアム状態を再現する手段がない。実購入には Sandbox テスターアカウントが必要 (本 QA では未提供)。コードレビューでは `premium_introduction_sheet.dart` の `if (user.isPremium)` 分岐で `PremiumUserThanksRow` に切り替わることを確認済み
+  - ⏭️ スキップ: dev 環境でプレミアム状態を再現する手段がない。実購入には Sandbox テスターアカウントが必要 (本 QA では未提供)。コードレビューでは `premium_introduction_sheet.dart` の `if (customerInfo.isPremium)` 分岐で `PremiumUserThanksRow` に切り替わることを確認済み
 
 #### 動作確認
 <details>
@@ -216,7 +216,7 @@ iOS シミュレータで買い切りプラン ($69.99・「一度の購入で�
 
 - [x] **プレミアム機能一覧へのリンク**: 「プレミアム機能を見る」ボタンをタップすると外部ブラウザでプレミアム機能紹介ページが開く
 - [x] **期間限定割引の表示 (該当ユーザーのみ)**: 割引権限(`hasDiscountEntitlement`)を持つユーザーでは、通常価格に取り消し線を引いた割引訴求と期限までのカウントダウンが月額プランボタンの上部に表示される
-  - 訂正: この割引権限はバックエンド側の個別付与が不要で、初期設定完了時(`EndInitialSetting`, lib/provider/user.dart)に全ユーザーへ自動的に`discountEntitlementDeadlineDate`が設定される(Remote Configのオフセット日数に基づく)。新規アカウントで初期設定を完了するだけで通常操作で再現できることを確認した
+  - 訂正: この割引権限はバックエンド側の個別付与が不要で、初期設定完了時に付与されるトライアル (RevenueCat の Promotional Entitlement) の期限に Remote Config の `discountEntitlementOffsetDay` 日を足した日が期限になる (`CustomerInfoPremium.discountEntitlementDeadlineDate`, lib/provider/customer_info.dart)。新規アカウントで初期設定を完了するだけで通常操作で再現できる
 - [ ] **オファリング取得失敗時のエラー画面**: 機内モード等でオファリング取得に失敗した状態でシートを開くと、エラーページが表示され、再読み込み操作でオファリング再取得を試みられる
   - ⏭️ スキップ: この iOS シミュレータの Settings アプリに Wi-Fi/機内モードのトグルが存在せず、シミュレータ単体でネットワークを切断する手段がない。Mac 本体のネットワークを切ると並行して動く他のセッションに影響するため実施を見送った。コードレビューでは `premium_introduction_sheet.dart` の `AsyncValueGroup.group2(...).when(error: ...)` が `UniversalErrorPage` を表示し、reload で `purchaseOfferingsProvider` / `refreshAppProvider` を再取得することを確認済み
     - 起動条件: ローカル sim-boot。`SIMSLIM_EXCEPT=store,health,icloud` / `SLIM_STATUS=APPLIED` (2026-10-05)
