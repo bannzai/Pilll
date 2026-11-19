@@ -820,6 +820,119 @@ void main() {
             .called(1);
       });
 
+      test('pendingSync を返した後に TakePill が失敗した場合は、記録後の更新を呼ばない', () async {
+        final syncedPillSheetGroups = <PillSheetGroup>[];
+        final takingPillSheetGroup = Completer<PillSheetGroup?>();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePillAnswering(() => takingPillSheetGroup.future),
+            takePillTimeout: const Duration(milliseconds: 10),
+            syncAfterRecord: (pillSheetGroup) async =>
+                syncedPillSheetGroups.add(pillSheetGroup),
+          ),
+          AppIntentRecordPillResult.pendingSync,
+        );
+
+        takingPillSheetGroup.completeError(
+          Exception('commit'),
+          StackTrace.empty,
+        );
+        await pumpEventQueue();
+
+        expect(syncedPillSheetGroups, isEmpty);
+      });
+
+      test(
+          'pendingSync を返した後に TakePill が記録を終えた場合は、記録後の PillSheetGroup で記録後の更新を呼ぶ',
+          () async {
+        final syncedPillSheetGroups = <PillSheetGroup>[];
+        final takingPillSheetGroup = Completer<PillSheetGroup?>();
+        final recordedPillSheetGroup = v1PillSheetGroup(
+          lastTakenDate: DateTime.parse('2024-01-15'),
+        );
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePillAnswering(() => takingPillSheetGroup.future),
+            takePillTimeout: const Duration(milliseconds: 10),
+            syncAfterRecord: (pillSheetGroup) async =>
+                syncedPillSheetGroups.add(pillSheetGroup),
+          ),
+          AppIntentRecordPillResult.pendingSync,
+        );
+        expect(syncedPillSheetGroups, isEmpty);
+
+        takingPillSheetGroup.complete(recordedPillSheetGroup);
+        await pumpEventQueue();
+
+        expect(syncedPillSheetGroups, [recordedPillSheetGroup]);
+      });
+
+      test('pendingSync を返した後に TakePill が記録せずに null を返した場合は、記録後の更新を呼ばない',
+          () async {
+        final syncedPillSheetGroups = <PillSheetGroup>[];
+        final takingPillSheetGroup = Completer<PillSheetGroup?>();
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePillAnswering(() => takingPillSheetGroup.future),
+            takePillTimeout: const Duration(milliseconds: 10),
+            syncAfterRecord: (pillSheetGroup) async =>
+                syncedPillSheetGroups.add(pillSheetGroup),
+          ),
+          AppIntentRecordPillResult.pendingSync,
+        );
+
+        takingPillSheetGroup.complete(null);
+        await pumpEventQueue();
+
+        expect(syncedPillSheetGroups, isEmpty);
+      });
+
+      test(
+          'pendingSync を返した後の記録後の更新が例外を投げた場合は、その例外を errorLogger に記録する',
+          () async {
+        final mockErrorLogger = MockErrorLogger();
+        errorLogger = mockErrorLogger;
+        final takingPillSheetGroup = Completer<PillSheetGroup?>();
+        final exception = Exception('sync');
+
+        expect(
+          await recordPillFromAppIntent(
+            fetchUser: () async => const User(isPremium: true),
+            fetchPillSheetGroup: () async => v1PillSheetGroup(
+              lastTakenDate: DateTime.parse('2024-01-14'),
+            ),
+            takePill: takePillAnswering(() => takingPillSheetGroup.future),
+            takePillTimeout: const Duration(milliseconds: 10),
+            syncAfterRecord: (_) =>
+                Future.error(exception, StackTrace.empty),
+          ),
+          AppIntentRecordPillResult.pendingSync,
+        );
+
+        takingPillSheetGroup.complete(
+          v1PillSheetGroup(lastTakenDate: DateTime.parse('2024-01-15')),
+        );
+        await pumpEventQueue();
+
+        verify(mockErrorLogger.recordError(exception, StackTrace.empty))
+            .called(1);
+      });
+
       test('user の取得が例外を投げた場合は記録せず failed を返す', () async {
         final (takePill, batch) = takePillWithMockBatch();
 
