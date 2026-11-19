@@ -113,7 +113,7 @@ enum AppIntentRecordPillResult {
 /// syncAfterRecord が失敗しても、記録は済んでいるため recorded を返す。
 /// user と PillSheetGroup の取得と記録後の更新を関数で受け取るのは、Firestore と通知の plugin を使わずにテストするため。
 /// 服用お休み中は、アプリの記録画面が「飲んだ」ボタンを出さない (RecordPageButton) のに合わせて記録しない。
-/// TakePill が takePillTimeout の内に終わらない時は pendingSync を返し、syncAfterRecord は呼ばない。
+/// TakePill が takePillTimeout の内に終わらない時は pendingSync を返す。返した後に TakePill が記録を終えた時は、その時点で syncAfterRecord を呼ぶ (返答は待たない)。
 /// Firestore の書き込みは、オフラインの間は端末に書き込まれた後もサーバーが受け付けるまで完了しないため、待ち続けると返答を返せない。
 /// 冪等ではない (1 日に複数回服用する設定では、呼ぶたびに未服用の 1 回分を記録するため)
 Future<AppIntentRecordPillResult> recordPillFromAppIntent({
@@ -154,11 +154,15 @@ Future<AppIntentRecordPillResult> recordPillFromAppIntent({
     try {
       takenPillSheetGroup = await takingPillSheetGroup.timeout(takePillTimeout);
     } on TimeoutException {
-      // 保留として返した後に書き込みが失敗した時は、返答では伝えられないため errorLogger に残す
+      // 保留として返した後に書き込みが終わった時も、服用済みの分の通知が届かないように syncAfterRecord を呼ぶ。
+      // 書き込みと syncAfterRecord の失敗は、返答では伝えられないため errorLogger に残す
       unawaited(
-        takingPillSheetGroup.then<void>(
-          (_) {},
-          onError: (Object e, StackTrace st) => errorLogger.recordError(e, st),
+        takingPillSheetGroup.then<void>((lateTakenPillSheetGroup) async {
+          if (lateTakenPillSheetGroup != null) {
+            await syncAfterRecord(lateTakenPillSheetGroup);
+          }
+        }).catchError(
+          (Object e, StackTrace st) => errorLogger.recordError(e, st),
         ),
       );
       return AppIntentRecordPillResult.pendingSync;
