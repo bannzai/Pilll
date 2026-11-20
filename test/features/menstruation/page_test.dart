@@ -26,6 +26,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 /// 生理の記録もピルシートも無い利用者の設定。週カレンダーと AppBar の月表示はこの値に依存しない
@@ -56,6 +57,7 @@ Widget _menstruationPageBody({required Weekday firstWeekday}) {
   return ProviderScope(
     overrides: [
       firstWeekdayProvider.overrideWithValue(firstWeekday),
+      customerInfoProviderOverride(freeCustomerInfo),
       // MenstruationRecordButton が記録用の provider を通して読む。描画では Firestore に書き込まないため Mock にする
       databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
     ],
@@ -79,8 +81,8 @@ Widget _menstruationPageBody({required Weekday firstWeekday}) {
 /// AppBar に表示している月
 String? _appBarMonth(WidgetTester tester) {
   return tester
-      .widget<Text>(find.descendant(
-          of: find.byType(AppBar), matching: find.byType(Text)))
+      .widget<Text>(
+          find.descendant(of: find.byType(AppBar), matching: find.byType(Text)))
       .data;
 }
 
@@ -246,6 +248,7 @@ void main() {
               // MenstruationRecordButton が記録用の provider を通して読む。描画では Firestore に書き込まないため Mock にする
               databaseProvider.overrideWith((ref) => MockDatabaseConnection()),
               userProvider.overrideWith((ref) => Stream.value(const User())),
+              customerInfoProviderOverride(freeCustomerInfo),
               settingProvider.overrideWith((ref) => Stream.value(_setting)),
               latestPillSheetGroupProvider
                   .overrideWith((ref) => Stream.value(null)),

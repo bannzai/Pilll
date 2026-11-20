@@ -41,6 +41,7 @@ import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/provider/app_is_released.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/fake.dart';
@@ -124,10 +125,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(freeCustomerInfo),
               userProvider.overrideWith((ref) {
                 return Stream.value(
                   User(
-                    isPremium: false,
                     trialDeadlineDate: mockToday.subtract(
                       const Duration(days: 1),
                     ),
@@ -216,10 +217,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(freeCustomerInfo),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   User(
-                    isPremium: false,
                     trialDeadlineDate: mockToday.add(const Duration(days: 1)),
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -286,10 +287,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(freeCustomerInfo),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
-                    isPremium: false,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -346,10 +347,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(freeCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: false,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -406,10 +407,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -472,10 +473,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(freeCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     User(
-                      isPremium: false,
                       trialDeadlineDate: mockToday.add(const Duration(days: 1)),
                       beginTrialDate: mockToday.subtract(
                         const Duration(days: 2),
@@ -550,10 +551,10 @@ void main() {
                   latestPillSheetGroupProvider.overrideWith(
                     (ref) => Stream.value(pillSheetGroup),
                   ),
+                  customerInfoProviderOverride(freeCustomerInfo),
                   userProvider.overrideWith(
                     (ref) => Stream.value(
                       const User(
-                        isPremium: false,
                         trialDeadlineDate: null,
                         beginTrialDate: null,
                         discountEntitlementDeadlineDate: null,
@@ -633,10 +634,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(freeCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: false,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -716,10 +717,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(freeCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: false,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -799,10 +800,10 @@ void main() {
                   latestPillSheetGroupProvider.overrideWith(
                     (ref) => Stream.value(pillSheetGroup),
                   ),
+                  customerInfoProviderOverride(freeCustomerInfo),
                   userProvider.overrideWith(
                     (ref) => Stream.value(
                       const User(
-                        isPremium: false,
                         trialDeadlineDate: null,
                         beginTrialDate: null,
                         discountEntitlementDeadlineDate: null,
@@ -882,10 +883,10 @@ void main() {
                   latestPillSheetGroupProvider.overrideWith(
                     (ref) => Stream.value(pillSheetGroup),
                   ),
+                  customerInfoProviderOverride(freeCustomerInfo),
                   userProvider.overrideWith(
                     (ref) => Stream.value(
                       const User(
-                        isPremium: false,
                         trialDeadlineDate: null,
                         beginTrialDate: null,
                         discountEntitlementDeadlineDate: null,
@@ -969,10 +970,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1041,10 +1042,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1113,10 +1114,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1194,10 +1195,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1283,10 +1284,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1367,10 +1368,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1451,10 +1452,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1535,10 +1536,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1621,10 +1622,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1705,10 +1706,10 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith(
                   (ref) => Stream.value(pillSheetGroup),
                 ),
+                customerInfoProviderOverride(premiumCustomerInfo),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
-                      isPremium: true,
                       trialDeadlineDate: null,
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
@@ -1792,10 +1793,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(premiumCustomerInfo),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
-                    isPremium: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -1862,10 +1863,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(premiumCustomerInfo),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
-                    isPremium: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -1932,10 +1933,10 @@ void main() {
               latestPillSheetGroupProvider.overrideWith(
                 (ref) => Stream.value(pillSheetGroup),
               ),
+              customerInfoProviderOverride(premiumCustomerInfo),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
-                    isPremium: true,
                     trialDeadlineDate: null,
                     beginTrialDate: null,
                     discountEntitlementDeadlineDate: null,
@@ -1999,10 +2000,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2063,10 +2064,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2122,10 +2123,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 5)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2189,10 +2190,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2251,10 +2252,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2311,10 +2312,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 5)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2373,10 +2374,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(premiumCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 const User(
-                  isPremium: true,
                   trialDeadlineDate: null,
                   beginTrialDate: null,
                   discountEntitlementDeadlineDate: null,
@@ -2434,10 +2435,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 15)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2497,10 +2498,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate: mockToday.add(const Duration(days: 8)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 1)),
                   discountEntitlementDeadlineDate: null,
@@ -2559,10 +2560,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate:
                       mockToday.subtract(const Duration(days: 1)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 30)),
@@ -2621,10 +2622,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate:
                       mockToday.subtract(const Duration(days: 1)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 30)),
@@ -2701,10 +2702,10 @@ void main() {
             appIsReleasedProvider.overrideWith((ref) => true),
             latestPillSheetGroupProvider
                 .overrideWith((ref) => Stream.value(pillSheetGroup)),
+            customerInfoProviderOverride(freeCustomerInfo),
             userProvider.overrideWith(
               (ref) => Stream.value(
                 User(
-                  isPremium: false,
                   trialDeadlineDate:
                       mockToday.subtract(const Duration(days: 1)),
                   beginTrialDate: mockToday.subtract(const Duration(days: 30)),
@@ -2747,6 +2748,7 @@ void main() {
     Future<SharedPreferences> pumpAnnouncementBar(
       WidgetTester tester, {
       required User user,
+      required CustomerInfo customerInfo,
       Map<String, Object> initialSharedPreferencesValues = const {},
     }) async {
       final mockTodayRepository = MockTodayService();
@@ -2783,6 +2785,7 @@ void main() {
               (ref) => Stream.value(pillSheetGroup),
             ),
             userProvider.overrideWith((ref) => Stream.value(user)),
+            customerInfoProviderOverride(customerInfo),
             isLinkedProvider.overrideWithValue(true),
             isJaLocaleProvider.overrideWithValue(true),
             sharedPreferencesProvider.overrideWith(
@@ -2823,7 +2826,6 @@ void main() {
       await pumpAnnouncementBar(
         tester,
         user: User(
-          isPremium: false,
           trialDeadlineDate:
               DateTime(2026, 7, 3).subtract(const Duration(days: 290)),
           beginTrialDate:
@@ -2831,6 +2833,7 @@ void main() {
           discountEntitlementDeadlineDate:
               DateTime(2026, 7, 3).subtract(const Duration(days: 280)),
         ),
+        customerInfo: freeCustomerInfo,
       );
 
       expect(
@@ -2844,11 +2847,11 @@ void main() {
       await pumpAnnouncementBar(
         tester,
         user: const User(
-          isPremium: true,
           trialDeadlineDate: null,
           beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         ),
+        customerInfo: premiumCustomerInfo,
       );
 
       expect(
@@ -2862,11 +2865,11 @@ void main() {
       final sharedPreferences = await pumpAnnouncementBar(
         tester,
         user: const User(
-          isPremium: false,
           trialDeadlineDate: null,
           beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         ),
+        customerInfo: freeCustomerInfo,
       );
 
       expect(
@@ -2881,11 +2884,11 @@ void main() {
       await pumpAnnouncementBar(
         tester,
         user: const User(
-          isPremium: false,
           trialDeadlineDate: null,
           beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         ),
+        customerInfo: freeCustomerInfo,
         initialSharedPreferencesValues: {
           lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
               DateTime(2026, 7, 2, 9, 0, 0).toIso8601String(),
@@ -2900,11 +2903,11 @@ void main() {
       await pumpAnnouncementBar(
         tester,
         user: const User(
-          isPremium: true,
           trialDeadlineDate: null,
           beginTrialDate: null,
           discountEntitlementDeadlineDate: null,
         ),
+        customerInfo: premiumCustomerInfo,
         initialSharedPreferencesValues: {
           lifetimeOfferFirstDisplayedDateTimeKey(cycle: 0):
               DateTime(2026, 7, 1, 9, 0, 0).toIso8601String(),

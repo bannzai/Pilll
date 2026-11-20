@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -12,9 +13,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/yaz_flex_initial_setting_attribute.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -22,12 +21,11 @@ import 'package:riverpod/riverpod.dart';
 
 final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
   (ref) => InitialSettingStateNotifier(
-    ref.watch(endInitialSettingProvider),
+    ref.watch(startPromotionProvider),
     ref.watch(batchFactoryProvider),
     ref.watch(batchSetSettingProvider),
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
-    ref.watch(remoteConfigParameterProvider),
     ref.watch(registerReminderLocalNotificationRunnerProvider),
     ref.watch(setYazFlexInitialSettingAttributeProvider),
     now(),
@@ -35,24 +33,22 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
 );
 
 class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
-  final EndInitialSetting endInitialSetting;
+  final StartPromotion startPromotion;
   final BatchFactory batchFactory;
   final BatchSetSetting batchSetSetting;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
-  final RemoteConfigParameter remoteConfigParameter;
   final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   /// 登録時に、ヤーズフレックス向けの導線を通ったかを Firebase Analytics と RevenueCat に載せる
   final Future<void> Function({required bool isYazFlex}) setYazFlexInitialSettingAttribute;
 
   InitialSettingStateNotifier(
-    this.endInitialSetting,
+    this.startPromotion,
     this.batchFactory,
     this.batchSetSetting,
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
-    this.remoteConfigParameter,
     this.registerReminderLocalNotificationRunner,
     this.setYazFlexInitialSettingAttribute,
     DateTime _now,
@@ -209,14 +205,24 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillTakenCount: pillTakenCount);
   }
 
-  /// 初期設定の内容を保存し、トライアルを開始する。
-  /// トライアルは 1 アカウント 1 回のため、[user] が既にトライアルを開始している時は開始しない
-  Future<void> register({required User user}) async {
-    // 保存の待機中に前のページへ戻って答えを選び直せるため、保存する内容を作る前の値を属性に使う (待機の後に state を読むと、保存した内容と属性が食い違う)
-    final registeringIsYazFlex = state.isYazFlex;
+  /// トライアルを開始し、初期設定の内容を保存する。
+  /// トライアルは 1 アカウント 1 回のため、既にトライアルを開始している時は開始しない。
+  /// トライアルの開始 (サーバーの callable) はオフラインで失敗するため保存より先に行い、失敗した時は何も保存せずに例外を投げてやり直せるようにする
+  Future<void> register({required User user, required CustomerInfo customerInfo}) async {
+    // トライアルの開始・保存の待機中に前のページへ戻って答えを選び直せるため、登録を始めた時の状態から保存する内容と属性を作る (待機の後に state を読むと、保存した内容と属性が食い違う)
+    final registeringState = state;
+
+    // 初期設定の完了のイベント (end_initial_setting) とトライアルの開始より前に載せ、以降のイベントと購入に属性が付くようにする。
+    // 属性は載せ直しても同じ値になるため、トライアルの開始や保存に失敗してやり直した時に 2 回載っても困らない
+    await setYazFlexInitialSettingAttribute(isYazFlex: registeringState.isYazFlex);
+
+    if (!customerInfo.trialIsAlreadyBegin(user: user)) {
+      await startPromotion();
+    }
+
     final batch = batchFactory.batch();
 
-    final builtPillSheetGroup = state.buildPillSheetGroup();
+    final builtPillSheetGroup = registeringState.buildPillSheetGroup();
     PillSheetGroup? createdPillSheetGroup;
     if (builtPillSheetGroup != null) {
       createdPillSheetGroup = batchSetPillSheetGroup(batch, builtPillSheetGroup);
@@ -228,13 +234,10 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       batchSetPillSheetModifiedHistory(batch, history);
     }
 
-    final setting = await state.buildSetting();
+    final setting = await registeringState.buildSetting();
     batchSetSetting(batch, setting);
 
     await batch.commit();
-
-    // 初期設定の完了のイベント (end_initial_setting) とトライアルの開始より前に載せ、以降のイベントと購入に属性が付くようにする
-    await setYazFlexInitialSettingAttribute(isYazFlex: registeringIsYazFlex);
 
     final activePillSheet = createdPillSheetGroup?.activePillSheet;
     if (createdPillSheetGroup != null && activePillSheet != null) {
@@ -244,10 +247,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         premiumOrTrial: true,
         setting: setting,
       );
-    }
-
-    if (!user.trialIsAlreadyBegin) {
-      await endInitialSetting(remoteConfigParameter);
     }
   }
 

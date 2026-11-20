@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -33,6 +35,8 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     // InitialSettingOrAppPage が user の取得後にだけ初期設定を表示するため、ここでは値が入っている
     final user = ref.watch(userProvider).requireValue;
+    // UserSetup が CustomerInfo の取得後にだけ画面を表示するため、ここでは値が入っている
+    final customerInfo = ref.watch(customerInfoProvider).requireValue;
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -151,13 +155,24 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   analytics.logEvent(name: 'pressed_start_app_preiun_trial');
                   try {
                     final navigator = Navigator.of(context);
-                    await store.register(user: user);
+                    await store.register(user: user, customerInfo: customerInfo);
                     // トライアルを新しく開始した時は、register が premiumOrTrial: true で通知を登録済み。
-                    // EndInitialSetting が書いたトライアル状態は userProvider に遅れて届くため、
+                    // 付与したトライアルは customerInfoProvider に遅れて届くため、
                     // ここで再登録すると古い premiumOrTrial: false で上書きしてしまう。
-                    // トライアルを開始済みのユーザーは register の登録が今の状態と合わないため、userProvider の状態で登録し直す
-                    if (user.trialIsAlreadyBegin) {
+                    // トライアルを開始済みのユーザーは register の登録が今の状態と合わないため、customerInfoProvider の状態で登録し直す
+                    if (customerInfo.trialIsAlreadyBegin(user: user)) {
                       await registerReminderLocalNotification();
+                    } else {
+                      // StartPromotion がキャッシュを捨てて取得し直した CustomerInfo を customerInfoProvider に反映する。
+                      // 取得し直しで CustomerInfo の更新の listener が呼ばれるかを SDK の文書で確かめられないため、listener に頼らず読み直す
+                      // 遷移先の画面が付与前の無料の状態で初回の処理 (無料ユーザー向けのダイアログ等) をしないよう、読み直しを終えてから遷移する。
+                      // 読み直しに失敗しても初期設定の保存とトライアルの付与は済んでいるため、エラーにしてやり直させず (やり直すと初期設定を二重に保存する) 遷移する
+                      ref.invalidate(customerInfoProvider);
+                      try {
+                        await ref.read(customerInfoProvider.future);
+                      } catch (error, stackTrace) {
+                        errorLogger.recordError(error, stackTrace);
+                      }
                     }
                     await AppRouter.endInitialSetting(
                       navigator,

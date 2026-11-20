@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:pilll/native/channel.dart';
 
@@ -40,11 +39,12 @@ Future<void> syncActivePillSheetValue({
   }
 }
 
-Future<void> syncUserStatus({required User? user}) async {
+/// プレミアム会員またはトライアル中か ([premiumOrTrial]) を Widget に同期する。null はキーの削除になる
+Future<void> syncUserStatus({required bool? premiumOrTrial}) async {
   try {
     await HomeWidget.saveWidgetData(
       'userIsPremiumOrTrial',
-      user?.premiumOrTrial,
+      premiumOrTrial,
     );
     await updateWidget();
   } catch (error) {

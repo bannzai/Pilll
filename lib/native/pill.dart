@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:app_badge_plus/app_badge_plus.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/batch.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/database.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -13,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 /// クイックレコードで服用済みかどうかを判定する
 /// v1: 1錠飲みなので todayPillIsAlreadyTaken で判定
@@ -109,15 +111,17 @@ enum AppIntentRecordPillResult {
 
 /// App Intent (Siri・ショートカット) から今日の服用を記録し、結果を返す。例外は投げず、失敗は failed として返して errorLogger に記録する。
 /// 通知からのクイックレコードと同じくプレミアムの機能のため、プレミアムでもトライアル中でもない user では記録しない。
+/// プレミアム・トライアルの判定の正は RevenueCat の CustomerInfo で、fetchCustomerInfo で取得する。取得に失敗した時は、課金していない状態を作って判定せずに failed を返す。
 /// 記録した時だけ、記録後の PillSheetGroup で syncAfterRecord (ウィジェットと通知の更新) を呼ぶ。
 /// syncAfterRecord が失敗しても、記録は済んでいるため recorded を返す。
-/// user と PillSheetGroup の取得と記録後の更新を関数で受け取るのは、Firestore と通知の plugin を使わずにテストするため。
+/// user・CustomerInfo・PillSheetGroup の取得と記録後の更新を関数で受け取るのは、Firestore・RevenueCat と通知の plugin を使わずにテストするため。
 /// 服用お休み中は、アプリの記録画面が「飲んだ」ボタンを出さない (RecordPageButton) のに合わせて記録しない。
 /// TakePill が takePillTimeout の内に終わらない時は pendingSync を返す。返した後に TakePill が記録を終えた時は、その時点で syncAfterRecord を呼ぶ (返答は待たない)。
 /// Firestore の書き込みは、オフラインの間は端末に書き込まれた後もサーバーが受け付けるまで完了しないため、待ち続けると返答を返せない。
 /// 冪等ではない (1 日に複数回服用する設定では、呼ぶたびに未服用の 1 回分を記録するため)
 Future<AppIntentRecordPillResult> recordPillFromAppIntent({
   required Future<User?> Function() fetchUser,
+  required Future<CustomerInfo> Function() fetchCustomerInfo,
   required Future<PillSheetGroup?> Function() fetchPillSheetGroup,
   required TakePill takePill,
   required Duration takePillTimeout,
@@ -129,7 +133,7 @@ Future<AppIntentRecordPillResult> recordPillFromAppIntent({
     if (user == null) {
       return AppIntentRecordPillResult.notSignedIn;
     }
-    if (!user.premiumOrTrial) {
+    if (!(await fetchCustomerInfo()).premiumOrTrial(user: user)) {
       return AppIntentRecordPillResult.notPremiumOrTrial;
     }
     final pillSheetGroup = await fetchPillSheetGroup();

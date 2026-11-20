@@ -12,6 +12,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 /// スクリーンショット用 Mock 画面で共有する部品と描画ヘルパー。
 ///
@@ -324,3 +325,18 @@ List<PillSheetModifiedHistory> mockTakenPillHistories({required DateTime fixedTo
     );
   });
 }
+
+/// スクリーンショット用の課金中 (プレミアム) の CustomerInfo。
+/// マーケティング訴求のため、プレミアム機能が伏せられない状態で画面を撮る。
+/// Promotional Entitlement ではない商品の購読があれば CustomerInfoPremium.isPremium が true になる。商品 ID は表示に使わないため実在しない値でよい
+const mockPremiumCustomerInfo = CustomerInfo(
+  EntitlementInfos({}, {}),
+  {},
+  ['mock_premium_subscription'],
+  [],
+  [],
+  '',
+  '',
+  {},
+  '',
+);

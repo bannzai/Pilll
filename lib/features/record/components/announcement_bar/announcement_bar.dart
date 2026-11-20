@@ -9,6 +9,7 @@ import 'package:pilll/features/record/components/announcement_bar/components/adm
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_offer.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -64,8 +65,14 @@ class AnnouncementBar extends HookConsumerWidget {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
     final user = ref.watch(userProvider).valueOrNull;
+    final customerInfo = ref.watch(customerInfoProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
-    final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = user == null || customerInfo == null
+        ? null
+        : customerInfo.discountEntitlementDeadlineDate(
+            user: user,
+            discountEntitlementOffsetDay: remoteConfigParameter.discountEntitlementOffsetDay,
+          );
     final hiddenCountdownDiscountDeadline = ref.watch(
       hiddenCountdownDiscountDeadlineProvider(
         discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
@@ -139,18 +146,18 @@ class AnnouncementBar extends HookConsumerWidget {
       return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
     }();
 
-    if (user == null) {
+    if (user == null || customerInfo == null) {
       return Container();
     }
 
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
-    if (!appIsReleased && !user.isPremium && Environment.flavor == Flavor.PRODUCTION) {
+    if (!appIsReleased && !customerInfo.isPremium && Environment.flavor == Flavor.PRODUCTION) {
       return const AdMob();
     }
 
-    if (!user.isPremium) {
-      if (user.hasDiscountEntitlement) {
-        if (!user.isTrial) {
+    if (!customerInfo.isPremium) {
+      if (customerInfo.hasDiscountEntitlement(user: user, discountEntitlementOffsetDay: remoteConfigParameter.discountEntitlementOffsetDay)) {
+        if (!customerInfo.isTrial(user: user)) {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
@@ -168,14 +175,14 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
+        return EndedPillSheet(isPremium: customerInfo.isPremium, isTrial: customerInfo.isTrial(user: user));
       }
 
-      if (user.isTrial) {
-        final remainingTrialDays = PremiumTrialLimitAnnouncementBar.remainingTrialDays(user);
+      if (customerInfo.isTrial(user: user)) {
+        final remainingTrialDays = PremiumTrialLimitAnnouncementBar.remainingTrialDays(customerInfo: customerInfo, user: user);
         if (remainingTrialDays != null && remainingTrialDays <= 10) {
           return PremiumTrialLimitAnnouncementBar(
-            premiumTrialLimit: PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user)!,
+            premiumTrialLimit: PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(customerInfo: customerInfo, user: user)!,
           );
         }
 
@@ -191,7 +198,7 @@ class AnnouncementBar extends HookConsumerWidget {
           return const RecommendSignupGeneralAnnouncementBar();
         }
 
-        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
+        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(customerInfo: customerInfo, user: user);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(
             premiumTrialLimit: premiumTrialLimit,
@@ -199,7 +206,7 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      if (!user.isTrial) {
+      if (!customerInfo.isTrial(user: user)) {
         // !isPremium && !isTrial
 
         if (!isAdsDisabled && pilllAds != null) {
@@ -239,7 +246,7 @@ class AnnouncementBar extends HookConsumerWidget {
         return const AdMob();
       }
     } else {
-      // user.isPremium
+      // customerInfo.isPremium
 
       // 1. lifetime購入者向けサブスク解約警告 (最優先)
       final isLifetimePurchased = lifetimePurchaseStatus.asData?.value ?? false;
@@ -273,7 +280,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
+        return EndedPillSheet(isPremium: customerInfo.isPremium, isTrial: customerInfo.isTrial(user: user));
       }
 
       if (FeatureAppealBarsContainer.hasAnyCandidate(

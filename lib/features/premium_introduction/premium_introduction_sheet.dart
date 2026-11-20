@@ -18,6 +18,8 @@ import 'package:pilll/features/premium_introduction/components/premium_user_than
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/features/error/page.dart';
+import 'package:pilll/provider/customer_info.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/purchase.dart';
@@ -71,6 +73,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
+    final customerInfo = ref.watch(customerInfoProvider).requireValue;
+    final discountEntitlementOffsetDay = ref.watch(remoteConfigParameterProvider).discountEntitlementOffsetDay;
 
     final isLoading = useState(false);
 
@@ -108,16 +112,19 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         const PremiumIntroductionHeader(),
-                        if (user.isPremium) ...[
+                        if (customerInfo.isPremium) ...[
                           const SizedBox(height: 32),
                           const PremiumUserThanksRow(),
                         ],
-                        if (!user.isPremium) ...[
-                          if (user.hasDiscountEntitlement)
+                        if (!customerInfo.isPremium) ...[
+                          if (customerInfo.hasDiscountEntitlement(user: user, discountEntitlementOffsetDay: discountEntitlementOffsetDay))
                             if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
                                 monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+                                discountEntitlementDeadlineDate: customerInfo.discountEntitlementDeadlineDate(
+                                  user: user,
+                                  discountEntitlementOffsetDay: discountEntitlementOffsetDay,
+                                ),
                               ),
                           const SizedBox(height: 12),
                           if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
