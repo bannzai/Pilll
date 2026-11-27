@@ -115,9 +115,14 @@ Widget maintenanceGateBuilder(BuildContext context, Widget? child, {http.Client?
     stateURL: Uri.parse(Environment.maintenanceStateURL),
     defaultMessage: AppLocalizations.of(context)!.maintenanceDefaultMessage,
     // コールバックで渡すのは、雛形 (castle の service-maintenance-setup skill) がテストで URL を開く処理を差し替えるため
-    onOpenURL: (url) {
+    onOpenURL: (url) async {
       analytics.logEvent(name: 'maintenance_button_tapped', parameters: {'url': url.toString()});
-      launchUrl(url, mode: LaunchMode.externalApplication);
+      try {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      } catch (error) {
+        // 開けない時もメンテナンス中の画面のまま残すため、未処理の例外にせず記録だけする
+        debugPrint(error.toString());
+      }
     },
     client: client,
     child: child!,
