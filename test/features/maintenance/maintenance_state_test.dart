@@ -20,6 +20,15 @@ void main() {
       expect(state.changedAt, '2026-11-25T07:00:00.000Z');
     });
 
+    test('source が owner・cost・usage のどれでもメンテナンス中として読む', () {
+      for (final source in ['owner', 'cost', 'usage']) {
+        final maintenanceState = MaintenanceState.tryParse(
+            {...inMaintenanceWithButton, 'source': source});
+        expect(maintenanceState?.maintenance, true, reason: source);
+        expect(maintenanceState?.source, source, reason: source);
+      }
+    });
+
     test('maintenance・source・changedAt の形が違う値は null を返す', () {
       expect(MaintenanceState.tryParse(null), isNull);
       expect(MaintenanceState.tryParse('maintenance'), isNull);
