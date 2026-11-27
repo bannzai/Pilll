@@ -152,5 +152,40 @@ void main() {
         false,
       );
     });
+
+    test('client を渡さない時は、時間切れでも自分で作った client を閉じる', () async {
+      final neverRespondingClient = NeverRespondingClient();
+      expect(
+        (await http.runWithClient(
+          () => fetchMaintenanceState(stateURL,
+              timeout: const Duration(milliseconds: 10)),
+          () => neverRespondingClient,
+        ))
+            .maintenance,
+        false,
+      );
+      expect(neverRespondingClient.isClosed, true);
+    });
+
+    test('client を渡した時は、呼び出し側の client を閉じない', () async {
+      final neverRespondingClient = NeverRespondingClient();
+      await fetchMaintenanceState(stateURL,
+          client: neverRespondingClient,
+          timeout: const Duration(milliseconds: 10));
+      expect(neverRespondingClient.isClosed, false);
+    });
   });
+}
+
+/// 応答を返さず、close されたかを記録する HTTP の client
+class NeverRespondingClient extends http.BaseClient {
+  /// close が呼ばれたか
+  bool isClosed = false;
+
+  @override
+  Future<http.StreamedResponse> send(http.BaseRequest request) =>
+      Completer<http.StreamedResponse>().future;
+
+  @override
+  void close() => isClosed = true;
 }
