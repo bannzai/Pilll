@@ -41,6 +41,12 @@ void main() {
       for (final button in [
         {'label': '開く', 'url': 'javascript:alert(1)'},
         {'label': '開く', 'url': 'example.com/news'},
+        {'label': '開く', 'url': 'ftp://example.com/news'},
+        {'label': '開く', 'url': 'intent://example.com/news'},
+        {'label': '開く', 'url': 'https:news'},
+        {'label': '開く', 'url': 'https://[::1'},
+        {'label': '開く'},
+        {'label': '開く', 'url': 1},
         {'label': '', 'url': 'https://example.com/news'},
         {'url': 'https://example.com/news'},
         'https://example.com/news',
@@ -49,6 +55,15 @@ void main() {
             {...inMaintenanceWithButton, 'button': button})!;
         expect(state.maintenance, true, reason: '$button');
         expect(state.button, isNull, reason: '$button');
+      }
+    });
+
+    test('空の message と文字列でない message は、メンテナンス中のまま message だけ null にする', () {
+      for (final message in ['', 1]) {
+        final state = MaintenanceState.tryParse(
+            {...inMaintenanceWithButton, 'message': message})!;
+        expect(state.maintenance, true, reason: '$message');
+        expect(state.message, isNull, reason: '$message');
       }
     });
 

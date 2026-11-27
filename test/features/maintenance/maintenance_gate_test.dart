@@ -64,10 +64,10 @@ Future<List<Uri>> pumpApp(
 void main() {
   group('#MaintenanceGate', () {
     testWidgets('メンテナンス中は通常の画面の代わりに、状態の文とボタンを出す', (tester) async {
-      final control = SwitchableClient(inMaintenanceWithButton);
-      final openedURLs = await pumpApp(tester, control.client);
+      final switchableClient = SwitchableClient(inMaintenanceWithButton);
+      final openedURLs = await pumpApp(tester, switchableClient.client);
 
-      expect(control.requestedURLs, [stateURL]);
+      expect(switchableClient.requestedURLs, [stateURL]);
       expect(find.text('復旧までお待ちください'), findsOneWidget);
       expect(find.text('通常の画面'), findsNothing);
 
@@ -93,26 +93,27 @@ void main() {
     });
 
     testWidgets('状態を読めない時 (通信の失敗) は通常の画面を出す', (tester) async {
-      final control = SwitchableClient(inMaintenanceWithButton)..fail = true;
-      await pumpApp(tester, control.client);
+      final switchableClient = SwitchableClient(inMaintenanceWithButton)
+        ..fail = true;
+      await pumpApp(tester, switchableClient.client);
 
-      expect(control.requestedURLs, hasLength(1));
+      expect(switchableClient.requestedURLs, hasLength(1));
       expect(find.text('通常の画面'), findsOneWidget);
       expect(find.byType(MaintenanceScreen), findsNothing);
     });
 
     testWidgets('状態を読めない時 (200 以外の応答・形の違う応答) は通常の画面を出す', (tester) async {
-      final control = SwitchableClient(inMaintenanceWithButton)
+      final switchableClient = SwitchableClient(inMaintenanceWithButton)
         ..statusCode = 500;
-      await pumpApp(tester, control.client);
+      await pumpApp(tester, switchableClient.client);
       expect(find.text('通常の画面'), findsOneWidget);
 
-      control
+      switchableClient
         ..statusCode = 200
         ..body = {'maintenance': 'yes'};
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(2));
+      expect(switchableClient.requestedURLs, hasLength(2));
       expect(find.text('通常の画面'), findsOneWidget);
       expect(find.byType(MaintenanceScreen), findsNothing);
     });
@@ -145,66 +146,66 @@ void main() {
     });
 
     testWidgets('既定では 60 秒ごとに読み直し、切り替わった状態で画面を切り替える', (tester) async {
-      final control = SwitchableClient(notInMaintenance);
-      await pumpApp(tester, control.client);
+      final switchableClient = SwitchableClient(notInMaintenance);
+      await pumpApp(tester, switchableClient.client);
       expect(find.text('通常の画面'), findsOneWidget);
 
-      control.body = inMaintenanceWithButton;
+      switchableClient.body = inMaintenanceWithButton;
       await tester.pump(const Duration(seconds: 59));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(1));
+      expect(switchableClient.requestedURLs, hasLength(1));
       expect(find.text('通常の画面'), findsOneWidget);
 
       await tester.pump(const Duration(seconds: 1));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(2));
+      expect(switchableClient.requestedURLs, hasLength(2));
       expect(find.text('復旧までお待ちください'), findsOneWidget);
       expect(find.text('通常の画面'), findsNothing);
 
-      control.body = notInMaintenance;
+      switchableClient.body = notInMaintenance;
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(3));
+      expect(switchableClient.requestedURLs, hasLength(3));
       expect(find.text('通常の画面'), findsOneWidget);
       expect(find.byType(MaintenanceScreen), findsNothing);
     });
 
     testWidgets('背面にいる間は時間が過ぎても読まず、前面に戻った後はまた間隔ごとに読む', (tester) async {
-      final control = SwitchableClient(notInMaintenance);
-      await pumpApp(tester, control.client);
-      expect(control.requestedURLs, hasLength(1));
+      final switchableClient = SwitchableClient(notInMaintenance);
+      await pumpApp(tester, switchableClient.client);
+      expect(switchableClient.requestedURLs, hasLength(1));
 
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
       await tester.pump(const Duration(seconds: 180));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(1));
+      expect(switchableClient.requestedURLs, hasLength(1));
 
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(2));
+      expect(switchableClient.requestedURLs, hasLength(2));
 
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(3));
+      expect(switchableClient.requestedURLs, hasLength(3));
     });
 
     testWidgets('背面で作られた時は、前面に出るまで間隔ごとに読まない', (tester) async {
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
-      final control = SwitchableClient(notInMaintenance);
+      final switchableClient = SwitchableClient(notInMaintenance);
       // 背面の間は描画のフレームが予約されないため、背面で作られた状況を作るには、強制のフレームで build させる
       tester.binding.scheduleForcedFrame();
-      await pumpApp(tester, control.client);
-      expect(control.requestedURLs, hasLength(1));
+      await pumpApp(tester, switchableClient.client);
+      expect(switchableClient.requestedURLs, hasLength(1));
 
       await tester.pump(const Duration(seconds: 180));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(1));
+      expect(switchableClient.requestedURLs, hasLength(1));
 
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.hidden);
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.inactive);
@@ -212,36 +213,36 @@ void main() {
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(3));
+      expect(switchableClient.requestedURLs, hasLength(3));
     });
 
     testWidgets('メンテナンス中は、隠した通常の画面がフォーカスを持たない', (tester) async {
-      final control = SwitchableClient(notInMaintenance);
+      final switchableClient = SwitchableClient(notInMaintenance);
       final focusNode = FocusNode();
       addTearDown(focusNode.dispose);
-      await pumpApp(tester, control.client,
+      await pumpApp(tester, switchableClient.client,
           home:
               Scaffold(body: TextField(focusNode: focusNode, autofocus: true)));
       expect(focusNode.hasFocus, true);
 
-      control.body = inMaintenanceWithButton;
+      switchableClient.body = inMaintenanceWithButton;
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
       expect(focusNode.hasFocus, false);
     });
 
     testWidgets('前面に戻った時に読み直し、背面に回った時は読まない', (tester) async {
-      final control = SwitchableClient(notInMaintenance);
-      await pumpApp(tester, control.client);
+      final switchableClient = SwitchableClient(notInMaintenance);
+      await pumpApp(tester, switchableClient.client);
 
-      control.body = inMaintenanceWithButton;
+      switchableClient.body = inMaintenanceWithButton;
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.paused);
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(1));
+      expect(switchableClient.requestedURLs, hasLength(1));
 
       tester.binding.handleAppLifecycleStateChanged(AppLifecycleState.resumed);
       await tester.pumpAndSettle();
-      expect(control.requestedURLs, hasLength(2));
+      expect(switchableClient.requestedURLs, hasLength(2));
       expect(find.text('復旧までお待ちください'), findsOneWidget);
     });
 
@@ -272,18 +273,33 @@ void main() {
       expect(find.text('通常の画面'), findsNothing);
     });
 
+    testWidgets('読み取りの応答を待つ間に破棄された時は、後から応答が返っても例外を出さない', (tester) async {
+      final pendingResponse = Completer<http.Response>();
+      await pumpApp(
+        tester,
+        MockClient((_) => pendingResponse.future),
+        settle: false,
+      );
+      await tester.pumpWidget(const SizedBox());
+
+      pendingResponse.complete(http.Response.bytes(
+          utf8.encode(jsonEncode(inMaintenanceWithButton)), 200));
+      await tester.pumpAndSettle();
+      expect(tester.takeException(), isNull);
+    });
+
     testWidgets('メンテナンスが終わると、隠していた通常の画面を、入力した内容を保ったまま出す', (tester) async {
-      final control = SwitchableClient(notInMaintenance);
-      await pumpApp(tester, control.client,
+      final switchableClient = SwitchableClient(notInMaintenance);
+      await pumpApp(tester, switchableClient.client,
           home: const Scaffold(body: TextField()));
       await tester.enterText(find.byType(TextField), '書きかけの文');
 
-      control.body = inMaintenanceWithButton;
+      switchableClient.body = inMaintenanceWithButton;
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
       expect(find.byType(TextField), findsNothing);
 
-      control.body = notInMaintenance;
+      switchableClient.body = notInMaintenance;
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
       expect(find.text('書きかけの文'), findsOneWidget);
