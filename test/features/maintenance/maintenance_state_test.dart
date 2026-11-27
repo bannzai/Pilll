@@ -11,13 +11,15 @@ import 'maintenance_state_fixtures.dart';
 void main() {
   group('#MaintenanceState.tryParse', () {
     test('5 つの項目がそろった値を読む', () {
-      final state = MaintenanceState.tryParse(inMaintenanceWithButton)!;
-      expect(state.maintenance, true);
-      expect(state.message, '復旧までお待ちください');
-      expect(state.button!.label, 'お知らせを見る');
-      expect(state.button!.url, Uri.parse('https://example.com/news'));
-      expect(state.source, 'owner');
-      expect(state.changedAt, '2026-11-25T07:00:00.000Z');
+      final maintenanceState =
+          MaintenanceState.tryParse(inMaintenanceWithButton)!;
+      expect(maintenanceState.maintenance, true);
+      expect(maintenanceState.message, '復旧までお待ちください');
+      expect(maintenanceState.button!.label, 'お知らせを見る');
+      expect(
+          maintenanceState.button!.url, Uri.parse('https://example.com/news'));
+      expect(maintenanceState.source, 'owner');
+      expect(maintenanceState.changedAt, '2026-11-25T07:00:00.000Z');
     });
 
     test('source が owner・cost・usage のどれでもメンテナンス中として読む', () {
@@ -60,19 +62,19 @@ void main() {
         {'url': 'https://example.com/news'},
         'https://example.com/news',
       ]) {
-        final state = MaintenanceState.tryParse(
+        final maintenanceState = MaintenanceState.tryParse(
             {...inMaintenanceWithButton, 'button': button})!;
-        expect(state.maintenance, true, reason: '$button');
-        expect(state.button, isNull, reason: '$button');
+        expect(maintenanceState.maintenance, true, reason: '$button');
+        expect(maintenanceState.button, isNull, reason: '$button');
       }
     });
 
     test('空の message と文字列でない message は、メンテナンス中のまま message だけ null にする', () {
       for (final message in ['', 1]) {
-        final state = MaintenanceState.tryParse(
+        final maintenanceState = MaintenanceState.tryParse(
             {...inMaintenanceWithButton, 'message': message})!;
-        expect(state.maintenance, true, reason: '$message');
-        expect(state.message, isNull, reason: '$message');
+        expect(maintenanceState.maintenance, true, reason: '$message');
+        expect(maintenanceState.message, isNull, reason: '$message');
       }
     });
 
@@ -92,7 +94,7 @@ void main() {
   group('#fetchMaintenanceState', () {
     test('200 でメンテナンス中の応答を返した時は、その状態を返す', () async {
       final requestedURLs = <Uri>[];
-      final state = await fetchMaintenanceState(
+      final maintenanceState = await fetchMaintenanceState(
         stateURL,
         client: MockClient((request) async {
           requestedURLs.add(request.url);
@@ -101,8 +103,8 @@ void main() {
         }),
       );
       expect(requestedURLs, [stateURL]);
-      expect(state.maintenance, true);
-      expect(state.message, '復旧までお待ちください');
+      expect(maintenanceState.maintenance, true);
+      expect(maintenanceState.message, '復旧までお待ちください');
     });
 
     test('通信に失敗した時は、メンテナンス中でない状態を返す', () async {
