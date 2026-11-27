@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:pilll/features/maintenance/maintenance_gate.dart';
+import 'package:pilll/features/maintenance/maintenance_state.dart';
 
 import 'maintenance_state_fixtures.dart';
 
@@ -303,6 +304,43 @@ void main() {
       await tester.pump(const Duration(seconds: 60));
       await tester.pumpAndSettle();
       expect(find.text('書きかけの文'), findsOneWidget);
+    });
+  });
+
+  group('#MaintenanceScreen', () {
+    testWidgets('小さい画面で文が長い時も、スクロールで文の末尾とボタンを画面の中に出せる', (tester) async {
+      tester.view.physicalSize = const Size(320, 480);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(MaterialApp(
+        home: MaintenanceScreen(
+          message: List.generate(40, (index) => '${index + 1} 行目').join('\n'),
+          button: MaintenanceButton(
+              label: 'お知らせを見る', url: Uri.parse('https://example.com/news')),
+          onOpenURL: (_) {},
+        ),
+      ));
+
+      expect(tester.takeException(), isNull);
+      await tester.ensureVisible(find.byType(ElevatedButton));
+      await tester.pumpAndSettle();
+      expect(tester.getRect(find.byType(ElevatedButton)).bottom,
+          lessThanOrEqualTo(480));
+    });
+
+    testWidgets('文が短い時は、文を画面の縦の中央に出す', (tester) async {
+      tester.view.physicalSize = const Size(320, 480);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.reset);
+      await tester.pumpWidget(MaterialApp(
+        home: MaintenanceScreen(
+          message: 'ただいまメンテナンス中です',
+          button: null,
+          onOpenURL: (_) {},
+        ),
+      ));
+
+      expect(tester.getCenter(find.byType(Text)).dy, closeTo(240, 1));
     });
   });
 }

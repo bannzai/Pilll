@@ -157,7 +157,8 @@ class MaintenanceScreen extends StatelessWidget {
       color: AppColors.background,
       child: SafeArea(
         child: Center(
-          child: Padding(
+          // 運営者が設定する文には長さの上限が無いため、長い文でも末尾とボタンまで届くようにスクロールさせる
+          child: SingleChildScrollView(
             // 余白 (24) は Material の画面の端の余白として一般的な 24 にした
             padding: const EdgeInsets.all(24),
             child: Column(
