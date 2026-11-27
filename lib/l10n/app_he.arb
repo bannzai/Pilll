@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "דילוג",
   "yazFlexBeginPillNumberPageTitle": "באיזה יום במחזור נטילת הגלולות מתחילה החפיסה?",
   "yazFlexBeginPillNumberPageNote": "יש לענות לפי מספר הימים שחלפו מאז שהסתיים ההפסק שלפני תחילת חפיסת הגלולות",
-  "yazFlexNextInputIsRestDuration": "בהמשך יש להזין את תקופת ההפסק הקודמת בנטילת הגלולות"
+  "yazFlexNextInputIsRestDuration": "בהמשך יש להזין את תקופת ההפסק הקודמת בנטילת הגלולות",
+  "maintenanceDefaultMessage": "האפליקציה נמצאת כעת בתחזוקה\nאפשר להמתין מעט\nולנסות שוב"
 }

@@ -6,9 +6,13 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/features/maintenance/maintenance_gate.dart';
 import 'package:pilll/features/root/page.dart';
+import 'package:pilll/utils/environment.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:pilll/l10n/app_localizations.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -103,6 +107,23 @@ final appThemeData = ThemeData(
   ),
 );
 
+/// MaterialApp の builder に渡す、アプリの一番外側のメンテナンス中の判定。
+/// Navigator ごと覆うため、画面遷移の先 (ダイアログ・モーダル) も含めてメンテナンス中の画面で隠す。
+/// [client] は状態の取得に使う HTTP のクライアントで、テストで差し替える
+Widget maintenanceGateBuilder(BuildContext context, Widget? child, {http.Client? client}) {
+  return MaintenanceGate(
+    stateURL: Uri.parse(Environment.maintenanceStateURL),
+    defaultMessage: AppLocalizations.of(context)!.maintenanceDefaultMessage,
+    // コールバックで渡すのは、雛形 (castle の service-maintenance-setup skill) がテストで URL を開く処理を差し替えるため
+    onOpenURL: (url) {
+      analytics.logEvent(name: 'maintenance_button_tapped', parameters: {'url': url.toString()});
+      launchUrl(url, mode: LaunchMode.externalApplication);
+    },
+    client: client,
+    child: child!,
+  );
+}
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -114,6 +135,7 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
       ],
       theme: appThemeData,
+      builder: maintenanceGateBuilder,
       home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: appSupportedLocales,

@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Preskočite",
   "yazFlexBeginPillNumberPageTitle": "Na kateri dan cikla jemanja tablet se začne omot?",
   "yazFlexBeginPillNumberPageNote": "Odgovorite glede na število dni od konca premora pred začetkom jemanja tablet iz omota",
-  "yazFlexNextInputIsRestDuration": "Nato boste vnesli prejšnji premor pri jemanju tablet"
+  "yazFlexNextInputIsRestDuration": "Nato boste vnesli prejšnji premor pri jemanju tablet",
+  "maintenanceDefaultMessage": "Aplikacija je trenutno v vzdrževanju\nPočakajte nekaj časa\nin poskusite znova"
 }

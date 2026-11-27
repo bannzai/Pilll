@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Jäta vahele",
   "yazFlexBeginPillNumberPageTitle": "Millisel sinu pillivõtmise tsükli päeval algab pillileht?",
   "yazFlexBeginPillNumberPageNote": "Vasta selle järgi, mitu päeva on möödunud enne pillilehe alustamist olnud pillipausi lõpust",
-  "yazFlexNextInputIsRestDuration": "Järgmisena sisesta oma eelmine pillipaus"
+  "yazFlexNextInputIsRestDuration": "Järgmisena sisesta oma eelmine pillipaus",
+  "maintenanceDefaultMessage": "Rakendust hooldatakse praegu\nOota veidi\nja proovi siis uuesti"
 }

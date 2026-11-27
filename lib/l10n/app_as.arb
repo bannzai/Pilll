@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "এৰি যাওক",
   "yazFlexBeginPillNumberPageTitle": "আপোনাৰ পিল খোৱাৰ চক্ৰৰ কিমান নম্বৰ দিনত পিলৰ ষ্ট্ৰিপখন আৰম্ভ হয়?",
   "yazFlexBeginPillNumberPageNote": "শ্বীটখন আৰম্ভ কৰাৰ আগৰ বিৰতি শেষ হোৱাৰ পৰা কিমান দিন পাৰ হৈছে, তাৰ ভিত্তিত অনুগ্ৰহ কৰি উত্তৰ দিয়ক",
-  "yazFlexNextInputIsRestDuration": "পৰৱৰ্তী ধাপত আগৰ বিৰতিৰ তথ্য দিয়ক"
+  "yazFlexNextInputIsRestDuration": "পৰৱৰ্তী ধাপত আগৰ বিৰতিৰ তথ্য দিয়ক",
+  "maintenanceDefaultMessage": "এতিয়া এপটোৰ ৰক্ষণাবেক্ষণ চলি আছে\nঅনুগ্ৰহ কৰি কিছু সময় অপেক্ষা কৰি\nপুনৰ চেষ্টা কৰক"
 }

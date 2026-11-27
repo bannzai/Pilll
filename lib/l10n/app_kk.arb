@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Өткізіп жіберу",
   "yazFlexBeginPillNumberPageTitle": "Таблетка қабылдау кезеңіңіздің нешінші күнінде блистер басталады?",
   "yazFlexBeginPillNumberPageNote": "Блистерді бастар алдындағы үзіліс аяқталғаннан бері қанша күн өткеніне қарай жауап беріңіз",
-  "yazFlexNextInputIsRestDuration": "Келесі қадамда таблетка қабылдаудағы алдыңғы үзіліс мерзімін енгізіңіз"
+  "yazFlexNextInputIsRestDuration": "Келесі қадамда таблетка қабылдаудағы алдыңғы үзіліс мерзімін енгізіңіз",
+  "maintenanceDefaultMessage": "Қосымшада қазір техникалық қызмет көрсету жүріп жатыр\nБіраз күтіп\nқайта байқап көріңіз"
 }

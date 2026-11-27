@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Saltar",
   "yazFlexBeginPillNumberPageTitle": "En que día do teu ciclo de toma da pílula comeza o blíster?",
   "yazFlexBeginPillNumberPageNote": "Responde segundo os días transcorridos desde que rematou o descanso anterior ao inicio do blíster",
-  "yazFlexNextInputIsRestDuration": "A continuación, introducirás o descanso anterior"
+  "yazFlexNextInputIsRestDuration": "A continuación, introducirás o descanso anterior",
+  "maintenanceDefaultMessage": "A aplicación está en mantemento\nAgarda un pouco\ne volve tentalo"
 }

@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Hepgorwch",
   "yazFlexBeginPillNumberPageTitle": "Ar ba ddiwrnod o'ch cylch cymryd pils y mae'r stribed yn dechrau?",
   "yazFlexBeginPillNumberPageNote": "Atebwch yn ôl nifer y diwrnodau ers i'r seibiant cyn dechrau'r stribed pils ddod i ben",
-  "yazFlexNextInputIsRestDuration": "Nesaf, byddwch yn nodi eich seibiant blaenorol"
+  "yazFlexNextInputIsRestDuration": "Nesaf, byddwch yn nodi eich seibiant blaenorol",
+  "maintenanceDefaultMessage": "Mae'r ap wrthi'n cael ei gynnal a'i gadw\nArhoswch ychydig, os gwelwch yn dda\nac yna rhowch gynnig arall arni"
 }

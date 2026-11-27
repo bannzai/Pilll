@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "वगळा",
   "yazFlexBeginPillNumberPageTitle": "गोळ्या घेण्याच्या तुमच्या चक्रातील कितव्या दिवशी पट्टी सुरू होते?",
   "yazFlexBeginPillNumberPageNote": "गोळ्यांची पट्टी सुरू करण्यापूर्वीचा विराम संपल्यापासून किती दिवस झाले आहेत, यानुसार कृपया उत्तर द्या",
-  "yazFlexNextInputIsRestDuration": "पुढील पानावर मागील विरामाची माहिती भरायची आहे"
+  "yazFlexNextInputIsRestDuration": "पुढील पानावर मागील विरामाची माहिती भरायची आहे",
+  "maintenanceDefaultMessage": "ॲपची सध्या देखभाल सुरू आहे\nकृपया थोडा वेळ थांबा\nआणि पुन्हा प्रयत्न करा"
 }

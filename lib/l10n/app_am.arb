@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "ዝለሉ",
   "yazFlexBeginPillNumberPageTitle": "የክኒን ሉሁ መጀመሪያ በዑደቱ ውስጥ ስንተኛው የአወሳሰድ ቀን ነው?",
   "yazFlexBeginPillNumberPageNote": "የክኒን ሉህን ከመጀመርዎ በፊት የነበረው ክኒን እረፍት ካበቃ ጀምሮ ባለፉት ቀናት ብዛት መሠረት እባክዎ ይመልሱ",
-  "yazFlexNextInputIsRestDuration": "ቀጥሎ የቀድሞውን ክኒን እረፍት ያስገቡ"
+  "yazFlexNextInputIsRestDuration": "ቀጥሎ የቀድሞውን ክኒን እረፍት ያስገቡ",
+  "maintenanceDefaultMessage": "መተግበሪያው አሁን በጥገና ላይ ነው\nእባክዎ ትንሽ ቆይተው\nእንደገና ይሞክሩ"
 }
