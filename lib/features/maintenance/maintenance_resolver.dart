@@ -68,11 +68,14 @@ class _MaintenanceResolverState extends State<MaintenanceResolver> {
     // 読み込み中の表示 (ぐるぐる) は、応答が 0.07〜0.22 秒で返る通常の起動で一瞬だけ出て消えるため出さない (SKILL.md「読む間隔と待つ上限」)
     if (maintenanceState == null) return ColoredBox(color: Theme.of(context).scaffoldBackgroundColor);
     if (!maintenanceState.maintenance) return widget.child;
-    return MaintenanceScreen(
-      message: maintenanceState.message ?? widget.defaultMessage,
-      button: maintenanceState.button,
-      onOpenURL: widget.onOpenURL,
-    );
+    return Stack(children: [
+      Offstage(child: widget.child),
+      MaintenanceScreen(
+        message: maintenanceState.message ?? widget.defaultMessage,
+        button: maintenanceState.button,
+        onOpenURL: widget.onOpenURL,
+      ),
+    ]);
   }
 }
 
