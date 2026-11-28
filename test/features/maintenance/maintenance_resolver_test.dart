@@ -93,6 +93,22 @@ void main() {
       expect(resolverApp.openedURLs, [Uri.parse('https://example.com/news')]);
     });
 
+    testWidgets(
+        'メンテナンス中に戻る操作 (Android の戻るボタン) をしても、閉じられる本来の画面 (Navigator) が無く、メンテナンス中の画面のまま',
+        (tester) async {
+      final resolverApp = ResolverApp();
+      await resolverApp.pump(
+          tester, SwitchableClient(inMaintenanceWithButton).client);
+
+      // 戻る操作を受ける Navigator が無いため、どの observer も扱わず (false)、一番下の画面と同じくアプリを閉じる側に回る
+      expect(await tester.binding.handlePopRoute(), isFalse);
+      await tester.pumpAndSettle();
+
+      expect(find.text('復旧までお待ちください'), findsOneWidget);
+      expect(find.byType(Navigator, skipOffstage: false), findsNothing);
+      expect(resolverApp.childBuildCount, 0);
+    });
+
     testWidgets('button が null の時はボタンを出さず、message が null の時はサービスの既定の文を出す',
         (tester) async {
       await ResolverApp()
