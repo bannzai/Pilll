@@ -43,13 +43,19 @@ class MaintenanceResolver extends StatefulWidget {
 }
 
 /// [MaintenanceResolver] が起動時に読んだ状態を持つ
-class _MaintenanceResolverState extends State<MaintenanceResolver> {
+class _MaintenanceResolverState extends State<MaintenanceResolver> with WidgetsBindingObserver {
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) _read();
+  }
+
   /// 起動時に読んだ状態。読み終わるまでは null (読めなかった時はメンテナンス中でない状態が入る)
   MaintenanceState? _maintenanceState;
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _read();
   }
 
@@ -66,13 +72,13 @@ class _MaintenanceResolverState extends State<MaintenanceResolver> {
     // 読み終わるまで (応答を待つ上限の 2 秒まで) は、アプリの背景の色だけを出す。
     // 本来の画面を先に出すと、メンテナンス中の時に本来の画面が一瞬見えて処理も始まる。
     // 読み込み中の表示 (ぐるぐる) は、応答が 0.07〜0.22 秒で返る通常の起動で一瞬だけ出て消えるため出さない (SKILL.md「読む間隔と待つ上限」)
-    if (maintenanceState == null) return ColoredBox(color: Theme.of(context).scaffoldBackgroundColor);
+    if (maintenanceState == null) return widget.child;
     if (!maintenanceState.maintenance) return widget.child;
-    return MaintenanceScreen(
+    return Stack(children: [widget.child, MaintenanceScreen(
       message: maintenanceState.message ?? widget.defaultMessage,
       button: maintenanceState.button,
       onOpenURL: widget.onOpenURL,
-    );
+    )]);
   }
 }
 
