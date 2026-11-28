@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Überspringen",
   "yazFlexBeginPillNumberPageTitle": "An welchem Tag deines Pillenzyklus beginnt der Blister?",
   "yazFlexBeginPillNumberPageNote": "Bitte antworte anhand der Tage seit dem Ende der Einnahmepause vor Beginn des Blisters",
-  "yazFlexNextInputIsRestDuration": "Als Nächstes gibst du deine letzte Einnahmepause ein"
+  "yazFlexNextInputIsRestDuration": "Als Nächstes gibst du deine letzte Einnahmepause ein",
+  "maintenanceDefaultMessage": "Die App wird gerade gewartet\nWarte bitte eine Weile\nund versuche es dann erneut"
 }

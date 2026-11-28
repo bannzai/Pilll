@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "छोड्नुहोस्",
   "yazFlexBeginPillNumberPageTitle": "तपाईंको चक्की लिने चक्रको कति औँ दिनमा पत्ता सुरु हुन्छ?",
   "yazFlexBeginPillNumberPageNote": "चक्कीको पत्ता सुरु गर्नुअघिको विश्राम सकिएको कति दिन भयो, त्यसका आधारमा कृपया जवाफ दिनुहोस्",
-  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि भर्नुहुनेछ"
+  "yazFlexNextInputIsRestDuration": "अर्को चरणमा अघिल्लो विश्राम अवधि भर्नुहुनेछ",
+  "maintenanceDefaultMessage": "एपमा अहिले मर्मतसम्भार भइरहेको छ\nकृपया केही बेर पर्खनुहोस्\nर फेरि प्रयास गर्नुहोस्"
 }

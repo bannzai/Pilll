@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "దాటవేయండి",
   "yazFlexBeginPillNumberPageTitle": "మాత్రలు తీసుకునే చక్రంలో ఎన్నో రోజున స్ట్రిప్ ప్రారంభమవుతుంది?",
   "yazFlexBeginPillNumberPageNote": "మాత్రల స్ట్రిప్‌ను ప్రారంభించే ముందు ఉన్న విరామం ముగిసినప్పటి నుంచి ఎన్ని రోజులు గడిచాయో దాని ఆధారంగా దయచేసి సమాధానం ఇవ్వండి",
-  "yazFlexNextInputIsRestDuration": "తర్వాతి పేజీలో మీరు గత విరామ వివరాలను నమోదు చేస్తారు"
+  "yazFlexNextInputIsRestDuration": "తర్వాతి పేజీలో మీరు గత విరామ వివరాలను నమోదు చేస్తారు",
+  "maintenanceDefaultMessage": "యాప్‌లో ప్రస్తుతం నిర్వహణ పనులు జరుగుతున్నాయి\nదయచేసి కాసేపు వేచి ఉండి\nమళ్లీ ప్రయత్నించండి"
 }

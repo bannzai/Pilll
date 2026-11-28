@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "මඟ හරින්න",
   "yazFlexBeginPillNumberPageTitle": "පෙති පත්‍රයේ ආරම්භය ඔබේ පෙති ගැනීමේ චක්‍රයේ කීවැනි පෙත්තද?",
   "yazFlexBeginPillNumberPageNote": "පෙති පත්‍රය ආරම්භ කිරීමට පෙර තිබූ විරාමය අවසන් වූ දින සිට ගතවූ දින ගණන අනුව කරුණාකර පිළිතුරු දෙන්න",
-  "yazFlexNextInputIsRestDuration": "ඊළඟට, පෙර විරාමය ඇතුළත් කරනු ඇත"
+  "yazFlexNextInputIsRestDuration": "ඊළඟට, පෙර විරාමය ඇතුළත් කරනු ඇත",
+  "maintenanceDefaultMessage": "යෙදුමේ නඩත්තු කටයුතු දැන් සිදු වෙමින් පවතී\nකරුණාකර මඳක් රැඳී සිට\nනැවත උත්සාහ කරන්න"
 }

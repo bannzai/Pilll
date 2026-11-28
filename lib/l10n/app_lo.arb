@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "ຂ້າມ",
   "yazFlexBeginPillNumberPageTitle": "ແຜງຢາເລີ່ມຢູ່ມື້ທີເທົ່າໃດຂອງຮອບການກິນຢາຂອງທ່ານ?",
   "yazFlexBeginPillNumberPageNote": "ກະລຸນາຕອບຕາມຈຳນວນມື້ທີ່ຜ່ານມານັບແຕ່ຊ່ວງພັກຢາກ່ອນເລີ່ມແຜງຢາສິ້ນສຸດລົງ",
-  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນໄລຍະພັກຢາຄັ້ງກ່ອນ"
+  "yazFlexNextInputIsRestDuration": "ຕໍ່ໄປ ກະລຸນາປ້ອນໄລຍະພັກຢາຄັ້ງກ່ອນ",
+  "maintenanceDefaultMessage": "ແອັບກຳລັງຢູ່ໃນລະຫວ່າງການບຳລຸງຮັກສາ\nກະລຸນາລໍຖ້າຈັກໜ້ອຍ\nແລ້ວລອງໃໝ່"
 }

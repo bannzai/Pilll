@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Přeskočit",
   "yazFlexBeginPillNumberPageTitle": "Kolikátým dnem cyklu užívání pilulek začíná blistr?",
   "yazFlexBeginPillNumberPageNote": "Odpovězte prosím podle počtu dní od konce pauzy před začátkem blistru",
-  "yazFlexNextInputIsRestDuration": "Na další obrazovce zadáte předchozí pauzu v užívání pilulek"
+  "yazFlexNextInputIsRestDuration": "Na další obrazovce zadáte předchozí pauzu v užívání pilulek",
+  "maintenanceDefaultMessage": "Aplikace právě prochází údržbou\nPočkejte prosím chvíli\na zkuste to znovu"
 }

@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Überspringe",
   "yazFlexBeginPillNumberPageTitle": "A weläm Tag i dim Pillezyklus fangt de Blister aa?",
   "yazFlexBeginPillNumberPageNote": "Antwort bitte nach de Aazahl Täg, wo sit em Ändi vo de Pillepause vor em Aafang vom Blister verbiigange sind",
-  "yazFlexNextInputIsRestDuration": "Als Nöchschts chasch dini letschti Pillepause iiträge"
+  "yazFlexNextInputIsRestDuration": "Als Nöchschts chasch dini letschti Pillepause iiträge",
+  "maintenanceDefaultMessage": "D App isch grad i de Wartig\nWart bitte es Wiili\nund probier s dänn nomal"
 }

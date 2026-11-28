@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Preskočiť",
   "yazFlexBeginPillNumberPageTitle": "V ktorý deň cyklu užívania tabletiek sa začína blist?",
   "yazFlexBeginPillNumberPageNote": "Odpovedzte podľa počtu dní od konca prestávky pred začiatkom blistra",
-  "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku v užívaní tabletiek"
+  "yazFlexNextInputIsRestDuration": "Ďalej zadajte predchádzajúcu prestávku v užívaní tabletiek",
+  "maintenanceDefaultMessage": "Momentálne prebieha údržba aplikácie\nChvíľu počkajte\na skúste to znova"
 }

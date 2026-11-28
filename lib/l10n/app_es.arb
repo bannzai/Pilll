@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Omitir",
   "yazFlexBeginPillNumberPageTitle": "¿En qué día de tu ciclo de toma de píldoras empieza el blíster?",
   "yazFlexBeginPillNumberPageNote": "Responde según los días que han pasado desde que terminó el descanso previo al inicio del blíster",
-  "yazFlexNextInputIsRestDuration": "A continuación, indica tu descanso anterior de la píldora"
+  "yazFlexNextInputIsRestDuration": "A continuación, indica tu descanso anterior de la píldora",
+  "maintenanceDefaultMessage": "La aplicación está en mantenimiento\nEspera un momento\ny vuelve a intentarlo"
 }

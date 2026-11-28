@@ -23,6 +23,25 @@ abstract class Environment {
     'ANDROID_SIWA_REDIRECT_URL',
   );
 
+  /// メンテナンス中かどうかを読む先 (service-maintenance の Worker の `/pilll`)。
+  /// 開発用のビルドだけ `--dart-define=MAINTENANCE_STATE_URL=<URL>` で手元の確認用のサーバーに差し替えられる
+  static String get maintenanceStateURL => resolveMaintenanceStateURL(
+        overriddenURL: const String.fromEnvironment('MAINTENANCE_STATE_URL'),
+        isDevelopment: isDevelopment,
+      );
+
+  /// [overriddenURL] (dart-define の値。未指定は空文字) と [isDevelopment] (開発用の flavor か) から、メンテナンス中かどうかを読む先を返す。
+  /// 本番のビルドは dart-define の値を使わず、常に本番の URL を返す
+  static String resolveMaintenanceStateURL({
+    required String overriddenURL,
+    required bool isDevelopment,
+  }) {
+    if (overriddenURL.isNotEmpty && isDevelopment) {
+      return overriddenURL;
+    }
+    return 'https://service-maintenance.star-kojiki.workers.dev/pilll';
+  }
+
   static Function()? deleteUser;
   static Function()? signOutUser;
 }

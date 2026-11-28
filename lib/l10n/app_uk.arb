@@ -594,5 +594,6 @@
   "yazFlexSkipRestDurationDialogSkip": "Пропустити",
   "yazFlexBeginPillNumberPageTitle": "На який день циклу прийому пігулок починається блістер?",
   "yazFlexBeginPillNumberPageNote": "Будь ласка, дайте відповідь з огляду на кількість днів від завершення перерви перед початком блістера",
-  "yazFlexNextInputIsRestDuration": "Далі вкажіть попередню перерву в прийомі пігулок"
+  "yazFlexNextInputIsRestDuration": "Далі вкажіть попередню перерву в прийомі пігулок",
+  "maintenanceDefaultMessage": "Зараз у застосунку тривають технічні роботи\nБудь ласка, трохи зачекайте\nі спробуйте ще раз"
 }

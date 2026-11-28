@@ -6,9 +6,13 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/localizations/resolver.dart';
+import 'package:pilll/features/maintenance/maintenance_resolver.dart';
 import 'package:pilll/features/root/page.dart';
+import 'package:pilll/utils/environment.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:pilll/l10n/app_localizations.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
@@ -103,6 +107,28 @@ final appThemeData = ThemeData(
   ),
 );
 
+/// MaterialApp の builder に渡す、アプリの一番上のメンテナンス中の判定。
+/// 起動時に 1 回だけ状態を読み、メンテナンス中ならメンテナンス中の画面だけを出して、本来の画面 (Navigator) を作らない。
+/// [client] は状態の取得に使う HTTP のクライアントで、テストで差し替える
+Widget maintenanceResolverBuilder(BuildContext context, Widget? child, {http.Client? client}) {
+  return MaintenanceResolver(
+    stateURL: Uri.parse(Environment.maintenanceStateURL),
+    defaultMessage: AppLocalizations.of(context)!.maintenanceDefaultMessage,
+    // コールバックで渡すのは、雛形 (castle の service-maintenance-setup skill) がテストで URL を開く処理を差し替えるため
+    onOpenURL: (url) async {
+      analytics.logEvent(name: 'maintenance_button_tapped', parameters: {'url': url.toString()});
+      try {
+        await launchUrl(url, mode: LaunchMode.externalApplication);
+      } catch (error) {
+        // 開けない時もメンテナンス中の画面のまま残すため、未処理の例外にせず記録だけする
+        debugPrint(error.toString());
+      }
+    },
+    client: client,
+    child: child!,
+  );
+}
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -114,6 +140,7 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
       ],
       theme: appThemeData,
+      builder: maintenanceResolverBuilder,
       home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: appSupportedLocales,

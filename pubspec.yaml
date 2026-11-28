@@ -44,6 +44,7 @@ dependencies:
   # 同じ BoM 4.20.2 に揃える (https://firebase.google.com/support/guides/compromised-emudhra-intermediate-ca)
   cloud_firestore: ^6.10.2
   url_launcher: ^6.3.2
+  http: ^1.6.0
   package_info_plus: ^9.0.0
   json_annotation: ^4.9.0
   mockito: ^5.4.4
