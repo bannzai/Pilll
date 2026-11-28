@@ -37,7 +37,7 @@ Navigator.of(context).popUntil((r) => r.isFirst);
 tabController?.animateTo(HomePageTabType.{record|menstruation|calendar|setting}.index);
 ```
 
-Premium 機能の場合のみ、タブ移動前に `ref.watch(userProvider).requireValue` で user を取得し、`!user.premiumOrTrial` のとき `showPremiumIntroductionSheet(context)` でペイウォール表示。
+Premium 機能の場合のみ、タブ移動前に `ref.read(userProvider).requireValue` で user を、`ref.read(customerInfoProvider).requireValue` で CustomerInfo を取得し、`!customerInfo.premiumOrTrial(user: user)` のとき `showPremiumIntroductionSheet(context)` でペイウォール表示。
 
 Premium 機能の HelpPage は「確認する」の下に `FeatureAppealPremiumPlanButton` (`feature_appeal_premium_plan_button.dart`) を置く。トライアル中ユーザーにだけ表示され、`feature_appeal_paywall_shown` (`trigger: premium_plan_button`) を送ってペイウォールを開く。
 

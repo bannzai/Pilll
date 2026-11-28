@@ -20,6 +20,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/provider/app_is_released.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 
+import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
 
 class _FakeOfferings extends Fake implements Offerings {}
@@ -66,25 +67,6 @@ class _LifetimeFakePackage extends Fake implements Package {
   PackageType get packageType => PackageType.lifetime;
 }
 
-class _FakeUser extends Fake implements User {
-  _FakeUser({
-    required this.fakeIsPremium,
-    required this.fakeHasDiscountEntitlement,
-    required this.fakeDiscountEntitlementDeadlineDate,
-  });
-  final bool fakeIsPremium;
-  final bool fakeHasDiscountEntitlement;
-  final DateTime? fakeDiscountEntitlementDeadlineDate;
-
-  @override
-  bool get isPremium => fakeIsPremium;
-  @override
-  bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
-  @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      fakeDiscountEntitlementDeadlineDate;
-}
-
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -100,7 +82,7 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final mockToday = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate = mockToday.subtract(
+    final discountEntitlementDeadlineDate = mockToday.add(
       const Duration(days: 1),
     );
 
@@ -111,11 +93,7 @@ void main() {
       testWidgets(
         '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
         (WidgetTester tester) async {
-          final user = _FakeUser(
-            fakeIsPremium: true,
-            fakeHasDiscountEntitlement: true, // NOTE: Nasty data
-            fakeDiscountEntitlementDeadlineDate: null,
-          );
+          const user = User();
 
           const sheet =
               PremiumIntroductionSheet(source: PaywallSource.appLaunch);
@@ -136,6 +114,7 @@ void main() {
                     (ref) => _LifetimeFakePackage(),
                   ),
                   userProvider.overrideWith((ref) => Stream.value(user)),
+                  customerInfoProviderOverride(premiumCustomerInfo),
                   isOverDiscountDeadlineProvider(
                     discountEntitlementDeadlineDate:
                         discountEntitlementDeadlineDate,
@@ -169,15 +148,12 @@ void main() {
       );
     });
     group('user has discount entitlements', () {
-      const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found', (
         WidgetTester tester,
       ) async {
-        var user = _FakeUser(
-          fakeIsPremium: false,
-          fakeHasDiscountEntitlement: hasDiscountEntitlement,
-          fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+        final user = User(
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
@@ -198,6 +174,7 @@ void main() {
                   (ref) => _LifetimeFakePackage(),
                 ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
+                customerInfoProviderOverride(freeCustomerInfo),
                 isOverDiscountDeadlineProvider(
                   discountEntitlementDeadlineDate:
                       discountEntitlementDeadlineDate,
@@ -226,7 +203,6 @@ void main() {
       });
     });
     group('user does not has discount entitlements', () {
-      const hasDiscountEntitlement = false;
       testWidgets('#PremiumIntroductionDiscountRow is not found', (
         WidgetTester tester,
       ) async {
@@ -236,10 +212,8 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final user = _FakeUser(
-          fakeIsPremium: false,
-          fakeHasDiscountEntitlement: hasDiscountEntitlement,
-          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(
+        final user = User(
+          discountEntitlementDeadlineDate: mockToday.subtract(
             const Duration(days: 1),
           ),
         );
@@ -262,13 +236,14 @@ void main() {
                   (ref) => _LifetimeFakePackage(),
                 ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
+                customerInfoProviderOverride(freeCustomerInfo),
                 isOverDiscountDeadlineProvider(
                   discountEntitlementDeadlineDate:
-                      discountEntitlementDeadlineDate,
+                      mockToday.subtract(const Duration(days: 1)),
                 ).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(
                   discountEntitlementDeadlineDate:
-                      discountEntitlementDeadlineDate,
+                      mockToday.subtract(const Duration(days: 1)),
                 ).overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(
@@ -301,12 +276,8 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        final user = _FakeUser(
-          fakeIsPremium: false,
-          fakeHasDiscountEntitlement: true,
-          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(
-            const Duration(days: 1),
-          ),
+        final user = User(
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
@@ -327,6 +298,7 @@ void main() {
                   (ref) => _LifetimeFakePackage(),
                 ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
+                customerInfoProviderOverride(freeCustomerInfo),
                 isOverDiscountDeadlineProvider(
                   discountEntitlementDeadlineDate:
                       discountEntitlementDeadlineDate,
@@ -364,11 +336,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
-        var user = _FakeUser(
-          fakeIsPremium: false,
-          fakeHasDiscountEntitlement: true,
-          fakeDiscountEntitlementDeadlineDate: null,
-        );
+        const user = User();
 
         const sheet = PremiumIntroductionSheet(source: PaywallSource.appLaunch);
         await tester.pumpWidget(
@@ -388,6 +356,7 @@ void main() {
                   (ref) => _LifetimeFakePackage(),
                 ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
+                customerInfoProviderOverride(freeCustomerInfo),
                 isOverDiscountDeadlineProvider(
                   discountEntitlementDeadlineDate:
                       discountEntitlementDeadlineDate,

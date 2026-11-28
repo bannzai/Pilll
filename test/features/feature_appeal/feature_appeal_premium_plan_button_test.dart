@@ -9,6 +9,7 @@ import 'package:pilll/features/premium_introduction/paywall_source.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 import '../../helper/fake.dart';
 import '../../helper/mock.mocks.dart';
@@ -23,10 +24,11 @@ void main() {
     todayRepository = mockTodayRepository;
   });
 
-  Widget subject({required User user}) {
+  Widget subject({required User user, required CustomerInfo customerInfo}) {
     return ProviderScope(
       overrides: [
         userProvider.overrideWith((ref) => Stream.value(user)),
+        customerInfoProviderOverride(customerInfo),
       ],
       child: const MaterialApp(
         home: Material(
@@ -37,29 +39,29 @@ void main() {
   }
 
   group('#FeatureAppealPremiumPlanButton', () {
-    testWidgets('トライアル中 (isPremium=false, trialDeadlineDate が未来) → AppOutlinedButton が表示される', (tester) async {
-      await tester.pumpWidget(subject(user: User(isPremium: false, trialDeadlineDate: mockToday.add(const Duration(days: 10)))));
+    testWidgets('トライアル中 (課金なし, trialDeadlineDate が未来) → AppOutlinedButton が表示される', (tester) async {
+      await tester.pumpWidget(subject(user: User(trialDeadlineDate: mockToday.add(const Duration(days: 10))), customerInfo: freeCustomerInfo));
       await tester.pumpAndSettle();
 
       expect(find.byType(AppOutlinedButton), findsOneWidget);
     });
 
     testWidgets('トライアル終了後の無料ユーザー (trialDeadlineDate が過去) → 「確認する」が paywall を開くため表示しない', (tester) async {
-      await tester.pumpWidget(subject(user: User(isPremium: false, trialDeadlineDate: mockToday.subtract(const Duration(days: 1)))));
+      await tester.pumpWidget(subject(user: User(trialDeadlineDate: mockToday.subtract(const Duration(days: 1))), customerInfo: freeCustomerInfo));
       await tester.pumpAndSettle();
 
       expect(find.byType(AppOutlinedButton), findsNothing);
     });
 
     testWidgets('トライアル未開始 (trialDeadlineDate=null) → 表示しない', (tester) async {
-      await tester.pumpWidget(subject(user: const User(isPremium: false, trialDeadlineDate: null)));
+      await tester.pumpWidget(subject(user: const User(trialDeadlineDate: null), customerInfo: freeCustomerInfo));
       await tester.pumpAndSettle();
 
       expect(find.byType(AppOutlinedButton), findsNothing);
     });
 
     testWidgets('Premium 会員 (トライアル期間内でも) → 表示しない', (tester) async {
-      await tester.pumpWidget(subject(user: User(isPremium: true, trialDeadlineDate: mockToday.add(const Duration(days: 10)))));
+      await tester.pumpWidget(subject(user: User(trialDeadlineDate: mockToday.add(const Duration(days: 10))), customerInfo: premiumCustomerInfo));
       await tester.pumpAndSettle();
 
       expect(find.byType(AppOutlinedButton), findsNothing);

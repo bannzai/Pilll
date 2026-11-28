@@ -5,6 +5,7 @@ import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -77,6 +78,7 @@ class CalendarPage extends HookConsumerWidget {
       data: (data) => _CalendarPageBody(
         histories: data.$1,
         user: data.$2,
+        premiumOrTrial: ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: data.$2),
         calendarMenstruationBandModels: data.$3,
         calendarScheduledMenstruationBandModels: data.$4,
         calendarNextPillSheetBandModels: data.$5,
@@ -102,6 +104,9 @@ const _monthlyCalendarHeight =
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
+
+  /// プレミアム会員またはトライアル中か。false の時は無料で見られる範囲を超えた月に Paywall への導線を出す
+  final bool premiumOrTrial;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
@@ -113,6 +118,7 @@ class _CalendarPageBody extends StatelessWidget {
   const _CalendarPageBody({
     required this.histories,
     required this.user,
+    required this.premiumOrTrial,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
@@ -175,7 +181,7 @@ class _CalendarPageBody extends StatelessWidget {
                           calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
                           calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                         ),
-                        if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
+                        if (!premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
                       ],
                     );
                   }),

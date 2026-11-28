@@ -1,5 +1,7 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/util.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
@@ -11,7 +13,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
 import 'package:flutter/material.dart';
 
-class DiaryPostPhysicalConditionDetails extends StatelessWidget {
+class DiaryPostPhysicalConditionDetails extends ConsumerWidget {
   const DiaryPostPhysicalConditionDetails({
     super.key,
     required this.user,
@@ -26,9 +28,10 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   final ValueNotifier<List<String>> physicalConditionDetails;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final premiumOrTrial = ref.watch(customerInfoProvider).requireValue.premiumOrTrial(user: user);
     late List<String> availablePhysicalConditionDetails;
-    if (user.premiumOrTrial) {
+    if (premiumOrTrial) {
       availablePhysicalConditionDetails = diarySetting?.physicalConditions ?? defaultPhysicalConditions;
     } else {
       availablePhysicalConditionDetails = defaultPhysicalConditions;
@@ -43,7 +46,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
             IconButton(
               onPressed: () {
                 analytics.logEvent(name: 'edit_physical_condition_detail');
-                if (user.isPremium || user.isTrial) {
+                if (premiumOrTrial) {
                   showModalBottomSheet(
                     context: context,
                     isDismissible: true,

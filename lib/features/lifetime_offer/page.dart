@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/provider/customer_info.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -85,7 +86,7 @@ class LifetimeOfferPageBody extends HookConsumerWidget {
     final usageDays = ref.watch(lifetimeOfferUsageDaysProvider);
     final isLifetimePurchased = ref.watch(isLifetimePurchasedProvider).valueOrNull == true;
     // 買い切り購入後もサブスクリプションの自動更新は止まらないため、月額・年額で課金中のユーザーには事前の解約を促す
-    final isActiveSubscriber = user.isPremium && !isLifetimePurchased;
+    final isActiveSubscriber = ref.watch(customerInfoProvider).requireValue.isPremium && !isLifetimePurchased;
     // ページを開いたまま表示期限を迎えた場合に購入導線を無効化するための判定。false→trueの変化時のみ再ビルドされる
     final isOverLifetimeOfferDeadline = ref.watch(isOverLifetimeOfferDeadlineProvider);
 

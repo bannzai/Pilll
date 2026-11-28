@@ -4,13 +4,9 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
-import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -26,7 +22,6 @@ class UpdatePurchaseInfo {
   UpdatePurchaseInfo(this.databaseConnection);
 
   Future<void> call({
-    required bool? isActivated,
     required String? entitlementIdentifier,
     required String? premiumPlanIdentifier,
     required String purchaseAppID,
@@ -34,7 +29,6 @@ class UpdatePurchaseInfo {
     required String? originalPurchaseDate,
   }) async {
     await databaseConnection.userRawReference().set({
-      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
     }, SetOptions(merge: true));
     final privates = {
@@ -48,19 +42,6 @@ class UpdatePurchaseInfo {
         ...privates,
       }, SetOptions(merge: true));
     }
-  }
-}
-
-/// 端末の CustomerInfo の Premium entitlement から isPremium を users ドキュメントに書く。
-/// 権限の正は RevenueCat に移す予定で、それまでの間はこのクライアントの書き込みで isPremium を決める
-class SyncPurchaseInfo {
-  final DatabaseConnection databaseConnection;
-  SyncPurchaseInfo(this.databaseConnection);
-
-  Future<void> call({required bool isActivated}) async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isPremium: isActivated,
-    }, SetOptions(merge: true));
   }
 }
 
@@ -254,33 +235,6 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
       UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
-
-      UserFirestoreFieldKeys.isTrial: user.isTrial,
-    }, SetOptions(merge: true));
-  }
-}
-
-final endInitialSettingProvider = Provider(
-  (ref) => EndInitialSetting(ref.watch(databaseProvider)),
-);
-
-/// 初期設定の完了時にトライアルを開始する。
-/// isTrial・beginTrialDate・trialDeadlineDate・discountEntitlementDeadlineDate を端末の時刻と Remote Config の日数から計算して書く
-class EndInitialSetting {
-  final DatabaseConnection databaseConnection;
-  EndInitialSetting(this.databaseConnection);
-
-  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
-    final beginTrialDate = now();
-    return databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isTrial: true,
-      UserFirestoreFieldKeys.beginTrialDate: beginTrialDate,
-      UserFirestoreFieldKeys.trialDeadlineDate: beginTrialDate.addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: beginTrialDate
-          .addDays(
-            remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay,
-          )
-          .endOfDay(),
     }, SetOptions(merge: true));
   }
 }
@@ -296,26 +250,6 @@ class DisableShouldAskCancelReason {
   Future<void> call() async {
     await databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.shouldAskCancelReason: false,
-    }, SetOptions(merge: true));
-  }
-}
-
-final endTrialForDebugProvider = Provider(
-  (ref) => EndTrialForDebug(ref.watch(databaseProvider)),
-);
-
-/// 開発用: トライアルを強制終了し、無料ユーザー（非トライアル）状態での動作確認を可能にする
-class EndTrialForDebug {
-  final DatabaseConnection databaseConnection;
-  EndTrialForDebug(this.databaseConnection);
-
-  Future<void> call() async {
-    if (!Environment.isDevelopment) {
-      throw AssertionError('This method should not call out of development');
-    }
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isTrial: false,
-      UserFirestoreFieldKeys.trialDeadlineDate: now().subtract(const Duration(days: 1)),
     }, SetOptions(merge: true));
   }
 }
