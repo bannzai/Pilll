@@ -6,7 +6,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/localizations/resolver.dart';
-import 'package:pilll/features/maintenance/maintenance_gate.dart';
+import 'package:pilll/features/maintenance/maintenance_resolver.dart';
 import 'package:pilll/features/root/page.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -107,11 +107,11 @@ final appThemeData = ThemeData(
   ),
 );
 
-/// MaterialApp の builder に渡す、アプリの一番外側のメンテナンス中の判定。
-/// Navigator ごと覆うため、画面遷移の先 (ダイアログ・モーダル) も含めてメンテナンス中の画面で隠す。
+/// MaterialApp の builder に渡す、アプリの一番上のメンテナンス中の判定。
+/// 起動時に 1 回だけ状態を読み、メンテナンス中ならメンテナンス中の画面だけを出して、本来の画面 (Navigator) を作らない。
 /// [client] は状態の取得に使う HTTP のクライアントで、テストで差し替える
-Widget maintenanceGateBuilder(BuildContext context, Widget? child, {http.Client? client}) {
-  return MaintenanceGate(
+Widget maintenanceResolverBuilder(BuildContext context, Widget? child, {http.Client? client}) {
+  return MaintenanceResolver(
     stateURL: Uri.parse(Environment.maintenanceStateURL),
     defaultMessage: AppLocalizations.of(context)!.maintenanceDefaultMessage,
     // コールバックで渡すのは、雛形 (castle の service-maintenance-setup skill) がテストで URL を開く処理を差し替えるため
@@ -140,7 +140,7 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
       ],
       theme: appThemeData,
-      builder: maintenanceGateBuilder,
+      builder: maintenanceResolverBuilder,
       home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: appSupportedLocales,

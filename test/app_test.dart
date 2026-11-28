@@ -5,10 +5,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
 import 'package:pilll/app.dart';
-import 'package:pilll/features/maintenance/maintenance_gate.dart';
+import 'package:pilll/features/maintenance/maintenance_resolver.dart';
 import 'package:pilll/l10n/app_localizations.dart';
 
-/// maintenanceGateBuilder を MaterialApp の builder に置いたアプリを、日本語で組む。
+/// maintenanceResolverBuilder を MaterialApp の builder に置いたアプリを、日本語で組む。
 /// [client] は状態の取得の代わりで、通常の画面には「通常の画面」の文を出す
 Future<void> pumpApp(WidgetTester tester, {required http.Client client}) async {
   await tester.pumpWidget(
@@ -17,7 +17,7 @@ Future<void> pumpApp(WidgetTester tester, {required http.Client client}) async {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       builder: (context, child) =>
-          maintenanceGateBuilder(context, child, client: client),
+          maintenanceResolverBuilder(context, child, client: client),
       home: const Scaffold(body: Text('通常の画面')),
     ),
   );
@@ -39,7 +39,7 @@ http.Response stateResponse({required bool maintenance}) {
 }
 
 void main() {
-  group('#maintenanceGateBuilder', () {
+  group('#maintenanceResolverBuilder', () {
     testWidgets('本番の Pilll の状態の URL を読み、メンテナンス中は Pilll の既定の文を通常の画面の代わりに出す',
         (tester) async {
       final requestedURLs = <Uri>[];
